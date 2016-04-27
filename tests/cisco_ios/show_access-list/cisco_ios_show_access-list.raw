@@ -1,0 +1,23 @@
+Extended IP access list Virtual-Access1.1#1
+    20 permit icmp host 1.1.1.1 any
+    30 deny ip host 44.33.66.36 host 1.1.1.1
+    40 permit udp any host 1.1.1.1
+Extended IP access list Virtual-Access1.1#2
+    10 permit igmp any host 13.1.1.2
+    20 permit icmp host 13.1.1.2 any
+Extended IP access list 102
+    10 permit tcp any host 192.168.1.100 eq ftp
+    20 permit tcp any host 192.168.1.100 gt 1024
+Extended IP access list VLAN-TEST
+    10 permit ip any any
+    20 deny ip any any
+Standard IP access list 1
+    10 permit 10.1.2.3 log
+    20 deny   10.1.1.1
+    30 deny   192.168.1.0, wildcard bits 0.0.0.255
+    40 deny   any log
+Extended IP access list ciao
+    10 permit tcp any eq www whois uucp domain ident host 10.10.10.10 tos normal
+    20 deny tcp any eq www any log
+    30 deny tcp any range www domain 10.10.10.10 0.0.0.255
+

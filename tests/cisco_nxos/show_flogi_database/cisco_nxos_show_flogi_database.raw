@@ -1,0 +1,47 @@
+SWITCH1# sh flogi database
+--------------------------------------------------------------------------------
+INTERFACE        VSAN    FCID           PORT NAME               NODE NAME
+--------------------------------------------------------------------------------
+fc1/33           10    0x000000  aa:bb:cc:dd:ee:ff:00:11 aa:bb:cc:dd:ee:ff:00:00
+                           [SAN_PORT_1]
+fc1/34           10    0x000000  aa:bb:cc:dd:ee:ff:00:12 aa:bb:cc:dd:ee:ff:00:00
+                           [SAN_PORT_2]
+fc1/35           10    0x000000  aa:bb:cc:dd:ee:ff:00:13 aa:bb:cc:dd:ee:ff:00:00
+                           [SAN_PORT_3]
+fc1/36           10    0x000000  aa:bb:cc:dd:ee:ff:00:14 aa:bb:cc:dd:ee:ff:00:00
+                           [SAN_PORT_4]
+fc1/37           10    0x000000  aa:bb:cc:dd:ee:ff:00:15 bb:bb:cc:dd:ee:ff:00:00
+                           [TAPE_1]
+fc1/38           10    0x000000  aa:bb:cc:dd:ee:ff:00:16 a0:bb:cc:dd:ee:ff:00:00
+                           [TAPE_2]
+fc1/41           10    0x000000  aa:bb:cc:dd:ee:ff:00:17 d1:bb:cc:dd:ee:ff:00:00
+                           [SERVER_A_PORT_1]
+fc1/42           10    0x000000  aa:bb:cc:dd:ee:ff:00:18 d1:bb:cc:dd:ee:ff:00:00
+                           [SERVER_A_PORT_2]
+fc1/43           10    0x000000  aa:bb:cc:dd:ee:ff:00:19 3a:bb:cc:dd:ee:ff:00:00
+                           [SERVER_B_PORT_1]
+fc1/44           10    0x000000  aa:bb:cc:dd:ee:ff:00:10 3a:bb:cc:dd:ee:ff:00:00
+                           [SERVER_B_PORT_2]
+fc1/45           10    0x000000  aa:bb:cc:dd:ee:ff:01:10 da:bb:cc:dd:ee:ff:00:00
+fc1/45           10    0x000000  aa:bb:cc:dd:ee:ff:01:11 da:bb:cc:dd:ee:ff:00:01
+                           [SERVER_C_PORT_1]
+fc1/45           10    0x000000  aa:bb:cc:dd:ee:ff:01:12 da:bb:cc:dd:ee:ff:00:a0
+                           [SERVER_D_PORT_1]
+fc1/45           10    0x000000  aa:bb:cc:dd:ee:ff:01:13 da:bb:cc:dd:ee:ff:00:f3
+                           [SERVER_E_PORT_1]
+fc1/45           10    0x000000  aa:bb:cc:dd:ee:ff:01:14 da:bb:cc:dd:ee:ff:00:d7
+                           [SERVER_F_PORT_1]
+fc1/45           10    0x000000  aa:bb:cc:dd:ee:ff:01:15 da:bb:cc:dd:ee:ff:00:a8
+                           [SERVER_G_PORT_1]
+fc1/45           10    0x000000  aa:bb:cc:dd:ee:ff:01:16 da:bb:cc:dd:ee:ff:00:c3
+                           [SERVER_H_PORT_1]
+fc1/45           10    0x000000  aa:bb:cc:dd:ee:ff:01:17 da:bb:cc:dd:ee:ff:00:c8
+                           [SERVER_I_PORT_1]
+fc1/45           10    0x000000  aa:bb:cc:dd:ee:ff:01:18 da:bb:cc:dd:ee:ff:00:e9
+                           [SERVER_J_PORT_1]
+fc1/45           10    0x000000  aa:bb:cc:dd:ee:ff:01:19 da:bb:cc:dd:ee:ff:00:e1
+                           [SERVER_K_PORT_1]
+fc1/46           10    0x000000  aa:bb:cc:dd:ee:ff:02:00 c6:bb:cc:dd:ee:ff:00:11
+                           [DEV_SERVER_PORT_1]
+
+Total number of flogi = 21.

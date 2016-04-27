@@ -1,0 +1,19 @@
+                 Flags
+------------------------ ---------------------------- -------------------------
+  a - LACP Active          p - LACP Passive           * - static fallback
+  F - Fallback enabled     f - Fallback configured    ^ - individual fallback
+  U - In Use               D - Down
+  + - In-Sync              - - Out-of-Sync            i - incompatible with agg
+  P - bundled in Po        s - suspended              G - Aggregable
+  I - Individual           S - ShortTimeout           w - wait for agg
+ 
+Number of channels in use: 26
+Number of aggregators:26
+ 
+Port-Channel Protocol  Ports
+------------ --------- --------------------------------------------------------
+Po1(U)       LACP(a)    Et3/36/1(PG+)
+Po25(D)      LACP(a)    Et3/12/1(G-)
+Po101(U)     LACP(a)    Et3/1/1(PSG+) Et3/1/2(PSG+) Et3/1/3(PSG+) Et3/1/4(PSG+)
+                        Et3/3/1(PSG+) Et3/3/2(PSG+) Et3/3/3(PSG+) Et3/3/4(PSG+)
+Po102(U)     LACP(a)    Et3/2/1(PSG+) Et3/2/2(PSG+) Et3/2/3(PSG+) Et3/2/4(PSG+)

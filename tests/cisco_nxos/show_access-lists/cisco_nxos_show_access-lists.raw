@@ -1,0 +1,50 @@
+IP access list acl-test
+        10 permit ip 1.1.1.1/32 any
+        20 permit ip 1.1.1.1/24 any ttl 200
+        30 permit tcp any neq finger any ack psh rst fin
+        40 permit tcp 1.1.1.1/32 range time bgp any
+        50 permit tcp 1.1.1.1/32 addrgroup TEST
+        60 permit tcp addrgroup TEST-START addrgroup TEST_FINISH
+IP access list copp-system-p-acl-eigrp
+        10 permit eigrp any any
+IP access list copp-system-p-acl-hsrp
+        10 permit udp any 224.0.0.0/24 eq 1985
+IPv6 access list copp-system-p-acl-hsrp6
+        10 permit udp any ff02::66/128 eq 2029
+IPv6 access list copp-system-p-acl-icmp6-msgs
+        10 permit icmp any any router-advertisement
+        20 permit icmp any any router-solicitation
+MAC access list copp-system-p-acl-mac-cdp-udld-vtp
+        10 permit any 0100.0ccc.cccc 0000.0000.0000
+MAC access list copp-system-p-acl-mac-cfsoe
+        10 permit any 0180.c200.000e 0000.0000.0000 0x8843
+MAC access list copp-system-p-acl-mac-l2-tunnel
+        10 permit any any 0x8840
+MAC access list copp-system-p-acl-mac-l3-isis
+        10 permit any 0180.c200.0015 0000.0000.0000
+        20 permit any 0180.c200.0014 0000.0000.0000
+MAC access list copp-system-p-acl-mac-lacp
+        10 permit any 0180.c200.0002 0000.0000.0000 0x8809
+MAC access list copp-system-p-acl-mac-lldp
+        10 permit any 0180.c200.000e 0000.0000.0000 0x88cc
+MAC access list copp-system-p-acl-mac-sdp-srp
+        10 permit any 0180.c200.000e 0000.0000.0000 0x3401
+IPv6 access list copp-system-p-acl-pim6
+        10 permit pim any ff02::d/128
+        20 permit udp any any eq pim-auto-rp
+IPv6 access list copp-system-p-acl-pim6-reg
+        10 permit pim any any
+IP access list copp-system-p-acl-ptp
+        10 permit udp any 224.0.1.129/32 eq 319
+        20 permit udp any 224.0.1.129/32 eq 320
+IP access list copp-system-p-acl-radius
+        10 permit udp any any eq 1812
+IPv6 access list copp-system-p-acl-rip6
+        10 permit udp any ff02::9/64 eq 521
+IP access list copp-system-p-acl-traceroute
+        10 permit icmp any any ttl-exceeded
+IPv6 access list copp-system-p-acl-vrrp6
+        10 permit ipv6 any ff02::12/128
+MAC access list mac_acl_test
+        10 permit 000e.000e.000e 000e.000e.000e 00aa.00aa.00aa 00aa.00ae.00ac aarp cos 0
+

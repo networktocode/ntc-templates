@@ -1,0 +1,30 @@
+---
+parsed_sample:
+- neighbor: "R1-PBX"
+  local_interface: "Gig 1/0/10"
+  neighbor_interface: "Fas 0/0"
+
+- neighbor: "TS-1"
+  local_interface: "Gig 1/0/39"
+  neighbor_interface: "Eth 0/1"
+
+- neighbor: "Cisco-WAP-N"
+  local_interface: "Gig 1/0/1"
+  neighbor_interface: "Gig 0"
+
+- neighbor: "SEP04FE7F689D33"
+  local_interface: "Gig 1/0/2"
+  neighbor_interface: "Port 1"
+
+- neighbor: "SEP000DBC50FCD1"
+  local_interface: "Gig 1/0/4"
+  neighbor_interface: "Port 1"
+
+- neighbor: "SEP00124362C4D2"
+  local_interface: "Gig 1/0/42"
+  neighbor_interface: "Port 1"
+
+
+
+
+

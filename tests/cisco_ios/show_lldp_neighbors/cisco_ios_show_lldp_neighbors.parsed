@@ -1,0 +1,21 @@
+---
+parsed_sample:
+- neighbor: "S2"
+  local_interface: "Fa0/13"
+  neighbor_interface: "Gi0/13"
+
+- neighbor: "Cisco-switch-1"
+  local_interface: "Gi1/0/7"
+  neighbor_interface: "Gi0/1"
+
+- neighbor: "Juniper-switch1"
+  local_interface: "Gi2/0/1"
+  neighbor_interface: "666"
+
+- neighbor: "Juniper-switch1"
+  local_interface: "Gi1/0/1"
+  neighbor_interface: "531"
+
+
+
+

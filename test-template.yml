@@ -1,0 +1,45 @@
+---
+
+- name: Verify TextFSM template
+  hosts: localhost
+  gather_facts: False
+
+  vars_prompt:
+    - name: template_name
+      prompt: "Enter the name of the template to verify:"
+      default: "cisco_nxos_show_ip_route"
+      private: no
+
+    - name: platform
+      prompt: "Enter the platform"
+      default: "cisco_nxos"
+      private: no
+
+  tasks:
+
+  - name: extract command from template name
+    set_fact: command_variable="{{ template_name | split(platform + '_') | last }}"
+
+  - name: extract command string from command_variable
+    set_fact: command="{{ command_variable | split('_') | join(' ') }}"
+
+  - name: run TextFSM locally on test input
+    ntc_show_command:
+      connection: offline
+      file: "{{ item }}"
+      platform: "{{ platform }}"
+      command: "{{ command }}"
+    with_fileglob:
+      - "{{ TEST_DIR }}/{{ platform }}/{{ command_variable}}/{{ template_name}}*.raw"
+    register: ntc_result
+
+  - name: read parsed sample files
+    include_vars: "{{ item.item | regex_replace('\\.raw$', '.parsed') }}"
+    with_items: "{{ ntc_result.results }}"
+    register: ntc_result
+
+  - name: verify that parsed result is the same as expected
+    compare_dict:
+      result: "{{ item.item.response }}"
+      sample: "{{ item.ansible_facts.parsed_sample }}"
+    with_items: "{{ ntc_result.results }}"

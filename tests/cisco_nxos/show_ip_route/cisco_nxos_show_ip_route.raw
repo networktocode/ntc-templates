@@ -1,0 +1,46 @@
+IP Route Table for VRF "default"
+'*' denotes best ucast next-hop
+'**' denotes best mcast next-hop
+'[x/y]' denotes [preference/metric]
+'%<string>' in via output denotes VRF <string>
+
+0.0.0.0/0, ubest/mbest: 1/0
+    *via 10.1.100.1%management, [1/0], 6d02h, static
+1.1.1.1/32, ubest/mbest: 2/0, attached
+    *via 1.1.1.1, Lo10, [0/0], 6d00h, local
+    *via 1.1.1.1, Lo10, [0/0], 6d00h, direct
+2.2.2.2/32, ubest/mbest: 2/0
+    *via 10.10.30.2, Eth2/2, [110/3], 5d18h, ospf-10, intra
+    *via 10.10.40.2, Eth2/4, [110/3], 5d18h, ospf-10, intra
+3.3.3.3/32, ubest/mbest: 2/0
+    *via 10.10.30.2, Eth2/2, [110/4], 5d18h, ospf-10, intra
+    *via 10.10.40.2, Eth2/4, [110/4], 5d18h, ospf-10, intra
+4.4.4.4/32, ubest/mbest: 2/0
+    *via 10.10.30.2, Eth2/2, [110/2], 5d23h, ospf-10, intra
+    *via 10.10.40.2, Eth2/4, [110/2], 5d23h, ospf-10, intra
+7.7.7.7/32, ubest/mbest: 1/0
+    *via 10.10.50.1, [1/0], 1d21h, static
+10.10.10.0/24, ubest/mbest: 1/0, attached
+    *via 10.10.10.1, Vlan5, [0/0], 5d18h, direct
+10.10.10.1/32, ubest/mbest: 1/0, attached
+    *via 10.10.10.1, Vlan5, [0/0], 5d18h, local
+10.10.30.0/24, ubest/mbest: 1/0, attached
+    *via 10.10.30.1, Eth2/2, [0/0], 5d23h, direct
+10.10.30.1/32, ubest/mbest: 1/0, attached
+    *via 10.10.30.1, Eth2/2, [0/0], 5d23h, local
+10.10.40.0/24, ubest/mbest: 1/0, attached
+    *via 10.10.40.1, Eth2/4, [0/0], 5d23h, direct
+10.10.40.1/32, ubest/mbest: 1/0, attached
+    *via 10.10.40.1, Eth2/4, [0/0], 5d23h, local
+10.10.50.0/24, ubest/mbest: 2/0
+    *via 10.10.30.2, Eth2/2, [110/3], 5d18h, ospf-10, intra
+    *via 10.10.40.2, Eth2/4, [110/3], 5d18h, ospf-10, intra
+10.10.60.0/24, ubest/mbest: 2/0
+    *via 10.10.30.2, Eth2/2, [110/3], 5d18h, ospf-10, intra
+    *via 10.10.40.2, Eth2/4, [110/3], 5d18h, ospf-10, intra
+10.10.70.0/24, ubest/mbest: 2/0
+    *via 10.10.30.2, Eth2/2, [110/2], 5d23h, ospf-10, intra
+    *via 10.10.40.2, Eth2/4, [110/2], 5d23h, ospf-10, intra
+10.10.80.0/24, ubest/mbest: 2/0
+    *via 10.10.30.2, Eth2/2, [110/2], 5d23h, ospf-10, intra
+    *via 10.10.40.2, Eth2/4, [110/2], 5d23h, ospf-10, intra

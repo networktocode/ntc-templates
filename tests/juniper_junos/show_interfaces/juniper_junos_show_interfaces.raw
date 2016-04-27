@@ -1,0 +1,71 @@
+Physical interface: ge-0/0/0, Enabled, Physical link is Up
+  Interface index: 134, SNMP ifIndex: 502
+  Link-level type: Ethernet, MTU: 1514, MRU: 0, LAN-PHY mode,
+  Link-mode: Half-duplex, Speed: 1000mbps, BPDU Error: None,
+  MAC-REWRITE Error: None, Loopback: Disabled, Source filtering: Disabled,
+  Flow control: Enabled, Auto-negotiation: Enabled, Remote fault: Online
+  Device flags   : Present Running
+  Interface flags: SNMP-Traps Internal: 0x4000
+  Link flags     : None
+  CoS queues     : 8 supported, 8 maximum usable queues
+  Current address: 00:0c:29:5e:2c:1a, Hardware address: 00:0c:29:5e:2c:1a
+  Last flapped   : 2016-02-09 13:37:59 UTC (23:39:35 ago)
+  Input rate     : 0 bps (0 pps)
+  Output rate    : 0 bps (0 pps)
+  Active alarms  : None
+  Active defects : None
+  Interface transmit statistics: Disabled
+
+Physical interface: gr-0/0/0, Enabled, Physical link is Up
+  Interface index: 139, SNMP ifIndex: 506
+  Type: GRE, Link-level type: GRE, MTU: Unlimited, Speed: 800mbps
+  Link flags     : Scheduler Keepalives DTE
+  Device flags   : Present Running
+  Interface flags: Point-To-Point
+  Input rate     : 0 bps (0 pps)
+  Output rate    : 0 bps (0 pps)
+
+Physical interface: ip-0/0/0, Enabled, Physical link is Up
+  Interface index: 140, SNMP ifIndex: 507
+  Type: IPIP, Link-level type: IP-over-IP, MTU: Unlimited, Speed: 800mbps
+  Link flags     : Scheduler Keepalives DTE
+  Device flags   : Present Running
+  Input rate     : 0 bps (0 pps)
+  Output rate    : 0 bps (0 pps)
+
+Physical interface: lsq-0/0/0, Enabled, Physical link is Up
+  Interface index: 141, SNMP ifIndex: 509
+  Link-level type: LinkService, MTU: 1504
+  Device flags   : Present Running
+  Interface flags: Point-To-Point SNMP-Traps Internal: 0x4000
+  Last flapped   : 2016-02-09 13:37:59 UTC (22:25:23 ago)
+  Input rate     : 0 bps (0 pps)
+  Output rate    : 0 bps (0 pps)
+
+Physical interface: lt-0/0/0, Enabled, Physical link is Up
+  Interface index: 143, SNMP ifIndex: 510
+  Type: Logical-tunnel, Link-level type: Logical-tunnel, MTU: Unlimited, Speed: 800mbps
+  Device flags   : Present Running
+  Interface flags: Point-To-Point SNMP-Traps Internal: 0x4000
+  Link flags     : None
+  Physical info  : 13
+  Current address: 02:96:14:57:ee:b3, Hardware address: 02:96:14:57:ee:b3
+  Last flapped   : Never
+  Input rate     : 0 bps (0 pps)
+  Output rate    : 0 bps (0 pps)
+
+Physical interface: mt-0/0/0, Enabled, Physical link is Up
+  Interface index: 142, SNMP ifIndex: 511
+  Type: Multicast-GRE, Link-level type: GRE, MTU: Unlimited, Speed: 800mbps
+  Link flags     : Keepalives DTE
+  Device flags   : Present Running
+  Interface flags: SNMP-Traps
+  Input rate     : 0 bps (0 pps)
+  Output rate    : 0 bps (0 pps)
+
+Physical interface: sp-0/0/0, Enabled, Physical link is Up
+  Interface index: 138, SNMP ifIndex: 515
+  Type: Adaptive-Services, Link-level type: Adaptive-Services, MTU: 9192, Speed: 800mbps
+  Device flags   : Present Running
+  Interface flags: Point-To-Point SNMP-Traps Internal: 0x4000
+

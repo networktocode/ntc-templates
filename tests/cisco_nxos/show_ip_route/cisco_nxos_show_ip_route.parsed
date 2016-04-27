@@ -1,0 +1,194 @@
+---
+parsed_sample:
+
+    - admin_distance: "1"
+      interface: management
+      mask: "0"
+      metric: "0"
+      next_hop: 10.1.100.1
+      prefix: 0.0.0.0
+      type: static
+
+    - admin_distance: "0"
+      interface: Lo10
+      mask: "32"
+      metric: "0"
+      next_hop: 1.1.1.1
+      prefix: 1.1.1.1
+      type: local
+
+    - admin_distance: "0"
+      interface: Lo10
+      mask: "32"
+      metric: "0"
+      next_hop: 1.1.1.1
+      prefix: 1.1.1.1
+      type: direct
+
+    - admin_distance: "110"
+      interface: Eth2/2
+      mask: "32"
+      metric: "3"
+      next_hop: 10.10.30.2
+      prefix: 2.2.2.2
+      type: ospf-10, intra
+
+    - admin_distance: "110"
+      interface: Eth2/4
+      mask: "32"
+      metric: "3"
+      next_hop: 10.10.40.2
+      prefix: 2.2.2.2
+      type: ospf-10, intra
+
+    - admin_distance: "110"
+      interface: Eth2/2
+      mask: "32"
+      metric: "4"
+      next_hop: 10.10.30.2
+      prefix: 3.3.3.3
+      type: ospf-10, intra
+
+    - admin_distance: "110"
+      interface: Eth2/4
+      mask: "32"
+      metric: "4"
+      next_hop: 10.10.40.2
+      prefix: 3.3.3.3
+      type: ospf-10, intra
+
+    - admin_distance: "110"
+      interface: Eth2/2
+      mask: "32"
+      metric: "2"
+      next_hop: 10.10.30.2
+      prefix: 4.4.4.4
+      type: ospf-10, intra
+
+    - admin_distance: "110"
+      interface: Eth2/4
+      mask: "32"
+      metric: "2"
+      next_hop: 10.10.40.2
+      prefix: 4.4.4.4
+      type: ospf-10, intra
+
+    - admin_distance: "1"
+      interface: ""
+      mask: "32"
+      metric: "0"
+      next_hop: 10.10.50.1
+      prefix: 7.7.7.7
+      type: static
+
+    - admin_distance: "0"
+      interface: Vlan5
+      mask: "24"
+      metric: "0"
+      next_hop: 10.10.10.1
+      prefix: 10.10.10.0
+      type: direct
+
+    - admin_distance: "0"
+      interface: Vlan5
+      mask: "32"
+      metric: "0"
+      next_hop: 10.10.10.1
+      prefix: 10.10.10.1
+      type: local
+
+    - admin_distance: "0"
+      interface: Eth2/2
+      mask: "24"
+      metric: "0"
+      next_hop: 10.10.30.1
+      prefix: 10.10.30.0
+      type: direct
+
+    - admin_distance: "0"
+      interface: Eth2/2
+      mask: "32"
+      metric: "0"
+      next_hop: 10.10.30.1
+      prefix: 10.10.30.1
+      type: local
+
+    - admin_distance: "0"
+      interface: Eth2/4
+      mask: "24"
+      metric: "0"
+      next_hop: 10.10.40.1
+      prefix: 10.10.40.0
+      type: direct
+
+    - admin_distance: "0"
+      interface: Eth2/4
+      mask: "32"
+      metric: "0"
+      next_hop: 10.10.40.1
+      prefix: 10.10.40.1
+      type: local
+
+    - admin_distance: "110"
+      interface: Eth2/2
+      mask: "24"
+      metric: "3"
+      next_hop: 10.10.30.2
+      prefix: 10.10.50.0
+      type: ospf-10, intra
+
+    - admin_distance: "110"
+      interface: Eth2/4
+      mask: "24"
+      metric: "3"
+      next_hop: 10.10.40.2
+      prefix: 10.10.50.0
+      type: ospf-10, intra
+
+    - admin_distance: "110"
+      interface: Eth2/2
+      mask: "24"
+      metric: "3"
+      next_hop: 10.10.30.2
+      prefix: 10.10.60.0
+      type: ospf-10, intra
+
+    - admin_distance: "110"
+      interface: Eth2/4
+      mask: "24"
+      metric: "3"
+      next_hop: 10.10.40.2
+      prefix: 10.10.60.0
+      type: ospf-10, intra
+
+    - admin_distance: "110"
+      interface: Eth2/2
+      mask: "24"
+      metric: "2"
+      next_hop: 10.10.30.2
+      prefix: 10.10.70.0
+      type: ospf-10, intra
+
+    - admin_distance: "110"
+      interface: Eth2/4
+      mask: "24"
+      metric: "2"
+      next_hop: 10.10.40.2
+      prefix: 10.10.70.0
+      type: ospf-10, intra
+
+    - admin_distance: "110"
+      interface: Eth2/2
+      mask: "24"
+      metric: "2"
+      next_hop: 10.10.30.2
+      prefix: 10.10.80.0
+      type: ospf-10, intra
+
+    - admin_distance: "110"
+      interface: Eth2/4
+      mask: "24"
+      metric: "2"
+      next_hop: 10.10.40.2
+      prefix: 10.10.80.0
+      type: ospf-10, intra

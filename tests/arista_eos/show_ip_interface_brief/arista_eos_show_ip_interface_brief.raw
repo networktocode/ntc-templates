@@ -1,0 +1,7 @@
+Interface              IP Address         Status     Protocol         MTU
+Loopback0              1.1.1.1/32         up         up             65535
+Management1            unassigned         down       down            1500
+Vlan10                 unassigned         down       lowerlayerdown  1500
+Ethernet5              10.0.0.1/24        up         up              1500
+Port-Channel1          11.11.11.11/24     down       lowerlayerdown  1500
+
