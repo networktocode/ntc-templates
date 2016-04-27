@@ -22,8 +22,8 @@ if __name__ == "__main__":
        module_args='',
        pattern='localhost',
        host_list=HOSTS,
-       module_path='/home/travis/build/networktocode/ntc-templates/ntc-ansible/library/'
-    )
+       #module_path='../library/')
+       module_path='/home/travis/build/networktocode/ntc-templates/ntc-ansible/library/')
 
     results = runner.run()
     print results
@@ -38,8 +38,7 @@ if __name__ == "__main__":
 
         args = dict(file=filepath + '/' + rawfile, platform=platform,
                     command=command, connection='offline',
-                    template_dir='templates/',
-                    module_path='/home/travis/build/networktocode/ntc-templates/ntc-ansible/library/')
+                    template_dir='templates/')
         runner = ansible.runner.Runner(
             module_name='ntc_show_command',
             module_args=args,
