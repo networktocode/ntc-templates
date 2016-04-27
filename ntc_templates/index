@@ -1,0 +1,68 @@
+
+# First line is the header fields for columns and is mandatory.
+# Regular expressions are supported in all fields except the first.
+# Last field supports variable length command completion.
+# abc[[xyz]] is expanded to abc(x(y(z)?)?)?, regexp inside [[]] is not supported
+#
+Template, Hostname, Platform, Command
+cisco_ios_show_archive.template,  .*, cisco_ios, sh[[ow]] arc[[hive]]
+cisco_ios_show_capability_feature_routing.template,  .*, cisco_ios, sh[[ow]] cap[[ability]] f[[eature]] r[[outing]]
+cisco_ios_show_aliases.template,  .*, cisco_ios, sh[[ow]] alia[[ses]]
+cisco_ios_dir.template,  .*, cisco_ios, dir
+cisco_nxos_show_processes_cpu.template, .*, cisco_nxos, sh[[ow]] proc[[esses]] c[[pu]]
+cisco_ios_show_processes_cpu.template, .*, cisco_ios, sh[[ow]] proc[[esses]] [[cpu]]
+cisco_nxos_show_vlan.template, .*, cisco_nxos, sh[[ow]] vl[[an]]
+cisco_ios_show_ip_int_brief.template, .*, cisco_ios, sh[[ow]] ip int[[erface]] br[[ief]]
+cisco_nxos_show_ip_route.template, .*, cisco_nxos, sh[[ow]] ip route
+hp_comware_display_vlan_brief.template, .*, hp_comware, di[[splay]] v[[lan]] b[[rief]]
+cisco_nxos_show_version.template, .*, cisco_nxos, sh[[ow]] ver[[sion]]
+cisco_wlc_ssh_show_sysinfo.template, .*, cisco_wlc_ssh, sh[[ow]] sysi[[nfo]]
+cisco_ios_show_spanning-tree.template, .*, cisco_ios, sh[[ow]] sp[[anning-tree]]
+cisco_ios_show_ip_route.template, .*, cisco_ios, sh[[ow]] ip r[[oute]]
+cisco_ios_show_ip_bgp_summary.template, .*, cisco_ios, sh[[ow]] ip bgp sum[[mary]]
+cisco_ios_show_interface_transceiver.template, .*, cisco_ios, sh[[ow]] int[[erface]] trans[[ceiver]]
+cisco_ios_show_standby_brief.template, .*, cisco_ios, sh[[ow]] standby br[[ief]]
+cisco_ios_show_vtp_status.template, .*, cisco_ios, sh[[ow]] vtp stat[[us]]
+cisco_ios_show_ip_ospf_neighbor.template, .*, cisco_ios, sh[[ow]] ip ospf nei[[ghbor]]
+cisco_nxos_show_port-channel_summary.template, .*, cisco_nxos, sh[[ow]] po[[rt-channel]] sum[[mary]]
+cisco_nxos_show_flogi_database.template, .*, cisco_nxos, sh[[ow]] fl[[ogi]] d[[atabase]]
+cisco_ios_show_interfaces.template, .*, cisco_ios, sh[[ow]] int[[erfaces]]
+cisco_ios_show_clock.template, .*, cisco_ios, sh[[ow]] clo[[ck]]
+cisco_nxos_show_clock.template, .*, cisco_nxos, sh[[ow]] clo[[ck]]
+cisco_ios_show_ip_arp.template, .*, cisco_ios, sh[[ow]] i[[p]] a[[rp]]
+cisco_nxos_show_ip_arp_detail.template, .*, cisco_nxos, sh[[ow]] i[[p]] a[[rp]] det[[ail]]
+cisco_ios_show_interfaces_status.template, .*, cisco_ios, sh[[ow]] int[[erfaces]] st[[atus]]
+cisco_nxos_show_vpc.template, .*, cisco_nxos, sh[[ow]] vpc
+cisco_nxos_show_interface_brief.template, .*, cisco_nxos, sh[[ow]] int[[erface]] br[[ief]]
+cisco_ios_show_inventory.template, .*, cisco_ios, sh[[ow]] inven[[tory]]
+cisco_nxos_show_interface_status.template, .*, cisco_nxos, sh[[ow]] int[[erface]] st[[atus]]
+cisco_nxos_show_feature.template, .*, cisco_nxos, sh[[ow]] feat[[ure]]
+arista_eos_show_vlan.template, .*, arista_eos, sh[[ow]] vl[[an]]
+cisco_nxos_show_mac_address-table.template, .*, cisco_nxos, sh[[ow]] m[[ac]] addr[[ess-table]]
+cisco_ios_show_mac-address-table.template, .*, cisco_ios, sh[[ow]] m[[ac-address-table]]
+cisco_nxos_show_ip_ospf_neighbor_vrf.template, .*, cisco_nxos, sh[[ow]] ip ospf nei[[ghbor]] vrf (\S+)
+cisco_nxos_show_ip_dhcp_relay_address.template, .*, cisco_nxos, sh[[ow]] ip dh[[cp]] r[[elay]] a[[ddress]]
+cisco_ios_show_snmp_community.template, .*, cisco_ios, sh[[ow]] sn[[mp]] com[[munity]]
+cisco_nxos_show_inventory.template, .*, cisco_nxos, sh[[ow]] inv[[entory]]
+cisco_nxos_show_access-lists.template, .*, cisco_nxos, sh[[ow]] acc[[ess-lists]]
+cisco_ios_show_access-list.template, .*, cisco_ios, sh[[ow]] acc[[ess-list]]
+arista_eos_show_clock.template, .*, arista_eos, sh[[ow]] clo[[ck]]
+arista_eos_show_interfaces_status.template, .*, arista_eos, sh[[ow]] int[[erfaces]] st[[atus]]
+arista_eos_show_ip_interface_brief.template, .*, arista_eos, sh[[ow]] i[[p]] int[[erface]] br[[ief]]
+arista_eos_show_mlag.template, .*, arista_eos, sh[[ow]] ml[[ag]]
+arista_eos_show_ip_arp.template, .*, arista_eos, sh[[ow]] i[[p]] ar[[p]]
+arista_eos_show_snmp_community.template, .*, arista_eos, sh[[ow]] sn[[mp]] com[[munity]]
+arista_eos_show_lldp_neighbors.template, .*, arista_eos, sh[[ow]] ll[[dp]] nei[[ghbors]]
+cisco_nxos_show_cdp_neighbors.template, .*, cisco_nxos, sh[[ow]] cd[[p]] neig[[hbors]]
+arista_eos_show_ip_access-lists.template, .*, arista_eos, sh[[ow]] i[[p]] acce[[ss-lists]]
+cisco_nxos_show_lldp_neighbors.template, .*, cisco_nxos, sh[[ow]] ll[[dp]] nei[[ghbors]]
+cisco_ios_show_cdp_neighbors.template, .*, cisco_ios, sh[[ow]] c[[dp]] neig[[hbors]]
+cisco_ios_show_lldp_neighbors.template, .*, cisco_ios, sh[[ow]] lld[[p]] neig[[hbors]]
+cisco_ios_show_version.template, .*, cisco_ios, sh[[ow]] ver[[sion]]
+cisco_ios_show_vlan.template, .*, cisco_ios, sh[[ow]] vlan
+dell_force10_show_version.template, .*, dell_force10, sh[[ow]] ver[[sion]]
+dell_force10_show_vlan.template, .*, dell_force10, sh[[ow]] vl[[an]]
+arista_eos_show_version.template, .*, arista_eos, sh[[ow]] ver[[sion]]
+cisco_nxos_show_interface.template, .*, cisco_nxos, sh[[ow]] inte[[rface]]
+arista_eos_show_interfaces.template, .*, arista_eos, sh[[ow]] inte[[rfaces]]
+juniper_show_interfaces.template, .*, juniper, sh[[ow]] inte[[rfaces]]
