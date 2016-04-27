@@ -25,7 +25,7 @@ if __name__ == "__main__":
     )
 
     results = runner.run()
-
+    print results
     tests = results['contacted']['localhost']['tests']
 
     responses = []
