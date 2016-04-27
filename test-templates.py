@@ -37,7 +37,7 @@ if __name__ == "__main__":
 
         args = dict(file=filepath + '/' + rawfile, platform=platform,
                     command=command, connection='offline',
-                    template_dir='templates/')
+                    template_dir='templates/', module_path='../')
         runner = ansible.runner.Runner(
             module_name='ntc_show_command',
             module_args=args,
