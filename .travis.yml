@@ -21,7 +21,7 @@ install:
   - export PYTHONPATH=$PYTHONPATH:/home/travis/build/networktocode/ntc-ansible/gtextfsm-0.2.1/textfsm
   - pip install ansible==1.9.2
   - pip install terminal
-  - git clone https://github.com/ntc-ansible.git
+  - git clone https://github.com/networktocode/ntc-ansible.git
   #- pip install gtextfsm
 
 script:
