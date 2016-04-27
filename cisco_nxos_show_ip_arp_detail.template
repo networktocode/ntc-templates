@@ -1,0 +1,8 @@
+Value ADDRESS (\d+\.\d+\.\d+\.\d+)
+Value AGE (\d+:\d+:\d+|-)
+Value MAC (\S+)
+Value INTERFACE (\S+)
+Value PHYSICAL_INTERFACE (\S+)
+
+Start
+  ^${ADDRESS}\s+${AGE}\s+${MAC}\s+${INTERFACE}\s+${PHYSICAL_INTERFACE} -> Record

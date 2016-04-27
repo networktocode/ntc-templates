@@ -1,0 +1,25 @@
+# Experimental for 'show ip bgp' on Cisco IOS
+#
+# Note these rules are not handling some possible 'show ip bgp' output.
+# I wanted to publish this however so that others could expand upon it.
+# 
+Value valid ([r\*][\>\s]i*)
+Value Filldown prefix (\d+\.\d+\.\d+\.[\d\/]+)
+Value Required next_hop (\d+\.\d+\.\d+\.\d+)
+Value metric (\d*)
+Value local_pref (\d*)
+Value weight (\d+)
+Value as_path ([\d ]*\s*i)
+
+Start
+  ^\s+Network.*Next.* -> Routes
+
+Routes
+  # Scrub the "Network" line
+  ^\s+Network\s+
+  #
+  # Weight, metric, and local_pref 
+  ^\s*${valid}\s*${prefix}\s+${next_hop}\s+${metric}\s+${local_pref}\s*\s\s${weight}\s${as_path} -> Record
+  # 
+  # Match lines with an assumed prefix
+  ^\s*${valid}\s*${next_hop}\s+${metric}\s+${local_pref}\s*\s\s${weight}\s${as_path} -> Record

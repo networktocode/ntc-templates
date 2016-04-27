@@ -1,0 +1,13 @@
+Value Filldown FILE_SYSTEM (\S+)
+Value ID (\d+)
+Value PERMISSIONS (\S+)
+Value SIZE (\d+)
+Value DATE_TIME ((<no date>)|(\w+\s\d+\s\d+\s\S+\s\S+))
+Value NAME (\S+)
+
+Start
+  ^Directory of\s+${FILE_SYSTEM} -> DIR
+
+DIR
+  ^Directory of\s+${FILE_SYSTEM} -> DIR  
+  ^((\s+)*${ID})\s+${PERMISSIONS}\s+${SIZE}\s+${DATE_TIME}\s+${NAME} -> Record

@@ -1,0 +1,7 @@
+Value INTF (\S+)
+Value IPADDR (\S+)
+Value STATUS (up|down|administratively down)
+Value PROTO (up|down)
+
+Start
+  ^${INTF}\s+${IPADDR}\s+\w+\s+\w+\s+${STATUS}\s+${PROTO} -> Record

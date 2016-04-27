@@ -1,0 +1,15 @@
+Value Filldown PREFIX (\d+\.\d+\.\d+\.\d+)
+Value Filldown MASK (\d+)
+Value NEXT_HOP (\d+\.\d+\.\d+\.\d+)
+Value INTERFACE ([^\[]\S+/?\S+[^\]])
+Value ADMIN_DISTANCE (\d+)
+Value METRIC (\d+)
+Value TYPE (.+)
+
+Start
+  ^\s*${PREFIX}/${MASK}, \S+: \S+
+  ^\s+\*+via ${NEXT_HOP}, ${INTERFACE}, \[$ADMIN_DISTANCE\/$METRIC\], \S+, ${TYPE} -> Record
+  ^\s+\*+via ${NEXT_HOP}, \[$ADMIN_DISTANCE\/$METRIC\], \S+, ${TYPE} -> Record
+  ^\s+\*+via ${NEXT_HOP}%${INTERFACE}, \[$ADMIN_DISTANCE\/$METRIC\], \S+, ${TYPE} -> Record
+
+EOF

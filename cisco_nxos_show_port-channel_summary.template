@@ -1,0 +1,12 @@
+Value BUNDLE_IFACE (Po\d+)
+Value BUNDLE_STATUS (\(\w\))
+Value BUNDLE_PROTO (\w+)
+Value BUNDLE_PROTO_STATE (\(\w+\))
+# Value List PHYS_IFACE (Et\d+\/\S+)
+
+Start
+  ^.*------------ -> Routes
+
+Routes
+  ^.+ -> Continue.Record
+  ^${BUNDLE_IFACE}${BUNDLE_STATUS}\s+${BUNDLE_PROTO}${BUNDLE_PROTO_STATE}\s+

@@ -1,0 +1,8 @@
+Value IFACE (\w+\d+\/\S+)
+Value TEMPERATURE (\d+.\d+)
+Value VOLTAGE (\d+.\d+)
+Value TX_PWR (\S+)
+Value RX_PWR (\S+)
+
+Start
+  ^${IFACE}\s+${TEMPERATURE}\s+${VOLTAGE}\s+${TX_PWR}\s+${RX_PWR}\s+ -> Record

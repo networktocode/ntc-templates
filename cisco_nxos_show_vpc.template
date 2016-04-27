@@ -1,0 +1,6 @@
+Value ID (\d+)
+Value PORT (\S+)
+Value STATUS (\S+)
+
+Start
+  ^${ID}\s+${PORT}\s+${STATUS} -> Record

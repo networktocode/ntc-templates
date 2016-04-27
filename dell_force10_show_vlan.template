@@ -1,0 +1,7 @@
+Value VLAN_ID (\d+)
+# Name is really the description and it currently only supports a single word (no spaces)
+Value NAME (\S+)
+Value STATUS (\w+)
+
+Start
+  ^(\*)?\s+${VLAN_ID}\s+${STATUS}(\s\s${NAME})? -> Record

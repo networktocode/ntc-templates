@@ -1,0 +1,12 @@
+Value Filldown NEIGHBOR (\S+)
+Value Required LOCAL_INTERFACE (\S+)
+Value NEIGHBOR_INTERFACE (\S+)
+
+Start
+  ^Device.*ID -> CDP
+
+CDP
+  ^${NEIGHBOR}\s+${LOCAL_INTERFACE}\s+\d+\s+[\w\s]+\S+\s+${NEIGHBOR_INTERFACE} -> Record
+  ^${NEIGHBOR}
+  ^\s+${LOCAL_INTERFACE}\s+\d+\s+[\w\s]+\S+\s+${NEIGHBOR_INTERFACE} -> Record
+

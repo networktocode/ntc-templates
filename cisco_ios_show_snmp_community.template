@@ -1,0 +1,10 @@
+Value NAME (\S+)
+Value INDEX (\S+)
+Value SECURITY_NAME (\S+)
+Value STORAGE_TYPE (\S+)
+
+Start
+  ^Community\s+name:\s+${NAME}.*
+  ^Community\sIndex:\s+${INDEX}
+  ^Community\sSecurityName:\s+${SECURITY_NAME}
+  ^storage-type:\s${STORAGE_TYPE} -> Record

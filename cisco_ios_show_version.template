@@ -1,0 +1,15 @@
+Value VERSION (\d+\.\d+(.+).*)
+Value HOSTNAME (\S+)
+Value UPTIME (.+)
+Value RUNNING_IMAGE (\S+)
+Value HARDWARE ((WS-C\S+)|(\d+)|(CSR\S+))
+Value SERIAL (\S+)
+Value CONFIG_REGISTER (\S+)
+
+Start
+  ^.*Software\s.+\),\sVersion\s${VERSION}, RELEASE.*
+  ^${HOSTNAME}\s+uptime\s+is\s+${UPTIME}
+  ^[sS]ystem\s+image\s+file\s+is\s+".*flash:${RUNNING_IMAGE}"
+  ^[Cc]isco\s+${HARDWARE}.+
+  ^[Ss]ystem serial number\s+:\s+${SERIAL}
+  ^[Cc]onfiguration\s+register\s+is\s+${CONFIG_REGISTER} -> Record

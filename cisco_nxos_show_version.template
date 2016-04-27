@@ -1,0 +1,12 @@
+Value UPTIME ((\d+\s\w+.s.,?\s?){4})
+Value LAST_REBOOT_REASON (\w+)
+Value OS (\d+.\d+(.+)?)
+Value BOOT_IMAGE (.*)
+Value PLATFORM (\w+)
+
+Start
+  ^\s+NXOS: version\s${OS}
+  ^\s+NXOS image file is:\s${BOOT_IMAGE}
+  ^\s+cisco Nexus\d+\s${PLATFORM}
+  ^Kernel uptime is\s${UPTIME}
+  ^\s+Reason:\s${LAST_REBOOT_REASON} -> Record

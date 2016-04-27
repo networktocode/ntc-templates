@@ -1,0 +1,6 @@
+Value FEATURE ((\S+(\s)*)+)
+Value STATE (\w+)
+
+Start
+  ^Displaying capability information for all available features: 
+  ^${FEATURE}:\s${STATE} -> Record

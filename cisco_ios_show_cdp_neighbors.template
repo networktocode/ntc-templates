@@ -1,0 +1,9 @@
+Value NEIGHBOR (\S+)
+Value LOCAL_INTERFACE (\S+\s\S+)
+Value NEIGHBOR_INTERFACE (\S+\s\S+)
+
+Start
+  ^Device.*ID -> CDP
+
+CDP
+  ^${NEIGHBOR}\s+${LOCAL_INTERFACE}\s+\d+\s+[\w+\s]+\S+\s+${NEIGHBOR_INTERFACE} -> Record
