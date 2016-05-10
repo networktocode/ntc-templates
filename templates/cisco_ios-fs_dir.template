@@ -1,0 +1,5 @@
+Value BYTES_TOTAL (\d+)
+Value BYTES_FREE (\d+)
+
+Start
+  ^${BYTES_TOTAL}\s+.*\(${BYTES_FREE}\s+.*\) -> Record
