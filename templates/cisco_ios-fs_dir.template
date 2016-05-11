@@ -4,10 +4,3 @@ Value FREE_BYTES (\d+)
 
 Start
   ^${TOTAL_BYTES}\s+.*\(${FREE_BYTES}\s+.*\) -> Record
-=======
-Value BYTES_TOTAL (\d+)
-Value BYTES_FREE (\d+)
-
-Start
-  ^${BYTES_TOTAL}\s+.*\(${BYTES_FREE}\s+.*\) -> Record
->>>>>>> a1c245be886f07ffd4635c049c452e828420d99a
