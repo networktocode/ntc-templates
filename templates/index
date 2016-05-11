@@ -8,7 +8,6 @@ Template, Hostname, Platform, Command
 cisco_ios_show_archive.template,  .*, cisco_ios, sh[[ow]] arc[[hive]]
 cisco_ios_show_capability_feature_routing.template,  .*, cisco_ios, sh[[ow]] cap[[ability]] f[[eature]] r[[outing]]
 cisco_ios_show_aliases.template,  .*, cisco_ios, sh[[ow]] alia[[ses]]
-cisco_ios_dir.template,  .*, cisco_ios, dir
 cisco_nxos_show_processes_cpu.template, .*, cisco_nxos, sh[[ow]] proc[[esses]] c[[pu]]
 cisco_ios_show_processes_cpu.template, .*, cisco_ios, sh[[ow]] proc[[esses]] [[cpu]]
 cisco_nxos_show_vlan.template, .*, cisco_nxos, sh[[ow]] vl[[an]]
@@ -66,5 +65,6 @@ arista_eos_show_version.template, .*, arista_eos, sh[[ow]] ver[[sion]]
 cisco_nxos_show_interface.template, .*, cisco_nxos, sh[[ow]] inte[[rface]]
 arista_eos_show_interfaces.template, .*, arista_eos, sh[[ow]] inte[[rfaces]]
 juniper_junos_show_interfaces.template, .*, juniper_junos, sh[[ow]] inte[[rfaces]]
-cisco_ios-fs_dir.template, .*, cisco_ios-fs, di[[r]]
+cisco_ios-fs_dir.template, .*, cisco_ios-fs, dir
+cisco_ios_dir.template,  .*, cisco_ios, dir
 
