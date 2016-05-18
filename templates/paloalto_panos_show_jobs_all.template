@@ -1,0 +1,9 @@
+Value ENQUEUED (\S+\s+\S+)
+Value ID (\d+)
+Value TYPE (\w+)
+Value STATUS (\w+)
+Value RESULT (\w+)
+Value COMPLETED (\S+)
+
+Start
+  ^${ENQUEUED}\s+${ID}\s+${TYPE}\s+${STATUS}\s+${RESULT}\s+${COMPLETED} -> Record
