@@ -1,0 +1,22 @@
+total configured logical interfaces: 38
+​
+name                id    vsys zone             forwarding               tag    address                                         
+------------------- ----- ---- ---------------- ------------------------ ------ ------------------
+ethernet1/1         16    1                     N/A                      0      N/A               
+ethernet1/2         17    1                     N/A                      0      N/A               
+ethernet1/2.100     275   1    ISP1         vr:default               100    65.5.44.46/30  
+ethernet1/3         18    1                     N/A                      0      N/A               
+ethernet1/3.101     278   1    ISP2         vr:default               101    65.5.26.46/30  
+ethernet1/4         19    1                     N/A                      0      N/A               
+ethernet1/4.102     256   1    WAN     vr:default               102    10.10.134.1/24  
+ethernet1/5         20    1                     N/A                      0      N/A               
+ethernet1/5.103     261   1    Voice            vr:default               101    10.10.248.49/24
+ethernet1/6         21    1                     N/A                      0      N/A               
+ethernet1/6.104     265   1    Video            vr:default               901    10.10.10.1/24    
+ethernet1/7         22    1    Guest1   N/A                      0      N/A               
+ethernet1/7.700     267   1    Guest1   vr:default               700    10.10.100.1/23     
+dedicated-ha1       5     1                     ha                       0      10.1.1.1/30       
+dedicated-ha2       6     1                     ha                       0      10.2.2.1/30       
+vlan                1     1                     N/A                      0      N/A               
+loopback            3     1                     N/A                      0      N/A               
+tunnel              4     1                     N/A                      0      N/A   
