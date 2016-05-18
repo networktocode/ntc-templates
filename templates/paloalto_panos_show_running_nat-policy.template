@@ -1,0 +1,23 @@
+Value Filldown NAME (.*?)
+Value Required NAT_TYPE (\S+)
+Value FROM (\S+)
+Value SOURCE (\S+)
+Value TO (\S+)
+Value TO_INTERFACE ({\S+}?)
+Value DESTINATION (\S+)
+Value SERVICE ([\S+\s+]+)
+Value TRANSLATE_TO ([\S+\s+]+)
+Value TERMINAL (\S+)
+
+Start
+  ^${NAME}\s+\{
+  ^\s+nat-type\s+${NAT_TYPE};
+  ^\s+from\s+${FROM};
+  ^\s+source\s+${SOURCE}; 
+  ^\s+to\s+${TO};
+  ^s+to-interface\s+${TO_INTERFACE};
+  ^\s+destination\s+${DESTINATION};
+  ^\s+service\s+${SERVICE};
+  ^\s+translate-to\s+"${TRANSLATE_TO}";
+  ^\s+terminal\s+${TERMINAL};
+  ^} -> Record
