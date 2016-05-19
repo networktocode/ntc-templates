@@ -12,9 +12,9 @@ parsed_sample:
   category: any
   application_service: '[ any/tcp/any/8000 any/tcp/any/80 any/tcp/any/8080 ]'
   action: allow
-  icmp_unreachable: no
-  terminal: yes
-  type: 
+  icmp_unreachable: "no"
+  terminal: "yes"
+  type: ""
 
 - name: '"ICMP Any"'
   from: Trust
@@ -27,9 +27,9 @@ parsed_sample:
   category: any 
   application_service: '[ icmp/icmp/any/any ping/icmp/any/any ]'
   action: allow
-  icmp_unreachable: no
-  terminal: yes
-  type: 
+  icmp_unreachable: "no"
+  terminal: "yes"
+  type: ""
 
 
 - name: '"DNS Outbound"'
@@ -43,9 +43,9 @@ parsed_sample:
   category: any
   application_service: 'dns/udp/any/53'
   action: allow
-  icmp_unreachable: no
-  terminal: yes
-  type:
+  icmp_unreachable: "no"
+  terminal: "yes"
+  type: ""
 
 - name: '"Inbound to DMZ Web"'
   from: Unrust
@@ -58,9 +58,9 @@ parsed_sample:
   category: any
   application_service: '[ any/tcp/any/8000 any/tcp/any/80 any/tcp/any/8080 ]'
   action: allow
-  icmp_unreachable: no
-  terminal: yes
-  type:
+  icmp_unreachable: "no"
+  terminal: "yes"
+  type: ""
 
 - name: '"Inbound to DMZ Deny"'
   from: Unrust
@@ -73,9 +73,9 @@ parsed_sample:
   category: any
   application_service: any/any/any/any
   action: deny
-  icmp_unreachable: no
-  terminal: no
-  type:
+  icmp_unreachable: "no"
+  terminal: "no"
+  type: ""
 
 
 - name: 'intrazone-default'
@@ -85,12 +85,12 @@ parsed_sample:
   to: any
   destination: any          
   destination_region: none
-  user: 
+  user: ""
   category: any
   application_service: any/any/any/any
   action: allow
-  icmp_unreachable: no
-  terminal: yes
+  icmp_unreachable: "no"
+  terminal: "yes"
   type: intrazone
 
 - name: 'interzone-default'
@@ -100,11 +100,11 @@ parsed_sample:
   to: any    
   destination: any          
   destination_region: none
-  user:    
+  user: ""    
   category: any
   application_service: any/any/any/any
   action: deny
-  icmp_unreachable: no
-  terminal: yes
+  icmp_unreachable: "no"
+  terminal: "yes"
   type: interzone
 
