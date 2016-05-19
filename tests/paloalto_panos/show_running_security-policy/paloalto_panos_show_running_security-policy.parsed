@@ -48,7 +48,7 @@ parsed_sample:
   type: ""
 
 - name: '"Inbound to DMZ Web"'
-  from: Unrust
+  from: Untrust
   source: any
   source_region: none
   to: DMZ
@@ -63,7 +63,7 @@ parsed_sample:
   type: ""
 
 - name: '"Inbound to DMZ Deny"'
-  from: Unrust
+  from: Untrust
   source: any
   source_region: none
   to: DMZ    
