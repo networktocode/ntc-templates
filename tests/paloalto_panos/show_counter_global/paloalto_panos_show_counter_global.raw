@@ -1,0 +1,16 @@
+Global counters:
+Elapsed time since last sampling: 349.576 seconds
+
+name                                   value     rate severity  category  aspect    description
+--------------------------------------------------------------------------------
+pkt_recv                                  29        0 info      packet    pktproc   Packets received
+pkt_sent                                  21        0 info      packet    pktproc   Packets transmitted
+pkt_sock_recv                              1        0 info      packet    pktproc   Packets received at socket level - delayed counter
+pkt_lldp_sent                              1        0 info      packet    pktproc   LLDP Packets transmitted
+flow_rcv_dot1q_tag_err                     1        0 drop      flow      parse     Packets dropped: 802.1q tag not configured
+flow_no_interface                          1        0 drop      flow      parse     Packets dropped: invalid interface
+ssl_hsm_up_down_event_rcv                  1        0 info      ssl       pktproc   The number of HSM up/down events received
+--------------------------------------------------------------------------------
+Total counters shown: 7
+--------------------------------------------------------------------------------
+
