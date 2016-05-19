@@ -1,14 +1,14 @@
 ---
 parsed_sample:
 
-- group: 1
+- group: "1"
   mode: Active-Passive
   state: active
   ha1_link_state: Up
   ha1_link_setting: 1Gb/s-full
   ha2_link_state: Up
   ha2_link_setting: 1Gb/s-full
-  priority: 50
+  priority: "50"
   preemptive: "yes"
   sw_version: Match
   app_content_compatibility: Match
