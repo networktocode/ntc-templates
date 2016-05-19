@@ -66,3 +66,13 @@ arista_eos_show_version.template, .*, arista_eos, sh[[ow]] ver[[sion]]
 cisco_nxos_show_interface.template, .*, cisco_nxos, sh[[ow]] inte[[rface]]
 arista_eos_show_interfaces.template, .*, arista_eos, sh[[ow]] inte[[rfaces]]
 juniper_junos_show_interfaces.template, .*, juniper_junos, sh[[ow]] inte[[rfaces]]
+paloalto_panos_show_system_info.template, .*, paloalto_panos, sh[[ow]] sys[[tem]] in[[fo]]
+paloalto_panos_show_counter_global.template, .*, paloalto_panos, sh[[ow]] coun[[ter]] glo[[bal]]
+paloalto_panos_show_high-availability_all.template, .*, paloalto_panos, sh[[ow]] high[[-availability]] all
+paloalto_panos_show_jobs_all.template, .*, paloalto_panos, sh[[ow]] jo[[bs]] all
+paloalto_panos_show_running_nat-policy.template, .*, paloalto_panos, sh[[ow]] runn[[ing]] nat[[-policy]]
+paloalto_panos_show_running_security-policy.template, .*, paloalto_panos, sh[[ow]] runn[[ing]] security[[-policy]]
+paloalto_panos_show_interface_logical.template, .*, paloalto, sh[[ow]] int[[erface]] logi[[cal]]
+paloalto_panos_show_interface_hardware.template, .*, paloalto, sh[[ow]] int[[erface]] hard[[ware]]
+
+
