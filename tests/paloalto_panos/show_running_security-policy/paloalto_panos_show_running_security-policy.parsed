@@ -37,7 +37,7 @@ parsed_sample:
   source: 10.1.1.0/24        
   source_region: none
   to: Untrust
-  destination: [ 8.8.8.8 8.8.4.4 ]
+  destination: "[ 8.8.8.8 8.8.4.4 ]"
   destination_region: none
   user: any
   category: any
