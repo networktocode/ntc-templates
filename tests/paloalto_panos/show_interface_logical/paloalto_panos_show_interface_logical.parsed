@@ -20,7 +20,7 @@ parsed_sample:
 
 - intf: ethernet1/3
   vsys: "1"
-  zone:
+  zone: ""
   forwarding: N/A
   address: N/A
 
@@ -32,7 +32,7 @@ parsed_sample:
 
 - intf: ethernet1/4    
   vsys: "1"
-  zone:     
+  zone: ""     
   forwarding: N/A         
   address: N/A          
 
@@ -44,7 +44,7 @@ parsed_sample:
 
 - intf: ethernet1/5
   vsys: "1"
-  zone:     
+  zone: ""     
   forwarding: N/A         
   address: N/A          
 
@@ -56,7 +56,7 @@ parsed_sample:
 
 - intf: ethernet1/6
   vsys: "1"
-  zone:
+  zone: ""
   forwarding: N/A
   address: N/A
 
@@ -92,19 +92,19 @@ parsed_sample:
 
 - intf: vlan1
   vsys: "1"
-  zone:
+  zone: ""
   forwarding: N/A
   address: N/A
 
 - intf: loopback
   vsys: "1"
-  zone:
+  zone: ""
   forwarding: N/A
   address: N/A
 
 - intf: tunnel
   vsys: "1"
-  zone:
+  zone: ""
   forwarding: N/A
   address: N/A
 
