@@ -5,6 +5,7 @@
 # abc[[xyz]] is expanded to abc(x(y(z)?)?)?, regexp inside [[]] is not supported
 #
 Template, Hostname, Platform, Command
+cisco_asa_dir.template,  .*, cisco_asa, dir
 cisco_ios_show_archive.template,  .*, cisco_ios, sh[[ow]] arc[[hive]]
 cisco_ios_show_capability_feature_routing.template,  .*, cisco_ios, sh[[ow]] cap[[ability]] f[[eature]] r[[outing]]
 cisco_ios_show_aliases.template,  .*, cisco_ios, sh[[ow]] alia[[ses]]
