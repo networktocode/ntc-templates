@@ -47,6 +47,7 @@ cisco_nxos_show_inventory.template, .*, cisco_nxos, sh[[ow]] inv[[entory]]
 cisco_nxos_show_access-lists.template, .*, cisco_nxos, sh[[ow]] acc[[ess-lists]]
 cisco_ios_show_access-list.template, .*, cisco_ios, sh[[ow]] acc[[ess-list]]
 arista_eos_show_clock.template, .*, arista_eos, sh[[ow]] clo[[ck]]
+cisco_xr_show_configuration_commit_list.template, .*, cisco_xr, sh[[ow]] conf[[iguration]] c[[ommit]] l[[ist]]
 arista_eos_show_interfaces_status.template, .*, arista_eos, sh[[ow]] int[[erfaces]] st[[atus]]
 arista_eos_show_ip_interface_brief.template, .*, arista_eos, sh[[ow]] i[[p]] int[[erface]] br[[ief]]
 arista_eos_show_mlag.template, .*, arista_eos, sh[[ow]] ml[[ag]]
@@ -74,5 +75,3 @@ paloalto_panos_show_running_nat-policy.template, .*, paloalto_panos, sh[[ow]] ru
 paloalto_panos_show_running_security-policy.template, .*, paloalto_panos, sh[[ow]] runn[[ing]] security[[-policy]]
 paloalto_panos_show_interface_logical.template, .*, paloalto_panos, sh[[ow]] int[[erface]] logi[[cal]]
 paloalto_panos_show_interface_hardware.template, .*, paloalto_panos, sh[[ow]] int[[erface]] hard[[ware]]
-
-
