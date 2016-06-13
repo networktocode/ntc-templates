@@ -1,0 +1,10 @@
+Value ADDRESS (\d+\.\d+\.\d+\.\d+)
+Value STATE (\S+)
+Value LEASE_REMAINING (\S+)
+Value MAC (\S+)
+Value INTERFACE (\S+)
+Value VRF (\S+)
+Value SUBLABEL (\S+)
+
+Start
+  ^${MAC}\s+${ADDRESS}\s+${STATE}\s+${LEASE_REMAINING}\s+${INTERFACE}\s+${VRF}\s+${SUBLABEL} -> Record
