@@ -47,6 +47,7 @@ cisco_ios_show_snmp_community.template, .*, cisco_ios, sh[[ow]] sn[[mp]] com[[mu
 cisco_nxos_show_inventory.template, .*, cisco_nxos, sh[[ow]] inv[[entory]]
 cisco_nxos_show_access-lists.template, .*, cisco_nxos, sh[[ow]] acc[[ess-lists]]
 cisco_ios_show_access-list.template, .*, cisco_ios, sh[[ow]] acc[[ess-list]]
+cisco_xr_show_dhcp_ipv4_proxy_binding.template, .*, cisco_xr, sh[[ow]] dh[[cp]] ipv4 p[[roxy]] b[[inding]]
 arista_eos_show_clock.template, .*, arista_eos, sh[[ow]] clo[[ck]]
 cisco_xr_show_configuration_commit_list.template, .*, cisco_xr, sh[[ow]] conf[[iguration]] c[[ommit]] l[[ist]]
 arista_eos_show_interfaces_status.template, .*, arista_eos, sh[[ow]] int[[erfaces]] st[[atus]]
