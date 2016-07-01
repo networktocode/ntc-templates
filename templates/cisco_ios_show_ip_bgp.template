@@ -1,25 +1,58 @@
-# Experimental for 'show ip bgp' on Cisco IOS
-#
-# Note these rules are not handling some possible 'show ip bgp' output.
-# I wanted to publish this however so that others could expand upon it.
-# 
-Value valid ([r\*][\>\s]i*)
-Value Filldown prefix (\d+\.\d+\.\d+\.[\d\/]+)
-Value Required next_hop (\d+\.\d+\.\d+\.\d+)
-Value metric (\d*)
-Value local_pref (\d*)
-Value weight (\d+)
-Value as_path ([\d ]*\s*i)
+# Carry down the local end information so that it is present on each row item.
+Value VALID_PATH_FLAG ((\*|\s)?)
+Value RIB_FAIL_FLAG ((r|\s)?)
+Value BEST_PATH_FLAG ((\>|\s)?)
+Value MULTIPATH_FLAG ((m|\s)?)
+Value INTERNAL_FLAG ((i|\s)?)
+Value Filldown PREFIX (\d+\.\d+\.\d+\.\d+(\/\d+)?)
+Value NEXTHOP ((?:[0-9]{1,3}\.){3}[0-9]{1,3})
+Value METRIC ((\d+(?:    ))?)
+Value LOCALPREF ((\d+)?)
+Value WEIGHT (\d+)
+Value AS_PATH ((((\d+\s)|(\{\S+\}\s))*)?)
+Value TYPE ((\e|\i|\?)?)
 
 Start
-  ^\s+Network.*Next.* -> Routes
+  ### Header - ignore
+  ^\s*Network\s+Next Hop\s+Metric\sLocPrf\sWeight\sPath
+  ###
+  ### Regular line - no metric - no localpref
+  ^\s*${VALID_PATH_FLAG}${RIB_FAIL_FLAG}${BEST_PATH_FLAG}${MULTIPATH_FLAG}${INTERNAL_FLAG}\s+${PREFIX}\s+${NEXTHOP}[\s]{19,99}${WEIGHT}\s${AS_PATH}${TYPE} -> Record
+  ### Regular line - all attributes
+  ^\s*${VALID_PATH_FLAG}${RIB_FAIL_FLAG}${BEST_PATH_FLAG}${MULTIPATH_FLAG}${INTERNAL_FLAG}\s+${PREFIX}\s+${NEXTHOP}\s+${METRIC}${LOCALPREF}\s+${WEIGHT}\s${AS_PATH}${TYPE} -> Record
+  ### Regular line - no localpref
+  ^\s*${VALID_PATH_FLAG}${RIB_FAIL_FLAG}${BEST_PATH_FLAG}${MULTIPATH_FLAG}${INTERNAL_FLAG}\s+${PREFIX}\s+${NEXTHOP}\s+${METRIC}[\s]{8,99}${WEIGHT}\s${AS_PATH}${TYPE} -> Record
+  ### Regular line - no metric
+  ^\s*${VALID_PATH_FLAG}${RIB_FAIL_FLAG}${BEST_PATH_FLAG}${MULTIPATH_FLAG}${INTERNAL_FLAG}\s+${PREFIX}\s+${NEXTHOP}[\s]{13,99}${LOCALPREF}\s+${WEIGHT}\s${AS_PATH}${TYPE} -> Record
+  ###
+  ### No space in front of prefix - no metric - no localpref
+  ^\s*${VALID_PATH_FLAG}${RIB_FAIL_FLAG}${BEST_PATH_FLAG}${MULTIPATH_FLAG}${INTERNAL_FLAG}[\s]{0,1}${PREFIX}\s+${NEXTHOP}[\s]{19,99}${WEIGHT}\s${AS_PATH}${TYPE} -> Record
+  ### No space in front of prefix - all attributes
+  ^\s*${VALID_PATH_FLAG}${RIB_FAIL_FLAG}${BEST_PATH_FLAG}${MULTIPATH_FLAG}${INTERNAL_FLAG}[\s]{0,1}${PREFIX}\s+${NEXTHOP}\s+${METRIC}${LOCALPREF}\s+${WEIGHT}\s${AS_PATH}${TYPE} -> Record
+  ### No space in front of prefix - no localpref
+  ^\s*${VALID_PATH_FLAG}${RIB_FAIL_FLAG}${BEST_PATH_FLAG}${MULTIPATH_FLAG}${INTERNAL_FLAG}[\s]{0,1}${PREFIX}\s+${NEXTHOP}\s+${METRIC}[\s]{8,99}${WEIGHT}\s${AS_PATH}${TYPE} -> Record
+  ### No space in front of prefix - no metric
+  ^\s*${VALID_PATH_FLAG}${RIB_FAIL_FLAG}${BEST_PATH_FLAG}${MULTIPATH_FLAG}${INTERNAL_FLAG}[\s]{0,1}${PREFIX}\s+${NEXTHOP}[\s]{13,99}${LOCALPREF}\s+${WEIGHT}\s${AS_PATH}${TYPE} -> Record
+  ###
+  ### No prefix  - no metric - no localpref
+  ^\s*${VALID_PATH_FLAG}${RIB_FAIL_FLAG}${BEST_PATH_FLAG}${MULTIPATH_FLAG}${INTERNAL_FLAG}[\s]{10,99}${NEXTHOP}[\s]{19,99}${WEIGHT}\s${AS_PATH}${TYPE} -> Record
+  ### No prefix - all attributes
+  ^\s*${VALID_PATH_FLAG}${RIB_FAIL_FLAG}${BEST_PATH_FLAG}${MULTIPATH_FLAG}${INTERNAL_FLAG}[\s]{10,99}${NEXTHOP}\s+${METRIC}${LOCALPREF}\s+${WEIGHT}\s${AS_PATH}${TYPE} -> Record
+  ### No prefix  - no localpref
+  ^\s*${VALID_PATH_FLAG}${RIB_FAIL_FLAG}${BEST_PATH_FLAG}${MULTIPATH_FLAG}${INTERNAL_FLAG}[\s]{10,99}${NEXTHOP}\s+${METRIC}[\s]{8,99}${WEIGHT}\s${AS_PATH}${TYPE} -> Record
+  ### No prefix  - no metric
+  ^\s*${VALID_PATH_FLAG}${RIB_FAIL_FLAG}${BEST_PATH_FLAG}${MULTIPATH_FLAG}${INTERNAL_FLAG}[\s]{10,99}${NEXTHOP}[\s]{13,99}${LOCALPREF}\s+${WEIGHT}\s${AS_PATH}${TYPE} -> Record
+  ###
+  ### Show ip bgp entry line with only prefix and no space
+  ^\s*${VALID_PATH_FLAG}${RIB_FAIL_FLAG}${BEST_PATH_FLAG}${MULTIPATH_FLAG}${INTERNAL_FLAG}${PREFIX}$$ -> ParseSub
+  ### Show ip bgp entry line with only prefix
+  ^\s*${VALID_PATH_FLAG}${RIB_FAIL_FLAG}${BEST_PATH_FLAG}${MULTIPATH_FLAG}${INTERNAL_FLAG}\s+${PREFIX}$$ -> ParseSub
 
-Routes
-  # Scrub the "Network" line
-  ^\s+Network\s+
-  #
-  # Weight, metric, and local_pref 
-  ^\s*${valid}\s*${prefix}\s+${next_hop}\s+${metric}\s+${local_pref}\s*\s\s${weight}\s${as_path} -> Record
-  # 
-  # Match lines with an assumed prefix
-  ^\s*${valid}\s*${next_hop}\s+${metric}\s+${local_pref}\s*\s\s${weight}\s${as_path} -> Record
+ParseSub
+  ^\s*${NEXTHOP}\s+${METRIC}${LOCALPREF}\s+${WEIGHT}\s${AS_PATH}${TYPE} -> Record Start
+  ^\s*${NEXTHOP}[\s]{19,99}${WEIGHT}\s${AS_PATH}${TYPE} -> Record Start
+  ^\s*${NEXTHOP}\s+${METRIC}[\s]{8,99}${WEIGHT}\s${AS_PATH}${TYPE} -> Record Start
+  ^\s*${NEXTHOP}[\s]{13,99}${LOCALPREF}\s+${WEIGHT}\s${AS_PATH}${TYPE} -> Record Start
+
+
+
