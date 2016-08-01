@@ -1,0 +1,15 @@
+Value IPAddress (\d+.\d+.\d+.\d+)
+Value MACAddress (\w+-\w+-\w+)
+Value VLAN (\S+|\d+)
+Value Interface (\S+)
+Value Aging (\d+)
+Value Type (\S+)
+
+Start
+  ^${IPAddress}\s+${MACAddress}\s+${VLAN}\s+${Interface}\s+${Aging}\s+${Type} -> Record
+
+
+
+
+
+
