@@ -1,12 +1,12 @@
-Value IPAddress (\d+.\d+.\d+.\d+)
-Value MACAddress (\w+-\w+-\w+)
+Value IPADDRESS (\d+.\d+.\d+.\d+)
+Value MACADDRESS (\w+-\w+-\w+)
 Value VLAN (\S+|\d+)
-Value Interface (\S+)
-Value Aging (\d+)
-Value Type (\S+)
+Value INTERFACE (\S+)
+Value AGING (\d+)
+Value TYPE (\S+)
 
 Start
-  ^${IPAddress}\s+${MACAddress}\s+${VLAN}\s+${Interface}\s+${Aging}\s+${Type} -> Record
+  ^${IPADDRESS}\s+${MACADDRESS}\s+${VLAN}\s+${INTERFACE}\s+${AGING}\s+${TYPE} -> Record
 
 
 
