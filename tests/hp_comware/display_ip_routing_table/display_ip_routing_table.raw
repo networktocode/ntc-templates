@@ -1,4 +1,4 @@
-Destinations : 20	Routes : 20
+Destinations : 5	Routes : 5
 
 Destination/Mask    Proto  Pre  Cost         NextHop         Interface
 0.0.0.0/32          Direct 0    0            127.0.0.1       InLoop0
@@ -6,18 +6,3 @@ Destination/Mask    Proto  Pre  Cost         NextHop         Interface
 10.10.10.0/24       OSPF   10   2            10.20.1.254     Vlan1
 10.20.1.0/24        Direct 0    0            10.20.1.1       Vlan1
 10.20.1.0/32        Direct 0    0            10.20.1.1       Vlan1
-10.20.1.1/32        Direct 0    0            127.0.0.1       InLoop0
-10.20.1.255/32      Direct 0    0            10.20.1.1       Vlan1
-10.20.10.0/24       OSPF   10   2            10.20.1.254     Vlan1
-10.101.0.0/24       OSPF   10   2            10.20.1.254     Vlan1
-10.101.10.1/32      OSPF   10   3            10.20.1.254     Vlan1
-10.101.15.0/24      OSPF   10   2            10.20.1.254     Vlan1
-10.101.16.0/24      OSPF   10   3            10.20.1.254     Vlan1
-127.0.0.0/8         Direct 0    0            127.0.0.1       InLoop0
-127.0.0.0/32        Direct 0    0            127.0.0.1       InLoop0
-127.0.0.1/32        Direct 0    0            127.0.0.1       InLoop0
-127.255.255.255/32  Direct 0    0            127.0.0.1       InLoop0
-192.168.1.221/32    OSPF   10   1            10.20.1.254     Vlan1
-224.0.0.0/4         Direct 0    0            0.0.0.0         NULL0
-224.0.0.0/24        Direct 0    0            0.0.0.0         NULL0
-255.255.255.255/32  Direct 0    0            127.0.0.1       InLoop0
