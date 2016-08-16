@@ -1,0 +1,88 @@
+---
+
+parsed_sample:
+
+- {cost: '0', destinationmask: 0.0.0.0/32, interface: InLoop0, nexthop: '127.0.0.1 ',
+    pre: '0', proto: Direct}
+- {cost: '2', destinationmask: 10.3.10.0/24, interface: Vlan1, nexthop: '10.20.1.254 ',
+    pre: '10', proto: OSPF}
+- {cost: '2', destinationmask: 10.10.3.0/24, interface: Vlan1, nexthop: '10.20.1.254 ',
+    pre: '10', proto: OSPF}
+- {cost: '2', destinationmask: 10.10.10.0/24, interface: Vlan1, nexthop: '10.20.1.254 ',
+    pre: '10', proto: OSPF}
+- {cost: '2', destinationmask: 10.10.11.0/24, interface: Vlan1, nexthop: '10.20.1.254 ',
+    pre: '10', proto: OSPF}
+- {cost: '2', destinationmask: 10.10.12.0/24, interface: Vlan1, nexthop: '10.20.1.254 ',
+    pre: '10', proto: OSPF}
+- {cost: '2', destinationmask: 10.10.13.0/24, interface: Vlan1, nexthop: '10.20.1.254 ',
+    pre: '10', proto: OSPF}
+- {cost: '2', destinationmask: 10.10.50.0/24, interface: Vlan1, nexthop: '10.20.1.254 ',
+    pre: '10', proto: OSPF}
+- {cost: '2', destinationmask: 10.10.101.0/24, interface: Vlan1, nexthop: '10.20.1.254 ',
+    pre: '10', proto: OSPF}
+- {cost: '2', destinationmask: 10.10.102.0/24, interface: Vlan1, nexthop: '10.20.1.254 ',
+    pre: '10', proto: OSPF}
+- {cost: '2', destinationmask: 10.10.103.0/24, interface: Vlan1, nexthop: '10.20.1.254 ',
+    pre: '10', proto: OSPF}
+- {cost: '2', destinationmask: 10.10.105.0/24, interface: Vlan1, nexthop: '10.20.1.254 ',
+    pre: '10', proto: OSPF}
+- {cost: '2', destinationmask: 10.10.106.0/24, interface: Vlan1, nexthop: '10.20.1.254 ',
+    pre: '10', proto: OSPF}
+- {cost: '2', destinationmask: 10.10.201.0/24, interface: Vlan1, nexthop: '10.20.1.254 ',
+    pre: '10', proto: OSPF}
+- {cost: '2', destinationmask: 10.10.203.0/24, interface: Vlan1, nexthop: '10.20.1.254 ',
+    pre: '10', proto: OSPF}
+- {cost: '2', destinationmask: 10.15.1.0/24, interface: Vlan1, nexthop: '10.20.1.254 ',
+    pre: '10', proto: OSPF}
+- {cost: '0', destinationmask: 10.20.1.0/24, interface: Vlan1, nexthop: '10.20.1.1 ',
+    pre: '0', proto: Direct}
+- {cost: '0', destinationmask: 10.20.1.0/32, interface: Vlan1, nexthop: '10.20.1.1 ',
+    pre: '0', proto: Direct}
+- {cost: '0', destinationmask: 10.20.1.1/32, interface: InLoop0, nexthop: '127.0.0.1 ',
+    pre: '0', proto: Direct}
+- {cost: '0', destinationmask: 10.20.1.255/32, interface: Vlan1, nexthop: '10.20.1.1 ',
+    pre: '0', proto: Direct}
+- {cost: '2', destinationmask: 10.20.10.0/24, interface: Vlan1, nexthop: '10.20.1.254 ',
+    pre: '10', proto: OSPF}
+- {cost: '2', destinationmask: 10.101.0.0/24, interface: Vlan1, nexthop: '10.20.1.254 ',
+    pre: '10', proto: OSPF}
+- {cost: '2', destinationmask: 10.101.2.0/24, interface: Vlan1, nexthop: '10.20.1.254 ',
+    pre: '10', proto: OSPF}
+- {cost: '2', destinationmask: 10.101.15.0/24, interface: Vlan1, nexthop: '10.20.1.254 ',
+    pre: '10', proto: OSPF}
+- {cost: '3', destinationmask: 10.101.16.0/24, interface: Vlan1, nexthop: '10.20.1.254 ',
+    pre: '10', proto: OSPF}
+- {cost: '2', destinationmask: 10.102.1.0/24, interface: Vlan1, nexthop: '10.20.1.254 ',
+    pre: '10', proto: OSPF}
+- {cost: '3', destinationmask: 10.254.0.100/32, interface: Vlan1, nexthop: '10.20.1.254 ',
+    pre: '10', proto: OSPF}
+- {cost: '0', destinationmask: '127.0.0.0/8 ', interface: InLoop0, nexthop: '127.0.0.1 ',
+    pre: '0', proto: Direct}
+- {cost: '0', destinationmask: 127.0.0.0/32, interface: InLoop0, nexthop: '127.0.0.1 ',
+    pre: '0', proto: Direct}
+- {cost: '0', destinationmask: 127.0.0.1/32, interface: InLoop0, nexthop: '127.0.0.1 ',
+    pre: '0', proto: Direct}
+- {cost: '0', destinationmask: 127.255.255.255/32, interface: InLoop0, nexthop: '127.0.0.1 ',
+    pre: '0', proto: Direct}
+- {cost: '2', destinationmask: 172.16.2.0/24, interface: Vlan1, nexthop: '10.20.1.254 ',
+    pre: '10', proto: OSPF}
+- {cost: '2', destinationmask: 172.16.3.0/24, interface: Vlan1, nexthop: '10.20.1.254 ',
+    pre: '10', proto: OSPF}
+- {cost: '1', destinationmask: 172.16.3.10/32, interface: Vlan1, nexthop: '10.20.1.254 ',
+    pre: '10', proto: OSPF}
+- {cost: '2', destinationmask: 172.16.4.0/24, interface: Vlan1, nexthop: '10.20.1.254 ',
+    pre: '10', proto: OSPF}
+- {cost: '2', destinationmask: 172.16.5.0/24, interface: Vlan1, nexthop: '10.20.1.254 ',
+    pre: '10', proto: OSPF}
+- {cost: '2', destinationmask: 172.16.6.0/24, interface: Vlan1, nexthop: '10.20.1.254 ',
+    pre: '10', proto: OSPF}
+- {cost: '2', destinationmask: 172.16.7.0/24, interface: Vlan1, nexthop: '10.20.1.254 ',
+    pre: '10', proto: OSPF}
+- {cost: '1', destinationmask: 192.168.1.221/32, interface: Vlan1, nexthop: '10.20.1.254 ',
+    pre: '10', proto: OSPF}
+- {cost: '0', destinationmask: '224.0.0.0/4 ', interface: NULL0, nexthop: '0.0.0.0 ',
+    pre: '0', proto: Direct}
+- {cost: '0', destinationmask: 224.0.0.0/24, interface: NULL0, nexthop: '0.0.0.0 ',
+    pre: '0', proto: Direct}
+- {cost: '0', destinationmask: 255.255.255.255/32, interface: InLoop0, nexthop: '127.0.0.1 ',
+    pre: '0', proto: Direct}
