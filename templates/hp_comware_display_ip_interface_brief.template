@@ -1,0 +1,10 @@
+Value Interface (\S+)
+Value Physical (\S+)
+Value Protocol (\S+)
+Value IP_Address (\d+.\d+.\d+.\d+)
+Value Description (\S+)
+
+
+Start
+  ^${Interface}\s+${Physical}\s+${Protocol}\s+${IP_Address}\s+${Description} -> Record
+
