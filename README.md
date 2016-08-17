@@ -27,7 +27,7 @@ Some notes on contributing that should help you ensure that your TravisCI builds
 
 
 
-##TextFSM Templates
+## TextFSM Templates
 
 TextFSM templates should be placed in the ./templates folder and should adhere to the NTC-Templates style.
 The TextFSM template name should be in the following format
@@ -51,7 +51,8 @@ Value YEAR (\d+)
 Start
   ^${TIME}\s+${TIMEZONE}\s+${DAYWEEK}\s+${DAY}/${MONTH}/${YEAR} -> Record  </pre>
 
-##Raw version of Input Text
+## Raw version of Input Text
+
 
 The raw text file should contain **only** the output of the CLI command to be parsed. It should **not** contain the CLI command itself
 The raw text file should be placed in a folder in the ./tests directory with the same name as the template file minus the .template extension
@@ -62,7 +63,7 @@ An example of the proper format is shown below
 19:35:31 UTC Sat 01/08/2011
 </pre>
 
-##YAML file containing expected parsed dictionary
+## YAML file containing expected parsed dictionary
 
 
 The parsed dictionary must be in a dictionary format. All keys in the dictionary should be in all lowercase
