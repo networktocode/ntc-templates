@@ -31,13 +31,13 @@ parsed_sample:
   mtu: "Unlimited"
 
 - admin_state: "Enabled"
-  hardware_type: "Adaptive-Services"
-  interface: "sp-0/0/0"
-  link_status: "Up"
-  mtu: "9192"
-
-- admin_state: "Enabled"
   hardware_type: "GRE"
   interface: "mt-0/0/0"
   link_status: "Up"
   mtu: "Unlimited"
+
+- admin_state: "Enabled"
+  hardware_type: "Adaptive-Services"
+  interface: "sp-0/0/0"
+  link_status: "Up"
+  mtu: "9192"
