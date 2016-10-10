@@ -19,82 +19,82 @@ parsed_sample:
 
     - port: "Eth1/2"
       name: "--"
-      status: "disabled" 
+      status: "disabled"
       vlan: "1"
       duplex: "auto"
-      speed: "auto" 
+      speed: "auto"
       type: "SFP-H10GB-CU2M"
 
     - port: "Eth1/3"
       name: "--"
-      status: "xcvrAbsen" 
+      status: "xcvrAbsen"
       vlan: "1"
       duplex: "auto"
       speed: "auto"
       type: "--"
 
     - port: "Eth1/4"
-      name: "--"               
+      name: "--"
       status: "xcvrAbsen"
-      vlan: "trunk"   
+      vlan: "trunk"
       duplex: "auto"
-      speed: "auto" 
-      type: "--" 
+      speed: "auto"
+      type: "--"
 
     - port: "Eth1/5"
-      name: "--"               
+      name: "--"
       status: "xcvrAbsen"
       vlan: "trunk"
       duplex: "auto"
-      speed: "auto" 
-      type: -- 
+      speed: "auto"
+      type: --
 
     - port: "Eth1/6"
-      name: "--"               
+      name: "--"
       status: "xcvrAbsen"
       vlan: "trunk"
       duplex: "auto"
-      speed: "auto" 
-      type: "--" 
+      speed: "auto"
+      type: "--"
 
     - port: Eth1/7
-      name: --               
+      name: --
       status: xcvrAbsen
       vlan: trunk
       duplex: auto
-      speed: auto 
-      type: -- 
+      speed: auto
+      type: --
 
     - port: "Eth1/8"
-      name: "--"               
+      name: "--"
       status: "xcvrAbsen"
       vlan: "1"
       duplex: "auto"
-      speed: "auto" 
-      type: "--" 
+      speed: "auto"
+      type: "--"
 
     - port: "Eth1/9"
-      name: "--"               
+      name: "--"
       status: "xcvrAbsen"
       vlan: "1"
       duplex: "auto"
-      speed: "auto" 
-      type: "--" 
+      speed: "auto"
+      type: "--"
 
     - port: "Eth1/10"
-      name: "managed by puppet"               
+      name: "managed by puppet"
       status: "xcvrAbsen"
       vlan: "routed"
       duplex: "auto"
-      speed: "auto" 
-      type: "--" 
+      speed: "auto"
+      type: "--"
 
     - port: "Eth1/11"
       name: "--"
       status: "xcvrAbsen"
       vlan: "1"
       duplex: "auto"
-      speed: "auto" 
+      speed: "auto"
       type: "--"
 
     - port: "Eth1/12"
@@ -102,7 +102,7 @@ parsed_sample:
       status: "xcvrAbsen"
       vlan: "1"
       duplex: "auto"
-      speed: "auto" 
+      speed: "auto"
       type: "--"
 
     - port: "Eth1/13"
@@ -110,7 +110,7 @@ parsed_sample:
       status: "xcvrAbsen"
       vlan: "1"
       duplex: "auto"
-      speed: "auto" 
+      speed: "auto"
       type: "--"
 
     - port: "Eth1/14"
@@ -126,7 +126,7 @@ parsed_sample:
       status: "xcvrAbsen"
       vlan: "1"
       duplex: "auto"
-      speed: "auto" 
+      speed: "auto"
       type: "--"
 
     - port: "Eth1/16"
@@ -134,7 +134,7 @@ parsed_sample:
       status: "xcvrAbsen"
       vlan: "1"
       duplex: "auto"
-      speed: "auto" 
+      speed: "auto"
       type: "--"
 
     - port: "Eth1/17"
@@ -142,7 +142,7 @@ parsed_sample:
       status: "xcvrAbsen"
       vlan: "1"
       duplex: "auto"
-      speed: "auto" 
+      speed: "auto"
       type: "--"
 
     - port: "Eth1/18"
@@ -150,7 +150,7 @@ parsed_sample:
       status: "xcvrAbsen"
       vlan: "1"
       duplex: "auto"
-      speed: "auto" 
+      speed: "auto"
       type: "--"
 
     - port: "Eth1/19"
@@ -158,7 +158,7 @@ parsed_sample:
       status: "xcvrAbsen"
       vlan: "1"
       duplex: "auto"
-      speed: "auto" 
+      speed: "auto"
       type: "--"
 
     - port: "Eth1/20"
@@ -166,7 +166,7 @@ parsed_sample:
       status: "xcvrAbsen"
       vlan: "1"
       duplex: "auto"
-      speed: "auto" 
+      speed: "auto"
       type: "--"
 
     - port: "Eth1/21"
@@ -174,7 +174,7 @@ parsed_sample:
       status: "xcvrAbsen"
       vlan: "1"
       duplex: "auto"
-      speed: "auto" 
+      speed: "auto"
       type: "--"
 
     - port: "Eth1/22"
@@ -182,7 +182,7 @@ parsed_sample:
       status: "xcvrAbsen"
       vlan: "1"
       duplex: "auto"
-      speed: "auto" 
+      speed: "auto"
       type: "--"
 
     - port: "Eth1/23"
@@ -190,7 +190,7 @@ parsed_sample:
       status: "xcvrAbsen"
       vlan: "1"
       duplex: "auto"
-      speed: "auto" 
+      speed: "auto"
       type: "--"
 
     - port: "Eth1/24"
@@ -206,7 +206,7 @@ parsed_sample:
       status: "xcvrAbsen"
       vlan: "1"
       duplex: "auto"
-      speed: "auto" 
+      speed: "auto"
       type: "--"
 
     - port: "Eth1/26"
@@ -214,7 +214,7 @@ parsed_sample:
       status: "xcvrAbsen"
       vlan: "1"
       duplex: "auto"
-      speed: "auto" 
+      speed: "auto"
       type: "--"
 
     - port: "Eth1/27"
@@ -222,7 +222,7 @@ parsed_sample:
       status: "xcvrAbsen"
       vlan: "1"
       duplex: "auto"
-      speed: "auto" 
+      speed: "auto"
       type: "--"
 
     - port: "Eth1/28"
@@ -230,7 +230,7 @@ parsed_sample:
       status: "xcvrAbsen"
       vlan: "1"
       duplex: "auto"
-      speed: "auto" 
+      speed: "auto"
       type: "--"
 
     - port: "Eth1/29"
@@ -238,7 +238,7 @@ parsed_sample:
       status: "xcvrAbsen"
       vlan: "1"
       duplex: "auto"
-      speed: "auto" 
+      speed: "auto"
       type: "--"
 
     - port: "Eth1/30"
@@ -246,7 +246,7 @@ parsed_sample:
       status: "xcvrAbsen"
       vlan: "1"
       duplex: "auto"
-      speed: "auto" 
+      speed: "auto"
       type: "--"
 
     - port: "Eth1/31"
@@ -254,7 +254,7 @@ parsed_sample:
       status: "xcvrAbsen"
       vlan: "1"
       duplex: "auto"
-      speed: "auto" 
+      speed: "auto"
       type: "--"
 
     - port: "Eth1/32"
@@ -262,7 +262,7 @@ parsed_sample:
       status: "xcvrAbsen"
       vlan: "1"
       duplex: "auto"
-      speed: "auto" 
+      speed: "auto"
       type: "--"
 
     - port: "Eth1/33"
@@ -270,7 +270,7 @@ parsed_sample:
       status: "xcvrAbsen"
       vlan: "1"
       duplex: "auto"
-      speed: "auto" 
+      speed: "auto"
       type: "--"
 
     - port: "Eth1/34"
@@ -278,7 +278,7 @@ parsed_sample:
       status: "xcvrAbsen"
       vlan: "1"
       duplex: "auto"
-      speed: "auto" 
+      speed: "auto"
       type: "--"
 
     - port: "Eth1/35"
@@ -286,7 +286,7 @@ parsed_sample:
       status: "xcvrAbsen"
       vlan: "1"
       duplex: "auto"
-      speed: "auto" 
+      speed: "auto"
       type: "--"
 
     - port: "Eth1/36"
@@ -294,7 +294,7 @@ parsed_sample:
       status: "xcvrAbsen"
       vlan: "1"
       duplex: "auto"
-      speed: "auto" 
+      speed: "auto"
       type: "--"
 
     - port: "Eth1/37"
@@ -302,7 +302,7 @@ parsed_sample:
       status: "xcvrAbsen"
       vlan: "1"
       duplex: "auto"
-      speed: "auto" 
+      speed: "auto"
       type: "--"
 
     - port: "Eth1/38"
@@ -310,7 +310,7 @@ parsed_sample:
       status: "xcvrAbsen"
       vlan: "1"
       duplex: "auto"
-      speed: "auto" 
+      speed: "auto"
       type: "--"
 
     - port: "Eth1/39"
@@ -318,7 +318,7 @@ parsed_sample:
       status: "xcvrAbsen"
       vlan: "1"
       duplex: "auto"
-      speed: "auto" 
+      speed: "auto"
       type: "--"
 
     - port: "Eth1/40"
@@ -326,7 +326,7 @@ parsed_sample:
       status: "xcvrAbsen"
       vlan: "1"
       duplex: "auto"
-      speed: "auto" 
+      speed: "auto"
       type: "--"
 
     - port: "Eth1/41"
@@ -334,7 +334,7 @@ parsed_sample:
       status: "xcvrAbsen"
       vlan: "1"
       duplex: "auto"
-      speed: "auto" 
+      speed: "auto"
       type: "--"
 
     - port: "Eth1/42"
@@ -342,7 +342,7 @@ parsed_sample:
       status: "xcvrAbsen"
       vlan: "1"
       duplex: "auto"
-      speed: "auto" 
+      speed: "auto"
       type: "--"
 
     - port: "Eth1/43"
@@ -350,7 +350,7 @@ parsed_sample:
       status: "xcvrAbsen"
       vlan: "1"
       duplex: "auto"
-      speed: "auto" 
+      speed: "auto"
       type: "--"
 
     - port: "Eth1/44"
@@ -358,7 +358,7 @@ parsed_sample:
       status: "xcvrAbsen"
       vlan: "1"
       duplex: "auto"
-      speed: "auto" 
+      speed: "auto"
       type: "--"
 
     - port: "Eth1/45"
@@ -366,7 +366,7 @@ parsed_sample:
       status: "xcvrAbsen"
       vlan: "1"
       duplex: "auto"
-      speed: "auto" 
+      speed: "auto"
       type: "--"
 
     - port: "Eth1/46"
@@ -374,7 +374,7 @@ parsed_sample:
       status: "xcvrAbsen"
       vlan: "1"
       duplex: "auto"
-      speed: "auto" 
+      speed: "auto"
       type: "--"
 
     - port: "Eth1/47"
@@ -382,7 +382,7 @@ parsed_sample:
       status: "xcvrAbsen"
       vlan: "1"
       duplex: "auto"
-      speed: "auto" 
+      speed: "auto"
       type: "--"
 
     - port: "Eth1/48"
@@ -390,7 +390,7 @@ parsed_sample:
       status: "xcvrAbsen"
       vlan: "1"
       duplex: "auto"
-      speed: "auto" 
+      speed: "auto"
       type: "--"
 
     - port: "Eth2/1"
@@ -398,7 +398,7 @@ parsed_sample:
       status: "notconnec"
       vlan: "routed"
       duplex: "auto"
-      speed: "auto" 
+      speed: "auto"
       type: "QSFP-40G-SR-BD"
 
     - port: "Eth2/2"
@@ -436,15 +436,7 @@ parsed_sample:
     - port: "Eth2/6"
       name: "--"
       status: "xcvrAbsen"
-      vlan: "trunk" 
-      duplex: "auto"
-      speed: "auto"
-      type: "--" 
-
-    - port: "Eth2/7"
-      name: "--"
-      status: "xcvrAbsen"
-      vlan: "1" 
+      vlan: "trunk"
       duplex: "auto"
       speed: "auto"
       type: "--"
@@ -452,82 +444,82 @@ parsed_sample:
     - port: "Eth2/7"
       name: "--"
       status: "xcvrAbsen"
-      vlan: "1"   
+      vlan: "1"
       duplex: "auto"
       speed: "auto"
-      type: "--"            
+      type: "--"
 
     - port: "Eth2/8"
       name: "--"
       status: "xcvrAbsen"
-      vlan: "1"   
+      vlan: "1"
       duplex: "auto"
       speed: "auto"
-      type: "--"            
+      type: "--"
 
     - port: "Eth2/9"
       name: "--"
       status: "xcvrAbsen"
-      vlan: "1"   
+      vlan: "1"
       duplex: "auto"
       speed: "auto"
-      type: "--"            
+      type: "--"
 
     - port: "Eth2/10"
       name: "--"
       status: "xcvrAbsen"
-      vlan: "1"   
+      vlan: "1"
       duplex: "auto"
       speed: "auto"
-      type: "--"            
+      type: "--"
 
     - port: "Eth2/11"
       name: "--"
       status: "disabled"
-      vlan: "1"   
+      vlan: "1"
       duplex: "auto"
       speed: "auto"
       type: "QSFP-40G-SR-BD"
 
     - port: "Eth2/12"
       name: "--"
-      status: "disabled" 
+      status: "disabled"
       vlan: "1"
       duplex: "auto"
-      speed: "auto" 
+      speed: "auto"
       type: "QSFP-40G-SR-BD"
 
     - port: "Po10"
       name: "--"
-      status: "noOperMem" 
+      status: "noOperMem"
       vlan: "1"
       duplex: "auto"
-      speed: "auto" 
+      speed: "auto"
       type: "--"
 
-    - port: "Po11"   
+    - port: "Po11"
       name: "--"
       status: "noOperMem"
       vlan: "1"
       duplex: "auto"
       speed: "auto"
-      type: "--"  
+      type: "--"
 
-    - port: "Po12"   
+    - port: "Po12"
       name: "--"
       status: "noOperMem"
       vlan: "1"
       duplex: "auto"
       speed: "auto"
-      type: "--"  
+      type: "--"
 
-    - port: "Lo10"   
+    - port: "Lo10"
       name: "--"
       status: "connected"
       vlan: "routed"
       duplex: "auto"
       speed: "auto"
-      type: "--"  
+      type: "--"
 
     - port: "Vlan1"
       name: "--"
@@ -539,7 +531,7 @@ parsed_sample:
 
     - port: "Vlan5"
       name: "--"
-      status: "down"     
+      status: "down"
       vlan: "routed"
       duplex: "auto"
       speed: "auto"
@@ -547,7 +539,7 @@ parsed_sample:
 
     - port: "Vlan10"
       name: "--"
-      status: "down"     
+      status: "down"
       vlan: "routed"
       duplex: "auto"
       speed: "auto"
@@ -555,7 +547,7 @@ parsed_sample:
 
     - port: "Vlan20"
       name: "--"
-      status: "down"     
+      status: "down"
       vlan: "routed"
       duplex: "auto"
       speed: "auto"
@@ -563,7 +555,7 @@ parsed_sample:
 
     - port: "Vlan66"
       name: "--"
-      status: "down"     
+      status: "down"
       vlan: "routed"
       duplex: "auto"
       speed: "auto"
@@ -571,7 +563,7 @@ parsed_sample:
 
     - port: "Vlan77"
       name: "--"
-      status: "down"     
+      status: "down"
       vlan: "routed"
       duplex: "auto"
       speed: "auto"
@@ -579,47 +571,8 @@ parsed_sample:
 
     - port: "Vlan146"
       name: "my vlan 146"
-      status: "down"     
+      status: "down"
       vlan: "routed"
       duplex: "auto"
       speed: "auto"
       type: "--"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
