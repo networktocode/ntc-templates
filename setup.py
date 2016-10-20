@@ -1,9 +1,9 @@
 import re
 from codecs import open
-from setuptools import setup
+from setuptools import setup, find_packages
 
 version = ''
-with open('ntc_templates/__init__.py', 'r') as fd:
+with open('lib/ntc_templates/__init__.py', 'r') as fd:
     version = re.search(r'^__version__\s*=\s*[\'"]([^\'"]*)[\'"]',
                         fd.read(), re.MULTILINE).group(1)
 
@@ -20,7 +20,8 @@ long_description = readme + '\n\n' + history
 
 config = {
     'name': 'ntc_templates',
-    'packages': ['ntc_templates'],
+    'package_dir': {'': 'lib'},
+    'packages': find_packages('lib'),
     'version': version,
     'package_data': {'ntc_templates': ['templates/*']},
     'description': 'Package to return structured data from the output of network devices.',
