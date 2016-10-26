@@ -1,4 +1,3 @@
-Value Filldown LOCAL_HOST (\S+)
 Value Required DESTINATION_HOST (\S+)
 Value MANAGEMENT_IP (.*)
 Value PLATFORM (.*)
@@ -7,7 +6,6 @@ Value LOCAL_PORT (.*)
 Value SOFTWARE_VERSION (.*)
 
 Start
-  ^${LOCAL_HOST}[>#].
   ^Device ID: ${DESTINATION_HOST}
   ^Entry address\(es\): -> ParseIP
   ^Platform: ${PLATFORM},
