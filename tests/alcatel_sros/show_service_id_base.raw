@@ -1,0 +1,29 @@
+===============================================================================
+Service Basic Information
+===============================================================================
+Service Id        : 1099                Vpn Id            : 0
+Service Type      : VPLS                
+Name              : (Not Specified)
+Description       : this_is_a_description
+Customer Id       : 4                   
+Last Status Change: 10/31/2016 14:44:10 
+Last Mgmt Change  : 11/01/2016 11:04:36 
+Admin State       : Up                  Oper State        : Down
+MTU               : 5000                Def. Mesh VC Id   : 1099
+SAP Count         : 1                   SDP Bind Count    : 1
+Snd Flush on Fail : Disabled            Host Conn Verify  : Disabled
+Propagate MacFlush: Disabled            Per Svc Hashing   : Disabled
+Allow IP Intf Bind: Disabled            
+Def. Gateway IP   : None                
+Def. Gateway MAC  : None                
+Temp Flood Time   : Disabled            Temp Flood        : Inactive
+Temp Flood Chg Cnt: 0                   
+ 
+-------------------------------------------------------------------------------
+Service Access & Destination Points
+-------------------------------------------------------------------------------
+Identifier                               Type         AdmMTU  OprMTU  Adm  Opr
+-------------------------------------------------------------------------------
+sap:1/1/6:100                            q-tag        9212    9212    Up   Down
+sdp:4:1099 M(192.0.2.4)                  Mesh         0       9190    Up   Down
+===============================================================================
