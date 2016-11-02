@@ -85,4 +85,4 @@ paloalto_panos_show_interface_logical.template, .*, paloalto_panos, sh[[ow]] int
 paloalto_panos_show_interface_hardware.template, .*, paloalto_panos, sh[[ow]] int[[erface]] hard[[ware]]
 alcatel_sros_show_service_id_base.template, .*, alcatel_sros, sh[[ow]] serv[[ice]] id [0-9]+ base
 alcatel_sros_show_router_bgp_routes_vpn_ipv4.template, .*, alcatel_sros, sh[[ow]] router bgp routes vpn-ipv4
-alcatel_sros_oam_mac_ping.template, .*, alcatel_sros, oam mac-ping service [0-9]+ dest[[ination]] [a-f0-9]?\:[a-f0-9]?\:[a-f0-9]?\:[a-f0-9]?\:[a-f0-9]?\:[a-f0-9]?
+alcatel_sros_oam_mac_ping.template, .*, alcatel_sros, oam mac-ping service [0-9]+ dest[[ination]] [a-f,0-9]?\:[a-f,0-9]?\:[a-f,0-9]?\:[a-f,0-9]?\:[a-f,0-9]?\:[a-f,0-9]?
