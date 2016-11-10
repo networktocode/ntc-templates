@@ -1,0 +1,187 @@
+
+
+
+
+
+
+
+
+
+
+CRASHLogfileshow
+
+
+Active Management Module 2 Crash Log
+
+...Crash Log File Header..........................
+Product:   HP J9091A
+Name:      HP Switch E8212zl
+Date:      Apr 20 2012 12:34:21
+Build:     13
+Version:   K.15.06.0017
+Directory: /ws/swbuildm/ec_rel_eureka_qaoff/code/b
+CPU:       PPC85XX
+  crash rec index = 1
+   boot type    = Warm Boot
+   willBootType = UNKNOWN BOOT
+..................................................
+    CrashRecordPointer (ff419a8)  for Crash Record Index 1
+----- Crash Record:   1 at 0xff419a8 -----
+crash id = 0x7f0c3993
+crash info = 0xbaabface
+Mgmt Module 2 went down in Active Mode
+timestamp:  03/08/16 00:04:11
+Crash msg:  Operator warm reload.
+-----
+
+
+Standby Management Module 1 Crash Log
+
+Crash Log Uninitialized
+
+
+CRASHData
+
+Slot 1
+
+CRASHLogfileshow
+
+slot a:
+-------
+
+...Crash Log File Header..........................
+Product:   Procurve CA
+Name:      Procurve Switch card id:68
+Date:      Apr 20 2012 12:18:16
+Build:     288
+Version:   K.15.06.0017
+Directory: /ws/swbuildm/ec_rel_eureka_qaoff/code/b
+CPU:       arm11
+  crash rec index = 0
+   boot type    = POWER ON
+   willBootType = UNKNOWN BOOT
+..................................................
+  No Saved Crash Information
+
+
+CRASHData
+
+slot a:
+-------
+
+MSGCOUNTERSshow
+
+slot a:
+-------
+ txSeq        =      64295     rxSeq       =      42342 
+ rxAcks       =    1209122     txAcks      =    2151500 
+ retx         =          0     rxOutOfSeq  =          0 
+ rtx_pktcnt   =          0     rxSeqQcnt   =          0 
+ Max pktcnt   =         31     Max Qcnt    =          0 
+ Bad CRCs     =          0     dupSeq      =          3 
+
+
+MSGpoolStatsShow
+
+slot a:
+-------
+             total   free  allocated  min-free  missed  corrupt
+             -----  -----  ---------  --------  ------  -------
+  MSG_BUF     4400   4168      232       4010        0       0
+
+
+Checking buffer pool structures... PASSED
+
+Allocation statistics for MSG buffer pool:
+Current system time: 01/16/90 15:16:02
+   OwnerName    OwnerID    #Owned        Oldest
+  -----------   --------   ------   -----------------
+       (null)   1b215600       3    01/01/90 00:00:00
+     muiCore1   1b1ed400       2    01/01/90 00:00:04
+      mSess11   1b1eda40       1    01/01/90 00:00:03
+    mSesInp11   1b1ea880       1    01/01/90 00:00:04
+   mChassAgnt   1b1f1500       8    01/01/90 00:00:04
+   mInstUpCtl   1b215740       2    01/16/90 15:14:59
+     mAsicUpd   1b1e78c0       1    01/16/90 15:16:01
+   mAdMUpCtrl   1b1e7e00       3    01/01/90 00:00:05
+    mHttpCtUp   1b1dfc00       1    01/16/90 15:16:01
+   mIpAdMUpCt   1b1e4c80       3    01/01/90 00:00:05
+   mPmSlvCtrl   1b1db500       3    01/01/90 00:00:05
+   mPoeMgrCtl   1b1f7e80       2    01/01/90 00:00:06
+   tagentConsole   1b1f7900       1    01/16/90 15:16:01
+     muiAgent   1b1f7640       1    01/16/90 15:16:01
+    INTERRUPT          0     199    01/16/90 15:15:13
+  Note: (null) indicates buffer allocated at init time (not used since).
+
+
+Slot 2
+
+CRASHLogfileshow
+
+slot b:
+-------
+
+...Crash Log File Header..........................
+Product:   Procurve CA
+Name:      Procurve Switch card id:124
+Date:      Apr 20 2012 12:18:16
+Build:     288
+Version:   K.15.06.0017
+Directory: /ws/swbuildm/ec_rel_eureka_qaoff/code/b
+CPU:       arm11
+  crash rec index = 0
+   boot type    = POWER ON
+   willBootType = UNKNOWN BOOT
+..................................................
+  No Saved Crash Information
+
+
+CRASHData
+
+slot b:
+-------
+
+MSGCOUNTERSshow
+
+slot b:
+-------
+ txSeq        =      12101     rxSeq       =      44667 
+ rxAcks       =    1237277     txAcks      =    2131969 
+ retx         =          0     rxOutOfSeq  =          0 
+ rtx_pktcnt   =          0     rxSeqQcnt   =          0 
+ Max pktcnt   =         31     Max Qcnt    =          0 
+ Bad CRCs     =          0     dupSeq      =          1 
+
+
+MSGpoolStatsShow
+
+slot b:
+-------
+             total   free  allocated  min-free  missed  corrupt
+             -----  -----  ---------  --------  ------  -------
+  MSG_BUF     4400   4168      232       4062        0       0
+
+
+Checking buffer pool structures... PASSED
+
+Allocation statistics for MSG buffer pool:
+Current system time: 01/16/90 15:16:00
+   OwnerName    OwnerID    #Owned        Oldest
+  -----------   --------   ------   -----------------
+       (null)   1b215600       3    01/01/90 00:00:00
+     muiCore2   1b1f1bc0       2    01/01/90 00:00:04
+      mSess21   1b1ed000       1    01/01/90 00:00:04
+    mSesInp21   1b215740       1    01/01/90 00:00:04
+   mChassAgnt   1b1f1500       8    01/01/90 00:00:07
+     mAsicUpd   1b1e8d40       1    01/16/90 15:15:59
+   mAdMUpCtrl   1b1e5280       3    01/01/90 00:00:08
+    mHttpCtUp   1b1dc080       1    01/16/90 15:15:59
+   mIpAdMUpCt   1b1e1100       3    01/01/90 00:00:08
+   mPmSlvCtrl   1b1dc980       3    01/01/90 00:00:08
+   mInstUpCtl   1b1eaf40       2    01/16/90 15:14:59
+   mPoeMgrCtl   1b1f7f00       2    01/01/90 00:00:09
+   tagentConsole   1b1f7980       1    01/16/90 15:15:59
+     muiAgent   1b1f76c0       1    01/16/90 15:15:59
+    INTERRUPT          0     199    01/16/90 15:15:06
+  Note: (null) indicates buffer allocated at init time (not used since).
+

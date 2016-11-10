@@ -83,3 +83,7 @@ paloalto_panos_show_running_nat-policy.template, .*, paloalto_panos, sh[[ow]] ru
 paloalto_panos_show_running_security-policy.template, .*, paloalto_panos, sh[[ow]] runn[[ing]] security[[-policy]]
 paloalto_panos_show_interface_logical.template, .*, paloalto_panos, sh[[ow]] int[[erface]] logi[[cal]]
 paloalto_panos_show_interface_hardware.template, .*, paloalto_panos, sh[[ow]] int[[erface]] hard[[ware]]
+hp_procurve_show_system.template, .*, hp_procurve, sh[[ow]] syst[[em]]
+hp_procurve_show_vlans.template, .*, hp_procurve, sh[[ow]] vl[[ans]]
+hp_procurve_show_arp.template, .*, hp_procurve, sh[[ow]] ar[[p]]
+hp_procurve_show_tech_buffers.template, .*, hp_procurve, sh[[ow]] tec[[h]] buf[[ffers]]
