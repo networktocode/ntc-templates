@@ -71,6 +71,8 @@ cisco_ios_show_version.template, .*, cisco_ios, sh[[ow]] ver[[sion]]
 cisco_ios_show_vlan.template, .*, cisco_ios, sh[[ow]] vlan
 dell_force10_show_version.template, .*, dell_force10, sh[[ow]] ver[[sion]]
 dell_force10_show_vlan.template, .*, dell_force10, sh[[ow]] vl[[an]]
+dell_force10_show_vlan_brief.template, .*, dell_force10, sh[[ow]] vl[[an]] br[[ief]]
+dell_force10_show_arp.template, .*, dell_force10, sh[[ow]] ar[[p]]
 arista_eos_show_version.template, .*, arista_eos, sh[[ow]] ver[[sion]]
 cisco_nxos_show_interface.template, .*, cisco_nxos, sh[[ow]] inte[[rface]]
 arista_eos_show_interfaces.template, .*, arista_eos, sh[[ow]] inte[[rfaces]]
