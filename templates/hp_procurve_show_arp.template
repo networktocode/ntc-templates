@@ -1,0 +1,10 @@
+Value IP ((?:[0-9]{1,3}\.){3}[0-9]{1,3})
+Value MAC ([0-9a-fA-F]{6}-[0-9a-fA-F]{6})
+Value TYPE (\S+)
+Value PORT (\d+)
+
+Start
+  ^.*IP ARP table -> ARP
+
+ARP
+  ^\s+${IP}\s+${MAC}\s+${TYPE}\s+${PORT} -> Record
