@@ -1,0 +1,8 @@
+Value MODULE (\d+)
+Value PORTS (\d+)
+Value TYPE (\S+(\s+\S+)+)
+Value MODEL (\S+)
+Value STATUS (\S+(\s+.)?)
+
+Start
+  ^${MODULE}\s+${PORTS}\s+${TYPE}\s+Module\s+${MODEL}\s+${STATUS} -> Record
