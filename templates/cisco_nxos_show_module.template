@@ -1,0 +1,12 @@
+Value MODULE (\d+)
+Value PORTS (\d+)
+Value TYPE (\S+(\s+\S+)+)
+Value MODEL (\S+)
+Value STATUS (ok|active \*|ha-standby|powered-dn)
+
+Start
+  ^Xbar\s+Ports\s+Module-Type\s+Model\s+Status -> Fail
+  ^${MODULE}\s+${PORTS}\s+${TYPE}\s+${MODEL}\s+${STATUS} -> Record
+
+Fail
+  ^.* -> NoRecord

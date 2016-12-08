@@ -5,8 +5,8 @@ Value BOOT_IMAGE (.*)
 Value PLATFORM (\w+)
 
 Start
-  ^\s+NXOS: version\s${OS}
-  ^\s+NXOS image file is:\s${BOOT_IMAGE}
+  ^\s+(NXOS: version|system:\s+version)\s${OS}
+  ^\s+(NXOS|kickstart) image file is:\s${BOOT_IMAGE}
   ^\s+cisco Nexus\d+\s${PLATFORM}
   ^Kernel uptime is\s${UPTIME}
   ^\s+Reason:\s${LAST_REBOOT_REASON} -> Record
