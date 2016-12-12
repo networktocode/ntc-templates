@@ -3,7 +3,7 @@ Value GROUP (\d+)
 Value PRIORITY (\d+)
 Value PREEMPT (.)
 Value STATE (\w+)
-Value ACTIVE (\w+)
+Value ACTIVE (\S+)
 Value STANDBY (\S+)
 Value VIRTUALIP (\S+)
 
