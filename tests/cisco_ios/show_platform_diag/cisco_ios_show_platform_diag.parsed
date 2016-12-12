@@ -3,6 +3,7 @@ parsed_sample:
 
 - chassis_type: 'ASR1004'
   slot_number:  'R0'
+  module_sku: 'ASR1000-RP1'
   state:  ''
   running_state:  'ok' 
   internal_state:  'online'
@@ -14,6 +15,7 @@ parsed_sample:
 
 - chassis_type: 'ASR1004'
   slot_number:  'R0/0'
+  module_sku: ''
   state:  ''
   running_state:  'ok, active' 
   internal_state:  ''
@@ -25,6 +27,7 @@ parsed_sample:
 
 - chassis_type: 'ASR1004'
   slot_number:  'R0/1'
+  module_sku: ''
   state:  ''
   running_state:  'ok, standby' 
   internal_state:  ''
@@ -36,6 +39,7 @@ parsed_sample:
 
 - chassis_type: 'ASR1004'
   slot_number:  'F0'
+  module_sku: 'ASR1000-ESP10'
   state:  ''
   running_state:  'ok, active' 
   internal_state:  'online'
@@ -47,6 +51,7 @@ parsed_sample:
 
 - chassis_type: 'ASR1004'
   slot_number:  'P0'
+  module_sku: 'ASR1004-PWR-AC'
   state:  'ok'
   running_state:  '' 
   internal_state:  ''
@@ -58,6 +63,7 @@ parsed_sample:
 
 - chassis_type: 'ASR1004'
   slot_number:  'P1'
+  module_sku: 'ASR1004-PWR-AC'
   state:  'ok'
   running_state:  '' 
   internal_state:  ''

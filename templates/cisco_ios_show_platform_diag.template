@@ -1,5 +1,6 @@
 Value Filldown CHASSIS_TYPE (.*?)
 Value Required SLOT_NUMBER ((?:.*)[A-Z]\d+(?:.*))
+Value MODULE_SKU (.+?)
 Value STATE (.+)
 Value RUNNING_STATE (.+)
 Value INTERNAL_STATE (.+)
@@ -10,8 +11,8 @@ Value HARDWARE_SIGNAL (.*)
 Value PACKET_SIGNAL (.*)
 
 Start
-  ^Chassis type: ${CHASSIS_TYPE}(\s|$$)
-  ^.*(?:Sub-slot|Slot):\s${SLOT_NUMBER}\,
+  ^Chassis type: ${CHASSIS_TYPE}(?:\s|$$)
+  ^.*(?:Sub-slot|Slot):\s${SLOT_NUMBER}\,(?:\s${MODULE_SKU}|\s+$$)(?:\s+|$$)
   ^\s+State\s*\:\s${STATE}
   ^.*Running state\s*\:\s${RUNNING_STATE}
   ^.*Internal state\s*\:\s${INTERNAL_STATE}
