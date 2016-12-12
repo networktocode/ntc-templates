@@ -1,0 +1,59 @@
+Chassis type: ASR1004 
+ Slot: 0, ASR1000-SIP10 
+ Running state               : ok
+ Internal state              : online
+ Internal operational state  : ok
+ Physical insert detect time : 00:00:48 (4d22h ago)
+ Software declared up time   : 00:01:40 (4d22h ago)
+ CPLD version                : 07091401
+ Firmware version            : 12.2(33r)XNB
+
+ Sub-slot: 0/0, SPA-5X1GE-V2
+ Operational status          : ok
+ Internal state              : inserted
+ Physical insert detect time : 00:00:36 (4d22h ago)
+ Logical insert detect time  : 00:02:23 (4d22h ago)
+
+ Sub-slot: 0/1, SPA-2XT3/E3
+ Operational status          : ok
+ Internal state              : inserted
+   Physical insert detect time : 00:00:36 (4d22h ago)
+   Logical insert detect time  : 00:02:23 (4d22h ago)
+
+ Slot: R0, ASR1000-RP1         
+   Running state               : ok
+   Internal state              : online
+   Internal operational state  : ok
+   Physical insert detect time : 00:00:48 (4d22h ago)
+   Software declared up time   : 00:00:48 (4d22h ago)
+   CPLD version                : 07062111
+   Firmware version            : 12.2(33r)XNB
+
+ Sub-slot: R0/0, 
+   Running state               : ok, active
+   Logical insert detect time  : 00:00:48 (4d22h ago)
+   Became HA Active time       : 00:04:56 (4d22h ago)
+
+ Sub-slot: R0/1, 
+   Running state               : ok, standby
+   Logical insert detect time  : 00:02:50 (4d22h ago)
+
+ Slot: F0, ASR1000-ESP10       
+   Running state               : ok, active
+   Internal state              : online
+   Internal operational state  : ok
+   Physical insert detect time : 00:00:48 (4d22h ago)
+   Software declared up time   : 00:01:40 (4d22h ago)
+   Hardware ready signal time  : 00:00:49 (4d22h ago)
+   Packet ready signal time    : 00:01:49 (4d22h ago)
+   CPLD version                : 07051680
+   Firmware version            : 12.2(33r)XNB
+
+ Slot: P0, ASR1004-PWR-AC
+   State                       : ok
+   Physical insert detect time : 00:01:40 (4d22h ago)
+
+ Slot: P1, ASR1004-PWR-AC
+   State                       : ok
+   Physical insert detect time : 00:01:40 (4d22h ago)
+
