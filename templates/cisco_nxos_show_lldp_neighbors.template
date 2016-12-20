@@ -1,4 +1,4 @@
-Value NEIGHBOR (\S+)
+Value NEIGHBOR (\S+(\.\S+)+)
 Value LOCAL_INTERFACE (\S+)
 Value NEIGHBOR_INTERFACE (\S+)
 
@@ -7,3 +7,5 @@ Start
 
 LLDP
   ^${NEIGHBOR}\s+${LOCAL_INTERFACE}\s+\d+\s+[\w+\s]+\S+\s+${NEIGHBOR_INTERFACE} -> Record
+  ^${NEIGHBOR}
+  ^\s+${LOCAL_INTERFACE}\s+\d+\s+[\w+\s]+\S+\s+${NEIGHBOR_INTERFACE} -> Record
