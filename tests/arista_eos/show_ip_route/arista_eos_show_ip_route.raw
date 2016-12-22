@@ -1,0 +1,28 @@
+Codes: C - connected, S - static, K - kernel, 
+       O - OSPF, IA - OSPF inter area, E1 - OSPF external type 1,
+       E2 - OSPF external type 2, N1 - OSPF NSSA external type 1,
+       N2 - OSPF NSSA external type2, B I - iBGP, B E - eBGP,
+       R - RIP, I - ISIS, A B - BGP Aggregate, A O - OSPF Summary,
+       NG - Nexthop Group Static Route 
+
+Gateway of last resort is not set
+
+ B E    10.1.31.100/32 [200/0] via 192.168.17.5, Ethernet18
+ B E    10.1.31.101/32 [200/0] via 192.168.17.5, Ethernet18
+ C      10.1.31.102/32 is directly connected, Loopback100
+ C      10.1.31.200/32 is directly connected, Loopback10
+ B E    10.1.31.254/32 [200/0] via 192.168.17.5, Ethernet18
+ C      10.63.255.8/30 is directly connected, Ethernet20
+ B E    10.100.22.52/30 [200/0] via 192.168.17.5, Ethernet18
+ B E    10.100.22.56/30 [200/0] via 192.168.17.5, Ethernet18
+ B E    10.100.233.11/32 [200/0] via 192.168.17.5, Ethernet18
+ B E    10.100.233.12/32 [200/0] via 192.168.17.5, Ethernet18
+ B E    10.100.233.15/32 [200/0] via 192.168.17.5, Ethernet18
+ C      10.100.233.32/32 is directly connected, Loopback0
+ B E    10.100.233.34/32 [200/0] via 192.168.38.5, Ethernet21
+ B E    10.100.233.50/32 [200/0] via 192.168.17.5, Ethernet18
+ B E    10.100.233.64/32 [200/0] via 192.168.17.5, Ethernet18
+ B E    10.100.233.66/32 [200/0] via 192.168.17.5, Ethernet18
+ B E    10.100.233.67/32 [200/0] via 192.168.17.5, Ethernet18
+ B E    10.100.233.68/32 [200/0] via 192.168.17.5, Ethernet18
+ B E    10.100.233.192/32 [200/0] via 10.63.255.10, Ethernet20
