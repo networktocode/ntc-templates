@@ -1,0 +1,35 @@
+---
+parsed_sample:
+
+ - vlan_id: '1'
+   name: 'default'
+   status: 'active'
+
+ - vlan_id: '10'
+   name: 'Management'
+   status: 'active'
+
+ - vlan_id: '50'
+   name: 'VLan50'
+   status: 'active'
+
+ - vlan_id: '60'
+   name: 'VLan60'
+   status: 'active'
+
+ - vlan_id: '1002'
+   name: 'fddi-default'
+   status: 'act/unsup'
+
+ - vlan_id: '1003'
+   name: 'token-ring-default'
+   status: 'act/unsup'
+
+ - vlan_id: '1004'
+   name: 'fddinet-default'
+   status: 'act/unsup'
+
+ - vlan_id: '1005'
+   name: 'trnet-default'
+   status: 'act/unsup'
+

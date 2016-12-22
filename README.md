@@ -62,6 +62,7 @@ An example of the proper format is shown below
 19:35:31 UTC Sat 01/08/2011
 </pre>
 
+
 ##YAML file containing expected parsed dictionary
 
 
@@ -84,7 +85,33 @@ parsed_sample:
 </pre>
 
 
-#MQuestion
+Multile RAW and Parsed files are supported per folder, and are encouraged, as there are differences depending on version, length, etc... that additional testing and more real life data helps identify. 
+
+##Index File
+
+The Index file binds the templates to the commands being run. Special care has been taken on ordering, as there is potential for issues. e.g. show ip route picking up for show ip router vrf <vrf-name>. We have used a combination of ordering, as defined: 
+
+  - OS in alphbetical order
+  - Command in length other
+  - When Length is the same, use alphabetical order
+  - Keep space between OS's
+
+Example:
+
+```
+Template, Hostname, Platform, Command
+
+arista_eos_show_mlag.template, .*, arista_eos, sh[[ow]] ml[[ag]]
+arista_eos_show_vlan.template, .*, arista_eos, sh[[ow]] vl[[an]]
+
+cisco_asa_dir.template,  .*, cisco_asa, dir
+
+cisco_ios_show_capability_feature_routing.template,  .*, cisco_ios, sh[[ow]] cap[[ability]] f[[eature]] r[[outing]]
+cisco_ios_show_interface_transceiver.template, .*, cisco_ios, sh[[ow]] int[[erface]] trans[[ceiver]]
+cisco_ios_show_cdp_neighbors_detail.template, .*, cisco_ios, sh[[ow]] c[[dp]] neig[[hbors]] det[[ail]]
+```
+
+#Questions
 
 For any questions or comments, please feel free to swing by the [networktocode slack channel](https://networktocode.slack.com)
 

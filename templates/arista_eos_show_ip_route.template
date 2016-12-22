@@ -1,0 +1,11 @@
+Value Filldown PROTOCOL (\S+\s\S+?|\w?)
+Value Filldown NETWORK (\d+.\d+.\d+.\d+)
+Value Filldown MASK (\d+)
+Value DISTANCE (\d+)
+Value METRIC (\d+)
+Value DIRECT (directly)
+Value Required NEXT_HOP (connected|\d+\.\d+\.\d+\.\d+)
+Value INTERFACE (\S+)
+
+Start
+  ^\s+${PROTOCOL}\s+${NETWORK}/${MASK}\s+(?:\[${DISTANCE}/${METRIC}\]|is\s+${DIRECT})(?:.+?)${NEXT_HOP},\s+${INTERFACE}$$ -> Next.Record
