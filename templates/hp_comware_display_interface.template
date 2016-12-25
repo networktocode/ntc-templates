@@ -1,0 +1,31 @@
+Value INTERFACE (\w+-\w+\d+/\d+/\d+)
+Value CURRENTSTATE (\w+)
+Value LINEPROTOCOL (\w+)
+Value FRAMETYPE (.+?(?=,))
+Value HARDWAREADDRESS (\w+-\w+-\w+)
+Value DESCRIPTION (\S+)
+Value BANDWIDTH (\S+)
+Value LINKSPEED (.+?(?=,))
+Value DUPLEX (\S+)
+Value PVID (\S+)
+Value PORTLINKTYPE (\S+)
+Value TAGGEDVLANS (\S+)
+Value UNTAGGEDVLANS (\S+)
+Value PORTPRIORITY (\d+)
+
+
+
+Start
+  ^${INTERFACE}
+  ^Current state:\s+${CURRENTSTATE}
+  ^Line\s+protocol\s+state:\s${LINEPROTOCOL}
+  ^IP\s+packet\s+frame\s+type:\s+${FRAMETYPE},\s+hardware\s+address:\s+${HARDWAREADDRESS}
+  ^Description:\s+${DESCRIPTION}
+  ^Bandwidth:\s+${BANDWIDTH}
+  ^Link\s+speed\s+type\s+is\s+${LINKSPEED},\s+link\s+duplex\s+type\s+is\s+${DUPLEX}
+  ^PVID:\s+${PVID}
+  ^Port\s+link-type:\s+${PORTLINKTYPE}
+  ^ Tagged\s+VLANs:\s+${TAGGEDVLANS}
+  ^\s+Untagged\s+VLANs:\s+${UNTAGGEDVLANS}
+  ^Port\s+priority:\s+${PORTPRIORITY} -> Record
+

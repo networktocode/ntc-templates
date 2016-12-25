@@ -1,0 +1,14 @@
+---
+
+parsed_sample:
+
+- {cost: '0', destinationmask: 0.0.0.0/32, interface: InLoop0, nexthop: '127.0.0.1 ',
+    pre: '0', proto: Direct}
+- {cost: '2', destinationmask: 10.3.10.0/24, interface: Vlan1, nexthop: '10.20.1.254 ',
+    pre: '10', proto: OSPF}
+- {cost: '2', destinationmask: 10.10.10.0/24, interface: Vlan1, nexthop: '10.20.1.254 ',
+    pre: '10', proto: OSPF}
+- {cost: '0', destinationmask: 10.20.1.0/24, interface: Vlan1, nexthop: '10.20.1.1 ',
+    pre: '0', proto: Direct}
+- {cost: '0', destinationmask: 10.20.1.0/32, interface: Vlan1, nexthop: '10.20.1.1 ',
+    pre: '0', proto: Direct}

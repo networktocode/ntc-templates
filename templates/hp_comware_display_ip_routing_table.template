@@ -1,0 +1,18 @@
+Value DESTINATIONMASK (\d+.\d+.\d+.\d+...)
+Value PROTO (\S+)
+Value PRE (\d+)
+Value COST (\d+)
+Value NEXTHOP (\d+.\d+.\d+.\d+.)
+Value INTERFACE (\S+)
+
+Start
+  ^${DESTINATIONMASK}\s+${PROTO}\s+${PRE}\s+${COST}\s+${NEXTHOP}\s+${INTERFACE} -> Record
+
+
+
+
+
+
+
+
+
