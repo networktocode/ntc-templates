@@ -16,5 +16,8 @@ parsed_sample:
   local_interface: "Eth1/2"
   neighbor_interface: "Ethernet1/3"
 
+- neighbor: "neighbor.with.long.hostname.n9k2.cisconxapi.com"
+  local_interface: "Eth1/21"
+  neighbor_interface: "Te5/1"
 
 
