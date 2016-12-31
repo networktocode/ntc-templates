@@ -13,7 +13,7 @@ TYPE1
   ^${DESTINATION_ADDRESS}\s+${TYPE}\s+${VLAN}\s+${DESTINATION_PORT} -> Record
 
 TYPE2
-  ^[\*|\s]\s+${VLAN}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\d+\s+${DESTINATION_PORT} -> Record
+  ^[\*|\s]\s+${VLAN}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+${DESTINATION_PORT} -> Record
 
 TYPE3
   ^\s+${VLAN}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+${DESTINATION_PORT} -> Record

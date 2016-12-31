@@ -16,6 +16,11 @@ parsed_sample:
   type: dynamic
   vlan: '60'
 
+- destination_address: 0000.30a3.0167
+  destination_port: Router
+  type: static
+  vlan: '777'
+
 - destination_address: 30a3.30a3.58b5
   destination_port: Po6
   type: dynamic
