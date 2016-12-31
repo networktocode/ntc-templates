@@ -2,7 +2,7 @@
 <!--- Pick one below and delete the rest: -->
  - New Template Pull Request
  - Bugfix Pull Request
- - Additonal Testing
+ - Additional Testing
  - Docs Pull Request
 
 ##### COMPONENT
