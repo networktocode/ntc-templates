@@ -12,6 +12,10 @@
 #
 Template, Hostname, Platform, Command
 
+alcatel_sros_show_router_bgp_routes_vpn-ipv4.template, .*, alcatel_sros, sh[[ow]] router bgp rou[[tes]] vpn-ipv4
+alcatel_sros_show_service_id_base.template, .*, alcatel_sros, sh[[ow]] serv[[ice]] id ba[[se]]
+alcatel_sros_oam_mac-ping.template, .*, alcatel_sros, oam mac-pi[[ng]]
+
 arista_eos_show_ip_interface_brief.template, .*, arista_eos, sh[[ow]] i[[p]] int[[erface]] br[[ief]]
 arista_eos_show_interfaces_status.template, .*, arista_eos, sh[[ow]] int[[erfaces]] st[[atus]]
 arista_eos_show_ip_access-lists.template, .*, arista_eos, sh[[ow]] i[[p]] acce[[ss-lists]]
