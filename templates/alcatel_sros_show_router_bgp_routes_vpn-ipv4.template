@@ -1,0 +1,17 @@
+Value IN_OUT_USE (\*>i|u\*>i|\*i)
+Value RD (\d+\:\d+)
+Value Required PREFIX (\d+\.\d+\.\d+\.\d+\/[1-9][0-9]?)
+Value LOCAL_PREF (\d+)
+Value MED (None|d\+)
+Value NEXT_HOP (\d+\.\d+\.\d+\.\d+)
+Value PATH_ID (None|\d+)
+Value LABEL (\d+)
+Value AS_PATH (No As-Path|\d+)
+
+Start
+  ^----------- -> Prefix
+
+Prefix
+  ^${IN_OUT_USE}\s+${RD}\:${PREFIX}\s+${LOCAL_PREF}\s+${MED}
+  ^\s+${NEXT_HOP}\s+${PATH_ID}\s+${LABEL}
+  ^\s+${AS_PATH} -> Record
