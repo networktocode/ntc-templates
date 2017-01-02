@@ -3,11 +3,16 @@
 parsed_sample:
 
 
-  - sap_count: '1'
+  - sdp_type_list: ['Mesh']
+    sap_count: '1'
+    sdp_list: ['4']
     mtu: '5000'
-    description: 'this_is_a_description'
-    oper_state: 'Down'
     admin_state: 'Up'
+    port_list: ['1/1/6']
+    sdp_count: '1'
+    remote_pe_list: ['192.0.2.4']
     service_id: '1099'
     customer_id: '4'
-    sdp_count: '1'
+    oper_state: 'Down'
+    vlan_id: '100'
+    description: 'this_is_a_description'
