@@ -20,6 +20,7 @@ arista_eos_show_ip_interface_brief.template, .*, arista_eos, sh[[ow]] i[[p]] int
 arista_eos_show_interfaces_status.template, .*, arista_eos, sh[[ow]] int[[erfaces]] st[[atus]]
 arista_eos_show_ip_ospf_neighbor.template, .*, arista_eos, sh[[ow]] i[[p]] o[[spf]] nei[[ghbor]]
 arista_eos_show_ip_access-lists.template, .*, arista_eos, sh[[ow]] i[[p]] acce[[ss-lists]]
+arista_eos_show_isis_neighbors.template, .*, arista_eos, sh[[ow]] isis ne[[ighbors]]
 arista_eos_show_lldp_neighbors.template, .*, arista_eos, sh[[ow]] ll[[dp]] nei[[ghbors]]
 arista_eos_show_snmp_community.template, .*, arista_eos, sh[[ow]] sn[[mp]] com[[munity]]
 arista_eos_show_interfaces.template, .*, arista_eos, sh[[ow]] inte[[rfaces]]
@@ -44,6 +45,7 @@ cisco_ios_show_mac-address-table.template, .*, cisco_ios, sh[[ow]] m[[ac-address
 cisco_ios_show_ip_ospf_neighbor.template, .*, cisco_ios, sh[[ow]] ip ospf nei[[ghbor]]
 cisco_ios_show_ip_bgp_summary.template, .*, cisco_ios, sh[[ow]] ip bgp sum[[mary]]
 cisco_ios_show_ipv6_int_brief.template, .*, cisco_ios, sh[[ow]] ipv[[6]] i[[nterface]] b[[rief]]
+cisco_ios_show_isis_neighbors.template, .*, cisco_ios, sh[[ow]] isis ne[[ighbors]]
 cisco_ios_show_lldp_neighbors.template, .*, cisco_ios, sh[[ow]] lld[[p]] neig[[hbors]]
 cisco_ios_show_snmp_community.template, .*, cisco_ios, sh[[ow]] sn[[mp]] com[[munity]]
 cisco_ios_show_cdp_neighbors.template, .*, cisco_ios, sh[[ow]] c[[dp]] neig[[hbors]]
@@ -95,6 +97,7 @@ cisco_wlc_ssh_show_sysinfo.template, .*, cisco_wlc_ssh, sh[[ow]] sysi[[nfo]]
 
 cisco_xr_show_configuration_commit_list.template, .*, cisco_xr, sh[[ow]] conf[[iguration]] c[[ommit]] l[[ist]]
 cisco_xr_show_dhcp_ipv4_proxy_binding.template, .*, cisco_xr, sh[[ow]] dh[[cp]] ipv4 p[[roxy]] b[[inding]]
+cisco_xr_show_isis_neighbors.template, .*, cisco_xr, sh[[ow]] isis ne[[ighbors]]
 cisco_xr_show_ospf_neighbor.template, .*, cisco_xr, sh[[ow]] ospf nei[[ghbor]]
 
 dell_force10_show_vlan_brief.template, .*, dell_force10, sh[[ow]] vl[[an]] br[[ief]]
@@ -111,6 +114,7 @@ hp_procurve_show_system.template, .*, hp_procurve, sh[[ow]] syst[[em]]
 hp_procurve_show_vlans.template, .*, hp_procurve, sh[[ow]] vl[[ans]]
 hp_procurve_show_arp.template, .*, hp_procurve, sh[[ow]] ar[[p]]
 
+juniper_junos_show_isis_adjacency.template, .*, juniper_junos, sh[[ow]] is[[is]] ad[[jacency]]
 juniper_junos_show_ospf_neighbor.template, .*, juniper_junos, sh[[ow]] ospf n[[eighbor]]
 juniper_junos_show_interfaces.template, .*, juniper_junos, sh[[ow]] inte[[rfaces]]
 
