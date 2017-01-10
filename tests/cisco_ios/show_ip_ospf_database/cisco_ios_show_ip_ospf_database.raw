@@ -1,0 +1,22 @@
+OSPF Router with id(192.168.239.66) (Process ID 300)
+                 Displaying Router Link States(Area 0.0.0.0)
+  Link ID       ADV Router    Age        Seq#     Checksum  Link count
+172.16.21.6   172.16.21.6    1731    0x80002CFB    0x69BC       8
+172.16.21.5   172.16.21.5    1112    0x800009D2    0xA2B8       5
+172.16.1.2    172.16.1.2     1662    0x80000A98    0x4CB6       9
+                Displaying Net Link States(Area 0.0.0.0)
+  Link ID       ADV Router      Age        Seq#        Checksum
+172.16.1.3  192.168.239.66     1245    0x800000EC      0x82E
+                Displaying Summary Net Link States(Area 0.0.0.0)
+  Link ID       ADV Router       Age        Seq#        Checksum
+172.16.240.0   172.16.241.5    1152      0x80000077      0x7A05
+                Displaying Summary Net Link States(Area 1)
+  Link ID       ADV Router       Age        Seq#        Checksum
+172.16.240.0   172.16.241.5    1152      0x80000077      0x7A05
+172.16.241.0   172.16.241.5    1152      0x80000070      0xAEB7
+		Type-5 AS External Link States
+
+Link ID         ADV Router      Age         Seq#       Checksum Tag
+192.168.1.0     0.0.0.3         542         0x80000001 0x003F23 0
+192.168.1.128   0.0.0.3         565         0x80000001 0x007C05 0
+192.168.1.160   0.0.0.3         567         0x80000001 0x003B26 0
