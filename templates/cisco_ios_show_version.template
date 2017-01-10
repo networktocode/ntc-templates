@@ -1,4 +1,5 @@
 Value VERSION (.+?)
+Value ROMMON (\S+)
 Value HOSTNAME (\S+)
 Value UPTIME (.+)
 Value RUNNING_IMAGE (\S+)
@@ -8,6 +9,7 @@ Value CONFIG_REGISTER (\S+)
 
 Start
   ^.*Software\s.+\),\sVersion\s${VERSION},*\s+RELEASE.*
+  ^ROM: ${ROMMON}
   ^\s*${HOSTNAME}\s+uptime\s+is\s+${UPTIME}
   ^[sS]ystem\s+image\s+file\s+is\s+"(.*?):${RUNNING_IMAGE}"
   ^[Pp]rocessor\s+board\s+ID\s+${SERIAL}
