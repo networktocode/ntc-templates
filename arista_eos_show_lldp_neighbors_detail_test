@@ -1,0 +1,49 @@
+FSM Template:
+Value DEST_HOST (\S+)
+Value SYSTEM_ID (.+?)
+Value MGMT_ADDRESS (.+?)
+Value PLATFORM_VERSION (.+?)
+Value REMOTE_PORT (.+?)
+Value Filldown LOCAL_PORT (\S+?)
+Value Filldown NEIGH_COUNT (\d+?)
+Value AGE (.+?)
+
+Start
+  ^\S+\s+${LOCAL_PORT}\s+\S+\s+${NEIGH_COUNT}.*
+  ^.*age\s+${AGE}$$ -> Interface
+
+Interface
+  ^\s+Chassis ID\s+:\s+${SYSTEM_ID}$$
+  ^\s+-\s+Port ID type -> Port_ID
+  ^\s+-\s+\S+\s+Name:\s+\"${DEST_HOST}\"
+  ^.*System Description:\s+\"${PLATFORM_VERSION}(\"|$$)
+  ^\s+\S+\s+Address\s+:\s+${MGMT_ADDRESS}$$
+  ^\s*$$ -> Record Start
+
+Port_ID
+  ^\s+Port ID\s+:(\s+\"|\s+)${REMOTE_PORT}(\"|$$) -> Interface
+
+EOF
+
+
+FSM Table:
+['DEST_HOST', 'SYSTEM_ID', 'MGMT_ADDRESS', 'PLATFORM_VERSION', 'REMOTE_PORT', 'LOCAL_PORT', 'NEIGH_COUNT', 'AGE']
+['spine2.company.com', '2cc2.6081.eaf9', '2cc2.6081.eaf9', 'Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS', 'Ethernet1', 'Ethernet1', '1', '12 seconds']
+['spine2.company.com', '2cc2.6081.eaf9', '2cc2.6081.eaf9', 'Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS', 'Ethernet2', 'Ethernet2', '1', '12 seconds']
+['spine2.company.com', '2cc2.6081.eaf9', '2cc2.6081.eaf9', 'Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS', 'Ethernet3', 'Ethernet3', '1', '12 seconds']
+['spine2.company.com', '2cc2.6081.eaf9', '2cc2.6081.eaf9', 'Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS', 'Ethernet4', 'Ethernet4', '1', '12 seconds']
+['vmx1', '0005.8671.4ec0', '10.0.0.31', 'Juniper Networks, Inc. vmx internet router, kernel JUNOS 15.1F4.15, Build date: 2015-12-23 19:22:55 UTC Copyright (c) 1996-2015 Juniper Networks, Inc.', 'fxp0', 'Management1', '2', '27 seconds']
+['spine2.company.com', '2cc2.6081.eaf9', '2cc2.6081.eaf9', 'Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS', 'Management1', 'Management1', '2', '17 seconds']
+['cvx', '0050.56eb.3ef3', '172.16.2.141', 'Arista Networks EOS version 4.15.5M running on an Arista Networks CVX', 'Management1', 'Ethernet8', '3', '4 seconds']
+['cvx-client-1', '0050.568b.67c8', '172.16.2.142', 'Arista Networks EOS version 4.15.5M running on an Arista Networks CVX', 'Ethernet1', 'Ethernet8', '3', '29 seconds']
+['cvx-client-1', '0050.568b.67c8', '172.16.2.142', 'Arista Networks EOS version 4.15.5M running on an Arista Networks CVX', 'Management1', 'Ethernet8', '3', '30 seconds']
+['Leaf1.cliqr.com', '7c0e.cecb.659b', '7c0e.cecb.659b', 'topology/pod-1/node-101', 'Eth1/23', 'Ethernet9', '1', '29 seconds']
+['Leaf1.cliqr.com', '7c0e.cecb.659c', '7c0e.cecb.659c', 'topology/pod-1/node-101', 'Eth1/24', 'Ethernet10', '1', '29 seconds']
+['MX', '3c8a.b089.9898', '', 'Juniper Networks, Inc. mx5-t internet router, kernel JUNOS 14.2R5.8, Build date: 2015-11-25 01:57:41 UTC Copyright (c) 1996-2015 Juniper Networks, Inc.', '527', 'Ethernet23', '1', '21 seconds']
+['cvx-client-2', '0050.560b.66ea', '172.16.2.143', 'Arista Networks EOS version 4.15.5M running on an Arista Networks CVX', 'Management1', 'Ethernet33', '4', '29 seconds']
+['cvx-client-2', '0050.560b.66ea', '172.16.2.143', 'Arista Networks EOS version 4.15.5M running on an Arista Networks CVX', 'Ethernet1', 'Ethernet33', '4', '29 seconds']
+['aci-compute', '0050.56ac.4cd9', 'fe80::250:56ff:feac:4cd9', 'Red Hat Enterprise Linux Linux 3.10.0-327.13.1.el7.x86_64 #1 SMP Mon Feb 29 13:22:02 EST 2016 x86_64', '0050.56ac.4cd9', 'Ethernet33', '4', '29 seconds']
+['aci-control', '0050.56ac.4e29', 'fe80::250:56ff:feac:4e29', 'Red Hat Enterprise Linux Linux 3.10.0-327.13.1.el7.x86_64 #1 SMP Mon Feb 29 13:22:02 EST 2016 x86_64', '0050.56ac.4e29', 'Ethernet33', '4', '29 seconds']
+['R4-Arista-L3-SDNLAB-SW1', '001c.737d.77fb', '2.2.2.2', 'Arista Networks EOS version 4.15.0FXA running on an Arista Networks DCS-7050SX-64', 'Ethernet49/1', 'Ethernet49/1', '1', '19 seconds']
+['R4-Arista-L3-SDNLAB-SW2', '001c.737d.745f', '172.16.1.3', 'Arista Networks EOS version 4.15.0FXA running on an Arista Networks DCS-7050SX-64', 'Ethernet49/1', 'Ethernet51/1', '1', '28 seconds']
+['R4-Arista-L3-SDNLAB-SW2', '001c.737d.745f', '172.16.1.3', 'Arista Networks EOS version 4.15.0FXA running on an Arista Networks DCS-7050SX-64', 'Ethernet50/1', 'Ethernet52/1', '1', '28 seconds']
