@@ -54,5 +54,4 @@ ParseSub
   ^\s*${NEXTHOP}\s+${METRIC}[\s]{8,99}${WEIGHT}\s${AS_PATH}${TYPE} -> Record Start
   ^\s*${NEXTHOP}[\s]{13,99}${LOCALPREF}\s+${WEIGHT}\s${AS_PATH}${TYPE} -> Record Start
 
-
-
+EOF
