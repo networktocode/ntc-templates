@@ -1,0 +1,10 @@
+Value MAC_ADDRESS (\w+?\.\w+?\.\w+?|\w+?\:\w+?\:\w+?\:\w+?\:\w+?\:\w+?)
+Value TYPE (\w+?)
+Value VLAN (\d+?)
+Value DESTINATION_PORT (\w+\s\w+\s\w+\s\w+|\w+\s\w+\s\w+|\w+\s\w+|\w+?)
+Value MOVES (\d+?)
+Value LAST_MOVE (.+)
+
+Start
+  ^\s*${VLAN}\s+?${MAC_ADDRESS}\s+?${TYPE}\s+?${DESTINATION_PORT}\s+?${MOVES}\s+${LAST_MOVE}\sago$$ -> Record
+  ^\s*${VLAN}\s+?${MAC_ADDRESS}\s+?${TYPE}\s+?${DESTINATION_PORT}$$ -> Record
