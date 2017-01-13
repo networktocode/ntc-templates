@@ -1,0 +1,13 @@
+Value Required NEIGHBOR (\S+)
+Value Required LOCAL_INTERFACE (\S+)
+Value Required NEIGHBOR_INTERFACE (\S+)
+Value CHASSIS_ID (\w+?\.\w+?\.\w+?)
+Value MGMT_ADDRESS (\d+?\.\d+?\.\d+?\.\d+?|\w+?\.\w+?\.\w+?)
+
+
+Start
+  ^[Cc]hassis\s[idID]{2}\:\s${CHASSIS_ID}$$
+  ^[Pp]ort\s[idID]{2}\:\s${NEIGHBOR_INTERFACE}$$
+  ^[Ll]ocal\s[Pp]ort\s[idID]{2}\:\s${LOCAL_INTERFACE}$$
+  ^[Ss]ystem\s[Nn]ame\:\s${NEIGHBOR}$$
+  ^[Mm]anagement\s[Aa]ddress\:\s${MGMT_ADDRESS}$$ -> Record
