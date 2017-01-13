@@ -78,13 +78,16 @@ cisco_ios_show_vlan.template, .*, cisco_ios, sh[[ow]] vlan
 cisco_ios_dir.template,  .*, cisco_ios, dir
 
 cisco_nxos_show_ip_dhcp_relay_address.template, .*, cisco_nxos, sh[[ow]] ip dh[[cp]] r[[elay]] a[[ddress]]
+cisco_nxos_show_lldp_neighbors_detail.template, .*, cisco_nxos, sh[[ow]] ll[[dp]] nei[[ghbors]] d[[etail]]
 cisco_nxos_show_ip_ospf_neighbor_vrf.template, .*, cisco_nxos, sh[[ow]] ip ospf nei[[ghbor]] vrf (\S+)
 cisco_nxos_show_ipv6_interface_brief.template, .*, cisco_nxos, sh[[ow]] ipv[[6]] interf[[ace]] b[[rief]]
 cisco_nxos_show_port-channel_summary.template, .*, cisco_nxos, sh[[ow]] po[[rt-channel]] sum[[mary]]
 cisco_nxos_show_mac_address-table.template, .*, cisco_nxos, sh[[ow]] m[[ac]] addr[[ess-table]]
 cisco_nxos_show_interface_status.template, .*, cisco_nxos, sh[[ow]] int[[erface]] st[[atus]]
+cisco_nxos_show_ip_ospf_database.template, .*, cisco_nxos, sh[[ow]] ip o[[spf]] d[[atabase]]
 cisco_nxos_show_interface_brief.template, .*, cisco_nxos, sh[[ow]] int[[erface]] br[[ief]]
 cisco_nxos_show_flogi_database.template, .*, cisco_nxos, sh[[ow]] fl[[ogi]] d[[atabase]]
+cisco_nxos_show_ip_bgp_summary.template, .*, cisco_nxos, sh[[ow]] ip b[[gp]] s[[ummary]]
 cisco_nxos_show_lldp_neighbors.template, .*, cisco_nxos, sh[[ow]] ll[[dp]] nei[[ghbors]]
 cisco_nxos_show_cdp_neighbors.template, .*, cisco_nxos, sh[[ow]] cd[[p]] neig[[hbors]]
 cisco_nxos_show_ip_arp_detail.template, .*, cisco_nxos, sh[[ow]] i[[p]] a[[rp]] det[[ail]]
@@ -92,6 +95,7 @@ cisco_nxos_show_processes_cpu.template, .*, cisco_nxos, sh[[ow]] proc[[esses]] c
 cisco_nxos_show_access-lists.template, .*, cisco_nxos, sh[[ow]] acc[[ess-lists]]
 cisco_nxos_show_interface.template, .*, cisco_nxos, sh[[ow]] inte[[rface]]
 cisco_nxos_show_inventory.template, .*, cisco_nxos, sh[[ow]] inv[[entory]]
+cisco_nxos_show_hostname.template, .*, cisco_nxos, sh[[ow]] hostn[[ame]]
 cisco_nxos_show_ip_route.template, .*, cisco_nxos, sh[[ow]] ip route
 cisco_nxos_show_feature.template, .*, cisco_nxos, sh[[ow]] feat[[ure]]
 cisco_nxos_show_version.template, .*, cisco_nxos, sh[[ow]] ver[[sion]]
