@@ -21,9 +21,9 @@ parsed_sample:
   remote_port: "eth0"
   local_port: "GigabitEthernet1/0/19"
     
-- destination_host: "vIOS-L2-1"
-  local_port: "GigabitEthernet0/2"
+- platform: ""
   management_ip: ""
-  platform: ""
-  remote_port: "GigabitEthernet0/2"
   software_version: "Cisco IOS Software, vios_l2 Software (vios_l2-ADVENTERPRISEK9-M), Version 15.2(CML_NIGHTLY_20150414)FLO_DSGS7, EARLY DEPLOYMENT DEVELOPMENT BUILD, synced to  DSGS_PI5_POSTCOLLAPSE_TEAM_TRACK_CLONE"
+  destination_host: "vIOS-L2-1"
+  remote_port: "GigabitEthernet0/3"
+  local_port: "GigabitEthernet0/3"
