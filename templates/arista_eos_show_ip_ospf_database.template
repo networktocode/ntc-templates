@@ -9,7 +9,7 @@ Value LINK_COUNT (\d+)
 Value TAG (\d+)
 
 Start
-  ^.*\(${ROUTER_ID}\).*${PROCESS_ID}.*VRF\s+${VRF}\)
+  ^.*\(${ROUTER_ID}\).*?${PROCESS_ID}.*VRF\s+${VRF}\)
   ^.*\(Area\s+${AREA}\)
   ^${LINK_ID}\s+${ADV_ROUTER}\s+${AGE}\s+\S+\s+\S+\s+${LINK_COUNT} -> Record
   ^${LINK_ID}\s+${ADV_ROUTER}\s+${AGE}\s+\S+\s+\S+ -> Record
