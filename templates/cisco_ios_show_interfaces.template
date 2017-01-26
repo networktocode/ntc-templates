@@ -11,6 +11,8 @@ Value BANDWIDTH (\d+\s+\w+)
 Value DELAY (\d+\s+\w+)
 Value ENCAPSULATION (\w+)
 Value QUEUE_STRATEGY (.*)
+Value INPUT_RATE (\d+)
+Value OUTPUT_RATE (\d+)
 
 Start
   ^${INTERFACE} is ${LINK_STATUS}.*protocol is ${PROTOCOL_STATUS}
@@ -20,4 +22,6 @@ Start
   ^\s+Internet address is ${IP_ADDRESS}
   ^\s+MTU ${MTU}.*BW ${BANDWIDTH}.*DLY ${DELAY}
   ^\s+Encapsulation ${ENCAPSULATION}
-  ^\s+Queueing strategy: ${QUEUE_STRATEGY} -> Record
+  ^\s+Queueing strategy: ${QUEUE_STRATEGY}
+  ^.*input rate ${INPUT_RATE}
+  ^.*output rate ${OUTPUT_RATE} -> Record
