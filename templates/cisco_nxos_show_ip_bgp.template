@@ -13,11 +13,6 @@ Value WEIGHT (\S{0,10})
 Value AS_PATH (.*?)
 Value ORIGIN ([ie\?])
 
-#   Network            Next Hop            Metric     LocPrf     Weight Path
-#*>e10.10.202.0/30     10.10.2.1                                      0 64102 64202 i
-#*>l100.100.100.100/30 0.0.0.0                           100      32768 i
-#x e100.100.100.104/30 10.10.2.1                                      0 64102 64002 i
-#0  1               18 1                19 1    6 1       11 1       10 
 
 Start
   # Since using mostly position, play it safe and ensure we see header first
@@ -34,8 +29,5 @@ Bgp_table
   # Full normal example. metric, and as_path might not exist, regex defaults to blank line. 
   # Example: *>e10.10.101.4/30     10.10.2.1                                      0 64102 i
   ^${STATUS}${PATH_SELECTION}${ROUTE_SOURCE}\s{0,1}(?=${NETWORK}).{18}\s(?=${NEXT_HOP}).{19}\s(?=\s{0,6}${METRIC}).{6}\s(?=\s{0,11}${LOCAL_PREF}).{11}\s(?=\s{0,10}${WEIGHT}).{10}\s*${AS_PATH}\s*${ORIGIN}$$ -> Record
-
-
-
 
 EOF
