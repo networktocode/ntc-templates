@@ -101,6 +101,7 @@ cisco_nxos_show_ip_route.template, .*, cisco_nxos, sh[[ow]] ip route
 cisco_nxos_show_feature.template, .*, cisco_nxos, sh[[ow]] feat[[ure]]
 cisco_nxos_show_version.template, .*, cisco_nxos, sh[[ow]] ver[[sion]]
 cisco_nxos_show_fex_id.template, .*, cisco_nxos, sh[[ow]] fex (\S+)
+cisco_nxos_show_ip_bgp.template, .*, cisco_nxos, sh[[ow]] i[[p]] bgp
 cisco_nxos_show_module.template, .*, cisco_nxos, sh[[ow]] mod[[ule]]
 cisco_nxos_show_clock.template, .*, cisco_nxos, sh[[ow]] clo[[ck]]
 cisco_nxos_show_vlan.template, .*, cisco_nxos, sh[[ow]] vl[[an]]
