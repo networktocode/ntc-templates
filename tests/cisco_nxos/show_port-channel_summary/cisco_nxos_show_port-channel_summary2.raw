@@ -1,0 +1,37 @@
+Flags:  D - Down        P - Up in port-channel (members)
+        I - Individual  H - Hot-standby (LACP only)
+        s - Suspended   r - Module-removed
+        S - Switched    R - Routed
+        U - Up (port-channel)
+        M - Not in use. Min-links not met
+--------------------------------------------------------------------------------
+Group Port-       Type     Protocol  Member Ports
+      Channel
+--------------------------------------------------------------------------------
+1     Po1(RU)     Eth      LACP      Eth1/1(P)    Eth2/1(P)
+2     Po2(RU)     Eth      LACP      Eth1/2(P)    Eth2/2(P)
+3     Po3(RU)     Eth      LACP      Eth1/3(P)    Eth2/3(P)
+4     Po4(RU)     Eth      LACP      Eth1/4(P)    Eth2/4(P)
+12    Po12(RU)    Eth      LACP      Eth1/5(P)    Eth2/5(P)
+13    Po13(RU)    Eth      LACP      Eth1/6(P)    Eth2/6(P)
+14    Po14(RU)    Eth      LACP      Eth1/7(P)    Eth2/7(P)
+801   Po801(RU)   Eth      LACP      Eth5/6(P)    Eth6/6(P)
+802   Po802(RU)   Eth      LACP      Eth5/7(P)    Eth6/7(P)
+803   Po803(RU)   Eth      LACP      Eth15/17(P)  Eth16/17(P)
+804   Po804(RU)   Eth      LACP      Eth15/24(P)  Eth16/24(P)
+811   Po811(RU)   Eth      LACP      Eth15/8(P)   Eth15/28(P)  Eth16/8(P)
+                                     Eth16/28(P)
+812   Po812(RU)   Eth      LACP      Eth15/36(P)  Eth16/36(P)  Eth17/8(P)
+                                     Eth18/8(P)
+813   Po813(RU)   Eth      LACP      Eth15/15(P)  Eth16/15(P)
+814   Po814(RU)   Eth      LACP      Eth15/22(P)  Eth16/22(P)
+821   Po821(RU)   Eth      LACP      Eth15/30(P)  Eth16/30(P)  Eth17/29(P)
+                                     Eth18/29(P)
+822   Po822(RU)   Eth      LACP      Eth15/38(P)  Eth16/38(P)  Eth17/30(P)
+                                     Eth18/30(P)
+823   Po823(RU)   Eth      LACP      Eth3/9(P)    Eth4/9(P)
+824   Po824(RU)   Eth      LACP      Eth3/10(P)   Eth4/10(P)
+825   Po825(RU)   Eth      LACP      Eth3/3(P)
+826   Po826(RU)   Eth      LACP      Eth4/3(P)
+827   Po827(RU)   Eth      LACP      Eth5/3(P)
+828   Po828(RU)   Eth      LACP      Eth6/3(P)
