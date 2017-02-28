@@ -1,67 +1,59 @@
 ---
 parsed_sample:
 
-- enqueued: '2016/04/28 03:05:24'
-  id: "2341"
-  type: FqdnRefresh
-  status: FIN
-  result: OK
-  completed: '03:05:41'
-
-- enqueued: '2016/04/28 02:35:05'
-  id: "2340"
-  type: FqdnRefresh
-  status: FIN
-  result: OK
-  completed: '02:35:22'
-
-- enqueued: '2016/04/28 02:05:03'
-  id: "2339"
-  type: FqdnRefresh
-  status: FIN
-  result: OK
-  completed: '02:05:21'
-
-- enqueued: '2016/04/28 01:35:01'
-  id: "2338"
-  type: FqdnRefresh
-  status: FIN
-  result: OK
-  completed: '01:35:01'
-
-- enqueued: '2016/04/28 01:04:43'
-  id: "2337"
-  type: FqdnRefresh
-  status: FIN
-  result: OK
-  completed: '01:05:00'
-
-- enqueued: '2016/04/28 01:01:43'
-  id: "2336"
-  type: Antivirus
-  status: FIN
-  result: OK
-  completed: '01:02:26'
-
-- enqueued: '2016/04/28 01:00:09'
-  id: "2335"
-  type: Install  
-  status: FIN
-  result: OK
-  completed: '01:01:43'
-
-- enqueued: '2016/04/28 01:00:06'
-  id: "2334"
-  type: Downld
-  status: FIN
-  result: OK
-  completed: '01:00:08'
-
-
-
-
-
-
-
-
-  
+-   completed: 03:05:41
+    dequeued: ''
+    enqueued: 2016/04/28 03:05:24
+    id: '2341'
+    result: OK
+    status: FIN
+    type: FqdnRefresh
+-   completed: 02:35:22
+    dequeued: ''
+    enqueued: 2016/04/28 02:35:05
+    id: '2340'
+    result: OK
+    status: FIN
+    type: FqdnRefresh
+-   completed: 02:05:21
+    dequeued: ''
+    enqueued: 2016/04/28 02:05:03
+    id: '2339'
+    result: OK
+    status: FIN
+    type: FqdnRefresh
+-   completed: 01:35:01
+    dequeued: ''
+    enqueued: 2016/04/28 01:35:01
+    id: '2338'
+    result: OK
+    status: FIN
+    type: FqdnRefresh
+-   completed: 01:05:00
+    dequeued: ''
+    enqueued: 2016/04/28 01:04:43
+    id: '2337'
+    result: OK
+    status: FIN
+    type: FqdnRefresh
+-   completed: 01:02:26
+    dequeued: ''
+    enqueued: 2016/04/28 01:01:43
+    id: '2336'
+    result: OK
+    status: FIN
+    type: Antivirus
+-   completed: 01:01:43
+    dequeued: ''
+    enqueued: 2016/04/28 01:00:09
+    id: '2335'
+    result: OK
+    status: FIN
+    type: Install
+-   completed: 01:00:08
+    dequeued: ''
+    enqueued: 2016/04/28 01:00:06
+    id: '2334'
+    result: OK
+    status: FIN
+    type: Downld

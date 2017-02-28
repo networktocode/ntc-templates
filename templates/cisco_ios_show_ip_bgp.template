@@ -22,8 +22,8 @@ Bgp_table
   #
   # 
   # Compliment to previous, status, path_selection, route_source, network is filldown. 
-  # Example:                     157.191.186.194          0    100  50000 64801 64808 64608 64601 64787 i
-  ^\s{23,25}(?=${NEXT_HOP}).{19}\s(?=\s{0,6}${METRIC}).{6}\s(?=\s{0,6}${LOCAL_PREF}).{6}\s(?=\s{0,6}${WEIGHT}).{6}\s*${AS_PATH}\s*${ORIGIN}$$ -> Record
+  # Example:                     200.200.186.194          0    100  50000 64801 64808 64608 64601 64787 i
+  ^\s{20,25}(?=${NEXT_HOP}).{19}\s(?=\s{0,6}${METRIC}).{6}\s(?=\s{0,6}${LOCAL_PREF}).{6}\s(?=\s{0,6}${WEIGHT}).{6}\s*${AS_PATH}\s*${ORIGIN}$$ -> Record
   #
   #
   # Match first when there is no network, since previous line had it already (compliment and filldown below)
