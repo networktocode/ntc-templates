@@ -66,7 +66,7 @@ def test_index_ordering():
         'cisco_asa', 'cisco_ios', 'cisco_nxos', 'cisco_s300', 'cisco_wlc', 'cisco_xe', 'cisco_xr',
         'dell_force10', 'enterasys', 'extreme', 'f5_ltm', 'fortinet', 'hp_comware', 'hp_procurve',
         'huawei', 'juniper', 'juniper_junos', 'linux', 'ovs_linux', 'paloalto_panos',
-        'quanta_mesh', 'vyatta_vyos', 'vyos'
+        'quanta_mesh', 'vmware_nsxv', 'vyatta_vyos', 'vyos'
         ] 
 
     prior_os = ""
