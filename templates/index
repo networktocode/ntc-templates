@@ -142,3 +142,6 @@ paloalto_panos_show_interface_logical.template, .*, paloalto_panos, sh[[ow]] int
 paloalto_panos_show_counter_global.template, .*, paloalto_panos, sh[[ow]] coun[[ter]] glo[[bal]]
 paloalto_panos_show_system_info.template, .*, paloalto_panos, sh[[ow]] sys[[tem]] in[[fo]]
 paloalto_panos_show_jobs_all.template, .*, paloalto_panos, sh[[ow]] jo[[bs]] all
+
+vmware_nsxv_show_ip_bgp_neighbors.template, .*, vmware_nsxv, sh[[ow]] ip b[[gp]] n[[eighbors]]
+vmware_nsxv_show_ip_route.template, .*, vmware_nsxv, sh[[ow]] ip r[[oute]]
