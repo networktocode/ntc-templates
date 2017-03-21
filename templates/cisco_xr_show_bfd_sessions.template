@@ -1,0 +1,10 @@
+Value INTERFACE (.+?)
+Value DSTADDRESS (\d+\.\d+\.\d+\.\d+)
+Value STATE (\S+)
+
+Start
+  ^\-+ -> Begin1
+
+Begin1
+  ^\s*${INTERFACE}\s+${DSTADDRESS}\s+\S+\s+\S+\s+${STATE} -> Record
+

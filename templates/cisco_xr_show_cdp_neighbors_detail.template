@@ -1,0 +1,23 @@
+Value Required DEST_HOST (\S+)
+Value SYSNAME (.*)
+Value MGMT_IP (.*)
+Value PLATFORM (.*)
+Value REMOTE_PORT (.*)
+Value LOCAL_PORT (.*)
+Value VERSION (.*)
+
+Start
+  ^Device ID: ${DEST_HOST}
+  ^SysName : ${SYSNAME}
+  ^Entry address\(es\): -> GetIP
+  ^Platform: ${PLATFORM},
+  ^Interface: ${REMOTE_PORT}
+  ^Port ID \(outgoing port\): ${LOCAL_PORT}
+  ^Version : -> GetVersion
+
+GetIP
+  ^.*IP.+address: ${MGMT_IP} -> Start
+
+GetVersion
+  ^${VERSION} -> Record Start
+
