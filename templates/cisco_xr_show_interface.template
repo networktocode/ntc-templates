@@ -14,7 +14,7 @@ Value DELAY_DOWN (\d+\s+\w+)
 
 Start
   ^${INTERFACE}\sis\s+${LINK_STATUS},\s+line\sprotocol\sis\s+${ADMIN_STATE}
-  ^\s+Hardware(:|\s+is)\s+${HARDWARE_TYPE}(,\s+address(:|\s+is)\s+${ADDRESS}(.*bia\s+${BIA})*)*
+  ^\s+Hardware(:|\s+is)\s+${HARDWARE_TYPE}(,)?(\s+address(:|\s+is)\s+${ADDRESS}(.*bia\s+${BIA})*)*
   ^\s+Description:\s+${DESCRIPTION}
   ^\s+Internet\s+Address\s+is\s+${IP_ADDRESS}
   ^\s+MTU\s+${MTU}.*BW\s+${BANDWIDTH}
