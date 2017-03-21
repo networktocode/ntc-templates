@@ -17,4 +17,4 @@ Start
   ^\s+Internet\s+Address\s+is\s+${IP_ADDRESS}
   ^\s+MTU\s+${MTU}.*BW\s+${BANDWIDTH}
   ^\s+Encapsulation\s+${ENCAPSULATION}
-  \s+Carrier\s+delay\s(\(up\))\sis\s\s$[DELAY_UP}(,)?\s+(Carrier\s+delay\s(\(down\))\sis\s$[DELAY_DOWN})? -> Record
+  ^\s+Carrier\s+delay\s(\(up\))\sis\s\s$[DELAY_UP}(,)?\s+(Carrier\s+delay\s(\(down\))\sis\s\s$[DELAY_DOWN})? -> Record
