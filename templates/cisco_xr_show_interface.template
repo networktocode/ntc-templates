@@ -1,0 +1,20 @@
+Value Required INTERFACE (\S+)
+Value LINK_STATUS (\w+)
+Value ADMIN_STATE (\S+)
+Value HARDWARE_TYPE (.*)
+Value DESCRIPTION (.*)
+Value IP_ADDRESS (\d+\.\d+\.\d+\.\d+\/\d+)
+Value MTU (\d+)
+Value BANDWIDTH (\d+\s+\w+)
+Value ENCAPSULATION (\w+)
+Value DELAY_UP (\d+\s+\w+)
+Value DELAY_DOWN (\d+\s+\w+)
+
+Start
+  ^${INTERFACE}\sis\s+${LINK_STATUS},\s+line\sprotocol\sis\s+${ADMIN_STATE}
+  ^\s+Hardware(:|\s+is)\s+${HARDWARE_TYPE}
+  ^\s+Description:\s+${DESCRIPTION}
+  ^\s+Internet\s+Address\s+is\s+${IP_ADDRESS}
+  ^\s+MTU\s+${MTU}.*BW\s+${BANDWIDTH}
+  ^\s+Encapsulation\s+${ENCAPSULATION}
+  \s+Carrier\s+delay\s(\(up\))\sis\s\s$[DELAY_UP}(,)?\s+(Carrier\s+delay\s(\(down\))\sis\s$[DELAY_DOWN})? -> Record
