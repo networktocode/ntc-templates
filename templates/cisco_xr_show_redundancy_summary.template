@@ -1,0 +1,10 @@
+Value PRIMARY (\S+)
+Value BACKUP (\S+)
+Value STATUS ((\S+(\s\S+)*))
+Value NSR (\S+)
+
+Start
+  ^.*\-+ -> Parse
+
+Parse
+  ^\s+${PRIMARY}\s+${BACKUP}\s+\(${STATUS},\s+NSR:\s+${NSR}\) -> Record
