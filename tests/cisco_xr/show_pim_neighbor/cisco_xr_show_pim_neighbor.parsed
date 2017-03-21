@@ -1,7 +1,7 @@
 ---
 parsed_sample:
 
-- neighbor: "192.168.166.29"
+- neighbor: "10.100.100.129"
   interface: "FortyGigE0/2/1/1"
   uptime: "4w2d"
   expires: "00:01:41"
@@ -9,7 +9,7 @@ parsed_sample:
   pri: ""
   flags: "B P"
 
-- neighbor: "192.168.166.30*"
+- neighbor: "10.100.100.130*"
   interface: "FortyGigE0/2/1/1"
   uptime: "4w2d"
   expires: "00:01:25"
@@ -17,7 +17,7 @@ parsed_sample:
   pri: "DR"
   flags: "B E"
 
-- neighbor: "192.168.166.25"
+- neighbor: "10.100.100.125"
   interface: "FortyGigE0/0/0/1"
   uptime: "4w2d"
   expires: "00:01:27"
