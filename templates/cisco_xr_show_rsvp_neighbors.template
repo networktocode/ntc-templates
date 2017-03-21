@@ -1,0 +1,10 @@
+Value Filldown GLOBAL_NEIGHBOR (\S+)
+Value Required INTERFACE_NEIGHBOR (\S+)
+Value INTERFACE (\S+)
+
+Start
+  ^.*Global Neighbor:\s+${GLOBAL_NEIGHBOR}
+  ^.*\-+ -> Parse
+
+Parse
+  ^\s+${INTERFACE_NEIGHBOR}\s+${INTERFACE} -> Record
