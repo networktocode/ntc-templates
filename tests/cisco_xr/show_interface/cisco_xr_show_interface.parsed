@@ -1,42 +1,69 @@
 ---
 parsed_sample:
 
-    - address: "5087.89a1.d8d5"
-      admin_state: ""
-      bandwidth: "1000000 Kbit" 
-      bia: "" 
-      delay: "10 usec" 
-      description: "" 
-      encapsulation: "ARPA" 
-      hardware_type: "EtherSVI" 
-      interface: "Vlan20" 
-      ip_address: "10.1.20.3/24" 
-      link_status: "down" 
-      mtu: "1500"
-
-    - address: "5087.89a1.d8ce"
-      admin_state: "up"
-      bandwidth: "100000 Kbit"
-      bia: "5087.89a1.d8ce"
-      delay: "10 usec"
-      description: "out of band mgmt interface" 
-      encapsulation: "ARPA" 
-      hardware_type: "GigabitEthernet"
-      interface: "mgmt0"
-      ip_address: "10.1.100.21/24"
-      link_status: "up" 
-      mtu: "1500"
-
-    - address: "5087.89a1.d8d6"
-      admin_state: "up"
-      bandwidth: "10000000 Kbit"
-      bia: "5087.89a1.d8d6"
-      delay: "10 usec"
-      description: ""
-      encapsulation: "ARPA"
-      hardware_type: "1000/10000 Ethernet"
-      interface: "Ethernet1/1"
-      ip_address: ""
-      link_status: "up"
-      mtu: "1500"
-
+- address: ''
+  admin_state: up
+  bandwidth: 0 Kbit
+  bia: ''
+  description: "$DCI ~Loopback for OSPF/LDP/BGP/TE"
+  encapsulation: Loopback
+  hardware_type: Loopback
+  interface: Loopback5
+  ip_address: ''
+  link_status: up
+  mtu: '1500'
+- address: ''
+  admin_state: up
+  bandwidth: 0 Kbit
+  bia: ''
+  description: ''
+  encapsulation: 'Null'
+  hardware_type: 'Null'
+  interface: Null0
+  ip_address: ''
+  link_status: up
+  mtu: '1500'
+- address: ''
+  admin_state: up
+  bandwidth: 0 Kbit
+  bia: ''
+  description: "$DCI TE Tunnel For REPLICATION to P-YB19-C95"
+  encapsulation: TUNNEL
+  hardware_type: Tunnel
+  interface: tunnel-te300
+  ip_address: ''
+  link_status: up
+  mtu: '1500'
+- address: f09e.6340.1420
+  admin_state: up
+  bandwidth: 1000000 Kbit
+  bia: f09e.6340.1420
+  description: Management Interface
+  encapsulation: ARPA
+  hardware_type: Management
+  interface: MgmtEth0/RSP1/CPU0/0
+  ip_address: ''
+  link_status: up
+  mtu: '1514'
+- address: 5087.895f.81a0
+  admin_state: up
+  bandwidth: 40000000 Kbit
+  bia: 5087.895f.81a0
+  description: "$DCI ~QTS Richmond DCI @CRDC %P-CRDC-C98 +Fort0/0/0/0 !CRIT"
+  encapsulation: ARPA
+  hardware_type: FortyGigE
+  interface: FortyGigE0/0/0/0
+  ip_address: ''
+  link_status: up
+  mtu: '9216'
+- address: 5087.8964.53b0
+  admin_state: up
+  bandwidth: 10000000 Kbit
+  bia: 5087.8964.53b0
+  description: "$DCI ~QTS Richmond Prod @CRDC %Z-CRDC-Dcc001 +Te5/1 !CRIT"
+  encapsulation: ARPA
+  hardware_type: TenGigE
+  interface: TenGigE0/3/0/0
+  ip_address: ''
+  link_status: up
+  mtu: '9216'
