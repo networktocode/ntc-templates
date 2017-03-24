@@ -10,36 +10,33 @@
       default: "cisco_nxos_show_ip_route"
       private: no
 
-    - name: platform
-      prompt: "Enter the platform"
-      default: "cisco_nxos"
-      private: no
+  vars:
+    top_dir: "{{ lookup('env', 'PWD') }}"
+    TEST_DIR: "{{ top_dir }}/tests"
+    platform: "{{ template_name.split('_')[0:2] | join('_') }}"
+    command_variable: "{{ template_name.split(platform + '_') | last }}"
+    command: "{{ command_variable.split('_') | join(' ') }}"
 
   tasks:
 
-  - name: extract command from template name
-    set_fact: command_variable="{{ template_name | split(platform + '_') | last }}"
-
-  - name: extract command string from command_variable
-    set_fact: command="{{ command_variable | split('_') | join(' ') }}"
-
-  - name: run TextFSM locally on test input
+  - name: "{{template_name}}: run TextFSM on test input"
     ntc_show_command:
       connection: offline
       file: "{{ item }}"
       platform: "{{ platform }}"
       command: "{{ command }}"
+      template_dir: "{{ top_dir }}/templates"
     with_fileglob:
-      - "{{ TEST_DIR }}/{{ platform }}/{{ command_variable}}/{{ template_name}}*.raw"
+      - "{{ TEST_DIR }}/{{ platform }}/{{ command_variable }}/{{ template_name }}*.raw"
     register: ntc_result
 
-  - name: read parsed sample files
+  - name: "{{template_name}}: read parsed sample files"
     include_vars: "{{ item.item | regex_replace('\\.raw$', '.parsed') }}"
     with_items: "{{ ntc_result.results }}"
     register: ntc_result
 
-  - name: verify that parsed result is the same as expected
+  - name: "{{template_name}}: verify that parsed result is the same as expected"
+    with_items: "{{ ntc_result.results }}"
     compare_dict:
       result: "{{ item.item.response }}"
       sample: "{{ item.ansible_facts.parsed_sample }}"
-    with_items: "{{ ntc_result.results }}"
