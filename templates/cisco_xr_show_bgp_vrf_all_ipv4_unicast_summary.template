@@ -1,0 +1,9 @@
+Value Required VRF (\S+)
+Value RD (\S+)
+Value STATE (\w+)
+
+Start
+  ^BGP\s+VRF\s+${VRF},\s+state:\s+${STATE}
+  ^BGP Route Distinguisher:\s+${RD} -> Record
+
+

@@ -1,0 +1,88 @@
+Tue Mar  7 16:51:31.347 EST
+PHY data for interface: FortyGigE0/1/1/0 
+
+QSFP EEPROM port: 0
+        Xcvr Type: QSFP+
+        Ext Type: 1.5W, CLEI, 
+        Connector Type: MPO
+        Ethernet Compliance Codes: 40GBASE-SR4, 
+        Encoding: 64B66B, 
+        BR, nominal: 10300 Mbps
+        Length SMF: 0KM, OM3: 100M, OM2: 30M, OM1: 0M, Copper: 0M
+        Device Tech: 850 nm VCSEL, No wavelength control, Uncooled transmitter device, Pin detector, Transmitter not tunable, 
+        Vendor Name: CISCO           
+        Vendor OUI: 00.17.6a
+        Vendor Part Number: AFBR-79EIPZ-CS2   (rev.: 03)
+        Wavelength: 850.030 nm
+        Wavelength Tolerance: 10.030 nm
+        Vendor Serial Number: AVP1812S4QL     
+        Date Code (yy/mm/dd): 14/03/22  lot code:   
+        Diagnostic Monitoring Type: Average Power, 
+        Enhanced Options: No Rate Selection, No Application Select, 
+        Extended Module Codes: 
+        Options: Rx Squ Dis, Rx Op Dis cap, Tx Squ Dis, Tx Squelch, Page 02, Page 01, Tx_Disable, Tx_Fault, Pave, Tx LOS, 
+        L-Tx/Rx LOS: 
+        L-Tx Fault: 
+        Module DDM: Voltage, Temperature, 
+MSA Data (Lower Memory)
+0x0000: 0d 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00 
+0x0010: 00 00 00 00 00 00 1a 89 : 00 00 7f 19 00 00 00 00 
+0x0020: 00 00 16 d5 14 2c 1b 1b : 17 25 0d 25 0c 9a 0c 0a 
+0x0030: 0b f1 17 95 18 74 18 70 : 19 5a 00 00 00 00 00 00 
+0x0040: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00 
+0x0050: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00 
+0x0060: 00 00 00 00 00 00 00 f0 : f0 00 18 00 00 00 00 00 
+0x0070: 00 00 00 00 00 03 03 00 : 00 00 00 00 00 00 00 03 
+
+
+MSA Data (Upper Memory Page 00)
+0x0080: 0d 10 0c 04 00 00 00 00 : 00 00 00 05 67 00 00 32 
+0x0090: 1e 00 00 00 43 49 53 43 : 4f 20 20 20 20 20 20 20 
+0x00a0: 20 20 20 20 00 00 17 6a : 41 46 42 52 2d 37 39 45 
+0x00b0: 49 50 5a 2d 43 53 32 20 : 30 33 42 68 07 d0 46 6a 
+0x00c0: 00 00 0f de 41 56 50 31 : 38 31 32 53 34 51 4c 20 
+0x00d0: 20 20 20 20 31 34 30 33 : 32 32 20 20 0a 00 00 da 
+0x00e0: 00 00 06 6a de 2e ae 68 : 0e ce 79 e7 a5 0f 93 fe 
+0x00f0: 61 45 b8 00 00 00 00 00 : 00 00 00 00 7e 57 7d cc 
+
+        CLEI Code: COUIA9JCAB
+        Part Number: 10-2672-02 (ver.: V02 )
+        Product Id: QSFP-40G-SR4        
+MSA Data (Upper Memory Page 02)
+0x0100: 43 4f 55 49 41 39 4a 43 : 41 42 31 30 2d 32 36 37 
+0x0110: 32 2d 30 32 56 30 32 20 : 01 00 00 00 00 00 00 00 
+0x0120: 00 81 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00 
+0x0130: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 aa aa 
+0x0140: 51 53 46 50 2d 34 30 47 : 2d 53 52 34 20 20 20 20 
+0x0150: 20 20 20 20 00 00 00 00 : 00 00 00 00 00 00 00 18 
+0x0160: 36 34 31 33 34 34 31 37 : 00 9e 00 00 00 00 00 00 
+0x0170: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00 
+
+        Module
+        Thresholds:                   Alarm High          Warning High          Warning Low          Alarm Low
+              Temperature:            +75.000 C             +70.000 C              +0.000 C              -5.000 C
+                  Voltage:           3.630 Volt            3.465 Volt            3.100 Volt            2.970 Volt
+
+        Temperature: +26.535 C
+        Voltage: 3.254 Volt
+
+        Lanes
+        Thresholds:                   Alarm High          Warning High          Warning Low          Alarm Low
+                     Bias:         10.000 mAmps           9.500 mAmps           1.000 mAmps           0.500 mAmps
+           Transmit Power:  1.58480 mW (1.99974 dBm)   0.79430 mW (-1.00015 dBm)   0.17370 mW (-7.60200 dBm)   0.06910 mW (-11.60522 dBm)
+            Receive Power:  2.18770 mW (3.39988 dBm)   1.73780 mW (2.40000 dBm)   0.11220 mW (-9.50007 dBm)   0.04460 mW (-13.50665 dBm)
+
+                 Lane            Temp            Bias                   Tx Power                   Rx Power
+                    0             N/A     6.730 mAmps   0.60370 mW (-2.19179 dBm)   0.58450 mW (-2.33215 dBm)
+                    1             N/A     6.452 mAmps   0.62600 mW (-2.03426 dBm)   0.51640 mW (-2.87014 dBm)
+                    2             N/A     6.164 mAmps   0.62560 mW (-2.03703 dBm)   0.69390 mW (-1.58703 dBm)
+                    3             N/A     6.114 mAmps   0.64900 mW (-1.87755 dBm)   0.59250 mW (-2.27312 dBm)
+MSA Data (Upper Memory Page 03)
+0x0180: 4b 00 fb 00 46 00 00 00 : 00 00 00 00 00 00 00 00 
+0x0190: 8d cc 74 04 87 5a 79 18 : 00 00 00 00 00 00 00 00 
+0x01a0: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00 
+0x01b0: 55 75 01 be 43 e2 04 62 : 13 88 00 fa 12 8e 01 f4 
+0x01c0: 3d e8 02 b3 1f 07 06 c9 : 00 00 00 00 00 00 00 00 
+0x01d0: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00 
+0x01e0: 00 00 00 00 00 00 00 00 : 00 00 00 00 33 33 77 77 
+0x01f0: 00 00 ff ff ff ff ff ff : 00 00 00 00 00 00 00 00 
