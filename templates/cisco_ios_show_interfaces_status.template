@@ -2,7 +2,7 @@ Value PORT (([a-zA-Z])\w+/\d+|mgmt\d+|Po\d+|Lo\d+|Vlan\d+)
 Value NAME (\S+((\s\w+)+)?)
 Value STATUS (\w+)
 Value VLAN (\w+)
-Value DUPLEX (a-full|auto|half)
+Value DUPLEX (a-full|auto|half|a-half)
 Value SPEED (auto|\w+-\d+|\d+)
 Value TYPE (.*)
 
