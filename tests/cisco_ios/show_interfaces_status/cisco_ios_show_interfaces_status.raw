@@ -1,18 +1,12 @@
-Port    Name               Status       Vlan       Duplex Speed Type
-Fa1/0   To-SW-LAN          connected    trunk      a-full   a-100 10/100BaseTX
-Fa1/1   To-R1              connected    routed     a-full   a-100 10/100BaseTX
-Fa1/2                      notconnect   1            auto    auto 10/100BaseTX
-Fa1/3                      notconnect   1            auto    auto 10/100BaseTX
-Fa1/4                      notconnect   1            auto    auto 10/100BaseTX
-Fa1/5                      notconnect   1            auto    auto 10/100BaseTX
-Fa1/6                      notconnect   1            auto    auto 10/100BaseTX
-Fa1/7                      notconnect   1            auto    auto 10/100BaseTX
-Fa1/8                      notconnect   1            auto    auto 10/100BaseTX
-Fa1/9                      notconnect   1            auto    auto 10/100BaseTX
-Fa1/10                     notconnect   1            auto    auto 10/100BaseTX
-Fa1/11                     notconnect   1            auto    auto 10/100BaseTX
-Fa1/12                     notconnect   1            auto    auto 10/100BaseTX
-Fa1/13                     notconnect   1            auto    auto 10/100BaseTX
-Fa1/14                     notconnect   1            auto    auto 10/100BaseTX
-Fa1/15                     notconnect   1            auto    auto 10/100BaseTX
-
+Port      Name               Status       Vlan       Duplex  Speed Type
+Gi1/0/1                      notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/2   AccessPoint        connected    8          a-full a-1000 10/100/1000BaseTX
+Gi1/0/3   John's Office      notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/4   SingleName         connected    1          a-full  a-100 10/100/1000BaseTX
+Gi1/0/5   Dashed-Name        connected    1000       a-full a-1000 10/100/1000BaseTX
+Gi1/0/6   Spaced Example     connected    8          a-full  a-100 10/100/1000BaseTX
+Gi1/0/14  Trunk Example      connected    trunk      a-full a-1000 1000BaseSX SFP
+Gi1/0/50  SFP Not Present    notconnect   1            auto   auto Not Present
+Fa0       Management         notconnect   routed       auto   auto 10/100BaseTX
+Fa0/1     2960S Port         notconnect   16         a-half   auto 10/100BaseTX
+Fa0/2     Half Duplex 2950   notconnect   16         a-half   auto 10/100BaseTX

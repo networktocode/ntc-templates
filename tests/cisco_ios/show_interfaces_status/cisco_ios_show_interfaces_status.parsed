@@ -1,131 +1,81 @@
 ---
 parsed_sample:
-   
-    - port: "Fa1/0"
-      name: "To-SW-LAN"
-      status: "connected"
-      vlan: "trunk"
-      duplex: "a-full"
-      speed: "a-100"
-      type: "10/100BaseTX"
-
-    - port: "Fa1/1"
-      name: "To-R1"
-      status: "connected"
-      vlan: "routed"
-      duplex: "a-full"
-      speed: "a-100"
-      type: "10/100BaseTX"
-
-    - port: "Fa1/2"
-      name: ""
-      status: "notconnect"
-      vlan: "1"
-      duplex: "auto"
-      speed: "auto"
-      type: "10/100BaseTX"
-
-    - port: "Fa1/3"
-      name: ""
-      status: "notconnect"
-      vlan: "1"
-      duplex: "auto"
-      speed: "auto"
-      type: "10/100BaseTX"
-
-    - port: "Fa1/4"
-      name: ""
-      status: "notconnect"
-      vlan: "1"
-      duplex: "auto"
-      speed: "auto"
-      type: "10/100BaseTX"
-
-    - port: "Fa1/5"
-      name: ""
-      status: "notconnect"
-      vlan: "1"
-      duplex: "auto"
-      speed: "auto"
-      type: "10/100BaseTX"
-
-    - port: "Fa1/6"
-      name: ""
-      status: "notconnect"
-      vlan: "1"
-      duplex: "auto"
-      speed: "auto"
-      type: "10/100BaseTX"
-
-    - port: "Fa1/7"
-      name: ""
-      status: "notconnect"
-      vlan: "1"
-      duplex: "auto"
-      speed: "auto"
-      type: "10/100BaseTX"
-
-    - port: "Fa1/8"
-      name: ""
-      status: "notconnect"
-      vlan: "1"
-      duplex: "auto"
-      speed: "auto"
-      type: "10/100BaseTX"
-
-    - port: "Fa1/9"
-      name: ""
-      status: "notconnect"
-      vlan: "1"
-      duplex: "auto"
-      speed: "auto"
-      type: "10/100BaseTX"
-
-    - port: "Fa1/10"
-      name: ""
-      status: "notconnect"
-      vlan: "1"
-      duplex: "auto"
-      speed: "auto"
-      type: "10/100BaseTX"
-
-    - port: "Fa1/11"
-      name: ""
-      status: "notconnect"
-      vlan: "1"
-      duplex: "auto"
-      speed: "auto"
-      type: "10/100BaseTX"
-
-    - port: "Fa1/12"
-      name: ""
-      status: "notconnect"
-      vlan: "1"
-      duplex: "auto"
-      speed: "auto"
-      type: "10/100BaseTX"
-
-    - port: "Fa1/13"
-      name: ""
-      status: "notconnect"
-      vlan: "1"
-      duplex: "auto"
-      speed: "auto"
-      type: "10/100BaseTX"
-
-    - port: "Fa1/14"
-      name: ""
-      status: "notconnect"
-      vlan: "1"
-      duplex: "auto"
-      speed: "auto"
-      type: "10/100BaseTX"
-
-    - port: "Fa1/15"
-      name: ""
-      status: "notconnect"
-      vlan: "1"
-      duplex: "auto"
-      speed: "auto"
-      type: "10/100BaseTX"
+    
+  - duplex: auto
+    name: ''
+    port: Gi1/0/1
+    speed: auto
+    status: notconnect
+    type: 10/100/1000BaseTX
+    vlan: '1'
+  - duplex: a-full
+    name: AccessPoint
+    port: Gi1/0/2
+    speed: a-1000
+    status: connected
+    type: 10/100/1000BaseTX
+    vlan: '8'
+  - duplex: auto
+    name: John's Office
+    port: Gi1/0/3
+    speed: auto
+    status: notconnect
+    type: 10/100/1000BaseTX
+    vlan: '1'
+  - duplex: a-full
+    name: SingleName
+    port: Gi1/0/4
+    speed: a-100
+    status: connected
+    type: 10/100/1000BaseTX
+    vlan: '1'
+  - duplex: a-full
+    name: Dashed-Name
+    port: Gi1/0/5
+    speed: a-1000
+    status: connected
+    type: 10/100/1000BaseTX
+    vlan: '1000'
+  - duplex: a-full
+    name: Spaced Example
+    port: Gi1/0/6
+    speed: a-100
+    status: connected
+    type: 10/100/1000BaseTX
+    vlan: '8'
+  - duplex: a-full
+    name: Trunk Example
+    port: Gi1/0/14
+    speed: a-1000
+    status: connected
+    type: 1000BaseSX SFP
+    vlan: trunk
+  - duplex: auto
+    name: SFP Not Present
+    port: Gi1/0/50
+    speed: auto
+    status: notconnect
+    type: Not Present
+    vlan: '1'
+  - duplex: auto
+    name: Management
+    port: Fa0
+    speed: auto
+    status: notconnect
+    type: 10/100BaseTX
+    vlan: routed
+  - duplex: a-half
+    name: 2960S Port
+    port: Fa0/1
+    speed: auto
+    status: notconnect
+    type: 10/100BaseTX
+    vlan: '16'
+  - duplex: a-half
+    name: Half Duplex 2950
+    port: Fa0/2
+    speed: auto
+    status: notconnect
+    type: 10/100BaseTX
+    vlan: '16'
 
