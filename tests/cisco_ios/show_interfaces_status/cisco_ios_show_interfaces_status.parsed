@@ -57,13 +57,6 @@ parsed_sample:
     status: notconnect
     type: Not Present
     vlan: '1'
-  - duplex: auto
-    name: Management
-    port: Fa0
-    speed: auto
-    status: notconnect
-    type: 10/100BaseTX
-    vlan: routed
   - duplex: a-half
     name: 2960S Port
     port: Fa0/1
