@@ -36,3 +36,5 @@ Start
   ^\s+Rx\s+Power\s+${RX_VALUE}\s+(\w+\s+)?[+-]*\s+${RX_ALARM_HIGH}\s+(\w+\s+)?[+-]*\s+${RX_ALARM_LOW}\s+(\w+\s+)?[+-]*\s+${RX_WARN_HIGH}\s+(\w+\s+)?[+-]*\s+${RX_WARN_LOW}
   ^\s+Tx\s+Power\s+${TX_VALUE}\s+(\w+\s+)?[+-]*\s+${TX_ALARM_HIGH}\s+(\w+\s+)?[+-]*\s+${TX_ALARM_LOW}\s+(\w+\s+)?[+-]*\s+${TX_WARN_HIGH}\s+(\w+\s+)?[+-]*\s+${TX_WARN_LOW}
   ^\s+Note: -> Record
+
+EOF
