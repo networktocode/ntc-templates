@@ -59,7 +59,7 @@ brocade_netiron_show_interfaces.template, .*, brocade_netiron, sh[[ow]] in[[terf
 brocade_netiron_show_run_int_ve.template, .*, brocade_netiron, sh[[ow]] ru[[nning-config]] i[[nterface]] v[[e]]
 brocade_netiron_show_lag_brief.template, .*, brocade_netiron, sh[[ow]] lag b[[rief]]
 brocade_netiron_show_run_vlan.template, .*, brocade_netiron, sh[[ow]] ru[[nning-config]] v[[lan]]
-brocade_netiron_show_monitor.template, .*, brocade_netiron, sh[[ow]] mon[[itor]] c[[onfig]]
+brocade_netiron_show_monitor.template, .*, brocade_netiron, sh[[ow]] mon[[itor]] [actual|config]
 brocade_netiron_show_metro.template, .*, brocade_netiron, sh[[ow]] met[[ro-ring]]
 brocade_netiron_show_span.template, .*, brocade_netiron, sh[[ow]] sp[[anning-tree]]
 brocade_netiron_show_topo.template, .*, brocade_netiron, sh[[ow]] to[[pology-group]]
