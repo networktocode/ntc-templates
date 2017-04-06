@@ -185,3 +185,13 @@ ENV/
 
 # Cloned modules used while testing
 .ntc-modules/
+
+*.cfg~
+
+templates/index~
+
+ansible.cfg
+
+helpers/create-parsed.retry
+
+hosts
