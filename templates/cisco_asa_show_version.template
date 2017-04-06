@@ -21,7 +21,7 @@ Start
   ^Device.+\s${DEVICE_MGR_VERSION}
   ^System image file.+"${IMAGE}"
   ^${HOSTNAME} up ${UPTIME}
-  ^Hardware:\s+${HARDWARE}
+  ^Hardware:\s+${HARDWARE},
   ^Model Id:\s+${MODEL}
   ^Internal.+Flash,\s${FLASH}
   ^ \d+:.\S+\s${INTERFACES}.*
