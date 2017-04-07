@@ -1,0 +1,55 @@
+vlan 1 name DEFAULT-VLAN by port
+ no spanning-tree
+!
+vlan 10 name CLMAMO-RING-1 by port
+ tagged ethe 2 ethe 11 
+ no spanning-tree
+ metro-ring 10
+  ring-interfaces  ethernet 11  ethernet 2
+  enable
+!
+vlan 13 name SocketPublicWifi by port
+ tagged ethe 1 to 2 
+ no spanning-tree
+!
+vlan 14 name CLMAMOFW-Ring by port
+ tagged ethe 1 to 2 
+ no spanning-tree
+ metro-ring 14
+  ring-interfaces  ethernet 1  ethernet 2
+  enable
+!
+vlan 100 by port
+ tagged ethe 1 to 2 
+ no spanning-tree                                                 
+!
+vlan 146 name LabSBC-External by port
+ tagged ethe 2 ethe 11 
+ no spanning-tree
+!
+vlan 149 name SBC-External by port
+ tagged ethe 2 ethe 11 
+ untagged ethe 16 ethe 21 
+ no spanning-tree
+!
+vlan 151 name LabSBC-Internal by port
+ tagged ethe 2 ethe 11 
+ no spanning-tree
+!
+vlan 152 name SBC-Inside by port
+ tagged ethe 2 ethe 11 
+ untagged ethe 10 ethe 20 
+ no spanning-tree
+!
+vlan 154 name SocketVoIP-Svr by port
+ tagged ethe 2 ethe 11 ethe 19 
+ untagged ethe 14 
+ no spanning-tree                                                 
+!
+vlan 175 name CLMAMO10G-to-FW by port
+ tagged ethe 1 to 2 
+ no spanning-tree
+ metro-ring 176
+  ring-interfaces  ethernet 1  ethernet 2
+  enable
+  name CLMAMOFW-to-CLMAMO10G

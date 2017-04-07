@@ -1,0 +1,29 @@
+Value Required interface (\d+)
+Value portname ([0-9a-zA-Z\ \-\"\/\(\)\_\#\@\.\'\!\&]+)
+Value qostostrust ([a-z\-]+)
+Value qostosmark ([a-z\-]+)
+Value ospfarea (\d+)
+Value ospfpassive (passive)
+Value ospfcost (\d+)
+Value vrf ([a-zA-Z0-9]+)
+Value ippimsparse (pim-sparse)
+Value iprouterisis (isis)
+Value isismetric (\d+)
+Value iphelpers (\d+)
+Value ipaddresses (\d+)
+Value ipredirect (no)
+
+Start
+  ^interface ve ${interface}
+  ^\s+port-name\s+${portname}
+  ^\s+qos-tos trust ${qostostrust}
+  ^\s+qos-tos mark ${qostosmark}
+  ^\s+ip ospf area ${ospfarea}
+  ^\s+ip ospf ${ospfpassive}
+  ^\s+ip ospf cost ${ospfcost}
+  ^\s+vrf forwarding ${vrf}
+  ^\s+ip ${ippimsparse}
+  ^\s+ip router ${iprouterisis}
+  ^\s+isis metric ${isismetric}
+  ^\s+${ipredirect} ip redirect
+  ^! -> Next.Record
