@@ -1,5 +1,5 @@
 Value PORT (([a-zA-Z])\w+/\d+|([a-zA-Z])\w+/\d+/\d+|mgmt\d+|Po\d+|Lo\d+|Vlan\d+)
-Value NAME (\S+((\s\w+|\w+'|\w+'\w+|'\w+|\w+\s+)+)?)
+Value NAME (.{0,18}?)
 Value STATUS (\w+)
 Value VLAN (\w+)
 Value DUPLEX (a-full|auto|half|a-half)
