@@ -1,0 +1,85 @@
+Total MRP entries configured = 6
+
+Metro Ring 10
+=============
+Ring       State      Ring       Master     Topo       Hello      Prefwing
+id                    role       vlan       group      time(ms)   time(ms)
+10         enabled    master     10         10         100        300
+
+Ring interfaces Interface role Forwarding state Active interface interface type 
+ethernet 1/1/24 primary        forwarding       ethernet 1/1/24  regular        
+ethernet 2/1/1  secondary      blocking         ethernet 2/1/1   regular        
+
+RHPs sent            RHPs rcvd            TC RBPDUs rcvd       State changes
+10901939             10901939             0                    0
+
+
+Metro Ring 171 - CLMA-KSCY-STLS-10G-CLMA
+=============
+Ring       State      Ring       Master     Topo       Hello      Prefwing
+id                    role       vlan       group      time(ms)   time(ms)
+171        enabled    member     170        170        100        300
+
+Ring interfaces Interface role Forwarding state Active interface interface type 
+ethernet 1/3/1  primary        forwarding       ethernet 1/3/1   regular        
+ethernet 2/3/1  secondary      forwarding       ethernet 2/3/1   regular        
+
+RHPs sent            RHPs rcvd            TC RBPDUs rcvd       State changes
+0                    10767120             0                    0
+
+
+Metro Ring 175 - CLMAMO10G-to-CLMAMOFW
+=============
+Ring       State      Ring       Master     Topo       Hello      Prefwing
+id                    role       vlan       group      time(ms)   time(ms)
+175        enabled    member     175        175        100        300
+
+Ring interfaces Interface role Forwarding state Active interface interface type 
+ethernet 1/3/1  primary        forwarding       ethernet 1/3/1   regular        
+ethernet 2/3/1  secondary      forwarding       ethernet 2/3/1   regular        
+
+RHPs sent            RHPs rcvd            TC RBPDUs rcvd       State changes
+0                    10767119             3                    0
+
+
+Metro Ring 215
+=============
+Ring       State      Ring       Master     Topo       Hello      Prefwing
+id                    role       vlan       group      time(ms)   time(ms)
+215        enabled    member     215        215        100        300
+
+Ring interfaces Interface role Forwarding state Active interface interface type 
+ethernet 2/3/1  primary        forwarding       ethernet 2/3/1   regular        
+ethernet 1/3/1  secondary      forwarding       ethernet 1/3/1   regular        
+
+RHPs sent            RHPs rcvd            TC RBPDUs rcvd       State changes
+0                    11175806             0                    0
+
+
+Metro Ring 13 - CLMAMO-10G
+=============
+Ring       State      Ring       Master     Topo       Hello      Prefwing
+id                    role       vlan       group      time(ms)   time(ms)
+13         enabled    member     513        13         100        300
+
+Ring interfaces Interface role Forwarding state Active interface interface type 
+ethernet 1/3/1  primary        forwarding       ethernet 1/3/1   regular        
+ethernet 2/3/1  secondary      forwarding       ethernet 2/3/1   regular        
+
+RHPs sent            RHPs rcvd            TC RBPDUs rcvd       State changes
+0                    10767120             15                   0  
+
+
+Metro Ring 60 - CLMA-JFCY-FLTNHT
+=============
+Ring       State      Ring       Master     Topo       Hello      Prefwing
+id                    role       vlan       group      time(ms)   time(ms)
+60         enabled    member     60         60         100        300
+
+Ring interfaces Interface role Forwarding state Active interface interface type 
+ethernet 1/3/1  primary        forwarding       ethernet 1/3/1   regular        
+ethernet 2/3/1  secondary      forwarding       ethernet 2/3/1   regular        
+
+RHPs sent            RHPs rcvd            TC RBPDUs rcvd       State changes
+0                    10767120             3                    0
+
