@@ -9,7 +9,7 @@ Start
   ^Device ID: ${DESTINATION_HOST}
   ^Entry address\(es\): -> ParseIP
   ^Platform: ${PLATFORM},
-  ^Interface: ${LOCAL_PORT},  Port ID \(outgoing port\): ${REMOTE_PORT}
+  ^Interface: ${REMOTE_PORT},  Port ID \(outgoing port\): ${LOCAL_PORT}
   ^Version : -> GetVersion
 
 ParseIP
