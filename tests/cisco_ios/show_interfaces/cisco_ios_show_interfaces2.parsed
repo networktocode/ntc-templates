@@ -1,0 +1,955 @@
+---
+parsed_sample:
+
+-   address: 0014.1c57.a4c0
+    bandwidth: 1000000 Kbit
+    bia: 0014.1c57.a4c0
+    delay: 10 usec
+    description: ''
+    duplex: ''
+    encapsulation: ARPA
+    hardware_type: EtherSVI
+    input_rate: '0'
+    interface: Vlan1
+    ip_address: ''
+    link_status: up
+    mtu: '1500'
+    output_rate: '0'
+    protocol_status: up
+    queue_strategy: fifo
+    speed: ''
+-   address: 0014.1c57.a4c1
+    bandwidth: 1000000 Kbit
+    bia: 0014.1c57.a4c1
+    delay: 10 usec
+    description: ''
+    duplex: ''
+    encapsulation: ARPA
+    hardware_type: EtherSVI
+    input_rate: '0'
+    interface: Vlan50
+    ip_address: 10.1.50.1/24
+    link_status: up
+    mtu: '1500'
+    output_rate: '0'
+    protocol_status: up
+    queue_strategy: fifo
+    speed: ''
+-   address: 0014.1c57.a4c2
+    bandwidth: 1000000 Kbit
+    bia: 0014.1c57.a4c2
+    delay: 10 usec
+    description: ''
+    duplex: ''
+    encapsulation: ARPA
+    hardware_type: EtherSVI
+    input_rate: '2000'
+    interface: Vlan100
+    ip_address: 10.1.100.1/24
+    link_status: up
+    mtu: '1500'
+    output_rate: '2000'
+    protocol_status: up
+    queue_strategy: fifo
+    speed: ''
+-   address: 0014.1c57.a4c3
+    bandwidth: 1000000 Kbit
+    bia: 0014.1c57.a4c3
+    delay: 10 usec
+    description: ''
+    duplex: ''
+    encapsulation: ARPA
+    hardware_type: EtherSVI
+    input_rate: '0'
+    interface: Vlan254
+    ip_address: 10.1.254.1/24
+    link_status: up
+    mtu: '1500'
+    output_rate: '0'
+    protocol_status: up
+    queue_strategy: fifo
+    speed: ''
+-   address: 0014.1c57.a483
+    bandwidth: 100000 Kbit
+    bia: 0014.1c57.a483
+    delay: 100 usec
+    description: ''
+    duplex: Full-duplex
+    encapsulation: ARPA
+    hardware_type: Fast Ethernet
+    input_rate: '182000'
+    interface: FastEthernet1/0/1
+    ip_address: ''
+    link_status: up
+    mtu: '1500'
+    output_rate: '38883000'
+    protocol_status: up (connected)
+    queue_strategy: fifo
+    speed: 100Mb/s
+-   address: 0014.1c57.a484
+    bandwidth: 100000 Kbit
+    bia: 0014.1c57.a484
+    delay: 100 usec
+    description: ''
+    duplex: Full-duplex
+    encapsulation: ARPA
+    hardware_type: Fast Ethernet
+    input_rate: '38882000'
+    interface: FastEthernet1/0/2
+    ip_address: ''
+    link_status: up
+    mtu: '1500'
+    output_rate: '182000'
+    protocol_status: up (connected)
+    queue_strategy: fifo
+    speed: 100Mb/s
+-   address: 0014.1c57.a485
+    bandwidth: 100000 Kbit
+    bia: 0014.1c57.a485
+    delay: 100 usec
+    description: ''
+    duplex: Full-duplex
+    encapsulation: ARPA
+    hardware_type: Fast Ethernet
+    input_rate: '0'
+    interface: FastEthernet1/0/3
+    ip_address: ''
+    link_status: up
+    mtu: '1500'
+    output_rate: '1000'
+    protocol_status: up (connected)
+    queue_strategy: fifo
+    speed: 100Mb/s
+-   address: 0014.1c57.a486
+    bandwidth: 10000 Kbit
+    bia: 0014.1c57.a486
+    delay: 1000 usec
+    description: ''
+    duplex: Auto-duplex
+    encapsulation: ARPA
+    hardware_type: Fast Ethernet
+    input_rate: '0'
+    interface: FastEthernet1/0/4
+    ip_address: ''
+    link_status: down
+    mtu: '1500'
+    output_rate: '0'
+    protocol_status: down (notconnect)
+    queue_strategy: fifo
+    speed: Auto-speed
+-   address: 0014.1c57.a487
+    bandwidth: 10000 Kbit
+    bia: 0014.1c57.a487
+    delay: 1000 usec
+    description: ''
+    duplex: Auto-duplex
+    encapsulation: ARPA
+    hardware_type: Fast Ethernet
+    input_rate: '0'
+    interface: FastEthernet1/0/5
+    ip_address: ''
+    link_status: down
+    mtu: '1500'
+    output_rate: '0'
+    protocol_status: down (notconnect)
+    queue_strategy: fifo
+    speed: Auto-speed
+-   address: 0014.1c57.a488
+    bandwidth: 10000 Kbit
+    bia: 0014.1c57.a488
+    delay: 1000 usec
+    description: ''
+    duplex: Auto-duplex
+    encapsulation: ARPA
+    hardware_type: Fast Ethernet
+    input_rate: '0'
+    interface: FastEthernet1/0/6
+    ip_address: ''
+    link_status: down
+    mtu: '1500'
+    output_rate: '0'
+    protocol_status: down (notconnect)
+    queue_strategy: fifo
+    speed: Auto-speed
+-   address: 0014.1c57.a489
+    bandwidth: 10000 Kbit
+    bia: 0014.1c57.a489
+    delay: 1000 usec
+    description: ''
+    duplex: Auto-duplex
+    encapsulation: ARPA
+    hardware_type: Fast Ethernet
+    input_rate: '0'
+    interface: FastEthernet1/0/7
+    ip_address: ''
+    link_status: down
+    mtu: '1500'
+    output_rate: '0'
+    protocol_status: down (notconnect)
+    queue_strategy: fifo
+    speed: Auto-speed
+-   address: 0014.1c57.a48a
+    bandwidth: 10000 Kbit
+    bia: 0014.1c57.a48a
+    delay: 1000 usec
+    description: ''
+    duplex: Auto-duplex
+    encapsulation: ARPA
+    hardware_type: Fast Ethernet
+    input_rate: '0'
+    interface: FastEthernet1/0/8
+    ip_address: ''
+    link_status: down
+    mtu: '1500'
+    output_rate: '0'
+    protocol_status: down (notconnect)
+    queue_strategy: fifo
+    speed: Auto-speed
+-   address: 0014.1c57.a48b
+    bandwidth: 100000 Kbit
+    bia: 0014.1c57.a48b
+    delay: 100 usec
+    description: ''
+    duplex: Full-duplex
+    encapsulation: ARPA
+    hardware_type: Fast Ethernet
+    input_rate: '38871000'
+    interface: FastEthernet1/0/9
+    ip_address: ''
+    link_status: up
+    mtu: '1500'
+    output_rate: '174000'
+    protocol_status: up (connected)
+    queue_strategy: fifo
+    speed: 100Mb/s
+-   address: 0014.1c57.a48c
+    bandwidth: 100000 Kbit
+    bia: 0014.1c57.a48c
+    delay: 100 usec
+    description: ''
+    duplex: Full-duplex
+    encapsulation: ARPA
+    hardware_type: Fast Ethernet
+    input_rate: '0'
+    interface: FastEthernet1/0/10
+    ip_address: ''
+    link_status: up
+    mtu: '1500'
+    output_rate: '0'
+    protocol_status: up (connected)
+    queue_strategy: fifo
+    speed: 100Mb/s
+-   address: 0014.1c57.a48d
+    bandwidth: 100000 Kbit
+    bia: 0014.1c57.a48d
+    delay: 100 usec
+    description: ''
+    duplex: Auto-duplex
+    encapsulation: ARPA
+    hardware_type: Fast Ethernet
+    input_rate: '0'
+    interface: FastEthernet1/0/11
+    ip_address: ''
+    link_status: down
+    mtu: '1500'
+    output_rate: '0'
+    protocol_status: down (notconnect)
+    queue_strategy: fifo
+    speed: Auto-speed
+-   address: 0014.1c57.a48e
+    bandwidth: 100000 Kbit
+    bia: 0014.1c57.a48e
+    delay: 100 usec
+    description: ''
+    duplex: Full-duplex
+    encapsulation: ARPA
+    hardware_type: Fast Ethernet
+    input_rate: '0'
+    interface: FastEthernet1/0/12
+    ip_address: ''
+    link_status: up
+    mtu: '1500'
+    output_rate: '0'
+    protocol_status: up (connected)
+    queue_strategy: fifo
+    speed: 100Mb/s
+-   address: 0014.1c57.a48f
+    bandwidth: 100000 Kbit
+    bia: 0014.1c57.a48f
+    delay: 100 usec
+    description: ''
+    duplex: Full-duplex
+    encapsulation: ARPA
+    hardware_type: Fast Ethernet
+    input_rate: '0'
+    interface: FastEthernet1/0/13
+    ip_address: ''
+    link_status: up
+    mtu: '1500'
+    output_rate: '0'
+    protocol_status: up (connected)
+    queue_strategy: fifo
+    speed: 100Mb/s
+-   address: 0014.1c57.a490
+    bandwidth: 100000 Kbit
+    bia: 0014.1c57.a490
+    delay: 100 usec
+    description: ''
+    duplex: Full-duplex
+    encapsulation: ARPA
+    hardware_type: Fast Ethernet
+    input_rate: '0'
+    interface: FastEthernet1/0/14
+    ip_address: ''
+    link_status: up
+    mtu: '1500'
+    output_rate: '0'
+    protocol_status: up (connected)
+    queue_strategy: fifo
+    speed: 100Mb/s
+-   address: 0014.1c57.a491
+    bandwidth: 100000 Kbit
+    bia: 0014.1c57.a491
+    delay: 100 usec
+    description: ''
+    duplex: Auto-duplex
+    encapsulation: ARPA
+    hardware_type: Fast Ethernet
+    input_rate: '0'
+    interface: FastEthernet1/0/15
+    ip_address: ''
+    link_status: down
+    mtu: '1500'
+    output_rate: '0'
+    protocol_status: down (notconnect)
+    queue_strategy: fifo
+    speed: Auto-speed
+-   address: 0014.1c57.a492
+    bandwidth: 100000 Kbit
+    bia: 0014.1c57.a492
+    delay: 100 usec
+    description: ''
+    duplex: Auto-duplex
+    encapsulation: ARPA
+    hardware_type: Fast Ethernet
+    input_rate: '0'
+    interface: FastEthernet1/0/16
+    ip_address: ''
+    link_status: down
+    mtu: '1500'
+    output_rate: '0'
+    protocol_status: down (notconnect)
+    queue_strategy: fifo
+    speed: Auto-speed
+-   address: 0014.1c57.a493
+    bandwidth: 100000 Kbit
+    bia: 0014.1c57.a493
+    delay: 100 usec
+    description: ''
+    duplex: Auto-duplex
+    encapsulation: ARPA
+    hardware_type: Fast Ethernet
+    input_rate: '0'
+    interface: FastEthernet1/0/17
+    ip_address: ''
+    link_status: down
+    mtu: '1500'
+    output_rate: '0'
+    protocol_status: down (notconnect)
+    queue_strategy: fifo
+    speed: Auto-speed
+-   address: 0014.1c57.a494
+    bandwidth: 100000 Kbit
+    bia: 0014.1c57.a494
+    delay: 100 usec
+    description: ''
+    duplex: Auto-duplex
+    encapsulation: ARPA
+    hardware_type: Fast Ethernet
+    input_rate: '0'
+    interface: FastEthernet1/0/18
+    ip_address: ''
+    link_status: down
+    mtu: '1500'
+    output_rate: '0'
+    protocol_status: down (notconnect)
+    queue_strategy: fifo
+    speed: Auto-speed
+-   address: 0014.1c57.a495
+    bandwidth: 100000 Kbit
+    bia: 0014.1c57.a495
+    delay: 100 usec
+    description: ''
+    duplex: Full-duplex
+    encapsulation: ARPA
+    hardware_type: Fast Ethernet
+    input_rate: '0'
+    interface: FastEthernet1/0/19
+    ip_address: ''
+    link_status: up
+    mtu: '1500'
+    output_rate: '0'
+    protocol_status: up (connected)
+    queue_strategy: fifo
+    speed: 100Mb/s
+-   address: 0014.1c57.a496
+    bandwidth: 100000 Kbit
+    bia: 0014.1c57.a496
+    delay: 100 usec
+    description: ''
+    duplex: Full-duplex
+    encapsulation: ARPA
+    hardware_type: Fast Ethernet
+    input_rate: '0'
+    interface: FastEthernet1/0/20
+    ip_address: ''
+    link_status: up
+    mtu: '1500'
+    output_rate: '0'
+    protocol_status: up (connected)
+    queue_strategy: fifo
+    speed: 100Mb/s
+-   address: 0014.1c57.a497
+    bandwidth: 100000 Kbit
+    bia: 0014.1c57.a497
+    delay: 100 usec
+    description: ''
+    duplex: Full-duplex
+    encapsulation: ARPA
+    hardware_type: Fast Ethernet
+    input_rate: '0'
+    interface: FastEthernet1/0/21
+    ip_address: ''
+    link_status: up
+    mtu: '1500'
+    output_rate: '0'
+    protocol_status: up (connected)
+    queue_strategy: fifo
+    speed: 100Mb/s
+-   address: 0014.1c57.a498
+    bandwidth: 100000 Kbit
+    bia: 0014.1c57.a498
+    delay: 100 usec
+    description: ''
+    duplex: Full-duplex
+    encapsulation: ARPA
+    hardware_type: Fast Ethernet
+    input_rate: '0'
+    interface: FastEthernet1/0/22
+    ip_address: ''
+    link_status: up
+    mtu: '1500'
+    output_rate: '0'
+    protocol_status: up (connected)
+    queue_strategy: fifo
+    speed: 100Mb/s
+-   address: 0014.1c57.a499
+    bandwidth: 100000 Kbit
+    bia: 0014.1c57.a499
+    delay: 100 usec
+    description: ''
+    duplex: Auto-duplex
+    encapsulation: ARPA
+    hardware_type: Fast Ethernet
+    input_rate: '0'
+    interface: FastEthernet1/0/23
+    ip_address: ''
+    link_status: down
+    mtu: '1500'
+    output_rate: '0'
+    protocol_status: down (notconnect)
+    queue_strategy: fifo
+    speed: Auto-speed
+-   address: 0014.1c57.a49a
+    bandwidth: 100000 Kbit
+    bia: 0014.1c57.a49a
+    delay: 100 usec
+    description: ''
+    duplex: Full-duplex
+    encapsulation: ARPA
+    hardware_type: Fast Ethernet
+    input_rate: '0'
+    interface: FastEthernet1/0/24
+    ip_address: ''
+    link_status: up
+    mtu: '1500'
+    output_rate: '0'
+    protocol_status: up (connected)
+    queue_strategy: fifo
+    speed: 100Mb/s
+-   address: 0014.1c57.a49d
+    bandwidth: 10000 Kbit
+    bia: 0014.1c57.a49d
+    delay: 1000 usec
+    description: ''
+    duplex: Auto-duplex
+    encapsulation: ARPA
+    hardware_type: Fast Ethernet
+    input_rate: '0'
+    interface: FastEthernet1/0/25
+    ip_address: ''
+    link_status: down
+    mtu: '1500'
+    output_rate: '0'
+    protocol_status: down (notconnect)
+    queue_strategy: fifo
+    speed: Auto-speed
+-   address: 0014.1c57.a49e
+    bandwidth: 10000 Kbit
+    bia: 0014.1c57.a49e
+    delay: 1000 usec
+    description: ''
+    duplex: Auto-duplex
+    encapsulation: ARPA
+    hardware_type: Fast Ethernet
+    input_rate: '0'
+    interface: FastEthernet1/0/26
+    ip_address: ''
+    link_status: down
+    mtu: '1500'
+    output_rate: '0'
+    protocol_status: down (notconnect)
+    queue_strategy: fifo
+    speed: Auto-speed
+-   address: 0014.1c57.a49f
+    bandwidth: 100000 Kbit
+    bia: 0014.1c57.a49f
+    delay: 100 usec
+    description: ''
+    duplex: Half-duplex
+    encapsulation: ARPA
+    hardware_type: Fast Ethernet
+    input_rate: '0'
+    interface: FastEthernet1/0/27
+    ip_address: ''
+    link_status: up
+    mtu: '1500'
+    output_rate: '0'
+    protocol_status: up (connected)
+    queue_strategy: fifo
+    speed: 100Mb/s
+-   address: 0014.1c57.a4a0
+    bandwidth: 100000 Kbit
+    bia: 0014.1c57.a4a0
+    delay: 100 usec
+    description: ''
+    duplex: Full-duplex
+    encapsulation: ARPA
+    hardware_type: Fast Ethernet
+    input_rate: '0'
+    interface: FastEthernet1/0/28
+    ip_address: ''
+    link_status: up
+    mtu: '1500'
+    output_rate: '0'
+    protocol_status: up (connected)
+    queue_strategy: fifo
+    speed: 100Mb/s
+-   address: 0014.1c57.a4a1
+    bandwidth: 100000 Kbit
+    bia: 0014.1c57.a4a1
+    delay: 100 usec
+    description: ''
+    duplex: Full-duplex
+    encapsulation: ARPA
+    hardware_type: Fast Ethernet
+    input_rate: '1000'
+    interface: FastEthernet1/0/29
+    ip_address: ''
+    link_status: up
+    mtu: '1500'
+    output_rate: '2000'
+    protocol_status: up (connected)
+    queue_strategy: fifo
+    speed: 100Mb/s
+-   address: 0014.1c57.a4a2
+    bandwidth: 100000 Kbit
+    bia: 0014.1c57.a4a2
+    delay: 100 usec
+    description: ''
+    duplex: Full-duplex
+    encapsulation: ARPA
+    hardware_type: Fast Ethernet
+    input_rate: '0'
+    interface: FastEthernet1/0/30
+    ip_address: ''
+    link_status: up
+    mtu: '1500'
+    output_rate: '0'
+    protocol_status: up (connected)
+    queue_strategy: fifo
+    speed: 100Mb/s
+-   address: 0014.1c57.a4a3
+    bandwidth: 100000 Kbit
+    bia: 0014.1c57.a4a3
+    delay: 100 usec
+    description: ''
+    duplex: Full-duplex
+    encapsulation: ARPA
+    hardware_type: Fast Ethernet
+    input_rate: '0'
+    interface: FastEthernet1/0/31
+    ip_address: ''
+    link_status: up
+    mtu: '1500'
+    output_rate: '0'
+    protocol_status: up (connected)
+    queue_strategy: fifo
+    speed: 100Mb/s
+-   address: 0014.1c57.a4a4
+    bandwidth: 100000 Kbit
+    bia: 0014.1c57.a4a4
+    delay: 100 usec
+    description: ''
+    duplex: Full-duplex
+    encapsulation: ARPA
+    hardware_type: Fast Ethernet
+    input_rate: '0'
+    interface: FastEthernet1/0/32
+    ip_address: ''
+    link_status: up
+    mtu: '1500'
+    output_rate: '0'
+    protocol_status: up (connected)
+    queue_strategy: fifo
+    speed: 100Mb/s
+-   address: 0014.1c57.a4a5
+    bandwidth: 100000 Kbit
+    bia: 0014.1c57.a4a5
+    delay: 100 usec
+    description: ''
+    duplex: Full-duplex
+    encapsulation: ARPA
+    hardware_type: Fast Ethernet
+    input_rate: '0'
+    interface: FastEthernet1/0/33
+    ip_address: ''
+    link_status: up
+    mtu: '1500'
+    output_rate: '0'
+    protocol_status: up (connected)
+    queue_strategy: fifo
+    speed: 100Mb/s
+-   address: 0014.1c57.a4a6
+    bandwidth: 100000 Kbit
+    bia: 0014.1c57.a4a6
+    delay: 100 usec
+    description: ''
+    duplex: Full-duplex
+    encapsulation: ARPA
+    hardware_type: Fast Ethernet
+    input_rate: '0'
+    interface: FastEthernet1/0/34
+    ip_address: ''
+    link_status: up
+    mtu: '1500'
+    output_rate: '0'
+    protocol_status: up (connected)
+    queue_strategy: fifo
+    speed: 100Mb/s
+-   address: 0014.1c57.a4a7
+    bandwidth: 100000 Kbit
+    bia: 0014.1c57.a4a7
+    delay: 100 usec
+    description: ''
+    duplex: Full-duplex
+    encapsulation: ARPA
+    hardware_type: Fast Ethernet
+    input_rate: '3000'
+    interface: FastEthernet1/0/35
+    ip_address: ''
+    link_status: up
+    mtu: '1500'
+    output_rate: '2000'
+    protocol_status: up (connected)
+    queue_strategy: fifo
+    speed: 100Mb/s
+-   address: 0014.1c57.a4a8
+    bandwidth: 100000 Kbit
+    bia: 0014.1c57.a4a8
+    delay: 100 usec
+    description: ''
+    duplex: Full-duplex
+    encapsulation: ARPA
+    hardware_type: Fast Ethernet
+    input_rate: '0'
+    interface: FastEthernet1/0/36
+    ip_address: ''
+    link_status: up
+    mtu: '1500'
+    output_rate: '0'
+    protocol_status: up (connected)
+    queue_strategy: fifo
+    speed: 100Mb/s
+-   address: 0014.1c57.a4a9
+    bandwidth: 100000 Kbit
+    bia: 0014.1c57.a4a9
+    delay: 100 usec
+    description: ''
+    duplex: Auto-duplex
+    encapsulation: ARPA
+    hardware_type: Fast Ethernet
+    input_rate: '0'
+    interface: FastEthernet1/0/37
+    ip_address: ''
+    link_status: down
+    mtu: '1500'
+    output_rate: '0'
+    protocol_status: down (notconnect)
+    queue_strategy: fifo
+    speed: Auto-speed
+-   address: 0014.1c57.a4aa
+    bandwidth: 10000 Kbit
+    bia: 0014.1c57.a4aa
+    delay: 1000 usec
+    description: ''
+    duplex: Auto-duplex
+    encapsulation: ARPA
+    hardware_type: Fast Ethernet
+    input_rate: '0'
+    interface: FastEthernet1/0/38
+    ip_address: ''
+    link_status: down
+    mtu: '1500'
+    output_rate: '0'
+    protocol_status: down (notconnect)
+    queue_strategy: fifo
+    speed: Auto-speed
+-   address: 0014.1c57.a4ab
+    bandwidth: 10000 Kbit
+    bia: 0014.1c57.a4ab
+    delay: 1000 usec
+    description: ''
+    duplex: Auto-duplex
+    encapsulation: ARPA
+    hardware_type: Fast Ethernet
+    input_rate: '0'
+    interface: FastEthernet1/0/39
+    ip_address: ''
+    link_status: down
+    mtu: '1500'
+    output_rate: '0'
+    protocol_status: down (notconnect)
+    queue_strategy: fifo
+    speed: Auto-speed
+-   address: 0014.1c57.a4ac
+    bandwidth: 10000 Kbit
+    bia: 0014.1c57.a4ac
+    delay: 1000 usec
+    description: ''
+    duplex: Auto-duplex
+    encapsulation: ARPA
+    hardware_type: Fast Ethernet
+    input_rate: '0'
+    interface: FastEthernet1/0/40
+    ip_address: ''
+    link_status: down
+    mtu: '1500'
+    output_rate: '0'
+    protocol_status: down (notconnect)
+    queue_strategy: fifo
+    speed: Auto-speed
+-   address: 0014.1c57.a4ad
+    bandwidth: 10000 Kbit
+    bia: 0014.1c57.a4ad
+    delay: 1000 usec
+    description: ''
+    duplex: Auto-duplex
+    encapsulation: ARPA
+    hardware_type: Fast Ethernet
+    input_rate: '0'
+    interface: FastEthernet1/0/41
+    ip_address: ''
+    link_status: down
+    mtu: '1500'
+    output_rate: '0'
+    protocol_status: down (notconnect)
+    queue_strategy: fifo
+    speed: Auto-speed
+-   address: 0014.1c57.a4ae
+    bandwidth: 10000 Kbit
+    bia: 0014.1c57.a4ae
+    delay: 1000 usec
+    description: ''
+    duplex: Auto-duplex
+    encapsulation: ARPA
+    hardware_type: Fast Ethernet
+    input_rate: '0'
+    interface: FastEthernet1/0/42
+    ip_address: ''
+    link_status: down
+    mtu: '1500'
+    output_rate: '0'
+    protocol_status: down (notconnect)
+    queue_strategy: fifo
+    speed: Auto-speed
+-   address: 0014.1c57.a4af
+    bandwidth: 100000 Kbit
+    bia: 0014.1c57.a4af
+    delay: 100 usec
+    description: ''
+    duplex: Auto-duplex
+    encapsulation: ARPA
+    hardware_type: Fast Ethernet
+    input_rate: '0'
+    interface: FastEthernet1/0/43
+    ip_address: ''
+    link_status: down
+    mtu: '1500'
+    output_rate: '0'
+    protocol_status: down (notconnect)
+    queue_strategy: fifo
+    speed: Auto-speed
+-   address: 0014.1c57.a4b0
+    bandwidth: 10000 Kbit
+    bia: 0014.1c57.a4b0
+    delay: 1000 usec
+    description: ''
+    duplex: Auto-duplex
+    encapsulation: ARPA
+    hardware_type: Fast Ethernet
+    input_rate: '0'
+    interface: FastEthernet1/0/44
+    ip_address: ''
+    link_status: down
+    mtu: '1500'
+    output_rate: '0'
+    protocol_status: down (notconnect)
+    queue_strategy: fifo
+    speed: Auto-speed
+-   address: 0014.1c57.a4b1
+    bandwidth: 100000 Kbit
+    bia: 0014.1c57.a4b1
+    delay: 100 usec
+    description: ''
+    duplex: Full-duplex
+    encapsulation: ARPA
+    hardware_type: Fast Ethernet
+    input_rate: '0'
+    interface: FastEthernet1/0/45
+    ip_address: ''
+    link_status: up
+    mtu: '1500'
+    output_rate: '0'
+    protocol_status: up (connected)
+    queue_strategy: fifo
+    speed: 100Mb/s
+-   address: 0014.1c57.a4b2
+    bandwidth: 10000 Kbit
+    bia: 0014.1c57.a4b2
+    delay: 1000 usec
+    description: ''
+    duplex: Auto-duplex
+    encapsulation: ARPA
+    hardware_type: Fast Ethernet
+    input_rate: '0'
+    interface: FastEthernet1/0/46
+    ip_address: ''
+    link_status: down
+    mtu: '1500'
+    output_rate: '0'
+    protocol_status: down (notconnect)
+    queue_strategy: fifo
+    speed: Auto-speed
+-   address: 0014.1c57.a4b3
+    bandwidth: 10000 Kbit
+    bia: 0014.1c57.a4b3
+    delay: 1000 usec
+    description: ''
+    duplex: Auto-duplex
+    encapsulation: ARPA
+    hardware_type: Fast Ethernet
+    input_rate: '0'
+    interface: FastEthernet1/0/47
+    ip_address: ''
+    link_status: down
+    mtu: '1500'
+    output_rate: '0'
+    protocol_status: down (notconnect)
+    queue_strategy: fifo
+    speed: Auto-speed
+-   address: 0014.1c57.a4b4
+    bandwidth: 100000 Kbit
+    bia: 0014.1c57.a4b4
+    delay: 100 usec
+    description: ''
+    duplex: Full-duplex
+    encapsulation: ARPA
+    hardware_type: Fast Ethernet
+    input_rate: '180000'
+    interface: FastEthernet1/0/48
+    ip_address: ''
+    link_status: up
+    mtu: '1500'
+    output_rate: '38881000'
+    protocol_status: up (connected)
+    queue_strategy: fifo
+    speed: 100Mb/s
+-   address: 0014.1c57.a481
+    bandwidth: 10000 Kbit
+    bia: 0014.1c57.a481
+    delay: 1000 usec
+    description: ''
+    duplex: Auto-duplex
+    encapsulation: ARPA
+    hardware_type: Gigabit Ethernet
+    input_rate: '0'
+    interface: GigabitEthernet1/0/1
+    ip_address: ''
+    link_status: down
+    mtu: '1500'
+    output_rate: '0'
+    protocol_status: down (notconnect)
+    queue_strategy: fifo
+    speed: Auto-speed, link type is auto
+-   address: 0014.1c57.a482
+    bandwidth: 10000 Kbit
+    bia: 0014.1c57.a482
+    delay: 1000 usec
+    description: ''
+    duplex: Auto-duplex
+    encapsulation: ARPA
+    hardware_type: Gigabit Ethernet
+    input_rate: '0'
+    interface: GigabitEthernet1/0/2
+    ip_address: ''
+    link_status: down
+    mtu: '1500'
+    output_rate: '0'
+    protocol_status: down (notconnect)
+    queue_strategy: fifo
+    speed: Auto-speed, link type is auto
+-   address: 0014.1c57.a49b
+    bandwidth: 10000 Kbit
+    bia: 0014.1c57.a49b
+    delay: 1000 usec
+    description: ''
+    duplex: Auto-duplex
+    encapsulation: ARPA
+    hardware_type: Gigabit Ethernet
+    input_rate: '0'
+    interface: GigabitEthernet1/0/3
+    ip_address: ''
+    link_status: down
+    mtu: '1500'
+    output_rate: '0'
+    protocol_status: down (notconnect)
+    queue_strategy: fifo
+    speed: Auto-speed, link type is auto
+-   address: 0014.1c57.a49c
+    bandwidth: 10000 Kbit
+    bia: 0014.1c57.a49c
+    delay: 1000 usec
+    description: ''
+    duplex: Auto-duplex
+    encapsulation: ARPA
+    hardware_type: Gigabit Ethernet
+    input_rate: '0'
+    interface: GigabitEthernet1/0/4
+    ip_address: ''
+    link_status: down
+    mtu: '1500'
+    output_rate: '0'
+    protocol_status: down (notconnect)
+    queue_strategy: fifo
+    speed: Auto-speed, link type is auto
