@@ -7,6 +7,8 @@ Value BIA ([a-zA-Z0-9]+.[a-zA-Z0-9]+.[a-zA-Z0-9]+)
 Value DESCRIPTION (.*)
 Value IP_ADDRESS (\d+\.\d+\.\d+\.\d+\/\d+)
 Value MTU (\d+)
+Value DUPLEX (.+?)
+Value SPEED (.+?)
 Value BANDWIDTH (\d+\s+\w+)
 Value ENCAPSULATION (\w+)
 
@@ -16,4 +18,6 @@ Start
   ^\s+Description:\s+${DESCRIPTION}
   ^\s+Internet\s+Address\s+is\s+${IP_ADDRESS}
   ^\s+MTU\s+${MTU}.*BW\s+${BANDWIDTH}
-  ^\s+Encapsulation\s+${ENCAPSULATION} -> Record
+  ^\s+${DUPLEX}, ${SPEED},.+link 
+  ^\s+Encapsulation\s+${ENCAPSULATION}
+  ^\s+Last -> Record
