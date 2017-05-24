@@ -41,6 +41,6 @@ ParseCurrentCounters
   ^\s+Total Data.+ -> ParseTotalCounters
 
 ParseTotalCounters
-  ^\s+${TOTAL_LINE_CODE_VIOLATIONS}\sLine\sCode\sViolations,\s${TOTAL_PATH_CODE_VIOLATIONS}\sPath\sCode\sViolations
-  ^\s+${TOTAL_SLIP_SECS}\sSlip\sSecs,\s${TOTAL_FR_LOSS_SECS}\sFr\sLoss\sSecs,\s${TOTAL_LINE_ERR_SECS}\sLine\sErr\sSecs,\s${TOTAL_DEGRADED_MINS}\sDegraded\sMins
+  ^\s+${TOTAL_LINE_CODE_VIOLATIONS}\sLine\sCode\sViolations,\s${TOTAL_PATH_CODE_VIOLATIONS}\sPath\sCode\sViolations,
+  ^\s+${TOTAL_SLIP_SECS}\sSlip\sSecs,\s${TOTAL_FR_LOSS_SECS}\sFr\sLoss\sSecs,\s${TOTAL_LINE_ERR_SECS}\sLine\sErr\sSecs,\s${TOTAL_DEGRADED_MINS}\sDegraded\sMins,
   ^\s+${TOTAL_ERR_SECS}\sErrored\sSecs,\s${TOTAL_BURSTY_ERR_SECS}\sBursty\sErr\sSecs,\s${TOTAL_SEV_ERR_SECS}\sSeverely\sErr\sSecs,\s${TOTAL_UNAVAIL_SECS}\sUnavail\sSecs -> Record Start
