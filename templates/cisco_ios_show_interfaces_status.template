@@ -1,6 +1,6 @@
 Value PORT (.+?)
 Value NAME (.{0,18}?)
-Value STATUS (\w+)
+Value STATUS (\S+)
 Value VLAN (\w+)
 Value DUPLEX (a-full|full|auto|half|a-half)
 Value SPEED (auto|\w+-\d+|\d+)
