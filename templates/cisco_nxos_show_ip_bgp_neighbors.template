@@ -1,0 +1,78 @@
+Value NEIGHBOR (\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})
+Value ASN (\d+)
+Value BGP_STATE (\w+)
+Value UPTIME (\w+)
+Value SOURCE_IFACE (\w+)
+Value CONN_ESTAB (\w+)
+Value CONN_DROPPED (\w+)
+Value LAST_RESET (\w+)
+Value LAST_RESET_REASON (.*)
+Value LAST_PEER_RESET (\w+)
+Value LAST_PEER_RESET_REASON (.*)
+
+Start
+  # Neighbor information:
+  ^BGP neighbor is ${NEIGHBOR},\s+remote AS\s+${ASN},.*
+  ^\s+BGP state = ${BGP_STATE}, \w+ for ${UPTIME}
+  ^\s+Using ${SOURCE_IFACE} as update source for this peer
+  ^\s+Connections established ${CONN_ESTAB}, dropped ${CONN_DROPPED}
+  ^\s+Last reset by us ${LAST_RESET}, due to ${LAST_RESET_REASON}
+  ^\s+Last reset by peer ${LAST_PEER_RESET}, due to ${LAST_PEER_RESET_REASON} -> Record
+
+  #Neighbor capabilities:
+  #Dynamic capability: advertised (mp, refresh, gr) received (mp, refresh, gr)
+  #Dynamic capability (old): advertised received
+  #Route refresh capability (new): advertised received
+  #Route refresh capability (old): advertised received
+  #4-Byte AS capability: advertised received
+  #Address family IPv4 Unicast: advertised received
+  #Address family L2VPN EVPN: advertised received
+  #Graceful Restart capability: advertised received
+
+  #Graceful Restart Parameters:
+  #Address families advertised to peer:
+  #  IPv4 Unicast  L2VPN EVPN
+  #Address families received from peer:
+  #  IPv4 Unicast  L2VPN EVPN
+  #Forwarding state preserved by peer for:
+  #Restart time advertised to peer: 120 seconds
+  #Stale time for routes advertised by peer: 300 seconds
+  #Restart time advertised by peer: 120 seconds
+  #Extended Next Hop Encoding Capability: advertised received
+  #Receive IPv6 next hop encoding Capability for AF:
+  #  IPv4 Unicast
+
+  #Message statistics:
+  #                            Sent               Rcvd
+  #Opens:                        24                  3
+  #Notifications:                 1                  1
+  #Updates:                    8514             743363
+  #Keepalives:               192374             162725
+  #Route Refresh:                13                  0
+  #Capability:                    6                  6
+  #Total:                    200932             906098
+  #Total bytes:             4570033           85316584
+  #Bytes in queue:                0                  0
+
+  #For address family: IPv4 Unicast
+  #BGP table version 10317, neighbor version 10317
+  #226 accepted paths consume 28024 bytes of memory
+  #5 sent paths
+  #Nexthop always set to local peering address, 10.227.129.188
+  #Third-party Nexthop will not be computed.
+  #Last End-of-RIB received 00:00:01 after session start
+
+  #For address family: L2VPN EVPN
+  #BGP table version 1123760, neighbor version 1123760
+  #8458 accepted paths consume 1048792 bytes of memory
+  #608 sent paths
+  #Community attribute sent to this neighbor
+  #Extended community attribute sent to this neighbor
+  #Third-party Nexthop will not be computed.
+  #Last End-of-RIB received 00:00:02 after session start
+
+  #Local host: 10.227.129.188, Local port: 31643
+  #Foreign host: 10.227.129.146, Foreign port: 179
+  #fd = 82
+
+EOF
