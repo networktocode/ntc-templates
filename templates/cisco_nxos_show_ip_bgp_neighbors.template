@@ -76,7 +76,7 @@ Start
   ^\s+Capability:\s+${CAPABILITY_COUNT_SENT}\s+${CAPABILITY_COUNT_RCVD}
   ^\s+Total:\s+${TOTAL_MESS_COUNT_SENT}\s+${TOTAL_MESS_COUNT_RCVD}
   ^\s+Total bytes:\s+${TOTAL_BYTES_COUNT_SENT}\s+${TOTAL_BYTES_COUNT_RCVD}
-  ^\s+Bytes in queue:\s+${TOTAL_BYTES_SEND_QUEUE}\s+${TOTAL_BYTES_RCVD_QUEUE} -> Record AddrFamState
+  ^\s+Bytes in queue:\s+${TOTAL_BYTES_SEND_QUEUE}\s+${TOTAL_BYTES_RCVD_QUEUE} -> AddrFamState
 
 AddrFamCap
   ^\s+${ADDR_FAM_ADV} -> Start
@@ -88,6 +88,6 @@ AddrFamState
   ^\s+${SENT_PATHS} sent paths
   ^\s+Last End-of-RIB received [\d:]+ after session start -> AddrFamState
   ^\s+Local host:\s+${LOCALHOST_IP}, Local port:\s+${LOCALHOST_PORT}
-  ^\s+Foreign host:\s+${REMOTE_IP}, Foreign port:\s+${REMOTE_PORT} -> Start
+  ^\s+Foreign host:\s+${REMOTE_IP}, Foreign port:\s+${REMOTE_PORT} -> Record Start
 
 EOF
