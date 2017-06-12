@@ -1,17 +1,16 @@
 ---
 parsed_sample:
-
-- accepted_paths: ''
+- accepted_paths: '8458'
   addr_fam_adv: IPv4 Unicast  L2VPN EVPN
   addr_fam_rcv: ''
-  addr_family: []
+  addr_family: [IPv4 Unicast, L2VPN EVPN]
   asn: '64826'
   bgp_state: Established
   capability_count_rcvd: '6'
   capability_count_sent: '6'
   conn_dropped: '2'
   conn_estab: '3'
-  consumed_mem: ''
+  consumed_mem: '1048792'
   description: from boo to donkey
   ext_nh_cap: advertised received
   fourbyte_cap: advertised received
@@ -22,26 +21,26 @@ parsed_sample:
   last_peer_reset_reason: administratively shutdown
   last_reset: 1d10h
   last_reset_reason: holdtimer expired error
-  localhost_ip: ''
-  localhost_port: ''
-  nei_table_version: []
+  localhost_ip: 34.83.217.230
+  localhost_port: '31643'
+  nei_table_version: ['10317', '1123760']
   neighbor: 136.170.1.201
   notifications_count_rcvd: '1'
   notifications_count_sent: '1'
   opens_count_rcvd: '743363'
   opens_count_sent: '24'
-  remote_ip: ''
-  remote_port: ''
+  remote_ip: 226.176.223.89
+  remote_port: '179'
   restart_time_adv: '120'
   restart_time_rcv: '120'
   route_refresh_count_rcvd: '0'
   route_refresh_count_sent: '13'
   rr_new_cap: advertised received
   rr_old_cap: advertised received
-  sent_paths: ''
+  sent_paths: '608'
   source_iface: loopback0
   stale_time: '300'
-  table_version: []
+  table_version: ['10317', '1123760']
   total_bytes_count_rcvd: '85316584'
   total_bytes_count_sent: '4570033'
   total_bytes_rcvd_queue: '0'
@@ -72,16 +71,16 @@ parsed_sample:
   last_peer_reset_reason: administratively shutdown
   last_reset: 1w0d
   last_reset_reason: session closed
-  localhost_ip: 34.83.217.230
-  localhost_port: '31643'
+  localhost_ip: 29.91.80.176
+  localhost_port: '179'
   nei_table_version: ['10317', '1123760']
   neighbor: 174.8.181.98
   notifications_count_rcvd: '1'
   notifications_count_sent: '0'
   opens_count_rcvd: '697776'
   opens_count_sent: '10'
-  remote_ip: 226.176.223.89
-  remote_port: '179'
+  remote_ip: 127.145.91.46
+  remote_port: '52469'
   restart_time_adv: '120'
   restart_time_rcv: '120'
   route_refresh_count_rcvd: '0'
@@ -122,7 +121,7 @@ parsed_sample:
   last_peer_reset_reason: administratively shutdown
   last_reset: 3d21h
   last_reset_reason: session closed
-  localhost_ip: 29.91.80.176
+  localhost_ip: 190.125.83.222
   localhost_port: '179'
   nei_table_version: ['10317', '1123760']
   neighbor: 171.143.203.215
@@ -130,8 +129,8 @@ parsed_sample:
   notifications_count_sent: '0'
   opens_count_rcvd: '744278'
   opens_count_sent: '20'
-  remote_ip: 127.145.91.46
-  remote_port: '52469'
+  remote_ip: 231.231.113.66
+  remote_port: '22132'
   restart_time_adv: '120'
   restart_time_rcv: '120'
   route_refresh_count_rcvd: '0'
@@ -172,7 +171,7 @@ parsed_sample:
   last_peer_reset_reason: administratively shutdown
   last_reset: 3d15h
   last_reset_reason: session closed
-  localhost_ip: 190.125.83.222
+  localhost_ip: 61.84.112.233
   localhost_port: '179'
   nei_table_version: ['10317', '1123760']
   neighbor: 94.210.82.240
@@ -180,8 +179,8 @@ parsed_sample:
   notifications_count_sent: '0'
   opens_count_rcvd: '744351'
   opens_count_sent: '13'
-  remote_ip: 231.231.113.66
-  remote_port: '22132'
+  remote_ip: 221.224.143.168
+  remote_port: '21548'
   restart_time_adv: '120'
   restart_time_rcv: '120'
   route_refresh_count_rcvd: '0'
@@ -201,56 +200,6 @@ parsed_sample:
   updates_count_rcvd: ''
   updates_count_sent: '8566'
   uptime: 3d15h
-- accepted_paths: '8458'
-  addr_fam_adv: IPv4 Unicast  L2VPN EVPN
-  addr_fam_rcv: ''
-  addr_family: [IPv4 Unicast, L2VPN EVPN]
-  asn: '64938'
-  bgp_state: Established
-  capability_count_rcvd: '3'
-  capability_count_sent: '3'
-  conn_dropped: '0'
-  conn_estab: '1'
-  consumed_mem: '1048792'
-  description: from foo to foo
-  ext_nh_cap: advertised received
-  fourbyte_cap: advertised received
-  graceful_cap: advertised received
-  keepalives_count_rcvd: '5279'
-  keepalives_count_sent: '5279'
-  last_peer_reset: never
-  last_peer_reset_reason: No error
-  last_reset: never
-  last_reset_reason: No error
-  localhost_ip: 61.84.112.233
-  localhost_port: '179'
-  nei_table_version: ['10317', '1123760']
-  neighbor: 143.128.128.163
-  notifications_count_rcvd: '0'
-  notifications_count_sent: '0'
-  opens_count_rcvd: '1'
-  opens_count_sent: '1'
-  remote_ip: 221.224.143.168
-  remote_port: '21548'
-  restart_time_adv: '120'
-  restart_time_rcv: '120'
-  route_refresh_count_rcvd: '0'
-  route_refresh_count_sent: '0'
-  rr_new_cap: advertised received
-  rr_old_cap: advertised received
-  sent_paths: '608'
-  source_iface: loopback0
-  stale_time: '300'
-  table_version: ['10317', '1123760']
-  total_bytes_count_rcvd: '100400'
-  total_bytes_count_sent: '100396'
-  total_bytes_rcvd_queue: '0'
-  total_bytes_send_queue: '0'
-  total_mess_count_rcvd: '5284'
-  total_mess_count_sent: '5284'
-  updates_count_rcvd: ''
-  updates_count_sent: '1'
-  uptime: 3d15h
 - accepted_paths: '0'
   addr_fam_adv: IPv4 Unicast  L2VPN EVPN
   addr_fam_rcv: ''
@@ -262,7 +211,7 @@ parsed_sample:
   conn_dropped: '0'
   conn_estab: '1'
   consumed_mem: '0'
-  description: from donkey to boo
+  description: from foo to foo
   ext_nh_cap: advertised received
   fourbyte_cap: advertised received
   graceful_cap: advertised received
@@ -275,7 +224,7 @@ parsed_sample:
   localhost_ip: 144.125.246.17
   localhost_port: '36220'
   nei_table_version: ['4']
-  neighbor: 12.26.221.3
+  neighbor: 143.128.128.163
   notifications_count_rcvd: '0'
   notifications_count_sent: '0'
   opens_count_rcvd: '1'
@@ -302,16 +251,66 @@ parsed_sample:
   updates_count_sent: '1'
   uptime: 3d15h
 - accepted_paths: '0'
-  addr_fam_adv: ''
+  addr_fam_adv: IPv4 Unicast  L2VPN EVPN
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
+  asn: '64938'
+  bgp_state: Established
+  capability_count_rcvd: '3'
+  capability_count_sent: '3'
+  conn_dropped: '0'
+  conn_estab: '1'
+  consumed_mem: '0'
+  description: from donkey to boo
+  ext_nh_cap: advertised received
+  fourbyte_cap: advertised received
+  graceful_cap: advertised received
+  keepalives_count_rcvd: '5279'
+  keepalives_count_sent: '5279'
+  last_peer_reset: never
+  last_peer_reset_reason: No error
+  last_reset: never
+  last_reset_reason: No error
+  localhost_ip: 210.219.168.143
+  localhost_port: '48355'
+  nei_table_version: ['4']
+  neighbor: 12.26.221.3
+  notifications_count_rcvd: '0'
+  notifications_count_sent: '0'
+  opens_count_rcvd: '1'
+  opens_count_sent: '1'
+  remote_ip: 220.134.183.122
+  remote_port: '179'
+  restart_time_adv: '120'
+  restart_time_rcv: '120'
+  route_refresh_count_rcvd: '0'
+  route_refresh_count_sent: '0'
+  rr_new_cap: advertised received
+  rr_old_cap: advertised received
+  sent_paths: '0'
+  source_iface: loopback0
+  stale_time: '300'
+  table_version: ['4']
+  total_bytes_count_rcvd: '100400'
+  total_bytes_count_sent: '100396'
+  total_bytes_rcvd_queue: '0'
+  total_bytes_send_queue: '0'
+  total_mess_count_rcvd: '5284'
+  total_mess_count_sent: '5284'
+  updates_count_rcvd: ''
+  updates_count_sent: '1'
+  uptime: 3d15h
+- accepted_paths: '51195'
+  addr_fam_adv: ''
+  addr_fam_rcv: ''
+  addr_family: [IPv4 Unicast, IPv4 Unicast, IPv4 Unicast]
   asn: '64938'
   bgp_state: Idle
   capability_count_rcvd: '0'
   capability_count_sent: '0'
   conn_dropped: '0'
   conn_estab: '0'
-  consumed_mem: '0'
+  consumed_mem: '3071700'
   description: from donkey to boo
   ext_nh_cap: ''
   fourbyte_cap: ''
@@ -322,15 +321,15 @@ parsed_sample:
   last_peer_reset_reason: No error
   last_reset: never
   last_reset_reason: No error
-  localhost_ip: 210.219.168.143
-  localhost_port: '48355'
-  nei_table_version: ['4']
+  localhost_ip: 148.188.153.56
+  localhost_port: '24169'
+  nei_table_version: ['0', '0', '8483941']
   neighbor: 202.77.85.157
   notifications_count_rcvd: '0'
   notifications_count_sent: '0'
   opens_count_rcvd: '0'
   opens_count_sent: '0'
-  remote_ip: 220.134.183.122
+  remote_ip: 22.15.33.118
   remote_port: '179'
   restart_time_adv: ''
   restart_time_rcv: ''
@@ -338,10 +337,10 @@ parsed_sample:
   route_refresh_count_sent: '0'
   rr_new_cap: ''
   rr_old_cap: ''
-  sent_paths: '0'
+  sent_paths: '10303'
   source_iface: loopback0
   stale_time: ''
-  table_version: ['4']
+  table_version: ['4', '4', '8483941']
   total_bytes_count_rcvd: '0'
   total_bytes_count_sent: '0'
   total_bytes_rcvd_queue: '0'
@@ -354,7 +353,7 @@ parsed_sample:
 - accepted_paths: '51195'
   addr_fam_adv: IPv4 Unicast
   addr_fam_rcv: ''
-  addr_family: [IPv4 Unicast, IPv4 Unicast, IPv4 Unicast]
+  addr_family: [IPv4 Unicast]
   asn: '65003'
   bgp_state: Established
   capability_count_rcvd: '0'
@@ -372,16 +371,16 @@ parsed_sample:
   last_peer_reset_reason: No error
   last_reset: never
   last_reset_reason: No error
-  localhost_ip: 148.188.153.56
-  localhost_port: '24169'
-  nei_table_version: ['0', '0', '8483941']
+  localhost_ip: 77.16.23.163
+  localhost_port: '179'
+  nei_table_version: ['8483941']
   neighbor: 167.161.119.185
   notifications_count_rcvd: '0'
   notifications_count_sent: '0'
   opens_count_rcvd: '875258'
   opens_count_sent: '1'
-  remote_ip: 22.15.33.118
-  remote_port: '179'
+  remote_ip: 228.67.65.167
+  remote_port: '28699'
   restart_time_adv: '120'
   restart_time_rcv: '120'
   route_refresh_count_rcvd: '0'
@@ -391,7 +390,7 @@ parsed_sample:
   sent_paths: '10303'
   source_iface: Ethernet6/24
   stale_time: '300'
-  table_version: ['4', '4', '8483941']
+  table_version: ['8483941']
   total_bytes_count_rcvd: '101143596'
   total_bytes_count_sent: '116855577'
   total_bytes_rcvd_queue: '0'
@@ -401,7 +400,7 @@ parsed_sample:
   updates_count_rcvd: ''
   updates_count_sent: '937989'
   uptime: 13w2d
-- accepted_paths: '51195'
+- accepted_paths: '117'
   addr_fam_adv: Sent               Rcvd
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
@@ -411,7 +410,7 @@ parsed_sample:
   capability_count_sent: '0'
   conn_dropped: '0'
   conn_estab: '1'
-  consumed_mem: '3071700'
+  consumed_mem: '7020'
   description: from boo to frog
   ext_nh_cap: ''
   fourbyte_cap: advertised
@@ -422,23 +421,23 @@ parsed_sample:
   last_peer_reset_reason: No error
   last_reset: never
   last_reset_reason: No error
-  localhost_ip: 77.16.23.163
-  localhost_port: '179'
+  localhost_ip: 30.251.237.123
+  localhost_port: '29517'
   nei_table_version: ['8483941']
   neighbor: 129.33.213.49
   notifications_count_rcvd: '0'
   notifications_count_sent: '0'
   opens_count_rcvd: '633313'
   opens_count_sent: '1'
-  remote_ip: 228.67.65.167
-  remote_port: '28699'
+  remote_ip: 88.181.26.218
+  remote_port: '179'
   restart_time_adv: ''
   restart_time_rcv: ''
   route_refresh_count_rcvd: '0'
   route_refresh_count_sent: '0'
   rr_new_cap: advertised received
   rr_old_cap: advertised received
-  sent_paths: '10303'
+  sent_paths: '53329'
   source_iface: ''
   stale_time: ''
   table_version: ['8483941']
@@ -451,7 +450,7 @@ parsed_sample:
   updates_count_rcvd: ''
   updates_count_sent: '1534229'
   uptime: 13w2d
-- accepted_paths: '117'
+- accepted_paths: '2'
   addr_fam_adv: Sent               Rcvd
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
@@ -461,7 +460,7 @@ parsed_sample:
   capability_count_sent: '0'
   conn_dropped: '0'
   conn_estab: '1'
-  consumed_mem: '7020'
+  consumed_mem: '120'
   description: from baz to boo
   ext_nh_cap: ''
   fourbyte_cap: advertised
@@ -472,15 +471,15 @@ parsed_sample:
   last_peer_reset_reason: No error
   last_reset: never
   last_reset_reason: No error
-  localhost_ip: 30.251.237.123
-  localhost_port: '29517'
+  localhost_ip: 27.27.246.137
+  localhost_port: '29341'
   nei_table_version: ['8483941']
   neighbor: 134.81.203.129
   notifications_count_rcvd: '0'
   notifications_count_sent: '0'
   opens_count_rcvd: '529532'
   opens_count_sent: '1'
-  remote_ip: 88.181.26.218
+  remote_ip: 121.155.249.169
   remote_port: '179'
   restart_time_adv: ''
   restart_time_rcv: ''
@@ -488,7 +487,7 @@ parsed_sample:
   route_refresh_count_sent: '0'
   rr_new_cap: advertised received
   rr_old_cap: advertised received
-  sent_paths: '53329'
+  sent_paths: '53444'
   source_iface: ''
   stale_time: ''
   table_version: ['8483941']
@@ -522,15 +521,15 @@ parsed_sample:
   last_peer_reset_reason: No error
   last_reset: never
   last_reset_reason: No error
-  localhost_ip: 27.27.246.137
-  localhost_port: '29341'
+  localhost_ip: 142.198.83.176
+  localhost_port: '29565'
   nei_table_version: ['8483941']
   neighbor: 87.209.8.85
   notifications_count_rcvd: '0'
   notifications_count_sent: '0'
   opens_count_rcvd: '536991'
   opens_count_sent: '1'
-  remote_ip: 121.155.249.169
+  remote_ip: 72.243.246.239
   remote_port: '179'
   restart_time_adv: ''
   restart_time_rcv: ''
@@ -551,7 +550,7 @@ parsed_sample:
   updates_count_rcvd: ''
   updates_count_sent: '1533678'
   uptime: 13w2d
-- accepted_paths: '2'
+- accepted_paths: '12'
   addr_fam_adv: Sent               Rcvd
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
@@ -561,7 +560,7 @@ parsed_sample:
   capability_count_sent: '0'
   conn_dropped: '0'
   conn_estab: '1'
-  consumed_mem: '120'
+  consumed_mem: '720'
   description: from frog to bing
   ext_nh_cap: ''
   fourbyte_cap: advertised
@@ -572,63 +571,13 @@ parsed_sample:
   last_peer_reset_reason: No error
   last_reset: never
   last_reset_reason: No error
-  localhost_ip: 142.198.83.176
-  localhost_port: '29565'
+  localhost_ip: 83.39.58.145
+  localhost_port: '29751'
   nei_table_version: ['8483941']
   neighbor: 232.122.144.131
   notifications_count_rcvd: '0'
   notifications_count_sent: '0'
   opens_count_rcvd: '653827'
-  opens_count_sent: '1'
-  remote_ip: 72.243.246.239
-  remote_port: '179'
-  restart_time_adv: ''
-  restart_time_rcv: ''
-  route_refresh_count_rcvd: '0'
-  route_refresh_count_sent: '0'
-  rr_new_cap: advertised received
-  rr_old_cap: advertised received
-  sent_paths: '53444'
-  source_iface: ''
-  stale_time: ''
-  table_version: ['8483941']
-  total_bytes_count_rcvd: '70997495'
-  total_bytes_count_sent: '159436316'
-  total_bytes_rcvd_queue: '0'
-  total_bytes_send_queue: '0'
-  total_mess_count_rcvd: '1194123'
-  total_mess_count_sent: '1995749'
-  updates_count_rcvd: ''
-  updates_count_sent: '1533676'
-  uptime: 13w2d
-- accepted_paths: '12'
-  addr_fam_adv: Sent               Rcvd
-  addr_fam_rcv: ''
-  addr_family: [IPv4 Unicast]
-  asn: '64521'
-  bgp_state: Established
-  capability_count_rcvd: '0'
-  capability_count_sent: '0'
-  conn_dropped: '0'
-  conn_estab: '1'
-  consumed_mem: '720'
-  description: from baz to bar
-  ext_nh_cap: ''
-  fourbyte_cap: advertised
-  graceful_cap: advertised
-  keepalives_count_rcvd: '540291'
-  keepalives_count_sent: '462066'
-  last_peer_reset: never
-  last_peer_reset_reason: No error
-  last_reset: never
-  last_reset_reason: No error
-  localhost_ip: 83.39.58.145
-  localhost_port: '29751'
-  nei_table_version: ['8483941']
-  neighbor: 255.6.79.240
-  notifications_count_rcvd: '0'
-  notifications_count_sent: '0'
-  opens_count_rcvd: '635238'
   opens_count_sent: '1'
   remote_ip: 249.71.59.33
   remote_port: '179'
@@ -642,27 +591,27 @@ parsed_sample:
   source_iface: ''
   stale_time: ''
   table_version: ['8483941']
-  total_bytes_count_rcvd: '71901157'
-  total_bytes_count_sent: '159402410'
+  total_bytes_count_rcvd: '70997495'
+  total_bytes_count_sent: '159436316'
   total_bytes_rcvd_queue: '0'
   total_bytes_send_queue: '0'
-  total_mess_count_rcvd: '1175530'
-  total_mess_count_sent: '1995481'
+  total_mess_count_rcvd: '1194123'
+  total_mess_count_sent: '1995749'
   updates_count_rcvd: ''
-  updates_count_sent: '1533414'
+  updates_count_sent: '1533676'
   uptime: 13w2d
 - accepted_paths: '9'
   addr_fam_adv: Sent               Rcvd
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
-  asn: '64522'
+  asn: '64521'
   bgp_state: Established
   capability_count_rcvd: '0'
   capability_count_sent: '0'
   conn_dropped: '0'
   conn_estab: '1'
   consumed_mem: '540'
-  description: from bing to donkey
+  description: from baz to bar
   ext_nh_cap: ''
   fourbyte_cap: advertised
   graceful_cap: advertised
@@ -675,10 +624,10 @@ parsed_sample:
   localhost_ip: 159.85.223.154
   localhost_port: '30455'
   nei_table_version: ['8483941']
-  neighbor: 135.138.128.239
+  neighbor: 255.6.79.240
   notifications_count_rcvd: '0'
   notifications_count_sent: '0'
-  opens_count_rcvd: '635285'
+  opens_count_rcvd: '635238'
   opens_count_sent: '1'
   remote_ip: 88.87.6.2
   remote_port: '179'
@@ -692,32 +641,32 @@ parsed_sample:
   source_iface: ''
   stale_time: ''
   table_version: ['8483941']
-  total_bytes_count_rcvd: '71887964'
-  total_bytes_count_sent: '159405036'
+  total_bytes_count_rcvd: '71901157'
+  total_bytes_count_sent: '159402410'
   total_bytes_rcvd_queue: '0'
   total_bytes_send_queue: '0'
-  total_mess_count_rcvd: '1175577'
-  total_mess_count_sent: '1995513'
+  total_mess_count_rcvd: '1175530'
+  total_mess_count_sent: '1995481'
   updates_count_rcvd: ''
-  updates_count_sent: '1533446'
+  updates_count_sent: '1533414'
   uptime: 13w2d
 - accepted_paths: '12'
   addr_fam_adv: Sent               Rcvd
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
-  asn: '64523'
+  asn: '64522'
   bgp_state: Established
   capability_count_rcvd: '0'
   capability_count_sent: '0'
   conn_dropped: '0'
   conn_estab: '1'
   consumed_mem: '720'
-  description: from boo to monkey
+  description: from bing to donkey
   ext_nh_cap: ''
   fourbyte_cap: advertised
   graceful_cap: advertised
-  keepalives_count_rcvd: '429734'
-  keepalives_count_sent: '462068'
+  keepalives_count_rcvd: '540291'
+  keepalives_count_sent: '462066'
   last_peer_reset: never
   last_peer_reset_reason: No error
   last_reset: never
@@ -725,10 +674,10 @@ parsed_sample:
   localhost_ip: 115.48.39.12
   localhost_port: '29928'
   nei_table_version: ['8483941']
-  neighbor: 166.177.87.84
+  neighbor: 135.138.128.239
   notifications_count_rcvd: '0'
   notifications_count_sent: '0'
-  opens_count_rcvd: '657289'
+  opens_count_rcvd: '635285'
   opens_count_sent: '1'
   remote_ip: 187.84.208.112
   remote_port: '179'
@@ -742,32 +691,32 @@ parsed_sample:
   source_iface: ''
   stale_time: ''
   table_version: ['8483941']
-  total_bytes_count_rcvd: '71926991'
-  total_bytes_count_sent: '159546312'
+  total_bytes_count_rcvd: '71887964'
+  total_bytes_count_sent: '159405036'
   total_bytes_rcvd_queue: '0'
   total_bytes_send_queue: '0'
-  total_mess_count_rcvd: '1087024'
-  total_mess_count_sent: '1996708'
+  total_mess_count_rcvd: '1175577'
+  total_mess_count_sent: '1995513'
   updates_count_rcvd: ''
-  updates_count_sent: '1534639'
+  updates_count_sent: '1533446'
   uptime: 13w2d
 - accepted_paths: '10'
   addr_fam_adv: Sent               Rcvd
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
-  asn: '64525'
+  asn: '64523'
   bgp_state: Established
   capability_count_rcvd: '0'
   capability_count_sent: '0'
   conn_dropped: '0'
   conn_estab: '1'
   consumed_mem: '600'
-  description: from frog to foo
+  description: from boo to monkey
   ext_nh_cap: ''
   fourbyte_cap: advertised
   graceful_cap: advertised
-  keepalives_count_rcvd: '540290'
-  keepalives_count_sent: '462065'
+  keepalives_count_rcvd: '429734'
+  keepalives_count_sent: '462068'
   last_peer_reset: never
   last_peer_reset_reason: No error
   last_reset: never
@@ -775,10 +724,10 @@ parsed_sample:
   localhost_ip: 121.14.31.73
   localhost_port: '179'
   nei_table_version: ['8483941']
-  neighbor: 24.218.246.161
+  neighbor: 166.177.87.84
   notifications_count_rcvd: '0'
   notifications_count_sent: '0'
-  opens_count_rcvd: '676579'
+  opens_count_rcvd: '657289'
   opens_count_sent: '1'
   remote_ip: 22.41.156.160
   remote_port: '59645'
@@ -792,32 +741,32 @@ parsed_sample:
   source_iface: ''
   stale_time: ''
   table_version: ['8483941']
-  total_bytes_count_rcvd: '76128478'
-  total_bytes_count_sent: '159325085'
+  total_bytes_count_rcvd: '71926991'
+  total_bytes_count_sent: '159546312'
   total_bytes_rcvd_queue: '0'
   total_bytes_send_queue: '0'
-  total_mess_count_rcvd: '1216870'
-  total_mess_count_sent: '1994773'
+  total_mess_count_rcvd: '1087024'
+  total_mess_count_sent: '1996708'
   updates_count_rcvd: ''
-  updates_count_sent: '1532707'
+  updates_count_sent: '1534639'
   uptime: 13w2d
 - accepted_paths: '3'
   addr_fam_adv: Sent               Rcvd
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
-  asn: '64524'
+  asn: '64525'
   bgp_state: Established
   capability_count_rcvd: '0'
   capability_count_sent: '0'
   conn_dropped: '0'
   conn_estab: '1'
   consumed_mem: '180'
-  description: from bing to monkey
+  description: from frog to foo
   ext_nh_cap: ''
   fourbyte_cap: advertised
   graceful_cap: advertised
-  keepalives_count_rcvd: '540291'
-  keepalives_count_sent: '462067'
+  keepalives_count_rcvd: '540290'
+  keepalives_count_sent: '462065'
   last_peer_reset: never
   last_peer_reset_reason: No error
   last_reset: never
@@ -825,10 +774,10 @@ parsed_sample:
   localhost_ip: 46.95.207.194
   localhost_port: '30808'
   nei_table_version: ['8483941']
-  neighbor: 88.158.245.249
+  neighbor: 24.218.246.161
   notifications_count_rcvd: '0'
   notifications_count_sent: '0'
-  opens_count_rcvd: '673811'
+  opens_count_rcvd: '676579'
   opens_count_sent: '1'
   remote_ip: 249.173.131.89
   remote_port: '179'
@@ -842,32 +791,32 @@ parsed_sample:
   source_iface: ''
   stale_time: ''
   table_version: ['8483941']
-  total_bytes_count_rcvd: '75757206'
-  total_bytes_count_sent: '159330896'
+  total_bytes_count_rcvd: '76128478'
+  total_bytes_count_sent: '159325085'
   total_bytes_rcvd_queue: '0'
   total_bytes_send_queue: '0'
-  total_mess_count_rcvd: '1214103'
-  total_mess_count_sent: '1994815'
+  total_mess_count_rcvd: '1216870'
+  total_mess_count_sent: '1994773'
   updates_count_rcvd: ''
-  updates_count_sent: '1532747'
+  updates_count_sent: '1532707'
   uptime: 13w2d
 - accepted_paths: '1'
   addr_fam_adv: Sent               Rcvd
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
-  asn: '65150'
+  asn: '64524'
   bgp_state: Established
   capability_count_rcvd: '0'
   capability_count_sent: '0'
   conn_dropped: '0'
   conn_estab: '1'
   consumed_mem: '60'
-  description: from monkey to foo
+  description: from bing to monkey
   ext_nh_cap: ''
   fourbyte_cap: advertised
   graceful_cap: advertised
-  keepalives_count_rcvd: '540295'
-  keepalives_count_sent: '462097'
+  keepalives_count_rcvd: '540291'
+  keepalives_count_sent: '462067'
   last_peer_reset: never
   last_peer_reset_reason: No error
   last_reset: never
@@ -875,10 +824,10 @@ parsed_sample:
   localhost_ip: 19.33.193.41
   localhost_port: '30630'
   nei_table_version: ['8483941']
-  neighbor: 209.58.188.204
+  neighbor: 88.158.245.249
   notifications_count_rcvd: '0'
   notifications_count_sent: '0'
-  opens_count_rcvd: '645646'
+  opens_count_rcvd: '673811'
   opens_count_sent: '1'
   remote_ip: 113.114.126.174
   remote_port: '179'
@@ -892,32 +841,32 @@ parsed_sample:
   source_iface: ''
   stale_time: ''
   table_version: ['8483941']
-  total_bytes_count_rcvd: '72795532'
-  total_bytes_count_sent: '159307244'
+  total_bytes_count_rcvd: '75757206'
+  total_bytes_count_sent: '159330896'
   total_bytes_rcvd_queue: '0'
   total_bytes_send_queue: '0'
-  total_mess_count_rcvd: '1185942'
-  total_mess_count_sent: '1994538'
+  total_mess_count_rcvd: '1214103'
+  total_mess_count_sent: '1994815'
   updates_count_rcvd: ''
-  updates_count_sent: '1532440'
+  updates_count_sent: '1532747'
   uptime: 13w2d
 - accepted_paths: '247'
   addr_fam_adv: Sent               Rcvd
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
-  asn: '65510'
+  asn: '65150'
   bgp_state: Established
   capability_count_rcvd: '0'
   capability_count_sent: '0'
   conn_dropped: '0'
   conn_estab: '1'
   consumed_mem: '14820'
-  description: from monkey to baz
+  description: from monkey to foo
   ext_nh_cap: ''
   fourbyte_cap: advertised
   graceful_cap: advertised
   keepalives_count_rcvd: '540295'
-  keepalives_count_sent: '462080'
+  keepalives_count_sent: '462097'
   last_peer_reset: never
   last_peer_reset_reason: No error
   last_reset: never
@@ -925,10 +874,10 @@ parsed_sample:
   localhost_ip: 79.138.5.173
   localhost_port: '30104'
   nei_table_version: ['8483941']
-  neighbor: 168.96.139.211
+  neighbor: 209.58.188.204
   notifications_count_rcvd: '0'
   notifications_count_sent: '0'
-  opens_count_rcvd: '651138'
+  opens_count_rcvd: '645646'
   opens_count_sent: '1'
   remote_ip: 241.90.87.199
   remote_port: '179'
@@ -942,6 +891,56 @@ parsed_sample:
   source_iface: ''
   stale_time: ''
   table_version: ['8483941']
+  total_bytes_count_rcvd: '72795532'
+  total_bytes_count_sent: '159307244'
+  total_bytes_rcvd_queue: '0'
+  total_bytes_send_queue: '0'
+  total_mess_count_rcvd: '1185942'
+  total_mess_count_sent: '1994538'
+  updates_count_rcvd: ''
+  updates_count_sent: '1532440'
+  uptime: 13w2d
+- accepted_paths: '61'
+  addr_fam_adv: Sent               Rcvd
+  addr_fam_rcv: ''
+  addr_family: [IPv4 Unicast]
+  asn: '65510'
+  bgp_state: Established
+  capability_count_rcvd: '0'
+  capability_count_sent: '0'
+  conn_dropped: '0'
+  conn_estab: '1'
+  consumed_mem: '3660'
+  description: from monkey to baz
+  ext_nh_cap: ''
+  fourbyte_cap: advertised
+  graceful_cap: advertised
+  keepalives_count_rcvd: '540295'
+  keepalives_count_sent: '462080'
+  last_peer_reset: never
+  last_peer_reset_reason: No error
+  last_reset: never
+  last_reset_reason: No error
+  localhost_ip: 191.131.46.70
+  localhost_port: '30959'
+  nei_table_version: ['8483941']
+  neighbor: 168.96.139.211
+  notifications_count_rcvd: '0'
+  notifications_count_sent: '0'
+  opens_count_rcvd: '651138'
+  opens_count_sent: '1'
+  remote_ip: 224.44.237.104
+  remote_port: '179'
+  restart_time_adv: ''
+  restart_time_rcv: ''
+  route_refresh_count_rcvd: '0'
+  route_refresh_count_sent: '0'
+  rr_new_cap: advertised received
+  rr_old_cap: advertised received
+  sent_paths: '53385'
+  source_iface: ''
+  stale_time: ''
+  table_version: ['8483941']
   total_bytes_count_rcvd: '73439672'
   total_bytes_count_sent: '159216507'
   total_bytes_rcvd_queue: '0'
@@ -951,7 +950,7 @@ parsed_sample:
   updates_count_rcvd: ''
   updates_count_sent: '1531755'
   uptime: 13w2d
-- accepted_paths: '61'
+- accepted_paths: '324'
   addr_fam_adv: IPv4 Unicast
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
@@ -961,7 +960,7 @@ parsed_sample:
   capability_count_sent: '0'
   conn_dropped: '0'
   conn_estab: '1'
-  consumed_mem: '3660'
+  consumed_mem: '19440'
   description: from bing to bing
   ext_nh_cap: advertised received
   fourbyte_cap: advertised received
@@ -972,23 +971,23 @@ parsed_sample:
   last_peer_reset_reason: No error
   last_reset: never
   last_reset_reason: No error
-  localhost_ip: 191.131.46.70
-  localhost_port: '30959'
+  localhost_ip: 233.29.157.75
+  localhost_port: '179'
   nei_table_version: ['8483941']
   neighbor: 131.243.190.190
   notifications_count_rcvd: '0'
   notifications_count_sent: '0'
   opens_count_rcvd: '4645'
   opens_count_sent: '1'
-  remote_ip: 224.44.237.104
-  remote_port: '179'
+  remote_ip: 116.246.167.246
+  remote_port: '27360'
   restart_time_adv: '120'
   restart_time_rcv: '120'
   route_refresh_count_rcvd: '0'
   route_refresh_count_sent: '0'
   rr_new_cap: advertised received
   rr_old_cap: advertised received
-  sent_paths: '53385'
+  sent_paths: '53122'
   source_iface: ''
   stale_time: '300'
   table_version: ['8483941']
@@ -1001,7 +1000,7 @@ parsed_sample:
   updates_count_rcvd: ''
   updates_count_sent: '1529417'
   uptime: 13w2d
-- accepted_paths: '324'
+- accepted_paths: '258'
   addr_fam_adv: Sent               Rcvd
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
@@ -1011,7 +1010,7 @@ parsed_sample:
   capability_count_sent: '0'
   conn_dropped: '0'
   conn_estab: '1'
-  consumed_mem: '19440'
+  consumed_mem: '15480'
   description: from donkey to baz
   ext_nh_cap: ''
   fourbyte_cap: advertised
@@ -1022,23 +1021,23 @@ parsed_sample:
   last_peer_reset_reason: No error
   last_reset: never
   last_reset_reason: No error
-  localhost_ip: 233.29.157.75
-  localhost_port: '179'
+  localhost_ip: 159.247.127.30
+  localhost_port: '28632'
   nei_table_version: ['8483941']
   neighbor: 103.90.75.222
   notifications_count_rcvd: '0'
   notifications_count_sent: '0'
   opens_count_rcvd: '634933'
   opens_count_sent: '1'
-  remote_ip: 116.246.167.246
-  remote_port: '27360'
+  remote_ip: 27.240.178.84
+  remote_port: '179'
   restart_time_adv: ''
   restart_time_rcv: ''
   route_refresh_count_rcvd: '0'
   route_refresh_count_sent: '0'
   rr_new_cap: advertised received
   rr_old_cap: advertised received
-  sent_paths: '53122'
+  sent_paths: '53236'
   source_iface: Ethernet5/2
   stale_time: ''
   table_version: ['8483941']
@@ -1051,7 +1050,7 @@ parsed_sample:
   updates_count_rcvd: ''
   updates_count_sent: '1534379'
   uptime: 13w2d
-- accepted_paths: '258'
+- accepted_paths: '265'
   addr_fam_adv: Sent               Rcvd
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
@@ -1061,7 +1060,7 @@ parsed_sample:
   capability_count_sent: '0'
   conn_dropped: '0'
   conn_estab: '1'
-  consumed_mem: '15480'
+  consumed_mem: '15900'
   description: from monkey to baz
   ext_nh_cap: ''
   fourbyte_cap: advertised
@@ -1072,15 +1071,15 @@ parsed_sample:
   last_peer_reset_reason: No error
   last_reset: never
   last_reset_reason: No error
-  localhost_ip: 159.247.127.30
-  localhost_port: '28632'
+  localhost_ip: 167.143.174.37
+  localhost_port: '29025'
   nei_table_version: ['8483941']
   neighbor: 122.169.105.222
   notifications_count_rcvd: '0'
   notifications_count_sent: '0'
   opens_count_rcvd: '650489'
   opens_count_sent: '1'
-  remote_ip: 27.240.178.84
+  remote_ip: 133.127.112.13
   remote_port: '179'
   restart_time_adv: ''
   restart_time_rcv: ''
@@ -1088,7 +1087,7 @@ parsed_sample:
   route_refresh_count_sent: '0'
   rr_new_cap: advertised received
   rr_old_cap: advertised received
-  sent_paths: '53236'
+  sent_paths: '53375'
   source_iface: Ethernet5/6
   stale_time: ''
   table_version: ['8483941']
@@ -1101,7 +1100,7 @@ parsed_sample:
   updates_count_rcvd: ''
   updates_count_sent: '1532715'
   uptime: 13w2d
-- accepted_paths: '265'
+- accepted_paths: '33'
   addr_fam_adv: Sent               Rcvd
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
@@ -1111,7 +1110,7 @@ parsed_sample:
   capability_count_sent: '0'
   conn_dropped: '0'
   conn_estab: '1'
-  consumed_mem: '15900'
+  consumed_mem: '1980'
   description: from donkey to foo
   ext_nh_cap: ''
   fourbyte_cap: advertised
@@ -1122,63 +1121,13 @@ parsed_sample:
   last_peer_reset_reason: No error
   last_reset: never
   last_reset_reason: No error
-  localhost_ip: 167.143.174.37
-  localhost_port: '29025'
+  localhost_ip: 117.70.157.199
+  localhost_port: '30297'
   nei_table_version: ['8483941']
   neighbor: 248.253.184.199
   notifications_count_rcvd: '0'
   notifications_count_sent: '0'
   opens_count_rcvd: '664426'
-  opens_count_sent: '1'
-  remote_ip: 133.127.112.13
-  remote_port: '179'
-  restart_time_adv: ''
-  restart_time_rcv: ''
-  route_refresh_count_rcvd: '0'
-  route_refresh_count_sent: '0'
-  rr_new_cap: advertised received
-  rr_old_cap: advertised received
-  sent_paths: '53375'
-  source_iface: ''
-  stale_time: ''
-  table_version: ['8483941']
-  total_bytes_count_rcvd: '74725071'
-  total_bytes_count_sent: '159313024'
-  total_bytes_rcvd_queue: '0'
-  total_bytes_send_queue: '0'
-  total_mess_count_rcvd: '1204718'
-  total_mess_count_sent: '1994668'
-  updates_count_rcvd: ''
-  updates_count_sent: '1532601'
-  uptime: 13w2d
-- accepted_paths: '33'
-  addr_fam_adv: Sent               Rcvd
-  addr_fam_rcv: ''
-  addr_family: [IPv4 Unicast]
-  asn: '64517'
-  bgp_state: Established
-  capability_count_rcvd: '0'
-  capability_count_sent: '0'
-  conn_dropped: '0'
-  conn_estab: '1'
-  consumed_mem: '1980'
-  description: from boo to bing
-  ext_nh_cap: ''
-  fourbyte_cap: advertised
-  graceful_cap: advertised
-  keepalives_count_rcvd: '404105'
-  keepalives_count_sent: '462066'
-  last_peer_reset: never
-  last_peer_reset_reason: No error
-  last_reset: never
-  last_reset_reason: No error
-  localhost_ip: 117.70.157.199
-  localhost_port: '30297'
-  nei_table_version: ['8483941']
-  neighbor: 113.9.147.198
-  notifications_count_rcvd: '0'
-  notifications_count_sent: '0'
-  opens_count_rcvd: '654504'
   opens_count_sent: '1'
   remote_ip: 234.33.202.152
   remote_port: '179'
@@ -1192,6 +1141,56 @@ parsed_sample:
   source_iface: ''
   stale_time: ''
   table_version: ['8483941']
+  total_bytes_count_rcvd: '74725071'
+  total_bytes_count_sent: '159313024'
+  total_bytes_rcvd_queue: '0'
+  total_bytes_send_queue: '0'
+  total_mess_count_rcvd: '1204718'
+  total_mess_count_sent: '1994668'
+  updates_count_rcvd: ''
+  updates_count_sent: '1532601'
+  uptime: 13w2d
+- accepted_paths: '7'
+  addr_fam_adv: Sent               Rcvd
+  addr_fam_rcv: ''
+  addr_family: [IPv4 Unicast]
+  asn: '64517'
+  bgp_state: Established
+  capability_count_rcvd: '0'
+  capability_count_sent: '0'
+  conn_dropped: '0'
+  conn_estab: '1'
+  consumed_mem: '420'
+  description: from boo to bing
+  ext_nh_cap: ''
+  fourbyte_cap: advertised
+  graceful_cap: advertised
+  keepalives_count_rcvd: '404105'
+  keepalives_count_sent: '462066'
+  last_peer_reset: never
+  last_peer_reset_reason: No error
+  last_reset: never
+  last_reset_reason: No error
+  localhost_ip: 158.80.154.105
+  localhost_port: '30528'
+  nei_table_version: ['8483941']
+  neighbor: 113.9.147.198
+  notifications_count_rcvd: '0'
+  notifications_count_sent: '0'
+  opens_count_rcvd: '654504'
+  opens_count_sent: '1'
+  remote_ip: 124.68.182.124
+  remote_port: '179'
+  restart_time_adv: ''
+  restart_time_rcv: ''
+  route_refresh_count_rcvd: '0'
+  route_refresh_count_sent: '0'
+  rr_new_cap: advertised received
+  rr_old_cap: advertised received
+  sent_paths: '53439'
+  source_iface: ''
+  stale_time: ''
+  table_version: ['8483941']
   total_bytes_count_rcvd: '71166342'
   total_bytes_count_sent: '159354403'
   total_bytes_rcvd_queue: '0'
@@ -1201,17 +1200,17 @@ parsed_sample:
   updates_count_rcvd: ''
   updates_count_sent: '1533067'
   uptime: 13w2d
-- accepted_paths: '7'
+- accepted_paths: '6'
   addr_fam_adv: ''
   addr_fam_rcv: ''
-  addr_family: [IPv4 Unicast]
+  addr_family: [IPv4 Unicast, IPv4 Unicast]
   asn: '64568'
   bgp_state: Shut (Admin)
   capability_count_rcvd: '0'
   capability_count_sent: '0'
   conn_dropped: '0'
   conn_estab: '0'
-  consumed_mem: '420'
+  consumed_mem: '360'
   description: from bar to foo
   ext_nh_cap: ''
   fourbyte_cap: ''
@@ -1222,15 +1221,15 @@ parsed_sample:
   last_peer_reset_reason: No error
   last_reset: never
   last_reset_reason: No error
-  localhost_ip: 158.80.154.105
-  localhost_port: '30528'
-  nei_table_version: ['8483941']
+  localhost_ip: 42.49.226.128
+  localhost_port: '30976'
+  nei_table_version: ['0', '8483941']
   neighbor: 178.51.35.168
   notifications_count_rcvd: '0'
   notifications_count_sent: '0'
   opens_count_rcvd: '0'
   opens_count_sent: '0'
-  remote_ip: 124.68.182.124
+  remote_ip: 187.198.29.137
   remote_port: '179'
   restart_time_adv: ''
   restart_time_rcv: ''
@@ -1238,10 +1237,10 @@ parsed_sample:
   route_refresh_count_sent: '0'
   rr_new_cap: ''
   rr_old_cap: ''
-  sent_paths: '53439'
+  sent_paths: '53440'
   source_iface: ''
   stale_time: ''
-  table_version: ['8483941']
+  table_version: ['8483941', '8483941']
   total_bytes_count_rcvd: '0'
   total_bytes_count_sent: '0'
   total_bytes_rcvd_queue: '0'
@@ -1251,17 +1250,17 @@ parsed_sample:
   updates_count_rcvd: ''
   updates_count_sent: '0'
   uptime: 13w2d
-- accepted_paths: '6'
+- accepted_paths: '54'
   addr_fam_adv: Sent               Rcvd
   addr_fam_rcv: ''
-  addr_family: [IPv4 Unicast, IPv4 Unicast]
+  addr_family: [IPv4 Unicast]
   asn: '65205'
   bgp_state: Established
   capability_count_rcvd: '0'
   capability_count_sent: '0'
   conn_dropped: '0'
   conn_estab: '1'
-  consumed_mem: '360'
+  consumed_mem: '3240'
   description: from boo to foo
   ext_nh_cap: ''
   fourbyte_cap: advertised
@@ -1272,63 +1271,13 @@ parsed_sample:
   last_peer_reset_reason: No error
   last_reset: never
   last_reset_reason: No error
-  localhost_ip: 42.49.226.128
-  localhost_port: '30976'
-  nei_table_version: ['0', '8483941']
+  localhost_ip: 99.106.129.169
+  localhost_port: '29117'
+  nei_table_version: ['8483941']
   neighbor: 162.55.172.94
   notifications_count_rcvd: '0'
   notifications_count_sent: '0'
   opens_count_rcvd: '85'
-  opens_count_sent: '1'
-  remote_ip: 187.198.29.137
-  remote_port: '179'
-  restart_time_adv: ''
-  restart_time_rcv: ''
-  route_refresh_count_rcvd: '0'
-  route_refresh_count_sent: '0'
-  rr_new_cap: advertised received
-  rr_old_cap: advertised received
-  sent_paths: '53440'
-  source_iface: Ethernet5/1
-  stale_time: ''
-  table_version: ['8483941', '8483941']
-  total_bytes_count_rcvd: '10269707'
-  total_bytes_count_sent: '159219708'
-  total_bytes_rcvd_queue: '0'
-  total_bytes_send_queue: '0'
-  total_mess_count_rcvd: '540378'
-  total_mess_count_sent: '1993712'
-  updates_count_rcvd: ''
-  updates_count_sent: '1531655'
-  uptime: 13w2d
-- accepted_paths: '54'
-  addr_fam_adv: Sent               Rcvd
-  addr_fam_rcv: ''
-  addr_family: [IPv4 Unicast]
-  asn: '64519'
-  bgp_state: Established
-  capability_count_rcvd: '0'
-  capability_count_sent: '0'
-  conn_dropped: '0'
-  conn_estab: '1'
-  consumed_mem: '3240'
-  description: from monkey to donkey
-  ext_nh_cap: ''
-  fourbyte_cap: advertised
-  graceful_cap: advertised
-  keepalives_count_rcvd: '417850'
-  keepalives_count_sent: '462089'
-  last_peer_reset: never
-  last_peer_reset_reason: No error
-  last_reset: never
-  last_reset_reason: No error
-  localhost_ip: 99.106.129.169
-  localhost_port: '29117'
-  nei_table_version: ['8483941']
-  neighbor: 117.185.189.71
-  notifications_count_rcvd: '0'
-  notifications_count_sent: '0'
-  opens_count_rcvd: '618470'
   opens_count_sent: '1'
   remote_ip: 130.223.103.98
   remote_port: '179'
@@ -1339,35 +1288,35 @@ parsed_sample:
   rr_new_cap: advertised received
   rr_old_cap: advertised received
   sent_paths: '53392'
-  source_iface: ''
+  source_iface: Ethernet5/1
   stale_time: ''
   table_version: ['8483941']
-  total_bytes_count_rcvd: '64469061'
-  total_bytes_count_sent: '159372385'
+  total_bytes_count_rcvd: '10269707'
+  total_bytes_count_sent: '159219708'
   total_bytes_rcvd_queue: '0'
   total_bytes_send_queue: '0'
-  total_mess_count_rcvd: '1036321'
-  total_mess_count_sent: '1995243'
+  total_mess_count_rcvd: '540378'
+  total_mess_count_sent: '1993712'
   updates_count_rcvd: ''
-  updates_count_sent: '1533153'
+  updates_count_sent: '1531655'
   uptime: 13w2d
 - accepted_paths: '94'
   addr_fam_adv: Sent               Rcvd
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
-  asn: '64980'
+  asn: '64519'
   bgp_state: Established
   capability_count_rcvd: '0'
   capability_count_sent: '0'
   conn_dropped: '0'
   conn_estab: '1'
   consumed_mem: '5640'
-  description: from baz to frog
+  description: from monkey to donkey
   ext_nh_cap: ''
   fourbyte_cap: advertised
   graceful_cap: advertised
-  keepalives_count_rcvd: '540291'
-  keepalives_count_sent: '462073'
+  keepalives_count_rcvd: '417850'
+  keepalives_count_sent: '462089'
   last_peer_reset: never
   last_peer_reset_reason: No error
   last_reset: never
@@ -1375,10 +1324,10 @@ parsed_sample:
   localhost_ip: 222.163.71.138
   localhost_port: '179'
   nei_table_version: ['8483941']
-  neighbor: 11.17.141.125
+  neighbor: 117.185.189.71
   notifications_count_rcvd: '0'
   notifications_count_sent: '0'
-  opens_count_rcvd: '157'
+  opens_count_rcvd: '618470'
   opens_count_sent: '1'
   remote_ip: 60.17.163.56
   remote_port: '35869'
@@ -1392,32 +1341,32 @@ parsed_sample:
   source_iface: ''
   stale_time: ''
   table_version: ['8483941']
-  total_bytes_count_rcvd: '10275086'
-  total_bytes_count_sent: '159108645'
+  total_bytes_count_rcvd: '64469061'
+  total_bytes_count_sent: '159372385'
   total_bytes_rcvd_queue: '0'
   total_bytes_send_queue: '0'
-  total_mess_count_rcvd: '540449'
-  total_mess_count_sent: '1993020'
+  total_mess_count_rcvd: '1036321'
+  total_mess_count_sent: '1995243'
   updates_count_rcvd: ''
-  updates_count_sent: '1530946'
+  updates_count_sent: '1533153'
   uptime: 13w2d
 - accepted_paths: '155'
   addr_fam_adv: Sent               Rcvd
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
-  asn: '65290'
+  asn: '64980'
   bgp_state: Established
   capability_count_rcvd: '0'
   capability_count_sent: '0'
   conn_dropped: '0'
   conn_estab: '1'
   consumed_mem: '9300'
-  description: from foo to bing
+  description: from baz to frog
   ext_nh_cap: ''
   fourbyte_cap: advertised
   graceful_cap: advertised
-  keepalives_count_rcvd: '425522'
-  keepalives_count_sent: '462428'
+  keepalives_count_rcvd: '540291'
+  keepalives_count_sent: '462073'
   last_peer_reset: never
   last_peer_reset_reason: No error
   last_reset: never
@@ -1425,10 +1374,10 @@ parsed_sample:
   localhost_ip: 204.196.181.66
   localhost_port: '31129'
   nei_table_version: ['8483941']
-  neighbor: 157.89.123.211
+  neighbor: 11.17.141.125
   notifications_count_rcvd: '0'
   notifications_count_sent: '0'
-  opens_count_rcvd: '675340'
+  opens_count_rcvd: '157'
   opens_count_sent: '1'
   remote_ip: 40.101.222.225
   remote_port: '179'
@@ -1442,32 +1391,32 @@ parsed_sample:
   source_iface: ''
   stale_time: ''
   table_version: ['8483941']
-  total_bytes_count_rcvd: '74252109'
-  total_bytes_count_sent: '159185878'
+  total_bytes_count_rcvd: '10275086'
+  total_bytes_count_sent: '159108645'
   total_bytes_rcvd_queue: '0'
   total_bytes_send_queue: '0'
-  total_mess_count_rcvd: '1100863'
-  total_mess_count_sent: '1993261'
+  total_mess_count_rcvd: '540449'
+  total_mess_count_sent: '1993020'
   updates_count_rcvd: ''
-  updates_count_sent: '1530832'
+  updates_count_sent: '1530946'
   uptime: 13w2d
 - accepted_paths: '358'
   addr_fam_adv: Sent               Rcvd
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
-  asn: '64538'
+  asn: '65290'
   bgp_state: Established
   capability_count_rcvd: '0'
   capability_count_sent: '0'
   conn_dropped: '0'
   conn_estab: '1'
   consumed_mem: '21480'
-  description: from bar to frog
+  description: from foo to bing
   ext_nh_cap: ''
   fourbyte_cap: advertised
   graceful_cap: advertised
-  keepalives_count_rcvd: '540296'
-  keepalives_count_sent: '462063'
+  keepalives_count_rcvd: '425522'
+  keepalives_count_sent: '462428'
   last_peer_reset: never
   last_peer_reset_reason: No error
   last_reset: never
@@ -1475,10 +1424,10 @@ parsed_sample:
   localhost_ip: 28.224.141.117
   localhost_port: '179'
   nei_table_version: ['8483941']
-  neighbor: 194.134.175.38
+  neighbor: 157.89.123.211
   notifications_count_rcvd: '0'
   notifications_count_sent: '0'
-  opens_count_rcvd: '643578'
+  opens_count_rcvd: '675340'
   opens_count_sent: '1'
   remote_ip: 128.255.228.37
   remote_port: '18524'
@@ -1489,6 +1438,56 @@ parsed_sample:
   rr_new_cap: advertised received
   rr_old_cap: advertised received
   sent_paths: '53100'
+  source_iface: ''
+  stale_time: ''
+  table_version: ['8483941']
+  total_bytes_count_rcvd: '74252109'
+  total_bytes_count_sent: '159185878'
+  total_bytes_rcvd_queue: '0'
+  total_bytes_send_queue: '0'
+  total_mess_count_rcvd: '1100863'
+  total_mess_count_sent: '1993261'
+  updates_count_rcvd: ''
+  updates_count_sent: '1530832'
+  uptime: 13w2d
+- accepted_paths: '5'
+  addr_fam_adv: Sent               Rcvd
+  addr_fam_rcv: ''
+  addr_family: [IPv4 Unicast]
+  asn: '64538'
+  bgp_state: Established
+  capability_count_rcvd: '0'
+  capability_count_sent: '0'
+  conn_dropped: '0'
+  conn_estab: '1'
+  consumed_mem: '300'
+  description: from bar to frog
+  ext_nh_cap: ''
+  fourbyte_cap: advertised
+  graceful_cap: advertised
+  keepalives_count_rcvd: '540296'
+  keepalives_count_sent: '462063'
+  last_peer_reset: never
+  last_peer_reset_reason: No error
+  last_reset: never
+  last_reset_reason: No error
+  localhost_ip: 29.156.12.176
+  localhost_port: '30092'
+  nei_table_version: ['8483941']
+  neighbor: 194.134.175.38
+  notifications_count_rcvd: '0'
+  notifications_count_sent: '0'
+  opens_count_rcvd: '643578'
+  opens_count_sent: '1'
+  remote_ip: 119.96.208.59
+  remote_port: '179'
+  restart_time_adv: ''
+  restart_time_rcv: ''
+  route_refresh_count_rcvd: '0'
+  route_refresh_count_sent: '0'
+  rr_new_cap: advertised received
+  rr_old_cap: advertised received
+  sent_paths: '53441'
   source_iface: Ethernet6/11
   stale_time: ''
   table_version: ['8483941']
@@ -1501,7 +1500,7 @@ parsed_sample:
   updates_count_rcvd: ''
   updates_count_sent: '1532184'
   uptime: 13w2d
-- accepted_paths: '5'
+- accepted_paths: '3'
   addr_fam_adv: Sent               Rcvd
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
@@ -1511,7 +1510,7 @@ parsed_sample:
   capability_count_sent: '0'
   conn_dropped: '0'
   conn_estab: '1'
-  consumed_mem: '300'
+  consumed_mem: '180'
   description: from donkey to boo
   ext_nh_cap: ''
   fourbyte_cap: advertised
@@ -1522,15 +1521,15 @@ parsed_sample:
   last_peer_reset_reason: No error
   last_reset: never
   last_reset_reason: No error
-  localhost_ip: 29.156.12.176
-  localhost_port: '30092'
+  localhost_ip: 26.19.106.90
+  localhost_port: '28398'
   nei_table_version: ['8483941']
   neighbor: 187.149.19.88
   notifications_count_rcvd: '0'
   notifications_count_sent: '0'
   opens_count_rcvd: '645340'
   opens_count_sent: '1'
-  remote_ip: 119.96.208.59
+  remote_ip: 195.117.50.146
   remote_port: '179'
   restart_time_adv: ''
   restart_time_rcv: ''
@@ -1538,7 +1537,7 @@ parsed_sample:
   route_refresh_count_sent: '0'
   rr_new_cap: advertised received
   rr_old_cap: advertised received
-  sent_paths: '53441'
+  sent_paths: '53443'
   source_iface: Ethernet5/4
   stale_time: ''
   table_version: ['8483941']
@@ -1551,7 +1550,7 @@ parsed_sample:
   updates_count_rcvd: ''
   updates_count_sent: '1533949'
   uptime: 13w2d
-- accepted_paths: '3'
+- accepted_paths: '5'
   addr_fam_adv: Sent               Rcvd
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
@@ -1561,7 +1560,7 @@ parsed_sample:
   capability_count_sent: '0'
   conn_dropped: '0'
   conn_estab: '1'
-  consumed_mem: '180'
+  consumed_mem: '300'
   description: from donkey to donkey
   ext_nh_cap: ''
   fourbyte_cap: advertised
@@ -1572,15 +1571,15 @@ parsed_sample:
   last_peer_reset_reason: No error
   last_reset: never
   last_reset_reason: No error
-  localhost_ip: 26.19.106.90
-  localhost_port: '28398'
+  localhost_ip: 220.226.76.231
+  localhost_port: '30862'
   nei_table_version: ['8483941']
   neighbor: 16.114.168.33
   notifications_count_rcvd: '0'
   notifications_count_sent: '0'
   opens_count_rcvd: '3'
   opens_count_sent: '1'
-  remote_ip: 195.117.50.146
+  remote_ip: 186.39.56.0
   remote_port: '179'
   restart_time_adv: ''
   restart_time_rcv: ''
@@ -1588,7 +1587,7 @@ parsed_sample:
   route_refresh_count_sent: '0'
   rr_new_cap: advertised received
   rr_old_cap: advertised received
-  sent_paths: '53443'
+  sent_paths: '53441'
   source_iface: Ethernet3/31
   stale_time: ''
   table_version: ['8483941']
@@ -1622,15 +1621,15 @@ parsed_sample:
   last_peer_reset_reason: No error
   last_reset: never
   last_reset_reason: No error
-  localhost_ip: 220.226.76.231
-  localhost_port: '30862'
+  localhost_ip: 99.240.42.174
+  localhost_port: '28790'
   nei_table_version: ['8483941']
   neighbor: 156.0.8.154
   notifications_count_rcvd: '0'
   notifications_count_sent: '0'
   opens_count_rcvd: '648401'
   opens_count_sent: '1'
-  remote_ip: 186.39.56.0
+  remote_ip: 235.228.253.157
   remote_port: '179'
   restart_time_adv: ''
   restart_time_rcv: ''
@@ -1638,7 +1637,7 @@ parsed_sample:
   route_refresh_count_sent: '0'
   rr_new_cap: advertised received
   rr_old_cap: advertised received
-  sent_paths: '53441'
+  sent_paths: '53442'
   source_iface: Ethernet5/3
   stale_time: ''
   table_version: ['8483941']
@@ -1651,7 +1650,7 @@ parsed_sample:
   updates_count_rcvd: ''
   updates_count_sent: '1533275'
   uptime: 13w2d
-- accepted_paths: '5'
+- accepted_paths: '3'
   addr_fam_adv: Sent               Rcvd
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
@@ -1661,7 +1660,7 @@ parsed_sample:
   capability_count_sent: '0'
   conn_dropped: '0'
   conn_estab: '1'
-  consumed_mem: '300'
+  consumed_mem: '180'
   description: from donkey to donkey
   ext_nh_cap: ''
   fourbyte_cap: advertised
@@ -1672,15 +1671,15 @@ parsed_sample:
   last_peer_reset_reason: No error
   last_reset: never
   last_reset_reason: No error
-  localhost_ip: 99.240.42.174
-  localhost_port: '28790'
+  localhost_ip: 49.35.116.26
+  localhost_port: '30581'
   nei_table_version: ['8483941']
   neighbor: 131.175.74.157
   notifications_count_rcvd: '0'
   notifications_count_sent: '0'
   opens_count_rcvd: '2'
   opens_count_sent: '1'
-  remote_ip: 235.228.253.157
+  remote_ip: 244.157.125.129
   remote_port: '179'
   restart_time_adv: ''
   restart_time_rcv: ''
@@ -1688,7 +1687,7 @@ parsed_sample:
   route_refresh_count_sent: '0'
   rr_new_cap: advertised received
   rr_old_cap: advertised received
-  sent_paths: '53442'
+  sent_paths: '53443'
   source_iface: Ethernet6/10
   stale_time: ''
   table_version: ['8483941']
@@ -1701,17 +1700,17 @@ parsed_sample:
   updates_count_rcvd: ''
   updates_count_sent: '1531346'
   uptime: 13w2d
-- accepted_paths: '3'
+- accepted_paths: '21'
   addr_fam_adv: ''
   addr_fam_rcv: ''
-  addr_family: [IPv4 Unicast]
+  addr_family: [IPv4 Unicast, IPv4 Unicast]
   asn: '65271'
   bgp_state: Idle
   capability_count_rcvd: '0'
   capability_count_sent: '0'
   conn_dropped: '0'
   conn_estab: '0'
-  consumed_mem: '180'
+  consumed_mem: '1260'
   description: from monkey to boo
   ext_nh_cap: ''
   fourbyte_cap: ''
@@ -1722,15 +1721,15 @@ parsed_sample:
   last_peer_reset_reason: No error
   last_reset: never
   last_reset_reason: No error
-  localhost_ip: 49.35.116.26
-  localhost_port: '30581'
-  nei_table_version: ['8483941']
+  localhost_ip: 168.77.208.187
+  localhost_port: '28277'
+  nei_table_version: ['0', '8483941']
   neighbor: 48.218.155.56
   notifications_count_rcvd: '0'
   notifications_count_sent: '0'
   opens_count_rcvd: '0'
   opens_count_sent: '0'
-  remote_ip: 244.157.125.129
+  remote_ip: 192.204.136.39
   remote_port: '179'
   restart_time_adv: ''
   restart_time_rcv: ''
@@ -1738,10 +1737,10 @@ parsed_sample:
   route_refresh_count_sent: '0'
   rr_new_cap: ''
   rr_old_cap: ''
-  sent_paths: '53443'
+  sent_paths: '0'
   source_iface: ''
   stale_time: ''
-  table_version: ['8483941']
+  table_version: ['8483941', '8483941']
   total_bytes_count_rcvd: '0'
   total_bytes_count_sent: '0'
   total_bytes_rcvd_queue: '0'
@@ -1751,17 +1750,17 @@ parsed_sample:
   updates_count_rcvd: ''
   updates_count_sent: '0'
   uptime: 13w2d
-- accepted_paths: '21'
+- accepted_paths: '6'
   addr_fam_adv: Sent               Rcvd
   addr_fam_rcv: ''
-  addr_family: [IPv4 Unicast, IPv4 Unicast]
+  addr_family: [IPv4 Unicast]
   asn: '65160'
   bgp_state: Established
   capability_count_rcvd: '0'
   capability_count_sent: '0'
   conn_dropped: '0'
   conn_estab: '1'
-  consumed_mem: '1260'
+  consumed_mem: '360'
   description: from bar to bing
   ext_nh_cap: ''
   fourbyte_cap: advertised
@@ -1772,63 +1771,13 @@ parsed_sample:
   last_peer_reset_reason: No error
   last_reset: never
   last_reset_reason: No error
-  localhost_ip: 168.77.208.187
-  localhost_port: '28277'
-  nei_table_version: ['0', '8483941']
+  localhost_ip: 51.154.104.202
+  localhost_port: '179'
+  nei_table_version: ['8483941']
   neighbor: 255.247.222.27
   notifications_count_rcvd: '0'
   notifications_count_sent: '0'
   opens_count_rcvd: '2683'
-  opens_count_sent: '1'
-  remote_ip: 192.204.136.39
-  remote_port: '179'
-  restart_time_adv: ''
-  restart_time_rcv: ''
-  route_refresh_count_rcvd: '0'
-  route_refresh_count_sent: '0'
-  rr_new_cap: advertised received
-  rr_old_cap: advertised received
-  sent_paths: '0'
-  source_iface: Ethernet6/4
-  stale_time: ''
-  table_version: ['8483941', '8483941']
-  total_bytes_count_rcvd: '10115356'
-  total_bytes_count_sent: '159358223'
-  total_bytes_rcvd_queue: '0'
-  total_bytes_send_queue: '0'
-  total_mess_count_rcvd: '529259'
-  total_mess_count_sent: '1994274'
-  updates_count_rcvd: ''
-  updates_count_sent: '1531827'
-  uptime: 13w2d
-- accepted_paths: '6'
-  addr_fam_adv: Sent               Rcvd
-  addr_fam_rcv: ''
-  addr_family: [IPv4 Unicast]
-  asn: '65180'
-  bgp_state: Established
-  capability_count_rcvd: '0'
-  capability_count_sent: '0'
-  conn_dropped: '0'
-  conn_estab: '1'
-  consumed_mem: '360'
-  description: from frog to donkey
-  ext_nh_cap: ''
-  fourbyte_cap: advertised
-  graceful_cap: advertised
-  keepalives_count_rcvd: '527508'
-  keepalives_count_sent: '462096'
-  last_peer_reset: never
-  last_peer_reset_reason: No error
-  last_reset: never
-  last_reset_reason: No error
-  localhost_ip: 51.154.104.202
-  localhost_port: '179'
-  nei_table_version: ['8483941']
-  neighbor: 220.157.249.83
-  notifications_count_rcvd: '0'
-  notifications_count_sent: '0'
-  opens_count_rcvd: '253'
   opens_count_sent: '1'
   remote_ip: 49.149.6.165
   remote_port: '18056'
@@ -1839,6 +1788,56 @@ parsed_sample:
   rr_new_cap: advertised received
   rr_old_cap: advertised received
   sent_paths: '53440'
+  source_iface: Ethernet6/4
+  stale_time: ''
+  table_version: ['8483941']
+  total_bytes_count_rcvd: '10115356'
+  total_bytes_count_sent: '159358223'
+  total_bytes_rcvd_queue: '0'
+  total_bytes_send_queue: '0'
+  total_mess_count_rcvd: '529259'
+  total_mess_count_sent: '1994274'
+  updates_count_rcvd: ''
+  updates_count_sent: '1531827'
+  uptime: 13w2d
+- accepted_paths: '32'
+  addr_fam_adv: Sent               Rcvd
+  addr_fam_rcv: ''
+  addr_family: [IPv4 Unicast]
+  asn: '65180'
+  bgp_state: Established
+  capability_count_rcvd: '0'
+  capability_count_sent: '0'
+  conn_dropped: '0'
+  conn_estab: '1'
+  consumed_mem: '1920'
+  description: from frog to donkey
+  ext_nh_cap: ''
+  fourbyte_cap: advertised
+  graceful_cap: advertised
+  keepalives_count_rcvd: '527508'
+  keepalives_count_sent: '462096'
+  last_peer_reset: never
+  last_peer_reset_reason: No error
+  last_reset: never
+  last_reset_reason: No error
+  localhost_ip: 16.47.100.156
+  localhost_port: '179'
+  nei_table_version: ['8483941']
+  neighbor: 220.157.249.83
+  notifications_count_rcvd: '0'
+  notifications_count_sent: '0'
+  opens_count_rcvd: '253'
+  opens_count_sent: '1'
+  remote_ip: 144.195.50.101
+  remote_port: '35983'
+  restart_time_adv: ''
+  restart_time_rcv: ''
+  route_refresh_count_rcvd: '0'
+  route_refresh_count_sent: '0'
+  rr_new_cap: advertised received
+  rr_old_cap: advertised received
+  sent_paths: '53414'
   source_iface: Ethernet6/5
   stale_time: ''
   table_version: ['8483941']
@@ -1851,7 +1850,7 @@ parsed_sample:
   updates_count_rcvd: ''
   updates_count_sent: '1533270'
   uptime: 13w2d
-- accepted_paths: '32'
+- accepted_paths: '6'
   addr_fam_adv: IPv4 Unicast
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
@@ -1861,7 +1860,7 @@ parsed_sample:
   capability_count_sent: '0'
   conn_dropped: '1'
   conn_estab: '2'
-  consumed_mem: '1920'
+  consumed_mem: '360'
   description: from boo to baz
   ext_nh_cap: advertised
   fourbyte_cap: advertised received
@@ -1872,23 +1871,23 @@ parsed_sample:
   last_peer_reset_reason: duplicate connection request
   last_reset: never
   last_reset_reason: No error
-  localhost_ip: 16.47.100.156
-  localhost_port: '179'
+  localhost_ip: 30.246.241.47
+  localhost_port: '15942'
   nei_table_version: ['8483941']
   neighbor: 244.94.161.162
   notifications_count_rcvd: '0'
   notifications_count_sent: '0'
   opens_count_rcvd: '9'
   opens_count_sent: '2'
-  remote_ip: 144.195.50.101
-  remote_port: '35983'
+  remote_ip: 170.229.101.87
+  remote_port: '179'
   restart_time_adv: '120'
   restart_time_rcv: '120'
   route_refresh_count_rcvd: '0'
   route_refresh_count_sent: '0'
   rr_new_cap: advertised received
   rr_old_cap: advertised received
-  sent_paths: '53414'
+  sent_paths: '53441'
   source_iface: Ethernet6/6
   stale_time: '300'
   table_version: ['8483941']
@@ -1901,7 +1900,7 @@ parsed_sample:
   updates_count_rcvd: ''
   updates_count_sent: '1549371'
   uptime: 9w4d
-- accepted_paths: '6'
+- accepted_paths: '110'
   addr_fam_adv: IPv4 Unicast
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
@@ -1911,7 +1910,7 @@ parsed_sample:
   capability_count_sent: '0'
   conn_dropped: '3'
   conn_estab: '4'
-  consumed_mem: '360'
+  consumed_mem: '6600'
   description: from donkey to monkey
   ext_nh_cap: advertised
   fourbyte_cap: advertised received
@@ -1922,15 +1921,15 @@ parsed_sample:
   last_peer_reset_reason: duplicate connection request
   last_reset: never
   last_reset_reason: No error
-  localhost_ip: 30.246.241.47
-  localhost_port: '15942'
+  localhost_ip: 214.144.36.241
+  localhost_port: '55353'
   nei_table_version: ['8483941']
   neighbor: 132.115.163.171
   notifications_count_rcvd: '0'
   notifications_count_sent: '0'
   opens_count_rcvd: '79'
   opens_count_sent: '4'
-  remote_ip: 170.229.101.87
+  remote_ip: 160.215.146.14
   remote_port: '179'
   restart_time_adv: '120'
   restart_time_rcv: '120'
@@ -1938,7 +1937,7 @@ parsed_sample:
   route_refresh_count_sent: '0'
   rr_new_cap: advertised received
   rr_old_cap: advertised received
-  sent_paths: '53441'
+  sent_paths: '53336'
   source_iface: ''
   stale_time: '300'
   table_version: ['8483941']
@@ -1951,17 +1950,17 @@ parsed_sample:
   updates_count_rcvd: ''
   updates_count_sent: '1578342'
   uptime: 1d06h
-- accepted_paths: '110'
+- accepted_paths: '55'
   addr_fam_adv: ''
   addr_fam_rcv: ''
-  addr_family: [IPv4 Unicast]
+  addr_family: [IPv4 Unicast, IPv4 Unicast]
   asn: '65282'
   bgp_state: Idle
   capability_count_rcvd: '0'
   capability_count_sent: '0'
   conn_dropped: '0'
   conn_estab: '0'
-  consumed_mem: '6600'
+  consumed_mem: '3300'
   description: from bing to bar
   ext_nh_cap: ''
   fourbyte_cap: ''
@@ -1972,15 +1971,15 @@ parsed_sample:
   last_peer_reset_reason: No error
   last_reset: never
   last_reset_reason: No error
-  localhost_ip: 214.144.36.241
-  localhost_port: '55353'
-  nei_table_version: ['8483941']
+  localhost_ip: 238.32.93.158
+  localhost_port: '65116'
+  nei_table_version: ['0', '8483941']
   neighbor: 32.180.174.240
   notifications_count_rcvd: '0'
   notifications_count_sent: '0'
   opens_count_rcvd: '0'
   opens_count_sent: '0'
-  remote_ip: 160.215.146.14
+  remote_ip: 206.89.69.2
   remote_port: '179'
   restart_time_adv: ''
   restart_time_rcv: ''
@@ -1988,10 +1987,10 @@ parsed_sample:
   route_refresh_count_sent: '0'
   rr_new_cap: ''
   rr_old_cap: ''
-  sent_paths: '53336'
+  sent_paths: '53393'
   source_iface: ''
   stale_time: ''
-  table_version: ['8483941']
+  table_version: ['8483941', '8483941']
   total_bytes_count_rcvd: '0'
   total_bytes_count_sent: '0'
   total_bytes_rcvd_queue: '0'
@@ -2001,17 +2000,17 @@ parsed_sample:
   updates_count_rcvd: ''
   updates_count_sent: '0'
   uptime: 13w2d
-- accepted_paths: '55'
+- accepted_paths: '642'
   addr_fam_adv: Sent               Rcvd
   addr_fam_rcv: ''
-  addr_family: [IPv4 Unicast, IPv4 Unicast]
+  addr_family: [IPv4 Unicast]
   asn: '65010'
   bgp_state: Established
   capability_count_rcvd: '0'
   capability_count_sent: '0'
   conn_dropped: '0'
   conn_estab: '1'
-  consumed_mem: '3300'
+  consumed_mem: '38520'
   description: from frog to boo
   ext_nh_cap: ''
   fourbyte_cap: advertised received
@@ -2022,26 +2021,26 @@ parsed_sample:
   last_peer_reset_reason: No error
   last_reset: never
   last_reset_reason: No error
-  localhost_ip: 238.32.93.158
-  localhost_port: '65116'
-  nei_table_version: ['0', '8483941']
+  localhost_ip: 85.4.162.71
+  localhost_port: '179'
+  nei_table_version: ['8483941']
   neighbor: 58.87.110.23
   notifications_count_rcvd: '0'
   notifications_count_sent: '0'
   opens_count_rcvd: '226933'
   opens_count_sent: '1'
-  remote_ip: 206.89.69.2
-  remote_port: '179'
+  remote_ip: 112.221.23.57
+  remote_port: '37814'
   restart_time_adv: ''
   restart_time_rcv: ''
   route_refresh_count_rcvd: '0'
   route_refresh_count_sent: '0'
   rr_new_cap: advertised received
   rr_old_cap: advertised received
-  sent_paths: '53393'
+  sent_paths: '52804'
   source_iface: ''
   stale_time: ''
-  table_version: ['8483941', '8483941']
+  table_version: ['8483941']
   total_bytes_count_rcvd: '24196536'
   total_bytes_count_sent: '194429206'
   total_bytes_rcvd_queue: '0'
@@ -2051,7 +2050,7 @@ parsed_sample:
   updates_count_rcvd: ''
   updates_count_sent: '1527603'
   uptime: 13w2d
-- accepted_paths: '642'
+- accepted_paths: '11'
   addr_fam_adv: IPv4 Unicast
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
@@ -2061,7 +2060,7 @@ parsed_sample:
   capability_count_sent: '0'
   conn_dropped: '0'
   conn_estab: '1'
-  consumed_mem: '38520'
+  consumed_mem: '660'
   description: from foo to frog
   ext_nh_cap: advertised received
   fourbyte_cap: advertised received
@@ -2072,7 +2071,7 @@ parsed_sample:
   last_peer_reset_reason: No error
   last_reset: never
   last_reset_reason: No error
-  localhost_ip: 85.4.162.71
+  localhost_ip: 51.185.196.36
   localhost_port: '179'
   nei_table_version: ['8483941']
   neighbor: 214.53.165.54
@@ -2080,15 +2079,15 @@ parsed_sample:
   notifications_count_sent: '0'
   opens_count_rcvd: '3'
   opens_count_sent: '1'
-  remote_ip: 112.221.23.57
-  remote_port: '37814'
+  remote_ip: 191.20.54.179
+  remote_port: '57737'
   restart_time_adv: '120'
   restart_time_rcv: '120'
   route_refresh_count_rcvd: '0'
   route_refresh_count_sent: '0'
   rr_new_cap: advertised received
   rr_old_cap: advertised received
-  sent_paths: '52804'
+  sent_paths: '53435'
   source_iface: Ethernet5/14
   stale_time: '300'
   table_version: ['8483941']
@@ -2101,7 +2100,7 @@ parsed_sample:
   updates_count_rcvd: ''
   updates_count_sent: '1535502'
   uptime: 13w2d
-- accepted_paths: '11'
+- accepted_paths: '1'
   addr_fam_adv: IPv4 Unicast
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
@@ -2111,7 +2110,7 @@ parsed_sample:
   capability_count_sent: '0'
   conn_dropped: '0'
   conn_estab: '1'
-  consumed_mem: '660'
+  consumed_mem: '60'
   description: from donkey to frog
   ext_nh_cap: advertised received
   fourbyte_cap: advertised received
@@ -2122,7 +2121,7 @@ parsed_sample:
   last_peer_reset_reason: No error
   last_reset: never
   last_reset_reason: No error
-  localhost_ip: 51.185.196.36
+  localhost_ip: 89.132.8.29
   localhost_port: '179'
   nei_table_version: ['8483941']
   neighbor: 237.50.68.158
@@ -2130,15 +2129,15 @@ parsed_sample:
   notifications_count_sent: '0'
   opens_count_rcvd: '2'
   opens_count_sent: '1'
-  remote_ip: 191.20.54.179
-  remote_port: '57737'
+  remote_ip: 255.186.167.183
+  remote_port: '17650'
   restart_time_adv: '120'
   restart_time_rcv: '120'
   route_refresh_count_rcvd: '0'
   route_refresh_count_sent: '0'
   rr_new_cap: advertised received
   rr_old_cap: advertised received
-  sent_paths: '53435'
+  sent_paths: '53445'
   source_iface: Ethernet6/14
   stale_time: '300'
   table_version: ['8483941']
@@ -2151,7 +2150,7 @@ parsed_sample:
   updates_count_rcvd: ''
   updates_count_sent: '1533672'
   uptime: 13w2d
-- accepted_paths: '1'
+- accepted_paths: '26'
   addr_fam_adv: IPv4 Unicast
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
@@ -2161,7 +2160,7 @@ parsed_sample:
   capability_count_sent: '0'
   conn_dropped: '0'
   conn_estab: '1'
-  consumed_mem: '60'
+  consumed_mem: '1560'
   description: from foo to baz
   ext_nh_cap: advertised received
   fourbyte_cap: advertised received
@@ -2172,7 +2171,7 @@ parsed_sample:
   last_peer_reset_reason: No error
   last_reset: never
   last_reset_reason: No error
-  localhost_ip: 89.132.8.29
+  localhost_ip: 78.199.207.157
   localhost_port: '179'
   nei_table_version: ['8483941']
   neighbor: 30.151.70.12
@@ -2180,15 +2179,15 @@ parsed_sample:
   notifications_count_sent: '0'
   opens_count_rcvd: '18'
   opens_count_sent: '1'
-  remote_ip: 255.186.167.183
-  remote_port: '17650'
+  remote_ip: 222.28.243.82
+  remote_port: '16952'
   restart_time_adv: '120'
   restart_time_rcv: '120'
   route_refresh_count_rcvd: '0'
   route_refresh_count_sent: '0'
   rr_new_cap: advertised received
   rr_old_cap: advertised received
-  sent_paths: '53445'
+  sent_paths: '53420'
   source_iface: ''
   stale_time: '300'
   table_version: ['8483941']
@@ -2201,7 +2200,7 @@ parsed_sample:
   updates_count_rcvd: ''
   updates_count_sent: '1533539'
   uptime: 13w2d
-- accepted_paths: '26'
+- accepted_paths: '4'
   addr_fam_adv: IPv4 Unicast
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
@@ -2211,7 +2210,7 @@ parsed_sample:
   capability_count_sent: '0'
   conn_dropped: '2'
   conn_estab: '3'
-  consumed_mem: '1560'
+  consumed_mem: '240'
   description: from monkey to bing
   ext_nh_cap: advertised received
   fourbyte_cap: advertised received
@@ -2222,23 +2221,23 @@ parsed_sample:
   last_peer_reset_reason: duplicate connection request
   last_reset: never
   last_reset_reason: No error
-  localhost_ip: 78.199.207.157
-  localhost_port: '179'
+  localhost_ip: 221.66.123.172
+  localhost_port: '64966'
   nei_table_version: ['8483941']
   neighbor: 59.112.207.30
   notifications_count_rcvd: '0'
   notifications_count_sent: '0'
   opens_count_rcvd: '15'
   opens_count_sent: '3'
-  remote_ip: 222.28.243.82
-  remote_port: '16952'
+  remote_ip: 127.176.93.177
+  remote_port: '179'
   restart_time_adv: '120'
   restart_time_rcv: '120'
   route_refresh_count_rcvd: '0'
   route_refresh_count_sent: '0'
   rr_new_cap: advertised received
   rr_old_cap: advertised received
-  sent_paths: '53420'
+  sent_paths: '53442'
   source_iface: Ethernet5/15
   stale_time: '300'
   table_version: ['8483941']
@@ -2251,7 +2250,7 @@ parsed_sample:
   updates_count_rcvd: ''
   updates_count_sent: '1563738'
   uptime: 10w5d
-- accepted_paths: '4'
+- accepted_paths: '5'
   addr_fam_adv: IPv4 Unicast
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
@@ -2261,7 +2260,7 @@ parsed_sample:
   capability_count_sent: '0'
   conn_dropped: '0'
   conn_estab: '1'
-  consumed_mem: '240'
+  consumed_mem: '300'
   description: from monkey to bing
   ext_nh_cap: advertised
   fourbyte_cap: advertised received
@@ -2272,15 +2271,15 @@ parsed_sample:
   last_peer_reset_reason: No error
   last_reset: never
   last_reset_reason: No error
-  localhost_ip: 221.66.123.172
-  localhost_port: '64966'
+  localhost_ip: 209.213.88.120
+  localhost_port: '27191'
   nei_table_version: ['8483941']
   neighbor: 185.174.44.36
   notifications_count_rcvd: '0'
   notifications_count_sent: '0'
   opens_count_rcvd: '7'
   opens_count_sent: '1'
-  remote_ip: 127.176.93.177
+  remote_ip: 166.18.170.15
   remote_port: '179'
   restart_time_adv: '120'
   restart_time_rcv: '120'
@@ -2288,7 +2287,7 @@ parsed_sample:
   route_refresh_count_sent: '0'
   rr_new_cap: advertised received
   rr_old_cap: advertised received
-  sent_paths: '53442'
+  sent_paths: '53441'
   source_iface: Ethernet6/15
   stale_time: '300'
   table_version: ['8483941']
@@ -2301,7 +2300,7 @@ parsed_sample:
   updates_count_rcvd: ''
   updates_count_sent: '1533546'
   uptime: 13w2d
-- accepted_paths: '5'
+- accepted_paths: '1'
   addr_fam_adv: IPv4 Unicast
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
@@ -2311,7 +2310,7 @@ parsed_sample:
   capability_count_sent: '0'
   conn_dropped: '0'
   conn_estab: '1'
-  consumed_mem: '300'
+  consumed_mem: '60'
   description: from boo to donkey
   ext_nh_cap: advertised received
   fourbyte_cap: advertised received
@@ -2322,23 +2321,23 @@ parsed_sample:
   last_peer_reset_reason: No error
   last_reset: never
   last_reset_reason: No error
-  localhost_ip: 209.213.88.120
-  localhost_port: '27191'
+  localhost_ip: 151.112.219.37
+  localhost_port: '179'
   nei_table_version: ['8483941']
   neighbor: 73.80.95.69
   notifications_count_rcvd: '0'
   notifications_count_sent: '0'
   opens_count_rcvd: '2'
   opens_count_sent: '1'
-  remote_ip: 166.18.170.15
-  remote_port: '179'
+  remote_ip: 87.38.121.111
+  remote_port: '40066'
   restart_time_adv: '120'
   restart_time_rcv: '120'
   route_refresh_count_rcvd: '0'
   route_refresh_count_sent: '0'
   rr_new_cap: advertised received
   rr_old_cap: advertised received
-  sent_paths: '53441'
+  sent_paths: '53445'
   source_iface: Ethernet5/10
   stale_time: '300'
   table_version: ['8483941']
@@ -2351,7 +2350,7 @@ parsed_sample:
   updates_count_rcvd: ''
   updates_count_sent: '1534921'
   uptime: 13w2d
-- accepted_paths: '1'
+- accepted_paths: '51100'
   addr_fam_adv: IPv4 Unicast
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
@@ -2361,7 +2360,7 @@ parsed_sample:
   capability_count_sent: '0'
   conn_dropped: '1'
   conn_estab: '2'
-  consumed_mem: '60'
+  consumed_mem: '3066000'
   description: from frog to monkey
   ext_nh_cap: advertised received
   fourbyte_cap: advertised received
@@ -2372,23 +2371,23 @@ parsed_sample:
   last_peer_reset_reason: No error
   last_reset: 12w6d
   last_reset_reason: other configuration change
-  localhost_ip: 151.112.219.37
-  localhost_port: '179'
+  localhost_ip: 246.236.13.106
+  localhost_port: '34610'
   nei_table_version: ['8483941']
   neighbor: 238.139.143.60
   notifications_count_rcvd: '0'
   notifications_count_sent: '0'
   opens_count_rcvd: '1000017'
   opens_count_sent: '2'
-  remote_ip: 87.38.121.111
-  remote_port: '40066'
+  remote_ip: 129.148.50.189
+  remote_port: '179'
   restart_time_adv: '120'
   restart_time_rcv: '120'
   route_refresh_count_rcvd: '0'
   route_refresh_count_sent: '0'
   rr_new_cap: advertised received
   rr_old_cap: advertised received
-  sent_paths: '53445'
+  sent_paths: '46640'
   source_iface: Ethernet6/2
   stale_time: '300'
   table_version: ['8483941']
@@ -2422,15 +2421,15 @@ parsed_sample:
   last_peer_reset_reason: duplicate connection request
   last_reset: 11w5d
   last_reset_reason: other configuration change
-  localhost_ip: 246.236.13.106
-  localhost_port: '34610'
+  localhost_ip: 247.176.130.61
+  localhost_port: '53574'
   nei_table_version: ['8483941']
   neighbor: 14.39.170.172
   notifications_count_rcvd: '0'
   notifications_count_sent: '0'
   opens_count_rcvd: '1108031'
   opens_count_sent: '7'
-  remote_ip: 129.148.50.189
+  remote_ip: 180.138.38.81
   remote_port: '179'
   restart_time_adv: '120'
   restart_time_rcv: '120'
@@ -2451,7 +2450,7 @@ parsed_sample:
   updates_count_rcvd: ''
   updates_count_sent: '955014'
   uptime: 11w4d
-- accepted_paths: '51100'
+- accepted_paths: '52809'
   addr_fam_adv: IPv4 Unicast
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
@@ -2461,7 +2460,7 @@ parsed_sample:
   capability_count_sent: '0'
   conn_dropped: '8'
   conn_estab: '9'
-  consumed_mem: '3066000'
+  consumed_mem: '3168540'
   description: from donkey to bing
   ext_nh_cap: advertised received
   fourbyte_cap: advertised received
@@ -2472,23 +2471,23 @@ parsed_sample:
   last_peer_reset_reason: duplicate connection request
   last_reset: 11w5d
   last_reset_reason: holdtimer expired error
-  localhost_ip: 247.176.130.61
-  localhost_port: '53574'
+  localhost_ip: 183.124.152.216
+  localhost_port: '179'
   nei_table_version: ['8483941']
   neighbor: 171.175.146.126
   notifications_count_rcvd: '0'
   notifications_count_sent: '6'
   opens_count_rcvd: '1334218'
   opens_count_sent: '9'
-  remote_ip: 180.138.38.81
-  remote_port: '179'
+  remote_ip: 188.93.115.206
+  remote_port: '3413'
   restart_time_adv: '120'
   restart_time_rcv: '120'
   route_refresh_count_rcvd: '0'
   route_refresh_count_sent: '0'
   rr_new_cap: advertised received
   rr_old_cap: advertised received
-  sent_paths: '46640'
+  sent_paths: '53204'
   source_iface: Ethernet6/1
   stale_time: '300'
   table_version: ['8483941']
@@ -2501,7 +2500,7 @@ parsed_sample:
   updates_count_rcvd: ''
   updates_count_sent: '1321374'
   uptime: 11w5d
-- accepted_paths: '52809'
+- accepted_paths: '12901'
   addr_fam_adv: IPv4 Unicast
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
@@ -2511,7 +2510,7 @@ parsed_sample:
   capability_count_sent: '0'
   conn_dropped: '0'
   conn_estab: '1'
-  consumed_mem: '3168540'
+  consumed_mem: '774060'
   description: from bing to bar
   ext_nh_cap: advertised
   fourbyte_cap: advertised received
@@ -2522,7 +2521,7 @@ parsed_sample:
   last_peer_reset_reason: No error
   last_reset: never
   last_reset_reason: No error
-  localhost_ip: 183.124.152.216
+  localhost_ip: 31.67.203.133
   localhost_port: '179'
   nei_table_version: ['8483941']
   neighbor: 254.145.7.45
@@ -2530,15 +2529,15 @@ parsed_sample:
   notifications_count_sent: '0'
   opens_count_rcvd: '1067023'
   opens_count_sent: '1'
-  remote_ip: 188.93.115.206
-  remote_port: '3413'
+  remote_ip: 255.45.69.45
+  remote_port: '25122'
   restart_time_adv: '120'
   restart_time_rcv: '120'
   route_refresh_count_rcvd: '0'
   route_refresh_count_sent: '0'
   rr_new_cap: advertised received
   rr_old_cap: advertised received
-  sent_paths: '53204'
+  sent_paths: '52922'
   source_iface: Ethernet5/8
   stale_time: '300'
   table_version: ['8483941']
@@ -2551,17 +2550,17 @@ parsed_sample:
   updates_count_rcvd: ''
   updates_count_sent: '1506061'
   uptime: 13w2d
-- accepted_paths: '12901'
+- accepted_paths: '2159'
   addr_fam_adv: IPv4 Unicast  IPv6 Unicast  L2VPN EVPN
   addr_fam_rcv: ''
-  addr_family: [IPv4 Unicast]
+  addr_family: [IPv4 Unicast, IPv6 Unicast, L2VPN EVPN]
   asn: '65272'
   bgp_state: Established
   capability_count_rcvd: '9'
   capability_count_sent: '9'
   conn_dropped: '2'
   conn_estab: '3'
-  consumed_mem: '774060'
+  consumed_mem: '276352'
   description: ''
   ext_nh_cap: advertised received
   fourbyte_cap: advertised received
@@ -2572,26 +2571,26 @@ parsed_sample:
   last_peer_reset_reason: No error
   last_reset: 3w5d
   last_reset_reason: holdtimer expired error
-  localhost_ip: 31.67.203.133
-  localhost_port: '179'
-  nei_table_version: ['8483941']
+  localhost_ip: 187.113.144.52
+  localhost_port: '42267'
+  nei_table_version: ['227160', '4', '139600']
   neighbor: 255.136.173.131
   notifications_count_rcvd: '0'
   notifications_count_sent: '2'
   opens_count_rcvd: '21260'
   opens_count_sent: '3'
-  remote_ip: 255.45.69.45
-  remote_port: '25122'
+  remote_ip: 87.39.86.252
+  remote_port: '179'
   restart_time_adv: '120'
   restart_time_rcv: '120'
   route_refresh_count_rcvd: '0'
   route_refresh_count_sent: '3'
   rr_new_cap: advertised received
   rr_old_cap: advertised received
-  sent_paths: '52922'
+  sent_paths: '601'
   source_iface: loopback0
   stale_time: '300'
-  table_version: ['8483941']
+  table_version: ['227160', '4', '139600']
   total_bytes_count_rcvd: '3818154'
   total_bytes_count_sent: '1212655'
   total_bytes_rcvd_queue: '0'
