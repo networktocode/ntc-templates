@@ -1,0 +1,14 @@
+Value MAP (\S+)
+Value SEQ (\d+)
+Value PFS (group\d)
+Value PEER (\S+)
+Value IKE (\S+)
+Value TRANSFORM (\S+)
+Value SA (\d+)
+
+Start
+  ^crypto\smap\s${MAP}\s${SEQ}\sset\spfs\s${PFS}\s*
+  ^crypto\smap\s\S+\s\d+\sset\speer\s${PEER}\s*
+  ^crypto\smap\s\S+\s\d+\sset\s${IKE}\stransform-set\s${TRANSFORM}\s*
+  ^crypto\smap\s\S+\s\d+\sset\ssecurity-association\slifetime\sseconds\s${SA}\s* -> Record
+
