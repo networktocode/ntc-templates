@@ -48,6 +48,3 @@ access-list test line 13 extended permit object svc10 host 10.21.10.5 host 10.50
 access-list test line 14 extended permit tcp host 10.20.30.22 10.50.12.0 255.255.255.224 eq www (hitcnt=0) 0x3f0331e6 
 access-list test line 15 remark explicit-deny 
 access-list test line 16 extended deny ip any4 any (hitcnt=0) 0x60edeab9 
-access-list ACL-DEUTSCHE-BANK line 1 extended permit ip object-group SOCGEN-208.75.235.0_24 object-group DEUTSCHE-BANK (hitcnt=0) 0x3088689e 
-  access-list ACL-DEUTSCHE-BANK line 1 extended permit ip 208.75.235.0 255.255.255.0 host 156.109.108.22 (hitcnt=0) 0x4eb87bbb 
-  access-list ACL-DEUTSCHE-BANK line 1 extended permit ip 208.75.235.0 255.255.255.0 host 156.109.108.21 (hitcnt=0) 0x4db03415 
