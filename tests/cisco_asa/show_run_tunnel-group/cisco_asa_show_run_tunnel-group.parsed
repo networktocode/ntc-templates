@@ -23,14 +23,14 @@ parsed_sample:
   scep_enrol: "enable"
   sec_authentication_grp_intfc: "outside"
   sec_authentication_pri_grp: "aaa"
-  sec_authentication_sec_grp: "LOCAL", 
+  sec_authentication_sec_grp: "LOCAL"
   sec_authentication_use_pri_user: "use-primary-username"
   sec_cert_codes: "C CN"
   sec_cert_fallback: "cert"
   pri_cert_codes: "C CN"
   pri_cert_fallback: ""
   strip_grp: "strip-group"
-  strip_realm: "strip-realm", 
+  strip_realm: "strip-realm"
   ikev1_psk: "*****"
   chain: "chain"
   client_os: ["Win9X", "WinNT", "Windows", "mac", "linux", "vpn3002"]
@@ -84,7 +84,7 @@ parsed_sample:
   scep_enrol: ""
   sec_authentication_grp_intfc: ""
   sec_authentication_pri_grp: ""
-  sec_authentication_sec_grp: "", 
+  sec_authentication_sec_grp: ""
   sec_authentication_use_pri_user: ""
   sec_cert_codes: ""
   sec_cert_fallback: ""
@@ -145,7 +145,7 @@ parsed_sample:
   scep_enrol: ""
   sec_authentication_grp_intfc: ""
   sec_authentication_pri_grp: ""
-  sec_authentication_sec_grp: "", 
+  sec_authentication_sec_grp: ""
   sec_authentication_use_pri_user: ""
   sec_cert_codes: ""
   sec_cert_fallback: ""
