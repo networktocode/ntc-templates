@@ -1,0 +1,20 @@
+crypto ipsec ikev1 transform-set AES-256_MD5 esp-aes-256 esp-md5-hmac 
+crypto ipsec ikev1 transform-set AES-256_SHA esp-aes-256 esp-sha-hmac 
+crypto ipsec ikev1 transform-set 3DES_MD5 esp-3des esp-md5-hmac 
+crypto ipsec ikev1 transform-set 3DES_SHa esp-3des esp-sha-hmac 
+crypto ipsec ikev1 transform-set AES_MD5 esp-aes esp-md5-hmac 
+crypto ipsec ikev1 transform-set AES_SHA esp-aes esp-sha-hmac 
+crypto ipsec ikev1 transform-set AES-192_MD5 esp-aes-192 esp-md5-hmac 
+crypto ipsec ikev1 transform-set AES-192_SHA esp-aes-192 esp-sha-hmac 
+crypto ipsec ikev2 ipsec-proposal IKE2
+ protocol esp encryption aes-gcm-256 aes-gcm-192 aes-gcm aes-256 aes-192 aes 3des des aes-gmac-256 aes-gmac-192 aes-gmac
+ protocol esp integrity sha-512 sha-384 sha-256 sha-1 md5
+crypto ipsec ikev2 ipsec-proposal NEW_IKE2
+ protocol esp encryption aes-gcm-256 aes-gcm-192 aes-gcm aes-256 aes-192 aes 3des des aes-gmac-256 aes-gmac-192 aes-gmac
+crypto ipsec ikev2 ipsec-proposal newer_ike2
+ protocol esp integrity sha-512 sha-384 sha-256 sha-1 md5
+crypto ipsec ikev1 transform-set DES_MD5 esp-des esp-md5-hmac 
+crypto ipsec ikev1 transform-set DES_SHA esp-des esp-sha-hmac 
+crypto ipsec ikev2 ipsec-proposal final_IKE2
+ protocol esp encryption aes-gcm-256 aes-gcm-192 3des des aes-gmac-256 aes-gmac-192 aes-gmac
+ protocol esp integrity sha-512 sha-1 md5
