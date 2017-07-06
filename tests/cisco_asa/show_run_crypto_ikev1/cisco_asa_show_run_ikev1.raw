@@ -1,0 +1,72 @@
+crypto ikev1 policy 5
+ authentication pre-share
+ encryption aes-256
+ hash sha
+ group 5
+ lifetime 86400
+crypto ikev1 policy 10
+ authentication pre-share
+ encryption 3des
+ hash md5
+ group 2
+ lifetime 86400
+crypto ikev1 policy 15
+ authentication pre-share
+ encryption 3des
+ hash sha
+ group 2
+ lifetime 86400
+crypto ikev1 policy 20
+ authentication pre-share
+ encryption 3des
+ hash md5
+ group 5
+ lifetime 86400
+crypto ikev1 policy 25
+ authentication pre-share
+ encryption 3des
+ hash sha
+ group 5
+ lifetime 86400
+crypto ikev1 policy 30
+ authentication pre-share
+ encryption aes-192
+ hash md5
+ group 2
+ lifetime 86400
+crypto ikev1 policy 35
+ authentication pre-share
+ encryption aes-192
+ hash sha
+ group 2
+ lifetime 86400
+crypto ikev1 policy 40
+ authentication pre-share
+ encryption aes-192
+ hash md5
+ group 5
+ lifetime 86400
+crypto ikev1 policy 45
+ authentication pre-share
+ encryption aes-192
+ hash sha
+ group 5
+ lifetime 86400
+crypto ikev1 policy 50
+ authentication pre-share
+ encryption aes-256
+ hash md5
+ group 2
+ lifetime 86400
+crypto ikev1 policy 55
+ authentication pre-share
+ encryption aes-256
+ hash sha
+ group 2
+ lifetime 86400
+crypto ikev1 policy 60
+ authentication pre-share
+ encryption aes-256
+ hash md5
+ group 5      
+ lifetime 86400
