@@ -1,4 +1,3 @@
-ESW1#sh ip route 
 Codes: C - connected, S - static, R - RIP, M - mobile, B - BGP
        D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area 
        N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
@@ -34,9 +33,23 @@ D       10.0.5.128/26 [90/2297856] via 10.0.1.2, 00:12:03, Serial0/0
 D       10.0.5.192/27 [90/2297856] via 10.0.1.2, 00:12:03, Serial0/0
      192.168.0.0/32 is subnetted, 1 subnets
 D       192.168.0.1 [90/2297856] via 10.0.1.2, 00:12:03, Serial0/0
+     192.168.10.0/29 is subnetted, 1 subnets
+O E2    192.168.10.168 
+           [110/20] via 7.7.7.170, 12:54:35, TenGigabitEthernet7/4
+O E2    10.63.184.0/23 
+           [110/20] via 10.62.4.29, 12:55:19, TenGigabitEthernet1/15
+           [110/20] via 10.62.3.29, 12:55:19, TenGigabitEthernet1/16
+O E2    192.168.12.0/27 [110/20] via 10.64.3.13, 12:54:36, Port-channel202
+                        [110/20] via 10.64.1.9, 12:54:36, Port-channel201
+C       10.64.4.88/30 is directly connected, Serial0/0/0:0
+O E2    10.6.234.0/24 [110/20] via 10.64.4.90, 12:54:53, Serial0/0/0:0
+C       7.7.7.168/30 is directly connected, TenGigabitEthernet7/4
+C       10.64.3.12/30 is directly connected, Port-channel202
+C       10.64.1.8/30 is directly connected, Port-channel201
+C       10.62.4.28/30 is directly connected, TenGigabitEthernet1/15
+C       10.62.3.28/30 is directly connected, TenGigabitEthernet1/16
 O IA 195.0.0.0/24 [110/11] via 194.0.0.2, 00:05:45, FastEthernet0/0
 O*E2 0.0.0.0/0 [110/1] via 194.0.0.2, 00:05:35, FastEthernet0/0
 O E2 212.0.0.0/8 [110/20] via 194.0.0.2, 00:05:35, FastEthernet0/0
 C    194.0.0.0/16 is directly connected, FastEthernet0/0
-ESW1# 
 
