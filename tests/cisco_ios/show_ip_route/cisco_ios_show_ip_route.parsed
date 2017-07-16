@@ -25,7 +25,7 @@ parsed_sample:
   distance: ''
   mask: /24
   metric: ''
-  nexthopif: FastEthernet0/0
+  nexthopif: FastEthernet0/0.100
   nexthopip: ''
   protocol: S
   type: ''
@@ -35,7 +35,7 @@ parsed_sample:
   distance: '110'
   mask: /16
   metric: '20'
-  nexthopif: FastEthernet0/0
+  nexthopif: FastEthernet0/0.100
   nexthopip: 194.0.0.2
   protocol: O
   type: E2
@@ -75,7 +75,7 @@ parsed_sample:
   distance: '110'
   mask: /32
   metric: '11'
-  nexthopif: FastEthernet0/0
+  nexthopif: FastEthernet0/0.100
   nexthopip: 194.0.0.2
   protocol: O
   type: ''
@@ -85,7 +85,7 @@ parsed_sample:
   distance: '110'
   mask: /32
   metric: '11'
-  nexthopif: FastEthernet0/0
+  nexthopif: FastEthernet0/0.100
   nexthopip: 194.0.0.2
   protocol: O
   type: ''
@@ -95,7 +95,7 @@ parsed_sample:
   distance: '110'
   mask: /32
   metric: '11'
-  nexthopif: FastEthernet0/0
+  nexthopif: FastEthernet0/0.100
   nexthopip: 194.0.0.2
   protocol: O
   type: ''
@@ -285,7 +285,7 @@ parsed_sample:
   distance: '110'
   mask: /24
   metric: '11'
-  nexthopif: FastEthernet0/0
+  nexthopif: FastEthernet0/0.100
   nexthopip: 194.0.0.2
   protocol: O
   type: IA
@@ -295,7 +295,7 @@ parsed_sample:
   distance: '110'
   mask: /0
   metric: '1'
-  nexthopif: FastEthernet0/0
+  nexthopif: FastEthernet0/0.100
   nexthopip: 194.0.0.2
   protocol: O
   type: E2
@@ -305,7 +305,7 @@ parsed_sample:
   distance: '110'
   mask: /8
   metric: '20'
-  nexthopif: FastEthernet0/0
+  nexthopif: FastEthernet0/0.100
   nexthopip: 194.0.0.2
   protocol: O
   type: E2
@@ -315,7 +315,7 @@ parsed_sample:
   distance: ''
   mask: /16
   metric: ''
-  nexthopif: FastEthernet0/0
+  nexthopif: FastEthernet0/0.100
   nexthopip: ''
   protocol: C
   type: ''
