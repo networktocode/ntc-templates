@@ -12,9 +12,9 @@ Gateway of last resort is 194.0.0.2 to network 0.0.0.0
 S       1.1.1.1 [1/0] via 212.0.0.1
                 [1/0] via 192.168.0.1
      2.0.0.0/24 is subnetted, 1 subnets
-S       2.2.2.0 is directly connected, FastEthernet0/0
+S       2.2.2.0 is directly connected, FastEthernet0/0.100
      4.0.0.0/16 is subnetted, 1 subnets
-O E2    4.4.0.0 [110/20] via 194.0.0.2, 1d18h, FastEthernet0/0
+O E2    4.4.0.0 [110/20] via 194.0.0.2, 1d18h, FastEthernet0/0.100
      5.0.0.0/24 is subnetted, 1 subnets
 D EX    5.5.5.0 [170/2297856] via 10.0.1.2, 00:12:01, Serial0/0
      6.0.0.0/16 is subnetted, 1 subnets
@@ -22,9 +22,9 @@ B       6.6.0.0 [200/0] via 195.0.0.1, 00:00:04
      172.16.0.0/26 is subnetted, 1 subnets
 i L2    172.16.1.0 [115/10] via 10.0.1.2, Serial0/0
      172.20.0.0/32 is subnetted, 3 subnets
-O       172.20.1.1 [110/11] via 194.0.0.2, 00:05:45, FastEthernet0/0
-O       172.20.3.1 [110/11] via 194.0.0.2, 00:05:45, FastEthernet0/0
-O       172.20.2.1 [110/11] via 194.0.0.2, 00:05:45, FastEthernet0/0
+O       172.20.1.1 [110/11] via 194.0.0.2, 00:05:45, FastEthernet0/0.100
+O       172.20.3.1 [110/11] via 194.0.0.2, 00:05:45, FastEthernet0/0.100
+O       172.20.2.1 [110/11] via 194.0.0.2, 00:05:45, FastEthernet0/0.100
      10.0.0.0/8 is variably subnetted, 5 subnets, 3 masks
 C       10.0.1.0/24 is directly connected, Serial0/0
 D       10.0.5.0/26 [90/2297856] via 10.0.1.2, 00:12:03, Serial0/0
@@ -48,8 +48,8 @@ C       10.64.3.12/30 is directly connected, Port-channel202
 C       10.64.1.8/30 is directly connected, Port-channel201
 C       10.62.4.28/30 is directly connected, TenGigabitEthernet1/15
 C       10.62.3.28/30 is directly connected, TenGigabitEthernet1/16
-O IA 195.0.0.0/24 [110/11] via 194.0.0.2, 00:05:45, FastEthernet0/0
-O*E2 0.0.0.0/0 [110/1] via 194.0.0.2, 00:05:35, FastEthernet0/0
-O E2 212.0.0.0/8 [110/20] via 194.0.0.2, 00:05:35, FastEthernet0/0
-C    194.0.0.0/16 is directly connected, FastEthernet0/0
+O IA 195.0.0.0/24 [110/11] via 194.0.0.2, 00:05:45, FastEthernet0/0.100
+O*E2 0.0.0.0/0 [110/1] via 194.0.0.2, 00:05:35, FastEthernet0/0.100
+O E2 212.0.0.0/8 [110/20] via 194.0.0.2, 00:05:35, FastEthernet0/0.100
+C    194.0.0.0/16 is directly connected, FastEthernet0/0.100
 
