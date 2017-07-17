@@ -5,8 +5,8 @@ parsed_sample:
   distance: '1'
   mask: /32
   metric: '0'
-  nexthopif: ''
-  nexthopip: 212.0.0.1
+  nexthop_if: ''
+  nexthop_ip: 212.0.0.1
   protocol: S
   type: ''
   uptime: ''
@@ -15,8 +15,8 @@ parsed_sample:
   distance: '1'
   mask: /32
   metric: '0'
-  nexthopif: ''
-  nexthopip: 192.168.0.1
+  nexthop_if: ''
+  nexthop_ip: 192.168.0.1
   protocol: S
   type: ''
   uptime: ''
@@ -25,8 +25,8 @@ parsed_sample:
   distance: ''
   mask: /24
   metric: ''
-  nexthopif: FastEthernet0/0.100
-  nexthopip: ''
+  nexthop_if: FastEthernet0/0.100
+  nexthop_ip: ''
   protocol: S
   type: ''
   uptime: ''
@@ -35,8 +35,8 @@ parsed_sample:
   distance: '110'
   mask: /16
   metric: '20'
-  nexthopif: FastEthernet0/0.100
-  nexthopip: 194.0.0.2
+  nexthop_if: FastEthernet0/0.100
+  nexthop_ip: 194.0.0.2
   protocol: O
   type: E2
   uptime: 1d18h
@@ -45,8 +45,8 @@ parsed_sample:
   distance: '170'
   mask: /24
   metric: '2297856'
-  nexthopif: Serial0/0
-  nexthopip: 10.0.1.2
+  nexthop_if: Serial0/0
+  nexthop_ip: 10.0.1.2
   protocol: D
   type: EX
   uptime: 00:12:01
@@ -55,8 +55,8 @@ parsed_sample:
   distance: '200'
   mask: /16
   metric: '0'
-  nexthopif: ''
-  nexthopip: 195.0.0.1
+  nexthop_if: ''
+  nexthop_ip: 195.0.0.1
   protocol: B
   type: ''
   uptime: 00:00:04
@@ -65,8 +65,8 @@ parsed_sample:
   distance: '115'
   mask: /26
   metric: '10'
-  nexthopif: Serial0/0
-  nexthopip: 10.0.1.2
+  nexthop_if: Serial0/0
+  nexthop_ip: 10.0.1.2
   protocol: i
   type: L2
   uptime: ''
@@ -75,8 +75,8 @@ parsed_sample:
   distance: '110'
   mask: /32
   metric: '11'
-  nexthopif: FastEthernet0/0.100
-  nexthopip: 194.0.0.2
+  nexthop_if: FastEthernet0/0.100
+  nexthop_ip: 194.0.0.2
   protocol: O
   type: ''
   uptime: 00:05:45
@@ -85,8 +85,8 @@ parsed_sample:
   distance: '110'
   mask: /32
   metric: '11'
-  nexthopif: FastEthernet0/0.100
-  nexthopip: 194.0.0.2
+  nexthop_if: FastEthernet0/0.100
+  nexthop_ip: 194.0.0.2
   protocol: O
   type: ''
   uptime: 00:05:45
@@ -95,8 +95,8 @@ parsed_sample:
   distance: '110'
   mask: /32
   metric: '11'
-  nexthopif: FastEthernet0/0.100
-  nexthopip: 194.0.0.2
+  nexthop_if: FastEthernet0/0.100
+  nexthop_ip: 194.0.0.2
   protocol: O
   type: ''
   uptime: 00:05:45
@@ -105,8 +105,8 @@ parsed_sample:
   distance: ''
   mask: /24
   metric: ''
-  nexthopif: Serial0/0
-  nexthopip: ''
+  nexthop_if: Serial0/0
+  nexthop_ip: ''
   protocol: C
   type: ''
   uptime: ''
@@ -115,8 +115,8 @@ parsed_sample:
   distance: '90'
   mask: /26
   metric: '2297856'
-  nexthopif: Serial0/0
-  nexthopip: 10.0.1.2
+  nexthop_if: Serial0/0
+  nexthop_ip: 10.0.1.2
   protocol: D
   type: ''
   uptime: 00:12:03
@@ -125,8 +125,8 @@ parsed_sample:
   distance: '90'
   mask: /26
   metric: '2297856'
-  nexthopif: Serial0/0
-  nexthopip: 10.0.1.2
+  nexthop_if: Serial0/0
+  nexthop_ip: 10.0.1.2
   protocol: D
   type: ''
   uptime: 00:12:03
@@ -135,8 +135,8 @@ parsed_sample:
   distance: '90'
   mask: /26
   metric: '2297856'
-  nexthopif: Serial0/0
-  nexthopip: 10.0.1.2
+  nexthop_if: Serial0/0
+  nexthop_ip: 10.0.1.2
   protocol: D
   type: ''
   uptime: 00:12:03
@@ -145,8 +145,8 @@ parsed_sample:
   distance: '90'
   mask: /27
   metric: '2297856'
-  nexthopif: Serial0/0
-  nexthopip: 10.0.1.2
+  nexthop_if: Serial0/0
+  nexthop_ip: 10.0.1.2
   protocol: D
   type: ''
   uptime: 00:12:03
@@ -155,8 +155,8 @@ parsed_sample:
   distance: '90'
   mask: /32
   metric: '2297856'
-  nexthopif: Serial0/0
-  nexthopip: 10.0.1.2
+  nexthop_if: Serial0/0
+  nexthop_ip: 10.0.1.2
   protocol: D
   type: ''
   uptime: 00:12:03
@@ -165,8 +165,8 @@ parsed_sample:
   distance: '110'
   mask: /29
   metric: '20'
-  nexthopif: TenGigabitEthernet7/4
-  nexthopip: 7.7.7.170
+  nexthop_if: TenGigabitEthernet7/4
+  nexthop_ip: 7.7.7.170
   protocol: O
   type: E2
   uptime: '12:54:35'
@@ -175,8 +175,8 @@ parsed_sample:
   distance: '110'
   mask: /23
   metric: '20'
-  nexthopif: TenGigabitEthernet1/15
-  nexthopip: 10.62.4.29
+  nexthop_if: TenGigabitEthernet1/15
+  nexthop_ip: 10.62.4.29
   protocol: O
   type: E2
   uptime: '12:55:19'
@@ -185,8 +185,8 @@ parsed_sample:
   distance: '110'
   mask: /23
   metric: '20'
-  nexthopif: TenGigabitEthernet1/16
-  nexthopip: 10.62.3.29
+  nexthop_if: TenGigabitEthernet1/16
+  nexthop_ip: 10.62.3.29
   protocol: O
   type: E2
   uptime: '12:55:19'
@@ -195,8 +195,8 @@ parsed_sample:
   distance: '110'
   mask: /27
   metric: '20'
-  nexthopif: Port-channel202
-  nexthopip: 10.64.3.13
+  nexthop_if: Port-channel202
+  nexthop_ip: 10.64.3.13
   protocol: O
   type: E2
   uptime: '12:54:36'
@@ -205,8 +205,8 @@ parsed_sample:
   distance: '110'
   mask: /27
   metric: '20'
-  nexthopif: Port-channel201
-  nexthopip: 10.64.1.9
+  nexthop_if: Port-channel201
+  nexthop_ip: 10.64.1.9
   protocol: O
   type: E2
   uptime: '12:54:36'
@@ -215,8 +215,8 @@ parsed_sample:
   distance: ''
   mask: /30
   metric: ''
-  nexthopif: Serial0/0/0:0
-  nexthopip: ''
+  nexthop_if: Serial0/0/0:0
+  nexthop_ip: ''
   protocol: C
   type: ''
   uptime: ''
@@ -225,8 +225,8 @@ parsed_sample:
   distance: '110'
   mask: /24
   metric: '20'
-  nexthopif: Serial0/0/0:0
-  nexthopip: 10.64.4.90
+  nexthop_if: Serial0/0/0:0
+  nexthop_ip: 10.64.4.90
   protocol: O
   type: E2
   uptime: '12:54:53'
@@ -235,8 +235,8 @@ parsed_sample:
   distance: ''
   mask: /30
   metric: ''
-  nexthopif: TenGigabitEthernet7/4
-  nexthopip: ''
+  nexthop_if: TenGigabitEthernet7/4
+  nexthop_ip: ''
   protocol: C
   type: ''
   uptime: ''
@@ -245,8 +245,8 @@ parsed_sample:
   distance: ''
   mask: /30
   metric: ''
-  nexthopif: Port-channel202
-  nexthopip: ''
+  nexthop_if: Port-channel202
+  nexthop_ip: ''
   protocol: C
   type: ''
   uptime: ''
@@ -255,8 +255,8 @@ parsed_sample:
   distance: ''
   mask: /30
   metric: ''
-  nexthopif: Port-channel201
-  nexthopip: ''
+  nexthop_if: Port-channel201
+  nexthop_ip: ''
   protocol: C
   type: ''
   uptime: ''
@@ -265,8 +265,8 @@ parsed_sample:
   distance: ''
   mask: /30
   metric: ''
-  nexthopif: TenGigabitEthernet1/15
-  nexthopip: ''
+  nexthop_if: TenGigabitEthernet1/15
+  nexthop_ip: ''
   protocol: C
   type: ''
   uptime: ''
@@ -275,8 +275,8 @@ parsed_sample:
   distance: ''
   mask: /30
   metric: ''
-  nexthopif: TenGigabitEthernet1/16
-  nexthopip: ''
+  nexthop_if: TenGigabitEthernet1/16
+  nexthop_ip: ''
   protocol: C
   type: ''
   uptime: ''
@@ -285,8 +285,8 @@ parsed_sample:
   distance: '110'
   mask: /24
   metric: '11'
-  nexthopif: FastEthernet0/0.100
-  nexthopip: 194.0.0.2
+  nexthop_if: FastEthernet0/0.100
+  nexthop_ip: 194.0.0.2
   protocol: O
   type: IA
   uptime: 00:05:45
@@ -295,8 +295,8 @@ parsed_sample:
   distance: '110'
   mask: /0
   metric: '1'
-  nexthopif: FastEthernet0/0.100
-  nexthopip: 194.0.0.2
+  nexthop_if: FastEthernet0/0.100
+  nexthop_ip: 194.0.0.2
   protocol: O
   type: E2
   uptime: 00:05:35
@@ -305,8 +305,8 @@ parsed_sample:
   distance: '110'
   mask: /8
   metric: '20'
-  nexthopif: FastEthernet0/0.100
-  nexthopip: 194.0.0.2
+  nexthop_if: FastEthernet0/0.100
+  nexthop_ip: 194.0.0.2
   protocol: O
   type: E2
   uptime: 00:05:35
@@ -315,8 +315,8 @@ parsed_sample:
   distance: ''
   mask: /16
   metric: ''
-  nexthopif: FastEthernet0/0.100
-  nexthopip: ''
+  nexthop_if: FastEthernet0/0.100
+  nexthop_ip: ''
   protocol: C
   type: ''
   uptime: ''
