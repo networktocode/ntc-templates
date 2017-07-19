@@ -3,7 +3,7 @@ parsed_sample:
 
 - network: 1.1.1.1
   distance: '1'
-  mask: /32
+  mask: '32'
   metric: '0'
   nexthop_if: ''
   nexthop_ip: 212.0.0.1
@@ -13,7 +13,7 @@ parsed_sample:
 
 - network: 1.1.1.1
   distance: '1'
-  mask: /32
+  mask: '32'
   metric: '0'
   nexthop_if: ''
   nexthop_ip: 192.168.0.1
@@ -23,7 +23,7 @@ parsed_sample:
 
 - network: 2.2.2.0
   distance: ''
-  mask: /24
+  mask: '24'
   metric: ''
   nexthop_if: FastEthernet0/0.100
   nexthop_ip: ''
@@ -33,7 +33,7 @@ parsed_sample:
 
 - network: 4.4.0.0
   distance: '110'
-  mask: /16
+  mask: '16'
   metric: '20'
   nexthop_if: FastEthernet0/0.100
   nexthop_ip: 194.0.0.2
@@ -43,7 +43,7 @@ parsed_sample:
 
 - network: 5.5.5.0
   distance: '170'
-  mask: /24
+  mask: '24'
   metric: '2297856'
   nexthop_if: Serial0/0
   nexthop_ip: 10.0.1.2
@@ -53,7 +53,7 @@ parsed_sample:
 
 - network: 6.6.0.0
   distance: '200'
-  mask: /16
+  mask: '16'
   metric: '0'
   nexthop_if: ''
   nexthop_ip: 195.0.0.1
@@ -63,7 +63,7 @@ parsed_sample:
 
 - network: 172.16.1.0
   distance: '115'
-  mask: /26
+  mask: '26'
   metric: '10'
   nexthop_if: Serial0/0
   nexthop_ip: 10.0.1.2
@@ -73,7 +73,7 @@ parsed_sample:
 
 - network: 172.20.1.1
   distance: '110'
-  mask: /32
+  mask: '32'
   metric: '11'
   nexthop_if: FastEthernet0/0.100
   nexthop_ip: 194.0.0.2
@@ -83,7 +83,7 @@ parsed_sample:
 
 - network: 172.20.3.1
   distance: '110'
-  mask: /32
+  mask: '32'
   metric: '11'
   nexthop_if: FastEthernet0/0.100
   nexthop_ip: 194.0.0.2
@@ -93,7 +93,7 @@ parsed_sample:
 
 - network: 172.20.2.1
   distance: '110'
-  mask: /32
+  mask: '32'
   metric: '11'
   nexthop_if: FastEthernet0/0.100
   nexthop_ip: 194.0.0.2
@@ -103,7 +103,7 @@ parsed_sample:
 
 - network: 10.0.1.0
   distance: ''
-  mask: /24
+  mask: '24'
   metric: ''
   nexthop_if: Serial0/0
   nexthop_ip: ''
@@ -113,7 +113,7 @@ parsed_sample:
 
 - network: 10.0.5.0
   distance: '90'
-  mask: /26
+  mask: '26'
   metric: '2297856'
   nexthop_if: Serial0/0
   nexthop_ip: 10.0.1.2
@@ -123,7 +123,7 @@ parsed_sample:
 
 - network: 10.0.5.64
   distance: '90'
-  mask: /26
+  mask: '26'
   metric: '2297856'
   nexthop_if: Serial0/0
   nexthop_ip: 10.0.1.2
@@ -133,7 +133,7 @@ parsed_sample:
 
 - network: 10.0.5.128
   distance: '90'
-  mask: /26
+  mask: '26'
   metric: '2297856'
   nexthop_if: Serial0/0
   nexthop_ip: 10.0.1.2
@@ -143,7 +143,7 @@ parsed_sample:
 
 - network: 10.0.5.192
   distance: '90'
-  mask: /27
+  mask: '27'
   metric: '2297856'
   nexthop_if: Serial0/0
   nexthop_ip: 10.0.1.2
@@ -153,7 +153,7 @@ parsed_sample:
 
 - network: 192.168.0.1
   distance: '90'
-  mask: /32
+  mask: '32'
   metric: '2297856'
   nexthop_if: Serial0/0
   nexthop_ip: 10.0.1.2
@@ -163,7 +163,7 @@ parsed_sample:
 
 - network: 192.168.10.168
   distance: '110'
-  mask: /29
+  mask: '29'
   metric: '20'
   nexthop_if: TenGigabitEthernet7/4
   nexthop_ip: 7.7.7.170
@@ -173,7 +173,7 @@ parsed_sample:
 
 - network: 10.63.184.0
   distance: '110'
-  mask: /23
+  mask: '23'
   metric: '20'
   nexthop_if: TenGigabitEthernet1/15
   nexthop_ip: 10.62.4.29
@@ -183,7 +183,7 @@ parsed_sample:
 
 - network: 10.63.184.0
   distance: '110'
-  mask: /23
+  mask: '23'
   metric: '20'
   nexthop_if: TenGigabitEthernet1/16
   nexthop_ip: 10.62.3.29
@@ -193,7 +193,7 @@ parsed_sample:
 
 - network: 192.168.12.0
   distance: '110'
-  mask: /27
+  mask: '27'
   metric: '20'
   nexthop_if: Port-channel202
   nexthop_ip: 10.64.3.13
@@ -203,7 +203,7 @@ parsed_sample:
 
 - network: 192.168.12.0
   distance: '110'
-  mask: /27
+  mask: '27'
   metric: '20'
   nexthop_if: Port-channel201
   nexthop_ip: 10.64.1.9
@@ -213,7 +213,7 @@ parsed_sample:
 
 - network: 10.64.4.88
   distance: ''
-  mask: /30
+  mask: '30'
   metric: ''
   nexthop_if: Serial0/0/0:0
   nexthop_ip: ''
@@ -223,7 +223,7 @@ parsed_sample:
 
 - network: 10.6.234.0
   distance: '110'
-  mask: /24
+  mask: '24'
   metric: '20'
   nexthop_if: Serial0/0/0:0
   nexthop_ip: 10.64.4.90
@@ -233,7 +233,7 @@ parsed_sample:
 
 - network: 7.7.7.168
   distance: ''
-  mask: /30
+  mask: '30'
   metric: ''
   nexthop_if: TenGigabitEthernet7/4
   nexthop_ip: ''
@@ -243,7 +243,7 @@ parsed_sample:
 
 - network: 10.64.3.12
   distance: ''
-  mask: /30
+  mask: '30'
   metric: ''
   nexthop_if: Port-channel202
   nexthop_ip: ''
@@ -253,7 +253,7 @@ parsed_sample:
 
 - network: 10.64.1.8
   distance: ''
-  mask: /30
+  mask: '30'
   metric: ''
   nexthop_if: Port-channel201
   nexthop_ip: ''
@@ -263,7 +263,7 @@ parsed_sample:
 
 - network: 10.62.4.28
   distance: ''
-  mask: /30
+  mask: '30'
   metric: ''
   nexthop_if: TenGigabitEthernet1/15
   nexthop_ip: ''
@@ -273,7 +273,7 @@ parsed_sample:
 
 - network: 10.62.3.28
   distance: ''
-  mask: /30
+  mask: '30'
   metric: ''
   nexthop_if: TenGigabitEthernet1/16
   nexthop_ip: ''
@@ -283,7 +283,7 @@ parsed_sample:
 
 - network: 195.0.0.0
   distance: '110'
-  mask: /24
+  mask: '24'
   metric: '11'
   nexthop_if: FastEthernet0/0.100
   nexthop_ip: 194.0.0.2
@@ -293,7 +293,7 @@ parsed_sample:
 
 - network: 0.0.0.0
   distance: '110'
-  mask: /0
+  mask: '0'
   metric: '1'
   nexthop_if: FastEthernet0/0.100
   nexthop_ip: 194.0.0.2
@@ -303,7 +303,7 @@ parsed_sample:
 
 - network: 212.0.0.0
   distance: '110'
-  mask: /8
+  mask: '8'
   metric: '20'
   nexthop_if: FastEthernet0/0.100
   nexthop_ip: 194.0.0.2
@@ -313,7 +313,7 @@ parsed_sample:
 
 - network: 194.0.0.0
   distance: ''
-  mask: /16
+  mask: '16'
   metric: ''
   nexthop_if: FastEthernet0/0.100
   nexthop_ip: ''
