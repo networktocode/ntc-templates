@@ -27,6 +27,12 @@ Routes
   # Match regular route, all one line, where mask is learned from "is subnetted" line
   ^${PROTOCOL}(\s|\*)${TYPE}\s+${NETWORK}\s\[${DISTANCE}\/${METRIC}\]\svia\s${NEXTHOP_IP}(,\s${UPTIME})?(,\s${NEXTHOP_IF})? -> Record
   #
+  # Match route with no via statement (Null via protocol)
+  ^${PROTOCOL}(\s|\*)${TYPE}\s+${NETWORK}\/${MASK}\s\[${DISTANCE}/${METRIC}\],\s${UPTIME},\s${NEXTHOP_IF} -> Record
+  #
+  # Match "is a summary" routes (often Null0)
+  ^${PROTOCOL}(\s|\*)${TYPE}\s+${NETWORK}\/${MASK}\sis\sa\ssummary,\s${UPTIME},\s${NEXTHOP_IF} -> Record
+  #
   # Match regular routes where the network/mask is on the line above the rest of the route
   ^${PROTOCOL}(\s|\*)${TYPE}\s+${NETWORK}\/${MASK} -> Next
   #

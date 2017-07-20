@@ -151,6 +151,36 @@ parsed_sample:
   type: ''
   uptime: 00:12:03
 
+- network: 11.1.0.0
+  distance: '200'
+  mask: '17'
+  metric: '0'
+  nexthop_if: Null0
+  nexthop_ip: ''
+  protocol: B
+  type: ''
+  uptime: 2w0d
+
+- network: 12.0.0.0
+  distance: ''
+  mask: '16'
+  metric: ''
+  nexthop_if: Null0
+  nexthop_ip: ''
+  protocol: S
+  type: ''
+  uptime: ''
+
+- network: 13.14.128.0
+  distance: ''
+  mask: '17'
+  metric: ''
+  nexthop_if: Null0
+  nexthop_ip: ''
+  protocol: O
+  type: ''
+  uptime: 7w0d
+
 - network: 192.168.0.1
   distance: '90'
   mask: '32'
