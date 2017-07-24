@@ -120,3 +120,10 @@ parsed_sample:
     status: err-disabled
     type: 10/100BaseTX
     vlan: '16'
+-   duplex: a-full
+    name: ethchl
+    port: Po1
+    speed: a-1000
+    status: connected
+    type: ''
+    vlan: trunk
