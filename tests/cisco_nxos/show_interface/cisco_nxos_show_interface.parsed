@@ -2,7 +2,7 @@
 parsed_sample:
 
 -   address: 5087.89a1.d8d5
-    admin_state: ''
+    admin_state: down
     bandwidth: 1000000 Kbit
     bia: ''
     delay: 10 usec
@@ -12,7 +12,7 @@ parsed_sample:
     hardware_type: EtherSVI
     interface: Vlan20
     ip_address: 10.1.20.3/24
-    link_status: down
+    link_status: down (VLAN/BD is down)
     mtu: '1500'
     speed: ''
 -   address: 5087.89a1.d8ce
