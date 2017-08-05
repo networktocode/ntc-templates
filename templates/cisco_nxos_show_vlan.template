@@ -1,9 +1,10 @@
-Value Required VLAN_ID (\d+)
+Value VLAN_ID (\d+)
 Value NAME (\S+)
 Value STATUS (\S+)
 Value List PORTS (.+?)
 
 Start
+  ^\d{1,4}\s+enet.* -> Next.NoRecord
   ^\d+\s+ -> Continue.Record
   ^${VLAN_ID}\s+${NAME}\s+${STATUS}\s+${PORTS}(?:,|\s|$$) -> Continue
   ^${VLAN_ID}\s+${NAME}\s+${STATUS}\s+(.+?),\s${PORTS}(?:,|\s|$$) -> Continue
