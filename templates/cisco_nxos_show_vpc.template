@@ -1,6 +1,24 @@
-Value ID (\d+)
-Value PORT (\S+)
-Value STATUS (\S+)
+Value VPCID (\d+)
+Value VPCPLUSSWITCHID (\d+)
+Value PEERSTATUS ((\w|\s)+\w)
+Value KEEPALIVE ([\w|\s]+\w)
+Value VPCFABRIC ([\w|\s]+\w)
+Value CONF_CONSISTENCY (\S+)
+Value VLAN_CONSISTENCY (\S+)
+Value TYPE2_CONSISTENCY (\S+)
+Value ROLE (\S+)
+Value GATEWAY (\S+)
+Value AUTORECOVERY (\S+)
 
 Start
-  ^${ID}\s+${PORT}\s+${STATUS} -> Record
+  ^vPC\sdomain\sid\s+:\s${VPCID} -> Continue
+  ^vPC\+\sswitch\sid\s+:\s${VPCPLUSSWITCHID} -> Continue
+  ^Peer\sstatus\s+:\s${PEERSTATUS} -> Continue
+  ^vPC\skeep\-alive\sstatus\s+:\s${KEEPALIVE} -> Continue
+  ^vPC\sfabricpath\sstatus\s+:\s${VPCFABRIC} -> Continue
+  ^Configuration\sconsistency\sstatus\s+:\s${CONF_CONSISTENCY} -> Continue
+  ^Per\-vlan\sconsistency\sstatus\s+:\s${VLAN_CONSISTENCY} -> Continue
+  ^Type\-2\sconsistency\sstatus\s+:\s${TYPE2_CONSISTENCY} -> Continue
+  ^vPC\srole\s+:\s${ROLE} -> Continue
+  ^Peer\sGateway\s+:\s${GATEWAY} -> Continue
+  ^Auto\-recovery\sstatus\s+:\s${AUTORECOVERY} -> Continue
