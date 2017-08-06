@@ -1,8 +1,14 @@
 Value VPCID (\d+)
 Value VPCPLUSSWITCHID (\d+)
+<<<<<<< HEAD
 Value PEERSTATUS ((\w|\s)+\w)
 Value KEEPALIVE ([\w|\s]+\w)
 Value VPCFABRIC ([\w|\s]+\w)
+=======
+Value PEERSTATUS ((\w|\s)+)
+Value KEEPALIVE ((\w|\s)+)
+Value VPCFABRIC ((\w|\s)+)
+>>>>>>> 8800ef39e2a254268bb190baee44505ab0043d94
 Value CONF_CONSISTENCY (\S+)
 Value VLAN_CONSISTENCY (\S+)
 Value TYPE2_CONSISTENCY (\S+)
