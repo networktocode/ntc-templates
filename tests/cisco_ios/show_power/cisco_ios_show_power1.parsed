@@ -1,0 +1,20 @@
+---
+parsed_sample:
+
+- "Power                                             Fan      Inline\nSupply  Model\
+    \ No          Type       Status       Sensor   Status\n------  ----------------\
+    \  ---------  -----------  -------  -------\nPS1     PWR-C45-4200ACV   AC 4200W\
+    \   good         good     good   \nPS1-1                         220V   good \
+    \        \nPS1-2                         220V   good         \nPS2     PWR-C45-4200ACV\
+    \   AC 4200W   err-disable  good     good   \nPS2-1                          \
+    \      off          \nPS2-2                         220V   good         \n\n***\
+    \ Power Supplies of different type have been detected***\n\nPower supplies needed\
+    \ by system    : 1\nPower supplies currently available : 1\n\nPower Summary  \
+    \                    Maximum\n (in Watts)              Used     Available\n----------------------\
+    \   ----     ---------\nSystem Power (12V)        971        1360\nInline Power\
+    \ (-50V)       618        3189\nBackplane Power (3.3V)     40          40\n----------------------\
+    \   ----     ---------\nTotal                    1629 (not to exceed Total Maximum\
+    \ Available = 4200)\n\nPower Measurement    Inline Power (-50V)\n(in Watts)  \
+    \           (+/- 50Watts)\n------------------   -------------------\nPS1     \
+    \                    250\nPS2                         100\n------------------\
+    \   -------------------\nTotal                       350\n"

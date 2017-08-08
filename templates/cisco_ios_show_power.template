@@ -1,0 +1,45 @@
+####
+# For 4500 switches
+###
+Value PS (PS1|PS2|PS1-1|PS1-2|PS2-1|PS2-2)
+Value MODEL (\S+)
+Value TYPE (.+?)
+Value STATUS (off|good|err-disable)
+Value FAN_SENSOR (\w+)
+Value INLINE_STATUS (good|n.a.)
+Value WATTS (\w+)
+Value PS_NEEDED (\d)
+Value PS_AVAIL (\d)
+Value SYS_USED_WATTS (\d+)
+Value SYS_AVAIL_WATTS (\d+)
+Value INLINE_USED_WATTS (\d+)
+Value INLINE_AVAIL_WATTS (\d+)
+Value BACKPLANE_USED_WATTS (\d+)
+Value BACKPLANE_AVAIL_WATTS (\d+)
+Value TOTAL_USED_WATTS (\d+)
+Value TOTAL_AVAIL_WATTS (\d+)
+Value TOTAL_INLINE_USED_WATTS (\d+)
+
+Start
+  ^Supply.*Model -> POWER
+
+POWER
+  ^${PS}\s+${MODEL}\s+${TYPE}\s+${STATUS}\s+${FAN_SENSOR}\s+${INLINE_STATUS} -> Record
+  ^${PS}\s{25,32}${TYPE}\s+${STATUS} -> Record
+  ^$$ -> REDUNDANCY
+
+REDUNDANCY
+  ^Power\ssupplies\sneeded\sby\ssystem\s+:\s${PS_NEEDED} -> Record
+  ^Power\ssupplies\scurrently\savailable\s+:\s${PS_AVAIL} -> Record
+  ^Power Summary.*Maximum -> SUMMARY
+
+SUMMARY
+  ^System Power \(12V\)\s+${SYS_USED_WATTS}\s+${SYS_AVAIL_WATTS} -> Record
+  ^Inline Power \(-50V\)\s+${INLINE_USED_WATTS}\s+${INLINE_AVAIL_WATTS} -> Record
+  ^Backplane Power \(3.3V\)\s+${BACKPLANE_USED_WATTS}\s+${BACKPLANE_AVAIL_WATTS} -> Record
+  ^Total\s+${TOTAL_USED_WATTS}.*Available\s=\s${TOTAL_AVAIL_WATTS} -> Record 
+  ^\(in Watts\).*Watts\) -> INLINE_SUMMARY
+
+INLINE_SUMMARY
+  ^${PS}\s+${INLINE_USED_WATTS} -> Record
+  ^Total\s+${TOTAL_INLINE_USED_WATTS} -> Record

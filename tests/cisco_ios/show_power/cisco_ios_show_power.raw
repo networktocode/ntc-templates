@@ -1,0 +1,29 @@
+Power                                             Fan      Inline
+Supply  Model No          Type       Status       Sensor   Status
+------  ----------------  ---------  -----------  -------  -------
+PS1     PWR-C45-4200ACV   AC 4200W   good         good     good   
+PS1-1                         220V   good         
+PS1-2                         220V   good         
+PS2     PWR-C45-4200ACV   AC 4200W   good         good     good   
+PS2-1                         220V   good         
+PS2-2                         220V   good         
+
+Power supplies needed by system    : 1
+Power supplies currently available : 2
+
+Power Summary                      Maximum
+ (in Watts)              Used     Available
+----------------------   ----     ---------
+System Power (12V)       1168        1360
+Inline Power (-50V)       753        2992
+Backplane Power (3.3V)     40          40
+----------------------   ----     ---------
+Total                    1961 (not to exceed Total Maximum Available = 4200)
+
+Power Measurement    Inline Power (-50V)
+(in Watts)             (+/- 50Watts)
+------------------   -------------------
+PS1                         150
+PS2                         150
+------------------   -------------------
+Total                       300
