@@ -1,0 +1,6 @@
+Value Filldown PRODUCT (\S+)
+Value Required HOTFIX (HOTFIX\S+)
+
+Start
+  ^\[${PRODUCT}\]
+  ^\s+${HOTFIX} -> Record
