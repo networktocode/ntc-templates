@@ -1,0 +1,886 @@
+PHY data for interface: FortyGigE0/2/0/0
+
+QSFP EEPROM port: 0
+        Xcvr Type: QSFP+
+        Ext Type: 1.5W, CLEI,
+        Connector Type: MPO
+        Ethernet Compliance Codes: 40GBASE-SR4,
+        Encoding: 64B66B,
+        BR, nominal: 10300 Mbps
+        Length SMF: 0KM, OM3: 100M, OM2: 30M, OM1: 0M, Copper: 0M
+        Device Tech: 850 nm VCSEL, No wavelength control, Uncooled transmitter device, Pin detector, Transmitter not tunable,
+        Vendor Name: CISCO
+        Vendor OUI: 00.90.65
+        Vendor Part Number: FTL410QE2C-C1     (rev.: B )
+        Wavelength: 850.030 nm
+        Wavelength Tolerance: 10.030 nm
+        Vendor Serial Number: FIS182100SW
+        Date Code (yy/mm/dd): 14/05/22  lot code:
+        Diagnostic Monitoring Type: Average Power,
+        Enhanced Options: No Rate Selection, No Application Select,
+        Extended Module Codes:
+        Options: RX op amp prog, Rx Op Dis cap, Page 02, Page 01, Tx_Disable, Tx_Fault, OMA,
+        L-Tx/Rx LOS:
+        L-Tx Fault:
+        Module DDM: Voltage, Temperature,
+MSA Data (Lower Memory)
+0x0000: 0d 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x0010: 00 00 00 00 00 00 1a f1 : 00 00 80 b9 00 00 00 00
+0x0020: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x0030: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x0040: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x0050: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x0060: 00 00 00 00 00 00 00 f0 : f0 00 18 00 00 00 00 00
+0x0070: 00 00 00 00 00 00 00 ff : ff ff ff ff ff ff ff 03
+
+
+MSA Data (Upper Memory Page 00)
+0x0080: 0d 10 0c 04 00 00 00 00 : 00 00 00 05 67 00 00 32
+0x0090: 1e 00 00 00 43 49 53 43 : 4f 20 20 20 20 20 20 20
+0x00a0: 20 20 20 20 00 00 90 65 : 46 54 4c 34 31 30 51 45
+0x00b0: 32 43 2d 43 31 20 20 20 : 42 20 42 68 07 d0 46 5f
+0x00c0: 00 01 04 d8 46 49 53 31 : 38 32 31 30 30 53 57 20
+0x00d0: 20 20 20 20 31 34 30 35 : 32 32 20 20 0a 00 00 ad
+0x00e0: 02 00 02 18 fc 00 42 ea : a8 b4 d7 83 d5 06 4a 8c
+0x00f0: 1f d4 8a 00 00 00 00 00 : 00 00 00 00 9c aa 4c 0a
+
+        CLEI Code: COUIA9JCAB
+        Part Number: 10-2672-02 (ver.: V02 )
+        Product Id: QSFP-40G-SR4
+MSA Data (Upper Memory Page 02)
+0x0100: 43 4f 55 49 41 39 4a 43 : 41 42 31 30 2d 32 36 37
+0x0110: 32 2d 30 32 56 30 32 20 : 01 00 00 00 00 00 00 00
+0x0120: 00 81 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x0130: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 aa aa
+0x0140: 51 53 46 50 2d 34 30 47 : 2d 53 52 34 20 20 20 20
+0x0150: 20 20 20 20 00 00 00 00 : 00 00 00 00 00 00 00 18
+0x0160: 36 34 31 33 34 34 31 32 : 00 99 00 00 00 00 00 00
+0x0170: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+
+        Module
+        Thresholds:                   Alarm High          Warning High          Warning Low          Alarm Low
+              Temperature:            +75.000 C             +70.000 C              +0.000 C              -5.000 C
+                  Voltage:           3.630 Volt            3.465 Volt            3.100 Volt            2.970 Volt
+
+        Temperature: +26.941 C
+        Voltage: 3.295 Volt
+
+        Lanes
+        Thresholds:                   Alarm High          Warning High          Warning Low          Alarm Low
+                     Bias:          0.000 mAmps           0.000 mAmps           0.000 mAmps           0.000 mAmps
+           Transmit Power:  0.000 mW (<-40.00 dBm)   0.000 mW (<-40.00 dBm)   0.000 mW (<-40.00 dBm)   0.000 mW (<-40.00 dBm)
+            Receive Power:  0.000 mW (<-40.00 dBm)   0.000 mW (<-40.00 dBm)   0.000 mW (<-40.00 dBm)   0.000 mW (<-40.00 dBm)
+
+                 Lane            Temp            Bias                   Tx Power                   Rx Power
+                    0             N/A     0.000 mAmps     0.000 mW (<-40.00 dBm)     0.000 mW (<-40.00 dBm)
+                    1             N/A     0.000 mAmps     0.000 mW (<-40.00 dBm)     0.000 mW (<-40.00 dBm)
+                    2             N/A     0.000 mAmps     0.000 mW (<-40.00 dBm)     0.000 mW (<-40.00 dBm)
+                    3             N/A     0.000 mAmps     0.000 mW (<-40.00 dBm)     0.000 mW (<-40.00 dBm)
+MSA Data (Upper Memory Page 03)
+0x0180: 4b 00 fb 00 46 00 00 00 : 00 00 00 00 00 00 00 00
+0x0190: 8d cc 74 04 87 5a 79 18 : 00 00 00 00 00 00 00 00
+0x01a0: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x01b0: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x01c0: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x01d0: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x01e0: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 33 33
+0x01f0: 00 00 ff ff ff ff ff ff : 00 00 00 00 00 00 00 00
+
+PHY data for interface: FortyGigE0/2/0/1
+
+QSFP EEPROM port: 1
+        Xcvr Type: QSFP+
+        Ext Type: 1.5W, CLEI,
+        Connector Type: MPO
+        Ethernet Compliance Codes: 40GBASE-SR4,
+        Encoding: 64B66B,
+        BR, nominal: 10300 Mbps
+        Length SMF: 0KM, OM3: 100M, OM2: 30M, OM1: 0M, Copper: 0M
+        Device Tech: 850 nm VCSEL, No wavelength control, Uncooled transmitter device, Pin detector, Transmitter not tunable,
+        Vendor Name: CISCO
+        Vendor OUI: 00.90.65
+        Vendor Part Number: FTL410QE2C-C1     (rev.: B )
+        Wavelength: 850.030 nm
+        Wavelength Tolerance: 10.030 nm
+        Vendor Serial Number: FIS182100TM
+        Date Code (yy/mm/dd): 14/05/22  lot code:
+        Diagnostic Monitoring Type: Average Power,
+        Enhanced Options: No Rate Selection, No Application Select,
+        Extended Module Codes:
+        Options: RX op amp prog, Rx Op Dis cap, Page 02, Page 01, Tx_Disable, Tx_Fault, OMA,
+        L-Tx/Rx LOS:
+        L-Tx Fault:
+        Module DDM: Voltage, Temperature,
+MSA Data (Lower Memory)
+0x0000: 0d 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x0010: 00 00 00 00 00 00 17 ee : 00 00 80 8b 00 00 00 00
+0x0020: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x0030: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x0040: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x0050: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x0060: 00 00 00 00 00 00 00 f0 : f0 00 18 00 00 00 00 00
+0x0070: 00 00 00 00 00 00 00 ff : ff ff ff ff ff ff ff 03
+
+
+MSA Data (Upper Memory Page 00)
+0x0080: 0d 10 0c 04 00 00 00 00 : 00 00 00 05 67 00 00 32
+0x0090: 1e 00 00 00 43 49 53 43 : 4f 20 20 20 20 20 20 20
+0x00a0: 20 20 20 20 00 00 90 65 : 46 54 4c 34 31 30 51 45
+0x00b0: 32 43 2d 43 31 20 20 20 : 42 20 42 68 07 d0 46 5f
+0x00c0: 00 01 04 d8 46 49 53 31 : 38 32 31 30 30 54 4d 20
+0x00d0: 20 20 20 20 31 34 30 35 : 32 32 20 20 0a 00 00 a4
+0x00e0: 02 00 02 c3 18 74 7b eb : 17 37 8f 22 97 71 28 75
+0x00f0: 69 8a d1 00 00 00 00 00 : 00 00 00 00 ab d2 42 97
+
+        CLEI Code: COUIA9JCAB
+        Part Number: 10-2672-02 (ver.: V02 )
+        Product Id: QSFP-40G-SR4
+MSA Data (Upper Memory Page 02)
+0x0100: 43 4f 55 49 41 39 4a 43 : 41 42 31 30 2d 32 36 37
+0x0110: 32 2d 30 32 56 30 32 20 : 01 00 00 00 00 00 00 00
+0x0120: 00 81 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x0130: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 aa aa
+0x0140: 51 53 46 50 2d 34 30 47 : 2d 53 52 34 20 20 20 20
+0x0150: 20 20 20 20 00 00 00 00 : 00 00 00 00 00 00 00 18
+0x0160: 36 34 31 33 34 34 31 32 : 00 99 00 00 00 00 00 00
+0x0170: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+
+        Module
+        Thresholds:                   Alarm High          Warning High          Warning Low          Alarm Low
+              Temperature:            +75.000 C             +70.000 C              +0.000 C              -5.000 C
+                  Voltage:           3.630 Volt            3.465 Volt            3.100 Volt            2.970 Volt
+
+        Temperature: +23.929 C
+        Voltage: 3.291 Volt
+
+        Lanes
+        Thresholds:                   Alarm High          Warning High          Warning Low          Alarm Low
+                     Bias:          0.000 mAmps           0.000 mAmps           0.000 mAmps           0.000 mAmps
+           Transmit Power:  0.000 mW (<-40.00 dBm)   0.000 mW (<-40.00 dBm)   0.000 mW (<-40.00 dBm)   0.000 mW (<-40.00 dBm)
+            Receive Power:  0.000 mW (<-40.00 dBm)   0.000 mW (<-40.00 dBm)   0.000 mW (<-40.00 dBm)   0.000 mW (<-40.00 dBm)
+
+                 Lane            Temp            Bias                   Tx Power                   Rx Power
+                    0             N/A     0.000 mAmps     0.000 mW (<-40.00 dBm)     0.000 mW (<-40.00 dBm)
+                    1             N/A     0.000 mAmps     0.000 mW (<-40.00 dBm)     0.000 mW (<-40.00 dBm)
+                    2             N/A     0.000 mAmps     0.000 mW (<-40.00 dBm)     0.000 mW (<-40.00 dBm)
+                    3             N/A     0.000 mAmps     0.000 mW (<-40.00 dBm)     0.000 mW (<-40.00 dBm)
+MSA Data (Upper Memory Page 03)
+0x0180: 4b 00 fb 00 46 00 00 00 : 00 00 00 00 00 00 00 00
+0x0190: 8d cc 74 04 87 5a 79 18 : 00 00 00 00 00 00 00 00
+0x01a0: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x01b0: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x01c0: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x01d0: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x01e0: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 33 33
+0x01f0: 00 00 ff ff ff ff ff ff : 00 00 00 00 00 00 00 00
+
+PHY data for interface: FortyGigE0/2/1/0
+
+QSFP EEPROM port: 0
+        Xcvr Type: QSFP+
+        Ext Type: 1.5W, CLEI,
+        Connector Type: MPO
+        Ethernet Compliance Codes: 40GBASE-SR4,
+        Encoding: 64B66B,
+        BR, nominal: 10300 Mbps
+        Length SMF: 0KM, OM3: 100M, OM2: 30M, OM1: 0M, Copper: 0M
+        Device Tech: 850 nm VCSEL, No wavelength control, Uncooled transmitter device, Pin detector, Transmitter not tunable,
+        Vendor Name: CISCO
+        Vendor OUI: 00.90.65
+        Vendor Part Number: FTL410QE2C-C1     (rev.: B )
+        Wavelength: 850.030 nm
+        Wavelength Tolerance: 10.030 nm
+        Vendor Serial Number: FIS182100RS
+        Date Code (yy/mm/dd): 14/05/22  lot code:
+        Diagnostic Monitoring Type: Average Power,
+        Enhanced Options: No Rate Selection, No Application Select,
+        Extended Module Codes:
+        Options: RX op amp prog, Rx Op Dis cap, Page 02, Page 01, Tx_Disable, Tx_Fault, OMA,
+        L-Tx/Rx LOS:
+        L-Tx Fault:
+        Module DDM: Voltage, Temperature,
+MSA Data (Lower Memory)
+0x0000: 0d 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x0010: 00 00 00 00 00 00 15 9e : 00 00 80 9a 00 00 00 00
+0x0020: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x0030: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x0040: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x0050: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x0060: 00 00 00 00 00 00 00 f0 : f0 00 18 00 00 00 00 00
+0x0070: 00 00 00 00 00 00 00 ff : ff ff ff ff ff ff ff 03
+
+
+MSA Data (Upper Memory Page 00)
+0x0080: 0d 10 0c 04 00 00 00 00 : 00 00 00 05 67 00 00 32
+0x0090: 1e 00 00 00 43 49 53 43 : 4f 20 20 20 20 20 20 20
+0x00a0: 20 20 20 20 00 00 90 65 : 46 54 4c 34 31 30 51 45
+0x00b0: 32 43 2d 43 31 20 20 20 : 42 20 42 68 07 d0 46 5f
+0x00c0: 00 01 04 d8 46 49 53 31 : 38 32 31 30 30 52 53 20
+0x00d0: 20 20 20 20 31 34 30 35 : 32 32 20 20 0a 00 00 a8
+0x00e0: 02 00 02 11 82 df 8e 0b : d7 32 5c c8 f1 64 b4 00
+0x00f0: ec 78 62 00 00 00 00 00 : 00 00 00 00 47 78 f0 c3
+
+        CLEI Code: COUIA9JCAB
+        Part Number: 10-2672-02 (ver.: V02 )
+        Product Id: QSFP-40G-SR4
+MSA Data (Upper Memory Page 02)
+0x0100: 43 4f 55 49 41 39 4a 43 : 41 42 31 30 2d 32 36 37
+0x0110: 32 2d 30 32 56 30 32 20 : 01 00 00 00 00 00 00 00
+0x0120: 00 81 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x0130: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 aa aa
+0x0140: 51 53 46 50 2d 34 30 47 : 2d 53 52 34 20 20 20 20
+0x0150: 20 20 20 20 00 00 00 00 : 00 00 00 00 00 00 00 18
+0x0160: 36 34 31 33 34 34 31 32 : 00 99 00 00 00 00 00 00
+0x0170: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+
+        Module
+        Thresholds:                   Alarm High          Warning High          Warning Low          Alarm Low
+              Temperature:            +75.000 C             +70.000 C              +0.000 C              -5.000 C
+                  Voltage:           3.630 Volt            3.465 Volt            3.100 Volt            2.970 Volt
+
+        Temperature: +21.617 C
+        Voltage: 3.292 Volt
+
+        Lanes
+        Thresholds:                   Alarm High          Warning High          Warning Low          Alarm Low
+                     Bias:          0.000 mAmps           0.000 mAmps           0.000 mAmps           0.000 mAmps
+           Transmit Power:  0.000 mW (<-40.00 dBm)   0.000 mW (<-40.00 dBm)   0.000 mW (<-40.00 dBm)   0.000 mW (<-40.00 dBm)
+            Receive Power:  0.000 mW (<-40.00 dBm)   0.000 mW (<-40.00 dBm)   0.000 mW (<-40.00 dBm)   0.000 mW (<-40.00 dBm)
+
+                 Lane            Temp            Bias                   Tx Power                   Rx Power
+                    0             N/A     0.000 mAmps     0.000 mW (<-40.00 dBm)     0.000 mW (<-40.00 dBm)
+                    1             N/A     0.000 mAmps     0.000 mW (<-40.00 dBm)     0.000 mW (<-40.00 dBm)
+                    2             N/A     0.000 mAmps     0.000 mW (<-40.00 dBm)     0.000 mW (<-40.00 dBm)
+                    3             N/A     0.000 mAmps     0.000 mW (<-40.00 dBm)     0.000 mW (<-40.00 dBm)
+MSA Data (Upper Memory Page 03)
+0x0180: 4b 00 fb 00 46 00 00 00 : 00 00 00 00 00 00 00 00
+0x0190: 8d cc 74 04 87 5a 79 18 : 00 00 00 00 00 00 00 00
+0x01a0: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x01b0: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x01c0: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x01d0: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x01e0: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 33 33
+0x01f0: 00 00 ff ff ff ff ff ff : 00 00 00 00 00 00 00 00
+
+PHY data for interface: FortyGigE0/2/1/1
+
+QSFP EEPROM port: 1
+        Xcvr Type: QSFP+
+        Ext Type: 1.5W, CLEI,
+        Connector Type: MPO
+        Ethernet Compliance Codes: 40GBASE-SR4,
+        Encoding: 64B66B,
+        BR, nominal: 10300 Mbps
+        Length SMF: 0KM, OM3: 100M, OM2: 30M, OM1: 0M, Copper: 0M
+        Device Tech: 850 nm VCSEL, No wavelength control, Uncooled transmitter device, Pin detector, Transmitter not tunable,
+        Vendor Name: CISCO
+        Vendor OUI: 00.90.65
+        Vendor Part Number: FTL410QE2C-C1     (rev.: B )
+        Wavelength: 850.030 nm
+        Wavelength Tolerance: 10.030 nm
+        Vendor Serial Number: FIS182100TD
+        Date Code (yy/mm/dd): 14/05/22  lot code:
+        Diagnostic Monitoring Type: Average Power,
+        Enhanced Options: No Rate Selection, No Application Select,
+        Extended Module Codes:
+        Options: RX op amp prog, Rx Op Dis cap, Page 02, Page 01, Tx_Disable, Tx_Fault, OMA,
+        L-Tx/Rx LOS:
+        L-Tx Fault:
+        Module DDM: Voltage, Temperature,
+MSA Data (Lower Memory)
+0x0000: 0d 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x0010: 00 00 00 00 00 00 16 ab : 00 00 80 97 00 00 00 00
+0x0020: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x0030: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x0040: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x0050: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x0060: 00 00 00 00 00 00 00 f0 : f0 00 18 00 00 00 00 00
+0x0070: 00 00 00 00 00 00 00 ff : ff ff ff ff ff ff ff 03
+
+
+MSA Data (Upper Memory Page 00)
+0x0080: 0d 10 0c 04 00 00 00 00 : 00 00 00 05 67 00 00 32
+0x0090: 1e 00 00 00 43 49 53 43 : 4f 20 20 20 20 20 20 20
+0x00a0: 20 20 20 20 00 00 90 65 : 46 54 4c 34 31 30 51 45
+0x00b0: 32 43 2d 43 31 20 20 20 : 42 20 42 68 07 d0 46 5f
+0x00c0: 00 01 04 d8 46 49 53 31 : 38 32 31 30 30 54 44 20
+0x00d0: 20 20 20 20 31 34 30 35 : 32 32 20 20 0a 00 00 9b
+0x00e0: 02 00 02 87 d7 b8 e2 ac : a3 56 d5 73 1b ac 65 80
+0x00f0: 01 29 ec 00 00 00 00 00 : 00 00 00 00 1b 22 cd 41
+
+        CLEI Code: COUIA9JCAB
+        Part Number: 10-2672-02 (ver.: V02 )
+        Product Id: QSFP-40G-SR4
+MSA Data (Upper Memory Page 02)
+0x0100: 43 4f 55 49 41 39 4a 43 : 41 42 31 30 2d 32 36 37
+0x0110: 32 2d 30 32 56 30 32 20 : 01 00 00 00 00 00 00 00
+0x0120: 00 81 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x0130: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 aa aa
+0x0140: 51 53 46 50 2d 34 30 47 : 2d 53 52 34 20 20 20 20
+0x0150: 20 20 20 20 00 00 00 00 : 00 00 00 00 00 00 00 18
+0x0160: 36 34 31 33 34 34 31 32 : 00 99 00 00 00 00 00 00
+0x0170: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+
+        Module
+        Thresholds:                   Alarm High          Warning High          Warning Low          Alarm Low
+              Temperature:            +75.000 C             +70.000 C              +0.000 C              -5.000 C
+                  Voltage:           3.630 Volt            3.465 Volt            3.100 Volt            2.970 Volt
+
+        Temperature: +22.667 C
+        Voltage: 3.292 Volt
+
+        Lanes
+        Thresholds:                   Alarm High          Warning High          Warning Low          Alarm Low
+                     Bias:          0.000 mAmps           0.000 mAmps           0.000 mAmps           0.000 mAmps
+           Transmit Power:  0.000 mW (<-40.00 dBm)   0.000 mW (<-40.00 dBm)   0.000 mW (<-40.00 dBm)   0.000 mW (<-40.00 dBm)
+            Receive Power:  0.000 mW (<-40.00 dBm)   0.000 mW (<-40.00 dBm)   0.000 mW (<-40.00 dBm)   0.000 mW (<-40.00 dBm)
+
+                 Lane            Temp            Bias                   Tx Power                   Rx Power
+                    0             N/A     0.000 mAmps     0.000 mW (<-40.00 dBm)     0.000 mW (<-40.00 dBm)
+                    1             N/A     0.000 mAmps     0.000 mW (<-40.00 dBm)     0.000 mW (<-40.00 dBm)
+                    2             N/A     0.000 mAmps     0.000 mW (<-40.00 dBm)     0.000 mW (<-40.00 dBm)
+                    3             N/A     0.000 mAmps     0.000 mW (<-40.00 dBm)     0.000 mW (<-40.00 dBm)
+MSA Data (Upper Memory Page 03)
+0x0180: 4b 00 fb 00 46 00 00 00 : 00 00 00 00 00 00 00 00
+0x0190: 8d cc 74 04 87 5a 79 18 : 00 00 00 00 00 00 00 00
+0x01a0: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x01b0: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x01c0: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x01d0: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x01e0: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 33 33
+0x01f0: 00 00 ff ff ff ff ff ff : 00 00 00 00 00 00 00 00
+
+PHY data for interface: FortyGigE0/3/0/0
+
+QSFP EEPROM port: 0
+        Xcvr Type: QSFP+
+        Ext Type: 1.5W, CLEI,
+        Connector Type: MPO
+        Ethernet Compliance Codes: 40GBASE-SR4,
+        Encoding: 64B66B,
+        BR, nominal: 10300 Mbps
+        Length SMF: 0KM, OM3: 100M, OM2: 30M, OM1: 0M, Copper: 0M
+        Device Tech: 850 nm VCSEL, No wavelength control, Uncooled transmitter device, Pin detector, Transmitter not tunable,
+        Vendor Name: CISCO
+        Vendor OUI: 00.90.65
+        Vendor Part Number: FTL410QE2C-C1     (rev.: B )
+        Wavelength: 850.030 nm
+        Wavelength Tolerance: 10.030 nm
+        Vendor Serial Number: FIS181202M9
+        Date Code (yy/mm/dd): 14/03/21  lot code:
+        Diagnostic Monitoring Type: Average Power,
+        Enhanced Options: No Rate Selection, No Application Select,
+        Extended Module Codes:
+        Options: RX op amp prog, Rx Op Dis cap, Page 02, Page 01, Tx_Disable, Tx_Fault, OMA,
+        L-Tx/Rx LOS:
+        L-Tx Fault:
+        Module DDM: Voltage, Temperature,
+MSA Data (Lower Memory)
+0x0000: 0d 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x0010: 00 00 00 00 00 00 17 d3 : 00 00 80 8f 00 00 00 00
+0x0020: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x0030: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x0040: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x0050: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x0060: 00 00 00 00 00 00 00 f0 : f0 00 18 00 00 00 00 00
+0x0070: 00 00 00 00 00 00 00 ff : ff ff ff ff ff ff ff 03
+
+
+MSA Data (Upper Memory Page 00)
+0x0080: 0d 10 0c 04 00 00 00 00 : 00 00 00 05 67 00 00 32
+0x0090: 1e 00 00 00 43 49 53 43 : 4f 20 20 20 20 20 20 20
+0x00a0: 20 20 20 20 00 00 90 65 : 46 54 4c 34 31 30 51 45
+0x00b0: 32 43 2d 43 31 20 20 20 : 42 20 42 68 07 d0 46 5f
+0x00c0: 00 01 04 d8 46 49 53 31 : 38 31 32 30 32 4d 39 20
+0x00d0: 20 20 20 20 31 34 30 33 : 32 31 20 20 0a 00 00 88
+0x00e0: 02 00 02 f9 5c 7e 18 71 : 9d 89 93 7a aa 1b fa c2
+0x00f0: cc f7 e2 00 00 00 00 00 : 00 00 00 00 23 60 0a 2f
+
+        CLEI Code: COUIA9JCAB
+        Part Number: 10-2672-02 (ver.: V02 )
+        Product Id: QSFP-40G-SR4
+MSA Data (Upper Memory Page 02)
+0x0100: 43 4f 55 49 41 39 4a 43 : 41 42 31 30 2d 32 36 37
+0x0110: 32 2d 30 32 56 30 32 20 : 01 00 00 00 00 00 00 00
+0x0120: 00 81 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x0130: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 aa aa
+0x0140: 51 53 46 50 2d 34 30 47 : 2d 53 52 34 20 20 20 20
+0x0150: 20 20 20 20 00 00 00 00 : 00 00 00 00 00 00 00 18
+0x0160: 36 34 31 33 34 34 31 32 : 00 99 00 00 00 00 00 00
+0x0170: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+
+        Module
+        Thresholds:                   Alarm High          Warning High          Warning Low          Alarm Low
+              Temperature:            +75.000 C             +70.000 C              +0.000 C              -5.000 C
+                  Voltage:           3.630 Volt            3.465 Volt            3.100 Volt            2.970 Volt
+
+        Temperature: +23.824 C
+        Voltage: 3.291 Volt
+
+        Lanes
+        Thresholds:                   Alarm High          Warning High          Warning Low          Alarm Low
+                     Bias:          0.000 mAmps           0.000 mAmps           0.000 mAmps           0.000 mAmps
+           Transmit Power:  0.000 mW (<-40.00 dBm)   0.000 mW (<-40.00 dBm)   0.000 mW (<-40.00 dBm)   0.000 mW (<-40.00 dBm)
+            Receive Power:  0.000 mW (<-40.00 dBm)   0.000 mW (<-40.00 dBm)   0.000 mW (<-40.00 dBm)   0.000 mW (<-40.00 dBm)
+
+                 Lane            Temp            Bias                   Tx Power                   Rx Power
+                    0             N/A     0.000 mAmps     0.000 mW (<-40.00 dBm)     0.000 mW (<-40.00 dBm)
+                    1             N/A     0.000 mAmps     0.000 mW (<-40.00 dBm)     0.000 mW (<-40.00 dBm)
+                    2             N/A     0.000 mAmps     0.000 mW (<-40.00 dBm)     0.000 mW (<-40.00 dBm)
+                    3             N/A     0.000 mAmps     0.000 mW (<-40.00 dBm)     0.000 mW (<-40.00 dBm)
+MSA Data (Upper Memory Page 03)
+0x0180: 4b 00 fb 00 46 00 00 00 : 00 00 00 00 00 00 00 00
+0x0190: 8d cc 74 04 87 5a 79 18 : 00 00 00 00 00 00 00 00
+0x01a0: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x01b0: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x01c0: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x01d0: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x01e0: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 33 33
+0x01f0: 00 00 ff ff ff ff ff ff : 00 00 00 00 00 00 00 00
+
+PHY data for interface: FortyGigE0/3/0/1
+
+QSFP EEPROM port: 1
+        Xcvr Type: QSFP+
+        Ext Type: 1.5W, CLEI,
+        Connector Type: MPO
+        Ethernet Compliance Codes: 40GBASE-SR4,
+        Encoding: 64B66B,
+        BR, nominal: 10300 Mbps
+        Length SMF: 0KM, OM3: 100M, OM2: 30M, OM1: 0M, Copper: 0M
+        Device Tech: 850 nm VCSEL, No wavelength control, Uncooled transmitter device, Pin detector, Transmitter not tunable,
+        Vendor Name: CISCO
+        Vendor OUI: 00.90.65
+        Vendor Part Number: FTL410QE2C-C1     (rev.: B )
+        Wavelength: 850.030 nm
+        Wavelength Tolerance: 10.030 nm
+        Vendor Serial Number: FIS181202NT
+        Date Code (yy/mm/dd): 14/03/21  lot code:
+        Diagnostic Monitoring Type: Average Power,
+        Enhanced Options: No Rate Selection, No Application Select,
+        Extended Module Codes:
+        Options: RX op amp prog, Rx Op Dis cap, Page 02, Page 01, Tx_Disable, Tx_Fault, OMA,
+        L-Tx/Rx LOS:
+        L-Tx Fault:
+        Module DDM: Voltage, Temperature,
+MSA Data (Lower Memory)
+0x0000: 0d 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x0010: 00 00 00 00 00 00 17 e7 : 00 00 80 ad 00 00 00 00
+0x0020: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x0030: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x0040: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x0050: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x0060: 00 00 00 00 00 00 00 f0 : f0 00 18 00 00 00 00 00
+0x0070: 00 00 00 00 00 00 00 ff : ff ff ff ff ff ff ff 03
+
+
+MSA Data (Upper Memory Page 00)
+0x0080: 0d 10 0c 04 00 00 00 00 : 00 00 00 05 67 00 00 32
+0x0090: 1e 00 00 00 43 49 53 43 : 4f 20 20 20 20 20 20 20
+0x00a0: 20 20 20 20 00 00 90 65 : 46 54 4c 34 31 30 51 45
+0x00b0: 32 43 2d 43 31 20 20 20 : 42 20 42 68 07 d0 46 5f
+0x00c0: 00 01 04 d8 46 49 53 31 : 38 31 32 30 32 4e 54 20
+0x00d0: 20 20 20 20 31 34 30 33 : 32 31 20 20 0a 00 00 a4
+0x00e0: 02 00 02 ca 6f b2 ce f9 : a2 93 c7 3b cd e3 cf d6
+0x00f0: 50 d4 c1 00 00 00 00 00 : 00 00 00 00 83 ad 56 0b
+
+        CLEI Code: COUIA9JCAB
+        Part Number: 10-2672-02 (ver.: V02 )
+        Product Id: QSFP-40G-SR4
+MSA Data (Upper Memory Page 02)
+0x0100: 43 4f 55 49 41 39 4a 43 : 41 42 31 30 2d 32 36 37
+0x0110: 32 2d 30 32 56 30 32 20 : 01 00 00 00 00 00 00 00
+0x0120: 00 81 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x0130: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 aa aa
+0x0140: 51 53 46 50 2d 34 30 47 : 2d 53 52 34 20 20 20 20
+0x0150: 20 20 20 20 00 00 00 00 : 00 00 00 00 00 00 00 18
+0x0160: 36 34 31 33 34 34 31 32 : 00 99 00 00 00 00 00 00
+0x0170: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+
+        Module
+        Thresholds:                   Alarm High          Warning High          Warning Low          Alarm Low
+              Temperature:            +75.000 C             +70.000 C              +0.000 C              -5.000 C
+                  Voltage:           3.630 Volt            3.465 Volt            3.100 Volt            2.970 Volt
+
+        Temperature: +23.902 C
+        Voltage: 3.294 Volt
+
+        Lanes
+        Thresholds:                   Alarm High          Warning High          Warning Low          Alarm Low
+                     Bias:          0.000 mAmps           0.000 mAmps           0.000 mAmps           0.000 mAmps
+           Transmit Power:  0.000 mW (<-40.00 dBm)   0.000 mW (<-40.00 dBm)   0.000 mW (<-40.00 dBm)   0.000 mW (<-40.00 dBm)
+            Receive Power:  0.000 mW (<-40.00 dBm)   0.000 mW (<-40.00 dBm)   0.000 mW (<-40.00 dBm)   0.000 mW (<-40.00 dBm)
+
+                 Lane            Temp            Bias                   Tx Power                   Rx Power
+                    0             N/A     0.000 mAmps     0.000 mW (<-40.00 dBm)     0.000 mW (<-40.00 dBm)
+                    1             N/A     0.000 mAmps     0.000 mW (<-40.00 dBm)     0.000 mW (<-40.00 dBm)
+                    2             N/A     0.000 mAmps     0.000 mW (<-40.00 dBm)     0.000 mW (<-40.00 dBm)
+                    3             N/A     0.000 mAmps     0.000 mW (<-40.00 dBm)     0.000 mW (<-40.00 dBm)
+MSA Data (Upper Memory Page 03)
+0x0180: 4b 00 fb 00 46 00 00 00 : 00 00 00 00 00 00 00 00
+0x0190: 8d cc 74 04 87 5a 79 18 : 00 00 00 00 00 00 00 00
+0x01a0: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x01b0: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x01c0: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x01d0: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x01e0: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 33 33
+0x01f0: 00 00 ff ff ff ff ff ff : 00 00 00 00 00 00 00 00
+
+PHY data for interface: FortyGigE0/3/1/0
+
+QSFP EEPROM port: 0
+        Xcvr Type: QSFP+
+        Ext Type: 1.5W, CLEI,
+        Connector Type: MPO
+        Ethernet Compliance Codes: 40GBASE-SR4,
+        Encoding: 64B66B,
+        BR, nominal: 10300 Mbps
+        Length SMF: 0KM, OM3: 100M, OM2: 30M, OM1: 0M, Copper: 0M
+        Device Tech: 850 nm VCSEL, No wavelength control, Uncooled transmitter device, Pin detector, Transmitter not tunable,
+        Vendor Name: CISCO
+        Vendor OUI: 00.90.65
+        Vendor Part Number: FTL410QE2C-C1     (rev.: B )
+        Wavelength: 850.030 nm
+        Wavelength Tolerance: 10.030 nm
+        Vendor Serial Number: FIS181202MB
+        Date Code (yy/mm/dd): 14/03/21  lot code:
+        Diagnostic Monitoring Type: Average Power,
+        Enhanced Options: No Rate Selection, No Application Select,
+        Extended Module Codes:
+        Options: RX op amp prog, Rx Op Dis cap, Page 02, Page 01, Tx_Disable, Tx_Fault, OMA,
+        L-Tx/Rx LOS:
+        L-Tx Fault:
+        Module DDM: Voltage, Temperature,
+MSA Data (Lower Memory)
+0x0000: 0d 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x0010: 00 00 00 00 00 00 15 71 : 00 00 80 78 00 00 00 00
+0x0020: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x0030: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x0040: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x0050: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x0060: 00 00 00 00 00 00 00 f0 : f0 00 18 00 00 00 00 00
+0x0070: 00 00 00 00 00 00 00 ff : ff ff ff ff ff ff ff 03
+
+
+MSA Data (Upper Memory Page 00)
+0x0080: 0d 10 0c 04 00 00 00 00 : 00 00 00 05 67 00 00 32
+0x0090: 1e 00 00 00 43 49 53 43 : 4f 20 20 20 20 20 20 20
+0x00a0: 20 20 20 20 00 00 90 65 : 46 54 4c 34 31 30 51 45
+0x00b0: 32 43 2d 43 31 20 20 20 : 42 20 42 68 07 d0 46 5f
+0x00c0: 00 01 04 d8 46 49 53 31 : 38 31 32 30 32 4d 42 20
+0x00d0: 20 20 20 20 31 34 30 33 : 32 31 20 20 0a 00 00 91
+0x00e0: 02 00 02 ff ee 8f 08 7a : 4d 65 ab da 8b 60 1f 38
+0x00f0: 25 7e 9d 00 00 00 00 00 : 00 00 00 00 da df ae 7b
+
+        CLEI Code: COUIA9JCAB
+        Part Number: 10-2672-02 (ver.: V02 )
+        Product Id: QSFP-40G-SR4
+MSA Data (Upper Memory Page 02)
+0x0100: 43 4f 55 49 41 39 4a 43 : 41 42 31 30 2d 32 36 37
+0x0110: 32 2d 30 32 56 30 32 20 : 01 00 00 00 00 00 00 00
+0x0120: 00 81 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x0130: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 aa aa
+0x0140: 51 53 46 50 2d 34 30 47 : 2d 53 52 34 20 20 20 20
+0x0150: 20 20 20 20 00 00 00 00 : 00 00 00 00 00 00 00 18
+0x0160: 36 34 31 33 34 34 31 32 : 00 99 00 00 00 00 00 00
+0x0170: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+
+        Module
+        Thresholds:                   Alarm High          Warning High          Warning Low          Alarm Low
+              Temperature:            +75.000 C             +70.000 C              +0.000 C              -5.000 C
+                  Voltage:           3.630 Volt            3.465 Volt            3.100 Volt            2.970 Volt
+
+        Temperature: +21.441 C
+        Voltage: 3.289 Volt
+
+        Lanes
+        Thresholds:                   Alarm High          Warning High          Warning Low          Alarm Low
+                     Bias:          0.000 mAmps           0.000 mAmps           0.000 mAmps           0.000 mAmps
+           Transmit Power:  0.000 mW (<-40.00 dBm)   0.000 mW (<-40.00 dBm)   0.000 mW (<-40.00 dBm)   0.000 mW (<-40.00 dBm)
+            Receive Power:  0.000 mW (<-40.00 dBm)   0.000 mW (<-40.00 dBm)   0.000 mW (<-40.00 dBm)   0.000 mW (<-40.00 dBm)
+
+                 Lane            Temp            Bias                   Tx Power                   Rx Power
+                    0             N/A     0.000 mAmps     0.000 mW (<-40.00 dBm)     0.000 mW (<-40.00 dBm)
+                    1             N/A     0.000 mAmps     0.000 mW (<-40.00 dBm)     0.000 mW (<-40.00 dBm)
+                    2             N/A     0.000 mAmps     0.000 mW (<-40.00 dBm)     0.000 mW (<-40.00 dBm)
+                    3             N/A     0.000 mAmps     0.000 mW (<-40.00 dBm)     0.000 mW (<-40.00 dBm)
+MSA Data (Upper Memory Page 03)
+0x0180: 4b 00 fb 00 46 00 00 00 : 00 00 00 00 00 00 00 00
+0x0190: 8d cc 74 04 87 5a 79 18 : 00 00 00 00 00 00 00 00
+0x01a0: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x01b0: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x01c0: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x01d0: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x01e0: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 33 33
+0x01f0: 00 00 ff ff ff ff ff ff : 00 00 00 00 00 00 00 00
+
+PHY data for interface: FortyGigE0/3/1/1
+
+QSFP EEPROM port: 1
+        Xcvr Type: QSFP+
+        Ext Type: 1.5W, CLEI,
+        Connector Type: MPO
+        Ethernet Compliance Codes: 40GBASE-SR4,
+        Encoding: 64B66B,
+        BR, nominal: 10300 Mbps
+        Length SMF: 0KM, OM3: 100M, OM2: 30M, OM1: 0M, Copper: 0M
+        Device Tech: 850 nm VCSEL, No wavelength control, Uncooled transmitter device, Pin detector, Transmitter not tunable,
+        Vendor Name: CISCO
+        Vendor OUI: 00.90.65
+        Vendor Part Number: FTL410QE2C-C1     (rev.: B )
+        Wavelength: 850.030 nm
+        Wavelength Tolerance: 10.030 nm
+        Vendor Serial Number: FIS181202NL
+        Date Code (yy/mm/dd): 14/03/21  lot code:
+        Diagnostic Monitoring Type: Average Power,
+        Enhanced Options: No Rate Selection, No Application Select,
+        Extended Module Codes:
+        Options: RX op amp prog, Rx Op Dis cap, Page 02, Page 01, Tx_Disable, Tx_Fault, OMA,
+        L-Tx/Rx LOS:
+        L-Tx Fault:
+        Module DDM: Voltage, Temperature,
+MSA Data (Lower Memory)
+0x0000: 0d 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x0010: 00 00 00 00 00 00 13 fd : 00 00 80 97 00 00 00 00
+0x0020: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x0030: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x0040: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x0050: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x0060: 00 00 00 00 00 00 00 f0 : f0 00 18 00 00 00 00 00
+0x0070: 00 00 00 00 00 00 00 ff : ff ff ff ff ff ff ff 03
+
+
+MSA Data (Upper Memory Page 00)
+0x0080: 0d 10 0c 04 00 00 00 00 : 00 00 00 05 67 00 00 32
+0x0090: 1e 00 00 00 43 49 53 43 : 4f 20 20 20 20 20 20 20
+0x00a0: 20 20 20 20 00 00 90 65 : 46 54 4c 34 31 30 51 45
+0x00b0: 32 43 2d 43 31 20 20 20 : 42 20 42 68 07 d0 46 5f
+0x00c0: 00 01 04 d8 46 49 53 31 : 38 31 32 30 32 4e 4c 20
+0x00d0: 20 20 20 20 31 34 30 33 : 32 31 20 20 0a 00 00 9c
+0x00e0: 02 00 02 5a d6 e7 a7 16 : cf 23 1d f8 07 c8 3c 20
+0x00f0: a8 b9 1b 00 00 00 00 00 : 00 00 00 00 84 c8 02 4b
+
+        CLEI Code: COUIA9JCAB
+        Part Number: 10-2672-02 (ver.: V02 )
+        Product Id: QSFP-40G-SR4
+MSA Data (Upper Memory Page 02)
+0x0100: 43 4f 55 49 41 39 4a 43 : 41 42 31 30 2d 32 36 37
+0x0110: 32 2d 30 32 56 30 32 20 : 01 00 00 00 00 00 00 00
+0x0120: 00 81 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x0130: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 aa aa
+0x0140: 51 53 46 50 2d 34 30 47 : 2d 53 52 34 20 20 20 20
+0x0150: 20 20 20 20 00 00 00 00 : 00 00 00 00 00 00 00 18
+0x0160: 36 34 31 33 34 34 31 32 : 00 99 00 00 00 00 00 00
+0x0170: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+
+        Module
+        Thresholds:                   Alarm High          Warning High          Warning Low          Alarm Low
+              Temperature:            +75.000 C             +70.000 C              +0.000 C              -5.000 C
+                  Voltage:           3.630 Volt            3.465 Volt            3.100 Volt            2.970 Volt
+
+        Temperature: +19.988 C
+        Voltage: 3.292 Volt
+
+        Lanes
+        Thresholds:                   Alarm High          Warning High          Warning Low          Alarm Low
+                     Bias:          0.000 mAmps           0.000 mAmps           0.000 mAmps           0.000 mAmps
+           Transmit Power:  0.000 mW (<-40.00 dBm)   0.000 mW (<-40.00 dBm)   0.000 mW (<-40.00 dBm)   0.000 mW (<-40.00 dBm)
+            Receive Power:  0.000 mW (<-40.00 dBm)   0.000 mW (<-40.00 dBm)   0.000 mW (<-40.00 dBm)   0.000 mW (<-40.00 dBm)
+
+                 Lane            Temp            Bias                   Tx Power                   Rx Power
+                    0             N/A     0.000 mAmps     0.000 mW (<-40.00 dBm)     0.000 mW (<-40.00 dBm)
+                    1             N/A     0.000 mAmps     0.000 mW (<-40.00 dBm)     0.000 mW (<-40.00 dBm)
+                    2             N/A     0.000 mAmps     0.000 mW (<-40.00 dBm)     0.000 mW (<-40.00 dBm)
+                    3             N/A     0.000 mAmps     0.000 mW (<-40.00 dBm)     0.000 mW (<-40.00 dBm)
+MSA Data (Upper Memory Page 03)
+0x0180: 4b 00 fb 00 46 00 00 00 : 00 00 00 00 00 00 00 00
+0x0190: 8d cc 74 04 87 5a 79 18 : 00 00 00 00 00 00 00 00
+0x01a0: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x01b0: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x01c0: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x01d0: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x01e0: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 33 33
+0x01f0: 00 00 ff ff ff ff ff ff : 00 00 00 00 00 00 00 00
+
+PHY data for interface: FortyGigE0/4/0/0
+
+QSFP EEPROM port: 0
+        Xcvr Type: QSFP+
+        Ext Type: 1.5W, CLEI,
+        Connector Type: MPO
+        Ethernet Compliance Codes: 40GBASE-SR4,
+        Encoding: 64B66B,
+        BR, nominal: 10300 Mbps
+        Length SMF: 0KM, OM3: 100M, OM2: 30M, OM1: 0M, Copper: 0M
+        Device Tech: 850 nm VCSEL, No wavelength control, Uncooled transmitter device, Pin detector, Transmitter not tunable,
+        Vendor Name: CISCO
+        Vendor OUI: 00.90.65
+        Vendor Part Number: FTL410QE2C-C1     (rev.: C )
+        Wavelength: 850.030 nm
+        Wavelength Tolerance: 10.030 nm
+        Vendor Serial Number: FIS192101N0
+        Date Code (yy/mm/dd): 15/05/19  lot code:
+        Diagnostic Monitoring Type: Average Power,
+        Enhanced Options: No Rate Selection, No Application Select,
+        Extended Module Codes:
+        Options: RX op amp prog, Rx Op Dis cap, Page 02, Page 01, Tx_Disable, Tx_Fault, OMA,
+        L-Tx/Rx LOS:
+        L-Tx Fault:
+        Module DDM: Voltage, Temperature,
+MSA Data (Lower Memory)
+0x0000: 0d 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x0010: 00 00 00 00 00 00 1d fc : 00 00 80 bd 00 00 00 00
+0x0020: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x0030: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x0040: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x0050: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x0060: 00 00 00 00 00 00 00 f0 : f0 00 18 00 00 00 00 00
+0x0070: 00 00 00 00 00 00 00 ff : ff ff ff ff ff ff ff 03
+
+
+MSA Data (Upper Memory Page 00)
+0x0080: 0d 10 0c 04 00 00 00 00 : 00 00 00 05 67 00 00 32
+0x0090: 1e 00 00 00 43 49 53 43 : 4f 20 20 20 20 20 20 20
+0x00a0: 20 20 20 20 00 00 90 65 : 46 54 4c 34 31 30 51 45
+0x00b0: 32 43 2d 43 31 20 20 20 : 43 20 42 68 07 d0 46 60
+0x00c0: 00 01 04 d8 46 49 53 31 : 39 32 31 30 31 4e 30 20
+0x00d0: 20 20 20 20 31 35 30 35 : 31 39 20 20 0a 00 00 8a
+0x00e0: 00 00 02 b2 52 4a f5 92 : 48 9a ed 09 2b f0 b3 95
+0x00f0: d1 76 ad 00 00 00 00 00 : 00 00 00 00 61 0e be 08
+
+        CLEI Code: COUIA9JCAB
+        Part Number: 10-2672-02 (ver.: V02 )
+        Product Id: QSFP-40G-SR4
+MSA Data (Upper Memory Page 02)
+0x0100: 43 4f 55 49 41 39 4a 43 : 41 42 31 30 2d 32 36 37
+0x0110: 32 2d 30 32 56 30 32 20 : 01 00 00 00 00 00 00 00
+0x0120: 00 81 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x0130: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 aa aa
+0x0140: 51 53 46 50 2d 34 30 47 : 2d 53 52 34 20 20 20 20
+0x0150: 20 20 20 20 00 00 00 00 : 00 00 00 00 00 00 00 18
+0x0160: 36 34 31 33 34 34 32 30 : 00 98 00 00 00 00 00 00
+0x0170: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+
+        Module
+        Thresholds:                   Alarm High          Warning High          Warning Low          Alarm Low
+              Temperature:            +75.000 C             +70.000 C              +0.000 C              -5.000 C
+                  Voltage:           3.630 Volt            3.465 Volt            3.100 Volt            2.970 Volt
+
+        Temperature: +29.984 C
+        Voltage: 3.296 Volt
+
+        Lanes
+        Thresholds:                   Alarm High          Warning High          Warning Low          Alarm Low
+                     Bias:          0.000 mAmps           0.000 mAmps           0.000 mAmps           0.000 mAmps
+           Transmit Power:  0.000 mW (<-40.00 dBm)   0.000 mW (<-40.00 dBm)   0.000 mW (<-40.00 dBm)   0.000 mW (<-40.00 dBm)
+            Receive Power:  0.000 mW (<-40.00 dBm)   0.000 mW (<-40.00 dBm)   0.000 mW (<-40.00 dBm)   0.000 mW (<-40.00 dBm)
+
+                 Lane            Temp            Bias                   Tx Power                   Rx Power
+                    0             N/A     0.000 mAmps     0.000 mW (<-40.00 dBm)     0.000 mW (<-40.00 dBm)
+                    1             N/A     0.000 mAmps     0.000 mW (<-40.00 dBm)     0.000 mW (<-40.00 dBm)
+                    2             N/A     0.000 mAmps     0.000 mW (<-40.00 dBm)     0.000 mW (<-40.00 dBm)
+                    3             N/A     0.000 mAmps     0.000 mW (<-40.00 dBm)     0.000 mW (<-40.00 dBm)
+MSA Data (Upper Memory Page 03)
+0x0180: 4b 00 fb 00 46 00 00 00 : 00 00 00 00 00 00 00 00
+0x0190: 8d cc 74 04 87 5a 79 18 : 00 00 00 00 00 00 00 00
+0x01a0: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x01b0: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x01c0: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x01d0: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x01e0: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 33 33
+0x01f0: 00 00 ff ff ff ff ff ff : 00 00 00 00 00 00 00 00
+
+PHY data for interface: FortyGigE0/4/0/1
+
+QSFP EEPROM port: 1
+        Xcvr Type: QSFP+
+        Ext Type: 1.5W, CLEI,
+        Connector Type: MPO
+        Ethernet Compliance Codes: 40GBASE-SR4,
+        Encoding: 64B66B,
+        BR, nominal: 10300 Mbps
+        Length SMF: 0KM, OM3: 100M, OM2: 30M, OM1: 0M, Copper: 0M
+        Device Tech: 850 nm VCSEL, No wavelength control, Uncooled transmitter device, Pin detector, Transmitter not tunable,
+        Vendor Name: CISCO
+        Vendor OUI: 00.90.65
+        Vendor Part Number: FTL410QE2C-C1     (rev.: C )
+        Wavelength: 850.030 nm
+        Wavelength Tolerance: 10.030 nm
+        Vendor Serial Number: FIS192301B8
+        Date Code (yy/mm/dd): 15/06/02  lot code:
+        Diagnostic Monitoring Type: Average Power,
+        Enhanced Options: No Rate Selection, No Application Select,
+        Extended Module Codes:
+        Options: RX op amp prog, Rx Op Dis cap, Page 02, Page 01, Tx_Disable, Tx_Fault, OMA,
+        L-Tx/Rx LOS:
+        L-Tx Fault:
+        Module DDM: Voltage, Temperature,
+MSA Data (Lower Memory)
+0x0000: 0d 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x0010: 00 00 00 00 00 00 1a 15 : 00 00 80 cc 00 00 00 00
+0x0020: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x0030: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x0040: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x0050: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x0060: 00 00 00 00 00 00 00 f0 : f0 00 18 00 00 00 00 00
+0x0070: 00 00 00 00 00 00 00 ff : ff ff ff ff ff ff ff 03
+
+
+MSA Data (Upper Memory Page 00)
+0x0080: 0d 10 0c 04 00 00 00 00 : 00 00 00 05 67 00 00 32
+0x0090: 1e 00 00 00 43 49 53 43 : 4f 20 20 20 20 20 20 20
+0x00a0: 20 20 20 20 00 00 90 65 : 46 54 4c 34 31 30 51 45
+0x00b0: 32 43 2d 43 31 20 20 20 : 43 20 42 68 07 d0 46 60
+0x00c0: 00 01 04 d8 46 49 53 31 : 39 32 33 30 31 42 38 20
+0x00d0: 20 20 20 20 31 35 30 36 : 30 32 20 20 0a 00 00 81
+0x00e0: 00 00 02 a5 07 46 7f fd : 45 5f e2 e6 66 de 79 32
+0x00f0: c3 e5 19 00 00 00 00 00 : 00 00 00 00 91 43 cf 65
+
+        CLEI Code: COUIA9JCAB
+        Part Number: 10-2672-02 (ver.: V02 )
+        Product Id: QSFP-40G-SR4
+MSA Data (Upper Memory Page 02)
+0x0100: 43 4f 55 49 41 39 4a 43 : 41 42 31 30 2d 32 36 37
+0x0110: 32 2d 30 32 56 30 32 20 : 01 00 00 00 00 00 00 00
+0x0120: 00 81 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x0130: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 aa aa
+0x0140: 51 53 46 50 2d 34 30 47 : 2d 53 52 34 20 20 20 20
+0x0150: 20 20 20 20 00 00 00 00 : 00 00 00 00 00 00 00 18
+0x0160: 36 34 31 33 34 34 32 30 : 00 98 00 00 00 00 00 00
+0x0170: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+
+        Module
+        Thresholds:                   Alarm High          Warning High          Warning Low          Alarm Low
+              Temperature:            +75.000 C             +70.000 C              +0.000 C              -5.000 C
+                  Voltage:           3.630 Volt            3.465 Volt            3.100 Volt            2.970 Volt
+
+        Temperature: +26.082 C
+        Voltage: 3.297 Volt
+
+        Lanes
+        Thresholds:                   Alarm High          Warning High          Warning Low          Alarm Low
+                     Bias:          0.000 mAmps           0.000 mAmps           0.000 mAmps           0.000 mAmps
+           Transmit Power:  0.000 mW (<-40.00 dBm)   0.000 mW (<-40.00 dBm)   0.000 mW (<-40.00 dBm)   0.000 mW (<-40.00 dBm)
+            Receive Power:  0.000 mW (<-40.00 dBm)   0.000 mW (<-40.00 dBm)   0.000 mW (<-40.00 dBm)   0.000 mW (<-40.00 dBm)
+
+                 Lane            Temp            Bias                   Tx Power                   Rx Power
+                    0             N/A     0.000 mAmps     0.000 mW (<-40.00 dBm)     0.000 mW (<-40.00 dBm)
+                    1             N/A     0.000 mAmps     0.000 mW (<-40.00 dBm)     0.000 mW (<-40.00 dBm)
+                    2             N/A     0.000 mAmps     0.000 mW (<-40.00 dBm)     0.000 mW (<-40.00 dBm)
+                    3             N/A     0.000 mAmps     0.000 mW (<-40.00 dBm)     0.000 mW (<-40.00 dBm)
+MSA Data (Upper Memory Page 03)
+0x0180: 4b 00 fb 00 46 00 00 00 : 00 00 00 00 00 00 00 00
+0x0190: 8d cc 74 04 87 5a 79 18 : 00 00 00 00 00 00 00 00
+0x01a0: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x01b0: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x01c0: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x01d0: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x01e0: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 33 33
+0x01f0: 00 00 ff ff ff ff ff ff : 00 00 00 00 00 00 00 00
+
+PHY data for interface: FortyGigE0/4/1/0
+QSFP #0 is not present.
+
+PHY data for interface: FortyGigE0/4/1/1
+QSFP #1 is not present.
+
