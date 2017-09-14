@@ -1,0 +1,13 @@
+---
+
+parsed_sample:
+
+- name: "DEFAULT_VLAN"
+  vlan_id: "1"
+  status: "Port-based"
+  voice: "No"
+
+- name: "VoiceVlan"
+  vlan_id: "100"
+  status: "Port-based"
+  voice: "Yes"
