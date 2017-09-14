@@ -8,4 +8,4 @@ Start
   ^.*VLAN ID -> VLAN
 
 VLAN
-  ^\s+${VLAN_ID}\s+${NAME}\s+${STATUS}\s+${VOICE}\s+${JUMBO} -> Record
+  ^\s+${VLAN_ID}\s+${NAME}\s+\|?\s?${STATUS}\s+${VOICE}\s+${JUMBO}? -> Record
