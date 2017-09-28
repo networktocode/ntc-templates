@@ -1,0 +1,19 @@
+Value VLANID (\d+)
+Value VLANNAME (\S+(\s\S+)*)
+Value VLANTYPE (\w+)
+Value VLANPROTOCOL (\w+)
+Value VLANPID (\w+)
+Value VLANACTIVE (\w+)
+Value VLANIVLSVL (\w+)
+Value VLANMGMT (\w+)
+Value List VLANPORTMEMBERS (\S+)
+
+Start
+  ^Total\s+VLANs: -> Done
+  ^\d+ -> Continue.Record
+  ^${VLANID}\s+${VLANNAME}\s+${VLANTYPE}\s+${VLANPROTOCOL}\s+${VLANPID}\s+${VLANACTIVE}\s+${VLANIVLSVL}\s+${VLANMGMT}$$
+  ^\t+Port Members:\s+${VLANPORTMEMBERS}$$
+  ^\t+\s{14}${VLANPORTMEMBERS}$$
+
+
+Done
