@@ -8,10 +8,10 @@ Value LAST_RESET_TYPE (.*)
 Value AUTOTOPOLOGY (.*)
 Value BASE_UNIT_SELECTION (.*)
 Value SERIAL_NUMBER (.*)
-Value OPERATIONAL_SOFTWARE (.*)\s+$
-Value INSTALLED_SOFTWARE (.*)\s+$
-Value OPERATIONAL_LICENSE (.*)\s+$
-Value INSTALLED_LICENSE (.*)\s+$
+Value OPERATIONAL_SOFTWARE (.*)
+Value INSTALLED_SOFTWARE (.*)
+Value OPERATIONAL_LICENSE (.*)
+Value INSTALLED_LICENSE (.*)
 Value SYS_OBJECT_ID (.*)
 Value SYS_UP_TIME (.*)
 Value SYS_NTP_TIME (.*)
@@ -33,10 +33,10 @@ Start
   ^Autotopology:\s+${AUTOTOPOLOGY}
   ^Base Unit Selection:\s+${BASE_UNIT_SELECTION}
   ^Serial #:\s+${SERIAL_NUMBER}
-  ^Operational Software:\s+${OPERATIONAL_SOFTWARE}
-  ^Installed software:\s+${INSTALLED_SOFTWARE}
-  ^Operational license:\s+${OPERATIONAL_LICENSE}
-  ^Installed license:\s+${INSTALLED_LICENSE}
+  ^Operational Software:\s+${OPERATIONAL_SOFTWARE}(\s+|$$)
+  ^Installed software:\s+${INSTALLED_SOFTWARE}(\s+|$$)
+  ^Operational license:\s+${OPERATIONAL_LICENSE}(\s+|$$)
+  ^Installed license:\s+${INSTALLED_LICENSE}(\s+|$$)
   ^sysObjectID:\s+${SYS_OBJECT_ID}
   ^sysUpTime:\s+${SYS_UP_TIME}
   ^sysNtpTime:\s+${SYS_NTP_TIME}
