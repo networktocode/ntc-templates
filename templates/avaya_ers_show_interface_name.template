@@ -1,0 +1,9 @@
+Value PORT (\d+)
+Value NAME ([\S ]*)
+
+Start
+  ^Port Name
+  ^-+ -+
+  ^${PORT}\s+${NAME} -> Record
+
+Done
