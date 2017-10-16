@@ -1,0 +1,21 @@
+Id   Name                 Type     Protocol         PID     Active IVL/SVL Mgmt
+---- -------------------- -------- ---------------- ------- ------ ------- ----
+1    VLAN #1              Port     None             0x0000  Yes    IVL     No
+	Port Members: NONE
+2    Dead_VLAN            Port     None             0x0000  Yes    IVL     No
+	Port Members: 17-42,49-50
+17   Network_Services     Port     None             0x0000  Yes    IVL     No
+	Port Members: 5-10,47
+27   Lab_Mgmt             Port     None             0x0000  Yes    IVL     Yes
+	Port Members: 1,11,13,16,43-46,48
+47   IoT_Devices          Port     None             0x0000  Yes    IVL     No
+	Port Members: 14,48
+300  Trusted Wifi         Port     None             0x0000  Yes    IVL     No
+	Port Members: 3-4,11-13,47
+301  Untrusted Wifi       Port     None             0x0000  Yes    IVL     No
+	Port Members: 11,13,48
+477  VM Environment       Port     None             0x0000  Yes    IVL     No
+	Port Members: 2,15,48
+999  Native_VLAN          Port     None             0x0000  Yes    IVL     No
+	Port Members: NONE
+Total VLANs: 9
