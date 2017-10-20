@@ -1,0 +1,12 @@
+Value PORT (\S+\d+\S+)
+Value TEMP (\d+.\d+|N\/A)
+Value VOLTAGE (\d+.\d+|N\/A)
+Value BIAS_CURRENT (\d+.\d+|N\/A)
+Value TX_POWER (-\d+.\d+|\d+.\d+|N\/A)
+Value RX_POWER (-\d+.\d+|\d+.\d+|N\/A)
+
+
+Start
+  ^${PORT}\s+${TEMP}\s+${VOLTAGE}\s+${BIAS_CURRENT}\s+${TX_POWER}\s+${RX_POWER} -> Record
+
+EOF
