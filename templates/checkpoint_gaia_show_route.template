@@ -3,7 +3,7 @@ Value NETWORK ([0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3})
 Value MASK (\d{1,2})
 Value NEXTHOPIP ([0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3})
 Value INTERFACE (\S+)
-Value COMMENT (.*)
+Value COMMENT (\S.*)
 
 
 Start
@@ -13,4 +13,4 @@ Start
   # Match directly connected networks
   ^${PROTOCOL}\s+${NETWORK}/${MASK}\s+is directly connected,\s${INTERFACE}
   # Match optional comment, ignore trailing whitespace
-  ^\s{8,}${COMMENT}(?<=\S)\s+
+  ^\s{34}${COMMENT}\s*$$
