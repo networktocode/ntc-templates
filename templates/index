@@ -116,6 +116,7 @@ cisco_ios_show_vlan.template, .*, cisco_ios, sh[[ow]] vlan
 cisco_ios_show_vrf.template, .*, cisco_ios, sh[[ow]] vrf
 cisco_ios_dir.template,  .*, cisco_ios, dir
 
+cisco_nxos_show_configuration_session_summary.template, .*, cisco_nxos, sh[[ow]] configu[[ration]] s[[ession]] su[[mmary]]
 cisco_nxos_show_interface_transceiver_details.template, .*, cisco_nxos, sh[[ow]] int[[erface]] tra[[nsceiver]] de[[tails]]
 cisco_nxos_show_ip_dhcp_relay_address.template, .*, cisco_nxos, sh[[ow]] ip dh[[cp]] r[[elay]] a[[ddress]]
 cisco_nxos_show_lldp_neighbors_detail.template, .*, cisco_nxos, sh[[ow]] ll[[dp]] nei[[ghbors]] d[[etail]]
