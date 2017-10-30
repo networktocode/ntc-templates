@@ -47,6 +47,8 @@ avaya_ers_show_sys-info.template, .*, avaya_ers, sh[[ow]] sys-[[info]]
 avaya_ers_show_interface_name.template, .*, avaya_ers, sh[[ow]] in[[terfaces]] n[[ame]]
 avaya_ers_show_mac-address-table.template, .*, avaya_ers, sh[[ow]] mac-a[[ddress-table]]
 
+avaya_vsp_show_software.template, .*, avaya_vsp, sho[[w]] so[[ftware]]
+
 brocade_fastiron_show_lldp_neighbors_detail.template, .*, brocade_fastiron, sh[[ow]] ll[[dp]] n[[eighbors]] d[[etail]]
 brocade_fastiron_show_interfaces_brief.template, .*, brocade_fastiron, sh[[ow]] in[[terfaces]] b[[rief]]
 brocade_fastiron_show_interfaces.template, .*, brocade_fastiron, sh[[ow]] in[[terfaces]]
