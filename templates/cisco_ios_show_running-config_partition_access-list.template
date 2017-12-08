@@ -24,7 +24,7 @@ Value DST_PORT_RANGE_END (\S+)
 
 Start
   ^ip\s+access-list -> Continue.Clearall
-  ^ip\s+access-list\s+${ACL_TYPE}\s+${ACL_NAME}\s*
+  ^ip\s+access-list\s+${ACL_TYPE}\s+${ACL_NAME}\s* -> Record
   ^access-list -> Continue.Clearall
   ^access-list\s+${ACL_NAME}\s+${ACTION}\s+${STANDARD_HOST}\s* -> Record
   ^\s+remark\s+${COMMENT}\s*
