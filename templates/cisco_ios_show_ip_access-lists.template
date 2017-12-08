@@ -8,6 +8,7 @@ Value SRC_HOST (\d+\.\d+\.\d+\.\d+)
 Value SRC_ANY (any)
 Value SRC_NETWORK (\d+\.\d+\.\d+\.\d+)
 Value SRC_WILDCARD (\d+\.\d+\.\d+\.\d+)
+Value SRC_PORT_MATCH (eq|range|lt|gt)
 Value SRC_PORT (\S+)
 Value SRC_PORT_RANGE_START (\S+)
 Value SRC_PORT_RANGE_END (\S+)
@@ -15,13 +16,16 @@ Value DST_HOST (\d+\.\d+\.\d+\.\d+)
 Value DST_ANY (any)
 Value DST_NETWORK (\d+\.\d+\.\d+\.\d+)
 Value DST_WILDCARD (\d+\.\d+\.\d+\.\d+)
+Value DST_PORT_MATCH (eq|range|lt|gt)
 Value DST_PORT (\S+)
 Value DST_PORT_RANGE_START (\S+)
 Value DST_PORT_RANGE_END (\S+)
 
 Start
-  #^(Standard|Extended) -> Continue.Record
+  ^(Standard|Extended) -> Continue.Clearall
   ^${ACL_TYPE}\s+IP\s+access\s+list\s+${ACL_NAME}\s*
-  ^\s+${LINE_NUM}\s+${ACTION}\s+${PROTOCOL}\s+(host\s+${SRC_HOST}|${SRC_ANY}|${SRC_NETWORK}\s+${SRC_WILDCARD})(\s+range\s+${SRC_PORT_RANGE_START}\s+${SRC_PORT_RANGE_END}|\s+eq\s+${SRC_PORT}|)\s+(host\s+${DST_HOST}|${DST_ANY}|${DST_NETWORK}\s+${DST_WILDCARD})(\s+range\s+${DST_PORT_RANGE_START}\s+${DST_PORT_RANGE_END}|\s+eq\s+${DST_PORT}|)\s* -> Record
+  ^\s+${LINE_NUM}\s+${ACTION}\s+${PROTOCOL}\s+(host\s+${SRC_HOST}|${SRC_ANY}|${SRC_NETWORK}\s+${SRC_WILDCARD})(\s+${SRC_PORT_MATCH}\s+|)(${SRC_PORT_RANGE_START}\s+${SRC_PORT_RANGE_END}|${SRC_PORT}|)\s+(host\s+${DST_HOST}|${DST_ANY}|${DST_NETWORK}\s+${DST_WILDCARD})(\s+${DST_PORT_MATCH}\s+|)(${DST_PORT_RANGE_START}\s+${DST_PORT_RANGE_END}|${DST_PORT}|)\s* -> Record
   ^\s+${LINE_NUM}\s+${ACTION}\s+${STANDARD_HOST}\s* -> Record
   ^.* -> Error "Could not parse line:"
+
+EOF
