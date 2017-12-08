@@ -28,7 +28,7 @@ Start
   ^access-list -> Continue.Clearall
   ^access-list\s+${ACL_NAME}\s+${ACTION}\s+${STANDARD_HOST}\s* -> Record
   ^\s+remark\s+${COMMENT}\s*
-  ^\s+${ACTION}\s+${PROTOCOL}\s+(host\s+${SRC_HOST}|${SRC_ANY}|${SRC_NETWORK}\s+${SRC_WILDCARD})(\s+${SRC_PORT_MATCH}\s+|)(${SRC_PORT_RANGE_START}\s+{SRC_PORT_RANGE_END}|${SRC_PORT}|)\s+(host\s+${DST_HOST}|${DST_ANY}|${DST_NETWORK}\s+${DST_WILDCARD})(\s+${DST_PORT_MATCH}\s+|)(${DST_PORT_RANGE_START}\s+{DST_PORT_RANGE_END}|${DST_PORT}|) -> Record
+  ^\s+${ACTION}\s+${PROTOCOL}\s+(host\s+${SRC_HOST}|${SRC_ANY}|${SRC_NETWORK}\s+${SRC_WILDCARD})(\s+${SRC_PORT_MATCH}\s+|)(${SRC_PORT_RANGE_START}\s+${SRC_PORT_RANGE_END}|${SRC_PORT}|)\s+(host\s+${DST_HOST}|${DST_ANY}|${DST_NETWORK}\s+${DST_WILDCARD})(\s+${DST_PORT_MATCH}\s+|)(${DST_PORT_RANGE_START}\s+${DST_PORT_RANGE_END}|${DST_PORT}|) -> Record
   ^\s+${ACTION}\s+${STANDARD_HOST}\s* -> Record
   ^!\s*
   ^$$
