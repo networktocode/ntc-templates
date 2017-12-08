@@ -105,5 +105,6 @@ access-list 99 permit 10.16.5.20
 !
 ip access-list standard stdacl
  permit 10.1.1.1
+ip access-list extended test2
 
 end
