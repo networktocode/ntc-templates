@@ -29,7 +29,7 @@ Value TIME (\S+)
 
 Start
   # Clear all data to start new named ACL
-  ^ip\s+access-list -> Continue.Clearall
+  ^(ip\s+|)access-list -> Continue.Clearall
   # Record new named ACL; the record is required if a named ACL does not have any explicit policy entries.
   ^ip\s+access-list\s+${ACL_TYPE}\s+${ACL_NAME}\s* -> Record
   # Record named ACL Extended entry
