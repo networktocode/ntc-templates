@@ -93,18 +93,34 @@ ip access-list extended sample
  permit udp 10.1.6.16 0.0.0.3 host 10.3.139.133 range 13001 13191
  permit udp 10.1.6.24 0.0.0.7 host 10.3.139.133 range 13001 13191
  remark permit sample TCP access
- permit tcp 10.1.6.16 0.0.0.3 host 10.3.139.134 range 13001 13191
- permit tcp 10.1.6.24 0.0.0.7 host 10.3.139.134 range 13001 13191
+ permit tcp 10.1.6.16 0.0.0.3 host 10.3.139.134 range 13001 13191 log time-range test
+ permit tcp 10.1.6.24 0.0.0.7 host 10.3.139.134 range 13001 13191 log-input
  remark allow sample to send PIM-Join
  permit pim host 10.1.6.20 host 224.0.0.1
  deny   ip any any
  permit ip 10.0.0.0 0.255.0.255 any
 ip access-list extended test
+access-list 97 remark this is a remark
+access-list 97 deny   10.1.0.1 0.0.255.0 log
+access-list 97 permit any
+access-list 98 permit 10.16.5.19
+access-list 98 permit 10.16.5.20
 access-list 99 permit 10.16.5.19
 access-list 99 permit 10.16.5.20
+access-list 199 permit tcp 10.16.5.19 0.0.0.0 any eq 80
+access-list 199 permit udp any any eq 1000
+access-list 101 permit tcp any host 10.1.1.1 eq www
+access-list 101 permit tcp any host 10.1.1.1 eq 443 log
+access-list 101 remark this is a remark
+access-list 101 permit ahp any any log-input
+access-list 101 permit tcp host 10.1.1.1 eq ftp any eq tacacs log time-range test
+
 !
 ip access-list standard stdacl
  permit 10.1.1.1
 ip access-list extended test2
+
+access-list 198 permit tcp 10.16.5.19 0.0.0.0 any eq 80
+access-list 198 permit udp any any eq 1000
 
 end
