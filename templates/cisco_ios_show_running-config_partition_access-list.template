@@ -3,10 +3,6 @@ Value Filldown ACL_TYPE (standard|extended)
 Value COMMENT (.*)
 Value ACTION (permit|deny)
 Value PROTOCOL ([a-z]+)
-Value STANDARD_HOST (\d+\.\d+\.\d+\.\d+)
-Value STANDARD_ANY (any)
-Value STANDARD_NETWORK (\d+\.\d+\.\d+\.\d+)
-Value STANDARD_WILDCARD (\d+\.\d+\.\d+\.\d+)
 Value SRC_HOST (\d+\.\d+\.\d+\.\d+)
 Value SRC_ANY (any)
 Value SRC_NETWORK (\d+\.\d+\.\d+\.\d+)
@@ -35,13 +31,13 @@ Start
   # Record named ACL Extended entry
   ^\s+${ACTION}\s+${PROTOCOL}\s+(host\s+${SRC_HOST}|${SRC_ANY}|${SRC_NETWORK}\s+${SRC_WILDCARD})(\s+${SRC_PORT_MATCH}\s+(${SRC_PORT_RANGE_START}\s+${SRC_PORT_RANGE_END}|${SRC_PORT})|)\s+(host\s+${DST_HOST}|${DST_ANY}|${DST_NETWORK}\s+${DST_WILDCARD})(\s+${DST_PORT_MATCH}\s+(${DST_PORT_RANGE_START}\s+${DST_PORT_RANGE_END}|${DST_PORT})|)(\s+${LOG}|)(\s+time-range\s+${TIME}|) -> Record
   # Record named ACL Standard entry
-  ^\s+${ACTION}\s+(${STANDARD_NETWORK}\s+${STANDARD_WILDCARD}|${STANDARD_ANY}|${STANDARD_HOST})(\s+${LOG}|)(\s+time-range\s+${TIME}|)\s* -> Record
+  ^\s+${ACTION}\s+(${SRC_NETWORK}\s+${SRC_WILDCARD}|${SRC_ANY}|${SRC_HOST})(\s+${LOG}|)(\s+time-range\s+${TIME}|)\s* -> Record
   # Record named ACL Remark
   ^\s+remark\s+${COMMENT}\s*
   # Record numbered ACL Extended entry
   ^access-list\s+${ACL_NAME}\s+${ACTION}\s+${PROTOCOL}\s+(host\s+${SRC_HOST}|${SRC_ANY}|${SRC_NETWORK}\s+${SRC_WILDCARD})(\s+${SRC_PORT_MATCH}\s+(${SRC_PORT_RANGE_START}\s+${SRC_PORT_RANGE_END}|${SRC_PORT})|)\s+(host\s+${DST_HOST}|${DST_ANY}|${DST_NETWORK}\s+${DST_WILDCARD})(\s+${DST_PORT_MATCH}\s+(${DST_PORT_RANGE_START}\s+${DST_PORT_RANGE_END}|${DST_PORT})|)(\s+${LOG}|)(\s+time-range\s+${TIME}|)\s* -> Record
   # Record numbered ACL Standard entry
-  ^access-list\s+${ACL_NAME}\s+${ACTION}\s+(${STANDARD_NETWORK}\s+${STANDARD_WILDCARD}|${STANDARD_ANY}|${STANDARD_HOST})(\s+${LOG}|)(\s+time-range\s+${TIME}|)\s* -> Record
+  ^access-list\s+${ACL_NAME}\s+${ACTION}\s+(${SRC_NETWORK}\s+${SRC_WILDCARD}|${SRC_ANY}|${SRC_HOST})(\s+${LOG}|)(\s+time-range\s+${TIME}|)\s* -> Record
   # Record numerd ACL Remark
   ^access-list\s+${ACL_NAME}\s+remark\s+${COMMENT}\s* -> Record
   # Catch all unuseful raw data
