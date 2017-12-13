@@ -1,6 +1,6 @@
-Value DESTINATION_ADDRESS (\w+.\w+.\w+)
+Value DESTINATION_ADDRESS ([0-9a-f]{4}\.[0-9a-f]{4}\.[0-9a-f]{4})
 Value TYPE (\w+)
-Value VLAN (\w+)
+Value VLAN (\d{1,4})
 Value DESTINATION_PORT (\S+)
 
 Start
@@ -20,4 +20,4 @@ TYPE3
 
 TYPE4
   ^\s+${VLAN}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+${DESTINATION_PORT} -> Record
-
+  
