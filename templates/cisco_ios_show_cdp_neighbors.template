@@ -1,15 +1,15 @@
 Value NEIGHBOR (\S+)
 Value LOCAL_INTERFACE (\S+\s\S+)
-Value CAPABILITY (([A-Z]\s)*?[A-Z]??)
+Value CAPABILITY (([A-Z]\s)*?[A-Z]?)
 Value PLATFORM (\S+\s\S+|\S+)
 Value NEIGHBOR_INTERFACE (\S+\s\S+)
-·
+
 Start
   ^Device.*ID -> CDP
-·
+
 CDP
+  ^${NEIGHBOR}$$ -> CDP2
   ^${NEIGHBOR}\s+${LOCAL_INTERFACE}\s+\d+\s+${CAPABILITY}\s\s+${PLATFORM}\s+${NEIGHBOR_INTERFACE} -> Record
-  ^${NEIGHBOR} -> CDP2
-·
+
 CDP2
   ^\s+${LOCAL_INTERFACE}\s+\d+\s+${CAPABILITY}\s\s+${PLATFORM}\s+${NEIGHBOR_INTERFACE} -> Record CDP
