@@ -84,7 +84,8 @@ cisco_asa_show_route.template, .*, cisco_asa, sh[[ow]] ro[[ute]]
 cisco_asa_show_name.template, .*, cisco_asa, sh[[ow]] nam[[e]]
 cisco_asa_dir.template, .*, cisco_asa, dir
 
-cisco_ios_show_capability_feature_routing.template,  .*, cisco_ios, sh[[ow]] cap[[ability]] f[[eature]] r[[outing]]
+cisco_ios_show_running-config_partition_access-list.template, .*, cisco_ios, sh[[ow]] ru[[nning-config]] p[[artition]] a[[ccess-list]]
+cisco_ios_show_capability_feature_routing.template, .*, cisco_ios, sh[[ow]] cap[[ability]] f[[eature]] r[[outing]]
 cisco_ios_show_authentication_sessions.template, .*, cisco_ios, show authen[[tication]] ses[[sions]]
 cisco_ios_show_ip_ospf_interface_brief.template, .*, cisco_ios, sh[[ow]] ip ospf int[[erface]]
 cisco_ios_show_environment_power_all.template, .*, cisco_ios, sh[[ow]] envi[[ronment]] p[[ower]] a[[ll]]
