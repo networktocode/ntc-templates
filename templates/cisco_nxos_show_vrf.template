@@ -8,4 +8,5 @@ Start
 
 Start_record
   ^${NAME}\s+${ID}\s+${STATE}\s+${REASON} -> Record
-
+  ^\s+$$
+  ^.* -> Error "LINE NOT FOUND"
