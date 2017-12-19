@@ -7,7 +7,7 @@ Value NTFY ([TF])
 Value PORT (\S+)
 
 Start
-  ^VLAN\s+MAC\s+Address\s+Type\s+age\s+Secure\s+NTFY\s+Ports -> Start_record
+  ^\s+VLAN\s+MAC\s+Address\s+Type\s+age\s+Secure\s+NTFY\s+Ports -> Start_record
 
 Start_record
   ^.*\s${VLAN}\s+${MAC}\s+${TYPE}\s+${AGE}\s+${SECURE}\s+${NTFY}\s+${PORT} -> Record
