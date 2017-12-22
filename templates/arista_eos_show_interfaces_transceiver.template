@@ -11,7 +11,8 @@ Start
 
 Begin
   ^${PORT}\s+${TEMP}\s+${VOLTAGE}\s+${BIAS_CURRENT}\s+${TX_POWER}\s+${RX_POWER}\s+(\S+ ago|N/A) -> Record
-  ^\s*$$
-  ^$$ -> Error "LINE NOT FOUND"
+  ^\s+$$
+  ^$$
+  ^.* -> Error "LINE NOT FOUND"
   
 EOF
