@@ -162,6 +162,7 @@ cisco_xr_show_configuration_commit_list.template, .*, cisco_xr, sh[[ow]] conf[[i
 cisco_xr_show_dhcp_ipv4_proxy_binding.template, .*, cisco_xr, sh[[ow]] dh[[cp]] ipv4 p[[roxy]] b[[inding]]
 cisco_xr_show_mpls_ldp_neighbor_brief.template, .*, cisco_xr, sh[[ow]] mp[[ls]] ld[[p]] neigh[[bor]] br[[ief]]
 cisco_xr_show_cdp_neighbors_detail.template, .*, cisco_xr, sh[[ow]] c[[dp]] neig[[hbors]] det[[ail]]
+cisco_xr_show_controllers_HundredGigE0.template, .*, cisco_xr, sh[[ow]] contr[[ollers]] (\S+)
 cisco_xr_show_redundancy_summary.template, .*, cisco_xr, sh[[ow]] redun[[dancy]] summ[[ary]]
 cisco_xr_show_interface_brief.template, .*, cisco_xr, sh[[ow]] int[[erface]] br[[ief]]
 cisco_xr_admin_show_platform.template, .*, cisco_xr, adm[[in]] sh[[ow]] pla[[tform]]
