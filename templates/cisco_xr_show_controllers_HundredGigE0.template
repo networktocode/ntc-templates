@@ -21,5 +21,8 @@ Start
   ^\s+Transceiver Temp:\s+${TEMPERATURE_VALUE}
   ^\s+Transceiver Voltage:\s+${VOLTAGE_VALUE}
   ^\s+${LANE}\s+${WAVELENGTH}\s+${TX_VALUE_DBM}\s+${TX_VALUE_MW}\s+${RX_VALUE_DBM}\s+${RX_VALUE_MW}\s+(\S+|\s+) -> Record
+  ^\s+$$
+  ^$$
+  ^.* -> Error "LINE NOT FOUND"
   
 EOF
