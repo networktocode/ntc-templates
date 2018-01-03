@@ -25,14 +25,14 @@
 
       - name: SET FACT FOR ROOT DIR
         set_fact:
-          root_directory: "{{ root_dir | default('..') }}"
-
+          root_directory: "/home/ken/github/ntc-templates"
+      - debug: msg="{{ root_directory }}/templates/"
       - name: OFFLINE NTC SHOW COMMAND
         ntc_show_command:
           connection: "offline"
           file: "{{ root_directory }}/tests/{{ os }}/{{ command_dash }}/{{ os }}_{{ command_dash}}{{ num | default('') }}.raw"
           platform: '{{ os }}'
-          command: '{{ command }}'
+          command: 'show controllers hundredgige all'
           template_dir: '{{ root_directory }}/templates/'
         register: "value"
 
