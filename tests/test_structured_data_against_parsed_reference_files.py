@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 """Run tests against all the *.raw files."""
 import glob
 import pytest
