@@ -1,8 +1,8 @@
 """ntc_templates.parse."""
 import os
 import sys
-from textfsm.clitable import CliTableError
-import textfsm.clitable as clitable
+from clitable import CliTableError
+import clitable as clitable
 
 
 def _get_template_dir():
