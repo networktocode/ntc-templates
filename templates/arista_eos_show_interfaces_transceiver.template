@@ -1,12 +1,17 @@
-Value PORT (\S+\d+\S+)
-Value TEMP (\d+.\d+|N\/A)
-Value VOLTAGE (\d+.\d+|N\/A)
-Value BIAS_CURRENT (\d+.\d+|N\/A)
-Value TX_POWER (-\d+.\d+|\d+.\d+|N\/A)
-Value RX_POWER (-\d+.\d+|\d+.\d+|N\/A)
-
+Value PORT (\S+)
+Value TEMP (\S+)
+Value VOLTAGE (\S+)
+Value BIAS_CURRENT (\S+)
+Value TX_POWER (\S+)
+Value RX_POWER (\S+)
 
 Start
-  ^${PORT}\s+${TEMP}\s+${VOLTAGE}\s+${BIAS_CURRENT}\s+${TX_POWER}\s+${RX_POWER} -> Record
+  ^---- -> Begin
 
+Begin
+  ^${PORT}\s+${TEMP}\s+${VOLTAGE}\s+${BIAS_CURRENT}\s+${TX_POWER}\s+${RX_POWER}\s+(\S+ ago|N/A) -> Record
+  ^\s+$$
+  ^$$
+  ^.* -> Error "LINE NOT FOUND"
+  
 EOF
