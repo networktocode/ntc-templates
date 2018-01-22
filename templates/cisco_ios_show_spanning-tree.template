@@ -8,5 +8,5 @@ Value PORT_ID (\w+)
 Value TYPE (.*)
 
 Start
-  ^VLAN(0*)?${VLAN_ID}
+  ^VLAN0*${VLAN_ID}
   ^${INTERFACE}\s+${ROLE}\s+${STATUS}\s+${COST}\s+${PORT_PRIORITY}.${PORT_ID}\s+${TYPE} -> Record

@@ -1,0 +1,21 @@
+---
+parsed_sample:
+
+- cost: '19'                   
+  interface: Gi1/0/48
+  port_id: '48' 
+  port_priority: '128'
+  role: Desg
+  status: FWD
+  type: P2p Edge
+  vlan_id: '1000'
+
+- cost: '19'
+  interface: Gi1/0/48
+  port_id: '48'
+  port_priority: '128'
+  role: Desg  
+  status: FWD
+  type: P2p Edge
+  vlan_id: '1001' 
+
