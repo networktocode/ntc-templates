@@ -11,8 +11,7 @@
       private: no
 
   vars:
-    top_dir: "{{ lookup('env', 'PWD') }}"
-    TEST_DIR: "{{ top_dir }}/tests"
+    TEST_DIR: "{{ playbook_dir }}/tests"
     platform: "{{ template_name.split('_')[0:2] | join('_') }}"
     command_variable: "{{ template_name.split(platform + '_') | last }}"
     command: "{{ command_variable.split('_') | join(' ') }}"
@@ -25,7 +24,7 @@
       file: "{{ item }}"
       platform: "{{ platform }}"
       command: "{{ command }}"
-      template_dir: "{{ top_dir }}/templates"
+      template_dir: "{{ playbook_dir }}/templates"
     with_fileglob:
       - "{{ TEST_DIR }}/{{ platform }}/{{ command_variable }}/{{ template_name }}*.raw"
     register: ntc_result

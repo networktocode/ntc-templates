@@ -1,0 +1,32 @@
+
+Flags: * - Adjacencies learnt on non-active FHRP router
+       + - Adjacencies synced via CFSoE
+       # - Adjacencies Throttled for Glean
+       D - Static Adjacencies attached to down interface
+
+IP ARP Table for all contexts
+Total number of entries: 22
+Address         Age       MAC Address     Interface
+1.1.1.2         00:00:57  3c60.f40e.f9c3  Ethernet1/41
+1.0.11.2        00:01:02  3c60.f40e.f9c4  Ethernet1/47
+10.3.1.101      00:06:06  d46d.5031.88b0  mgmt0
+10.3.1.102      00:18:18  e0ac.b16b.e940  mgmt0
+10.3.1.104      00:17:17  e5ac.b16c.aac8  mgmt0
+10.3.1.105      00:13:08  d46d.503c.beb0  mgmt0
+10.3.0.20       00:15:11  487b.6bad.7b36  mgmt0
+10.3.0.250      00:14:56  0000.0c9f.fa14  mgmt0
+10.3.0.251      00:07:08  03c5.a4e8.c342  mgmt0
+10.3.0.252      00:14:14  02c5.a4ea.56c2  mgmt0
+192.168.10.12   00:00:57  8c60.0012.0012  Vlan10
+10.45.69.110    00:09:49  70e4.225a.5e6a  Ethernet1/1.2151
+10.45.69.106    00:00:05  d46d.501e.2a92  Ethernet1/2.2151
+10.225.19.113   00:00:57  8c60.f40e.f9c3  Vlan2051
+10.254.254.113  00:00:57  8b60.f40e.f9c3  Vlan2003
+10.225.19.110   00:09:51  7ee4.225a.5e6a  Ethernet1/1.2051
+10.225.19.106   00:00:05  a16d.501e.2a92  Ethernet1/2.2051
+10.254.254.106  00:00:05  a16d.501e.2a92  Ethernet1/2.2003
+10.254.254.110  00:09:50  1ee4.125a.5e6a  Ethernet1/1.2003
+10.15.154.110   00:09:50  1ee4.125a.5e6a  Ethernet1/1.2103
+10.15.154.106   00:00:06  d46d.301e.2a92  Ethernet1/2.2103
+10.215.51.250      -      0000.0c9f.f9d3  Vlan2515
+10.5.6.10       00:00:16  INCOMPLETE      Vlan1425
