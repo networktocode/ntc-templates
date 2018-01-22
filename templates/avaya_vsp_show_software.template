@@ -9,7 +9,7 @@ Start
   ^\s+software releases in ${RELEASE_LOCATION}
   ^${BACKUP_RELEASE}\s+\(Backup Release\)
   ^${PRIMARY_RELEASE}\s+\(Primary Release\)
-  ^Auto Commit     :\s+${AUTO_COMMIT}
-  ^Commit Timeout  :\s+${COMMIT_TIMEOUT}
+  ^Auto Commit\s+:\s+${AUTO_COMMIT}
+  ^Commit Timeout\s+:\s+${COMMIT_TIMEOUT}
 
 Done
