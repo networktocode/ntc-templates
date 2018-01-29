@@ -1,0 +1,15 @@
+Value Required NEIGHBOR (\S+)
+Value Required LOCAL_INTERFACE (\S+)
+Value Required NEIGHBOR_INTERFACE (\S+)
+
+Start
+  ^Device.*ID -> LLDP
+
+LLDP
+  ^${NEIGHBOR}\s+${LOCAL_INTERFACE}\s+\d+\s+(.+?)\s+${NEIGHBOR_INTERFACE}$$ -> Record
+  ^${NEIGHBOR}
+  ^\s+${LOCAL_INTERFACE}\s+\d+\s+(.*?)\s+${NEIGHBOR_INTERFACE} -> Record
+  ^Total entries
+  ^\s+$$
+  ^$$
+  ^.* -> Error "LINE NOT FOUND"
