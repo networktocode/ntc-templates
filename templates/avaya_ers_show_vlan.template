@@ -1,11 +1,11 @@
 Value VLANID (\d+)
-Value VLANNAME (\S+(\s\S+)*)
-Value VLANTYPE (\w+)
-Value VLANPROTOCOL (\w+)
-Value VLANPID (\w+)
-Value VLANACTIVE (\w+)
-Value VLANIVLSVL (\w+)
-Value VLANMGMT (\w+)
+Value VLANNAME (\S.*?)
+Value VLANTYPE (\S+)
+Value VLANPROTOCOL (\S+)
+Value VLANPID (\S+)
+Value VLANACTIVE (\S+)
+Value VLANIVLSVL (\S+)
+Value VLANMGMT (\S+)
 Value List VLANPORTMEMBERS (\S+)
 
 Start
