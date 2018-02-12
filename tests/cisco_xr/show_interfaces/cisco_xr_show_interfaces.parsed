@@ -40,6 +40,19 @@ parsed_sample:
     link_status: up
     mtu: '1500'
     speed: ''
+-   address: 5087.8966.5329
+    admin_state: administratively down
+    bandwidth: 0 Kbit
+    bia: 5087.8966.5329
+    description: $DCI
+    duplex: ''
+    encapsulation: ARPA
+    hardware_type: Management
+    interface: MgmtEth0/RSP0/CPU0/0
+    ip_address: ''
+    link_status: administratively down
+    mtu: '1514'
+    speed: ''
 -   address: f09e.6340.1420
     admin_state: up
     bandwidth: 1000000 Kbit
@@ -78,4 +91,17 @@ parsed_sample:
     ip_address: ''
     link_status: up
     mtu: '9216'
+    speed: 10000Mb/s
+-   address: 5087.8964.53b4
+    admin_state: administratively down
+    bandwidth: 10000000 Kbit
+    bia: 5087.8964.53b4
+    description: ''
+    duplex: Full-duplex
+    encapsulation: ARPA
+    hardware_type: TenGigE
+    interface: TenGigE0/3/0/4
+    ip_address: ''
+    link_status: administratively down
+    mtu: '1514'
     speed: 10000Mb/s
