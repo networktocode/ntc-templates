@@ -7,13 +7,26 @@ Value NTFY ([TF])
 Value PORT (\S+)
 
 Start
-  ^\s+VLAN\s+MAC\s+Address\s+Type\s+age\s+Secure\s+NTFY\s+Ports -> Start_record
+  ^\s+VLAN\s+MAC\s+Address\s+Type\s+age\s+Secure\s+NTFY\s+Ports -> TYPE1
+  ^VLAN\s+MAC Address\s+Type\s+Age\s+Port -> TYPE2
 
-Start_record
+TYPE1
   ^.*\s${VLAN}\s+${MAC}\s+${TYPE}\s+${AGE}\s+${SECURE}\s+${NTFY}\s+${PORT} -> Record
   ^\s+$$
   ^$$
   ^[\-| |\+]+$$
+  ^Legend:
+  ^.*\* - primary entry
+  ^.*age - seconds since first seen
+  ^\s+VLAN\s+MAC\s+Address\s+Type\s+age\s+Secure\s+NTFY\s+Ports
   ^.* -> Error "LINE NOT FOUND"
 
-
+TYPE2
+  ^${VLAN}\s+${MAC}\s+${TYPE}\s+${AGE}\s+${PORT} -> Record
+  ^\s+$$
+  ^$$
+  ^[\-| |\+]+$$
+  ^VLAN\s+MAC Address\s+Type\s+Age\s+Port
+  ^Unknown Key ID
+  ^Total MAC Addresses
+  ^.* -> Error "LINE NOT FOUND"

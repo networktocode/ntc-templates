@@ -1,4 +1,4 @@
-Value MAC (\w+.\w+.\w+)
+Value MAC (\w+\.\w+\.\w+)
 Value TYPE (\w+)
 Value VLAN (\w+)
 Value PORT (\S+)
@@ -24,16 +24,17 @@ TYPE2
   ^.* -> Error "LINE NOT FOUND"
 
 TYPE3
-  ^\s+${VLAN}\s+${MAC}\s+${TYPE}\s+\S+\s+${PORT} -> Record
+  ^\s*${VLAN}\s+${MAC}\s+${TYPE}\s+\S+\s+${PORT} -> Record
   ^\s+$$
   ^$$
   ^[\-| |\+]+$$
   ^.* -> Error "LINE NOT FOUND"
 
 TYPE4
-  ^\s+${VLAN}\s+${MAC}\s+${TYPE}\s+${PORT} -> Record
+  ^\s*${VLAN}\s+${MAC}\s+${TYPE}\s+${PORT} -> Record
   ^\s+$$
   ^$$
   ^[\-| |\+]+$$
+  ^Total Mac Addresses for this criterion
   ^.* -> Error "LINE NOT FOUND"
 
