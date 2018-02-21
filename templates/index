@@ -214,6 +214,8 @@ juniper_junos_show_isis_adjacency.template, .*, juniper_junos, sh[[ow]] is[[is]]
 juniper_junos_show_ospf_neighbor.template, .*, juniper_junos, sh[[ow]] ospf n[[eighbor]]
 juniper_junos_show_interfaces.template, .*, juniper_junos, sh[[ow]] inte[[rfaces]]
 
+juniper_screenos_get_route.template, .*, juniper_screenos, get route
+
 paloalto_panos_show_running_security-policy.template, .*, paloalto_panos, sh[[ow]] runn[[ing]] security[[-policy]]
 paloalto_panos_show_high-availability_all.template, .*, paloalto_panos, sh[[ow]] high[[-availability]] all
 paloalto_panos_show_interface_hardware.template, .*, paloalto_panos, sh[[ow]] int[[erface]] hard[[ware]]
