@@ -11,7 +11,7 @@ Value VSYS (\w+)
 
 Start
   # Match the VR
-  ^IPv\d\s+Dest-routes\s+for\s+<${VR}>
+  ^IPv\d\s+Dest-Routes\s+for\s+<${VR}>
   # Match route line
   ^${BEST}\s+${ID}\s+${PREFIX}\s+${OUTINTERFACE}\s+${NEXTHOP}\s+${PROTOCOL}\s+${PREF}\s+${METRIC}\s+${VSYS} -> Record
  
