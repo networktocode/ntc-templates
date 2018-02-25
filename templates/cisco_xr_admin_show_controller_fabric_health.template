@@ -141,8 +141,6 @@ RackHealth
   ^\s+3\s+\S+\s+${PLANE_ID_3_SFE_ASICS_TOTAL}/${PLANE_ID_3_SFE_ASICS_UP}/${PLANE_ID_3_SFE_ASICS_DOWN}\s+${PLANE_ID_3_FAB_ID_REACHABLE}\s+?
   ^\s+4\s+\S+\s+${PLANE_ID_4_SFE_ASICS_TOTAL}/${PLANE_ID_4_SFE_ASICS_UP}/${PLANE_ID_4_SFE_ASICS_DOWN}\s+${PLANE_ID_4_FAB_ID_REACHABLE}\s+?
   ^\s+5\s+\S+\s+${PLANE_ID_5_SFE_ASICS_TOTAL}/${PLANE_ID_5_SFE_ASICS_UP}/${PLANE_ID_5_SFE_ASICS_DOWN}\s+${PLANE_ID_5_FAB_ID_REACHABLE}\s+? -> Record
-  #^\s+-.+ -> Record
-  #^${TEST3} -> Record
   ^\s+-.+
   ^\s+$$
   ^$$
