@@ -1,0 +1,13 @@
+Value Required ADDRESS (\d+\.\d+\.\d+\.\d+)
+Value Required AGE (\S+)
+Value Required MAC (\S+)
+Value INTERFACE (\S+)
+
+Start
+  ^Address\s+Age\s+MAC Address\s+Interface -> Start_record
+
+Start_record
+  ^${ADDRESS}\s+${AGE}\s+${MAC}\s+${INTERFACE} -> Record
+  ^\s+$$
+  ^$$
+  ^.* -> Error "LINE NOT FOUND"

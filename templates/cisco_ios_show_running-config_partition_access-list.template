@@ -1,0 +1,48 @@
+Value Required,Filldown ACL_NAME (\S+)
+Value Filldown ACL_TYPE (standard|extended)
+Value COMMENT (.*)
+Value ACTION (permit|deny)
+Value PROTOCOL ([a-z]+)
+Value SRC_HOST (\d+\.\d+\.\d+\.\d+)
+Value SRC_ANY (any)
+Value SRC_NETWORK (\d+\.\d+\.\d+\.\d+)
+Value SRC_WILDCARD (\d+\.\d+\.\d+\.\d+)
+Value SRC_PORT_MATCH (eq|range|lt|gt)
+Value SRC_PORT ((?<!range\s)\S+)
+Value SRC_PORT_RANGE_START ((?<!range\s)\S+)
+Value SRC_PORT_RANGE_END (\S+)
+Value DST_HOST (\d+\.\d+\.\d+\.\d+)
+Value DST_ANY (any)
+Value DST_NETWORK (\d+\.\d+\.\d+\.\d+)
+Value DST_WILDCARD (\d+\.\d+\.\d+\.\d+)
+Value DST_PORT_MATCH (eq|range|lt|gt)
+Value DST_PORT ((?<!range\s)\S+)
+Value DST_PORT_RANGE_START ((?<=range\s)\S+)
+Value DST_PORT_RANGE_END (\S+)
+Value LOG (log-input|log)
+Value TIME (\S+)
+
+
+Start
+  # Clear all data to start new named ACL
+  ^(ip\s+|)access-list -> Continue.Clearall
+  # Record new named ACL; the record is required if a named ACL does not have any explicit policy entries.
+  ^ip\s+access-list\s+${ACL_TYPE}\s+${ACL_NAME}\s* -> Record
+  # Record named ACL Extended entry
+  ^\s+${ACTION}\s+${PROTOCOL}\s+(host\s+${SRC_HOST}|${SRC_ANY}|${SRC_NETWORK}\s+${SRC_WILDCARD})(\s+${SRC_PORT_MATCH}\s+(${SRC_PORT_RANGE_START}\s+${SRC_PORT_RANGE_END}|${SRC_PORT})|)\s+(host\s+${DST_HOST}|${DST_ANY}|${DST_NETWORK}\s+${DST_WILDCARD})(\s+${DST_PORT_MATCH}\s+(${DST_PORT_RANGE_START}\s+${DST_PORT_RANGE_END}|${DST_PORT})|)(\s+${LOG}|)(\s+time-range\s+${TIME}|) -> Record
+  # Record named ACL Standard entry
+  ^\s+${ACTION}\s+(${SRC_NETWORK}\s+${SRC_WILDCARD}|${SRC_ANY}|${SRC_HOST})(\s+${LOG}|)(\s+time-range\s+${TIME}|)\s* -> Record
+  # Record named ACL Remark
+  ^\s+remark\s+${COMMENT}\s*
+  # Record numbered ACL Extended entry
+  ^access-list\s+${ACL_NAME}\s+${ACTION}\s+${PROTOCOL}\s+(host\s+${SRC_HOST}|${SRC_ANY}|${SRC_NETWORK}\s+${SRC_WILDCARD})(\s+${SRC_PORT_MATCH}\s+(${SRC_PORT_RANGE_START}\s+${SRC_PORT_RANGE_END}|${SRC_PORT})|)\s+(host\s+${DST_HOST}|${DST_ANY}|${DST_NETWORK}\s+${DST_WILDCARD})(\s+${DST_PORT_MATCH}\s+(${DST_PORT_RANGE_START}\s+${DST_PORT_RANGE_END}|${DST_PORT})|)(\s+${LOG}|)(\s+time-range\s+${TIME}|)\s* -> Record
+  # Record numbered ACL Standard entry
+  ^access-list\s+${ACL_NAME}\s+${ACTION}\s+(${SRC_NETWORK}\s+${SRC_WILDCARD}|${SRC_ANY}|${SRC_HOST})(\s+${LOG}|)(\s+time-range\s+${TIME}|)\s* -> Record
+  # Record numerd ACL Remark
+  ^access-list\s+${ACL_NAME}\s+remark\s+${COMMENT}\s* -> Record
+  # Catch all unuseful raw data
+  ^(!\s*|$$|Building configuration.*|Current configuration.*|Configuration.*|end.*)
+  # Error out if raw data does not match any above rules.
+  ^.* -> Error "Could not parse line:"
+
+EOF
