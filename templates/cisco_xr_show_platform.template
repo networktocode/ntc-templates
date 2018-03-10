@@ -1,0 +1,10 @@
+Value NODE (\S+)
+Value TYPE (\S+)
+Value STATE ((\S+(\s\S+)*))
+Value CONFIG_STATE (\S+)
+
+Start
+  ^\-+ -> Parse
+
+Parse
+  ^${NODE}\s+${TYPE}\s+${STATE}\s+(${CONFIG_STATE})? -> Record

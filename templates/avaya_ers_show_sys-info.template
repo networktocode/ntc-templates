@@ -1,0 +1,14 @@
+Value MAC_ADDR (\S+)
+Value MODEL ([\S ]*[^ ])
+Value SERIAL (\S+)
+Value SW_VER (\S+)
+Value LICENSE (\S+)
+
+Start
+  ^MAC Address:\s+${MAC_ADDR}
+  ^sysDescr:\s+${MODEL}
+  ^Serial #:\s+${SERIAL}
+  ^Operational Software:\s+\S+\s+SW:${SW_VER}
+  ^Operational license:\s+${LICENSE} software -> Record
+
+Done
