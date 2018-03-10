@@ -1,0 +1,19 @@
+Value Required NODE (.+)
+Value BOOT_PARTITION (\S+)
+Value ACTIVE_PACKAGES (\d+)
+Value List PACKAGES (\S+)
+
+
+Start
+  ^.+UTC -> Nd
+ 
+Nd
+  ^Node\s+${NODE}
+  ^\s+Boot Partition:\s+${BOOT_PARTITION}
+  ^\s+Active Packages:\s+${ACTIVE_PACKAGES} ->  Pack
+  
+Pack  
+  ^\s+${PACKAGES}
+  ^\S? -> Record Nd
+  
+  

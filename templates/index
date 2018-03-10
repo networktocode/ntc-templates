@@ -157,22 +157,31 @@ cisco_nxos_show_vpc.template, .*, cisco_nxos, sh[[ow]] vpc
 
 cisco_wlc_ssh_show_sysinfo.template, .*, cisco_wlc_ssh, sh[[ow]] sysi[[nfo]]
 
+cisco_xr_show_controllers_fia_diagshell_3_ps_location_all.template, .*, cisco_xr, sh[[ow]] controllers fia diags[[hell]] 3 (\S+) loca[[tion]] all
 cisco_xr_show_bgp_vrf_all_ipv4_unicast_summary.template, .*, cisco_xr, sh[[ow]] bg[[p]] v[[rf]] all ip[[v4]] uni[[cast]] summ[[ary]]
+cisco_xr_admin_show_controller_fabric_health.template, .*, cisco_xr, adm[[in]] sh[[ow]] controller fab[[ric]] hea[[lth]]
+cisco_xr_show_install_log_egrep.template, .*, cisco_xr, sh[[ow]] inst[[all]] lo[[g]] | util[[ity]] egr[[ep]] -B 1
+cisco_xr_show_controller_fabric_plane_all.template, .*, cisco_xr, sh[[ow]] controller fab[[ric]] pla[[ne]] all
 cisco_xr_show_configuration_commit_list.template, .*, cisco_xr, sh[[ow]] conf[[iguration]] c[[ommit]] l[[ist]]
-cisco_xr_show_dhcp_ipv4_proxy_binding.template, .*, cisco_xr, sh[[ow]] dh[[cp]] ipv4 p[[roxy]] b[[inding]]
 cisco_xr_show_mpls_ldp_neighbor_brief.template, .*, cisco_xr, sh[[ow]] mp[[ls]] ld[[p]] neigh[[bor]] br[[ief]]
+cisco_xr_show_bgp_ipv6_unicast_summary.template, .*, cisco_xr, sh[[ow]] b[[gp]] ipv6 uni[[cast]] sum[[mary]]
+cisco_xr_show_dhcp_ipv4_proxy_binding.template, .*, cisco_xr, sh[[ow]] dh[[cp]] ipv4 p[[roxy]] b[[inding]]
 cisco_xr_show_cdp_neighbors_detail.template, .*, cisco_xr, sh[[ow]] c[[dp]] neig[[hbors]] det[[ail]]
+cisco_xr_admin_show_install_active.template, .*, cisco_xr, adm[[in]] sh[[ow]] inst[[all]] act[[ive]]
 cisco_xr_show_redundancy_summary.template, .*, cisco_xr, sh[[ow]] redun[[dancy]] summ[[ary]]
 cisco_xr_show_interface_brief.template, .*, cisco_xr, sh[[ow]] int[[erface]] br[[ief]]
 cisco_xr_admin_show_platform.template, .*, cisco_xr, adm[[in]] sh[[ow]] pla[[tform]]
-cisco_xr_show_isis_neighbors.template, .*, cisco_xr, sh[[ow]] isis ne[[ighbors]]
+cisco_xr_show_controllers.template, .*, cisco_xr, sh[[ow]] contr[[ollers]] (\S+) phy
 cisco_xr_show_rsvp_neighbors.template, .*, cisco_xr, sh[[ow]] rs[[vp]] neigh[[bors]]
-cisco_xr_show_ospf_neighbor.template, .*, cisco_xr, sh[[ow]] ospf nei[[ghbor]]
+cisco_xr_show_install_active.template, .*, cisco_xr, sh[[ow]] inst[[all]] act[[ive]]
 cisco_xr_show_processes_cpu.template, .*, cisco_xr, sh[[ow]] proc[[esses]] c[[pu]]
+cisco_xr_show_isis_neighbors.template, .*, cisco_xr, sh[[ow]] isis ne[[ighbors]]
 cisco_xr_show_bfd_sessions.template, .*, cisco_xr, sh[[ow]] bf[[d]] sess[[ions]]
 cisco_xr_show_pim_neighbor.template, .*, cisco_xr, sh[[ow]] pi[[m]] neigh[[bor]]
-cisco_xr_show_controllers.template, .*, cisco_xr, sh[[ow]] contr[[ollers]] (\S+) phy
+cisco_xr_show_ospf_neighbor.template, .*, cisco_xr, sh[[ow]] ospf nei[[ghbor]]
 cisco_xr_show_interfaces.template, .*, cisco_xr, sh[[ow]] inte[[rfaces]]
+cisco_xr_show_inventory.template, .*, cisco_xr, sh[[ow]] inve[[ntory]]
+cisco_xr_show_platform.template, .*, cisco_xr, sh[[ow]] pla[[tform]]
 
 dell_force10_show_vlan_brief.template, .*, dell_force10, sh[[ow]] vl[[an]] br[[ief]]
 dell_force10_show_version.template, .*, dell_force10, sh[[ow]] ver[[sion]]

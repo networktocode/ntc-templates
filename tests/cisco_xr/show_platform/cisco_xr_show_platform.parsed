@@ -1,0 +1,285 @@
+---
+
+parsed_sample:
+
+
+- type : 'NC55-36X100G-S'
+  node : '0/0/CPU0'
+  state : 'IOS XR RUN'
+  config_state : 'NSHUT'
+
+
+- type : 'Slice'
+  node : '0/0/NPU0'
+  state : 'UP'
+  config_state : ''
+
+
+- type : 'Slice'
+  node : '0/0/NPU1'
+  state : 'UP'
+  config_state : ''
+
+
+- type : 'Slice'
+  node : '0/0/NPU2'
+  state : 'UP'
+  config_state : ''
+
+
+- type : 'Slice'
+  node : '0/0/NPU3'
+  state : 'UP'
+  config_state : ''
+
+
+- type : 'Slice'
+  node : '0/0/NPU4'
+  state : 'UP'
+  config_state : ''
+
+
+- type : 'Slice'
+  node : '0/0/NPU5'
+  state : 'UP'
+  config_state : ''
+
+
+- type : 'NC55-36X100G-S'
+  node : '0/1/CPU0'
+  state : 'IOS XR RUN'
+  config_state : 'NSHUT'
+
+
+- type : 'Slice'
+  node : '0/1/NPU0'
+  state : 'UP'
+  config_state : ''
+
+
+- type : 'Slice'
+  node : '0/1/NPU1'
+  state : 'UP'
+  config_state : ''
+
+
+- type : 'Slice'
+  node : '0/1/NPU2'
+  state : 'UP'
+  config_state : ''
+
+
+- type : 'Slice'
+  node : '0/1/NPU3'
+  state : 'UP'
+  config_state : ''
+
+
+- type : 'Slice'
+  node : '0/1/NPU4'
+  state : 'UP'
+  config_state : ''
+
+
+- type : 'Slice'
+  node : '0/1/NPU5'
+  state : 'UP'
+  config_state : ''
+
+
+- type : 'NC55-36X100G-S'
+  node : '0/2/CPU0'
+  state : 'IOS XR RUN'
+  config_state : 'NSHUT'
+
+
+- type : 'Slice'
+  node : '0/2/NPU0'
+  state : 'UP'
+  config_state : ''
+
+
+- type : 'Slice'
+  node : '0/2/NPU1'
+  state : 'UP'
+  config_state : ''
+
+
+- type : 'Slice'
+  node : '0/2/NPU2'
+  state : 'UP'
+  config_state : ''
+
+
+- type : 'Slice'
+  node : '0/2/NPU3'
+  state : 'UP'
+  config_state : ''
+
+
+- type : 'Slice'
+  node : '0/2/NPU4'
+  state : 'UP'
+  config_state : ''
+
+
+- type : 'Slice'
+  node : '0/2/NPU5'
+  state : 'UP'
+  config_state : ''
+
+
+- type : 'NC55-36X100G-S'
+  node : '0/3/CPU0'
+  state : 'IOS XR RUN'
+  config_state : 'NSHUT'
+
+
+- type : 'Slice'
+  node : '0/3/NPU0'
+  state : 'UP'
+  config_state : ''
+
+
+- type : 'Slice'
+  node : '0/3/NPU1'
+  state : 'UP'
+  config_state : ''
+
+
+- type : 'Slice'
+  node : '0/3/NPU2'
+  state : 'UP'
+  config_state : ''
+
+
+- type : 'Slice'
+  node : '0/3/NPU3'
+  state : 'UP'
+  config_state : ''
+
+
+- type : 'Slice'
+  node : '0/3/NPU4'
+  state : 'UP'
+  config_state : ''
+
+
+- type : 'Slice'
+  node : '0/3/NPU5'
+  state : 'UP'
+  config_state : ''
+
+
+- type : 'NC55-36X100G-S'
+  node : '0/4/CPU0'
+  state : 'IOS XR RUN'
+  config_state : 'NSHUT'
+
+
+- type : 'Slice'
+  node : '0/4/NPU0'
+  state : 'UP'
+  config_state : ''
+
+
+- type : 'Slice'
+  node : '0/4/NPU1'
+  state : 'UP'
+  config_state : ''
+
+
+- type : 'Slice'
+  node : '0/4/NPU2'
+  state : 'UP'
+  config_state : ''
+
+
+- type : 'Slice'
+  node : '0/4/NPU3'
+  state : 'UP'
+  config_state : ''
+
+
+- type : 'Slice'
+  node : '0/4/NPU4'
+  state : 'UP'
+  config_state : ''
+
+
+- type : 'Slice'
+  node : '0/4/NPU5'
+  state : 'UP'
+  config_state : ''
+
+
+- type : 'NC55-RP(Active)'
+  node : '0/RP0/CPU0'
+  state : 'IOS XR RUN'
+  config_state : 'NSHUT'
+
+
+- type : 'NC55-5516-FC'
+  node : '0/FC0'
+  state : 'OPERATIONAL'
+  config_state : 'NSHUT'
+
+
+- type : 'NC55-5516-FC'
+  node : '0/FC1'
+  state : 'OPERATIONAL'
+  config_state : 'NSHUT'
+
+
+- type : 'NC55-5516-FC'
+  node : '0/FC2'
+  state : 'OPERATIONAL'
+  config_state : 'NSHUT'
+
+
+- type : 'NC55-5516-FC'
+  node : '0/FC3'
+  state : 'OPERATIONAL'
+  config_state : 'NSHUT'
+
+
+- type : 'NC55-5516-FC'
+  node : '0/FC4'
+  state : 'OPERATIONAL'
+  config_state : 'NSHUT'
+
+
+- type : 'NC55-5516-FC'
+  node : '0/FC5'
+  state : 'OPERATIONAL'
+  config_state : 'NSHUT'
+
+
+- type : 'NC55-5516-FAN'
+  node : '0/FT0'
+  state : 'OPERATIONAL'
+  config_state : 'NSHUT'
+
+
+- type : 'NC55-5516-FAN'
+  node : '0/FT1'
+  state : 'OPERATIONAL'
+  config_state : 'NSHUT'
+
+
+- type : 'NC55-5516-FAN'
+  node : '0/FT2'
+  state : 'OPERATIONAL'
+  config_state : 'NSHUT'
+
+
+- type : 'NC55-SC'
+  node : '0/SC0'
+  state : 'OPERATIONAL'
+  config_state : 'NSHUT'
+
+
+- type : 'NC55-SC'
+  node : '0/SC1'
+  state : 'OPERATIONAL'
+  config_state : 'NSHUT'
