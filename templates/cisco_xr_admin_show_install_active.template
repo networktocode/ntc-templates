@@ -1,6 +1,6 @@
 Value Required NODE (.+)
 Value ACTIVE_PACKAGES (\d+)
-Value List PACKAGES (.+)
+Value List PACKAGES (\S+)
 
 
 Start
@@ -12,4 +12,4 @@ Nd
   
 Pack  
   ^\s+${PACKAGES}
-  ^\S? -> Record Nd
+  ^\s+? -> Record Nd
