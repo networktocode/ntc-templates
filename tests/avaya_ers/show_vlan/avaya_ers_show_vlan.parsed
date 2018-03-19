@@ -1,0 +1,39 @@
+---
+parsed_sample:
+
+-   active: 'Yes'
+    name: 'VLAN #1'
+    ports: NONE
+    vlan_id: '1'
+-   active: 'Yes'
+    name: Dead_VLAN
+    ports: 17-42,49-50
+    vlan_id: '2'
+-   active: 'Yes'
+    name: Network_Services
+    ports: 5-10,47
+    vlan_id: '17'
+-   active: 'Yes'
+    name: Lab_Mgmt
+    ports: 1,11,13,16,43-46,48
+    vlan_id: '27'
+-   active: 'Yes'
+    name: IoT_Devices
+    ports: 14,48
+    vlan_id: '47'
+-   active: 'Yes'
+    name: Trusted Wifi
+    ports: 3-4,11-13,47
+    vlan_id: '300'
+-   active: 'Yes'
+    name: Untrusted Wifi
+    ports: 11,13,48
+    vlan_id: '301'
+-   active: 'Yes'
+    name: VM Environment
+    ports: 2,15,48
+    vlan_id: '477'
+-   active: 'Yes'
+    name: Native_VLAN
+    ports: NONE
+    vlan_id: '999'
