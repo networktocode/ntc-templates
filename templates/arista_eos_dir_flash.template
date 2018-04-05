@@ -1,3 +1,4 @@
+Value Filldown FILE_SYSTEM (\S+)
 Value PERMISSIONS (\S+)
 Value SIZE (\d+)
 Value DATE_TIME (\S+\s+\d+\s+((\d+)|(\d+:\d+)))
@@ -9,7 +10,10 @@ Start
   ^Directory of\s+${FILE_SYSTEM} -> DIR
 
 DIR
-  ^{PERMISSIONS}\s+{SIZE}\s+{DATE_TIME}\s{NAME} -> Record
-  ^${TOTAL_SIZE}\s+\S+\s+\S+\s+\({TOTAL_FREE}\s+\S+\s+\S+\)
+  ^\s+${PERMISSIONS}\s+${SIZE}\s+${DATE_TIME}\s+${NAME} -> Record
+  ^${TOTAL_SIZE}\s+\S+\s+\S+\s+\(${TOTAL_FREE}\s+\S+\s+\S+\)
+  ^\s+$$
+  ^$$
+  ^.* -> Error "LINE NOT FOUND"
 
 EOF
