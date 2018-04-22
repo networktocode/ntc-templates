@@ -181,6 +181,7 @@ cisco_xr_show_configuration_commit_list.template, .*, cisco_xr, sh[[ow]] conf[[i
 cisco_xr_show_mpls_ldp_neighbor_brief.template, .*, cisco_xr, sh[[ow]] mp[[ls]] ld[[p]] neigh[[bor]] br[[ief]]
 cisco_xr_show_bgp_ipv6_unicast_summary.template, .*, cisco_xr, sh[[ow]] b[[gp]] ipv6 uni[[cast]] sum[[mary]]
 cisco_xr_show_dhcp_ipv4_proxy_binding.template, .*, cisco_xr, sh[[ow]] dh[[cp]] ipv4 p[[roxy]] b[[inding]]
+cisco_xr_admin_show_environment_fan.template, .*, cisco_xr, adm[[in]] sh[[ow]] env[[ironment]] f[[an]]
 cisco_xr_show_cdp_neighbors_detail.template, .*, cisco_xr, sh[[ow]] c[[dp]] neig[[hbors]] det[[ail]]
 cisco_xr_admin_show_install_active.template, .*, cisco_xr, adm[[in]] sh[[ow]] inst[[all]] act[[ive]]
 cisco_xr_show_redundancy_summary.template, .*, cisco_xr, sh[[ow]] redun[[dancy]] summ[[ary]]
@@ -199,6 +200,8 @@ cisco_xr_show_ospf_neighbor.template, .*, cisco_xr, sh[[ow]] ospf nei[[ghbor]]
 cisco_xr_show_interfaces.template, .*, cisco_xr, sh[[ow]] inte[[rfaces]]
 cisco_xr_show_inventory.template, .*, cisco_xr, sh[[ow]] inve[[ntory]]
 cisco_xr_show_platform.template, .*, cisco_xr, sh[[ow]] pla[[tform]]
+cisco_xr_admin_show_vm.template, .*, cisco_xr, adm[[in]] sh[[ow]] vm
+cisco_xr_show_version.template, .*, cisco_xr, sh[[ow]] ver[[sion]]
 
 dell_force10_show_vlan_brief.template, .*, dell_force10, sh[[ow]] vl[[an]] br[[ief]]
 dell_force10_show_version.template, .*, dell_force10, sh[[ow]] ver[[sion]]
