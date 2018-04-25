@@ -1,5 +1,5 @@
 Value Required port (\S+)
-Value Filldown type (Temperature|Voltage|Current|Tx\sPower|Rx\sPower)
+Value Filldown type ((\S|\s)+?)
 Value current_value (\S+)
 Value high_alarm_threshold (\S+)
 Value high_warn_threshold (\S+)

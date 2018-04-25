@@ -1,10 +1,10 @@
-Value Required sensor (\d+)
-Value description (.+?)
-Value current_value (\d+.?\d?)
+Value Required sensor (\S+)
+Value description ((\s|\S)+?)
+Value current_value (\S+)
 Value setpoint (\S+)
-Value alert_limit (\d+.?\d?)
-Value critical_limit (\d+.?\d?)
-Value Filldown psu (\d+)
+Value alert_limit (\S+)
+Value critical_limit (\S+)
+Value Filldown psu (\S+)
 
 Start
   ^System\stemperature\sstatus\sis

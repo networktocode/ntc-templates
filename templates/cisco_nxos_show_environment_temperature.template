@@ -1,9 +1,9 @@
-Value current_value (\d+.?\d?)
-Value major_threshold (\d+.?\d?)
-Value minor_threshold (\d+.?\d?)
+Value current_value (\d+)
+Value major_threshold (\d+)
+Value minor_threshold (\d+)
 Value status (\S+)
-Value module (\d+)
-Value sensor (.+?)
+Value module (\S+)
+Value sensor ((\s|\S)+?)
 
 Start
   ^Temperature
