@@ -1,0 +1,16 @@
+Value current_value (\d+.?\d?)
+Value major_threshold (\d+.?\d?)
+Value minor_threshold (\d+.?\d?)
+Value status (\S+)
+Value module (\d+)
+Value sensor (.+?)
+
+Start
+  ^Temperature
+  ^-+
+  ^Module\s+Sensor\s+MajorThresh\s+
+  ^(\s+\(Celsius\))+
+  ^${module}\s+${sensor}\s+${major_threshold}\s+${minor_threshold}\s+${current_value}\s+${status} -> Record
+  ^\s+$$
+  ^$$
+  ^.* -> Error "LINE NOT FOUND"

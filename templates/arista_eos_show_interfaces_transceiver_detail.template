@@ -1,0 +1,31 @@
+Value Required port (\S+)
+Value Filldown type (Temperature|Voltage|Current|Tx\sPower|Rx\sPower)
+Value current_value (\S+)
+Value high_alarm_threshold (\S+)
+Value high_warn_threshold (\S+)
+Value low_alarm_threshold (\S+)
+Value low_warn_threshold (\S+)
+
+Start
+  ^mA:\smilliamperes,\s+
+  ^\+\+\s:\shigh\salarm,\s+
+  ^A2D\sreadouts\s+
+  ^The\sthreshold\svalues\sare\scalibrated\.
+  ^\s+High\sAlarm\s+\S+
+  ^\s+${type}\s+Threshold\s+ -> Values
+  ^\s+${type}\s+Threshold\s+ -> Values
+  ^\s+${type}\s+Threshold\s+ -> Values
+  ^\s+${type}\s+Threshold\s+ -> Values
+  ^\s+${type}\s+Threshold\s+ -> Values
+  ^\s+$$
+  ^$$
+  ^.* -> Error "LINE NOT FOUND"
+  
+Values
+  ^Port\s+\S+
+  ^-+\s+-+\s+-+\s+-+\s+-+\s+-+\s+
+  ^${port}\s+${current_value}\s+${high_alarm_threshold}\s+${high_warn_threshold}\s+${low_alarm_threshold}\s+${low_warn_threshold} -> Record
+  ^\s+High\sAlarm\s+High Warn\s+Low\sAlarm\s+Low\sWarn -> Start
+  ^\s+$$
+  ^$$
+  ^.* -> Error "LINE NOT FOUND"

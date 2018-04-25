@@ -1,0 +1,19 @@
+Value Required sensor (\d+)
+Value description (.+?)
+Value current_value (\d+.?\d?)
+Value setpoint (\S+)
+Value alert_limit (\d+.?\d?)
+Value critical_limit (\d+.?\d?)
+Value Filldown psu (\d+)
+
+Start
+  ^System\stemperature\sstatus\sis
+  ^\s+Alert\s+Critical
+  ^\s+Temp\s+Setpoint\s+
+  ^Sensor\s+Description\s+\(C\)\s+
+  ^-+\s+-+\s+-+\s+-+\s+-+\s+-+
+  ^PowerSupply\s${psu}:
+  ^${sensor}\s+${description}\s+${current_value}\s+\(${setpoint}\)\s+\S+\s+${alert_limit}\s+${critical_limit} -> Record
+  ^\s+$$
+  ^$$
+  ^.* -> Error "LINE NOT FOUND"
