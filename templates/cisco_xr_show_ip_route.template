@@ -1,0 +1,30 @@
+Value Filldown PROTOCOL (\S+)
+Value Filldown NETWORK (\d+\.\d+\.\d+\.\d+)
+Value Filldown MASK (\d+)
+Value DISTANCE (\d+|is)
+Value METRIC (\d+)
+Value TYPE (directly|via)
+Value Required NEXT_HOP (connected|\d+\.\d+\.\d+\.\d+)
+Value INTERFACE (\S+)
+
+Start
+  ^Codes: C - connected, -> Route
+
+Route
+  ^       D - EIGRP, EX
+  ^       N1 - OSPF NSSA
+  ^       E1 - OSPF exte
+  ^       i - ISIS, L1 -
+  ^       ia - IS-IS int
+  ^       U - per-user s
+  ^       A - access/sub
+  ^       M - mobile rou
+  ^Gateway of last resort
+  ^${PROTOCOL}\s+${NETWORK}\/${MASK}\s+(?:\[${DISTANCE}\/${METRIC}\]|is)\s+${TYPE}\s+${NEXT_HOP},\s+(\d+:\d+:\d+),\s+${INTERFACE} -> Record
+  ^\s+(?:\[${DISTANCE}\/${METRIC}\]|is)\s+${TYPE}\s+${NEXT_HOP},\s+(\d+:\d+:\d+),\s+${INTERFACE} -> Record
+  ^${PROTOCOL}\s+${NETWORK}\/${MASK}\s+(?:\[${DISTANCE}\/${METRIC}\]|is)\s+${TYPE}\s+${NEXT_HOP},\s+(\d+:\d+:\d+) -> Record
+  ^\s+(?:\[${DISTANCE}\/${METRIC}\]|is)\s+${TYPE}\s+${NEXT_HOP},\s+(\d+:\d+:\d+) -> Record
+  ^\s+$$
+  ^$$
+  ^.* -> Error "LINE NOT FOUND"
+  

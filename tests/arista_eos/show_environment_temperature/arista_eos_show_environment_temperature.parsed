@@ -1,0 +1,156 @@
+---
+
+parsed_sample:
+
+
+- sensor : '1'
+  description : 'Cpu temp sensor'
+  current_value : '38.5'
+  setpoint : '60'
+  alert_limit : '90'
+  critical_limit : '95'
+  psu : ''
+
+
+- sensor : '2'
+  description : 'Cpu board temp sensor'
+  current_value : '32.0'
+  setpoint : '55'
+  alert_limit : '75'
+  critical_limit : '80'
+  psu : ''
+
+
+- sensor : '3'
+  description : 'Back-panel temp sensor'
+  current_value : '29.4'
+  setpoint : '50'
+  alert_limit : '75'
+  critical_limit : '85'
+  psu : ''
+
+
+- sensor : '4'
+  description : 'Board Sensor'
+  current_value : '32.0'
+  setpoint : 'N/A'
+  alert_limit : '55'
+  critical_limit : '70'
+  psu : ''
+
+
+- sensor : '5'
+  description : 'Front-panel temp sensor'
+  current_value : '27.1'
+  setpoint : 'N/A'
+  alert_limit : '65'
+  critical_limit : '75'
+  psu : ''
+
+
+- sensor : '6'
+  description : 'Trident Bottom Right Outer'
+  current_value : '42.3'
+  setpoint : 'N/A'
+  alert_limit : '100'
+  critical_limit : '110'
+  psu : ''
+
+
+- sensor : '7'
+  description : 'Trident Bottom Left Outer'
+  current_value : '41.2'
+  setpoint : 'N/A'
+  alert_limit : '100'
+  critical_limit : '110'
+  psu : ''
+
+
+- sensor : '8'
+  description : 'Trident Top Left Outer'
+  current_value : '41.2'
+  setpoint : 'N/A'
+  alert_limit : '100'
+  critical_limit : '110'
+  psu : ''
+
+
+- sensor : '9'
+  description : 'Trident Top Right Outer'
+  current_value : '42.3'
+  setpoint : 'N/A'
+  alert_limit : '100'
+  critical_limit : '110'
+  psu : ''
+
+
+- sensor : '10'
+  description : 'Trident Bottom Right Inner'
+  current_value : '40.1'
+  setpoint : 'N/A'
+  alert_limit : '100'
+  critical_limit : '110'
+  psu : ''
+
+
+- sensor : '11'
+  description : 'Trident Bottom Left Inner'
+  current_value : '39.5'
+  setpoint : 'N/A'
+  alert_limit : '100'
+  critical_limit : '110'
+  psu : ''
+
+
+- sensor : '12'
+  description : 'Trident Top Left Inner'
+  current_value : '40.1'
+  setpoint : 'N/A'
+  alert_limit : '100'
+  critical_limit : '110'
+  psu : ''
+
+
+- sensor : '13'
+  description : 'Trident Top Right Inner'
+  current_value : '40.1'
+  setpoint : 'N/A'
+  alert_limit : '100'
+  critical_limit : '110'
+  psu : ''
+
+
+- sensor : '1'
+  description : 'Hotspot temperature sensor'
+  current_value : '34.0'
+  setpoint : '80'
+  alert_limit : '95'
+  critical_limit : '100'
+  psu : '1'
+
+
+- sensor : '2'
+  description : 'Inlet temperature sensor'
+  current_value : '24.0'
+  setpoint : '55'
+  alert_limit : '70'
+  critical_limit : '75'
+  psu : '1'
+
+
+- sensor : '1'
+  description : 'Hotspot temperature sensor'
+  current_value : '33.0'
+  setpoint : '80'
+  alert_limit : '95'
+  critical_limit : '100'
+  psu : '2'
+
+
+- sensor : '2'
+  description : 'Inlet temperature sensor'
+  current_value : '22.0'
+  setpoint : '55'
+  alert_limit : '70'
+  critical_limit : '75'
+  psu : '2'
