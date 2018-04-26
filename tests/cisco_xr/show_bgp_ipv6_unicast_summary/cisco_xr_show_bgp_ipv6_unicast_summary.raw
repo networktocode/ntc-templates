@@ -1,0 +1,33 @@
+Sat Mar 10 07:29:49.578 UTC
+BGP router identifier 10.244.24.41, local AS number 64915
+BGP generic scan interval 60 secs
+Non-stop routing is enabled
+BGP table state: Active
+Table ID: 0xe0800000   RD version: 212775
+BGP main routing table version 212775
+BGP NSR Initial initsync version 9533 (Reached)
+BGP NSR/ISSU Sync-Group versions 0/0
+BGP scan interval 60 secs
+
+BGP is operating in STANDALONE mode.
+
+
+Process       RcvTblVer   bRIB/RIB   LabelVer  ImportVer  SendTblVer  StandbyVer
+Speaker          212775     212775     212775     212775      212775           0
+
+Neighbor        Spk    AS MsgRcvd MsgSent   TblVer  InQ OutQ  Up/Down  St/PfxRcd
+10.52.180.163     0 64915       0       0        0    0    0 00:00:00 Idle
+2603:10b0:111:8000::155
+                  0 64588    3495   27815   212775    0    0 23:47:59        262
+2603:10b0:111:8001::155
+                  0 64588    3490   27815   212775    0    0 23:47:28        262
+2603:10b0:111:8002::155
+                  0 64588    3476   27816   212775    0    0 23:48:28        262
+2603:10b0:111:8003::155
+                  0 64588    3477   19125   212775    0    0 23:46:16        262
+2603:10b0:111:8307::c6
+                  0 64946    2387    1458   212775    0    0 23:44:27        673
+2603:10b0:111:8307::ca
+                  0 64946    2306    1458   212775    0    0 23:44:24        590
+2603:10b0:111:8307::ce
+                  0 64946       0       0        0    0    0 00:00:00 Idle

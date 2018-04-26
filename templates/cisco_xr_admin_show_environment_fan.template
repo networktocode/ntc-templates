@@ -1,0 +1,39 @@
+Value MODULE (0\/(FT|PM)\d)
+Value TYPE (\S+)
+Value List FAN_SPEED (\d+)
+
+Start
+  ^.+UTC
+  ^=+
+  ^\s+Fan speed.+
+  ^Location\s+FRU Type.+FAN_\d
+  ^\s+FAN_.+$$
+  ^-+ -> FM
+  ^\s+$$
+  ^$$
+  ^.* -> Error "LINE NOT FOUND"
+  
+FM
+  ^${MODULE}\s+${TYPE}\s+${FAN_SPEED} -> Continue
+  ^${MODULE}\s+${TYPE}\s+\d+\s+${FAN_SPEED} -> Continue
+  ^${MODULE}\s+${TYPE}\s+\d+\s+\d+\s+${FAN_SPEED} -> Continue
+  ^${MODULE}\s+${TYPE}\s+\d+\s+\d+\s+\d+\s+${FAN_SPEED} -> Continue
+  ^${MODULE}\s+${TYPE}\s+\d+\s+\d+\s+\d+\s+\d+\s+${FAN_SPEED} -> Continue
+  ^${MODULE}\s+${TYPE}\s+\d+\s+\d+\s+\d+\s+\d+\s+\d+\s+${FAN_SPEED}
+  ^\s+${FAN_SPEED} -> Continue
+  ^\s+\d+\s+${FAN_SPEED} -> Continue
+  ^\s+\d+\s+\d+\s+${FAN_SPEED} -> Continue
+  ^\s+\d+\s+\d+\s+\d+\s+${FAN_SPEED} -> Continue
+  ^\s+\d+\s+\d+\s+\d+\s+\d+\s+${FAN_SPEED} -> Continue
+  ^\s+\d+\s+\d+\s+\d+\s+\d+\s+\d+\s+${FAN_SPEED} -> Record
+  ^.*$$ -> PM
+  ^\s+$$
+  ^$$
+  ^.* -> Error "LINE NOT FOUND"
+  
+PM
+  ^${MODULE}\s+${TYPE}\s+${FAN_SPEED} -> Continue
+  ^${MODULE}\s+${TYPE}\s+\d+\s+${FAN_SPEED} -> Record
+  ^\s+$$
+  ^$$
+  ^.* -> Error "LINE NOT FOUND"

@@ -1,0 +1,15 @@
+Value Required NODE (.+)
+Value ACTIVE_PACKAGES (\d+)
+Value List PACKAGES (\S+)
+
+
+Start
+  ^.+UTC -> Nd
+ 
+Nd
+  ^\s+Node\s+${NODE}
+  ^\s+Active Packages:\s+${ACTIVE_PACKAGES} ->  Pack
+  
+Pack  
+  ^\s+${PACKAGES}
+  ^\s+? -> Record Nd

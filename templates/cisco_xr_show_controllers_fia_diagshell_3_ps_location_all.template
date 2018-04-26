@@ -1,0 +1,30 @@
+Value Filldown NODE_ID (\S+)
+Value PORT ((\S+\(\s+\d+\))|\S+\(\d+\))
+Value ENA_LINK (\S+)
+Value SPEED (\S+)
+Value DUPLEX (\S+)
+Value LINK_SCAN (\S+)
+Value AUTO_NEG (\S+)
+Value STP_STATE (\S+)
+Value PAUSE (\S+|RX|TX)
+Value DISCARD (\S+)
+Value LRN_OPS (\S+)
+Value INTERFACE (\S+)
+Value Required MAX_FRAME (\d+)
+Value LOOPBACK (\S+)
+
+Start
+  ^.+UTC -> Node
+  
+Node
+  ^Node ID:\s+${NODE_ID}
+  ^\s+ena.+loop
+  ^\s+port.+back -> Ports
+  
+Ports
+  ^Node ID:\s+${NODE_ID} -> Continue
+  ^\s+${PORT}\s+${ENA_LINK}\s+${SPEED}\s+${DUPLEX}\s+${LINK_SCAN}\s+${AUTO_NEG}\s+${STP_STATE}\s+${PAUSE}\s+${DISCARD}\s+${LRN_OPS}\s+${INTERFACE}\s+${MAX_FRAME}\s+${LOOPBACK} -> Record
+  ^\s+${PORT}\s+${ENA_LINK}\s+${SPEED}\s+${DUPLEX}\s+${LINK_SCAN}\s+${AUTO_NEG}\s+${STP_STATE}\s+${PAUSE}\s+${DISCARD}\s+${LRN_OPS}\s+${INTERFACE}\s+${MAX_FRAME} -> Record
+  ^\s+${PORT}\s+${ENA_LINK}\s+${SPEED}\s+${DUPLEX}\s+${LINK_SCAN}\s+${AUTO_NEG}\s+${STP_STATE}\s+${DISCARD}\s+${LRN_OPS}\s+${INTERFACE}\s+${MAX_FRAME}\s+${LOOPBACK} -> Record
+  ^\s+${PORT}\s+${ENA_LINK}\s+${SPEED}\s+${DUPLEX}\s+${LINK_SCAN}\s+${AUTO_NEG}\s+${STP_STATE}\s+${DISCARD}\s+${LRN_OPS}\s+${INTERFACE}\s+${MAX_FRAME}\s+ -> Record
+  ^\s+? -> Record
