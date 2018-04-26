@@ -17,11 +17,14 @@ alcatel_sros_show_service_id_base.template, .*, alcatel_sros, sh[[ow]] serv[[ice
 alcatel_sros_oam_mac-ping.template, .*, alcatel_sros, oam mac-pi[[ng]]
 
 arista_eos_show_mac_security_participants_detail.template, .*, arista_eos, sh[[ow]] ma[[c]] secu[[rity]] part[[icipants]] det[[ail]]
+arista_eos_show_interfaces_transceiver_detail.template, .*, arista_eos, sh[[ow]] inte[[rfaces]] tr[[ansceiver]] de[[tail]]
 arista_eos_show_mac_security_mka_counters.template, .*, arista_eos, sh[[ow]] ma[[c]] secu[[rity]] mk[[a]] count[[ers]]
 arista_eos_show_mac_security_interface.template, .*, arista_eos, sh[[ow]] ma[[c]] secu[[rity]] int[[erface]]
 arista_eos_show_interfaces_transceiver.template, .*, arista_eos, sh[[ow]] inte[[rfaces]] tr[[ansceiver]]
 arista_eos_show_lldp_neighbors_detail.template, .*, arista_eos, sh[[ow]] ll[[dp]] nei[[ghbors]] d[[etail]]
+arista_eos_show_environment_temperature.template, .*, arista_eos, sh[[ow]] en[[vironment]] t[[emperature]]
 arista_eos_show_ip_interface_brief.template, .*, arista_eos, sh[[ow]] i[[p]] int[[erface]] br[[ief]]
+arista_eos_show_environment_cooling.template, .*, arista_eos, sh[[ow]] en[[vironment]] c[[ooling]]
 arista_eos_show_interfaces_status.template, .*, arista_eos, sh[[ow]] int[[erfaces]] st[[atus]]
 arista_eos_show_mac_address-table.template, .*, arista_eos, sh[[ow]] m[[ac]] ad[[dress-table]]
 arista_eos_show_ip_ospf_database.template, .*, arista_eos, sh[[ow]] i[[p]] o[[spf]] data[[base]]
@@ -52,6 +55,8 @@ avaya_ers_show_mac-address-table.template, .*, avaya_ers, sh[[ow]] mac-a[[ddress
 avaya_ers_show_interface_name.template, .*, avaya_ers, sh[[ow]] in[[terfaces]] n[[ames]]
 avaya_ers_show_sys-info.template, .*, avaya_ers, sh[[ow]] sys-[[info]]
 avaya_ers_show_vlan.template, .*, avaya_ers, sh[[ow]] vlan
+
+avaya_vsp_show_software.template, .*, avaya_vsp, sho[[w]] so[[ftware]]
 
 brocade_fastiron_show_lldp_neighbors_detail.template, .*, brocade_fastiron, sh[[ow]] ll[[dp]] n[[eighbors]] d[[etail]]
 brocade_fastiron_show_interfaces_brief.template, .*, brocade_fastiron, sh[[ow]] in[[terfaces]] b[[rief]]
@@ -110,6 +115,7 @@ cisco_ios_show_lldp_neighbors.template, .*, cisco_ios, sh[[ow]] lld[[p]] neig[[h
 cisco_ios_show_power_supplies.template,  .*, cisco_ios, sh[[ow]] pow[[er]] su[[pplies]]
 cisco_ios_show_snmp_community.template, .*, cisco_ios, sh[[ow]] sn[[mp]] com[[munity]]
 cisco_ios_show_cdp_neighbors.template, .*, cisco_ios, sh[[ow]] c[[dp]] neig[[hbors]]
+cisco_ios_show_controller_t1.template, .*, cisco_ios, sh[[ow]] cont[[rollers]] t1
 cisco_ios_show_platform_diag.template, .*, cisco_ios, sh[[ow]] plat[[form]] di[[ag]]
 cisco_ios_show_processes_cpu.template, .*, cisco_ios, sh[[ow]] proc[[esses]] [[cpu]]
 cisco_ios_show_spanning-tree.template, .*, cisco_ios, sh[[ow]] sp[[anning-tree]]
@@ -117,6 +123,7 @@ cisco_ios_show_standby_brief.template, .*, cisco_ios, sh[[ow]] standby br[[ief]]
 cisco_ios_show_ip_int_brief.template, .*, cisco_ios, sh[[ow]] ip int[[erface]] br[[ief]]
 cisco_ios_show_power_status.template,  .*, cisco_ios, sh[[ow]] pow[[er]] st[[atus]]
 cisco_ios_show_access-list.template, .*, cisco_ios, sh[[ow]] acc[[ess-list]]
+cisco_ios_show_isdn_status.template, .*, cisco_ios, sh[[ow]] isd[[n]] st[[atus]]
 cisco_ios_show_interfaces.template, .*, cisco_ios, sh[[ow]] int[[erfaces]]
 cisco_ios_show_vtp_status.template, .*, cisco_ios, sh[[ow]] vtp stat[[us]]
 cisco_ios_show_inventory.template, .*, cisco_ios, sh[[ow]] inven[[tory]]
@@ -133,6 +140,7 @@ cisco_ios_show_vrf.template, .*, cisco_ios, sh[[ow]] vrf
 cisco_ios_dir.template,  .*, cisco_ios, dir
 
 cisco_nxos_show_interface_transceiver_details.template, .*, cisco_nxos, sh[[ow]] int[[erface]] tra[[nsceiver]] de[[tails]]
+cisco_nxos_show_environment_temperature.template, .*, cisco_nxos, sh[[ow]] env[[ironment]] t[[emperature]]
 cisco_nxos_show_ip_dhcp_relay_address.template, .*, cisco_nxos, sh[[ow]] ip dh[[cp]] r[[elay]] a[[ddress]]
 cisco_nxos_show_lldp_neighbors_detail.template, .*, cisco_nxos, sh[[ow]] ll[[dp]] nei[[ghbors]] d[[etail]]
 cisco_nxos_show_cdp_neighbors_detail.template, .*, cisco_nxos, sh[[ow]] c[[dp]] neig[[hbors]] det[[ail]]
@@ -190,6 +198,7 @@ cisco_xr_admin_show_platform.template, .*, cisco_xr, adm[[in]] sh[[ow]] pla[[tfo
 cisco_xr_show_controllers.template, .*, cisco_xr, sh[[ow]] contr[[ollers]] (\S+) phy
 cisco_xr_show_ip_bgp_summary.template, .*, cisco_xr, sh[[ow]] ip b[[gp]] s[[ummary]]
 cisco_xr_show_isis_neighbors.template, .*, cisco_xr, sh[[ow]] isis ne[[ighbors]]
+cisco_xr_show_lldp_neighbors.template, .*, cisco_xr, sh[[ow]] lld[[p]] neig[[hbors]]
 cisco_xr_show_rsvp_neighbors.template, .*, cisco_xr, sh[[ow]] rs[[vp]] neigh[[bors]]
 cisco_xr_show_install_active.template, .*, cisco_xr, sh[[ow]] inst[[all]] act[[ive]]
 cisco_xr_show_processes_cpu.template, .*, cisco_xr, sh[[ow]] proc[[esses]] c[[pu]]
@@ -199,6 +208,7 @@ cisco_xr_show_pim_neighbor.template, .*, cisco_xr, sh[[ow]] pi[[m]] neigh[[bor]]
 cisco_xr_show_ospf_neighbor.template, .*, cisco_xr, sh[[ow]] ospf nei[[ghbor]]
 cisco_xr_show_interfaces.template, .*, cisco_xr, sh[[ow]] inte[[rfaces]]
 cisco_xr_show_inventory.template, .*, cisco_xr, sh[[ow]] inve[[ntory]]
+cisco_xr_show_ip_route.template, .*, cisco_xr, sh[[ow]] ip ro[[ute]]
 cisco_xr_show_platform.template, .*, cisco_xr, sh[[ow]] pla[[tform]]
 cisco_xr_admin_show_vm.template, .*, cisco_xr, adm[[in]] sh[[ow]] vm
 cisco_xr_show_version.template, .*, cisco_xr, sh[[ow]] ver[[sion]]

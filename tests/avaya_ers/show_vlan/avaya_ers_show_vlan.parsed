@@ -1,39 +1,92 @@
 ---
 parsed_sample:
 
--   active: 'Yes'
-    name: 'VLAN #1'
-    ports: NONE
-    vlan_id: '1'
--   active: 'Yes'
-    name: Dead_VLAN
-    ports: 17-42,49-50
-    vlan_id: '2'
--   active: 'Yes'
-    name: Network_Services
-    ports: 5-10,47
-    vlan_id: '17'
--   active: 'Yes'
-    name: Lab_Mgmt
-    ports: 1,11,13,16,43-46,48
-    vlan_id: '27'
--   active: 'Yes'
-    name: IoT_Devices
-    ports: 14,48
-    vlan_id: '47'
--   active: 'Yes'
-    name: Trusted Wifi
-    ports: 3-4,11-13,47
-    vlan_id: '300'
--   active: 'Yes'
-    name: Untrusted Wifi
-    ports: 11,13,48
-    vlan_id: '301'
--   active: 'Yes'
-    name: VM Environment
-    ports: 2,15,48
-    vlan_id: '477'
--   active: 'Yes'
-    name: Native_VLAN
-    ports: NONE
-    vlan_id: '999'
+- vlanid: '1'
+  vlanname: 'VLAN #1'
+  vlantype: 'Port'
+  vlanprotocol: 'None'
+  vlanpid: '0x0000'
+  vlanactive: 'Yes'
+  vlanivlsvl: 'IVL'
+  vlanmgmt: 'No'
+  vlanportmembers: [NONE]
+
+- vlanid: '2'
+  vlanname: 'Dead_VLAN'
+  vlantype: 'Port'
+  vlanprotocol: 'None'
+  vlanpid: '0x0000'
+  vlanactive: 'Yes'
+  vlanivlsvl: 'IVL'
+  vlanmgmt: 'No'
+  vlanportmembers: ['17-42,49-50']
+
+- vlanid: '17'
+  vlanname: 'Network_Services'
+  vlantype: 'Port'
+  vlanprotocol: 'None'
+  vlanpid: '0x0000'
+  vlanactive: 'Yes'
+  vlanivlsvl: 'IVL'
+  vlanmgmt: 'No'
+  vlanportmembers: ['5-10,47']
+
+- vlanid: '27'
+  vlanname: 'Lab_Mgmt'
+  vlantype: 'Port'
+  vlanprotocol: 'None'
+  vlanpid: '0x0000'
+  vlanactive: 'Yes'
+  vlanivlsvl: 'IVL'
+  vlanmgmt: 'Yes'
+  vlanportmembers: ['1,11,13,16,43-46,48']
+
+- vlanid: '47'
+  vlanname: 'IoT_Devices'
+  vlantype: 'Port'
+  vlanprotocol: 'None'
+  vlanpid: '0x0000'
+  vlanactive: 'Yes'
+  vlanivlsvl: 'IVL'
+  vlanmgmt: 'No'
+  vlanportmembers: ['14,48']
+
+- vlanid: '300'
+  vlanname: 'Trusted Wifi'
+  vlantype: 'Port'
+  vlanprotocol: 'None'
+  vlanpid: '0x0000'
+  vlanactive: 'Yes'
+  vlanivlsvl: 'IVL'
+  vlanmgmt: 'No'
+  vlanportmembers: ['3-4,11-13,47']
+
+- vlanid: '301'
+  vlanname: 'Untrusted Wifi'
+  vlantype: 'Port'
+  vlanprotocol: 'None'
+  vlanpid: '0x0000'
+  vlanactive: 'Yes'
+  vlanivlsvl: 'IVL'
+  vlanmgmt: 'No'
+  vlanportmembers: ['11,13,48']
+
+- vlanid: '477'
+  vlanname: 'VM Environment'
+  vlantype: 'Port'
+  vlanprotocol: 'None'
+  vlanpid: '0x0000'
+  vlanactive: 'Yes'
+  vlanivlsvl: 'IVL'
+  vlanmgmt: 'No'
+  vlanportmembers: ['2,15,48']
+
+- vlanid: '999'
+  vlanname: 'Native_VLAN'
+  vlantype: 'Port'
+  vlanprotocol: 'None'
+  vlanpid: '0x0000'
+  vlanactive: 'Yes'
+  vlanivlsvl: 'IVL'
+  vlanmgmt: 'No'
+  vlanportmembers: ['NONE']
