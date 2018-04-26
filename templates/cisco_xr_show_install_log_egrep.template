@@ -1,0 +1,9 @@
+Value SMU (\S+)
+Value INSTALL_DATE (\S+\s+\d+\s+\S+)
+Value BY_USER (\S+)
+
+Start
+  ^.+UTC
+  ^${INSTALL_DATE}\s+Install operation \d+ started by ${BY_USER}:
+  ^\s+install add source\s+\S+\s+${SMU}
+  ^-+ -> Record Start
