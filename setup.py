@@ -44,7 +44,7 @@ config = {
     'author_email': 'info@networktocode.com',
     'url': 'https://github.com/networktocode/ntc-templates',
     'install_requires': [
-        'gtextfsm',
+        'textfsm',
         'terminal',
     ],
     'classifiers': ['Development Status :: 4 - Beta',

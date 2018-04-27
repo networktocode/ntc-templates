@@ -1,5 +1,5 @@
 Value UPTIME ((\d+\s\w+.s.,?\s?){4})
-Value LAST_REBOOT_REASON (\w+)
+Value LAST_REBOOT_REASON (.+)
 Value OS (\d+.\d+(.+)?)
 Value BOOT_IMAGE (.*)
 Value PLATFORM (\w+)
