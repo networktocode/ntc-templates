@@ -20,5 +20,9 @@ Start
   ^Module.+Uptime
   ^-.+
   ^${MODULE}\s+${STATUS}(\s+${UPTIME})? -> Record
+  ^\s+$$
+  ^$$
+  ^.* -> Error "LINE NOT FOUND"
   
+EOF  
 
