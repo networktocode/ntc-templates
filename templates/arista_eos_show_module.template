@@ -1,0 +1,28 @@
+Value MODULE (\S+)
+Value Required PORTS (\d+)
+Value CARD (((\S+-port\s+\S+)|(\S+))?)
+Value TYPE (\S+)
+Value MODEL (\S+)
+Value SERIAL_NUM (\S+)
+Value Fillup MAC_ADD (\S+\s+-\s+\S+)
+Value Fillup HW_VER (\S+)
+Value Fillup SW_VER (\S+|\s+)
+Value Fillup STATUS (\S+)
+Value Fillup UPTIME (.+)
+
+Start
+  ^Module\s+Ports.+
+  ^-.+
+  ^${MODULE}\s+${PORTS}\s+${CARD}\s+${TYPE}\s+${MODEL}\s+${SERIAL_NUM} -> Record
+  ^Module\s+MAC.+
+  ^-.+
+  ^${MODULE}\s+(${MAC_ADD})?\s+${HW_VER}(\s+${SW_VER})? -> Record
+  ^Module.+Uptime
+  ^-.+
+  ^${MODULE}\s+${STATUS}(\s+${UPTIME})? -> Record
+  ^\s+$$
+  ^$$
+  ^.* -> Error "LINE NOT FOUND"
+  
+EOF  
+
