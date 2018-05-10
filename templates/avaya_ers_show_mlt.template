@@ -1,0 +1,25 @@
+Value MLTID (\d+)
+Value MLTNAME (.*?)
+Value MLTACTIVEMEMBERS (\S+)
+Value MLTINACTIVEMEMBERS (\S+)
+Value MLTBPDU (\S+)
+Value MLTMODE (\S+)
+Value MLTSTATUS (\S+)
+Value MLTTYPE (\S+)
+Value MLTLACPKEY (\S+)
+
+Start
+  ^Id:\s${MLTID} -> Values
+
+Values
+  ^\s+Name:${MLTNAME} -> Continue
+  ^\s+Active Members:\s${MLTACTIVEMEMBERS} -> Continue
+  ^\s+Inactive Members:\s${MLTINACTIVEMEMBERS} -> Continue
+  ^\s+Bpdu:\s${MLTBPDU} -> Continue
+  ^\s+Mode:\s${MLTMODE} -> Continue
+  ^\s+Status:\s${MLTSTATUS} -> Continue
+  ^\s+Type:\s${MLTTYPE} -> Continue
+  ^\s+LACP key:\s${MLTLACPKEY} -> Continue
+  ^Id:\s${MLTID} -> Values
+
+EOF
