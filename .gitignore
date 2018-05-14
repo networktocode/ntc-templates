@@ -95,8 +95,10 @@ fabric.properties
 ### Python template
 # Byte-compiled / optimized / DLL files
 __pycache__/
+.pytest_cache/
 *.py[cod]
 *$py.class
+
 
 # C extensions
 *.so
