@@ -1,0 +1,19 @@
+Value Filldown FILE_SYSTEM (\S+)
+Value PERMISSIONS (\S+)
+Value SIZE (\d+)
+Value DATE_TIME (\S+\s+\d+\s+((\d+)|(\d+:\d+)))
+Value NAME (\S+)
+Value Fillup TOTAL_SIZE (\d+)
+Value Fillup TOTAL_FREE (\d+)
+
+Start
+  ^Directory of\s+${FILE_SYSTEM} -> DIR
+
+DIR
+  ^\s+${PERMISSIONS}\s+${SIZE}\s+${DATE_TIME}\s+${NAME} -> Record
+  ^${TOTAL_SIZE}\s+\S+\s+\S+\s+\(${TOTAL_FREE}\s+\S+\s+\S+\)
+  ^\s+$$
+  ^$$
+  ^.* -> Error "LINE NOT FOUND"
+
+EOF

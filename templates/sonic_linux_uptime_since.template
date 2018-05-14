@@ -1,0 +1,4 @@
+Value UPTIME (.+)
+
+Start
+  ^${UPTIME} -> Record
