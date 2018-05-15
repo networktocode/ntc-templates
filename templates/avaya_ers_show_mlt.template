@@ -1,0 +1,18 @@
+Value Required MLTID (\d+)
+Value MLTNAME (.*?)
+Value MLTACTIVEMEMBERS (\S+?)
+Value MLTINACTIVEMEMBERS (\S+?)
+Value MLTBPDU (\S+?)
+Value MLTMODE (\S+?)
+Value MLTSTATUS (Enabled|Disabled)
+Value MLTTYPE (Access|Trunk|)
+Value MLTLACPKEY (\S+|)
+
+Start
+  ^${MLTID}\s+${MLTNAME}\s+${MLTACTIVEMEMBERS}\s+${MLTBPDU}\s+${MLTMODE}\s+${MLTSTATUS}\s*${MLTTYPE}\s*${MLTLACPKEY}\s*$$ -> Record
+  ^\s+LACP$$
+  ^Id\s+Name\s+Members\s+Bpdu\s+Mode\s+Status\s+Type(\s+Key|)\s*$$
+  ^-+\s+-+\s+-+\s+-+\s+-+\s+-+\s+-+(\s+-+|)\s*$$
+  ^MODE\s+Legend:\s*$$
+  ^B=Basic,\s+A=Advance,\s+Man=ManLag,\s+Dyn=DynLag\s*$$
+  ^.*$$ -> Error
