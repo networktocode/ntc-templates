@@ -1,0 +1,26 @@
+Value Filldown VERSION (\S+)
+Value Filldown DISTRIBUTION (.+)
+Value Filldown KERNEL (\S+)
+Value Filldown BUILD_COMMIT (\S+)
+Value Filldown BUILD_DATE (.+)
+Value Filldown BUILT_BY (\S+)
+Value REPOSITORY (\S+)
+Value TAG (\S+)
+Value IMAGE_ID (\S+)
+Value SIZE (.+)
+
+Start
+  ^SONiC.*Version:\s+${VERSION}
+  ^Distribution:\s+${DISTRIBUTION}
+  ^Kernel:\s+${KERNEL}
+  ^Build\s+commit:\s+${BUILD_COMMIT}
+  ^Build\s+date:${BUILD_DATE}
+  ^Built\s+by:\s+${BUILT_BY}
+  ^Docker\s+images:
+  ^REPOSITORY.+
+  ^${REPOSITORY}\s+${TAG}\s+${IMAGE_ID}\s+${SIZE} -> Record 
+  ^\s+$$
+  ^$$
+  ^.* -> Error "LINE NOT FOUND"
+   
+EOF 

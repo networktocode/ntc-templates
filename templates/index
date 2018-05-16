@@ -244,8 +244,11 @@ paloalto_panos_show_counter_global.template, .*, paloalto_panos, sh[[ow]] coun[[
 paloalto_panos_show_system_info.template, .*, paloalto_panos, sh[[ow]] sys[[tem]] in[[fo]]
 paloalto_panos_show_jobs_all.template, .*, paloalto_panos, sh[[ow]] jo[[bs]] all
 
-sonic_linux_uptime_since.template, .*, linux, up[[time]] -s
+sonic_linux_show_ipv6_bgp_summary.template, .*, linux, sh[[ow]] ipv6 bgp sum[[mary]]
+sonic_linux_show_ip_bgp_summary.template, .*, linux, sh[[ow]] ip bgp sum[[mary]]
 sonic_linux_docker_top_bgp.template, .*, linux, dock[[er]] to[[p]] bg[[p]]
+sonic_linux_show_version.template, .*, linux, show ver[[sion]]
+sonic_linux_uptime_since.template, .*, linux, up[[time]] -s
 
 vmware_nsxv_show_ip_bgp_neighbors.template, .*, vmware_nsxv, sh[[ow]] ip b[[gp]] n[[eighbors]]
 vmware_nsxv_show_ip_route.template, .*, vmware_nsxv, sh[[ow]] ip r[[oute]]
