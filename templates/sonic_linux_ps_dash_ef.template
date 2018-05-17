@@ -1,0 +1,17 @@
+Value UID (\S+)
+Value PID (\d+)
+Value PPID (\d+)
+Value C (\d+)
+Value STIME (\S+)
+Value TTY (\S+)
+Value TIME (\S+)
+Value CMD (.+)
+
+Start
+  ^UID.+
+  ^${UID}\s+${PID}\s+${PPID}\s+${C}\s+${STIME}\s+${TTY}\s+${TIME}\s+${CMD} -> Record 
+  ^\s+$$
+  ^$$
+  ^.* -> Error "LINE NOT FOUND"
+   
+EOF 
