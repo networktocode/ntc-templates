@@ -1,0 +1,15 @@
+Value RELEASE_LOCATION (\S+)
+Value BACKUP_RELEASE (\S+)
+Value PRIMARY_RELEASE (\S+)
+Value AUTO_COMMIT (\S+)
+Value COMMIT_TIMEOUT (.*\w)
+
+Start
+  ^==+
+  ^\s+software releases in ${RELEASE_LOCATION}
+  ^${BACKUP_RELEASE}\s+\(Backup Release\)
+  ^${PRIMARY_RELEASE}\s+\(Primary Release\)
+  ^Auto Commit\s+:\s+${AUTO_COMMIT}
+  ^Commit Timeout\s+:\s+${COMMIT_TIMEOUT}
+
+Done
