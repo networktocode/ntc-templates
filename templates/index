@@ -56,6 +56,7 @@ avaya_ers_show_vlan.template, .*, avaya_ers, sh[[ow]] vlan
 
 avaya_vsp_show_software.template, .*, avaya_vsp, sho[[w]] so[[ftware]]
 
+
 brocade_fastiron_show_lldp_neighbors_detail.template, .*, brocade_fastiron, sh[[ow]] ll[[dp]] n[[eighbors]] d[[etail]]
 brocade_fastiron_show_interfaces_brief.template, .*, brocade_fastiron, sh[[ow]] in[[terfaces]] b[[rief]]
 brocade_fastiron_show_interfaces.template, .*, brocade_fastiron, sh[[ow]] in[[terfaces]]
@@ -77,6 +78,15 @@ brocade_netiron_show_monitor.template, .*, brocade_netiron, sh[[ow]] mon[[itor]]
 brocade_netiron_show_metro.template, .*, brocade_netiron, sh[[ow]] met[[ro-ring]]
 brocade_netiron_show_span.template, .*, brocade_netiron, sh[[ow]] sp[[anning-tree]]
 brocade_netiron_show_topo.template, .*, brocade_netiron, sh[[ow]] to[[pology-group]]
+
+checkpoint_gaia_show_interfaces_all.template, .*, checkpoint_gaia, show interfaces all
+checkpoint_gaia_show_version_all.template, .*, checkpoint_gaia, show version all
+checkpoint_gaia_show_domainname.template, .*, checkpoint_gaia, show domainname
+checkpoint_gaia_show_ipv6_route.template, .*, checkpoint_gaia, show ipv6 route
+checkpoint_gaia_show_asset_all.template, .*, checkpoint_gaia, show asset all
+checkpoint_gaia_show_route.template, .*, checkpoint_gaia, show route
+checkpoint_gaia_show_lom.template, .*, checkpoint_gaia, show lom
+checkpoint_gaia_fw_stat.template, .*, checkpoint_gaia, fw stat
 
 cisco_asa_show_running-config_crypto_ikev1.template, .*, cisco_asa, sh[[ow]] ru[[nning-config]] cr[[ypto]] ikev1
 cisco_asa_show_running-config_tunnel-group.template, .*, cisco_asa, sh[[ow]] ru[[nning-config]] tu[[nnel-group]]
