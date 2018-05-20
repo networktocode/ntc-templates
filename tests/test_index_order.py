@@ -83,8 +83,8 @@ def test_index_ordering():
         check_val, check_msg = check_order(os, prior_os, cmd_len, prior_len, os_choices, used_os, cmd, prior_cmd)
         if not check_val:
         #assertFalse(check_val, msg=check_msg)
-            print "Error on line: {}".format(row)
-            print "Error Message: {}".format(check_msg)
+            print("Error on line: {}".format(row))
+            print("Error Message: {}".format(check_msg))
         assert check_val != False
         if os not in used_os:
             used_os.append(os)

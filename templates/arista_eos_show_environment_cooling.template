@@ -1,0 +1,18 @@
+Value Required FAN (\S+)
+Value STATUS (\S+\s?\S+)
+Value CONFIG_SPEED (\S+)
+Value ACTUAL_SPEED (\S+)
+Value Filldown SYS_COOLING_STATUS (\S+)
+Value Filldown AMBIENT_TEMP (\S+)
+Value Filldown AIRFLOW (\S+)
+
+Start
+  ^System\scooling\sstatus\sis:\s${SYS_COOLING_STATUS}
+  ^Ambient\stemperature:\s${AMBIENT_TEMP}
+  ^Airflow:\s${AIRFLOW}
+  ^Fan\s+Status\s+Configured\sSpeed\s+Actual\sSpeed
+  ^-+\s+-+\s+-+\s+-+
+  ^${FAN}\s+${STATUS}\s+${CONFIG_SPEED}\%?\s+${ACTUAL_SPEED}\%? -> Record
+  ^\s+$$
+  ^$$
+  ^.* -> Error "LINE NOT FOUND"

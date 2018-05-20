@@ -25,7 +25,7 @@
 
       - name: SET FACT FOR ROOT DIR
         set_fact:
-          root_directory: "{{ root_dir | default('..') }}"
+          root_directory: "{{ playbook_dir | dirname }}"
 
       - name: OFFLINE NTC SHOW COMMAND
         ntc_show_command:

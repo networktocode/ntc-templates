@@ -1,0 +1,13 @@
+Value Required NAME (\S+)
+Value Required ID (\S+)
+Value Required STATE (\S+)
+Value Required REASON (\S+)
+
+Start
+  ^VRF-Name\s+VRF-ID\s+State\s+Reason -> Start_record
+
+Start_record
+  ^${NAME}\s+${ID}\s+${STATE}\s+${REASON} -> Record
+  ^\s+$$
+  ^$$
+  ^.* -> Error "LINE NOT FOUND"

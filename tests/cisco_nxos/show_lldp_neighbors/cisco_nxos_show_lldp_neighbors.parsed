@@ -1,23 +1,15 @@
 ---
 parsed_sample:
-- neighbor: "PERIMETER.cisco.com"
-  local_interface: "mgmt0"
-  neighbor_interface: "Fa1/0/10"
-
-- neighbor: "n9k1.cisconxapi.com"
+- neighbor: "nx-osv9000-3-long-name.com"
   local_interface: "Eth1/1"
   neighbor_interface: "Ethernet1/1"
 
-- neighbor: "n9k1.cisconxapi.com"
+- neighbor: "nx-osv9000-4-extremely-long-name"
   local_interface: "Eth1/2"
-  neighbor_interface: "Ethernet1/2"
+  neighbor_interface: "Ethernet1/1"
 
-- neighbor: "n9k1.cisconxapi.com"
-  local_interface: "Eth1/2"
+- neighbor: "nx-osv9000-2"
+  local_interface: "Eth1/3"
   neighbor_interface: "Ethernet1/3"
-
-- neighbor: "neighbor.with.long.hostname.n9k2.cisconxapi.com"
-  local_interface: "Eth1/21"
-  neighbor_interface: "Te5/1"
 
 

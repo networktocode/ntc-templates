@@ -1,0 +1,53 @@
+System temperature status is: Ok
+
+Supervisor 1:
+                                                                 Alert  Critical
+                                               Temp    Setpoint  Limit     Limit
+Sensor  Description                             (C)         (C)    (C)       (C)
+------- ----------------------------------- ------- ----------- ------ ---------
+1       Digital Temperature Sensor on cpu0     36.0   (65) 63.8     95       105
+2       Digital Temperature Sensor on cpu1     36.0   (65) 63.8     95       105
+3       Digital Temperature Sensor on cpu2     36.0   (65) 63.8     95       105
+
+Linecard 3:
+                                                                 Alert  Critical
+                                               Temp    Setpoint  Limit     Limit
+Sensor  Description                             (C)         (C)    (C)       (C)
+------- ----------------------------------- ------- ----------- ------ ---------
+6       Outlet sensor                          50.8   (85) 83.8     95       105
+7       Inlet sensor                           59.2   (75) 73.8     90       100
+8       Board sensor                           62.0   (95) 93.8    105       110
+
+Linecard 4:
+                                                                 Alert  Critical
+                                               Temp    Setpoint  Limit     Limit
+Sensor  Description                             (C)         (C)    (C)       (C)
+------- ----------------------------------- ------- ----------- ------ ---------
+5       Outlet sensor                          41.2   (80) 78.8     90       100
+6       Inlet sensor                           43.8   (65) 63.8     75        85
+7       Board sensor                           49.0   (85) 83.8     95       105
+9       Board sensor                           45.0   (85) 83.8     95       105
+
+Linecard 5:
+                                                                 Alert  Critical
+                                               Temp    Setpoint  Limit     Limit
+Sensor  Description                             (C)         (C)    (C)       (C)
+------- ----------------------------------- ------- ----------- ------ ---------
+5       Outlet sensor                          39.5   (80) 78.8     90       100
+6       Inlet sensor                           39.0   (65) 63.8     75        85
+
+Linecard 6:
+                                                                 Alert  Critical
+                                               Temp    Setpoint  Limit     Limit
+Sensor  Description                             (C)         (C)    (C)       (C)
+------- ----------------------------------- ------- ----------- ------ ---------
+1       Outlet sensor                          32.5   (80) 78.8     90       100
+2       Inlet sensor                           29.2   (65) 63.8     70        85
+
+Fabric 1:
+                                                                 Alert  Critical
+                                               Temp    Setpoint  Limit     Limit
+Sensor  Description                             (C)         (C)    (C)       (C)
+------- ----------------------------------- ------- ----------- ------ ---------
+13      ADT (Fan controller) 1                 32.8   (85) 83.8     95       105
+14      Fan side sensor                        32.0   (85) 83.8     95       105
