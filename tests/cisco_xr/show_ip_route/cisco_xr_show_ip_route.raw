@@ -1,4 +1,4 @@
-Mon Jan 29 19:00:32.892 UTC
+Tue May 22 22:32:30.765 UTC
 
 Codes: C - connected, S - static, R - RIP, B - BGP, (>) - Diversion path
        D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area
@@ -10,39 +10,12 @@ Codes: C - connected, S - static, R - RIP, B - BGP, (>) - Diversion path
        A - access/subscriber, a - Application route
        M - mobile route, r - RPL, (!) - FRR Backup path
 
-Gateway of last resort is 172.16.1.1 to network 0.0.0.0
+Gateway of last resort is 10.72.0.1 to network 0.0.0.0
 
-S*   0.0.0.0/0 [1/0] via 172.16.1.1, 04:43:54
-O    1.1.1.1/32 [110/0] via 10.1.1.9, 04:43:27, GigabitEthernet0/0/0/0 (!)
-                [110/9164] via 10.1.1.34, 04:43:27, GigabitEthernet0/0/0/3
-O    1.1.1.3/32 [110/0] via 10.1.1.9, 04:43:21, GigabitEthernet0/0/0/0 (!)
-                [110/6564] via 10.1.1.34, 04:43:21, GigabitEthernet0/0/0/3
-O    1.1.2.1/32 [110/0] via 10.1.1.9, 04:43:40, GigabitEthernet0/0/0/0 (!)
-                [110/9163] via 10.1.1.34, 04:43:40, GigabitEthernet0/0/0/3
-O    1.1.2.3/32 [110/0] via 10.1.1.9, 04:43:40, GigabitEthernet0/0/0/0 (!)
-                [110/6563] via 10.1.1.34, 04:43:40, GigabitEthernet0/0/0/3
-O    1.1.2.5/32 [110/0] via 10.1.1.9, 04:43:40, GigabitEthernet0/0/0/0 (!)
-                [110/639] via 10.1.1.34, 04:43:40, GigabitEthernet0/0/0/3
-L    1.1.2.6/32 is directly connected, 04:43:54, Loopback0
-O    10.1.0.0/30 [110/0] via 10.1.1.9, 04:43:40, GigabitEthernet0/0/0/0 (!)
-                 [110/9163] via 10.1.1.34, 04:43:40, GigabitEthernet0/0/0/3
-O    10.1.0.8/30 [110/0] via 10.1.1.9, 04:43:40, GigabitEthernet0/0/0/0 (!)
-                 [110/6563] via 10.1.1.34, 04:43:40, GigabitEthernet0/0/0/3
-O    10.1.1.0/30 [110/0] via 10.1.1.9, 04:43:40, GigabitEthernet0/0/0/0 (!)
-                 [110/11762] via 10.1.1.34, 04:43:40, GigabitEthernet0/0/0/3
-C    10.1.1.4/30 is directly connected, 04:43:54, GigabitEthernet0/0/0/1
-L    10.1.1.6/32 is directly connected, 04:43:54, GigabitEthernet0/0/0/1
-C    10.1.1.8/30 is directly connected, 04:43:54, GigabitEthernet0/0/0/0
-L    10.1.1.10/32 is directly connected, 04:43:54, GigabitEthernet0/0/0/0
-O    10.1.1.12/30 [110/0] via 10.1.1.9, 04:43:40, GigabitEthernet0/0/0/0 (!)
-                  [110/9162] via 10.1.1.34, 04:43:40, GigabitEthernet0/0/0/3
-O    10.1.1.20/30 [110/0] via 10.1.1.9, 04:43:41, GigabitEthernet0/0/0/0 (!)
-                  [110/6562] via 10.1.1.34, 04:43:41, GigabitEthernet0/0/0/3
-O    10.1.1.24/30 [110/0] via 10.1.1.9, 04:43:40, GigabitEthernet0/0/0/0 (!)
-                  [110/709] via 10.1.1.34, 04:43:40, GigabitEthernet0/0/0/3
-C    10.1.1.28/30 is directly connected, 04:43:54, GigabitEthernet0/0/0/2
-L    10.1.1.30/32 is directly connected, 04:43:54, GigabitEthernet0/0/0/2
-C    10.1.1.32/30 is directly connected, 04:43:54, GigabitEthernet0/0/0/3
-L    10.1.1.33/32 is directly connected, 04:43:54, GigabitEthernet0/0/0/3
-C    172.16.1.0/24 is directly connected, 04:43:54, MgmtEth0/0/CPU0/0
-L    172.16.1.120/32 is directly connected, 04:43:54, MgmtEth0/0/CPU0/0
+S*   0.0.0.0/0 [1/0] via 10.72.0.1, 4d01h
+B    10.39.0.0/16 [20/0] via 192.168.50.1, 1w4d
+D EX 10.14.0.0/16 [170/153600] via 192.168.150.130, 14:56:35, TenGigE0/0/0/1.5
+                    [170/153600] via 192.168.150.134, 6d21h, TenGigE0/0/0/2.5
+                    [170/153600] via 192.168.150.138, 6d21h, TenGigE0/0/0/3.5
+                    [170/153600] via 192.168.150.142, 6d21h, TenGigE0/0/0/4.5
+B    10.15.0.0/16 [20/0] via 192.168.250.130, 1y03w
