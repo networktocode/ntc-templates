@@ -1,0 +1,11 @@
+Codes: C - Connected, S - Static, R - RIP, B - BGP (D - Default),
+       O - OSPF IntraArea (IA - InterArea, E - External, N - NSSA)
+       A - Aggregate, K - Kernel Remnant, H - Hidden, P - Suppressed,
+       U - Unreachable, i - Inactive
+
+S         0.0.0.0/0           via 10.10.10.1, eth1-02.122, cost 0, age 4238351
+                                  default
+S         10.0.0.0/24        via 10.1.1.254, eth1-01.100, cost 0, age 4238351
+                                  Comment-static-Route-1
+C         10.1.1.0/24      is directly connected, eth1.111
+                                  Comment-Network-1

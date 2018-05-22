@@ -63,10 +63,10 @@ def test_index_ordering():
     os_choices = [
         'a10', 'alcatel_sros', 'arista_eos', 'aruba_os', 'avaya_ers', 'avaya_vsp',
         'brocade_fastiron', 'brocade_netiron', 'brocade_nos', 'brocade_vdx', 'brocade_vyos',
-        'cisco_asa', 'cisco_ios', 'cisco_nxos', 'cisco_s300', 'cisco_wlc', 'cisco_xe', 'cisco_xr',
-        'dell_force10', 'enterasys', 'extreme', 'f5_ltm', 'fortinet', 'hp_comware', 'hp_procurve',
-        'huawei', 'juniper', 'juniper_junos', 'linux', 'ovs_linux', 'paloalto_panos',
-        'quanta_mesh', 'vmware_nsxv', 'vyatta_vyos', 'vyos'
+        'checkpoint_gaia', 'cisco_asa', 'cisco_ios', 'cisco_nxos', 'cisco_s300', 'cisco_wlc',
+        'cisco_xe', 'cisco_xr', 'dell_force10', 'enterasys', 'extreme', 'f5_ltm', 'fortinet',
+        'hp_comware', 'hp_procurve', 'huawei', 'juniper', 'juniper_junos', 'linux', 'ovs_linux',
+        'paloalto_panos', 'quanta_mesh', 'vmware_nsxv', 'vyatta_vyos', 'vyos'
         ] 
 
     prior_os = ""
@@ -83,8 +83,8 @@ def test_index_ordering():
         check_val, check_msg = check_order(os, prior_os, cmd_len, prior_len, os_choices, used_os, cmd, prior_cmd)
         if not check_val:
         #assertFalse(check_val, msg=check_msg)
-            print "Error on line: {}".format(row)
-            print "Error Message: {}".format(check_msg)
+            print("Error on line: {}".format(row))
+            print("Error Message: {}".format(check_msg))
         assert check_val != False
         if os not in used_os:
             used_os.append(os)
