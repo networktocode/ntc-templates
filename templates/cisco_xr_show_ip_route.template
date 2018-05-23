@@ -13,7 +13,7 @@ Start
 
 Route
   ^\s+(\S+\s+-\s+.+[,]*)+
-  ^Gateway of last resort
+  ^Gateway\s+of\s+last\s+resort
   ^${PROTOCOL}\s+${NETWORK}\/${MASK}\s+(?:\[${DISTANCE}\/${METRIC}\]|is)\s+${TYPE}\s+${NEXT_HOP},\s+${UPTIME},\s+${INTERFACE} -> Record
   ^\s+(?:\[${DISTANCE}\/${METRIC}\]|is)\s+${TYPE}\s+${NEXT_HOP},\s+${UPTIME},\s+${INTERFACE} -> Record
   ^${PROTOCOL}\s+${NETWORK}\/${MASK}\s+(?:\[${DISTANCE}\/${METRIC}\]|is)\s+${TYPE}\s+${NEXT_HOP},\s+${UPTIME} -> Record
