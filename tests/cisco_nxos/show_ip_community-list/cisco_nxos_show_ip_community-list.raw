@@ -1,0 +1,8 @@
+Expanded Community List ROUTES_CL1
+    1 permit "11111:10000"
+Standard Community List ROUTES_CL2
+    1 permit 11111:10000
+    2 permit 22222:10000
+    3 permit 33333:10000
+    4 permit 44444:10000 55555:10005 no-export
+    5 deny internet
