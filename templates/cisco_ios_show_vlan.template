@@ -34,8 +34,8 @@ VLANS
   ^\s+(?:\S+\s+){9}${INTERFACES},* -> Continue
   ^\s+(?:\S+\s+){10}${INTERFACES},* -> Continue
   ^\s+(?:\S+\s+){11}${INTERFACES} -> Continue
-  ^\d+ -> VLANS
-  ^\s+ -> VLANS
+  ^\d+
+  ^\s+
   ^-+
   ^\S+\s+[TtYyPpEe]{4} -> Done
   ^.+ -> Error
