@@ -1,0 +1,11 @@
+Value Filldown SLOT (\d+)
+Value Filldown TABLE_NAME (\S+)
+Value List TABLES (\S+\s+\d+\s+\d+)
+
+
+Start
+  ^Slot\s+${SLOT}
+  ^${TABLE_NAME}.+Tables:
+  ^Index.+
+  ^-.+
+  ^${TABLES} -> Record Start

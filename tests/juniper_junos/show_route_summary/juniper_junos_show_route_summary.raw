@@ -1,0 +1,71 @@
+Autonomous system number: 8090
+Router ID: 101.46.32.1
+Maximum ECMP: 64
+
+inet.0: 945352 destinations, 5826639 routes (920328 active, 598 holddown, 117685 hidden)
+              Direct:     73 routes,     73 active
+               Local:     69 routes,     69 active
+                OSPF:     28 routes,     28 active
+                 BGP: 5821477 routes, 915182 active
+               IS-IS:   4987 routes,   4975 active
+                RSVP:      4 routes,      0 active
+                 LDP:      1 routes,      1 active
+
+inet.3: 4475 destinations, 6327 routes (4475 active, 0 holddown, 6 hidden)
+                OSPF:      6 routes,      0 active
+              Static:      2 routes,      2 active
+               IS-IS:   4370 routes,   2792 active
+                RSVP:    268 routes,    268 active
+                 LDP:   1151 routes,   1151 active
+              L-ISIS:    530 routes,    262 active
+
+tms-l3vrf.inet.0: 333 destinations, 3844 routes (333 active, 0 holddown, 0 hidden)
+                 BGP:   3667 routes,    332 active
+              Static:      1 routes,      1 active
+           Multipath:    176 routes,      0 active
+
+ITEvrf.inet.0: 147 destinations, 150 routes (147 active, 0 holddown, 0 hidden)
+              Direct:     73 routes,     73 active
+               Local:     69 routes,     69 active
+                 BGP:      7 routes,      4 active
+              Static:      1 routes,      1 active
+
+iso.0: 1 destinations, 1 routes (1 active, 0 holddown, 0 hidden)
+              Direct:      1 routes,      1 active
+
+mpls.0: 2129 destinations, 2129 routes (2129 active, 0 holddown, 0 hidden)
+                MPLS:      6 routes,      6 active
+                 LDP:   1159 routes,   1159 active
+                 VPN:      3 routes,      3 active
+              L-ISIS:    961 routes,    961 active
+
+bgp.l3vpn.0: 1838 destinations, 3674 routes (1838 active, 0 holddown, 0 hidden)
+                 BGP:   3674 routes,   1838 active
+
+inet6.0: 123006 destinations, 754812 routes (121209 active, 29 holddown, 53185 hidden)
+              Direct:     56 routes,     56 active
+               Local:    115 routes,    115 active
+                 BGP: 753138 routes, 119540 active
+              Static:      2 routes,      2 active
+               IS-IS:   1500 routes,   1495 active
+           Aggregate:      1 routes,      1 active
+
+inet6.3: 2605 destinations, 3282 routes (2605 active, 0 holddown, 0 hidden)
+              Static:      2 routes,      2 active
+               IS-IS:    920 routes,    511 active
+                RSVP:    268 routes,    268 active
+                 LDP:   1151 routes,   1151 active
+              L-ISIS:    941 routes,    673 active
+
+tms-l3vrf.inet6.0: 94 destinations, 305 routes (94 active, 0 holddown, 0 hidden)
+                 BGP:    304 routes,     93 active
+              Static:      1 routes,      1 active
+
+ITEvrf.inet6.0: 174 destinations, 176 routes (174 active, 0 holddown, 0 hidden)
+              Direct:     56 routes,     56 active
+               Local:    115 routes,    115 active
+                 BGP:      4 routes,      2 active
+              Static:      1 routes,      1 active
+
+bgp.l3vpn-inet6.0: 154 destinations, 308 routes (154 active, 0 holddown, 0 hidden)
+                 BGP:    308 routes,    154 active

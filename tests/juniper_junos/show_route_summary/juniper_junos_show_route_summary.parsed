@@ -1,0 +1,135 @@
+---
+
+parsed_sample:
+
+
+- asn : '8090'
+  router_id : '101.46.32.1'
+  max_ecmp : '64'
+  route_table : 'inet.0'
+  destinations : '945352'
+  routes : '5826639'
+  active : '920328'
+  holddown : '598'
+  hidden : '117685'
+
+
+- asn : '8090'
+  router_id : '101.46.32.1'
+  max_ecmp : '64'
+  route_table : 'inet.3'
+  destinations : '4475'
+  routes : '6327'
+  active : '4475'
+  holddown : '0'
+  hidden : '6'
+
+
+- asn : '8090'
+  router_id : '101.46.32.1'
+  max_ecmp : '64'
+  route_table : 'tms-l3vrf.inet.0'
+  destinations : '333'
+  routes : '3844'
+  active : '333'
+  holddown : '0'
+  hidden : '0'
+
+
+- asn : '8090'
+  router_id : '101.46.32.1'
+  max_ecmp : '64'
+  route_table : 'ITEvrf.inet.0'
+  destinations : '147'
+  routes : '150'
+  active : '147'
+  holddown : '0'
+  hidden : '0'
+
+
+- asn : '8090'
+  router_id : '101.46.32.1'
+  max_ecmp : '64'
+  route_table : 'iso.0'
+  destinations : '1'
+  routes : '1'
+  active : '1'
+  holddown : '0'
+  hidden : '0'
+
+
+- asn : '8090'
+  router_id : '101.46.32.1'
+  max_ecmp : '64'
+  route_table : 'mpls.0'
+  destinations : '2129'
+  routes : '2129'
+  active : '2129'
+  holddown : '0'
+  hidden : '0'
+
+
+- asn : '8090'
+  router_id : '101.46.32.1'
+  max_ecmp : '64'
+  route_table : 'bgp.l3vpn.0'
+  destinations : '1838'
+  routes : '3674'
+  active : '1838'
+  holddown : '0'
+  hidden : '0'
+
+
+- asn : '8090'
+  router_id : '101.46.32.1'
+  max_ecmp : '64'
+  route_table : 'inet6.0'
+  destinations : '123006'
+  routes : '754812'
+  active : '121209'
+  holddown : '29'
+  hidden : '53185'
+
+
+- asn : '8090'
+  router_id : '101.46.32.1'
+  max_ecmp : '64'
+  route_table : 'inet6.3'
+  destinations : '2605'
+  routes : '3282'
+  active : '2605'
+  holddown : '0'
+  hidden : '0'
+
+
+- asn : '8090'
+  router_id : '101.46.32.1'
+  max_ecmp : '64'
+  route_table : 'tms-l3vrf.inet6.0'
+  destinations : '94'
+  routes : '305'
+  active : '94'
+  holddown : '0'
+  hidden : '0'
+
+
+- asn : '8090'
+  router_id : '101.46.32.1'
+  max_ecmp : '64'
+  route_table : 'ITEvrf.inet6.0'
+  destinations : '174'
+  routes : '176'
+  active : '174'
+  holddown : '0'
+  hidden : '0'
+
+
+- asn : '8090'
+  router_id : '101.46.32.1'
+  max_ecmp : '64'
+  route_table : 'bgp.l3vpn-inet6.0'
+  destinations : '154'
+  routes : '308'
+  active : '154'
+  holddown : '0'
+  hidden : '0'

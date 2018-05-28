@@ -1,0 +1,16 @@
+Value Filldown ASN (\d+)
+Value Filldown ROUTER_ID (\S+)
+Value Filldown MAX_ECMP (\d+)
+Value Required ROUTE_TABLE (\S+)
+Value DESTINATIONS (\d+)
+Value ROUTES (\d+)
+Value ACTIVE (\d+)
+Value HOLDDOWN (\d+)
+Value HIDDEN (\d+)
+
+Start
+  ^Autonomous.+:\s+${ASN}
+  ^Router.+:\s+${ROUTER_ID}
+  ^Maximum.+:\s+${MAX_ECMP}
+  ^${ROUTE_TABLE}:\s+${DESTINATIONS}\s+destinations,\s+${ROUTES}\s+routes\s+\(${ACTIVE}\s+active,\s+${HOLDDOWN}\s+holddown,\s+${HIDDEN}\s+hidden\) -> Record
+
