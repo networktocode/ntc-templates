@@ -230,12 +230,12 @@ hp_procurve_show_system.template, .*, hp_procurve, sh[[ow]] syst[[em]]
 hp_procurve_show_vlans.template, .*, hp_procurve, sh[[ow]] vl[[ans]]
 hp_procurve_show_arp.template, .*, hp_procurve, sh[[ow]] ar[[p]]
 
-juniper_junos_show_pfe_route_summary.template, .*, juniper_junos, sh[[ow]] pfe rou[[te]] summ[[ary]]
-juniper_junos_show_chassis_firmware.template, .*, juniper_junos, sh[[ow]] ch[[assis]] fi[[rmware]]
-juniper_junos_show_isis_adjacency.template, .*, juniper_junos, sh[[ow]] is[[is]] ad[[jacency]]
-juniper_junos_show_route_summary.template, .*, juniper_junos, sh[[ow]] rou[[te]] summ[[ary]]
-juniper_junos_show_ospf_neighbor.template, .*, juniper_junos, sh[[ow]] ospf n[[eighbor]]
-juniper_junos_show_interfaces.template, .*, juniper_junos, sh[[ow]] inte[[rfaces]]
+juniper_junos_show_pfe_route_summary.template, .*, juniper_junos|juniper, sh[[ow]] pfe rou[[te]] summ[[ary]]
+juniper_junos_show_chassis_firmware.template, .*, juniper_junos|juniper, sh[[ow]] ch[[assis]] fi[[rmware]]
+juniper_junos_show_isis_adjacency.template, .*, juniper_junos|juniper, sh[[ow]] is[[is]] ad[[jacency]]
+juniper_junos_show_route_summary.template, .*, juniper_junos|juniper, sh[[ow]] rou[[te]] summ[[ary]]
+juniper_junos_show_ospf_neighbor.template, .*, juniper_junos|juniper, sh[[ow]] ospf n[[eighbor]]
+juniper_junos_show_interfaces.template, .*, juniper_junos|juniper, sh[[ow]] inte[[rfaces]]
 
 paloalto_panos_show_running_security-policy.template, .*, paloalto_panos, sh[[ow]] runn[[ing]] security[[-policy]]
 paloalto_panos_show_high-availability_all.template, .*, paloalto_panos, sh[[ow]] high[[-availability]] all
