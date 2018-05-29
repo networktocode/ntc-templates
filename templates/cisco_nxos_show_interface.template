@@ -14,6 +14,7 @@ Value DELAY (\d+\s+\w+)
 Value ENCAPSULATION (\w+)
 
 Start
+  ^\S+\s+is.+ -> Continue.Record
   ^${INTERFACE}\s+is\s+${LINK_STATUS},\sline\sprotocol\sis\s${ADMIN_STATE}$$
   ^${INTERFACE}\s+is\s+${LINK_STATUS}$$
   ^admin\s+state\s+is\s+${ADMIN_STATE},
@@ -23,4 +24,4 @@ Start
   ^\s+${DUPLEX}, ${SPEED}(,|$$)
   ^\s+MTU\s+${MTU}.*BW\s+${BANDWIDTH}.*DLY\s+${DELAY}
   ^\s+Encapsulation\s+${ENCAPSULATION}
-  ^\s*$$ -> Record
+  ^\s*$$
