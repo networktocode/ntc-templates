@@ -14,5 +14,9 @@ Start
   ^IPv\d\s+Dest-Routes\s+for\s+<${VR}>
   # Match route line
   ^${BEST}\s+${ID}\s+${PREFIX}\s+${OUTINTERFACE}\s+${NEXTHOP}\s+${PROTOCOL}\s+${PREF}\s+${METRIC}\s+${VSYS} -> Record
- 
+  ^---
+  ^\w+
+  ^\s+
+  ^.+ -> Error "Line not found"
+
 EOF
