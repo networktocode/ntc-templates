@@ -6,42 +6,40 @@ REPOSITORY OF TEXTFSM TEMPLATES FOR NETWORK DEVICES
 NTC-Templates contains a set of multi-vendor templates based around TEXTFSM parsing engine.
 
 These templates take the raw string input from the CLI of network infrastructure devices, such as Cisco IOS, Juniper JUNOS
-or HPE Comware devices, run them through a TEXTFSM template and return structured text in the form of a python dictionary.
+or HPE Comware devices, run them through a TEXTFSM template and return structured text in the form of a Python dictionary.
 
 
-#Contributing
+# Contributing
 
 Pull request are welcomed and automatically built and tested through TravisCI.
 
 To contribute new templates, each new pull request must include the folowing
 
--  TextFSM template
--  raw version of text to be parsed
--  YAML file containing the expected parsed dictionary
+- TextFSM template
+- raw version of text to be parsed
+- YAML file containing the expected parsed dictionary
 - Modified version of the **index** file
 
 
-Some notes on contributing that should help you ensure that your TravisCI builds comes back as successfull
+Some notes on contributing that should help you ensure that your TravisCI builds comes back as successful:
 
+## TextFSM Templates
 
-
-
-
-##TextFSM Templates
-
-TextFSM templates should be placed in the ./templates folder and should adhere to the NTC-Templates style.
+TextFSM templates should be placed in the `./templates` folder and should adhere to the NTC-Templates style.
 The TextFSM template name should be in the following format
 
+```
 {{ vendor_name }}_{{show_command}}
+```
 
-Note: The vendor name must be valid from the [Netmiko](https://github.com/ktbyers/netmiko/tree/master/netmiko)  
-
+Note: The vendor name must be valid from the [Netmiko](https://github.com/ktbyers/netmiko/tree/master/netmiko) library.
 
 The **Value** variable should be in UPPERCASE. 
 
 An example of the proper format is shown below.
 
-<pre>Value TIME (\d+:\d+:\d+)
+```
+Value TIME (\d+:\d+:\d+)
 Value TIMEZONE (\S+)
 Value DAYWEEK (\w+)
 Value MONTH (\d+)
@@ -49,52 +47,51 @@ Value DAY (\d+)
 Value YEAR (\d+)
 
 Start
-  ^${TIME}\s+${TIMEZONE}\s+${DAYWEEK}\s+${DAY}/${MONTH}/${YEAR} -> Record  </pre>
+  ^${TIME}\s+${TIMEZONE}\s+${DAYWEEK}\s+${DAY}/${MONTH}/${YEAR} -> Record
+```
 
-##Raw version of Input Text
+## Raw version of Input Text
 
 The raw text file should contain **only** the output of the CLI command to be parsed. It should **not** contain the CLI command itself
-The raw text file should be placed in a folder in the ./tests directory with the same name as the template file minus the .template extension
+The raw text file should be placed in a folder in the `./tests` directory with the same name as the template file minus the .template extension
 
 An example of the proper format is shown below
 
-<pre>
+```
 19:35:31 UTC Sat 01/08/2011
-</pre>
+```
 
 
-##YAML file containing expected parsed dictionary
+## YAML file containing expected parsed dictionary
 
 
 The parsed dictionary must be in a dictionary format. All keys in the dictionary should be in all lowercase
 
-The parsed text file should be placed in a folder in the ./tests directory with the same name as the template file minus the .template extension.
-The raw text file and the parsed text file should be in the same folder.
+The parsed text file should be placed in a folder in the ./tests directory with the same name as the template file minus the
+`.template` extension. The raw text file and the parsed text file should be in the same folder.
 
 An example of the proper format is shown below
 
 
-<pre>
-
+```yaml
 ---
 
 parsed_sample:
 
 
 - {day: '01', dayweek: Sat, month: 08, time: '19:35:31', timezone: UTC, year: '2011'}
-</pre>
+```
 
+Multiple RAW and Parsed files are supported per folder, and are encouraged, as there are differences depending on version, length, etc... that additional testing and more real life data helps identify. 
 
-Multile RAW and Parsed files are supported per folder, and are encouraged, as there are differences depending on version, length, etc... that additional testing and more real life data helps identify. 
+## Index File
 
-##Index File
+The Index file binds the templates to the commands being run. Special care has been taken on ordering, as there is potential for issues. e.g. `show ip route` picking up for `show ip router vrf <vrf-name>`. We have used a combination of ordering, as defined: 
 
-The Index file binds the templates to the commands being run. Special care has been taken on ordering, as there is potential for issues. e.g. show ip route picking up for show ip router vrf <vrf-name>. We have used a combination of ordering, as defined: 
-
-  - OS in alphbetical order
-  - Command in length other
-  - When Length is the same, use alphabetical order
-  - Keep space between OS's
+ - OS in alphabetical order
+ - Command in length other
+ - When Length is the same, use alphabetical order
+ - Keep space between OS's
 
 Example:
 
@@ -111,8 +108,8 @@ cisco_ios_show_interface_transceiver.template, .*, cisco_ios, sh[[ow]] int[[erfa
 cisco_ios_show_cdp_neighbors_detail.template, .*, cisco_ios, sh[[ow]] c[[dp]] neig[[hbors]] det[[ail]]
 ```
 
-#Questions
+# Questions
 
-For any questions or comments, please feel free to swing by the [networktocode slack channel](https://networktocode.slack.com)
+For any questions or comments, please feel free to swing by the [networktocode slack channel](https://networktocode.slack.com).
 
-sign up [here](http://slack.networktocode.com/)
+Sign up [here](http://slack.networktocode.com/)
