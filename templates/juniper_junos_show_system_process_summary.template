@@ -1,0 +1,29 @@
+Value Filldown LAST_PID (\S+)
+Value Filldown LOAD_AVG (.+)
+Value Filldown UP (.+)
+Value Filldown PROCESSES_TOTAL (\d+)
+Value Filldown PROCESSES_STATUS ()
+Value Filldown MEM (.+)
+Value Filldown SWAP (.+)
+Value PID (\d+)
+Value USERNAME (\S+)
+Value THR (\S+)
+Value PRI (\S+)
+Value NICE (\S+)
+Value SIZE (\S+)
+Value RES (\S+)
+Value STATE (\S+)
+Value C (\S+)
+Value TIME (\S+)
+Value WCPU (\S+)
+Value COMMAND (\S+)
+
+Start
+  ^last\s+pid:\s+${LAST_PID};\s+load\s+averages:\s+${LOAD_AVG}\s+up\s+${UP}
+  ^${PROCESSES_TOTAL}:\s+${PROCESSES_STATUS}
+  ^Mem:\s+${MEM}
+  ^Swap:\s+${SWAP}
+  ^PID\s+USERNAME.+
+  ^${PID}\s+${USERNAME}\s+${THR}\s+${PRI}\s+${NICE}\s+${SIZE}\s+${RES}\s+${STATE}\s+${C}\s+${TIME}\s+${WCPU}\s+${COMMAND} -> Record
+
+EOF
