@@ -236,7 +236,7 @@ juniper_junos_show_isis_adjacency.template, .*, juniper_junos|juniper, sh[[ow]] 
 juniper_junos_show_route_summary.template, .*, juniper_junos|juniper, sh[[ow]] rou[[te]] summ[[ary]]
 juniper_junos_show_ospf_neighbor.template, .*, juniper_junos|juniper, sh[[ow]] ospf n[[eighbor]]
 juniper_junos_show_interfaces.template, .*, juniper_junos|juniper, sh[[ow]] inte[[rfaces]]
-juniper_junos_show_system_process_summary.template, .*, juniper_junos, sh[[ow]] sys[[tem]] proce[[ss]] sum[[mary]]
+juniper_junos_show_system_process_summary.template, .*, juniper_junos|juniper, sh[[ow]] sys[[tem]] proce[[ss]] sum[[mary]]
 
 paloalto_panos_show_running_security-policy.template, .*, paloalto_panos, sh[[ow]] runn[[ing]] security[[-policy]]
 paloalto_panos_show_high-availability_all.template, .*, paloalto_panos, sh[[ow]] high[[-availability]] all
