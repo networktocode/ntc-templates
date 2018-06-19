@@ -14,9 +14,12 @@ Start
   ^IPv\d\s+Dest-Routes\s+for\s+<${VR}>
   # Match route line
   ^${BEST}\s+${ID}\s+${PREFIX}\s+${OUTINTERFACE}\s+${NEXTHOP}\s+${PROTOCOL}\s+${PREF}\s+${METRIC}\s+${VSYS} -> Record
-  ^---
-  ^\w+
-  ^\s+
-  ^.+ -> Error "Line not found"
+  # Match table separator
+  ^-+\s*$$
+  # Match route type keys
+  ^\S+:\s+
+  # Match lines that are just space
+  ^\s+$$
+  # ^.+ -> Error "Line not found"
 
 EOF
