@@ -12,3 +12,7 @@ Value NAME ((\S+\s*)+\S+)
 
 Start
   ^\s*${VLAN}\s+${TYPE}\s+${ADMIN}\s+${OPER}\s+${STREE1X1}\s+${STREEFLAT}\s+${AUTH}\s+${IP}\s+${MBLETAG}\s+${SRCLRN}\s+${NAME}\s+ -> Record
+  ^\s*stree\s+mble\s+src
+  ^\s*vlan\s+type\s+admin\s+oper\s+1x1\s+flat\s+auth\s+ip\s+tag\s+lrn\s+name
+  ^-----\+-----\+------\+------\+------\+------\+----\+-----\+-----\+------\+----------
+  ^.*$$ -> Error
