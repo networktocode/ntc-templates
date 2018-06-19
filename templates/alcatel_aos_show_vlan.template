@@ -1,0 +1,14 @@
+Value VLAN (\d+)
+Value TYPE (std|vstk|gvrp|ipmv)
+Value ADMIN (on|off)
+Value OPER (on|off)
+Value STREE1X1 (on|off)
+Value STREEFLAT (on|off)
+Value AUTH (on|off)
+Value IP (on|off)
+Value MBLETAG (on|off)
+Value SRCLRN (on|off)
+Value NAME ((\S+\s*)+\S+)
+
+Start
+  ^\s*${VLAN}\s+${TYPE}\s+${ADMIN}\s+${OPER}\s+${STREE1X1}\s+${STREEFLAT}\s+${AUTH}\s+${IP}\s+${MBLETAG}\s+${SRCLRN}\s+${NAME}\s+ -> Record
