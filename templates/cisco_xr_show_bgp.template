@@ -1,0 +1,25 @@
+Value Filldown STATUS ([sdhirSN*>])
+Value Filldown PATH_SELECTION ([sdhirSN*> ])
+Value Filldown ROUTE_SOURCE ([sdhirSN*> ])
+Value Filldown NETWORK ((?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\/([0-9]|[1-2][0-9]|3[0-2]))
+Value Required NEXT_HOP ((?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?))
+Value Filldown METRIC (\d{0,10})
+Value LOCAL_PREF (\d{0,10})
+Value WEIGHT (\S{0,6})
+Value AS_PATH (.*?)
+Value ORIGIN ([ie\?])
+
+Start
+  # Checking for header
+  ^\s+Network\s+Next Hop\s+Metric\s+LocPrf\s+Weight\s+Path -> Bgp_table
+
+Bgp_table
+  # Regex to match the complete line including network
+  # *> 10.0.0.0/8          192.168.1.1          900    100      0 65135 65235 i
+  ^\s{0,1}${STATUS}${PATH_SELECTION}${ROUTE_SOURCE}\s{0,1}${NETWORK}\s{1,10}${NEXT_HOP}\s{1,19}${METRIC}\s{1,10}${LOCAL_PREF}\s{2,6}${WEIGHT}\s*${AS_PATH}\s*${ORIGIN}$$ -> Record
+  #
+  # Regex to match the lines without network
+  # * i                   192.168.1.2          900    100      0 65135 65235 i
+  ^\s{0,1}${STATUS}${PATH_SELECTION}${ROUTE_SOURCE}\s{19}${NEXT_HOP}\s{1,19}${METRIC}\s{1,10}${LOCAL_PREF}\s{2,6}${WEIGHT}\s*${AS_PATH}\s*${ORIGIN}$$ -> Record
+
+EOF
