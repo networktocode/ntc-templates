@@ -1,0 +1,10 @@
+Value INTERFACE (.+?)
+Value GROUP (\d+)
+Value PRIO (\d+)
+Value STATE (\w+)
+Value ACTIVE_ADDR (\w+|\d+\.\d+\.\d+\.\d+)
+Value STANDBY_ADDR (\d+\.\d+\.\d+\.\d+)
+Value GROUP_ADDR (\d+\.\d+\.\d+\.\d+)
+
+Start
+  ^${INTERFACE}\s+${GROUP}\s+${PRIO}\s+P\s+${STATE}\s+${ACTIVE_ADDR}\s+${STANDBY_ADDR}\s+${GROUP_ADDR} -> Record
