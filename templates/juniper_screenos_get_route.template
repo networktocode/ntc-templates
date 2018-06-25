@@ -20,6 +20,6 @@ Start
   ^\S+:\s+
   # Match lines that are just space
   ^\s+$$
-  # ^.+ -> Error "Line not found"
+  ^.+ -> Error "Line not found"
 
 EOF
