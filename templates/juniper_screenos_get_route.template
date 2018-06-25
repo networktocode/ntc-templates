@@ -20,6 +20,9 @@ Start
   ^\S+:\s+
   # Match lines that are just space
   ^\s+$$
+  # Match table header
+  ^\s+ID\s+IP-Prefix\s+Interface\s+Gateway\s+P\s+Pref\s+Mtr\s+Vsys\s*$$
+  # Error out if line does not match any expressions
   ^.+ -> Error "Line not found"
 
 EOF
