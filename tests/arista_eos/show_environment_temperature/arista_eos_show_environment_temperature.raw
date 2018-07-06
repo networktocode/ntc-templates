@@ -1,34 +1,107 @@
 System temperature status is: Ok
-                                                                 Alert  Critical
-                                               Temp    Setpoint  Limit     Limit
-Sensor  Description                             (C)         (C)    (C)       (C)
-------- ----------------------------------- ------- ----------- ------ ---------
-1       Cpu temp sensor                        38.5    (60) N/A     90        95
-2       Cpu board temp sensor                  32.0    (55) N/A     75        80
-3       Back-panel temp sensor                 29.4    (50) N/A     75        85
-4       Board Sensor                           32.0   (N/A) N/A     55        70
-5       Front-panel temp sensor                27.1   (N/A) N/A     65        75
-6       Trident Bottom Right Outer             42.3   (N/A) N/A    100       110
-7       Trident Bottom Left Outer              41.2   (N/A) N/A    100       110
-8       Trident Top Left Outer                 41.2   (N/A) N/A    100       110
-9       Trident Top Right Outer                42.3   (N/A) N/A    100       110
-10      Trident Bottom Right Inner             40.1   (N/A) N/A    100       110
-11      Trident Bottom Left Inner              39.5   (N/A) N/A    100       110
-12      Trident Top Left Inner                 40.1   (N/A) N/A    100       110
-13      Trident Top Right Inner                40.1   (N/A) N/A    100       110
 
-PowerSupply 1:
+Supervisor 1:
                                                                  Alert  Critical
                                                Temp    Setpoint  Limit     Limit
 Sensor  Description                             (C)         (C)    (C)       (C)
 ------- ----------------------------------- ------- ----------- ------ ---------
-1       Hotspot temperature sensor             34.0    (80) N/A     95       100
-2       Inlet temperature sensor               24.0    (55) N/A     70        75
+1       Digital Temperature Sensor on cpu0     36.0   (65) 63.8     95       105
+2       Digital Temperature Sensor on cpu1     36.0   (65) 63.8     95       105
+3       Digital Temperature Sensor on cpu2     36.0   (65) 63.8     95       105
+4       Digital Temperature Sensor on cpu3     36.0   (65) 63.8     95       105
+5       Digital Temperature Sensor on cpu4     36.0   (65) 63.8     95       105
+6       Digital Temperature Sensor on cpu5     36.0   (65) 63.8     95       105
+7       Digital Temperature Sensor on cpu6     36.0   (65) 63.8     95       105
+8       Digital Temperature Sensor on cpu7     36.0   (65) 63.8     95       105
+9       Digital Temperature Sensor on cpu8     36.0   (65) 63.8     95       105
+10      Digital Temperature Sensor on cpu9     36.0   (65) 63.8     95       105
+11      Digital Temperature Sensor on cpu10    36.0   (65) 63.8     95       105
+12      Digital Temperature Sensor on cpu11    36.0   (65) 63.8     95       105
+13      Supervisor temp sensor                 25.6   (52) 50.8     75        85
+14      PlxLc sensor                           46.0   (80) 78.8     95       110
+15      PlxFc sensor                           43.2   (80) 78.8     95       110
+16      Front sensor                           21.9   (43) 41.8     65        75
+17      Rear sensor                            22.8   (43) 41.8     65        75
+37      CPU VRM temp sensor 0                  30.0   (70) 68.8    105       110
+38      CPU VRM temp sensor 0                  29.0   (70) 68.8    105       110
 
-PowerSupply 2:
+Linecard 3:
                                                                  Alert  Critical
                                                Temp    Setpoint  Limit     Limit
 Sensor  Description                             (C)         (C)    (C)       (C)
 ------- ----------------------------------- ------- ----------- ------ ---------
-1       Hotspot temperature sensor             33.0    (80) N/A     95       100
-2       Inlet temperature sensor               22.0    (55) N/A     70        75
+6       Outlet sensor                          50.8   (85) 83.8     95       105
+7       Inlet sensor                           59.2   (75) 73.8     90       100
+8       Board sensor                           62.0   (95) 93.8    105       110
+10      Board sensor                           64.0   (85) 83.8     95       105
+11      Board sensor                           56.0   (85) 83.8     95       105
+12      Jericho0                               66.0   (85) 83.8    100       108
+13      Jericho1                               73.8   (85) 83.8    100       108
+14      Board sensor                           50.0   (85) 83.8     95       105
+15      Jericho2                               63.0   (85) 83.8    100       108
+16      Jericho3                               69.8   (85) 83.8    100       108
+18      Jericho4                               62.2   (85) 83.8    100       108
+19      Jericho5                               67.0   (85) 83.8    100       108
+
+Linecard 4:
+                                                                 Alert  Critical
+                                               Temp    Setpoint  Limit     Limit
+Sensor  Description                             (C)         (C)    (C)       (C)
+------- ----------------------------------- ------- ----------- ------ ---------
+5       Outlet sensor                          41.2   (80) 78.8     90       100
+6       Inlet sensor                           43.8   (65) 63.8     75        85
+7       Board sensor                           49.0   (85) 83.8     95       105
+9       Board sensor                           45.0   (85) 83.8     95       105
+10      Board sensor                           47.0   (85) 83.8     95       105
+11      Jericho0                               54.2   (85) 83.8    100       110
+12      Jericho1                               59.0   (85) 83.8    100       110
+13      Board sensor                           44.0   (85) 83.8     95       105
+14      Jericho2                               53.8   (85) 83.8    100       110
+15      Jericho3                               57.8   (85) 83.8    100       110
+17      Jericho4                               54.8   (85) 83.8    100       110
+18      Jericho5                               60.2   (85) 83.8    100       110
+
+Linecard 5:
+                                                                 Alert  Critical
+                                               Temp    Setpoint  Limit     Limit
+Sensor  Description                             (C)         (C)    (C)       (C)
+------- ----------------------------------- ------- ----------- ------ ---------
+5       Outlet sensor                          39.5   (80) 78.8     90       100
+6       Inlet sensor                           39.0   (65) 63.8     75        85
+7       Board sensor                           47.2   (85) 83.8     95       105
+9       Board sensor                           43.0   (85) 83.8     95       105
+10      Board sensor                           42.0   (85) 83.8     95       105
+11      Jericho0                               54.2   (85) 83.8    100       110
+12      Jericho1                               60.2   (85) 83.8    100       110
+13      Board sensor                           38.0   (85) 83.8     95       105
+14      Jericho2                               52.2   (85) 83.8    100       110
+15      Jericho3                               56.8   (85) 83.8    100       110
+17      Jericho4                               52.8   (85) 83.8    100       110
+18      Jericho5                               57.2   (85) 83.8    100       110
+
+Linecard 6:
+                                                                 Alert  Critical
+                                               Temp    Setpoint  Limit     Limit
+Sensor  Description                             (C)         (C)    (C)       (C)
+------- ----------------------------------- ------- ----------- ------ ---------
+1       Outlet sensor                          32.5   (80) 78.8     90       100
+2       Inlet sensor                           29.2   (65) 63.8     70        85
+3       Board sensor                           42.8   (90) 88.8    100       105
+4       Board sensor                           38.4   (85) 83.8     95       105
+5       Jericho0                               58.1   (85) 83.8    105       110
+6       Jericho1                               54.8   (85) 83.8    105       110
+7       Board sensor                           34.8   (85) 83.8     95       105
+8       Jericho2                               60.2   (85) 83.8    105       110
+9       Jericho3                               57.2   (85) 83.8    105       110
+
+Fabric 1:
+                                                                 Alert  Critical
+                                               Temp    Setpoint  Limit     Limit
+Sensor  Description                             (C)         (C)    (C)       (C)
+------- ----------------------------------- ------- ----------- ------ ---------
+13      ADT (Fan controller) 1                 32.8   (85) 83.8     95       105
+14      Fan side sensor                        32.0   (85) 83.8     95       105
+15      Midplane side sensor                   28.5   (65) 63.8     75        85
+16      ADT (Fan controller) 2                 30.2   (85) 83.8     95       105
+17      FE 0 sensor                            36.2   (85) 83.8     95       105
+18      FE 1 sensor                            40.8   (85) 83.8     95       105
