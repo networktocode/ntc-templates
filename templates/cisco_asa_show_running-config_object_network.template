@@ -1,0 +1,19 @@
+Value NAME (\S+)
+Value DESC (.+)
+Value TYPE ([hostubnerag]+)
+Value HOST (\d+.\d+.\d+.\d+)
+Value NETWORK (\d+.\d+.\d+.\d+)
+Value MASK (\d+.\d+.\d+.\d+)
+Value START_IP (\d+.\d+.\d+.\d+)
+Value END_IP (\d+.\d+.\d+.\d+)
+
+
+Start
+  ^object\s+network\s+${NAME}\s*
+  ^\s+description:\s+${DESC}\s*
+  ^\s+subnet\s+${NETWORK}\s+${MASK}\s* -> Continue
+  ^\s+range\s+${START_IP}\s+${END_IP}\s* -> Continue
+  ^\s+host\s+${HOST}\s* -> Continue
+  ^\s+${TYPE} -> Record
+
+EOF
