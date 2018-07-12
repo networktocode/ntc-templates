@@ -1,0 +1,27 @@
+Value LOCAL_INTERFACE (\S+)
+Value CHASSIS_ID (\w+?\.\w+?\.\w+?)
+Value NEIGHBOR_PORT_ID (\S+)
+Value NEIGHBOR_INTERFACE (\S+)
+Value NEIGHBOR (\S+)
+Value SYSTEM_DESCRIPTION (.*)
+Value CAPABILITIES (.*)
+Value MANAGEMENT_IP (.*)
+Value VLAN (.*)
+
+Start
+  ^Local Intf: ${LOCAL_INTERFACE}$$
+  ^Chassis id: ${CHASSIS_ID}$$
+  ^Port id: ${NEIGHBOR_PORT_ID}$$
+  ^Port Description: ${NEIGHBOR_INTERFACE}$$
+  ^System Name - not advertised${NEIGHBOR}$$
+  ^System Name: ${NEIGHBOR}$$
+  ^System Description: -> GetDescription
+  ^Enabled Capabilities: ${CAPABILITIES}$$
+  ^Management Addresses: -> GetIP
+  ^Vlan ID: ${VLAN}$$ -> Record
+
+GetDescription
+  ^${SYSTEM_DESCRIPTION} -> Start
+
+GetIP
+  ^.*IP: ${MANAGEMENT_IP} -> Start
