@@ -1,22 +1,22 @@
 Value Required DESTINATION_HOST (\S+)
-Value MANAGEMENT_IP (.*)
+Value MANAGEMENT_IP (\d+\.\d+\.\d+\.\d+|\w+\.\w+\.\w+)
 Value PLATFORM (.*)
 Value REMOTE_PORT (.*)
 Value LOCAL_PORT (.*)
-Value SOFTWARE_VERSION (.*)
+Value SOFTWARE_VERSION (.*$)
 Value CAPABILITIES (.*)
 
-#TODO - currently doesn't parse Platform and Capabilities if no ip is present
 Start
   ^Device ID: ${DESTINATION_HOST}
-  ^Entry address\(es\): -> ParseIP
-  ^Platform: ${PLATFORM},  Capabilities: ${CAPABILITIES}
+  ^Entry address\(es\)\s*:\s* -> ParseIP
+  ^Platform\s*:\s*${PLATFORM}\s*,\s*Capabilities\s*:\s*${CAPABILITIES}
   ^Interface: ${LOCAL_PORT},  Port ID \(outgoing port\): ${REMOTE_PORT}
   ^Version : -> GetVersion
 
 ParseIP
   ^.*IP address: ${MANAGEMENT_IP} -> Start
-  ^Platform: -> Start
+  ^Platform\s*:\s*${PLATFORM}\s*,\s*Capabilities\s*:\s*${CAPABILITIES} -> Start
+  ^.* -> Start
 
 GetVersion
   ^${SOFTWARE_VERSION} -> Record Start
