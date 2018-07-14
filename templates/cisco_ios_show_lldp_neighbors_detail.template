@@ -5,7 +5,7 @@ Value NEIGHBOR_INTERFACE (\S+)
 Value NEIGHBOR (\S+)
 Value SYSTEM_DESCRIPTION (.*)
 Value CAPABILITIES (.*)
-Value MANAGEMENT_IP (.*)
+Value MANAGEMENT_IP (\d+\.\d+\.\d+\.\d+|\w+\.\w+\.\w+)
 Value VLAN (.*)
 
 Start
@@ -18,7 +18,13 @@ Start
   ^System Description: -> GetDescription
   ^Enabled Capabilities: ${CAPABILITIES}$$
   ^Management Addresses: -> GetIP
-  ^Vlan ID: ${VLAN}$$ -> Record
+  ^Vlan ID: ${VLAN}$$
+  ^-+ -> Record
+  ^\s*$$
+  ^Total entries displayed -> Continue.Record
+  ^\s*$$ -> Continue
+  ^\S*$$ -> Error
+
 
 GetDescription
   ^${SYSTEM_DESCRIPTION} -> Start
