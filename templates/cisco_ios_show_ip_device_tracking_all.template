@@ -8,3 +8,11 @@ Value Required SOURCE (\S+)
 
 Start
   ^${IP}\s+${MAC}\s+${VLAN}\s+${INTERFACE}\s+${PROBE_TIMEOUT}\s+${STATE}\s+${SOURCE} -> Record
+  ^Global
+  ^Total
+  ^Enabled\s+interfaces
+  ^\s+(?:\S+(?:,\s*|))+$$
+  ^\s*-+
+  ^\s+IP Address\s+MAC\s+Address\s+Vlan\s+Interface\s+Probe-Timeout\s+State\s+Source
+  ^\s*$$
+  ^.* -> Error
