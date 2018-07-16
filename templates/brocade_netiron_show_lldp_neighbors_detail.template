@@ -15,7 +15,7 @@ Start
   ^Local\s+port:\s+${interface}
   ^\s+\+\s+System\s+name\s+:\s+"${neihostnametid}"
   ^\s+\+\s+Port\s+description\s+:\s+"${neiinterface}"
-  ^\s+\Enabled\s+capabilities\s*:\s+${neicapabilities}
+  ^\s+Enabled\s+capabilities\s*:\s+${neicapabilities}
   ^\s+\+\s+Port\s+VLAN\s+ID:\s+${neipvid}
   ^\s+\+\s+Management\s+address\s+\(IPv4\):\s+${neimgmtip}
   ^\s+\+\s+Link\s+aggregation:\s+aggregated\s+\(aggregated\s+port\s+ifIndex:\s+${neilacpindex}\)
