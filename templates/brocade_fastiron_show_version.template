@@ -1,0 +1,12 @@
+Value SW_BIN (\S+)
+Value SW_VERSION (\S+)
+Value BOOT_MONITOR_VERSION (.*$)
+Value HW (.*$)
+Value SERIAL (\S+$)
+
+Start
+  ^.*from Primary ${SW_BIN}
+  ^\s*SW: Version ${SW_VERSION}
+  ^\s*Boot-Monitor.*, Version:${BOOT_MONITOR_VERSION}
+  ^\s*Serial  #: ${SERIAL}
+  ^\s*HW: ${HW}
