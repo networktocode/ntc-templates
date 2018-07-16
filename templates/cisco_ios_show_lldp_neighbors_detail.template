@@ -6,7 +6,7 @@ Value NEIGHBOR (\S+)
 Value SYSTEM_DESCRIPTION (.*)
 Value CAPABILITIES (.*)
 Value MANAGEMENT_IP (\d+\.\d+\.\d+\.\d+|\w+\.\w+\.\w+)
-Value VLAN (.*)
+Value VLAN (\d+)
 
 Start
   ^Local Intf: ${LOCAL_INTERFACE}$$
