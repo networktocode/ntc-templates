@@ -5,29 +5,43 @@ Value NEIGHBOR_INTERFACE (\S+)
 Value NEIGHBOR (\S+)
 Value SYSTEM_DESCRIPTION (.*)
 Value CAPABILITIES (.*)
-Value MANAGEMENT_IP (\d+\.\d+\.\d+\.\d+|\w+\.\w+\.\w+)
+Value MANAGEMENT_IP (\S+)
 Value VLAN (\d+)
 
 Start
-  ^Local Intf: ${LOCAL_INTERFACE}$$
-  ^Chassis id: ${CHASSIS_ID}$$
-  ^Port id: ${NEIGHBOR_PORT_ID}$$
-  ^Port Description: ${NEIGHBOR_INTERFACE}$$
-  ^System Name - not advertised${NEIGHBOR}$$
-  ^System Name: ${NEIGHBOR}$$
-  ^System Description: -> GetDescription
-  ^Enabled Capabilities: ${CAPABILITIES}$$
-  ^Management Addresses: -> GetIP
-  ^Vlan ID: ${VLAN}$$
+  ^Local\s+Intf:\s+${LOCAL_INTERFACE}\s*$$
+  ^Chassis\s+id:\s+${CHASSIS_ID}\s*$$
+  ^Port\s+id:\s+${NEIGHBOR_PORT_ID}\s*$$
+  ^Port\s+Description:\s+${NEIGHBOR_INTERFACE}\s*$$
+  ^System\s+Name(?::\s+${NEIGHBOR}|\s+-\s+not\s+advertised)\s*$$
+  ^System\s+Description -> GetDescription
+  ^Time
+  ^System\s+Capabilities
+  ^Enabled\s+Capabilities:\s+${CAPABILITIES}\s*$$
+  ^Management\s+Addresses
+  ^\s+OID
+  ^\s+[\d+\.]{8,}
+  ^.*IP:\s+${MANAGEMENT_IP}
+  ^Auto\s+Negotiation
+  ^Physical\s+media
+  ^\s+.+\(\S+\)\s*$$
+  ^\s*[MEDmed]+
+  ^\s+Inventory
+  ^\s+Capabilities
+  ^\s+Device\s+type
+  ^\s+Network\s+Policies
+  ^\s+Power\s+requirements
+  ^\s+Location
+  ^Vlan\s+ID:\s+(?:${VLAN}|-\s+not\s+advertised)\s*$$
+  ^\s+\(\S+\)
+  ^(?:PoE|\s+Power)
   ^-+ -> Record
   ^\s*$$
-  ^Total entries displayed -> Continue.Record
-  ^\s*$$ -> Continue
-  ^\S*$$ -> Error
-
+  ^\s*Total\s+entries\s+displayed -> Record
+  ^\s*$$
+  ^.*$$ -> Error
 
 GetDescription
   ^${SYSTEM_DESCRIPTION} -> Start
-
-GetIP
-  ^.*IP: ${MANAGEMENT_IP} -> Start
+  ^\s*$$
+  ^.*$$ -> Error
