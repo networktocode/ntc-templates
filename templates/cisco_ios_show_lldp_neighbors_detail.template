@@ -25,7 +25,7 @@ Start
   ^Auto\s+Negotiation
   ^Physical\s+media
   ^\s+.+\(\S+\)\s*$$
-  ^\s*[MEDmed]+
+  ^Media\s+Attachment
   ^\s+Inventory
   ^\s+Capabilities
   ^\s+Device\s+type
@@ -35,8 +35,8 @@ Start
   ^Vlan\s+ID:\s+(?:${VLAN}|-\s+not\s+advertised)\s*$$
   ^\s+\(\S+\)
   ^(?:PoE|\s+Power)
-  ^-+ -> Record
-  ^\s*$$
+  ^\s*-+\s*$$ -> Record
+  ^MED -> Med
   ^\s*Total\s+entries\s+displayed -> Record
   ^\s*$$
   ^.*$$ -> Error
@@ -45,3 +45,10 @@ GetDescription
   ^${SYSTEM_DESCRIPTION} -> Start
   ^\s*$$
   ^.*$$ -> Error
+
+Med
+  ^\s+\S+
+  ^\s*$$
+  ^\s*-+\s*$$ -> Continue.Record
+  ^\s*-+\s*$$ -> Start
+  ^.* -> Error
