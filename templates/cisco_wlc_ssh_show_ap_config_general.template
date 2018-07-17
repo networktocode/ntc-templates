@@ -1,0 +1,9 @@
+Value AP_SERIAL_NUMBER (\S+)
+Value AP_GROUP (\S+)
+Value AP_MODE (\S+)
+
+Start
+  ^Cisco AP Group Name\.*\s+${AP_GROUP} 
+  ^AP Mode \.*\s+${AP_MODE} 
+  ^AP Serial Number\.*\s+${AP_SERIAL_NUMBER} -> Record
+  
