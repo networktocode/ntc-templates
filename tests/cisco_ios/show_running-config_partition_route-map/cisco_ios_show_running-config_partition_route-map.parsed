@@ -7,7 +7,7 @@ parsed_sample:
   match_prefix_list: "11167:5002"
   match_community_value: ""
   set_community_value: ""
-  set_local_pref_value:""
+  set_local_pref_value: ""
   set_prepend_as_path: ""
 
 - route_map_name: "RIP_TO_BGP"
@@ -16,7 +16,7 @@ parsed_sample:
   match_prefix_list: ""
   match_community_value: ""
   set_community_value: ""
-  set_local_pref_value:""
+  set_local_pref_value: ""
   set_prepend_as_path: ""
 
 
@@ -35,7 +35,7 @@ parsed_sample:
   match_prefix_list: ""
   match_community_value: 500
   set_community_value: "no-advertise"
-  set_local_pref_value:""
+  set_local_pref_value: ""
   set_prepend_as_path: ""
 
 - route_map_name: "CLINK_BGP_IN"
