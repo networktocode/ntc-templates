@@ -9,6 +9,7 @@ Value MANAGEMENT_IP (\S+)
 Value VLAN (\d+)
 
 Start
+  ^.*LLDP is not enabled -> EOF
   ^Local\s+Intf:\s+${LOCAL_INTERFACE}\s*$$
   ^Chassis\s+id:\s+${CHASSIS_ID}\s*$$
   ^Port\s+id:\s+${NEIGHBOR_PORT_ID}\s*$$
