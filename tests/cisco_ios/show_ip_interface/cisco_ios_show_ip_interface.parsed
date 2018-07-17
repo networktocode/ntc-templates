@@ -1,0 +1,92 @@
+---
+parsed_sample:
+
+- inbound_acl: ""
+  interface: "GigabitEthernet2/23"
+  ip_address: ""
+  ip_helper: []
+  link_status: "up"
+  mask: ""
+  mtu: ""
+  outgoing_acl: ""
+  protocol_status: "up"
+
+- inbound_acl: ""
+  interface: "GigabitEthernet2/24"
+  ip_address: ""
+  ip_helper: []
+  link_status: "administratively down"
+  mask: ""
+  mtu: ""
+  outgoing_acl: ""
+  protocol_status: "down"
+  
+- inbound_acl: ""
+  interface: "GigabitEthernet2/25"
+  ip_address: "192.168.102.45"
+  ip_helper: []
+  link_status: "up"
+  mask: "30"
+  mtu: ""
+  outgoing_acl: ""
+  protocol_status: "up"
+  
+- inbound_acl: ""
+  interface: "Tunnel0"
+  ip_address: ""
+  ip_helper: []
+  link_status: "up"
+  mask: ""
+  mtu: ""
+  outgoing_acl: ""
+  protocol_status: "up"
+  
+- inbound_acl: ""
+  interface: "Vlan1"
+  ip_address: "192.168.1.1"
+  ip_helper: ['192.168.1.27', '192.168.1.88', '10.17.5.255']
+  link_status: "up"
+  mask: "24"
+  mtu: ""
+  outgoing_acl: ""
+  protocol_status: "up"
+
+- inbound_acl: ""
+  interface: "Vlan2"
+  ip_address: "192.168.2.1"
+  ip_helper: ['192.168.1.27', '192.168.1.88']
+  link_status: "administratively down"
+  mask: "24"
+  mtu: ""
+  outgoing_acl: ""
+  protocol_status: "down"
+  
+- inbound_acl: "ACL-IN"
+  interface: "TenGigabitEthernet0/1/0"
+  ip_address: "1.1.1.1"
+  ip_helper: []
+  link_status: "up"
+  mask: "30"
+  mtu: ""
+  outgoing_acl: "ACL-OUT"
+  protocol_status: "up"
+  
+- inbound_acl: ""
+  interface: "GigabitEthernet0"
+  ip_address: ""
+  ip_helper: []
+  link_status: "administratively down"
+  mask: ""
+  mtu: ""
+  outgoing_acl: ""
+  protocol_status: "down"
+  
+- inbound_acl: ""
+  interface: "Loopback0"
+  ip_address: "10.255.255.1"
+  ip_helper: []
+  link_status: "up"
+  mask: "32"
+  mtu: ""
+  outgoing_acl: ""
+  protocol_status: "up"

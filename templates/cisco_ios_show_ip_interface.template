@@ -3,13 +3,21 @@ Value LINK_STATUS (\w+(\s?\w+))
 Value PROTOCOL_STATUS (.*)
 Value IP_ADDRESS (\d+\.\d+\.\d+\.\d+)
 Value MASK (\d+)
+Value MTU (\d+)
 Value List IP_HELPER (\d+\.\d+\.\d+\.\d+)
+Value OUTGOING_ACL (.*)
+Value INBOUND_ACL (.*)
 
 Start
   ^\S+ -> Continue.Record
   ^${INTERFACE} is ${LINK_STATUS}.*protocol is ${PROTOCOL_STATUS}
   ^\s+Internet address is ${IP_ADDRESS}/${MASK}
-  ^\s+Helper\saddress(es|)\s(is|are)\s${IP_HELPER}\s*$$ -> HELPERS
+  ^\s+MTU\s+is\s+${MTU}\s+bytes}
+  ^\s+Helper\s+address(es|)\s(is|are)\s+${IP_HELPER}\s*$$ -> HELPERS
+  ^\s+Outgoing\s+access\s+list\s+is\s+not\s+set -> NoRecord
+  ^\s+Outgoing\s+access\s+list\s+is\s+${OUTGOING_ACL}
+  ^\s+Inbound\s+access\s+list\s+is\s+not\s+set -> NoRecord
+  ^\s+Inbound\s+access\s+list\s+is\s+${INBOUND_ACL}
 
 HELPERS
   ^\s+${IP_HELPER}\s*$$
