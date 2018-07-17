@@ -6,4 +6,9 @@ Value Required VLAN ([0-9]+)
 Value Required INTERFACE (\S+)
 
 Start
+  ^\s*MacAddress\s*IpAddress\s*Lease\(sec\)\s*Type\s*VLAN\s*Interface\s*
+  ^-+
   ^${MAC}\s+${IP}\s+${LEASE}\s+${TYPE}\s+${VLAN}\s+${INTERFACE} -> Record
+  ^Total number of bindings
+  ^\s*$$
+  ^.*$$ -> Error
