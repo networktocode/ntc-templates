@@ -16,8 +16,9 @@ Start
   ^\sset\s+local-preference\s+${SET_LOCAL_PREF_VALUE}
   ^\smatch\s+community\s+${MATCH_COMMUNITY_VALUE}
   ^\sset\s+as-path\s+prepend\s+${SET_PREPEND_AS_PATH}
+  ^! -> Record
   # Catch all unuseful raw data
-  ^(!\s*|$$|Building configuration.*|Current configuration.*|Configuration.*|end.*) -> Record
+  ^(!\s*|$$|Building configuration.*|Current configuration.*|Configuration.*|end.*)
   # Error out if raw data does not match any above rules.
   ^.* -> Error "Could not parse line:"
 
