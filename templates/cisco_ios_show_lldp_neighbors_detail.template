@@ -9,6 +9,8 @@ Value MANAGEMENT_IP (\S+)
 Value VLAN (\d+)
 
 Start
+  ^.*Invalid input detected -> EOF
+  ^.*LLDP is not enabled -> EOF
   ^Local\s+Intf:\s+${LOCAL_INTERFACE}\s*$$
   ^Chassis\s+id:\s+${CHASSIS_ID}\s*$$
   ^Port\s+id:\s+${NEIGHBOR_PORT_ID}\s*$$
@@ -35,8 +37,14 @@ Start
   ^Vlan\s+ID:\s+(?:${VLAN}|-\s+not\s+advertised)\s*$$
   ^\s+\(\S+\)
   ^(?:PoE|\s+Power)
+<<<<<<< HEAD
   ^\s*-+\s*$$ -> Record
   ^MED -> Med
+=======
+  ^\s*\^\s*
+  ^-+ -> Record
+  ^\s*$$
+>>>>>>> 46813f6ff07751fe0d02eab80831836bfbf7d517
   ^\s*Total\s+entries\s+displayed -> Record
   ^\s*$$
   ^.*$$ -> Error
