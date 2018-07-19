@@ -1,0 +1,9 @@
+Value RELOAD_TYPE (.+)
+
+Start
+  ^Reload-Type\s+:\s+${RELOAD_TYPE} -> Record
+  ^\s+$$
+  ^$$
+  ^.* -> Error "LINE NOT FOUND"
+
+EOF
