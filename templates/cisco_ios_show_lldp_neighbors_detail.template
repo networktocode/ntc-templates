@@ -34,6 +34,7 @@ Start
   ^\s+Network\s+Policies
   ^\s+Power\s+requirements
   ^\s+Location
+  ^Time\s+remaining
   ^Vlan\s+ID:\s+(?:${VLAN}|-\s+not\s+advertised)\s*$$
   ^\s+\(\S+\)
   ^(?:PoE|\s+Power)
@@ -45,9 +46,13 @@ Start
   ^.*$$ -> Error
 
 GetDescription
-  ^${SYSTEM_DESCRIPTION} -> Start
+  ^${SYSTEM_DESCRIPTION} -> IgnoreDescription
+
+IgnoreDescription
+  ^Time\s+remaining -> Start
+  ^\S*
   ^\s*$$
-  ^.*$$ -> Error
+  ^.* -> Error
 
 Med
   ^\s+\S+
