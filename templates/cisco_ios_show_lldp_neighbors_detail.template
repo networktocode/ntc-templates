@@ -9,6 +9,7 @@ Value MANAGEMENT_IP (\S+)
 Value VLAN (\d+)
 
 Start
+  ^.*not advertised
   ^.*Invalid input detected -> EOF
   ^.*LLDP is not enabled -> EOF
   ^Local\s+Intf:\s+${LOCAL_INTERFACE}\s*$$
