@@ -9,6 +9,7 @@ Value VLAN ([0-9]+)
 
 
 Start
+  ^.*not advertised
   ^[Cc]hassis\s[idID]{2}\:\s${CHASSIS_ID}$$
   ^[Pp]ort\s[idID]{2}\:\s${NEIGHBOR_INTERFACE}$$
   ^[Ll]ocal\s[Pp]ort\s[idID]{2}\:\s${LOCAL_INTERFACE}$$
