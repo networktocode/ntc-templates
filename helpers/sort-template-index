@@ -1,0 +1,61 @@
+#!/usr/bin/env python
+
+import argparse
+import csv
+import re
+import os
+import sys
+
+def load_indexdata(index):
+    """Load data from index file."""
+    index_data = []
+    headers = []
+    with open(index) as indexfs:
+        line = indexfs.readline()
+        while re.match('^\s+$', line) or line.startswith('#') or line.startswith('Template,'):
+            headers.append(line)
+            line = indexfs.readline()
+        indexfs.seek(indexfs.tell()-len(line))
+        data = csv.reader(indexfs)
+        for row in data:
+            if len(row) > 2 and row[0] != 'Template':
+                index_data.append(row)
+
+    return index_data, headers
+
+def sort_index(indexfile, replace=False):
+
+    index, headers = load_indexdata(indexfile)
+
+    if args.replace:
+        fh = open(indexfile, "w")
+    else:
+        fh = sys.stdout
+
+    fh.write(''.join(headers))
+
+    indexordered = sorted(index, key=lambda a: (a[2], -len(re.sub(r'\[\[|\]\]','',a[3])), re.sub(r'\[\[|\]\]','',a[3]) ) )
+
+    prevos = None
+    for row in indexordered:
+        if prevos and row[2] != prevos:
+             fh.write("\n")
+        fh.write(','.join(row) + "\n")
+        prevos = row[2]
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description='''
+Update the ntc-templates index file with a properly sorted index"
+
+Sorting Criteria:
+    1) OS entries are grouped, alphabetically
+    2) Commands are sorted from longest to shortest
+    3) When commands are the same length, they are alphabetically sorted
+    4) Add space between OS groupings
+''')
+    parser.add_argument("--index", type=str, help="ntc-templates index file to sort", default='./templates/index')
+    parser.add_argument("--replace", action="store_true", help="replace the file, otherwise printed to stdout")
+
+    args = parser.parse_args()
+
+    sort_index(args.index, args.replace)

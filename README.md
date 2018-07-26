@@ -86,12 +86,9 @@ Multiple RAW and Parsed files are supported per folder, and are encouraged, as t
 
 ## Index File
 
-The Index file binds the templates to the commands being run. Special care has been taken on ordering, as there is potential for issues. e.g. `show ip route` picking up for `show ip router vrf <vrf-name>`. We have used a combination of ordering, as defined: 
-
- - OS in alphabetical order
- - Command in length other
- - When Length is the same, use alphabetical order
- - Keep space between OS's
+The Index file binds the templates to the commands being run. Special care has
+been taken on ordering, as there is potential for issues. e.g. `show ip route`
+picking up for `show ip router vrf <vrf-name>`.
 
 Example:
 
@@ -107,6 +104,28 @@ cisco_ios_show_capability_feature_routing.template,  .*, cisco_ios, sh[[ow]] cap
 cisco_ios_show_interface_transceiver.template, .*, cisco_ios, sh[[ow]] int[[erface]] trans[[ceiver]]
 cisco_ios_show_cdp_neighbors_detail.template, .*, cisco_ios, sh[[ow]] c[[dp]] neig[[hbors]] det[[ail]]
 ```
+
+## Sorting the Index file
+
+The order of the index file is important and it's nice to by tidy. We have
+used a combination of ordering, as defined:
+
+ - OS in alphabetical order
+ - Command in length order
+ - When Length is the same, use alphabetical order
+ - Keep space between OS's
+
+Sorting the index file can be a little tedious to follow the rules specified.
+A helper script has been added that will make this easier.  You can append
+your lines to the index file and run the `helper/sort-template-index
+--replace` command to re-sort the index following the above rules.
+
+The commands should be listed in reverse length order so that longer, presumably more
+specific commands are matched before less-specific.
+
+## Testing
+
+You can use `pytest` to run the test suite.
 
 # Questions
 

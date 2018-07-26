@@ -5,7 +5,7 @@ import csv
 import os
 import glob
 import csv
-
+import re
 
 
 def load_indexdata():
@@ -33,14 +33,14 @@ def check_order(current_os, prior_os,cmd_len, prior_len, os_choices, used_os, cm
         return False , msg
 
     if current_os not in os_choices:
-        msg = "'{}' is not one of the valid options '{}'".format(current_os, used_os)
+        msg = "OS '{}' is not in the valid OS options '{}'".format(current_os, os_choices)
         return False, msg
 
     if not prior_os and prior_len == 0:
         # Starting Point
         return True , ''
     elif current_os == prior_os and cmd_len == prior_len and cmd == min(prior_cmd, cmd):
-        msg = "OS is the same and command same length, please set {} before {} to be in alphabetical order".format(cmd, prior_cmd)
+        msg = "OS {} is the same and length of command is same, please set {} before {} to be in alphabetical order".format(current_os, cmd, prior_cmd)
         return False, msg
     elif current_os == prior_os and cmd_len <= prior_len:
         # OS is the same as previous, and cmd_len is smaller or equal to prior so good
@@ -49,7 +49,7 @@ def check_order(current_os, prior_os,cmd_len, prior_len, os_choices, used_os, cm
         # prior OS has changed, do not need to check for length yet
         return True , ''
     elif current_os == prior_os and cmd_len > prior_len:
-        msg = "Current Command len '{}' larger then previous '{}', for command '{}'".format(cmd_len, prior_len, cmd )
+        msg = "Current Command '{}' len {} longer then previous '{}' len {} on {}".format(cmd, cmd_len, prior_cmd, prior_len, current_os)
         return False , msg
     elif current_os != prior_os and current_os in used_os:
         msg = "'{}' OS was already used in list on command '{}'".format(current_os, cmd)
@@ -68,7 +68,7 @@ def test_index_ordering():
         'hp_comware', 'hp_procurve', 'huawei', 'juniper', 'juniper_junos', 'juniper_screenos',
         'alcatel_sros', 'linux', 'ovs_linux', 'paloalto_panos', 'quanta_mesh', 'vmware_nsxv',
         'vyatta_vyos', 'vyos'
-    ]
+        ]
 
     prior_os = ""
     prior_len = 0
@@ -80,17 +80,19 @@ def test_index_ordering():
         template = row[0].strip()
         os = '_'.join(template.split('_')[:2])
         cmd = '_'.join(template.split('_')[2:])
-        cmd_len = len(cmd)
-        check_val, check_msg = check_order(os, prior_os, cmd_len, prior_len, os_choices, used_os, cmd, prior_cmd)
-        if not check_val:
-        #assertFalse(check_val, msg=check_msg)
+
+        # cmd is based on the template name, cmd_full is using the command without the [[ and ]] (note other regex syntax may occur)
+        cmd_full = re.sub(r'\[\[|\]\]','', row[3].strip())
+        cmd_len = len(cmd_full)
+        order_ok, check_msg = check_order(os, prior_os, cmd_len, prior_len, os_choices, used_os, cmd_full, prior_cmd)
+        if not order_ok:
             print("Error on line: {}".format(row))
-            print("Error Message: {}".format(check_msg))
-        assert check_val != False
+            assert order_ok, check_msg
+
         if os not in used_os:
             used_os.append(os)
         prior_len = cmd_len
-        prior_cmd = cmd
+        prior_cmd = cmd_full
         prior_os = os
 
 def main():
