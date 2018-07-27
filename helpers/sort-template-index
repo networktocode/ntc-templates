@@ -1,10 +1,14 @@
 #!/usr/bin/env python
 
+from __future__ import print_function
 import argparse
 import csv
 import re
 import os
 import sys
+
+def warn(*args, **kwargs):
+    print(*args, file=sys.stderr, **kwargs)
 
 def load_indexdata(index):
     """Load data from index file."""
@@ -12,19 +16,31 @@ def load_indexdata(index):
     headers = []
     with open(index) as indexfs:
         line = indexfs.readline()
-        while re.match('^\s+$', line) or line.startswith('#') or line.startswith('Template,'):
+        while re.match('^\s*$', line) or line.startswith('#') or line.startswith('Template,'):
             headers.append(line)
             line = indexfs.readline()
+
+        # unslurp the last line that wasn't a header
         indexfs.seek(indexfs.tell()-len(line))
-        data = csv.reader(indexfs)
+
+        indexbuffer = [ line for line in indexfs if not re.match('^\s*$', line) ]
+        noncsvlines = [ line for line in indexbuffer if len(re.findall(',', line))<3 ]
+        if len(noncsvlines):
+            warn("WARNING Non-CSV lines will be lost in sort:\n\n{}\n".format(''.join(noncsvlines)))
+            sys.exit(1)
+
+        data = csv.reader(indexbuffer)
         for row in data:
-            if len(row) > 2 and row[0] != 'Template':
+            if len(row) > 2:
                 index_data.append(row)
+            else:
+                warn("Unparsed row detected, will be lost in sort")
+                sys.exit(1)
 
     return index_data, headers
 
 def sort_index(indexfile, replace=False):
-
+    """Sort and optionaly replace the index file, otherwise print to stdout"""
     index, headers = load_indexdata(indexfile)
 
     if args.replace:
@@ -34,7 +50,10 @@ def sort_index(indexfile, replace=False):
 
     fh.write(''.join(headers))
 
-    indexordered = sorted(index, key=lambda a: (a[2], -len(re.sub(r'\[\[|\]\]','',a[3])), re.sub(r'\[\[|\]\]','',a[3]) ) )
+    indexordered = sorted(index, key=lambda a: (a[2],
+                                                -len(re.sub(r'\[\[|\]\]','',a[3])),
+                                                re.sub(r'\[\[|\]\]','',a[3])
+                                            ))
 
     prevos = None
     for row in indexordered:
@@ -48,10 +67,9 @@ if __name__ == "__main__":
 Update the ntc-templates index file with a properly sorted index"
 
 Sorting Criteria:
-    1) OS entries are grouped, alphabetically
+    1) OS entries are grouped, in alphabetical order with blank line between
     2) Commands are sorted from longest to shortest
     3) When commands are the same length, they are alphabetically sorted
-    4) Add space between OS groupings
 ''')
     parser.add_argument("--index", type=str, help="ntc-templates index file to sort", default='./templates/index')
     parser.add_argument("--replace", action="store_true", help="replace the file, otherwise printed to stdout")

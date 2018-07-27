@@ -52,8 +52,10 @@ Start
 
 ## Raw version of Input Text
 
-The raw text file should contain **only** the output of the CLI command to be parsed. It should **not** contain the CLI command itself
-The raw text file should be placed in a folder in the `./tests` directory with the same name as the template file minus the .template extension
+The raw text file should contain **only** the output of the CLI command to be
+parsed. It should **not** contain the CLI command itself The raw text file
+should be placed in a folder in the `./tests` directory with the same name as
+the template file minus the .template extension
 
 An example of the proper format is shown below
 
@@ -67,8 +69,9 @@ An example of the proper format is shown below
 
 The parsed dictionary must be in a dictionary format. All keys in the dictionary should be in all lowercase
 
-The parsed text file should be placed in a folder in the ./tests directory with the same name as the template file minus the
-`.template` extension. The raw text file and the parsed text file should be in the same folder.
+The parsed text file should be placed in a folder in the ./tests directory
+with the same name as the template file minus the `.template` extension. The
+raw text file and the parsed text file should be in the same folder.
 
 An example of the proper format is shown below
 
@@ -82,7 +85,9 @@ parsed_sample:
 - {day: '01', dayweek: Sat, month: 08, time: '19:35:31', timezone: UTC, year: '2011'}
 ```
 
-Multiple RAW and Parsed files are supported per folder, and are encouraged, as there are differences depending on version, length, etc... that additional testing and more real life data helps identify. 
+Multiple RAW and Parsed files are supported per folder, and are encouraged, as
+there are differences depending on version, length, etc... that additional
+testing and more real life data helps identify.
 
 ## Index File
 
@@ -107,21 +112,20 @@ cisco_ios_show_cdp_neighbors_detail.template, .*, cisco_ios, sh[[ow]] c[[dp]] ne
 
 ## Sorting the Index file
 
-The order of the index file is important and it's nice to by tidy. We have
-used a combination of ordering, as defined:
+The order of the index file is important and it's nice to be tidy. In
+particular, the commands should be listed in reverse length order so that
+longer, presumably more specific commands are matched before less-specific.
 
- - OS in alphabetical order
- - Command in length order
- - When Length is the same, use alphabetical order
- - Keep space between OS's
+To keep the layout clean, we have used a combination of ordering rules, as defined:
+
+ - OS entries are grouped, in alphabetical order with blank line between
+ - Commands are sorted from longest to shortest
+ - When commands are the same length, they are alphabetically sorted
 
 Sorting the index file can be a little tedious to follow the rules specified.
 A helper script has been added that will make this easier.  You can append
 your lines to the index file and run the `helper/sort-template-index
---replace` command to re-sort the index following the above rules.
-
-The commands should be listed in reverse length order so that longer, presumably more
-specific commands are matched before less-specific.
+--replace` command to sort (and --replace in place) the index following the above rules.
 
 ## Testing
 
