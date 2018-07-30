@@ -5,14 +5,15 @@
 # abc[[xyz]] is expanded to abc(x(y(z)?)?)?, regexp inside [[]] is not supported
 #
 # Rules of Ordering:
-#  - OS in alphbetical order
-#  - Command in length other
+#  - OS grouped in alphabetical order
+#  - Command in length order
 #  - When Length is the same, use alphabetical order
-#  - Keep space between OS's
+#  - Keep space between OS groupings
+#
+# Tip: Run 'helpers/sort-template-index --replace' from the top level to
+# automatically re-sort this file according to the above rules.
 #
 Template, Hostname, Platform, Command
-
-
 
 alcatel_sros_show_router_bgp_routes_vpn-ipv4.template, .*, alcatel_sros, sh[[ow]] router bgp rou[[tes]] vpn-ipv4
 alcatel_sros_show_service_id_base.template, .*, alcatel_sros, sh[[ow]] serv[[ice]] id ba[[se]]

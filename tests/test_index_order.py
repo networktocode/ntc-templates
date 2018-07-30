@@ -77,7 +77,8 @@ def test_index_ordering():
 
     index = load_indexdata()
     for row in index:
-        template = row[0].strip()
+        template = re.sub('\.template$', '', row[0].strip())
+
         os = '_'.join(template.split('_')[:2])
         cmd = '_'.join(template.split('_')[2:])
 
