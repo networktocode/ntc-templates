@@ -1,81 +1,81 @@
 ---
 parsed_sampled:
 
-- "adv_router": ['10.254.11.9', '10.254.11.33']
-  "code": "P"
-  "fd": "264448"
-  "mask": "32"
-  "out_interface": ['TenGigabitEthernet1/1', 'TenGigabitEthernet2/1']
-  "process_id": "100"
-  "route": "66.128.208.232"
-  "router_id": "10.255.11.6"
-  "successors": "2"
-  "tag": ""
+- adv_router: ['10.254.11.9', '10.254.11.33']
+  code: "P"
+  fd: "264448"
+  mask: "32"
+  out_interface: ['TenGigabitEthernet1/1', 'TenGigabitEthernet2/1']
+  process_id: "100"
+  route: "66.128.208.232"
+  router_id: "10.255.11.6"
+  successors: "2"
+  tag: ""
   
-- "adv_router": ['10.254.6.14']
-  "code": "P"
-  "fd": "1024"
-  "mask": "30"
-  "out_interface": ['Port-channel10']
-  "process_id": "100"
-  "route": "10.254.6.8"
-  "router_id": "10.255.11.6"
-  "successors": "1"
-  "tag": ""
+- adv_router: ['10.254.6.14']
+  code: "P"
+  fd: "1024"
+  mask: "30"
+  out_interface: ['Port-channel10']
+  process_id: "100"
+  route: "10.254.6.8"
+  router_id: "10.255.11.6"
+  successors: "1"
+  tag: ""
   
-- "adv_router": ['10.254.11.9', '10.254.11.33']
-  "code": "P"
-  "fd": "5632"
-  "mask": "28"
-  "out_interface": ['TenGigabitEthernet1/1', 'TenGigabitEthernet2/1']
-  "process_id": "100"
-  "route": "67.230.223.128"
-  "router_id": "10.255.11.6"
-  "successors": "2"
-  "tag": "53471"
+- adv_router: ['10.254.11.9', '10.254.11.33']
+  code: "P"
+  fd: "5632"
+  mask: "28"
+  out_interface: ['TenGigabitEthernet1/1', 'TenGigabitEthernet2/1']
+  process_id: "100"
+  route: "67.230.223.128"
+  router_id: "10.255.11.6"
+  successors: "2"
+  tag: "53471"
   
-- "adv_router": ['10.254.10.34']
-  "code": "P"
-  "fd": "130816"
-  "mask": "32"
-  "out_interface": ['GigabitEthernet9/29']
-  "process_id": "100"
-  "route": "10.255.10.5"
-  "router_id": "10.255.11.6"
-  "successors": "1"
-  "tag": ""
+- adv_router: ['10.254.10.34']
+  code: "P"
+  fd: "130816"
+  mask: "32"
+  out_interface: ['GigabitEthernet9/29']
+  process_id: "100"
+  route: "10.255.10.5"
+  router_id: "10.255.11.6"
+  successors: "1"
+  tag: ""
   
-- "adv_router": ['10.254.1.34']
-  "code": "P"
-  "fd": "128768"
-  "mask": "32"
-  "out_interface": ['Port-channel3']
-  "process_id": "100"
-  "route": "10.255.1.14"
-  "router_id": "10.255.11.6"
-  "successors": "1"
-  "tag": ""
-  
-  
-- "adv_router": ['10.254.2.22']
-  "code": "P"
-  "fd": "768"
-  "mask": "30"
-  "out_interface": ['TenGigabitEthernet3/3']
-  "process_id": "100"
-  "route": "10.254.2.12"
-  "router_id": "10.255.11.6"
-  "successors": "1"
-  "tag": ""
+- adv_router: ['10.254.1.34']
+  code: "P"
+  fd: "128768"
+  mask: "32"
+  out_interface: ['Port-channel3']
+  process_id: "100"
+  route: "10.255.1.14"
+  router_id: "10.255.11.6"
+  successors: "1"
+  tag: ""
   
   
-- "adv_router": ['10.254.56.6', '10.254.55.6', '10.254.11.33', '10.254.11.9', '10.254.52.6', '10.254.4.10', '10.254.4.14', '10.254.54.6']
-  "code": "P"
-  "fd": "128768"
-  "mask": "32"
-  "out_interface": ['TenGigabitEthernet1/4', 'TenGigabitEthernet1/6', 'TenGigabitEthernet2/1', 'TenGigabitEthernet1/1', 'TenGigabitEthernet1/5', 'TenGigabitEthernet4/4', 'TenGigabitEthernet4/5', 'TenGigabitEthernet1/3']
-  "process_id": "100"
-  "route": "10.255.11.4"
-  "router_id": "10.255.11.6"
-  "successors": "4"
-  "tag": ""
+- adv_router: ['10.254.2.22']
+  code: "P"
+  fd: "768"
+  mask: "30"
+  out_interface: ['TenGigabitEthernet3/3']
+  process_id: "100"
+  route: "10.254.2.12"
+  router_id: "10.255.11.6"
+  successors: "1"
+  tag: ""
+  
+  
+- adv_router: ['10.254.56.6', '10.254.55.6', '10.254.11.33', '10.254.11.9', '10.254.52.6', '10.254.4.10', '10.254.4.14', '10.254.54.6']
+  code: "P"
+  fd: "128768"
+  mask: "32"
+  out_interface: ['TenGigabitEthernet1/4', 'TenGigabitEthernet1/6', 'TenGigabitEthernet2/1', 'TenGigabitEthernet1/1', 'TenGigabitEthernet1/5', 'TenGigabitEthernet4/4', 'TenGigabitEthernet4/5', 'TenGigabitEthernet1/3']
+  process_id: "100"
+  route: "10.255.11.4"
+  router_id: "10.255.11.6"
+  successors: "4"
+  tag: ""
