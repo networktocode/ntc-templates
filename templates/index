@@ -256,6 +256,7 @@ sonic_linux_docker_top_bgp.template, .*, linux, dock[[er]] to[[p]] bg[[p]]
 sonic_linux_show_version.template, .*, linux, show ver[[sion]]
 sonic_linux_uptime_since.template, .*, linux, up[[time]] -s
 sonic_linux_ps_dash_ef.template, .*, linux, ps -ef
+sonic_linux_df_dash_h.template, .*, linux, df -h
 
 vmware_nsxv_show_ip_bgp_neighbors.template, .*, vmware_nsxv, sh[[ow]] ip b[[gp]] n[[eighbors]]
 vmware_nsxv_show_ip_route.template, .*, vmware_nsxv, sh[[ow]] ip r[[oute]]
