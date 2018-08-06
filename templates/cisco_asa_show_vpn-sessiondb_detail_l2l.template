@@ -21,6 +21,7 @@ Value Filldown AUTHENTICATION_MODE (\w+)
 Value Filldown IKE_REKEY_INTERVAL (\d+)
 Value Filldown IKE_REKEY_TIME_LEFT (\d+)
 Value Filldown DH_GROUP (\d+)
+Value Filldown PRF ((\S+|\S+\s){0,})
 Value Filldown FILTER_NAME (\S+)
 Value IPSEC_SESSION_ID (\d+.\d+)
 Value LOCAL_ADDRESS_NETWORK (\d+\.\d+\.\d+\.\d+)
@@ -59,6 +60,7 @@ IKE
   ^\s+IKE\s+Neg\s+Mode\s+:\s+${NEGOTIAION_MODE}\s+Auth\s+Mode\s+:\s+${AUTHENTICATION_MODE}
   ^\s+Rekey\s+Int\s+\(\w+\):\s+${IKE_REKEY_INTERVAL}\s+Seconds\s+Rekey\s+Left\(\w+\):\s+${IKE_REKEY_TIME_LEFT}
   ^\s+D\/H\s+Group\s+:\s+${DH_GROUP}
+  ^\s+PRF\s+:\s+${PRF}\s+D\/H\s+Group\s+:\s+${DH_GROUP}
   ^\s+Filter\s+Name\s+:\s+${FILTER_NAME}
   ^\s*$$ -> Start
 
