@@ -1,0 +1,364 @@
+
+
+
+BGP neighbor is 10.146.72.2,  remote AS 65100, ibgp link,  Peer index 1
+  Description: ccg11b02accsw01
+  BGP version 4, remote router ID 10.146.248.247
+  BGP state = Established, up for 13w0d
+  Peer is directly attached, interface Vlan500
+  TCP MD5 authentication is set (enabled)
+  Last read 00:00:02, hold time = 15, keepalive interval is 5 seconds
+  Last written 00:00:03, keepalive timer expiry due 00:00:01
+  Received 1574336 messages, 1 notifications, 0 bytes in queue
+  Sent 1574360 messages, 0 notifications, 0 bytes in queue
+  Connections established 2, dropped 1
+  Last reset by peer 13w0d, due to holdtimer expired error
+  Last reset by us never, due to No error
+
+  Neighbor capabilities:
+  Dynamic capability: advertised (mp, refresh, gr) received (mp, refresh, gr)
+  Dynamic capability (old): advertised received
+  Route refresh capability (new): advertised received
+  Route refresh capability (old): advertised received
+  4-Byte AS capability: advertised received
+  Address family IPv4 Unicast: advertised received
+  Graceful Restart capability: advertised received
+
+  Graceful Restart Parameters:
+  Address families advertised to peer:
+    IPv4 Unicast
+  Address families received from peer:
+    IPv4 Unicast
+  Forwarding state preserved by peer for:
+  Restart time advertised to peer: 120 seconds
+  Stale time for routes advertised by peer: 300 seconds
+  Restart time advertised by peer: 120 seconds
+  Extended Next Hop Encoding Capability: advertised received
+  Receive IPv6 next hop encoding Capability for AF:
+    IPv4 Unicast
+
+  Message statistics:
+                              Sent               Rcvd
+  Opens:                         2                  2
+  Notifications:                 0                  1
+  Updates:                     388                369
+  Keepalives:              1573968            1573962
+  Route Refresh:                 0                  0
+  Capability:                    2                  2
+  Total:                   1574360            1574336
+  Total bytes:            29930027           29929143
+  Bytes in queue:                0                  0
+
+  For address family: IPv4 Unicast
+  BGP table version 1250, neighbor version 1250
+  155 accepted paths consume 19220 bytes of memory
+  155 sent paths
+  Inbound soft reconfiguration allowed
+  Nexthop always set to local peering address, 10.146.72.3
+  Third-party Nexthop will not be computed.
+  Last End-of-RIB received 00:00:01 after session start
+
+  Local host: 10.146.72.3, Local port: 51842
+  Foreign host: 10.146.72.2, Foreign port: 179
+  fd = 76
+
+BGP neighbor is 10.146.249.4,  remote AS 65000, ebgp link,  Peer index 2
+  Description: ccg11b02corrt01
+  BGP version 4, remote router ID 10.146.248.253
+  BGP state = Established, up for 13w0d
+  Peer is directly attached, interface Ethernet1/49.500
+  TCP MD5 authentication is set (enabled)
+  Last read 00:00:01, hold time = 15, keepalive interval is 5 seconds
+  Last written 00:00:03, keepalive timer expiry due 00:00:01
+  Received 1572392 messages, 0 notifications, 0 bytes in queue
+  Sent 1574705 messages, 0 notifications, 0 bytes in queue
+  Connections established 1, dropped 0
+  Last reset by us never, due to No error
+  Last reset by peer never, due to No error
+
+  Neighbor capabilities:
+  Dynamic capability: advertised (mp, refresh, gr) received (mp, refresh, gr)
+  Dynamic capability (old): advertised received
+  Route refresh capability (new): advertised received
+  Route refresh capability (old): advertised received
+  4-Byte AS capability: advertised received
+  Address family IPv4 Unicast: advertised received
+  Graceful Restart capability: advertised received
+
+  Graceful Restart Parameters:
+  Address families advertised to peer:
+    IPv4 Unicast
+  Address families received from peer:
+    IPv4 Unicast
+  Forwarding state preserved by peer for:
+  Restart time advertised to peer: 120 seconds
+  Stale time for routes advertised by peer: 300 seconds
+  Restart time advertised by peer: 120 seconds
+  Extended Next Hop Encoding Capability: advertised received
+  Receive IPv6 next hop encoding Capability for AF:
+    IPv4 Unicast
+
+  Message statistics:
+                              Sent               Rcvd
+  Opens:                         1                  1
+  Notifications:                 0                  0
+  Updates:                     234                276
+  Keepalives:              1574469            1572114
+  Route Refresh:                 0                  0
+  Capability:                    1                  1
+  Total:                   1574705            1572392
+  Total bytes:            29928581           29886049
+  Bytes in queue:                0                  0
+
+  For address family: IPv4 Unicast
+  BGP table version 1250, neighbor version 1250
+  151 accepted paths consume 18724 bytes of memory
+  15 sent paths
+  Inbound soft reconfiguration allowed
+  Last End-of-RIB received 00:00:01 after session start
+
+  Local host: 10.146.249.5, Local port: 47422
+  Foreign host: 10.146.249.4, Foreign port: 179
+  fd = 72
+
+BGP neighbor is 10.146.249.6,  remote AS 65001, ebgp link,  Peer index 3
+  Description: ccg11b02corrt02
+  BGP version 4, remote router ID 10.146.248.252
+  BGP state = Established, up for 13w0d
+  Peer is directly attached, interface Ethernet1/50.500
+  TCP MD5 authentication is set (enabled)
+  Last read 0.767544, hold time = 15, keepalive interval is 5 seconds
+  Last written 00:00:03, keepalive timer expiry due 00:00:01
+  Received 1572613 messages, 0 notifications, 0 bytes in queue
+  Sent 1574734 messages, 0 notifications, 0 bytes in queue
+  Connections established 1, dropped 0
+  Last reset by us never, due to No error
+  Last reset by peer never, due to No error
+
+  Neighbor capabilities:
+  Dynamic capability: advertised (mp, refresh, gr) received (mp, refresh, gr)
+  Dynamic capability (old): advertised received
+  Route refresh capability (new): advertised received
+  Route refresh capability (old): advertised received
+  4-Byte AS capability: advertised received
+  Address family IPv4 Unicast: advertised received
+  Graceful Restart capability: advertised received
+
+  Graceful Restart Parameters:
+  Address families advertised to peer:
+    IPv4 Unicast
+  Address families received from peer:
+    IPv4 Unicast
+  Forwarding state preserved by peer for:
+  Restart time advertised to peer: 120 seconds
+  Stale time for routes advertised by peer: 300 seconds
+  Restart time advertised by peer: 120 seconds
+  Extended Next Hop Encoding Capability: advertised received
+  Receive IPv6 next hop encoding Capability for AF:
+    IPv4 Unicast
+
+  Message statistics:
+                              Sent               Rcvd
+  Opens:                         1                  1
+  Notifications:                 0                  0
+  Updates:                     264                302
+  Keepalives:              1574468            1572309
+  Route Refresh:                 0                  0
+  Capability:                    1                  1
+  Total:                   1574734            1572613
+  Total bytes:            29930637           29891419
+  Bytes in queue:                0                  0
+
+  For address family: IPv4 Unicast
+  BGP table version 1250, neighbor version 1250
+  151 accepted paths consume 18724 bytes of memory
+  146 sent paths
+  Inbound soft reconfiguration allowed
+  Last End-of-RIB received 00:00:01 after session start
+
+  Local host: 10.146.249.7, Local port: 19577
+  Foreign host: 10.146.249.6, Foreign port: 179
+  fd = 74
+
+BGP neighbor is 10.146.8.2,  remote AS 65100, ibgp link,  Peer index 1
+  Description: ccg11b02accsw01
+  BGP version 4, remote router ID 10.146.246.247
+  BGP state = Established, up for 13w0d
+  Peer is directly attached, interface Vlan400
+  TCP MD5 authentication is set (enabled)
+  Last read 00:00:02, hold time = 15, keepalive interval is 5 seconds
+  Last written 00:00:03, keepalive timer expiry due 00:00:01
+  Received 1574241 messages, 0 notifications, 0 bytes in queue
+  Sent 1574256 messages, 1 notifications, 0 bytes in queue
+  Connections established 2, dropped 1
+  Last reset by us 13w0d, due to holdtimer expired error
+  Last reset by peer never, due to No error
+
+  Neighbor capabilities:
+  Dynamic capability: advertised (mp, refresh, gr) received (mp, refresh, gr)
+  Dynamic capability (old): advertised received
+  Route refresh capability (new): advertised received
+  Route refresh capability (old): advertised received
+  4-Byte AS capability: advertised received
+  Address family IPv4 Unicast: advertised received
+  Graceful Restart capability: advertised received
+
+  Graceful Restart Parameters:
+  Address families advertised to peer:
+    IPv4 Unicast
+  Address families received from peer:
+    IPv4 Unicast
+  Forwarding state preserved by peer for:
+  Restart time advertised to peer: 120 seconds
+  Stale time for routes advertised by peer: 300 seconds
+  Restart time advertised by peer: 120 seconds
+  Extended Next Hop Encoding Capability: advertised received
+  Receive IPv6 next hop encoding Capability for AF:
+    IPv4 Unicast
+
+  Message statistics:
+                              Sent               Rcvd
+  Opens:                         2                  2
+  Notifications:                 1                  0
+  Updates:                     272                264
+  Keepalives:              1573979            1573973
+  Route Refresh:                 0                  0
+  Capability:                    2                  2
+  Total:                   1574256            1574241
+  Total bytes:            29922930           29922623
+  Bytes in queue:                0                  0
+
+  For address family: IPv4 Unicast
+  BGP table version 1212, neighbor version 1212
+  143 accepted paths consume 17732 bytes of memory
+  143 sent paths
+  Inbound soft reconfiguration allowed
+  Nexthop always set to local peering address, 10.146.8.3
+  Third-party Nexthop will not be computed.
+  Last End-of-RIB received 00:00:01 after session start
+
+  Local host: 10.146.8.3, Local port: 38293
+  Foreign host: 10.146.8.2, Foreign port: 179
+  fd = 77
+
+BGP neighbor is 10.146.247.4,  remote AS 65000, ebgp link,  Peer index 2
+  Description: ccg11b02corrt01
+  BGP version 4, remote router ID 10.146.246.253
+  BGP state = Established, up for 13w0d
+  Peer is directly attached, interface Ethernet1/49.400
+  TCP MD5 authentication is set (enabled)
+  Last read 00:00:01, hold time = 15, keepalive interval is 5 seconds
+  Last written 00:00:03, keepalive timer expiry due 00:00:01
+  Received 1572408 messages, 0 notifications, 0 bytes in queue
+  Sent 1574741 messages, 0 notifications, 0 bytes in queue
+  Connections established 1, dropped 0
+  Last reset by us never, due to No error
+  Last reset by peer never, due to No error
+
+  Neighbor capabilities:
+  Dynamic capability: advertised (mp, refresh, gr) received (mp, refresh, gr)
+  Dynamic capability (old): advertised received
+  Route refresh capability (new): advertised received
+  Route refresh capability (old): advertised received
+  4-Byte AS capability: advertised received
+  Address family IPv4 Unicast: advertised received
+  Graceful Restart capability: advertised received
+
+  Graceful Restart Parameters:
+  Address families advertised to peer:
+    IPv4 Unicast
+  Address families received from peer:
+    IPv4 Unicast
+  Forwarding state preserved by peer for:
+  Restart time advertised to peer: 120 seconds
+  Stale time for routes advertised by peer: 300 seconds
+  Restart time advertised by peer: 120 seconds
+  Extended Next Hop Encoding Capability: advertised received
+  Receive IPv6 next hop encoding Capability for AF:
+    IPv4 Unicast
+
+  Message statistics:
+                              Sent               Rcvd
+  Opens:                         1                  1
+  Notifications:                 0                  0
+  Updates:                     272                285
+  Keepalives:              1574467            1572121
+  Route Refresh:                 0                  0
+  Capability:                    1                  1
+  Total:                   1574741            1572408
+  Total bytes:            29930541           29886572
+  Bytes in queue:                0                  0
+
+  For address family: IPv4 Unicast
+  BGP table version 1212, neighbor version 1212
+  140 accepted paths consume 17360 bytes of memory
+  124 sent paths
+  Inbound soft reconfiguration allowed
+  Last End-of-RIB received 00:00:01 after session start
+
+  Local host: 10.146.247.5, Local port: 56345
+  Foreign host: 10.146.247.4, Foreign port: 179
+  fd = 73
+
+BGP neighbor is 10.146.247.6,  remote AS 65001, ebgp link,  Peer index 3
+  Description: ccg11b02corrt02
+  BGP version 4, remote router ID 10.146.246.252
+  BGP state = Established, up for 13w0d
+  Peer is directly attached, interface Ethernet1/50.400
+  TCP MD5 authentication is set (enabled)
+  Last read 0.770900, hold time = 15, keepalive interval is 5 seconds
+  Last written 00:00:03, keepalive timer expiry due 00:00:01
+  Received 1572629 messages, 0 notifications, 0 bytes in queue
+  Sent 1574673 messages, 0 notifications, 0 bytes in queue
+  Connections established 1, dropped 0
+  Last reset by us never, due to No error
+  Last reset by peer never, due to No error
+
+  Neighbor capabilities:
+  Dynamic capability: advertised (mp, refresh, gr) received (mp, refresh, gr)
+  Dynamic capability (old): advertised received
+  Route refresh capability (new): advertised received
+  Route refresh capability (old): advertised received
+  4-Byte AS capability: advertised received
+  Address family IPv4 Unicast: advertised received
+  Graceful Restart capability: advertised received
+
+  Graceful Restart Parameters:
+  Address families advertised to peer:
+    IPv4 Unicast
+  Address families received from peer:
+    IPv4 Unicast
+  Forwarding state preserved by peer for:
+  Restart time advertised to peer: 120 seconds
+  Stale time for routes advertised by peer: 300 seconds
+  Restart time advertised by peer: 120 seconds
+  Extended Next Hop Encoding Capability: advertised received
+  Receive IPv6 next hop encoding Capability for AF:
+    IPv4 Unicast
+
+  Message statistics:
+                              Sent               Rcvd
+  Opens:                         1                  1
+  Notifications:                 0                  0
+  Updates:                     198                305
+  Keepalives:              1574473            1572322
+  Route Refresh:                 0                  0
+  Capability:                    1                  1
+  Total:                   1574673            1572629
+  Total bytes:            29926000           29891565
+  Bytes in queue:                0                  0
+
+  For address family: IPv4 Unicast
+  BGP table version 1212, neighbor version 1212
+  140 accepted paths consume 17360 bytes of memory
+  24 sent paths
+  Inbound soft reconfiguration allowed
+  Last End-of-RIB received 00:00:01 after session start
+
+  Local host: 10.146.247.7, Local port: 52207
+  Foreign host: 10.146.247.6, Foreign port: 179
+  fd = 71
+
+
+
+

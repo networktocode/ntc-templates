@@ -1,0 +1,504 @@
+BGP neighbor is 10.111.0.232, remote AS 65000, external link
+  BGP version 4, remote router ID 10.111.1.0, VRF default
+  Inherits configuration from and member of peer-group CORES
+  Last read 00:00:02, last write 00:00:04
+  Hold time is 15, keepalive interval is 5 seconds
+  Configured hold time is 15, keepalive interval is 5 seconds
+  Hold timer is active, time left: 00:00:03
+  Keepalive timer is active, time left: 00:00:03
+  Connect timer is inactive
+  Idle-restart timer is inactive
+  BGP state is Established, up for 97d08h
+  Number of transitions to established: 2
+  Last state was OpenConfirm
+  Last event was KeepAlive
+  Last sent notification:Cease/other configuration change, Last time 97d08h
+  Last sent socket-error:Connect (No route to host), Last time 101d07h, First time 101d08h, Repeats 37
+  Neighbor Capabilities:
+    Multiprotocol IPv4 Unicast: advertised and received and negotiated
+    Four Octet ASN: advertised and received
+    Route Refresh: advertised and received and negotiated
+    Send End-of-RIB messages: advertised and received and negotiated
+    Additional-paths recv capability:
+      IPv4 Unicast: advertised
+    Additional-paths send capability:
+      IPv4 Unicast: received
+    Graceful Restart advertised:
+      Restart-time is 300
+      Restarting: no
+    Graceful Restart received:
+      Restart-time is 300
+      Restarting: no
+  Restart timer is inactive
+  End of rib timer is inactive
+  Message Statistics:
+                         Sent      Rcvd
+    Opens:                  2         2
+    Updates:            92402       162
+    Keepalives:       2032571   2057740
+    Notifications:          1         0
+    Route-Refresh:          0         0
+    Total messages:   2124976   2057904
+  Prefix Statistics:
+                         Sent      Rcvd
+    IPv4 Unicast:           -        78
+    IPv6 Unicast:           -         0
+  Configured maximum total number of routes is 12000
+  Inbound updates dropped by reason:
+    AS path loop detection: 3
+    Malformed MPBGP routes: 0
+    Originator ID matches local router ID: 0
+    Nexthop matches local IP address: 0
+Local AS is 65114, local router ID 10.111.1.33
+Local TCP address is 10.111.0.233, local port is 53660
+Remote TCP address is 10.111.0.232, remote port is 179
+Bfd is enabled and state is Up
+MD5 authentication is enabled
+BGP neighbor is 10.111.0.234, remote AS 65000, external link
+  BGP version 4, remote router ID 10.111.1.1, VRF default
+  Inherits configuration from and member of peer-group CORES
+  Last read 00:00:02, last write 00:00:02
+  Hold time is 15, keepalive interval is 5 seconds
+  Configured hold time is 15, keepalive interval is 5 seconds
+  Hold timer is active, time left: 00:00:07
+  Keepalive timer is active, time left: 00:00:01
+  Connect timer is inactive
+  Idle-restart timer is inactive
+  BGP state is Established, up for 97d08h
+  Number of transitions to established: 2
+  Last state was OpenConfirm
+  Last event was RecvKeepAlive
+  Last sent notification:Cease/other configuration change, Last time 97d08h
+  Last sent socket-error:Connect (No route to host), Last time 101d07h, First time 101d08h, Repeats 38
+  Neighbor Capabilities:
+    Multiprotocol IPv4 Unicast: advertised and received and negotiated
+    Four Octet ASN: advertised and received
+    Route Refresh: advertised and received and negotiated
+    Send End-of-RIB messages: advertised and received and negotiated
+    Additional-paths recv capability:
+      IPv4 Unicast: advertised
+    Additional-paths send capability:
+      IPv4 Unicast: received
+    Graceful Restart advertised:
+      Restart-time is 300
+      Restarting: no
+    Graceful Restart received:
+      Restart-time is 300
+      Restarting: no
+  Restart timer is inactive
+  End of rib timer is inactive
+  Message Statistics:
+                         Sent      Rcvd
+    Opens:                  2         2
+    Updates:            92391       159
+    Keepalives:       2032446   2057758
+    Notifications:          1         0
+    Route-Refresh:          0         0
+    Total messages:   2124840   2057919
+  Prefix Statistics:
+                         Sent      Rcvd
+    IPv4 Unicast:           -        78
+    IPv6 Unicast:           -         0
+  Configured maximum total number of routes is 12000
+  Inbound updates dropped by reason:
+    AS path loop detection: 2
+    Malformed MPBGP routes: 0
+    Originator ID matches local router ID: 0
+    Nexthop matches local IP address: 0
+Local AS is 65114, local router ID 10.111.1.33
+Local TCP address is 10.111.0.235, local port is 179
+Remote TCP address is 10.111.0.234, remote port is 44317
+Bfd is enabled and state is Up
+MD5 authentication is enabled
+BGP neighbor is 10.111.0.236, remote AS 65000, external link
+  BGP version 4, remote router ID 10.111.1.2, VRF default
+  Inherits configuration from and member of peer-group CORES
+  Last read 00:00:04, last write 00:00:03
+  Hold time is 15, keepalive interval is 5 seconds
+  Configured hold time is 15, keepalive interval is 5 seconds
+  Hold timer is active, time left: 00:00:02
+  Keepalive timer is active, time left: 00:00:01
+  Connect timer is inactive
+  Idle-restart timer is inactive
+  BGP state is Established, up for 97d08h
+  Number of transitions to established: 2
+  Last state was OpenConfirm
+  Last event was KeepAlive
+  Last sent notification:Cease/other configuration change, Last time 97d08h
+  Last sent socket-error:Connect (No route to host), Last time 101d07h, First time 101d08h, Repeats 39
+  Neighbor Capabilities:
+    Multiprotocol IPv4 Unicast: advertised and received and negotiated
+    Four Octet ASN: advertised and received
+    Route Refresh: advertised and received and negotiated
+    Send End-of-RIB messages: advertised and received and negotiated
+    Additional-paths recv capability:
+      IPv4 Unicast: advertised
+    Additional-paths send capability:
+      IPv4 Unicast: received
+    Graceful Restart advertised:
+      Restart-time is 300
+      Restarting: no
+    Graceful Restart received:
+      Restart-time is 300
+      Restarting: no
+  Restart timer is inactive
+  End of rib timer is inactive
+  Message Statistics:
+                         Sent      Rcvd
+    Opens:                  2         2
+    Updates:            92392       151
+    Keepalives:       2032480   2057236
+    Notifications:          1         0
+    Route-Refresh:          0         0
+    Total messages:   2124875   2057389
+  Prefix Statistics:
+                         Sent      Rcvd
+    IPv4 Unicast:           -        77
+    IPv6 Unicast:           -         0
+  Configured maximum total number of routes is 12000
+  Inbound updates dropped by reason:
+    AS path loop detection: 2
+    Malformed MPBGP routes: 0
+    Originator ID matches local router ID: 0
+    Nexthop matches local IP address: 0
+Local AS is 65114, local router ID 10.111.1.33
+Local TCP address is 10.111.0.237, local port is 179
+Remote TCP address is 10.111.0.236, remote port is 55643
+Bfd is enabled and state is Up
+MD5 authentication is enabled
+BGP neighbor is 10.111.0.238, remote AS 65000, external link
+  BGP version 4, remote router ID 10.111.1.3, VRF default
+  Inherits configuration from and member of peer-group CORES
+  Last read 00:00:05, last write 00:00:01
+  Hold time is 15, keepalive interval is 5 seconds
+  Configured hold time is 15, keepalive interval is 5 seconds
+  Hold timer is active, time left: 00:00:09
+  Keepalive timer is active, time left: 00:00:03
+  Connect timer is inactive
+  Idle-restart timer is inactive
+  BGP state is Established, up for 97d08h
+  Number of transitions to established: 2
+  Last state was OpenConfirm
+  Last event was KeepAlive
+  Last sent notification:Cease/other configuration change, Last time 97d08h
+  Last sent socket-error:Connect (No route to host), Last time 101d07h, First time 101d08h, Repeats 39
+  Neighbor Capabilities:
+    Multiprotocol IPv4 Unicast: advertised and received and negotiated
+    Four Octet ASN: advertised and received
+    Route Refresh: advertised and received and negotiated
+    Send End-of-RIB messages: advertised and received and negotiated
+    Additional-paths recv capability:
+      IPv4 Unicast: advertised
+    Additional-paths send capability:
+      IPv4 Unicast: received
+    Graceful Restart advertised:
+      Restart-time is 300
+      Restarting: no
+    Graceful Restart received:
+      Restart-time is 300
+      Restarting: no
+  Restart timer is inactive
+  End of rib timer is inactive
+  Message Statistics:
+                         Sent      Rcvd
+    Opens:                  2         2
+    Updates:            61532     61872
+    Keepalives:       2040658   2033436
+    Notifications:          1         0
+    Route-Refresh:          0         0
+    Total messages:   2102193   2095310
+  Prefix Statistics:
+                         Sent      Rcvd
+    IPv4 Unicast:           -        76
+    IPv6 Unicast:           -         0
+  Configured maximum total number of routes is 12000
+  Inbound updates dropped by reason:
+    AS path loop detection: 3
+    Malformed MPBGP routes: 0
+    Originator ID matches local router ID: 0
+    Nexthop matches local IP address: 0
+Local AS is 65114, local router ID 10.111.1.33
+Local TCP address is 10.111.0.239, local port is 60398
+Remote TCP address is 10.111.0.238, remote port is 179
+Bfd is enabled and state is Up
+MD5 authentication is enabled
+BGP neighbor is 10.111.1.0, remote AS 65000, external link
+  BGP version 4, remote router ID 10.111.1.0, VRF default
+  Inherits configuration from and member of peer-group CORES-EVPN
+  Last read 00:00:03, last write 00:00:04
+  Hold time is 15, keepalive interval is 5 seconds
+  Configured hold time is 15, keepalive interval is 5 seconds
+  Hold timer is active, time left: 00:00:07
+  Keepalive timer is active, time left: 00:00:04
+  Connect timer is inactive
+  Idle-restart timer is inactive
+  BGP state is Established, up for 101d06h
+  Number of transitions to established: 1
+  Last state was OpenConfirm
+  Last event was RecvKeepAlive
+  Last sent socket-error:Connect (Network is unreachable), Last time 101d06h, First time 101d08h, Repeats 58
+  Neighbor Capabilities:
+    Multiprotocol L2VPN EVPN: advertised and received and negotiated
+    Four Octet ASN: advertised and received
+    Route Refresh: advertised and received and negotiated
+    Send End-of-RIB messages: advertised and received and negotiated
+    Additional-paths recv capability:
+      L2VPN EVPN: advertised
+    Additional-paths send capability:
+      L2VPN EVPN: received
+    Graceful Restart advertised:
+      Restart-time is 300
+      Restarting: no
+    Graceful Restart received:
+      Restart-time is 300
+      Restarting: no
+  Restart timer is inactive
+  End of rib timer is inactive
+  Message Statistics:
+                         Sent      Rcvd
+    Opens:                  1         1
+    Updates:             2027      2551
+    Keepalives:       2056792   2056291
+    Notifications:          0         0
+    Route-Refresh:          0         0
+    Total messages:   2058820   2058843
+  Prefix Statistics:
+                         Sent      Rcvd
+    IPv4 Unicast:           -         0
+    IPv6 Unicast:           -         0
+  Configured maximum total number of routes is 0
+  Inbound updates dropped by reason:
+    AS path loop detection: 291
+    Malformed MPBGP routes: 0
+    Originator ID matches local router ID: 0
+    Nexthop matches local IP address: 0
+Local AS is 65114, local router ID 10.111.1.33
+TTL is 255, external peer can be 255 hops away
+Local TCP address is 10.111.1.33, local port is 58556
+Remote TCP address is 10.111.1.0, remote port is 179
+MD5 authentication is enabled
+BGP neighbor is 10.111.1.1, remote AS 65000, external link
+  BGP version 4, remote router ID 10.111.1.1, VRF default
+  Inherits configuration from and member of peer-group CORES-EVPN
+  Last read 00:00:04, last write 00:00:03
+  Hold time is 15, keepalive interval is 5 seconds
+  Configured hold time is 15, keepalive interval is 5 seconds
+  Hold timer is active, time left: 00:00:01
+  Keepalive timer is active, time left: 00:00:00
+  Connect timer is inactive
+  Idle-restart timer is inactive
+  BGP state is Established, up for 101d06h
+  Number of transitions to established: 1
+  Last state was OpenConfirm
+  Last event was KeepAlive
+  Last sent socket-error:Connect (Network is unreachable), Last time 101d06h, First time 101d08h, Repeats 58
+  Neighbor Capabilities:
+    Multiprotocol L2VPN EVPN: advertised and received and negotiated
+    Four Octet ASN: advertised and received
+    Route Refresh: advertised and received and negotiated
+    Send End-of-RIB messages: advertised and received and negotiated
+    Additional-paths recv capability:
+      L2VPN EVPN: advertised
+    Additional-paths send capability:
+      L2VPN EVPN: received
+    Graceful Restart advertised:
+      Restart-time is 300
+      Restarting: no
+    Graceful Restart received:
+      Restart-time is 300
+      Restarting: no
+  Restart timer is inactive
+  End of rib timer is inactive
+  Message Statistics:
+                         Sent      Rcvd
+    Opens:                  1         1
+    Updates:             2336      2537
+    Keepalives:       2056807   2056600
+    Notifications:          0         0
+    Route-Refresh:          0         0
+    Total messages:   2059144   2059138
+  Prefix Statistics:
+                         Sent      Rcvd
+    IPv4 Unicast:           -         0
+    IPv6 Unicast:           -         0
+  Configured maximum total number of routes is 0
+  Inbound updates dropped by reason:
+    AS path loop detection: 291
+    Malformed MPBGP routes: 0
+    Originator ID matches local router ID: 0
+    Nexthop matches local IP address: 0
+Local AS is 65114, local router ID 10.111.1.33
+TTL is 255, external peer can be 255 hops away
+Local TCP address is 10.111.1.33, local port is 57370
+Remote TCP address is 10.111.1.1, remote port is 179
+MD5 authentication is enabled
+BGP neighbor is 10.111.1.2, remote AS 65000, external link
+  BGP version 4, remote router ID 10.111.1.2, VRF default
+  Inherits configuration from and member of peer-group CORES-EVPN
+  Last read 00:00:01, last write 00:00:03
+  Hold time is 15, keepalive interval is 5 seconds
+  Configured hold time is 15, keepalive interval is 5 seconds
+  Hold timer is active, time left: 00:00:05
+  Keepalive timer is active, time left: 00:00:00
+  Connect timer is inactive
+  Idle-restart timer is inactive
+  BGP state is Established, up for 101d06h
+  Number of transitions to established: 1
+  Last state was OpenConfirm
+  Last event was KeepAlive
+  Last sent socket-error:Connect (Network is unreachable), Last time 101d06h, First time 101d08h, Repeats 59
+  Neighbor Capabilities:
+    Multiprotocol L2VPN EVPN: advertised and received and negotiated
+    Four Octet ASN: advertised and received
+    Route Refresh: advertised and received and negotiated
+    Send End-of-RIB messages: advertised and received and negotiated
+    Additional-paths recv capability:
+      L2VPN EVPN: advertised
+    Additional-paths send capability:
+      L2VPN EVPN: received
+    Graceful Restart advertised:
+      Restart-time is 300
+      Restarting: no
+    Graceful Restart received:
+      Restart-time is 300
+      Restarting: no
+  Restart timer is inactive
+  End of rib timer is inactive
+  Message Statistics:
+                         Sent      Rcvd
+    Opens:                  1         1
+    Updates:             2208      2533
+    Keepalives:       2056743   2056947
+    Notifications:          0         0
+    Route-Refresh:          0         0
+    Total messages:   2058952   2059481
+  Prefix Statistics:
+                         Sent      Rcvd
+    IPv4 Unicast:           -         0
+    IPv6 Unicast:           -         0
+  Configured maximum total number of routes is 0
+  Inbound updates dropped by reason:
+    AS path loop detection: 290
+    Malformed MPBGP routes: 0
+    Originator ID matches local router ID: 0
+    Nexthop matches local IP address: 0
+Local AS is 65114, local router ID 10.111.1.33
+TTL is 255, external peer can be 255 hops away
+Local TCP address is 10.111.1.33, local port is 179
+Remote TCP address is 10.111.1.2, remote port is 38031
+MD5 authentication is enabled
+BGP neighbor is 10.111.1.3, remote AS 65000, external link
+  BGP version 4, remote router ID 10.111.1.3, VRF default
+  Inherits configuration from and member of peer-group CORES-EVPN
+  Last read 00:00:03, last write 00:00:00
+  Hold time is 15, keepalive interval is 5 seconds
+  Configured hold time is 15, keepalive interval is 5 seconds
+  Hold timer is active, time left: 00:00:01
+  Keepalive timer is active, time left: 00:00:03
+  Connect timer is inactive
+  Idle-restart timer is inactive
+  BGP state is Established, up for 101d06h
+  Number of transitions to established: 1
+  Last state was OpenConfirm
+  Last event was KeepAlive
+  Last sent socket-error:Connect (Network is unreachable), Last time 101d06h, First time 101d08h, Repeats 58
+  Neighbor Capabilities:
+    Multiprotocol L2VPN EVPN: advertised and received and negotiated
+    Four Octet ASN: advertised and received
+    Route Refresh: advertised and received and negotiated
+    Send End-of-RIB messages: advertised and received and negotiated
+    Additional-paths recv capability:
+      L2VPN EVPN: advertised
+    Additional-paths send capability:
+      L2VPN EVPN: received
+    Graceful Restart advertised:
+      Restart-time is 300
+      Restarting: no
+    Graceful Restart received:
+      Restart-time is 300
+      Restarting: no
+  Restart timer is inactive
+  End of rib timer is inactive
+  Message Statistics:
+                         Sent      Rcvd
+    Opens:                  1         1
+    Updates:             1901      2556
+    Keepalives:       2057084   2056715
+    Notifications:          0         0
+    Route-Refresh:          0         0
+    Total messages:   2058986   2059272
+  Prefix Statistics:
+                         Sent      Rcvd
+    IPv4 Unicast:           -         0
+    IPv6 Unicast:           -         0
+  Configured maximum total number of routes is 0
+  Inbound updates dropped by reason:
+    AS path loop detection: 291
+    Malformed MPBGP routes: 0
+    Originator ID matches local router ID: 0
+    Nexthop matches local IP address: 0
+Local AS is 65114, local router ID 10.111.1.33
+TTL is 255, external peer can be 255 hops away
+Local TCP address is 10.111.1.33, local port is 45000
+Remote TCP address is 10.111.1.3, remote port is 179
+MD5 authentication is enabled
+BGP neighbor is 192.168.255.0, remote AS 65114, internal link
+  BGP version 4, remote router ID 10.111.1.32, VRF default
+  Inherits configuration from and member of peer-group MLAG-PEER
+  Last read 00:00:04, last write 00:00:01
+  Hold time is 15, keepalive interval is 5 seconds
+  Configured hold time is 15, keepalive interval is 5 seconds
+  Hold timer is active, time left: 00:00:10
+  Keepalive timer is active, time left: 00:00:02
+  Connect timer is inactive
+  Idle-restart timer is inactive
+  BGP state is Established, up for 97d08h
+  Number of transitions to established: 2
+  Last state was OpenConfirm
+  Last event was KeepAlive
+  Last sent notification:Cease/other configuration change, Last time 97d08h
+  Last sent socket-error:Connect (Network is unreachable), Last time 97d08h, First time 101d08h, Repeats 10
+  Neighbor Capabilities:
+    Multiprotocol IPv4 Unicast: advertised and received and negotiated
+    Four Octet ASN: advertised and received
+    Route Refresh: advertised and received and negotiated
+    Send End-of-RIB messages: advertised and received and negotiated
+    Additional-paths recv capability:
+      IPv4 Unicast: advertised
+    Additional-paths send capability:
+      IPv4 Unicast: received
+    Graceful Restart advertised:
+      Restart-time is 300
+      Restarting: no
+    Graceful Restart received:
+      Restart-time is 300
+      Restarting: no
+  Restart timer is inactive
+  End of rib timer is inactive
+  Message Statistics:
+                         Sent      Rcvd
+    Opens:                  2         2
+    Updates:            61746     61753
+    Keepalives:       2034739   2034735
+    Notifications:          1         0
+    Route-Refresh:          0         0
+    Total messages:   2096488   2096490
+  Prefix Statistics:
+                         Sent      Rcvd
+    IPv4 Unicast:           -       176
+    IPv6 Unicast:           -         0
+  Configured maximum total number of routes is 12000
+  Inbound updates dropped by reason:
+    AS path loop detection: 0
+    Malformed MPBGP routes: 0
+    Originator ID matches local router ID: 0
+    Nexthop matches local IP address: 0
+Local AS is 65114, local router ID 10.111.1.33
+Local TCP address is 192.168.255.1, local port is 179
+Remote TCP address is 192.168.255.0, remote port is 32946
+Bfd is enabled and state is Up
+MD5 authentication is enabled
+
+
+
+
