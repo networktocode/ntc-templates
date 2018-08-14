@@ -1,0 +1,16 @@
+Value Required MAC_ADDRESS (\w+?\.\w+?\.\w+?|\w+?\:\w+?\:\w+?\:\w+?\:\w+?\:\w+?)
+Value TYPE (\w+?)
+Value VLAN (\d+?)
+Value DESTINATION_PORT (\w+\s\w+\s\w+\s\w+|\w+\s\w+\s\w+|\w+\s\w+|\w+?)
+Value Filldown MULTICAST (\w{9,9})
+Value MOVES (\d+?)
+Value LAST_MOVE (.+)
+Value PROTOCOLS (\S+)
+Value AGE (\S+)
+Value SECURE ([TF])
+Value NTFY ([TF])
+
+Start
+  ^\s*${VLAN}\s+?${MAC_ADDRESS}\s+?${TYPE}\s+?${DESTINATION_PORT}\s+?${MOVES}\s+${LAST_MOVE}\sago$$ -> Record
+  ^.*${MULTICAST}\s+Mac Address Table
+  ^\s*${VLAN}\s+?${MAC_ADDRESS}\s+?${TYPE}\s+?${DESTINATION_PORT}$$ -> Record

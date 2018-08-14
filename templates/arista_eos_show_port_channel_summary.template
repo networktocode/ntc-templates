@@ -1,0 +1,8 @@
+Value Required PORT_CHANNEL (Po\d+\S*)
+Value PROTOCOL (\S+)
+Value List PORTS ((((?!Po)[A-z]+[0-9\/]+)(\([A-Z]+\))\s*)+)
+
+Start
+  ^\s+(Po\d+\S*) -> Continue.Record
+  ^\s+${PORTS}
+  ^\s+${PORT_CHANNEL}\s+${PROTOCOL}\s+${PORTS}

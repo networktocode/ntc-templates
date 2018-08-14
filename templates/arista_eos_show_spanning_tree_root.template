@@ -1,0 +1,42 @@
+Value Filldown VLAN_ID (VL.*)
+Value Filldown STP (\S+)
+Value Filldown ROOT_PRIORITY (\d+)
+Value Filldown ROOT_MAC_ADDR (\w{4}.\w{4}.\w{4})
+Value Filldown IS_BRIDGE_A_ROOT (\w+)
+Value Filldown ROOT_COST (\d+)
+Value Filldown ROOT_PORT (\S+\s+\S+)
+Value Filldown ROOT_HELLO_TIME (\d+\s+\S+)
+Value Filldown ROOT_MAX_AGE (\d+\s+\S+)
+Value Filldown ROOT_FORWARD_DELAY (\d+\s+\S+)
+Value Filldown BRIDGE_MAC_ADDR (\w{4}.\w{4}.\w{4})
+Value Filldown BRIDGE_HELLO_TIME (\d+\s+\S+)
+Value Filldown BRIDGE_MAX_AGE (\d+\s+\S+)
+Value Filldown BRIDGE_FORWARD_DELAY (\d+\s+\S+)
+Value Filldown BRIDGE_AGING_TIME (\d+\s+\S+)
+Value Required INTERFACE_NAME (\S+)
+Value ROLE (\w+)
+Value INTERFACE_STATE (\w+)
+Value PORT_PATH_COST (\d+)
+Value PORT_PRIORITY (\w+)
+Value PORT_ID (\w+)
+Value PORT_TYPE (.*)
+
+Start
+  ^${VLAN_ID}
+  ^.*Spanning tree enabled protocol(\s+)${STP}
+  ^.*Root(\s+)ID(\s+)Priority(\s+)${ROOT_PRIORITY} -> ROOT
+  ^.*Bridge(\s+)ID(\s+)Priority(\s+)${ROOT_PRIORITY} -> BRIDGE
+  ^${INTERFACE_NAME}\s+${ROLE}\s+${INTERFACE_STATE}\s+${PORT_PATH_COST}\s+${PORT_PRIORITY}.${PORT_ID}\s+${PORT_TYPE} -> Record
+
+ROOT
+  ^.*Address(\s+)${ROOT_MAC_ADDR}
+  ^.*This bridge is the ${IS_BRIDGE_A_ROOT} -> Start
+  ^.*Cost(\s+)${ROOT_COST}
+  ^.*Port(\s+)${ROOT_PORT}
+  ^.*Hello(\s+)Time(\s+)${ROOT_HELLO_TIME}(\s+)Max(\s+)Age(\s+)${ROOT_MAX_AGE}(\s+)Forward(\s+)Delay(\s+)${ROOT_FORWARD_DELAY} -> Start
+
+BRIDGE
+  ^.*Address(\s+)${BRIDGE_MAC_ADDR}
+  ^.*Hello(\s+)Time(\s+)${BRIDGE_HELLO_TIME}(\s+)Max(\s+)Age(\s+)${BRIDGE_MAX_AGE}(\s+)Forward(\s+)Delay(\s+)${BRIDGE_FORWARD_DELAY}
+  ^.*Aging(\s+)Time(\s+)${BRIDGE_AGING_TIME} -> Start
+  ^.* -> Start

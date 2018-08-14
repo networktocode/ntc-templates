@@ -1,0 +1,10 @@
+Value GROUP (\d*)
+Value Required PORT_CHANNEL (Po\d+\S*)
+Value TYPE ([A-z]*)
+Value PROTOCOL (\S+)
+Value List PORTS ((((?!Po)[A-z]+[0-9\/]+)(\([A-Z]+\))\s*)+)
+
+Start
+  ^((\d*)\s+)?(Po\d+\S*) -> Continue.Record
+  ^\s+${PORTS}
+  ^(${GROUP}\s+)?${PORT_CHANNEL}\s+(${TYPE}\s+)?${PROTOCOL}\s+${PORTS}

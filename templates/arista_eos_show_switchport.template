@@ -1,0 +1,31 @@
+Value Filldown SWITCHPORT_MODE (.*)
+Value Required INTERFACE_NAME (.*)
+Value SWITCHPORT (.*)
+Value ADMIN_MODE (.*)
+Value OP_MODE (.*)
+Value MAC_LEARNING (.*)
+Value ETHERTYPE (.*)
+Value ACCESS_MODE (.*)
+Value TRUNKING_NATIVE_MODE (.*)
+Value ADMIN_VLAN_TAGGING (.*)
+Value TRUNKING_VLAN_ENABLE (.*)
+Value STATIC_TRUNK_GROUP (.*)
+Value DYNAMIC_TRUNK_GROUP (.*)
+Value SOURCE_INTERFACE_FILTERING (.*)
+
+
+Start
+  ^.*Default switchport mode:${SWITCHPORT_MODE}
+  ^.*Name:${INTERFACE_NAME}
+  ^.*Switchport(.*):${SWITCHPORT}
+  ^.*Admin(.*)Mode(.*):${ADMIN_MODE}
+  ^.*Op(.*)Mode(.*):${OP_MODE}
+  ^.*M*Learning(.*):${MAC_LEARNING}
+  ^.*ethertype(.*):${ETHERTYPE}
+  ^.*Access Mode VLAN(.*):${ACCESS_MODE}
+  ^.*Trunking Native Mode VLAN(.*):${TRUNKING_NATIVE_MODE}
+  ^.*Administrative Native VLAN tagging(.*):${ADMIN_VLAN_TAGGING}
+  ^.*Trunking VLANs Enabled(.*):${TRUNKING_VLAN_ENABLE}
+  ^.*Static Trunk Groups(.*):${STATIC_TRUNK_GROUP}
+  ^.*Dynamic Trunk Groups(.*):${DYNAMIC_TRUNK_GROUP}
+  ^.*Source interface filtering(.*):${SOURCE_INTERFACE_FILTERING} -> Record

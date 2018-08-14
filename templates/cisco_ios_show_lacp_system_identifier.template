@@ -1,0 +1,5 @@
+Value LACP_PRIORITY (\d+)
+Value LACP_MAC (([a-fA-f0-9]{4}\.){2}[a-fA-f0-9]{4})
+
+Start
+  ^${LACP_PRIORITY}\,\s*${LACP_MAC}

@@ -1,0 +1,14 @@
+Value Filldown CHANNEL_GROUP (\d+)
+Value Required PORT ([A-z0-9\/]+)
+Value LACP_PRIORITY (\d+)
+Value LACP_MAC (([a-fA-F0-9]{4}\.){2}[a-fA-f0-9]{4})
+Value PARTNER_PORT_NUMBER (\S+)
+Value FLAGS ([A-Z]+)
+Value OPER_KEY (\S+)
+Value AGE ([0-9]+)
+Value PORT_STATE (\S+)
+Value ADMIN_KEY (\S+)
+
+Start
+  ^Channel group ${CHANNEL_GROUP} neighbors
+  ^${PORT}\s+${FLAGS}\s+${LACP_PRIORITY}\s+${LACP_MAC}\s+${AGE}s*\s+${ADMIN_KEY}\s+${OPER_KEY}\s+${PARTNER_PORT_NUMBER}\s+${PORT_STATE} -> Record

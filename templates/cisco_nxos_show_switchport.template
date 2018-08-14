@@ -1,0 +1,42 @@
+Value Required INTERFACE_NAME (.*)
+Value SWITCHPORT (.*)
+Value SWITCHPORT_MONITOR (.*)
+Value SWITCHPORT_ISOLATED (.*)
+Value SWITCHPORT_MULTICAST_BLOCKED (.*)
+Value SWITCHPORT_UNICAST_BLOCKED (.*)
+Value MAC_LEARNING (.*)
+Value OP_MODE (.*)
+Value ACCESS_MODE (.*)
+Value TRUNKING_NATIVE_MODE (.*)
+Value TRUNKING_VLAN_ENABLE (.*)
+Value ADMIN_PVLAN_HOST_ASSOC (.*)
+Value ADMIN_PVLAN_SEC_HOST_ASSOC (.*)
+Value ADMIN_PVLAN_MAPPING (.*)
+Value ADMIN_PVLAN_SEC_MAPPING (.*)
+Value ADMIN_PVLAN_TRUNK_VLAN (.*)
+Value ADMIN_PVLAN_TRUNK_ENCAP (.*)
+Value ADMIN_PVLAN_TRUNK_NORMAL_VLANS (.*)
+Value ADMIN_PVLAN_TRUNK_PRIVATE_VLANS (.*)
+Value OP_PRI_VLAN (.*)
+
+Start
+  ^.*Name:${INTERFACE_NAME}
+  ^.*Switchport(.*):${SWITCHPORT}
+  ^.*Switchport(.*)Monitor(.*):${SWITCHPORT_MONITOR}
+  ^.*Switchport(.*)Isolated(.*):${SWITCHPORT_ISOLATED}
+  ^.*Switchport Block Multicast(.*):${SWITCHPORT_MULTICAST_BLOCKED}
+  ^.*Switchport Block Unicast(.*):${SWITCHPORT_UNICAST_BLOCKED}
+  ^.*Mac learning(.*):${MAC_LEARNING}
+  ^.*Operational Mode(.*):${OP_MODE}
+  ^.*Access Mode VLAN(.*):${ACCESS_MODE}
+  ^.*Trunking Native Mode VLAN(.*):${TRUNKING_NATIVE_MODE}
+  ^.*Trunking VLANs Allowed(.*):${TRUNKING_VLAN_ENABLE}
+  ^.*(.*)primary host-association(.*):${ADMIN_PVLAN_HOST_ASSOC}
+  ^.*(.*)secondary host-association(.*):${ADMIN_PVLAN_SEC_HOST_ASSOC}
+  ^.*Administrative private-vlan primary mapping(.*):${ADMIN_PVLAN_MAPPING}
+  ^.*Administrative private-vlan secondary mapping(.*):${ADMIN_PVLAN_SEC_MAPPING}
+  ^.*Administrative private-vlan trunk native VLAN:${ADMIN_PVLAN_TRUNK_VLAN}
+  ^.*Administrative private-vlan trunk encapsulation(.*):${ADMIN_PVLAN_TRUNK_ENCAP}
+  ^.*Administrative private-vlan trunk normal VLANs(.*):${ADMIN_PVLAN_TRUNK_NORMAL_VLANS}
+  ^.*Administrative private-vlan trunk private VLANs(.*):${ADMIN_PVLAN_TRUNK_PRIVATE_VLANS}
+  ^.*Operational private-vlan(.*):${OP_PRI_VLAN} -> Record

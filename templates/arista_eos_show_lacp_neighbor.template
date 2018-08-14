@@ -1,0 +1,13 @@
+Value Filldown PORT_CHANNEL (([A-z0-9\-])+)
+Value Required PORT ([A-z0-9\/]+)
+Value LACP_PRIORITY ([a-fA-F0-9]+)
+Value LACP_MAC (([a-fA-F0-9]{2}\-){5}[a-fA-f0-9]{2})
+Value PARTNER_PORT_NUMBER (\d+)
+Value FLAGS (\S+)
+Value OPER_KEY (\S+)
+Value STATUS (\S+)
+Value PORT_PRIORITY (\d+)
+
+Start
+  ^Port Channel ${PORT_CHANNEL}\S*
+  ^\s*${PORT}\s+${STATUS}.*?${LACP_PRIORITY}.*?${LACP_MAC}\s+${PARTNER_PORT_NUMBER}\s+${FLAGS}\s+${OPER_KEY}\s+${PORT_PRIORITY} -> Record

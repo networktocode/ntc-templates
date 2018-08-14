@@ -1,0 +1,44 @@
+Value Required VLAN_ID (\d+)
+Value NAME (\S+)
+Value STATUS (\S+)
+Value List INTERFACES ([\w\./]+)
+
+Start
+  ^$$
+  ^\w+\s+[NnAaMmEe]{4}.*$$ -> VLANS
+
+VLANS
+  ^\d+ -> Continue.Record
+  ^${VLAN_ID}\s+${NAME}\s+${STATUS}\s*$$
+  ^${VLAN_ID}\s+${NAME}\s+${STATUS}\s+${INTERFACES},* -> Continue
+  ^\d+\s+(?:\S+\s+){3}${INTERFACES},* -> Continue
+  ^\d+\s+(?:\S+\s+){4}${INTERFACES},* -> Continue
+  ^\d+\s+(?:\S+\s+){5}${INTERFACES},* -> Continue
+  ^\d+\s+(?:\S+\s+){6}${INTERFACES},* -> Continue
+  ^\d+\s+(?:\S+\s+){7}${INTERFACES},* -> Continue
+  ^\d+\s+(?:\S+\s+){8}${INTERFACES},* -> Continue
+  ^\d+\s+(?:\S+\s+){9}${INTERFACES},* -> Continue
+  ^\d+\s+(?:\S+\s+){10}${INTERFACES},* -> Continue
+  ^\d+\s+(?:\S+\s+){11}${INTERFACES},* -> Continue
+  ^\d+\s+(?:\S+\s+){12}${INTERFACES},* -> Continue
+  ^\d+\s+(?:\S+\s+){13}${INTERFACES} -> Continue
+  ^\s+${INTERFACES},* -> Continue
+  ^\s+\S+\s+${INTERFACES},* -> Continue
+  ^\s+(?:\S+\s+){2}${INTERFACES},* -> Continue
+  ^\s+(?:\S+\s+){3}${INTERFACES},* -> Continue
+  ^\s+(?:\S+\s+){4}${INTERFACES},* -> Continue
+  ^\s+(?:\S+\s+){5}${INTERFACES},* -> Continue
+  ^\s+(?:\S+\s+){6}${INTERFACES},* -> Continue
+  ^\s+(?:\S+\s+){7}${INTERFACES},* -> Continue
+  ^\s+(?:\S+\s+){8}${INTERFACES},* -> Continue
+  ^\s+(?:\S+\s+){9}${INTERFACES},* -> Continue
+  ^\s+(?:\S+\s+){10}${INTERFACES},* -> Continue
+  ^\s+(?:\S+\s+){11}${INTERFACES} -> Continue
+  ^\d+
+  ^\s+
+  ^-+
+  ^\S+\s+[TtYyPpEe]{4} -> Done
+  ^.+ -> Error
+
+Done
+  ^.*

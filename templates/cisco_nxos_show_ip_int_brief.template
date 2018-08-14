@@ -1,0 +1,8 @@
+Value INTF (\S+)
+Value IPADDR (\d+\.\d+\.\d+\.\d+)
+Value PROTOCOL (\S+)
+Value LINK (\S+)
+Value ADMIN (\S+)
+
+Start
+  ^${INTF}\s+${IPADDR}\s+${PROTOCOL}\/${LINK}\/${ADMIN}\s+$$ -> Record

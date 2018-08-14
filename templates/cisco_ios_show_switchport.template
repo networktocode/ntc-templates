@@ -1,0 +1,54 @@
+Value Required INTERFACE_NAME (.*)
+Value SWITCHPORT (.*)
+Value ADMIN_MODE (.*)
+Value OP_MODE (.*)
+Value ADMIN_TRUNKING_ENCAP (.*)
+Value NEGO_TRUNKING (.*)
+Value ACCESS_MODE (.*)
+Value TRUNKING_NATIVE_MODE (.*)
+Value ADMIN_VLAN_TAGGING (.*)
+Value VOICE_VLAN (.*)
+Value ADMIN_PVLAN_HOST_ASSOC (.*)
+Value ADMIN_PVLAN_MAPPING (.*)
+Value ADMIN_PVLAN_TRUNK_VLAN (.*)
+Value ADMIN_PVLAN_TRUNK_VLAN_TAGGING (.*)
+Value ADMIN_PVLAN_TRUNK_ENCAP (.*)
+Value ADMIN_PVLAN_TRUNK_NORMAL_VLANS (.*)
+Value ADMIN_PVLAN_TRUNK_ASSOC (.*)
+Value ADMIN_PVLAN_TRUNK_MAPPING (.*)
+Value OP_PRI_VLAN (.*)
+Value TRUNKING_VLAN_ENABLE (.*)
+Value PRUNING_VLAN_ENABLE (.*)
+Value CAPTURE_MOD (.*)
+Value CAPTURE_VLAN (.*)
+Value UNKNOWN_UNICAST_BLOCKED (.*)
+Value UNKNOWN_MULTICAST_BLOCKED (.*)
+Value APPLIANCE_TRUST (.*)
+
+Start
+  ^.*Name:${INTERFACE_NAME}
+  ^.*Switchport(.*):${SWITCHPORT}
+  ^.*Admin(.*)Mode(.*):${ADMIN_MODE}
+  ^.*Op(.*)Mode(.*):${OP_MODE}
+  ^.*Administrative Trunking Encapsulation(.*):${ADMIN_TRUNKING_ENCAP}
+  ^.*Negotiation of Trunking(.*):${NEGO_TRUNKING}
+  ^.*Access Mode VLAN(.*):${ACCESS_MODE}
+  ^.*Trunking Native Mode VLAN(.*):${TRUNKING_NATIVE_MODE}
+  ^.*Administrative Native VLAN tagging(.*):${ADMIN_VLAN_TAGGING}
+  ^.*Voice VLAN(.*):${VOICE_VLAN}
+  ^.*(.*)host-association(.*):${ADMIN_PVLAN_HOST_ASSOC}
+  ^.*Administrative private-vlan mapping(.*):${ADMIN_PVLAN_MAPPING}
+  ^.*Administrative private-vlan trunk native VLAN:${ADMIN_PVLAN_TRUNK_VLAN}
+  ^.*Administrative private-vlan trunk native VLAN tagging(.*):${ADMIN_PVLAN_TRUNK_VLAN_TAGGING}
+  ^.*Administrative private-vlan trunk encapsulation(.*):${ADMIN_PVLAN_TRUNK_ENCAP}
+  ^.*Administrative private-vlan trunk normal VLANs(.*):${ADMIN_PVLAN_TRUNK_NORMAL_VLANS}
+  ^.*Administrative private-vlan trunk associations(.*):${ADMIN_PVLAN_TRUNK_ASSOC}
+  ^.*Administrative private-vlan trunk mappings(.*):${ADMIN_PVLAN_TRUNK_MAPPING}
+  ^.*Operational private-vlan(.*):${OP_PRI_VLAN}
+  ^.*Trunking VLANs Enabled(.*):${TRUNKING_VLAN_ENABLE}
+  ^.*Pruning VLANs Enabled(.*):${PRUNING_VLAN_ENABLE}
+  ^.*Capture Mode ${CAPTURE_MOD}
+  ^.*Capture VLANs Allowed(.*):${CAPTURE_VLAN}
+  ^.*Unknown unicast blocked(.*):${UNKNOWN_UNICAST_BLOCKED}
+  ^.*Unknown multicast blocked(.*):${UNKNOWN_MULTICAST_BLOCKED}
+  ^.*Appliance(.*):${APPLIANCE_TRUST} -> Record

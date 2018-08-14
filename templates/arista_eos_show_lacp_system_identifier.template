@@ -1,0 +1,8 @@
+Value LACP_PRIORITY (\d+)
+Value LACP_MAC (([a-fA-f0-9]{2}\-){5}[a-fA-f0-9]{2})
+Value MLAG_PRIORITY (\d+)
+Value MLAG_MAC (([a-fA-f0-9]{2}\-){5}[a-fA-f0-9]{2})
+
+Start
+  ^LACP .*\:\s*${LACP_PRIORITY}\,${LACP_MAC}
+  ^MLAG .*\:\s*${MLAG_PRIORITY}\,${MLAG_MAC}
