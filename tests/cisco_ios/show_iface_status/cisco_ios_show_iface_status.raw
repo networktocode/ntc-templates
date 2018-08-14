@@ -1,0 +1,141 @@
+
+--------------------------------------------------------------------------------
+Port   VRF          Status IP Address                              Speed    MTU
+--------------------------------------------------------------------------------
+mgmt0  --           up     10.0.19.24                              1000     1500
+
+--------------------------------------------------------------------------------
+Ethernet      VLAN    Type Mode   Status  Reason                   Speed     Port
+Interface                                                                    Ch #
+--------------------------------------------------------------------------------
+Eth1/1        800     eth  trunk  up      none                        10G(D) 1
+Eth1/2        800     eth  trunk  up      none                        10G(D) --
+Eth1/3        800     eth  trunk  up      none                        10G(D) --
+Eth1/4        800     eth  trunk  up      none                        10G(D) --
+Eth1/5        800     eth  trunk  up      none                        10G(D) --
+Eth1/6        800     eth  trunk  up      none                        10G(D) 6
+Eth1/7        800     eth  trunk  up      none                       1000(D) --
+Eth1/8        800     eth  trunk  up      none                       1000(D) --
+Eth1/9        800     eth  trunk  up      none                        10G(D) --
+Eth1/10       800     eth  trunk  up      none                        10G(D) --
+Eth1/11       800     eth  trunk  up      none                        10G(D) --
+Eth1/12       800     eth  trunk  up      none                        10G(D) --
+Eth1/13       800     eth  trunk  up      none                        10G(D) 13
+Eth1/14       800     eth  trunk  up      none                        10G(D) --
+Eth1/15       800     eth  trunk  down    Link not connected         auto(D) 15
+Eth1/16       800     eth  trunk  down    Link not connected         auto(D) 16
+Eth1/17       800     eth  trunk  up      none                        10G(D) 17
+Eth1/18       800     eth  trunk  up      none                        10G(D) --
+Eth1/19       800     eth  trunk  up      none                        10G(D) 19
+Eth1/20       800     eth  trunk  up      none                        10G(D) --
+Eth1/21       800     eth  trunk  up      none                        10G(D) --
+Eth1/22       800     eth  trunk  up      none                        10G(D) 22
+Eth1/23       800     eth  trunk  up      none                        10G(D) --
+Eth1/24       800     eth  trunk  up      none                        10G(D) 24
+Eth1/25       800     eth  trunk  up      none                        10G(D) 25
+Eth1/26       800     eth  trunk  down    vpc compatibility check f  auto(D) 26
+Eth1/27       800     eth  trunk  up      none                        10G(D) 27
+Eth1/28       800     eth  trunk  up      none                        10G(D) --
+Eth1/29       800     eth  trunk  up      none                        10G(D) --
+Eth1/30       800     eth  trunk  up      none                        10G(D) 30
+Eth1/31       800     eth  trunk  up      none                        10G(D) 31
+Eth1/32       500     eth  access up      none                        10G(D) --
+Eth1/33       500     eth  access up      none                        10G(D) --
+Eth1/34       3900    eth  access up      none                        10G(D) --
+Eth1/35       3900    eth  access up      none                        10G(D) --
+Eth1/36       500     eth  access up      none                       1000(D) --
+Eth1/37       800     eth  trunk  down    Link not connected         auto(D) 37
+Eth1/38       500     eth  access up      none                        10G(D) --
+Eth1/39       800     eth  trunk  down    Link not connected         auto(D) 39
+Eth1/40       800     eth  trunk  down    Link not connected         auto(D) 40
+Eth1/41       800     eth  trunk  down    Link not connected         auto(D) 41
+Eth1/42       800     eth  trunk  down    Link not connected         auto(D) 42
+Eth1/43       800     eth  trunk  up      none                       1000(D) --
+Eth1/44       800     eth  trunk  up      none                       1000(D) --
+Eth1/45       800     eth  trunk  up      none                       1000(D) --
+Eth1/46       800     eth  trunk  up      none                       1000(D) --
+Eth1/47       800     eth  trunk  down    Link not connected         auto(D) 47
+Eth1/48       800     eth  trunk  up      none                       1000(D) --
+Eth1/49       --      eth  routed up      none                        40G(D) --
+Eth1/49.400   400     eth  routed up      none                        40G(D) --
+Eth1/49.500   500     eth  routed up      none                        40G(D) --
+Eth1/49.800   800     eth  routed up      none                        40G(D) --
+Eth1/49.1000  1000    eth  routed up      none                        40G(D) --
+Eth1/50       --      eth  routed up      none                        40G(D) --
+Eth1/50.400   400     eth  routed up      none                        40G(D) --
+Eth1/50.500   500     eth  routed up      none                        40G(D) --
+Eth1/50.800   800     eth  routed up      none                        40G(D) --
+Eth1/50.1000  1000    eth  routed up      none                        40G(D) --
+Eth1/51       1       eth  trunk  up      none                        40G(D) 100
+Eth1/52       1       eth  trunk  up      none                        40G(D) 100
+
+--------------------------------------------------------------------------------
+Port-channel VLAN    Type Mode   Status  Reason                    Speed   Protocol
+Interface
+--------------------------------------------------------------------------------
+Po1          800     eth  trunk  up      none                       a-10G(D)  lacp
+Po2          800     eth  trunk  down    No operational members      auto(D)  lacp
+Po3          800     eth  trunk  down    No operational members      auto(D)  lacp
+Po4          800     eth  trunk  down    No operational members      auto(D)  lacp
+Po5          800     eth  trunk  down    No operational members      auto(D)  lacp
+Po6          800     eth  trunk  up      none                       a-10G(D)  lacp
+Po7          800     eth  trunk  down    No operational members      auto(D)  lacp
+Po8          800     eth  trunk  down    No operational members      auto(D)  lacp
+Po9          800     eth  trunk  down    No operational members      auto(D)  lacp
+Po10         800     eth  trunk  down    No operational members      auto(D)  lacp
+Po11         800     eth  trunk  down    No operational members      auto(D)  lacp
+Po12         800     eth  trunk  down    No operational members      auto(D)  lacp
+Po13         800     eth  trunk  up      none                       a-10G(D)  lacp
+Po14         800     eth  trunk  down    No operational members      auto(D)  lacp
+Po15         800     eth  trunk  down    No operational members      auto(D)  lacp
+Po16         800     eth  trunk  down    No operational members      auto(D)  lacp
+Po17         800     eth  trunk  up      none                       a-10G(D)  lacp
+Po18         800     eth  trunk  down    No operational members      auto(D)  lacp
+Po19         800     eth  trunk  up      none                       a-10G(D)  lacp
+Po20         800     eth  trunk  down    No operational members      auto(D)  lacp
+Po21         800     eth  trunk  down    No operational members      auto(D)  lacp
+Po22         800     eth  trunk  up      none                       a-10G(D)  lacp
+Po23         800     eth  trunk  down    No operational members      auto(D)  lacp
+Po24         800     eth  trunk  up      none                       a-10G(D)  lacp
+Po25         800     eth  trunk  up      none                       a-10G(D)  lacp
+Po26         800     eth  trunk  down    No operational members      auto(D)  lacp
+Po27         800     eth  trunk  up      none                       a-10G(D)  lacp
+Po28         800     eth  trunk  down    No operational members      auto(D)  lacp
+Po29         800     eth  trunk  down    No operational members      auto(D)  lacp
+Po30         800     eth  trunk  up      none                       a-10G(D)  lacp
+Po31         800     eth  trunk  up      none                       a-10G(D)  lacp
+Po32         800     eth  trunk  down    No operational members      auto(I)  none
+Po33         800     eth  trunk  down    No operational members      auto(I)  none
+Po34         800     eth  trunk  down    No operational members      auto(I)  none
+Po35         800     eth  trunk  down    No operational members      auto(I)  none
+Po36         800     eth  trunk  down    No operational members      auto(I)  none
+Po37         800     eth  trunk  down    No operational members      auto(D)  lacp
+Po38         800     eth  trunk  down    No operational members      auto(I)  none
+Po39         800     eth  trunk  down    No operational members      auto(D)  lacp
+Po40         800     eth  trunk  down    No operational members      auto(D)  lacp
+Po41         800     eth  trunk  down    No operational members      auto(D)  lacp
+Po42         800     eth  trunk  down    No operational members      auto(D)  lacp
+Po43         800     eth  trunk  down    No operational members      auto(D)  lacp
+Po44         800     eth  trunk  down    No operational members      auto(D)  lacp
+Po45         800     eth  trunk  down    No operational members      auto(D)  lacp
+Po46         800     eth  trunk  down    No operational members      auto(D)  lacp
+Po47         800     eth  trunk  down    No operational members      auto(D)  lacp
+Po48         800     eth  trunk  down    No operational members      auto(D)  lacp
+Po100        1       eth  trunk  up      none                       a-40G(D)  lacp
+
+--------------------------------------------------------------------------------
+Interface     Status     Description
+--------------------------------------------------------------------------------
+Lo400         up         dcg11accsw01:NCP
+Lo500         up         dcg11accsw01:CMP
+Lo800         up         dcg11accsw01:CLD
+Lo1000        up         dcg11accsw01:SPN
+
+-------------------------------------------------------------------------------
+Interface Secondary VLAN(Type)                    Status Reason
+-------------------------------------------------------------------------------
+Vlan1     --                                      down   Administratively down
+Vlan400   --                                      up     --
+Vlan500   --                                      up     --
+Vlan800   --                                      up     --
+Vlan1000  --                                      up     --

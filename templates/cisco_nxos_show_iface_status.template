@@ -1,0 +1,23 @@
+Value Required INTERFACE (\S+)
+Value VLAN (\d+?)
+Value TYPE (\w+?)
+Value MODE (\w+?)
+Value STATUS (\w+?)
+Value REASON (.*)
+Value SPEED (.*(.+))
+Value PORT_CHANNEL (.*)
+Value PROTOCOL (.*)
+
+Start
+  ^Ethernet\s+VLAN\s+Type\s+Mode\s+Status\s+Reason\s+Speed\s+Port
+  ^Interface\s* -> Ethernet
+  ^Port-channel\s+VLAN\s+Type\s+Mode\s+Status\s+Reason\s+Speed\s+Protocol
+  ^Interface\s* -> Port
+
+Ethernet
+  ^${INTERFACE}\s+${VLAN}\s+${TYPE}\s+${MODE}\s+${STATUS}\s+${REASON}\s+${SPEED}\s+${PORT_CHANNEL} -> Record
+  ^Port-channel\s+VLAN\s+Type\s+Mode\s+Status\s+Reason\s+Speed\s+Protocol
+  ^Interface\s* -> Port
+
+Port
+  ^${INTERFACE}\s+${VLAN}\s+${TYPE}\s+${MODE}\s+${STATUS}\s+${REASON}\s+${SPEED}\s+${PROTOCOL} -> Record
