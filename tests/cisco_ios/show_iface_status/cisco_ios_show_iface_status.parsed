@@ -1,0 +1,111 @@
+---
+
+parsed_sample:
+
+ - {'interface': 'Eth1/1', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'up', 'reason': 'none                       ', 'speed': '10G(D)', 'port_channel': '1', 'protocol': ''}
+ - {'interface': 'Eth1/2', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'down', 'reason': 'Link not connected        ', 'speed': 'auto(D)', 'port_channel': '2', 'protocol': ''}
+ - {'interface': 'Eth1/3', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'up', 'reason': 'none                       ', 'speed': '10G(D)', 'port_channel': '--', 'protocol': ''}
+ - {'interface': 'Eth1/4', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'up', 'reason': 'none                       ', 'speed': '10G(D)', 'port_channel': '--', 'protocol': ''}
+ - {'interface': 'Eth1/5', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'up', 'reason': 'none                       ', 'speed': '10G(D)', 'port_channel': '--', 'protocol': ''}
+ - {'interface': 'Eth1/6', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'up', 'reason': 'none                       ', 'speed': '10G(D)', 'port_channel': '6', 'protocol': ''}
+ - {'interface': 'Eth1/7', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'up', 'reason': 'none                      ', 'speed': '1000(D)', 'port_channel': '--', 'protocol': ''}
+ - {'interface': 'Eth1/8', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'up', 'reason': 'none                      ', 'speed': '1000(D)', 'port_channel': '--', 'protocol': ''}
+ - {'interface': 'Eth1/9', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'up', 'reason': 'none                       ', 'speed': '10G(D)', 'port_channel': '--', 'protocol': ''}
+ - {'interface': 'Eth1/10', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'up', 'reason': 'none                       ', 'speed': '10G(D)', 'port_channel': '--', 'protocol': ''}
+ - {'interface': 'Eth1/11', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'up', 'reason': 'none                       ', 'speed': '10G(D)', 'port_channel': '--', 'protocol': ''}
+ - {'interface': 'Eth1/12', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'up', 'reason': 'none                       ', 'speed': '10G(D)', 'port_channel': '--', 'protocol': ''}
+ - {'interface': 'Eth1/13', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'up', 'reason': 'none                       ', 'speed': '10G(D)', 'port_channel': '13', 'protocol': ''}
+ - {'interface': 'Eth1/14', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'up', 'reason': 'none                       ', 'speed': '10G(D)', 'port_channel': '--', 'protocol': ''}
+ - {'interface': 'Eth1/15', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'down', 'reason': 'Link not connected        ', 'speed': 'auto(D)', 'port_channel': '15', 'protocol': ''}
+ - {'interface': 'Eth1/16', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'down', 'reason': 'Link not connected        ', 'speed': 'auto(D)', 'port_channel': '16', 'protocol': ''}
+ - {'interface': 'Eth1/17', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'up', 'reason': 'none                       ', 'speed': '10G(D)', 'port_channel': '17', 'protocol': ''}
+ - {'interface': 'Eth1/18', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'up', 'reason': 'none                       ', 'speed': '10G(D)', 'port_channel': '--', 'protocol': ''}
+ - {'interface': 'Eth1/19', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'up', 'reason': 'none                       ', 'speed': '10G(D)', 'port_channel': '19', 'protocol': ''}
+ - {'interface': 'Eth1/20', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'up', 'reason': 'none                       ', 'speed': '10G(D)', 'port_channel': '--', 'protocol': ''}
+ - {'interface': 'Eth1/21', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'up', 'reason': 'none                       ', 'speed': '10G(D)', 'port_channel': '--', 'protocol': ''}
+ - {'interface': 'Eth1/22', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'up', 'reason': 'none                       ', 'speed': '10G(D)', 'port_channel': '22', 'protocol': ''}
+ - {'interface': 'Eth1/23', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'up', 'reason': 'none                       ', 'speed': '10G(D)', 'port_channel': '--', 'protocol': ''}
+ - {'interface': 'Eth1/24', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'up', 'reason': 'none                       ', 'speed': '10G(D)', 'port_channel': '24', 'protocol': ''}
+ - {'interface': 'Eth1/25', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'up', 'reason': 'none                       ', 'speed': '10G(D)', 'port_channel': '25', 'protocol': ''}
+ - {'interface': 'Eth1/26', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'down', 'reason': 'vpc compatibility check f ', 'speed': 'auto(D)', 'port_channel': '26', 'protocol': ''}
+ - {'interface': 'Eth1/27', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'up', 'reason': 'none                       ', 'speed': '10G(D)', 'port_channel': '27', 'protocol': ''}
+ - {'interface': 'Eth1/28', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'up', 'reason': 'none                       ', 'speed': '10G(D)', 'port_channel': '--', 'protocol': ''}
+ - {'interface': 'Eth1/29', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'up', 'reason': 'none                       ', 'speed': '10G(D)', 'port_channel': '--', 'protocol': ''}
+ - {'interface': 'Eth1/30', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'up', 'reason': 'none                       ', 'speed': '10G(D)', 'port_channel': '30', 'protocol': ''}
+ - {'interface': 'Eth1/31', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'up', 'reason': 'none                       ', 'speed': '10G(D)', 'port_channel': '31', 'protocol': ''}
+ - {'interface': 'Eth1/32', 'vlan': '500', 'type': 'eth', 'mode': 'access', 'status': 'up', 'reason': 'none                       ', 'speed': '10G(D)', 'port_channel': '--', 'protocol': ''}
+ - {'interface': 'Eth1/33', 'vlan': '500', 'type': 'eth', 'mode': 'access', 'status': 'up', 'reason': 'none                       ', 'speed': '10G(D)', 'port_channel': '--', 'protocol': ''}
+ - {'interface': 'Eth1/34', 'vlan': '3900', 'type': 'eth', 'mode': 'access', 'status': 'up', 'reason': 'none                       ', 'speed': '10G(D)', 'port_channel': '--', 'protocol': ''}
+ - {'interface': 'Eth1/35', 'vlan': '3900', 'type': 'eth', 'mode': 'access', 'status': 'up', 'reason': 'none                       ', 'speed': '10G(D)', 'port_channel': '--', 'protocol': ''}
+ - {'interface': 'Eth1/36', 'vlan': '500', 'type': 'eth', 'mode': 'access', 'status': 'up', 'reason': 'none                      ', 'speed': '1000(D)', 'port_channel': '--', 'protocol': ''}
+ - {'interface': 'Eth1/37', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'down', 'reason': 'Link not connected        ', 'speed': 'auto(D)', 'port_channel': '37', 'protocol': ''}
+ - {'interface': 'Eth1/38', 'vlan': '500', 'type': 'eth', 'mode': 'access', 'status': 'up', 'reason': 'none                       ', 'speed': '10G(D)', 'port_channel': '--', 'protocol': ''}
+ - {'interface': 'Eth1/39', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'down', 'reason': 'Link not connected        ', 'speed': 'auto(D)', 'port_channel': '39', 'protocol': ''}
+ - {'interface': 'Eth1/40', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'down', 'reason': 'Link not connected        ', 'speed': 'auto(D)', 'port_channel': '40', 'protocol': ''}
+ - {'interface': 'Eth1/41', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'down', 'reason': 'Link not connected        ', 'speed': 'auto(D)', 'port_channel': '41', 'protocol': ''}
+ - {'interface': 'Eth1/42', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'down', 'reason': 'Link not connected        ', 'speed': 'auto(D)', 'port_channel': '42', 'protocol': ''}
+ - {'interface': 'Eth1/43', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'up', 'reason': 'none                      ', 'speed': '1000(D)', 'port_channel': '--', 'protocol': ''}
+ - {'interface': 'Eth1/44', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'up', 'reason': 'none                      ', 'speed': '1000(D)', 'port_channel': '--', 'protocol': ''}
+ - {'interface': 'Eth1/45', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'up', 'reason': 'none                      ', 'speed': '1000(D)', 'port_channel': '--', 'protocol': ''}
+ - {'interface': 'Eth1/46', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'up', 'reason': 'none                      ', 'speed': '1000(D)', 'port_channel': '--', 'protocol': ''}
+ - {'interface': 'Eth1/47', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'down', 'reason': 'Link not connected        ', 'speed': 'auto(D)', 'port_channel': '47', 'protocol': ''}
+ - {'interface': 'Eth1/48', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'up', 'reason': 'none                      ', 'speed': '1000(D)', 'port_channel': '--', 'protocol': ''}
+ - {'interface': 'Eth1/49.400', 'vlan': '400', 'type': 'eth', 'mode': 'routed', 'status': 'up', 'reason': 'none                       ', 'speed': '40G(D)', 'port_channel': '--', 'protocol': ''}
+ - {'interface': 'Eth1/49.500', 'vlan': '500', 'type': 'eth', 'mode': 'routed', 'status': 'up', 'reason': 'none                       ', 'speed': '40G(D)', 'port_channel': '--', 'protocol': ''}
+ - {'interface': 'Eth1/49.800', 'vlan': '800', 'type': 'eth', 'mode': 'routed', 'status': 'up', 'reason': 'none                       ', 'speed': '40G(D)', 'port_channel': '--', 'protocol': ''}
+ - {'interface': 'Eth1/49.1000', 'vlan': '1000', 'type': 'eth', 'mode': 'routed', 'status': 'up', 'reason': 'none                       ', 'speed': '40G(D)', 'port_channel': '--', 'protocol': ''}
+ - {'interface': 'Eth1/50.400', 'vlan': '400', 'type': 'eth', 'mode': 'routed', 'status': 'up', 'reason': 'none                       ', 'speed': '40G(D)', 'port_channel': '--', 'protocol': ''}
+ - {'interface': 'Eth1/50.500', 'vlan': '500', 'type': 'eth', 'mode': 'routed', 'status': 'up', 'reason': 'none                       ', 'speed': '40G(D)', 'port_channel': '--', 'protocol': ''}
+ - {'interface': 'Eth1/50.800', 'vlan': '800', 'type': 'eth', 'mode': 'routed', 'status': 'up', 'reason': 'none                       ', 'speed': '40G(D)', 'port_channel': '--', 'protocol': ''}
+ - {'interface': 'Eth1/50.1000', 'vlan': '1000', 'type': 'eth', 'mode': 'routed', 'status': 'up', 'reason': 'none                       ', 'speed': '40G(D)', 'port_channel': '--', 'protocol': ''}
+ - {'interface': 'Eth1/51', 'vlan': '1', 'type': 'eth', 'mode': 'trunk', 'status': 'up', 'reason': 'none                       ', 'speed': '40G(D)', 'port_channel': '100', 'protocol': ''}
+ - {'interface': 'Eth1/52', 'vlan': '1', 'type': 'eth', 'mode': 'trunk', 'status': 'up', 'reason': 'none                       ', 'speed': '40G(D)', 'port_channel': '100', 'protocol': ''}
+ - {'interface': 'Po1', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'up', 'reason': 'none                      ', 'speed': 'a-10G(D) ', 'port_channel': '', 'protocol': 'lacp'}
+ - {'interface': 'Po2', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'down', 'reason': 'No operational members     ', 'speed': 'auto(D) ', 'port_channel': '', 'protocol': 'lacp'}
+ - {'interface': 'Po3', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'down', 'reason': 'No operational members     ', 'speed': 'auto(D) ', 'port_channel': '', 'protocol': 'lacp'}
+ - {'interface': 'Po4', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'down', 'reason': 'No operational members     ', 'speed': 'auto(D) ', 'port_channel': '', 'protocol': 'lacp'}
+ - {'interface': 'Po5', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'down', 'reason': 'No operational members     ', 'speed': 'auto(D) ', 'port_channel': '', 'protocol': 'lacp'}
+ - {'interface': 'Po6', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'up', 'reason': 'none                      ', 'speed': 'a-10G(D) ', 'port_channel': '', 'protocol': 'lacp'}
+ - {'interface': 'Po7', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'down', 'reason': 'No operational members     ', 'speed': 'auto(D) ', 'port_channel': '', 'protocol': 'lacp'}
+ - {'interface': 'Po8', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'down', 'reason': 'No operational members     ', 'speed': 'auto(D) ', 'port_channel': '', 'protocol': 'lacp'}
+ - {'interface': 'Po9', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'down', 'reason': 'No operational members     ', 'speed': 'auto(D) ', 'port_channel': '', 'protocol': 'lacp'}
+ - {'interface': 'Po10', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'down', 'reason': 'No operational members     ', 'speed': 'auto(D) ', 'port_channel': '', 'protocol': 'lacp'}
+ - {'interface': 'Po11', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'down', 'reason': 'No operational members     ', 'speed': 'auto(D) ', 'port_channel': '', 'protocol': 'lacp'}
+ - {'interface': 'Po12', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'down', 'reason': 'No operational members     ', 'speed': 'auto(D) ', 'port_channel': '', 'protocol': 'lacp'}
+ - {'interface': 'Po13', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'up', 'reason': 'none                      ', 'speed': 'a-10G(D) ', 'port_channel': '', 'protocol': 'lacp'}
+ - {'interface': 'Po14', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'down', 'reason': 'No operational members     ', 'speed': 'auto(D) ', 'port_channel': '', 'protocol': 'lacp'}
+ - {'interface': 'Po15', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'down', 'reason': 'No operational members     ', 'speed': 'auto(D) ', 'port_channel': '', 'protocol': 'lacp'}
+ - {'interface': 'Po16', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'down', 'reason': 'No operational members     ', 'speed': 'auto(D) ', 'port_channel': '', 'protocol': 'lacp'}
+ - {'interface': 'Po17', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'up', 'reason': 'none                      ', 'speed': 'a-10G(D) ', 'port_channel': '', 'protocol': 'lacp'}
+ - {'interface': 'Po18', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'down', 'reason': 'No operational members     ', 'speed': 'auto(D) ', 'port_channel': '', 'protocol': 'lacp'}
+ - {'interface': 'Po19', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'up', 'reason': 'none                      ', 'speed': 'a-10G(D) ', 'port_channel': '', 'protocol': 'lacp'}
+ - {'interface': 'Po20', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'down', 'reason': 'No operational members     ', 'speed': 'auto(D) ', 'port_channel': '', 'protocol': 'lacp'}
+ - {'interface': 'Po21', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'down', 'reason': 'No operational members     ', 'speed': 'auto(D) ', 'port_channel': '', 'protocol': 'lacp'}
+ - {'interface': 'Po22', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'up', 'reason': 'none                      ', 'speed': 'a-10G(D) ', 'port_channel': '', 'protocol': 'lacp'}
+ - {'interface': 'Po23', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'down', 'reason': 'No operational members     ', 'speed': 'auto(D) ', 'port_channel': '', 'protocol': 'lacp'}
+ - {'interface': 'Po24', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'up', 'reason': 'none                      ', 'speed': 'a-10G(D) ', 'port_channel': '', 'protocol': 'lacp'}
+ - {'interface': 'Po25', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'up', 'reason': 'none                      ', 'speed': 'a-10G(D) ', 'port_channel': '', 'protocol': 'lacp'}
+ - {'interface': 'Po26', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'down', 'reason': 'No operational members     ', 'speed': 'auto(D) ', 'port_channel': '', 'protocol': 'lacp'}
+ - {'interface': 'Po27', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'up', 'reason': 'none                      ', 'speed': 'a-10G(D) ', 'port_channel': '', 'protocol': 'lacp'}
+ - {'interface': 'Po28', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'down', 'reason': 'No operational members     ', 'speed': 'auto(D) ', 'port_channel': '', 'protocol': 'lacp'}
+ - {'interface': 'Po29', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'down', 'reason': 'No operational members     ', 'speed': 'auto(D) ', 'port_channel': '', 'protocol': 'lacp'}
+ - {'interface': 'Po30', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'up', 'reason': 'none                      ', 'speed': 'a-10G(D) ', 'port_channel': '', 'protocol': 'lacp'}
+ - {'interface': 'Po31', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'up', 'reason': 'none                      ', 'speed': 'a-10G(D) ', 'port_channel': '', 'protocol': 'lacp'}
+ - {'interface': 'Po32', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'down', 'reason': 'No operational members     ', 'speed': 'auto(I) ', 'port_channel': '', 'protocol': 'none'}
+ - {'interface': 'Po33', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'down', 'reason': 'No operational members     ', 'speed': 'auto(I) ', 'port_channel': '', 'protocol': 'none'}
+ - {'interface': 'Po34', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'down', 'reason': 'No operational members     ', 'speed': 'auto(I) ', 'port_channel': '', 'protocol': 'none'}
+ - {'interface': 'Po35', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'down', 'reason': 'No operational members     ', 'speed': 'auto(I) ', 'port_channel': '', 'protocol': 'none'}
+ - {'interface': 'Po36', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'down', 'reason': 'No operational members     ', 'speed': 'auto(I) ', 'port_channel': '', 'protocol': 'none'}
+ - {'interface': 'Po37', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'down', 'reason': 'No operational members     ', 'speed': 'auto(D) ', 'port_channel': '', 'protocol': 'lacp'}
+ - {'interface': 'Po38', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'down', 'reason': 'No operational members     ', 'speed': 'auto(I) ', 'port_channel': '', 'protocol': 'none'}
+ - {'interface': 'Po39', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'down', 'reason': 'No operational members     ', 'speed': 'auto(D) ', 'port_channel': '', 'protocol': 'lacp'}
+ - {'interface': 'Po40', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'down', 'reason': 'No operational members     ', 'speed': 'auto(D) ', 'port_channel': '', 'protocol': 'lacp'}
+ - {'interface': 'Po41', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'down', 'reason': 'No operational members     ', 'speed': 'auto(D) ', 'port_channel': '', 'protocol': 'lacp'}
+ - {'interface': 'Po42', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'down', 'reason': 'No operational members     ', 'speed': 'auto(D) ', 'port_channel': '', 'protocol': 'lacp'}
+ - {'interface': 'Po43', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'down', 'reason': 'No operational members     ', 'speed': 'auto(D) ', 'port_channel': '', 'protocol': 'lacp'}
+ - {'interface': 'Po44', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'down', 'reason': 'No operational members     ', 'speed': 'auto(D) ', 'port_channel': '', 'protocol': 'lacp'}
+ - {'interface': 'Po45', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'down', 'reason': 'No operational members     ', 'speed': 'auto(D) ', 'port_channel': '', 'protocol': 'lacp'}
+ - {'interface': 'Po46', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'down', 'reason': 'No operational members     ', 'speed': 'auto(D) ', 'port_channel': '', 'protocol': 'lacp'}
+ - {'interface': 'Po47', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'down', 'reason': 'No operational members     ', 'speed': 'auto(D) ', 'port_channel': '', 'protocol': 'lacp'}
+ - {'interface': 'Po48', 'vlan': '800', 'type': 'eth', 'mode': 'trunk', 'status': 'down', 'reason': 'No operational members     ', 'speed': 'auto(D) ', 'port_channel': '', 'protocol': 'lacp'}
+ - {'interface': 'Po100', 'vlan': '1', 'type': 'eth', 'mode': 'trunk', 'status': 'up', 'reason': 'none                      ', 'speed': 'a-40G(D) ', 'port_channel': '', 'protocol': 'lacp'}
