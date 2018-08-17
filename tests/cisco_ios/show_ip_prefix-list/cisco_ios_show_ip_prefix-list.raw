@@ -1,0 +1,4 @@
+ip prefix-list OSPF_Redist: 2 entries
+   seq 5 deny 10.0.0.0/24
+   seq 10 permit 0.0.0.0/0 le 32
+   seq 15 deny 10.0.0.0/8 ge 10 le 20
