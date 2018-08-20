@@ -11,6 +11,9 @@ Extended IP access list 101
     30 permit ahp any any log-input
     40 permit ahp any any log-input time-range test (active)
     50 permit ip any host 10.1.10.11 log time-range test2 (inactive)
+    60 permit udp any range 16384 32767 10.1.1.0 0.0.0.255 range 16384 32767
+    70 permit udp any eq snmp bootpc 10.1.0.0 0.0.0.255
+    80 permit tcp 10.0.0.0 0.255.255.255 eq telnet ssh http 8080 host 10.1.0.0 neq telnet ssh
 Extended IP access list sample
     10 permit tcp host 10.10.37.18 host 10.10.37.17 eq bgp
     20 permit tcp host 10.10.37.18 eq bgp host 10.10.37.17
