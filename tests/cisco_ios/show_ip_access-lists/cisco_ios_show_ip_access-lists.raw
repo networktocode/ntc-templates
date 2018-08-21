@@ -1,7 +1,7 @@
 Standard IP access list 99
     10 permit 172.16.191.199
     20 deny   any log
-    30 permit 10.0.10.0, wildcard bits 0.255.0.255
+    30 permit 10.0.10.0, wildcard bits 0.255.0.255 (20 matches)
 Standard IP access list stdacl
     10 permit 10.1.1.1
 Extended IP access list test
