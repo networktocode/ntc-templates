@@ -1,0 +1,54 @@
+Value IDENTIFIER (\d+)
+Value NAME (\S+)
+Value COUNTRYCODE (\S+)
+Value MACADDRESS (\S+)
+Value IPADDRESS (\S+)
+Value NETMASK (\S+)
+Value GATEWAY (\S+)
+Value APGROUP (\S+)
+Value PRIMARY_SWITCH_NAME (\S+)
+Value PRIMARY_SWITCH_IP (\S+)
+Value SECONDARY_SWITCH_NAME (\S+)
+Value SECONDARY_SWITCH_IP (\S+)
+Value TERTIARY_SWITCH_NAME (\S+)
+Value TERTIARY_SWITCH_IP (\S+)
+Value ADMINISTRATIVE_STATE (\S+)
+Value OPERATION_STATE (\S+)
+Value MODE (\S+)
+Value MODEL (\S+)
+Value IMAGE (\S+)
+Value VERSION (\S+)
+Value SERIAL_NUMBER (\S+)
+Value FLEXCONNECT_VLAN_MODE (\S+)
+Value UPTIME (.*)
+Value LWAPP_UPTIME (.*)
+Value JOIN_DATETIME (.*)
+Value JOIN_TAKENTIME (.*)
+
+Start
+  ^Cisco AP Identifier\.*\s+${IDENTIFIER} 
+  ^Cisco AP Name\.*\s+${NAME}
+  ^Country code\.*\s+${COUNTRYCODE}
+  ^MAC Address\.*\s+${MACADDRESS}
+  ^IP Address\.*\s+${IPADDRESS}
+  ^IP NetMask\.*\s+${NETMASK}
+  ^Gateway IP Addr\.*\s+${GATEWAY}
+  ^Cisco AP Group Name\.*\s+${APGROUP} 
+  ^Primary Cisco Switch Name\.*\s+${PRIMARY_SWITCH_NAME} 
+  ^Primary Cisco Switch IP Address\.*\s+${PRIMARY_SWITCH_IP} 
+  ^Secondary Cisco Switch Name\.*\s+${SECONDARY_SWITCH_NAME} 
+  ^Secondary Cisco Switch IP Address\.*\s+${SECONDARY_SWITCH_IP} 
+  ^Tertiary Cisco Switch Name\.*\s+${TERTIARY_SWITCH_NAME} 
+  ^Tertiary Cisco Switch IP Address\.*\s+${TERTIARY_SWITCH_IP} 
+  ^Administrative State\s+\.*\s+${ADMINISTRATIVE_STATE}
+  ^Operation State\s+\.*\s+${OPERATION_STATE}
+  ^AP Mode \.*\s+${MODE} 
+  ^AP Model\.*\s+${MODEL}
+  ^AP Image\.*\s+${IMAGE}
+  ^IOS Version\.*\s+${VERSION}
+  ^AP Serial Number\.*\s+${SERIAL_NUMBER}
+  ^FlexConnect Vlan mode :\.+\s+${FLEXCONNECT_VLAN_MODE}
+  ^AP Up Time\.*\s+${UPTIME}
+  ^AP LWAPP Up Time\.*\s+${LWAPP_UPTIME}
+  ^Join Date and Time\.*\s+${JOIN_DATETIME}
+  ^Join Taken Time\.*\s+${JOIN_TAKENTIME} -> Record
