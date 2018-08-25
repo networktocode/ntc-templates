@@ -1,0 +1,124 @@
+Cisco AP Identifier.............................. 111
+Cisco AP Name.................................... AP_test_01
+Country code..................................... IT  - Italy
+Regulatory Domain allowed by Country............. 802.11bg:-E     802.11a:-E
+AP Country code.................................. IT  - Italy
+AP Regulatory Domain............................. -E
+Switch Port Number .............................. 8
+MAC Address...................................... 00:62:ec:01:02:03
+IP Address Configuration......................... Static IP assigned
+IP Address....................................... 10.1.1.1
+IP NetMask....................................... 255.255.255.0
+Gateway IP Addr.................................. 10.1.1.254
+Domain........................................... 
+Name Server...................................... 192.168.1.1
+NAT External IP Address.......................... None
+CAPWAP Path MTU.................................. 1485
+DHCP Release Override............................ Disabled 
+Telnet State..................................... Globally Enabled
+Ssh State........................................ Globally Enabled
+Cisco AP Location................................ default location
+Cisco AP Floor Label............................. 0
+Cisco AP Group Name.............................. GROUP_PE
+Primary Cisco Switch Name........................ WLC
+Primary Cisco Switch IP Address.................. 10.2.2.2
+Secondary Cisco Switch Name...................... 
+Secondary Cisco Switch IP Address................ Not Configured
+Tertiary Cisco Switch Name....................... 
+Tertiary Cisco Switch IP Address................. Not Configured
+Administrative State ............................ ADMIN_ENABLED
+Operation State ................................. REGISTERED
+Mirroring Mode .................................. Disabled
+AP Mode ......................................... FlexConnect
+Public Safety ................................... Disabled 
+AP SubMode ...................................... Not Configured
+Rogue Detection ................................. Enabled
+AP Vlan Trunking ................................ Enabled  (Inherited) 
+AP Native Vlan ID: .............................. 1 (Inherited) 
+Remote AP Debug ................................. Disabled
+Logging trap severity level ..................... emergencies
+Logging syslog facility ......................... kern
+S/W  Version .................................... 8.2.164.0
+Boot  Version ................................... 15.2.4.5
+Mini IOS Version ................................ 8.2.100.0
+Stats Reporting Period .......................... 180
+Stats Collection Mode ........................... normal
+Radio Core Mode ................................. Disabled
+Slub Debug Mode ................................. Disabled
+LED State........................................ Enabled
+PoE Pre-Standard Switch.......................... Disabled
+PoE Power Injector MAC Addr...................... Disabled
+Power Type/Mode.................................. PoE/Medium Power (15.4 W)
+Number Of Slots.................................. 2 
+AP Model......................................... AIR-CAP2702E-E-K9
+AP Image......................................... C2700-K9W8-M
+IOS Version...................................... 15.3(3)JC9$
+Reset Button..................................... Enabled
+AP Serial Number................................. FCEDDCCBBAA
+AP Certificate Type.............................. Manufacture Installed
+AP LAG Configuration Status ..................... Disabled
+LAG Support for AP .............................. No
+Native Vlan Inheritance: ........................ AP
+FlexConnect Vlan mode :.......................... Enabled
+        Native ID :..................................... 1
+        WLAN 13 :....................................... 3 (Wlan-Specific)
+        WLAN 46 :....................................... 13 (Wlan-Specific)
+        WLAN 70 :....................................... 254 (Wlan-Specific)
+FlexConnect VLAN ACL Mappings
+FlexConnect Group................................ Not a member of any group
+Group VLAN ACL Mappings
+
+
+Group VLAN Name to Id Mappings
+ Template in Modified State - apply it to see mappings
+
+AP-Specific FlexConnect Policy ACLs :
+L2Acl Configuration ............................. Not Available
+FlexConnect Local-Split ACLs :
+
+WLAN ID   PROFILE NAME                       ACL                                 TYPE
+-------  --------------------------------   ---------------------------------   -------
+
+ Flexconnect Central-Dhcp Values :
+
+WLAN ID   PROFILE NAME                         Central-Dhcp      DNS Override      Nat-Pat     Type
+-------  ---------------------------------    --------------    --------------    ---------   ------   
+  13       WLAN_13                                  False             False          False      Wlan  
+  46       WLAN_46                                  False             False          False      Wlan  
+  70       WLAN_70                                  False             False          False      Wlan
+
+Flex AVC visibility Configurations.............. 
+
+WlanId  PROFILE NAME                     Inherit-level Visibility       Flex Avc-profile
+------- -------------------------------- ------------- ---------- --------------------------------
+13         WLAN_13                          wlan-spec     disable    none                            
+46         WLAN_46                          wlan-spec     disable    none                            
+70         WLAN_70                          wlan-spec     enable     none                            
+
+FlexConnect Backup Auth Radius Servers :
+ Primary Radius Server........................... Disabled
+ Secondary Radius Server......................... Disabled
+AP User Mode..................................... AUTOMATIC
+AP User Name..................................... admin
+AP Dot1x User Mode............................... Not Configured
+AP Dot1x User Name............................... Not Configured
+Cisco AP system logging host..................... 255.255.255.255
+AP Up Time....................................... 248 days, 07 h 09 m 00 s
+AP LWAPP Up Time................................. 165 days, 11 h 03 m 33 s
+Join Date and Time............................... Wed Jan 17 10:07:12 2018
+Join Taken Time.................................. 0 days, 00 h 05 m 36 s
+Memory Type...................................... DDR3
+Memory Size...................................... 11839 KBytes
+CPU Type......................................... PowerPC CPU at 800Mhz, revision number 0x2151
+Flash Type....................................... Onboard Flash
+Flash Size....................................... 1564 KBytes
+GPS Present...................................... NO
+Ethernet Vlan Tag................................ Disabled
+Ethernet Port Duplex............................. Auto
+Ethernet Port Speed.............................. Auto
+AP Link Latency.................................. Disabled
+Rogue Detection.................................. Enabled
+AP TCP MSS Adjust................................ Disabled
+Hotspot Venue Group.............................. Unspecified
+Hotspot Venue Type............................... Unspecified
+      DNS server IP ............................. 192.168.1.1
