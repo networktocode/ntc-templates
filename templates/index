@@ -205,8 +205,8 @@ cisco_nxos_show_vrf.template, .*, cisco_nxos, sh[[ow]] vrf
 
 cisco_wlc_ssh_show_cdp_neighbors_detail.template, .*, cisco_wlc_ssh, sh[[ow]] c[[dp]] neig[[hbors]] det[[ail]]
 cisco_wlc_ssh_show_ap_config_general.template, .*, cisco_wlc_ssh, sh[[ow]] ap con[[fig]] ge[[neral]]
+cisco_wlc_ssh_show_ap_summary.template, .*, cisco_wlc_ssh, sh[[ow]] ap sum[[mary]]
 cisco_wlc_ssh_show_sysinfo.template, .*, cisco_wlc_ssh, sh[[ow]] sysi[[nfo]]
-cisco_wlc_ssh_show_ap_summary.template, .*, cisco_wlc_ssh, sh[[ow]] ap summ[[ary]]
 
 cisco_xr_show_controllers_HundredGigabitEthernet.template, .*, cisco_xr, sh[[ow]] contr[[ollers]] Hu[[ndredGigabitEthernet]]
 cisco_xr_show_bgp_vrf_all_ipv4_unicast_summary.template, .*, cisco_xr, sh[[ow]] bg[[p]] v[[rf]] all ip[[v4]] uni[[cast]] summ[[ary]]
