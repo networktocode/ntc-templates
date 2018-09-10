@@ -76,7 +76,7 @@ def test_index_ordering():
     used_os = []
 
     index = load_indexdata()
-    for row in index:
+    for line, row in enumerate(index):
         template = re.sub('\.template$', '', row[0].strip())
 
         os = '_'.join(template.split('_')[:2])
@@ -86,9 +86,8 @@ def test_index_ordering():
         cmd_full = re.sub(r'\[\[|\]\]','', row[3].strip())
         cmd_len = len(cmd_full)
         order_ok, check_msg = check_order(os, prior_os, cmd_len, prior_len, os_choices, used_os, cmd_full, prior_cmd)
-        if not order_ok:
-            print("Error on line: {}".format(row))
-            assert order_ok, check_msg
+
+        assert order_ok, '{}\n(line {}): {}'.format(check_msg, line, ''.join(row))
 
         if os not in used_os:
             used_os.append(os)
