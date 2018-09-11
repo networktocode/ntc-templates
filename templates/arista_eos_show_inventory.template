@@ -1,36 +1,48 @@
-Value PORT (\d+)
+Value Filldown MODEL (\S+-\S+)
+Value Filldown CHASSIS_DESCR (.+)
+Value PORT (\d+\/\d+|\d+)
 Value NAME (\S+)
 Value SN (\S+)
-Value DESCR (.+)
+Value DESCR (\w+\W\w+|\S+)
 Value VID (\d+\.\d+|\d+)
 
 Start
-  ^\s*System\s+\S+?$$ -> Chassis
+  ^System\s+information
+  ^\s+Model.+
+  ^\s+--.+
+  ^\s+${MODEL}\s+${CHASSIS_DESCR}
+  ^s+HW.+
+  ^\s+--.+
+  ^\s+${VID}\s+${SN}\s+\S+\s+\S+ -> Record
+  ^System.+card.+ -> Cards
+  ^System.+power.+ -> Power_Supply
 
-Chassis
-  ^\s+Model
-  ^\s+-
-  ^\s+HW
-  ^\s+${VID}\s+${SN}\s+\d+-\d+-\d+$$ -> Record
-  ^\s+${NAME}?\s+${DESCR}$$
-  ^\s*System.+(power supply|power-supply) -> Power_Supply
-
+Cards
+  ^\s+Module.+
+  ^\s+-.+
+  ^\s+${NAME}\s+${DESCR}\s+${VID}\s+${SN}\s+\S+\s+\S+ -> Record
+  ^\s+${NAME}\s+${DESCR}.+ -> Record
+  ^\s+System.+power.+ -> Power_Supply
 
 Power_Supply
-  ^\s+Slot
-  ^\s+-
-  ^\s+${PORT}\s+${NAME}\s+${SN}$$ -> Record
-  ^\s*System.+(fan) -> Fan
-  
+  ^\s+Slot.+
+  ^\s+--.+
+  ^\s+${PORT}\s+${NAME}\s+${SN} -> Record
+  ^\s+${PORT}\s+${NAME}.+ -> Record
+  ^System.+(fan).+ -> Fan
+
 Fan
   ^\s+Module
   ^\s+-
   ^\s+${PORT}?\s+\d+?\s+${NAME}?\s+${SN}$$ -> Record
-  ^\s*System.+ports -> Ports
+  ^System.+ports -> Ports
 
 Ports
+  ^\s+Type.+
+  ^\s+-
   ^\s+${DESCR}\s+${PORT}$$ -> Record
-  ^\s*System.+transceiver -> Transceiver
+  ^System.+transceiver.+ -> Transceiver
 
 Transceiver
   ^\s+${PORT}\s+${DESCR}\s+${NAME}\s+${SN}\s+${VID}$$ -> Record
+  ^\s+${PORT}\s+${DESCR} -> Record
