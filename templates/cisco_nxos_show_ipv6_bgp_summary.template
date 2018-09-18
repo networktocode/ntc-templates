@@ -17,4 +17,4 @@ V6Peers
   ^${BGP_NEIGH}$$ -> V6OnNextLine
 
 V6OnNextLine
-  ^\s+${VERSION}\s+${NEIGH_AS}\s+${MSG_RCVD}\s+${MSG_SENT}\s+${TABLE_VER}\s+\d+\s+\d+\s+${UP_DOWN}\s+${STATE_PFXRCD}$$ -> Record V6Peers
+  ^\s+${VERSION}\s+${NEIGH_AS}\s+${MSG_RCVD}\s+${MSG_SENT}\s+${TABLE_VER}\s+\d+\s+\d+\s+${UP_DOWN}\s+${STATE_PFXRCD} -> Record V6Peers
