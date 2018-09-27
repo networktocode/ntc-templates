@@ -1,36 +1,68 @@
 System information
-  Model                    Description
-  ------------------------ ----------------------------------------------------
-  DCS-7050S-64             48 SFP+ +4 QSFP 10Gb 1RU
+  Model                    Description                                          
+  ------------------------ ---------------------------------------------------- 
+  DCS-7050QX-32S           32 QSFP+ + 4 SFP+ 1RU                                
 
-  HW Version  Serial Number  Mfg Date   Epoch
-  ----------- -------------- ---------- -----
-  01.27       JPE14437991    2014-10-27 00.00
+  HW Version  Serial Number  Mfg Date   Epoch 
+  ----------- -------------- ---------- ----- 
+  11.32       SSJ17235348    2017-06-25 01.00 
 
 System has 2 power supply slots
-  Slot Model            Serial Number
-  ---- ---------------- ----------------
-  1    PWR-460AC-F      K192NL005C1CZ
-  2    PWR-460AC-F      K192NA002Z1CZ
+  Slot Model            Serial Number    
+  ---- ---------------- ---------------- 
+  1    PWR-500AC-F      GWCD65T1L1K      
+  2    PWR-500AC-F      GWCD65T1L3S      
 
 System has 4 fan modules
-  Module  Number of Fans  Model            Serial Number
-  ------- --------------- ---------------- ----------------
-  1       1               FAN-7000-F       N/A
-  2       1               FAN-7000-F       N/A
-  3       1               FAN-7000-F       N/A
-  4       1               FAN-7000-F       N/A
+  Module  Number of Fans  Model            Serial Number    
+  ------- --------------- ---------------- ---------------- 
+  1       1               FAN-7000-F       N/A              
+  2       1               FAN-7000-F       N/A              
+  3       1               FAN-7000-F       N/A              
+  4       1               FAN-7000-F       N/A              
 
-System has 65 ports
+System has 109 ports
   Type             Count
   ---------------- ----
-  Management       1
-  Switched         64
+  Management       1   
+  Switched         108 
 
-System has 52 transceiver slots
-  Port Manufacturer     Model            Serial Number    Rev
+System has 36 transceiver slots
+  Port Manufacturer     Model            Serial Number    Rev 
   ---- ---------------- ---------------- ---------------- ----
-  1    FINISAR CORP.    FTLX8571D3BCL    ASG1FSE          A
-  9    FINISAR CORP.    FTLX8571D3BCL    ASG1EN0          A
-  51   AOI              AQOMBBQ4EDMA0694 28717K20021      B
-  52   Not Present                                           
+  1    Not Present                                            
+  2    Not Present                                            
+  3    Not Present                                            
+  4    Not Present                                            
+  5    Not Present                                            
+  6    AOI              AQOA9N12ADLN0720 49217C10234      A   
+  7    AOI              AQOA9N12ADLN0720 49217C10217      A   
+  8    AOI              AQOA9N12ADLN0720 65617B10033      A   
+  9    AOI              AQOA9N09ADLN0720 70317B10071      A   
+  10   AOI              AQOA9N08ADLN0720 57317B10042      A   
+  11   AOI              AQOA9N09ADLN0720 70317B10095      A   
+  12   AOI              AQOA9N09ADLN0720 70317B10097      A   
+  13   AOI              AQOA9N12ADLN0720 70417B10068      A   
+  14   AOI              AQOA9N12ADLN0720 70417B10237      A   
+  15   ONET             1AT-1Q2M16XX-03A 1QA-0160126      03  
+  16   FINISAR CORP     FCBN410QB1C20    DRN00EP          B   
+  17   FINISAR CORP     FCBN410QB1C20    DRN00B6          B   
+  18   AOI              AQOA9N16ADLN0720 57417B10074      A   
+  19   AOI              AQOA9N16ADLN0720 57417B10011      A   
+  20   AOI              AQOA9N16ADLN0720 57417B10029      A   
+  21   AOI              AQOA9N12ADLN0720 49217C10216      A   
+  22   AOI              AQOA9N12ADLN0720 49217C10294      A   
+  23   AOI              AQOA9N12ADLN0720 70417B10235      A   
+  24   FINISAR CORP     FCBN410QB1C16    DSG01WP          B   
+  25   FINISAR CORP     FCBN410QB1C16    DRN00N0          B   
+  26   Not Present                                            
+  27   Not Present                                            
+  28   Not Present                                            
+  29   MOLEX            1064141400       G16214P0186      H1  
+  30   MOLEX            1064141400       G16431P0839      H1  
+  31   MOLEX            1064141400       G16431P0874      H1  
+  32   MOLEX            1064141400       G16431P0193      H1  
+  33   MOLEX            1064141400       G16214P0196      H1  
+  34   MOLEX            1064141400       G16431P0190      H1  
+  35   MOLEX            1064141400       G16214P0197      H1  
+  36   MOLEX            1064141400       G16431P0886      H1  

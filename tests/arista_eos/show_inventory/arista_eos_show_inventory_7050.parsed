@@ -2,36 +2,27 @@
 
 parsed_sample:
 
-
-  model : 'DCS-7050S-64'
-  chassis_descr : '48 SFP+ +4 QSFP 10Gb 1RU'
   port : ''
-  name : ''
-  sn : 'JPE14437991'
-  descr : ''
-  vid : '01.27'
+  name : 'DCS-7050QX-32S'
+  sn : 'SSJ17235348'
+  descr : '32 QSFP+ + 4 SFP+ 1RU'
+  vid : '11.32'
 
 
-  model : 'DCS-7050S-64'
-  chassis_descr : '48 SFP+ +4 QSFP 10Gb 1RU'
   port : '1'
-  name : 'PWR-460AC-F'
-  sn : 'K192NL005C1CZ'
+  name : 'PWR-500AC-F'
+  sn : 'GWCD65T1L1K'
   descr : ''
   vid : ''
 
 
-  model : 'DCS-7050S-64'
-  chassis_descr : '48 SFP+ +4 QSFP 10Gb 1RU'
   port : '2'
-  name : 'PWR-460AC-F'
-  sn : 'K192NA002Z1CZ'
+  name : 'PWR-500AC-F'
+  sn : 'GWCD65T1L3S'
   descr : ''
   vid : ''
 
 
-  model : 'DCS-7050S-64'
-  chassis_descr : '48 SFP+ +4 QSFP 10Gb 1RU'
   port : '1'
   name : 'FAN-7000-F'
   sn : 'N/A'
@@ -39,8 +30,6 @@ parsed_sample:
   vid : ''
 
 
-  model : 'DCS-7050S-64'
-  chassis_descr : '48 SFP+ +4 QSFP 10Gb 1RU'
   port : '2'
   name : 'FAN-7000-F'
   sn : 'N/A'
@@ -48,8 +37,6 @@ parsed_sample:
   vid : ''
 
 
-  model : 'DCS-7050S-64'
-  chassis_descr : '48 SFP+ +4 QSFP 10Gb 1RU'
   port : '3'
   name : 'FAN-7000-F'
   sn : 'N/A'
@@ -57,8 +44,6 @@ parsed_sample:
   vid : ''
 
 
-  model : 'DCS-7050S-64'
-  chassis_descr : '48 SFP+ +4 QSFP 10Gb 1RU'
   port : '4'
   name : 'FAN-7000-F'
   sn : 'N/A'
@@ -66,64 +51,267 @@ parsed_sample:
   vid : ''
 
 
-  model : 'DCS-7050S-64'
-  chassis_descr : '48 SFP+ +4 QSFP 10Gb 1RU'
   port : '1'
-  name : ''
+  name : 'Management'
   sn : ''
-  descr : 'Management'
+  descr : ''
   vid : ''
 
 
-  model : 'DCS-7050S-64'
-  chassis_descr : '48 SFP+ +4 QSFP 10Gb 1RU'
-  port : '64'
-  name : ''
+  port : '108'
+  name : 'Switched'
   sn : ''
-  descr : 'Switched'
+  descr : ''
   vid : ''
 
 
-  model : 'DCS-7050S-64'
-  chassis_descr : '48 SFP+ +4 QSFP 10Gb 1RU'
   port : '1'
-  name : ''
-  sn : ''
-  descr : 'FINISAR CORP'
-  vid : ''
-
-
-  model : 'DCS-7050S-64'
-  chassis_descr : '48 SFP+ +4 QSFP 10Gb 1RU'
-  port : '9'
-  name : ''
-  sn : ''
-  descr : 'FINISAR CORP'
-  vid : ''
-
-
-  model : 'DCS-7050S-64'
-  chassis_descr : '48 SFP+ +4 QSFP 10Gb 1RU'
-  port : '51'
-  name : ''
-  sn : ''
-  descr : 'AOI'
-  vid : ''
-
-
-  model : 'DCS-7050S-64'
-  chassis_descr : '48 SFP+ +4 QSFP 10Gb 1RU'
-  port : '52'
   name : ''
   sn : ''
   descr : 'Not Present'
   vid : ''
 
 
-  model : 'DCS-7050S-64'
-  chassis_descr : '48 SFP+ +4 QSFP 10Gb 1RU'
-  port : ''
+  port : '2'
   name : ''
   sn : ''
-  descr : ''
+  descr : 'Not Present'
+  vid : ''
+
+
+  port : '3'
+  name : ''
+  sn : ''
+  descr : 'Not Present'
+  vid : ''
+
+
+  port : '4'
+  name : ''
+  sn : ''
+  descr : 'Not Present'
+  vid : ''
+
+
+  port : '5'
+  name : ''
+  sn : ''
+  descr : 'Not Present'
+  vid : ''
+
+
+  port : '6'
+  name : 'AQOA9N12ADLN0720'
+  sn : '49217C10234'
+  descr : 'AOI'
+  vid : ''
+
+
+  port : '7'
+  name : 'AQOA9N12ADLN0720'
+  sn : '49217C10217'
+  descr : 'AOI'
+  vid : ''
+
+
+  port : '8'
+  name : 'AQOA9N12ADLN0720'
+  sn : '65617B10033'
+  descr : 'AOI'
+  vid : ''
+
+
+  port : '9'
+  name : 'AQOA9N09ADLN0720'
+  sn : '70317B10071'
+  descr : 'AOI'
+  vid : ''
+
+
+  port : '10'
+  name : 'AQOA9N08ADLN0720'
+  sn : '57317B10042'
+  descr : 'AOI'
+  vid : ''
+
+
+  port : '11'
+  name : 'AQOA9N09ADLN0720'
+  sn : '70317B10095'
+  descr : 'AOI'
+  vid : ''
+
+
+  port : '12'
+  name : 'AQOA9N09ADLN0720'
+  sn : '70317B10097'
+  descr : 'AOI'
+  vid : ''
+
+
+  port : '13'
+  name : 'AQOA9N12ADLN0720'
+  sn : '70417B10068'
+  descr : 'AOI'
+  vid : ''
+
+
+  port : '14'
+  name : 'AQOA9N12ADLN0720'
+  sn : '70417B10237'
+  descr : 'AOI'
+  vid : ''
+
+
+  port : '15'
+  name : '1AT-1Q2M16XX-03A'
+  sn : '1QA-0160126'
+  descr : 'ONET'
+  vid : ''
+
+
+  port : '16'
+  name : 'CORP'
+  sn : 'FCBN410QB1C20'
+  descr : 'FINISAR'
+  vid : ''
+
+
+  port : '17'
+  name : 'CORP'
+  sn : 'FCBN410QB1C20'
+  descr : 'FINISAR'
+  vid : ''
+
+
+  port : '18'
+  name : 'AQOA9N16ADLN0720'
+  sn : '57417B10074'
+  descr : 'AOI'
+  vid : ''
+
+
+  port : '19'
+  name : 'AQOA9N16ADLN0720'
+  sn : '57417B10011'
+  descr : 'AOI'
+  vid : ''
+
+
+  port : '20'
+  name : 'AQOA9N16ADLN0720'
+  sn : '57417B10029'
+  descr : 'AOI'
+  vid : ''
+
+
+  port : '21'
+  name : 'AQOA9N12ADLN0720'
+  sn : '49217C10216'
+  descr : 'AOI'
+  vid : ''
+
+
+  port : '22'
+  name : 'AQOA9N12ADLN0720'
+  sn : '49217C10294'
+  descr : 'AOI'
+  vid : ''
+
+
+  port : '23'
+  name : 'AQOA9N12ADLN0720'
+  sn : '70417B10235'
+  descr : 'AOI'
+  vid : ''
+
+
+  port : '24'
+  name : 'CORP'
+  sn : 'FCBN410QB1C16'
+  descr : 'FINISAR'
+  vid : ''
+
+
+  port : '25'
+  name : 'CORP'
+  sn : 'FCBN410QB1C16'
+  descr : 'FINISAR'
+  vid : ''
+
+
+  port : '26'
+  name : ''
+  sn : ''
+  descr : 'Not Present'
+  vid : ''
+
+
+  port : '27'
+  name : ''
+  sn : ''
+  descr : 'Not Present'
+  vid : ''
+
+
+  port : '28'
+  name : ''
+  sn : ''
+  descr : 'Not Present'
+  vid : ''
+
+
+  port : '29'
+  name : '1064141400'
+  sn : 'G16214P0186'
+  descr : 'MOLEX'
+  vid : ''
+
+
+  port : '30'
+  name : '1064141400'
+  sn : 'G16431P0839'
+  descr : 'MOLEX'
+  vid : ''
+
+
+  port : '31'
+  name : '1064141400'
+  sn : 'G16431P0874'
+  descr : 'MOLEX'
+  vid : ''
+
+
+  port : '32'
+  name : '1064141400'
+  sn : 'G16431P0193'
+  descr : 'MOLEX'
+  vid : ''
+
+
+  port : '33'
+  name : '1064141400'
+  sn : 'G16214P0196'
+  descr : 'MOLEX'
+  vid : ''
+
+
+  port : '34'
+  name : '1064141400'
+  sn : 'G16431P0190'
+  descr : 'MOLEX'
+  vid : ''
+
+
+  port : '35'
+  name : '1064141400'
+  sn : 'G16214P0197'
+  descr : 'MOLEX'
+  vid : ''
+
+
+  port : '36'
+  name : '1064141400'
+  sn : 'G16431P0886'
+  descr : 'MOLEX'
   vid : ''
