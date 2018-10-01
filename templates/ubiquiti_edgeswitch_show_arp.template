@@ -1,0 +1,13 @@
+Value ADDRESS (\d+\.\d+\.\d+\.\d+)
+Value MAC (\S+)
+Value INTERFACE (\S+)
+Value TYPE (\S+)
+Value AGE (.*)
+
+Start
+  ^\s+IP Address -> ARP
+
+ARP
+  ^${ADDRESS}\s+${MAC}\s+${INTERFACE}\s+${TYPE}\s+${AGE}.*$$ -> Record
+  ^-+\s+-+\s+-+\s+-+\s+-+\s*$$
+  ^.*$$ -> Error
