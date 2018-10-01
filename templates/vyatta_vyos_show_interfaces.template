@@ -1,0 +1,14 @@
+Value INTERFACE (\S+)
+Value List IP_ADDRESS (\d+\.\d+\.\d+\.\d+\/\d+|\-|[\:\d\/a-f]+)
+Value STATUS (\S+)
+Value DESCRIPTION (.+)
+
+Start
+  ^Interface -> INTERFACE
+
+INTERFACE
+  ^\S+\s+ -> Continue.Record
+  ^${INTERFACE}\s+${IP_ADDRESS}\s+${STATUS}\s+(${DESCRIPTION}|)\s
+  ^\s+${IP_ADDRESS}
+  ^-+\s+-+\s+-+\s+-+$$
+  ^.+ -> Error
