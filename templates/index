@@ -251,5 +251,8 @@ paloalto_panos_show_counter_global.template, .*, paloalto_panos, sh[[ow]] coun[[
 paloalto_panos_show_system_info.template, .*, paloalto_panos, sh[[ow]] sys[[tem]] in[[fo]]
 paloalto_panos_show_jobs_all.template, .*, paloalto_panos, sh[[ow]] jo[[bs]] all
 
+ubiquiti_edgeswitch_show_vlan.template, .*, ubiquiti_edgeswitch, sh[[ow]] vl[[an]]
+ubiquiti_edgeswitch_show_arp.template, .*, ubiquiti_edgeswitch, sh[[ow]] ar[[p]]
+
 vmware_nsxv_show_ip_bgp_neighbors.template, .*, vmware_nsxv, sh[[ow]] ip b[[gp]] n[[eighbors]]
 vmware_nsxv_show_ip_route.template, .*, vmware_nsxv, sh[[ow]] ip r[[oute]]
