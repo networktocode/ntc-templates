@@ -1,0 +1,13 @@
+Value ADDRESS ((\d+.){3}\d+)
+Value HWTYPE (\S+)
+Value HWADDRESS (\S+)
+Value FLAGS (\w)
+Value INTERFACE (\S+)
+
+Start
+  ^Address -> ARP
+
+ARP
+  ^${ADDRESS}\s+(${HWTYPE}|)\s+${HWADDRESS}\s+(${FLAGS}|)\s+${INTERFACE}$$ -> Record
+  ^Address.*$$
+  ^.+ -> Error

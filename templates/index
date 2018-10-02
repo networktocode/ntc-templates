@@ -254,4 +254,5 @@ paloalto_panos_show_jobs_all.template, .*, paloalto_panos, sh[[ow]] jo[[bs]] all
 vmware_nsxv_show_ip_bgp_neighbors.template, .*, vmware_nsxv, sh[[ow]] ip b[[gp]] n[[eighbors]]
 vmware_nsxv_show_ip_route.template, .*, vmware_nsxv, sh[[ow]] ip r[[oute]]
 
-vyos_show_interfaces.template, .*, vyos, sh[[ow]] int[[erfaces]]
+vyatta_vyos_show_interfaces.template, .*, .*vyos.*, sh[[ow]] int[[erfaces]]
+vyatta_vyos_show_arp.template, .*, .*vyos.*, sh[[ow]] a[[rp]]
