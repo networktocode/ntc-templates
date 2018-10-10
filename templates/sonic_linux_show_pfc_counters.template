@@ -1,0 +1,16 @@
+Value Filldown PORT_STATE (\S+)
+Value Required PORT (\S+)
+Value PFC0 (\d+)
+Value PFC1 (\d+)
+Value PFC2 (\d+)
+Value PFC3 (\d+)
+Value PFC4 (\d+)
+Value PFC5 (\d+)
+Value PFC6 (\d+)
+Value PFC7 (\d+)
+
+Start
+  ^\s+Port\s+${PORT_STATE}\s+PFC0 -> Record               
+  ^\s+${PORT}\s+${PFC0}\s+${PFC1}\s+${PFC2}\s+${PFC3}\s+${PFC4}\s+${PFC5}\s+${PFC6}\s+${PFC7} -> Record               
+
+EOF

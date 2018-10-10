@@ -232,13 +232,13 @@ hp_procurve_show_system.template, .*, hp_procurve, sh[[ow]] syst[[em]]
 hp_procurve_show_vlans.template, .*, hp_procurve, sh[[ow]] vl[[ans]]
 hp_procurve_show_arp.template, .*, hp_procurve, sh[[ow]] ar[[p]]
 
+juniper_junos_show_system_process_summary.template, .*, juniper_junos|juniper, sh[[ow]] sys[[tem]] proce[[ss]] sum[[mary]]
 juniper_junos_show_pfe_route_summary.template, .*, juniper_junos|juniper, sh[[ow]] pfe rou[[te]] summ[[ary]]
 juniper_junos_show_chassis_firmware.template, .*, juniper_junos|juniper, sh[[ow]] ch[[assis]] fi[[rmware]]
 juniper_junos_show_isis_adjacency.template, .*, juniper_junos|juniper, sh[[ow]] is[[is]] ad[[jacency]]
 juniper_junos_show_route_summary.template, .*, juniper_junos|juniper, sh[[ow]] rou[[te]] summ[[ary]]
 juniper_junos_show_ospf_neighbor.template, .*, juniper_junos|juniper, sh[[ow]] ospf n[[eighbor]]
 juniper_junos_show_interfaces.template, .*, juniper_junos|juniper, sh[[ow]] inte[[rfaces]]
-juniper_junos_show_system_process_summary.template, .*, juniper_junos|juniper, sh[[ow]] sys[[tem]] proce[[ss]] sum[[mary]]
 
 paloalto_panos_show_running_security-policy.template, .*, paloalto_panos, sh[[ow]] runn[[ing]] security[[-policy]]
 paloalto_panos_show_high-availability_all.template, .*, paloalto_panos, sh[[ow]] high[[-availability]] all
@@ -249,15 +249,15 @@ paloalto_panos_show_counter_global.template, .*, paloalto_panos, sh[[ow]] coun[[
 paloalto_panos_show_system_info.template, .*, paloalto_panos, sh[[ow]] sys[[tem]] in[[fo]]
 paloalto_panos_show_jobs_all.template, .*, paloalto_panos, sh[[ow]] jo[[bs]] all
 
-sonic_linux_uptime_since.template, .*, linux, up[[time]] -s
-sonic_linux_docker_top_bgp.template, .*, linux, dock[[er]] to[[p]] bg[[p]]
 sonic_linux_show_ipv6_bgp_summary.template, .*, linux, sh[[ow]] ipv6 bgp sum[[mary]]
 sonic_linux_show_ip_bgp_summary.template, .*, linux, sh[[ow]] ip bgp sum[[mary]]
+sonic_linux_show_pfc_counters.template, .*, linux, sh[[ow]] pf[[c]] coun[[ters]]
 sonic_linux_docker_top_bgp.template, .*, linux, dock[[er]] to[[p]] bg[[p]]
 sonic_linux_show_version.template, .*, linux, show ver[[sion]]
 sonic_linux_uptime_since.template, .*, linux, up[[time]] -s
 sonic_linux_ps_dash_ef.template, .*, linux, ps -ef
 sonic_linux_df_dash_h.template, .*, linux, df -h
+
 
 vmware_nsxv_show_ip_bgp_neighbors.template, .*, vmware_nsxv, sh[[ow]] ip b[[gp]] n[[eighbors]]
 vmware_nsxv_show_ip_route.template, .*, vmware_nsxv, sh[[ow]] ip r[[oute]]
