@@ -1,0 +1,35 @@
+Command: sudo lldpshow
+Capability codes: (R) Router, (B) Bridge, (O) Other
+LocalPort    RemoteDevice                RemotePortID    Capability    RemotePortDescr
+-----------  --------------------------  --------------  ------------  -----------------------------------------
+Ethernet4    BL5-0101-0116-01T0          Ethernet1/3     BR            BL5-0101-0116-13T1:Ethernet6/1
+Ethernet8    BL5-0101-0116-02T0          Ethernet1/3     BR            BL5-0101-0116-13T1:Ethernet7/1
+Ethernet12   BL5-0101-0116-03T0          Ethernet1/3     BR            BL5-0101-0116-13T1:Ethernet8/1
+Ethernet16   BL5-0101-0116-04T0          Ethernet1/3     BR            BL5-0101-0116-13T1:Ethernet9/1
+Ethernet20   BL5-0101-0116-05T0          Ethernet1/3     BR            BL5-0101-0116-13T1:Ethernet10/1
+Ethernet24   BL5-0101-0116-06T0          Ethernet1/3     BR            BL5-0101-0116-13T1:Ethernet11/1
+Ethernet28   BL5-0101-0116-07T0          Ethernet1/3     BR            BL5-0101-0116-13T1:Ethernet12/1
+Ethernet32   BL5-0101-0116-08T0          Ethernet1/3     BR            BL5-0101-0116-13T1:Ethernet13/1
+Ethernet36   BL5-0101-0116-09T0          Ethernet1/3     BR            BL5-0101-0116-13T1:Ethernet14/1
+Ethernet40   BL5-0101-0116-10T0          Ethernet1/3     BR            BL5-0101-0116-13T1:Ethernet15/1
+Ethernet44   BL5-0101-0116-11T0          Ethernet1/3     BR            BL5-0101-0116-13T1:Ethernet16/1
+Ethernet48   BL5-0101-0116-12T0          Ethernet1/3     BR            BL5-0101-0116-13T1:Ethernet17/1
+Ethernet52   BL5-0101-0116-13T0          Ethernet1/3     BR            BL5-0101-0116-13T1:Ethernet18/1
+Ethernet56   BL5-0101-0116-14T0          Ethernet1/3     BR            BL5-0101-0116-13T1:Ethernet19/1
+Ethernet60   BL5-0101-0116-15T0          Ethernet1/3     BR            BL5-0101-0116-13T1:Ethernet20/1
+Ethernet64   BL5-0101-0116-16T0          Ethernet1/3     BR            BL5-0101-0116-13T1:Ethernet21/1
+Ethernet68   BL5-0101-0116-17T0          Ethernet1/3     BR            BL5-0101-0116-13T1:Ethernet22/1
+Ethernet72   BL5-0101-0116-18T0          Ethernet1/3     BR            BL5-0101-0116-13T1:Ethernet23/1
+Ethernet76   BL5-0101-0116-19T0          Ethernet1/3     BR            BL5-0101-0116-13T1:Ethernet24/1
+Ethernet80   BL5-0101-0116-20T0          Ethernet1/3     BR            BL5-0101-0116-13T1:Ethernet25/1
+Ethernet96   BL5-0101-0200-01T2          Ethernet6/17/1  BR            BL5-0101-0116-13T1:Ethernet29
+Ethernet100  BL5-0101-0200-01T2          Ethernet6/18/1  BR            BL5-0101-0116-13T1:Ethernet30
+Ethernet104  BL5-0101-0200-02T2          Ethernet6/17/1  BR            BL5-0101-0116-13T1:Ethernet31
+Ethernet108  BL5-0101-0200-02T2          Ethernet6/18/1  BR            BL5-0101-0116-13T1:Ethernet32
+Ethernet112  BL5-0101-0200-03T2          Ethernet6/17/1  BR            BL5-0101-0116-13T1:Ethernet33
+Ethernet116  BL5-0101-0200-03T2          Ethernet6/18/1  BR            BL5-0101-0116-13T1:Ethernet34
+Ethernet120  BL5-0101-0200-04T2          Ethernet6/17/1  BR            BL5-0101-0116-13T1:Ethernet35
+Ethernet124  BL5-0101-0200-04T2          Ethernet6/18/1  BR            BL5-0101-0116-13T1:Ethernet36
+eth0         BL5-0101-0116-01M0.phx.gbl  Ethernet1/4     BR            INFRA:MGMT:BL5-0101-0116-13T1:Management1
+--------------------------------------------------
+Total entries displayed:  29

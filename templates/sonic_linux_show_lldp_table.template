@@ -1,0 +1,15 @@
+Value Required LOCAL_PORT (\S+)
+Value Required REMOTE_DEVICE (\S+)
+Value Required REMOTE_PORT_ID (\S+)
+Value Required CAPABILITY (\S+)
+Value REMOTE_PORT_DESCR (\S+)
+
+Start
+  ^LocalPort.*RemotePortDescr -> Data
+
+Data
+  ^-.+
+  ^${LOCAL_PORT}\s+${REMOTE_DEVICE}\s+${REMOTE_PORT_ID}\s+${CAPABILITY}\s+${REMOTE_PORT_DESCR} -> Record
+  ^-.+ 
+
+EOF
