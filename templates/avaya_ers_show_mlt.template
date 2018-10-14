@@ -1,25 +1,25 @@
-Value Required MLTID (\d+)
-Value MLTNAME (.*?)
-Value MLTACTIVEMEMBERS (\S+?)
-Value MLTINACTIVEMEMBERS (\S+?)
-Value MLTBPDU (\S+?)
-Value MLTMODE (\S+?)
-Value MLTSTATUS (Enabled|Disabled)
-Value MLTTYPE (Access|Trunk|)
-Value MLTLACPKEY (\S+|)
+Value Required ID (\d+)
+Value NAME (.*?)
+Value ACTIVE_MEMBERS (\S+?)
+Value INACTIVE_MEMBERS (\S+?)
+Value BPDU (\S+?)
+Value MODE (\S+?)
+Value STATUS (Enabled|Disabled)
+Value TYPE (Access|Trunk|)
+Value LACP_KEY (\S+|)
 
 Start
-  ^${MLTID}\s+${MLTNAME}\s+${MLTACTIVEMEMBERS}\s+${MLTBPDU}\s+${MLTMODE}\s+${MLTSTATUS}\s*${MLTTYPE}\s*${MLTLACPKEY}\s*$$ -> Record
+  ^${ID}\s+${NAME}\s+${ACTIVE_MEMBERS}\s+${BPDU}\s+${MODE}\s+${STATUS}\s*${TYPE}\s*${LACP_KEY}\s*$$ -> Record
   ^Id:\s+\d+\s*$$ -> Continue.Record
-  ^Id:\s*${MLTID}\s*$$
-  ^\s+Name:${MLTNAME}\s*$$
-  ^\s+Active Members:\s${MLTACTIVEMEMBERS}\s*$$
-  ^\s+Inactive Members:\s${MLTINACTIVEMEMBERS}\s*$$
-  ^\s+Bpdu:\s${MLTBPDU}\s*$$
-  ^\s+Mode:\s${MLTMODE}\s*$$
-  ^\s+Status:\s${MLTSTATUS}\s*$$
-  ^\s+Type:\s${MLTTYPE}\s*$$
-  ^\s+LACP key:\s${MLTLACPKEY}\s*$$
+  ^Id:\s*${ID}\s*$$
+  ^\s+Name:${NAME}\s*$$
+  ^\s+Active Members:\s${ACTIVE_MEMBERS}\s*$$
+  ^\s+Inactive Members:\s${INACTIVE_MEMBERS}\s*$$
+  ^\s+Bpdu:\s${BPDU}\s*$$
+  ^\s+Mode:\s${MODE}\s*$$
+  ^\s+Status:\s${STATUS}\s*$$
+  ^\s+Type:\s${TYPE}\s*$$
+  ^\s+LACP key:\s${LACP_KEY}\s*$$
   ^\s+LACP$$
   ^Id\s+Name\s+Members\s+Bpdu\s+Mode\s+Status\s+Type(\s+Key|)\s*$$
   ^-+\s+-+\s+-+\s+-+\s+-+\s+-+\s+-+(\s+-+|)\s*$$
