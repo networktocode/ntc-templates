@@ -1,17 +1,18 @@
-Value ap_name (\S+)
-Value slot (\S+)
-Value ap_model (\S+)
-Value mac (\S+)
-Value loc (((?!\s{2}).)*)
-Value country (\S+)
-Value ip (\S+)
-Value clients (\S+)
-Value dseloc ([\[\] ,0-9]+)
+Value AP_NAME (\S+)
+Value SLOT (\d+)
+Value AP_MODEL (\S+)
+Value MAC ([a-fA-F0-9:\.]+)
+Value LOCATION (.+?)
+Value COUNTRY (\S+)
+Value IP ([a-fA-F0-9:\.]+)
+Value CLIENTS (\d+)
+Value DSE_LOCATION (.+?)
 
 
 Start
-  ^---.* -> Begin
-
-
-Begin
-  ^${ap_name}\s+${slot}\s+${ap_model}\s+${mac}\s+${loc}\s+${country}\s+${ip}\s+${clients}\s+${dseloc} -> Record
+  ^${AP_NAME}\s+${SLOT}\s+${AP_MODEL}\s+${MAC}\s+${LOCATION}\s+${COUNTRY}\s+${IP}\s+${CLIENTS}\s+${DSE_LOCATION}\s*$$ -> Record
+  ^.+\.+
+  ^\s*$$
+  ^AP\s+Name\s+Slots\s+AP\s+Model\s+Ethernet\s+MAC\s+Location\s+Country\s+IP\s+Address\s+Clients\s+DSE\s+Location\s*$$
+  ^-+
+  ^. -> Error
