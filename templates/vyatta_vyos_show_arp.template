@@ -1,13 +1,11 @@
-Value ADDRESS ((\d+.){3}\d+)
-Value HWTYPE (\S+)
-Value HWADDRESS (\S+)
-Value FLAGS (\w)
+Value Required ADDRESS ([A-Fa-f0-9:\.]+)
+Value TYPE (\S+)
+Value MAC (\S+)
+Value FLAGS (\S+)
 Value INTERFACE (\S+)
 
 Start
-  ^Address -> ARP
-
-ARP
-  ^${ADDRESS}\s+(${HWTYPE}|)\s+${HWADDRESS}\s+(${FLAGS}|)\s+${INTERFACE}$$ -> Record
-  ^Address.*$$
-  ^.+ -> Error
+  ^${ADDRESS}\s+(${TYPE}|)\s+${MAC}\s+(${FLAGS}|)\s+${INTERFACE}$$ -> Record
+  ^Address\s+HWtype\s+HWaddress\s+Flags\s+Mask\s+Iface\s*$$
+  ^\s*$$
+  ^. -> Error
