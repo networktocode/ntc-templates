@@ -2,7 +2,7 @@ Value VERSION (.+?)
 Value ROMMON (\S+)
 Value HOSTNAME (\S+)
 Value UPTIME (.+)
-Value RELOAD_REASON (.+)
+Value RELOAD_REASON (.+?)
 Value RUNNING_IMAGE (\S+)
 Value List HARDWARE (\S+\d\S+)
 Value List SERIAL (\S+)
@@ -13,7 +13,7 @@ Start
   ^ROM: ${ROMMON}
   ^\s*${HOSTNAME}\s+uptime\s+is\s+${UPTIME}
   ^[sS]ystem\s+image\s+file\s+is\s+"(.*?):${RUNNING_IMAGE}"
-  ^[lL]ast\s+reload\s+reason:\s+${RELOAD_REASON}
+  ^(?:[lL]ast\s+reload\s+reason:|System\s+returned\s+to\s+ROM\s+by)\s+${RELOAD_REASON}\s*$$
   ^[Pp]rocessor\s+board\s+ID\s+${SERIAL}
   ^[Cc]isco\s+${HARDWARE}.+
   ^[Cc]onfiguration\s+register\s+is\s+${CONFIG_REGISTER}
