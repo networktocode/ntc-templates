@@ -249,6 +249,7 @@ paloalto_panos_show_counter_global.template, .*, paloalto_panos, sh[[ow]] coun[[
 paloalto_panos_show_system_info.template, .*, paloalto_panos, sh[[ow]] sys[[tem]] in[[fo]]
 paloalto_panos_show_jobs_all.template, .*, paloalto_panos, sh[[ow]] jo[[bs]] all
 
+sonic_linux_bcmcmd_show_counters_changed.template, .*, linux, bcmcmd "show c[[ounters]] c[[hanged]]"
 sonic_linux_show_ipv6_bgp_summary.template, .*, linux, sh[[ow]] ipv6 bgp sum[[mary]]
 sonic_linux_show_ip_bgp_summary.template, .*, linux, sh[[ow]] ip bgp sum[[mary]]
 sonic_linux_show_pfc_counters.template, .*, linux, sh[[ow]] pf[[c]] coun[[ters]]

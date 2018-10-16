@@ -1,0 +1,15 @@
+Value COUNTER_NAME (\S+)
+Value COUNTER_VALUE (\S+)
+Value DELTA (\S+)
+Value RATE_PER_SEC (\S+)
+
+Start
+  ^show\sc.*
+  ^${COUNTER_NAME}\s+:\s+${COUNTER_VALUE}\s+\+${DELTA}\s+${RATE_PER_SEC}\/s -> Record
+  ^${COUNTER_NAME}\s+:\s+${COUNTER_VALUE}\s+\+${DELTA} -> Record
+  ^drivshell>
+  ^\s+$$
+  ^$$
+  ^.* -> Error "LINE NOT FOUND" 
+
+EOF
