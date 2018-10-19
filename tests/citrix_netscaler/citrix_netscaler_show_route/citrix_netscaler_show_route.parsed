@@ -1,0 +1,76 @@
+---
+
+parsed_sample:
+
+
+- network : '127.0.0.0'
+  netmask : '255.0.0.0'
+  gateway : '127.0.0.1'
+  state : 'UP'
+  traffic_domain : '0'
+  type : 'PERMANENT'
+
+
+- network : '25.156.156.0'
+  netmask : '255.255.255.192'
+  gateway : '25.156.156.33'
+  state : 'UP'
+  traffic_domain : '0'
+  type : 'DIRECT'
+
+
+- network : '25.171.222.0'
+  netmask : '255.255.255.128'
+  gateway : '25.171.222.4'
+  state : 'UP'
+  traffic_domain : '0'
+  type : 'DIRECT'
+
+
+- network : '40.97.138.128'
+  netmask : '255.255.255.248'
+  gateway : '40.97.138.132'
+  state : 'UP'
+  traffic_domain : '0'
+  type : 'DIRECT'
+
+
+- network : '10.255.0.0'
+  netmask : '255.255.0.0'
+  gateway : '25.171.222.1'
+  state : 'UP'
+  traffic_domain : '0'
+  type : 'STATIC'
+
+
+- network : '40.66.128.0'
+  netmask : '255.255.128.0'
+  gateway : '25.171.222.1'
+  state : 'UP'
+  traffic_domain : '0'
+  type : 'STATIC'
+
+
+- network : '192.32.128.0'
+  netmask : '255.255.128.0'
+  gateway : '25.171.222.1'
+  state : 'UP'
+  traffic_domain : '0'
+  type : 'STATIC'
+
+
+- network : '129.75.192.0'
+  netmask : '255.255.192.0'
+  gateway : '25.171.222.1'
+  state : 'UP'
+  traffic_domain : '0'
+  type : 'STATIC'
+
+
+- network : '141.251.224.0'
+  netmask : '255.255.224.0'
+  gateway : '25.171.222.1'
+  state : 'UP'
+  traffic_domain : '0'
+  type : 'STATIC'
+

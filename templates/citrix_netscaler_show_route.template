@@ -1,0 +1,19 @@
+Value NETWORK (\S+)  
+Value NETMASK (\S+)  
+Value GATEWAY (\S+)  
+Value STATE (\S+)  
+Value TRAFFIC_DOMAIN (\S+) 
+Value TYPE (\S+)   
+
+Start 
+  ^\s+Network.*Type -> Data 
+ 
+Data
+  ^\s+\-.+
+  ^\S+\)\s+${NETWORK}\s+${NETMASK}\s+${GATEWAY}\s+${STATE}\s+${TRAFFIC_DOMAIN}\s+${TYPE} -> Record  
+  ^\s+Done
+  ^>  
+  ^.* -> Error "LINE NOT FOUND" 
+ 
+  
+EOF 
