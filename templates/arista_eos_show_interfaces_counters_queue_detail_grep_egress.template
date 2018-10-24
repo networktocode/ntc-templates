@@ -1,0 +1,20 @@
+Value PORT (\S+)
+Value TRAFFIC_CLASS (\S+)
+Value DROP_PREC (\S+)
+Value DEST_TYPE (\S+)
+Value OUT_ENQ_PKTS (\S+)
+Value OUT_ENQ_OCTETS (\S+)
+Value OUT_DROP_PKTS (\S+)
+Value OUT_DROP_OCTETS (\S+)
+
+Start
+  #^${TEST} -> Record
+  ^Egress.+
+  ^Port.+OutDropOctets
+  ^\s+Class
+  ^${PORT}\s+${TRAFFIC_CLASS}\s+${DROP_PREC}\s+${DEST_TYPE}\s+${OUT_ENQ_PKTS}\s+${OUT_ENQ_OCTETS}\s+${OUT_DROP_PKTS}\s+${OUT_DROP_OCTETS} -> Record
+  ^\s+$$
+  ^$$
+  ^.* -> Error "LINE NOT FOUND"
+
+EOF
