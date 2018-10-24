@@ -8,7 +8,6 @@ Value OUT_DROP_PKTS (\S+)
 Value OUT_DROP_OCTETS (\S+)
 
 Start
-  #^${TEST} -> Record
   ^Egress.+
   ^Port.+OutDropOctets
   ^\s+Class
