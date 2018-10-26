@@ -12,8 +12,8 @@ Start
   ^SysName : ${SYSNAME}
   ^Entry address\(es\): -> GetIP
   ^Platform: ${PLATFORM},  Capabilities: ${CAPABILITIES}
-  ^Interface: ${REMOTE_PORT}
-  ^Port ID \(outgoing port\): ${LOCAL_PORT}
+  ^Interface: ${LOCAL_PORT}
+  ^Port ID \(outgoing port\): ${REMOTE_PORT}
   ^Version : -> GetVersion
 
 GetIP
