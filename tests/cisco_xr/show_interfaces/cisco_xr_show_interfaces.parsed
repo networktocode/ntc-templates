@@ -10,7 +10,7 @@ parsed_sample:
     encapsulation: Loopback
     hardware_type: Loopback
     interface: Loopback5
-    ip_address: ''
+    ip_address: '192.168.169.21/32'
     link_status: up
     mtu: '1500'
     speed: ''
@@ -23,7 +23,7 @@ parsed_sample:
     encapsulation: 'Null'
     hardware_type: 'Null'
     interface: Null0
-    ip_address: ''
+    ip_address: 'Unknown'
     link_status: up
     mtu: '1500'
     speed: ''
@@ -36,7 +36,7 @@ parsed_sample:
     encapsulation: TUNNEL
     hardware_type: Tunnel
     interface: tunnel-te300
-    ip_address: ''
+    ip_address: '192.168.169.21/32'
     link_status: up
     mtu: '1500'
     speed: ''
@@ -49,7 +49,7 @@ parsed_sample:
     encapsulation: ARPA
     hardware_type: Management
     interface: MgmtEth0/RSP1/CPU0/0
-    ip_address: ''
+    ip_address: '10.253.3.18/25'
     link_status: up
     mtu: '1514'
     speed: 1000Mb/s
@@ -62,7 +62,7 @@ parsed_sample:
     encapsulation: ARPA
     hardware_type: FortyGigE
     interface: FortyGigE0/0/0/0
-    ip_address: ''
+    ip_address: '192.168.166.9/30'
     link_status: up
     mtu: '9216'
     speed: 40000Mb/s
@@ -75,7 +75,7 @@ parsed_sample:
     encapsulation: ARPA
     hardware_type: TenGigE
     interface: TenGigE0/3/0/0
-    ip_address: ''
+    ip_address: '192.168.166.65/30'
     link_status: up
     mtu: '9216'
     speed: 10000Mb/s
