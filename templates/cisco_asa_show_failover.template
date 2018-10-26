@@ -11,9 +11,7 @@ Value List LAST_FAILOVER_TIMEZONE (\w+)
 Value List LAST_FAILOVER_MONTH (\w+)
 Value List LAST_FAILOVER_DAY (\d+)
 Value List LAST_FAILOVER_YEAR (\d+)
-Value List SERVICE (\S+)
 Value List SERVICE_STATE (.*?)
-Value List SERVICE_MATE (\S+)
 Value List SERVICE_STATE_MATE (.*?)
 Value List SSP_SLOT (\d+)
 Value List SSP_MODEL (\S+)
@@ -36,7 +34,7 @@ Start
   ^Failover\s+LAN\s+Interface:\s+${LAN_INTF_NAME}\s+${LAN_INTF}\s+\(${LAN_INTF_STATE}\)\s*$$
   ^Version:\s+Ours\s+${SW_VERSION},\s+Mate\s+${SW_VERSION_MATE}\s*$$
   ^(?:Group\s+${FAILOVER_GROUP}\s+|)[Ll]ast\s+[Ff]ailover\s+at:\s+${LAST_FAILOVER_TIME}\s+${LAST_FAILOVER_TIMEZONE}\s+${LAST_FAILOVER_MONTH}\s+${LAST_FAILOVER_DAY}\s+${LAST_FAILOVER_YEAR}\s*$$
-  ^\s*This\s+host:.+?-\s+${SERVICE}\s*${SERVICE_STATE}\s*$$ -> ThisHost
+  ^\s*This\s+host:.+?-\s+${SERVICE_STATE}\s*$$ -> ThisHost
   ^\s*This\s+host:\s+\S+\s*$$ -> ThisHost
   ^Reconnect\s+timeout
   ^Unit\s+Poll\s+frequency
@@ -50,20 +48,20 @@ Start
   ^. -> Error
 
 ThisHost
-  ^Group\s+\d+\s+State:\s+${SERVICE}\s*${SERVICE_STATE}\s*$$
+  ^Group\s+\d+\s+State:\s*${SERVICE_STATE}\s*$$
   ^\s*Active\s+time
   ^\s*slot\s+${SSP_SLOT}:\s+${SSP_MODEL}\s+.+?status\s+\(${SSP_STATUS}.*?\)\s*$$
   ^\s*(${INTERFACES_CONTEXT}\s+|)Interface\s+${INTERFACES}.+?:\s+${INTERFACES_STATUS}(?:\s+\(${INTERFACES_STATE}\)|)\s*$$
   # Service module has different line
   ^\s*\S+,\s+\S+,\s+\S+\s*$$
-  ^\s*Other\s+host:.+?-\s+${SERVICE_MATE}\s*${SERVICE_STATE_MATE}\s*$$ -> OtherHost
+  ^\s*Other\s+host:.+?-\s+${SERVICE_STATE_MATE}\s*$$ -> OtherHost
   ^\s*Other\s+host:\s+\S+\s*$$ -> OtherHost
   ^\s*slot\s+\d+:\s+empty\s*$$
   ^\s*$$
   ^. -> Error
 
 OtherHost
-  ^Group\s+\d+\s+State:\s+${SERVICE_MATE}\s*${SERVICE_STATE_MATE}\s*$$
+  ^Group\s+\d+\s+State:\s*${SERVICE_STATE_MATE}\s*$$
   ^\s*Active\s+time
   ^\s*slot\s+${SSP_SLOT_MATE}:\s+${SSP_MODEL_MATE}\s+.+?status\s+\(${SSP_STATUS_MATE}.*?\)\s*$$
   ^\s*(${INTERFACES_CONTEXT_MATE}\s+|)Interface\s+${INTERFACES_MATE}.+?:\s+${INTERFACES_STATUS_MATE}(?:\s+\(${INTERFACES_STATE_MATE}\)|)\s*$$
