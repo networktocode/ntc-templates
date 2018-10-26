@@ -219,6 +219,8 @@ cisco_xr_show_version.template, .*, cisco_xr, sh[[ow]] ver[[sion]]
 
 citrix_netscaler_show_route.template, .*, netscaler, sh[[ow]] ro[[ute]]
 
+dell_force10_show_ip_bgp_ipv6_unicast_summary.template, .*, dell_force10, sh[[ow]] ip bgp ipv6 uni[[cast]] summ[[ary]]
+dell_force10_show_ip_bgp_summary.template, .*, dell_force10, sh[[ow]] ip b[[gp]] summ[[ary]]
 dell_force10_show_vlan_brief.template, .*, dell_force10, sh[[ow]] vl[[an]] br[[ief]]
 dell_force10_show_reload.template, .*, dell_force10, sh[[ow]] reload[[-type]]
 dell_force10_show_version.template, .*, dell_force10, sh[[ow]] ver[[sion]]
