@@ -1,7 +1,7 @@
 Value MODULE (\S+)
 Value Required PORTS (\d+)
-Value CARD (((\S+-port\s+\S+)|(\S+))?)
-Value TYPE (\S+)
+Value CARD (.+)
+Value TYPE (Fabric Module|Supervisor Module|Linecard|Fabric|Supervisor)
 Value MODEL (\S+)
 Value SERIAL_NUM (\S+)
 Value Fillup MAC_ADD (\S+\s+-\s+\S+)
@@ -23,6 +23,5 @@ Start
   ^\s+$$
   ^$$
   ^.* -> Error "LINE NOT FOUND"
-  
-EOF  
 
+EOF
