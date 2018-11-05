@@ -1,6 +1,6 @@
 Value Filldown AS (\d+)
 Value ADDRESS ([0-9A-Fa-f:\.]+)
-Value INTERFACE (\w+(\d+|\d+/\d+|\d+/\d+/\d+))
+Value INTERFACE (\S+)
 Value HOLD (\d+)
 Value UPTIME ((\d+:\d+:\d+|\d+\w\d+\w))
 Value SRTT (\d+)
