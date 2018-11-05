@@ -290,9 +290,5 @@ ubiquiti_edgeswitch_show_arp.template, .*, ubiquiti_edgeswitch, sh[[ow]] ar[[p]]
 vmware_nsxv_show_ip_bgp_neighbors.template, .*, vmware_nsxv, sh[[ow]] ip b[[gp]] n[[eighbors]]
 vmware_nsxv_show_ip_route.template, .*, vmware_nsxv, sh[[ow]] ip r[[oute]]
 
+vyatta_vyos_show_arp.template, .*, .*vyos.*, sh[[ow]] a[[rp]]
 vyatta_vyos_show_interfaces.template, .*, .*vyos.*, sh[[ow]] int[[erfaces]]
-<<<<<<< HEAD
-vyatta_vyos_show_arp.template, .*, .*vyos.*, sh[[ow]] a[[rp]]
-=======
-vyatta_vyos_show_arp.template, .*, .*vyos.*, sh[[ow]] a[[rp]]
->>>>>>> Update index/test_index_order.py to match master (resolve conflicts)
