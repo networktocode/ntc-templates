@@ -3,7 +3,8 @@
 parsed_sample:
 
 
-- address: "192.168.1.2"
+- as: "1"
+  address: "192.168.1.2"
   interface: "Gi0/0"
   hold: "10"
   uptime: "00:12:45"
@@ -12,7 +13,8 @@ parsed_sample:
   q_cnt: "0"
   seq_num: "11"
 
-- address: "192.168.2.2"
+- as: "1"
+  address: "192.168.2.2"
   interface: "Gi0/1"
   hold: "12"
   uptime: "00:11:24"
