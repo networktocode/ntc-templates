@@ -1,5 +1,5 @@
 Value Filldown AS (\d+)
-Value ADDRESS ([0-9A-Fa-f:\.]+)
+Value Required ADDRESS ([0-9A-Fa-f:\.]+)
 Value INTERFACE (\S+)
 Value HOLD (\d+)
 Value UPTIME (\S+)
@@ -9,6 +9,5 @@ Value Q_CNT (\d+)
 Value SEQ_NUM (\d+)
 
 Start
-  ^.*\s+${ADDRESS}\s+${INTERFACE}\s+${HOLD}\s+${UPTIME}\s+${SRTT}\s+${RTO}\s+${Q_CNT}\s+${SEQ_NUM}\s*$$ -> Record
   ^\s*(?:IP-|)EIGRP(?:-IPv4|)\s+[Nn]eighbors\s+for\s+(?:process|AS\()\s*${AS}(?:\)|)\s*$$
-  
+  ^.*\s+${ADDRESS}\s+${INTERFACE}\s+${HOLD}\s+${UPTIME}\s+${SRTT}\s+${RTO}\s+${Q_CNT}\s+${SEQ_NUM}\s*$$ -> Record
