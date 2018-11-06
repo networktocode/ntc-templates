@@ -9,12 +9,6 @@ Value Q_CNT (\d+)
 Value SEQ_NUM (\d+)
 
 Start
- ^.*\s+${ADDRESS}\s+${INTERFACE}\s+${HOLD}\s+${UPTIME}\s+${SRTT}\s+${RTO}\s+${Q_CNT}\s+${SEQ_NUM}\s*$$ -> Record
+  ^.*\s+${ADDRESS}\s+${INTERFACE}\s+${HOLD}\s+${UPTIME}\s+${SRTT}\s+${RTO}\s+${Q_CNT}\s+${SEQ_NUM}\s*$$ -> Record
   ^\s*(?:IP-|)EIGRP(?:-IPv4|)\s+[Nn]eighbors\s+for\s+(?:process|AS\()\s*${AS}(?:\)|)\s*$$
-  ^\s*$$
-  ^\s*H\s+Address\s+Interface\s+Hold\s+Uptime\s+SRTT\s+RTO\s+Q\s+Seq\s*$$
-  ^\s+\(sec\)\s+\(ms\)\s+Cnt\s+Num\s*$$
-  ^\s*Load\s+for
-  ^Time\s+source\s+is
-  ^. -> Error
   
