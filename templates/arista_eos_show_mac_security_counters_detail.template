@@ -1,0 +1,47 @@
+Value INTERFACE (\S+)
+Value OUT_PKTS_ENCR (\S+)
+Value OUT_OCTETS_ENCR (\S+)
+Value OUT_PKTS_UNTAGGED (\S+)
+Value OUT_PKTS_TOO_LONG (\S+)
+Value OUT_PKTS_CTRL (\S+)
+Value IN_PKTS_DECRYPTED (\S+)
+Value IN_OCTETS_DECRYPTED (\S+)
+Value IN_PKTS_UNCHECKED (\S+)
+Value IN_PKTS_OK (\S+)
+Value IN_PKTS_NOT_VALID (\S+)
+Value IN_PKTS_NOT_USING_SA (\S+)
+Value IN_PKTS_CTRL (\S+)
+Value IN_PKTS_NO_TAG (\S+)
+Value IN_PKTS_TAGGED (\S+)
+Value IN_PKTS_BAD_TAG (\S+)
+Value IN_PKTS_NO_SCI (\S+)
+Value IN_PKTS_LATE (\S+)
+
+Start
+  ^${INTERFACE}\s+Counter.+Count
+  ^-.+ -> Data
+
+Data
+  ^\s+outPktsEncrypted\s+${OUT_PKTS_ENCR}
+  ^\s+outOctetsEncrypted\s+${OUT_OCTETS_ENCR}
+  ^\s+outPktsUntagged\s+${OUT_PKTS_UNTAGGED}
+  ^\s+outPktsTooLong\s+${OUT_PKTS_TOO_LONG}
+  ^\s+outPktCtrl\s+${OUT_PKTS_CTRL}
+  ^\s+outPktsUntagged\s+${OUT_PKTS_UNTAGGED}
+  ^\s+inPktsDecrypted\s+${IN_PKTS_DECRYPTED}
+  ^\s+inOctetsDecrypted\s+${IN_OCTETS_DECRYPTED}
+  ^\s+inPktsUnchecked\s+${IN_PKTS_UNCHECKED}
+  ^\s+inPktsOK\s+${IN_PKTS_OK}
+  ^\s+inPktsNotValid\s+${IN_PKTS_NOT_VALID}
+  ^\s+inPktsNotUsingSA\s+${IN_PKTS_NOT_USING_SA}
+  ^\s+inPktsCtrl\s+${IN_PKTS_CTRL}
+  ^\s+inPktsNoTag\s+${IN_PKTS_NO_TAG}
+  ^\s+inPktsTagged\s+${IN_PKTS_TAGGED}
+  ^\s+inPktsBadTag\s+${IN_PKTS_BAD_TAG}
+  ^\s+inPktsNoSCI\s+${IN_PKTS_NO_SCI}
+  ^\s+inPktsLate\s+${IN_PKTS_LATE} -> Record Start
+  ^\s+$$
+  ^$$
+  ^.* -> Error "LINE NOT FOUND"
+
+EOF

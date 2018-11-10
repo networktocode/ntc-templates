@@ -1,0 +1,41 @@
+---
+
+parsed_sample:
+
+
+- interface : 'Ethernet7/14/1'
+  tx_success : '810870'
+  tx_failure : '0'
+  tx_invalid : '0'
+  rx_success : '830650'
+  rx_failure : '0'
+  rx_invalid : '0'
+  rx_eapol : '0'
+  rx_basic_pram_err : '0'
+  rx_ckn_err : '0'
+  rx_icv_val_err : '0'
+  rx_live_peer_list_err : '0'
+  rx_potential_peer_list_err : '0'
+  rx_sak_use_err : '0'
+  rx_dist_sak_err : '0'
+  rx_icv_indicator_err : '0'
+  rx_unrec_pram_err : '0'
+
+
+- interface : 'Ethernet7/15/1'
+  tx_success : '810380'
+  tx_failure : '0'
+  tx_invalid : '0'
+  rx_success : '830995'
+  rx_failure : '1'
+  rx_invalid : '0'
+  rx_eapol : '0'
+  rx_basic_pram_err : '0'
+  rx_ckn_err : '1'
+  rx_icv_val_err : '0'
+  rx_live_peer_list_err : '0'
+  rx_potential_peer_list_err : '0'
+  rx_sak_use_err : '0'
+  rx_dist_sak_err : '0'
+  rx_icv_indicator_err : '0'
+  rx_unrec_pram_err : '0'

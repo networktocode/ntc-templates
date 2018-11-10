@@ -1,0 +1,44 @@
+Value INTERFACE (\S+)
+Value TX_SUCCESS (\S+)
+Value TX_FAILURE (\S+)
+Value TX_INVALID (\S+)
+Value RX_SUCCESS (\S+)
+Value RX_FAILURE (\S+)
+Value RX_INVALID (\S+)
+Value RX_EAPOL (\S+)
+Value RX_BASIC_PRAM_ERR (\S+)
+Value RX_CKN_ERR (\S+)
+Value RX_ICV_VAL_ERR (\S+)
+Value RX_LIVE_PEER_LIST_ERR (\S+)
+Value RX_POTENTIAL_PEER_LIST_ERR (\S+)
+Value RX_SAK_USE_ERR (\S+)
+Value RX_DIST_SAK_ERR (\S+)
+Value RX_ICV_INDICATOR_ERR (\S+)
+Value RX_UNREC_PRAM_ERR (\S+)
+
+
+Start
+  ^Interface:\s+${INTERFACE} -> Data
+
+Data
+  ^\s+Tx packet success:\s+${TX_SUCCESS}
+  ^\s+Tx packet failure:\s+${TX_FAILURE}
+  ^\s+Tx invalid:\s+${TX_INVALID}
+  ^\s+Rx packet success:\s+${RX_SUCCESS}
+  ^\s+Rx packet failure:\s+${RX_FAILURE}
+  ^\s+Rx invalid:\s+${RX_INVALID}
+  ^\s+Rx eapol error:\s+${RX_EAPOL}
+  ^\s+Rx basic parameter set error:\s+${RX_BASIC_PRAM_ERR}
+  ^\s+Rx unrecognized CKN error:\s+${RX_CKN_ERR}
+  ^\s+Rx ICV validation error:\s+${RX_ICV_VAL_ERR}
+  ^\s+Rx live peer list error:\s+${RX_LIVE_PEER_LIST_ERR}
+  ^\s+Rx potential peer list error:\s+${RX_POTENTIAL_PEER_LIST_ERR}
+  ^\s+Rx SAK use set error:\s+${RX_SAK_USE_ERR}
+  ^\s+Rx distributed SAK set error:\s+${RX_DIST_SAK_ERR}
+  ^\s+Rx ICV Indicator error:\s+${RX_ICV_INDICATOR_ERR}
+  ^\s+Rx unrecognized parameter set error:\s+${RX_UNREC_PRAM_ERR} -> Record Start
+  ^\s+$$
+  ^$$
+  ^.* -> Error "LINE NOT FOUND"
+
+EOF
