@@ -1,0 +1,32 @@
+Value MODULE (\S+)
+Value STATUS (()|.+)
+Value MIN_MAC_ADDRESS (()|\S+)
+Value MODEL_NAME (()|.+)
+Value PORT_COUNT (()|\S+)
+Value MAX_MAC_ADDRESS (()|\S+)
+Value TYPE_DESC (()|.+)
+Value SERIAL_NUMBER (()|\S+)
+Value HARDWARE_REV (()|\S+)
+Value SOFTWARE_REV (()|\S+)
+Value UPTIME (.+)
+
+Start
+  ^{
+  ^\s+\"modules\":\s+{
+  ^\s+\"${MODULE}\":\s+{ -> Data
+
+Data
+  ^\s+\"status\":\s+\"${STATUS}\",\s?
+  ^\s+\"minMacAddress\":\s+\"${MIN_MAC_ADDRESS}\",\s?
+  ^\s+\"modelName\":\s+\"${MODEL_NAME}\",\s?
+  ^\s+\"portCount\":\s+${PORT_COUNT},\s?
+  ^\s+\"maxMacAddress\":\s+\"${MAX_MAC_ADDRESS}\",\s?
+  ^\s+\"typeDescription\":\s+\"${TYPE_DESC}\",\s?
+  ^\s+\"serialNumber\":\s+\"${SERIAL_NUMBER}\",\s?
+  ^\s+\"hardwareRev\":\s+\"${HARDWARE_REV}\",\s?
+  ^\s+\"softwareRev\":\s+\"${SOFTWARE_REV}\"\s?
+  ^\s+\"uptime\":\s+${UPTIME}\s?
+  ^\s+} -> Record Start
+  ^\s+$$
+  ^$$
+  ^.* -> Error "LINE NOT FOUND"

@@ -1,0 +1,29 @@
+---
+
+parsed_sample:
+
+
+- module : '1'
+  status : 'active'
+  min_mac_address : '28:99:3a:ba:36:b1'
+  model_name : 'DCS-7516-SUP2'
+  port_count : '3'
+  max_mac_address : '28:99:3a:ba:36:b2'
+  type_desc : 'DCS-7516-SUP2 Supervisor'
+  serial_number : 'KKJ17174597'
+  hardware_rev : '21.10'
+  software_rev : '4.19.5M'
+  uptime : ''
+
+
+- module : 'Fabric1'
+  status : 'ok'
+  min_mac_address : '00:00:00:00:00:00'
+  model_name : '7516R-FM'
+  port_count : '0'
+  max_mac_address : '00:00:00:00:00:00'
+  type_desc : 'DCS-7516R-FM'
+  serial_number : 'KKJ17204593'
+  hardware_rev : '21.00'
+  software_rev : ''
+  uptime : '1531893800.4668052'

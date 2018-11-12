@@ -38,6 +38,7 @@ arista_eos_show_isis_neighbors.template, .*, arista_eos, sh[[ow]] isis ne[[ighbo
 arista_eos_show_lldp_neighbors.template, .*, arista_eos, sh[[ow]] ll[[dp]] nei[[ghbors]]
 arista_eos_show_snmp_community.template, .*, arista_eos, sh[[ow]] sn[[mp]] com[[munity]]
 arista_eos_show_reload_cause.template, .*, arista_eos, sh[[ow]] relo[[ad]] ca[[use]]
+arista_eos_show_module_json.template, .*, arista_eos, sh[[ow]] modu[[le]] | json
 arista_eos_show_boot-config.template, .*, arista_eos, sh[[ow]] boot-c[[onfig]]
 arista_eos_show_interfaces.template, .*, arista_eos, sh[[ow]] inte[[rfaces]]
 arista_eos_show_inventory.template, .*, arista_eos, sh[[ow]] inv[[entory]]
