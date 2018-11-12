@@ -19,7 +19,7 @@ alcatel_sros_oam_mac-ping.template, .*, alcatel_sros, oam mac-pi[[ng]]
 arista_eos_show_interfaces_counters_queue_detail_grep_egress.template, .*, arista_eos, sh[[ow]] inte[[rfaces]] coun[[ters]] qu[[eue]] det[[ail]] | grep -A 5000 "Egress Queue Counters" | nz
 arista_eos_show_mac_security_mka_counters_detail.template, .*, arista_eos, sh[[ow]] ma[[c]] sec[[urity]] mk[[a]] count[[ers]] det[[ail]]
 arista_eos_show_mac_security_participants_detail.template, .*, arista_eos, sh[[ow]] ma[[c]] sec[[urity]] part[[icipants]] det[[ail]]
-arista_eos_show_mac_security_participants_detail.template, .*, arista_eos, sh[[ow]] ma[[c]] secu[[rity]] part[[icipants]] det[[ail]]
+arista_eos_show_mac_security_counters_detail.template, .*, arista_eos, sh[[ow]] ma[[c]] sec[[urity]] coun[[ters]] det[[ail]]
 arista_eos_show_interfaces_transceiver_detail.template, .*, arista_eos, sh[[ow]] inte[[rfaces]] tr[[ansceiver]] de[[tail]]
 arista_eos_show_mac_security_mka_counters.template, .*, arista_eos, sh[[ow]] ma[[c]] secu[[rity]] mk[[a]] count[[ers]]
 arista_eos_show_mac_security_interface.template, .*, arista_eos, sh[[ow]] ma[[c]] secu[[rity]] int[[erface]]
