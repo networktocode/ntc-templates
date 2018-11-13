@@ -1,4 +1,3 @@
-"""setup.py file."""
 from ntc_templates import __version__
 from codecs import open
 from setuptools import setup
