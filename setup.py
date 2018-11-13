@@ -23,12 +23,6 @@ with open('HISTORY.rst', 'r', 'utf-8') as f:
 
 long_description = readme + '\n\n' + history
 
-if os.path.islink('ntc_templates/templates'):
-    os.unlink('ntc_templates/templates')
-elif os.path.isdir('ntc_templates/templates'):
-    shutil.rmtree('ntc_templates/templates')
-
-os.symlink('../templates', 'ntc_templates/templates')
 config = {
     'name': 'ntc_templates',
     'packages': ['ntc_templates'],
@@ -50,6 +44,3 @@ config = {
 }
 
 setup(**config)
-
-if os.path.islink('ntc_templates/templates'):
-    os.unlink('ntc_templates/templates')
