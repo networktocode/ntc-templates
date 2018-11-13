@@ -9,7 +9,6 @@ with open('README.md', 'r', 'utf-8') as f:
 with open('HISTORY.rst', 'r', 'utf-8') as f:
     history = f.read()
 
-
 long_description = readme + '\n\n' + history
 
 config = {
