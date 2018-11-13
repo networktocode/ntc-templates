@@ -31,7 +31,6 @@ elif os.path.isdir('ntc_templates/templates'):
 os.symlink('../templates', 'ntc_templates/templates')
 config = {
     'name': 'ntc_templates',
-    # 'package_dir': {'': 'lib'},
     'packages': ['ntc_templates'],
     'version': version,
     'package_data': {'ntc_templates': ['templates/*']},
