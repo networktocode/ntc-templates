@@ -23,9 +23,6 @@ with open('HISTORY.rst', 'r', 'utf-8') as f:
 
 long_description = readme + '\n\n' + history
 
-
-template_files = glob('templates/*')
-
 if os.path.islink('ntc_templates/templates'):
     os.unlink('ntc_templates/templates')
 elif os.path.isdir('ntc_templates/templates'):
@@ -37,7 +34,7 @@ config = {
     # 'package_dir': {'': 'lib'},
     'packages': ['ntc_templates'],
     'version': version,
-    'package_data': {'ntc_templates': template_files},
+    'package_data': {'ntc_templates': ['templates/*']},
     'description': 'Package to return structured data from the output of network devices.',
     'long_description': long_description,
     'author': 'network.toCode()',
