@@ -1,10 +1,7 @@
 """setup.py file."""
 import re
 from codecs import open
-from glob import glob
 from setuptools import setup
-import os
-import shutil
 
 version = ''
 with open('ntc_templates/__init__.py', 'r') as fd:
