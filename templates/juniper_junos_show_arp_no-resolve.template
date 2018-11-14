@@ -1,0 +1,10 @@
+Value Required MAC ([A-Fa-f0-9\:]{17})
+Value Required IP_ADDRESS (\d+\.\d+\.\d+\.\d+)
+Value Required INTERFACE (\S+)
+Value Required FLAGS (\S+)
+
+Start
+  ^MAC Address\s+Address\s+Interface\s+Flags
+  ^${MAC}\s+${IP_ADDRESS}\s+${INTERFACE}\s+${FLAGS} -> Record
+  ^Total.*
+  ^. -> Error
