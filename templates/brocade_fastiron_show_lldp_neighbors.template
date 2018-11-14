@@ -1,0 +1,13 @@
+Value Required DEVICE_ID (\S+)
+Value Required LOCAL_PORT (\S+)
+Value Required HOLD_TIME (\d+)
+Value Required CAPABILITY (\S+)
+Value Required PORT_ID (\S+) 
+
+Start
+  ^Capability.*
+  ^\s+\(.*
+  ^Device ID\s+Local Intf\s+Hold-time\s+Capability\s+Port ID
+  ^${DEVICE_ID}\s+${LOCAL_PORT}\s+${HOLD_TIME}\s+${CAPABILITY}\s+${PORT_ID} -> Record
+  ^Total.*
+  ^. -> Error
