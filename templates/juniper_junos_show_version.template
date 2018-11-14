@@ -1,0 +1,9 @@
+Value HOSTNAME (\S+)
+Value MODEL (\S+)
+Value VERSION ([\S\s]*)
+
+Start
+  ^Hostname:\s+${HOSTNAME}
+  ^Model:\s+${MODEL}
+  ^JUNOS\s+${VERSION} -> Record
+  ^. -> Error
