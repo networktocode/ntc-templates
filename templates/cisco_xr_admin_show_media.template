@@ -1,0 +1,19 @@
+Value Required PARTITION (\S+) 
+Value Required SIZE (\S+) 
+Value Required USED (\S+) 
+Value Required PERCENT (\S+%) 
+Value Required AVAIL (\S+) 
+ 
+Start   
+  ^Partition.*Avail -> Data
+
+Data 
+  ^-+
+  ^${PARTITION}\s+${SIZE}\s+${USED}\s+${PERCENT}\s+${AVAIL} -> Record 
+  ^-+  
+  ^\S+\s+=\s+\S+
+  ^\s+$$ 
+  ^$$ 
+  ^.* -> Error "LINE NOT FOUND"
+
+EOF
