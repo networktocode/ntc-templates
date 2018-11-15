@@ -3,77 +3,77 @@
 parsed_sample:
 
 
-  partition : 'rootfs:'
+- partition : 'rootfs:'
   size : '2.4G'
   used : '585M'
   percent : '26%'
   avail : '1.7G'
 
 
-  partition : 'install:'
+- partition : 'install:'
   size : '7.4G'
   used : '1.7G'
   percent : '24%'
   avail : '5.4G'
 
 
-  partition : 'harddisk:/tftpboot'
+- partition : 'harddisk:/tftpboot'
   size : '31G'
   used : '2.5G'
   percent : '9%'
   avail : '27G'
 
 
-  partition : 'harddisk:'
+- partition : 'harddisk:'
   size : '38G'
   used : '5.0G'
   percent : '15%'
   avail : '31G'
 
 
-  partition : 'log:'
+- partition : 'log:'
   size : '459M'
   used : '181M'
   percent : '43%'
   avail : '244M'
 
 
-  partition : 'config:'
+- partition : 'config:'
   size : '459M'
   used : '11M'
   percent : '3%'
   avail : '414M'
 
 
-  partition : 'disk0:'
+- partition : 'disk0:'
   size : '2.0G'
   used : '24M'
   percent : '2%'
   avail : '1.8G'
 
 
-  partition : 'rootfs:/mnt/plog'
+- partition : 'rootfs:/mnt/plog'
   size : '15M'
   used : '688K'
   percent : '5%'
   avail : '13M'
 
 
-  partition : 'install:/tmp'
+- partition : 'install:/tmp'
   size : '7.4G'
   used : '1.7G'
   percent : '24%'
   avail : '5.4G'
 
 
-  partition : 'install:/cache'
+- partition : 'install:/cache'
   size : '7.4G'
   used : '1.7G'
   percent : '24%'
   avail : '5.4G'
 
 
-  partition : 'rootfs:/install/tmp'
+- partition : 'rootfs:/install/tmp'
   size : '7.4G'
   used : '1.7G'
   percent : '24%'
