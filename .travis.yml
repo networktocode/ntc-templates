@@ -9,7 +9,7 @@ sudo: false
 
 install:
   - pip install netmiko
-  - pip install gtextfsm
+  - pip install textfsm
   - export PYTHONPATH=$PYTHONPATH:/home/travis/build/networktocode/ntc-templates/gtextfsm-0.2.1/textfsm
   - pip install ansible==1.9.2
   - pip install terminal
