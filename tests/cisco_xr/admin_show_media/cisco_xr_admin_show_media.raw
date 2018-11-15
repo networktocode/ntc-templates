@@ -1,0 +1,20 @@
+Thu Nov 15 09:36:30.373 UTC
+---------------------------------------------------------------------
+Partition                    Size     Used  Percent    Avail
+---------------------------------------------------------------------
+rootfs:                      2.4G     585M      26%     1.7G
+install:                     7.4G     1.7G      24%     5.4G
+harddisk:/tftpboot            31G     2.5G       9%      27G
+harddisk:                     38G     5.0G      15%      31G
+log:                         459M     181M      43%     244M
+config:                      459M      11M       3%     414M
+disk0:                       2.0G      24M       2%     1.8G
+rootfs:/mnt/plog              15M     688K       5%      13M
+install:/tmp                 7.4G     1.7G      24%     5.4G
+install:/cache               7.4G     1.7G      24%     5.4G
+rootfs:/install/tmp          7.4G     1.7G      24%     5.4G
+---------------------------------------------------------------------
+rootfs:  = root file system (read-only)
+log:     = system log files (read-only)
+config:  = configuration storage (read-only)
+install: = install repository (read-only)
