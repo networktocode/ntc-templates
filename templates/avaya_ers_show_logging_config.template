@@ -1,0 +1,22 @@
+Value EVENT_LOGGING (Enabled|Disabled)
+Value VOLATILE (Latch|Overwrite)
+Value LOG_TYPES ([\S ]*)
+Value NV_STORAGE_TYPES ([\S ]*)
+Value REMOTE_LOGGING (Enabled|Disabled)
+Value REMOTE_ADDRESS (\S+)
+Value SECONDARY_ADDRESS (\S+)
+Value REMOTE_TYPES ([\S ]*)
+Value FACILITY (\S+)
+
+Start
+  ^Event Logging:\s+${EVENT_LOGGING}
+  ^Volatile Logging Option:\s+${VOLATILE}
+  ^Event Types To Log:\s+${LOG_TYPES}
+  ^Event Types To Log To NV Storage:\s+${NV_STORAGE_TYPES}
+  ^Remote Logging:\s+${REMOTE_LOGGING}
+  ^Remote Logging Address:\s+${REMOTE_ADDRESS}
+  ^Secondary Remote Logging Address:\s+${SECONDARY_ADDRESS}
+  ^Event Types To Log Remotely:\s+${REMOTE_TYPES}
+  ^Facility:\s+${FACILITY}
+
+Done
