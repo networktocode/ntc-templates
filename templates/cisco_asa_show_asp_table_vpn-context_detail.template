@@ -1,4 +1,4 @@
-Value Key VPN_CTX (\S+)
+Value VPN_CTX (\S+)
 Value PEER_IP (\d+.\d+.\d+.\d+)
 Value POINTER (\S+)
 Value STATE (\S+)
@@ -16,8 +16,8 @@ Value REKEY_CALL (\d+)
 Value VPN_FILTER (\S+)
 
 Start
-  ^VPN\s+CTX\s+=\s${VPN_CTX}
-  ^Peer\s+IP\s+=\s${PEER_IP}
+  ^VPN\sCTX\s+=\s${VPN_CTX}
+  ^Peer\sIP\s+=\s${PEER_IP}
   ^Pointer\s+=\s${POINTER}
   ^State\s+=\s${STATE}
   ^Flags\s+=\s${FLAGS}
@@ -25,13 +25,13 @@ Start
   ^SPI\s+=\s${SPI}
   ^Group\s+=\s${GROUP}
   ^Pkts\s+=\s${PKTS}
-  ^Bad\s+Pkts\s+=\s${BAD_PKTS}
-  ^Bad\s+SPI\s+=\s${BAD_SPI}
+  ^Bad\sPkts\s+=\s${BAD_PKTS}
+  ^Bad\sSPI\s+=\s${BAD_SPI}
   ^Spoof\s+=\s${SPOOF}
-  ^Bad\s+Crypto\s+=\s${BAD_CRYPTO}
-  ^Rekey\s+Pkt\s+=\s${REKEY_PKT}
-  ^Rekey\s+Call\s+=\s${REKEY_CALL}
-  ^VPN\s+Filter\s+=\s${VPN_FILTER} -> Record
+  ^Bad\sCrypto\s+=\s${BAD_CRYPTO}
+  ^Rekey\sPkt\s+=\s${REKEY_PKT}
+  ^Rekey\sCall\s+=\s${REKEY_CALL}
+  ^VPN\sFilter\s+=\s${VPN_FILTER} -> Record
   ^. -> Error
 
 EOF
