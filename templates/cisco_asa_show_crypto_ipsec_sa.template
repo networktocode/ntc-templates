@@ -1,6 +1,7 @@
-Value INTERFACE (\S+)
-Value CRYPTO_MAP_TAG (\w+)
-Value LOCAL_ADDRESS (\d+\.\d+\.\d+\.\d+)
+Value Filldown INTERFACE (\S+)
+Value Filldown CRYPTO_MAP_TAG (\w+)
+Value Filldown SEQUENCE_NUMBER (\d+)
+Value Filldown LOCAL_ADDRESS (\d+\.\d+\.\d+\.\d+)
 Value LOCAL_IDENTITY_ADDR (\d+\.\d+\.\d+\.\d+)
 Value LOACL_IDENTITY_MASK (\d+\.\d+\.\d+\.\d+)
 Value LOCAL_IDENTITY_PROTOCOL (\d+)
@@ -60,9 +61,9 @@ Value OUTBOUND_IV_SIZE (\d+\s+\w+)
 Value OUTBOUND_REPLAY_DETECTION (\w+)
 
 Start
-  ^interface -> Continue.Record
   ^interface:\s+${INTERFACE}\s*
   ^\s+Crypto map tag:\s+${CRYPTO_MAP_TAG},\s+local addr:\s+${LOCAL_ADDRESS}\s*
+  ^\s+Crypto map tag:\s+${CRYPTO_MAP_TAG}, seq num:\s+${SEQUENCE_NUMBER},\s+local addr:\s+${LOCAL_ADDRESS}\s*
   ^\s+local\s+ident\s+\(addr\/mask\/prot\/port\):\s+\(${LOCAL_IDENTITY_ADDR}\/${LOACL_IDENTITY_MASK}\/${LOCAL_IDENTITY_PROTOCOL}\/${LOCAL_IDENTITY_PORT}\)\s*
   ^\s+remote\s+ident\s+\(addr/mask/prot/port\):\s+\(${REMOTE_IDENTITY_ADDR}\/${REMOTE_IDENTITY_MASK}\/${REMOTE_IDENTITY_PROTOCOL}\/${REMOTE_IDENTITY_PORT}\)\s*
   ^\s+current_peer:\s+${CURRENT_PEER}\s*
@@ -96,4 +97,6 @@ Outbound
   ^\s+slot:\s+${OUTBOUND_SLOT},\s+conn_id:\s+${OUTBOUND_CONNECTION_ID},\s+crypto-map:\s+${OUTBOUND_CRYPTO_MAP}\s*
   ^\s+sa\s+timing:\s+remaining\s+key\s+lifetime\s+\(sec\):\s+${OUTBOUND_REMAINING_LIFETIME}\s*
   ^\s+IV\s+size:\s+${OUTBOUND_IV_SIZE}\s*
-  ^\s+replay\s+detection\s+support:\s+${OUTBOUND_REPLAY_DETECTION}\s* -> Start
+  ^\s+replay\s+detection\s+support:\s+${OUTBOUND_REPLAY_DETECTION}\s* -> Record Start
+
+EOF
