@@ -1,8 +1,8 @@
 Value Required PROTOCOL (\S+)
 Value Required IP_ADDRESS ([A-Fa-f0-9:\.]+)
+Value Required AGE (\S+)
 Value Required MAC_ADDRESS ([A-Fa-f0-9\.]{14})
 Value Required TYPE (\S+)
-Value Required AGE (\S+)
 Value Required PORT (\S+)
 
 Start
