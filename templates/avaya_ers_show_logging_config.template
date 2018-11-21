@@ -1,8 +1,8 @@
-Value EVENT_LOGGING (Enabled|Disabled)
-Value VOLATILE (Latch|Overwrite)
+Value EVENT_LOGGING (.+?)
+Value VOLATILE (.+?)
 Value LOG_TYPES (.+?)
 Value NV_STORAGE_TYPES (.+?)
-Value REMOTE_LOGGING (Enabled|Disabled)
+Value REMOTE_LOGGING (.+?)
 Value REMOTE_ADDRESS (.+?)
 Value SECONDARY_ADDRESS (.+?)
 Value REMOTE_TYPES (.+?)
@@ -20,5 +20,3 @@ Start
   ^Facility:\s+${FACILITY}\s*$$
   ^\s*$$
   ^. -> Error
-
-Done
