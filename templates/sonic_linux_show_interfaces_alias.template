@@ -1,0 +1,10 @@
+Value NAME (\S+)
+Value ALIAS (\S+)
+
+Start
+  ^Name\s+Alias
+  ^-+\s+-+
+  ^${NAME}\s+${ALIAS}
+  ^\s+$$
+  ^$$
+  ^.* -> Error "LINE NOT FOUND"
