@@ -4,7 +4,7 @@ Value ALIAS (\S+)
 Start
   ^Name\s+Alias
   ^-+\s+-+
-  ^${NAME}\s+${ALIAS}
+  ^${NAME}\s+${ALIAS} -> Record
   ^\s+$$
   ^$$
   ^.* -> Error "LINE NOT FOUND"
