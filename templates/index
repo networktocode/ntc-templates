@@ -259,7 +259,7 @@ paloalto_panos_show_system_info.template, .*, paloalto_panos, sh[[ow]] sys[[tem]
 paloalto_panos_show_jobs_all.template, .*, paloalto_panos, sh[[ow]] jo[[bs]] all
 
 sonic_linux_bcmcmd_show_counters_changed.template, .*, linux, bcmcmd "show c[[ounters]] c[[hanged]]"
-sonic_linux_bcmcmd_show_counters_changed.template, .*, linux, bcmcmd "show c[[ounters]] xe[[\d+]]"
+sonic_linux_bcmcmd_show_counters_xe.template, .*, linux, bcmcmd "show c[[ounters]] xe[[\d+]]"
 sonic_linux_show_interfaces_alias.template, .*, linux, sh[[ow]] in[[terfaces]] al[[ias]]
 sonic_linux_show_ipv6_bgp_summary.template, .*, linux, sh[[ow]] ipv6 bgp sum[[mary]]
 sonic_linux_show_ip_bgp_summary.template, .*, linux, sh[[ow]] ip bgp sum[[mary]]
