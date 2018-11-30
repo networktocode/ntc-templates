@@ -1,11 +1,12 @@
-Value Required PROTOCOL (\S+)
+Value PROTOCOL (\S+)
 Value Required IP_ADDRESS ([A-Fa-f0-9:\.]+)
-Value Required AGE (\S+)
+Value AGE (\S+)
 Value Required MAC_ADDRESS ([A-Fa-f0-9\.]{14})
-Value Required TYPE (\S+)
+Value TYPE (\S+)
 Value Required PORT (\S+)
 
 Start
   ^Protocol\s+Address\s+Age \(min\)\s+Hardware Addr\s+Type\s+Interface
   ^${PROTOCOL}\s+${IP_ADDRESS}\s+${AGE}\s+${MAC_ADDRESS}\s+${TYPE}\s+${PORT} -> Record
+  ^\s*$$
   ^. -> Error
