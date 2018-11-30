@@ -8,7 +8,7 @@ Start
   ^Capability.*
   ^\s+\(.*
   ^Device\s+ID\s+Local\s+Intf\s+Hold-time\s+Capability\s+Port\s+ID\s*$$
-  ^${DEVICE_ID}\s+${LOCAL_PORT}\s+${HOLD_TIME}\s+${CAPABILITY}\s+${PORT_ID} -> Record
+  ^${NEIGHBOR}\s+${LOCAL_INTERFACE}\s+${HOLD_TIME}\s+${CAPABILITIES}\s+${NEIGHBOR_INTERFACE} -> Record
   ^Total.*
   ^\s*$$
   ^. -> Error
