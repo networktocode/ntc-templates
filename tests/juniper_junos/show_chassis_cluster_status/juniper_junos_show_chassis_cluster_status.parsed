@@ -1,15 +1,6 @@
 ---
 parsed_sample:
   - cluster_id: "1"
-    redundancy_group_id: ""
-    failover_count: ""
-    node: []
-    priority: []
-    status: []
-    preempt: []
-    manual: []
-    monitor_failures: []
-  - cluster_id: "1"
     redundancy_group_id: "0"
     failover_count: "1"
     node: ["node0", "node1"]
