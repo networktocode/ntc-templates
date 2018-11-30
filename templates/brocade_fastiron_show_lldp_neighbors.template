@@ -7,7 +7,7 @@ Value Required PORT_ID (\S+)
 Start
   ^Capability.*
   ^\s+\(.*
-  ^Device ID\s+Local Intf\s+Hold-time\s+Capability\s+Port ID
+  ^Device\s+ID\s+Local\s+Intf\s+Hold-time\s+Capability\s+Port\s+ID\s*$$
   ^${DEVICE_ID}\s+${LOCAL_PORT}\s+${HOLD_TIME}\s+${CAPABILITY}\s+${PORT_ID} -> Record
   ^Total.*
   ^\s*$$
