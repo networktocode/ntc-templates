@@ -2,7 +2,7 @@ Value Required NEIGHBOR (\S+)
 Value Required LOCAL_PORT (\S+)
 Value Required HOLD_TIME (\d+)
 Value Required CAPABILITIES (\S+)
-Value Required PORT_ID (\S+) 
+Value Required NEIGHBOR_INTERFACE (\S+) 
 
 Start
   ^Capability.*
