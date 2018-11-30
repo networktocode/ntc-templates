@@ -10,4 +10,5 @@ Start
   ^Device ID\s+Local Intf\s+Hold-time\s+Capability\s+Port ID
   ^${DEVICE_ID}\s+${LOCAL_PORT}\s+${HOLD_TIME}\s+${CAPABILITY}\s+${PORT_ID} -> Record
   ^Total.*
+  ^\s*$$
   ^. -> Error
