@@ -25,6 +25,7 @@ Start
   ^$$ -> Interfaces
 
 Interfaces
+  ^Dot1x Info for\s -> Continue.Record
   ^Dot1x Info for\s${INTERFACE}
   ^PAE\s+=\s${PAE}
   ^PortControl\s+=\s${PORTCONTROL}
@@ -39,4 +40,3 @@ Interfaces
   ^MaxReq\s+=\s${MASREQ}
   ^TxPeriod\s+=\s${TXPERIOD}
   ^RateLimitPeriod\s+=\s${RATELIMITPERIOD}
-  ^$$ -> Record
