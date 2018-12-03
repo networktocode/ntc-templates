@@ -1,0 +1,58 @@
+Value SMART_STATUS (.*)
+Value REG_STATUS (.*)
+Value SMART_ACCOUNT (.*)
+Value VIRTUAL_ACCOUNT (.*)
+Value EXPORT_CONTROLLED (.*)
+Value REG_INITIAL (.*)
+Value REG_LAST_RENEW (.*)
+Value REG_FAIL_ERROR (.*)
+Value REG_NEXT_RENEW (.*)
+Value REG_EXPIRATION (.*)
+Value AUTH_STATUS (.*)
+Value EVAL_REMAINING (.*)
+Value AUTH_LAST_COMMUNICATION (.*)
+Value AUTH_FAIL_ERROR (.*)
+Value AUTH_NEXT_COMMUNICATION (.*)
+Value AUTH_DEADLINE (.*)
+Value LICENSE_USAGE (.*)
+Value PID (.*)
+Value SN (.*)
+Value SMART_AGENT_VERSION (.*)
+
+Start
+  ^Smart Licensing is ${SMART_STATUS}.*
+  ^Registration:\s*$$ -> REGISTRATION
+  ^License Authorization:\s*$$ -> AUTHORIZATION
+  ^License Usage\s*$$ -> LICENSE_USAGE
+  ^Product Information\s*$$ -> PRODUCT_INFORMATION
+  ^Agent Version\s*$$ -> AGENT_VERSION
+
+REGISTRATION
+  ^\s+Status: ${REG_STATUS}
+  ^\s+Smart Account: ${SMART_ACCOUNT}
+  ^\s+Virtual Account: ${VIRTUAL_ACCOUNT}
+  ^\s+Export-Controlled Functionality: ${EXPORT_CONTROLLED}
+  ^\s+Initial Registration: ${REG_INITIAL}
+  ^\s+Last Renewal Attempt: ${REG_LAST_RENEW}
+  ^\s+Failure reason: ${REG_FAIL_ERROR}
+  ^\s+Next Renewal Attempt: ${REG_NEXT_RENEW}
+  ^\s+Registration Expires: ${REG_EXPIRATION}
+  ^$$ -> Start
+
+AUTHORIZATION
+  ^\s+Status: ${AUTH_STATUS}
+  ^\s+Evaluation Period Remaining: ${EVAL_REMAINING}
+  ^\s+Last Communication Attempt: ${AUTH_LAST_COMMUNICATION}
+  ^\s+Failure reason: ${AUTH_FAIL_ERROR}
+  ^\s+Next Communication Attempt: ${AUTH_NEXT_COMMUNICATION}
+  ^\s+Communication Deadline: ${AUTH_DEADLINE}
+  ^$$ -> Start
+
+LICENSE_USAGE 
+  ^\s+Description: ${LICENSE_USAGE} -> Start
+
+PRODUCT_INFORMATION
+  ^UDI:.*PID:${PID},SN:${SN} -> Start
+
+AGENT_VERSION
+  ^Smart Agent for Licensing: ${SMART_AGENT_VERSION} -> Start
