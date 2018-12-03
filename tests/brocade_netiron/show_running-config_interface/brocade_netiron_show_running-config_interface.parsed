@@ -1,0 +1,23 @@
+---
+parsed_sample:
+
+- acl_in: ''
+  acl_out: ''
+  admin_state: disable
+  interface: ve 2801
+  ip_addr: [10.92.176.219, 10.92.191.67, 10.201.214.35, 10.231.184.211, 10.251.229.83]
+  ip_addr_vrrpe: [10.92.176.217, 10.251.229.81, 10.231.184.209, 10.201.214.33, 10.92.191.65]
+  iphelpers: [10.0.113.10, 10.0.113.20]
+  ippimsparse: ''
+  ipredirect: ''
+  iprouterisis: ''
+  ipv6_addr: ['2001:2aaf:14:8::3']
+  ipv6_addr_vrrpe: ['2001:2aaf:14:8::1']
+  isismetric: ''
+  ospfarea: ''
+  ospfcost: ''
+  ospfpassive: ''
+  portname: ''
+  qostosmark: ''
+  qostostrust: ''
+  vrf: ''

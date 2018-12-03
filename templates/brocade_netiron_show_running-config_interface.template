@@ -1,0 +1,49 @@
+Value Required INTERFACE (.*)
+Value PORTNAME ([0-9a-zA-Z\ \-\"\/\(\)\_\#\@\.\'\!\&]+)
+Value QOSTOSTRUST ([a-z\-]+)
+Value QOSTOSMARK ([a-z\-]+)
+Value OSPFAREA (\d+)
+Value OSPFPASSIVE (passive)
+Value OSPFCOST (\d+)
+Value VRF ([a-zA-Z0-9]+)
+Value IPPIMSPARSE (pim-sparse)
+Value IPROUTERISIS (isis)
+Value ISISMETRIC (\d+)
+Value List IPHELPERS (\w+\.\w+\.\w+\.\w+)
+Value IPREDIRECT (no)
+Value List IP_ADDR (\w+\.\w+\.\w+\.\w+)
+Value List IP_ADDR_VRRPE (\w+\.\w+\.\w+\.\w+)
+Value List IPV6_ADDR ([0-9A-Fa-f:]+)
+Value List IPV6_ADDR_VRRPE ([0-9A-Fa-f:]+)
+Value ADMIN_STATE (disable)
+Value ACL_IN (\S+)
+Value ACL_OUT (\S+)
+
+Start
+  ^interface ${INTERFACE}
+  ^\s+${ADMIN_STATE}$$
+  ^\s+port-name\s+${PORTNAME}
+  ^\s+qos-tos trust ${QOSTOSTRUST}
+  ^\s+qos-tos mark ${QOSTOSMARK}
+  ^\s+ip ospf area ${OSPFAREA}
+  ^\s+ip ospf ${OSPFPASSIVE}
+  ^\s+ip ospf cost ${OSPFCOST}
+  ^\s+vrf forwarding ${VRF}
+  ^\s+ip ${IPPIMSPARSE}
+  ^\s+ip router ${IPROUTERISIS}
+  ^\s+isis metric ${ISISMETRIC}
+  ^\s+${IPREDIRECT} ip redirect
+  ^\s+ip helper-address ${IPHELPERS}
+  ^\s+ip access-group ${ACL_IN} in
+  ^\s+ip access-group ${ACL_OUT} out
+  ^\s+ip address ${IP_ADDR}/
+  ^\s+ipv6 address ${IPV6_ADDR}/
+  ^\s+ip vrrp-extended vrid -> IPV4_VRRPEXTENDED
+  ^\s+ipv6 vrrp-extended vrid -> IPV6_VRRPEXTENDED
+  ^! -> Next.Record
+
+IPV4_VRRPEXTENDED
+  ^\s+ip-address ${IP_ADDR_VRRPE} -> Start
+
+IPV6_VRRPEXTENDED
+  ^\s+ipv6-address ${IPV6_ADDR_VRRPE} -> Start
