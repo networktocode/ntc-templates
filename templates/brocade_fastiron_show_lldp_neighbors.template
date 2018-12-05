@@ -1,14 +1,14 @@
-Value Required DEVICE_ID (\S+)
-Value Required LOCAL_PORT (\S+)
+Value Required NEIGHBOR (\S+)
+Value Required LOCAL_INTERFACE (\S+)
 Value Required HOLD_TIME (\d+)
-Value Required CAPABILITY (\S+)
-Value Required PORT_ID (\S+) 
+Value Required CAPABILITIES (\S+)
+Value Required NEIGHBOR_INTERFACE (\S+) 
 
 Start
   ^Capability.*
   ^\s+\(.*
   ^Device\s+ID\s+Local\s+Intf\s+Hold-time\s+Capability\s+Port\s+ID\s*$$
-  ^${DEVICE_ID}\s+${LOCAL_PORT}\s+${HOLD_TIME}\s+${CAPABILITY}\s+${PORT_ID} -> Record
+  ^${NEIGHBOR}\s+${LOCAL_INTERFACE}\s+${HOLD_TIME}\s+${CAPABILITIES}\s+${NEIGHBOR_INTERFACE} -> Record
   ^Total.*
   ^\s*$$
   ^. -> Error
