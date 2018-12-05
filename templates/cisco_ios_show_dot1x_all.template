@@ -39,4 +39,7 @@ Interfaces
   ^ReAuthMax\s+=\s${REAUTHMAX}
   ^MaxReq\s+=\s${MASREQ}
   ^TxPeriod\s+=\s${TXPERIOD}
-  ^RateLimitPeriod\s+=\s${RATELIMITPERIOD}
+  ^RateLimitPeriod\s+=\s+${RATELIMITPERIOD}
+  ^-+\s*$$
+  ^\s*$$
+  ^. -> Error
