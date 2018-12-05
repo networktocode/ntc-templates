@@ -149,6 +149,7 @@ cisco_ios_show_isdn_status.template, .*, cisco_ios, sh[[ow]] isd[[n]] st[[atus]]
 cisco_ios_show_interfaces.template, .*, cisco_ios, sh[[ow]] int[[erfaces]]
 cisco_ios_show_redundancy.template, .*, cisco_ios, sh[[ow]] redu[[ndancy]]
 cisco_ios_show_vtp_status.template, .*, cisco_ios, sh[[ow]] vtp stat[[us]]
+cisco_ios_show_dot1x_all.template, .*, cisco_ios, sh[[ow]] dot1x a[[ll]]
 cisco_ios_show_inventory.template, .*, cisco_ios, sh[[ow]] inven[[tory]]
 cisco_ios_show_ip_mroute.template, .*, cisco_ios, sh[[ow]] ip mr[[oute]]
 cisco_ios_show_route-map.template, .*, cisco_ios, sh[[ow]] route-m[[ap]]
@@ -163,7 +164,6 @@ cisco_ios_show_clock.template, .*, cisco_ios, sh[[ow]] clo[[ck]]
 cisco_ios_show_vlan.template, .*, cisco_ios, sh[[ow]] vlan
 cisco_ios_show_vrf.template, .*, cisco_ios, sh[[ow]] vrf
 cisco_ios_dir.template,  .*, cisco_ios, dir
-cisco_ios_show_dot1x_all.template, .*, cisco_ios, sh[[ow]] dot1x a[[ll]]
 
 cisco_nxos_show_configuration_session_summary.template, .*, cisco_nxos, sh[[ow]] configu[[ration]] s[[ession]] su[[mmary]]
 cisco_nxos_show_interface_transceiver_details.template, .*, cisco_nxos, sh[[ow]] int[[erface]] tra[[nsceiver]] de[[tails]]
