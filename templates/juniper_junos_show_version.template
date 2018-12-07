@@ -1,9 +1,18 @@
-Value HOSTNAME (\S+)
+Value Required HOSTNAME (\S+)
 Value MODEL (\S+)
-Value VERSION ([\S\s]*)
+Value JUNOS_VERSION ([\S\s]*)
+Value List DEVICE_PROPERTY ([^\[]*)
+Value List PROPERTY_VERSION (\S+)
+Value LABPKG (\S+)
+Value SERIAL_NUMBER (\S+)
+Value QFABRIC_SYSTEM_ID (\S+)
 
 Start
-  ^Hostname:\s+${HOSTNAME}
+  ^Hostname:\s+${HOSTNAME} 
   ^Model:\s+${MODEL}
-  ^JUNOS\s+${VERSION} -> Record
+  ^Junos:\s+${JUNOS_VERSION}
+  ^JUNOS\s+${DEVICE_PROPERTY}\[${PROPERTY_VERSION}\]
+  ^labpkg\s+\[${LABPKG}\]
+  ^Serial\s+Number:\s+${SERIAL_NUMBER}
+  ^QFabric\s+System\s+ID:\s+${QFABRIC_SYSTEM_ID}
   ^. -> Error
