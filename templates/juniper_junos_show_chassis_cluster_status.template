@@ -9,16 +9,16 @@ Value List MANUAL (\S+)
 Value List MONITOR_FAILURES (\S+)
 
 Start
-  ^Monitor\s+
-  ^CS\s+
-  ^GR\s+
-  ^IF\s+
-  ^LB\s+
-  ^NH\s+
-  ^SP\s+
+  ^[Mm]onitor\s+[Ff]ailure\s+[Cc]odes:\s*$$
+  ^\S{1,3}\s+
+  ^\s*$$
+  ^Cluster\s+ID:\s+${CLUSTER_ID}\s*$$
+  ^Node\s+Priority\s+Status\s+Preempt\s+Manual\s+Monitor-failures\s*$$
+  ^Redundancy\s+group:\s+${REDUNDANCY_GROUP_ID}\s*,\s*Failover\s+count:\s+${FAILOVER_COUNT}\s*$$ -> RedGroup
+  ^. -> Error
+
+RedGroup
   ^${NODE}\s+${PRIORITY}\s+${STATUS}\s+${PREEMPT}\s+${MANUAL}\s+${MONITOR_FAILURES}\s*$$
   ^Redundancy\s+group -> Continue.Record
   ^Redundancy\s+group:\s+${REDUNDANCY_GROUP_ID}\s*,\s*Failover\s+count:\s+${FAILOVER_COUNT}\s*$$
-  ^Cluster ID:\s+${CLUSTER_ID}\s*$$
-  ^Node\s+Priority\s+Status\s+Preempt\s+Manual\s+Monitor-failures\s*$$
   ^. -> Error
