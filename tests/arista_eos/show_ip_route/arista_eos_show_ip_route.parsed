@@ -1,155 +1,145 @@
 ---
+
 parsed_sample:
-- direct: ''
-  distance: '200'
-  interface: Ethernet18
-  mask: '32'
-  metric: '0'
-  network: 10.1.31.100
-  next_hop: 192.168.17.5
-  protocol: B E
-- direct: ''
-  distance: '200'
-  interface: Ethernet18
-  mask: '32'
-  metric: '0'
-  network: 10.1.31.101
-  next_hop: 192.168.17.5
-  protocol: B E
-- direct: directly
-  distance: ''
-  interface: Loopback100
-  mask: '32'
-  metric: ''
-  network: 10.1.31.102
-  next_hop: connected
-  protocol: C
-- direct: directly
-  distance: ''
-  interface: Loopback10
-  mask: '32'
-  metric: ''
-  network: 10.1.31.200
-  next_hop: connected
-  protocol: C
-- direct: ''
-  distance: '200'
-  interface: Ethernet18
-  mask: '32'
-  metric: '0'
-  network: 10.1.31.254
-  next_hop: 192.168.17.5
-  protocol: B E
-- direct: directly
-  distance: ''
-  interface: Ethernet20
-  mask: '30'
-  metric: ''
-  network: 10.63.255.8
-  next_hop: connected
-  protocol: C
-- direct: ''
-  distance: '200'
-  interface: Ethernet18
-  mask: '30'
-  metric: '0'
-  network: 10.100.22.52
-  next_hop: 192.168.17.5
-  protocol: B E
-- direct: ''
-  distance: '200'
-  interface: Ethernet18
-  mask: '30'
-  metric: '0'
-  network: 10.100.22.56
-  next_hop: 192.168.17.5
-  protocol: B E
-- direct: ''
-  distance: '200'
-  interface: Ethernet18
-  mask: '32'
-  metric: '0'
-  network: 10.100.233.11
-  next_hop: 192.168.17.5
-  protocol: B E
-- direct: ''
-  distance: '200'
-  interface: Ethernet18
-  mask: '32'
-  metric: '0'
-  network: 10.100.233.12
-  next_hop: 192.168.17.5
-  protocol: B E
-- direct: ''
-  distance: '200'
-  interface: Ethernet18
-  mask: '32'
-  metric: '0'
-  network: 10.100.233.15
-  next_hop: 192.168.17.5
-  protocol: B E
-- direct: directly
-  distance: ''
-  interface: Loopback0
-  mask: '32'
-  metric: ''
-  network: 10.100.233.32
-  next_hop: connected
-  protocol: C
-- direct: ''
-  distance: '200'
-  interface: Ethernet21
-  mask: '32'
-  metric: '0'
-  network: 10.100.233.34
-  next_hop: 192.168.38.5
-  protocol: B E
-- direct: ''
-  distance: '200'
-  interface: Ethernet18
-  mask: '32'
-  metric: '0'
-  network: 10.100.233.50
-  next_hop: 192.168.17.5
-  protocol: B E
-- direct: ''
-  distance: '200'
-  interface: Ethernet18
-  mask: '32'
-  metric: '0'
-  network: 10.100.233.64
-  next_hop: 192.168.17.5
-  protocol: B E
-- direct: ''
-  distance: '200'
-  interface: Ethernet18
-  mask: '32'
-  metric: '0'
-  network: 10.100.233.66
-  next_hop: 192.168.17.5
-  protocol: B E
-- direct: ''
-  distance: '200'
-  interface: Ethernet18
-  mask: '32'
-  metric: '0'
-  network: 10.100.233.67
-  next_hop: 192.168.17.5
-  protocol: B E
-- direct: ''
-  distance: '200'
-  interface: Ethernet18
-  mask: '32'
-  metric: '0'
-  network: 10.100.233.68
-  next_hop: 192.168.17.5
-  protocol: B E
-- direct: ''
-  distance: '200'
-  interface: Ethernet20
-  mask: '32'
-  metric: '0'
-  network: 10.100.233.192
-  next_hop: 10.63.255.10
-  protocol: B E
+
+
+  - protocol : 'B E'
+  network : '0.0.0.0'
+  mask : '0'
+  distance : '200'
+  metric : '0'
+  direct : ''
+  next_hop : '['10.10.1.80', '10.10.9.80', '10.10.17.80', '10.10.25.80', '10.10.33.80', '10.10.41.80', '10.10.49.80', '10.10.57.80', '10.10.65.80', '10.10.73.80', '10.10.81.80', '10.10.89.80', '10.10.97.80', '10.10.105.80']'
+  interface : '['Port-Channel253', 'Port-Channel254', 'Port-Channel255', 'Port-Channel256', 'Port-Channel257', 'Port-Channel258', 'Port-Channel259', 'Port-Channel260', 'Port-Channel261', 'Port-Channel262', 'Port-Channel263', 'Port-Channel264', 'Port-Channel265', 'Port-Channel266']'
+
+
+  - protocol : 'B E'
+  network : '10.3.129.224'
+  mask : '28'
+  distance : '200'
+  metric : '0'
+  direct : ''
+  next_hop : '['10.106.0.65']'
+  interface : '['Port-Channel1033']'
+
+
+  - protocol : 'B E'
+  network : '10.3.129.240'
+  mask : '28'
+  distance : '200'
+  metric : '0'
+  direct : ''
+  next_hop : '['10.106.0.65']'
+  interface : '['Port-Channel1033']'
+
+
+  - protocol : 'B E'
+  network : '10.3.135.192'
+  mask : '28'
+  distance : '200'
+  metric : '0'
+  direct : ''
+  next_hop : '['10.106.0.65']'
+  interface : '['Port-Channel1033']'
+
+
+  - protocol : 'B E'
+  network : '10.3.236.0'
+  mask : '25'
+  distance : '200'
+  metric : '0'
+  direct : ''
+  next_hop : '['10.106.0.65']'
+  interface : '['Port-Channel1033']'
+
+
+  - protocol : 'B E'
+  network : '10.3.236.128'
+  mask : '26'
+  distance : '200'
+  metric : '0'
+  direct : ''
+  next_hop : '['10.106.0.65']'
+  interface : '['Port-Channel1033']'
+
+
+  - protocol : 'C'
+  network : '10.10.1.80'
+  mask : '31'
+  distance : ''
+  metric : ''
+  direct : 'directly'
+  next_hop : '['connected']'
+  interface : '['Port-Channel253']'
+
+
+  - protocol : 'C'
+  network : '10.10.9.80'
+  mask : '31'
+  distance : ''
+  metric : ''
+  direct : 'directly'
+  next_hop : '['connected']'
+  interface : '['Port-Channel254']'
+
+
+  - protocol : 'C'
+  network : '10.10.17.80'
+  mask : '31'
+  distance : ''
+  metric : ''
+  direct : 'directly'
+  next_hop : '['connected']'
+  interface : '['Port-Channel255']'
+
+
+  - protocol : 'C'
+  network : '10.10.25.80'
+  mask : '31'
+  distance : ''
+  metric : ''
+  direct : 'directly'
+  next_hop : '['connected']'
+  interface : '['Port-Channel256']'
+
+
+  - protocol : 'C'
+  network : '10.10.33.80'
+  mask : '31'
+  distance : ''
+  metric : ''
+  direct : 'directly'
+  next_hop : '['connected']'
+  interface : '['Port-Channel257']'
+
+
+  - protocol : 'C'
+  network : '10.10.41.80'
+  mask : '31'
+  distance : ''
+  metric : ''
+  direct : 'directly'
+  next_hop : '['connected']'
+  interface : '['Port-Channel258']'
+
+
+  - protocol : 'C'
+  network : '10.10.49.80'
+  mask : '31'
+  distance : ''
+  metric : ''
+  direct : 'directly'
+  next_hop : '['connected']'
+  interface : '['Port-Channel259']'
+
+
+  - protocol : 'C'
+  network : '10.10.57.80'
+  mask : '31'
+  distance : ''
+  metric : ''
+  direct : 'directly'
+  next_hop : '['connected']'
+  interface : '['Port-Channel260']'
+
 
