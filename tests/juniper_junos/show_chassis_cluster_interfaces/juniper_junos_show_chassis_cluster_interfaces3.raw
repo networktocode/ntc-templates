@@ -1,20 +1,15 @@
 Control link status: Up
-
 Control interfaces:
-    Index   Interface   Monitored-Status   Internal-SA
+    Index   Interface   Monitored-Status   Security
     0       em0         Up                 Disabled
     1       em1         Down               Disabled
-
 Fabric link status: Up
-
 Fabric interfaces: 
-    Name    Child-interface    Status
-                               (Physical/Monitored)
-    fab0    ge-0/1/0           Up / Down
+    Name    Child-interface    Status   Security
+    fab0    ge-0/1/0           Up       Disabled
     fab0   
-    fab1    ge-6/1/0           Up/Down
+    fab1    ge-6/1/0           Up       Disabled
     fab1   
-
 Redundant-ethernet Information:     
     Name         Status      Redundancy-group
     reth0        Up          1                
@@ -29,11 +24,9 @@ Redundant-ethernet Information:
     reth9        Down        Not configured   
     reth10       Down        Not configured   
     reth11       Down        Not configured   
-
 Redundant-pseudo-interface Information:
     Name        Status       Redundancy-group
      lo0          Up               1
-
 Interface Monitoring:
     Interface         Weight    Status    Redundancy-group
     ge-0/1/9          100       Up        0   

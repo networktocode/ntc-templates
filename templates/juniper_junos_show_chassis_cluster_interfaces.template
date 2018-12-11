@@ -1,30 +1,88 @@
-Value CONTROL_LINK_STATUS (\S+)
-#Value CONTROL_INTERFACES_INDEX (\d+)
-#Value CONTROL_INTERFACES_INTERFACE (\S+)
-#Value CONTROL_INTERFACES_STATUS (\S+)
-#Value CONTROL_INTERFACES_INTERNAL_SA (\S+)
-Value FABRIC_LINK_STATUS (\S+)
-#Value FABRIC_INTERFACES_NAME (\S+)
-#Value FABRIC_INTERFACES_CHILD_INTERFACE (\S+)
-#Value FABRIC_INTERFACES_STATUS ([\S\s]*)
-#Value REDUNDANT_ETHERNET_INFO_NAME (\S+)
-#Value REDUNDANT_ETHERNET_INFO_STATUS (\S+)
-#Value REDUNDANT_ETHERNET_INFO_REDUNDANCY_GROUP (\S+)
-#Value REDUNDANT_PSEUDO_INTERFACE_INFO_NAME (\S+)
-#Value REDUNDANT_PSEUDO_INTERFACE_INFO_STATUS (\S+)
-#Value REDUNDANT_PSEUDO_INTERFACE_INFO_REDUNDANCY_GROUP (\S+)
-#Value INTERFACE_MONITORING_INTERFACE (\S+)
-#Value INTERFACE_MONITORING_WEIGHT (\d+)
-#Value INTERFACE_MONITORING_STATUS (\S+)
-#Value INTERFACE_MONITORING_REDUNDANCY_GROUP (\d+)
+Value Filldown CONTROL_LINK_STATUS (\S+)
+Value Filldown FABRIC_LINK_STATUS (\S+)
+Value Filldown LINK_TYPE (\S+)
+Value INDEX (\d+)
+Value INTERFACE (\S+)
+Value STATUS ((\S+\s*\/\s*\S+|\S+))
+Value SECURITY (\S+)
+Value CHILD_INTERFACE (\S+)
+Value REDUNDANCY_GROUP (\d+|[Nn]ot\s+[Cc]onfigured)
+Value WEIGHT (\d+)
+
 
 Start
-  #^${CONTROL_INTERFACES_INDEX}\s+${CONTROL_INTERFACES_INTERFACE}\s+${CONTROL_INTERFACES_STATUS}\s+${CONTROL_INTERFACES_INTERNAL_SA}\s*$$
-  ^Control link status:\s+${CONTROL_LINK_STATUS}
-  ^Fabric link status:\s+${FABRIC_LINK_STATUS}
-  #^${FABRIC_INTERFACES_NAME}\s+${FABRIC_INTERFACES_CHILD_INTERFACE}\s+${FABRIC_INTERFACES_STATUS}
-  #^${REDUNDANT_ETHERNET_INFO_NAME}\s+${REDUNDANT_ETHERNET_INFO_STATUS}\s+${REDUNDANT_ETHERNET_INFO_REDUNDANCY_GROUP}
-  #^${REDUNDANT_PSEUDO_INTERFACE_INFO_NAME}\s+${REDUNDANT_PSEUDO_INTERFACE_INFO_STATUS}\s+${REDUNDANT_PSEUDO_INTERFACE_INFO_REDUNDANCY_GROUP}
-  #^${INTERFACE_MONITORING_INTERFACE}\s+${INTERFACE_MONITORING_WEIGHT}\s+${INTERFACE_MONITORING_STATUS}\s+${INTERFACE_MONITORING_REDUNDANCY_GROUP}
+  ^[Cc]ontrol\s+[Ll]ink\s+[Ss]tatus:\s+${CONTROL_LINK_STATUS}\s*$$ -> Control
+  ^[Ff]abric\s+[Ll]ink\s+[Ss]tatus:\s+${FABRIC_LINK_STATUS}\s*$$ -> Fabric
+  ^${LINK_TYPE}\s+Information:\s*$$ -> Continue
+  ^[Rr]edundant-ethernet -> RedEth
+  ^[Rr]edundant-pseudo -> RedPse
+  ^[Ii]nterface\s+[Mm]onitoring -> IntMon
+  ^\s*$$
+  ^. -> Error
 
-           
+Control
+  ^${LINK_TYPE}\s+interfaces:\s*$$
+  ^\s*Index\s+Interface\s+Monitored-Status\s+Security\s*$$
+  ^\s*Index\s+Interface\s+Monitored-Status\s+Internal-SA\s*$$
+  ^\s*${INDEX}\s+${INTERFACE}\s+${STATUS}\s+${SECURITY}\s*$$ -> Record
+  ^\S+ -> Continue.Clearall
+  ^[Ff]abric\s+[Ll]ink\s+[Ss]tatus:\s+${FABRIC_LINK_STATUS}\s*$$ -> Fabric
+  ^${LINK_TYPE}\s+Information:\s*$$ -> Continue
+  ^[Rr]edundant-ethernet -> RedEth
+  ^[Rr]edundant-pseudo -> RedPse
+  ^Interface\s+[Mm]onitoring -> IntMon
+  ^\s*$$
+
+Fabric
+  ^${LINK_TYPE}\s+interfaces:\s*$$
+  ^\s*Name\s+Child-interface\s+Status\s+Security\s*$$
+  ^\s*Name\s+Child-interface\s+Status\s*$$
+  ^\s*\(Physical\/Monitored\)\s*$$
+  ^\s*${INTERFACE}\s+${CHILD_INTERFACE}\s+${STATUS}\s+${SECURITY}\s*$$ -> Record
+  ^\s*${INTERFACE}\s+${CHILD_INTERFACE}\s+${STATUS}\s*$$ -> Record
+  ^\s*\S+\s*$$
+  ^\s+\w+\d+\s*$$
+  ^\S+ -> Continue.Clearall
+  ^${LINK_TYPE}\s+Information:\s*$$ -> Continue
+  ^[Rr]edundant-ethernet -> RedEth
+  ^[Rr]edundant-pseudo -> RedPse
+  ^Interface\s+[Mm]onitoring -> IntMon
+  ^\s*$$
+  ^Control\s+[Ll]ink\s+[Ss]tatus:\s+${CONTROL_LINK_STATUS}\s*$$ - Control
+  ^. -> Error
+
+RedEth
+  ^\s*Name\s+Status\s+Redundancy-group\s*$$
+  ^\s*${INTERFACE}\s+${STATUS}\s+${REDUNDANCY_GROUP}\s*$$ -> Record
+  ^\S+ -> Continue.Clearall
+  ^${LINK_TYPE}\s+Information -> Continue
+  ^[Rr]edundant-pseudo -> RedPse
+  ^Interface\s+[Mm]onitoring -> IntMon
+  ^\s*$$
+  ^Control\s+[Ll]ink\s+[Ss]tatus:\s+${CONTROL_LINK_STATUS}\s*$$ - Control
+  ^[Ff]abric\s+[Ll]ink\s+[Ss]tatus:\s+${FABRIC_LINK_STATUS}\s*$$ -> Fabric
+  ^. -> Error
+
+RedPse
+  ^\s*Name\s+Status\s+Redundancy-group\s*$$
+  ^\s*${INTERFACE}\s+${STATUS}\s+${REDUNDANCY_GROUP}\s*$$ -> Record
+  ^\S+ -> Continue.Clearall
+  ^${LINK_TYPE}\s+Information -> Continue
+  ^[Ii]nterface\s+[Mm]onitoring -> IntMon
+  ^\s*$$
+  ^Control\s+[Ll]ink\s+[Ss]tatus:\s+${CONTROL_LINK_STATUS}\s*$$ - Control
+  ^[Ff]abric\s+[Ll]ink\s+[Ss]tatus:\s+${FABRIC_LINK_STATUS}\s*$$ -> Fabric
+  ^[Rr]edundant-ethernet -> RedEth
+  ^. -> Error
+
+IntMon
+  ^\s*Interface\s+Weight\s+Status\s+Redundancy-group\s*$$
+  ^\s*${INTERFACE}\s+${WEIGHT}\s+${STATUS}(?:\s+${REDUNDANCY_GROUP}|)\s*$$ -> Record
+  ^\s*$$
+  ^\S+ -> Continue.Clearall
+  ^${LINK_TYPE}\s+Information:\s*$$ -> Continue
+  ^Control\s+[Ll]ink\s+[Ss]tatus:\s+${CONTROL_LINK_STATUS}\s*$$ - Control
+  ^[Ff]abric\s+[Ll]ink\s+[Ss]tatus:\s+${FABRIC_LINK_STATUS}\s*$$ -> Fabric
+  ^[Rr]edundant-ethernet -> RedEth
+  ^[Rr]edundant-pseudo -> RedPse
+  ^. -> Error
