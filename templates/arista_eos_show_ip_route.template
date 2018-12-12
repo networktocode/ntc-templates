@@ -4,8 +4,10 @@ Value Filldown MASK (\d+)
 Value DISTANCE (\d+)
 Value METRIC (\d+)
 Value DIRECT (directly)
-Value Required NEXT_HOP (connected|\d+\.\d+\.\d+\.\d+)
-Value INTERFACE (\S+)
+Value List NEXT_HOP (connected|\d+\.\d+\.\d+\.\d+)
+Value List INTERFACE (\S+)
 
 Start
-  ^\s+${PROTOCOL}\s+${NETWORK}/${MASK}\s+(?:\[${DISTANCE}/${METRIC}\]|is\s+${DIRECT})(?:.+?)${NEXT_HOP},\s+${INTERFACE}$$ -> Next.Record
+  ^\s+\S\s(\S+|\s+) -> Continue.Record
+  ^\s+${PROTOCOL}\s+${NETWORK}/${MASK}\s+(?:\[${DISTANCE}/${METRIC}\]|is\s+${DIRECT})(?:.+?)${NEXT_HOP},\s+${INTERFACE}$$
+  ^\s+via\s+${NEXT_HOP},\s+${INTERFACE}$$

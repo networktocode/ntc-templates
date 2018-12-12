@@ -1,28 +1,39 @@
-Codes: C - connected, S - static, K - kernel, 
+
+VRF name: default
+Codes: C - connected, S - static, K - kernel,
        O - OSPF, IA - OSPF inter area, E1 - OSPF external type 1,
        E2 - OSPF external type 2, N1 - OSPF NSSA external type 1,
        N2 - OSPF NSSA external type2, B I - iBGP, B E - eBGP,
-       R - RIP, I - ISIS, A B - BGP Aggregate, A O - OSPF Summary,
-       NG - Nexthop Group Static Route 
+       R - RIP, I L1 - ISIS level 1, I L2 - ISIS level 2,
+       O3 - OSPFv3, A B - BGP Aggregate, A O - OSPF Summary,
+       NG - Nexthop Group Static Route, V - VXLAN Control Service
 
-Gateway of last resort is not set
+Gateway of last resort:
+ B E    0.0.0.0/0 [200/0] via 10.10.1.80, Port-Channel253
+                          via 10.10.9.80, Port-Channel254
+                          via 10.10.17.80, Port-Channel255
+                          via 10.10.25.80, Port-Channel256
+                          via 10.10.33.80, Port-Channel257
+                          via 10.10.41.80, Port-Channel258
+                          via 10.10.49.80, Port-Channel259
+                          via 10.10.57.80, Port-Channel260
+                          via 10.10.65.80, Port-Channel261
+                          via 10.10.73.80, Port-Channel262
+                          via 10.10.81.80, Port-Channel263
+                          via 10.10.89.80, Port-Channel264
+                          via 10.10.97.80, Port-Channel265
+                          via 10.10.105.80, Port-Channel266
 
- B E    10.1.31.100/32 [200/0] via 192.168.17.5, Ethernet18
- B E    10.1.31.101/32 [200/0] via 192.168.17.5, Ethernet18
- C      10.1.31.102/32 is directly connected, Loopback100
- C      10.1.31.200/32 is directly connected, Loopback10
- B E    10.1.31.254/32 [200/0] via 192.168.17.5, Ethernet18
- C      10.63.255.8/30 is directly connected, Ethernet20
- B E    10.100.22.52/30 [200/0] via 192.168.17.5, Ethernet18
- B E    10.100.22.56/30 [200/0] via 192.168.17.5, Ethernet18
- B E    10.100.233.11/32 [200/0] via 192.168.17.5, Ethernet18
- B E    10.100.233.12/32 [200/0] via 192.168.17.5, Ethernet18
- B E    10.100.233.15/32 [200/0] via 192.168.17.5, Ethernet18
- C      10.100.233.32/32 is directly connected, Loopback0
- B E    10.100.233.34/32 [200/0] via 192.168.38.5, Ethernet21
- B E    10.100.233.50/32 [200/0] via 192.168.17.5, Ethernet18
- B E    10.100.233.64/32 [200/0] via 192.168.17.5, Ethernet18
- B E    10.100.233.66/32 [200/0] via 192.168.17.5, Ethernet18
- B E    10.100.233.67/32 [200/0] via 192.168.17.5, Ethernet18
- B E    10.100.233.68/32 [200/0] via 192.168.17.5, Ethernet18
- B E    10.100.233.192/32 [200/0] via 10.63.255.10, Ethernet20
+ B E    10.3.129.224/28 [200/0] via 10.106.0.65, Port-Channel1033
+ B E    10.3.129.240/28 [200/0] via 10.106.0.65, Port-Channel1033
+ B E    10.3.135.192/28 [200/0] via 10.106.0.65, Port-Channel1033
+ B E    10.3.236.0/25 [200/0] via 10.106.0.65, Port-Channel1033
+ B E    10.3.236.128/26 [200/0] via 10.106.0.65, Port-Channel1033
+ C      10.10.1.80/31 is directly connected, Port-Channel253
+ C      10.10.9.80/31 is directly connected, Port-Channel254
+ C      10.10.17.80/31 is directly connected, Port-Channel255
+ C      10.10.25.80/31 is directly connected, Port-Channel256
+ C      10.10.33.80/31 is directly connected, Port-Channel257
+ C      10.10.41.80/31 is directly connected, Port-Channel258
+ C      10.10.49.80/31 is directly connected, Port-Channel259
+ C      10.10.57.80/31 is directly connected, Port-Channel260
