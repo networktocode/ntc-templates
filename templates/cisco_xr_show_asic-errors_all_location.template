@@ -1,0 +1,25 @@
+Value Filldown ASIC (\S+)
+Value INSTANCE (\d+)
+Value NUMBER_OF_NODES (\d+)
+Value SBE_ERROR_COUNT (\d+)
+Value MBE_ERROR_COUNT (\d+)
+Value PARITY_ERROR_COUNT (\d+)
+Value CRC_ERROR_COUNT (\d+)
+Value GENERIC_ERROR_COUNT (\d+)
+Value RESET_ERROR_COUNT (\d+)
+
+Start
+  ^\* +${ASIC} ASIC Error Summary +\*
+  ^Instance +: +${INSTANCE}
+  ^Number of nodes +: +${NUMBER_OF_NODES}
+  ^SBE error count +: +${SBE_ERROR_COUNT}
+  ^MBE error count +: +${MBE_ERROR_COUNT}
+  ^Parity error count +: +${PARITY_ERROR_COUNT}
+  ^CRC error count +: +${CRC_ERROR_COUNT}
+  ^Generic error count +: +${GENERIC_ERROR_COUNT}
+  ^Reset error count +: +${RESET_ERROR_COUNT} -> Record
+  ^\-+$$
+  ^\*+$$
+  ^\s+$$
+  ^$$
+  ^.* -> Error "LINE NOT FOUND"
