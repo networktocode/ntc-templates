@@ -6,7 +6,7 @@ parsed_sample:
   age: "-"
   secure: "F"
   ntfy: "F"
-  port: "sup-eth1(R)"
+  ports: "sup-eth1(R)"
 
 - vlan: "145"
   mac: "000a.000a.000a"
@@ -14,7 +14,7 @@ parsed_sample:
   age: "-"
   secure: "F"
   ntfy: "F"
-  port: "Drop"
+  ports: "Drop"
 
 - vlan: "145"
   mac: "000e.000e.000e"
@@ -22,5 +22,5 @@ parsed_sample:
   age: "-"
   secure: "F"
   ntfy: "F"
-  port: "Po10"
+  ports: "Po10"
 

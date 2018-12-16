@@ -1,7 +1,7 @@
-Value MAC (\w+\.\w+\.\w+)
+Value DESTINATION_ADDRESS (\w+.\w+.\w+)
 Value TYPE (\w+)
 Value VLAN (\w+)
-Value PORT (\S+)
+Value DESTINATION_PORT (\S+)
 
 Start
   ^Destination\s+Address\s+Address\s+Type\s+VLAN\s+Destination\s+Port -> TYPE1
@@ -10,31 +10,14 @@ Start
   ^Vlan\s+Mac Address\s+Type\s+Ports -> TYPE4
 
 TYPE1
-  ^${MAC}\s+${TYPE}\s+${VLAN}\s+${PORT} -> Record
-  ^\s+$$
-  ^$$
-  ^[\-| |\+]+$$
-  ^.* -> Error "LINE NOT FOUND"
+  ^${DESTINATION_ADDRESS}\s+${TYPE}\s+${VLAN}\s+${DESTINATION_PORT} -> Record
 
 TYPE2
-  ^[\*|\s]\s+${VLAN}\s+${MAC}\s+${TYPE}\s+\S+\s+\S+\s+${PORT} -> Record
-  ^\s+$$
-  ^$$
-  ^[\-| |\+]+$$
-  ^.* -> Error "LINE NOT FOUND"
+  ^[\*|\s]\s+${VLAN}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+${DESTINATION_PORT} -> Record
 
 TYPE3
-  ^\s*${VLAN}\s+${MAC}\s+${TYPE}\s+\S+\s+${PORT} -> Record
-  ^\s+$$
-  ^$$
-  ^[\-| |\+]+$$
-  ^.* -> Error "LINE NOT FOUND"
+  ^\s+${VLAN}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+${DESTINATION_PORT} -> Record
 
 TYPE4
-  ^\s*${VLAN}\s+${MAC}\s+${TYPE}\s+${PORT} -> Record
-  ^\s+$$
-  ^$$
-  ^[\-| |\+]+$$
-  ^Total Mac Addresses for this criterion
-  ^.* -> Error "LINE NOT FOUND"
+  ^\s+${VLAN}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+${DESTINATION_PORT} -> Record
 

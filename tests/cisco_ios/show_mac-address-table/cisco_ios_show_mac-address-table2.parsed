@@ -1,43 +1,43 @@
 ---
 parsed_sample:
 
-- mac: 30a3.30a3.a1c3
-  port: Te1/30
+- destination_address: 30a3.30a3.a1c3
+  destination_port: Te1/30
   type: dynamic
   vlan: '666'
 
-- mac: 30a3.30a3.5ab8
-  port: Po3
+- destination_address: 30a3.30a3.5ab8
+  destination_port: Po3
   type: dynamic
   vlan: '666'
 
-- mac: 30a3.30a3.4d54
-  port: Te1/21
+- destination_address: 30a3.30a3.4d54
+  destination_port: Te1/21
   type: dynamic
   vlan: '60'
 
-- mac: 0000.30a3.0167
-  port: Router
+- destination_address: 0000.30a3.0167
+  destination_port: Router
   type: static
   vlan: '777'
 
-- mac: 30a3.30a3.58b5
-  port: Po6
+- destination_address: 30a3.30a3.58b5
+  destination_port: Po6
   type: dynamic
   vlan: '664'
 
-- mac: 30a3.30a3.daf5
-  port: Te3/20
+- destination_address: 30a3.30a3.daf5
+  destination_port: Te3/20
   type: dynamic
   vlan: '667'
 
-- mac: 30a3.30a3.e401
-  port: Po6
+- destination_address: 30a3.30a3.e401
+  destination_port: Po6
   type: dynamic
   vlan: '668'
 
-- mac: 30a3.30a3.5a22
-  port: Te3/20
+- destination_address: 30a3.30a3.5a22
+  destination_port: Te3/20
   type: dynamic
   vlan: '669'
 
