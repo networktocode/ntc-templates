@@ -1,0 +1,22 @@
+Mon Dec 18 11:13:26.959 UTC
+BGP router identifier 30.67.35.78, local AS number 64200
+BGP generic scan interval 60 secs
+Non-stop routing is enabled
+BGP table state: Active
+Table ID: 0xe0000000   RD version: 94623
+BGP main routing table version 94623
+BGP NSR Initial initsync version 2 (Reached)
+BGP NSR/ISSU Sync-Group versions 0/0
+BGP scan interval 60 secs
+
+BGP is operating in STANDALONE mode.
+
+
+Process       RcvTblVer   bRIB/RIB   LabelVer  ImportVer  SendTblVer  StandbyVer
+Speaker           94623      94623      94623      94623       94623           0
+
+Neighbor        Spk    AS MsgRcvd MsgSent   TblVer  InQ OutQ  Up/Down  St/PfxRcd
+10.10.17.161      0 64924   36190   64731        0    0    0 00:00:00 Idle
+10.10.128.240     0 64727   68750   70941        0    0    0    2d14h Active
+10.10.132.240     0 64727   74112   76220    94623    0    0     7w2d         82
+10.10.140.240     0 64727   72363   74575    94623    0    0    4d10h         82

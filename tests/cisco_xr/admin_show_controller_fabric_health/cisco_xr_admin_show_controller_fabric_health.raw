@@ -1,0 +1,62 @@
+Sat Feb 24 18:07:38.753 UTC
+
+Fabric System Health
+---------------------
+Flags: T - Total,      U - Up,         A - Admin Down 
+       L - LCC,        M - Mcast Down, Y - Yes        
+       F - FCC,        D - Down,       N - No or Not Ok
+       V - Valid,     
+
+Collaborator Process State:
+------------------------------
+    FSDB Aggregator: OK
+    +-----------+--+
+    |Rack id    | 0|
+    +-----------+--+
+    |FSDB status|Ok|
+    +-----------+--+
+
+    +------------+-----+-----+-----+-----+-----+-----+
+    |FC Location |0/FC0|0/FC1|0/FC2|0/FC3|0/FC4|0/FC5|
+    +------------+-----+-----+-----+-----+-----+-----+
+    |SFE status  |  Ok |  Ok |  Ok |  Ok |  Ok |  Ok |
+    +------------+-----+-----+-----+-----+-----+-----+
+
+Router Health:
+-----------------
+
+    Rack    Planes  SFE Asics      Fia Asics     
+    T/L/F   U/M/D/A T/U/D          T/U/D         
+    ------------------------------------------------------
+    1/1/0   5/0/1/0 36/30/6        36/36/0        
+
+    Plane Admin Plane    Racks    Data      
+    id    state state    in issue drop/error
+    -----------------------------------------------------------
+    0     UP    UP       0        No        
+    1     UP    UP       0        No        
+    2     UP    DN       1        No        
+    3     UP    UP       0        No        
+    4     UP    UP       0        No        
+    5     UP    UP       0        No        
+    -----------------------------------------------------------
+
+Rack Health:
+-------------
+    Rack:  0, Type: LCC
+
+    SFE Asics  FIA Asics   Planes   Valid  
+    T/U/D      T/U/D       U/M/D    fab ids
+    ------------------------------------------------
+    36/30/6    36/36/0     5/0/1      72
+
+    Plane Plane    SFE Asics    Fab ids  
+    id    state    T/U/D        Reachable
+    --------------------------------------
+    0     UP       6/6/0        72    
+    1     UP       6/6/0        72    
+    2     DN       6/0/6        0     
+    3     UP       6/6/0        72    
+    4     UP       6/6/0        72    
+    5     UP       6/6/0        72    
+    --------------------------------------

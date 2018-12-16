@@ -1,0 +1,11 @@
+Value Required ADDRESS ([A-Fa-f0-9:\.]+)
+Value TYPE (\S+)
+Value MAC (\S+)
+Value FLAGS (\S+)
+Value INTERFACE (\S+)
+
+Start
+  ^${ADDRESS}\s+(${TYPE}|)\s+${MAC}\s+(${FLAGS}|)\s+${INTERFACE}$$ -> Record
+  ^Address\s+HWtype\s+HWaddress\s+Flags\s+Mask\s+Iface\s*$$
+  ^\s*$$
+  ^. -> Error
