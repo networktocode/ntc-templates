@@ -1,0 +1,15 @@
+Value FIA (\S+)
+Value CATEGORY (\S+)
+Value TO_SPAUI_ERROR_0 (\d+)
+Value TO_SPAUI_ERROR_1 (\d+)
+Value RL_OVER_UNDER_FLOW_CNT (\d+)
+
+Start
+  ^ ?\*+ ${FIA} \*+
+  ^Category: ${CATEGORY}
+  ^ +To Spaui Error-0 +${TO_SPAUI_ERROR_0}
+  ^ +To Spaui Error-1 +${TO_SPAUI_ERROR_1}
+  ^ +RL over\/under flow cnt +${RL_OVER_UNDER_FLOW_CNT} -> Record
+  ^\s+$$
+  ^$$
+  ^.* -> Error "LINE NOT FOUND"
