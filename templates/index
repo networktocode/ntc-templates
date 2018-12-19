@@ -251,6 +251,7 @@ cisco_xr_show_bgp_neighbors.template, .*, cisco_xr, sh[[ow]] bg[[p]] nei[[ghbors
 cisco_xr_show_ospf_neighbor.template, .*, cisco_xr, sh[[ow]] ospf nei[[ghbor]]
 cisco_xr_show_processes_cpu.template, .*, cisco_xr, sh[[ow]] proc[[esses]] c[[pu]]
 cisco_xr_show_bfd_sessions.template, .*, cisco_xr, sh[[ow]] bf[[d]] sess[[ions]]
+cisco_xr_show_drops_np_all.template, .*, cisco_xr, sh[[ow]] drops np all
 cisco_xr_show_pim_neighbor.template, .*, cisco_xr, sh[[ow]] pi[[m]] neigh[[bor]]
 cisco_xr_show_controllers.template, .*, cisco_xr, sh[[ow]] contr[[ollers]] (\S+) phy
 cisco_xr_show_interfaces.template, .*, cisco_xr, sh[[ow]] inte[[rfaces]]
