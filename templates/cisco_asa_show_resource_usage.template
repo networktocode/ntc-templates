@@ -1,0 +1,15 @@
+Value Required RESOURCE (.+?)
+Value CURRENT (\d+)
+Value PEAK (\d+)
+Value LIMIT (\S+)
+Value DENIED (\d+)
+Value CONTEXT (.*)
+
+
+Start
+  ^Resource\s+Current\s+Peak\s+Limit\s+Denied Context -> Start_record
+
+Start_record
+  ^${RESOURCE}\s+${CURRENT}\s+${PEAK}\s+${LIMIT}\s+${DENIED}\s+${CONTEXT} -> Record
+  ^S = System: Combined context limits
+  ^.* -> Error "LINE NOT FOUND"
