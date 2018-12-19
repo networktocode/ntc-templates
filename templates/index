@@ -236,6 +236,7 @@ cisco_xr_show_bgp_vrf_all_ipv4_unicast_summary.template, .*, cisco_xr, sh[[ow]] 
 cisco_xr_admin_show_controller_fabric_health.template, .*, cisco_xr, adm[[in]] sh[[ow]] controller fab[[ric]] hea[[lth]]
 cisco_xr_show_controller_fabric_plane_all.template, .*, cisco_xr, sh[[ow]] controller fab[[ric]] pla[[ne]] all
 cisco_xr_show_configuration_commit_list.template, .*, cisco_xr, sh[[ow]] conf[[iguration]] c[[ommit]] l[[ist]]
+cisco_xr_show_asic-errors_all_location.template, .*, cisco_xr, sh[[ow]] asic-errors all loc[[ation]].*
 cisco_xr_show_dhcp_ipv4_proxy_binding.template, .*, cisco_xr, sh[[ow]] dh[[cp]] ipv4 p[[roxy]] b[[inding]]
 cisco_xr_show_mpls_ldp_neighbor_brief.template, .*, cisco_xr, sh[[ow]] mp[[ls]] ld[[p]] neigh[[bor]] br[[ief]]
 cisco_xr_admin_show_environment_fan.template, .*, cisco_xr, adm[[in]] sh[[ow]] env[[ironment]] f[[an]]
