@@ -1,0 +1,105 @@
+-------------------------------------------------------------
+                Node 0/3/CPU0:
+-------------------------------------------------------------
+ Burst = 100ms for all flow types
+-------------------------------------------------------------
+FlowType               Policer Type    Cur. Rate  Def. Rate  Accepted             Dropped              TOS Value
+---------------------- ------- ------- ---------- ---------- -------------------- -------------------- ----------
+unconfigured-default   100     Static  2500       2500       0                    0                    01234567
+L2TPv2-fragment        185     Static  10000      10000      0                    0                    01234567
+Fragment               101     Static  2500       2500       0                    0                    01234567
+OSPF-mc-known          102     Static  2000       2000       387624               0                    01234567
+OSPF-mc-default        103     Static  1500       1500       0                    0                    01234567
+OSPF-uc-known          104     Static  2000       2000       20                   0                    01234567
+OSPF-uc-default        105     Static  1000       1000       0                    0                    01234567
+ISIS-known             143     Static  2000       2000       0                    0                    01234567
+ISIS-default           144     Static  1500       1500       0                    0                    01234567
+BFD-known              150     Static  9600       9600       0                    0                    01234567
+BFD-default            160     Static  45340      9600       0                    0                    01234567
+BFD-MP-known           178     Static  11520      11520      0                    0                    01234567
+BFD-MP-0               179     Static  128        128        0                    0                    01234567
+BFD-BLB-known          183     Static  11520      11520      0                    0                    01234567
+BFD-BLB-0              184     Static  128        128        0                    0                    01234567
+BFD-SP-0               182     Static  512        512        0                    0                    01234567
+BGP-known              106     Static  2500       2500       51911                0                    01234567
+BGP-cfg-peer           107     Static  2000       2000       0                    0                    01234567
+BGP-default            108     Static  1500       1500       7                    0                    01234567
+PIM-mcast-default      109     Static  2000       2000       0                    0                    01234567
+PIM-mcast-known        176     Static  2000       2000       0                    0                    01234567
+PIM-ucast              110     Static  1500       1500       0                    0                    01234567
+IGMP                   111     Static  3000       3000       0                    0                    01234567
+ICMP-local             112     Static  1500       1500       19                   0                    01234567
+ICMP-app               152     Static  1500       1500       0                    0                    01234567
+ICMP-control           140     Static  1000       1000       0                    0                    01234567
+ICMP-default           153     Static  1500       1500       35                   0                    01234567
+ICMP-app-default       152     Static  1500       1500       0                    0                    01234567
+LDP-TCP-known          113     Static  2500       2500       127939               0                    01234567
+LDP-TCP-cfg-peer       114     Static  2000       2000       0                    0                    01234567
+LDP-TCP-default        115     Static  1500       1500       0                    0                    01234567
+LDP-UDP                116     Static  2000       2000       726952               0                    01234567
+All-routers            117     Static  1000       1000       0                    0                    01234567
+LMP-TCP-known          168     Static  2500       2500       0                    0                    01234567
+LMP-TCP-cfg-peer       169     Static  2000       2000       0                    0                    01234567
+LMP-TCP-default        170     Static  1500       1500       0                    0                    01234567
+LMP-UDP                171     Static  2000       2000       0                    0                    01234567
+RSVP-UDP               118     Static  2000       2000       0                    0                    01234567
+RSVP-default           154     Static  500        500        0                    0                    01234567
+RSVP-known             177     Static  7000       7000       0                    0                    01234567
+IKE                    119     Static  100        100        0                    0                    01234567
+IPSEC-known            120     Static  400        400        0                    0                    01234567
+IPSEC-default          121     Static  100        100        0                    0                    01234567
+MSDP-known             122     Static  300        300        0                    0                    01234567
+MSDP-cfg-peer          123     Static  200        200        0                    0                    01234567
+MSDP-default           124     Static  100        100        0                    0                    01234567
+SNMP                   125     Static  300        300        0                    0                    01234567
+SSH-known              127     Static  300        300        0                    0                    01234567
+SSH-default            128     Static  200        200        0                    0                    01234567
+HTTP-known             129     Static  400        400        0                    0                    01234567
+HTTP-default           130     Static  200        200        0                    0                    01234567
+SHTTP-known            161     Static  400        400        0                    0                    01234567
+IFIB_FT_SHTTP_DEFAULT  162     Static  200        200        0                    0                    01234567
+TELNET-known           131     Static  200        200        0                    0                    01234567
+TELNET-default         132     Static  200        200        0                    0                    01234567
+CSS-known              133     Static  200        200        0                    0                    01234567
+CSS-default            134     Static  200        200        0                    0                    01234567
+RSH-known              135     Static  200        200        0                    0                    01234567
+RSH-default            136     Static  200        200        0                    0                    01234567
+UDP-known              137     Static  2500       2500       0                    0                    01234567
+UDP-listen             138     Static  2500       2500       0                    0                    01234567
+UDP-cfg-peer           155     Static  2500       2500       0                    0                    01234567
+UDP-default            163     Static  3500       3500       0                    0                    01234567
+TCP-known              156     Static  2500       2500       0                    0                    01234567
+TCP-listen             157     Static  2500       2500       0                    0                    01234567
+TCP-cfg-peer           158     Static  2000       2000       0                    0                    01234567
+TCP-default            164     Static  2000       2000       573                  0                    01234567
+Mcast-known            159     Static  2500       2500       0                    0                    01234567
+Mcast-default          165     Static  2000       2000       0                    0                    01234567
+Raw-listen             166     Static  2500       2500       0                    0                    01234567
+Raw-default            167     Static  2500       2500       0                    0                    01234567
+Ip-Sla                 139     Static  1000       1000       0                    0                    01234567
+EIGRP                  145     Static  1500       1500       0                    0                    01234567
+RIP                    146     Static  1500       1500       0                    0                    01234567
+L2TPv3                 141     Static  400        400        0                    0                    01234567
+PCEP                   142     Static  200        200        0                    0                    01234567
+GRE                    147     Static  10000      10000      0                    0                    01234567
+VRRP                   148     Static  1000       1000       0                    0                    01234567
+HSRP                   149     Static  400        400        0                    0                    01234567
+MPLS-oam               151     Static  250        250        0                    0                    01234567
+L2TPv2-default         172     Static  2000       2000       0                    0                    01234567
+L2TPv2-known           181     Static  2500       2500       0                    0                    01234567
+DNS                    173     Static  2000       2000       0                    0                    01234567
+RADIUS                 174     Static  2000       2000       0                    0                    01234567
+TACACS                 175     Static  2000       2000       0                    0                    01234567
+NTP-default            126     Static  200        200        0                    0                    01234567
+NTP-known              180     Static  200        200        0                    0                    01234567
+AMT                    186     Static  4000       4000       0                    0                    01234567
+MIPv6                  188     Static  0          0          0                    0                    01234567
+SDAC-TCP               187     Static  5000       5000       0                    0                    01234567
+ONEPK                  189     Static  0          0          0                    0                    01234567
+
+------------------------
+statistics:
+Packets accepted by deleted entries: 7
+Packets dropped by deleted entries: 0
+Run out of statistics counter errors: 0
+Statistics last cleared: Sat Aug 25 18:56:24 2700
