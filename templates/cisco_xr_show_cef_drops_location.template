@@ -1,0 +1,38 @@
+Value LOCATION (\S+)
+Value UNRESOLVED_DROPS (\d+)
+Value UNSUPPORTED_DROPS (\d+)
+Value NULL0_DROPS (\d+)
+Value NO_ROUTE_DROPS (\d+)
+Value NO_ADJACENCY_DROPS (\d+)
+Value CHECKSUM_ERROR_DROPS (\d+)
+Value RPF_DROPS (\d+)
+Value RPF_SUPPRESSED_DROPS (\d+)
+Value RP_DESTINED_DROPS (\d+)
+Value DISCARD_DROPS (\d+)
+Value GRE_LOOKUP_DROPS (\d+)
+Value GRE_PROCESSING_DROPS (\d+)
+Value LISP_PUNT_DROPS (\d+)
+Value LISP_ENCAP_ERR_DROPS (\d+)
+Value LISP_DECAP_ERR_DROPS (\d+)
+
+Start
+  ^Node: ${LOCATION}
+  ^ +Unresolved drops     packets : +${UNRESOLVED_DROPS}
+  ^ +Unsupported drops    packets : +${UNSUPPORTED_DROPS}
+  ^ +Null0 drops          packets : +${NULL0_DROPS}
+  ^ +No route drops       packets : +${NO_ROUTE_DROPS}
+  ^ +No Adjacency drops   packets : +${NO_ADJACENCY_DROPS}
+  ^ +Checksum error drops packets : +${CHECKSUM_ERROR_DROPS}
+  ^ +RPF drops            packets : +${RPF_DROPS}
+  ^ +RPF suppressed drops packets : +${RPF_SUPPRESSED_DROPS}
+  ^ +RP destined drops    packets : +${RP_DESTINED_DROPS}
+  ^ +Discard drops        packets : +${DISCARD_DROPS}
+  ^ +GRE lookup drops     packets : +${GRE_LOOKUP_DROPS}
+  ^ +GRE processing drops packets : +${GRE_PROCESSING_DROPS}
+  ^ +LISP punt drops      packets : +${LISP_PUNT_DROPS}
+  ^ +LISP encap err drops packets : +${LISP_ENCAP_ERR_DROPS}
+  ^ +LISP decap err drops packets : +${LISP_DECAP_ERR_DROPS} -> Record
+  ^CEF Drop Statistics$$
+  ^\s+$$
+  ^$$
+  ^.* -> Error "LINE NOT FOUND"
