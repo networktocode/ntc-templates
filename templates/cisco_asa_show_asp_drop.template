@@ -1,0 +1,235 @@
+Value flow_drop_acl_drop (\d+)
+Value flow_drop_shunned (\d+)
+Value flow_drop_cluster_redirect (\d+)
+Value flow_drop_inspect_fail (\d+)
+Value flow_drop_nat_rpf_failed (\d+)
+Value flow_drop_out_of_memory (\d+)
+Value flow_drop_ssl_bad_record_detect (\d+)
+Value flow_drop_ssl_handshake_failed (\d+)
+Value flow_drop_vpn_overlap_conflict (\d+)
+Value flow_drop_vpn_missing_decrypt (\d+)
+Value flow_drop_svc_replacement_conn (\d+)
+Value flow_drop_svc_selector_failure (\d+)
+Value flow_drop_svc_failover (\d+)
+Value flow_drop_ssl_record_decrypt_error (\d+)
+Value flow_drop_ctm_crypto_request_error (\d+)
+Value flow_drop_vpn_handle_not_found (\d+)
+Value flow_drop_np_socket_data_move_failure (\d+)
+Value flow_drop_dtls_hello_close (\d+)
+Value acl_drop (\d+)
+Value async_lock_queue_limit (\d+)
+Value bad_ipsec_natt (\d+)
+Value bad_tcp_cksum (\d+)
+Value bad_tcp_flags (\d+)
+Value cluster_bad_trailer (\d+)
+Value cluster_ccl_backup (\d+)
+Value cluster_ccl_unknown (\d+)
+Value cluster_ccl_unknown_stub (\d+)
+Value cluster_non_ip_pkt (\d+)
+Value conn_limit (\d+)
+Value connection_lock (\d+)
+Value cp_event_queue_error (\d+)
+Value cp_syslog_event_queue_error (\d+)
+Value ctm_error (\d+)
+Value dispatch_queue_limit (\d+)
+Value dispatch_block_alloc (\d+)
+Value flow_being_freed (\d+)
+Value flow_expired (\d+)
+Value fo_standby (\d+)
+Value fragment_reassembly_failed (\d+)
+Value host_limit (\d+)
+Value ifc_classify (\d+)
+Value inspect_dns_id_not_matched (\d+)
+Value inspect_dns_invalid_domain_label (\d+)
+Value inspect_dns_invalid_pak (\d+)
+Value inspect_dns_pak_too_long (\d+)
+Value inspect_dp_out_of_memory (\d+)
+Value inspect_icmp_bad_code (\d+)
+Value inspect_icmp_error_no_existing_conn (\d+)
+Value inspect_icmp_invalid_pak (\d+)
+Value inspect_icmp_seq_num_not_matched (\d+)
+Value intercept_unexpected (\d+)
+Value interface_down (\d+)
+Value invalid_encap (\d+)
+Value invalid_ip_header (\d+)
+Value invalid_ip_length (\d+)
+Value invalid_ip_option (\d+)
+Value invalid_tcp_hdr_length (\d+)
+Value invalid_udp_length (\d+)
+Value ipsec_tun_down (\d+)
+Value l2_acl (\d+)
+Value lu_invalid_pkt (\d+)
+Value mcast_in_nonactive_device (\d+)
+Value mp_svc_flow_control (\d+)
+Value mp_svc_no_channel (\d+)
+Value mp_svc_no_fragment (\d+)
+Value mp_svc_no_session (\d+)
+Value nat_failed (\d+)
+Value nat_no_xlate_to_pat_pool (\d+)
+Value nat_xlate_failed (\d+)
+Value natt_keepalive (\d+)
+Value no_adjacency (\d+)
+Value no_inspect (\d+)
+Value no_route (\d+)
+Value np_socket_closed (\d+)
+Value np_socket_lock_failure (\d+)
+Value np_sp_invalid_spi (\d+)
+Value object_group_search_threshold_exceeded (\d+)
+Value punt_queue_limit (\d+)
+Value punt_limit (\d+)
+Value punt_no_mem (\d+)
+Value punt_rate_limit (\d+)
+Value rm_conn_rate_limit (\d+)
+Value rm_inspect_rate_limit (\d+)
+Value rpf_violated (\d+)
+Value rule_transaction_in_progress (\d+)
+Value security_failed (\d+)
+Value shunned (\d+)
+Value sp_security_failed (\d+)
+Value tcp_3whs_failed (\d+)
+Value tcp_ack_syn_diff (\d+)
+Value tcp_bad_option_list (\d+)
+Value tcp_buffer_full (\d+)
+Value tcp_buffer_timeout (\d+)
+Value tcp_conn_limit (\d+)
+Value tcp_data_past_fin (\d+)
+Value tcp_dual_open (\d+)
+Value tcp_dup_in_queue (\d+)
+Value tcp_fo_drop (\d+)
+Value tcp_global_buffer_full (\d+)
+Value tcp_invalid_ack (\d+)
+Value tcp_not_syn (\d+)
+Value tcp_paws_fail (\d+)
+Value tcp_rst_syn_in_win (\d+)
+Value tcp_rstfin_ooo (\d+)
+Value tcp_seq_past_win (\d+)
+Value tcp_seq_syn_diff (\d+)
+Value tcp_synack_ooo (\d+)
+Value ttl_exceeded (\d+)
+Value unable_to_add_flow (\d+)
+Value unable_to_create_flow (\d+)
+Value unsupported_ip_version (\d+)
+
+Start
+  ^Frame drop:
+  ^\s+$$
+  ^$$
+  ^Last clearing
+  ^.+acl-drop\)\s+${acl_drop}
+  ^.+async-lock-queue-limit\)\s+${async_lock_queue_limit}
+  ^.+bad-ipsec-natt\)\s+${bad_ipsec_natt}
+  ^.+bad-tcp-cksum\)\s+${bad_tcp_cksum}
+  ^.+bad-tcp-flags\)\s+${bad_tcp_flags}
+  ^.+cluster-bad-trailer\)\s+${cluster_bad_trailer}
+  ^.+cluster-ccl-backup\)\s+${cluster_ccl_backup}
+  ^.+cluster-ccl-unknown\)\s+${cluster_ccl_unknown}
+  ^.+cluster-ccl-unknown-stub\)\s+${cluster_ccl_unknown_stub}
+  ^.+cluster-non-ip-pkt\)\s+${cluster_non_ip_pkt}
+  ^.+conn-limit\)\s+${conn_limit}
+  ^.+connection-lock\)\s+${connection_lock}
+  ^.+cp-event-queue-error\)\s+${cp_event_queue_error}
+  ^.+cp-syslog-event-queue-error\)\s+${cp_syslog_event_queue_error}
+  ^.+ctm-error\)\s+${ctm_error}
+  ^.+dispatch-queue-limit\)\s+${dispatch_queue_limit}
+  ^.+dispatch-block-alloc\)\s+${dispatch_block_alloc}
+  ^.+flow-being-freed\)\s+${flow_being_freed}
+  ^.+flow-expired\)\s+${flow_expired}
+  ^.+fo-standby\)\s+${fo_standby}
+  ^.+fragment-reassembly-failed\)\s+${fragment_reassembly_failed}
+  ^.+host-limit\)\s+${host_limit}
+  ^.+ifc-classify\)\s+${ifc_classify}
+  ^.+inspect-dns-id-not-matched\)\s+${inspect_dns_id_not_matched}
+  ^.+inspect-dns-invalid-domain-label\)\s+${inspect_dns_invalid_domain_label}
+  ^.+inspect-dns-invalid-pak\)\s+${inspect_dns_invalid_pak}
+  ^.+inspect-dns-pak-too-long\)\s+${inspect_dns_pak_too_long}
+  ^.+inspect-dp-out-of-memory\)\s+${inspect_dp_out_of_memory}
+  ^.+inspect-icmp-bad-code\)\s+${inspect_icmp_bad_code}
+  ^.+inspect-icmp-error-no-existing-conn\)\s+${inspect_icmp_error_no_existing_conn}
+  ^.+inspect-icmp-invalid-pak\)\s+${inspect_icmp_invalid_pak}
+  ^.+inspect-icmp-seq-num-not-matched\)\s+${inspect_icmp_seq_num_not_matched}
+  ^.+intercept-unexpected\)\s+${intercept_unexpected}
+  ^.+interface-down\)\s+${interface_down}
+  ^.+invalid-encap\)\s+${invalid_encap}
+  ^.+invalid-ip-header\)\s+${invalid_ip_header}
+  ^.+invalid-ip-length\)\s+${invalid_ip_length}
+  ^.+invalid-ip-option\)\s+${invalid_ip_option}
+  ^.+invalid-tcp-hdr-length\)\s+${invalid_tcp_hdr_length}
+  ^.+invalid-udp-length\)\s+${invalid_udp_length}
+  ^.+ipsec-tun-down\)\s+${ipsec_tun_down}
+  ^.+l2_acl\)\s+${l2_acl}
+  ^.+lu-invalid-pkt\)\s+${lu_invalid_pkt}
+  ^.+mcast-in-nonactive-device\)\s+${mcast_in_nonactive_device}
+  ^.+mp-svc-flow-control\)\s+${mp_svc_flow_control}
+  ^.+mp-svc-no-channel\)\s+${mp_svc_no_channel}
+  ^.+mp-svc-no-fragment\)\s+${mp_svc_no_fragment}
+  ^.+mp-svc-no-session\)\s+${mp_svc_no_session}
+  ^.+nat-failed\)\s+${nat_failed}
+  ^.+nat-no-xlate-to-pat-pool\)\s+${nat_no_xlate_to_pat_pool}
+  ^.+natt-keepalive\)\s+${natt_keepalive}
+  ^.+nat-xlate-failed\)\s+${nat_xlate_failed}
+  ^.+no-adjacency\)\s+${no_adjacency}
+  ^.+no-inspect\)\s+${no_inspect}
+  ^.+no-route\)\s+${no_route}
+  ^.+np-socket-closed\)\s+${np_socket_closed}
+  ^.+np-socket-lock-failu\s+${np_socket_lock_failure}
+  ^.+np-sp-invalid-spi\)\s+${np_sp_invalid_spi}
+  ^.+object-group-search-threshold-exceeded\)\s+${object_group_search_threshold_exceeded}
+  ^.+punt-queue-limit\)\s+${punt_queue_limit}
+  ^.+punt-limit\)\s+${punt_limit}
+  ^.+punt-no-mem\)\s+${punt_no_mem}
+  ^.+punt-rate-limit\)\s+${punt_rate_limit}
+  ^.+rm-conn-rate-limit\)\s+${rm_conn_rate_limit}
+  ^.+rm-inspect-rate-limit\)\s+${rm_inspect_rate_limit}
+  ^.+rpf-violated\)\s+${rpf_violated}
+  ^.+rule-transaction-in-progress\)\s+${rule_transaction_in_progress}
+  ^.+security-failed\)\s+${security_failed}
+  ^.+shunned\)\s+${shunned}
+  ^.+sp-security-failed\)\s+${sp_security_failed}
+  ^.+tcp-3whs-failed\)\s+${tcp_3whs_failed}
+  ^.+tcp-ack-syn-diff\)\s+${tcp_ack_syn_diff}
+  ^.+tcp-bad-option-list\)\s+${tcp_bad_option_list}
+  ^.+tcp-buffer-full\)\s+${tcp_buffer_full}
+  ^.+tcp-buffer-timeout\)\s+${tcp_buffer_timeout}
+  ^.+tcp-conn-limit\)\s+${tcp_conn_limit}
+  ^.+tcp-data-past-fin\)\s+${tcp_data_past_fin}
+  ^.+tcp-dual-open\)\s+${tcp_dual_open}
+  ^.+tcp-dup-in-queue\)\s+${tcp_dup_in_queue}
+  ^.+tcp-fo-drop\)\s+${tcp_fo_drop}
+  ^.+tcp-global-buffer-full\)\s+${tcp_global_buffer_full}
+  ^.+tcp-invalid-ack\)\s+${tcp_invalid_ack}
+  ^.+tcp-not-syn\)\s+${tcp_not_syn}
+  ^.+tcp-paws-fail\)\s+${tcp_paws_fail}
+  ^.+tcp-rst-syn-in-win\)\s+${tcp_rst_syn_in_win}
+  ^.+tcp-rstfin-ooo\)\s+${tcp_rstfin_ooo}
+  ^.+tcp-seq-past-win\)\s+${tcp_seq_past_win}
+  ^.+tcp-seq-syn-diff\)\s+${tcp_seq_syn_diff}
+  ^.+tcp-synack-ooo\)\s+${tcp_synack_ooo}
+  ^.+ttl-exceeded\)\s+${ttl_exceeded}
+  ^.+unable-to-add-flow\)\s+${unable_to_add_flow}
+  ^.+unable-to-create-flow\)\s+${unable_to_create_flow}
+  ^.+unsupported-ip-version\)\s+${unsupported_ip_version}
+  ^Flow drop: -> FLOW
+  ^.* -> Error "LINE NOT FOUND"
+
+FLOW
+  ^\s+$$
+  ^$$
+  ^.+Flow is denied by access rule \(acl-drop\)\s+${flow_drop_acl_drop}
+  ^.+cluster-redirect\)\s+${flow_drop_cluster_redirect}
+  ^.+Flow shunned \(shunned\)\s+${flow_drop_shunned}
+  ^.+inspect-fail\)\s+${flow_drop_inspect_fail}
+  ^.+nat-rpf-failed\)\s+${flow_drop_nat_rpf_failed}
+  ^.+out-of-memory\)\s+${flow_drop_out_of_memory}
+  ^.+ssl-bad-record-detect\)\s+${flow_drop_ssl_bad_record_detect}
+  ^.+ssl-handshake-failed\)\s+${flow_drop_ssl_handshake_failed}
+  ^.+vpn-overlap-conflict\)\s+${flow_drop_vpn_overlap_conflict}
+  ^.+vpn-missing-decrypt\)\s+${flow_drop_vpn_missing_decrypt}
+  ^.+svc-replacement-conn\)\s+${flow_drop_svc_replacement_conn}
+  ^.+svc-selector-failure\)\s+${flow_drop_svc_selector_failure}
+  ^.+svc-failover\)\s+${flow_drop_svc_failover}
+  ^.+ssl-record-decrypt-error\)\s+${flow_drop_ssl_record_decrypt_error}
+  ^.+ctm-crypto-request-error\)\s+${flow_drop_ctm_crypto_request_error}
+  ^.+vpn-handle-not-found\)\s+${flow_drop_vpn_handle_not_found}
+  ^.+np-socket-data-move-failure\)\s+${flow_drop_np_socket_data_move_failure}
+  ^.+dtls-hello-close\)\s+${flow_drop_dtls_hello_close}
+  ^.* -> Error "LINE NOT FOUND"
