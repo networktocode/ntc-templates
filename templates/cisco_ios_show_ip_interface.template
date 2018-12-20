@@ -1,0 +1,11 @@
+Value INTF (\S+)
+Value Required IPADDR (\S+)
+Value VRF (\S+)
+
+Start
+  ^${INTF} is .* ->
+  ^\s+Internet address is ${IPADDR} ->
+  ^\s+VPN Routing/Forwarding "${VRF}" ->
+  ^\s+IP multicast.* -> Record
+
+EOF
