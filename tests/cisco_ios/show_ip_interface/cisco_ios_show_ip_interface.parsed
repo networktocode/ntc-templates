@@ -1,0 +1,232 @@
+parsed_sample:
+- int: "GigabitEthernet0"
+  ipaddr: "172.21.2.3/24"
+  vrf: "Mgmt-intf"
+
+- int: "Loopback0"
+  ipaddr: "88.16.255.249/32"
+  vrf: ""
+
+- int: "Loopback1"
+  ipaddr: "88.16.255.1/32"
+  vrf: ""
+
+- int: "Loopback505"
+  ipaddr: "192.168.100.100/32"
+  vrf: "DATA"
+
+- int: "Loopback506"
+  ipaddr: "192.168.200.100/32"
+  vrf: "SIG"
+
+- int: "Loopback1001"
+  ipaddr: "172.18.0.24/32"
+  vrf: "MYCOMPANY"
+
+- int: "Loopback5999"
+  ipaddr: "172.22.255.255/32"
+  vrf: "VRF_WL_SIG"
+
+- int: "Loopback12345"
+  ipaddr: "88.16.245.1/32"
+  vrf: "7650C2814C784BACBBE23BB30B47D3A1"
+
+- int: "Port-channel1.10"
+  ipaddr: "172.18.16.42/29"
+  vrf: "MYCOMPANY"
+
+- int: "Port-channel1.102"
+  ipaddr: "88.16.254.61/31"
+  vrf: ""
+
+- int: "Port-channel1.105"
+  ipaddr: "172.20.0.149/30"
+  vrf: "MYCOMPANY"
+
+- int: "Port-channel1.106"
+  ipaddr: "88.16.254.65/31"
+  vrf: ""
+
+- int: "Port-channel1.107"
+  ipaddr: "172.20.2.1/30"
+  vrf: "MYCOMPANY"
+
+- int: "Port-channel1.501"
+  ipaddr: "169.254.0.114/29"
+  vrf: "C617529B810A48F6AD40FEBCB163B286"
+
+- int: "Port-channel1.504"
+  ipaddr: "169.254.0.1/30"
+  vrf: "7650C2814C784BACBBE23BB30B47D3A1"
+
+- int: "Port-channel1.535"
+  ipaddr: "169.254.0.1/30"
+  vrf: "6281BBEF467947E4949F989BBC891138"
+
+- int: "Port-channel1.601"
+  ipaddr: "169.254.0.50/29"
+  vrf: "C617529B810A48F6AD40FEBCB163B286"
+
+- int: "Port-channel1.620"
+  ipaddr: "169.254.0.5/30"
+  vrf: "6281BBEF467947E4949F989BBC891138"
+
+- int: "Port-channel1.1012"
+  ipaddr: "88.16.254.103/31"
+  vrf: ""
+
+- int: "Port-channel1.1013"
+  ipaddr: "88.16.254.94/31"
+  vrf: ""
+
+- int: "Port-channel1.1014"
+  ipaddr: "88.16.254.17/31"
+  vrf: ""
+
+- int: "Port-channel1.1087"
+  ipaddr: "88.16.255.53/31"
+  vrf: ""
+
+- int: "Port-channel1.3201"
+  ipaddr: "88.16.254.0/31"
+  vrf: ""
+
+- int: "Port-channel1.3202"
+  ipaddr: "88.16.254.2/31"
+  vrf: ""
+
+- int: "Port-channel1.3204"
+  ipaddr: "88.16.254.4/31"
+  vrf: ""
+
+- int: "Port-channel1.3251"
+  ipaddr: "172.19.0.90/31"
+  vrf: "MYCOMPANY"
+
+- int: "Port-channel1.3262"
+  ipaddr: "88.16.234.10/29"
+  vrf: ""
+
+- int: "Tunnel5001"
+  ipaddr: "169.254.64.0/31"
+  vrf: ""
+
+- int: "Tunnel5002"
+  ipaddr: "169.254.64.4/31"
+  vrf: ""
+
+- int: "Tunnel5010"
+  ipaddr: "169.254.64.36/31"
+  vrf: ""
+
+- int: "Tunnel6001"
+  ipaddr: "169.254.64.2/31"
+  vrf: ""
+
+- int: "Tunnel6002"
+  ipaddr: "169.254.64.6/31"
+  vrf: ""
+
+- int: "vasileft1"
+  ipaddr: "88.16.254.10/31"
+  vrf: ""
+
+- int: "vasileft21"
+  ipaddr: "100.66.0.2/31"
+  vrf: ""
+
+- int: "vasileft22"
+  ipaddr: "100.66.0.64/31"
+  vrf: ""
+
+- int: "vasileft23"
+  ipaddr: "100.66.0.102/31"
+  vrf: ""
+
+- int: "vasileft24"
+  ipaddr: "100.66.0.82/31"
+  vrf: ""
+
+- int: "vasileft25"
+  ipaddr: "100.66.0.74/31"
+  vrf: ""
+
+- int: "vasileft26"
+  ipaddr: "100.66.0.130/31"
+  vrf: ""
+
+- int: "vasileft27"
+  ipaddr: "100.66.0.158/31"
+  vrf: ""
+
+- int: "vasileft28"
+  ipaddr: "100.66.0.162/31"
+  vrf: ""
+
+- int: "vasileft29"
+  ipaddr: "100.66.0.174/31"
+  vrf: ""
+
+- int: "vasileft30"
+  ipaddr: "100.66.0.194/31"
+  vrf: ""
+
+- int: "vasileft31"
+  ipaddr: "100.66.0.214/31"
+  vrf: ""
+
+- int: "vasileft32"
+  ipaddr: "100.66.1.2/31"
+  vrf: ""
+
+- int: "vasiright1"
+  ipaddr: "88.16.254.11/31"
+  vrf: "MYCOMPANY"
+
+- int: "vasiright21"
+  ipaddr: "100.66.0.3/31"
+  vrf: "C617529B810A48F6AD40FEBCB163B286"
+
+- int: "vasiright22"
+  ipaddr: "100.66.0.65/31"
+  vrf: "28FBAE630B934EB5AFA7FCE43E52393E"
+
+- int: "vasiright23"
+  ipaddr: "100.66.0.103/31"
+  vrf: "4CB342232A7B4D04ADEF7DE3EC2679EC"
+
+- int: "vasiright24"
+  ipaddr: "100.66.0.83/31"
+  vrf: "F76D90EAB6474F5BBB433939BA52FB14"
+
+- int: "vasiright25"
+  ipaddr: "100.66.0.75/31"
+  vrf: "6281BBEF467947E4949F989BBC891138"
+
+- int: "vasiright26"
+  ipaddr: "100.66.0.131/31"
+  vrf: "7650C2814C784BACBBE23BB30B47D3A1"
+
+- int: "vasiright27"
+  ipaddr: "100.66.0.159/31"
+  vrf: "AF1C8AE356D94BBBB377257D047D3D4D"
+
+- int: "vasiright28"
+  ipaddr: "100.66.0.163/31"
+  vrf: "41ECD4DB33314E949FD8D96D98252919"
+
+- int: "vasiright29"
+  ipaddr: "100.66.0.175/31"
+  vrf: "A1E5B05D1D914A109BE1EE71B7C994B7"
+
+- int: "vasiright30"
+  ipaddr: "100.66.0.195/31"
+  vrf: "CC462DCE24DD43B28EA8EA9BAD49044E"
+
+- int: "vasiright31"
+  ipaddr: "100.66.0.215/31"
+  vrf: "C5DE7D3B149B4AF7BF398F45F0AD90A6"
+
+- int: "vasiright32"
+  ipaddr: "100.66.1.3/31"
+  vrf: "8B3C2CFAD23841D1BC9FA2A178BA5855"
