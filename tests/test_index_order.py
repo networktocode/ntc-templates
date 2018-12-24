@@ -60,7 +60,7 @@ def check_order(current_os, prior_os,cmd_len, prior_len, os_choices, used_os, cm
 
 def test_index_ordering():
 
-os_choices = [
+    os_choices = [
         'a10', 'alcatel_sros', 'arista_eos', 'aruba_os', 'avaya_ers', 'avaya_vsp',
         'brocade_fastiron', 'brocade_netiron', 'brocade_nos', 'brocade_vdx', 'brocade_vyos',
         'checkpoint_gaia', 'cisco_asa', 'cisco_ios', 'cisco_nxos', 'cisco_s300', 'cisco_wlc',
