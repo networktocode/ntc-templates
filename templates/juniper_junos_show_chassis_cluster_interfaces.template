@@ -32,6 +32,7 @@ Control
   ^[Rr]edundant-pseudo -> RedPse
   ^Interface\s+[Mm]onitoring -> IntMon
   ^\s*$$
+  ^. -> Error
 
 Fabric
   ^${LINK_TYPE}\s+interfaces:\s*$$
