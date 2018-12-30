@@ -1,7 +1,7 @@
 Value Required PROTOCOL (\S+)
 Value Required ADDRESS (\d+\.\d+\.\d+\.\d+)
 Value Required AGE (\S+)
-Value Required MAC ([A-Fa-f0-9\.]{14}|[A-Fa-f0-9\:]{17})
+Value Required MAC ([A-Fa-f0-9:\.]{14,17})
 Value Required TYPE (\S+)
 Value INTERFACE (\S+)
 
@@ -10,3 +10,4 @@ Start
   ^${PROTOCOL}\s+${ADDRESS}\s+${AGE}\s+${MAC}\s+${TYPE}\s+${INTERFACE} -> Record
   ^${PROTOCOL}\s+${ADDRESS}\s+${AGE}\s+${MAC}\s+${TYPE} -> Record
   ^. -> Error
+  
