@@ -1,0 +1,30 @@
+Control link status: Down
+
+Control interfaces:
+Index   Interface        Status   Internal-SA
+0       fxp1             Down     Disabled
+
+Fabric link status: Down
+
+Fabric interfaces:
+Name    Child-interface    Status
+(Physical/Monitored)
+fab0    ge-0/0/2           Down / Down
+fab0
+
+Redundant-ethernet Information:
+Name         Status      Redundancy-group
+reth0        Up          1
+reth1        Up          3
+reth2        Down        Not configured
+reth3        Down        Not configured
+reth4        Down        Not configured
+
+Redundant-pseudo-interface Information:
+Name         Status      Redundancy-group
+lo0          Up          0
+
+Interface Monitoring:
+Interface         Weight    Status    Redundancy-group
+ge-11/0/0         255       Down      1
+ge-2/0/0          255       Up        1
