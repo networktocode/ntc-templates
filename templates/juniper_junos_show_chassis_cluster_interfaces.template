@@ -24,6 +24,7 @@ Control
   ^${LINK_TYPE}\s+interfaces:\s*$$
   ^\s*Index\s+Interface\s+Monitored-Status\s+Security\s*$$
   ^\s*Index\s+Interface\s+Monitored-Status\s+Internal-SA\s*$$
+  ^\s*Index\s+Interface\s+Status\s+Internal-SA\s*$$
   ^\s*${INDEX}\s+${INTERFACE}\s+${STATUS}\s+${SECURITY}\s*$$ -> Record
   ^\S+ -> Continue.Clearall
   ^[Ff]abric\s+[Ll]ink\s+[Ss]tatus:\s+${FABRIC_LINK_STATUS}\s*$$ -> Fabric
