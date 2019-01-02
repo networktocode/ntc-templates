@@ -1,0 +1,18 @@
+Value NAME (cpu\S+|cpu)
+Value USER (\S+)
+Value NICE (\S+)
+Value SYSTEM (\S+)
+Value IDLE (\S+)
+Value IOWAIT (\S+)
+Value IRQ (\S+)
+Value SOFTIRQ (\S+)
+Value STEAL (\S+)
+Value GUEST (\S+)
+Value GUEST_NICE (\S+)
+
+Start
+  ^${NAME}\s+${USER}\s${NICE}\s${SYSTEM}\s${IDLE}\s${IOWAIT}\s${IRQ}\s${SOFTIRQ}\s${STEAL}\s${GUEST}\s${GUEST_NICE} -> Record
+  ^intr\s+
+  ^.*
+
+EOF

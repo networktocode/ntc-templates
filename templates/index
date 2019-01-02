@@ -264,8 +264,9 @@ sonic_linux_show_interfaces_alias.template, .*, linux, sh[[ow]] in[[terfaces]] a
 sonic_linux_show_ipv6_bgp_summary.template, .*, linux, sh[[ow]] ipv6 bgp sum[[mary]]
 sonic_linux_show_ip_bgp_summary.template, .*, linux, sh[[ow]] ip bgp sum[[mary]]
 sonic_linux_show_pfc_counters.template, .*, linux, sh[[ow]] pf[[c]] coun[[ters]]
-sonic_linux_docker_top_bgp.template, .*, linux, dock[[er]] to[[p]] bg[[p]]
 sonic_linux_show_lldp_table.template, .*, linux, sh[[ow]] lld[[p]] tab[[le]]
+sonic_linux_docker_top_bgp.template, .*, linux, dock[[er]] to[[p]] bg[[p]]
+sonic_linux_cat_slash_proc_slash_stat.template, .*, linux, cat /proc/stat
 sonic_linux_show_version.template, .*, linux, show ver[[sion]]
 sonic_linux_uptime_since.template, .*, linux, up[[time]] -s
 sonic_linux_ps_dash_ef.template, .*, linux, ps -ef
