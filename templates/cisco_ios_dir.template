@@ -1,19 +1,15 @@
 Value Filldown FILE_SYSTEM (\S+)
 Value ID (\d+)
-Value PERMISSIONS (\S+)
+Value PERMISSIONS (.+?)
 Value SIZE (\d+)
 Value Fillup TOTAL_SIZE (\d+)
 Value Fillup TOTAL_FREE (\d+)
-Value DATE_TIME ((<no date>)|(\w+\s\d+\s\d+\s\S+\s\S+))
+Value DATE_TIME (.+?)
 Value NAME (\S+)
 
 Start
-  ^Directory of\s+${FILE_SYSTEM} -> DIR
-
-DIR
-  ^Directory of\s+${FILE_SYSTEM} -> DIR
-  ^((\s+)*${ID})\s+${PERMISSIONS}\s+${SIZE}\s+${DATE_TIME}\s+${NAME} -> Record
+  ^\s*${ID}\s+${PERMISSIONS}\s+${SIZE}\s+${DATE_TIME}\s+${NAME}\s*$$ -> Record
+  ^Directory of\s+${FILE_SYSTEM}
   ^${TOTAL_SIZE}\s+\S+\s+\S+\s\(${TOTAL_FREE} bytes free\)
 
-#
 EOF
