@@ -1,0 +1,21 @@
+Value TOTAL_MEMORY (\S+)
+Value USED_MEMORY (\S+)
+Value FREE_MEMORY (\S+)
+Value SHARED_MEMORY (\S+)
+Value BUFFERS (\S+)
+Value CACHED (\S+)
+Value USED_RAM (\S+)
+Value FREE_RAM (\S+)
+Value TOTAL_SWAP (\S+)
+Value USED_SWAP (\S+)
+Value FREE_SWAP (\S+)
+
+Start
+  ^\s+total.*cached
+  ^Mem:\s+${TOTAL_MEMORY}\s+${USED_MEMORY}\s+${FREE_MEMORY}\s+${SHARED_MEMORY}\s+${BUFFERS}\s+${CACHED}
+  ^-\/\+\sbuffers/cache:\s+${USED_RAM}\s+${FREE_RAM}
+  ^Swap:\s+${TOTAL_SWAP}\s+${USED_SWAP}\s+${FREE_SWAP} -> Record
+  ^.* -> Error "LINE NOT FOUND"
+
+
+EOF
