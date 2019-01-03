@@ -102,7 +102,7 @@ cisco_asa_show_running-config_tunnel-group.template, .*, cisco_asa, sh[[ow]] ru[
 cisco_asa_show_running-config_crypto_map.template, .*, cisco_asa, sh[[ow]] ru[[nning-config]] cr[[ypto]] m[[ap]]
 cisco_asa_show_vpn-sessiondb_detail_l2l.template, .*, cisco_asa, sh[[ow]] vpn-[[sessiondb]] d[[etail]] l[[2l]]
 cisco_asa_show_crypto_ikev1_sa_detail.template, .*, cisco_asa, sh[[ow]] cry[[pto]] ikev1 sa d[[etail]]
-cisco_asa_show_object-group_network.template, .*, cisco_asa, sh[[ow]] ob[[ject-group]] n[[etwork]]
+cisco_asa_show_object-group_network.template, .*, cisco_asa, sh[[ow]] (?:ru[[nning-config]] object-[[group]]|ob[[ject-group]]) n[[etwork]]
 cisco_asa_show_running-config_ipsec.template, .*, cisco_asa, sh[[ow]] ru[[nning-config]] ips[[ec]]
 cisco_asa_show_crypto_ipsec_sa.template, .*, cisco_asa, sh[[ow]] cry[[pto]] ip[[sec]] sa
 cisco_asa_show_access-list.template, .*, cisco_asa, sh[[ow]] ac[[cess-list]]
