@@ -1,30 +1,33 @@
 Value Required INTF (\S+)
 Value LINK_STATUS (.+?)
 Value PROTOCOL_STATUS (.+?)
-Value Required IPADDR (\S+?)
-Value MASK (\d*)
+Value List IPADDR (\S+?)
+Value List MASK (\d*)
 Value VRF (\S+)
 Value MTU (\d+)
 Value List IP_HELPER (\d+\.\d+\.\d+\.\d+)
-Value OUTGOING_ACL (.*)
-Value INBOUND_ACL (.*)
+Value OUTGOING_ACL (.*?)
+Value INBOUND_ACL (.*?)
 
 
 Start
   ^\S -> Continue.Record
   ^${INTF}\s+is\s+${LINK_STATUS},\s+line\s+protocol\s+is\s+${PROTOCOL_STATUS}\s*$$
-  ^\s+Internet\s+address\s+is\s+${IPADDR}/*${MASK}\s*$$
+  ^\s+Internet\s+address\s+is\s+${IPADDR}/?${MASK}\s*$$
+  ^\s+Secondary\s+address\s+${IPADDR}/?${MASK}\s*$$
   ^.+VPN\s+Routing/Forwarding\s+"${VRF}"
   ^\s+MTU\s+is\s+${MTU}\s+bytes
   ^\s+Helper\s+address(es|)\s(is|are)\s+${IP_HELPER}\s*$$ -> HELPERS
-  ^\s+Outgoing\s+access\s+list\s+is\s+not\s+set -> NoRecord
+  ^\s+Outgoing\s+access\s+list\s+is\s+not\s+set
   ^\s+Outgoing\s+access\s+list\s+is\s+${OUTGOING_ACL}
-  ^\s+Inbound\s+access\s+list\s+is\s+not\s+set -> NoRecord
-  ^\s+Inbound\s+access\s+list\s+is\s+${INBOUND_ACL}
+  ^\s+Inbound\s+access\s+list\s+is\s+not\s+set
+  ^\s+Inbound\s+access\s+list\s+is\s+${INBOUND_ACL}\s*$$
   ^\s+Internet\s+protocol
   ^\s+Broadcast
   ^\s+Multicast
+  ^\s+2[2-5]\d\.
   ^\s+Address\s+determined
+  ^\s+Directed
   ^\s+MTU
   ^\s+Helper
   ^\s+Directed
@@ -44,9 +47,8 @@ Start
   ^\s+Policy
   ^\s+Network\s+address\s+
   ^\s+BGP
-  ^\s+Input
+  ^\s+(Input|Output|Post)\s+.*features
   ^\s+IPv4\s+WCCP
-  ^\s+Output
   ^\s*$$
   ^. -> Error
 
