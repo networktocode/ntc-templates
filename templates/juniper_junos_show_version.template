@@ -1,0 +1,78 @@
+Value Required HOSTNAME (\S+)
+Value MODEL (\S+)
+Value JUNOS_VERSION ([\S\s]*)
+Value BASE_OS_BOOT (\S+)
+Value BASE_OS_SOFTWARE_SUITE (\S+)
+Value KERNEL_SOFTWARE_SUITE (\S+)
+Value CRYPTO_SOFTWARE_SUITE (\S+)
+Value PACKET_FORWARDING_ENGINE_SUPPORT_M_T_EX_COMMON (\S+)
+Value PACKET_FORWARDING_ENGINE_SUPPORT_MX_COMMON (\S+)
+Value ONLINE_DOCUMENTATION (\S+)
+Value SERVICES_AACL_CONTAINER_PACKAGE (\S+)
+Value SERVICES_APPLICATION_LEVEL_GATEWAYS (\S+)
+Value APPID_SERVICES (\S+)
+Value BORDER_GATEWAY_FUNCTION_PACKAGE (\S+)
+Value SERVICES_CAPTIVE_PORTAL_CONTENT_DELIVERY_PACKAGE (\S+)
+Value SERVICES_HTTP_CONTENT_MANAGEMENT_PACKAGE (\S+)
+Value IDP_SERVICES (\S+)
+Value SERVICES_JFLOW_CONTAINER_PACKAGE (\S+)
+Value SERVICES_LL_PDF_CONTAINER_PACKAGE (\S+)
+Value SERVICES_MOBILENEXT_SOFTWARE_PACKAGE (\S+)
+Value SERVICES_MOBILE_SUBSCRIBER_SERVICE_PACKAGE (\S+)
+Value SERVICES_NAT (\S+)
+Value SERVICES_PTSP_CONTAINER_PACKAGE (\S+)
+Value SERVICES_RPM (\S+)
+Value SERVICES_STATEFUL_FIREWALL (\S+)
+Value VOICE_SERVICES_CONTAINER_PACKAGE (\S+)
+Value SERVICES_CRYPTO (\S+)
+Value SERVICES_SSL (\S+)
+Value SERVICES_IPSEC (\S+)
+Value PLATFORM_SOFTWARE_SUITE (\S+)
+Value RUNTIME_SOFTWARE_SUITE (\S+)
+Value ROUTING_SOFTWARE_SUITE (\S+)
+Value PY_BASE_I386 (\S+)
+Value LAB_PACKAGE (\S+)
+Value SERIAL_NUMBER (\S+)
+Value QFABRIC_SYSTEM_ID (\S+)
+Value List OTHER_DEVICE_PROPERTIES ([^\[]*)
+Value List OTHER_PROPERTIES_VERSIONS (\S+)
+
+Start
+  ^Hostname:\s+${HOSTNAME} 
+  ^Model:\s+${MODEL}
+  ^Junos:\s+${JUNOS_VERSION}
+  ^JUNOS\s+Base\s+OS\s+boot\s+\[${BASE_OS_BOOT}\]
+  ^JUNOS\s+Base\s+OS\s+Software\s+Suite\s+\[${BASE_OS_SOFTWARE_SUITE}\]
+  ^JUNOS\s+Kernel\s+Software\s+Suite\s+\[${KERNEL_SOFTWARE_SUITE}\]
+  ^JUNOS\s+Crypto\s+Software\s+Suite\s+\[${CRYPTO_SOFTWARE_SUITE}\]
+  ^JUNOS\s+Packet\s+Forwarding\s+Engine\s+Support\s+\(M/T/EX\s+Common\)\s+\[${PACKET_FORWARDING_ENGINE_SUPPORT_M_T_EX_COMMON}\]
+  ^JUNOS\s+Packet\s+Forwarding\s+Engine\s+Support\s+\(MX\s+Common\)\s+\[${PACKET_FORWARDING_ENGINE_SUPPORT_MX_COMMON}\]
+  ^JUNOS\s+Online\s+Documentation\s+\[${ONLINE_DOCUMENTATION}\]
+  ^JUNOS\s+Services\s+AACL\s+Container\s+package\s+\[${SERVICES_AACL_CONTAINER_PACKAGE}\]
+  ^JUNOS\s+Services\s+Application\s+Level\s+Gateways\s+\[${SERVICES_APPLICATION_LEVEL_GATEWAYS}\]
+  ^JUNOS\s+AppId\s+Services\s+\[${APPID_SERVICES}\]
+  ^JUNOS\s+Border\s+Gateway\s+Function\s+package\s+\[${BORDER_GATEWAY_FUNCTION_PACKAGE}\]
+  ^JUNOS\s+Services\s+Captive\s+Portal\s+and\s+Content\s+Delivery\s+Container\s+package\s+\[${SERVICES_CAPTIVE_PORTAL_CONTENT_DELIVERY_PACKAGE}\]
+  ^JUNOS\s+Services\s+HTTP\s+Content\s+Management\s+package\s+\[${SERVICES_HTTP_CONTENT_MANAGEMENT_PACKAGE}\]
+  ^JUNOS\s+IDP\s+Services\s+\[${IDP_SERVICES}\]
+  ^JUNOS\s+Services\s+Jflow\s+Container\s+package\s+\[${SERVICES_JFLOW_CONTAINER_PACKAGE}\]
+  ^JUNOS\s+Services\s+LL-PDF\s+Container\s+package\s+\[${SERVICES_LL_PDF_CONTAINER_PACKAGE}\]
+  ^JUNOS\s+Services\s+MobileNext\s+Software\s+package\s+\[${SERVICES_MOBILENEXT_SOFTWARE_PACKAGE}\]
+  ^JUNOS\s+Services\s+Mobile\s+Subscriber\s+Service\s+Container\s+package\s+\[${SERVICES_MOBILE_SUBSCRIBER_SERVICE_PACKAGE}\]
+  ^JUNOS\s+Services\s+NAT\s+\[${SERVICES_NAT}\]
+  ^JUNOS\s+Services\s+PTSP\s+Container\s+package\s+\[${SERVICES_PTSP_CONTAINER_PACKAGE}\]
+  ^JUNOS\s+Services\s+RPM\s+\[${SERVICES_RPM}\]
+  ^JUNOS\s+Services\s+Stateful\s+Firewall\s+\[${SERVICES_STATEFUL_FIREWALL}\]
+  ^JUNOS\s+Voice\s+Services\s+Container\s+package\s+\[${VOICE_SERVICES_CONTAINER_PACKAGE}\]
+  ^JUNOS\s+Services\s+Crypto\s+\[${SERVICES_CRYPTO}\]
+  ^JUNOS\s+Services\s+SSL\s+\[${SERVICES_SSL}\]
+  ^JUNOS\s+Services\s+IPSec\s+\[${SERVICES_IPSEC}\]
+  ^JUNOS\s+platform\s+Software\s+Suite\s+\[${PLATFORM_SOFTWARE_SUITE}\]
+  ^JUNOS\s+Runtime\s+Software\s+Suite\s+\[${RUNTIME_SOFTWARE_SUITE}\]
+  ^JUNOS\s+Routing\s+Software\s+Suite\s+\[${ROUTING_SOFTWARE_SUITE}\]
+  ^JUNOS\s+py-base-i386\s+\[${PY_BASE_I386}\]
+  ^labpkg\s+\[${LAB_PACKAGE}\]
+  ^Serial\s+Number:\s+${SERIAL_NUMBER}
+  ^QFabric\s+System\s+ID:\s+${QFABRIC_SYSTEM_ID}
+  ^JUNOS\s+${OTHER_DEVICE_PROPERTIES}\[${OTHER_PROPERTIES_VERSIONS}\]
+  ^. -> Error
