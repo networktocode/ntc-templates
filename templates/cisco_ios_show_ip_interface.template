@@ -1,0 +1,40 @@
+Value INTF (\S+)
+Value LINK_STATUS (.+?)
+Value PROTOCOL_STATUS (.+?)
+Value Required IPADDR (\S+?)
+Value MASK (\d*)
+Value VRF (\S+)
+
+Start
+  ^\S -> Continue.Record
+  ^${INTF}\s+is\s+${LINK_STATUS},\s+line\s+protocol\s+is\s+${PROTOCOL_STATUS}\s*$$
+  ^\s+Internet\s+address\s+is\s+${IPADDR}/*${MASK}\s*$$
+  ^.+VPN\s+Routing/Forwarding\s+"${VRF}"
+  ^\s+Internet\s+protocol
+  ^\s+Broadcast
+  ^\s+Multicast
+  ^\s+Address\s+determined
+  ^\s+MTU
+  ^\s+Helper
+  ^\s+Directed
+  ^\s+Outgoing
+  ^\s+Inbound
+  ^\s+.*Proxy
+  ^\s+Security
+  ^\s+Split
+  ^\s+ICMP
+  ^\s+IP\s+(?:fast|Flow|CEF|Null|multicast|route|output|access)
+  ^\s+Associated
+  ^\s+Topology
+  ^\s+Router
+  ^\s+TCP
+  ^\s+RTP
+  ^\s+Probe
+  ^\s+Policy
+  ^\s+Network\s+address\s+
+  ^\s+BGP
+  ^\s+Input
+  ^\s+IPv4\s+WCCP
+  ^\s+Output
+  ^\s*$$
+  ^. -> Error
