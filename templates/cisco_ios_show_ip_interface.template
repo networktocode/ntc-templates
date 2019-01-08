@@ -18,11 +18,12 @@ Start
   ^.+VPN\s+Routing/Forwarding\s+"${VRF}"
   ^\s+MTU\s+is\s+${MTU}\s+bytes
   ^\s+Helper\s+address(es|)\s(is|are)\s+${IP_HELPER}\s*$$ -> HELPERS
-  ^\s+Outgoing\s+access\s+list\s+is\s+not\s+set
-  ^\s+Outgoing\s+access\s+list\s+is\s+${OUTGOING_ACL}
-  ^\s+Inbound\s+access\s+list\s+is\s+not\s+set
-  ^\s+Inbound\s+access\s+list\s+is\s+${INBOUND_ACL}\s*$$
+  ^\s+Outgoing\s+(?:Common\s+)?access\s+list\s+is\s+not\s+set
+  ^\s+Outgoing\s+(?:Common\s+)?access\s+list\s+is\s+${OUTGOING_ACL}\s*$$
+  ^\s+Inbound\s+(?:Common\s+)?access\s+list\s+is\s+not\s+set
+  ^\s+Inbound\s+(?:Common\s+)?access\s+list\s+is\s+${INBOUND_ACL}\s*$$
   ^\s+Internet\s+protocol
+  ^\s+Interface\s+is\s+unnumbered
   ^\s+Broadcast
   ^\s+Multicast
   ^\s+2[2-5]\d\.
