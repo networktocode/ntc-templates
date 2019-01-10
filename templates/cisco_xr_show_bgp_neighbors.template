@@ -1,0 +1,31 @@
+Value NEIGHBOR (\S+)
+Value REMOTE_AS (\d+)
+Value LOCAL_AS (\d+)
+Value ROUTER_ID (\S+)
+Value Required AFI (IPv4 Unicast)
+Value BGP_STATE (\w+)
+Value PFX_IN (\d+)
+Value PFX_OUT (\d+)
+Value MAX_PFX (\d+)
+Value MAX_PFX_WARN (\d+)
+Value LOCAL_ADDRESS (.*)
+Value LOCAL_PORT (\d+)
+Value REMOTE_ADDRESS (.*)
+Value REMOTE_PORT (\d+)
+Value BGP_TYPE (\w+)
+Value DESCRIPTION (.*)
+
+Start
+  ^BGP neighbor is ${NEIGHBOR}
+  ^\s+Remote AS ${REMOTE_AS}\, local AS ${LOCAL_AS}\, ${BGP_TYPE} link
+  ^\s+Description: ${DESCRIPTION}
+  ^\s+Remote router ID ${ROUTER_ID}
+  ^\s+BGP state \= ${BGP_STATE}
+  ^\s+${PFX_IN} accepted prefixes
+  ^\s+Prefix advertised ${PFX_OUT}
+  ^\s+Maximum prefixes allowed ${MAX_PFX}
+  ^\s+Threshold for warning message ${MAX_PFX_WARN}
+  ^\s+For Address Family\:\ ${AFI}
+  ^\s+Local host\:\s+${LOCAL_ADDRESS}\,\s+Local port\:\s+${LOCAL_PORT}
+  ^\s+Foreign host\:\s+${REMOTE_ADDRESS}\, Foreign port\:\s+${REMOTE_PORT} -> Record
+

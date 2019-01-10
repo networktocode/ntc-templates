@@ -1,0 +1,76 @@
+---
+
+parsed_sample:
+
+
+- afi: IPv4 Unicast
+  bgp_state: Established
+  bgp_type: internal
+  description: RouteReflector_1
+  local_address: 10.0.0.1
+  local_as: '65001'
+  local_port: '179'
+  max_pfx: '1048576'
+  max_pfx_warn: '75'
+  neighbor: 192.168.100.1
+  pfx_in: '847583'
+  pfx_out: '170'
+  remote_address: 192.168.100.1
+  remote_as: '65001'
+  remote_port: '13617'
+  router_id: 192.168.100.1
+
+
+- afi: IPv4 Unicast
+  bgp_state: Established
+  bgp_type: internal
+  description: RouteReflector_2
+  local_address: 10.0.0.1
+  local_as: '65001'
+  local_port: '179'
+  max_pfx: '1048576'
+  max_pfx_warn: '75'
+  neighbor: 192.168.100.2
+  pfx_in: '847585'
+  pfx_out: '170'
+  remote_address: 192.168.100.2
+  remote_as: '65001'
+  remote_port: '15445'
+  router_id: 192.168.100.2
+
+
+- afi: IPv4 Unicast
+  bgp_state: OpenSent
+  bgp_type: internal
+  description: iBGP_Neighbor
+  local_address: 10.0.0.1
+  local_as: '65001'
+  local_port: '59248'
+  max_pfx: '524288'
+  max_pfx_warn: '75'
+  neighbor: 10.0.0.42
+  pfx_in: '0'
+  pfx_out: '0'
+  remote_address: 10.0.0.42
+  remote_as: '65001'
+  remote_port: '179'
+  router_id: 0.0.0.0
+
+
+- afi: IPv4 Unicast
+  bgp_state: Established
+  bgp_type: external
+  description: ''
+  local_address: 10.0.0.1
+  local_as: '65001'
+  local_port: '37554'
+  max_pfx: '1048576'
+  max_pfx_warn: '75'
+  neighbor: 10.0.0.124
+  pfx_in: '5836'
+  pfx_out: '0'
+  remote_address: 10.0.0.124
+  remote_as: '65012'
+  remote_port: '179'
+  router_id: 10.1.2.3
+
