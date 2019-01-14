@@ -1,7 +1,7 @@
 Value PORT (\S+)
 Value NAME (.*?)
 Value STATUS (\S+)
-Value VLAN (\d+|routed|trunk)
+Value VLAN (\d+|routed|trunk|--)
 Value DUPLEX (\S+)
 Value SPEED (\d+|auto)
 Value TYPE (.+?)
