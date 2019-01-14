@@ -3,7 +3,7 @@ Value NAME (.*?)
 Value STATUS (\S+)
 Value VLAN (\d+|routed|trunk)
 Value DUPLEX (\S+)
-Value SPEED (\d+G?|auto)
+Value SPEED (\S+)
 Value TYPE (.+?)
 
 Start
