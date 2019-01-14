@@ -1,25 +1,11 @@
 Value DOMAIN (\S+)
-Value DNS_SERVER_1 (\S+)
-Value DNS_SERVER_2 (\S+)
-Value DNS_SERVER_3 (\S+)
+Value List DNS_SERVERS (\S+)
 
 Start
   ^DNS\ssetup
   ^Name\s+Value
   ^Domain\s+${DOMAIN}
-  ^DNS\sserver\s+${DNS_SERVER_1} -> Dns2
-  ^DNS\sserver
-  ^\s*$$
-  ^. -> Error
-
-Dns2
-  ^DNS\sserver\s+${DNS_SERVER_2} -> Dns3
-  ^DNS\sserver
-  ^\s*$$
-  ^. -> Error
-
-Dns3
-  ^DNS\sserver\s+${DNS_SERVER_3} -> Record
+  ^DNS\sserver\s+${DNS_SERVERS} -> Continue
   ^DNS\sserver
   ^\s*$$
   ^. -> Error
