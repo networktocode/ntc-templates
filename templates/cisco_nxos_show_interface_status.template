@@ -3,8 +3,8 @@ Value NAME (.*?)
 Value STATUS (\S+)
 Value VLAN (\d+|routed|trunk|--)
 Value DUPLEX (\S+)
-Value SPEED (\d+|auto)
-Value TYPE (.+?)
+Value SPEED (\S+)
+Value TYPE (\S+)
 
 Start
   ^[Pp]ort\s+[Nn]ame\s+[Ss]tatus\s+[Vv]lan\s+[Dd]uplex\s+[Ss]peed\s+[Tt]ype\s*$$ -> INTFS
