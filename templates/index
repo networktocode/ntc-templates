@@ -105,6 +105,7 @@ cisco_asa_show_vpn-sessiondb_detail_l2l.template, .*, cisco_asa, sh[[ow]] vpn-[[
 cisco_asa_show_crypto_ikev1_sa_detail.template, .*, cisco_asa, sh[[ow]] cry[[pto]] ikev1 sa d[[etail]]
 cisco_asa_show_object-group_network.template, .*, cisco_asa, sh[[ow]] (?:ru[[nning-config]] object-[[group]]|ob[[ject-group]]) n[[etwork]]
 cisco_asa_show_running-config_ipsec.template, .*, cisco_asa, sh[[ow]] ru[[nning-config]] ips[[ec]]
+cisco_asa_show_interface_detail.template, .*, cisco_asa, sh[[ow]] int[[erface]] d[[etail]]
 cisco_asa_show_crypto_ipsec_sa.template, .*, cisco_asa, sh[[ow]] cry[[pto]] ip[[sec]] sa
 cisco_asa_show_resource_usage.template, .*, cisco_asa, sh[[ow]] res[[ource]] u[[sage]]
 cisco_asa_show_access-list.template, .*, cisco_asa, sh[[ow]] ac[[cess-list]]
