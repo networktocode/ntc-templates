@@ -15,4 +15,4 @@ Start_record
   ^${RESOURCE}\s+${CURRENT}\s+${PEAK}\s+${LIMIT}\s+${DENIED}\s+${CONTEXT}\s*$$ -> Record
   ^S\s+=\s+System:\s+Combined\s+context\s+limits
   ^\s*$$
-  ^.* -> Error "LINE NOT FOUND".
+  ^.* -> Error "LINE NOT FOUND"
