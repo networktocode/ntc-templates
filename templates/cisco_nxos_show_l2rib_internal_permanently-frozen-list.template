@@ -3,11 +3,8 @@ Value Required MAC (\S+\.\S+\.\S+)
 Value Required FROZEN_TIME (.*\S)
 
 Start
-  ^Topology\s+Mac Address\s+Frozen time -> Start_record
-
-Start_record
   ^${TOPOLOGY}\s+${MAC}\s+${FROZEN_TIME} -> Record
-  ^\-+
-  ^\s+$$
-  ^$$
+  ^Topology\s+Mac Address\s+Frozen time -> Start_record
+  ^-+
+  ^\s*$$
   ^.* -> Error "LINE NOT FOUND"
