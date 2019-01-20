@@ -1,58 +1,118 @@
-Value SMART_STATUS (.*)
-Value REG_STATUS (.*)
-Value SMART_ACCOUNT (.*)
-Value VIRTUAL_ACCOUNT (.*)
-Value EXPORT_CONTROLLED (.*)
-Value REG_INITIAL (.*)
-Value REG_LAST_RENEW (.*)
-Value REG_FAIL_ERROR (.*)
-Value REG_NEXT_RENEW (.*)
-Value REG_EXPIRATION (.*)
-Value AUTH_STATUS (.*)
-Value EVAL_REMAINING (.*)
-Value AUTH_LAST_COMMUNICATION (.*)
-Value AUTH_FAIL_ERROR (.*)
-Value AUTH_NEXT_COMMUNICATION (.*)
-Value AUTH_DEADLINE (.*)
-Value LICENSE_USAGE (.*)
-Value PID (.*)
-Value SN (.*)
-Value SMART_AGENT_VERSION (.*)
+Value SMART_STATUS (.+?)
+Value REGISTRATION_STATUS (.+?)
+Value SMART_ACCOUNT (.+?)
+Value VIRTUAL_ACCOUNT (.+?)
+Value EXPORT_CONTROLLED (.+?)
+Value REGISTRATION_INITIAL_STATUS (.+?)
+Value REGISTRATION_INITIAL_DATE (.+?)
+Value REGISTRATION_LAST_RENEWAL (.+?)
+Value REGISTRATION_LAST_RENEWAL_DATE (.+?)
+Value REGISTRATION_LAST_RENEWAL_ERROR (.+?)
+Value REGISTRATION_NEXT_RENEWAL_DATE (.+?)
+Value REGISTRATION_EXPIRATION_DATE (.+?)
+Value AUTH_STATUS (.+?)
+Value AUTH_DATE (.+?)
+Value EVAL_REMAINING (.+?)
+Value AUTH_LAST_COMMUNICATION (.+?)
+Value AUTH_LAST_COMMUNICATION_DATE (.+?)
+Value AUTH_FAIL_ERROR (.+?)
+Value AUTH_NEXT_COMMUNICATION_DATE (.+?)
+Value AUTH_DEADLINE (.+?)
+Value LICENSE (\S.*?)
+Value LICENSE_PID (\S+?)
+Value LICENSE_DESCRIPTION (.+?)
+Value LICENSE_COUNT (\d+)
+Value LICENSE_VERSION (\S+)
+Value LICENSE_STATUS (.+?)
+Value PID (.+?)
+Value SN (.+?)
+Value SMART_AGENT_VERSION (.+?)
 
 Start
-  ^Smart Licensing is ${SMART_STATUS}.*
+  ^\s*$$
+  ^Smart\s+Licensing\s+Status
+  ^Smart\s+Licensing\s+is\s+${SMART_STATUS}\s*$$
   ^Registration:\s*$$ -> REGISTRATION
-  ^License Authorization:\s*$$ -> AUTHORIZATION
-  ^License Usage\s*$$ -> LICENSE_USAGE
-  ^Product Information\s*$$ -> PRODUCT_INFORMATION
-  ^Agent Version\s*$$ -> AGENT_VERSION
+  ^License\s+Authorization:\s*$$ -> AUTHORIZATION
+  ^License\s+Usage\s*$$ -> LICENSE_USAGE
+  ^Product\s+Information\s*$$ -> PRODUCT_INFORMATION
+  ^Agent\s+Version\s*$$ -> AGENT_VERSION
+  ^=+\s*$$
+  ^. -> Error
 
 REGISTRATION
-  ^\s+Status: ${REG_STATUS}
-  ^\s+Smart Account: ${SMART_ACCOUNT}
-  ^\s+Virtual Account: ${VIRTUAL_ACCOUNT}
-  ^\s+Export-Controlled Functionality: ${EXPORT_CONTROLLED}
-  ^\s+Initial Registration: ${REG_INITIAL}
-  ^\s+Last Renewal Attempt: ${REG_LAST_RENEW}
-  ^\s+Failure reason: ${REG_FAIL_ERROR}
-  ^\s+Next Renewal Attempt: ${REG_NEXT_RENEW}
-  ^\s+Registration Expires: ${REG_EXPIRATION}
-  ^$$ -> Start
+  ^\s*$$
+  ^\s+Status:\s+${REGISTRATION_STATUS}\s*$$
+  ^\s+Smart\s+Account:\s+${SMART_ACCOUNT}\s*$$
+  ^\s+Virtual\s+Account:\s+${VIRTUAL_ACCOUNT}\s*$$
+  ^\s+Export-Controlled\s+Functionality:\s+${EXPORT_CONTROLLED}\s*$$
+  ^\s+Initial\s+Registration:\s+${REGISTRATION_INITIAL_STATUS}(?:\s+on\s+${REGISTRATION_INITIAL_DATE})?\s*$$
+  ^\s+Last\s+Renewal\s+Attempt:\s+${REGISTRATION_LAST_RENEWAL}(?:\s+on\s+${REGISTRATION_LAST_RENEWAL_DATE})?\s*$$
+  ^\s+Failure\s+reason:\s+${REGISTRATION_LAST_RENEWAL_ERROR}\s*$$
+  ^\s+Next\s+Renewal\s+Attempt:\s+${REGISTRATION_NEXT_RENEWAL_DATE}\s*$$
+  ^\s+Registration\s+Expires:\s+${REGISTRATION_EXPIRATION_DATE}\s*$$
+  ^License\s+Authorization:\s*$$ -> AUTHORIZATION
+  ^License\s+Usage\s*$$ -> LICENSE_USAGE
+  ^Product\s+Information\s*$$ -> PRODUCT_INFORMATION
+  ^Agent\s+Version\s*$$ -> AGENT_VERSION
+  ^Smart\s+Licensing\s+is\s+${SMART_STATUS}\s*$$
+  ^Registration:\s*$$ -> REGISTRATION
+  ^=+\s*$$
+  ^. -> Error
 
 AUTHORIZATION
-  ^\s+Status: ${AUTH_STATUS}
-  ^\s+Evaluation Period Remaining: ${EVAL_REMAINING}
-  ^\s+Last Communication Attempt: ${AUTH_LAST_COMMUNICATION}
-  ^\s+Failure reason: ${AUTH_FAIL_ERROR}
-  ^\s+Next Communication Attempt: ${AUTH_NEXT_COMMUNICATION}
-  ^\s+Communication Deadline: ${AUTH_DEADLINE}
-  ^$$ -> Start
+  ^\s*$$
+  ^\s+Status:\s+${AUTH_STATUS}(?:\s+on\s+${AUTH_DATE})?\s*$$
+  ^\s+Evaluation\s+Period\s+Remaining:\s+${EVAL_REMAINING}\s*$$
+  ^\s+Last\s+Communication\s+Attempt:\s+${AUTH_LAST_COMMUNICATION}(?:\s+on\s+${AUTH_LAST_COMMUNICATION_DATE})?\s*$$
+  ^\s+Failure\s+reason:\s+${AUTH_FAIL_ERROR}\s*$$
+  ^\s+Next\s+Communication\s+Attempt:\s+${AUTH_NEXT_COMMUNICATION_DATE}\s*$$
+  ^\s+Communication\s+Deadline:\s+${AUTH_DEADLINE}\s*$$
+  ^License\s+Usage\s*$$ -> LICENSE_USAGE
+  ^Product\s+Information\s*$$ -> PRODUCT_INFORMATION
+  ^Agent\s+Version\s*$$ -> AGENT_VERSION
+  ^Smart\s+Licensing\s+is\s+${SMART_STATUS}\s*$$
+  ^Registration:\s*$$ -> REGISTRATION
+  ^License\s+Authorization:\s*$$ -> AUTHORIZATION
+  ^=+\s*$$
+  ^. -> Error
 
-LICENSE_USAGE 
-  ^\s+Description: ${LICENSE_USAGE} -> Start
+LICENSE_USAGE
+  ^\s*$$
+  ^${LICENSE}?\s*\(${LICENSE_PID}\):\s*$$
+  ^\s+Description:(?:\s+${LICENSE_DESCRIPTION})?\s*$$
+  ^\s+Count:\s+${LICENSE_COUNT}\s*$$
+  ^\s+Version:\s+${LICENSE_VERSION}\s*$$
+  ^\s+Status:\s+${LICENSE_STATUS}\s*$$
+  ^Product\s+Information\s*$$ -> PRODUCT_INFORMATION
+  ^Agent\s+Version\s*$$ -> AGENT_VERSION
+  ^Smart\s+Licensing\s+is\s+${SMART_STATUS}\s*$$
+  ^Registration:\s*$$ -> REGISTRATION
+  ^License\s+Authorization:\s*$$ -> AUTHORIZATION
+  ^License\s+Usage\s*$$ -> LICENSE_USAGE
+  ^=+\s*$$
+  ^. -> Error
 
 PRODUCT_INFORMATION
-  ^UDI:.*PID:${PID},SN:${SN} -> Start
+  ^\s*$$
+  ^UDI:.*PID:${PID},\s*SN:${SN}\s*$$ -> Start
+  ^Agent\s+Version\s*$$ -> AGENT_VERSION
+  ^Smart\s+Licensing\s+is\s+${SMART_STATUS}\s*$$
+  ^Registration:\s*$$ -> REGISTRATION
+  ^License\s+Authorization:\s*$$ -> AUTHORIZATION
+  ^License\s+Usage\s*$$ -> LICENSE_USAGE
+  ^Product\s+Information\s*$$ -> PRODUCT_INFORMATION
+  ^=+\s*$$
+  ^. -> Error
 
 AGENT_VERSION
-  ^Smart Agent for Licensing: ${SMART_AGENT_VERSION} -> Start
+  ^\s*$$
+  ^Smart\s+Agent\s+for\s+Licensing:\s+${SMART_AGENT_VERSION}\s*$$
+  ^Smart\s+Licensing\s+is\s+${SMART_STATUS}\s*$$
+  ^Registration:\s*$$ -> REGISTRATION
+  ^License\s+Authorization:\s*$$ -> AUTHORIZATION
+  ^License\s+Usage\s*$$ -> LICENSE_USAGE
+  ^Product\s+Information\s*$$ -> PRODUCT_INFORMATION
+  ^Agent\s+Version\s*$$ -> AGENT_VERSION
+  ^=+\s*$$
+  ^. -> Error
