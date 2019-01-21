@@ -1,76 +1,337 @@
 ---
-
 parsed_sample:
+  - neighbor: "192.168.100.1"
+    remote_as: "65001"
+    local_as: "65001"
+    type: "internal"
+    description: "RouteReflector_1"
+    remote_router_id: "192.168.100.1"
+    cluster_id: ""
+    state: "Established"
+    uptime: "2w3d"
+    nsr_state: "Ready"
+    holdtime: "90"
+    keepalive: "30"
+    nsr: "enabled"
+    afi: ["IPv4 Unicast"]
+    version: ["56362493"]
+    route_reflector_role: []
+    policy_incoming: []
+    policy_outgoing: []
+    prefixes_in: ["847583"]
+    prefixes_in_best: ["794705"]
+    prefixes_out: ["170"]
+    prefixes_out_suppressed: ["0"]
+    prefixes_out_withdrawn: ["19"]
+    max_prefixes: ["1048576"]
+    max_prefixes_warn_percent: ["75"]
+    last_ack_version: ["56362493"]
+    last_synced_ack_version: ["56362493"]
+    connections_established: "2"
+    connections_dropped: "1"
+    local_address: "10.0.0.1"
+    local_port: "179"
+    remote_address: "192.168.100.1"
+    remote_port: "13617"
+    last_reset: "2w3d"
+    last_reset_reason: "Peer closing down the session"
+    last_notification_sent: ""
+    error_code: ""
+    last_notification_received: ""
+    peer_error_code: ""
+    peer_reset_reason: "Remote closed the session (No error)"
+    max_hops: ""
 
+  - neighbor: "192.168.100.2"
+    remote_as: "65001"
+    local_as: "65001"
+    type: "internal"
+    description: "RouteReflector_2"
+    remote_router_id: "192.168.100.2"
+    cluster_id: ""
+    state: "Established"
+    uptime: "2w3d"
+    nsr_state: "Ready"
+    holdtime: "90"
+    keepalive: "30"
+    nsr: "enabled"
+    afi: ["IPv4 Unicast"]
+    version: ["56362493"]
+    route_reflector_role: []
+    policy_incoming: []
+    policy_outgoing: []
+    prefixes_in: ["847585"]
+    prefixes_in_best: ["52523"]
+    prefixes_out: ["170"]
+    prefixes_out_suppressed: ["0"]
+    prefixes_out_withdrawn: ["19"]
+    max_prefixes: ["1048576"]
+    max_prefixes_warn_percent: ["75"]
+    last_ack_version: ["56362493"]
+    last_synced_ack_version: ["56362493"]
+    connections_established: "2"
+    connections_dropped: "1"
+    local_address: "10.0.0.1"
+    local_port: "179"
+    remote_address: "192.168.100.2"
+    remote_port: "15445"
+    last_reset: "2w3d"
+    last_reset_reason: "Peer closing down the session"
+    last_notification_sent: ""
+    error_code: ""
+    last_notification_received: ""
+    peer_error_code: ""
+    peer_reset_reason: "Remote closed the session (No error)"
+    max_hops: ""
 
-- afi: IPv4 Unicast
-  bgp_state: Established
-  bgp_type: internal
-  description: RouteReflector_1
-  local_address: 10.0.0.1
-  local_as: '65001'
-  local_port: '179'
-  max_pfx: '1048576'
-  max_pfx_warn: '75'
-  neighbor: 192.168.100.1
-  pfx_in: '847583'
-  pfx_out: '170'
-  remote_address: 192.168.100.1
-  remote_as: '65001'
-  remote_port: '13617'
-  router_id: 192.168.100.1
+  - neighbor: "192.168.0.1"
+    remote_as: "65001"
+    local_as: "65001"
+    type: "internal"
+    description: "VPN_RouteReflector_1"
+    remote_router_id: "192.168.0.1"
+    cluster_id: ""
+    state: "Established"
+    uptime: "2w4d"
+    nsr_state: "Ready"
+    holdtime: "90"
+    keepalive: "30"
+    nsr: "enabled"
+    afi: ["VPNv4 Unicast", "VPNv6 Unicast", "IPv4 MDT"]
+    version: ["1735091", "1", "77"]
+    route_reflector_role: []
+    policy_incoming: []
+    policy_outgoing: []
+    prefixes_in: ["4713", "0", "0"]
+    prefixes_in_best: ["4443", "0", "0"]
+    prefixes_out: ["889", "0", "0"]
+    prefixes_out_suppressed: ["0", "0", "0"]
+    prefixes_out_withdrawn: ["6", "0", "0"]
+    max_prefixes: ["2097152", "1048576", "131072"]
+    max_prefixes_warn_percent: ["75", "75", "75"]
+    last_ack_version: ["1735091", "1", "77"]
+    last_synced_ack_version: ["1735091", "1", "77"]
+    connections_established: "3"
+    connections_dropped: "2"
+    local_address: "10.0.0.1"
+    local_port: "45510"
+    remote_address: "192.168.0.1"
+    remote_port: "179"
+    last_reset: "2w4d"
+    last_reset_reason: "BGP Notification received: peer unconfigured"
+    last_notification_sent: "3w2d"
+    error_code: "peer in wrong AS"
+    last_notification_received: "2w4d"
+    peer_error_code: "peer unconfigured"
+    peer_reset_reason: ""
+    max_hops: ""
 
+  - neighbor: "192.168.0.2"
+    remote_as: "65001"
+    local_as: "65001"
+    type: "internal"
+    description: "VPN_RouteReflector_2"
+    remote_router_id: "192.168.0.2"
+    cluster_id: ""
+    state: "Established"
+    uptime: "3w2d"
+    nsr_state: "Ready"
+    holdtime: "90"
+    keepalive: "30"
+    nsr: "enabled"
+    afi: ["VPNv4 Unicast", "VPNv6 Unicast", "IPv4 MDT"]
+    version: ["1735091", "1", "77"]
+    route_reflector_role: []
+    policy_incoming: []
+    policy_outgoing: []
+    prefixes_in: ["4710", "0", "0"]
+    prefixes_in_best: ["66", "0", "0"]
+    prefixes_out: ["5803", "0", "0"]
+    prefixes_out_suppressed: ["0", "0", "0"]
+    prefixes_out_withdrawn: ["9", "0", "0"]
+    max_prefixes: ["2097152", "1048576", "131072"]
+    max_prefixes_warn_percent: ["75", "75", "75"]
+    last_ack_version: ["1735091", "1", "77"]
+    last_synced_ack_version: ["1735091", "1", "77"]
+    connections_established: "1"
+    connections_dropped: "0"
+    local_address: "10.0.0.1"
+    local_port: "35134"
+    remote_address: "192.168.0.2"
+    remote_port: "179"
+    last_reset: "3w2d"
+    last_reset_reason: "BGP Notification sent: peer in wrong AS"
+    last_notification_sent: "3w2d"
+    error_code: "peer in wrong AS"
+    last_notification_received: ""
+    peer_error_code: ""
+    peer_reset_reason: ""
+    max_hops: ""
 
-- afi: IPv4 Unicast
-  bgp_state: Established
-  bgp_type: internal
-  description: RouteReflector_2
-  local_address: 10.0.0.1
-  local_as: '65001'
-  local_port: '179'
-  max_pfx: '1048576'
-  max_pfx_warn: '75'
-  neighbor: 192.168.100.2
-  pfx_in: '847585'
-  pfx_out: '170'
-  remote_address: 192.168.100.2
-  remote_as: '65001'
-  remote_port: '15445'
-  router_id: 192.168.100.2
+  - neighbor: "10.0.0.42"
+    remote_as: "65001"
+    local_as: "65001"
+    type: "internal"
+    description: "iBGP_Neighbor"
+    remote_router_id: "0.0.0.0"
+    cluster_id: "10.0.0.1"
+    state: "OpenSent"
+    uptime: ""
+    nsr_state: "None"
+    holdtime: "180"
+    keepalive: "60"
+    nsr: "enabled"
+    afi: ["IPv4 Unicast", "IPv6 Unicast"]
+    version: ["0", "0"]
+    route_reflector_role: ["Client", "Client"]
+    policy_incoming: ["DENY-ALL", "DENY-ALL"]
+    policy_outgoing: ["PASS-ALL", "PASS-ALL"]
+    prefixes_in: ["0", "0"]
+    prefixes_in_best: ["0", "0"]
+    prefixes_out: ["0", "0"]
+    prefixes_out_suppressed: ["0", "0"]
+    prefixes_out_withdrawn: ["0", "0"]
+    max_prefixes: ["1048576", "524288"]
+    max_prefixes_warn_percent: ["75", "75"]
+    last_ack_version: ["0", "0"]
+    last_synced_ack_version: ["0", "0"]
+    connections_established: "1"
+    connections_dropped: "1"
+    local_address: "10.0.0.1"
+    local_port: "59248"
+    remote_address: "10.0.0.42"
+    remote_port: "179"
+    last_reset: "00:00:52"
+    last_reset_reason: "Peer closing down the session"
+    last_notification_sent: "2w3d"
+    error_code: "hold time expired"
+    last_notification_received: ""
+    peer_error_code: ""
+    peer_reset_reason: "Remote closed the session (Connection timed out)"
+    max_hops: ""
 
+  - neighbor: "10.0.0.124"
+    remote_as: "65012"
+    local_as: "65001"
+    type: "external"
+    description: ""
+    remote_router_id: "10.1.2.3"
+    cluster_id: ""
+    state: "Established"
+    uptime: "3w1d"
+    nsr_state: "Ready"
+    holdtime: "180"
+    keepalive: "60"
+    nsr: "enabled"
+    afi: ["IPv4 Unicast"]
+    version: ["56362493"]
+    route_reflector_role: []
+    policy_incoming: ["eBGP-IN"]
+    policy_outgoing: ["DENY-ALL"]
+    prefixes_in: ["5836"]
+    prefixes_in_best: ["5836"]
+    prefixes_out: ["0"]
+    prefixes_out_suppressed: ["0"]
+    prefixes_out_withdrawn: ["0"]
+    max_prefixes: ["1048576"]
+    max_prefixes_warn_percent: ["75"]
+    last_ack_version: ["56362493"]
+    last_synced_ack_version: ["56362493"]
+    connections_established: "1"
+    connections_dropped: "0"
+    local_address: "10.0.0.1"
+    local_port: "37554"
+    remote_address: "10.0.0.124"
+    remote_port: "179"
+    last_reset: "3w1d"
+    last_reset_reason: "User clear requested (CEASE notification sent - administrative reset)"
+    last_notification_sent: "3w1d"
+    error_code: "administrative reset"
+    last_notification_received: ""
+    peer_error_code: ""
+    peer_reset_reason: ""
+    max_hops: "20"
 
-- afi: IPv4 Unicast
-  bgp_state: OpenSent
-  bgp_type: internal
-  description: iBGP_Neighbor
-  local_address: 10.0.0.1
-  local_as: '65001'
-  local_port: '59248'
-  max_pfx: '524288'
-  max_pfx_warn: '75'
-  neighbor: 10.0.0.42
-  pfx_in: '0'
-  pfx_out: '0'
-  remote_address: 10.0.0.42
-  remote_as: '65001'
-  remote_port: '179'
-  router_id: 0.0.0.0
+  - neighbor: "1:1:1::1"
+    remote_as: "65001"
+    local_as: "65001"
+    type: "internal"
+    description: "rs01.lsan01-ca"
+    remote_router_id: "192.168.100.1"
+    cluster_id: ""
+    state: "Established"
+    uptime: "2w3d"
+    nsr_state: "Ready"
+    holdtime: "90"
+    keepalive: "30"
+    nsr: "enabled"
+    afi: ["IPv6 Unicast"]
+    version: ["18781601"]
+    route_reflector_role: []
+    policy_incoming: []
+    policy_outgoing: []
+    prefixes_in: ["59216"]
+    prefixes_in_best: ["35229"]
+    prefixes_out: ["1"]
+    prefixes_out_suppressed: ["0"]
+    prefixes_out_withdrawn: ["0"]
+    max_prefixes: ["524288"]
+    max_prefixes_warn_percent: ["75"]
+    last_ack_version: ["18781601"]
+    last_synced_ack_version: ["18781601"]
+    connections_established: "2"
+    connections_dropped: "1"
+    local_address: "100::42"
+    local_port: "179"
+    remote_address: "1:1:1::1"
+    remote_port: "13730"
+    last_reset: "2w3d"
+    last_reset_reason: "Peer closing down the session"
+    last_notification_sent: ""
+    error_code: ""
+    last_notification_received: ""
+    peer_error_code: ""
+    peer_reset_reason: "Remote closed the session (No error)"
+    max_hops: ""
 
-
-- afi: IPv4 Unicast
-  bgp_state: Established
-  bgp_type: external
-  description: ''
-  local_address: 10.0.0.1
-  local_as: '65001'
-  local_port: '37554'
-  max_pfx: '1048576'
-  max_pfx_warn: '75'
-  neighbor: 10.0.0.124
-  pfx_in: '5836'
-  pfx_out: '0'
-  remote_address: 10.0.0.124
-  remote_as: '65012'
-  remote_port: '179'
-  router_id: 10.1.2.3
-
+  - neighbor: "1:1:34::242"
+    remote_as: "65001"
+    local_as: "65001"
+    type: "internal"
+    description: "RouteReflector_2"
+    remote_router_id: "192.168.100.2"
+    cluster_id: ""
+    state: "Established"
+    uptime: "2w3d"
+    nsr_state: "Ready"
+    holdtime: "90"
+    keepalive: "30"
+    nsr: "enabled"
+    afi: ["IPv6 Unicast"]
+    version: ["18781601"]
+    route_reflector_role: []
+    policy_incoming: []
+    policy_outgoing: []
+    prefixes_in: ["59216"]
+    prefixes_in_best: ["23987"]
+    prefixes_out: ["1"]
+    prefixes_out_suppressed: ["0"]
+    prefixes_out_withdrawn: ["0"]
+    max_prefixes: ["524288"]
+    max_prefixes_warn_percent: ["75"]
+    last_ack_version: ["18781601"]
+    last_synced_ack_version: ["18781601"]
+    connections_established: "2"
+    connections_dropped: "1"
+    local_address: "100::42"
+    local_port: "179"
+    remote_address: "1:1:34::242"
+    remote_port: "44455"
+    last_reset: "2w3d"
+    last_reset_reason: "Peer closing down the session"
+    last_notification_sent: ""
+    error_code: ""
+    last_notification_received: ""
+    peer_error_code: ""
+    peer_reset_reason: "Remote closed the session (No error)"
+    max_hops: ""
