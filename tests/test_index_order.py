@@ -37,7 +37,7 @@ def check_order(current_os, prior_os,cmd_len, prior_len, os_choices, used_os, cm
         return False, msg
 
     if not prior_os and prior_len == 0:
-        # Starting Point 
+        # Starting Point
         return True , ''
     elif current_os == prior_os and cmd_len == prior_len and cmd == min(prior_cmd, cmd):
         msg = "OS is the same and command same length, please set {} before {} to be in alphabetical order".format(cmd, prior_cmd)
@@ -61,13 +61,14 @@ def check_order(current_os, prior_os,cmd_len, prior_len, os_choices, used_os, cm
 def test_index_ordering():
 
     os_choices = [
-        'a10', 'alcatel_sros', 'arista_eos', 'aruba_os', 'avaya_ers', 'avaya_vsp',
+        'a10', 'alcatel_aos', 'alcatel_sros', 'arista_eos', 'aruba_os', 'avaya_ers', 'avaya_vsp',
         'brocade_fastiron', 'brocade_netiron', 'brocade_nos', 'brocade_vdx', 'brocade_vyos',
         'checkpoint_gaia', 'cisco_asa', 'cisco_ios', 'cisco_nxos', 'cisco_s300', 'cisco_wlc',
         'cisco_xe', 'cisco_xr', 'dell_force10', 'enterasys', 'extreme', 'f5_ltm', 'fortinet',
-        'hp_comware', 'hp_procurve', 'huawei', 'juniper', 'juniper_junos', 'linux', 'ovs_linux',
-        'paloalto_panos', 'quanta_mesh', 'vmware_nsxv', 'vyatta_vyos', 'vyos'
-        ] 
+        'hp_comware', 'hp_procurve', 'huawei', 'juniper', 'juniper_junos', 'juniper_screenos',
+        'alcatel_sros', 'linux', 'ovs_linux', 'paloalto_panos', 'quanta_mesh',
+        'ubiquiti_edgeswitch', 'vmware_nsxv', 'vyatta_vyos', 'vyos'
+    ]
 
     prior_os = ""
     prior_len = 0

@@ -1,0 +1,10 @@
+Value Required TOPOLOGY (\d+)
+Value Required MAC (\S+\.\S+\.\S+)
+Value Required FROZEN_TIME (.*\S)
+
+Start
+  ^${TOPOLOGY}\s+${MAC}\s+${FROZEN_TIME} -> Record
+  ^Topology\s+Mac Address\s+Frozen time
+  ^-+
+  ^\s*$$
+  ^.* -> Error "LINE NOT FOUND"

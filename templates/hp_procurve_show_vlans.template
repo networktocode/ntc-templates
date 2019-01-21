@@ -10,4 +10,5 @@ Start
 VLAN
   ^\s+${VLAN_ID}\s+${NAME}\s+(\|\s+|)${STATUS}\s+${VOICE}(\s+${JUMBO}|)\s*$$ -> Record
   ^\s+-+\s+-+\s+(\+\s+|)-+\s+-+(\s+-+|)\s*$$
+  ^\s*$$
   ^.*$$ -> Error

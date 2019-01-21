@@ -11,6 +11,7 @@ parsed_sample:
   neilacpindex: ''
   neimaxframesize: ''
   neiopmau: ''
+  neicapabilities: 'bridge'
 
 - interface: '1/1/24'
   neimac: '609c.9f44.bbf0'
@@ -22,6 +23,7 @@ parsed_sample:
   neilacpindex: '257'
   neimaxframesize: '10200'
   neiopmau: '1000BaseT-FD'
+  neicapabilities: 'bridge'
 
 - interface: '1/3/1'
   neimac: '609c.9f44.bc13'
@@ -33,6 +35,7 @@ parsed_sample:
   neilacpindex: '385'
   neimaxframesize: '10200'
   neiopmau: '10GigBaseER'
+  neicapabilities: 'bridge'
 
 - interface: '1/3/2'
   neimac: '609c.9f44.bc14'
@@ -44,6 +47,7 @@ parsed_sample:
   neilacpindex: '385'
   neimaxframesize: '10200'
   neiopmau: '10GigBaseER'
+  neicapabilities: 'bridge'
 
 - interface: '2/1/1'
   neimac: 'cc4e.24c7.ccd4'
@@ -55,6 +59,7 @@ parsed_sample:
   neilacpindex: '1'
   neimaxframesize: '10200'
   neiopmau: '1000BaseT-FD'
+  neicapabilities: 'bridge'
 
 - interface: '2/3/1'
   neimac: 'cc4e.24c7.af6f'
@@ -66,6 +71,7 @@ parsed_sample:
   neilacpindex: '385'
   neimaxframesize: '10200'
   neiopmau: '10GigBaseER'
+  neicapabilities: 'bridge'
 
 - interface: '2/3/2'
   neimac: 'cc4e.24c7.af71'
@@ -77,4 +83,5 @@ parsed_sample:
   neilacpindex: '385'
   neimaxframesize: '10200'
   neiopmau: '10GigBaseER'
+  neicapabilities: 'bridge'
 

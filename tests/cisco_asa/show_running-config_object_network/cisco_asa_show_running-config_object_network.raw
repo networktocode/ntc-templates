@@ -1,0 +1,27 @@
+object network corp
+ subnet 10.0.0.0 255.0.0.0
+object network internal
+ subnet 192.168.0.0 255.255.255.0
+object network any
+ subnet 0.0.0.0 0.0.0.0
+object network host-10.10.11.1
+ host 10.10.11.1
+object network block
+ host 10.75.51.11
+object network dmz
+ description dmz GW ip
+ host 11.1.2.2
+object network server-vip
+ host 10.1.11.8
+object network visitors
+ range 10.10.10.4 10.10.10.60
+object network contractor
+ range 10.75.51.15 10.75.51.100
+object network cloudflare-ipv6-dns-primary
+ host 2606:4700:4700::1111
+object network google-ipv6-dns-primary
+ host 2001:4860:4860::8888
+object network internal-ipv6-range
+ range fd00:: fd00::ffff
+object network internal-ipv6-subnet
+ subnet fd00::/8

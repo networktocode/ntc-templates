@@ -1,0 +1,14 @@
+Value Required NEIGHBOR (\S+)
+Value Required LOCAL_INTERFACE (\S+)
+Value Required HOLD_TIME (\d+)
+Value Required CAPABILITIES (\S+)
+Value Required NEIGHBOR_INTERFACE (\S+) 
+
+Start
+  ^Capability.*
+  ^\s+\(.*
+  ^Device\s+ID\s+Local\s+Intf\s+Hold-time\s+Capability\s+Port\s+ID\s*$$
+  ^${NEIGHBOR}\s+${LOCAL_INTERFACE}\s+${HOLD_TIME}\s+${CAPABILITIES}\s+${NEIGHBOR_INTERFACE} -> Record
+  ^Total.*
+  ^\s*$$
+  ^. -> Error
