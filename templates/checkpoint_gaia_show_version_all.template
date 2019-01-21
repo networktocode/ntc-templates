@@ -1,0 +1,10 @@
+Value VERSION (\S+)
+Value BUILD (\S+)
+Value KERNEL (\S+)
+Value ARCHITECTURE (\S+)
+
+Start
+  ^Product version Check Point Gaia\s${VERSION}
+  ^OS build\s${BUILD}
+  ^OS kernel version\s${KERNEL}
+  ^OS edition\s${ARCHITECTURE}-bit -> Record
