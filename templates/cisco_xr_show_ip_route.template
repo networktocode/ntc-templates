@@ -1,0 +1,23 @@
+Value Filldown PROTOCOL (\S+|\S+\s\S+)
+Value Filldown NETWORK (\d+\.\d+\.\d+\.\d+)
+Value Filldown MASK (\d+)
+Value DISTANCE (\d+|is)
+Value METRIC (\d+)
+Value TYPE (directly|via)
+Value Required NEXT_HOP (connected|\d+\.\d+\.\d+\.\d+)
+Value INTERFACE (\S+)
+Value UPTIME (\S+)
+
+Start
+  ^Codes: C - connected, -> Route
+
+Route
+  ^\s+(\S+\s+-\s+.+[,]*)+
+  ^Gateway\s+of\s+last\s+resort
+  ^${PROTOCOL}\s+${NETWORK}/${MASK}\s+(?:\[${DISTANCE}/${METRIC}\]|is)\s+${TYPE}\s+${NEXT_HOP},\s+${UPTIME},\s+${INTERFACE} -> Record
+  ^\s+(?:\[${DISTANCE}/${METRIC}\]|is)\s+${TYPE}\s+${NEXT_HOP},\s+${UPTIME},\s+${INTERFACE} -> Record
+  ^${PROTOCOL}\s+${NETWORK}/${MASK}\s+(?:\[${DISTANCE}/${METRIC}\]|is)\s+${TYPE}\s+${NEXT_HOP},\s+${UPTIME} -> Record
+  ^\s+(?:\[${DISTANCE}/${METRIC}\]|is)\s+${TYPE}\s+${NEXT_HOP},\s+${UPTIME} -> Record
+  ^\s+$$
+  ^$$
+  ^.* -> Error "LINE NOT FOUND"

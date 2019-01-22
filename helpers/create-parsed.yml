@@ -25,8 +25,8 @@
 
       - name: SET FACT FOR ROOT DIR
         set_fact:
-          root_directory: "/home/ken/github/ntc-templates"
-      - debug: msg="{{ root_directory }}/templates/"
+          root_directory: "{{ playbook_dir | dirname }}"
+
       - name: OFFLINE NTC SHOW COMMAND
         ntc_show_command:
           connection: "offline"

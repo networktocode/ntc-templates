@@ -1,0 +1,25 @@
+Value Filldown ROUTER_ID (\d+\.\d+\.\d+\.\d+)
+Value Filldown LOCAL_AS (\d+)
+Value BGP_NEIGH (\d+\.\d+\.\d+\.\d+)
+Value NEIGH_AS (\d+)
+Value MSG_RCVD (\d+)
+Value MSG_SENT (\d+)
+Value IN_QUEUE (\d+)
+Value OUT_QUEUE (\d+)
+Value UP_DOWN (\S+)
+Value STATE_PFXRCD (\S+)
+
+
+Start
+  ^.*\s+${ROUTER_ID}.*number\s+${LOCAL_AS} -> Begin
+
+Begin
+  ^Neighbor\s+.*Spk -> Neighbors
+  
+Neighbors
+  ^${BGP_NEIGH}\s+\d+\s+${NEIGH_AS}\s+${MSG_RCVD}\s+${MSG_SENT}\s+\d+\s+${IN_QUEUE}\s+${OUT_QUEUE}\s+${UP_DOWN}\s+${STATE_PFXRCD} -> Record
+  ^\s+$$
+  ^$$
+  ^.* -> Error "LINE NOT FOUND"
+  
+EOF

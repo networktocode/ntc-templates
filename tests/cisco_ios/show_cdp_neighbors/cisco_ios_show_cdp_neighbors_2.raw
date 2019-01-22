@@ -1,0 +1,25 @@
+Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
+                  S - Switch, H - Host, I - IGMP, r - Repeater, P - Phone,
+                  D - Remote, C - CVTA, M - Two-port Mac Relay
+
+Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
+asr1002-2.some.example.com
+                 Ten 1/1/3         173              R I   ASR1002-H Ten 0/1/0
+vWAAS3b          Ten 1/0/6         140               H    OE-VWAAS  Virtual 2/0
+vWAAS3b          Ten 1/0/6         140               H    OE-VWAAS  Virtual 1/0
+vWAAS4b          Ten 1/0/7         162               H    OE-VWAAS  Virtual 2/0
+vWAAS4b          Ten 1/0/7         162               H    OE-VWAAS  Virtual 1/0
+NEXTGENLABSWT01.some.example.com
+                 Gig 0/0           130              S I   WS-C3560X Gig 0/23
+router01.some.example.com
+                 Ten 1/0/4         172            R B S I CISCO2911 Gig 0/0
+9300mgig-1.some.example.com
+                 Ten 1/1/6         155             R S I  C9300-24U Ten 1/1/7
+9300mgig-1.some.example.com
+                 Ten 1/1/7         140             R S I  C9300-24U Ten 1/1/6
+9500-1.some.example.com
+                 Ten 1/1/8         170             R S I  C9500-40X Ten 2/0/36
+9300mgig-2.some.example.com
+                 Ten 1/1/1         148             R S I  C9300-24U Ten 1/1/2
+
+Total cdp entries displayed : 11

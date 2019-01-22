@@ -1,0 +1,9 @@
+Value IP_ADDRESS ((?:[0-9]{1,3}\.){3}[0-9]{1,3})
+Value TYPE (\S+)
+Value VERSION (\S+)
+
+Start
+  ^IP\sAddress\s+Type\s+Version\s*$$
+  ^${IP_ADDRESS}\s+${TYPE}\s+${VERSION}\s*$$ -> Record
+  ^\s*$$
+  ^. -> Error
