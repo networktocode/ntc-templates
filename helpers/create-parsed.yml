@@ -32,7 +32,7 @@
           connection: "offline"
           file: "{{ root_directory }}/tests/{{ os }}/{{ command_dash }}/{{ os }}_{{ command_dash}}{{ num | default('') }}.raw"
           platform: '{{ os }}'
-          command: 'show controllers hundredgige all'
+          command: '{{ command }}'
           template_dir: '{{ root_directory }}/templates/'
         register: "value"
 
