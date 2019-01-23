@@ -33,8 +33,8 @@ Value LOCAL_ADDRESS (.*)
 Value LOCAL_PORT (\d+)
 Value REMOTE_ADDRESS (.*)
 Value REMOTE_PORT (\d+)
-Value LAST_RESET (\S+)
-Value LAST_RESET_REASON (.*)
+Value LAST_RESET (.+?)
+Value LAST_RESET_REASON (.+?)
 Value LAST_NOTIFICATION_SENT (\S+)
 Value ERROR_CODE (.+?)
 Value LAST_NOTIFICATION_RECEIVED (\S+)
@@ -124,8 +124,7 @@ AFI
 Connection
   ^\s+Local\s+host\:\s+${LOCAL_ADDRESS}\,\s+Local\s+port\:\s+${LOCAL_PORT}
   ^\s+Foreign\s+host\:\s+${REMOTE_ADDRESS}\,\s+Foreign\s+port\:\s+${REMOTE_PORT}
-  ^\s+Last\s+reset\s+${LAST_RESET}\,\s+due\s+to\s+${LAST_RESET_REASON}
-  ^\s+Last\s+reset\s+${LAST_RESET}
+  ^\s+Last\s+reset\s+${LAST_RESET}(?:\,\s+due\s+to\s+${LAST_RESET_REASON})?\s*$$
   ^\s+External\s+BGP\s+neighbor\s+not\s+directly
   ^\s+Time\s+since\s+last\s+notification\s+sent\s+to\s+neighbor:\s+${LAST_NOTIFICATION_SENT}
   ^\s+Error\s+Code:\s+${ERROR_CODE}\s*$$
