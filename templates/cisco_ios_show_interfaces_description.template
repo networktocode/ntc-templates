@@ -8,4 +8,4 @@ Start
 
 Begin
   ^${PORT}\s+${STATUS}\s+${PROTOCOL}\s+${DESCRIP}$$ -> Record
-  
+  ^.*$$ -> Error
