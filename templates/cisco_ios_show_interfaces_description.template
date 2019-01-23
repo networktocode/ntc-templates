@@ -1,0 +1,11 @@
+Value PORT (\S+)
+Value STATUS (up|down|admin down)
+Value PROTOCOL (up|down)
+Value DESCRIP (.+?)
+
+Start
+  ^Interface -> Begin
+
+Begin
+  ^${PORT}\s+${STATUS}\s+${PROTOCOL}\s+${DESCRIP}$$ -> Record
+  ^.*$$ -> Error
