@@ -88,7 +88,7 @@ AFI
   ^\s+BGP\s+neighbor\s+version\s+${VERSION}\s*$$
   ^\s+Update\s+group:
   ^\s+Route-Reflector\s+${ROUTE_REFLECTOR_ROLE}\s*$$
-  ^\s+Default\s+information\s+originate\:\s+${DEFAULT_ORIGINATE}
+  ^\s+Default\s+information\s+originate\:\s+${DEFAULT_ORIGINATE}\s*$$
   ^\s+AF-dependent capabilities
   ^\s+Graceful\s+Restart\s+capability
   ^\s+Local\s+restart\s+time\s+is
