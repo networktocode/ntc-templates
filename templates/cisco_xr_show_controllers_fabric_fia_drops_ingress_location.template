@@ -1,0 +1,63 @@
+Value FIA (\S+)
+Value CATEGORY (\S+)
+Value FROM_SPAUI_DROP_0 (\d+)
+Value ACCPT_TBL_0 (\d+)
+Value CTL_LEN_0 (\d+)
+Value SHORT_PKT_0 (\d+)
+Value MAX_PKT_LEN_0 (\d+)
+Value MIN_PKT_LEN_0 (\d+)
+Value FROM_SPAUI_DROP_1 (\d+)
+Value ACCPT_TBL_1 (\d+)
+Value CTL_LEN_1 (\d+)
+Value SHORT_PKT_1 (\d+)
+Value MAX_PKT_LEN_1 (\d+)
+Value MIN_PKT_LEN_1 (\d+)
+Value TAIL_DRP (\d+)
+Value VQI_DRP (\d+)
+Value HEADER_PARSING_DRP (\d+)
+Value PW_TO_NI_DRP (\d+)
+Value NI_FROM_PW_DRP (\d+)
+Value SP0_CRC_ERR (\d+)
+Value SP0_BAD_ALIGN (\d+)
+Value SP0_BAD_CODE (\d+)
+Value SP0_ALIGN_FAIL (\d+)
+Value SP0_PROT_ERR (\d+)
+Value SP1_CRC_ERR (\d+)
+Value SP1_BAD_ALIGN (\d+)
+Value SP1_BAD_CODE (\d+)
+Value SP1_ALIGN_FAIL (\d+)
+Value SP1_PROT_ERR (\d+)
+
+Start
+  ^ ?\*+ ${FIA} \*+
+  ^Category: ${CATEGORY}
+  ^ +From Spaui Drop-0 +${FROM_SPAUI_DROP_0}
+  ^ +accpt tbl-0 +${ACCPT_TBL_0}
+  ^ +ctl len-0 +${CTL_LEN_0}
+  ^ +short pkt-0 +${SHORT_PKT_0}
+  ^ +max pkt len-0 +${MAX_PKT_LEN_0}
+  ^ +min pkt len-0 +${MIN_PKT_LEN_0}
+  ^ +From Spaui Drop-1 +${FROM_SPAUI_DROP_1}
+  ^ +accpt tbl-1 +${ACCPT_TBL_1}
+  ^ +ctl len-1 +${CTL_LEN_1}
+  ^ +short pkt-1 +${SHORT_PKT_1}
+  ^ +max pkt len-1 +${MAX_PKT_LEN_1}
+  ^ +min pkt len-1 +${MIN_PKT_LEN_1}
+  ^ + Tail drp +${TAIL_DRP}
+  ^ +Vqi drp +${VQI_DRP}
+  ^ +Header parsing drp +${HEADER_PARSING_DRP}
+  ^ +pw to ni drp +${PW_TO_NI_DRP}
+  ^ +ni from pw drp +${NI_FROM_PW_DRP}
+  ^ +sp0 crc err +${SP0_CRC_ERR}
+  ^ +sp0 bad align +${SP0_BAD_ALIGN}
+  ^ +sp0 bad code +${SP0_BAD_CODE}
+  ^ +sp0 align fail +${SP0_ALIGN_FAIL}
+  ^ +sp0 prot err +${SP0_PROT_ERR}
+  ^ +sp1 crc err +${SP1_CRC_ERR}
+  ^ +sp1 bad align +${SP1_BAD_ALIGN}
+  ^ +sp1 bad code +${SP1_BAD_CODE}
+  ^ +sp1 align fail +${SP1_ALIGN_FAIL}
+  ^ +sp1 prot err +${SP1_PROT_ERR} -> Record
+  ^\s+$$
+  ^$$
+  ^.* -> Error "LINE NOT FOUND"
