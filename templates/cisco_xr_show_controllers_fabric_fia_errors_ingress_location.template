@@ -18,24 +18,24 @@ Value NI_BAD_CRC32 (\d+)
 Value NI_CRC32_CORRUPT (\d+)
 
 Start
-  ^ ?\*+ ${FIA} \*+
-  ^Category: ${CATEGORY}
-  ^ +To Xbar Uc Crc-0 +${TO_XBAR_UC_CRC_0}
-  ^ +To Xbar Uc Crc-1 +${TO_XBAR_UC_CRC_1}
-  ^ +To Xbar Uc Crc-2 +${TO_XBAR_UC_CRC_2}
-  ^ +To Xbar Uc Crc-3 +${TO_XBAR_UC_CRC_3}
-  ^ +To Xbar Mc Crc-0 +${TO_XBAR_MC_CRC_0}
-  ^ +To Xbar Mc Crc-1 +${TO_XBAR_MC_CRC_1}
-  ^ +To Xbar Mc Crc-2 +${TO_XBAR_MC_CRC_2}
-  ^ +To Xbar Mc Crc-3 +${TO_XBAR_MC_CRC_3}
-  ^ +nb pa read data err +${NB_PA_READ_DATA_ERR}
-  ^ +pa header err +${PA_HEADER_ERR}
-  ^ +pa crc16 err +${PA_CRC16_ERR}
-  ^ +pa crc32 err +${PA_CRC32_ERR}
-  ^ +pa to tf err +${PA_TO_TF_ERR}
-  ^ +ab overflow req lost +${AB_OVERFLOW_REQ_LOST}
-  ^ +ni bad crc32 +${NI_BAD_CRC32}
-  ^ +ni crc32 corrupt +${NI_CRC32_CORRUPT} -> Record
-  ^\s+$$
-  ^$$
+  ^\s*\*+\s+\S+ -> Continue.Record
+  ^\s*\*+\s+${FIA}\s+\*+
+  ^Category:\s+${CATEGORY}
+  ^\s+To\s+Xbar\s+Uc\s+Crc-0\s+${TO_XBAR_UC_CRC_0}
+  ^\s+To\s+Xbar\s+Uc\s+Crc-1\s+${TO_XBAR_UC_CRC_1}
+  ^\s+To\s+Xbar\s+Uc\s+Crc-2\s+${TO_XBAR_UC_CRC_2}
+  ^\s+To\s+Xbar\s+Uc\s+Crc-3\s+${TO_XBAR_UC_CRC_3}
+  ^\s+To\s+Xbar\s+Mc\s+Crc-0\s+${TO_XBAR_MC_CRC_0}
+  ^\s+To\s+Xbar\s+Mc\s+Crc-1\s+${TO_XBAR_MC_CRC_1}
+  ^\s+To\s+Xbar\s+Mc\s+Crc-2\s+${TO_XBAR_MC_CRC_2}
+  ^\s+To\s+Xbar\s+Mc\s+Crc-3\s+${TO_XBAR_MC_CRC_3}
+  ^\s+nb\s+pa\s+read\s+data\s+err\s+${NB_PA_READ_DATA_ERR}
+  ^\s+pa\s+header\s+err\s+${PA_HEADER_ERR}
+  ^\s+pa\s+crc16\s+err\s+${PA_CRC16_ERR}
+  ^\s+pa\s+crc32\s+err\s+${PA_CRC32_ERR}
+  ^\s+pa\s+to\s+tf\s+err\s+${PA_TO_TF_ERR}
+  ^\s+ab\s+overflow\s+req lost\s+${AB_OVERFLOW_REQ_LOST}
+  ^\s+ni\s+bad\s+crc32\s+${NI_BAD_CRC32}
+  ^\s+ni\s+crc32\s+corrupt\s+${NI_CRC32_CORRUPT}
+  ^\s*$$
   ^.* -> Error "LINE NOT FOUND"
