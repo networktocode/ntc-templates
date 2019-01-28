@@ -1,3 +1,4 @@
+Value Filldown LOCATION (\S+?)
 Value FLOWTYPE (\S+)
 Value POLICER (\d+)
 Value TYPE (\S+)
@@ -8,16 +9,17 @@ Value DROPPED (\d+)
 Value TOS_VALUE (\d+)
 
 Start
+  ^\s+Node\s+${LOCATION}:
   ^FlowType\s+Policer\s+Type\s+Cur.\s+Rate\s+Def.\s+Rate\s+Accepted\s+Dropped\s+TOS\s+Value -> Parse
 
 Parse
   ^${FLOWTYPE}\s+${POLICER}\s+${TYPE}\s+${CUR_RATE}\s+${DEF_RATE}\s+${ACCEPTED}\s+${DROPPED}\s+${TOS_VALUE} -> Record
   ^statistics:
-  ^Packets accepted by deleted entries:
-  ^Packets dropped by deleted entries:
-  ^Run out of statistics counter errors:
-  ^Statistics last cleared:
+  ^Packets\s+accepted\s+by\s+deleted\s+entries:
+  ^Packets\s+dropped\s+by\s+deleted\s+entries:
+  ^Run\s+out\s+of\s+statistics\s+counter\s+errors:
+  ^Statistics\s+last\s+cleared:
   ^[ -]*$$
-  ^\s+$$
-  ^$$
   ^.* -> Error "LINE NOT FOUND"
+
+EOF
