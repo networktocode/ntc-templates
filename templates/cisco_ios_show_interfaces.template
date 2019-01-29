@@ -15,6 +15,10 @@ Value ENCAPSULATION (.+?)
 Value QUEUE_STRATEGY (.+)
 Value INPUT_RATE (\d+)
 Value OUTPUT_RATE (\d+)
+Value INPUT_PACKETS (\d+)
+Value OUTPUT_PACKETS (\d+)
+Value INPUT_ERRORS (\d+)
+Value OUTPUT_ERRORS (\d+)
 
 Start
   ^\S+\s+is\s+.+?,\s+line\s+protocol.*$$ -> Continue.Record
@@ -29,3 +33,7 @@ Start
   ^\s+${DUPLEX},\s+${SPEED},.+$$
   ^.*input\s+rate\s+${INPUT_RATE}.+$$
   ^.*output\s+rate\s+${OUTPUT_RATE}.+$$
+  ^\s+${INPUT_PACKETS}\s+packets\s+input,\s+\d+\s+bytes,\s+\d+\s+no\s+buffer\s*$$
+  ^\s+${INPUT_ERRORS}\s+input\s+errors,\s+\d+\s+CRC,\s+\d+\s+frame,\s+\d+\s+overrun,\s+\d+\s+ignored\s*$$
+  ^\s+${OUTPUT_PACKETS}\s+packets\s+output,\s+\d+\s+bytes,\s+\d+\s+underruns\s*$$
+  ^\s+${OUTPUT_ERRORS}\s+output\s+errors,\s+\d+\s+collisions,\s+\d+\s+interface\s+resets\s*$$

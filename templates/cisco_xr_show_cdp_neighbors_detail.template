@@ -5,14 +5,15 @@ Value PLATFORM (.*)
 Value REMOTE_PORT (.*)
 Value LOCAL_PORT (.*)
 Value VERSION (.*)
+Value CAPABILITIES (.*)
 
 Start
   ^Device ID: ${DEST_HOST}
   ^SysName : ${SYSNAME}
   ^Entry address\(es\): -> GetIP
-  ^Platform: ${PLATFORM},
-  ^Interface: ${REMOTE_PORT}
-  ^Port ID \(outgoing port\): ${LOCAL_PORT}
+  ^Platform: ${PLATFORM},  Capabilities: ${CAPABILITIES}
+  ^Interface: ${LOCAL_PORT}
+  ^Port ID \(outgoing port\): ${REMOTE_PORT}
   ^Version : -> GetVersion
 
 GetIP

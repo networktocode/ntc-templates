@@ -1,0 +1,28 @@
+Value VERSION (\S+)
+Value UPTIME (.+)
+Value LOCATION (\S+)
+Value HARDWARE (\S+)
+Value BUILD_HOST (\S+)
+
+Start
+  ^.+UTC
+  ^Cisco.+Software.+Version.+
+  ^Copyright\s\(c\).+
+  ^Build\s+Information: -> Build_Info
+  ^[Cc]isco\s${HARDWARE}\s.+
+  ^System\suptime\sis\s${UPTIME} -> Record
+  ^\s+$$
+  ^$$
+  ^.* -> Error "Line not found"
+  
+Build_Info
+  ^\s+Built\sBy.+
+  ^\s+Built\sOn.+
+  ^\s+Build\sHost\s+:\s+${BUILD_HOST}
+  ^\s+Workspace\s+:\s\S+
+  ^\s+Version\s+:\s${VERSION}
+  ^\s+Location\s+:\s${LOCATION}
+  ^$$ -> Start
+  ^\s+$$
+  ^$$
+  ^.* -> Error "Line not found"
