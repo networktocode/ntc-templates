@@ -1,8 +1,11 @@
-Value Required ADDRESS ([A-Fa-f0-9]*:[A-Fa-f0-9]*:[A-Fa-f0-9:]*)
-Value Required AGE ([-\d+]+)
-Value Required MAC (\S+)
-Value Required TYPE (\S+)
+Value ADDRESS (\S+)
+Value AGE ([-\d]+)
+Value MAC (\S+)
+Value TYPE (\S+)
 Value INTERFACE (\S+)
 
 Start
+  ^IPv6\s+Address\s+Age\s+Link-layer\s+Addr\s+State\s+Interface\s*$$
   ^${ADDRESS}\s+${AGE}\s+${MAC}\s+${TYPE}\s+${INTERFACE} -> Record
+  ^\s*$$
+  ^. -> Error
