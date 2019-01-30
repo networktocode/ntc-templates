@@ -1,11 +1,15 @@
-Value switch (\d+)
-Value status1 (\w+)
-Value status2 (\w+)
-Value neighbor1 (\w+)
-Value neighbor2 (\w+)
+Value SWITCH (\d+)
+Value STATUS1 (\w+)
+Value STATUS2 (\w+)
+Value NEIGHBOR1 (\w+)
+Value NEIGHBOR2 (\w+)
 
 Start
   ^\s*Stack\s+Port\s+Status -> Stack
 
 Stack
-  ^\s+${switch}\s+${status1}\s+${status2}\s+${neighbor1}\s+${neighbor2} -> Record
+  ^ *Switch\# +Port +1 +Port +2 +Port +1 +Port +2
+  ^-+$$
+  ^ *${SWITCH} +${STATUS1} +${STATUS2} +${NEIGHBOR1} +${NEIGHBOR2} -> Record
+  ^ *$$ -> Start
+  ^ -> Error
