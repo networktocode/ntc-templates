@@ -1,0 +1,16 @@
+Switch/Stack Mac Address : 4c4e.3573.ac00
+                                           H/W   Current
+Switch#  Role   Mac Address     Priority Version  State 
+----------------------------------------------------------
+*1       Master 4c4e.3573.ac00     15     3       Ready               
+ 2       Member 4c4e.3573.7b00     8      3       Ready               
+ 3       Member 4c4e.3573.ac80     7      3       Ready               
+
+
+
+         Stack Port Status             Neighbors     
+Switch#  Port 1     Port 2           Port 1   Port 2 
+--------------------------------------------------------
+  1        Ok         Ok                3        2 
+  2        Ok         Ok                1        3 
+  3        Ok         Ok                2        1 
