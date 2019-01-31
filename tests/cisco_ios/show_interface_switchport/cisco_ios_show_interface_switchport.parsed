@@ -1,0 +1,32 @@
+---
+parsed_sample:
+
+    - interface: "Et0/1"
+      switchport: "Enabled"
+      admin_mode: "static access"
+      oper_mode: "static access"
+      dtp: "Off"
+      access_vlan: "30"
+      native_vlan: "1"
+      voice_vlan: "31"
+      trunking_vlans: "ALL"
+
+    - interface: "Et0/2"
+      switchport: "Enabled"
+      admin_mode: "trunk"
+      oper_mode: "trunk"
+      dtp: "On"
+      access_vlan: "1"
+      native_vlan: "7"
+      voice_vlan: "none"
+      trunking_vlans: "7,43,56,78,90,99-102"
+
+    - interface: "Et0/3"
+      switchport: "Enabled"
+      admin_mode: "dynamic auto"
+      oper_mode: "down"
+      dtp: "On"
+      access_vlan: "1"
+      native_vlan: "1"
+      voice_vlan: "none"
+      trunking_vlans: "ALL"

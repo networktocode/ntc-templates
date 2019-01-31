@@ -1,0 +1,14 @@
+Value Required INTERFACE (\S+)
+Value SWITCHPORT (\S+)
+Value MODE (\S+)
+Value ACCESS_VLAN (\S+)
+Value NATIVE_VLAN (\S+)
+Value TRUNKING_VLANS (\S+)
+
+Start
+  ^Name: ${INTERFACE}
+  ^\s*Switchport: ${SWITCHPORT}
+  ^\s*Operational Mode: ${MODE}
+  ^\s*Access Mode VLAN: ${ACCESS_VLAN}
+  ^\s*Trunking Native Mode VLAN: ${NATIVE_VLAN}
+  ^\s*Trunking VLANs Allowed: ${TRUNKING_VLANS} -> Record

@@ -1,0 +1,20 @@
+Value Required INTERFACE (\S+)
+Value SWITCHPORT (\S+)
+Value ADMIN_MODE (.+)
+Value OPER_MODE (.+)
+Value DTP (\S+)
+Value ACCESS_VLAN (\S+)
+Value NATIVE_VLAN (\S+)
+Value VOICE_VLAN (\S+)
+Value TRUNKING_VLANS (\S+)
+
+Start
+  ^Name: ${INTERFACE}
+  ^Switchport: ${SWITCHPORT}
+  ^Administrative Mode: ${ADMIN_MODE}
+  ^Operational Mode: ${OPER_MODE}
+  ^Negotiation of Trunking: ${DTP}
+  ^Access Mode VLAN: ${ACCESS_VLAN}
+  ^Trunking Native Mode VLAN: ${NATIVE_VLAN}
+  ^Voice VLAN: ${VOICE_VLAN}
+  ^Trunking VLANs Enabled: ${TRUNKING_VLANS} -> Record
