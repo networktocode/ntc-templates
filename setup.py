@@ -30,6 +30,7 @@ config = {
     'url': 'https://github.com/networktocode/ntc-templates',
     'install_requires': [
         'textfsm',
+        'PyYAML',
         'terminal',
     ],
     'classifiers': ['Development Status :: 4 - Beta',
