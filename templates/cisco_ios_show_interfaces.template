@@ -32,7 +32,7 @@ Start
   ^\s+Internet\s+address\s+is\s+${IP_ADDRESS}\s*$$
   ^\s+MTU\s+${MTU}.*BW\s+${BANDWIDTH}.*DLY\s+${DELAY},\s*$$
   ^\s+Encapsulation\s+${ENCAPSULATION},.+$$
-  ^\s+Last\s+input\s+${LAST_INPUT},\s+output\s+${LAST_OUTPUT},\s+output\s+hang\s+${LAST_OUTPUT_HANG}*$$
+  ^\s+Last\s+input\s+${LAST_INPUT},\s+output\s+${LAST_OUTPUT},\s+output\s+hang\s+${LAST_OUTPUT_HANG}\s*$$
   ^\s+Queueing\s+strategy:\s+${QUEUE_STRATEGY}\s*$$
   ^\s+${DUPLEX},\s+${SPEED},.+$$
   ^.*input\s+rate\s+${INPUT_RATE}.+$$
