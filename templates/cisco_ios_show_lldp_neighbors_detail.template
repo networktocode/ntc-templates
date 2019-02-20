@@ -60,6 +60,7 @@ IgnoreDescription
 Med
   ^\s+\S+
   ^\s*$$
+  ^\s*Total\s+entries\s+displayed -> Record
   ^\s*-+\s*$$ -> Continue.Record
   ^\s*-+\s*$$ -> Start
   ^.* -> Error
