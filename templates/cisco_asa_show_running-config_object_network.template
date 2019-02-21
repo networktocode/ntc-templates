@@ -1,0 +1,21 @@
+Value Required NAME (\S+)
+Value DESC (.+)
+Value TYPE ([hostubnerag]+)
+Value HOST (\S+)
+Value NETWORK (\S+)
+Value MASK (\S+)
+Value CIDR (\/\d+)
+Value START_IP (\S+)
+Value END_IP (\S+)
+
+
+Start
+  ^object\s+network -> Continue.Record
+  ^object\s+network\s+${NAME}\s*
+  ^\s+description\s+${DESC}\s*
+  ^\s+${TYPE} -> Continue
+  ^\s+subnet\s+${NETWORK}\s+${MASK}\s*
+  ^\s+subnet\s+${NETWORK}${CIDR}\s*
+  ^\s+range\s+${START_IP}\s+${END_IP}\s*
+  ^\s+host\s+${HOST}\s*
+  ^. -> Error
