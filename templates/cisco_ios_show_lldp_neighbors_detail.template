@@ -2,7 +2,7 @@ Value LOCAL_INTERFACE (\S+)
 Value CHASSIS_ID (\S+)
 Value NEIGHBOR_PORT_ID (.*)
 Value NEIGHBOR_INTERFACE (.*)
-Value NEIGHBOR (\S+)
+Value NEIGHBOR (.+?)
 Value SYSTEM_DESCRIPTION (.*)
 Value CAPABILITIES (.*)
 Value MANAGEMENT_IP (\S+)
@@ -16,7 +16,9 @@ Start
   ^Chassis\s+id:\s+${CHASSIS_ID}\s*$$
   ^Port\s+id:\s+${NEIGHBOR_PORT_ID}\s*$$
   ^Port\s+Description:\s+${NEIGHBOR_INTERFACE}\s*$$
-  ^System\s+Name(?::\s+${NEIGHBOR}|\s+-\s+not\s+advertised)\s*$$
+  ^System\s+Name(\s+-\s+not\s+advertised)\s*$$
+  ^System\s+Name:?\s*$$
+  ^System\s+Name(:\s+${NEIGHBOR})\s*$$
   ^System\s+Description -> GetDescription
   ^Time
   ^System\s+Capabilities
@@ -58,6 +60,7 @@ IgnoreDescription
 Med
   ^\s+\S+
   ^\s*$$
+  ^\s*Total\s+entries\s+displayed -> Record
   ^\s*-+\s*$$ -> Continue.Record
   ^\s*-+\s*$$ -> Start
   ^.* -> Error
