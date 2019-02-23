@@ -182,8 +182,8 @@ cisco_ios_show_ip_arp.template, .*, cisco_ios, sh[[ow]] i[[p]] a[[rp]]
 cisco_ios_show_ip_bgp.template, .*, cisco_ios, sh[[ow]] i[[p]] bgp
 cisco_ios_show_tacacs.template, .*, cisco_ios, sh[[ow]] tacacs
 cisco_ios_show_clock.template, .*, cisco_ios, sh[[ow]] clo[[ck]]
-cisco_ios_show_vlan.template, .*, cisco_ios, sh[[ow]] vlan
 cisco_ios_show_boot.template, .*, cisco_ios, sh[[ow]] boot
+cisco_ios_show_vlan.template, .*, cisco_ios, sh[[ow]] vlan
 cisco_ios_show_vrf.template, .*, cisco_ios, sh[[ow]] vrf
 cisco_ios_dir.template,  .*, cisco_ios, dir
 
@@ -234,8 +234,9 @@ cisco_wlc_ssh_show_ap_config_general.template, .*, cisco_wlc_ssh, sh[[ow]] ap co
 cisco_wlc_ssh_show_ap_summary.template, .*, cisco_wlc_ssh, sh[[ow]] ap sum[[mary]]
 cisco_wlc_ssh_show_sysinfo.template, .*, cisco_wlc_ssh, sh[[ow]] sysi[[nfo]]
 
-cisco_xr_show_controllers_fabric_fia_errors_ingress_location.template, .*, cisco_xr, sh[[ow]] contr[[ollers]] fabric fia errors
-cisco_xr_show_lpts_pifib_hardware_police_location.template, .*, cisco_xr, sh[[ow]] lpts pifib hardware police loc[[ation]].*
+cisco_xr_show_controllers_fabric_fia_errors_ingress_location.template, .*, cisco_xr, sh[[ow]] contr[[ollers]] fabric fi[[a]] err[[ors]] in[[gress]] loc[[ation]]
+cisco_xr_show_controllers_fabric_fia_errors_egress_location.template, .*, cisco_xr, sh[[ow]] contr[[ollers]] fabric fi[[a]] err[[ors]] eg[[ress]] loc[[ation]]
+cisco_xr_show_lpts_pifib_hardware_police_location.template, .*, cisco_xr, sh[[ow]] lpts pifib hardware police loc[[ation]]
 cisco_xr_show_controllers_HundredGigabitEthernet.template, .*, cisco_xr, sh[[ow]] contr[[ollers]] Hu[[ndredGigabitEthernet]]
 cisco_xr_show_bgp_vrf_all_ipv4_unicast_summary.template, .*, cisco_xr, sh[[ow]] bg[[p]] v[[rf]] all ip[[v4]] uni[[cast]] summ[[ary]]
 cisco_xr_admin_show_controller_fabric_health.template, .*, cisco_xr, adm[[in]] sh[[ow]] controller fab[[ric]] hea[[lth]]
