@@ -29,35 +29,35 @@ Value MC_VL2_SRC1_BUFFER_FULL_DRP (\d+)
 Value MC_VL3_SRC1_BUFFER_FULL_DRP (\d+)
 
 Start
-  ^ ?\*+ ${FIA} \*+
-  ^Category: ${CATEGORY}
-  ^ +From Xbar Uc Crc-0 +${FROM_XBAR_UC_CRC_0}
-  ^ +From Xbar Uc Crc-1 +${FROM_XBAR_UC_CRC_1}
-  ^ +From Xbar Uc Crc-2 +${FROM_XBAR_UC_CRC_2}
-  ^ +From Xbar Uc Crc-3 +${FROM_XBAR_UC_CRC_3}
-  ^ +From Xbar Uc Drp-0 +${FROM_XBAR_UC_DRP_0}
-  ^ +From Xbar Uc Drp-1 +${FROM_XBAR_UC_DRP_1}
-  ^ +From Xbar Uc Drp-2 +${FROM_XBAR_UC_DRP_2}
-  ^ +From Xbar Uc Drp-3 +${FROM_XBAR_UC_DRP_3}
-  ^ +From Xbar Mc Crc-0 +${FROM_XBAR_MC_CRC_0}
-  ^ +From Xbar Mc Crc-1 +${FROM_XBAR_MC_CRC_1}
-  ^ +From Xbar Mc Crc-2 +${FROM_XBAR_MC_CRC_2}
-  ^ +From Xbar Mc Crc-3 +${FROM_XBAR_MC_CRC_3}
-  ^ +From Xbar Mc Drp-0 +${FROM_XBAR_MC_DRP_0}
-  ^ +From Xbar Mc Drp-1 +${FROM_XBAR_MC_DRP_1}
-  ^ +From Xbar Mc Drp-2 +${FROM_XBAR_MC_DRP_2}
-  ^ +From Xbar Mc Drp-3 +${FROM_XBAR_MC_DRP_3}
-  ^ +Uc dq pkt-len-crc\/RO-seq\/len error drp +${UC_DQ_PKT_LEN_CRC_RO_SEQ_LEN_ERROR_DRP}
-  ^ +Uc eq pkt-len-crc\/lookup-drp +${UC_EQ_PKT_LEN_CRC_LOOKUP_DRP}
-  ^ +Mc rf crc drp +${MC_RF_CRC_DRP}
-  ^ +Mc vl0 src0 buffer full drp +${MC_VL0_SRC0_BUFFER_FULL_DRP}
-  ^ +Mc vl1 src0 buffer full drp +${MC_VL1_SRC0_BUFFER_FULL_DRP}
-  ^ +Mc vl2 src0 buffer full drp +${MC_VL2_SRC0_BUFFER_FULL_DRP}
-  ^ +Mc vl3 src0 buffer full drp +${MC_VL3_SRC0_BUFFER_FULL_DRP}
-  ^ +Mc vl0 src1 buffer full drp +${MC_VL0_SRC1_BUFFER_FULL_DRP}
-  ^ +Mc vl1 src1 buffer full drp +${MC_VL1_SRC1_BUFFER_FULL_DRP}
-  ^ +Mc vl2 src1 buffer full drp +${MC_VL2_SRC1_BUFFER_FULL_DRP}
-  ^ +Mc vl3 src1 buffer full drp +${MC_VL3_SRC1_BUFFER_FULL_DRP} -> Record
-  ^\s+$$
-  ^$$
+  ^\s*\*+\s+\S+\s+\*+ -> Continue.Record
+  ^\s*\*+\s+${FIA}\s+\*+
+  ^Category:\s+${CATEGORY}
+  ^\s+From\s+Xbar\s+Uc\s+Crc-0\s+${FROM_XBAR_UC_CRC_0}
+  ^\s+From\s+Xbar\s+Uc\s+Crc-1\s+${FROM_XBAR_UC_CRC_1}
+  ^\s+From\s+Xbar\s+Uc\s+Crc-2\s+${FROM_XBAR_UC_CRC_2}
+  ^\s+From\s+Xbar\s+Uc\s+Crc-3\s+${FROM_XBAR_UC_CRC_3}
+  ^\s+From\s+Xbar\s+Uc\s+Drp-0\s+${FROM_XBAR_UC_DRP_0}
+  ^\s+From\s+Xbar\s+Uc\s+Drp-1\s+${FROM_XBAR_UC_DRP_1}
+  ^\s+From\s+Xbar\s+Uc\s+Drp-2\s+${FROM_XBAR_UC_DRP_2}
+  ^\s+From\s+Xbar\s+Uc\s+Drp-3\s+${FROM_XBAR_UC_DRP_3}
+  ^\s+From\s+Xbar\s+Mc\s+Crc-0\s+${FROM_XBAR_MC_CRC_0}
+  ^\s+From\s+Xbar\s+Mc\s+Crc-1\s+${FROM_XBAR_MC_CRC_1}
+  ^\s+From\s+Xbar\s+Mc\s+Crc-2\s+${FROM_XBAR_MC_CRC_2}
+  ^\s+From\s+Xbar\s+Mc\s+Crc-3\s+${FROM_XBAR_MC_CRC_3}
+  ^\s+From\s+Xbar\s+Mc\s+Drp-0\s+${FROM_XBAR_MC_DRP_0}
+  ^\s+From\s+Xbar\s+Mc\s+Drp-1\s+${FROM_XBAR_MC_DRP_1}
+  ^\s+From\s+Xbar\s+Mc\s+Drp-2\s+${FROM_XBAR_MC_DRP_2}
+  ^\s+From\s+Xbar\s+Mc\s+Drp-3\s+${FROM_XBAR_MC_DRP_3}
+  ^\s+Uc\s+dq\s+pkt-len-crc/RO-seq/len\s+error\s+drp\s+${UC_DQ_PKT_LEN_CRC_RO_SEQ_LEN_ERROR_DRP}
+  ^\s+Uc\s+eq\s+pkt-len-crc/lookup-drp\s+${UC_EQ_PKT_LEN_CRC_LOOKUP_DRP}
+  ^\s+Mc\s+rf\s+crc\s+drp\s+${MC_RF_CRC_DRP}
+  ^\s+Mc\s+vl0\s+src0\s+buffer\s+full\s+drp\s+${MC_VL0_SRC0_BUFFER_FULL_DRP}
+  ^\s+Mc\s+vl1\s+src0\s+buffer\s+full\s+drp\s+${MC_VL1_SRC0_BUFFER_FULL_DRP}
+  ^\s+Mc\s+vl2\s+src0\s+buffer\s+full\s+drp\s+${MC_VL2_SRC0_BUFFER_FULL_DRP}
+  ^\s+Mc\s+vl3\s+src0\s+buffer\s+full\s+drp\s+${MC_VL3_SRC0_BUFFER_FULL_DRP}
+  ^\s+Mc\s+vl0\s+src1\s+buffer\s+full\s+drp\s+${MC_VL0_SRC1_BUFFER_FULL_DRP}
+  ^\s+Mc\s+vl1\s+src1\s+buffer\s+full\s+drp\s+${MC_VL1_SRC1_BUFFER_FULL_DRP}
+  ^\s+Mc\s+vl2\s+src1\s+buffer\s+full\s+drp\s+${MC_VL2_SRC1_BUFFER_FULL_DRP}
+  ^\s+Mc\s+vl3\s+src1\s+buffer\s+full\s+drp\s+${MC_VL3_SRC1_BUFFER_FULL_DRP}
+  ^\s*$$
   ^.* -> Error "LINE NOT FOUND"

@@ -16,23 +16,23 @@ Value LISP_ENCAP_ERR_DROPS (\d+)
 Value LISP_DECAP_ERR_DROPS (\d+)
 
 Start
-  ^Node: ${LOCATION}
-  ^ +Unresolved drops     packets : +${UNRESOLVED_DROPS}
-  ^ +Unsupported drops    packets : +${UNSUPPORTED_DROPS}
-  ^ +Null0 drops          packets : +${NULL0_DROPS}
-  ^ +No route drops       packets : +${NO_ROUTE_DROPS}
-  ^ +No Adjacency drops   packets : +${NO_ADJACENCY_DROPS}
-  ^ +Checksum error drops packets : +${CHECKSUM_ERROR_DROPS}
-  ^ +RPF drops            packets : +${RPF_DROPS}
-  ^ +RPF suppressed drops packets : +${RPF_SUPPRESSED_DROPS}
-  ^ +RP destined drops    packets : +${RP_DESTINED_DROPS}
-  ^ +Discard drops        packets : +${DISCARD_DROPS}
-  ^ +GRE lookup drops     packets : +${GRE_LOOKUP_DROPS}
-  ^ +GRE processing drops packets : +${GRE_PROCESSING_DROPS}
-  ^ +LISP punt drops      packets : +${LISP_PUNT_DROPS}
-  ^ +LISP encap err drops packets : +${LISP_ENCAP_ERR_DROPS}
-  ^ +LISP decap err drops packets : +${LISP_DECAP_ERR_DROPS} -> Record
-  ^CEF Drop Statistics$$
-  ^\s+$$
-  ^$$
+  ^Node: -> Continue.Record
+  ^Node:\s+${LOCATION}
+  ^\s+Unresolved\s+drops\s+packets\s+:\s+${UNRESOLVED_DROPS}
+  ^\s+Unsupported\s+drops\s+packets\s+:\s+${UNSUPPORTED_DROPS}
+  ^\s+Null0\s+drops\s+packets\s+:\s+${NULL0_DROPS}
+  ^\s+No\s+route\s+drops\s+packets\s+:\s+${NO_ROUTE_DROPS}
+  ^\s+No\s+Adjacency\s+drops\s+packets\s+:\s+${NO_ADJACENCY_DROPS}
+  ^\s+Checksum\s+error\s+drops\s+packets\s+:\s+${CHECKSUM_ERROR_DROPS}
+  ^\s+RPF\s+drops\s+packets\s+:\s+${RPF_DROPS}
+  ^\s+RPF\s+suppressed\s+drops\s+packets\s+:\s+${RPF_SUPPRESSED_DROPS}
+  ^\s+RP\s+destined\s+drops\s+packets\s+:\s+${RP_DESTINED_DROPS}
+  ^\s+Discard\s+drops\s+packets\s+:\s+${DISCARD_DROPS}
+  ^\s+GRE\s+lookup\s+drops\s+packets\s+:\s+${GRE_LOOKUP_DROPS}
+  ^\s+GRE\s+processing\s+drops\s+packets\s+:\s+${GRE_PROCESSING_DROPS}
+  ^\s+LISP\s+punt\s+drops\s+packets\s+:\s+${LISP_PUNT_DROPS}
+  ^\s+LISP\s+encap\s+err\s+drops\s+packets\s+:\s+${LISP_ENCAP_ERR_DROPS}
+  ^\s+LISP\s+decap\s+err\s+drops\s+packets\s+:\s+${LISP_DECAP_ERR_DROPS}
+  ^CEF\s+Drop\s+Statistics\s*$$
+  ^\s*$$
   ^.* -> Error "LINE NOT FOUND"

@@ -29,35 +29,35 @@ Value SP1_ALIGN_FAIL (\d+)
 Value SP1_PROT_ERR (\d+)
 
 Start
-  ^ ?\*+ ${FIA} \*+
-  ^Category: ${CATEGORY}
-  ^ +From Spaui Drop-0 +${FROM_SPAUI_DROP_0}
-  ^ +accpt tbl-0 +${ACCPT_TBL_0}
-  ^ +ctl len-0 +${CTL_LEN_0}
-  ^ +short pkt-0 +${SHORT_PKT_0}
-  ^ +max pkt len-0 +${MAX_PKT_LEN_0}
-  ^ +min pkt len-0 +${MIN_PKT_LEN_0}
-  ^ +From Spaui Drop-1 +${FROM_SPAUI_DROP_1}
-  ^ +accpt tbl-1 +${ACCPT_TBL_1}
-  ^ +ctl len-1 +${CTL_LEN_1}
-  ^ +short pkt-1 +${SHORT_PKT_1}
-  ^ +max pkt len-1 +${MAX_PKT_LEN_1}
-  ^ +min pkt len-1 +${MIN_PKT_LEN_1}
-  ^ + Tail drp +${TAIL_DRP}
-  ^ +Vqi drp +${VQI_DRP}
-  ^ +Header parsing drp +${HEADER_PARSING_DRP}
-  ^ +pw to ni drp +${PW_TO_NI_DRP}
-  ^ +ni from pw drp +${NI_FROM_PW_DRP}
-  ^ +sp0 crc err +${SP0_CRC_ERR}
-  ^ +sp0 bad align +${SP0_BAD_ALIGN}
-  ^ +sp0 bad code +${SP0_BAD_CODE}
-  ^ +sp0 align fail +${SP0_ALIGN_FAIL}
-  ^ +sp0 prot err +${SP0_PROT_ERR}
-  ^ +sp1 crc err +${SP1_CRC_ERR}
-  ^ +sp1 bad align +${SP1_BAD_ALIGN}
-  ^ +sp1 bad code +${SP1_BAD_CODE}
-  ^ +sp1 align fail +${SP1_ALIGN_FAIL}
-  ^ +sp1 prot err +${SP1_PROT_ERR} -> Record
-  ^\s+$$
-  ^$$
+  ^\s*\*+\s+\S+ -> Continue.Record
+  ^\s*\*+\s+${FIA}\s+\*+
+  ^Category:\s+${CATEGORY}
+  ^\s+From\s+Spaui\s+Drop-0\s+${FROM_SPAUI_DROP_0}
+  ^\s+accpt\s+tbl-0\s+${ACCPT_TBL_0}
+  ^\s+ctl\s+len-0\s+${CTL_LEN_0}
+  ^\s+short\s+pkt-0\s+${SHORT_PKT_0}
+  ^\s+max\s+pkt\s+len-0\s+${MAX_PKT_LEN_0}
+  ^\s+min\s+pkt\s+len-0\s+${MIN_PKT_LEN_0}
+  ^\s+From\s+Spaui\s+Drop-1\s+${FROM_SPAUI_DROP_1}
+  ^\s+accpt\s+tbl-1\s+${ACCPT_TBL_1}
+  ^\s+ctl\s+len-1\s+${CTL_LEN_1}
+  ^\s+short\s+pkt-1\s+${SHORT_PKT_1}
+  ^\s+max\s+pkt\s+len-1\s+${MAX_PKT_LEN_1}
+  ^\s+min\s+pkt\s+len-1\s+${MIN_PKT_LEN_1}
+  ^\s+Tail\s+drp\s+${TAIL_DRP}
+  ^\s+Vqi\s+drp\s+${VQI_DRP}
+  ^\s+Header\s+parsing drp\s+${HEADER_PARSING_DRP}
+  ^\s+pw\s+to\s+ni\s+drp\s+${PW_TO_NI_DRP}
+  ^\s+ni\s+from\s+pw\s+drp\s+${NI_FROM_PW_DRP}
+  ^\s+sp0\s+crc\s+err\s+${SP0_CRC_ERR}
+  ^\s+sp0\s+bad\s+align\s+${SP0_BAD_ALIGN}
+  ^\s+sp0\s+bad\s+code\s+${SP0_BAD_CODE}
+  ^\s+sp0\s+align\s+fail\s+${SP0_ALIGN_FAIL}
+  ^\s+sp0\s+prot\s+err\s+${SP0_PROT_ERR}
+  ^\s+sp1\s+crc\s+err\s+${SP1_CRC_ERR}
+  ^\s+sp1\s+bad\s+align\s+${SP1_BAD_ALIGN}
+  ^\s+sp1\s+bad\s+code\s+${SP1_BAD_CODE}
+  ^\s+sp1\s+align\s+fail\s+${SP1_ALIGN_FAIL}
+  ^\s+sp1\s+prot\s+err\s+${SP1_PROT_ERR}
+  ^\s*$$
   ^.* -> Error "LINE NOT FOUND"

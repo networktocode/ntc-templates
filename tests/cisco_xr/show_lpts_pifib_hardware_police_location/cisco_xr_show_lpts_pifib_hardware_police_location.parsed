@@ -6,6 +6,7 @@ parsed_sample:
     def_rate: '2500'
     dropped: '0'
     flowtype: unconfigured-default
+    location: '0/7/CPU0'
     policer: '100'
     tos_value: '01234567'
     type: Static
@@ -14,6 +15,7 @@ parsed_sample:
     def_rate: '10000'
     dropped: '0'
     flowtype: L2TPv2-fragment
+    location: '0/7/CPU0'
     policer: '185'
     tos_value: '01234567'
     type: Static
@@ -22,6 +24,7 @@ parsed_sample:
     def_rate: '2500'
     dropped: '0'
     flowtype: Fragment
+    location: '0/7/CPU0'
     policer: '101'
     tos_value: '01234567'
     type: Static
@@ -30,6 +33,7 @@ parsed_sample:
     def_rate: '2000'
     dropped: '0'
     flowtype: OSPF-mc-known
+    location: '0/7/CPU0'
     policer: '102'
     tos_value: '01234567'
     type: Static
@@ -38,6 +42,7 @@ parsed_sample:
     def_rate: '1500'
     dropped: '0'
     flowtype: OSPF-mc-default
+    location: '0/7/CPU0'
     policer: '103'
     tos_value: '01234567'
     type: Static
@@ -46,6 +51,7 @@ parsed_sample:
     def_rate: '2000'
     dropped: '0'
     flowtype: OSPF-uc-known
+    location: '0/7/CPU0'
     policer: '104'
     tos_value: '01234567'
     type: Static
@@ -54,6 +60,7 @@ parsed_sample:
     def_rate: '1000'
     dropped: '0'
     flowtype: OSPF-uc-default
+    location: '0/7/CPU0'
     policer: '105'
     tos_value: '01234567'
     type: Static
@@ -62,6 +69,7 @@ parsed_sample:
     def_rate: '2000'
     dropped: '0'
     flowtype: ISIS-known
+    location: '0/7/CPU0'
     policer: '143'
     tos_value: '01234567'
     type: Static
@@ -70,6 +78,7 @@ parsed_sample:
     def_rate: '1500'
     dropped: '0'
     flowtype: ISIS-default
+    location: '0/7/CPU0'
     policer: '144'
     tos_value: '01234567'
     type: Static
@@ -78,6 +87,7 @@ parsed_sample:
     def_rate: '9600'
     dropped: '0'
     flowtype: BFD-known
+    location: '0/7/CPU0'
     policer: '150'
     tos_value: '01234567'
     type: Static
@@ -86,6 +96,7 @@ parsed_sample:
     def_rate: '9600'
     dropped: '0'
     flowtype: BFD-default
+    location: '0/7/CPU0'
     policer: '160'
     tos_value: '01234567'
     type: Static
@@ -94,6 +105,7 @@ parsed_sample:
     def_rate: '11520'
     dropped: '0'
     flowtype: BFD-MP-known
+    location: '0/7/CPU0'
     policer: '178'
     tos_value: '01234567'
     type: Static
@@ -102,6 +114,7 @@ parsed_sample:
     def_rate: '128'
     dropped: '0'
     flowtype: BFD-MP-0
+    location: '0/7/CPU0'
     policer: '179'
     tos_value: '01234567'
     type: Static
@@ -110,6 +123,7 @@ parsed_sample:
     def_rate: '11520'
     dropped: '0'
     flowtype: BFD-BLB-known
+    location: '0/7/CPU0'
     policer: '183'
     tos_value: '01234567'
     type: Static
@@ -118,6 +132,7 @@ parsed_sample:
     def_rate: '128'
     dropped: '0'
     flowtype: BFD-BLB-0
+    location: '0/7/CPU0'
     policer: '184'
     tos_value: '01234567'
     type: Static
@@ -126,6 +141,7 @@ parsed_sample:
     def_rate: '512'
     dropped: '0'
     flowtype: BFD-SP-0
+    location: '0/7/CPU0'
     policer: '182'
     tos_value: '01234567'
     type: Static
@@ -134,6 +150,7 @@ parsed_sample:
     def_rate: '2500'
     dropped: '0'
     flowtype: BGP-known
+    location: '0/7/CPU0'
     policer: '106'
     tos_value: '01234567'
     type: Static
@@ -142,6 +159,7 @@ parsed_sample:
     def_rate: '2000'
     dropped: '0'
     flowtype: BGP-cfg-peer
+    location: '0/7/CPU0'
     policer: '107'
     tos_value: '01234567'
     type: Static
@@ -150,6 +168,7 @@ parsed_sample:
     def_rate: '1500'
     dropped: '0'
     flowtype: BGP-default
+    location: '0/7/CPU0'
     policer: '108'
     tos_value: '01234567'
     type: Static
@@ -158,6 +177,7 @@ parsed_sample:
     def_rate: '2000'
     dropped: '0'
     flowtype: PIM-mcast-default
+    location: '0/7/CPU0'
     policer: '109'
     tos_value: '01234567'
     type: Static
@@ -166,6 +186,7 @@ parsed_sample:
     def_rate: '2000'
     dropped: '0'
     flowtype: PIM-mcast-known
+    location: '0/7/CPU0'
     policer: '176'
     tos_value: '01234567'
     type: Static
@@ -174,6 +195,7 @@ parsed_sample:
     def_rate: '1500'
     dropped: '0'
     flowtype: PIM-ucast
+    location: '0/7/CPU0'
     policer: '110'
     tos_value: '01234567'
     type: Static
@@ -182,6 +204,7 @@ parsed_sample:
     def_rate: '3000'
     dropped: '0'
     flowtype: IGMP
+    location: '0/7/CPU0'
     policer: '111'
     tos_value: '01234567'
     type: Static
@@ -190,6 +213,7 @@ parsed_sample:
     def_rate: '1500'
     dropped: '0'
     flowtype: ICMP-local
+    location: '0/7/CPU0'
     policer: '112'
     tos_value: '01234567'
     type: Static
@@ -198,6 +222,7 @@ parsed_sample:
     def_rate: '1500'
     dropped: '0'
     flowtype: ICMP-app
+    location: '0/7/CPU0'
     policer: '152'
     tos_value: '01234567'
     type: Static
@@ -206,6 +231,7 @@ parsed_sample:
     def_rate: '1000'
     dropped: '0'
     flowtype: ICMP-control
+    location: '0/7/CPU0'
     policer: '140'
     tos_value: '01234567'
     type: Static
@@ -214,6 +240,7 @@ parsed_sample:
     def_rate: '1500'
     dropped: '0'
     flowtype: ICMP-default
+    location: '0/7/CPU0'
     policer: '153'
     tos_value: '01234567'
     type: Static
@@ -222,6 +249,7 @@ parsed_sample:
     def_rate: '1500'
     dropped: '0'
     flowtype: ICMP-app-default
+    location: '0/7/CPU0'
     policer: '190'
     tos_value: '01234567'
     type: Static
@@ -230,6 +258,7 @@ parsed_sample:
     def_rate: '2500'
     dropped: '0'
     flowtype: LDP-TCP-known
+    location: '0/7/CPU0'
     policer: '113'
     tos_value: '01234567'
     type: Static
@@ -238,6 +267,7 @@ parsed_sample:
     def_rate: '2000'
     dropped: '0'
     flowtype: LDP-TCP-cfg-peer
+    location: '0/7/CPU0'
     policer: '114'
     tos_value: '01234567'
     type: Static
@@ -246,6 +276,7 @@ parsed_sample:
     def_rate: '1500'
     dropped: '0'
     flowtype: LDP-TCP-default
+    location: '0/7/CPU0'
     policer: '115'
     tos_value: '01234567'
     type: Static
@@ -254,6 +285,7 @@ parsed_sample:
     def_rate: '2000'
     dropped: '0'
     flowtype: LDP-UDP
+    location: '0/7/CPU0'
     policer: '116'
     tos_value: '01234567'
     type: Static
@@ -262,6 +294,7 @@ parsed_sample:
     def_rate: '1000'
     dropped: '0'
     flowtype: All-routers
+    location: '0/7/CPU0'
     policer: '117'
     tos_value: '01234567'
     type: Static
@@ -270,6 +303,7 @@ parsed_sample:
     def_rate: '2500'
     dropped: '0'
     flowtype: LMP-TCP-known
+    location: '0/7/CPU0'
     policer: '168'
     tos_value: '01234567'
     type: Static
@@ -278,6 +312,7 @@ parsed_sample:
     def_rate: '2000'
     dropped: '0'
     flowtype: LMP-TCP-cfg-peer
+    location: '0/7/CPU0'
     policer: '169'
     tos_value: '01234567'
     type: Static
@@ -286,6 +321,7 @@ parsed_sample:
     def_rate: '1500'
     dropped: '0'
     flowtype: LMP-TCP-default
+    location: '0/7/CPU0'
     policer: '170'
     tos_value: '01234567'
     type: Static
@@ -294,6 +330,7 @@ parsed_sample:
     def_rate: '2000'
     dropped: '0'
     flowtype: LMP-UDP
+    location: '0/7/CPU0'
     policer: '171'
     tos_value: '01234567'
     type: Static
@@ -302,6 +339,7 @@ parsed_sample:
     def_rate: '2000'
     dropped: '0'
     flowtype: RSVP-UDP
+    location: '0/7/CPU0'
     policer: '118'
     tos_value: '01234567'
     type: Static
@@ -310,6 +348,7 @@ parsed_sample:
     def_rate: '500'
     dropped: '0'
     flowtype: RSVP-default
+    location: '0/7/CPU0'
     policer: '154'
     tos_value: '01234567'
     type: Static
@@ -318,6 +357,7 @@ parsed_sample:
     def_rate: '7000'
     dropped: '0'
     flowtype: RSVP-known
+    location: '0/7/CPU0'
     policer: '177'
     tos_value: '01234567'
     type: Static
@@ -326,6 +366,7 @@ parsed_sample:
     def_rate: '1000'
     dropped: '0'
     flowtype: IKE
+    location: '0/7/CPU0'
     policer: '119'
     tos_value: '01234567'
     type: Static
@@ -334,6 +375,7 @@ parsed_sample:
     def_rate: '400'
     dropped: '0'
     flowtype: IPSEC-known
+    location: '0/7/CPU0'
     policer: '120'
     tos_value: '01234567'
     type: Static
@@ -342,6 +384,7 @@ parsed_sample:
     def_rate: '100'
     dropped: '0'
     flowtype: IPSEC-default
+    location: '0/7/CPU0'
     policer: '121'
     tos_value: '01234567'
     type: Static
@@ -350,6 +393,7 @@ parsed_sample:
     def_rate: '10000'
     dropped: '0'
     flowtype: IPSEC-fragment
+    location: '0/7/CPU0'
     policer: '194'
     tos_value: '01234567'
     type: Static
@@ -358,6 +402,7 @@ parsed_sample:
     def_rate: '300'
     dropped: '0'
     flowtype: MSDP-known
+    location: '0/7/CPU0'
     policer: '122'
     tos_value: '01234567'
     type: Static
@@ -366,6 +411,7 @@ parsed_sample:
     def_rate: '200'
     dropped: '0'
     flowtype: MSDP-cfg-peer
+    location: '0/7/CPU0'
     policer: '123'
     tos_value: '01234567'
     type: Static
@@ -374,6 +420,7 @@ parsed_sample:
     def_rate: '100'
     dropped: '0'
     flowtype: MSDP-default
+    location: '0/7/CPU0'
     policer: '124'
     tos_value: '01234567'
     type: Static
@@ -382,6 +429,7 @@ parsed_sample:
     def_rate: '300'
     dropped: '0'
     flowtype: SNMP
+    location: '0/7/CPU0'
     policer: '125'
     tos_value: '01234567'
     type: Static
@@ -390,6 +438,7 @@ parsed_sample:
     def_rate: '300'
     dropped: '0'
     flowtype: SSH-known
+    location: '0/7/CPU0'
     policer: '127'
     tos_value: '01234567'
     type: Static
@@ -398,6 +447,7 @@ parsed_sample:
     def_rate: '200'
     dropped: '0'
     flowtype: SSH-default
+    location: '0/7/CPU0'
     policer: '128'
     tos_value: '01234567'
     type: Static
@@ -406,6 +456,7 @@ parsed_sample:
     def_rate: '400'
     dropped: '0'
     flowtype: HTTP-known
+    location: '0/7/CPU0'
     policer: '129'
     tos_value: '01234567'
     type: Static
@@ -414,6 +465,7 @@ parsed_sample:
     def_rate: '200'
     dropped: '0'
     flowtype: HTTP-default
+    location: '0/7/CPU0'
     policer: '130'
     tos_value: '01234567'
     type: Static
@@ -422,6 +474,7 @@ parsed_sample:
     def_rate: '400'
     dropped: '0'
     flowtype: SHTTP-known
+    location: '0/7/CPU0'
     policer: '161'
     tos_value: '01234567'
     type: Static
@@ -430,6 +483,7 @@ parsed_sample:
     def_rate: '200'
     dropped: '0'
     flowtype: IFIB_FT_SHTTP_DEFAULT
+    location: '0/7/CPU0'
     policer: '162'
     tos_value: '01234567'
     type: Static
@@ -438,6 +492,7 @@ parsed_sample:
     def_rate: '200'
     dropped: '0'
     flowtype: TELNET-known
+    location: '0/7/CPU0'
     policer: '131'
     tos_value: '01234567'
     type: Static
@@ -446,6 +501,7 @@ parsed_sample:
     def_rate: '200'
     dropped: '0'
     flowtype: TELNET-default
+    location: '0/7/CPU0'
     policer: '132'
     tos_value: '01234567'
     type: Static
@@ -454,6 +510,7 @@ parsed_sample:
     def_rate: '200'
     dropped: '0'
     flowtype: CSS-known
+    location: '0/7/CPU0'
     policer: '133'
     tos_value: '01234567'
     type: Static
@@ -462,6 +519,7 @@ parsed_sample:
     def_rate: '200'
     dropped: '0'
     flowtype: CSS-default
+    location: '0/7/CPU0'
     policer: '134'
     tos_value: '01234567'
     type: Static
@@ -470,6 +528,7 @@ parsed_sample:
     def_rate: '200'
     dropped: '0'
     flowtype: RSH-known
+    location: '0/7/CPU0'
     policer: '135'
     tos_value: '01234567'
     type: Static
@@ -478,6 +537,7 @@ parsed_sample:
     def_rate: '200'
     dropped: '0'
     flowtype: RSH-default
+    location: '0/7/CPU0'
     policer: '136'
     tos_value: '01234567'
     type: Static
@@ -486,6 +546,7 @@ parsed_sample:
     def_rate: '2500'
     dropped: '0'
     flowtype: UDP-known
+    location: '0/7/CPU0'
     policer: '137'
     tos_value: '01234567'
     type: Static
@@ -494,6 +555,7 @@ parsed_sample:
     def_rate: '2500'
     dropped: '0'
     flowtype: UDP-listen
+    location: '0/7/CPU0'
     policer: '138'
     tos_value: '01234567'
     type: Static
@@ -502,6 +564,7 @@ parsed_sample:
     def_rate: '2500'
     dropped: '0'
     flowtype: UDP-cfg-peer
+    location: '0/7/CPU0'
     policer: '155'
     tos_value: '01234567'
     type: Static
@@ -510,6 +573,7 @@ parsed_sample:
     def_rate: '3500'
     dropped: '0'
     flowtype: UDP-default
+    location: '0/7/CPU0'
     policer: '163'
     tos_value: '01234567'
     type: Static
@@ -518,6 +582,7 @@ parsed_sample:
     def_rate: '2500'
     dropped: '0'
     flowtype: TCP-known
+    location: '0/7/CPU0'
     policer: '156'
     tos_value: '01234567'
     type: Static
@@ -526,6 +591,7 @@ parsed_sample:
     def_rate: '2500'
     dropped: '0'
     flowtype: TCP-listen
+    location: '0/7/CPU0'
     policer: '157'
     tos_value: '01234567'
     type: Static
@@ -534,6 +600,7 @@ parsed_sample:
     def_rate: '2000'
     dropped: '0'
     flowtype: TCP-cfg-peer
+    location: '0/7/CPU0'
     policer: '158'
     tos_value: '01234567'
     type: Static
@@ -542,6 +609,7 @@ parsed_sample:
     def_rate: '2000'
     dropped: '0'
     flowtype: TCP-default
+    location: '0/7/CPU0'
     policer: '164'
     tos_value: '01234567'
     type: Static
@@ -550,6 +618,7 @@ parsed_sample:
     def_rate: '2500'
     dropped: '0'
     flowtype: Mcast-known
+    location: '0/7/CPU0'
     policer: '159'
     tos_value: '01234567'
     type: Static
@@ -558,6 +627,7 @@ parsed_sample:
     def_rate: '2000'
     dropped: '0'
     flowtype: Mcast-default
+    location: '0/7/CPU0'
     policer: '165'
     tos_value: '01234567'
     type: Static
@@ -566,6 +636,7 @@ parsed_sample:
     def_rate: '2500'
     dropped: '0'
     flowtype: Raw-listen
+    location: '0/7/CPU0'
     policer: '166'
     tos_value: '01234567'
     type: Static
@@ -574,6 +645,7 @@ parsed_sample:
     def_rate: '2500'
     dropped: '0'
     flowtype: Raw-default
+    location: '0/7/CPU0'
     policer: '167'
     tos_value: '01234567'
     type: Static
@@ -582,6 +654,7 @@ parsed_sample:
     def_rate: '1000'
     dropped: '0'
     flowtype: Ip-Sla
+    location: '0/7/CPU0'
     policer: '139'
     tos_value: '01234567'
     type: Static
@@ -590,6 +663,7 @@ parsed_sample:
     def_rate: '1500'
     dropped: '0'
     flowtype: EIGRP
+    location: '0/7/CPU0'
     policer: '145'
     tos_value: '01234567'
     type: Static
@@ -598,6 +672,7 @@ parsed_sample:
     def_rate: '1500'
     dropped: '0'
     flowtype: RIP
+    location: '0/7/CPU0'
     policer: '146'
     tos_value: '01234567'
     type: Static
@@ -606,6 +681,7 @@ parsed_sample:
     def_rate: '400'
     dropped: '0'
     flowtype: L2TPv3
+    location: '0/7/CPU0'
     policer: '141'
     tos_value: '01234567'
     type: Static
@@ -614,6 +690,7 @@ parsed_sample:
     def_rate: '200'
     dropped: '0'
     flowtype: PCEP
+    location: '0/7/CPU0'
     policer: '142'
     tos_value: '01234567'
     type: Static
@@ -622,6 +699,7 @@ parsed_sample:
     def_rate: '10000'
     dropped: '0'
     flowtype: GRE
+    location: '0/7/CPU0'
     policer: '147'
     tos_value: '01234567'
     type: Static
@@ -630,6 +708,7 @@ parsed_sample:
     def_rate: '1000'
     dropped: '0'
     flowtype: VRRP
+    location: '0/7/CPU0'
     policer: '148'
     tos_value: '01234567'
     type: Static
@@ -638,6 +717,7 @@ parsed_sample:
     def_rate: '400'
     dropped: '0'
     flowtype: HSRP
+    location: '0/7/CPU0'
     policer: '149'
     tos_value: '01234567'
     type: Static
@@ -646,6 +726,7 @@ parsed_sample:
     def_rate: '250'
     dropped: '0'
     flowtype: MPLS-oam
+    location: '0/7/CPU0'
     policer: '151'
     tos_value: '01234567'
     type: Static
@@ -654,6 +735,7 @@ parsed_sample:
     def_rate: '2000'
     dropped: '0'
     flowtype: L2TPv2-default
+    location: '0/7/CPU0'
     policer: '172'
     tos_value: '01234567'
     type: Static
@@ -662,6 +744,7 @@ parsed_sample:
     def_rate: '2500'
     dropped: '0'
     flowtype: L2TPv2-known
+    location: '0/7/CPU0'
     policer: '181'
     tos_value: '01234567'
     type: Static
@@ -670,6 +753,7 @@ parsed_sample:
     def_rate: '2000'
     dropped: '0'
     flowtype: DNS
+    location: '0/7/CPU0'
     policer: '173'
     tos_value: '01234567'
     type: Static
@@ -678,6 +762,7 @@ parsed_sample:
     def_rate: '2000'
     dropped: '0'
     flowtype: RADIUS
+    location: '0/7/CPU0'
     policer: '174'
     tos_value: '01234567'
     type: Static
@@ -686,6 +771,7 @@ parsed_sample:
     def_rate: '2000'
     dropped: '0'
     flowtype: TACACS
+    location: '0/7/CPU0'
     policer: '175'
     tos_value: '01234567'
     type: Static
@@ -694,6 +780,7 @@ parsed_sample:
     def_rate: '200'
     dropped: '0'
     flowtype: NTP-default
+    location: '0/7/CPU0'
     policer: '126'
     tos_value: '01234567'
     type: Static
@@ -702,6 +789,7 @@ parsed_sample:
     def_rate: '200'
     dropped: '0'
     flowtype: NTP-known
+    location: '0/7/CPU0'
     policer: '180'
     tos_value: '01234567'
     type: Static
@@ -710,6 +798,7 @@ parsed_sample:
     def_rate: '5000'
     dropped: '0'
     flowtype: MIPv6
+    location: '0/7/CPU0'
     policer: '188'
     tos_value: '01234567'
     type: Static
@@ -718,6 +807,7 @@ parsed_sample:
     def_rate: '4000'
     dropped: '0'
     flowtype: AMT
+    location: '0/7/CPU0'
     policer: '186'
     tos_value: '01234567'
     type: Static
@@ -726,6 +816,7 @@ parsed_sample:
     def_rate: '5000'
     dropped: '0'
     flowtype: SDAC-TCP
+    location: '0/7/CPU0'
     policer: '187'
     tos_value: '01234567'
     type: Static
@@ -734,6 +825,7 @@ parsed_sample:
     def_rate: '400'
     dropped: '0'
     flowtype: RADIUS-COA
+    location: '0/7/CPU0'
     policer: '189'
     tos_value: '01234567'
     type: Static
@@ -742,6 +834,7 @@ parsed_sample:
     def_rate: '50000'
     dropped: '0'
     flowtype: REL-UDP
+    location: '0/7/CPU0'
     policer: '191'
     tos_value: '01234567'
     type: Static
@@ -750,6 +843,7 @@ parsed_sample:
     def_rate: '4000'
     dropped: '0'
     flowtype: DHCPv4
+    location: '0/7/CPU0'
     policer: '192'
     tos_value: '01234567'
     type: Static
@@ -758,6 +852,7 @@ parsed_sample:
     def_rate: '4000'
     dropped: '0'
     flowtype: DHCPv6
+    location: '0/7/CPU0'
     policer: '193'
     tos_value: '01234567'
     type: Static
@@ -766,6 +861,7 @@ parsed_sample:
     def_rate: '2500'
     dropped: '0'
     flowtype: ONEPK
+    location: '0/7/CPU0'
     policer: '100'
     tos_value: '01234567'
     type: Static
