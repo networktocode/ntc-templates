@@ -91,7 +91,7 @@ brocade_netiron_show_span.template, .*, brocade_netiron, sh[[ow]] sp[[anning-tre
 brocade_netiron_show_topo.template, .*, brocade_netiron, sh[[ow]] to[[pology-group]]
 
 checkpoint_gaia_show_interfaces_all.template, .*, checkpoint_gaia, show interfaces all
-checkpoint_gaia_show_ntp_servers.template, .*, checkpoint_gaia, show ntp servers 
+checkpoint_gaia_show_ntp_servers.template, .*, checkpoint_gaia, show ntp servers
 checkpoint_gaia_show_version_all.template, .*, checkpoint_gaia, show version all
 checkpoint_gaia_show_domainname.template, .*, checkpoint_gaia, show domainname
 checkpoint_gaia_show_ipv6_route.template, .*, checkpoint_gaia, show ipv6 route
@@ -139,6 +139,7 @@ cisco_ios_show_lldp_neighbors_detail.template, .*, cisco_ios, sh[[ow]] lld[[p]] 
 cisco_ios_show_cdp_neighbors_detail.template, .*, cisco_ios, sh[[ow]] c[[dp]] neig[[hbors]] det[[ail]]
 cisco_ios_show_ipv6_interface_brief.template, .*, cisco_ios, sh[[ow]] ipv[[6]] i[[nterface]] b[[rief]]
 cisco_ios_show_ip_eigrp_neighbors.template, .*, cisco_ios, sh[[ow]] ip ei[[grp]] nei[[ghbors]]
+cisco_ios_show_ip_flow_toptalkers.template, .*, cisco_ios, sh[[ow]] ip fl[[ow]] top[[-talkers]]
 cisco_ios_show_ip_interface_brief.template, .*, cisco_ios, sh[[ow]] ip int[[erface]] br[[ief]]
 cisco_ios_show_interfaces_status.template, .*, cisco_ios, sh[[ow]] int[[erfaces]] st[[atus]]
 cisco_ios_show_ip_eigrp_topology.template, .*, cisco_ios, sh[[ow]] ip eigrp top[[ology]]
@@ -150,6 +151,7 @@ cisco_ios_show_ip_access-lists.template, .*, cisco_ios, sh[[ow]] ip acce[[ss-lis
 cisco_ios_show_power_available.template,  .*, cisco_ios, sh[[ow]] pow[[er]] a[[vailable]]
 cisco_ios_show_ip_bgp_summary.template, .*, cisco_ios, sh[[ow]] ip bgp sum[[mary]]
 cisco_ios_show_ip_prefix-list.template, .*, cisco_ios, sh[[ow]] ip pre[[fix-list]]
+cisco_ios_show_ipv6_neighbors.template, .*, cisco_ios, sh[[ow]] ipv[[6]] ne[[ighbors]]
 cisco_ios_show_isis_neighbors.template, .*, cisco_ios, sh[[ow]] isis ne[[ighbors]]
 cisco_ios_show_lldp_neighbors.template, .*, cisco_ios, sh[[ow]] lld[[p]] neig[[hbors]]
 cisco_ios_show_power_supplies.template,  .*, cisco_ios, sh[[ow]] pow[[er]] su[[pplies]]
@@ -180,6 +182,7 @@ cisco_ios_show_ip_arp.template, .*, cisco_ios, sh[[ow]] i[[p]] a[[rp]]
 cisco_ios_show_ip_bgp.template, .*, cisco_ios, sh[[ow]] i[[p]] bgp
 cisco_ios_show_tacacs.template, .*, cisco_ios, sh[[ow]] tacacs
 cisco_ios_show_clock.template, .*, cisco_ios, sh[[ow]] clo[[ck]]
+cisco_ios_show_boot.template, .*, cisco_ios, sh[[ow]] boot
 cisco_ios_show_vlan.template, .*, cisco_ios, sh[[ow]] vlan
 cisco_ios_show_vrf.template, .*, cisco_ios, sh[[ow]] vrf
 cisco_ios_dir.template,  .*, cisco_ios, dir
@@ -231,7 +234,11 @@ cisco_wlc_ssh_show_ap_config_general.template, .*, cisco_wlc_ssh, sh[[ow]] ap co
 cisco_wlc_ssh_show_ap_summary.template, .*, cisco_wlc_ssh, sh[[ow]] ap sum[[mary]]
 cisco_wlc_ssh_show_sysinfo.template, .*, cisco_wlc_ssh, sh[[ow]] sysi[[nfo]]
 
-cisco_xr_show_controllers_fabric_fia_drops_egress_location.template, .*, cisco_xr, sh[[ow]] contr[[ollers]] fabric fia drops egress loc[[ation]].*
+cisco_xr_show_controllers_fabric_fia_errors_ingress_location.template, .*, cisco_xr, sh[[ow]] contr[[ollers]] fabric fi[[a]] err[[ors]] in[[gress]] loc[[ation]]
+cisco_xr_show_controllers_fabric_fia_drops_ingress_location.template, .*, cisco_xr, sh[[ow]] contr[[ollers]] fabric fi[[a]] dr[[ops]] in[[gress]] loc[[ation]]
+cisco_xr_show_controllers_fabric_fia_errors_egress_location.template, .*, cisco_xr, sh[[ow]] contr[[ollers]] fabric fi[[a]] err[[ors]] eg[[ress]] loc[[ation]]
+cisco_xr_show_controllers_fabric_fia_drops_egress_location.template, .*, cisco_xr, sh[[ow]] contr[[ollers]] fabric fi[[a]] dr[[ops]] eg[[ress]] loc[[ation]]
+cisco_xr_show_lpts_pifib_hardware_police_location.template, .*, cisco_xr, sh[[ow]] lpts pifib hardware police loc[[ation]]
 cisco_xr_show_controllers_HundredGigabitEthernet.template, .*, cisco_xr, sh[[ow]] contr[[ollers]] Hu[[ndredGigabitEthernet]]
 cisco_xr_show_bgp_vrf_all_ipv4_unicast_summary.template, .*, cisco_xr, sh[[ow]] bg[[p]] v[[rf]] all ip[[v4]] uni[[cast]] summ[[ary]]
 cisco_xr_admin_show_controller_fabric_health.template, .*, cisco_xr, adm[[in]] sh[[ow]] controller fab[[ric]] hea[[lth]]
@@ -252,6 +259,7 @@ cisco_xr_show_bgp_neighbors.template, .*, cisco_xr, sh[[ow]] bg[[p]] nei[[ghbors
 cisco_xr_show_ospf_neighbor.template, .*, cisco_xr, sh[[ow]] ospf nei[[ghbor]]
 cisco_xr_show_processes_cpu.template, .*, cisco_xr, sh[[ow]] proc[[esses]] c[[pu]]
 cisco_xr_show_bfd_sessions.template, .*, cisco_xr, sh[[ow]] bf[[d]] sess[[ions]]
+cisco_xr_show_drops_np_all.template, .*, cisco_xr, sh[[ow]] drops np all
 cisco_xr_show_pim_neighbor.template, .*, cisco_xr, sh[[ow]] pi[[m]] neigh[[bor]]
 cisco_xr_show_controllers.template, .*, cisco_xr, sh[[ow]] contr[[ollers]] (\S+) phy
 cisco_xr_show_interfaces.template, .*, cisco_xr, sh[[ow]] inte[[rfaces]]
