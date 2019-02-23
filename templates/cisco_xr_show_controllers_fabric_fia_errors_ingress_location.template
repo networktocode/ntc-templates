@@ -1,9 +1,13 @@
 Value FIA (\S+)
 Value CATEGORY (\S+)
-Value List TO_XBAR_UNICAST_LOCATION (\d+)
-Value List TO_XBAR_UNICAST_CRC_COUNT (\d+)
-Value List TO_XBAR_MULTICAST_LOCATION (\d+)
-Value List TO_XBAR_MULTICAST_CRC_COUNT (\d+)
+Value TO_XBAR_UC_CRC_0 (\d+)
+Value TO_XBAR_UC_CRC_1 (\d+)
+Value TO_XBAR_UC_CRC_2 (\d+)
+Value TO_XBAR_UC_CRC_3 (\d+)
+Value TO_XBAR_MC_CRC_0 (\d+)
+Value TO_XBAR_MC_CRC_1 (\d+)
+Value TO_XBAR_MC_CRC_2 (\d+)
+Value TO_XBAR_MC_CRC_3 (\d+)
 Value NB_PA_READ_DATA_ERR (\d+)
 Value PA_HEADER_ERR (\d+)
 Value PA_CRC16_ERR (\d+)
@@ -17,8 +21,14 @@ Start
   ^\s*\*+\s+\S+ -> Continue.Record
   ^\s*\*+\s+${FIA}\s+\*+
   ^Category:\s+${CATEGORY}
-  ^\s+To\s+Xbar\s+Uc\s+Crc-${TO_XBAR_UNICAST_LOCATION}\s+${TO_XBAR_UNICAST_CRC_COUNT}
-  ^\s+To\s+Xbar\s+Mc\s+Crc-${TO_XBAR_MULTICAST_LOCATION}\s+${TO_XBAR_MULTICAST_CRC_COUNT}
+  ^\s+To\s+Xbar\s+Uc\s+Crc-0\s+${TO_XBAR_UC_CRC_0}
+  ^\s+To\s+Xbar\s+Uc\s+Crc-1\s+${TO_XBAR_UC_CRC_1}
+  ^\s+To\s+Xbar\s+Uc\s+Crc-2\s+${TO_XBAR_UC_CRC_2}
+  ^\s+To\s+Xbar\s+Uc\s+Crc-3\s+${TO_XBAR_UC_CRC_3}
+  ^\s+To\s+Xbar\s+Mc\s+Crc-0\s+${TO_XBAR_MC_CRC_0}
+  ^\s+To\s+Xbar\s+Mc\s+Crc-1\s+${TO_XBAR_MC_CRC_1}
+  ^\s+To\s+Xbar\s+Mc\s+Crc-2\s+${TO_XBAR_MC_CRC_2}
+  ^\s+To\s+Xbar\s+Mc\s+Crc-3\s+${TO_XBAR_MC_CRC_3}
   ^\s+nb\s+pa\s+read\s+data\s+err\s+${NB_PA_READ_DATA_ERR}
   ^\s+pa\s+header\s+err\s+${PA_HEADER_ERR}
   ^\s+pa\s+crc16\s+err\s+${PA_CRC16_ERR}
