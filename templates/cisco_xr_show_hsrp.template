@@ -1,0 +1,18 @@
+Value INTERFACE (.+?)
+Value GROUP (\d+)
+Value PRIO (\d+)
+Value PREEMPT (P)
+Value STATE (\w+)
+Value ACTIVE_ADDR (\S+)
+Value STANDBY_ADDR (\S+)
+Value GROUP_ADDR (\S+)
+
+Start
+  ^${INTERFACE}\s+${GROUP}\s+${PRIO}\s+(?:${PREEMPT}\s+)?${STATE}\s+${ACTIVE_ADDR}\s+${STANDBY_ADDR}\s+${GROUP_ADDR} -> Record
+  ^Interface\s+Grp\s+Pri\s+P\s+State\s+Active\s+addr\s+Standby\s+addr\s+\s+Group\s+addr\s*$$
+  ^IPv[46]\s+Groups:
+  ^\s+P\s+indicates
+  ^\s+|\s*$$
+  ^\S+\s+\S+\s+\d+\s+\d+:\d+:\d+\.\d+\s+\S+\s*$$
+  ^\s*$$
+  ^. -> Error
