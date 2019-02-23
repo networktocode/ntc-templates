@@ -3,19 +3,27 @@ parsed_sample:
 
 -   bfd_neighbor_drop: ''
     bfd_remote_punt_disc_0_drop: ''
-    ilkn_crc_err_location: []
-    sgmii_crc_err_location: []
-    xaui_crc_err_location: []
-    drop_from_crc_err_ilkn: []
-    drop_from_crc_err_sgmii: []
-    drop_from_crc_err_xaui: []
-    ilkn_frame_err_location: []
-    sgmii_frame_err_location: []
-    xaui_frame_err_location: []
-    drop_from_frame_err_ilkn: []
-    drop_from_frame_err_sgmii: []
-    drop_from_frame_err_xaui: []
-    drop_from_runt: ''
+    drop_frm_crc_err_ilkn0: ''
+    drop_frm_crc_err_ilkn1: ''
+    drop_frm_crc_err_ilkn2: ''
+    drop_frm_crc_err_sgmii0: ''
+    drop_frm_crc_err_sgmii1: ''
+    drop_frm_crc_err_sgmii2: ''
+    drop_frm_crc_err_sgmii3: ''
+    drop_frm_crc_err_xaui4: ''
+    drop_frm_crc_err_xaui5: ''
+    drop_frm_crc_err_xaui6: ''
+    drop_frm_frm_err_ilkn0: ''
+    drop_frm_frm_err_ilkn1: ''
+    drop_frm_frm_err_ilkn2: ''
+    drop_frm_frm_err_sgmii0: ''
+    drop_frm_frm_err_sgmii1: ''
+    drop_frm_frm_err_sgmii2: ''
+    drop_frm_frm_err_sgmii3: ''
+    drop_frm_frm_err_xaui4: ''
+    drop_frm_frm_err_xaui5: ''
+    drop_frm_frm_err_xaui6: ''
+    drop_frm_runt: ''
     ipv4_bfd_excd: ''
     ipv4_frag_needed_punt_excd: ''
     ipv4_ttl_error_excd: ''
@@ -71,19 +79,27 @@ parsed_sample:
     unknown_l2_on_l3_discard: ''
 -   bfd_neighbor_drop: ''
     bfd_remote_punt_disc_0_drop: ''
-    ilkn_crc_err_location: []
-    sgmii_crc_err_location: []
-    xaui_crc_err_location: []
-    drop_from_crc_err_ilkn: []
-    drop_from_crc_err_sgmii: []
-    drop_from_crc_err_xaui: []
-    ilkn_frame_err_location: []
-    sgmii_frame_err_location: []
-    xaui_frame_err_location: []
-    drop_from_frame_err_ilkn: []
-    drop_from_frame_err_sgmii: []
-    drop_from_frame_err_xaui: []
-    drop_from_runt: ''
+    drop_frm_crc_err_ilkn0: ''
+    drop_frm_crc_err_ilkn1: ''
+    drop_frm_crc_err_ilkn2: ''
+    drop_frm_crc_err_sgmii0: ''
+    drop_frm_crc_err_sgmii1: ''
+    drop_frm_crc_err_sgmii2: ''
+    drop_frm_crc_err_sgmii3: ''
+    drop_frm_crc_err_xaui4: ''
+    drop_frm_crc_err_xaui5: ''
+    drop_frm_crc_err_xaui6: ''
+    drop_frm_frm_err_ilkn0: ''
+    drop_frm_frm_err_ilkn1: ''
+    drop_frm_frm_err_ilkn2: ''
+    drop_frm_frm_err_sgmii0: ''
+    drop_frm_frm_err_sgmii1: ''
+    drop_frm_frm_err_sgmii2: ''
+    drop_frm_frm_err_sgmii3: ''
+    drop_frm_frm_err_xaui4: ''
+    drop_frm_frm_err_xaui5: ''
+    drop_frm_frm_err_xaui6: ''
+    drop_frm_runt: ''
     ipv4_bfd_excd: ''
     ipv4_frag_needed_punt_excd: ''
     ipv4_ttl_error_excd: ''
@@ -139,19 +155,27 @@ parsed_sample:
     unknown_l2_on_l3_discard: ''
 -   bfd_neighbor_drop: ''
     bfd_remote_punt_disc_0_drop: ''
-    ilkn_crc_err_location: []
-    sgmii_crc_err_location: []
-    xaui_crc_err_location: []
-    drop_from_crc_err_ilkn: []
-    drop_from_crc_err_sgmii: []
-    drop_from_crc_err_xaui: []
-    ilkn_frame_err_location: []
-    sgmii_frame_err_location: []
-    xaui_frame_err_location: []
-    drop_from_frame_err_ilkn: []
-    drop_from_frame_err_sgmii: []
-    drop_from_frame_err_xaui: []
-    drop_from_runt: ''
+    drop_frm_crc_err_ilkn0: ''
+    drop_frm_crc_err_ilkn1: ''
+    drop_frm_crc_err_ilkn2: ''
+    drop_frm_crc_err_sgmii0: ''
+    drop_frm_crc_err_sgmii1: ''
+    drop_frm_crc_err_sgmii2: ''
+    drop_frm_crc_err_sgmii3: ''
+    drop_frm_crc_err_xaui4: ''
+    drop_frm_crc_err_xaui5: ''
+    drop_frm_crc_err_xaui6: ''
+    drop_frm_frm_err_ilkn0: ''
+    drop_frm_frm_err_ilkn1: ''
+    drop_frm_frm_err_ilkn2: ''
+    drop_frm_frm_err_sgmii0: ''
+    drop_frm_frm_err_sgmii1: ''
+    drop_frm_frm_err_sgmii2: ''
+    drop_frm_frm_err_sgmii3: ''
+    drop_frm_frm_err_xaui4: ''
+    drop_frm_frm_err_xaui5: ''
+    drop_frm_frm_err_xaui6: ''
+    drop_frm_runt: ''
     ipv4_bfd_excd: ''
     ipv4_frag_needed_punt_excd: ''
     ipv4_ttl_error_excd: ''
@@ -207,19 +231,27 @@ parsed_sample:
     unknown_l2_on_l3_discard: ''
 -   bfd_neighbor_drop: ''
     bfd_remote_punt_disc_0_drop: ''
-    ilkn_crc_err_location: []
-    sgmii_crc_err_location: []
-    xaui_crc_err_location: []
-    drop_from_crc_err_ilkn: []
-    drop_from_crc_err_sgmii: []
-    drop_from_crc_err_xaui: []
-    ilkn_frame_err_location: []
-    sgmii_frame_err_location: []
-    xaui_frame_err_location: ['4']
-    drop_from_frame_err_ilkn: []
-    drop_from_frame_err_sgmii: []
-    drop_from_frame_err_xaui: ['1']
-    drop_from_runt: ''
+    drop_frm_crc_err_ilkn0: ''
+    drop_frm_crc_err_ilkn1: ''
+    drop_frm_crc_err_ilkn2: ''
+    drop_frm_crc_err_sgmii0: ''
+    drop_frm_crc_err_sgmii1: ''
+    drop_frm_crc_err_sgmii2: ''
+    drop_frm_crc_err_sgmii3: ''
+    drop_frm_crc_err_xaui4: ''
+    drop_frm_crc_err_xaui5: ''
+    drop_frm_crc_err_xaui6: ''
+    drop_frm_frm_err_ilkn0: ''
+    drop_frm_frm_err_ilkn1: ''
+    drop_frm_frm_err_ilkn2: ''
+    drop_frm_frm_err_sgmii0: ''
+    drop_frm_frm_err_sgmii1: ''
+    drop_frm_frm_err_sgmii2: ''
+    drop_frm_frm_err_sgmii3: ''
+    drop_frm_frm_err_xaui4: '1'
+    drop_frm_frm_err_xaui5: ''
+    drop_frm_frm_err_xaui6: ''
+    drop_frm_runt: ''
     ipv4_bfd_excd: ''
     ipv4_frag_needed_punt_excd: ''
     ipv4_ttl_error_excd: ''
@@ -275,19 +307,27 @@ parsed_sample:
     unknown_l2_on_l3_discard: '1228075'
 -   bfd_neighbor_drop: ''
     bfd_remote_punt_disc_0_drop: ''
-    ilkn_crc_err_location: []
-    sgmii_crc_err_location: []
-    xaui_crc_err_location: []
-    drop_from_crc_err_ilkn: []
-    drop_from_crc_err_sgmii: []
-    drop_from_crc_err_xaui: []
-    ilkn_frame_err_location: []
-    sgmii_frame_err_location: []
-    xaui_frame_err_location: []
-    drop_from_frame_err_ilkn: []
-    drop_from_frame_err_sgmii: []
-    drop_from_frame_err_xaui: []
-    drop_from_runt: ''
+    drop_frm_crc_err_ilkn0: ''
+    drop_frm_crc_err_ilkn1: ''
+    drop_frm_crc_err_ilkn2: ''
+    drop_frm_crc_err_sgmii0: ''
+    drop_frm_crc_err_sgmii1: ''
+    drop_frm_crc_err_sgmii2: ''
+    drop_frm_crc_err_sgmii3: ''
+    drop_frm_crc_err_xaui4: ''
+    drop_frm_crc_err_xaui5: ''
+    drop_frm_crc_err_xaui6: ''
+    drop_frm_frm_err_ilkn0: ''
+    drop_frm_frm_err_ilkn1: ''
+    drop_frm_frm_err_ilkn2: ''
+    drop_frm_frm_err_sgmii0: ''
+    drop_frm_frm_err_sgmii1: ''
+    drop_frm_frm_err_sgmii2: ''
+    drop_frm_frm_err_sgmii3: ''
+    drop_frm_frm_err_xaui4: ''
+    drop_frm_frm_err_xaui5: ''
+    drop_frm_frm_err_xaui6: ''
+    drop_frm_runt: ''
     ipv4_bfd_excd: ''
     ipv4_frag_needed_punt_excd: ''
     ipv4_ttl_error_excd: '544'
@@ -343,19 +383,27 @@ parsed_sample:
     unknown_l2_on_l3_discard: ''
 -   bfd_neighbor_drop: ''
     bfd_remote_punt_disc_0_drop: ''
-    ilkn_crc_err_location: []
-    sgmii_crc_err_location: []
-    xaui_crc_err_location: []
-    drop_from_crc_err_ilkn: []
-    drop_from_crc_err_sgmii: []
-    drop_from_crc_err_xaui: []
-    ilkn_frame_err_location: []
-    sgmii_frame_err_location: []
-    xaui_frame_err_location: []
-    drop_from_frame_err_ilkn: []
-    drop_from_frame_err_sgmii: []
-    drop_from_frame_err_xaui: []
-    drop_from_runt: ''
+    drop_frm_crc_err_ilkn0: ''
+    drop_frm_crc_err_ilkn1: ''
+    drop_frm_crc_err_ilkn2: ''
+    drop_frm_crc_err_sgmii0: ''
+    drop_frm_crc_err_sgmii1: ''
+    drop_frm_crc_err_sgmii2: ''
+    drop_frm_crc_err_sgmii3: ''
+    drop_frm_crc_err_xaui4: ''
+    drop_frm_crc_err_xaui5: ''
+    drop_frm_crc_err_xaui6: ''
+    drop_frm_frm_err_ilkn0: ''
+    drop_frm_frm_err_ilkn1: ''
+    drop_frm_frm_err_ilkn2: ''
+    drop_frm_frm_err_sgmii0: ''
+    drop_frm_frm_err_sgmii1: ''
+    drop_frm_frm_err_sgmii2: ''
+    drop_frm_frm_err_sgmii3: ''
+    drop_frm_frm_err_xaui4: ''
+    drop_frm_frm_err_xaui5: ''
+    drop_frm_frm_err_xaui6: ''
+    drop_frm_runt: ''
     ipv4_bfd_excd: ''
     ipv4_frag_needed_punt_excd: ''
     ipv4_ttl_error_excd: ''
@@ -411,19 +459,27 @@ parsed_sample:
     unknown_l2_on_l3_discard: ''
 -   bfd_neighbor_drop: ''
     bfd_remote_punt_disc_0_drop: ''
-    ilkn_crc_err_location: []
-    sgmii_crc_err_location: []
-    xaui_crc_err_location: []
-    drop_from_crc_err_ilkn: []
-    drop_from_crc_err_sgmii: []
-    drop_from_crc_err_xaui: []
-    ilkn_frame_err_location: []
-    sgmii_frame_err_location: []
-    xaui_frame_err_location: []
-    drop_from_frame_err_ilkn: []
-    drop_from_frame_err_sgmii: []
-    drop_from_frame_err_xaui: []
-    drop_from_runt: ''
+    drop_frm_crc_err_ilkn0: ''
+    drop_frm_crc_err_ilkn1: ''
+    drop_frm_crc_err_ilkn2: ''
+    drop_frm_crc_err_sgmii0: ''
+    drop_frm_crc_err_sgmii1: ''
+    drop_frm_crc_err_sgmii2: ''
+    drop_frm_crc_err_sgmii3: ''
+    drop_frm_crc_err_xaui4: ''
+    drop_frm_crc_err_xaui5: ''
+    drop_frm_crc_err_xaui6: ''
+    drop_frm_frm_err_ilkn0: ''
+    drop_frm_frm_err_ilkn1: ''
+    drop_frm_frm_err_ilkn2: ''
+    drop_frm_frm_err_sgmii0: ''
+    drop_frm_frm_err_sgmii1: ''
+    drop_frm_frm_err_sgmii2: ''
+    drop_frm_frm_err_sgmii3: ''
+    drop_frm_frm_err_xaui4: ''
+    drop_frm_frm_err_xaui5: ''
+    drop_frm_frm_err_xaui6: ''
+    drop_frm_runt: ''
     ipv4_bfd_excd: ''
     ipv4_frag_needed_punt_excd: ''
     ipv4_ttl_error_excd: ''
@@ -479,19 +535,27 @@ parsed_sample:
     unknown_l2_on_l3_discard: ''
 -   bfd_neighbor_drop: ''
     bfd_remote_punt_disc_0_drop: ''
-    ilkn_crc_err_location: []
-    sgmii_crc_err_location: []
-    xaui_crc_err_location: []
-    drop_from_crc_err_ilkn: []
-    drop_from_crc_err_sgmii: []
-    drop_from_crc_err_xaui: []
-    ilkn_frame_err_location: []
-    sgmii_frame_err_location: []
-    xaui_frame_err_location: []
-    drop_from_frame_err_ilkn: []
-    drop_from_frame_err_sgmii: []
-    drop_from_frame_err_xaui: []
-    drop_from_runt: ''
+    drop_frm_crc_err_ilkn0: ''
+    drop_frm_crc_err_ilkn1: ''
+    drop_frm_crc_err_ilkn2: ''
+    drop_frm_crc_err_sgmii0: ''
+    drop_frm_crc_err_sgmii1: ''
+    drop_frm_crc_err_sgmii2: ''
+    drop_frm_crc_err_sgmii3: ''
+    drop_frm_crc_err_xaui4: ''
+    drop_frm_crc_err_xaui5: ''
+    drop_frm_crc_err_xaui6: ''
+    drop_frm_frm_err_ilkn0: ''
+    drop_frm_frm_err_ilkn1: ''
+    drop_frm_frm_err_ilkn2: ''
+    drop_frm_frm_err_sgmii0: ''
+    drop_frm_frm_err_sgmii1: ''
+    drop_frm_frm_err_sgmii2: ''
+    drop_frm_frm_err_sgmii3: ''
+    drop_frm_frm_err_xaui4: ''
+    drop_frm_frm_err_xaui5: ''
+    drop_frm_frm_err_xaui6: ''
+    drop_frm_runt: ''
     ipv4_bfd_excd: ''
     ipv4_frag_needed_punt_excd: ''
     ipv4_ttl_error_excd: ''
@@ -547,19 +611,27 @@ parsed_sample:
     unknown_l2_on_l3_discard: ''
 -   bfd_neighbor_drop: ''
     bfd_remote_punt_disc_0_drop: ''
-    ilkn_crc_err_location: []
-    sgmii_crc_err_location: []
-    xaui_crc_err_location: []
-    drop_from_crc_err_ilkn: []
-    drop_from_crc_err_sgmii: []
-    drop_from_crc_err_xaui: []
-    ilkn_frame_err_location: []
-    sgmii_frame_err_location: ['0']
-    xaui_frame_err_location: []
-    drop_from_frame_err_ilkn: []
-    drop_from_frame_err_sgmii: ['1']
-    drop_from_frame_err_xaui: []
-    drop_from_runt: ''
+    drop_frm_crc_err_ilkn0: ''
+    drop_frm_crc_err_ilkn1: ''
+    drop_frm_crc_err_ilkn2: ''
+    drop_frm_crc_err_sgmii0: ''
+    drop_frm_crc_err_sgmii1: ''
+    drop_frm_crc_err_sgmii2: ''
+    drop_frm_crc_err_sgmii3: ''
+    drop_frm_crc_err_xaui4: ''
+    drop_frm_crc_err_xaui5: ''
+    drop_frm_crc_err_xaui6: ''
+    drop_frm_frm_err_ilkn0: ''
+    drop_frm_frm_err_ilkn1: ''
+    drop_frm_frm_err_ilkn2: ''
+    drop_frm_frm_err_sgmii0: '1'
+    drop_frm_frm_err_sgmii1: ''
+    drop_frm_frm_err_sgmii2: ''
+    drop_frm_frm_err_sgmii3: ''
+    drop_frm_frm_err_xaui4: ''
+    drop_frm_frm_err_xaui5: ''
+    drop_frm_frm_err_xaui6: ''
+    drop_frm_runt: ''
     ipv4_bfd_excd: ''
     ipv4_frag_needed_punt_excd: ''
     ipv4_ttl_error_excd: ''
@@ -615,19 +687,27 @@ parsed_sample:
     unknown_l2_on_l3_discard: '806532'
 -   bfd_neighbor_drop: ''
     bfd_remote_punt_disc_0_drop: ''
-    ilkn_crc_err_location: []
-    sgmii_crc_err_location: []
-    xaui_crc_err_location: []
-    drop_from_crc_err_ilkn: []
-    drop_from_crc_err_sgmii: []
-    drop_from_crc_err_xaui: []
-    ilkn_frame_err_location: []
-    sgmii_frame_err_location: []
-    xaui_frame_err_location: []
-    drop_from_frame_err_ilkn: []
-    drop_from_frame_err_sgmii: []
-    drop_from_frame_err_xaui: []
-    drop_from_runt: ''
+    drop_frm_crc_err_ilkn0: ''
+    drop_frm_crc_err_ilkn1: ''
+    drop_frm_crc_err_ilkn2: ''
+    drop_frm_crc_err_sgmii0: ''
+    drop_frm_crc_err_sgmii1: ''
+    drop_frm_crc_err_sgmii2: ''
+    drop_frm_crc_err_sgmii3: ''
+    drop_frm_crc_err_xaui4: ''
+    drop_frm_crc_err_xaui5: ''
+    drop_frm_crc_err_xaui6: ''
+    drop_frm_frm_err_ilkn0: ''
+    drop_frm_frm_err_ilkn1: ''
+    drop_frm_frm_err_ilkn2: ''
+    drop_frm_frm_err_sgmii0: ''
+    drop_frm_frm_err_sgmii1: ''
+    drop_frm_frm_err_sgmii2: ''
+    drop_frm_frm_err_sgmii3: ''
+    drop_frm_frm_err_xaui4: ''
+    drop_frm_frm_err_xaui5: ''
+    drop_frm_frm_err_xaui6: ''
+    drop_frm_runt: ''
     ipv4_bfd_excd: ''
     ipv4_frag_needed_punt_excd: ''
     ipv4_ttl_error_excd: ''
@@ -683,19 +763,27 @@ parsed_sample:
     unknown_l2_on_l3_discard: ''
 -   bfd_neighbor_drop: ''
     bfd_remote_punt_disc_0_drop: ''
-    ilkn_crc_err_location: []
-    sgmii_crc_err_location: []
-    xaui_crc_err_location: []
-    drop_from_crc_err_ilkn: []
-    drop_from_crc_err_sgmii: []
-    drop_from_crc_err_xaui: []
-    ilkn_frame_err_location: []
-    sgmii_frame_err_location: []
-    xaui_frame_err_location: []
-    drop_from_frame_err_ilkn: []
-    drop_from_frame_err_sgmii: []
-    drop_from_frame_err_xaui: []
-    drop_from_runt: ''
+    drop_frm_crc_err_ilkn0: ''
+    drop_frm_crc_err_ilkn1: ''
+    drop_frm_crc_err_ilkn2: ''
+    drop_frm_crc_err_sgmii0: ''
+    drop_frm_crc_err_sgmii1: ''
+    drop_frm_crc_err_sgmii2: ''
+    drop_frm_crc_err_sgmii3: ''
+    drop_frm_crc_err_xaui4: ''
+    drop_frm_crc_err_xaui5: ''
+    drop_frm_crc_err_xaui6: ''
+    drop_frm_frm_err_ilkn0: ''
+    drop_frm_frm_err_ilkn1: ''
+    drop_frm_frm_err_ilkn2: ''
+    drop_frm_frm_err_sgmii0: ''
+    drop_frm_frm_err_sgmii1: ''
+    drop_frm_frm_err_sgmii2: ''
+    drop_frm_frm_err_sgmii3: ''
+    drop_frm_frm_err_xaui4: ''
+    drop_frm_frm_err_xaui5: ''
+    drop_frm_frm_err_xaui6: ''
+    drop_frm_runt: ''
     ipv4_bfd_excd: ''
     ipv4_frag_needed_punt_excd: ''
     ipv4_ttl_error_excd: ''
@@ -751,19 +839,27 @@ parsed_sample:
     unknown_l2_on_l3_discard: ''
 -   bfd_neighbor_drop: ''
     bfd_remote_punt_disc_0_drop: ''
-    ilkn_crc_err_location: []
-    sgmii_crc_err_location: []
-    xaui_crc_err_location: []
-    drop_from_crc_err_ilkn: []
-    drop_from_crc_err_sgmii: []
-    drop_from_crc_err_xaui: []
-    ilkn_frame_err_location: []
-    sgmii_frame_err_location: []
-    xaui_frame_err_location: []
-    drop_from_frame_err_ilkn: []
-    drop_from_frame_err_sgmii: []
-    drop_from_frame_err_xaui: []
-    drop_from_runt: ''
+    drop_frm_crc_err_ilkn0: ''
+    drop_frm_crc_err_ilkn1: ''
+    drop_frm_crc_err_ilkn2: ''
+    drop_frm_crc_err_sgmii0: ''
+    drop_frm_crc_err_sgmii1: ''
+    drop_frm_crc_err_sgmii2: ''
+    drop_frm_crc_err_sgmii3: ''
+    drop_frm_crc_err_xaui4: ''
+    drop_frm_crc_err_xaui5: ''
+    drop_frm_crc_err_xaui6: ''
+    drop_frm_frm_err_ilkn0: ''
+    drop_frm_frm_err_ilkn1: ''
+    drop_frm_frm_err_ilkn2: ''
+    drop_frm_frm_err_sgmii0: ''
+    drop_frm_frm_err_sgmii1: ''
+    drop_frm_frm_err_sgmii2: ''
+    drop_frm_frm_err_sgmii3: ''
+    drop_frm_frm_err_xaui4: ''
+    drop_frm_frm_err_xaui5: ''
+    drop_frm_frm_err_xaui6: ''
+    drop_frm_runt: ''
     ipv4_bfd_excd: ''
     ipv4_frag_needed_punt_excd: ''
     ipv4_ttl_error_excd: '1238'
@@ -819,19 +915,27 @@ parsed_sample:
     unknown_l2_on_l3_discard: ''
 -   bfd_neighbor_drop: ''
     bfd_remote_punt_disc_0_drop: ''
-    ilkn_crc_err_location: []
-    sgmii_crc_err_location: []
-    xaui_crc_err_location: []
-    drop_from_crc_err_ilkn: []
-    drop_from_crc_err_sgmii: []
-    drop_from_crc_err_xaui: []
-    ilkn_frame_err_location: []
-    sgmii_frame_err_location: []
-    xaui_frame_err_location: []
-    drop_from_frame_err_ilkn: []
-    drop_from_frame_err_sgmii: []
-    drop_from_frame_err_xaui: []
-    drop_from_runt: ''
+    drop_frm_crc_err_ilkn0: ''
+    drop_frm_crc_err_ilkn1: ''
+    drop_frm_crc_err_ilkn2: ''
+    drop_frm_crc_err_sgmii0: ''
+    drop_frm_crc_err_sgmii1: ''
+    drop_frm_crc_err_sgmii2: ''
+    drop_frm_crc_err_sgmii3: ''
+    drop_frm_crc_err_xaui4: ''
+    drop_frm_crc_err_xaui5: ''
+    drop_frm_crc_err_xaui6: ''
+    drop_frm_frm_err_ilkn0: ''
+    drop_frm_frm_err_ilkn1: ''
+    drop_frm_frm_err_ilkn2: ''
+    drop_frm_frm_err_sgmii0: ''
+    drop_frm_frm_err_sgmii1: ''
+    drop_frm_frm_err_sgmii2: ''
+    drop_frm_frm_err_sgmii3: ''
+    drop_frm_frm_err_xaui4: ''
+    drop_frm_frm_err_xaui5: ''
+    drop_frm_frm_err_xaui6: ''
+    drop_frm_runt: ''
     ipv4_bfd_excd: ''
     ipv4_frag_needed_punt_excd: ''
     ipv4_ttl_error_excd: ''
@@ -887,19 +991,27 @@ parsed_sample:
     unknown_l2_on_l3_discard: ''
 -   bfd_neighbor_drop: ''
     bfd_remote_punt_disc_0_drop: ''
-    ilkn_crc_err_location: []
-    sgmii_crc_err_location: []
-    xaui_crc_err_location: []
-    drop_from_crc_err_ilkn: []
-    drop_from_crc_err_sgmii: []
-    drop_from_crc_err_xaui: []
-    ilkn_frame_err_location: []
-    sgmii_frame_err_location: []
-    xaui_frame_err_location: []
-    drop_from_frame_err_ilkn: []
-    drop_from_frame_err_sgmii: []
-    drop_from_frame_err_xaui: []
-    drop_from_runt: ''
+    drop_frm_crc_err_ilkn0: ''
+    drop_frm_crc_err_ilkn1: ''
+    drop_frm_crc_err_ilkn2: ''
+    drop_frm_crc_err_sgmii0: ''
+    drop_frm_crc_err_sgmii1: ''
+    drop_frm_crc_err_sgmii2: ''
+    drop_frm_crc_err_sgmii3: ''
+    drop_frm_crc_err_xaui4: ''
+    drop_frm_crc_err_xaui5: ''
+    drop_frm_crc_err_xaui6: ''
+    drop_frm_frm_err_ilkn0: ''
+    drop_frm_frm_err_ilkn1: ''
+    drop_frm_frm_err_ilkn2: ''
+    drop_frm_frm_err_sgmii0: ''
+    drop_frm_frm_err_sgmii1: ''
+    drop_frm_frm_err_sgmii2: ''
+    drop_frm_frm_err_sgmii3: ''
+    drop_frm_frm_err_xaui4: ''
+    drop_frm_frm_err_xaui5: ''
+    drop_frm_frm_err_xaui6: ''
+    drop_frm_runt: ''
     ipv4_bfd_excd: ''
     ipv4_frag_needed_punt_excd: ''
     ipv4_ttl_error_excd: '766'
@@ -955,19 +1067,27 @@ parsed_sample:
     unknown_l2_on_l3_discard: ''
 -   bfd_neighbor_drop: ''
     bfd_remote_punt_disc_0_drop: ''
-    ilkn_crc_err_location: []
-    sgmii_crc_err_location: []
-    xaui_crc_err_location: []
-    drop_from_crc_err_ilkn: []
-    drop_from_crc_err_sgmii: []
-    drop_from_crc_err_xaui: []
-    ilkn_frame_err_location: []
-    sgmii_frame_err_location: []
-    xaui_frame_err_location: []
-    drop_from_frame_err_ilkn: []
-    drop_from_frame_err_sgmii: []
-    drop_from_frame_err_xaui: []
-    drop_from_runt: ''
+    drop_frm_crc_err_ilkn0: ''
+    drop_frm_crc_err_ilkn1: ''
+    drop_frm_crc_err_ilkn2: ''
+    drop_frm_crc_err_sgmii0: ''
+    drop_frm_crc_err_sgmii1: ''
+    drop_frm_crc_err_sgmii2: ''
+    drop_frm_crc_err_sgmii3: ''
+    drop_frm_crc_err_xaui4: ''
+    drop_frm_crc_err_xaui5: ''
+    drop_frm_crc_err_xaui6: ''
+    drop_frm_frm_err_ilkn0: ''
+    drop_frm_frm_err_ilkn1: ''
+    drop_frm_frm_err_ilkn2: ''
+    drop_frm_frm_err_sgmii0: ''
+    drop_frm_frm_err_sgmii1: ''
+    drop_frm_frm_err_sgmii2: ''
+    drop_frm_frm_err_sgmii3: ''
+    drop_frm_frm_err_xaui4: ''
+    drop_frm_frm_err_xaui5: ''
+    drop_frm_frm_err_xaui6: ''
+    drop_frm_runt: ''
     ipv4_bfd_excd: ''
     ipv4_frag_needed_punt_excd: ''
     ipv4_ttl_error_excd: ''
@@ -1023,19 +1143,27 @@ parsed_sample:
     unknown_l2_on_l3_discard: ''
 -   bfd_neighbor_drop: ''
     bfd_remote_punt_disc_0_drop: ''
-    ilkn_crc_err_location: []
-    sgmii_crc_err_location: []
-    xaui_crc_err_location: []
-    drop_from_crc_err_ilkn: []
-    drop_from_crc_err_sgmii: []
-    drop_from_crc_err_xaui: []
-    ilkn_frame_err_location: []
-    sgmii_frame_err_location: []
-    xaui_frame_err_location: []
-    drop_from_frame_err_ilkn: []
-    drop_from_frame_err_sgmii: []
-    drop_from_frame_err_xaui: []
-    drop_from_runt: ''
+    drop_frm_crc_err_ilkn0: ''
+    drop_frm_crc_err_ilkn1: ''
+    drop_frm_crc_err_ilkn2: ''
+    drop_frm_crc_err_sgmii0: ''
+    drop_frm_crc_err_sgmii1: ''
+    drop_frm_crc_err_sgmii2: ''
+    drop_frm_crc_err_sgmii3: ''
+    drop_frm_crc_err_xaui4: ''
+    drop_frm_crc_err_xaui5: ''
+    drop_frm_crc_err_xaui6: ''
+    drop_frm_frm_err_ilkn0: ''
+    drop_frm_frm_err_ilkn1: ''
+    drop_frm_frm_err_ilkn2: ''
+    drop_frm_frm_err_sgmii0: ''
+    drop_frm_frm_err_sgmii1: ''
+    drop_frm_frm_err_sgmii2: ''
+    drop_frm_frm_err_sgmii3: ''
+    drop_frm_frm_err_xaui4: ''
+    drop_frm_frm_err_xaui5: ''
+    drop_frm_frm_err_xaui6: ''
+    drop_frm_runt: ''
     ipv4_bfd_excd: ''
     ipv4_frag_needed_punt_excd: ''
     ipv4_ttl_error_excd: ''
@@ -1091,19 +1219,27 @@ parsed_sample:
     unknown_l2_on_l3_discard: ''
 -   bfd_neighbor_drop: ''
     bfd_remote_punt_disc_0_drop: ''
-    ilkn_crc_err_location: []
-    sgmii_crc_err_location: []
-    xaui_crc_err_location: []
-    drop_from_crc_err_ilkn: []
-    drop_from_crc_err_sgmii: []
-    drop_from_crc_err_xaui: []
-    ilkn_frame_err_location: []
-    sgmii_frame_err_location: []
-    xaui_frame_err_location: []
-    drop_from_frame_err_ilkn: []
-    drop_from_frame_err_sgmii: []
-    drop_from_frame_err_xaui: []
-    drop_from_runt: ''
+    drop_frm_crc_err_ilkn0: ''
+    drop_frm_crc_err_ilkn1: ''
+    drop_frm_crc_err_ilkn2: ''
+    drop_frm_crc_err_sgmii0: ''
+    drop_frm_crc_err_sgmii1: ''
+    drop_frm_crc_err_sgmii2: ''
+    drop_frm_crc_err_sgmii3: ''
+    drop_frm_crc_err_xaui4: ''
+    drop_frm_crc_err_xaui5: ''
+    drop_frm_crc_err_xaui6: ''
+    drop_frm_frm_err_ilkn0: ''
+    drop_frm_frm_err_ilkn1: ''
+    drop_frm_frm_err_ilkn2: ''
+    drop_frm_frm_err_sgmii0: ''
+    drop_frm_frm_err_sgmii1: ''
+    drop_frm_frm_err_sgmii2: ''
+    drop_frm_frm_err_sgmii3: ''
+    drop_frm_frm_err_xaui4: ''
+    drop_frm_frm_err_xaui5: ''
+    drop_frm_frm_err_xaui6: ''
+    drop_frm_runt: ''
     ipv4_bfd_excd: ''
     ipv4_frag_needed_punt_excd: ''
     ipv4_ttl_error_excd: ''
@@ -1159,19 +1295,27 @@ parsed_sample:
     unknown_l2_on_l3_discard: ''
 -   bfd_neighbor_drop: ''
     bfd_remote_punt_disc_0_drop: ''
-    ilkn_crc_err_location: []
-    sgmii_crc_err_location: []
-    xaui_crc_err_location: []
-    drop_from_crc_err_ilkn: []
-    drop_from_crc_err_sgmii: []
-    drop_from_crc_err_xaui: []
-    ilkn_frame_err_location: []
-    sgmii_frame_err_location: []
-    xaui_frame_err_location: []
-    drop_from_frame_err_ilkn: []
-    drop_from_frame_err_sgmii: []
-    drop_from_frame_err_xaui: []
-    drop_from_runt: ''
+    drop_frm_crc_err_ilkn0: ''
+    drop_frm_crc_err_ilkn1: ''
+    drop_frm_crc_err_ilkn2: ''
+    drop_frm_crc_err_sgmii0: ''
+    drop_frm_crc_err_sgmii1: ''
+    drop_frm_crc_err_sgmii2: ''
+    drop_frm_crc_err_sgmii3: ''
+    drop_frm_crc_err_xaui4: ''
+    drop_frm_crc_err_xaui5: ''
+    drop_frm_crc_err_xaui6: ''
+    drop_frm_frm_err_ilkn0: ''
+    drop_frm_frm_err_ilkn1: ''
+    drop_frm_frm_err_ilkn2: ''
+    drop_frm_frm_err_sgmii0: ''
+    drop_frm_frm_err_sgmii1: ''
+    drop_frm_frm_err_sgmii2: ''
+    drop_frm_frm_err_sgmii3: ''
+    drop_frm_frm_err_xaui4: ''
+    drop_frm_frm_err_xaui5: ''
+    drop_frm_frm_err_xaui6: ''
+    drop_frm_runt: ''
     ipv4_bfd_excd: ''
     ipv4_frag_needed_punt_excd: ''
     ipv4_ttl_error_excd: ''
@@ -1227,19 +1371,27 @@ parsed_sample:
     unknown_l2_on_l3_discard: ''
 -   bfd_neighbor_drop: ''
     bfd_remote_punt_disc_0_drop: ''
-    ilkn_crc_err_location: []
-    sgmii_crc_err_location: []
-    xaui_crc_err_location: []
-    drop_from_crc_err_ilkn: []
-    drop_from_crc_err_sgmii: []
-    drop_from_crc_err_xaui: []
-    ilkn_frame_err_location: []
-    sgmii_frame_err_location: []
-    xaui_frame_err_location: []
-    drop_from_frame_err_ilkn: []
-    drop_from_frame_err_sgmii: []
-    drop_from_frame_err_xaui: []
-    drop_from_runt: ''
+    drop_frm_crc_err_ilkn0: ''
+    drop_frm_crc_err_ilkn1: ''
+    drop_frm_crc_err_ilkn2: ''
+    drop_frm_crc_err_sgmii0: ''
+    drop_frm_crc_err_sgmii1: ''
+    drop_frm_crc_err_sgmii2: ''
+    drop_frm_crc_err_sgmii3: ''
+    drop_frm_crc_err_xaui4: ''
+    drop_frm_crc_err_xaui5: ''
+    drop_frm_crc_err_xaui6: ''
+    drop_frm_frm_err_ilkn0: ''
+    drop_frm_frm_err_ilkn1: ''
+    drop_frm_frm_err_ilkn2: ''
+    drop_frm_frm_err_sgmii0: ''
+    drop_frm_frm_err_sgmii1: ''
+    drop_frm_frm_err_sgmii2: ''
+    drop_frm_frm_err_sgmii3: ''
+    drop_frm_frm_err_xaui4: ''
+    drop_frm_frm_err_xaui5: ''
+    drop_frm_frm_err_xaui6: ''
+    drop_frm_runt: ''
     ipv4_bfd_excd: ''
     ipv4_frag_needed_punt_excd: ''
     ipv4_ttl_error_excd: ''
@@ -1295,19 +1447,27 @@ parsed_sample:
     unknown_l2_on_l3_discard: ''
 -   bfd_neighbor_drop: ''
     bfd_remote_punt_disc_0_drop: ''
-    ilkn_crc_err_location: []
-    sgmii_crc_err_location: []
-    xaui_crc_err_location: []
-    drop_from_crc_err_ilkn: []
-    drop_from_crc_err_sgmii: []
-    drop_from_crc_err_xaui: []
-    ilkn_frame_err_location: []
-    sgmii_frame_err_location: []
-    xaui_frame_err_location: []
-    drop_from_frame_err_ilkn: []
-    drop_from_frame_err_sgmii: []
-    drop_from_frame_err_xaui: []
-    drop_from_runt: ''
+    drop_frm_crc_err_ilkn0: ''
+    drop_frm_crc_err_ilkn1: ''
+    drop_frm_crc_err_ilkn2: ''
+    drop_frm_crc_err_sgmii0: ''
+    drop_frm_crc_err_sgmii1: ''
+    drop_frm_crc_err_sgmii2: ''
+    drop_frm_crc_err_sgmii3: ''
+    drop_frm_crc_err_xaui4: ''
+    drop_frm_crc_err_xaui5: ''
+    drop_frm_crc_err_xaui6: ''
+    drop_frm_frm_err_ilkn0: ''
+    drop_frm_frm_err_ilkn1: ''
+    drop_frm_frm_err_ilkn2: ''
+    drop_frm_frm_err_sgmii0: ''
+    drop_frm_frm_err_sgmii1: ''
+    drop_frm_frm_err_sgmii2: ''
+    drop_frm_frm_err_sgmii3: ''
+    drop_frm_frm_err_xaui4: ''
+    drop_frm_frm_err_xaui5: ''
+    drop_frm_frm_err_xaui6: ''
+    drop_frm_runt: ''
     ipv4_bfd_excd: ''
     ipv4_frag_needed_punt_excd: ''
     ipv4_ttl_error_excd: ''
@@ -1363,19 +1523,27 @@ parsed_sample:
     unknown_l2_on_l3_discard: ''
 -   bfd_neighbor_drop: ''
     bfd_remote_punt_disc_0_drop: ''
-    ilkn_crc_err_location: []
-    sgmii_crc_err_location: []
-    xaui_crc_err_location: []
-    drop_from_crc_err_ilkn: []
-    drop_from_crc_err_sgmii: []
-    drop_from_crc_err_xaui: []
-    ilkn_frame_err_location: []
-    sgmii_frame_err_location: []
-    xaui_frame_err_location: []
-    drop_from_frame_err_ilkn: []
-    drop_from_frame_err_sgmii: []
-    drop_from_frame_err_xaui: []
-    drop_from_runt: ''
+    drop_frm_crc_err_ilkn0: ''
+    drop_frm_crc_err_ilkn1: ''
+    drop_frm_crc_err_ilkn2: ''
+    drop_frm_crc_err_sgmii0: ''
+    drop_frm_crc_err_sgmii1: ''
+    drop_frm_crc_err_sgmii2: ''
+    drop_frm_crc_err_sgmii3: ''
+    drop_frm_crc_err_xaui4: ''
+    drop_frm_crc_err_xaui5: ''
+    drop_frm_crc_err_xaui6: ''
+    drop_frm_frm_err_ilkn0: ''
+    drop_frm_frm_err_ilkn1: ''
+    drop_frm_frm_err_ilkn2: ''
+    drop_frm_frm_err_sgmii0: ''
+    drop_frm_frm_err_sgmii1: ''
+    drop_frm_frm_err_sgmii2: ''
+    drop_frm_frm_err_sgmii3: ''
+    drop_frm_frm_err_xaui4: ''
+    drop_frm_frm_err_xaui5: ''
+    drop_frm_frm_err_xaui6: ''
+    drop_frm_runt: ''
     ipv4_bfd_excd: ''
     ipv4_frag_needed_punt_excd: ''
     ipv4_ttl_error_excd: ''
@@ -1431,19 +1599,27 @@ parsed_sample:
     unknown_l2_on_l3_discard: ''
 -   bfd_neighbor_drop: ''
     bfd_remote_punt_disc_0_drop: ''
-    ilkn_crc_err_location: []
-    sgmii_crc_err_location: []
-    xaui_crc_err_location: []
-    drop_from_crc_err_ilkn: []
-    drop_from_crc_err_sgmii: []
-    drop_from_crc_err_xaui: []
-    ilkn_frame_err_location: []
-    sgmii_frame_err_location: []
-    xaui_frame_err_location: []
-    drop_from_frame_err_ilkn: []
-    drop_from_frame_err_sgmii: []
-    drop_from_frame_err_xaui: []
-    drop_from_runt: ''
+    drop_frm_crc_err_ilkn0: ''
+    drop_frm_crc_err_ilkn1: ''
+    drop_frm_crc_err_ilkn2: ''
+    drop_frm_crc_err_sgmii0: ''
+    drop_frm_crc_err_sgmii1: ''
+    drop_frm_crc_err_sgmii2: ''
+    drop_frm_crc_err_sgmii3: ''
+    drop_frm_crc_err_xaui4: ''
+    drop_frm_crc_err_xaui5: ''
+    drop_frm_crc_err_xaui6: ''
+    drop_frm_frm_err_ilkn0: ''
+    drop_frm_frm_err_ilkn1: ''
+    drop_frm_frm_err_ilkn2: ''
+    drop_frm_frm_err_sgmii0: ''
+    drop_frm_frm_err_sgmii1: ''
+    drop_frm_frm_err_sgmii2: ''
+    drop_frm_frm_err_sgmii3: ''
+    drop_frm_frm_err_xaui4: ''
+    drop_frm_frm_err_xaui5: ''
+    drop_frm_frm_err_xaui6: ''
+    drop_frm_runt: ''
     ipv4_bfd_excd: ''
     ipv4_frag_needed_punt_excd: ''
     ipv4_ttl_error_excd: ''
@@ -1499,19 +1675,27 @@ parsed_sample:
     unknown_l2_on_l3_discard: ''
 -   bfd_neighbor_drop: ''
     bfd_remote_punt_disc_0_drop: ''
-    ilkn_crc_err_location: []
-    sgmii_crc_err_location: []
-    xaui_crc_err_location: []
-    drop_from_crc_err_ilkn: []
-    drop_from_crc_err_sgmii: []
-    drop_from_crc_err_xaui: []
-    ilkn_frame_err_location: []
-    sgmii_frame_err_location: []
-    xaui_frame_err_location: []
-    drop_from_frame_err_ilkn: []
-    drop_from_frame_err_sgmii: []
-    drop_from_frame_err_xaui: []
-    drop_from_runt: ''
+    drop_frm_crc_err_ilkn0: ''
+    drop_frm_crc_err_ilkn1: ''
+    drop_frm_crc_err_ilkn2: ''
+    drop_frm_crc_err_sgmii0: ''
+    drop_frm_crc_err_sgmii1: ''
+    drop_frm_crc_err_sgmii2: ''
+    drop_frm_crc_err_sgmii3: ''
+    drop_frm_crc_err_xaui4: ''
+    drop_frm_crc_err_xaui5: ''
+    drop_frm_crc_err_xaui6: ''
+    drop_frm_frm_err_ilkn0: ''
+    drop_frm_frm_err_ilkn1: ''
+    drop_frm_frm_err_ilkn2: ''
+    drop_frm_frm_err_sgmii0: ''
+    drop_frm_frm_err_sgmii1: ''
+    drop_frm_frm_err_sgmii2: ''
+    drop_frm_frm_err_sgmii3: ''
+    drop_frm_frm_err_xaui4: ''
+    drop_frm_frm_err_xaui5: ''
+    drop_frm_frm_err_xaui6: ''
+    drop_frm_runt: ''
     ipv4_bfd_excd: ''
     ipv4_frag_needed_punt_excd: ''
     ipv4_ttl_error_excd: ''
@@ -1567,19 +1751,27 @@ parsed_sample:
     unknown_l2_on_l3_discard: ''
 -   bfd_neighbor_drop: ''
     bfd_remote_punt_disc_0_drop: ''
-    ilkn_crc_err_location: []
-    sgmii_crc_err_location: []
-    xaui_crc_err_location: []
-    drop_from_crc_err_ilkn: []
-    drop_from_crc_err_sgmii: []
-    drop_from_crc_err_xaui: []
-    ilkn_frame_err_location: []
-    sgmii_frame_err_location: []
-    xaui_frame_err_location: []
-    drop_from_frame_err_ilkn: []
-    drop_from_frame_err_sgmii: []
-    drop_from_frame_err_xaui: []
-    drop_from_runt: ''
+    drop_frm_crc_err_ilkn0: ''
+    drop_frm_crc_err_ilkn1: ''
+    drop_frm_crc_err_ilkn2: ''
+    drop_frm_crc_err_sgmii0: ''
+    drop_frm_crc_err_sgmii1: ''
+    drop_frm_crc_err_sgmii2: ''
+    drop_frm_crc_err_sgmii3: ''
+    drop_frm_crc_err_xaui4: ''
+    drop_frm_crc_err_xaui5: ''
+    drop_frm_crc_err_xaui6: ''
+    drop_frm_frm_err_ilkn0: ''
+    drop_frm_frm_err_ilkn1: ''
+    drop_frm_frm_err_ilkn2: ''
+    drop_frm_frm_err_sgmii0: ''
+    drop_frm_frm_err_sgmii1: ''
+    drop_frm_frm_err_sgmii2: ''
+    drop_frm_frm_err_sgmii3: ''
+    drop_frm_frm_err_xaui4: ''
+    drop_frm_frm_err_xaui5: ''
+    drop_frm_frm_err_xaui6: ''
+    drop_frm_runt: ''
     ipv4_bfd_excd: ''
     ipv4_frag_needed_punt_excd: ''
     ipv4_ttl_error_excd: ''
@@ -1635,19 +1827,27 @@ parsed_sample:
     unknown_l2_on_l3_discard: ''
 -   bfd_neighbor_drop: ''
     bfd_remote_punt_disc_0_drop: ''
-    ilkn_crc_err_location: []
-    sgmii_crc_err_location: []
-    xaui_crc_err_location: []
-    drop_from_crc_err_ilkn: []
-    drop_from_crc_err_sgmii: []
-    drop_from_crc_err_xaui: []
-    ilkn_frame_err_location: []
-    sgmii_frame_err_location: []
-    xaui_frame_err_location: []
-    drop_from_frame_err_ilkn: []
-    drop_from_frame_err_sgmii: []
-    drop_from_frame_err_xaui: []
-    drop_from_runt: ''
+    drop_frm_crc_err_ilkn0: ''
+    drop_frm_crc_err_ilkn1: ''
+    drop_frm_crc_err_ilkn2: ''
+    drop_frm_crc_err_sgmii0: ''
+    drop_frm_crc_err_sgmii1: ''
+    drop_frm_crc_err_sgmii2: ''
+    drop_frm_crc_err_sgmii3: ''
+    drop_frm_crc_err_xaui4: ''
+    drop_frm_crc_err_xaui5: ''
+    drop_frm_crc_err_xaui6: ''
+    drop_frm_frm_err_ilkn0: ''
+    drop_frm_frm_err_ilkn1: ''
+    drop_frm_frm_err_ilkn2: ''
+    drop_frm_frm_err_sgmii0: ''
+    drop_frm_frm_err_sgmii1: ''
+    drop_frm_frm_err_sgmii2: ''
+    drop_frm_frm_err_sgmii3: ''
+    drop_frm_frm_err_xaui4: ''
+    drop_frm_frm_err_xaui5: ''
+    drop_frm_frm_err_xaui6: ''
+    drop_frm_runt: ''
     ipv4_bfd_excd: ''
     ipv4_frag_needed_punt_excd: ''
     ipv4_ttl_error_excd: ''
@@ -1703,19 +1903,27 @@ parsed_sample:
     unknown_l2_on_l3_discard: ''
 -   bfd_neighbor_drop: ''
     bfd_remote_punt_disc_0_drop: ''
-    ilkn_crc_err_location: []
-    sgmii_crc_err_location: []
-    xaui_crc_err_location: []
-    drop_from_crc_err_ilkn: []
-    drop_from_crc_err_sgmii: []
-    drop_from_crc_err_xaui: []
-    ilkn_frame_err_location: []
-    sgmii_frame_err_location: []
-    xaui_frame_err_location: []
-    drop_from_frame_err_ilkn: []
-    drop_from_frame_err_sgmii: []
-    drop_from_frame_err_xaui: []
-    drop_from_runt: ''
+    drop_frm_crc_err_ilkn0: ''
+    drop_frm_crc_err_ilkn1: ''
+    drop_frm_crc_err_ilkn2: ''
+    drop_frm_crc_err_sgmii0: ''
+    drop_frm_crc_err_sgmii1: ''
+    drop_frm_crc_err_sgmii2: ''
+    drop_frm_crc_err_sgmii3: ''
+    drop_frm_crc_err_xaui4: ''
+    drop_frm_crc_err_xaui5: ''
+    drop_frm_crc_err_xaui6: ''
+    drop_frm_frm_err_ilkn0: ''
+    drop_frm_frm_err_ilkn1: ''
+    drop_frm_frm_err_ilkn2: ''
+    drop_frm_frm_err_sgmii0: ''
+    drop_frm_frm_err_sgmii1: ''
+    drop_frm_frm_err_sgmii2: ''
+    drop_frm_frm_err_sgmii3: ''
+    drop_frm_frm_err_xaui4: ''
+    drop_frm_frm_err_xaui5: ''
+    drop_frm_frm_err_xaui6: ''
+    drop_frm_runt: ''
     ipv4_bfd_excd: ''
     ipv4_frag_needed_punt_excd: ''
     ipv4_ttl_error_excd: ''
@@ -1771,19 +1979,27 @@ parsed_sample:
     unknown_l2_on_l3_discard: '783084'
 -   bfd_neighbor_drop: ''
     bfd_remote_punt_disc_0_drop: ''
-    ilkn_crc_err_location: []
-    sgmii_crc_err_location: []
-    xaui_crc_err_location: []
-    drop_from_crc_err_ilkn: []
-    drop_from_crc_err_sgmii: []
-    drop_from_crc_err_xaui: []
-    ilkn_frame_err_location: []
-    sgmii_frame_err_location: []
-    xaui_frame_err_location: []
-    drop_from_frame_err_ilkn: []
-    drop_from_frame_err_sgmii: []
-    drop_from_frame_err_xaui: []
-    drop_from_runt: ''
+    drop_frm_crc_err_ilkn0: ''
+    drop_frm_crc_err_ilkn1: ''
+    drop_frm_crc_err_ilkn2: ''
+    drop_frm_crc_err_sgmii0: ''
+    drop_frm_crc_err_sgmii1: ''
+    drop_frm_crc_err_sgmii2: ''
+    drop_frm_crc_err_sgmii3: ''
+    drop_frm_crc_err_xaui4: ''
+    drop_frm_crc_err_xaui5: ''
+    drop_frm_crc_err_xaui6: ''
+    drop_frm_frm_err_ilkn0: ''
+    drop_frm_frm_err_ilkn1: ''
+    drop_frm_frm_err_ilkn2: ''
+    drop_frm_frm_err_sgmii0: ''
+    drop_frm_frm_err_sgmii1: ''
+    drop_frm_frm_err_sgmii2: ''
+    drop_frm_frm_err_sgmii3: ''
+    drop_frm_frm_err_xaui4: ''
+    drop_frm_frm_err_xaui5: ''
+    drop_frm_frm_err_xaui6: ''
+    drop_frm_runt: ''
     ipv4_bfd_excd: ''
     ipv4_frag_needed_punt_excd: ''
     ipv4_ttl_error_excd: '110'
@@ -1839,19 +2055,27 @@ parsed_sample:
     unknown_l2_on_l3_discard: ''
 -   bfd_neighbor_drop: ''
     bfd_remote_punt_disc_0_drop: ''
-    ilkn_crc_err_location: []
-    sgmii_crc_err_location: []
-    xaui_crc_err_location: []
-    drop_from_crc_err_ilkn: []
-    drop_from_crc_err_sgmii: []
-    drop_from_crc_err_xaui: []
-    ilkn_frame_err_location: []
-    sgmii_frame_err_location: []
-    xaui_frame_err_location: []
-    drop_from_frame_err_ilkn: []
-    drop_from_frame_err_sgmii: []
-    drop_from_frame_err_xaui: []
-    drop_from_runt: ''
+    drop_frm_crc_err_ilkn0: ''
+    drop_frm_crc_err_ilkn1: ''
+    drop_frm_crc_err_ilkn2: ''
+    drop_frm_crc_err_sgmii0: ''
+    drop_frm_crc_err_sgmii1: ''
+    drop_frm_crc_err_sgmii2: ''
+    drop_frm_crc_err_sgmii3: ''
+    drop_frm_crc_err_xaui4: ''
+    drop_frm_crc_err_xaui5: ''
+    drop_frm_crc_err_xaui6: ''
+    drop_frm_frm_err_ilkn0: ''
+    drop_frm_frm_err_ilkn1: ''
+    drop_frm_frm_err_ilkn2: ''
+    drop_frm_frm_err_sgmii0: ''
+    drop_frm_frm_err_sgmii1: ''
+    drop_frm_frm_err_sgmii2: ''
+    drop_frm_frm_err_sgmii3: ''
+    drop_frm_frm_err_xaui4: ''
+    drop_frm_frm_err_xaui5: ''
+    drop_frm_frm_err_xaui6: ''
+    drop_frm_runt: ''
     ipv4_bfd_excd: ''
     ipv4_frag_needed_punt_excd: ''
     ipv4_ttl_error_excd: ''
@@ -1907,19 +2131,27 @@ parsed_sample:
     unknown_l2_on_l3_discard: ''
 -   bfd_neighbor_drop: ''
     bfd_remote_punt_disc_0_drop: ''
-    ilkn_crc_err_location: []
-    sgmii_crc_err_location: []
-    xaui_crc_err_location: []
-    drop_from_crc_err_ilkn: []
-    drop_from_crc_err_sgmii: []
-    drop_from_crc_err_xaui: []
-    ilkn_frame_err_location: []
-    sgmii_frame_err_location: []
-    xaui_frame_err_location: []
-    drop_from_frame_err_ilkn: []
-    drop_from_frame_err_sgmii: []
-    drop_from_frame_err_xaui: []
-    drop_from_runt: ''
+    drop_frm_crc_err_ilkn0: ''
+    drop_frm_crc_err_ilkn1: ''
+    drop_frm_crc_err_ilkn2: ''
+    drop_frm_crc_err_sgmii0: ''
+    drop_frm_crc_err_sgmii1: ''
+    drop_frm_crc_err_sgmii2: ''
+    drop_frm_crc_err_sgmii3: ''
+    drop_frm_crc_err_xaui4: ''
+    drop_frm_crc_err_xaui5: ''
+    drop_frm_crc_err_xaui6: ''
+    drop_frm_frm_err_ilkn0: ''
+    drop_frm_frm_err_ilkn1: ''
+    drop_frm_frm_err_ilkn2: ''
+    drop_frm_frm_err_sgmii0: ''
+    drop_frm_frm_err_sgmii1: ''
+    drop_frm_frm_err_sgmii2: ''
+    drop_frm_frm_err_sgmii3: ''
+    drop_frm_frm_err_xaui4: ''
+    drop_frm_frm_err_xaui5: ''
+    drop_frm_frm_err_xaui6: ''
+    drop_frm_runt: ''
     ipv4_bfd_excd: ''
     ipv4_frag_needed_punt_excd: ''
     ipv4_ttl_error_excd: ''
@@ -1975,19 +2207,27 @@ parsed_sample:
     unknown_l2_on_l3_discard: ''
 -   bfd_neighbor_drop: ''
     bfd_remote_punt_disc_0_drop: ''
-    ilkn_crc_err_location: []
-    sgmii_crc_err_location: []
-    xaui_crc_err_location: []
-    drop_from_crc_err_ilkn: []
-    drop_from_crc_err_sgmii: []
-    drop_from_crc_err_xaui: []
-    ilkn_frame_err_location: []
-    sgmii_frame_err_location: []
-    xaui_frame_err_location: []
-    drop_from_frame_err_ilkn: []
-    drop_from_frame_err_sgmii: []
-    drop_from_frame_err_xaui: []
-    drop_from_runt: ''
+    drop_frm_crc_err_ilkn0: ''
+    drop_frm_crc_err_ilkn1: ''
+    drop_frm_crc_err_ilkn2: ''
+    drop_frm_crc_err_sgmii0: ''
+    drop_frm_crc_err_sgmii1: ''
+    drop_frm_crc_err_sgmii2: ''
+    drop_frm_crc_err_sgmii3: ''
+    drop_frm_crc_err_xaui4: ''
+    drop_frm_crc_err_xaui5: ''
+    drop_frm_crc_err_xaui6: ''
+    drop_frm_frm_err_ilkn0: ''
+    drop_frm_frm_err_ilkn1: ''
+    drop_frm_frm_err_ilkn2: ''
+    drop_frm_frm_err_sgmii0: ''
+    drop_frm_frm_err_sgmii1: ''
+    drop_frm_frm_err_sgmii2: ''
+    drop_frm_frm_err_sgmii3: ''
+    drop_frm_frm_err_xaui4: ''
+    drop_frm_frm_err_xaui5: ''
+    drop_frm_frm_err_xaui6: ''
+    drop_frm_runt: ''
     ipv4_bfd_excd: ''
     ipv4_frag_needed_punt_excd: ''
     ipv4_ttl_error_excd: ''
