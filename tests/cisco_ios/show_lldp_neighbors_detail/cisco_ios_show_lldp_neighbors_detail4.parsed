@@ -9,3 +9,13 @@ parsed_sample:
   capabilities: 'T'
   management_ip: ''
   vlan: ''
+
+- local_interface: 'Te1/1/1'
+  chassis_id: '2c33.1100.a6c0'
+  neighbor_port_id: 'Te1/2/13'
+  neighbor_interface: 'asw22'
+  neighbor: 'dsw01'
+  system_description: 'Cisco IOS Software, s6t64 Software (s6t64-ADVENTERPRISEK9-M), Version 15.4(1)SY3, RELEASE SOFTWARE (fc4)'
+  capabilities: 'B,R'
+  management_ip: '172.16.0.10'
+  vlan: ''
