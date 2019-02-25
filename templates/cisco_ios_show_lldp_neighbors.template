@@ -6,6 +6,6 @@ Start
   ^Device.*ID -> LLDP
 
 LLDP
-  ^${NEIGHBOR}${LOCAL_INTERFACE}\s+\d+\s+(\S+)*\s+${NEIGHBOR_INTERFACE} -> Record
+  ^${NEIGHBOR}\s*${LOCAL_INTERFACE}\s+\d+\s+(\S+)*\s+${NEIGHBOR_INTERFACE} -> Record
   ^${NEIGHBOR}
   ^\s+${LOCAL_INTERFACE}\s+\d+\s+(\S+)*\s+${NEIGHBOR_INTERFACE} -> Record
