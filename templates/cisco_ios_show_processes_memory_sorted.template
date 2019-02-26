@@ -1,0 +1,8 @@
+Value memTotal (\d+)
+Value memUsed (\d+)
+Value memFree (\d+)
+
+Start
+  ^Processor Pool Total:\s+${memTotal} Used:\s+${memUsed} Free:\s+${memFree} -> Record
+
+  
