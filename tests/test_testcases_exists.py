@@ -3,6 +3,7 @@ import glob
 
 from tests import load_index_data
 
+
 KNOWN_MISSING_TESTS = {
     'cisco_ios_show_vlan',
     'cisco_nxos_show_interface_brief',
