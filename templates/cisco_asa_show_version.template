@@ -1,5 +1,6 @@
 Value VERSION (\S+)
 Value DEVICE_MGR_VERSION (\S+)
+Value COMPILE_DATE (\d+-\w+-\d+)
 Value IMAGE (\S+)
 Value HOSTNAME (\S+)
 Value UPTIME (.+)
@@ -19,6 +20,7 @@ Value LAST_MOD (.+)
 Start
   ^.*Software\sVersion\s${VERSION}
   ^Device.+\s${DEVICE_MGR_VERSION}
+  ^Compiled on \w+\s+{COMPILE_DATE}.*
   ^System image file.+"${IMAGE}"
   ^${HOSTNAME} up ${UPTIME}
   ^Hardware:\s+${HARDWARE},
@@ -33,4 +35,3 @@ Start
   ^Cluster\s+:\s${CLUSTER}
   ^Serial Number:\s${SERIAL}
   ^.+last modified by\s${LAST_MOD}
-
