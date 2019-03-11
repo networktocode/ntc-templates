@@ -1,7 +1,7 @@
 Value Required INTERFACE (\S+)
 Value LINK_STATUS (.+?)
 Value ADMIN_STATE (.+?)
-Value HARDWARE_TYPE (\S+?(?:\s+Ethernet|)(?:\s+interface\(s\)|))
+Value HARDWARE_TYPE (\S+?(?:\s+Ethernet|))
 Value ADDRESS ((?:\w{4}\.){2}\w{4})
 Value BIA ((?:\w{4}\.){2}\w{4})
 Value DESCRIPTION (.*?)
@@ -15,7 +15,7 @@ Value ENCAPSULATION (\w+)
 Start
   ^\S+\s+is -> Continue.Record
   ^${INTERFACE}\sis\s+${LINK_STATUS},\s+line\sprotocol\sis\s+${ADMIN_STATE}\s*$$
-  ^\s+Hardware\s+is\s+${HARDWARE_TYPE}(?:,\s+address\s+is\s+${ADDRESS}(?:\s+\(bia\s+${BIA}\)\s*)*$$|\s.+|\s*$$)
+  ^\s+Hardware\s+is\s+${HARDWARE_TYPE}(?:\s+interface\(s\)|)(?:,\s+address\s+is\s+${ADDRESS}(?:\s+\(bia\s+${BIA}\)\s*)*$$|\s.+|\s*$$)
   ^\s+Description:\s+${DESCRIPTION}\s*$$
   ^\s+[Ii]nternet\s+[Aa]ddress\s+is\s+${IP_ADDRESS}\s*$$
   ^\s+MTU\s+${MTU}.*BW\s+${BANDWIDTH}
