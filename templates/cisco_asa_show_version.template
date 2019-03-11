@@ -20,10 +20,10 @@ Value LAST_MOD (.+)
 Start
   ^.*Software\sVersion\s${VERSION}
   ^Device.+\s${DEVICE_MGR_VERSION}
-  ^Compiled on \w+\s+{COMPILE_DATE}.*
+  ^Compiled on \w+\s+${COMPILE_DATE}.*
   ^System image file.+"${IMAGE}"
   ^${HOSTNAME} up ${UPTIME}
-  ^Hardware:\s+${HARDWARE},
+  ^Hardware:\s+${HARDWARE}
   ^Model Id:\s+${MODEL}
   ^Internal.+Flash,\s${FLASH}
   ^ \d+:.\S+\s${INTERFACES}.*
