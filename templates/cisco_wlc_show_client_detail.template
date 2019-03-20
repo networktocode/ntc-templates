@@ -1,0 +1,25 @@
+Value CLIENT_USERNAME (.*)
+Value AP_NAME (.*)
+Value CLIENT_STATE (\S+)
+Value WIRELESS_LAN_NETWORK_NAME (.*)
+Value WIRELESS_LAN_PROFILE_NAME (.*)
+Value CONNECTED_FOR (\d+)
+Value IP_ADDRESS (\d.*)
+Value INTERFACE (.*)
+Value RADIO_SIGNAL_STRENGTH_INDICATOR (\d+)
+Value SIGNAL_TO_NOISE_RATIO (\d+)
+Value VLAN (.*)
+
+
+Start
+  ^C\S+\sU\S+\s\.+\s${CLIENT_USERNAME}
+  ^A\S\sNa\S+\s${AP_NAME}
+  ^Cl\S+\sS\S+\s${CLIENT_STATE}
+  ^W\S+\s\S+\s\S+\s\S+\s\(\S+\s${WIRELESS_LAN_NETWORK_NAME}
+  ^W\S+\s\S+\sP\S+\s\S+\s${WIRELESS_LAN_PROFILE_NAME}
+  ^C\S+\sF\S+\s\S+\s${CONNECTED_FOR}
+  ^I\S\sA\S+\s${IP_ADDRESS}
+  ^\s+R\wd\w+\s\w+\s\w+\s\w+\.+\s\-${RADIO_SIGNAL_STRENGTH_INDICATOR}
+  ^Inte\wf\S+\s${INTERFACE}
+  ^\s+S\w+\st\w\s\w+\s\w+\.+\s${SIGNAL_TO_NOISE_RATIO}
+  ^VLAN\.+\s${VLAN}
