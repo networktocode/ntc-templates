@@ -1,0 +1,26 @@
+Value IFACE (\S+)
+Value STATE (\S+)
+Value RX_OK (\S+)
+Value RX_BPS (\S+[\s]*[KB/s]*)
+Value RX_UTIL (\S+)
+Value RX_ERR (\S+)
+Value RX_DRP (\S+)
+Value RX_OVR (\S+)
+Value TX_OK (\S+)
+Value TX_BPS (\S+[\s]*[KB/s]*)
+Value TX_UTIL (\S+)
+Value TX_ERR (\S+)
+Value TX_DRP (\S+)
+Value TX_OVR (\S+)
+
+Start
+  ^\s+IFACE.*TX_OVR -> Data
+
+Data
+  ^-
+  ^[\s]*${IFACE}\s+${STATE}\s+${RX_OK}\s+${RX_BPS}\s+${RX_UTIL}\s+${RX_ERR}\s+${RX_DRP}\s+${RX_OVR}\s+${TX_OK}\s+${TX_BPS}\s+${TX_UTIL}\s+${TX_ERR}\s+${TX_DRP}\s+${TX_OVR} -> Record
+  ^\s+$$
+  ^$$
+  ^.* -> Error "LINE NOT FOUND"
+
+EOF
