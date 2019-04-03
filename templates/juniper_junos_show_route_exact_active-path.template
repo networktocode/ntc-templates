@@ -1,0 +1,19 @@
+Value SUBNET (\S+\/\S+)
+Value TIME_IN_TABLE (\S+\s+\S+)
+Value LOCALPREF (\S+)
+Value ASPATH (.*)
+Value List NEIGHBORS (\S+)
+Value List LEARNING_INTERFACES (\S+)
+
+Start
+  ^\n
+  ^inet.*
+  ^\+.*Both
+  ^${SUBNET}\s+\S+\s${TIME_IN_TABLE}\,\slocalpref\s${LOCALPREF},
+  ^${SUBNET}
+  ^\s+\S+\s${TIME_IN_TABLE}\,\slocalpref\s${LOCALPREF}\,?
+  ^\s+AS\spath:\s${ASPATH},\s
+  ^\s+\>?\sto\s${NEIGHBORS}\svia\s${LEARNING_INTERFACES}
+  ^\s+$$ -> Continue.Record
+  ^$$
+  ^.* -> Error "LINE NOT FOUND"

@@ -1,0 +1,12 @@
+show route exact 1234:1090:1500:5000::/60 active-path  
+
+inet6.0: 183100 destinations, 1514203 routes (180147 active, 272 holddown, 5920 hidden)
++ = Active Route, - = Last Active, * = Both
+
+1234:1090:1500:5000::/60
+                   *[BGP/170] 3w5d 14:26:10, localpref 100
+                      AS path: 65512 ?, validation-state: unverified
+                    > to 1234:1090:1500:5280::6 via ae2.0
+                      to 1234:1090:1500:5280::a via ae3.0
+                      to 1234:1090:1500:5280::e via ae4.0
+                      to 1234:1090:1500:5280::2 via ae5.0
