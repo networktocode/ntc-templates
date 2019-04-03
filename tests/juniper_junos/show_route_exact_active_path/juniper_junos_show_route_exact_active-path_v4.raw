@@ -1,0 +1,11 @@
+show route exact 1.2.3.0/24 active-path 
+
+inet.0: 100 destinations, 150 routes (101 active, 50 holddown, 200 hidden)
++ = Active Route, - = Last Active, * = Both
+
+1.2.3.0/24     *[BGP/170] 3w5d 14:23:49, localpref 123, from 4.3.2.1
+                      AS path: 65512 I, validation-state: unverified
+                      to 4.3.2.1 via et2.0
+                    > to 6.5.4.3 via et3.0
+                      to 8.7.6.5 via et4.0
+                      to 10.9.8.7 via et5.0
