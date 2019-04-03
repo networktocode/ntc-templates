@@ -271,9 +271,9 @@ sonic_linux_cat_slash_proc_slash_stat.template, .*, linux, cat /proc/stat
 sonic_linux_show_version.template, .*, linux, show ver[[sion]]
 sonic_linux_uptime_since.template, .*, linux, up[[time]] -s
 sonic_linux_free_dash_m.template, .*, linux, free -m
+sonic_linux_portstat.template, .*, linux, portstat
 sonic_linux_ps_dash_ef.template, .*, linux, ps -ef
 sonic_linux_df_dash_h.template, .*, linux, df -h
-
 
 vmware_nsxv_show_ip_bgp_neighbors.template, .*, vmware_nsxv, sh[[ow]] ip b[[gp]] n[[eighbors]]
 vmware_nsxv_show_ip_route.template, .*, vmware_nsxv, sh[[ow]] ip r[[oute]]
