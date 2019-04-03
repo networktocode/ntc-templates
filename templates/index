@@ -243,6 +243,7 @@ hp_procurve_show_arp.template, .*, hp_procurve, sh[[ow]] ar[[p]]
 
 juniper_junos_show_route_exact_active-path.template, .*, juniper_junos|juniper, sh[[ow]] rou[[te]] exa[[ct]] (\S+) act[[ive-path]]
 juniper_junos_show_system_process_summary.template, .*, juniper_junos|juniper, sh[[ow]] sys[[tem]] proce[[ss]] sum[[mary]]
+juniper_junos_show_interfaces_descriptions.template, .*, juniper_junos|juniper, sh[[ow]] inte[[rfaces]] desc[[riptions]]
 juniper_junos_show_pfe_route_summary.template, .*, juniper_junos|juniper, sh[[ow]] pfe rou[[te]] summ[[ary]]
 juniper_junos_show_chassis_firmware.template, .*, juniper_junos|juniper, sh[[ow]] ch[[assis]] fi[[rmware]]
 juniper_junos_show_isis_adjacency.template, .*, juniper_junos|juniper, sh[[ow]] is[[is]] ad[[jacency]]

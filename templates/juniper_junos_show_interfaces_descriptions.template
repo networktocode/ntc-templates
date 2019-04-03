@@ -1,0 +1,13 @@
+Value INTERFACE (\S+)
+Value ADMIN_STATE (\S+)
+Value LINK_STATE (\S+)
+Value DESCRIPTION (\S+)
+
+Start
+  ^Interface.*Description -> Data
+
+Data
+  ^${INTERFACE}\s+${ADMIN_STATE}\s+${LINK_STATE}\s+${DESCRIPTION} -> Record
+  ^\s+$$ 
+  ^$$ 
+  ^.* -> Error "LINE NOT FOUND"   
