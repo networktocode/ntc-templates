@@ -3,7 +3,7 @@
 """Run tests against all the *.raw files."""
 import pytest
 import yaml
-from ntc_template_test_helper import return_test_files
+from tests.ntc_template_test_helper import return_test_files
 from ntc_templates.parse import parse_output
 
 
