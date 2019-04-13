@@ -81,23 +81,3 @@ def test_correct_data_in_entries(load_template_test):
     for i in range(len(reference)):
         for key in reference[i].keys():
             assert processed[i][key] == reference[i][key]
-
-
-def test_that_all_entries_dicts_match(load_template_test):
-    """Test that the values of the dicts returned are the same as the control.
-
-    This test swaps place with the processed and reference variable so it's not run
-    in the same order as test_correct_data_in_entries to catch dicts with extra keys
-
-    This will create a test for each of the files in the test_collection
-    variable.
-    """
-    processed, reference = raw_template_test(load_template_test)
-
-    # Can be uncommented if we don't care that the parsed data isn't
-    # in the same order as the raw data
-    # reference = sorted(reference)
-    # processed = sorted(processed)
-
-    for i in range(len(processed)):
-        assert processed[i] == reference[i]
