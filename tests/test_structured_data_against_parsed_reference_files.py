@@ -37,7 +37,7 @@ def raw_template_test(raw_file):
         rawoutput = data.read()
     structured = parse_output(platform=platform, command=command, data=rawoutput)
     with open(parsed_file, 'r') as data:
-        parsed_data = yaml.load(data.read())
+        parsed_data = yaml.safe_load(data.read())
 
     return structured, parsed_data['parsed_sample']
 
