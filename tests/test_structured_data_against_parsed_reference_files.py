@@ -3,12 +3,21 @@
 """Run tests against all the *.raw files."""
 import pytest
 import yaml
-from tests.ntc_template_test_helper import return_test_files
+import glob
+
 from ntc_templates.parse import parse_output
 
 
-# Populate test_collection with a list of all the .raw template files we want
-# to run tests against
+def return_test_files():
+    """Return a list of all the *.raw files to run tests against."""
+    platform_dirs = glob.glob('tests/*')
+    platforms = (glob.glob('%s/*' % platform) for platform in platform_dirs)
+    template_dirs = (item for sublist in platforms for item in sublist)
+    test_commands = (glob.glob('%s/*.raw' % template_dir) for template_dir in template_dirs)
+
+    return [item for sublist in test_commands for item in sublist]
+
+
 test_collection = return_test_files()
 
 
