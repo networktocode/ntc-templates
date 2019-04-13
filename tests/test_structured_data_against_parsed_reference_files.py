@@ -1,9 +1,10 @@
 #!/usr/bin/env python
 
 """Run tests against all the *.raw files."""
+import glob
+
 import pytest
 import yaml
-import glob
 
 from ntc_templates.parse import parse_output
 
