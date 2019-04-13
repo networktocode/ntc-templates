@@ -15,13 +15,10 @@ def return_test_files():
     template_dirs = (item for sublist in platforms for item in sublist)
     test_commands = (glob.glob('%s/*.raw' % template_dir) for template_dir in template_dirs)
 
-    return [item for sublist in test_commands for item in sublist]
+    return (item for sublist in test_commands for item in sublist)
 
 
-test_collection = return_test_files()
-
-
-@pytest.fixture(scope='function', params=test_collection)
+@pytest.fixture(scope='function', params=return_test_files())
 def load_template_test(request):
     """Return each *.raw file to run tests on."""
     return request.param
@@ -42,37 +39,39 @@ def raw_template_test(raw_file):
     return structured, parsed_data['parsed_sample']
 
 
-def test_correct_number_of_entries(load_template_test):
+def test_raw_data_against_mock(load_template_test):
+    processed, reference = raw_template_test(load_template_test)
+
+    correct_number_of_entries_test(processed, reference)
+    all_entries_have_the_same_keys_test(processed, reference)
+    correct_data_in_entries_test(processed, reference)
+
+
+def correct_number_of_entries_test(processed, reference):
     """Test that the number of entries returned are the same as the control.
 
     This will create a test for each of the files in the test_collection
     variable.
     """
-    processed, reference = raw_template_test(load_template_test)
-
     assert len(processed) == len(reference)
 
 
-def test_that_all_entries_have_the_same_keys(load_template_test):
+def all_entries_have_the_same_keys_test(processed, reference):
     """Test that the keys of the returned data are the same as the control.
 
     This will create a test for each of the files in the test_collection
     variable.
     """
-    processed, reference = raw_template_test(load_template_test)
-
     for i in range(len(processed)):
         assert sorted(processed[i].keys()) == sorted(reference[i].keys())
 
 
-def test_correct_data_in_entries(load_template_test):
+def correct_data_in_entries_test(processed, reference):
     """Test that the actual data in each entry is the same as the control.
 
     This will create a test for each of the files in the test_collection
     variable.
     """
-    processed, reference = raw_template_test(load_template_test)
-
     # Can be uncommented if we don't care that the parsed data isn't
     # in the same order as the raw data
     # reference = sorted(reference)
