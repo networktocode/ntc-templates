@@ -6,17 +6,8 @@ import os
 import glob
 import csv
 
+from tests import load_index_data
 
-
-def load_indexdata():
-    """Load data from index file."""
-    index_data = []
-    with open('./templates/index') as indexfs:
-        data = csv.reader(indexfs)
-        for row in data:
-            if len(row) > 2 and row[0] != 'Template':
-                index_data.append(row)
-    return index_data
 
 def check_order(current_os, prior_os, cmd_len, prior_len, os_choices, used_os, cmd, prior_cmd):
     add_os_check = []
@@ -80,7 +71,7 @@ def test_index_ordering():
     prior_cmd = ""
     used_os = []
 
-    index = load_indexdata()
+    index = load_index_data()
     for row in index:
         template = row[0].strip()
         os = '_'.join(template.split('_')[:2])

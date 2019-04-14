@@ -1,9 +1,7 @@
 """Ensure that testcases exist for all templates."""
-import csv
 import glob
-import os
 
-from ntc_templates.parse import _get_template_dir
+from tests import load_index_data
 
 KNOWN_MISSING_TESTS = [
     'cisco_ios_show_vlan',
@@ -15,20 +13,9 @@ KNOWN_MISSING_TESTS = [
 ]
 
 
-def load_indexdata():
-    """Load data from index file."""
-    index_data = []
-    with open('%s%sindex' % (_get_template_dir(), os.sep)) as indexfs:
-        data = csv.reader(indexfs)
-        for row in data:
-            if len(row) > 2 and row[0] != 'Template':
-                index_data.append(row)
-    return index_data
-
-
 def test_verify_parsed_and_reference_data_exists():
     """Verify that at least one test exists for all entries in the index file."""
-    index = sorted(load_indexdata())
+    index = sorted(load_index_data())
     coverage = {}
     for row in index:
         template = row[0].strip()
