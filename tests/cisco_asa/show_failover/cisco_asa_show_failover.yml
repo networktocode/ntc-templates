@@ -1,0 +1,69 @@
+---
+parsed_sample:
+  - state: "On"
+    role: "Primary"
+    lan_intf_name: "failover"
+    lan_intf: "GigabitEthernet0/4"
+    lan_intf_state: "up"
+    sw_version: "98.1(1)86"
+    sw_version_mate: "98.1(1)86"
+    failover_group:
+      - "None"
+    last_failover_time:
+      - "12:52:34"
+    last_failover_timezone:
+      - "UTC"
+    last_failover_month:
+      - "Apr"
+    last_failover_day:
+      - "26"
+    last_failover_year:
+      - "2017"
+    service_state:
+      - "Active"
+    service_state_mate:
+      - "Standby Ready"
+    ssp_slot:
+      - "0"
+    ssp_model:
+      - "ASA5585-SSP-10"
+    ssp_status:
+      - "Up"
+    ssp_slot_mate:
+      - "0"
+    ssp_model_mate:
+      - "ASA5585-SSP-10"
+    ssp_status_mate:
+      - "Up"
+    interfaces_context:
+      - "None"
+      - "None"
+      - "None"
+    interfaces:
+      - "inside"
+      - "outside"
+      - "dmz"
+    interfaces_status:
+      - "Normal"
+      - "No Link"
+      - "No Link"
+    interfaces_state:
+      - "Monitored"
+      - "Waiting"
+      - "Waiting"
+    interfaces_context_mate:
+      - "None"
+      - "None"
+      - "None"
+    interfaces_mate:
+      - "inside"
+      - "outside"
+      - "dmz"
+    interfaces_status_mate:
+      - "Normal"
+      - "No Link"
+      - "No Link"
+    interfaces_state_mate:
+      - "Waiting"
+      - "Waiting"
+      - "Waiting"

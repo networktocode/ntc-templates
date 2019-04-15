@@ -27,7 +27,7 @@ def load_template_test(request):
 
 def raw_template_test(raw_file):
     """Return structured data along with reference data."""
-    parsed_file = "{0}.parsed".format(raw_file[:-4])
+    parsed_file = "{0}.yml".format(raw_file[:-4])
     parts = raw_file.split("/")
     platform = parts[1]
     command = " ".join(parts[2].split("_"))

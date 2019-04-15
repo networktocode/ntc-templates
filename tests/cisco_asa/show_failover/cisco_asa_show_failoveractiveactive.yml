@@ -1,0 +1,117 @@
+---
+parsed_sample:
+  - state: "On"
+    role: "Primary"
+    lan_intf_name: "folink"
+    lan_intf: "GigabitEthernet0/2"
+    lan_intf_state: "up"
+    sw_version: ""
+    sw_version_mate: ""
+    failover_group:
+      - "1"
+      - "2"
+    last_failover_time:
+      - "13:40:18"
+      - "13:40:06"
+    last_failover_timezone:
+      - "UTC"
+      - "UTC"
+    last_failover_month:
+      - "Dec"
+      - "Dec"
+    last_failover_day:
+      - "9"
+      - "9"
+    last_failover_year:
+      - "2004"
+      - "2004"
+    service_state:
+      - "Active"
+      - "Standby Ready"
+    service_state_mate:
+      - "Standby Ready"
+      - "Active"
+    ssp_slot:
+      - "0"
+    ssp_model:
+      - "ASA-5545"
+    ssp_status:
+      - "Up"
+    ssp_slot_mate:
+      - "0"
+    ssp_model_mate:
+      - "ASA-5545"
+    ssp_status_mate:
+      - "Up"
+    interfaces_context:
+      - "admin"
+      - "admin"
+      - "admin"
+      - "admin"
+      - "ctx1"
+      - "ctx1"
+      - "ctx2"
+      - "ctx2"
+    interfaces:
+      - "outside"
+      - "folink"
+      - "inside"
+      - "fourth"
+      - "outside"
+      - "inside"
+      - "outside"
+      - "inside"
+    interfaces_status:
+      - "Normal"
+      - "Normal"
+      - "Normal"
+      - "Normal"
+      - "Normal"
+      - "Normal"
+      - "Normal"
+      - "Normal"
+    interfaces_state:
+      - "None"
+      - "None"
+      - "None"
+      - "None"
+      - "None"
+      - "None"
+      - "None"
+      - "None"
+    interfaces_context_mate:
+      - "admin"
+      - "admin"
+      - "admin"
+      - "admin"
+      - "ctx1"
+      - "ctx1"
+      - "ctx2"
+      - "ctx2"
+    interfaces_mate:
+      - "outside"
+      - "folink"
+      - "inside"
+      - "fourth"
+      - "outside"
+      - "inside"
+      - "outside"
+      - "inside"
+    interfaces_status_mate:
+      - "Normal"
+      - "Normal"
+      - "Normal"
+      - "Normal"
+      - "Normal"
+      - "Normal"
+      - "Normal"
+      - "Normal"
+    interfaces_state_mate:
+      - "None"
+      - "None"
+      - "None"
+      - "None"
+      - "None"
+      - "None"
+      - "None"
+      - "None"
