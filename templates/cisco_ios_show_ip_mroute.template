@@ -1,6 +1,6 @@
 Value MULTICAST_SOURCE_IP (\*|\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})
 Value MULTICAST_GROUP_IP (\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})
-Value UP_TIME (\d{2}:\d{2}:\d{2})
+Value UP_TIME (\S+)
 Value EXPIRATION_TIME (\d{2}:\d{2}:\d{2}|stopped)
 Value RENDEZVOUS_POINT (\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})
 Value FLAGS (\w*)
@@ -9,7 +9,7 @@ Value REVERSE_PATH_FORWARDING_NEIGHBOUR_IP (\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})
 Value REGISTERING (Registering)
 Value List OUTGOING_INTERFACE (\S+)
 Value List FORWARD_MODE (Forward\/Sparse|Forward\/Dense)
-Value List OUTGOING_MULTICAST_UP_TIME (\d{2}:\d{2}:\d{2})
+Value List OUTGOING_MULTICAST_UP_TIME (\S+)
 Value List OUTGOING_MULTICAST_EXPIRATION_TIME (\d{2}:\d{2}:\d{2}|stopped)
 
 Start
