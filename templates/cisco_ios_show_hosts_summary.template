@@ -1,0 +1,12 @@
+Value DEFAULT_DOMAIN (\S+)
+Value NAME_SERVERS ([\S ]+)
+Value LOCAL_CACHE_ENTRIES (\d+)
+Value DYNAMIC_CACHE_ENTRIES (\d+)
+
+Start
+  ^Default domain is\s+${DEFAULT_DOMAIN}
+  ^Name servers are\s+${NAME_SERVERS}
+  ^Local cache entries:\s+${LOCAL_CACHE_ENTRIES}
+  ^Dynamic cache entries:\s+${DYNAMIC_CACHE_ENTRIES}
+  ^\s*$$
+  ^. -> Error
