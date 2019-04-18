@@ -1,0 +1,8 @@
+Value VERSION_INSTALLED (\S+)
+Value VERSION_RUNNING (\S+)
+Value KERNEL (\S+)
+
+Start
+  ^\| *Installed Package +\: +${VERSION_INSTALLED}
+  ^\| *Running Package +\: +${VERSION_RUNNING}
+  ^\| *Running Kernel +\: +${KERNEL}

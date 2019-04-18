@@ -1,6 +1,7 @@
 ---
 
 # This Playbook will build the correct *.parsed file, based on the *.raw file. The presumption is you are running the playbook from the helpers folder, and it will find the correct test path. 
+# Requirements: git clone https://github.com/networktocode/ntc-ansible.git and copy the library directory to this directory
 # You can set extra vars for root_directory, os, command, and num ( which is a way to differentiate when you have multiple tests)
 
 # Example command below, makes use of localhost,
