@@ -6,7 +6,7 @@ Value DISTANCE (\d+)
 Value METRIC (\d+)
 Value NEXTHOPIP (\d+\.\d+\.\d+\.\d+)
 Value NEXTHOPIF (\S+)
-Value UPTIME (\d+:\d+:\d+)
+Value UPTIME ((\d+:\d+:\d+)|(\d+w\d+d))
 
 Start
   ^Gateway -> ROUTES
@@ -20,7 +20,7 @@ ROUTES
   ^${PROTOCOL}(\s|\*)${TYPE}\s+${NETWORK}\s\[${DISTANCE}\/${METRIC}\]\svia\s${NEXTHOPIP}(,\s${UPTIME}){0,1}(,\s${NEXTHOPIF}){0,1} -> Record
   #
   # Match load-balanced routes
-  ^\s+\[${DISTANCE}\/${METRIC}\]\s+via\s+${NEXTHOPIP},\s+${NEXTHOPIF} -> Record
+  ^\s+\[${DISTANCE}\/${METRIC}\]\s+via\s+${NEXTHOPIP},\s+${UPTIME}, \s+${NEXTHOPIF} -> Record
   #
   # Match directly connected routes
   ^${PROTOCOL}\s${TYPE}\s+${NETWORK}\sis\sdirectly\sconnected,\s${NEXTHOPIF} -> Record
@@ -29,8 +29,7 @@ ROUTES
   # Clear all variables on empty lines
   ^\s* -> Clearall
   #^${TYPE} -> Continue.Record
-  #^${TYPE}\s+${NETWORK}\s+${MASK}\s+\[\d+\/\d+\]\s+via\s+${GATEWAY}\,\s+${INTFC}\s* -> Record
-  #^\s+\[\d+\/\d+\]\s+via\s+${GATEWAY}\,\s+${INTFC} -> Record
+  #^${TYPE}\s+${NETWORK}\s+${MASK}\s+\[\d+\/\d+\]\s+via\s+${GATEWAY}\,\s+${UPTIME},\s+${INTFC}\s* -> Record
+  #^\s+\[\d+\/\d+\]\s+via\s+${GATEWAY}\,\s+${UPTIME},\s+${INTFC} -> Record
 
 EOF
-
