@@ -1,8 +1,8 @@
 Value INTERFACE (\S+)
-Value PHY (down|up)
-Value PROTOCOL (down|up)
-Value INUTI (\d*\.?\d*%)
-Value OUTUTI (\d*\.?\d*%)
+Value PHY (down|\*down|up|up\(s\))
+Value PROTOCOL (down|\*down|up|up\(s\))
+Value INUTI (\d*\.?\d*%|\-\-)
+Value OUTUTI (\d*\.?\d*%|\-\-)
 Value INERRORS (\d+)
 Value OUTERRORS (\d+)
 
