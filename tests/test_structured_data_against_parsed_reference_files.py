@@ -1,56 +1,11 @@
 #!/usr/bin/env python
 
 """Run tests against all the *.raw files."""
-import glob
 import pytest
 import yaml
-try:
-    import clitable
-except:
-    import textfsm.clitable as clitable
+from ntc_template_test_helper import return_test_files
+from ntc_templates.parse import parse_output
 
-
-def return_test_files():
-    """Return a list of all the *.raw files to run tests against."""
-    platform_dirs = glob.glob('tests/*')
-
-    platforms = []
-    for platform in platform_dirs:
-        platforms.append(glob.glob('%s/*' % platform))
-
-    template_dirs = [item for sublist in platforms for item in sublist]
-
-    test_commands = []
-    for template_dir in template_dirs:
-        test_commands.append(glob.glob('%s/*.raw' % template_dir))
-
-    return [item for sublist in test_commands for item in sublist]
-
-
-def clitable_to_dict(cli_table):
-    """Convert TextFSM cli_table object to list of dictionaries."""
-    objs = []
-    for row in cli_table:
-        temp_dict = {}
-        for index, element in enumerate(row):
-            temp_dict[cli_table.header[index].lower()] = element
-        objs.append(temp_dict)
-
-    return objs
-
-
-def get_structured_data(platform, command, rawoutput):
-    """Return the structured data."""
-    cli_table = clitable.CliTable('index', 'templates')
-
-    attrs = dict(
-        Command=command,
-        Platform=platform
-    )
-    cli_table.ParseCmd(rawoutput, attrs)
-    structured_data = clitable_to_dict(cli_table)
-
-    return structured_data
 
 # Populate test_collection with a list of all the .raw template files we want
 # to run tests against
@@ -71,7 +26,7 @@ def raw_template_test(raw_file):
     command = ' '.join(parts[2].split('_'))
     with open(raw_file, 'r') as data:
         rawoutput = data.read()
-    structured = get_structured_data(platform, command, rawoutput)
+    structured = parse_output(platform=platform, command=command, data=rawoutput)
     with open(parsed_file, 'r') as data:
         parsed_data = yaml.load(data.read())
 
