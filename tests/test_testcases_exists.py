@@ -1,44 +1,39 @@
 """Ensure that testcases exist for all templates."""
-import csv
-import glob
 import os
+import glob
+import re
 
-from ntc_templates.parse import _get_template_dir
+from tests import load_index_data
 
-KNOWN_MISSING_TESTS = [
+
+KNOWN_MISSING_TESTS = {
     'cisco_ios_show_vlan',
     'cisco_nxos_show_interface_brief',
     'cisco_nxos_show_ip_ospf_neighbor_vrf',
     'cisco_xr_show_controllers',
-    '.*vyos.*_os_show_interfaces',
-    '.*vyos.*_os_show_arp',
-]
-
-
-def load_indexdata():
-    """Load data from index file."""
-    index_data = []
-    with open('%s%sindex' % (_get_template_dir(), os.sep)) as indexfs:
-        data = csv.reader(indexfs)
-        for row in data:
-            if len(row) > 2 and row[0] != 'Template':
-                index_data.append(row)
-    return index_data
+}
 
 
 def test_verify_parsed_and_reference_data_exists():
-    """Verify that at least one test exists for all entries in the index file."""
-    index = sorted(load_indexdata())
-    coverage = {}
+    """Verify that at least one test exists for all entries in the index file.
+
+    TODO:
+        Add test cases for ``KNOWN_MISSING_TESTS`` and remove related conditional.
+        Remove "_ssh" from ``cisco_wlc_ssh`` and rely on vendor_platform_command syntax
+            instead of using regex on the directories.
+    """
+    index = sorted(load_index_data())
     for row in index:
         template = row[0].strip()
+        template_short = template.split('.')[0]
         platform = row[2].strip()
-        cut = len(platform) + 1
-        command = template[cut:].split('.')[0]
-        cases = 'tests/%s/%s/*.raw' % (platform, command)
-        test_list = glob.glob(cases)
-        coverage['%s_%s' % (platform, command)] = len(test_list)
-
-    for test in coverage:
-        if coverage[test] == 0 and test not in KNOWN_MISSING_TESTS:
-            assert test == 'No test cases found'
+        for directory in os.listdir("tests"):
+            if re.match(platform, directory):
+                platform_directory = directory
+                break
+        cut = len(platform_directory) + 1
+        command = template_short[cut:]
+        if template_short not in KNOWN_MISSING_TESTS:
+            cases = 'tests/%s/%s/*.raw' % (platform_directory, command)
+            test_list = glob.glob(cases)
+            assert len(test_list) != 0, 'Could not find tests for %s' % template
