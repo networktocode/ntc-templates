@@ -64,7 +64,10 @@ def all_entries_have_the_same_keys_test(processed, reference):
     variable.
     """
     for i in range(len(processed)):
-        assert sorted(processed[i].keys()) == sorted(reference[i].keys())
+        proc = set(processed[i].keys())
+        ref = set(reference[i].keys())
+        diff = proc.symmetric_difference(ref)
+        assert not diff, "Key diffs: " + ", ".join(diff)
 
 
 def correct_data_in_entries_test(processed, reference):
@@ -80,4 +83,4 @@ def correct_data_in_entries_test(processed, reference):
 
     for i in range(len(reference)):
         for key in reference[i].keys():
-            assert processed[i][key] == reference[i][key]
+            assert processed[i][key] == reference[i][key], "entry #{0}, key: {1}".format(i, key)
