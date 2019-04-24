@@ -26,6 +26,7 @@ config = {
     'package_data': {'ntc_templates': ['templates/*']},
     'description': 'Package to return structured data from the output of network devices.',
     'long_description': long_description,
+    'long_description_content_type': 'text/markdown',
     'author': 'network.toCode()',
     'author_email': 'info@networktocode.com',
     'url': 'https://github.com/networktocode/ntc-templates',
