@@ -1,0 +1,31 @@
+---
+parsed_sample:
+
+- bgp_neigh: 192.168.1.2
+  local_as: '645001'
+  neigh_as: '65002'
+  pfxrcd: 7      4
+  router_id: 192.168.1.1
+  state: Estab
+  vrf: RED
+- bgp_neigh: 192.168.2.2
+  local_as: '65011'
+  neigh_as: '65012'
+  pfxrcd: 7      5
+  router_id: 192.168.2.1
+  state: Estab
+  vrf: WHITE
+- bgp_neigh: 192.168.3.2
+  local_as: '65021'
+  neigh_as: '65022'
+  pfxrcd: 25     2
+  router_id: 192.168.3.1
+  state: Estab
+  vrf: BLUE
+- bgp_neigh: 192.168.3.3
+  local_as: '65021'
+  neigh_as: '65023'
+  pfxrcd: 18     1
+  router_id: 192.168.3.1
+  state: Estab
+  vrf: BLUE
