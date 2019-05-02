@@ -8,6 +8,11 @@ NTC-Templates contains a set of multi-vendor templates based around TEXTFSM pars
 These templates take the raw string input from the CLI of network infrastructure devices, such as Cisco IOS, Juniper JUNOS
 or HPE Comware devices, run them through a TEXTFSM template and return structured text in the form of a Python dictionary.
 
+# Initial Setup
+
+- setup a virual environment with `pipenv install`
+- enter the virtual environment with `pipenv shell`
+- run all tests with the command `tox`
 
 # Contributing
 
