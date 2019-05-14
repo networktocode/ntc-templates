@@ -1,4 +1,4 @@
-Value Required NEIGHBOR (\S+)
+Value Required NEIGHBOR (\S{0,20})
 Value Required LOCAL_INTERFACE (\S+)
 Value Required NEIGHBOR_INTERFACE (\S+)
 
@@ -6,6 +6,6 @@ Start
   ^Device.*ID -> LLDP
 
 LLDP
-  ^${NEIGHBOR}\s+${LOCAL_INTERFACE}\s+\d+\s+(\S+)*\s+${NEIGHBOR_INTERFACE} -> Record
+  ^${NEIGHBOR}\s*${LOCAL_INTERFACE}\s+\d+\s+(\S+)*\s+${NEIGHBOR_INTERFACE} -> Record
   ^${NEIGHBOR}
   ^\s+${LOCAL_INTERFACE}\s+\d+\s+(\S+)*\s+${NEIGHBOR_INTERFACE} -> Record
