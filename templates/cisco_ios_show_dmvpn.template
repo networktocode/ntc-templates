@@ -1,0 +1,11 @@
+Value Filldown INTERFACE ([a-zA-Z0-9_]+)
+Value PEER_ADDRESS ([0-9A-Fa-f:\.]+)
+Value TUNNEL_ADDRESS ([0-9A-Fa-f:\.]+)
+Value STATE (\S+)
+
+
+Start
+  ^Interface:[ ]${INTERFACE}
+  ^\s+\d+[ ]${PEER_ADDRESS}\s+${TUNNEL_ADDRESS}\s+${STATE} -> Record
+
+EOF
