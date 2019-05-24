@@ -1,0 +1,20 @@
+Value Filldown SYSTEM_TYPE (\S+)
+Value Filldown SYSTEM_MODE (\S+)
+Value Filldown OS_VERSION (\S+)
+Value UNIT (\S+)
+Value UNIT_TYPE (\S+)
+Value SERIAL (\S+)
+Value PART_NUMBER (\S+)
+Value REVISION (\S+)
+Value PART_ID (\S+)
+Value SERVICE_TAG (\S+)
+
+Start
+  ^System Type\s+:\s+${SYSTEM_TYPE}
+  ^System Mode\s+:\s+${SYSTEM_MODE}
+  ^Software Version\s+:\s+${OS_VERSION}
+  ^Unit Type
+  ^-+
+  ^\*?\s+${UNIT}\s+${UNIT_TYPE}\s+${SERIAL}\s+${PART_NUMBER}\s+${REVISION}\s+${PART_ID}\s+\S+\s+${SERVICE_TAG} -> Record
+
+EOF
