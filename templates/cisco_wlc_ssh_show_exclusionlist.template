@@ -1,0 +1,5 @@
+Value mac (([\da-fA-F]{2}[-:]){5}[\da-fA-F]{2})
+Value comment (.*)
+
+Start
+  ^${mac}\s+${comment} -> Record
