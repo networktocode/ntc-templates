@@ -1,0 +1,69 @@
+Wed Jul 10 13:20:45.514 UTC
+================================================================================
+CHASSIS LEVEL POWER INFO: 0
+================================================================================
+   Total output power capacity (N + 1)             :   27000W +    3000W
+   Total output power required                     :   13179W
+   Total power input                               :   10692W
+   Total power output                              :    9930W
+
+Power Group 0: 
+================================================================================
+   Power       Supply     ------Input----   ------Output---      Status
+   Module      Type        Volts     Amps    Volts     Amps    
+================================================================================
+   0/PM0       3kW-AC      241.1      4.4     12.0     81.8    OK 
+   0/PM1       3kW-AC      240.5      4.5     12.0     82.4    OK 
+   0/PM2       3kW-AC      241.1      4.4     12.0     82.7    OK 
+   0/PM3       3kW-AC      241.1      4.5     12.0     83.6    OK 
+   0/PM4       3kW-AC      241.3      4.4     12.0     82.1    OK 
+
+Total of Power Group 0:       5351W/ 22.2A      4951W/412.6A
+
+Power Group 1: 
+================================================================================
+   Power       Supply     ------Input----   ------Output---      Status
+   Module      Type        Volts     Amps    Volts     Amps    
+================================================================================
+   0/PM5       3kW-AC      241.3      4.6     12.0     85.6    OK 
+   0/PM6       3kW-AC      241.1      4.4     12.0     81.8    OK 
+   0/PM7       3kW-AC      241.1      4.4     12.0     81.8    OK 
+   0/PM8       3kW-AC      238.4      4.4     12.0     82.4    OK 
+   0/PM9       3kW-AC      241.1      4.4     12.0     83.3    OK 
+
+Total of Power Group 1:       5341W/ 22.2A      4979W/414.9A
+
+================================================================================
+   Location     Card Type            Power       Power       Status
+                                     Allocated   Used
+                                     Watts       Watts
+================================================================================
+   0/0          NC55-36X100G-S         902         709       ON 
+   0/1          NC55-36X100G-S         902         716       ON 
+   0/2          NC55-36X100G-S         902         800       ON 
+   0/3          NC55-36X100G-S         902         739       ON 
+   0/4          NC55-36X100G-S         902         573       ON 
+   0/5          NC55-36X100G-S         902         589       ON 
+   0/6          NC55-36X100G-S         902         582       ON 
+   0/7                 -                25           -       RESERVED 
+   0/8                 -                25           -       RESERVED 
+   0/9                 -                25           -       RESERVED 
+   0/10                -                25           -       RESERVED 
+   0/11                -                25           -       RESERVED 
+   0/12                -                25           -       RESERVED 
+   0/13                -                25           -       RESERVED 
+   0/14                -                25           -       RESERVED 
+   0/15                -                25           -       RESERVED 
+   0/RP0        NC55-RP                 90          31       ON 
+   0/RP1               -                90           -       RESERVED 
+   0/FC0        NC55-5516-FC           775         541       ON 
+   0/FC1        NC55-5516-FC           775         537       ON 
+   0/FC2        NC55-5516-FC           775         544       ON 
+   0/FC3        NC55-5516-FC           775         538       ON 
+   0/FC4        NC55-5516-FC           775         542       ON 
+   0/FC5        NC55-5516-FC           775         545       ON 
+   0/FT0        NC55-5516-FAN          580         504       ON 
+   0/FT1        NC55-5516-FAN          580         509       ON 
+   0/FT2        NC55-5516-FAN          580         520       ON 
+   0/SC0        NC55-SC                 35          17       ON 
+   0/SC1        NC55-SC                 35          21       ON 

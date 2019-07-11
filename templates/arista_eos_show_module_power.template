@@ -1,0 +1,11 @@
+Value MODULE (\S+)
+Value MODEL (\S+)
+Value Required POWERCONSUMPTION (\S+)
+Value Fillup TOTAL (\S+)
+
+Start
+  ^.*Module.+\s+
+  ^-.+
+  ^${MODULE}\s+${MODEL}\s+${POWERCONSUMPTION}\s+\S+\s+\S+ -> Record
+  ^-.+
+  ^\s+Total\s+${TOTAL} -> Record

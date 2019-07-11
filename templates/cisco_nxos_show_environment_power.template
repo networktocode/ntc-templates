@@ -1,0 +1,13 @@
+Value Required MODULE (\S+)
+Value MODEL (\S+)
+Value ACTUAL_DRAW (N\/A|\d+\.\d+ W|\d+ W)
+Value POWER_ALLOC (N\/A|\d+\.\d+ W|\d+ W)
+Value STATUS (\S+)
+Value Fillup TOTAL (N\/A|\d+\.\d+ W|\d+ W)
+
+Start
+  ^Power\s+Supply:
+  ^.+ -> Continue
+  ^.+--
+  ^${MODULE}\s+${MODEL}\s+${ACTUAL_DRAW}\s+${POWER_ALLOC}\s+${STATUS} -> Record
+  ^Total Power of all Inputs \(cumulative\)\s+${TOTAL} -> Record

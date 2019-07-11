@@ -1,0 +1,54 @@
+Power Supply:
+Voltage: 12 Volts
+Power                             Actual      Actual        Total
+Supply    Model                   Output      Input      Capacity    Status
+                                (Watts )    (Watts )     (Watts )
+-------  -------------------  ----------  ----------  ----------  --------------
+1        N9K-PAC-3000W-B           774 W       819 W      3000 W     Ok        
+2        N9K-PAC-3000W-B           802 W       855 W      3000 W     Ok        
+3        N9K-PAC-3000W-B           791 W       834 W      3000 W     Ok        
+4        N9K-PAC-3000W-B           777 W       834 W      3000 W     Ok        
+5        ------------                0 W         0 W         0 W     Absent    
+6        ------------                0 W         0 W         0 W     Absent    
+7        ------------                0 W         0 W         0 W     Absent    
+8        ------------                0 W         0 W         0 W     Absent    
+
+
+                                  Actual        Power      
+Module    Model                     Draw    Allocated    Status
+                                 (Watts )     (Watts )     
+-------  -------------------  -----------  -----------  --------------
+1        N9K-X9732C-EXM          238.00 W     840.00 W    Powered-Up
+2        N9K-X9732C-EX           249.00 W     720.00 W    Powered-Up
+3        N9K-X9732C-EX           267.00 W     720.00 W    Powered-Up
+4        N9K-X9732C-EX           230.00 W     720.00 W    Powered-Up
+Xb21     xbar                      N/A          0.00 W    Absent
+Xb22     N9K-C9508-FM-E           85.00 W     564.00 W    Powered-Up
+Xb23     N9K-C9508-FM-E           97.00 W     564.00 W    Powered-Up
+Xb24     N9K-C9508-FM-E           98.00 W     564.00 W    Powered-Up
+Xb25     xbar                      N/A          0.00 W    Absent
+Xb26     N9K-C9508-FM-E           92.00 W     564.00 W    Powered-Up
+27       N9K-SUP-A                65.00 W      79.92 W    Powered-Up
+28       supervisor                N/A          0.00 W    Absent
+29       N9K-SC-A                 14.00 W      25.20 W    Powered-Up
+30       N9K-SC-A                 15.00 W      25.20 W    Powered-Up
+fan1     N9K-C9508-FAN            67.00 W     249.00 W    Powered-Up
+fan2     N9K-C9508-FAN            68.00 W     249.00 W    Powered-Up
+fan3     N9K-C9508-FAN            70.00 W     249.00 W    Powered-Up
+
+N/A - Per module power not available
+
+
+Power Usage Summary:
+--------------------
+Power Supply redundancy mode (configured)                PS-Redundant
+Power Supply redundancy mode (operational)               PS-Redundant
+
+Total Power Capacity (based on configured mode)            9000.00 W
+Total Grid-A (first half of PS slots) Power Capacity       12000.00 W
+Total Grid-B (second half of PS slots) Power Capacity         0.00 W
+Total Power of all Inputs (cumulative)                     12000.00 W
+Total Power Output (actual draw)                           3146.00 W
+Total Power Input (actual draw)                            3343.00 W
+Total Power Allocated (budget)                             5275.44 W
+Total Power Available for additional modules               3724.56 W

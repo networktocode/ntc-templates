@@ -1,0 +1,16 @@
+Value Filldown TOTAL (\S+)
+Value Required MODULE_LOC (\d+/\S+)
+Value MODULE_TYPE (\S+|-)
+Value MODULE_STATUS (\S+)
+Value MODULE_POW_USED (\d+|-)
+Value MODULE_POW_ALLOC (\d+|\S+)
+
+
+Start
+  #^${TEST}
+  ^\s+Total power input\s+:\s+${TOTAL}
+  ^\s+${MODULE_LOC}\s+${MODULE_TYPE}\s+${MODULE_POW_ALLOC}\s+${MODULE_POW_USED}\s+${MODULE_STATUS} -> Record
+
+
+
+

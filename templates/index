@@ -38,6 +38,7 @@ arista_eos_show_isis_neighbors.template, .*, arista_eos, sh[[ow]] isis ne[[ighbo
 arista_eos_show_lldp_neighbors.template, .*, arista_eos, sh[[ow]] ll[[dp]] nei[[ghbors]]
 arista_eos_show_snmp_community.template, .*, arista_eos, sh[[ow]] sn[[mp]] com[[munity]]
 arista_eos_show_reload_cause.template, .*, arista_eos, sh[[ow]] relo[[ad]] ca[[use]]
+arista_eos_show_module_power.template, .*, arista_eos, sh[[ow]] modu[[le]] pow[[er]]
 arista_eos_show_module_json.template, .*, arista_eos, sh[[ow]] modu[[le]] | json
 arista_eos_show_boot-config.template, .*, arista_eos, sh[[ow]] boot-c[[onfig]]
 arista_eos_show_interfaces.template, .*, arista_eos, sh[[ow]] inte[[rfaces]]
@@ -156,6 +157,7 @@ cisco_nxos_show_port-channel_summary.template, .*, cisco_nxos, sh[[ow]] po[[rt-c
 cisco_nxos_show_cts_interface_brief.template, .*, cisco_nxos, sh[[ow]] cts inte[[rface]] br[[ief]]
 cisco_nxos_show_cts_interface_all.template, .*, cisco_nxos, sh[[ow]] ct[[s]] inter[[face]] al[[l]]
 cisco_nxos_show_ipv6_bgp_summary.template, .*, cisco_nxos, sh[[ow]] ipv[[6]] bg[[p]] su[[mmary]]
+cisco_nxos_show_environment_power.template, .*, cisco_nxos, sh[[ow]] env[[ironment]] pow[[er]]
 cisco_nxos_show_mac_address-table.template, .*, cisco_nxos, sh[[ow]] m[[ac]] addr[[ess-table]]
 cisco_nxos_show_interface_status.template, .*, cisco_nxos, sh[[ow]] int[[erface]] st[[atus]]
 cisco_nxos_show_ip_bgp_neighbors.template, .*, cisco_nxos, sh[[ow]] ip bgp nei[[ghbors]]
@@ -195,6 +197,7 @@ cisco_xr_show_controller_fabric_plane_all.template, .*, cisco_xr, sh[[ow]] contr
 cisco_xr_show_configuration_commit_list.template, .*, cisco_xr, sh[[ow]] conf[[iguration]] c[[ommit]] l[[ist]]
 cisco_xr_show_mpls_ldp_neighbor_brief.template, .*, cisco_xr, sh[[ow]] mp[[ls]] ld[[p]] neigh[[bor]] br[[ief]]
 cisco_xr_show_bgp_ipv6_unicast_summary.template, .*, cisco_xr, sh[[ow]] b[[gp]] ipv6 uni[[cast]] sum[[mary]]
+cisco_xr_admin_show_environment_power.template, .*, cisco_xr, adm[[in]] sh[[ow]] env[[ironment]] pow[[er]]
 cisco_xr_show_dhcp_ipv4_proxy_binding.template, .*, cisco_xr, sh[[ow]] dh[[cp]] ipv4 p[[roxy]] b[[inding]]
 cisco_xr_admin_show_environment_fan.template, .*, cisco_xr, adm[[in]] sh[[ow]] env[[ironment]] f[[an]]
 cisco_xr_show_cdp_neighbors_detail.template, .*, cisco_xr, sh[[ow]] c[[dp]] neig[[hbors]] det[[ail]]
