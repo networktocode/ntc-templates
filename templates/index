@@ -146,6 +146,7 @@ cisco_ios_show_vlan.template, .*, cisco_ios, sh[[ow]] vlan
 cisco_ios_show_vrf.template, .*, cisco_ios, sh[[ow]] vrf
 cisco_ios_dir.template,  .*, cisco_ios, dir
 
+cisco_nxos_show_hardware_capacity_fabric_utilization.template, .*, cisco_nxos, sh[[ow]] hard[[ware]] capa[[city]] fabric[[-utilization]]
 cisco_nxos_show_interface_transceiver_details.template, .*, cisco_nxos, sh[[ow]] int[[erface]] tra[[nsceiver]] de[[tails]]
 cisco_nxos_show_environment_temperature.template, .*, cisco_nxos, sh[[ow]] env[[ironment]] t[[emperature]]
 cisco_nxos_show_ip_dhcp_relay_address.template, .*, cisco_nxos, sh[[ow]] ip dh[[cp]] r[[elay]] a[[ddress]]

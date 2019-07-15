@@ -1,0 +1,9 @@
+Value MODULE (\d+)
+Value TOTAL_FAB_BW (\S+)
+Value UTIL_INGRESS (\S+)
+Value UTIL_EGRESS (\S+)
+
+Start
+  ^\s?${MODULE}\s+${TOTAL_FAB_BW}\s+${UTIL_INGRESS}\s+${UTIL_EGRESS} -> Record
+
+EOF
