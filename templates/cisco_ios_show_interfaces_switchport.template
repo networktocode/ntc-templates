@@ -1,16 +1,18 @@
 Value Required INTERFACE (\S+)
 Value SWITCHPORT (.+)
 Value SWITCHPORT_MONITOR (.+)
-Value MODE (\S+)
+Value SWITCHPORT_NEGOTIATION (.+)
+Value MODE (.+)
 Value ACCESS_VLAN (\d+)
 Value NATIVE_VLAN (\d+)
-Value TRUNKING_VLANS (\S+)
+Value TRUNKING_VLANS (.+)
 
 Start
   ^Name: ${INTERFACE}
-  ^  Switchport: ${SWITCHPORT}
-  ^  Switchport Monitor: ${SWITCHPORT_MONITOR}
-  ^  Operational Mode: ${MODE}
-  ^  Access Mode VLAN: ${ACCESS_VLAN}
-  ^  Trunking Native Mode VLAN: ${NATIVE_VLAN}
-  ^  Trunking VLANs Allowed: ${TRUNKING_VLANS} -> Record
+  ^\S*Switchport: ${SWITCHPORT}
+  ^\S*Switchport Monitor: ${SWITCHPORT_MONITOR}
+  ^\S*Operational Mode: ${MODE}
+  ^\S*Negotiation of Trunking: ${SWITCHPORT_NEGOTIATION}
+  ^\S*Access Mode VLAN: ${ACCESS_VLAN}
+  ^\S*Trunking Native Mode VLAN: ${NATIVE_VLAN}
+  ^\S*Trunking VLANs Enabled: ${TRUNKING_VLANS} -> Record
