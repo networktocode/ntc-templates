@@ -9,10 +9,10 @@ Value TRUNKING_VLANS (.+)
 
 Start
   ^Name: ${INTERFACE}
-  ^\S*Switchport: ${SWITCHPORT}
-  ^\S*Switchport Monitor: ${SWITCHPORT_MONITOR}
-  ^\S*Operational Mode: ${MODE}
-  ^\S*Negotiation of Trunking: ${SWITCHPORT_NEGOTIATION}
-  ^\S*Access Mode VLAN: ${ACCESS_VLAN}
-  ^\S*Trunking Native Mode VLAN: ${NATIVE_VLAN}
-  ^\S*Trunking VLANs Enabled: ${TRUNKING_VLANS} -> Record
+  ^\s*Switchport: ${SWITCHPORT}
+  ^\s*Switchport Monitor: ${SWITCHPORT_MONITOR}
+  ^\s*Operational Mode: ${MODE}
+  ^\s*Negotiation of Trunking: ${SWITCHPORT_NEGOTIATION}
+  ^\s*Access Mode VLAN: ${ACCESS_VLAN}
+  ^\s*Trunking Native Mode VLAN: ${NATIVE_VLAN}
+  ^\s*Trunking VLANs Enabled: ${TRUNKING_VLANS} -> Record
