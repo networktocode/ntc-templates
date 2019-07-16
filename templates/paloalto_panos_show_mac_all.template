@@ -1,8 +1,9 @@
 Value VLAN (\S+)
-Value MAC (\S+)
+Value MAC ([0-9a-fA-F:]+)
 Value INTERFACE (\S+)
 Value STATUS (\S+)
-Value TTL (\S+)
+Value TTL (\d+)
 
 Start
+  ^---
   ^${VLAN}\s+${MAC}\s+${INTERFACE}\s+${STATUS}\s+${TTL} -> Record
