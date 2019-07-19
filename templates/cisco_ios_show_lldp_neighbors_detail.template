@@ -29,7 +29,9 @@ Start
   ^.*IP:\s+${MANAGEMENT_IP}
   ^Auto\s+Negotiation
   ^Physical\s+media
-  ^\s+.+\(\S+\)\s*$$
+  # Removed \(\s+\) from the template - The line 'Other/unknown' would not be captured
+  # Now looks for any text beginning with any space
+  ^\s+.+\s*$$
   ^Media\s+Attachment
   ^\s+Inventory
   ^\s+Capabilities
