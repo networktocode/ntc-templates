@@ -1,0 +1,15 @@
+Value NAME (\S+)
+Value SERIAL_NUMBER (\S+)
+Value ARRAY_MEMBER (\S+)
+Value ARRAY_STATUS (\S+)
+Value MODEL (([\s|\S]+)$)
+
+Start
+  ^--+
+  ^Sys::Raid::Disk
+  ^Name\s+Serial\sNumber
+  ^\s+Member
+  ^${NAME}\s+${SERIAL_NUMBER}\s+${ARRAY_MEMBER}\s+${ARRAY_STATUS}\s+${MODEL} -> Record
+  ^\s+$$
+  ^$$
+  ^.* -> Error "LINE NOT FOUND"

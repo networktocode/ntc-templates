@@ -236,6 +236,10 @@ dell_force10_show_version.template, .*, dell_force10, sh[[ow]] ver[[sion]]
 dell_force10_show_vlan.template, .*, dell_force10, sh[[ow]] vl[[an]]
 dell_force10_show_arp.template, .*, dell_force10, sh[[ow]] ar[[p]]
 
+f5_ltm_show_sys_raid_array.template, .*, f5_(ltm|tmsh|linux), sh[[ow]] sy[[s]] ra[[id]] a[[rray]]
+f5_ltm_show_sys_raid_bay.template, .*, f5_(ltm|tmsh|linux), sh[[ow]] sy[[s]] ra[[id]] b[[ay]]
+f5_ltm_show_sys_raid_disk.template, .*, f5_(ltm|tmsh|linux), sh[[ow]] sy[[s]] ra[[id]] d[[isk]]
+
 hp_comware_display_mac-address.template, .*, hp_comware, di[[splay]] mac-ad[[dress]]
 hp_comware_display_vlan_brief.template, .*, hp_comware, di[[splay]] v[[lan]] b[[rief]]
 hp_comware_display_clock.template, .*, hp_comware, di[[splay]] clo[[ck]]

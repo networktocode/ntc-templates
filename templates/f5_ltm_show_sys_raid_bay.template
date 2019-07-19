@@ -1,0 +1,15 @@
+Value BAY (\d+)
+Value SHELF (\d+)
+Value NAME (\S+)
+Value SERIAL_NUMBER (\S+)
+Value ARRAY_MEMBER (\S+)
+Value ARRAY_STATUS (\S+)
+
+Start
+  ^--+
+  ^Sys::Raid::Bay
+  ^Bay\s+Shelf
+  ^${BAY}\s+${SHELF}\s+${NAME}\s+${SERIAL_NUMBER}\s+${ARRAY_MEMBER}\s+${ARRAY_STATUS} -> Record
+  ^\s+$$
+  ^$$
+  ^.* -> Error "LINE NOT FOUND"
