@@ -1,0 +1,16 @@
+Value FEATURE (\w+)
+Value PERIOD_LEFT (.*)
+Value PERIOD_USED (.*)
+Value LICENSE_TYPE (.*)
+Value LICENSE_STATE (.*)
+Value LICENSE_COUNT (.*)
+Value LICENSE_PRIORITY (.*)
+
+Start
+  ^Index\s\d\sFeature:\s${FEATURE}\s+$$
+  ^\s+Period left:\s${PERIOD_LEFT}$$
+  ^\s+Period Used:\s${PERIOD_USED}$$
+  ^\s+License Type:\s${LICENSE_TYPE}$$
+  ^\s+License State:\s${LICENSE_STATE}$$
+  ^\s+License Count:\s${LICENSE_COUNT}$$
+  ^\s+License Priority:\s${LICENSE_PRIORITY}$$ -> Record
