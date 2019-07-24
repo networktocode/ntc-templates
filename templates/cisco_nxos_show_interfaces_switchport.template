@@ -14,3 +14,5 @@ Start
   ^\s*Access Mode VLAN: ${ACCESS_VLAN}
   ^\s*Trunking Native Mode VLAN: ${NATIVE_VLAN}
   ^\s*Trunking VLANs Allowed: ${TRUNKING_VLANS} -> Record
+  ^.+$$
+  ^. -> Error
