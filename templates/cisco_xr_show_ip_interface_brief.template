@@ -1,8 +1,8 @@
-Value INTERFACE (.+?)
-Value IP_ADDRESS (\S+)
-Value INTF_STATE (Up|Down|Shutdown)
-Value PROTO_STATE (Up|Down)
-Value VRF_NAME (\S+)
+Value INTF (.+?)
+Value IPADDR (\S+)
+Value STATUS (Up|Down|Shutdown)
+Value PROTO (Up|Down)
+Value VRF (\S+)
 
 Start
-  ^${INTERFACE}\s+${IP_ADDRESS}\s+${INTF_STATE}\s+${PROTO_STATE}\s+${VRF_NAME} -> Record
+  ^${INTF}\s+${IPADDR}\s+${STATUS}\s+${PROTO}\s+${VRF} -> Record
