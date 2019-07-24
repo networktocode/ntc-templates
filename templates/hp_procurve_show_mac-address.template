@@ -3,7 +3,8 @@ Value PORT (\S+)
 Value VLAN (\d+)
 
 Start
-  ^.*MAC Address -> MAC
+  ^\s*--- -> Start_record
 
-MAC
+Start_record
   ^\s+${MAC}\s+${PORT}\s+${VLAN} -> Record
+  ^.* -> Error
