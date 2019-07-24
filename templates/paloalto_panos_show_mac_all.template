@@ -5,5 +5,8 @@ Value STATUS (\S+)
 Value TTL (\d+)
 
 Start
-  ^---
+  ^\s*--- -> Start_record
+
+Start_record
   ^${VLAN}\s+${MAC}\s+${INTERFACE}\s+${STATUS}\s+${TTL} -> Record
+  ^.* -> Error
