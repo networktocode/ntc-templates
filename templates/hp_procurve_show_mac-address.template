@@ -7,4 +7,5 @@ Start
 
 Start_record
   ^\s+${MAC}\s+${PORT}\s+${VLAN} -> Record
-  ^.* -> Error
+  ^\s*$$
+  ^. -> Error
