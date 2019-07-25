@@ -9,4 +9,5 @@ Start
 
 Start_record
   ^${VLAN}\s+${MAC}\s+${INTERFACE}\s+${STATUS}\s+${TTL} -> Record
-  ^.* -> Error
+  ^\s*$$
+  ^. -> Error
