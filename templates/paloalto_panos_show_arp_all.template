@@ -10,4 +10,5 @@ Start
 
 Start_record
   ^${INTERFACE}\s+${IP}\s+${MAC}\s+${PORT}\s+${STATUS}\s+${TTL} -> Record
-  ^.* -> Error
+  ^\s*$$
+  ^. -> Error
