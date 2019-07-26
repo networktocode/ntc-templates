@@ -7,12 +7,12 @@ Value NATIVE_VLAN (\d+)
 Value TRUNKING_VLANS (\S+)
 
 Start
-  ^Name: ${INTERFACE}
-  ^\s*Switchport: ${SWITCHPORT}
-  ^\s*Switchport Monitor: ${SWITCHPORT_MONITOR}
-  ^\s*Operational Mode: ${MODE}
-  ^\s*Access Mode VLAN: ${ACCESS_VLAN}
-  ^\s*Trunking Native Mode VLAN: ${NATIVE_VLAN}
-  ^\s*Trunking VLANs Allowed: ${TRUNKING_VLANS} -> Record
+  ^Name:\s+${INTERFACE}
+  ^\s*Switchport:\s+${SWITCHPORT}
+  ^\s*Switchport\s+Monitor:\s+${SWITCHPORT_MONITOR}
+  ^\s*Operational\s+Mode:\s+${MODE}
+  ^\s*Access\s+Mode\s+VLAN:\s+${ACCESS_VLAN}
+  ^\s*Trunking\s+Native\s+Mode\s+VLAN:\s+${NATIVE_VLAN}
+  ^\s*Trunking\s+VLANs\s+Allowed:\s+${TRUNKING_VLANS} -> Record
   ^.+$$
   ^. -> Error
