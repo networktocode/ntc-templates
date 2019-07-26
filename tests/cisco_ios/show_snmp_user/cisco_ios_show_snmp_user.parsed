@@ -5,12 +5,11 @@ parsed_sample:
   group_name: managerpriv
   privacy_protocol: AES128
   storage_type: nonvolatile
-  storage_type_active: active
   user_name: user_snmp1
 - authentication_protocol: SHA
   engine_id: 80000009030000451DEC1085
   group_name: managerpriv
   privacy_protocol: AES128
   storage_type: nonvolatile
-  storage_type_active: active
+  access_list: 10
   user_name: user_snmp2
