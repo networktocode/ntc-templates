@@ -135,6 +135,7 @@ cisco_ios_show_interfaces_description.template, .*, cisco_ios, sh[[ow]] int[[erf
 cisco_ios_show_ip_device_tracking_all.template, .*, cisco_ios, sh[[ow]] ip de[[vice]] t[[racking]] a[[ll]]
 cisco_ios_show_environment_power_all.template, .*, cisco_ios, sh[[ow]] envi[[ronment]] p[[ower]] a[[ll]]
 cisco_ios_show_interface_transceiver.template, .*, cisco_ios, sh[[ow]] int[[erface]] trans[[ceiver]]
+cisco_ios_show_interfaces_switchport.template, .*, cisco_ios, sh[[ow]] int[[erfaces]] sw[[itchport]]
 cisco_ios_show_lldp_neighbors_detail.template, .*, cisco_ios, sh[[ow]] lld[[p]] neig[[hbors]] det[[ail]]
 cisco_ios_show_cdp_neighbors_detail.template, .*, cisco_ios, sh[[ow]] c[[dp]] neig[[hbors]] det[[ail]]
 cisco_ios_show_ipv6_interface_brief.template, .*, cisco_ios, sh[[ow]] ipv[[6]] i[[nterface]] b[[rief]]
@@ -191,6 +192,7 @@ cisco_nxos_show_l2rib_internal_permanently-frozen-list.template, .*, cisco_nxos,
 cisco_nxos_show_configuration_session_summary.template, .*, cisco_nxos, sh[[ow]] configu[[ration]] s[[ession]] su[[mmary]]
 cisco_nxos_show_interface_transceiver_details.template, .*, cisco_nxos, sh[[ow]] int[[erface]] tra[[nsceiver]] de[[tails]]
 cisco_nxos_show_environment_temperature.template, .*, cisco_nxos, sh[[ow]] env[[ironment]] t[[emperature]]
+cisco_nxos_show_interfaces_switchport.template, .*, cisco_nxos, sh[[ow]] int[[erfaces]] sw[[itchport]]
 cisco_nxos_show_ip_dhcp_relay_address.template, .*, cisco_nxos, sh[[ow]] ip dh[[cp]] r[[elay]] a[[ddress]]
 cisco_nxos_show_lldp_neighbors_detail.template, .*, cisco_nxos, sh[[ow]] ll[[dp]] nei[[ghbors]] d[[etail]]
 cisco_nxos_show_cdp_neighbors_detail.template, .*, cisco_nxos, sh[[ow]] c[[dp]] neig[[hbors]] det[[ail]]
@@ -250,6 +252,7 @@ cisco_xr_show_mpls_ldp_neighbor_brief.template, .*, cisco_xr, sh[[ow]] mp[[ls]] 
 cisco_xr_admin_show_environment_fan.template, .*, cisco_xr, adm[[in]] sh[[ow]] env[[ironment]] f[[an]]
 cisco_xr_show_cdp_neighbors_detail.template, .*, cisco_xr, sh[[ow]] c[[dp]] neig[[hbors]] det[[ail]]
 cisco_xr_show_cef_drops_location.template, .*, cisco_xr, sh[[ow]] cef drops loc[[ation]]
+cisco_xr_show_ip_interface_brief.template, .*, cisco_xr, sh[[ow]] ip int[[erface]] br[[ief]]
 cisco_xr_show_redundancy_summary.template, .*, cisco_xr, sh[[ow]] redun[[dancy]] summ[[ary]]
 cisco_xr_show_interface_brief.template, .*, cisco_xr, sh[[ow]] int[[erface]] br[[ief]]
 cisco_xr_admin_show_platform.template, .*, cisco_xr, adm[[in]] sh[[ow]] pla[[tform]]
@@ -282,6 +285,7 @@ hp_comware_display_clock.template, .*, hp_comware, di[[splay]] clo[[ck]]
 hp_comware_display_arp.template, .*, hp_comware, di[[splay]] a[[rp]]
 
 hp_procurve_show_tech_buffers.template, .*, hp_procurve, sh[[ow]] tec[[h]] buf[[ffers]]
+hp_procurve_show_mac-address.template, .*, hp_procurve, sh[[ow]] mac-a[[ddress]]
 hp_procurve_show_system.template, .*, hp_procurve, sh[[ow]] syst[[em]]
 hp_procurve_show_vlans.template, .*, hp_procurve, sh[[ow]] vl[[ans]]
 hp_procurve_show_arp.template, .*, hp_procurve, sh[[ow]] ar[[p]]
@@ -305,6 +309,8 @@ paloalto_panos_show_interface_logical.template, .*, paloalto_panos, sh[[ow]] int
 paloalto_panos_show_counter_global.template, .*, paloalto_panos, sh[[ow]] coun[[ter]] glo[[bal]]
 paloalto_panos_show_system_info.template, .*, paloalto_panos, sh[[ow]] sys[[tem]] in[[fo]]
 paloalto_panos_show_jobs_all.template, .*, paloalto_panos, sh[[ow]] jo[[bs]] all
+paloalto_panos_show_arp_all.template, .*, paloalto_panos, sh[[ow]] ar[[p]] all
+paloalto_panos_show_mac_all.template, .*, paloalto_panos, sh[[ow]] mac all
 
 ubiquiti_edgeswitch_show_vlan.template, .*, ubiquiti_edgeswitch, sh[[ow]] vl[[an]]
 ubiquiti_edgeswitch_show_arp.template, .*, ubiquiti_edgeswitch, sh[[ow]] ar[[p]]
