@@ -1,0 +1,9 @@
+Value APNAME (\S+)
+Value RADIOMAC (/W+:/W+:/W+:/W+:/W+:/W+)
+Value SLOT (\d+)
+Value ADMIN (ENABLED|DISABLED)
+Value CHANNEL (\d+)
+
+
+Start
+  ^${APNAME}\s+${RADIOMAC}\s+${SLOT}\s+${ADMIN}\s+${CHANNEL} -> Record

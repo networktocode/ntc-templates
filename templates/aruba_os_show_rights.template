@@ -1,0 +1,15 @@
+Value RIGHTNAME (\S+)
+Value ACL (\d+)
+Value BANDWIDTHUP (\S+\s\(per user\)|No Limit)
+Value BANDWIDTHDOWN (\S+\s\(per user\)|No Limit)
+Value ACLLIST (\S+)
+Value TYPE (User|System|System \(not editable\))
+Value CHK (\d+)
+
+Start
+  ^RoleTable -> RIGHTS
+
+RIGHTS
+  ^${RIGHTNAME}\s+${ACL}\s+Up:\s${BANDWIDTHUP},Dn:\s${BANDWIDTHDOWN}\s+${ACLLIST}\s+${TYPE} -> Record
+  ^${RIGHTNAME}\s+${ACL}\s+Up:\s+${BANDWIDTHUP},Dn:\s${BANDWIDTHDOWN}\s+${ACLLIST} -> Record
+  ^Total Roles:${CHK} -> EOF

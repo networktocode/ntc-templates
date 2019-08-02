@@ -1,0 +1,27 @@
+Value APNAME (\S+)
+Value APGROUP (\S+)
+Value APTYPE (\S+)
+Value IPADDRESS (\d+.\d+.\d+.\d+)
+Value STATUS (Up\s+\S+|Down)
+Value FLAGS (\w+)
+Value SWITCHIP (\d+.\d+.\d+.\d+)
+Value STANDBYIP (\d+.\d+.\d+.\d+)
+Value WIREDMAC (\w+:\w+:\w+:\w+:\w+:\w+)
+Value SERIAL (\w+)
+Value PORT (\S+)
+Value FQLN (\S+)
+Value OUTERIP (\S+)
+Value COUNT (\S+)
+Value CHK (\d+)
+
+
+Start
+  ^show ap database long -> DATABASELONG
+
+DATABASELONG
+  ^${APNAME}\s+${APGROUP}\s+${APTYPE}\s+${IPADDRESS}\s+${STATUS}\s+${FLAGS}\s+${SWITCHIP}\s+${STANDBYIP}\s+${WIREDMAC}\s+${SERIAL}\s+${PORT}\s+${FQLN}\s+${OUTERIP} -> Record
+  ^${APNAME}\s+${APGROUP}\s+${APTYPE}\s+${IPADDRESS}\s+${STATUS}\s+${SWITCHIP}\s+${STANDBYIP}\s+${WIREDMAC}\s+${SERIAL}\s+${PORT}\s+${FQLN}\s+${OUTERIP} -> Record
+  ^${APNAME}\s+${APGROUP}\s+${APTYPE}\s+${IPADDRESS}\s+${STATUS}\s+${FLAGS}\s+${SWITCHIP}\s+${STANDBYIP}\s+${WIREDMAC}\s+${SERIAL}\s+${FQLN}\s+${OUTERIP} -> Record
+  ^${APNAME}\s+${APGROUP}\s+${APTYPE}\s+${IPADDRESS}\s+${STATUS}\s+${SWITCHIP}\s+${STANDBYIP}\s+${WIREDMAC}\s+${SERIAL}\s+${FQLN}\s+${OUTERIP} -> Record
+  ^Total APs:${CHK} -> Record
+  ^show ap database-summary -> EOF

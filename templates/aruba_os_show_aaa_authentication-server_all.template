@@ -1,0 +1,16 @@
+Value SERVERNAME (\S+)
+Value TYPE (Local|Radius|Tacacs)
+Value FQDN (\S+|n/a)
+Value IPADDRESS (\d+(.\d+){3})
+Value AUTHPORT (\d+|n/a)
+Value ACCTPORT (\d+|n/a)
+Value STATUS (Enabled|Disabled)
+Value REQUESTS (\d+)
+
+
+Start
+  ^Auth Method Statistics -> AAASERVERS
+
+AAASERVERS
+  ^${SERVERNAME}\s+${TYPE}\s+${FQDN}\s+${IPADDRESS}\s+${AUTHPORT}\s+${ACCTPORT}\s+${STATUS}\s+${REQUESTS} -> Record
+  ^show aaa authentication-server radius statistics -> EOF

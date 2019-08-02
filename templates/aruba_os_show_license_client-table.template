@@ -1,0 +1,14 @@
+Value SERVICETYPE (Access Points|Next Generation Policy Enforcement Firewall Module|RF Protect|xSec Module|Advanced Cryptography )
+Value SYSTEMLIMIT (\d+)
+Value SERVERLIC (\d+)
+Value USEDLIC (\d+)
+Value CONTRIBUTEDLIC (\d+)
+Value REMAININGLIC (\d+)
+
+
+Start
+  ^show license client-table -> LICENSETABLE
+
+LICENSETABLE
+  ^${SERVICETYPE}\s+${SYSTEMLIMIT}\s+${SERVERLIC}\s+${USEDLIC}\s+${CONTRIBUTEDLIC}\s+${REMAININGLIC} -> Record
+  ^Summary of licensing state

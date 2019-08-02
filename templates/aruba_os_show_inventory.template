@@ -1,0 +1,34 @@
+Value SUPCARDSLOT (\d+)
+Value SERIAL (\S+)
+Value SCASSEMBLY (\S+.+)
+Value SCSERIAL (\S+.+)
+Value SCMODEL (\S+)
+Value HWMACSTART (\w+:\w+:\w+:\w+:\w+:\w+)
+Value HWMACSTOP (\w+:\w+:\w+:\w+:\w+:\w+)
+Value CPLDVERSION (\(Rev: \d+.\d+\))
+Value CARDTEMP (\d+ C)
+Value CPUTEMP (\d+ C)
+Value RPMFANA (\d+)
+Value RPMFANB (\d+)
+Value RPMFANC (\d+)
+Value RPMFAND (\d+)
+
+
+
+Start
+  ^show inventory -> INVENTORY
+
+INVENTORY
+  ^Supervisor Card slot\s+:\s+${SUPCARDSLOT}
+  ^System Serial#\s+:\s+${SERIAL}
+  ^SC\s+Assembly#\s+:\s+${SCASSEMBLY}
+  ^SC\s+Serial#\s+:\s+${SCSERIAL}
+  ^SC\s+Model#\s+:\s+${SCMODEL}
+  ^HW MAC Addr\s+:\s+${HWMACSTART}\s+to\s+${HWMACSTOP}
+  ^CPLD Version\s+:\s+${CPLDVERSION}
+  ^\s+:\s+Card Temperature\s+${CARDTEMP}
+  ^\s+:\s+CPU Temperature\s+${CPUTEMP}
+  ^\s+:\s+Chassis Fan A\s+${RPMFANA}
+  ^\s+:\s+Chassis Fan B\s+${RPMFANB}
+  ^\s+:\s+Chassis Fan C\s+${RPMFANC}
+  ^\s+:\s+Chassis Fan D\s+${RPMFAND} -> Record

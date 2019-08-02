@@ -1,0 +1,28 @@
+Value BSS (\w+:\w+:\w+:\w+:\w+:\w+)
+Value ESS (\S+)
+Value PORT (\s+)
+Value IP (\d+.\d+.\d+.\d+)
+Value PHY (\S+)
+Value TYPE (ap)
+Value CHANNEL (\d+[-|+|E]*)
+Value EIRP (\d+(.\d+)*)
+Value MAXEIRP (\d+(.\d+)*)
+Value CURRENTCLIENTS (\d+)
+Value APNAME (\S+)
+Value INTS (\d+)
+Value TOTT (\S+)
+Value MTU (\d+)
+Value ACLSTATE (-)
+Value ACL (\d+)
+Value FORWARDMODE (\S+)
+Value CHK (\d+)
+
+
+Start
+  ^show ap database-summary -> DATABASESUMMARY
+
+DATABASESUMMARY
+  ^${BSS}\s+${ESS}\s+${PORT}\s+${IP}\s+${PHY}\s+${TYPE}\s+${CHANNEL}/${EIRP}/${MAXEIRP}\s+${CURRENTCLIENTS}\s+${APNAME}\s+${INTS}\s+${TOTT}\s+${MTU}\s+${ACLSTATE}\s+${ACL}\s+${FORWARDMODE} -> Record
+  ^${BSS}\s+${ESS}\s+${PORT} -> Record
+  ^Num APs:${CHK} -> Continue.Record
+  ^show ap radio-summary -> EOF

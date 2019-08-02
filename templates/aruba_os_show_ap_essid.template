@@ -1,0 +1,15 @@
+Value ESSID (\S+)
+Value APCOUNT (\d+)
+Value CLIENTCOUNT (\d+)
+Value VLANS (\S+)
+Value ENCRYPTION ((WPA2 8021X AES|WPA2 PSK AES|Open|Static WEP|Dynamic WPA|WPA 8021X AES|WPA2 8021X TKIP|WPA PSK AES|WPA PSK TKIP)+)
+Value CHK (\d+)
+
+
+Start
+  ^show ap essid -> ESSID
+
+ESSID
+  ^${ESSID}\s+${APCOUNT}\s+${CLIENTCOUNT}\s+${VLANS}\s+${ENCRYPTION} -> Record
+  ^Num ESSID:${CHK} -> Record
+  ^show ap active -> EOF

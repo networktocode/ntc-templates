@@ -1,0 +1,32 @@
+Value APNAME (\S+)
+Value BSSID ((\w+)(:\w+){5})
+Value CLIENTMAC ((\w+)(:\w+){5})
+Value AUTH (y|n)
+Value ASSOC (y|n)
+Value AID (\d+)
+Value LINT (\d+)
+Value ESSID (\S+)
+Value VLANID (\d+)
+Value TUNNELID (\S+)
+Value PHY (\S+)
+Value ASSOCTIME (\S+)
+Value NUMASSOCIATIONS (\d+)
+Value FLAGS (\S+)
+Value BANDSTEERMOVETRY (\d+)
+Value BANDSTEERMOVESSUCCESS (\d+)
+Value CHKNUMCLIENT (\d+)
+Value CHKNUMDUALBAND24 (\d+)
+Value CHKNUMDUALBAND5 (\d+)
+Value CHKNUMSINGLEBAND (\d+)
+
+
+Start
+  ^Association Table -> ASSOCIATIONS
+
+ASSOCIATIONS
+  ^${APNAME}\s+${BSSID}\s+${CLIENTMAC}\s+${AUTH}\s+${ASSOC} -> Record
+  ^Num Clients:${CHKNUMCLIENT}
+  ^Total num of dual-band capable clients in 2.4G band:${CHKNUMDUALBAND24}
+  ^Total num of dual-band capable clients in 5G band:${CHKNUMDUALBAND5}
+  ^Total num of single-band only clients:${CHKNUMSINGLEBAND}
+  ^show aaa authentication all -> EOF
