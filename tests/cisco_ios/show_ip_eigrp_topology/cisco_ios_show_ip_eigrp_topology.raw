@@ -26,3 +26,19 @@ P 10.255.11.4/32, 4 successors, FD is 128768
         via 10.254.4.10, TenGigabitEthernet4/4
         via 10.254.4.14, TenGigabitEthernet4/5
         via 10.254.54.6, TenGigabitEthernet1/3
+
+IP-EIGRP Topology Table for AS(65000)/ID(10.2.0.1)
+
+Codes: P - Passive, A - Active, U - Update, Q - Query, R - Reply,
+       r - reply Status, s - sia Status
+
+P 10.50.20.4/32, 2 successors, FD is 128039168
+        via 10.4.0.1, GigabitEthernet1/1
+        via 10.4.0.2, GigabitEthernet1/2
+P 10.50.21.0/27, 0 successors, FD is Inaccessible, tag is 6508497
+        via 10.4.0.1, GigabitEthernet1/1
+        via 10.4.0.2, GigabitEthernet1/2
+P 10.50.75.0/24, 1 successors, FD is 2816
+        via Rstatic
+P 10.50.23.92/30, 1 successors, FD is 3840256, tag is 5507497
+        via Redistributed
