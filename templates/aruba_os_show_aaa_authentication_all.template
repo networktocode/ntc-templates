@@ -1,12 +1,14 @@
-Value METHOD (Web|802.1x|Management|tacacs-accounting)
+Value METHOD (\S+)
 Value SUCCESSES (\d+)
 Value FAILURES (\d+)
 
 
 Start
-  ^Auth Method Statistics -> AUTHMETHODSTATS
+  ^Auth Method Statistics -> authMethodStats
 
-AUTHMETHODSTATS
+authMethodStats
   ^${METHOD}\s+${SUCCESSES}\s+${FAILURES} -> Record
-
-EOF
+  ^Method
+  ^[-]+
+  ^show -> EOF
+  ^. -> Error
