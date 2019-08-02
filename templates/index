@@ -55,6 +55,20 @@ arista_eos_show_vlan.template, .*, arista_eos, sh[[ow]] vl[[an]]
 aruba_os_show_ipv6_interface_brief.template, .*, aruba_os, sh[[ow]] ipv6 in[[terface]] b[[rief]]
 aruba_os_show_ip_interface_brief.template, .*, aruba_os, sh[[ow]] ip in[[terface]] b[[rief]]
 aruba_os_show_aaa_authentication_all.template, .*, aruba_os, sh[[ow]] aaa authen[[tication]] a[[ll]]
+aruba_os_show_ap_association.template, .*, aruba_os, sh[[ow]] ap assoc[[iation]]
+aruba_os_show_ap_bss_table.template, .*, aruba_os, sh[[ow]] ap bss[[-table]]
+aruba_os_show_ap_database_long.template, .*, aruba_os, sh[[ow]] ap database long
+aruba_os_show_ap_database-summary.template, .*, aruba_os, sh[[ow]] ap database-summary
+aruba_os_show_ap_essid.template, .*, aruba_os, sh[[ow]] ap essid
+aruba_os_show_ap_radio-summary.template, .*, aruba_os, sh[[ow]] ap radio-summary
+aruba_os_show_databath_route_verbose, .*, aruba_os, sh[[ow]] datapath route verbose
+aruba_os_show_inventory.template, .*, aruba_os, sh[[ow]] inventory
+aruba_os_show_license_client-table.template, .*, aruba_os, sh[[ow]] license client-table
+aruba_os_show_port_status.template, .*, aruba_os, sh[[ow]] port status
+aruba_os_show_rights.template, .*, aruba_os, sh[[ow]] rights
+aruba_os_show_switches.template, .*, aruba_os, sh[[ow]] switches
+aruba_os_show_vlan_mapping.template, .*, aruba_os, sh[[ow]] vlan mapping
+aruba_os_show_vlan.template, .*, aruba_os, sh[[ow]] vlan
 
 avaya_ers_show_mac-address-table.template, .*, avaya_ers, sh[[ow]] mac-a[[ddress-table]]
 avaya_ers_show_mlt_all-members.template, .*, avaya_ers, sh[[ow]] ml[[t]] a[[ll-members]]
@@ -253,6 +267,7 @@ cisco_wlc_ssh_show_ap_summary.template, .*, cisco_wlc_ssh, sh[[ow]] ap sum[[mary
 cisco_wlc_ssh_show_inventory.template, .*, cisco_wlc_ssh, sh[[ow]] inve[[ntory]]
 cisco_wlc_ssh_show_802.11a.template, .*, cisco_wlc_ssh, show 802\.11[ab]
 cisco_wlc_ssh_show_sysinfo.template, .*, cisco_wlc_ssh, sh[[ow]] sysi[[nfo]]
+cisco_wlc_ssh_show_advanced_802_11x_summary, .*, cisco_wlc_ssh show advanced 802.11[[\S+]] summary
 
 cisco_xr_show_controllers_fabric_fia_errors_ingress_location.template, .*, cisco_xr, sh[[ow]] contr[[ollers]] fabric fi[[a]] err[[ors]] in[[gress]] loc[[ation]]
 cisco_xr_show_controllers_fabric_fia_drops_ingress_location.template, .*, cisco_xr, sh[[ow]] contr[[ollers]] fabric fi[[a]] dr[[ops]] in[[gress]] loc[[ation]]
