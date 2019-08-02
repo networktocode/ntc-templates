@@ -1,0 +1,18 @@
+Value APMODE (Access Points|Air Monitors|Wired Access Points|Mesh Portals|Mesh Points|Spectrum Monitors)
+Value TOTALUP (\d+)
+Value TOTALDOWN (\d+)
+Value TOTALUPGRADING (\d+)
+Value TOTALREBOOTING (\d+)
+Value RAPUP (\d+)
+Value RAPDOWN (\d+)
+Value RAPUPGRADING (\d+)
+Value RAPREBOOTING (\d+)
+Value ACTIVEUP (\d+)
+Value STANDBYUP (\d+)
+
+Start
+  ^show ap database-summary -> DATABASESUMMARY
+
+DATABASESUMMARY
+  ^${APMODE}\s+${TOTALUP}\s+${TOTALDOWN}\s+${TOTALUPGRADING}\s+${TOTALREBOOTING}\s+${RAPUP}\s+${RAPDOWN}\s+${RAPUPGRADING}\s+${RAPREBOOTING}\s+${ACTIVEUP}\s+${STANDBYUP} -> Record
+  ^show ap bss-table -> EOF

@@ -1,0 +1,26 @@
+Value APNAME (\S+)
+Value APGROUP (\S+)
+Value APTYPE (\S+)
+Value IPADDRESS (\d+.\d+.\d+.\d+)
+Value BAND (5|2.4)
+Value MODE (\S+)
+Value CHANNEL (\d+[-|+|E]*)
+Value EIRP (\d+(.\d+)*)
+Value MAXEIRP (\d+(.\d+)*)
+Value NOISEFL (-\d+|0)
+Value UTILIZATION (\d+)
+Value INTERFERENCE (\d+)
+Value TD (\d+(/\d+)+)
+Value TM (\d+(/\d+)+)
+Value TC (\d+(/\d+)+)
+Value CHK (\d+)
+
+
+Start
+  ^show ap radio-summary -> RADIOSUMMARY
+
+RADIOSUMMARY
+  ^${APNAME}\s+${APGROUP}\s+${APTYPE}\s+${IPADDRESS}\s+${BAND}\s+${MODE}\s+${EIRP}/${MAXEIRP}\s+${NOISEFL}/${UTILIZATION}/${INTERFERENCE}\s+${TD}\s+${TM}\s+${TC} -> Record
+  ^${APNAME}\s+${APGROUP}\s+${APTYPE}\s+${IPADDRESS}\s+${BAND}\s+${MODE}\s+N/A\s+N/A\s+${TD}\s+${TM}\s+${TC} -> Record
+  ^Total Radios:${CHK} -> Record
+  ^show ap essid -> EOF

@@ -1,0 +1,12 @@
+Value VLAN (\d+)
+Value DESCRIPTION (\S+)
+Value PORTS ((Pc\d+(-)?(\d+)?\s)*)
+Value AAAPROFILE (\S+|N/A)
+
+
+Start
+  ^show vlan -> VLAN
+
+VLAN
+  ^${VLAN}\s+${DESCRIPTION}\s+${PORTS}\s+${AAAPROFILE} -> Record
+  ^show vlan mapping -> EOF

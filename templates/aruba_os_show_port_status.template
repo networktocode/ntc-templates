@@ -1,0 +1,17 @@
+Value SLOTPORT (\d/\d)
+Value PORTTYPE (\S+)
+Value ADMINSTATE (Enabled|Disabled)
+Value OPERSTATE (Up|Down)
+Value POE (Enabled|NA)
+Value TRUSTED (N/A|Yes)
+Value SPANNINGTREE (N/A|Forwarding)
+Value PORTMODE (\S+)
+Value SPEED (\S+)
+Value DUPLEX (\S+)
+
+Start
+  ^show port status -> PORTSTATUS
+
+PORTSTATUS
+  ^${SLOTPORT}\s+${PORTTYPE}\s+${ADMINSTATE}\s+${OPERSTATE}\s+${POE}\s+${TRUSTED}\s+${SPANNINGTREE}\s+${PORTMODE}\s+${SPEED}\s+${DUPLEX} -> Record
+  ^show port stats -> EOF

@@ -1,0 +1,11 @@
+Value VLANNAME (\S+)
+Value ASSIGNMENT (Hash)
+Value VLANIDS (((\d+)(,)?)*)
+
+
+Start
+  ^show vlan mapping -> VLANMAPPING
+
+VLANMAPPING
+  ^${VLANNAME}\s+${ASSIGNMENT}\s+${VLANIDS} -> Record
+  ^show interface counters -> EOF
