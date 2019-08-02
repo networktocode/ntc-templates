@@ -77,3 +77,51 @@ parsed_sample:
   fd: "128768"
   tag: ""  
   successors: "4"
+
+- router_id: "10.2.0.1"
+  code: "P"
+  out_interface: ['GigabitEthernet1/1', 'GigabitEthernet1/2']
+  route: "10.50.20.4"
+  mask: "32"
+  adv_router: ['10.4.0.1', '10.4.0.2']
+  process_id: "65000"
+  fd: "128039168"
+  tag: ""
+  successors: "2"
+  source: ""
+
+- router_id: "10.2.0.1"
+  code: "P"
+  out_interface: ['GigabitEthernet1/1', 'GigabitEthernet1/2']
+  route: "10.50.21.0"
+  mask: "27"
+  adv_router: ['10.4.0.1', '10.4.0.2']
+  process_id: "65000"
+  fd: "Inaccessible"
+  tag: "6508497"
+  successors: "0"
+  source: ""
+
+- router_id: "10.2.0.1"
+  code: "P"
+  out_interface: []
+  route: "10.50.75.0"
+  mask: "24"
+  adv_router: []
+  process_id: "65000"
+  fd: "2816"
+  tag: ""
+  successors: "1"
+  source: "Rstatic"
+
+- router_id: "10.2.0.1"
+  code: "P"
+  out_interface: []
+  route: "10.50.23.92"
+  mask: "30"
+  adv_router: []
+  process_id: "65000"
+  fd: "3840256"
+  tag: "5507497"
+  successors: "1"
+  source: "Redistributed"
