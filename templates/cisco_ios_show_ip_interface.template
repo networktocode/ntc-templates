@@ -1,0 +1,59 @@
+Value Required INTF (\S+)
+Value LINK_STATUS (.+?)
+Value PROTOCOL_STATUS (.+?)
+Value List IPADDR (\S+?)
+Value List MASK (\d*)
+Value VRF (\S+)
+Value MTU (\d+)
+Value List IP_HELPER (\d+\.\d+\.\d+\.\d+)
+Value OUTGOING_ACL (.*?)
+Value INBOUND_ACL (.*?)
+
+
+Start
+  ^\S -> Continue.Record
+  ^${INTF}\s+is\s+${LINK_STATUS},\s+line\s+protocol\s+is\s+${PROTOCOL_STATUS}\s*$$
+  ^\s+Internet\s+address\s+is\s+${IPADDR}/?${MASK}\s*$$
+  ^\s+Secondary\s+address\s+${IPADDR}/?${MASK}\s*$$
+  ^.+VPN\s+Routing/Forwarding\s+"${VRF}"
+  ^\s+MTU\s+is\s+${MTU}\s+bytes
+  ^\s+Helper\s+address(es|)\s(is|are)\s+${IP_HELPER}\s*$$ -> HELPERS
+  ^\s+Outgoing\s+(?:Common\s+)?access\s+list\s+is\s+not\s+set
+  ^\s+Outgoing\s+(?:Common\s+)?access\s+list\s+is\s+${OUTGOING_ACL}\s*$$
+  ^\s+Inbound\s+(?:Common\s+)?access\s+list\s+is\s+not\s+set
+  ^\s+Inbound\s+(?:Common\s+)?access\s+list\s+is\s+${INBOUND_ACL}\s*$$
+  ^\s+Internet\s+protocol
+  ^\s+Interface\s+is\s+unnumbered
+  ^\s+Broadcast
+  ^\s+Multicast
+  ^\s+2[2-5]\d\.
+  ^\s+Address\s+determined
+  ^\s+Directed
+  ^\s+MTU
+  ^\s+Helper
+  ^\s+Directed
+  ^\s+Outgoing
+  ^\s+Inbound
+  ^\s+.*Proxy
+  ^\s+Security
+  ^\s+Split
+  ^\s+ICMP
+  ^\s+IP\s+(?:fast|Flow|CEF|Null|multicast|route|output|access)
+  ^\s+Associated
+  ^\s+Topology
+  ^\s+Router
+  ^\s+TCP
+  ^\s+RTP
+  ^\s+Probe
+  ^\s+Policy
+  ^\s+Network\s+address\s+
+  ^\s+BGP
+  ^\s+(Input|Output|Post)\s+.*features
+  ^\s+IPv4\s+WCCP
+  ^\s*$$
+  ^. -> Error
+
+HELPERS
+  ^\s+${IP_HELPER}\s*$$
+  ^\s+Directed -> Start
+  ^.* -> Error
