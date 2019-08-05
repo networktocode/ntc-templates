@@ -2,6 +2,7 @@ Value flow_drop_acl_drop (\d+)
 Value flow_drop_shunned (\d+)
 Value flow_drop_cluster_redirect (\d+)
 Value flow_drop_inspect_fail (\d+)
+Value flow_drop_ipsec_selector_failure (\d+)
 Value flow_drop_nat_rpf_failed (\d+)
 Value flow_drop_out_of_memory (\d+)
 Value flow_drop_ssl_bad_record_detect (\d+)
@@ -60,6 +61,7 @@ Value ipsec_tun_down (\d+)
 Value l2_acl (\d+)
 Value lu_invalid_pkt (\d+)
 Value mcast_in_nonactive_device (\d+)
+Value mp_svc_bad_length (\d+)
 Value mp_svc_flow_control (\d+)
 Value mp_svc_no_channel (\d+)
 Value mp_svc_no_fragment (\d+)
@@ -86,6 +88,7 @@ Value rule_transaction_in_progress (\d+)
 Value security_failed (\d+)
 Value shunned (\d+)
 Value sp_security_failed (\d+)
+Value ssl_first_record_invalid (\d+)
 Value tcp_3whs_failed (\d+)
 Value tcp_ack_syn_diff (\d+)
 Value tcp_bad_option_list (\d+)
@@ -159,6 +162,7 @@ Start
   ^.+l2_acl\)\s+${l2_acl}
   ^.+lu-invalid-pkt\)\s+${lu_invalid_pkt}
   ^.+mcast-in-nonactive-device\)\s+${mcast_in_nonactive_device}
+  ^.+mp-svc-bad-length\)\s+${mp_svc_bad_length}
   ^.+mp-svc-flow-control\)\s+${mp_svc_flow_control}
   ^.+mp-svc-no-channel\)\s+${mp_svc_no_channel}
   ^.+mp-svc-no-fragment\)\s+${mp_svc_no_fragment}
@@ -185,6 +189,7 @@ Start
   ^.+security-failed\)\s+${security_failed}
   ^.+shunned\)\s+${shunned}
   ^.+sp-security-failed\)\s+${sp_security_failed}
+  ^.+ssl-first-record-invalid\)\s+${ssl_first_record_invalid}
   ^.+tcp-3whs-failed\)\s+${tcp_3whs_failed}
   ^.+tcp-ack-syn-diff\)\s+${tcp_ack_syn_diff}
   ^.+tcp-bad-option-list\)\s+${tcp_bad_option_list}
@@ -214,10 +219,12 @@ Start
 FLOW
   ^\s+$$
   ^$$
+  ^Last clearing
   ^.+Flow is denied by access rule \(acl-drop\)\s+${flow_drop_acl_drop}
   ^.+cluster-redirect\)\s+${flow_drop_cluster_redirect}
   ^.+Flow shunned \(shunned\)\s+${flow_drop_shunned}
   ^.+inspect-fail\)\s+${flow_drop_inspect_fail}
+  ^.+ipsec-selector-failure\)\s+${flow_drop_ipsec_selector_failure}
   ^.+nat-rpf-failed\)\s+${flow_drop_nat_rpf_failed}
   ^.+out-of-memory\)\s+${flow_drop_out_of_memory}
   ^.+ssl-bad-record-detect\)\s+${flow_drop_ssl_bad_record_detect}
