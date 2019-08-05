@@ -39,6 +39,7 @@ parsed_sample:
     flow_drop_vpn_missing_decrypt: '202'
     flow_drop_vpn_overlap_conflict: '201'
     flow_expired: '10'
+    flow_last_cleared: ''
     fo_standby: '5'
     fragment_reassembly_failed: ''
     host_limit: ''
@@ -62,6 +63,7 @@ parsed_sample:
     invalid_udp_length: '6'
     ipsec_tun_down: '118'
     l2_acl: '150'
+    last_cleared: Never
     lu_invalid_pkt: '2'
     mcast_in_nonactive_device: '4063'
     mp_svc_bad_length: ''
