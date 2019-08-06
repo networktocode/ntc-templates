@@ -9,9 +9,9 @@ Start
   ^---- -> Begin
 
 Begin
-  ^${PORT}\s+${TEMP}\s+${VOLTAGE}\s+${BIAS_CURRENT}\s+${TX_POWER}\s+${RX_POWER}\s+(\S+ ago|N/A) -> Record
+  ^${PORT}\s+${TEMP}\s+${VOLTAGE}\s+${BIAS_CURRENT}\s+${TX_POWER}\s+${RX_POWER}\s+(.+) -> Record
   ^\s+$$
   ^$$
   ^.* -> Error "LINE NOT FOUND"
-  
+
 EOF

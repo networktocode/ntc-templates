@@ -15,6 +15,7 @@ Value RX_SAK_USE_ERR (\S+)
 Value RX_DIST_SAK_ERR (\S+)
 Value RX_ICV_INDICATOR_ERR (\S+)
 Value RX_UNREC_PRAM_ERR (\S+)
+Value RX_DIST_CAK_ERR (\S+)
 
 
 Start
@@ -35,6 +36,7 @@ Data
   ^\s+Rx potential peer list error:\s+${RX_POTENTIAL_PEER_LIST_ERR}
   ^\s+Rx SAK use set error:\s+${RX_SAK_USE_ERR}
   ^\s+Rx distributed SAK set error:\s+${RX_DIST_SAK_ERR}
+  ^\s+Rx distributed CAK set error:\s+${RX_DIST_CAK_ERR}
   ^\s+Rx ICV Indicator error:\s+${RX_ICV_INDICATOR_ERR}
   ^\s+Rx unrecognized parameter set error:\s+${RX_UNREC_PRAM_ERR} -> Record Start
   ^\s+$$
