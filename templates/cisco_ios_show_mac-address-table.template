@@ -19,4 +19,4 @@ TYPE3
   ^\s+${VLAN}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+${DESTINATION_PORT} -> Record
 
 TYPE4
-  ^\s+${VLAN}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+${DESTINATION_PORT} -> Record
+  ^(?:\s+)?${VLAN}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+${DESTINATION_PORT} -> Record
