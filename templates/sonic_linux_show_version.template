@@ -5,9 +5,14 @@ Value Filldown BUILD_COMMIT (\S+)
 Value Filldown BUILD_DATE (.+)
 Value Filldown BUILT_BY (\S+)
 Value REPOSITORY (\S+)
-Value TAG (\S+)
-Value IMAGE_ID (\S+)
-Value SIZE (.+)
+Value Filldown TAG (\S+)
+Value Filldown IMAGE_ID (\S+)
+Value Filldown SIZE (.+)
+Value Filldown PLATFORM (\S+)
+Value Filldown HW_SKU (\S+)
+Value Filldown ASIC (\S+)
+Value Filldown SERIAL_NUMBER (\S+)
+Value Filldown UPTIME (.+)
 
 Start
   ^SONiC.*Version:\s+${VERSION}
@@ -16,11 +21,21 @@ Start
   ^Build\s+commit:\s+${BUILD_COMMIT}
   ^Build\s+date:${BUILD_DATE}
   ^Built\s+by:\s+${BUILT_BY}
-  ^Docker\s+images:
+  ^Platform:\s+${PLATFORM}
+  ^HwSKU:\s+${HW_SKU}
+  ^ASIC:\s+${ASIC}
+  ^Serial Number:\s+${SERIAL_NUMBER}
+  ^Uptime:\s+${UPTIME}
+  ^Docker\s+images: -> IMAGES
+  ^\s+$$
+  ^$$
+  ^.* -> Error "LINE NOT FOUND"
+
+IMAGES
   ^REPOSITORY.+
   ^${REPOSITORY}\s+${TAG}\s+${IMAGE_ID}\s+${SIZE} -> Record 
   ^\s+$$
   ^$$
   ^.* -> Error "LINE NOT FOUND"
    
-EOF 
+EOF

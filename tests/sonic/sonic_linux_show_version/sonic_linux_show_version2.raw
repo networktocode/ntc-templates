@@ -1,0 +1,35 @@
+SONiC Software Version: SONiC.20181130.31
+Distribution: Debian 9.9
+Kernel: 4.9.0-9-amd64
+Build commit: 5d250ab
+Build date: Thu Jul  4 01:56:25 UTC 2019
+Built by: sonicbld@jenkins-slave-phx-2
+
+Platform: x86_64-mlnx_msn2700-r0
+HwSKU: Mellanox-SN2700-D48C8
+ASIC: mellanox
+Serial Number: MT1822X15664
+Uptime: 05:49:49 up 3 days,  6:03,  1 user,  load average: 3.56, 2.86, 2.70
+
+Docker images:
+REPOSITORY                 TAG                 IMAGE ID            SIZE
+docker-orchagent-mlnx      20181130.31         3829df685d02        286MB
+docker-orchagent-mlnx      latest              3829df685d02        286MB
+docker-syncd-mlnx          20181130.31         aac2fb6c5339        331MB
+docker-syncd-mlnx          latest              aac2fb6c5339        331MB
+docker-lldp-sv2            20181130.31         eebdced79f7b        275MB
+docker-lldp-sv2            latest              eebdced79f7b        275MB
+docker-dhcp-relay          20181130.31         17862da8b4f2        257MB
+docker-dhcp-relay          latest              17862da8b4f2        257MB
+docker-database            20181130.31         f59a5848d585        255MB
+docker-database            latest              f59a5848d585        255MB
+docker-snmp-sv2            20181130.31         d4ceb1fcb67a        289MB
+docker-snmp-sv2            latest              d4ceb1fcb67a        289MB
+docker-teamd               20181130.31         1bf0b2ca6d7c        275MB
+docker-teamd               latest              1bf0b2ca6d7c        275MB
+docker-router-advertiser   20181130.31         208ce93d5e1b        254MB
+docker-router-advertiser   latest              208ce93d5e1b        254MB
+docker-platform-monitor    20181130.31         b8d3fb5633a8        287MB
+docker-platform-monitor    latest              b8d3fb5633a8        287MB
+docker-fpm-quagga          20181130.31         6e34eb847870        281MB
+docker-fpm-quagga          latest              6e34eb847870        281MB
