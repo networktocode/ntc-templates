@@ -242,7 +242,7 @@ To add additional raw/parsed tests for a command:
 - Create new `.raw` and `.parsed` files within the directory, preferrably with a name identifying why the data is unique:
   * Existing raw: `./tests/cisco_ios/show_version/cisco_ios_show_version.raw`
   * New raw: `./tests/cisco_ios/show_version/cisco_ios_show_version_stack_platforms.raw`
-  * Existing parsed: `./tests/cisco_ios/show_version`/cisco_ios_show_version`.parsed`
+  * Existing parsed: `./tests/cisco_ios/show_version/cisco_ios_show_version.parsed`
   * New parsed: `./tests/cisco_ios/show_version/cisco_ios_show_version_stack_platforms.parsed`
 
 #### Testing
