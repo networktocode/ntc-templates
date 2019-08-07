@@ -6,9 +6,9 @@ Value DESCRIP (\S.*?)
 Start
   ^Interface\s+Status\s+Protocol\s+Description\s*$$ -> Begin
   ^\s*$$
-  ^. -> Error
+
 
 Begin
   ^${PORT}\s+${STATUS}\s+${PROTOCOL}(?:\s+${DESCRIP})?\s*$$ -> Record
   ^\s*$$
-  ^. -> Error
+
