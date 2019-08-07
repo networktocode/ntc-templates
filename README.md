@@ -133,7 +133,7 @@ BGPTable
  ... omitted
 ```
 
-Each **state** should end with `^. -> Error`. This helps to ensure we're accounting for every line within the raw output for the command. This doesn't mean we have to capture all the data as a **Value**, but we do have to account for it. In addition, it is also good to provide an expression to match blank lines, `^\s*$$`
+Each **state** should end with `^. -> Error`. This helps to ensure we're accounting for every line within the raw output for the command. This doesn't mean we have to capture all the data as a **Value**, but we do have to account for it.
 
 An example would be the following raw output:
 ```
@@ -149,7 +149,7 @@ Value DESCRIPTION (.*)
 Start
   ^NAME:\s+"${NAME}",\s*DESCR:\s+"${DESCRIPTION}"
   ^PID:\s*,\s*VID:\s*\S+,\s*SN:\s*\S+
-  ^\s*$$
+  ^\s*
   ^. -> Error
 ```
 
@@ -211,7 +211,7 @@ $
 
 ##### YAML file containing expected parsed dictionary
 
-The parsed file should match the data that is returned from the `parse_output` function discussed in the beginning. Dictionary keys should be in lowercase.
+The parsed file should match the data that is returned from the `parse_output` function discussed in the begining. Dictionary keys should be in lowercase.
 
 The parsed text file should be placed in a directory in the `./tests` directory with the same name as the template file but replace `.template` file extension with `.parsed`. The raw text file and the parsed text file should be in the same directory.
 **ex. ./tests/cisco_ios/show_clock/**
@@ -240,10 +240,10 @@ When either fixing a bug within a template or adding additional **Values** to be
 To add additional raw/parsed tests for a command:
 - Navigate to `./tests/{{ vendor_os }}/{{ command_name }}/`
 - Create new `.raw` and `.parsed` files within the directory, preferrably with a name identifying why the data is unique:
-  * Existing raw: `./tests/cisco_ios/show_version/cisco_ios_show_version.raw`
-  * New raw: `./tests/cisco_ios/show_version/cisco_ios_show_version_stack_platforms.raw`
-  * Existing parsed: `./tests/cisco_ios/show_version`/cisco_ios_show_version`.parsed`
-  * New parsed: `./tests/cisco_ios/show_version/cisco_ios_show_version_stack_platforms.parsed`
+  * Existing raw: `./tests/cisco_ios/show_clock/cisco_ios_show_version.raw`
+  * New raw: `./tests/cisco_ios/show_clock/cisco_ios_show_version_stack_platforms.raw`
+  * Existing parsed: `./tests/cisco_ios/show_clock/cisco_ios_show_clock.parsed`
+  * New parsed: `./tests/cisco_ios/show_clock/cisco_ios_show_version_stack_platforms.parsed`
 
 #### Testing
 You can test your changes locally within your Git branch before submitting a PR. If you do not have **tox** already installed, you can do that using pip or your systems package manager. Tox should be ran inside the **ntc-templates** root directory. The tox file is configured to run against python3.6, so either python3.6 needs to be available, or the tox.ini file will need to be updated with an available Python version.
