@@ -3,3 +3,5 @@ Value comment (.*)
 
 Start
   ^${mac}\s+${comment} -> Record
+  ^\s*$$
+  ^. -> Error
