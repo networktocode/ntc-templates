@@ -3,5 +3,6 @@ Value comment (.*)
 
 Start
   ^${mac}\s+${comment} -> Record
-  ^\s*$$
+  ^([A-Za-z]+\s)+
+  ^-+
   ^. -> Error
