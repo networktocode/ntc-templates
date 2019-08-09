@@ -7,7 +7,7 @@ Compiled on Mon 05-Nov-18 13:32 PST by builders
 System image file is "disk0:/asa992-32-lfbff-k8.SPA"
 Config file at boot was "startup-config"
 
-LHRUB-ASA5516-01 up 51 days 9 hours
+asa1 up 51 days 9 hours
 failover cluster up 83 days 15 hours
 
 Hardware:   ASA5516, 8192 MB RAM, CPU Atom C2000 series 2416 MHz, 1 CPU (8 cores)
@@ -23,15 +23,6 @@ Encryption hardware device : Cisco ASA Crypto on-board accelerator (revision 0x1
  4: Ext: GigabitEthernet1/4  : address is 7872.5dce.e58f, irq 255
  5: Ext: GigabitEthernet1/5  : address is 7872.5dce.e590, irq 255
  6: Ext: GigabitEthernet1/6  : address is 7872.5dce.e591, irq 255
- 7: Ext: GigabitEthernet1/7  : address is 7872.5dce.e592, irq 255
- 8: Ext: GigabitEthernet1/8  : address is 7872.5dce.e593, irq 255
- 9: Int: Internal-Data1/1    : address is 7872.5dce.e58b, irq 255
-10: Int: Internal-Data1/2    : address is 0000.0001.0002, irq 0
-11: Int: Internal-Control1/1 : address is 0000.0001.0001, irq 0
-12: Int: Internal-Data1/3    : address is 0000.0001.0003, irq 0
-13: Ext: Management1/1       : address is 7872.5dce.e58b, irq 0
-14: Int: Internal-Data1/4    : address is 0000.0100.0001, irq 0
-
 Licensed features for this platform:
 Maximum Physical Interfaces       : Unlimited      perpetual
 Maximum VLANs                     : 150            perpetual
@@ -58,5 +49,6 @@ VPN Load Balancing                : Enabled        perpetual
 Serial Number: JAD222605K8
 
 Image type                : Release
-Key Version               : A  
+Key Version               : A 
+Configuration last modified by ntc at 17:20:37.576 CDT Thu Aug 8 2019
 
