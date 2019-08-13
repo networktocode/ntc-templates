@@ -1,0 +1,84 @@
+Cisco Adaptive Security Appliance Software Version 9.9(2)32 
+Firepower Extensible Operating System Version 2.3(1.121)
+Device Manager Version 7.9(1)151
+
+Compiled on Mon 05-Nov-18 13:32 PST by builders
+System image file is "disk0:/asa992-32-lfbff-k8.SPA"
+Config file at boot was "startup-config"
+
+ASA2 up 55 days 9 hours
+failover cluster up 87 days 15 hours
+
+Hardware:   ASA5516, 8192 MB RAM, CPU Atom C2000 series 2416 MHz, 1 CPU (8 cores)
+Internal ATA Compact Flash, 8000MB
+BIOS Flash M25P64 @ 0xfed01000, 16384KB
+
+Encryption hardware device : Cisco ASA Crypto on-board accelerator (revision 0x1)
+                             Number of accelerators: 1
+
+ 1: Ext: GigabitEthernet1/1  : address is 7872.5dce.e58c, irq 255
+ 2: Ext: GigabitEthernet1/2  : address is 7872.5dce.e58d, irq 255
+ 3: Ext: GigabitEthernet1/3  : address is 7872.5dce.e58e, irq 255
+ 4: Ext: GigabitEthernet1/4  : address is 7872.5dce.e58f, irq 255
+ 5: Ext: GigabitEthernet1/5  : address is 7872.5dce.e590, irq 255
+ 6: Ext: GigabitEthernet1/6  : address is 7872.5dce.e591, irq 255
+ 7: Ext: GigabitEthernet1/7  : address is 7872.5dce.e592, irq 255
+ 8: Ext: GigabitEthernet1/8  : address is 7872.5dce.e593, irq 255
+ 9: Int: Internal-Data1/1    : address is 7872.5dce.e58b, irq 255
+10: Int: Internal-Data1/2    : address is 0000.0001.0002, irq 0
+11: Int: Internal-Control1/1 : address is 0000.0001.0001, irq 0
+12: Int: Internal-Data1/3    : address is 0000.0001.0003, irq 0
+13: Ext: Management1/1       : address is 7872.5dce.e58b, irq 0
+14: Int: Internal-Data1/4    : address is 0000.0100.0001, irq 0
+
+Licensed features for this platform:
+Maximum Physical Interfaces       : Unlimited      perpetual
+Maximum VLANs                     : 150            perpetual
+Inside Hosts                      : Unlimited      perpetual
+Failover                          : Active/Active  perpetual
+Encryption-DES                    : Enabled        perpetual
+Encryption-3DES-AES               : Enabled        perpetual
+Security Contexts                 : 2              perpetual
+Carrier                           : Disabled       perpetual
+AnyConnect Premium Peers          : 4              perpetual
+AnyConnect Essentials             : Disabled       perpetual
+Other VPN Peers                   : 300            perpetual
+Total VPN Peers                   : 300            perpetual
+AnyConnect for Mobile             : Disabled       perpetual
+AnyConnect for Cisco VPN Phone    : Disabled       perpetual
+Advanced Endpoint Assessment      : Disabled       perpetual
+Shared License                    : Disabled       perpetual
+Total TLS Proxy Sessions          : 1000           perpetual
+Botnet Traffic Filter             : Disabled       perpetual
+Cluster                           : Enabled        perpetual
+Cluster Members                   : 2              perpetual
+VPN Load Balancing                : Enabled        perpetual
+
+
+Failover cluster licensed features for this platform:
+Maximum Physical Interfaces       : Unlimited      perpetual
+Maximum VLANs                     : 150            perpetual
+Inside Hosts                      : Unlimited      perpetual
+Failover                          : Active/Active  perpetual
+Encryption-DES                    : Enabled        perpetual
+Encryption-3DES-AES               : Enabled        perpetual
+Security Contexts                 : 4              perpetual
+Carrier                           : Disabled       perpetual
+AnyConnect Premium Peers          : 8              perpetual
+AnyConnect Essentials             : Disabled       perpetual
+Other VPN Peers                   : 300            perpetual
+Total VPN Peers                   : 300            perpetual
+AnyConnect for Mobile             : Disabled       perpetual
+AnyConnect for Cisco VPN Phone    : Disabled       perpetual
+Advanced Endpoint Assessment      : Disabled       perpetual
+Shared License                    : Disabled       perpetual
+Total TLS Proxy Sessions          : 1000           perpetual
+Botnet Traffic Filter             : Disabled       perpetual
+Cluster                           : Enabled        perpetual
+VPN Load Balancing                : Enabled        perpetual
+
+Serial Number: JAD222605K8
+Configuration register is 0x1
+Image type                : Release
+Key Version               : A
+Configuration last modified by xxx at 17:31:04.576 CDT Mon Aug 12 2019
