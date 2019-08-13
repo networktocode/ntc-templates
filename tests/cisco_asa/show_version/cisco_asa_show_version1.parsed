@@ -2,11 +2,12 @@
 parsed_sample:
 
 - version: '9.9(2)32'
-  device_mgr_version: '7.5(2)'
+  device_mgr_version: '7.9(1)151'
   image: 'disk0:/asa992-32-lfbff-k8.SPA'
   hostname: 'ASA2'
   uptime: '87 days 15 hours'
   hardware: 'ASA5516, 8192 MB RAM, CPU Atom C2000 series 2416 MHz, 1 CPU (8 cores)'
+  model: ''
   flash: '8000MB'
   interfaces:
     - 'GigabitEthernet1/1'
