@@ -23,10 +23,11 @@ parsed_sample:
     - 'Internal-Data1/3'
     - 'Management1/1'
     - 'Internal-Data1/4'
-    
+  license_mode: ''
+  license_state: ''
   max_intf: 'Unlimited'
   max_vlans: '150'
-  failover: 'Active/Standby'
+  failover: 'Active/Active'
   cluster: 'Active/Active'
   serial: 'JAD222605K8'
   last_mod: 'xxx at 18:56:48.410 UTC Wed Apr 5 2017'
