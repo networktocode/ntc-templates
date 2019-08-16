@@ -11,16 +11,8 @@ Value STATE_PFXRCD (\S+)
 
 Start
   ^.*\s+${ROUTER_ID}.*\s+${LOCAL_AS} -> Continue
-  ^RIB.+
-  ^Peers.+
-  ^Peer\s+groups.+ -> Begin
-
-
-Begin
   ^Neighbor.+ -> Neighbors
-  ^\s+$$
-  ^$$
-  ^.* -> Error "LINE NOT FOUND"
+
   
 Neighbors
   ^${BGP_NEIGH}\s+\d+\s+${NEIGH_AS}\s+${MSG_RCVD}\s+${MSG_SENT}\s+\d+\s+${IN_QUEUE}\s+${OUT_QUEUE}\s+${UP_DOWN}\s+(${STATE_PFXRCD})? -> Record
