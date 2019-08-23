@@ -1,5 +1,5 @@
 """ntc_templates - Parse raw output from network devices and return structured data."""
 
 
-__version__ = '1.0.52.dev1'
+__version__ = '1.0.53.dev1'
 
