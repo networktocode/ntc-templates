@@ -235,8 +235,8 @@ cisco_nxos_show_vpc.template, .*, cisco_nxos, sh[[ow]] vpc
 cisco_nxos_show_vrf.template, .*, cisco_nxos, sh[[ow]] vrf
 
 cisco_wlc_ssh_show_network_assurance_sum.template, .*, cisco_wlc, sh[[ow]] netw[[ork]] a[[ssurance]] su[[mmary]]
-cisco_wlc_ssh_show_802_11a_cleanair_config.template, .*, cisco_wlc, sh[[ow]] 802.11a cl[[eanair]] c[[onfig]]
-cisco_wlc_ssh_show_802_11b_cleanair_config.template, .*, cisco_wlc, sh[[ow]] 802.11b cl[[eanair]] c[[onfig]]
+cisco_wlc_ssh_show_802_11acleanair_config.template, .*, cisco_wlc, sh[[ow]] 802.11a cl[[eanair]] c[[onfig]]
+cisco_wlc_ssh_show_802_11bcleanair_config.template, .*, cisco_wlc, sh[[ow]] 802.11b cl[[eanair]] c[[onfig]]
 cisco_wlc_ssh_show_cdp_neighbors_detail.template, .*, cisco_wlc, sh[[ow]] c[[dp]] neig[[hbors]] det[[ail]]
 cisco_wlc_ssh_show_mdns_service_sum.template, .*, cisco_wlc, sh[[ow]] md[[ns]] s[[ervice]] su[[mmary]]
 cisco_wlc_ssh_show_ap_config_general.template, .*, cisco_wlc_ssh, sh[[ow]] ap con[[fig]] ge[[neral]]
@@ -252,8 +252,8 @@ cisco_wlc_ssh_show_ap_summary.template, .*, cisco_wlc, sh[[ow]] ap su[[mmary]]
 cisco_wlc_ssh_show_trapflags.template, .*, cisco_wlc, sh[[ow]] trapf[[lags]]
 cisco_wlc_ssh_show_sessions.template, .*, cisco_wlc, sh[[ow]] ses[[sions]]
 cisco_wlc_ssh_show_sysinfo.template, .*, cisco_wlc, sh[[ow]] sysi[[nfo]]
-cisco_wlc_ssh_show_802_11a.template, .*, cisco_wlc, sh[[ow]] 802.11a
-cisco_wlc_ssh_show_802_11b.template, .*, cisco_wlc, sh[[ow]] 802.11b
+cisco_wlc_ssh_show_80211a.template, .*, cisco_wlc, sh[[ow]] 802.11a
+cisco_wlc_ssh_show_80211b.template, .*, cisco_wlc, sh[[ow]] 802.11b
 cisco_wlc_ssh_show_time.template, .*, cisco_wlc, sh[[ow]] ti[[me]]
 
 cisco_xr_show_controllers_fabric_fia_errors_ingress_location.template, .*, cisco_xr, sh[[ow]] contr[[ollers]] fabric fi[[a]] err[[ors]] in[[gress]] loc[[ation]]
