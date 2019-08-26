@@ -1,0 +1,8 @@
+Value NAME (\S+)
+Value LSS (\w+)
+Value ORIGIN (\w+)
+Value NO_SP (\d+)
+Value SERVICE_STRING (.+?)
+
+Start
+ ^${NAME}\s+${LSS}\s+${ORIGIN}\s+${NO_SP}\s+${SERVICE_STRING}\s+ -> Record

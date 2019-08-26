@@ -1,0 +1,10 @@
+Value NAME (.+?)
+Value PORT (\w+|-|N\/A)
+Value VLAN (\d+|\w+)
+Value IP_ADDR (([\d1-9]+\.?){4})
+Value TYPE (\w+)
+Value AP_MGR (\w+)
+Value GUEST (N\/A|\w+)
+
+Start
+  ^${NAME}\s\s+${PORT}\s+${VLAN}\s+${IP_ADDR}\s+${TYPE}\s+${AP_MGR}\s+${GUEST} -> Record

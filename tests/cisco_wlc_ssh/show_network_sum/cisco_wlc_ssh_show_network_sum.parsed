@@ -1,0 +1,48 @@
+---
+parsed_sample:
+- AP_DISC: Enabled
+  AP_EASYADMIN: Disable
+  AP_FALLBACK: Enable
+  AP_JOIN_PRIORITY: Disable
+  AP_VIP: 0.0.0.0
+  ARP_FORWARD: ''
+  ARP_IDLE_TIMEOUT: 300 seconds
+  BRIDGE_MAC_FILTER: Enable
+  BRIDGE_SEC_MODE: EAP
+  BROADCAST_FORWARD: Disable
+  CCX_LITE_STAT: Disable
+  DNS_SERVER: 0.0.0.0
+  FAST_SSID: Disabled
+  IGMP_QUERY_TIME: 20 seconds
+  IGMP_SNOOP: Disabled
+  IGMP_TIMEOUT: 60 seconds
+  IP_MAC_BIND: Enabled
+  MESH_BACKHAUL_RRM: Disable
+  MESH_DFS: Enable
+  MGT_VIA_DYN_INT: Disable
+  MGT_VIA_WIRELESS: Disable
+  MLD_QUERY_TIME: 20 seconds
+  MLD_SNOOP: Disabled
+  MLD_TIMEOUT: 60 seconds
+  MULITCAST_ADDR: ''
+  MULTICAST_FORWARD: Disable
+  NET_PROFILE: Disabled
+  OCSP: Disabled
+  RF_NET_NAME: data
+  SEC_WEB_CIPHER_HIGH: Disable
+  SEC_WEB_MODE: Enable
+  SEC_WEB_SSP: Disable
+  SSH: Enable
+  SSH_CIPHER_HIGH: Disable
+  TELNET: Disable
+  USER_IDLE_TIMEOUT: 300 seconds
+  WEB_AUTH_CAPTIVE_BYPASS: Disable
+  WEB_AUTH_CMCC: Disabled
+  WEB_AUTH_PROXY: Disable
+  WEB_AUTH_REDIRECT_PORTS: '80'
+  WEB_AUTH_SEC_REDIRCT: Disable
+  WEB_AUTH_SEC_WEB: Enable
+  WEB_AUTH_SEC_WEB_CIPHER: Disable
+  WEB_AUTH_SEC_WEB_SSLV3: Disable
+  WEB_CSRF_CHECK: Enable
+  WEB_MODE: Disable
