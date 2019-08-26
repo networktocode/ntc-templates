@@ -1,3 +1,48 @@
 ---
 parsed_sample:
-[]
+- ap_disc: Enabled
+  ap_easyadmin: Disable
+  ap_fallback: Enable
+  ap_join_priority: Disable
+  ap_vip: 0.0.0.0
+  arp_forward: ''
+  arp_idle_timeout: 300 seconds
+  bridge_mac_filter: Enable
+  bridge_sec_mode: EAP
+  broadcast_forward: Disable
+  ccx_lite_stat: Disable
+  dns_server: 0.0.0.0
+  fast_ssid: Disabled
+  igmp_query_time: 20 seconds
+  igmp_snoop: Disabled
+  igmp_timeout: 60 seconds
+  ip_mac_bind: Enabled
+  mesh_backhaul_rrm: Disable
+  mesh_dfs: Enable
+  mgt_via_dyn_int: Disable
+  mgt_via_wireless: Disable
+  mld_query_time: 20 seconds
+  mld_snoop: Disabled
+  mld_timeout: 60 seconds
+  mulitcast_addr: ''
+  multicast_forward: Disable
+  net_profile: Disabled
+  ocsp: Disabled
+  rf_net_name: data
+  sec_web_cipher_high: Disable
+  sec_web_mode: Enable
+  sec_web_ssp: Disable
+  ssh: Enable
+  ssh_cipher_high: Disable
+  telnet: Disable
+  user_idle_timeout: 300 seconds
+  web_auth_captive_bypass: Disable
+  web_auth_cmcc: Disabled
+  web_auth_proxy: Disable
+  web_auth_redirect_ports: '80'
+  web_auth_sec_redirct: Disable
+  web_auth_sec_web: Enable
+  web_auth_sec_web_cipher: Disable
+  web_auth_sec_web_sslv3: Disable
+  web_csrf_check: Enable
+  web_mode: Disable
