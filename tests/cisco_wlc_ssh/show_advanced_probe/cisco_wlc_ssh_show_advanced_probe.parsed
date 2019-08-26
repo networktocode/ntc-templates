@@ -1,7 +1,7 @@
 ---
 parsed_sample:
-- AGGREGATE_REQ_INTERVAL: 0 msec
-  BACKOFF: Disabled
-  PROBE_FWD: '2'
-  PROBE_REQUEST_FILTER: Enabled
-  PROBE_REQ_RATE_LIMITING_INTERVAL: 500 msec
+- aggregate_req_interval: 0 msec
+  backoff: Disabled
+  probe_fwd: '2'
+  probe_req_rate_limiting_interval: 500 msec
+  probe_request_filter: Enabled

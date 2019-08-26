@@ -1,52 +1,16 @@
 ---
 parsed_sample:
-- LSS: 'No'
-  NAME: AirTunes
-  NO_SP: '0'
-  ORIGIN: All
-  SERVICE_STRING: _raop._tcp.local.
-- LSS: 'No'
-  NAME: Airplay
-  NO_SP: '0'
-  ORIGIN: All
-  SERVICE_STRING: _airplay._tcp.local.
-- LSS: 'No'
-  NAME: Googlecast
-  NO_SP: '0'
-  ORIGIN: All
-  SERVICE_STRING: _googlecast._tcp.local.
-- LSS: 'No'
-  NAME: HP_Photosmart_Printer_1
-  NO_SP: '0'
-  ORIGIN: All
-  SERVICE_STRING: _universal._sub._ipp._tcp.local.
-- LSS: 'No'
-  NAME: HP_Photosmart_Printer_2
-  NO_SP: '0'
-  ORIGIN: All
-  SERVICE_STRING: _cups._sub._ipp._tcp.local.
-- LSS: 'No'
-  NAME: HomeSharing
-  NO_SP: '0'
-  ORIGIN: All
-  SERVICE_STRING: _home-sharing._tcp.local.
-- LSS: 'No'
-  NAME: Printer-IPP
-  NO_SP: '0'
-  ORIGIN: All
-  SERVICE_STRING: _ipp._tcp.local.
-- LSS: 'No'
-  NAME: Printer-IPPS
-  NO_SP: '0'
-  ORIGIN: All
-  SERVICE_STRING: _ipps._tcp.local.
-- LSS: 'No'
-  NAME: Printer-LPD
-  NO_SP: '0'
-  ORIGIN: All
-  SERVICE_STRING: _printer._tcp.local.
-- LSS: 'No'
-  NAME: Printer-SOCKET
-  NO_SP: '0'
-  ORIGIN: All
-  SERVICE_STRING: _pdl-datastream._tcp.local.
+- lss: 'No'
+  name: AirTunes
+  no_sp: '0'
+  origin: All
+  service_string: _raop._tcp.local.
+- {}
+- {}
+- {}
+- {}
+- {}
+- {}
+- {}
+- {}
+- {}
