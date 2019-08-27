@@ -1,0 +1,78 @@
+
+Authentication Flag.............................. Enable
+Link Up/Down Flag................................ Enable
+Multiple Users Flag.............................. Enable
+
+configsave....................................... Enabled
+strong-pwd check................................. Enabled
+
+Client Related Traps
+	802.11 Disassociation........................... Disabled
+	802.11 Association.............................. Disabled
+	Enhanced 802.11 Association..................... Disabled
+	802.11 Deauthenticate........................... Disabled
+	Enhanced 802.11 Deauthenticate.................. Disabled
+	802.11 Authenticate Failure..................... Disabled
+	802.11 Association Failure...................... Disabled
+	Excluded........................................ Enabled
+	Authentication.................................. Disabled
+	Enhanced Authentication......................... Disabled
+	Enhanced 802.11 Stats........................... Disabled
+	Enhanced 802.11 Disassociate Stats.............. Disabled
+	Max Client Warning Threshold.................... 90%
+	Nac-Alert Traps................................. Enabled
+	WebAuthUserLogin................................ Enabled
+	WebAuthUserLogout............................... Enabled
+	Neighbor clients detection...................... Disabled
+
+RFID Related Traps
+	Max RFIDs Warning Threshold..................... 90%
+
+Cisco AP
+	AuthFailure..................................... Enabled
+	SsidKeyConflict................................. Disabled
+	Register........................................ Enabled
+	InterfaceUp..................................... Enabled
+	modeChange...................................... Enabled
+	Neighbor AP detection........................... Disabled
+	Rogue Ap/Client detection....................... Disabled
+
+802.11 Security related traps
+	WEP/WPA Decrypt Error........................... Enabled
+	IDS Signature Attack............................ Enable
+
+AAA
+	auth............................................ Enabled
+	servers......................................... Enabled
+
+mfp.............................................. Disabled
+
+rogueap.......................................... Enabled
+
+adjchannel-rogueap............................... Disabled
+
+Auto-RF Profiles
+	Load............................................ Enabled
+	Noise........................................... Enabled
+	Interference.................................... Enabled
+	Coverage........................................ Enabled
+
+Auto-RF Thresholds
+	tx-power........................................ Enabled
+	channel......................................... Enabled
+
+Mesh
+	auth failure.................................... Enabled
+	child excluded parent........................... Enabled
+	parent change................................... Enabled
+	child moved..................................... Enabled
+	excessive parent change......................... Enabled
+	onset SNR....................................... Enabled
+	abate SNR....................................... Enabled
+	console login................................... Enabled
+	excessive association........................... Enabled
+	default bridge group name....................... Enabled
+	excessive hop count............................. Disabled
+	excessive children.............................. Enabled
+	sec backhaul change............................. Disabled
+	psk auth failure................................ Disabled

@@ -1,0 +1,44 @@
+
+Total Number of AP Groups........................ 1    
+
+
+Site Name........................................ default-group
+Site Description................................. <none>
+NAS-identifier................................... none
+Client Traffic QinQ Enable....................... FALSE
+DHCPv4 QinQ Enable............................... FALSE
+AP Operating Class............................... Not-configured
+Capwap Prefer Mode............................... Not-configured
+Antenna Monitoring - Status...................... Disabled
+
+RF Profile
+----------
+2.4 GHz band..................................... <none>
+5 GHz band....................................... <none>
+
+WLAN ID          Interface          Network Admission Control          Radio Policy        OpenDnsProfile
+-------          -----------        --------------------------         ------------         --------------
+ 1               management           Disabled                          None                        None
+
+*AP3600 with 802.11ac Module will only advertise first 8 WLANs on 5GHz radios.
+
+
+ Lan Port configs
+ ----------------
+
+LAN          Status        POE          RLAN
+---          -------       ----         -----
+ 1           Disabled      Disabled     None                            
+ 2           Disabled                   None                            
+ 3           Disabled                   None                            
+
+ External Module configs
+ -----------------------------
+
+LAN          Status        POE          RLAN
+---          -------       ----         -----
+ 1           Disabled                   None                            
+
+AP Name             Slots  AP Model             Ethernet MAC       Location          Port  Country  Priority
+------------------  -----  -------------------  -----------------  ----------------  ----  -------  --------
+Fabric Flex Acl Template Name ................... Not Configured

@@ -234,10 +234,23 @@ cisco_nxos_show_fex.template, .*, cisco_nxos, sh[[ow]] fex
 cisco_nxos_show_vpc.template, .*, cisco_nxos, sh[[ow]] vpc
 cisco_nxos_show_vrf.template, .*, cisco_nxos, sh[[ow]] vrf
 
+cisco_wlc_ssh_show_network_assurance_sum.template, .*, cisco_wlc, sh[[ow]] netw[[ork]] a[[ssurance]] su[[mmary]]
 cisco_wlc_ssh_show_cdp_neighbors_detail.template, .*, cisco_wlc_ssh, sh[[ow]] c[[dp]] neig[[hbors]] det[[ail]]
+cisco_wlc_ssh_show_mdns_service_sum.template, .*, cisco_wlc, sh[[ow]] md[[ns]] s[[ervice]] su[[mmary]]
 cisco_wlc_ssh_show_ap_config_general.template, .*, cisco_wlc_ssh, sh[[ow]] ap con[[fig]] ge[[neral]]
+cisco_wlc_ssh_show_interface_sum.template, .*, cisco_wlc, sh[[ow]] int[[erface]] s[[ummary]]
+cisco_wlc_ssh_show_advanced_probe.template, .*, cisco_wlc, sh[[ow]] ad[[vanced]] p[[robe]]
+cisco_wlc_ssh_show_wlan_apgroups.template, .*, cisco_wlc, sh[[ow]] wl[[an]] a[[pgroups]]
+cisco_wlc_ssh_show_network_sum.template, .*, cisco_wlc, sh[[ow]] netw[[ork]] su[[mmary]]
+cisco_wlc_ssh_show_advanced_fra.template, .*, cisco_wlc, sh[[ow]] ad[[vanced]] f[[ra]]
+cisco_wlc_ssh_show_load-balancing.template, .*, cisco_wlc, sh[[ow]] loa[[d-balancing]]
+cisco_wlc_ssh_show_wlan_sum.template, .*, cisco_wlc, sh[[ow]] wl[[an]] s[[ummary]]
 cisco_wlc_ssh_show_ap_summary.template, .*, cisco_wlc_ssh, sh[[ow]] ap sum[[mary]]
+cisco_wlc_ssh_show_band-select.template, .*, cisco_wlc, sh[[ow]] ba[[nd-select]]
 cisco_wlc_ssh_show_sysinfo.template, .*, cisco_wlc_ssh, sh[[ow]] sysi[[nfo]]
+cisco_wlc_ssh_show_trapflags.template, .*, cisco_wlc, sh[[ow]] trapf[[lags]]
+cisco_wlc_ssh_show_sessions.template, .*, cisco_wlc, sh[[ow]] ses[[sions]]
+cisco_wlc_ssh_show_time.template, .*, cisco_wlc, sh[[ow]] ti[[me]]
 
 cisco_xr_show_controllers_fabric_fia_errors_ingress_location.template, .*, cisco_xr, sh[[ow]] contr[[ollers]] fabric fi[[a]] err[[ors]] in[[gress]] loc[[ation]]
 cisco_xr_show_controllers_fabric_fia_drops_ingress_location.template, .*, cisco_xr, sh[[ow]] contr[[ollers]] fabric fi[[a]] dr[[ops]] in[[gress]] loc[[ation]]
