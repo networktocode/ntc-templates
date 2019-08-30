@@ -1,0 +1,22 @@
+Value Required INTERFACE (\S+)
+Value Required LANES (\S+)
+Value Required SPEED (\S+)
+Value Required MTU (\S+)
+Value Required ALIAS (\S+)
+Value Required VLAN (\S+)
+Value Required OPER (\S+)
+Value Required ADMIN (\S+)
+Value Required TYPE (\S+)
+Value Required ASYM_PFC (\S+)
+
+Start
+  ^\s+Interface.*PFC -> Data
+
+Data
+  ^-.+
+  ^[\s]*${INTERFACE}\s+${LANES}\s+${SPEED}\s+${MTU}\s+${ALIAS}\s+${VLAN}\s+${OPER}\s+${ADMIN}\s+${TYPE}\s+${ASYM_PFC} -> Record
+  ^\s+$$
+  ^$$
+  ^.* -> Error "LINE NOT FOUND"
+
+EOF
