@@ -10,8 +10,7 @@ except ImportError:
 def _get_template_dir():
     ntc_template_abspath = os.path.abspath(sys.modules['ntc_templates'].__file__)
     base_dir = os.path.dirname(ntc_template_abspath)
-    #template_dir = '%s%s%s' % (base_dir, os.sep, 'templates')
-    template_dir = "/home/sityagi/ntc-templates/templates/"
+    template_dir = '%s%s%s' % (base_dir, os.sep, 'templates')
     return template_dir
 
 
