@@ -1,0 +1,609 @@
+PHY data for interface: TenGigE0/0/0/0
+
+SFP EEPROM  port: 0
+        Xcvr Type: SFP
+        Xcvr Code: SFP-10G-SR
+        Encoding: 64B66B
+        Bit Rate: 10300 Mbps
+        Link Reach 50u fiber: 80 meter
+        Link Reach 62.5u fiber: 20 meter
+        Vendor Name: CISCO-FINISAR
+        Vendor OUI: 00.90.65
+        Vendor Part Number: FTLX8571D3BCL-C2 (rev.: A   )
+        Laser wavelength: 850 nm (fraction: 0.00 nm)
+        Optional SFP Signal: Tx_Disable, Tx_Fault, LOS
+        Vendor Serial Number: FNS17231KXG
+        Date Code (yy/mm/dd): 13/06/06  lot code:
+        Diagnostic Monitoring: DOM, Int. Cal.,
+        Enhanced Options: Alarm/Warning Flags
+
+MSA Data
+0x0000: 03 04 07 10 00 00 00 00 : 00 00 00 06 67 00 00 00
+0x0010: 08 02 00 1e 43 49 53 43 : 4f 2d 46 49 4e 49 53 41
+0x0020: 52 20 20 20 00 00 90 65 : 46 54 4c 58 38 35 37 31
+0x0030: 44 33 42 43 4c 2d 43 32 : 41 20 20 20 03 52 00 a5
+0x0040: 00 1a 00 00 46 4e 53 31 : 37 32 33 31 4b 58 47 20
+0x0050: 20 20 20 20 31 33 30 36 : 30 36 20 20 68 80 03 e4
+0x0060: 00 00 02 12 74 eb 9c 1e : 89 59 e6 a8 3c 20 cb 2a
+0x0070: b0 0d ca 00 00 00 00 00 : 00 00 00 00 f5 ca 74 5e
+
+        Thresholds:                    Alarm High         Warning High          Warning Low            Alarm Low
+              Temperature:            +75.000 C             +70.000 C              +0.000 C              -5.000 C
+                  Voltage:           3.630 Volt            3.465 Volt            3.135 Volt            2.970 Volt
+                     Bias:         11.800 mAmps          10.800 mAmps           5.000 mAmps           4.000 mAmps
+           Transmit Power:  1.47910 mW (1.69998 dBm)   0.74130 mW (-1.30006 dBm)   0.18620 mW (-7.30020 dBm)   0.07410 mW (-11.30182 dBm)
+            Receive Power:  1.58490 mW (2.00002 dBm)   0.79430 mW (-1.00015 dBm)   0.10230 mW (-9.90124 dBm)   0.04070 mW (-13.90406 dBm)
+        Temperature: 28.461
+        Voltage: 3.244 Volt
+        Tx Bias: 0.116 mAmps
+        Tx Power:  0.02730 mW (-15.63837 dBm)
+        Rx Power:  0.000 mW (<-40.00 dBm)
+        Oper. Status/Control: Tx Disabled, LOS,
+EEPROM Memory (A2 lower)
+0x0100: 4b 00 fb 00 46 00 00 00 : 8d cc 74 04 87 5a 7a 76
+0x0110: 17 0c 07 d0 15 18 09 c4 : 39 c7 02 e5 1c f5 07 46
+0x0120: 3d e9 01 97 1f 07 03 ff : 00 00 00 00 00 00 00 00
+0x0130: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x0140: 00 00 00 00 3f 80 00 00 : 00 00 00 00 01 00 00 00
+0x0150: 01 00 00 00 01 00 00 00 : 01 00 00 00 00 00 00 10
+0x0160: 1c 76 7e b9 00 3a 01 11 : 00 00 00 00 00 00 82 00
+0x0170: 05 40 00 00 05 40 00 00 : ff ff ff ff ff ff ff 01
+
+        CLEI Code: COUIA8NCAA
+        Part Number: 10-2415-03 (ver.: V03 )
+        Temp/Alarm/Power Flags: COM, commercial 0C to 70C
+        Minimum Temperature: 0
+        Maximum Temperature: 70
+        Calibration Constants:
+        Product Id: SFP-10G-SR
+EEPROM Memory (A2 upper)
+0x0180: 43 4f 55 49 41 38 4e 43 : 41 41 31 30 2d 32 34 31
+0x0190: 35 2d 30 33 56 30 33 20 : 01 00 46 00 00 00 00 c6
+0x01a0: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x01b0: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 aa aa
+0x01c0: 53 46 50 2d 31 30 47 2d : 53 52 20 20 20 20 20 20
+0x01d0: 20 20 20 20 32 33 00 00 : 00 00 00 00 00 00 00 35
+0x01e0: 15 1a 20 24 2a 30 20 30 : 00 00 00 00 00 00 00 00
+0x01f0: 00 00 00 00 00 1d 00 00 : ff ff ff ff 00 00 00 00
+
+
+
+PHY data for interface: TenGigE0/0/0/1
+
+SFP EEPROM  port: 1
+        Xcvr Type: SFP
+        Xcvr Code: SFP-10G-LR
+        Encoding: 64B66B
+        Bit Rate: 10300 Mbps
+        Link Reach 9u fiber (Km): 10000 meter
+        Link Reach 9u fiber (100m): 10000 meter
+        Vendor Name: CISCO-SUMITOMO
+        Vendor OUI: 00.00.5f
+        Vendor Part Number: SPP5200LR-C6     (rev.: B   )
+        Laser wavelength: 1310 nm (fraction: 0.00 nm)
+        Optional SFP Signal: Tx_Disable, Tx_Fault, LOS
+        Vendor Serial Number: SPC1719093J
+        Date Code (yy/mm/dd): 13/05/11  lot code: 1C
+        Diagnostic Monitoring: DOM, Int. Cal.,
+        Enhanced Options: SW RX LOS Mon., SW TX Fault Mon, SW TX Disable, Alarm/Warning Flags
+
+MSA Data
+0x0000: 03 04 07 20 00 00 00 00 : 00 00 00 06 67 00 0a 64
+0x0010: 00 00 00 00 43 49 53 43 : 4f 2d 53 55 4d 49 54 4f
+0x0020: 4d 4f 20 20 00 00 00 5f : 53 50 50 35 32 30 30 4c
+0x0030: 52 2d 43 36 20 20 20 20 : 42 20 20 20 05 1e 00 06
+0x0040: 00 1a 00 00 53 50 43 31 : 37 31 39 30 39 33 4a 20
+0x0050: 20 20 20 20 31 33 30 35 : 31 31 31 43 68 f0 03 52
+0x0060: 00 00 0b 1c ba 98 43 64 : 6a 97 d8 6c ea 86 b2 df
+0x0070: cc 46 fd 00 00 00 00 00 : 00 00 00 00 3e ac 79 a3
+
+        Thresholds:                    Alarm High         Warning High          Warning Low            Alarm Low
+              Temperature:            +75.000 C             +70.000 C              +0.000 C              -5.000 C
+                  Voltage:           3.630 Volt            3.465 Volt            3.135 Volt            2.970 Volt
+                     Bias:         90.000 mAmps          84.000 mAmps          24.000 mAmps          20.000 mAmps
+           Transmit Power:  2.23870 mW (3.49996 dBm)   1.12200 mW (0.49993 dBm)   0.15140 mW (-8.19874 dBm)   0.06030 mW (-12.19683 dBm)
+            Receive Power:  2.23870 mW (3.49996 dBm)   1.12200 mW (0.49993 dBm)   0.03630 mW (-14.40093 dBm)   0.01450 mW (-18.38632 dBm)
+        Temperature: 25.629
+        Voltage: 3.318 Volt
+        Tx Bias: 0.000 mAmps
+        Tx Power:  0.000 mW (<-40.00 dBm)
+        Rx Power:  0.000 mW (<-40.00 dBm)
+        Oper. Status/Control: Tx Disabled, LOS,
+EEPROM Memory (A2 lower)
+0x0100: 4b 00 fb 00 46 00 00 00 : 8d cc 74 04 87 5a 7a 76
+0x0110: af c8 27 10 a4 10 2e e0 : 57 73 02 5b 2b d4 05 ea
+0x0120: 57 73 00 91 2b d4 01 6b : 00 00 00 00 00 00 00 00
+0x0130: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x0140: 00 00 00 00 3f 80 00 00 : 00 00 00 00 01 00 00 00
+0x0150: 01 00 00 00 01 00 00 00 : 01 00 00 00 00 00 00 3c
+0x0160: 19 a1 81 98 00 00 00 00 : 00 00 00 00 00 00 82 00
+0x0170: 00 40 00 00 00 40 00 00 : 00 00 00 00 00 00 00 01
+
+        CLEI Code: COUIA75CAA
+        Part Number: 10-2457-02 (ver.: V02 )
+        Temp/Alarm/Power Flags: COM, commercial 0C to 70C
+        Minimum Temperature: 0
+        Maximum Temperature: 70
+        Calibration Constants: LBC Scale, Temperature, Laser bias current, Output power,
+        Product Id: SFP-10G-LR
+EEPROM Memory (A2 upper)
+0x0180: 43 4f 55 49 41 37 35 43 : 41 41 31 30 2d 32 34 35
+0x0190: 37 2d 30 32 56 30 32 20 : 01 00 46 00 00 00 00 b0
+0x01a0: 00 00 00 00 00 00 00 00 : 00 00 8c dd 94 00 ac a5
+0x01b0: d6 cd 00 00 1e 00 59 2d : 12 88 0f 3e 00 00 aa aa
+0x01c0: 53 46 50 2d 31 30 47 2d : 4c 52 20 20 20 20 20 20
+0x01d0: 20 20 20 20 32 33 00 00 : 00 00 00 00 00 00 00 2e
+0x01e0: 20 26 2b 30 33 36 2b 36 : 00 00 00 00 00 00 00 00
+0x01f0: 00 00 00 00 00 6b 00 00 : ff ff ff ff 00 00 00 00
+
+
+
+PHY data for interface: TenGigE0/0/0/2
+
+SFP EEPROM  port: 2
+        Xcvr Type: SFP
+        Xcvr Code: DWDM-SFP10G-58.98
+        Encoding: 64B66B
+        Bit Rate: 11100 Mbps
+        Link Reach 9u fiber (Km): 80000 meter
+        Vendor Name: CISCO-FUJITSU
+        Vendor OUI: 00.00.0e
+        Vendor Part Number: FIM35060/201W23  (rev.: 0002)
+        Laser wavelength: 1558 nm (fraction: 0.098 nm)
+        Optional SFP Signal: Tx_Disable, Tx_Fault, LOS
+        Vendor Serial Number: FLJ1736K039
+        Date Code (yy/mm/dd): 13/09/03  lot code: 01
+        Diagnostic Monitoring: DOM, Int. Cal.,
+        Enhanced Options: SW RX LOS Mon., SW TX Fault Mon, SW TX Disable, Alarm/Warning Flags
+
+MSA Data
+0x0000: 03 04 07 00 00 00 00 00 : 00 00 00 06 6f 00 50 00
+0x0010: 00 00 00 00 43 49 53 43 : 4f 2d 46 55 4a 49 54 53
+0x0020: 55 20 20 20 00 00 00 0e : 46 49 4d 33 35 30 36 30
+0x0030: 2f 32 30 31 57 32 33 20 : 30 30 30 32 06 16 62 c1
+0x0040: 05 1a 00 00 46 4c 4a 31 : 37 33 36 4b 30 33 39 20
+0x0050: 20 20 20 20 31 33 30 39 : 30 33 30 31 68 f0 04 40
+0x0060: a3 00 15 3b 48 6e 9c da : f4 7b 3c 89 41 c2 1e d5
+0x0070: aa f3 88 00 00 00 00 00 : 00 00 00 00 49 75 e7 e7
+
+        Thresholds:                    Alarm High         Warning High          Warning Low            Alarm Low
+              Temperature:            +75.000 C             +70.000 C              +0.000 C              -5.000 C
+                  Voltage:           3.630 Volt            3.465 Volt            3.135 Volt            2.970 Volt
+                     Bias:        105.000 mAmps          98.000 mAmps          42.000 mAmps          35.000 mAmps
+           Transmit Power:  3.98100 mW (5.99992 dBm)   1.99520 mW (2.99986 dBm)   0.79430 mW (-1.00015 dBm)   0.31620 mW (-5.00038 dBm)
+            Receive Power:  0.50120 mW (-2.99989 dBm)   0.19950 mW (-7.00057 dBm)   0.00200 mW (-26.98970 dBm)   0.00080 mW (-30.96910 dBm)
+        Temperature: 36.656
+        Voltage: 3.250 Volt
+        Tx Bias: 79.936 mAmps
+        Tx Power:  1.38250 mW (1.40665 dBm)
+        Rx Power:  0.01520 mW (-18.18156 dBm)
+        Oper. Status/Control:
+EEPROM Memory (A2 lower)
+0x0100: 4b 00 fb 00 46 00 00 00 : 8d cc 74 04 87 5a 7a 76
+0x0110: cd 14 44 5c bf 68 52 08 : 9b 82 0c 5a 4d f0 1f 07
+0x0120: 13 94 00 08 07 cb 00 14 : 00 00 00 00 00 00 00 00
+0x0130: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x0140: 00 00 00 00 00 00 00 01 : 00 00 00 00 00 01 00 00
+0x0150: 00 01 00 00 00 01 00 00 : 00 01 00 00 00 00 00 b0
+0x0160: 24 a8 7e f8 9c 20 36 01 : 00 98 00 00 00 00 00 00
+0x0170: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 02
+
+        CLEI Code: IPU3AZ6CAA
+        Part Number: 10-2750-01 (ver.: V01 )
+        Temp/Alarm/Power Flags: COM, commercial 0C to 70C
+        Minimum Temperature: 0
+        Maximum Temperature: 70
+        Calibration Constants: LBC Scale, Temperature, Laser bias current, Output power,
+        Product Id: DWDM-SFP10G-58.98
+EEPROM Memory (A2 upper)
+0x0180: 49 50 55 33 41 5a 36 43 : 41 41 31 30 2d 32 37 35
+0x0190: 30 2d 30 31 56 30 31 20 : 01 00 46 00 00 00 00 bf
+0x01a0: 00 00 00 00 00 00 00 00 : 00 00 63 aa 64 00 64 ca
+0x01b0: 66 43 00 00 1c 02 9d 51 : 37 07 0f a1 00 00 aa aa
+0x01c0: 44 57 44 4d 2d 53 46 50 : 31 30 47 2d 35 38 2e 39
+0x01d0: 38 20 20 20 33 32 00 00 : 00 00 00 00 00 00 00 e8
+0x01e0: 0b 0d 1a 21 27 34 1a 34 : 00 00 00 00 00 00 00 00
+0x01f0: 00 00 00 00 00 fc 00 00 : ff ff ff ff 00 00 00 00
+
+
+
+PHY data for interface: TenGigE0/0/0/3
+
+SFP EEPROM  port: 3
+        Xcvr Type: SFP
+        Xcvr Code: SFP-10G-SR
+        Encoding: 64B66B
+        Bit Rate: 10300 Mbps
+        Link Reach 50u fiber: 80 meter
+        Link Reach 62.5u fiber: 20 meter
+        Vendor Name: CISCO-JDSU
+        Vendor OUI: 00.01.9c
+        Vendor Part Number: PLRXPL-SC-S43-CS (rev.: 1   )
+        Laser wavelength: 850 nm (fraction: 0.00 nm)
+        Optional SFP Signal: Tx_Disable, Tx_Fault, LOS
+        Vendor Serial Number: JUR1833GV1F
+        Date Code (yy/mm/dd): 14/08/16  lot code:
+        Diagnostic Monitoring: DOM, Int. Cal.,
+        Enhanced Options: SW RX LOS Mon., SW TX Fault Mon, SW TX Disable, Alarm/Warning Flags
+
+MSA Data
+0x0000: 03 04 07 10 00 00 00 00 : 00 00 00 06 67 00 00 00
+0x0010: 08 02 00 1e 43 49 53 43 : 4f 2d 4a 44 53 55 20 20
+0x0020: 20 20 20 20 00 00 01 9c : 50 4c 52 58 50 4c 2d 53
+0x0030: 43 2d 53 34 33 2d 43 53 : 31 20 20 20 03 52 00 19
+0x0040: 00 1a 00 00 4a 55 52 31 : 38 33 33 47 56 31 46 20
+0x0050: 20 20 20 20 31 34 30 38 : 31 36 20 20 68 f0 03 5d
+0x0060: 00 00 08 93 24 b6 53 74 : 94 4c 09 f7 05 38 f0 78
+0x0070: 12 90 2a 00 00 00 00 00 : 00 00 00 00 8a 25 00 f8
+
+        Thresholds:                    Alarm High         Warning High          Warning Low            Alarm Low
+              Temperature:            +75.000 C             +70.000 C              +0.000 C              -5.000 C
+                  Voltage:           3.630 Volt            3.465 Volt            3.135 Volt            2.970 Volt
+                     Bias:         10.000 mAmps           8.500 mAmps           3.000 mAmps           2.600 mAmps
+           Transmit Power:  1.47910 mW (1.69998 dBm)   0.74130 mW (-1.30006 dBm)   0.18620 mW (-7.30020 dBm)   0.07410 mW (-11.30182 dBm)
+            Receive Power:  1.58490 mW (2.00002 dBm)   0.79430 mW (-1.00015 dBm)   0.10230 mW (-9.90124 dBm)   0.04070 mW (-13.90406 dBm)
+        Temperature: 32.988
+        Voltage: 3.291 Volt
+        Tx Bias: 7.250 mAmps
+        Tx Power:  0.56550 mW (-2.47567 dBm)
+        Rx Power:  0.42270 mW (-3.73968 dBm)
+        Oper. Status/Control:
+EEPROM Memory (A2 lower)
+0x0100: 4b 00 fb 00 46 00 00 00 : 8d cc 74 04 87 5a 7a 76
+0x0110: 13 88 05 14 10 9a 05 dc : 39 c7 02 e5 1c f5 07 46
+0x0120: 3d e9 01 97 1f 07 03 ff : 00 00 00 00 00 00 00 00
+0x0130: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x0140: 00 00 00 00 3f 80 00 00 : 00 00 00 00 01 00 00 00
+0x0150: 01 00 00 00 01 00 00 00 : 01 00 00 00 00 00 00 5b
+0x0160: 20 fd 80 8e 0e 29 16 17 : 10 83 00 00 00 00 00 00
+0x0170: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 01
+
+        CLEI Code: COUIA8NCAA
+        Part Number: 10-2415-03 (ver.: V03 )
+        Temp/Alarm/Power Flags: COM, commercial 0C to 70C
+        Minimum Temperature: 0
+        Maximum Temperature: 70
+        Calibration Constants: LBC Scale, Temperature, Laser bias current, Output power,
+        Product Id: SFP-10G-SR
+EEPROM Memory (A2 upper)
+0x0180: 43 4f 55 49 41 38 4e 43 : 41 41 31 30 2d 32 34 31
+0x0190: 35 2d 30 33 56 30 33 20 : 01 00 46 00 00 00 00 c6
+0x01a0: 00 00 00 00 00 00 00 00 : 00 00 61 06 64 00 6d d7
+0x01b0: 7c 2b 00 00 16 00 0c 6c : 16 45 0f ae 00 00 aa aa
+0x01c0: 53 46 50 2d 31 30 47 2d : 53 52 20 20 20 20 20 20
+0x01d0: 20 20 20 20 34 31 00 00 : 00 00 00 00 00 00 00 35
+0x01e0: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x01f0: 00 00 00 00 00 00 00 00 : ff ff ff ff 00 00 00 00
+
+
+
+PHY data for interface: TenGigE0/0/0/4
+
+SFP EEPROM  port: 4
+        Xcvr Type: SFP
+        Xcvr Code: SFP-10G-SR
+        Encoding: 64B66B
+        Bit Rate: 10300 Mbps
+        Link Reach 50u fiber: 80 meter
+        Link Reach 62.5u fiber: 20 meter
+        Vendor Name: CISCO-FINISAR
+        Vendor OUI: 00.90.65
+        Vendor Part Number: FTLX8571D3BCL-C2 (rev.: A   )
+        Laser wavelength: 850 nm (fraction: 0.00 nm)
+        Optional SFP Signal: Tx_Disable, Tx_Fault, LOS
+        Vendor Serial Number: FNS17231KZU
+        Date Code (yy/mm/dd): 13/06/06  lot code:
+        Diagnostic Monitoring: DOM, Int. Cal.,
+        Enhanced Options: Alarm/Warning Flags
+
+MSA Data
+0x0000: 03 04 07 10 00 00 00 00 : 00 00 00 06 67 00 00 00
+0x0010: 08 02 00 1e 43 49 53 43 : 4f 2d 46 49 4e 49 53 41
+0x0020: 52 20 20 20 00 00 90 65 : 46 54 4c 58 38 35 37 31
+0x0030: 44 33 42 43 4c 2d 43 32 : 41 20 20 20 03 52 00 a5
+0x0040: 00 1a 00 00 46 4e 53 31 : 37 32 33 31 4b 5a 55 20
+0x0050: 20 20 20 20 31 33 30 36 : 30 36 20 20 68 80 03 f4
+0x0060: 00 00 02 61 e7 86 6e be : 16 35 ef 18 50 08 c7 78
+0x0070: 28 bc 3c 00 00 00 00 00 : 00 00 00 00 e5 04 00 95
+
+        Thresholds:                    Alarm High         Warning High          Warning Low            Alarm Low
+              Temperature:            +75.000 C             +70.000 C              +0.000 C              -5.000 C
+                  Voltage:           3.630 Volt            3.465 Volt            3.135 Volt            2.970 Volt
+                     Bias:         11.800 mAmps          10.800 mAmps           5.000 mAmps           4.000 mAmps
+           Transmit Power:  1.47910 mW (1.69998 dBm)   0.74130 mW (-1.30006 dBm)   0.18620 mW (-7.30020 dBm)   0.07410 mW (-11.30182 dBm)
+            Receive Power:  1.58490 mW (2.00002 dBm)   0.79430 mW (-1.00015 dBm)   0.10230 mW (-9.90124 dBm)   0.04070 mW (-13.90406 dBm)
+        Temperature: 32.152
+        Voltage: 3.264 Volt
+        Tx Bias: 7.904 mAmps
+        Tx Power:  0.59180 mW (-2.27825 dBm)
+        Rx Power:  0.45310 mW (-3.43806 dBm)
+        Oper. Status/Control:
+EEPROM Memory (A2 lower)
+0x0100: 4b 00 fb 00 46 00 00 00 : 8d cc 74 04 87 5a 7a 76
+0x0110: 17 0c 07 d0 15 18 09 c4 : 39 c7 02 e5 1c f5 07 46
+0x0120: 3d e9 01 97 1f 07 03 ff : 00 00 00 00 00 00 00 00
+0x0130: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x0140: 00 00 00 00 3f 80 00 00 : 00 00 00 00 01 00 00 00
+0x0150: 01 00 00 00 01 00 00 00 : 01 00 00 00 00 00 00 10
+0x0160: 20 27 7f 83 0f 70 17 1e : 11 b3 00 00 00 00 00 00
+0x0170: 00 00 00 00 00 00 00 00 : ff ff ff ff ff ff ff 01
+
+        CLEI Code: COUIA8NCAA
+        Part Number: 10-2415-03 (ver.: V03 )
+        Temp/Alarm/Power Flags: COM, commercial 0C to 70C
+        Minimum Temperature: 0
+        Maximum Temperature: 70
+        Calibration Constants:
+        Product Id: SFP-10G-SR
+EEPROM Memory (A2 upper)
+0x0180: 43 4f 55 49 41 38 4e 43 : 41 41 31 30 2d 32 34 31
+0x0190: 35 2d 30 33 56 30 33 20 : 01 00 46 00 00 00 00 c6
+0x01a0: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x01b0: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 aa aa
+0x01c0: 53 46 50 2d 31 30 47 2d : 53 52 20 20 20 20 20 20
+0x01d0: 20 20 20 20 32 33 00 00 : 00 00 00 00 00 00 00 35
+0x01e0: 15 1a 20 24 2a 30 20 30 : 00 00 00 00 00 00 00 00
+0x01f0: 00 00 00 00 00 1d 00 00 : ff ff ff ff 00 00 00 00
+
+
+
+PHY data for interface: TenGigE0/0/0/5
+
+SFP EEPROM  port: 5
+        Xcvr Type: SFP
+        Xcvr Code: SFP-10G-SR
+        Encoding: 64B66B
+        Bit Rate: 10300 Mbps
+        Link Reach 50u fiber: 80 meter
+        Link Reach 62.5u fiber: 20 meter
+        Vendor Name: CISCO-FINISAR
+        Vendor OUI: 00.90.65
+        Vendor Part Number: FTLX8571D3BCL-C2 (rev.: A   )
+        Laser wavelength: 850 nm (fraction: 0.00 nm)
+        Optional SFP Signal: Tx_Disable, Tx_Fault, LOS
+        Vendor Serial Number: FNS17231KZ7
+        Date Code (yy/mm/dd): 13/06/06  lot code:
+        Diagnostic Monitoring: DOM, Int. Cal.,
+        Enhanced Options: Alarm/Warning Flags
+
+MSA Data
+0x0000: 03 04 07 10 00 00 00 00 : 00 00 00 06 67 00 00 00
+0x0010: 08 02 00 1e 43 49 53 43 : 4f 2d 46 49 4e 49 53 41
+0x0020: 52 20 20 20 00 00 90 65 : 46 54 4c 58 38 35 37 31
+0x0030: 44 33 42 43 4c 2d 43 32 : 41 20 20 20 03 52 00 a5
+0x0040: 00 1a 00 00 46 4e 53 31 : 37 32 33 31 4b 5a 37 20
+0x0050: 20 20 20 20 31 33 30 36 : 30 36 20 20 68 80 03 d6
+0x0060: 00 00 02 6d 9a 90 34 05 : 5a 2b de b4 22 a8 95 6b
+0x0070: 4c b4 d5 00 00 00 00 00 : 00 00 00 00 b6 4c a5 80
+
+        Thresholds:                    Alarm High         Warning High          Warning Low            Alarm Low
+              Temperature:            +75.000 C             +70.000 C              +0.000 C              -5.000 C
+                  Voltage:           3.630 Volt            3.465 Volt            3.135 Volt            2.970 Volt
+                     Bias:         11.800 mAmps          10.800 mAmps           5.000 mAmps           4.000 mAmps
+           Transmit Power:  1.47910 mW (1.69998 dBm)   0.74130 mW (-1.30006 dBm)   0.18620 mW (-7.30020 dBm)   0.07410 mW (-11.30182 dBm)
+            Receive Power:  1.58490 mW (2.00002 dBm)   0.79430 mW (-1.00015 dBm)   0.10230 mW (-9.90124 dBm)   0.04070 mW (-13.90406 dBm)
+        Temperature: 30.563
+        Voltage: 3.258 Volt
+        Tx Bias: 7.876 mAmps
+        Tx Power:  0.64740 mW (-1.88827 dBm)
+        Rx Power:  0.56550 mW (-2.47567 dBm)
+        Oper. Status/Control:
+EEPROM Memory (A2 lower)
+0x0100: 4b 00 fb 00 46 00 00 00 : 8d cc 74 04 87 5a 7a 76
+0x0110: 17 0c 07 d0 15 18 09 c4 : 39 c7 02 e5 1c f5 07 46
+0x0120: 3d e9 01 97 1f 07 03 ff : 00 00 00 00 00 00 00 00
+0x0130: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x0140: 00 00 00 00 3f 80 00 00 : 00 00 00 00 01 00 00 00
+0x0150: 01 00 00 00 01 00 00 00 : 01 00 00 00 00 00 00 10
+0x0160: 1e 90 7f 45 0f 62 19 4a : 16 17 00 00 00 00 00 00
+0x0170: 00 00 00 00 00 00 00 00 : ff ff ff ff ff ff ff 01
+
+        CLEI Code: COUIA8NCAA
+        Part Number: 10-2415-03 (ver.: V03 )
+        Temp/Alarm/Power Flags: COM, commercial 0C to 70C
+        Minimum Temperature: 0
+        Maximum Temperature: 70
+        Calibration Constants:
+        Product Id: SFP-10G-SR
+EEPROM Memory (A2 upper)
+0x0180: 43 4f 55 49 41 38 4e 43 : 41 41 31 30 2d 32 34 31
+0x0190: 35 2d 30 33 56 30 33 20 : 01 00 46 00 00 00 00 c6
+0x01a0: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x01b0: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 aa aa
+0x01c0: 53 46 50 2d 31 30 47 2d : 53 52 20 20 20 20 20 20
+0x01d0: 20 20 20 20 32 33 00 00 : 00 00 00 00 00 00 00 35
+0x01e0: 15 1a 20 24 2a 30 20 30 : 00 00 00 00 00 00 00 00
+0x01f0: 00 00 00 00 00 1d 00 00 : ff ff ff ff 00 00 00 00
+
+
+
+PHY data for interface: TenGigE0/0/0/6
+
+SFP EEPROM  port: 6
+        Xcvr Type: SFP
+        Xcvr Code: SFP-10G-SR
+        Encoding: 64B66B
+        Bit Rate: 10300 Mbps
+        Link Reach 50u fiber: 80 meter
+        Link Reach 62.5u fiber: 20 meter
+        Vendor Name: CISCO-FINISAR
+        Vendor OUI: 00.90.65
+        Vendor Part Number: FTLX8571D3BCL-C2 (rev.: A   )
+        Laser wavelength: 850 nm (fraction: 0.00 nm)
+        Optional SFP Signal: Tx_Disable, Tx_Fault, LOS
+        Vendor Serial Number: FNS17231KYN
+        Date Code (yy/mm/dd): 13/06/06  lot code:
+        Diagnostic Monitoring: DOM, Int. Cal.,
+        Enhanced Options: Alarm/Warning Flags
+
+MSA Data
+0x0000: 03 04 07 10 00 00 00 00 : 00 00 00 06 67 00 00 00
+0x0010: 08 02 00 1e 43 49 53 43 : 4f 2d 46 49 4e 49 53 41
+0x0020: 52 20 20 20 00 00 90 65 : 46 54 4c 58 38 35 37 31
+0x0030: 44 33 42 43 4c 2d 43 32 : 41 20 20 20 03 52 00 a5
+0x0040: 00 1a 00 00 46 4e 53 31 : 37 32 33 31 4b 59 4e 20
+0x0050: 20 20 20 20 31 33 30 36 : 30 36 20 20 68 80 03 ec
+0x0060: 00 00 02 b1 f4 73 e5 c3 : 5c aa e2 5c 9c fe 1c 95
+0x0070: 91 98 47 00 00 00 00 00 : 00 00 00 00 ab 24 53 3c
+
+        Thresholds:                    Alarm High         Warning High          Warning Low            Alarm Low
+              Temperature:            +75.000 C             +70.000 C              +0.000 C              -5.000 C
+                  Voltage:           3.630 Volt            3.465 Volt            3.135 Volt            2.970 Volt
+                     Bias:         11.800 mAmps          10.800 mAmps           5.000 mAmps           4.000 mAmps
+           Transmit Power:  1.47910 mW (1.69998 dBm)   0.74130 mW (-1.30006 dBm)   0.18620 mW (-7.30020 dBm)   0.07410 mW (-11.30182 dBm)
+            Receive Power:  1.58490 mW (2.00002 dBm)   0.79430 mW (-1.00015 dBm)   0.10230 mW (-9.90124 dBm)   0.04070 mW (-13.90406 dBm)
+        Temperature: 34.293
+        Voltage: 3.240 Volt
+        Tx Bias: 7.846 mAmps
+        Tx Power:  0.61560 mW (-2.10701 dBm)
+        Rx Power:  0.62050 mW (-2.07258 dBm)
+        Oper. Status/Control:
+EEPROM Memory (A2 lower)
+0x0100: 4b 00 fb 00 46 00 00 00 : 8d cc 74 04 87 5a 7a 76
+0x0110: 17 0c 07 d0 15 18 09 c4 : 39 c7 02 e5 1c f5 07 46
+0x0120: 3d e9 01 97 1f 07 03 ff : 00 00 00 00 00 00 00 00
+0x0130: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x0140: 00 00 00 00 3f 80 00 00 : 00 00 00 00 01 00 00 00
+0x0150: 01 00 00 00 01 00 00 00 : 01 00 00 00 00 00 00 10
+0x0160: 22 4b 7e 8e 0f 53 18 0c : 18 3d 00 00 00 00 00 00
+0x0170: 00 00 00 00 00 00 00 00 : ff ff ff ff ff ff ff 01
+
+        CLEI Code: COUIA8NCAA
+        Part Number: 10-2415-03 (ver.: V03 )
+        Temp/Alarm/Power Flags: COM, commercial 0C to 70C
+        Minimum Temperature: 0
+        Maximum Temperature: 70
+        Calibration Constants:
+        Product Id: SFP-10G-SR
+EEPROM Memory (A2 upper)
+0x0180: 43 4f 55 49 41 38 4e 43 : 41 41 31 30 2d 32 34 31
+0x0190: 35 2d 30 33 56 30 33 20 : 01 00 46 00 00 00 00 c6
+0x01a0: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x01b0: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 aa aa
+0x01c0: 53 46 50 2d 31 30 47 2d : 53 52 20 20 20 20 20 20
+0x01d0: 20 20 20 20 32 33 00 00 : 00 00 00 00 00 00 00 35
+0x01e0: 15 1a 20 24 2a 30 20 30 : 00 00 00 00 00 00 00 00
+0x01f0: 00 00 00 00 00 1d 00 00 : ff ff ff ff 00 00 00 00
+
+
+
+PHY data for interface: TenGigE0/0/0/7
+
+SFP EEPROM  port: 7
+        Xcvr Type: SFP
+        Xcvr Code: SFP-10G-SR
+        Encoding: 64B66B
+        Bit Rate: 10300 Mbps
+        Link Reach 50u fiber: 80 meter
+        Link Reach 62.5u fiber: 20 meter
+        Vendor Name: CISCO-FINISAR
+        Vendor OUI: 00.90.65
+        Vendor Part Number: FTLX8571D3BCL-C2 (rev.: A   )
+        Laser wavelength: 850 nm (fraction: 0.00 nm)
+        Optional SFP Signal: Tx_Disable, Tx_Fault, LOS
+        Vendor Serial Number: FNS17231KYF
+        Date Code (yy/mm/dd): 13/06/06  lot code:
+        Diagnostic Monitoring: DOM, Int. Cal.,
+        Enhanced Options: Alarm/Warning Flags
+
+MSA Data
+0x0000: 03 04 07 10 00 00 00 00 : 00 00 00 06 67 00 00 00
+0x0010: 08 02 00 1e 43 49 53 43 : 4f 2d 46 49 4e 49 53 41
+0x0020: 52 20 20 20 00 00 90 65 : 46 54 4c 58 38 35 37 31
+0x0030: 44 33 42 43 4c 2d 43 32 : 41 20 20 20 03 52 00 a5
+0x0040: 00 1a 00 00 46 4e 53 31 : 37 32 33 31 4b 59 46 20
+0x0050: 20 20 20 20 31 33 30 36 : 30 36 20 20 68 80 03 e4
+0x0060: 00 00 02 92 fe 63 74 2e : 97 52 42 36 a9 62 00 68
+0x0070: 2e 2a 5f 00 00 00 00 00 : 00 00 00 00 8b 7d 0c 6e
+
+        Thresholds:                    Alarm High         Warning High          Warning Low            Alarm Low
+              Temperature:            +75.000 C             +70.000 C              +0.000 C              -5.000 C
+                  Voltage:           3.630 Volt            3.465 Volt            3.135 Volt            2.970 Volt
+                     Bias:         11.800 mAmps          10.800 mAmps           5.000 mAmps           4.000 mAmps
+           Transmit Power:  1.47910 mW (1.69998 dBm)   0.74130 mW (-1.30006 dBm)   0.18620 mW (-7.30020 dBm)   0.07410 mW (-11.30182 dBm)
+            Receive Power:  1.58490 mW (2.00002 dBm)   0.79430 mW (-1.00015 dBm)   0.10230 mW (-9.90124 dBm)   0.04070 mW (-13.90406 dBm)
+        Temperature: 34.387
+        Voltage: 3.278 Volt
+        Tx Bias: 0.152 mAmps
+        Tx Power:  0.05760 mW (-12.39578 dBm)
+        Rx Power:  0.000 mW (<-40.00 dBm)
+        Oper. Status/Control: Tx Disabled, LOS,
+EEPROM Memory (A2 lower)
+0x0100: 4b 00 fb 00 46 00 00 00 : 8d cc 74 04 87 5a 7a 76
+0x0110: 17 0c 07 d0 15 18 09 c4 : 39 c7 02 e5 1c f5 07 46
+0x0120: 3d e9 01 97 1f 07 03 ff : 00 00 00 00 00 00 00 00
+0x0130: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x0140: 00 00 00 00 3f 80 00 00 : 00 00 00 00 01 00 00 00
+0x0150: 01 00 00 00 01 00 00 00 : 01 00 00 00 00 00 00 10
+0x0160: 22 63 80 09 00 4c 02 40 : 00 00 00 00 00 00 82 00
+0x0170: 05 40 00 00 05 40 00 00 : ff ff ff ff ff ff ff 01
+
+        CLEI Code: COUIA8NCAA
+        Part Number: 10-2415-03 (ver.: V03 )
+        Temp/Alarm/Power Flags: COM, commercial 0C to 70C
+        Minimum Temperature: 0
+        Maximum Temperature: 70
+        Calibration Constants:
+        Product Id: SFP-10G-SR
+EEPROM Memory (A2 upper)
+0x0180: 43 4f 55 49 41 38 4e 43 : 41 41 31 30 2d 32 34 31
+0x0190: 35 2d 30 33 56 30 33 20 : 01 00 46 00 00 00 00 c6
+0x01a0: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x01b0: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 aa aa
+0x01c0: 53 46 50 2d 31 30 47 2d : 53 52 20 20 20 20 20 20
+0x01d0: 20 20 20 20 32 33 00 00 : 00 00 00 00 00 00 00 35
+0x01e0: 15 1a 20 24 2a 30 20 30 : 00 00 00 00 00 00 00 00
+0x01f0: 00 00 00 00 00 1d 00 00 : ff ff ff ff 00 00 00 00
+
+
+
+PHY data for interface: TenGigE0/0/0/8
+
+SFP EEPROM  port: 8
+        Xcvr Type: SFP
+        Xcvr Code: SFP-10G-SR
+        Encoding: 64B66B
+        Bit Rate: 10300 Mbps
+        Link Reach 50u fiber: 80 meter
+        Link Reach 62.5u fiber: 20 meter
+        Vendor Name: CISCO-FINISAR
+        Vendor OUI: 00.90.65
+        Vendor Part Number: FTLX8571D3BCL-C2 (rev.: A   )
+        Laser wavelength: 850 nm (fraction: 0.00 nm)
+        Optional SFP Signal: Tx_Disable, Tx_Fault, LOS
+        Vendor Serial Number: FNS17231KZG
+        Date Code (yy/mm/dd): 13/06/06  lot code:
+        Diagnostic Monitoring: DOM, Int. Cal.,
+        Enhanced Options: Alarm/Warning Flags
+
+MSA Data
+0x0000: 03 04 07 10 00 00 00 00 : 00 00 00 06 67 00 00 00
+0x0010: 08 02 00 1e 43 49 53 43 : 4f 2d 46 49 4e 49 53 41
+0x0020: 52 20 20 20 00 00 90 65 : 46 54 4c 58 38 35 37 31
+0x0030: 44 33 42 43 4c 2d 43 32 : 41 20 20 20 03 52 00 a5
+0x0040: 00 1a 00 00 46 4e 53 31 : 37 32 33 31 4b 5a 47 20
+0x0050: 20 20 20 20 31 33 30 36 : 30 36 20 20 68 80 03 e6
+0x0060: 00 00 02 3e c6 30 bb 72 : 52 c4 39 8f 04 21 07 b0
+0x0070: cc 72 75 00 00 00 00 00 : 00 00 00 00 60 af 93 d2
+
+        Thresholds:                    Alarm High         Warning High          Warning Low            Alarm Low
+              Temperature:            +75.000 C             +70.000 C              +0.000 C              -5.000 C
+                  Voltage:           3.630 Volt            3.465 Volt            3.135 Volt            2.970 Volt
+                     Bias:         11.800 mAmps          10.800 mAmps           5.000 mAmps           4.000 mAmps
+           Transmit Power:  1.47910 mW (1.69998 dBm)   0.74130 mW (-1.30006 dBm)   0.18620 mW (-7.30020 dBm)   0.07410 mW (-11.30182 dBm)
+            Receive Power:  1.58490 mW (2.00002 dBm)   0.79430 mW (-1.00015 dBm)   0.10230 mW (-9.90124 dBm)   0.04070 mW (-13.90406 dBm)
+        Temperature: 33.723
+        Voltage: 3.277 Volt
+        Tx Bias: 0.000 mAmps
+        Tx Power:  0.00530 mW (-22.75724 dBm)
+        Rx Power:  0.000 mW (<-40.00 dBm)
+        Oper. Status/Control: Tx Disabled, LOS,
+EEPROM Memory (A2 lower)
+0x0100: 4b 00 fb 00 46 00 00 00 : 8d cc 74 04 87 5a 7a 76
+0x0110: 17 0c 07 d0 15 18 09 c4 : 39 c7 02 e5 1c f5 07 46
+0x0120: 3d e9 01 97 1f 07 03 ff : 00 00 00 00 00 00 00 00
+0x0130: 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00
+0x0140: 00 00 00 00 3f 80 00 00 : 00 00 00 00 01 00 00 00
+0x0150: 01 00 00 00 01 00 00 00 : 01 00 00 00 00 00 00 10
+0x0160: 21 b9 80 02 00 00 00 35 : 00 00 00 00 00 00 82 00
+0x0170: 05 40 00 00 05 40 00 00 : ff ff ff ff ff ff ff 01

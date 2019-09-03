@@ -1,0 +1,17 @@
+BGP table version is 17, local router ID is 10.0.0.0
+Status codes: s suppressed, d damped, h history, * valid, > best, i - internal, 
+              r RIB-failure, S Stale, m multipath, b backup-path, f RT-Filter, 
+              x best-external, a additional-path, c RIB-compressed, 
+              t secondary path, 
+Origin codes: i - IGP, e - EGP, ? - incomplete
+RPKI validation codes: V valid, I invalid, N Not found
+
+     Network          Next Hop            Metric LocPrf Weight Path
+ *>   10.1.0.0/16      0.0.0.0                  0         32768 i
+ *>   10.2.0.0/16      0.0.0.0                  0         32768 i
+ *>   10.3.0.0/16      0.0.0.0                  0         32768 i
+ *>   10.4.0.0/16      0.0.0.0                  0         32768 i
+ *>i  10.11.0.0/16     10.0.0.1                 0    100      0 i
+ *>i  10.12.0.0/16     10.0.0.1                 0    100      0 i
+ *>i  10.13.0.0/16     10.0.0.1                 0    100      0 i
+ *>i  10.14.0.0/16     10.0.0.1                 0    100      0 i

@@ -1,0 +1,16 @@
+router1# sh ip ospf neighbors vrf all 
+ OSPF Process ID 1111 VRF CUSTVRF1
+ Total number of neighbors: 3
+ Neighbor ID     Pri State            Up Time  Address         Interface
+ 10.0.0.1          1 FULL/ -          8w6d     11.11.11.11     Vlan999 
+ 10.0.0.2          1 FULL/ -          5w6d     22.22.22.22     Po1 
+ 10.0.0.3          1 FULL/ -          5w6d     44.44.44.44     Po2 
+ OSPF Process ID 2222 VRF CUSTVRF2
+ Total number of neighbors: 1
+ Neighbor ID     Pri State            Up Time  Address         Interface
+ 10.0.0.4          1 FULL/ -          8w6d     55.55.55.55     Vlan1000 
+ OSPF Process ID 3333 VRF CUSTVRF2
+ Total number of neighbors: 2
+ Neighbor ID     Pri State            Up Time  Address         Interface
+ 10.0.0.5          1 FULL/ -          7w2d     66.66.66.66     Po3 
+ 10.0.0.6          1 INIT/DROTHER     -        77.77.77.77     Po4 

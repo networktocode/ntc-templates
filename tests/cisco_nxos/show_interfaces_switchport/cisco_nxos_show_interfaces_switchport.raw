@@ -1,0 +1,63 @@
+Name: Ethernet1/1
+  Switchport: Enabled
+  Switchport Monitor: Not enabled
+  Switchport Isolated : Not enabled
+  Switchport Block Multicast: Not enabled
+  Switchport Block Unicast: Not enabled
+  Operational Mode: access
+  Access Mode VLAN: 3 (Vlan not created)
+  Trunking Native Mode VLAN: 1 (default)
+  Trunking VLANs Allowed: 1-4094
+  Voice VLAN: none
+  Extended Trust State : not trusted [COS = 0]
+  Administrative private-vlan primary host-association: none
+  Administrative private-vlan secondary host-association: none
+  Administrative private-vlan primary mapping: none
+  Administrative private-vlan secondary mapping: none
+  Administrative private-vlan trunk native VLAN: none
+  Administrative private-vlan trunk encapsulation: dot1q
+  Administrative private-vlan trunk normal VLANs: none
+  Administrative private-vlan trunk private VLANs: none
+  Operational private-vlan: none
+Name: Ethernet1/2
+  Switchport: Enabled
+  Switchport Monitor: Not enabled
+  Switchport Isolated : Not enabled
+  Switchport Block Multicast: Not enabled
+  Switchport Block Unicast: Not enabled
+  Operational Mode: trunk
+  Access Mode VLAN: 1 (default)
+  Trunking Native Mode VLAN: 5 (Vlan not created)
+  Trunking VLANs Allowed: 1-4094
+  Voice VLAN: none
+  Extended Trust State : not trusted [COS = 0]
+  Administrative private-vlan primary host-association: none
+  Administrative private-vlan secondary host-association: none
+  Administrative private-vlan primary mapping: none
+  Administrative private-vlan secondary mapping: none
+  Administrative private-vlan trunk native VLAN: none
+  Administrative private-vlan trunk encapsulation: dot1q
+  Administrative private-vlan trunk normal VLANs: none
+  Administrative private-vlan trunk private VLANs: none
+  Operational private-vlan: none
+Name: Ethernet1/3
+  Switchport: Enabled
+  Switchport Monitor: Not enabled
+  Switchport Isolated : Not enabled
+  Switchport Block Multicast: Not enabled
+  Switchport Block Unicast: Not enabled
+  Operational Mode: trunk
+  Access Mode VLAN: 1 (default)
+  Trunking Native Mode VLAN: 1 (default)
+  Trunking VLANs Allowed: 1-4094
+  Voice VLAN: none
+  Extended Trust State : not trusted [COS = 0]
+  Administrative private-vlan primary host-association: none
+  Administrative private-vlan secondary host-association: none
+  Administrative private-vlan primary mapping: none
+  Administrative private-vlan secondary mapping: none
+  Administrative private-vlan trunk native VLAN: none
+  Administrative private-vlan trunk encapsulation: dot1q
+  Administrative private-vlan trunk normal VLANs: none
+  Administrative private-vlan trunk private VLANs: none
+  Operational private-vlan: none
