@@ -2,106 +2,105 @@
 
 parsed_sample:
 
-
-- avail : '4.5G'
-  used : '44M'
-  size : '4.6G'
-  mounted_on : '/'
-  file_system : 'none'
-  use_percent : '1%'
-
-
-- avail : '4.5G'
-  used : '44M'
-  size : '4.6G'
-  mounted_on : '/.overlay'
-  file_system : 'none'
-  use_percent : '1%'
-
-
-- avail : '8.0M'
-  used : '0'
-  size : '8.0M'
-  mounted_on : '/dev'
-  file_system : 'devtmpfs'
-  use_percent : '0%'
-
-
-- avail : '16G'
-  used : '0'
-  size : '16G'
-  mounted_on : '/dev/shm'
-  file_system : 'tmpfs'
-  use_percent : '0%'
-
-
-- avail : '16G'
-  used : '4.4M'
-  size : '16G'
-  mounted_on : '/run'
-  file_system : 'tmpfs'
-  use_percent : '1%'
-
-
-- avail : '16G'
-  used : '0'
-  size : '16G'
-  mounted_on : '/sys/fs/cgroup'
-  file_system : 'tmpfs'
-  use_percent : '0%'
-
-
-- avail : '4.6G'
-  used : '308K'
-  size : '4.6G'
-  mounted_on : '/tmp'
-  file_system : 'tmpfs'
-  use_percent : '1%'
-
-
-- avail : '63M'
-  used : '1.2M'
-  size : '64M'
-  mounted_on : '/.deltas'
-  file_system : 'tmpfs'
+- used : '44M'
   use_percent : '2%'
+  mounted_on : '/'
+  avail : '2.2G'
+  file_system : 'none'
+  size : '2.2G'
 
 
-- avail : '16G'
-  used : '0'
-  size : '16G'
+- used : '44M'
+  use_percent : '2%'
+  mounted_on : '/.overlay'
+  avail : '2.2G'
+  file_system : 'none'
+  size : '2.2G'
+
+
+- used : '0'
+  use_percent : '0%'
+  mounted_on : '/dev'
+  avail : '8.0M'
+  file_system : 'devtmpfs'
+  size : '8.0M'
+
+
+- used : '0'
+  use_percent : '0%'
+  mounted_on : '/dev/shm'
+  avail : '7.2G'
+  file_system : 'tmpfs'
+  size : '7.2G'
+
+
+- used : '4.7M'
+  use_percent : '1%'
+  mounted_on : '/run'
+  avail : '7.2G'
+  file_system : 'tmpfs'
+  size : '7.2G'
+
+
+- used : '0'
+  use_percent : '0%'
+  mounted_on : '/sys/fs/cgroup'
+  avail : '7.2G'
+  file_system : 'tmpfs'
+  size : '7.2G'
+
+
+- used : '24K'
+  use_percent : '1%'
+  mounted_on : '/tmp'
+  avail : '2.2G'
+  file_system : 'tmpfs'
+  size : '2.2G'
+
+
+- used : '1.3M'
+  use_percent : '2%'
+  mounted_on : '/.deltas'
+  avail : '63M'
+  file_system : 'tmpfs'
+  size : '64M'
+
+
+- used : '0'
+  use_percent : '0%'
   mounted_on : '/var/run/netns'
+  avail : '7.2G'
   file_system : 'tmpfs'
-  use_percent : '0%'
+  size : '7.2G'
 
 
-- avail : '3.1G'
-  used : '0'
-  size : '3.1G'
+- used : '1.5G'
+  use_percent : '100%'
   mounted_on : '/var/core'
+  avail : '0'
   file_system : 'tmpfs'
-  use_percent : '0%'
+  size : '1.5G'
 
 
-- avail : '3.0G'
-  used : '93M'
-  size : '3.1G'
-  mounted_on : '/var/log'
-  file_system : 'tmpfs'
-  use_percent : '3%'
-
-
-- avail : '807M'
-  used : '218M'
-  size : '1.0G'
-  mounted_on : '/var/shmem'
-  file_system : 'tmpfs'
-  use_percent : '22%'
-
-
-- avail : '2.2G'
-  used : '1.2G'
-  size : '3.3G'
+- used : '1.6G'
+  use_percent : '49%'
   mounted_on : '/mnt/flash'
+  avail : '1.8G'
   file_system : '/dev/sda1'
-  use_percent : '35%'
+  size : '3.3G'
+
+
+- used : '361M'
+  use_percent : '25%'
+  mounted_on : '/var/log'
+  avail : '1.1G'
+  file_system : 'tmpfs'
+  size : '1.5G'
+
+
+- used : '176M'
+  use_percent : '18%'
+  mounted_on : '/var/shmem'
+  avail : '849M'
+  file_system : 'tmpfs'
+  size : '1.0G'

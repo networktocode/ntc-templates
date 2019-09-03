@@ -2,61 +2,41 @@
 parsed_sample:
 
 - bgp_neigh: '10.0.0.1'
-  local_as: '65000'
   neigh_as: '65000'
-  router_id: '10.0.0.0'
   state_pfxrcd: '558720'
 
 - bgp_neigh: '10.0.0.2'
-  local_as: '65000'
   neigh_as: '65001'
-  router_id: '10.0.0.0'
   state_pfxrcd: '558720'
 
 - bgp_neigh: '10.0.0.3'
-  local_as: '65000'
   neigh_as: '65002'
-  router_id: '10.0.0.0'
   state_pfxrcd: '0'
 
 - bgp_neigh: '10.0.0.4'
-  local_as: '65000'
   neigh_as: '65003'
-  router_id: '10.0.0.0'
   state_pfxrcd: '1351'
 
 - bgp_neigh: '10.0.0.5'
-  local_as: '65000'
   neigh_as: '65004'
-  router_id: '10.0.0.0'
   state_pfxrcd: '558720'
 
 - bgp_neigh: '10.0.0.6'
-  local_as: '65000'
   neigh_as: '65005'
-  router_id: '10.0.0.0'
   state_pfxrcd: '558720'
 
 - bgp_neigh: '10.0.0.7'
-  local_as: '65000'
   neigh_as: '65006'
-  router_id: '10.0.0.0'
   state_pfxrcd: '82'
 
 - bgp_neigh: '10.0.0.8'
-  local_as: '65000'
   neigh_as: '65007'
-  router_id: '10.0.0.0'
   state_pfxrcd: '82'
 
 - bgp_neigh: '10.0.0.9'
-  local_as: '65000'
   neigh_as: '65008'
-  router_id: '10.0.0.0'
   state_pfxrcd: '0'
 
 - bgp_neigh: '10.0.0.10'
-  local_as: '65000'
   neigh_as: '65009'
-  router_id: '10.0.0.0'
   state_pfxrcd: 'Idle (Admin)'

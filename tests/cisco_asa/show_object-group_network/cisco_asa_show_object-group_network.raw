@@ -21,6 +21,3 @@ object-group network Prod
 object-group network dr
  description: dr-network
  network-object 10.210.0.0 255.255.0.0
-object-group network dr2
- description dr2-network
- network-object 10.211.0.0 255.255.0.0

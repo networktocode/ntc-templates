@@ -9,22 +9,15 @@ parsed_sample:
     duplex: Auto-duplex
     encapsulation: ARPA
     hardware_type: iGbE
-    input_errors: '0'
-    input_packets: '324'
     input_rate: '0'
     interface: GigabitEthernet0/0
     ip_address: ''
-    last_input: 1d21h
-    last_output: 1d21h
-    last_output_hang: never
     link_status: reset
     mtu: '1500'
-    output_errors: '0'
-    output_packets: '703'
     output_rate: '0'
     protocol_status: down (notconnect)
     queue_strategy: fifo
-    speed: Auto-speed
+    speed: Auto-speed, link type is auto
 -   address: fa16.3e4f.41cc
     bandwidth: 1000000 Kbit
     bia: fa16.3e4f.41cc
@@ -33,22 +26,15 @@ parsed_sample:
     duplex: Auto-duplex
     encapsulation: ARPA
     hardware_type: iGbE
-    input_errors: '0'
-    input_packets: '83'
     input_rate: '0'
     interface: GigabitEthernet0/1
     ip_address: ''
-    last_input: 1d21h
-    last_output: 00:00:02
-    last_output_hang: never
     link_status: up
     mtu: '1500'
-    output_errors: '0'
-    output_packets: '15513'
     output_rate: '0'
     protocol_status: up (connected)
     queue_strategy: fifo
-    speed: Auto-speed
+    speed: Auto-speed, link type is auto
 -   address: fa16.3ea3.3e49
     bandwidth: 1000000 Kbit
     bia: fa16.3ea3.3e49
@@ -57,22 +43,15 @@ parsed_sample:
     duplex: Auto-duplex
     encapsulation: ARPA
     hardware_type: iGbE
-    input_errors: '0'
-    input_packets: '8677'
     input_rate: '0'
     interface: GigabitEthernet0/2
     ip_address: ''
-    last_input: 00:00:13
-    last_output: 00:00:00
-    last_output_hang: never
     link_status: up
     mtu: '1500'
-    output_errors: '0'
-    output_packets: '420798'
     output_rate: '1000'
     protocol_status: up (connected)
     queue_strategy: fifo
-    speed: Auto-speed
+    speed: Auto-speed, link type is auto
 -   address: fa16.3e31.2c47
     bandwidth: 1000000 Kbit
     bia: fa16.3e31.2c47
@@ -81,22 +60,15 @@ parsed_sample:
     duplex: Auto-duplex
     encapsulation: ARPA
     hardware_type: iGbE
-    input_errors: '0'
-    input_packets: '8638'
     input_rate: '0'
     interface: GigabitEthernet0/3
     ip_address: ''
-    last_input: 00:00:28
-    last_output: 00:00:00
-    last_output_hang: never
     link_status: up
     mtu: '1500'
-    output_errors: '0'
-    output_packets: '420819'
     output_rate: '1000'
     protocol_status: up (connected)
     queue_strategy: fifo
-    speed: Auto-speed
+    speed: Auto-speed, link type is auto
 -   address: fa16.3ec8.50ab
     bandwidth: 1000000 Kbit
     bia: fa16.3ec8.50ab
@@ -105,22 +77,15 @@ parsed_sample:
     duplex: Auto-duplex
     encapsulation: ARPA
     hardware_type: iGbE
-    input_errors: '0'
-    input_packets: '8627'
     input_rate: '0'
     interface: GigabitEthernet1/0
     ip_address: ''
-    last_input: 00:00:26
-    last_output: 00:00:00
-    last_output_hang: never
     link_status: up
     mtu: '1500'
-    output_errors: '0'
-    output_packets: '420790'
     output_rate: '2000'
     protocol_status: up (connected)
     queue_strategy: fifo
-    speed: Auto-speed
+    speed: Auto-speed, link type is auto
 -   address: fa16.3e4f.41cc
     bandwidth: 100000 Kbit
     bia: fa16.3e4f.41cc
@@ -129,18 +94,11 @@ parsed_sample:
     duplex: Auto-duplex
     encapsulation: ARPA
     hardware_type: EtherChannel
-    input_errors: '0'
-    input_packets: '85'
     input_rate: '0'
     interface: Port-channel1
     ip_address: ''
-    last_input: 1d21h
-    last_output: never
-    last_output_hang: never
     link_status: down
     mtu: '1500'
-    output_errors: '0'
-    output_packets: '0'
     output_rate: '0'
     protocol_status: down (notconnect)
     queue_strategy: fifo
@@ -153,18 +111,11 @@ parsed_sample:
     duplex: ''
     encapsulation: LOOPBACK
     hardware_type: Loopback
-    input_errors: ''
-    input_packets: '0'
     input_rate: '0'
     interface: Loopback0
     ip_address: ''
-    last_input: never
-    last_output: never
-    last_output_hang: never
     link_status: up
     mtu: '1514'
-    output_errors: '0'
-    output_packets: '0'
     output_rate: '0'
     protocol_status: up
     queue_strategy: fifo
@@ -177,18 +128,11 @@ parsed_sample:
     duplex: ''
     encapsulation: ARPA
     hardware_type: Ethernet SVI
-    input_errors: '0'
-    input_packets: '0'
     input_rate: '0'
     interface: Vlan1
     ip_address: 10.255.0.16/16
-    last_input: never
-    last_output: never
-    last_output_hang: never
     link_status: up
     mtu: '1500'
-    output_errors: ''
-    output_packets: '4'
     output_rate: '0'
     protocol_status: up
     queue_strategy: fifo

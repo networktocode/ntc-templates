@@ -1,9 +1,13 @@
+"""setup.py file."""
 import re
 from codecs import open
-from setuptools import setup, find_packages
+from glob import glob
+from setuptools import setup
+import os
+import shutil
 
 version = ''
-with open('lib/ntc_templates/__init__.py', 'r') as fd:
+with open('ntc_templates/__init__.py', 'r') as fd:
     version = re.search(r'^__version__\s*=\s*[\'"]([^\'"]*)[\'"]',
                         fd.read(), re.MULTILINE).group(1)
 
@@ -16,17 +20,26 @@ with open('README.md', 'r', 'utf-8') as f:
 with open('HISTORY.rst', 'r', 'utf-8') as f:
     history = f.read()
 
+
 long_description = readme + '\n\n' + history
 
+
+template_files = glob('templates/*')
+
+if os.path.islink('ntc_templates/templates'):
+    os.unlink('ntc_templates/templates')
+elif os.path.isdir('ntc_templates/templates'):
+    shutil.rmtree('ntc_templates/templates')
+
+os.symlink('../templates', 'ntc_templates/templates')
 config = {
     'name': 'ntc_templates',
-    'package_dir': {'': 'lib'},
-    'packages': find_packages('lib'),
+    # 'package_dir': {'': 'lib'},
+    'packages': ['ntc_templates'],
     'version': version,
-    'package_data': {'ntc_templates': ['templates/*']},
+    'package_data': {'ntc_templates': template_files},
     'description': 'Package to return structured data from the output of network devices.',
     'long_description': long_description,
-    'long_description_content_type': 'text/markdown',
     'author': 'network.toCode()',
     'author_email': 'info@networktocode.com',
     'url': 'https://github.com/networktocode/ntc-templates',
@@ -37,8 +50,10 @@ config = {
     'classifiers': ['Development Status :: 4 - Beta',
                     'Intended Audience :: Developers',
                     'Intended Audience :: System Administrators',
-                    'Programming Language :: Python :: 3'],
-    'zip_safe': False
+                    'Programming Language :: Python :: 2.7']
 }
 
 setup(**config)
+
+if os.path.islink('ntc_templates/templates'):
+    os.unlink('ntc_templates/templates')

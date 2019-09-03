@@ -1,111 +1,87 @@
 ---
 parsed_sample:
 
-- address: 00de.fb01.c9bc
-  admin_state: down
-  bandwidth: 1000000 Kbit
-  bia: ''
-  delay: 10 usec
-  description: ''
-  duplex: ''
-  encapsulation: ''
-  hardware_type: EtherSVI
-  input_errors: ''
-  input_packets: ''
-  interface: Vlan1
-  ip_address: ''
-  link_status: down (Administratively down)
-  mtu: '1500'
-  output_errors: ''
-  output_packets: ''
-  speed: ''
-- address: 00de.fb01.c921
-  admin_state: up
-  bandwidth: 1000000 Kbit
-  bia: ''
-  delay: 10 usec
-  description: ''
-  duplex: ''
-  encapsulation: ''
-  hardware_type: EtherSVI
-  input_errors: ''
-  input_packets: ''
-  interface: Vlan330
-  ip_address: 192.168.1.3/24
-  link_status: up
-  mtu: '1500'
-  output_errors: ''
-  output_packets: ''
-  speed: ''
-- address: 00de.fb01.c933
-  admin_state: up
-  bandwidth: 1000000 Kbit
-  bia: ''
-  delay: 10 usec
-  description: ''
-  duplex: ''
-  encapsulation: ''
-  hardware_type: EtherSVI
-  input_errors: ''
-  input_packets: ''
-  interface: Vlan336
-  ip_address: 192.168.2.3/24
-  link_status: up
-  mtu: '1500'
-  output_errors: ''
-  output_packets: ''
-  speed: ''
-- address: 00de.fb01.c9ab
-  admin_state: up
-  bandwidth: 1000000 Kbit
-  bia: ''
-  delay: 10 usec
-  description: ''
-  duplex: ''
-  encapsulation: ''
-  hardware_type: EtherSVI
-  input_errors: ''
-  input_packets: ''
-  interface: Vlan339
-  ip_address: 192.168.3.3/24
-  link_status: up
-  mtu: '1500'
-  output_errors: ''
-  output_packets: ''
-  speed: ''
-- address: 00de.fb01.c9ef
-  admin_state: up
-  bandwidth: 1000000 Kbit
-  bia: ''
-  delay: 10 usec
-  description: ''
-  duplex: ''
-  encapsulation: ''
-  hardware_type: EtherSVI
-  input_errors: ''
-  input_packets: ''
-  interface: Vlan300
-  ip_address: 192.168.24.1/24
-  link_status: up
-  mtu: '1500'
-  output_errors: ''
-  output_packets: ''
-  speed: ''
-- address: 0000.d200.0000
-  admin_state: ''
-  bandwidth: 23 Kbit
-  bia: 0000.d200.0000
-  delay: 10 usec
-  description: ''
-  duplex: auto-duplex
-  encapsulation: ARPA
-  hardware_type: 10/100/1000 Ethernet
-  input_errors: '0'
-  input_packets: '887330'
-  interface: Ethernet106/1/1
-  ip_address: ''
-  link_status: down (Link not connected)
-  mtu: '1500'
-  output_errors: '0'
-  output_packets: '6018158'
-  speed: auto-speed
+-   address: 00de.fb01.c9bc
+    admin_state: down
+    bandwidth: 1000000 Kbit
+    bia: ''
+    delay: 10 usec
+    description: ''
+    duplex: ''
+    encapsulation: ''
+    hardware_type: EtherSVI
+    interface: Vlan1
+    ip_address: ''
+    link_status: down (Administratively down)
+    mtu: '1500'
+    speed: ''
+-   address: 00de.fb01.c921
+    admin_state: up
+    bandwidth: 1000000 Kbit
+    bia: ''
+    delay: 10 usec
+    description: ''
+    duplex: ''
+    encapsulation: ''
+    hardware_type: EtherSVI
+    interface: Vlan330
+    ip_address: 192.168.1.3/24
+    link_status: up
+    mtu: '1500'
+    speed: ''
+-   address: 00de.fb01.c933
+    admin_state: up
+    bandwidth: 1000000 Kbit
+    bia: ''
+    delay: 10 usec
+    description: ''
+    duplex: ''
+    encapsulation: ''
+    hardware_type: EtherSVI
+    interface: Vlan336
+    ip_address: 192.168.2.3/24
+    link_status: up
+    mtu: '1500'
+    speed: ''
+-   address: 00de.fb01.c9ab
+    admin_state: up
+    bandwidth: 1000000 Kbit
+    bia: ''
+    delay: 10 usec
+    description: ''
+    duplex: ''
+    encapsulation: ''
+    hardware_type: EtherSVI
+    interface: Vlan339
+    ip_address: 192.168.3.3/24
+    link_status: up
+    mtu: '1500'
+    speed: ''
+-   address: 00de.fb01.c9ef
+    admin_state: up
+    bandwidth: 1000000 Kbit
+    bia: ''
+    delay: 10 usec
+    description: ''
+    duplex: ''
+    encapsulation: ''
+    hardware_type: EtherSVI
+    interface: Vlan300
+    ip_address: 192.168.24.1/24
+    link_status: up
+    mtu: '1500'
+    speed: ''
+-   address: 0000.d200.0000
+    admin_state: ''
+    bandwidth: 23 Kbit
+    bia: 0000.d200.0000
+    delay: 10 usec
+    description: ''
+    duplex: auto-duplex
+    encapsulation: ARPA
+    hardware_type: 10/100/1000 Ethernet
+    interface: Ethernet106/1/1
+    ip_address: ''
+    link_status: down (Link not connected)
+    mtu: '1500'
+    speed: auto-speed

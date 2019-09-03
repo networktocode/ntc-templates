@@ -6,7 +6,7 @@ parsed_sample:
   deployed: 'Y'
   trunkid: '11'
   primaryinterface: '1/13'
-  portlist: 'e 1/13 e 2/13'
+  portlist: 'e 1/13 e 2/13          '
   portlistcont: ''
 
 - lagnameshort: 'CLMAMOFW-FLTNHT   '
@@ -14,7 +14,7 @@ parsed_sample:
   deployed: 'Y'
   trunkid: '7'
   primaryinterface: '4/2'
-  portlist: 'e 3/2 e 4/2'
+  portlist: 'e 3/2 e 4/2            '
   portlistcont: ''
 
 - lagnameshort: 'LAG5              '
@@ -22,7 +22,7 @@ parsed_sample:
   deployed: 'Y'
   trunkid: '5'
   primaryinterface: '3/3'
-  portlist: 'e 3/3 to 3/4'
+  portlist: 'e 3/3 to 3/4           '
   portlistcont: ''
 
 - lagnameshort: 'LAG6              '
@@ -30,7 +30,7 @@ parsed_sample:
   deployed: 'Y'
   trunkid: '6'
   primaryinterface: '4/3'
-  portlist: 'e 4/3 to 4/4'
+  portlist: 'e 4/3 to 4/4           '
   portlistcont: ''
 
 - lagnameshort: 'MLX-1a            '
@@ -38,7 +38,7 @@ parsed_sample:
   deployed: 'Y'
   trunkid: '4'
   primaryinterface: '2/2'
-  portlist: 'e 2/2'
+  portlist: 'e 2/2                  '
   portlistcont: ''
 
 - lagnameshort: 'MLX-CLMAMOXE      '
@@ -46,7 +46,7 @@ parsed_sample:
   deployed: 'Y'
   trunkid: '3'
   primaryinterface: '2/1'
-  portlist: 'e 2/1'
+  portlist: 'e 2/1                  '
   portlistcont: ''
 
 - lagnameshort: 'Switch1e.clmamofw '
@@ -54,7 +54,7 @@ parsed_sample:
   deployed: 'Y'
   trunkid: '10'
   primaryinterface: '1/5'
-  portlist: 'e 1/5 e 2/21'
+  portlist: 'e 1/5 e 2/21           '
   portlistcont: ''
 
 - lagnameshort: 'fw1-inside        '
@@ -62,7 +62,7 @@ parsed_sample:
   deployed: 'Y'
   trunkid: '12'
   primaryinterface: '1/24'
-  portlist: 'e 1/24 e 2/24'
+  portlist: 'e 1/24 e 2/24          '
   portlistcont: ''
 
 - lagnameshort: 'fw1-outside       '
@@ -70,7 +70,7 @@ parsed_sample:
   deployed: 'Y'
   trunkid: '13'
   primaryinterface: '1/10'
-  portlist: 'e 1/10 e 2/10'
+  portlist: 'e 1/10 e 2/10          '
   portlistcont: ''
 
 - lagnameshort: 'speedtest         '
@@ -78,7 +78,7 @@ parsed_sample:
   deployed: 'Y'
   trunkid: '9'
   primaryinterface: '2/23'
-  portlist: 'e 1/11 e 2/23'
+  portlist: 'e 1/11 e 2/23          '
   portlistcont: ''
 
 - lagnameshort: 'switch1c-MLX-FW   '
@@ -86,7 +86,7 @@ parsed_sample:
   deployed: 'Y'
   trunkid: '2'
   primaryinterface: '1/1'
-  portlist: 'e 1/1'
+  portlist: 'e 1/1                  '
   portlistcont: ''
 
 - lagnameshort: 'videouplink       '
@@ -95,4 +95,5 @@ parsed_sample:
   trunkid: '8'
   primaryinterface: '2/15'
   portlist: 'e 1/15 to 1/18 e 2/15 t'
-  portlistcont: 'o 2/18'
+  portlistcont: 'o 2/18      '
+

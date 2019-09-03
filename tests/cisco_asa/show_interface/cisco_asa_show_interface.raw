@@ -86,26 +86,3 @@ Interface Management0/0 "mgmt", is up, line protocol is up
       5 minute output rate 0 pkts/sec,  11 bytes/sec
       5 minute drop rate, 0 pkts/sec
         Management-only interface. Blocked 0 through-the-device packets
-Interface DMZ "DMZ", is up, line protocol is up
-        Description: DMZ (Vl3)
-        MAC address fa16.3eb0.c3d3, MTU 1500
-        IP address 10.6.2.1, subnet mask 255.255.255.0
-  Traffic Statistics for "DMZ":
-        10797302304 packets input, 7672861881962 bytes
-        4822409435 packets output, 1511083097851 bytes
-        868027 packets dropped
-Interface outside "outside-3", is up, line protocol is up
-        Description: outside(Vl2)
-        MAC address fa16.3eb0.c3d3, MTU 1500
-        IP address 10.12.16.237, subnet mask 255.255.255.248
-  Traffic Statistics for "outside-3":
-        668040831 packets input, 193650939031 bytes
-        700470696 packets output, 316092320235 bytes
-        26397124 packets dropped
-Interface inside "inside", is up, line protocol is up
-        MAC address fa16.3eb0.c3d3, MTU 1500
-        IP address 10.6.10.1, subnet mask 255.255.255.0
-  Traffic Statistics for "inside":
-        7645054611 packets input, 2415587779568 bytes
-        4906203211 packets output, 778812612541 bytes
-        32105760 packets dropped

@@ -26,7 +26,7 @@ if __name__ == "__main__":
        module_path='/home/travis/build/networktocode/ntc-templates/ntc-ansible/library/')
 
     results = runner.run()
-    print(results)
+    print results
     tests = results['contacted']['localhost']['tests']
 
     responses = []
@@ -49,12 +49,12 @@ if __name__ == "__main__":
 
         responses.append(results)
 
-    # print(json.dumps(responses, indent=4))
+    # print json.dumps(responses, indent=4)
     with_parsed = []
-    # print(json.dumps(responses, indent=4))
+    # print json.dumps(responses, indent=4)
     for rsp in responses:
-        # print(json.dumps(rsp, indent=4))
-        # print(rsp['contacted']['localhost']['invocation']['module_args'])
+        # print json.dumps(rsp, indent=4)
+        # print rsp['contacted']['localhost']['invocation']['module_args']
         args = rsp['contacted']['localhost']['invocation']['module_args']
         split = args.split(' ')
         for each in split:
@@ -69,26 +69,26 @@ if __name__ == "__main__":
                     host_list=HOSTS
                 )
                 results = runner.run()
-                # print(json.dumps(results, indent=4))
+                # print json.dumps(results, indent=4)
                 try:
                     results['response'] = rsp['contacted']['localhost']['response']
                 except KeyError:
-                    print('FAILED')
-                    print(each)
-                    print(rsp)
+                    print 'FAILED'
+                    print each
+                    print rsp
                     sys.exit(1)
 
-                # print(rsp.get('response'))
+                # print rsp.get('response')
                 with_parsed.append(results)
 
-    #    print(json.dumps(with_parsed, indent=4))
+    #    print json.dumps(with_parsed, indent=4)
 
     failed = False
 
     for each in with_parsed:
-        print('****')
-        print(each)
-        print('****')
+        print '****'
+        print each
+        print '****'
         text = each['contacted']['localhost']['invocation']['module_args']
         command = text.split('/')[-1].split('.')[0]
         parsed_sample = each['contacted']['localhost']['ansible_facts']['parsed_sample']
@@ -96,21 +96,21 @@ if __name__ == "__main__":
 
         rc, msg = compare(result, parsed_sample)
 
-        print(command)
+        print command
         if rc != 0:
-            print('----> failed')
-            print('msg:')
-            print(msg)
-            print('*' * 100)
-            print('parsed (from parsed file): ')
-            print(parsed_sample)
-            print('*' * 100)
-            print('result (from ntc_show_command): ')
-            print(result)
+            print '----> failed'
+            print 'msg:'
+            print msg
+            print '*' * 100
+            print 'parsed (from parsed file): '
+            print parsed_sample
+            print '*' * 100
+            print 'result (from ntc_show_command): '
+            print result
             failed = True
         else:
-            print('----> passed')
-        print('=' * 50)
+            print '----> passed'
+        print '=' * 50
 
     if failed:
         sys.exit(1)

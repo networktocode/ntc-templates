@@ -1,57 +1,45 @@
 ---
 parsed_sample:
 
-- address: 5087.89a1.d8d5
-  admin_state: down
-  bandwidth: 1000000 Kbit
-  bia: ''
-  delay: 10 usec
-  description: ''
-  duplex: ''
-  encapsulation: ARPA
-  hardware_type: EtherSVI
-  input_errors: ''
-  input_packets: ''
-  interface: Vlan20
-  ip_address: 10.1.20.3/24
-  link_status: down (VLAN/BD is down)
-  mtu: '1500'
-  output_errors: ''
-  output_packets: ''
-  speed: ''
-- address: 5087.89a1.d8ce
-  admin_state: up
-  bandwidth: 100000 Kbit
-  bia: 5087.89a1.d8ce
-  delay: 10 usec
-  description: out of band mgmt interface
-  duplex: full-duplex
-  encapsulation: ARPA
-  hardware_type: GigabitEthernet
-  input_errors: ''
-  input_packets: ''
-  interface: mgmt0
-  ip_address: 10.1.100.21/24
-  link_status: up
-  mtu: '1500'
-  output_errors: ''
-  output_packets: ''
-  speed: 100 Mb/s
-- address: 5087.89a1.d8d6
-  admin_state: up
-  bandwidth: 10000000 Kbit
-  bia: 5087.89a1.d8d6
-  delay: 10 usec
-  description: ''
-  duplex: full-duplex
-  encapsulation: ARPA
-  hardware_type: 1000/10000 Ethernet
-  input_errors: '0'
-  input_packets: '68448'
-  interface: Ethernet1/1
-  ip_address: ''
-  link_status: up
-  mtu: '1500'
-  output_errors: '0'
-  output_packets: '754962'
-  speed: 10 Gb/s
+-   address: 5087.89a1.d8d5
+    admin_state: down
+    bandwidth: 1000000 Kbit
+    bia: ''
+    delay: 10 usec
+    description: ''
+    duplex: ''
+    encapsulation: ARPA
+    hardware_type: EtherSVI
+    interface: Vlan20
+    ip_address: 10.1.20.3/24
+    link_status: down (VLAN/BD is down)
+    mtu: '1500'
+    speed: ''
+-   address: 5087.89a1.d8ce
+    admin_state: up
+    bandwidth: 100000 Kbit
+    bia: 5087.89a1.d8ce
+    delay: 10 usec
+    description: out of band mgmt interface
+    duplex: full-duplex
+    encapsulation: ARPA
+    hardware_type: GigabitEthernet
+    interface: mgmt0
+    ip_address: 10.1.100.21/24
+    link_status: up
+    mtu: '1500'
+    speed: 100 Mb/s
+-   address: 5087.89a1.d8d6
+    admin_state: up
+    bandwidth: 10000000 Kbit
+    bia: 5087.89a1.d8d6
+    delay: 10 usec
+    description: ''
+    duplex: full-duplex
+    encapsulation: ARPA
+    hardware_type: 1000/10000 Ethernet
+    interface: Ethernet1/1
+    ip_address: ''
+    link_status: up
+    mtu: '1500'
+    speed: 10 Gb/s

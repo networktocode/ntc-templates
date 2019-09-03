@@ -1,7 +1,7 @@
 Standard IP access list 99
     10 permit 172.16.191.199
     20 deny   any log
-    30 permit 10.0.10.0, wildcard bits 0.255.0.255 (20 matches)
+    30 permit 10.0.10.0, wildcard bits 0.255.0.255
 Standard IP access list stdacl
     10 permit 10.1.1.1
 Extended IP access list test
@@ -11,12 +11,6 @@ Extended IP access list 101
     30 permit ahp any any log-input
     40 permit ahp any any log-input time-range test (active)
     50 permit ip any host 10.1.10.11 log time-range test2 (inactive)
-    60 permit udp any range 16384 32767 10.1.1.0 0.0.0.255 range 16384 32767
-    70 permit udp any eq snmp bootpc 10.1.0.0 0.0.0.255
-    80 permit tcp 10.0.0.0 0.255.255.255 eq telnet ssh http 8080 host 10.1.0.0 neq telnet ssh
-    90 permit tcp any any match-all +ack -fin log
-    100 permit tcp host 10.1.1.1 any established
-    110 permit tcp any 10.1.1.0 0.0.255.255 established psh
 Extended IP access list sample
     10 permit tcp host 10.10.37.18 host 10.10.37.17 eq bgp
     20 permit tcp host 10.10.37.18 eq bgp host 10.10.37.17

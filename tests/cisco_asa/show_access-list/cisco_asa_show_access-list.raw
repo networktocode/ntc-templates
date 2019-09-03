@@ -47,23 +47,4 @@ access-list test line 13 extended permit object svc10 host 10.21.10.5 host 10.50
   access-list test line 13 extended permit tcp host 10.21.10.5 host 10.50.20.10 range www 88 (hitcnt=0) 0xc766bdc7 
 access-list test line 14 extended permit tcp host 10.20.30.22 10.50.12.0 255.255.255.224 eq www (hitcnt=0) 0x3f0331e6 
 access-list test line 15 remark explicit-deny 
-access-list test line 16 extended deny ip any4 any (hitcnt=0) 0x60edeab9
-access-list test line 17 remark ************ Allow ICMP *************
-access-list test line 18 extended permit icmp any any time-exceeded log informational interval 300 (hitcnt=31778) 0x6c633843
-access-list test line 19 extended permit icmp any4 any4 time-exceeded log informational interval 300 (hitcnt=0) 0x19b0643c
-access-list test line 20 extended permit icmp any4 any4 unreachable log informational interval 300 (hitcnt=1902659) 0x5e72d761
-access-list test line 21 extended permit icmp any4 any4 echo log informational interval 300 (hitcnt=0) 0x2405f42c
-access-list test line 22 extended permit icmp any4 any4 echo-reply log informational interval 300 (hitcnt=572136) 0x95dca5e7
-access-list test line 23 extended permit icmp any4 169.254.148.0 255.255.0.0 echo (hitcnt=0) 0x735d2ad8
-access-list test line 24 extended permit icmp any4 169.254.148.0 255.255.0.0 echo-reply (hitcnt=0) 0x4b1cc532
-access-list test line 25 extended permit icmp any4 169.254.148.0 255.255.0.0 unreachable (hitcnt=0) 0x3111e9c0
-access-list test line 26 extended permit icmp any4 169.254.148.0 255.255.0.0 time-exceeded (hitcnt=0) 0x7a963265
-access-list test line 27 extended permit icmp any4 169.254.147.0 255.255.0.0 echo-reply (hitcnt=0) 0x07bfbf99
-access-list test line 28 extended permit icmp any4 169.254.147.0 255.255.0.0 echo (hitcnt=0) 0x99e30c47
-access-list test line 29 extended permit icmp any4 169.254.147.0 255.255.0.0 unreachable (hitcnt=0) 0x91a15afa
-access-list test line 30 extended permit icmp any4 169.254.151.0 255.255.0.0 echo-reply (hitcnt=0) 0xfb31202c
-access-list test line 31 extended permit icmp any4 169.254.147.0 255.255.0.0 time-exceeded (hitcnt=0) 0x2bc95316
-access-list test line 32 extended permit icmp any4 169.254.151.0 255.255.0.0 echo (hitcnt=0) 0x0f3edcdd
-access-list test line 33 extended permit icmp any4 169.254.151.0 255.255.0.0 unreachable (hitcnt=0) 0x7887741b
-access-list test line 34 extended permit icmp any4 169.254.151.0 255.255.0.0 time-exceeded (hitcnt=0) 0x480bef5c
-access-list test line 35 extended deny icmp any any (hitcnt=3) 0xff7fd0ca
+access-list test line 16 extended deny ip any4 any (hitcnt=0) 0x60edeab9 

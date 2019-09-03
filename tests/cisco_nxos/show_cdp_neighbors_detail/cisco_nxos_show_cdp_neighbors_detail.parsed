@@ -9,8 +9,6 @@ parsed_sample:
     sysname: ''
     version: Cisco IOS Software, C3750 Software (C3750-IPBASEK9-M), Version 12.2(44)SE2,
         RELEASE SOFTWARE (fc2)
-    interface_ip: '10.1.100.1'
-    capabilities: 'Router Switch IGMP Filtering'
 -   dest_host: dc-lf03(SAL19069XXX)
     local_port: Ethernet1/1
     mgmt_ip: 10.1.100.226
@@ -18,8 +16,6 @@ parsed_sample:
     remote_port: Ethernet1/1
     sysname: dc-lf03
     version: Cisco Nexus Operating System (NX-OS) Software, Version 7.0(3)I5(1)
-    interface_ip: '10.1.100.226'
-    capabilities: 'Router Switch IGMP Filtering Supports-STP-Dispute'
 -   dest_host: dc-lf03(SAL1906XXXX)
     local_port: Ethernet1/3
     mgmt_ip: 10.1.100.226
@@ -27,8 +23,6 @@ parsed_sample:
     remote_port: Ethernet1/3
     sysname: dc-lf03
     version: Cisco Nexus Operating System (NX-OS) Software, Version 7.0(3)I5(1)
-    interface_ip: '10.1.100.226'
-    capabilities: 'Router Switch IGMP Filtering Supports-STP-Dispute'
 -   dest_host: dc-sp01(SAL19069XXX)
     local_port: Ethernet1/49
     mgmt_ip: 10.1.100.222
@@ -36,8 +30,6 @@ parsed_sample:
     remote_port: Ethernet1/52
     sysname: dc-sp01
     version: Cisco Nexus Operating System (NX-OS) Software, Version 7.0(3)I2(2d)
-    interface_ip: '10.1.1.1'
-    capabilities: 'Router Switch IGMP Filtering Supports-STP-Dispute'
 -   dest_host: dc-sp02(SAL19069XXX)
     local_port: Ethernet1/50
     mgmt_ip: 10.1.100.223
@@ -45,5 +37,3 @@ parsed_sample:
     remote_port: Ethernet1/52
     sysname: dc-sp02
     version: Cisco Nexus Operating System (NX-OS) Software, Version 7.0(3)I2(2d)
-    interface_ip: '10.1.1.9'
-    capabilities: 'Router Switch IGMP Filtering Supports-STP-Dispute'
