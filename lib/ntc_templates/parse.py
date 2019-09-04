@@ -4,7 +4,6 @@ try:
     from textfsm import clitable
 except ImportError:
     import clitable
-    import clitable
 
 
 def _get_template_dir():
