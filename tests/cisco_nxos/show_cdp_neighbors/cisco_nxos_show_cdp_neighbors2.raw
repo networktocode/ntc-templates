@@ -1,0 +1,19 @@
+Capability Codes: R - Router, T - Trans-Bridge, B - Source-Route-Bridge
+                 S - Switch, H - Host, I - IGMP, r - Repeater,
+                 V - VoIP-Phone, D - Remotely-Managed-Device,
+                 s - Supports-STP-Dispute
+
+
+Device-ID             Local Intrfce Hldtme Capability  Platform         Port ID
+my-dc1-mgt-sw1(FOC213230KP)
+                   mgmt0          138    R S I s   N3K-C3172PQ-XL     Eth1/48       
+lx-dc1-server01.mynetwork.com
+                   Eth1/1/1       109    H         Linux              eth9          
+lx-dc1-server02.mynetwork.com
+                   Eth1/1/2       106    H         Linux              eth9          
+lx-dc1-server03.mynetwork.com
+                   Eth1/1/3       91     H         Linux              eth9          
+lx-dc1-server04.mynetwork.com
+                   Eth1/1/4       112    H         Linux              eth9          
+lx-dc1-server05.mynetwork.com
+                   Eth1/2/1       100    H         Linux              eth9

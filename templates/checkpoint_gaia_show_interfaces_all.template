@@ -1,0 +1,31 @@
+Value INTERFACE (\S+)
+Value STATE (\w+)
+Value MAC (.*)
+Value TYPE (\S+)
+Value LINK_STATE (.*)
+Value MTU (\d+)
+Value AUTONEG (.*)
+Value SPEED (.*)
+Value COMMENT (\S.*)
+Value IPV4_ADDRESS ((?:[0-9]{1,3}\.){3}[0-9]{1,3}(/\d{1,2})?|\w+)
+Value IPV6_ADDRESS ([0-9a-f:]*)
+Value IPV6_LL_ADDRESS ([0-9a-f:]*)
+Value IPV6_LL_MASK (\d+)
+
+
+Start
+  ^Interface\s${INTERFACE}
+  ^\s+state\s${STATE}
+  ^\s+mac-addr\s${MAC}
+  ^\s+type\s${TYPE}
+  ^\s+link-state\s${LINK_STATE}
+  ^\s+mtu\s${MTU}
+  ^\s+auto-negotiation\s${AUTONEG}
+  ^\s+speed\s${SPEED}
+  # sometimes the comment is enclosed in braces
+  ^\s+comments\s${COMMENT}\s*$$
+  ^\s+ipv4-address\s${IPV4_ADDRESS}\s*$$
+  ^\s+ipv6-address\s${IPV6_ADDRESS}\s*$$
+  ^\s+ipv6-local-link-address\s${IPV6_LL_ADDRESS}/${IPV6_LL_MASK}
+  ^Statistics: -> Record
+

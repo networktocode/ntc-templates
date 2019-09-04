@@ -24,6 +24,7 @@ Value FIVEMIN_OUT_RATE (\d+)
 Value FIVEMIN_DROP_RATE (\d+)
 
 Start
+  ^Interface.* -> Continue.Record
   ^.*Interface ${INTERFACE} "${INTERFACE_ZONE}", is ${LINK_STATUS}.*protocol is ${PROTOCOL_STATUS}
   ^\s+Hardware is ${HARDWARE_TYPE} -> Continue
   ^.*BW ${BANDWIDTH}.*DLY ${DELAY}
@@ -36,4 +37,4 @@ Start
   ^.*1 minute drop rate, ${ONEMIN_DROP_RATE}
   ^.*5 minute input rate ${FIVEMIN_IN_PPS} pkts/sec,\s+${FIVEMIN_IN_RATE} bytes/sec
   ^.*5 minute output rate ${FIVEMIN_OUT_PPS} pkts/sec,\s+${FIVEMIN_OUT_RATE} bytes/sec
-  ^.*5 minute drop rate, ${FIVEMIN_DROP_RATE} -> Record
+  ^.*5 minute drop rate, ${FIVEMIN_DROP_RATE}

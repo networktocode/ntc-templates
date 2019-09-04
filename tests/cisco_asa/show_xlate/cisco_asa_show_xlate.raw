@@ -1,0 +1,16 @@
+5 in use, 5 most used
+Flags: D - DNS, i - dynamic, r - portmap, s - static, I - identity, T - twice
+e - extended
+NAT from any:10.90.67.2 to any:10.9.1.0/24
+flags idle 277:05:26 timeout 0:00:00
+NAT from any:10.1.1.0/24 to any:172.16.1.0/24
+flags idle 277:05:26 timeout 0:00:00
+NAT from any:10.90.67.2 to any:10.86.94.0
+flags idle 277:05:26 timeout 0:00:00
+NAT from any:10.9.0.9, 10.9.0.10/31, 10.9.0.12/30,
+10.9.0.16/28, 10.9.0.32/29, 10.9.0.40/30,
+10.9.0.44/31 to any:0.0.0.0
+flags idle 277:05:26 timeout 0:00:00
+NAT from any:10.1.1.0/24 to any:172.16.1.0/24
+flags idle 277:05:14 timeout 0:00:00
+NAT from inside:192.168.1.150 to outside:172.18.254.252 flags s idle 0:01:37 timeout 0:00:00
