@@ -1,0 +1,14 @@
+Value INTERFACE (\S+)
+Value IP (\S+)
+Value MAC ([0-9a-fA-F:]+)
+Value PORT (\S+)
+Value STATUS (\S+)
+Value TTL (\d+)
+
+Start
+  ^\s*--- -> Start_record
+
+Start_record
+  ^${INTERFACE}\s+${IP}\s+${MAC}\s+${PORT}\s+${STATUS}\s+${TTL} -> Record
+  ^\s*$$
+  ^. -> Error

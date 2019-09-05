@@ -1,0 +1,37 @@
+Sysauthcontrol             Disabled
+Dot1x Protocol Version            2
+Critical Recovery Delay         100
+Critical EAPOL             Disabled
+
+Dot1x Info for Ethernet1/0
+-----------------------------------
+PAE                       = AUTHENTICATOR
+PortControl               = AUTO
+ControlDirection          = Both
+HostMode                  = SINGLE_HOST
+ReAuthentication          = Disabled
+QuietPeriod               = 60
+ServerTimeout             = 30
+SuppTimeout               = 30
+ReAuthPeriod              = 3600 (Locally configured)
+ReAuthMax                 = 2
+MaxReq                    = 2
+TxPeriod                  = 30
+RateLimitPeriod           = 0
+
+Dot1x Info for Ethernet1/2
+-----------------------------------
+
+PAE                       = AUTHENTICATOR
+PortControl               = AUTO
+ControlDirection          = Both
+HostMode                  = SINGLE_HOST
+ReAuthentication          = Disabled
+QuietPeriod               = 60
+ServerTimeout             = 30
+SuppTimeout               = 30
+ReAuthPeriod              = 3600 (Locally configured)
+ReAuthMax                 = 2
+MaxReq                    = 2
+TxPeriod                  = 30
+RateLimitPeriod           = 0

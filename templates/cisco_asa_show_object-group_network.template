@@ -10,7 +10,7 @@ Value GRP_OBJECT (\S+)
 Start
   ^object-group -> Continue.Clearall
   ^object-group\s+network\s+${NAME}\s*
-  ^\s+description:\s+${DESC}\s*
+  ^\s+description:?\s+${DESC}\s*
   ^\s+network-object\s+${TYPE}\s+${HOST}\s* -> Record
   ^\s+network-object\s+${TYPE}\s+${NET_OBJECT}\s* -> Record
   ^\s+${TYPE}-object\s+${NETWORK}\s+${MASK}\s* -> Record
