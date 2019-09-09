@@ -1,12 +1,13 @@
 Value MAC ([0-9a-fA-F]{4}\.[0-9a-fA-F]{4}\.[0-9a-fA-F]{4})
 Value PORT (\S+)
 Value VLAN (\d+)
-Value TYPE (\d+)
+Value TYPE (\S+)
 
 Start
   ^\s*--- -> Start_record
 
 Start_record
-  ^\s+${VLAN}\s+${MAC}\s+${TYPE}\s+${PORT} -> Record
+  ^\s*${VLAN}\s+${MAC}\s+${TYPE}\s+${PORT} -> Record
+  ^\s*Total.*
   ^\s*$$
   ^. -> Error
