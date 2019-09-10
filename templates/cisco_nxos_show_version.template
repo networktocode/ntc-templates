@@ -9,5 +9,6 @@ Start
   ^\s+(NXOS|kickstart)\s+image\s+file\s+is:\s+${BOOT_IMAGE}\s*$$
   ^\s+cisco\s+${PLATFORM}\s+[cC]hassis
   ^\s+cisco\s+Nexus\d+\s+${PLATFORM}
+  ^\s+cisco\s+.+-${PLATFORM}\s*
   ^Kernel\s+uptime\s+is\s+${UPTIME}
   ^\s+Reason:\s${LAST_REBOOT_REASON} -> Record
