@@ -6,7 +6,7 @@ Start
   ^\s*-- -> Start_record
 
 Start_record
-  ^\?\s+\(${IP}\)\s+at\s+${MAC}\s+(\[\S+\]\s*)?on\s+${INTERFACE} -> Record
+  ^\?\s+\(${IP}\)\s+at\s+${MAC}\s+(\[\S+\]\s*)?([A-Z]+\s*)?on\s+${INTERFACE} -> Record
   ^\s*--.*
   ^\s*$$
   ^. -> Error
