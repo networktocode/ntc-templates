@@ -24,3 +24,18 @@ Start
   ^Interface\s*\.+\s*${INTERFACE}\s*$$
   ^\s+Signal\s+to\s+Noise\s+Ratio\s*\.+\s*${SIGNAL_TO_NOISE_RATIO}\s+dB\s*$$
   ^VLAN\s*\.+\s*${VLAN}\s*$$
+  ^.+\.+
+  ^\s+AP.+\(.+\)
+  ^Client\s+Capabilities:
+  ^Client\s+Wifi\s+Direct Capabilities:
+  ^Fast\s+BSS\s+Transition\s+Details:
+  ^Client\s+Statistics:
+  ^Client\s+Rate\s+Limiting\s+Statistics:
+  ^Nearby\s+AP\s+Statistics:
+  ^DNS\s+Server\s+details:
+  ^Assisted\s+Roaming\s+Prediction\s+List\s+details:
+  ^\s*Client\s+Dhcp\s+Required:
+  ^Allowed\s+\(URL\)IP\s+Addresses
+  ^-+
+  ^\s*$$
+  ^. -> Error
