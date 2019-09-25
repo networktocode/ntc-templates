@@ -7,7 +7,7 @@ Value VID (\S+)
 Value SERIAL_NUMBER (\S+)
 
 Start
-  ^Burned\-in\sMAC\sAddress\.*\s${MAC}s*$$
-  ^Maximum number of APs supported\.*\s${MAX_AP_COUNT}s*$$
-  ^NAME:\s\"${TYPE}\"\s+,\sDESCR:\s${DESCR}s*$$
+  ^Burned\-in\sMAC\sAddress\.*\s${MAC}\s*$$
+  ^Maximum number of APs supported\.*\s${MAX_AP_COUNT}\s*$$
+  ^NAME:\s\"${TYPE}\"\s+,\sDESCR:\s${DESCR}\s*$$
   ^PID:\s${PID},\s+VID:\s${VID},\s+SN:\s${SERIAL_NUMBER}

@@ -5,7 +5,7 @@ Value SERVER (([\d1-9]+\.?){4})
 Value STATUS (\w+ \w+)
 
 Start
-  ^\s+NTP Polling Interval\.*\s+${PULL_INTERVAL}s*$$
+  ^\s+NTP Polling Interval\.*\s+${PULL_INTERVAL}\s*$$
   ^\s+Index     NTP Key Index                  NTP Server -> NTP_Servers
 
 NTP_Servers

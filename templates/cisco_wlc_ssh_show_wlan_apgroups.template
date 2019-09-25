@@ -9,18 +9,18 @@ Value List AP_LIST (\S+)
 
 
 Start
-  ^Site Name\.*\s${GROUP_NAME}s*$$ -> Group
+  ^Site Name\.*\s${GROUP_NAME}\s*$$ -> Group
   ^\s${WLAN_ID}\s+${INTERFACE}\s+\w+\s+${RADIO_POLICY}\s+\w+.*
   ^${AP_LIST}\s+\d\s+\S+\s+.*
   ^Fabric Flex Acl Template Name -> Record
-  ^Site Name\.*\s${GROUP_NAME}s*$$ -> Group
+  ^Site Name\.*\s${GROUP_NAME}\s*$$ -> Group
   ^\s${WLAN_ID}\s+${INTERFACE}\s+\w+\s+${RADIO_POLICY}\s+\w+.*
   ^${AP_LIST}\s+\d\s+\S+\s+.*
   ^Fabric Flex Acl Template Name -> Record
 
 
 Group
-  ^Site Description\.*\s${DESC}s*$$ 
+  ^Site Description\.*\s${DESC}\s*$$ 
   ^2\.4 GHz band\.*\s${RF_PROFILE_24GHZ} 
   ^5 GHz band\.*\s${RF_PROFILE_5GHZ} -> Start
   
