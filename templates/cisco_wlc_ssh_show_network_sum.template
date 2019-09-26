@@ -1,0 +1,97 @@
+Value RF_NET_NAME (.+?)
+Value DNS_SERVER (([\d1-9]+\.?){4})
+Value WEB_MODE (\w+)
+Value SEC_WEB_MODE (\w+)
+Value SEC_WEB_CIPHER_HIGH (\w+)
+Value SEC_WEB_SSP (\w+)
+Value WEB_CSRF_CHECK (\w+)
+Value OCSP (\w+)
+Value SSH (\w+)
+Value SSH_CIPHER_HIGH (\w+)
+Value TELNET (\w+)
+Value MULTICAST_FORWARD (\w+)
+Value BROADCAST_FORWARD (\w+)
+Value ARP_FORWARD (\w+)
+Value MULITCAST_ADDR (([\d1-9]+\.?){4})
+Value IGMP_SNOOP (\w+)
+Value IGMP_TIMEOUT (\d+ \w+)
+Value IGMP_QUERY_TIME (\d+ \w+)
+Value MLD_SNOOP (\w+)
+Value MLD_TIMEOUT (\d+ \w+)
+Value MLD_QUERY_TIME (\d+ \w+)
+Value USER_IDLE_TIMEOUT (\d+ \w+)
+Value ARP_IDLE_TIMEOUT (\d+ \w+)
+Value AP_JOIN_PRIORITY (\w+)
+Value MGT_VIA_WIRELESS (\w+)
+Value MGT_VIA_DYN_INT (\w+)
+Value BRIDGE_MAC_FILTER (\w+)
+Value BRIDGE_SEC_MODE (\w+)
+Value MESH_DFS (\w+)
+Value MESH_BACKHAUL_RRM (\w+)
+Value AP_FALLBACK (\w+)
+Value AP_EASYADMIN (\w+)
+Value AP_VIP (([\d1-9]+\.?){4})
+Value WEB_AUTH_CMCC (\w+)
+Value WEB_AUTH_REDIRECT_PORTS (\d+)
+Value WEB_AUTH_PROXY (\w+)
+Value WEB_AUTH_CAPTIVE_BYPASS (\w+)
+Value WEB_AUTH_SEC_WEB (\w+)
+Value WEB_AUTH_SEC_WEB_CIPHER (\w+)
+Value WEB_AUTH_SEC_WEB_SSLV3 (\w+)
+Value WEB_AUTH_SEC_REDIRCT (\w+)
+Value FAST_SSID (\w+)
+Value AP_DISC (\w+)
+Value IP_MAC_BIND (\w+)
+Value CCX_LITE_STAT (\w+)
+Value NET_PROFILE (.+?)
+
+
+
+
+Start
+  ^RF-Network Name\.*\s${RF_NET_NAME}\s*$$
+  ^DNS Server IP\.*\s${DNS_SERVER}\s*$$
+  ^Web Mode\.*\s${WEB_MODE}\s*$$
+  ^Secure Web Mode\.*\s${SEC_WEB_MODE}\s*$$
+  ^Secure Web Mode Cipher-Option High\.*\s${SEC_WEB_CIPHER_HIGH}\s*$$
+  ^Secure Web Mode SSL Protocol\.*\s${SEC_WEB_SSP}\s*$$
+  ^Web CSRF check\.*\s${WEB_CSRF_CHECK}\s*$$
+  ^OCSP\.*\s${OCSP}\s*$$
+  ^Secure Shell \(ssh\)\.*\s${SSH}\s*$$
+  ^Secure Shell \(ssh\) Cipher-Option High\.*\s${SSH_CIPHER_HIGH}\s*$$
+  ^Telnet\.*\s${TELNET}\s*$$
+  ^Ethernet Multicast Forwarding\.*\s${MULTICAST_FORWARD}\s*$$
+  ^Ethernet Broadcast Forwarding\.*\s${BROADCAST_FORWARD}\s*$$
+  ^ARP Unicast Forwarding Mode  \.*\s${ARP_FORWARD}\s*$$
+  ^IPv4 AP Multicast/Broadcast Mode\.*\sMulticast   Address : ${MULITCAST_ADDR}\s*$$
+  ^IGMP snooping\.*\s${IGMP_SNOOP}\s*$$
+  ^IGMP timeout\.*\s${IGMP_TIMEOUT}\s*$$
+  ^IGMP Query Interval\.*\s${IGMP_QUERY_TIME}\s*$$
+  ^MLD snooping\.*\s${MLD_SNOOP}\s*$$
+  ^MLD timeout\.*\s${MLD_TIMEOUT}\s*$$
+  ^MLD query interval\.*\s${MLD_QUERY_TIME}\s*$$
+  ^User Idle Timeout\.*\s${USER_IDLE_TIMEOUT}\s*$$
+  ^ARP Idle Timeout\.*\s${ARP_IDLE_TIMEOUT}\s*$$
+  ^AP Join Priority\.*\s${AP_JOIN_PRIORITY}\s*$$
+  ^Mgmt Via Wireless Interface\.*\s${MGT_VIA_WIRELESS}\s*$$
+  ^Mgmt Via Dynamic Interface\.*\s${MGT_VIA_DYN_INT}\s*$$
+  ^Bridge MAC filter Config\.*\s${BRIDGE_MAC_FILTER}\s*$$
+  ^Bridge Security Mode\.*\s${BRIDGE_SEC_MODE}\s*$$
+  ^Mesh Full Sector DFS\.*\s${MESH_DFS}\s*$$
+  ^Mesh Backhaul RRM\.*\s${MESH_BACKHAUL_RRM}\s*$$
+  ^AP Fallback \.*\s${AP_FALLBACK}\s*$$
+  ^AP EasyAdmin \.*\s${AP_EASYADMIN}\s*$$
+  ^AP Virtual IP \.*\s${AP_VIP}\s*$$
+  ^Web Auth CMCC Support \.*\s${WEB_AUTH_CMCC}\s*$$
+  ^Web Auth Redirect Ports \.*\s${WEB_AUTH_REDIRECT_PORTS}\s*$$
+  ^Web Auth Proxy Redirect  \.*\s${WEB_AUTH_PROXY}\s*$$
+  ^Web Auth Captive-Bypass   \.*\s${WEB_AUTH_CAPTIVE_BYPASS}\s*$$
+  ^Web Auth Secure Web  \.*\s${WEB_AUTH_SEC_WEB}\s*$$
+  ^Web Auth Secure Web Cipher Option  \.*\s${WEB_AUTH_SEC_WEB_CIPHER}\s*$$
+  ^Web Auth Secure Web Sslv3  \.*\s${WEB_AUTH_SEC_WEB_SSLV3}\s*$$
+  ^Web Auth Secure Redirection  \.*\s${WEB_AUTH_SEC_REDIRCT}\s*$$
+  ^Fast SSID Change \.*\s${FAST_SSID}\s*$$
+  ^AP Discovery - NAT IP Only \.*\s${AP_DISC}\s*$$
+  ^IP/MAC Addr Binding Check \.*\s${IP_MAC_BIND}\s*$$
+  ^CCX-lite status \.*\s${CCX_LITE_STAT}\s*$$
+  ^Network Profile\.*\s${NET_PROFILE}\s*$$

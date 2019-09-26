@@ -1,0 +1,13 @@
+Value PROBE_REQUEST_FILTER (\w+)
+Value PROBE_FWD (\d+)
+Value PROBE_REQ_RATE_LIMITING_INTERVAL (\d+ \w+)
+Value AGGREGATE_REQ_INTERVAL (\d+ \w+)
+Value BACKOFF (\w+)
+
+
+Start
+  ^Probe request filtering\.*\s+${PROBE_REQUEST_FILTER}\s*$$
+  ^Probes fwd to controller per client per radio\.*\s+${PROBE_FWD}\s*$$
+  ^Probe request rate-limiting interval\.*\s+${PROBE_REQ_RATE_LIMITING_INTERVAL}\s*$$
+  ^Aggregate Probe request interval\.*\s+${AGGREGATE_REQ_INTERVAL}\s*$$
+  ^Increased backoff parameters for probe respon.*\s+${BACKOFF}\s*$$

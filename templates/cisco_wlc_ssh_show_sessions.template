@@ -1,0 +1,6 @@
+Value CLI_TIMEOUT (\d+)
+Value MAX_CLI_COUNT (\d+)
+
+Start
+  ^CLI Login Timeout \(minutes\)\.*\s${CLI_TIMEOUT}\s*$$
+  ^Maximum Number of CLI Sessions\.*\s${MAX_CLI_COUNT}\s*$$

@@ -1,0 +1,12 @@
+Value INTERFER_THRESH (.+?)
+Value NOISE_THRESH (.+?)
+Value UTILIZATION_THRESH (.+?)
+Value THROUGHPUT_THRESH (.+?)
+Value CLIENTS_THRESH (.+?)
+
+Start
+  ^.*Global Interference threshold\.*\s${INTERFER_THRESH}s*$$
+  ^.*Global noise threshold\.*\s${NOISE_THRESH}s*$$
+  ^.*Global RF utilization threshold\.*\s${UTILIZATION_THRESH}s*$$
+  ^.*Global throughput threshold\.*\s${THROUGHPUT_THRESH}s*$$
+  ^.*Global clients threshold\.*\s${CLIENTS_THRESH}s*$$

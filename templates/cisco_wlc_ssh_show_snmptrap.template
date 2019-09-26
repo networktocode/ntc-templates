@@ -1,0 +1,8 @@
+Value NAME (.+?)
+Value IP_ADDR (([\d1-9]+\.?){4})
+Value STATUS (\w+)
+Value IPSEC (\w+\s?\/?\s?(\w+)?)
+
+
+Start
+  ^${NAME}\s+${IP_ADDR}\s+${STATUS}\s+${IPSEC} -> Record

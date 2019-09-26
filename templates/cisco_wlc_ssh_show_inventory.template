@@ -1,0 +1,13 @@
+Value MAC (([\d1-9A-F]{2}\:?){6})
+Value MAX_AP_COUNT (\d+)
+Value TYPE (\w+)
+Value DESCR (.+?)
+Value PID (\w+\-\S+\-\S+)
+Value VID (\S+)
+Value SERIAL_NUMBER (\S+)
+
+Start
+  ^Burned\-in\sMAC\sAddress\.*\s${MAC}s*$$
+  ^Maximum number of APs supported\.*\s${MAX_AP_COUNT}s*$$
+  ^NAME:\s\"${TYPE}\"\s+,\sDESCR:\s${DESCR}s*$$
+  ^PID:\s${PID},\s+VID:\s${VID},\s+SN:\s${SERIAL_NUMBER}

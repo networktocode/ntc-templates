@@ -1,0 +1,10 @@
+Value AGG_LOAD_BALANCING (.+?)
+Value AGG_LOAD_BAL_WIN (\d+ \w+)
+Value AGG_LOAD_BAL_DEN_COUNT (\d+)
+Value AGG_LOAD_BAL_UPLINK_THRESH (\d+)
+
+Start
+  ^Aggressive Load Balancing.\.*\s${AGG_LOAD_BALANCING}\s*$$
+  ^Aggressive Load Balancing Window\.*\s${AGG_LOAD_BAL_WIN}\s*$$
+  ^Aggressive Load Balancing Denial Count\.*\s${AGG_LOAD_BAL_DEN_COUNT}
+  ^Aggressive Load Balancing Uplink Threshold\.*\s${AGG_LOAD_BAL_UPLINK_THRESH}

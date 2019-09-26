@@ -1,0 +1,97 @@
+Value AUTH_FLAG (\w+)
+Value MULTI_USER (\w+)
+Value CONFIG_SAVE (\w+)
+Value STRONG_PWD (\w+)
+Value DISASSOC (\w+)
+Value ASSOC (\w+)
+Value ENHANCED_ASSOC (\w+)
+Value DEAUTH (\w+)
+Value ENHANCED_DEAUTH (\w+)
+Value AUTH_FAIL (\w+)
+Value ASSOC_FAIL (\w+)
+Value EXCLUDED (\w+)
+Value AUTH (\w+)
+Value ENANCED_AUTH (\w+)
+Value MAX_CLIENT (\w+|\d+%)
+Value NAC_ALERT (\w+)
+Value WEBAUTHUSERLOGIN (\w+)
+Value WEBAUTHUSERLOGOUT (\w+)
+Value RFID (\w+|\d+%)
+Value AP_AUTHFAILURE (\w+)
+Value SSID_KEY_CONFLICT (\w+)
+Value AP_REGISTER (\w+)
+Value AP_INTERFACEUP (\w+)
+Value AP_MODECHANGE (\w+)
+Value NEIGH_AP (\w+)
+Value ROGUEAPDEDECTION (\w+)
+Value DECRYPT_ERROR (\w+)
+Value IDS_ATTACK (\w+)
+Value AAA_AUTH (\w+)
+Value AAA_SERVER (\w+)
+Value MFP (\w+)
+Value ROGUE (\w+)
+Value ADJACENT_CHANNEL_ROGUE (\w+)
+Value RFP_LOAD (\w+)
+Value RFP_NOISE (\w+)
+Value RFP_INTERFERENCE (\w+)
+Value RFP_COVERAGE (\w+)
+Value TX_POWER (\w+)
+Value CHANNEL (\w+)
+
+
+Start
+  ^Authentication Flag\.*\s${AUTH_FLAG}\s*$$
+  ^Multiple Users Flag\.*\s${MULTI_USER}\s*$$
+  ^configsave\.*\s${CONFIG_SAVE}\s*$$
+  ^strong-pwd check\.*\s${STRONG_PWD}\s*$$
+  ^Client Related Traps -> Client_Related
+  ^mfp\.*\s${MFP}\s*$$
+  ^rogueap\.*\s${ROGUE}\s*$$
+  ^adjchannel-rogueap\.*\s${ADJACENT_CHANNEL_ROGUE}\s*$$
+  ^Auto-RF Profiles -> RF_Profile_Related
+
+
+Client_Related
+  ^\s+802.11 Disassociation\.*\s${DISASSOC}\s*$$
+  ^\s+802.11 Association\.*\s${ASSOC}\s*$$
+  ^\s+Enhanced 802.11 Association\.*\s${ENHANCED_ASSOC}\s*$$
+  ^\s+802.11 Deauthenticate\.*\s${DEAUTH}\s*$$
+  ^\s+Enhanced 802.11 Deauthenticate\.*\s${ENHANCED_DEAUTH}\s*$$
+  ^\s+802.11 Authenticate Failure\.*\s${AUTH_FAIL}\s*$$
+  ^\s+802.11 Association Failure\.*\s${ASSOC_FAIL}\s*$$
+  ^\s+Excluded\.*\s${EXCLUDED}\s*$$
+  ^\s+Authentication\.*\s${AUTH}\s*$$
+  ^\s+Enhanced Authentication\.*\s${ENANCED_AUTH}\s*$$
+  ^\s+Max Client Warning Threshold\.*\s${MAX_CLIENT}\s*$$
+  ^\s+Nac-Alert Traps\.*\s${NAC_ALERT}\s*$$
+  ^\s+WebAuthUserLogin\.*\s${WEBAUTHUSERLOGIN}\s*$$
+  ^\s+WebAuthUserLogout\.*\s${WEBAUTHUSERLOGOUT}\s*$$
+  ^RFID Related Traps -> RFID_Related
+
+RFID_Related
+  ^\s+Max RFIDs Warning Threshold\.*\s${RFID}\s*$$
+  ^Cisco AP -> AP_Related
+
+AP_Related
+  ^\s+AuthFailure\.*\s${AP_AUTHFAILURE}\s*$$
+  ^\s+SsidKeyConflict\.*\s${SSID_KEY_CONFLICT}\s*$$
+  ^\s+Register\.*\s${AP_REGISTER}\s*$$
+  ^\s+InterfaceUp\.*\s${AP_INTERFACEUP}\s*$$
+  ^\s+modeChange\.*\s${AP_MODECHANGE}\s*$$
+  ^\s+Neighbor AP detection\.*\s${NEIGH_AP}\s*$$
+  ^\s+Rogue Ap/Client detection\.*\s${ROGUEAPDEDECTION}\s*$$
+  ^802.11 Security related traps -> Security_Related
+
+Security_Related
+  ^\s+WEP/WPA Decrypt Error\.*\s${DECRYPT_ERROR}\s*$$
+  ^\s+IDS Signature Attack\.*\s${IDS_ATTACK}\s*$$
+  ^\s+auth\.*\s${AAA_AUTH}\s*$$
+  ^\s+servers\.*\s${AAA_SERVER} -> Start
+
+RF_Profile_Related
+  ^\s+Load\.*\s${RFP_LOAD}\s*$$
+  ^\s+Noise\.*\s${RFP_NOISE}\s*$$
+  ^\s+Interference\.*\s${RFP_INTERFERENCE}\s*$$
+  ^\s+Coverage\.*\s${RFP_COVERAGE}\s*$$
+  ^\s+tx-power\.*\s${TX_POWER}\s*$$
+  ^\s+channel\.*\s${CHANNEL}\s*$$

@@ -1,0 +1,31 @@
+Value ASSIGN_MODE (\w+)
+Value UPDATE_TIME (\d+ \w+)
+Value ANCHOR_TIME (\d+)
+Value NOISE (\w+)
+Value INTERFER (\w+)
+Value LOAD (\w+)
+Value DEVICE_AWARE (\w+)
+Value CLEANAIR_DRIVEN (\w+)
+Value DCA_SENSITIVITY (\w+ \(\d+ dB\))
+Value DCA_MIN (-\d+ dBm)
+Value List DCA_CHANNELS ((\d+,?)*?)
+
+Start
+  ^\s+Channel Assignment Mode\.*\s${ASSIGN_MODE}s*$$
+  ^\s+Channel Update Interval\.*\s${UPDATE_TIME}s*$$
+  ^\s+Anchor time \(Hour of the day\)\.*\s${ANCHOR_TIME}
+  ^\s+Noise\.*\s${NOISE}s*$$
+  ^\s+Interference\.*\s${INTERFER}s*$$
+  ^\s+Load\.*\s${LOAD}s*$$
+  ^\s+Device Aware\.*\s${DEVICE_AWARE}s*$$
+  ^\s+CleanAir Event-driven RRM option\.*\s${CLEANAIR_DRIVEN}s*$$
+  ^\s+DCA Sensitivity Level:\s+\.*\s${DCA_SENSITIVITY}s*$$
+  ^\s+DCA Minimum Energy Limit\.*\s${DCA_MIN}s*$$
+  ^.*Allowed Channel List\.*\s${DCA_CHANNELS}s*$$ -> Channels
+
+Channels
+  ^\s+${DCA_CHANNELS}s*$$
+  ^.+: -> Continue.Record
+  ^\s+Unused Channel List.* -> Start
+
+

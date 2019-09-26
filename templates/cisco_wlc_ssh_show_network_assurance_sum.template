@@ -1,0 +1,14 @@
+Value SERVER_URL (.+?)
+Value WSA_SERVICE (\w+)
+Value WSA_ONCHANGE_MODE (\w+)
+Value WSA_SYNC_INTERVAL (.+?)
+Value SSID ((\w+(.?.?\w+)+))
+Value AUTH (.+?)
+
+Start
+  ^\s+Server url\.*\s${SERVER_URL}\s*$$
+  ^\s+Wsa Service\.*\s${WSA_SERVICE}\s*$$
+  ^\s+wsa Onchange Mode\.*\s${WSA_ONCHANGE_MODE}\s*$$
+  ^\s+wsa Sync Interval\.*\s${WSA_SYNC_INTERVAL}\s*$$
+  ^\s+Ssid\.*\s${SSID}\s*$$
+  ^\s+Authentication\.*\s${AUTH}\s*$$

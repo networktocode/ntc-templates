@@ -1,0 +1,13 @@
+Value MODE (\w+)
+Value MIN_RSSI (-\d+)
+Value HYSTERESIS (\w+)
+Value SCAN_THRESH (-\d+)
+Value TRANS_TIME (\d+)
+
+
+Start
+  ^\s+Config\sMode\.*\s${MODE}s*$$
+  ^\s+Minimum\sRSSI\.*\s${MIN_RSSI}s*$$
+  ^\s+Roam\sHysteresis\.*\s${HYSTERESIS}s*$$
+  ^\s+Scan\sThreshold\.*\s${SCAN_THRESH}s*$$
+  ^\s+Transition\stime\.*\s${TRANS_TIME}s*$$

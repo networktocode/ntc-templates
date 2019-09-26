@@ -1,0 +1,24 @@
+Value MODE (\w+)
+Value MODE_MESH (\w+)
+Value CHANNELS (\w+\s?\w+?)
+Value NEIGH_DISCOVER_TYPE (\w+)
+Value NEIGH_RSSI_NORM (\w+)
+Value COVERAGE_INTERVAL (\d+ \w+)
+Value LOAD_INTERVAL (\d+ \w+)
+Value MON_MEASURE_INTERVAL (\d+ \w+)
+Value NEIGH_TIMEOUT_FACTOR (\d+)
+Value REPORT_MEASURE_INTERVAL (\d+ \w+)
+
+
+
+Start
+  ^.*Monitor Mode\.*\s${MODE}s*$$
+  ^.*Monitor Mode for Mesh AP Backhaul.*\s${MODE_MESH}s*$$
+  ^.*Monitor Channels\.*\s${CHANNELS}s*$$
+  ^.*RRM Neighbor Disc\w+ Type\.*\s${NEIGH_DISCOVER_TYPE}s*$$
+  ^.*RRM Neighbor RSSI Normalization\.*\s${NEIGH_RSSI_NORM}s*$$
+  ^.*AP Coverage Interval\.*\s${COVERAGE_INTERVAL}s*$$
+  ^.*AP Load Interval\.*\s${LOAD_INTERVAL}s*$$
+  ^.*AP Monitor Measurement Interval\.*\s${MON_MEASURE_INTERVAL}s*$$
+  ^.*AP Neighbor Timeout Factor\.*\s${NEIGH_TIMEOUT_FACTOR}s*$$
+  ^.*AP Report Measurement Interval\.*\s${REPORT_MEASURE_INTERVAL}s*$$

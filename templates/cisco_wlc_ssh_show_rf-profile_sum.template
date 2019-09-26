@@ -1,0 +1,10 @@
+Value PROFILE (((?!.*Client-Density).)\S+)
+#Value PROFILE (\S+)
+Value BAND (\d\.?4? GHz)
+Value DESC ((\S+(.?\S+)+))
+Value N_ONLY (\w+)
+Value APPLIED (\w+)
+
+
+Start
+  ^${PROFILE}\s+${BAND}\s+${DESC}\s+${N_ONLY}\s+${APPLIED} -> Record

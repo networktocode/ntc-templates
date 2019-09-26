@@ -1,0 +1,21 @@
+Value CHD_MODE (\w+)
+Value VOICE_PKT_COUNT (\d+ \w+)
+Value VOICE_PKT_PERT (\d+\%)
+Value VOICE_RSSI (-\d+ dBm)
+Value DATA_PKT_COUNT (\d+ \w+)
+Value DATA_PKT_PERT (\d+\%)
+Value DATA_RSSI (-\d+ dBm)
+Value CHD_EXCEPTION (\d+ \%)
+Value CHD_MINIMUM_CLIENT (\d+ \w+)
+
+
+Start
+  ^.*Coverage Hole Detection Mode\.*\s${CHD_MODE}s*$$
+  ^.*Coverage Voice Packet Count\.*\s${VOICE_PKT_COUNT}s*$$
+  ^.*Coverage Voice Packet Percentage\.*\s${VOICE_PKT_PERT}s*$$
+  ^.*Coverage Voice RSSI Threshold\.*\s${VOICE_RSSI}s*$$
+  ^.*Coverage Data Packet Count\.*\s${DATA_PKT_COUNT}s*$$
+  ^.*Coverage Data Packet Percentage\.*\s${DATA_PKT_PERT}s*$$
+  ^.*Coverage Data RSSI Threshold\.*\s${DATA_RSSI}s*$$
+  ^.*Global coverage exception level\.*\s${CHD_EXCEPTION}s*$$
+  ^.*Global client minimum exception lev\.*\s${CHD_MINIMUM_CLIENT}s*$$

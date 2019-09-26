@@ -1,0 +1,27 @@
+Value ASSIGN_MODE (\w+)
+Value UPDATE_TIME (\d+ \w+)
+Value THRESHOLD (-\d+ dBm)
+Value NEIGHBOR_COUNT (\d APs)
+Value MIN_POWER (-?\d+ dBm)
+Value MAX_POWER (-?\d+ dBm)
+Value NOISE (\w+)
+Value INTERFER (\w+)
+Value LOAD (\w+)
+Value DEVICE_AWARE (\w+)
+Value WLAN_AWARE (\w+)
+Value MODE ((\w+(.?\w+)+))
+
+
+Start
+  ^\s+Transmit Power Assignment Mode\.*\s${ASSIGN_MODE}s*$$
+  ^\s+Transmit Power Update Interval\.*\s${UPDATE_TIME}s*$$
+  ^\s+Transmit Power Threshold\.*\s${THRESHOLD}s*$$
+  ^\s+Transmit Power Neighbor Count\.*\s${NEIGHBOR_COUNT}s*$$
+  ^\s+WLAN Aware TPC\.*\s${WLAN_AWARE}s*$$
+  ^\s+Min Transmit Power\.*\s${MIN_POWER}s*$$
+  ^\s+Max Transmit Power\.*\s${MAX_POWER}s*$$
+  ^\s+Noise\.*\s${NOISE}s*$$
+  ^\s+Interference\.*\s${INTERFER}s*$$
+  ^\s+Load\.*\s${LOAD}s*$$
+  ^\s+Device Aware\.*\s${DEVICE_AWARE}s*$$
+  ^\s+TPC Mode\.*\s${MODE}s*$$

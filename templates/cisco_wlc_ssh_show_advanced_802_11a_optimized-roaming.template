@@ -1,0 +1,11 @@
+Value OR_MODE (\w+)
+Value OR_INTERVAL (.+?)
+Value OR_THRESHOLD (.+?)
+Value OR_HYST (.+?)
+
+
+Start
+  ^.*OptimizedRoaming Mode\.*\s${OR_MODE}s*$$
+  ^.*OptimizedRoaming Reporting Interval\.*\s${OR_INTERVAL}s*$$
+  ^.*OptimizedRoaming Rate Threshold\.*\s${OR_THRESHOLD}s*$$
+  ^.*OptimizedRoaming Hysteresis\.*\s${OR_HYST}s*$$

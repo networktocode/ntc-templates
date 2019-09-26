@@ -1,0 +1,22 @@
+Value MODE (\w+)
+Value CHANNELS (\w+\s?\w+?)
+Value NEIGH_DISCOVER_TYPE (\w+)
+Value NEIGH_RSSI_NORM (\w+)
+Value COVERAGE_INTERVAL (\d+ \w+)
+Value LOAD_INTERVAL (\d+ \w+)
+Value MON_MEASURE_INTERVAL (\d+ \w+)
+Value NEIGH_TIMEOUT_FACTOR (\d+)
+Value REPORT_MEASURE_INTERVAL (\d+ \w+)
+
+
+
+Start
+  ^\s+802.11b\sMonitor\sMode\.*\s${MODE}s*$$
+  ^\s+802.11b\sMonitor\sChannels\.*\s${CHANNELS}s*$$
+  ^\s+802.11b\sRRM\sNeighbor\sDisc\w+\sType\.*\s${NEIGH_DISCOVER_TYPE}s*$$
+  ^\s+802.11b\sRRM\sNeighbor\sRSSI\sNormalization\.*\s${NEIGH_RSSI_NORM}s*$$
+  ^\s+802.11b\sAP\sCoverage\sInterval\.*\s${COVERAGE_INTERVAL}s*$$
+  ^\s+802.11b\sAP\sLoad\sInterval\.*\s${LOAD_INTERVAL}s*$$
+  ^\s+802.11b\sAP\sMonitor\sMeasurement\sInterval\.*\s${MON_MEASURE_INTERVAL}s*$$
+  ^\s+802.11b\sAP\sNeighbor\sTimeout\sFactor\.*\s${NEIGH_TIMEOUT_FACTOR}s*$$
+  ^\s+802.11b\sAP\sReport\sMeasurement\sInterval\.*\s${REPORT_MEASURE_INTERVAL}s*$$
