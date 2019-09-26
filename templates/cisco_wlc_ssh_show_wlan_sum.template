@@ -1,9 +1,0 @@
-Value WLANID (\d+)
-Value PROFILE (.+?)
-Value SSID (.+?)
-Value STATUS (Enabled|Disabled)
-Value INTERFACE (\w+(.?\w+)+)
-
-
-Start
-  ^${WLANID}\s+${PROFILE}\s/\s${SSID}\s+${STATUS}\s+${INTERFACE}\s* -> Record

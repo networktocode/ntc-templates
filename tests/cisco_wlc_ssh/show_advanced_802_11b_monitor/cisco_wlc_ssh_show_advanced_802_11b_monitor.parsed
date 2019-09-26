@@ -1,0 +1,11 @@
+---
+parsed_sample:
+- channels: Country channel
+  coverage_interval: 90 seconds
+  load_interval: 60 seconds
+  mode: enable
+  mon_measure_interval: 180 seconds
+  neigh_discover_type: Transparent
+  neigh_rssi_norm: Enabled
+  neigh_timeout_factor: '20'
+  report_measure_interval: 180 seconds
