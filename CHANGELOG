@@ -1,8 +1,14 @@
-## [1.2.0]
+## [1.2.1]
 ### Fixed for any bug fixes
-- [#455] Template files were inaccessable when installing from local directory; now works when using `pip -e`
-
 ### Added for new features
 ### Changed for changes in existing functionality
 ### Deprecated for soon-to-be removed features
 ### Removed for now removed features
+
+## [1.2.0]
+### Fixed
+- [#389] IOS-XR show interfaces: Fixed matching speed and duplex for bundle-ethernet interfaces
+- [#442] IOS-XR show version: Fixed matching `build_host` field that uses both "Build" and "Built" keywords
+- [#455][#456] Template files were inaccessable when installing from local directory; now works when using `pip -e`
+### Added
+- [#470] ASA show version: Add capturing `compiled_date` field
