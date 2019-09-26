@@ -22,4 +22,5 @@ Start
   ^\s+(?:\[${DISTANCE}/${METRIC}\]|is)\s+${TYPE}\s+${NEXT_HOP},\s+${UPTIME} -> Record
   ^\s*$$
   ^\S+\s+\S+\s+\d+\s+\d+:\d+:\d+
+  ^% No matching routes found
   ^. -> Error "LINE NOT FOUND"
