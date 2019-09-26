@@ -3,18 +3,12 @@
 language: python
 
 python:
-  - "2.7"
+  - "3.6"
 
 sudo: false
 
 install:
-  - pip install netmiko
-  - pip install textfsm
-  - export PYTHONPATH=$PYTHONPATH:/home/travis/build/networktocode/ntc-templates/gtextfsm-0.2.1/textfsm
-  - pip install ansible==1.9.2
-  - pip install terminal
-  - git clone https://github.com/networktocode/ntc-ansible.git
-
+  - pip install tox
 
 script:
-  - python test-templates.py
+  - tox
