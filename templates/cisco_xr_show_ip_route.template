@@ -12,9 +12,7 @@ Value UPTIME (\S+)
 
 Start
   ^VRF?:\s${VRF}
-  ^Codes: C - connected, -> Route
-
-Route
+  ^Codes:
   ^\s+(\S+\s+-\s+.+[,]*)+
   ^Gateway\s+of\s+last\s+resort
   ^${PROTOCOL}\s+${NETWORK}/${MASK}\s+(?:\[${DISTANCE}/${METRIC}\]|is)\s+${TYPE}\s+${NEXT_HOP},\s+${UPTIME},\s+${INTERFACE} -> Record
@@ -22,7 +20,6 @@ Route
   ^${PROTOCOL}\s+${NETWORK}/${MASK}\s+(?:\[${DISTANCE}/${METRIC}\]|is)\s+${TYPE}\s+${NEXT_HOP},\s+${UPTIME} -> Record
   ^${PROTOCOL}\s+${NETWORK}/${MASK}\s+(?:\[${DISTANCE}/${METRIC}\]|is)\s+${TYPE}\s+${NEXT_HOP}\s+\(nexthop\sin\s${INTERFACE}\),\s+${UPTIME} -> Record
   ^\s+(?:\[${DISTANCE}/${METRIC}\]|is)\s+${TYPE}\s+${NEXT_HOP},\s+${UPTIME} -> Record
-  ^\s+$$
-  ^$$
-  ^VRF?:\s${VRF} -> Start
-  ^.* -> Error "LINE NOT FOUND"
+  ^\s*$$
+  ^\S+\s+\S+\s+\d+\s+\d+:\d+:\d+
+  ^. -> Error "LINE NOT FOUND"
