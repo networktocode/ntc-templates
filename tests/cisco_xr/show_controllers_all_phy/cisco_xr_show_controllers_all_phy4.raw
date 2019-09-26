@@ -1,0 +1,122 @@
+Operational data for interface HundredGigE0/0/0/0:
+
+State:
+    Administrative state: enabled
+    Operational state: Up
+    LED state: Green On
+
+Phy:
+    Media type: Active optical cable
+    Optics:
+        Vendor: AOI             
+        Part number: AQPA9N40ADLN0778
+        Serial number: 05217E10017     
+        Wavelength: 850 nm
+    Digital Optical Monitoring:
+        Transceiver Temp: 29.574 C
+        Transceiver Voltage: 3.376 V
+
+        Alarms key: (H) Alarm high, (h) Warning high
+                    (L) Alarm low, (l) Warning low
+           Wavelength    Tx Power          Rx Power      Laser Bias
+        Lane  (nm)    (dBm)    (mW)     (dBm)     (mW)      (mA)
+        --   -----   ------   ------    ------   ------    ------
+        01     n/a     0.4   1.0847     -1.5   0.7066     6.066 
+        02     n/a     0.5   1.1314     -2.0   0.6361     5.854 
+        03     n/a     0.1   1.0278     -2.2   0.6055     5.854 
+        04     n/a     -0.2   0.9607     -1.2   0.7616     6.066 
+
+        DOM alarms:
+            No alarms
+
+        Alarm                     Alarm    Warning   Warning    Alarm
+        Thresholds                High      High       Low       Low
+                                 -------   -------   -------   -------
+        Transceiver Temp (C):     80.000     0.000     0.000    -5.000
+        Transceiver Voltage (V):   3.600     0.000     0.000     3.000
+        Laser Bias (mA):             n/a       n/a       n/a       n/a
+        Transmit Power (mW):       2.754     0.000     0.000     0.091
+        Transmit Power (dBm):      4.400      -inf      -inf   -10.410
+        Receive Power (mW):        2.754     0.000     0.000     0.058
+        Receive Power (dBm):       4.400      -inf      -inf   -12.366
+    Statistics:
+        FEC:
+            Corrected Codeword Count: 0
+            Uncorrected Codeword Count: 0
+
+MAC address information:
+    Operational address: 008a.9674.6904
+    Burnt-in address: 008a.9674.6000
+
+Autonegotiation disabled.
+
+Operational values:
+    Speed: 100Gbps
+    Duplex: Full Duplex
+    Flowcontrol: None
+    Loopback: None (or external)
+    MTU: 9114
+    MRU: 9114
+    Forward error correction: Disabled
+          
+
+Operational data for interface HundredGigE0/0/0/1:
+
+State:
+    Administrative state: enabled
+    Operational state: Up
+    LED state: Green On
+
+Phy:
+    Media type: Active optical cable
+    Optics:
+        Vendor: AOI             
+        Part number: AQPA9N40ADLN0778
+        Serial number: 05217E10027     
+        Wavelength: 850 nm
+    Digital Optical Monitoring:
+        Transceiver Temp: 28.929 C
+        Transceiver Voltage: 3.382 V
+
+        Alarms key: (H) Alarm high, (h) Warning high
+                    (L) Alarm low, (l) Warning low
+           Wavelength    Tx Power          Rx Power      Laser Bias
+        Lane  (nm)    (dBm)    (mW)     (dBm)     (mW)      (mA)
+        --   -----   ------   ------    ------   ------    ------
+        01     n/a     -0.6   0.8696     -1.7   0.6703     6.066 
+        02     n/a     -0.0   0.9913     -1.6   0.6923     5.968 
+        03     n/a     0.1   1.0195     -1.0   0.7987     5.968 
+        04     n/a     0.2   1.0481     -1.8   0.6677     5.968 
+
+        DOM alarms:
+            No alarms
+
+        Alarm                     Alarm    Warning   Warning    Alarm
+        Thresholds                High      High       Low       Low
+                                 -------   -------   -------   -------
+        Transceiver Temp (C):     80.000     0.000     0.000    -5.000
+        Transceiver Voltage (V):   3.600     0.000     0.000     3.000
+        Laser Bias (mA):             n/a       n/a       n/a       n/a
+        Transmit Power (mW):       2.754     0.000     0.000     0.091
+        Transmit Power (dBm):      4.400      -inf      -inf   -10.410
+        Receive Power (mW):        2.754     0.000     0.000     0.058
+        Receive Power (dBm):       4.400      -inf      -inf   -12.366
+    Statistics:
+        FEC:
+            Corrected Codeword Count: 0
+            Uncorrected Codeword Count: 0
+
+MAC address information:
+    Operational address: 008a.9674.6904
+    Burnt-in address: 008a.9674.6004
+
+Autonegotiation disabled.
+
+Operational values:
+    Speed: 100Gbps
+    Duplex: Full Duplex
+    Flowcontrol: None
+    Loopback: None (or external)
+    MTU: 9114
+    MRU: 9114
+    Forward error correction: Disabled
