@@ -1,0 +1,65 @@
+---
+parsed_sample:
+- applied_apgroup: VSW_OFFICE
+  chd_data: -80 dBm
+  chd_exception: 25 %
+  chd_minimum_client: 3 clients
+  chd_voice: -80 dBm
+  datarate_11m: ''
+  datarate_12m: Mandatory
+  datarate_18m: Supported
+  datarate_1m: ''
+  datarate_24m: Mandatory
+  datarate_2m: ''
+  datarate_36m: Supported
+  datarate_48m: Supported
+  datarate_54m: Supported
+  datarate_5_5m: ''
+  datarate_6m: Mandatory
+  datarate_9m: Supported
+  dca_bandwidth: '20'
+  dca_channels:
+  - 36,40,44,48,52,56,60,64,100,
+  - 104,108,112,116,120,124,128,
+  - 132,136,140,144,149,153,157,
+  - '161'
+  max_client: '200'
+  max_power: 30 dBm
+  mcs_00_rate: enabled
+  mcs_01_rate: enabled
+  mcs_02_rate: enabled
+  mcs_03_rate: enabled
+  mcs_04_rate: enabled
+  mcs_05_rate: enabled
+  mcs_06_rate: enabled
+  mcs_07_rate: enabled
+  mcs_08_rate: enabled
+  mcs_09_rate: enabled
+  mcs_10_rate: enabled
+  mcs_11_rate: enabled
+  mcs_12_rate: enabled
+  mcs_13_rate: enabled
+  mcs_14_rate: enabled
+  mcs_15_rate: enabled
+  mcs_16_rate: enabled
+  mcs_17_rate: enabled
+  mcs_18_rate: enabled
+  mcs_19_rate: enabled
+  mcs_20_rate: enabled
+  mcs_21_rate: enabled
+  mcs_22_rate: enabled
+  mcs_23_rate: enabled
+  mcs_24_rate: enabled
+  mcs_25_rate: enabled
+  mcs_26_rate: enabled
+  mcs_27_rate: enabled
+  mcs_28_rate: enabled
+  mcs_29_rate: enabled
+  mcs_30_rate: enabled
+  mcs_31_rate: enabled
+  min_power: -10 dBm
+  n_client: disabled
+  radio_policy: 5 GHz
+  rx_sop: AUTO
+  tptv1: -70 dBm
+  tptv2: -67 dBm

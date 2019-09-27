@@ -1,0 +1,122 @@
+Value APPLIED_APGROUP (.+?)
+Value RADIO_POLICY (.+?)
+Value N_CLIENT (.+?)
+Value TPTv1 (.+?)
+Value TPTv2 (.+?)
+Value MIN_POWER (.+?)
+Value MAX_POWER (.+?)
+Value DATARATE_1M (.+?)
+Value DATARATE_2M (.+?)
+Value DATARATE_5_5M (.+?)
+Value DATARATE_11M (.+?)
+Value DATARATE_6M (.+?)
+Value DATARATE_9M (.+?)
+Value DATARATE_12M (.+?)
+Value DATARATE_18M (.+?)
+Value DATARATE_24M (.+?)
+Value DATARATE_36M (.+?)
+Value DATARATE_48M (.+?)
+Value DATARATE_54M (.+?)
+Value MAX_CLIENT (.+?)
+Value RX_SOP (.+?)
+Value CHD_DATA (.+?)
+Value CHD_VOICE (.+?)
+Value CHD_MINIMUM_CLIENT (.+?)
+Value CHD_EXCEPTION (.+?)
+Value List DCA_CHANNELS ((\d+,?)*?)
+Value DCA_BANDWIDTH (.+?)
+Value MCS_00_Rate (.+?)
+Value MCS_01_Rate (.+?)
+Value MCS_02_Rate (.+?)
+Value MCS_03_Rate (.+?)
+Value MCS_04_Rate (.+?)
+Value MCS_05_Rate (.+?)
+Value MCS_06_Rate (.+?)
+Value MCS_07_Rate (.+?)
+Value MCS_08_Rate (.+?)
+Value MCS_09_Rate (.+?)
+Value MCS_10_Rate (.+?)
+Value MCS_11_Rate (.+?)
+Value MCS_12_Rate (.+?)
+Value MCS_13_Rate (.+?)
+Value MCS_14_Rate (.+?)
+Value MCS_15_Rate (.+?)
+Value MCS_16_Rate (.+?)
+Value MCS_17_Rate (.+?)
+Value MCS_18_Rate (.+?)
+Value MCS_19_Rate (.+?)
+Value MCS_20_Rate (.+?)
+Value MCS_21_Rate (.+?)
+Value MCS_22_Rate (.+?)
+Value MCS_23_Rate (.+?)
+Value MCS_24_Rate (.+?)
+Value MCS_25_Rate (.+?)
+Value MCS_26_Rate (.+?)
+Value MCS_27_Rate (.+?)
+Value MCS_28_Rate (.+?)
+Value MCS_29_Rate (.+?)
+Value MCS_30_Rate (.+?)
+Value MCS_31_Rate (.+?)
+
+
+Start
+  ^AP\s+Group\s+Name\.*\s+${APPLIED_APGROUP}\s*$$
+  ^Radio\s+policy\.*\s+${RADIO_POLICY}\s*$$
+  ^11n-client-only.*\s+${N_CLIENT}\s*$$
+  ^Transmit\s+Power\s+Threshold\s+v1\.*\s+${TPTv1}\s*$$
+  ^Transmit\s+Power\s+Threshold\s+v2\.*\s+${TPTv2}\s*$$
+  ^Min\s+Transmit\s+Power\.*\s+${MIN_POWER}\s*$$
+  ^Max\s+Transmit\s+Power\.*\s+${MAX_POWER}\s*$$
+  ^\s+802.11b\/?g?\s+1M\s+Rate\.*\s+${DATARATE_1M}\s*$$
+  ^\s+802.11b\/?g?\s+2M\s+Rate\.*\s+${DATARATE_2M}\s*$$
+  ^\s+802.11b\/?g?\s+5.5M\s+Rate\.*\s+${DATARATE_5_5M}\s*$$
+  ^\s+802.11b\/?g?\s+11M\s+Rate\.*\s+${DATARATE_11M}\s*$$
+  ^\s+802.11[g|a]\s+6M\s+Rate\.*\s+${DATARATE_6M}\s*$$
+  ^\s+802.11[g|a]\s+9M\s+Rate\.*\s+${DATARATE_9M}\s*$$
+  ^\s+802.11[g|a]\s+12M\s+Rate\.*\s+${DATARATE_12M}\s*$$
+  ^\s+802.11[g|a]\s+18M\s+Rate\.*\s+${DATARATE_18M}\s*$$
+  ^\s+802.11[g|a]\s+24M\s+Rate\.*\s+${DATARATE_24M}\s*$$
+  ^\s+802.11[g|a]\s+36M\s+Rate\.*\s+${DATARATE_36M}\s*$$
+  ^\s+802.11[g|a]\s+48M\s+Rate\.*\s+${DATARATE_48M}\s*$$
+  ^\s+802.11[g|a]\s+54M\s+Rate\.*\s+${DATARATE_54M}\s*$$
+  ^Max\s+Clients\.*\s+${MAX_CLIENT}\s*$$
+  ^Rx\s+Sop\s+Threshold\.*\s+${RX_SOP}\s*$$
+  ^\s+\Data\.*\s+${CHD_DATA}\s*$$
+  ^\s+Voice\.*\s+${CHD_VOICE}\s*$$
+  ^\s+Minimum\s+Client\s+Level\.*\s+${CHD_MINIMUM_CLIENT}\s*$$
+  ^\s+Exception\s+Level\.*\s+${CHD_EXCEPTION}\s*$$
+  ^DCA\s+Channel\s+List\.*\s+${DCA_CHANNELS}\s*$$
+  ^\s{50}${DCA_CHANNELS}\s*$$
+  ^DCA\s+Bandwidth\.*\s+${DCA_BANDWIDTH}\s*$$
+  ^\s+MCS-00\s+Rate\.*\s+${MCS_00_Rate}\s*$$
+  ^\s+MCS-01\s+Rate\.*\s+${MCS_01_Rate}\s*$$
+  ^\s+MCS-02\s+Rate\.*\s+${MCS_02_Rate}\s*$$
+  ^\s+MCS-03\s+Rate\.*\s+${MCS_03_Rate}\s*$$
+  ^\s+MCS-04\s+Rate\.*\s+${MCS_04_Rate}\s*$$
+  ^\s+MCS-05\s+Rate\.*\s+${MCS_05_Rate}\s*$$
+  ^\s+MCS-06\s+Rate\.*\s+${MCS_06_Rate}\s*$$
+  ^\s+MCS-07\s+Rate\.*\s+${MCS_07_Rate}\s*$$
+  ^\s+MCS-08\s+Rate\.*\s+${MCS_08_Rate}\s*$$
+  ^\s+MCS-09\s+Rate\.*\s+${MCS_09_Rate}\s*$$
+  ^\s+MCS-10\s+Rate\.*\s+${MCS_10_Rate}\s*$$
+  ^\s+MCS-11\s+Rate\.*\s+${MCS_11_Rate}\s*$$
+  ^\s+MCS-12\s+Rate\.*\s+${MCS_12_Rate}\s*$$
+  ^\s+MCS-13\s+Rate\.*\s+${MCS_13_Rate}\s*$$
+  ^\s+MCS-14\s+Rate\.*\s+${MCS_14_Rate}\s*$$
+  ^\s+MCS-15\s+Rate\.*\s+${MCS_15_Rate}\s*$$
+  ^\s+MCS-16\s+Rate\.*\s+${MCS_16_Rate}\s*$$
+  ^\s+MCS-17\s+Rate\.*\s+${MCS_17_Rate}\s*$$
+  ^\s+MCS-18\s+Rate\.*\s+${MCS_18_Rate}\s*$$
+  ^\s+MCS-19\s+Rate\.*\s+${MCS_19_Rate}\s*$$
+  ^\s+MCS-20\s+Rate\.*\s+${MCS_20_Rate}\s*$$
+  ^\s+MCS-21\s+Rate\.*\s+${MCS_21_Rate}\s*$$
+  ^\s+MCS-22\s+Rate\.*\s+${MCS_22_Rate}\s*$$
+  ^\s+MCS-23\s+Rate\.*\s+${MCS_23_Rate}\s*$$
+  ^\s+MCS-24\s+Rate\.*\s+${MCS_24_Rate}\s*$$
+  ^\s+MCS-25\s+Rate\.*\s+${MCS_25_Rate}\s*$$
+  ^\s+MCS-26\s+Rate\.*\s+${MCS_26_Rate}\s*$$
+  ^\s+MCS-27\s+Rate\.*\s+${MCS_27_Rate}\s*$$
+  ^\s+MCS-28\s+Rate\.*\s+${MCS_28_Rate}\s*$$
+  ^\s+MCS-29\s+Rate\.*\s+${MCS_29_Rate}\s*$$
+  ^\s+MCS-30\s+Rate\.*\s+${MCS_30_Rate}\s*$$
+  ^\s+MCS-31\s+Rate\.*\s+${MCS_31_Rate}\s*$$

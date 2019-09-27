@@ -1,0 +1,99 @@
+
+
+Description...................................... <none>
+AP Group Name.................................... VSW_OFFICE
+Radio policy..................................... 5 GHz
+11n-client-only.................................. disabled
+Transmit Power Threshold v1...................... -70 dBm
+Transmit Power Threshold v2...................... -67 dBm
+Min Transmit Power............................... -10 dBm
+Max Transmit Power............................... 30 dBm
+802.11a Operational Rates
+    802.11a 6M Rate.............................. Mandatory
+    802.11a 9M Rate.............................. Supported
+    802.11a 12M Rate............................. Mandatory
+    802.11a 18M Rate............................. Supported
+    802.11a 24M Rate............................. Mandatory
+    802.11a 36M Rate............................. Supported
+    802.11a 48M Rate............................. Supported
+    802.11a 54M Rate............................. Supported
+Max Clients...................................... 200
+
+WLAN ID 	 Max Clients
+------- 	 -------  
+  1        	   600
+
+Trap Threshold
+    Clients...................................... 12 clients
+    Interference................................. 10 %
+    Noise........................................ -70 dBm
+    Utilization.................................. 80 %
+Multicast Data Rate.............................. 0
+Rx Sop Threshold................................. AUTO
+Cca Threshold.................................... 0 dBm
+Slot Admin State:................................ Enabled
+
+Client Aware FRA
+    State........................................ Disabled
+    Client Select Utilization Threshold.......... 50%
+    Client Reset Utilization Threshold........... 5%
+
+Band Select
+    Probe Response............................... Disabled
+    Cycle Count.................................. 2 cycles
+    Cycle Threshold.............................. 200 milliseconds
+    Expire Suppression........................... 20 seconds
+    Expire Dual Band............................. 60 seconds
+    Client Rssi.................................. -80 dBm
+    Client Mid Rssi.............................. -80 dBm
+
+Load Balancing
+    Denial....................................... 3 count
+    Window....................................... 5 clients
+
+Coverage Data
+    Data......................................... -80 dBm
+    Voice........................................ -80 dBm
+    Minimum Client Level......................... 3 clients
+    Exception Level.............................. 25 %
+DCA Channel List................................. 36,40,44,48,52,56,60,64,100,
+                                                  104,108,112,116,120,124,128,
+                                                  132,136,140,144,149,153,157,
+                                                  161
+DCA Bandwidth.................................... 20
+DCA Foreign AP Contribution...................... enabled
+
+802.11n MCS Rates
+    MCS-00 Rate.................................. enabled
+    MCS-01 Rate.................................. enabled
+    MCS-02 Rate.................................. enabled
+    MCS-03 Rate.................................. enabled
+    MCS-04 Rate.................................. enabled
+    MCS-05 Rate.................................. enabled
+    MCS-06 Rate.................................. enabled
+    MCS-07 Rate.................................. enabled
+    MCS-08 Rate.................................. enabled
+    MCS-09 Rate.................................. enabled
+    MCS-10 Rate.................................. enabled
+    MCS-11 Rate.................................. enabled
+    MCS-12 Rate.................................. enabled
+    MCS-13 Rate.................................. enabled
+    MCS-14 Rate.................................. enabled
+    MCS-15 Rate.................................. enabled
+    MCS-16 Rate.................................. enabled
+    MCS-17 Rate.................................. enabled
+    MCS-18 Rate.................................. enabled
+    MCS-19 Rate.................................. enabled
+    MCS-20 Rate.................................. enabled
+    MCS-21 Rate.................................. enabled
+    MCS-22 Rate.................................. enabled
+    MCS-23 Rate.................................. enabled
+    MCS-24 Rate.................................. enabled
+    MCS-25 Rate.................................. enabled
+    MCS-26 Rate.................................. enabled
+    MCS-27 Rate.................................. enabled
+    MCS-28 Rate.................................. enabled
+    MCS-29 Rate.................................. enabled
+    MCS-30 Rate.................................. enabled
+    MCS-31 Rate.................................. enabled
+ Client Network Preference....................... default

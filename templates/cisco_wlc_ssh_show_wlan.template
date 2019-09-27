@@ -1,0 +1,85 @@
+Value IDENTIFIER (\d+)
+Value SSID (.+?)
+Value STATUS (\w+)
+Value MACFILTER (\w+)
+Value BROADCAST (\w+)
+Value AAA (\w+)
+Value MAXCLIENT (\d+)
+Value EXCLUSTIMEOUT ((\w+(.?\w+)+))
+Value SESTIMEOUT ((\w+(.?\w+)+))
+Value IDLETIMEOUT ((\w+(.?\w+)+))
+Value CHD (\w+)
+Value INTERFACE (\w+(.?\w+)+)
+Value QOS (\w+)
+Value WMM (\w+)
+Value CCX (\w+)
+Value PTP (\S+)
+Value BAND (\w+(.?\w+)+)
+Value DTIM_A (\d+)
+Value DTIM_B (\d+)
+Value List RADIUS_AUTH (\d+.\d+.\d+.\d+\s\d+\s.|\w+(.?\w+)+)
+Value List RADIUS_ACCT (\d+.\d+.\d+.\d+\s\d+\s.|\w+(.?\w+)+)
+Value DOT11R (\w+)
+Value DOT1X (\w+) 
+Value WPA (\w+)
+Value WPA2 (\w+)
+Value TKIP (\w+)
+Value AES (\w+)
+Value PSK (\w+)
+Value FASTT (\w+)
+Value FTOVERDS (\w+)
+Value AVC_VIS (\w+)
+Value DOT11K (\w+)
+#802.11k Dual Band
+Value DOT11KDB (\w+)
+Value DOT11V (\w+)
+#802.11v Directed Multicast Service
+Value DOT11VMC (\w+)
+#802.11v BSS Max Idle Service
+Value DOT11VMIS (\w+)
+Value BAND_SELECT (\w+)
+Value LOAD_BALANCING (\w+)
+
+
+
+Start
+  ^WLAN Identifier.*\s${IDENTIFIER}\s*$$
+  ^Network Name \(SSID\)\.*\s${SSID}\s*$$
+  ^Status\.*\s${STATUS}\s*$$
+  ^MAC Filtering\.*\s${MACFILTER}\s*$$
+  ^Broadcast SSID\.*\s${BROADCAST}\s*$$
+  ^AAA Policy Override\.*\s${AAA}\s*$$
+  ^Maximum number of Clients per AP Radio\.*\s${MAXCLIENT}\s*$$
+  ^Exclusionlist Timeout\.*\s${EXCLUSTIMEOUT}\s*$$
+  ^Session Timeout\.*\s${SESTIMEOUT}\s*$$
+  ^User Idle Timeout\.*\s${IDLETIMEOUT}\s*$$
+  ^CHD per WLAN\.*\s${CHD}\s*$$
+  ^Interface\.*\s${INTERFACE}\s*$$
+  ^Quality of Service\.*\s${QOS}\s*$$
+  ^WMM\.*\s${WMM}\s*$$
+  ^CCX - AironetIe Support\.*\s${CCX}s*$$
+  ^Peer-to-Peer Blocking\sAction\.*\s${PTP}\s*$$
+  ^Radio Policy\.*\s${BAND}\s*$$
+  ^DTIM period for 802.11a radio\.*\s${DTIM_A}s*$$
+  ^DTIM period for 802.11b radio\.*\s${DTIM_B}s*$$
+  ^\s+Authentication\.*\s${RADIUS_AUTH}
+  ^\s+Accounting\.*\s${RADIUS_ACCT}
+  ^\s+FT Support\.*\s${DOT11R}s*$$
+  ^\s+802.1x\.*\s${DOT1X}s*$$  
+  ^\s+WPA \(SSN\sIE\)\.*\s${WPA}s*$$
+  ^\s+WPA2 \(RSN\sIE\)\.*\s${WPA2}s*$$
+  ^\s+PSK\.*\s${PSK}s*$$
+  ^\s+TKIP Cipher\.*\s${TKIP}s*$$
+  ^\s+AES Cipher\.*\s${AES}s*$$
+  ^\s+FT-1X\(802\.11r\).*\s${FASTT}s*$$
+  ^\s+FT Over-The-DS mode\.*\s${FTOVERDS}s*$$
+  ^AVC Visibilty\.*\s${AVC_VIS}s*$$
+  ^802.11k Neighbor List\.*\s${DOT11K}s*$$
+  ^802.11k Neighbor List Dual Band\.*\s${DOT11KDB}s*$$
+  ^802.11v BSS Transition Service\.*\s${DOT11V}s*$$
+  ^802.11v Directed Multicast Service\.*\s${DOT11VMC}s*$$
+  ^802.11v BSS Max Idle Service\.*\s${DOT11VMIS}s*$$
+  ^Band Select\.*\s${BAND_SELECT}s*$$
+  ^Load Balancing\.*\s${LOAD_BALANCING}s*$$
+
+

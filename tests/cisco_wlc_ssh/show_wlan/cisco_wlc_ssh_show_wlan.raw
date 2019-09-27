@@ -1,0 +1,200 @@
+
+
+WLAN Identifier.................................. 1
+Profile Name..................................... test
+Network Name (SSID).............................. test
+Status........................................... Enabled
+MAC Filtering.................................... Disabled
+Broadcast SSID................................... Enabled
+AAA Policy Override.............................. Disabled
+Network Admission Control
+Client Profiling Status
+    Radius Profiling ............................ Disabled
+     DHCP ....................................... Disabled
+     HTTP ....................................... Disabled
+    Local Profiling ............................. Disabled
+     DHCP ....................................... Disabled
+     HTTP ....................................... Disabled
+  Radius-NAC State............................... Disabled
+  SNMP-NAC State................................. Disabled
+  Quarantine VLAN................................ 0
+Maximum Clients Allowed.......................... Unlimited
+Security Group Tag............................... Unknown(0)
+Maximum number of Clients per AP Radio........... 200
+ATF Policy....................................... 0
+Number of Active Clients......................... 0
+Exclusionlist Timeout............................ 180 seconds
+Session Timeout.................................. 1800 seconds
+User Idle Timeout................................ Disabled
+Sleep Client..................................... disable
+Sleep Client Timeout............................. 720 minutes
+Web Auth Captive Bypass Mode..................... None
+User Idle Threshold.............................. 0 Bytes
+NAS-identifier................................... none
+CHD per WLAN..................................... Enabled
+Webauth DHCP exclusion........................... Disabled
+Interface........................................ management
+Multicast Interface.............................. Not Configured
+WLAN IPv4 ACL.................................... unconfigured
+WLAN IPv6 ACL.................................... unconfigured
+WLAN Layer2 ACL.................................. unconfigured
+mDNS Status...................................... Disabled
+mDNS Profile Name................................ unconfigured
+DHCP Server...................................... Default
+Central NAT Peer-Peer Blocking................... Unknown
+DHCP Address Assignment Required................. Disabled
+Static IP client tunneling....................... Disabled
+Tunnel Profile................................... Unconfigured
+Quality of Service............................... Silver
+Per-SSID Rate Limits............................. Upstream	Downstream
+Average Data Rate................................   0		  0
+Average Realtime Data Rate.......................   0		  0
+Burst Data Rate..................................   0		  0
+Burst Realtime Data Rate.........................   0		  0
+Per-Client Rate Limits........................... Upstream	Downstream
+Average Data Rate................................   0		  0
+Average Realtime Data Rate.......................   0		  0
+Burst Data Rate..................................   0		  0
+Burst Realtime Data Rate.........................   0		  0
+Scan Defer Priority.............................. 4,5,6
+Scan Defer Time.................................. 100 milliseconds
+WMM.............................................. Allowed
+WMM UAPSD Compliant Client Support............... Disabled
+Media Stream Multicast-direct.................... Disabled
+CCX - AironetIe Support.......................... Enabled
+CCX - Gratuitous ProbeResponse (GPR)............. Disabled
+CCX - Diagnostics Channel Capability............. Disabled
+Dot11-Phone Mode (7920).......................... Disabled
+Wired Protocol................................... 802.1P (Tag=0)
+Passive Client Feature........................... Disabled
+Peer-to-Peer Blocking Action..................... Disabled
+Radio Policy..................................... All
+DTIM period for 802.11a radio.................... 1
+DTIM period for 802.11b radio.................... 1
+Radius Servers
+   Authentication................................ Global Servers
+   Accounting.................................... Global Servers
+      Interim Update............................. Enabled
+      Interim Update Interval.................... 0
+      Framed IPv6 Acct AVP ...................... Prefix
+   Dynamic Interface............................. Disabled
+   Dynamic Interface Priority.................... wlan
+Local EAP Authentication......................... Disabled
+Radius NAI-Realm................................. Disabled
+Mu-Mimo.......................................... Enabled
+Security
+
+   802.11 Authentication:........................ Open System
+   FT Support.................................... Adaptive
+   Static WEP Keys............................... Disabled
+   802.1X........................................ Disabled
+   Wi-Fi Protected Access (WPA/WPA2)............. Enabled
+      WPA (SSN IE)............................... Disabled
+      WPA2 (RSN IE).............................. Enabled
+         TKIP Cipher............................. Disabled
+         AES Cipher.............................. Enabled
+         CCMP256 Cipher.......................... Disabled
+         GCMP128 Cipher.......................... Disabled
+         GCMP256 Cipher.......................... Disabled
+      OSEN IE.................................... Disabled
+      Auth Key Management
+         802.1x.................................. Enabled
+         PSK..................................... Disabled
+         CCKM.................................... Disabled
+         FT-1X(802.11r).......................... Disabled
+         FT-PSK(802.11r)......................... Disabled
+         PMF-1X(802.11w)......................... Disabled
+         PMF-PSK(802.11w)........................ Disabled
+         OSEN-1X................................. Disabled
+         SUITEB-1X............................... Disabled
+         SUITEB192-1X............................ Disabled
+      FT Reassociation Timeout................... 20
+      FT Over-The-DS mode........................ Enabled
+      GTK Randomization.......................... Disabled
+      SKC Cache Support.......................... Disabled
+      CCKM TSF Tolerance......................... 1000
+   Wi-Fi Direct policy configured................ Disabled
+   EAP-Passthrough............................... Disabled
+   CKIP ......................................... Disabled
+   Web Based Authentication...................... Disabled
+   Web Authentication Timeout.................... 300
+   Web-Passthrough............................... Disabled
+   Mac-auth-server............................... 0.0.0.0
+   Web-portal-server............................. 0.0.0.0
+   qrscan-des-key................................ 
+   Conditional Web Redirect...................... Disabled
+   Splash-Page Web Redirect...................... Disabled
+   Auto Anchor................................... Disabled
+   FlexConnect Local Switching................... Enabled
+   FlexConnect Central Association............... Disabled
+   flexconnect Central Dhcp Flag................. Disabled
+   flexconnect nat-pat Flag...................... Disabled
+   flexconnect Dns Override Flag................. Disabled
+   flexconnect PPPoE pass-through................ Disabled
+   flexconnect local-switching IP-source-guar.... Disabled
+   FlexConnect Vlan based Central Switching ..... Disabled
+   FlexConnect Local Authentication.............. Disabled
+   FlexConnect Learn IP Address.................. Enabled
+   Client MFP.................................... Optional
+   PMF........................................... Disabled
+   PMF Association Comeback Time................. 1
+   PMF SA Query RetryTimeout..................... 200
+   Tkip MIC Countermeasure Hold-down Timer....... 60
+   Eap-params.................................... Disabled
+Flex Avc Profile Name............................ None
+Flow Monitor Name................................ None
+Split Tunnel Configuration
+    Split Tunnel................................. Disabled
+Call Snooping.................................... Disabled
+Roamed Call Re-Anchor Policy..................... Disabled
+SIP CAC Fail Send-486-Busy Policy................ Enabled
+SIP CAC Fail Send Dis-Association Policy......... Disabled
+KTS based CAC Policy............................. Disabled
+Assisted Roaming Prediction Optimization......... Disabled
+802.11k Neighbor List............................ Enabled
+802.11k Neighbor List Dual Band.................. Disabled
+802.11v Directed Multicast Service............... Enabled
+802.11v BSS Max Idle Service..................... Enabled
+802.11v BSS Transition Service................... Enabled
+802.11v BSS Transition Disassoc Imminent......... Disabled
+802.11v BSS Transition Disassoc Timer............ 200
+802.11v BSS Transition OpRoam Disassoc Timer..... 40
+DMS DB is empty
+Band Select...................................... Disabled
+Load Balancing................................... Disabled
+Multicast Buffer................................. Disabled
+Universal Ap Admin............................... Disabled
+Broadcast Tagging................................ Disabled
+PRP.............................................. Disabled
+
+ Mobility Anchor List
+ WLAN ID     IP Address            Status                             Priority
+ -------     ---------------       ------                             --------
+
+802.11u........................................ Disabled
+
+MSAP Services.................................. Disabled
+
+Local Policy
+----------------
+Priority  Policy Name
+--------  ---------------
+
+QoS Fastlane Status.............................. Disable
+Selective Reanchoring Status..................... Disable
+Lobby Admin Access............................... Disabled
+
+ Fabric Status
+--------------
+
+Fabric status.................................... Disable
+Vnid Name........................................ 
+Vnid............................................. 0
+Applied SGT Tag.................................. 0
+Peer Ip Address.................................. 0.0.0.0
+Flex Acl Name.................................... 
+Flex Avc Policy Name............................. 
+
+U3-Interface................................... Disable
+
+U3-Reporting Interval.......................... 30

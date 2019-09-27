@@ -1,0 +1,42 @@
+---
+parsed_sample:
+- aaa: Disabled
+  aes: Enabled
+  avc_vis: ''
+  band: All
+  band_select: Disabled
+  broadcast: Enabled
+  ccx: Enabled
+  chd: Enabled
+  dot11k: Enabled
+  dot11kdb: Disabled
+  dot11r: Adaptive
+  dot11v: Enabled
+  dot11vmc: Enabled
+  dot11vmis: Enabled
+  dot1x: Enabled
+  dtim_a: '1'
+  dtim_b: '1'
+  exclustimeout: 180 seconds
+  fastt: Disabled
+  ftoverds: Enabled
+  identifier: '1'
+  idletimeout: Disabled
+  interface: management
+  load_balancing: Disabled
+  macfilter: Disabled
+  maxclient: '200'
+  psk: Disabled
+  ptp: Disabled
+  qos: Silver
+  radius_acct:
+  - Global Servers
+  radius_auth:
+  - Global Servers
+  sestimeout: 1800 seconds
+  ssid: test
+  status: Enabled
+  tkip: Disabled
+  wmm: Allowed
+  wpa: Disabled
+  wpa2: Enabled
