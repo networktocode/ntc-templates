@@ -1,0 +1,25 @@
+Value Filldown TOTAL_ADVERSE_DROPS (\d+)
+Value Filldown TOTAL_CONGESTION_DROPS (\d+)
+Value Filldown TOTAL_PKT_PROCESSOR_DROPS (\d+)
+Value Required TYPE (\S+)
+Value CHIP (\S+)
+Value COUNTER_NAME (\S+)
+Value COUNT (\S+)
+Value FIRST_OCCURRENCE (\S+\s+\S+)
+Value LAST_OCCURRENCE (\S+)
+
+
+Start
+  ^Summary:
+  ^Total Adverse.+:\s+${TOTAL_ADVERSE_DROPS}
+  ^Total Congestion.+:\s+${TOTAL_CONGESTION_DROPS}
+  ^Total Packet Processor.+:\s+${TOTAL_PKT_PROCESSOR_DROPS}
+  ^Type\s+Chip.+
+  ^-.+
+  ^${TYPE}\s+${CHIP}\s+${COUNTER_NAME}\s+:\s+${COUNT}\s+:\s+${FIRST_OCCURRENCE}\s+:\s+${LAST_OCCURRENCE} -> Record
+  ^\s+$$
+  ^$$
+  ^.* -> Error "LINE NOT FOUND"
+
+EOF  
+  
