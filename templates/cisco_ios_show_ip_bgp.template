@@ -27,12 +27,12 @@ Bgp_table
   #
   #
   # Match first when there is no network, since previous line had it already (compliment and filldown below)
-  # Example: * i172.16.1.0/24    172.16.1.2               0    100      0 i
+  # Example: *>                  0.0.0.0                  0         32768 i
   ^\s{0,1}${STATUS}${PATH_SELECTION}${ROUTE_SOURCE}\s{0,2}\s{16}\s(?=${NEXT_HOP}).{19}\s(?=\s{0,6}${METRIC}).{6}\s(?=\s{0,6}${LOCAL_PREF}).{6}\s(?=\s{0,6}${WEIGHT}).{6}\s*${AS_PATH}\s*${ORIGIN}$$ -> Record
   #
   #
   # Full normal example. metric, and as_path might not exist, regex defaults to blank line. 
-  # Example: *>                  0.0.0.0                  0         32768 i
+  # Example: * i172.16.1.0/24    172.16.1.2               0    100      0 i
   ^\s{0,1}${STATUS}${PATH_SELECTION}${ROUTE_SOURCE}\s{0,2}(?=${NETWORK}).{16}\s(?=${NEXT_HOP}).{19}\s(?=\s{0,6}${METRIC}).{6}\s(?=\s{0,6}${LOCAL_PREF}).{6}\s(?=\s{0,6}${WEIGHT}).{6}\s*${AS_PATH}\s*${ORIGIN}$$ -> Record
 
 
