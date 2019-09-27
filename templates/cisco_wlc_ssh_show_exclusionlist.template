@@ -1,8 +1,11 @@
-Value mac (([\da-fA-F]{2}[-:]){5}[\da-fA-F]{2})
-Value comment (.*)
+Value MAC (([\da-fA-F]{2}[-:]){5}[\da-fA-F]{2})
+Value COMMENT (.*)
 
 Start
-  ^${mac}\s+${comment} -> Record
-  ^([A-Za-z]+\s)+
-  ^-+
+  ^MAC\s+Address\s+Description -> ManuallyDisabled
+
+ManuallyDisabled
+  ^${MAC}\s+${COMMENT} -> Record
+  ^No\s*dynamically
+  ^\s*$$
   ^. -> Error
