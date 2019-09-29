@@ -5,5 +5,4 @@ Value LINK (\S+-\S+)
 Value PROTO (\S+-\S+)
 
 Start
-  ^${INTF}\s+${IPADDR}\s+${STATUS}/${LINK}/${PROTO} -> Record
-
+  ^${INTF}\s+${IPADDR}\s+${PROTO}/${LINK}/${STATUS} -> Record
