@@ -16,6 +16,7 @@ Value OUTPUT_ERRORS (\d+)
 Value BANDWIDTH (\d+\s+\w+)
 Value DELAY (\d+\s+\w+)
 Value ENCAPSULATION (\w+)
+Value GIANTS (\d+)
 
 Start
   ^\S+\s+is.+ -> Continue.Record
@@ -29,6 +30,7 @@ Start
   ^\s+MTU\s+${MTU}.*BW\s+${BANDWIDTH}.*DLY\s+${DELAY}
   ^\s+Encapsulation\s+${ENCAPSULATION}
   ^\s+${INPUT_PACKETS}\s+input\s+packets\s+\d+\s+bytes\s*$$
+  ^\s+${GIANTS}\s+giants\s+${INPUT_ERRORS}\s+input\s+error\s+\d+\s+short\s+frame\s+\d+\s+overrun\s+\d+\s+underrun
   ^\s+${INPUT_ERRORS}\s+input\s+error\s+\d+\s+short\s+frame\s+\d+\s+overrun\s+\d+\s+underrun\s+\d+\s+ignored\s*$$
   ^\s+${OUTPUT_PACKETS}\s+output\s+packets\s+\d+\s+bytes\s*$$
   ^\s+${OUTPUT_ERRORS}\s+output\s+error\s+\d+\s+collision\s+\d+\s+deferred\s+\d+\s+late\s+collision\s*$$
