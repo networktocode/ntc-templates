@@ -326,3 +326,5 @@ vmware_nsxv_show_ip_route.template, .*, vmware_nsxv, sh[[ow]] ip r[[oute]]
 
 vyatta_vyos_show_interfaces.template, .*, .*vyos.*, sh[[ow]] int[[erfaces]]
 vyatta_vyos_show_arp.template, .*, .*vyos.*, sh[[ow]] a[[rp]]
+
+watchguard_firebox_show_arp.template, .*, watchguard_firebox, sh[[ow]] arp
