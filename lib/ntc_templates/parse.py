@@ -1,5 +1,6 @@
 """ntc_templates.parse."""
-import pkg_resources
+import os
+
 try:
     from textfsm import clitable
 except ImportError:
@@ -7,7 +8,13 @@ except ImportError:
 
 
 def _get_template_dir():
-    return pkg_resources.resource_filename("ntc_templates", "templates")
+    package_dir = os.path.dirname(__file__)
+    template_dir = os.path.join(package_dir, "templates")
+    if not os.path.isdir(template_dir):
+        project_dir = os.path.dirname(os.path.dirname(os.path.dirname(template_dir)))
+        template_dir = os.path.join(project_dir, "templates")
+
+    return template_dir
 
 
 def _clitable_to_dict(cli_table):

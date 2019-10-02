@@ -203,6 +203,7 @@ cisco_nxos_show_ip_ospf_neighbor_vrf.template, .*, cisco_nxos, sh[[ow]] ip ospf 
 cisco_nxos_show_ipv6_interface_brief.template, .*, cisco_nxos, sh[[ow]] ipv[[6]] interf[[ace]] b[[rief]]
 cisco_nxos_show_port-channel_summary.template, .*, cisco_nxos, sh[[ow]] po[[rt-channel]] sum[[mary]]
 cisco_nxos_show_cts_interface_brief.template, .*, cisco_nxos, sh[[ow]] cts inte[[rface]] br[[ief]]
+cisco_nxos_show_ip_interface_brief.template, .*, cisco_nxos, sh[[ow]] ip int[[erface]] b[[rief]]
 cisco_nxos_show_cts_interface_all.template, .*, cisco_nxos, sh[[ow]] ct[[s]] inter[[face]] al[[l]]
 cisco_nxos_show_ip_community-list.template, .*, cisco_nxos, sh[[ow]] ip comm[[unity-list]]
 cisco_nxos_show_mac_address-table.template, .*, cisco_nxos, sh[[ow]] m[[ac]] addr[[ess-table]]
@@ -236,8 +237,10 @@ cisco_nxos_show_vrf.template, .*, cisco_nxos, sh[[ow]] vrf
 
 cisco_wlc_ssh_show_cdp_neighbors_detail.template, .*, cisco_wlc_ssh, sh[[ow]] c[[dp]] neig[[hbors]] det[[ail]]
 cisco_wlc_ssh_show_ap_config_general.template, .*, cisco_wlc_ssh, sh[[ow]] ap con[[fig]] ge[[neral]]
+cisco_wlc_ssh_show_exclusionlist.template, .*, cisco_wlc_ssh, sh[[ow]] ex[[clusionlist]]
 cisco_wlc_ssh_show_ap_summary.template, .*, cisco_wlc_ssh, sh[[ow]] ap sum[[mary]]
 cisco_wlc_ssh_show_sysinfo.template, .*, cisco_wlc_ssh, sh[[ow]] sysi[[nfo]]
+
 
 cisco_xr_show_controllers_fabric_fia_errors_ingress_location.template, .*, cisco_xr, sh[[ow]] contr[[ollers]] fabric fi[[a]] err[[ors]] in[[gress]] loc[[ation]]
 cisco_xr_show_controllers_fabric_fia_drops_ingress_location.template, .*, cisco_xr, sh[[ow]] contr[[ollers]] fabric fi[[a]] dr[[ops]] in[[gress]] loc[[ation]]
@@ -272,7 +275,7 @@ cisco_xr_show_pim_neighbor.template, .*, cisco_xr, sh[[ow]] pi[[m]] neigh[[bor]]
 cisco_xr_show_controllers.template, .*, cisco_xr, sh[[ow]] contr[[ollers]] (\S+) phy
 cisco_xr_show_interfaces.template, .*, cisco_xr, sh[[ow]] inte[[rfaces]]
 cisco_xr_admin_show_vm.template, .*, cisco_xr, adm[[in]] sh[[ow]] vm
-cisco_xr_show_ip_route.template, .*, cisco_xr, sh[[ow]] ip ro[[ute]]
+cisco_xr_show_ip_route.template, .*, cisco_xr, sh[[ow]] (?:ip )?ro[[ute]]
 cisco_xr_show_version.template, .*, cisco_xr, sh[[ow]] ver[[sion]]
 cisco_xr_show_hsrp.template, .*, cisco_xr, sh[[ow]] hs[[rp]]
 cisco_xr_show_bgp.template, .*, cisco_xr, sh[[ow]] bg[[p]]
@@ -323,3 +326,5 @@ vmware_nsxv_show_ip_route.template, .*, vmware_nsxv, sh[[ow]] ip r[[oute]]
 
 vyatta_vyos_show_interfaces.template, .*, .*vyos.*, sh[[ow]] int[[erfaces]]
 vyatta_vyos_show_arp.template, .*, .*vyos.*, sh[[ow]] a[[rp]]
+
+watchguard_firebox_show_arp.template, .*, watchguard_firebox, sh[[ow]] arp
