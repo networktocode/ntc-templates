@@ -63,7 +63,7 @@ def test_index_ordering():
         'cisco_xe', 'cisco_xr', 'dell_force10', 'enterasys', 'extreme', 'f5_ltm', 'fortinet',
         'hp_comware', 'hp_procurve', 'huawei', 'juniper', 'juniper_junos', 'juniper_screenos',
         'alcatel_sros', 'linux', 'ovs_linux', 'paloalto_panos', 'quanta_mesh',
-        'ubiquiti_edgeswitch', 'vmware_nsxv', 'vyatta_vyos', 'vyos',
+        'ubiquiti_edgeswitch', 'vmware_nsxv', 'vyatta_vyos', 'vyos', 'watchguard_firebox',
     ]
 
     prior_os = ""
