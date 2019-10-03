@@ -1,0 +1,19 @@
+Value FAN_MODULE (\d+)
+Value FAN_SPEED (\S+)
+Value FAN_SPEED_UNIT (\S+)
+Value FAN_STATUS (\S+)
+Value FAN_RPM_1 (\S+)
+Value FAN_RPM_2 (\S+)
+Value FAN_RPM_3 (\S+)
+Value FAN_RPM_4 (\S+)
+Value FAN_RPM_5 (\S+)
+Value FAN_RPM_6 (\S+)
+
+Start 
+  ^FAN\s+${FAN_MODULE}\s+\|\s+${FAN_SPEED}\s+\|\s+${FAN_SPEED_UNIT}\s+\|\s+${FAN_STATUS}\s+\|\s+${FAN_RPM_1}\s+\|\s+${FAN_RPM_2}\s+\|\s+${FAN_RPM_3}\s+\|\s+${FAN_RPM_4}\s+\|\s+${FAN_RPM_5}\s+\|\s+${FAN_RPM_6} -> Record
+  ^PS_
+  ^>  
+  ^.* -> Error "LINE NOT FOUND" 
+ 
+  
+EOF 

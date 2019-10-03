@@ -1,0 +1,12 @@
+Value FAN_NUMBER (\d+)
+Value MODULE_TYPE (\S+)
+Value SPEED (\d+)
+
+Start 
+  ^${MODULE_TYPE}\s+Fan\s+${FAN_NUMBER}\s+Speed\s+\(RPM\)\s+${SPEED} -> Record
+  ^${MODULE_TYPE}\s+Fan\s+Speed\s+\(RPM\)\s+${SPEED} -> Record
+  ^${MODULE_TYPE}\s+${FAN_NUMBER}\s+Speed\s+\(RPM\)\s+${SPEED} -> Record
+  ^>  
+  ^.* -> Error "LINE NOT FOUND" 
+   
+EOF 
