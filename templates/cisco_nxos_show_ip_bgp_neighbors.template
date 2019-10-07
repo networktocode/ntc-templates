@@ -88,8 +88,8 @@ AddrFamState
   ^\s+BGP table version ${TABLE_VERSION}, neighbor version ${NEI_TABLE_VERSION}
   ^\s+${ACCEPTED_PATHS} accepted paths consume ${CONSUMED_MEM} bytes of memory
   ^\s+${SENT_PATHS} sent paths
-  ^\s+Inbound route-map configured is\s+${INBOUND_ROUTEMAP}, handle obtained
-  ^\s+Outbound route-map configured is\s+${OUTBOUND_ROUTEMAP}, handle obtained
+  ^\s+Inbound\s+route-map\s+configured\s+is\s+${INBOUND_ROUTEMAP},\s+handle\s+obtained
+  ^\s+Outbound\s+route-map\s+configured\s+is\s+${OUTBOUND_ROUTEMAP},\s+handle\s+obtained
   ^\s+Last End-of-RIB received [\d:]+ after session start -> AddrFamState
   ^\s+Local host:\s+${LOCALHOST_IP}, Local port:\s+${LOCALHOST_PORT}
   ^\s+Foreign host:\s+${REMOTE_IP}, Foreign port:\s+${REMOTE_PORT} -> Record Start
