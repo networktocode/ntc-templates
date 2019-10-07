@@ -1,0 +1,18 @@
+Value Required USER_NAME (\w+)
+Value ENGINE_ID (\w+)
+Value STORAGE_TYPE (\w+)
+Value ACCESS_LIST (.*)
+Value AUTHENTICATION_PROTOCOL (\w+)
+Value PRIVACY_PROTOCOL (\w+)
+Value GROUP_NAME (\w+)
+
+Start
+  ^User\s+name:\s+${USER_NAME}$$
+  ^Engine\s+ID:\s+${ENGINE_ID}$$
+  ^storage-type:\s${STORAGE_TYPE}\s+active\s+access-list:\s+${ACCESS_LIST}$$
+  ^storage-type:\s${STORAGE_TYPE}\s+active$$
+  ^Authentication\s+Protocol:\s+${AUTHENTICATION_PROTOCOL}$$
+  ^Privacy\s+Protocol:\s+${PRIVACY_PROTOCOL}$$
+  ^Group-name:\s+${GROUP_NAME}$$ -> Record
+  ^\s*$$
+  ^. -> Error

@@ -4,10 +4,11 @@ Value Required CODE (\S+)
 Value ROUTE (\d+\.\d+\.\d+\.\d+)
 Value MASK (\d+)
 Value SUCCESSORS (\d+)
-Value FD (\d+)
+Value FD (\d+|Inaccessible)
 Value TAG (\d+)
 Value List ADV_ROUTER (\d+\.\d+\.\d+\.\d+|\w+)
 Value List OUT_INTERFACE (\S+)
+Value SOURCE (R\S+)
 
 Start
   # Captures Process ID and Router ID
@@ -28,6 +29,8 @@ Start
 Gateway
   # This captures the advertising router and outgoing interface
   ^\s+via\s+${ADV_ROUTER},\s+${OUT_INTERFACE}
+  # This captures the scenarion where the route is injected via Redistribution.
+  ^\s+via\s+${SOURCE}
   # This will not capture anything but if it encounters another route, it will continue and record what it already captured
   ^\S+\s+(?:\d+(?:\.|)){4}/\d+,\s+\d+\s+successors -> Continue.Record
   # These are the same as above and capture the next set of routes
@@ -44,3 +47,4 @@ Gateway
   ^\s*$$
   # This will throw an error if there are no matches
   ^. -> Error
+
