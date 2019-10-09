@@ -7,7 +7,7 @@ Value PACKETS_ERROR (\d+)
 Start
   ^\s*$$
   ^Interface\s+Total\s+\(pkts\)\s+Broadcast\s+\(pkts\)\s+Multicast\s+\(pkts\)\s+Err\s+\(pkts\) -> InterfaceTable
-
+  ^. -> Error
 InterfaceTable
   ^${INTERFACE}\s+${PACKETS_TOTAL}\s+${PACKETS_BROADCAST}\s+${PACKETS_MULTICAST}\s+${PACKETS_ERROR} -> Record
   ^\s*$$ -> InterfaceTableFooter
