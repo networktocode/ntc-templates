@@ -10,6 +10,7 @@ Start
   ^\s+Set\s+clauses -> Set
   ^\s*$$
   ^. -> Error
+
 Match
   ^\s*$$
   ^\s+Set\s+clauses -> Set
@@ -19,6 +20,7 @@ Match
   ^route-map\s+${NAME},\s+${ACTION},\s+sequence\s+${SEQ}\s*$$ -> Start
   ^\s*$$
   ^. -> Error
+
 Set
   ^\s*$$
   ^\s+Policy\s+routing
