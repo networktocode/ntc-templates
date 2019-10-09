@@ -11,7 +11,8 @@ Start
 InterfaceTable
   ^${INTERFACE}\s+${PACKETS_TOTAL}\s+${PACKETS_BROADCAST}\s+${PACKETS_MULTICAST}\s+${PACKETS_ERROR} -> Record
   ^\s*$$ -> InterfaceTableFooter
-  ^. -> Error
+  ^\s*$$
+  ^\s*Overflow -> InterfaceTableFooter
 
 InterfaceTableFooter
   # ignore the footer's content
