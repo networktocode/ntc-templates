@@ -8,8 +8,8 @@ Start
   ^route-map\s+${NAME},\s+${ACTION},\s+sequence\s+${SEQ}\s*$$
   ^\s+Match\s+clauses -> Match
   ^\s+Set\s+clauses -> Set
-  ^\s*$$ -> Error
-
+  ^\s*$$
+  ^. -> Error
 Match
   ^\s*$$
   ^\s+Set\s+clauses -> Set
@@ -17,12 +17,13 @@ Match
   ^\s+${MATCH_CLAUSES}\s*$$
   ^route-map -> Continue.Record
   ^route-map\s+${NAME},\s+${ACTION},\s+sequence\s+${SEQ}\s*$$ -> Start
-  ^\s*$$ -> Error
-
+  ^\s*$$
+  ^. -> Error
 Set
   ^\s*$$
   ^\s+Policy\s+routing
   ^\s+${SET_CLAUSES}\s*$$
   ^route-map -> Continue.Record
   ^route-map\s+${NAME},\s+${ACTION},\s+sequence\s+${SEQ}\s*$$ -> Start
-  ^\s*$$ -> Error
+  ^\s*$$
+  ^. -> Error
