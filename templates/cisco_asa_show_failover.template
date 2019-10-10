@@ -57,6 +57,7 @@ ThisHost
   ^\s*Other\s+host:.+?-\s+${SERVICE_STATE_MATE}\s*$$ -> OtherHost
   ^\s*Other\s+host:\s+\S+\s*$$ -> OtherHost
   ^\s*slot\s+\d+:\s+empty\s*$$
+  ^\s*ASA\s+FirePOWER
   ^\s*$$
   ^. -> Error
 
@@ -68,6 +69,7 @@ OtherHost
   # Service module has different line
   ^\s*\S+,\s+\S+,\s+\S+\s*$$
   ^\s*slot\s+\d+:\s+empty\s*$$
+  ^\s*ASA\s+FirePOWER
   ^Stateful\s+Failover\s+Logical\s+Update\s+Statistics\s*$$ -> Stats
   ^\s*$$
   ^. -> Error
