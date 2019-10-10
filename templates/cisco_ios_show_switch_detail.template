@@ -1,15 +1,23 @@
-Value SWITCH (\d+)
-Value STATUS1 (\w+)
-Value STATUS2 (\w+)
-Value NEIGHBOR1 (\w+)
-Value NEIGHBOR2 (\w+)
+Value Key SWITCH (\d+)
+Value ROLE (\w+)
+Value MAC_ADDRESS (\S+)
+Value PRIORITY (\d+)
+Value VERSION (\S+)
+Value STATE (.+?)
 
 Start
+  ^Switch/Stack
+  ^\s+H/W\s+Current\s*$$
+  ^Switch#\s+Role\s+Mac\s+Address\s+Priority\s+Version\s+State\s*$$
+  ^\s*-+ -> Status
+  ^\s*$$
+  ^. -> Error
+
+Status
+  ^\*?\s*${SWITCH}\s+${ROLE}\s+${MAC_ADDRESS}\s+${PRIORITY}\s+${VERSION}\s+${STATE}\s*$$ -> Record
   ^\s*Stack\s+Port\s+Status -> Stack
+  ^\s*$$
+  ^. -> Error
 
 Stack
-  ^ *Switch\# +Port +1 +Port +2 +Port +1 +Port +2
-  ^-+$$
-  ^ *${SWITCH} +${STATUS1} +${STATUS2} +${NEIGHBOR1} +${NEIGHBOR2} -> Record
-  ^ *$$ -> Start
-  ^ -> Error
+  ^.
