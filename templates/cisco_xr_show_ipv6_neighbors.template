@@ -1,0 +1,18 @@
+Value ADDRESS (\S+)
+Value AGE (\S+)
+Value MAC (\S+)
+Value STATE (\S+)
+Value INTERFACE (\S+)
+Value LOCATION (\S+)
+
+Start
+  ^\S+\s+\S+\s+\S+\s+\S+:\S+:\S+\.\S+\s+\S+\s*
+  ^IPv6\s+Address\s+Age\s+Link-layer\s+Addr\s+State\s+Interface\s+Location\s*$$ -> Begin
+  ^\s*$$
+  ^. -> Error
+
+Begin
+  ^${ADDRESS}\s\s+${AGE}\s+${MAC}\s+${STATE}\s+${INTERFACE}\s+${LOCATION}\s*$$ -> Record
+  ^\s*\[Mcast\s+adjacency\]
+  ^\s*$$
+  ^. -> Error
