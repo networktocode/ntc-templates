@@ -1,6 +1,6 @@
 Value NUMBER (\S+)
 Value Required IP_ADDRESS ([A-Fa-f0-9:\.]+)
-Value Required MAC_ADDRESS ([A-Fa-f0-9\.]{14})
+Value Required MAC_ADDRESS (([A-Fa-f0-9\.]{14}|None))
 Value TYPE (\S+)
 Value AGE (\S+)
 Value Required PORT (\S+)
@@ -8,10 +8,10 @@ Value STATUS (\S+)
 Value VLAN (\S+)
 
 Start
-  ^All ARPs:\s+\d+, maximum capacity:\s+\d+
-  ^Total (number of |)ARP (e|E)ntries( |):\s+\d+
-  ^Entries in default routing instance:
-  ^No\.\s+(IP Address|IP)\s+(MAC Address|MAC)\s+Type\s+Age\s+Port\s+Status(\s+VLAN|$)
+  ^All\s+ARPs:\s+\d+,\s+maximum\s+capacity:\s+\d+
+  ^Total\s+(number\s+of\s+|)ARP\s+[Ee]ntries\s*:\s+\d+
+  ^Entries\s+in\s+default\s+routing\s+instance:
+  ^No\.\s+(IP\s+Address|IP)\s+(MAC\s+Address|MAC)\s+Type\s+Age\s+Port\s+Status(\s+VLAN|)
   ^${NUMBER}\s+${IP_ADDRESS}\s+${MAC_ADDRESS}\s+${TYPE}\s+${AGE}\s+${PORT}\s+${STATUS}\s+${VLAN} -> Record
   ^${NUMBER}\s+${IP_ADDRESS}\s+${MAC_ADDRESS}\s+${TYPE}\s+${AGE}\s+${PORT}\s+${STATUS} -> Record
   ^\s*$$
