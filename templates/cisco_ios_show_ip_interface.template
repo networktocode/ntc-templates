@@ -48,8 +48,10 @@ Start
   ^\s+Policy
   ^\s+Network\s+address\s+
   ^\s+BGP
+  ^\s+Sampled Netflow
+  ^\s+IP (Routed|Bridged) Flow
   ^\s+(Input|Output|Post)\s+.*features
-  ^\s+IPv4\s+WCCP
+  ^\s+(IPv4\s+)?WCCP
   ^\s*$$
   ^. -> Error
 
