@@ -7,7 +7,7 @@ Value LOCATION (\S+)
 
 Start
   ^\S+\s+\S+\s+\S+\s+\S+:\S+:\S+\.\S+\s+\S+\s*
-  ^IPv6\s+Address\s+Age\s+Link-layer\s+Addr\s+State\s+Interface\s+Location\s*$$ -> Begin
+  ^IPv6\s+Address\s+Age\s+Link-layer\s+Add(r?)\s+State\s+Interface\s+Location\s*$$ -> Begin
   ^\s*$$
   ^. -> Error
 
