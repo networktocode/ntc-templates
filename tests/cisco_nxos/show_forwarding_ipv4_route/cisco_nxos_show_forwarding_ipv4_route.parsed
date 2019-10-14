@@ -1207,4 +1207,8 @@ parsed_sample:
   nexthop:
   - 172.30.135.17
   prefix: 203.72.179.0/25
-
+- interface:
+  - Ethernet1/41
+  nexthop:
+  - 172.30.135.17
+  prefix: 203.72.179.128/25
