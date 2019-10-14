@@ -3,7 +3,7 @@ Value Required,List NEXTHOP (Drop|Receive|Attached|\d+\.\d+\.\d+\.\d+)
 Value List INTERFACE (\S+)
 
 Start
-  ^Prefix.*Partial\s+Install\s*$$ -> FIB
+  ^Prefix.*Next.*Interface.*Labels.*Partial.*Install\s*$$ -> FIB
 
 FIB
   # Start Record on encountering a Prefix, don't substitute any values yet
