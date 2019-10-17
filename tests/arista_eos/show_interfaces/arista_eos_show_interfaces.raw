@@ -93,3 +93,25 @@ Vlan10 is down, line protocol is lowerlayerdown (notconnect)
   Address determined by manual configuration
   IP MTU 1500 bytes
   Down 35 seconds
+Ethernet3/1 is up, line protocol is up (connected)
+  Hardware is Ethernet, address is 1234.5678.9090 (bia 1234.5678.9090)
+  Description: INFRA:TRUNK:devices2
+  Member of Port-Channel1004
+  Ethernet MTU 9214 bytes , BW 10000000 kbit
+  Full-duplex, 10Gb/s, auto negotiation: off, uni-link: disabled
+  Up 168 days, 11 hours, 11 minutes, 32 seconds
+  Loopback Mode : None
+  0 link status changes since last clear
+  Last clearing of "show interface" counters 29 days, 5:42:04 ago
+  5 minutes input rate 87.7 kbps (0.0% with framing overhead), 118 packets/sec
+  5 minutes output rate 126 kbps (0.0% with framing overhead), 104 packets/sec
+     292532847 packets input, 27108765548 bytes
+     Received 0 broadcasts, 168298 multicast
+     0 runts, 0 giants
+     123 input errors, 456 CRC, 0 alignment, 0 symbol, 111 input discards
+     0 PAUSE input
+     254882188 packets output, 40233319131 bytes
+     Sent 26635193 broadcasts, 14550425 multicast
+     1012 output errors, 0 collisions
+     0 late collision, 0 deferred, 0 output discards
+     0 PAUSE output
