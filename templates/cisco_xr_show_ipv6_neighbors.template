@@ -1,4 +1,4 @@
-Value ADDRESS (\S+)
+Value ADDRESS (.+?)
 Value AGE (\S+)
 Value MAC (\S+)
 Value STATE (\S+)
@@ -12,7 +12,6 @@ Start
   ^. -> Error
 
 Begin
-  ^${ADDRESS}\s\s+${AGE}\s+${MAC}\s+${STATE}\s+${INTERFACE}\s+${LOCATION}\s*$$ -> Record
-  ^\s*\[Mcast\s+adjacency\]
+  ^\[?${ADDRESS}\]?\s+${AGE}\s+${MAC}\s+${STATE}\s+${INTERFACE}\s+${LOCATION}\s*$$ -> Record
   ^\s*$$
   ^. -> Error

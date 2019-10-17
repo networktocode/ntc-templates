@@ -13,6 +13,24 @@ parsed_sample:
     location: 0/0/CPU0
     mac: 0c07.a11a.b801
     state: REACH
+-   address: Mcast adjacency
+    age: '-'
+    interface: Gi0/0/0/0
+    location: 0/0/CPU0
+    mac: 0000.0000.0000
+    state: REACH
+-   address: Mcast adjacency
+    age: '-'
+    interface: Gi0/0/0/1
+    location: 0/0/CPU0
+    mac: 0000.0000.0000
+    state: REACH
+-   address: Mcast adjacency
+    age: '-'
+    interface: Gi0/0/0/2
+    location: 0/0/CPU0
+    mac: 0000.0000.0000
+    state: REACH
 -   address: 2001:db8:1000:beef::1
     age: '105'
     interface: Gi0/0/0/3
@@ -48,4 +66,10 @@ parsed_sample:
     interface: Gi0/0/0/3
     location: 0/0/CPU0
     mac: ca03.100d.0008
+    state: REACH
+-   address: Mcast adjacency
+    age: '-'
+    interface: Gi0/0/0/3
+    location: 0/0/CPU0
+    mac: 0000.0000.0000
     state: REACH
