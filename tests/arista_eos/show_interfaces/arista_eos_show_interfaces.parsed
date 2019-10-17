@@ -1,68 +1,82 @@
 ---
 parsed_sample:
 
-- address: "0800.27dc.5443"
-  bandwidth: "10000000 kbit"
-  bia: ""
-  description: ""
-  hardware_type: "Ethernet"
-  interface: "Ethernet1"
-  ip_address: "172.16.1.1/24"
-  link_status: "up"
-  mtu: "1500"
-  protocol_status: "up (connected)"
+- interface : 'Ethernet1'
+  link_status : 'up'
+  protocol_status : 'up (connected)'
+  hardware_type : 'Ethernet'
+  address : '0800.27dc.5443'
+  bia : ''
+  description : ''
+  ip_address : '172.16.1.1/24'
+  mtu : '1500'
+  bandwidth : '10000000 kbit'
+  input_errors : '0'
+  output_errors : '0'
+  crc : '0'
+  input_discards : '0'
 
-- address: "0800.27dc.5443"
-  bandwidth: "10000000 kbit"
-  bia: ""
-  description: "Connects to Ethernet1 on localhost"
-  hardware_type: "Ethernet"
-  interface: "Ethernet2"
-  ip_address: "172.16.2.1/24"
-  link_status: "up"
-  mtu: "1500"
-  protocol_status: "up (connected)"
 
-- address: ""
-  bandwidth: ""
-  bia: ""
-  description: ""
-  hardware_type: "Loopback"
-  interface: "Loopback0"
-  ip_address: "1.1.1.1/32"
-  link_status: "up"
-  mtu: "65535"
-  protocol_status: "up (connected)"
+- interface : 'Ethernet2'
+  link_status : 'up'
+  protocol_status : 'up (connected)'
+  hardware_type : 'Ethernet'
+  address : '0800.27dc.5443'
+  bia : ''
+  description : 'Connects to Ethernet1 on localhost'
+  ip_address : '172.16.2.1/24'
+  mtu : '1500'
+  bandwidth : '10000000 kbit'
+  input_errors : '0'
+  output_errors : '0'
+  crc : '0'
+  input_discards : '0'
 
-- address: "0000.0000.0000"
-  bandwidth: ""
-  bia: ""
-  description: ""
-  hardware_type: "Port-Channel"
-  interface: "Port-Channel1"
-  ip_address: ""
-  link_status: "down"
-  mtu: "9214"
-  protocol_status: "lowerlayerdown (notconnect)"
 
-- address: "0800.27a5.02b7"
-  bandwidth: "1000000 kbit"
-  bia: "0800.27a5.02b7"
-  description: ""
-  hardware_type: "Ethernet"
-  interface: "Management1"
-  ip_address: ""
-  link_status: "up"
-  mtu: "1500"
-  protocol_status: "up (connected)"
+- interface : 'Port-Channel1'
+  link_status : 'down'
+  protocol_status : 'lowerlayerdown (notconnect)'
+  hardware_type : 'Port-Channel'
+  address : '0000.0000.0000'
+  bia : ''
+  description : ''
+  ip_address : '1.1.1.1/32'
+  mtu : '9214'
+  bandwidth : ''
+  input_errors : ''
+  output_errors : '0'
+  crc : ''
+  input_discards : ''
 
-- address: "0800.27dc.5443"
-  bandwidth: ""
-  bia: "0800.27dc.5443"
-  description: ""
-  hardware_type: "Vlan"
-  interface: "Vlan10"
-  ip_address: "10.0.0.1/24"
-  link_status: "down"
-  mtu: "1500"
-  protocol_status: "lowerlayerdown (notconnect)"
+
+- interface : 'Management1'
+  link_status : 'up'
+  protocol_status : 'up (connected)'
+  hardware_type : 'Ethernet'
+  address : '0800.27a5.02b7'
+  bia : '0800.27a5.02b7'
+  description : ''
+  ip_address : ''
+  mtu : '1500'
+  bandwidth : '1000000 kbit'
+  input_errors : '0'
+  output_errors : '0'
+  crc : '0'
+  input_discards : '0'
+
+
+- interface : 'Ethernet3/1'
+  link_status : 'up'
+  protocol_status : 'up (connected)'
+  hardware_type : 'Ethernet'
+  address : '1234.5678.9090'
+  bia : '1234.5678.9090'
+  description : 'INFRA:TRUNK:devices2'
+  ip_address : '10.0.0.1/24'
+  mtu : '9214'
+  bandwidth : '10000000 kbit'
+  input_errors : '123'
+  output_errors : '1012'
+  crc : '456'
+  input_discards : '111'
+
