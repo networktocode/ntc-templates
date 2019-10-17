@@ -2,6 +2,7 @@ Value FLOW_DROP_ACL_DROP (\d+)
 Value FLOW_DROP_SHUNNED (\d+)
 Value FLOW_DROP_CLUSTER_REDIRECT (\d+)
 Value FLOW_DROP_INSPECT_FAIL (\d+)
+Value FLOW_DROP_IPSEC_SELECTOR_FAILURE (\d+)
 Value FLOW_DROP_NAT_RPF_FAILED (\d+)
 Value FLOW_DROP_OUT_OF_MEMORY (\d+)
 Value FLOW_DROP_SSL_BAD_RECORD_DETECT (\d+)
@@ -16,6 +17,7 @@ Value FLOW_DROP_CTM_CRYPTO_REQUEST_ERROR (\d+)
 Value FLOW_DROP_VPN_HANDLE_NOT_FOUND (\d+)
 Value FLOW_DROP_NP_SOCKET_DATA_MOVE_FAILURE (\d+)
 Value FLOW_DROP_DTLS_HELLO_CLOSE (\d+)
+Value FLOW_LAST_CLEARED (.+?)
 Value ACL_DROP (\d+)
 Value ASYNC_LOCK_QUEUE_LIMIT (\d+)
 Value BAD_IPSEC_NATT (\d+)
@@ -61,6 +63,7 @@ Value L2_ACL (\d+)
 Value LAST_CLEARED (.+?)
 Value LU_INVALID_PKT (\d+)
 Value MCAST_IN_NONACTIVE_DEVICE (\d+)
+Value MP_SVC_BAD_LENGTH (\d+)
 Value MP_SVC_FLOW_CONTROL (\d+)
 Value MP_SVC_NO_CHANNEL (\d+)
 Value MP_SVC_NO_FRAGMENT (\d+)
@@ -87,6 +90,7 @@ Value RULE_TRANSACTION_IN_PROGRESS (\d+)
 Value SECURITY_FAILED (\d+)
 Value SHUNNED (\d+)
 Value SP_SECURITY_FAILED (\d+)
+Value SSL_FIRST_RECORD_INVALID (\d+)
 Value TCP_3WHS_FAILED (\d+)
 Value TCP_ACK_SYN_DIFF (\d+)
 Value TCP_BAD_OPTION_LIST (\d+)
@@ -160,6 +164,7 @@ Start
   ^.+l2_acl\)\s+${L2_ACL}
   ^.+lu-invalid-pkt\)\s+${LU_INVALID_PKT}
   ^.+mcast-in-nonactive-device\)\s+${MCAST_IN_NONACTIVE_DEVICE}
+  ^.+mp-svc-bad-length\)\s+${MP_SVC_BAD_LENGTH}
   ^.+mp-svc-flow-control\)\s+${MP_SVC_FLOW_CONTROL}
   ^.+mp-svc-no-channel\)\s+${MP_SVC_NO_CHANNEL}
   ^.+mp-svc-no-fragment\)\s+${MP_SVC_NO_FRAGMENT}
@@ -186,6 +191,7 @@ Start
   ^.+security-failed\)\s+${SECURITY_FAILED}
   ^.+shunned\)\s+${SHUNNED}
   ^.+sp-security-failed\)\s+${SP_SECURITY_FAILED}
+  ^.+ssl-first-record-invalid\)\s+${SSL_FIRST_RECORD_INVALID}
   ^.+tcp-3whs-failed\)\s+${TCP_3WHS_FAILED}
   ^.+tcp-ack-syn-diff\)\s+${TCP_ACK_SYN_DIFF}
   ^.+tcp-bad-option-list\)\s+${TCP_BAD_OPTION_LIST}
@@ -215,10 +221,12 @@ Start
 FLOW
   ^\s+$$
   ^$$
+  ^Last\s+clearing:\s+${FLOW_LAST_CLEARED}\s*$$
   ^.+Flow\s+is\s+denied\s+by\s+access\s+rule\s+\(acl-drop\)\s+${FLOW_DROP_ACL_DROP}
   ^.+cluster-redirect\)\s+${FLOW_DROP_CLUSTER_REDIRECT}
   ^.+Flow\s+shunned \(shunned\)\s+${FLOW_DROP_SHUNNED}
   ^.+inspect-fail\)\s+${FLOW_DROP_INSPECT_FAIL}
+  ^.+ipsec-selector-failure\)\s+${FLOW_DROP_IPSEC_SELECTOR_FAILURE}
   ^.+nat-rpf-failed\)\s+${FLOW_DROP_NAT_RPF_FAILED}
   ^.+out-of-memory\)\s+${FLOW_DROP_OUT_OF_MEMORY}
   ^.+ssl-bad-record-detect\)\s+${FLOW_DROP_SSL_BAD_RECORD_DETECT}
