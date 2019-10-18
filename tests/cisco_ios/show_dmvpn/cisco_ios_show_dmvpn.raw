@@ -1,0 +1,17 @@
+Legend: Attrb --> S - Static, D - Dynamic, I - Incomplete
+        N - NATed, L - Local, X - No Socket
+        T1 - Route Installed, T2 - Nexthop-override
+        C - CTS Capable
+        # Ent --> Number of NHRP entries with same NBMA peer
+        NHS Status: E --> Expecting Replies, R --> Responding, W --> Waiting
+        UpDn Time --> Up or Down Time for a Tunnel
+==========================================================================
+
+Interface: Tunnel100, IPv4 NHRP Details 
+Type:Spoke, NHRP Peers:2, 
+
+ # Ent  Peer NBMA Addr Peer Tunnel Add State  UpDn Tm Attrb
+ ----- --------------- --------------- ----- -------- -----
+     1 10.200.0.3           10.253.0.1    UP 03:19:46     S
+     1 10.202.0.170         10.253.0.2  NHRP    48w0d     S
+
