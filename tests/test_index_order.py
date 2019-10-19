@@ -62,8 +62,8 @@ def test_index_ordering():
         'checkpoint_gaia', 'cisco_asa', 'cisco_ios', 'cisco_nxos', 'cisco_s300', 'cisco_wlc',
         'cisco_xe', 'cisco_xr', 'dell_force10', 'enterasys', 'extreme', 'f5_ltm', 'fortinet',
         'hp_comware', 'hp_procurve', 'huawei', 'juniper', 'juniper_junos', 'juniper_screenos',
-        'alcatel_sros', 'linux', 'ovs_linux', 'paloalto_panos', 'quanta_mesh',
-        'ubiquiti_edgeswitch', 'vmware_nsxv', 'vyatta_vyos', 'vyos',
+        'alcatel_sros', 'linux', 'ovs_linux', 'paloalto_panos', 'quanta_mesh','ruckus_fastiron',
+        'ubiquiti_edgeswitch', 'vmware_nsxv', 'vyatta_vyos', 'vyos', 'watchguard_firebox',
     ]
 
     prior_os = ""
