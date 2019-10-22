@@ -8,5 +8,5 @@ Start
   ^Name:\s+"${NAME}"\s*,\s+DESCR:\s+"${DESCR}"
   ^PID:\s+${PID}\s*,\s+VID:\s+${VID}\s*,\s+SN:\s+${SN} -> Record
   ^\s*$$
+  ^show_inventory_all\s+\S+ -> NoRecord
   ^.+ -> Error
-
