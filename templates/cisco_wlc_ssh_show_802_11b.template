@@ -1,0 +1,123 @@
+Value STATUS (\w+)
+Value G_SUPPORT (\w+)
+Value N_SUPPORT (\w+)
+Value DATARATE_1M (.+?)
+Value DATARATE_2M (.+?)
+Value DATARATE_55M (.+?)
+Value DATARATE_11M (.+?)
+Value DATARATE_6M (.+?)
+Value DATARATE_9M (.+?)
+Value DATARATE_12M (.+?)
+Value DATARATE_18M (.+?)
+Value DATARATE_24M (.+?)
+Value DATARATE_36M (.+?)
+Value DATARATE_48M (.+?)
+Value DATARATE_54M (.+?)
+Value MCS_00_Rate (.+?)
+Value MCS_01_Rate (.+?)
+Value MCS_02_Rate (.+?)
+Value MCS_03_Rate (.+?)
+Value MCS_04_Rate (.+?)
+Value MCS_05_Rate (.+?)
+Value MCS_06_Rate (.+?)
+Value MCS_07_Rate (.+?)
+Value MCS_08_Rate (.+?)
+Value MCS_09_Rate (.+?)
+Value MCS_10_Rate (.+?)
+Value MCS_11_Rate (.+?)
+Value MCS_12_Rate (.+?)
+Value MCS_13_Rate (.+?)
+Value MCS_14_Rate (.+?)
+Value MCS_15_Rate (.+?)
+Value MCS_16_Rate (.+?)
+Value MCS_17_Rate (.+?)
+Value MCS_18_Rate (.+?)
+Value MCS_19_Rate (.+?)
+Value MCS_20_Rate (.+?)
+Value MCS_21_Rate (.+?)
+Value MCS_22_Rate (.+?)
+Value MCS_23_Rate (.+?)
+Value MCS_24_Rate (.+?)
+Value MCS_25_Rate (.+?)
+Value MCS_26_Rate (.+?)
+Value MCS_27_Rate (.+?)
+Value MCS_28_Rate (.+?)
+Value MCS_29_Rate (.+?)
+Value MCS_30_Rate (.+?)
+Value MCS_31_Rate (.+?)
+Value BEACON_INTERVAL (\d+)
+Value RSSI_LOW_CHECK (\w+)
+Value RSSI_THRES (-\d+)
+Value EDCA (.+?)
+Value VOICE_AMC (\w+)
+Value VOICE_CAC_METHOD (.+?)
+Value VOICE_MAX_BANDWIDTH (\d+)
+Value VOICE_ROAMING_BANDWIDTH (\d+|)
+Value VIDEO_AMC (\w+)
+Value VIDEO_CAC_METHOD (.+?)
+Value VIDEO_MAX_BANDWIDTH (\d+)
+Value VIDEO_ROAMING_BANDWIDTH (\d+|)
+Value MAX_CLIENT (\d+)
+
+
+Start
+  ^802.11b Network\.*\s${STATUS}s*$$
+  ^11gSupport\.*\s${G_SUPPORT}s*$$
+  ^11nSupport\.*\s${N_SUPPORT}s*$$
+  ^\s+802.11b\/?g? 1M Rate\.*\s+${DATARATE_1M}\s*$$
+  ^\s+802.11b\/?g? 2M Rate\.*\s+${DATARATE_2M}\s*$$
+  ^\s+802.11b\/?g? 5.5M Rate\.*\s+${DATARATE_55M}\s*$$
+  ^\s+802.11b\/?g? 11M Rate\.*\s+${DATARATE_11M}\s*$$  
+  ^\s+802.11g\s+6M Rate\.*\s+${DATARATE_6M}\s*$$
+  ^\s+802.11g 9M Rate\.*\s+${DATARATE_9M}\s*$$
+  ^\s+802.11g 12M Rate\.*\s+${DATARATE_12M}\s*$$
+  ^\s+802.11g 18M Rate\.*\s+${DATARATE_18M}\s*$$
+  ^\s+802.11g 24M Rate\.*\s+${DATARATE_24M}\s*$$
+  ^\s+802.11g 36M Rate\.*\s+${DATARATE_36M}\s*$$
+  ^\s+802.11g 48M Rate\.*\s+${DATARATE_48M}\s*$$
+  ^\s+802.11g 54M Rate\.*\s+${DATARATE_54M}\s*$$
+  ^\s+MCS 0\.*\s+${MCS_00_Rate}\s*$$
+  ^\s+MCS 1\.*\s+${MCS_01_Rate}\s*$$
+  ^\s+MCS 2\.*\s+${MCS_02_Rate}\s*$$
+  ^\s+MCS 3\.*\s+${MCS_03_Rate}\s*$$
+  ^\s+MCS 4\.*\s+${MCS_04_Rate}\s*$$
+  ^\s+MCS 5\.*\s+${MCS_05_Rate}\s*$$
+  ^\s+MCS 6\.*\s+${MCS_06_Rate}\s*$$
+  ^\s+MCS 7\.*\s+${MCS_07_Rate}\s*$$
+  ^\s+MCS 8\.*\s+${MCS_08_Rate}\s*$$
+  ^\s+MCS 9\.*\s+${MCS_09_Rate}\s*$$
+  ^\s+MCS 10\.*\s+${MCS_10_Rate}\s*$$
+  ^\s+MCS 11\.*\s+${MCS_11_Rate}\s*$$
+  ^\s+MCS 12\.*\s+${MCS_12_Rate}\s*$$
+  ^\s+MCS 13\.*\s+${MCS_13_Rate}\s*$$
+  ^\s+MCS 14\.*\s+${MCS_14_Rate}\s*$$
+  ^\s+MCS 15\.*\s+${MCS_15_Rate}\s*$$
+  ^\s+MCS 16\.*\s+${MCS_16_Rate}\s*$$
+  ^\s+MCS 17\.*\s+${MCS_17_Rate}\s*$$
+  ^\s+MCS 18\.*\s+${MCS_18_Rate}\s*$$
+  ^\s+MCS 19\.*\s+${MCS_19_Rate}\s*$$
+  ^\s+MCS 20\.*\s+${MCS_20_Rate}\s*$$
+  ^\s+MCS 21\.*\s+${MCS_21_Rate}\s*$$
+  ^\s+MCS 22\.*\s+${MCS_22_Rate}\s*$$
+  ^\s+MCS 23\.*\s+${MCS_23_Rate}\s*$$
+  ^\s+MCS 24\.*\s+${MCS_24_Rate}\s*$$
+  ^\s+MCS 25\.*\s+${MCS_25_Rate}\s*$$
+  ^\s+MCS 26\.*\s+${MCS_26_Rate}\s*$$
+  ^\s+MCS 27\.*\s+${MCS_27_Rate}\s*$$
+  ^\s+MCS 28\.*\s+${MCS_28_Rate}\s*$$
+  ^\s+MCS 29\.*\s+${MCS_29_Rate}\s*$$
+  ^\s+MCS 30\.*\s+${MCS_30_Rate}\s*$$
+  ^\s+MCS 31\.*\s+${MCS_31_Rate}\s*$$
+  ^Beacon Interval\.*\s${BEACON_INTERVAL}s*$$
+  ^RSSI Low Check\.*\s${RSSI_LOW_CHECK}s*$$
+  ^RSSI Threshold\.*\s${RSSI_THRES}s*$$
+  ^EDCA profile type\.*\s${EDCA}s*$$
+  ^\s+Voice AC - Admission control \(ACM\)\.*\s${VOICE_AMC}s*$$
+  ^\s+Voice CAC Method\.*\s${VOICE_CAC_METHOD}s*$$
+  ^\s+Voice max RF bandwidth\.*\s${VOICE_MAX_BANDWIDTH}s*$$
+  ^\s+Voice reserved roaming bandwidth\.*\s${VOICE_ROAMING_BANDWIDTH}s*$$
+  ^\s+Video AC - Admission control \(ACM\)\.*\s${VIDEO_AMC}s*$$
+  ^\s+Video CAC Method\s\.*\s${VIDEO_CAC_METHOD}s*$$
+  ^\s+Video max RF bandwidth\.*\s${VIDEO_MAX_BANDWIDTH}s*$$
+  ^\s+Video reserved roaming bandwidth\.*\s${VIDEO_ROAMING_BANDWIDTH}s*$$
+  ^Maximum Number of Clients per AP\.*\s${MAX_CLIENT}s*$$
