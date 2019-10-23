@@ -1,0 +1,20 @@
+Value Required INTERFACE (\S+)
+Value SWITCHPORT (.+)
+Value SWITCHPORT_MONITOR (.+)
+Value SWITCHPORT_NEGOTIATION (.+)
+Value MODE (.+)
+Value ACCESS_VLAN (\d+)
+Value NATIVE_VLAN (\d+)
+Value TRUNKING_VLANS (.+)
+
+Start
+  ^Name:\s+${INTERFACE}
+  ^\s*Switchport:\s+${SWITCHPORT}
+  ^\s*Switchport\s+Monitor:\s+${SWITCHPORT_MONITOR}
+  ^\s*Operational\s+Mode:\s+${MODE}
+  ^\s*Negotiation\s+of\s+Trunking:\s+${SWITCHPORT_NEGOTIATION}
+  ^\s*Access\s+Mode\s+VLAN:\s+${ACCESS_VLAN}
+  ^\s*Trunking\s+Native\s+Mode\s+VLAN:\s+${NATIVE_VLAN}
+  ^\s*Trunking\s+VLANs\s+Enabled:\s+${TRUNKING_VLANS} -> Record
+  ^.+$$
+  ^. -> Error

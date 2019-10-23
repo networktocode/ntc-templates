@@ -24,6 +24,8 @@ Start
   ^\s+Inbound\s+(?:Common\s+)?access\s+list\s+is\s+${INBOUND_ACL}\s*$$
   ^\s+Internet\s+protocol
   ^\s+Interface\s+is\s+unnumbered
+  ^\s+Peer\s+address
+  ^\s+Dialer
   ^\s+Broadcast
   ^\s+Multicast
   ^\s+2[2-5]\d\.
@@ -48,8 +50,10 @@ Start
   ^\s+Policy
   ^\s+Network\s+address\s+
   ^\s+BGP
+  ^\s+Sampled\s+Netflow
+  ^\s+IP\s+(Routed|Bridged)\s+Flow
   ^\s+(Input|Output|Post)\s+.*features
-  ^\s+IPv4\s+WCCP
+  ^\s+(IPv4\s+)?WCCP
   ^\s*$$
   ^. -> Error
 

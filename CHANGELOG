@@ -1,0 +1,19 @@
+## [1.2.1]
+### Fixed for any bug fixes
+- [#497] ASA show version: Fix `MAX_INTF` to account for `Unlimited`
+- [#497] ASA show version: Fix `HARDWARE` to properly handle trailing commas
+- [#503] IOS show standby: Fix output that spread across two lines
+### Added for new features
+- [#503] IOS show standby: Add support for matching template when specifying specific interface
+### Changed for changes in existing functionality
+- [#497] ASA show version: Change `SERIAL` to be a list for clusters
+### Deprecated for soon-to-be removed features
+### Removed for now removed features
+
+## [1.2.0]
+### Fixed
+- [#389] IOS-XR show interfaces: Fixed matching speed and duplex for bundle-ethernet interfaces
+- [#442] IOS-XR show version: Fixed matching `build_host` field that uses both "Build" and "Built" keywords
+- [#455][#456] Template files were inaccessable when installing from local directory; now works when using `pip -e`
+### Added
+- [#470] ASA show version: Add capturing `compiled_date` field

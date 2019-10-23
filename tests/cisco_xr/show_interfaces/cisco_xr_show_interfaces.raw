@@ -193,3 +193,31 @@ TenGigE0/3/0/4 is administratively down, line protocol is administratively down
      0 output errors, 0 underruns, 0 applique, 0 resets
      0 output buffer failures, 0 output buffers swapped out
      0 carrier transitions
+
+Bundle-Ether123456 is up, line protocol is up
+  Interface state transitions: 1
+  Hardware is Aggregated Ethernet interface(s), address is aaaa.bbbb.cccc
+  Description: Bundle_example
+  Internet address is Unknown
+  MTU 1514 bytes, BW 10000000 Kbit (Max: 10000000 Kbit)
+     reliability 255/255, txload 0/255, rxload 0/255
+  Encapsulation ARPA,
+  Full-duplex, 10000Mb/s
+  loopback not set,
+  Last link flapped 3w1d
+    No. of members in this bundle: 1
+      TenGigE0/3/0/4             Full-duplex  10000Mb/s    Active
+  Last input 00:00:00, output 00:00:00
+  Last clearing of "show interface" counters never
+  5 minute input rate 0 bits/sec, 0 packets/sec
+  5 minute output rate 0 bits/sec, 0 packets/sec
+     0 packets input, 0 bytes, 0 total input drops
+     0 drops for unrecognized upper-level protocol
+     Received 0 broadcast packets, 0 multicast packets
+              0 runts, 0 giants, 0 throttles, 0 parity
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored, 0 abort
+     0 packets output, 0 bytes, 0 total output drops
+     Output 0 broadcast packets, 0 multicast packets
+     0 output errors, 0 underruns, 0 applique, 0 resets
+     0 output buffer failures, 0 output buffers swapped out
+     0 carrier transitions
