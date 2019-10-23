@@ -93,5 +93,6 @@ AddrFamState
   ^\s+Last End-of-RIB received [\d:]+ after session start -> AddrFamState
   ^\s+Local host:\s+${LOCALHOST_IP}, Local port:\s+${LOCALHOST_PORT}
   ^\s+Foreign host:\s+${REMOTE_IP}, Foreign port:\s+${REMOTE_PORT} -> Record Start
+  ^\s+No\s+established\s+BGP\s+session\s+with\s+peer -> Record Start
 
 EOF
