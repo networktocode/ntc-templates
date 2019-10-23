@@ -1,0 +1,14 @@
+Value MAC (([\da-fA-F]{2}[-:]){5}[\da-fA-F]{2})
+Value COMMENT (.*)
+
+Start
+  ^Manually\s*Disabled\s*Clients -> ManuallyDisabled
+  ^No\s*dynamically
+  ^\s*$$
+  ^. -> Error
+
+ManuallyDisabled
+  ^---
+  ^MAC\s+Address\s+Description
+  ^${MAC}\s+${COMMENT} -> Record
+  ^\s*$$ -> Start

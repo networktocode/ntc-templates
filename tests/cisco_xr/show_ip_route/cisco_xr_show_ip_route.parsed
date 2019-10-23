@@ -10,6 +10,7 @@ parsed_sample:
     protocol: S*
     type: via
     uptime: '04:43:54'
+    vrf: ''
 -   distance: '110'
     interface: GigabitEthernet0/0/0/0
     mask: '32'
@@ -19,6 +20,7 @@ parsed_sample:
     protocol: O
     type: via
     uptime: '04:43:27'
+    vrf: ''
 -   distance: '110'
     interface: GigabitEthernet0/0/0/3
     mask: '32'
@@ -28,6 +30,7 @@ parsed_sample:
     protocol: O
     type: via
     uptime: '04:43:27'
+    vrf: ''
 -   distance: '110'
     interface: GigabitEthernet0/0/0/0
     mask: '32'
@@ -37,6 +40,7 @@ parsed_sample:
     protocol: O
     type: via
     uptime: '04:43:21'
+    vrf: ''
 -   distance: '110'
     interface: GigabitEthernet0/0/0/3
     mask: '32'
@@ -46,6 +50,7 @@ parsed_sample:
     protocol: O
     type: via
     uptime: '04:43:21'
+    vrf: ''
 -   distance: '110'
     interface: GigabitEthernet0/0/0/0
     mask: '32'
@@ -55,6 +60,7 @@ parsed_sample:
     protocol: O
     type: via
     uptime: '04:43:40'
+    vrf: ''
 -   distance: '110'
     interface: GigabitEthernet0/0/0/3
     mask: '32'
@@ -64,6 +70,7 @@ parsed_sample:
     protocol: O
     type: via
     uptime: '04:43:40'
+    vrf: ''
 -   distance: '110'
     interface: GigabitEthernet0/0/0/0
     mask: '32'
@@ -73,6 +80,7 @@ parsed_sample:
     protocol: O
     type: via
     uptime: '04:43:40'
+    vrf: ''
 -   distance: '110'
     interface: GigabitEthernet0/0/0/3
     mask: '32'
@@ -82,6 +90,7 @@ parsed_sample:
     protocol: O
     type: via
     uptime: '04:43:40'
+    vrf: ''
 -   distance: '110'
     interface: GigabitEthernet0/0/0/0
     mask: '32'
@@ -91,6 +100,7 @@ parsed_sample:
     protocol: O
     type: via
     uptime: '04:43:40'
+    vrf: ''
 -   distance: '110'
     interface: GigabitEthernet0/0/0/3
     mask: '32'
@@ -100,6 +110,7 @@ parsed_sample:
     protocol: O
     type: via
     uptime: '04:43:40'
+    vrf: ''
 -   distance: ''
     interface: Loopback0
     mask: '32'
@@ -109,6 +120,7 @@ parsed_sample:
     protocol: L
     type: directly
     uptime: '04:43:54'
+    vrf: ''
 -   distance: '110'
     interface: GigabitEthernet0/0/0/0
     mask: '30'
@@ -118,6 +130,7 @@ parsed_sample:
     protocol: O
     type: via
     uptime: '04:43:40'
+    vrf: ''
 -   distance: '110'
     interface: GigabitEthernet0/0/0/3
     mask: '30'
@@ -127,6 +140,7 @@ parsed_sample:
     protocol: O
     type: via
     uptime: '04:43:40'
+    vrf: ''
 -   distance: '110'
     interface: GigabitEthernet0/0/0/0
     mask: '30'
@@ -136,6 +150,7 @@ parsed_sample:
     protocol: O
     type: via
     uptime: '04:43:40'
+    vrf: ''
 -   distance: '110'
     interface: GigabitEthernet0/0/0/3
     mask: '30'
@@ -145,6 +160,7 @@ parsed_sample:
     protocol: O
     type: via
     uptime: '04:43:40'
+    vrf: ''
 -   distance: '110'
     interface: GigabitEthernet0/0/0/0
     mask: '30'
@@ -154,6 +170,7 @@ parsed_sample:
     protocol: O
     type: via
     uptime: '04:43:40'
+    vrf: ''
 -   distance: '110'
     interface: GigabitEthernet0/0/0/3
     mask: '30'
@@ -163,6 +180,7 @@ parsed_sample:
     protocol: O
     type: via
     uptime: '04:43:40'
+    vrf: ''
 -   distance: ''
     interface: GigabitEthernet0/0/0/1
     mask: '30'
@@ -172,6 +190,7 @@ parsed_sample:
     protocol: C
     type: directly
     uptime: '04:43:54'
+    vrf: ''
 -   distance: ''
     interface: GigabitEthernet0/0/0/1
     mask: '32'
@@ -181,6 +200,7 @@ parsed_sample:
     protocol: L
     type: directly
     uptime: '04:43:54'
+    vrf: ''
 -   distance: ''
     interface: GigabitEthernet0/0/0/0
     mask: '30'
@@ -190,6 +210,7 @@ parsed_sample:
     protocol: C
     type: directly
     uptime: '04:43:54'
+    vrf: ''
 -   distance: ''
     interface: GigabitEthernet0/0/0/0
     mask: '32'
@@ -199,6 +220,7 @@ parsed_sample:
     protocol: L
     type: directly
     uptime: '04:43:54'
+    vrf: ''
 -   distance: '110'
     interface: GigabitEthernet0/0/0/0
     mask: '30'
@@ -208,6 +230,7 @@ parsed_sample:
     protocol: O
     type: via
     uptime: '04:43:40'
+    vrf: ''
 -   distance: '110'
     interface: GigabitEthernet0/0/0/3
     mask: '30'
@@ -217,6 +240,7 @@ parsed_sample:
     protocol: O
     type: via
     uptime: '04:43:40'
+    vrf: ''
 -   distance: '110'
     interface: GigabitEthernet0/0/0/0
     mask: '30'
@@ -226,6 +250,7 @@ parsed_sample:
     protocol: O
     type: via
     uptime: '04:43:41'
+    vrf: ''
 -   distance: '110'
     interface: GigabitEthernet0/0/0/3
     mask: '30'
@@ -235,6 +260,7 @@ parsed_sample:
     protocol: O
     type: via
     uptime: '04:43:41'
+    vrf: ''
 -   distance: '110'
     interface: GigabitEthernet0/0/0/0
     mask: '30'
@@ -244,6 +270,7 @@ parsed_sample:
     protocol: O
     type: via
     uptime: '04:43:40'
+    vrf: ''
 -   distance: '110'
     interface: GigabitEthernet0/0/0/3
     mask: '30'
@@ -253,6 +280,7 @@ parsed_sample:
     protocol: O
     type: via
     uptime: '04:43:40'
+    vrf: ''
 -   distance: ''
     interface: GigabitEthernet0/0/0/2
     mask: '30'
@@ -262,6 +290,7 @@ parsed_sample:
     protocol: C
     type: directly
     uptime: '04:43:54'
+    vrf: ''
 -   distance: ''
     interface: GigabitEthernet0/0/0/2
     mask: '32'
@@ -271,6 +300,7 @@ parsed_sample:
     protocol: L
     type: directly
     uptime: '04:43:54'
+    vrf: ''
 -   distance: ''
     interface: GigabitEthernet0/0/0/3
     mask: '30'
@@ -280,6 +310,7 @@ parsed_sample:
     protocol: C
     type: directly
     uptime: '04:43:54'
+    vrf: ''
 -   distance: ''
     interface: GigabitEthernet0/0/0/3
     mask: '32'
@@ -289,6 +320,7 @@ parsed_sample:
     protocol: L
     type: directly
     uptime: '04:43:54'
+    vrf: ''
 -   distance: ''
     interface: MgmtEth0/0/CPU0/0
     mask: '24'
@@ -298,6 +330,7 @@ parsed_sample:
     protocol: C
     type: directly
     uptime: '04:43:54'
+    vrf: ''
 -   distance: ''
     interface: MgmtEth0/0/CPU0/0
     mask: '32'
@@ -307,3 +340,4 @@ parsed_sample:
     protocol: L
     type: directly
     uptime: '04:43:54'
+    vrf: ''
