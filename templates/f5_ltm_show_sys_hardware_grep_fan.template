@@ -1,0 +1,14 @@
+Value INDEX (\d+)
+Value STATUS (\S+)
+Value LOW_LIMIT_SPEED (\d+)
+Value FAN_SPEED (\d+)
+
+
+Start
+  ^Chassis\s+Fan\s+Status
+  ^\s+{INDEX}\s+${STATUS}\s+${LOW_LIMIT_SPEED}\s+${FAN_SPEED} -> Record
+  ^-.+
+  ^.*
+  ^.* -> Error "LINE NOT FOUND"
+
+EOF
