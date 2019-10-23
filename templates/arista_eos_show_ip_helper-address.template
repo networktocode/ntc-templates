@@ -5,7 +5,7 @@ Start
  ^DHCP
  ^\S -> Continue.Record
  ^Interface:\s+${INTERFACE}$$
- ^\s+DHCP Smart
+ ^\s+DHCP\s+Smart
  ^\s+DHCP\s+servers:\s+${IP_HELPER}$$
  ^\s+${IP_HELPER}$$
  ^$$
