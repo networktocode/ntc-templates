@@ -26,8 +26,8 @@ parsed_sample:
   neighbor_interface: Gig 1/0
   platform: OE474
 - capability: R B S
-  local_interface: 1/0/1
-  neighbor: Gig
+  local_interface: Gig 1/0/1
+  neighbor: router.domain.local
   neighbor_interface: Gig 0/0
   platform: CISCO2911
 - capability: H P M
