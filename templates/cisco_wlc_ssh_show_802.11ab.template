@@ -42,21 +42,18 @@ Start
   ^. -> Error
 
 Spec_support
-  ^  \S \S\S -> Continue.Record
   ^11${SPECS}Support\.*\s${SPECS_VALUE}s*$$
   ^802.11(a|b|b\/g)\sOperational\sRates -> Data_Rates
   ^\s*
   ^. -> Error
 
 Data_Rates
-  ^  \S \S\S -> Continue.Record
   ^\s+802.11(a|g|b|(b\/g))\s${DATA_RATE}\s+Rate\.*\s+${DATA_RATE_VALUE}s*$$
   ^802.11n MCS Settings: -> MCS_Rates
   ^\s*
   ^. -> Error
 
 MCS_Rates
-  ^  \S \S\S -> Continue.Record
   ^\s+MCS\s${MCS_RATE}\.*\s+${MCS_RATE_VALUE}s*$$
   ^802.11ac MCS Settings: -> AC_MCS_Rates
   ^802.11n Status: -> Start
@@ -64,7 +61,6 @@ MCS_Rates
   ^. -> Error
 
 AC_MCS_Rates
-  ^  \S \S\S -> Continue.Record
   ^\s+${SS_MCS_RATE}\s+\.*\s${SS_MCS_RATE_VALUE}s*$$
   ^802.11n Status: -> Start
   ^\s*
