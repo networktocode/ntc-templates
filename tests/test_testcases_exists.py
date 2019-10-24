@@ -25,7 +25,7 @@ def test_verify_parsed_and_reference_data_exists():
     index = sorted(load_index_data())
     for row in index:
         template = row[0].strip()
-        template_short = template.split('.')[0]
+        template_short = template.split('.template')[0]
         platform = row[2].strip()
         for directory in os.listdir("tests"):
             if re.match(platform, directory):
