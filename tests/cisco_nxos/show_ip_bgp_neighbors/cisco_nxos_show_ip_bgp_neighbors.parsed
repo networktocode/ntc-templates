@@ -1,8 +1,7 @@
 ---
 parsed_sample:
+
 - accepted_paths: '8458'
-  outbound_routemap: ''
-  inbound_routemap: ''
   addr_fam_adv: IPv4 Unicast  L2VPN EVPN
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast, L2VPN EVPN]
@@ -17,6 +16,7 @@ parsed_sample:
   ext_nh_cap: advertised received
   fourbyte_cap: advertised received
   graceful_cap: advertised received
+  inbound_routemap: ''
   keepalives_count_rcvd: '162725'
   keepalives_count_sent: '192374'
   last_peer_reset: 1w1d
@@ -31,6 +31,7 @@ parsed_sample:
   notifications_count_sent: '1'
   opens_count_rcvd: '743363'
   opens_count_sent: '24'
+  outbound_routemap: ''
   remote_ip: 226.176.223.89
   remote_port: '179'
   restart_time_adv: '120'
@@ -53,8 +54,6 @@ parsed_sample:
   updates_count_sent: '8514'
   uptime: 1d01h
 - accepted_paths: '8458'
-  outbound_routemap: ''
-  inbound_routemap: ''
   addr_fam_adv: IPv4 Unicast  L2VPN EVPN
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast, L2VPN EVPN]
@@ -69,6 +68,7 @@ parsed_sample:
   ext_nh_cap: advertised received
   fourbyte_cap: advertised received
   graceful_cap: advertised received
+  inbound_routemap: ''
   keepalives_count_rcvd: '163033'
   keepalives_count_sent: '192920'
   last_peer_reset: 1w0d
@@ -83,6 +83,7 @@ parsed_sample:
   notifications_count_sent: '0'
   opens_count_rcvd: '697776'
   opens_count_sent: '10'
+  outbound_routemap: ''
   remote_ip: 127.145.91.46
   remote_port: '52469'
   restart_time_adv: '120'
@@ -105,8 +106,6 @@ parsed_sample:
   updates_count_sent: '8559'
   uptime: 1w0d
 - accepted_paths: '8458'
-  outbound_routemap: ''
-  inbound_routemap: ''
   addr_fam_adv: IPv4 Unicast  L2VPN EVPN
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast, L2VPN EVPN]
@@ -121,6 +120,7 @@ parsed_sample:
   ext_nh_cap: advertised received
   fourbyte_cap: advertised received
   graceful_cap: advertised received
+  inbound_routemap: ''
   keepalives_count_rcvd: '162984'
   keepalives_count_sent: '192899'
   last_peer_reset: 3d23h
@@ -135,6 +135,7 @@ parsed_sample:
   notifications_count_sent: '0'
   opens_count_rcvd: '744278'
   opens_count_sent: '20'
+  outbound_routemap: ''
   remote_ip: 231.231.113.66
   remote_port: '22132'
   restart_time_adv: '120'
@@ -157,8 +158,6 @@ parsed_sample:
   updates_count_sent: '8558'
   uptime: 3d21h
 - accepted_paths: '8458'
-  outbound_routemap: ''
-  inbound_routemap: ''
   addr_fam_adv: IPv4 Unicast  L2VPN EVPN
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast, L2VPN EVPN]
@@ -173,6 +172,7 @@ parsed_sample:
   ext_nh_cap: advertised received
   fourbyte_cap: advertised received
   graceful_cap: advertised received
+  inbound_routemap: ''
   keepalives_count_rcvd: '162938'
   keepalives_count_sent: '192845'
   last_peer_reset: 3d18h
@@ -187,6 +187,7 @@ parsed_sample:
   notifications_count_sent: '0'
   opens_count_rcvd: '744351'
   opens_count_sent: '13'
+  outbound_routemap: ''
   remote_ip: 221.224.143.168
   remote_port: '21548'
   restart_time_adv: '120'
@@ -209,8 +210,6 @@ parsed_sample:
   updates_count_sent: '8566'
   uptime: 3d15h
 - accepted_paths: '0'
-  outbound_routemap: ''
-  inbound_routemap: ''
   addr_fam_adv: IPv4 Unicast  L2VPN EVPN
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
@@ -225,6 +224,7 @@ parsed_sample:
   ext_nh_cap: advertised received
   fourbyte_cap: advertised received
   graceful_cap: advertised received
+  inbound_routemap: ''
   keepalives_count_rcvd: '5279'
   keepalives_count_sent: '5279'
   last_peer_reset: never
@@ -239,6 +239,7 @@ parsed_sample:
   notifications_count_sent: '0'
   opens_count_rcvd: '1'
   opens_count_sent: '1'
+  outbound_routemap: ''
   remote_ip: 72.193.89.91
   remote_port: '179'
   restart_time_adv: '120'
@@ -261,8 +262,6 @@ parsed_sample:
   updates_count_sent: '1'
   uptime: 3d15h
 - accepted_paths: '0'
-  outbound_routemap: ''
-  inbound_routemap: ''
   addr_fam_adv: IPv4 Unicast  L2VPN EVPN
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
@@ -277,6 +276,7 @@ parsed_sample:
   ext_nh_cap: advertised received
   fourbyte_cap: advertised received
   graceful_cap: advertised received
+  inbound_routemap: ''
   keepalives_count_rcvd: '5279'
   keepalives_count_sent: '5279'
   last_peer_reset: never
@@ -291,6 +291,7 @@ parsed_sample:
   notifications_count_sent: '0'
   opens_count_rcvd: '1'
   opens_count_sent: '1'
+  outbound_routemap: ''
   remote_ip: 220.134.183.122
   remote_port: '179'
   restart_time_adv: '120'
@@ -312,49 +313,101 @@ parsed_sample:
   updates_count_rcvd: ''
   updates_count_sent: '1'
   uptime: 3d15h
-- accepted_paths: '51195'
-  outbound_routemap: ''
-  inbound_routemap: ''
+- accepted_paths: '0'
   addr_fam_adv: ''
   addr_fam_rcv: ''
-  addr_family: [IPv4 Unicast, IPv4 Unicast, IPv4 Unicast]
+  addr_family: [IPv4 Unicast]
   asn: '64938'
   bgp_state: Idle
   capability_count_rcvd: '0'
   capability_count_sent: '0'
   conn_dropped: '0'
   conn_estab: '0'
-  consumed_mem: '3071700'
+  consumed_mem: '0'
   description: from donkey to boo
   ext_nh_cap: ''
   fourbyte_cap: ''
   graceful_cap: ''
+  inbound_routemap: ''
   keepalives_count_rcvd: '0'
   keepalives_count_sent: '0'
   last_peer_reset: never
   last_peer_reset_reason: No error
   last_reset: never
   last_reset_reason: No error
-  localhost_ip: 148.188.153.56
-  localhost_port: '24169'
-  nei_table_version: ['0', '0', '8483941']
+  localhost_ip: ''
+  localhost_port: ''
+  nei_table_version: ['0']
   neighbor: 202.77.85.157
   notifications_count_rcvd: '0'
   notifications_count_sent: '0'
   opens_count_rcvd: '0'
   opens_count_sent: '0'
-  remote_ip: 22.15.33.118
-  remote_port: '179'
+  outbound_routemap: ''
+  remote_ip: ''
+  remote_port: ''
   restart_time_adv: ''
   restart_time_rcv: ''
   route_refresh_count_rcvd: '0'
   route_refresh_count_sent: '0'
   rr_new_cap: ''
   rr_old_cap: ''
-  sent_paths: '10303'
+  sent_paths: '0'
   source_iface: loopback0
   stale_time: ''
-  table_version: ['4', '4', '8483941']
+  table_version: ['4']
+  total_bytes_count_rcvd: '0'
+  total_bytes_count_sent: '0'
+  total_bytes_rcvd_queue: '0'
+  total_bytes_send_queue: '0'
+  total_mess_count_rcvd: '0'
+  total_mess_count_sent: '0'
+  updates_count_rcvd: ''
+  updates_count_sent: '0'
+  uptime: 3d16h
+- accepted_paths: '0'
+  addr_fam_adv: ''
+  addr_fam_rcv: ''
+  addr_family: [IPv4 Unicast]
+  asn: '64938'
+  bgp_state: Idle
+  capability_count_rcvd: '0'
+  capability_count_sent: '0'
+  conn_dropped: '0'
+  conn_estab: '0'
+  consumed_mem: '0'
+  description: from bar to monkey
+  ext_nh_cap: ''
+  fourbyte_cap: ''
+  graceful_cap: ''
+  inbound_routemap: ''
+  keepalives_count_rcvd: '0'
+  keepalives_count_sent: '0'
+  last_peer_reset: never
+  last_peer_reset_reason: No error
+  last_reset: never
+  last_reset_reason: No error
+  localhost_ip: ''
+  localhost_port: ''
+  nei_table_version: ['0']
+  neighbor: 47.48.246.179
+  notifications_count_rcvd: '0'
+  notifications_count_sent: '0'
+  opens_count_rcvd: '0'
+  opens_count_sent: '0'
+  outbound_routemap: ''
+  remote_ip: ''
+  remote_port: ''
+  restart_time_adv: ''
+  restart_time_rcv: ''
+  route_refresh_count_rcvd: '0'
+  route_refresh_count_sent: '0'
+  rr_new_cap: ''
+  rr_old_cap: ''
+  sent_paths: '0'
+  source_iface: loopback0
+  stale_time: ''
+  table_version: ['4']
   total_bytes_count_rcvd: '0'
   total_bytes_count_sent: '0'
   total_bytes_rcvd_queue: '0'
@@ -365,8 +418,58 @@ parsed_sample:
   updates_count_sent: '0'
   uptime: 3d16h
 - accepted_paths: '51195'
-  outbound_routemap: ''
+  addr_fam_adv: IPv4 Unicast
+  addr_fam_rcv: ''
+  addr_family: [IPv4 Unicast]
+  asn: '65003'
+  bgp_state: Established
+  capability_count_rcvd: '0'
+  capability_count_sent: '0'
+  conn_dropped: '0'
+  conn_estab: '1'
+  consumed_mem: '3071700'
+  description: from bing to bing
+  ext_nh_cap: advertised
+  fourbyte_cap: advertised received
+  graceful_cap: advertised received
   inbound_routemap: ''
+  keepalives_count_rcvd: '348479'
+  keepalives_count_sent: '474926'
+  last_peer_reset: never
+  last_peer_reset_reason: No error
+  last_reset: never
+  last_reset_reason: No error
+  localhost_ip: 148.188.153.56
+  localhost_port: '24169'
+  nei_table_version: ['8483941']
+  neighbor: 217.90.29.79
+  notifications_count_rcvd: '0'
+  notifications_count_sent: '0'
+  opens_count_rcvd: '857498'
+  opens_count_sent: '1'
+  outbound_routemap: ''
+  remote_ip: 22.15.33.118
+  remote_port: '179'
+  restart_time_adv: '120'
+  restart_time_rcv: '120'
+  route_refresh_count_rcvd: '0'
+  route_refresh_count_sent: '0'
+  rr_new_cap: advertised received
+  rr_old_cap: advertised received
+  sent_paths: '10303'
+  source_iface: Ethernet5/24
+  stale_time: '300'
+  table_version: ['8483941']
+  total_bytes_count_rcvd: '99012794'
+  total_bytes_count_sent: '116954780'
+  total_bytes_rcvd_queue: '0'
+  total_bytes_send_queue: '0'
+  total_mess_count_rcvd: '1205978'
+  total_mess_count_sent: '1413795'
+  updates_count_rcvd: ''
+  updates_count_sent: '938868'
+  uptime: 13w2d
+- accepted_paths: '51195'
   addr_fam_adv: IPv4 Unicast
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
@@ -381,6 +484,7 @@ parsed_sample:
   ext_nh_cap: advertised
   fourbyte_cap: advertised received
   graceful_cap: advertised received
+  inbound_routemap: ''
   keepalives_count_rcvd: '347974'
   keepalives_count_sent: '474925'
   last_peer_reset: never
@@ -395,6 +499,7 @@ parsed_sample:
   notifications_count_sent: '0'
   opens_count_rcvd: '875258'
   opens_count_sent: '1'
+  outbound_routemap: ''
   remote_ip: 228.67.65.167
   remote_port: '28699'
   restart_time_adv: '120'
@@ -417,8 +522,6 @@ parsed_sample:
   updates_count_sent: '937989'
   uptime: 13w2d
 - accepted_paths: '117'
-  outbound_routemap: ''
-  inbound_routemap: ''
   addr_fam_adv: Sent               Rcvd
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
@@ -433,6 +536,7 @@ parsed_sample:
   ext_nh_cap: ''
   fourbyte_cap: advertised
   graceful_cap: advertised
+  inbound_routemap: ''
   keepalives_count_rcvd: '540297'
   keepalives_count_sent: '462065'
   last_peer_reset: never
@@ -447,6 +551,7 @@ parsed_sample:
   notifications_count_sent: '0'
   opens_count_rcvd: '633313'
   opens_count_sent: '1'
+  outbound_routemap: ''
   remote_ip: 88.181.26.218
   remote_port: '179'
   restart_time_adv: ''
@@ -469,8 +574,6 @@ parsed_sample:
   updates_count_sent: '1534229'
   uptime: 13w2d
 - accepted_paths: '2'
-  outbound_routemap: ''
-  inbound_routemap: ''
   addr_fam_adv: Sent               Rcvd
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
@@ -485,6 +588,7 @@ parsed_sample:
   ext_nh_cap: ''
   fourbyte_cap: advertised
   graceful_cap: advertised
+  inbound_routemap: ''
   keepalives_count_rcvd: '540290'
   keepalives_count_sent: '462062'
   last_peer_reset: never
@@ -499,6 +603,7 @@ parsed_sample:
   notifications_count_sent: '0'
   opens_count_rcvd: '529532'
   opens_count_sent: '1'
+  outbound_routemap: ''
   remote_ip: 121.155.249.169
   remote_port: '179'
   restart_time_adv: ''
@@ -521,8 +626,6 @@ parsed_sample:
   updates_count_sent: '1534343'
   uptime: 13w2d
 - accepted_paths: '2'
-  outbound_routemap: ''
-  inbound_routemap: ''
   addr_fam_adv: Sent               Rcvd
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
@@ -537,6 +640,7 @@ parsed_sample:
   ext_nh_cap: ''
   fourbyte_cap: advertised
   graceful_cap: advertised
+  inbound_routemap: ''
   keepalives_count_rcvd: '540294'
   keepalives_count_sent: '462062'
   last_peer_reset: never
@@ -551,6 +655,7 @@ parsed_sample:
   notifications_count_sent: '0'
   opens_count_rcvd: '536991'
   opens_count_sent: '1'
+  outbound_routemap: ''
   remote_ip: 72.243.246.239
   remote_port: '179'
   restart_time_adv: ''
@@ -573,8 +678,6 @@ parsed_sample:
   updates_count_sent: '1533678'
   uptime: 13w2d
 - accepted_paths: '12'
-  outbound_routemap: ''
-  inbound_routemap: ''
   addr_fam_adv: Sent               Rcvd
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
@@ -589,6 +692,7 @@ parsed_sample:
   ext_nh_cap: ''
   fourbyte_cap: advertised
   graceful_cap: advertised
+  inbound_routemap: ''
   keepalives_count_rcvd: '540295'
   keepalives_count_sent: '462072'
   last_peer_reset: never
@@ -603,6 +707,7 @@ parsed_sample:
   notifications_count_sent: '0'
   opens_count_rcvd: '653827'
   opens_count_sent: '1'
+  outbound_routemap: ''
   remote_ip: 249.71.59.33
   remote_port: '179'
   restart_time_adv: ''
@@ -625,8 +730,6 @@ parsed_sample:
   updates_count_sent: '1533676'
   uptime: 13w2d
 - accepted_paths: '9'
-  outbound_routemap: ''
-  inbound_routemap: ''
   addr_fam_adv: Sent               Rcvd
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
@@ -641,6 +744,7 @@ parsed_sample:
   ext_nh_cap: ''
   fourbyte_cap: advertised
   graceful_cap: advertised
+  inbound_routemap: ''
   keepalives_count_rcvd: '540291'
   keepalives_count_sent: '462066'
   last_peer_reset: never
@@ -655,6 +759,7 @@ parsed_sample:
   notifications_count_sent: '0'
   opens_count_rcvd: '635238'
   opens_count_sent: '1'
+  outbound_routemap: ''
   remote_ip: 88.87.6.2
   remote_port: '179'
   restart_time_adv: ''
@@ -677,8 +782,6 @@ parsed_sample:
   updates_count_sent: '1533414'
   uptime: 13w2d
 - accepted_paths: '12'
-  outbound_routemap: ''
-  inbound_routemap: ''
   addr_fam_adv: Sent               Rcvd
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
@@ -693,6 +796,7 @@ parsed_sample:
   ext_nh_cap: ''
   fourbyte_cap: advertised
   graceful_cap: advertised
+  inbound_routemap: ''
   keepalives_count_rcvd: '540291'
   keepalives_count_sent: '462066'
   last_peer_reset: never
@@ -707,6 +811,7 @@ parsed_sample:
   notifications_count_sent: '0'
   opens_count_rcvd: '635285'
   opens_count_sent: '1'
+  outbound_routemap: ''
   remote_ip: 187.84.208.112
   remote_port: '179'
   restart_time_adv: ''
@@ -729,8 +834,6 @@ parsed_sample:
   updates_count_sent: '1533446'
   uptime: 13w2d
 - accepted_paths: '10'
-  outbound_routemap: ''
-  inbound_routemap: ''
   addr_fam_adv: Sent               Rcvd
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
@@ -745,6 +848,7 @@ parsed_sample:
   ext_nh_cap: ''
   fourbyte_cap: advertised
   graceful_cap: advertised
+  inbound_routemap: ''
   keepalives_count_rcvd: '429734'
   keepalives_count_sent: '462068'
   last_peer_reset: never
@@ -759,6 +863,7 @@ parsed_sample:
   notifications_count_sent: '0'
   opens_count_rcvd: '657289'
   opens_count_sent: '1'
+  outbound_routemap: ''
   remote_ip: 22.41.156.160
   remote_port: '59645'
   restart_time_adv: ''
@@ -781,8 +886,6 @@ parsed_sample:
   updates_count_sent: '1534639'
   uptime: 13w2d
 - accepted_paths: '3'
-  outbound_routemap: ''
-  inbound_routemap: ''
   addr_fam_adv: Sent               Rcvd
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
@@ -797,6 +900,7 @@ parsed_sample:
   ext_nh_cap: ''
   fourbyte_cap: advertised
   graceful_cap: advertised
+  inbound_routemap: ''
   keepalives_count_rcvd: '540290'
   keepalives_count_sent: '462065'
   last_peer_reset: never
@@ -811,6 +915,7 @@ parsed_sample:
   notifications_count_sent: '0'
   opens_count_rcvd: '676579'
   opens_count_sent: '1'
+  outbound_routemap: ''
   remote_ip: 249.173.131.89
   remote_port: '179'
   restart_time_adv: ''
@@ -833,8 +938,6 @@ parsed_sample:
   updates_count_sent: '1532707'
   uptime: 13w2d
 - accepted_paths: '1'
-  outbound_routemap: ''
-  inbound_routemap: ''
   addr_fam_adv: Sent               Rcvd
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
@@ -849,6 +952,7 @@ parsed_sample:
   ext_nh_cap: ''
   fourbyte_cap: advertised
   graceful_cap: advertised
+  inbound_routemap: ''
   keepalives_count_rcvd: '540291'
   keepalives_count_sent: '462067'
   last_peer_reset: never
@@ -863,6 +967,7 @@ parsed_sample:
   notifications_count_sent: '0'
   opens_count_rcvd: '673811'
   opens_count_sent: '1'
+  outbound_routemap: ''
   remote_ip: 113.114.126.174
   remote_port: '179'
   restart_time_adv: ''
@@ -885,8 +990,6 @@ parsed_sample:
   updates_count_sent: '1532747'
   uptime: 13w2d
 - accepted_paths: '247'
-  outbound_routemap: ''
-  inbound_routemap: ''
   addr_fam_adv: Sent               Rcvd
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
@@ -901,6 +1004,7 @@ parsed_sample:
   ext_nh_cap: ''
   fourbyte_cap: advertised
   graceful_cap: advertised
+  inbound_routemap: ''
   keepalives_count_rcvd: '540295'
   keepalives_count_sent: '462097'
   last_peer_reset: never
@@ -915,6 +1019,7 @@ parsed_sample:
   notifications_count_sent: '0'
   opens_count_rcvd: '645646'
   opens_count_sent: '1'
+  outbound_routemap: ''
   remote_ip: 241.90.87.199
   remote_port: '179'
   restart_time_adv: ''
@@ -937,8 +1042,6 @@ parsed_sample:
   updates_count_sent: '1532440'
   uptime: 13w2d
 - accepted_paths: '61'
-  outbound_routemap: ''
-  inbound_routemap: ''
   addr_fam_adv: Sent               Rcvd
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
@@ -953,6 +1056,7 @@ parsed_sample:
   ext_nh_cap: ''
   fourbyte_cap: advertised
   graceful_cap: advertised
+  inbound_routemap: ''
   keepalives_count_rcvd: '540295'
   keepalives_count_sent: '462080'
   last_peer_reset: never
@@ -967,6 +1071,7 @@ parsed_sample:
   notifications_count_sent: '0'
   opens_count_rcvd: '651138'
   opens_count_sent: '1'
+  outbound_routemap: ''
   remote_ip: 224.44.237.104
   remote_port: '179'
   restart_time_adv: ''
@@ -989,8 +1094,6 @@ parsed_sample:
   updates_count_sent: '1531755'
   uptime: 13w2d
 - accepted_paths: '324'
-  outbound_routemap: ''
-  inbound_routemap: ''
   addr_fam_adv: IPv4 Unicast
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
@@ -1005,6 +1108,7 @@ parsed_sample:
   ext_nh_cap: advertised received
   fourbyte_cap: advertised received
   graceful_cap: advertised received
+  inbound_routemap: ''
   keepalives_count_rcvd: '538997'
   keepalives_count_sent: '462954'
   last_peer_reset: never
@@ -1019,6 +1123,7 @@ parsed_sample:
   notifications_count_sent: '0'
   opens_count_rcvd: '4645'
   opens_count_sent: '1'
+  outbound_routemap: ''
   remote_ip: 116.246.167.246
   remote_port: '27360'
   restart_time_adv: '120'
@@ -1041,8 +1146,6 @@ parsed_sample:
   updates_count_sent: '1529417'
   uptime: 13w2d
 - accepted_paths: '258'
-  outbound_routemap: ''
-  inbound_routemap: ''
   addr_fam_adv: Sent               Rcvd
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
@@ -1057,6 +1160,7 @@ parsed_sample:
   ext_nh_cap: ''
   fourbyte_cap: advertised
   graceful_cap: advertised
+  inbound_routemap: ''
   keepalives_count_rcvd: '540296'
   keepalives_count_sent: '462068'
   last_peer_reset: never
@@ -1071,6 +1175,7 @@ parsed_sample:
   notifications_count_sent: '0'
   opens_count_rcvd: '634933'
   opens_count_sent: '1'
+  outbound_routemap: ''
   remote_ip: 27.240.178.84
   remote_port: '179'
   restart_time_adv: ''
@@ -1093,8 +1198,6 @@ parsed_sample:
   updates_count_sent: '1534379'
   uptime: 13w2d
 - accepted_paths: '265'
-  outbound_routemap: ''
-  inbound_routemap: ''
   addr_fam_adv: Sent               Rcvd
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
@@ -1109,6 +1212,7 @@ parsed_sample:
   ext_nh_cap: ''
   fourbyte_cap: advertised
   graceful_cap: advertised
+  inbound_routemap: ''
   keepalives_count_rcvd: '540293'
   keepalives_count_sent: '462070'
   last_peer_reset: never
@@ -1123,6 +1227,7 @@ parsed_sample:
   notifications_count_sent: '0'
   opens_count_rcvd: '650489'
   opens_count_sent: '1'
+  outbound_routemap: ''
   remote_ip: 133.127.112.13
   remote_port: '179'
   restart_time_adv: ''
@@ -1145,8 +1250,6 @@ parsed_sample:
   updates_count_sent: '1532715'
   uptime: 13w2d
 - accepted_paths: '33'
-  outbound_routemap: ''
-  inbound_routemap: ''
   addr_fam_adv: Sent               Rcvd
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
@@ -1161,6 +1264,7 @@ parsed_sample:
   ext_nh_cap: ''
   fourbyte_cap: advertised
   graceful_cap: advertised
+  inbound_routemap: ''
   keepalives_count_rcvd: '540291'
   keepalives_count_sent: '462066'
   last_peer_reset: never
@@ -1175,6 +1279,7 @@ parsed_sample:
   notifications_count_sent: '0'
   opens_count_rcvd: '664426'
   opens_count_sent: '1'
+  outbound_routemap: ''
   remote_ip: 234.33.202.152
   remote_port: '179'
   restart_time_adv: ''
@@ -1197,8 +1302,6 @@ parsed_sample:
   updates_count_sent: '1532601'
   uptime: 13w2d
 - accepted_paths: '7'
-  outbound_routemap: ''
-  inbound_routemap: ''
   addr_fam_adv: Sent               Rcvd
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
@@ -1213,6 +1316,7 @@ parsed_sample:
   ext_nh_cap: ''
   fourbyte_cap: advertised
   graceful_cap: advertised
+  inbound_routemap: ''
   keepalives_count_rcvd: '404105'
   keepalives_count_sent: '462066'
   last_peer_reset: never
@@ -1227,6 +1331,7 @@ parsed_sample:
   notifications_count_sent: '0'
   opens_count_rcvd: '654504'
   opens_count_sent: '1'
+  outbound_routemap: ''
   remote_ip: 124.68.182.124
   remote_port: '179'
   restart_time_adv: ''
@@ -1248,49 +1353,49 @@ parsed_sample:
   updates_count_rcvd: ''
   updates_count_sent: '1533067'
   uptime: 13w2d
-- accepted_paths: '6'
-  outbound_routemap: ''
-  inbound_routemap: ''
+- accepted_paths: '0'
   addr_fam_adv: ''
   addr_fam_rcv: ''
-  addr_family: [IPv4 Unicast, IPv4 Unicast]
+  addr_family: [IPv4 Unicast]
   asn: '64568'
   bgp_state: Shut (Admin)
   capability_count_rcvd: '0'
   capability_count_sent: '0'
   conn_dropped: '0'
   conn_estab: '0'
-  consumed_mem: '360'
+  consumed_mem: '0'
   description: from bar to foo
   ext_nh_cap: ''
   fourbyte_cap: ''
   graceful_cap: ''
+  inbound_routemap: ''
   keepalives_count_rcvd: '0'
   keepalives_count_sent: '0'
   last_peer_reset: never
   last_peer_reset_reason: No error
   last_reset: never
   last_reset_reason: No error
-  localhost_ip: 42.49.226.128
-  localhost_port: '30976'
-  nei_table_version: ['0', '8483941']
+  localhost_ip: ''
+  localhost_port: ''
+  nei_table_version: ['0']
   neighbor: 178.51.35.168
   notifications_count_rcvd: '0'
   notifications_count_sent: '0'
   opens_count_rcvd: '0'
   opens_count_sent: '0'
-  remote_ip: 187.198.29.137
-  remote_port: '179'
+  outbound_routemap: ''
+  remote_ip: ''
+  remote_port: ''
   restart_time_adv: ''
   restart_time_rcv: ''
   route_refresh_count_rcvd: '0'
   route_refresh_count_sent: '0'
   rr_new_cap: ''
   rr_old_cap: ''
-  sent_paths: '53440'
+  sent_paths: '0'
   source_iface: ''
   stale_time: ''
-  table_version: ['8483941', '8483941']
+  table_version: ['8483941']
   total_bytes_count_rcvd: '0'
   total_bytes_count_sent: '0'
   total_bytes_rcvd_queue: '0'
@@ -1300,9 +1405,59 @@ parsed_sample:
   updates_count_rcvd: ''
   updates_count_sent: '0'
   uptime: 13w2d
-- accepted_paths: '54'
-  outbound_routemap: ''
+- accepted_paths: '6'
+  addr_fam_adv: Sent               Rcvd
+  addr_fam_rcv: ''
+  addr_family: [IPv4 Unicast]
+  asn: '63000'
+  bgp_state: Established
+  capability_count_rcvd: '0'
+  capability_count_sent: '0'
+  conn_dropped: '0'
+  conn_estab: '1'
+  consumed_mem: '360'
+  description: from bing to monkey
+  ext_nh_cap: ''
+  fourbyte_cap: advertised
+  graceful_cap: advertised
   inbound_routemap: ''
+  keepalives_count_rcvd: '540297'
+  keepalives_count_sent: '462062'
+  last_peer_reset: never
+  last_peer_reset_reason: No error
+  last_reset: never
+  last_reset_reason: No error
+  localhost_ip: 42.49.226.128
+  localhost_port: '30976'
+  nei_table_version: ['8483941']
+  neighbor: 212.164.170.242
+  notifications_count_rcvd: '0'
+  notifications_count_sent: '0'
+  opens_count_rcvd: '277837'
+  opens_count_sent: '1'
+  outbound_routemap: ''
+  remote_ip: 187.198.29.137
+  remote_port: '179'
+  restart_time_adv: ''
+  restart_time_rcv: ''
+  route_refresh_count_rcvd: '0'
+  route_refresh_count_sent: '0'
+  rr_new_cap: advertised received
+  rr_old_cap: advertised received
+  sent_paths: '53440'
+  source_iface: ''
+  stale_time: ''
+  table_version: ['8483941']
+  total_bytes_count_rcvd: '37605685'
+  total_bytes_count_sent: '159180954'
+  total_bytes_rcvd_queue: '0'
+  total_bytes_send_queue: '0'
+  total_mess_count_rcvd: '818135'
+  total_mess_count_sent: '1993594'
+  updates_count_rcvd: ''
+  updates_count_sent: '1531531'
+  uptime: 13w2d
+- accepted_paths: '54'
   addr_fam_adv: Sent               Rcvd
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
@@ -1317,6 +1472,7 @@ parsed_sample:
   ext_nh_cap: ''
   fourbyte_cap: advertised
   graceful_cap: advertised
+  inbound_routemap: ''
   keepalives_count_rcvd: '540292'
   keepalives_count_sent: '462056'
   last_peer_reset: never
@@ -1331,6 +1487,7 @@ parsed_sample:
   notifications_count_sent: '0'
   opens_count_rcvd: '85'
   opens_count_sent: '1'
+  outbound_routemap: ''
   remote_ip: 130.223.103.98
   remote_port: '179'
   restart_time_adv: ''
@@ -1353,8 +1510,6 @@ parsed_sample:
   updates_count_sent: '1531655'
   uptime: 13w2d
 - accepted_paths: '94'
-  outbound_routemap: ''
-  inbound_routemap: ''
   addr_fam_adv: Sent               Rcvd
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
@@ -1369,6 +1524,7 @@ parsed_sample:
   ext_nh_cap: ''
   fourbyte_cap: advertised
   graceful_cap: advertised
+  inbound_routemap: ''
   keepalives_count_rcvd: '417850'
   keepalives_count_sent: '462089'
   last_peer_reset: never
@@ -1383,6 +1539,7 @@ parsed_sample:
   notifications_count_sent: '0'
   opens_count_rcvd: '618470'
   opens_count_sent: '1'
+  outbound_routemap: ''
   remote_ip: 60.17.163.56
   remote_port: '35869'
   restart_time_adv: ''
@@ -1405,8 +1562,6 @@ parsed_sample:
   updates_count_sent: '1533153'
   uptime: 13w2d
 - accepted_paths: '155'
-  outbound_routemap: ''
-  inbound_routemap: ''
   addr_fam_adv: Sent               Rcvd
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
@@ -1421,6 +1576,7 @@ parsed_sample:
   ext_nh_cap: ''
   fourbyte_cap: advertised
   graceful_cap: advertised
+  inbound_routemap: ''
   keepalives_count_rcvd: '540291'
   keepalives_count_sent: '462073'
   last_peer_reset: never
@@ -1435,6 +1591,7 @@ parsed_sample:
   notifications_count_sent: '0'
   opens_count_rcvd: '157'
   opens_count_sent: '1'
+  outbound_routemap: ''
   remote_ip: 40.101.222.225
   remote_port: '179'
   restart_time_adv: ''
@@ -1457,8 +1614,6 @@ parsed_sample:
   updates_count_sent: '1530946'
   uptime: 13w2d
 - accepted_paths: '358'
-  outbound_routemap: ''
-  inbound_routemap: ''
   addr_fam_adv: Sent               Rcvd
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
@@ -1473,6 +1628,7 @@ parsed_sample:
   ext_nh_cap: ''
   fourbyte_cap: advertised
   graceful_cap: advertised
+  inbound_routemap: ''
   keepalives_count_rcvd: '425522'
   keepalives_count_sent: '462428'
   last_peer_reset: never
@@ -1487,6 +1643,7 @@ parsed_sample:
   notifications_count_sent: '0'
   opens_count_rcvd: '675340'
   opens_count_sent: '1'
+  outbound_routemap: ''
   remote_ip: 128.255.228.37
   remote_port: '18524'
   restart_time_adv: ''
@@ -1509,8 +1666,6 @@ parsed_sample:
   updates_count_sent: '1530832'
   uptime: 13w2d
 - accepted_paths: '5'
-  outbound_routemap: ''
-  inbound_routemap: ''
   addr_fam_adv: Sent               Rcvd
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
@@ -1525,6 +1680,7 @@ parsed_sample:
   ext_nh_cap: ''
   fourbyte_cap: advertised
   graceful_cap: advertised
+  inbound_routemap: ''
   keepalives_count_rcvd: '540296'
   keepalives_count_sent: '462063'
   last_peer_reset: never
@@ -1539,6 +1695,7 @@ parsed_sample:
   notifications_count_sent: '0'
   opens_count_rcvd: '643578'
   opens_count_sent: '1'
+  outbound_routemap: ''
   remote_ip: 119.96.208.59
   remote_port: '179'
   restart_time_adv: ''
@@ -1561,8 +1718,6 @@ parsed_sample:
   updates_count_sent: '1532184'
   uptime: 13w2d
 - accepted_paths: '3'
-  outbound_routemap: ''
-  inbound_routemap: ''
   addr_fam_adv: Sent               Rcvd
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
@@ -1577,6 +1732,7 @@ parsed_sample:
   ext_nh_cap: ''
   fourbyte_cap: advertised
   graceful_cap: advertised
+  inbound_routemap: ''
   keepalives_count_rcvd: '540299'
   keepalives_count_sent: '462064'
   last_peer_reset: never
@@ -1591,6 +1747,7 @@ parsed_sample:
   notifications_count_sent: '0'
   opens_count_rcvd: '645340'
   opens_count_sent: '1'
+  outbound_routemap: ''
   remote_ip: 195.117.50.146
   remote_port: '179'
   restart_time_adv: ''
@@ -1613,8 +1770,6 @@ parsed_sample:
   updates_count_sent: '1533949'
   uptime: 13w2d
 - accepted_paths: '5'
-  outbound_routemap: ''
-  inbound_routemap: ''
   addr_fam_adv: Sent               Rcvd
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
@@ -1629,6 +1784,7 @@ parsed_sample:
   ext_nh_cap: ''
   fourbyte_cap: advertised
   graceful_cap: advertised
+  inbound_routemap: ''
   keepalives_count_rcvd: '540287'
   keepalives_count_sent: '462067'
   last_peer_reset: never
@@ -1643,6 +1799,7 @@ parsed_sample:
   notifications_count_sent: '0'
   opens_count_rcvd: '3'
   opens_count_sent: '1'
+  outbound_routemap: ''
   remote_ip: 186.39.56.0
   remote_port: '179'
   restart_time_adv: ''
@@ -1665,8 +1822,6 @@ parsed_sample:
   updates_count_sent: '1531502'
   uptime: 13w2d
 - accepted_paths: '5'
-  outbound_routemap: ''
-  inbound_routemap: ''
   addr_fam_adv: Sent               Rcvd
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
@@ -1681,6 +1836,7 @@ parsed_sample:
   ext_nh_cap: ''
   fourbyte_cap: advertised
   graceful_cap: advertised
+  inbound_routemap: ''
   keepalives_count_rcvd: '540297'
   keepalives_count_sent: '462064'
   last_peer_reset: never
@@ -1695,6 +1851,7 @@ parsed_sample:
   notifications_count_sent: '0'
   opens_count_rcvd: '648401'
   opens_count_sent: '1'
+  outbound_routemap: ''
   remote_ip: 235.228.253.157
   remote_port: '179'
   restart_time_adv: ''
@@ -1717,8 +1874,6 @@ parsed_sample:
   updates_count_sent: '1533275'
   uptime: 13w2d
 - accepted_paths: '3'
-  outbound_routemap: ''
-  inbound_routemap: ''
   addr_fam_adv: Sent               Rcvd
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
@@ -1733,6 +1888,7 @@ parsed_sample:
   ext_nh_cap: ''
   fourbyte_cap: advertised
   graceful_cap: advertised
+  inbound_routemap: ''
   keepalives_count_rcvd: '540293'
   keepalives_count_sent: '462062'
   last_peer_reset: never
@@ -1747,6 +1903,7 @@ parsed_sample:
   notifications_count_sent: '0'
   opens_count_rcvd: '2'
   opens_count_sent: '1'
+  outbound_routemap: ''
   remote_ip: 244.157.125.129
   remote_port: '179'
   restart_time_adv: ''
@@ -1768,39 +1925,39 @@ parsed_sample:
   updates_count_rcvd: ''
   updates_count_sent: '1531346'
   uptime: 13w2d
-- accepted_paths: '21'
-  outbound_routemap: 'DENY_ALL'
-  inbound_routemap: ''
+- accepted_paths: '0'
   addr_fam_adv: ''
   addr_fam_rcv: ''
-  addr_family: [IPv4 Unicast, IPv4 Unicast]
+  addr_family: [IPv4 Unicast]
   asn: '65271'
   bgp_state: Idle
   capability_count_rcvd: '0'
   capability_count_sent: '0'
   conn_dropped: '0'
   conn_estab: '0'
-  consumed_mem: '1260'
+  consumed_mem: '0'
   description: from monkey to boo
   ext_nh_cap: ''
   fourbyte_cap: ''
   graceful_cap: ''
+  inbound_routemap: ''
   keepalives_count_rcvd: '0'
   keepalives_count_sent: '0'
   last_peer_reset: never
   last_peer_reset_reason: No error
   last_reset: never
   last_reset_reason: No error
-  localhost_ip: 168.77.208.187
-  localhost_port: '28277'
-  nei_table_version: ['0', '8483941']
+  localhost_ip: ''
+  localhost_port: ''
+  nei_table_version: ['0']
   neighbor: 48.218.155.56
   notifications_count_rcvd: '0'
   notifications_count_sent: '0'
   opens_count_rcvd: '0'
   opens_count_sent: '0'
-  remote_ip: 192.204.136.39
-  remote_port: '179'
+  outbound_routemap: ''
+  remote_ip: ''
+  remote_port: ''
   restart_time_adv: ''
   restart_time_rcv: ''
   route_refresh_count_rcvd: '0'
@@ -1810,7 +1967,7 @@ parsed_sample:
   sent_paths: '0'
   source_iface: ''
   stale_time: ''
-  table_version: ['8483941', '8483941']
+  table_version: ['8483941']
   total_bytes_count_rcvd: '0'
   total_bytes_count_sent: '0'
   total_bytes_rcvd_queue: '0'
@@ -1820,9 +1977,59 @@ parsed_sample:
   updates_count_rcvd: ''
   updates_count_sent: '0'
   uptime: 13w2d
-- accepted_paths: '6'
-  outbound_routemap: ''
+- accepted_paths: '21'
+  addr_fam_adv: Sent               Rcvd
+  addr_fam_rcv: ''
+  addr_family: [IPv4 Unicast]
+  asn: '65201'
+  bgp_state: Established
+  capability_count_rcvd: '0'
+  capability_count_sent: '0'
+  conn_dropped: '0'
+  conn_estab: '1'
+  consumed_mem: '1260'
+  description: from monkey to baz
+  ext_nh_cap: ''
+  fourbyte_cap: advertised
+  graceful_cap: advertised
   inbound_routemap: ''
+  keepalives_count_rcvd: '540302'
+  keepalives_count_sent: '539739'
+  last_peer_reset: never
+  last_peer_reset_reason: No error
+  last_reset: never
+  last_reset_reason: No error
+  localhost_ip: 168.77.208.187
+  localhost_port: '28277'
+  nei_table_version: ['8483941']
+  neighbor: 44.153.169.176
+  notifications_count_rcvd: '0'
+  notifications_count_sent: '0'
+  opens_count_rcvd: '2'
+  opens_count_sent: '1'
+  outbound_routemap: DENY_ALL
+  remote_ip: 192.204.136.39
+  remote_port: '179'
+  restart_time_adv: ''
+  restart_time_rcv: ''
+  route_refresh_count_rcvd: '0'
+  route_refresh_count_sent: '0'
+  rr_new_cap: advertised received
+  rr_old_cap: advertised received
+  sent_paths: '0'
+  source_iface: Ethernet3/30
+  stale_time: ''
+  table_version: ['8483941']
+  total_bytes_count_rcvd: '10265893'
+  total_bytes_count_sent: '10255045'
+  total_bytes_rcvd_queue: '0'
+  total_bytes_send_queue: '0'
+  total_mess_count_rcvd: '540305'
+  total_mess_count_sent: '539741'
+  updates_count_rcvd: ''
+  updates_count_sent: '1'
+  uptime: 13w2d
+- accepted_paths: '6'
   addr_fam_adv: Sent               Rcvd
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
@@ -1837,6 +2044,7 @@ parsed_sample:
   ext_nh_cap: ''
   fourbyte_cap: advertised
   graceful_cap: advertised
+  inbound_routemap: ''
   keepalives_count_rcvd: '526575'
   keepalives_count_sent: '462446'
   last_peer_reset: never
@@ -1851,6 +2059,7 @@ parsed_sample:
   notifications_count_sent: '0'
   opens_count_rcvd: '2683'
   opens_count_sent: '1'
+  outbound_routemap: ''
   remote_ip: 49.149.6.165
   remote_port: '18056'
   restart_time_adv: ''
@@ -1873,8 +2082,6 @@ parsed_sample:
   updates_count_sent: '1531827'
   uptime: 13w2d
 - accepted_paths: '32'
-  outbound_routemap: ''
-  inbound_routemap: ''
   addr_fam_adv: Sent               Rcvd
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
@@ -1889,6 +2096,7 @@ parsed_sample:
   ext_nh_cap: ''
   fourbyte_cap: advertised
   graceful_cap: advertised
+  inbound_routemap: ''
   keepalives_count_rcvd: '527508'
   keepalives_count_sent: '462096'
   last_peer_reset: never
@@ -1903,6 +2111,7 @@ parsed_sample:
   notifications_count_sent: '0'
   opens_count_rcvd: '253'
   opens_count_sent: '1'
+  outbound_routemap: ''
   remote_ip: 144.195.50.101
   remote_port: '35983'
   restart_time_adv: ''
@@ -1925,8 +2134,6 @@ parsed_sample:
   updates_count_sent: '1533270'
   uptime: 13w2d
 - accepted_paths: '6'
-  outbound_routemap: ''
-  inbound_routemap: ''
   addr_fam_adv: IPv4 Unicast
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
@@ -1941,6 +2148,7 @@ parsed_sample:
   ext_nh_cap: advertised
   fourbyte_cap: advertised received
   graceful_cap: advertised received
+  inbound_routemap: ''
   keepalives_count_rcvd: '539882'
   keepalives_count_sent: '462077'
   last_peer_reset: 9w4d
@@ -1955,6 +2163,7 @@ parsed_sample:
   notifications_count_sent: '0'
   opens_count_rcvd: '9'
   opens_count_sent: '2'
+  outbound_routemap: ''
   remote_ip: 170.229.101.87
   remote_port: '179'
   restart_time_adv: '120'
@@ -1977,8 +2186,6 @@ parsed_sample:
   updates_count_sent: '1549371'
   uptime: 9w4d
 - accepted_paths: '110'
-  outbound_routemap: ''
-  inbound_routemap: ''
   addr_fam_adv: IPv4 Unicast
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
@@ -1993,6 +2200,7 @@ parsed_sample:
   ext_nh_cap: advertised
   fourbyte_cap: advertised received
   graceful_cap: advertised received
+  inbound_routemap: ''
   keepalives_count_rcvd: '539738'
   keepalives_count_sent: '462085'
   last_peer_reset: 1d06h
@@ -2007,6 +2215,7 @@ parsed_sample:
   notifications_count_sent: '0'
   opens_count_rcvd: '79'
   opens_count_sent: '4'
+  outbound_routemap: ''
   remote_ip: 160.215.146.14
   remote_port: '179'
   restart_time_adv: '120'
@@ -2028,49 +2237,49 @@ parsed_sample:
   updates_count_rcvd: ''
   updates_count_sent: '1578342'
   uptime: 1d06h
-- accepted_paths: '55'
-  outbound_routemap: 'ALLOW_DEFAULT'
-  inbound_routemap: ''
+- accepted_paths: '0'
   addr_fam_adv: ''
   addr_fam_rcv: ''
-  addr_family: [IPv4 Unicast, IPv4 Unicast]
+  addr_family: [IPv4 Unicast]
   asn: '65282'
   bgp_state: Idle
   capability_count_rcvd: '0'
   capability_count_sent: '0'
   conn_dropped: '0'
   conn_estab: '0'
-  consumed_mem: '3300'
+  consumed_mem: '0'
   description: from bing to bar
   ext_nh_cap: ''
   fourbyte_cap: ''
   graceful_cap: ''
+  inbound_routemap: ''
   keepalives_count_rcvd: '0'
   keepalives_count_sent: '0'
   last_peer_reset: never
   last_peer_reset_reason: No error
   last_reset: never
   last_reset_reason: No error
-  localhost_ip: 238.32.93.158
-  localhost_port: '65116'
-  nei_table_version: ['0', '8483941']
+  localhost_ip: ''
+  localhost_port: ''
+  nei_table_version: ['0']
   neighbor: 32.180.174.240
   notifications_count_rcvd: '0'
   notifications_count_sent: '0'
   opens_count_rcvd: '0'
   opens_count_sent: '0'
-  remote_ip: 206.89.69.2
-  remote_port: '179'
+  outbound_routemap: ALLOW_DEFAULT
+  remote_ip: ''
+  remote_port: ''
   restart_time_adv: ''
   restart_time_rcv: ''
   route_refresh_count_rcvd: '0'
   route_refresh_count_sent: '0'
   rr_new_cap: ''
   rr_old_cap: ''
-  sent_paths: '53393'
+  sent_paths: '0'
   source_iface: ''
   stale_time: ''
-  table_version: ['8483941', '8483941']
+  table_version: ['8483941']
   total_bytes_count_rcvd: '0'
   total_bytes_count_sent: '0'
   total_bytes_rcvd_queue: '0'
@@ -2080,9 +2289,59 @@ parsed_sample:
   updates_count_rcvd: ''
   updates_count_sent: '0'
   uptime: 13w2d
-- accepted_paths: '642'
-  outbound_routemap: ''
+- accepted_paths: '55'
+  addr_fam_adv: IPv4 Unicast
+  addr_fam_rcv: ''
+  addr_family: [IPv4 Unicast]
+  asn: '64602'
+  bgp_state: Established
+  capability_count_rcvd: '0'
+  capability_count_sent: '0'
+  conn_dropped: '1'
+  conn_estab: '2'
+  consumed_mem: '3300'
+  description: from donkey to bing
+  ext_nh_cap: advertised received
+  fourbyte_cap: advertised received
+  graceful_cap: advertised received
   inbound_routemap: ''
+  keepalives_count_rcvd: '539731'
+  keepalives_count_sent: '462077'
+  last_peer_reset: 10w5d
+  last_peer_reset_reason: duplicate connection request
+  last_reset: never
+  last_reset_reason: No error
+  localhost_ip: 238.32.93.158
+  localhost_port: '65116'
+  nei_table_version: ['8483941']
+  neighbor: 132.226.58.125
+  notifications_count_rcvd: '0'
+  notifications_count_sent: '0'
+  opens_count_rcvd: '223'
+  opens_count_sent: '2'
+  outbound_routemap: ''
+  remote_ip: 206.89.69.2
+  remote_port: '179'
+  restart_time_adv: '120'
+  restart_time_rcv: '120'
+  route_refresh_count_rcvd: '0'
+  route_refresh_count_sent: '0'
+  rr_new_cap: advertised received
+  rr_old_cap: advertised received
+  sent_paths: '53393'
+  source_iface: Ethernet6/8
+  stale_time: '300'
+  table_version: ['8483941']
+  total_bytes_count_rcvd: '10273374'
+  total_bytes_count_sent: '206256974'
+  total_bytes_rcvd_queue: '0'
+  total_bytes_send_queue: '0'
+  total_mess_count_rcvd: '539956'
+  total_mess_count_sent: '2010003'
+  updates_count_rcvd: ''
+  updates_count_sent: '1547924'
+  uptime: 10w5d
+- accepted_paths: '642'
   addr_fam_adv: Sent               Rcvd
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
@@ -2097,6 +2356,7 @@ parsed_sample:
   ext_nh_cap: ''
   fourbyte_cap: advertised received
   graceful_cap: advertised
+  inbound_routemap: ''
   keepalives_count_rcvd: '525814'
   keepalives_count_sent: '463268'
   last_peer_reset: never
@@ -2111,6 +2371,7 @@ parsed_sample:
   notifications_count_sent: '0'
   opens_count_rcvd: '226933'
   opens_count_sent: '1'
+  outbound_routemap: ''
   remote_ip: 112.221.23.57
   remote_port: '37814'
   restart_time_adv: ''
@@ -2133,8 +2394,6 @@ parsed_sample:
   updates_count_sent: '1527603'
   uptime: 13w2d
 - accepted_paths: '11'
-  outbound_routemap: ''
-  inbound_routemap: ''
   addr_fam_adv: IPv4 Unicast
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
@@ -2149,6 +2408,7 @@ parsed_sample:
   ext_nh_cap: advertised received
   fourbyte_cap: advertised received
   graceful_cap: advertised received
+  inbound_routemap: ''
   keepalives_count_rcvd: '539905'
   keepalives_count_sent: '462076'
   last_peer_reset: never
@@ -2163,6 +2423,7 @@ parsed_sample:
   notifications_count_sent: '0'
   opens_count_rcvd: '3'
   opens_count_sent: '1'
+  outbound_routemap: ''
   remote_ip: 191.20.54.179
   remote_port: '57737'
   restart_time_adv: '120'
@@ -2185,8 +2446,6 @@ parsed_sample:
   updates_count_sent: '1535502'
   uptime: 13w2d
 - accepted_paths: '1'
-  outbound_routemap: ''
-  inbound_routemap: ''
   addr_fam_adv: IPv4 Unicast
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
@@ -2201,6 +2460,7 @@ parsed_sample:
   ext_nh_cap: advertised received
   fourbyte_cap: advertised received
   graceful_cap: advertised received
+  inbound_routemap: ''
   keepalives_count_rcvd: '539885'
   keepalives_count_sent: '462075'
   last_peer_reset: never
@@ -2215,6 +2475,7 @@ parsed_sample:
   notifications_count_sent: '0'
   opens_count_rcvd: '2'
   opens_count_sent: '1'
+  outbound_routemap: ''
   remote_ip: 255.186.167.183
   remote_port: '17650'
   restart_time_adv: '120'
@@ -2237,8 +2498,6 @@ parsed_sample:
   updates_count_sent: '1533672'
   uptime: 13w2d
 - accepted_paths: '26'
-  outbound_routemap: ''
-  inbound_routemap: ''
   addr_fam_adv: IPv4 Unicast
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
@@ -2253,6 +2512,7 @@ parsed_sample:
   ext_nh_cap: advertised received
   fourbyte_cap: advertised received
   graceful_cap: advertised received
+  inbound_routemap: ''
   keepalives_count_rcvd: '539976'
   keepalives_count_sent: '462078'
   last_peer_reset: never
@@ -2267,6 +2527,7 @@ parsed_sample:
   notifications_count_sent: '0'
   opens_count_rcvd: '18'
   opens_count_sent: '1'
+  outbound_routemap: ''
   remote_ip: 222.28.243.82
   remote_port: '16952'
   restart_time_adv: '120'
@@ -2289,8 +2550,6 @@ parsed_sample:
   updates_count_sent: '1533539'
   uptime: 13w2d
 - accepted_paths: '4'
-  outbound_routemap: ''
-  inbound_routemap: ''
   addr_fam_adv: IPv4 Unicast
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
@@ -2305,6 +2564,7 @@ parsed_sample:
   ext_nh_cap: advertised received
   fourbyte_cap: advertised received
   graceful_cap: advertised received
+  inbound_routemap: ''
   keepalives_count_rcvd: '539740'
   keepalives_count_sent: '462080'
   last_peer_reset: 10w5d
@@ -2319,6 +2579,7 @@ parsed_sample:
   notifications_count_sent: '0'
   opens_count_rcvd: '15'
   opens_count_sent: '3'
+  outbound_routemap: ''
   remote_ip: 127.176.93.177
   remote_port: '179'
   restart_time_adv: '120'
@@ -2341,8 +2602,6 @@ parsed_sample:
   updates_count_sent: '1563738'
   uptime: 10w5d
 - accepted_paths: '5'
-  outbound_routemap: ''
-  inbound_routemap: ''
   addr_fam_adv: IPv4 Unicast
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
@@ -2357,6 +2616,7 @@ parsed_sample:
   ext_nh_cap: advertised
   fourbyte_cap: advertised received
   graceful_cap: advertised received
+  inbound_routemap: ''
   keepalives_count_rcvd: '578128'
   keepalives_count_sent: '462068'
   last_peer_reset: never
@@ -2371,6 +2631,7 @@ parsed_sample:
   notifications_count_sent: '0'
   opens_count_rcvd: '7'
   opens_count_sent: '1'
+  outbound_routemap: ''
   remote_ip: 166.18.170.15
   remote_port: '179'
   restart_time_adv: '120'
@@ -2393,8 +2654,6 @@ parsed_sample:
   updates_count_sent: '1533546'
   uptime: 13w2d
 - accepted_paths: '1'
-  outbound_routemap: ''
-  inbound_routemap: ''
   addr_fam_adv: IPv4 Unicast
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
@@ -2409,6 +2668,7 @@ parsed_sample:
   ext_nh_cap: advertised received
   fourbyte_cap: advertised received
   graceful_cap: advertised received
+  inbound_routemap: ''
   keepalives_count_rcvd: '539929'
   keepalives_count_sent: '462076'
   last_peer_reset: never
@@ -2423,6 +2683,7 @@ parsed_sample:
   notifications_count_sent: '0'
   opens_count_rcvd: '2'
   opens_count_sent: '1'
+  outbound_routemap: ''
   remote_ip: 87.38.121.111
   remote_port: '40066'
   restart_time_adv: '120'
@@ -2445,8 +2706,6 @@ parsed_sample:
   updates_count_sent: '1534921'
   uptime: 13w2d
 - accepted_paths: '51100'
-  outbound_routemap: ''
-  inbound_routemap: ''
   addr_fam_adv: IPv4 Unicast
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
@@ -2461,6 +2720,7 @@ parsed_sample:
   ext_nh_cap: advertised received
   fourbyte_cap: advertised received
   graceful_cap: advertised received
+  inbound_routemap: ''
   keepalives_count_rcvd: '465343'
   keepalives_count_sent: '478041'
   last_peer_reset: never
@@ -2475,6 +2735,7 @@ parsed_sample:
   notifications_count_sent: '0'
   opens_count_rcvd: '1000017'
   opens_count_sent: '2'
+  outbound_routemap: ''
   remote_ip: 129.148.50.189
   remote_port: '179'
   restart_time_adv: '120'
@@ -2497,8 +2758,6 @@ parsed_sample:
   updates_count_sent: '913861'
   uptime: 12w6d
 - accepted_paths: '51100'
-  outbound_routemap: ''
-  inbound_routemap: ''
   addr_fam_adv: IPv4 Unicast
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
@@ -2513,6 +2772,7 @@ parsed_sample:
   ext_nh_cap: advertised received
   fourbyte_cap: advertised received
   graceful_cap: advertised received
+  inbound_routemap: ''
   keepalives_count_rcvd: '462580'
   keepalives_count_sent: '477387'
   last_peer_reset: 11w4d
@@ -2527,6 +2787,7 @@ parsed_sample:
   notifications_count_sent: '0'
   opens_count_rcvd: '1108031'
   opens_count_sent: '7'
+  outbound_routemap: ''
   remote_ip: 180.138.38.81
   remote_port: '179'
   restart_time_adv: '120'
@@ -2549,8 +2810,6 @@ parsed_sample:
   updates_count_sent: '955014'
   uptime: 11w4d
 - accepted_paths: '52809'
-  outbound_routemap: ''
-  inbound_routemap: ''
   addr_fam_adv: IPv4 Unicast
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
@@ -2565,6 +2824,7 @@ parsed_sample:
   ext_nh_cap: advertised received
   fourbyte_cap: advertised received
   graceful_cap: advertised received
+  inbound_routemap: ''
   keepalives_count_rcvd: '463215'
   keepalives_count_sent: '473697'
   last_peer_reset: 11w5d
@@ -2579,6 +2839,7 @@ parsed_sample:
   notifications_count_sent: '6'
   opens_count_rcvd: '1334218'
   opens_count_sent: '9'
+  outbound_routemap: ''
   remote_ip: 188.93.115.206
   remote_port: '3413'
   restart_time_adv: '120'
@@ -2601,8 +2862,6 @@ parsed_sample:
   updates_count_sent: '1321374'
   uptime: 11w5d
 - accepted_paths: '12901'
-  outbound_routemap: ''
-  inbound_routemap: ''
   addr_fam_adv: IPv4 Unicast
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast]
@@ -2617,6 +2876,7 @@ parsed_sample:
   ext_nh_cap: advertised
   fourbyte_cap: advertised received
   graceful_cap: advertised received
+  inbound_routemap: ''
   keepalives_count_rcvd: '473315'
   keepalives_count_sent: '462406'
   last_peer_reset: never
@@ -2631,6 +2891,7 @@ parsed_sample:
   notifications_count_sent: '0'
   opens_count_rcvd: '1067023'
   opens_count_sent: '1'
+  outbound_routemap: ''
   remote_ip: 255.45.69.45
   remote_port: '25122'
   restart_time_adv: '120'
@@ -2653,8 +2914,6 @@ parsed_sample:
   updates_count_sent: '1506061'
   uptime: 13w2d
 - accepted_paths: '2159'
-  outbound_routemap: ''
-  inbound_routemap: ''
   addr_fam_adv: IPv4 Unicast  IPv6 Unicast  L2VPN EVPN
   addr_fam_rcv: ''
   addr_family: [IPv4 Unicast, IPv6 Unicast, L2VPN EVPN]
@@ -2669,6 +2928,7 @@ parsed_sample:
   ext_nh_cap: advertised received
   fourbyte_cap: advertised received
   graceful_cap: advertised received
+  inbound_routemap: ''
   keepalives_count_rcvd: '35845'
   keepalives_count_sent: '38070'
   last_peer_reset: never
@@ -2683,6 +2943,7 @@ parsed_sample:
   notifications_count_sent: '2'
   opens_count_rcvd: '21260'
   opens_count_sent: '3'
+  outbound_routemap: ''
   remote_ip: 87.39.86.252
   remote_port: '179'
   restart_time_adv: '120'
