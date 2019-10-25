@@ -1,0 +1,125 @@
+
+802.11a Network.................................. Disabled
+11acSupport...................................... Enabled
+11nSupport....................................... Enabled
+      802.11a Low Band........................... Enabled
+      802.11a Mid Band........................... Enabled
+      802.11a High Band.......................... Enabled
+802.11a Operational Rates
+    802.11a 6M Rate.............................. Mandatory
+    802.11a 9M Rate.............................. Supported
+    802.11a 12M Rate............................. Mandatory
+    802.11a 18M Rate............................. Supported
+    802.11a 24M Rate............................. Mandatory
+    802.11a 36M Rate............................. Supported
+    802.11a 48M Rate............................. Supported
+    802.11a 54M Rate............................. Supported
+802.11n MCS Settings:
+    MCS 0........................................ Supported
+    MCS 1........................................ Supported
+    MCS 2........................................ Supported
+    MCS 3........................................ Supported
+    MCS 4........................................ Supported
+    MCS 5........................................ Supported
+    MCS 6........................................ Supported
+    MCS 7........................................ Supported
+    MCS 8........................................ Supported
+    MCS 9........................................ Supported
+    MCS 10....................................... Supported
+    MCS 11....................................... Supported
+    MCS 12....................................... Supported
+    MCS 13....................................... Supported
+    MCS 14....................................... Supported
+    MCS 15....................................... Supported
+    MCS 16....................................... Supported
+    MCS 17....................................... Supported
+    MCS 18....................................... Supported
+    MCS 19....................................... Supported
+    MCS 20....................................... Supported
+    MCS 21....................................... Supported
+    MCS 22....................................... Supported
+    MCS 23....................................... Supported
+    MCS 24....................................... Supported
+    MCS 25....................................... Supported
+    MCS 26....................................... Supported
+    MCS 27....................................... Supported
+    MCS 28....................................... Supported
+    MCS 29....................................... Supported
+    MCS 30....................................... Supported
+    MCS 31....................................... Supported
+802.11ac MCS Settings:
+    Nss=1: MCS 0-9 .............................. Supported
+    Nss=2: MCS 0-9 .............................. Supported
+    Nss=3: MCS 0-9 .............................. Supported
+    Nss=4: MCS 0-7 .............................. Supported
+802.11n Status:
+    A-MPDU Tx:
+        Priority 0............................... Enabled
+        Priority 1............................... Enabled
+        Priority 2............................... Enabled
+        Priority 3............................... Enabled
+        Priority 4............................... Enabled
+        Priority 5............................... Enabled
+        Priority 6............................... Disabled
+        Priority 7............................... Disabled
+        Aggregation scheduler.................... Enabled
+        Frame Burst.............................. Automatic
+            Realtime Timeout..................... 10
+            Non Realtime Timeout................. 200
+    A-MSDU Tx:
+        Priority 0............................... Enabled
+        Priority 1............................... Enabled
+        Priority 2............................... Enabled
+        Priority 3............................... Enabled
+        Priority 4............................... Enabled
+        Priority 5............................... Enabled
+        Priority 6............................... Disabled
+        Priority 7............................... Disabled
+    A-MSDU Max Subframes ........................ 3
+    A-MSDU MAX Length ........................... 8k
+    Rifs Rx ..................................... Enabled
+    Guard Interval .............................. Any
+Beacon Interval.................................. 100
+CF Pollable mandatory............................ Disabled
+CF Poll Request mandatory........................ Disabled
+CFP Period....................................... 4
+CFP Maximum Duration............................. 60
+Default Channel.................................. 36
+Default Tx Power Level........................... 1
+DTPC  Status..................................... Enabled
+Fragmentation Threshold.......................... 2346
+RSSI Low Check................................... Disabled
+RSSI Threshold................................... -80
+TI Threshold..................................... -50
+Legacy Tx Beamforming setting.................... Disabled
+Traffic Stream Metrics Status.................... Disabled
+Expedited BW Request Status...................... Disabled
+World Mode....................................... Enabled
+dfs-peakdetect................................... Enabled
+EDCA profile type................................ default-wmm
+Voice MAC optimization status.................... Disabled
+Call Admission Control (CAC) configuration
+Voice AC:
+   Voice AC - Admission control (ACM)............ Disabled
+   Voice Stream-Size............................. 84000
+   Voice Max-Streams............................. 2
+   Voice max RF bandwidth........................ 75
+   Voice reserved roaming bandwidth.............. 6
+   Voice CAC Method ............................. Load-Based
+   Voice tspec inactivity timeout................ Disabled
+ CAC SIP-Voice configuration
+   SIP based CAC ................................ Disabled
+   SIP Codec Type ............................... CODEC_TYPE_G711
+   SIP call bandwidth ........................... 64
+   SIP call bandwith sample-size ................ 20
+Video AC:
+   Video AC - Admission control (ACM)............ Disabled
+   Video max RF bandwidth........................ 0
+   Video reserved roaming bandwidth.............. 0
+   Video load-based CAC mode..................... Disabled
+   Video CAC Method ............................. Static
+ CAC SIP-Video Configuration
+   SIP based CAC ................................ Disabled
+   Best-effort AC - Admission control (ACM)...... Disabled
+   Background AC - Admission control (ACM)....... Disabled
+Maximum Number of Clients per AP Radio........... 200
