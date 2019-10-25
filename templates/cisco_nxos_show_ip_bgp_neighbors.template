@@ -52,6 +52,7 @@ Value INBOUND_ROUTEMAP (\S+)
 Value OUTBOUND_ROUTEMAP (\S+)
 
 Start
+  ^BGP\s+neighbor\s+is -> Continue.Record
   ^BGP neighbor is ${NEIGHBOR},\s+remote AS\s+${ASN},.*
   ^\s+Description:\s+${DESCRIPTION}
   ^\s+BGP state = ${BGP_STATE}, \w+ for ${UPTIME}
@@ -82,6 +83,8 @@ Start
 
 AddrFamCap
   ^\s+${ADDR_FAM_ADV} -> Start
+  ^BGP\s+neighbor\s+is -> Continue.Record
+  ^BGP\s+neighbor\s+is\s+${NEIGHBOR},\s+remote\s+AS\s+${ASN},.* -> Start
 
 AddrFamState
   ^\s+For address family:\s+${ADDR_FAMILY}
@@ -92,6 +95,7 @@ AddrFamState
   ^\s+Outbound\s+route-map\s+configured\s+is\s+${OUTBOUND_ROUTEMAP},\s+handle\s+obtained
   ^\s+Last End-of-RIB received [\d:]+ after session start -> AddrFamState
   ^\s+Local host:\s+${LOCALHOST_IP}, Local port:\s+${LOCALHOST_PORT}
-  ^\s+Foreign host:\s+${REMOTE_IP}, Foreign port:\s+${REMOTE_PORT} -> Record Start
-
-EOF
+  ^\s+Foreign host:\s+${REMOTE_IP}, Foreign port:\s+${REMOTE_PORT}
+  ^\s+No\s+established\s+BGP\s+session\s+with\s+peer
+  ^BGP\s+neighbor\s+is -> Continue.Record
+  ^BGP\s+neighbor\s+is\s+${NEIGHBOR},\s+remote\s+AS\s+${ASN},.* -> Start
