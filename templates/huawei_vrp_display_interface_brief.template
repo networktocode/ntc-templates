@@ -1,0 +1,12 @@
+Value INTERFACE (\S+)
+Value PHY (down|\*down|up|up\(s\))
+Value PROTOCOL (down|\*down|up|up\(s\))
+Value INUTI (\d*\.?\d*%|\-\-)
+Value OUTUTI (\d*\.?\d*%|\-\-)
+Value INERRORS (\d+)
+Value OUTERRORS (\d+)
+
+
+
+Start
+  ^\s*${INTERFACE}\s+${PHY}\s+${PROTOCOL}\s+${INUTI}\s+${OUTUTI}\s+${INERRORS}\s+${OUTERRORS} -> Record
