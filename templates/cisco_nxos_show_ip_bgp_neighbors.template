@@ -48,8 +48,11 @@ Value TOTAL_MESS_COUNT_RCVD (\d+)
 Value TOTAL_BYTES_COUNT_RCVD (\d+)
 Value TOTAL_BYTES_SEND_QUEUE (\d+)
 Value TOTAL_BYTES_RCVD_QUEUE (\d+)
+Value INBOUND_ROUTEMAP (\S+)
+Value OUTBOUND_ROUTEMAP (\S+)
 
 Start
+  ^BGP\s+neighbor\s+is -> Continue.Record
   ^BGP neighbor is ${NEIGHBOR},\s+remote AS\s+${ASN},.*
   ^\s+Description:\s+${DESCRIPTION}
   ^\s+BGP state = ${BGP_STATE}, \w+ for ${UPTIME}
@@ -80,14 +83,19 @@ Start
 
 AddrFamCap
   ^\s+${ADDR_FAM_ADV} -> Start
+  ^BGP\s+neighbor\s+is -> Continue.Record
+  ^BGP\s+neighbor\s+is\s+${NEIGHBOR},\s+remote\s+AS\s+${ASN},.* -> Start
 
 AddrFamState
   ^\s+For address family:\s+${ADDR_FAMILY}
   ^\s+BGP table version ${TABLE_VERSION}, neighbor version ${NEI_TABLE_VERSION}
   ^\s+${ACCEPTED_PATHS} accepted paths consume ${CONSUMED_MEM} bytes of memory
   ^\s+${SENT_PATHS} sent paths
+  ^\s+Inbound\s+route-map\s+configured\s+is\s+${INBOUND_ROUTEMAP},\s+handle\s+obtained
+  ^\s+Outbound\s+route-map\s+configured\s+is\s+${OUTBOUND_ROUTEMAP},\s+handle\s+obtained
   ^\s+Last End-of-RIB received [\d:]+ after session start -> AddrFamState
   ^\s+Local host:\s+${LOCALHOST_IP}, Local port:\s+${LOCALHOST_PORT}
-  ^\s+Foreign host:\s+${REMOTE_IP}, Foreign port:\s+${REMOTE_PORT} -> Record Start
-
-EOF
+  ^\s+Foreign host:\s+${REMOTE_IP}, Foreign port:\s+${REMOTE_PORT}
+  ^\s+No\s+established\s+BGP\s+session\s+with\s+peer
+  ^BGP\s+neighbor\s+is -> Continue.Record
+  ^BGP\s+neighbor\s+is\s+${NEIGHBOR},\s+remote\s+AS\s+${ASN},.* -> Start

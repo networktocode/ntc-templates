@@ -1,6 +1,6 @@
 Value PORT (\S+)
-Value NAME (\w.*\w)
-Value STATUS (connected|notconnect|inactive|errdisabled)
+Value NAME (\S.*(?<!\s))
+Value STATUS (connected|notconnect|inactive|errdisabled|disabled)
 Value VLAN (\S+)
 Value DUPLEX (\S+)
 Value SPEED (\S+)
