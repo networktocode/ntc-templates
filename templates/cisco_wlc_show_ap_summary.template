@@ -1,0 +1,12 @@
+Value AP_NAME (\S+)
+Value SLOTS (\d+)
+Value AP_MODEL (\S+|n/a)
+Value ETHERNET_MAC (/W+:/W+:/W+:/W+:/W+:/W+)
+Value LOCATION ((/S+/s)*)
+Value COUNTRY (US)
+Value IP_ADDRESS (/d+./d+./d+./d+)
+Value CLIENTS (\d+)
+
+
+Start
+  ^${AP_NAME}\s+${SLOTS}\s+${AP_MODEL}\s+${ETHERNET_MAC}\s+${LOCATION}\s+${COUNTRY}\s+${IP_ADDRESS}\s+${CLIENTS} -> Record
