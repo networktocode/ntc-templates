@@ -27,6 +27,7 @@ arista_eos_show_lldp_neighbors_detail.template, .*, arista_eos, sh[[ow]] ll[[dp]
 arista_eos_show_environment_cooling.template, .*, arista_eos, sh[[ow]] en[[vironment]] c[[ooling]]
 arista_eos_show_ip_interface_brief.template, .*, arista_eos, sh[[ow]] i[[p]] int[[erface]] br[[ief]]
 arista_eos_show_interfaces_status.template, .*, arista_eos, sh[[ow]] int[[erfaces]] st[[atus]]
+arista_eos_show_ip_helper-address.template, .*, arista_eos, sh[[ow]] ip he[[lper-address]]
 arista_eos_show_mac_address-table.template, .*, arista_eos, sh[[ow]] m[[ac]] ad[[dress-table]]
 arista_eos_show_ip_ospf_database.template, .*, arista_eos, sh[[ow]] i[[p]] o[[spf]] data[[base]]
 arista_eos_show_ip_ospf_neighbor.template, .*, arista_eos, sh[[ow]] i[[p]] o[[spf]] nei[[ghbor]]
@@ -101,6 +102,8 @@ checkpoint_gaia_show_dns.template, .*, checkpoint_gaia, show dns
 checkpoint_gaia_show_lom.template, .*, checkpoint_gaia, show lom
 checkpoint_gaia_fw_stat.template, .*, checkpoint_gaia, fw stat
 
+ciena_6x_software_show.template, .*, ciena_6x, so[[ftware]] sh[[ow]]
+
 cisco_asa_show_running-config_object_network.template, .*, cisco_asa, sh[[ow]] ru[[nning-config]] o[[bject]] n[[etwork]]
 cisco_asa_show_asp_table_vpn-context_detail.template, .*, cisco_asa, sh[[ow]] asp t[[able]] vpn-co[[ntext]] d[[etail]]
 cisco_asa_show_running-config_crypto_ikev1.template, .*, cisco_asa, sh[[ow]] ru[[nning-config]] cr[[ypto]] ikev1
@@ -132,6 +135,7 @@ cisco_ios_show_running-config_partition_route-map.template, .*, cisco_ios, sh[[o
 cisco_ios_show_capability_feature_routing.template, .*, cisco_ios, sh[[ow]] cap[[ability]] f[[eature]] r[[outing]]
 cisco_ios_show_authentication_sessions.template, .*, cisco_ios, show authen[[tication]] ses[[sions]]
 cisco_ios_show_ip_ospf_interface_brief.template, .*, cisco_ios, sh[[ow]] ip ospf int[[erface]]
+cisco_ios_show_processes_memory_sorted.template, .*, cisco_ios, sh[[ow]] pro[[cesses]] mem[[ory]] so[[rted]]
 cisco_ios_show_interfaces_description.template, .*, cisco_ios, sh[[ow]] int[[erfaces]] des[[cription]]
 cisco_ios_show_ip_device_tracking_all.template, .*, cisco_ios, sh[[ow]] ip de[[vice]] t[[racking]] a[[ll]]
 cisco_ios_show_environment_power_all.template, .*, cisco_ios, sh[[ow]] envi[[ronment]] p[[ower]] a[[ll]]
@@ -238,13 +242,16 @@ cisco_nxos_show_fex.template, .*, cisco_nxos, sh[[ow]] fex
 cisco_nxos_show_vpc.template, .*, cisco_nxos, sh[[ow]] vpc
 cisco_nxos_show_vrf.template, .*, cisco_nxos, sh[[ow]] vrf
 
+cisco_wlc_ssh_show_802.11a_cleanair_config.template, .*, cisco_wlc_ssh, sh[[ow]] 802\.11[ab] cl[[eanair]] c[[onfig]]
 cisco_wlc_ssh_show_cdp_neighbors_detail.template, .*, cisco_wlc_ssh, sh[[ow]] c[[dp]] neig[[hbors]] det[[ail]]
+cisco_wlc_ssh_show_rf-profile_summary.template, .*, cisco_wlc_ssh, sh[[ow]] rf-[[profile]] s[[ummary]]
 cisco_wlc_ssh_show_ap_config_general.template, .*, cisco_wlc_ssh, sh[[ow]] ap con[[fig]] ge[[neral]]
 cisco_wlc_ssh_show_client_detail.template, .*, cisco_wlc_ssh, sh[[ow]] cl[[ient]] det[[ail]] 
 cisco_wlc_ssh_show_exclusionlist.template, .*, cisco_wlc_ssh, sh[[ow]] ex[[clusionlist]]
 cisco_wlc_ssh_show_ap_summary.template, .*, cisco_wlc_ssh, sh[[ow]] ap sum[[mary]]
+cisco_wlc_ssh_show_inventory.template, .*, cisco_wlc_ssh, sh[[ow]] inve[[ntory]]
+cisco_wlc_ssh_show_802.11a.template, .*, cisco_wlc_ssh, show 802\.11[ab]
 cisco_wlc_ssh_show_sysinfo.template, .*, cisco_wlc_ssh, sh[[ow]] sysi[[nfo]]
-
 
 cisco_xr_show_controllers_fabric_fia_errors_ingress_location.template, .*, cisco_xr, sh[[ow]] contr[[ollers]] fabric fi[[a]] err[[ors]] in[[gress]] loc[[ation]]
 cisco_xr_show_controllers_fabric_fia_drops_ingress_location.template, .*, cisco_xr, sh[[ow]] contr[[ollers]] fabric fi[[a]] dr[[ops]] in[[gress]] loc[[ation]]
@@ -302,6 +309,9 @@ hp_procurve_show_mac-address.template, .*, hp_procurve, sh[[ow]] mac-a[[ddress]]
 hp_procurve_show_system.template, .*, hp_procurve, sh[[ow]] syst[[em]]
 hp_procurve_show_vlans.template, .*, hp_procurve, sh[[ow]] vl[[ans]]
 hp_procurve_show_arp.template, .*, hp_procurve, sh[[ow]] ar[[p]]
+
+huawei_vrp_display_interface_brief.template, .*, huawei_vrp, disp[[lay]] inter[[face]] br[[ief]]
+huawei_vrp_display_temperature.template, .*, huawei_vrp, disp[[lay]] tem[[perature]]
 
 juniper_junos_show_chassis_cluster_interfaces.template, .*, juniper_junos, sh[[ow]] ch[[assis]] c[[luster]] i[[nterface]]
 juniper_junos_show_chassis_cluster_status.template, .*, juniper_junos, sh[[ow]] ch[[assis]] c[[luster]] s[[tatus]]
