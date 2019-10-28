@@ -316,6 +316,7 @@ dell_force10_show_version.template, .*, dell_force10, sh[[ow]] ver[[sion]]
 dell_force10_show_vlan.template, .*, dell_force10, sh[[ow]] vl[[an]]
 dell_force10_show_arp.template, .*, dell_force10, sh[[ow]] ar[[p]]
 
+f5_ltm_show_sys_hardware_grep_fan.template, .*, f5_(ltm|tmsh|linux), sh[[ow]] s[[ys]] hard[[ware]] | gr[[ep]] -B 0 -A 4 Fan
 f5_ltm_show_sys_raid_array.template, .*, f5_(ltm|tmsh|linux), sh[[ow]] sy[[s]] ra[[id]] a[[rray]]
 f5_ltm_show_sys_raid_bay.template, .*, f5_(ltm|tmsh|linux), sh[[ow]] sy[[s]] ra[[id]] b[[ay]]
 f5_ltm_show_sys_raid_disk.template, .*, f5_(ltm|tmsh|linux), sh[[ow]] sy[[s]] ra[[id]] d[[isk]]
