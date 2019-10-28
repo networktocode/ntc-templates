@@ -1,0 +1,12 @@
+Value APNAME (\S+)
+Value IP (\d+.\d+.\d+.\d+)
+Value NeighborName (\S+)
+Value NeighborPort (\S+)
+Value NeighborIP (\d+.\d+.\d+.\d+)
+
+Start
+  ^AP Name -> APCDPNEIGHBOR
+
+APCDPNEIGHBOR
+  ^${APNAME}\s+${IP}\s+${NeighborName}\s+${NeighborPort}
+  ^\s+IP\saddress:\s+${NeighborIP} -> Record

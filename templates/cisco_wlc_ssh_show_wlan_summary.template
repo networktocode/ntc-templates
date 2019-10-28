@@ -1,0 +1,12 @@
+Value WLAN_COUNT (\d+)
+Value WLAN_ID (\d+)
+Value WLAN_PROFILE (\S+)
+Value SSID (\S+)
+Value WLAN_STATUS (Enabled|Disabled)
+Value INTERFACE_NAME (\S+)
+Value PMIPV6_MOBILITY (none)
+
+
+Start
+  ^Number\sof\sWLANs\.+\s${WLAN_COUNT} -> Record
+  ^${WLAN_ID}\s+${WLAN_PROFILE}\s/\s${SSID}\s+${WLAN_STATUS}\s+${INTERFACE_NAME}\s+${PMIPV6_MOBILITY} -> Record

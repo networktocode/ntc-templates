@@ -1,0 +1,10 @@
+Value AP_NAME (\S+)
+Value RADIO_MAC (\S+:\S+:\S+:\S+:\S+:\S+)
+Value SLOT (\d)
+Value ADMIN (ENABLED|DISABLED)
+Value OPER (UP|DOWN)
+Value CHANNEL (\d+)
+
+
+Start
+  ^${AP_NAME}\s+${RADIO_MAC}\s+${SLOT}\s+${ADMIN}\s+${OPER}\s+${CHANNEL} -> Record

@@ -1,0 +1,9 @@
+Value MAC_ADDRESS (\S+:\S+:\S+:\S+:\S+:\S+)
+Value AP_ID (\d+)
+Value STATUS (\S+)
+Value WLAN_ID (\d+)
+Value AUTHENTICATED (Yes|No)
+
+
+Start
+  ^${MAC_ADDRESS}\s+${AP_ID}\s+${STATUS}\s+${WLAN_ID}\s+${AUTHENTICATED} -> Record

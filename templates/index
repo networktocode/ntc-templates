@@ -257,17 +257,17 @@ cisco_nxos_show_fex.template, .*, cisco_nxos, sh[[ow]] fex
 cisco_nxos_show_vpc.template, .*, cisco_nxos, sh[[ow]] vpc
 cisco_nxos_show_vrf.template, .*, cisco_nxos, sh[[ow]] vrf
 
-cisco_wlc_ssh_show_802.11a_cleanair_config.template, .*, cisco_wlc_ssh, sh[[ow]] 802\.11[ab] cl[[eanair]] c[[onfig]]
+cisco_wlc_ssh_show_client_ap_802.11a.template, .*, cisco_wlc_ssh, sh[[ow]] client ap 802.11a \S+
+cisco_wlc_ssh_show_client_ap_802.11a.template, .*, cisco_wlc_ssh, sh[[ow]] client ap 802.11b \S+
+cisco_wlc_ssh_show_client_summary.template, .*, cisco_wlc_ssh, show client summary
 cisco_wlc_ssh_show_cdp_neighbors_detail.template, .*, cisco_wlc_ssh, sh[[ow]] c[[dp]] neig[[hbors]] det[[ail]]
-cisco_wlc_ssh_show_rf-profile_summary.template, .*, cisco_wlc_ssh, sh[[ow]] rf-[[profile]] s[[ummary]]
+cisco_wlc_ssh_show_advanced_802.11a_summary.template, .*, cisco_wlc_ssh, show advanced 802.11a summary
+cisco_wlc_ssh_show_ap_auto-rf_802.11a.template, .*, cisco_wlc_ssh, show ap auto-rf 802.11a \S+
+cisco_wlc_ssh_show_ap_cdp_neigh_all.template, .*, cisco_wlc_ssh, show ap cdp neighbor all
 cisco_wlc_ssh_show_ap_config_general.template, .*, cisco_wlc_ssh, sh[[ow]] ap con[[fig]] ge[[neral]]
-cisco_wlc_ssh_show_client_detail.template, .*, cisco_wlc_ssh, sh[[ow]] cl[[ient]] det[[ail]] 
-cisco_wlc_ssh_show_exclusionlist.template, .*, cisco_wlc_ssh, sh[[ow]] ex[[clusionlist]]
 cisco_wlc_ssh_show_ap_summary.template, .*, cisco_wlc_ssh, sh[[ow]] ap sum[[mary]]
-cisco_wlc_ssh_show_inventory.template, .*, cisco_wlc_ssh, sh[[ow]] inve[[ntory]]
-cisco_wlc_ssh_show_802.11a.template, .*, cisco_wlc_ssh, show 802\.11[ab]
 cisco_wlc_ssh_show_sysinfo.template, .*, cisco_wlc_ssh, sh[[ow]] sysi[[nfo]]
-cisco_wlc_ssh_show_advanced_802_11x_summary, .*, cisco_wlc_ssh show advanced 802.11[[\S+]] summary
+cisco_wlc_ssh_show_wlan_summary.template, .*, cisco_wlc_ssh, show wlan summary
 
 cisco_xr_show_controllers_fabric_fia_errors_ingress_location.template, .*, cisco_xr, sh[[ow]] contr[[ollers]] fabric fi[[a]] err[[ors]] in[[gress]] loc[[ation]]
 cisco_xr_show_controllers_fabric_fia_drops_ingress_location.template, .*, cisco_xr, sh[[ow]] contr[[ollers]] fabric fi[[a]] dr[[ops]] in[[gress]] loc[[ation]]

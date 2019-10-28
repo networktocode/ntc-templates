@@ -1,0 +1,14 @@
+Value RADIO_MAC (\S+:\S+:\S+:\S+:\S+:\S+)
+Value SLOT (\d+)
+Value RSSI (-\d+)
+Value CHANNEL (\d+)
+Value CHANNEL_WIDTH (\d+MHz)
+Value CONTROLLER_IP (\d+.\d+.\d+.\d+)
+Value AP_NAME (\S+)
+
+Start
+  ^\s+Nearby\s+APs -> nearByAPs
+
+nearByAPs
+  ^\s+AP\s+${RADIO_MAC}\s+slot\s+${SLOT}[.]+\s+${RSSI}\s+(dBm)\s+(on)\s+${CHANNEL}\s+${CHANNEL_WIDTH}\s+\(${CONTROLLER_IP}\)\s+${AP_NAME} -> Record
+  ^\s+Radar -> EOF
