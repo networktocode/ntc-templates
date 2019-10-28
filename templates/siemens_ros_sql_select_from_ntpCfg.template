@@ -1,0 +1,13 @@
+Value ID (\d+)
+Value SERVER (Primary|Backup)
+Value IP_ADDRESS (\d+.\d+.\d+.\d+)
+Value UDP_PORT (\d+)
+Value MAX_RETRY (\S+)
+Value TIMEOUT (\S+)
+Value REACHABLE (\S+)
+Value UPDATE_PERIOD (\S+)
+
+
+Start
+  ^ID
+  ^${ID}\s+${SERVER}\s+${IP_ADDRESS}?\s+${UDP_PORT}\s+${MAX_RETRY}\s+${TIMEOUT}\s+${REACHABLE}\s+${UPDATE_PERIOD} -> Record
