@@ -12,7 +12,7 @@ Value STATE_PFXRCD (\d+)
 Value STATE_PFXACC (\d+)
 
 Start
-  ^.*\s+${ROUTER_ID}.*\s+${LOCAL_AS} -> Continue
+  ^.+\s+${ROUTER_ID},\s+[Ll]ocal\s+[Aa][Ss]\s+[Nn]umber\s+${LOCAL_AS}
   ^\s+${BGP_NEIGH}\s+\d+\s+${NEIGH_AS}\s+${MSG_RCVD}\s+${MSG_SENT}\s+${IN_QUEUE}\s+${OUT_QUEUE}\s+${UP_DOWN}\s+${STATE}\s+${STATE_PFXRCD}\s+${STATE_PFXACC} -> Record
   ^\s+${BGP_NEIGH}\s+\d+\s+${NEIGH_AS}\s+${MSG_RCVD}\s+${MSG_SENT}\s+${IN_QUEUE}\s+${OUT_QUEUE}\s+${UP_DOWN}\s+${STATE}\s+ -> Record
   ^${BGP_NEIGH}\s+\d+\s+${NEIGH_AS}\s+${MSG_RCVD}\s+${MSG_SENT}\s+${IN_QUEUE}\s+${OUT_QUEUE}\s+${UP_DOWN}\s+${STATE_PFXRCD} -> Record
