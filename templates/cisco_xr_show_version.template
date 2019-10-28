@@ -1,16 +1,28 @@
 Value VERSION (\S[^\[]+)
-Value UPTIME (.+)
+Value UPTIME (.+?)
 Value LOCATION (\S+)
 Value HARDWARE (.+)
 Value BUILD_HOST (\S+)
 
 Start
-  ^Cisco IOS XR Software, Version ${VERSION} 
+  ^Cisco\s+IOS\s+XR\s+Software,\s+Version\s+${VERSION}
   ^Build\s+Information: -> Build_Info
-  ^.+uptime is ${UPTIME}
-  ^${HARDWARE}\s\(.*\) processor
+  ^.+uptime\s+is\s+${UPTIME}\s*$$
+  ^(?:\s*[Cc]isco\s+)?${HARDWARE}\s\(.*\) processor
+  ^\S{3}\s+\S{3}\s+\d{1,2}\s+\d+:\d+:\d+
+  ^Copyright
+  ^ROM:
+  ^[Ss]ystem\s+[Ii]mage
+  ^\d+\s+processor
+  ^\d+\s+.*(?:[Ee]th|[Gg]ig[Ee]|[Ss][Oo][Nn][Ee][Tt]|[Ww][Aa][Nn][Pp][Hh][Yy])
+  ^\d+\w\s+bytes
+  ^Boot\s+device
+  ^Package\s+active
+  ^hfr-doc -> CRS
+  ^\s*$$
+  ^. -> Error
   
-#A VARIATION OF THE OUTPUT, EX. NCS PLATFORM
+# A VARIATION OF THE OUTPUT, EX. NCS PLATFORM
 Build_Info
   ^\s+Built\sBy.+
   ^\s+Built\sOn.+
@@ -18,7 +30,8 @@ Build_Info
   ^\s+Workspace\s+:\s\S+
   ^\s+Version\s+:\s${VERSION}
   ^\s+Location\s+:\s${LOCATION}
-  ^$$ -> Start
-  ^\s+$$
-  ^$$
-  ^.* -> Error "Line not found"
+  ^\s*$$ -> Start
+  ^.* -> Error
+
+CRS
+  ^.
