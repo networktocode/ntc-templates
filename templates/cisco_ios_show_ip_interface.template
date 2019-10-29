@@ -30,6 +30,7 @@ Start
   ^\s+Multicast
   ^\s+2[2-5]\d\.
   ^\s+Address\s+determined
+  ^\s+Peer
   ^\s+Directed
   ^\s+MTU
   ^\s+Helper
@@ -41,6 +42,7 @@ Start
   ^\s+Split
   ^\s+ICMP
   ^\s+IP\s+(?:fast|Flow|CEF|Null|multicast|route|output|access)
+  ^\s+Downstream
   ^\s+Associated
   ^\s+Topology
   ^\s+Router
