@@ -33,3 +33,13 @@ parsed_sample:
     outgoing_acl: ''
     protocol_status: up
     vrf: ''
+-   inbound_acl: ''
+    intf: 'Serial0/0/0:0'
+    ip_helper: []
+    ipaddr: ['172.1.1.110']
+    link_status: 'up'
+    mask: ['30']
+    mtu: ''
+    outgoing_acl: ''
+    protocol_status: 'up'
+    vrf: ''

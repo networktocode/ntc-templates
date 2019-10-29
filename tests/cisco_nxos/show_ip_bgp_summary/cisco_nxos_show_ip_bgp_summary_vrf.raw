@@ -1,0 +1,36 @@
+BGP summary information for VRF RED, address family IPv4 Unicast
+BGP router identifier 192.168.1.1, local AS number 65001
+BGP table version is 110, IPv4 Unicast config peers 1, capable peers 1
+8 network entries and 8 paths using 1152 bytes of memory
+BGP attribute entries [6/864], BGP AS path entries [4/64]
+BGP community entries [3/124], BGP clusterlist entries [0/0]
+7 received paths for inbound soft reconfiguration
+7 identical, 0 modified, 0 filtered received paths using 0 bytes
+
+Neighbor        V    AS MsgRcvd MsgSent   TblVer  InQ OutQ Up/Down  State/PfxRcd
+192.168.1.2     4 65002 1143238 1065438      110    0    0    10w4d 7
+
+BGP summary information for VRF WHITE, address family IPv4 Unicast
+BGP router identifier 192.168.2.1, local AS number 65011
+BGP table version is 114, IPv4 Unicast config peers 1, capable peers 1
+8 network entries and 8 paths using 1152 bytes of memory
+BGP attribute entries [6/864], BGP AS path entries [4/64]
+BGP community entries [3/124], BGP clusterlist entries [0/0]
+7 received paths for inbound soft reconfiguration
+7 identical, 0 modified, 0 filtered received paths using 0 bytes
+
+Neighbor        V    AS MsgRcvd MsgSent   TblVer  InQ OutQ Up/Down  State/PfxRcd
+192.168.2.2     4 65012 1142321 1065438      114    0    0    10w4d 7
+
+BGP summary information for VRF BLUE, address family IPv4 Unicast
+BGP router identifier 192.168.3.1, local AS number 65021
+BGP table version is 16, IPv4 Unicast config peers 2, capable peers 2
+2 network entries and 3 paths using 368 bytes of memory
+BGP attribute entries [4/576], BGP AS path entries [1/22]
+BGP community entries [3/124], BGP clusterlist entries [0/0]
+2 received paths for inbound soft reconfiguration
+0 identical, 2 modified, 0 filtered received paths using 16 bytes
+
+Neighbor        V    AS MsgRcvd MsgSent   TblVer  InQ OutQ Up/Down  State/PfxRcd
+192.168.3.2     4 65022  672804  639789       16    0    0    10w4d 1
+192.168.3.3     4 65023  672792  639791       16    0    0    10w4d 1
