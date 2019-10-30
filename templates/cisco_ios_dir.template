@@ -11,5 +11,8 @@ Start
   ^\s*${ID}\s+${PERMISSIONS}\s+${SIZE}\s+${DATE_TIME}\s+${NAME}\s*$$ -> Record
   ^Directory of\s+${FILE_SYSTEM}
   ^${TOTAL_SIZE}\s+\S+\s+\S+\s\(${TOTAL_FREE} bytes free\)
+  # Capture time-stamp if vty line has command time-stamping turned on
+  ^Load\s+for\s+
+  ^Time\s+source\s+is
 
 EOF

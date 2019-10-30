@@ -14,4 +14,6 @@ Start
   ^PID:\s+,.*VID:\s+${VID}.*
   ^.*SN:\s+${SN} -> Record
   ^.*SN: -> Record
-
+  # Capture time-stamp if vty line has command time-stamping turned on
+  ^Load\s+for\s+
+  ^Time\s+source\s+is

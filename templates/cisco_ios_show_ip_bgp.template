@@ -12,6 +12,9 @@ Value ORIGIN ([ie\?])
 Start
   # Since using mostly position, play it safe and ensure we see header first
   ^\s+Network\s+Next Hop\s+Metric\s+LocPrf\s+Weight\s+Path -> Bgp_table
+  # Capture time-stamp if vty line has command time-stamping turned on
+  ^Load\s+for\s+
+  ^Time\s+source\s+is
 
 Bgp_table
   #

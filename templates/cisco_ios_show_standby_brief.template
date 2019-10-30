@@ -9,6 +9,9 @@ Value VIRTUALIP (\S+)
 
 Start
   ^Interface\s+Grp\s+Pri\s+P\s+State\s+Active\s+Standby\s+Virtual\s+IP\s*$$ -> Standby
+  # Capture time-stamp if vty line has command time-stamping turned on
+  ^Load\s+for\s+
+  ^Time\s+source\s+is
 
 Standby
   ^${IFACE}\s+${GROUP}\s+${PRIORITY}\s+${PREEMPT}\s+${STATE}\s+${ACTIVE}\s+${STANDBY}\s+${VIRTUALIP} -> Record

@@ -46,5 +46,8 @@ Gateway
   # If it doesn't match anything above, this just acknowledges a new line
   ^\s*$$
   # This will throw an error if there are no matches
+  # Capture time-stamp if vty line has command time-stamping turned on
+  ^Load\s+for\s+
+  ^Time\s+source\s+is
   ^. -> Error
 

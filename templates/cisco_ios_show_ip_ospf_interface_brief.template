@@ -7,3 +7,6 @@ Value NEIGHBORS_FC (\d+/\d+)
 
 Start
   ^${INTERFACE}\s+\d+\s+${AREA}\s+${IP_ADDRESS_MASK}\s+${COST}\s+${STATE}\s+${NEIGHBORS_FC} -> Record
+  # Capture time-stamp if vty line has command time-stamping turned on
+  ^Load\s+for\s+
+  ^Time\s+source\s+is

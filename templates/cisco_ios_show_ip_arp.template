@@ -9,5 +9,7 @@ Start
   ^Protocol\s+Address\s+Age\s*\(min\)\s+Hardware Addr\s+Type\s+Interface
   ^${PROTOCOL}\s+${ADDRESS}\s+${AGE}\s+${MAC}\s+${TYPE}\s+${INTERFACE} -> Record
   ^${PROTOCOL}\s+${ADDRESS}\s+${AGE}\s+${MAC}\s+${TYPE} -> Record
-  ^. -> Error
-  
+  # Capture time-stamp if vty line has command time-stamping turned on
+  ^Load\s+for\s+
+  ^Time\s+source\s+is
+  ^. -> Error  

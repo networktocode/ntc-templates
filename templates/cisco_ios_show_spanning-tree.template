@@ -10,3 +10,6 @@ Value TYPE (.*)
 Start
   ^VLAN(0*)?${VLAN_ID}
   ^${INTERFACE}\s+${ROLE}\s+${STATUS}\s+${COST}\s+${PORT_PRIORITY}.${PORT_ID}\s+${TYPE} -> Record
+  # Capture time-stamp if vty line has command time-stamping turned on
+  ^Load\s+for\s+
+  ^Time\s+source\s+is

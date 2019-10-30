@@ -16,5 +16,15 @@ Start
   ^\s*Access\s+Mode\s+VLAN:\s+${ACCESS_VLAN}
   ^\s*Trunking\s+Native\s+Mode\s+VLAN:\s+${NATIVE_VLAN}
   ^\s*Trunking\s+VLANs\s+Enabled:\s+${TRUNKING_VLANS} -> Record
-  ^.+$$
+  ^\s*Administrative\s+Mode
+  ^\s*(?:Operational|Administrative)\s+(?:Trunking|Native\s+VLAN|private-vlan)
+  ^\s*Voice\s+VLAN:
+  ^\s*Pruning\s+VLANs
+  ^\s*Capture\s+(?:Mode|VLANs)
+  ^\s*Protected
+  ^\s*Appliance\s+trust
+  ^\s*$$
+  # Capture time-stamp if vty line has command time-stamping turned on
+  ^Load\s+for\s+
+  ^Time\s+source\s+is
   ^. -> Error

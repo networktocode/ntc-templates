@@ -11,6 +11,9 @@ Start
   ^=*$$
   ^Interface.*$$
   ^Type.*$$
-  ^\s+|\s*$$
+  ^\s*$$
   ^\s+#\s+Ent\s+Peer\s+NBMA\s+Addr\s+Peer\s+Tunnel\s+Add\s+State\s+UpDn\s+Tm\s+Attrb
+  # Capture time-stamp if vty line has command time-stamping turned on
+  ^Load\s+for\s+
+  ^Time\s+source\s+is
   ^. -> Error

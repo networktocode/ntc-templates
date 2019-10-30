@@ -42,6 +42,9 @@ Start
   ^access-list\s+${ACL_NAME}\s+remark\s+${COMMENT}\s* -> Record
   # Catch all unuseful raw data
   ^(!\s*|$$|Building configuration.*|Current configuration.*|Configuration.*|end.*)
+  # Capture time-stamp if vty line has command time-stamping turned on
+  ^Load\s+for\s+
+  ^Time\s+source\s+is
   # Error out if raw data does not match any above rules.
   ^.* -> Error "Could not parse line:"
 

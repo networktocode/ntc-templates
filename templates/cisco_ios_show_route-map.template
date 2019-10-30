@@ -8,6 +8,9 @@ Start
   ^route-map\s+${NAME},\s+${ACTION},\s+sequence\s+${SEQ}\s*$$
   ^\s+Match\s+clauses -> Match
   ^\s+Set\s+clauses -> Set
+  # Capture time-stamp if vty line has command time-stamping turned on
+  ^Load\s+for\s+
+  ^Time\s+source\s+is
   ^.+ -> Error
 
 Match

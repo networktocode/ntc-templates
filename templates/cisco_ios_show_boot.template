@@ -28,5 +28,8 @@ Start
   ^\s+Download:\s+${TIMEOUT_CONFIG_DOWNLOAD}
   ^Config\s+Download
   ^\s+via\s+DHCP:\s+${CONFIG_DOWNLOAD_DHCP}
+  # Capture time-stamp if vty line has command time-stamping turned on
+  ^Load\s+for\s+
+  ^Time\s+source\s+is
   ^\s*$$
   ^. -> Error

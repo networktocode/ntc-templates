@@ -33,4 +33,7 @@ Start
   ^.*list\s+${NAME}
   ^\s+${SN}\s+${ACTION}\s+${PROTOCOL}\s+${SOURCE}(\s+${PORT})*(\s${RANGE})*\s+${DESTINATION}(\s+${MODIFIER})* -> Record
   ^\s+${SN}\s+${ACTION}\s+${SOURCE}(\s+${MODIFIER})* -> Record
+  # Capture time-stamp if vty line has command time-stamping turned on
+  ^Load\s+for\s+
+  ^Time\s+source\s+is
 
