@@ -32,7 +32,7 @@ arista_eos_show_mac_address-table.template, .*, arista_eos, sh[[ow]] m[[ac]] ad[
 arista_eos_show_ip_ospf_database.template, .*, arista_eos, sh[[ow]] i[[p]] o[[spf]] data[[base]]
 arista_eos_show_ip_ospf_neighbor.template, .*, arista_eos, sh[[ow]] i[[p]] o[[spf]] nei[[ghbor]]
 arista_eos_show_ip_access-lists.template, .*, arista_eos, sh[[ow]] i[[p]] acce[[ss-lists]]
-arista_eos_show_ip_bgp_summary.template, .*, arista_eos, sh[[ow]] i[[p]] bg[[p]] su[[mmary]]
+arista_eos_show_ip_bgp_summary.template, .*, arista_eos, sh[[ow]] (?:i[[p]] bg[[p]]|bg[[p]] ev[[pn]]) su[[mmary]]
 arista_eos_show_isis_neighbors.template, .*, arista_eos, sh[[ow]] isis ne[[ighbors]]
 arista_eos_show_lldp_neighbors.template, .*, arista_eos, sh[[ow]] ll[[dp]] nei[[ghbors]]
 arista_eos_show_snmp_community.template, .*, arista_eos, sh[[ow]] sn[[mp]] com[[munity]]
