@@ -1,0 +1,8 @@
+Value VRF (\S+)
+Value RD (<not set>|\S+)
+
+Start
+  ^\s+Vrf\s+RD\s+Protocols\s+State\s+Interfaces -> Start_record
+
+Start_record
+  ^\s+${VRF}\s+${RD} -> Record
