@@ -23,4 +23,7 @@ Start
   ^\s+Total\s+Packets\s+Sent:\s+${PACKETS_SENT}\s*$$
   ^\s+Total\s+Packets\s+Recv:\s+${PACKET_RECEIVED}\s*$$
   ^\s*$$
+  # Capture time-stamp if vty line has command time-stamping turned on
+  ^Load\s+for\s+
+  ^Time\s+source\s+is
   ^. -> Error

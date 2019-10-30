@@ -23,4 +23,7 @@ Start
   ^.*[Ff]lags
   ^\s+\S+\s+-\s+
   ^\s+(?:Timers|Interface\s+state):
+  # Capture time-stamp if vty line has command time-stamping turned on
+  ^Load\s+for\s+
+  ^Time\s+source\s+is
   ^. -> Error

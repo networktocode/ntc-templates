@@ -12,6 +12,9 @@ Value MAX_AVAIL_WATTS (\d+)
 
 Start
   ^Power.*Maximum -> SUMMARY
+  # Capture time-stamp if vty line has command time-stamping turned on
+  ^Load\s+for\s+
+  ^Time\s+source\s+is
 
 SUMMARY
   ^System Power \(12V\)\s+${SYS_USED_WATTS}\s+${SYS_AVAIL_WATTS} -> Continue

@@ -24,3 +24,6 @@ Start
   ^Maximum\sVLANs\s[s,S]upported\s[l,L]ocally\s+:\s${MAX_VLANS}
   ^Number\sof\sexisting\sVLANs\s+:\s${EXISTING_VLAN_COUNT}
   ^Configuration\s[r,R]evision\s+:\s${REVISION_NUMBER} -> Record
+  # Capture time-stamp if vty line has command time-stamping turned on
+  ^Load\s+for\s+
+  ^Time\s+source\s+is

@@ -6,3 +6,6 @@ Value RX_PWR (\S+)
 
 Start
   ^${IFACE}\s+${TEMPERATURE}\s+${VOLTAGE}\s+${TX_PWR}\s+${RX_PWR}\s+ -> Record
+  # Capture time-stamp if vty line has command time-stamping turned on
+  ^Load\s+for\s+
+  ^Time\s+source\s+is
