@@ -8,3 +8,6 @@ Value CIRCUIT_ID (\S+)
 
 Start
   ^${SYSTEM_ID}\s+${TYPE}\s+${INTERFACE}\s+${IP_ADDRESS}\s+${STATE}\s+${HOLD_TIME}\s+${CIRCUIT_ID} -> Record
+  # Capture time-stamp if vty line has command time-stamping turned on
+  ^Load\s+for\s+
+  ^Time\s+source\s+is

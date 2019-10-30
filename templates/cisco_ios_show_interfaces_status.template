@@ -8,6 +8,9 @@ Value TYPE (.*)
 
 Start
   ^Port -> Begin
+  # Capture time-stamp if vty line has command time-stamping turned on
+  ^Load\s+for\s+
+  ^Time\s+source\s+is
 
 Begin
   ^(?=\s{0,9}${PORT}).{9}\s{20}${STATUS}\s+${VLAN}\s+${DUPLEX}\s+${SPEED}\s*${TYPE}$$ -> Record

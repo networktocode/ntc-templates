@@ -5,6 +5,9 @@ Value List INTERFACES (\S+)
 
 Start
   ^\s+Name\s+Default RD\s+Protocols\s+Interfaces -> Start_record
+  # Capture time-stamp if vty line has command time-stamping turned on
+  ^Load\s+for\s+
+  ^Time\s+source\s+is
 
 Start_record
   ^\s{2}\S+ -> Continue.Record

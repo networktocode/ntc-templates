@@ -12,6 +12,9 @@ Value Filldown INLINE_STATUS (good|n.a.)
 
 Start
   ^Supply.*Model -> POWER
+  # Capture time-stamp if vty line has command time-stamping turned on
+  ^Load\s+for\s+
+  ^Time\s+source\s+is
 
 
 POWER
@@ -20,4 +23,3 @@ POWER
   # Capture just INPUT_STATUS when INPUT_TYPE field is blank
   ^${PS}\s{32}${INPUT_STATUS} -> Record
   ^$$ -> Clearall
-

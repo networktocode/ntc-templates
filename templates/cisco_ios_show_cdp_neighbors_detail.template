@@ -12,6 +12,9 @@ Start
   ^Platform\s*:\s*${PLATFORM}\s*,\s*Capabilities\s*:\s*${CAPABILITIES}
   ^Interface: ${LOCAL_PORT},  Port ID \(outgoing port\): ${REMOTE_PORT}
   ^Version : -> GetVersion
+  # Capture time-stamp if vty line has command time-stamping turned on
+  ^Load\s+for\s+
+  ^Time\s+source\s+is
 
 ParseIP
   ^.*IP address: ${MANAGEMENT_IP} -> Start

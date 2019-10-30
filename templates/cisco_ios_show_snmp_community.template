@@ -8,3 +8,6 @@ Start
   ^Community\sIndex:\s+${INDEX}
   ^Community\sSecurityName:\s+${SECURITY_NAME}
   ^storage-type:\s${STORAGE_TYPE} -> Record
+  # Capture time-stamp if vty line has command time-stamping turned on
+  ^Load\s+for\s+
+  ^Time\s+source\s+is

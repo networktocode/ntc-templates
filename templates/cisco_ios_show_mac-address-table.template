@@ -8,6 +8,9 @@ Start
   ^\s+vlan\s+mac address\s+type\s+learn\s+age\s+ports -> TYPE2
   ^\s+vlan\s+mac address\s+type\s+protocols\s+port -> TYPE3
   ^Vlan\s+Mac Address\s+Type\s+Ports -> TYPE4
+  # Capture time-stamp if vty line has command time-stamping turned on
+  ^Load\s+for\s+
+  ^Time\s+source\s+is
 
 TYPE1
   ^${DESTINATION_ADDRESS}\s+${TYPE}\s+${VLAN}\s+${DESTINATION_PORT} -> Record

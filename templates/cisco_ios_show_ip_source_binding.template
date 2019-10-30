@@ -11,4 +11,7 @@ Start
   ^${MAC}\s+${IP}\s+${LEASE}\s+${TYPE}\s+${VLAN}\s+${INTERFACE} -> Record
   ^Total number of bindings
   ^\s*$$
+  # Capture time-stamp if vty line has command time-stamping turned on
+  ^Load\s+for\s+
+  ^Time\s+source\s+is
   ^.*$$ -> Error

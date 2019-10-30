@@ -24,4 +24,6 @@ Start
   ^\s+Active dsl \d+ CCBs =\s+${ACTIVE_DSL_CCBS}
   ^\s+The Free Channel Mask:\s+${FREE_CHANNEL_MASK}
   ^\s+Number of L2 Discards =\s+${L2_DISCARDS}, L2 Session ID =\s+${L2_SESSION_ID} -> Record
-
+  # Capture time-stamp if vty line has command time-stamping turned on
+  ^Load\s+for\s+
+  ^Time\s+source\s+is

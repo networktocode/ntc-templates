@@ -14,6 +14,7 @@ Start
   ^\s*$$
   ^\s*H\s+Address\s+Interface\s+Hold\s+Uptime\s+SRTT\s+RTO\s+Q\s+Seq\s*$$
   ^\s+\(sec\)\s+\(ms\)\s+Cnt\s+Num\s*$$
+  # Capture time-stamp if vty line has command time-stamping turned on
   ^\s*Load\s+for
   ^Time\s+source\s+is
   ^. -> Error
