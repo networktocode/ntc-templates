@@ -1,0 +1,20 @@
+Value VRF (\S+)
+Value RD (\d\S+|<.+>)
+
+Start
+  ^\s+Vrf\s+RD\s+Protocols\s+State\s+Interfaces -> VRF
+  ^Maximum
+  ^\s*$$
+  ^. -> Error
+
+VRF
+  ^\s+${VRF}\s+${RD} -> Record
+  # Match second line with Status e.x. v6:routing
+  ^\s+\S+:\S+
+  # Match multiline interface with last line having a single interface
+  ^\s+\S+\s*$$
+  # Match multilin interface with multiple interfaces on the line
+  ^(?:\s+\S+?,){1,5}(?:\s+\S+)?\s*$$
+  ^\s*-+\s+-+
+  ^\s*$$
+  ^. -> Error
