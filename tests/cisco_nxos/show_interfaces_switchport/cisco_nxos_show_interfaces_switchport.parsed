@@ -8,6 +8,7 @@ parsed_sample:
       access_vlan: '3'
       native_vlan: '1'
       trunking_vlans: '1-4094'
+      voice_vlan: none
     - interface: Ethernet1/2
       switchport: Enabled
       switchport_monitor: Not enabled
@@ -15,6 +16,7 @@ parsed_sample:
       access_vlan: '1'
       native_vlan: '5'
       trunking_vlans: '1-4094'
+      voice_vlan: none
     - interface: Ethernet1/3
       switchport: Enabled
       switchport_monitor: Not enabled
@@ -22,3 +24,4 @@ parsed_sample:
       access_vlan: '1'
       native_vlan: '1'
       trunking_vlans: '1-4094'
+      voice_vlan: none

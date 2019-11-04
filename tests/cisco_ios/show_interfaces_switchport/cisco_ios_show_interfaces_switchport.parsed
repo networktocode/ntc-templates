@@ -8,6 +8,7 @@ parsed_sample:
     switchport: Enabled
     switchport_negotiation: 'Off'
     switchport_monitor: ''
+    voice_vlan: none
     trunking_vlans: ALL
 -   access_vlan: '100'
     interface: Gi0/2
@@ -16,6 +17,7 @@ parsed_sample:
     switchport: Enabled
     switchport_negotiation: 'On'
     switchport_monitor: ''
+    voice_vlan: none
     trunking_vlans: ALL
 -   access_vlan: '101'
     interface: Gi0/3
@@ -24,6 +26,7 @@ parsed_sample:
     switchport: Enabled
     switchport_negotiation: 'On'
     switchport_monitor: ''
+    voice_vlan: none
     trunking_vlans: ALL
 -   access_vlan: '110'
     interface: Gi1/0
@@ -32,6 +35,7 @@ parsed_sample:
     switchport: Enabled
     switchport_negotiation: 'On'
     switchport_monitor: ''
+    voice_vlan: none
     trunking_vlans: ALL
 -   access_vlan: '111'
     interface: Gi1/1
@@ -40,4 +44,5 @@ parsed_sample:
     switchport: Enabled
     switchport_negotiation: 'On'
     switchport_monitor: ''
+    voice_vlan: none
     trunking_vlans: ALL
