@@ -1,10 +1,10 @@
-Value Required USER_NAME (\w+)
-Value ENGINE_ID (\w+)
-Value STORAGE_TYPE (\w+)
+Value Required USER_NAME (\S+)
+Value ENGINE_ID (\S+)
+Value STORAGE_TYPE (\S+)
 Value ACCESS_LIST (.*)
-Value AUTHENTICATION_PROTOCOL (\w+)
-Value PRIVACY_PROTOCOL (\w+)
-Value GROUP_NAME (\w+)
+Value AUTHENTICATION_PROTOCOL (\S+)
+Value PRIVACY_PROTOCOL (\S+)
+Value GROUP_NAME (\S+)
 
 Start
   ^User\s+name:\s+${USER_NAME}$$
