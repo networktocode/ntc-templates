@@ -61,7 +61,7 @@ def test_index_ordering():
         'brocade_fastiron', 'brocade_netiron', 'brocade_nos', 'brocade_vdx', 'brocade_vyos',
         'checkpoint_gaia', 'ciena_6x', 'cisco_asa', 'cisco_ios', 'cisco_nxos', 'cisco_s300',
         'cisco_wlc', 'cisco_xe', 'cisco_xr', 'dell_force10', 'enterasys', 'extreme', 'f5_ltm',
-        'fortinet', 'hp_comware', 'hp_procurve', 'huawei_vrp', 'juniper', 'juniper_junos',
+        'fortinet_fortios', 'hp_comware', 'hp_procurve', 'huawei_vrp', 'juniper', 'juniper_junos',
         'juniper_screenos', 'linux', 'ovs_linux', 'paloalto_panos', 'quanta_mesh','ruckus_fastiron',
         'ubiquiti_edgeswitch', 'vmware_nsxv', 'vyatta_vyos', 'vyos', 'watchguard_firebox',
     ]
