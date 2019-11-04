@@ -46,6 +46,9 @@ Start
   ^\s+Maintenance\s+Mode\s*=\s*${MAINTENANCE_MODE}\s*$$
   ^\s+Communications\s*=\s*${COMMUNICATION_STATUS}\s*$$
   ^\s+Current\s+Processor -> Current
+  # Capture time-stamp if vty line has command time-stamping turned on
+  ^Load\s+for\s+
+  ^Time\s+source\s+is
   ^\s*$$
   ^. -> Error
 

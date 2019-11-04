@@ -23,6 +23,9 @@ Start
   ^Critical Recovery Delay\s+${CRITICAL_RECOVERY_DELAY}
   ^Critical EAPOL\s+${CRITICAL_EAPOL}
   ^$$ -> Interfaces
+  # Capture time-stamp if vty line has command time-stamping turned on
+  ^Load\s+for\s+
+  ^Time\s+source\s+is
 
 Interfaces
   ^Dot1x Info for\s -> Continue.Record

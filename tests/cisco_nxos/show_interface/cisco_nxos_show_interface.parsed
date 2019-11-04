@@ -19,6 +19,7 @@ parsed_sample:
   output_errors: ''
   output_packets: ''
   speed: ''
+  last_link_flapped: ''
 - address: 5087.89a1.d8ce
   admin_state: up
   bandwidth: 100000 Kbit
@@ -37,6 +38,7 @@ parsed_sample:
   output_errors: ''
   output_packets: ''
   speed: 100 Mb/s
+  last_link_flapped: ''
 - address: 5087.89a1.d8d6
   admin_state: up
   bandwidth: 10000000 Kbit
@@ -55,3 +57,4 @@ parsed_sample:
   output_errors: '0'
   output_packets: '754962'
   speed: 10 Gb/s
+  last_link_flapped: '2week(s) 1day(s)'

@@ -4,8 +4,11 @@ Value STATUS (\S+)
 Value List INTERFACES ([\w\./]+)
 
 Start
-  ^$$
+  ^\s*$$
   ^\w+\s+[NnAaMmEe]{4}.*$$ -> VLANS
+  # Capture time-stamp if vty line has command time-stamping turned on
+  ^Load\s+for\s+
+  ^Time\s+source\s+is
 
 VLANS
   ^\d+ -> Continue.Record

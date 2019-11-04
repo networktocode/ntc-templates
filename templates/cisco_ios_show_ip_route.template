@@ -10,6 +10,9 @@ Value UPTIME (\d[\w:\.]+)
 
 Start
   ^Gateway.* -> Routes
+  # Capture time-stamp if vty line has command time-stamping turned on
+  ^Load\s+for\s+
+  ^Time\s+source\s+is
 
 Routes
   # For "is (variably )subnetted" line, capture mask, clear all values.

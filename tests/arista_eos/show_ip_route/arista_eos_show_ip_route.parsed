@@ -1,6 +1,7 @@
 ---
 parsed_sample:
-- direct: ''
+- vrf: ''
+  direct: ''
   distance: '200'
   interface: Ethernet18
   mask: '32'
@@ -8,7 +9,8 @@ parsed_sample:
   network: 10.1.31.100
   next_hop: 192.168.17.5
   protocol: B E
-- direct: ''
+- vrf: ''
+  direct: ''
   distance: '200'
   interface: Ethernet18
   mask: '32'
@@ -16,7 +18,8 @@ parsed_sample:
   network: 10.1.31.101
   next_hop: 192.168.17.5
   protocol: B E
-- direct: directly
+- vrf: ''
+  direct: directly
   distance: ''
   interface: Loopback100
   mask: '32'
@@ -24,7 +27,8 @@ parsed_sample:
   network: 10.1.31.102
   next_hop: connected
   protocol: C
-- direct: directly
+- vrf: ''
+  direct: directly
   distance: ''
   interface: Loopback10
   mask: '32'
@@ -32,7 +36,8 @@ parsed_sample:
   network: 10.1.31.200
   next_hop: connected
   protocol: C
-- direct: ''
+- vrf: ''
+  direct: ''
   distance: '200'
   interface: Ethernet18
   mask: '32'
@@ -40,7 +45,8 @@ parsed_sample:
   network: 10.1.31.254
   next_hop: 192.168.17.5
   protocol: B E
-- direct: directly
+- vrf: ''
+  direct: directly
   distance: ''
   interface: Ethernet20
   mask: '30'
@@ -48,7 +54,8 @@ parsed_sample:
   network: 10.63.255.8
   next_hop: connected
   protocol: C
-- direct: ''
+- vrf: ''
+  direct: ''
   distance: '200'
   interface: Ethernet18
   mask: '30'
@@ -56,7 +63,8 @@ parsed_sample:
   network: 10.100.22.52
   next_hop: 192.168.17.5
   protocol: B E
-- direct: ''
+- vrf: ''
+  direct: ''
   distance: '200'
   interface: Ethernet18
   mask: '30'
@@ -64,7 +72,8 @@ parsed_sample:
   network: 10.100.22.56
   next_hop: 192.168.17.5
   protocol: B E
-- direct: ''
+- vrf: ''
+  direct: ''
   distance: '200'
   interface: Ethernet18
   mask: '32'
@@ -72,7 +81,8 @@ parsed_sample:
   network: 10.100.233.11
   next_hop: 192.168.17.5
   protocol: B E
-- direct: ''
+- vrf: ''
+  direct: ''
   distance: '200'
   interface: Ethernet18
   mask: '32'
@@ -80,7 +90,8 @@ parsed_sample:
   network: 10.100.233.12
   next_hop: 192.168.17.5
   protocol: B E
-- direct: ''
+- vrf: ''
+  direct: ''
   distance: '200'
   interface: Ethernet18
   mask: '32'
@@ -88,7 +99,8 @@ parsed_sample:
   network: 10.100.233.15
   next_hop: 192.168.17.5
   protocol: B E
-- direct: directly
+- vrf: ''
+  direct: directly
   distance: ''
   interface: Loopback0
   mask: '32'
@@ -96,7 +108,8 @@ parsed_sample:
   network: 10.100.233.32
   next_hop: connected
   protocol: C
-- direct: ''
+- vrf: ''
+  direct: ''
   distance: '200'
   interface: Ethernet21
   mask: '32'
@@ -104,7 +117,8 @@ parsed_sample:
   network: 10.100.233.34
   next_hop: 192.168.38.5
   protocol: B E
-- direct: ''
+- vrf: ''
+  direct: ''
   distance: '200'
   interface: Ethernet18
   mask: '32'
@@ -112,7 +126,8 @@ parsed_sample:
   network: 10.100.233.50
   next_hop: 192.168.17.5
   protocol: B E
-- direct: ''
+- vrf: ''
+  direct: ''
   distance: '200'
   interface: Ethernet18
   mask: '32'
@@ -120,7 +135,8 @@ parsed_sample:
   network: 10.100.233.64
   next_hop: 192.168.17.5
   protocol: B E
-- direct: ''
+- vrf: ''
+  direct: ''
   distance: '200'
   interface: Ethernet18
   mask: '32'
@@ -128,7 +144,8 @@ parsed_sample:
   network: 10.100.233.66
   next_hop: 192.168.17.5
   protocol: B E
-- direct: ''
+- vrf: ''
+  direct: ''
   distance: '200'
   interface: Ethernet18
   mask: '32'
@@ -136,7 +153,8 @@ parsed_sample:
   network: 10.100.233.67
   next_hop: 192.168.17.5
   protocol: B E
-- direct: ''
+- vrf: ''
+  direct: ''
   distance: '200'
   interface: Ethernet18
   mask: '32'
@@ -144,7 +162,8 @@ parsed_sample:
   network: 10.100.233.68
   next_hop: 192.168.17.5
   protocol: B E
-- direct: ''
+- vrf: ''
+  direct: ''
   distance: '200'
   interface: Ethernet20
   mask: '32'
@@ -152,4 +171,3 @@ parsed_sample:
   network: 10.100.233.192
   next_hop: 10.63.255.10
   protocol: B E
-
