@@ -5,6 +5,7 @@ Value MODE (.+)
 Value ACCESS_VLAN (\d+)
 Value NATIVE_VLAN (\d+)
 Value TRUNKING_VLANS (\S+)
+Value VOICE_VLAN (\S+)
 
 Start
   ^Name:\s+${INTERFACE}
@@ -13,6 +14,7 @@ Start
   ^\s*Operational\s+Mode:\s+${MODE}
   ^\s*Access\s+Mode\s+VLAN:\s+${ACCESS_VLAN}
   ^\s*Trunking\s+Native\s+Mode\s+VLAN:\s+${NATIVE_VLAN}
-  ^\s*Trunking\s+VLANs\s+Allowed:\s+${TRUNKING_VLANS} -> Record
+  ^\s*Trunking\s+VLANs\s+Allowed:\s+${TRUNKING_VLANS}
+  ^\s*Voice\s+VLAN:\s+${VOICE_VLAN} -> Record
   ^.+$$
   ^. -> Error
