@@ -19,6 +19,7 @@ parsed_sample:
   output_errors: ''
   output_packets: ''
   speed: ''
+  last_link_flapped: ''
 - address: 00de.fb01.c921
   admin_state: up
   bandwidth: 1000000 Kbit
@@ -37,6 +38,7 @@ parsed_sample:
   output_errors: ''
   output_packets: ''
   speed: ''
+  last_link_flapped: ''
 - address: 00de.fb01.c933
   admin_state: up
   bandwidth: 1000000 Kbit
@@ -55,6 +57,7 @@ parsed_sample:
   output_errors: ''
   output_packets: ''
   speed: ''
+  last_link_flapped: ''
 - address: 00de.fb01.c9ab
   admin_state: up
   bandwidth: 1000000 Kbit
@@ -73,6 +76,7 @@ parsed_sample:
   output_errors: ''
   output_packets: ''
   speed: ''
+  last_link_flapped: ''
 - address: 00de.fb01.c9ef
   admin_state: up
   bandwidth: 1000000 Kbit
@@ -91,6 +95,7 @@ parsed_sample:
   output_errors: ''
   output_packets: ''
   speed: ''
+  last_link_flapped: ''
 - address: 0000.d200.0000
   admin_state: ''
   bandwidth: 23 Kbit
@@ -109,3 +114,4 @@ parsed_sample:
   output_errors: '0'
   output_packets: '6018158'
   speed: auto-speed
+  last_link_flapped: '14week(s) 5day(s)'
