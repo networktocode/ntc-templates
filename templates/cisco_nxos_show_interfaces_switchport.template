@@ -8,6 +8,7 @@ Value TRUNKING_VLANS (\S+)
 Value VOICE_VLAN (\S+)
 
 Start
+  ^Name: -> Continue.Record
   ^Name:\s+${INTERFACE}
   ^\s*Switchport:\s+${SWITCHPORT}
   ^\s*Switchport\s+Monitor:\s+${SWITCHPORT_MONITOR}
@@ -15,6 +16,6 @@ Start
   ^\s*Access\s+Mode\s+VLAN:\s+${ACCESS_VLAN}
   ^\s*Trunking\s+Native\s+Mode\s+VLAN:\s+${NATIVE_VLAN}
   ^\s*Trunking\s+VLANs\s+Allowed:\s+${TRUNKING_VLANS}
-  ^\s*Voice\s+VLAN:\s+${VOICE_VLAN} -> Record
+  ^\s*Voice\s+VLAN:\s+${VOICE_VLAN}
   ^.+$$
   ^. -> Error
