@@ -16,7 +16,7 @@ Value OUTPUT_ERRORS (\d+)
 Value BANDWIDTH (\d+\s+\w+)
 Value DELAY (\d+\s+\w+)
 Value ENCAPSULATION (\w+)
-Value LAST_LINK_FLAPPED (.+)
+Value LAST_LINK_FLAPPED (.+?)
 
 Start
   ^\S+\s+is.+ -> Continue.Record
