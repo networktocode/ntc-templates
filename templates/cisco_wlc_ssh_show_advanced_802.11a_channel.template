@@ -11,6 +11,7 @@ Value DCA_SENSITIVITY (\w+ \(\d+ dB\))
 Value DCA_WIDTH (\d+ \w+)
 Value DCA_MIN (-\d+ dBm)
 Value List DCA_CHANNELS ((\d+,?)*?)
+Value List UNUSED_DCA_CHANNELS ((\d+,?)*?)
 
 Start
   ^\s*Leader\sAutomatic\sChannel\sAssignments*$$
@@ -34,9 +35,8 @@ Start
   ^\s+Average
   ^\s+Maximum
   ^\s+Channel\sDwell\sTimes
-  ^\s+802\.11a\s5\sGHz\sAuto\-RF Channel Lists*$$
-  ^.*Allowed\sChannel\sList\.*\s${DCA_CHANNELS}s*$$ -> Channels
-  ^\s+802.11a\s4.9\sGHz\sAuto-RF Channel Lists*$$
+  ^\s+802\.11a\s5\sGHz\sAuto\-RF Channel Lists*$$ -> Channels
+  ^.*Allowed\sChannel\sList
   ^\s+Unused\sChannel\sList
   ^\s+\d+,?
   ^\s+DCA\sOutdoor\sAP\soption
@@ -44,7 +44,9 @@ Start
   ^. -> Error
 
 Channels
+  ^.*Allowed\sChannel\sList\.*\s${DCA_CHANNELS}s*$$
   ^\s+${DCA_CHANNELS}s*$$
-  ^\s+Unused Channel List.* -> Start
+  ^\s+Unused Channel List.*\s${UNUSED_DCA_CHANNELS}s*$$
+  ^\s+802.11a\s4.9\sGHz\sAuto-RF Channel Lists*$$ -> Start
 
 
