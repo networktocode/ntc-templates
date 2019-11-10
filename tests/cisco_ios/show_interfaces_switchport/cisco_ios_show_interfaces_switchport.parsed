@@ -46,3 +46,12 @@ parsed_sample:
     switchport_monitor: ''
     voice_vlan: none
     trunking_vlans: ALL
+-   access_vlan: '1'
+    interface: Gi1/1
+    mode: static access
+    native_vlan: '1'
+    switchport: Enabled
+    switchport_negotiation: 'On'
+    switchport_monitor: ''
+    voice_vlan: none
+    trunking_vlans: ALL
