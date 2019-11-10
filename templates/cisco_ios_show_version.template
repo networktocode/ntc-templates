@@ -20,6 +20,9 @@ Start
   ^[Cc]onfiguration\s+register\s+is\s+${CONFIG_REGISTER}
   ^Base [Ee]thernet MAC [Aa]ddress\s+:\s+${MAC}
   ^Switch Port -> Stack
+  # Capture time-stamp if vty line has command time-stamping turned on
+  ^Load\s+for\s+
+  ^Time\s+source\s+is
 
 
 Stack

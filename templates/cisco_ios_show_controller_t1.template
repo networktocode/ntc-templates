@@ -33,6 +33,9 @@ Start
   ^\s+AIS\sState:${AIS_STATE}\s+LOS\sState:${LOS_STATE}\s+LOF\sState:${LOF_STATE}
   ^\s+Framing\sis\s${FRAMING},\sLine\sCode\sis\s${LINE_CODE},\sClock\sSource\sis\s${CLOCK_SOURCE}. 
   ^\s+Data\sin\scurrent\sinterval\s\(${CURR_INTERVAL_ELAPSED_SECONDS}\sseconds\selapsed\): -> ParseCurrentCounters
+  # Capture time-stamp if vty line has command time-stamping turned on
+  ^Load\s+for\s+
+  ^Time\s+source\s+is
 
 ParseCurrentCounters
   ^\s+${CURR_LINE_CODE_VIOLATIONS}\sLine\sCode\sViolations,\s${CURR_PATH_CODE_VIOLATIONS}\sPath\sCode\sViolations

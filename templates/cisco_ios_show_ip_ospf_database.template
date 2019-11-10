@@ -13,6 +13,9 @@ Start
   ^${LINK_ID}\s+${ADV_ROUTER}\s+${AGE}\s+\S+\s+\S+\s+${LINK_COUNT} -> Record
   ^${LINK_ID}\s+${ADV_ROUTER}\s+${AGE}\s+\S+\s+\S+ -> Record
   ^\s+Type-5 AS External Link States -> Tag
+  # Capture time-stamp if vty line has command time-stamping turned on
+  ^Load\s+for\s+
+  ^Time\s+source\s+is
 
 Tag
   ^Link ID\s+ADV Router\s+Age\s+Seq#\s+Checksum\s+Tag -> Next.Clearall

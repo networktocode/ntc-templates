@@ -24,10 +24,13 @@ Start
   ^\s+Inbound\s+(?:Common\s+)?access\s+list\s+is\s+${INBOUND_ACL}\s*$$
   ^\s+Internet\s+protocol
   ^\s+Interface\s+is\s+unnumbered
+  ^\s+Peer\s+address
+  ^\s+Dialer
   ^\s+Broadcast
   ^\s+Multicast
   ^\s+2[2-5]\d\.
   ^\s+Address\s+determined
+  ^\s+Peer
   ^\s+Directed
   ^\s+MTU
   ^\s+Helper
@@ -39,6 +42,7 @@ Start
   ^\s+Split
   ^\s+ICMP
   ^\s+IP\s+(?:fast|Flow|CEF|Null|multicast|route|output|access)
+  ^\s+Downstream
   ^\s+Associated
   ^\s+Topology
   ^\s+Router
@@ -53,6 +57,9 @@ Start
   ^\s+(Input|Output|Post)\s+.*features
   ^\s+(IPv4\s+)?WCCP
   ^\s*$$
+  # Capture time-stamp if vty line has command time-stamping turned on
+  ^Load\s+for\s+
+  ^Time\s+source\s+is
   ^. -> Error
 
 HELPERS

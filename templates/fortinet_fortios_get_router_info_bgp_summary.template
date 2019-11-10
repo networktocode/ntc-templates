@@ -1,0 +1,9 @@
+Value BGP_NEIGH (\d+?\.\d+?\.\d+?\.\d+?)
+Value NEIGH_AS (\d+)
+Value UP_DOWN (\w+)
+Value STATE_PFXRCD (\w+)
+
+Start
+  ^${BGP_NEIGH}\s+\S+\s+${NEIGH_AS}(?:\s+\S+\s+){5}${UP_DOWN}\s+${STATE_PFXRCD}\s*$$ -> Record
+
+EOF

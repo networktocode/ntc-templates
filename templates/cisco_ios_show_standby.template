@@ -30,3 +30,6 @@ Start
   ^.*Standby\s+router\s+is\s+${STANDBY_ROUTER}(,\s+priority\s+${STANDBY_ROUTER_PRIORITY})?
   ^.*Priority\s+${PRIORITY}
   ^.*Group\s+name\s+is\s+"${GROUP_NAME}" -> Record
+  # Capture time-stamp if vty line has command time-stamping turned on
+  ^Load\s+for\s+
+  ^Time\s+source\s+is
