@@ -11,3 +11,13 @@ parsed_sample:
    hotspot_temperature_state: GREEN
    hotspot_yellow_threshold: '105'
    hotspot_red_threshold: '125'
+ -  switch: '2'
+   switch_temperature: OK
+   inlet_temperature_value: '28'
+   inlet_temperature_state: GREEN
+   inlet_yellow_threshold: '46'
+   inlet_red_threshold: '56'
+   hotspot_temperature_value: '68'
+   hotspot_temperature_state: GREEN
+   hotspot_yellow_threshold: '105'
+   hotspot_red_threshold: '125'
