@@ -25,7 +25,7 @@ Start
   ^\s*Pruning\s+VLANs
   ^\s*Capture\s+(?:Mode|VLANs)
   ^\s*Protected
-  ^\s*Unknown\s+[unicast|multicast]
+  ^\s*Unknown\s+(unicast|multicast)
   ^\s*Appliance\s+trust
   ^\s*$$
   # Capture time-stamp if vty line has command time-stamping turned on
