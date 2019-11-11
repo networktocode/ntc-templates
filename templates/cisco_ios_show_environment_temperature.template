@@ -29,7 +29,11 @@ Hotspot
   ^Hotspot\s+Temperature\s+Value:\s+${HOTSPOT_TEMPERATURE_VALUE}\s+Degree\s+Celsius\s*$$
   ^Temperature\s+State:\s+${HOTSPOT_TEMPERATURE_STATE}\s*$$
   ^Yellow\s+Threshold\s+:\s+${HOTSPOT_YELLOW_THRESHOLD}\s+Degree\s+Celsius\s*$$
-  ^Red\s+Threshold\s+:\s+${HOTSPOT_RED_THRESHOLD}\s+Degree\s+Celsius\s*$$ -> Record Start
+  ^Red\s+Threshold\s+:\s+${HOTSPOT_RED_THRESHOLD}\s+Degree\s+Celsius\s*$$
+  ^Switch\s+\d -> Continue.Record
+  ^Switch\s+${SWITCH}:\s+SYSTEM\s+TEMPERATURE\s+is\s+${SWITCH_TEMPERATURE}\s*$$ - > Start
+  ^\s*$$
+  ^. -> Error
  
 
 
