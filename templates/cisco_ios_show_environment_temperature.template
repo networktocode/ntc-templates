@@ -13,6 +13,8 @@ Start
   ^Switch\s+\d -> Continue.Record
   ^Switch\s+${SWITCH}:\s+SYSTEM\s+TEMPERATURE\s+is\s+${SWITCH_TEMPERATURE}\s*$$
   ^Inlet\s+Temperature\s+Value:\s+${INLET_TEMPERATURE_VALUE}\s+Degree\s+Celsius\s*$$ -> Inlet
+  ^\s*$$
+  ^. -> Error
  
 Inlet
   ^Temperature\s+State:\s+${INLET_TEMPERATURE_STATE}\s*$$
