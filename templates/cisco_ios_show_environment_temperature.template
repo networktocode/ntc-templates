@@ -18,7 +18,11 @@ Inlet
   ^Temperature\s+State:\s+${INLET_TEMPERATURE_STATE}\s*$$
   ^Yellow\s+Threshold\s+:\s+${INLET_YELLOW_THRESHOLD}\s+Degree\s+Celsius\s*$$
   ^Red\s+Threshold\s+:\s+${INLET_RED_THRESHOLD}\s+Degree\s+Celsius\s*$$ -> Hotspot
- 
+  ^Switch\s+\d -> Continue.Record
+  ^Switch\s+${SWITCH}:\s+SYSTEM\s+TEMPERATURE\s+is\s+${SWITCH_TEMPERATURE}\s*$$ -> Start
+  ^\s*$$
+  ^. -> Error
+
 Hotspot
   ^Hotspot\s+Temperature\s+Value:\s+${HOTSPOT_TEMPERATURE_VALUE}\s+Degree\s+Celsius\s*$$
   ^Temperature\s+State:\s+${HOTSPOT_TEMPERATURE_STATE}\s*$$
