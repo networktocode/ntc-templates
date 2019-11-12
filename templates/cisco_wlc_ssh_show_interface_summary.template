@@ -1,15 +1,17 @@
 Value Filldown INT_COUNT (\d+)
-Value NAME (.+?)
-Value PORT (\w+|-|N\/A)
-Value VLAN (\d+|\w+|N\/A)
+Value Required NAME (\S+)
+Value PORT (\S+)
+Value VLAN (\S+)
 Value IP_ADDR (([\d1-9]+\.?){4})
-Value TYPE (\w+)
-Value AP_MGR (\w+)
-Value GUEST (N\/A|\w+)
+Value TYPE (\S+)
+Value AP_MGR (\S+)
+Value GUEST (\S+)
 
 Start
   ^\s+Number\sof\sInterfaces\.*\s${INT_COUNT}s*$$
-  ^Interface\sName\s+Port
+  ^Interface\s+Name\s+Port\s+Vlan\s+Id\s+IP\s+Address\s+Type\s+Ap\s+Mgr\s+Guest -> Type_One
+
+Type_One
   ^-+\s
   ^${NAME}\s\s+${PORT}\s+${VLAN}\s+${IP_ADDR}\s+${TYPE}\s+${AP_MGR}\s+${GUEST} -> Record
   ^\s*$$
