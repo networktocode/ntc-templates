@@ -11,22 +11,29 @@ Value HOTSPOT_RED_THRESHOLD (\d+)
 
 Start
   ^Switch\s+\d -> Continue.Record
-  ^Switch\s+${SWITCH}:\s+SYSTEM\s+TEMPERATURE\s+is\s+${SWITCH_TEMPERATURE}\s*$$ -> Inlet
+  ^Switch\s+${SWITCH}:\s+SYSTEM\s+TEMPERATURE\s+is\s+${SWITCH_TEMPERATURE}\s*$$
+  ^Inlet\s+Temperature\s+Value:\s+${INLET_TEMPERATURE_VALUE}\s+Degree\s+Celsius\s*$$ -> Inlet
+  ^Hotspot\s+Temperature\s+Value:\s+${HOTSPOT_TEMPERATURE_VALUE}\s+Degree\s+Celsius\s*$$ -> Hotspot
   ^\s*$$
   ^. -> Error 
  
 Inlet
-  ^Inlet\s+Temperature\s+Value:\s+${INLET_TEMPERATURE_VALUE}\s+Degree\s+Celsius\s*$$ 
   ^Temperature\s+State:\s+${INLET_TEMPERATURE_STATE}\s*$$
   ^Yellow\s+Threshold\s+:\s+${INLET_YELLOW_THRESHOLD}\s+Degree\s+Celsius\s*$$
-  ^Red\s+Threshold\s+:\s+${INLET_RED_THRESHOLD}\s+Degree\s+Celsius\s*$$ -> Hotspot
+  ^Red\s+Threshold\s+:\s+${INLET_RED_THRESHOLD}\s+Degree\s+Celsius\s*$$
+  ^Hotspot\s+Temperature\s+Value:\s+${HOTSPOT_TEMPERATURE_VALUE}\s+Degree\s+Celsius\s*$$ -> Hotspot
+  ^Switch\s+\d -> Continue.Record
+  ^Switch\s+${SWITCH}:\s+SYSTEM\s+TEMPERATURE\s+is\s+${SWITCH_TEMPERATURE}\s*$$ -> Start
   ^\s*$$
   ^. -> Error 
  
 Hotspot
-  ^Hotspot\s+Temperature\s+Value:\s+${HOTSPOT_TEMPERATURE_VALUE}\s+Degree\s+Celsius\s*$$
   ^Temperature\s+State:\s+${HOTSPOT_TEMPERATURE_STATE}\s*$$
   ^Yellow\s+Threshold\s+:\s+${HOTSPOT_YELLOW_THRESHOLD}\s+Degree\s+Celsius\s*$$
-  ^Red\s+Threshold\s+:\s+${HOTSPOT_RED_THRESHOLD}\s+Degree\s+Celsius\s*$$ -> Start
+  ^Red\s+Threshold\s+:\s+${HOTSPOT_RED_THRESHOLD}\s+Degree\s+Celsius\s*$$
+  ^Switch\s+\d -> Continue.Record
+  ^Switch\s+${SWITCH}:\s+SYSTEM\s+TEMPERATURE\s+is\s+${SWITCH_TEMPERATURE}\s*$$ -> Start
+  ^Inlet\s+Temperature\s+Value:\s+${INLET_TEMPERATURE_VALUE}\s+Degree\s+Celsius\s*$$ -> Inlet
   ^\s*$$
-  ^. -> Error 
+  ^. -> Error
+
