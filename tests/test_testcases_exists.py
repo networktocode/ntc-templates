@@ -7,10 +7,10 @@ from tests import load_index_data
 
 
 KNOWN_MISSING_TESTS = {
-    'cisco_ios_show_vlan',
-    'cisco_nxos_show_interface_brief',
-    'cisco_nxos_show_ip_ospf_neighbor_vrf',
-    'cisco_xr_show_controllers',
+    "cisco_ios_show_vlan",
+    "cisco_nxos_show_interface_brief",
+    "cisco_nxos_show_ip_ospf_neighbor_vrf",
+    "cisco_xr_show_controllers",
 }
 
 
@@ -25,7 +25,7 @@ def test_verify_parsed_and_reference_data_exists():
     index = sorted(load_index_data())
     for row in index:
         template = row[0].strip()
-        template_short = template.split('.template')[0]
+        template_short = template.split(".template")[0]
         platform = row[2].strip()
         for directory in os.listdir("tests"):
             if re.match(platform, directory):
@@ -34,6 +34,6 @@ def test_verify_parsed_and_reference_data_exists():
         cut = len(platform_directory) + 1
         command = template_short[cut:]
         if template_short not in KNOWN_MISSING_TESTS:
-            cases = 'tests/%s/%s/*.raw' % (platform_directory, command)
+            cases = "tests/{0}/{1}/*.raw".format(platform_directory, command)
             test_list = glob.glob(cases)
-            assert len(test_list) != 0, 'Could not find tests for %s' % template
+            assert len(test_list) != 0, "Could not find tests for {0}".format(template)
