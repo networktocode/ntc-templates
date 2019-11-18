@@ -21,7 +21,7 @@ def transform_parsed(filepath=None, dirpath=None):
 
 
 def ensure_yaml_standards(yaml_file):
-    with open(yaml_file) as parsed_file:
+    with open(yaml_file, encoding="utf-8") as parsed_file:
         parsed_data = parsed_file.read()
 
     yaml_obj = YAML()
