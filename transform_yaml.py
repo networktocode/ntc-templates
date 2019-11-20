@@ -8,95 +8,220 @@ import argparse
 from ruamel.yaml import YAML
 from ruamel.yaml.scalarstring import DoubleQuotedScalarString as DQ
 from textfsm import clitable
-from ntc_templates.parse import _clitable_to_dict
+from lib.ntc_templates.parse import parse_output
 
 
 FILE_PATH = os.path.abspath(__file__)
 FILE_DIR = os.path.dirname(FILE_PATH)
-TEMPLATE_DIR = "{0}/templates".format(FILE_DIR)
 TEST_DIR = "{0}/tests".format(FILE_DIR)
+YAML_OBJECT = YAML()
+YAML_OBJECT.explicit_start = True
+YAML_OBJECT.indent(sequence=4, offset=2)
+YAML_OBJECT.block_style = True
 
 
-def transform_parsed(filepath=None, dirpath=None):
-    if filepath is not None:
-        ensure_yaml_standards(filepath)
-    else:
-        for file in glob.iglob("{0}/*.parsed".format(dirpath)):
-            os.rename(file, file.replace(file[-6:], "yml"))
-        for file in glob.iglob("{0}/*.yml".format(dirpath)):
-            print(file)
-            ensure_yaml_standards(file)
+
+def transform_file(filepath):
+    """
+    Loads YAML file and formats to adhere to yamllint config.
+
+    Args:
+        filepath (str): The full path to a YAML file.
+
+    Returns:
+        None: File I/O is performed to ensure YAML file adheres to yamllint config.
+
+    Example:
+        >>> filepath = "tests/cisco_ios/show_version/cisco_ios_show_version.yml"
+        >>> transform_parsed(filepath)
+        >>> 
+    """
+    with open(filepath, encoding="utf-8") as parsed_file:
+        parsed_object = YAML_OBJECT.load(parsed_file)
+    
+    ensure_yaml_standards(parsed_object, filepath)
 
 
-def ensure_yaml_standards(yaml_file, parsed_obj=None):
-    yaml_obj = YAML()
-    if parsed_obj is None:
-        with open(yaml_file, encoding="utf-8") as parsed_file:
-            parsed_data = parsed_file.read()
-            parsed_obj = yaml_obj.load(parsed_data.replace("\n\n", "\n"))
+def transform_glob(dirpath):
+    """
+    Globs for YAML files and formats to adhere to yamllint config.
 
-    for entry in parsed_obj["parsed_sample"]:
+    Every file in ``dirpath`` ending in ``.yml`` will be formatted according to
+    yamllint config. Since this is using glob, the directory string passed in can
+    also include glob syntax (see ``Example``)
+
+    Args:
+        dirpath (str): The path to search for files with ``.yml`` extension.
+
+    Returns:
+        None: File I/O is performed to ensure YAML files adhere to yamllint config.
+
+    Example:
+        >>> dirpath = "tests/*/*"
+        >>> transform_parsed(dirpath)
+        # Each filename is printed to the terminal
+        >>> 
+    """
+    # This commented out code was used for mass renaming of files;
+    # it is probably not needed anymore
+    # for file in glob.iglob("{0}/*.parsed".format(dirpath)):
+    #     os.rename(file, file.replace(file[-6:], "yml"))
+    for file in glob.iglob("{0}/*.yml".format(dirpath)):
+        print(file)
+        transform_file(file)
+
+
+def ensure_yaml_standards(parsed_object, output_path):
+    """
+    Ensures YAML files adhere to yamllint config as defined in this project.
+
+    Args:
+        parsed_object (dict): The TextFSM/CliTable data converted to a list of dicts.
+            The list of dicts must be the value of a dictionary key, ``parsed_sample``.
+        output_path (str): The filepath to write the ``parsed_object`` to.
+
+    Returns:
+        None: File I/O is performed to write ``parsed_object`` to ``output_path``.
+    """
+    for entry in parsed_object["parsed_sample"]:
+        # TextFSM conversion will allways be a list of dicts
         for key, value in entry.items():
+            # TextFSM capture groups always return strings or lists
+            # This also accounts for numbers incase the YAML was done by hand
             if isinstance(value, (str, numbers.Number)):
                 entry[key] = DQ(value)
             else:
                 entry[key] = [DQ(val) for val in value]
 
-    yaml_obj.explicit_start = True
-    yaml_obj.indent(sequence=4, offset=2)
-    yaml_obj.block_style = True
-
-    with open(yaml_file, "w") as parsed_file:
-        yaml_obj.dump(parsed_obj, parsed_file)
+    with open(output_path, "w", encoding="utf-8") as parsed_file:
+        YAML_OBJECT.dump(parsed_object, parsed_file)
 
 
-def build_parsed_data_from_output(
-    test_filename, command, platform,
-):
+def parse_test_filepath(filepath):
     """
-    TODO: Adjust parse_command function to accept templates directory
-          instead of always using _get_template_dir
+    Parses fullpath of test file to obtain platform, command, and filename info.
+
+    Args:
+        filepath (str): The path to a test file from platform directory or earlier.
+
+    Returns:
+        tuple: Strings of platform, command, and the filename without the extension.
+
+    Example:
+        >>> filepath = "tests/cisco_ios/show_version/cisco_ios_show_version.raw"
+        >>> platform, command, filename = parse_test_filepath(filepath)
+        >>> print(platform)
+        cisco_ios
+        >>> print(command)
+        show version
+        >>> print(filename)
+        cisco_ios_show_version
+        >>> 
     """
+    command_dir, filename = os.path.split(filepath)
+    platform_dir, command = os.path.split(command_dir)
+    test_dir, platform = os.path.split(platform_dir)
+
+    command_without_underscores = command.replace("_", " ")
+    filename_without_extension, extension = filename.rsplit(".", 1)
+
+    return platform, command_without_underscores, filename_without_extension
+
+
+def build_parsed_data_from_output(filepath):
+    """
+    Generates a YAML file from the file containing the command output.
+
+    The command output should be stored in a file in the appropriate directory;
+    for example, ``tests/cisco_ios/show_version/cisco_ios_show_version.raw``
+    This uses ``lib.ntc_templates.parse.parse_output``, so the template must
+    be in the ``templates/`` directory, and ``templates/index`` must be updated
+    with the correct entry for the template.
+
+    Args:
+        filepath (str): The path to the file containing sample command output.
+
+    Returns
+        None: File I/O is performed to generate a YAML file pased on command output.
+
+    Example:
+        >>> filepath = "tests/cisco_ios/show_version/cisco_ios_show_version.raw"
+        >>> build_parsed_data_from_output(filepath)
+        >>> 
+    """
+    platform, command, filename = parse_test_filepath(filepath)
+    with open(filepath, encoding="utf-8") as output_file:
+        output_data = output_file.read()
+
+    structured_data = parse_output(platform, command, output_data)
+
     command_with_underscores = command.replace(" ", "_")
-    test_dir = "{0}/{1}/{2}".format(TEST_DIR, platform, command_with_underscores)
-    output_file = "{0}/{1}.raw".format(test_dir, test_filename)
-    with open(output_file, encoding="utf-8") as fh:
-        output_data = fh.read()
+    yaml_file = "{0}/{1}/{2}/{3}.yml".format(
+        TEST_DIR, platform, command_with_underscores, filename
+    )
+    ensure_yaml_standards({"parsed_sample": structured_data}, yaml_file)
 
-    cli_table = clitable.CliTable("index", TEMPLATE_DIR)
-    attrs = {"Command": command, "Platform": platform}
-    try:
-        cli_table.ParseCmd(output_data, attrs)
-        structured_data = _clitable_to_dict(cli_table)
-    except clitable.CliTableError as e:
-        raise Exception(
-            'Unable to parse command "{0}" on platform {1} - {2}'.format(command, platform, str(e))
-        )
-    yml_file = "{0}/{1}.yml".format(test_dir, test_filename)
-    ensure_yaml_standards(yml_file, {"parsed_sample": structured_data})
+
+
+def build_parsed_data_from_dir(dirpath):
+    """
+    Globs for files ending in ``.raw`` and generates YAML files based on TextFSM ouptut.
+
+    Every file in ``dirpath`` ending in ``.raw`` will be parsed with TextFSM and written
+    to a YAML file following the yamllint config standards. Since this is using glob, the
+    directory string passed in can also include glob syntax.
+
+    Args:
+        dirpath (str): The path to search for files with ``.raw`` extension.
+
+    Returns:
+        None: File I/O is performed to ensure YAML files exist for each test output file.
+
+    Example:
+        >>> dirpath = "tests/cisco_ios/show_mac-address-table"
+        >>> build_parsed_data_from_dir(dirpath)
+        # Each filename is printed to the terminal
+        >>> 
+    """
+    for file in glob.iglob("{0}/*.raw".format(dirpath)):
+        print(file)
+        build_parsed_data_from_output(file)
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Ensures YAML files match project standards")
     group = parser.add_mutually_exclusive_group()
-    group.add_argument("-f", "--filepath", type=str, help="The path to a YAML file.")
-    group.add_argument("-t", "--test_filename", type=str, help="The name of the test files.")
+    group.add_argument("-y", "--yaml_file", type=str, help="The path to a YAML file.")
     group.add_argument(
-        "-d",
-        "--dirpath",
+        "-yd",
+        "--yaml_dir",
         type=str,
-        help='The directory path to look for all files ending in ".parsed"',
+        help='The directory path to look for all files ending in ".yml"',
     )
-    parser.add_argument("-c", "--command", type=str, help="The command issued to get output.")
-    parser.add_argument("-p", "--platform", type=str, help="The platform per the index file.")
+    group.add_argument(
+        "-c",
+        "--command_file",
+        type=str,
+        help="The path to the file containing command output."
+    )
+    group.add_argument(
+        "-cd",
+        "--command_dir",
+        type=str,
+        help='The directory path to look for all files ending in ".raw"',
+    )
 
     args = parser.parse_args()
-    filepath = args.filepath
-    dirpath = args.dirpath
-    test_filename = args.test_filename
-    command = args.command
-    platform = args.platform
-    if test_filename is None:
-        transform_parsed(filepath, dirpath)
+    yaml_file = args.yaml_file
+    yaml_dir = args.yaml_dir
+    command_file = args.command_file
+    command_dir = args.command_dir
+
+    if yaml_file is not None:
+        transform_file(yaml_file)
+    elif yaml_dir is not None:
+        transform_glob(yaml_dir)
+    elif command_file is not None:
+        build_parsed_data_from_output(command_file)
     else:
-        build_parsed_data_from_output(test_filename, command, platform)
+        build_parsed_data_from_dir(command_dir)
