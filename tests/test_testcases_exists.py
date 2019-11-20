@@ -18,7 +18,7 @@ def extract_index_data():
     for row in index:
         # Trim template name to only parts making up platform and command directories
         template = row[0].strip()
-        template_short = template.split(".template")[0]
+        template_short = template.split(".textfsm")[0]
         # Get RegEx pattern to strip platform from template name
         platform = row[2].strip()
         # The platform attribute is a RegEx pattern,
@@ -40,4 +40,4 @@ def test_verify_parsed_and_reference_data_exists(mock_directory):
     """
     cases = f"{mock_directory}/*.raw"
     test_list = glob.glob(cases)
-    assert len(test_list) != 0, f"Could not find tests for {mock_directory}.template"
+    assert len(test_list) != 0, f"Could not find tests for {mock_directory}.textfsm"
