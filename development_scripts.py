@@ -20,7 +20,6 @@ YAML_OBJECT.indent(sequence=4, offset=2)
 YAML_OBJECT.block_style = True
 
 
-
 def transform_file(filepath):
     """
     Loads YAML file and formats to adhere to yamllint config.
@@ -38,7 +37,7 @@ def transform_file(filepath):
     """
     with open(filepath, encoding="utf-8") as parsed_file:
         parsed_object = YAML_OBJECT.load(parsed_file)
-    
+
     ensure_yaml_standards(parsed_object, filepath)
 
 
@@ -162,7 +161,6 @@ def build_parsed_data_from_output(filepath):
     ensure_yaml_standards({"parsed_sample": structured_data}, yaml_file)
 
 
-
 def build_parsed_data_from_dir(dirpath):
     """
     Globs for files ending in ``.raw`` and generates YAML files based on TextFSM ouptut.
@@ -189,7 +187,9 @@ def build_parsed_data_from_dir(dirpath):
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Ensures YAML files match project standards")
+    parser = argparse.ArgumentParser(
+        description="Ensures YAML files match project standards"
+    )
     group = parser.add_mutually_exclusive_group()
     group.add_argument("-y", "--yaml_file", type=str, help="The path to a YAML file.")
     group.add_argument(
@@ -202,7 +202,7 @@ if __name__ == "__main__":
         "-c",
         "--command_file",
         type=str,
-        help="The path to the file containing command output."
+        help="The path to the file containing command output.",
     )
     group.add_argument(
         "-cd",
