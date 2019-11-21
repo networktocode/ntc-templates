@@ -1,0 +1,11 @@
+Value LOAD_AVERAGE_01MIN (...\d+)
+Value LOAD_AVERAGE_05MIN (...\d+)
+Value LOAD_AVERAGE_15MIN (...\d+)
+
+
+Start
+  ^Load\s+average:\s+1\s+minute:\s+${LOAD_AVERAGE_01MIN}\s+5\s+minutes:\s+${LOAD_AVERAGE_05MIN}\s+15\s+minutes:\s+${LOAD_AVERAGE_15MIN} -> Record
+  ^.*
+  ^.* -> Error "LINE NOT FOUND"
+
+EOF
