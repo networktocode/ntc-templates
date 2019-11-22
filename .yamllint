@@ -32,4 +32,6 @@ rules:
     quote-type: "double"
     level: "warning"
   trailing-spaces: {}
-  
+
+ignore: |
+  tests/mocks/
