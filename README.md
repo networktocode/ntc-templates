@@ -25,10 +25,26 @@ $ pip install -e ntc-templates/
 $ 
 ```
 
+The install can also include the required dev packages, which can be useful for adding or editing templates:
+
+```shell
+$ git clone git@github.com:networktocode/ntc-templates.git
+$ 
+# Optional steps to install ntc-templates as a python package
+$ pip install -e ntc-templates/[dev]
+$ 
+```
+
 #### PyPI
 
 ```shell
 $ pip install ntc_templates
+$ 
+```
+
+To include the dev packages:
+```
+$ pip install ntc_templates[dev]
 $ 
 ```
 
@@ -217,7 +233,7 @@ The parsed file should match the data that is returned from the `parse_output` f
 The parsed text file should be placed in a directory in the `./tests` directory with the same name as the template file but replace `.template` file extension with `.yml`. The raw text file and the parsed text file should be in the same directory.
 **ex. ./tests/cisco_ios/show_clock/**
 
-There is an available helper that uses **Ansible** and **ntc-ansible** custom modules to create the parsed file automatically into the correct format. Helpers are located within `./helpers/`.
+There are available helpers to create the parsed file in the correct format (See _Development Helper Scripts_ below).
 
 An example of the proper format is shown below:
 ```bash
@@ -237,9 +253,9 @@ Multiple `raw` and `parsed` files are supported per directory, and are encourage
 
 All YAML files must adhere to the YAML standards defined in the `.yamllint` file in the root directory. Yamllint provides thorough documentation of their configuration settings [here](https://yamllint.readthedocs.io/en/stable/rules.html). 
 
-##### DEVELOPMENT HELPER SCRIPTS
+##### Development Helper Scripts
 
-We have provided a cli utility to assist with properly building the parsed files. All arguments that can be passed to the script are mutually exclusive (i.e. you can only pass one argument). The file can be made executable with the `chmod +x development_scripts.py` command. The arguments are:
+A cli utility is provided to assist with properly building the parsed files. This utility depends on some packages listed in the dev install requirements; see _Install and Usage_ for directions on installing the dev requirements. All arguments that can be passed to the script are mutually exclusive (i.e. you can only pass one argument). The file can be made executable with the `chmod +x development_scripts.py` command. The arguments are:
 
   * `-y`: Takes the path to a YAML file and ensures that the file adheres to the .yamllint settings
   * `-yd`: Takes a glob path to a directory or directories that will ensure all files ending in `.yml` adhere to the .yamllint settings
@@ -248,7 +264,7 @@ We have provided a cli utility to assist with properly building the parsed files
 
   The `-y` and `-yd` arguments are designed to allow developers to generate the expected parsed file how they want, and ensure that the formatting adheres to the defined standard for this project.
 
-  The `-c` and `-cd` arguments use `lib.ntc_templates.parse.parse_output()` to generate the parsed data; this means that you can use these arguments to auto-generate the test `.yml` file(s) for new templates; just be sure that the template's parsing behavior meets expectations. In order for the data to be parsed, the template must be places in `templates/` and the `templates/index` file must be updated to correctly point to the template file(s).
+  The `-c` and `-cd` arguments use `lib.ntc_templates.parse.parse_output()` to generate the parsed data; this means that you can use these arguments to auto-generate the test `.yml` file(s) for new templates; just be sure that the template's parsing behavior meets expectations. In order for the data to be parsed, the template must be placed in `templates/` and the `templates/index` file must be updated to correctly point to the template file(s).
 
 ```bash
 $ /development_scripts.py -yd tests/cisco_ios/show_mac-address-table
