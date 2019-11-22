@@ -294,7 +294,6 @@ def transform_file(filepath):
     with open(filepath, encoding="utf-8") as parsed_file:
         parsed_object = YAML_OBJECT.load(parsed_file)
 
-    update_yaml_comments(parsed_object)
     ensure_yaml_standards(parsed_object, filepath)
 
 
@@ -348,6 +347,10 @@ def ensure_yaml_standards(parsed_object, output_path):
                 entry[key] = DQ(value)
             else:
                 entry[key] = [DQ(val) for val in value]
+    try:
+        update_yaml_comments(parsed_object)
+    except AttributeError:
+        pass
 
     with open(output_path, "w", encoding="utf-8") as parsed_file:
         YAML_OBJECT.dump(parsed_object, parsed_file)
@@ -384,7 +387,7 @@ def parse_test_filepath(filepath):
     return platform, command_without_underscores, filename_without_extension
 
 
-def build_parsed_data_from_output(filepath):
+def build_parsed_data_from_output(filepath, test_dir=TEST_DIR):
     """
     Generates a YAML file from the file containing the command output.
 
@@ -396,13 +399,19 @@ def build_parsed_data_from_output(filepath):
 
     Args:
         filepath (str): The path to the file containing sample command output.
+        test_dir (str): The root directory to story the resulting YAML file.
 
     Returns
         None: File I/O is performed to generate a YAML file pased on command output.
 
     Example:
+        >>> root_dir = "tests/cisco_ios/show_version"
+        >>> os.listdir(root_dir)
+        ['cisco_ios_show_version.raw']
         >>> filepath = "tests/cisco_ios/show_version/cisco_ios_show_version.raw"
         >>> build_parsed_data_from_output(filepath)
+        >>> os.listdir(root_dir)
+        ['cisco_ios_show_version.raw', 'cisco_ios_show_version.yml']
         >>> 
     """
     platform, command, filename = parse_test_filepath(filepath)
@@ -413,12 +422,12 @@ def build_parsed_data_from_output(filepath):
 
     command_with_underscores = command.replace(" ", "_")
     yaml_file = "{0}/{1}/{2}/{3}.yml".format(
-        TEST_DIR, platform, command_with_underscores, filename
+        test_dir, platform, command_with_underscores, filename
     )
     ensure_yaml_standards({"parsed_sample": structured_data}, yaml_file)
 
 
-def build_parsed_data_from_dir(dirpath):
+def build_parsed_data_from_dir(dirpath, test_dir=TEST_DIR):
     """
     Globs for files ending in ``.raw`` and generates YAML files based on TextFSM ouptut.
 
@@ -440,7 +449,7 @@ def build_parsed_data_from_dir(dirpath):
     """
     for file in glob.iglob("{0}/*.raw".format(dirpath)):
         print(file)
-        build_parsed_data_from_output(file)
+        build_parsed_data_from_output(file, test_dir)
 
 
 if __name__ == "__main__":
