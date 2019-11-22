@@ -22,6 +22,7 @@ def copy_yaml_comments(yaml_comments_file):
 @pytest.fixture
 def teardown_normalize_file():
     filepaths = {}
+
     def _teardown_normalize_file(filepath):
         with open(filepath, encoding="utf-8") as fh:
             contents = fh.read()
@@ -52,6 +53,7 @@ def expected_mac_file():
 @pytest.fixture
 def teardown_delete_file():
     filepaths = []
+
     def _teardown_delete_file(filepath):
         filepaths.append(filepath)
 
@@ -126,9 +128,9 @@ def test_ensure_yaml_standards(teardown_normalize_file, expected_file):
 def test_parse_test_filepath():
     filepath = "tests/cisco_ios/show_version/cisco_ios_show_version.raw"
     platform, command, filename = development_scripts.parse_test_filepath(filepath)
-    assert platform  == "cisco_ios"
-    assert command  == "show version"
-    assert filename  == "cisco_ios_show_version"
+    assert platform == "cisco_ios"
+    assert command == "show version"
+    assert filename == "cisco_ios_show_version"
 
 
 def test_build_parsed_data_from_output(teardown_delete_file, expected_mac_file):
