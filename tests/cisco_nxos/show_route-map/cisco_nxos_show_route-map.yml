@@ -1,0 +1,99 @@
+---
+parsed_sample:
+  - action: "permit"
+    match_clauses:
+      - "as-path (as-path filter): AS-TEST"
+    name: "RM-TEST-OUT"
+    seq: "10"
+    set_clauses: []
+  - action: "deny"
+    match_clauses:
+      - "tag: 12345"
+    name: "RM-BGP-TO-OSPF"
+    seq: "10"
+    set_clauses: []
+  - action: "permit"
+    match_clauses: []
+    name: "RM-BGP-TO-OSPF"
+    seq: "20"
+    set_clauses: []
+  - action: "permit"
+    match_clauses: []
+    name: "RM-ISP1-IN"
+    seq: "1000"
+    set_clauses:
+      - "local-preference 300"
+  - action: "permit"
+    match_clauses:
+      - "as-path (as-path filter): AS-ISP2"
+    name: "RM-ISP1-OUT"
+    seq: "1000"
+    set_clauses: []
+  - action: "permit"
+    match_clauses: []
+    name: "RM-ISP1-MAITENANCE"
+    seq: "10"
+    set_clauses:
+      - "local-preference 50"
+  - action: "permit"
+    match_clauses: []
+    name: "RM-FW-LP"
+    seq: "10"
+    set_clauses:
+      - "local-preference 25"
+  - action: "permit"
+    match_clauses: []
+    name: "RM-FW-MAITENANCE"
+    seq: "10"
+    set_clauses: []
+  - action: "permit"
+    match_clauses:
+      - "as-path (as-path filter): TEST-AS-FW"
+    name: "RM-FW-OUTBOUND"
+    seq: "10"
+    set_clauses: []
+  - action: "permit"
+    match_clauses:
+      - "ip address prefix-lists: PF-PATH-X-INTERNAL"
+    name: "RM-X-SIDE-INTERNAL"
+    seq: "10"
+    set_clauses: []
+  - action: "permit"
+    match_clauses:
+      - "ip address prefix-lists: PF-PATH-Z-INTERNAL"
+    name: "RM-Z-SIDE-INTERNAL"
+    seq: "10"
+    set_clauses: []
+  - action: "permit"
+    match_clauses:
+      - "ip address prefix-lists: PL-PERMIT-IN"
+    name: "RM-FILTER-IN"
+    seq: "10"
+    set_clauses: []
+  - action: "permit"
+    match_clauses:
+      - "ip address (access-lists): AL_TEST_TEST"
+    name: "TEST_THIS"
+    seq: "10"
+    set_clauses:
+      - "ip next-hop 2.2.2.2"
+  - action: "permit"
+    match_clauses:
+      - "ip address prefix-lists: PF-N3K1-TO-N3K2"
+    name: "RM-N3K1-TO-N3K2"
+    seq: "10"
+    set_clauses:
+      - "extcommunity RT:100:1"
+  - action: "permit"
+    match_clauses:
+      - "ip address prefix-lists: PF-N3K2-TO-N3K1"
+    name: "RM-N3K2-TO-N3K1"
+    seq: "10"
+    set_clauses:
+      - "extcommunity RT:200:1"
+  - action: "permit"
+    match_clauses:
+      - "ip address prefix-lists: PF-A-DEFAULT-ROUTE"
+    name: "RM-PATH-A-DEFAULT-ROUTE"
+    seq: "10"
+    set_clauses: []

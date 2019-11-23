@@ -40,7 +40,9 @@ def parse_output(platform=None, command=None, data=None):
         structured_data = _clitable_to_dict(cli_table)
     except clitable.CliTableError as e:
         raise Exception(
-            'Unable to parse command "{0}" on platform {1} - {2}'.format(command, platform, str(e))
+            'Unable to parse command "{0}" on platform {1} - {2}'.format(
+                command, platform, str(e)
+            )
         )
         # Invalid or Missing template
         # module.fail_json(msg='parsing error', error=str(e))

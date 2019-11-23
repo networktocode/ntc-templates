@@ -14,7 +14,9 @@ def return_test_files():
     platform_dirs = glob.glob("tests/*")
     platforms = (glob.glob("{0}/*".format(platform)) for platform in platform_dirs)
     template_dirs = (item for sublist in platforms for item in sublist)
-    test_commands = (glob.glob("{0}/*.raw".format(template_dir)) for template_dir in template_dirs)
+    test_commands = (
+        glob.glob("{0}/*.raw".format(template_dir)) for template_dir in template_dirs
+    )
 
     return (item for sublist in test_commands for item in sublist)
 
@@ -27,7 +29,7 @@ def load_template_test(request):
 
 def raw_template_test(raw_file):
     """Return structured data along with reference data."""
-    parsed_file = "{0}.parsed".format(raw_file[:-4])
+    parsed_file = "{0}.yml".format(raw_file[:-4])
     parts = raw_file.split("/")
     platform = parts[1]
     command = " ".join(parts[2].split("_"))
@@ -83,4 +85,6 @@ def correct_data_in_entries_test(processed, reference):
 
     for i in range(len(reference)):
         for key in reference[i].keys():
-            assert processed[i][key] == reference[i][key], "entry #{0}, key: {1}".format(i, key)
+            assert processed[i][key] == reference[i][key], "entry #{0}, key: {1}".format(
+                i, key
+            )
