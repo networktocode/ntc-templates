@@ -1,0 +1,35 @@
+---
+parsed_sample:
+  - platform: "cisco WS-C2960-8TC-L"
+    management_ip: "10.1.1.2"
+    software_version: "Cisco IOS Software, C2960 Software (C2960-LANBASEK9-M), Version\
+      \ 12.2(55)SE9, RELEASE SOFTWARE (fc1)"
+    destination_host: "desktop-switch"
+    remote_port: "GigabitEthernet0/1"
+    local_port: "GigabitEthernet1/0/16"
+    capabilities: "Switch IGMP"
+  - platform: "Cisco 3825"
+    management_ip: "10.1.1.1"
+    software_version: "Cisco IOS Software, 3800 Software (C3825-ADVENTERPRISEK9-M),\
+      \ Version 12.4(24)T1, RELEASE SOFTWARE (fc3)"
+    destination_host: "ce-router"
+    remote_port: "GigabitEthernet0/0"
+    local_port: "GigabitEthernet1/0/22"
+    capabilities: "Router Switch IGMP"
+  - platform: "VMware"
+    management_ip: "10.1.1.232"
+    software_version: "Linux 2.6.32-431.20.3.el6.x86_64 #1 SMP Fri Jun 6 18:30:54\
+      \ EDT 2014 CCM:10.5.2.10000-5.i386"
+    destination_host: "server"
+    remote_port: "eth0"
+    local_port: "GigabitEthernet1/0/19"
+    capabilities: "Host"
+  - platform: "Cisco "
+    management_ip: ""
+    software_version: "Cisco IOS Software, vios_l2 Software (vios_l2-ADVENTERPRISEK9-M),\
+      \ Version 15.2(CML_NIGHTLY_20150414)FLO_DSGS7, EARLY DEPLOYMENT DEVELOPMENT\
+      \ BUILD, synced to  DSGS_PI5_POSTCOLLAPSE_TEAM_TRACK_CLONE"
+    destination_host: "vIOS-L2-1"
+    remote_port: "GigabitEthernet0/3"
+    local_port: "GigabitEthernet0/3"
+    capabilities: "Router Switch IGMP"
