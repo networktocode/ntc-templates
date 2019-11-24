@@ -208,7 +208,7 @@ cisco_nxos_show_interfaces_switchport.template, .*, cisco_nxos, sh[[ow]] int[[er
 cisco_nxos_show_ip_dhcp_relay_address.template, .*, cisco_nxos, sh[[ow]] ip dh[[cp]] r[[elay]] a[[ddress]]
 cisco_nxos_show_lldp_neighbors_detail.template, .*, cisco_nxos, sh[[ow]] ll[[dp]] nei[[ghbors]] d[[etail]]
 cisco_nxos_show_cdp_neighbors_detail.template, .*, cisco_nxos, sh[[ow]] c[[dp]] neig[[hbors]] det[[ail]]
-cisco_nxos_show_ip_ospf_neighbor_vrf.template, .*, cisco_nxos, sh[[ow]] ip ospf nei[[ghbor]] vrf (\S+)
+cisco_nxos_show_ip_ospf_neighbor_vrf.template, .*, cisco_nxos, sh[[ow]] ip ospf nei[[ghbor]] vrf
 cisco_nxos_show_ipv6_interface_brief.template, .*, cisco_nxos, sh[[ow]] ipv[[6]] interf[[ace]] b[[rief]]
 cisco_nxos_show_port-channel_summary.template, .*, cisco_nxos, sh[[ow]] po[[rt-channel]] sum[[mary]]
 cisco_nxos_show_cts_interface_brief.template, .*, cisco_nxos, sh[[ow]] cts inte[[rface]] br[[ief]]
@@ -290,7 +290,7 @@ cisco_xr_show_processes_cpu.template, .*, cisco_xr, sh[[ow]] proc[[esses]] c[[pu
 cisco_xr_show_bfd_sessions.template, .*, cisco_xr, sh[[ow]] bf[[d]] sess[[ions]]
 cisco_xr_show_drops_np_all.template, .*, cisco_xr, sh[[ow]] drops np all
 cisco_xr_show_pim_neighbor.template, .*, cisco_xr, sh[[ow]] pi[[m]] neigh[[bor]]
-cisco_xr_show_controllers.template, .*, cisco_xr, sh[[ow]] contr[[ollers]] (\S+) phy
+cisco_xr_show_controllers.template, .*, cisco_xr, sh[[ow]] contr[[ollers]]
 cisco_xr_show_interfaces.template, .*, cisco_xr, sh[[ow]] inte[[rfaces]]
 cisco_xr_admin_show_vm.template, .*, cisco_xr, adm[[in]] sh[[ow]] vm
 cisco_xr_show_ip_route.template, .*, cisco_xr, sh[[ow]] (?:ip )?ro[[ute]]
