@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/networktocode/ntc-templates.svg?branch=master)](https://travis-ci.org/networktocode/ntc-templates)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
 
 NTC TEMPLATES
 =============
@@ -24,10 +25,26 @@ $ pip install -e ntc-templates/
 $ 
 ```
 
+The install can also include the required dev packages, which can be useful for adding or editing templates:
+
+```shell
+$ git clone git@github.com:networktocode/ntc-templates.git
+$ 
+# Optional steps to install ntc-templates as a python package
+$ pip install -e ntc-templates/[dev]
+$ 
+```
+
 #### PyPI
 
 ```shell
 $ pip install ntc_templates
+$ 
+```
+
+To include the dev packages:
+```
+$ pip install ntc_templates[dev]
 $ 
 ```
 
@@ -189,10 +206,10 @@ cisco_ios_show_cdp_neighbors_detail.template, .*, cisco_ios, sh[[ow]] c[[dp]] ne
 Tests will be located in `./tests` with the following hierarchy:
 - `./tests/{{ vendor_os }}/{{ command_name }}/`
 
-The `{{ command_name }}` directory should include the `.raw` file that includes the raw output of the command to be parsed, and the `.parsed` file of the returned structured data.
+The `{{ command_name }}` directory should include the `.raw` file that includes the raw output of the command to be parsed, and the `.yml` file of the returned structured data.
 ```bash
 $ ls tests/cisco_ios/show_clock/
-cisco_ios_show_clock.parsed
+cisco_ios_show_clock.yml
 cisco_ios_show_clock.raw
 $ 
 ```
@@ -213,14 +230,14 @@ $
 
 The parsed file should match the data that is returned from the `parse_output` function discussed in the beginning. Dictionary keys should be in lowercase.
 
-The parsed text file should be placed in a directory in the `./tests` directory with the same name as the template file but replace `.template` file extension with `.parsed`. The raw text file and the parsed text file should be in the same directory.
+The parsed text file should be placed in a directory in the `./tests` directory with the same name as the template file but replace `.template` file extension with `.yml`. The raw text file and the parsed text file should be in the same directory.
 **ex. ./tests/cisco_ios/show_clock/**
 
-There is an available helper that uses **Ansible** and **ntc-ansible** custom modules to create the parsed file automatically into the correct format. Helpers are located within `./helpers/`.
+There are available helpers to create the parsed file in the correct format (See _Development Helper Scripts_ below).
 
 An example of the proper format is shown below:
 ```bash
-$ cat ./tests/cisco_ios/show_clock/cisco_ios_show_clock.parsed
+$ cat ./tests/cisco_ios/show_clock/cisco_ios_show_clock.yml
 ---
 parsed_sample:
   - time: "18:57:38.347"
@@ -234,41 +251,82 @@ $
 
 Multiple `raw` and `parsed` files are supported per directory, and are encouraged, as there are differences depending on version, length, etc. Additional test files and more real life data helps ensure backwards compatibility is maintained as each template is updated and merged into the repo.
 
+All YAML files must adhere to the YAML standards defined in the `.yamllint` file in the root directory. Yamllint provides thorough documentation of their configuration settings [here](https://yamllint.readthedocs.io/en/stable/rules.html). 
+
+##### Development Helper Scripts
+
+A cli utility is provided to assist with properly building the parsed files. This utility depends on some packages listed in the dev install requirements; see _Install and Usage_ for directions on installing the dev requirements. All arguments that can be passed to the script are mutually exclusive (i.e. you can only pass one argument). The file can be made executable with the `chmod +x development_scripts.py` command. The arguments are:
+
+  * `-y`: Takes the path to a YAML file and ensures that the file adheres to the .yamllint settings
+  * `-yd`: Takes a glob path to a directory or directories that will ensure all files ending in `.yml` adhere to the .yamllint settings
+  * `-c`: Takes the path to a `.raw` file, and generates the parsed data and saves the results adjacent to the `.raw` file following the defined standards in .yamllint.
+  * `-cd`: Takes a glob path to a directory or directories containing `.raw` files, and creates the appropriate parsed files in the appropriate directory.
+
+  The `-y` and `-yd` arguments are designed to allow developers to generate the expected parsed file how they want, and ensure that the formatting adheres to the defined standard for this project.
+
+  The `-c` and `-cd` arguments use `lib.ntc_templates.parse.parse_output()` to generate the parsed data; this means that you can use these arguments to auto-generate the test `.yml` file(s) for new templates; just be sure that the template's parsing behavior meets expectations. In order for the data to be parsed, the template must be placed in `templates/` and the `templates/index` file must be updated to correctly point to the template file(s).
+
+```bash
+$ /development_scripts.py -yd tests/cisco_ios/show_mac-address-table
+tests/cisco_ios/show_mac-address-table/cisco_ios_show_mac-address-table2.yml
+tests/cisco_ios/show_mac-address-table/cisco_ios_show_mac-address-table3.yml
+tests/cisco_ios/show_mac-address-table/cisco_ios_show_mac-address-table5.yml
+tests/cisco_ios/show_mac-address-table/cisco_ios_show_mac-address-table4.yml
+tests/cisco_ios/show_mac-address-table/cisco_ios_show_mac-address-table.yml
+$
+$ ls tests/arista_eos/show_version/
+arista_eos_show_version.raw
+$
+$ ./development_scripts.py -c tests/arista_eos/show_version/arista_eos_show_version.txt
+$ ls tests/arista_eos/show_version/
+arista_eos_show_version.raw   arista_eos_show_version.yml
+$
+```
+
 ### Updating/Fixing Existing Templates
 When either fixing a bug within a template or adding additional **Values** to be captured, additional test files should be added to ensure backwards compatibility and that the new data is being parsed correctly.
 
 To add additional raw/parsed tests for a command:
 - Navigate to `./tests/{{ vendor_os }}/{{ command_name }}/`
-- Create new `.raw` and `.parsed` files within the directory, preferrably with a name identifying why the data is unique:
+- Create new `.raw` and `.yml` files within the directory, preferrably with a name identifying why the data is unique:
   * Existing raw: `./tests/cisco_ios/show_version/cisco_ios_show_version.raw`
   * New raw: `./tests/cisco_ios/show_version/cisco_ios_show_version_stack_platforms.raw`
-  * Existing parsed: `./tests/cisco_ios/show_version/cisco_ios_show_version.parsed`
-  * New parsed: `./tests/cisco_ios/show_version/cisco_ios_show_version_stack_platforms.parsed`
+  * Existing parsed: `./tests/cisco_ios/show_version/cisco_ios_show_version.yml`
+  * New parsed: `./tests/cisco_ios/show_version/cisco_ios_show_version_stack_platforms.yml`
 
 #### Testing
 You can test your changes locally within your Git branch before submitting a PR. If you do not have **tox** already installed, you can do that using pip or your systems package manager. Tox should be ran inside the **ntc-templates** root directory. The tox file is configured to run against python3.6, so either python3.6 needs to be available, or the tox.ini file will need to be updated with an available Python version.
 ```bash
 $ tox
 GLOB sdist-make: /home/admin/ntc-templates/setup.py
-py36 inst-nodeps: /home/admin/ntc-templates/.tox/dist/ntc_templates-1.1.0.zip
-py36 installed: atomicwrites==1.3.0,attrs==19.1.0,importlib-metadata==0.18,more-itertools==7.1.0,ntc-templates==1.1.0,packaging==19.0,pkg-resources==0.0.0,pluggy==0.12.0,py==1.8.0,pyparsing==2.4.0,pytest==5.0.1,PyYAML==5.1.1,six==1.12.0,terminal==0.4.0,textfsm==0.4.1,wcwidth==0.1.7,zipp==0.5.2
-py36 runtests: PYTHONHASHSEED='1913863515'
-py36 runtests: commands[0] | pytest
-=============================================================================== test session starts ================================================================================
-platform linux -- Python 3.6.8, pytest-5.0.1, py-1.8.0, pluggy-0.12.0
-rootdir: /home/admin/ntc-templates
-collected 364 items
+py36 inst-nodeps: /home/admin/ntc-templates/.tox/dist/ntc_templates-1.3.0.zip
+py36 installed: appdirs==1.4.3,atomicwrites==1.3.0,attrs==19.3.0,black==19.10b0,Click==7.0,future==0.18.2,importlib-metadata==0.23,more-itertools==7.2.0,ntc-templates==1.3.0,packaging==19.2,pathspec==0.6.0,pluggy==0.13.0,py==1.8.0,pyparsing==2.4.5,pytest==5.2.4,PyYAML==5.1.2,regex==2019.11.1,six==1.13.0,terminal==0.4.0,textfsm==1.1.0,toml==0.10.0,typed-ast==1.4.0,wcwidth==0.1.7,yamllint==1.18.0,zipp==0.6.0
+py36 runtests: PYTHONHASHSEED='3677750645'
+py36 runtests: commands[0] | black ./ --diff --check
+All done! ✨ 🍰 ✨
+8 files would be left unchanged.
+py36 runtests: commands[1] | yamllint tests/
+py36 runtests: commands[2] | pytest -vv
+================================================================ test session starts =================================================================
+platform linux -- Python 3.6.8, pytest-5.2.4, py-1.8.0, pluggy-0.13.0 -- /home/jmcgill/repos/ntc-templates/.tox/py36/bin/python3.6
+cachedir: .pytest_cache
+rootdir: /home/jmcgill/repos/ntc-templates
+collected 428 items                                                                                                                                  
 
-tests/test_index_order.py .                                                                                                                                                  [  0%]
-tests/test_structured_data_against_parsed_reference_files.py ............................................................................................................... [ 30%]
-............................................................................................................................................................................ [ 78%]
-...............................................................................                                                                                              [ 99%]
-tests/test_testcases_exists.py .                                                                                                                                             [100%]
+tests/test_index_order.py::test_index_ordering PASSED                                                                                          [  0%]
+tests/test_structured_data_against_parsed_reference_files.py::test_raw_data_against_mock[tests/alcatel_sros/oam_mac-ping/alcatel_sros_oam_mac-ping.raw] PASSED [  0%]
+tests/test_structured_data_against_parsed_reference_files.py::test_raw_data_against_mock[tests/alcatel_sros/show_service_id_base/alcatel_sros_show_service_id_base.raw] PASSED [  0%]
+tests/test_structured_data_against_parsed_reference_files.py::test_raw_data_against_mock[tests/alcatel_sros/show_router_bgp_routes_vpn-ipv4/alcatel_sros_show_router_bgp_routes_vpn-ipv4.raw] PASSED [  0%]
+tests/test_structured_data_against_parsed_reference_files.py::test_raw_data_against_mock[tests/brocade_fastiron/show_lldp_neighbors/brocade_fastiron_show_lldp_neighbors.raw] PASSED [  1%]
+...
+tests/test_structured_data_against_parsed_reference_files.py::test_raw_data_against_mock[tests/cisco_nxos/show_ip_interface_brief/cisco_nxos_show_ip_interface_brief.raw] PASSED [ 99%]
+tests/test_testcases_exists.py::test_verify_parsed_and_reference_data_exists PASSED                                                            [100%]
 
-=========================================================================== 364 passed in 15.69 seconds ============================================================================
-_____________________________________________________________________________________ summary ______________________________________________________________________________________
+================================================================ 428 passed in 43.84s ================================================================
+______________________________________________________________________ summary _______________________________________________________________________
   py36: commands succeeded
   congratulations :)
+$
 ```
 
 Questions

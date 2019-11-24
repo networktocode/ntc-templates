@@ -1,0 +1,44 @@
+---
+parsed_sample:
+  - source_intf: "any"
+    source:
+      - "10.90.67.2"
+    destination_intf: "any"
+    destination:
+      - "10.9.1.0/24"
+  - source_intf: "any"
+    source:
+      - "10.1.1.0/24"
+    destination_intf: "any"
+    destination:
+      - "172.16.1.0/24"
+  - source_intf: "any"
+    source:
+      - "10.90.67.2"
+    destination_intf: "any"
+    destination:
+      - "10.86.94.0"
+  - source_intf: "any"
+    source:
+      - "10.9.0.9"
+      - "10.9.0.10/31"
+      - "10.9.0.12/30"
+      - "10.9.0.16/28"
+      - "10.9.0.32/29"
+      - "10.9.0.40/30"
+      - "10.9.0.44/31"
+    destination_intf: "any"
+    destination:
+      - "0.0.0.0"
+  - source_intf: "any"
+    source:
+      - "10.1.1.0/24"
+    destination_intf: "any"
+    destination:
+      - "172.16.1.0/24"
+  - source_intf: "inside"
+    source:
+      - "192.168.1.150"
+    destination_intf: "outside"
+    destination:
+      - "172.18.254.252"

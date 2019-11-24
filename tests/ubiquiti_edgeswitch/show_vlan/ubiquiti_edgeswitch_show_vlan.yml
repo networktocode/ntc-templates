@@ -1,0 +1,17 @@
+---
+parsed_sample:
+  - name: "default"
+    type: "Default"
+    vlan_id: "1"
+  - name: "ip tv"
+    type: "Static"
+    vlan_id: "101"
+  - name: "internet"
+    type: "Static"
+    vlan_id: "102"
+  - name: "hjemmenett"
+    type: "Static"
+    vlan_id: "216"
+  - name: "server"
+    type: "Static"
+    vlan_id: "217"
