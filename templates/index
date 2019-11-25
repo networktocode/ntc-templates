@@ -208,7 +208,6 @@ cisco_nxos_show_interfaces_switchport.template, .*, cisco_nxos, sh[[ow]] int[[er
 cisco_nxos_show_ip_dhcp_relay_address.template, .*, cisco_nxos, sh[[ow]] ip dh[[cp]] r[[elay]] a[[ddress]]
 cisco_nxos_show_lldp_neighbors_detail.template, .*, cisco_nxos, sh[[ow]] ll[[dp]] nei[[ghbors]] d[[etail]]
 cisco_nxos_show_cdp_neighbors_detail.template, .*, cisco_nxos, sh[[ow]] c[[dp]] neig[[hbors]] det[[ail]]
-cisco_nxos_show_ip_ospf_neighbor_vrf.template, .*, cisco_nxos, sh[[ow]] ip ospf nei[[ghbor]] vrf
 cisco_nxos_show_ipv6_interface_brief.template, .*, cisco_nxos, sh[[ow]] ipv[[6]] interf[[ace]] b[[rief]]
 cisco_nxos_show_port-channel_summary.template, .*, cisco_nxos, sh[[ow]] po[[rt-channel]] sum[[mary]]
 cisco_nxos_show_cts_interface_brief.template, .*, cisco_nxos, sh[[ow]] cts inte[[rface]] br[[ief]]
@@ -219,6 +218,7 @@ cisco_nxos_show_mac_address-table.template, .*, cisco_nxos, sh[[ow]] m[[ac]] add
 cisco_nxos_show_interface_status.template, .*, cisco_nxos, sh[[ow]] int[[erface]] st[[atus]]
 cisco_nxos_show_ip_bgp_neighbors.template, .*, cisco_nxos, sh[[ow]] ip bgp nei[[ghbors]]
 cisco_nxos_show_ip_ospf_database.template, .*, cisco_nxos, sh[[ow]] ip o[[spf]] d[[atabase]]
+cisco_nxos_show_ip_ospf_neighbor.template, .*, cisco_nxos, sh[[ow]] ip ospf nei[[ghbor]]
 cisco_nxos_show_interface_brief.template, .*, cisco_nxos, sh[[ow]] int[[erface]] br[[ief]]
 cisco_nxos_show_flogi_database.template, .*, cisco_nxos, sh[[ow]] fl[[ogi]] d[[atabase]]
 cisco_nxos_show_ip_bgp_summary.template, .*, cisco_nxos, sh[[ow]] ip b[[gp]] s[[ummary]]
