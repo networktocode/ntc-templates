@@ -105,8 +105,8 @@ The TextFSM template name should be in the following format:
 
 ##### Naming
 
-The template should be named using: `{{ vendor_os }}_{{ command_with_underscores }}.template`
-> Ex: cisco_ios_show_cdp_neighbors.template
+The template should be named using: `{{ vendor_os }}_{{ command_with_underscores }}.textfsm`
+> Ex: cisco_ios_show_cdp_neighbors.textfsm
 
 Note: The vendor name must be valid from the [os_choices](https://github.com/networktocode/ntc-templates/blob/master/tests/test_index_order.py#L59) tests, which is primarily based on [Netmiko](https://github.com/ktbyers/netmiko/tree/master/netmiko) list of supported vendors. New vendors added should adhere to **vendor_os**.
 > Ex: vmware_nsx
@@ -190,16 +190,16 @@ Example:
 Template, Hostname, Platform, Command
 
 # same os, same length, used alphabetical order of command name
-arista_eos_show_mlag.template, .*, arista_eos, sh[[ow]] ml[[ag]]
-arista_eos_show_vlan.template, .*, arista_eos, sh[[ow]] vl[[an]]
+arista_eos_show_mlag.textfsm, .*, arista_eos, sh[[ow]] ml[[ag]]
+arista_eos_show_vlan.textfsm, .*, arista_eos, sh[[ow]] vl[[an]]
 
 # os in alphabetical order and space between cisco_asa and arista_eos
-cisco_asa_dir.template,  .*, cisco_asa, dir
+cisco_asa_dir.textfsm,  .*, cisco_asa, dir
 
 # same os, template name length different and space between cisco_asa and cisco_ios
-cisco_ios_show_capability_feature_routing.template,  .*, cisco_ios, sh[[ow]] cap[[ability]] f[[eature]] r[[outing]]
-cisco_ios_show_interface_transceiver.template, .*, cisco_ios, sh[[ow]] int[[erface]] trans[[ceiver]]
-cisco_ios_show_cdp_neighbors_detail.template, .*, cisco_ios, sh[[ow]] c[[dp]] neig[[hbors]] det[[ail]]
+cisco_ios_show_capability_feature_routing.textfsm,  .*, cisco_ios, sh[[ow]] cap[[ability]] f[[eature]] r[[outing]]
+cisco_ios_show_interface_transceiver.textfsm, .*, cisco_ios, sh[[ow]] int[[erface]] trans[[ceiver]]
+cisco_ios_show_cdp_neighbors_detail.textfsm, .*, cisco_ios, sh[[ow]] c[[dp]] neig[[hbors]] det[[ail]]
 ```
 
 #### Tests
@@ -230,7 +230,7 @@ $
 
 The parsed file should match the data that is returned from the `parse_output` function discussed in the beginning. Dictionary keys should be in lowercase.
 
-The parsed text file should be placed in a directory in the `./tests` directory with the same name as the template file but replace `.template` file extension with `.yml`. The raw text file and the parsed text file should be in the same directory.
+The parsed text file should be placed in a directory in the `./tests` directory with the same name as the template file but replace `.textfsm` file extension with `.yml`. The raw text file and the parsed text file should be in the same directory.
 **ex. ./tests/cisco_ios/show_clock/**
 
 There are available helpers to create the parsed file in the correct format (See _Development Helper Scripts_ below).
