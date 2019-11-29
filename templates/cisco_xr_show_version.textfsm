@@ -1,0 +1,37 @@
+Value VERSION (\S[^\[]+)
+Value UPTIME (.+?)
+Value LOCATION (\S+)
+Value HARDWARE (.+)
+Value BUILD_HOST (\S+)
+
+Start
+  ^Cisco.+Software.+Version\s+${VERSION}
+  ^Build\s+Information: -> Build_Info
+  ^.+uptime\s+is\s+${UPTIME}\s*$$
+  ^(?:\s*[Cc]isco\s+)?${HARDWARE}\s\(.*\) processor
+  ^\S{3}\s+\S{3}\s+\d{1,2}\s+\d+:\d+:\d+
+  ^Copyright
+  ^ROM:
+  ^[Ss]ystem\s+[Ii]mage
+  ^\d+\s+processor
+  ^\d+\s+.*(?:[Ee]th|[Gg]ig[Ee]|[Ss][Oo][Nn][Ee][Tt]|[Ww][Aa][Nn][Pp][Hh][Yy])
+  ^\d+\w\s+bytes
+  ^Boot\s+device
+  ^Package\s+active
+  ^hfr-doc -> CRS
+  ^\s*$$
+  ^. -> Error
+  
+# A VARIATION OF THE OUTPUT, EX. NCS PLATFORM
+Build_Info
+  ^\s+Built\sBy.+
+  ^\s+Built\sOn.+
+  ^\s+Buil[dt]\sHost\s+:\s+${BUILD_HOST}
+  ^\s+Workspace\s+:\s\S+
+  ^\s+Version\s+:
+  ^\s+Location\s+:\s${LOCATION}
+  ^\s*$$ -> Start
+  ^.* -> Error
+
+CRS
+  ^.

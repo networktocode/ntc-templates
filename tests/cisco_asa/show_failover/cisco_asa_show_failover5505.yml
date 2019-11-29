@@ -1,0 +1,77 @@
+---
+parsed_sample:
+  - state: "On"
+    role: "Primary"
+    lan_intf_name: "fover"
+    lan_intf: "Vlan150"
+    lan_intf_state: "up"
+    sw_version: "7.2(0)55"
+    sw_version_mate: "7.2(0)55"
+    failover_group:
+      - "None"
+    last_failover_time:
+      - "19:59:58"
+    last_failover_timezone:
+      - "PST"
+    last_failover_month:
+      - "Apr"
+    last_failover_day:
+      - "6"
+    last_failover_year:
+      - "2006"
+    service_state:
+      - "Active"
+    service_state_mate:
+      - "Standby Ready"
+    ssp_slot:
+      - "0"
+    ssp_model:
+      - "ASA5505"
+    ssp_status:
+      - "Up"
+    ssp_slot_mate:
+      - "0"
+    ssp_model_mate:
+      - "ASA5505"
+    ssp_status_mate:
+      - "Up"
+    interfaces_context:
+      - "None"
+      - "None"
+      - "None"
+      - "None"
+    interfaces:
+      - "inside"
+      - "outside"
+      - "dmz"
+      - "test"
+    interfaces_status:
+      - "Normal"
+      - "Normal"
+      - "Normal"
+      - "Normal"
+    interfaces_state:
+      - "None"
+      - "None"
+      - "None"
+      - "None"
+    interfaces_context_mate:
+      - "None"
+      - "None"
+      - "None"
+      - "None"
+    interfaces_mate:
+      - "inside"
+      - "outside"
+      - "dmz"
+      - "test"
+    interfaces_status_mate:
+      - "Normal"
+      - "Normal"
+      - "Normal"
+      - "Normal"
+    interfaces_state_mate:
+      - "None"
+      - "None"
+      - "None"
+      - "None"
