@@ -1,0 +1,54 @@
+---
+parsed_sample:
+  - bundle_iface: "Po1"
+    bundle_proto: "LACP"
+    bundle_proto_state: "(a)"
+    bundle_status: "(U)"
+    phys_iface:
+      - "Et3/36/1"
+    phys_iface_status:
+      - "(PG+)"
+  - bundle_iface: "Po25"
+    bundle_proto: "LACP"
+    bundle_proto_state: "(a)"
+    bundle_status: "(D)"
+    phys_iface:
+      - "Et3/12/1"
+    phys_iface_status:
+      - "(G-)"
+  - bundle_iface: "Po101"
+    bundle_proto: "LACP"
+    bundle_proto_state: "(a)"
+    bundle_status: "(U)"
+    phys_iface:
+      - "Et3/1/1"
+      - "Et3/1/2"
+      - "Et3/1/3"
+      - "Et3/1/4"
+      - "Et3/3/1"
+      - "Et3/3/2"
+      - "Et3/3/3"
+      - "Et3/3/4"
+    phys_iface_status:
+      - "(PSG+)"
+      - "(PSG+)"
+      - "(PSG+)"
+      - "(PSG+)"
+      - "(PSG+)"
+      - "(PSG+)"
+      - "(PSG+)"
+      - "(PSG+)"
+  - bundle_iface: "Po102"
+    bundle_proto: "LACP"
+    bundle_proto_state: "(a)"
+    bundle_status: "(U)"
+    phys_iface:
+      - "Et3/2/1"
+      - "Et3/2/2"
+      - "Et3/2/3"
+      - "Et3/2/4"
+    phys_iface_status:
+      - "(PSG+)"
+      - "(PSG+)"
+      - "(PSG+)"
+      - "(PSG+)"

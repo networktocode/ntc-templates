@@ -1,6 +1,0 @@
-Value BGP_NEIGH (\d+?\.\d+?\.\d+?\.\d+?)
-Value NEIGH_AS (\d+)
-Value STATE_PFXRCD (\S+?\s+\S+?|\S+?)
-
-Start
-  ^${BGP_NEIGH}\s+\S+\s+${NEIGH_AS}(\s+\d+?){5}\s+\S+?\s+${STATE_PFXRCD}$$ -> Record

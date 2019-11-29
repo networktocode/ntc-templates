@@ -1,0 +1,34 @@
+Value Required INTERFACE (\S+)
+Value SWITCHPORT (.+)
+Value SWITCHPORT_MONITOR (.+)
+Value SWITCHPORT_NEGOTIATION (.+)
+Value MODE (.+)
+Value ACCESS_VLAN (\d+)
+Value NATIVE_VLAN (\d+)
+Value VOICE_VLAN (\S+)
+Value TRUNKING_VLANS (.+)
+
+Start
+  ^Name: -> Continue.Record
+  ^Name:\s+${INTERFACE}
+  ^\s*Switchport:\s+${SWITCHPORT}
+  ^\s*Switchport\s+Monitor:\s+${SWITCHPORT_MONITOR}
+  ^\s*Operational\s+Mode:\s+${MODE}
+  ^\s*Negotiation\s+of\s+Trunking:\s+${SWITCHPORT_NEGOTIATION}
+  ^\s*Access\s+Mode\s+VLAN:\s+${ACCESS_VLAN}
+  ^\s*Trunking\s+Native\s+Mode\s+VLAN:\s+${NATIVE_VLAN}
+  ^\s*Voice\s+VLAN:\s+${VOICE_VLAN}
+  ^\s*Trunking\s+VLANs\s+Enabled:\s+${TRUNKING_VLANS}
+  ^\s*Administrative\s+Mode
+  ^\s*(?:Operational|Administrative)\s+(?:Trunking|Native\s+VLAN|private-vlan)
+  ^\s*Voice\s+VLAN:
+  ^\s*Pruning\s+VLANs
+  ^\s*Capture\s+(?:Mode|VLANs)
+  ^\s*Protected
+  ^\s*Unknown\s+(unicast|multicast)
+  ^\s*Appliance\s+trust
+  ^\s*$$
+  # Capture time-stamp if vty line has command time-stamping turned on
+  ^Load\s+for\s+
+  ^Time\s+source\s+is
+  ^. -> Error
