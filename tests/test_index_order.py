@@ -62,7 +62,6 @@ def check_order(
 def test_index_ordering():
 
     os_choices = [
-<<<<<<< HEAD
         "a10",
         "alcatel_aos",
         "alcatel_sros",
@@ -105,17 +104,6 @@ def test_index_ordering():
         "vyatta_vyos",
         "vyos",
         "watchguard_firebox",
-=======
-        'a10', 'alcatel_aos', 'alcatel_sros', 'arista_eos', 'aruba_os', 'avaya_ers', 'avaya_vsp',
-        'brocade_fastiron', 'brocade_netiron', 'brocade_nos', 'brocade_vdx', 'brocade_vyos',
-        'checkpoint_gaia', 'cisco_asa', 'cisco_ios', 'cisco_nxos', 'cisco_s300', 'cisco_wlc',
-        'cisco_xe', 'cisco_xr', 'dell_force10', 'enterasys', 'extreme', 'f5_ltm', 'fortinet',
-        'hp_comware', 'hp_procurve', 'huawei', 'juniper', 'juniper_junos', 'juniper_screenos',
-        'alcatel_sros', 'linux', 'ovs_linux', 'paloalto_panos', 'quanta_mesh','ruckus_fastiron',
-        'ubiquiti_edgeswitch', 'vmware_nsxv', 'vyatta_vyos', 'vyos', 'watchguard_firebox', 
-        'siemens_ros',
-
->>>>>>> cd6266967b68302d25fc16bb7806cf68f5eb06e1
     ]
 
     prior_os = ""

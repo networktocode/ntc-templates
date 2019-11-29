@@ -342,20 +342,7 @@ paloalto_panos_show_jobs_all.textfsm, .*, paloalto_panos, sh[[ow]] jo[[bs]] all
 paloalto_panos_show_arp_all.textfsm, .*, paloalto_panos, sh[[ow]] ar[[p]] all
 paloalto_panos_show_mac_all.textfsm, .*, paloalto_panos, sh[[ow]] mac all
 
-<<<<<<< HEAD
 ruckus_fastiron_show_arp.textfsm, .*, ruckus_fastiron, sh[[ow]] ar[[p]]
-=======
-siemens_ros_sql_select_from_ethPortStatus.template, .*, siemens_ros, sql select from ethPortStatus
-siemens_ros_sql_select_from_productInfo.template, .*, siemens_ros, sql select from productInfo
-siemens_ros_sql_select_from_timeDateCfg.template, .*, siemens_ros, sql select from timeDateCfg
-siemens_ros_sql_select_from_lldpRemTbl.template, .*, siemens_ros, sql select from lldpRemTbl
-siemens_ros_sql_select_from_macaddress.template, .*, siemens_ros, sql select from macaddress
-siemens_ros_sql_select_from_systemID.template, .*, siemens_ros, sql select from systemID
-siemens_ros_sql_select_from_ntpCfg.template, .*, siemens_ros, sql select from ntpCfg
-
-ubiquiti_edgeswitch_show_vlan.template, .*, ubiquiti_edgeswitch, sh[[ow]] vl[[an]]
-ubiquiti_edgeswitch_show_arp.template, .*, ubiquiti_edgeswitch, sh[[ow]] ar[[p]]
->>>>>>> cd6266967b68302d25fc16bb7806cf68f5eb06e1
 
 ubiquiti_edgeswitch_show_vlan.textfsm, .*, ubiquiti_edgeswitch, sh[[ow]] vl[[an]]
 ubiquiti_edgeswitch_show_arp.textfsm, .*, ubiquiti_edgeswitch, sh[[ow]] ar[[p]]
