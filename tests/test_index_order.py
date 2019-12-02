@@ -9,7 +9,9 @@ import csv
 from tests import load_index_data
 
 
-def check_order(current_os, prior_os, cmd_len, prior_len, os_choices, used_os, cmd, prior_cmd):
+def check_order(
+    current_os, prior_os, cmd_len, prior_len, os_choices, used_os, cmd, prior_cmd
+):
     add_os_check = []
 
     if current_os not in used_os and used_os is not None:
@@ -20,7 +22,9 @@ def check_order(current_os, prior_os, cmd_len, prior_len, os_choices, used_os, c
         msg = "OS's are not in alpabetical order, current order: '{0}'".format(used_os)
         return False, msg
     elif add_os_check != sorted(add_os_check):
-        msg = "OS's are not in alpabetical order, current order: '{0}'".format(add_os_check)
+        msg = "OS's are not in alpabetical order, current order: '{0}'".format(
+            add_os_check
+        )
         return False, msg
 
     if current_os not in os_choices:

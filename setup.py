@@ -3,7 +3,9 @@ from codecs import open
 from setuptools import setup, find_packages
 
 with open("lib/ntc_templates/__init__.py", "r") as fd:
-    version = re.search(r'^__version__\s*=\s*[\'"]([^\'"]*)[\'"]', fd.read(), re.MULTILINE).group(1)
+    version = re.search(
+        r'^__version__\s*=\s*[\'"]([^\'"]*)[\'"]', fd.read(), re.MULTILINE
+    ).group(1)
 
 if not version:
     raise RuntimeError("Cannot find version information")
@@ -29,6 +31,7 @@ config = {
     "author_email": "info@networktocode.com",
     "url": "https://github.com/networktocode/ntc-templates",
     "install_requires": ["textfsm", "terminal"],
+    "extras_require": {"dev": ["pytest", "PyYAML", "black", "yamllint", "ruamel.yaml"]},
     "classifiers": [
         "Development Status :: 4 - Beta",
         "Intended Audience :: Developers",
