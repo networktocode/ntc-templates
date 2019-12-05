@@ -1,7 +1,7 @@
-Value Key NUMBER (\w+)
+Value NUMBER (\w+)
 Value MONTH (\w+)
 Value DAY (\d+)
-Value TIME (\d+:\d+:\d+\.\d+)
+Value TIME ((\d+:\d+:\d+\.\d+)|(\d+:\d+:\d+))
 Value TIMEZONE (\w+)
 Value FACILITY (.*)
 Value SEVERITY (\d)
@@ -10,3 +10,5 @@ Value MESSAGE (.*)
 
 Start
   ^${NUMBER}[:]\s${MONTH}\s+${DAY}\s+${TIME}\s*${TIMEZONE}:\s%${FACILITY}-${SEVERITY}-${MNEMONIC}:\s${MESSAGE} -> Record
+  ^${MONTH}\s+${DAY}\s+${TIME}\s*${TIMEZONE}:\s%${FACILITY}-${SEVERITY}-${MNEMONIC}:\s${MESSAGE} -> Record
+  ^${MONTH}\s+${DAY}\s+${TIME}\s*:\s%${FACILITY}-${SEVERITY}-${MNEMONIC}:\s${MESSAGE} -> Record
