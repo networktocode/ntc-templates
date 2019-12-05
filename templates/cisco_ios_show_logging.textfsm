@@ -1,15 +1,29 @@
-Value NUMBER (\d+)
-Value MONTH (\w+)
-Value DAY (\d+)
+Value NUMBER (\d{6})
+Value MONTH (\D\D\D)
+Value DAY (\d{1,2})
 Value TIME ((\d+:\d+:\d+\.\d+)|(\d+:\d+:\d+))
-Value TIMEZONE (\w+)
-Value FACILITY (.*)
+Value TIMEZONE (\D\D\D)
+Value FACILITY (\w+)
 Value SEVERITY (\d)
 Value MNEMONIC (\w+)
-Value MESSAGE (.*)
+Value List MESSAGE (.*)
 
 Start
-  ^${NUMBER}[:]\s${MONTH}\s+${DAY}\s+${TIME}:\s*%${FACILITY}-${SEVERITY}-${MNEMONIC}:\s${MESSAGE} -> Record
-  ^${NUMBER}[:]\s${MONTH}\s+${DAY}\s+${TIME}\s*${TIMEZONE}:\s%${FACILITY}-${SEVERITY}-${MNEMONIC}:\s${MESSAGE} -> Record
-  ^${MONTH}\s+${DAY}\s+${TIME}\s*:\s%${FACILITY}-${SEVERITY}-${MNEMONIC}:\s${MESSAGE} -> Record
-  ^${MONTH}\s+${DAY}\s+${TIME}\s*${TIMEZONE}:\s%${FACILITY}-${SEVERITY}-${MNEMONIC}:\s${MESSAGE} -> Record
+  ^Log\sBuffer -> Info
+
+Info
+  ^${NUMBER}:\s${MONTH}\s+${DAY}\s+${TIME}:\s+%${FACILITY}-${SEVERITY}-${MNEMONIC}:\s+${MESSAGE}$$ -> Messages
+  ^${NUMBER}:\s${MONTH}\s+${DAY}\s+${TIME}\s+${TIMEZONE}:\s+%${FACILITY}-${SEVERITY}-${MNEMONIC}:\s+${MESSAGE}$$ -> Messages
+  ^${MONTH}\s+${DAY}\s+${TIME}\s*:\s%${FACILITY}-${SEVERITY}-${MNEMONIC}:\s${MESSAGE} -> Messages
+  ^${MONTH}\s+${DAY}\s+${TIME}\s*${TIMEZONE}:\s%${FACILITY}-${SEVERITY}-${MNEMONIC}:\s${MESSAGE} -> Messages
+
+Messages
+  ^(\d{6}):\s+(\D\D\D)\s+(\d{1,2})\s+((\d+:\d+:\d+\.\d+)|(\d+:\d+:\d+)) -> Continue.Record
+  ^(\D\D\D)\s+(\d{1,2})\s+((\d+:\d+:\d+\.\d+)|(\d+:\d+:\d+)) -> Continue.Record
+  ^${NUMBER}:\s${MONTH}\s+${DAY}\s+${TIME}:\s+%${FACILITY}-${SEVERITY}-${MNEMONIC}:\s+${MESSAGE}$$
+  ^${NUMBER}:\s${MONTH}\s+${DAY}\s+${TIME}\s+${TIMEZONE}:\s+%${FACILITY}-${SEVERITY}-${MNEMONIC}:\s+${MESSAGE}$$
+  ^${MONTH}\s+${DAY}\s+${TIME}\s*:\s%${FACILITY}-${SEVERITY}-${MNEMONIC}:\s${MESSAGE}
+  ^${MONTH}\s+${DAY}\s+${TIME}\s*${TIMEZONE}:\s%${FACILITY}-${SEVERITY}-${MNEMONIC}:\s${MESSAGE}
+  ^${MESSAGE}$$
+  ^(\d{6}):\s+(\D\D\D)\s+(\d{1,2})\s+((\d+:\d+:\d+\.\d+)|(\d+:\d+:\d+)) -> Continue.Record
+  ^(\D\D\D)\s+(\d{1,2})\s+((\d+:\d+:\d+\.\d+)|(\d+:\d+:\d+)) -> Continue.Record
