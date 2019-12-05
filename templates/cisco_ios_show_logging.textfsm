@@ -9,6 +9,7 @@ Value MNEMONIC (\w+)
 Value MESSAGE (.*)
 
 Start
+  ^${NUMBER}[:]\s${MONTH}\s+${DAY}\s+${TIME}:\s*%${FACILITY}-${SEVERITY}-${MNEMONIC}:\s${MESSAGE} -> Record
   ^${NUMBER}[:]\s${MONTH}\s+${DAY}\s+${TIME}\s*${TIMEZONE}:\s%${FACILITY}-${SEVERITY}-${MNEMONIC}:\s${MESSAGE} -> Record
-  ^${MONTH}\s+${DAY}\s+${TIME}\s*${TIMEZONE}:\s%${FACILITY}-${SEVERITY}-${MNEMONIC}:\s${MESSAGE} -> Record
   ^${MONTH}\s+${DAY}\s+${TIME}\s*:\s%${FACILITY}-${SEVERITY}-${MNEMONIC}:\s${MESSAGE} -> Record
+  ^${MONTH}\s+${DAY}\s+${TIME}\s*${TIMEZONE}:\s%${FACILITY}-${SEVERITY}-${MNEMONIC}:\s${MESSAGE} -> Record
