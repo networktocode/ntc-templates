@@ -1,0 +1,5 @@
+Aug 15 2019 13:44:38: %ASA-6-305011: Built dynamic UDP translation from inside:192.168.1.5/56739 to outside:23.66.55.121/56739
+Aug 15 2019 13:44:38: %ASA-4-434002: SFR requested to drop TCP packet from outside:108.52.144.124/1215 to inside:98.56.23.111/443
+Aug 15 2019 13:44:38: %ASA-6-302021: Teardown ICMP connection for faddr 8.8.8.8/0 gaddr 98.56.23.111/4651 laddr 172.18.99.51/4651 type 8 code 0
+Aug 15 2019 13:44:38: %ASA-6-434004: SFR requested ASA to bypass further packet redirection and process TCP flow from outside:52.66.85.1/443 to inside:98.56.23.111/57459 locally
+Aug 15 2019 13:44:39: %ASA-6-106015: Deny TCP (no connection) from 84.155.66.45/1215 to 98.56.23.111/443 flags ACK  on interface outside

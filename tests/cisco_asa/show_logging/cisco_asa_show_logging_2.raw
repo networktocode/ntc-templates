@@ -1,0 +1,4 @@
+Sep 04 2018 13:08:26: %ASA-3-305006: regular translation creation failed for icmp src inside:192.168.0.52 dst outside:96.55.22.1 (type 3, code 3)
+Sep 04 2018 13:08:27: %ASA-4-733100: [ Scanning] drop rate-1 exceeded. Current burst rate is 3 per second, max configured rate is 10; Current average rate is 7 per second, max configured rate is 5; Cumulative total count is 4625
+Sep 04 2018 13:09:17: %ASA-4-313005: No matching connection for ICMP error message: icmp src outside:41.66.55.10 dst identity:88.51.101.253 (type 3, code 10) on outside interface.  Original IP payload: tcp src 88.51.101.253/62322 dst 41.66.55.10/443.
+Sep 04 2018 13:13:52: %ASA-4-434002: SFR requested to drop TCP packet from outside:23.99.61.81/80 to inside:88.51.101.253/60456
