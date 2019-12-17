@@ -1,0 +1,16 @@
+Value ID (\S+)
+Value NAME (\S+)
+Value CPU (\S+)
+Value MEM (\S+)
+Value DISK (\S+)
+
+Start
+  ^CONTAINER.*PIDS -> Data
+
+Data
+  ^${ID}\s+${NAME}\s+${CPU}\s+${MEM}\s+\S+\s+\S+\s+\S+\s+\S+\s+\S+\s+\S+\s+${DISK} -> Record
+  ^\s+$$
+  ^$$
+  ^.* -> Error "LINE NOT FOUND"  
+  
+EOF 
