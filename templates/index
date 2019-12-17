@@ -375,6 +375,7 @@ sonic_linux_uptime_since.template, .*, linux, up[[time]] -s
 sonic_linux_free_dash_m.template, .*, linux, free -m
 sonic_linux_portstat.template, .*, linux, portstat
 sonic_linux_ps_dash_ef.template, .*, linux, ps -ef
+sonic_linux_docker_stats.template, .*, linux, dock[[er]] stat[[s]]
 sonic_linux_df_dash_h.template, .*, linux, df -h
 
 ubiquiti_edgeswitch_show_vlan.template, .*, ubiquiti_edgeswitch, sh[[ow]] vl[[an]]
