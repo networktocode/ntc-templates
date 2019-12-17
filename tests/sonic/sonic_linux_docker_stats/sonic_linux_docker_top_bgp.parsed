@@ -1,0 +1,63 @@
+---
+
+parsed_sample:
+
+
+- uid : 'root'
+  pid : '4820'
+  ppid : '4802'
+  c : '0'
+  stime : 'May04'
+  tty : 'pts/9'
+  time : '00:08:18'
+  cmd : '/usr/bin/python /usr/bin/supervisord'
+
+
+- uid : 'root'
+  pid : '4996'
+  ppid : '4820'
+  c : '0'
+  stime : 'May04'
+  tty : 'pts/9'
+  time : '00:00:00'
+  cmd : 'python /usr/bin/bgpcfgd'
+
+
+- uid : 'root'
+  pid : '5004'
+  ppid : '4820'
+  c : '0'
+  stime : 'May04'
+  tty : 'pts/9'
+  time : '00:01:21'
+  cmd : '/usr/sbin/rsyslogd -n'
+
+
+  uid : 'sshd'
+  pid : '5009'
+  ppid : '4820'
+  c : '0'
+  stime : 'May04'
+  tty : 'pts/9'
+  time : '00:00:15'
+  cmd : '/usr/lib/quagga/zebra -A 127.0.0.1'
+
+
+  uid : 'sshd'
+  pid : '5011'
+  ppid : '4820'
+  c : '0'
+  stime : 'May04'
+  tty : 'pts/9'
+  time : '00:28:35'
+  cmd : '/usr/lib/quagga/bgpd -A 127.0.0.1 -F'
+
+
+- uid : 'root'
+  pid : '5020'
+  ppid : '4820'
+  c : '0'
+  stime : 'May04'
+  tty : 'pts/9'
+  time : '00:00:00'
+  cmd : 'fpmsyncd'
