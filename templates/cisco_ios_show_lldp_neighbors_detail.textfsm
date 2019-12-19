@@ -7,6 +7,7 @@ Value SYSTEM_DESCRIPTION (.*)
 Value CAPABILITIES (.*)
 Value MANAGEMENT_IP (\S+)
 Value VLAN (\d+)
+Value SERIAL (.*)
 
 Start
   ^.*not advertised
@@ -63,6 +64,7 @@ IgnoreDescription
   ^.* -> Error
 
 Med
+  ^\s+Serial\s+number:\s+${SERIAL}
   ^\s+\S+
   ^\s*$$
   ^\s*Total\s+entries\s+displayed -> Record
