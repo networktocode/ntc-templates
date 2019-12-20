@@ -1,4 +1,4 @@
-ation failed for icmp src inside:10.1.1.31 dst outside:12.51.6.66 (type 3, code 3)
-Jan 09 2018 10:30:24: %ASA-3-305006: regular translation creation failed for icmp src inside:10.1.1.31 dst outside:12.51.6.66 (type 3, code 3)
-Jan 09 2018 10:34:00: %ASA-2-106001: Inbound TCP connection denied from 10.1.1.107/51399 to 172.18.99.205/135 flags SYN  on interface inside
-Jan 09 2018 12:03:47: %ASA-2-106001: Inbound TCP connection denied from 10.1.1.107/56084 to 172.18.99.205/135 flags SYN  on interface inside
+Aug 15 2019 13:44:38: %ASA-6-305011: Built dynamic UDP translation from inside:192.168.1.5/56739 to outside:56.22.114.12/56739
+Aug 15 2019 13:44:38: %ASA-4-434002: SFR requested to drop TCP packet from outside:110.52.22.124/1215 to inside:98.1.33.5/443
+Aug 15 2019 13:44:38: %ASA-6-302021: Teardown ICMP connection for faddr 8.8.8.8/0 gaddr 98.1.33.5/4651 laddr 172.18.99.51/4651 type 8 code 0
+Aug 15 2019 13:44:39: %ASA-6-106015: Deny TCP (no connection) from 84.155.66.45/1215 to 98.1.33.51/443 flags ACK  on interface outside
