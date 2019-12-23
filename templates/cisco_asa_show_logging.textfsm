@@ -15,5 +15,9 @@ Start
   ^${MONTH}\s+${DAY}\s+${YEAR}\s+${TIME}:\s+%${FACILITY}-${SEVERITY}-${MNEMONIC}:\s+${MESSAGE}$$ -> Record
   # Mar 09 2017 10:25:04 MDF-ASA5515X : %ASA-6-305012: Teardown dynamic TCP translation from inside:10.111.5.124/49578 to outside:168.52.96.121/49578 duration 0:00:00
   ^${MONTH}\s+${DAY}\s+${YEAR}\s+${TIME}\s+${HOSTNAME}\s+:\s+%${FACILITY}-${SEVERITY}-${MNEMONIC}:\s+${MESSAGE}$$ -> Record
+  # ASA5585_HQ :  %ASA-4-106023: Deny udp src dmz:10.20.22.121/123 dst outside:123.34.0.90/123 by access-group "dmz" [0x0, 0x0]
+  ^${HOSTNAME}\s+:\s+%${FACILITY}-${SEVERITY}-${MNEMONIC}:\s+${MESSAGE}$$ -> Record
+  # %ASA-4-106023: Deny udp src dmz:10.20.22.121/123 dst outside:123.34.0.90/123 by access-group "dmz" [0x0, 0x0]
+  ^%${FACILITY}-${SEVERITY}-${MNEMONIC}:\s+${MESSAGE}$$ -> Record
   ^\s*$$
-  ^. -> Error
+#  ^. -> Error
