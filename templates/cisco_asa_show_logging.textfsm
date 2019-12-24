@@ -11,13 +11,39 @@ Value MNEMONIC (\S+)
 Value List MESSAGE (.+)
 
 Start
+  ^${MONTH}\s+${DAY}\s+${YEAR}\s+${TIME}:\s+%${FACILITY}-${SEVERITY}-${MNEMONIC}:\s+${MESSAGE}$$ -> TimestampLogs
   # Aug 15 2019 13:44:38: %ASA-6-305011: Built dynamic UDP translation from inside:192.168.1.5/56739 to outside:56.22.114.12/56739
-  ^${MONTH}\s+${DAY}\s+${YEAR}\s+${TIME}:\s+%${FACILITY}-${SEVERITY}-${MNEMONIC}:\s+${MESSAGE}$$ -> Record
-  # Mar 09 2017 10:25:04 MDF-ASA5515X : %ASA-6-305012: Teardown dynamic TCP translation from inside:10.111.5.124/49578 to outside:168.52.96.121/49578 duration 0:00:00
-  ^${MONTH}\s+${DAY}\s+${YEAR}\s+${TIME}\s+${HOSTNAME}\s+:\s+%${FACILITY}-${SEVERITY}-${MNEMONIC}:\s+${MESSAGE}$$ -> Record
+  ^${MONTH}\s+${DAY}\s+${YEAR}\s+${TIME}\s+${HOSTNAME}\s+:\s+%${FACILITY}-${SEVERITY}-${MNEMONIC}:\s+${MESSAGE}$$ -> TimestampLogs
   # ASA5585_HQ :  %ASA-4-106023: Deny udp src dmz:10.20.22.121/123 dst outside:123.34.0.90/123 by access-group "dmz" [0x0, 0x0]
-  ^${HOSTNAME}\s+:\s+%${FACILITY}-${SEVERITY}-${MNEMONIC}:\s+${MESSAGE}$$ -> Record
+  ^${HOSTNAME}\s+:\s+%${FACILITY}-${SEVERITY}-${MNEMONIC}:\s+${MESSAGE}$$ -> DefaultLogs
   # %ASA-4-106023: Deny udp src dmz:10.20.22.121/123 dst outside:123.34.0.90/123 by access-group "dmz" [0x0, 0x0]
-  ^%${FACILITY}-${SEVERITY}-${MNEMONIC}:\s+${MESSAGE}$$ -> Record
+  ^%${FACILITY}-${SEVERITY}-${MNEMONIC}:\s+${MESSAGE}$$ -> DefaultLogs
+
+
+TimestampLogs
+  ^(\D\D\D)\s+(\d{1,2})\s+(\d{4})\s+((\d+:\d+:\d+\.\d+)|(\d+:\d+:\d+)) -> Continue.Record
+  ^%(\D\D\D)-(\d{1,2}) -> Continue.Record
+  ^(\S+)\s+:\s+%(\D\D\D)-(\d{1,2}) -> Continue.Record
+  # TIMESTAMP LOGS
+  ^${MONTH}\s+${DAY}\s+${YEAR}\s+${TIME}:\s+%${FACILITY}-${SEVERITY}-${MNEMONIC}:\s+${MESSAGE}$$
+  ^${MONTH}\s+${DAY}\s+${YEAR}\s+${TIME}\s+${HOSTNAME}\s+:\s+%${FACILITY}-${SEVERITY}-${MNEMONIC}:\s+${MESSAGE}$$
+  # DEFAULT LOGS
+  ^${HOSTNAME}\s+:\s+%${FACILITY}-${SEVERITY}-${MNEMONIC}:\s+${MESSAGE}$$ -> DefaultLogs
+  ^%${FACILITY}-${SEVERITY}-${MNEMONIC}:\s+${MESSAGE}$$ -> DefaultLogs
+  ^${MESSAGE}$$
   ^\s*$$
-#  ^. -> Error
+  ^. -> Error
+
+DefaultLogs
+  ^%(\D\D\D)-(\d{1,2}) -> Continue.Record
+  ^(\S+)\s+:\s+%(\D\D\D)-(\d{1,2}) -> Continue.Record
+  ^(\D\D\D)\s+(\d{1,2})\s+(\d{4})\s+((\d+:\d+:\d+\.\d+)|(\d+:\d+:\d+)) -> Continue.Record
+  # DEFAULT LOGS
+  ^${HOSTNAME}\s+:\s+%${FACILITY}-${SEVERITY}-${MNEMONIC}:\s+${MESSAGE}$$
+  ^%${FACILITY}-${SEVERITY}-${MNEMONIC}:\s+${MESSAGE}$$
+  # TIMESTAMP LOGS
+  ^${MONTH}\s+${DAY}\s+${YEAR}\s+${TIME}:\s+%${FACILITY}-${SEVERITY}-${MNEMONIC}:\s+${MESSAGE}$$ -> TimestampLogs
+  ^${MONTH}\s+${DAY}\s+${YEAR}\s+${TIME}\s+${HOSTNAME}\s+:\s+%${FACILITY}-${SEVERITY}-${MNEMONIC}:\s+${MESSAGE}$$ -> TimestampLogs
+  ^${MESSAGE}$$
+  ^\s*$$
+  ^. -> Error
