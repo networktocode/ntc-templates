@@ -1,0 +1,26 @@
+Syslog logging: enabled
+    Facility: 20
+    Timestamp logging: disabled
+    Hide Username logging: disabled
+    Standby logging: disabled
+    Debug-trace logging: disabled
+    Console logging: disabled
+    Monitor logging: disabled
+    Buffer logging: level warnings, 4908890 messages logged
+    Trap logging: level informational, facility 20, 568235255 messages logged
+        Logging to inside 10.168.1.21, UDP TX:393859 errors: 24  dropped: 45
+        Logging to inside 10.45.22.11, UDP TX:393898 errors: 5  dropped: 6
+    Global TCP syslog stats::
+        NOT_PUTABLE: 0, ALL_CHANNEL_DOWN: 0
+        CHANNEL_FLAP_CNT: 0, SYSLOG_PKT_LOSS: 0
+        PARTIAL_REWRITE_CNT: 0
+    Permit-hostdown logging: disabled
+    History logging: disabled
+    Device ID: disabled
+    Mail logging: disabled
+    ASDM logging: level warnings, 4908890 messages logged
+%ASA-4-106023: Deny udp src dmz:10.20.22.121/123 dst outside:123.34.0.90/123 by access-group "dmz" [0x0, 0x0]
+%ASA-4-313005: No matching connection for ICMP error message: icmp src inside:192.168.45.44 dst outside:4.2.2.9 (type 3, code 3) on inside interface.  Original IP payload: udp src 4.2.2.9/53 dst 192.168.45.44/50765.
+%ASA-3-305006: regular translation creation failed for icmp src inside:172.16.111.2 dst outside:1.1.1.4 (type 3, code 3)
+%ASA-4-733100: [ Scanning] drop rate-1 exceeded. Current burst rate is 2 per second, max configured rate is 10; Current average rate is 5 per second, max configured rate is 5; Cumulative total count is 3299
+%ASA-4-313005: No matching connection for ICMP error message: icmp src inside:172.16.111.2 dst outside:75.66.66.22 (type 3, code 3) on inside interface.  Original IP payload: udp src 75.66.66.22/53 dst 172.16.111.2/57348.
