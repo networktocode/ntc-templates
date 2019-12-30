@@ -1,15 +1,16 @@
 Value INTERFACE (\S+/\S+)
 Value MANUFACTURER (\S+)
-Value TYPE (.+)
+Value Required TYPE (.+)
 Value SERIAL (\S+)
 Value PART_NUMBER (\S+)
 
 Start
+  ^\S+/\S+ -> Continue.Record
   ^${INTERFACE}
   ^\s+type\s+is\s+${TYPE}
   ^\s+name\s+is\s+${MANUFACTURER} 
   ^\s+part\s+number\s+is\s+${PART_NUMBER}
-  ^\s+serial\s+number\s+is\s+${SERIAL} -> Record
+  ^\s+serial\s+number\s+is\s+${SERIAL}
   ^\s+transceiver\s+
   ^\s+nominal\s+
   ^\s+revision\s+
