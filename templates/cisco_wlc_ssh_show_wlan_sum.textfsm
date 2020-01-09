@@ -1,0 +1,14 @@
+Value WLANID (\d+)
+Value PROFILE (.+?)
+Value SSID (.+?)
+Value STATUS (Enabled|Disabled)
+Value INTERFACE (\w+(.?\w+)+)
+
+
+Start
+  ^Number\s+of\s+WLANs
+  ^WLAN\s+ID\s+WLAN\s+Profile\s+Name
+  ^-------\s+
+  ^${WLANID}\s+${PROFILE}\s/\s${SSID}\s+${STATUS}\s+${INTERFACE}\s* -> Record
+  ^\s*$$
+  ^. -> Error
