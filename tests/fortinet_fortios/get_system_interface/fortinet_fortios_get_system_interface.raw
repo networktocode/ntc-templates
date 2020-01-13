@@ -1,0 +1,4 @@
+== [ port1 ]
+name: port1   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 0.0.0.0 0.0.0.0   status: down    netbios-forward: disable    type: physical   netflow-sampler: disable    sflow-sampler: disable    scan-botnet-connections: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    mtu-override: disable    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable    
+== [ port2 ]
+name: port2   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 0.0.0.0 0.0.0.0   status: down    netbios-forward: disable    type: physical   netflow-sampler: disable    sflow-sampler: disable    scan-botnet-connections: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    mtu-override: disable    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable    
