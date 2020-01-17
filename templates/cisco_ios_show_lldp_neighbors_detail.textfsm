@@ -7,7 +7,7 @@ Value SYSTEM_DESCRIPTION (.*)
 Value CAPABILITIES (.*)
 Value MANAGEMENT_IP (\S+)
 Value VLAN (\d+)
-Value SERIAL (.*)
+Value SERIAL (\S+)
 
 Start
   ^.*not advertised
