@@ -1,0 +1,10 @@
+Value MAC_ADDRESS (\S+)
+Value VID (\S+)
+Value PORT (\S+)
+Value TYPE (\S+)
+Value COS (\S+)
+
+
+Start
+  ^MAC 
+  ^${MAC_ADDRESS}\s+${VID}\s+${PORT}\s+${TYPE}\s+${COS} -> Record

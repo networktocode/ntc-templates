@@ -1,0 +1,9 @@
+Value Required LOCAL_PORT (\d+)
+Value REMOTE_CHASSISID (\S+)
+Value REMOTE_PORT (\S+)
+Value REMOTE_SYSNAME (\S+((?!\s{2}).)+)
+Value REMOTE_SYSDESC (\S+)
+
+Start
+  ^RcvTim
+  ^\S+\s+${LOCAL_PORT}\s+\S+\s+\S+\s+${REMOTE_CHASSISID}\s+\S+\s+${REMOTE_PORT}\s+${REMOTE_SYSNAME}\s+${REMOTE_SYSDESC}  -> Record

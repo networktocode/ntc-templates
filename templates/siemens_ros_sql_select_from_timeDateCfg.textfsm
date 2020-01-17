@@ -1,0 +1,13 @@
+Value TIME (\S+)
+Value DATE (.+\d{4})
+Value TIME_ZONE (\S+((?!\s{3}).)+)
+Value DST_OFFSET (\S+)
+Value DST_RULE (\S+\/\S+ \S+\/\S+)
+Value CURRENT_UTC_OFFSET (\d+ s)
+Value LEAP_SECOND_PENDING (Yes|No)
+
+
+
+Start
+  ^Time 
+  ^${TIME}\s+${DATE}\s+${TIME_ZONE}\s+${DST_OFFSET}\s+${DST_RULE}?\s+${CURRENT_UTC_OFFSET}\s+${LEAP_SECOND_PENDING} -> Record

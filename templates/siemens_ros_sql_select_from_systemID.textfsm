@@ -1,0 +1,7 @@
+Value SYSTEM_NAME (\S+((?!\s{2}).)+)
+Value LOCATION (\S+((?!\s{2}).)+)
+Value CONTACT (\S+((?!\s{3}).)+)
+
+Start
+  ^Prod
+  ^\s+${SYSTEM_NAME}\s+${LOCATION}\s+${CONTACT} -> Record
