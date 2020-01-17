@@ -8,7 +8,7 @@ Value LICENSE_PRIORITY (.*)
 
 Start
   ^Index\s+\d+\s+Feature: -> Continue.Record
-  ^Index\s+\d+\s+Feature:\s+${FEATURE}$$
+  ^Index\s+\d+\s+Feature:\s+${FEATURE}\s*$$
   ^\s+Period\s+left:\s+${PERIOD_LEFT}$$
   ^\s+Period\s+Used:\s+${PERIOD_USED}$$
   ^\s+License\s+Type:\s+${LICENSE_TYPE}$$
@@ -17,4 +17,3 @@ Start
   ^\s+License\s+Priority:\s+${LICENSE_PRIORITY}$$
   ^\s*$$
   ^. -> Error
-
