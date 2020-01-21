@@ -18,6 +18,7 @@ TYPE1
   ^Displaying\s+entries
   ^Destination\s+Address\s+Address\s+Type\s+VLAN\s+Destination\s+Port
   ^\s*$$
+  ^Multicast Entries -> End
   ^. -> Error
 
 TYPE2
@@ -26,6 +27,7 @@ TYPE2
   ^Displaying\s+entries
   ^\s+vlan\s+mac address\s+type\s+learn\s+age\s+ports
   ^\s*$$
+  ^Multicast Entries -> End
   ^. -> Error
 
 TYPE3
@@ -34,6 +36,7 @@ TYPE3
   ^Displaying\s+entries
   ^\s+vlan\s+mac address\s+type\s+protocols\s+port
   ^\s*$$
+  ^Multicast Entries -> End
   ^. -> Error
 
 TYPE4
@@ -43,4 +46,5 @@ TYPE4
   ^Vlan\s+Mac Address\s+Type\s+Ports
   ^\s*$$
   ^Total\s+Mac\s+Addresses
+  ^Multicast Entries -> End
   ^. -> Error
