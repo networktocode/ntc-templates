@@ -1,0 +1,67 @@
+Failover On
+Failover unit Secondary
+Failover LAN Interface: Failover GigabitEthernet0/7 (up)
+Reconnect timeout 0:00:00
+Unit Poll frequency 1 seconds, holdtime 4 seconds
+Interface Poll frequency 5 seconds, holdtime 25 seconds
+Interface Policy 1
+Monitored Interfaces 7 of 1049 maximum
+MAC Address Move Notification Interval not set
+failover replication http
+Version: Ours 9.6(4)34, Mate 9.6(4)34
+Serial Number: Ours JAD163903TY, Mate JAD163900D6
+Last Failover at: 19:38:08 UTC Nov 4 2019
+        This host: Secondary - Active
+                Active time: 1450749 (sec)
+                slot 0: ASA5585-SSP-20 hw/sw rev (2.0/9.6(4)34) status (Up Sys)
+                  il2-admin Interface skyscape_admin (1.1.1.1): Normal (Monitored)
+                  fwname Interface skyscape_mgmt (1.1.1.1): Normal (Not-Monitored)
+                  fwname Interface avamar_drac (1.1.1.1): Normal (Monitored)
+				  <omited output>	
+                slot 1: ASA5585-SSP-IPS20 hw/sw rev (2.0/7.3(5)E4) status (Up/Up)
+                  IPS, 7.3(5)E4, Up, (Monitored)
+        Other host: Primary - Standby Ready
+                Active time: 425691 (sec)
+                slot 0: ASA5585-SSP-20 hw/sw rev (2.0/9.6(4)34) status (Up Sys)
+                  il2-admin Interface skyscape_admin (2.2.2.2): Normal (Monitored)
+                  fwname Interface skyscape_mgmt (2.2.2.2): Normal (Not-Monitored)
+                  fwname Interface avamar_drac (2.2.2.2): Normal (Monitored)
+				  <omited output>
+                slot 1: ASA5585-SSP-IPS20 hw/sw rev (2.0/7.3(5)E4) status (Up/Up)
+                  IPS, 7.3(5)E4, Up, (Monitored)
+
+Stateful Failover Logical Update Statistics
+        Link : StateFailover GigabitEthernet0/6 (up)
+        Stateful Obj    xmit       xerr       rcv        rerr
+        General         2455641256 0          628699983  1699
+        sys cmd         250128     0          250128     0
+        up time         0          0          0          0
+        RPC services    0          0          0          0
+        TCP conn        1441746676 0          398760885  0
+        UDP conn        635150912  0          113869522  1697
+        ARP tbl         378487541  0          115817628  0
+        Xlate_Timeout   0          0          0          0
+        IPv6 ND tbl     5985       0          1729       0
+        VPN IKEv1 SA    0          0          0          0
+        VPN IKEv1 P2    0          0          0          0
+        VPN IKEv2 SA    0          0          0          0
+        VPN IKEv2 P2    0          0          0          0
+        VPN CTCP upd    0          0          0          0
+        VPN SDI upd     0          0          0          0
+        VPN DHCP upd    0          0          0          0
+        SIP Session     0          0          0          0
+        SIP Tx  0          0          0          0
+        SIP Pinhole     0          0          0          0
+        Route Session   14         0          0          2
+        Router ID       0          0          0          0
+        User-Identity   0          0          91         0
+        CTS SGTNAME     0          0          0          0
+        CTS PAC         0          0          0          0
+        TrustSec-SXP    0          0          0          0
+        IPv6 Route      0          0          0          0
+        STS Table       0          0          0          0
+
+        Logical Update Queue Information
+                        Cur     Max     Total
+        Recv Q:         0       140     651732837
+        Xmit Q:         0       3       2527845901
