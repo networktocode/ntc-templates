@@ -67,7 +67,5 @@ Start
   ^FortiOS\s+x86-64:\s+${FORTIOS_X86_64}
   ^System\s+time:\s+${SYSTEM_TIME} -> Record
   ^\s*$$
-  ^.*$$
   ^. -> Error
 
-EOF
