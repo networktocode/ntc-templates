@@ -1,6 +1,6 @@
 Value Required LOCAL_INTERFACE (\S+)
 Value CHASSIS_ID (.+?)
-Value MANUFACTURER_NAME (.*)
+Value MANUFACTURER_NAME (.*?)
 Value MODEL_NAME (.*)
 Value NEIGHBOR_PORT_ID (.*)
 Value NEIGHBOR_INTERFACE (.*)
@@ -57,7 +57,7 @@ MED
   ^FirmwareRev
   ^SoftwareRev
   ^SerialNum\s+:${SERIAL}
-  ^Manufacturer\s+name\s+:${MANUFACTURER_NAME}
+  ^Manufacturer\s+name\s+:${MANUFACTURER_NAME}\s*$$
   ^Model\s+name\s+:${MODEL_NAME}
   ^Asset\s+tracking
   ^Media\s+policy\s+type
