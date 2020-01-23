@@ -1,12 +1,12 @@
 Value Required LOCAL_INTERFACE (\S+)
 Value CHASSIS_ID (.+?)
 Value MANUFACTURER_NAME (.*?)
-Value MODEL_NAME (.*)
-Value NEIGHBOR_PORT_ID (.*)
-Value NEIGHBOR_INTERFACE (.*)
+Value MODEL_NAME (.*?)
+Value NEIGHBOR_PORT_ID (.*?)
+Value NEIGHBOR_INTERFACE (.*?)
 Value NEIGHBOR (.+?)
 Value List SYSTEM_DESCRIPTION (.*)
-Value CAPABILITIES (.*)
+Value CAPABILITIES (.*?)
 Value MANAGEMENT_IP (\S+)
 Value VLAN (\d+)
 Value SERIAL (\S+)
@@ -18,12 +18,12 @@ Start
   ^Chassis\s+type
   ^Chassis\s+ID\s+:${CHASSIS_ID}$$
   ^Port\s+ID\s+type
-  ^Port\s+ID\s+:${NEIGHBOR_PORT_ID}$$
-  ^Port\s+description\s+:${NEIGHBOR_INTERFACE}$$
-  ^System\s+name\s+:${NEIGHBOR}$$
+  ^Port\s+ID\s+:${NEIGHBOR_PORT_ID}\s*$$
+  ^Port\s+description\s+:${NEIGHBOR_INTERFACE}\s*$$
+  ^System\s+name\s+:${NEIGHBOR}\s*$$
   ^System\s+description\s+:${SYSTEM_DESCRIPTION} -> SystemDescription
   ^System\s+capabilities\s+supported
-  ^System\s+capabilities\s+enabled\s+:${CAPABILITIES}$$
+  ^System\s+capabilities\s+enabled\s+:${CAPABILITIES}\s*$$
   ^Management\s+address\s+type
   ^Management\s+address\s*:\s*${MANAGEMENT_IP}
   ^Expired\s+time
@@ -58,7 +58,7 @@ MED
   ^SoftwareRev
   ^SerialNum\s+:${SERIAL}
   ^Manufacturer\s+name\s+:${MANUFACTURER_NAME}\s*$$
-  ^Model\s+name\s+:${MODEL_NAME}
+  ^Model\s+name\s+:${MODEL_NAME}\s*$$
   ^Asset\s+tracking
   ^Media\s+policy\s+type
   ^Unknown\s+Policy
