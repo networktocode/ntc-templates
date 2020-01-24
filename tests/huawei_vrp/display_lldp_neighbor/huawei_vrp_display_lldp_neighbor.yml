@@ -1,0 +1,36 @@
+---
+parsed_sample:
+  - local_interface: "GigabitEthernet0/0/1"
+    chassis_id: "f55f-c2c5-e180"
+    manufacturer_name: "Cisco Systems, Inc."
+    model_name: "WS-C2960S-48LPS-L"
+    neighbor_port_id: "Gi1/0/1"
+    neighbor_interface: "GigabitEthernet1/0/1"
+    neighbor: "tsa-2960-sw01"
+    system_description:
+      - "Cisco IOS Software, C2960S Software (C2960S-UNIVERSALK9-M), Version 12.2(55)SE7,\
+        \ RELEASE SOFTWARE (fc1)"
+      - "Technical Support: http://www.cisco.com/techsupport"
+      - "Copyright (c) 1986-2013 by Cisco Systems, Inc."
+      - "Compiled Mon 28-Jan-13 10:28 by prod_rel_team"
+    capabilities: "bridge"
+    management_ip: "192.168.0.240"
+    vlan: "1"
+    serial: "NA"
+  - local_interface: "GigabitEthernet0/0/8"
+    chassis_id: "f41f-c2c5-e180"
+    manufacturer_name: "Cisco Systems, Inc."
+    model_name: "WS-C2960S-48LPS-L"
+    neighbor_port_id: "Gi1/0/2"
+    neighbor_interface: "GigabitEthernet1/0/2"
+    neighbor: "tsa-2960-sw01"
+    system_description:
+      - "Cisco IOS Software, C2960S Software (C2960S-UNIVERSALK9-M), Version 12.2(55)SE7,\
+        \ RELEASE SOFTWARE (fc1)"
+      - "Technical Support: http://www.cisco.com/techsupport"
+      - "Copyright (c) 1986-2013 by Cisco Systems, Inc."
+      - "Compiled Mon 28-Jan-13 10:28 by prod_rel_team"
+    capabilities: "bridge"
+    management_ip: "192.168.0.241"
+    vlan: "1"
+    serial: "NA"
