@@ -1,8 +1,12 @@
-Value ALL_TYPES (ALL TYPES|IFT_ETHERBUNDLE|IFT_HUNDREDGE|IFT_LOOPBACK|IFT_ETHERNET|IFT_NULL|IFT_TENGETHERNET)
-Value TOTAL (\S+)
-Value UP (\d+)
+Value INTF_TYPE (ALL TYPES|IFT_ETHERBUNDLE|IFT_HUNDREDGE|IFT_LOOPBACK|IFT_ETHERNET|IFT_NULL|IFT_TENGETHERNET)
+Value TOTAL (\d+)
+Value UP (\S+)
 Value DOWN (\S+)
 Value ADMIN_DOWN (\S+)
 
 Start
-  ^${ALL_TYPES}+\s+${TOTAL}\s+${UP}\s+${DOWN}\s+${ADMIN_DOWN} -> Record
+  ^Interface\s+Type\s+Total\s+UP\s+\Down\s+Admin\s+Down\s*$$
+  ^----
+  ^${INTF_TYPE}+\s+${TOTAL}\s+${UP}\s+${DOWN}\s+${ADMIN_DOWN} -> Record
+  ^\s*$$
+  ^. -> Error
