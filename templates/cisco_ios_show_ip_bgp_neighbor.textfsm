@@ -1,0 +1,36 @@
+Value NEIGHBOR_IP (\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})
+Value REMOTE_AS (\d+)
+Value PEER_GROUP (\w+)
+Value REMOTE_ROUTER_ID (\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})
+Value BGP_STATE (\w+)
+Value LOCAL_HOST (\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})
+Value LOCAL_PORT (\d+)
+Value FOREIGN_HOST (\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})
+Value FOREIGN_PORT (\d+)
+
+Start
+  # Capture first line, which shows the BGP neighor and remote AS number
+  ^BGP\s+neighbor\s+is\s+${NEIGHBOR_IP},\s+remote\s+AS\s+${REMOTE_AS} -> Bgp_neighbor
+
+Bgp_neighbor
+  # Capture BGP peer group
+  # Example: 'Member of peer-group RR_SERVERS for session parameters'
+  ^\s*Member\s+of\s+peer-group\s+${PEER_GROUP}
+  # 
+  # Capture remote router ID
+  # Example: ' BGP state = Established, up for 7w3d'
+  ^.+remote\s+router\s+ID\s+${REMOTE_ROUTER_ID}
+  #
+  # Capture BGP state
+  # Example: ' BGP state = Established, up for 7w3d'
+  ^\s+BGP\s+state\s+=\s+${BGP_STATE}
+  #
+  #
+  # Match local host and port
+  # Example: 'Local host: 10.10.255.13, Local port: 39443'
+  ^Local\s+host:\s+${LOCAL_HOST},\s+Local\s+port:\s+${LOCAL_PORT}
+  # 
+  # Match local host and port
+  # Example: 'Local host: 10.10.255.13, Local port: 39443'
+  ^Foreign\s+host:\s+${FOREIGN_HOST},\s+Foreign\s+port:\s+${FOREIGN_PORT} -> Next.Record Start
+  #^.+ -> Error
