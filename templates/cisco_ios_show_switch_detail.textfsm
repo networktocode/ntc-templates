@@ -7,6 +7,7 @@ Value STATE (.+?)
 
 Start
   ^Switch/Stack
+  ^Mac persistency wait time
   ^\s+H/W\s+Current\s*$$
   ^Switch#\s+Role\s+Mac\s+Address\s+Priority\s+Version\s+State\s*$$
   ^\s*-+ -> Status
