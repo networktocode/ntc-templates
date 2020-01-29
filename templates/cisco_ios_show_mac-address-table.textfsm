@@ -22,7 +22,8 @@ TYPE1
   ^. -> Error
 
 TYPE2
-  ^[\*|\s]\s*${VLAN}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+${DESTINATION_PORT} -> Record
+  # Order of the group in brackets here matters
+  ^\s*(?:\*\s+R|\*|R|\s)\s*${VLAN}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+${DESTINATION_PORT} -> Record
   ^-+\+-+
   ^Displaying\s+entries
   ^\s+vlan\s+mac address\s+type\s+learn\s+age\s+ports
