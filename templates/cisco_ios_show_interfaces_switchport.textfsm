@@ -27,7 +27,9 @@ Start
   ^\s*Capture\s+(?:Mode|VLANs)
   ^\s*Protected
   ^\s*Unknown\s+(unicast|multicast)
+  ^\s*Vepa\s+Enabled
   ^\s*Appliance\s+trust
+  ^\s*Operational\s+Dot1q\s+Ethertype
   ^\s*$$
   # Capture time-stamp if vty line has command time-stamping turned on
   ^Load\s+for\s+
