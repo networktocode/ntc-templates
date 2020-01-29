@@ -1,0 +1,75 @@
+
+
+Legend: * - primary entry
+        age - seconds since last seen
+        n/a - not available
+        S - secure entry
+        R - router's gateway mac address entry
+        D - Duplicate mac address entry
+        # - Fabric mac address entry. Clear mac cli doesn't clear this entry
+
+Displaying entries from active supervisor: Earl [1]:
+
+      vlan   mac address    type   learn    age                 ports
+-----+----+---------------+-------+-----+----------+-----------------------------
+         40 a099.9b05.ffaf  dynamic  Yes      280     Te1/8
+   R     51 006c.bc1c.a865   static   No       -      Router
+         65 701f.5385.b307  dynamic  Yes      280     Te1/4
+         53 0050.b68e.1efd  dynamic  Yes      280     Te1/2
+ *       49 70cd.604c.523c  dynamic  Yes        0     Te1/29
+         65 701f.5385.b318  dynamic  Yes      280     Te1/4
+         40 e033.8ebe.f149  dynamic  Yes      280     Te1/8
+         64 701f.534c.5bbd  dynamic  Yes      280     Te1/3
+         53 f80d.609c.cf1c  dynamic  Yes      280     Te1/2
+         64 701f.534c.5ba0  dynamic  Yes      280     Te1/3
+         44 006c.bc1c.6aa7  dynamic  Yes      280     Po1
+
+
+Displaying entries from active supervisor: Earl [2]:
+
+      vlan   mac address    type   learn    age                 ports
+-----+----+---------------+-------+-----+----------+-----------------------------
+ *       40 a099.9b05.ffaf  dynamic  Yes        0     Te1/8
+ * R     51 006c.bc1c.a865   static   No       -      Router
+ *       65 701f.5385.b307  dynamic  Yes       10     Te1/4
+ *       53 0050.b68e.1efd  dynamic  Yes        0     Te1/2
+         49 70cd.604c.523c  dynamic  Yes      280     Te1/29
+ *       65 701f.5385.b318  dynamic  Yes        0     Te1/4
+ *       40 e033.8ebe.f149  dynamic  Yes       20     Te1/8
+ *       45 58b1.0f81.4b32  dynamic  Yes      130     Te1/8
+ *       40 6c96.cfdd.d70f  dynamic  Yes        0     Te1/8
+ *       64 701f.534c.5bd3  dynamic  Yes        0     Te1/3
+ *       65 701f.5385.b32b  dynamic  Yes       25     Te1/3
+ *       68 701f.534c.5b60  dynamic  Yes       15     Te1/6
+ *       64 701f.534c.5bbd  dynamic  Yes       15     Te1/3
+ *       53 f80d.609c.cf1c  dynamic  Yes        5     Te1/2
+ *       64 701f.534c.5ba0  dynamic  Yes        5     Te1/3
+         44 006c.bc1c.6aa7  dynamic  Yes      280     Po1
+ *       69 0072.78de.5b2f  dynamic  Yes       15     Te1/6
+ *       63 701f.5385.b259  dynamic  Yes       10     Te1/2
+ *       40 acbc.32be.0a99  dynamic  Yes        0     Te1/8
+ *       57 3ce1.a146.fd6e  dynamic  Yes        0     Te1/5
+
+
+Displaying entries from active supervisor: Earl [3]:
+
+      vlan   mac address    type   learn    age                 ports
+-----+----+---------------+-------+-----+----------+-----------------------------
+         40 a099.9b05.ffaf  dynamic  Yes      280     Te1/8
+   R     51 006c.bc1c.a865   static   No       -      Router
+         65 701f.5385.b307  dynamic  Yes      280     Te1/4
+         53 0050.b68e.1efd  dynamic  Yes      280     Te1/2
+         49 70cd.604c.523c  dynamic  Yes      280     Te1/29
+         65 701f.5385.b318  dynamic  Yes      280     Te1/4
+         63 701f.534c.5ec1  dynamic  Yes      280     Te1/2
+         64 701f.534c.5bb5  dynamic  Yes      280     Te1/3
+         68 701f.534c.5b60  dynamic  Yes      280     Te1/6
+         64 701f.534c.5bbd  dynamic  Yes      280     Te1/3
+         53 f80d.609c.cf1c  dynamic  Yes      280     Te1/2
+         64 701f.534c.5ba0  dynamic  Yes      280     Te1/3
+ *       44 006c.bc1c.6aa7  dynamic  Yes        0     Po1
+         69 0072.78de.5b2f  dynamic  Yes      280     Te1/6
+         63 701f.5385.b259  dynamic  Yes      280     Te1/2
+         40 acbc.32be.0a99  dynamic  Yes      280     Te1/8
+         57 3ce1.a146.fd6e  dynamic  Yes      280     Te1/5
+         67 701f.534c.643e  dynamic  Yes      280     Te1/5
