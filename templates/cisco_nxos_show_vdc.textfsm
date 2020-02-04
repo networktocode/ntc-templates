@@ -1,0 +1,14 @@
+Value VDC_ID (\d+)
+Value VDC_NAME (\S+)
+Value STATE (\S+)
+Value MAC (\S+)
+Value TYPE (\S+)
+Value LC (\S+)
+
+Start
+  ^[Ss]witchwide\s+mode
+  ^vdc_id\s+vdc_name\s+state\s+mac\s+type\s+lc\s*$$
+  ^-+
+  ^\s*${VDC_ID}\s+${VDC_NAME}\s+${STATE}\s+${MAC}\s+${TYPE}\s+${LC} -> Record
+  ^\s*$$
+  ^. -> Error
