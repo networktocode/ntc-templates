@@ -1,0 +1,120 @@
+---
+parsed_sample:
+  - ike_version: "1"
+    name: "AES-256_MD5"
+    encryption:
+      - "esp-aes-256"
+    auth:
+      - "esp-md5-hmac"
+  - ike_version: "1"
+    name: "AES-256_SHA"
+    encryption:
+      - "esp-aes-256"
+    auth:
+      - "esp-sha-hmac"
+  - ike_version: "1"
+    name: "3DES_MD5"
+    encryption:
+      - "esp-3des"
+    auth:
+      - "esp-md5-hmac"
+  - ike_version: "1"
+    name: "3DES_SHa"
+    encryption:
+      - "esp-3des"
+    auth:
+      - "esp-sha-hmac"
+  - ike_version: "1"
+    name: "AES_MD5"
+    encryption:
+      - "esp-aes"
+    auth:
+      - "esp-md5-hmac"
+  - ike_version: "1"
+    name: "AES_SHA"
+    encryption:
+      - "esp-aes"
+    auth:
+      - "esp-sha-hmac"
+  - ike_version: "1"
+    name: "AES-192_MD5"
+    encryption:
+      - "esp-aes-192"
+    auth:
+      - "esp-md5-hmac"
+  - ike_version: "1"
+    name: "AES-192_SHA"
+    encryption:
+      - "esp-aes-192"
+    auth:
+      - "esp-sha-hmac"
+  - ike_version: "2"
+    name: "IKE2"
+    encryption:
+      - "aes-gmac"
+      - "aes-gmac-192"
+      - "aes-gmac-256"
+      - "des"
+      - "3des"
+      - "aes"
+      - "aes-192"
+      - "aes-256"
+      - "aes-gcm"
+      - "aes-gcm-192"
+      - "aes-gcm-256"
+    auth:
+      - "md5"
+      - "sha-1"
+      - "sha-256"
+      - "sha-384"
+      - "sha-512"
+  - ike_version: "2"
+    name: "NEW_IKE2"
+    encryption:
+      - "aes-gmac"
+      - "aes-gmac-192"
+      - "aes-gmac-256"
+      - "des"
+      - "3des"
+      - "aes"
+      - "aes-192"
+      - "aes-256"
+      - "aes-gcm"
+      - "aes-gcm-192"
+      - "aes-gcm-256"
+    auth: []
+  - ike_version: "2"
+    name: "newer_ike2"
+    encryption: []
+    auth:
+      - "md5"
+      - "sha-1"
+      - "sha-256"
+      - "sha-384"
+      - "sha-512"
+  - ike_version: "1"
+    name: "DES_MD5"
+    encryption:
+      - "esp-des"
+    auth:
+      - "esp-md5-hmac"
+  - ike_version: "1"
+    name: "DES_SHA"
+    encryption:
+      - "esp-des"
+    auth:
+      - "esp-sha-hmac"
+  - ike_version: "2"
+    name: "final_IKE2"
+    encryption:
+      - "aes-gmac"
+      - "aes-gmac-192"
+      - "aes-gmac-256"
+      - "des"
+      - "3des"
+      - "aes-gcm-192"
+      - "aes-gcm-256"
+    auth:
+      - "md5"
+      - "sha-1"
+      - "sha-512"

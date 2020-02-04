@@ -1,0 +1,29 @@
+Value TACACS_SERVER (.+?)
+Value SERVER_PORT (\d+)
+Value SOCKET_OPENS (\d+)
+Value SOCKET_CLOSES (\d+)
+Value SOCKET_ABORTS (\d+)
+Value SOCKET_ERRORS (\d+)
+Value SOCKET_TIMEOUTS (\d+)
+Value FAILED_CONNECTIONS (\d+)
+Value PACKETS_SENT (\d+)
+Value PACKET_RECEIVED (\d+)
+
+
+Start
+  ^Tacacs -> Record
+  ^\s+Server\s+address:\s+${TACACS_SERVER}\s*$$
+  ^\s+Server\s+port:\s+${SERVER_PORT}\s*$$
+  ^\s+Socket\s+opens:\s+ ${SOCKET_OPENS}\s*$$
+  ^\s+Socket\s+closes:\s+${SOCKET_CLOSES}\s*$$
+  ^\s+Socket\s+aborts:\s+${SOCKET_ABORTS}\s*$$
+  ^\s+Socket\s+errors:\s+${SOCKET_ERRORS}\s*$$
+  ^\s+Socket\s+Timeouts:\s+${SOCKET_TIMEOUTS}\s*$$
+  ^\s+Failed\s+Connect\s+Attempts:\s+${FAILED_CONNECTIONS}\s*$$
+  ^\s+Total\s+Packets\s+Sent:\s+${PACKETS_SENT}\s*$$
+  ^\s+Total\s+Packets\s+Recv:\s+${PACKET_RECEIVED}\s*$$
+  ^\s*$$
+  # Capture time-stamp if vty line has command time-stamping turned on
+  ^Load\s+for\s+
+  ^Time\s+source\s+is
+  ^. -> Error
