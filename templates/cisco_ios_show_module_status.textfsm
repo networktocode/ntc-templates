@@ -1,0 +1,18 @@
+Value Key MODULE (\d+)
+Value MAC_ADDR (\S+\sto\s\S+)
+Value MOD_HW (\S+)
+Value FW (\S+)
+Value SW (\S+)
+Value STATUS (\w+)
+
+
+Start
+  ^\s*Mod\s+MAC\saddresses\s+Hw\s+Fw\s+Sw\s+Status\s*$$ -> ModStatus  
+  
+ModStatus
+  ^\s*${MODULE}\s+${MAC_ADDR}\s+${MOD_HW}\s+${FW}\s+${SW}\s+${STATUS}\s*$$ -> Record
+  ^\s*Mod\s+Sub-Module\s+Model\s+Serial\s+Hw\s+Status\s*$$
+  ^\s*Mod\s+Online\s+Diag\s+Status\s*$$
+  ^\s*$$
+  ^\s*[-\s]+\s*$$
+  ^.

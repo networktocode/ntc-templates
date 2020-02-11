@@ -15,8 +15,6 @@ Start
 
 Status
   ^\*?\s*${SWITCH}\s+${ROLE}\s+${MAC_ADDRESS}\s+${PRIORITY}\s+${VERSION}\s+${STATE}\s*$$ -> Record
-  ^\s*Stack\s+Port\s+Status 
+  ^\s*Stack\s+Port\s+Status
   ^\s*$$
-  ^.
-
-  
+  ^. -> Error

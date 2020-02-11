@@ -1,0 +1,11 @@
+Value Key MODULE (\d+)
+Value ONLINE_DIAG (\w+)
+
+Start
+  ^\s*Mod\s+Online\s+Diag\s+Status\s*$$ -> Diag  
+  
+Diag
+  ^\s*${MODULE}\s+${ONLINE_DIAG}\s*$$ -> Record  
+  ^\s*$$
+  ^\s*[-\s]+\s*$$
+  ^. -> Error

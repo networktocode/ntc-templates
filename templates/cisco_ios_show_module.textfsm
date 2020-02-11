@@ -1,0 +1,17 @@
+Value Key MODULE (\d+)
+Value PORT (\d+)
+Value CARDTYPE (.{38})
+Value MODEL (\S+)
+Value SERIAL (\w+)
+
+
+Start
+  ^Mod\s+Ports+\s+Card\s+Type\s+Model\s+Serial  
+  ^\s*[-\s]+\s*$$ -> Status
+  ^\s*$$
+  ^. -> Error
+  
+Status
+  ^\s*${MODULE}\s+${PORT}\s+${CARDTYPE}\s+${MODEL}\s+${SERIAL}\s*$$ -> Record
+  ^\s*$$
+  ^. 
