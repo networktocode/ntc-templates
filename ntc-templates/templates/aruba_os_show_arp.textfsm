@@ -1,0 +1,6 @@
+Value IP_ADDRESS (\d+.\d+.\d+.\d+)
+Value HARDWARE_ADDRESS (\w+.\w+.\w+.\w+.\w+.\w+)
+Value INTERFACE (\w+)
+
+Start
+ ^\s+Internet\s+${IP_ADDRESS}\s+${HARDWARE_ADDRESS}\s+${INTERFACE} -> Record
