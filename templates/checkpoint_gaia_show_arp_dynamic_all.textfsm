@@ -5,4 +5,5 @@ Start
   ^Dynamic\sArp\sParameters
   ^IP\sAddress\s+Mac\sAddress
   ^${ADDRESS}\s+${MAC} -> Record
-  ^. -> Error
+ ^\s*$$
+ ^. -> Error
