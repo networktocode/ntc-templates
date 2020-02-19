@@ -1,0 +1,8 @@
+Value POWER_MODULE (\d+\/PM\d+)
+Value STATUS (\S+)
+
+Start
+  ^.*\=+ -> Parse
+
+Parse
+  ^\s+${POWER_MODULE}\s+\S+\s+\S+\s+\S+\s+\S+\s+\S+\s+\S+\s+${STATUS} -> Record
