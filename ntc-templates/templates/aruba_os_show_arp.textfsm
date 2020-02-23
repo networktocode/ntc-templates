@@ -1,0 +1,14 @@
+Value PROTOCOL (\w+)
+Value ADDRESS (\d+.\d+.\d+.\d+)
+Value MAC (\S+)
+Value INTERFACE (\S+)
+Value AGE (\d+)
+
+ Start
+ ^IPV4\s+ARP\s+Table
+ ^-+
+ ^\s+Protocol\s+IP\s+Address\s+Hardware\s+Address\s+Interface\s+Age
+ ^\s+${PROTOCOL}\s+${ADDRESS}\s+${MAC}\s+${INTERFACE}\s+${AGE} -> Record
+ ^\s*$$
+ ^. -> Error
+
