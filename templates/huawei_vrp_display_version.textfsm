@@ -1,0 +1,9 @@
+Value VRP_VERSION (\S+)
+Value PRODUCT_VERSION (.+)
+Value MODEL (.+)
+Value UPTIME (.+)
+
+
+Start
+  ^.*software,\s+Version\s+${VRP_VERSION}\s+\(${PRODUCT_VERSION}\)
+  ^HUAWEI\s+${MODEL}\s+uptime\s+is\s+${UPTIME}$$
