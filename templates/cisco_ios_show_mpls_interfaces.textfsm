@@ -9,5 +9,5 @@ Value OPERATIONAL (\w+)
 Start
   ^Interface\s+IP\s+Tunnel\s+BGP\sStatic\sOperational$$
   ^${INTERFACE}\s+${MPLS_IP}\s+\(${PROTOCOL}\)\s+${TUNNEL}\s+${BGP}\s+${STATIC}\s+${OPERATIONAL}\s*$$ -> Record
+  ^\s*
   ^. -> Error
-  
