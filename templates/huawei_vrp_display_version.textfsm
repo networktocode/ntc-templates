@@ -6,4 +6,4 @@ Value UPTIME (.+)
 
 Start
   ^.*software,\sVersion\s${VRP_VERSION}\s\(${PRODUCT_VERSION}\)
-  ^HUAWEI\s${MODEL}\suptime\sis\s${UPTIME}
+  ^HUAWEI\s${MODEL}\suptime\sis\s${UPTIME}$$
