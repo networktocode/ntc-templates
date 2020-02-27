@@ -1,6 +1,6 @@
 Value Required,Filldown ACL_NAME (\S+)
 Value Filldown ACL_TYPE (standard|extended)
-Value COMMENT (.*)
+Value List COMMENT (.*)
 Value ACTION (permit|deny)
 Value PROTOCOL (\S+)
 Value SRC_HOST (\d+\.\d+\.\d+\.\d+)
