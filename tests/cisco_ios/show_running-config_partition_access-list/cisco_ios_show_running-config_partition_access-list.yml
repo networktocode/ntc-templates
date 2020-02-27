@@ -2,7 +2,7 @@
 parsed_sample:
   - acl_name: "sample"
     acl_type: "extended"
-    comment: ""
+    comment: []
     action: ""
     protocol: ""
     src_host: ""
@@ -26,7 +26,8 @@ parsed_sample:
     time: ""
   - acl_name: "sample"
     acl_type: "extended"
-    comment: "\"allows BGP\""
+    comment:
+      - "\"allows BGP\""
     action: "permit"
     protocol: "tcp"
     src_host: "10.1.6.20"
@@ -50,7 +51,7 @@ parsed_sample:
     time: ""
   - acl_name: "sample"
     acl_type: "extended"
-    comment: ""
+    comment: []
     action: "permit"
     protocol: "tcp"
     src_host: "10.1.6.20"
@@ -74,7 +75,8 @@ parsed_sample:
     time: ""
   - acl_name: "sample"
     acl_type: "extended"
-    comment: "\"allows sample to ping\""
+    comment:
+      - "\"allows sample to ping\""
     action: "permit"
     protocol: "icmp"
     src_host: ""
@@ -98,7 +100,7 @@ parsed_sample:
     time: ""
   - acl_name: "sample"
     acl_type: "extended"
-    comment: ""
+    comment: []
     action: "permit"
     protocol: "icmp"
     src_host: ""
@@ -122,7 +124,8 @@ parsed_sample:
     time: ""
   - acl_name: "sample"
     acl_type: "extended"
-    comment: "\"allows sample to ping\""
+    comment:
+      - "\"allows sample to ping\""
     action: "permit"
     protocol: "icmp"
     src_host: ""
@@ -146,7 +149,7 @@ parsed_sample:
     time: ""
   - acl_name: "sample"
     acl_type: "extended"
-    comment: ""
+    comment: []
     action: "permit"
     protocol: "icmp"
     src_host: ""
@@ -170,7 +173,8 @@ parsed_sample:
     time: ""
   - acl_name: "sample"
     acl_type: "extended"
-    comment: "\"allows sample to ping\""
+    comment:
+      - "\"allows sample to ping\""
     action: "permit"
     protocol: "icmp"
     src_host: ""
@@ -194,7 +198,7 @@ parsed_sample:
     time: ""
   - acl_name: "sample"
     acl_type: "extended"
-    comment: ""
+    comment: []
     action: "permit"
     protocol: "icmp"
     src_host: ""
@@ -218,7 +222,8 @@ parsed_sample:
     time: ""
   - acl_name: "sample"
     acl_type: "extended"
-    comment: "\"allows sample to ping\""
+    comment:
+      - "\"allows sample to ping\""
     action: "permit"
     protocol: "icmp"
     src_host: ""
@@ -242,7 +247,7 @@ parsed_sample:
     time: ""
   - acl_name: "sample"
     acl_type: "extended"
-    comment: ""
+    comment: []
     action: "permit"
     protocol: "icmp"
     src_host: ""
@@ -266,7 +271,8 @@ parsed_sample:
     time: ""
   - acl_name: "sample"
     acl_type: "extended"
-    comment: "\"allows sample to ping\""
+    comment:
+      - "\"allows sample to ping\""
     action: "permit"
     protocol: "icmp"
     src_host: ""
@@ -290,7 +296,7 @@ parsed_sample:
     time: ""
   - acl_name: "sample"
     acl_type: "extended"
-    comment: ""
+    comment: []
     action: "permit"
     protocol: "icmp"
     src_host: ""
@@ -314,7 +320,8 @@ parsed_sample:
     time: ""
   - acl_name: "sample"
     acl_type: "extended"
-    comment: "\"allows sample to ping\""
+    comment:
+      - "\"allows sample to ping\""
     action: "permit"
     protocol: "icmp"
     src_host: ""
@@ -338,7 +345,7 @@ parsed_sample:
     time: ""
   - acl_name: "sample"
     acl_type: "extended"
-    comment: ""
+    comment: []
     action: "permit"
     protocol: "icmp"
     src_host: ""
@@ -362,7 +369,8 @@ parsed_sample:
     time: ""
   - acl_name: "sample"
     acl_type: "extended"
-    comment: "allows sample to ping"
+    comment:
+      - "allows sample to ping"
     action: "permit"
     protocol: "icmp"
     src_host: ""
@@ -386,7 +394,7 @@ parsed_sample:
     time: ""
   - acl_name: "sample"
     acl_type: "extended"
-    comment: ""
+    comment: []
     action: "permit"
     protocol: "icmp"
     src_host: ""
@@ -410,7 +418,8 @@ parsed_sample:
     time: ""
   - acl_name: "sample"
     acl_type: "extended"
-    comment: "allows sample to ping"
+    comment:
+      - "allows sample to ping"
     action: "permit"
     protocol: "icmp"
     src_host: ""
@@ -434,7 +443,7 @@ parsed_sample:
     time: ""
   - acl_name: "sample"
     acl_type: "extended"
-    comment: ""
+    comment: []
     action: "permit"
     protocol: "icmp"
     src_host: ""
@@ -458,7 +467,8 @@ parsed_sample:
     time: ""
   - acl_name: "sample"
     acl_type: "extended"
-    comment: "permit sample servers to ping"
+    comment:
+      - "permit sample servers to ping"
     action: "permit"
     protocol: "icmp"
     src_host: ""
@@ -482,7 +492,7 @@ parsed_sample:
     time: ""
   - acl_name: "sample"
     acl_type: "extended"
-    comment: ""
+    comment: []
     action: "permit"
     protocol: "icmp"
     src_host: ""
@@ -506,7 +516,8 @@ parsed_sample:
     time: ""
   - acl_name: "sample"
     acl_type: "extended"
-    comment: "allows sample to ping"
+    comment:
+      - "allows sample to ping"
     action: "permit"
     protocol: "icmp"
     src_host: ""
@@ -530,7 +541,7 @@ parsed_sample:
     time: ""
   - acl_name: "sample"
     acl_type: "extended"
-    comment: ""
+    comment: []
     action: "permit"
     protocol: "icmp"
     src_host: ""
@@ -554,7 +565,7 @@ parsed_sample:
     time: ""
   - acl_name: "sample"
     acl_type: "extended"
-    comment: ""
+    comment: []
     action: "permit"
     protocol: "icmp"
     src_host: ""
@@ -578,7 +589,7 @@ parsed_sample:
     time: ""
   - acl_name: "sample"
     acl_type: "extended"
-    comment: ""
+    comment: []
     action: "permit"
     protocol: "icmp"
     src_host: ""
@@ -602,7 +613,8 @@ parsed_sample:
     time: ""
   - acl_name: "sample"
     acl_type: "extended"
-    comment: "\"allows sample workstation(s) to connect\""
+    comment:
+      - "\"allows sample workstation(s) to connect\""
     action: "permit"
     protocol: "tcp"
     src_host: ""
@@ -626,7 +638,7 @@ parsed_sample:
     time: ""
   - acl_name: "sample"
     acl_type: "extended"
-    comment: ""
+    comment: []
     action: "permit"
     protocol: "tcp"
     src_host: ""
@@ -650,7 +662,7 @@ parsed_sample:
     time: ""
   - acl_name: "sample"
     acl_type: "extended"
-    comment: ""
+    comment: []
     action: "permit"
     protocol: "tcp"
     src_host: ""
@@ -674,7 +686,7 @@ parsed_sample:
     time: ""
   - acl_name: "sample"
     acl_type: "extended"
-    comment: ""
+    comment: []
     action: "permit"
     protocol: "tcp"
     src_host: ""
@@ -698,7 +710,7 @@ parsed_sample:
     time: ""
   - acl_name: "sample"
     acl_type: "extended"
-    comment: ""
+    comment: []
     action: "permit"
     protocol: "tcp"
     src_host: ""
@@ -722,7 +734,7 @@ parsed_sample:
     time: ""
   - acl_name: "sample"
     acl_type: "extended"
-    comment: ""
+    comment: []
     action: "permit"
     protocol: "tcp"
     src_host: ""
@@ -746,7 +758,7 @@ parsed_sample:
     time: ""
   - acl_name: "sample"
     acl_type: "extended"
-    comment: ""
+    comment: []
     action: "permit"
     protocol: "tcp"
     src_host: ""
@@ -770,7 +782,7 @@ parsed_sample:
     time: ""
   - acl_name: "sample"
     acl_type: "extended"
-    comment: ""
+    comment: []
     action: "permit"
     protocol: "tcp"
     src_host: ""
@@ -794,7 +806,8 @@ parsed_sample:
     time: ""
   - acl_name: "sample"
     acl_type: "extended"
-    comment: "\"allows sample workstation(s)\""
+    comment:
+      - "\"allows sample workstation(s)\""
     action: "permit"
     protocol: "tcp"
     src_host: ""
@@ -818,7 +831,7 @@ parsed_sample:
     time: ""
   - acl_name: "sample"
     acl_type: "extended"
-    comment: ""
+    comment: []
     action: "permit"
     protocol: "tcp"
     src_host: ""
@@ -842,7 +855,7 @@ parsed_sample:
     time: ""
   - acl_name: "sample"
     acl_type: "extended"
-    comment: ""
+    comment: []
     action: "permit"
     protocol: "tcp"
     src_host: ""
@@ -866,7 +879,7 @@ parsed_sample:
     time: ""
   - acl_name: "sample"
     acl_type: "extended"
-    comment: ""
+    comment: []
     action: "permit"
     protocol: "tcp"
     src_host: ""
@@ -890,7 +903,7 @@ parsed_sample:
     time: ""
   - acl_name: "sample"
     acl_type: "extended"
-    comment: ""
+    comment: []
     action: "permit"
     protocol: "tcp"
     src_host: ""
@@ -914,7 +927,7 @@ parsed_sample:
     time: ""
   - acl_name: "sample"
     acl_type: "extended"
-    comment: ""
+    comment: []
     action: "permit"
     protocol: "tcp"
     src_host: ""
@@ -938,7 +951,8 @@ parsed_sample:
     time: ""
   - acl_name: "sample"
     acl_type: "extended"
-    comment: "\"allows sample workstation(s)\""
+    comment:
+      - "\"allows sample workstation(s)\""
     action: "permit"
     protocol: "tcp"
     src_host: ""
@@ -962,7 +976,7 @@ parsed_sample:
     time: ""
   - acl_name: "sample"
     acl_type: "extended"
-    comment: ""
+    comment: []
     action: "permit"
     protocol: "tcp"
     src_host: ""
@@ -986,7 +1000,7 @@ parsed_sample:
     time: ""
   - acl_name: "sample"
     acl_type: "extended"
-    comment: ""
+    comment: []
     action: "permit"
     protocol: "tcp"
     src_host: ""
@@ -1010,7 +1024,7 @@ parsed_sample:
     time: ""
   - acl_name: "sample"
     acl_type: "extended"
-    comment: ""
+    comment: []
     action: "permit"
     protocol: "tcp"
     src_host: ""
@@ -1034,7 +1048,7 @@ parsed_sample:
     time: ""
   - acl_name: "sample"
     acl_type: "extended"
-    comment: ""
+    comment: []
     action: "permit"
     protocol: "tcp"
     src_host: ""
@@ -1058,7 +1072,7 @@ parsed_sample:
     time: ""
   - acl_name: "sample"
     acl_type: "extended"
-    comment: ""
+    comment: []
     action: "permit"
     protocol: "tcp"
     src_host: ""
@@ -1082,7 +1096,8 @@ parsed_sample:
     time: ""
   - acl_name: "sample"
     acl_type: "extended"
-    comment: "\"allows sample workstation(s)\""
+    comment:
+      - "\"allows sample workstation(s)\""
     action: "permit"
     protocol: "tcp"
     src_host: ""
@@ -1106,7 +1121,7 @@ parsed_sample:
     time: ""
   - acl_name: "sample"
     acl_type: "extended"
-    comment: ""
+    comment: []
     action: "permit"
     protocol: "tcp"
     src_host: ""
@@ -1130,7 +1145,7 @@ parsed_sample:
     time: ""
   - acl_name: "sample"
     acl_type: "extended"
-    comment: ""
+    comment: []
     action: "permit"
     protocol: "tcp"
     src_host: ""
@@ -1154,7 +1169,7 @@ parsed_sample:
     time: ""
   - acl_name: "sample"
     acl_type: "extended"
-    comment: ""
+    comment: []
     action: "permit"
     protocol: "tcp"
     src_host: ""
@@ -1178,7 +1193,8 @@ parsed_sample:
     time: ""
   - acl_name: "sample"
     acl_type: "extended"
-    comment: "\"allows sample workstation(s)\""
+    comment:
+      - "\"allows sample workstation(s)\""
     action: "permit"
     protocol: "tcp"
     src_host: ""
@@ -1202,7 +1218,7 @@ parsed_sample:
     time: ""
   - acl_name: "sample"
     acl_type: "extended"
-    comment: ""
+    comment: []
     action: "permit"
     protocol: "tcp"
     src_host: ""
@@ -1226,7 +1242,7 @@ parsed_sample:
     time: ""
   - acl_name: "sample"
     acl_type: "extended"
-    comment: ""
+    comment: []
     action: "permit"
     protocol: "tcp"
     src_host: ""
@@ -1250,7 +1266,7 @@ parsed_sample:
     time: ""
   - acl_name: "sample"
     acl_type: "extended"
-    comment: ""
+    comment: []
     action: "permit"
     protocol: "tcp"
     src_host: ""
@@ -1274,7 +1290,7 @@ parsed_sample:
     time: ""
   - acl_name: "sample"
     acl_type: "extended"
-    comment: ""
+    comment: []
     action: "permit"
     protocol: "tcp"
     src_host: ""
@@ -1298,7 +1314,7 @@ parsed_sample:
     time: ""
   - acl_name: "sample"
     acl_type: "extended"
-    comment: ""
+    comment: []
     action: "permit"
     protocol: "tcp"
     src_host: ""
@@ -1322,7 +1338,7 @@ parsed_sample:
     time: ""
   - acl_name: "sample"
     acl_type: "extended"
-    comment: ""
+    comment: []
     action: "permit"
     protocol: "tcp"
     src_host: ""
@@ -1346,7 +1362,7 @@ parsed_sample:
     time: ""
   - acl_name: "sample"
     acl_type: "extended"
-    comment: ""
+    comment: []
     action: "permit"
     protocol: "tcp"
     src_host: ""
@@ -1370,7 +1386,8 @@ parsed_sample:
     time: ""
   - acl_name: "sample"
     acl_type: "extended"
-    comment: "permit sample workstation(s)"
+    comment:
+      - "permit sample workstation(s)"
     action: "permit"
     protocol: "tcp"
     src_host: ""
@@ -1394,7 +1411,8 @@ parsed_sample:
     time: ""
   - acl_name: "sample"
     acl_type: "extended"
-    comment: "permit sample workstation(s)"
+    comment:
+      - "permit sample workstation(s)"
     action: "permit"
     protocol: "tcp"
     src_host: ""
@@ -1418,7 +1436,8 @@ parsed_sample:
     time: ""
   - acl_name: "sample"
     acl_type: "extended"
-    comment: "permit sample to connect"
+    comment:
+      - "permit sample to connect"
     action: "permit"
     protocol: "tcp"
     src_host: ""
@@ -1442,7 +1461,7 @@ parsed_sample:
     time: ""
   - acl_name: "sample"
     acl_type: "extended"
-    comment: ""
+    comment: []
     action: "permit"
     protocol: "tcp"
     src_host: ""
@@ -1466,7 +1485,8 @@ parsed_sample:
     time: ""
   - acl_name: "sample"
     acl_type: "extended"
-    comment: "permit sample to connect"
+    comment:
+      - "permit sample to connect"
     action: "permit"
     protocol: "tcp"
     src_host: ""
@@ -1490,7 +1510,8 @@ parsed_sample:
     time: ""
   - acl_name: "sample"
     acl_type: "extended"
-    comment: "permit sample UDP access"
+    comment:
+      - "permit sample UDP access"
     action: "permit"
     protocol: "udp"
     src_host: ""
@@ -1514,7 +1535,7 @@ parsed_sample:
     time: ""
   - acl_name: "sample"
     acl_type: "extended"
-    comment: ""
+    comment: []
     action: "permit"
     protocol: "udp"
     src_host: ""
@@ -1538,7 +1559,8 @@ parsed_sample:
     time: ""
   - acl_name: "sample"
     acl_type: "extended"
-    comment: "permit sample TCP access"
+    comment:
+      - "permit sample TCP access"
     action: "permit"
     protocol: "tcp"
     src_host: ""
@@ -1562,7 +1584,7 @@ parsed_sample:
     time: "test"
   - acl_name: "sample"
     acl_type: "extended"
-    comment: ""
+    comment: []
     action: "permit"
     protocol: "tcp"
     src_host: ""
@@ -1586,7 +1608,8 @@ parsed_sample:
     time: ""
   - acl_name: "sample"
     acl_type: "extended"
-    comment: "allow sample to send PIM-Join"
+    comment:
+      - "allow sample to send PIM-Join"
     action: "permit"
     protocol: "pim"
     src_host: "10.1.6.20"
@@ -1610,7 +1633,7 @@ parsed_sample:
     time: ""
   - acl_name: "sample"
     acl_type: "extended"
-    comment: ""
+    comment: []
     action: "deny"
     protocol: "ip"
     src_host: ""
@@ -1634,7 +1657,7 @@ parsed_sample:
     time: ""
   - acl_name: "sample"
     acl_type: "extended"
-    comment: ""
+    comment: []
     action: "permit"
     protocol: "ip"
     src_host: ""
@@ -1658,7 +1681,7 @@ parsed_sample:
     time: ""
   - acl_name: "test"
     acl_type: "extended"
-    comment: ""
+    comment: []
     action: ""
     protocol: ""
     src_host: ""
@@ -1682,7 +1705,7 @@ parsed_sample:
     time: ""
   - acl_name: "97"
     acl_type: ""
-    comment: ""
+    comment: []
     action: "deny"
     protocol: ""
     src_host: ""
@@ -1706,7 +1729,7 @@ parsed_sample:
     time: ""
   - acl_name: "97"
     acl_type: ""
-    comment: ""
+    comment: []
     action: "permit"
     protocol: ""
     src_host: ""
@@ -1730,7 +1753,7 @@ parsed_sample:
     time: ""
   - acl_name: "98"
     acl_type: ""
-    comment: ""
+    comment: []
     action: "permit"
     protocol: ""
     src_host: "10.16.5.19"
@@ -1754,7 +1777,7 @@ parsed_sample:
     time: ""
   - acl_name: "98"
     acl_type: ""
-    comment: ""
+    comment: []
     action: "permit"
     protocol: ""
     src_host: "10.16.5.20"
@@ -1778,7 +1801,7 @@ parsed_sample:
     time: ""
   - acl_name: "99"
     acl_type: ""
-    comment: ""
+    comment: []
     action: "permit"
     protocol: ""
     src_host: "10.16.5.19"
@@ -1802,7 +1825,7 @@ parsed_sample:
     time: ""
   - acl_name: "99"
     acl_type: ""
-    comment: ""
+    comment: []
     action: "permit"
     protocol: ""
     src_host: "10.16.5.20"
@@ -1826,7 +1849,7 @@ parsed_sample:
     time: ""
   - acl_name: "199"
     acl_type: ""
-    comment: ""
+    comment: []
     action: "permit"
     protocol: "tcp"
     src_host: ""
@@ -1850,7 +1873,7 @@ parsed_sample:
     time: ""
   - acl_name: "199"
     acl_type: ""
-    comment: ""
+    comment: []
     action: "permit"
     protocol: "udp"
     src_host: ""
@@ -1874,7 +1897,7 @@ parsed_sample:
     time: ""
   - acl_name: "101"
     acl_type: ""
-    comment: ""
+    comment: []
     action: "permit"
     protocol: "tcp"
     src_host: ""
@@ -1898,7 +1921,7 @@ parsed_sample:
     time: ""
   - acl_name: "101"
     acl_type: ""
-    comment: ""
+    comment: []
     action: "permit"
     protocol: "tcp"
     src_host: ""
@@ -1922,7 +1945,7 @@ parsed_sample:
     time: ""
   - acl_name: "101"
     acl_type: ""
-    comment: ""
+    comment: []
     action: "permit"
     protocol: "ahp"
     src_host: ""
@@ -1946,7 +1969,7 @@ parsed_sample:
     time: ""
   - acl_name: "101"
     acl_type: ""
-    comment: ""
+    comment: []
     action: "permit"
     protocol: "tcp"
     src_host: "10.1.1.1"
@@ -1970,7 +1993,7 @@ parsed_sample:
     time: "test"
   - acl_name: "stdacl"
     acl_type: "standard"
-    comment: ""
+    comment: []
     action: ""
     protocol: ""
     src_host: ""
@@ -1994,7 +2017,7 @@ parsed_sample:
     time: ""
   - acl_name: "stdacl"
     acl_type: "standard"
-    comment: ""
+    comment: []
     action: "permit"
     protocol: ""
     src_host: "10.1.1.1"
@@ -2018,7 +2041,7 @@ parsed_sample:
     time: ""
   - acl_name: "test2"
     acl_type: "extended"
-    comment: ""
+    comment: []
     action: ""
     protocol: ""
     src_host: ""
@@ -2042,7 +2065,7 @@ parsed_sample:
     time: ""
   - acl_name: "198"
     acl_type: ""
-    comment: ""
+    comment: []
     action: "permit"
     protocol: "tcp"
     src_host: ""
@@ -2066,7 +2089,7 @@ parsed_sample:
     time: ""
   - acl_name: "198"
     acl_type: ""
-    comment: ""
+    comment: []
     action: "permit"
     protocol: "udp"
     src_host: ""
