@@ -129,23 +129,31 @@ ip access-list extended ios_partition_acl
  deny   55 any any
  deny   pim any any
  remark match source port range correctly
+ remark COMMENTs as a list
  permit udp any range 3478 3481 host 172.16.1.1
  permit udp any range 50000 50019 host 172.16.1.1
  permit udp any range 50020 50039 host 172.16.1.1
  permit udp any range 50040 50059 host 172.16.1.1
  remark match TCP flags
+ remark consecutive COMMENT
  permit tcp any host 192.168.100.1 established
+ remark correct syntax for time-range ace
+ permit tcp host 10.1.1.1 eq ftp any eq tacacs time-range test log
 
 access-list 102 remark match protocol numbers
 access-list 102 deny   53 any any
 access-list 102 deny   55 any any
 access-list 102 deny   pim any any
 access-list 102 remark match source port range correctly
+access-list 102 remark COMMENTs as a list
 access-list 102 permit udp any range 3478 3481 host 172.16.1.1
 access-list 102 permit udp any range 50000 50019 host 172.16.1.1
 access-list 102 permit udp any range 50020 50039 host 172.16.1.1
 access-list 102 permit udp any range 50040 50059 host 172.16.1.1
 access-list 102 remark match TCP flags
+access-list 102 remark consecutive COMMENT
 access-list 102 permit tcp any host 192.168.100.1 established
+access-list 102 remark correct syntax for time-range ace
+access-list 102 permit tcp host 10.1.1.1 eq ftp any eq tacacs time-range test log
 
 end
