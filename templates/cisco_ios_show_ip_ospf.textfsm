@@ -1,0 +1,11 @@
+Value OSPF_INSTANCE (\d+|\w+)
+Value ROUTER_ID (\d+.\d+.\d+.\d+)
+Value VRF_NAME (\S+)
+
+Start
+  ^\s+Routing Process\s+\"ospf\s+${OSPF_INSTANCE}\"\s+with\s+ID\s+${ROUTER_ID}
+  ^\s+Connected\s+to\s+MPLS\s+VPN\s+Superbackbone,\s+VRF\s+${VRF_NAME}
+  ^\s+Cisco NSF -> Record
+
+end
+

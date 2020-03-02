@@ -1,0 +1,19 @@
+Value PREFIX (\d+.\d+.\d+.\d+)
+Value NETMASK (\d+.\d+.\d+.\d+)
+Value NEXTHOP (\d+.\d+.\d+.\d+)
+Value NEXTHOP_VRF (\S+)
+Value COST (\d+)
+Value PREF (\d+)
+Value LCLNHOP (TRUE|FALSE)
+Value STATUS (ACTIVE|INACTV)
+Value ENABLE (TRUE|FALSE)
+
+Start
+  ^=+
+  ^\s+IP Static Route - GlobalRouter
+  ^=+
+  ^DEST\s+MASK\s+NEXT\s+NH-VRF\s+COST\s+PREF\s+LCLNHOP\s+STATUS\s+ENABLE
+  ^-+
+  ^${PREFIX}\s+${NETMASK}\s+${NEXTHOP}\s+${NEXTHOP_VRF}\s+${COST}\s+${PREF}\s+${LCLNHOP}\s+${STATUS}\s+${ENABLE} -> Record
+
+Done

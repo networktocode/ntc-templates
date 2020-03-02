@@ -1,0 +1,16 @@
+Value VERSION ([^ ()]+)
+Value HOSTNAME (\S+)
+Value MODEL (\w+)
+Value VENDOR (\w+\s+\w+)
+Value SERIAL (\w+)
+Value BASE_MAC (\w+:\w+:\w+:\w+:\w+:\w+)
+
+Start
+  ^\s+SysDescr\s+:\s+\S+\s+\(${VERSION}\)
+  ^\s+SysName\s+:\s+${HOSTNAME}
+  ^\s+Chassis\s+:\s+${MODEL}
+  ^\s+BrandName\s+:\s+${VENDOR}
+  ^\s+Serial#\s+:\s+${SERIAL}
+  ^\s+BaseMacAddr\s+:\s+${BASE_MAC}
+
+Done

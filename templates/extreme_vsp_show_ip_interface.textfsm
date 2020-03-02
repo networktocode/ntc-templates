@@ -1,0 +1,21 @@
+Value INTERFACE (^\w+\d+/\d|^\w+)
+Value IP_ADDRESS (\d+.\d+.\d+.\d+)
+Value NETMAKS (\d+.\d+.\d+.\d+)
+Value BCASTADDR (\w+)
+Value MTU (\d+)
+Value VLAN_ID (\d+|--)
+Value BROUTER (true|false)
+Value IPSEC (disable|enable)
+
+Start
+  ^=+
+  ^[\s]+IP Interface - GlobalRouter
+  ^=+
+  ^INTERFACE+[\s]+IP
+  ^[\s]+ADDRESS
+  ^-+
+  ^${INTERFACE}\s+${IP_ADDRESS}\s+${NETMAKS}\s+${BCASTADDR}\s+${MTU}\s+${VLAN_ID}\s+${BROUTER}\s+${IPSEC} -> Record
+  ^All
+  ^-+
+
+Done

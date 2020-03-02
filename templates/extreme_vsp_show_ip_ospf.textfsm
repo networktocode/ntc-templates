@@ -1,0 +1,25 @@
+Value ROUTER_ID (\d+.\d+.\d+.\d+)
+Value OSPF_ENABLE (\w+)
+Value VERSION (\d+)
+Value MET_ETHERNET (\d+)
+Value MET_FASTETHERNET (\d+)
+Value MET_GIGETHERNET (\d+)
+Value MET_TENGIGETHERNET (\d+)
+Value MET_FORTYGIGETHERNET (\d+)
+Value MET_VLAN (\d+)
+
+Start
+  ^=+
+  ^\s+OSPF General
+  ^=+
+  ^\s+RouterId:\s+${ROUTER_ID}
+  ^\s+AdminStat:\s+${OSPF_ENABLE}
+  ^\s+VersionNumber:\s+${VERSION}
+  ^\s+ethernet\s+-\s+${MET_ETHERNET}
+  ^\s+fast-ethernet\s+-\s+${MET_FASTETHERNET}
+  ^\s+gig-ethernet\s+-\s+${MET_GIGETHERNET}
+  ^\s+ten-gig-ethernet\s+-\s+${MET_TENGIGETHERNET}
+  ^\s+forty-gig-ethernet\s+-\s+${MET_FORTYGIGETHERNET}
+  ^\s+vlan\s+-\s+${MET_VLAN}
+
+Done

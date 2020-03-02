@@ -1,0 +1,6 @@
+Value SNMP_HOST (\d+.\d+.\d+.\d+)
+
+Start
+  ^\w+\s+ipv[46]\s+${SNMP_HOST}: -> Record
+
+Done

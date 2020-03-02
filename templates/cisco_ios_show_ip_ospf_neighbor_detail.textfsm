@@ -1,0 +1,18 @@
+Value PEER_RID (\d+.\d+.\d+.\d+)
+Value LOCAL_INT_IP (\d+.\d+.\d+.\d+)
+Value AREA_ID (\d+.\d+.\d+.\d+|\d+)
+Value LOCAL_INT (\S+)
+Value STATE (\w+)
+Value DR_IP (\d+.\d+.\d+.\d+)
+Value BDR_IP (\d+.\d+.\d+.\d+)
+Value UP_TIME (\S+)
+
+
+Start
+  ^\s+Neighbor\s+${PEER_RID},\s+interface\s+address\s+${LOCAL_INT_IP}
+  ^\s+In\s+the\s+area\s+${AREA_ID}\s+via\s+interface\s+${LOCAL_INT}
+  ^\s+Neighbor\s+priority\s+is\s+\d+,\s+State\s+is\s+${STATE},\s+\d+\s+state\s+changes
+  ^\s+DR\s+is\s+${DR_IP}\s+BDR\s+is\s+${BDR_IP}
+  ^\s+Neighbor\s+is\s+up\s+for\s+${UP_TIME} -> Record
+
+End

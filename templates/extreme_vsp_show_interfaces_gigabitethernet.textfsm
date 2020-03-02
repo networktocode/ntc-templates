@@ -1,0 +1,21 @@
+Value PORT (\d+|\d+/\d+|mgmt)
+Value INDEX (\d+)
+Value DESCRIPTION (\w+)
+Value LINK_TRAP (true|false)
+Value PORT_LOCK (true|false)
+Value MTU (\d+)
+Value MAC_ADDR (([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2}))
+Value ADMIN_STATUS (up|down)
+Value OPERATE (up|down)
+
+Start
+  ^=+
+  ^\s+Port Interface\s
+  ^=+
+  ^PORT\s+LINK\s+PORT\s+PHYSICAL\s+STATUS\s+
+  ^NUM\s+INDEX\s+DESCRIPTION\s+TRAP\s+LOCK\s+MTU\s+ADDRESS\s+ADMIN\s+OPERATE\s+
+  ^-+
+  ^${PORT}\s+${INDEX}\s+${DESCRIPTION}\s+${LINK_TRAP}\s+\s+${PORT_LOCK}\s+${MTU}\s+${MAC_ADDR}\s+${ADMIN_STATUS}\s+${OPERATE} -> Record
+  ^=+
+
+Done

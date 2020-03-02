@@ -1,0 +1,9 @@
+Value Filldown,Required VRF_NAME (\S+)
+Value List VLANS_ID (\S+)
+
+Start
+  ^VRF: ${VRF_NAME}
+  ^[-]+
+  ^${VLANS_ID}@ -> Record
+  ^[\n\r] -> Record
+

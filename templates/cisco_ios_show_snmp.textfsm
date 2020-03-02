@@ -1,0 +1,7 @@
+Value SNMP_SERVER (\d+.\d+.\d+.\d+)
+Value SNMP_SERVER_PORT (\d+)
+
+Start
+  ^\s+Logging\s+to\s+${SNMP_SERVER}.${SNMP_SERVER_PORT} -> Record
+
+Done

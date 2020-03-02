@@ -1,0 +1,28 @@
+Value Filldown,Required BGP_VERSION (\d+)
+Value Filldown,Required LOCAL_AS (\d+|\d+.\d+.\d+.\d+)
+Value Filldown,Required ROUTER_ID (\d+.\d+.\d+.\d+)
+Value PEER_IP (\d+.\d+.\d+.\d+)
+Value REMOTE_AS (\d+|\d+.\d+.\d+.\d+)
+Value PEER_STATE (\w+)
+Value HOLDDOWN (\d+)
+Value KEEPALIVE (\d+)
+Value HLDCFG (\d+)
+Value KPCFG (\d+)
+Value WGHT (\d+)
+Value CONRTY (\d+)
+Value ADVINT (\d+)
+Value DAYS_UP (\d+)
+Value HOUR_UP (\d+)
+Value MIN_UP (\d+)
+Value SEC_UP (\d+)
+
+Start
+  ^=+
+  ^\s+BGP\s+Summary
+  ^=+
+  ^\s+BGP\s+version\s+-\s+${BGP_VERSION}
+  ^\s+local-as\s+-\s+${LOCAL_AS}
+  ^\s+Identifier\s+-\s+${ROUTER_ID}
+  ^${PEER_IP}\s+${REMOTE_AS}\s+${PEER_STATE}\s+${HOLDDOWN}\s+${KEEPALIVE}\s+${HLDCFG}\s+${KPCFG}\s+${WGHT}\s+${CONRTY}\s+${ADVINT}\s+${DAYS_UP}\s+day\(s\),\s+${HOUR_UP}:${MIN_UP}:${SEC_UP} -> Record
+
+Done

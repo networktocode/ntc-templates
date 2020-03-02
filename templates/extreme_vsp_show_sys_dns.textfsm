@@ -1,0 +1,6 @@
+Value DOMAIN ([^ \r\n]+)
+
+Start
+  ^\s+DNS Default Domain Name :\s+${DOMAIN}
+
+Done

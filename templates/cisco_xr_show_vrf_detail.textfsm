@@ -1,0 +1,8 @@
+Value VRF_NAME (\S+)
+Value VRF_ID (\d+)
+Value RD ([^;]+)
+
+Start
+  ^VRF\s+${VRF_NAME}\s+\(VRF\s+Id\s+=\s+${VRF_ID}\);\s+default\s+RD\s+${RD}; -> Record
+
+Done

@@ -1,0 +1,14 @@
+Value VRF_NAME (([a-zA-Z0-9_.,/-]*))
+Value VRF_ID (\d+)
+Value OSPF (TRUE|FALSE)
+Value RIP (TRUE|FALSE)
+Value BGP (TRUE|FALSE)
+Value PIM (TRUE|FALSE)
+Value VLAN_COUNT (\d+)
+Value ARP_COUNT (\d+)
+Value PIM6 (TRUE|FALSE)
+
+Start
+  ^${VRF_NAME}\s+${VRF_ID}\s+${OSPF}\s+${RIP}\s+${BGP}\s+${PIM}\s+${VLAN_COUNT}\s+${ARP_COUNT}\s+${PIM6} -> Record  
+
+Done  

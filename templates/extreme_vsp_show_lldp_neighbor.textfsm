@@ -1,0 +1,20 @@
+Value LOCAL_PORT (\d+\/\d+|\w+)
+Value MAC_ADDR (([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2}))
+Value NEIGHBOR_PORT ([^\r\n]+)
+Value NEIGHBOR_NAME ([0-9A-Za-z\-]+)
+Value NEIGHBOR_TYPE (\w+)
+Value NEIGHBOR_DESCR ([^\r\n]+)
+Value NEIGHBOR_OS ([^\r\n]+)
+Value NEIGHBOR_MGMT_IP (\d+.\d+.\d+.\d+)
+
+Start
+  ^Port:\s+${LOCAL_PORT}\s+Index
+  ^\s+ChassisId:\s+MAC Address\s+${MAC_ADDR}
+  ^\s+PortId\s+:\s+IfName\s+${NEIGHBOR_PORT}
+  ^\s+SysName\s+:\s+${NEIGHBOR_NAME}
+  ^\s+SysCap\s+:\s+${NEIGHBOR_TYPE}
+  ^\s+PortDescr:\s+${NEIGHBOR_PORT}
+  ^\s+SysDescr\s+:\s+${NEIGHBOR_OS}
+  ^\s+Address\s+:\s+${NEIGHBOR_MGMT_IP} -> Record
+
+Done

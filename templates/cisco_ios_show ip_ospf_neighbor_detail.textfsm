@@ -1,0 +1,7 @@
+Value OSPF_INSTANCE (\d+|\w+)
+Value ROUTER_ID (\d+.\d+.\d+.\d+)
+
+Start
+  ^\s+Routing Process\s+\"ospf\s+${OSPF_INSTANCE}\"\s+with\s+ID\s+${ROUTER_ID} -> Record
+
+end

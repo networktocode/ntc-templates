@@ -1,0 +1,11 @@
+Value SUBNET (\d+.\d+.\d+.\d+)
+Value AD (\d+)
+Value METRIC (\d+)
+Value CIDR_MASK (\d+)
+Value NEXT_HOP (\S+)
+
+Start
+  ^S\s+${SUBNET}\/${CIDR_MASK}\s+\[${AD}\/${METRIC}\]\s+via\s+${NEXT_HOP} -> Record
+  ^S\s+${SUBNET}\/${CIDR_MASK}\s+is\s+directly\s+connected,\s+${NEXT_HOP} -> Record
+
+Done

@@ -1,0 +1,17 @@
+Value INTERFACE (\d+.\d+.\d+.\d+)
+Value AREA_ID (\d+.\d+.\d+.\d+|d+)
+Value ADM (en|dis)
+Value IFST (DR|BDR|DR_O|Down)
+Value METRIC (\d+)
+Value PRIORITY (\d+)
+Value DR (\d+.\d+.\d+.\d+)
+Value BDR (\d+.\d+.\d+.\d+)
+Value TYPE (\w+)
+Value AUTH_TYPE (\w+)
+Value MTU_IGNORE (en|dis)
+
+Start
+  ^${INTERFACE}\s+${AREA_ID}\s+${ADM}\s+${IFST}\s+${METRIC}\s+${PRIORITY}\s+${DR}\s+${TYPE}\s+${AUTH_TYPE}\s+${MTU_IGNORE}
+  ^\s+${BDR} -> Record
+
+Done
