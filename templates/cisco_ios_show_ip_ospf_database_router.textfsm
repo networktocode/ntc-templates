@@ -19,6 +19,8 @@ Value LS_TOS_0_METRICS (\d+)
 Start
   ^\s+OSPF Router with ID \(${ROUTER_ID}\) \(Process ID ${PROCESS_ID}\)
   ^\s+Router Link States \(Area ${AREA}\) -> LSAInfo
+  ^\s*$$
+  ^. -> Error
 
 LSAInfo
   ^\s+LS age: ${LSA_AGE}
@@ -30,6 +32,8 @@ LSAInfo
   ^\s+Checksum: ${LSA_CHECKSUM}
   ^\s+Length: ${LSA_LENGTH}
   ^\s+Number of Links: ${LSA_NUM_LINKS} -> LSAs
+  ^\s*$$
+  ^. -> Error
 
 LSAs
   ^\s+Link connected to: ${LS_LINK_TYPE}
@@ -38,5 +42,7 @@ LSAs
   ^\s+Number of MTID metrics: ${LS_MTID_METRICS}
   ^\s+TOS 0 Metrics: ${LS_TOS_0_METRICS} -> Next.Record
   ^\s -> LSAInfo
+  ^\s*$$
+  ^. -> Error
 
 EOF
