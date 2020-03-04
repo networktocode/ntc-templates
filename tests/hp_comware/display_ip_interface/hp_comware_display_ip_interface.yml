@@ -1,0 +1,31 @@
+---
+parsed_sample:
+  - interface: "LoopBack0"
+    ip_address:
+      - "172.18.255.63/32"
+    mtu: "1536"
+    phy: "UP"
+    protocol: "UP(spoofing)"
+  - interface: "M-GigabitEthernet0/0/0"
+    ip_address: []
+    mtu: ''
+    phy: "Administratively DOWN"
+    protocol: "DOWN"
+  - interface: "Vlan-interface66"
+    ip_address:
+      - "172.18.69.101/24"
+    mtu: "1500"
+    phy: "UP"
+    protocol: "UP"
+  - interface: "Vlan-interface89"
+    ip_address:
+      - "172.18.89.3/24"
+    mtu: "1500"
+    phy: "UP"
+    protocol: "UP"
+  - interface: "Vlan-interface206"
+    ip_address:
+      - "172.18.41.22/24"
+    mtu: "1500"
+    phy: "UP"
+    protocol: "UP"

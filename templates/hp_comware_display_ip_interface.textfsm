@@ -1,0 +1,19 @@
+Value INTERFACE (\S+)
+Value PHY (UP|DOWN|Administratively DOWN)
+Value PROTOCOL (UP(\(spoofing\))?|DOWN)
+Value List IP_ADDRESS (\S+)
+Value MTU (\d+)
+
+
+Start
+  ^${INTERFACE}\s+current\s+state:\s+${PHY} -> Interface
+  ^. -> Error
+
+
+Interface
+  ^$$ -> Continue.Record
+  ^${INTERFACE}\s+current\s+state:\s+${PHY}
+  ^Line\s+protocol\s+current\s+state:\s+${PROTOCOL}
+  ^Internet\s+Address\s+is\s+${IP_ADDRESS}\s+Primary
+  ^Internet\s+Address\s+is\s+${IP_ADDRESS}\s+Sub
+  ^The\s+Maximum\s+Transmit\s+Unit:\s+${MTU}\s+bytes -> Record
