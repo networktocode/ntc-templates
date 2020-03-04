@@ -1,5 +1,5 @@
 Value INTERFACE (\S+)
-Value List IP_ADDRESS ((?:[A-Fa-f0-9:\.]+\/\d+)|-)
+Value List IP_ADDRESS ((?:[A-Fa-f0-9:\.]+)(\/\d+)?|-)
 Value STATUS (\S+)
 Value DESCRIPTION (.+?)
 
