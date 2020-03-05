@@ -234,6 +234,7 @@ cisco_nxos_show_lldp_neighbors.textfsm, .*, cisco_nxos, sh[[ow]] ll[[dp]] nei[[g
 cisco_nxos_show_cdp_neighbors.textfsm, .*, cisco_nxos, sh[[ow]] cd[[p]] neig[[hbors]]
 cisco_nxos_show_ip_arp_detail.textfsm, .*, cisco_nxos, sh[[ow]] i[[p]] a[[rp]] det[[ail]]
 cisco_nxos_show_processes_cpu.textfsm, .*, cisco_nxos, sh[[ow]] proc[[esses]] c[[pu]]
+cisco_nxos_show_vrf_interface.textfsm, .*, cisco_nxos, sh[[ow]] vrf int[[erface]]
 cisco_nxos_show_access-lists.textfsm, .*, cisco_nxos, sh[[ow]] acc[[ess-lists]]
 cisco_nxos_show_environments.textfsm, .*, cisco_nxos, sh[[ow]] envi[[ronments]]
 cisco_nxos_show_interface.textfsm, .*, cisco_nxos, sh[[ow]] inte[[rface]]
@@ -253,6 +254,8 @@ cisco_nxos_show_fex.textfsm, .*, cisco_nxos, sh[[ow]] fex
 cisco_nxos_show_vdc.textfsm, .*, cisco_nxos, sh[[ow]] vdc
 cisco_nxos_show_vpc.textfsm, .*, cisco_nxos, sh[[ow]] vpc
 cisco_nxos_show_vrf.textfsm, .*, cisco_nxos, sh[[ow]] vrf
+
+cisco_s300_show_version.textfsm, .*, cisco_s300, sh[[ow]] ver[[sion]]
 
 cisco_wlc_ssh_show_advanced_802.11a_channel.textfsm, .*, cisco_wlc_ssh, sh[[ow]] ad[[vanced]] 802\.11[ab] ch[[annel]]
 cisco_wlc_ssh_show_802.11a_cleanair_config.textfsm, .*, cisco_wlc_ssh, sh[[ow]] 802\.11[ab] cl[[eanair]] c[[onfig]]
@@ -279,6 +282,7 @@ cisco_xr_admin_show_controller_fabric_health.textfsm, .*, cisco_xr, adm[[in]] sh
 cisco_xr_show_controller_fabric_plane_all.textfsm, .*, cisco_xr, sh[[ow]] controller fab[[ric]] pla[[ne]] all
 cisco_xr_show_configuration_commit_list.textfsm, .*, cisco_xr, sh[[ow]] conf[[iguration]] c[[ommit]] l[[ist]]
 cisco_xr_show_asic-errors_all_location.textfsm, .*, cisco_xr, sh[[ow]] asic-er[[rors]] all loc[[ation]]
+cisco_xr_admin_show_environment_power.textfsm, .*, cisco_xr, adm[[in]] sh[[ow]] env[[ironment]] p[[ower]]
 cisco_xr_show_dhcp_ipv4_proxy_binding.textfsm, .*, cisco_xr, sh[[ow]] dh[[cp]] ipv4 p[[roxy]] b[[inding]]
 cisco_xr_show_mpls_ldp_neighbor_brief.textfsm, .*, cisco_xr, sh[[ow]] mp[[ls]] ld[[p]] neigh[[bor]] br[[ief]]
 cisco_xr_admin_show_environment_fan.textfsm, .*, cisco_xr, adm[[in]] sh[[ow]] env[[ironment]] f[[an]]
@@ -334,6 +338,7 @@ hp_procurve_show_arp.textfsm, .*, hp_procurve, sh[[ow]] ar[[p]]
 huawei_vrp_display_interface_brief.textfsm, .*, huawei_vrp, disp[[lay]] inter[[face]] br[[ief]]
 huawei_vrp_display_lldp_neighbor.textfsm, .*, huawei_vrp, disp[[lay]] lldp nei[[ghbor]]
 huawei_vrp_display_temperature.textfsm, .*, huawei_vrp, disp[[lay]] tem[[perature]]
+huawei_vrp_display_version.textfsm, .*, huawei_vrp, disp[[lay]] ver[[sion]]
 
 juniper_junos_show_chassis_cluster_interfaces.textfsm, .*, juniper_junos, sh[[ow]] ch[[assis]] c[[luster]] i[[nterface]]
 juniper_junos_show_chassis_cluster_status.textfsm, .*, juniper_junos, sh[[ow]] ch[[assis]] c[[luster]] s[[tatus]]
