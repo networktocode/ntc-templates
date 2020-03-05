@@ -1,0 +1,29 @@
+Value Required GROUP (\d+)
+Value PO_NAME (\S+)
+Value PO_STATUS (\D+)
+Value PROTOCOL (\S+)
+Value List INTERFACES ([\w\.\/]+)
+Value List INTERFACES_STATUS (\D+)
+
+Start
+  ^Group\s+Port-channel\s+Protocol -> PortChannel
+  ^\s*$$
+  
+	
+
+PortChannel
+  ^\d+ -> Continue.Record
+  ^${GROUP}\s+${PO_NAME}\(${PO_STATUS}\)\s+${PROTOCOL}\s* -> Continue
+  ^.+(-|LACP|PAgP)\s+${INTERFACES}\(${INTERFACES_STATUS}\) -> Continue
+  ^.+(-|LACP|PAgP)\s+[\w\.\/\(\)]+\s+${INTERFACES}\(${INTERFACES_STATUS}\) -> Continue
+  ^.+(-|LACP|PAgP)\s+[\w\.\/\(\)]+\s+[\w\.\/\(\)]+\s+${INTERFACES}\(${INTERFACES_STATUS}\) -> Continue
+  ^.+(-|LACP|PAgP)\s+[\w\.\/\(\)]+\s+[\w\.\/\(\)]+\s+[\w\.\/\(\)]+\s+${INTERFACES}\(${INTERFACES_STATUS}\) -> Continue
+  ^\s+${INTERFACES}\(${INTERFACES_STATUS}\) -> Continue
+  ^\s+[\w\.\/\(\)]+\s+${INTERFACES}\(${INTERFACES_STATUS}\) -> Continue
+  ^\s+[\w\.\/\(\)]+\s+[\w\.\/\(\)]+\s+${INTERFACES}\(${INTERFACES_STATUS}\) -> Continue
+  ^\s+[\w\.\/\(\)]+\s+[\w\.\/\(\)]+\s+[\w\.\/\(\)]+\s+${INTERFACES}\(${INTERFACES_STATUS}\) -> Continue
+  ^\d+
+  ^\s+
+  ^-+\++
+  ^\s*$$
+  ^. -> Error
