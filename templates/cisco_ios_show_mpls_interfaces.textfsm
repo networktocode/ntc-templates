@@ -7,7 +7,7 @@ Value STATIC (\w+)
 Value OPERATIONAL (\w+)
 
 Start
-  ^Interface\s+IP\s+Tunnel\s+BGP\sStatic\sOperational$$
+  ^Interface\s+IP\s+Tunnel\s+BGP\s+Static\s+Operational$$
   ^${INTERFACE}\s+${MPLS_IP}\s+\(${PROTOCOL}\)\s+${TUNNEL}\s+${BGP}\s+${STATIC}\s+${OPERATIONAL}\s*$$ -> Record
-  ^\s*
+  ^\s*$$
   ^. -> Error
