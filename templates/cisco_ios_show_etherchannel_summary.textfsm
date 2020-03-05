@@ -25,4 +25,5 @@ PortChannel
   ^\d+
   ^\s+
   ^-+\++
-  ^.+ -> Error
+  ^\s*$$
+  ^. -> Error
