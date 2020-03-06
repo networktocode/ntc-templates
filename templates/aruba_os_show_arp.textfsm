@@ -5,6 +5,8 @@ Value INTERFACE (\S+)
 Value AGE (\d+)
 
 Start
+ ^Codes:\s+\*\s+-\s+Local\s+Addresses,\s+S\s+-\s+Static,\s+A\s+-\s+Auth
+ ^Total\s+ARP\s+entries:\s+\d+
  ^IPV4\s+ARP\s+Table                                                                                
  ^-+                                                                                                
  ^\s+Protocol\s+IP\s+Address\s+Hardware\s+Address\s+Interface\s+Age                                 
