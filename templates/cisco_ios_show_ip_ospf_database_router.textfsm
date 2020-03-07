@@ -6,11 +6,11 @@ Value Filldown LSA_OPTIONS (.*)
 Value Filldown LSA_TYPE (.*)
 Value Filldown LSA_ID (\d+\.\d+\.\d+\.\d+)
 Value Filldown LSA_ADV_ROUTER (\d+\.\d+\.\d+\.\d+)
-Value Filldown LSA_SEQ_NUMBER (\d+)
+Value Filldown LSA_SEQ_NUMBER (\S+)
 Value Filldown LSA_CHECKSUM (\S+)
 Value Filldown LSA_LENGTH (\d+)
 Value Filldown LSA_NUM_LINKS (\d+)
-Value LS_LINK_TYPE ((a Stub Network)|(a Transit Network))
+Value LS_LINK_TYPE ((a Stub Network)|(a Transit Network)|(another Router \(point-to-point\)))
 Value LS_LINK_ID (\d+\.\d+\.\d+\.\d+)
 Value LS_LINK_DATA (\d+\.\d+\.\d+\.\d+)
 Value LS_MTID_METRICS (\d+)
@@ -37,11 +37,11 @@ LSAInfo
 
 LSAs
   ^\s+Link connected to: ${LS_LINK_TYPE}
-  ^\s+\(Link ID\) ((Network\/subnet number)|(Designated Router address)): ${LS_LINK_ID}
+  ^\s+\(Link ID\) ((Network\/subnet number)|(Designated Router address)|(Neighboring Router ID)): ${LS_LINK_ID}
   ^\s+\(Link Data\) ((Network Mask)|(Router Interface address)): ${LS_LINK_DATA}
   ^\s+Number of MTID metrics: ${LS_MTID_METRICS}
   ^\s+TOS 0 Metrics: ${LS_TOS_0_METRICS} -> Next.Record
-  ^\s -> LSAInfo
+  ^\s+LS age: ${LSA_AGE} -> LSAInfo
   ^\s*$$
   ^. -> Error
 
