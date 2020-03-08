@@ -2,15 +2,18 @@ Codes: S - State, L - Link, u - Up, D - Down, A - Admin Down
 Interface        IP Address                        S/L  Description
 ---------        ----------                        ---  -----------
 eth0             -                                 u/u  
-eth0.42          172.11.100.1/31                   u/u  Utside 
+eth0.40          123.123.120.123/27                u/u  OUTSIDE 
 eth1             -                                 u/u  
-eth1.1727        172.11.100.11/31                  u/u  SERVICES-LINK 
-eth1.1800        172.11.100.3/31                   u/u  DS-LAN 
-eth1.1801        172.11.100.5/31                   u/u  Link 
-eth1.1804        172.11.100.7/31                   u/u  TEST-NET 
+eth1.204         123.123.123.81/28                 u/u  CUST-DS-LAN 
+eth1.269         172.18.32.14/28                   u/u  CUST-COM 
+                 123.123.123.123/32
+eth1.437         123.123.116.169/29                u/u  CUST-VIDEO 
+eth1.1753        172.18.161.196/29                 u/u  SERVICE-LINK 
 eth2             -                                 u/u  
-eth2.1802        172.18.254.3/31                   u/u  SYNC 
-                 fe80:3023:1234:d::3/127
 lo               127.0.0.1/8                       u/u  
-                 172.18.255.3/32
+                 172.18.255.110/32
                  ::1/128
+vtun0            192.168.80.2                      u/u  
+vtun1            192.168.80.4                      u/u   OpenVPN-TUNNEL1
+vtun2            192.168.80.6                      u/u  
+
