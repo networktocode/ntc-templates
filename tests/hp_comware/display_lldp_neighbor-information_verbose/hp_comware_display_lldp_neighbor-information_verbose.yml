@@ -1,0 +1,14 @@
+---
+parsed_sample:
+  - local_if: "Ten-GigabitEthernet1/0/0/1"
+    neighbor: "IDC-Extranet-HR8808-1"
+    chassis_id: "70f9-6d6b-e800"
+    neighbor_port: "GigabitEthernet0/0/1"
+  - local_if: "Ten-GigabitEthernet1/0/0/2"
+    neighbor: "IDC-Intranet-HS125X"
+    chassis_id: "70f9-6d17-ad59"
+    neighbor_port: "Ten-GigabitEthernet1/0/0/5"
+  - local_if: "Ten-GigabitEthernet1/0/0/3"
+    neighbor: "IDC-Intranet-HS125X"
+    chassis_id: "70f9-6d17-ad59"
+    neighbor_port: "Ten-GigabitEthernet2/0/0/5"

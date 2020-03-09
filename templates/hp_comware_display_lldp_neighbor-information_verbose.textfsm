@@ -1,0 +1,17 @@
+Value Required LOCAL_IF (\S+)
+Value NEIGHBOR (\S+)
+Value CHASSIS_ID ([\d\w-]+)
+Value NEIGHBOR_PORT (\S+)
+
+Start
+  ^LLDP\s+neighbor-information\s+of\s+port\s+\d+\[${LOCAL_IF}\]
+  ^LLDP agent nearest-bridge:
+  ^\s+LLDP\s+neighbor index\s+:.*
+  ^\s+Update\s+time\s+:.*
+  ^\s+Chassis\s+type\s+:.*
+  ^\s+Chassis\s+ID\s+:\s+${CHASSIS_ID}
+  ^\s+Port\s+ID\s+type\s+:.*
+  ^\s+Port\s+ID\s+:\s+${NEIGHBOR_PORT}
+  ^\s+Time\s+to\s+live\d+:.*
+  ^\s+Port\s+description\s+:.*
+  ^\s+System\s+name\s+:\s+${NEIGHBOR} -> Record Start
