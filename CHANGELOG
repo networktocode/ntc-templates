@@ -1,12 +1,58 @@
 ## [1.4.0]
-### Fixed for any bug fixes
-### Added for new features
+### Fixed
+- [#548] IOS show mac address-table: Account for Total Mac Addresses
+- [#565] IOS show license: Avoid trailing spaces for features
+- [#575] NXOS show version: Match N5K PLATFORM & LAST_REBOOT captures split words
+- [#574] ASA show failover: Account for new output (IPS)
+- [#577] IOS show mac address-table: Account for Multicast Entries
+- [#582] NXOS show interface transceiver: Remove requirement for TYPE
+- [#585] IOS show mac address-table: Fixed ordering for TYPE2
+- [#587] IOS show interfaces switchport: Account for Vepa Enabled and Operational Dot1q Ethertype
+- [#584] IOS show switch detail: Account for Mac persistency wait time
+- [#589] EOS show ip route: Filldown for DISTANCE and METRIC - Added new data formats for VRF and NEXT_HOP and INTERFACE
+- [#592] Fortinet get router info bgp summary: Account for more data, fix UP_DOWN regex from word to non-whitespace
+- [#603] IOS show ip access-list: Update PROTOCOL to capture numbered protocols
+- [610] Aruba os show arp: Fix tests to have the full output from the command and device
+- [#608] Vyatta VyOS show interfaces: Capture IP_ADDRESS with or without netmask
+- [#614] IOS show interfaces status: Remove reliance on whitespaces
+### Added
 - [#406] Testing: Add yamllint to test suite
 - [#407] Testing: Add python black to test suite
-### Changed for changes in existing functionality
+- [#553] IOS show lldp neighbors: Added CAPABILITIES capture group
+- [#554] IOS show logging: New template
+- [#563] IOS show interfaces switchport: Added ADMIN_MDOE capture group
+- [#562] ASA show logging: New template
+- [#564] NXOS show interface transceiver: New template
+- [#567] XR show arp: New template
+- [#572] IOS show lldp neighbors detail: Added SERIAL capture group
+- [#573] ASA show arp: New template
+- [#578] Fortinet get system interface: New template
+- [#576] Huawei VRP display lldp neighbor: New template
+- [#581] Cisco WLC show vlan sum: New template
+- [#580] XR show interfaces summary: New template
+- [#590] IOS show ip bgp neighbors: New template
+- [#591] NXOS show vdc: New template
+- [#595] Checkpoint GAIA show arp dynamic all: New template
+- [#593] IOS show module: New template
+- [#597] Huwai VRP display version: New template
+- [#602] NXOS show vrf interface: New template
+- [#598] IOS show running-config partition access list: Added TCP_FLAG capture group
+- [#598] IOS show running-config partition access list: Convert COMMENT to list
+- [#598] IOS show running-config partition access list: Update PROTOCOL to include numbered protocols
+- [#596] XR admin show environment power: New template
+- [#594] Aruba os show arp: New template
+- [#605] SG300 show version: New template
+- [#604] NXOS show vlan: Added INTERFACES capture group, Require VLAN_ID
+- [#600] IOS show mpls interfaces: New template
+- [#599] IOS show etherchannel summary: New template
+- [#611] NXOS show interface: Added MODE capture group
+- [#612] NXOS show interfaces switchport: Added ACCESS_VLAN_NAME and NATIVE_VLAN_NAME capture groups
+- [#609] HP Comware display ip interface: New template
+- [#606] IOS show ip ospf database router: New template
+### Changed
 - [#406] Helpers: Added development_helpers cli utility to replace existing helpers
-### Deprecated for soon-to-be removed features
-### Removed for now removed features
+### Deprecated
+### Removed
 
 ## [1.3.0]
 ### Fixed
