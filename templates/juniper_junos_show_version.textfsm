@@ -75,7 +75,7 @@ Start
   ^Serial\s+Number:\s+${SERIAL_NUMBER}
   ^QFabric\s+System\s+ID:\s+${QFABRIC_SYSTEM_ID}
   ^JUNOS\s+${OTHER_DEVICE_PROPERTIES}\[${OTHER_PROPERTIES_VERSIONS}\]
-  ^fpc:\d+
+  ^fpc\d+
   ^-----
   ^{master:\d+}
   ^. -> Error
