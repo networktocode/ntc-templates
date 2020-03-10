@@ -7,3 +7,5 @@ Value SNPA ((\S+)?)
 
 Start
   ^${INTERFACE}\s+${SYSTEM_ID}\s+${TYPE}\s+${STATE}\s+${HOLD_TIME}(\s+)?${SNPA} -> Record
+  ^\s*$$
+  ^{master:\d+}

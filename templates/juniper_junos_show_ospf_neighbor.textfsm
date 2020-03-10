@@ -8,3 +8,5 @@ Value DEAD_TIME (\d+)
 
 Start
   ^${ADDRESS}\s+${INTERFACE}\s+${STATE}\s+${NEIGHBOR_ID}\s+${PRIORITY}\s+${DEAD_TIME} -> Record
+  ^\s*$$
+  ^{master:\d+}

@@ -10,5 +10,7 @@ Start
   ^.*ype:\s+${HARDWARE_TYPE},.*MTU:\s+${MTU}.* -> Record
   ^.*MTU:\s+${MTU}.* -> Record
   ^.*[fF]lags -> Record
+  ^\s*$$
+  ^{master:\d+}
 
 EOF
