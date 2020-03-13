@@ -8,4 +8,5 @@ Start
   ^${MAC}\s+${IP_ADDRESS}\s+${INTERFACE}\s+${FLAGS} -> Record
   ^Total.*
   ^\s*$$
+  ^{master:\d+}
   ^. -> Error
