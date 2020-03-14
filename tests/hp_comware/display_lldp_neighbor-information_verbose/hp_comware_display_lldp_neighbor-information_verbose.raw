@@ -27,7 +27,7 @@ LLDP agent nearest-bridge:
  Power pairs                : Signal
  Port power classification  : Class 0
  Maximum frame size         : 9216
-               
+
 LLDP neighbor-information of port 2[Ten-GigabitEthernet1/0/0/2]:
 LLDP agent nearest-bridge:
  LLDP neighbor index : 1
@@ -65,7 +65,7 @@ LLDP agent nearest-bridge:
  Power pairs                : Signal
  Port power classification  : Class 0
  Maximum frame size         : 9216
-               
+
 LLDP neighbor-information of port 3[Ten-GigabitEthernet1/0/0/3]:
 LLDP agent nearest-bridge:
  LLDP neighbor index : 1
@@ -100,6 +100,44 @@ LLDP agent nearest-bridge:
  PSE power supported        : No
  PSE power enabled          : No
  PSE pairs control ability  : No
+ Power pairs                : Signal
+ Port power classification  : Class 0
+ Maximum frame size         : 9216
+
+ [H3C-GigabitEthernet0/0]dis lldp neighbor-information verbose
+LLDP neighbor-information of port 1[GigabitEthernet0/0]:
+LLDP agent nearest-bridge:
+ LLDP neighbor index : 1
+ Update time         : 0 days, 0 hours, 3 minutes, 9 seconds
+ Chassis type        : MAC address
+ Chassis ID          : 4c1c-503a-0100
+ Port ID type        : Interface name
+ Port ID             : GigabitEthernet0/0
+ Time to live        : 121
+ Port description    : GigabitEthernet0/0 Interface
+ System name         : Test-Router
+ System description  : H3C Comware Platform Software, Software Version 7.1.075,
+                       Alpha 7571
+                       H3C MSR36-20
+                       Copyright (c) 2004-2017 New H3C Technologies Co., Ltd. Al
+                       l rights reserved.
+ System capabilities supported : Bridge, Router, Customer Bridge, Service Bridge
+ System capabilities enabled   : Bridge, Router, Customer Bridge
+ Management address type           : IPv4
+ Management address                : 12.1.1.2
+ Management address interface type : IfIndex
+ Management address interface ID   : 1
+ Management address OID            : 0
+ Link aggregation supported : Yes
+ Link aggregation enabled   : No
+ Aggregation port ID        : 0
+ Auto-negotiation supported : No
+ Auto-negotiation enabled   : No
+ OperMau                    : Speed(0)/Duplex(Unknown)
+ Power port class           : PSE
+ PSE power supported        : Yes
+ PSE power enabled          : No
+ PSE pairs control ability  : Yes
  Power pairs                : Signal
  Port power classification  : Class 0
  Maximum frame size         : 9216
