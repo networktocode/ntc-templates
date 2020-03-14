@@ -1,5 +1,5 @@
 Value NUMBER (\d+)
-Value DESCR (\S+)
+Value DESCR ((\S+)(\s+\S+)*)
 Value STATE (\S+)
 Value MODEL (\S+)
 Value SERIAL (\S+)
