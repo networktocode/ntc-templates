@@ -22,7 +22,7 @@ Value INACTIVITY (.+?)
 Value VLAN_MAPPING (\S+)
 Value VLAN (.+?)
 Value AUDT_SESS_ID (.+?)
-Value SECURITY_GRP (.+?)
+Value SECURITY_GRP (\S+)
 
 Start
   ^Session\s+Type:\s+${SESSION_TYPE}$$ -> Connection
@@ -41,6 +41,6 @@ Connection
   ^\s*Inactivity\s+:\s+${INACTIVITY}$$
   ^\s*VLAN\s+Mapping\s+:\s+${VLAN_MAPPING}\s+VLAN\s+:\s+${VLAN}$$
   ^\s*Audt\s+Sess\s+ID\s+:\s+${AUDT_SESS_ID}$$
-  ^\s*Security\s+Grp\s+:\s+${SECURITY_GRP}$$ -> Record
+  ^\s*Security\s+Grp\s+:\s+${SECURITY_GRP}\s*$$ -> Record
   ^\s*$$
   ^. -> Error
