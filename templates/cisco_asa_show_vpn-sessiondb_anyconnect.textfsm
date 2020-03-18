@@ -1,6 +1,6 @@
-Value Required SESSION_TYPE (\S+)
+Value Filldown,Required SESSION_TYPE (\S+)
 Value USERNAME (\S+)
-Value INDEX (\d+)
+Value Required INDEX (\d+)
 Value ASSIGNED_IP (\d+\.\d+\.\d+\.\d+)
 Value PUBLIC_IP (\d+\.\d+\.\d+\.\d+)
 Value PROTOCOL (.+?)
@@ -22,10 +22,12 @@ Value INACTIVITY (.+?)
 Value VLAN_MAPPING (\S+)
 Value VLAN (.+?)
 Value AUDT_SESS_ID (.+?)
-Value SECURITY_GRP (.+?)
+Value SECURITY_GRP (\S+)
 
 Start
-  ^Session\s+Type:\s+${SESSION_TYPE}$$
+  ^Session\s+Type:\s+${SESSION_TYPE}$$ -> Connection
+
+Connection
   ^\s*Username\s*:\s+${USERNAME}\s+Index\s+:\s*${INDEX}$$
   ^\s*Assigned\s+IP\s*:\s+${ASSIGNED_IP}\s+Public\s*IP\s*:\s*${PUBLIC_IP}$$
   ^\s*Protocol\s+:\s+${PROTOCOL}$$
@@ -33,12 +35,12 @@ Start
   ^\s*Encryption\s+:\s*${ENCRYPTION}$$
   ^\s*Hashing\s+:\s*${HASHING}$$
   ^\s*Bytes\s+Tx\s+:\s+${BYTES_TX}\s+Bytes\s+Rx\s+:\s+${BYTES_RX}$$
- ^\s*Group\s+Policy\s+:\s+${GROUP_POLICY}\s+Tunnel\s+Group\s+:\s+${TUNNEL_GROUP}$$
+  ^\s*Group\s+Policy\s+:\s+${GROUP_POLICY}\s+Tunnel\s+Group\s+:\s+${TUNNEL_GROUP}$$
   ^\s*Login\s+Time\s+:\s+${LOGIN_TIME}\s+${LOGIN_TIME_ZONE}\s+${LOGIN_WEEKDAY}\s+${LOGIN_MONTH}\s+${LOGIN_DAY}\s+${LOGIN_YEAR}$$
   ^\s*Duration\s+:\s+${DURATION}$$
   ^\s*Inactivity\s+:\s+${INACTIVITY}$$
   ^\s*VLAN\s+Mapping\s+:\s+${VLAN_MAPPING}\s+VLAN\s+:\s+${VLAN}$$
   ^\s*Audt\s+Sess\s+ID\s+:\s+${AUDT_SESS_ID}$$
-  ^\s*Security\s+Grp\s+:\s+${SECURITY_GRP}$$ -> Record
+  ^\s*Security\s+Grp\s+:\s+${SECURITY_GRP}\s*$$ -> Record
   ^\s*$$
   ^. -> Error
