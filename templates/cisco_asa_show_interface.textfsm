@@ -1,5 +1,5 @@
 Value Required INTERFACE (\S+)
-Value INTERFACE_ZONE (.*)
+Value INTERFACE_ZONE (.+?)
 Value LINK_STATUS (.*)
 Value PROTOCOL_STATUS (.*)
 Value HARDWARE_TYPE ([\w ]+)
