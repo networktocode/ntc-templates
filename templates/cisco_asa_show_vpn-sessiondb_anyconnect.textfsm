@@ -30,12 +30,16 @@ Start
 Connection
   ^\s*Username\s*:\s+${USERNAME}\s+Index\s+:\s*${INDEX}$$
   ^\s*Assigned\s+IP\s*:\s+${ASSIGNED_IP}\s+Public\s*IP\s*:\s*${PUBLIC_IP}$$
+  ^\s*Assigned\s+IP\s*:\s+${ASSIGNED_IP}$$
+  ^\s*Public\s+IP\s*:\s+${PUBLIC_IP}$$
   ^\s*Protocol\s+:\s+${PROTOCOL}$$
   ^\s*License\s+:\s*${LICENSE}$$
   ^\s*Encryption\s+:\s*${ENCRYPTION}$$
   ^\s*Hashing\s+:\s*${HASHING}$$
   ^\s*Bytes\s+Tx\s+:\s+${BYTES_TX}\s+Bytes\s+Rx\s+:\s+${BYTES_RX}$$
   ^\s*Group\s+Policy\s+:\s+${GROUP_POLICY}\s+Tunnel\s+Group\s+:\s+${TUNNEL_GROUP}$$
+  ^\s*Group\s+Policy\s+:\s+${GROUP_POLICY}$$
+  ^\s*Tunnel\s+Group\s+:\s+${TUNNEL_GROUP}$$
   ^\s*Login\s+Time\s+:\s+${LOGIN_TIME}\s+${LOGIN_TIME_ZONE}\s+${LOGIN_WEEKDAY}\s+${LOGIN_MONTH}\s+${LOGIN_DAY}\s+${LOGIN_YEAR}$$
   ^\s*Duration\s+:\s+${DURATION}$$
   ^\s*Inactivity\s+:\s+${INACTIVITY}$$
