@@ -2,8 +2,9 @@ Value Filldown INTERFACE (\S+)
 Value Filldown CRYPTO_MAP_TAG (\S+)
 Value Filldown SEQUENCE_NUMBER (\d+)
 Value Filldown LOCAL_ADDRESS (\d+\.\d+\.\d+\.\d+)
+Value Filldown LOCAL_ADDRESS_NAME (\S+)
 Value LOCAL_IDENTITY_ADDR (\d+\.\d+\.\d+\.\d+)
-Value LOACL_IDENTITY_MASK (\d+\.\d+\.\d+\.\d+)
+Value LOCAL_IDENTITY_MASK (\d+\.\d+\.\d+\.\d+)
 Value LOCAL_IDENTITY_PROTOCOL (\d+)
 Value LOCAL_IDENTITY_PORT (\d+)
 Value REMOTE_IDENTITY_ADDR (\d+\.\d+\.\d+\.\d+)
@@ -12,6 +13,8 @@ Value REMOTE_IDENTITY_PROTOCOL (\d+)
 Value REMOTE_IDENTITY_PORT (\d+)
 Value CURRENT_PEER (\d+\.\d+\.\d+\.\d+)
 Value DYNAMIC_PEER (\d+\.\d+\.\d+\.\d+)
+Value CURRENT_PEER_NAME (\S+)
+Value DYNAMIC_PEER_NAME (\S+)
 Value PACKETS_ENCAPSULATED (\d+)
 Value PACKETS_ENCRYPTED (\d+)
 Value PACKETS_DIGESTED (\d+)
@@ -33,6 +36,8 @@ Value SEND_ERRORS (\d+)
 Value RECEIVE_ERRORS (\d+)
 Value LOCAL_CRYPTO_ENDPOINT (\d+\.\d+\.\d+\.\d+)
 Value REMOTE_CRYPTO_ENDPOINT (\d+\.\d+\.\d+\.\d+)
+Value LOCAL_CRYPTO_ENDPOINT_NAME (\S+)
+Value REMOTE_CRYPTO_ENDPOINT_NAME (\S+)
 Value PATH_MTU (\d+)
 Value IPSEC_OVERHEAD (\d+)
 Value MEDIA_MTU (\d+)
@@ -65,12 +70,12 @@ Value OUTBOUND_REPLAY_DETECTION (\w+)
 
 Start
   ^interface:\s+${INTERFACE}\s*
-  ^\s+Crypto map tag:\s+${CRYPTO_MAP_TAG},\s+local addr:\s+${LOCAL_ADDRESS}\s*
-  ^\s+Crypto map tag:\s+${CRYPTO_MAP_TAG}, seq num:\s+${SEQUENCE_NUMBER},\s+local addr:\s+${LOCAL_ADDRESS}\s*
-  ^\s+local\s+ident\s+\(addr\/mask\/prot\/port\):\s+\(${LOCAL_IDENTITY_ADDR}\/${LOACL_IDENTITY_MASK}\/${LOCAL_IDENTITY_PROTOCOL}\/${LOCAL_IDENTITY_PORT}\)\s*
+  ^\s+Crypto map tag:\s+${CRYPTO_MAP_TAG},\s+local addr:\s+(?:${LOCAL_ADDRESS}|${LOCAL_ADDRESS_NAME})\s*
+  ^\s+Crypto map tag:\s+${CRYPTO_MAP_TAG}, seq num:\s+${SEQUENCE_NUMBER},\s+local addr:\s+(?:${LOCAL_ADDRESS}|${LOCAL_ADDRESS_NAME})\s*
+  ^\s+local\s+ident\s+\(addr\/mask\/prot\/port\):\s+\(${LOCAL_IDENTITY_ADDR}\/${LOCAL_IDENTITY_MASK}\/${LOCAL_IDENTITY_PROTOCOL}\/${LOCAL_IDENTITY_PORT}\)\s*
   ^\s+remote\s+ident\s+\(addr/mask/prot/port\):\s+\(${REMOTE_IDENTITY_ADDR}\/${REMOTE_IDENTITY_MASK}\/${REMOTE_IDENTITY_PROTOCOL}\/${REMOTE_IDENTITY_PORT}\)\s*
-  ^\s+current_peer:\s+${CURRENT_PEER}\s*
-  ^\s+dynamic\s+allocated\s+peer\s+ip:\s+${DYNAMIC_PEER}\s*
+  ^\s+current_peer:\s+(?:${CURRENT_PEER}|${CURRENT_PEER_NAME})\s*
+  ^\s+dynamic\s+allocated\s+peer\s+ip:\s+(?:${DYNAMIC_PEER}|${DYNAMIC_PEER_NAME})\s*
   ^\s+#pkts\s+encaps:\s+${PACKETS_ENCAPSULATED},\s+#pkts\s+encrypt:\s+${PACKETS_ENCRYPTED},\s+#pkts\s+digest:\s+${PACKETS_DIGESTED}\s*
   ^\s+#pkts\s+decaps:\s+${PACKETS_DECAPSULATED},\s+#pkts\s+decrypt:\s+${PACKETS_DECRYPTED},\s+#pkts\s+verify:\s+${PACKETS_VERIFIED}\s*
   ^\s+#pkts\s+compressed:\s+${PACKETS_COMPRESSED},\s+#pkts\s+decompressed:\s+${PACKETS_DECOMPRESSED}\s*
@@ -78,7 +83,8 @@ Start
   ^\s+#pre-frag\s+successes:\s+${PRE_FRAGMENT_SUCCESS},\s+#pre-frag\s+failures:\s+${PRE_FRAGMENT_FAILURES},\s+#fragments\s+created:\s+${FRAGMENTS_CREATED}\s*
   ^\s+#PMTUs\s+sent:\s+${PMTUS_SENT},\s+#PMTUs\s+rcvd:\s+${PMTUS_RECEIVED},\s+#decapsulated\s+fra?gs\s+needing\s+reassembly:\s+${DECAP_FRAGS_NEEDING_REASSEMBLY}\s*
   ^\s+#send\s+errors:\s+${SEND_ERRORS},\s+#recv\s+errors:\s+${RECEIVE_ERRORS}\s*
-  ^\s+local\s+crypto\s+endpt\.:\s+${LOCAL_CRYPTO_ENDPOINT}(\/\d+)?,\s+remote\s+crypto\s+endpt\.:\s+${REMOTE_CRYPTO_ENDPOINT}(\/\d+)?\s*
+  ^\s+local\s+crypto\s+endpt\.:\s+${LOCAL_CRYPTO_ENDPOINT},\s+remote\s+crypto\s+endpt\.:\s+${REMOTE_CRYPTO_ENDPOINT}\s*
+  ^\s+local\s+crypto\s+endpt\.:\s+(?:${LOCAL_CRYPTO_ENDPOINT}|${LOCAL_CRYPTO_ENDPOINT_NAME})(\/\d+),\s+remote\s+crypto\s+endpt\.:\s+(?:${REMOTE_CRYPTO_ENDPOINT}|${REMOTE_CRYPTO_ENDPOINT_NAME})(\/\d+)\s*
   ^\s+path\s+mtu\s+${PATH_MTU},\s+ipsec\s+overhead\s+${IPSEC_OVERHEAD}(\(\d+\))?,\s+media\s+mtu\s+${MEDIA_MTU}\s*
   ^\s+current\s+outbound\s+spi:\s+${CURRENT_OUTBOUND_SPI}\s*
   ^\s+current\s+inbound\s+spi\s+:\s+${CURRENT_INBOUND_SPI}\s*
