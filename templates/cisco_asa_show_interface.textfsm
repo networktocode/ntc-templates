@@ -1,6 +1,6 @@
 Value Required INTERFACE (\S+)
 Value INTERFACE_ZONE (.+?)
-Value LINK_STATUS (.*)
+Value LINK_STATUS (\w+)
 Value PROTOCOL_STATUS (.*)
 Value HARDWARE_TYPE ([\w ]+)
 Value BANDWIDTH (\d+\s+\w+)
