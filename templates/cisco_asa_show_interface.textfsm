@@ -30,7 +30,7 @@ Start
   ^.*BW ${BANDWIDTH}.*DLY ${DELAY}
   ^.*\(${DUPLEX}.*Auto-Speed\(${SPEED}\)
   ^.*Description: ${DESCRIPTION}
-  ^\s*MAC\s+address\s+${ADDRESS},\s+MTU ${MTU}$$
+  ^.*MAC address ${ADDRESS}.*MTU ${MTU}
   ^.*IP address ${IP_ADDRESS}, .*subnet mask ${NET_MASK}
   ^.*1 minute input rate ${ONEMIN_IN_PPS} pkts/sec,\s+${ONEMIN_IN_RATE} bytes/sec
   ^.*1 minute output rate ${ONEMIN_OUT_PPS} pkts/sec,\s+${ONEMIN_OUT_RATE} bytes/sec
