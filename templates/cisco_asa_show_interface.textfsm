@@ -25,7 +25,7 @@ Value FIVEMIN_DROP_RATE (\d+)
 
 Start
   ^Interface.* -> Continue.Record
-  ^.*Interface ${INTERFACE} "${INTERFACE_ZONE}", is ${LINK_STATUS},\s+line\s+protocol is ${PROTOCOL_STATUS}
+  ^.*Interface ${INTERFACE} "${INTERFACE_ZONE}", is ${LINK_STATUS}.*protocol is ${PROTOCOL_STATUS}
   ^\s+Hardware is ${HARDWARE_TYPE} -> Continue
   ^.*BW ${BANDWIDTH}.*DLY ${DELAY}
   ^.*\(${DUPLEX}.*Auto-Speed\(${SPEED}\)
