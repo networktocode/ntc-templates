@@ -1,0 +1,65 @@
+---
+parsed_sample:
+  - description: ""
+    interface: "eth0"
+    ip_address:
+      - "-"
+    status: "u/u"
+  - description: "OUTSIDE"
+    interface: "eth0.40"
+    ip_address:
+      - "123.123.120.123/27"
+    status: "u/u"
+  - description: ""
+    interface: "eth1"
+    ip_address:
+      - "-"
+    status: "u/u"
+  - description: "CUST-DS-LAN"
+    interface: "eth1.204"
+    ip_address:
+      - "123.123.123.81/28"
+    status: "u/u"
+  - description: "CUST-COM"
+    interface: "eth1.269"
+    ip_address:
+      - "172.18.32.14/28"
+      - "123.123.123.123/32"
+    status: "u/u"
+  - description: "CUST-VIDEO"
+    interface: "eth1.437"
+    ip_address:
+      - "123.123.116.169/29"
+    status: "u/u"
+  - description: "SERVICE-LINK"
+    interface: "eth1.1753"
+    ip_address:
+      - "172.18.161.196/29"
+    status: "u/u"
+  - description: ""
+    interface: "eth2"
+    ip_address:
+      - "-"
+    status: "u/u"
+  - description: ""
+    interface: "lo"
+    ip_address:
+      - "127.0.0.1/8"
+      - "172.18.255.110/32"
+      - "::1/128"
+    status: "u/u"
+  - description: ""
+    interface: "vtun0"
+    ip_address:
+      - "192.168.80.2"
+    status: "u/u"
+  - description: "OpenVPN-TUNNEL1"
+    interface: "vtun1"
+    ip_address:
+      - "192.168.80.4"
+    status: "u/u"
+  - description: ""
+    interface: "vtun2"
+    ip_address:
+      - "192.168.80.6"
+    status: "u/u"

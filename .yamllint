@@ -1,0 +1,37 @@
+---
+rules:
+  indentation:
+    spaces: 2
+    indent-sequences: "consistent"
+  braces:
+    min-spaces-inside: 0
+  brackets:
+    min-spaces-inside: 0
+  colons:
+    max-spaces-before: 0
+    max-spaces-after: 1
+  hyphens:
+    max-spaces-after: 1
+  commas:
+    max-spaces-before: 0
+    max-spaces-after: 1
+  comments:
+    require-starting-space: true
+    ignore-shebangs: true
+    min-spaces-from-content: 1
+  document-start:
+    present: true
+  empty-lines:
+    max: 1
+  empty-values:
+    forbid-in-block-mappings: true
+    forbid-in-flow-mappings: true
+  key-duplicates: "enable"
+  new-line-at-end-of-file: "enable"
+  quoted-strings:
+    quote-type: "double"
+    level: "warning"
+  trailing-spaces: {}
+
+ignore: |
+  tests/mocks/

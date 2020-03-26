@@ -1,7 +1,0 @@
-Value CPU_5_SEC (\d+)
-Value CPU_1_MIN (\d+)
-Value CPU_5_MIN (\d+)
-Value INTERRUPTS (\d+)
-
-Start
-  ^CPU utilization for five seconds:\W+${CPU_5_SEC}%/${INTERRUPTS}%; one minute:\W+${CPU_1_MIN}%; five minutes:\W+${CPU_5_MIN}% -> Record

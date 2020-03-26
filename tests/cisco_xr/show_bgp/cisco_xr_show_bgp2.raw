@@ -1,0 +1,33 @@
+BGP router identifier 172.20.1.1, local AS number 1820
+BGP generic scan interval 60 secs
+BGP table state: Active
+Table ID: 0xe0000000
+BGP main routing table version 3
+Dampening enabled
+BGP scan interval 60 secs
+
+Status codes: s suppressed, d damped, h history, * valid, > best
+              i - internal, S stale
+Origin codes: i - IGP, e - EGP, ? - incomplete
+
+Network             Next-hop           Metric LocPrf Weight Path
+* i10.3.0.0/16      172.20.22.1             0    100      0 1800 1239 ?
+*>i                 172.20.16.1             0    100      0 1800 1239 ?
+* i10.6.0.0/16      172.20.22.1             0    100      0 1800 690 568 ?
+*>i                 172.20.16.1             0    100      0 1800 690 568 ?
+* i10.7.0.0/16      172.20.22.1             0    100      0 1800 701 35 ?
+*>i                 172.20.16.1             0    100      0 1800 701 35 ?
+*                   192.168.40.24                         0 1878 704 701 35 ?
+* i10.8.0.0/16      172.20.22.1             0    100      0 1800 690 560 ?
+*>i                 172.20.16.1             0    100      0 1800 690 560 ?
+*                   192.168.40.24                         0 1878 704 701 560 ?
+* i10.13.0.0/16     172.20.22.1             0    100      0 1800 690 200 ?
+*>i                 172.20.16.1             0    100      0 1800 690 200 ?
+*                   192.168.40.24                         0 1878 704 701 200 ?
+* i10.15.0.0/16     172.20.22.1             0    100      0 1800 174 ?
+*>i                 172.20.16.1             0    100      0 1800 174 ?
+* i10.16.0.0/16     172.20.22.1             0    100      0 1800 701 i
+*>i                 172.20.16.1             0    100  65535 1800 701 i
+*                   192.168.40.24                         0 1878 704 701 i
+
+Processed 8 prefixes, 8 paths

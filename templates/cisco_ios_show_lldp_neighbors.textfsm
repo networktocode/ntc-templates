@@ -1,0 +1,15 @@
+Value Required NEIGHBOR (\S{0,20})
+Value Required LOCAL_INTERFACE (\S+)
+Value CAPABILITIES (\S*)
+Value Required NEIGHBOR_INTERFACE (\S+)
+
+Start
+  ^Device.*ID -> LLDP
+  # Capture time-stamp if vty line has command time-stamping turned on
+  ^Load\s+for\s+
+  ^Time\s+source\s+is
+
+LLDP
+  ^${NEIGHBOR}\s*${LOCAL_INTERFACE}\s+\d+\s+${CAPABILITIES}\s+${NEIGHBOR_INTERFACE} -> Record
+  ^${NEIGHBOR}
+  ^\s+${LOCAL_INTERFACE}\s+\d+\s+${CAPABILITIES}\s+${NEIGHBOR_INTERFACE} -> Record

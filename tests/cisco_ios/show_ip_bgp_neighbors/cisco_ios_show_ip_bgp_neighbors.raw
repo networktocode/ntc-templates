@@ -1,0 +1,97 @@
+BGP neighbor is 20.30.255.14,  remote AS 1255, internal link
+ Member of peer-group RR_SERVERS for session parameters
+  BGP version 4, remote router ID 20.40.1.1
+  BGP state = Established, up for 7w3d
+  Last read 00:00:24, last write 00:00:22, hold time is 180, keepalive interval is 60 seconds
+  Neighbor sessions:
+    1 active, is not multisession capable (disabled)
+  Neighbor capabilities:
+    Route refresh: advertised and received(new)
+    Four-octets ASN Capability: advertised and received
+    Address family IPv4 Unicast: advertised and received
+    Multisession Capability:
+  Message statistics:
+    InQ depth is 0
+    OutQ depth is 0
+
+                         Sent       Rcvd
+    Opens:                  1          1
+    Notifications:          0          0
+    Updates:                1         94
+    Keepalives:         83823      84638
+    Route Refresh:          0          0
+    Total:              83825      84733
+  Default minimum time between advertisement runs is 0 seconds
+
+ For address family: IPv4 Unicast
+  Session: 20.30.255.14
+  BGP table version 270, neighbor version 270/0
+  Output queue size : 0
+  Index 1, Advertise bit 0
+  1 update-group member
+  RR_SERVERS peer-group member
+  Inbound soft reconfiguration allowed
+  Slow-peer detection is disabled
+  Slow-peer split-update-group dynamic is disabled
+                                 Sent       Rcvd
+  Prefix activity:               ----       ----
+    Prefixes Current:               0        113 (Consumes 6328 bytes)
+    Prefixes Total:                 0        217
+    Implicit Withdraw:              0         52
+    Explicit Withdraw:              0         52
+    Used as bestpath:             n/a        113
+    Used as multipath:            n/a          0
+
+                                   Outbound    Inbound
+  Local Policy Denied Prefixes:    --------    -------
+    Bestpath from this peer:            217        n/a
+    Invalid Path:                        52        n/a
+    Total:                              269          0
+  Number of NLRIs in the update sent: max 0, min 0
+  Last detected as dynamic slow peer: never
+  Dynamic slow peer recovered: never
+
+  Address tracking is enabled, the RIB does have a route to 20.30.255.14
+  Connections established 1; dropped 0
+  Last reset never
+  Transport(tcp) path-mtu-discovery is enabled
+  Graceful-Restart is disabled
+Connection state is ESTAB, I/O status: 1, unread input bytes: 0
+Connection is ECN Disabled, Mininum incoming TTL 0, Outgoing TTL 255
+Local host: 20.30.255.13, Local port: 39443
+Foreign host: 20.30.255.14, Foreign port: 179
+Connection tableid (VRF): 0
+Maximum output segment queue size: 50
+
+Enqueued packets for retransmit: 0, input: 0  mis-ordered: 0 (0 bytes)
+
+Event Timers (current time is 0x1106B0BD8):
+Timer          Starts    Wakeups            Next
+Retrans         83827          1             0x0
+TimeWait            0          0             0x0
+AckHold         84719      83274             0x0
+SendWnd             0          0             0x0
+KeepAlive           0          0             0x0
+GiveUp              0          0             0x0
+PmtuAger            1          1             0x0
+DeadWait            0          0             0x0
+Linger              0          0             0x0
+ProcessQ            0          0             0x0
+
+iss: 3730243128  snduna: 3731835842  sndnxt: 3731835842
+irs: 2485586108  rcvnxt: 2487200336
+
+sndwnd:  33561  scale:      0  maxrcvwnd:  16384
+rcvwnd:  16099  scale:      0  delrcvwnd:    285
+
+SRTT: 1000 ms, RTTO: 1003 ms, RTV: 3 ms, KRTT: 0 ms
+minRTT: 0 ms, maxRTT: 1000 ms, ACK hold: 200 ms
+Status Flags: active open
+Option Flags: nagle, path mtu capable, SACK option permitted
+IP Precedence value : 6
+
+Datagrams (max data segment is 1460 bytes):
+Rcvd: 168543 (out of order: 0), with data: 84718, total data bytes:41614227
+Sent: 168204 (retransmit: 1, fastretransmit: 0, partialack: 0, Second Congestion: 0), with data: 83825, total data bytes: 1592713
+ Packets received in fast path: 0, fast processed: 0, slow path: 0
+ fast lock acquisition failures: 0, slow path: 0

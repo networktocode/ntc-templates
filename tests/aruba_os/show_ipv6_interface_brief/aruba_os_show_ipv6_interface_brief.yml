@@ -1,0 +1,29 @@
+---
+parsed_sample:
+  - intf: "vlan 1"
+    ipaddr:
+      - "fe80::1a:3e00:6ed1:1585/64"
+      - "2001::1/64"
+    admin: "up"
+    protocol: "up"
+  - intf: "vlan 390"
+    ipaddr:
+      - "unassigned"
+    admin: "up"
+    protocol: "up"
+  - intf: "vlan 991"
+    ipaddr:
+      - "fe80::1a:3e00:6ed1:1585/64"
+      - "2a01:9e73:433f:109::6/64"
+    admin: "up"
+    protocol: "up"
+  - intf: "vlan 992"
+    ipaddr:
+      - "unassigned"
+    admin: "up"
+    protocol: "up"
+  - intf: "loopback"
+    ipaddr:
+      - "fe80::1a:3e00:6ed1:1585/64"
+    admin: "up"
+    protocol: "up"
