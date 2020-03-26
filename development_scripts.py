@@ -7,7 +7,9 @@ import argparse
 
 from ruamel.yaml import YAML
 from ruamel.yaml.scalarstring import DoubleQuotedScalarString as DQ
-from textfsm import clitable
+
+# from textfsm import clitable
+import clitable
 from lib.ntc_templates.parse import parse_output
 
 

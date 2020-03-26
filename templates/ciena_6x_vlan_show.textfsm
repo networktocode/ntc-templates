@@ -1,0 +1,9 @@
+Value VLAN_ID (\d+)
+Value VLAN_NAME ([0-9a-zA-Z_#]+)
+
+Start
+  ^\+-+\s*VLAN\s*GLOBAL\s*CONFIGURATION\s*-+\+ -> VLAN_TABLE
+
+VLAN_TABLE
+  ^\|\s*${VLAN_ID}\s*\|\s*${VLAN_NAME}\s*\| -> Record
+  ^\s*$$
