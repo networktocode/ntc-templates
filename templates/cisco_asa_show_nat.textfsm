@@ -7,6 +7,7 @@ Value SOURCE_REAL (any|\S+)
 Value SOURCE_MAPPED (any|interface\s+ipv6|interface|pat-pool\s+interface|pat-pool\s+\S+|\S+)
 Value DESTINATION_REAL (interface|interface\s+ipv6|\S+)
 Value DESTINATION_MAPPED (any|\S+)
+Value SERVICE_PROTOCOL (tcp|udp|sctp)
 Value SERVICE_REAL (any|\S+)
 Value SERVICE_MAPPED (\S+)
 Value EXTENDED (extended)
@@ -28,7 +29,7 @@ Start
   # Section 2 = Auto NAT
   # Section 3 = After-auto Manual NAT
   ^(Manual|Auto) NAT Policies \(Section ${NAT_SECTION_NUMBER}\)\s*
-  ^${LINE_NUMBER}\s+\(${SOURCE_INTERFACE}\)\s+to\s+\(${DESTINATION_INTERFACE}\)\s+source\s+${SOURCE_TYPE}\s+${SOURCE_REAL}\s+${SOURCE_MAPPED}\s*(destination\s+static\s+${DESTINATION_REAL}\s+${DESTINATION_MAPPED})?\s*(service\s+${SERVICE_REAL}\s+${SERVICE_MAPPED})?\s*${EXTENDED}?\s*${FLAT}?\s*${INCLUDE_RESERVE}?\s*${ROUND_ROBIN}?\s*${NET_TO_NET}?\s*${DNS}?\s*${UNIDIRECTIONAL}?\s*${NO_PROXY_ARP}?\s*${ROUTE_LOOKUP}?\s*${INACTIVE}?\s*(description\s+${DESCRIPTION})?
+  ^${LINE_NUMBER}\s+\(${SOURCE_INTERFACE}\)\s+to\s+\(${DESTINATION_INTERFACE}\)\s+source\s+${SOURCE_TYPE}\s+${SOURCE_REAL}\s+${SOURCE_MAPPED}\s*(destination\s+static\s+${DESTINATION_REAL}\s+${DESTINATION_MAPPED})?\s*(service\s+${SERVICE_PROTOCOL}?\s*${SERVICE_REAL}\s+${SERVICE_MAPPED})?\s*${EXTENDED}?\s*${FLAT}?\s*${INCLUDE_RESERVE}?\s*${ROUND_ROBIN}?\s*${NET_TO_NET}?\s*${DNS}?\s*${UNIDIRECTIONAL}?\s*${NO_PROXY_ARP}?\s*${ROUTE_LOOKUP}?\s*${INACTIVE}?\s*(description\s+${DESCRIPTION})?
   ^\s+translate_hits\s+=\s+${TRANSLATE_HITS},\s+untranslate_hits\s+=\s+${UNTRANSLATE_HITS} -> Record
   ^\s*
   ^. -> Error
