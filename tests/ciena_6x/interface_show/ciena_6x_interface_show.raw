@@ -1,0 +1,43 @@
++------------------------------ INTERFACE MANAGEMENT -------------------------------+
+| Name            | Domain             | IP Address/Prefix                          |
++-----------------+--------------------+--------------------------------------------+
+| local           | n/a                | 10.192.77.154/24                           |
+| local           | n/a                | fe80::56c3:3eff:fe09:1c0/64                |
+| remote          | VLAN 800           | 10.206.77.3/24                             |
+| remote          | VLAN 800           | fe80::56c3:3eff:fe09:1df/64                |
++-----------------+--------------------+--------------------------------------------+
+
++---------------- TCP/IP/STACK OPERATIONAL STATE ---------------+
+| Parameter           | Value                                   |
++---------------------+-----------------------------------------+
+| IPv4 Gateway        | 10.192.77.1                             |
+| IPv6 Gateway        | fe80::6e41:6aff:fef2:d400               |
+| IPv4 Forwarding     | Off                                     |
+| Default DSCP        | 0                                       |
+| Mgmt Port Interface | local                                   |
++---------------------+-----------------------------------------+
+
++---------------------- IPV4 STACK STATE -----------------------+
+| Parameter                    | Value                          |
++------------------------------+--------------------------------+
+| ICMP Accept Redirects        | On                             |
+| ICMP Echo Ignore Broadcasts  | Off                            |
+| ICMP Port Unreachable        | On                             |
++------------------------------+--------------------------------+
+
++---------------------- IPV6 STACK STATE -----------------------+
+| Parameter                    | Value                          |
++------------------------------+--------------------------------+
+| IPv6 Stack                   | Enabled                        |
+| Stack Preference             | IPv6                           |
+| Accept Router Advertisement  | On                             |
+| ICMP Accept Redirects        | On                             |
+| ICMP Echo Ignore Broadcasts  | Off                            |
+| ICMP Port Unreachable        | On                             |
++------------------------------+--------------------------------+
+
++----------------------- TCP STACK STATE -----------------------+
+| Parameter                    | Value                          |
++------------------------------+--------------------------------+
+| TCP Timestamps               | On                             |
++------------------------------+--------------------------------+
