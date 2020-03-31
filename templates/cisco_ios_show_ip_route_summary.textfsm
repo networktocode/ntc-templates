@@ -11,6 +11,7 @@ Start
   ^IP\s+routing\s+table\s+name\s+is\s+${NAME}\s*$$
   ^IP\s+routing\s+table\s+maximum-paths\s+is\s+\d+\s*$$
   ^Route\s+Source\s+Networks\s+Subnets\s+Replicates\s+Overhead\s+Memory\s+\(bytes\)\s*$$ -> RouteData
+  ^\s*$$
   ^. -> Error
 
 RouteData
@@ -19,4 +20,5 @@ RouteData
   ^\s+Level\s+1:\s+\d+\s+Level\s+2:\s+\d+\s+Inter-area:\s+\d+\s*$$
   ^\s+Intra-area:\s+\d+\s+Inter-area:\s+\d+\s+External-1:\s+\d+\s+External-2:\s+\d+\s*$$
   ^\s+NSSA\s+External-1:\s+\d+\s+NSSA\s+External-2:\s+\d+\s*$$
+  ^\s*$$
   ^. -> Error
