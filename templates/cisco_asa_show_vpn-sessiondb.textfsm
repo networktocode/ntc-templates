@@ -46,7 +46,7 @@ Start
   ^\s*Totals\s+:\s+${TOTALS_ACTIVE}\s+:\s+${TOTALS_CUMULATIVE}\s*$$ -> Record
   ^\s*$$
   # Lines that are not capturing output but in the output
-  ^\s*\-{75}\s*$$ -> NoRecord
+  ^\s*\-+ -> NoRecord
   ^\s*\-{46}\s*$$ -> NoRecord
   ^\s*VPN\s+Session\s+Summary\s*$$ -> NoRecord
   ^\s*Active\s+:\s+Cumulative\s+:\s+Peak\s+Concur\s+:\s+Inactive\s*$$ -> NoRecord
