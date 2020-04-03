@@ -20,6 +20,7 @@ ROUTES
   ^${PROTOCOL}(\s|\*)${TYPE}\s+${NETWORK}\s\[${DISTANCE}\/${METRIC}\]\svia\s${NEXTHOPIP}(,\s${UPTIME}){0,1}(,\s${NEXTHOPIF}){0,1}\s*$$ -> Record
   #
   # Match load-balanced routes
+  ^${PROTOCOL}(\s|\*)${TYPE}\s+${NETWORK}\s+${MASK}\s$$
   ^\s+\[${DISTANCE}\/${METRIC}\]\s+via\s+${NEXTHOPIP},(?:\s+${UPTIME},)?\s+${NEXTHOPIF}\s*$$ -> Record
   #
   # Match directly connected routes
