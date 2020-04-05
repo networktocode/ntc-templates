@@ -106,6 +106,7 @@ checkpoint_gaia_show_lom.textfsm, .*, checkpoint_gaia, show lom
 checkpoint_gaia_fw_stat.textfsm, .*, checkpoint_gaia, fw stat
 
 ciena_6x_software_show.textfsm, .*, ciena_6x, so[[ftware]] sh[[ow]]
+ciena_6x_port_show.textfsm, .*, ciena_6x, po[[rt]] sh[[ow]]
 ciena_6x_vlan_show.textfsm, .*, ciena_6x, vl[[an]] sh[[ow]]
 
 cisco_asa_show_running-config_object_network.textfsm, .*, cisco_asa, sh[[ow]] ru[[nning-config]] o[[bject]] n[[etwork]]
@@ -121,6 +122,7 @@ cisco_asa_show_running-config_ipsec.textfsm, .*, cisco_asa, sh[[ow]] ru[[nning-c
 cisco_asa_show_interface_detail.textfsm, .*, cisco_asa, sh[[ow]] int[[erface]] d[[etail]]
 cisco_asa_show_crypto_ipsec_sa.textfsm, .*, cisco_asa, sh[[ow]] (?:cry[[pto]] ip[[sec]]|ipsec) sa
 cisco_asa_show_resource_usage.textfsm, .*, cisco_asa, sh[[ow]] res[[ource]] u[[sage]]
+cisco_asa_show_vpn-sessiondb.textfsm, .*, cisco_asa, sh[[ow]] vpn-[[sessiondb]]
 cisco_asa_show_access-list.textfsm, .*, cisco_asa, sh[[ow]] ac[[cess-list]]
 cisco_asa_show_license_all.textfsm, .*, cisco_asa, (?:fa[[ilover]]\s+e[[xec]]\s+)?sh[[ow]] lic[[ense]] a[[ll]]
 cisco_asa_show_interface.textfsm, .*, cisco_asa, sh[[ow]] int[[erface]]
@@ -166,6 +168,7 @@ cisco_ios_show_mac-address-table.textfsm, .*, cisco_ios, sh[[ow]] mac[[-address-
 cisco_ios_show_ip_bgp_neighbors.textfsm, .*, cisco_ios, sh[[ow]] ip bgp nei[[ghbors]]
 cisco_ios_show_ip_ospf_database.textfsm, .*, cisco_ios, sh[[ow]] ip ospf data[[base]]
 cisco_ios_show_ip_ospf_neighbor.textfsm, .*, cisco_ios, sh[[ow]] ip ospf nei[[ghbor]]
+cisco_ios_show_ip_route_summary.textfsm, .*, cisco_ios, sh[[ow]] ip ro[[ute]] sum[[mary]]
 cisco_ios_show_ip_access-lists.textfsm, .*, cisco_ios, sh[[ow]] ip acce[[ss-lists]]
 cisco_ios_show_mpls_interfaces.textfsm, .*, cisco_ios, sh[[ow]] mpls interfa[[ces]]
 cisco_ios_show_power_available.textfsm,  .*, cisco_ios, sh[[ow]] pow[[er]] a[[vailable]]
