@@ -1,0 +1,12 @@
+Value PORT (\S+)
+Value TYPE (\S+)
+Value DUPLEX (Full|Half|--)
+Value SPEED (\d+|--)
+Value NEG (Enabled|Disabled|--)
+Value FLOWCTRL (Off|On|--)
+Value LINKSTATE (Up|Down)
+Value BACKPRESSURE (Disabled|Enabled|--)
+Value MDIXMODE (Off|On|--)
+
+Start
+  ^${PORT}\s+${TYPE}\s+${DUPLEX}\s+${SPEED}\s+${NEG}\s+${FLOWCTRL}\s+${LINKSTATE}\s+${BACKPRESSURE}\s+${MDIXMODE} -> Record
