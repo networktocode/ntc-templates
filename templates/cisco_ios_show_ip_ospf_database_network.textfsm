@@ -13,7 +13,7 @@ Value Filldown LSA_NETWORK_MASK (\S+)
 Value LS_ATT_ROUTER (\d+\.\d+\.\d+\.\d+)
 
 Start
-  ^\s+OSPF\s+Router\s+with\s+ID\s+\(${ROUTER_ID}\)\s+\(Process\s+ID\s+${PROCESS_ID}\)
+  ^\s*OSPF\s+Router\s+with\s+ID\s+\(${ROUTER_ID}\)\s+\(Process\s+ID\s+${PROCESS_ID}\)
   ^\s+Net\s+Link\s+States\s+\(Area ${AREA}\) -> LSAInfo
   ^\s*$$
   ^. -> Error
