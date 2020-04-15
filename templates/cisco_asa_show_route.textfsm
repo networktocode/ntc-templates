@@ -19,6 +19,9 @@ ROUTES
   ^\s+[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}${MASK}\s*$$ -> Clear
   ^${PROTOCOL}(\s|\*)${TYPE}\s+${NETWORK}\s\[${DISTANCE}\/${METRIC}\]\svia\s${NEXTHOPIP}(,\s${UPTIME}){0,1}(,\s${NEXTHOPIF}){0,1}\s*$$ -> Record
   #
+  # Match multiline route statements
+  ^${PROTOCOL}(\s|\*)${TYPE}\s+${NETWORK}\s+${MASK}\s*$$
+  #
   # Match load-balanced routes
   ^\s+\[${DISTANCE}\/${METRIC}\]\s+via\s+${NEXTHOPIP},(?:\s+${UPTIME},)?\s+${NEXTHOPIF}\s*$$ -> Record
   #
