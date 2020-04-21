@@ -1,0 +1,52 @@
+Value Required LOCAL_PORT (\S+)
+Value CHASSI_TYPE (\S+)
+Value CHASSI_ID ([a-f0-9]{6}-[a-f0-9]{6}|(?:[a-z0-9]{2}\s){5}[a-z0-9]{2}|\S+)
+Value PORT_TYPE (\S+)
+Value PORT_ID (.*?)
+Value SYSNAME (.*?)
+Value SYSTEM_DESCR (.*?)
+Value PORT_DESCR (\S+|.*?)
+Value PVID (\d+|.*?)
+Value SYSTEM_CAPABILITIES_SUPPORTED (.*?)
+Value SYSTEM_CAPABILITIES_ENABLED (.*?)
+Value REMOTE_MANAGEMENT_ADDRESS (\S+|.*?)
+
+Start
+  ^\s*$$
+  ^\s*LLDP\sRemote\sDevice\sInformation\sDetail -> LLDP
+  ^. -> Error
+
+LLDP
+  ^\s+Local\sPort\s+:\s${LOCAL_PORT}\s*$$
+  ^\s+ChassisType\s+:\s${CHASSI_TYPE}\s*$$
+  ^\s+ChassisId\s+:\s${CHASSI_ID}\s*$$
+  ^\s+PortType\s+:\s${PORT_TYPE}\s*$$
+  ^\s+PortId\s+:\s${PORT_ID}\s*$$
+  ^\s+SysName\s+:\s${SYSNAME}\s*$$
+  ^\s+System\sDescr\s:\s${SYSTEM_DESCR}\s*$$
+  ^\s+PortDescr\s+:\s${PORT_DESCR}\s*$$
+  ^\s+Pvid\s+:\s${PVID}\s*$$
+  ^\s+System\sCapabilities\sSupported\s+:\s${SYSTEM_CAPABILITIES_SUPPORTED}\s*$$
+  ^\s+System\sCapabilities\sEnabled\s+:\s${SYSTEM_CAPABILITIES_ENABLED}\s*$$
+  ^\s+Remote\sManagement\sAddress\s*$$
+  ^\s+Type.*$$
+  ^\s+Address\s:\s${REMOTE_MANAGEMENT_ADDRESS}
+  ^\s+Poe\sPlus\sInformation\sDetail\s*$$
+  ^\s+Poe Device Type.*
+  ^\s+Power Source.*
+  ^\s+Power Priority.*
+  ^\s+PD Request Power Value.*
+  ^\s+PD Requested Power Value.*
+  ^\s+Requested Power Value.*
+  ^\s+Actual Power Value.*
+  ^\s+PSE Allocated Power Value.*
+  ^\s+MED\sInformation\sDetail\s*$$
+  ^\s+EndpointClass.*
+  ^\s+Poe Device Type.*
+  ^\s+Power Requested.*
+  ^\s+Power Source.*
+  ^\s+Power Priority.*
+  ^\s*$$
+  ^\S+\#\s*$$ -> Record
+  ^\s*-*$$ -> Record
+  ^. -> Error
