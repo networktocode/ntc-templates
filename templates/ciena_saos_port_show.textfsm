@@ -1,10 +1,21 @@
-Value PORT_NAME (\d+)
-Value PORT_TYPE ([0-9a-zA-Z_/]+)
+Value NAME (\d+)
+Value TYPE (\d+\/\d+\/\w)
 Value LINK (\w+)
-Value STATE_DURATION_DAY (\d+)
-Value STATE_DURATION_HOUR (\d+)
-Value STATE_DURATION_MINUTE (\d+)
-Value STATE_DURATION_SECOND (\d+)
+Value DURATION (\d+\w+\s+\d+\w+)
+Value XCVR (\w+)
+Value STP (\w+)
+Value MODE (\d+\/\w+)
+Value AUTONEG (\w+)
+Value ADMIN_LINK (\w+)
+Value ADMIN_MODE (\w+\/\w+)
+Value ADMIN_AUTONEG (\w+)
+
 
 Start
-  ^\|\s*${PORT_NAME}\s*\|\s*${PORT_TYPE}\s*\|\s*\s*${LINK}\s*\|\s*${STATE_DURATION_DAY}d\s*${STATE_DURATION_HOUR}h\s*\s*${STATE_DURATION_MINUTE}m\s*${STATE_DURATION_SECOND}s\s* -> Record
+  ^\+-+\s*PORT\s*GLOBAL\s*CONFIGURATION\s*-+\+ -> PORT_TABLE
+
+PORT_TABLE
+  ^\|\s+${NAME}\s+\|${TYPE}\s+\|\s+${LINK}\s+\|\s+${DURATION}\|${XCVR}\s+\|${STP}\|${MODE}\|\s${AUTONEG}\s\|${ADMIN_LINK}\s\|${ADMIN_MODE}\|\s${ADMIN_AUTONEG}\s+\| -> Record
+  ^\s*$$
+  ^. -> Error
+  

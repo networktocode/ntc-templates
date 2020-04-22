@@ -7,3 +7,4 @@ Start
 VLAN_TABLE
   ^\|\s*${VLAN_ID}\s*\|\s*${VLAN_NAME}\s*\| -> Record
   ^\s*$$
+  ^. -> Error
