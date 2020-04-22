@@ -1,0 +1,11 @@
+Value CURRENT (\d+\s*\w+)
+Value LOW (\d+\s*\w+)
+Value HIGH (\d+\s*\w+)
+
+Start
+  ^\+-+\s*TEMPERATURE\s*THRESHOLD\s*-+\+ -> TEMP_TABLE
+
+TEMP_TABLE
+  ^\|\s*${CURRENT}\s*\|\s*${LOW}\s*\|\s*${HIGH}\s*\| -> Record
+  ^\s*$$
+  ^. -> Error
