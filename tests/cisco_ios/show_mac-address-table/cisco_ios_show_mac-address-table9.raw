@@ -1,0 +1,43 @@
+
+Legend: * - primary entry
+        age - seconds since last seen
+        n/a - not available
+        S - secure entry
+        R - router's gateway mac address entry
+        D - Duplicate mac address entry
+        # - Fabric mac address entry. Clear mac cli doesn't clear this entry
+
+Displaying entries from active supervisor::
+
+      vlan   mac address    type   learn    age                 ports
+-----+----+---------------+-------+-----+----------+-----------------------------
+         75 0000.0000.4500  dynamic  Yes        0     Te2/5/4
+        402 0000.0000.21de  dynamic  Yes        0     Po4
+          3 0000.0000.3800  dynamic  Yes        0     Te2/5/10
+         24 0000.0000.0f00  dynamic  Yes      265     Te1/1/9
+ *       10 0000.0100.0000  dynamic  Yes        0     Te1/5/13
+   R    459 0000.0000.0e00   static   No       -      Router
+ *       39 0000.0000.0d00  dynamic  Yes        0     Te1/5/4
+        174 0000.0000.ace0  dynamic  Yes      265     Te1/1/11
+        361 0000.0000.1bea  dynamic  Yes      265     Po4
+        310 0000.0000.e903  dynamic  Yes      105     Te2/1/5
+ *      302 0000.0000.0400  dynamic  Yes        0     Te1/5/4
+        402 0000.0000.0000  dynamic  Yes      265     Te1/1/10
+   R    303 0000.0000.0e00   static   No       -      Router
+        141 0000.0000.3e00  dynamic  Yes        0     Te2/1/9
+          8 0000.0000.3900  dynamic  Yes        0     Te2/5/3
+        111 0000.0000.0f00  dynamic  Yes      265     Te1/1/9
+   R     68 0000.0000.0e00   static   No       -      Router
+         60 0000.0000.39c9  dynamic  Yes      105     Te2/1/5
+          6 0000.0000.a3ea  dynamic  Yes        0     Te2/5/8
+        703 0000.0000.4000  dynamic  Yes        0     Te2/1/9
+   R     62 0000.0000.0e00   static   No       -      Router
+ *       10 0000.0000.1300  dynamic  Yes        0     Te1/5/13
+        200 0000.0000.3cc0  dynamic  Yes       20     Te1/1/8
+         82 0000.0000.3900  dynamic  Yes        0     Te2/5/4
+   R   N/A  0000.0000.0e00   static   No       -      Router
+        216 0000.0000.4b10  dynamic  Yes      265     Te1/1/8
+        361 0000.0000.7565  dynamic  Yes       50     Po4
+        361 0000.0000.0ca6  dynamic  Yes      105     Po4
+   R    451 0000.0000.0e00   static   No       -      Router
+        401 0000.0000.1fcb  dynamic  Yes        5     Po4
