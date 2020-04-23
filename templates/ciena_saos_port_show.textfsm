@@ -12,9 +12,8 @@ Value ADMIN_AUTONEG (\w+)
 
 
 Start
-  ^\+-+\s*PORT\s*GLOBAL\s*CONFIGURATION\s*-+\+ -> PORT_TABLE
-
-PORT_TABLE
+  ^\+-+\s*PORT\s*GLOBAL\s*CONFIGURATION\s*-+\+
+  ^\+-+
   ^\|\s+${NAME}\s+\|${TYPE}\s+\|\s+${LINK}\s+\|\s+${DURATION}\|${XCVR}\s+\|${STP}\|${MODE}\|\s${AUTONEG}\s\|${ADMIN_LINK}\s\|${ADMIN_MODE}\|\s${ADMIN_AUTONEG}\s+\| -> Record
   ^\s*$$
   ^. -> Error
