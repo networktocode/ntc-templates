@@ -1,3 +1,26 @@
+## [1.4.1]
+### Fixed
+- [#617] - IOS show ip ospf database router: Removed reliance on static spacing
+- [#620] - NXOS show fex: Allow spaces in descriptions
+- [#621] - Juniper show arp, etc.: Account for virtual chassis output (`{master:0}`)
+- [#626] - ASA show vpn-sessiondb anyconnect: Require index, capture different format style
+- [#650] - IOS show ip ospf database network: Change to allow one or more whitespace at the beginning of the line rather than 1 or more due to different output
+- [#647] - ASA show route: Allow multiline route statements
+- [#659] - IOS show mac address-table: Allow VLAN to be non-whitespace to allow N/A as an option
+
+### Added
+- [#618] - IOS show ip ospf database network: New template
+- [#619] - HP Comware display lldp neighbor information verbose: New template
+- [#625] - ASA show vpn-sessiondb anyconnect: New template
+- [#628] - Cisco WLC show mobility sum: New template
+- [#631] - ASA show vpn-sessiondb anyconnect: Account for new data for assigned/public IP, group policy, and tunnel group
+- [#629] - ASA show crypto ipsec sa - Add LOCAL_ADDRESS_NAME, CURRENT_PEER_NAME, DYNAMIC_PEER_NAME, LOCAL_CRYPTO_ENDPOINT_NAME, REMOTE_CRYPTO_ENDPOINT_NAME
+- [#632] - ASA show nat: Added SERVICE_PROTOCOL
+- [#635] - IOS show ip route summary: New template
+- [#636] - ASA show vpn-sessiondb: New template
+- [#638] - ASA show inventory: Capture PID and VID withoout serial
+- [#637] - Cisco WLC show band select: New template
+
 ## [1.4.0]
 ### Fixed
 - [#548] IOS show mac address-table: Account for Total Mac Addresses
