@@ -1,14 +1,14 @@
 Value NAME ([0-9A-Za-z]+)
-Value TYPE (\s*(\d+\/\d+\/\w)\s*\||\s*((\w+\/\d+\w+)|\s*(\w+))\s*\|)
+Value TYPE (\w+\/\d+\w+\/G|\w+\/\d+\w+|\w+)
 Value LINK (Up|Down)
-Value DURATION (\d+d\s*\d+h\s*\d+m\s*\d+s)
-Value XCVR (\w+|\s*)
+Value DURATION (\w+\s*\wh\s*\w+m\s*\w+)
+Value XCVR ((\s*)|(Ena))
 Value STP (\w+)
-Value MODE (\w+\/\w+|\s*)
-Value AUTONEG (\w+|\s*)
+Value MODE ((\w+\/\w+)|(\s*))
+Value AUTONEG ((\w+)|(\s*))
 Value ADMIN_LINK (\w+)
-Value ADMIN_MODE (\w+\/\w+|\s*)
-Value ADMIN_AUTONEG (\w+|\s*)
+Value ADMIN_MODE ((\w+\/\w+)|(\s*))
+Value ADMIN_AUTONEG ((\w+)|(\s*))
 
 
 Start
@@ -24,7 +24,7 @@ Start
   ^\|\s*Por\w+\s*\|\s*Port\s*\s*\|\s*\|\s*Link\s*\State\s*\|\s*\|\s*\|\s*\|Auto\|\s*\|\s*\|Auto\|
   ^\|\s*Name\s*\|\s*Type\s*\|Link\|\s*Duration\s*\|XCVR\|STP\|\s*Mode\s*\|Neg\s*\|Link\|\s*Mode\s*\|Neg\s*\|
   ^\|-+
-  ^\|\s*${NAME}\s*\|${TYPE}\s*${LINK}\s*|\|\s*${DURATION}\|\s*${XCVR}\s*\|${STP}\|\s*${MODE}\s*\|\s*${AUTONEG}\s*\|${ADMIN_LINK}\s*\|${ADMIN_MODE}\|\s*${ADMIN_AUTONEG}\s*\| -> Record
+  ^\|\s*${NAME}\s*\|\s*${TYPE}\s*\|\s*${LINK}\s*\|\s*${DURATION}\|\s*${XCVR}\s*\|${STP}\|\s*${MODE}\s*\|\s*${AUTONEG}\s*\|${ADMIN_LINK}\s*\|${ADMIN_MODE}\|\s*${ADMIN_AUTONEG}\s*\| -> Record
   ^\+-+
   ^\s*$$
   ^. -> Error
