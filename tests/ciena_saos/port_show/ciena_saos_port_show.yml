@@ -1,6 +1,6 @@
 ---
 parsed_sample:
-  - name: '1'
+  - name: '1.11'
     type: '10/100/G'
     link: 'Up'
     duration: '30d 2h24m21s'
@@ -11,11 +11,11 @@ parsed_sample:
     admin_link: 'Ena'
     admin_mode: 'Auto/FD'
     admin_autoneg: 'On'
-  - name: '2'
+  - name: '2.1'
     type: 'G/10Gig'
     link: 'Down'
     duration: '0d 0h 0m 0s'
-    xcvr: ''
+    xcvr: 'UCTF'
     stp: 'Dis'
     mode: ''
     autoneg: ''
