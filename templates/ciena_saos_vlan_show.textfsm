@@ -1,0 +1,26 @@
+Value VLAN_ID (\d+)
+Value VLAN_NAME ([0-9a-zA-Z_#]+)
+
+Start
+  ^\+-+\s*VLAN\s*GLOBAL\s*CONFIGURATION\s*-+\+
+  ^\+-+
+  ^\|\sP\w+\s*\|\s*V\w+\s*\|
+  ^\+-+
+  ^\|\s+In\w+\s*\w+\s*\|\s*\d+\s*\|
+  ^\+-+
+  ^(?=\s+)
+  ^\+-+
+  ^\|VL\w+\|\s*\|\s*\d+\|
+  ^\|\s*ID\s*\|\s*\w+\s*\w+\s*\w+\s*\|\d+\|
+  ^\+-+
+  ^\|\s*${VLAN_ID}\s*\|\s*${VLAN_NAME}\s*\| -> Record
+  ^\+-+
+  ^(?=\s+)
+  ^\+-+
+  ^\+-+\s*CROSS\s*CONNECTION\s*TABLE\s*-+\+
+  ^\|\sOV\w+\s*\|\s*IV\w+\s*\|\s*\w+\-\w+\s*\|\s*\w+\-\w+\s*\|
+  ^\+-+
+  ^\|\s*No\s*Entry\s*Found\s*\|
+  ^\+-+
+  ^\s*$$
+  ^. -> Error

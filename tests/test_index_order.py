@@ -75,7 +75,7 @@ def test_index_ordering():
         "brocade_vdx",
         "brocade_vyos",
         "checkpoint_gaia",
-        "ciena_6x",
+        "ciena_saos",
         "cisco_asa",
         "cisco_ios",
         "cisco_nxos",
