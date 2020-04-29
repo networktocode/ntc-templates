@@ -77,6 +77,7 @@ def test_index_ordering():
         "checkpoint_gaia",
         "ciena_saos",
         "cisco_asa",
+        "cisco_ftd",
         "cisco_ios",
         "cisco_nxos",
         "cisco_s300",
