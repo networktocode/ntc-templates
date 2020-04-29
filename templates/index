@@ -136,8 +136,9 @@ cisco_asa_show_version.textfsm, .*, cisco_asa, sh[[ow]] ver[[sion]]
 cisco_asa_show_route.textfsm, .*, cisco_asa, sh[[ow]] ro[[ute]]
 cisco_asa_show_xlate.textfsm, .*, cisco_asa, sh[[ow]] x[[late]]
 cisco_asa_show_name.textfsm, .*, cisco_asa, sh[[ow]] nam[[e]]
-cisco_asa_show_arp.textfsm, .*, cisco_asa, sh[[ow]] arp
+cisco_asa_show_arp.textfsm, .*, cisco_(asa|ftd), sh[[ow]] arp
 cisco_asa_show_nat.textfsm, .*, cisco_asa, sh[[ow]] nat
+cisco_asa_ping.textfsm, .*, cisco_(asa|ftd), ping
 cisco_asa_dir.textfsm, .*, cisco_asa, dir
 
 cisco_ios_show_module.textfsm:cisco_ios_show_module_status.textfsm:cisco_ios_show_module_submodule.textfsm:cisco_ios_show_module_online_diag.textfsm, .*, cisco_ios, sh[[ow]] mod[[ule]]
