@@ -13,6 +13,8 @@ Start
   ^\s+via\s+${NEXT_HOP},\s+${INTERFACE}
   ^VRF\s+name:\s+${VRF}\s*$$
   ^VRF:\s+${VRF}\s*$$
+  ^WARNING
+  ^kernel
   ^Codes:
   # Match for codes
   ^\s+\S+\s+-\s+\S+
