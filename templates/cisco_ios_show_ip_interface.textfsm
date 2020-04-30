@@ -14,6 +14,7 @@ Start
   ^\S -> Continue.Record
   ^${INTF}\s+is\s+${LINK_STATUS},\s+line\s+protocol\s+is\s+${PROTOCOL_STATUS}\s*$$
   ^\s+Internet\s+address\s+is\s+${IPADDR}/?${MASK}\s*$$
+  ^\s+Internet\s+address\s+will\s+be\s+negotiated
   ^\s+Secondary\s+address\s+${IPADDR}/?${MASK}\s*$$
   ^.+VPN\s+Routing/Forwarding\s+"${VRF}"
   ^\s+MTU\s+is\s+${MTU}\s+bytes
