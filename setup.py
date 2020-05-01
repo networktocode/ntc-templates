@@ -30,7 +30,7 @@ config = {
     "author": "network.toCode()",
     "author_email": "info@networktocode.com",
     "url": "https://github.com/networktocode/ntc-templates",
-    "install_requires": ["textfsm", "terminal"],
+    "install_requires": ["textfsm>=1.1.0"],
     "extras_require": {"dev": ["pytest", "PyYAML", "black", "yamllint", "ruamel.yaml"]},
     "classifiers": [
         "Development Status :: 4 - Beta",
