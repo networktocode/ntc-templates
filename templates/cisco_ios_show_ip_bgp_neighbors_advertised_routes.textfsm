@@ -37,6 +37,6 @@ Bgp_table
   # Full normal example. metric, and as_path might not exist, regex defaults to blank line. 
   # Example: * i172.16.1.0/24    172.16.1.2               0    100      0 i
   ^\s{0,1}${STATUS}${PATH_SELECTION}${ROUTE_SOURCE}\s{0,2}(?=${NETWORK}).{16}\s(?=${NEXT_HOP}).{19}\s(?=\s{0,6}${METRIC}).{6}\s(?=\s{0,6}${LOCAL_PREF}).{6}\s(?=\s{0,6}${WEIGHT}).{6}\s*${AS_PATH}\s*${ORIGIN}$$ -> Record
-
-
-EOF
+  ^Total\s+number\s+of\s+prefixes
+  ^\s*$$
+  ^. -> Error
