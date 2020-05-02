@@ -168,7 +168,7 @@ cisco_ios_show_interfaces_status.textfsm, .*, cisco_ios, sh[[ow]] int[[erfaces]]
 cisco_ios_show_ip_eigrp_topology.textfsm, .*, cisco_ios, sh[[ow]] ip eigrp top[[ology]]
 cisco_ios_show_ip_source_binding.textfsm, .*, cisco_ios, sh[[ow]] ip sou[[rce]] b[[inding]]
 cisco_ios_show_mac-address-table.textfsm, .*, cisco_ios, sh[[ow]] mac[[-address-table]]
-cisco_ios_show_ip_bgp_neighbors.textfsm, .*, cisco_ios, sh[[ow]] ip bgp nei[[ghbors]]
+cisco_ios_show_ip_bgp_neighbors.textfsm, .*, cisco_ios, sh[[ow]] ip bgp nei[[ghbors]]$
 cisco_ios_show_ip_ospf_database.textfsm, .*, cisco_ios, sh[[ow]] ip ospf data[[base]]
 cisco_ios_show_ip_ospf_neighbor.textfsm, .*, cisco_ios, sh[[ow]] ip ospf nei[[ghbor]]
 cisco_ios_show_ip_route_summary.textfsm, .*, cisco_ios, sh[[ow]] ip ro[[ute]] sum[[mary]]
@@ -209,6 +209,7 @@ cisco_ios_show_logging.textfsm, .*, cisco_ios, sh[[ow]] log[[ging]]
 cisco_ios_show_standby.textfsm, .*, cisco_ios, sh[[ow]] sta[[ndby]]
 cisco_ios_show_version.textfsm, .*, cisco_ios, sh[[ow]] ver[[sion]]
 cisco_ios_show_ip_arp.textfsm, .*, cisco_ios, sh[[ow]] i[[p]] a[[rp]]
+cisco_ios_show_ip_bgp.textfsm, .*, cisco_ios, sh[[ow]] i[[p]] bgp nei[[ghbors]] adv[[ertised-routes]]
 cisco_ios_show_ip_bgp.textfsm, .*, cisco_ios, sh[[ow]] i[[p]] bgp
 cisco_ios_show_tacacs.textfsm, .*, cisco_ios, sh[[ow]] tacacs
 cisco_ios_show_clock.textfsm, .*, cisco_ios, sh[[ow]] clo[[ck]]
