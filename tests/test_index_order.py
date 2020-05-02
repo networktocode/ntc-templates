@@ -34,9 +34,6 @@ def check_order(
     if not prior_os and prior_len == 0:
         # Starting Point
         return True, ""
-    elif current_os == prior_os and cmd_len == prior_len and cmd == prior_cmd:
-        # This is to not fail on if the same template is used for a similar command
-        return True, ""
     elif current_os == prior_os and cmd_len == prior_len and cmd == min(prior_cmd, cmd):
         msg = (
             "OS is the same and command same length, "
