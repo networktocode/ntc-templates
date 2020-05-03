@@ -1,0 +1,18 @@
+Value Name (\S+)
+Value MACaddress ([a-fA-F0-9]{2}\:[a-fA-F0-9]{2}\:[a-fA-F0-9]{2}\:[a-fA-F0-9]{2}\:[a-fA-F0-9]{2}\:[a-fA-F0-9]{2})
+Value IPv4 (\S+)
+Value IPv4Netmask (\S+)
+Value IPv4Gateway (\S+)
+Value IPv6 (\S+)
+Value IPv6LinkLocal (\S+)
+Value IPv6Gateway (\S+)
+
+Start
+  ^Name: ${Name}
+  ^\s+Port MAC address ${MACaddress}
+  ^Ip address: ${IPv4}
+  ^Netmask: ${IPv4Netmask}
+  ^Default gateway: ${IPv4Gateway}
+  ^Ipv6 address: ${IPv6}
+  ^Ipv6 link local address: ${IPv6LinkLocal}
+  ^Ipv6 default gateway: ${IPv6Gateway} -> Record
