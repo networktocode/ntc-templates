@@ -8,11 +8,11 @@ Value IPv6LinkLocal (\S+)
 Value IPv6Gateway (\S+)
 
 Start
-  ^Name: ${Name}
-  ^\s+Port MAC address ${MACaddress}
-  ^Ip address: ${IPv4}
-  ^Netmask: ${IPv4Netmask}
-  ^Default gateway: ${IPv4Gateway}
-  ^Ipv6 address: ${IPv6}
-  ^Ipv6 link local address: ${IPv6LinkLocal}
-  ^Ipv6 default gateway: ${IPv6Gateway} -> Record
+  ^Name:\S+${Name}
+  ^\s+Port\S+MAC\S+address\S+${MACaddress}
+  ^Ip\S+address:\S+IPv4}
+  ^Netmask:\S+${IPv4Netmask}
+  ^Default\S+gateway:\S+${IPv4Gateway}
+  ^Ipv6\S+address:\S+${IPv6}
+  ^Ipv6\S+link\S+local\S+address:\S+${IPv6LinkLocal}
+  ^Ipv6\S+default\S+gateway:\S+${IPv6Gateway} -> Record
