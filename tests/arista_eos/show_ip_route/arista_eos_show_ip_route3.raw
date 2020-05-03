@@ -1,0 +1,16 @@
+VRF name: default
+WARNING: Some of the routes are not programmed in     
+kernel, and they are marked with '%'.                 
+Codes: C - connected, S - static, K - kernel, 
+       O - OSPF, IA - OSPF inter area, E1 - OSPF external type 1,
+       E2 - OSPF external type 2, N1 - OSPF NSSA external type 1,
+       N2 - OSPF NSSA external type2, B I - iBGP, B E - eBGP,
+       R - RIP, I L1 - ISIS level 1, I L2 - ISIS level 2,
+       O3 - OSPFv3, A B - BGP Aggregate, A O - OSPF Summary,
+       NG - Nexthop Group Static Route, V - VXLAN Control Service
+
+Gateway of last resort:
+ O E1   0.0.0.0/0 [110/21] via 172.83.43.48, Vlan55
+                           via 172.83.43.50, Vlan65
+
+ S      10.1.26.0/24 [1/0] via 142.54.229.92, Vlan2503
