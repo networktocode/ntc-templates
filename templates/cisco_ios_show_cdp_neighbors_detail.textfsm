@@ -4,12 +4,13 @@ Value PLATFORM (.*)
 Value REMOTE_PORT (.*)
 Value LOCAL_PORT (.*)
 Value SOFTWARE_VERSION (.*$)
-Value CAPABILITIES (.*?)
+Value CAPABILITIES (.+?)
 
 Start
   ^Device ID: ${DESTINATION_HOST}
   ^Entry address\(es\)\s*:\s* -> ParseIP
-  ^Platform\s*:\s*${PLATFORM}\s*,\s*Capabilities\s*:\s*${CAPABILITIES}\s*$$
+  ^Platform\s*:\s*${PLATFORM}\s*,\s*Capabilities\s*:\s*${CAPABILITIES}\s+$$
+  ^Platform\s*:\s*${PLATFORM}\s*,\s*Capabilities\s*:\s*${CAPABILITIES}$$
   ^Interface: ${LOCAL_PORT},  Port ID \(outgoing port\): ${REMOTE_PORT}
   ^Version : -> GetVersion
   # Capture time-stamp if vty line has command time-stamping turned on
@@ -18,7 +19,8 @@ Start
 
 ParseIP
   ^.*IP address: ${MANAGEMENT_IP} -> Start
-  ^Platform\s*:\s*${PLATFORM}\s*,\s*Capabilities\s*:\s*${CAPABILITIES} -> Start
+  ^Platform\s*:\s*${PLATFORM}\s*,\s*Capabilities\s*:\s*${CAPABILITIES}\s+$$ -> Start
+  ^Platform\s*:\s*${PLATFORM}\s*,\s*Capabilities\s*:\s*${CAPABILITIES}$$ -> Start
   ^.* -> Start
 
 GetVersion
