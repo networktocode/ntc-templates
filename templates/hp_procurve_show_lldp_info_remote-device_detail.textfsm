@@ -1,6 +1,13 @@
 Value Required LOCAL_PORT (\S+)
+<<<<<<< HEAD
 Value NEIGHBOR_CHASSIS_TYPE (\S+)
 Value NEIGHBOR_CHASSIS_ID ([a-f0-9]{6}-[a-f0-9]{6}|(?:[a-z0-9]{2}\s){5}[a-z0-9]{2}|\S+)
+=======
+Value CHASSIS_TYPE (\S+)
+Value CHASSIS_ID ([a-f0-9]{6}-[a-f0-9]{6}|(?:[a-z0-9]{2}\s){5}[a-z0-9]{2}|\S+)
+
+Value CHASSI_ID ([a-f0-9]{6}-[a-f0-9]{6}|(?:[a-z0-9]{2}\s){5}[a-z0-9]{2}|\S+)
+>>>>>>> 26e5e4598b46c21d1b5f92b6db194e4e93ac6330
 Value PORT_TYPE (\S+)
 Value NEIGHBOR_PORTID (.*?)
 Value NEIGHBOR_SYSNAME (.*?)
