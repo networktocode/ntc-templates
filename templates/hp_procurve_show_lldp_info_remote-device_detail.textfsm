@@ -1,9 +1,9 @@
 Value Required LOCAL_PORT (\S+)
-Value CHASSI_TYPE (\S+)
-Value CHASSI_ID ([a-f0-9]{6}-[a-f0-9]{6}|(?:[a-z0-9]{2}\s){5}[a-z0-9]{2}|\S+)
+Value NEIGHBOR_CHASSIS_TYPE (\S+)
+Value NEIGHBOR_CHASSIS_ID ([a-f0-9]{6}-[a-f0-9]{6}|(?:[a-z0-9]{2}\s){5}[a-z0-9]{2}|\S+)
 Value PORT_TYPE (\S+)
-Value PORT_ID (.*?)
-Value SYSNAME (.*?)
+Value NEIGHBOR_PORTID (.*?)
+Value NEIGHBOR_SYSNAME (.*?)
 Value SYSTEM_DESCR (.*?)
 Value PORT_DESCR (\S+|.*?)
 Value PVID (\d+|.*?)
@@ -18,11 +18,11 @@ Start
 
 LLDP
   ^\s+Local\sPort\s+:\s${LOCAL_PORT}\s*$$
-  ^\s+ChassisType\s+:\s${CHASSI_TYPE}\s*$$
-  ^\s+ChassisId\s+:\s${CHASSI_ID}\s*$$
+  ^\s+ChassisType\s+:\s${NEIGHBOR_CHASSIS_TYPE}\s*$$
+  ^\s+ChassisId\s+:\s${NEIGHBOR_CHASSIS_ID}\s*$$
   ^\s+PortType\s+:\s${PORT_TYPE}\s*$$
-  ^\s+PortId\s+:\s${PORT_ID}\s*$$
-  ^\s+SysName\s+:\s${SYSNAME}\s*$$
+  ^\s+PortId\s+:\s${NEIGHBOR_PORTID}\s*$$
+  ^\s+SysName\s+:\s${NEIGHBOR_SYSNAME}\s*$$
   ^\s+System\sDescr\s:\s${SYSTEM_DESCR}\s*$$
   ^\s+PortDescr\s+:\s${PORT_DESCR}\s*$$
   ^\s+Pvid\s+:\s${PVID}\s*$$
