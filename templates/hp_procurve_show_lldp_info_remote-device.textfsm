@@ -1,15 +1,8 @@
 Value Required LOCAL_PORT (\S+)
-<<<<<<< HEAD
 Value NEIGHBOR_CHASSIS_ID ((?:[a-z0-9]{2}\s){5}[a-z0-9]{2}|\S+)
 Value NEIGHBOR_PORTID ((?:[a-z0-9]{2}\s){5}[a-z0-9]{2}|\S+)
 Value NEIGHBOR_DESCR (\S+|.*?)
 Value NEIGHBOR_SYSNAME (\S+)
-=======
-Value CHASSIS_ID ((?:[a-z0-9]{2}\s){5}[a-z0-9]{2}|\S+)
-Value PORT_ID ((?:[a-z0-9]{2}\s){5}[a-z0-9]{2}|\S+)
-Value PORT_DESCR (\S+|.*?)
-Value SYSNAME (\S+)
->>>>>>> 26e5e4598b46c21d1b5f92b6db194e4e93ac6330
 
 Start
   ^\s*LLDP\sRemote\sDevices\sInformation\s*$$
