@@ -9,7 +9,7 @@ Start
   ^\s+LocalPort\s|\sChassisId.*$$
   ^\s+-.* -> LLDP
   ^\s*$$
-  ^.* -> Error
+  ^. -> Error
 
 LLDP
   ^\s+${LOCAL_PORT}\s+\|\s${NEIGHBOR_CHASSIS_ID}\s+${NEIGHBOR_PORTID}\s*$$ -> Record
