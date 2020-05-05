@@ -9,7 +9,7 @@ Start
   ^\s+Port\s+|\s+Name\s+Type\s+|\s+Group\s+Type.*$$
   ^\s+-+\s+\+\s+\-+.* -> TRUNKS
   ^\s*$$
-  ^.* -> Error
+  ^. -> Error
 
 TRUNKS
   ^\s+${LOCAL_PORT}\s+\|\s${INT_NAME}\s+ ${INT_TYPE}\s+ \|\s${TRUNK}\s+${TRUNK_TYPE}.*$$ -> Record
