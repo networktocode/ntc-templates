@@ -31,6 +31,8 @@ LSAInfo
   ^\s+LS\s+Seq\s+Number:\s+${LSA_SEQ_NUMBER}
   ^\s+Checksum:\s+${LSA_CHECKSUM}
   ^\s+Length:\s+${LSA_LENGTH}
+  ^\s+Area\s+Border\s+Router
+  ^\s+AS\s+Boundary\s+Router
   ^\s+Number\s+of\s+Links:\s+${LSA_NUM_LINKS} -> LSAs
   ^\s*$$
   ^. -> Error
@@ -42,6 +44,7 @@ LSAs
   ^\s+Number\s+of\s+MTID\s+metrics:\s+${LS_MTID_METRICS}
   ^\s+TOS\s+0\s+Metrics:\s+${LS_TOS_0_METRICS} -> Next.Record
   ^\s+LS\s+age:\s+${LSA_AGE} -> LSAInfo
+  ^\s+Router\s+Link\s+States\s+\(Area ${AREA}\) -> LSAInfo
   ^\s*$$
   ^. -> Error
 

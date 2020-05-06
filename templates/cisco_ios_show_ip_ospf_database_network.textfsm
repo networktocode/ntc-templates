@@ -27,6 +27,8 @@ LSAInfo
   ^\s+LS\s+Seq\s+Number:\s+${LSA_SEQ_NUMBER}
   ^\s+Checksum:\s+${LSA_CHECKSUM}
   ^\s+Length:\s+${LSA_LENGTH}
+  ^\s+Area\s+Border\s+Router
+  ^\s+AS\s+Boundary\s+Router
   ^\s+Network\s+Mask:\s+${LSA_NETWORK_MASK} -> LSAs
   ^\s*$$
   ^. -> Error
@@ -34,6 +36,7 @@ LSAInfo
 LSAs
   ^\s+Attached\s+Router:\s+${LS_ATT_ROUTER} -> Next.Record
   ^\s+LS\s+age:\s+${LSA_AGE} -> LSAInfo
+  ^\s+Router\s+Link\s+States\s+\(Area ${AREA}\) -> LSAInfo
   ^\s*$$
   ^. -> Error
 
