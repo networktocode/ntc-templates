@@ -10,6 +10,8 @@ Value Filldown LSA_SEQ_NUMBER (\S+)
 Value Filldown LSA_CHECKSUM (\S+)
 Value Filldown LSA_LENGTH (\d+)
 Value Filldown LSA_NUM_LINKS (\d+)
+Value Filldown LSA_ABR (Area\s+Border\s+Router)
+Value Filldown LSA_ASBR (AS\s+Boundary\s+Router)
 Value LS_LINK_TYPE (.+?)
 Value LS_LINK_ID (\d+\.\d+\.\d+\.\d+)
 Value LS_LINK_DATA (\d+\.\d+\.\d+\.\d+)
@@ -31,6 +33,8 @@ LSAInfo
   ^\s+LS\s+Seq\s+Number:\s+${LSA_SEQ_NUMBER}
   ^\s+Checksum:\s+${LSA_CHECKSUM}
   ^\s+Length:\s+${LSA_LENGTH}
+  ^\s+${LSA_ABR}$$
+  ^\s+${LSA_ASBR}$$
   ^\s+Number\s+of\s+Links:\s+${LSA_NUM_LINKS} -> LSAs
   ^\s*$$
   ^. -> Error
@@ -42,6 +46,7 @@ LSAs
   ^\s+Number\s+of\s+MTID\s+metrics:\s+${LS_MTID_METRICS}
   ^\s+TOS\s+0\s+Metrics:\s+${LS_TOS_0_METRICS} -> Next.Record
   ^\s+LS\s+age:\s+${LSA_AGE} -> LSAInfo
+  ^\s+Router\s+Link\s+States\s+\(Area ${AREA}\) -> LSAInfo
   ^\s*$$
   ^. -> Error
 
