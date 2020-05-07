@@ -1,0 +1,13 @@
+Value USERNAME (\S*)
+Value KEY_STATUS (\S*)
+
+Start
+  ^\+\S*\s*\w+\s*\w+\s*\S*\s*-*\+
+  ^\|\s*\S*\s*\S*\s*\|\s*[Gg]enerated\s*\|
+  ^\|\s*\S*\s*[Ff]ingerprint\S*\s*\S*\s*\|\s*\S*\s*\|
+  ^\+\S*-*\+
+  ^\+\S*-\s*[Ss]\S*\s*\S*\s*\S*\s*\S*\s*\S*\s*-.+
+  ^\|\s*\S*\s*\S*\s*\|\s*[Kk]ey\s*\S*\s*\|
+  ^\|\s*${USERNAME}\s*\S*\s*\|\s*${KEY_STATUS}\s*\| -> Record
+  ^\s*$$
+  ^. -> Error
