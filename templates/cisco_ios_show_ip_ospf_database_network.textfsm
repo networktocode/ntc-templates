@@ -10,6 +10,8 @@ Value Filldown LSA_SEQ_NUMBER (\S+)
 Value Filldown LSA_CHECKSUM (\S+)
 Value Filldown LSA_LENGTH (\d+)
 Value Filldown LSA_NETWORK_MASK (\S+)
+Value Filldown LSA_ABR (Area\s+Border\s+Router)
+Value Filldown LSA_ASBR (AS\s+Boundary\s+Router)
 Value LS_ATT_ROUTER (\d+\.\d+\.\d+\.\d+)
 
 Start
@@ -27,8 +29,8 @@ LSAInfo
   ^\s+LS\s+Seq\s+Number:\s+${LSA_SEQ_NUMBER}
   ^\s+Checksum:\s+${LSA_CHECKSUM}
   ^\s+Length:\s+${LSA_LENGTH}
-  ^\s+Area\s+Border\s+Router
-  ^\s+AS\s+Boundary\s+Router
+  ^\s+${LSA_ABR}$$
+  ^\s+${LSA_ASBR}$$
   ^\s+Network\s+Mask:\s+${LSA_NETWORK_MASK} -> LSAs
   ^\s*$$
   ^. -> Error
