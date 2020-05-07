@@ -1,0 +1,26 @@
+---
+parsed_sample:
+  - interface: "GigabitEthernet0/0/0"
+    endpoint: "10.180.14.15"
+    rewrite_headers:
+      - "78BC1AF1CA6100A6CA7D06D00800"
+    recursive_interface: ""
+    recursive_nexthop: ""
+  - interface: "GigabitEthernet0/0/0"
+    endpoint: "227.0.0.0"
+    rewrite_headers:
+      - "01005E00000000A6CA7D06D00800"
+    recursive_interface: ""
+    recursive_nexthop: ""
+  - interface: "Tunnel0"
+    endpoint: "172.17.10.158"
+    rewrite_headers:
+      - "4500000000000000FF2FC465C0A88CDB"
+      - "D150D49120000800000186A0"
+    recursive_interface: "GigabitEthernet0/0/1"
+    recursive_nexthop: "192.168.140.1"
+  - interface: "Tunnel0"
+    endpoint: "227.0.0.0"
+    rewrite_headers: []
+    recursive_interface: "drop"
+    recursive_nexthop: ""
