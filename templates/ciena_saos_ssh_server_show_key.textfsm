@@ -1,5 +1,5 @@
-Value USERNAME (\S*)
-Value KEY_STATUS (\S*)
+Value USERNAME (\S+)
+Value KEY_STATUS (\S+)
 
 Start
   # Accounts for tabular delineations and table names
