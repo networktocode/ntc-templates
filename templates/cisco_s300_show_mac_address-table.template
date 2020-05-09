@@ -4,4 +4,12 @@ Value VLAN (\w+)
 Value DESTINATION_PORT (\S+)
 
 Start
+  ^Flags:
+  ^Aging
+  ^\s+Vlan
+  ^-- -> Begin
+  ^\s+$$
+  ^. -> Error
+
+Begin
   ^\s+${VLAN}\s+${DESTINATION_ADDRESS}\s+${DESTINATION_PORT}\s+${TYPE} -> Record
