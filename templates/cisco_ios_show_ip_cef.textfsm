@@ -1,0 +1,112 @@
+Value Required PREFIX ((?:\d{1,3}\.){3}\d{1,3}\/\d{1,2})
+Value List FLAGS ([^,\]\n]+)
+Value TYPE ([a-z\s]+)
+Value NEXTHOP ((?:\d{1,3}\.){3}\d{1,3})
+Value INTERFACE ([A-Za-z0-9\.\/-]+)
+
+# --- HEAD and DETAILED ENTRIES ---
+#     e.g. show ip cef detail, show ip cef 10.0.0.1, etc
+Start
+  # Detect errors and/or disabled CEF
+  ^%IPv4\s+CEF\s+not\s+running$$ -> End
+  ^\s+Invalid\s+prefix/mask -> End
+  ^Prefix\s+Next\s+Hop\s+Interface$$ -> Entries
+  # Ignore JUNK in HEAD
+  ^IP(?:v4)?\s+CEF
+  ^VRF|Adjacency
+  ^\s+\d+\s+(?:routes|instant|leaves|load|prefixes|in-place)
+  ^\s+(?:Default|Table|Database|Resolution|Non-stop|Switchover)
+  ^\s+(?:universal|refcounts)
+  ^.*?CEF\s+resets
+  # Entry detected, begin analysis
+  ^(?:\d{1,3}\.){3}\d{1,3}\/\d{1,2} -> Continue.Record
+  #
+  # --- Parse CEF table from Cisco IOS >v15.x
+  #
+  # Extract prefix (no flags)
+  ^${PREFIX},\s+epoch(?:(?!flags).)*$$
+  # Extract prefix with Flags
+  ^${PREFIX}.*?flags -> Continue
+  # Attempt to extract first Flag (if present)
+  ^\d.*?flags\s+\[?${FLAGS} -> Continue
+  # Attempt to extract other Flags (up to 6)
+  ^\d.*?flags\s+\[?(?:[^\]\n]+?,\s+){1}${FLAGS} -> Continue
+  ^\d.*?flags\s+\[?(?:[^\]\n]+?,\s+){2}${FLAGS} -> Continue
+  ^\d.*?flags\s+\[?(?:[^\]\n]+?,\s+){3}${FLAGS} -> Continue
+  ^\d.*?flags\s+\[?(?:[^\]\n]+?,\s+){4}${FLAGS} -> Continue
+  ^\d.*?flags\s+\[?(?:[^\]\n]+?,\s+){5}${FLAGS} -> Continue
+  # Stop processing Flags (6+)
+  ^\d.*?flags.*?$$
+  # Extract Type / Nexthop / Interface
+  # Available Type (IOS >v15.x):
+  #     - attached
+  #     - receive
+  #     - drop
+  #     - no route
+  #     - nexthop
+  #     - multicast
+  ^\s+${TYPE}(?<=drop)$$
+  ^\s+${TYPE}(?<=no route)$$
+  ^\s+${TYPE}(?<=receive)$$
+  ^\s+${TYPE}(?<=multicast)$$
+  ^\s+${TYPE}(?<=nexthop)\s+${NEXTHOP}\s+${INTERFACE}
+  ^\s+recursive\s+via\s+${NEXTHOP}
+  ^\s+${TYPE}(?<=receive)\s+for\s+${INTERFACE}
+  ^\s+${TYPE}(?<=attached)\s+to\s+${INTERFACE}
+  #
+  # --- Parse CEF table from Cisco IOS 12.x ISR G1
+  #
+  # Legacy CEF formatting
+  # Extract Prefix and Flags
+  ^${PREFIX},\s+version -> Continue
+  ^.*?epoch\s+\d+,\s+${FLAGS} -> Continue
+  ^.*?epoch\s+\d+,\s+(?:[^,\n]+,\s+){1}${FLAGS} -> Continue
+  ^.*?epoch\s+\d+,\s+(?:[^,\n]+,\s+){2}${FLAGS} -> Continue
+  ^.*?epoch\s+\d+,\s+(?:[^,\n]+,\s+){3}${FLAGS} -> Continue
+  # Stop processing Flags (max 4)
+  ^.*?epoch.*?$$
+  # Extract extra Flag, such as recursive
+  ^.*?dependencies,\s+${FLAGS}
+  ^.*?dependencies
+  # Extract Nexthop and Interface
+  ^\s+next\s+hop\s+${NEXTHOP}\s*$$
+  ^\s+next\s+hop\s+${NEXTHOP},\s+${INTERFACE}
+  # Extract Type, where available
+  # Available Type (IOS v12.x ISR G1):
+  #     - null (same as receive with Null0 interface in IOS v15.x)
+  #     - glean (same as attached in IOS v15.x)
+  #     - cached (same as nexthop in IOS v15.x)
+  #     - drop
+  #     - if type is None, then it's receive (check flags)
+  ^\s+valid\s+${TYPE}\s+adjacency$$
+  #
+  # Ignore JUNK
+  #
+  ^\s+Special\s+source
+  ^\s+Interface\s+source
+  ^\s+Adj\s+source
+  ^\s+DefNet\s+source
+  ^\s+Covered\s+dependent
+  ^\s+need\s+deagg
+  ^\s+notify\s+cover
+  ^\s+Dependent\s+covered
+  ^\s+(?:Net)?Flow:
+  ^\s+Interest\s+List:
+  ^\s+-\s+
+  ^\s+BFD\s+state
+  ^\s+\d+\s+IPL\s+source
+  ^\d+\s+packets
+  #
+  # End of processing
+  #
+  ^\s*$$
+  ^. -> Error
+
+# --- BRIEF ENTRIES
+#     e.g. show ip cef, or show ip cef vrf <name>
+Entries
+  ^${PREFIX}\s+${TYPE}\s*$$ -> Record
+  ^${PREFIX}\s+${TYPE}\s+${INTERFACE}$$ -> Record
+  ^${PREFIX}\s+${NEXTHOP}\s+${INTERFACE}$$ -> Record
+  ^\s*$$
+  ^. -> Error

@@ -1,0 +1,47 @@
+IPv4 CEF is enabled for distributed and running
+VRF Default:
+ 1079 prefixes (1079/0 fwd/non-fwd)
+ Default network 0.0.0.0/0
+ Table id 0
+ Database epoch:        11 (1079 entries at this epoch)
+ Non-stop forwarding:
+  79 routes at switchover
+  Switchover in progress (protocols reconverging)
+  43 routes available after convergence and purge (20 purged)
+
+0.0.0.0/0, epoch 11
+  DefNet source: 0.0.0.0/0
+  nexthop 10.158.0.198 Vlan1801
+0.0.0.0/8, epoch 11
+  Special source: drop
+  drop
+0.0.0.0/32, epoch 11, flags receive
+  Special source: receive
+  receive
+10.0.0.0/16, epoch 11
+  nexthop 10.158.0.198 Vlan1801
+10.158.0.192/29, epoch 11, flags attached, connected, cover dependents, need deagg
+  Covered dependent prefixes: 5
+    need deagg: 3
+    notify cover updated: 2
+  attached to Vlan1801
+10.158.0.192/32, epoch 11, flags receive
+  Dependent covered prefix type cover need deagg cover 10.158.0.192/29
+  Interface source: Vlan1801
+  receive for Vlan1801
+10.158.0.195/32, epoch 11, flags attached
+  Adj source: IP adj out of Vlan1801, addr 10.158.0.195 0637CEA0
+   Dependent covered prefix type adjfib cover 10.158.0.192/29
+  attached to Vlan1801
+224.0.0.0/4, epoch 11
+  Special source: drop
+  drop
+224.0.0.0/24, epoch 11, flags receive
+  Special source: receive
+  receive
+240.0.0.0/4, epoch 11
+  Special source: drop
+  drop
+255.255.255.255/32, epoch 11, flags receive
+  Special source: receive
+  receive
