@@ -41,7 +41,7 @@ parsed_sample:
     flags:
       - "attached"
     type: "attached"
-    nexthop: ""
+    nexthop: "10.255.1.1"
     interface: "Port-channel1.1"
   - prefix: "10.255.1.11/32"
     flags:
@@ -73,7 +73,7 @@ parsed_sample:
     flags:
       - "attached"
     type: "attached"
-    nexthop: ""
+    nexthop: "10.180.163.133"
     interface: "Vlan1831"
   - prefix: "127.0.0.0/8"
     flags: []
