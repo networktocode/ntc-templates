@@ -112,6 +112,7 @@ Start
 #     e.g. show ip cef, or show ip cef vrf <name>
 Entries
   ^${PREFIX}\s+${TYPE}\s*$$ -> Record
+  ^${PREFIX}\s+${NEXTHOP}\s*$$ -> Record
   ^${PREFIX}\s+${TYPE}\s+${INTERFACE}$$ -> Record
   ^${PREFIX}\s+${NEXTHOP}\s+${INTERFACE}$$ -> Record
   ^\s*$$
