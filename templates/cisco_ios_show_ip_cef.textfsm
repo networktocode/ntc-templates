@@ -66,8 +66,8 @@ Start
   # Stop processing Flags (max 4)
   ^.*?epoch.*?$$
   # Extract extra Flag, such as recursive
-  ^.*?dependencies,\s+${FLAGS}
-  ^.*?dependencies
+  ^.*?dependenc(?:y|ies),\s+${FLAGS}
+  ^.*?dependenc(?:y|ies)
   # Extract Nexthop and Interface
   ^\s+next\s+hop\s+${NEXTHOP}\s*$$
   ^\s+next\s+hop\s+${NEXTHOP},\s+${INTERFACE}
@@ -82,6 +82,7 @@ Start
   #
   # Ignore JUNK
   #
+  ^\s+Q[Oo]S
   ^\s+Special\s+source
   ^\s+Interface\s+source
   ^\s+Adj\s+source
