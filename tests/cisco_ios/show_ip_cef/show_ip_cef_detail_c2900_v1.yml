@@ -97,15 +97,6 @@ parsed_sample:
     type: "attached"
     nexthop: ""
     interface: "Null0"
-  - prefix: "10.181.150.16/30"
-    flags:
-      - "attached"
-      - "connected"
-      - "cover dependents"
-      - "need deagg"
-    type: "attached"
-    nexthop: ""
-    interface: "GigabitEthernet0/2"
   - prefix: "224.0.0.0/4"
     flags: []
     type: "multicast"
