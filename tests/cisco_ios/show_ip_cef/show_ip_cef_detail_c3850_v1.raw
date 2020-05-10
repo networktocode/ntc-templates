@@ -12,6 +12,9 @@ VRF Default
 0.0.0.0/32, epoch 2, flags [receive]
   Special source: receive
   receive
+10.180.195.0/32, epoch 3, per-destination sharing
+  nexthop 10.180.101.5 GigabitEthernet1/0/1
+  nexthop 10.180.101.10 GigabitEthernet1/0/2
 10.255.0.0/30, epoch 2
   nexthop 10.255.1.1 Port-channel1.1
 10.255.1.0/24, epoch 2, flags [attached, connected, cover dependents, need deagg]
