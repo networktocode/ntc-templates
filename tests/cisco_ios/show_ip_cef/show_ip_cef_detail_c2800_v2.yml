@@ -5,77 +5,88 @@ parsed_sample:
       - "cached adjacency 199.220.235.181"
       - "recursive"
     type: "cached"
-    nexthop: "199.220.235.181"
-    interface: "GigabitEthernet0/1"
+    nexthop:
+      - "199.220.235.181"
+    interface:
+      - "GigabitEthernet0/1"
   - prefix: "0.0.0.0/8"
     flags: []
     type: "drop"
-    nexthop: "0.0.0.0"
-    interface: ""
+    nexthop:
+      - "0.0.0.0"
+    interface: []
   - prefix: "0.0.0.0/32"
     flags:
       - "receive"
     type: ""
-    nexthop: ""
-    interface: ""
+    nexthop: []
+    interface: []
   - prefix: "10.158.0.0/19"
     flags: []
     type: "null"
-    nexthop: "0.0.0.0"
-    interface: "Null0"
+    nexthop:
+      - "0.0.0.0"
+    interface:
+      - "Null0"
   - prefix: "10.158.0.192/29"
     flags:
       - "cached adjacency 10.158.0.209"
     type: "cached"
-    nexthop: "10.158.0.209"
-    interface: "GigabitEthernet0/0.1821"
+    nexthop:
+      - "10.158.0.209"
+    interface:
+      - "GigabitEthernet0/0.1821"
   - prefix: "10.158.0.208/32"
     flags:
       - "receive"
     type: ""
-    nexthop: ""
-    interface: ""
+    nexthop: []
+    interface: []
   - prefix: "10.180.30.1/32"
     flags:
       - "connected"
       - "receive"
     type: ""
-    nexthop: ""
-    interface: ""
+    nexthop: []
+    interface: []
   - prefix: "199.220.235.180/30"
     flags:
       - "attached"
       - "connected"
     type: "glean"
-    nexthop: ""
-    interface: "GigabitEthernet0/1"
+    nexthop: []
+    interface:
+      - "GigabitEthernet0/1"
   - prefix: "199.220.235.180/32"
     flags:
       - "receive"
     type: ""
-    nexthop: ""
-    interface: ""
+    nexthop: []
+    interface: []
   - prefix: "199.220.235.181/32"
     flags:
       - "connected"
       - "cached adjacency 199.220.235.181"
     type: "cached"
-    nexthop: "199.220.235.181"
-    interface: "GigabitEthernet0/1"
+    nexthop:
+      - "199.220.235.181"
+    interface:
+      - "GigabitEthernet0/1"
   - prefix: "224.0.0.0/24"
     flags:
       - "receive"
     type: ""
-    nexthop: ""
-    interface: ""
+    nexthop: []
+    interface: []
   - prefix: "240.0.0.0/4"
     flags: []
     type: "drop"
-    nexthop: "0.0.0.0"
-    interface: ""
+    nexthop:
+      - "0.0.0.0"
+    interface: []
   - prefix: "255.255.255.255/32"
     flags:
       - "receive"
     type: ""
-    nexthop: ""
-    interface: ""
+    nexthop: []
+    interface: []

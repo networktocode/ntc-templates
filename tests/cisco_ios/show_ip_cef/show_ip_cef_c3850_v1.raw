@@ -2,6 +2,8 @@ Prefix               Next Hop             Interface
 0.0.0.0/0            10.255.1.1           Vlan1
 0.0.0.0/8            drop
 0.0.0.0/32           receive              
+10.180.195.0/32      10.180.101.5         GigabitEthernet1/0/1
+                     10.180.101.10        GigabitEthernet1/0/2
 10.255.1.0/24        attached             Vlan1
 10.255.1.0/32        receive              Vlan1
 10.255.255.192/30    10.255.2.1           Port-channel1.1825
