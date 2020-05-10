@@ -21,11 +21,6 @@ parsed_sample:
     type: "nexthop"
     nexthop: "10.158.0.198"
     interface: "Vlan1801"
-  - prefix: "10.0.120.0/24"
-    flags: []
-    type: "nexthop"
-    nexthop: "10.158.0.198"
-    interface: "Vlan1801"
   - prefix: "10.158.0.192/29"
     flags:
       - "attached"
@@ -47,15 +42,6 @@ parsed_sample:
     type: "attached"
     nexthop: ""
     interface: "Vlan1801"
-  - prefix: "10.158.1.0/24"
-    flags:
-      - "attached"
-      - "connected"
-      - "cover dependents"
-      - "need deagg"
-    type: "attached"
-    nexthop: ""
-    interface: "Vlan1581"
   - prefix: "224.0.0.0/4"
     flags: []
     type: "drop"

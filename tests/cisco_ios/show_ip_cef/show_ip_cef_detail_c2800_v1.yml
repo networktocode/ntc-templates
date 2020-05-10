@@ -71,12 +71,6 @@ parsed_sample:
     type: "receive"
     nexthop: ""
     interface: "Tunnel0"
-  - prefix: "172.17.40.255/32"
-    flags:
-      - "receive"
-    type: "receive"
-    nexthop: ""
-    interface: "Tunnel0"
   - prefix: "224.0.0.0/4"
     flags: []
     type: "drop"

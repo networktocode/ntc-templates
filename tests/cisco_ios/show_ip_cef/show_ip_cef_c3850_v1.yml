@@ -25,31 +25,6 @@ parsed_sample:
     type: "receive             "
     nexthop: ""
     interface: "Vlan1"
-  - prefix: "10.255.1.1/32"
-    flags: []
-    type: "attached            "
-    nexthop: ""
-    interface: "Vlan1"
-  - prefix: "10.255.1.11/32"
-    flags: []
-    type: "attached            "
-    nexthop: ""
-    interface: "Vlan1"
-  - prefix: "10.255.1.23/32"
-    flags: []
-    type: "receive             "
-    nexthop: ""
-    interface: "Vlan1"
-  - prefix: "10.255.1.250/32"
-    flags: []
-    type: "attached            "
-    nexthop: ""
-    interface: "Vlan1"
-  - prefix: "10.255.1.255/32"
-    flags: []
-    type: "receive             "
-    nexthop: ""
-    interface: "Vlan1"
   - prefix: "10.255.255.192/30"
     flags: []
     type: ""

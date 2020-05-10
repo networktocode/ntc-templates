@@ -3,7 +3,7 @@ parsed_sample:
   - prefix: "0.0.0.0/0"
     flags: []
     type: ""
-    nexthop: "10.180.140.153"
+    nexthop: "10.180.122.153"
     interface: "GigabitEthernet0/1"
   - prefix: "0.0.0.0/8"
     flags: []
@@ -18,49 +18,24 @@ parsed_sample:
   - prefix: "10.0.0.0/16"
     flags: []
     type: ""
-    nexthop: "10.180.140.153"
-    interface: "GigabitEthernet0/1"
-  - prefix: "10.0.120.0/24"
-    flags: []
-    type: ""
-    nexthop: "10.180.140.153"
-    interface: "GigabitEthernet0/1"
-  - prefix: "10.157.0.0/16"
-    flags: []
-    type: ""
-    nexthop: "10.180.140.153"
+    nexthop: "10.180.122.153"
     interface: "GigabitEthernet0/1"
   - prefix: "10.157.1.0/24"
     flags: []
     type: ""
     nexthop: "172.17.100.101"
     interface: "Tunnel60701"
-  - prefix: "10.180.140.7/32"
+  - prefix: "10.180.122.7/32"
     flags: []
     type: "receive             "
     nexthop: ""
     interface: "Loopback0"
-  - prefix: "10.180.140.152/29"
+  - prefix: "10.180.122.152/29"
     flags: []
     type: "attached            "
     nexthop: ""
     interface: "GigabitEthernet0/1"
-  - prefix: "10.180.140.152/32"
-    flags: []
-    type: "receive             "
-    nexthop: ""
-    interface: "GigabitEthernet0/1"
-  - prefix: "10.180.140.153/32"
-    flags: []
-    type: "attached            "
-    nexthop: ""
-    interface: "GigabitEthernet0/1"
-  - prefix: "10.180.140.158/32"
-    flags: []
-    type: "receive             "
-    nexthop: ""
-    interface: "GigabitEthernet0/1"
-  - prefix: "10.180.140.159/32"
+  - prefix: "10.180.122.152/32"
     flags: []
     type: "receive             "
     nexthop: ""

@@ -3,7 +3,7 @@ parsed_sample:
   - prefix: "0.0.0.0/0"
     flags: []
     type: ""
-    nexthop: "199.220.235.181"
+    nexthop: "192.168.0.181"
     interface: "GigabitEthernet0/1"
   - prefix: "0.0.0.0/8"
     flags: []
@@ -18,12 +18,7 @@ parsed_sample:
   - prefix: "10.0.0.0/16"
     flags: []
     type: ""
-    nexthop: "199.220.235.181"
-    interface: "GigabitEthernet0/1"
-  - prefix: "10.0.120.0/24"
-    flags: []
-    type: ""
-    nexthop: "199.220.235.181"
+    nexthop: "192.168.0.181"
     interface: "GigabitEthernet0/1"
   - prefix: "10.158.0.0/19"
     flags: []
@@ -45,56 +40,11 @@ parsed_sample:
     type: "receive"
     nexthop: ""
     interface: ""
-  - prefix: "10.158.0.209/32"
-    flags: []
-    type: ""
-    nexthop: "10.158.0.209"
-    interface: "GigabitEthernet0/0.1821"
-  - prefix: "10.158.0.210/32"
-    flags: []
-    type: ""
-    nexthop: "10.158.0.210"
-    interface: "GigabitEthernet0/0.1821"
-  - prefix: "10.158.0.214/32"
-    flags: []
-    type: "receive"
-    nexthop: ""
-    interface: ""
-  - prefix: "10.158.0.215/32"
-    flags: []
-    type: "receive"
-    nexthop: ""
-    interface: ""
-  - prefix: "10.180.30.1/32"
-    flags: []
-    type: "receive"
-    nexthop: ""
-    interface: ""
-  - prefix: "199.220.235.180/30"
+  - prefix: "192.168.0.180/30"
     flags: []
     type: "attached            "
     nexthop: ""
     interface: "GigabitEthernet0/1"
-  - prefix: "199.220.235.180/32"
-    flags: []
-    type: "receive"
-    nexthop: ""
-    interface: ""
-  - prefix: "199.220.235.181/32"
-    flags: []
-    type: ""
-    nexthop: "199.220.235.181"
-    interface: "GigabitEthernet0/1"
-  - prefix: "199.220.235.182/32"
-    flags: []
-    type: "receive"
-    nexthop: ""
-    interface: ""
-  - prefix: "199.220.235.183/32"
-    flags: []
-    type: "receive"
-    nexthop: ""
-    interface: ""
   - prefix: "224.0.0.0/4"
     flags: []
     type: "drop"
