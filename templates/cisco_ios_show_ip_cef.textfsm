@@ -1,6 +1,10 @@
 Value Required PREFIX ((?:\d{1,3}\.){3}\d{1,3}\/\d{1,2})
 Value List FLAGS ([^,\]\n]+)
 Value TYPE ((?:no\s)?(?:[a-z]+))
+# Nexthop and Interface are lists to support ECMP
+# Usually these will be single item lists
+# However, if there are multiple paths available
+#     these will contain one items per route/path
 Value List NEXTHOP ((?:\d{1,3}\.){3}\d{1,3})
 Value List INTERFACE ([A-Za-z][A-Za-z0-9\.\/-]+)
 
@@ -67,9 +71,7 @@ Start
   ^.*?epoch.*?$$
   # Extract extra Flag, such as recursive
   ^.*?dependenc(?:y|ies),\s+${FLAGS} -> Continue
-  #^\s+via\s+${NEXTHOP},\s+\d+\s+depend
   ^\s+via\s+${INTERFACE},\s+\d+\s+depend
-  #^\s+via\s+${NEXTHOP},\s+${INTERFACE},\s+\d+\s+depend
   ^.*?depend
   # Extract Nexthop and Interface
   ^\s+next\s+hop\s+${NEXTHOP}\s*$$
