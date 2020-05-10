@@ -27,17 +27,17 @@ parsed_sample:
     interface: "Tunnel0"
   - prefix: "10.191.64.0/24"
     flags: []
-    type: "attached            "
+    type: "attached"
     nexthop: ""
     interface: "GigabitEthernet0/0"
   - prefix: "10.191.64.0/32"
     flags: []
-    type: "receive             "
+    type: "receive"
     nexthop: ""
     interface: "GigabitEthernet0/0"
   - prefix: "10.191.64.2/32"
     flags: []
-    type: "attached            "
+    type: "attached"
     nexthop: ""
     interface: "GigabitEthernet0/0"
   - prefix: "224.0.0.0/4"

@@ -12,17 +12,17 @@ parsed_sample:
     interface: ""
   - prefix: "0.0.0.0/32"
     flags: []
-    type: "receive              "
+    type: "receive"
     nexthop: ""
     interface: ""
   - prefix: "10.255.1.0/24"
     flags: []
-    type: "attached            "
+    type: "attached"
     nexthop: ""
     interface: "Vlan1"
   - prefix: "10.255.1.0/32"
     flags: []
-    type: "receive             "
+    type: "receive"
     nexthop: ""
     interface: "Vlan1"
   - prefix: "10.255.255.192/30"
@@ -32,7 +32,7 @@ parsed_sample:
     interface: "Port-channel1.1825"
   - prefix: "10.255.200.0/24"
     flags: []
-    type: "attached            "
+    type: "attached"
     nexthop: ""
     interface: "GigabitEthernet0/0/2.200"
   - prefix: "127.0.0.0/8"
@@ -47,7 +47,7 @@ parsed_sample:
     interface: ""
   - prefix: "224.0.0.0/24"
     flags: []
-    type: "receive              "
+    type: "receive"
     nexthop: ""
     interface: ""
   - prefix: "240.0.0.0/4"
@@ -57,6 +57,6 @@ parsed_sample:
     interface: ""
   - prefix: "255.255.255.255/32"
     flags: []
-    type: "receive              "
+    type: "receive"
     nexthop: ""
     interface: ""
