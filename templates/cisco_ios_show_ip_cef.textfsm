@@ -66,7 +66,10 @@ Start
   # Stop processing Flags (max 4)
   ^.*?epoch.*?$$
   # Extract extra Flag, such as recursive
-  ^.*?dependenc(?:y|ies),\s+${FLAGS}
+  ^.*?dependenc(?:y|ies),\s+${FLAGS} -> Continue
+  ^\s+via\s+${NEXTHOP},\s+\d+\s+dependenc
+  ^\s+via\s+${INTERFACE},\s+\d+\s+dependenc
+  ^\s+via\s+${NEXTHOP},\s+${INTERFACE},\s+\d+\s+dependenc
   ^.*?dependenc(?:y|ies)
   # Extract Nexthop and Interface
   ^\s+next\s+hop\s+${NEXTHOP}\s*$$
