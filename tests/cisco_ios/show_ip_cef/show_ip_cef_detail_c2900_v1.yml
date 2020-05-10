@@ -35,7 +35,7 @@ parsed_sample:
     flags:
       - "attached"
     type: "attached"
-    nexthop: ""
+    nexthop: "10.180.140.153"
     interface: "GigabitEthernet0/1"
   - prefix: "10.180.150.0/26"
     flags:
@@ -73,7 +73,7 @@ parsed_sample:
     flags:
       - "attached"
     type: "attached"
-    nexthop: ""
+    nexthop: "10.180.150.33"
     interface: "Port-channel1.1822"
   - prefix: "10.180.150.38/32"
     flags:
