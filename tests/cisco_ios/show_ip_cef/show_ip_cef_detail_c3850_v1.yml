@@ -4,24 +4,37 @@ parsed_sample:
     flags:
       - "default route"
     type: "nexthop"
-    nexthop: "10.255.1.1"
-    interface: "Port-channel1.1"
+    nexthop:
+      - "10.255.1.1"
+    interface:
+      - "Port-channel1.1"
   - prefix: "0.0.0.0/8"
     flags: []
     type: "drop"
-    nexthop: ""
-    interface: ""
+    nexthop: []
+    interface: []
   - prefix: "0.0.0.0/32"
     flags:
       - "receive"
     type: "receive"
-    nexthop: ""
-    interface: ""
+    nexthop: []
+    interface: []
+  - prefix: "10.180.195.0/32"
+    flags: []
+    type: "nexthop"
+    nexthop:
+      - "10.180.101.5"
+      - "10.180.101.10"
+    interface:
+      - "GigabitEthernet1/0/1"
+      - "GigabitEthernet1/0/2"
   - prefix: "10.255.0.0/30"
     flags: []
     type: "nexthop"
-    nexthop: "10.255.1.1"
-    interface: "Port-channel1.1"
+    nexthop:
+      - "10.255.1.1"
+    interface:
+      - "Port-channel1.1"
   - prefix: "10.255.1.0/24"
     flags:
       - "attached"
@@ -29,28 +42,32 @@ parsed_sample:
       - "cover dependents"
       - "need deagg"
     type: "attached"
-    nexthop: ""
-    interface: "Port-channel1.1"
+    nexthop: []
+    interface:
+      - "Port-channel1.1"
   - prefix: "10.255.1.0/32"
     flags:
       - "receive"
     type: "receive"
-    nexthop: ""
-    interface: "Port-channel1.1"
+    nexthop: []
+    interface:
+      - "Port-channel1.1"
   - prefix: "10.255.1.1/32"
     flags:
       - "attached"
     type: "attached"
-    nexthop: "10.255.1.1"
-    interface: "Port-channel1.1"
+    nexthop: []
+    interface:
+      - "Port-channel1.1"
   - prefix: "10.255.1.11/32"
     flags:
       - "receive"
       - "local"
       - "source eligible"
     type: "receive"
-    nexthop: ""
-    interface: "Port-channel1.1"
+    nexthop: []
+    interface:
+      - "Port-channel1.1"
   - prefix: "10.180.163.0/32"
     flags:
       - "attached"
@@ -59,35 +76,38 @@ parsed_sample:
       - "local"
       - "source eligible"
     type: "receive"
-    nexthop: ""
-    interface: "Loopback180"
+    nexthop: []
+    interface:
+      - "Loopback180"
   - prefix: "10.180.163.129/32"
     flags:
       - "receive"
       - "local"
       - "source eligible"
     type: "receive"
-    nexthop: ""
-    interface: "Vlan1831"
+    nexthop: []
+    interface:
+      - "Vlan1831"
   - prefix: "10.180.163.133/32"
     flags:
       - "attached"
     type: "attached"
-    nexthop: "10.180.163.133"
-    interface: "Vlan1831"
+    nexthop: []
+    interface:
+      - "Vlan1831"
   - prefix: "127.0.0.0/8"
     flags: []
     type: "drop"
-    nexthop: ""
-    interface: ""
+    nexthop: []
+    interface: []
   - prefix: "240.0.0.0/4"
     flags: []
     type: "drop"
-    nexthop: ""
-    interface: ""
+    nexthop: []
+    interface: []
   - prefix: "255.255.255.255/32"
     flags:
       - "receive"
     type: "receive"
-    nexthop: ""
-    interface: ""
+    nexthop: []
+    interface: []
