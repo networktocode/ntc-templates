@@ -3,25 +3,25 @@ parsed_sample:
   - prefix: "0.0.0.0/0"
     flags:
       - "default route"
-    type: "nexthop"
+    etype: "nexthop"
     nexthop:
       - "10.255.1.1"
     interface:
       - "Port-channel1.1"
   - prefix: "0.0.0.0/8"
     flags: []
-    type: "drop"
+    etype: "drop"
     nexthop: []
     interface: []
   - prefix: "0.0.0.0/32"
     flags:
       - "receive"
-    type: "receive"
+    etype: "receive"
     nexthop: []
     interface: []
   - prefix: "10.180.195.0/32"
     flags: []
-    type: "nexthop"
+    etype: "nexthop"
     nexthop:
       - "10.180.101.5"
       - "10.180.101.10"
@@ -30,7 +30,7 @@ parsed_sample:
       - "GigabitEthernet1/0/2"
   - prefix: "10.255.0.0/30"
     flags: []
-    type: "nexthop"
+    etype: "nexthop"
     nexthop:
       - "10.255.1.1"
     interface:
@@ -41,21 +41,21 @@ parsed_sample:
       - "connected"
       - "cover dependents"
       - "need deagg"
-    type: "attached"
+    etype: "attached"
     nexthop: []
     interface:
       - "Port-channel1.1"
   - prefix: "10.255.1.0/32"
     flags:
       - "receive"
-    type: "receive"
+    etype: "receive"
     nexthop: []
     interface:
       - "Port-channel1.1"
   - prefix: "10.255.1.1/32"
     flags:
       - "attached"
-    type: "attached"
+    etype: "attached"
     nexthop: []
     interface:
       - "Port-channel1.1"
@@ -64,7 +64,7 @@ parsed_sample:
       - "receive"
       - "local"
       - "source eligible"
-    type: "receive"
+    etype: "receive"
     nexthop: []
     interface:
       - "Port-channel1.1"
@@ -75,7 +75,7 @@ parsed_sample:
       - "receive"
       - "local"
       - "source eligible"
-    type: "receive"
+    etype: "receive"
     nexthop: []
     interface:
       - "Loopback180"
@@ -84,30 +84,30 @@ parsed_sample:
       - "receive"
       - "local"
       - "source eligible"
-    type: "receive"
+    etype: "receive"
     nexthop: []
     interface:
       - "Vlan1831"
   - prefix: "10.180.163.133/32"
     flags:
       - "attached"
-    type: "attached"
+    etype: "attached"
     nexthop: []
     interface:
       - "Vlan1831"
   - prefix: "127.0.0.0/8"
     flags: []
-    type: "drop"
+    etype: "drop"
     nexthop: []
     interface: []
   - prefix: "240.0.0.0/4"
     flags: []
-    type: "drop"
+    etype: "drop"
     nexthop: []
     interface: []
   - prefix: "255.255.255.255/32"
     flags:
       - "receive"
-    type: "receive"
+    etype: "receive"
     nexthop: []
     interface: []
