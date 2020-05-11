@@ -6,5 +6,7 @@ Start
   ^[Pp]art
   ^${PART}\s+${TYPE}?\s+?(.+Version\s+|.+U-Boot\s.+|.+?)${VERSION}(Copy\S+$$|\s+.+$$|$$) -> Record
   ^\s+${TYPE}\s+?(.+Version\s+|.+U-Boot\s.+|.+?)${VERSION}(Copy\S+$$|\s+.+$$|$$) -> Record
+  ^\s*$$
+  ^{master:\d+}
 
 EOF

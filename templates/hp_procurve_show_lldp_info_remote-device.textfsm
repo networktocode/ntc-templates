@@ -1,0 +1,20 @@
+Value Required LOCAL_PORT (\S+)
+Value NEIGHBOR_CHASSIS_ID ((?:[a-z0-9]{2}\s){5}[a-z0-9]{2}|\S+)
+Value NEIGHBOR_PORTID ((?:[a-z0-9]{2}\s){5}[a-z0-9]{2}|\S+)
+Value NEIGHBOR_DESCR (\S+|.*?)
+Value NEIGHBOR_SYSNAME (\S+)
+
+Start
+  ^\s*LLDP\sRemote\sDevices\sInformation\s*$$
+  ^\s+LocalPort\s|\sChassisId.*$$
+  ^\s+-.* -> LLDP
+  ^\s*$$
+  ^. -> Error
+
+LLDP
+  ^\s+${LOCAL_PORT}\s+\|\s${NEIGHBOR_CHASSIS_ID}\s+${NEIGHBOR_PORTID}\s*$$ -> Record
+  ^\s+${LOCAL_PORT}\s+\|\s${NEIGHBOR_CHASSIS_ID}\s+${NEIGHBOR_PORTID}\s+${NEIGHBOR_SYSNAME}\s*$$ -> Record
+  ^\s+${LOCAL_PORT}\s+\|\s${NEIGHBOR_CHASSIS_ID}\s+${NEIGHBOR_PORTID}\s+${NEIGHBOR_DESCR}\s+${NEIGHBOR_SYSNAME}\s*$$ -> Record
+  ^\S+\#\s*$$
+  ^\s*$$
+  ^. -> Error

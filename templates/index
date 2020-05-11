@@ -55,6 +55,7 @@ arista_eos_show_vrf.textfsm, .*, arista_eos, sh[[ow]] vrf
 
 aruba_os_show_ipv6_interface_brief.textfsm, .*, aruba_os, sh[[ow]] ipv6 in[[terface]] b[[rief]]
 aruba_os_show_ip_interface_brief.textfsm, .*, aruba_os, sh[[ow]] ip in[[terface]] b[[rief]]
+aruba_os_show_arp.textfsm, .*, aruba_os, sh[[ow]] arp
 
 avaya_ers_show_mac-address-table.textfsm, .*, avaya_ers, sh[[ow]] mac-a[[ddress-table]]
 avaya_ers_show_mlt_all-members.textfsm, .*, avaya_ers, sh[[ow]] ml[[t]] a[[ll-members]]
@@ -92,6 +93,7 @@ brocade_netiron_show_metro.textfsm, .*, brocade_netiron, sh[[ow]] met[[ro-ring]]
 brocade_netiron_show_span.textfsm, .*, brocade_netiron, sh[[ow]] sp[[anning-tree]]
 brocade_netiron_show_topo.textfsm, .*, brocade_netiron, sh[[ow]] to[[pology-group]]
 
+checkpoint_gaia_show_arp_dynamic_all.textfsm, .*, checkpoint_gaia, show arp dynamic all
 checkpoint_gaia_show_interfaces_all.textfsm, .*, checkpoint_gaia, show interfaces all
 checkpoint_gaia_show_ntp_servers.textfsm, .*, checkpoint_gaia, show ntp servers
 checkpoint_gaia_show_version_all.textfsm, .*, checkpoint_gaia, show version all
@@ -103,20 +105,27 @@ checkpoint_gaia_show_dns.textfsm, .*, checkpoint_gaia, show dns
 checkpoint_gaia_show_lom.textfsm, .*, checkpoint_gaia, show lom
 checkpoint_gaia_fw_stat.textfsm, .*, checkpoint_gaia, fw stat
 
-ciena_6x_software_show.textfsm, .*, ciena_6x, so[[ftware]] sh[[ow]]
+ciena_saos_chassis_show_temperature.textfsm, .*, ciena_saos, ch[[assis]] sh[[ow]] te[[mperature]]
+ciena_saos_ssh_server_show_key.textfsm, .*, ciena_saos, ssh se[[rver]] sh[[ow]] k[[ey]]
+ciena_saos_software_show.textfsm, .*, ciena_saos, so[[ftware]] sh[[ow]]
+ciena_saos_port_show.textfsm, .*, ciena_saos, po[[rt]] sh[[ow]]
+ciena_saos_rstp_show.textfsm, .*, ciena_saos, rs[[tp]] sh[[ow]]
+ciena_saos_vlan_show.textfsm, .*, ciena_saos, vl[[an]] sh[[ow]]
 
 cisco_asa_show_running-config_object_network.textfsm, .*, cisco_asa, sh[[ow]] ru[[nning-config]] o[[bject]] n[[etwork]]
 cisco_asa_show_asp_table_vpn-context_detail.textfsm, .*, cisco_asa, sh[[ow]] asp t[[able]] vpn-co[[ntext]] d[[etail]]
 cisco_asa_show_running-config_crypto_ikev1.textfsm, .*, cisco_asa, sh[[ow]] ru[[nning-config]] cr[[ypto]] ikev1
 cisco_asa_show_running-config_tunnel-group.textfsm, .*, cisco_asa, sh[[ow]] ru[[nning-config]] tu[[nnel-group]]
 cisco_asa_show_running-config_crypto_map.textfsm, .*, cisco_asa, sh[[ow]] ru[[nning-config]] cr[[ypto]] m[[ap]]
+cisco_asa_show_vpn-sessiondb_anyconnect.textfsm, .*, cisco_asa, sh[[ow]] vpn-[[sessiondb]] a[[nyconnect]]
 cisco_asa_show_vpn-sessiondb_detail_l2l.textfsm, .*, cisco_asa, sh[[ow]] vpn-[[sessiondb]] d[[etail]] l[[2l]]
 cisco_asa_show_crypto_ikev1_sa_detail.textfsm, .*, cisco_asa, sh[[ow]] cry[[pto]] ikev1 sa d[[etail]]
 cisco_asa_show_object-group_network.textfsm, .*, cisco_asa, sh[[ow]] (?:ru[[nning-config]] object-[[group]]|ob[[ject-group]]) n[[etwork]]
 cisco_asa_show_running-config_ipsec.textfsm, .*, cisco_asa, sh[[ow]] ru[[nning-config]] ips[[ec]]
 cisco_asa_show_interface_detail.textfsm, .*, cisco_asa, sh[[ow]] int[[erface]] d[[etail]]
-cisco_asa_show_crypto_ipsec_sa.textfsm, .*, cisco_asa, sh[[ow]] cry[[pto]] ip[[sec]] sa
+cisco_asa_show_crypto_ipsec_sa.textfsm, .*, cisco_asa, sh[[ow]] (?:cry[[pto]] ip[[sec]]|ipsec) sa
 cisco_asa_show_resource_usage.textfsm, .*, cisco_asa, sh[[ow]] res[[ource]] u[[sage]]
+cisco_asa_show_vpn-sessiondb.textfsm, .*, cisco_asa, sh[[ow]] vpn-[[sessiondb]]
 cisco_asa_show_access-list.textfsm, .*, cisco_asa, sh[[ow]] ac[[cess-list]]
 cisco_asa_show_license_all.textfsm, .*, cisco_asa, (?:fa[[ilover]]\s+e[[xec]]\s+)?sh[[ow]] lic[[ense]] a[[ll]]
 cisco_asa_show_interface.textfsm, .*, cisco_asa, sh[[ow]] int[[erface]]
@@ -128,16 +137,20 @@ cisco_asa_show_version.textfsm, .*, cisco_asa, sh[[ow]] ver[[sion]]
 cisco_asa_show_route.textfsm, .*, cisco_asa, sh[[ow]] ro[[ute]]
 cisco_asa_show_xlate.textfsm, .*, cisco_asa, sh[[ow]] x[[late]]
 cisco_asa_show_name.textfsm, .*, cisco_asa, sh[[ow]] nam[[e]]
-cisco_asa_show_arp.textfsm, .*, cisco_asa, sh[[ow]] arp
+cisco_asa_show_arp.textfsm, .*, cisco_(asa|ftd), sh[[ow]] arp
 cisco_asa_show_nat.textfsm, .*, cisco_asa, sh[[ow]] nat
+cisco_asa_ping.textfsm, .*, cisco_(asa|ftd), ping
 cisco_asa_dir.textfsm, .*, cisco_asa, dir
 
+cisco_ios_show_module.textfsm:cisco_ios_show_module_status.textfsm:cisco_ios_show_module_submodule.textfsm:cisco_ios_show_module_online_diag.textfsm, .*, cisco_ios, sh[[ow]] mod[[ule]]
 cisco_ios_show_switch_detail.textfsm:cisco_ios_show_switch_detail_stack_ports.textfsm, .*, cisco_ios, sh[[ow]] sw[[itch]] d[[etail]]
 cisco_ios_show_running-config_partition_access-list.textfsm, .*, cisco_ios, sh[[ow]] ru[[nning-config]] p[[artition]] a[[ccess-list]]
 cisco_ios_show_running-config_partition_route-map.textfsm, .*, cisco_ios, sh[[ow]] ru[[nning-config]] p[[artition]] route-[[map]]
 cisco_ios_show_capability_feature_routing.textfsm, .*, cisco_ios, sh[[ow]] cap[[ability]] f[[eature]] r[[outing]]
+cisco_ios_show_ip_ospf_database_network.textfsm, .*, cisco_ios, sh[[ow]] ip ospf data[[base]] ne[[twork]]
 cisco_ios_show_authentication_sessions.textfsm, .*, cisco_ios, show authen[[tication]] ses[[sions]]
 cisco_ios_show_environment_temperature.textfsm, .*, cisco_ios, sh[[ow]] envi[[ronment]] t[[emperature]]
+cisco_ios_show_ip_ospf_database_router.textfsm, .*, cisco_ios, sh[[ow]] ip ospf data[[base]] r[[outer]]
 cisco_ios_show_ip_ospf_interface_brief.textfsm, .*, cisco_ios, sh[[ow]] ip ospf int[[erface]]
 cisco_ios_show_processes_memory_sorted.textfsm, .*, cisco_ios, sh[[ow]] pro[[cesses]] mem[[ory]] so[[rted]]
 cisco_ios_show_interfaces_description.textfsm, .*, cisco_ios, sh[[ow]] int[[erfaces]] des[[cription]]
@@ -147,6 +160,7 @@ cisco_ios_show_interface_transceiver.textfsm, .*, cisco_ios, sh[[ow]] int[[erfac
 cisco_ios_show_interfaces_switchport.textfsm, .*, cisco_ios, sh[[ow]] int[[erfaces]] sw[[itchport]]
 cisco_ios_show_lldp_neighbors_detail.textfsm, .*, cisco_ios, sh[[ow]] lld[[p]] neig[[hbors]] det[[ail]]
 cisco_ios_show_cdp_neighbors_detail.textfsm, .*, cisco_ios, sh[[ow]] c[[dp]] neig[[hbors]] det[[ail]]
+cisco_ios_show_etherchannel_summary.textfsm, .*, cisco_ios, sh[[ow]] etherchann[[el]] summ[[ary]]
 cisco_ios_show_ipv6_interface_brief.textfsm, .*, cisco_ios, sh[[ow]] ipv[[6]] i[[nterface]] b[[rief]]
 cisco_ios_show_ip_eigrp_neighbors.textfsm, .*, cisco_ios, sh[[ow]] ip ei[[grp]] nei[[ghbors]]
 cisco_ios_show_ip_flow_toptalkers.textfsm, .*, cisco_ios, sh[[ow]] ip fl[[ow]] top[[-talkers]]
@@ -154,11 +168,14 @@ cisco_ios_show_ip_interface_brief.textfsm, .*, cisco_ios, sh[[ow]] ip int[[erfac
 cisco_ios_show_interfaces_status.textfsm, .*, cisco_ios, sh[[ow]] int[[erfaces]] st[[atus]]
 cisco_ios_show_ip_eigrp_topology.textfsm, .*, cisco_ios, sh[[ow]] ip eigrp top[[ology]]
 cisco_ios_show_ip_source_binding.textfsm, .*, cisco_ios, sh[[ow]] ip sou[[rce]] b[[inding]]
-cisco_ios_show_mac-address-table.textfsm, .*, cisco_ios, sh[[ow]] m[[ac-address-table]]
+cisco_ios_show_mac-address-table.textfsm, .*, cisco_ios, sh[[ow]] mac[[-address-table]]
+cisco_ios_show_adjacency_detail.textfsm, .*, cisco_ios, sh[[ow]] ad[[jacency]](?:\s+\S+)* det[[ail]]
 cisco_ios_show_ip_bgp_neighbors.textfsm, .*, cisco_ios, sh[[ow]] ip bgp nei[[ghbors]]
 cisco_ios_show_ip_ospf_database.textfsm, .*, cisco_ios, sh[[ow]] ip ospf data[[base]]
 cisco_ios_show_ip_ospf_neighbor.textfsm, .*, cisco_ios, sh[[ow]] ip ospf nei[[ghbor]]
+cisco_ios_show_ip_route_summary.textfsm, .*, cisco_ios, sh[[ow]] ip ro[[ute]] sum[[mary]]
 cisco_ios_show_ip_access-lists.textfsm, .*, cisco_ios, sh[[ow]] ip acce[[ss-lists]]
+cisco_ios_show_mpls_interfaces.textfsm, .*, cisco_ios, sh[[ow]] mpls interfa[[ces]]
 cisco_ios_show_power_available.textfsm,  .*, cisco_ios, sh[[ow]] pow[[er]] a[[vailable]]
 cisco_ios_show_ip_bgp_summary.textfsm, .*, cisco_ios, sh[[ow]] ip bgp sum[[mary]]
 cisco_ios_show_ip_prefix-list.textfsm, .*, cisco_ios, sh[[ow]] ip pre[[fix-list]]
@@ -231,6 +248,7 @@ cisco_nxos_show_lldp_neighbors.textfsm, .*, cisco_nxos, sh[[ow]] ll[[dp]] nei[[g
 cisco_nxos_show_cdp_neighbors.textfsm, .*, cisco_nxos, sh[[ow]] cd[[p]] neig[[hbors]]
 cisco_nxos_show_ip_arp_detail.textfsm, .*, cisco_nxos, sh[[ow]] i[[p]] a[[rp]] det[[ail]]
 cisco_nxos_show_processes_cpu.textfsm, .*, cisco_nxos, sh[[ow]] proc[[esses]] c[[pu]]
+cisco_nxos_show_vrf_interface.textfsm, .*, cisco_nxos, sh[[ow]] vrf int[[erface]]
 cisco_nxos_show_access-lists.textfsm, .*, cisco_nxos, sh[[ow]] acc[[ess-lists]]
 cisco_nxos_show_environments.textfsm, .*, cisco_nxos, sh[[ow]] envi[[ronments]]
 cisco_nxos_show_interface.textfsm, .*, cisco_nxos, sh[[ow]] inte[[rface]]
@@ -251,6 +269,8 @@ cisco_nxos_show_vdc.textfsm, .*, cisco_nxos, sh[[ow]] vdc
 cisco_nxos_show_vpc.textfsm, .*, cisco_nxos, sh[[ow]] vpc
 cisco_nxos_show_vrf.textfsm, .*, cisco_nxos, sh[[ow]] vrf
 
+cisco_s300_show_version.textfsm, .*, cisco_s300, sh[[ow]] ver[[sion]]
+
 cisco_wlc_ssh_show_advanced_802.11a_channel.textfsm, .*, cisco_wlc_ssh, sh[[ow]] ad[[vanced]] 802\.11[ab] ch[[annel]]
 cisco_wlc_ssh_show_802.11a_cleanair_config.textfsm, .*, cisco_wlc_ssh, sh[[ow]] 802\.11[ab] cl[[eanair]] c[[onfig]]
 cisco_wlc_ssh_show_cdp_neighbors_detail.textfsm, .*, cisco_wlc_ssh, sh[[ow]] c[[dp]] neig[[hbors]] det[[ail]]
@@ -259,6 +279,8 @@ cisco_wlc_ssh_show_ap_config_general.textfsm, .*, cisco_wlc_ssh, sh[[ow]] ap con
 cisco_wlc_ssh_show_interface_summary.textfsm, .*, cisco_wlc_ssh, sh[[ow]] int[[erface]] s[[ummary]]
 cisco_wlc_ssh_show_client_detail.textfsm, .*, cisco_wlc_ssh, sh[[ow]] cl[[ient]] det[[ail]]
 cisco_wlc_ssh_show_exclusionlist.textfsm, .*, cisco_wlc_ssh, sh[[ow]] ex[[clusionlist]]
+cisco_wlc_ssh_show_mobility_sum.textfsm, .*, cisco_wlc_ssh, sh[[ow]] mo[[bility]] su[[mmary]]
+cisco_wlc_ssh_show_band-select.textfsm, .*, cisco_wlc_ssh, sh[[ow]] ba[[nd-select]]
 cisco_wlc_ssh_show_ap_summary.textfsm, .*, cisco_wlc_ssh, sh[[ow]] ap sum[[mary]]
 cisco_wlc_ssh_show_inventory.textfsm, .*, cisco_wlc_ssh, sh[[ow]] inve[[ntory]]
 cisco_wlc_ssh_show_wlan_sum.textfsm, .*, cisco_wlc_ssh, sh[[ow]] wl[[an]] s[[ummary]]
@@ -276,6 +298,7 @@ cisco_xr_admin_show_controller_fabric_health.textfsm, .*, cisco_xr, adm[[in]] sh
 cisco_xr_show_controller_fabric_plane_all.textfsm, .*, cisco_xr, sh[[ow]] controller fab[[ric]] pla[[ne]] all
 cisco_xr_show_configuration_commit_list.textfsm, .*, cisco_xr, sh[[ow]] conf[[iguration]] c[[ommit]] l[[ist]]
 cisco_xr_show_asic-errors_all_location.textfsm, .*, cisco_xr, sh[[ow]] asic-er[[rors]] all loc[[ation]]
+cisco_xr_admin_show_environment_power.textfsm, .*, cisco_xr, adm[[in]] sh[[ow]] env[[ironment]] p[[ower]]
 cisco_xr_show_dhcp_ipv4_proxy_binding.textfsm, .*, cisco_xr, sh[[ow]] dh[[cp]] ipv4 p[[roxy]] b[[inding]]
 cisco_xr_show_mpls_ldp_neighbor_brief.textfsm, .*, cisco_xr, sh[[ow]] mp[[ls]] ld[[p]] neigh[[bor]] br[[ief]]
 cisco_xr_admin_show_environment_fan.textfsm, .*, cisco_xr, adm[[in]] sh[[ow]] env[[ironment]] f[[an]]
@@ -316,21 +339,29 @@ fortinet_fortios_get_router_info_bgp_summary.textfsm, .*, fortinet_fortios, g[[e
 fortinet_fortios_get_system_interface.textfsm, .*, fortinet_fortios, [[g]]et [[s]]ystem [[i]]nterface
 fortinet_fortios_get_system_status.textfsm, .*, fortinet_fortios, [[g]]et [[s]]ystem [[s]]tatus
 
+hp_comware_display_lldp_neighbor-information_verbose.textfsm, .*, hp_comware, di[[splay]] ll[[dp]] n[[eighbor-information]] v[[erbose]]
 hp_comware_display_counters_bound_interface.textfsm, .*, hp_comware, di[[splay]] cou[[nters]] (\S+) i[[nterface]]
+hp_comware_display_ip_routing-table.textfsm, .*, hp_comware, di[[splay]] ip r[[outing-table]]
+hp_comware_display_device_manuinfo.textfsm, .*, hp_comware, di[[splay]] dev[[ice]] m[[anuinfo]]
+hp_comware_display_ip_interface.textfsm, .*, hp_comware, dis[[play]] ip i[[nterface]]
 hp_comware_display_mac-address.textfsm, .*, hp_comware, di[[splay]] mac-ad[[dress]]
 hp_comware_display_vlan_brief.textfsm, .*, hp_comware, di[[splay]] v[[lan]] b[[rief]]
 hp_comware_display_clock.textfsm, .*, hp_comware, di[[splay]] clo[[ck]]
 hp_comware_display_arp.textfsm, .*, hp_comware, di[[splay]] a[[rp]]
 
+hp_procurve_show_lldp_info_remote-device_detail.textfsm, .*, hp_procurve, sh[[ow]] ll[[dp]] i[[nfo]] r[[emote-device]] .+
+hp_procurve_show_lldp_info_remote-device.textfsm, .*, hp_procurve, sh[[ow]] ll[[dp]] i[[nfo]] r[[emote-device]]
 hp_procurve_show_tech_buffers.textfsm, .*, hp_procurve, sh[[ow]] tec[[h]] buf[[ffers]]
 hp_procurve_show_mac-address.textfsm, .*, hp_procurve, sh[[ow]] mac-a[[ddress]]
 hp_procurve_show_system.textfsm, .*, hp_procurve, sh[[ow]] syst[[em]]
+hp_procurve_show_trunks.textfsm, .*, hp_procurve, sh[[ow]] tr[[unks]]
 hp_procurve_show_vlans.textfsm, .*, hp_procurve, sh[[ow]] vl[[ans]]
 hp_procurve_show_arp.textfsm, .*, hp_procurve, sh[[ow]] ar[[p]]
 
 huawei_vrp_display_interface_brief.textfsm, .*, huawei_vrp, disp[[lay]] inter[[face]] br[[ief]]
 huawei_vrp_display_lldp_neighbor.textfsm, .*, huawei_vrp, disp[[lay]] lldp nei[[ghbor]]
 huawei_vrp_display_temperature.textfsm, .*, huawei_vrp, disp[[lay]] tem[[perature]]
+huawei_vrp_display_version.textfsm, .*, huawei_vrp, disp[[lay]] ver[[sion]]
 
 juniper_junos_show_chassis_cluster_interfaces.textfsm, .*, juniper_junos, sh[[ow]] ch[[assis]] c[[luster]] i[[nterface]]
 juniper_junos_show_chassis_cluster_status.textfsm, .*, juniper_junos, sh[[ow]] ch[[assis]] c[[luster]] s[[tatus]]

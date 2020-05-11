@@ -10,9 +10,11 @@ Value INTERFACE (\S+)
 
 Start
   ^\s+${PROTOCOL}\s+${NETWORK}/${MASK}\s+(?:\[${DISTANCE}/${METRIC}\]|is\s+${DIRECT})(?:.+?)${NEXT_HOP},\s+${INTERFACE}$$ -> Record
-  ^\s+via\s+${NEXT_HOP},\s+${INTERFACE}
+  ^\s+via\s+${NEXT_HOP},\s+${INTERFACE} -> Record
   ^VRF\s+name:\s+${VRF}\s*$$
   ^VRF:\s+${VRF}\s*$$
+  ^WARNING
+  ^kernel
   ^Codes:
   # Match for codes
   ^\s+\S+\s+-\s+\S+

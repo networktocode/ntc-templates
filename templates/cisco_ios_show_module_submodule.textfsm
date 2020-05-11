@@ -1,0 +1,21 @@
+Value Key MODULE (\d+)
+Value SUBMODULE (.+?)
+Value SUBMODULE_MODEL (\S+)
+Value SUBMODULE_SERIAL (\S+)
+Value SUBMODULE_HW (\S+)
+Value SUBMODULE_STATUS (\w+)
+
+
+Start
+  ^\s*Mod\s+Sub-Module\s+Model\s+Serial\s+Hw\s+Status\s*$$ -> SubModule  
+
+SubModule
+  ^-+
+  ^\s*${MODULE}\s+${SUBMODULE}\s+${SUBMODULE_MODEL}\s+${SUBMODULE_SERIAL}\s+${SUBMODULE_HW}\s+${SUBMODULE_STATUS}\s*$$ -> Record  
+  ^Mod\s+Ports\s+Card\s+Type\s+Model\s+Serial -> End
+  ^Mod\s+MAC\s+addresses\s+Hw\s+Fw\s+Sw\s+Status -> End
+  ^Mod\s+Online\s+Diag\s+Status -> End
+  ^\s*$$
+  ^. -> Error
+
+End

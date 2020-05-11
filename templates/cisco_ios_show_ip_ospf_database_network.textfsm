@@ -1,0 +1,45 @@
+Value Filldown ROUTER_ID (\d+\.\d+\.\d+\.\d+)
+Value Filldown PROCESS_ID (\d+)
+Value Filldown AREA (\d+\.\d+\.\d+\.\d+|\d+)
+Value Filldown LSA_AGE (\d+)
+Value Filldown LSA_OPTIONS (.+)
+Value Filldown LSA_TYPE (.+)
+Value Filldown LSA_ID (\d+\.\d+\.\d+\.\d+)
+Value Filldown LSA_ADV_ROUTER (\d+\.\d+\.\d+\.\d+)
+Value Filldown LSA_SEQ_NUMBER (\S+)
+Value Filldown LSA_CHECKSUM (\S+)
+Value Filldown LSA_LENGTH (\d+)
+Value Filldown LSA_NETWORK_MASK (\S+)
+Value Filldown LSA_ABR (Area\s+Border\s+Router)
+Value Filldown LSA_ASBR (AS\s+Boundary\s+Router)
+Value LS_ATT_ROUTER (\d+\.\d+\.\d+\.\d+)
+
+Start
+  ^\s*OSPF\s+Router\s+with\s+ID\s+\(${ROUTER_ID}\)\s+\(Process\s+ID\s+${PROCESS_ID}\)
+  ^\s+Net\s+Link\s+States\s+\(Area ${AREA}\) -> LSAInfo
+  ^\s*$$
+  ^. -> Error
+
+LSAInfo
+  ^\s+LS\s+age:\s+${LSA_AGE}
+  ^\s+Options:\s+\(${LSA_OPTIONS}\)
+  ^\s+LS\s+Type:\s+${LSA_TYPE}
+  ^\s+Link\s+State\s+ID:\s+${LSA_ID}
+  ^\s+Advertising\s+Router:\s+${LSA_ADV_ROUTER}
+  ^\s+LS\s+Seq\s+Number:\s+${LSA_SEQ_NUMBER}
+  ^\s+Checksum:\s+${LSA_CHECKSUM}
+  ^\s+Length:\s+${LSA_LENGTH}
+  ^\s+${LSA_ABR}$$
+  ^\s+${LSA_ASBR}$$
+  ^\s+Network\s+Mask:\s+${LSA_NETWORK_MASK} -> LSAs
+  ^\s*$$
+  ^. -> Error
+
+LSAs
+  ^\s+Attached\s+Router:\s+${LS_ATT_ROUTER} -> Next.Record
+  ^\s+LS\s+age:\s+${LSA_AGE} -> LSAInfo
+  ^\s+Router\s+Link\s+States\s+\(Area ${AREA}\) -> LSAInfo
+  ^\s*$$
+  ^. -> Error
+
+EOF

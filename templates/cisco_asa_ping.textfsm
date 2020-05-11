@@ -1,0 +1,19 @@
+Value Required SENT_QTY (\d+)
+Value Required SENT_TYPE (.*)
+Value Required DESTINATION (\S+)
+Value Required TIMEOUT (\d+)
+Value Required RESPONSE_STREAM ([\.\!]+)
+Value Required SUCCESS_PCT (\d+)
+Value Required SUCCESS_QTY (\d+)
+Value Required RTT_MIN (\d+)
+Value Required RTT_AVG (\d+)
+Value Required RTT_MAX (\d+)
+
+
+Start
+  ^Type\s+escape\s+sequence\s+to\s+abort.
+  ^Sending\s+${SENT_QTY},\s+${SENT_TYPE}\s+to\s+${DESTINATION},\s+timeout\s+is\s+${TIMEOUT}\s+seconds:
+  ^${RESPONSE_STREAM}
+  ^Success\s+rate\s+is\s+${SUCCESS_PCT}\s+percent\s+\(${SUCCESS_QTY}/\d+\),\s+round-trip\s+min/avg/max\s+=\s+${RTT_MIN}/${RTT_AVG}/${RTT_MAX}\s+ms
+  ^\s*$$
+  ^. -> Error

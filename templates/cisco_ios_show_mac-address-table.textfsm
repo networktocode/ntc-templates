@@ -1,6 +1,6 @@
 Value DESTINATION_ADDRESS ([0-9a-fA-F]{4}\.[0-9a-fA-F]{4}\.[0-9a-fA-F]{4})
-Value TYPE (\w+)
-Value VLAN (\w+)
+Value TYPE (\S+)
+Value VLAN (\S+)
 Value DESTINATION_PORT (\S+)
 
 Start
