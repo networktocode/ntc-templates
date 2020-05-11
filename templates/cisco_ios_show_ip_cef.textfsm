@@ -1,6 +1,6 @@
 Value Required PREFIX ((?:\d{1,3}\.){3}\d{1,3}\/\d{1,2})
 Value List FLAGS ([^,\]\n]+)
-Value TYPE ((?:no\s)?(?:[a-z]+))
+Value ETYPE ((?:no\s)?(?:[a-z]+))
 # Nexthop and Interface are lists to support ECMP
 # Usually these will be single item lists
 # However, if there are multiple paths available
@@ -50,13 +50,13 @@ Start
   #     - nexthop
   #     - multicast
   ^\s+recursive\s+via\s+${NEXTHOP}
-  ^\s+${TYPE}(?<=receive)\s+for\s+${INTERFACE}
-  ^\s+${TYPE}(?<=attached)\s+to\s+${INTERFACE}
-  ^\s+${TYPE}(?<=drop)$$
-  ^\s+${TYPE}(?<=no route)$$
-  ^\s+${TYPE}(?<=receive)$$
-  ^\s+${TYPE}(?<=multicast)$$
-  ^\s+${TYPE}(?<=nexthop)\s+${NEXTHOP}\s+${INTERFACE}
+  ^\s+${ETYPE}(?<=receive)\s+for\s+${INTERFACE}
+  ^\s+${ETYPE}(?<=attached)\s+to\s+${INTERFACE}
+  ^\s+${ETYPE}(?<=drop)$$
+  ^\s+${ETYPE}(?<=no route)$$
+  ^\s+${ETYPE}(?<=receive)$$
+  ^\s+${ETYPE}(?<=multicast)$$
+  ^\s+${ETYPE}(?<=nexthop)\s+${NEXTHOP}\s+${INTERFACE}
   #
   # --- Parse CEF table from Cisco IOS 12.x ISR G1
   #
@@ -83,7 +83,7 @@ Start
   #     - cached (same as nexthop in IOS v15.x)
   #     - drop
   #     - if type is None, then it's receive (check flags)
-  ^\s+valid\s+${TYPE}\s+adjacency$$
+  ^\s+valid\s+${ETYPE}\s+adjacency$$
   #
   # Ignore JUNK
   #
@@ -113,9 +113,9 @@ Start
 #     e.g. show ip cef, or show ip cef vrf <name>
 Entries
   ^(?:\d{1,3}\.){3}\d{1,3}\/\d{1,2} -> Continue.Record
-  ^${PREFIX}\s+${TYPE}\s*$$
+  ^${PREFIX}\s+${ETYPE}\s*$$
   ^${PREFIX}\s+${NEXTHOP}\s*$$
-  ^${PREFIX}\s+${TYPE}\s+${INTERFACE}$$
+  ^${PREFIX}\s+${ETYPE}\s+${INTERFACE}$$
   ^${PREFIX}\s+${NEXTHOP}\s+${INTERFACE}$$
   ^\s+${NEXTHOP}\s+${INTERFACE}$$
   ^\s*$$
