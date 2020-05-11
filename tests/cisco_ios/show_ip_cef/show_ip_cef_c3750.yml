@@ -2,31 +2,31 @@
 parsed_sample:
   - prefix: "0.0.0.0/0"
     flags: []
-    type: ""
+    etype: ""
     nexthop:
       - "10.158.0.198"
     interface:
       - "Vlan1801"
   - prefix: "0.0.0.0/8"
     flags: []
-    type: "drop"
+    etype: "drop"
     nexthop: []
     interface: []
   - prefix: "0.0.0.0/32"
     flags: []
-    type: "receive"
+    etype: "receive"
     nexthop: []
     interface: []
   - prefix: "10.0.0.0/16"
     flags: []
-    type: ""
+    etype: ""
     nexthop:
       - "10.158.0.198"
     interface:
       - "Vlan1801"
   - prefix: "10.0.120.0/24"
     flags: []
-    type: ""
+    etype: ""
     nexthop:
       - "10.158.0.198"
     interface:
