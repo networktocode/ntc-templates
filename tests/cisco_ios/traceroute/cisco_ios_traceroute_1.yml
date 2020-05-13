@@ -1,0 +1,35 @@
+---
+parsed_sample:
+  - hop_num: "1"
+    nh_address: "10.180.133.121"
+    nh_hostname: ""
+    rtt_response:
+      - "1"
+    details: ""
+  - hop_num: "1"
+    nh_address: "10.180.133.125"
+    nh_hostname: ""
+    rtt_response:
+      - "1"
+    details: ""
+  - hop_num: "1"
+    nh_address: "10.180.133.121"
+    nh_hostname: ""
+    rtt_response:
+      - "0"
+    details: ""
+  - hop_num: "1"
+    nh_address: "10.180.133.125"
+    nh_hostname: ""
+    rtt_response:
+      - "2"
+    details: ""
+  - hop_num: "2"
+    nh_address: "10.180.133.177"
+    nh_hostname: ""
+    rtt_response:
+      - "1"
+      - "*"
+      - "2"
+      - "*"
+    details: ""
