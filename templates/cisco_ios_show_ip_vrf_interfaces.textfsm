@@ -9,8 +9,8 @@ Value Required PROTO_STATE (\S+)
 
 Start
   ^Interface\s+IP-Address\s+VRF\s+Protocol -> Entries
-  ^\s+$$
-  ^.*$$ -> Error
+  ^\s*$$
+  ^. -> Error
 
 Entries
   ^${INTERFACE}\s+${IPADDRESS}\s+${VRF}\s+${PROTO_STATE} -> Record
