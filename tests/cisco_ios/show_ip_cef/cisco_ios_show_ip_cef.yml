@@ -1,0 +1,36 @@
+---
+parsed_sample:
+  - interface:
+      - "Port-channel1"
+    nexthop:
+      - "172.16.88.2"
+    prefix: "0.0.0.0/0"
+  - interface: []
+    nexthop:
+      - "drop"
+    prefix: "0.0.0.0/8"
+  - interface: []
+    nexthop:
+      - "receive"
+    prefix: "0.0.0.0/32"
+  - interface:
+      - "Vlan200"
+    nexthop:
+      - "attached"
+    prefix: "10.1.2.0/24"
+  - interface: []
+    nexthop:
+      - "drop"
+    prefix: "224.0.0.0/4"
+  - interface: []
+    nexthop:
+      - "receive"
+    prefix: "224.0.0.0/24"
+  - interface: []
+    nexthop:
+      - "drop"
+    prefix: "240.0.0.0/4"
+  - interface: []
+    nexthop:
+      - "receive"
+    prefix: "255.255.255.255/32"

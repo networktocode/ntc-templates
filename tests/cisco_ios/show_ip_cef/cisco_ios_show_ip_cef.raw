@@ -1,0 +1,9 @@
+Prefix               Next Hop             Interface
+0.0.0.0/0            172.16.88.2          Port-channel1
+0.0.0.0/8            drop
+0.0.0.0/32           receive              
+10.1.2.0/24          attached             Vlan200
+224.0.0.0/4          drop
+224.0.0.0/24         receive              
+240.0.0.0/4          drop
+255.255.255.255/32   receive              
