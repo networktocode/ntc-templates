@@ -1,0 +1,19 @@
+Value VLAN (\S+)
+Value MAC_ADDRESS (\S+)
+Value MAC_FLAG (\S+)
+Value AGE (\S+)
+Value LOGICAL_INTERFACE (\S+)
+
+Start
+  ^MAC\sflags\s\(S\s-\sstatic\sMAC,\sD\s-\sdynamic\sMAC,\sL\s-\slocally\slearned,\sP\s-\sPersistent\sstatic\S*\s*\S*\s*\S*\s*\S*\s*\S*$$
+  ^\s+SE\s-\sstatistics\senabled,\sNM\s-\snon\sconfigured\sMAC,\sR\s-\sremote\sPE\sMAC,\sO\s-\sovsdb\sMAC\)$$
+  ^Ethernet\sswitching\stable\s:\s\d+\sentries,\s\d+\slearned$$
+  ^Routing\sinstance\s:\sdefault-switch$$
+  ^\s+Vlan\s+MAC\s+MAC\s+Age\s+Logical\s*\S*\s*\S*\s*$$
+  ^\s+name\s+address\s+flags\s+interface\s*\S*\s*\S*\s*$$
+  ^\s+Vlan${VLAN}\s+${MAC_ADDRESS}\s+${MAC_FLAG}\s+${AGE}\s+${LOGICAL_INTERFACE}\s*\S*\s*\S* -> Record
+  ^\s*$$
+  ^{master:\d+}
+  ^. -> Error
+
+EOF
