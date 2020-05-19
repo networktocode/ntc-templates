@@ -29,6 +29,8 @@ Start
 
 Connection
   ^\s*Username\s*:\s+${USERNAME}\s+Index\s+:\s*${INDEX}$$
+  ^\s*Username\s*:\s+${USERNAME}$$
+  ^\s*Index\s*:\s+${INDEX}$$
   ^\s*Assigned\s+IP\s*:\s+${ASSIGNED_IP}\s+Public\s*IP\s*:\s*${PUBLIC_IP}$$
   ^\s*Assigned\s+IP\s*:\s+${ASSIGNED_IP}$$
   ^\s*Public\s+IP\s*:\s+${PUBLIC_IP}$$
