@@ -12,20 +12,20 @@ Start
   ^\|\s+\|\s+\|
   ^\|VLAN\|.*
   ^\|\s+ID\s+\|\s+VLAN Name* -> VLAN_TABLE
-  ^\+-+\sCROSS CONNECTION TABLE -+.* -> CROSS_TABLE
+  ^\+-+\s+CROSS\s+CONNECTION\s+TABLE -> CROSS_TABLE
   ^\s*$$
   ^. -> Error
 
 VLAN_TABLE
   ^\|\s*${VLAN_ID}\s*\|\s*${NAME}\s*\| -> Record
-  ^\+----\+----.*
-  ^\+-+.*$$
-  ^\s*$$ -> Start
+  ^\+-+\+.*
+  ^\+-+\s+CROSS\s+CONNECTION\s+TABLE -> CROSS_TABLE
+  ^\s*$$
   ^. -> Error
   
 CROSS_TABLE
-  ^.*Port-A\s+\|\s+Port-B
-  ^\+-+CROSS CONNECTION TABLE
-  ^^\+-+.*$$
+  ^\|\s+OVID
+  ^\+-+\+.*
   ^\|\s+No Entry Found
+  ^\s*$$
   ^. -> Error
