@@ -1,42 +1,34 @@
 ---
 parsed_sample:
   - prefix: "0.0.0.0/0"
-    flags: []
     etype: "no route"
     nexthop: []
     interface: []
   - prefix: "0.0.0.0/8"
-    flags: []
     etype: "drop"
     nexthop: []
     interface: []
   - prefix: "0.0.0.0/32"
-    flags: []
     etype: "receive"
     nexthop: []
     interface: []
   - prefix: "127.0.0.0/8"
-    flags: []
     etype: "drop"
     nexthop: []
     interface: []
   - prefix: "224.0.0.0/4"
-    flags: []
     etype: "drop"
     nexthop: []
     interface: []
   - prefix: "224.0.0.0/24"
-    flags: []
     etype: "receive"
     nexthop: []
     interface: []
   - prefix: "240.0.0.0/4"
-    flags: []
     etype: "drop"
     nexthop: []
     interface: []
   - prefix: "255.255.255.255/32"
-    flags: []
     etype: "receive"
     nexthop: []
     interface: []
