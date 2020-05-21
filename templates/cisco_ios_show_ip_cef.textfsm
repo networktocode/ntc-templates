@@ -22,6 +22,10 @@ Start
   #
   # >>> Parse HEADING
   ^Prefix\s+Next\s+Hop\s+Interface$$ -> Entries
+  #
+  # >>> Parse SPECIAL
+  ^\s*$$
+  ^. -> Error
 
 Entries
   # >>> Parse CEF ENTRIES
