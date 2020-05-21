@@ -1,73 +1,51 @@
 ---
 parsed_sample:
   - prefix: "0.0.0.0/0"
-    flags: []
-    type: "nexthop"
     nexthop:
       - "10.158.0.198"
     interface:
       - "Vlan1801"
   - prefix: "0.0.0.0/8"
-    flags: []
-    type: "drop"
-    nexthop: []
+    nexthop:
+      - "drop"
     interface: []
   - prefix: "0.0.0.0/32"
-    flags:
+    nexthop:
       - "receive"
-    type: "receive"
-    nexthop: []
     interface: []
   - prefix: "10.0.0.0/16"
-    flags: []
-    type: "nexthop"
     nexthop:
       - "10.158.0.198"
     interface:
       - "Vlan1801"
   - prefix: "10.158.0.192/29"
-    flags:
+    nexthop:
       - "attached"
-      - "connected"
-      - "cover dependents"
-      - "need deagg"
-    type: "attached"
-    nexthop: []
     interface:
       - "Vlan1801"
   - prefix: "10.158.0.192/32"
-    flags:
+    nexthop:
       - "receive"
-    type: "receive"
-    nexthop: []
     interface:
       - "Vlan1801"
   - prefix: "10.158.0.195/32"
-    flags:
+    nexthop:
       - "attached"
-    type: "attached"
-    nexthop: []
     interface:
       - "Vlan1801"
   - prefix: "224.0.0.0/4"
-    flags: []
-    type: "drop"
-    nexthop: []
+    nexthop:
+      - "drop"
     interface: []
   - prefix: "224.0.0.0/24"
-    flags:
+    nexthop:
       - "receive"
-    type: "receive"
-    nexthop: []
     interface: []
   - prefix: "240.0.0.0/4"
-    flags: []
-    type: "drop"
-    nexthop: []
+    nexthop:
+      - "drop"
     interface: []
   - prefix: "255.255.255.255/32"
-    flags:
+    nexthop:
       - "receive"
-    type: "receive"
-    nexthop: []
     interface: []

@@ -1,137 +1,86 @@
 ---
 parsed_sample:
   - prefix: "0.0.0.0/0"
-    flags:
-      - "rib only nolabel"
-      - "rib defined all labels"
-      - "default route"
-    type: "attached"
     nexthop:
       - "10.181.150.18"
     interface:
       - "GigabitEthernet0/2"
   - prefix: "0.0.0.0/8"
-    flags: []
-    type: "drop"
-    nexthop: []
+    nexthop:
+      - "drop"
     interface: []
   - prefix: "0.0.0.0/32"
-    flags:
+    nexthop:
       - "receive"
-    type: "receive"
-    nexthop: []
     interface: []
   - prefix: "10.0.0.0/16"
-    flags: []
-    type: "nexthop"
     nexthop:
       - "10.180.150.33"
     interface:
       - "Port-channel1.1822"
   - prefix: "10.0.120.0/24"
-    flags:
-      - "rib only nolabel"
-      - "rib defined all labels"
-    type: "attached"
     nexthop:
       - "10.181.150.18"
     interface:
       - "GigabitEthernet0/2"
   - prefix: "10.180.140.153/32"
-    flags:
+    nexthop:
       - "attached"
-    type: "attached"
-    nexthop: []
     interface:
       - "GigabitEthernet0/1"
   - prefix: "10.180.150.0/26"
-    flags:
-      - "rib only nolabel"
-      - "rib defined all labels"
-    type: "attached"
-    nexthop: []
+    nexthop:
+      - "attached"
     interface:
       - "Null0"
   - prefix: "10.180.150.5/32"
-    flags:
-      - "attached"
-      - "connected"
+    nexthop:
       - "receive"
-      - "local"
-      - "source eligible"
-    type: "receive"
-    nexthop: []
     interface:
       - "Loopback180"
   - prefix: "10.180.150.32/29"
-    flags:
+    nexthop:
       - "attached"
-      - "connected"
-      - "cover dependents"
-      - "need deagg"
-    type: "attached"
-    nexthop: []
     interface:
       - "Port-channel1.1822"
   - prefix: "10.180.150.32/32"
-    flags:
+    nexthop:
       - "receive"
-    type: "receive"
-    nexthop: []
     interface:
       - "Port-channel1.1822"
   - prefix: "10.180.150.33/32"
-    flags:
+    nexthop:
       - "attached"
-    type: "attached"
-    nexthop: []
     interface:
       - "Port-channel1.1822"
   - prefix: "10.180.150.38/32"
-    flags:
+    nexthop:
       - "receive"
-      - "local"
-      - "source eligible"
-    type: "receive"
-    nexthop: []
     interface:
       - "Port-channel1.1822"
   - prefix: "10.180.150.192/26"
-    flags:
-      - "rib only nolabel"
-      - "rib defined all labels"
-    type: "attached"
     nexthop:
       - "10.181.150.18"
     interface:
       - "GigabitEthernet0/2"
   - prefix: "10.181.150.0/26"
-    flags:
-      - "rib only nolabel"
-      - "rib defined all labels"
-    type: "attached"
-    nexthop: []
+    nexthop:
+      - "attached"
     interface:
       - "Null0"
   - prefix: "224.0.0.0/4"
-    flags: []
-    type: "multicast"
-    nexthop: []
+    nexthop:
+      - "multicast"
     interface: []
   - prefix: "224.0.0.0/24"
-    flags:
+    nexthop:
       - "receive"
-    type: "receive"
-    nexthop: []
     interface: []
   - prefix: "240.0.0.0/4"
-    flags: []
-    type: "drop"
-    nexthop: []
+    nexthop:
+      - "drop"
     interface: []
   - prefix: "255.255.255.255/32"
-    flags:
+    nexthop:
       - "receive"
-    type: "receive"
-    nexthop: []
     interface: []
