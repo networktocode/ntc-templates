@@ -1,27 +1,24 @@
 ---
 parsed_sample:
   - prefix: "0.0.0.0/0"
-    type: ""
     nexthop:
       - "10.158.0.198"
     interface:
       - "Vlan1801"
   - prefix: "0.0.0.0/8"
-    type: "drop"
-    nexthop: []
+    nexthop:
+      - "drop"
     interface: []
   - prefix: "0.0.0.0/32"
-    type: "receive"
-    nexthop: []
+    nexthop:
+      - "receive"
     interface: []
   - prefix: "10.0.0.0/16"
-    type: ""
     nexthop:
       - "10.158.0.198"
     interface:
       - "Vlan1801"
   - prefix: "10.0.120.0/24"
-    type: ""
     nexthop:
       - "10.158.0.198"
     interface:
