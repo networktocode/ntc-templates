@@ -23,7 +23,8 @@ Start
   ^Tracing\s+the\s+route
   ^VRF\s+info: -> Entries
   ^\s*$$
-  ^.*$$ -> Error
+  ^\s*$$
+  ^. -> Error
 
 Entries
   ^\s+${HOP_NUM}\s+ -> Continue
