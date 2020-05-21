@@ -5,25 +5,25 @@ parsed_sample:
       - "rib only nolabel"
       - "rib defined all labels"
       - "default route"
-    etype: "attached"
+    type: "attached"
     nexthop:
       - "10.181.150.18"
     interface:
       - "GigabitEthernet0/2"
   - prefix: "0.0.0.0/8"
     flags: []
-    etype: "drop"
+    type: "drop"
     nexthop: []
     interface: []
   - prefix: "0.0.0.0/32"
     flags:
       - "receive"
-    etype: "receive"
+    type: "receive"
     nexthop: []
     interface: []
   - prefix: "10.0.0.0/16"
     flags: []
-    etype: "nexthop"
+    type: "nexthop"
     nexthop:
       - "10.180.150.33"
     interface:
@@ -32,7 +32,7 @@ parsed_sample:
     flags:
       - "rib only nolabel"
       - "rib defined all labels"
-    etype: "attached"
+    type: "attached"
     nexthop:
       - "10.181.150.18"
     interface:
@@ -40,7 +40,7 @@ parsed_sample:
   - prefix: "10.180.140.153/32"
     flags:
       - "attached"
-    etype: "attached"
+    type: "attached"
     nexthop: []
     interface:
       - "GigabitEthernet0/1"
@@ -48,7 +48,7 @@ parsed_sample:
     flags:
       - "rib only nolabel"
       - "rib defined all labels"
-    etype: "attached"
+    type: "attached"
     nexthop: []
     interface:
       - "Null0"
@@ -59,7 +59,7 @@ parsed_sample:
       - "receive"
       - "local"
       - "source eligible"
-    etype: "receive"
+    type: "receive"
     nexthop: []
     interface:
       - "Loopback180"
@@ -69,21 +69,21 @@ parsed_sample:
       - "connected"
       - "cover dependents"
       - "need deagg"
-    etype: "attached"
+    type: "attached"
     nexthop: []
     interface:
       - "Port-channel1.1822"
   - prefix: "10.180.150.32/32"
     flags:
       - "receive"
-    etype: "receive"
+    type: "receive"
     nexthop: []
     interface:
       - "Port-channel1.1822"
   - prefix: "10.180.150.33/32"
     flags:
       - "attached"
-    etype: "attached"
+    type: "attached"
     nexthop: []
     interface:
       - "Port-channel1.1822"
@@ -92,7 +92,7 @@ parsed_sample:
       - "receive"
       - "local"
       - "source eligible"
-    etype: "receive"
+    type: "receive"
     nexthop: []
     interface:
       - "Port-channel1.1822"
@@ -100,7 +100,7 @@ parsed_sample:
     flags:
       - "rib only nolabel"
       - "rib defined all labels"
-    etype: "attached"
+    type: "attached"
     nexthop:
       - "10.181.150.18"
     interface:
@@ -109,29 +109,29 @@ parsed_sample:
     flags:
       - "rib only nolabel"
       - "rib defined all labels"
-    etype: "attached"
+    type: "attached"
     nexthop: []
     interface:
       - "Null0"
   - prefix: "224.0.0.0/4"
     flags: []
-    etype: "multicast"
+    type: "multicast"
     nexthop: []
     interface: []
   - prefix: "224.0.0.0/24"
     flags:
       - "receive"
-    etype: "receive"
+    type: "receive"
     nexthop: []
     interface: []
   - prefix: "240.0.0.0/4"
     flags: []
-    etype: "drop"
+    type: "drop"
     nexthop: []
     interface: []
   - prefix: "255.255.255.255/32"
     flags:
       - "receive"
-    etype: "receive"
+    type: "receive"
     nexthop: []
     interface: []

@@ -4,44 +4,44 @@ parsed_sample:
     flags:
       - "default route handler"
       - "default route"
-    etype: "no route"
+    type: "no route"
     nexthop: []
     interface: []
   - prefix: "0.0.0.0/8"
     flags: []
-    etype: "drop"
+    type: "drop"
     nexthop: []
     interface: []
   - prefix: "0.0.0.0/32"
     flags:
       - "receive"
-    etype: "receive"
+    type: "receive"
     nexthop: []
     interface: []
   - prefix: "127.0.0.0/8"
     flags: []
-    etype: "drop"
+    type: "drop"
     nexthop: []
     interface: []
   - prefix: "224.0.0.0/4"
     flags: []
-    etype: "drop"
+    type: "drop"
     nexthop: []
     interface: []
   - prefix: "224.0.0.0/24"
     flags:
       - "receive"
-    etype: "receive"
+    type: "receive"
     nexthop: []
     interface: []
   - prefix: "240.0.0.0/4"
     flags: []
-    etype: "drop"
+    type: "drop"
     nexthop: []
     interface: []
   - prefix: "255.255.255.255/32"
     flags:
       - "receive"
-    etype: "receive"
+    type: "receive"
     nexthop: []
     interface: []
