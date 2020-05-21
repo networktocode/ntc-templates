@@ -11,13 +11,11 @@
 # same structured data regardless of IOS version.
 #
 Value Required PREFIX ((?:\d{1,3}\.){3}\d{1,3}\/\d{1,2})
-Value List FLAGS ([^,\]\n]+)
-Value TYPE ((?:no\s)?(?:[a-z]+))
 # Nexthop and Interface are lists to support ECMP
 # Usually these will be single item lists
 # However, if there are multiple paths available
 #     these will contain one item per route/path
-Value List NEXTHOP ((?:\d{1,3}\.){3}\d{1,3})
+Value List NEXTHOP ((?:no\s)?\S+)
 Value List INTERFACE ([A-Za-z][A-Za-z0-9\.\/-]+)
 
 Start
@@ -42,66 +40,40 @@ Start
   #
   # >>>>>> Cisco IOS >v15.x
   # Extract prefix (no flags)
-  ^${PREFIX},\s+epoch(?:(?!flags).)*$$
-  # Extract prefix with flags
-  ^${PREFIX}.*?flags -> Continue
-  # Attempt to extract first flag (if present)
-  ^\d.*?flags\s+\[?${FLAGS} -> Continue
-  # Attempt to extract other flags (up to 6)
-  ^\d.*?flags\s+\[?(?:[^\]\n]+?,\s+){1}${FLAGS} -> Continue
-  ^\d.*?flags\s+\[?(?:[^\]\n]+?,\s+){2}${FLAGS} -> Continue
-  ^\d.*?flags\s+\[?(?:[^\]\n]+?,\s+){3}${FLAGS} -> Continue
-  ^\d.*?flags\s+\[?(?:[^\]\n]+?,\s+){4}${FLAGS} -> Continue
-  ^\d.*?flags\s+\[?(?:[^\]\n]+?,\s+){5}${FLAGS} -> Continue
-  # Stop processing flags (6+)
-  ^\d.*?flags.*?$$
-  # Extract nexthop IP address
-  ^\s+recursive\s+via\s+${NEXTHOP}
-  # Extract type and interface/nexthop, if available)
-  # Type values (IOS >v15.x):
-  #     - attached
-  #     - receive
-  #     - drop
-  #     - no route
-  #     - nexthop
-  #     - multicast
-  ^\s+${TYPE}(?<=receive)\s+for\s+${INTERFACE}
-  ^\s+${TYPE}(?<=attached)\s+to\s+${INTERFACE}
-  ^\s+${TYPE}(?<=drop)$$
-  ^\s+${TYPE}(?<=no route)$$
-  ^\s+${TYPE}(?<=receive)$$
-  ^\s+${TYPE}(?<=multicast)$$
-  ^\s+${TYPE}(?<=nexthop)\s+${NEXTHOP}\s+${INTERFACE}
+  ^${PREFIX},\s+epoch
+  # Extract nexthop for recursive entries
+  ^\s+recursive\s+via\s+${NEXTHOP} -> Recursive
+  # Extract nexthop (receive) and interface
+  ^\s+${NEXTHOP}(?<=receive)\s+for\s+${INTERFACE}
+  # Extract nexthop (attached) and interface
+  ^\s+${NEXTHOP}(?<=attached)\s+to\s+${INTERFACE}
+  # Extract nexthop (drop)
+  ^\s+${NEXTHOP}(?<=drop)$$
+  # Extract nexthop (no route)
+  ^\s+${NEXTHOP}(?<=no route)$$
+  # Extract nexthop (receive)
+  ^\s+${NEXTHOP}(?<=receive)$$
+  # Extract nexthop (multicast)
+  ^\s+${NEXTHOP}(?<=multicast)$$
+  # Extract nexthop and interface
+  ^\s+nexthop\s+${NEXTHOP}\s+${INTERFACE}
   #
   # >>>>>> Cisco IOS 12.x ISR G1 (legacy CEF formatting)
   # Extract prefix
   ^${PREFIX},\s+version -> Continue
-  # Extract flags (if available)
-  ^.*?epoch\s+\d+,\s+${FLAGS} -> Continue
-  ^.*?epoch\s+\d+,\s+(?:[^,\n]+,\s+){1}${FLAGS} -> Continue
-  ^.*?epoch\s+\d+,\s+(?:[^,\n]+,\s+){2}${FLAGS} -> Continue
-  ^.*?epoch\s+\d+,\s+(?:[^,\n]+,\s+){3}${FLAGS} -> Continue
-  # Stop processing flags (max 4)
+  # Extract nexthop (receive and attached)
+  ^.*?epoch\s+\d+,.+?${NEXTHOP}(?<=receive)
+  ^.*?epoch\s+\d+,.+?${NEXTHOP}(?<=attached)
   ^.*?epoch.*?$$
-  # Extract extra flag, such as recursive
-  ^.*?dependenc(?:y|ies),\s+${FLAGS} -> Continue
-  # Extract interface for glean adjacency (it's the only place)
+  # Extract interface for glean adjacency (attached)
   ^\s+via\s+${INTERFACE},\s+\d+\s+depend
-  # Stop procssing line with 'dependencies'
-  #   Interface and flags are extracted by now
   ^.*?depend
-  # Extract nexthop IP address
-  ^\s+next\s+hop\s+${NEXTHOP}\s*$$
   # Extract nexthop IP address and interface
   ^\s+next\s+hop\s+${NEXTHOP},\s+${INTERFACE}
-  # Extract type, where available
-  # Type values (IOS v12.x ISR G1):
-  #     - null (same as receive with Null0 interface in IOS v15.x)
-  #     - glean (same as attached in IOS v15.x)
-  #     - cached (same as nexthop in IOS v15.x)
-  #     - drop
-  #     - if type is None, then it's receive (check flags)
-  ^\s+valid\s+${TYPE}\s+adjacency$$
+  ^\s+next\s+hop
+  # Extract nexthop (drop)
+  ^\s+valid\s+${NEXTHOP}(?<=drop)\s+adjacency$$
+  ^\s+valid.+adjacency
   #
   # >>> Parse OTHER BODY (irrelevant output)
   ^\s+Adj\s+source
@@ -122,5 +94,11 @@ Start
   ^\d+\s+packets
   #
   # >>> Parse SPECIAL
+  ^\s*$$
+  ^. -> Error
+
+Recursive
+  # Extract interface for recursive entries
+  ^\s+attached\s+to\s+${INTERFACE} -> Start
   ^\s*$$
   ^. -> Error
