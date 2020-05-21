@@ -11,7 +11,7 @@ Value MDIXMODE (Off|On|--)
 Start
   ^\s
   ^Port -> Begin
-  ^\s+$$
+  ^\s*$$
   ^. -> Error
 
 Begin
