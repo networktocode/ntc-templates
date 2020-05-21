@@ -1,59 +1,59 @@
 ---
 parsed_sample:
   - prefix: "0.0.0.0/0"
-    etype: ""
+    type: ""
     nexthop:
       - "10.180.122.153"
     interface:
       - "GigabitEthernet0/1"
   - prefix: "0.0.0.0/8"
-    etype: "drop"
+    type: "drop"
     nexthop: []
     interface: []
   - prefix: "0.0.0.0/32"
-    etype: "receive"
+    type: "receive"
     nexthop: []
     interface: []
   - prefix: "10.0.0.0/16"
-    etype: ""
+    type: ""
     nexthop:
       - "10.180.122.153"
     interface:
       - "GigabitEthernet0/1"
   - prefix: "10.157.1.0/24"
-    etype: ""
+    type: ""
     nexthop:
       - "172.17.100.101"
     interface:
       - "Tunnel60701"
   - prefix: "10.180.122.7/32"
-    etype: "receive"
+    type: "receive"
     nexthop: []
     interface:
       - "Loopback0"
   - prefix: "10.180.122.152/29"
-    etype: "attached"
+    type: "attached"
     nexthop: []
     interface:
       - "GigabitEthernet0/1"
   - prefix: "10.180.122.152/32"
-    etype: "receive"
+    type: "receive"
     nexthop: []
     interface:
       - "GigabitEthernet0/1"
   - prefix: "224.0.0.0/4"
-    etype: "drop"
+    type: "drop"
     nexthop: []
     interface: []
   - prefix: "224.0.0.0/24"
-    etype: "receive"
+    type: "receive"
     nexthop: []
     interface: []
   - prefix: "240.0.0.0/4"
-    etype: "drop"
+    type: "drop"
     nexthop: []
     interface: []
   - prefix: "255.255.255.255/32"
-    etype: "receive"
+    type: "receive"
     nexthop: []
     interface: []
