@@ -1,64 +1,60 @@
 ---
 parsed_sample:
   - prefix: "0.0.0.0/0"
-    type: ""
     nexthop:
       - "192.168.0.181"
     interface:
       - "GigabitEthernet0/1"
   - prefix: "0.0.0.0/8"
-    type: "drop"
-    nexthop: []
+    nexthop:
+      - "drop"
     interface: []
   - prefix: "0.0.0.0/32"
-    type: "receive"
-    nexthop: []
+    nexthop:
+      - "receive"
     interface: []
   - prefix: "10.0.0.0/16"
-    type: ""
     nexthop:
       - "192.168.0.181"
     interface:
       - "GigabitEthernet0/1"
   - prefix: "10.158.0.0/19"
-    type: ""
     nexthop:
       - "0.0.0.0"
     interface:
       - "Null0"
   - prefix: "10.158.0.192/29"
-    type: ""
     nexthop:
       - "10.158.0.209"
     interface:
       - "GigabitEthernet0/0.1821"
   - prefix: "10.158.0.208/29"
-    type: "attached"
-    nexthop: []
+    nexthop:
+      - "attached"
     interface:
       - "GigabitEthernet0/0.1821"
   - prefix: "10.158.0.208/32"
-    type: "receive"
-    nexthop: []
+    nexthop:
+      - "receive"
     interface: []
   - prefix: "192.168.0.180/30"
-    type: "attached"
-    nexthop: []
+    nexthop:
+      - "attached"
     interface:
       - "GigabitEthernet0/1"
   - prefix: "224.0.0.0/4"
-    type: "drop"
-    nexthop: []
+    nexthop:
+      - "drop"
     interface: []
   - prefix: "224.0.0.0/24"
-    type: "receive"
-    nexthop: []
+    nexthop:
+      - "receive"
     interface: []
   - prefix: "240.0.0.0/4"
-    type: "drop"
-    nexthop: []
+    nexthop:
+      - "drop"
     interface: []
   - prefix: "255.255.255.255/32"
-    type: "receive"
-    nexthop: []
+    nexthop:
+      - "receive"
     interface: []

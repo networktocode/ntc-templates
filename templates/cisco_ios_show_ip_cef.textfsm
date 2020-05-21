@@ -5,12 +5,11 @@
 # Check cisco_ios_show_ip_cef_detail.textfsm for more details
 #
 Value Required PREFIX ((?:\d{1,3}\.){3}\d{1,3}\/\d{1,2})
-Value TYPE ((?:no\s)?(?:[a-z]+))
 # To support ECMP, NEXTHOP and INTERFACE are defined as lists
 # When no ECMP is available, these will be single item lists
 # However, if there are multiple paths available
 #     then expect to see one item per route/path
-Value List NEXTHOP ((?:\d{1,3}\.){3}\d{1,3})
+Value List NEXTHOP ((?:no\s)?(?:\S+))
 Value List INTERFACE ([A-Za-z][A-Za-z0-9\.\/-]+)
 
 Start
@@ -31,12 +30,8 @@ Entries
   # >>> Parse CEF ENTRIES
   # Entry detected
   ^(?:\d{1,3}\.){3}\d{1,3}\/\d{1,2} -> Continue.Record
-  # Parse prefix/type
-  ^${PREFIX}\s+${TYPE}\s*$$
   # Parse prefix/nexthop
   ^${PREFIX}\s+${NEXTHOP}\s*$$
-  # Parse prefix, type and interface
-  ^${PREFIX}\s+${TYPE}\s+${INTERFACE}$$
   # Parse prefix, nexthop and interface
   ^${PREFIX}\s+${NEXTHOP}\s+${INTERFACE}$$
   # Parse nexthop and interface for ECMP prefixes
