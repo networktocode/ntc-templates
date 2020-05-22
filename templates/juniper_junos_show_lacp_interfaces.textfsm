@@ -1,11 +1,19 @@
-Value Required,Filldown AGGREGATED_INTERFACE (\S+)
+Value Required AGGREGATED_INTERFACE (\S+)
 Value List MEMBER_INTERFACE (\S+)
 Value List RECEIVE_STATE (\S+\s?\w+)
 Value List TRANSMIT_STATE (\S+\s?periodic)
 Value List MUX_STATE (\S+\s?\S*)
 
 Start
-  ^Aggre -> Continue.Record
+  ^Aggregated -> Continue.Record
   ^Aggregated\sinterface:\s${AGGREGATED_INTERFACE}(\s|$$) -> Continue
-  ^\s+${MEMBER_INTERFACE}\s+${RECEIVE_STATE}\s+${TRANSMIT_STATE}\s+${MUX_STATE}(\s|$$) -> Continue
+  ^\s+LACP\s+state: -> Continue
+  ^\s+LACP\sprotocol: -> LACP_PROTO
+  ^\s*$$
+  ^{master:\d+}
 
+LACP_PROTO
+  ^\s+${MEMBER_INTERFACE}\s+${RECEIVE_STATE}\s+${TRANSMIT_STATE}\s+${MUX_STATE}(\s|$$) -> Continue
+  ^\s*$$
+  ^Aggregated -> Continue.Record
+  ^Aggregated\sinterface:\s${AGGREGATED_INTERFACE}(\s|$$) -> Start
