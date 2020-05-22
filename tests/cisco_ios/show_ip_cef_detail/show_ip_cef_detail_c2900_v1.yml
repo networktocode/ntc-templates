@@ -1,0 +1,86 @@
+---
+parsed_sample:
+  - prefix: "0.0.0.0/0"
+    nexthop:
+      - "10.181.150.18"
+    interface:
+      - "GigabitEthernet0/2"
+  - prefix: "0.0.0.0/8"
+    nexthop:
+      - "drop"
+    interface: []
+  - prefix: "0.0.0.0/32"
+    nexthop:
+      - "receive"
+    interface: []
+  - prefix: "10.0.0.0/16"
+    nexthop:
+      - "10.180.150.33"
+    interface:
+      - "Port-channel1.1822"
+  - prefix: "10.0.120.0/24"
+    nexthop:
+      - "10.181.150.18"
+    interface:
+      - "GigabitEthernet0/2"
+  - prefix: "10.180.140.153/32"
+    nexthop:
+      - "attached"
+    interface:
+      - "GigabitEthernet0/1"
+  - prefix: "10.180.150.0/26"
+    nexthop:
+      - "attached"
+    interface:
+      - "Null0"
+  - prefix: "10.180.150.5/32"
+    nexthop:
+      - "receive"
+    interface:
+      - "Loopback180"
+  - prefix: "10.180.150.32/29"
+    nexthop:
+      - "attached"
+    interface:
+      - "Port-channel1.1822"
+  - prefix: "10.180.150.32/32"
+    nexthop:
+      - "receive"
+    interface:
+      - "Port-channel1.1822"
+  - prefix: "10.180.150.33/32"
+    nexthop:
+      - "attached"
+    interface:
+      - "Port-channel1.1822"
+  - prefix: "10.180.150.38/32"
+    nexthop:
+      - "receive"
+    interface:
+      - "Port-channel1.1822"
+  - prefix: "10.180.150.192/26"
+    nexthop:
+      - "10.181.150.18"
+    interface:
+      - "GigabitEthernet0/2"
+  - prefix: "10.181.150.0/26"
+    nexthop:
+      - "attached"
+    interface:
+      - "Null0"
+  - prefix: "224.0.0.0/4"
+    nexthop:
+      - "multicast"
+    interface: []
+  - prefix: "224.0.0.0/24"
+    nexthop:
+      - "receive"
+    interface: []
+  - prefix: "240.0.0.0/4"
+    nexthop:
+      - "drop"
+    interface: []
+  - prefix: "255.255.255.255/32"
+    nexthop:
+      - "receive"
+    interface: []
