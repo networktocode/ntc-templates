@@ -1,0 +1,17 @@
+Value DESTINATION_ADDRESS ((\w\w:){5}\w\w)
+Value TYPE (dynamic|self)
+Value VLAN (\w+)
+Value DESTINATION_PORT (\S+)
+
+Start
+  ^Flags
+  ^Aging
+  ^\s+Vlan\s+Mac\s+Address\s+Port\s+Type -> Begin
+  ^\s*$$
+  ^. -> Error
+
+Begin
+  ^-+
+  ^\s+${VLAN}\s+${DESTINATION_ADDRESS}\s+${DESTINATION_PORT}\s+${TYPE} -> Record
+  ^\s*$$
+  ^. -> Error
