@@ -1,0 +1,17 @@
+Value NEIGHBOR (\S+)
+Value LOCAL_INTERFACE (\S+)
+Value NEIGHBOR_INTERFACE (\S+)
+Value DEVICE_ID (([0-9a-f]{2}[:-]){5}([0-9a-f]{2}))
+
+Start
+  ^System\s+capability\s+legend
+  ^\S+\s*-
+  ^\s*Port\s+Device\s+ID\s+Port\s+ID\s+System\s+Name\s+Capabilities\s+TTL -> Begin
+  ^\s*$$
+  ^. -> Error
+
+Begin
+  ^-+
+  ^${LOCAL_INTERFACE}\s+${DEVICE_ID}\s+${NEIGHBOR_INTERFACE}\s+${NEIGHBOR}.+ -> Record
+  ^\s*$$
+  ^. -> Error
