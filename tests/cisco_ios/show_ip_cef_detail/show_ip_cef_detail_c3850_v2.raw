@@ -1,0 +1,29 @@
+IPv4 CEF is enabled for distributed and running
+VRF Default
+ 8 prefixes (8/0 fwd/non-fwd)
+ Table id 0x0
+ Database epoch:        3 (8 entries at this epoch)
+
+0.0.0.0/0, epoch 3, flags [default route handler, default route]
+  no route
+0.0.0.0/8, epoch 3
+  Special source: drop
+  drop
+0.0.0.0/32, epoch 3, flags [receive]
+  Special source: receive
+  receive
+127.0.0.0/8, epoch 3
+  Special source: drop
+  drop
+224.0.0.0/4, epoch 3
+  Special source: drop
+  drop
+224.0.0.0/24, epoch 3, flags [receive]
+  Special source: receive
+  receive
+240.0.0.0/4, epoch 3
+  Special source: drop
+  drop
+255.255.255.255/32, epoch 3, flags [receive]
+  Special source: receive
+  receive
