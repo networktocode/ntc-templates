@@ -1,4 +1,6 @@
-Value Required ENDPOINT ((?:\d{1,3}\.){3}\d{1,3})
+# Nexus 7k have multiple slots
+Value Filldown SLOT (\d+)
+Value Required NEXTHOP ((?:\d{1,3}\.){3}\d{1,3})
 Value Required REWRITE (\S+)
 Value Required INTERFACE (\S+)
 Value ORIGIN_AS (\S+)
@@ -9,16 +11,20 @@ Start
   # Match headers
   ^IPv4\s+adjacency\s+information
   ^next-hop\s+rewrite\s+info\s+interface
-  # Match begin of the list of entries
+  # Extract slot, if available (Nexus 7k)
+  ^slot\s+${SLOT}
+  ^====
+  # List of entries detected
   ^-------- -> Entries
-  # Capture empty and unknowns lines
+  # Empty and unknowns lines
   ^\s*$$
   ^. -> Error
 
 Entries
-  # Match single adjacency entry
-  ^${ENDPOINT}\s+${REWRITE}\s+${INTERFACE}\s+${ORIGIN_AS}\s+${PEER_AS}\s+${NEIGHBOR} -> Record
-  ^${ENDPOINT}\s+${REWRITE}\s+${INTERFACE}$$ -> Record
-  # Capture empty and unknowns lines
+  # Match single adjacency entry (detailed view)
+  ^${NEXTHOP}\s+${REWRITE}\s+${INTERFACE}\s+${ORIGIN_AS}\s+${PEER_AS}\s+${NEIGHBOR} -> Record
+  # Match single adjacency entry (brief view)
+  ^${NEXTHOP}\s+${REWRITE}\s+${INTERFACE} -> Record
+  # Empty and unknowns lines
   ^\s*$$
   ^. -> Error
