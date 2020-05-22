@@ -20,8 +20,7 @@ Start
   ^Default\s+gateway:\s+${IPV4_GATEWAY}
   ^Ipv6\s+address:\s+${IPV6_ADDRESS}
   ^Ipv6\s+link\s+local\s+address:\s+${IPV6_LINKLOCAL}
-  ^Ipv6\s+default\s+gateway:\s+${IPV6_GATEWAY}
-  ^Ipv6\s+default\s+gateway
+  ^Ipv6\s+default\s+gateway:(\s+${IPV6_GATEWAY})?
   ^Logical\s+interface\s+counters
   ^bytes\s+received
   ^bytes\s+transmitted
