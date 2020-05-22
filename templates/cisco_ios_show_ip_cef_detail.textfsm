@@ -1,0 +1,104 @@
+# Even though this template understands the output from
+#   - show ip cef [vrf NAME] [PREFIX | INTERFACE] [detail]
+# INDEX file forces you to use 'detail' keyword, or there
+# will be no match. This is done to simplify INDEX file
+# matching logic, otherwise matching regex is too complex.
+#
+# This template is compatible with IOS v12.x and above,
+# including IOS-XE. There are two versions of output
+# with significant differences depending on IOS version.
+# Template is able to recognize both versions and captures
+# same structured data regardless of IOS version.
+#
+Value Required PREFIX ((?:\d{1,3}\.){3}\d{1,3}\/\d{1,2})
+# Nexthop and Interface are lists to support ECMP
+# Usually these will be single item lists
+# However, if there are multiple paths available
+#     these will contain one item per route/path
+Value List NEXTHOP ((?:no\s)?\S+)
+Value List INTERFACE ([A-Za-z][A-Za-z0-9\.\/-]+)
+
+Start
+  # >>> Parse EXCEPTIONS
+  # CEF is not enabled
+  ^%IPv4\s+CEF\s+not\s+running$$ -> End
+  # Invalid prefix
+  ^\s+Invalid\s+prefix/mask -> End
+  #
+  # >>> Parse HEADING
+  # Ignore Junk (irrelevant output)
+  ^IP(?:v4)?\s+CEF
+  ^VRF|Adjacency
+  ^\s+\d+\s+(?:routes|instant|leaves|load|prefixes|in-place)
+  ^\s+(?:Default|Table|Database|Resolution|Non-stop|Switchover)
+  ^\s+(?:universal|refcounts)
+  ^.*?CEF\s+resets
+  #
+  # >>> Parse CEF ENTRIES
+  # Entry detected, begin analysis
+  ^(?:\d{1,3}\.){3}\d{1,3}\/\d{1,2} -> Continue.Record
+  #
+  # >>>>>> Cisco IOS >v15.x
+  # Extract prefix (no flags)
+  ^${PREFIX},\s+epoch
+  # Extract nexthop for recursive entries
+  ^\s+recursive\s+via\s+${NEXTHOP} -> Recursive
+  # Extract nexthop (receive) and interface
+  ^\s+${NEXTHOP}(?<=receive)\s+for\s+${INTERFACE}
+  # Extract nexthop (attached) and interface
+  ^\s+${NEXTHOP}(?<=attached)\s+to\s+${INTERFACE}
+  # Extract nexthop (drop)
+  ^\s+${NEXTHOP}(?<=drop)$$
+  # Extract nexthop (no route)
+  ^\s+${NEXTHOP}(?<=no route)$$
+  # Extract nexthop (receive)
+  ^\s+${NEXTHOP}(?<=receive)$$
+  # Extract nexthop (multicast)
+  ^\s+${NEXTHOP}(?<=multicast)$$
+  # Extract nexthop and interface
+  ^\s+nexthop\s+${NEXTHOP}\s+${INTERFACE}
+  #
+  # >>>>>> Cisco IOS 12.x ISR G1 (legacy CEF formatting)
+  # Extract prefix
+  ^${PREFIX},\s+version -> Continue
+  # Extract nexthop (receive and attached)
+  ^.*?epoch\s+\d+,.+?${NEXTHOP}(?<=receive)
+  ^.*?epoch\s+\d+,.+?${NEXTHOP}(?<=attached)
+  ^.*?epoch.*?$$
+  # Extract interface for glean adjacency (attached)
+  ^\s+via\s+${INTERFACE},\s+\d+\s+depend
+  ^.*?depend
+  # Extract nexthop IP address and interface
+  ^\s+next\s+hop\s+${NEXTHOP},\s+${INTERFACE}
+  ^\s+next\s+hop
+  # Extract nexthop (drop)
+  ^\s+valid\s+${NEXTHOP}(?<=drop)\s+adjacency$$
+  ^\s+valid.+adjacency
+  #
+  # >>> Parse OTHER BODY (irrelevant output)
+  ^\s+Adj\s+source
+  ^\s+Special\s+source
+  ^\s+Interface\s+source
+  ^\s+DefNet\s+source
+  ^\s+Q[Oo]S
+  ^\s+Covered\s+dependent
+  ^\s+need\s+deagg
+  ^\s+notify\s+cover
+  ^\s+Dependent\s+covered
+  ^.*?RR\s+source
+  ^\s+(?:Net)?Flow:
+  ^\s+Interest\s+List:
+  ^\s+-\s+
+  ^\s+BFD\s+state
+  ^\s+\d+\s+IPL\s+source
+  ^\d+\s+packets
+  #
+  # >>> Parse SPECIAL
+  ^\s*$$
+  ^. -> Error
+
+Recursive
+  # Extract interface for recursive entries
+  ^\s+attached\s+to\s+${INTERFACE} -> Start
+  ^\s*$$
+  ^. -> Error

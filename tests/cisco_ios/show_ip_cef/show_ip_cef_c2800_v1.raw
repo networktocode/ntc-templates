@@ -1,0 +1,13 @@
+Prefix               Next Hop             Interface
+0.0.0.0/0            172.17.40.1          Tunnel0
+0.0.0.0/8            drop
+0.0.0.0/32           receive
+10.0.0.0/16          172.17.40.1          Tunnel0
+10.0.120.0/24        172.17.40.1          Tunnel0
+10.191.64.0/24       attached             GigabitEthernet0/0
+10.191.64.0/32       receive              GigabitEthernet0/0
+10.191.64.2/32       attached             GigabitEthernet0/0
+224.0.0.0/4          drop
+224.0.0.0/24         receive
+240.0.0.0/4          drop
+255.255.255.255/32   receive
