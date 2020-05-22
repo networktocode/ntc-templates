@@ -17,6 +17,8 @@ Start
   ^Time\s+source\s+is
 
 Bgp_table
+  # Account for show ip bgp vpnv4 vrf command
+  ^Route\s+Distinguisher
   #
   #
   # Match if subnet is 17,18 characters long, creates two lines
