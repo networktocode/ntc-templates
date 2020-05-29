@@ -66,28 +66,28 @@ StateChanger
   ^\s+Alarm.+Alarm -> AlarmHeader
   ^\s+Statistics: -> Stats
   ^Lane -> Lanes
-  ^MAC address information:
+  ^MAC\s+address\s+information:
   ^Operational\s+data\s+for\s+interface\s+${INTERFACE}:
-  ^Management information for interface -> Ender
+  ^Management\s+information\s+for\s+interface -> Ender
 
 State
-  ^\s+Administrative state:\s+${ADMIN_STATE} 
-  ^\s+Operational state:\s+${OPS_STATE}
-  ^\s+LED state:\s+${LED_STATE} -> Record
+  ^\s+Administrative\s+state:\s+${ADMIN_STATE} 
+  ^\s+Operational\s+state:\s+${OPS_STATE}
+  ^\s+LED\s+state:\s+${LED_STATE} -> Record
   ^\s*$$ -> StateChanger
   ^Autonegotiation\s+${AUTONEGOTIATION} -> Record
-  ^Operational values: -> OpsValues
+  ^Operational\s+values: -> OpsValues
   
 Phy
-  ^\s+Media type:\s+${MEDIA_TYPE}
+  ^\s+Media\s+type:\s+${MEDIA_TYPE}
   ^\s+Optics:
   ^\s+Vendor:\s+${VENDOR}
   ^\s+Part\s+number:\s+${PART_NUM}
   ^\s+Serial\s+number:\s+${SERIAL_NUM}
   ^\s+Wavelength:\s+${WAVELENGTH}\s+nm
   ^\s+Digital\s+Optical\s+Monitoring:
-  ^\s+Transceiver Temp:\s+${TEMPERATURE_VALUE}
-  ^\s+Transceiver Voltage:\s+${VOLTAGE_VALUE}\s+V
+  ^\s+Transceiver\s+Temp:\s+${TEMPERATURE_VALUE}
+  ^\s+Transceiver\s+Voltage:\s+${VOLTAGE_VALUE}\s+V
   ^\s+Alarms.*high
   ^\s+\(L\).+low
   ^\s+Wavelength.+Bias
@@ -97,7 +97,7 @@ Phy
   
 Lanes
   ^\s+${LANE}\s+${WAVELENGTH}\s+${TX_VALUE_DBM}\s+${TX_VALUE_MW}\s+${RX_VALUE_DBM}\s+${RX_VALUE_MW}\s+${LASER_BIAS}  -> Record
-  ^\s+DOM alarms: -> Dom
+  ^\s+DOM\s+alarms: -> Dom
   ^\s*$$ -> StateChanger
   ^.* -> Error "LINE NOT FOUND"
   
@@ -112,25 +112,25 @@ AlarmHeader
   ^.* -> Error "LINE NOT FOUND"
   
 AlarmThresholds
-  ^\s+Transceiver Temp \(C\):\s+${TEMPERATURE_ALARM_HIGH}\s+${TEMPERATURE_WARN_HIGH}\s+${TEMPERATURE_WARN_LOW}\s+${TEMPERATURE_ALARM_LOW}
-  ^\s+Transceiver Voltage \(V\):\s+${VOLTAGE_ALARM_HIGH}\s+${VOLTAGE_WARN_HIGH}\s+${VOLTAGE_WARN_LOW}\s+${VOLTAGE_ALARM_LOW}
-  ^\s+Laser Bias \(mA\):\s+${AMPS_ALARM_HIGH}\s+${AMPS_WARN_HIGH}\s+${AMPS_WARN_LOW}\s+${AMPS_ALARM_LOW}
-  ^\s+Transmit Power \(mW\):\s+${TX_ALARM_MW_HIGH}\s+${TX_WARN_MW_HIGH}\s+${TX_WARN_MW_LOW}\s+${TX_ALARM_MW_LOW}
-  ^\s+Transmit Power \(dBm\):\s+${TX_ALARM_DBM_HIGH}\s+${TX_WARN_DBM_HIGH}\s+${TX_WARN_DBM_LOW}\s+${TX_ALARM_DBM_LOW}
-  ^\s+Receive Power \(mW\):\s+${RX_ALARM_MW_HIGH}\s+${RX_WARN_MW_HIGH}\s+${RX_WARN_MW_LOW}\s+${RX_ALARM_MW_LOW}
-  ^\s+Receive Power \(dBm\):\s+${RX_ALARM_DBM_HIGH}\s+${RX_WARN_DBM_HIGH}\s+${RX_WARN_DBM_LOW}\s+${RX_ALARM_DBM_LOW} -> Record StateChanger
+  ^\s+Transceiver\s+Temp\s+\(C\):\s+${TEMPERATURE_ALARM_HIGH}\s+${TEMPERATURE_WARN_HIGH}\s+${TEMPERATURE_WARN_LOW}\s+${TEMPERATURE_ALARM_LOW}
+  ^\s+Transceiver\s+Voltage\s+\(V\):\s+${VOLTAGE_ALARM_HIGH}\s+${VOLTAGE_WARN_HIGH}\s+${VOLTAGE_WARN_LOW}\s+${VOLTAGE_ALARM_LOW}
+  ^\s+Laser\s+Bias\s+\(mA\):\s+${AMPS_ALARM_HIGH}\s+${AMPS_WARN_HIGH}\s+${AMPS_WARN_LOW}\s+${AMPS_ALARM_LOW}
+  ^\s+Transmit\s+Power\s+\(mW\):\s+${TX_ALARM_MW_HIGH}\s+${TX_WARN_MW_HIGH}\s+${TX_WARN_MW_LOW}\s+${TX_ALARM_MW_LOW}
+  ^\s+Transmit\s+Power\s+\(dBm\):\s+${TX_ALARM_DBM_HIGH}\s+${TX_WARN_DBM_HIGH}\s+${TX_WARN_DBM_LOW}\s+${TX_ALARM_DBM_LOW}
+  ^\s+Receive\s+Power\s+\(mW\):\s+${RX_ALARM_MW_HIGH}\s+${RX_WARN_MW_HIGH}\s+${RX_WARN_MW_LOW}\s+${RX_ALARM_MW_LOW}
+  ^\s+Receive\s+Power\s+\(dBm\):\s+${RX_ALARM_DBM_HIGH}\s+${RX_WARN_DBM_HIGH}\s+${RX_WARN_DBM_LOW}\s+${RX_ALARM_DBM_LOW} -> Record StateChanger
   ^.* -> Error "LINE NOT FOUND"
 
 Stats
   ^\s+FEC:
-  ^\s+Corrected Codeword Count:\s+${FEC_CORRECTED}
-  ^\s+Uncorrected Codeword Count:\s+${FEC_UNCORRECTED} -> Record
+  ^\s+Corrected\s+Codeword\s+Count:\s+${FEC_CORRECTED}
+  ^\s+Uncorrected\s+Codeword\s+Count:\s+${FEC_UNCORRECTED} -> Record
   ^\s*$$ -> StateChanger
   ^.* -> Error "LINE NOT FOUND"
   
 MacInfo
-  ^\s+Operational address:\s+${MAC_OPS_ADD}
-  ^\s+Burnt-in address:\s+${MAC_BIA_ADD} -> Record StateChanger
+  ^\s+Operational\s+address:\s+${MAC_OPS_ADD}
+  ^\s+Burnt-in\s+address:\s+${MAC_BIA_ADD} -> Record StateChanger
   ^.* -> Error "LINE NOT FOUND"
  
 OpsValues
@@ -140,7 +140,7 @@ OpsValues
   ^\s+Loopback:\s+${LOOPBACK}
   ^\s+MTU:\s+${MTU}
   ^\s+MRU:\s+${MRU}
-  ^\s+Forward error correction:\s+${FEC} -> Record StateChanger
+  ^\s+Forward\s+error\s+correction:\s+${FEC} -> Record StateChanger
   ^.* -> Error "LINE NOT FOUND"
   
 Ender
