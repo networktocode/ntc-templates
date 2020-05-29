@@ -1,7 +1,0 @@
-Value VLAN_ID (\d+)
-Value NAME (\S+)
-Value STATUS (\S+)
-
-Start
-  ^\d+\s+enet\s+CE
-  ^${VLAN_ID}\s+${NAME}\s+${STATUS} -> Record

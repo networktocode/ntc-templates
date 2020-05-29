@@ -1,0 +1,240 @@
+Protocol Interface                 Address
+IP       Vlan10                    10.102.10.5(8)
+                                   0 packets, 0 bytes
+                                   epoch 0
+                                   sourced in sev-epoch 0
+                                   Encap length 14
+                                   000EB65D4EB0C80084D399460800
+                                   L2 destination address byte offset 0
+                                   L2 destination address byte length 6
+                                   Link-type after encap: ip
+                                   ARP
+IP       Vlan1801                  10.180.102.195(8)
+                                   0 packets, 0 bytes
+                                   epoch 0
+                                   sourced in sev-epoch 14
+                                   Encap length 14
+                                   70695A4F201CC80084D399490800
+                                   L2 destination address byte offset 0
+                                   L2 destination address byte length 6
+                                   Link-type after encap: ip
+                                   ARP
+IP       BDI445                    192.0.2.21(12)
+                                   203564970 packets, 94434660716 bytes
+                                   epoch 0
+                                   sourced in sev-epoch 6
+                                   Encap length 14
+                                   000C29BDD45A2CABEBC01DC30800
+                                   L2 destination address byte offset 0
+                                   L2 destination address byte length 6
+                                   Link-type after encap: ip
+                                   ARP
+IP       Tunnel10                  172.17.10.225(13)
+                                   53350544 packets, 23470143707 bytes
+                                   epoch 0
+                                   sourced in sev-epoch 35
+                                   Encap length 28
+                                   4500000000000000FF2F4C08C0A80067
+                                   2A20D48B20000800001A456E
+                                   Tun endpt
+                                   Next chain element:
+                                     IP adj out of GigabitEthernet0/0/2, addr 192.168.0.1
+IP       Tunnel10                  172.17.10.12(15)
+                                   170956956 packets, 68065013365 bytes
+                                   epoch 0
+                                   sourced in sev-epoch 6
+                                   Encap length 28
+                                   4500000000000000FF2F71F12927C88E
+                                   5C41EADA20000800001A456E
+                                   Tun endpt
+                                   Next chain element:
+                                     IP adj out of GigabitEthernet0/0/2, addr 41.39.200.141
+IP       GigabitEthernet0/0/2      46.40.201.141(42)
+                                   321323801 packets, 136336825775 bytes
+                                   epoch 0
+                                   sourced in sev-epoch 6
+                                   Encap length 14
+                                   244C07ED1BFE2CABEBC01D420800
+                                   L2 destination address byte offset 0
+                                   L2 destination address byte length 6
+                                   Link-type after encap: ip
+                                   ARP
+IP       Port-channel1.1           10.255.1.1(11)
+                                   21160969 packets, 9329327344 bytes
+                                   epoch 0
+                                   sourced in sev-epoch 433
+                                   Encap length 14
+                                   40A6E8119FC72CABEB99E6D00800
+                                   L2 destination address byte offset 0
+                                   L2 destination address byte length 6
+                                   Link-type after encap: ip
+                                   ARP
+IP       Port-channel1.1           10.255.1.250(8)
+                                   145609 packets, 24959821 bytes
+                                   epoch 0
+                                   sourced in sev-epoch 433
+                                   Encap length 14
+                                   000C2963CBC22CABEB99E6D00800
+                                   L2 destination address byte offset 0
+                                   L2 destination address byte length 6
+                                   Link-type after encap: ip
+                                   ARP
+IP       Port-channel1.1           227.0.0.0(3)
+                                   connectionid 1
+                                   1009546 packets, 74708967 bytes
+                                   epoch 0
+                                   sourced in sev-epoch 2
+                                   Encap length 14
+                                   01005E0000002CABEB99E6D00800
+                                   L2 destination address byte offset 0
+                                   L2 destination address byte length 6
+                                   Link-type after encap: ip
+                                   Inject p2mp Multicast
+IP       Port-channel1.1835        10.255.0.13(24)
+                                   19028387 packets, 2552719646 bytes
+                                   epoch 0
+                                   sourced in sev-epoch 7
+                                   Encap length 18
+                                   E0CBBCBC0C982CABEB99E6D08100072B
+                                   0800
+                                   L2 destination address byte offset 0
+                                   L2 destination address byte length 6
+                                   Link-type after encap: dot1Q
+                                   ARP
+IP       Port-channel1.1835        227.0.0.0(3)
+                                   connectionid 1
+                                   0 packets, 0 bytes
+                                   epoch 0
+                                   sourced in sev-epoch 7
+                                   Encap length 18
+                                   01005E0000002CABEB99E6D08100072B
+                                   0800
+                                   L2 destination address byte offset 0
+                                   L2 destination address byte length 6
+                                   Link-type after encap: dot1Q
+                                   Inject p2mp Multicast
+IP       Tunnel11                  point2point(15)
+                                   3777029 packets, 451109462 bytes
+                                   epoch 0
+                                   sourced in sev-epoch 433
+                                   empty encap string
+                                   P2P-ADJ
+                                   Next chain element:
+                                     IP adj out of Port-channel1.1835, addr 10.255.0.13
+IP       GigabitEthernet0/0/2.200  10.255.200.106(8)
+                                   1564016 packets, 950690451 bytes
+                                   epoch 0
+                                   sourced in sev-epoch 398
+                                   Encap length 18
+                                   00E04C6807772CABEB99E692810000C8
+                                   0800
+                                   L2 destination address byte offset 0
+                                   L2 destination address byte length 6
+                                   Link-type after encap: dot1Q
+                                   ARP
+IP       GigabitEthernet0/0/2.200  227.0.0.0(3)
+                                   connectionid 1
+                                   0 packets, 0 bytes
+                                   epoch 0
+                                   sourced in sev-epoch 353
+                                   Encap length 18
+                                   01005E0000002CABEB99E692810000C8
+                                   0800
+                                   L2 destination address byte offset 0
+                                   L2 destination address byte length 6
+                                   Link-type after encap: dot1Q
+                                   Inject p2mp Multicast
+IP       Tunnel12                  point2point(11)
+                                   1223710 packets, 70068247 bytes
+                                   epoch 0
+                                   sourced in sev-epoch 429
+                                   empty encap string
+                                   P2P-ADJ
+                                   Next chain element:
+                                     IP adj out of Port-channel1.1835, addr 10.255.0.13
+IP       Port-channel1.1837        10.255.0.21(12)
+                                   65470 packets, 29854320 bytes
+                                   epoch 0
+                                   sourced in sev-epoch 399
+                                   Encap length 18
+                                   E0CBBCBC0C982CABEB99E6D08100072D
+                                   0800
+                                   L2 destination address byte offset 0
+                                   L2 destination address byte length 6
+                                   Link-type after encap: dot1Q
+                                   ARP
+IP       Port-channel1.1837        227.0.0.0(3)
+                                   connectionid 1
+                                   0 packets, 0 bytes
+                                   epoch 0
+                                   sourced in sev-epoch 399
+                                   Encap length 18
+                                   01005E0000002CABEB99E6D08100072D
+                                   0800
+                                   L2 destination address byte offset 0
+                                   L2 destination address byte length 6
+                                   Link-type after encap: dot1Q
+                                   Inject p2mp Multicast
+IP       Port-channel1.1825        10.255.2.1(11)
+                                   202942 packets, 38595865 bytes
+                                   epoch 0
+                                   sourced in sev-epoch 399
+                                   Encap length 18
+                                   40A6E8119FF72CABEB99E6D081000721
+                                   0800
+                                   L2 destination address byte offset 0
+                                   L2 destination address byte length 6
+                                   Link-type after encap: dot1Q
+                                   ARP
+IP       Port-channel1.1825        227.0.0.0(3)
+                                   connectionid 1
+                                   363345 packets, 28342885 bytes
+                                   epoch 0
+                                   sourced in sev-epoch 399
+                                   Encap length 18
+                                   01005E0000002CABEB99E6D081000721
+                                   0800
+                                   L2 destination address byte offset 0
+                                   L2 destination address byte length 6
+                                   Link-type after encap: dot1Q
+                                   Inject p2mp Multicast
+IP       GigabitEthernet0/0/0      10.180.14.15(13)
+                                   11676149172 packets, 4648006265878 bytes
+                                   epoch 0
+                                   sourced in sev-epoch 0
+                                   Encap length 14
+                                   78BC1AF1CA6100A6CA7D06D00800
+                                   L2 destination address byte offset 0
+                                   L2 destination address byte length 6
+                                   Link-type after encap: ip
+                                   ARP
+IP       GigabitEthernet0/0/0      227.0.0.0(3)
+                                   connectionid 1
+                                   4289975 packets, 322386841 bytes
+                                   epoch 0
+                                   sourced in sev-epoch 0
+                                   Encap length 14
+                                   01005E00000000A6CA7D06D00800
+                                   L2 destination address byte offset 0
+                                   L2 destination address byte length 6
+                                   Link-type after encap: ip
+                                   Inject p2mp Multicast
+IP       Tunnel0                   172.17.10.158(13)
+                                   8174797 packets, 3597459493 bytes
+                                   epoch 0
+                                   sourced in sev-epoch 8
+                                   Encap length 28
+                                   4500000000000000FF2FC465C0A88CDB
+                                   D150D49120000800000186A0
+                                   Tun endpt
+                                   Next chain element:
+                                     IP adj out of GigabitEthernet0/0/1, addr 192.168.140.1
+IP       Tunnel0                   227.0.0.0(3) (incomplete)
+                                   connectionid 1
+                                   0 packets, 0 bytes
+                                   epoch 0
+                                   sourced in sev-epoch 0
+                                   punt (rate-limited) packets
+                                   Inject p2mp Multicast
+                                   Next chain element:
+                                     drop

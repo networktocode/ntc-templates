@@ -1,0 +1,10 @@
+Value PART (\S+)
+Value STATE (\S+)
+Value VERSION (\S+)
+
+Start
+  ^Partition\s+State\s+Version
+  ^-+$$
+  ^${PART}\s+${STATE}\s+${VERSION} -> Record
+  ^\s*$$
+  ^. -> Error

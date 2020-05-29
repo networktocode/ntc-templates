@@ -1,0 +1,21 @@
+Value Required USER_NAME (\S+)
+Value ENGINE_ID (\S+)
+Value STORAGE_TYPE (\S+)
+Value ACCESS_LIST (.*)
+Value AUTHENTICATION_PROTOCOL (\S+)
+Value PRIVACY_PROTOCOL (\S+)
+Value GROUP_NAME (\S+)
+
+Start
+  ^User\s+name:\s+${USER_NAME}$$
+  ^Engine\s+ID:\s+${ENGINE_ID}$$
+  ^storage-type:\s${STORAGE_TYPE}\s+active\s+access-list:\s+${ACCESS_LIST}$$
+  ^storage-type:\s${STORAGE_TYPE}\s+active$$
+  ^Authentication\s+Protocol:\s+${AUTHENTICATION_PROTOCOL}$$
+  ^Privacy\s+Protocol:\s+${PRIVACY_PROTOCOL}$$
+  ^Group-name:\s+${GROUP_NAME}$$ -> Record
+  # Capture time-stamp if vty line has command time-stamping turned on
+  ^Load\s+for\s+
+  ^Time\s+source\s+is
+  ^\s*$$
+  ^. -> Error

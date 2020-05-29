@@ -1,0 +1,52 @@
+Value Required LOCAL_PORT (\S+)
+Value NEIGHBOR_CHASSIS_TYPE (\S+)
+Value NEIGHBOR_CHASSIS_ID ([a-f0-9]{6}-[a-f0-9]{6}|(?:[a-z0-9]{2}\s){5}[a-z0-9]{2}|\S+)
+Value PORT_TYPE (\S+)
+Value NEIGHBOR_PORTID (.*?)
+Value NEIGHBOR_SYSNAME (.*?)
+Value SYSTEM_DESCR (.*?)
+Value PORT_DESCR (\S+|.*?)
+Value PVID (\d+|.*?)
+Value SYSTEM_CAPABILITIES_SUPPORTED (.*?)
+Value SYSTEM_CAPABILITIES_ENABLED (.*?)
+Value REMOTE_MANAGEMENT_ADDRESS (\S+|.*?)
+
+Start
+  ^\s*$$
+  ^\s*LLDP\sRemote\sDevice\sInformation\sDetail -> LLDP
+  ^. -> Error
+
+LLDP
+  ^\s+Local\sPort\s+:\s${LOCAL_PORT}\s*$$
+  ^\s+ChassisType\s+:\s${NEIGHBOR_CHASSIS_TYPE}\s*$$
+  ^\s+ChassisId\s+:\s${NEIGHBOR_CHASSIS_ID}\s*$$
+  ^\s+PortType\s+:\s${PORT_TYPE}\s*$$
+  ^\s+PortId\s+:\s${NEIGHBOR_PORTID}\s*$$
+  ^\s+SysName\s+:\s${NEIGHBOR_SYSNAME}\s*$$
+  ^\s+System\sDescr\s:\s${SYSTEM_DESCR}\s*$$
+  ^\s+PortDescr\s+:\s${PORT_DESCR}\s*$$
+  ^\s+Pvid\s+:\s${PVID}\s*$$
+  ^\s+System\s+Capabilities\s+Supported\s+:\s${SYSTEM_CAPABILITIES_SUPPORTED}\s*$$
+  ^\s+System\s+Capabilities\s+Enabled\s+:\s${SYSTEM_CAPABILITIES_ENABLED}\s*$$
+  ^\s+Remote\s+Management\s+Address\s*$$
+  ^\s+Type.*$$
+  ^\s+Address\s:\s${REMOTE_MANAGEMENT_ADDRESS}
+  ^\s+Poe\s+Plus\s+Information\s+Detail\s*$$
+  ^\s+Poe\s+Device\s+Type.*
+  ^\s+Power\s+Source.*
+  ^\s+Power\s+Priority.*
+  ^\s+PD\s+Request\s+Power\s+Value.*
+  ^\s+PD\s+Requested\s+Power\s+Value.*
+  ^\s+Requested\s+Power\s+Value.*
+  ^\s+Actual\s+Power\s+Value.*
+  ^\s+PSE\s+Allocated\s+Power\s+Value.*
+  ^\s+MED\sInformation\sDetail\s*$$
+  ^\s+EndpointClass.*
+  ^\s+Poe\s+Device\s+Type.*
+  ^\s+Power\s+Requested.*
+  ^\s+Power\s+Source.*
+  ^\s+Power\s+Priority.*
+  ^\s*$$
+  ^\S+\#\s*$$ -> Record
+  ^\s*-*$$ -> Record
+  ^. -> Error

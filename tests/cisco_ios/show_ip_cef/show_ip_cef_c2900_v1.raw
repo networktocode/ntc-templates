@@ -1,0 +1,13 @@
+Prefix               Next Hop             Interface
+0.0.0.0/0            10.180.122.153       GigabitEthernet0/1
+0.0.0.0/8            drop
+0.0.0.0/32           receive
+10.0.0.0/16          10.180.122.153       GigabitEthernet0/1
+10.157.1.0/24        172.17.100.101       Tunnel60701
+10.180.122.7/32      receive              Loopback0
+10.180.122.152/29    attached             GigabitEthernet0/1
+10.180.122.152/32    receive              GigabitEthernet0/1
+224.0.0.0/4          drop
+224.0.0.0/24         receive
+240.0.0.0/4          drop
+255.255.255.255/32   receive

@@ -1,0 +1,17 @@
+Value Required ADDRESS (\d+\.\d+\.\d+\.\d+)
+Value Required AGE (\S+)
+Value Required MAC (\S+)
+Value Required STATE (\S+)
+Value Required TYPE (\S+)
+Value Required INTERFACE (\S+)
+Value Filldown CPU (\d+/\d+/CPU\d+$)
+
+Start
+  # Match the timestamp at beginning of command output
+  ^\S+\s+\S+\s+\d+\s+\d+:\d+:\d+\.\d+\s+\S+\s*$$
+  ^Address\s+Age\s+Hardware\s+Addr\s+State\s+Type\s+Interface$$
+  ^-+
+  ^${CPU}
+  ^\s*$$
+  ^${ADDRESS}\s+${AGE}\s+${MAC}\s+${STATE}\s+${TYPE}\s+${INTERFACE}\s*$$ -> Record
+  ^. -> Error

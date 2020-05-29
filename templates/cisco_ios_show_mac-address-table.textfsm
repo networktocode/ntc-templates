@@ -1,0 +1,51 @@
+Value DESTINATION_ADDRESS ([0-9a-fA-F]{4}\.[0-9a-fA-F]{4}\.[0-9a-fA-F]{4})
+Value TYPE (\S+)
+Value VLAN (\S+)
+Value DESTINATION_PORT (\S+)
+
+Start
+  ^Destination\s+Address\s+Address\s+Type\s+VLAN\s+Destination\s+Port -> TYPE1
+  ^\s+vlan\s+mac address\s+type\s+learn\s+age\s+ports -> TYPE2
+  ^\s+vlan\s+mac address\s+type\s+protocols\s+port -> TYPE3
+  ^Vlan\s+Mac Address\s+Type\s+Ports -> TYPE4
+  # Capture time-stamp if vty line has command time-stamping turned on
+  ^Load\s+for\s+
+  ^Time\s+source\s+is
+
+TYPE1
+  ^${DESTINATION_ADDRESS}\s+${TYPE}\s+${VLAN}\s+${DESTINATION_PORT} -> Record
+  ^-+\s+-+
+  ^Displaying\s+entries
+  ^Destination\s+Address\s+Address\s+Type\s+VLAN\s+Destination\s+Port
+  ^\s*$$
+  ^Multicast\s+Entries -> End
+  ^. -> Error
+
+TYPE2
+  # Order of the group in brackets here matters
+  ^\s*(?:\*\s+R|\*|R|\s)\s*${VLAN}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+${DESTINATION_PORT} -> Record
+  ^-+\+-+
+  ^Displaying\s+entries
+  ^\s+vlan\s+mac address\s+type\s+learn\s+age\s+ports
+  ^\s*$$
+  ^Multicast\s+Entries -> End
+  ^. -> Error
+
+TYPE3
+  ^\s*${VLAN}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+${DESTINATION_PORT} -> Record
+  ^-+\+-+
+  ^Displaying\s+entries
+  ^\s+vlan\s+mac address\s+type\s+protocols\s+port
+  ^\s*$$
+  ^Multicast\s+Entries -> End
+  ^. -> Error
+
+TYPE4
+  ^\s*${VLAN}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+${DESTINATION_PORT} -> Record
+  ^-+\s+-+
+  ^Displaying\s+entries
+  ^Vlan\s+Mac Address\s+Type\s+Ports
+  ^\s*$$
+  ^Total\s+Mac\s+Addresses
+  ^MultiCast\s+Entries -> End
+  ^. -> Error

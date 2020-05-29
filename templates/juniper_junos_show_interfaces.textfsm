@@ -1,0 +1,16 @@
+Value Required INTERFACE (\S+)
+Value LINK_STATUS (\w+)
+Value ADMIN_STATE (\S+)
+Value HARDWARE_TYPE (\S+)
+Value MTU (\d+|Unlimited)
+
+Start
+  ^\s+Logical\s+interface\s+${INTERFACE}
+  ^Physical\s+interface:\s+${INTERFACE},\s+${ADMIN_STATE},\s+Physical\s+link\s+is\s+${LINK_STATUS}
+  ^.*ype:\s+${HARDWARE_TYPE},.*MTU:\s+${MTU}.* -> Record
+  ^.*MTU:\s+${MTU}.* -> Record
+  ^.*[fF]lags -> Record
+  ^\s*$$
+  ^{master:\d+}
+
+EOF

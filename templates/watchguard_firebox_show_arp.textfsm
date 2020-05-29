@@ -1,0 +1,11 @@
+Value INTERFACE (\S+)
+Value IP ([0-9.]+)
+Value MAC ([0-9a-fA-F:]+|incomplete)
+
+Start
+  ^--
+  ^--\s+ARP\s+Table
+  ^--
+  ^\?\s+\(${IP}\)\s+at\s+<*${MAC}>*\s+(\[\S+\]\s*)?([A-Z]+\s*)?on\s+${INTERFACE} -> Record
+  ^\s*$$
+  ^. -> Error

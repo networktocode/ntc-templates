@@ -1,0 +1,27 @@
+---
+parsed_sample:
+  - fex: "102"
+    description: "ATL1-AS3P"
+    state: "Online"
+    version: "7.2(1)N1(1)"
+    extender_serial: "SSI16340AR0"
+    extender_model: "N2K-C2248TP-E-1GE"
+    part_no: "73-13671-01"
+    pinning_mode: "static"
+    max_links: "1"
+    fabric_port: "Eth1/31"
+    fcoe_admin: "false"
+    fcoe_oper: "true"
+    fcoe_fex_aa_configured: "false"
+    fabric_interface:
+      - "Po102"
+      - "Eth1/31"
+      - "Eth2/15"
+    interface_mode:
+      - "Up"
+      - "Up"
+      - "Up"
+    interface_state:
+      - "Active"
+      - "Active"
+      - "Active"

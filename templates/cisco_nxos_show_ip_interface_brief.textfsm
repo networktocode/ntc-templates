@@ -1,0 +1,13 @@
+Value Filldown VRF (\S+)
+Value Required INTF (\S+)
+Value Required IPADDR ([a-zA-Z0-9./]+)
+Value STATUS (\S+-\S+)
+Value LINK (\S+-\S+)
+Value PROTO (\S+-\S+)
+
+Start
+  ^IP\s+Interface\s+Status\s+for\s+VRF\s+"${VRF}"\(\d+\)
+  ^Interface\s+IP\s+Address\s+Interface\s+Status
+  ^${INTF}\s+${IPADDR}\s+${PROTO}/${LINK}/${STATUS} -> Record
+  ^\s*$$
+  ^.*$$ -> Error
