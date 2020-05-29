@@ -1,6 +1,6 @@
 Value Required INTERFACE (\S+)
 Value INTERFACE_ZONE (.+?)
-Value LINK_STATUS (\w+)
+Value LINK_STATUS (.+?)
 Value PROTOCOL_STATUS (.*)
 Value HARDWARE_TYPE ([\w ]+)
 Value BANDWIDTH (\d+\s+\w+)
@@ -25,12 +25,14 @@ Value FIVEMIN_DROP_RATE (\d+)
 
 Start
   ^Interface.* -> Continue.Record
-  ^.*Interface ${INTERFACE} "${INTERFACE_ZONE}", is ${LINK_STATUS}.*protocol is ${PROTOCOL_STATUS}
+  ^.*Interface ${INTERFACE} "${INTERFACE_ZONE}", is ${LINK_STATUS},.*protocol\s+is\s+${PROTOCOL_STATUS}
+  ^.*Interface ${INTERFACE}.*is\s+${LINK_STATUS},.*protocol\s+is\s+${PROTOCOL_STATUS}
   ^\s+Hardware is ${HARDWARE_TYPE} -> Continue
   ^.*BW ${BANDWIDTH}.*DLY ${DELAY}
   ^.*\(${DUPLEX}.*Auto-Speed\(${SPEED}\)
   ^.*Description: ${DESCRIPTION}
   ^.*MAC address ${ADDRESS}.*MTU ${MTU}
+  ^.*MAC address ${ADDRESS},\s+MTU not set
   ^.*IP address ${IP_ADDRESS}, .*subnet mask ${NET_MASK}
   ^.*1 minute input rate ${ONEMIN_IN_PPS} pkts/sec,\s+${ONEMIN_IN_RATE} bytes/sec
   ^.*1 minute output rate ${ONEMIN_OUT_PPS} pkts/sec,\s+${ONEMIN_OUT_RATE} bytes/sec
