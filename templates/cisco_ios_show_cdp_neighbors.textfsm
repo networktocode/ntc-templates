@@ -1,6 +1,6 @@
 Value Required NEIGHBOR (\S+)
 Value LOCAL_INTERFACE (\S+(?:\s\S+)?)
-Value CAPABILITY ((?:\w\s*?)*?)
+Value CAPABILITY ((?:\w\s*?)+?)
 Value PLATFORM (\S{2,}\s\S+|\S{2,})
 Value NEIGHBOR_INTERFACE ([a-zA-Z]\S+(?:\s\S+)?)
 
