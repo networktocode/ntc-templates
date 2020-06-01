@@ -1,0 +1,83 @@
+IPv4 CEF is enabled and running
+VRF Default
+ 823 prefixes (823/0 fwd/non-fwd)
+ Table id 0x0
+ Database epoch:        0 (823 entries at this epoch)
+
+0.0.0.0/0, epoch 0, flags rib only nolabel, rib defined all labels, default route
+  NetFlow: Origin AS 0, Peer AS 0, Mask Bits 0
+  recursive via 10.181.150.18
+    attached to GigabitEthernet0/2
+0.0.0.0/8, epoch 0
+  NetFlow: Origin AS 0, Peer AS 0, Mask Bits 0
+  Special source: drop
+  drop
+0.0.0.0/32, epoch 0, flags receive
+  NetFlow: Origin AS 0, Peer AS 0, Mask Bits 0
+  Special source: receive
+  receive
+10.0.0.0/16, epoch 0
+  NetFlow: Origin AS 0, Peer AS 0, Mask Bits 16
+  nexthop 10.180.150.33 Port-channel1.1822
+10.0.120.0/24, epoch 0, flags rib only nolabel, rib defined all labels
+  NetFlow: Origin AS 65005, Peer AS 0, Mask Bits 24
+  recursive via 10.181.150.18
+    attached to GigabitEthernet0/2
+10.180.140.153/32, epoch 0, flags [attached]
+  Interest List:
+     - fib bfd tracking
+  BFD state up, tracking attached BFD session on GigabitEthernet0/1
+  Adj source: IP adj out of GigabitEthernet0/1, addr 10.180.140.153 3ED40F00
+    Dependent covered prefix type adjfib, cover 10.180.140.152/29
+  1 IPL source [no flags]
+  attached to GigabitEthernet0/1
+10.180.150.0/26, epoch 0, flags rib only nolabel, rib defined all labels
+  NetFlow: Origin AS 0, Peer AS 0, Mask Bits 26
+  attached to Null0
+10.180.150.5/32, epoch 0, flags attached, connected, receive, local, source eligible
+  NetFlow: Origin AS 0, Peer AS 0, Mask Bits 32
+  Interface source: Loopback180 flags: local, source eligible
+  receive for Loopback180
+10.180.150.32/29, epoch 0, flags attached, connected, cover dependents, need deagg
+  NetFlow: Origin AS 0, Peer AS 0, Mask Bits 29
+  Covered dependent prefixes: 3
+    need deagg: 2
+    notify cover updated: 1
+  attached to Port-channel1.1822
+10.180.150.32/32, epoch 0, flags receive
+  NetFlow: Origin AS 0, Peer AS 0, Mask Bits 29
+  Interface source: Port-channel1.1822 flags: none
+  Dependent covered prefix type cover need deagg, cover 10.180.150.32/29
+  receive for Port-channel1.1822
+10.180.150.33/32, epoch 0, flags attached
+  NetFlow: Origin AS 0, Peer AS 0, Mask Bits 29
+  Adj source: IP adj out of Port-channel1.1822, addr 10.180.150.33 01F3E080
+   Dependent covered prefix type adjfib, cover 10.180.150.32/29
+  attached to Port-channel1.1822
+10.180.150.38/32, epoch 0, flags receive, local, source eligible
+  NetFlow: Origin AS 0, Peer AS 0, Mask Bits 29
+  Interface source: Port-channel1.1822 flags: local, source eligible
+  receive for Port-channel1.1822
+10.180.150.192/26, epoch 0, flags rib only nolabel, rib defined all labels
+  NetFlow: Origin AS 65150, Peer AS 0, Mask Bits 26
+  recursive via 10.181.150.18
+    attached to GigabitEthernet0/2
+10.181.150.0/26, epoch 0, flags rib only nolabel, rib defined all labels
+  NetFlow: Origin AS 0, Peer AS 0, Mask Bits 26
+  attached to Null0
+224.0.0.0/4, epoch 0
+  NetFlow: Origin AS 0, Peer AS 0, Mask Bits 0
+  Special source: multicast
+  multicast
+224.0.0.0/24, epoch 0, flags receive
+  NetFlow: Origin AS 0, Peer AS 0, Mask Bits 0
+  Special source: receive
+  receive
+240.0.0.0/4, epoch 0
+  NetFlow: Origin AS 0, Peer AS 0, Mask Bits 0
+  Special source: drop
+  drop
+255.255.255.255/32, epoch 0, flags receive
+  NetFlow: Origin AS 0, Peer AS 0, Mask Bits 0
+  Special source: receive
+  receive

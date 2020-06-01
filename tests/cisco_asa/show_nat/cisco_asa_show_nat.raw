@@ -67,6 +67,10 @@ Auto NAT Policies (Section 2)
     translate_hits = 383, untranslate_hits = 467
 9 (any) to (outside) source dynamic test5 interface   dns
     translate_hits = 795, untranslate_hits = 263
+10 (inside) to (outside) source static test7 test8   service udp https 8443
+    translate_hits = 680, untranslate_hits = 7
+11 (inside) to (outside) source static test7 test8   service sctp www 8080
+    translate_hits = 680, untranslate_hits = 7
 
 Manual NAT Policies (Section 3)
 1 (any) to (outside) source dynamic test11 test12   destination static test13 test14 net-to-net inactive description source dynamic static destination static net-to-net service any pat-pool interface dns unidirectional no-proxy-arp route-lookup ipv6 inactive description <-- THESE ARE ALL PART OF THE DESCRIPTION

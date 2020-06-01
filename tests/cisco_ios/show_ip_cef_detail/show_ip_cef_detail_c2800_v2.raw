@@ -1,0 +1,67 @@
+IP CEF with switching (Table Version 49101), flags=0x0
+  699 routes, 0 reresolve, 0 unresolved (0 old, 0 new), peak 694
+  48837 instant recursive resolutions, 0 used background process
+  699 leaves, 303 nodes, 421368 bytes, 49035 inserts, 48336 invalidations
+  0 load sharing elements, 0 bytes, 0 references
+  universal per-destination load sharing algorithm, id FCE725EE
+  3(0) CEF resets, 38 revisions of existing leaves
+  Resolution Timer: Exponential (currently 1s, peak 1s)
+  75 in-place/0 aborted modifications
+  refcounts:  80269 leaf, 77824 node
+
+  Table epoch: 0 (699 entries at this epoch)
+
+Adjacency Table has 3 adjacencies
+0.0.0.0/0, version 46142, epoch 0, cached adjacency 199.220.235.181
+0 packets, 0 bytes
+  Flow: AS 0, mask 0
+  via 199.220.235.181, 0 dependencies, recursive
+    next hop 199.220.235.181, GigabitEthernet0/1 via 199.220.235.181/32
+    valid cached adjacency
+0.0.0.0/8, version 7, epoch 0
+0 packets, 0 bytes
+  Flow: AS 0, mask 0
+  via 0.0.0.0, 0 dependencies
+    next hop 0.0.0.0
+    valid drop adjacency
+0.0.0.0/32, version 1, epoch 0, receive
+  Flow: AS 0, mask 32
+10.158.0.0/19, version 9608, epoch 0
+0 packets, 0 bytes
+  Flow: AS 0, mask 19
+  via 0.0.0.0, Null0, 0 dependencies
+    next hop 0.0.0.0, Null0
+    valid null adjacency
+10.158.0.192/29, version 10598, epoch 0, cached adjacency 10.158.0.209
+0 packets, 0 bytes
+  Flow: AS 0, mask 29
+  via 10.158.0.209, GigabitEthernet0/0.1821, 0 dependencies
+    next hop 10.158.0.209, GigabitEthernet0/0.1821
+    valid cached adjacency
+10.158.0.208/32, version 10, epoch 0, receive
+  Flow: AS 0, mask 29
+10.180.30.1/32, version 4, epoch 0, connected, receive
+  Flow: AS 0, mask 32
+199.220.235.180/30, version 2163, epoch 0, attached, connected
+0 packets, 0 bytes
+  Flow: AS 0, mask 30
+  via GigabitEthernet0/1, 0 dependencies
+    valid glean adjacency
+199.220.235.180/32, version 2161, epoch 0, receive
+  Flow: AS 0, mask 30
+199.220.235.181/32, version 2164, epoch 0, connected, cached adjacency 199.220.235.181
+0 packets, 0 bytes
+  Flow: AS 0, mask 30
+  via 199.220.235.181, GigabitEthernet0/1, 661 dependencies
+    next hop 199.220.235.181, GigabitEthernet0/1
+    valid cached adjacency
+224.0.0.0/24, version 3, epoch 0, receive
+  Flow: AS 0, mask 24
+240.0.0.0/4, version 6, epoch 0
+0 packets, 0 bytes
+  Flow: AS 0, mask 0
+  via 0.0.0.0, 0 dependencies
+    next hop 0.0.0.0
+    valid drop adjacency
+255.255.255.255/32, version 2, epoch 0, receive
+  Flow: AS 0, mask 32

@@ -21,6 +21,8 @@ Value OUTPUT_RATE (\d+)
 Value INPUT_PACKETS (\d+)
 Value OUTPUT_PACKETS (\d+)
 Value INPUT_ERRORS (\d+)
+Value CRC (\d+)
+Value ABORT (\d+)
 Value OUTPUT_ERRORS (\d+)
 
 Start
@@ -38,7 +40,8 @@ Start
   ^.*input\s+rate\s+${INPUT_RATE}.+$$
   ^.*output\s+rate\s+${OUTPUT_RATE}.+$$
   ^\s+${INPUT_PACKETS}\s+packets\s+input,\s+\d+\s+bytes,\s+\d+\s+no\s+buffer\s*$$
-  ^\s+${INPUT_ERRORS}\s+input\s+errors,\s+\d+\s+CRC,\s+\d+\s+frame,\s+\d+\s+overrun,\s+\d+\s+ignored\s*$$
+  ^\s+${INPUT_ERRORS}\s+input\s+errors,\s+${CRC}\s+CRC,\s+\d+\s+frame,\s+\d+\s+overrun,\s+\d+\s+ignored\s*$$
+  ^\s+${INPUT_ERRORS}\s+input\s+errors,\s+${CRC}\s+CRC,\s+\d+\s+frame,\s+\d+\s+overrun,\s+\d+\s+ignored,\s+${ABORT}\s+abort\s*$$
   ^\s+${OUTPUT_PACKETS}\s+packets\s+output,\s+\d+\s+bytes,\s+\d+\s+underruns\s*$$
   ^\s+${OUTPUT_ERRORS}\s+output\s+errors,\s+\d+\s+collisions,\s+\d+\s+interface\s+resets\s*$$
   # Capture time-stamp if vty line has command time-stamping turned on
