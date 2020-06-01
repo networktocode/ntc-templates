@@ -14,7 +14,8 @@ Start
   ^Software\s+Version\.+\s+${VERSION}
   ^Hardware\s+Revision\.+\s+${HW_REVISION}
   # netmiko's send_command starts command output with the last symbol from command sent
-  ^\w
-  ^.+\.
+  ^\w$$
+  ^System\s+Description
+  ^Part\s+Number
   ^\s*$$
   ^. -> Error
