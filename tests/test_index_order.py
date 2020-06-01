@@ -69,6 +69,7 @@ def test_index_ordering():
         "aruba_os",
         "avaya_ers",
         "avaya_vsp",
+        "broadcom_icos",
         "brocade_fastiron",
         "brocade_netiron",
         "brocade_nos",
