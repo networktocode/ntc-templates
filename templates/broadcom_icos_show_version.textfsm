@@ -1,41 +1,40 @@
-Value System_Description (.+)
-Value Machine_Type (.+)
-Value Machine_Model (.+)
-Value Serial_Number (.+)
-Value Fru_Number (.+)
-Value Part_Number (.+)
-Value Maintenance_Level (.+)
-Value Manufacturer (.+)
-Value Burned_In_MAC_Address (.+)
-Value Software_Version (.+)
-Value Operating_System (.+)
-Value Network_Processing_Device (.+)
-Value CPLD_version (.+)
-Value Board_Revision (.+)
-Value List Additional_Packages (.+)
+Value DESCRIPTION (.+)
+Value SWITCH_TYPE (.+)
+Value SWITCH_MODEL (.+)
+Value SERIAL (.+)
+Value FRU_NUMBER (.+)
+Value PART_NUMBER (.+)
+Value MAINTENANCE_LEVEL (.+)
+Value MANUFACTURER (.+)
+Value MAC (.+)
+Value VERSION (.+)
+Value OS_VERSION (.+)
+Value NETWORK_PROCESSING_DEVICE (.+)
+Value CPLD_VERSION (.+)
+Value BOARD_REVISION (.+)
+Value List ADDITIONAL_PACKAGES (.+)
 
 Start
   # Captures show version for:
   # Accton AS4610-54P, Accton AS5610-52X, Quanta LY2R, Quanta LB9, DNI AG3448P-R   
   # The following can be an empty value as it doesnt exist in all the models:
   # FruNumber, PartNumber, CPLDversion, BoardRevision
-  ^\s*$$
   ^\s*Switch\s*:\s*\d+\s*$$
   ^\s*$$
-  ^\s*System\s*Description\s*\.+\s*${System_Description}$$
-  ^\s*Machine\s*Type\s*\.+\s*${Machine_Type}$$
-  ^\s*Machine\s*Model\s*\.+\s*${Machine_Model}$$
-  ^\s*Serial\s*Number\s*\.+\s*${Serial_Number}$$
-  ^\s*FRU\s*Number\s*\.+\s*${Fru_Number}$$
-  ^\s*Part\s*Number\s*\.+\s*${Part_Number}$$
-  ^\s*Maintenance\s*Level\s*\.+\s*${Maintenance_Level}$$
-  ^\s*Manufacturer\s*\.+\s*${Manufacturer}$$
-  ^\s*Burned\s*In\s*MAC\s*Address\s*\.+\s*${Burned_In_MAC_Address}$$
-  ^\s*Software\s*Version\s*\.+\s*${Software_Version}$$
-  ^\s*Operating\s*System\s*\.+\s*${Operating_System}$$
-  ^\s*Network\s*Processing\s*Device\s*\.+\s*${Network_Processing_Device}$$
-  ^\s*CPLD\s*version\s*\.+\s*${CPLD_version}$$
-  ^\s*Board\s*Revision\s*\.+\s*${Board_Revision}$$
-  ^\S \S\S -> Continue.Record
-  ^\s*Additional\s*Packages\s*\.+\s*${Additional_Packages}$$
-  ^\s*${Additional_Packages}$$
+  ^\s*System\s*Description\s*\.+\s*${DESCRIPTION}$$
+  ^\s*Machine\s*Type\s*\.+\s*${SWITCH_TYPE}$$
+  ^\s*Machine\s*Model\s*\.+\s*${SWITCH_MODEL}$$
+  ^\s*Serial\s*Number\s*\.+\s*${SERIAL}$$
+  ^\s*FRU\s*Number\s*\.+\s*${FRU_NUMBER}$$
+  ^\s*Part\s*Number\s*\.+\s*${PART_NUMBER}$$
+  ^\s*Maintenance\s*Level\s*\.+\s*${MAINTENANCE_LEVEL}$$
+  ^\s*Manufacturer\s*\.+\s*${MANUFACTURER}$$
+  ^\s*Burned\s*In\s*MAC\s*Address\s*\.+\s*${MAC}$$
+  ^\s*Software\s*Version\s*\.+\s*${VERSION}$$
+  ^\s*Operating\s*System\s*\.+\s*${OS_VERSION}$$
+  ^\s*Network\s*Processing\s*Device\s*\.+\s*${NETWORK_PROCESSING_DEVICE}$$
+  ^\s*CPLD\s*version\s*\.+\s*${CPLD_VERSION}$$
+  ^\s*Board\s*Revision\s*\.+\s*${BOARD_REVISION}$$
+  ^\s*Additional\s*Packages\s*\.+\s*${ADDITIONAL_PACKAGES}$$
+  ^\s+${ADDITIONAL_PACKAGES}$$
+  ^. -> Error
