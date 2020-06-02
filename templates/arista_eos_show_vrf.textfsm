@@ -1,5 +1,10 @@
 Value VRF (\S+)
 Value RD (\d\S+|<.+>)
+# Value List PROTOCOLS (\S+)
+# Value List STATE (\S+:(routing|no routing|incomplete))
+# Value List INTERFACES ((\w+.\w+,?\s?)*)
+Value List INTERFACES (\w+)
+
 
 Start
   ^\s+Vrf\s+RD\s+Protocols\s+State\s+Interfaces -> VRF
@@ -8,7 +13,24 @@ Start
   ^. -> Error
 
 VRF
-  ^\s+${VRF}\s+${RD} -> Record
+  # match a vrf with interfaces
+  ^\s+${VRF}\s+${RD}\s+\S+\s+\S+:\S+(\s\S+)*,\s+${INTERFACES},\s -> Continue
+  ^\s+\S+\s+\S+(\s\S+)*\s+\S+\s+\S+:\S+(\s\S+)*,\s+\S+,\s${INTERFACES},\s$$ -> Continue
+  ^\s+\S+:\S+(\s\S+)*,\s+${INTERFACES},\s -> Continue
+  ^\s+\S+:\S+(\s\S+)*,\s+\S+,\s${INTERFACES},\s$$ -> Continue
+  ^\s+\S+:\S+(\s\S+)*,\s+${INTERFACES}\s*$$ -> Record
+  ^\s+\S+:\S+(\s\S+)*,\s+\S+,\s${INTERFACES}\s*$$ -> Record
+  ^\s+${INTERFACES},\s -> Continue
+  ^\+s\S+,\s${INTERFACES},\s$$ -> Continue
+  ^\s+${INTERFACES}\s*$$ -> Record
+  ^^\+s\S+,\s${INTERFACES}\s*$$ -> Record
+  ^\s+\S+\s+\S+(\s\S+)*\s+\S+\s+\S+:\S+(\s\S+)*,?\s+${INTERFACES} -> Record
+  # ^\s+${VRF}\s+${RD}\s+\S+\s+\S+:\S+(\s\S+)*,\s+${INTERFACES}\s -> Record
+  #^\s+\S+\s+\S+\s+\S+\s+\S+:\S+(\s+\S+)*,\s+\\s${INTERFACES},\s$$ -> Continue
+  # ^\s+\S+:\S+\s+${INTERFACES},?\s? -> Continue
+  # ^\s+\S+:\S+\s+\S+,?\s? -> Continue
+  #\s+${STATE},?\s+${INTERFACES}\s*$$ -> Continue
+  # ^\s+${VRF}\s+${RD}\s+${PROTOCOLS},${PROTOCOLS}\s+${STATE},?\s+${INTERFACES}\s*$$ -> Record
   # Match second line with Status e.x. v6:routing
   ^\s+\S+:\S+
   # Match multiline interface with last line having a single interface
@@ -18,3 +40,16 @@ VRF
   ^\s*-+\s+-+
   ^\s*$$
   ^. -> Error
+
+  # # match a vrf without interfaces
+  # ^\s+${VRF}\s+${RD}\s+${PROTOCOLS}\s+${STATE}\s*$$ -> Continue.Record
+  # # Match continuing record with line with with protocols, state, interfaces 
+  # ^\s+${PROTOCOLS}\s+${STATE}\s+${INTERFACES}\s*$$ -> Continue.Record
+  # # Match continuing record with just protocols and State
+  # ^\s+${PROTOCOLS}\s+${STATE}\s*$$
+  # # Match continuing record with state and interfaces
+  # ^\s+${STATE}\s{2,}${INTERFACES}\s*$$ -> Continue.Record
+  # # Match continuing record just state and no interfaces
+  # ^\s+${STATE}(routing|no routing|incomplete)\s*$$
+  # # Match continuing record with just interfaces
+  # ^\s+${INTERFACES}\s*$$
