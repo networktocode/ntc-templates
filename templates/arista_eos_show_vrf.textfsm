@@ -43,7 +43,7 @@ VRF
   ############## Lines that contains state plus interfaces ##################
   #
   # match first interface of the line when it also has a state and it is the last interface
-  ^\s+\S+:\S+(\s\S+)*\s+${INTERFACES}\s*$$ -> Continue
+  ^\s+(\S+:\S+(?:\s\S+)*)\s+${INTERFACES}?\s*$$ -> Continue
   #
   # match first interface of the line when it also has a state and it is not the last interface
   ^\s+\S+:\S+(\s\S+)*\s+${INTERFACES}, -> Continue
@@ -89,3 +89,6 @@ VRF
   # three interfaces displayed per line
   ^\s+(?:\S+,){2}\s${INTERFACES}, -> Continue
   #
+
+
+EOF
