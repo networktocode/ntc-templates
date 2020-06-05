@@ -1,0 +1,15 @@
+Value VLAN (\S+)
+Value MAC (\S+)
+Value INTERFACE (\S+)
+Value INDEX (\S+)
+Value STATUS (\S+)
+
+Start
+  # Captures show mac-address-table for:
+  # Accton AS4610-54P, Accton AS5610-52X, Quanta LY2R, Quanta LB9, DNI AG3448P-R   
+  # Raw data is the same in the case of all those devices
+  ^\s*VLAN\s+ID\s+MAC\s+Address\s+Interface\s+IfIndex\s+Status
+  ^-+
+  ^\s*${VLAN}\s+${MAC}\s+${INTERFACE}\s+${INDEX}\s+${STATUS} -> Record
+  ^\s*$$
+  ^. -> Error
