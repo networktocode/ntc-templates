@@ -1,8 +1,5 @@
 Value VRF (\S+)
 Value RD (\d\S+|<.+>)
-# Value List PROTOCOLS (\S+)
-# Value List STATE (\S+:(routing|no routing|incomplete))
-# Value List INTERFACES ((\w+.\w+,?\s?)*)
 Value List INTERFACES (\w+)
 
 Start
