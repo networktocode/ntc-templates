@@ -1,0 +1,17 @@
+
+Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge,
+                  S - Switch, H - Host, I - IGMP, r - Repeater
+
+Device ID                Intf      Holdtime  Capability Platform         Port ID
+------------------------ --------- --------- ---------- ---------------- ---------
+AP00-1-00001             0/1       173       T B I      cisco AIR-CAP270 GigabitEt
+AP00-2-00002             0/2       139       T B I      cisco AIR-CAP270 GigabitEt
+AP00-15-00050D           0/3       127       R T        cisco AIR-AP3802 GigabitEt
+AP00-1-00115F            0/4       170       R T        cisco AIR-AP3802 GigabitEt
+AP00-22-01665A           0/5       143       R T        cisco AIR-AP3802 GigabitEt
+dev1-df-loc-sw000001     0/35      161       R          BCM-56340        0/1
+dev2-dd-loc-sw000001     0/37      178       R          BCM-56340        0/1
+dev3-ds-loc-sw000001     0/39      157       R          BCM-56340        0/1
+dev4-da-loc-sw000001     0/43      179       R          BCM-56340        0/1
+dev5-ab-loc-sw0001       0/49      154       R          AS5610-52X       0/1
+dev6-aa-loc-sw0002       0/50      158       R          AS5610-52X       0/1
