@@ -10,7 +10,7 @@ Start
   # Accton AS4610-54P, Accton AS5610-52X, Quanta LY2R, Quanta LB9, DNI AG3448P-R   
   # Raw data is the same in the case of all those devices
   ^Capability\sCodes:
-  ^\s+\S+
+  ^\s+\S+\s+-
   ^\s*Device\s+ID\s+Intf\s+Holdtime\s+Capability\s+Platform\s+Port\s+ID$$
   ^-+
   ^\s*${ID}\s+${INTERFACE}\s+${HOLDTIME}\s+${CAPABILITY}\s+${PLATFORM}\s+${PORT} -> Record
