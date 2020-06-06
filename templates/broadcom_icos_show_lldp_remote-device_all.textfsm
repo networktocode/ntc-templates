@@ -1,0 +1,19 @@
+Value LOCAL_INTERFACE (\S+)
+Value REMOTE_ID (\S+)
+Value CHASSIS_ID (\S+)
+Value PORT_ID (\S+)
+Value SYSTEM_NAME (\S+)
+
+Start
+  # Captures show lldp remote-device all for:
+  # Accton AS4610-54P, Accton AS5610-52X, Quanta LY2R, Quanta LB9, DNI AG3448P-R   
+  # Raw data is the same in the case of all those devices
+  ^LLDP
+  ^Local
+  ^\s*Interface\s+RemID\s+Chassis\s+ID\s+Port\s+ID\s+System\s+Name$$
+  ^-+
+  ^\s*${LOCAL_INTERFACE}\s+${REMOTE_ID}\s+${CHASSIS_ID}\s+${PORT_ID}\s+${SYSTEM_NAME} -> Record
+  # Match records that only include the interface value
+  ^\s*${LOCAL_INTERFACE} -> Record
+  ^\s*$$
+  ^. -> Error
