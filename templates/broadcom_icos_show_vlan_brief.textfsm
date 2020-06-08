@@ -1,4 +1,4 @@
-Value ID (\d+)
+Value VLAN_ID (\d+)
 Value NAME (\S+)
 Value TYPE (\S+)
 
@@ -9,6 +9,6 @@ Start
   # Raw data is the same in the case of all those devices
   ^\s*VLAN\s+ID\s+VLAN\s+Name\s+VLAN\s+Type$$
   ^-+
-  ^\s*${ID}\s+${NAME}\s+${TYPE} -> Record
+  ^\s*${VLAN_ID}\s+${NAME}\s+${TYPE} -> Record
   ^\s*$$
   ^. -> Error
