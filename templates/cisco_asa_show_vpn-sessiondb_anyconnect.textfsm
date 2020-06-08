@@ -2,7 +2,8 @@ Value Filldown,Required SESSION_TYPE (\S+)
 Value USERNAME (\S+)
 Value Required INDEX (\d+)
 Value ASSIGNED_IP (\d+\.\d+\.\d+\.\d+)
-Value PUBLIC_IP (\d+\.\d+\.\d+\.\d+)
+Value PUBLIC_IP (\S+)
+Value ASSIGNED_IPV6 (\S+)
 Value PROTOCOL (.+?)
 Value LICENSE (.+?)
 Value ENCRYPTION (.+?)
@@ -33,6 +34,7 @@ Connection
   ^\s*Index\s*:\s+${INDEX}$$
   ^\s*Assigned\s+IP\s*:\s+${ASSIGNED_IP}\s+Public\s*IP\s*:\s*${PUBLIC_IP}$$
   ^\s*Assigned\s+IP\s*:\s+${ASSIGNED_IP}$$
+  ^\s*Assigned\s+IPv6\s*:\s+${ASSIGNED_IPV6}$$
   ^\s*Public\s+IP\s*:\s+${PUBLIC_IP}$$
   ^\s*Protocol\s+:\s+${PROTOCOL}$$
   ^\s*License\s+:\s*${LICENSE}$$
