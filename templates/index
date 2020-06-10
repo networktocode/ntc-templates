@@ -24,6 +24,7 @@ arista_eos_show_environment_temperature.textfsm, .*, arista_eos, sh[[ow]] en[[vi
 arista_eos_show_interfaces_transceiver.textfsm, .*, arista_eos, sh[[ow]] inte[[rfaces]] tr[[ansceiver]]
 arista_eos_show_mac_security_interface.textfsm, .*, arista_eos, sh[[ow]] ma[[c]] secu[[rity]] int[[erface]]
 arista_eos_show_lldp_neighbors_detail.textfsm, .*, arista_eos, sh[[ow]] ll[[dp]] nei[[ghbors]] d[[etail]]
+arista_eos_show_port-channel_summary.textfsm, .*, arista_eos, sh[[ow]] port-c[[hannel]] s[[ummary]]
 arista_eos_show_environment_cooling.textfsm, .*, arista_eos, sh[[ow]] en[[vironment]] c[[ooling]]
 arista_eos_show_ip_interface_brief.textfsm, .*, arista_eos, sh[[ow]] i[[p]] int[[erface]] br[[ief]]
 arista_eos_show_interfaces_status.textfsm, .*, arista_eos, sh[[ow]] int[[erfaces]] st[[atus]]
@@ -52,6 +53,7 @@ arista_eos_dir_flash.textfsm, .*, arista_eos, dir fl[[ash:]]
 arista_eos_show_mlag.textfsm, .*, arista_eos, sh[[ow]] ml[[ag]]
 arista_eos_show_vlan.textfsm, .*, arista_eos, sh[[ow]] vl[[an]]
 arista_eos_show_vrf.textfsm, .*, arista_eos, sh[[ow]] vrf
+
 
 aruba_os_show_ipv6_interface_brief.textfsm, .*, aruba_os, sh[[ow]] ipv6 in[[terface]] b[[rief]]
 aruba_os_show_ip_interface_brief.textfsm, .*, aruba_os, sh[[ow]] ip in[[terface]] b[[rief]]
