@@ -8,8 +8,8 @@ parsed_sample:
     primary_ip_address: "172.20.254.36"
     primary_ip_subnet: "172.20.254.32/27"
     primary_broadcast_address: "255.255.255.255"
-    secondary_ip_address: ""
-    secondary_ip_subnet: ""
+    secondary_ip_address: []
+    secondary_ip_subnet: []
     multicast_groups: "224.0.0.100"
     mtu: "1500"
     route_preference: "0"
@@ -76,8 +76,10 @@ parsed_sample:
     primary_ip_address: "172.16.100.69"
     primary_ip_subnet: "172.16.100.0/25"
     primary_broadcast_address: "255.255.255.255"
-    secondary_ip_address: "172.16.69.209"
-    secondary_ip_subnet: "172.16.69.192/26"
+    secondary_ip_address:
+      - "172.16.69.209"
+    secondary_ip_subnet:
+      - "172.16.69.192/26"
     multicast_groups: "224.0.0.100"
     mtu: "1500"
     route_preference: "0"
@@ -144,8 +146,8 @@ parsed_sample:
     primary_ip_address: "10.255.255.4"
     primary_ip_subnet: "10.255.255.4/32"
     primary_broadcast_address: "255.255.255.255"
-    secondary_ip_address: ""
-    secondary_ip_subnet: ""
+    secondary_ip_address: []
+    secondary_ip_subnet: []
     multicast_groups: "224.0.0.13  224.0.0.10  224.0.0.2  224.0.0.1"
     mtu: "1500"
     route_preference: "0"
@@ -212,8 +214,8 @@ parsed_sample:
     primary_ip_address: "172.20.200.14"
     primary_ip_subnet: "172.20.200.12/30"
     primary_broadcast_address: "255.255.255.255"
-    secondary_ip_address: ""
-    secondary_ip_subnet: ""
+    secondary_ip_address: []
+    secondary_ip_subnet: []
     multicast_groups: "224.0.0.22  224.0.0.13  224.0.0.10  224.0.0.2  224.0.0.1"
     mtu: "9216"
     route_preference: "0"
@@ -280,8 +282,8 @@ parsed_sample:
     primary_ip_address: "172.20.200.30"
     primary_ip_subnet: "172.20.200.28/30"
     primary_broadcast_address: "255.255.255.255"
-    secondary_ip_address: ""
-    secondary_ip_subnet: ""
+    secondary_ip_address: []
+    secondary_ip_subnet: []
     multicast_groups: "224.0.0.13  224.0.0.10  224.0.0.2  224.0.0.1"
     mtu: "9216"
     route_preference: "0"
@@ -348,8 +350,8 @@ parsed_sample:
     primary_ip_address: "172.20.200.46"
     primary_ip_subnet: "172.20.200.44/30"
     primary_broadcast_address: "255.255.255.255"
-    secondary_ip_address: ""
-    secondary_ip_subnet: ""
+    secondary_ip_address: []
+    secondary_ip_subnet: []
     multicast_groups: "224.0.0.20  224.0.0.10  224.0.0.2  224.0.0.1"
     mtu: "9216"
     route_preference: "0"
@@ -416,8 +418,8 @@ parsed_sample:
     primary_ip_address: "10.46.16.122"
     primary_ip_subnet: "10.46.16.0/24"
     primary_broadcast_address: "255.255.255.255"
-    secondary_ip_address: ""
-    secondary_ip_subnet: ""
+    secondary_ip_address: []
+    secondary_ip_subnet: []
     multicast_groups: ""
     mtu: "1500"
     route_preference: "0"
@@ -484,8 +486,8 @@ parsed_sample:
     primary_ip_address: "172.20.1.94"
     primary_ip_subnet: "172.20.1.0/24"
     primary_broadcast_address: "255.255.255.255"
-    secondary_ip_address: ""
-    secondary_ip_subnet: ""
+    secondary_ip_address: []
+    secondary_ip_subnet: []
     multicast_groups: ""
     mtu: "1500"
     route_preference: "0"
