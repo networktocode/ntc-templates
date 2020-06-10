@@ -1,0 +1,18 @@
+Value PORT (\d+)
+Value ID (\d+)
+Value PROFILE_NAME (\w+\d+)
+Value ROLE
+Value PARENT_CHILD (\d+)
+Value CIR
+Value EIR
+Value CBS
+Value EBS
+Value CLASSIFIER
+
+Start
+  ^\+-+\s*STANDARD\s*PROFILE\s*TABLE\s*-+\+
+  ^\|\s*Port
+  
+  ^\+-+\+
+  ^\s*$$
+  ^. -> Error
