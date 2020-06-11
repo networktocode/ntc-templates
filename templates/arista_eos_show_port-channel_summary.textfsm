@@ -7,7 +7,7 @@ Value List PHYS_IFACE_STATUS (\(.+?\))
 
 
 Start
-  ^Flags -> PCS
+  ^\s*Flags -> PCS
 #   ^\s+Port-Channel\s+Protocol\s+Ports\s+$$ -> PCS
   ^\s*$$
   ^. -> Error
