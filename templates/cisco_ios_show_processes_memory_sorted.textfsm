@@ -16,5 +16,6 @@ Start
 
 Process
   ^\s*${PROCESS_ID}\s+\d+\s+${PROCESS_ALLOCATED}\s+${PROCESS_FREED}\s+${PROCESS_HOLDING}\s+\d+\s+\d+\s+${PROCESS}\s*$$
+  ^\s*\d+\s+Total\s*$$
   ^\s*$$
   ^. -> Error

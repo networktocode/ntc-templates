@@ -7,7 +7,7 @@ Value ADMIN_MODE (.+?)
 Value ACCESS_VLAN (\d+|unassigned)
 Value NATIVE_VLAN (\d+)
 Value VOICE_VLAN (\S+)
-Value TRUNKING_VLANS (.+?)
+Value List TRUNKING_VLANS (\S+?)
 
 Start
   ^Name: -> Continue.Record
@@ -19,7 +19,9 @@ Start
   ^\s*Access\s+Mode\s+VLAN:\s+${ACCESS_VLAN}
   ^\s*Trunking\s+Native\s+Mode\s+VLAN:\s+${NATIVE_VLAN}
   ^\s*Voice\s+VLAN:\s+${VOICE_VLAN}
+  ^\s*Trunking\s+VLANs\s+Enabled:\s+${TRUNKING_VLANS},\s*$$ -> Trunk
   ^\s*Trunking\s+VLANs\s+Enabled:\s+${TRUNKING_VLANS}$$
+  ^\s+${TRUNKING_VLANS}$$
   ^\s*Administrative\s+Mode:\s+${ADMIN_MODE}$$
   ^\s*(?:Operational|Administrative)\s+(?:Trunking|Native\s+VLAN|private-vlan)
   ^\s*Voice\s+VLAN:
@@ -35,3 +37,7 @@ Start
   ^Load\s+for\s+
   ^Time\s+source\s+is
   ^. -> Error
+
+Trunk
+  ^\s+${TRUNKING_VLANS},\s*$$ -> Start
+  ^\s+${TRUNKING_VLANS}\s*$$
