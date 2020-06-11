@@ -21,6 +21,7 @@ MAT
   ^\s*${VLAN}\s+${MAC_ADDRESS}\s+${TYPE}\s+${DESTINATION_PORT}\s+${MOVES}\s+${LAST_MOVE}\sago$$ -> Record
   ^\s*Total\s+mac -> Start
   ^\s*-+\s+.*-*$$
+  ^\s*$$
   ^. -> Error
 
 MMAT
@@ -36,4 +37,4 @@ MMAT
   ^\s*\d+\s+(\w+\.\w+\.\w+|\w+\:\w+\:\w+\:\w+\:\w+\:\w+)\s+\w+\s+((\w+\/\w+|\w+)\s){4}${DESTINATION_PORT}$$ -> Continue
   ^\s*Total\s+mac -> Start
   ^\s*-+\s+.*-*$$
-  ^. -> Error
+  ^\s*$$
