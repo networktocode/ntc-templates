@@ -1,7 +1,0 @@
-Value STATE (\w+\s\w+)
-
-Start
-  ^\sArchive feature ${STATE} -> Record
-  # Capture time-stamp if vty line has command time-stamping turned on
-  ^Load\s+for\s+
-  ^Time\s+source\s+is

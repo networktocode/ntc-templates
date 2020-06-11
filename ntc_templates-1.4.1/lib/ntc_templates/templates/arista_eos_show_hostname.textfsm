@@ -1,6 +1,0 @@
-Value HOSTNAME (\S+?)
-Value FQDN (\S+?)
-
-Start
-  ^Hostname:\s+${HOSTNAME}$$
-  ^FQDN:\s+${FQDN}$$ -> Record

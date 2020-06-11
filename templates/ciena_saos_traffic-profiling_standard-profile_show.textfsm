@@ -7,7 +7,8 @@ Value CIR (\d+)
 Value EIR (\d+)
 Value CBS (\d+)
 Value EBS (\d+)
-Value CLASSIFIER (\S+.\|\s*\S+)
+Value CLASSIFIER_A (\S+)
+Value CLASSIFIER_B (\S+)
 
 
 Start
@@ -15,7 +16,7 @@ Start
   ^\|\s*Port
   ^\|\s*\|\s*ID
   ^\+-+\+
-  ^\|\s*${PORT}\s*\|\s*${ID}\s*\|\s*${PROFILE_NAME}\s*\|\s*${ROLE}\s*\|\s*${PARENT_CHILD}\s*\|\s*${CIR}\s*\|\s*${EIR}\s*\|\s*${CBS}\s*\|\s*${EBS}\s*\|\s*${CLASSIFIER}\s*\| -> Record
+  ^\|\s*${PORT}\s*\|\s*${ID}\s*\|\s*${PROFILE_NAME}\s*\|\s*${ROLE}\s*\|\s*${PARENT_CHILD}\s*\|\s*${CIR}\s*\|\s*${EIR}\s*\|\s*${CBS}\s*\|\s*${EBS}\s*\|\s*${CLASSIFIER_A}\s*\|\s*${CLASSIFIER_B}\s*\| -> Record
   ^\+-.*
   ^\s*$$
   ^. -> Error

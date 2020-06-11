@@ -1,7 +1,0 @@
-Value VERSION (\S+)
-Value CONSOLE (.*)
-
-Start
-  ^Software image:\s+${VERSION}
-  ^Console speed:\s+${CONSOLE} -> Record
-  
