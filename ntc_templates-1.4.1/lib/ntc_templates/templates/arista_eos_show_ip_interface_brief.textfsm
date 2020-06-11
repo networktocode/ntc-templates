@@ -1,0 +1,8 @@
+Value INTERFACE (\S+)
+Value IP (\S+)
+Value STATUS (\S+)
+Value PROTOCOL (\S+)
+Value MTU (\d+)
+
+Start
+  ^${INTERFACE}\s+${IP}\s+${STATUS}\s+${PROTOCOL}\s+${MTU} -> Record

@@ -1,0 +1,19 @@
+Value Filldown NAME (\S+)
+Value Filldown DESC (.+)
+Value TYPE ([newrkguphsobjct]+)
+Value HOST (\d+.\d+.\d+.\d+)
+Value NET_OBJECT (\S+)
+Value NETWORK (\d+.\d+.\d+.\d+)
+Value MASK (\d+.\d+.\d+.\d+)
+Value GRP_OBJECT (\S+)
+
+Start
+  ^object-group -> Continue.Clearall
+  ^object-group\s+network\s+${NAME}\s*
+  ^\s+description:?\s+${DESC}\s*
+  ^\s+network-object\s+${TYPE}\s+${HOST}\s* -> Record
+  ^\s+network-object\s+${TYPE}\s+${NET_OBJECT}\s* -> Record
+  ^\s+${TYPE}-object\s+${NETWORK}\s+${MASK}\s* -> Record
+  ^\s+${TYPE}-object\s+${GRP_OBJECT}\s* -> Record
+
+EOF
