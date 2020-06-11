@@ -19,7 +19,8 @@ MAT
   # capture the mac address table
   ^\s*${VLAN}\s+${MAC_ADDRESS}\s+${TYPE}\s+${DESTINATION_PORT}\s*$$ -> Record
   ^\s*${VLAN}\s+${MAC_ADDRESS}\s+${TYPE}\s+${DESTINATION_PORT}\s+${MOVES}\s+${LAST_MOVE}\sago$$ -> Record
-  ^\s*$$ -> Start
+  ^\s*Total\s+mac -> Start
+  ^. -> Error
 
 MMAT
   # capture the multicast mac address table
@@ -32,4 +33,5 @@ MMAT
   ^\s*\d+\s+(\w+\.\w+\.\w+|\w+\:\w+\:\w+\:\w+\:\w+\:\w+)\s+\w+\s+((\w+\/\w+|\w+)\s){2}${DESTINATION_PORT}\s* -> Continue
   ^\s*\d+\s+(\w+\.\w+\.\w+|\w+\:\w+\:\w+\:\w+\:\w+\:\w+)\s+\w+\s+((\w+\/\w+|\w+)\s){3}${DESTINATION_PORT}\s* -> Continue
   ^\s*\d+\s+(\w+\.\w+\.\w+|\w+\:\w+\:\w+\:\w+\:\w+\:\w+)\s+\w+\s+((\w+\/\w+|\w+)\s){4}${DESTINATION_PORT}$$ -> Continue
-  ^\s*$$ -> Start
+  ^\s*Total\s+mac -> Start
+  ^. -> Error
