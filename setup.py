@@ -13,7 +13,7 @@ if not version:
 with open("README.md", "r", "utf-8") as f:
     readme = f.read()
 
-with open("CHANGELOG.md", "r", "utf-8") as f:
+with open("CHANGELOG", "r", "utf-8") as f:
     history = f.read()
 
 long_description = readme + "\n\n" + history
