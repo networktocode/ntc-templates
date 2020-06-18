@@ -6,9 +6,12 @@ Value EXPIRY_DATE (\S+|\s*?)
 Value COMMENTS (.+)
 
 Start
-  ^\s+Count\s*$$ -> Begin
+  ^Feature\s+Ins\s+Lic\s+Status\s+Expiry\s+Date\s+Comments -> Begin
+  ^\s*$$
+  ^. -> Error
 
 Begin
+  ^\s+Count
   ^${FEATURE}\s+${INSTALLED}\s+${LICENSE_COUNT}\s+${STATUS}\s+?${EXPIRY_DATE}\s+${COMMENTS}\s*$$ -> Record
   ^-+\s*$$
   ^\s*$$
