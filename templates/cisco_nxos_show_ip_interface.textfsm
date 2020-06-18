@@ -71,11 +71,11 @@ Start
   ^IP\s+Interface\s+Status\s+for\s+VRF\s+\"${VRF_NAME}\"\s*$$
   ^${INTERFACE},.*protocol-${PROTOCOL_STATUS}\/link-${LINK_STATUS}\/admin-${ADMIN_STATUS},.*$$
   ^\s+IP\s+address:\s+${PRIMARY_IP_ADDRESS},\s+IP\s+subnet:\s+${PRIMARY_IP_SUBNET}\s*$$
-  # Secondary IP addresses are stores in a list object
+  # Secondary IP addresses are stored as a list
   ^\s+IP\s+address:\s+${SECONDARY_IP_ADDRESS},\s+IP\s+subnet:\s+${SECONDARY_IP_SUBNET}\s+secondary\s*$$
   ^\s+IP\s+broadcast\s+address:\s+${PRIMARY_BROADCAST_ADDRESS}\s*$$
   ^\s+IP\s+multicast\s+groups\s+locally\s+joined:.*$$
-  # Sadly multicast groups are all on the same line so we can't make a list out of it
+  # Multiple multicast groups are on the same line so we can't make a list out of those
   ^\s+${MULTICAST_GROUPS}\s*$$
   ^\s+IP\s+MTU:\s+${MTU}.*$$
   ^\s+IP\s+primary\s+address\s+route-preference:\s+${ROUTE_PREFERENCE}, tag:\s+${ROUTE_PREFERENCE_TAG}\s*$$
@@ -102,4 +102,5 @@ Start
   ^\s+WCCP\s+Redirect\s+outbound:\s+${WCCP_REDIRECT_OUTBOUND}\s*$$
   ^\s+WCCP\s+Redirect\s+inbound:\s+${WCCP_REDIRECT_INBOUND}\s*$$
   ^\s+WCCP\s+Redirect\s+exclude:\s+${WCCP_REDIRECT_EXCLUDE}\s*$$ -> Record
+  ^\s*$$
   ^. -> Error
