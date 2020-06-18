@@ -38,18 +38,18 @@ Start
   ^\s+Hellotime\s+${TIMERS_HELLO_SEC}.*holdtime\s+${TIMERS_HOLD_SEC}.*$$
   ^\s+Next\s+hello\s+sent.*$$
   ^\s+Virtual\s+IP\s+address\s+is\s+${PRIMARY_IPV4_ADDRESS}\s+.*$$
-  ^\s+Secondary Virtual IP address is ${SECONDARY_IPV4_ADDRESS}\s*$$
-  ^\s+Active router is ${ACTIVE_ROUTER}\s*$$
-  ^\s+Active router is ${ACTIVE_IP_ADDRESS}\s?, priority ${ACTIVE_PRIORITY} expires in ${ACTIVE_EXPIRE}.*$$
-  ^\s+Standby router is ${STANDBY_ROUTER}\s*$$
-  ^\s+Standby router is ${STANDBY_IP_ADDRESS}\s?, priority ${STANDBY_PRIORITY} expires in ${STANDBY_EXPIRE}.*$$
-  ^\s+Authentication ${AUTHENTICATION},.*$$
-  ^\s+Virtual mac address is ${VIRTUAL_MAC_ADDRESS} \(${VIRTUAL_MAC_ADDRESS_STATUS}\)\s*$$
-  ^\s+${NUM_STATE_CHANGES} state changes, last state change ${LAST_STATE_CHANGE}\s*$$
-  ^\s+IP redundancy name is ${SESSION_NAME}\s.*$$
+  ^\s+Secondary\s+Virtual\s+IP\s+address\s+is\s+${SECONDARY_IPV4_ADDRESS}\s*$$
+  ^\s+Active\s+router\s+is\s+${ACTIVE_ROUTER}\s*$$
+  ^\s+Active\s+router\s+is\s+${ACTIVE_IP_ADDRESS}\s?,\s+priority\s+${ACTIVE_PRIORITY}\s+expires\s+in\s+${ACTIVE_EXPIRE}.*$$
+  ^\s+Standby\s+router\s+is\s+${STANDBY_ROUTER}\s*$$
+  ^\s+Standby\s+router\s+is\s+${STANDBY_IP_ADDRESS}\s?,\s+priority\s+${STANDBY_PRIORITY}\s+expires\s+in\s+${STANDBY_EXPIRE}.*$$
+  ^\s+Authentication\s+${AUTHENTICATION},.*$$
+  ^\s+Virtual\s+mac\s+address\s+is\s+${VIRTUAL_MAC_ADDRESS} \(${VIRTUAL_MAC_ADDRESS_STATUS}\)\s*$$
+  ^\s+${NUM_STATE_CHANGES}\s+state\s+changes,\s+last\s+state\s+change\s+${LAST_STATE_CHANGE}\s*$$
+  ^\s+IP\s+redundancy\s+name\s+is\s+${SESSION_NAME}\s.*$$
   ^\s+Secondary VIP.*$$
-  # Catch unexpected non-empty lines (secondary IP's at the end of the block for example)
-  ^\s+\S+.*$$
+  # Catch secondary VIPs:
+  ^\s+\d+\.\d+\.\d+\.\d+$$
   # Record data when empty line is found
   ^\s*$$ -> Record
   ^. -> Error
