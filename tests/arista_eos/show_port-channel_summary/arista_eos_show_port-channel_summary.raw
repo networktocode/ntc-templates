@@ -1,0 +1,55 @@
+Flags                                                            
+-------------------------- ----------------------------- ------------------------- 
+   a - LACP Active            p - LACP Passive           * - static fallback       
+   F - Fallback enabled       f - Fallback configured    ^ - individual fallback   
+   U - In Use                 D - Down                                             
+   + - In-Sync                - - Out-of-Sync            i - incompatible with agg 
+   P - bundled in Po          s - suspended              G - Aggregable            
+   I - Individual             S - ShortTimeout           w - wait for agg          
+
+Number of channels in use: 1
+Number of aggregators: 1
+
+   Port-Channel       Protocol     Ports                            
+------------------ --------------- -------------------------------- 
+   Po105(D)           LACP(aF*)    Et5(D)                           
+   Po106(D)           LACP(aF*)    Et6(D)                           
+   Po107(D)           LACP(aF*)    Et7(D)                           
+   Po108(D)           LACP(aF*)    Et8(D)                           
+   Po109(D)           LACP(aF*)    Et9(D)                           
+   Po110(D)           LACP(aF*)    Et10(D)                          
+   Po111(D)           LACP(aF*)    Et11(D)                          
+   Po112(D)           LACP(aF*)    Et12(D)                          
+   Po113(D)           LACP(aF*)    Et13(D)                          
+   Po114(D)           LACP(aF*)    Et14(D)                          
+   Po115(D)           LACP(aF*)    Et15(D)                          
+   Po116(D)           LACP(aF*)    Et16(D)                          
+   Po117(D)           LACP(aF*)    Et17(D)                          
+   Po118(D)           LACP(aF*)    Et18(D)                          
+   Po119(D)           LACP(aF*)    Et19(D)                          
+   Po120(D)           LACP(aF*)    Et20(D)                          
+   Po121(D)           LACP(aF*)    Et21(D)                          
+   Po122(D)           LACP(aF*)    Et22(D)                          
+   Po123(D)           LACP(aF*)    Et23(D)                          
+   Po124(D)           LACP(aF*)    Et24(D)                          
+   Po125(D)           LACP(aF*)    Et25(D)                          
+   Po126(D)           LACP(aF*)    Et26(D)                          
+   Po127(D)           LACP(aF*)    Et27(D)                          
+   Po128(D)           LACP(aF*)    Et28(D)                          
+   Po129(D)           LACP(aF*)    Et29(D)                          
+   Po130(D)           LACP(aF*)    Et30(D)                          
+   Po131(D)           LACP(aF*)    Et31(D)                          
+   Po132(D)           LACP(aF*)    Et32(D)                          
+   Po133(D)           LACP(aF*)    Et33(D)                          
+   Po134(D)           LACP(aF*)    Et34(D)                          
+   Po135(D)           LACP(aF*)    Et35(D)                          
+   Po136(D)           LACP(aF*)    Et36(D)                          
+   Po137(D)           LACP(aF*)    Et37(D)                          
+   Po138(D)           LACP(aF*)    Et38(D)                          
+   Po139(D)           LACP(aF*)    Et39(D)                          
+   Po140(D)           LACP(aF*)    Et40(D)                          
+   Po141(D)           LACP(aF*)    Et41(D)                          
+   Po142(D)           LACP(aF*)    Et42(D)                          
+   Po146(D)           LACP(aF*)    Et43(D) Et44(D) Et45(D) Et46(D)  
+                                   Et47(D)                          
+   Po2000(U)          LACP(a)      Et54/1(PG+)   
