@@ -1,0 +1,14 @@
+Value SENT_QTY (\d+)
+Value DESTINATION (\d+.\d+.\d+.\d+)
+Value LOSS_PCT (\d+)
+Value SUCCESS_QTY (\d+)
+Value RTT_MIN (\d+)
+Value RTT_AVG (\d+)
+Value RTT_MAX (\d+)
+Value RTT_STDDEV (\d+)
+
+
+Start
+  ^----\s+${DESTINATION}\s+PING\s+Statistics\s+----
+  ^${SENT_QTY}\s+\S+\s+\S+\s+${SUCCESS_QTY}\s+\S+\s+\S+\s+${LOSS_PCT}\S+\s+\S+\s+\S+
+  ^\S+\s+\S+\s+\S\s+${RTT_MIN}\S+\s+\S+\s+\S\s+${RTT_AVG}\S+\s+\S+\s+\S\s+${RTT_MAX}\S+\s+\S+\s+\S\s+${RTT_STDDEV}\S+ -> Record
