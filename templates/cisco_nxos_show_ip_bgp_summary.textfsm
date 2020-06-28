@@ -15,6 +15,8 @@ Start
   ^BGP\s+router\s+identifier\s+${ROUTER_ID},\s+[Ll]ocal\s+[Aa][Ss]\s+number\s+${LOCAL_AS}
   ^Neighbor\s+V\s+AS\s+MsgRcvd\s+MsgSent\s+TblVer\s+InQ\s+OutQ\s+Up/Down\s+State/PfxRcd\s*$$
   ^${BGP_NEIGH}\s+\d+\s+${NEIGH_AS}\s+${MSG_RCVD}\s+${MSG_SENT}\s+\d+\s+${IN_QUEUE}\s+${OUT_QUEUE}\s+${UP_DOWN}\s+${STATE_PFXRCD}\s*$$ -> Record
+  ^${BGP_NEIGH}\s+\d+\s+${NEIGH_AS}
+  ^\s+${MSG_RCVD}\s+${MSG_SENT}\s+\d+\s+${IN_QUEUE}\s+${OUT_QUEUE}\s+${UP_DOWN}\s+${STATE_PFXRCD}\s*$$ -> Record
   ^BGP\s+table\s+version
   ^\d+\s+network\s+entries
   ^BGP attribute entries
