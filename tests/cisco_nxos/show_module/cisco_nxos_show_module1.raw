@@ -1,0 +1,41 @@
+Mod  Ports  Module-Type                      Model              Status
+---  -----  -------------------------------- ------------------ ------------
+1    48     1000 Mbps Optical Ethernet Modul N7K-M148GS-11      ok
+3    0      Supervisor Module-2                                 powered-up
+4    0      Supervisor Module-2              N7K-SUP1           powered-dn
+5    0      Supervisor Module-2              N7K-SUP1           active *
+6    0      Supervisor Module-2              N7K-SUP1           ha-standby
+
+
+Mod  Power-Status  Reason 
+---  ------------  ---------------------------
+4    powered-dn     Configured Power down
+
+Mod  Sw              Hw
+---  --------------  ------
+3    4.1(3)          0.202   
+4    4.1(3)          0.805   
+
+Mod  MAC-Address(es)                         Serial-Num
+---  --------------------------------------  ----------
+3    00-1b-54-c2-ed-d0 to 00-1b-54-c2-ee-04  JAF1219AGFE
+4    00-1b-54-c0-ff-10 to 00-1b-54-c0-ff-18  JAB114000BV
+
+Mod  Online Diag Status
+---  ------------------
+3    Pass
+4    Pass
+
+Xbar Ports  Module-Type                      Model              Status
+---  -----  -------------------------------- ------------------ ------------
+1    0      Fabric Module 1                  N7K-C7018-FAB-1    ok
+
+Xbar Sw              Hw
+---  --------------  ------
+1    NA              0.101   
+
+Xbar MAC-Address(es)                         Serial-Num
+---  --------------------------------------  ----------
+1    NA                                      JAF1225AGHJ
+
+* this terminal session 
