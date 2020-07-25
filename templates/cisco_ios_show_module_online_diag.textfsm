@@ -1,0 +1,16 @@
+Value Key MODULE (\d+)
+Value ONLINE_DIAG (\w+)
+
+Start
+  ^Mod\s+Online\s+Diag\s+Status -> Diag  
+
+Diag
+  ^-+
+  ^\s*${MODULE}\s+${ONLINE_DIAG} -> Record  
+  ^Mod\s+Ports\s+Card\s+Type\s+Model\s+Serial -> End
+  ^Mod\s+MAC\s+addresses\s+Hw\s+Fw\s+Sw\s+Status -> End
+  ^Mod\s+Sub-Module\s+Model\s+Serial\s+Hw\s+Status -> End
+  ^\s*$$
+  ^. -> Error
+
+End

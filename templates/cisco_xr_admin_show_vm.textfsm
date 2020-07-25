@@ -1,0 +1,21 @@
+Value Filldown LOCATION (\S+)
+Value ID (\S+)
+Value Required STATUS (\S+)
+Value Required IP_ADDR (\S+)
+Value HB_SENT (\S+)
+Value HB_RECV (\S+)
+
+Start
+  ^.+UTC
+  ^Location:\s${LOCATION}
+  ^Id\s+Status\s+IP\sAddress\s+HB\sSent/Recv
+  ^-+ -> Loc
+  ^\s+$$
+  ^$$
+  ^.* -> Error "LINE NOT FOUND"
+
+Loc
+  ^${ID}\s+${STATUS}\s+${IP_ADDR}\s+${HB_SENT}\/${HB_RECV} -> Record
+  ^\s+$$
+  ^$$ -> Start
+  ^.* -> Error "LINE NOT FOUND"

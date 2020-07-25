@@ -1,0 +1,23 @@
+Value Filldown VRF (\S+)
+Value Filldown PROTOCOL (\S+\s\S+?|\w?)
+Value Filldown NETWORK (\d+.\d+.\d+.\d+)
+Value Filldown MASK (\d+)
+Value Filldown DISTANCE (\d+)
+Value Filldown METRIC (\d+)
+Value DIRECT (directly)
+Value Required NEXT_HOP (connected|\d+\.\d+\.\d+\.\d+)
+Value INTERFACE (\S+)
+
+Start
+  ^\s+${PROTOCOL}\s+${NETWORK}/${MASK}\s+(?:\[${DISTANCE}/${METRIC}\]|is\s+${DIRECT})(?:.+?)${NEXT_HOP},\s+${INTERFACE}$$ -> Record
+  ^\s+via\s+${NEXT_HOP},\s+${INTERFACE} -> Record
+  ^VRF\s+name:\s+${VRF}\s*$$
+  ^VRF:\s+${VRF}\s*$$
+  ^WARNING
+  ^kernel
+  ^Codes:
+  # Match for codes
+  ^\s+\S+\s+-\s+\S+
+  ^Gateway\s+of\s+last
+  ^\s*$$
+  ^. -> Error

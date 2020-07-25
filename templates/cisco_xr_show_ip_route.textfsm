@@ -1,0 +1,26 @@
+Value Filldown VRF (\S+)
+Value Filldown PROTOCOL (\S+|\S+\s\S+)
+Value Filldown NETWORK (\d+\.\d+\.\d+\.\d+)
+Value Filldown MASK (\d+)
+Value DISTANCE (\d+|is)
+Value METRIC (\d+)
+Value TYPE (directly|via)
+Value Required NEXT_HOP (connected|\d+\.\d+\.\d+\.\d+)
+Value INTERFACE (\S+|vrf\s\S+)
+Value UPTIME (\S+)
+
+
+Start
+  ^VRF?:\s${VRF}
+  ^Codes:
+  ^\s+(\S+\s+-\s+.+[,]*)+
+  ^Gateway\s+of\s+last\s+resort
+  ^${PROTOCOL}\s+${NETWORK}/${MASK}\s+(?:\[${DISTANCE}/${METRIC}\]|is)\s+${TYPE}\s+${NEXT_HOP},\s+${UPTIME},\s+${INTERFACE} -> Record
+  ^\s+(?:\[${DISTANCE}/${METRIC}\]|is)\s+${TYPE}\s+${NEXT_HOP},\s+${UPTIME},\s+${INTERFACE} -> Record
+  ^${PROTOCOL}\s+${NETWORK}/${MASK}\s+(?:\[${DISTANCE}/${METRIC}\]|is)\s+${TYPE}\s+${NEXT_HOP},\s+${UPTIME} -> Record
+  ^${PROTOCOL}\s+${NETWORK}/${MASK}\s+(?:\[${DISTANCE}/${METRIC}\]|is)\s+${TYPE}\s+${NEXT_HOP}\s+\(nexthop\sin\s${INTERFACE}\),\s+${UPTIME} -> Record
+  ^\s+(?:\[${DISTANCE}/${METRIC}\]|is)\s+${TYPE}\s+${NEXT_HOP},\s+${UPTIME} -> Record
+  ^\s*$$
+  ^\S+\s+\S+\s+\d+\s+\d+:\d+:\d+
+  ^% No matching routes found
+  ^. -> Error "LINE NOT FOUND"

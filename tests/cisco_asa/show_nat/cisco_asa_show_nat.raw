@@ -1,0 +1,121 @@
+Manual NAT Policies (Section 1)
+1 (any) to (any) source static any any   description source dynamic static destination static net-to-net service any pat-pool interface dns unidirectional no-proxy-arp route-lookup ipv6 inactive description <-- THESE ARE ALL PART OF THE DESCRIPTION
+    translate_hits = 505, untranslate_hits = 750
+2 (any) to (outside) source dynamic test1 test2   destination static test3 test4 net-to-net inactive description test
+    translate_hits = 900, untranslate_hits = 883
+3 (any) to (outside) source dynamic test1 test2   destination static test3 test4 service test-service-1 test-service-2
+    translate_hits = 826, untranslate_hits = 961
+4 (any) to (outside) source dynamic test1 test2   destination static test3 test4 service any test-service-2
+    translate_hits = 722, untranslate_hits = 201
+5 (any) to (outside) source dynamic test1 pat-pool interface  destination static test3 test4
+    translate_hits = 563, untranslate_hits = 48
+6 (any) to (outside) source dynamic test1 pat-pool test11  destination static test3 test4
+    translate_hits = 997, untranslate_hits = 159
+7 (any) to (outside) source dynamic any test2   destination static test3 test4 net-to-net
+    translate_hits = 488, untranslate_hits = 313
+8 (any) to (outside) source dynamic test1 test2   destination static test3 any
+    translate_hits = 606, untranslate_hits = 395
+9 (any) to (outside) source static test1 test2   destination static test3 test4 description extended flat include-reserve round-robin dns 169.254.1.1 2006::2/128 <-- THESE ARE ALL PART OF THE DESCRIPTION
+    translate_hits = 303, untranslate_hits = 275
+10 (any) to (outside) source static test1 test2   destination static test3 test4 unidirectional no-proxy-arp
+    translate_hits = 359, untranslate_hits = 447
+11 (any) to (outside) source static test1 test2   destination static test3 test4 net-to-net inactive description test
+    translate_hits = 393, untranslate_hits = 527
+12 (any) to (outside) source static test1 test2   destination static test3 test4 service test-service-1 test-service-2
+    translate_hits = 327, untranslate_hits = 527
+13 (any) to (outside) source static test1 test2   destination static test3 test4 service any test-service-2
+    translate_hits = 683, untranslate_hits = 110
+14 (any) to (outside) source static test2 test2   destination static test3 test3 no-proxy-arp route-lookup
+    translate_hits = 373, untranslate_hits = 811
+15 (any) to (outside) source static test1 test1   destination static test3 test3 route-lookup
+    translate_hits = 666, untranslate_hits = 609
+16 (any) to (outside) source static any test2   destination static test3 test4 net-to-net
+    translate_hits = 263, untranslate_hits = 131
+17 (any) to (outside) source static test1 test2   dns unidirectional no-proxy-arp
+    translate_hits = 408, untranslate_hits = 436
+18 (any) to (outside) source static test1 test2   destination static test3 any
+    translate_hits = 892, untranslate_hits = 922
+19 (inside) to (outside) source dynamic test1 test2   destination static interface test4
+    translate_hits = 142, untranslate_hits = 129
+20 (inside) to (outside) source dynamic test1 test2   destination static interface any
+    translate_hits = 620, untranslate_hits = 50
+21 (inside) to (outside) source dynamic test6 test7   destination static interface ipv6 test9
+    translate_hits = 152, untranslate_hits = 359
+22 (inside) to (outside) source dynamic test6 interface ipv6   destination static test8 test9
+    translate_hits = 214, untranslate_hits = 411
+23 (inside) to (outside) source dynamic any interface ipv6   destination static test8 test9
+    translate_hits = 341, untranslate_hits = 651
+24 (inside) to (outside) source dynamic test1 interface   destination static test3 test4
+    translate_hits = 992, untranslate_hits = 255
+
+Auto NAT Policies (Section 2)
+1 (any) to (any) source static test11 169.254.11.11   no-proxy-arp route-lookup
+    translate_hits = 694, untranslate_hits = 246
+2 (inside) to (outside) source static test6 interface ipv6   net-to-net no-proxy-arp
+    translate_hits = 655, untranslate_hits = 840
+3 (inside) to (outside) source static test7 test8   service tcp ssh 2222
+    translate_hits = 680, untranslate_hits = 7
+4 (inside) to (outside) source static test9 2006::2/128
+    translate_hits = 976, untranslate_hits = 175
+5 (any) to (outside) source dynamic test1 169.254.1.1   dns
+    translate_hits = 683, untranslate_hits = 761
+6 (any) to (outside) source dynamic test2 test3
+    translate_hits = 117, untranslate_hits = 939
+7 (any) to (outside) source dynamic test3 pat-pool test11 extended flat include-reserve round-robin dns
+    translate_hits = 936, untranslate_hits = 246
+8 (any) to (outside) source dynamic test4 pat-pool test11 interface flat round-robin dns
+    translate_hits = 383, untranslate_hits = 467
+9 (any) to (outside) source dynamic test5 interface   dns
+    translate_hits = 795, untranslate_hits = 263
+10 (inside) to (outside) source static test7 test8   service udp https 8443
+    translate_hits = 680, untranslate_hits = 7
+11 (inside) to (outside) source static test7 test8   service sctp www 8080
+    translate_hits = 680, untranslate_hits = 7
+
+Manual NAT Policies (Section 3)
+1 (any) to (outside) source dynamic test11 test12   destination static test13 test14 net-to-net inactive description source dynamic static destination static net-to-net service any pat-pool interface dns unidirectional no-proxy-arp route-lookup ipv6 inactive description <-- THESE ARE ALL PART OF THE DESCRIPTION
+    translate_hits = 687, untranslate_hits = 666
+2 (any) to (outside) source dynamic test11 test12   destination static test13 test14 service test-service-1 test-service-2
+    translate_hits = 911, untranslate_hits = 47
+3 (any) to (outside) source dynamic test11 test12   destination static test13 test14 service any test-service-2
+    translate_hits = 651, untranslate_hits = 130
+4 (any) to (outside) source dynamic test11 pat-pool interface  destination static test13 test14
+    translate_hits = 350, untranslate_hits = 231
+5 (any) to (outside) source dynamic test11 pat-pool test21  destination static test13 test14
+    translate_hits = 553, untranslate_hits = 961
+6 (any) to (outside) source dynamic any test12   destination static test13 test14 net-to-net
+    translate_hits = 957, untranslate_hits = 766
+7 (any) to (outside) source dynamic test11 test12   destination static test13 any
+    translate_hits = 997, untranslate_hits = 468
+8 (any) to (outside) source static test11 test12   destination static test13 test14 description extended flat include-reserve round-robin dns 169.254.1.1 2006::2/128 <-- THESE ARE ALL PART OF THE DESCRIPTION
+    translate_hits = 622, untranslate_hits = 632
+9 (any) to (outside) source static test11 test12   destination static test13 test14 unidirectional no-proxy-arp
+    translate_hits = 425, untranslate_hits = 474
+10 (any) to (outside) source static test11 test12   destination static test13 test14 net-to-net inactive description test1
+    translate_hits = 99, untranslate_hits = 610
+11 (any) to (outside) source static test11 test12   destination static test13 test14 service test-service-1 test-service-2
+    translate_hits = 948, untranslate_hits = 144
+12 (any) to (outside) source static test11 test12   destination static test13 test14 service any test-service-2
+    translate_hits = 386, untranslate_hits = 211
+13 (any) to (outside) source static test12 test12   destination static test13 test13 no-proxy-arp route-lookup
+    translate_hits = 443, untranslate_hits = 600
+14 (any) to (outside) source static test11 test11   destination static test13 test13 route-lookup
+    translate_hits = 957, untranslate_hits = 705
+15 (any) to (outside) source static any test12   destination static test13 test14 net-to-net
+    translate_hits = 171, untranslate_hits = 11
+16 (any) to (outside) source static test11 test12   dns unidirectional no-proxy-arp
+    translate_hits = 843, untranslate_hits = 956
+17 (any) to (outside) source static test11 test12   destination static test13 any
+    translate_hits = 302, untranslate_hits = 950
+18 (inside) to (outside) source dynamic test11 test12   destination static interface test14
+    translate_hits = 662, untranslate_hits = 278
+19 (inside) to (outside) source dynamic test11 test12   destination static interface any
+    translate_hits = 269, untranslate_hits = 859
+20 (inside) to (outside) source dynamic test16 test17   destination static interface ipv6 test19
+    translate_hits = 92, untranslate_hits = 257
+21 (inside) to (outside) source dynamic test16 interface ipv6   destination static test18 test19
+    translate_hits = 97, untranslate_hits = 354
+22 (inside) to (outside) source dynamic any interface ipv6   destination static test18 test19
+    translate_hits = 780, untranslate_hits = 376
+23 (inside) to (outside) source dynamic test11 interface   destination static test13 test14
+    translate_hits = 291, untranslate_hits = 3

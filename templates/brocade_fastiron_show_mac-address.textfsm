@@ -1,0 +1,13 @@
+Value Required MAC_ADDRESS ([A-Fa-f0-9\.]{14})
+Value Required DESTINATION_PORT (\S+)
+Value Required AGE (\d+)
+Value Required VLAN (\d+)
+Value TYPE (\S+)
+
+
+Start
+  ^Total.*
+  ^MAC Address\s+Port\s+Age\s+VLAN\s+Type
+  ^${MAC_ADDRESS}\s+${DESTINATION_PORT}\s+${AGE}\s+${VLAN}\s+${TYPE} -> Record
+  ^${MAC_ADDRESS}\s+${DESTINATION_PORT}\s+${AGE}\s+${VLAN} -> Record
+  ^. -> Error

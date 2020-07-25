@@ -1,0 +1,17 @@
+---
+parsed_sample:
+  - name: "DEFAULT_VLAN"
+    vlan_id: "1"
+    status: "Port-based"
+    voice: "No"
+    jumbo: "No"
+  - name: "Router Vlan"
+    vlan_id: "10"
+    status: "Port-based"
+    voice: "No"
+    jumbo: "No"
+  - name: "Voice"
+    vlan_id: "50"
+    status: "Port-based"
+    voice: "Yes"
+    jumbo: "No"

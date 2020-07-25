@@ -1,0 +1,13 @@
+---
+parsed_sample:
+  - interface: "Vlan1"
+    ip_helper:
+      - "10.1.0.0"
+      - "10.1.0.1"
+      - "10.1.0.2"
+      - "10.1.0.3"
+      - "server.domain"
+  - interface: "Vlan2"
+    ip_helper:
+      - "10.1.0.4"
+      - "server.domain"

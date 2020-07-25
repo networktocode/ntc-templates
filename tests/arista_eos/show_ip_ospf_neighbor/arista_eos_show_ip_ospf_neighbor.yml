@@ -1,0 +1,16 @@
+---
+parsed_sample:
+  - address: "10.3.4.3"
+    interface: "Ethernet2"
+    state: "FULL/BDR"
+    neighbor_id: "3.3.3.3"
+    vrf: "default"
+    priority: "1"
+    dead_time: "00:00:34"
+  - address: "10.2.4.2"
+    interface: "Ethernet3"
+    state: "FULL"
+    neighbor_id: "2.2.2.2"
+    vrf: "default"
+    priority: "1"
+    dead_time: "00:00:38"

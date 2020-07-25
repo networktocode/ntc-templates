@@ -1,0 +1,19 @@
+Value Filldown NETWORK (\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3})
+Value Filldown MASK (\d{1,2})
+Value Filldown PROTOCAL (\w+)
+Value Filldown DISTANCE (\d{1,3})
+Value Filldown METRIC (\d+)
+Value Required NEXTHOP_IP (\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3})
+Value NEXTHOP_IF (\S+)
+
+Start
+  ^Destination\/Mask -> Routes
+
+Routes
+  ^${NETWORK}\/${MASK}\s+${PROTOCAL}\s+${DISTANCE}\s+${METRIC}\s+${NEXTHOP_IP}\s+${NEXTHOP_IF} -> Record
+  # for comware v7 ecmp
+  ^\s+${NEXTHOP_IP}\s+${NEXTHOP_IF} -> Record
+  # for comware v5 ecmp
+  ^\s+${PROTOCAL}\s+${DISTANCE}\s+${METRIC}\s+${NEXTHOP_IP}\s+${NEXTHOP_IF} -> Record
+  ^\s*$$
+  ^. -> Error

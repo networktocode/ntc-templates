@@ -1,0 +1,9 @@
+interface ve 1390
+ port-name TA5000A.CLMAMOXI-VoIP
+ qos-tos trust ip-prec
+ vrf forwarding SocketVoIP
+ ip address 10.192.0.129/27
+ ip address 10.192.4.1/24
+ ip helper-address 10.154.0.180
+ ip helper-address 10.154.0.181
+ no ip redirect

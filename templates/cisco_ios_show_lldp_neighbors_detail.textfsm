@@ -1,0 +1,73 @@
+Value LOCAL_INTERFACE (\S+)
+Value CHASSIS_ID (\S+)
+Value NEIGHBOR_PORT_ID (.*)
+Value NEIGHBOR_INTERFACE (.*)
+Value NEIGHBOR (.+?)
+Value SYSTEM_DESCRIPTION (.*)
+Value CAPABILITIES (.*)
+Value MANAGEMENT_IP (\S+)
+Value VLAN (\d+)
+Value SERIAL (\S+)
+
+Start
+  ^.*not advertised
+  ^.*Invalid input detected -> EOF
+  ^.*LLDP is not enabled -> EOF
+  ^Local\s+Intf:\s+${LOCAL_INTERFACE}\s*$$
+  ^Chassis\s+id:\s+${CHASSIS_ID}\s*$$
+  ^Port\s+id:\s+${NEIGHBOR_PORT_ID}\s*$$
+  ^Port\s+Description:\s+${NEIGHBOR_INTERFACE}\s*$$
+  ^System\s+Name(\s+-\s+not\s+advertised)\s*$$
+  ^System\s+Name:?\s*$$
+  ^System\s+Name(:\s+${NEIGHBOR})\s*$$
+  ^System\s+Description -> GetDescription
+  ^Time
+  ^System\s+Capabilities
+  ^Enabled\s+Capabilities:\s+${CAPABILITIES}\s*$$
+  ^Management\s+Addresses
+  ^\s+OID
+  ^\s+[\d+\.]{8,}
+  ^.*IP:\s+${MANAGEMENT_IP}
+  ^Auto\s+Negotiation
+  ^Physical\s+media
+  # Removed \(\s+\) from the template - The line 'Other/unknown' would not be captured
+  # Now looks for any text beginning with any space
+  ^\s+.+\s*$$
+  ^Media\s+Attachment
+  ^\s+Inventory
+  ^\s+Capabilities
+  ^\s+Device\s+type
+  ^\s+Network\s+Policies
+  ^\s+Power\s+requirements
+  ^\s+Location
+  ^Time\s+remaining
+  ^Vlan\s+ID:\s+(?:${VLAN}|-\s+not\s+advertised)\s*$$
+  ^\s+\(\S+\)
+  ^(?:PoE|\s+Power)
+  ^\s*-+\s*$$ -> Record
+  ^MED -> Med
+  ^\s*\^\s*
+  ^\s*Total\s+entries\s+displayed -> Record
+  ^\s*$$
+  # Capture time-stamp if vty line has command time-stamping turned on
+  ^Load\s+for\s+
+  ^Time\s+source\s+is
+  ^.*$$ -> Error
+
+GetDescription
+  ^${SYSTEM_DESCRIPTION} -> IgnoreDescription
+
+IgnoreDescription
+  ^Time\s+remaining -> Start
+  ^\S*
+  ^\s*$$
+  ^.* -> Error
+
+Med
+  ^\s+Serial\s+number:\s+${SERIAL}
+  ^\s+\S+
+  ^\s*$$
+  ^\s*Total\s+entries\s+displayed -> Record
+  ^\s*-+\s*$$ -> Continue.Record
+  ^\s*-+\s*$$ -> Start
+  ^.* -> Error

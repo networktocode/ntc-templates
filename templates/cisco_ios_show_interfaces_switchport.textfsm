@@ -1,0 +1,43 @@
+Value Required INTERFACE (\S+)
+Value SWITCHPORT (.+?)
+Value SWITCHPORT_MONITOR (.+?)
+Value SWITCHPORT_NEGOTIATION (.+?)
+Value MODE (.+?)
+Value ADMIN_MODE (.+?)
+Value ACCESS_VLAN (\d+|unassigned)
+Value NATIVE_VLAN (\d+)
+Value VOICE_VLAN (\S+)
+Value List TRUNKING_VLANS (\S+?)
+
+Start
+  ^Name: -> Continue.Record
+  ^Name:\s+${INTERFACE}
+  ^\s*Switchport:\s+${SWITCHPORT}$$
+  ^\s*Switchport\s+Monitor:\s+${SWITCHPORT_MONITOR}$$
+  ^\s*Operational\s+Mode:\s+${MODE}$$
+  ^\s*Negotiation\s+of\s+Trunking:\s+${SWITCHPORT_NEGOTIATION}$$
+  ^\s*Access\s+Mode\s+VLAN:\s+${ACCESS_VLAN}
+  ^\s*Trunking\s+Native\s+Mode\s+VLAN:\s+${NATIVE_VLAN}
+  ^\s*Voice\s+VLAN:\s+${VOICE_VLAN}
+  ^\s*Trunking\s+VLANs\s+Enabled:\s+${TRUNKING_VLANS},\s*$$ -> Trunk
+  ^\s*Trunking\s+VLANs\s+Enabled:\s+${TRUNKING_VLANS}$$
+  ^\s+${TRUNKING_VLANS}$$
+  ^\s*Administrative\s+Mode:\s+${ADMIN_MODE}$$
+  ^\s*(?:Operational|Administrative)\s+(?:Trunking|Native\s+VLAN|private-vlan)
+  ^\s*Voice\s+VLAN:
+  ^\s*Pruning\s+VLANs
+  ^\s*Capture\s+(?:Mode|VLANs)
+  ^\s*Protected
+  ^\s*Unknown\s+(unicast|multicast)
+  ^\s*Vepa\s+Enabled
+  ^\s*Appliance\s+trust
+  ^\s*Operational\s+Dot1q\s+Ethertype
+  ^\s*$$
+  # Capture time-stamp if vty line has command time-stamping turned on
+  ^Load\s+for\s+
+  ^Time\s+source\s+is
+  ^. -> Error
+
+Trunk
+  ^\s+${TRUNKING_VLANS},\s*$$ -> Start
+  ^\s+${TRUNKING_VLANS}\s*$$

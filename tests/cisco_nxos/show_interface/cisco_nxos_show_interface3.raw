@@ -1,0 +1,117 @@
+Ethernet1/1 is up
+ Dedicated Interface 
+  Belongs to Po131
+  Hardware: 1000/10000 Ethernet, address: 8c60.4f4e.93a8 (bia 8c60.4f4e.93a8)
+  Description: Uplink Fex131
+  MTU 1500 bytes, BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA
+  Port mode is fex-fabric
+  full-duplex, 10 Gb/s, media type is 10G
+  Beacon is turned off
+  Input flow-control is off, output flow-control is off
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Last link flapped 974week(s) 3day(s)
+  Last clearing of "show interface" counters never
+  1 interface resets
+  30 seconds input rate 32346224 bits/sec, 8793 packets/sec
+  30 seconds output rate 47982536 bits/sec, 9411 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 36.01 Mbps, 9.23 Kpps; output rate 49.26 Mbps, 9.77 Kpps
+  RX
+    1903413812337 unicast packets  219094882 multicast packets  622897070 broadcast packets
+    1904255804289 input packets  1909306429752104 bytes
+    987336110118 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  193274 input discard
+    0 Rx pause
+  TX
+    1601284660049 unicast packets  13299704580 multicast packets  8086317894 broadcast packets
+    1622670682523 output packets  1387104438655786 bytes
+    684393029155 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 133470 output discard
+    0 Tx pause
+
+Ethernet1/2 is up
+ Dedicated Interface 
+  Belongs to Po131
+  Hardware: 1000/10000 Ethernet, address: 8c60.4f4e.93a9 (bia 8c60.4f4e.93a9)
+  Description: Uplink Fex131
+  MTU 1500 bytes, BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA
+  Port mode is fex-fabric
+  full-duplex, 10 Gb/s, media type is 10G
+  Beacon is turned off
+  Input flow-control is off, output flow-control is off
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Last link flapped 974week(s) 3day(s)
+  Last clearing of "show interface" counters never
+  1 interface resets
+  30 seconds input rate 21147496 bits/sec, 5254 packets/sec
+  30 seconds output rate 31222448 bits/sec, 6805 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 22.42 Mbps, 5.61 Kpps; output rate 39.75 Mbps, 7.63 Kpps
+  RX
+    2550054589331 unicast packets  129905052 multicast packets  644315156 broadcast packets
+    2550828809539 input packets  2823270896659984 bytes
+    1680152855934 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  82750 input discard
+    0 Rx pause
+  TX
+    1754604611168 unicast packets  6811367807 multicast packets  11436838940 broadcast packets
+    1772852817915 output packets  1766162885103164 bytes
+    876474626578 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 160093 output discard
+    0 Tx pause
+
+Ethernet1/3 is up
+ Dedicated Interface 
+  Belongs to Po121
+  Hardware: 1000/10000 Ethernet, address: 8c60.4f4e.93aa (bia 8c60.4f4e.93aa)
+  Description: Uplink Fex121
+  MTU 1500 bytes, BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA
+  Port mode is fex-fabric
+  full-duplex, 10 Gb/s, media type is 10G
+  Beacon is turned off
+  Input flow-control is off, output flow-control is off
+  Rate mode is dedicated
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Last link flapped 974week(s) 3day(s)
+  Last clearing of "show interface" counters never
+  1 interface resets
+  30 seconds input rate 14428688 bits/sec, 1550 packets/sec
+  30 seconds output rate 1487168 bits/sec, 884 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 14.39 Mbps, 1.52 Kpps; output rate 1.29 Mbps, 826 pps
+  RX
+    461973309464 unicast packets  788660399 multicast packets  1146874572 broadcast packets
+    463908844435 input packets  347263876335683 bytes
+    36111355157 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    464888191798 unicast packets  3304335856 multicast packets  8086501809 broadcast packets
+    476279029463 output packets  301080257321094 bytes
+    10471533142 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 8366 output discard
+    0 Tx pause
+

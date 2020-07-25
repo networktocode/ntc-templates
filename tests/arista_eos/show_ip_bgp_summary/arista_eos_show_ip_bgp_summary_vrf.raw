@@ -1,0 +1,16 @@
+BGP summary information for VRF RED
+Router identifier 192.168.1.1, local AS number 645001
+Neighbor Status Codes: m - Under maintenance
+  Neighbor         V  AS           MsgRcvd   MsgSent  InQ OutQ  Up/Down State  PfxRcd PfxAcc
+  192.168.1.2      4  65002        1753556   1761743    0    0   40d23h Estab  7      4
+BGP summary information for VRF WHITE
+Router identifier 192.168.2.1, local AS number 65011
+Neighbor Status Codes: m - Under maintenance
+  Neighbor         V  AS           MsgRcvd   MsgSent  InQ OutQ  Up/Down State  PfxRcd PfxAcc
+  192.168.2.2      4  65012        7405942   7406081    0    0  270d13h Estab  7      5
+BGP summary information for VRF BLUE
+Router identifier 192.168.3.1, local AS number 65021
+Neighbor Status Codes: m - Under maintenance
+  Neighbor         V  AS           MsgRcvd   MsgSent  InQ OutQ  Up/Down State  PfxRcd PfxAcc
+  192.168.3.2      4  65022        1171721   1171752    0    0   67d19h Estab  25     25
+  192.168.3.3      4  65023          97651     97643    0    0   40d23h Estab  18     18

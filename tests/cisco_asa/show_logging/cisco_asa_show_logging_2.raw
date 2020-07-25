@@ -1,0 +1,24 @@
+Syslog logging: enabled
+    Facility: 20
+    Timestamp logging: enabled
+    Hide Username logging: disabled
+    Standby logging: disabled
+    Debug-trace logging: disabled
+    Console logging: enabled
+    Monitor logging: disabled
+    Buffer logging: level warnings, 4908890 messages logged
+    Trap logging: level informational, facility 20, 454554 messages logged
+        Logging to inside 10.67.88.90, UDP TX:323 errors: 0  dropped: 1
+    Global TCP syslog stats::
+        NOT_PUTABLE: 0, ALL_CHANNEL_DOWN: 0
+        CHANNEL_FLAP_CNT: 0, SYSLOG_PKT_LOSS: 0
+        PARTIAL_REWRITE_CNT: 0
+    Permit-hostdown logging: disabled
+    History logging: disabled
+    Device ID: enabled
+    Mail logging: enabled
+    ASDM logging: level info, 5553 messages logged
+Mar 09 2017 10:25:04 MDF-ASA5515X : %ASA-6-305012: Teardown dynamic TCP translation from inside:10.111.5.124/49578 to outside:168.52.96.121/49578 duration 0:00:00
+Mar 09 2017 10:25:04 MDF-ASA5515X : %ASA-6-302014: Teardown TCP connection 2208441 for outside:69.172.216.111/443 to inside:10.1.103.124/49579 duration 0:00:00 bytes 0 TCP Reset-I
+Mar 09 2017 10:25:04 MDF-ASA5515X : %ASA-6-305012: Teardown dynamic TCP translation from inside:10.11.113.124/49579 to outside:19.88.121.11/49579 duration 0:00:00
+Mar 09 2017 10:25:04 MDF-ASA5515X : %ASA-6-305011: Built dynamic TCP translation from inside:10.11.111.124/49580 to outside:192.88.1.11/49580
