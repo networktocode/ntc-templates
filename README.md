@@ -384,7 +384,7 @@ happen. That includes updating the index file appropriately and adding proper ra
 _Why don't you grab all of the data in the template?_
 
 There is no intention for ntc-templates to become feature complete, some of the data is less interesting, or can be better understood from 
-other commands. This is actually an area where the project choose to be loose, as we do not want to over-burden the contributor. If you feel 
+other commands. This is actually an area where the project chose to be loose, as we do not want to over-burden the contributor. If you feel 
 that the additional data should be added, you are welcome to add the feature, but it would not be considered a bug, and thus not supported by 
 the maintainers of the this project.
 
@@ -404,7 +404,7 @@ The most likely reasons are:
 * Did not provide the data required to act upon the request.
 * A prolonged time with no response.  
 
-_What is meant that the is a parsing project, not a data modeling project?_
+_What is meant that this is a parsing project, not a data modeling project?_
 
 The project intends to parse, meaning post processing is assumed in order to normalize the data. This project does not intend to solve that 
 problem set. This is often noted in keys being different between the same command on multiple OS's. This was not intentional as at first there was not strict enforcement. That being said, there is no intention to retrofit this use case for the above stated reasons. This use case is 
