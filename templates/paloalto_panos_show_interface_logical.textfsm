@@ -1,9 +1,0 @@
-Value INTF (\S+)
-Value VSYS (\d+)
-Value ZONE (\S+)
-Value FORWARDING (\S+)
-Value ADDRESS (\S+)
-
-Start
-  ^${INTF}\s+\d+\s+${VSYS}\s+${ZONE}\s+${FORWARDING}+\s+\d+\s+${ADDRESS} -> Record
-  ^${INTF}\s+\d+\s+${VSYS}\s+${FORWARDING}\s+\d+\s+${ADDRESS} -> Record

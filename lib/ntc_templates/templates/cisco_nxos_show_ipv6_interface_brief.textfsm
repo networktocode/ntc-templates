@@ -1,0 +1,10 @@
+Value Required INTF (\S+)
+Value Required IPADDR ([a-zA-Z0-9:/]+)
+Value LINKIPADDR ([a-zA-Z0-9:/]+)
+Value STATUS (\S+/\S+)
+Value PROTO (\S+)
+
+Start
+  ^${INTF}\s+${IPADDR}\s+${STATUS}/${PROTO}
+  ^\s+${LINKIPADDR} -> Record
+

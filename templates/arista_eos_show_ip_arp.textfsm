@@ -1,7 +1,0 @@
-Value ADDRESS (\d+\.\d+\.\d+\.\d+)
-Value AGE ((\d+|N\/A))
-Value MAC (\S+)
-Value INTERFACE (.*)
-
-Start
-  ^${ADDRESS}\s+${AGE}\s+${MAC}\s+${INTERFACE} -> Record

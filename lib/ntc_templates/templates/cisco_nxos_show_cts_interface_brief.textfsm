@@ -1,0 +1,8 @@
+Value INTERFACE (\S+)
+Value MODE (\S+)
+Value IFC_STATE (\S+)
+Value SGT_ASSIGNMENT ((\S+(\s\S+)*))
+Value SGT_PROPAGATE (Enabled|Disabled)
+
+Start
+  ^${INTERFACE}\s+${MODE}\s+${IFC_STATE}\s+${SGT_ASSIGNMENT}\s+${SGT_PROPAGATE} -> Record

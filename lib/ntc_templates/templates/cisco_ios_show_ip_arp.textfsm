@@ -1,0 +1,15 @@
+Value Required PROTOCOL (\S+)
+Value Required ADDRESS (\d+\.\d+\.\d+\.\d+)
+Value Required AGE (\S+)
+Value Required MAC (\S+)
+Value Required TYPE (\S+)
+Value INTERFACE (\S+)
+
+Start
+  ^Protocol\s+Address\s+Age\s*\(min\)\s+Hardware Addr\s+Type\s+Interface
+  ^${PROTOCOL}\s+${ADDRESS}\s+${AGE}\s+${MAC}\s+${TYPE}\s+${INTERFACE} -> Record
+  ^${PROTOCOL}\s+${ADDRESS}\s+${AGE}\s+${MAC}\s+${TYPE} -> Record
+  # Capture time-stamp if vty line has command time-stamping turned on
+  ^Load\s+for\s+
+  ^Time\s+source\s+is
+  ^. -> Error  

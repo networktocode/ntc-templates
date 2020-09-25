@@ -1,0 +1,8 @@
+Value Probe ([0-9]{1,4})
+Value Type1 (\S+)
+Value Destination1 (\d+\.\d+\.\d+\.\d+)
+Value RTT1 (RTT=\S+ | - )
+Value CODE_RETURN1 (\S+)
+
+Start
+  ^\*${Probe}\s+${Type1}\s+${Destination1}\s*${RTT1}\s+${CODE_RETURN1} -> Record

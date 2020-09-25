@@ -1,8 +1,0 @@
-Value INTF (\S+\s\S+)
-Value IPADDR (\S+)
-Value MASK (\S+)
-Value ADMIN (\S+)
-Value PROTOCOL (\S+)
-
-Start
-  ^${INTF}\s+${IPADDR}\s+/\s+${MASK}\s+${ADMIN}\s+${PROTOCOL} -> Record

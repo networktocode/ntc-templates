@@ -1,8 +1,0 @@
-Value PLATFORM (\S+)
-Value MODEL (.*)
-Value SERIAL (.*)
-
-Start
-  ^Platform:\s${PLATFORM}
-  ^Model:\s${MODEL}
-  ^Serial Number:\s${SERIAL} -> Record

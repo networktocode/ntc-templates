@@ -1,9 +1,0 @@
-Value INTF (\S+)
-Value ID (\S+)
-Value SPEED (\[n/a\]|\S+)
-Value DUPLEX (\[n/a\]|\S+)
-Value STATE (\S+)
-Value ADDRESS ([a-fA-F0-9]{2}\:[a-fA-F0-9]{2}\:[a-fA-F0-9]{2}\:[a-fA-F0-9]{2}\:[a-fA-F0-9]{2}\:[a-fA-F0-9]{2})
-
-Start
-  ^${INTF}\s+${ID}\s+${SPEED}/${DUPLEX}/${STATE}\s+${ADDRESS} -> Record

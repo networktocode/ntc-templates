@@ -1,0 +1,38 @@
+Value Required INTERFACE (\S+)
+Value LINK_STATUS (.+?)
+Value ADMIN_STATE (.+?)
+Value HARDWARE_TYPE (.*)
+Value ADDRESS ([a-zA-Z0-9]+.[a-zA-Z0-9]+.[a-zA-Z0-9]+)
+Value BIA ([a-zA-Z0-9]+.[a-zA-Z0-9]+.[a-zA-Z0-9]+)
+Value DESCRIPTION (.*)
+Value IP_ADDRESS (\d+\.\d+\.\d+\.\d+\/\d+)
+Value MTU (\d+)
+Value MODE (\S+)
+Value DUPLEX (.+duplex?)
+Value SPEED (.+?)
+Value INPUT_PACKETS (\d+)
+Value OUTPUT_PACKETS (\d+)
+Value INPUT_ERRORS (\d+)
+Value OUTPUT_ERRORS (\d+)
+Value BANDWIDTH (\d+\s+\w+)
+Value DELAY (\d+\s+\w+)
+Value ENCAPSULATION (\w+)
+Value LAST_LINK_FLAPPED (.+?)
+
+Start
+  ^\S+\s+is.+ -> Continue.Record
+  ^${INTERFACE}\s+is\s+${LINK_STATUS},\sline\sprotocol\sis\s${ADMIN_STATE}$$
+  ^${INTERFACE}\s+is\s+${LINK_STATUS}$$
+  ^admin\s+state\s+is\s+${ADMIN_STATE},
+  ^\s+Hardware(:|\s+is)\s+${HARDWARE_TYPE},\s+address(:|\s+is)\s+${ADDRESS}(.*bia\s+${BIA})*
+  ^\s+Description:\s+${DESCRIPTION}
+  ^\s+Internet\s+Address\s+is\s+${IP_ADDRESS}
+  ^\s+Port\s+mode\s+is\s+${MODE}
+  ^\s+${DUPLEX}, ${SPEED}(,|$$)
+  ^\s+MTU\s+${MTU}.*BW\s+${BANDWIDTH}.*DLY\s+${DELAY}
+  ^\s+Encapsulation\s+${ENCAPSULATION}
+  ^\s+${INPUT_PACKETS}\s+input\s+packets\s+\d+\s+bytes\s*$$
+  ^\s+${INPUT_ERRORS}\s+input\s+error\s+\d+\s+short\s+frame\s+\d+\s+overrun\s+\d+\s+underrun\s+\d+\s+ignored\s*$$
+  ^\s+${OUTPUT_PACKETS}\s+output\s+packets\s+\d+\s+bytes\s*$$
+  ^\s+${OUTPUT_ERRORS}\s+output\s+error\s+\d+\s+collision\s+\d+\s+deferred\s+\d+\s+late\s+collision\s*$$
+  ^\s+Last\s+link\s+flapped\s+${LAST_LINK_FLAPPED}\s*$$

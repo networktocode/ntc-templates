@@ -1,0 +1,11 @@
+Value Filldown VRF (\S+)
+Value Filldown ROUTER_ID (\d+?\.\d+?\.\d+?\.\d+?)
+Value Filldown LOCAL_AS (\d+)
+Value Required BGP_NEIGH (\d+?\.\d+?\.\d+?\.\d+?)
+Value Required NEIGH_AS (\d+)
+Value STATE_PFXRCD (\S+?\s+\S+?|\S+?)
+
+Start
+  ^BGP summary information for VRF ${VRF}, address family IPv4 Unicast
+  ^BGP router identifier ${ROUTER_ID}, local AS number ${LOCAL_AS}
+  ^${BGP_NEIGH}\s+\S+\s+${NEIGH_AS}(\s+\d+?){5}\s+\S+?\s+${STATE_PFXRCD}$$ -> Record

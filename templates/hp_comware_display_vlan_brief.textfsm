@@ -1,8 +1,0 @@
-Value VLAN_ID (\d+)
-Value NAME (\w+)
-
-Start
-  ^VLAN ID\s+ -> VLAN
-
-VLAN
-  ^${VLAN_ID}\s+${NAME} -> Record

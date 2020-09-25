@@ -1,0 +1,7 @@
+Value CPU_1_min (\d+)
+Value CPU_5_MIN (\d+)
+Value CPU_15_MIN (\d+)
+
+Start
+  ^CPU utilization for one minute:\s${CPU_1_min}%;\s+five minutes:\s+${CPU_5_MIN}%;\s+fifteen minutes:\s+${CPU_15_MIN}% -> Record
+

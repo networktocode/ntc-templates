@@ -1,0 +1,16 @@
+Value Required NEIGHBOR (\S+)
+Value LOCAL_INTERFACE (\S+(?:\s\S+)?)
+Value CAPABILITY ((?:\w\s)*\w)
+Value PLATFORM ((?:[IiPp]{2}\s)?\S+)
+Value NEIGHBOR_INTERFACE (.+?)
+
+Start
+  ^Device.*ID -> CDP
+  # Capture time-stamp if vty line has command time-stamping turned on
+  ^Load\s+for\s+
+  ^Time\s+source\s+is
+
+CDP
+  ^${NEIGHBOR}$$
+  ^\s*${LOCAL_INTERFACE}\s+\d+\s+${CAPABILITY}\s+${PLATFORM}\s+${NEIGHBOR_INTERFACE}\s*$$ -> Record
+  ^${NEIGHBOR}\s+${LOCAL_INTERFACE}\s+\d+\s+${CAPABILITY}\s+${PLATFORM}\s+${NEIGHBOR_INTERFACE}\s*$$ -> Record

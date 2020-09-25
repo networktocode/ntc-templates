@@ -1,0 +1,10 @@
+Value INTERFACE ([\w+/]+)
+Value INTF_STATE (up|down|admin-down)
+Value LINEP_STATE (up|down|admin-down)
+Value ENCAP_TYPE (\S+)
+Value MTU (\d+)
+Value INT_BW (\d+)
+
+
+Start
+  ^\s+${INTERFACE}\s+${INTF_STATE}\s+${LINEP_STATE}\s+${ENCAP_TYPE}\s+${MTU}\s+${INT_BW} -> Record

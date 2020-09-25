@@ -1,0 +1,33 @@
+Value STATUS ([acdehiIlrsSx*>])
+Value PATH_SELECTION ([acdehiIlrsSx*> ])
+Value ROUTE_SOURCE ([acdehiIlrsSx*> ])
+#Value STATUS (.)
+#Value PATH_SELECTION (.)
+#Value ROUTE_SOURCE (.)
+Value Filldown NETWORK (\S{0,18})
+#Value Required NEXT_HOP (\S{0,20})
+Value NEXT_HOP (\S{0,19})
+Value METRIC (\S{0,6})
+Value LOCAL_PREF (\S{0,11})
+Value WEIGHT (\S{0,10})
+Value AS_PATH (.*?)
+Value ORIGIN ([ie\?])
+
+
+Start
+  # Since using mostly position, play it safe and ensure we see header first
+  ^\s+Network\s+Next Hop\s+Metric\s+LocPrf\s+Weight\s+Path -> Bgp_table
+
+Bgp_table
+  #
+  #
+  # Match first when there is no network, since previous line had it already (compliment and filldown below)
+  # Example: * e                   10.10.1.1                                      0 64101 64201 i
+  ^${STATUS}${PATH_SELECTION}${ROUTE_SOURCE}\s{0,1}\s{18}\s(?=${NEXT_HOP}).{19}\s(?=\s{0,6}${METRIC}).{6}\s(?=\s{0,11}${LOCAL_PREF}).{11}\s(?=\s{0,10}${WEIGHT}).{10}\s*${AS_PATH}\s*${ORIGIN}$$ -> Record
+  #
+  #
+  # Full normal example. metric, and as_path might not exist, regex defaults to blank line. 
+  # Example: *>e10.10.101.4/30     10.10.2.1                                      0 64102 i
+  ^${STATUS}${PATH_SELECTION}${ROUTE_SOURCE}\s{0,1}(?=${NETWORK}).{18}\s(?=${NEXT_HOP}).{19}\s(?=\s{0,6}${METRIC}).{6}\s(?=\s{0,11}${LOCAL_PREF}).{11}\s(?=\s{0,10}${WEIGHT}).{10}\s*${AS_PATH}\s*${ORIGIN}$$ -> Record
+
+EOF

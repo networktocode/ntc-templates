@@ -1,0 +1,11 @@
+Value Filldown OSPF_PID (\d+)
+Value Filldown VRF (\S+)
+Value NEIGHBOR_IPADDR (\d+\.\d+\.\d+\.\d+)
+Value STATE (\S+.\/.\S+)
+Value UPTIME (\S+)
+Value LOCAL_IPADDR (\d+\.\d+\.\d+\.\d+)
+Value Required INTERFACE (\S+)
+
+Start
+  ^\s+\w+\s+\w+\s+\w+\s+${OSPF_PID}\s+[Vv][Rr][Ff]\s+${VRF} -> Record
+  ^\s+${NEIGHBOR_IPADDR}\s+\d+\s+${STATE}\s+${UPTIME}\s+${LOCAL_IPADDR}\s+${INTERFACE} -> Record

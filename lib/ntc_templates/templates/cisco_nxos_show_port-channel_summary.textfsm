@@ -1,0 +1,45 @@
+Value Required,Filldown BUNDLE_IFACE (Po\d+)
+Value Filldown BUNDLE_STATUS (\(\w+\))
+Value Filldown BUNDLE_PROTO (\w+)
+Value Filldown BUNDLE_PROTO_STATE (\(\w+\))
+Value List PHYS_IFACE (Et.+?)
+Value List PHYS_IFACE_STATUS (\(.+?\))
+
+
+Start
+  ^\s+Flag -> CASE1
+  ^Flags: -> CASE2
+
+
+CASE1
+  ^.*------------ -> CASE1_RTE
+
+CASE1_RTE
+  ^Po -> Continue.Record
+  ^${BUNDLE_IFACE}${BUNDLE_STATUS}\s+${BUNDLE_PROTO}${BUNDLE_PROTO_STATE}\s+${PHYS_IFACE}${PHYS_IFACE_STATUS}(\s|$$) -> Continue
+  ^Po\d+\(\w+\)\s+\w+\(\w+\)\s+Et.+?\(.+?\)\s+${PHYS_IFACE}${PHYS_IFACE_STATUS}(\s|$$) -> Continue
+  ^Po\d+\(\w+\)\s+\w+\(\w+\)\s+Et.+?\(.+?\)\s+Et.+?\(.+?\)\s+${PHYS_IFACE}${PHYS_IFACE_STATUS}(\s|$$) -> Continue
+  ^Po\d+\(\w+\)\s+\w+\(\w+\)\s+Et.+?\(.+?\)\s+Et.+?\(.+?\)\s+Et.+?\(.+?\)\s+${PHYS_IFACE}${PHYS_IFACE_STATUS}(\s|$$) -> Continue
+  ^Po\d+\(\w+\)\s+\w+\(\w+\)\s+Et.+?\(.+?\)\s+Et.+?\(.+?\)\s+Et.+?\(.+?\)\s+Et.+?\(.+?\)\s+${PHYS_IFACE}${PHYS_IFACE_STATUS}(\s|$$) -> Continue
+  ^Po\d+\(\w+\)\s+\w+\(\w+\)\s+Et.+?\(.+?\)\s+Et.+?\(.+?\)\s+Et.+?\(.+?\)\s+Et.+?\(.+?\)\s+Et.+?\(.+?\)\s+${PHYS_IFACE}${PHYS_IFACE_STATUS}(\s|$$) -> Continue
+  ^\s{24}${PHYS_IFACE}${PHYS_IFACE_STATUS}(\s|$$) -> Continue
+  ^\s{24}Et.+?\s+${PHYS_IFACE}${PHYS_IFACE_STATUS}(\s|$$) -> Continue
+  ^\s{24}Et.+?\s+Et.+?\s+${PHYS_IFACE}${PHYS_IFACE_STATUS}(\s|$$) -> Continue
+  ^\s{24}Et.+?\s+Et.+?\s+Et.+?\s+${PHYS_IFACE}${PHYS_IFACE_STATUS}(\s|$$) -> Continue
+  ^\s{24}Et.+?\s+Et.+?\s+Et.+?\s+Et.+?\s+${PHYS_IFACE}${PHYS_IFACE_STATUS}(\s|$$) -> Continue
+
+
+CASE2
+  ^Group\s+Port -> CASE2_RTE
+
+CASE2_RTE
+  ^------------ -> Next
+  ^\d+ -> Continue.Record
+  ^\d+\s+${BUNDLE_IFACE}${BUNDLE_STATUS}\s+\w+\s+${BUNDLE_PROTO}\s+${PHYS_IFACE}${PHYS_IFACE_STATUS}(\s|$$) -> Continue
+  ^\d+\s+Po\d+\(\w+\)\s+\w+\s+\w+\s+Et.+?\s+${PHYS_IFACE}${PHYS_IFACE_STATUS}(\s|$$) -> Continue
+  ^\d+\s+Po\d+\(\w+\)\s+\w+\s+\w+\s+Et.+?\s+Et.+?\s+${PHYS_IFACE}${PHYS_IFACE_STATUS}(\s|$$) -> Continue
+  ^\d+\s+Po\d+\(\w+\)\s+\w+\s+\w+\s+Et.+?\s+Et.+?\s+Et.+?\s+${PHYS_IFACE}${PHYS_IFACE_STATUS}(\s|$$) -> Continue
+  ^\s{37}${PHYS_IFACE}${PHYS_IFACE_STATUS}(\s|$$) -> Continue
+  ^\s{37}Et.+?\s+${PHYS_IFACE}${PHYS_IFACE_STATUS}(\s|$$) -> Continue
+  ^\s{37}Et.+?\s+Et.+?\s+${PHYS_IFACE}${PHYS_IFACE_STATUS}(\s|$$) -> Continue
+  ^\s{37}Et.+?\s+Et.+?\s+Et.+?\s+${PHYS_IFACE}${PHYS_IFACE_STATUS}(\s|$$) -> Continue

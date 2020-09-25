@@ -1,0 +1,10 @@
+Value SYSTEM_ID ((\d+.\d+.\d+)|\S+)
+Value INTERFACE (\S+)
+Value SNPA ((\d+.\d+.\d+)|\S+)
+Value STATE (\S+)
+Value HOLD_TIME (\d+)
+Value TYPE ((L\d)+)
+Value IETF_NSF (\S+)
+
+Start
+  ^${SYSTEM_ID}\s+${INTERFACE}\s+${SNPA}\s+${STATE}\s+${HOLD_TIME}\s+${TYPE}\s+${IETF_NSF} -> Record
