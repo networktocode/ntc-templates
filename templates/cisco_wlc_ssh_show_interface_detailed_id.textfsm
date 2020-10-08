@@ -1,10 +1,10 @@
 Value INTERFACE_NAME (\S+)
 Value MAC_ADDRESS (\w+\.\w+\.\w+|\w+\:\w+\:\w+\:\w+\:\w+\:\w+)
-Value IP_ADDRESS (([\d1-9]+\.?){4})
-Value IP_NETMASK (([\d1-9]+\.?){4})
-Value IP_GATEWAY (([\d1-9]+\.?){4})
-Value PRIMARY_DHCP_SERVER (([\d1-9]+\.?){4})
-Value SECONDARY_DHCP_SERVER (([\d1-9]+\.?){4})
+Value IP_ADDRESS (\d+.\d+.\d+.\d+)
+Value IP_NETMASK (\d+.\d+.\d+.\d+)
+Value IP_GATEWAY (\d+.\d+.\d+.\d+)
+Value PRIMARY_DHCP_SERVER (\d+.\d+.\d+.\d+)
+Value SECONDARY_DHCP_SERVER (\d+.\d+.\d+.\d+)
 
 Start
   ^\s*Interface\s+Name\.+\s+${INTERFACE_NAME}\s*$$
