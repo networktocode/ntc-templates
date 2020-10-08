@@ -1,12 +1,16 @@
-Value UPTIME ((\d+\s\w+.s.,?\s?){4})
+Value UPTIME ((\d+\s\w+(\(s\))?(,\s)?){4,5})
 Value LAST_REBOOT_REASON (.+)
-Value OS (\d+.\d+(.+)?)
+Value OS (\d+\..*)
 Value BOOT_IMAGE (.*)
-Value PLATFORM (\w+)
+Value PLATFORM ([\w-]+)
 Value HOSTNAME (.*)
+Value SERIAL (\w+)
+
 
 Start
-  ^\s+(NXOS: version|system:\s+version)\s+${OS}\s*$$
+  ^\s*(NXOS:|system:|Cisco IOS XE Software,)\s+[Vv]ersion:?\s+${OS}$$
+  # Skip duplicate half version
+  ^\s+System version:
   ^\s+(NXOS|kickstart)\s+image\s+file\s+is:\s+${BOOT_IMAGE}\s*$$
   ^\s+cisco\s+${PLATFORM}\s+[cC]hassis
   ^\s+cisco\s+Nexus\d+\s+${PLATFORM}
@@ -14,5 +18,54 @@ Start
   ^\s+cisco\s+Nexus\s+${PLATFORM}\s+[cC]hassis
   ^\s+Device\s+name:\s+${HOSTNAME}$$
   ^\s+cisco\s+.+-${PLATFORM}\s*
-  ^Kernel\s+uptime\s+is\s+${UPTIME}
-  ^\s+Reason:\s${LAST_REBOOT_REASON} -> Record
+  # Nexus intel platform uses Board ID as serial/license
+  ^\s*Processor\s[Bb]oard\sID\s+${SERIAL}$$
+  ## Stack info 2nd switch
+  ^System Serial Number\s+:\s+${SERIAL}$$ -> Record
+  ^Kernel\s+uptime\s+is\s+${UPTIME}\s*$$
+  ^Uptime\s+for\s+this\s+control\s+processor\s+is\s+${UPTIME}\s*$$
+  ^${HOSTNAME}\s+uptime\s+is\s+${UPTIME}\s*$$
+  # For nexus 2nd switch there is space behind uptime :()
+  ^Switch uptime\s+:\s${UPTIME}\s*$$
+  ^\s*Model Number\s+:\s+${PLATFORM}
+  # Junk Cat9K
+  ^Cisco\s(IOS|Nexus)\s.+Software
+  ^cisco\s.*X86
+  ^(TAC|Technical)\s[Ss]upport:\shttp
+  ^Documents:\shttp
+  ^export@cisco.com.
+  ^(Compiled|All rights reserved.)\s.+$$
+  ^.*(licenses, such as|such license|License Information)
+  ^.*(licensed under|\sGNU|\s\(?GPL|licenses.(l?gpl|old-)|Smart Licens)
+  ^.*License.+(is available at)
+  #^Cisco IOS-XE\s.+Copyright\s.+$$
+  ^(documentation or|or the|BOOTLDR:)\s.+$$
+  ^([Ss]oftware\.?|Hardware|ROM: IOS-XE ROMMON)$$
+  ^\s+(BIOS|kickstart|PE|system):\s+version
+  ^\s+(BIOS|NXOS|kickstart|system)\scompile\stime:
+  ^\s*(Intel|bootflash:\s|Last reset|Service:)
+  ^\s*(Core\s)?[Pp]lugin
+  ^\s*(Active\sPackages:|Technology-package|Current\s+Type)
+  ^.*([Cc]opyrights?|rights reserved|GPL.+Version|License Notice|applicable URL provided).+$$
+  ^.*(ABSOLUTELY NO WARRANTY|there is no warranty|limited to warranties).+$$
+  ^(System restarted at|System image file is|System returned to ROM by)\s.+$$
+  ^\s+(system|kickstart)\simage\sfile\sis:\s
+  ^(This product contains cryptographic|States and local)\s.+$$
+  ^.*(third[-\s]part(y|ies)|users are responsible|local country laws|applicable laws|local laws|require further assistance)\s.+$$
+  ^.*(cryptographic products|local (country\s)?laws[\.,]|export\/crypto).+$$
+  ^\s*(Reason:|Last reload reason:)\s${LAST_REBOOT_REASON}
+  # Junk, CAT9K
+  ^\d+\s(Virtual|(Ten|Forty)\sGigabit)\sEthernet interfaces
+  ^.*bytes\sof.*(memory|[Ff]lash|webui)
+  ^.*[Cc]rash\sFiles
+  ^Base\sEthernet\sMAC
+  ^(Motherboard|Model) (Assembly|Serial|Revision) Number
+  ^Switch Ports Model\s+SW Version\s+SW Image\s+Mode
+  ^\*?\s+\d+\s\d+\s+[\w-]+\s+[\d\.]+\s
+  ^Switch\s\d+
+  ^\s+Power Sequencer Firmware:
+  ^\s+Module\s(\d|not detected)
+  ^.+Microcontroller Firmware:
+  ^Configuration register is
+  ^[\s-]*$$
+  ^.+ -> Error
