@@ -6,3 +6,5 @@ Value INTERFACE (\S+)
 
 Start
   ^${REV_DNS}\s+\(${IP_ADDRESS}\)\s+at\s+${MAC_ADDRESS}\s+\[${HW_TYPE}\]\s+on\s+${INTERFACE}$$ -> Record
+  ^\s*$$
+  ^. -> Error
