@@ -1,9 +1,15 @@
 ---
+
 parsed_sample:
   - hw_type: "ether"
     interface: "eth1.100"
     ip_address: "192.168.13.197"
     mac_address: "00:04:4b:cc:9c:ba"
+    rev_dns: "?"
+  - hw_type: ""
+    interface: "eth1.10"
+    ip_address: "192.168.10.100"
+    mac_address: "incomplete"
     rev_dns: "?"
   - hw_type: "ether"
     interface: "eth1.100"
@@ -24,6 +30,11 @@ parsed_sample:
     interface: "eth0.21"
     ip_address: "192.168.123.199"
     mac_address: "00:0f:c9:0e:c8:ec"
+    rev_dns: "?"
+  - hw_type: ""
+    interface: "eth1.10"
+    ip_address: "192.168.10.52"
+    mac_address: "incomplete"
     rev_dns: "?"
   - hw_type: "ether"
     interface: "eth1.10"

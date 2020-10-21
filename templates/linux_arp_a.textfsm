@@ -5,4 +5,7 @@ Value HW_TYPE (\S+)
 Value INTERFACE (\S+)
 
 Start
-  ^${REV_DNS}\s+\(${IP_ADDRESS}\)\s+at\s+${MAC_ADDRESS}\s+\[${HW_TYPE}\]\s+on\s+${INTERFACE}$$ -> Record
+  ^${REV_DNS}\s+\(${IP_ADDRESS}\)\s+\S+\s+${MAC_ADDRESS}\s+\[${HW_TYPE}\]\s+\S+\s+${INTERFACE}$$ -> Record
+  ^${REV_DNS}\s+\(${IP_ADDRESS}\)\s+\S+\s+<${MAC_ADDRESS}>\s+\S+\s+${INTERFACE}$$ -> Record
+  ^\s*$$
+  ^. -> Error
