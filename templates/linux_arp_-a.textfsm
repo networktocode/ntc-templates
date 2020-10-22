@@ -1,0 +1,11 @@
+Value REV_DNS (\S+)
+Value IP_ADDRESS (\S+)
+Value MAC_ADDRESS (\S+)
+Value HW_TYPE (\S+)
+Value INTERFACE (\S+)
+
+Start
+  ^${REV_DNS}\s+\(${IP_ADDRESS}\)\s+\S+\s+${MAC_ADDRESS}\s+\[${HW_TYPE}\]\s+\S+\s+${INTERFACE}$$ -> Record
+  ^${REV_DNS}\s+\(${IP_ADDRESS}\)\s+\S+\s+<${MAC_ADDRESS}>\s+\S+\s+${INTERFACE}$$ -> Record
+  ^\s*$$
+  ^. -> Error
