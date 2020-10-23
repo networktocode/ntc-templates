@@ -17,12 +17,5 @@ Start
   ^\s+cisco\s+.+-${PLATFORM}\s*
   # Nexus intel platform uses Board ID as serial/license
   ^\s*Processor\s[Bb]oard\sID\s+${SERIAL}$$
-  ## Stack info 2nd switch
-  ^System Serial Number\s+:\s+${SERIAL}$$ -> Record
-  ^Kernel\s+uptime\s+is\s+${UPTIME}\s*$$
-  ^Uptime\s+for\s+this\s+control\s+processor\s+is\s+${UPTIME}\s*$$
-  ^${HOSTNAME}\s+uptime\s+is\s+${UPTIME}\s*$$
-  # For nexus 2nd switch there is space behind uptime :()
-  ^Switch uptime\s+:\s${UPTIME}\s*$$
-  ^\s*Model Number\s+:\s+${PLATFORM}
-  ^\s*(Reason:|Last reload reason:)\s${LAST_REBOOT_REASON}
+  ^Kernel\s+uptime\s+is\s+${UPTIME}
+  ^\s+Reason:\s${LAST_REBOOT_REASON} -> Record
