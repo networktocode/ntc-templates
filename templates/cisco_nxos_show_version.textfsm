@@ -41,11 +41,11 @@ Start
   #^Cisco IOS-XE\s.+Copyright\s.+$$
   ^(documentation or|or the|BOOTLDR:)\s.+$$
   ^([Ss]oftware\.?|Hardware|ROM: IOS-XE ROMMON)$$
-  ^\s+(BIOS|kickstart|PE|system):\s+version
+  ^\s+(BIOS|kickstart|PE|system|loader|uC):\s+version
   ^\s+(BIOS|NXOS|kickstart|system)\scompile\stime:
   ^\s*(Intel|bootflash:\s|Last reset|Service:)
   ^\s*(Core\s)?[Pp]lugin
-  ^\s*(Active\sPackages:|Technology-package|Current\s+Type)
+  ^\s*(Active\sPackage|Technology-package|Current\s+Type)
   ^.*([Cc]opyrights?|rights reserved|GPL.+Version|License Notice|applicable URL provided).+$$
   ^.*(ABSOLUTELY NO WARRANTY|there is no warranty|limited to warranties).+$$
   ^(System restarted at|System image file is|System returned to ROM by)\s.+$$
@@ -64,7 +64,9 @@ Start
   ^\*?\s+\d+\s\d+\s+[\w-]+\s+[\d\.]+\s
   ^Switch\s\d+
   ^\s+Power Sequencer Firmware:
+  ^\s+power-seq:\sModule
   ^\s+Module\s(\d|not detected)
+  ^\s+SFP\suC:
   ^.+Microcontroller Firmware:
   ^Configuration register is
   ^[\s-]*$$
