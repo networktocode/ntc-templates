@@ -138,7 +138,7 @@ ip access-list extended ios_partition_acl
  remark consecutive COMMENT
  permit tcp any host 192.168.100.1 established
  remark correct syntax for time-range ace
- permit tcp host 10.1.1.1 eq ftp any eq tacacs time-range test log
+ permit tcp host 10.1.1.1 eq ftp any eq tacacs log time-range test
 
 access-list 102 remark match protocol numbers
 access-list 102 deny   53 any any

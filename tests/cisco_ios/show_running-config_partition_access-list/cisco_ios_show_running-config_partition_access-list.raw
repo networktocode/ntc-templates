@@ -113,7 +113,7 @@ access-list 101 permit tcp any host 10.1.1.1 eq www
 access-list 101 permit tcp any host 10.1.1.1 eq 443 log
 access-list 101 remark this is a remark
 access-list 101 permit ahp any any log-input
-access-list 101 permit tcp host 10.1.1.1 eq ftp any eq tacacs log time-range test
+access-list 101 permit tcp host 10.1.1.1 eq ftp any eq tacacs time-range test log
 
 !
 ip access-list standard stdacl
