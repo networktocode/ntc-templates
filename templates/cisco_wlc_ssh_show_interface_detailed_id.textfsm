@@ -3,8 +3,8 @@ Value MAC_ADDRESS (\w+\.\w+\.\w+|\w+\:\w+\:\w+\:\w+\:\w+\:\w+)
 Value IP_ADDRESS (\d+.\d+.\d+.\d+)
 Value IP_NETMASK (\d+.\d+.\d+.\d+)
 Value IP_GATEWAY (\d+.\d+.\d+.\d+)
-Value PRIMARY_DHCP_SERVER (\d+.\d+.\d+.\d+)
-Value SECONDARY_DHCP_SERVER (\d+.\d+.\d+.\d+)
+Value PRIMARY_DHCP_SERVER (\d+.\d+.\d+.\d+|Unconfigured)
+Value SECONDARY_DHCP_SERVER (\d+.\d+.\d+.\d+|Unconfigured)
 
 Start
   ^\s*Interface\s+Name\.+\s+${INTERFACE_NAME}\s*$$
