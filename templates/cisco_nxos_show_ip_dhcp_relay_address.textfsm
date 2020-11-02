@@ -4,9 +4,8 @@ Value VRF (\S+)
 
 Start
   ^\s*Interface\s+Relay\s+Address\s+VRF\s+Name\s*$$
-  ^\s*-+\s+-+\s+-+\s*$$
+  ^\s*-+
   ^\s*${INTERFACE}\s+${RELAY_ADDRESS}\s*$$ -> Record
   ^\s*${INTERFACE}\s+${RELAY_ADDRESS}\s+${VRF}\s*$$ -> Record
-  ^\s+$$
-  ^$$
+  ^\s*$$
   ^.* -> Error
