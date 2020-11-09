@@ -1,0 +1,24 @@
+Value INTERFACE (\S+)
+Value ADM (Up|Dwn)
+Value OPR (Up|Dwn)
+Value SUB_INTERFACE (ipv\d)
+Value SUB_INTERFACE_ADM (Up|Dwn)
+Value SUB_INTERFACE_OPR (Up|Dwn)
+Value HELLO_FCTR (\d+)
+Value HOLDTIME (\d+)
+Value KA_FCTR (\d+)
+Value KA_TIME (\d+)
+Value TRANSPORT_ADDRESS (\S+)
+
+Start
+  ^----------- -> Interface
+
+Interface
+  ^${INTERFACE}\s+${ADM}/${OPR}(\s|$$) -> SubInterface
+
+SubInterface
+  ^\s+${SUB_INTERFACE}\s+${SUB_INTERFACE_ADM}/${SUB_INTERFACE_OPR}\s+${HELLO_FCTR}\s+${HOLDTIME}\s+${KA_FCTR}\s+${KA_TIME}\s+${TRANSPORT_ADDRESS}(\s|$$) -> Record Interface
+  ^No.\s+of\s+Interfaces
+  ^-----------
+  ^\s*$$
+  ^. -> Error

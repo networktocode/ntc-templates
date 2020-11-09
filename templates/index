@@ -14,6 +14,11 @@ Template, Hostname, Platform, Command
 alcatel_aos_show_vlan.textfsm, .*, alcatel_aos, show vlan
 
 alcatel_sros_show_router_bgp_routes_vpn-ipv4.textfsm, .*, alcatel_sros, sh[[ow]] router bgp rou[[tes]] vpn-ipv4
+alcatel_sros_show_router_bgp_summary_family.textfsm, .*, alcatel_sros, sh[[ow]] router bgp sum[[mary]] family
+alcatel_sros_show_router_isis_adjacency.textfsm, .*, alcatel_sros, sh[[ow]] router isis adj[[acency]]
+alcatel_sros_show_router_isis_interface.textfsm, .*, alcatel_sros, sh[[ow]] router isis int[[erface]]
+alcatel_sros_show_router_ldp_interface.textfsm, .*, alcatel_sros, sh[[ow]] router ldp int[[erface]]
+alcatel_sros_show_router_pim_interface.textfsm, .*, alcatel_sros, sh[[ow]] router pim int[[erface]]
 alcatel_sros_show_service_id_base.textfsm, .*, alcatel_sros, sh[[ow]] serv[[ice]] id ba[[se]]
 alcatel_sros_oam_mac-ping.textfsm, .*, alcatel_sros, oam mac-pi[[ng]]
 
