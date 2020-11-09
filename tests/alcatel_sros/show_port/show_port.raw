@@ -1,0 +1,238 @@
+
+===============================================================================
+Ports on Slot 1
+===============================================================================
+Port          Admin Link Port    Cfg  Oper LAG/ Port Port Port   C/QS/S/XFP/
+Id            State      State   MTU  MTU  Bndl Mode Encp Type   MDIMDX
+-------------------------------------------------------------------------------
+1/1/1         Up    Yes  Up      9212 9212    - hybr dotq xcme   GIGE-SX
+1/1/2         Up    Yes  Up      1518 1518    - accs dotq xcme   MDI GIGE-T
+1/1/3         Up    Yes  Up      1518 1518    - accs dotq xcme   MDX GIGE-T
+1/1/4         Up    Yes  Up      9212 9212    1 netw null xcme   GIGE-SX
+1/1/5         Up    Yes  Up      9212 9212    - netw null xcme   GIGE-SX
+1/1/6         Up    Yes  Up      9212 9212    - netw null xcme   GIGE-SX
+1/1/7         Up    Yes  Up      1518 1518    - accs dotq xcme   MDX GIGE-T
+1/1/8         Up    Yes  Up      1514 1514    - accs null xcme   MDX GIGE-T
+1/1/9         Up    Yes  Up      9212 9212    - netw null xcme   GIGE-SX
+1/1/10        Up    No   Down    1518 1518    - accs dotq xcme   GIGE-SX
+1/1/11        Up    No   Down    1518 1518    - accs dotq xcme   GIGE-T
+1/1/12        Up    Yes  Up      9000 9000    - accs null xcme   MDX GIGE-T
+1/1/13        Up    Yes  Up      1514 1514    - accs null xcme   GIGE-SX
+1/1/14        Up    Yes  Up      1514 1514    - accs null xcme   MDI GIGE-T
+1/1/15        Up    Yes  Up      9000 9000    - accs null xcme   MDI GIGE-T
+1/1/16        Up    Yes  Up      1514 1514    - accs null xcme   GIGE-SX
+1/1/17        Up    No   Down    1518 1518    - accs dotq xcme   GIGE-T
+1/1/18        Up    Yes  Up      1518 1518    - accs dotq xcme   MDI GIGE-T
+1/1/19        Up    Yes  Up      1514 1514    - accs null xcme   MDI GIGE-T
+1/1/20        Up    Yes  Up      9212 9212    - hybr dotq xcme   MDX GIGE-T
+1/1/21        Up    Yes  Up      1518 1518    - accs dotq xcme   GIGE-SX
+1/1/22        Up    Yes  Up      1518 1518    - accs dotq xcme   GIGE-SX
+1/1/23        Up    Yes  Up      1518 1518    - accs dotq xcme   MDI GIGE-T
+1/1/24        Up    Yes  Up      1518 1518    - accs dotq xcme   MDX GIGE-T
+1/2/1         Up    No   Down    1518 1518    - accs dotq xcme   GIGE-SX
+1/2/2         Up    Yes  Up      1514 1514    - accs null xcme   MDI GIGE-T
+1/2/3         Up    Yes  Up      1514 1514    - accs null xcme   MDI GIGE-T
+1/2/4         Up    No   Down    1514 1514    - accs null xcme   GIGE-T
+1/2/5         Up    Yes  Up      9212 9212    - hybr dotq xcme   MDX GIGE-T
+1/2/6         Up    No   Down    9022 9022    - accs null xcme   GIGE-T
+1/2/7         Up    Yes  Up      1514 1514    - accs null xcme   MDX GIGE-T
+1/2/8         Up    No   Down    1514 1514    - accs null xcme
+1/2/9         Up    No   Down    1518 1518   99 accs dotq xcme   GIGE-SX
+1/2/10        Up    Yes  Up      1514 1514    - accs null xcme   MDI GIGE-T
+1/2/11        Up    Yes  Up      1514 1514    - accs null xcme   MDI GIGE-T
+1/2/12        Up    No   Down    1514 1514    - accs null xcme   GIGE-T
+1/2/13        Up    Yes  Up      1514 1514    - accs null xcme   MDX GIGE-T
+1/2/14        Up    No   Down    1514 1514    - accs null xcme   GIGE-T
+1/2/15        Up    No   Down    1570 1570    - accs dotq xcme   GIGE-T
+1/2/16        Up    Yes  Up      9022 9022    - accs null xcme   MDX GIGE-T
+1/2/17        Up    Yes  Up      1538 1538    - accs dotq xcme   MDX GIGE-T
+1/2/18        Up    No   Down    1514 1514    - accs null xcme   GIGE-T
+1/2/19        Up    No   Down    1518 1518    - accs dotq xcme   GIGE-T
+1/2/20        Up    No   Down    1514 1514    - accs null xcme   GIGE-T
+1/2/21        Up    Yes  Up      1514 1514    - accs null xcme   MDI GIGE-T
+1/2/22        Up    Yes  Up      1518 1518    - accs dotq xcme   MDX GIGE-T
+1/2/23        Up    Yes  Up      1518 1518    - accs dotq xcme   MDX GIGE-T
+1/2/24        Up    Yes  Up      9212 9212    7 netw null xcme   GIGE-SX
+
+===============================================================================
+Ports on Slot A
+===============================================================================
+Port          Admin Link Port    Cfg  Oper LAG/ Port Port Port   C/QS/S/XFP/
+Id            State      State   MTU  MTU  Bndl Mode Encp Type   MDIMDX
+-------------------------------------------------------------------------------
+A/1           Up    Yes  Up      1514 1514    - netw null faste  MDI
+A/4           Up    No   Down    1514 1514    - netw null faste
+
+===============================================================================
+Ports on Slot B
+===============================================================================
+Port          Admin Link Port    Cfg  Oper LAG/ Port Port Port   C/QS/S/XFP/
+Id            State      State   MTU  MTU  Bndl Mode Encp Type   MDIMDX
+-------------------------------------------------------------------------------
+B/1           Up    No   Down    1514 1514    - netw null faste
+B/4           Up    No   Down    1514 1514    - netw null faste
+
+
+===============================================================================
+Ports on Satellite esat-1
+===============================================================================
+Port          Admin Link Port    Cfg  Oper LAG/ Port Port Port   C/QS/S/XFP/
+Id            State      State   MTU  MTU  Bndl Mode Encp Type   MDIMDX
+-------------------------------------------------------------------------------
+esat-1/1/1    Up    Yes  Up      1518 1518    5 accs dotq xcme   MDI GIGE-T
+esat-1/1/2    Up    Yes  Up      1518 1518    - accs dotq xcme   MDI GIGE-T
+esat-1/1/3    Up    Yes  Up      1518 1518    - accs dotq xcme   MDX GIGE-T
+esat-1/1/4    Up    Yes  Up      1538 1538    - accs dotq xcme   MDX GIGE-T
+esat-1/1/5    Up    Yes  Up      9022 9022    - accs null xcme   MDX GIGE-T
+esat-1/1/6    Up    Yes  Up      1514 1514    - accs null xcme   MDI GIGE-T
+esat-1/1/7    Up    Yes  Up      9022 9022    - accs null xcme   MDI GIGE-T
+esat-1/1/8    Up    No   Down    9022 9022    - accs null xcme   GIGE-T
+esat-1/1/9    Down  No   Down    9208 9208    - netw null xcme
+esat-1/1/10   Down  No   Down    9208 9208    - netw null xcme
+esat-1/1/11   Down  No   Down    9208 9208    - netw null xcme
+esat-1/1/12   Down  No   Down    9208 9208    - netw null xcme
+esat-1/1/13   Down  No   Down    9208 9208    - netw null xcme
+esat-1/1/14   Down  No   Down    9208 9208    - netw null xcme
+esat-1/1/15   Down  No   Down    9208 9208    - netw null xcme
+esat-1/1/16   Down  No   Down    9208 9208    - netw null xcme
+esat-1/1/17   Down  No   Down    9208 9208    - netw null xcme
+esat-1/1/18   Down  No   Down    9208 9208    - netw null xcme
+esat-1/1/19   Down  No   Down    9208 9208    - netw null xcme
+esat-1/1/20   Down  No   Down    9208 9208    - netw null xcme
+esat-1/1/21   Down  No   Down    9208 9208    - netw null xcme
+esat-1/1/22   Down  No   Down    9208 9208    - netw null xcme
+esat-1/1/23   Down  No   Down    9208 9208    - netw null xcme
+esat-1/1/24   Down  No   Down    9208 9208    - netw null xcme
+esat-1/1/25   Down  No   Down    9208 9208    - netw null xcme
+esat-1/1/26   Down  No   Down    9208 9208    - netw null xcme
+esat-1/1/27   Down  No   Down    9208 9208    - netw null xcme
+esat-1/1/28   Down  No   Down    9208 9208    - netw null xcme
+esat-1/1/29   Down  No   Down    9208 9208    - netw null xcme
+esat-1/1/30   Down  No   Down    9208 9208    - netw null xcme
+esat-1/1/31   Up    No   Down    9208 9208    - netw null xcme
+esat-1/1/32   Down  No   Down    9208 9208    - netw null xcme
+esat-1/1/33   Down  No   Down    9208 9208    - netw null xcme
+esat-1/1/34   Down  No   Down    9208 9208    - netw null xcme
+esat-1/1/35   Down  No   Down    9208 9208    - netw null xcme
+esat-1/1/36   Down  No   Down    9208 9208    - netw null xcme
+esat-1/1/37   Down  No   Down    9208 9208    - netw null xcme
+esat-1/1/38   Down  No   Down    9208 9208    - netw null xcme
+esat-1/1/39   Down  No   Down    9208 9208    - netw null xcme
+esat-1/1/40   Down  No   Down    9208 9208    - netw null xcme
+esat-1/1/41   Down  No   Down    9208 9208    - netw null xcme
+esat-1/1/42   Down  No   Down    9208 9208    - netw null xcme
+esat-1/1/43   Down  No   Down    9208 9208    - netw null xcme
+esat-1/1/44   Down  No   Down    9208 9208    - netw null xcme
+esat-1/1/45   Down  No   Down    9208 9208    - netw null xcme
+esat-1/1/46   Down  No   Down    9208 9208    - netw null xcme
+esat-1/1/47   Down  No   Down    9208 9208    - netw null xcme
+esat-1/1/48   Down  No   Down    9208 9208    - netw null xcme
+esat-1/1/u1   Up    Yes  Up      9212 9212    - accs dotq xgige  10GBASE-LR  *
+esat-1/1/u2   Up    No   Down    9212 9212    - accs dotq xgige
+esat-1/1/u3   Up    No   Down    9212 9212    - accs dotq xgige
+esat-1/1/u4   Up    No   Down    9212 9212    - accs dotq xgige
+
+===============================================================================
+Ports on Satellite esat-2
+===============================================================================
+Port          Admin Link Port    Cfg  Oper LAG/ Port Port Port   C/QS/S/XFP/
+Id            State      State   MTU  MTU  Bndl Mode Encp Type   MDIMDX
+-------------------------------------------------------------------------------
+esat-2/1/1    Down  No   Ghost   9208 9208    - netw null xcme
+esat-2/1/2    Down  No   Ghost   9208 9208    - netw null xcme
+esat-2/1/3    Down  No   Ghost   9208 9208    - netw null xcme
+esat-2/1/4    Down  No   Ghost   9208 9208    - netw null xcme
+esat-2/1/5    Down  No   Ghost   9208 9208    - netw null xcme
+esat-2/1/6    Down  No   Ghost   9208 9208    - netw null xcme
+esat-2/1/7    Down  No   Ghost   9208 9208    - netw null xcme
+esat-2/1/8    Down  No   Ghost   9208 9208    - netw null xcme
+esat-2/1/9    Down  No   Ghost   9208 9208    - netw null xcme
+esat-2/1/10   Down  No   Ghost   9208 9208    - netw null xcme
+esat-2/1/11   Down  No   Ghost   9208 9208    - netw null xcme
+esat-2/1/12   Down  No   Ghost   9208 9208    - netw null xcme
+esat-2/1/13   Down  No   Ghost   9208 9208    - netw null xcme
+esat-2/1/14   Down  No   Ghost   9208 9208    - netw null xcme
+esat-2/1/15   Down  No   Ghost   9208 9208    - netw null xcme
+esat-2/1/16   Down  No   Ghost   9208 9208    - netw null xcme
+esat-2/1/17   Down  No   Ghost   9208 9208    - netw null xcme
+esat-2/1/18   Down  No   Ghost   9208 9208    - netw null xcme
+esat-2/1/19   Down  No   Ghost   9208 9208    - netw null xcme
+esat-2/1/20   Down  No   Ghost   9208 9208    - netw null xcme
+esat-2/1/21   Down  No   Ghost   9208 9208    - netw null xcme
+esat-2/1/22   Down  No   Ghost   9208 9208    - netw null xcme
+esat-2/1/23   Down  No   Ghost   9208 9208    - netw null xcme
+esat-2/1/24   Down  No   Ghost   9208 9208    - netw null xcme
+esat-2/1/25   Down  No   Ghost   9208 9208    - netw null xcme
+esat-2/1/26   Down  No   Ghost   9208 9208    - netw null xcme
+esat-2/1/27   Down  No   Ghost   9208 9208    - netw null xcme
+esat-2/1/28   Down  No   Ghost   9208 9208    - netw null xcme
+esat-2/1/29   Down  No   Ghost   9208 9208    - netw null xcme
+esat-2/1/30   Down  No   Ghost   9208 9208    - netw null xcme
+esat-2/1/31   Down  No   Ghost   9208 9208    - netw null xcme
+esat-2/1/32   Down  No   Ghost   9208 9208    - netw null xcme
+esat-2/1/33   Down  No   Ghost   9208 9208    - netw null xcme
+esat-2/1/34   Down  No   Ghost   9208 9208    - netw null xcme
+esat-2/1/35   Down  No   Ghost   9208 9208    - netw null xcme
+esat-2/1/36   Down  No   Ghost   9208 9208    - netw null xcme
+esat-2/1/37   Down  No   Ghost   9208 9208    - netw null xcme
+esat-2/1/38   Down  No   Ghost   9208 9208    - netw null xcme
+esat-2/1/39   Down  No   Ghost   9208 9208    - netw null xcme
+esat-2/1/40   Down  No   Ghost   9208 9208    - netw null xcme
+esat-2/1/41   Down  No   Ghost   9208 9208    - netw null xcme
+esat-2/1/42   Down  No   Ghost   9208 9208    - netw null xcme
+esat-2/1/43   Down  No   Ghost   9208 9208    - netw null xcme
+esat-2/1/44   Down  No   Ghost   9208 9208    - netw null xcme
+esat-2/1/45   Down  No   Ghost   9208 9208    - netw null xcme
+esat-2/1/46   Down  No   Ghost   9208 9208    - netw null xcme
+esat-2/1/47   Down  No   Ghost   9208 9208    - netw null xcme
+esat-2/1/48   Down  No   Ghost   9208 9208    - netw null xcme
+esat-2/1/u1   Up    No   Ghost   9212 9212    - accs dotq xgige
+esat-2/1/u2   Up    No   Ghost   9212 9212    - accs dotq xgige
+esat-2/1/u3   Up    No   Ghost   9212 9212    - accs dotq xgige
+esat-2/1/u4   Up    No   Ghost   9212 9212    - accs dotq xgige
+
+===============================================================================
+Ports on Slot 10
+===============================================================================
+Port          Admin Link Port    Cfg  Oper LAG/ Port Port Port   C/QS/S/XFP/
+Id            State      State   MTU  MTU  Bndl Mode Encp Type   MDIMDX
+-------------------------------------------------------------------------------
+10/2/c1       Up         Link Up                          conn   100GBASE-LR4*
+10/2/c1/1     Up    Yes  Up      9192 9192   10 accs null cgige
+10/2/c2       Up         Link Up                          conn   100GBASE-LR4*
+10/2/c2/1     Up    Yes  Up      9192 9192   10 accs null cgige
+10/2/c3       Up         Link Up                          conn   100GBASE-LR4*
+10/2/c3/1     Up    Yes  Up      9192 9192   10 accs null cgige
+10/2/c4       Down       Down                             conn   100GBASE-LR4*
+10/2/c5       Down       Down                             conn
+10/2/c6       Down       Down                             conn
+10/2/c7       Up         Link Up                          conn   100GBASE-LR4*
+10/2/c7/1     Up    Yes  Up      9192 9192   15 accs null cgige
+10/2/c8       Up         Link Up                          conn   100GBASE-LR4*
+10/2/c8/1     Up    Yes  Up      9192 9192   30 accs null cgige
+10/2/c9       Down       Down                             conn   100GBASE-LR4*
+10/2/c10      Up         Link Up                          conn   100GBASE-LR4*
+10/2/c10/1    Up    Yes  Up      9192 9192   24 accs null cgige
+10/2/c11      Down       Down                             conn
+10/2/c12      Down       Down                             conn
+10/2/c13      Up         Link Up                          conn   100GBASE-LR4*
+10/2/c13/1    Up    Yes  Up      9192 9192   14 accs null cgige
+10/2/c14      Up         Link Up                          conn   100GBASE-LR4*
+10/2/c14/1    Up    Yes  Link Up 9192 9192   14 accs null cgige
+10/2/c15      Up         Link Up                          conn   100GBASE-LR4*
+10/2/c15/1    Down  No   Down    9192 9192    - accs null cgige
+10/2/c16      Down       Down                             conn   100GBASE-LR4*
+10/2/c17      Down       Down                             conn
+10/2/c18      Down       Down                             conn
+10/2/c19      Up         Link Up                          conn   100GBASE-LR4*
+10/2/c19/1    Up    Yes  Up      9212 9212    7 netw null cgige
+10/2/c20      Up         Link Up                          conn   100GBASE-LR4*
+10/2/c20/1    Up    Yes  Up      9212 9212    3 netw null cgige
+10/2/c21      Up         Link Up                          conn   100GBASE-LR4*
+10/2/c21/1    Up    Yes  Up      9212 9212    7 netw null cgige
+10/2/c22      Down       Down                             conn
+10/2/c23      Down       Down                             conn
+10/2/c24      Down       Down                             conn
+===============================================================================
+* indicates that the corresponding row element may have been truncated.
+
