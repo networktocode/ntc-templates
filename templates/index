@@ -14,13 +14,21 @@ Template, Hostname, Platform, Command
 alcatel_aos_show_vlan.textfsm, .*, alcatel_aos, show vlan
 
 alcatel_sros_show_router_bgp_routes_vpn-ipv4.textfsm, .*, alcatel_sros, sh[[ow]] router bgp rou[[tes]] vpn-ipv4
+alcatel_sros_show_router_bgp_summary_family.textfsm, .*, alcatel_sros, sh[[ow]] router bgp sum[[mary]] family
+alcatel_sros_show_router_isis_adjacency.textfsm, .*, alcatel_sros, sh[[ow]] router isis adj[[acency]]
+alcatel_sros_show_router_isis_interface.textfsm, .*, alcatel_sros, sh[[ow]] router isis int[[erface]]
+alcatel_sros_show_router_ldp_interface.textfsm, .*, alcatel_sros, sh[[ow]] router ldp int[[erface]]
+alcatel_sros_show_router_pim_interface.textfsm, .*, alcatel_sros, sh[[ow]] router pim int[[erface]]
 alcatel_sros_show_service_id_base.textfsm, .*, alcatel_sros, sh[[ow]] serv[[ice]] id ba[[se]]
 alcatel_sros_oam_mac-ping.textfsm, .*, alcatel_sros, oam mac-pi[[ng]]
+alcatel_sros_show_port.textfsm, .*, alcatel_sros, show port
+alcatel_sros_show_lag.textfsm, .*, alcatel_sros, show lag
 
 arista_eos_show_mac_security_participants_detail.textfsm, .*, arista_eos, sh[[ow]] ma[[c]] secu[[rity]] part[[icipants]] det[[ail]]
 arista_eos_show_interfaces_transceiver_detail.textfsm, .*, arista_eos, sh[[ow]] inte[[rfaces]] tr[[ansceiver]] de[[tail]]
 arista_eos_show_mac_security_mka_counters.textfsm, .*, arista_eos, sh[[ow]] ma[[c]] secu[[rity]] mk[[a]] count[[ers]]
 arista_eos_show_environment_temperature.textfsm, .*, arista_eos, sh[[ow]] en[[vironment]] t[[emperature]]
+arista_eos_show_interfaces_description.textfsm, .*, arista_eos, sh[[ow]] int[[erfaces]] des[[cription]]
 arista_eos_show_interfaces_transceiver.textfsm, .*, arista_eos, sh[[ow]] inte[[rfaces]] tr[[ansceiver]]
 arista_eos_show_mac_security_interface.textfsm, .*, arista_eos, sh[[ow]] ma[[c]] secu[[rity]] int[[erface]]
 arista_eos_show_lldp_neighbors_detail.textfsm, .*, arista_eos, sh[[ow]] ll[[dp]] nei[[ghbors]] d[[etail]]
@@ -187,6 +195,7 @@ cisco_ios_show_ip_route_summary.textfsm, .*, cisco_ios, sh[[ow]] ip ro[[ute]] su
 cisco_ios_show_ip_access-lists.textfsm, .*, cisco_ios, sh[[ow]] ip acce[[ss-lists]]
 cisco_ios_show_mpls_interfaces.textfsm, .*, cisco_ios, sh[[ow]] mpls interfa[[ces]]
 cisco_ios_show_power_available.textfsm,  .*, cisco_ios, sh[[ow]] pow[[er]] a[[vailable]]
+cisco_ios_show_access-session.textfsm, .*, cisco_ios, show access-s[[ession]]
 cisco_ios_show_alert_counters.textfsm, .*, cisco_ios, sh[[ow]] alert [[counters]]
 cisco_ios_show_ip_bgp_summary.textfsm, .*, cisco_ios, sh[[ow]] ip bgp (?:all\s+)?sum[[mary]]
 cisco_ios_show_ip_prefix-list.textfsm, .*, cisco_ios, sh[[ow]] ip pre[[fix-list]]
@@ -297,6 +306,7 @@ cisco_s300_show_version.textfsm, .*, cisco_s300, sh[[ow]] ver[[sion]]
 
 cisco_wlc_ssh_show_advanced_802.11a_channel.textfsm, .*, cisco_wlc_ssh, sh[[ow]] ad[[vanced]] 802\.11[ab] ch[[annel]]
 cisco_wlc_ssh_show_802.11a_cleanair_config.textfsm, .*, cisco_wlc_ssh, sh[[ow]] 802\.11[ab] cl[[eanair]] c[[onfig]]
+cisco_wlc_ssh_show_interface_detailed_id.textfsm, .*, cisco_wlc_ssh, sh[[ow]] int[[erface]] d[[etailed]] (\S+)
 cisco_wlc_ssh_show_cdp_neighbors_detail.textfsm, .*, cisco_wlc_ssh, sh[[ow]] c[[dp]] neig[[hbors]] det[[ail]]
 cisco_wlc_ssh_show_rf-profile_summary.textfsm, .*, cisco_wlc_ssh, sh[[ow]] rf-[[profile]] s[[ummary]]
 cisco_wlc_ssh_show_ap_config_general.textfsm, .*, cisco_wlc_ssh, sh[[ow]] ap con[[fig]] ge[[neral]]
@@ -378,6 +388,7 @@ hp_procurve_show_lldp_info_remote-device_detail.textfsm, .*, hp_procurve, sh[[ow
 hp_procurve_show_lldp_info_remote-device.textfsm, .*, hp_procurve, sh[[ow]] ll[[dp]] i[[nfo]] r[[emote-device]]
 hp_procurve_show_tech_buffers.textfsm, .*, hp_procurve, sh[[ow]] tec[[h]] buf[[ffers]]
 hp_procurve_show_mac-address.textfsm, .*, hp_procurve, sh[[ow]] mac-a[[ddress]]
+hp_procurve_show_interfaces.textfsm, .*, hp_procurve, sh[[ow]] int[[erfaces]]
 hp_procurve_show_system.textfsm, .*, hp_procurve, sh[[ow]] syst[[em]]
 hp_procurve_show_trunks.textfsm, .*, hp_procurve, sh[[ow]] tr[[unks]]
 hp_procurve_show_vlans.textfsm, .*, hp_procurve, sh[[ow]] vl[[ans]]
@@ -395,11 +406,14 @@ juniper_junos_show_chassis_firmware.textfsm, .*, juniper_junos, sh[[ow]] ch[[ass
 juniper_junos_show_lacp_interfaces.textfsm, .*, juniper_junos, sh[[ow]] la[[cp]] i[[nterfaces]]
 juniper_junos_show_arp_no-resolve.textfsm, .*, juniper_junos, sh[[ow]] a[[rp]] n[[o-resolve]]
 juniper_junos_show_isis_adjacency.textfsm, .*, juniper_junos, sh[[ow]] is[[is]] ad[[jacency]]
+juniper_junos_show_lldp_neighbors.textfsm, .*, juniper_junos, sh[[ow]] ll[[dp]] n[[eighbors]]
 juniper_junos_show_ospf_neighbor.textfsm, .*, juniper_junos, sh[[ow]] ospf n[[eighbor]]
 juniper_junos_show_interfaces.textfsm, .*, juniper_junos, sh[[ow]] inte[[rfaces]]
 juniper_junos_show_version.textfsm, .*, juniper_junos, sh[[ow]] ver[[sion]]
 
 juniper_screenos_get_route.textfsm, .*, juniper_screenos, get route
+
+linux_arp_-a.textfsm, .*, linux, arp -a
 
 paloalto_panos_show_running_security-policy.textfsm, .*, paloalto_panos, sh[[ow]] runn[[ing]] security[[-policy]]
 paloalto_panos_show_high-availability_all.textfsm, .*, paloalto_panos, sh[[ow]] high[[-availability]] all
