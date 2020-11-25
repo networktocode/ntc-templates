@@ -34,6 +34,7 @@ OS_CHOICES = [
     "cisco_xe",
     "cisco_xr",
     "dell_force10",
+    "dell_powerconnect",
     "enterasys",
     "extreme",
     "f5_ltm",
