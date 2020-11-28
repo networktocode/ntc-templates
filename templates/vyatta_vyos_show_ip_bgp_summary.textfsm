@@ -14,11 +14,10 @@ Start
   ^RIB\s+entries\s+\d+,\s+using\s+\d+\s+MiB\s+of\s+memory$$
   ^Peers\s+\d+,\s+using\s+\d+\s+KiB\s+of\s+memory$$
   ^Peer\s+groups\s+\d+,\s+using\s+\d+\s+bytes\s+of\s+memory$$
-  ^\s*$$
   ^Neighbor\s+V\s+AS\s+MsgRcvd\s+MsgSent\s+TblVer\s+InQ\s+OutQ\s+Up/Down\s+State/PfxRcd$$
   ^${BGP_NEIGH}\s+\S+\s+${NEIGH_AS}\s+${MSG_RCVD}\s+${MSG_SENT}(\s+\d+?){3}\s+${UP_DOWN}\s+${STATE_PFXRCD}\s*$$ -> Record
-  ^\s*$$
   ^Total\s+number\s+of\s+neighbors\s+\d+$$
+  ^\s*$$
   ^. -> Error
 
 EOF
