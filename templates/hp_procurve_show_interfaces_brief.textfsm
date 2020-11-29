@@ -1,10 +1,10 @@
 Value PORT (\S+)
-Value TYPE ([\D\S]+)
+Value TYPE (\S+|\s+)
 Value INTRUSION_ALERT (Yes|No)
 Value ENABLED (Yes|No)
 Value STATUS (Up|Down)
-Value MODE ([\D\S]+)
-Value MDI_MODE ([\D\S]+)
+Value MODE (\S+|\s+)
+Value MDI_MODE (\S+|s+)
 Value FLOW_CTRL (on|off)
 Value BCAST_LIMIT (\d+)
 
@@ -28,3 +28,4 @@ showintbrief2
   ^\s+${PORT}\s+${TYPE}\s+\|\s+${INTRUSION_ALERT}\s+${ENABLED}\s+${STATUS}\s+${MODE}\s+${MDI_MODE}\s+${FLOW_CTRL}\s+${BCAST_LIMIT}\s*$$ -> Record
   ^\s*$$
   ^. -> Error
+
