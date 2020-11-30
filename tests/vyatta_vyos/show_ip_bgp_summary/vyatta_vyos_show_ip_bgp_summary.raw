@@ -1,0 +1,13 @@
+IPv4 Unicast Summary:
+BGP router identifier 10.10.10.1, local AS number 123456 vrf-id 0
+BGP table version 50711224
+RIB entries 1537189, using 270 MiB of memory
+Peers 3, using 593 KiB of memory
+Peer groups 4, using 256 bytes of memory
+
+Neighbor        V         AS MsgRcvd MsgSent   TblVer  InQ OutQ  Up/Down State/PfxRcd
+10.10.10.10     4       1234   71460   69353        0    0    0 5d13h10m            0
+123.123.123.123 4     345612  450590   34688        0    0    0 1d00h18m            0
+193.189.82.105  4     12365        0       0        0    0    0    never       Active
+
+Total number of neighbors 3
