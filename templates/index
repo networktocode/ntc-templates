@@ -373,9 +373,9 @@ dell_powerconnect_show_interfaces_description.textfsm, .*, dell_powerconnect, sh
 dell_powerconnect_show_bridge_address_table.textfsm, .*, dell_powerconnect, sh[[ow]] br[[idge]] a[[ddress-table]]
 dell_powerconnect_show_interfaces_status.textfsm, .*, dell_powerconnect, sh[[ow]] int[[erfaces]] st[[atus]]
 
-fortinet_fortios_get_router_info_bgp_summary.textfsm, .*, fortinet_fortios, g[[et]] r[[outer]] info bg[[p]] su[[mmary]]
-fortinet_fortios_get_system_interface.textfsm, .*, fortinet_fortios, [[g]]et [[s]]ystem [[i]]nterface
-fortinet_fortios_get_system_status.textfsm, .*, fortinet_fortios, [[g]]et [[s]]ystem [[s]]tatus
+fortinet_get_router_info_bgp_summary.textfsm, .*, fortinet, g[[et]] r[[outer]] info bg[[p]] su[[mmary]]
+fortinet_get_system_interface.textfsm, .*, fortinet, [[g]]et [[s]]ystem [[i]]nterface
+fortinet_get_system_status.textfsm, .*, fortinet, [[g]]et [[s]]ystem [[s]]tatus
 
 hp_comware_display_lldp_neighbor-information_verbose.textfsm, .*, hp_comware, di[[splay]] ll[[dp]] n[[eighbor-information]] v[[erbose]]
 hp_comware_display_counters_bound_interface.textfsm, .*, hp_comware, di[[splay]] cou[[nters]] (\S+) i[[nterface]]
@@ -440,6 +440,7 @@ ubiquiti_edgeswitch_show_arp.textfsm, .*, ubiquiti_edgeswitch, sh[[ow]] ar[[p]]
 vmware_nsxv_show_ip_bgp_neighbors.textfsm, .*, vmware_nsxv, sh[[ow]] ip b[[gp]] n[[eighbors]]
 vmware_nsxv_show_ip_route.textfsm, .*, vmware_nsxv, sh[[ow]] ip r[[oute]]
 
+vyatta_vyos_show_ip_bgp_summary.textfsm, .*, .*vyos.*, sh[[ow]] ip bgp sum[[mary]]
 vyatta_vyos_show_interfaces.textfsm, .*, .*vyos.*, sh[[ow]] int[[erfaces]]
 vyatta_vyos_show_arp.textfsm, .*, .*vyos.*, sh[[ow]] a[[rp]]
 

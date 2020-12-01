@@ -38,7 +38,7 @@ OS_CHOICES = [
     "enterasys",
     "extreme",
     "f5_ltm",
-    "fortinet_fortios",
+    "fortinet",
     "hp_comware",
     "hp_procurve",
     "huawei_vrp",
