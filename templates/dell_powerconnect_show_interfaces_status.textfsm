@@ -17,3 +17,5 @@ Begin
   ^${PORT}\s+${TYPE}\s+${DUPLEX}\s+${SPEED}\s+${NEG}\s+${FLOWCTRL}\s+${LINKSTATE}\s+${BACKPRESSURE}\s+${MDIXMODE} -> Record
   ^\s+Flow\s+Link
   ^Ch\s+Type\s+Duplex\s+Speed\s+Neg\s+control\s+State -> End
+  ^\s*
+  ^. -> Error
