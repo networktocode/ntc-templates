@@ -16,3 +16,7 @@ parsed_sample:
     local_interface: "Gi1/0/1"
     neighbor: "Juniper-switch1"
     neighbor_interface: "531"
+  - capabilities: "T"
+    local_interface: "Gi1/0/2"
+    neighbor: "Polycom VVX 500"
+    neighbor_interface: "0004.f2d1.2222"

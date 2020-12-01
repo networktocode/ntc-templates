@@ -336,6 +336,10 @@ For any questions or comments, please feel free to swing by the [networktocode s
 
 Sign up [here](http://slack.networktocode.com/)
 
+CHANGELOG
+---------
+
+Changelog should be generated using [github_changelog_generator](https://github.com/github-changelog-generator/github-changelog-generator)
 
 FAQ
 ---

@@ -1,4 +1,4 @@
-Value Required NEIGHBOR (\S{0,20})
+Value Required NEIGHBOR (.{0,20}(?<! ))
 Value Required LOCAL_INTERFACE (\S+)
 Value CAPABILITIES (\S*)
 Value Required NEIGHBOR_INTERFACE (\S+)
