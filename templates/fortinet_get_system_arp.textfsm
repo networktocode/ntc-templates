@@ -5,4 +5,6 @@ Value INTERFACE (.*)
 
 Start
   ^${ADDRESS}\s+${AGE}\s+${MAC}\s+${INTERFACE} -> Record
-
+  ^Address\s+Age(min)\s+Hardware\s+Addr\s+Interface\s*$$
+  ^\s*
+  ^. -> Error
