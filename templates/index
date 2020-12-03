@@ -77,7 +77,7 @@ avaya_ers_show_mlt.textfsm, .*, avaya_ers, sh[[ow]] ml[[t]]
 
 avaya_vsp_show_software.textfsm, .*, avaya_vsp, sho[[w]] so[[ftware]]
 
-broadcom_icos_show_lldp_remote-device_all.textfsm, .*, broadcom_icos, sh[[ow]] lld[[p]] r[[emote-device]] a[[ll]] 
+broadcom_icos_show_lldp_remote-device_all.textfsm, .*, broadcom_icos, sh[[ow]] lld[[p]] r[[emote-device]] a[[ll]]
 broadcom_icos_show_isdp_neighbors.textfsm, .*, broadcom_icos, sh[[ow]] is[[dp]] n[[eighbors]]
 broadcom_icos_show_mac-addr-table.textfsm, .*, broadcom_icos, sh[[ow]] mac-addr-[[table]]
 broadcom_icos_show_vlan_brief.textfsm, .*, broadcom_icos, sh[[ow]] vl[[an]] b[[rief]]
@@ -369,9 +369,14 @@ dell_force10_show_version.textfsm, .*, dell_force10, sh[[ow]] ver[[sion]]
 dell_force10_show_vlan.textfsm, .*, dell_force10, sh[[ow]] vl[[an]]
 dell_force10_show_arp.textfsm, .*, dell_force10, sh[[ow]] ar[[p]]
 
-fortinet_fortios_get_router_info_bgp_summary.textfsm, .*, fortinet_fortios, g[[et]] r[[outer]] info bg[[p]] su[[mmary]]
-fortinet_fortios_get_system_interface.textfsm, .*, fortinet_fortios, [[g]]et [[s]]ystem [[i]]nterface
-fortinet_fortios_get_system_status.textfsm, .*, fortinet_fortios, [[g]]et [[s]]ystem [[s]]tatus
+dell_powerconnect_show_interfaces_description.textfsm, .*, dell_powerconnect, sh[[ow]] int[[erfaces]] des[[cription]]
+dell_powerconnect_show_bridge_address_table.textfsm, .*, dell_powerconnect, sh[[ow]] br[[idge]] a[[ddress-table]]
+dell_powerconnect_show_interfaces_status.textfsm, .*, dell_powerconnect, sh[[ow]] int[[erfaces]] st[[atus]]
+
+fortinet_get_router_info_bgp_summary.textfsm, .*, fortinet, g[[et]] r[[outer]] info bg[[p]] su[[mmary]]
+fortinet_get_system_interface.textfsm, .*, fortinet, [[g]]et [[s]]ystem [[i]]nterface
+fortinet_get_system_status.textfsm, .*, fortinet, [[g]]et [[s]]ystem [[s]]tatus
+fortinet_get_system_arp.textfsm, .*, fortinet, [[g]]et [[sy]]stem arp
 
 hp_comware_display_lldp_neighbor-information_verbose.textfsm, .*, hp_comware, di[[splay]] ll[[dp]] n[[eighbor-information]] v[[erbose]]
 hp_comware_display_counters_bound_interface.textfsm, .*, hp_comware, di[[splay]] cou[[nters]] (\S+) i[[nterface]]
@@ -385,6 +390,7 @@ hp_comware_display_arp.textfsm, .*, hp_comware, di[[splay]] a[[rp]]
 
 hp_procurve_show_lldp_info_remote-device_detail.textfsm, .*, hp_procurve, sh[[ow]] ll[[dp]] i[[nfo]] r[[emote-device]] .+
 hp_procurve_show_lldp_info_remote-device.textfsm, .*, hp_procurve, sh[[ow]] ll[[dp]] i[[nfo]] r[[emote-device]]
+hp_procurve_show_interfaces_brief.textfsm, .*, hp_procurve, sh[[ow]] int[[erfaces]] b[[rief]]
 hp_procurve_show_tech_buffers.textfsm, .*, hp_procurve, sh[[ow]] tec[[h]] buf[[ffers]]
 hp_procurve_show_mac-address.textfsm, .*, hp_procurve, sh[[ow]] mac-a[[ddress]]
 hp_procurve_show_interfaces.textfsm, .*, hp_procurve, sh[[ow]] int[[erfaces]]
