@@ -26,7 +26,7 @@ PowerOut
   # Filter junk
   ^Supply\s+Model\s+Output
   ^\s+\(Watts\s\)\s+
-  ^-----+\s+-+
+  ^-+
   ^\s*$$ -> Start
   ^.+ -> Error "ERR:PowerOut"
 
