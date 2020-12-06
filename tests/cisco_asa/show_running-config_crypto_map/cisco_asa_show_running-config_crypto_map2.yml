@@ -1,0 +1,18 @@
+---
+parsed_sample:
+  - matched_address: "CMAP_FR1"
+    map: "WAN1_CMAP"
+    seq: "100"
+    pfs: "group5"
+    peer: "1.1.1.8"
+    ike: "ikev1"
+    transform: "DES-MD5"
+    sa: "3600"
+  - matched_address: "CMAP_RU17"
+    map: "S2S_CMAP"
+    seq: "10"
+    pfs: ""
+    peer: "1.1.1.5"
+    ike: "ikev1"
+    transform: "ESP-AES-256-SHA"
+    sa: ""
