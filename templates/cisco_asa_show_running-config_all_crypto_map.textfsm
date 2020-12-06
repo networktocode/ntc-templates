@@ -1,0 +1,28 @@
+Value MATCHED_ADDRESS (\S+)
+Value CONNECTION_TYPE (\S+)
+Value Required MAP (\S+)
+Value Required SEQ (\d+)
+Value PFS (group\d|\s*)
+Value Required PEER (\S+)
+Value IKE (\S+)
+Value IKEv1_PHASE1_MODE (\S+)
+Value IKEv1_TRANSFORM_SET (\S+)
+Value IKEv2_MODE (\S+)
+Value ISAKMP_DYNAMIC (\S+)
+Value Fillup INTERFACE (\S+)
+Value TRANSFORM (\S+)
+Value SA (\d+)
+
+Start
+  ^crypto\smap\s${MAP}\s${SEQ}\smatch\saddress\s${MATCHED_ADDRESS}\s*
+  ^crypto\smap\s${MAP}\s${SEQ}\sset\sconnection-type\s${CONNECTION_TYPE}\s*
+  ^crypto\smap\s${MAP}\s${SEQ}\sset\spfs\s${PFS}\s*
+  ^crypto\smap\s${MAP}\s${SEQ}\sset\speer\s${PEER}\s*
+  ^crypto\smap\s${MAP}\s${SEQ}\sset\sikev1\sphase1-mode\s${IKEv1_PHASE1_MODE}\s*
+  ^crypto\smap\s${MAP}\s${SEQ}\sset\sikev1\stransform-set\s${IKEv1_TRANSFORM_SET}\s*
+  ^crypto\smap\s${MAP}\s${SEQ}\sset\sikev2\smode\s${IKEv2_MODE}\s*
+  ^crypto\smap\s${MAP}\s${SEQ}\sipsec-isakmp\sdynamic\s${ISAKMP_DYNAMIC}\s*
+  ^no\scrypto\smap\s${MAP}\s${SEQ}\sset\stfc-packets\s* -> Record
+  ^crypto\smap\s${MAP}\sinterface\s${INTERFACE}\s*
+  ^crypto\smap\s\S+\s\d+\sset\ssecurity-association\slifetime\sseconds\s${SA}\s*
+  ^.*$$ -> Error
