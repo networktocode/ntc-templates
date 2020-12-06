@@ -1,48 +1,55 @@
-Value Required POWER_SUPPLY (\d+)
+Value POWER_SUPPLY (\d+)
 Value POWER_SUPPLY_MODEL (\S+)
 Value POWER_SUPPLY_OUTPUT (\d+)
 Value POWER_SUPPLY_INPUT (\d+)
 Value POWER_SUPPLY_CAPACITY (\d+)
 Value POWER_SUPPLY_STATUS (\w+)
-Value Filldown POWER_SUPPLY_VOLTAGE (\d+)
+Value POWER_SUPPLY_VOLTAGE (\d+)
+Value FAN (\S+)
+Value FAN_STATUS (\S+)
+Value TEMPERATURE_MODULE (\d+)
+Value TEMPERATURE_SENSOR (\S+)
+#([^ \t\r\n\f])
+Value TEMPERATURE_MAJOR_THRESH (\d+)
+Value TEMPERATURE_MINOR_THRESH (\d+)
+Value TEMPERATURE_CURRENT (\d+)
+Value TEMPERATURE_STATUS (\S+)
 
 Start
-  ^Power\s+Supply: -> Record PowerSupply
-  # Only capture one table from output, use more specific commands for restart
-  # e.g. show environment fan
-  #^Power\s+Actual\s+Total -> Power
-  #^Fan\s+Model\s+Hw\s+Status -> Fan
-  #^Module\s+Model\s+Draw\s+Allocated\s+Status -> ModuleStatus
+  # Note: 2020-12 this template is broken, mashing 4 tables into one.
+  ^Power Supply:\s*$$ -> Power
+  ^Fan:\s*$$ -> Fan
+  ^Temperature:\s*$$ -> Temperature
+  #^Fan\s+Model\s+Hw\s+(Direction\s+)?Status -> Fan
 
-
-PowerSupply
-  ^Voltage:\s+${POWER_SUPPLY_VOLTAGE}\s+Volts
-  ^Power\s+Actual\s+Total -> PowerOut
-  ^Power\s+Actual\s+Actual\s+Total -> PowerOutIn
-  ^.+ -> Error "ERR:PowerSupply"
-
-PowerOut
+Power
+  ^Power\s+Actual\s+Total -> Power
+  ^Power\s+Actual\s+Actual\s+Total -> Power
+  ^Voltage:\s+${POWER_SUPPLY_VOLTAGE}\s+Volts -> Record
   ^${POWER_SUPPLY}\s+${POWER_SUPPLY_MODEL}\s+${POWER_SUPPLY_OUTPUT}\s+\w+\s+${POWER_SUPPLY_CAPACITY}\s+\w+\s+${POWER_SUPPLY_STATUS} -> Record
-  # Filter junk
-  ^Supply\s+Model\s+Output
-  ^\s+\(Watts\s\)\s+
-  ^-+
-  ^\s*$$ -> Start
-  ^.+ -> Error "ERR:PowerOut"
-
-PowerOutIn
   ^${POWER_SUPPLY}\s+${POWER_SUPPLY_MODEL}\s+${POWER_SUPPLY_OUTPUT}\s+\w+\s+${POWER_SUPPLY_INPUT}\s+\w+\s+${POWER_SUPPLY_CAPACITY}\s+\w+\s+${POWER_SUPPLY_STATUS} -> Record
-  # Filter junk
-  ^Supply\s+Model\s+Output
+  ^Module\s+Model\s+Draw\s+Allocated\s+Status\s* -> Start
+  ^Power\s+Usage\s+Summary: -> Start
+  ^\s*$$ -> Start
+  ^Supply\s+Model\s+Output\s+Capacity\s+Status
+  ^Supply\s+Model\s+Output\s+Input\s+Capacity\s+Status
   ^\s+\(Watts\s\)\s+
   ^-+\s+-+
+  ^. -> Error
+
+Fan
+  ^${FAN}\s+\S+\s+\S+\s+${FAN_STATUS}\s*$$ -> Record
+  ^${FAN}\s+\S+\s+\S+\s+\S+\s+${FAN_STATUS}\s*$$ -> Record
   ^\s*$$ -> Start
-  ^.+ -> Error "ERR:PowerOutIn"
+  # Fan Ignore
+  ^Fan\s+Zone\s+Speed
+  ^-+\s*$$
+  ^. -> Error
 
-# Fan
-  # Table should be captured with more specific command
-  # show environment fan
-
-# Temperature
-  # Table should be captured with more specific command
-  # show environment temperature
+Temperature
+  ^Module\s+Sensor\s+MajorThresh\s+MinorThres\s+CurTemp\s+Status
+  ^${TEMPERATURE_MODULE}\s+${TEMPERATURE_SENSOR}(\s*\(\S+\))?\s+${TEMPERATURE_MAJOR_THRESH}\s+${TEMPERATURE_MINOR_THRESH}\s+${TEMPERATURE_CURRENT}\s+${TEMPERATURE_STATUS}\s* -> Record
+  ^\s*\(Celsius\)\s+\(Celsius\)
+  ^-+\s*$$
+  ^\s*$$
+  ^. -> Error
