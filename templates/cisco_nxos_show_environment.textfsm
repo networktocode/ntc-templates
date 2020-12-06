@@ -31,24 +31,18 @@ PowerOut
   ^.+ -> Error "ERR:PowerOut"
 
 PowerOutIn
-   #1  N9K-PAC-650W  101  W 103  W  650  W Ok
   ^${POWER_SUPPLY}\s+${POWER_SUPPLY_MODEL}\s+${POWER_SUPPLY_OUTPUT}\s+\w+\s+${POWER_SUPPLY_INPUT}\s+\w+\s+${POWER_SUPPLY_CAPACITY}\s+\w+\s+${POWER_SUPPLY_STATUS} -> Record
   # Filter junk
   ^Supply\s+Model\s+Output
   ^\s+\(Watts\s\)\s+
-  ^-----+\s+-+
+  ^-+\s+-+
   ^\s*$$ -> Start
   ^.+ -> Error "ERR:PowerOutIn"
 
-
-# Power
-  # ^${POWER_SUPPLY}\s+${POWER_SUPPLY_MODEL}\s+${POWER_SUPPLY_OUTPUT}\s+\w+\s+${POWER_SUPPLY_CAPACITY}\s+\w+\s+${POWER_SUPPLY_STATUS} -> Record
-  # ^Module\s+Model\s+Draw\s+Allocated\s+Status -> Start
-
 # Fan
-  # ^Fan\s+Zone\s+Speed -> Temperature
-  # ^${FAN}\s+\S+\s+\S+\s+${FAN_STATUS} -> Record
-  # ^Temperature: -> Temperature
+  # Table should be captured with more specific command
+  # show environment fan
 
 # Temperature
-  # ^${TEMPERATURE_MODULE}\s+${TEMPERATURE_SENSOR}(\s+)?\(\S+\)\s+${TEMPERATURE_MAJOR_THRESH}\s+${TEMPERATURE_MINOR_THRESH}\s+${TEMPERATURE_CURRENT}\s+${TEMPERATURE_STATUS} -> Record
+  # Table should be captured with more specific command
+  # show environment temperature
