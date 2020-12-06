@@ -14,7 +14,7 @@ Start
   ^-{50,99}\s*$$
   ^Port\s+Name\s+Status\s+Vlan\s+Duplex\s+Speed\s+Type -> Interfaces
   ^\s*$$
-  ^.* -> Error
+  ^. -> Error
 
 Interfaces
   #Match fc...
