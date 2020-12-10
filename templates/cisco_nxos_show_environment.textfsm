@@ -45,6 +45,7 @@ Power
 Fan
   ^\s*Fan\s+Model\s+Hw\s+Status
   ^${FAN}\s+\S+\s+\S+\s+${FAN_STATUS}\s*$$ -> Record
+  ^\s*Fan\s+Model\s+Hw\s+Direction\s+Status
   ^${FAN}\s+\S+\s+\S+\s+\S+\s+${FAN_STATUS}\s*$$ -> Record
   #
   # Blank line back to Start
