@@ -17,40 +17,25 @@ Value TEMPERATURE_STATUS (\S+)
 
 Start
   # Note: 2020-12 this template is broken, mashing 4 tables into one.
-  ^Power\s+Supply:
-  ^Voltage
-  ^Power\s+Actual\s+Total -> Power
-  ^Power\s+Actual\s+Actual\s+Total -> Power
-  ^Fan:\s*$$ -> Fan
-  ^Temperature:\s*$$ -> Temperature
-  #^Fan\s+Model\s+Hw\s+(Direction\s+)?Status -> Fan
-
-Power
-  # Capture the remaining headers
-  ^Supply\s+Model\s+Output\s+Capacity\s+Status
-  ^Supply\s+Model\s+Output\s+Input\s+Capacity\s+Status
-  ^\s+\(Watts\s\)
-  ^-+
-  # Start capturing the data for the two different types of outputs
-  ^${POWER_SUPPLY}\s+${POWER_SUPPLY_MODEL}\s+${POWER_SUPPLY_OUTPUT}\s+\w+\s+${POWER_SUPPLY_CAPACITY}\s+\w+\s+${POWER_SUPPLY_STATUS} -> Record
-  ^${POWER_SUPPLY}\s+${POWER_SUPPLY_MODEL}\s+${POWER_SUPPLY_OUTPUT}\s+\w+\s+${POWER_SUPPLY_INPUT}\s+\w+\s+${POWER_SUPPLY_CAPACITY}\s+\w+\s+${POWER_SUPPLY_STATUS} -> Record
-  ^Power\s+Usage\s+Summary: -> Start
-  ^\s*$$ -> Start
-  ^. -> Error
-  # Note: 2020-12 this template is broken, mashing 4 tables into one.
   ^Power Supply:\s*$$ -> Power
   ^Fan:\s*$$ -> Fan
   ^Temperature:\s*$$ -> Temperature
   #^Fan\s+Model\s+Hw\s+(Direction\s+)?Status -> Fan
 
 Power
-  ^Power\s+Actual\s+Total -> Power
-  ^Power\s+Actual\s+Actual\s+Total -> Power
+  #Capture Power with only Out
+  ^Power\s+Actual\s+Total
   ^${POWER_SUPPLY}\s+${POWER_SUPPLY_MODEL}\s+${POWER_SUPPLY_OUTPUT}\s+\w+\s+${POWER_SUPPLY_CAPACITY}\s+\w+\s+${POWER_SUPPLY_STATUS} -> Record
+  #
+  # Capture Power with Out and In
+  ^Power\s+Actual\s+Actual\s+Total
   ^${POWER_SUPPLY}\s+${POWER_SUPPLY_MODEL}\s+${POWER_SUPPLY_OUTPUT}\s+\w+\s+${POWER_SUPPLY_INPUT}\s+\w+\s+${POWER_SUPPLY_CAPACITY}\s+\w+\s+${POWER_SUPPLY_STATUS} -> Record
+  #
+  # Done with Power section back to Start
   ^Module\s+Model\s+Draw\s+Allocated\s+Status\s* -> Start
   ^Power\s+Usage\s+Summary: -> Start
-  #^Voltage:\s+${POWER_SUPPLY_VOLTAGE}\s+Volts -> Record
+  #
+  # Skip junk in Power section
   ^Voltage:\s+\d+\s+Volts
   ^\s*$$ -> Start
   ^Supply\s+Model\s+Output\s+Capacity\s+Status
@@ -62,7 +47,10 @@ Power
 Fan
   ^${FAN}\s+\S+\s+\S+\s+${FAN_STATUS}\s*$$ -> Record
   ^${FAN}\s+\S+\s+\S+\s+\S+\s+${FAN_STATUS}\s*$$ -> Record
+  #
+  # Blank line back to Start
   ^\s*$$ -> Start
+  #
   # Fan Ignore
   ^Fan\s+Zone\s+Speed
   ^-+\s*$$
