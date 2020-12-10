@@ -17,6 +17,27 @@ Value TEMPERATURE_STATUS (\S+)
 
 Start
   # Note: 2020-12 this template is broken, mashing 4 tables into one.
+  ^Power\s+Supply:
+  ^Voltage
+  ^Power\s+Actual\s+Total -> Power
+  ^Power\s+Actual\s+Actual\s+Total -> Power
+  ^Fan:\s*$$ -> Fan
+  ^Temperature:\s*$$ -> Temperature
+  #^Fan\s+Model\s+Hw\s+(Direction\s+)?Status -> Fan
+
+Power
+  # Capture the remaining headers
+  ^Supply\s+Model\s+Output\s+Capacity\s+Status
+  ^Supply\s+Model\s+Output\s+Input\s+Capacity\s+Status
+  ^\s+\(Watts\s\)
+  ^-+
+  # Start capturing the data for the two different types of outputs
+  ^${POWER_SUPPLY}\s+${POWER_SUPPLY_MODEL}\s+${POWER_SUPPLY_OUTPUT}\s+\w+\s+${POWER_SUPPLY_CAPACITY}\s+\w+\s+${POWER_SUPPLY_STATUS} -> Record
+  ^${POWER_SUPPLY}\s+${POWER_SUPPLY_MODEL}\s+${POWER_SUPPLY_OUTPUT}\s+\w+\s+${POWER_SUPPLY_INPUT}\s+\w+\s+${POWER_SUPPLY_CAPACITY}\s+\w+\s+${POWER_SUPPLY_STATUS} -> Record
+  ^Power\s+Usage\s+Summary: -> Start
+  ^\s*$$ -> Start
+  ^. -> Error
+  # Note: 2020-12 this template is broken, mashing 4 tables into one.
   ^Power Supply:\s*$$ -> Power
   ^Fan:\s*$$ -> Fan
   ^Temperature:\s*$$ -> Temperature
