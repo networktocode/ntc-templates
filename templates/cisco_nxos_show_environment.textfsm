@@ -4,11 +4,11 @@ Value POWER_SUPPLY_OUTPUT (\d+)
 Value POWER_SUPPLY_INPUT (\d+)
 Value POWER_SUPPLY_CAPACITY (\d+)
 Value POWER_SUPPLY_STATUS (\w+)
-Value POWER_SUPPLY_VOLTAGE (\d+)
+# Value POWER_SUPPLY_VOLTAGE (\d+)
 Value FAN (\S+)
 Value FAN_STATUS (\S+)
 Value TEMPERATURE_MODULE (\d+)
-Value TEMPERATURE_SENSOR (\S+)
+Value TEMPERATURE_SENSOR ([^\s\(\)]+)
 #([^ \t\r\n\f])
 Value TEMPERATURE_MAJOR_THRESH (\d+)
 Value TEMPERATURE_MINOR_THRESH (\d+)
@@ -25,11 +25,12 @@ Start
 Power
   ^Power\s+Actual\s+Total -> Power
   ^Power\s+Actual\s+Actual\s+Total -> Power
-  ^Voltage:\s+${POWER_SUPPLY_VOLTAGE}\s+Volts -> Record
   ^${POWER_SUPPLY}\s+${POWER_SUPPLY_MODEL}\s+${POWER_SUPPLY_OUTPUT}\s+\w+\s+${POWER_SUPPLY_CAPACITY}\s+\w+\s+${POWER_SUPPLY_STATUS} -> Record
   ^${POWER_SUPPLY}\s+${POWER_SUPPLY_MODEL}\s+${POWER_SUPPLY_OUTPUT}\s+\w+\s+${POWER_SUPPLY_INPUT}\s+\w+\s+${POWER_SUPPLY_CAPACITY}\s+\w+\s+${POWER_SUPPLY_STATUS} -> Record
   ^Module\s+Model\s+Draw\s+Allocated\s+Status\s* -> Start
   ^Power\s+Usage\s+Summary: -> Start
+  #^Voltage:\s+${POWER_SUPPLY_VOLTAGE}\s+Volts -> Record
+  ^Voltage:\s+\d+\s+Volts
   ^\s*$$ -> Start
   ^Supply\s+Model\s+Output\s+Capacity\s+Status
   ^Supply\s+Model\s+Output\s+Input\s+Capacity\s+Status
