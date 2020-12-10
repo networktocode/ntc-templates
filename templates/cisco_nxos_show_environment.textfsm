@@ -43,6 +43,7 @@ Power
   ^. -> Error
 
 Fan
+  ^\s*Fan\s+Model\s+Hw\s+Status
   ^${FAN}\s+\S+\s+\S+\s+${FAN_STATUS}\s*$$ -> Record
   ^${FAN}\s+\S+\s+\S+\s+\S+\s+${FAN_STATUS}\s*$$ -> Record
   #
