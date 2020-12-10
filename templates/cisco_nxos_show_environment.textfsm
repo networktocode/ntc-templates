@@ -4,19 +4,17 @@ Value POWER_SUPPLY_OUTPUT (\d+)
 Value POWER_SUPPLY_INPUT (\d+)
 Value POWER_SUPPLY_CAPACITY (\d+)
 Value POWER_SUPPLY_STATUS (\w+)
-# Value POWER_SUPPLY_VOLTAGE (\d+)
 Value FAN (\S+)
 Value FAN_STATUS (\S+)
 Value TEMPERATURE_MODULE (\d+)
 Value TEMPERATURE_SENSOR ([^\s\(\)]+)
-#([^ \t\r\n\f])
 Value TEMPERATURE_MAJOR_THRESH (\d+)
 Value TEMPERATURE_MINOR_THRESH (\d+)
 Value TEMPERATURE_CURRENT (\d+)
 Value TEMPERATURE_STATUS (\S+)
 
 Start
-  # Note: 2020-12 this template is broken, mashing 4 tables into one.
+  # Note: 2020-12 this template is broken, mashing 3 tables into one.
   ^Power Supply:\s*$$ -> Power
   ^Fan:\s*$$ -> Fan
   ^Temperature:\s*$$ -> Temperature
