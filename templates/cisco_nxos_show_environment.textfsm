@@ -4,7 +4,7 @@ Value POWER_SUPPLY_OUTPUT (\d+)
 Value POWER_SUPPLY_INPUT (\d+)
 Value POWER_SUPPLY_CAPACITY (\d+)
 Value POWER_SUPPLY_STATUS (\w+)
-Value FAN (\S+)
+Value FAN (Fan\S+)
 Value FAN_STATUS (\S+)
 Value TEMPERATURE_MODULE (\d+)
 Value TEMPERATURE_SENSOR ([^\s\(\)]+)
@@ -23,11 +23,11 @@ Start
 Power
   #Capture Power with only Out
   ^Power\s+Actual\s+Total
-  ^${POWER_SUPPLY}\s+${POWER_SUPPLY_MODEL}\s+${POWER_SUPPLY_OUTPUT}\s+\w+\s+${POWER_SUPPLY_CAPACITY}\s+\w+\s+${POWER_SUPPLY_STATUS} -> Record
+  ^${POWER_SUPPLY}\s+${POWER_SUPPLY_MODEL}\s+${POWER_SUPPLY_OUTPUT}\s+\w+\s+${POWER_SUPPLY_CAPACITY}\s+\w+\s+${POWER_SUPPLY_STATUS}\s*$$ -> Record
   #
   # Capture Power with Out and In
   ^Power\s+Actual\s+Actual\s+Total
-  ^${POWER_SUPPLY}\s+${POWER_SUPPLY_MODEL}\s+${POWER_SUPPLY_OUTPUT}\s+\w+\s+${POWER_SUPPLY_INPUT}\s+\w+\s+${POWER_SUPPLY_CAPACITY}\s+\w+\s+${POWER_SUPPLY_STATUS} -> Record
+  ^${POWER_SUPPLY}\s+${POWER_SUPPLY_MODEL}\s+${POWER_SUPPLY_OUTPUT}\s+\w+\s+${POWER_SUPPLY_INPUT}\s+\w+\s+${POWER_SUPPLY_CAPACITY}\s+\w+\s+${POWER_SUPPLY_STATUS}\s*$$ -> Record
   #
   # Done with Power section back to Start
   ^Module\s+Model\s+Draw\s+Allocated\s+Status\s* -> Start
@@ -52,7 +52,8 @@ Fan
   ^\s*$$ -> Start
   #
   # Fan Ignore
-  ^Fan\s+Zone\s+Speed
+  ^Fan\s+Zone\s+Speed\s*:
+  ^Fan\sAir\sFilter\s:
   ^-+\s*$$
   ^. -> Error
 
