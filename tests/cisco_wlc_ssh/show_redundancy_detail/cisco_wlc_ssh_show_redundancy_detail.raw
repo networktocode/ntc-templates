@@ -1,0 +1,21 @@
+Redundancy Management IP Address................. 10.128.1.2
+Peer Redundancy Management IP Address............ 10.128.1.3
+Redundancy Port IP Address....................... 169.254.1.2
+Peer Redundancy Port IP Address.................. 169.254.1.3
+Peer Service Port IP Address..................... 0.0.0.0
+
+Switchover History[1]:
+Previous Active = 10.128.1.3, Current Active = 10.128.1.2
+Switchover Reason = Active controller failed, Switchover Time = Tue Nov 24 19:24:43 2020
+
+
+Redundancy Timeout Values.....:
+----------------------------------------------------
+Keep Alive Timeout    : 100 msecs
+Peer Search Timeout   : 120 secs
+
+
+Number of Routes................................. 0
+
+Destination Network          Netmask               Gateway
+-------------------    -------------------   -------------------
