@@ -1,0 +1,69 @@
+Value VENDOR_ID_BWD_COMPAT (\S+)
+Value CALL_STATION_ID_CASE (\S+)
+Value ACCT_CALL_STATION_ID_TYPE (.+)
+Value AUTH_CALL_STATION_ID_TYPE (.+)
+Value EXT_SRC_PORTS_SUPPORT (\S+)
+Value AGGRESSIVE_FAILOVER (\S+)
+Value KEYWRAP (\S+)
+Value FALLBACK_TEST_MODE (\S+)
+Value FALLBACK_TEST_USERNAME (.+)
+Value FALLBACK_TEST_INTERVAL (\d+)
+Value MAC_DELIM_AUTHC_MSG (\S+)
+Value MAC_DELIM_ACCT_MSG (\S+)
+Value AUTHC_FRAMED_MTU (\d+)
+Value AUTHC_INDEX (\d+)
+Value AUTHC_TYPE (\S+)
+Value AUTHC_SRV_ADDR (\S+)
+Value AUTHC_SRV_PORT (\d+)
+Value AUTHC_SRV_STATE (\S+)
+Value AUTHC_SRV_TIMEOUT (\d+)
+Value AUTHC_SRV_MGMT_TIMEOUT (\d+)
+Value AUTHC_RFC3576 (\S+)
+Value AUTHC_IPSEC_STATE (\S+)
+Value AUTHC_IPSEC_PROFILE (\S+)
+Value AUTHC_IPSEC_REGION_STR (\S+)
+Value ACCT_INDEX (\d+)
+Value ACCT_TYPE (\S+)
+Value ACCT_SRV_ADDR (\S+)
+Value ACCT_SRV_PORT (\d+)
+Value ACCT_SRV_STATE (\S+)
+Value ACCT_SRV_TIMEOUT (\d+)
+Value ACCT_SRV_MGMT_TIMEOUT (\d+)
+Value ACCT_RFC3576 (\S+)
+Value ACCT_IPSEC_STATE (\S+)
+Value ACCT_IPSEC_PROFILE (\S+)
+Value ACCT_IPSEC_REGION_STR (\S+)
+
+Start
+  ^\s*Vendor Id Backward Compatibility\s*\.+\s+${VENDOR_ID_BWD_COMPAT}\s*$$
+  ^\s*Call Station I[dD] Case\s*\.+\s+${CALL_STATION_ID_CASE}\s*$$
+  ^\s*Accounting Call Station I[dD] Type\s*\.+\s+${ACCT_CALL_STATION_ID_TYPE}\s*$$
+  ^\s*Auth Call Station I[dD] Type\s*\.+\s+${AUTH_CALL_STATION_ID_TYPE}\s*$$
+  ^\s*Extended Source Ports Support\s*\.+\s+${EXT_SRC_PORTS_SUPPORT}\s*$$
+  ^\s*Aggressive Failover\s*\.+\s+${AGGRESSIVE_FAILOVER}\s*$$
+  ^\s*Keywrap\s*\.+\s+${KEYWRAP}\s*$$
+  ^\s*Fallback Test:\s*$$
+  ^\s+Test Mode\s*\.+\s+${FALLBACK_TEST_MODE}\s*$$
+  ^\s+Probe User Name\s*\.+\s+${FALLBACK_TEST_USERNAME}\s*$$
+  ^\s+Interval \(in seconds\)\.+\s+${FALLBACK_TEST_INTERVAL}\s*$$
+  ^\s*MAC Delimiter for Authentication Messages\s*\.+\s+${MAC_DELIM_AUTHC_MSG}\s*$$
+  ^\s*MAC Delimiter for Accounting Messages\s*\.+\s+${MAC_DELIM_ACCT_MSG}\s*$$
+  ^\s*RADIUS Authentication Framed-MTU\s*\.+\s+${AUTHC_FRAMED_MTU}\s[bB]ytes\s*$$ -> Record
+  ^\s*Authentication Servers\s*$$ -> AuthC_Servers
+  ^\s*$$
+  ^. -> Error
+
+AuthC_Servers
+  ^\s*Idx\s+Type\s+Server Address\s+Port\s+State\s+Tout\s+MgmtTout\s+RFC3576\s+IPSec - state\/Profile Name\/RadiusRegionString\s*$$
+  ^\s*[-\s]+$$
+  ^\s*${AUTHC_INDEX}\s+\*\s+${AUTHC_TYPE}\s+${AUTHC_SRV_ADDR}\s+${AUTHC_SRV_PORT}\s+${AUTHC_SRV_STATE}\s+${AUTHC_SRV_TIMEOUT}\s+${AUTHC_SRV_MGMT_TIMEOUT}\s+${AUTHC_RFC3576}\s+${AUTHC_IPSEC_STATE}\s+${AUTHC_IPSEC_PROFILE}\s+\/${AUTHC_IPSEC_REGION_STR}\s*$$ -> Record
+  ^\s*$$
+  ^\s*Accounting Servers\s*$$ -> Acct_Servers
+  ^. -> Error
+
+Acct_Servers
+  ^\s*Idx\s+Type\s+Server Address\s+Port\s+State\s+Tout\s+MgmtTout\s+RFC3576\s+IPSec - state\/Profile Name\/RadiusRegionString\s*$$
+  ^\s*[-\s]+$$
+  ^\s*${ACCT_INDEX}\s+\*\s+${ACCT_TYPE}\s+${ACCT_SRV_ADDR}\s+${ACCT_SRV_PORT}\s+${ACCT_SRV_STATE}\s+${ACCT_SRV_TIMEOUT}\s+${ACCT_SRV_MGMT_TIMEOUT}\s+${ACCT_RFC3576}\s+${ACCT_IPSEC_STATE}\s+${ACCT_IPSEC_PROFILE}\s+\/${ACCT_IPSEC_REGION_STR}\s*$$ -> Record
+  ^\s*$$
+  ^. -> Error

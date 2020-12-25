@@ -1,0 +1,49 @@
+Value FALLBACK_TEST_INTERVAL (\d+)
+Value AUTHC_INDEX (\d+)
+Value AUTHC_SRV_ADDR (\S+)
+Value AUTHC_SRV_PORT (\d+)
+Value AUTHC_SRV_STATE (\S+)
+Value AUTHC_SRV_TIMEOUT (\d+)
+Value AUTHC_SRV_MGMT_TIMEOUT (\d+)
+Value AUTHZ_INDEX (\d+)
+Value AUTHZ_SRV_ADDR (\S+)
+Value AUTHZ_SRV_PORT (\d+)
+Value AUTHZ_SRV_STATE (\S+)
+Value AUTHZ_SRV_TIMEOUT (\d+)
+Value AUTHZ_SRV_MGMT_TIMEOUT (\d+)
+Value ACCT_INDEX (\d+)
+Value ACCT_SRV_ADDR (\S+)
+Value ACCT_SRV_PORT (\d+)
+Value ACCT_SRV_STATE (\S+)
+Value ACCT_SRV_TIMEOUT (\d+)
+Value ACCT_SRV_MGMT_TIMEOUT (\d+)
+
+Start
+  ^\s*Fallback Test:\s*$$
+  ^\s+Interval \(in seconds\)\s*\.+\s+${FALLBACK_TEST_INTERVAL}\s*$$ -> Record
+  ^\s*Authentication Servers\s*$$ -> AuthC_Servers
+  ^\s*$$
+  ^. -> Error
+
+AuthC_Servers
+  ^\s*Idx\s+Server Address\s+Port\s+State\s+Tout\s+MgmtTout\s*$$
+  ^\s*[-\s]+$$
+  ^\s*${AUTHC_INDEX}\s+${AUTHC_SRV_ADDR}\s+${AUTHC_SRV_PORT}\s+${AUTHC_SRV_STATE}\s+${AUTHC_SRV_TIMEOUT}\s+${AUTHC_SRV_MGMT_TIMEOUT}\s*$$ -> Record
+  ^\s*$$
+  ^\s*Authorization Servers\s*$$ -> AuthZ_Servers
+  ^. -> Error
+
+AuthZ_Servers
+  ^\s*Idx\s+Server Address\s+Port\s+State\s+Tout\s+MgmtTout\s*$$
+  ^\s*[-\s]+$$
+  ^\s*${AUTHZ_INDEX}\s+${AUTHZ_SRV_ADDR}\s+${AUTHZ_SRV_PORT}\s+${AUTHZ_SRV_STATE}\s+${AUTHZ_SRV_TIMEOUT}\s+${AUTHZ_SRV_MGMT_TIMEOUT}\s*$$ -> Record
+  ^\s*$$
+  ^\s*Accounting Servers\s*$$ -> Acct_Servers
+  ^. -> Error
+
+Acct_Servers
+  ^\s*Idx\s+Server Address\s+Port\s+State\s+Tout\s+MgmtTout\s*$$
+  ^\s*[-\s]+$$
+  ^\s*${ACCT_INDEX}\s+${ACCT_SRV_ADDR}\s+${ACCT_SRV_PORT}\s+${ACCT_SRV_STATE}\s+${ACCT_SRV_TIMEOUT}\s+${ACCT_SRV_MGMT_TIMEOUT}\s*$$ -> Record
+  ^\s*$$
+  ^. -> Error
