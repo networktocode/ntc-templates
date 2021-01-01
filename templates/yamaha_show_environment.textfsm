@@ -1,0 +1,42 @@
+Value HARDWARE (\S+)
+Value VERSION (.+?)
+Value SERIAL (\S+)
+Value DATE (\d+/\d+/\d+)
+Value TIME (\d+:\d+:\d+)
+Value TIMEZONE (.+?)
+Value UPTIME (.+)
+Value CPU_5_SEC (\d+)
+Value CPU_1_MIN (\d+)
+Value CPU_5_MIN (\d+)
+Value MEM (\d+)
+Value BUFFER_SMALL (\d+)
+Value BUFFER_MIDDLE (\d+)
+Value BUFFER_LARGE (\d+)
+Value BUFFER_HUGE (\d+)
+Value SEC_CLASS (\d+)
+Value FORGET (\S+)
+Value TELNET (\S+)
+Value TEMPERATURE (\d+)
+
+Start
+  ^${HARDWARE}\sRev\.${VERSION}\s\(
+  ^\s*main.*serial=${SERIAL}\sMAC-Address=
+  ^CPU:\s+${CPU_5_SEC}%\(5sec\)\s+${CPU_1_MIN}%\(1min\)\s+${CPU_5_MIN}%\(5min\)\s+Memory:\s+${MEM}%\sused
+  ^Packet-buffer:\s+${BUFFER_SMALL}%\(small\)\s+${BUFFER_MIDDLE}%\(middle\)\s+${BUFFER_LARGE}%\(large\)\s+${BUFFER_HUGE}%\(huge\)\sused
+  ^Current\stime:\s${DATE}\s${TIME}\s${TIMEZONE}$$
+  ^Elapsed\stime\sfrom\sboot:\s${UPTIME}$$
+  ^Security\sClass:\s${SEC_CLASS},\sFORGET:\s${FORGET},\sTELNET:\s${TELNET}$$
+  ^Inside\sTemperature\(C\.\):\s${TEMPERATURE} -> Record
+  ^.+([0-9a-fA-F]{2}(:[0-9a-fA-F]{2}){5}|[0-9a-fA-F]{4}(\.[0-9a-fA-F]{4}){2})
+  ^.+\sBootROM\sVer\.
+  ^.+\sFlashROM\sTable\sVer\.
+  ^Firmware:
+  ^Default\sfirmware:
+  ^Config.*\sfile:
+  ^Boot\stime:
+  ^Serial\sBaudrate:
+  ^Power:
+  ^State of cooperation:
+  ^\s*$$
+  ^. -> Error
+

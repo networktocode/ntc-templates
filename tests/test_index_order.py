@@ -55,6 +55,7 @@ OS_CHOICES = [
     "vyatta_vyos",
     "vyos",
     "watchguard_firebox",
+    "yamaha",
 ]
 RE_TEMPLATE_OS = re.compile("^(" + "|".join(OS_CHOICES) + ")")
 
