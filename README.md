@@ -11,9 +11,11 @@ Repository of TextFSM Templates for Network Devices, and Python wrapper for Text
 This project provides a large collection of TextFSM Templates (text parsers) for a variety of Networking Vendors. In addition to the templates, there is a function that will convert the CLI output into a CliTable object; the resulting text table is converted into a list of dictionaries mapping the column headers with each row in the table.
 
 
+> As of v2.0.0, this project uses [Poetry](https://python-poetry.org/) for packaging and distribution. In order to use poetry, the `templates` directory has been moved to `ntc_templates/templates`
+
 Installation and Usage
 ----------------------
-The project can be installed using either Git or PyPI; if you would like to use the templates outside of this project, then Git is the recommended approach.
+The project can be installed using either Git + Poetry or PyPI.
 
 #### Git
 
@@ -21,17 +23,7 @@ The project can be installed using either Git or PyPI; if you would like to use 
 $ git clone git@github.com:networktocode/ntc-templates.git
 $ 
 # Optional steps to install ntc-templates as a python package
-$ pip install -e ntc-templates/
-$ 
-```
-
-The install can also include the required dev packages, which can be useful for adding or editing templates:
-
-```shell
-$ git clone git@github.com:networktocode/ntc-templates.git
-$ 
-# Optional steps to install ntc-templates as a python package
-$ pip install -e ntc-templates/[dev]
+$ poetry install
 $ 
 ```
 
@@ -39,12 +31,6 @@ $
 
 ```shell
 $ pip install ntc_templates
-$ 
-```
-
-To include the dev packages:
-```
-$ pip install ntc_templates[dev]
 $ 
 ```
 
@@ -283,7 +269,7 @@ A cli utility is provided to assist with properly building the parsed files. Thi
 
   The `-y` and `-yd` arguments are designed to allow developers to generate the expected parsed file how they want, and ensure that the formatting adheres to the defined standard for this project.
 
-  The `-c` and `-cd` arguments use `lib.ntc_templates.parse.parse_output()` to generate the parsed data; this means that you can use these arguments to auto-generate the test `.yml` file(s) for new templates; just be sure that the template's parsing behavior meets expectations. In order for the data to be parsed, the template must be placed in `templates/` and the `templates/index` file must be updated to correctly point to the template file(s).
+  The `-c` and `-cd` arguments use `ntc_templates.parse.parse_output()` to generate the parsed data; this means that you can use these arguments to auto-generate the test `.yml` file(s) for new templates; just be sure that the template's parsing behavior meets expectations. In order for the data to be parsed, the template must be placed in `ntc_templates/templates/` and the `ntc_templates/templates/index` file must be updated to correctly point to the template file(s).
 
 ```bash
 $ ./development_scripts.py -yd tests/cisco_ios/show_mac-address-table
