@@ -13,7 +13,7 @@ This project provides a large collection of TextFSM Templates (text parsers) for
 
 Installation and Usage
 ----------------------
-The project can be installed using either Git or PyPI; if you would like to use the templates outside of this project, then Git is the recommended approach.
+The project can be installed using either Git + Poetry or PyPI.
 
 #### Git
 
@@ -21,17 +21,7 @@ The project can be installed using either Git or PyPI; if you would like to use 
 $ git clone git@github.com:networktocode/ntc-templates.git
 $ 
 # Optional steps to install ntc-templates as a python package
-$ pip install -e ntc-templates/
-$ 
-```
-
-The install can also include the required dev packages, which can be useful for adding or editing templates:
-
-```shell
-$ git clone git@github.com:networktocode/ntc-templates.git
-$ 
-# Optional steps to install ntc-templates as a python package
-$ pip install -e ntc-templates/[dev]
+$ poetry install
 $ 
 ```
 
@@ -39,12 +29,6 @@ $
 
 ```shell
 $ pip install ntc_templates
-$ 
-```
-
-To include the dev packages:
-```
-$ pip install ntc_templates[dev]
 $ 
 ```
 

@@ -1,14 +1,22 @@
 ---
-
-language: python
+language: "python"
+dist: "xenial"
+os: "linux"
 
 python:
   - "3.6"
-
-sudo: false
+  - "3.7"
+  - "3.8"
 
 install:
-  - pip install tox
+  - "pip3 install --upgrade pip setuptools"
+  - "pip3 install tox"
 
-script:
-  - tox
+jobs:
+  include:
+    - stage: "lint"
+      script: "tox -e black"
+    - script: "tox -e flake8"
+    - script: "tox -e yamllint"
+    - stage: "unit test"
+      script: "tox -e py36,py37,py38
