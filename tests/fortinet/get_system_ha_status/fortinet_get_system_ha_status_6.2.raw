@@ -1,0 +1,37 @@
+HA Health Status: OK
+Model: FortiGate-600E
+Mode: HA A-P
+Group: 5
+Debug: 0
+Cluster Uptime: 36 days 22:20:40
+Cluster state change time: 2020-12-02 22:40:46
+Master selected using:
+    <2020/12/02 22:40:46> FG6H0Exxxxxxxxxx is selected as the master because it has the largest value of override priority.
+ses_pickup: enable, ses_pickup_delay=disable
+override: enable
+Configuration Status:
+    FG6H0Exxxxxxxxxx(updated 1 seconds ago): in-sync
+    FG6H0Eyyyyyyyyyy(updated 3 seconds ago): in-sync
+System Usage stats:
+    FG6H0Exxxxxxxxxx(updated 1 seconds ago):
+        sessions=692, average-cpu-user/nice/system/idle=0%/0%/0%/100%, memory=25%
+    FG6H0Eyyyyyyyyyy(updated 3 seconds ago):
+        sessions=303, average-cpu-user/nice/system/idle=0%/0%/0%/100%, memory=23%
+HBDEV stats:
+    FG6H0Exxxxxxxxxx(updated 1 seconds ago):
+        ha: physical/1000auto, up, rx-bytes/packets/dropped/errors=13086049757/51933375/0/0, tx=93993034207/102822032/0/0
+    FG6H0Eyyyyyyyyyy(updated 3 seconds ago):
+        ha: physical/1000auto, up, rx-bytes/packets/dropped/errors=93993244676/102822709/0/0, tx=13085729171/51934319/0/0
+MONDEV stats:
+    FG6H0Exxxxxxxxxx(updated 1 seconds ago):
+        x1: physical/10000full, up, rx-bytes/packets/dropped/errors=166373929414532/122946162431/0/0, tx=51746004768400/50869381172/0/0
+        x2: physical/10000full, up, rx-bytes/packets/dropped/errors=49656542180617/50909579016/0/337, tx=165637609617619/122981014444/0/0
+    FG6H0Eyyyyyyyyyy(updated 3 seconds ago):
+        x1: physical/10000full, up, rx-bytes/packets/dropped/errors=409699822/4202261/0/0, tx=0/0/0/0
+        x2: physical/10000full, up, rx-bytes/packets/dropped/errors=12425072765/11621697/0/0, tx=0/0/0/0
+Master: fgt-600e_a, FG6H0Exxxxxxxxxx, HA cluster index = 1
+Slave : fgt-600e_b, FG6H0Eyyyyyyyyyy, HA cluster index = 0
+number of vcluster: 1
+vcluster 1: work 169.254.0.2
+Master: FG6H0Exxxxxxxxxx, HA operating index = 0
+Slave : FG6H0Eyyyyyyyyyy, HA operating index = 1
