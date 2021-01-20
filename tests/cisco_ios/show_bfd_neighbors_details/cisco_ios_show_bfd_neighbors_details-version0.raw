@@ -1,0 +1,37 @@
+OurAddr       NeighAddr      LD/RD  RH/RS    Holdown(mult)  State     Int
+172.16.1.1    172.16.1.3     5/3    1(RH)    150 (3 )       Up   Fa0/1       
+Session state is UP and not using echo function.
+Local Diag: 0, Demand mode: 0, Poll bit: 0
+MinTxInt: 50000, MinRxInt: 50000, Multiplier: 3
+Received MinRxInt: 50000, Received Multiplier: 3
+Holdown (hits): 150(0), Hello (hits): 50(1364284)
+Rx Count: 1351813, Rx Interval (ms) min/max/avg: 28/64/49 last: 4 ms ago
+Tx Count: 1364289, Tx Interval (ms) min/max/avg: 40/68/49 last: 32 ms ago
+Registered protocols: EIGRP
+Uptime: 18:42:45
+Last packet: Version: 0            - Diagnostic: 0
+             I Hear You bit: 1     - Demand bit: 0
+             Poll bit: 0           - Final bit: 0
+             Multiplier: 3         - Length: 24
+             My Discr.: 3          - Your Discr.: 5
+             Min tx interval: 50000    - Min rx interval: 50000
+             Min Echo interval: 0
+
+OurAddr       NeighAddr     LD/RD  RH/RS   Holdown(mult)  State     Int
+172.16.1.1    172.16.1.2     6/1    Up        0    (3 )   Up        Fa0/1       
+Session state is UP and using echo function with 50 ms interval.
+Local Diag: 0, Demand mode: 0, Poll bit: 0
+MinTxInt: 1000000, MinRxInt: 1000000, Multiplier: 3
+Received MinRxInt: 1000000, Received Multiplier: 3
+Holdown (hits): 3000(0), Hello (hits): 1000(317)
+Rx Count: 305, Rx Interval (ms) min/max/avg: 1/1016/887 last: 448 ms ago
+Tx Count: 319, Tx Interval (ms) min/max/avg: 1/1008/880 last: 532 ms ago
+Registered protocols: EIGRP
+Uptime: 00:04:30
+Last packet: Version: 1            - Diagnostic: 0
+             State bit: Up         - Demand bit: 0
+             Poll bit: 0           - Final bit: 0
+             Multiplier: 3         - Length: 24
+             My Discr.: 1          - Your Discr.: 6
+             Min tx interval: 1000000    - Min rx interval: 1000000
+             Min Echo interval: 50000
