@@ -1,0 +1,226 @@
+
+IPv4 Sessions
+NeighAddr                              LD/RD         RH/RS     State     Int
+192.168.10.2                            3/8          Up        Up        Gi0/1.10
+Session state is UP and using echo function with 50 ms interval.
+Session Host: Software
+OurAddr: 192.168.10.1   
+Handle: 3
+Local Diag: 0, Demand mode: 0, Poll bit: 0
+MinTxInt: 1000000, MinRxInt: 1000000, Multiplier: 3
+Received MinRxInt: 1000000, Received Multiplier: 3
+Holddown (hits): 0(0), Hello (hits): 1000(4427)
+Rx Count: 4428, Rx Interval (ms) min/max/avg: 1/1676/880 last: 316 ms ago
+Tx Count: 4435, Tx Interval (ms) min/max/avg: 1/1296/876 last: 852 ms ago
+Elapsed time watermarks: 0 0 (last: 0)
+Registered protocols: CEF EIGRP 
+Uptime: 01:02:56
+Last packet: Version: 1                  - Diagnostic: 0
+             State bit: Up               - Demand bit: 0
+             Poll bit: 0                 - Final bit: 0
+             C bit: 0                                   
+             Multiplier: 3               - Length: 24
+             My Discr.: 8                - Your Discr.: 3
+             Min tx interval: 1000000    - Min rx interval: 1000000
+             Min Echo interval: 50000   
+
+IPv4 Sessions
+NeighAddr                              LD/RD         RH/RS     State     Int
+192.168.12.2                            4/4          Up        Up        Gi0/1.12
+Session state is UP and using echo function with 999 ms interval.
+Session Host: Software
+OurAddr: 192.168.12.1   
+Handle: 4
+Local Diag: 0, Demand mode: 0, Poll bit: 0
+MinTxInt: 1000000, MinRxInt: 1000000, Multiplier: 3
+Received MinRxInt: 1000000, Received Multiplier: 3
+Holddown (hits): 0(0), Hello (hits): 1000(4423)
+Rx Count: 4434, Rx Interval (ms) min/max/avg: 1/1004/875 last: 508 ms ago
+Tx Count: 4424, Tx Interval (ms) min/max/avg: 756/1184/880 last: 804 ms ago
+Elapsed time watermarks: 0 0 (last: 0)
+Registered protocols: EIGRP CEF BGP OSPF 
+Template: BFD-TEST
+Uptime: 01:04:45
+Last packet: Version: 1                  - Diagnostic: 0
+             State bit: Up               - Demand bit: 0
+             Poll bit: 0                 - Final bit: 0
+             C bit: 0                                   
+             Multiplier: 3               - Length: 24
+             My Discr.: 4                - Your Discr.: 4
+             Min tx interval: 1000000    - Min rx interval: 1000000
+             Min Echo interval: 999000  
+
+IPv4 Sessions
+NeighAddr                              LD/RD         RH/RS     State     Int
+192.168.14.253                          8/6          Up        Up        Gi0/1.14
+Session state is UP and not using echo function.
+Session Host: Software
+OurAddr: 192.168.14.254 
+Handle: 8
+Local Diag: 0, Demand mode: 0, Poll bit: 0
+MinTxInt: 999000, MinRxInt: 999000, Multiplier: 3
+Received MinRxInt: 999000, Received Multiplier: 3
+Holddown (hits): 2309(0), Hello (hits): 999(4383)
+Rx Count: 4381, Rx Interval (ms) min/max/avg: 4/1112/878 last: 496 ms ago
+Tx Count: 4386, Tx Interval (ms) min/max/avg: 1/1504/878 last: 408 ms ago
+Elapsed time watermarks: 0 0 (last: 0)
+Registered protocols: OSPF CEF 
+Uptime: 01:04:03
+Last packet: Version: 1                  - Diagnostic: 0
+             State bit: Up               - Demand bit: 0
+             Poll bit: 0                 - Final bit: 0
+             C bit: 0                                   
+             Multiplier: 3               - Length: 24
+             My Discr.: 6                - Your Discr.: 8
+             Min tx interval: 999000     - Min rx interval: 999000
+             Min Echo interval: 0       
+
+IPv4 Sessions
+NeighAddr                              LD/RD         RH/RS     State     Int
+192.168.16.253                          5/0          Down      Down      Gi0/1.16
+Session Host: Software
+OurAddr: 192.168.16.254 
+Handle: 5
+Local Diag: 0, Demand mode: 0, Poll bit: 0
+MinTxInt: 1000000, MinRxInt: 1000000, Multiplier: 3
+Received MinRxInt: 0, Received Multiplier: 0
+Holddown (hits): 0(0), Hello (hits): 1000(4369)
+Rx Count: 0, Rx Interval (ms) min/max/avg: 0/0/0 last: 3939644 ms ago
+Tx Count: 4369, Tx Interval (ms) min/max/avg: 756/1220/879 last: 836 ms ago
+Elapsed time watermarks: 0 0 (last: 0)
+Registered protocols: OSPF CEF 
+Template: BFD-TEST
+Last packet: Version: 1                  - Diagnostic: 0
+             State bit: AdminDown        - Demand bit: 0
+             Poll bit: 0                 - Final bit: 0
+             C bit: 0                                   
+             Multiplier: 0               - Length: 0
+             My Discr.: 0                - Your Discr.: 0
+             Min tx interval: 0          - Min rx interval: 0
+             Min Echo interval: 0       
+
+IPv6 Sessions
+NeighAddr                              LD/RD         RH/RS     State     Int
+2001::7357:2                           11/9          Up        Up        Gi0/1.12
+Session state is UP and not using echo function.
+Session Host: Software
+OurAddr: 2001::7357:1                           
+Handle: 9
+Local Diag: 0, Demand mode: 0, Poll bit: 0
+MinTxInt: 999000, MinRxInt: 999000, Multiplier: 3
+Received MinRxInt: 999000, Received Multiplier: 3
+Holddown (hits): 2585(0), Hello (hits): 999(82)
+Rx Count: 85, Rx Interval (ms) min/max/avg: 1/996/868 last: 116 ms ago
+Tx Count: 86, Tx Interval (ms) min/max/avg: 1/996/859 last: 64 ms ago
+Elapsed time watermarks: 0 0 (last: 0)
+Registered protocols: BGP CEF 
+Template: BFD-TEST
+Uptime: 00:01:13
+Last packet: Version: 1                  - Diagnostic: 0
+             State bit: Up               - Demand bit: 0
+             Poll bit: 0                 - Final bit: 0
+             C bit: 0                                   
+             Multiplier: 3               - Length: 24
+             My Discr.: 9                - Your Discr.: 11
+             Min tx interval: 999000     - Min rx interval: 999000
+             Min Echo interval: 0       
+
+IPv6 Sessions
+NeighAddr                              LD/RD         RH/RS     State     Int
+FE80:A::DAD                             1/7          Up        Up        Gi0/1.10
+Session state is UP and not using echo function.
+Session Host: Software
+OurAddr: FE80:A::CAB                            
+Handle: 1
+Local Diag: 0, Demand mode: 0, Poll bit: 0
+MinTxInt: 50000, MinRxInt: 50000, Multiplier: 3
+Received MinRxInt: 50000, Received Multiplier: 3
+Holddown (hits): 114(1), Hello (hits): 50(85054)
+Rx Count: 49417, Rx Interval (ms) min/max/avg: 1/56/45 last: 28 ms ago
+Tx Count: 49445, Tx Interval (ms) min/max/avg: 1/80/46 last: 32 ms ago
+Elapsed time watermarks: 2 2 (last: 2)
+Registered protocols: CEF EIGRP 
+Uptime: 00:37:27
+Last packet: Version: 1                  - Diagnostic: 0
+             State bit: Up               - Demand bit: 0
+             Poll bit: 0                 - Final bit: 0
+             C bit: 0                                   
+             Multiplier: 3               - Length: 24
+             My Discr.: 7                - Your Discr.: 1
+             Min tx interval: 50000      - Min rx interval: 50000
+             Min Echo interval: 0       
+
+IPv6 Sessions
+NeighAddr                              LD/RD         RH/RS     State     Int
+FE80:C::BAD                             2/11         Up        Up        Gi0/1.12
+Session state is UP and not using echo function.
+Session Host: Software
+OurAddr: FE80:C::CAFE                           
+Handle: 2
+Local Diag: 0, Demand mode: 0, Poll bit: 0
+MinTxInt: 999000, MinRxInt: 999000, Multiplier: 3
+Received MinRxInt: 999000, Received Multiplier: 3
+Holddown (hits): 2641(1), Hello (hits): 999(4416)
+Rx Count: 100, Rx Interval (ms) min/max/avg: 1/992/866 last: 112 ms ago
+Tx Count: 101, Tx Interval (ms) min/max/avg: 1/1000/856 last: 776 ms ago
+Elapsed time watermarks: 3 3 (last: 3)
+Registered protocols: OSPFv3 CEF EIGRP 
+Template: BFD-TEST
+Uptime: 00:01:26
+Last packet: Version: 1                  - Diagnostic: 0
+             State bit: Up               - Demand bit: 0
+             Poll bit: 0                 - Final bit: 0
+             C bit: 0                                   
+             Multiplier: 3               - Length: 24
+             My Discr.: 11               - Your Discr.: 2
+             Min tx interval: 999000     - Min rx interval: 999000
+             Min Echo interval: 0       
+
+IPv6 Sessions
+NeighAddr                              LD/RD         RH/RS     State     Int
+FE80:E::BEAD                            6/5          Up        Up        Gi0/1.14
+Session state is UP and not using echo function.
+Session Host: Software
+OurAddr: FE80:E::BEEF                           
+Handle: 6
+Local Diag: 0, Demand mode: 0, Poll bit: 0
+MinTxInt: 999000, MinRxInt: 999000, Multiplier: 3
+Received MinRxInt: 999000, Received Multiplier: 3
+Holddown (hits): 2865(1), Hello (hits): 999(4375)
+Rx Count: 2568, Rx Interval (ms) min/max/avg: 1/1000/878 last: 716 ms ago
+Tx Count: 2569, Tx Interval (ms) min/max/avg: 1/1000/877 last: 452 ms ago
+Elapsed time watermarks: 3 3 (last: 3)
+Registered protocols: CEF OSPFv3 
+Uptime: 00:37:30
+Last packet: Version: 1                  - Diagnostic: 0
+             State bit: Up               - Demand bit: 0
+             Poll bit: 0                 - Final bit: 0
+             C bit: 0                                   
+             Multiplier: 3               - Length: 24
+             My Discr.: 5                - Your Discr.: 6
+             Min tx interval: 999000     - Min rx interval: 999000
+             Min Echo interval: 0       
+
+IPv6 Sessions
+NeighAddr                              LD/RD         RH/RS     State     Int
+FE80:10::AAB                            7/0          Down      Down      Gi0/1.16
+Session Host: Software
+OurAddr: FE80:10::AAA                           
+Handle: 7
+Local Diag: 0, Demand mode: 0, Poll bit: 0
+MinTxInt: 1000000, MinRxInt: 1000000, Multiplier: 3
+Received MinRxInt: 0, Received Multiplier: 0
+Holddown (hits): 0(0), Hello (hits): 1000(4354)
+Rx Count: 0, Rx Interval (ms) min/max/avg: 0/0/0 last: 3946664 ms ago
+Tx Count: 4354, Tx Interval (ms) min/max/avg: 756/13196/882 last: 168 ms ago
+Elapsed time watermarks: 0 0 (last: 0)
+Registered protocols: OSPFv3 CEF 
+Template: BFD-TEST
+Last packet: Version: 1                  - Diagnostic: 0
+             State bit: AdminDown        - Demand bit: 0
+             Poll bit: 0                 - Final bit: 0
+             C bit: 0                                   
+             Multiplier: 0               - Length: 0
+             My Discr.: 0                - Your Discr.: 0
+             Min tx interval: 0          - Min rx interval: 0
+             Min Echo interval: 0       
