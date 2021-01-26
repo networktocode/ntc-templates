@@ -6,20 +6,22 @@ import glob
 import pytest
 import yaml
 
-from ntc_templates.parse import parse_output
+from lib.ntc_templates.parse import parse_output
 
 
 def return_test_files():
     """Return a list of all the *.raw files to run tests against."""
-    platform_dirs = glob.glob('tests/*')
-    platforms = (glob.glob('%s/*' % platform) for platform in platform_dirs)
+    platform_dirs = glob.glob("tests/*")
+    platforms = (glob.glob("{0}/*".format(platform)) for platform in platform_dirs)
     template_dirs = (item for sublist in platforms for item in sublist)
-    test_commands = (glob.glob('%s/*.raw' % template_dir) for template_dir in template_dirs)
+    test_commands = (
+        glob.glob("{0}/*.raw".format(template_dir)) for template_dir in template_dirs
+    )
 
     return (item for sublist in test_commands for item in sublist)
 
 
-@pytest.fixture(scope='function', params=return_test_files())
+@pytest.fixture(scope="function", params=return_test_files())
 def load_template_test(request):
     """Return each *.raw file to run tests on."""
     return request.param
@@ -27,17 +29,17 @@ def load_template_test(request):
 
 def raw_template_test(raw_file):
     """Return structured data along with reference data."""
-    parsed_file = '%s.parsed' % raw_file[:-4]
-    parts = raw_file.split('/')
+    parsed_file = "{0}.yml".format(raw_file[:-4])
+    parts = raw_file.split("/")
     platform = parts[1]
-    command = ' '.join(parts[2].split('_'))
-    with open(raw_file, 'r') as data:
+    command = " ".join(parts[2].split("_"))
+    with open(raw_file, "r") as data:
         rawoutput = data.read()
     structured = parse_output(platform=platform, command=command, data=rawoutput)
-    with open(parsed_file, 'r') as data:
+    with open(parsed_file, "r") as data:
         parsed_data = yaml.safe_load(data.read())
 
-    return structured, parsed_data['parsed_sample']
+    return structured, parsed_data["parsed_sample"]
 
 
 def test_raw_data_against_mock(load_template_test):
@@ -83,4 +85,6 @@ def correct_data_in_entries_test(processed, reference):
 
     for i in range(len(reference)):
         for key in reference[i].keys():
-            assert processed[i][key] == reference[i][key], "entry #{0}, key: {1}".format(i, key)
+            assert processed[i][key] == reference[i][key], "entry #{0}, key: {1}".format(
+                i, key
+            )

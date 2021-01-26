@@ -1,0 +1,11 @@
+---
+parsed_sample:
+  - event_logging: "Enabled"
+    volatile: "Latch"
+    log_types: "Critical, Serious, Informational"
+    nv_storage_types: "Critical, Serious"
+    remote_logging: "Enabled"
+    remote_address: "0.0.0.0"
+    secondary_address: "0.0.0.0"
+    remote_types: "Critical, Serious, Informational"
+    facility: "Daemon"

@@ -1,0 +1,948 @@
+---
+parsed_sample:
+  - intf: "GigabitEthernet0/0/0"
+    link_status: "administratively down"
+    protocol_status: "down"
+    ipaddr: []
+    mask: []
+    vrf: ""
+    mtu: ""
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "GigabitEthernet0/0/1"
+    link_status: "administratively down"
+    protocol_status: "down"
+    ipaddr: []
+    mask: []
+    vrf: ""
+    mtu: ""
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "GigabitEthernet0/0/2"
+    link_status: "administratively down"
+    protocol_status: "down"
+    ipaddr: []
+    mask: []
+    vrf: ""
+    mtu: ""
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "GigabitEthernet0/0/3"
+    link_status: "administratively down"
+    protocol_status: "down"
+    ipaddr: []
+    mask: []
+    vrf: ""
+    mtu: ""
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "GigabitEthernet0/0/4"
+    link_status: "administratively down"
+    protocol_status: "down"
+    ipaddr: []
+    mask: []
+    vrf: ""
+    mtu: ""
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "GigabitEthernet0/0/5"
+    link_status: "administratively down"
+    protocol_status: "down"
+    ipaddr: []
+    mask: []
+    vrf: ""
+    mtu: ""
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "TenGigabitEthernet0/1/0"
+    link_status: "up"
+    protocol_status: "up"
+    ipaddr: []
+    mask: []
+    vrf: ""
+    mtu: ""
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "TenGigabitEthernet0/2/0"
+    link_status: "up"
+    protocol_status: "up"
+    ipaddr: []
+    mask: []
+    vrf: ""
+    mtu: ""
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "TenGigabitEthernet0/3/0"
+    link_status: "up"
+    protocol_status: "up"
+    ipaddr: []
+    mask: []
+    vrf: ""
+    mtu: ""
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "GigabitEthernet0"
+    link_status: "up"
+    protocol_status: "up"
+    ipaddr:
+      - "172.21.2.3"
+    mask:
+      - "24"
+    vrf: "Mgmt-intf"
+    mtu: "1500"
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "Loopback0"
+    link_status: "up"
+    protocol_status: "up"
+    ipaddr:
+      - "88.16.255.249"
+    mask:
+      - "32"
+    vrf: ""
+    mtu: "1514"
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "Loopback1"
+    link_status: "up"
+    protocol_status: "up"
+    ipaddr:
+      - "88.16.255.1"
+    mask:
+      - "32"
+    vrf: ""
+    mtu: "1514"
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "Loopback505"
+    link_status: "up"
+    protocol_status: "up"
+    ipaddr:
+      - "192.168.100.100"
+    mask:
+      - "32"
+    vrf: "DATA"
+    mtu: "1514"
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "Loopback506"
+    link_status: "up"
+    protocol_status: "up"
+    ipaddr:
+      - "192.168.200.100"
+    mask:
+      - "32"
+    vrf: "SIG"
+    mtu: "1514"
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "Loopback1001"
+    link_status: "up"
+    protocol_status: "up"
+    ipaddr:
+      - "172.18.0.24"
+    mask:
+      - "32"
+    vrf: "MYCOMPANY"
+    mtu: "1514"
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "Loopback5999"
+    link_status: "up"
+    protocol_status: "up"
+    ipaddr:
+      - "172.22.255.255"
+    mask:
+      - "32"
+    vrf: "VRF_WL_SIG"
+    mtu: "1514"
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "Loopback12345"
+    link_status: "up"
+    protocol_status: "up"
+    ipaddr:
+      - "88.16.245.1"
+    mask:
+      - "32"
+    vrf: "7650C2814C784BACBBE23BB30B47D3A1"
+    mtu: "1514"
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "Port-channel1"
+    link_status: "up"
+    protocol_status: "up"
+    ipaddr: []
+    mask: []
+    vrf: ""
+    mtu: ""
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "Port-channel1.10"
+    link_status: "up"
+    protocol_status: "up"
+    ipaddr:
+      - "172.18.16.42"
+    mask:
+      - "29"
+    vrf: "MYCOMPANY"
+    mtu: "9000"
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "Port-channel1.102"
+    link_status: "up"
+    protocol_status: "up"
+    ipaddr:
+      - "88.16.254.61"
+    mask:
+      - "31"
+    vrf: ""
+    mtu: "8000"
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "Port-channel1.105"
+    link_status: "up"
+    protocol_status: "up"
+    ipaddr:
+      - "172.20.0.149"
+    mask:
+      - "30"
+    vrf: "MYCOMPANY"
+    mtu: "1500"
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "Port-channel1.106"
+    link_status: "up"
+    protocol_status: "up"
+    ipaddr:
+      - "88.16.254.65"
+    mask:
+      - "31"
+    vrf: ""
+    mtu: "8000"
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "Port-channel1.107"
+    link_status: "up"
+    protocol_status: "up"
+    ipaddr:
+      - "172.20.2.1"
+    mask:
+      - "30"
+    vrf: "MYCOMPANY"
+    mtu: "1500"
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "Port-channel1.501"
+    link_status: "up"
+    protocol_status: "up"
+    ipaddr:
+      - "169.254.0.114"
+    mask:
+      - "29"
+    vrf: "C617529B810A48F6AD40FEBCB163B286"
+    mtu: "9000"
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "Port-channel1.502"
+    link_status: "deleted"
+    protocol_status: "down"
+    ipaddr: []
+    mask: []
+    vrf: ""
+    mtu: ""
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "Port-channel1.504"
+    link_status: "up"
+    protocol_status: "up"
+    ipaddr:
+      - "169.254.0.1"
+    mask:
+      - "30"
+    vrf: "7650C2814C784BACBBE23BB30B47D3A1"
+    mtu: "9000"
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "Port-channel1.523"
+    link_status: "deleted"
+    protocol_status: "down"
+    ipaddr: []
+    mask: []
+    vrf: ""
+    mtu: ""
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "Port-channel1.524"
+    link_status: "deleted"
+    protocol_status: "down"
+    ipaddr: []
+    mask: []
+    vrf: ""
+    mtu: ""
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "Port-channel1.527"
+    link_status: "deleted"
+    protocol_status: "down"
+    ipaddr: []
+    mask: []
+    vrf: ""
+    mtu: ""
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "Port-channel1.528"
+    link_status: "deleted"
+    protocol_status: "down"
+    ipaddr: []
+    mask: []
+    vrf: ""
+    mtu: ""
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "Port-channel1.533"
+    link_status: "deleted"
+    protocol_status: "down"
+    ipaddr: []
+    mask: []
+    vrf: ""
+    mtu: ""
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "Port-channel1.535"
+    link_status: "up"
+    protocol_status: "up"
+    ipaddr:
+      - "169.254.0.1"
+    mask:
+      - "30"
+    vrf: "6281BBEF467947E4949F989BBC891138"
+    mtu: "9000"
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "Port-channel1.536"
+    link_status: "deleted"
+    protocol_status: "down"
+    ipaddr: []
+    mask: []
+    vrf: ""
+    mtu: ""
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "Port-channel1.537"
+    link_status: "deleted"
+    protocol_status: "down"
+    ipaddr: []
+    mask: []
+    vrf: ""
+    mtu: ""
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "Port-channel1.538"
+    link_status: "deleted"
+    protocol_status: "down"
+    ipaddr: []
+    mask: []
+    vrf: ""
+    mtu: ""
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "Port-channel1.601"
+    link_status: "up"
+    protocol_status: "up"
+    ipaddr:
+      - "169.254.0.50"
+    mask:
+      - "29"
+    vrf: "C617529B810A48F6AD40FEBCB163B286"
+    mtu: "9000"
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "Port-channel1.602"
+    link_status: "deleted"
+    protocol_status: "down"
+    ipaddr: []
+    mask: []
+    vrf: ""
+    mtu: ""
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "Port-channel1.614"
+    link_status: "deleted"
+    protocol_status: "down"
+    ipaddr: []
+    mask: []
+    vrf: ""
+    mtu: ""
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "Port-channel1.615"
+    link_status: "deleted"
+    protocol_status: "down"
+    ipaddr: []
+    mask: []
+    vrf: ""
+    mtu: ""
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "Port-channel1.618"
+    link_status: "deleted"
+    protocol_status: "down"
+    ipaddr: []
+    mask: []
+    vrf: ""
+    mtu: ""
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "Port-channel1.619"
+    link_status: "deleted"
+    protocol_status: "down"
+    ipaddr: []
+    mask: []
+    vrf: ""
+    mtu: ""
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "Port-channel1.620"
+    link_status: "up"
+    protocol_status: "up"
+    ipaddr:
+      - "169.254.0.5"
+    mask:
+      - "30"
+    vrf: "6281BBEF467947E4949F989BBC891138"
+    mtu: "9000"
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "Port-channel1.621"
+    link_status: "deleted"
+    protocol_status: "down"
+    ipaddr: []
+    mask: []
+    vrf: ""
+    mtu: ""
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "Port-channel1.1012"
+    link_status: "up"
+    protocol_status: "up"
+    ipaddr:
+      - "88.16.254.103"
+    mask:
+      - "31"
+    vrf: ""
+    mtu: "8000"
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "Port-channel1.1013"
+    link_status: "up"
+    protocol_status: "up"
+    ipaddr:
+      - "88.16.254.94"
+    mask:
+      - "31"
+    vrf: ""
+    mtu: "8000"
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "Port-channel1.1014"
+    link_status: "up"
+    protocol_status: "up"
+    ipaddr:
+      - "88.16.254.17"
+    mask:
+      - "31"
+    vrf: ""
+    mtu: "8000"
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "Port-channel1.1087"
+    link_status: "up"
+    protocol_status: "up"
+    ipaddr:
+      - "88.16.255.53"
+    mask:
+      - "31"
+    vrf: ""
+    mtu: "8000"
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "Port-channel1.3201"
+    link_status: "up"
+    protocol_status: "up"
+    ipaddr:
+      - "88.16.254.0"
+    mask:
+      - "31"
+    vrf: ""
+    mtu: "8000"
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "Port-channel1.3202"
+    link_status: "up"
+    protocol_status: "up"
+    ipaddr:
+      - "88.16.254.2"
+    mask:
+      - "31"
+    vrf: ""
+    mtu: "8000"
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "Port-channel1.3204"
+    link_status: "up"
+    protocol_status: "up"
+    ipaddr:
+      - "88.16.254.4"
+    mask:
+      - "31"
+    vrf: ""
+    mtu: "8000"
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "Port-channel1.3251"
+    link_status: "up"
+    protocol_status: "up"
+    ipaddr:
+      - "172.19.0.90"
+    mask:
+      - "31"
+    vrf: "MYCOMPANY"
+    mtu: "8000"
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "Port-channel1.3262"
+    link_status: "administratively down"
+    protocol_status: "down"
+    ipaddr:
+      - "88.16.234.10"
+    mask:
+      - "29"
+    vrf: ""
+    mtu: "9000"
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "Tunnel5001"
+    link_status: "up"
+    protocol_status: "up"
+    ipaddr:
+      - "169.254.64.0"
+    mask:
+      - "31"
+    vrf: "MYCOMPANY"
+    mtu: "1472"
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "Tunnel5002"
+    link_status: "up"
+    protocol_status: "up"
+    ipaddr:
+      - "169.254.64.4"
+    mask:
+      - "31"
+    vrf: "MYCOMPANY"
+    mtu: "1472"
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "Tunnel5010"
+    link_status: "up"
+    protocol_status: "up"
+    ipaddr:
+      - "169.254.64.36"
+    mask:
+      - "31"
+    vrf: "MYCOMPANY"
+    mtu: "1472"
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "Tunnel6001"
+    link_status: "up"
+    protocol_status: "down"
+    ipaddr:
+      - "169.254.64.2"
+    mask:
+      - "31"
+    vrf: "MYCOMPANY"
+    mtu: "1472"
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "Tunnel6002"
+    link_status: "up"
+    protocol_status: "down"
+    ipaddr:
+      - "169.254.64.6"
+    mask:
+      - "31"
+    vrf: "MYCOMPANY"
+    mtu: "1472"
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "vasileft1"
+    link_status: "up"
+    protocol_status: "up"
+    ipaddr:
+      - "88.16.254.10"
+    mask:
+      - "31"
+    vrf: ""
+    mtu: "9216"
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "vasileft21"
+    link_status: "up"
+    protocol_status: "up"
+    ipaddr:
+      - "100.66.0.2"
+    mask:
+      - "31"
+    vrf: ""
+    mtu: "9216"
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "vasileft22"
+    link_status: "up"
+    protocol_status: "up"
+    ipaddr:
+      - "100.66.0.64"
+    mask:
+      - "31"
+    vrf: ""
+    mtu: "9216"
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "vasileft23"
+    link_status: "up"
+    protocol_status: "up"
+    ipaddr:
+      - "100.66.0.102"
+    mask:
+      - "31"
+    vrf: ""
+    mtu: "9216"
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "vasileft24"
+    link_status: "up"
+    protocol_status: "up"
+    ipaddr:
+      - "100.66.0.82"
+    mask:
+      - "31"
+    vrf: ""
+    mtu: "9216"
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "vasileft25"
+    link_status: "up"
+    protocol_status: "up"
+    ipaddr:
+      - "100.66.0.74"
+    mask:
+      - "31"
+    vrf: ""
+    mtu: "9216"
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "vasileft26"
+    link_status: "up"
+    protocol_status: "up"
+    ipaddr:
+      - "100.66.0.130"
+    mask:
+      - "31"
+    vrf: ""
+    mtu: "9216"
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "vasileft27"
+    link_status: "up"
+    protocol_status: "up"
+    ipaddr:
+      - "100.66.0.158"
+    mask:
+      - "31"
+    vrf: ""
+    mtu: "9216"
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "vasileft28"
+    link_status: "up"
+    protocol_status: "up"
+    ipaddr:
+      - "100.66.0.162"
+    mask:
+      - "31"
+    vrf: ""
+    mtu: "9216"
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "vasileft29"
+    link_status: "up"
+    protocol_status: "up"
+    ipaddr:
+      - "100.66.0.174"
+    mask:
+      - "31"
+    vrf: ""
+    mtu: "9216"
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "vasileft30"
+    link_status: "up"
+    protocol_status: "up"
+    ipaddr:
+      - "100.66.0.194"
+    mask:
+      - "31"
+    vrf: ""
+    mtu: "9216"
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "vasileft31"
+    link_status: "up"
+    protocol_status: "up"
+    ipaddr:
+      - "100.66.0.214"
+    mask:
+      - "31"
+    vrf: ""
+    mtu: "9216"
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "vasileft32"
+    link_status: "up"
+    protocol_status: "up"
+    ipaddr:
+      - "100.66.1.2"
+    mask:
+      - "31"
+    vrf: ""
+    mtu: "9216"
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "vasiright1"
+    link_status: "up"
+    protocol_status: "up"
+    ipaddr:
+      - "88.16.254.11"
+    mask:
+      - "31"
+    vrf: "MYCOMPANY"
+    mtu: "9216"
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "vasiright21"
+    link_status: "up"
+    protocol_status: "up"
+    ipaddr:
+      - "100.66.0.3"
+    mask:
+      - "31"
+    vrf: "C617529B810A48F6AD40FEBCB163B286"
+    mtu: "9216"
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "vasiright22"
+    link_status: "up"
+    protocol_status: "up"
+    ipaddr:
+      - "100.66.0.65"
+    mask:
+      - "31"
+    vrf: "28FBAE630B934EB5AFA7FCE43E52393E"
+    mtu: "9216"
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "vasiright23"
+    link_status: "up"
+    protocol_status: "up"
+    ipaddr:
+      - "100.66.0.103"
+    mask:
+      - "31"
+    vrf: "4CB342232A7B4D04ADEF7DE3EC2679EC"
+    mtu: "9216"
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "vasiright24"
+    link_status: "up"
+    protocol_status: "up"
+    ipaddr:
+      - "100.66.0.83"
+    mask:
+      - "31"
+    vrf: "F76D90EAB6474F5BBB433939BA52FB14"
+    mtu: "9216"
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "vasiright25"
+    link_status: "up"
+    protocol_status: "up"
+    ipaddr:
+      - "100.66.0.75"
+    mask:
+      - "31"
+    vrf: "6281BBEF467947E4949F989BBC891138"
+    mtu: "9216"
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "vasiright26"
+    link_status: "up"
+    protocol_status: "up"
+    ipaddr:
+      - "100.66.0.131"
+    mask:
+      - "31"
+    vrf: "7650C2814C784BACBBE23BB30B47D3A1"
+    mtu: "9216"
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "vasiright27"
+    link_status: "up"
+    protocol_status: "up"
+    ipaddr:
+      - "100.66.0.159"
+    mask:
+      - "31"
+    vrf: "AF1C8AE356D94BBBB377257D047D3D4D"
+    mtu: "9216"
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "vasiright28"
+    link_status: "up"
+    protocol_status: "up"
+    ipaddr:
+      - "100.66.0.163"
+    mask:
+      - "31"
+    vrf: "41ECD4DB33314E949FD8D96D98252919"
+    mtu: "9216"
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "vasiright29"
+    link_status: "up"
+    protocol_status: "up"
+    ipaddr:
+      - "100.66.0.175"
+    mask:
+      - "31"
+    vrf: "A1E5B05D1D914A109BE1EE71B7C994B7"
+    mtu: "9216"
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "vasiright30"
+    link_status: "up"
+    protocol_status: "up"
+    ipaddr:
+      - "100.66.0.195"
+    mask:
+      - "31"
+    vrf: "CC462DCE24DD43B28EA8EA9BAD49044E"
+    mtu: "9216"
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "vasiright31"
+    link_status: "up"
+    protocol_status: "up"
+    ipaddr:
+      - "100.66.0.215"
+    mask:
+      - "31"
+    vrf: "C5DE7D3B149B4AF7BF398F45F0AD90A6"
+    mtu: "9216"
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "vasiright32"
+    link_status: "up"
+    protocol_status: "up"
+    ipaddr:
+      - "100.66.1.3"
+    mask:
+      - "31"
+    vrf: "8B3C2CFAD23841D1BC9FA2A178BA5855"
+    mtu: "9216"
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""

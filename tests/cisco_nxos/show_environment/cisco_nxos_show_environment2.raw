@@ -1,0 +1,48 @@
+Power Supply:
+Voltage: 12 Volts
+Power                             Actual      Actual        Total
+Supply    Model                   Output      Input      Capacity    Status
+                                (Watts )    (Watts )     (Watts )
+-------  -------------------  ----------  ----------  ----------  --------------
+1        N9K-PAC-650W              101 W       103 W       650 W     Ok
+2        N9K-PAC-650W               96 W       102 W       650 W     Ok
+
+
+Power Usage Summary:
+--------------------
+Power Supply redundancy mode (configured)                PS-Redundant
+Power Supply redundancy mode (operational)               PS-Redundant
+
+Total Power Capacity (based on configured mode)             650.00 W
+Total Grid-A (first half of PS slots) Power Capacity        650.00 W
+Total Grid-B (second half of PS slots) Power Capacity       650.00 W
+Total Power of all Inputs (cumulative)                     1300.00 W
+Total Power Output (actual draw)                            197.00 W
+Total Power Input (actual draw)                             206.00 W
+Total Power Allocated (budget)                                N/A
+Total Power Available for additional modules                  N/A
+
+Fan:
+---------------------------------------------------------------------------
+Fan             Model                Hw     Direction       Status
+---------------------------------------------------------------------------
+Fan1(sys_fan1)  N9K-C9300-FAN2       --     front-to-back   Ok
+Fan2(sys_fan2)  N9K-C9300-FAN2       --     front-to-back   Ok
+Fan3(sys_fan3)  N9K-C9300-FAN2       --     front-to-back   Ok
+Fan_in_PS1      --                   --     front-to-back   Ok
+Fan_in_PS2      --                   --     front-to-back   Ok
+Fan Zone Speed: Zone 1: 0x80
+Fan Air Filter : NotSupported
+
+
+Temperature:
+--------------------------------------------------------------------
+Module   Sensor        MajorThresh   MinorThres   CurTemp     Status
+                       (Celsius)     (Celsius)    (Celsius)
+--------------------------------------------------------------------
+1        FRONT           70              42          24         Ok
+1        BACK            80              70          26         Ok
+1        CPU             90              80          42         Ok
+1        TD2-1           105             90          35         Ok
+1        NS-1            105             90          37         Ok
+

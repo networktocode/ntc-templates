@@ -1,0 +1,1214 @@
+---
+parsed_sample:
+  - interface:
+      - "Null0"
+    nexthop:
+      - "Drop"
+    prefix: "0.0.0.0/32"
+  - interface:
+      - "Null0"
+    nexthop:
+      - "Drop"
+    prefix: "127.0.0.0/8"
+  - interface:
+      - "sup-eth1"
+    nexthop:
+      - "Receive"
+    prefix: "255.255.255.255/32"
+  - interface:
+      - "Ethernet1/45"
+    nexthop:
+      - "172.16.90.6"
+    prefix: "0.0.0.0/0"
+  - interface:
+      - "Ethernet1/45"
+    nexthop:
+      - "172.16.90.6"
+    prefix: "10.1.88.0/24"
+  - interface: []
+    nexthop:
+      - "Attached"
+    prefix: "10.1.90.0/24"
+  - interface:
+      - "Null0"
+    nexthop:
+      - "Drop"
+    prefix: "10.1.90.0/32"
+  - interface:
+      - "sup-eth1"
+    nexthop:
+      - "Receive"
+    prefix: "10.1.90.1/32"
+  - interface:
+      - "sup-eth1"
+    nexthop:
+      - "Receive"
+    prefix: "10.1.90.101/32"
+  - interface:
+      - "Vlan1"
+    nexthop:
+      - "10.1.90.102"
+    prefix: "10.1.90.102/32"
+  - interface:
+      - "Vlan1"
+    nexthop:
+      - "Attached"
+    prefix: "10.1.90.255/32"
+  - interface:
+      - "Ethernet1/45"
+    nexthop:
+      - "172.16.90.6"
+    prefix: "10.5.88.0/24"
+  - interface:
+      - "Ethernet1/45"
+      - "Ethernet1/43"
+    nexthop:
+      - "172.16.90.6"
+      - "172.16.90.10"
+    prefix: "10.5.90.0/24"
+  - interface:
+      - "Ethernet1/46"
+    nexthop:
+      - "172.16.90.33"
+    prefix: "10.5.99.0/24"
+  - interface:
+      - "Ethernet1/3"
+    nexthop:
+      - "172.16.29.5"
+    prefix: "10.5.224.0/24"
+  - interface:
+      - "Ethernet1/3"
+    nexthop:
+      - "172.16.29.5"
+    prefix: "10.5.225.0/24"
+  - interface:
+      - "Ethernet1/3"
+    nexthop:
+      - "172.16.29.5"
+    prefix: "10.5.226.0/24"
+  - interface:
+      - "Ethernet1/45"
+    nexthop:
+      - "172.16.90.6"
+    prefix: "10.9.88.0/24"
+  - interface:
+      - "Ethernet1/45"
+      - "Ethernet1/43"
+    nexthop:
+      - "172.16.90.6"
+      - "172.16.90.10"
+    prefix: "10.10.10.0/24"
+  - interface:
+      - "Ethernet1/3"
+    nexthop:
+      - "172.16.29.5"
+    prefix: "10.10.15.0/24"
+  - interface:
+      - "Ethernet1/3"
+    nexthop:
+      - "172.16.29.5"
+    prefix: "10.10.22.0/25"
+  - interface:
+      - "Ethernet1/3"
+    nexthop:
+      - "172.16.29.5"
+    prefix: "10.10.29.0/24"
+  - interface:
+      - "Ethernet1/3"
+    nexthop:
+      - "172.16.29.5"
+    prefix: "10.10.38.0/24"
+  - interface:
+      - "Ethernet1/3"
+    nexthop:
+      - "172.16.29.5"
+    prefix: "10.10.39.0/26"
+  - interface:
+      - "Ethernet1/3"
+    nexthop:
+      - "172.16.29.5"
+    prefix: "10.10.39.64/26"
+  - interface:
+      - "Ethernet1/3"
+    nexthop:
+      - "172.16.29.5"
+    prefix: "10.10.39.128/26"
+  - interface:
+      - "Ethernet1/3"
+    nexthop:
+      - "172.16.29.5"
+    prefix: "10.10.39.192/26"
+  - interface:
+      - "Ethernet1/45"
+    nexthop:
+      - "172.16.90.6"
+    prefix: "10.10.50.0/24"
+  - interface:
+      - "Ethernet1/45"
+    nexthop:
+      - "172.16.90.6"
+    prefix: "10.10.55.0/24"
+  - interface:
+      - "Ethernet1/45"
+    nexthop:
+      - "172.16.90.6"
+    prefix: "10.10.56.0/24"
+  - interface:
+      - "Ethernet1/45"
+    nexthop:
+      - "172.16.90.6"
+    prefix: "10.10.88.0/24"
+  - interface:
+      - "Ethernet1/45"
+      - "Ethernet1/43"
+    nexthop:
+      - "172.16.90.6"
+      - "172.16.90.10"
+    prefix: "10.10.90.0/24"
+  - interface:
+      - "Ethernet1/46"
+    nexthop:
+      - "172.16.90.33"
+    prefix: "10.10.99.0/24"
+  - interface:
+      - "Ethernet1/3"
+    nexthop:
+      - "172.16.29.5"
+    prefix: "10.10.192.0/24"
+  - interface:
+      - "Ethernet1/3"
+    nexthop:
+      - "172.16.29.5"
+    prefix: "10.10.224.0/24"
+  - interface:
+      - "Ethernet1/3"
+    nexthop:
+      - "172.16.29.5"
+    prefix: "10.10.225.0/24"
+  - interface:
+      - "Ethernet1/3"
+    nexthop:
+      - "172.16.29.5"
+    prefix: "10.10.226.0/24"
+  - interface:
+      - "Ethernet1/3"
+    nexthop:
+      - "172.16.29.5"
+    prefix: "10.10.254.1/32"
+  - interface:
+      - "Ethernet1/3"
+    nexthop:
+      - "172.16.29.5"
+    prefix: "10.10.254.2/32"
+  - interface:
+      - "Ethernet1/3"
+    nexthop:
+      - "172.16.29.5"
+    prefix: "10.10.255.0/24"
+  - interface:
+      - "Ethernet1/3"
+    nexthop:
+      - "172.16.29.5"
+    prefix: "10.10.255.7/32"
+  - interface:
+      - "Ethernet1/3"
+    nexthop:
+      - "172.16.29.5"
+    prefix: "10.10.255.8/32"
+  - interface:
+      - "Ethernet1/45"
+    nexthop:
+      - "172.16.90.6"
+    prefix: "10.11.88.0/24"
+  - interface:
+      - "Ethernet1/45"
+      - "Ethernet1/43"
+    nexthop:
+      - "172.16.90.6"
+      - "172.16.90.10"
+    prefix: "10.11.90.0/24"
+  - interface:
+      - "Ethernet1/45"
+    nexthop:
+      - "172.16.90.6"
+    prefix: "10.15.88.0/24"
+  - interface:
+      - "Ethernet1/45"
+    nexthop:
+      - "172.16.90.6"
+    prefix: "10.17.88.0/24"
+  - interface:
+      - "Ethernet1/45"
+    nexthop:
+      - "172.16.90.6"
+    prefix: "10.18.88.0/24"
+  - interface:
+      - "Ethernet1/45"
+    nexthop:
+      - "172.16.90.6"
+    prefix: "10.20.88.0/24"
+  - interface:
+      - "Ethernet1/45"
+    nexthop:
+      - "172.16.90.6"
+    prefix: "10.30.88.0/24"
+  - interface:
+      - "Null0"
+    nexthop:
+      - "Drop"
+    prefix: "10.30.112.0/24"
+  - interface:
+      - "Ethernet1/45"
+    nexthop:
+      - "172.16.90.6"
+    prefix: "10.30.113.0/24"
+  - interface:
+      - "Ethernet1/3"
+    nexthop:
+      - "172.16.29.5"
+    prefix: "10.35.29.0/24"
+  - interface:
+      - "Ethernet1/3"
+    nexthop:
+      - "172.16.29.5"
+    prefix: "10.35.44.0/24"
+  - interface:
+      - "Ethernet1/3"
+    nexthop:
+      - "172.16.29.5"
+    prefix: "10.35.45.0/24"
+  - interface:
+      - "Ethernet1/3"
+    nexthop:
+      - "172.16.29.5"
+    prefix: "10.35.46.0/24"
+  - interface:
+      - "Ethernet1/45"
+    nexthop:
+      - "172.16.90.6"
+    prefix: "10.35.88.0/24"
+  - interface:
+      - "Ethernet1/45"
+    nexthop:
+      - "172.16.90.6"
+    prefix: "10.35.90.0/24"
+  - interface:
+      - "Ethernet1/3"
+    nexthop:
+      - "172.16.29.5"
+    prefix: "10.35.192.0/24"
+  - interface:
+      - "Ethernet1/45"
+    nexthop:
+      - "172.16.90.6"
+    prefix: "10.40.88.0/24"
+  - interface:
+      - "Ethernet1/1"
+    nexthop:
+      - "10.249.38.65"
+    prefix: "10.77.100.0/28"
+  - interface:
+      - "Ethernet1/45"
+    nexthop:
+      - "172.16.90.6"
+    prefix: "10.77.100.96/28"
+  - interface:
+      - "Ethernet1/45"
+    nexthop:
+      - "172.16.90.6"
+    prefix: "10.90.88.0/30"
+  - interface:
+      - "Ethernet1/45"
+    nexthop:
+      - "172.16.90.6"
+    prefix: "10.100.88.0/24"
+  - interface:
+      - "Ethernet1/45"
+      - "Ethernet1/43"
+    nexthop:
+      - "172.16.90.6"
+      - "172.16.90.10"
+    prefix: "10.100.90.0/24"
+  - interface:
+      - "Ethernet1/46"
+    nexthop:
+      - "172.16.90.33"
+    prefix: "10.100.99.0/24"
+  - interface:
+      - "Ethernet1/3"
+    nexthop:
+      - "172.16.29.5"
+    prefix: "10.100.192.0/24"
+  - interface:
+      - "Ethernet1/3"
+    nexthop:
+      - "172.16.29.5"
+    prefix: "10.100.224.0/24"
+  - interface:
+      - "Ethernet1/3"
+    nexthop:
+      - "172.16.29.5"
+    prefix: "10.100.225.0/24"
+  - interface:
+      - "Ethernet1/3"
+    nexthop:
+      - "172.16.29.5"
+    prefix: "10.100.226.0/24"
+  - interface:
+      - "Ethernet1/3"
+    nexthop:
+      - "172.16.29.5"
+    prefix: "10.119.48.0/27"
+  - interface:
+      - "Ethernet1/3"
+    nexthop:
+      - "172.16.29.5"
+    prefix: "10.119.48.32/27"
+  - interface:
+      - "Ethernet1/3"
+    nexthop:
+      - "172.16.29.5"
+    prefix: "10.129.3.0/24"
+  - interface:
+      - "Ethernet1/3"
+    nexthop:
+      - "172.16.29.5"
+    prefix: "10.129.4.0/24"
+  - interface:
+      - "Ethernet1/3"
+    nexthop:
+      - "172.16.29.5"
+    prefix: "10.129.28.0/24"
+  - interface:
+      - "Ethernet1/45"
+    nexthop:
+      - "172.16.90.6"
+    prefix: "10.129.88.0/24"
+  - interface:
+      - "Vlan20"
+    nexthop:
+      - "Attached"
+    prefix: "10.129.90.0/24"
+  - interface:
+      - "Null0"
+    nexthop:
+      - "Drop"
+    prefix: "10.129.90.0/32"
+  - interface:
+      - "sup-eth1"
+    nexthop:
+      - "Receive"
+    prefix: "10.129.90.1/32"
+  - interface:
+      - "Vlan20"
+    nexthop:
+      - "10.129.90.10"
+    prefix: "10.129.90.10/32"
+  - interface:
+      - "Vlan20"
+    nexthop:
+      - "10.129.90.11"
+    prefix: "10.129.90.11/32"
+  - interface:
+      - "Vlan20"
+    nexthop:
+      - "10.129.90.12"
+    prefix: "10.129.90.12/32"
+  - interface:
+      - "Vlan20"
+    nexthop:
+      - "10.129.90.13"
+    prefix: "10.129.90.13/32"
+  - interface:
+      - "Vlan20"
+    nexthop:
+      - "10.129.90.14"
+    prefix: "10.129.90.14/32"
+  - interface:
+      - "Vlan20"
+    nexthop:
+      - "10.129.90.15"
+    prefix: "10.129.90.15/32"
+  - interface:
+      - "Vlan20"
+    nexthop:
+      - "10.129.90.16"
+    prefix: "10.129.90.16/32"
+  - interface:
+      - "Vlan20"
+    nexthop:
+      - "10.129.90.17"
+    prefix: "10.129.90.17/32"
+  - interface:
+      - "Vlan20"
+    nexthop:
+      - "10.129.90.18"
+    prefix: "10.129.90.18/32"
+  - interface:
+      - "Vlan20"
+    nexthop:
+      - "10.129.90.19"
+    prefix: "10.129.90.19/32"
+  - interface:
+      - "Vlan20"
+    nexthop:
+      - "10.129.90.20"
+    prefix: "10.129.90.20/32"
+  - interface:
+      - "Vlan20"
+    nexthop:
+      - "10.129.90.21"
+    prefix: "10.129.90.21/32"
+  - interface:
+      - "Vlan20"
+    nexthop:
+      - "10.129.90.22"
+    prefix: "10.129.90.22/32"
+  - interface:
+      - "Vlan20"
+    nexthop:
+      - "10.129.90.23"
+    prefix: "10.129.90.23/32"
+  - interface:
+      - "Vlan20"
+    nexthop:
+      - "10.129.90.24"
+    prefix: "10.129.90.24/32"
+  - interface:
+      - "Vlan20"
+    nexthop:
+      - "10.129.90.25"
+    prefix: "10.129.90.25/32"
+  - interface:
+      - "Vlan20"
+    nexthop:
+      - "10.129.90.26"
+    prefix: "10.129.90.26/32"
+  - interface:
+      - "Vlan20"
+    nexthop:
+      - "10.129.90.28"
+    prefix: "10.129.90.28/32"
+  - interface:
+      - "Vlan20"
+    nexthop:
+      - "10.129.90.29"
+    prefix: "10.129.90.29/32"
+  - interface:
+      - "Vlan20"
+    nexthop:
+      - "10.129.90.30"
+    prefix: "10.129.90.30/32"
+  - interface:
+      - "Vlan20"
+    nexthop:
+      - "Attached"
+    prefix: "10.129.90.255/32"
+  - interface:
+      - "Vlan112"
+    nexthop:
+      - "172.16.90.2"
+    prefix: "10.129.91.0/24"
+  - interface:
+      - "Ethernet1/45"
+      - "Ethernet1/43"
+    nexthop:
+      - "172.16.90.6"
+      - "172.16.90.10"
+    prefix: "10.129.92.0/24"
+  - interface:
+      - "Ethernet1/3"
+    nexthop:
+      - "172.16.29.5"
+    prefix: "10.129.100.0/24"
+  - interface:
+      - "Ethernet1/3"
+    nexthop:
+      - "172.16.29.5"
+    prefix: "10.129.192.0/24"
+  - interface:
+      - "Ethernet1/3"
+    nexthop:
+      - "172.16.29.5"
+    prefix: "10.129.200.0/24"
+  - interface:
+      - "Ethernet1/3"
+    nexthop:
+      - "172.16.29.5"
+    prefix: "10.129.224.0/24"
+  - interface:
+      - "Ethernet1/3"
+    nexthop:
+      - "172.16.29.5"
+    prefix: "10.129.225.0/24"
+  - interface:
+      - "Ethernet1/3"
+    nexthop:
+      - "172.16.29.5"
+    prefix: "10.129.226.0/24"
+  - interface:
+      - "Ethernet1/3"
+    nexthop:
+      - "172.16.29.5"
+    prefix: "10.129.227.0/24"
+  - interface:
+      - "Ethernet1/3"
+    nexthop:
+      - "172.16.29.5"
+    prefix: "10.129.228.0/24"
+  - interface:
+      - "Ethernet1/3"
+    nexthop:
+      - "172.16.29.5"
+    prefix: "10.129.229.0/24"
+  - interface:
+      - "Ethernet1/3"
+    nexthop:
+      - "172.16.29.5"
+    prefix: "10.129.230.0/24"
+  - interface:
+      - "Ethernet1/1"
+    nexthop:
+      - "10.249.38.65"
+    prefix: "10.150.201.130/31"
+  - interface:
+      - "Ethernet1/1"
+    nexthop:
+      - "10.249.38.65"
+    prefix: "10.150.202.0/27"
+  - interface:
+      - "Ethernet1/1"
+    nexthop:
+      - "10.249.38.65"
+    prefix: "10.150.202.64/27"
+  - interface:
+      - "Ethernet1/3"
+    nexthop:
+      - "172.16.29.5"
+    prefix: "10.150.202.64/28"
+  - interface:
+      - "Ethernet1/1"
+    nexthop:
+      - "10.249.38.65"
+    prefix: "10.150.202.80/28"
+  - interface:
+      - "Ethernet1/3"
+    nexthop:
+      - "172.16.29.5"
+    prefix: "10.152.202.16/28"
+  - interface:
+      - "Ethernet1/3"
+    nexthop:
+      - "172.16.29.5"
+    prefix: "10.200.130.0/29"
+  - interface:
+      - "Ethernet1/3"
+    nexthop:
+      - "172.16.29.5"
+    prefix: "10.222.48.192/26"
+  - interface:
+      - "Ethernet1/45"
+    nexthop:
+      - "172.16.90.6"
+    prefix: "10.249.0.8/32"
+  - interface:
+      - "Ethernet1/1"
+    nexthop:
+      - "10.249.38.65"
+    prefix: "10.249.17.0/24"
+  - interface:
+      - "Ethernet1/1"
+    nexthop:
+      - "10.249.38.65"
+    prefix: "10.249.18.0/24"
+  - interface:
+      - "Ethernet1/1"
+    nexthop:
+      - "10.249.38.65"
+    prefix: "10.249.37.1/32"
+  - interface:
+      - "Ethernet1/1"
+    nexthop:
+      - "10.249.38.65"
+    prefix: "10.249.37.2/32"
+  - interface:
+      - "Ethernet1/1"
+    nexthop:
+      - "10.249.38.65"
+    prefix: "10.249.37.3/32"
+  - interface:
+      - "Ethernet1/1"
+    nexthop:
+      - "10.249.38.65"
+    prefix: "10.249.37.4/32"
+  - interface:
+      - "Ethernet1/1"
+    nexthop:
+      - "10.249.38.65"
+    prefix: "10.249.37.5/32"
+  - interface:
+      - "Ethernet1/1"
+    nexthop:
+      - "10.249.38.65"
+    prefix: "10.249.37.6/32"
+  - interface:
+      - "Ethernet1/1"
+    nexthop:
+      - "10.249.38.65"
+    prefix: "10.249.38.5/32"
+  - interface:
+      - "Ethernet1/1"
+    nexthop:
+      - "10.249.38.65"
+    prefix: "10.249.38.6/32"
+  - interface:
+      - "Ethernet1/1"
+    nexthop:
+      - "10.249.38.65"
+    prefix: "10.249.38.12/30"
+  - interface:
+      - "Ethernet1/1"
+    nexthop:
+      - "10.249.38.65"
+    prefix: "10.249.38.13/32"
+  - interface:
+      - "Ethernet1/1"
+    nexthop:
+      - "10.249.38.65"
+    prefix: "10.249.38.14/32"
+  - interface:
+      - "Ethernet1/1"
+    nexthop:
+      - "Attached"
+    prefix: "10.249.38.64/30"
+  - interface:
+      - "Null0"
+    nexthop:
+      - "Drop"
+    prefix: "10.249.38.64/32"
+  - interface:
+      - "Ethernet1/1"
+    nexthop:
+      - "10.249.38.65"
+    prefix: "10.249.38.65/32"
+  - interface:
+      - "sup-eth1"
+    nexthop:
+      - "Receive"
+    prefix: "10.249.38.66/32"
+  - interface:
+      - "Ethernet1/1"
+    nexthop:
+      - "Attached"
+    prefix: "10.249.38.67/32"
+  - interface:
+      - "Ethernet1/1"
+    nexthop:
+      - "10.249.38.65"
+    prefix: "10.249.38.68/30"
+  - interface:
+      - "Ethernet1/1"
+    nexthop:
+      - "10.249.38.65"
+    prefix: "10.249.39.36/30"
+  - interface:
+      - "Ethernet1/1"
+    nexthop:
+      - "10.249.38.65"
+    prefix: "10.249.39.50/31"
+  - interface:
+      - "Ethernet1/1"
+    nexthop:
+      - "10.249.38.65"
+    prefix: "10.249.40.36/30"
+  - interface:
+      - "Ethernet1/45"
+    nexthop:
+      - "172.16.90.6"
+    prefix: "10.249.56.192/26"
+  - interface:
+      - "Ethernet1/1"
+    nexthop:
+      - "10.249.38.65"
+    prefix: "10.249.250.0/25"
+  - interface:
+      - "Ethernet1/1"
+    nexthop:
+      - "10.249.38.65"
+    prefix: "10.249.253.219/32"
+  - interface:
+      - "Ethernet1/1"
+    nexthop:
+      - "10.249.38.65"
+    prefix: "10.249.253.220/32"
+  - interface:
+      - "Ethernet1/1"
+    nexthop:
+      - "10.249.38.65"
+    prefix: "10.249.253.225/32"
+  - interface:
+      - "Ethernet1/1"
+    nexthop:
+      - "10.249.38.65"
+    prefix: "10.249.253.226/32"
+  - interface:
+      - "Ethernet1/1"
+    nexthop:
+      - "10.249.38.65"
+    prefix: "10.249.253.231/32"
+  - interface:
+      - "Ethernet1/1"
+    nexthop:
+      - "10.249.38.65"
+    prefix: "10.249.253.232/32"
+  - interface:
+      - "Ethernet1/1"
+    nexthop:
+      - "10.249.38.65"
+    prefix: "10.249.253.251/32"
+  - interface:
+      - "Ethernet1/45"
+    nexthop:
+      - "172.16.90.6"
+    prefix: "10.249.254.1/32"
+  - interface:
+      - "Vlan112"
+    nexthop:
+      - "172.16.90.2"
+    prefix: "10.249.254.64/30"
+  - interface:
+      - "Ethernet1/1"
+    nexthop:
+      - "10.249.38.65"
+    prefix: "10.249.254.68/30"
+  - interface:
+      - "Ethernet1/1"
+    nexthop:
+      - "10.249.38.65"
+    prefix: "10.249.255.120/29"
+  - interface:
+      - "Ethernet1/1"
+    nexthop:
+      - "10.249.38.65"
+    prefix: "10.249.255.240/29"
+  - interface:
+      - "Ethernet1/1"
+    nexthop:
+      - "10.249.38.65"
+    prefix: "10.249.255.248/29"
+  - interface:
+      - "Ethernet1/3"
+    nexthop:
+      - "172.16.29.5"
+    prefix: "10.255.28.1/32"
+  - interface:
+      - "Ethernet1/45"
+    nexthop:
+      - "172.16.90.6"
+    prefix: "10.255.88.1/32"
+  - interface:
+      - "Ethernet1/45"
+    nexthop:
+      - "172.16.90.6"
+    prefix: "10.255.88.253/32"
+  - interface:
+      - "sup-eth1"
+    nexthop:
+      - "Receive"
+    prefix: "10.255.90.1/32"
+  - interface:
+      - "Vlan112"
+    nexthop:
+      - "172.16.90.2"
+    prefix: "10.255.90.2/32"
+  - interface:
+      - "Ethernet1/45"
+    nexthop:
+      - "172.16.90.6"
+    prefix: "10.255.90.3/32"
+  - interface:
+      - "Ethernet1/43"
+    nexthop:
+      - "172.16.90.10"
+    prefix: "10.255.90.4/32"
+  - interface:
+      - "Ethernet1/45"
+    nexthop:
+      - "172.16.90.6"
+    prefix: "10.255.90.110/32"
+  - interface:
+      - "Ethernet1/46"
+    nexthop:
+      - "172.16.90.33"
+    prefix: "10.255.99.1/32"
+  - interface:
+      - "Vlan112"
+    nexthop:
+      - "172.16.90.2"
+    prefix: "10.255.99.2/32"
+  - interface:
+      - "Ethernet1/3"
+    nexthop:
+      - "172.16.29.5"
+    prefix: "10.255.192.1/32"
+  - interface:
+      - "Ethernet1/3"
+    nexthop:
+      - "172.16.29.5"
+    prefix: "10.255.192.2/32"
+  - interface:
+      - "Ethernet1/3"
+    nexthop:
+      - "172.16.29.5"
+    prefix: "10.255.255.1/32"
+  - interface:
+      - "Ethernet1/3"
+    nexthop:
+      - "172.16.29.5"
+    prefix: "10.255.255.2/32"
+  - interface:
+      - "Ethernet1/45"
+    nexthop:
+      - "172.16.90.6"
+    prefix: "68.202.118.148/32"
+  - interface:
+      - "Ethernet1/45"
+    nexthop:
+      - "172.16.90.6"
+    prefix: "69.203.118.52/24"
+  - interface:
+      - "Ethernet1/45"
+    nexthop:
+      - "172.16.90.6"
+    prefix: "113.117.128.2/32"
+  - interface:
+      - "Ethernet1/3"
+    nexthop:
+      - "172.16.29.5"
+    prefix: "117.120.112.118/26"
+  - interface:
+      - "Ethernet1/45"
+    nexthop:
+      - "172.16.90.6"
+    prefix: "117.121.132.112/26"
+  - interface:
+      - "Ethernet1/3"
+    nexthop:
+      - "172.16.29.5"
+    prefix: "160.44.97.23/32"
+  - interface:
+      - "Ethernet1/3"
+    nexthop:
+      - "172.16.29.5"
+    prefix: "160.45.98.45/32"
+  - interface:
+      - "Ethernet1/3"
+    nexthop:
+      - "Attached"
+    prefix: "172.116.129.4/30"
+  - interface:
+      - "Null0"
+    nexthop:
+      - "Drop"
+    prefix: "172.116.129.4/32"
+  - interface:
+      - "Ethernet1/3"
+    nexthop:
+      - "172.16.29.5"
+    prefix: "172.116.129.5/32"
+  - interface:
+      - "sup-eth1"
+    nexthop:
+      - "Receive"
+    prefix: "172.116.129.6/32"
+  - interface:
+      - "Ethernet1/3"
+    nexthop:
+      - "Attached"
+    prefix: "172.116.129.7/32"
+  - interface:
+      - "Ethernet1/45"
+    nexthop:
+      - "172.16.90.6"
+    prefix: "172.116.188.0/30"
+  - interface:
+      - "Ethernet1/45"
+    nexthop:
+      - "172.16.90.6"
+    prefix: "172.116.188.4/30"
+  - interface:
+      - "Ethernet1/45"
+    nexthop:
+      - "172.16.90.6"
+    prefix: "172.116.188.8/30"
+  - interface:
+      - "Ethernet1/43"
+    nexthop:
+      - "172.16.90.10"
+    prefix: "172.116.188.16/30"
+  - interface: []
+    nexthop:
+      - "Attached"
+    prefix: "172.116.190.0/30"
+  - interface:
+      - "Null0"
+    nexthop:
+      - "Drop"
+    prefix: "172.116.190.0/32"
+  - interface:
+      - "sup-eth1"
+    nexthop:
+      - "Receive"
+    prefix: "172.116.190.1/32"
+  - interface:
+      - "Vlan112"
+    nexthop:
+      - "172.16.90.2"
+    prefix: "172.116.190.2/32"
+  - interface:
+      - "Vlan112"
+    nexthop:
+      - "Attached"
+    prefix: "172.116.190.3/32"
+  - interface:
+      - "Ethernet1/45"
+    nexthop:
+      - "Attached"
+    prefix: "172.116.190.4/30"
+  - interface:
+      - "Null0"
+    nexthop:
+      - "Drop"
+    prefix: "172.116.190.4/32"
+  - interface:
+      - "sup-eth1"
+    nexthop:
+      - "Receive"
+    prefix: "172.116.190.5/32"
+  - interface:
+      - "Ethernet1/45"
+    nexthop:
+      - "172.16.90.6"
+    prefix: "172.116.190.6/32"
+  - interface:
+      - "Ethernet1/45"
+    nexthop:
+      - "Attached"
+    prefix: "172.116.190.7/32"
+  - interface:
+      - "Ethernet1/43"
+    nexthop:
+      - "Attached"
+    prefix: "172.116.190.8/30"
+  - interface:
+      - "Null0"
+    nexthop:
+      - "Drop"
+    prefix: "172.116.190.8/32"
+  - interface:
+      - "sup-eth1"
+    nexthop:
+      - "Receive"
+    prefix: "172.116.190.9/32"
+  - interface:
+      - "Ethernet1/43"
+    nexthop:
+      - "172.16.90.10"
+    prefix: "172.116.190.10/32"
+  - interface:
+      - "Ethernet1/43"
+    nexthop:
+      - "Attached"
+    prefix: "172.116.190.11/32"
+  - interface:
+      - "Vlan112"
+    nexthop:
+      - "172.16.90.2"
+    prefix: "172.116.190.12/30"
+  - interface:
+      - "Vlan112"
+    nexthop:
+      - "172.16.90.2"
+    prefix: "172.116.190.16/30"
+  - interface:
+      - "Ethernet1/45"
+      - "Ethernet1/43"
+    nexthop:
+      - "172.16.90.6"
+      - "172.16.90.10"
+    prefix: "172.116.190.20/30"
+  - interface:
+      - "Ethernet1/45"
+    nexthop:
+      - "172.16.90.6"
+    prefix: "172.120.93.24/30"
+  - interface:
+      - "Ethernet1/43"
+    nexthop:
+      - "172.16.90.10"
+    prefix: "172.120.93.28/30"
+  - interface:
+      - "Ethernet1/46"
+    nexthop:
+      - "Attached"
+    prefix: "172.120.93.32/30"
+  - interface:
+      - "Null0"
+    nexthop:
+      - "Drop"
+    prefix: "172.120.93.32/32"
+  - interface:
+      - "Ethernet1/46"
+    nexthop:
+      - "172.16.90.33"
+    prefix: "172.120.93.33/32"
+  - interface:
+      - "sup-eth1"
+    nexthop:
+      - "Receive"
+    prefix: "172.120.93.34/32"
+  - interface:
+      - "Ethernet1/46"
+    nexthop:
+      - "Attached"
+    prefix: "172.120.93.35/32"
+  - interface:
+      - "Vlan112"
+    nexthop:
+      - "172.16.90.2"
+    prefix: "172.120.93.36/30"
+  - interface:
+      - "Ethernet1/46"
+    nexthop:
+      - "172.16.90.33"
+    prefix: "172.120.93.0/30"
+  - interface:
+      - "Ethernet1/41"
+    nexthop:
+      - "Attached"
+    prefix: "172.121.135.16/30"
+  - interface:
+      - "Null0"
+    nexthop:
+      - "Drop"
+    prefix: "172.121.135.16/32"
+  - interface:
+      - "Ethernet1/41"
+    nexthop:
+      - "172.30.135.17"
+    prefix: "172.212.135.17/32"
+  - interface:
+      - "sup-eth1"
+    nexthop:
+      - "Receive"
+    prefix: "172.213.135.18/32"
+  - interface:
+      - "Ethernet1/41"
+    nexthop:
+      - "Attached"
+    prefix: "172.214.135.19/32"
+  - interface:
+      - "Ethernet1/45"
+    nexthop:
+      - "172.16.90.6"
+    prefix: "172.214.0.0/16"
+  - interface:
+      - "Ethernet1/45"
+    nexthop:
+      - "172.16.90.6"
+    prefix: "192.200.54.48/28"
+  - interface:
+      - "Ethernet1/45"
+    nexthop:
+      - "172.16.90.6"
+    prefix: "192.200.54.48/32"
+  - interface:
+      - "Ethernet1/45"
+    nexthop:
+      - "172.16.90.6"
+    prefix: "192.200.54.49/32"
+  - interface:
+      - "Ethernet1/45"
+    nexthop:
+      - "172.16.90.6"
+    prefix: "192.200.54.50/32"
+  - interface:
+      - "Ethernet1/45"
+    nexthop:
+      - "172.16.90.6"
+    prefix: "192.200.54.51/32"
+  - interface:
+      - "Ethernet1/45"
+    nexthop:
+      - "172.16.90.6"
+    prefix: "192.200.54.52/32"
+  - interface:
+      - "Ethernet1/45"
+    nexthop:
+      - "172.16.90.6"
+    prefix: "192.200.54.53/32"
+  - interface:
+      - "Ethernet1/45"
+    nexthop:
+      - "172.16.90.6"
+    prefix: "192.200.54.54/32"
+  - interface:
+      - "Ethernet1/45"
+    nexthop:
+      - "172.16.90.6"
+    prefix: "192.200.54.55/32"
+  - interface:
+      - "Ethernet1/45"
+    nexthop:
+      - "172.16.90.6"
+    prefix: "192.200.54.56/32"
+  - interface:
+      - "Ethernet1/45"
+    nexthop:
+      - "172.16.90.6"
+    prefix: "192.200.54.57/32"
+  - interface:
+      - "Ethernet1/45"
+    nexthop:
+      - "172.16.90.6"
+    prefix: "192.200.54.58/32"
+  - interface:
+      - "Ethernet1/45"
+    nexthop:
+      - "172.16.90.6"
+    prefix: "192.200.54.59/32"
+  - interface:
+      - "Ethernet1/45"
+    nexthop:
+      - "172.16.90.6"
+    prefix: "192.200.54.60/32"
+  - interface:
+      - "Ethernet1/45"
+    nexthop:
+      - "172.16.90.6"
+    prefix: "192.200.54.61/32"
+  - interface:
+      - "Ethernet1/45"
+    nexthop:
+      - "172.16.90.6"
+    prefix: "192.200.54.62/32"
+  - interface:
+      - "Ethernet1/41"
+    nexthop:
+      - "172.30.135.17"
+    prefix: "203.45.179.33/32"
+  - interface:
+      - "Ethernet1/41"
+    nexthop:
+      - "172.30.135.17"
+    prefix: "203.46.179.34/32"
+  - interface:
+      - "Ethernet1/41"
+    nexthop:
+      - "172.30.135.17"
+    prefix: "203.72.179.0/25"
+  - interface:
+      - "Ethernet1/41"
+    nexthop:
+      - "172.30.135.17"
+    prefix: "203.72.179.128/25"
