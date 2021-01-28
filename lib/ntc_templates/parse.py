@@ -12,10 +12,9 @@ except ImportError:
 
 
 def _get_template_dir():
-    env_dir = os.environ.get("NTC_TEMPLATES_DIR")
-    if env_dir is not None:
-        template_dir = os.path.join(env_dir, "templates")
-    if template_dir is None:
+    if os.environ.get("NTC_TEMPLATES_DIR") is not None:
+        template_dir = os.path.join(os.environ.get("NTC_TEMPLATES_DIR"), "templates")
+    else:
         package_dir = os.path.dirname(__file__)
         template_dir = os.path.join(package_dir, "templates")
         if not os.path.isdir(template_dir):
@@ -23,6 +22,14 @@ def _get_template_dir():
             template_dir = os.path.join(project_dir, "templates")
 
     return template_dir
+
+    # package_dir = os.path.dirname(__file__)
+    # template_dir = os.path.join(package_dir, "templates")
+    # if not os.path.isdir(template_dir):
+    #     project_dir = os.path.dirname(os.path.dirname(os.path.dirname(template_dir)))
+    #     template_dir = os.path.join(project_dir, "templates")
+
+    # return template_dir
 
 
 def _clitable_to_dict(cli_table):
