@@ -15,7 +15,7 @@ def _get_template_dir():
     env_dir = os.environ.get("NTC_TEMPLATES_DIR")
     if env_dir is not None:
         template_dir = os.path.join(env_dir, "templates")
-    if template_dir is not None:
+    if template_dir is None:
         package_dir = os.path.dirname(__file__)
         template_dir = os.path.join(package_dir, "templates")
         if not os.path.isdir(template_dir):
