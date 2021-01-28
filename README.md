@@ -84,6 +84,22 @@ $
 >>> 
 ```
 
+### Define Custom Templates Directory
+
+To use a custom templates directory set the environmental variable `NTC_TEMPLATES_DIR`.
+Note: The `templates` directory will automatically be appended to the end of the `NTC_TEMPLATES_DIR`.
+
+To manaully set variable:
+```shell
+export NTC_TEMPLATES_DIR=/path/to/new/location
+```
+
+To set within your program:
+```python
+import os
+os.environ["NTC_TEMPLATES_DIR"] = "/path/to/new/templates/location"
+```
+
 Contributing
 ------------
 
