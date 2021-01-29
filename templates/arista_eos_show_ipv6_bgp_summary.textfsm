@@ -1,7 +1,7 @@
 Value Filldown ROUTER_ID (\d+\.\d+\.\d+\.\d+)
 Value Filldown LOCAL_AS (\d+)
 Value Filldown VRF (\S+)
-Value Required BGP_NEIGH (\d+\.\d+\.\d+\.\d+)
+Value Required BGP_NEIGH (\S+)
 Value NEIGH_AS (\d+)
 Value MSG_RCVD (\d+)
 Value MSG_SENT (\d+)
