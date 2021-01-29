@@ -4,8 +4,8 @@
 # abc[[xyz]] is expanded to abc(x(y(z)?)?)?, regexp inside [[]] is not supported
 #
 # Rules of Ordering:
-#  - OS in alphbetical order
-#  - Command in length other
+#  - OS in alphabetical order
+#  - Template name in length order
 #  - When Length is the same, use alphabetical order
 #  - Keep space between OS's
 #
@@ -309,9 +309,11 @@ cisco_wlc_ssh_show_advanced_802.11a_channel.textfsm, .*, cisco_wlc_ssh, sh[[ow]]
 cisco_wlc_ssh_show_802.11a_cleanair_config.textfsm, .*, cisco_wlc_ssh, sh[[ow]] 802\.11[ab] cl[[eanair]] c[[onfig]]
 cisco_wlc_ssh_show_interface_detailed_id.textfsm, .*, cisco_wlc_ssh, sh[[ow]] int[[erface]] d[[etailed]] (\S+)
 cisco_wlc_ssh_show_cdp_neighbors_detail.textfsm, .*, cisco_wlc_ssh, sh[[ow]] c[[dp]] neig[[hbors]] det[[ail]]
+cisco_wlc_ssh_show_redundancy_summary.textfsm, .*, cisco_wlc_ssh, sh[[ow]] red[[undancy]] su[[mmary]]
 cisco_wlc_ssh_show_rf-profile_summary.textfsm, .*, cisco_wlc_ssh, sh[[ow]] rf-[[profile]] s[[ummary]]
 cisco_wlc_ssh_show_ap_config_general.textfsm, .*, cisco_wlc_ssh, sh[[ow]] ap con[[fig]] ge[[neral]]
 cisco_wlc_ssh_show_interface_summary.textfsm, .*, cisco_wlc_ssh, sh[[ow]] int[[erface]] s[[ummary]]
+cisco_wlc_ssh_show_redundancy_detail.textfsm, .*, cisco_wlc_ssh, sh[[ow]] red[[undancy]] d[[etail]]
 cisco_wlc_ssh_show_client_detail.textfsm, .*, cisco_wlc_ssh, sh[[ow]] cl[[ient]] det[[ail]]
 cisco_wlc_ssh_show_exclusionlist.textfsm, .*, cisco_wlc_ssh, sh[[ow]] ex[[clusionlist]]
 cisco_wlc_ssh_show_ap_image_all.textfsm, .*, cisco_wlc_ssh, sh[[ow]] ap ima[[ge]] a[[ll]]
