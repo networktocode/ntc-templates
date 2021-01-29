@@ -1,0 +1,38 @@
+Value IFACE (\S+)
+Value GROUP (\d+)
+Value ADDR_FAMILY (\S+)
+Value PRIORITY (\d+)
+Value TIME (\d+)
+Value OWN (.?)
+Value PREEMPT (.)
+Value STATE (\w+)
+Value MASTER_IP ([a-fA-F\d\.\:]+)
+Value VIRTUALIP ([a-fA-F\d\.\:]+)
+
+Start
+  ^Interface\s+Grp\s+Pri\s+Time\s+Own\s+Pre\s+State\s+Master addr\s+Group addr\s*$$ -> Vrrp
+  ^\s*Interface\s+Grp\s+A-F\s+Pri\s+Time\s+Own\s+Pre\s+State\s+Master addr\/Group addr\s*$$ -> Vrrpv3
+  # Capture time-stamp if vty line has command time-stamping turned on
+  ^Load\s+for\s+
+  ^Time\s+source\s+is
+
+Vrrp
+  # VRRP Legacy (VRRPv2 for IPv4)
+  ^${IFACE}\s+${GROUP}\s*${PRIORITY}\s+${TIME}\s+${OWN}\s+${PREEMPT}\s+${STATE}\s+${MASTER_IP}\s+${VIRTUALIP} -> Record
+  ^${IFACE}\s*$$
+  ^\s*${GROUP}\s+${PRIORITY}\s+${TIME}\s+${OWN}\s+${PREEMPT}\s+${STATE}\s+${MASTER_IP}\s+${VIRTUALIP} -> Record
+  ^\s*$$
+  ^. -> Error
+
+Vrrpv3
+  # VRRP Unified (VRRPv3 for IPv4 and IPv6)
+  # - ignoring the "local" designation since we can use the STATE value to determine who the master is
+  ^\s*${IFACE}\s+${GROUP}\s+${ADDR_FAMILY}\s+${PRIORITY}\s+${TIME}\s+${OWN}\s+${PREEMPT}\s+${STATE}\s+${MASTER_IP}\(local\)\s+${VIRTUALIP} -> Record
+  ^\s*${IFACE}\s+${GROUP}\s+${ADDR_FAMILY}\s+${PRIORITY}\s+${TIME}\s+${OWN}\s+${PREEMPT}\s+${STATE}\s+${MASTER_IP}\s+${VIRTUALIP} -> Record
+  # rows that roll over to a second line
+  ^\s*${IFACE}\s*$$
+  ^\s*${GROUP}\s+${ADDR_FAMILY}\s+${PRIORITY}\s+${TIME}\s+${OWN}\s+${PREEMPT}\s+${STATE}\s+${MASTER_IP}\(local\)\s+${VIRTUALIP} -> Record
+  ^\s*${IFACE}\s*$$
+  ^\s*${GROUP}\s+${ADDR_FAMILY}\s+${PRIORITY}\s+${TIME}\s+${OWN}\s+${PREEMPT}\s+${STATE}\s+${MASTER_IP}\s+${VIRTUALIP} -> Record
+  ^\s*$$
+  ^. -> Error
