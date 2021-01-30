@@ -1,16 +1,16 @@
-Value VENDOR_ID_BWD_COMPAT (\S+)
-Value CALL_STATION_ID_CASE (\S+)
-Value ACCT_CALL_STATION_ID_TYPE (.+)
-Value AUTH_CALL_STATION_ID_TYPE (.+)
-Value EXT_SRC_PORTS_SUPPORT (\S+)
-Value AGGRESSIVE_FAILOVER (\S+)
-Value KEYWRAP (\S+)
-Value FALLBACK_TEST_MODE (\S+)
-Value FALLBACK_TEST_USERNAME (.+)
-Value FALLBACK_TEST_INTERVAL (\d+)
-Value MAC_DELIM_AUTHC_MSG (\S+)
-Value MAC_DELIM_ACCT_MSG (\S+)
-Value AUTHC_FRAMED_MTU (\d+)
+Value Filldown VENDOR_ID_BWD_COMPAT (\S+)
+Value Filldown CALL_STATION_ID_CASE (\S+)
+Value Filldown ACCT_CALL_STATION_ID_TYPE (.+)
+Value Filldown AUTH_CALL_STATION_ID_TYPE (.+)
+Value Filldown EXT_SRC_PORTS_SUPPORT (\S+)
+Value Filldown AGGRESSIVE_FAILOVER (\S+)
+Value Filldown KEYWRAP (\S+)
+Value Filldown FALLBACK_TEST_MODE (\S+)
+Value Filldown FALLBACK_TEST_USERNAME (.+)
+Value Filldown FALLBACK_TEST_INTERVAL (\d+)
+Value Filldown MAC_DELIM_AUTHC_MSG (\S+)
+Value Filldown MAC_DELIM_ACCT_MSG (\S+)
+Value Filldown AUTHC_FRAMED_MTU (\d+)
 Value AUTHC_INDEX (\d+)
 Value AUTHC_TYPE (\S+)
 Value AUTHC_SRV_ADDR (\S+)
@@ -48,7 +48,7 @@ Start
   ^\s+Interval \(in seconds\)\.+\s+${FALLBACK_TEST_INTERVAL}\s*$$
   ^\s*MAC Delimiter for Authentication Messages\s*\.+\s+${MAC_DELIM_AUTHC_MSG}\s*$$
   ^\s*MAC Delimiter for Accounting Messages\s*\.+\s+${MAC_DELIM_ACCT_MSG}\s*$$
-  ^\s*RADIUS Authentication Framed-MTU\s*\.+\s+${AUTHC_FRAMED_MTU}\s[bB]ytes\s*$$ -> Record
+  ^\s*RADIUS Authentication Framed-MTU\s*\.+\s+${AUTHC_FRAMED_MTU}\s[bB]ytes\s*$$
   ^\s*Authentication Servers\s*$$ -> AuthC_Servers
   ^\s*$$
   ^. -> Error
