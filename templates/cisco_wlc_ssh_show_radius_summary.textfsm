@@ -11,28 +11,18 @@ Value Filldown FALLBACK_TEST_INTERVAL (\d+)
 Value Filldown MAC_DELIM_AUTHC_MSG (\S+)
 Value Filldown MAC_DELIM_ACCT_MSG (\S+)
 Value Filldown AUTHC_FRAMED_MTU (\d+)
-Value AUTHC_INDEX (\d+)
-Value AUTHC_TYPE (\S+)
+Value Required INDEX (\d+)
 Value AUTHC_SRV_ADDR (\S+)
-Value AUTHC_SRV_PORT (\d+)
-Value AUTHC_SRV_STATE (\S+)
-Value AUTHC_SRV_TIMEOUT (\d+)
-Value AUTHC_SRV_MGMT_TIMEOUT (\d+)
-Value AUTHC_RFC3576 (\S+)
-Value AUTHC_IPSEC_STATE (\S+)
-Value AUTHC_IPSEC_PROFILE (\S+)
-Value AUTHC_IPSEC_REGION_STR (\S+)
-Value ACCT_INDEX (\d+)
-Value ACCT_TYPE (\S+)
 Value ACCT_SRV_ADDR (\S+)
-Value ACCT_SRV_PORT (\d+)
-Value ACCT_SRV_STATE (\S+)
-Value ACCT_SRV_TIMEOUT (\d+)
-Value ACCT_SRV_MGMT_TIMEOUT (\d+)
-Value ACCT_RFC3576 (\S+)
-Value ACCT_IPSEC_STATE (\S+)
-Value ACCT_IPSEC_PROFILE (\S+)
-Value ACCT_IPSEC_REGION_STR (\S+)
+Value TYPE (\S+)
+Value SRV_PORT (\d+)
+Value SRV_STATE (\S+)
+Value SRV_TIMEOUT (\d+)
+Value SRV_MGMT_TIMEOUT (\d+)
+Value RFC3576 (\S+)
+Value IPSEC_STATE (\S+)
+Value IPSEC_PROFILE (\S+)
+Value IPSEC_REGION_STR (\S+)
 
 Start
   ^\s*Vendor Id Backward Compatibility\s*\.+\s+${VENDOR_ID_BWD_COMPAT}\s*$$
@@ -55,15 +45,15 @@ Start
 
 AuthC_Servers
   ^\s*Idx\s+Type\s+Server Address\s+Port\s+State\s+Tout\s+MgmtTout\s+RFC3576\s+IPSec - state\/Profile Name\/RadiusRegionString\s*$$
-  ^\s*[-\s]+$$
-  ^\s*${AUTHC_INDEX}\s+\*\s+${AUTHC_TYPE}\s+${AUTHC_SRV_ADDR}\s+${AUTHC_SRV_PORT}\s+${AUTHC_SRV_STATE}\s+${AUTHC_SRV_TIMEOUT}\s+${AUTHC_SRV_MGMT_TIMEOUT}\s+${AUTHC_RFC3576}\s+${AUTHC_IPSEC_STATE}\s+${AUTHC_IPSEC_PROFILE}\s+\/${AUTHC_IPSEC_REGION_STR}\s*$$ -> Record
+  ^-+
+  ^\s*${INDEX}\s+\*\s+${TYPE}\s+${AUTHC_SRV_ADDR}\s+${SRV_PORT}\s+${SRV_STATE}\s+${SRV_TIMEOUT}\s+${SRV_MGMT_TIMEOUT}\s+${RFC3576}\s+${IPSEC_STATE}\s+${IPSEC_PROFILE}\s+\/${IPSEC_REGION_STR}\s*$$ -> Record
   ^\s*$$
   ^\s*Accounting Servers\s*$$ -> Acct_Servers
   ^. -> Error
 
 Acct_Servers
   ^\s*Idx\s+Type\s+Server Address\s+Port\s+State\s+Tout\s+MgmtTout\s+RFC3576\s+IPSec - state\/Profile Name\/RadiusRegionString\s*$$
-  ^\s*[-\s]+$$
-  ^\s*${ACCT_INDEX}\s+\*\s+${ACCT_TYPE}\s+${ACCT_SRV_ADDR}\s+${ACCT_SRV_PORT}\s+${ACCT_SRV_STATE}\s+${ACCT_SRV_TIMEOUT}\s+${ACCT_SRV_MGMT_TIMEOUT}\s+${ACCT_RFC3576}\s+${ACCT_IPSEC_STATE}\s+${ACCT_IPSEC_PROFILE}\s+\/${ACCT_IPSEC_REGION_STR}\s*$$ -> Record
+  ^-+
+  ^\s*${INDEX}\s+\*\s+${TYPE}\s+${ACCT_SRV_ADDR}\s+${SRV_PORT}\s+${SRV_STATE}\s+${SRV_TIMEOUT}\s+${SRV_MGMT_TIMEOUT}\s+${RFC3576}\s+${IPSEC_STATE}\s+${IPSEC_PROFILE}\s+\/${IPSEC_REGION_STR}\s*$$ -> Record
   ^\s*$$
   ^. -> Error
