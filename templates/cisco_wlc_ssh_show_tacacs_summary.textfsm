@@ -1,22 +1,12 @@
 Value Filldown FALLBACK_TEST_INTERVAL (\d+)
-Value AUTHC_INDEX (\d+)
+Value Required INDEX (\d+)
 Value AUTHC_SRV_ADDR (\S+)
-Value AUTHC_SRV_PORT (\d+)
-Value AUTHC_SRV_STATE (\S+)
-Value AUTHC_SRV_TIMEOUT (\d+)
-Value AUTHC_SRV_MGMT_TIMEOUT (\d+)
-Value AUTHZ_INDEX (\d+)
 Value AUTHZ_SRV_ADDR (\S+)
-Value AUTHZ_SRV_PORT (\d+)
-Value AUTHZ_SRV_STATE (\S+)
-Value AUTHZ_SRV_TIMEOUT (\d+)
-Value AUTHZ_SRV_MGMT_TIMEOUT (\d+)
-Value ACCT_INDEX (\d+)
 Value ACCT_SRV_ADDR (\S+)
-Value ACCT_SRV_PORT (\d+)
-Value ACCT_SRV_STATE (\S+)
-Value ACCT_SRV_TIMEOUT (\d+)
-Value ACCT_SRV_MGMT_TIMEOUT (\d+)
+Value SRV_PORT (\d+)
+Value SRV_STATE (\S+)
+Value SRV_TIMEOUT (\d+)
+Value SRV_MGMT_TIMEOUT (\d+)
 
 Start
   ^\s*Fallback Test:\s*$$
@@ -27,23 +17,23 @@ Start
 
 AuthC_Servers
   ^\s*Idx\s+Server Address\s+Port\s+State\s+Tout\s+MgmtTout\s*$$
-  ^\s*[-\s]+$$
-  ^\s*${AUTHC_INDEX}\s+${AUTHC_SRV_ADDR}\s+${AUTHC_SRV_PORT}\s+${AUTHC_SRV_STATE}\s+${AUTHC_SRV_TIMEOUT}\s+${AUTHC_SRV_MGMT_TIMEOUT}\s*$$ -> Record
-  ^\s*$$
+  ^-+
+  ^\s*${INDEX}\s+${AUTHC_SRV_ADDR}\s+${SRV_PORT}\s+${SRV_STATE}\s+${SRV_TIMEOUT}\s+${SRV_MGMT_TIMEOUT}\s*$$ -> Record
   ^\s*Authorization Servers\s*$$ -> AuthZ_Servers
+  ^\s*$$
   ^. -> Error
 
 AuthZ_Servers
   ^\s*Idx\s+Server Address\s+Port\s+State\s+Tout\s+MgmtTout\s*$$
-  ^\s*[-\s]+$$
-  ^\s*${AUTHZ_INDEX}\s+${AUTHZ_SRV_ADDR}\s+${AUTHZ_SRV_PORT}\s+${AUTHZ_SRV_STATE}\s+${AUTHZ_SRV_TIMEOUT}\s+${AUTHZ_SRV_MGMT_TIMEOUT}\s*$$ -> Record
-  ^\s*$$
+  ^-+
+  ^\s*${INDEX}\s+${AUTHZ_SRV_ADDR}\s+${SRV_PORT}\s+${SRV_STATE}\s+${SRV_TIMEOUT}\s+${SRV_MGMT_TIMEOUT}\s*$$ -> Record
   ^\s*Accounting Servers\s*$$ -> Acct_Servers
+  ^\s*$$
   ^. -> Error
 
 Acct_Servers
   ^\s*Idx\s+Server Address\s+Port\s+State\s+Tout\s+MgmtTout\s*$$
-  ^\s*[-\s]+$$
-  ^\s*${ACCT_INDEX}\s+${ACCT_SRV_ADDR}\s+${ACCT_SRV_PORT}\s+${ACCT_SRV_STATE}\s+${ACCT_SRV_TIMEOUT}\s+${ACCT_SRV_MGMT_TIMEOUT}\s*$$ -> Record
+  ^-+
+  ^\s*${INDEX}\s+${ACCT_SRV_ADDR}\s+${SRV_PORT}\s+${SRV_STATE}\s+${SRV_TIMEOUT}\s+${SRV_MGMT_TIMEOUT}\s*$$ -> Record
   ^\s*$$
   ^. -> Error
