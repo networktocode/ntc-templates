@@ -1,32 +1,36 @@
 Value Filldown FALLBACK_TEST_INTERVAL (\d+)
 Value Required INDEX (\d+)
-Value AUTHC_SRV_ADDR (\S+)
-Value AUTHZ_SRV_ADDR (\S+)
-Value ACCT_SRV_ADDR (\S+)
-Value SRV_PORT (\d+)
-Value SRV_STATE (\S+)
-Value SRV_TIMEOUT (\d+)
-Value SRV_MGMT_TIMEOUT (\d+)
+Value AUTHENTICATION_ADDR (\S+)
+Value AUTHORIZATION_ADDR (\S+)
+Value ACCOUNTING_ADDR (\S+)
+Value PORT (\d+)
+Value STATE (\S+)
+Value TIMEOUT (\d+)
+Value MGMT_TIMEOUT (\d+)
 
 Start
   ^\s*Fallback Test:\s*$$
   ^\s+Interval \(in seconds\)\s*\.+\s+${FALLBACK_TEST_INTERVAL}\s*$$
   ^\s*Authentication Servers\s*$$ -> AuthC_Servers
+  ^\s*Authorization Servers\s*$$ -> AuthZ_Servers
+  ^\s*Accounting Servers\s*$$ -> Acct_Servers
   ^\s*$$
   ^. -> Error
 
 AuthC_Servers
   ^\s*Idx\s+Server Address\s+Port\s+State\s+Tout\s+MgmtTout\s*$$
   ^-+
-  ^\s*${INDEX}\s+${AUTHC_SRV_ADDR}\s+${SRV_PORT}\s+${SRV_STATE}\s+${SRV_TIMEOUT}\s+${SRV_MGMT_TIMEOUT}\s*$$ -> Record
+  ^\s*${INDEX}\s+${AUTHENTICATION_ADDR}\s+${PORT}\s+${STATE}\s+${TIMEOUT}\s+${MGMT_TIMEOUT}\s*$$ -> Record
   ^\s*Authorization Servers\s*$$ -> AuthZ_Servers
+  ^\s*Accounting Servers\s*$$ -> Acct_Servers
   ^\s*$$
   ^. -> Error
 
 AuthZ_Servers
   ^\s*Idx\s+Server Address\s+Port\s+State\s+Tout\s+MgmtTout\s*$$
   ^-+
-  ^\s*${INDEX}\s+${AUTHZ_SRV_ADDR}\s+${SRV_PORT}\s+${SRV_STATE}\s+${SRV_TIMEOUT}\s+${SRV_MGMT_TIMEOUT}\s*$$ -> Record
+  ^\s*${INDEX}\s+${AUTHORIZATION_ADDR}\s+${PORT}\s+${STATE}\s+${TIMEOUT}\s+${MGMT_TIMEOUT}\s*$$ -> Record
+  ^\s*Authentication Servers\s*$$ -> AuthC_Servers
   ^\s*Accounting Servers\s*$$ -> Acct_Servers
   ^\s*$$
   ^. -> Error
@@ -34,6 +38,8 @@ AuthZ_Servers
 Acct_Servers
   ^\s*Idx\s+Server Address\s+Port\s+State\s+Tout\s+MgmtTout\s*$$
   ^-+
-  ^\s*${INDEX}\s+${ACCT_SRV_ADDR}\s+${SRV_PORT}\s+${SRV_STATE}\s+${SRV_TIMEOUT}\s+${SRV_MGMT_TIMEOUT}\s*$$ -> Record
+  ^\s*${INDEX}\s+${ACCOUNTING_ADDR}\s+${PORT}\s+${STATE}\s+${TIMEOUT}\s+${MGMT_TIMEOUT}\s*$$ -> Record
+  ^\s*Authentication Servers\s*$$ -> AuthC_Servers
+  ^\s*Authorization Servers\s*$$ -> AuthZ_Servers
   ^\s*$$
   ^. -> Error
