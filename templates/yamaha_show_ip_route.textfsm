@@ -8,7 +8,6 @@ Value ADDITIONAL_INFO (\S*)
 
 Start
   ^Destination\s+Gateway\s+Interface\s+Kind\s+Additional\s+Info -> Routes
-  ^Destination.* -> Routes
 
 Routes
   ^${NETWORK}(/${MASK})?\s+${NEXTHOP_IP}\s+${NEXTHOP_IF}\s+${PROTOCOL}\s+${ADDITIONAL_INFO} -> Record
