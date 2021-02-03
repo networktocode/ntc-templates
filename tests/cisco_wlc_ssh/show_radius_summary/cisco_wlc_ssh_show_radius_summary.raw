@@ -1,0 +1,29 @@
+
+Vendor Id Backward Compatibility................. Disabled
+Call Station Id Case............................. lower
+Accounting Call Station Id Type.................. Mac Address
+Auth Call Station Id Type........................ AP's Radio MAC Address:SSID
+Extended Source Ports Support.................... Enabled
+Aggressive Failover.............................. Disabled
+Keywrap.......................................... Disabled
+Fallback Test:
+    Test Mode.................................... Passive
+    Probe User Name.............................. cisco-probe
+    Interval (in seconds)........................ 300
+MAC Delimiter for Authentication Messages........ hyphen
+MAC Delimiter for Accounting Messages............ hyphen
+RADIUS Authentication Framed-MTU................. 1300 Bytes
+
+Authentication Servers
+
+Idx  Type  Server Address    Port    State     Tout  MgmtTout  RFC3576  IPSec - state/Profile Name/RadiusRegionString
+---  ----  ----------------  ------  --------  ----  --------  -------  -------------------------------------------------------
+3  * NM    10.255.255.24       1812    Enabled   5     5         Disabled  Disabled - /none
+4  * NM    10.255.255.25       1812    Enabled   5     5         Disabled  Disabled - /none
+
+Accounting Servers
+
+Idx  Type  Server Address    Port    State     Tout  MgmtTout  RFC3576  IPSec - state/Profile Name/RadiusRegionString
+---  ----  ----------------  ------  --------  ----  --------  -------  -------------------------------------------------------
+3  * N     10.255.255.26       1813    Enabled   5     5         N/A       Disabled - /none
+4  * N     10.255.255.27       1813    Enabled   5     5         N/A       Disabled - /none
