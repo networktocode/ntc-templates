@@ -320,7 +320,7 @@ tests/test_development_scripts.py::test_ensure_space_comments PASSED     [  0%]
 tests/test_development_scripts.py::test_update_yaml_comments PASSED      [  0%]
 tests/test_development_scripts.py::test_transform_file PASSED            [  0%]
 tests/test_testcases_exists.py::test_verify_parsed_and_reference_data_exists[tests/yamaha/show_environment] PASSED [ 99%]
-1291tests/test_testcases_exists.py::test_verify_parsed_and_reference_data_exists[tests/yamaha/show_ip_route] PASSED [100%]
+tests/test_testcases_exists.py::test_verify_parsed_and_reference_data_exists[tests/yamaha/show_ip_route] PASSED [100%]
 
 ============================ 1065 passed in 22.59s =============================
 py37 create: /home/travis/build/networktocode/ntc-templates/.tox/py37
