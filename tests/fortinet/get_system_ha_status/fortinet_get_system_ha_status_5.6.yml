@@ -1,0 +1,17 @@
+---
+parsed_sample:
+  - ha_health: "OK"
+    model: "FortiGate-200D"
+    ha_mode: "HA A-P"
+    ha_group: "0"
+    cluster_uptime: "913 days 6:17:44"
+    cluster_state_changed_time: "2020-11-18 20:06:07"
+    ha_session_pickup_status: "enable"
+    ha_session_pickup_delay: "disable"
+    ha_override_status: "disable"
+    ha_master_unit_name: "fgt_200d_b"
+    ha_slave_unit_name: "fgt_200d_a"
+    ha_master_unit_serial: "FG200Dyyyyyyyyyy"
+    ha_slave_unit_serial: "FG200Dxxxxxxxxxx"
+    ha_master_unit_index: "0"
+    ha_slave_unit_index: "1"

@@ -1,0 +1,17 @@
+---
+parsed_sample:
+  - ha_health: "OK"
+    model: "FortiGate-600E"
+    ha_mode: "HA A-P"
+    ha_group: "5"
+    cluster_uptime: "36 days 22:20:40"
+    cluster_state_changed_time: "2020-12-02 22:40:46"
+    ha_session_pickup_status: "enable"
+    ha_session_pickup_delay: "disable"
+    ha_override_status: "enable"
+    ha_master_unit_name: "fgt-600e_a"
+    ha_slave_unit_name: "fgt-600e_b"
+    ha_master_unit_serial: "FG6H0Exxxxxxxxxx"
+    ha_slave_unit_serial: "FG6H0Eyyyyyyyyyy"
+    ha_master_unit_index: "1"
+    ha_slave_unit_index: "0"
