@@ -1,0 +1,133 @@
+== [onboard]
+        ==[dmz1]
+                mode: static
+                ip: 0.0.0.0 0.0.0.0
+                ipv6: ::/0
+                status: down
+                speed: n/a
+        ==[dmz2]
+                mode: static
+                ip: 0.0.0.0 0.0.0.0
+                ipv6: ::/0
+                status: down
+                speed: n/a
+        ==[mgmt]
+                mode: static
+                ip: 1.2.3.4 255.255.255.248
+                ipv6: ::/0
+                status: up
+                speed: 1000Mbps (Duplex: full)
+        ==[port1]
+                mode: static
+                ip: 2.3.4.5 255.255.255.224
+                ipv6: ::/0
+                status: up
+                speed: 1000Mbps (Duplex: full)
+        ==[port2]
+                mode: static
+                ip: 0.0.0.0 0.0.0.0
+                ipv6: ::/0
+                status: up
+                speed: 1000Mbps (Duplex: full)
+        ==[port3]
+                mode: static
+                ip: 3.4.5.6 255.255.255.248
+                ipv6: ::/0
+                status: up
+                speed: 1000Mbps (Duplex: full)
+        ==[port4]
+                mode: static
+                ip: 192.168.107.1 255.255.255.0
+                ipv6: ::/0
+                status: up
+                speed: 1000Mbps (Duplex: full)
+        ==[port5]
+                mode: static
+                ip: 10.107.128.68 255.255.255.248
+                ipv6: ::/0
+                status: up
+                speed: 1000Mbps (Duplex: full)
+        ==[port6]
+                mode: static
+                ip: 0.0.0.0 0.0.0.0
+                ipv6: ::/0
+                status: down
+                speed: n/a
+        ==[port7]
+                mode: static
+                ip: 0.0.0.0 0.0.0.0
+                ipv6: ::/0
+                status: down
+                speed: n/a
+        ==[port8]
+                mode: static
+                ip: 0.0.0.0 0.0.0.0
+                ipv6: ::/0
+                status: down
+                speed: n/a
+        ==[port9]
+                mode: static
+                ip: 0.0.0.0 0.0.0.0
+                ipv6: ::/0
+                status: down
+                speed: n/a
+        ==[port10]
+                mode: static
+                ip: 0.0.0.0 0.0.0.0
+                ipv6: ::/0
+                status: down
+                speed: n/a
+        ==[port11]
+                mode: static
+                ip: 0.0.0.0 0.0.0.0
+                ipv6: ::/0
+                status: down
+                speed: n/a
+        ==[port12]
+                mode: static
+                ip: 0.0.0.0 0.0.0.0
+                ipv6: ::/0
+                status: down
+                speed: n/a
+        ==[port13]
+                mode: static
+                ip: 0.0.0.0 0.0.0.0
+                ipv6: ::/0
+                status: down
+                speed: n/a
+        ==[port14]
+                mode: static
+                ip: 0.0.0.0 0.0.0.0
+                ipv6: ::/0
+                status: down
+                speed: n/a
+        ==[port15]
+                mode: static
+                ip: 0.0.0.0 0.0.0.0
+                ipv6: ::/0
+                status: down
+                speed: n/a
+        ==[port16]
+                mode: static
+                ip: 0.0.0.0 0.0.0.0
+                ipv6: ::/0
+                status: up
+                speed: 1000Mbps (Duplex: full)
+        ==[wan1]
+                mode: dhcp
+                ip: 0.0.0.0 0.0.0.0
+                ipv6: ::/0
+                status: down
+                speed: n/a
+        ==[wan2]
+                mode: dhcp
+                ip: 0.0.0.0 0.0.0.0
+                ipv6: ::/0
+                status: down
+                speed: n/a
+        ==[modem]
+                mode: pppoe
+                ip: 0.0.0.0 0.0.0.0
+                ipv6: ::/0
+                status: down
+                speed: n/a

@@ -1,0 +1,45 @@
+HA Health Status: OK
+Model: FortiGate-200D
+Mode: HA A-P
+Group: 0
+Debug: 0
+Cluster Uptime: 913 days 6:17:44
+Cluster state change time: 2020-11-18 20:06:07
+Master selected using:
+    <2020/11/18 20:06:07> FG200Dyyyyyyyyyy is selected as the master because it has the least value 0 of link-failure + pingsvr-failure.
+ses_pickup: enable, ses_pickup_delay=disable
+override: disable
+Configuration Status:
+    FG200Dxxxxxxxxxx(updated 3 seconds ago): in-sync
+    FG200Dyyyyyyyyyy(updated 2 seconds ago): in-sync
+System Usage stats:
+    FG200Dxxxxxxxxxx(updated 3 seconds ago):
+        sessions=783, average-cpu-user/nice/system/idle=0%/0%/0%/100%, memory=36%
+    FG200Dyyyyyyyyyy(updated 2 seconds ago):
+        sessions=2133, average-cpu-user/nice/system/idle=0%/0%/0%/100%, memory=45%
+HBDEV stats:
+    FG200Dxxxxxxxxxx(updated 3 seconds ago):
+        port16: physical/1000auto, up, rx-bytes/packets/dropped/errors=159611572717/161193511/0/0, tx=33081101596/72820100/0/0
+    FG200Dyyyyyyyyyy(updated 2 seconds ago):
+        port16: physical/1000auto, up, rx-bytes/packets/dropped/errors=33102078904/72841639/0/0, tx=159622538782/161222515/0/0
+MONDEV stats:
+    FG200Dxxxxxxxxxx(updated 3 seconds ago):
+        port1: physical/1000auto, up, rx-bytes/packets/dropped/errors=772333476/10120455/0/0, tx=0/0/0/0
+        port2: physical/1000auto, up, rx-bytes/packets/dropped/errors=24489027465/180044269/0/0, tx=1216527080/20272865/0/0
+        port3: physical/1000auto, up, rx-bytes/packets/dropped/errors=738612670/8494189/0/0, tx=0/0/0/0
+        port4: physical/1000auto, up, rx-bytes/packets/dropped/errors=1326403723/10314862/0/0, tx=7221960/120366/0/0
+        port9: physical/1000auto, up, rx-bytes/packets/dropped/errors=631932574/7780810/0/0, tx=0/0/0/0
+        port10: physical/1000auto, up, rx-bytes/packets/dropped/errors=1448638924/21408174/0/0, tx=0/0/0/0
+    FG200Dyyyyyyyyyy(updated 2 seconds ago):
+        port1: physical/1000auto, up, rx-bytes/packets/dropped/errors=4792670497191/8032421997/0/0, tx=2567023541941/6420616690/0/0
+        port2: physical/1000auto, up, rx-bytes/packets/dropped/errors=3164841988838/9813426301/0/0, tx=5238589087538/11151680911/0/0
+        port3: physical/1000auto, up, rx-bytes/packets/dropped/errors=2121416101948/1691293285/0/0, tx=193581440599/636568993/0/0
+        port4: physical/1000auto, up, rx-bytes/packets/dropped/errors=195739651207/655711324/0/0, tx=2119206966925/1682026942/0/0
+        port9: physical/1000auto, up, rx-bytes/packets/dropped/errors=4228611730/46724818/0/0, tx=1390605465/10026243/0/0
+        port10: physical/1000auto, up, rx-bytes/packets/dropped/errors=1353423864/19920614/0/0, tx=89179816/1486318/0/0
+Slave : fgt_200d_a    , FG200Dxxxxxxxxxx, cluster index = 1
+Master: fgt_200d_b    , FG200Dyyyyyyyyyy, cluster index = 0
+number of vcluster: 1
+vcluster 1: standby 169.254.0.1
+Slave : FG200Dxxxxxxxxxx, operating cluster index = 1
+Master: FG200Dyyyyyyyyyy, operating cluster index = 0
