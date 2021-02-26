@@ -14,12 +14,8 @@ Start
   ^${BGP_NEIGH}\s+\S+\s+${NEIGH_AS}.* -> Continue
   ^(\s+\d+?){5}\s+\S+?\s+${STATE_PFXRCD}\s*$$ -> Record
   ^${BGP_NEIGH}\s+\S+\s+${NEIGH_AS}(\s+\d+?){5}\s+\S+?\s+${STATE_PFXRCD}\s*$$ -> Record
-  # Match other text lines
-  ^.+
   # Match lines that are spaces
   ^\s+$$
-  # Errors
-  ^.+ -> Error
 
 Done
   ^.*
