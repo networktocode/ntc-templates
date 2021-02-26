@@ -2,6 +2,7 @@
 parsed_sample:
   - hostname: "MYCOOLEFIREWALLNAME"
     version: "FortiGate-1500D v6.0.7,build0302,191112 (GA)"
+    signature: ""
     virus_db: "16.00560(2012-10-19 08:31)"
     extended_db: "1.00000(2018-04-09 18:07)"
     extreme_db: "1.00000(2018-04-09 18:07)"
@@ -15,6 +16,7 @@ parsed_sample:
     bios_version: "05000006"
     system_part_number: "P12917-08"
     log_hard_disk: "Available"
+    private_encryption: ""
     operation_mode: "NAT"
     current_virtual_domain: "root"
     max_number_of_virtual_domains: "10"
