@@ -84,6 +84,25 @@ $
 >>> 
 ```
 
+### Define Custom Templates Directory
+
+To use a custom templates directory set the environmental variable `NTC_TEMPLATES_DIR`.
+
+**Requirements**
+1. `index` file needs to be defined with standard structure. [See](#Index-File)
+2. Each custom template should be defined.
+
+To manaully set variable:
+```shell
+export NTC_TEMPLATES_DIR=/path/to/new/location/templates
+```
+
+To set within your program:
+```python
+import os
+os.environ["NTC_TEMPLATES_DIR"] = "/path/to/new/templates/location/templates"
+```
+
 Contributing
 ------------
 
@@ -267,7 +286,7 @@ A cli utility is provided to assist with properly building the parsed files. Thi
   The `-c` and `-cd` arguments use `lib.ntc_templates.parse.parse_output()` to generate the parsed data; this means that you can use these arguments to auto-generate the test `.yml` file(s) for new templates; just be sure that the template's parsing behavior meets expectations. In order for the data to be parsed, the template must be placed in `templates/` and the `templates/index` file must be updated to correctly point to the template file(s).
 
 ```bash
-$ /development_scripts.py -yd tests/cisco_ios/show_mac-address-table
+$ ./development_scripts.py -yd tests/cisco_ios/show_mac-address-table
 tests/cisco_ios/show_mac-address-table/cisco_ios_show_mac-address-table2.yml
 tests/cisco_ios/show_mac-address-table/cisco_ios_show_mac-address-table3.yml
 tests/cisco_ios/show_mac-address-table/cisco_ios_show_mac-address-table5.yml
@@ -295,37 +314,47 @@ To add additional raw/parsed tests for a command:
   * New parsed: `./tests/cisco_ios/show_version/cisco_ios_show_version_stack_platforms.yml`
 
 #### Testing
-You can test your changes locally within your Git branch before submitting a PR. If you do not have **tox** already installed, you can do that using pip or your systems package manager. Tox should be ran inside the **ntc-templates** root directory. The tox file is configured to run against python3.6, so either python3.6 needs to be available, or the tox.ini file will need to be updated with an available Python version.
+You can test your changes locally within your Git branch before submitting a PR. If you do not have **tox** already installed, you can do that using pip or your systems package manager. Tox should be ran inside the **ntc-templates** root directory. The tox file is configured to run against python3.6,python3.7, and python3.8, if none/some of those python versions are unavailable **tox** will skip them. The tox.ini file can be updated with an available Python version.
 ```bash
 $ tox
-GLOB sdist-make: /home/admin/ntc-templates/setup.py
-py36 inst-nodeps: /home/admin/ntc-templates/.tox/dist/ntc_templates-1.3.0.zip
-py36 installed: appdirs==1.4.3,atomicwrites==1.3.0,attrs==19.3.0,black==19.10b0,Click==7.0,future==0.18.2,importlib-metadata==0.23,more-itertools==7.2.0,ntc-templates==1.3.0,packaging==19.2,pathspec==0.6.0,pluggy==0.13.0,py==1.8.0,pyparsing==2.4.5,pytest==5.2.4,PyYAML==5.1.2,regex==2019.11.1,six==1.13.0,terminal==0.4.0,textfsm==1.1.0,toml==0.10.0,typed-ast==1.4.0,wcwidth==0.1.7,yamllint==1.18.0,zipp==0.6.0
-py36 runtests: PYTHONHASHSEED='3677750645'
-py36 runtests: commands[0] | black ./ --diff --check
+GLOB sdist-make: /home/travis/build/networktocode/ntc-templates/setup.py
+py36 create: /home/travis/build/networktocode/ntc-templates/.tox/py36
+py36 inst: /home/travis/build/networktocode/ntc-templates/.tox/.tmp/package/1/ntc_templates-1.6.0.zip
+py36 installed: appdirs==1.4.4,attrs==20.3.0,black==20.8b1,click==7.1.2,dataclasses==0.8,future==0.18.2,importlib-metadata==3.7.0,iniconfig==1.1.1,mypy-extensions==0.4.3,ntc-templates==1.6.0,packaging==20.9,pathspec==0.8.1,pluggy==0.13.1,py==1.10.0,pyparsing==2.4.7,pytest==6.2.2,PyYAML==5.4.1,regex==2020.11.13,ruamel.yaml==0.16.12,ruamel.yaml.clib==0.2.2,six==1.15.0,textfsm==1.1.0,toml==0.10.2,typed-ast==1.4.2,typing-extensions==3.7.4.3,yamllint==1.26.0,zipp==3.4.0
+py36 run-test-pre: PYTHONHASHSEED='4147443973'
+py36 run-test: commands[0] | black ./ --diff --check
 All done! ✨ 🍰 ✨
-8 files would be left unchanged.
-py36 runtests: commands[1] | yamllint tests/
-py36 runtests: commands[2] | pytest -vv
-================================================================ test session starts =================================================================
-platform linux -- Python 3.6.8, pytest-5.2.4, py-1.8.0, pluggy-0.13.0 -- /home/jmcgill/repos/ntc-templates/.tox/py36/bin/python3.6
-cachedir: .pytest_cache
-rootdir: /home/jmcgill/repos/ntc-templates
-collected 428 items                                                                                                                                  
+9 files would be left unchanged.
+py36 run-test: commands[1] | yamllint tests/
+py36 run-test: commands[2] | pytest -vv
+============================= test session starts ==============================
+platform linux -- Python 3.6.7, pytest-6.2.2, py-1.10.0, pluggy-0.13.1 -- /home/travis/build/networktocode/ntc-templates/.tox/py36/bin/python
+cachedir: .tox/py36/.pytest_cache
+rootdir: /home/travis/build/networktocode/ntc-templates
+collected 1065 items                                                           
 
-tests/test_index_order.py::test_index_ordering PASSED                                                                                          [  0%]
-tests/test_structured_data_against_parsed_reference_files.py::test_raw_data_against_mock[tests/alcatel_sros/oam_mac-ping/alcatel_sros_oam_mac-ping.raw] PASSED [  0%]
-tests/test_structured_data_against_parsed_reference_files.py::test_raw_data_against_mock[tests/alcatel_sros/show_service_id_base/alcatel_sros_show_service_id_base.raw] PASSED [  0%]
-tests/test_structured_data_against_parsed_reference_files.py::test_raw_data_against_mock[tests/alcatel_sros/show_router_bgp_routes_vpn-ipv4/alcatel_sros_show_router_bgp_routes_vpn-ipv4.raw] PASSED [  0%]
-tests/test_structured_data_against_parsed_reference_files.py::test_raw_data_against_mock[tests/brocade_fastiron/show_lldp_neighbors/brocade_fastiron_show_lldp_neighbors.raw] PASSED [  1%]
-...
-tests/test_structured_data_against_parsed_reference_files.py::test_raw_data_against_mock[tests/cisco_nxos/show_ip_interface_brief/cisco_nxos_show_ip_interface_brief.raw] PASSED [ 99%]
-tests/test_testcases_exists.py::test_verify_parsed_and_reference_data_exists PASSED                                                            [100%]
+tests/test_development_scripts.py::test_ensure_spacing_for_multiline_comment PASSED [  0%]
+tests/test_development_scripts.py::test_ensure_space_after_octothorpe PASSED [  0%]
+tests/test_development_scripts.py::test_ensure_space_comments PASSED     [  0%]
+tests/test_development_scripts.py::test_update_yaml_comments PASSED      [  0%]
+tests/test_development_scripts.py::test_transform_file PASSED            [  0%]
+tests/test_testcases_exists.py::test_verify_parsed_and_reference_data_exists[tests/yamaha/show_environment] PASSED [ 99%]
+tests/test_testcases_exists.py::test_verify_parsed_and_reference_data_exists[tests/yamaha/show_ip_route] PASSED [100%]
 
-================================================================ 428 passed in 43.84s ================================================================
-______________________________________________________________________ summary _______________________________________________________________________
+============================ 1065 passed in 22.59s =============================
+py37 create: /home/travis/build/networktocode/ntc-templates/.tox/py37
+SKIPPED: InterpreterNotFound: python3.7
+py38 create: /home/travis/build/networktocode/ntc-templates/.tox/py38
+SKIPPED: InterpreterNotFound: python3.8
+___________________________________ summary ____________________________________
   py36: commands succeeded
+SKIPPED:  py37: InterpreterNotFound: python3.7
+SKIPPED:  py38: InterpreterNotFound: python3.8
   congratulations :)
+The command "tox" exited with 0.
+
+
+Done. Your build exited with 0.
 $
 ```
 
@@ -336,6 +365,10 @@ For any questions or comments, please feel free to swing by the [networktocode s
 
 Sign up [here](http://slack.networktocode.com/)
 
+CHANGELOG
+---------
+
+Changelog should be generated using [github_changelog_generator](https://github.com/github-changelog-generator/github-changelog-generator)
 
 FAQ
 ---
@@ -384,7 +417,7 @@ happen. That includes updating the index file appropriately and adding proper ra
 _Why don't you grab all of the data in the template?_
 
 There is no intention for ntc-templates to become feature complete, some of the data is less interesting, or can be better understood from 
-other commands. This is actually an area where the project choose to be loose, as we do not want to over-burden the contributor. If you feel 
+other commands. This is actually an area where the project chose to be loose, as we do not want to over-burden the contributor. If you feel 
 that the additional data should be added, you are welcome to add the feature, but it would not be considered a bug, and thus not supported by 
 the maintainers of the this project.
 
@@ -404,7 +437,7 @@ The most likely reasons are:
 * Did not provide the data required to act upon the request.
 * A prolonged time with no response.  
 
-_What is meant that the is a parsing project, not a data modeling project?_
+_What is meant that this is a parsing project, not a data modeling project?_
 
 The project intends to parse, meaning post processing is assumed in order to normalize the data. This project does not intend to solve that 
 problem set. This is often noted in keys being different between the same command on multiple OS's. This was not intentional as at first there was not strict enforcement. That being said, there is no intention to retrofit this use case for the above stated reasons. This use case is 

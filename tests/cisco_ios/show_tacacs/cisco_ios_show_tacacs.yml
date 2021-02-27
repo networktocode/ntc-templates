@@ -1,6 +1,7 @@
 ---
 parsed_sample:
   - tacacs_server: "10.1.1.140"
+    tacacs_server_name: ""
     server_port: "49"
     socket_opens: "138084"
     socket_closes: "137992"
@@ -11,6 +12,7 @@ parsed_sample:
     packets_sent: "147753"
     packet_received: "147693"
   - tacacs_server: "10.2.1.140"
+    tacacs_server_name: ""
     server_port: "49"
     socket_opens: "2027"
     socket_closes: "2027"

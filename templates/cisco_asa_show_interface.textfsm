@@ -31,6 +31,7 @@ Start
   ^.*BW\s+${BANDWIDTH},\s+DLY\s+${DELAY}
   ^.*\(${DUPLEX}\),\s+Auto-Speed\(${SPEED}\)
   ^.*\(${DUPLEX}\),\s+\d+\s+Mbps\(${SPEED}\)
+  ^.*Duplex,\s+Auto-Speed
   ^.*Description:\s+${DESCRIPTION}
   ^.*MAC\s+address\s+${ADDRESS},\s+MTU\s+${MTU}
   ^.*MAC\s+address\s+${ADDRESS},\s+MTU\s+not\s+set

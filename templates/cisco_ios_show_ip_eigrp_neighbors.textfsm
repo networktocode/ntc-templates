@@ -10,7 +10,8 @@ Value SEQ_NUM (\d+)
 
 Start
   ^.*\s+${ADDRESS}\s+${INTERFACE}\s+${HOLD}\s+${UPTIME}\s+${SRTT}\s+${RTO}\s+${Q_CNT}\s+${SEQ_NUM}\s*$$ -> Record
-  ^\s*(?:IP-|)EIGRP(?:-IPv(?:4|6)|)\s+[Nn]eighbors\s+for\s+(?:process\s+|AS\()${AS}(?:\)|)\s*$$
+  ^\s*(IP-|)EIGRP(-IPv[46](:\(\d+\))?|)\s+[Nn]eighbors\s+for\s+(process\s+|AS\()${AS}(\)|)\s*$$
+  ^\s*(IP-|)EIGRP(-IPv[46](:\(\d+\))?|)\s+[Nn]eighbors\s+for\s+(process\s+|AS\()${AS}(\)|)\s+VRF default\s*$$
   ^\s*$$
   ^\s*H\s+Address\s+Interface\s+Hold\s+Uptime\s+SRTT\s+RTO\s+Q\s+Seq\s*$$
   ^\s+\(sec\)\s+\(ms\)\s+Cnt\s+Num\s*$$

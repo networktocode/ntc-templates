@@ -1,3 +1,4 @@
+Value TACACS_SERVER_NAME (.+?)
 Value TACACS_SERVER (.+?)
 Value SERVER_PORT (\d+)
 Value SOCKET_OPENS (\d+)
@@ -13,6 +14,7 @@ Value PACKET_RECEIVED (\d+)
 Start
   ^Tacacs -> Record
   ^\s+Server\s+address:\s+${TACACS_SERVER}\s*$$
+  ^\s+Server\s+name:\s+${TACACS_SERVER_NAME}\s*$$
   ^\s+Server\s+port:\s+${SERVER_PORT}\s*$$
   ^\s+Socket\s+opens:\s+ ${SOCKET_OPENS}\s*$$
   ^\s+Socket\s+closes:\s+${SOCKET_CLOSES}\s*$$

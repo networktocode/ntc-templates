@@ -1,0 +1,30 @@
+Value PORT (\S+)
+Value TYPE (\S*)
+Value INTRUSION_ALERT (Yes|No)
+Value ENABLED (Yes|No)
+Value STATUS (Up|Down)
+Value MODE (\S+)
+Value MDI_MODE (MDI\S*|Auto|NA)
+Value FLOW_CTRL (on|off)
+Value BCAST_LIMIT (\d+)
+
+Start
+  ^\s+Status.*Status\s*
+  ^\s*$$
+  ^\s+\|\s+Intrusion\s+MDI\s+Flow(?:\s+Bcast)?\s*$$
+  ^\s+Port\s+Type\s+\|\s+Alert\s+Enabled\s+Status\s+Mode\s+Mode\s+Ctrl\s*$$ -> showintbrief1
+  ^\s+Port\s+Type\s+\|\s+Alert\s+Enabled\s+Status\s+Mode\s+Mode\s+Ctrl\s+Limit\s*$$ -> showintbrief2
+  ^. -> Error
+
+showintbrief1
+  ^\s+${PORT}\s+${TYPE}\s+\|\s+${INTRUSION_ALERT}\s+${ENABLED}\s+${STATUS}\s+${MODE}\s+(?:${MDI_MODE}\s+)?${FLOW_CTRL}\s*$$ -> Record
+  ^\s*-+(?:\s|-|\+)+$$
+  ^\s*$$
+  ^. -> Error
+
+showintbrief2
+  ^\s+${PORT}\s+${TYPE}\s+\|\s+${INTRUSION_ALERT}\s+${ENABLED}\s+${STATUS}\s+${MODE}\s+(?:${MDI_MODE}\s+)?${FLOW_CTRL}\s+${BCAST_LIMIT}\s*$$ -> Record
+  ^\s*-+(?:\s|-|\+)+$$
+  ^\s*$$
+  ^. -> Error
+

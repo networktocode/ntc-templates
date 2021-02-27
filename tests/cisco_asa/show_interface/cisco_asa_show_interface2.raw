@@ -1,0 +1,29 @@
+Interface GigabitEthernet0/0 "outside", is up, line protocol is up
+  Hardware is i82540EM rev03, BW 1000 Mbps, DLY 10 usec
+        Full-Duplex, Auto-Speed
+        Input flow control is unsupported, output flow control is off
+        Description: to iosv-1
+        MAC address fa16.3eb0.c3d3, MTU 1500
+        IP address 10.0.0.5, subnet mask 255.255.255.252
+        2 packets input, 0 bytes, 0 no buffer
+        Received 0 broadcasts, 0 runts, 0 giants
+        0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored, 0 abort
+        0 pause input, 0 resume input
+        0 L2 decode drops
+        1 packets output, 0 bytes, 0 underruns
+        0 pause output, 0 resume output
+        0 output errors, 0 collisions, 2 interface resets
+        0 late collisions, 0 deferred
+        0 input reset drops, 0 output reset drops
+        input queue (blocks free curr/low): hardware (511/511)
+        output queue (blocks free curr/low): hardware (511/511)
+  Traffic Statistics for "outside":
+        2 packets input, 381 bytes
+        1 packets output, 28 bytes
+        2 packets dropped
+      1 minute input rate 0 pkts/sec,  0 bytes/sec
+      1 minute output rate 0 pkts/sec,  0 bytes/sec
+      1 minute drop rate, 0 pkts/sec
+      5 minute input rate 0 pkts/sec,  0 bytes/sec
+      5 minute output rate 0 pkts/sec,  0 bytes/sec
+      5 minute drop rate, 0 pkts/sec
