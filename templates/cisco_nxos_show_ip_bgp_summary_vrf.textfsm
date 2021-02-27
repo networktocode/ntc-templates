@@ -11,9 +11,9 @@ Start
   # Match RID and Local AS
   ^BGP router identifier ${ROUTER_ID}, local AS number ${LOCAL_AS}
   # Match Neighbor lines
-  ^${BGP_NEIGH}\s+\S+\s+${NEIGH_AS}.* -> Continue
-  ^(\s+\d+?){5}\s+\S+?\s+${STATE_PFXRCD}\s*$$ -> Record
-  ^${BGP_NEIGH}\s+\S+\s+${NEIGH_AS}(\s+\d+?){5}\s+\S+?\s+${STATE_PFXRCD}\s*$$ -> Record
+  ^${BGP_NEIGH}\s+${BGP_VER}\s+${NEIGH_AS}.* -> Continue
+  ^\s+${MSG_RCVD}\s+${MSG_SENT}\s+${TBLVER}\s+${IN_QUEUE}\s+${OUT_QUEUE}\s+${UP_DOWN}\s+${STATE_PFXRCD}\s*$$ -> Record
+  ^${BGP_NEIGH}\s+${BGP_VER}\s+${NEIGH_AS}\s+${MSG_RCVD}\s+${MSG_SENT}\s+${TBLVER}\s+${IN_QUEUE}\s+${OUT_QUEUE}\s+${UP_DOWN}\s+${STATE_PFXRCD}\s*$$ -> Record
   # Match lines that are spaces
   ^\s+$$
 
