@@ -15,9 +15,13 @@ Value TUNNELID (0x[a-f\d]+)
 Value ENCAP (\w+)
 
 Start
+  ^.+show\sip\sroute
   ^IP\s+Route\s+Table\s+for\s+VRF\s+"${VRF}"\s*$$
   # Match the Network/Prefix Line
   ^\s*${NETWORK}\/${MASK}, ubest/mbest:
+  #
+  # Match empty vrf
+  ^\s*Route not found -> Record
   #
   # Match VXLAN Route Entry
   ^\s+\*+via ${NEXTHOP_IP}(%${NEXTHOP_VRF})?, \[${DISTANCE}/${METRIC}\], ${UPTIME}, ${PROTOCOL}, ${TYPE}, tag ${TAG}\s+segid: ${SEGID}\s+tunnelid: ${TUNNELID}\s+encap: ${ENCAP} -> Record
