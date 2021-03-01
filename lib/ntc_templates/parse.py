@@ -12,11 +12,13 @@ except ImportError:
 
 
 def _get_template_dir():
-    package_dir = os.path.dirname(__file__)
-    template_dir = os.path.join(package_dir, "templates")
-    if not os.path.isdir(template_dir):
-        project_dir = os.path.dirname(os.path.dirname(os.path.dirname(template_dir)))
-        template_dir = os.path.join(project_dir, "templates")
+    template_dir = os.environ.get("NTC_TEMPLATES_DIR")
+    if template_dir is None:
+        package_dir = os.path.dirname(__file__)
+        template_dir = os.path.join(package_dir, "templates")
+        if not os.path.isdir(template_dir):
+            project_dir = os.path.dirname(os.path.dirname(os.path.dirname(template_dir)))
+            template_dir = os.path.join(project_dir, "templates")
 
     return template_dir
 
