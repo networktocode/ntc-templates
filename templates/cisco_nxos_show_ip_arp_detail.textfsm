@@ -1,6 +1,6 @@
 Value ADDRESS (\d+\.\d+\.\d+\.\d+)
-Value AGE (-|(\d+(:|\.)\S+))
-Value MAC (INCOMPLETE|(\S{4}\.\S{4}\.\S{4}))
+Value AGE (\S+)
+Value MAC (\S+)
 Value INTERFACE (\S+)
 Value PHYSICAL_INTERFACE (\S+)
 
