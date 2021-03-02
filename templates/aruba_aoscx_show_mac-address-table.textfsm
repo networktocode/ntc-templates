@@ -1,0 +1,14 @@
+Value MAC (\S+)
+Value VLAN (\d+)
+Value TYPE ([a-z]+)
+Value PORT (\S+)
+
+Start
+  ^MAC\s+age-time\s+:\s+\d+\s+seconds
+  ^Number\s+of\s+MAC\s+addresses\s+:\s+\d+
+  ^MAC\s+Address\s+VLAN\s+Type\s+Port
+  ^\-{2,}
+  ^${MAC}\s+${VLAN}\s+${TYPE}\s+${PORT} -> Record
+  ^. -> Error
+
+Done

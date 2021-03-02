@@ -1,0 +1,22 @@
+Value SESSION (\d+)
+Value IFACE (\S+)
+Value VRF (\S+)
+Value SOURCE_IP (\d+\.\d+\.\d+\.\d+)
+Value DESTINATION_IP (\d+\.\d+\.\d+\.\d+)
+Value ECHO (\w+)
+Value STATE (\w+)
+Value APPLICATION (\w+)
+
+Start
+  ^Admin\s+status:\s+.*
+  ^Echo\s+source\s+IP:\s+.*
+  ^Statistics:.*
+  ^Total\s+number\s+of\s+control\s+packets\s+transmitted:\s+\d+
+  ^Total\s+number\s+of\s+control\s+packets\s+received:\s+\d+
+  ^Total\s+number\s+of\s+control\s+packets\s+dropped:\s+\d+
+  ^Session\s+Interface\s+VRF\s+Source\s+IP\s+Destination\s+IP\s+Echo\s+State\s+Protocol
+  ^\W+
+  ^${SESSION}\s+${IFACE}\s+${VRF}\s+${SOURCE_IP}\s+${DESTINATION_IP}\s+${ECHO}\s+${STATE}\s+${APPLICATION} -> Record
+  ^. -> Error
+
+Done

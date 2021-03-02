@@ -1,0 +1,20 @@
+Value Required LOCAL_PORT (\S+)
+Value Required CHASSIS_ID (\S+)
+Value PORT_ID (\S+)
+Value PORT_DESC (.*)
+Value TTL (\d+)
+Value SYS_NAME (\S+)
+
+Start
+  ^LLDP\s+Neighbor\s+Information
+  ^={2,}
+  ^Total\s+Neighbor\s+Entries\s+:\s+\d+
+  ^Total\s+Neighbor\s+Entries\s+Deleted\s+:\s+\d+
+  ^Total\s+Neighbor\s+Entries\s+Dropped\s+:\s+\d+
+  ^Total\s+Neighbor\s+Entries\s+Aged-Out\s+:\s+\d+
+  ^LOCAL-PORT\s+CHASSIS-ID\s+PORT-ID\s+PORT-DESC\s+TTL\s+SYS-NAME
+  ^-{2,}
+  ^${LOCAL_PORT}\s+${CHASSIS_ID}\s+${PORT_ID}\s+${PORT_DESC}\s+${TTL}\s+${SYS_NAME} -> Record
+  ^. -> Error
+
+Done

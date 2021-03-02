@@ -1,0 +1,18 @@
+---
+parsed_sample:
+  - SESSION: 1
+    IFACE: 2/1/28
+    VRF: default
+    SOURCE_IP: 172.25.0.190
+    DESTINATION_IP: 172.25.0.189
+    ECHO: enabled
+    STATE: up
+    APPLICATION: bgp
+  - SESSION: 2
+    IFACE: 1/1/28
+    VRF: default
+    SOURCE_IP: 172.25.0.186
+    DESTINATION_IP: 172.25.0.185
+    ECHO: enabled
+    STATE: up
+    APPLICATION: bgp

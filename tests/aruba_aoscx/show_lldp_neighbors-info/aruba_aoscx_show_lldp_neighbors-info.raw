@@ -1,0 +1,16 @@
+
+LLDP Neighbor Information
+=========================
+
+Total Neighbor Entries          : 5
+Total Neighbor Entries Deleted  : 0
+Total Neighbor Entries Dropped  : 0
+Total Neighbor Entries Aged-Out : 0
+
+LOCAL-PORT  CHASSIS-ID         PORT-ID          PORT-DESC               TTL      SYS-NAME
+------------------------------------------------------------------------------------------
+1/1/1       88:3a:30:a3:86:80  1/1/28           1/1/28                  120      sw-testbed-0013-0001
+1/1/28      10:b3:d5:0a:d1:b1  Ethernet2/6      rtr-testbed-agg-001...  120      rtr-testbed-core-east
+2/1/1       88:3a:30:a3:86:80  2/1/28           2/1/28                  120      sw-testbed-0013-0001
+2/1/28      10:b3:d5:0a:d1:f5  Ethernet2/6      rtr-testbed-agg-001...  120      rtr-testbed-core-west
+mgmt        70:01:b5:3f:40:80  Gi1/0/23         rtr-testbed-ag...       120      6648-6658
