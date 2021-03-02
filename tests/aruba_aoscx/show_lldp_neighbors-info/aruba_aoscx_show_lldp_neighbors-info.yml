@@ -1,32 +1,32 @@
 ---
 parsed_sample:
-    - LOCAL_PORT: 1/1/1
-      CHASSIS_ID: 88:3a:30:a3:86:80
-      PORT_ID: 1/1/28
-      PORT_DESC: 1/1/28                 
-      TTL: 120
-      SYS_NAME: sw-testbed-0013-0001
-    - LOCAL_PORT: 1/1/28
-      CHASSIS_ID: 10:b3:d5:0a:d1:b1
-      PORT_ID: Ethernet2/6
-      PORT_DESC: rtr-testbed-agg-001... 
-      TTL: 120
-      SYS_NAME: rtr-testbed-core-east
-    - LOCAL_PORT: 2/1/1
-      CHASSIS_ID: 88:3a:30:a3:86:80
-      PORT_ID: 2/1/28
-      PORT_DESC: 2/1/28                 
-      TTL: 120
-      SYS_NAME: sw-testbed-0013-0001
-    - LOCAL_PORT: 2/1/28
-      CHASSIS_ID: 10:b3:d5:0a:d1:f5
-      PORT_ID: Ethernet2/6
-      PORT_DESC: rtr-testbed-agg-001... 
-      TTL: 120
-      SYS_NAME: rtr-testbed-core-west
-    - LOCAL_PORT: mgmt
-      CHASSIS_ID: 70:01:b5:3f:40:80
-      PORT_ID: Gi1/0/23
-      PORT_DESC: rtr-testbed-ag... 
-      TTL: 120
-      SYS_NAME: 6648-6658
+  - LOCAL_PORT: "1/1/1"
+    CHASSIS_ID: "88:3a:30:a3:86:80"
+    PORT_ID: "1/1/28"
+    PORT_DESC: "1/1/28"
+    TTL: "120"
+    SYS_NAME: "sw-testbed-0013-0001"
+  - LOCAL_PORT: "1/1/28"
+    CHASSIS_ID: "10:b3:d5:0a:d1:b1"
+    PORT_ID: "Ethernet2/6"
+    PORT_DESC: "rtr-testbed-agg-001..."
+    TTL: "120"
+    SYS_NAME: "rtr-testbed-core-east"
+  - LOCAL_PORT: "2/1/1"
+    CHASSIS_ID: "88:3a:30:a3:86:80"
+    PORT_ID: "2/1/28"
+    PORT_DESC: "2/1/28"
+    TTL: "120"
+    SYS_NAME: "sw-testbed-0013-0001"
+  - LOCAL_PORT: "2/1/28"
+    CHASSIS_ID: "10:b3:d5:0a:d1:f5"
+    PORT_ID: "Ethernet2/6"
+    PORT_DESC: "rtr-testbed-agg-001..."
+    TTL: "120"
+    SYS_NAME: "rtr-testbed-core-west"
+  - LOCAL_PORT: "mgmt"
+    CHASSIS_ID: "70:01:b5:3f:40:80"
+    PORT_ID: "Gi1/0/23"
+    PORT_DESC: "rtr-testbed-ag... "
+    TTL: "120"
+    SYS_NAME: "6648-6658"
