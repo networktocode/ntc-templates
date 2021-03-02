@@ -14,6 +14,7 @@ OS_CHOICES = [
     "alcatel_aos",
     "alcatel_sros",
     "arista_eos",
+    "aruba_aoscx",
     "aruba_os",
     "avaya_ers",
     "avaya_vsp",
