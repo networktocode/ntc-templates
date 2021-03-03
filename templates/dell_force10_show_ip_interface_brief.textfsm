@@ -1,0 +1,9 @@
+Value INTERFACE (\S+ \S+)
+Value IP (\S+)
+Value OK (YES|NO)
+Value Method (None|Manual)
+Value Status (up|down)
+Value Protocol (up|down)
+
+Start
+  ^${INTERFACE}\s+${IP}\s+${OK}\s+${Method}\s+${Status}\s+${Protocol} -> Record
