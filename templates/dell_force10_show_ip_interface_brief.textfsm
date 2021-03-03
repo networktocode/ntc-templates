@@ -7,4 +7,3 @@ Value Protocol (up|down)
 
 Start
   ^${INTERFACE}\s+${IP}\s+${OK}\s+${Method}\s+${Status}\s+${Protocol} -> Record
-  ^. -> Error
