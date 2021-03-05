@@ -8,12 +8,19 @@ Value ADMIN_STATUS (\w+)
 Start
   ^VRF\s+:\s+${VRF}
   ^BGP\sSummary
-  ^$$
-  ^Address-family\s:\s${AF}
-  ^.+
-  ^\s+Neighbor\s+Remote-AS\s+MsgRcvd\s+MsgSent\s+Up/Down\s+Time\s+State\s+AdminStatus
-  ^\s+${NEIGHBOUR}\s+${REMOTE_AS}\s+\d+\s+\d+\s+\d+\S:\d+\S:\d+\S\s+${STATE}\s+${ADMIN_STATUS} -> Record
-  ^$$
+  ^-+
+  ^\s*Local\s*AS.*
+  ^\s*Peers.*
+  ^\s*Cfg.*
+  ^\s*$$
+  ^Address-family\s:\s${AF} -> Af
   ^. -> Error
 
-Done
+Af
+  ^-+
+  ^\s+Neighbor\s+Remote-AS\s+MsgRcvd\s+MsgSent\s+Up/Down\s+Time\s+State\s+AdminStatus
+  ^\s+${NEIGHBOUR}\s+${REMOTE_AS}\s+\d+\s+\d+\s+\S+\s+${STATE}\s+${ADMIN_STATUS} -> Record
+  ^\s*$$ -> Clear Start
+  ^. -> Error
+
+EOF
