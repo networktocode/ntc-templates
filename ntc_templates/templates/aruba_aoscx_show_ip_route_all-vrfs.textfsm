@@ -1,0 +1,14 @@
+Value Filldown IP (\d+\.\d+\.\d+\.\d+\/\d+)
+Value Filldown VRF (\S+)
+Value List IFACE (\S+)
+Value List METRIC (\[\S+\])
+Value List STATUS (\w+)
+
+Start
+  ^\s*Displaying.*
+  ^\s*$$
+  ^\s*\S+\s+denotes.*
+  ^\d+\.\d+\.\d+\.\d+\/\d+\W\s+vrf\s+\S+ -> Continue.Record
+  ^${IP}\W\s+vrf\s+${VRF}
+  ^\s+via\s+${IFACE},\s+${METRIC},\s+${STATUS}
+  ^. -> Error
