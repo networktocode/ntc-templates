@@ -7,24 +7,22 @@ Value Required TE_METRIC (\d+|None)
 
 
 Start
-  ^.*==========
-  ^ MPLS Interfaces
-  ^.*==========
-  ^Interface\s+Port-id\s+Adm\s+Opr(V4/V6)\s+TE-
+  ^=+
+  ^MPLS Interfaces
+  ^Interface\s+Port-id\s+Adm\s+Opr\(V4\/V6\)\s+TE- -> Interface
   ^\s+metric
-  ^----------- -> Interface
-  ^. Error
+  ^-+
+  ^\s*$$
+  ^. -> Error
 
 Interface
   ^${INTERFACE}\s+${PORT}\s+${ADMIN_STATUS}\s+${OPER_STATUS_V4}\S${OPER_STATUS_V6}\s+${TE_METRIC} -> Record
-  ^\s+Admin\sGroups
-  ^\s+
-  ^\s+SRLG\sGroups
-  ^\s+
-  ^----------- -> Total
-  ^. -> Error
-
-Total
+  ^\s+Admin\s+Groups
+  ^\s+\S+
+  ^\s+SRLG\s+Groups
   ^Interfaces
-  ^===========
+  ^=+
+  ^\s+metric
+  ^-+
+  ^\s*$$
   ^. -> Error
