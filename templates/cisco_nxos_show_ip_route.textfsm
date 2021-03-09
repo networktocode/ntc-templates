@@ -15,7 +15,6 @@ Value TUNNELID (0x[a-f\d]+)
 Value ENCAP (\w+)
 
 Start
-  ^.+show\sip\sroute
   ^IP\s+Route\s+Table\s+for\s+VRF\s+"${VRF}"\s*$$
   # Match the Network/Prefix Line
   ^\s*${NETWORK}\/${MASK}, ubest/mbest:
