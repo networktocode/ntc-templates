@@ -10,5 +10,8 @@ Start
   ^Timestamp:\s+${timestamp}
   ^Description:\s+${description}
   ^Recommendation:\s+${recommendation} -> Record
+  ^Global\s+Errors
+  ^\s*$$
+  ^. -> Error
 
 EOF
