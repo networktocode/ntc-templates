@@ -1,0 +1,68 @@
+crypto map WAN1_CMAP 10 match address CMAP_RU16
+crypto map WAN1_CMAP 10 set connection-type bidirectional
+crypto map WAN1_CMAP 10 set peer 1.1.1.1
+crypto map WAN1_CMAP 10 set ikev1 phase1-mode main
+crypto map WAN1_CMAP 10 set ikev1 transform-set ESP-AES-256-SHA ESP-AES-192-SHA
+crypto map WAN1_CMAP 10 set ikev2 mode tunnel
+no crypto map WAN1_CMAP 10 set tfc-packets
+crypto map WAN1_CMAP 20 match address CMAP_RU11
+crypto map WAN1_CMAP 20 set connection-type bidirectional
+crypto map WAN1_CMAP 20 set peer 2.2.2.2
+crypto map WAN1_CMAP 20 set ikev1 phase1-mode main
+crypto map WAN1_CMAP 20 set ikev1 transform-set ESP-AES-256-SHA ESP-AES-192-SHA
+crypto map WAN1_CMAP 20 set ikev2 mode tunnel
+no crypto map WAN1_CMAP 20 set tfc-packets
+crypto map WAN1_CMAP 30 match address CMAP_RU12
+crypto map WAN1_CMAP 30 set connection-type bidirectional
+crypto map WAN1_CMAP 30 set peer 3.3.3.3
+crypto map WAN1_CMAP 30 set ikev1 phase1-mode main
+crypto map WAN1_CMAP 30 set ikev1 transform-set ESP-AES-256-SHA ESP-AES-192-SHA
+crypto map WAN1_CMAP 30 set ikev2 mode tunnel
+no crypto map WAN1_CMAP 30 set tfc-packets
+crypto map WAN1_CMAP 40 match address CMAP_RU17
+crypto map WAN1_CMAP 40 set connection-type bidirectional
+crypto map WAN1_CMAP 40 set peer 4.4.4.4
+crypto map WAN1_CMAP 40 set ikev1 phase1-mode main
+crypto map WAN1_CMAP 40 set ikev1 transform-set ESP-AES-256-SHA ESP-AES-192-SHA
+crypto map WAN1_CMAP 40 set ikev2 mode tunnel
+no crypto map WAN1_CMAP 40 set tfc-packets
+crypto map WAN1_CMAP 100 match address CMAP_FR_TEST_VPN
+crypto map WAN1_CMAP 100 set pfs group5
+crypto map WAN1_CMAP 100 set connection-type bidirectional
+crypto map WAN1_CMAP 100 set peer 185.108.69.37
+crypto map WAN1_CMAP 100 set ikev1 phase1-mode main
+crypto map WAN1_CMAP 100 set ikev1 transform-set DES-MD5
+crypto map WAN1_CMAP 100 set ikev2 mode tunnel
+crypto map WAN1_CMAP 100 set security-association lifetime seconds 3600
+no crypto map WAN1_CMAP 100 set tfc-packets
+crypto map WAN1_CMAP 65535 ipsec-isakmp dynamic SYSTEM_DEFAULT_CRYPTO_MAP
+crypto map WAN1_CMAP interface WAN1
+crypto map S2S_CMAP 10 match address CMAP_RU17
+crypto map S2S_CMAP 10 set connection-type bidirectional
+crypto map S2S_CMAP 10 set peer 10.0.10.1
+crypto map S2S_CMAP 10 set ikev1 phase1-mode main
+crypto map S2S_CMAP 10 set ikev1 transform-set ESP-AES-256-SHA ESP-AES-192-SHA
+crypto map S2S_CMAP 10 set ikev2 mode tunnel
+no crypto map S2S_CMAP 10 set tfc-packets
+crypto map S2S_CMAP 20 match address CMAP_RU12
+crypto map S2S_CMAP 20 set connection-type bidirectional
+crypto map S2S_CMAP 20 set peer 10.0.20.1
+crypto map S2S_CMAP 20 set ikev1 phase1-mode main
+crypto map S2S_CMAP 20 set ikev1 transform-set ESP-AES-256-SHA ESP-AES-192-SHA
+crypto map S2S_CMAP 20 set ikev2 mode tunnel
+no crypto map S2S_CMAP 20 set tfc-packets
+crypto map S2S_CMAP 30 match address CMAP_RU11
+crypto map S2S_CMAP 30 set connection-type bidirectional
+crypto map S2S_CMAP 30 set peer 10.0.30.1
+crypto map S2S_CMAP 30 set ikev1 phase1-mode main
+crypto map S2S_CMAP 30 set ikev1 transform-set ESP-AES-256-SHA ESP-AES-192-SHA
+crypto map S2S_CMAP 30 set ikev2 mode tunnel
+no crypto map S2S_CMAP 30 set tfc-packets
+crypto map S2S_CMAP 40 match address CMAP_RU16
+crypto map S2S_CMAP 40 set connection-type bidirectional
+crypto map S2S_CMAP 40 set peer 10.0.40.1
+crypto map S2S_CMAP 40 set ikev1 phase1-mode main
+crypto map S2S_CMAP 40 set ikev1 transform-set ESP-AES-256-SHA ESP-AES-192-SHA
+crypto map S2S_CMAP 40 set ikev2 mode tunnel
+no crypto map S2S_CMAP 40 set tfc-packets
+crypto map S2S_CMAP interface S2SVPN
