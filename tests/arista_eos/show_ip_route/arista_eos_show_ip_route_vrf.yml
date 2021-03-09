@@ -7,8 +7,10 @@ parsed_sample:
     distance: "200"
     metric: "0"
     direct: ""
-    next_hop: "192.168.17.5"
-    interface: "Ethernet18"
+    next_hop:
+      - "192.168.17.5"
+    interface:
+      - "Ethernet18"
   - vrf: "default"
     protocol: "B E"
     network: "10.1.31.101"
@@ -16,8 +18,10 @@ parsed_sample:
     distance: "200"
     metric: "0"
     direct: ""
-    next_hop: "192.168.17.5"
-    interface: "Ethernet18"
+    next_hop:
+      - "192.168.17.5"
+    interface:
+      - "Ethernet18"
   - vrf: "default"
     protocol: "C"
     network: "10.1.31.102"
@@ -25,8 +29,10 @@ parsed_sample:
     distance: ""
     metric: ""
     direct: "directly"
-    next_hop: "connected"
-    interface: "Loopback100"
+    next_hop:
+      - "connected"
+    interface:
+      - "Loopback100"
   - vrf: "default"
     protocol: "C"
     network: "10.1.31.200"
@@ -34,8 +40,10 @@ parsed_sample:
     distance: ""
     metric: ""
     direct: "directly"
-    next_hop: "connected"
-    interface: "Loopback10"
+    next_hop:
+      - "connected"
+    interface:
+      - "Loopback10"
   - vrf: "default"
     protocol: "B E"
     network: "10.1.31.254"
@@ -43,8 +51,10 @@ parsed_sample:
     distance: "200"
     metric: "0"
     direct: ""
-    next_hop: "192.168.17.5"
-    interface: "Ethernet18"
+    next_hop:
+      - "192.168.17.5"
+    interface:
+      - "Ethernet18"
   - vrf: "default"
     protocol: "C"
     network: "10.63.255.8"
@@ -52,8 +62,10 @@ parsed_sample:
     distance: ""
     metric: ""
     direct: "directly"
-    next_hop: "connected"
-    interface: "Ethernet20"
+    next_hop:
+      - "connected"
+    interface:
+      - "Ethernet20"
   - vrf: "default"
     protocol: "B E"
     network: "10.100.22.52"
@@ -61,8 +73,10 @@ parsed_sample:
     distance: "200"
     metric: "0"
     direct: ""
-    next_hop: "192.168.17.5"
-    interface: "Ethernet18"
+    next_hop:
+      - "192.168.17.5"
+    interface:
+      - "Ethernet18"
   - vrf: "default"
     protocol: "B E"
     network: "10.100.22.56"
@@ -70,8 +84,10 @@ parsed_sample:
     distance: "200"
     metric: "0"
     direct: ""
-    next_hop: "192.168.17.5"
-    interface: "Ethernet18"
+    next_hop:
+      - "192.168.17.5"
+    interface:
+      - "Ethernet18"
   - vrf: "default"
     protocol: "B E"
     network: "10.100.233.11"
@@ -79,8 +95,10 @@ parsed_sample:
     distance: "200"
     metric: "0"
     direct: ""
-    next_hop: "192.168.17.5"
-    interface: "Ethernet18"
+    next_hop:
+      - "192.168.17.5"
+    interface:
+      - "Ethernet18"
   - vrf: "default"
     protocol: "B E"
     network: "10.100.233.12"
@@ -88,8 +106,10 @@ parsed_sample:
     distance: "200"
     metric: "0"
     direct: ""
-    next_hop: "192.168.17.5"
-    interface: "Ethernet18"
+    next_hop:
+      - "192.168.17.5"
+    interface:
+      - "Ethernet18"
   - vrf: "default"
     protocol: "B E"
     network: "10.100.233.15"
@@ -97,8 +117,10 @@ parsed_sample:
     distance: "200"
     metric: "0"
     direct: ""
-    next_hop: "192.168.17.5"
-    interface: "Ethernet18"
+    next_hop:
+      - "192.168.17.5"
+    interface:
+      - "Ethernet18"
   - vrf: "default"
     protocol: "C"
     network: "10.100.233.32"
@@ -106,8 +128,10 @@ parsed_sample:
     distance: ""
     metric: ""
     direct: "directly"
-    next_hop: "connected"
-    interface: "Loopback0"
+    next_hop:
+      - "connected"
+    interface:
+      - "Loopback0"
   - vrf: "default"
     protocol: "B E"
     network: "10.100.233.34"
@@ -115,8 +139,10 @@ parsed_sample:
     distance: "200"
     metric: "0"
     direct: ""
-    next_hop: "192.168.38.5"
-    interface: "Ethernet21"
+    next_hop:
+      - "192.168.38.5"
+    interface:
+      - "Ethernet21"
   - vrf: "default"
     protocol: "B E"
     network: "10.100.233.50"
@@ -124,8 +150,10 @@ parsed_sample:
     distance: "200"
     metric: "0"
     direct: ""
-    next_hop: "192.168.17.5"
-    interface: "Ethernet18"
+    next_hop:
+      - "192.168.17.5"
+    interface:
+      - "Ethernet18"
   - vrf: "default"
     protocol: "B E"
     network: "10.100.233.64"
@@ -133,8 +161,10 @@ parsed_sample:
     distance: "200"
     metric: "0"
     direct: ""
-    next_hop: "192.168.17.5"
-    interface: "Ethernet18"
+    next_hop:
+      - "192.168.17.5"
+    interface:
+      - "Ethernet18"
   - vrf: "default"
     protocol: "B E"
     network: "10.100.233.66"
@@ -142,8 +172,10 @@ parsed_sample:
     distance: "200"
     metric: "0"
     direct: ""
-    next_hop: "192.168.17.5"
-    interface: "Ethernet18"
+    next_hop:
+      - "192.168.17.5"
+    interface:
+      - "Ethernet18"
   - vrf: "default"
     protocol: "B E"
     network: "10.100.233.67"
@@ -151,8 +183,10 @@ parsed_sample:
     distance: "200"
     metric: "0"
     direct: ""
-    next_hop: "192.168.17.5"
-    interface: "Ethernet18"
+    next_hop:
+      - "192.168.17.5"
+    interface:
+      - "Ethernet18"
   - vrf: "default"
     protocol: "B E"
     network: "10.100.233.68"
@@ -160,8 +194,10 @@ parsed_sample:
     distance: "200"
     metric: "0"
     direct: ""
-    next_hop: "192.168.17.5"
-    interface: "Ethernet18"
+    next_hop:
+      - "192.168.17.5"
+    interface:
+      - "Ethernet18"
   - vrf: "default"
     protocol: "B E"
     network: "10.100.233.192"
@@ -169,8 +205,10 @@ parsed_sample:
     distance: "200"
     metric: "0"
     direct: ""
-    next_hop: "10.63.255.10"
-    interface: "Ethernet20"
+    next_hop:
+      - "10.63.255.10"
+    interface:
+      - "Ethernet20"
   - vrf: "RED"
     protocol: "B E"
     network: "10.1.31.100"
@@ -178,8 +216,10 @@ parsed_sample:
     distance: "200"
     metric: "0"
     direct: ""
-    next_hop: "192.168.17.5"
-    interface: "Ethernet18"
+    next_hop:
+      - "192.168.17.5"
+    interface:
+      - "Ethernet18"
   - vrf: "RED"
     protocol: "B E"
     network: "10.1.31.101"
@@ -187,8 +227,10 @@ parsed_sample:
     distance: "200"
     metric: "0"
     direct: ""
-    next_hop: "192.168.17.5"
-    interface: "Ethernet18"
+    next_hop:
+      - "192.168.17.5"
+    interface:
+      - "Ethernet18"
   - vrf: "RED"
     protocol: "C"
     network: "10.1.31.102"
@@ -196,8 +238,10 @@ parsed_sample:
     distance: ""
     metric: ""
     direct: "directly"
-    next_hop: "connected"
-    interface: "Loopback100"
+    next_hop:
+      - "connected"
+    interface:
+      - "Loopback100"
   - vrf: "RED"
     protocol: "C"
     network: "10.1.31.200"
@@ -205,8 +249,10 @@ parsed_sample:
     distance: ""
     metric: ""
     direct: "directly"
-    next_hop: "connected"
-    interface: "Loopback10"
+    next_hop:
+      - "connected"
+    interface:
+      - "Loopback10"
   - vrf: "RED"
     protocol: "B E"
     network: "10.1.31.254"
@@ -214,8 +260,10 @@ parsed_sample:
     distance: "200"
     metric: "0"
     direct: ""
-    next_hop: "192.168.17.5"
-    interface: "Ethernet18"
+    next_hop:
+      - "192.168.17.5"
+    interface:
+      - "Ethernet18"
   - vrf: "RED"
     protocol: "C"
     network: "10.63.255.8"
@@ -223,8 +271,10 @@ parsed_sample:
     distance: ""
     metric: ""
     direct: "directly"
-    next_hop: "connected"
-    interface: "Ethernet20"
+    next_hop:
+      - "connected"
+    interface:
+      - "Ethernet20"
   - vrf: "RED"
     protocol: "B E"
     network: "10.100.22.52"
@@ -232,8 +282,10 @@ parsed_sample:
     distance: "200"
     metric: "0"
     direct: ""
-    next_hop: "192.168.17.5"
-    interface: "Ethernet18"
+    next_hop:
+      - "192.168.17.5"
+    interface:
+      - "Ethernet18"
   - vrf: "RED"
     protocol: "B E"
     network: "10.100.22.56"
@@ -241,8 +293,10 @@ parsed_sample:
     distance: "200"
     metric: "0"
     direct: ""
-    next_hop: "192.168.17.5"
-    interface: "Ethernet18"
+    next_hop:
+      - "192.168.17.5"
+    interface:
+      - "Ethernet18"
   - vrf: "RED"
     protocol: "B E"
     network: "10.100.233.11"
@@ -250,8 +304,10 @@ parsed_sample:
     distance: "200"
     metric: "0"
     direct: ""
-    next_hop: "192.168.17.5"
-    interface: "Ethernet18"
+    next_hop:
+      - "192.168.17.5"
+    interface:
+      - "Ethernet18"
   - vrf: "RED"
     protocol: "B E"
     network: "10.100.233.12"
@@ -259,8 +315,10 @@ parsed_sample:
     distance: "200"
     metric: "0"
     direct: ""
-    next_hop: "192.168.17.5"
-    interface: "Ethernet18"
+    next_hop:
+      - "192.168.17.5"
+    interface:
+      - "Ethernet18"
   - vrf: "RED"
     protocol: "B E"
     network: "10.100.233.15"
@@ -268,8 +326,10 @@ parsed_sample:
     distance: "200"
     metric: "0"
     direct: ""
-    next_hop: "192.168.17.5"
-    interface: "Ethernet18"
+    next_hop:
+      - "192.168.17.5"
+    interface:
+      - "Ethernet18"
   - vrf: "RED"
     protocol: "C"
     network: "10.100.233.32"
@@ -277,8 +337,10 @@ parsed_sample:
     distance: ""
     metric: ""
     direct: "directly"
-    next_hop: "connected"
-    interface: "Loopback0"
+    next_hop:
+      - "connected"
+    interface:
+      - "Loopback0"
   - vrf: "RED"
     protocol: "B E"
     network: "10.100.233.34"
@@ -286,8 +348,10 @@ parsed_sample:
     distance: "200"
     metric: "0"
     direct: ""
-    next_hop: "192.168.38.5"
-    interface: "Ethernet21"
+    next_hop:
+      - "192.168.38.5"
+    interface:
+      - "Ethernet21"
   - vrf: "RED"
     protocol: "B E"
     network: "10.100.233.50"
@@ -295,8 +359,10 @@ parsed_sample:
     distance: "200"
     metric: "0"
     direct: ""
-    next_hop: "192.168.17.5"
-    interface: "Ethernet18"
+    next_hop:
+      - "192.168.17.5"
+    interface:
+      - "Ethernet18"
   - vrf: "RED"
     protocol: "B E"
     network: "10.100.233.64"
@@ -304,8 +370,10 @@ parsed_sample:
     distance: "200"
     metric: "0"
     direct: ""
-    next_hop: "192.168.17.5"
-    interface: "Ethernet18"
+    next_hop:
+      - "192.168.17.5"
+    interface:
+      - "Ethernet18"
   - vrf: "RED"
     protocol: "B E"
     network: "10.100.233.66"
@@ -313,8 +381,10 @@ parsed_sample:
     distance: "200"
     metric: "0"
     direct: ""
-    next_hop: "192.168.17.5"
-    interface: "Ethernet18"
+    next_hop:
+      - "192.168.17.5"
+    interface:
+      - "Ethernet18"
   - vrf: "RED"
     protocol: "B E"
     network: "10.100.233.67"
@@ -322,8 +392,10 @@ parsed_sample:
     distance: "200"
     metric: "0"
     direct: ""
-    next_hop: "192.168.17.5"
-    interface: "Ethernet18"
+    next_hop:
+      - "192.168.17.5"
+    interface:
+      - "Ethernet18"
   - vrf: "RED"
     protocol: "B E"
     network: "10.100.233.68"
@@ -331,8 +403,10 @@ parsed_sample:
     distance: "200"
     metric: "0"
     direct: ""
-    next_hop: "192.168.17.5"
-    interface: "Ethernet18"
+    next_hop:
+      - "192.168.17.5"
+    interface:
+      - "Ethernet18"
   - vrf: "RED"
     protocol: "B E"
     network: "10.100.233.192"
@@ -340,5 +414,7 @@ parsed_sample:
     distance: "200"
     metric: "0"
     direct: ""
-    next_hop: "10.63.255.10"
-    interface: "Ethernet20"
+    next_hop:
+      - "10.63.255.10"
+    interface:
+      - "Ethernet20"

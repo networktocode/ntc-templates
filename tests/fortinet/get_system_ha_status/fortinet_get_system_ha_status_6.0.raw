@@ -1,0 +1,31 @@
+HA Health Status: OK
+Model: FortiGate-200D
+Mode: HA A-P
+Group: 0
+Debug: 0
+Cluster Uptime: 764 days 22:45:44
+Cluster state change time: 2019-08-16 11:08:27
+Master selected using:
+    <2019/08/16 11:08:27> FG200Dxxxxxxxxxx is selected as the master because it has the largest value of override priority.
+    <2019/08/14 12:32:47> FG200Dyyyyyyyyyy is selected as the master because it has the largest value of override priority.
+ses_pickup: enable, ses_pickup_delay=disable
+override: enable
+Configuration Status:
+    FG200Dxxxxxxxxxx(updated 2 seconds ago): in-sync
+    FG200Dyyyyyyyyyy(updated 5 seconds ago): in-sync
+System Usage stats:
+    FG200Dxxxxxxxxxx(updated 2 seconds ago):
+        sessions=2421, average-cpu-user/nice/system/idle=0%/0%/0%/100%, memory=25%
+    FG200Dyyyyyyyyyy(updated 5 seconds ago):
+        sessions=326, average-cpu-user/nice/system/idle=0%/0%/0%/100%, memory=23%
+HBDEV stats:
+    FG200Dxxxxxxxxxx(updated 2 seconds ago):
+        port16: physical/1000auto, up, rx-bytes/packets/dropped/errors=152066501590/357378132/0/0, tx=476952801500/678960488/0/0
+    FG200Dyyyyyyyyyy(updated 5 seconds ago):
+        port16: physical/1000auto, up, rx-bytes/packets/dropped/errors=477266958857/680444657/0/0, tx=151761016675/355910298/0/0
+Master: fgt-200d_a, FG200Dxxxxxxxxxx, cluster index = 1
+Slave : fgt-200d_b, FG200Dyyyyyyyyyy, cluster index = 0
+number of vcluster: 1
+vcluster 1: work 169.254.0.2
+Master: FG200Dxxxxxxxxxx, operating cluster index = 0
+Slave : FG200Dyyyyyyyyyy, operating cluster index = 1
