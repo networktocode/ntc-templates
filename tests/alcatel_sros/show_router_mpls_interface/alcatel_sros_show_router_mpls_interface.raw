@@ -1,0 +1,23 @@
+===============================================================================
+MPLS Interfaces
+===============================================================================
+Interface                           Port-id           Adm  Opr(V4/V6) TE-
+                                                                      metric
+-------------------------------------------------------------------------------
+system                              system            Up   Up/Down    None
+  Admin Groups                      None
+  SRLG Groups                       None
+TO_IOSXR                            1/1/c4/1          Up   Up/Down    98999
+  Admin Groups                      RED
+                                    GREEN
+  SRLG Groups                       None
+TO_R1                               1/1/c1/1          Up   Up/Down    65660
+  Admin Groups                      None
+  SRLG Groups                       None
+TO_R4                               1/1/c2/1          Up   Up/Down    None
+  Admin Groups                      None
+  SRLG Groups                       PURPLE
+                                    WHITE
+-------------------------------------------------------------------------------
+Interfaces : 4
+===============================================================================
