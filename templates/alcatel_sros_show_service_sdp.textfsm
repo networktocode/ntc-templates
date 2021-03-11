@@ -11,7 +11,7 @@ Value Required SIG (\S+)
 Start
   ^=+
   ^Services:
-  ^SdpId\s+AdmMTU\s+OprMTU\s+Far\s+End\s+Adm\s+Opr\s+Del\s+LSP\s+Sig -> SDP
+  ^SdpId\s+AdmMTU\s+OprMTU\s+Far\s+End\s+Adm\s+Opr\s+Del\s+LSP\s+Sig\s*$$
   ^-+
   ^\s*$$
   ^. -> Error
