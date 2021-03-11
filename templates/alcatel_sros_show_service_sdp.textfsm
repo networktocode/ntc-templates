@@ -12,7 +12,7 @@ Start
   ^=+
   ^Services:
   ^SdpId\s+AdmMTU\s+OprMTU\s+Far\s+End\s+Adm\s+Opr\s+Del\s+LSP\s+Sig\s*$$
-  ^-+
+  ^-+ -> SDP
   ^\s*$$
   ^. -> Error
 
