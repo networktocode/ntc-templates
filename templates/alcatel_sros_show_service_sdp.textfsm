@@ -19,10 +19,7 @@ Start
 SDP
   ^${SDP_ID}\s+${ADM_MTU}\s+${OPR_MTU}\s+${FAR_END}\s+${ADM}\s+${OPR}\s+${DEL}\s+${LSP}\s+${SIG} -> Record
   ^${SDP_ID}\s+${ADM_MTU}\s+${OPR_MTU}\s+${ADM}\s+${OPR}\s+${DEL}\s+${LSP}\s+${SIG} -> Record
-  ^-+
-  ^Number
-  ^Legend
-  ^\s+I\s=
+  ^-+ -> Done
   ^\s*$$
   ^=+
   ^. -> Error
