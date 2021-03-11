@@ -9,7 +9,7 @@ Value Required OPER_STATE (Up|Dwn|Down)
 Start
   ^=+
   ^RSVP\s+Interfaces
-  ^Interface\s+Total\s+Active\s+Total\s+BW\s+Resv\s+BW\s+Adm\s+Opr -> Interface
+  ^Interface\s+Total\s+Active\s+Total\s+BW\s+Resv\s+BW\s+Adm\s+Opr\s*$$
   ^\s+Sessions\s+Sessions\s+\(Mbps\)\s+\(Mbps\)
   ^-+
   ^\s*$$
