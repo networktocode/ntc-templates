@@ -1,8 +1,16 @@
 # Changelog
 
-## [1.7.0](https://github.com/networktocode/ntc-templates/tree/1.5.0) (2021-03-11)
+## [2.0.0](https://github.com/networktocode/ntc-templates/tree/1.5.0) (2021-03-11)
 
-[Full Changelog](https://github.com/networktocode/ntc-templates/compare/v1.6.0...1.7.0)
+[Full Changelog](https://github.com/networktocode/ntc-templates/compare/v2.0.0...v1.7.0)
+
+**Merged pull requests:**
+
+- Migrate packaging to use poetry [\#882](https://github.com/networktocode/ntc-templates/pull/882) ([jmcgill298](https://github.com/jmcgill298))
+
+## [v1.7.0](https://github.com/networktocode/ntc-templates/tree/v1.7.0) (2021-03-11)
+
+[Full Changelog](https://github.com/networktocode/ntc-templates/compare/v1.6.0...v1.7.0)
 
 **Implemented enhancements:**
 
@@ -30,6 +38,7 @@
 
 **Merged pull requests:**
 
+- Release v1.7.0 [\#889](https://github.com/networktocode/ntc-templates/pull/889) ([jmcgill298](https://github.com/jmcgill298))
 - new alcatel\_sros tmpl, 'show service sdp' [\#886](https://github.com/networktocode/ntc-templates/pull/886) ([h4ndzdatm0ld](https://github.com/h4ndzdatm0ld))
 - New Template: alcatel\_sros\_show\_router\_rsvp\_interface [\#884](https://github.com/networktocode/ntc-templates/pull/884) ([h4ndzdatm0ld](https://github.com/h4ndzdatm0ld))
 - \#784-cisco\_asa\_show\_running-config\_all\_crypto\_map.textfsm [\#883](https://github.com/networktocode/ntc-templates/pull/883) ([diepes](https://github.com/diepes))
