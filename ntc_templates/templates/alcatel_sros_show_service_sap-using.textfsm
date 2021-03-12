@@ -1,0 +1,25 @@
+Value Required PORT_ID (\S+)
+Value Required SVC_ID (\d+)
+Value Required ING_QOS (\d+)
+Value Required ING_FLTR (\S+)
+Value Required EGR_QOS (\d+)
+Value Required EGR_FLTR (\S+)
+Value Required ADM (Up|Down)
+Value Required OPR (Up|Down)
+
+Start
+  ^=+
+  ^Service\s+Access\s+Points
+  ^PortId\s+SvcId\s+Ing.\s+Ing.\s+Egr.\s+Egr.\s+Adm\s+Opr\s*$$
+  ^\s+QoS\s+Fltr\s+QoS\s+Fltr        
+  ^-+ -> SAPS
+  ^\s*$$
+  ^. -> Error
+
+SAPS
+  ^${PORT_ID}\s+${SVC_ID}\s+${ING_QOS}\s+${ING_FLTR}\s+${EGR_QOS}\s+${EGR_FLTR}\s+${ADM}\s+${OPR} -> Record
+  ^-+ -> Done
+  ^\s*$$
+  ^. -> Error
+
+Done
