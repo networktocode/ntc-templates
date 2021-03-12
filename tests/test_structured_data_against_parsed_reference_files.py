@@ -6,7 +6,7 @@ import glob
 import pytest
 import yaml
 
-from lib.ntc_templates.parse import parse_output
+from ntc_templates.parse import parse_output
 
 
 def return_test_files():
