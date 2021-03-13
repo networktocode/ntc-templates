@@ -6,6 +6,7 @@ Value Required ADM (Up|Dwn)
 Value Required OPR (Up|Dwn)
 
 Start
+  ^=+
   ^=.
   ^MPLS\s+LSPs
   ^LSP\s+Name\s+Tun\s+Fastfail\s+Adm\s+Opr\s*$$ -> LSP
