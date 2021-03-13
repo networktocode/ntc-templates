@@ -1,0 +1,11 @@
+Value Required LOCAL_INTERFACE (\S+)
+Value Required PARENT_INTERFACE (\S+)
+Value Required CHASSIS_ID (\S+)
+Value Required PORT_INFO (\S+)
+Value Required SYSTEM_NAME (\S+)
+
+Start
+  ^Local\s+Interface\s+Parent\s+Interface\s+Chassis\s+Id\s+Port\s+info\s+System\s+Name
+  ^${LOCAL_INTERFACE}\s*${PARENT_INTERFACE}\s+${CHASSIS_ID}\s+${PORT_INFO}\s+${SYSTEM_NAME} -> Record
+  ^\s*$$
+  ^. -> Error

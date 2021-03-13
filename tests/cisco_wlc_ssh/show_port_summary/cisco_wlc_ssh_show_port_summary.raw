@@ -1,0 +1,11 @@
+
+           STP   Admin   Physical   Physical   Link   Link
+Pr  Type   Stat   Mode     Mode      Status   Status  Trap     POE    
+-- ------- ---- ------- ---------- ---------- ------ ------- ---------
+1  Normal  Forw Enable  Auto       1000 Full  Up     Enable  N/A     
+2  Normal  Disa Disable Auto       Auto       Down   Enable  N/A     
+3  Normal  Disa Disable Auto       Auto       Down   Enable  Disable 
+4  Normal  Forw Enable  Auto       1000 Full  Up     Enable  Enable  (Power Off) 
+5  Normal  Disa Enable  Auto       Auto       Down   Enable  N/A     
+RP Normal  Forw Enable  Auto       Auto       Up     Enable  N/A     
+SP Normal  Disa Enable  Auto       Auto       Down   Enable  N/A     

@@ -7,8 +7,7 @@ import argparse
 
 from ruamel.yaml import YAML
 from ruamel.yaml.scalarstring import DoubleQuotedScalarString as DQ
-from textfsm import clitable
-from lib.ntc_templates.parse import parse_output
+from ntc_templates.parse import parse_output
 
 
 FILE_PATH = os.path.abspath(__file__)
@@ -289,7 +288,7 @@ def transform_file(filepath):
     Example:
         >>> filepath = "tests/cisco_ios/show_version/cisco_ios_show_version.yml"
         >>> transform_parsed(filepath)
-        >>> 
+        >>>
     """
     with open(filepath, encoding="utf-8") as parsed_file:
         parsed_object = YAML_OBJECT.load(parsed_file)
@@ -315,7 +314,7 @@ def transform_glob(dirpath):
         >>> dirpath = "tests/*/*"
         >>> transform_parsed(dirpath)
         # Each filename is printed to the terminal
-        >>> 
+        >>>
     """
     # This commented out code was used for mass renaming of files;
     # it is probably not needed anymore
@@ -375,7 +374,7 @@ def parse_test_filepath(filepath):
         show version
         >>> print(filename)
         cisco_ios_show_version
-        >>> 
+        >>>
     """
     command_dir, filename = os.path.split(filepath)
     platform_dir, command = os.path.split(command_dir)
@@ -412,7 +411,7 @@ def build_parsed_data_from_output(filepath, test_dir=TEST_DIR):
         >>> build_parsed_data_from_output(filepath)
         >>> os.listdir(root_dir)
         ['cisco_ios_show_version.raw', 'cisco_ios_show_version.yml']
-        >>> 
+        >>>
     """
     platform, command, filename = parse_test_filepath(filepath)
     with open(filepath, encoding="utf-8") as output_file:
@@ -445,7 +444,7 @@ def build_parsed_data_from_dir(dirpath, test_dir=TEST_DIR):
         >>> dirpath = "tests/cisco_ios/show_mac-address-table"
         >>> build_parsed_data_from_dir(dirpath)
         # Each filename is printed to the terminal
-        >>> 
+        >>>
     """
     for file in glob.iglob("{0}/*.raw".format(dirpath)):
         print(file)

@@ -1,12 +1,59 @@
 #!/usr/bin/env python
-
-import pytest
-import csv
-import os
-import glob
-import csv
+import re
 
 from tests import load_index_data
+
+
+OS_CHOICES = [
+    "a10",
+    "alcatel_aos",
+    "alcatel_sros",
+    "arista_eos",
+    "aruba_os",
+    "avaya_ers",
+    "avaya_vsp",
+    "broadcom_icos",
+    "brocade_fastiron",
+    "brocade_netiron",
+    "brocade_nos",
+    "brocade_vdx",
+    "brocade_vyos",
+    "checkpoint_gaia",
+    "ciena_saos",
+    "cisco_asa",
+    "cisco_ftd",
+    "cisco_ios",
+    "cisco_nxos",
+    "cisco_s300",
+    "cisco_wlc",
+    "cisco_xe",
+    "cisco_xr",
+    "dell_force10",
+    "dell_powerconnect",
+    "enterasys",
+    "extreme",
+    "f5_ltm",
+    "fortinet",
+    "hp_comware",
+    "hp_procurve",
+    "huawei_vrp",
+    "juniper",
+    "juniper_junos",
+    "juniper_screenos",
+    "linux",
+    "ovs_linux",
+    "paloalto_panos",
+    "quanta_mesh",
+    "ruckus_fastiron",
+    "ubiquiti_edgeswitch",
+    "vmware_nsxv",
+    "vyatta_vyos",
+    "vyos",
+    "watchguard_firebox",
+    "yamaha",
+]
+CHOICES_STRING = "|".join(OS_CHOICES)
+RE_TEMPLATE_OS = re.compile(rf"^({CHOICES_STRING})")
 
 
 def check_order(
@@ -60,54 +107,6 @@ def check_order(
 
 
 def test_index_ordering():
-
-    os_choices = [
-        "a10",
-        "alcatel_aos",
-        "alcatel_sros",
-        "arista_eos",
-        "aruba_os",
-        "avaya_ers",
-        "avaya_vsp",
-        "broadcom_icos",
-        "brocade_fastiron",
-        "brocade_netiron",
-        "brocade_nos",
-        "brocade_vdx",
-        "brocade_vyos",
-        "checkpoint_gaia",
-        "ciena_saos",
-        "cisco_asa",
-        "cisco_ftd",
-        "cisco_ios",
-        "cisco_nxos",
-        "cisco_s300",
-        "cisco_wlc",
-        "cisco_xe",
-        "cisco_xr",
-        "dell_force10",
-        "enterasys",
-        "extreme",
-        "f5_ltm",
-        "fortinet_fortios",
-        "hp_comware",
-        "hp_procurve",
-        "huawei_vrp",
-        "juniper",
-        "juniper_junos",
-        "juniper_screenos",
-        "linux",
-        "ovs_linux",
-        "paloalto_panos",
-        "quanta_mesh",
-        "ruckus_fastiron",
-        "ubiquiti_edgeswitch",
-        "vmware_nsxv",
-        "vyatta_vyos",
-        "vyos",
-        "watchguard_firebox",
-    ]
-
     prior_os = ""
     prior_len = 0
     prior_cmd = ""
@@ -116,11 +115,12 @@ def test_index_ordering():
     index = load_index_data()
     for row in index:
         template = row[0].strip()
-        os = "_".join(template.split("_")[:2])
+        os_match = RE_TEMPLATE_OS.match(template)
+        os = os_match.group(0)
         cmd = "_".join(template.split("_")[2:])
         cmd_len = len(cmd)
         check_val, check_msg = check_order(
-            os, prior_os, cmd_len, prior_len, os_choices, used_os, cmd, prior_cmd
+            os, prior_os, cmd_len, prior_len, OS_CHOICES, used_os, cmd, prior_cmd
         )
         if not check_val:
             # assertFalse(check_val, msg=check_msg)

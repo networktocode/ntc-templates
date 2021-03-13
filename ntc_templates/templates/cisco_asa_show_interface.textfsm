@@ -1,0 +1,67 @@
+Value Required INTERFACE (\S+)
+Value INTERFACE_ZONE (.+?)
+Value LINK_STATUS (.+?)
+Value PROTOCOL_STATUS (.*)
+Value HARDWARE_TYPE ([\w ]+)
+Value BANDWIDTH (\d+\s+\w+)
+Value DELAY (\d+\s+\w+)
+Value DUPLEX (\w+\-\w+)
+Value SPEED (\d+\w+\s\w+)
+Value DESCRIPTION (.*)
+Value ADDRESS ([a-zA-Z0-9]+.[a-zA-Z0-9]+.[a-zA-Z0-9]+)
+Value MTU (\d+)
+Value IP_ADDRESS (\d+\.\d+\.\d+\.\d+)
+Value NET_MASK (\d+\.\d+\.\d+\.\d+)
+Value ONEMIN_IN_PPS (\d+)
+Value ONEMIN_IN_RATE (\d+)
+Value ONEMIN_OUT_PPS (\d+)
+Value ONEMIN_OUT_RATE (\d+)
+Value ONEMIN_DROP_RATE (\d+)
+Value FIVEMIN_IN_PPS (\d+)
+Value FIVEMIN_IN_RATE (\d+)
+Value FIVEMIN_OUT_PPS (\d+)
+Value FIVEMIN_OUT_RATE (\d+)
+Value FIVEMIN_DROP_RATE (\d+)
+
+Start
+  ^.*Interface\s+ -> Continue.Record
+  ^.*Interface\s+${INTERFACE}\s+"${INTERFACE_ZONE}",\s+is\s+${LINK_STATUS},.*protocol\s+is\s+${PROTOCOL_STATUS}
+  ^.*Interface\s+${INTERFACE}.*is\s+${LINK_STATUS},.*protocol\s+is\s+${PROTOCOL_STATUS}
+  ^\s+Hardware\s+is\s+${HARDWARE_TYPE} -> Continue
+  ^.*BW\s+${BANDWIDTH},\s+DLY\s+${DELAY}
+  ^.*\(${DUPLEX}\),\s+Auto-Speed\(${SPEED}\)
+  ^.*\(${DUPLEX}\),\s+\d+\s+Mbps\(${SPEED}\)
+  ^.*Duplex,\s+Auto-Speed
+  ^.*Description:\s+${DESCRIPTION}
+  ^.*MAC\s+address\s+${ADDRESS},\s+MTU\s+${MTU}
+  ^.*MAC\s+address\s+${ADDRESS},\s+MTU\s+not\s+set
+  ^.*IP\s+address\s+${IP_ADDRESS},\s+subnet\s+mask\s+${NET_MASK}
+  ^.*1\s+minute\s+input\s+rate\s+${ONEMIN_IN_PPS}\s+pkts/sec,\s+${ONEMIN_IN_RATE}\s+bytes/sec
+  ^.*1\s+minute\s+output\s+rate\s+${ONEMIN_OUT_PPS}\s+pkts/sec,\s+${ONEMIN_OUT_RATE}\s+bytes/sec
+  ^.*1\s+minute\s+drop\s+rate,\s+${ONEMIN_DROP_RATE}
+  ^.*5\s+minute\s+input\s+rate\s+${FIVEMIN_IN_PPS}\s+pkts/sec,\s+${FIVEMIN_IN_RATE}\s+bytes/sec
+  ^.*5\s+minute\s+output\s+rate\s+${FIVEMIN_OUT_PPS}\s+pkts/sec,\s+${FIVEMIN_OUT_RATE}\s+bytes/sec
+  ^.*5\s+minute\s+drop\s+rate,\s+${FIVEMIN_DROP_RATE}
+  ^.*Input\s+flow\s+control\s+is\s+unsupported,\s+output\s+flow\s+control\s+is\s+off
+  ^.*\d+\s+packets\s+input,\s+\d+\s+bytes,\s+\d+\s+no\s+buffer
+  ^.*Received\s+\d+\s+broadcasts,\s+\d+\s+runts,\s+\d+\s+giants
+  ^.*\d+\s+input\s+errors,\s+\d+\s+CRC,\s+\d+\s+frame,\s+\d+\s+overrun,\s+\d+\s+ignored,\s+\d+\s+abort
+  ^.*\d+\s+pause\s+input,\s+\d+\s+resume\s+input
+  ^.*\d+\s+L2\s+decode\s+drops
+  ^.*\d+\s+packets\s+output,\s+\d+\s+bytes,\s+\d+\s+underruns
+  ^.*\d+\s+pause\s+output,\s+\d+\s+resume\s+output
+  ^.*\d+\s+output\s+errors,\s+\d+\s+collisions,\s+\d+\s+interface\s+resets
+  ^.*\d+\s+late\s+collisions,\s+\d+\s+deferred
+  ^.*\d+\s+input\s+reset\s+drops,\s+\d+\s+output\s+reset\s+drops
+  ^.*input\s+queue\s+\(blocks\s+free\s+curr\/low\):\s+hardware\s+\(\d+\/\d+\)
+  ^.*output\s+queue\s+\(blocks\s+free\s+curr\/low\):\s+hardware\s+\(\d+\/\d+\)
+  ^.*Traffic\s+Statistics\s+for\s+".+?":
+  ^.*\d+\s+packets\s+input,\s+\d+\s+bytes
+  ^.*\d+\s+packets\s+output,\s+\d+\s+bytes
+  ^.*\d+\s+packets\s+dropped
+  ^.*Management-only\sinterface\.\s+Blocked\s+\d+\s+through-the-device\s+packets
+  ^.*Input\s+flow\s+control\s+is\s+unsupported,\s+output\s+flow\s+control\s+is\s+unsupported
+  ^.*Available\s+but\s+not\s+configured\s+via\s+nameif
+  ^.*IP\s+address\s+unassigned
+  ^\s*$$
+  ^. -> Error
