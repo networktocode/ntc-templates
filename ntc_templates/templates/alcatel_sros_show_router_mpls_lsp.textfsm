@@ -7,19 +7,20 @@ Value Required OPR (Up|Dwn)
 
 Start
   ^=+
-  ^=.
   ^MPLS\s+LSPs
   ^LSP\s+Name\s+Tun\s+Fastfail\s+Adm\s+Opr\s*$$ -> LSP
-  ^\s+To\s+Id\s+Config
-  ^- -> LSP
   ^\s*$$
   ^. -> Error
 
 LSP
+  ^\s+To\s+Id\s+Config
+  ^-+
   ^${LSP_NAME}\s+${TUN_ID}\s+${FASTFAIL_CONFIG}\s+${ADM}\s+${OPR}
   ^\s+${TO} -> Record
+  ^-+ -> Done
+  ^LSPs\s+:
+  ^=+
   ^\s*$$
-  ^- -> Done
   ^. -> Error
 
 Done
