@@ -1,9 +1,9 @@
 Value Required LSP_NAME (\S+)
 Value Required TO (\d+.\d+.\d+.\d+)
-Value Required TUN_ID (\d+)
+Value Required TUNNEL_ID (\d+)
 Value Required FASTFAIL_CONFIG (\S+)
-Value Required ADM (Up|Dwn)
-Value Required OPR (Up|Dwn)
+Value Required ADMIN_STATE (Up|Dwn)
+Value Required OPER_STATE (Up|Dwn)
 
 Start
   ^=+
@@ -15,7 +15,7 @@ Start
 LSP
   ^\s+To\s+Id\s+Config
   ^-+
-  ^${LSP_NAME}\s+${TUN_ID}\s+${FASTFAIL_CONFIG}\s+${ADM}\s+${OPR}
+  ^${LSP_NAME}\s+${TUNNEL_ID}\s+${FASTFAIL_CONFIG}\s+${ADMIN_STATE}\s+${OPER_STATE}
   ^\s+${TO} -> Record
   ^-+ -> Done
   ^LSPs\s+:
