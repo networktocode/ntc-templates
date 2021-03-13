@@ -7,6 +7,10 @@ Value Required OPER_STATE (Up|Dwn)
 
 Start
   ^=+
+<<<<<<< HEAD
+=======
+  ^=.
+>>>>>>> 0048862... Update ntc_templates/templates/alcatel_sros_show_router_mpls_lsp.textfsm
   ^MPLS\s+LSPs
   ^LSP\s+Name\s+Tun\s+Fastfail\s+Adm\s+Opr\s*$$ -> LSP
   ^\s*$$
