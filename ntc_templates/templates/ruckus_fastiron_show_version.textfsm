@@ -19,7 +19,7 @@ Start
   ^\s+Current\s+License:\S+
   ^\s+P-ASIC\s+[0-9]*:\s+.*
   ^\s+[0-9]* [KMGT](Hz|B)\s+.*
-  ^STACKID\s+[0-9]*\s+system\s+uptime\s+is\s+${UPTIME}
+  ^STACKID\s+[0-9]*\s+system\s+uptime\s+is\s+${UPTIME}\s*$$
   ^The\s+system\s+started\s+at\s+.*
   ^The\s+system\s+:\s+started=.*
   ^My\s+stack\s+unit\s+ID\s+=\s+[0-9]*,\s+bootup\s+role\s+=\s+\S+ -> Record
