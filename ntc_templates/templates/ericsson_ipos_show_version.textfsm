@@ -1,0 +1,6 @@
+Value VERSION (\S[^\[]+)
+Value UPTIME (\d+\s+\S+\s+\d+\s+\S+\s+\d+\s+\S+)
+
+Start
+  ^Ericsson\s+IPOS\s+Version\s+IPOS-v${VERSION}-Release
+  ^.+Up\s+Time\s+-\s+${UPTIME}
