@@ -33,6 +33,7 @@ OS_CHOICES = [
     "dell_force10",
     "dell_powerconnect",
     "enterasys",
+    "ericsson_ipos",
     "extreme",
     "f5_ltm",
     "fortinet",
