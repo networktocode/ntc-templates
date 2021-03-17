@@ -15,8 +15,8 @@ Start
   ^\s+HW:\s+${HARDWARE}\s*$$
   ^UNIT\s+[0-9]*:\s+SL\s+[0-9]*:\s+.*
   ^\s+Serial\s+#:${SERIAL}
-  ^\s+Software\s+Package:\S+
-  ^\s+Current\s+License:\S+
+  ^\s+Software\s+Package:\s+\S+
+  ^\s+Current\s+License:\s+\S+
   ^\s+P-ASIC\s+[0-9]*:\s+.*
   ^\s+[0-9]* [KMGT](Hz|B)\s+.*
   ^STACKID\s+[0-9]*\s+system\s+uptime\s+is\s+${UPTIME}\s*$$
