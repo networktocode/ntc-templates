@@ -29,9 +29,9 @@ script:
   - ".venv/bin/tox -e py36,py37,py38"
 
 deploy:
-  provider: script
+  provider: "script"
   script:
-    - poetry config pypi-token.pypi $PYPI_TOKEN
-    - poetry publish --build
+    - "poetry config pypi-token.pypi $PYPI_TOKEN"
+    - "poetry publish --build"
   on:
     tags: true
