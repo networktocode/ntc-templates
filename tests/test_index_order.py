@@ -36,7 +36,7 @@ OS_CHOICES = [
     "fortinet",
     "hp_comware",
     "hp_procurve",
-    "huawei_vrp",
+    "huawei_vrpv8",
     "juniper",
     "juniper_junos",
     "juniper_screenos",
