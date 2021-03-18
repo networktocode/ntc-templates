@@ -23,6 +23,7 @@ alcatel_sros_show_router_ldp_interface.textfsm, .*, alcatel_sros, sh[[ow]] route
 alcatel_sros_show_router_pim_interface.textfsm, .*, alcatel_sros, sh[[ow]] router pim int[[erface]]
 alcatel_sros_show_service_sap-using.textfsm, .*, alcatel_sros, sh[[ow]] service sap-u[[sing]]
 alcatel_sros_show_service_sdp-using.textfsm, .*, alcatel_sros, sh[[ow]] service sdp-using
+alcatel_sros_show_router_interface.textfsm, .*, alcatel_sros, sh[[ow]] router (\d+ int[[erface]]|int[[erface]])
 alcatel_sros_show_router_mpls_lsp.textfsm, .*, alcatel_sros, sh[[ow]] router mpls lsp
 alcatel_sros_show_service_id_base.textfsm, .*, alcatel_sros, sh[[ow]] serv[[ice]] id ba[[se]]
 alcatel_sros_show_service_sdp.textfsm, .*, alcatel_sros, sh[[ow]] service sdp
@@ -462,6 +463,7 @@ paloalto_panos_show_mac_all.textfsm, .*, paloalto_panos, sh[[ow]] mac all
 
 ruckus_fastiron_show_interfaces_brief.textfsm, .*, ruckus_fastiron, sh[[ow]] int[[erfaces]] b[[rief]]
 ruckus_fastiron_show_mac-address.textfsm, .*, ruckus_fastiron, sh[[ow]] mac[[-address]]
+ruckus_fastiron_show_version.textfsm, .*, ruckus_fastiron, sh[[ow]] v[[ersion]]
 ruckus_fastiron_show_arp.textfsm, .*, ruckus_fastiron, sh[[ow]] ar[[p]]
 
 ubiquiti_edgeswitch_show_version.textfsm, .*, ubiquiti_edgeswitch, sh[[ow]] ve[[rsion]]
