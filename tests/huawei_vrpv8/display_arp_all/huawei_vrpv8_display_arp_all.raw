@@ -1,0 +1,378 @@
+IP ADDRESS      MAC ADDRESS     EXPIRE(M) TYPE        INTERFACE   VPN-INSTANCE
+                                          VLAN/CEVLAN PVC
+----------------------------------------------------------------------------------------
+192.168.0.1     4cf5-5b2e-3d0a            I -         Eth0/0/0         __LOCAL_OAM_VPN__
+10.110.138.33   4cf5-5b2e-3d18            I -         GE0/2/13.203     Abis_IP
+10.110.138.33   4cf5-5b2e-3d18            I -         GE0/2/13.1003    OM-3G
+10.110.138.177  4cf5-5b2e-3d18            I -         GE0/2/13.1044    OM-3G
+10.110.182.33   4cf5-5b2e-3d18            I -         GE0/2/13.1151    LTE-S1X2
+10.110.183.33   4cf5-5b2e-3d18            I -         GE0/2/13.3751    OM-3G
+10.110.138.1    4cf5-5b2e-3d0a            I -         Eth-Trunk1.201   Abis_IP
+10.110.138.3    74c9-9ae5-f147  19        D-0         Eth-Trunk1.201   Abis_IP
+                                           201/-
+10.110.138.5    74c9-9abd-02c9  17        D-0         Eth-Trunk1.201   Abis_IP
+                                           201/-
+10.110.138.8    9055-ae48-6b2e  9         D-0         Eth-Trunk1.201   Abis_IP
+                                           201/-
+10.110.138.10   74c9-9ac1-91ce  12        D-0         Eth-Trunk1.201   Abis_IP
+                                           201/-
+10.110.138.11   74d0-dcf1-9804  8         D-0         Eth-Trunk1.201   Abis_IP
+                                           201/-
+10.110.138.12   74c9-9ae5-84b2  8         D-0         Eth-Trunk1.201   Abis_IP
+                                           201/-
+10.110.138.13   ac60-b676-7344  17        D-0         Eth-Trunk1.201   Abis_IP
+                                           201/-
+10.110.138.14   9055-ae4c-2fa2  13        D-0         Eth-Trunk1.201   Abis_IP
+                                           201/-
+10.110.138.17   4cf5-5b2e-3d0a            I -         Eth-Trunk1.202   Abis_IP
+10.110.138.18   ac60-b671-bc15  15        D-0         Eth-Trunk1.202   Abis_IP
+                                           202/-
+10.110.138.19   346e-9db4-8552  20        D-0         Eth-Trunk1.202   Abis_IP
+                                           202/-
+10.110.138.21   74d0-dcef-2b54  17        D-0         Eth-Trunk1.202   Abis_IP
+                                           202/-
+10.110.138.22   9038-0943-addf  8         D-0         Eth-Trunk1.202   Abis_IP
+                                           202/-
+10.110.138.23   3407-fbf7-f575  2         D-0         Eth-Trunk1.202   Abis_IP
+                                           202/-
+10.110.138.24   3407-fb42-1238  13        D-0         Eth-Trunk1.202   Abis_IP
+                                           202/-
+10.110.138.30   3c19-7df0-3966  8         D-0         Eth-Trunk1.202   Abis_IP
+                                           202/-
+10.110.192.193  4cf5-5b2e-3d0a            I -         Eth-Trunk1.265   Abis_IP
+10.110.138.129  4cf5-5b2e-3d0a            I -         Eth-Trunk1.301   IuB_UP
+10.110.138.130  74c9-9a03-ad10  13        D-0         Eth-Trunk1.301   IuB_UP
+                                           301/-
+10.110.138.133  549b-72a0-f2bb  11        D-0         Eth-Trunk1.301   IuB_UP
+                                           301/-
+10.110.138.134  74d0-dcc0-488e  18        D-0         Eth-Trunk1.301   IuB_UP
+                                           301/-
+10.110.138.137  987a-10a6-d5cc  9         D-0         Eth-Trunk1.301   IuB_UP
+                                           301/-
+10.110.138.145  4cf5-5b2e-3d0a            I -         Eth-Trunk1.302   IuB_UP
+10.110.138.146  74d0-dcc7-8317  13        D-0         Eth-Trunk1.302   IuB_UP
+                                           302/-
+10.110.138.147  74c9-9a01-454f  8         D-0         Eth-Trunk1.302   IuB_UP
+                                           302/-
+10.110.138.148  9038-099c-096d  10        D-0         Eth-Trunk1.302   IuB_UP
+                                           302/-
+10.110.138.149  549b-7281-d09d  6         D-0         Eth-Trunk1.302   IuB_UP
+                                           302/-
+10.110.138.150  9038-09d6-eb87  13        D-0         Eth-Trunk1.302   IuB_UP
+                                           302/-
+10.110.138.152  78d3-4749-894d  14        D-0         Eth-Trunk1.302   IuB_UP
+                                           302/-
+10.110.138.153  549b-7280-dca1  17        D-0         Eth-Trunk1.302   IuB_UP
+                                           302/-
+10.110.138.154  549b-7243-4043  18        D-0         Eth-Trunk1.302   IuB_UP
+                                           302/-
+10.110.138.156  987a-10aa-5729  17        D-0         Eth-Trunk1.302   IuB_UP
+                                           302/-
+10.110.138.157  a4a1-c237-8587  20        D-0         Eth-Trunk1.302   IuB_UP
+                                           302/-
+10.110.138.158  346e-9d5c-d9b3  20        D-0         Eth-Trunk1.302   IuB_UP
+                                           302/-
+10.110.138.161  4cf5-5b2e-3d0a            I -         Eth-Trunk1.303   IuB_UP
+10.110.138.110  346e-9d5e-0c92  7         D-0         Eth-Trunk1.303   IuB_UP
+                                           303/-
+10.110.138.167  3c19-7dba-8ed3  8         D-0         Eth-Trunk1.303   IuB_UP
+                                           303/-
+10.110.138.168  78d3-4749-105c  8         D-0         Eth-Trunk1.303   IuB_UP
+                                           303/-
+10.110.138.172  3407-fb1b-2110  7         D-0         Eth-Trunk1.303   IuB_UP
+                                           303/-
+10.110.138.110  9055-aee1-934b  4         D-0         Eth-Trunk1.303   IuB_UP
+                                           303/-
+10.110.0.193    4cf5-5b2e-3d0a            I -         Eth-Trunk1.365   OM-3G
+10.110.138.97   4cf5-5b2e-3d0a            I -         Eth-Trunk1.401   LTE-S1X2
+10.110.138.98   9038-0928-6970  14        D-0         Eth-Trunk1.401   LTE-S1X2
+                                           401/-
+10.110.138.99   98a4-04a8-3ded  9         D-0         Eth-Trunk1.401   LTE-S1X2
+                                           401/-
+10.110.138.100  9038-092c-aa7b  18        D-0         Eth-Trunk1.401   LTE-S1X2
+                                           401/-
+10.110.138.101  346e-9d5c-b080  13        D-0         Eth-Trunk1.401   LTE-S1X2
+                                           401/-
+10.110.138.102  346e-9d5e-0c92  17        D-0         Eth-Trunk1.401   LTE-S1X2
+                                           401/-
+10.110.138.104  78d3-4749-894d  18        D-0         Eth-Trunk1.401   LTE-S1X2
+                                           401/-
+10.110.138.105  78d3-4749-105c  20        D-0         Eth-Trunk1.401   LTE-S1X2
+                                           401/-
+10.110.138.106  987a-10a6-d5cc  17        D-0         Eth-Trunk1.401   LTE-S1X2
+                                           401/-
+10.110.138.107  ac60-b683-5ac0  3         D-0         Eth-Trunk1.401   LTE-S1X2
+                                           401/-
+10.110.138.108  346e-9d3f-4ada  3         D-0         Eth-Trunk1.401   LTE-S1X2
+                                           401/-
+10.110.138.109  549b-72a0-f2bb  1         D-0         Eth-Trunk1.401   LTE-S1X2
+                                           401/-
+10.110.138.110  a4a1-c2c0-d133  10        D-0         Eth-Trunk1.401   LTE-S1X2
+                                           401/-
+10.110.138.1    4cf5-5b2e-3d0a            I -         Eth-Trunk1.1001  OM-3G
+10.110.138.2    ac60-b676-7344  17        D-0         Eth-Trunk1.1001  OM-3G
+                                          1001/-
+10.110.138.3    74c9-9ae5-f147  19        D-0         Eth-Trunk1.1001  OM-3G
+                                          1001/-
+10.110.138.5    74c9-9abd-02c9  17        D-0         Eth-Trunk1.1001  OM-3G
+                                          1001/-
+10.110.138.8    9055-ae48-6b2e  6         D-0         Eth-Trunk1.1001  OM-3G
+                                          1001/-
+10.110.138.10   74c9-9ac1-91ce  13        D-0         Eth-Trunk1.1001  OM-3G
+                                          1001/-
+10.110.138.11   74d0-dcf1-9804  4         D-0         Eth-Trunk1.1001  OM-3G
+                                          1001/-
+10.110.138.12   74c9-9ae5-84b2  2         D-0         Eth-Trunk1.1001  OM-3G
+                                          1001/-
+10.110.138.14   9055-ae4c-2fa2  13        D-0         Eth-Trunk1.1001  OM-3G
+                                          1001/-
+10.110.138.17   4cf5-5b2e-3d0a            I -         Eth-Trunk1.1002  OM-3G
+10.110.138.18   ac60-b671-bc15  4         D-0         Eth-Trunk1.1002  OM-3G
+                                          1002/-
+10.110.138.19   346e-9db4-8552  20        D-0         Eth-Trunk1.1002  OM-3G
+                                          1002/-
+10.110.138.21   74d0-dcef-2b54  17        D-0         Eth-Trunk1.1002  OM-3G
+                                          1002/-
+10.110.138.22   9038-0943-addf  9         D-0         Eth-Trunk1.1002  OM-3G
+                                          1002/-
+10.110.138.24   3407-fb42-1238  16        D-0         Eth-Trunk1.1002  OM-3G
+                                          1002/-
+10.110.138.30   3c19-7df0-3966  8         D-0         Eth-Trunk1.1002  OM-3G
+                                          1002/-
+10.110.138.129  4cf5-5b2e-3d0a            I -         Eth-Trunk1.1041  OM-3G
+10.110.138.130  74c9-9a03-ad10  13        D-0         Eth-Trunk1.1041  OM-3G
+                                          1041/-
+10.110.138.134  74d0-dcc0-488e  18        D-0         Eth-Trunk1.1041  OM-3G
+                                          1041/-
+10.110.138.145  4cf5-5b2e-3d0a            I -         Eth-Trunk1.1042  OM-3G
+10.110.138.146  74d0-dcc7-8317  20        D-0         Eth-Trunk1.1042  OM-3G
+                                          1042/-
+10.110.138.147  74c9-9a01-454f  13        D-0         Eth-Trunk1.1042  OM-3G
+                                          1042/-
+10.110.138.150  9038-09d6-eb87  15        D-0         Eth-Trunk1.1042  OM-3G
+                                          1042/-
+10.110.138.156  987a-10aa-5729  17        D-0         Eth-Trunk1.1042  OM-3G
+                                          1042/-
+10.110.138.157  a4a1-c237-8587  20        D-0         Eth-Trunk1.1042  OM-3G
+                                          1042/-
+10.110.138.158  346e-9d5c-d9b3  20        D-0         Eth-Trunk1.1042  OM-3G
+                                          1042/-
+10.110.138.161  4cf5-5b2e-3d0a            I -         Eth-Trunk1.1043  OM-3G
+10.110.138.167  3c19-7dba-8ed3  8         D-0         Eth-Trunk1.1043  OM-3G
+                                          1043/-
+10.110.138.172  3407-fb1b-2110  7         D-0         Eth-Trunk1.1043  OM-3G
+                                          1043/-
+10.110.138.110  9055-aee1-934b  4         D-0         Eth-Trunk1.1043  OM-3G
+                                          1043/-
+10.110.138.97   4cf5-5b2e-3d0a            I -         Eth-Trunk1.1081  OM-3G
+10.110.138.98   9038-0928-6970  4         D-0         Eth-Trunk1.1081  OM-3G
+                                          1081/-
+10.110.138.99   98a4-04a8-3ded  20        D-0         Eth-Trunk1.1081  OM-3G
+                                          1081/-
+10.110.138.100  9038-092c-aa7b  19        D-0         Eth-Trunk1.1081  OM-3G
+                                          1081/-
+10.110.138.101  346e-9d5c-b080  16        D-0         Eth-Trunk1.1081  OM-3G
+                                          1081/-
+10.110.138.102  346e-9d5e-0c92  7         D-0         Eth-Trunk1.1081  OM-3G
+                                          1081/-
+10.110.138.104  78d3-4749-894d  16        D-0         Eth-Trunk1.1081  OM-3G
+                                          1081/-
+10.110.138.105  78d3-4749-105c  15        D-0         Eth-Trunk1.1081  OM-3G
+                                          1081/-
+10.110.138.106  987a-10a6-d5cc  13        D-0         Eth-Trunk1.1081  OM-3G
+                                          1081/-
+10.110.138.107  ac60-b683-5ac0  3         D-0         Eth-Trunk1.1081  OM-3G
+                                          1081/-
+10.110.138.108  346e-9d3f-4ada  8         D-0         Eth-Trunk1.1081  OM-3G
+                                          1081/-
+10.110.138.109  549b-72a0-f2bb  20        D-0         Eth-Trunk1.1081  OM-3G
+                                          1081/-
+10.110.138.110  a4a1-c2c0-d133  9         D-0         Eth-Trunk1.1081  OM-3G
+                                          1081/-
+10.110.103.97   4cf5-5b2e-3d0a            I -         Eth-Trunk1.1107  LTE-S1X2
+10.110.103.106  ac60-b683-2742  13        D-0         Eth-Trunk1.1107  LTE-S1X2
+                                          1107/-
+10.110.107.110  4cf5-5b2e-3d0a            I -         Eth-Trunk1.1108  LTE-S1X2
+10.110.107.110  987a-10aa-5729  17        D-0         Eth-Trunk1.1108  LTE-S1X2
+                                          1108/-
+10.110.170.81   4cf5-5b2e-3d0a            I -         Eth-Trunk1.1108  LTE-S1X2
+10.110.170.84   ac60-b682-c450  13        D-0         Eth-Trunk1.1108  LTE-S1X2
+                                          1108/-
+10.110.170.85   549b-7280-dca1  13        D-0         Eth-Trunk1.1108  LTE-S1X2
+                                          1108/-
+10.110.170.86   98c5-db33-2044  5         D-0         Eth-Trunk1.1108  LTE-S1X2
+                                          1108/-
+10.110.170.88   346e-9d56-6110  18        D-0         Eth-Trunk1.1108  LTE-S1X2
+                                          1108/-
+10.110.170.92   9038-099c-096d  2         D-0         Eth-Trunk1.1108  LTE-S1X2
+                                          1108/-
+10.110.170.93   549b-7281-d09d  9         D-0         Eth-Trunk1.1108  LTE-S1X2
+                                          1108/-
+10.110.170.94   549b-7243-4043  6         D-0         Eth-Trunk1.1108  LTE-S1X2
+                                          1108/-
+10.110.133.1    4cf5-5b2e-3d0a            I -         Eth-Trunk1.3100  Inband-IPaso
+10.110.133.2    0025-5cb6-ecb0  20        D-0         Eth-Trunk1.3100  Inband-IPaso
+                                          3100/-
+10.110.133.3    0020-85f8-8753  1         D-0         Eth-Trunk1.3100  Inband-IPaso
+                                          3100/-
+10.110.133.4    8cdf-9d60-94e0  12        D-0         Eth-Trunk1.3100  Inband-IPaso
+                                          3100/-
+10.110.133.5    0025-5cf9-7240  13        D-0         Eth-Trunk1.3100  Inband-IPaso
+                                          3100/-
+10.110.133.6    0025-5cf9-7610  9         D-0         Eth-Trunk1.3100  Inband-IPaso
+                                          3100/-
+10.110.133.7    8cdf-9d25-35c0  6         D-0         Eth-Trunk1.3100  Inband-IPaso
+                                          3100/-
+10.110.133.8    0025-5c7d-0840  16        D-0         Eth-Trunk1.3100  Inband-IPaso
+                                          3100/-
+10.110.133.9    0025-5cf9-4c60  1         D-0         Eth-Trunk1.3100  Inband-IPaso
+                                          3100/-
+10.110.133.10   0025-5cb2-93c0  20        D-0         Eth-Trunk1.3100  Inband-IPaso
+                                          3100/-
+10.110.133.12   0025-5c79-3280  1         D-0         Eth-Trunk1.3100  Inband-IPaso
+                                          3100/-
+10.110.133.13   d492-3400-1c80  13        D-0         Eth-Trunk1.3100  Inband-IPaso
+                                          3100/-
+10.110.133.14   0025-5ce9-4a50  13        D-0         Eth-Trunk1.3100  Inband-IPaso
+                                          3100/-
+10.110.133.17   4cf5-5b2e-3d0a            I -         Eth-Trunk1.3101  Inband-IPaso
+10.110.133.18   d492-3400-0ae0  5         D-0         Eth-Trunk1.3101  Inband-IPaso
+                                          3101/-
+10.110.133.19   0020-85ff-f610  13        D-0         Eth-Trunk1.3101  Inband-IPaso
+                                          3101/-
+10.110.133.20   0025-5c03-0940  10        D-0         Eth-Trunk1.3101  Inband-IPaso
+                                          3101/-
+10.110.133.21   743a-65b4-d720  4         D-0         Eth-Trunk1.3101  Inband-IPaso
+                                          3101/-
+10.110.133.22   d492-3400-0a40  8         D-0         Eth-Trunk1.3101  Inband-IPaso
+                                          3101/-
+10.110.133.23   58c2-329f-85e0  16        D-0         Eth-Trunk1.3101  Inband-IPaso
+                                          3101/-
+10.110.133.24   8cdf-9d60-8740  5         D-0         Eth-Trunk1.3101  Inband-IPaso
+                                          3101/-
+10.110.133.25   743a-6593-0380  18        D-0         Eth-Trunk1.3101  Inband-IPaso
+                                          3101/-
+10.110.133.26   8cdf-9d60-99a0  18        D-0         Eth-Trunk1.3101  Inband-IPaso
+                                          3101/-
+10.110.133.27   743a-65d6-7d40  1         D-0         Eth-Trunk1.3101  Inband-IPaso
+                                          3101/-
+10.110.133.28   0025-5c7e-6d00  6         D-0         Eth-Trunk1.3101  Inband-IPaso
+                                          3101/-
+10.110.133.29   8cdf-9da5-ac60  5         D-0         Eth-Trunk1.3101  Inband-IPaso
+                                          3101/-
+10.110.133.33   4cf5-5b2e-3d0a            I -         Eth-Trunk1.3102  Inband-IPaso
+10.110.133.35   8cdf-9d7c-f200  11        D-0         Eth-Trunk1.3102  Inband-IPaso
+                                          3102/-
+10.110.133.36   0025-5c92-20c0  3         D-0         Eth-Trunk1.3102  Inband-IPaso
+                                          3102/-
+10.110.133.37   743a-6533-50a0  2         D-0         Eth-Trunk1.3102  Inband-IPaso
+                                          3102/-
+10.110.133.38   0025-5c81-b3a0  4         D-0         Eth-Trunk1.3102  Inband-IPaso
+                                          3102/-
+10.110.133.39   0025-5cdf-4e60  6         D-0         Eth-Trunk1.3102  Inband-IPaso
+                                          3102/-
+10.110.133.40   0025-5cb6-f5e0  5         D-0         Eth-Trunk1.3102  Inband-IPaso
+                                          3102/-
+10.110.133.41   0025-5c69-e140  3         D-0         Eth-Trunk1.3102  Inband-IPaso
+                                          3102/-
+10.110.133.42   58c2-32a0-ed10  3         D-0         Eth-Trunk1.3102  Inband-IPaso
+                                          3102/-
+10.110.133.43   0025-5ca9-5e60  17        D-0         Eth-Trunk1.3102  Inband-IPaso
+                                          3102/-
+10.110.133.44   0025-5cf2-1f20  3         D-0         Eth-Trunk1.3102  Inband-IPaso
+                                          3102/-
+10.110.133.46   0025-5ca9-49e0  3         D-0         Eth-Trunk1.3102  Inband-IPaso
+                                          3102/-
+10.110.133.49   4cf5-5b2e-3d0a            I -         Eth-Trunk1.3103  Inband-IPaso
+10.110.133.52   8cdf-9d60-5ae0  3         D-0         Eth-Trunk1.3103  Inband-IPaso
+                                          3103/-
+10.110.133.53   8cdf-9d60-5000  11        D-0         Eth-Trunk1.3103  Inband-IPaso
+                                          3103/-
+10.110.133.57   0025-5ca1-b0c0  3         D-0         Eth-Trunk1.3103  Inband-IPaso
+                                          3103/-
+10.110.133.58   0025-5c79-50e0  3         D-0         Eth-Trunk1.3103  Inband-IPaso
+                                          3103/-
+10.110.133.59   58c2-3280-4c20  11        D-0         Eth-Trunk1.3103  Inband-IPaso
+                                          3103/-
+10.110.133.60   0025-5c7e-d730  15        D-0         Eth-Trunk1.3103  Inband-IPaso
+                                          3103/-
+10.110.133.61   0025-5cf2-2290  15        D-0         Eth-Trunk1.3103  Inband-IPaso
+                                          3103/-
+10.110.133.62   0025-5c7e-65d0  4         D-0         Eth-Trunk1.3103  Inband-IPaso
+                                          3103/-
+10.110.133.65   4cf5-5b2e-3d0a            I -         Eth-Trunk1.3104  Inband-IPaso
+10.110.133.66   0025-5c59-31c0  14        D-0         Eth-Trunk1.3104  Inband-IPaso
+                                          3104/-
+10.110.133.67   0025-5c3f-e780  14        D-0         Eth-Trunk1.3104  Inband-IPaso
+                                          3104/-
+10.110.133.68   743a-6583-e470  5         D-0         Eth-Trunk1.3104  Inband-IPaso
+                                          3104/-
+10.110.133.69   0025-5ce9-9110  5         D-0         Eth-Trunk1.3104  Inband-IPaso
+                                          3104/-
+10.110.133.70   8cdf-9db6-bf00  8         D-0         Eth-Trunk1.3104  Inband-IPaso
+                                          3104/-
+10.110.133.71   8cdf-9d27-2110  8         D-0         Eth-Trunk1.3104  Inband-IPaso
+                                          3104/-
+10.110.133.72   8cdf-9da5-98a0  8         D-0         Eth-Trunk1.3104  Inband-IPaso
+                                          3104/-
+10.110.133.73   58c2-3277-c440  8         D-0         Eth-Trunk1.3104  Inband-IPaso
+                                          3104/-
+10.110.133.74   8cdf-9d27-0000  15        D-0         Eth-Trunk1.3104  Inband-IPaso
+                                          3104/-
+10.110.133.75   58c2-32b1-1480  8         D-0         Eth-Trunk1.3104  Inband-IPaso
+                                          3104/-
+10.110.133.76   8cdf-9d34-c940  8         D-0         Eth-Trunk1.3104  Inband-IPaso
+                                          3104/-
+10.110.133.77   743a-656c-3da0  13        D-0         Eth-Trunk1.3104  Inband-IPaso
+                                          3104/-
+10.110.133.78   743a-65cb-0be0  8         D-0         Eth-Trunk1.3104  Inband-IPaso
+                                          3104/-
+10.110.102.97   4cf5-5b2e-3d0a            I -         Eth-Trunk1.3707  OM-3G
+10.110.102.106  ac60-b683-2742  13        D-0         Eth-Trunk1.3707  OM-3G
+                                          3707/-
+10.110.106.110  4cf5-5b2e-3d0a            I -         Eth-Trunk1.3708  OM-3G
+10.110.106.117  9038-0928-73e2  18        D-0         Eth-Trunk1.3708  OM-3G
+                                          3708/-
+10.110.122.177  4cf5-5b2e-3d0a            I -         Eth-Trunk1.3712  OM-3G
+10.110.122.193  4cf5-5b2e-3d0a            I -         Eth-Trunk1.3713  OM-3G
+10.110.122.209  4cf5-5b2e-3d0a            I -         Eth-Trunk1.3714  OM-3G
+10.110.171.81   4cf5-5b2e-3d0a            I -         Eth-Trunk1.3738  OM-3G
+10.110.171.84   ac60-b682-c450  13        D-0         Eth-Trunk1.3738  OM-3G
+                                          3738/-
+10.110.171.85   549b-7280-dca1  5         D-0         Eth-Trunk1.3738  OM-3G
+                                          3738/-
+10.110.171.86   98c5-db33-2044  8         D-0         Eth-Trunk1.3738  OM-3G
+                                          3738/-
+10.110.171.88   346e-9d56-6110  18        D-0         Eth-Trunk1.3738  OM-3G
+                                          3738/-
+10.110.171.92   9038-099c-096d  2         D-0         Eth-Trunk1.3738  OM-3G
+                                          3738/-
+10.110.175.93   549b-7281-d09d  16        D-0         Eth-Trunk1.3738  OM-3G
+                                          3738/-
+10.110.171.94   549b-7243-4043  9         D-0         Eth-Trunk1.3738  OM-3G
+                                          3738/-
+10.110.110.209  4cf5-5b2e-3d0a            I -         Eth-Trunk1.3914  OM-power
+10.110.110.210  c8c4-6594-8fc2  7         D-0         Eth-Trunk1.3914  OM-power
+                                          3914/-
+10.110.110.218  c835-b884-707f  5         D-0         Eth-Trunk1.3914  OM-power
+                                          3914/-
+10.110.110.222  c835-b885-1ec5  9         D-0         Eth-Trunk1.3914  OM-power
+                                          3914/-
+10.110.21.21    4cf5-5b2e-3d0a            I -         Eth-Trunk50.2400 OM-OLT
+10.110.21.22    3ce8-2462-b78e  18        D-0         Eth-Trunk50.2400 OM-OLT
+                                          2400/-
+10.110.178.65   4cf5-5b2e-3d0a            I -         VE0/2/1.20       IuB_UP
+10.110.167.65   4cf5-5b2e-3d0a            I -         VE0/2/1.36       IuB_UP
+10.110.195.81   4cf5-5b2e-3d0a            I -         VE0/2/1.80       IuB_UP
+10.110.195.145  4cf5-5b2e-3d0a            I -         VE0/2/1.84       IuB_UP
+10.110.138.177  4cf5-5b2e-3d0a            I -         VE0/2/1.304      IuB_UP
+10.110.1.9      4cf5-5b2e-3d0a            I -         Eth-Trunk2
+10.110.1.10     4cf5-5b2e-7ee5  15        D-0         Eth-Trunk2
+10.110.133.81   4cf5-5b2e-3d18            I -         GE0/2/13.3105    Inband-IPaso
+10.110.133.82   0025-5c92-57a0  3         D-0         GE0/2/13.3105    Inband-IPaso
+                                          3105/-
+10.110.1.6      4cf5-5b2e-3d0a            I -         Eth-Trunk0
+10.110.1.5      f41d-6bbc-4cb7  2         D-0         Eth-Trunk0
+----------------------------------------------------------------------------------------
+Total:209         Dynamic:110       Static:0    Interface:44    Remote:0
+Redirect:0
