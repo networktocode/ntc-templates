@@ -1,0 +1,24 @@
+Value Filldown SLOT (\d+)
+Value Required MDA (\d+)
+Value Required CARD_TYPE (\S+)
+Value Required ADMIN_STATE (\S+)
+Value Required OPER_STATE (\S+)
+
+Start
+  ^=+
+  ^MDA\s+Summary
+  ^Slot\s+Mda\s+Provisioned\s+Type\s+Admin\s+Operationals*$$ -> MDA
+  ^\s*$$
+  ^. -> Error
+
+MDA
+  ^-+
+  ^\s+Equipped\s+
+  ^${SLOT}\s+${MDA}\s+${CARD_TYPE}\s+${ADMIN_STATE}\s+${OPER_STATE}\s*$$ -> Record
+  ^\s+${MDA}\s+${CARD_TYPE}\s+${ADMIN_STATE}\s+${OPER_STATE}\s*$$ -> Record
+  ^=+ -> Done
+  ^\s+(\S+\s+equipped.|\S+)
+  ^\s*$$
+  ^. -> Error
+
+Done
