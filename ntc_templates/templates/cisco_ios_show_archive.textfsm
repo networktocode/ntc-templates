@@ -10,6 +10,7 @@ Start
   ^\s+Archive\s+#\s+Name
   ^\s+${CURRENT_INDEX}\s+${FILENAMES}\s+<-\s+Most\s+Recent
   ^\s+\d+\s+${FILENAMES}
+  ^\s+\d+ -> Record
   ^\sArchive feature ${STATE} -> Record
   # Capture time-stamp if vty line has command time-stamping turned on
   ^Load\s+for\s+
