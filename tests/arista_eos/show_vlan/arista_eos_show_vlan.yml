@@ -3,12 +3,19 @@ parsed_sample:
   - name: "default"
     status: "active"
     vlan_id: "1"
+    interfaces:
+      - "Et1"
   - name: "Test1"
     status: "active"
     vlan_id: "10"
+    interfaces:
+      - "Et1"
+      - "Et2"
   - name: "Test2"
     status: "suspended"
     vlan_id: "20"
+    interfaces: []
   - name: "VLAN0030"
     status: "suspended"
     vlan_id: "30"
+    interfaces: []
