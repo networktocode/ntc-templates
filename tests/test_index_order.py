@@ -10,6 +10,7 @@ OS_CHOICES = [
     "alcatel_sros",
     "arista_eos",
     "aruba_os",
+    "aruba_aoscx",
     "avaya_ers",
     "avaya_vsp",
     "broadcom_icos",
