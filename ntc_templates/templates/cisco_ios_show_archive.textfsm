@@ -1,7 +1,7 @@
 Value STATE (\w+\s\w+)
 Value NEXT_FILENAME (\S+)
 Value List FILENAMES (\S+)
-Value Required CURRENT_INDEX (\d+)
+Value CURRENT_INDEX (\d+)
 
 Start
   ^The\s+maximum\s+archive\s+configurations\s+allowed\s+is\s+\d+.
