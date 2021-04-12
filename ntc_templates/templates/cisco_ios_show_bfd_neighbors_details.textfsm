@@ -28,8 +28,6 @@ Value TEMPLATE (\S+)
 Value UPTIME (\S+)
 Value VERSION (\d+)
 
-# @TODO also add in BFD for IPv6/OSPFv3, etc
-
 Start
   ^\s*IPv\d+\s+Sessions\s*$$
   ^\s*(?:\S+\s+)?NeighAddr.*$$ -> BFD
