@@ -1,0 +1,22 @@
+crypto map WAN1_CMAP 10 match address CMAP_RU16
+crypto map WAN1_CMAP 10 set peer 1.1.1.1
+crypto map WAN1_CMAP 10 set ikev1 transform-set ESP-AES-256-SHA ESP-AES-192-SHA
+crypto map WAN1_CMAP 20 match address CMAP_RU11
+crypto map WAN1_CMAP 20 set peer 1.1.1.2
+crypto map WAN1_CMAP 20 set ikev1 transform-set ESP-AES-256-SHA ESP-AES-192-SHA
+crypto map WAN1_CMAP 30 match address CMAP_RU12
+crypto map WAN1_CMAP 30 set peer 1.1.1.3
+crypto map WAN1_CMAP 30 set ikev1 transform-set ESP-AES-256-SHA ESP-AES-192-SHA
+crypto map WAN1_CMAP 40 match address CMAP_RU17
+crypto map WAN1_CMAP 40 set peer 1.1.1.4
+crypto map WAN1_CMAP 40 set ikev1 transform-set ESP-AES-256-SHA ESP-AES-192-SHA
+crypto map WAN1_CMAP 100 match address CMAP_FR1
+crypto map WAN1_CMAP 100 set pfs group5
+crypto map WAN1_CMAP 100 set peer 1.1.1.8
+crypto map WAN1_CMAP 100 set ikev1 transform-set DES-MD5
+crypto map WAN1_CMAP 100 set security-association lifetime seconds 3600
+crypto map WAN1_CMAP 65535 ipsec-isakmp dynamic SYSTEM_DEFAULT_CRYPTO_MAP
+crypto map WAN1_CMAP interface WAN1
+crypto map S2S_CMAP 10 match address CMAP_RU17
+crypto map S2S_CMAP 10 set peer 1.1.1.5
+crypto map S2S_CMAP 10 set ikev1 transform-set ESP-AES-256-SHA ESP-AES-192-SHA
