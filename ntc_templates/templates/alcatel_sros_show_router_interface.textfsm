@@ -1,0 +1,28 @@
+Value Required INTERFACE (\S+)
+Value Required ADMIN_STATE (Up|Down)
+Value Required OPER_STATE_V4 (Up|Down)
+Value Required OPER_STATE_V6 (Up|Down)
+Value Required MODE (\S+)
+Value Required PORT_SAP_ID (\S+)
+Value List ADDRESS (\S+)
+Value List PFX_STATE (\S+)
+
+Start
+  ^=+
+  ^Interface\s+Table
+  ^Interface-Name\s+Adm\s+Opr\(v4\/v6\)\s+Mode\s+Port/SapId\s*$$ -> Interface
+  ^\s*$$
+  ^. -> Error
+
+Interface
+  ^\s+IP-Address\s+PfxState
+  ^-+
+  ^.*?\s+(Up|Down) -> Continue.Record
+  ^${INTERFACE}\s+${ADMIN_STATE}\s+${OPER_STATE_V4}\/${OPER_STATE_V6}\s+${MODE}\s+${PORT_SAP_ID} 
+  ^\s+${ADDRESS}\s+${PFX_STATE}
+  ^Interfaces -> Done
+  ^=+
+  ^\s*$$
+  ^. -> Error
+
+Done

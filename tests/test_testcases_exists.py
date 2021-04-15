@@ -24,7 +24,7 @@ def extract_index_data():
         # so need to loop through each platform looking to find a match
         # in order to accurately derive platform name
         for directory in TEST_DIRECTORIES:
-            if re.match(platform, directory):
+            if re.match(rf"{platform}", directory):
                 platform = directory
                 break
         cut = len(platform) + 1
