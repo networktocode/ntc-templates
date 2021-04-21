@@ -39,6 +39,7 @@ OS_CHOICES = [
     "hp_comware",
     "hp_procurve",
     "huawei_vrp",
+    "ipinfusion_ocnos",
     "juniper",
     "juniper_junos",
     "juniper_screenos",
