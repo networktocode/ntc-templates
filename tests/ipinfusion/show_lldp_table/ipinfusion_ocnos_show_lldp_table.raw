@@ -1,0 +1,12 @@
+Capability codes: (R) Router, (B) Bridge, (O) Other
+LocalPort    RemoteDevice     RemotePortID    Capability    RemotePortDescr
+-----------  ---------------  --------------  ------------  -----------------
+Ethernet0    spine01          fortyGigE0/20   BR            Ethernet20
+Ethernet4    spine02          fortyGigE0/20   BR            Ethernet20
+Ethernet8    leaf01           fortyGigE0/20   BR            Ethernet20
+Ethernet12   leaf02           fortyGigE0/20   BR            Ethernet20
+Ethernet16   leaf03           fortyGigE0/24   BR            Ethernet24
+Ethernet20   leaf04           fortyGigE0/24   BR            Ethernet24
+eth0         mgmt-switch      swp14           BR            swp14
+--------------------------------------------------
+Total entries displayed:  7
