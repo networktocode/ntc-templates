@@ -7,7 +7,10 @@ Value REMOTE_PORT_DESC (\S+)
 Start
   ^Capability\s+codes:\s+\(R\)\s+Router,\s+\(B\)\s+Bridge,\s+\(O\)\s+Other
   ^LocalPort\s+RemoteDevice\s+RemotePortID\s+Capability\s+RemotePortDescr
-  ^[-+\s+]+
+  ^[-+\s+]+ -> Row
+  ^. -> Error
+
+Row  
   ^${LOCAL_PORT}\s+${REMOTE_DEVICE}\s+${REMOTE_PORT_ID}\s+${CAPABILITY}\s+${REMOTE_PORT_DESC} -> Record
   ^-+
   ^[\w+\s+]*:\s+\d+
