@@ -1,8 +1,8 @@
-Value LOCAL_PORT (\S+)
-Value REMOTE_DEVICE (\S+)
-Value REMOTE_PORT_ID (\S+)
+Value LOCAL_INTERFACE (\S+)
+Value NEIGHBOR (\S+)
+Value NEIGHBOR_INTERFACE (\S+)
 Value CAPABILITY (R|B|O|RO|RB|BR|BO|OR|OB|RBO|ROB|BRO|BOR|ORB|OBR)
-Value REMOTE_PORT_DESC (\S+)
+Value NEIGHBOR_INTERFACE_DESCR (\S+)
 
 Start
   ^Capability\s+codes:\s+\(R\)\s+Router,\s+\(B\)\s+Bridge,\s+\(O\)\s+Other
@@ -11,7 +11,7 @@ Start
   ^. -> Error
 
 Row  
-  ^${LOCAL_PORT}\s+${REMOTE_DEVICE}\s+${REMOTE_PORT_ID}\s+${CAPABILITY}\s+${REMOTE_PORT_DESC} -> Record
+  ^${LOCAL_INTERFACE}\s+${NEIGHBOR}\s+${NEIGHBOR_INTERFACE}\s+${CAPABILITY}\s+${NEIGHBOR_INTERFACE_DESCR} -> Record
   ^-+
   ^[\w+\s+]*:\s+\d+
   ^. -> Error
