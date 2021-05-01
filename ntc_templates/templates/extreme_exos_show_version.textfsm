@@ -1,0 +1,15 @@
+Value SERIAL_NUMBER (\S+)
+Value BOOTROM ([\d|\.]+)
+Value VERSION (\S+)
+Value VERSION_DETAILED (\S+)
+Value CERTIFIED_VERSION (.*)
+Value BUILD_TOOLS_VERSION (\S+)
+
+Start
+  ^Switch\s+:\s+\S+\s+${SERIAL_NUMBER}
+  ^Image\s+:\sExtremeXOS\sversion\s${VERSION}\s${VERSION_DETAILED}
+  ^BootROM\s:\s${BOOTROM}
+  ^Certified\sVersion\s:\s${CERTIFIED_VERSION}(\s+|$$)
+  ^Build\sTools\sVersion\s:\s${BUILD_TOOLS_VERSION} -> Record
+  ^\s*$$
+  ^. -> Error

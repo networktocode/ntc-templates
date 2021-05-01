@@ -1,0 +1,23 @@
+Port Summary
+Port     Display              VLAN Name           Port  Link  Speed  Duplex
+#        String               (or # VLANs)        State State Actual Actual
+===========================================================================
+1        Uplink               (0004)              E     A      1000   FULL 
+2        Precense-HUB         IOT                 E     A      10     HALF 
+3        KontorPC             INTERN              E     A      1000   FULL 
+4        Kontor-AP            (0004)              E     A      1000   FULL 
+5        SvensVMHost          INTERN              E     R                               
+6        Verishure-HUB        IOT                 E     A      100    FULL 
+7        Ragnar               IOT                 E     A      100    FULL 
+8                             (0002)              E     R                               
+9                             Default             E     R                               
+10                            Default             E     R                               
+11                                                D     R                               
+12                            Default             E     R                               
+========================================================================
+   Port State: D-Disabled, E-Enabled, F-Disabled by link-flap detection,
+               L-Disabled due to licensing
+   Link State: A-Active, R-Ready, NP-Port not present, L-Loopback,
+               D-ELSM enabled but not up,
+               d-Ethernet OAM enabled but not up,
+               B-MACsec enabled but blocked awaiting authentication

@@ -32,6 +32,7 @@ OS_CHOICES = [
     "dell_powerconnect",
     "enterasys",
     "extreme",
+    "extreme_exos",
     "f5_ltm",
     "fortinet",
     "hp_comware",

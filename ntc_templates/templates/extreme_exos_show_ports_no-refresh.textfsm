@@ -1,0 +1,13 @@
+Value PORT (\d+)
+Value NAME (\S*)
+Value VLAN (\S*)
+Value STATE ([DEFL])
+Value LINKSTATE ([ARLDdB|NP])
+Value SPEED (\d*)
+Value DUPLEX ([HALF|FULL]*)
+
+Start
+  ^\=+
+  ^${PORT}\s+${NAME}\s+${VLAN}\s+${STATE}\s+${LINKSTATE}\s+${SPEED}\s+${DUPLEX} -> Record
+  ^\s*$$
+  ^. -> Error
