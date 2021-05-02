@@ -11,5 +11,7 @@ Start
   ^BootROM\s:\s${BOOTROM}
   ^Certified\sVersion\s:\s${CERTIFIED_VERSION}(\s+|$$)
   ^Build\sTools\sVersion\s:\s${BUILD_TOOLS_VERSION} -> Record
+  ^\s+on\s\w+.*
+  ^Diagnostics\s:
   ^\s*$$
   ^. -> Error
