@@ -1,0 +1,67 @@
+Port Summary
+Port     Display              VLAN Name           Port  Link  Speed  Duplex
+#        String               (or # VLANs)        State State Actual Actual
+===========================================================================
+1:1                           operations-client   E     R                               
+1:2                           operations-client   E     R                               
+1:3      laptop-Erik          operations-client   E     R                               
+1:4                           operations-client   E     R                               
+1:5      JCB-kontorpult       (0005)              E     A      1000   FULL 
+1:6                           operations-client   E     R                               
+1:7                           operations-client   E     R                               
+1:8                           operations-client   E     R                               
+1:9                           operations-client   E     R                               
+1:10                          operations-client   E     R                               
+1:11                          operations-client   E     R                               
+1:12                          operations-client   E     R                               
+1:13     TV-2                 operations-client   E     A      100    FULL 
+1:14     TV-1                 operations-client   E     A      1000   FULL 
+1:15     TV-3                 operations-client   E     A      1000   FULL 
+1:16                          operations-client   E     R                               
+1:17     Haivision-IPTV       DE-IPTV             E     A      100    FULL 
+1:18                                              D     R                               
+1:19                                              D     R                               
+1:20                                              D     R                               
+1:21                                              D     R                               
+1:22                                              D     R                               
+1:23                                              D     R                               
+1:24                          (0007)              E     A      1000   FULL 
+1:25                                              D     R                               
+1:26                                              D     R                               
+1:27                                              D     NP                              
+1:28                                              D     NP                              
+2:1                           operations-client   E     R                               
+2:2                           operations-client   E     R                               
+2:3                           operations-client   E     R                               
+2:4                           operations-client   E     R                               
+2:5                           operations-client   E     R                               
+2:6                           operations-client   E     R                               
+2:7                           operations-client   E     R                               
+2:8                           operations-client   E     R                               
+2:9                           operations-client   E     R                               
+2:10                          operations-client   E     R                               
+2:11                          operations-client   E     R                               
+2:12                          operations-client   E     R                               
+2:13                          operations-client   E     R                               
+2:14                          operations-client   E     R                               
+2:15     JCB-RPI              JCB-2200            E     R                               
+2:16     JCB-Labserver        (0003)              E     R                               
+2:17                                              D     R                               
+2:18                                              D     R                               
+2:19     AP-operations        (0003)              E     A      1000   FULL 
+2:20                                              E     R                               
+2:21                                              D     R                               
+2:22                                              D     R                               
+2:23                                              D     R                               
+2:24                          (0007)              E     A      1000   FULL 
+2:25                                              D     R                               
+2:26                                              D     R                               
+2:27                                              D     NP                              
+2:28                                              D     NP                              
+========================================================================
+   Port State: D-Disabled, E-Enabled, F-Disabled by link-flap detection,
+               L-Disabled due to licensing
+   Link State: A-Active, R-Ready, NP-Port not present, L-Loopback,
+               D-ELSM enabled but not up,
+               d-Ethernet OAM enabled but not up,
+               B-MACsec enabled but blocked awaiting authentication

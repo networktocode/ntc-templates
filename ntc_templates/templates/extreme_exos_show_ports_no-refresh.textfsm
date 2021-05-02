@@ -1,8 +1,10 @@
-Value PORT (\d+)
-Value NAME (\S*)
-Value VLAN (\S*)
+Value PORT (\S+)
+#Value PORT (\d+)
+Value NAME (\S+)
+Value VLAN (\S+)
 Value STATE ([DEFL])
-Value LINKSTATE ([ARLDdB|NP])
+#Value LINKSTATE ([ARLDdB|NP])
+Value LINKSTATE (\S+)
 Value SPEED (\d*)
 Value DUPLEX ([HALF|FULL]*)
 
@@ -10,9 +12,19 @@ Start
   ^Port.*
   ^.*String.*VLANs.*State\sState\sActual\sActual
   ^\=+
-  ^${PORT}\s+${NAME}\s+${VLAN}\s+${STATE}\s+${LINKSTATE}\s+${SPEED}\s+${DUPLEX} -> Record
+  ^${PORT}\s{5}${NAME}\s+${VLAN}\s+${STATE}\s+${LINKSTATE}\s+${SPEED}\s+${DUPLEX} -> Record
+  ^${PORT}\s{6}${NAME}\s+${VLAN}\s+${STATE}\s+${LINKSTATE}\s+${SPEED}\s+${DUPLEX} -> Record
+  ^${PORT}\s{7}${NAME}\s+${VLAN}\s+${STATE}\s+${LINKSTATE}\s+${SPEED}\s+${DUPLEX} -> Record
+  ^${PORT}\s{8}${NAME}\s+${VLAN}\s+${STATE}\s+${LINKSTATE}\s+${SPEED}\s+${DUPLEX} -> Record
+  ^${PORT}\s{26}${VLAN}\s+${STATE}\s+${LINKSTATE}\s+${SPEED}\s+${DUPLEX} -> Record
+  ^${PORT}\s{27}${VLAN}\s+${STATE}\s+${LINKSTATE}\s+${SPEED}\s+${DUPLEX} -> Record
+  ^${PORT}\s{28}${VLAN}\s+${STATE}\s+${LINKSTATE}\s+${SPEED}\s+${DUPLEX} -> Record
+  ^${PORT}\s{29}${VLAN}\s+${STATE}\s+${LINKSTATE}\s+${SPEED}\s+${DUPLEX} -> Record
+  ^${PORT}\s{46}${STATE}\s+${LINKSTATE}\s+${SPEED}\s+${DUPLEX} -> Record
+  ^${PORT}\s{47}${STATE}\s+${LINKSTATE}\s+${SPEED}\s+${DUPLEX} -> Record
+  ^${PORT}\s{48}${STATE}\s+${LINKSTATE}\s+${SPEED}\s+${DUPLEX} -> Record
+  ^${PORT}\s{49}${STATE}\s+${LINKSTATE}\s+${SPEED}\s+${DUPLEX} -> Record
   ^\s+Port\sState: -> Done
-  ^\s+-+\s+-+\s+(\+\s+|)-+\s+-+(\s+-+|)\s*$$
   ^\s*$$
   ^. -> Error
 
