@@ -1,0 +1,13 @@
+Value ADDRESS (\d+\.\d+\.\d+\.\d+)
+Value MAC (\S+)
+Value PORT_ID (\S+)
+Value PHYSICAL_PORT (\S+)
+Value STATE ([a-z]+)
+Value VRF (\S+)
+
+Start
+  ^IPv4\s+Address\s+MAC\s+Port\s+Physical\s+Port\s+State
+  ^${ADDRESS}\s+${MAC}\s+${PORT_ID}\s+${PHYSICAL_PORT}\s+${STATE}\s+${VRF} -> Record
+  ^\s*-*
+  ^\s*Total.*$$
+  ^. -> Error
