@@ -183,6 +183,7 @@ cisco_ios_show_ip_ospf_interface_brief.textfsm, .*, cisco_ios, sh[[ow]] ip ospf 
 cisco_ios_show_processes_memory_sorted.textfsm, .*, cisco_ios, sh[[ow]] pro[[cesses]] mem[[ory]] so[[rted]]
 cisco_ios_show_interfaces_description.textfsm, .*, cisco_ios, sh[[ow]] int[[erfaces]] des[[cription]]
 cisco_ios_show_ip_device_tracking_all.textfsm, .*, cisco_ios, sh[[ow]] ip de[[vice]] t[[racking]] a[[ll]]
+cisco_ios_show_bfd_neighbors_details.textfsm, .*, cisco_ios, sh[[ow]] bf[[d]] n[[eighbors]] (?:(?:ipv\d+|client \S+) )?de[[tails]]
 cisco_ios_show_environment_power_all.textfsm, .*, cisco_ios, sh[[ow]] envi[[ronment]] p[[ower]] a[[ll]]
 cisco_ios_show_interface_transceiver.textfsm, .*, cisco_ios, sh[[ow]] int[[erface]] trans[[ceiver]]
 cisco_ios_show_interfaces_switchport.textfsm, .*, cisco_ios, sh[[ow]] int[[erfaces]] sw[[itchport]]
@@ -387,6 +388,7 @@ cisco_xr_show_hsrp.textfsm, .*, cisco_xr, sh[[ow]] hs[[rp]]
 cisco_xr_show_arp.textfsm, .*, cisco_xr, sh[[ow]] arp
 cisco_xr_show_bgp.textfsm, .*, cisco_xr, sh[[ow]] bg[[p]]
 
+dell_force10_show_ip_interface_brief.textfsm, .*, dell_force10, sh[[ow]] ip int[[erface]] br[[ief]]
 dell_force10_show_vlan_brief.textfsm, .*, dell_force10, sh[[ow]] vl[[an]] br[[ief]]
 dell_force10_show_version.textfsm, .*, dell_force10, sh[[ow]] ver[[sion]]
 dell_force10_show_vlan.textfsm, .*, dell_force10, sh[[ow]] vl[[an]]
