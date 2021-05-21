@@ -1,0 +1,15 @@
+---
+parsed_sample:
+  - bgp_state: "Established"
+    inbound_routemap: "BGP_IN"
+    local_as: "65534"
+    localhost_ip: "10.255.11.204"
+    localhost_port: "33514"
+    neighbor: "10.255.11.4"
+    outbound_routemap: "BGP_OUT"
+    peer_group: ""
+    remote_as: "65514"
+    remote_ip: "10.255.11.4"
+    remote_port: "179"
+    remote_router_id: "10.255.255.6"
+    vrf: "VRF11"
