@@ -1,0 +1,54 @@
+#
+# Refried Jello
+#
+# 2021-01-08: Initial Version
+#
+# FG Version: 5.6, 6.0, 6.2
+# HW        : varied
+#
+Value HA_HEALTH (\S+)
+Value MODEL (\S+)
+Value HA_MODE ([\S\s]+)
+Value HA_GROUP (\S+)
+Value CLUSTER_UPTIME ([\S\s]+)
+Value CLUSTER_STATE_CHANGED_TIME ([\S\s]+)
+Value HA_SESSION_PICKUP_STATUS (\S+)
+Value HA_SESSION_PICKUP_DELAY (\S+)
+Value HA_OVERRIDE_STATUS (\S+)
+Value HA_MASTER_UNIT_NAME (\S+)
+Value HA_SLAVE_UNIT_NAME (\S+)
+Value HA_MASTER_UNIT_SERIAL (\S+)
+Value HA_SLAVE_UNIT_SERIAL (\S+)
+Value HA_MASTER_UNIT_INDEX (\S+)
+Value HA_SLAVE_UNIT_INDEX (\S+)
+
+Start
+  ^HA\s+Health\s+Status:\s+${HA_HEALTH}
+  ^Model:\s+${MODEL}
+  ^Mode:\s+${HA_MODE}
+  ^Group:\s+${HA_GROUP}
+  ^Debug:\s+\d+
+  ^Cluster\s+Uptime:\s+${CLUSTER_UPTIME}
+  ^Cluster\s+state\s+change\s+time:\s+${CLUSTER_STATE_CHANGED_TIME}
+  ^Master\s+selected\s+using:
+  ^\s+\<\S+
+  ^ses_pickup:\s+${HA_SESSION_PICKUP_STATUS},\s+ses_pickup_delay=${HA_SESSION_PICKUP_DELAY}
+  ^override:\s+${HA_OVERRIDE_STATUS}
+  ^Configuration\s+Status:
+  ^\s+\S+\([\S\s]+\):
+  ^System\s+Usage\s+stats:
+  ^\s+\S+:\s+
+  ^\s+sessions=
+  ^HBDEV\s+stats:
+  ^\s+\S+:\s+
+  ^\sha:+\S+:\s+
+  ^MONDEV\s+stats:
+  ^\s+\S+:\s+
+  ^\s:+\S+:\s+
+  ^Master\s*:\s+${HA_MASTER_UNIT_NAME}\s*,\s+${HA_MASTER_UNIT_SERIAL},\s+(HA\s+cluster\s+index|cluster\s+index)\s+=\s+${HA_MASTER_UNIT_INDEX}
+  ^Slave\s*:\s+${HA_SLAVE_UNIT_NAME}\s*,\s+${HA_SLAVE_UNIT_SERIAL},\s+(|HA)\s*cluster\s+index\s+=\s+${HA_SLAVE_UNIT_INDEX}
+  ^number\s+of\s+vcluster:\s+\d+
+  ^vcluster\s+\d+:
+  ^(Master|Slave)\s*:\s+\S+,\s+(operating\s+cluster\s+index|HA\s+operating\s+index)\s+=\s+\d+ -> Record
+  ^\s*$$
+  ^. -> Error

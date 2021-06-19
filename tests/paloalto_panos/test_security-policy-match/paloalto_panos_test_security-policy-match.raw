@@ -1,0 +1,50 @@
+"Allow 10.125.100.58-To-Google DNS; index: 1" {
+        from Internal;
+        source 10.125.100.58;
+        source-region none;
+        to External;
+        destination 8.8.8.8;
+        destination-region none;
+        user any;
+        source-device any;
+        destinataion-device any;
+        category any;
+        application/service 0:any/tcp/any/59;
+        action allow;
+        icmp-unreachable: no
+        terminal yes;
+}
+
+"Allow 10.125.100.58-To-1.1.1.1; index: 2" {
+        from Internal;
+        source 10.125.100.58;
+        source-region none;
+        to External;
+        destination 1.1.1.1;
+        destination-region none;
+        user any;
+        source-device any;
+        destinataion-device any;
+        category any;
+        application/service 0:any/tcp/any/53;
+        action allow;
+        icmp-unreachable: no
+        terminal yes;
+}
+
+"Allow DNS_Objects-To-192.0.2.10; index: 4" {
+        from Internal;
+        source [ 1.1.1.1 8.8.8.8 ];
+        source-region none;
+        to External;
+        destination 192.0.2.10;
+        destination-region none;
+        user any;
+        source-device any;
+        destinataion-device any;
+        category any;
+        application/service [0:any/tcp/any/53 1:any/tcp/any/54 ];
+        action allow;
+        icmp-unreachable: no
+        terminal yes;
+}

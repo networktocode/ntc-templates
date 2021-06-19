@@ -11,9 +11,11 @@ Repository of TextFSM Templates for Network Devices, and Python wrapper for Text
 This project provides a large collection of TextFSM Templates (text parsers) for a variety of Networking Vendors. In addition to the templates, there is a function that will convert the CLI output into a CliTable object; the resulting text table is converted into a list of dictionaries mapping the column headers with each row in the table.
 
 
+> As of v2.0.0, this project uses [Poetry](https://python-poetry.org/) for packaging and distribution. In order to use poetry, the `templates` directory has been moved to `ntc_templates/templates`
+
 Installation and Usage
 ----------------------
-The project can be installed using either Git or PyPI; if you would like to use the templates outside of this project, then Git is the recommended approach.
+The project can be installed using either Git + Poetry or PyPI.
 
 #### Git
 
@@ -21,17 +23,7 @@ The project can be installed using either Git or PyPI; if you would like to use 
 $ git clone git@github.com:networktocode/ntc-templates.git
 $ 
 # Optional steps to install ntc-templates as a python package
-$ pip install -e ntc-templates/
-$ 
-```
-
-The install can also include the required dev packages, which can be useful for adding or editing templates:
-
-```shell
-$ git clone git@github.com:networktocode/ntc-templates.git
-$ 
-# Optional steps to install ntc-templates as a python package
-$ pip install -e ntc-templates/[dev]
+$ poetry install
 $ 
 ```
 
@@ -39,12 +31,6 @@ $
 
 ```shell
 $ pip install ntc_templates
-$ 
-```
-
-To include the dev packages:
-```
-$ pip install ntc_templates[dev]
 $ 
 ```
 
@@ -82,6 +68,25 @@ $
     }
 ]
 >>> 
+```
+
+### Define Custom Templates Directory
+
+To use a custom templates directory set the environmental variable `NTC_TEMPLATES_DIR`.
+
+**Requirements**
+1. `index` file needs to be defined with standard structure. [See](#Index-File)
+2. Each custom template should be defined.
+
+To manaully set variable:
+```shell
+export NTC_TEMPLATES_DIR=/path/to/new/location/templates
+```
+
+To set within your program:
+```python
+import os
+os.environ["NTC_TEMPLATES_DIR"] = "/path/to/new/templates/location/templates"
 ```
 
 Contributing
@@ -264,10 +269,10 @@ A cli utility is provided to assist with properly building the parsed files. Thi
 
   The `-y` and `-yd` arguments are designed to allow developers to generate the expected parsed file how they want, and ensure that the formatting adheres to the defined standard for this project.
 
-  The `-c` and `-cd` arguments use `lib.ntc_templates.parse.parse_output()` to generate the parsed data; this means that you can use these arguments to auto-generate the test `.yml` file(s) for new templates; just be sure that the template's parsing behavior meets expectations. In order for the data to be parsed, the template must be placed in `templates/` and the `templates/index` file must be updated to correctly point to the template file(s).
+  The `-c` and `-cd` arguments use `ntc_templates.parse.parse_output()` to generate the parsed data; this means that you can use these arguments to auto-generate the test `.yml` file(s) for new templates; just be sure that the template's parsing behavior meets expectations. In order for the data to be parsed, the template must be placed in `ntc_templates/templates/` and the `ntc_templates/templates/index` file must be updated to correctly point to the template file(s).
 
 ```bash
-$ /development_scripts.py -yd tests/cisco_ios/show_mac-address-table
+$ ./development_scripts.py -yd tests/cisco_ios/show_mac-address-table
 tests/cisco_ios/show_mac-address-table/cisco_ios_show_mac-address-table2.yml
 tests/cisco_ios/show_mac-address-table/cisco_ios_show_mac-address-table3.yml
 tests/cisco_ios/show_mac-address-table/cisco_ios_show_mac-address-table5.yml
@@ -295,37 +300,47 @@ To add additional raw/parsed tests for a command:
   * New parsed: `./tests/cisco_ios/show_version/cisco_ios_show_version_stack_platforms.yml`
 
 #### Testing
-You can test your changes locally within your Git branch before submitting a PR. If you do not have **tox** already installed, you can do that using pip or your systems package manager. Tox should be ran inside the **ntc-templates** root directory. The tox file is configured to run against python3.6, so either python3.6 needs to be available, or the tox.ini file will need to be updated with an available Python version.
+You can test your changes locally within your Git branch before submitting a PR. If you do not have **tox** already installed, you can do that using pip or your systems package manager. Tox should be ran inside the **ntc-templates** root directory. The tox file is configured to run against python3.6,python3.7, and python3.8, if none/some of those python versions are unavailable **tox** will skip them. The tox.ini file can be updated with an available Python version.
 ```bash
 $ tox
-GLOB sdist-make: /home/admin/ntc-templates/setup.py
-py36 inst-nodeps: /home/admin/ntc-templates/.tox/dist/ntc_templates-1.3.0.zip
-py36 installed: appdirs==1.4.3,atomicwrites==1.3.0,attrs==19.3.0,black==19.10b0,Click==7.0,future==0.18.2,importlib-metadata==0.23,more-itertools==7.2.0,ntc-templates==1.3.0,packaging==19.2,pathspec==0.6.0,pluggy==0.13.0,py==1.8.0,pyparsing==2.4.5,pytest==5.2.4,PyYAML==5.1.2,regex==2019.11.1,six==1.13.0,terminal==0.4.0,textfsm==1.1.0,toml==0.10.0,typed-ast==1.4.0,wcwidth==0.1.7,yamllint==1.18.0,zipp==0.6.0
-py36 runtests: PYTHONHASHSEED='3677750645'
-py36 runtests: commands[0] | black ./ --diff --check
+GLOB sdist-make: /home/travis/build/networktocode/ntc-templates/setup.py
+py36 create: /home/travis/build/networktocode/ntc-templates/.tox/py36
+py36 inst: /home/travis/build/networktocode/ntc-templates/.tox/.tmp/package/1/ntc_templates-1.6.0.zip
+py36 installed: appdirs==1.4.4,attrs==20.3.0,black==20.8b1,click==7.1.2,dataclasses==0.8,future==0.18.2,importlib-metadata==3.7.0,iniconfig==1.1.1,mypy-extensions==0.4.3,ntc-templates==1.6.0,packaging==20.9,pathspec==0.8.1,pluggy==0.13.1,py==1.10.0,pyparsing==2.4.7,pytest==6.2.2,PyYAML==5.4.1,regex==2020.11.13,ruamel.yaml==0.16.12,ruamel.yaml.clib==0.2.2,six==1.15.0,textfsm==1.1.0,toml==0.10.2,typed-ast==1.4.2,typing-extensions==3.7.4.3,yamllint==1.26.0,zipp==3.4.0
+py36 run-test-pre: PYTHONHASHSEED='4147443973'
+py36 run-test: commands[0] | black ./ --diff --check
 All done! ✨ 🍰 ✨
-8 files would be left unchanged.
-py36 runtests: commands[1] | yamllint tests/
-py36 runtests: commands[2] | pytest -vv
-================================================================ test session starts =================================================================
-platform linux -- Python 3.6.8, pytest-5.2.4, py-1.8.0, pluggy-0.13.0 -- /home/jmcgill/repos/ntc-templates/.tox/py36/bin/python3.6
-cachedir: .pytest_cache
-rootdir: /home/jmcgill/repos/ntc-templates
-collected 428 items                                                                                                                                  
+9 files would be left unchanged.
+py36 run-test: commands[1] | yamllint tests/
+py36 run-test: commands[2] | pytest -vv
+============================= test session starts ==============================
+platform linux -- Python 3.6.7, pytest-6.2.2, py-1.10.0, pluggy-0.13.1 -- /home/travis/build/networktocode/ntc-templates/.tox/py36/bin/python
+cachedir: .tox/py36/.pytest_cache
+rootdir: /home/travis/build/networktocode/ntc-templates
+collected 1065 items                                                           
 
-tests/test_index_order.py::test_index_ordering PASSED                                                                                          [  0%]
-tests/test_structured_data_against_parsed_reference_files.py::test_raw_data_against_mock[tests/alcatel_sros/oam_mac-ping/alcatel_sros_oam_mac-ping.raw] PASSED [  0%]
-tests/test_structured_data_against_parsed_reference_files.py::test_raw_data_against_mock[tests/alcatel_sros/show_service_id_base/alcatel_sros_show_service_id_base.raw] PASSED [  0%]
-tests/test_structured_data_against_parsed_reference_files.py::test_raw_data_against_mock[tests/alcatel_sros/show_router_bgp_routes_vpn-ipv4/alcatel_sros_show_router_bgp_routes_vpn-ipv4.raw] PASSED [  0%]
-tests/test_structured_data_against_parsed_reference_files.py::test_raw_data_against_mock[tests/brocade_fastiron/show_lldp_neighbors/brocade_fastiron_show_lldp_neighbors.raw] PASSED [  1%]
-...
-tests/test_structured_data_against_parsed_reference_files.py::test_raw_data_against_mock[tests/cisco_nxos/show_ip_interface_brief/cisco_nxos_show_ip_interface_brief.raw] PASSED [ 99%]
-tests/test_testcases_exists.py::test_verify_parsed_and_reference_data_exists PASSED                                                            [100%]
+tests/test_development_scripts.py::test_ensure_spacing_for_multiline_comment PASSED [  0%]
+tests/test_development_scripts.py::test_ensure_space_after_octothorpe PASSED [  0%]
+tests/test_development_scripts.py::test_ensure_space_comments PASSED     [  0%]
+tests/test_development_scripts.py::test_update_yaml_comments PASSED      [  0%]
+tests/test_development_scripts.py::test_transform_file PASSED            [  0%]
+tests/test_testcases_exists.py::test_verify_parsed_and_reference_data_exists[tests/yamaha/show_environment] PASSED [ 99%]
+tests/test_testcases_exists.py::test_verify_parsed_and_reference_data_exists[tests/yamaha/show_ip_route] PASSED [100%]
 
-================================================================ 428 passed in 43.84s ================================================================
-______________________________________________________________________ summary _______________________________________________________________________
+============================ 1065 passed in 22.59s =============================
+py37 create: /home/travis/build/networktocode/ntc-templates/.tox/py37
+SKIPPED: InterpreterNotFound: python3.7
+py38 create: /home/travis/build/networktocode/ntc-templates/.tox/py38
+SKIPPED: InterpreterNotFound: python3.8
+___________________________________ summary ____________________________________
   py36: commands succeeded
+SKIPPED:  py37: InterpreterNotFound: python3.7
+SKIPPED:  py38: InterpreterNotFound: python3.8
   congratulations :)
+The command "tox" exited with 0.
+
+
+Done. Your build exited with 0.
 $
 ```
 
@@ -427,3 +442,22 @@ to take in qualified Pull Requests to have the feature, but have no intention of
 _Can you provide general guidance?_
 
 This is best handled via real time communication. Feel free to join our slack community (sign up information above) and reach out on the #networktocode channel. Please be aware of timezones, downtimes, and help is performed based on goodwill and timing, and not guaranteed.
+
+### Known Issues
+
+#### Cannot import name clitable from textfsm
+**ntc-templates** depends on **textfsm**, which hasn't published a source distribution to pypi in a while. See https://github.com/google/textfsm/issues/65.
+
+This means that for users with a build chain that depends on source distributions only (i.e. no wheels), ntc-templates appears to have a bug:
+
+```
+File "/usr/local/Cellar/foo/version/libexec/lib/python3.7/site-packages/ntc_templates/parse.py", line 3, in <module>
+    from textfsm import clitable
+ImportError: cannot import name 'clitable' from 'textfsm' 
+```
+
+What's actually happening here is that textfsm provides a source distribution only up to version 0.4.1 (2018-04-09) but the ntc-templates code relies on the interface from version 1.1.0 (2019-07-24) which is only available as a wheel. So the way for users to fix this problem if they encounter it is to install textfsm 1.1.0.
+
+`pip install textfsm==1.1.0`
+
+> This was taken from https://github.com/networktocode/ntc-templates/issues/731

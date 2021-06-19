@@ -1,14 +1,37 @@
 ---
-
-language: python
+language: "python"
+dist: "xenial"
+os: "linux"
 
 python:
   - "3.6"
-
-sudo: false
+  - "3.7"
+  - "3.8"
 
 install:
-  - pip install tox
+  - "pip install virtualenv"
+  - "virtualenv .venv"
+  - ".venv/bin/pip install pip setuptools -U"
+  - ".venv/bin/pip install tox"
+
+jobs:
+  include:
+    - stage: "lint"
+      script: ".venv/bin/tox -e black"
+    - script: ".venv/bin/tox -e flake8"
+    - script: ".venv/bin/tox -e yamllint"
+
+stages:
+  - "lint"
+  - "test"
 
 script:
-  - tox
+  - ".venv/bin/tox -e py36,py37,py38"
+
+deploy:
+  provider: "script"
+  script:
+    - "poetry config pypi-token.pypi $PYPI_TOKEN"
+    - "poetry publish --build"
+  on:
+    tags: true

@@ -1,0 +1,31 @@
+Network object group NNNN
+Service object group SSSS
+Service object group TEST-SVC-OGR
+ Description ! Test Service Group !
+ icmp echo-reply
+ tcp eq smtp
+ udp eq tacacs
+ udp range tacacs 50
+ tcp range 79 www
+ tcp eq www
+ tcp eq 81
+ udp lt 999
+ udp gt 97
+ tcp-udp range 12200 12700
+ icmp
+ tcp
+ udp
+ tcp-udp range 0 65535
+ group-object SSSS
+ ip
+ ipinip
+ 99
+Network object group TEST_NET_OGR
+ Description ###TEST NETWORK OGR###
+ any
+ host 1.1.1.1
+ range 2.2.2.2 3.3.3.3
+ group-object NNNN
+ 1.1.1.0 255.255.255.0
+Network object group XXXX
+Network object group YYYY

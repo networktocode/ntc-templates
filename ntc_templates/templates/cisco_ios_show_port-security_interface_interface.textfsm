@@ -1,0 +1,28 @@
+Value PORT_SECURITY (\w+)
+Value PORT_STATUS (\S+)
+Value VIOLATION_MODE ([Pp]rotect|[Rr]estrict|[Ss]hutdown)
+Value AGING_TIME (\d{1,4}\smins)
+Value AGING_TYPE ([Aa]bsolute|[Ii]nactivity)
+Value SS_ADDR_AGING (\w+)
+Value MAX_MAC_ADDRS (\d+)
+Value TOTAL_MAC_ADDRS (\d+)
+Value CONFIG_MAC_ADDRS (\d+)
+Value STICKY_MAC_ADDRS (\d+)
+Value LAST_SRC_MAC_ADDR_VLAN (\d.+:\d+)
+Value VIOLATION_COUNT (\d+)
+
+Start
+  ^Port Security\s+:\s+${PORT_SECURITY}
+  ^Port Status\s+:\s+${PORT_STATUS}
+  ^Violation Mode\s+:\s+${VIOLATION_MODE}
+  ^Aging Time\s+:\s+${AGING_TIME}
+  ^Aging Type\s+:\s+${AGING_TYPE}
+  ^SecureStatic Address Aging\s+:\s+${SS_ADDR_AGING}
+  ^Maximum MAC Addresses\s+:\s+${MAX_MAC_ADDRS}
+  ^Total MAC Addresses\s+:\s+${TOTAL_MAC_ADDRS}
+  ^Configured MAC Addresses\s+:\s+${CONFIG_MAC_ADDRS}
+  ^Sticky MAC Addresses\s+:\s+${STICKY_MAC_ADDRS}
+  ^Last Source Address:Vlan\s+:\s+${LAST_SRC_MAC_ADDR_VLAN}
+  ^Security Violation Count\s+:\s+${VIOLATION_COUNT}
+  ^\s*$$
+  ^. -> Error
