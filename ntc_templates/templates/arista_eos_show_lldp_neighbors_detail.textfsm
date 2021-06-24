@@ -1,10 +1,10 @@
-Value DEST_HOST (\S+)
+Value Required DEST_HOST (\S+)
 Value SYSTEM_ID (.+?)
 Value MGMT_ADDRESS (.+?)
 Value PLATFORM_VERSION (.+?)
 Value REMOTE_PORT (.+?)
 Value Filldown LOCAL_PORT (\S+?)
-Value Filldown NEIGH_COUNT (\d+?)
+Value Filldown NEIGH_COUNT ([1-9]\d*)
 Value AGE (.+?)
 
 Start
@@ -21,5 +21,3 @@ Interface
 
 Port_ID
   ^\s+Port ID\s+:(\s+\"|\s+)${REMOTE_PORT}(\"|$$) -> Interface
-
-EOF
