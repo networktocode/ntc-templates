@@ -442,3 +442,22 @@ to take in qualified Pull Requests to have the feature, but have no intention of
 _Can you provide general guidance?_
 
 This is best handled via real time communication. Feel free to join our slack community (sign up information above) and reach out on the #networktocode channel. Please be aware of timezones, downtimes, and help is performed based on goodwill and timing, and not guaranteed.
+
+### Known Issues
+
+#### Cannot import name clitable from textfsm
+**ntc-templates** depends on **textfsm**, which hasn't published a source distribution to pypi in a while. See https://github.com/google/textfsm/issues/65.
+
+This means that for users with a build chain that depends on source distributions only (i.e. no wheels), ntc-templates appears to have a bug:
+
+```
+File "/usr/local/Cellar/foo/version/libexec/lib/python3.7/site-packages/ntc_templates/parse.py", line 3, in <module>
+    from textfsm import clitable
+ImportError: cannot import name 'clitable' from 'textfsm' 
+```
+
+What's actually happening here is that textfsm provides a source distribution only up to version 0.4.1 (2018-04-09) but the ntc-templates code relies on the interface from version 1.1.0 (2019-07-24) which is only available as a wheel. So the way for users to fix this problem if they encounter it is to install textfsm 1.1.0.
+
+`pip install textfsm==1.1.0`
+
+> This was taken from https://github.com/networktocode/ntc-templates/issues/731
