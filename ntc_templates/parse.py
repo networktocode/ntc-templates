@@ -12,6 +12,7 @@ except ImportError:
 
 
 def _get_template_dir():
+    """Gets directory templates reside in. Checks env variable first, otherwise uses `templates` directory."""
     template_dir = os.environ.get("NTC_TEMPLATES_DIR")
     if template_dir is None:
         package_dir = os.path.dirname(__file__)
@@ -35,8 +36,27 @@ def _clitable_to_dict(cli_table):
     return objs
 
 
-def parse_output(platform=None, command=None, data=None):
-    """Return the structured data based on the output from a network device."""
+def parse_output(
+    platform=None,
+    command=None,
+    data=None,
+    template_dir=_get_template_dir(),
+    try_fallback=False,
+):
+    """
+    Return the structured data based on the output from a network device.
+
+    Args:
+        platform: The platform the command was run on (e.g., `cisco_ios`).
+        command: The command run on the platform (e.g., `show int status`).
+        data: The output from running the command.
+        template_dir: The directory to look for TextFSM templates. Defaults to setting of environment variable
+        or default ntc-templates dir. The specified directory must have a properly configured index file.
+        try_fallback: If true and a custom `template_dir` was set, but a template wasn't found when parsing,
+        fallback to using the default template directory.
+
+    Returns: structured data as a result of parsing the data
+    """
 
     if not HAS_CLITABLE:
         msg = """
@@ -49,7 +69,6 @@ https://github.com/google/textfsm/pull/82
 """
         raise ImportError(msg)
 
-    template_dir = _get_template_dir()
     cli_table = clitable.CliTable("index", template_dir)
 
     attrs = {"Command": command, "Platform": platform}
@@ -57,11 +76,17 @@ https://github.com/google/textfsm/pull/82
         cli_table.ParseCmd(data, attrs)
         structured_data = _clitable_to_dict(cli_table)
     except clitable.CliTableError as e:
-        raise Exception(
-            'Unable to parse command "{0}" on platform {1} - {2}'.format(
-                command, platform, str(e)
+        # if there wasn't a matching template but fallback was enabled, call again with default template directory
+        if template_dir != _get_template_dir() and try_fallback:
+            return parse_output(platform, command, data)
+        # otherwise re-raise exception with customized message
+        else:
+            e.args = (
+                'Unable to parse command "{0}" on platform {1} - {2}'.format(
+                    command, platform, str(e)
+                ),
             )
-        )
+            raise
         # Invalid or Missing template
         # module.fail_json(msg='parsing error', error=str(e))
         # rather than fail, fallback to return raw text
