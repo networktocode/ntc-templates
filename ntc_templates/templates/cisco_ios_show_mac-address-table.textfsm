@@ -1,7 +1,7 @@
 Value DESTINATION_ADDRESS ([0-9a-fA-F]{4}\.[0-9a-fA-F]{4}\.[0-9a-fA-F]{4})
 Value TYPE (\S+)
 Value VLAN (\S+)
-Value DESTINATION_PORT (\S+)
+Value DESTINATION_PORT (\S*)
 
 Start
   ^Destination\s+Address\s+Address\s+Type\s+VLAN\s+Destination\s+Port -> TYPE1
@@ -23,7 +23,7 @@ TYPE1
 
 TYPE2
   # Order of the group in brackets here matters
-  ^\s*(?:\*\s+R|\*|R|\s)\s*${VLAN}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+${DESTINATION_PORT} -> Record
+  ^\s*(?:\*\s+R|\*|R|S|\s)\s*${VLAN}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s*${DESTINATION_PORT} -> Record
   ^-+\+-+
   ^Displaying\s+entries
   ^\s+vlan\s+mac address\s+type\s+learn\s+age\s+ports
