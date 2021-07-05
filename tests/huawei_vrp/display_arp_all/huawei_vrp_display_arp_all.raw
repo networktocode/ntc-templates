@@ -1,0 +1,11 @@
+IP ADDRESS      MAC ADDRESS     EXPIRE(M) TYPE        INTERFACE   VPN-INSTANCE
+                                          VLAN/CEVLAN PVC
+----------------------------------------------------------------------------------------
+0.0.0.0         00xx-dxxx-8xxx            S--                          MOBILE-OAM
+0.0.0.0         00xx-dxxx-8xxx            I -         Eth-Trunk3       RCT
+0.0.0.0         00xx-dxxx-8xxx  16        D-0         Eth-Trunk3       RCT
+0.0.0.0         00xx-dxxx-8xxx            I -         Vlanif4024       MOBILE-NODE-TRAFFIC
+0.0.0.0         00xx-dxxx-8xxx  1         D-0         Vlanif4024       MOBILE-NODE-TRAFFIC
+                                          4024/-
+0.0.0.0         00xx-dxxx-8xxx            I -         Vlanif4025       MOBILE-OAM
+0.0.0.0         00xx-dxxx-8xxx  2         D-0         Vlanif4025       MOBILE-OAM

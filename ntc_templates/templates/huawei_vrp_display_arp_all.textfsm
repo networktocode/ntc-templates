@@ -1,0 +1,11 @@
+Value Required IP_ADDRESS (\S+)
+Value Required MAC_ADDRESS (\S+)
+Value EXPIRE (\d+|\s+)
+Value Required TYPE (D\W\d|I\s-)
+Value Required INTERFACE (\S+)
+Value VPN_INSTANCE (\S+|\s+)
+
+Start
+  ^IP\s+ADDRESS\s+MAC\s+ADDRESS
+  ^\s*VLAN\WCEVLAN\s+PVC
+  ^${IP_ADDRESS}\s+${MAC_ADDRESS}\s+${EXPIRE}\s+${TYPE}\s+${INTERFACE}\s+${VPN_INSTANCE} -> Record
