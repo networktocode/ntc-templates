@@ -1,4 +1,4 @@
-Value Filldown,Required INTERFACE (\S+)
+Value Required INTERFACE (\S+)
 Value Required SESSION_STATUS (\S+)
 Value UPTIME (\S+)
 Value Required PEER (\S+)
@@ -24,14 +24,11 @@ Value ORIGIN (.+)
 
 Start
  ^Crypto\s+.*
- ^Code:\s+C.*
- ^K\s+-.*
- ^X\s+-.*
- ^R\s+-.* -> TunnelInterface
- ^\s*$$
- ^. -> Error
-
-TunnelInterface
+ ^Code:
+ ^K\s+-
+ ^X\s+-
+ ^R\s+-
+ ^Interface: -> Continue.Record
  ^Interface:\s+${INTERFACE}
  ^Session\s+status:\s+${SESSION_STATUS}
  ^Uptime:\s+${UPTIME}
@@ -44,6 +41,6 @@ TunnelInterface
  ^\s+IPSEC\s+FLOW:\s+permit\s+${PERMIT}\s+host\s+${SRC_HOST}\s+host\s+${DST_HOST}
  ^\s+Active\s+SAs:\s+${ACTIVE_SA},\s+origin:\s+${ORIGIN}
  ^\s+Inbound:\s+#.*
- ^\s+Outbound:\s+#.* -> Record
+ ^\s+Outbound:\s+#.*
  ^\s*$$
  ^. -> Error
