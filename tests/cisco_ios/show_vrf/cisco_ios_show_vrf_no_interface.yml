@@ -1,0 +1,17 @@
+---
+parsed_sample:
+  - default_rd: "<not set>"
+    interfaces:
+      - "Gi0/3"
+    name: "OOB-MGMT"
+    protocols: "ipv4"
+  - default_rd: "65201:21"
+    interfaces:
+      - "Gi0/0.21"
+      - "Gi0/1.21"
+    name: "vpn21"
+    protocols: "ipv4,ipv6"
+  - default_rd: "65201:22"
+    interfaces: []
+    name: "vpn22"
+    protocols: "ipv4"
