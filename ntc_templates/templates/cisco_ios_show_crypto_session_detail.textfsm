@@ -1,0 +1,46 @@
+Value Required INTERFACE (\S+)
+Value Required SESSION_STATUS (\S+)
+Value UPTIME (\S+)
+Value Required PEER (\S+)
+Value PORT (\d+)
+Value FVRF (\S+)
+Value IVRF (\S+)
+Value DESC (\S+)
+Value PHASE1_ID (\S+)
+Value SESSION_ID (\d+)
+Value LOCAL_IP (\S+)
+Value LOCAL_PORT (\d+)
+Value REMOTE_IP (\S+)
+Value REMOTE_PORT (\S+)
+Value IKEV1_STATUS (\S+)
+Value CAPABILITIES (\S+)
+Value CONN_ID (\d+)
+Value LIFETIME (\S+)
+Value PERMIT (\S+)
+Value SRC_HOST (\S+)
+Value DST_HOST (\S+)
+Value ACTIVE_SA (\d+)
+Value ORIGIN (.+)
+
+Start
+ ^Crypto\s+.*
+ ^Code:
+ ^K\s+-
+ ^X\s+-
+ ^R\s+-
+ ^Interface: -> Continue.Record
+ ^Interface:\s+${INTERFACE}
+ ^Session\s+status:\s+${SESSION_STATUS}
+ ^Uptime:\s+${UPTIME}
+ ^Peer:\s+${PEER}\s+port\s+${PORT}\s+fvrf:\s+${FVRF}\s+ivrf:\s+${IVRF}
+ ^\s+Desc:\s+${DESC}
+ ^\s+Phase1_id:\s+${PHASE1_ID}
+ ^\s+Session\s+ID:\s+${SESSION_ID}
+ ^\s+IKEv1\s+SA:\s+local\s+${LOCAL_IP}/${LOCAL_PORT}\s+remote\s+${REMOTE_IP}/${REMOTE_PORT}\s+${IKEV1_STATUS}
+ ^\s+Capabilities:${CAPABILITIES}\s+connid:${CONN_ID}\s+lifetime:${LIFETIME}
+ ^\s+IPSEC\s+FLOW:\s+permit\s+${PERMIT}\s+host\s+${SRC_HOST}\s+host\s+${DST_HOST}
+ ^\s+Active\s+SAs:\s+${ACTIVE_SA},\s+origin:\s+${ORIGIN}
+ ^\s+Inbound:\s+#.*
+ ^\s+Outbound:\s+#.*
+ ^\s*$$
+ ^. -> Error
