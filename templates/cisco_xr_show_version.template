@@ -3,6 +3,7 @@ Value UPTIME (.+)
 Value LOCATION (\S+)
 Value HARDWARE (\S+)
 Value BUILD_HOST (\S+)
+Value LABEL (\S+)
 
 Start
   ^.+UTC
@@ -18,10 +19,11 @@ Start
 Build_Info
   ^\s+Built\sBy.+
   ^\s+Built\sOn.+
-  ^\s+Build\sHost\s+:\s+${BUILD_HOST}
+  ^\s+Buil[dt]\sHost\s+:\s+${BUILD_HOST}
   ^\s+Workspace\s+:\s\S+
   ^\s+Version\s+:\s${VERSION}
   ^\s+Location\s+:\s${LOCATION}
+  ^\s+Label\s+:\s${LABEL}
   ^$$ -> Start
   ^\s+$$
   ^$$
