@@ -3,6 +3,7 @@ Value UPTIME (.+?)
 Value LOCATION (\S+)
 Value HARDWARE (.+)
 Value BUILD_HOST (\S+)
+Value LABEL (\S+)
 
 Start
   ^Cisco.+Software.+Version\s+${VERSION}
@@ -21,7 +22,7 @@ Start
   ^hfr-doc -> CRS
   ^\s*$$
   ^. -> Error
-  
+
 # A VARIATION OF THE OUTPUT, EX. NCS PLATFORM
 Build_Info
   ^\s+Built\sBy.+
@@ -30,6 +31,7 @@ Build_Info
   ^\s+Workspace\s+:\s\S+
   ^\s+Version\s+:
   ^\s+Location\s+:\s${LOCATION}
+  ^\s+Label\s+:\s${LABEL}
   ^\s*$$ -> Start
   ^.* -> Error
 
