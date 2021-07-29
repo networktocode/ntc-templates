@@ -17,5 +17,7 @@ Start
   ^\s+Link\s+
   ^\s+cisco\s+id
   ^\s+cisco\s+extended
+  ^\s+cisco\s+part\s+number
+  ^\s+cisco\s+product\s+id
   ^\s*$$ -> Record
   ^. -> Error
