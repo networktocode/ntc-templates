@@ -17,6 +17,8 @@ Extended IP access list 101
     90 permit tcp any any match-all +ack -fin log
     100 permit tcp host 10.1.1.1 any established
     110 permit tcp any 10.1.1.0 0.0.255.255 established psh
+    120 deny esp any any precedence internet
+    130 deny esp any any tos normal
 Extended IP access list sample
     10 permit tcp host 10.10.37.18 host 10.10.37.17 eq bgp
     20 permit tcp host 10.10.37.18 eq bgp host 10.10.37.17
