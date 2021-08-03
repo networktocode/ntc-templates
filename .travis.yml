@@ -62,4 +62,3 @@ jobs:
         script: "poetry publish --build -u __token__ -p $PYPI_TOKEN"
         "on":
           all_branches: true
-
