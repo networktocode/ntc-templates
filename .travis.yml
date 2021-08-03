@@ -16,6 +16,17 @@ python:
   - "3.7"
   - "3.8"
 
+# --------------------------------------------------------------------------
+# Tests
+# --------------------------------------------------------------------------
+before_script:
+  - "pip install --upgrade pip"
+  - "pip install poetry"
+  - "poetry install"
+script:
+  - "poetry run tox -e py36,py37,py38"
+
+
 jobs:
   include:
     - stage: "lint"
@@ -27,13 +38,6 @@ jobs:
         - "poetry run tox -e black"
         - "poetry run tox -e flake8"
         - "poetry run tox -e yamllint"
-    - stage: "test"
-      before_script:
-        - "pip install --upgrade pip"
-        - "pip install poetry"
-        - "poetry install"
-      script:
-        - "poetry run tox -e py36,py37,py38"
     - stage: "deploy-github"
       before_script:
         - "pip install --upgrade pip"
