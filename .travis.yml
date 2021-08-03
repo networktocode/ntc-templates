@@ -1,4 +1,12 @@
 ---
+stages:
+  - name: "lint"
+  - name: "test"
+  - name: "deploy-github"
+    if: "tag IS present"
+  - name: "deploy-pypi"
+    if: "tag IS present"
+
 language: "python"
 dist: "xenial"
 os: "linux"
@@ -8,30 +16,50 @@ python:
   - "3.7"
   - "3.8"
 
-install:
-  - "pip install virtualenv"
-  - "virtualenv .venv"
-  - ".venv/bin/pip install pip setuptools -U"
-  - ".venv/bin/pip install tox"
-
 jobs:
   include:
     - stage: "lint"
-      script: ".venv/bin/tox -e black"
-    - script: ".venv/bin/tox -e flake8"
-    - script: ".venv/bin/tox -e yamllint"
+      before_script:
+        - "pip install --upgrade pip"
+        - "pip install poetry"
+        - "poetry install"
+      script:
+        - "poetry run tox -e black"
+        - "poetry run tox -e flake8"
+        - "poetry run tox -e yamllint"
+    - stage: "test"
+      before_script:
+        - "pip install --upgrade pip"
+        - "pip install poetry"
+        - "poetry install"
+      script:
+        - "poetry run tox -e py36,py37,py38"
+    - stage: "deploy-github"
+      before_script:
+        - "pip install --upgrade pip"
+        - "pip install poetry"
+      script:
+        - "poetry version $TRAVIS_TAG"
+        - "poetry build"
+      deploy:
+        provider: "releases"
+        api_key: "$GITHUB_AUTH_TOKEN"
+        file_glob: true
+        file: "dist/*"
+        skip_cleanup: true
+        "on":
+          all_branches: true
+    - stage: "deploy-pypi"
+      before_script:
+        - "pip install --upgrade pip"
+        - "pip install poetry"
+      script:
+        - "echo Deploying the release to PyPI"
+        - "poetry version $TRAVIS_TAG"
+      deploy:
+        provider: "script"
+        skip_cleanup: true
+        script: "poetry publish --build -u __token__ -p $PYPI_TOKEN"
+        "on":
+          all_branches: true
 
-stages:
-  - "lint"
-  - "test"
-
-script:
-  - ".venv/bin/tox -e py36,py37,py38"
-
-deploy:
-  provider: "script"
-  script:
-    - "poetry config pypi-token.pypi $PYPI_TOKEN"
-    - "poetry publish --build"
-  on:
-    tags: true
