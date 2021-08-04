@@ -33,6 +33,7 @@ Start
   ^System\s+restarted\s+at\s+${RESTARTED}$$
   ^Switch\s+Port -> Stack
   # Capture time-stamp if vty line has command time-stamping turned on
+  ^Switch\s\d+ -> Stack
   ^Load\s+for\s+
   ^Time\s+source\s+is
 
