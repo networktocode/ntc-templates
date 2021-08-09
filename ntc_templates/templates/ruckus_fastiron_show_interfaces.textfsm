@@ -1,0 +1,20 @@
+Value Required INTERFACE (\S+)
+Value LINK_STATUS (.*)
+Value INTERFACE_UP_TIME (.*)
+Value PROTOCOL_STATUS (.*)
+Value HARDWARE_TYPE ([\w+-]+)
+Value ADDRESS ([a-zA-Z0-9]+.[a-zA-Z0-9]+.[a-zA-Z0-9]+)
+Value BIA ([a-zA-Z0-9]+.[a-zA-Z0-9]+.[a-zA-Z0-9]+)
+Value DESCRIPTION (.*)
+Value IP_ADDRESS (\d+\.\d+\.\d+\.\d+\/\d+)
+Value MTU (\d+)
+
+Start
+  ^${INTERFACE}\s+is\s+${LINK_STATUS},\s+line\s+protocol\s+is\s+${PROTOCOL_STATUS}$$
+  ^\s+Port\s+(up|down)\s+for\s+${INTERFACE_UP_TIME}
+  ^\s+Hardware\s+is\s+${HARDWARE_TYPE}(.*address\s+is\s+${ADDRESS})*(.*bia\s+${BIA})*
+  ^\s+Description:\s+${DESCRIPTION}
+  ^\s+Internet\s+address\s+is\s+${IP_ADDRESS}
+  ^.*MTU\s+${MTU}\.* -> Record
+  ^\s+
+  ^\. -> Error
