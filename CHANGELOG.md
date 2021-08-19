@@ -1,5 +1,19 @@
 # Changelog
 
+## [2.2.2](https://github.com/networktocode/ntc-templates/tree/2.1.0) (2021-08-02)
+
+[Full Changelog](https://github.com/networktocode/ntc-templates/compare/v2.2.0...2.2.2)
+
+**Closed issues:**
+
+- cisco\_ios\_show\_ip\_access-lists template needs updated to include additional ICMP_TYPE options [\#964](https://github.com/networktocode/ntc-templates/issues/964)
+- cisco\_ios\_show\_version template needs updated to account for StackWise Virtual Domains [\#924](https://github.com/networktocode/ntc-templates/issues/924)
+
+**Merged pull requests:**
+
+- cisco\_ios\_show\_ip\_access-lists.textfsm: Updated to include mask-request in template. [\#965](https://github.com/networktocode/ntc-templates/pull/944) ([nsnelson402](https://github.com/nsnelson402))
+- cisco\_ios\_show\_version.textfsm: Updated to account for StackWise Virtual Domains template. [\#960](https://github.com/networktocode/ntc-templates/pull/960) ([itdependsnetworks](https://github.com/itdependsnetworks))
+
 ## [2.2.0](https://github.com/networktocode/ntc-templates/tree/2.1.0) (2021-08-02)
 
 [Full Changelog](https://github.com/networktocode/ntc-templates/compare/v2.1.0...2.2.0)
