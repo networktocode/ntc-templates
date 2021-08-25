@@ -1,0 +1,33 @@
+Displaying ipv4 routes selected for forwarding
+
+'[x/y]' denotes [distance/metric]
+
+0.0.0.0/0, vrf default
+	via  172.25.0.189,  [20/0],  bgp
+	via  172.25.0.185,  [20/0],  bgp
+10.252.14.109/32, vrf default
+	via  loopback0,  [0/0],  local
+10.252.22.128/26, vrf default
+	via  vlan3564,  [0/0],  connected
+10.252.22.129/32, vrf default
+	via  vlan3564,  [0/0],  local
+10.252.34.224/27, vrf default
+	via  vlan3560,  [0/0],  connected
+10.252.34.225/32, vrf default
+	via  vlan3560,  [0/0],  local
+10.252.71.0/25, vrf default
+	via  vlan3561,  [0/0],  connected
+10.252.71.1/32, vrf default
+	via  vlan3561,  [0/0],  local
+10.252.151.0/24, vrf default
+	via  vlan3590,  [0/0],  connected
+10.252.151.1/32, vrf default
+	via  vlan3590,  [0/0],  local
+172.25.0.184/30, vrf default
+	via  1/1/28,  [0/0],  connected
+172.25.0.186/32, vrf default
+	via  1/1/28,  [0/0],  local
+172.25.0.188/30, vrf default
+	via  2/1/28,  [0/0],  connected
+172.25.0.190/32, vrf default
+	via  2/1/28,  [0/0],  local
