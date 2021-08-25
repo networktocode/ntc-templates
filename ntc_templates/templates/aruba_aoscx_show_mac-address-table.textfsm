@@ -1,0 +1,13 @@
+Value MAC (\S+)
+Value VLAN (\d+)
+Value TYPE ([a-z]+)
+Value PORT (\S+)
+
+Start
+  ^MAC\s+age-time.*$$
+  ^Number\s+of\s+MAC.*$$
+  ^MAC\s+Address\s+VLAN\s+Type\s+Port
+  ^-+$$
+  ^${MAC}\s+${VLAN}\s+${TYPE}\s+${PORT} -> Record
+  ^\s*$$
+  ^. -> Error

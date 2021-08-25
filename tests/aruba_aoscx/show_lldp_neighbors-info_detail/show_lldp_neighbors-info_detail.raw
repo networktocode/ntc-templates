@@ -1,0 +1,192 @@
+sw-0620-0001# show lldp neighbor-info detail 
+LLDP Neighbor Information 
+=========================
+Total Neighbor Entries          : 6
+Total Neighbor Entries Deleted  : 0
+Total Neighbor Entries Dropped  : 0
+Total Neighbor Entries Aged-Out : 0
+--------------------------------------------------------------------------------
+Port                           : 1/1/1
+Neighbor Entries               : 1
+Neighbor Entries Deleted       : 0
+Neighbor Entries Dropped       : 0
+Neighbor Entries Aged-Out      : 0
+Neighbor Chassis-Name          : ap-9999-335-fe
+Neighbor Chassis-Description   : ArubaOS (MODEL: 335), Version Aruba AP
+Neighbor Chassis-ID            : 70:3a:0e:cd:41:fe
+Neighbor Management-Address    : 10.252.99.12
+Chassis Capabilities Available : Bridge, WLAN
+Chassis Capabilities Enabled   : WLAN
+Neighbor Port-ID               : 70:3a:0e:cd:41:fe
+Neighbor Port-Desc             : eth0
+Neighbor Port VLAN ID          : 
+TTL                            : 120
+Neighbor PoE information       : DOT3
+Neighbor Power Type            : Type 2 PD
+Neighbor Power Priority        : Unknown
+Neighbor Power Source          : PSE
+PD Requested Power Value       : 25.5 W                        
+PSE Allocated Power Value      : 25.5 W
+Neighbor Power Supported       : No
+Neighbor Power Enabled         : No
+Neighbor Power Class           : Class4
+Neighbor Power Paircontrol     : No
+PSE Power Pairs                : SIGNAL
+Neighbor Mac-Phy details
+Neighbor Auto-neg Supported    : true
+Neighbor Auto-Neg Enabled      : true
+Neighbor Auto-Neg Advertised   : 1000 BASE_TFD, FDX_APAUSE, FDX_PAUSE, 100 BASE_TXFD, Other
+Neighbor MAU type              :  
+--------------------------------------------------------------------------------
+Port                           : 1/1/2
+Neighbor Entries               : 1
+Neighbor Entries Deleted       : 0
+Neighbor Entries Dropped       : 0
+Neighbor Entries Aged-Out      : 0
+Neighbor Chassis-Name          : ap-9999-535-fe
+Neighbor Chassis-Description   : ArubaOS (MODEL: 535), Version Aruba AP
+Neighbor Chassis-ID            : 00:4e:35:c5:d2:2e
+Neighbor Management-Address    : 10.252.99.11
+Chassis Capabilities Available : Bridge, WLAN
+Chassis Capabilities Enabled   : WLAN
+Neighbor Port-ID               : 00:4e:35:c5:d2:2e
+Neighbor Port-Desc             : eth0
+Neighbor Port VLAN ID          : 
+TTL                            : 120
+                                                               
+Neighbor PoE information       : DOT3
+Neighbor Power Type            : Type 3 Single Signature PD
+Neighbor Power Priority        : Unknown
+Neighbor Power Source          : PSE
+PD Requested Power Value       : 32.1 W
+PSE Allocated Power Value      : 32.1 W
+Neighbor Power Supported       : No
+Neighbor Power Enabled         : No
+Neighbor Power Class           : Class5
+Neighbor Power Paircontrol     : No
+PSE Power Pairs                : SIGNAL
+PSE Allocated Power Value Alt A: 0.0 W
+PD Requested Power Value Mode A: 0.0 W
+PSE Allocated Power Value Alt B: 0.0 W
+PD Requested Power Value Mode B: 0.0 W
+Power At PD Powered Interface  : 0.0 W
+Neighbor Powered Status        : Single Signature PD
+Neighbor Power Class Pair A    : -
+Neighbor Power Class Pair B    : -
+Powering on both PD modes      : No
+PD load electrically isolated  : No
+Neighbor PD Autoclass Request  : No
+Neighbor Power Down Request    : No
+Neighbor Mac-Phy details
+Neighbor Auto-neg Supported    : true
+Neighbor Auto-Neg Enabled      : true
+Neighbor Auto-Neg Advertised   : 1000 BASE_TFD, FDX_APAUSE, FDX_PAUSE, 100 BASE_TXFD, Other
+Neighbor MAU type              :  
+--------------------------------------------------------------------------------
+Port                           : 1/1/52
+Neighbor Entries               : 1
+Neighbor Entries Deleted       : 0
+Neighbor Entries Dropped       : 0
+Neighbor Entries Aged-Out      : 0
+Neighbor Chassis-Name          : rtr-agg-0620-a
+Neighbor Chassis-Description   : Aruba JL635A  GL.10.05.0021
+Neighbor Chassis-ID            : 90:20:c2:bf:ae:00
+Neighbor Management-Address    : 10.252.15.17
+Chassis Capabilities Available : Bridge, Router
+Chassis Capabilities Enabled   : Bridge, Router
+Neighbor Port-ID               : 1/1/1
+Neighbor Port-Desc             : 1/1/1
+Neighbor Port VLAN ID          : 3560
+TTL                            : 120
+--------------------------------------------------------------------------------
+Port                           : 2/1/1
+Neighbor Entries               : 1
+Neighbor Entries Deleted       : 0
+Neighbor Entries Dropped       : 0
+Neighbor Entries Aged-Out      : 0
+Neighbor Chassis-Name          : ap-9999-335-fe
+Neighbor Chassis-Description   : ArubaOS (MODEL: 335), Version Aruba AP
+Neighbor Chassis-ID            : 70:3a:0e:cd:41:fe
+Neighbor Management-Address    : 10.252.99.12
+Chassis Capabilities Available : Bridge, WLAN
+Chassis Capabilities Enabled   : WLAN
+Neighbor Port-ID               : 70:3a:0e:cd:41:ff             
+Neighbor Port-Desc             : eth1
+Neighbor Port VLAN ID          : 
+TTL                            : 120
+Neighbor PoE information       : DOT3
+Neighbor Power Type            : Type 2 PD
+Neighbor Power Priority        : Unknown
+Neighbor Power Source          : PSE
+PD Requested Power Value       : 25.5 W
+PSE Allocated Power Value      : 25.5 W
+Neighbor Power Supported       : No
+Neighbor Power Enabled         : No
+Neighbor Power Class           : Class4
+Neighbor Power Paircontrol     : No
+PSE Power Pairs                : SIGNAL
+Neighbor Mac-Phy details
+Neighbor Auto-neg Supported    : true
+Neighbor Auto-Neg Enabled      : true
+Neighbor Auto-Neg Advertised   : 1000 BASE_TFD, FDX_APAUSE, FDX_PAUSE, 100 BASE_TXFD, 100 BASE_TX, 10 BASET_FD, 10 BASE_T
+Neighbor MAU type              : 1000 BASETFD
+--------------------------------------------------------------------------------
+Port                           : 2/1/2
+Neighbor Entries               : 1
+Neighbor Entries Deleted       : 0
+Neighbor Entries Dropped       : 0
+Neighbor Entries Aged-Out      : 0
+Neighbor Chassis-Name          : ap-9999-535-fe
+Neighbor Chassis-Description   : ArubaOS (MODEL: 535), Version Aruba AP
+Neighbor Chassis-ID            : 00:4e:35:c5:d2:2e
+Neighbor Management-Address    : 10.252.99.11
+Chassis Capabilities Available : Bridge, WLAN
+Chassis Capabilities Enabled   : WLAN
+Neighbor Port-ID               : 00:4e:35:c5:d2:2f
+Neighbor Port-Desc             : eth1
+Neighbor Port VLAN ID          : 
+TTL                            : 120
+Neighbor PoE information       : DOT3
+Neighbor Power Type            : Type 3 Single Signature PD
+Neighbor Power Priority        : Unknown
+Neighbor Power Source          : PSE
+PD Requested Power Value       : 32.1 W
+PSE Allocated Power Value      : 32.1 W
+Neighbor Power Supported       : No
+Neighbor Power Enabled         : No
+Neighbor Power Class           : Class5
+Neighbor Power Paircontrol     : No
+PSE Power Pairs                : SIGNAL
+PSE Allocated Power Value Alt A: 0.0 W
+PD Requested Power Value Mode A: 0.0 W
+PSE Allocated Power Value Alt B: 0.0 W
+PD Requested Power Value Mode B: 0.0 W
+Power At PD Powered Interface  : 0.0 W
+Neighbor Powered Status        : Single Signature PD
+Neighbor Power Class Pair A    : -
+Neighbor Power Class Pair B    : -
+Powering on both PD modes      : No
+PD load electrically isolated  : No
+Neighbor PD Autoclass Request  : No                            
+Neighbor Power Down Request    : No
+Neighbor Mac-Phy details
+Neighbor Auto-neg Supported    : true
+Neighbor Auto-Neg Enabled      : true
+Neighbor Auto-Neg Advertised   : 1000 BASE_TFD, FDX_APAUSE, FDX_PAUSE, 100 BASE_TXFD, Other
+Neighbor MAU type              :  
+--------------------------------------------------------------------------------
+Port                           : 2/1/52
+Neighbor Entries               : 1
+Neighbor Entries Deleted       : 0
+Neighbor Entries Dropped       : 0
+Neighbor Entries Aged-Out      : 0
+Neighbor Chassis-Name          : rtr-agg-0620-b
+Neighbor Chassis-Description   : Aruba JL635A  GL.10.05.0021
+Neighbor Chassis-ID            : 90:20:c2:bf:ed:00
+Neighbor Management-Address    : 10.252.15.18
+Chassis Capabilities Available : Bridge, Router
+Chassis Capabilities Enabled   : Bridge, Router
+Neighbor Port-ID               : 1/1/1
+Neighbor Port-Desc             : 1/1/1
+Neighbor Port VLAN ID          : 3560
+TTL                            : 120
