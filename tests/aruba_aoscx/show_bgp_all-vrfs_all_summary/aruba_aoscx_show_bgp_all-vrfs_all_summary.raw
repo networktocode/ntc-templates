@@ -1,0 +1,21 @@
+VRF : default
+BGP Summary
+-----------
+ Local AS               : 4290020685   BGP Router Identifier  : 192.168.100.1
+ Peers                  : 4            Log Neighbor Changes   : No
+ Cfg. Hold Time         : 180          Cfg. Keep Alive        : 60
+
+Address-family : IPv4 Unicast
+-----------------------------
+ Neighbor        Remote-AS MsgRcvd MsgSent   Up/Down Time State        AdminStatus
+ 10.252.13.2     4290020685  0       0       00h:00m:00s  Idle          Up
+ 172.25.0.1      4290000000  116314  133774  02m:02w:06d  Established   Up
+
+Address-family : IPv6 Unicast
+-----------------------------
+
+Address-family : L2VPN EVPN
+-----------------------------
+ Neighbor        Remote-AS MsgRcvd MsgSent   Up/Down Time State        AdminStatus
+ 172.18.174.17   4290000000  116310  133770  02m:02w:06d  Established   Up
+ 172.18.174.18   4290000000  116310  133742  02m:02w:06d  Established   Up

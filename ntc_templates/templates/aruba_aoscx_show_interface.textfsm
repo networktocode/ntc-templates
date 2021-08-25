@@ -1,0 +1,77 @@
+Value INTERFACE (\S+)
+Value LINK_STATUS (\w+)
+Value LINK_ADMIN (\w+)
+Value LINK_STATE_INFO (\.*)
+Value LINK_TRANSITIONS (\d+)
+Value INTERFACE_DESC (.*)
+Value HW_TYPE (\w+)
+Value MAC (\S+)
+Value MTU (\d+)
+Value IF_TYPE (\S+)
+Value DUPLEX (\w+)
+Value QOS_TRUST (\S+)
+Value SPEED (\S+\s\S+) 
+Value AUTO_NEG (\S+)
+Value FLOW_CONTROL (\S+)
+Value ERROR_CONTROL (\S+)
+Value VLAN_MODE (\S+)
+Value VLAN_ACCESS (\S+)
+Value RX_TOTAL_PACKETS (\d+)
+Value RX_TOTAL_BYTES (\d+)
+Value RX_UNICAST_PACKETS (\d+)
+Value RX_MCAST_PACKETS (\d+)
+Value RX_BROADCAST_PACKETS (\d+)
+Value RX_ERRORS (\d+)
+Value RX_DROPPED (\d+)
+Value RX_CRC_FCS (\d+)
+Value TX_TOTAL_PACKETS (\d+)
+Value TX_TOTAL_BYTES (\d+)
+Value TX_UNICAST_PACKETS (\d+)
+Value TX_MCAST_PACKETS (\d+)
+Value TX_BROADCAST_PACKETS (\d+)
+Value TX_ERRORS (\d+)
+Value TX_DROPPED (\d+)
+Value TX_CRC_FCS (\d+)
+Value TX_COLLISION (\d+)
+
+Start
+  ^\s*Interface\s*${INTERFACE}\s*is\s*${LINK_STATUS}
+  ^\s*Admin\s*state\s*is\s*${LINK_ADMIN}
+  ^\s*Link\s*transitions:\s*${LINK_TRANSITIONS}
+  ^\s*Description:\s${INTERFACE_DESC}
+  ^\s*State\s*information:\s*${LINK_STATE_INFO}
+  ^\s*Hardware:\s*${HW_TYPE},?\s*MAC\s*Address:\s+${MAC}
+  ^\s*MTU\s*${MTU}
+  ^\s*Type\s*${IF_TYPE}
+  ^\s*${DUPLEX}-duplex
+  ^\s*qos\s*trust\s*${QOS_TRUST}
+  ^\s*Speed\s*${SPEED}
+  ^\s*Auto-negotiation\s*is\s*${AUTO_NEG}
+  ^\s*Flow-control: ${FLOW_CONTROL}
+  ^\s*Error-control: ${ERROR_CONTROL}
+  ^\s*VLAN Mode: ${VLAN_MODE}
+  ^\s*Access VLAN: ${VLAN_ACCESS}
+  ^\s*Rx -> Rx
+  ^\s*Description:
+  ^. -> Error
+
+Rx
+  ^\s*${RX_TOTAL_PACKETS} total packets\s*${RX_TOTAL_BYTES} total bytes
+  ^\s*${RX_UNICAST_PACKETS}   unicast packets
+  ^\s*${RX_MCAST_PACKETS}   multicast packets
+  ^\s*${RX_BROADCAST_PACKETS}   broadcast packets
+  ^\s*${RX_ERRORS} errors\s*${RX_DROPPED} dropped
+  ^\s*${RX_CRC_FCS} CRC/FCS
+  ^\s*Tx -> Tx
+  ^. -> Error
+
+Tx
+  ^\s*${TX_TOTAL_PACKETS} total packets\s*${TX_TOTAL_BYTES} total bytes
+  ^\s*${TX_UNICAST_PACKETS}   unicast packets
+  ^\s*${TX_MCAST_PACKETS}   multicast packets
+  ^\s*${TX_BROADCAST_PACKETS}   broadcast packets
+  ^\s*${TX_ERRORS} errors\s*${TX_DROPPED} dropped
+  ^\s*${TX_CRC_FCS} CRC/FCS
+  ^\s*${TX_COLLISION}\s*collision
+  ^\s*$$ -> Record Start
+  ^. -> Error
