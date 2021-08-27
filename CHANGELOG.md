@@ -1,5 +1,32 @@
 # Changelog
 
+## [2.3.0](https://github.com/networktocode/ntc-templates/tree/2.3.0) (2021-08-27)
+
+[Full Changelog](https://github.com/networktocode/ntc-templates/compare/v2.2.2...2.3.0)
+
+**Closed issues:**
+
+- cisco\_ios\_show\_ip\_access-lists template needs updated to include LOG_TYPE options [\#969](https://github.com/networktocode/ntc-templates/issues/969) ([joewesch](https://github.com/joewesch))
+
+**Merged pull requests:**
+
+- ntc_templates/templates/aruba_aoscx_show_aaa_authentication_port-access_interface_all_client-status.textfsm [\#927](https://github.com/networktocode/ntc-templates/pull/927) ([scetron](https://github.com/scetron))
+
+**New Templates:**
+
+- aruba_aoscx_show_aaa_authentication_port-access_interface_all_client-status.textfsm
+- aruba_aoscx_show_arp_all-vrfs.textfsm
+- aruba_aoscx_show_bfd_all-vrfs.textfsm
+- aruba_aoscx_show_bgp_all-vrfs_all_summary.textfsm
+- aruba_aoscx_show_bgp_all_all-vrfs_summary.textfsm
+- aruba_aoscx_show_interface.textfsm
+- aruba_aoscx_show_interface_dom_detail.textfsm
+- aruba_aoscx_show_ip_route_all-vrfs.textfsm
+- aruba_aoscx_show_lldp_neighbors-info_detail.textfsm
+- aruba_aoscx_show_mac-address-table.textfsm
+- aruba_aoscx_show_ntp_associations.textfsm
+- aruba_aoscx_show_vsf_detail.textfsm
+
 ## [2.2.2](https://github.com/networktocode/ntc-templates/tree/2.1.0) (2021-08-02)
 
 [Full Changelog](https://github.com/networktocode/ntc-templates/compare/v2.2.0...2.2.2)
