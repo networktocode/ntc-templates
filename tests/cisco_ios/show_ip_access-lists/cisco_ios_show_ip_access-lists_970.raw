@@ -1,0 +1,326 @@
+Standard IP access list Deny-From-Client
+    10 deny   any
+Standard IP access list Deny-To-Client
+    10 deny   any (417 matches)
+Standard IP access list Eigrp-From-Tunnels
+    10 permit 206.201.48.0, wildcard bits 0.0.15.255 (785 matches)
+    20 permit 204.194.120.0, wildcard bits 0.0.7.255 (686 matches)
+    30 permit 204.194.128.0, wildcard bits 0.0.15.255 (5398 matches)
+    40 permit 167.16.0.0, wildcard bits 0.0.0.255 (29 matches)
+Standard IP access list Eigrp-To-Tunnels
+    10 permit 10.173.228.66 (11 matches)
+    20 permit 10.172.208.128, wildcard bits 0.0.0.63 (18 matches)
+Standard IP access list HomeDepot
+    10 deny   172.16.16.1
+    20 deny   172.16.16.2
+    30 permit 165.130.0.0, wildcard bits 0.0.255.255
+    40 permit 172.16.0.0, wildcard bits 0.15.255.255 (125196 matches)
+    50 permit 192.168.244.0, wildcard bits 0.0.0.255 (6343 matches)
+    60 permit 207.11.0.0, wildcard bits 0.0.255.255
+    70 permit 10.69.113.0, wildcard bits 0.0.0.255
+    80 permit 10.77.113.0, wildcard bits 0.0.0.255
+Standard IP access list Mgmnt-Access-Acl
+    10 permit 204.194.120.0, wildcard bits 0.0.0.255 (27622 matches)
+    20 permit 204.194.121.0, wildcard bits 0.0.0.255 (3254451 matches)
+Standard IP access list Routes-From-Carrier
+    10 permit 10.161.255.0, wildcard bits 0.0.0.255 (14 matches)
+    20 permit 10.163.255.0, wildcard bits 0.0.0.255 (14 matches)
+    30 permit 10.162.50.0, wildcard bits 0.0.0.3
+    40 permit 10.162.50.4, wildcard bits 0.0.0.3
+    50 permit 10.162.50.8, wildcard bits 0.0.0.3
+    60 permit 10.162.50.12, wildcard bits 0.0.0.3
+    70 permit 10.162.50.16, wildcard bits 0.0.0.3
+    80 permit 10.162.50.20, wildcard bits 0.0.0.3
+    90 permit 10.162.50.24, wildcard bits 0.0.0.3 (2 matches)
+    100 permit 10.162.50.28, wildcard bits 0.0.0.3
+    110 permit 68.139.150.44, wildcard bits 0.0.0.3
+    120 permit 68.139.150.56, wildcard bits 0.0.0.3
+    130 permit 68.139.239.232, wildcard bits 0.0.0.3
+    140 permit 68.139.239.236, wildcard bits 0.0.0.3
+Standard IP access list Routes-From-Client
+    10 deny   any (331 matches)
+Standard IP access list Routes-To-Carrier
+    10 permit 10.163.244.32 (1 match)
+Standard IP access list Routes-To-Client
+    10 permit 206.201.53.50 (3 matches)
+    20 permit 167.16.0.181 (3 matches)
+    30 permit 167.16.0.180 (3 matches)
+    40 permit 198.62.166.65 (3 matches)
+    50 permit 206.201.50.0 (17 matches)
+    60 permit 167.16.0.140 (3 matches)
+    70 permit 204.194.127.52 (3 matches)
+    80 permit 204.194.126.57 (3 matches)
+    90 permit 204.194.126.58 (3 matches)
+    380 permit 204.194.139.202 (3 matches)
+    100 permit 204.194.139.212 (3 matches)
+    110 permit 204.194.125.43 (17 matches)
+    120 permit 204.194.126.19 (3 matches)
+    130 permit 204.194.130.230 (3 matches)
+    140 permit 204.194.127.30 (3 matches)
+    150 permit 206.201.61.177 (3 matches)
+    160 permit 204.194.130.3 (3 matches)
+    170 permit 204.194.128.22 (3 matches)
+    180 permit 204.194.128.21 (3 matches)
+    190 permit 204.194.128.18
+    200 permit 204.194.128.17 (3 matches)
+    210 permit 206.201.53.146
+    220 permit 204.194.128.46 (3 matches)
+    230 permit 204.194.139.36 (3 matches)
+    240 permit 204.194.127.212 (3 matches)
+    250 permit 204.194.139.35 (3 matches)
+    260 permit 204.194.128.32 (3 matches)
+    270 permit 204.194.128.58 (3 matches)
+    280 permit 204.194.132.48 (3 matches)
+    390 permit 204.194.127.202 (3 matches)
+    290 permit 167.16.0.12 (3 matches)
+    370 permit 167.16.0.125 (3 matches)
+    300 permit 198.62.166.145 (3 matches)
+    400 permit 204.194.129.92 (17 matches)
+    320 permit 198.62.166.129 (3 matches)
+    330 permit 204.194.127.151 (3 matches)
+    340 permit 204.194.127.150 (3 matches)
+    350 permit 167.16.0.67 (3 matches)
+    360 permit 204.194.128.115 (3 matches)
+Extended IP access list Client_Chatter_Traffic
+    10 permit icmp any 204.194.120.0 0.0.7.255
+    20 permit icmp any 204.194.128.0 0.0.15.255 (9 matches)
+    30 permit icmp any 206.201.48.0 0.0.15.255 (1 match)
+    40 permit icmp any 167.16.0.0 0.0.0.255
+Extended IP access list From-Hsrp-Rtr
+    10 permit ip host 172.16.16.1 host 172.16.16.2
+    20 permit ip host 172.16.16.2 host 172.16.16.1 (35 matches)
+Extended IP access list Payload-In
+    5 permit tcp host 192.168.29.45 eq bgp host 192.168.29.42 (174465 matches)
+    6 permit tcp host 192.168.29.45 host 192.168.29.42 eq bgp (1172984 matches)
+    10 permit ospf host 192.168.29.44 host 224.0.0.5 (843551 matches)
+    20 permit ospf host 192.168.29.44 host 192.168.29.42 (486 matches)
+    30 permit ospf host 192.168.29.44 host 192.168.29.41
+    40 permit ospf host 192.168.29.41 host 192.168.29.42 (10 matches)
+    50 permit ospf host 192.168.29.44 host 224.0.0.6 (1906 matches)
+    60 permit ospf host 192.168.29.41 host 224.0.0.5 (768908 matches)
+    70 permit ospf host 192.168.29.41 host 224.0.0.6 (11280 matches)
+    80 permit tcp host 192.168.29.41 host 192.168.29.42 eq 22 (1 match)
+    90 permit tcp host 192.168.29.41 eq 22 host 192.168.29.42 established
+    100 permit icmp 192.168.29.40 0.0.0.7 192.168.29.40 0.0.0.7 echo
+    110 permit icmp 192.168.29.40 0.0.0.7 192.168.29.40 0.0.0.7 echo-reply
+    120 permit icmp 165.130.0.0 0.0.255.255 167.16.0.0 0.0.0.255 echo
+    130 permit icmp 172.16.0.0 0.15.255.255 167.16.0.0 0.0.0.255 echo
+    140 permit icmp 192.168.244.0 0.0.0.255 167.16.0.0 0.0.0.255 echo
+    150 permit icmp 165.130.0.0 0.0.255.255 198.62.166.0 0.0.0.255 echo
+    160 permit icmp 172.16.0.0 0.15.255.255 198.62.166.0 0.0.0.255 echo
+    170 permit icmp 192.168.244.0 0.0.0.255 198.62.166.0 0.0.0.255 echo
+    180 permit icmp 165.130.0.0 0.0.255.255 206.201.48.0 0.0.15.255 echo
+    190 permit icmp 172.16.0.0 0.15.255.255 206.201.48.0 0.0.15.255 echo
+    200 permit icmp 192.168.244.0 0.0.0.255 206.201.48.0 0.0.15.255 echo
+    210 permit icmp 165.130.0.0 0.0.255.255 204.194.124.0 0.0.3.255 echo
+    220 permit icmp 172.16.0.0 0.15.255.255 204.194.124.0 0.0.3.255 echo
+    230 permit icmp 192.168.244.0 0.0.0.255 204.194.124.0 0.0.3.255 echo
+    240 permit icmp 165.130.0.0 0.0.255.255 204.194.128.0 0.0.15.255 echo
+    250 permit icmp 172.16.0.0 0.15.255.255 204.194.128.0 0.0.15.255 echo
+    260 permit icmp 192.168.244.0 0.0.0.255 204.194.128.0 0.0.15.255 echo
+    270 permit tcp 165.130.0.0 0.0.255.255 host 167.16.0.181 eq 5017 5021
+    280 permit tcp 172.16.0.0 0.15.255.255 host 167.16.0.181 eq 5017 5021
+    290 permit tcp 192.168.244.0 0.0.0.255 host 167.16.0.181 eq 5017 5021
+    300 permit tcp 165.130.0.0 0.0.255.255 host 198.62.166.145 eq 5017 5021
+    310 permit tcp 172.16.0.0 0.15.255.255 host 198.62.166.145 eq 5017 5021
+    320 permit tcp 192.168.244.0 0.0.0.255 host 198.62.166.145 eq 5017 5021
+    330 permit tcp 165.130.0.0 0.0.255.255 host 167.16.0.67 eq 5117 5121
+    340 permit tcp 172.16.0.0 0.15.255.255 host 167.16.0.67 eq 5117 5121
+    350 permit tcp 192.168.244.0 0.0.0.255 host 167.16.0.67 eq 5117 5121
+    360 permit tcp 165.130.0.0 0.0.255.255 host 198.62.166.65 eq 5117 5121
+    370 permit tcp 172.16.0.0 0.15.255.255 host 198.62.166.65 eq 5117 5121
+    380 permit tcp 192.168.244.0 0.0.0.255 host 198.62.166.65 eq 5117 5121
+    390 permit tcp 165.130.0.0 0.0.255.255 host 167.16.0.180 eq 5117 5121
+    400 permit tcp 172.16.0.0 0.15.255.255 host 167.16.0.180 eq 5117 5121
+    410 permit tcp 192.168.244.0 0.0.0.255 host 167.16.0.180 eq 5117 5121
+    420 permit tcp 165.130.0.0 0.0.255.255 host 198.62.166.129 eq 5117 5121
+    430 permit tcp 172.16.0.0 0.15.255.255 host 198.62.166.129 eq 5117 5121
+    440 permit tcp 192.168.244.0 0.0.0.255 host 198.62.166.129 eq 5117 5121
+    450 permit tcp 165.130.0.0 0.0.255.255 host 206.201.50.177 eq 22429 22465 23074
+    460 permit tcp 172.16.0.0 0.15.255.255 host 206.201.50.177 eq 22429 22465 23074
+    470 permit tcp 192.168.244.0 0.0.0.255 host 206.201.50.177 eq 22429 22465 23074
+    480 permit tcp 165.130.0.0 0.0.255.255 host 206.201.61.177 eq 22429 22465 23074
+    490 permit tcp 172.16.0.0 0.15.255.255 host 206.201.61.177 eq 22429 22465 23074
+    500 permit tcp 192.168.244.0 0.0.0.255 host 206.201.61.177 eq 22429 22465 23074
+    510 permit tcp 165.130.0.0 0.0.255.255 host 206.201.50.50 eq 30180 30618 30735
+    520 permit tcp 172.16.0.0 0.15.255.255 host 206.201.50.50 eq 30180 30618 30735
+    530 permit tcp 192.168.244.0 0.0.0.255 host 206.201.50.50 eq 30180 30618 30735
+    540 permit tcp 165.130.0.0 0.0.255.255 host 206.201.53.50 eq 30180 30618 30735
+    550 permit tcp 172.16.0.0 0.15.255.255 host 206.201.53.50 eq 30180 30618 30735
+    560 permit tcp 192.168.244.0 0.0.0.255 host 206.201.53.50 eq 30180 30618 30735
+    570 permit tcp 165.130.0.0 0.0.255.255 host 167.16.0.150 eq 30180 30618 30735
+    580 permit tcp 172.16.0.0 0.15.255.255 host 167.16.0.150 eq 30180 30618 30735
+    590 permit tcp 192.168.244.0 0.0.0.255 host 167.16.0.150 eq 30180 30618 30735
+    600 permit tcp 165.130.0.0 0.0.255.255 host 204.194.130.230 eq 22429 22465 23074
+    610 permit tcp 172.16.0.0 0.15.255.255 host 204.194.130.230 eq 22429 22465 23074 (1239585 matches)
+    620 permit tcp 192.168.244.0 0.0.0.255 host 204.194.130.230 eq 22429 22465 23074
+    630 permit tcp 165.130.0.0 0.0.255.255 host 204.194.127.212 eq 30180 30618 30735
+    640 permit tcp 172.16.0.0 0.15.255.255 host 204.194.127.212 eq 30180 30618 30735
+    650 permit tcp 192.168.244.0 0.0.0.255 host 204.194.127.212 eq 30180 30618 30735 (7314 matches)
+    660 permit tcp 165.130.0.0 0.0.255.255 host 204.194.139.212 eq 30180 30618 30735
+    670 permit tcp 172.16.0.0 0.15.255.255 host 204.194.139.212 eq 30180 30618 30735
+    680 permit tcp 192.168.244.0 0.0.0.255 host 204.194.139.212 eq 30180 30618 30735 (215807076 matches)
+    690 permit tcp 165.130.0.0 0.0.255.255 host 204.194.126.19 eq 28063
+    700 permit tcp 172.16.0.0 0.15.255.255 host 204.194.126.19 eq 28063
+    710 permit tcp 192.168.244.0 0.0.0.255 host 204.194.126.19 eq 28063
+    720 permit tcp 165.130.0.0 0.0.255.255 host 204.194.128.115 eq 28063
+    730 permit tcp 172.16.0.0 0.15.255.255 host 204.194.128.115 eq 28063
+    740 permit tcp 192.168.244.0 0.0.0.255 host 204.194.128.115 eq 28063
+    750 permit tcp 165.130.0.0 0.0.255.255 host 204.194.128.17 eq 28063
+    760 permit tcp 172.16.0.0 0.15.255.255 host 204.194.128.17 eq 28063
+    770 permit tcp 192.168.244.0 0.0.0.255 host 204.194.128.17 eq 28063
+    780 permit tcp host 172.20.71.70 host 204.194.126.57 eq 1022
+    790 permit tcp host 172.20.71.70 host 204.194.126.58 eq 1022
+    800 permit tcp host 172.20.71.70 host 204.194.126.78 eq 1022
+    810 permit tcp host 172.20.71.70 host 204.194.128.58 eq 1022
+    820 permit tcp host 172.20.71.70 host 204.194.128.46 eq 1022
+    830 permit tcp host 172.20.71.70 host 204.194.139.35
+    840 permit tcp host 172.20.71.70 host 204.194.139.36
+    850 permit tcp host 172.20.71.70 host 204.194.127.150
+    860 permit tcp host 172.20.71.70 host 204.194.127.151
+    870 permit ip host 172.20.71.70 host 204.194.126.69
+    880 permit ip host 172.20.71.70 host 204.194.128.69
+    890 permit tcp host 172.20.71.16 eq 20000 host 204.194.129.92 established
+    900 permit tcp 172.16.0.0 0.15.255.255 host 204.194.130.3 eq 28083 (638151 matches)
+    910 permit tcp 207.11.0.0 0.0.255.255 host 204.194.130.3 eq 28083
+    920 permit tcp 172.16.0.0 0.15.255.255 host 204.194.127.30 eq 28083
+    930 permit tcp 172.16.0.0 0.15.255.255 host 204.194.127.52 eq 28083
+    940 permit tcp 172.16.0.0 0.15.255.255 host 204.194.132.48 eq 28083
+    950 permit tcp 165.130.0.0 0.0.255.255 host 204.194.130.3 eq 28083
+    960 permit tcp 165.130.0.0 0.0.255.255 host 204.194.127.30 eq 28083
+    970 permit tcp 165.130.0.0 0.0.255.255 host 204.194.127.52 eq 28083
+    980 permit tcp 165.130.0.0 0.0.255.255 host 204.194.132.48 eq 28083
+    990 permit tcp 192.168.244.0 0.0.0.255 host 204.194.130.3 eq 28083
+    1000 permit tcp 192.168.244.0 0.0.0.255 host 204.194.127.30 eq 28083
+    1010 permit tcp 192.168.244.0 0.0.0.255 host 204.194.127.52 eq 28083 (1695583 matches)
+    1020 permit tcp 192.168.244.0 0.0.0.255 host 204.194.132.48 eq 28083 (1670305 matches)
+    1030 permit tcp host 172.20.71.79 host 204.194.126.57 eq 1022
+    1040 permit tcp host 172.20.71.79 host 204.194.139.36
+    1050 permit tcp 207.11.0.0 0.0.255.255 host 204.194.127.212 eq 30180 30618 30735
+    1060 permit tcp 207.11.0.0 0.0.255.255 host 204.194.139.212 eq 30180 30618 30735
+    1070 permit tcp 207.11.0.0 0.0.255.255 host 204.194.127.52 eq 28083
+    1080 permit tcp 207.11.0.0 0.0.255.255 host 204.194.132.48 eq 28083
+    1090 permit tcp 10.69.113.0 0.0.0.255 host 204.194.139.35 eq 6522
+    1100 permit tcp 10.69.113.0 0.0.0.255 host 204.194.139.36 eq 6522
+    1110 permit tcp 10.77.113.0 0.0.0.255 host 204.194.139.35 eq 6522
+    1120 permit tcp 10.77.113.0 0.0.0.255 host 204.194.139.36 eq 6522
+    1130 permit tcp 172.16.0.0 0.15.255.255 host 167.16.0.125 eq 41230
+    1140 permit tcp 165.130.0.0 0.0.255.255 host 204.194.139.202 eq 42230
+    1150 permit tcp 165.130.0.0 0.0.255.255 host 204.194.127.202 eq 42230
+    1160 permit tcp 192.168.248.0 0.0.0.255 host 204.194.139.202 eq 42230
+    1170 permit tcp 192.168.248.0 0.0.0.255 host 204.194.127.202 eq 42230
+    1180 permit tcp 192.168.244.0 0.0.0.255 host 204.194.139.202 eq 42230 (88 matches)
+    1190 permit tcp 192.168.244.0 0.0.0.255 host 204.194.127.202 eq 42230 (11328236 matches)
+    1200 deny tcp any any (15674 matches)
+    1210 deny icmp any any (9 matches)
+Extended IP access list Payload-Out
+    10 deny udp any any eq tftp
+    20 deny udp any any eq snmp
+    30 deny udp any any eq snmptrap
+    40 deny udp any eq snmp any
+    50 deny udp any eq snmptrap any
+    60 deny udp any any eq bootps
+    70 deny udp any any eq bootpc
+    80 deny udp any any eq ntp
+    90 deny udp any any eq syslog
+    100 deny udp any any eq tacacs
+    110 deny tcp any any eq tacacs
+    120 permit ip any any (232565656 matches)
+Extended IP access list To-Hsrp-Rtr
+    10 permit ip host 172.16.16.1 host 172.16.16.2
+    20 permit ip host 172.16.16.2 host 172.16.16.1
+Extended IP access list Vty-Access-Acl
+    10 permit tcp 206.201.48.0 0.0.15.255 any eq 22
+    20 permit tcp 10.162.51.0 0.0.0.255 any eq 22
+    30 permit tcp 10.128.136.0 0.0.0.255 any eq 22
+    40 permit tcp host 68.137.46.186 any eq 22
+    50 permit tcp host 68.136.146.14 any eq 22
+    60 permit tcp host 152.183.116.102 any eq 22
+    70 permit tcp host 152.176.79.142 any eq 22
+    80 permit tcp host 152.164.210.62 any eq 22
+    90 permit tcp host 152.177.200.2 any eq 22
+    100 permit tcp 204.194.128.0 0.0.15.255 any eq 22
+    110 permit tcp 204.194.120.0 0.0.7.255 any eq 22 (878 matches)
+    120 permit tcp 167.16.0.0 0.0.0.255 any eq 22
+    130 permit tcp 10.161.0.0 0.0.127.255 any eq 22
+    140 permit tcp 10.163.0.0 0.0.127.255 any eq 22
+    150 permit tcp host 10.162.50.6 any eq 22
+    160 permit tcp host 10.162.50.14 any eq 22
+    170 permit tcp host 10.162.50.22 any eq 22
+    180 permit tcp host 10.162.50.30 any eq 22
+    190 permit tcp host 10.162.50.34 any eq 22
+    200 permit tcp host 10.162.50.38 any eq 22
+    210 permit tcp host 10.162.50.42 any eq 22
+    220 permit tcp host 10.162.50.46 any eq 22
+    230 permit tcp host 10.162.50.50 any eq 22
+    240 permit tcp host 10.162.50.54 any eq 22
+    250 permit tcp host 10.162.50.58 any eq 22
+    260 permit tcp host 10.162.50.62 any eq 22
+    270 permit tcp host 10.162.50.66 any eq 22
+    280 permit tcp host 10.162.50.70 any eq 22
+    290 permit tcp host 10.162.50.74 any eq 22
+    300 permit tcp host 10.162.50.78 any eq 22
+    310 permit tcp host 10.162.50.82 any eq 22
+    320 permit tcp host 10.162.50.86 any eq 22
+    330 permit tcp host 10.162.50.90 any eq 22
+    340 permit tcp host 10.162.50.94 any eq 22
+    350 permit tcp host 10.162.50.98 any eq 22
+    360 permit tcp host 10.162.50.102 any eq 22
+    370 permit tcp host 10.162.50.106 any eq 22
+    380 permit tcp host 10.162.50.110 any eq 22
+    390 permit tcp host 10.162.50.114 any eq 22
+    400 permit tcp host 10.162.50.118 any eq 22
+    410 permit tcp host 10.162.50.122 any eq 22
+    420 permit tcp host 10.162.50.126 any eq 22
+    430 permit tcp 10.175.184.0 0.0.0.15 any eq 22
+    440 permit tcp 10.175.192.0 0.0.0.15 any eq 22
+    450 permit tcp 10.190.48.1 0.0.15.0 any eq 22
+    460 permit tcp 10.175.48.1 0.0.15.0 any eq 22
+    470 permit tcp 208.72.255.0 0.0.0.15 any eq 22
+    480 permit tcp 216.66.221.0 0.0.0.15 any eq 22
+    490 permit tcp 10.160.120.224 0.0.0.15 any eq 22
+    500 permit tcp 10.191.120.224 0.0.0.15 any eq 22
+    510 permit tcp host 68.136.128.62 any eq 22
+    520 permit tcp host 68.136.158.174 any eq 22
+    530 permit tcp host 68.137.192.94 any eq 22
+    540 permit tcp host 68.139.150.46 any eq 22
+    550 permit tcp host 68.139.150.58 any eq 22
+    560 permit tcp host 152.162.68.154 any eq 22
+    570 permit tcp host 152.164.245.30 any eq 22
+    580 permit tcp host 152.176.20.134 any eq 22
+    590 permit tcp host 152.176.115.122 any eq 22
+    600 permit tcp host 152.177.18.94 any eq 22
+    610 permit tcp host 152.181.9.214 any eq 22
+    620 permit tcp host 152.192.41.174 any eq 22
+    630 permit tcp host 152.192.92.166 any eq 22
+    640 permit tcp 172.16.16.0 0.0.0.3 any eq 22 (2 matches)
+    650 permit tcp host 192.168.29.41 any eq 22
+Extended IP access list auth_traffic
+    10 deny tcp any any range ftp-data ftp
+    20 deny tcp any range ftp-data ftp any
+    30 deny tcp any range 1363 1368 any
+    40 deny tcp any any range 1363 1368
+    50 deny tcp any 204.194.120.0 0.0.0.255
+    60 deny tcp any 204.194.121.0 0.0.0.255
+    70 permit tcp any 206.201.48.0 0.0.15.255
+    80 permit tcp any 204.194.0.0 0.0.255.255 (232386338 matches)
+    90 permit tcp any 167.16.0.0 0.0.0.255
+Extended IP access list settle_traffic
+    10 permit tcp any any range ftp-data ftp
+    20 permit tcp any range ftp-data ftp any
+    30 permit tcp any range 1362 1368 any
+    40 permit tcp any any range 1363 1368
+    50 permit tcp any any range 6999 7000
+    60 permit tcp any host 204.194.126.171
+    70 permit tcp any host 167.16.0.148
+    80 permit tcp any host 204.194.126.57
+    90 permit tcp any host 204.194.126.58
+    100 permit tcp any host 204.194.126.78
+    110 permit tcp any host 204.194.128.46
+    120 permit tcp any host 204.194.128.58
+    130 permit tcp any any eq 6522
+Extended IP access list tn3270_xml
+    10 deny ip any any
+Extended IP access list tn3270_xml_eextender
+    10 permit udp any range 12000 12004 any
+    20 permit udp any any range 12000 12004
