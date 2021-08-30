@@ -4,6 +4,7 @@ Standard IP access list 99
     30 permit 10.0.10.0, wildcard bits 0.255.0.255 (20 matches)
 Standard IP access list stdacl
     10 permit 10.1.1.1
+    20 deny 10.1.1.2 (1 match)
 Extended IP access list test
 Extended IP access list 101
     10 permit tcp any host 10.1.1.1 eq www
@@ -60,7 +61,7 @@ Extended IP access list sample
     380 permit tcp 10.10.37.24 0.0.0.7 host 10.10.6.144 eq 4320
     390 permit tcp 10.10.37.24 0.0.0.7 host 10.10.6.146 eq 4000
     400 permit tcp 10.10.37.24 0.0.0.7 host 10.10.6.146 eq 4010
-    410 permit tcp 10.10.37.24 0.0.0.7 host 10.10.6.146 eq 4020
+    410 permit tcp 10.10.37.24 0.0.0.7 host 10.10.6.146 eq 4020 (1 match)
     420 permit tcp 10.10.37.24 0.0.0.7 host 10.10.6.146 eq 4300
     430 permit tcp 10.10.37.24 0.0.0.7 host 10.10.6.146 eq 4310
     440 permit tcp 10.10.37.24 0.0.0.7 host 10.10.6.146 eq 4320
