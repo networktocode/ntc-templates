@@ -32,7 +32,7 @@ Start
   ^(Standard|Extended) -> Continue.Clearall
   ^${ACL_TYPE}\s+IP\s+access\s+list\s+${ACL_NAME}\s* -> Record
   ^\s+${LINE_NUM}\s+${ACTION}\s+${PROTOCOL}\s+(host\s+${SRC_HOST}|${SRC_ANY}|${SRC_NETWORK}\s+${SRC_WILDCARD})(\s+${SRC_PORT_MATCH}\s+|)(${SRC_PORT_RANGE_START}\s+${SRC_PORT_RANGE_END}|${SRC_PORT}|)\s+(host\s+${DST_HOST}|${DST_ANY}|${DST_NETWORK}\s+${DST_WILDCARD})(\s+${DST_PORT_MATCH}\s+(${DST_PORT_RANGE_START}\s+${DST_PORT_RANGE_END}|${DST_PORT}|)|\s+(${FLAGS_MATCH}\s+|)${TCP_FLAG}|)(\s+${ICMP_TYPE}|)(\s+${LOG}|)(\s+time-range\s+${TIME}\s+\(${STATE}\)|)(?:\s+\(${MATCHES}\s+\S+\)|)(\s+\(tag\s+=\s+${LOG_TAG}\)|)\s*$$ -> Record
-  ^\s+${LINE_NUM}\s+${ACTION}\s+(${SRC_NETWORK},\s+wildcard\s+bits\s+${SRC_WILDCARD}|${SRC_HOST}|${SRC_ANY})(\s+${LOG}|)(\s+time-range\s+${TIME}\s+\(${STATE}\)|)(?:\s+\(${MATCHES}\s+matches\)|)(\s+\(tag\s+=\s+${LOG_TAG}\)|)\s*$$ -> Record
+  ^\s+${LINE_NUM}\s+${ACTION}\s+(${SRC_NETWORK},\s+wildcard\s+bits\s+${SRC_WILDCARD}|${SRC_HOST}|${SRC_ANY})(\s+${LOG}|)(\s+time-range\s+${TIME}\s+\(${STATE}\)|)(?:\s+\(${MATCHES}\s+\S+\)|)(\s+\(tag\s+=\s+${LOG_TAG}\)|)\s*$$ -> Record
   ^\s*$$
   # Capture time-stamp if vty line has command time-stamping turned on
   ^Load\s+for\s+
