@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.3.1](https://github.com/networktocode/ntc-templates/tree/2.3.1) (2021-08-30)
+
+[Full Changelog](https://github.com/networktocode/ntc-templates/compare/v2.3.0...2.3.1)
+
+**Closed issues:**
+
+- cisco\_ios\_show\_ip\_access-lists Account for singluar match [\#972](https://github.com/networktocode/ntc-templates/issues/972) ([mitchell-foxworth](https://github.com/mitchell-foxworth))
+
+**Merged pull requests:**
+
+- ntc_templates/templates/cisco_ios_show_ip_access-lists.textfsm [\#973](https://github.com/networktocode/ntc-templates/pull/973) ([mitchell-foxworth](https://github.com/mitchell-foxworth))
+
 ## [2.3.0](https://github.com/networktocode/ntc-templates/tree/2.3.0) (2021-08-27)
 
 [Full Changelog](https://github.com/networktocode/ntc-templates/compare/v2.2.2...2.3.0)
