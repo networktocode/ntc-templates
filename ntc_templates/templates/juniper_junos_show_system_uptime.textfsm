@@ -20,9 +20,6 @@ Value LAST_CONFIG_MONTH (\w+)
 Value LAST_CONFIG_DAY (\d+)
 Value LAST_CONFIG_YEAR (\d+)
 Value LAST_CONFIG_USER (\w+)
-Value UPTIME_DAYS (\d+)
-Value UPTIME_HOURS (\d+)
-Value UPTIME_MINUTES (\d+)
 Value USERS (\d+)
 Value LOAD_AVERAGE_1MIN (\d+\.\d{2})
 Value LOAD_AVERAGE_5MIN (\d+\.\d{2})
@@ -34,6 +31,6 @@ Start
   ^System\s+booted:\s*${BOOT_YEAR}-${BOOT_MONTH}-${BOOT_DAY}\s+${BOOT_TIME}\s+${BOOT_TIMEZONE}\s+\([^)]+\)
   ^Protocols\s+started:\s*${PROTOCOLS_YEAR}-${PROTOCOLS_MONTH}-${PROTOCOLS_DAY}\s+${PROTOCOLS_TIME}\s+${PROTOCOLS_TIMEZONE}\s+\([^)]+\)
   ^Last\s+configured:\s*${LAST_CONFIG_YEAR}-${LAST_CONFIG_MONTH}-${LAST_CONFIG_DAY}\s+${LAST_CONFIG_TIME}\s+${LAST_CONFIG_TIMEZONE}\s+\([^)]+\)\s+by\s+${LAST_CONFIG_USER}
-  ^\s*\d+:\d+\w+\s+up\s+${UPTIME_DAYS}\s+days,\s*${UPTIME_HOURS}:${UPTIME_MINUTES},\s*${USERS}\s+users,\s*load\s+averages:\s*${LOAD_AVERAGE_1MIN},\s*${LOAD_AVERAGE_5MIN},\s*${LOAD_AVERAGE_15MIN}
+  ^.*,\s*${USERS}\s+users?,\s*load\s+averages:\s*${LOAD_AVERAGE_1MIN},\s*${LOAD_AVERAGE_5MIN},\s*${LOAD_AVERAGE_15MIN}
   ^\s*$$
   ^. -> Error
