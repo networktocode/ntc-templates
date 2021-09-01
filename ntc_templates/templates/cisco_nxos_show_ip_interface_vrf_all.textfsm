@@ -1,0 +1,59 @@
+Value VRF (\S+)
+Value INTF (\S+)
+Value IPADDR ([a-zA-Z0-9./]+)
+Value STATUS (\S+-\S+)
+Value LINK (\S+-\S+)
+Value PROTO (\S+-\S+)
+Value SUBNET (\d+.\d+.\d+.\d+\/\d+)
+Value ROUTE_PREF (\d+)
+Value ROUTE_TAG (\d+)
+Value BROADCAST ([a-zA-Z0-9./]+)
+Value MULTICAST_GROUPS (\S+)
+Value MTU (\d+)
+Value PROXY_ARP (\S+)
+Value IP_LOCAL_PROXY_ARP (\S+)
+Value MULTICAST_ROUTING (\S+)
+Value ICMP_REDIRECTS (\S+)
+Value IP_DIRECTED_BROADCAST (\S+)
+Value IP_FORWARDING (\S+)
+Value ICMP_UNREACHABLES (\S+)
+Value ICMP_PORT_UNREACHABLES (\S+)
+Value IP_UNICAST_RPF (\S+)
+Value IP_LOAD_SHARING (\S+)
+Value WCCP_REDIRECT_OUTBOUND (\S+)
+Value WCCP_REDIRECT_INBOUND (\S+)
+Value WCCP_REDIRECT_EXCLUDE (\S+)
+
+Start
+  ^IP\s+Interface\s+Status\s+for\s+VRF\s+"${VRF}"
+  ^${INTF},\s+Interface\s+status:\s+${PROTO}/${LINK}/${STATUS}
+  ^\s+IP\s+address:\s+${IPADDR},\s+IP\s+subnet:\s+${SUBNET}\s+route-preference:\s+${ROUTE_PREF},\s+tag:\s+${ROUTE_TAG}
+  ^\s+IP\s+broadcast\s+address:\s+${BROADCAST}
+  ^\s+IP\s+multicast\s+groups\s+locally\s+joined:\s+${MULTICAST_GROUPS}
+  ^\s+IP\s+MTU:\s+${MTU}\s+bytes
+  ^\s+IP\s+primary\s+address\s+route-preference:
+  ^\s+IP\s+proxy\s+ARP\s+:\s+${PROXY_ARP}
+  ^\s+IP\s+Local\s+Proxy\s+ARP\s+:\s+${IP_LOCAL_PROXY_ARP}
+  ^\s+IP\s+multicast\s+routing:\s+${MULTICAST_ROUTING}
+  ^\s+IP\s+icmp\s+redirects:\s+${ICMP_REDIRECTS}
+  ^\s+IP\s+directed-broadcast:\s+${IP_DIRECTED_BROADCAST}
+  ^\s+IP\s+Forwarding:\s+${IP_FORWARDING}
+  ^\s+IP\s+icmp\s+unreachables.+:\s+${ICMP_UNREACHABLES}
+  ^\s+IP\s+icmp\s+port-unreachable:\s+${ICMP_PORT_UNREACHABLES}
+  ^\s+IP\s+unicast\s+reverse\s+path\s+forwarding:\s+${IP_UNICAST_RPF}
+  ^\s+IP\s+load\s+sharing:\s+${IP_LOAD_SHARING}
+  ^\s+IP\s+interface\s+statistics\s+last\s+reset:
+  ^\s+IP\s+interface\s+software\s+stats:
+  ^\s+Unicast\s+packets\s+:\s+\d+\/\d+\/\d+\/\d+\/\d+
+  ^\s+Unicast\s+bytes\s+:\s+\d+\/\d+\/\d+\/\d+\/\d+
+  ^\s+Multicast\s+packets\s+:\s+\d+\/\d+\/\d+\/\d+\/\d+
+  ^\s+Multicast\s+bytes\s+:\s+\d+\/\d+\/\d+\/\d+\/\d+
+  ^\s+Broadcast\s+packets\s+:\s+\d+\/\d+\/\d+\/\d+\/\d+
+  ^\s+Broadcast\s+bytes\s+:\s+\d+\/\d+\/\d+\/\d+\/\d+
+  ^\s+Labeled\s+packets\s+:\s+\d+\/\d+\/\d+\/\d+\/\d+
+  ^\s+Labeled\s+bytes\s+:\s+\d+\/\d+\/\d+\/\d+\/\d+
+  ^\s+WCCP\s+Redirect\s+outbound:\s+${WCCP_REDIRECT_OUTBOUND}
+  ^\s+WCCP\s+Redirect\s+inbound:\s+${WCCP_REDIRECT_INBOUND}
+  ^\s+WCCP\s+Redirect\s+exclude:\s+${WCCP_REDIRECT_EXCLUDE} -> Record
+  ^\s*$$
+  ^. -> Error
