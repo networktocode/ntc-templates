@@ -1,0 +1,60 @@
+FastEthernet0/1 - Group 1  
+  State is Master  
+  Virtual IP address is 192.168.88.1
+  Virtual MAC address is 0000.5e00.0101
+  Advertisement interval is 1.000 sec
+  Preemption enabled
+  Priority is 110 
+    Track object 1 state Up decrement 10
+  Authentication MD5, key-string "highavailability"
+  Master Router is 192.168.88.2 (local), priority is 110 
+  Master Advertisement interval is 1.000 sec
+  Master Down interval is 3.570 sec
+
+FastEthernet0/1.2 - Group 2  
+  State is Master  
+  Virtual IP address is 10.0.2.1
+  Virtual MAC address is 0000.5e00.0102
+  Advertisement interval is 1.000 sec
+  Preemption enabled
+  Priority is 110 
+    Track object 1 state Up decrement 10
+  Master Router is 10.0.2.2 (local), priority is 110 
+  Master Advertisement interval is 1.000 sec
+  Master Down interval is 3.570 sec
+
+FastEthernet0/1.3 - Group 3  
+  State is Backup  
+  Virtual IP address is 10.0.3.1
+  Virtual MAC address is 0000.5e00.0103
+  Advertisement interval is 1.000 sec
+  Preemption enabled
+  Priority is 110 
+    Track object 1 state Up decrement 10
+  Master Router is 10.0.3.3, priority is 120 
+  Master Advertisement interval is 1.000 sec
+  Master Down interval is 3.570 sec (expires in 2.738 sec)
+
+FastEthernet0/1.4 - Group 4  
+  State is Init    
+  Virtual IP address is 10.0.4.1
+  Virtual MAC address is 0000.5e00.0104
+  Advertisement interval is 1.000 sec
+  Preemption enabled
+  Priority is 100 
+  Master Router is 10.0.4.3, priority is 120 
+  Master Advertisement interval is 1.000 sec
+  Master Down interval is 3.609 sec
+
+FastEthernet0/1.5 - Group 5  
+  State is Backup  
+  Virtual IP address is 10.0.5.1
+  Virtual MAC address is 0000.5e00.0105
+  Advertisement interval is 1.000 sec
+  Preemption enabled
+  Priority is 90  (cfgd 110)
+    Track object 2 state Down decrement 20
+  Master Router is 10.0.5.3, priority is 105 
+  Master Advertisement interval is 1.000 sec
+  Master Down interval is 3.570 sec (expires in 2.706 sec)
+

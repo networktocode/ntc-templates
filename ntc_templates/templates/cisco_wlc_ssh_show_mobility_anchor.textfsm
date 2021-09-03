@@ -1,0 +1,19 @@
+Value WLAN_ID (\d+)
+Value IPADDR (\S+)
+Value STATUS (\S+)
+Value PRIORITY ([1-3])
+
+Start
+  ^\s*WLAN ID\s+IP Address\s+Status\s+Priority\s*$$ -> Mobility_Anchor
+
+Mobility_Anchor
+  # WLAN Mobility Anchor List
+  ^\s+${WLAN_ID}\s+${IPADDR}\s+${STATUS}\s+${PRIORITY} -> Record
+  #
+  # also handling the similar Guest LAN (GLAN) output
+  ^\s+${WLAN_ID}\s+${IPADDR}\s+${STATUS} -> Record
+  #
+  ^\s*GLAN ID\s+IP Address\s+Status\s*$$
+  ^\s+[-\s]+$$
+  ^\s*$$
+  ^. -> Error

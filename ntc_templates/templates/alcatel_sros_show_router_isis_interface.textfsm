@@ -1,0 +1,17 @@
+Value INTERFACE (\S+)
+Value LEVEL (\S+)
+Value CIRCID (\d+)
+Value OPER_STATE (Up|Down)
+Value METRIC_L1 (\d+)
+Value METRIC_L2 (\d+)
+
+Start
+  ^----------- -> Interface
+
+Interface
+  ^${INTERFACE}\s+${LEVEL}\s+${CIRCID}\s+${OPER_STATE}\s+${METRIC_L1}/${METRIC_L2} -> Record
+  ^\s*$$
+  ^-----------
+  ^===========
+  ^Interfaces
+  ^. -> Error

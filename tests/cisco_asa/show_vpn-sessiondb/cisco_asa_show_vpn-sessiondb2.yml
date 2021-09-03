@@ -1,0 +1,48 @@
+---
+parsed_sample:
+  - vpn_session_name:
+      - "Site-to-Site VPN"
+      - "IKEv2 IPsec"
+      - "IKEv1 IPsec"
+    vpn_session_active:
+      - "99"
+      - "9"
+      - "99"
+    vpn_session_cumulative:
+      - "3506999"
+      - "3999"
+      - "3502999"
+    vpn_session_peak_concurrent:
+      - "99"
+      - "9"
+      - "99"
+    vpn_session_inactive:
+      - "None"
+      - "None"
+      - "None"
+    total_active_and_inactive: "99"
+    total_cumulative: "3506999"
+    device_total_vpn_capacity: "750"
+    device_load_percent: "2"
+    tunnels_summary_name:
+      - "IKEv1"
+      - "IKEv2"
+      - "IPsec"
+      - "IPsecOverNatT"
+    tunnels_summary_active:
+      - "99"
+      - "9"
+      - "99"
+      - "9"
+    tunnels_summary_cumulative:
+      - "3502999"
+      - "3999"
+      - "9302"
+      - "1999"
+    tunnels_summary_peak_concurrent:
+      - "99"
+      - "9"
+      - "99"
+      - "9"
+    totals_active: "99"
+    totals_cumulative: "351999"

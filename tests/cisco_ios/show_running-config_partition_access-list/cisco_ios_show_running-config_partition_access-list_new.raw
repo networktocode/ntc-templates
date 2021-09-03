@@ -1,0 +1,57 @@
+ip access-list extended filter01
+ 20 deny   udp any host 200.10.11.135 eq 5060
+ 30 deny   tcp any 200.10.0.0 0.0.255.255 eq telnet
+ 40 deny   tcp any any eq telnet
+ 50 deny   ip 210.144.0.0 0.15.255.255 any
+ 280 deny   53 any any
+ 290 deny   55 any any
+ 300 deny   77 any any
+ 310 deny   pim any any
+ 320 remark Vodafone BGP
+ 320 permit icmp host 113.17.12.113 host 113.17.12.114
+ 330 permit icmp host 113.117.249.33 host 113.117.249.34
+ 340 permit icmp host 8.8.8.8 host 113.17.12.114
+ 350 permit icmp host 8.8.8.8 host 113.117.249.34
+ 360 permit icmp host 203.109.180.181 host 113.17.12.114
+ 370 permit icmp host 203.109.180.181 host 113.117.249.34
+ 380 permit icmp host 108.170.247.49 host 113.17.12.114
+ 390 permit icmp host 108.170.247.49 host 113.117.249.34
+ 400 permit icmp any host 113.17.12.114 echo-reply
+ 410 permit icmp host 203.50.13.93 host 113.17.12.114
+ 420 permit icmp host 203.50.13.93 host 113.117.249.34
+ 430 permit icmp any host 113.117.249.34 echo-reply
+ 440 permit tcp host 113.17.12.113 host 113.17.12.114 eq bgp
+ 450 permit tcp host 113.17.70.169 host 113.117.249.34 eq bgp
+ip access-list extended nineoneone
+ 20 deny   udp any host 200.10.11.135 eq 5060
+ 30 deny   tcp any 200.10.0.0 0.0.255.255 eq telnet
+ 40 deny   tcp any any eq telnet
+ 50 deny   ip 210.144.0.0 0.15.255.255 any
+ 280 deny   53 any any
+ 290 deny   55 any any
+ 300 deny   77 any any
+ 310 deny   pim any any
+ 320 remark Vodafone BGP
+ 320 permit icmp host 113.17.12.113 host 113.17.12.114
+ 330 permit icmp host 113.117.249.33 host 113.117.249.34
+ 340 permit icmp host 8.8.8.8 host 113.17.12.114
+ 350 permit icmp host 8.8.8.8 host 113.117.249.34
+ 360 permit icmp host 203.109.180.181 host 113.17.12.114
+ 370 permit icmp host 203.109.180.181 host 113.117.249.34
+ 380 permit icmp host 108.170.247.49 host 113.17.12.114
+ 390 permit icmp host 108.170.247.49 host 113.117.249.34
+ 400 permit icmp any host 113.17.12.114 echo-reply
+ 410 permit icmp host 203.50.13.93 host 113.17.12.114
+ 420 permit icmp host 203.50.13.93 host 113.117.249.34
+ 430 permit icmp any host 113.117.249.34 echo-reply
+ 440 permit tcp host 113.17.12.113 host 113.17.12.114 eq bgp
+ 450 permit tcp host 113.17.70.169 host 113.117.249.34 eq bgp
+ 460 permit icmp host 10.10.10.10 any echo-reply
+ 470 permit icmp host 10.10.10.10 any administratively-prohibited
+ 480 permit icmp host 10.10.10.10 any unreachable log
+ 490 permit icmp 10.10.10.0 0.0.0.255 20.20.0.0 0.0.255.255 port-unreachable
+ 500 permit icmp host 1.1.11.1 host 1.1.22.4 echo-reply log-input
+ 510 permit tcp any any match-all +ack -fin log
+ 520 permit tcp any any match-any +ack -fin log
+ 521 permit tcp any any match-any +ack +fin +syn +psh
+ 530 permit tcp any 10.1.0.0 0.0.255.255 established psh

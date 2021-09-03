@@ -1,0 +1,76 @@
+#
+# Patrick Marc Preuss, Refried Jello
+#
+# 2020-01-13: Inital Version
+# 2021-01-08: Update for 6.2
+#
+# FG Version: 5.6, 6.0.7, 6.2
+# HW        : FG1500D
+# CLUSTER MODE: AP
+# VDOMS       : ENABLED
+#
+Value Required HOSTNAME (\S+)
+Value VERSION (.*)
+Value SIGNATURE (.*)
+Value VIRUS_DB (.*)
+Value EXTENDED_DB (.*)
+Value EXTREME_DB (.*)
+Value IPS_DB (.*)
+Value IPS_ETDB (.*)
+Value APP_DB (.*)
+Value INDUSTRIAL_DB (.*)
+Value SERIAL_NUMBER (\S+)
+Value IPS_MALICIOUS_URL_DATABASE (.*)
+Value BOTNET_DB (.*)
+Value BIOS_VERSION (\S+)
+Value SYSTEM_PART_NUMBER (\S+)
+Value LOG_HARD_DISK (\S+)
+Value PRIVATE_ENCRYPTION (\S+)
+Value OPERATION_MODE (\S+)
+Value CURRENT_VIRTUAL_DOMAIN (\S+)
+Value MAX_NUMBER_OF_VIRTUAL_DOMAINS (\d+)
+Value VIRTUAL_DOMAINS_STATUS (.*)
+Value VIRTUAL_DOMAIN_CONFIGURATION (\S+)
+Value FIPS_CC_MODE (\S+)
+Value CURRENT_HA_MODE (.*)
+Value CLUSTER_UPTIME (.*)
+Value CLUSTER_STATE_CHANGE_TIME (.*)
+Value BRANCH_POINT (\S+)
+Value RELEASE_VERSION_INFORMATION (\S+)
+Value FORTIOS_X86_64 (\S+)
+Value SYSTEM_TIME (.*)
+
+Start
+  ^Version:\s+${VERSION}
+  ^Firmware Signature:\s+${SIGNATURE}
+  ^Virus-DB:\s+${VIRUS_DB}
+  ^Extended\s+DB:\s+${EXTENDED_DB}
+  ^Extreme\s+DB:\s+${EXTREME_DB}
+  ^IPS-DB:\s+${IPS_DB}
+  ^IPS-ETDB:\s+${IPS_ETDB}
+  ^APP-DB:\s+${APP_DB}
+  ^INDUSTRIAL-DB:\s+${INDUSTRIAL_DB}
+  ^Serial-Number:\s+${SERIAL_NUMBER}
+  ^IPS\s+Malicious\s+URL\s+Database:\s+${IPS_MALICIOUS_URL_DATABASE}
+  ^Botnet\s+DB:\s+${BOTNET_DB}
+  ^BIOS\s+version:\s+${BIOS_VERSION}
+  ^System\s+Part-Number:\s+${SYSTEM_PART_NUMBER}
+  ^Log\s+hard\s+disk:\s+${LOG_HARD_DISK}
+  ^Hostname:\s+${HOSTNAME}
+  ^Private\s+Encryption:\s+${PRIVATE_ENCRYPTION}
+  ^Operation\s+Mode:\s+${OPERATION_MODE}
+  ^Current\s+virtual\s+domain:\s+${CURRENT_VIRTUAL_DOMAIN}
+  ^Max\s+number\s+of\s+virtual\s+domains:\s+${MAX_NUMBER_OF_VIRTUAL_DOMAINS}
+  ^Virtual\s+domains\s+status:\s+${VIRTUAL_DOMAINS_STATUS}
+  ^Virtual\s+domain\s+configuration:\s+${VIRTUAL_DOMAIN_CONFIGURATION}
+  ^FIPS-CC\s+mode:\s+${FIPS_CC_MODE}
+  ^Current\s+HA\s+mode:\s+${CURRENT_HA_MODE}
+  ^Cluster\s+uptime:\s+${CLUSTER_UPTIME}
+  ^Cluster\s+state\s+change\s+time:\s+${CLUSTER_STATE_CHANGE_TIME}
+  ^Branch\s+point:\s+${BRANCH_POINT}
+  ^Release\s+Version\s+Information:\s+${RELEASE_VERSION_INFORMATION}
+  ^FortiOS\s+x86-64:\s+${FORTIOS_X86_64}
+  ^System\s+time:\s+${SYSTEM_TIME} -> Record
+  ^\s*$$
+  ^. -> Error
+

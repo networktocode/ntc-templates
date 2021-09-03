@@ -1,0 +1,21 @@
+Value MEMORY_TOTAL (\d+)
+Value MEMORY_USED (\d+)
+Value MEMORY_FREE (\d+)
+Value List PROCESS_ID (\d+)
+Value List PROCESS_ALLOCATED (\d+)
+Value List PROCESS_FREED (\d+)
+Value List PROCESS_HOLDING (\d+)
+Value List PROCESS (.+?)
+
+Start
+  ^Processor\s+Pool\s+Total:\s+${MEMORY_TOTAL}\s+Used:\s+${MEMORY_USED}\s+Free:\s+${MEMORY_FREE}
+  ^\s*lsmpi_io\s+Pool
+  ^\s*PID\s+TTY\s+Allocated\s+Freed\s+Holding\s+Getbufs\s+Retbufs\s+Process\s*$$ -> Process
+  ^\s*$$
+  ^. -> Error
+
+Process
+  ^\s*${PROCESS_ID}\s+\d+\s+${PROCESS_ALLOCATED}\s+${PROCESS_FREED}\s+${PROCESS_HOLDING}\s+\d+\s+\d+\s+${PROCESS}\s*$$
+  ^\s*\d+\s+Total\s*$$
+  ^\s*$$
+  ^. -> Error

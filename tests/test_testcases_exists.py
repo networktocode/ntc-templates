@@ -11,8 +11,7 @@ TEST_DIRECTORIES = os.listdir("tests")
 
 
 def extract_index_data():
-    """Used to parametrize and report each test case with the necessary data.
-    """
+    """Used to parametrize and report each test case with the necessary data."""
     index = sorted(load_index_data())
     mock_directories = []
     for row in index:
@@ -25,7 +24,7 @@ def extract_index_data():
         # so need to loop through each platform looking to find a match
         # in order to accurately derive platform name
         for directory in TEST_DIRECTORIES:
-            if re.match(platform, directory):
+            if re.match(rf"{platform}", directory):
                 platform = directory
                 break
         cut = len(platform) + 1
@@ -36,8 +35,7 @@ def extract_index_data():
 
 @pytest.mark.parametrize("mock_directory", extract_index_data())
 def test_verify_parsed_and_reference_data_exists(mock_directory):
-    """Verify that at least one test exists for all entries in the index file.
-    """
+    """Verify that at least one test exists for all entries in the index file."""
     cases = f"{mock_directory}/*.raw"
     test_list = glob.glob(cases)
     assert len(test_list) != 0, f"Could not find tests for {mock_directory}.textfsm"

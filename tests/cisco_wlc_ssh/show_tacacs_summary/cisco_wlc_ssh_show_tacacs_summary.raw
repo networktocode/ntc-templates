@@ -1,0 +1,26 @@
+
+Fallback Test:
+    Interval (in seconds)........................ 0
+Authentication Servers
+
+Idx      Server Address        Port    State   Tout   MgmtTout
+---  ----------------------   ------  -------  -----  --------
+1    10.255.255.24                  49      Enabled  5      5         
+2    10.255.255.25                  49      Enabled  5      5         
+3    10.255.255.124                 49      Enabled  5      5         
+
+Authorization Servers
+
+Idx      Server Address        Port    State   Tout   MgmtTout
+---  ----------------------   ------  -------  -----  --------
+1    10.255.255.26              49      Enabled  5      5         
+2    10.255.255.27              49      Enabled  5      5         
+3    10.255.255.126             49      Enabled  5      5         
+
+Accounting Servers
+
+Idx      Server Address        Port    State   Tout   MgmtTout
+---  ----------------------   ------  -------  -----  --------
+1    10.255.255.28              49      Enabled  5      5       
+2    10.255.255.29              49      Enabled  5      5       
+3    10.255.255.128             49      Enabled  5      5       

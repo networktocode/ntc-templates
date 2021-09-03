@@ -1,0 +1,63 @@
+Name: Te5/0/1
+Switchport: Enabled
+Administrative Mode: trunk
+Operational Mode: trunk
+Administrative Trunking Encapsulation: dot1q
+Operational Trunking Encapsulation: dot1q
+Negotiation of Trunking: Off
+Access Mode VLAN: 1 (default)
+Trunking Native Mode VLAN: 1 (default)
+Administrative Native VLAN tagging: disabled
+Voice VLAN: none
+Administrative private-vlan host-association: none 
+Administrative private-vlan mapping: none 
+Administrative private-vlan trunk native VLAN: none
+Administrative private-vlan trunk Native VLAN tagging: enabled
+Administrative private-vlan trunk encapsulation: dot1q
+Administrative private-vlan trunk normal VLANs: none
+Administrative private-vlan trunk associations: none
+Administrative private-vlan trunk mappings: none
+Operational private-vlan: none
+Trunking VLANs Enabled: 1,12,15,31-36,40-42,80,85,101,201,240,410,420,602,604,
+     900,910,920,930,940
+Pruning VLANs Enabled: 2-1001
+Capture Mode Disabled
+Capture VLANs Allowed: ALL
+
+Protected: false
+Unknown unicast blocked: disabled
+Unknown multicast blocked: disabled
+Vepa Enabled: false
+Appliance trust: none
+
+Name: Te5/0/2
+Switchport: Enabled
+Administrative Mode: trunk
+Operational Mode: trunk
+Administrative Trunking Encapsulation: dot1q
+Operational Trunking Encapsulation: dot1q
+Negotiation of Trunking: Off
+Access Mode VLAN: 1 (default)
+Trunking Native Mode VLAN: 1 (default)
+Administrative Native VLAN tagging: disabled
+Voice VLAN: none
+Administrative private-vlan host-association: none 
+Administrative private-vlan mapping: none 
+Administrative private-vlan trunk native VLAN: none
+Administrative private-vlan trunk Native VLAN tagging: enabled
+Administrative private-vlan trunk encapsulation: dot1q
+Administrative private-vlan trunk normal VLANs: none
+Administrative private-vlan trunk associations: none
+Administrative private-vlan trunk mappings: none
+Operational private-vlan: none
+Trunking VLANs Enabled: 1,12,15,31-36,40-42,80,85,101,201,240,410,420,602,604,
+     900,910,920,930,940
+Pruning VLANs Enabled: 2-1001
+Capture Mode Disabled
+Capture VLANs Allowed: ALL
+
+Protected: false
+Unknown unicast blocked: disabled
+Unknown multicast blocked: disabled
+Vepa Enabled: false
+Appliance trust: none

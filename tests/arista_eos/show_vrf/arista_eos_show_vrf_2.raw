@@ -1,0 +1,8 @@
+Maximum number of vrfs allowed: 4095
+  Vrf       RD           Protocols      State             Interfaces            
+--------- ------------ -------------- ------------------- --------------------- 
+  red       100:100      ipv4,ipv6      v4:routing,       Ethernet3, Ethernet4, 
+                                        v6:no routing     Ethernet5, Ethernet6, 
+                                                          Ethernet7             
+  blue      1:1          ipv4,ipv6      v4:no routing,    Management1           
+                                        v6:no routing                           

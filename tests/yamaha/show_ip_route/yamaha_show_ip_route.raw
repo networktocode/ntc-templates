@@ -1,0 +1,11 @@
+Destination         Gateway          Interface       Kind  Additional Info.
+default             -                    PP[01]    static  
+10.0.0.0/8          192.168.1.254          LAN2    static  k(1)
+10.0.0.0/8          192.168.1.253          LAN2    static  w(0)
+10.1.0.0/24         192.168.1.253          LAN2      OSPF     cost=2 
+10.2.0.0/24         192.168.1.252          LAN2      OSPF     cost=2 
+203.0.113.2/32      -                    PP[01]  implicit  
+169.254.1.1/30      -                 TUNNEL[1]  implicit  
+192.168.1.0/24      192.168.1.8            LAN2  implicit  
+192.168.100.0/24    192.168.100.1          LAN1  implicit  
+203.0.113.1/32       -                    PP[01] temporary 

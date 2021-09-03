@@ -1,0 +1,17 @@
+Value PORT (\S+)
+Value STATUS (up|down|deleted|admin\s+down)
+Value PROTOCOL (up|down)
+Value DESCRIP (\S.*?)
+
+Start
+  ^Interface\s+Status\s+Protocol\s+Description\s*$$ -> Begin
+  ^\s*$$
+  # Capture time-stamp if vty line has command time-stamping turned on
+  ^Load\s+for\s+
+  ^Time\s+source\s+is
+  ^. -> Error
+
+Begin
+  ^${PORT}\s+${STATUS}\s+${PROTOCOL}(?:\s+${DESCRIP})?\s*$$ -> Record
+  ^\s*$$
+  ^. -> Error

@@ -1,0 +1,74 @@
+IPv4 CEF is enabled and running
+VRF Default
+ 842 prefixes (842/0 fwd/non-fwd)
+ Table id 0x0
+ Database epoch:        0 (842 entries at this epoch)
+
+0.0.0.0/0, epoch 0
+  NetFlow: Origin AS 0, Peer AS 0, Mask Bits 0
+  nexthop 172.17.40.1 Tunnel0
+0.0.0.0/8, epoch 0
+  NetFlow: Origin AS 0, Peer AS 0, Mask Bits 0
+  Special source: drop
+  drop
+0.0.0.0/32, epoch 0, flags receive
+  NetFlow: Origin AS 0, Peer AS 0, Mask Bits 0
+  Special source: receive
+  receive
+10.0.0.0/16, epoch 0
+  NetFlow: Origin AS 0, Peer AS 0, Mask Bits 16
+  nexthop 172.17.40.1 Tunnel0
+10.191.64.0/24, epoch 0, flags attached, connected, cover dependents, need deagg
+  NetFlow: Origin AS 0, Peer AS 0, Mask Bits 24
+  Interest List:
+    - ipv4fib connected receive
+  Covered dependent prefixes: 18
+    need deagg: 2
+    notify cover updated: 16
+  attached to GigabitEthernet0/0
+10.191.64.0/32, epoch 0, flags receive
+  NetFlow: Origin AS 0, Peer AS 0, Mask Bits 24
+  Interface source: GigabitEthernet0/0
+  Dependent covered prefix type cover need deagg, cover 10.191.64.0/24
+  receive for GigabitEthernet0/0
+10.191.64.1/32, epoch 0, flags receive, source eligible
+  NetFlow: Origin AS 0, Peer AS 0, Mask Bits 24
+  Interface source: GigabitEthernet0/0
+  receive for GigabitEthernet0/0
+10.191.64.2/32, epoch 0, flags attached
+  NetFlow: Origin AS 0, Peer AS 0, Mask Bits 24
+  Adj source: IP adj out of GigabitEthernet0/0, addr 10.191.64.2 4A8EF620
+   Dependent covered prefix type adjfib, cover 10.191.64.0/24
+  attached to GigabitEthernet0/0
+172.17.40.0/24, epoch 0, flags attached, connected, cover dependents, need deagg
+  NetFlow: Origin AS 0, Peer AS 0, Mask Bits 24
+  Interest List:
+    - ipv4fib connected receive
+  Covered dependent prefixes: 2
+    need deagg: 2
+  attached to Tunnel0
+172.17.40.0/32, epoch 0, flags receive
+  NetFlow: Origin AS 0, Peer AS 0, Mask Bits 24
+  Interface source: Tunnel0
+  Dependent covered prefix type cover need deagg, cover 172.17.40.0/24
+  receive for Tunnel0
+172.17.40.158/32, epoch 0, flags receive, source eligible
+  NetFlow: Origin AS 0, Peer AS 0, Mask Bits 24
+  Interface source: Tunnel0
+  receive for Tunnel0
+224.0.0.0/4, epoch 0
+  NetFlow: Origin AS 0, Peer AS 0, Mask Bits 0
+  Special source: drop
+  drop
+224.0.0.0/24, epoch 0, flags receive
+  NetFlow: Origin AS 0, Peer AS 0, Mask Bits 0
+  Special source: receive
+  receive
+240.0.0.0/4, epoch 0
+  NetFlow: Origin AS 0, Peer AS 0, Mask Bits 0
+  Special source: drop
+  drop
+255.255.255.255/32, epoch 0, flags receive
+  NetFlow: Origin AS 0, Peer AS 0, Mask Bits 0
+  Special source: receive
+  receive

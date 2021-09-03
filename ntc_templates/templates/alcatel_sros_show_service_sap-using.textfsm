@@ -1,0 +1,27 @@
+Value Required PORT_ID (\S+)
+Value Required SERVICE_ID (\d+)
+Value Required INGRESS_QOS (\d+)
+Value Required INGRESS_FILTER (\S+)
+Value Required EGRESS_QOS (\d+)
+Value Required EGRESS_FILTER (\S+)
+Value Required ADMIN_STATE (Up|Down)
+Value Required OPER_STATE (Up|Down)
+
+Start
+  ^=+
+  ^Service\s+Access\s+Points
+  ^PortId\s+SvcId\s+Ing.\s+Ing.\s+Egr.\s+Egr.\s+Adm\s+Opr\s*$$ -> SAPS
+  ^\s*$$
+  ^. -> Error
+
+SAPS
+  ^\s+QoS\s+Fltr\s+QoS\s+Fltr        
+  ^-+
+  ^${PORT_ID}\s+${SERVICE_ID}\s+${INGRESS_QOS}\s+${INGRESS_FILTER}\s+${EGRESS_QOS}\s+${EGRESS_FILTER}\s+${ADMIN_STATE}\s+${OPER_STATE} -> Record
+  ^-+ -> Done
+  ^=+
+  ^Number\s+of
+  ^\s*$$
+  ^. -> Error
+
+Done

@@ -1,0 +1,26 @@
+---
+parsed_sample:
+  - vrf: "default"
+    protocol: "O E1"
+    network: "0.0.0.0"
+    mask: "0"
+    distance: "110"
+    metric: "21"
+    direct: ""
+    next_hop:
+      - "172.83.43.48"
+      - "172.83.43.50"
+    interface:
+      - "Vlan55"
+      - "Vlan65"
+  - vrf: "default"
+    protocol: "S"
+    network: "10.1.26.0"
+    mask: "24"
+    distance: "1"
+    metric: "0"
+    direct: ""
+    next_hop:
+      - "142.54.229.92"
+    interface:
+      - "Vlan2503"

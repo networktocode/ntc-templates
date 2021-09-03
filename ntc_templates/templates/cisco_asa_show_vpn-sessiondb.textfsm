@@ -1,0 +1,44 @@
+Value List VPN_SESSION_NAME (\S+?\s?\S+)
+Value List VPN_SESSION_ACTIVE (\d+)
+Value List VPN_SESSION_CUMULATIVE (\d+)
+Value List VPN_SESSION_PEAK_CONCURRENT (\d+)
+Value List VPN_SESSION_INACTIVE (\d+)
+#
+Value TOTAL_ACTIVE_AND_INACTIVE (\d+)
+Value TOTAL_CUMULATIVE (\d+)
+Value DEVICE_TOTAL_VPN_CAPACITY (\d+)
+Value DEVICE_LOAD_PERCENT (\d+)
+#
+Value List TUNNELS_SUMMARY_NAME (\S+?\s?\S+)
+Value List TUNNELS_SUMMARY_ACTIVE (\d+)
+Value List TUNNELS_SUMMARY_CUMULATIVE (\d+)
+Value List TUNNELS_SUMMARY_PEAK_CONCURRENT (\d+)
+#
+Value TOTALS_ACTIVE (\d+)
+Value TOTALS_CUMULATIVE (\d+)
+
+Start
+  ^.+#\s+show\s+vpn-sessiondb\s*$$
+  ^\s*\-+\s*$$
+  ^\s*VPN\s+Session\s+Summary\s*$$ -> VPN_Session_Summary
+
+VPN_Session_Summary
+  ^\s*\-+\s*$$
+  ^\s*Active\s+:\s+Cumulative\s+:\s+Peak\s+Concur\s+:\s+Inactive\s*$$
+  ^\s*${VPN_SESSION_NAME}\s+:\s+${VPN_SESSION_ACTIVE}\s+:\s+${VPN_SESSION_CUMULATIVE}\s+:\s+${VPN_SESSION_PEAK_CONCURRENT}\s*(:\s+${VPN_SESSION_INACTIVE}\s*)?$$
+  ^\s*Total\s+Active\s+and\s+Inactive\s+:\s+${TOTAL_ACTIVE_AND_INACTIVE}\s+Total\s+Cumulative\s+:\s+${TOTAL_CUMULATIVE}\s*$$
+  ^\s*Device\s+Total\s+VPN\s+Capacity\s+:\s+${DEVICE_TOTAL_VPN_CAPACITY}
+  ^\s*Device\s+Load\s+:\s+${DEVICE_LOAD_PERCENT}%\s*$$
+  #
+  ^\s*Tunnels\s+Summary\s* -> Tunnels_Summary
+  #
+  ^\s*$$
+  ^. -> Error
+
+Tunnels_Summary
+  ^\s*\-+\s*$$
+  ^\s*Active\s+:\s+Cumulative\s+:\s+Peak\s+Concurrent\s*$$
+  ^\s*${TUNNELS_SUMMARY_NAME}\s+:\s+${TUNNELS_SUMMARY_ACTIVE}\s+:\s+${TUNNELS_SUMMARY_CUMULATIVE}\s+:\s+${TUNNELS_SUMMARY_PEAK_CONCURRENT}\s*$$
+  ^\s*Totals\s+:\s+${TOTALS_ACTIVE}\s+:\s+${TOTALS_CUMULATIVE}\s*$$ -> Record
+  ^\s*$$
+  ^. -> Error

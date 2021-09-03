@@ -1,0 +1,237 @@
+---
+parsed_sample:
+  - iface: "1/1/34"
+    iface_type: "SFP+SR"
+    channel: []
+    temperature: "23.60C"
+    temp_high_alarm_trig: "Off"
+    temp_low_alarm_trig: "Off"
+    temp_high_warn_trig: "Off"
+    temp_low_warn_trig: "Off"
+    temp_high_alarm_threshold: "75.00C"
+    temp_low_alarm_threshold: "-5.00C"
+    temp_high_warn_threshold: "70.00C"
+    temp_low_warn_threshold: "0.00C"
+    voltage: "3.25V"
+    volt_high_alarm_trig: "Off"
+    volt_low_alarm_trig: "Off"
+    volt_high_warn_trig: "Off"
+    volt_low_warn_trig: "Off"
+    volt_high_alarm_threshold: "3.60V"
+    volt_low_alarm_threshold: "3.00V"
+    volt_high_warn_threshold: "3.50V"
+    volt_low_warn_threshold: "3.10V"
+    tx_bias:
+      - "5.64mA"
+    tx_bias_high_alarm_trig:
+      - "Off"
+    tx_bias_low_alarm_trig:
+      - "Off"
+    tx_bias_high_warn_trig:
+      - "Off"
+    tx_bias_low_warn_trig:
+      - "Off"
+    tx_bias_high_alarm_threshold:
+      - "12.00mA"
+    tx_bias_low_alarm_threshold:
+      - "1.00mA"
+    tx_bias_high_warn_threshold:
+      - "10.50mA"
+    tx_bias_low_warn_threshold:
+      - "2.50mA"
+    rx_mw:
+      - "0.54mW"
+    rx_high_alarm_trig:
+      - "Off"
+    rx_low_alarm_trig:
+      - "Off"
+    rx_high_warn_trig:
+      - "Off"
+    rx_low_warn_trig:
+      - "Off"
+    rx_high_alarm_threshold:
+      - "1.00mW"
+    rx_low_alarm_threshold:
+      - "0.05mW"
+    rx_high_warn_threshold:
+      - "0.79mW"
+    rx_low_warn_threshold:
+      - "0.10mW"
+    tx_mw:
+      - "0.59mW"
+    tx_high_alarm_trig:
+      - "Off"
+    tx_low_alarm_trig:
+      - "Off"
+    tx_high_warn_trig:
+      - "Off"
+    tx_low_warn_trig:
+      - "Off"
+    tx_high_alarm_threshold:
+      - "1.00mW"
+    tx_low_alarm_threshold:
+      - "0.15mW"
+    tx_high_warn_threshold:
+      - "0.79mW"
+    tx_low_warn_threshold:
+      - "0.19mW"
+  - iface: "1/1/56"
+    iface_type: "QSFP+LR4"
+    channel:
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+    temperature: "28.00C"
+    temp_high_alarm_trig: "Off"
+    temp_low_alarm_trig: "Off"
+    temp_high_warn_trig: "Off"
+    temp_low_warn_trig: "Off"
+    temp_high_alarm_threshold: "78.00C"
+    temp_low_alarm_threshold: "-5.00C"
+    temp_high_warn_threshold: "75.00C"
+    temp_low_warn_threshold: "0.00C"
+    voltage: "3.25V"
+    volt_high_alarm_trig: ""
+    volt_low_alarm_trig: ""
+    volt_high_warn_trig: ""
+    volt_low_warn_trig: ""
+    volt_high_alarm_threshold: "3.63V"
+    volt_low_alarm_threshold: "2.97V"
+    volt_high_warn_threshold: "3.46V"
+    volt_low_warn_threshold: "3.10V"
+    tx_bias:
+      - "33.10mA"
+      - "34.44mA"
+      - "36.21mA"
+      - "34.26mA"
+    tx_bias_high_alarm_trig:
+      - "Off"
+      - "Off"
+      - "Off"
+      - "Off"
+    tx_bias_low_alarm_trig:
+      - "Off"
+      - "Off"
+      - "Off"
+      - "Off"
+    tx_bias_high_warn_trig:
+      - "Off"
+      - "Off"
+      - "Off"
+      - "Off"
+    tx_bias_low_warn_trig:
+      - "Off"
+      - "Off"
+      - "Off"
+      - "Off"
+    tx_bias_high_alarm_threshold:
+      - "105.00mA"
+      - "105.00mA"
+      - "105.00mA"
+      - "105.00mA"
+    tx_bias_low_alarm_threshold:
+      - "8.00mA"
+      - "8.00mA"
+      - "8.00mA"
+      - "8.00mA"
+    tx_bias_high_warn_threshold:
+      - "105.00mA"
+      - "105.00mA"
+      - "105.00mA"
+      - "105.00mA"
+    tx_bias_low_warn_threshold:
+      - "10.00mA"
+      - "10.00mA"
+      - "10.00mA"
+      - "10.00mA"
+    rx_mw:
+      - "0.48mW"
+      - "0.55mW"
+      - "0.52mW"
+      - "0.40mW"
+    rx_high_alarm_trig:
+      - "Off"
+      - "Off"
+      - "Off"
+      - "Off"
+    rx_low_alarm_trig:
+      - "Off"
+      - "Off"
+      - "Off"
+      - "Off"
+    rx_high_warn_trig:
+      - "Off"
+      - "Off"
+      - "Off"
+      - "Off"
+    rx_low_warn_trig:
+      - "Off"
+      - "Off"
+      - "Off"
+      - "Off"
+    rx_high_alarm_threshold:
+      - "2.14mW"
+      - "2.14mW"
+      - "2.14mW"
+      - "2.14mW"
+    rx_low_alarm_threshold:
+      - "0.02mW"
+      - "0.02mW"
+      - "0.02mW"
+      - "0.02mW"
+    rx_high_warn_threshold:
+      - "1.70mW"
+      - "1.70mW"
+      - "1.70mW"
+      - "1.70mW"
+    rx_low_warn_threshold:
+      - "0.04mW"
+      - "0.04mW"
+      - "0.04mW"
+      - "0.04mW"
+    tx_mw:
+      - "1.26mW"
+      - "1.21mW"
+      - "1.18mW"
+      - "1.24mW"
+    tx_high_alarm_trig:
+      - "Off"
+      - "Off"
+      - "Off"
+      - "Off"
+    tx_low_alarm_trig:
+      - "Off"
+      - "Off"
+      - "Off"
+      - "Off"
+    tx_high_warn_trig:
+      - "Off"
+      - "Off"
+      - "Off"
+      - "Off"
+    tx_low_warn_trig:
+      - "Off"
+      - "Off"
+      - "Off"
+      - "Off"
+    tx_high_alarm_threshold:
+      - "0.00mW"
+      - "0.00mW"
+      - "0.00mW"
+      - "0.00mW"
+    tx_low_alarm_threshold:
+      - "0.00mW"
+      - "0.00mW"
+      - "0.00mW"
+      - "0.00mW"
+    tx_high_warn_threshold:
+      - "0.00mW"
+      - "0.00mW"
+      - "0.00mW"
+      - "0.00mW"
+    tx_low_warn_threshold:
+      - "0.00mW"
+      - "0.00mW"
+      - "0.00mW"
+      - "0.00mW"

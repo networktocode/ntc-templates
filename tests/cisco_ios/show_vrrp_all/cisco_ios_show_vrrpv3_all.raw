@@ -1,0 +1,80 @@
+
+GigabitEthernet0/0 - Group 1 - Address-Family IPv4
+  State is MASTER
+  State duration 37 mins 23.080 secs
+  Virtual IP address is 10.0.1.1
+  Virtual MAC address is 0000.5E00.0101
+  Advertisement interval is 1000 msec
+  Preemption enabled
+  Priority is 110
+    Track object 1 state UP decrement 10
+  Master Router is 10.0.1.2 (local), priority is 110
+  Master Advertisement interval is 1000 msec (expires in 32 msec)
+  Master Down interval is unknown
+
+GigabitEthernet0/0 - Group 6 - Address-Family IPv6
+  State is MASTER
+  State duration 37 mins 22.120 secs
+  Virtual IP address is FE80::1:1
+  Virtual MAC address is 0000.5E00.0206
+  Advertisement interval is 1000 msec
+  Preemption enabled
+  Priority is 110
+    Track object 1 state UP shutdown
+  Master Router is FE80::1:A (local), priority is 110
+  Master Advertisement interval is 1000 msec (expires in 260 msec)
+  Master Down interval is unknown
+
+
+GigabitEthernet0/0.4010 - Group 1 - Address-Family IPv4
+  State is BACKUP
+  State duration 37 mins 14.859 secs
+  Virtual IP address is 10.254.1.1
+  Virtual MAC address is 0000.5E00.0101
+  Advertisement interval is 1000 msec
+  Preemption enabled
+  Priority is 110
+  Master Router is 10.254.1.3, priority is 120
+  Master Advertisement interval is 1000 msec (learned)
+  Master Down interval is 3570 msec (expires in 3194 msec)
+
+GigabitEthernet0/0.4010 - Group 6 - Address-Family IPv6
+  State is BACKUP
+  State duration 37 mins 13.888 secs
+  Virtual IP address is FE80::4010:1
+  Virtual MAC address is 0000.5E00.0206
+  Advertisement interval is 1000 msec
+  Preemption enabled
+  Priority is 110
+  Master Router is FE80::4010:3, priority is 120
+  Master Advertisement interval is 1000 msec (learned)
+  Master Down interval is 3570 msec (expires in 3420 msec)
+
+
+GigabitEthernet0/0.2600 - Group 1 - Address-Family IPv4
+  State is BACKUP
+  State duration 2 mins 48.646 secs
+  Virtual IP address is 172.26.0.1
+  Virtual MAC address is 0000.5E00.0101
+  Advertisement interval is 1000 msec
+  Preemption enabled
+  Priority is 90 (Configured 110)
+    Track object 2 state DOWN decrement 20
+  Master Router is 172.26.0.3, priority is 100
+  Master Advertisement interval is 1000 msec (learned)
+  Master Down interval is 3648 msec (expires in 3427 msec)
+
+GigabitEthernet0/0.2600 - Group 6 - Address-Family IPv6
+  State is INIT (Group is shutdown - Tracked object down)
+  State duration 8 mins 57.183 secs
+  Virtual IP address is FE80::2600:1
+  Virtual MAC address is 0000.5E00.0206
+  Advertisement interval is 1000 msec
+  Preemption enabled
+  Priority is 110
+    Track object 2 state DOWN shutdown
+  Master Router is unknown, priority is unknown
+  Master Advertisement interval is unknown
+  Master Down interval is unknown
+
+

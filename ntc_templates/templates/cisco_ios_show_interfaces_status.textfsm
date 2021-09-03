@@ -1,0 +1,27 @@
+Value PORT (\S+)
+Value NAME (.+?)
+Value STATUS (err-disabled|disabled|connected|notconnect|inactive|up|down|monitoring)
+Value VLAN (\S+)
+Value DUPLEX (\S+)
+Value SPEED (\S+)
+Value TYPE (.*)
+Value FC_MODE (\S+)
+
+Start
+  ^Load\s+for\s+
+  # Capture time-stamp if vty line has command time-stamping turned on
+  ^Time\s+source\s+is
+  ^-+\s*$$
+  ^Port\s+Name\s+Status\s+Vlan\s+Duplex\s+Speed\s+Type -> Interfaces
+  ^\s*$$
+  ^. -> Error
+
+Interfaces
+  #Match fc...
+  ^\s*${PORT}\s+is\s+${STATUS}\s+Port\s+mode\s+is\s+${FC_MODE}\s*$$ -> Record
+  ^\s*${PORT}\s+is\s+${STATUS}\s+\(${TYPE}\)\s*$$ -> Record
+  ^\s*${PORT}\s+${STATUS}\s+${VLAN}\s+${DUPLEX}\s+${SPEED}\s*${TYPE}$$ -> Record
+  ^\s*${PORT}\s+${NAME}\s+${STATUS}\s+${VLAN}\s+${DUPLEX}\s+${SPEED}\s*${TYPE}$$ -> Record
+  ^-+
+  ^\s*$$
+  ^. -> Error

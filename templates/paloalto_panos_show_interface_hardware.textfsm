@@ -1,8 +1,0 @@
-Value INTF (\S+)
-Value SPEED (\d+|\[n\/a\])
-Value DUPLEX (\S+)
-Value STATE (\S+)
-
-Start
-  #^${INTF}\s+\d+\s+[n/a]/[n/a]/${STATE}\s+\S+ -> Record
-  ^${INTF}\s+\d+\s+${SPEED}/${DUPLEX}/${STATE}\s+\S+ -> Record

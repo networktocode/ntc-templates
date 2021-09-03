@@ -1,0 +1,18 @@
+Value Required INTERFACE (\S+)
+Value Required IPADDRESS (\S+)
+Value Required VRF (\S+)
+Value Required PROTO_STATE (\S+)
+
+# This command returns a list of interfaces which are assigned to
+# non-default VRF, including IP address (if available), VRF name,
+# interface name and protocol status
+
+Start
+  ^Interface\s+IP-Address\s+VRF\s+Protocol -> Entries
+  ^\s*$$
+  ^. -> Error
+
+Entries
+  ^${INTERFACE}\s+${IPADDRESS}\s+${VRF}\s+${PROTO_STATE} -> Record
+  ^\s*$$
+  ^. -> Error
