@@ -6,5 +6,6 @@ Start
   ^Port.*TTL -> LLDP
 
 LLDP
+  ^-+ -> NoRecord
   ^${LOCAL_INTERFACE}\s+${NEIGHBOR}\s+${NEIGHBOR_INTERFACE}\s+.* -> Record
 
