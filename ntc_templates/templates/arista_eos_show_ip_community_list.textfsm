@@ -7,3 +7,4 @@ Value COMMUNITY_TAG (\S+)
 Start
   ^${HOSTNAME}[>#].*
   ^ip\s+community-list\s+${TYPE}\s+${NAME}\s+${ACTION}\s+${COMMUNITY_TAG}$$ -> Record
+  ^. -> Error
