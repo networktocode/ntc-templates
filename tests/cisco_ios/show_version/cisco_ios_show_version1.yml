@@ -4,6 +4,11 @@ parsed_sample:
     rommon: "IOS-XE"
     hostname: "city-building-4-sw"
     uptime: "28 weeks, 1 day, 7 hours, 54 minutes"
+    uptime_days: "1"
+    uptime_hours: "7"
+    uptime_minutes: "54"
+    uptime_weeks: "28"
+    uptime_years: ""
     reload_reason: "Reload Command"
     running_image: "packages.conf"
     hardware:
@@ -22,3 +27,4 @@ parsed_sample:
       - "f8:7b:20:22:bb:80"
       - "f8:b7:e2:33:cc:00"
       - "f8:b7:e2:44:dd:00"
+    restarted: "05:00:08 AEDT Wed Nov 22 2017"
