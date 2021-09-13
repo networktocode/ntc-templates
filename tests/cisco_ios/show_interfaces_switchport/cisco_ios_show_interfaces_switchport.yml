@@ -66,3 +66,14 @@ parsed_sample:
     voice_vlan: "none"
     trunking_vlans:
       - "ALL"
+  - interface: "Gi1/0/1"
+    switchport: "Enabled"
+    switchport_monitor: ""
+    switchport_negotiation: "Off"
+    mode: "static access"
+    admin_mode: "static access"
+    access_vlan: "1"
+    native_vlan: "1"
+    voice_vlan: "none"
+    trunking_vlans:
+      - "ALL"
