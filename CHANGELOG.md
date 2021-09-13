@@ -1,5 +1,15 @@
 # Changelog
 
+## [2.3.2](https://github.com/networktocode/ntc-templates/tree/2.3.2) (2021-09-13)
+
+[Full Changelog](https://github.com/networktocode/ntc-templates/compare/v2.3.1...2.3.2)
+
+**Bugfixes**
+
+- cisco\_ios\_show\_ip\_bgp\_summary Account for dotted ASN notation [\#987](https://github.com/networktocode/ntc-templates/pull/987) ([thomasbridge74](https://github.com/thomasbridge74))
+- cisco\_nxos\_show\_interface\_status Account for blank type [\#980](https://github.com/networktocode/ntc-templates/pull/980) ([Kani999](https://github.com/Kani999))
+- cisco\_ios\_show\_interfaces Account for `App Interface` [\#968](https://github.com/networktocode/ntc-templates/pull/968) ([a-finocchiaro](https://github.com/a-finocchiaro))
+
 ## [2.3.1](https://github.com/networktocode/ntc-templates/tree/2.3.1) (2021-08-30)
 
 [Full Changelog](https://github.com/networktocode/ntc-templates/compare/v2.3.0...2.3.1)
