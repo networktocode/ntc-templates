@@ -141,6 +141,7 @@ checkpoint_gaia_show_dns.textfsm, .*, checkpoint_gaia, show dns
 checkpoint_gaia_show_lom.textfsm, .*, checkpoint_gaia, show lom
 checkpoint_gaia_fw_stat.textfsm, .*, checkpoint_gaia, fw stat
 
+ciena_saos_traffic-profiling_standard-profile_show.textfsm, .*, ciena_saos, traffic-p[[rofiling]] st[[andard-profile]] sh[[ow]]
 ciena_saos_chassis_show_temperature.textfsm, .*, ciena_saos, ch[[assis]] sh[[ow]] te[[mperature]]
 ciena_saos_ssh_server_show_key.textfsm, .*, ciena_saos, ssh se[[rver]] sh[[ow]] k[[ey]]
 ciena_saos_software_show.textfsm, .*, ciena_saos, so[[ftware]] sh[[ow]]
@@ -284,6 +285,7 @@ cisco_nxos_show_ip_dhcp_relay_address.textfsm, .*, cisco_nxos, sh[[ow]] ip dh[[c
 cisco_nxos_show_lldp_neighbors_detail.textfsm, .*, cisco_nxos, sh[[ow]] ll[[dp]] nei[[ghbors]] d[[etail]]
 cisco_nxos_show_cdp_neighbors_detail.textfsm, .*, cisco_nxos, sh[[ow]] c[[dp]] neig[[hbors]] det[[ail]]
 cisco_nxos_show_forwarding_adjacency.textfsm, .*, cisco_nxos, sh[[ow]] fo[[rwarding]] (?:ipv4 )?ad[[jacency]]
+cisco_nxos_show_ip_interface_vrf_all.textfsm, .*, cisco_nxos, sh[[ow]] ip interf[[ace]] v[[rf]] a[[ll]]
 cisco_nxos_show_ipv6_interface_brief.textfsm, .*, cisco_nxos, sh[[ow]] ipv[[6]] interf[[ace]] b[[rief]]
 cisco_nxos_show_port-channel_summary.textfsm, .*, cisco_nxos, sh[[ow]] po[[rt-channel]] sum[[mary]]
 cisco_nxos_show_cts_interface_brief.textfsm, .*, cisco_nxos, sh[[ow]] cts inte[[rface]] br[[ief]]
@@ -455,6 +457,7 @@ juniper_junos_show_arp_no-resolve.textfsm, .*, juniper_junos, sh[[ow]] a[[rp]] n
 juniper_junos_show_isis_adjacency.textfsm, .*, juniper_junos, sh[[ow]] is[[is]] ad[[jacency]]
 juniper_junos_show_lldp_neighbors.textfsm, .*, juniper_junos, sh[[ow]] ll[[dp]] n[[eighbors]]
 juniper_junos_show_ospf_neighbor.textfsm, .*, juniper_junos, sh[[ow]] ospf n[[eighbor]]
+juniper_junos_show_system_uptime.textfsm, .*, juniper_junos, sh[[ow]] sys[[tem]] up[[time]]
 juniper_junos_show_interfaces.textfsm, .*, juniper_junos, sh[[ow]] inte[[rfaces]]
 juniper_junos_show_version.textfsm, .*, juniper_junos, sh[[ow]] ver[[sion]]
 
