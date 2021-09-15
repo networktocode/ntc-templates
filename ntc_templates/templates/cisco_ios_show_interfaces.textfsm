@@ -19,6 +19,8 @@ Value LAST_OUTPUT_HANG (.+?)
 Value QUEUE_STRATEGY (.+)
 Value INPUT_RATE (\d+)
 Value OUTPUT_RATE (\d+)
+Value INPUT_PPS (\d+)
+Value OUTPUT_PPS (\d+)
 Value INPUT_PACKETS (\d+)
 Value OUTPUT_PACKETS (\d+)
 Value INPUT_ERRORS (\d+)
@@ -38,8 +40,8 @@ Start
   ^\s+Last\s+input\s+${LAST_INPUT},\s+output\s+${LAST_OUTPUT},\s+output\s+hang\s+${LAST_OUTPUT_HANG}\s*$$
   ^\s+Queueing\s+strategy:\s+${QUEUE_STRATEGY}\s*$$
   ^\s+${DUPLEX},\s+${SPEED},.+media\stype\sis\s${MEDIA_TYPE}$$
-  ^.*input\s+rate\s+${INPUT_RATE}.+$$
-  ^.*output\s+rate\s+${OUTPUT_RATE}.+$$
+  ^.*input\s+rate\s+${INPUT_RATE}\s+bits/sec,\s+${INPUT_PPS}\s+packets.+$$
+  ^.*output\s+rate\s+${OUTPUT_RATE}\s+bits/sec,\s+${OUTPUT_PPS}\s+packets.+$$
   ^\s+${INPUT_PACKETS}\s+packets\s+input,\s+\d+\s+bytes,\s+\d+\s+no\s+buffer\s*$$
   ^\s+${INPUT_ERRORS}\s+input\s+errors,\s+${CRC}\s+CRC,\s+\d+\s+frame,\s+\d+\s+overrun,\s+\d+\s+ignored\s*$$
   ^\s+${INPUT_ERRORS}\s+input\s+errors,\s+${CRC}\s+CRC,\s+\d+\s+frame,\s+\d+\s+overrun,\s+\d+\s+ignored,\s+${ABORT}\s+abort\s*$$
