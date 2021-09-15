@@ -1,0 +1,36 @@
+Value TIME (\d+:\d+:\d+)
+Value TIMEZONE (\S+)
+Value MONTH (\w+)
+Value DAY (\d+)
+Value YEAR (\d+)
+Value TIME_SOURCE (.*)
+Value BOOT_TIME (\d+:\d+:\d+)
+Value BOOT_TIMEZONE (\S+)
+Value BOOT_MONTH (\w+)
+Value BOOT_DAY (\d+)
+Value BOOT_YEAR (\d+)
+Value PROTOCOLS_TIME (\d+:\d+:\d+)
+Value PROTOCOLS_TIMEZONE (\S+)
+Value PROTOCOLS_MONTH (\w+)
+Value PROTOCOLS_DAY (\d+)
+Value PROTOCOLS_YEAR (\d+)
+Value LAST_CONFIG_TIME (\d+:\d+:\d+)
+Value LAST_CONFIG_TIMEZONE (\S+)
+Value LAST_CONFIG_MONTH (\w+)
+Value LAST_CONFIG_DAY (\d+)
+Value LAST_CONFIG_YEAR (\d+)
+Value LAST_CONFIG_USER (\w+)
+Value USERS (\d+)
+Value LOAD_AVERAGE_1MIN (\d+\.\d{2})
+Value LOAD_AVERAGE_5MIN (\d+\.\d{2})
+Value LOAD_AVERAGE_15MIN (\d+\.\d{2})
+
+Start
+  ^Current\s+time:\s*${YEAR}-${MONTH}-${DAY}\s+${TIME}\s+${TIMEZONE}
+  ^Time\s+[Ss]ource:\s*${TIME_SOURCE}
+  ^System\s+booted:\s*${BOOT_YEAR}-${BOOT_MONTH}-${BOOT_DAY}\s+${BOOT_TIME}\s+${BOOT_TIMEZONE}\s+\([^)]+\)
+  ^Protocols\s+started:\s*${PROTOCOLS_YEAR}-${PROTOCOLS_MONTH}-${PROTOCOLS_DAY}\s+${PROTOCOLS_TIME}\s+${PROTOCOLS_TIMEZONE}\s+\([^)]+\)
+  ^Last\s+configured:\s*${LAST_CONFIG_YEAR}-${LAST_CONFIG_MONTH}-${LAST_CONFIG_DAY}\s+${LAST_CONFIG_TIME}\s+${LAST_CONFIG_TIMEZONE}\s+\([^)]+\)\s+by\s+${LAST_CONFIG_USER}
+  ^.*,\s*${USERS}\s+users?,\s*load\s+averages:\s*${LOAD_AVERAGE_1MIN},\s*${LOAD_AVERAGE_5MIN},\s*${LOAD_AVERAGE_15MIN}
+  ^\s*$$
+  ^. -> Error
