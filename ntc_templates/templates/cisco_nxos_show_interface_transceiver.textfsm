@@ -1,0 +1,23 @@
+Value INTERFACE (\S+/\S+)
+Value MANUFACTURER (\S+)
+Value TYPE (.+)
+Value SERIAL (\S+)
+Value PART_NUMBER (\S+)
+
+Start
+  ^${INTERFACE}
+  ^\s+transceiver is not -> Clear
+  ^\s+type\s+is(\s+${TYPE})?
+  ^\s+name\s+is(\s+${MANUFACTURER})?
+  ^\s+part\s+number\s+is(\s+${PART_NUMBER})?
+  ^\s+serial\s+number\s+is(\s+${SERIAL})?
+  ^\s+transceiver\s+
+  ^\s+nominal\s+
+  ^\s+revision\s+
+  ^\s+Link\s+
+  ^\s+cisco\s+id
+  ^\s+cisco\s+extended
+  ^\s+cisco\s+part\s+number
+  ^\s+cisco\s+product\s+id
+  ^\s*$$ -> Record
+  ^. -> Error

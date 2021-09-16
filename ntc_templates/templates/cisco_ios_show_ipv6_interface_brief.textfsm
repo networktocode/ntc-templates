@@ -1,0 +1,17 @@
+Value INTF (\S+)
+Value List IPADDR (\S+)
+Value ADMIN (\S+|\S+\s\S+)
+Value PROTOCOL (\S+|\S+\s\S+)
+
+
+Start
+  ^${INTF}\s+\[${ADMIN}/${PROTOCOL}\] -> Interfaces
+  # Capture time-stamp if vty line has command time-stamping turned on
+  ^Load\s+for\s+
+  ^Time\s+source\s+is
+
+Interfaces
+  ^(\S+)\s+\[(\S+|\S+\s\S+)/(\S+|\S+\s\S+)\] -> Continue.Record
+  ^${INTF}\s+\[${ADMIN}/${PROTOCOL}\]
+  ^\s+${IPADDR}
+

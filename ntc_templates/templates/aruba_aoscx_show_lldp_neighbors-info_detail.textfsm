@@ -1,0 +1,33 @@
+Value Required LOCAL_PORT (\S+)
+Value Required CHASSIS_ID (\S+)
+Value CHASSIS_NAME (\S+)
+Value CHASSIS_DESC (.+)
+Value CAPABILITIES (.+)
+Value CAPABILITIES_ENABLED (.+)
+Value MGMT_ADDR (\S+)
+Value PORT_ID (\S+)
+Value PORT_DESC (\S+)
+
+
+Start
+  ^Port\s*:\s*${LOCAL_PORT}
+  ^Neighbor\s*Chassis-Name\s*:\s*${CHASSIS_NAME}
+  ^Neighbor\s*Chassis-Description\s*:\s*${CHASSIS_DESC}
+  ^Neighbor\s*Chassis-ID\s*:\s*${CHASSIS_ID}
+  ^Neighbor\s*Management-Address\s*:\s*${MGMT_ADDR}
+  ^Chassis\s*Capabilities\s*Available\s*:\s*${CAPABILITIES}
+  ^Chassis\s*Capabilities\s*Enabled\s*:\s*${CAPABILITIES_ENABLED}
+  ^Neighbor\s*Port-ID\s*:\s*${PORT_ID}
+  ^Neighbor\s*Port-Desc\s*:\s*${PORT_DESC} 
+  ^-+$$ -> Record
+  ^Neighbor\.*
+  ^TTL\.*
+  ^P[D|SE]\.*
+  ^Power\.*
+  ^\s+ -> Next
+  ^\S+#\.* -> Next
+  ^LLDP\.*
+  ^Total\.*
+  ^=+
+  ^. -> Error
+

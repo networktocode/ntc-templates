@@ -1,0 +1,13 @@
+---
+parsed_sample:
+  - neighbor: "20.30.255.14"
+    remote_as: "1255"
+    peer_group: "RR_SERVERS"
+    remote_router_id: "20.40.1.1"
+    bgp_state: "Established"
+    localhost_ip: "20.30.255.13"
+    localhost_port: "39443"
+    remote_ip: "20.30.255.14"
+    remote_port: "179"
+    inbound_routemap: ""
+    outbound_routemap: ""

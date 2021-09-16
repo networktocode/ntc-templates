@@ -80,12 +80,12 @@ interface: COLO
          Anti replay bitmap:
           0x00000000 0x00000001
 
-    Crypto map tag: COLO-MAP, seq num: 3, local addr: 172.20.248.119
+    Crypto map tag: COLO-MAP, seq num: 3, local addr: LOCAL-ADDR-172.20.248.119
 
       access-list 200 extended permit ip 172.20.122.32 255.255.255.240 10.160.4.0 255.255.255.0
       local ident (addr/mask/prot/port): (172.20.122.32/255.255.255.240/0/0)
       remote ident (addr/mask/prot/port): (10.160.4.0/255.255.255.0/0/0)
-      current_peer: 8.8.4.4
+      current_peer: REMOTE-PEER-8.8.4.4
 
 
       #pkts encaps: 0, #pkts encrypt: 0, #pkts digest: 0
@@ -98,7 +98,7 @@ interface: COLO
       #Valid ICMP Errors rcvd: 0, #Invalid ICMP Errors rcvd: 0
       #send errors: 0, #recv errors: 0
 
-      local crypto endpt.: 172.20.248.119/0, remote crypto endpt.: 8.8.4.4/0
+      local crypto endpt.: LOCAL-ADDR-172.20.248.119/500, remote crypto endpt.: REMOTE-PEER-8.8.4.4/500
       path mtu 1500, ipsec overhead 74(44), media mtu 1500
       PMTU time remaining (sec): 0, DF policy: copy-df
       ICMP error validation: disabled, TFC packets: disabled

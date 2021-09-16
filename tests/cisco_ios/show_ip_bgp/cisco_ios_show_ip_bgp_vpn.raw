@@ -1,0 +1,16 @@
+BGP table version is 17, local router ID is 1.1.1.1
+Status codes: s suppressed, d damped, h history, * valid, > best, i - internal,
+              r RIB-failure, S Stale, m multipath, b backup-path, f RT-Filter,
+              x best-external, a additional-path, c RIB-compressed,
+Origin codes: i - IGP, e - EGP, ? - incomplete
+RPKI validation codes: V valid, I invalid, N Not found
+
+     Network          Next Hop            Metric LocPrf Weight Path
+Route Distinguisher: 100:100 (default for vrf part)
+ *>  11.11.11.11/32   0.0.0.0                  0         32768 i
+ *>  11.11.11.12/32   0.0.0.0                  0         32768 i
+ *>  11.11.11.13/32   0.0.0.0                  0         32768 i
+ *>  11.11.11.14/32   0.0.0.0                  0         32768 i
+ *>  11.11.11.15/32   0.0.0.0                  0         32768 i
+
+Total number of prefixes 5

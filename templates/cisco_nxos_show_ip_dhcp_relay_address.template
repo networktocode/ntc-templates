@@ -1,5 +1,0 @@
-Value INTERFACE (\w+)
-Value RELAY_ADDRESS (\d+\.\d+\.\d+\.\d+)
-
-Start
-  ^\s${INTERFACE}\s+${RELAY_ADDRESS} -> Record

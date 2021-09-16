@@ -1,0 +1,18 @@
+---
+parsed_sample:
+  - matched_address: "peer1"
+    map: "Standard-1"
+    seq: "20"
+    pfs: "group5"
+    peer: "Peer-1"
+    ike: "ikev1"
+    transform: "Standard-Transform"
+    sa: "28800"
+  - matched_address: "peer2"
+    map: "Standard-1"
+    seq: "25"
+    pfs: "group2"
+    peer: "Peer-2"
+    ike: "ikev1"
+    transform: "Standard-Transform"
+    sa: "28800"

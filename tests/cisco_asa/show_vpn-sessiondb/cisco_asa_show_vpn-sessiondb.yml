@@ -1,0 +1,53 @@
+---
+parsed_sample:
+  - vpn_session_name:
+      - "AnyConnect Client"
+      - "SSL/TLS/DTLS"
+      - "Clientless VPN"
+      - "Browser"
+    vpn_session_active:
+      - "38"
+      - "38"
+      - "0"
+      - "0"
+    vpn_session_cumulative:
+      - "330351"
+      - "330351"
+      - "1040"
+      - "1040"
+    vpn_session_peak_concurrent:
+      - "442"
+      - "442"
+      - "9"
+      - "9"
+    vpn_session_inactive:
+      - "0"
+      - "0"
+      - "None"
+      - "None"
+    total_active_and_inactive: "38"
+    total_cumulative: "331391"
+    device_total_vpn_capacity: "5000"
+    device_load_percent: "1"
+    tunnels_summary_name:
+      - "Clientless"
+      - "AnyConnect-Parent"
+      - "SSL-Tunnel"
+      - "DTLS-Tunnel"
+    tunnels_summary_active:
+      - "0"
+      - "38"
+      - "38"
+      - "37"
+    tunnels_summary_cumulative:
+      - "1040"
+      - "330351"
+      - "985244"
+      - "2227003"
+    tunnels_summary_peak_concurrent:
+      - "9"
+      - "442"
+      - "392"
+      - "386"
+    totals_active: "113"
+    totals_cumulative: "3543638"

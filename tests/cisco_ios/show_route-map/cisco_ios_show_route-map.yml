@@ -1,0 +1,17 @@
+---
+parsed_sample:
+  - name: "equal"
+    action: "permit"
+    seq: "10"
+    match_clauses:
+      - "length 150 200"
+    set_clauses:
+      - "ip next-hop 10.10.11.254"
+  - name: "equal"
+    action: "permit"
+    seq: "20"
+    match_clauses:
+      - "ip address prefix-lists: PFX"
+      - "ip address (access-lists): 101"
+    set_clauses:
+      - "ip next-hop 10.10.11.14"

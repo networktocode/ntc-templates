@@ -635,5 +635,25 @@ Interface Ethernet52/3 detected 0 LLDP neighbors:
 
 Interface Ethernet52/4 detected 0 LLDP neighbors:
 
-Interface Management1 detected 0 LLDP neighbors:
+Interface Management1 detected 1 LLDP neighbors:
 
+  Neighbor 0cca.01c0.e8e1/"Management1", age 2 seconds
+  Discovered 1:11:08 ago; Last changed 1:11:08 ago
+  - Chassis ID type: MAC address (4)
+    Chassis ID     : 0cca.01c0.e8e1
+  - Port ID type: Interface name(5)
+    Port ID     : "Management1"
+  - Time To Live: 120 seconds
+  - System Name: "test-host.domain.com"
+  - System Capabilities : Bridge, Router
+    Enabled Capabilities: Bridge
+  - Management Address Subtype: IPv4 
+    Management Address        : 172.16.208.5
+    Interface Number Subtype  : ifIndex (2)
+    Interface Number          : 999001
+    OID String                : 
+  - IEEE802.1 Port VLAN ID: 0
+  - IEEE802.1/IEEE802.3 Link Aggregation
+    Link Aggregation Status: Not Capable (0x00)
+    Port ID                : 0
+  - IEEE802.3 Maximum Frame Size: 1518 bytes

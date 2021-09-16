@@ -1,9 +1,0 @@
-Value INTERFACE (\S+)
-Value AREA (\d+)
-Value IP_ADDRESS_MASK (\d+\.\d+\.\d+\.\d+/\d+)
-Value COST (\d+)
-Value STATE (\S+)
-Value NEIGHBORS_FC (\d+/\d+)
-
-Start
-  ^${INTERFACE}\s+\d+\s+${AREA}\s+${IP_ADDRESS_MASK}\s+${COST}\s+${STATE}\s+${NEIGHBORS_FC} -> Record

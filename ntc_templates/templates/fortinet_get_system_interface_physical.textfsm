@@ -1,0 +1,29 @@
+#
+# Refried Jello, Stephen Kiely
+# 2021-01-06 - Initial Version
+#
+# FG Version: 5.6, 6.0, 6.2
+# HW        : variety
+# HA        : AP
+# VDOMS     : ENABLED
+Value Required NAME (\S+)
+Value MODE (\S+)
+Value IP (\d+?\.\d+?\.\d+?\.\d+?)
+Value NETMASK (\S+)
+Value IPV6 (\S+)
+Value IPV6NETMASK (\S+)
+Value STATUS (\S+)
+Value SPEED (\d+|n\/a)
+Value DUPLEX (\S+)
+
+Start
+  ^==\s+\[onboard\]$$
+  ^\s+==\[${NAME}\]$$
+  ^\s+mode:\s+${MODE}$$
+  ^\s+ip:\s+${IP}\s+${NETMASK}$$
+  ^\s+ipv6:\s+${IPV6}/${IPV6NETMASK}$$
+  ^\s+status:\s+${STATUS}$$
+  ^\s+speed:\s+${SPEED}(|Mbps)\s+\(Duplex:\s+${DUPLEX}\)$$ -> Record
+  ^\s+speed:\s+${SPEED}$$ -> Record
+  ^\s*$$
+  ^. -> Error

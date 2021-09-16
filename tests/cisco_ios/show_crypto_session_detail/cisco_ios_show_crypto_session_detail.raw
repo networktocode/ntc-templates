@@ -1,0 +1,52 @@
+Crypto session current status
+ 
+Code: C - IKE Configuration mode, D - Dead Peer Detection    
+K - Keepalives, N - NAT-traversal, T - cTCP encapsulation    
+X - IKE Extended Authentication, F - IKE Fragmentation
+R - IKE Auto Reconnect
+ 
+Interface: Tunnel1201
+Session status: DOWN-NEGOTIATING
+Peer: 10.161.255.14 port 500 fvrf: (none) ivrf: (none)
+      Desc: (none)
+      Phase1_id: (none)
+  Session ID: 0 
+  IKEv1 SA: local 10.175.200.116/500 remote 10.161.255.14/500 Inactive
+          Capabilities:(none) connid:0 lifetime:0
+  Session ID: 0 
+  IKEv1 SA: local 10.175.200.116/500 remote 10.161.255.14/500 Inactive
+          Capabilities:(none) connid:0 lifetime:0
+  IPSEC FLOW: permit 47 host 10.175.200.116 host 10.161.255.14
+        Active SAs: 0, origin: crypto map
+        Inbound:  #pkts dec'ed 0 drop 0 life (KB/Sec) 0/0
+        Outbound: #pkts enc'ed 0 drop 0 life (KB/Sec) 0/0
+ 
+Interface: Tunnel1101
+Uptime: 7w0d
+Session status: UP-ACTIVE    
+Peer: 192.168.0.1 port 4500 fvrf: (none) ivrf: (none)
+      Phase1_id: SOME_DEVICE1234.1pc.com
+      Desc: (none)
+  Session ID: 0 
+  IKEv1 SA: local 169.0.1.1/4500 remote 192.168.0.1/4500 Active
+          Capabilities:DN connid:2913 lifetime:09:03:41
+  IPSEC FLOW: permit 47 host 169.0.1.1 host 192.168.0.1
+        Active SAs: 2, origin: crypto map
+        Inbound:  #pkts dec'ed 15344097 drop 0 life (KB/Sec) 4236992/615
+        Outbound: #pkts enc'ed 18074395 drop 0 life (KB/Sec) 4236962/615
+ 
+Interface: Tunnel2201
+Session status: DOWN-NEGOTIATING
+Peer: 10.163.255.14 port 500 fvrf: (none) ivrf: (none)
+      Desc: (none)
+      Phase1_id: (none)
+  Session ID: 0 
+  IKEv1 SA: local 10.175.200.116/500 remote 10.163.255.14/500 Inactive
+          Capabilities:(none) connid:0 lifetime:0
+  Session ID: 0 
+  IKEv1 SA: local 10.175.200.116/500 remote 10.163.255.14/500 Inactive
+          Capabilities:(none) connid:0 lifetime:0
+  IPSEC FLOW: permit 47 host 10.175.200.116 host 10.163.255.14
+        Active SAs: 0, origin: crypto map
+        Inbound:  #pkts dec'ed 0 drop 0 life (KB/Sec) 0/0
+        Outbound: #pkts enc'ed 0 drop 0 life (KB/Sec) 0/0

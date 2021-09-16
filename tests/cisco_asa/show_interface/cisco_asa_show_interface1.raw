@@ -1,0 +1,142 @@
+Interface GigabitEthernet0/0 "outside", is up, line protocol is up
+  Hardware is net_virtio, BW 1000 Mbps, DLY 10 usec
+	Auto-Duplex(Full-duplex), Auto-Speed(1000 Mbps)
+	Input flow control is unsupported, output flow control is unsupported
+	Description: to iosv-1
+	MAC address 5254.000d.da4c, MTU 1500
+	IP address 10.99.99.2, subnet mask 255.255.255.0
+	107 packets input, 35506 bytes, 0 no buffer
+	Received 0 broadcasts, 0 runts, 0 giants
+	0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored, 0 abort
+	0 pause input, 0 resume input
+	101 L2 decode drops
+	6 packets output, 612 bytes, 0 underruns
+	0 pause output, 0 resume output
+	0 output errors, 0 collisions, 0 interface resets
+	0 late collisions, 0 deferred
+	0 input reset drops, 0 output reset drops
+	input queue (blocks free curr/low): hardware (0/0)
+	output queue (blocks free curr/low): hardware (0/0)
+  Traffic Statistics for "outside":
+	6 packets input, 492 bytes
+	6 packets output, 456 bytes
+	0 packets dropped
+      1 minute input rate 0 pkts/sec,  0 bytes/sec
+      1 minute output rate 0 pkts/sec,  0 bytes/sec
+      1 minute drop rate, 0 pkts/sec
+      5 minute input rate 0 pkts/sec,  0 bytes/sec
+      5 minute output rate 0 pkts/sec,  0 bytes/sec
+      5 minute drop rate, 0 pkts/sec
+Interface GigabitEthernet0/1 "inside", is up, line protocol is up
+  Hardware is net_virtio, BW 1000 Mbps, DLY 10 usec
+	Auto-Duplex(Full-duplex), Auto-Speed(1000 Mbps)
+	Input flow control is unsupported, output flow control is unsupported
+	MAC address 5254.0005.1b55, MTU 1500
+	IP address 10.90.90.1, subnet mask 255.255.255.0
+	0 packets input, 0 bytes, 0 no buffer
+	Received 0 broadcasts, 0 runts, 0 giants
+	0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored, 0 abort
+	0 pause input, 0 resume input
+	0 L2 decode drops
+	1 packets output, 54 bytes, 0 underruns
+	0 pause output, 0 resume output
+	0 output errors, 0 collisions, 0 interface resets
+	0 late collisions, 0 deferred
+	0 input reset drops, 0 output reset drops
+	input queue (blocks free curr/low): hardware (0/0)
+	output queue (blocks free curr/low): hardware (0/0)
+  Traffic Statistics for "inside":
+	0 packets input, 0 bytes
+	1 packets output, 28 bytes
+	0 packets dropped
+      1 minute input rate 0 pkts/sec,  0 bytes/sec
+      1 minute output rate 0 pkts/sec,  0 bytes/sec
+      1 minute drop rate, 0 pkts/sec
+      5 minute input rate 0 pkts/sec,  0 bytes/sec
+      5 minute output rate 0 pkts/sec,  0 bytes/sec
+      5 minute drop rate, 0 pkts/sec
+Interface GigabitEthernet0/2 "", is administratively down, line protocol is up
+  Hardware is net_virtio, BW 1000 Mbps, DLY 10 usec
+    Full-Duplex(Full-duplex), 1000 Mbps(1000 Mbps)
+	Input flow control is unsupported, output flow control is unsupported
+	Available but not configured via nameif
+	MAC address 5254.0017.e9c0, MTU not set
+	IP address unassigned
+	0 packets input, 0 bytes, 0 no buffer
+	Received 0 broadcasts, 0 runts, 0 giants
+	0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored, 0 abort
+	0 pause input, 0 resume input
+	0 L2 decode drops
+	0 packets output, 0 bytes, 0 underruns
+        0 pause output, 0 resume output
+	0 output errors, 0 collisions, 0 interface resets
+	0 late collisions, 0 deferred
+	0 input reset drops, 0 output reset drops
+	input queue (blocks free curr/low): hardware (0/0)
+	output queue (blocks free curr/low): hardware (0/0)
+Interface GigabitEthernet0/3 "", is administratively down, line protocol is up
+  Hardware is net_virtio, BW 1000 Mbps, DLY 10 usec
+	Auto-Duplex(Full-duplex), Auto-Speed(1000 Mbps)
+	Input flow control is unsupported, output flow control is unsupported
+	Available but not configured via nameif
+	MAC address 5254.001c.5b3a, MTU not set
+	IP address unassigned
+	0 packets input, 0 bytes, 0 no buffer
+	Received 0 broadcasts, 0 runts, 0 giants
+	0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored, 0 abort
+	0 pause input, 0 resume input
+	0 L2 decode drops
+	0 packets output, 0 bytes, 0 underruns
+	0 pause output, 0 resume output
+	0 output errors, 0 collisions, 0 interface resets
+	0 late collisions, 0 deferred
+	0 input reset drops, 0 output reset drops
+        input queue (blocks free curr/low): hardware (0/0)
+	output queue (blocks free curr/low): hardware (0/0)
+Interface GigabitEthernet0/4 "", is administratively down, line protocol is up
+  Hardware is net_virtio, BW 1000 Mbps, DLY 10 usec
+	Auto-Duplex(Full-duplex), Auto-Speed(1000 Mbps)
+	Input flow control is unsupported, output flow control is unsupported
+	Available but not configured via nameif
+	MAC address 5254.0008.9da4, MTU not set
+	IP address unassigned
+	0 packets input, 0 bytes, 0 no buffer
+	Received 0 broadcasts, 0 runts, 0 giants
+	0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored, 0 abort
+	0 pause input, 0 resume input
+	0 L2 decode drops
+	0 packets output, 0 bytes, 0 underruns
+	0 pause output, 0 resume output
+	0 output errors, 0 collisions, 0 interface resets
+	0 late collisions, 0 deferred
+	0 input reset drops, 0 output reset drops
+	input queue (blocks free curr/low): hardware (0/0)
+	output queue (blocks free curr/low): hardware (0/0)
+Interface Management0/0 "management", is up, line protocol is up
+  Hardware is net_virtio, BW 1000 Mbps, DLY 10 usec
+        Auto-Duplex(Full-duplex), Auto-Speed(1000 Mbps)
+	Input flow control is unsupported, output flow control is unsupported
+	MAC address 5254.0006.b468, MTU 1500
+	IP address 10.100.100.2, subnet mask 255.255.255.0
+	975 packets input, 106522 bytes, 0 no buffer
+	Received 0 broadcasts, 0 runts, 0 giants
+	0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored, 0 abort
+	0 pause input, 0 resume input
+	0 L2 decode drops
+	881 packets output, 108542 bytes, 0 underruns
+	0 pause output, 0 resume output
+	0 output errors, 0 collisions, 0 interface resets
+	0 late collisions, 0 deferred
+	0 input reset drops, 0 output reset drops
+	input queue (blocks free curr/low): hardware (0/0)
+	output queue (blocks free curr/low): hardware (0/0)
+  Traffic Statistics for "management":
+	975 packets input, 92872 bytes
+	883 packets output, 85916 bytes
+	109 packets dropped
+      1 minute input rate 1 pkts/sec,  90 bytes/sec
+      1 minute output rate 1 pkts/sec,  95 bytes/sec
+      1 minute drop rate, 0 pkts/sec
+      5 minute input rate 0 pkts/sec,  17 bytes/sec
+      5 minute output rate 0 pkts/sec,  18 bytes/sec
+      5 minute drop rate, 0 pkts/sec

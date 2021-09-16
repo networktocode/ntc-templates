@@ -1,0 +1,18 @@
+BGP table version is 143173748, local router ID is 192.168.88.2
+Status codes: s suppressed, d damped, h history, * valid, > best, i - internal,
+              r RIB-failure, S Stale, m multipath, b backup-path, f RT-Filter,
+              x best-external, a additional-path, c RIB-compressed,
+              t secondary path,
+Origin codes: i - IGP, e - EGP, ? - incomplete
+RPKI validation codes: V valid, I invalid, N Not found
+
+     Network          Next Hop            Metric LocPrf Weight Path
+ *>   113.55.45.0/24   0.0.0.0                            32768 i
+ *>   113.55.48.0/24   0.0.0.0                            32768 i
+ *>   113.55.50.0/24   0.0.0.0                            32768 i
+ *>   113.55.51.0/24   0.0.0.0                            32768 i
+ *>   113.55.53.0/24   0.0.0.0                            32768 i
+ *>   113.55.54.0/24   0.0.0.0                            32768 i
+ *>   113.55.58.0/24   0.0.0.0                            32768 i
+
+Total number of prefixes 7

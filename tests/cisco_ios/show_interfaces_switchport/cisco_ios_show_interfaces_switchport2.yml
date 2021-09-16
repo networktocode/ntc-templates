@@ -1,0 +1,26 @@
+---
+parsed_sample:
+  - interface: "Te5/0/1"
+    switchport: "Enabled"
+    switchport_monitor: ""
+    switchport_negotiation: "Off"
+    mode: "trunk"
+    admin_mode: "trunk"
+    access_vlan: "1"
+    native_vlan: "1"
+    voice_vlan: "none"
+    trunking_vlans:
+      - "1,12,15,31-36,40-42,80,85,101,201,240,410,420,602,604"
+      - "900,910,920,930,940"
+  - interface: "Te5/0/2"
+    switchport: "Enabled"
+    switchport_monitor: ""
+    switchport_negotiation: "Off"
+    mode: "trunk"
+    admin_mode: "trunk"
+    access_vlan: "1"
+    native_vlan: "1"
+    voice_vlan: "none"
+    trunking_vlans:
+      - "1,12,15,31-36,40-42,80,85,101,201,240,410,420,602,604"
+      - "900,910,920,930,940"

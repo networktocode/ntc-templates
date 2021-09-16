@@ -1,0 +1,15 @@
+---
+parsed_sample:
+  - vrf: "default"
+    protocol: "B I"
+    network: "74.119.147.148"
+    mask: "32"
+    distance: "200"
+    metric: "0"
+    direct: ""
+    next_hop:
+      - "199.229.255.31"
+      - "199.229.255.35"
+    interface:
+      - "Vlan70"
+      - "Vlan71"

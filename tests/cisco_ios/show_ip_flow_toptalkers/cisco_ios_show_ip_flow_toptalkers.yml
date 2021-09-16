@@ -1,0 +1,18 @@
+---
+parsed_sample:
+  - src_port: "07C1"
+    pkt: "414"
+    proto: "11"
+    src_intf: "Gi0/2/0.30"
+    dst_intf: "Null"
+    src_ipaddr: "10.2.100.83"
+    dst_port: "07C1"
+    dst_ipaddr: "224.0.0.2"
+  - src_port: "07C1"
+    pkt: "410"
+    proto: "11"
+    src_intf: "Gi0/2/0.40"
+    dst_intf: "Null"
+    src_ipaddr: "10.2.100.99"
+    dst_port: "07C1"
+    dst_ipaddr: "224.0.0.2"

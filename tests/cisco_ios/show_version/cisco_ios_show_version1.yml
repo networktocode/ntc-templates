@@ -1,0 +1,30 @@
+---
+parsed_sample:
+  - version: "03.06.05E"
+    rommon: "IOS-XE"
+    hostname: "city-building-4-sw"
+    uptime: "28 weeks, 1 day, 7 hours, 54 minutes"
+    uptime_days: "1"
+    uptime_hours: "7"
+    uptime_minutes: "54"
+    uptime_weeks: "28"
+    uptime_years: ""
+    reload_reason: "Reload Command"
+    running_image: "packages.conf"
+    hardware:
+      - "WS-C3850-48U"
+      - "WS-C3850-48U"
+      - "WS-C3850-48U"
+      - "WS-C3850-48U"
+    serial:
+      - "FOC11111111"
+      - "FCW22222222"
+      - "FCW33333333"
+      - "FCW44444444"
+    config_register: "0x102"
+    mac:
+      - "f8:7b:20:11:aa:80"
+      - "f8:7b:20:22:bb:80"
+      - "f8:b7:e2:33:cc:00"
+      - "f8:b7:e2:44:dd:00"
+    restarted: "05:00:08 AEDT Wed Nov 22 2017"

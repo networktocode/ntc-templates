@@ -1,0 +1,16 @@
+---
+extends: "default"
+rules:
+  comments: "enable"
+  empty-values: "enable"
+  indentation:
+    indent-sequences: "consistent"
+  line-length: "disable"
+  quoted-strings:
+    quote-type: "double"
+
+ignore: |
+  tests/mocks/
+  .tox/
+  .venv/
+  venv/

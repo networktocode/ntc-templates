@@ -1,0 +1,36 @@
+Value PORT (\d+)
+Value NAME (\S+)
+Value SN (\S+)
+Value DESCR (.+)
+Value VID (\d+\.\d+|\d+)
+
+Start
+  ^\s*System\s+\S+?$$ -> Chassis
+
+Chassis
+  ^\s+Model
+  ^\s+-
+  ^\s+HW
+  ^\s+${VID}\s+${SN}\s+\d+-\d+-\d+ -> Record
+  ^\s+${NAME}?\s+${DESCR}$$
+  ^\s*System.+(power supply|power-supply) -> Power_Supply
+
+
+Power_Supply
+  ^\s+Slot
+  ^\s+-
+  ^\s+${PORT}\s+${NAME}\s+${SN} -> Record
+  ^\s*System.+(fan) -> Fan
+
+Fan
+  ^\s+Module
+  ^\s+-
+  ^\s+${PORT}?\s+\d+?\s+${NAME}?\s+${SN} -> Record
+  ^\s*System.+ports -> Ports
+
+Ports
+  ^\s+${DESCR}\s+${PORT} -> Record
+  ^\s*System.+transceiver -> Transceiver
+
+Transceiver
+  ^\s+${PORT}\s+${DESCR}\s+${NAME}\s+${SN}\s+${VID} -> Record

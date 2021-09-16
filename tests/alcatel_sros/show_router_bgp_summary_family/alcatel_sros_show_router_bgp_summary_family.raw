@@ -1,0 +1,64 @@
+[kvanlang@steffi upgrade-support]$ cat ../ntc-templates-test/lib/test-bgp-sum-family.raw
+A:SRHERE01# show router "Base" bgp summary family ipv4
+===============================================================================
+ BGP Router ID:192.0.2.11   AS:6848        Local AS:65535
+===============================================================================
+BGP Admin State         : Up          BGP Oper State              : Up
+Total Peer Groups       : 6           Total Peers                 : 150
+Total VPN Peer Groups   : 79          Total VPN Peers             : 207
+Total BGP Paths         : 407944      Total Path Memory           : 160791243
+
+Total IPv4 Remote Rts   : 1725031     Total IPv4 Rem. Active Rts  : 862201
+Total IPv6 Remote Rts   : 0           Total IPv6 Rem. Active Rts  : 0
+Total IPv4 Backup Rts   : 0           Total IPv6 Backup Rts       : 0
+Total LblIpv4 Rem Rts   : 2844        Total LblIpv4 Rem. Act Rts  : 311
+Total LblIpv6 Rem Rts   : 196896      Total LblIpv6 Rem. Act Rts  : 98446
+Total LblIpv4 Bkp Rts   : 0           Total LblIpv6 Bkp Rts       : 0
+Total Supressed Rts     : 0           Total Hist. Rts             : 0
+Total Decay Rts         : 0
+
+Total VPN-IPv4 Rem. Rts : 93000       Total VPN-IPv4 Rem. Act. Rts: 45689
+Total VPN-IPv6 Rem. Rts : 0           Total VPN-IPv6 Rem. Act. Rts: 0
+Total VPN-IPv4 Bkup Rts : 0           Total VPN-IPv6 Bkup Rts     : 0
+Total VPN Local Rts     : 1147        Total VPN Supp. Rts         : 0
+Total VPN Hist. Rts     : 0           Total VPN Decay Rts         : 0
+
+Total MVPN-IPv4 Rem Rts : 0           Total MVPN-IPv4 Rem Act Rts : 0
+Total MVPN-IPv6 Rem Rts : 0           Total MVPN-IPv6 Rem Act Rts : 0
+Total MDT-SAFI Rem Rts  : 0           Total MDT-SAFI Rem Act Rts  : 0
+Total McIPv4 Remote Rts : 0           Total McIPv4 Rem. Active Rts: 0
+Total McIPv6 Remote Rts : 0           Total McIPv6 Rem. Active Rts: 0
+Total McVpnIPv4 Rem Rts : 0           Total McVpnIPv4 Rem Act Rts : 0
+Total McVpnIPv6 Rem Rts : 0           Total McVpnIPv6 Rem Act Rts : 0
+
+Total EVPN Rem Rts      : 692         Total EVPN Rem Act Rts      : 338
+Total L2-VPN Rem. Rts   : 0           Total L2VPN Rem. Act. Rts   : 0
+Total MSPW Rem Rts      : 0           Total MSPW Rem Act Rts      : 0
+Total RouteTgt Rem Rts  : 1546        Total RouteTgt Rem Act Rts  : 1546
+Total FlowIpv4 Rem Rts  : 0           Total FlowIpv4 Rem Act Rts  : 0
+Total FlowIpv6 Rem Rts  : 0           Total FlowIpv6 Rem Act Rts  : 0
+Total Link State Rem Rts: 0           Total Link State Rem Act Rts: 0
+Total SrPlcyIpv4 Rem Rts: 0           Total SrPlcyIpv4 Rem Act Rts: 0
+
+===============================================================================
+BGP IPv4 Summary
+===============================================================================
+Legend : D - Dynamic Neighbor
+===============================================================================
+Neighbor
+                   AS PktRcvd PktSent  InQ OutQ Up/Down   State|Recv/Actv/Sent
+-------------------------------------------------------------------------------
+192.0.2.118
+               42598*  228872  215409    0    0 25d10h18m 2/2/1
+192.0.2.110
+               42598   271035  249777    0    0 29d11h41m 1/1/1
+192.0.2.126
+               42598*       0       0    0    0 54d18h43m Connect
+192.0.2.254
+               42598*       0       0    0    0 36d13h37m Active
+192.0.2.103
+               65535  390698*  749512    0    0 54d18h40m 862440/627895/373
+192.0.2.104
+               65535  355316*  749512    0    0 54d18h40m 862439/234172/373
+-------------------------------------------------------------------------------
+* indicates that the corresponding row element may have been truncated.

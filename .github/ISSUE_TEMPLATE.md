@@ -1,4 +1,12 @@
 <!---
+NOTE: Request for new template and adding data captured in template is not considered.
+Please see README for more information.
+
+ISSUES raised without following instructions will be immediately closed.
+-->
+
+
+<!---
 Verify first that your issue/request is not already reported on GitHub.
 Also test if the latest release, and master branch are affected too.
 -->
@@ -7,7 +15,6 @@ Also test if the latest release, and master branch are affected too.
 <!--- Pick one below and delete the rest: -->
  - Bug Report
  - Feature Idea
- - Template Creation Help
  - Documentation Report
 
 ##### TEMPLATE USING

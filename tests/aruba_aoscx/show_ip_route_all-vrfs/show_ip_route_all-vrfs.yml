@@ -1,0 +1,117 @@
+---
+parsed_sample:
+  - ip: "0.0.0.0/0"
+    vrf: "default"
+    iface:
+      - "172.25.0.189"
+      - "172.25.0.185"
+    metric:
+      - "[20/0]"
+      - "[20/0]"
+    status:
+      - "bgp"
+      - "bgp"
+  - ip: "10.252.14.109/32"
+    vrf: "default"
+    iface:
+      - "loopback0"
+    metric:
+      - "[0/0]"
+    status:
+      - "local"
+  - ip: "10.252.22.128/26"
+    vrf: "default"
+    iface:
+      - "vlan3564"
+    metric:
+      - "[0/0]"
+    status:
+      - "connected"
+  - ip: "10.252.22.129/32"
+    vrf: "default"
+    iface:
+      - "vlan3564"
+    metric:
+      - "[0/0]"
+    status:
+      - "local"
+  - ip: "10.252.34.224/27"
+    vrf: "default"
+    iface:
+      - "vlan3560"
+    metric:
+      - "[0/0]"
+    status:
+      - "connected"
+  - ip: "10.252.34.225/32"
+    vrf: "default"
+    iface:
+      - "vlan3560"
+    metric:
+      - "[0/0]"
+    status:
+      - "local"
+  - ip: "10.252.71.0/25"
+    vrf: "default"
+    iface:
+      - "vlan3561"
+    metric:
+      - "[0/0]"
+    status:
+      - "connected"
+  - ip: "10.252.71.1/32"
+    vrf: "default"
+    iface:
+      - "vlan3561"
+    metric:
+      - "[0/0]"
+    status:
+      - "local"
+  - ip: "10.252.151.0/24"
+    vrf: "default"
+    iface:
+      - "vlan3590"
+    metric:
+      - "[0/0]"
+    status:
+      - "connected"
+  - ip: "10.252.151.1/32"
+    vrf: "default"
+    iface:
+      - "vlan3590"
+    metric:
+      - "[0/0]"
+    status:
+      - "local"
+  - ip: "172.25.0.184/30"
+    vrf: "default"
+    iface:
+      - "1/1/28"
+    metric:
+      - "[0/0]"
+    status:
+      - "connected"
+  - ip: "172.25.0.186/32"
+    vrf: "default"
+    iface:
+      - "1/1/28"
+    metric:
+      - "[0/0]"
+    status:
+      - "local"
+  - ip: "172.25.0.188/30"
+    vrf: "default"
+    iface:
+      - "2/1/28"
+    metric:
+      - "[0/0]"
+    status:
+      - "connected"
+  - ip: "172.25.0.190/32"
+    vrf: "default"
+    iface:
+      - "2/1/28"
+    metric:
+      - "[0/0]"
+    status:
+      - "local"

@@ -1,0 +1,13 @@
+Value PEER (\S+)
+Value GR (\w)
+Value NSR (\S+)
+Value UPTIME (\S+)
+Value DISCOVERY_IPV4 (\d+)
+Value DISCOVERY_IPV6 (\d+)
+Value ADDRESSES_IPV4 (\d+)
+Value ADDRESSES_IPV6 (\d+)
+Value LABELS_IPV4 (\d+)
+Value LABELS_IPV6 (\d+)
+
+Start
+  ^${PEER}\s+${GR}\s+${NSR}\s+${UPTIME}\s+${DISCOVERY_IPV4}\s+${DISCOVERY_IPV6}\s+${ADDRESSES_IPV4}\s+${ADDRESSES_IPV6}\s+${LABELS_IPV4}\s+${LABELS_IPV6}\s*$$ -> Record

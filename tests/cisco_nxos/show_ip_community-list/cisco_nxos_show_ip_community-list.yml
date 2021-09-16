@@ -1,0 +1,56 @@
+---
+parsed_sample:
+  - type: "Expanded"
+    name: "ROUTES_CL1"
+    seq: "1"
+    action: "permit"
+    as:
+      - "11111"
+    tag:
+      - "10000"
+    community: ""
+  - type: "Standard"
+    name: "ROUTES_CL2"
+    seq: "1"
+    action: "permit"
+    as:
+      - "11111"
+    tag:
+      - "10000"
+    community: ""
+  - type: "Standard"
+    name: "ROUTES_CL2"
+    seq: "2"
+    action: "permit"
+    as:
+      - "22222"
+    tag:
+      - "10000"
+    community: ""
+  - type: "Standard"
+    name: "ROUTES_CL2"
+    seq: "3"
+    action: "permit"
+    as:
+      - "33333"
+    tag:
+      - "10000"
+    community: ""
+  - type: "Standard"
+    name: "ROUTES_CL2"
+    seq: "4"
+    action: "permit"
+    as:
+      - "44444"
+      - "55555"
+    tag:
+      - "10000"
+      - "10005"
+    community: "no-export"
+  - type: "Standard"
+    name: "ROUTES_CL2"
+    seq: "5"
+    action: "deny"
+    as: []
+    tag: []
+    community: "internet"

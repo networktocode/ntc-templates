@@ -1,0 +1,11 @@
+Value Filldown POWER_GROUP (\d+)
+Value Required POWER_MODULE (\d+\/PM\d+)
+Value Required SUPPLY_TYPE (\S+)
+Value Required STATUS (OK|Failed)
+
+Start
+  ^.*\=+ -> Parse
+
+Parse
+  ^Power\sGroup+\s+${POWER_GROUP} -> Record
+  ^\s+${POWER_MODULE}\s+${SUPPLY_TYPE}+\s+\S+\s+\S+\s+\S+\s+\S+\s+\S+\s+${STATUS} -> Record

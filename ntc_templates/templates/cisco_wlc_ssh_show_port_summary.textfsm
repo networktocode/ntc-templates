@@ -1,0 +1,23 @@
+Value PORT (\S+)
+Value TYPE (\S+)
+Value STP_STATUS (\S+)
+Value ADMIN_MODE (\S+)
+Value PHYSICAL_MODE (\w+\s?\w+)
+Value PHYSICAL_STATUS (\w+\s?\w+)
+Value LINK_STATUS (\S+)
+Value LINK_TRAP (\S+)
+Value POE (\S+(\s+\S+\s+\S+)?)
+
+Start
+  ^\s+STP\s+Admin\s+(Physical\s+){2}\s*(Link\s*){2}\s*$$
+  ^\s*Pr\s+Type\s+Stat\s+(Mode\s+){2}\s*(Status\s+){2}\s*Trap\s+POE\s*$$
+  #
+  # Port Status and Modes (after the dashed line)
+  ^\s*[-\s]+$$ -> Port_Status
+  ^\s*$$
+  ^. -> Error
+
+Port_Status
+  ^\s*${PORT}\s+${TYPE}\s+${STP_STATUS}\s+${ADMIN_MODE}\s+${PHYSICAL_MODE}\s+${PHYSICAL_STATUS}\s+${LINK_STATUS}\s+${LINK_TRAP}\s+${POE}\s*$$ -> Record
+  ^\s*$$
+  ^. -> Error

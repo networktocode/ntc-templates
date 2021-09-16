@@ -1,0 +1,14 @@
+  Vrf          RD                   Protocols      State             Interfaces            
+------------ -------------------- -------------- ------------------- ----------------------------- 
+  blue         10.125.253.15:1      ipv4,ipv6      v4:no routing,    Vlan1006, Vlan2230, Vlan2231, 
+                                                   v6:no routing     Vlan2232, Vlan2233, Vlan2234, 
+                                                                     Vlan2235, Vlan2236, Vlan2237, 
+                                                                     Vlan2238, Vlan2239, Vlan2240  
+  green         <not set>           ipv4,ipv6      v4:routing,       Vlan1015, Vlan1016, Vlan1017, 
+                                                   v6:no routing     Vlan1018, Vlan1019, Vlan1020, 
+                                                                     Vlan1021                      
+  yellow        10.125.253.15:4     ipv4,ipv6      v4:routing,       Vlan1009                      
+                                                   v6:no routing                                   
+  red           10.125.253.15:6     ipv4,ipv6      v4:routing,                                     
+                                                   v6:no routing                                   
+  black         999:999             ipv4,ipv6      v4:no routing     Management1                   

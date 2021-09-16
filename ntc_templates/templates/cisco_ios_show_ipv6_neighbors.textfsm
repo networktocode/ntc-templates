@@ -1,0 +1,14 @@
+Value ADDRESS (\S+)
+Value AGE (\d+)
+Value MAC (\S+)
+Value TYPE (\S+)
+Value INTERFACE (\S+)
+
+Start
+  ^IPv6\s+Address\s+Age\s+Link-layer\s+Addr\s+State\s+Interface\s*$$
+  ^${ADDRESS}\s+${AGE}\s+${MAC}\s+${TYPE}\s+${INTERFACE} -> Record
+  # Capture time-stamp if vty line has command time-stamping turned on
+  ^Load\s+for\s+
+  ^Time\s+source\s+is
+  ^\s*$$
+  ^. -> Error

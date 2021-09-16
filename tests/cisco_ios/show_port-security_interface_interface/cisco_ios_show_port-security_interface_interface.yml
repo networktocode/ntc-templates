@@ -1,0 +1,14 @@
+---
+parsed_sample:
+  - port_security: "Disabled"
+    port_status: "Secure-down"
+    violation_mode: "Shutdown"
+    aging_time: "1440 mins"
+    aging_type: "Absolute"
+    ss_addr_aging: "Disabled"
+    max_mac_addrs: "1"
+    total_mac_addrs: "0"
+    config_mac_addrs: "0"
+    sticky_mac_addrs: "0"
+    last_src_mac_addr_vlan: "0000.0000.0000:0"
+    violation_count: "0"
