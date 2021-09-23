@@ -1,5 +1,5 @@
 Value Filldown,Required ROUTER_ID ([0-9a-f:\.]+)
-Value Filldown LOCAL_AS (\d+)
+Value Filldown LOCAL_AS (\d+(\.\d+)?)
 Value Filldown ADDR_FAMILY (.+?)
 Value BGP_NEIGH (\d+?\.\d+?\.\d+?\.\d+?)
 Value NEIGH_AS (\d+)
