@@ -1,0 +1,131 @@
+---
+parsed_sample:
+  - interface: "GigabitEthernet0/0/1"
+    link_type: "trunk"
+    pvid: "1"
+    trunk_vlan_list:
+      - "1-4094"
+  - interface: "GigabitEthernet0/0/2"
+    link_type: "trunk"
+    pvid: "1"
+    trunk_vlan_list:
+      - "1"
+      - "249-255"
+  - interface: "GigabitEthernet0/0/3"
+    link_type: "trunk"
+    pvid: "999"
+    trunk_vlan_list:
+      - "255"
+      - "300"
+      - "999"
+  - interface: "GigabitEthernet0/0/4"
+    link_type: "trunk"
+    pvid: "999"
+    trunk_vlan_list:
+      - "255"
+      - "300"
+      - "999"
+  - interface: "GigabitEthernet0/0/5"
+    link_type: "access"
+    pvid: "330"
+    trunk_vlan_list: []
+  - interface: "GigabitEthernet0/0/6"
+    link_type: "access"
+    pvid: "330"
+    trunk_vlan_list: []
+  - interface: "GigabitEthernet0/0/7"
+    link_type: "access"
+    pvid: "330"
+    trunk_vlan_list: []
+  - interface: "GigabitEthernet0/0/8"
+    link_type: "access"
+    pvid: "330"
+    trunk_vlan_list: []
+  - interface: "GigabitEthernet0/0/9"
+    link_type: "access"
+    pvid: "330"
+    trunk_vlan_list: []
+  - interface: "GigabitEthernet0/0/10"
+    link_type: "access"
+    pvid: "330"
+    trunk_vlan_list: []
+  - interface: "GigabitEthernet0/0/11"
+    link_type: "access"
+    pvid: "330"
+    trunk_vlan_list: []
+  - interface: "GigabitEthernet0/0/12"
+    link_type: "access"
+    pvid: "330"
+    trunk_vlan_list: []
+  - interface: "GigabitEthernet0/0/13"
+    link_type: "access"
+    pvid: "300"
+    trunk_vlan_list: []
+  - interface: "GigabitEthernet0/0/14"
+    link_type: "access"
+    pvid: "300"
+    trunk_vlan_list: []
+  - interface: "GigabitEthernet0/0/15"
+    link_type: "access"
+    pvid: "300"
+    trunk_vlan_list: []
+  - interface: "GigabitEthernet0/0/16"
+    link_type: "access"
+    pvid: "300"
+    trunk_vlan_list: []
+  - interface: "GigabitEthernet0/0/17"
+    link_type: "access"
+    pvid: "300"
+    trunk_vlan_list: []
+  - interface: "GigabitEthernet0/0/18"
+    link_type: "access"
+    pvid: "300"
+    trunk_vlan_list: []
+  - interface: "GigabitEthernet0/0/19"
+    link_type: "access"
+    pvid: "300"
+    trunk_vlan_list: []
+  - interface: "GigabitEthernet0/0/20"
+    link_type: "access"
+    pvid: "300"
+    trunk_vlan_list: []
+  - interface: "GigabitEthernet0/0/21"
+    link_type: "auto"
+    pvid: "450"
+    trunk_vlan_list:
+      - "1-4094"
+  - interface: "GigabitEthernet0/0/22"
+    link_type: "auto"
+    pvid: "450"
+    trunk_vlan_list:
+      - "1-4094"
+  - interface: "GigabitEthernet0/0/23"
+    link_type: "auto"
+    pvid: "254"
+    trunk_vlan_list:
+      - "1-4094"
+  - interface: "GigabitEthernet0/0/24"
+    link_type: "auto"
+    pvid: "255"
+    trunk_vlan_list:
+      - "1-4094"
+  - interface: "GigabitEthernet0/0/25"
+    link_type: "auto"
+    pvid: "1"
+    trunk_vlan_list:
+      - "1-4094"
+  - interface: "GigabitEthernet0/0/26"
+    link_type: "auto"
+    pvid: "1"
+    trunk_vlan_list:
+      - "1-4094"
+  - interface: "GigabitEthernet0/0/27"
+    link_type: "trunk"
+    pvid: "1"
+    trunk_vlan_list:
+      - "1-4094"
+  - interface: "GigabitEthernet0/0/28"
+    link_type: "trunk"
+    pvid: "1"
+    trunk_vlan_list:
+      - "1-4094"
