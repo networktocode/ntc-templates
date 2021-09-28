@@ -15,17 +15,4 @@ Start
   ^\s*$$
   ^(Power|Fan)\s+
 
-# MICS
-#   ^.*FPC\s+${FPC}
-#   ^.*MIC\s+${MIC}\s+\S+\s+\S+\s+\S+.* -> Continue
-#   ^.*PIC\s+${PIC}\s+\S+\s+\S+\s+\S+.* -> PICS
-#   ^.*Xcvr\s+${XCVR}\s+(REV\s+\d+|)\s+${PART}\s+${SERIAL}\s+${DESCRIPTION} -> Record
-
-# PICS
-#   ^.*MIC\s+${MIC}\s+\S+\s+\S+\s+\S+.*
-#   ^.*PIC\s+${PIC}\s+\S+\s+\S+\s+\S+.* -> Continue
-#   ^.*Xcvr\s+${XCVR}\s+(REV\s+\d+|)\s+${PART}\s+${SERIAL}\s+${DESCRIPTION} -> Record
-#   ^\s*$$
-#   ^(Power|Fan)\s+
-
 EOF
