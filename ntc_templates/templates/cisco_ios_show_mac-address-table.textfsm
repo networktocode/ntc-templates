@@ -26,7 +26,7 @@ TYPE2
   ^\s*(?:\*\s+R|\*|R|S|\s)\s*(?:\d+|-+) -> Continue.Record
   ^\s*(?:\*\s+R|\*|R|S|\s)\s*${VLAN}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s*$$ -> Continue
   ^\s*(?:\*\s+R|\*|R|S|\s)\s*${VLAN}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+(?!\S+?,)${DESTINATION_PORT}\s*$$ -> Continue
-  ^\s*(?:\*\s+R|\*|R|S|\s)\s*${VLAN}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s*${DESTINATION_PORT}, -> Continue
+  ^\s*(?:\*\s+R|\*|R|S|\s)\s*${VLAN}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+${DESTINATION_PORT}, -> Continue
   ^\s*(?:\*\s+R|\*|R|S|\s)\s*(?:\d+|-+)\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+\S+?,${DESTINATION_PORT}, -> Continue
   ^\s*(?:\*\s+R|\*|R|S|\s)\s*(?:\d+|-+)\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+(?:\S+?,){2}${DESTINATION_PORT}, -> Continue
   ^\s*(?:\*\s+R|\*|R|S|\s)\s*(?:\d+|-+)\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+(?:\S+?,){3}${DESTINATION_PORT}(?:,|$$) -> Continue
