@@ -148,8 +148,9 @@ parsed_sample:
   - destination_address: "0000.0000.0004"
     type: "static"
     vlan: "67"
-    destination_port: "Te1/5/11"
+    destination_port:
+      - "Te1/5/11"
   - destination_address: "0000.0000.0003"
     type: "static"
     vlan: "728"
-    destination_port: ""
+    destination_port: []
