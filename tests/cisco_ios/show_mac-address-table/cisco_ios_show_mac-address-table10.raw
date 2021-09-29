@@ -1,0 +1,64 @@
+Legend: * - primary entry
+        age - seconds since last seen
+        n/a - not available
+
+  vlan   mac address     type    learn     age              ports
+------+----------------+--------+-----+----------+--------------------------
+*  345  3333.0000.000d    static  Yes          -   Gi1/3,Gi1/6,Gi1/45,Gi1/46,Gi1/47
+                                                   Gi1/48,Gi2/2,Gi2/45,Gi2/46
+                                                   Gi3/1,Gi3/2,Gi3/46,Gi3/47
+                                                   Gi3/48,Gi5/2,Gi8/1,Gi8/2
+                                                   Gi8/3,Gi8/4,Gi8/5,Gi8/6
+                                                   Gi8/7,Gi8/8,Gi8/9,Gi8/10
+                                                   Gi8/15,Gi8/16,Gi8/17,Gi8/45
+                                                   Gi9/1,Gi9/2,Gi9/3,Gi9/4
+                                                   Gi9/5,Gi9/6,Gi9/7,Gi9/8
+                                                   Gi9/9,Gi9/10,Gi9/15,Gi9/16
+                                                   Gi9/26,Gi9/27,Gi9/28,Gi9/29
+                                                   Gi9/45,Gi9/48,Router,Switch
+                                                   Stby-Switch
+*  344  3333.0000.000d    static  Yes          -   Gi1/3,Gi1/6,Gi1/45,Gi1/46
+                                                   Gi1/48,Gi2/2,Gi2/45,Gi2/46
+                                                   Gi3/1,Gi3/2,Gi3/46,Gi3/47
+                                                   Gi3/48,Gi5/2,Gi8/1,Gi8/2
+                                                   Gi8/3,Gi8/4,Gi8/5,Gi8/6
+                                                   Gi8/7,Gi8/8,Gi8/9,Gi8/10
+                                                   Gi8/15,Gi8/16,Gi8/17,Gi8/45
+                                                   Gi9/1,Gi9/2,Gi9/3,Gi9/4
+                                                   Gi9/5,Gi9/6,Gi9/7,Gi9/8
+                                                   Gi9/9,Gi9/10,Gi9/15,Gi9/16
+                                                   Gi9/26,Gi9/27,Gi9/28,Gi9/29
+                                                   Gi9/45,Gi9/48,Router,Switch
+                                                   Stby-Switch
+*  300  b4b5.2fef.dd44   dynamic  Yes        190   Gi9/16
+*  800  00c0.ff1a.6aee   dynamic  Yes         10   Gi1/45
+*  300  0015.5d0a.0502   dynamic  Yes          0   Gi8/15
+*  300  3333.0000.0016    static  Yes          -   Switch
+* 1102  00e1.6d87.f600   dynamic  Yes          0   Gi9/1
+*  ---  0000.0000.0000    static  No           -   Router
+*  300  ecb1.d7aa.e791   dynamic  Yes          0   Gi8/45
+*  810  0023.ac8b.5000    static  No           -   Router
+*  300  0050.568f.4859   dynamic  Yes          0   Gi8/8
+*  800  0023.ac8b.5000    static  No           -   Router
+*  300  ecb1.d7aa.e790   dynamic  Yes          5   Gi8/45
+*  800  00c0.ff1a.372c   dynamic  Yes         15   Gi1/46
+*  344  f092.1c04.f340   dynamic  Yes          0   Gi8/6
+*  300  0050.568f.7aa4   dynamic  Yes          0   Gi8/8
+*  344  3333.0000.0001    static  Yes          -   Switch
+*  345  3333.0000.0001    static  Yes          -   Switch
+*  410  0023.ac8b.5000    static  No           -   Router
+*  404  0023.ac8b.5000    static  No           -   Router
+*  800  0100.5e7f.4653    static  Yes          -   
+*  300  0050.568f.649a   dynamic  Yes          5   Gi8/8
+* 1102  3333.0000.0016    static  Yes          -   Switch
+*  300  ecb1.d7aa.e799   dynamic  Yes          0   Gi9/45
+*  300  0050.568f.2416   dynamic  Yes          5   Gi8/6
+*  300  0050.568f.12fa   dynamic  Yes          0   Gi8/8
+*  810  000d.ec3d.ef00   dynamic  Yes          5   Gi3/2
+*  444  f092.1c04.0510   dynamic  Yes          0   Gi9/7
+*  300  3333.0000.0001    static  Yes          -   Switch
+*  300  0050.568f.08c3   dynamic  Yes          5   Gi8/6
+* 1102  00e1.6d87.f700   dynamic  Yes          0   Gi8/1
+*  300  0050.568f.7fb7   dynamic  Yes          0   Gi9/6
+*  300  2c59.e537.d3bc   dynamic  Yes          0   Gi8/10
+*  800  0100.5e7f.fffa    static  Yes          -   

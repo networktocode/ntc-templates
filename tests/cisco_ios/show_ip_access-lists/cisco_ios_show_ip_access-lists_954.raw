@@ -1,0 +1,100 @@
+Standard IP access list 99
+    10 permit 172.16.191.199
+    20 deny   any log
+    30 permit 10.0.10.0, wildcard bits 0.255.0.255 (20 matches)
+Standard IP access list stdacl
+    10 permit 10.1.1.1
+Extended IP access list test
+Extended IP access list 101
+    10 permit tcp any host 10.1.1.1 eq www
+    20 permit tcp any host 10.1.1.1 eq 443 log
+    30 permit ahp any any log-input
+    40 permit ahp any any log-input time-range test (active)
+    50 permit ip any host 10.1.10.11 log time-range test2 (inactive)
+    60 permit udp any range 16384 32767 10.1.1.0 0.0.0.255 range 16384 32767
+    70 permit udp any eq snmp bootpc 10.1.0.0 0.0.0.255
+    80 permit tcp 10.0.0.0 0.255.255.255 eq telnet ssh http 8080 host 10.1.0.0 neq telnet ssh
+    90 permit tcp any any match-all +ack -fin log
+    100 permit tcp host 10.1.1.1 any established
+    110 permit tcp any 10.1.1.0 0.0.255.255 established psh
+    120 deny esp any any precedence internet
+    130 deny esp any any tos normal
+Extended IP access list sample
+    10 permit tcp host 10.10.37.18 host 10.10.37.17 eq bgp
+    20 permit tcp host 10.10.37.18 eq bgp host 10.10.37.17
+    30 permit icmp 10.10.37.16 0.0.0.3 host 10.10.37.17
+    40 permit icmp 10.10.37.24 0.0.0.7 host 10.10.37.17
+    50 permit icmp 10.10.37.16 0.0.0.3 host 10.10.5.20
+    60 permit icmp 10.10.37.24 0.0.0.7 host 10.10.5.20
+    70 permit icmp 10.10.37.16 0.0.0.3 host 10.10.6.144
+    80 permit icmp 10.10.37.24 0.0.0.7 host 10.10.6.144
+    90 permit icmp 10.10.37.16 0.0.0.3 host 10.10.6.146
+    100 permit icmp 10.10.37.24 0.0.0.7 host 10.10.6.146
+    110 permit icmp 10.10.37.16 0.0.0.3 host 10.10.6.148
+    120 permit icmp 10.10.37.24 0.0.0.7 host 10.10.6.148
+    130 permit icmp 10.10.37.16 0.0.0.3 host 10.10.6.152
+    140 permit icmp 10.10.37.24 0.0.0.7 host 10.10.6.152
+    150 permit icmp 10.10.37.16 0.0.0.3 host 10.10.8.26
+    160 permit icmp 10.10.37.24 0.0.0.7 host 10.10.8.26
+    170 permit icmp 10.10.37.16 0.0.0.3 host 10.10.8.152
+    180 permit icmp 10.10.37.24 0.0.0.7 host 10.10.8.152
+    190 permit icmp 10.10.37.16 0.0.0.3 10.3.140.0 0.0.0.127
+    200 permit icmp 10.10.37.24 0.0.0.7 10.3.140.0 0.0.0.127
+    210 permit icmp 10.10.37.16 0.0.0.3 host 10.3.139.248
+    220 permit icmp 10.10.37.24 0.0.0.7 host 10.3.139.248
+    230 permit icmp 10.10.37.16 0.0.0.3 10.3.139.128 0.0.0.7
+    240 permit icmp 10.10.37.24 0.0.0.7 10.3.139.128 0.0.0.7
+    250 permit tcp 10.10.37.24 0.0.0.7 host 10.10.5.20 eq 4000
+    260 permit tcp 10.10.37.24 0.0.0.7 host 10.10.5.20 eq 4010
+    270 permit tcp 10.10.37.24 0.0.0.7 host 10.10.5.20 eq 4020
+    280 permit tcp 10.10.37.24 0.0.0.7 host 10.10.5.20 eq 4080
+    290 permit tcp 10.10.37.24 0.0.0.7 host 10.10.5.20 eq 4300
+    300 permit tcp 10.10.37.24 0.0.0.7 host 10.10.5.20 eq 4310
+    310 permit tcp 10.10.37.24 0.0.0.7 host 10.10.5.20 eq 4320
+    320 permit tcp 10.10.37.24 0.0.0.7 host 10.10.5.20 eq 4380
+    330 permit tcp 10.10.37.24 0.0.0.7 host 10.10.6.144 eq 4000
+    340 permit tcp 10.10.37.24 0.0.0.7 host 10.10.6.144 eq 4010
+    350 permit tcp 10.10.37.24 0.0.0.7 host 10.10.6.144 eq 4020
+    360 permit tcp 10.10.37.24 0.0.0.7 host 10.10.6.144 eq 4300
+    370 permit tcp 10.10.37.24 0.0.0.7 host 10.10.6.144 eq 4310
+    380 permit tcp 10.10.37.24 0.0.0.7 host 10.10.6.144 eq 4320
+    390 permit tcp 10.10.37.24 0.0.0.7 host 10.10.6.146 eq 4000
+    400 permit tcp 10.10.37.24 0.0.0.7 host 10.10.6.146 eq 4010
+    410 permit tcp 10.10.37.24 0.0.0.7 host 10.10.6.146 eq 4020
+    420 permit tcp 10.10.37.24 0.0.0.7 host 10.10.6.146 eq 4300
+    430 permit tcp 10.10.37.24 0.0.0.7 host 10.10.6.146 eq 4310
+    440 permit tcp 10.10.37.24 0.0.0.7 host 10.10.6.146 eq 4320
+    450 permit tcp 10.10.37.24 0.0.0.7 host 10.10.6.148 eq 4050
+    460 permit tcp 10.10.37.24 0.0.0.7 host 10.10.6.148 eq 4060
+    470 permit tcp 10.10.37.24 0.0.0.7 host 10.10.6.148 eq 4350
+    480 permit tcp 10.10.37.24 0.0.0.7 host 10.10.6.148 eq 4360
+    490 permit tcp 10.10.37.24 0.0.0.7 host 10.10.6.152 eq 4000
+    500 permit tcp 10.10.37.24 0.0.0.7 host 10.10.6.152 eq 4010
+    510 permit tcp 10.10.37.24 0.0.0.7 host 10.10.6.152 eq 4020
+    520 permit tcp 10.10.37.24 0.0.0.7 host 10.10.6.152 eq 4080
+    530 permit tcp 10.10.37.24 0.0.0.7 host 10.10.6.152 eq 4300
+    540 permit tcp 10.10.37.24 0.0.0.7 host 10.10.6.152 eq 4310
+    550 permit tcp 10.10.37.24 0.0.0.7 host 10.10.6.152 eq 4320
+    560 permit tcp 10.10.37.24 0.0.0.7 host 10.10.6.152 eq 4380
+    570 permit tcp 10.10.37.24 0.0.0.7 host 10.10.8.26 eq 4001
+    580 permit tcp 10.10.37.24 0.0.0.7 host 10.10.8.152 eq 4001
+    590 permit tcp 10.10.37.24 0.0.0.7 10.3.140.64 0.0.0.31 eq 9815 log time-range test (active)
+    600 permit tcp 10.10.37.24 0.0.0.7 10.3.140.64 0.0.0.31 range 9821 9823
+    610 permit tcp 10.10.37.24 0.0.0.7 10.3.140.96 0.0.0.31 range 7400 7407
+    620 permit udp 10.10.37.16 0.0.0.3 host 10.3.139.133 range 13001 13191
+    630 permit udp 10.10.37.24 0.0.0.7 host 10.3.139.133 range 13001 13191
+    640 permit tcp 10.10.37.16 0.0.0.3 host 10.3.139.134 range 13001 13191
+    650 permit tcp 10.10.37.24 0.0.0.7 host 10.3.139.134 range 13001 13191
+    660 permit pim host 10.10.37.18 host 224.0.0.1 time-range test2 (inactive)
+Extended IP access list test2
+Extended IP access list ios_show_ip_acl
+    10 permit 53 any any log (123456 matches)
+    20 permit ip any any log (23 matches)
+Extended IP access list ntc-templates
+    10 permit icmp host 10.10.10.10 any echo-reply
+    20 permit icmp host 10.10.10.10 any administratively-prohibited (123456 matches)
+    30 permit icmp host 10.10.10.10 any unreachable log
+    40 permit icmp host 10.10.10.10 any redirect (900123456 matches)
+    50 permit icmp 10.10.10.0 0.0.0.255 any ttl-exceeded  (1278456 matches)
+    60 permit icmp 10.10.10.0 0.0.0.255 20.20.0.0 0.0.255.255 port-unreachable
+    70 permit icmp 10.10.10.0 0.0.0.255 20.20.0.0 0.0.255.255 parameter-problem log

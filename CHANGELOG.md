@@ -1,5 +1,86 @@
 # Changelog
 
+## [2.3.2](https://github.com/networktocode/ntc-templates/tree/2.3.2) (2021-09-13)
+
+[Full Changelog](https://github.com/networktocode/ntc-templates/compare/v2.3.1...2.3.2)
+
+**Bugfixes**
+
+- cisco\_ios\_show\_ip\_bgp\_summary Account for dotted ASN notation [\#987](https://github.com/networktocode/ntc-templates/pull/987) ([thomasbridge74](https://github.com/thomasbridge74))
+- cisco\_nxos\_show\_interface\_status Account for blank type [\#980](https://github.com/networktocode/ntc-templates/pull/980) ([Kani999](https://github.com/Kani999))
+- cisco\_ios\_show\_interfaces Account for `App Interface` [\#968](https://github.com/networktocode/ntc-templates/pull/968) ([a-finocchiaro](https://github.com/a-finocchiaro))
+
+## [2.3.1](https://github.com/networktocode/ntc-templates/tree/2.3.1) (2021-08-30)
+
+[Full Changelog](https://github.com/networktocode/ntc-templates/compare/v2.3.0...2.3.1)
+
+**Closed issues:**
+
+- cisco\_ios\_show\_ip\_access-lists Account for singluar match [\#972](https://github.com/networktocode/ntc-templates/issues/972) ([mitchell-foxworth](https://github.com/mitchell-foxworth))
+
+**Merged pull requests:**
+
+- ntc_templates/templates/cisco_ios_show_ip_access-lists.textfsm [\#973](https://github.com/networktocode/ntc-templates/pull/973) ([mitchell-foxworth](https://github.com/mitchell-foxworth))
+
+## [2.3.0](https://github.com/networktocode/ntc-templates/tree/2.3.0) (2021-08-27)
+
+[Full Changelog](https://github.com/networktocode/ntc-templates/compare/v2.2.2...2.3.0)
+
+**Closed issues:**
+
+- cisco\_ios\_show\_ip\_access-lists template needs updated to include LOG_TYPE options [\#969](https://github.com/networktocode/ntc-templates/issues/969) ([joewesch](https://github.com/joewesch))
+
+**Merged pull requests:**
+
+- ntc_templates/templates/aruba_aoscx_show_aaa_authentication_port-access_interface_all_client-status.textfsm [\#927](https://github.com/networktocode/ntc-templates/pull/927) ([scetron](https://github.com/scetron))
+
+**New Templates:**
+
+- aruba_aoscx_show_aaa_authentication_port-access_interface_all_client-status.textfsm
+- aruba_aoscx_show_arp_all-vrfs.textfsm
+- aruba_aoscx_show_bfd_all-vrfs.textfsm
+- aruba_aoscx_show_bgp_all-vrfs_all_summary.textfsm
+- aruba_aoscx_show_bgp_all_all-vrfs_summary.textfsm
+- aruba_aoscx_show_interface.textfsm
+- aruba_aoscx_show_interface_dom_detail.textfsm
+- aruba_aoscx_show_ip_route_all-vrfs.textfsm
+- aruba_aoscx_show_lldp_neighbors-info_detail.textfsm
+- aruba_aoscx_show_mac-address-table.textfsm
+- aruba_aoscx_show_ntp_associations.textfsm
+- aruba_aoscx_show_vsf_detail.textfsm
+
+## [2.2.2](https://github.com/networktocode/ntc-templates/tree/2.1.0) (2021-08-02)
+
+[Full Changelog](https://github.com/networktocode/ntc-templates/compare/v2.2.0...2.2.2)
+
+**Closed issues:**
+
+- cisco\_ios\_show\_ip\_access-lists template needs updated to include additional ICMP_TYPE options [\#964](https://github.com/networktocode/ntc-templates/issues/964)
+- cisco\_ios\_show\_version template needs updated to account for StackWise Virtual Domains [\#924](https://github.com/networktocode/ntc-templates/issues/924)
+
+**Merged pull requests:**
+
+- cisco\_ios\_show\_ip\_access-lists.textfsm: Updated to include mask-request in template. [\#965](https://github.com/networktocode/ntc-templates/pull/944) ([nsnelson402](https://github.com/nsnelson402))
+- cisco\_ios\_show\_version.textfsm: Updated to account for StackWise Virtual Domains template. [\#960](https://github.com/networktocode/ntc-templates/pull/960) ([itdependsnetworks](https://github.com/itdependsnetworks))
+
+## [2.2.0](https://github.com/networktocode/ntc-templates/tree/2.1.0) (2021-08-02)
+
+[Full Changelog](https://github.com/networktocode/ntc-templates/compare/v2.1.0...2.2.0)
+
+**Closed issues:**
+
+- cisco\_ios\_show\_ip\_access-lists template needs updated to include precedence and tos in *_PORT_MATCH [\#954](https://github.com/networktocode/ntc-templates/issues/954)
+- cisco\_nxos\_show\_interface\_transceiver transceiver template failure [\#952](https://github.com/networktocode/ntc-templates/issues/952)
+
+**Merged pull requests:**
+
+- cisco_ios_show_version: Cisco IOS uptime parsing more granular (days, hours, etc.) [\#944](https://github.com/networktocode/ntc-templates/pull/944) ([joewesch](https://github.com/joewesch))
+- New Template: cisco_ios_show_crypto_session_details [\#947](https://github.com/networktocode/ntc-templates/pull/947) ([h4ndzdatm0ld](https://github.com/h4ndzdatm0ld))
+- cisco_ios_show_vrf.texfsm: Parse a vrf with no interfaces [\#918](https://github.com/networktocode/ntc-templates/pull/918) ([dpnetca](https://github.com/dpnetca))
+- cisco_ios_show_interfaces_switchport: Modified Trunk state to handle multiline trunking lists [\#907](https://github.com/networktocode/ntc-templates/pull/907) ([mickyhale](https://github.com/mickyhale))
+- Fix nxos_show_interface_transceiver failure [\#953](https://github.com/networktocode/ntc-templates/pull/953) ([chipn](https://github.com/chipn))
+- Updated cisco_ios_show_ip_access-lists.textfsm to include the SRC_PORT_MATCH and DST_PORT_MATCH values for precedence and tos [\#955](https://github.com/networktocode/ntc-templates/pull/955) ([nsnelson402](https://github.com/nsnelson402))
+
 ## [2.1.0](https://github.com/networktocode/ntc-templates/tree/2.1.0) (2021-06-24)
 
 [Full Changelog](https://github.com/networktocode/ntc-templates/compare/v2.0.0...2.1.0)
