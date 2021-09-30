@@ -1,0 +1,44 @@
+Hardware inventory:
+Item             Version  Part number  Serial number     Description
+Chassis                                A0000             MX104
+Midplane         REV 49   750-000000   XXXXXX04          MX104
+PEM 0            REV 04   740-000000   XXXXXX20039       AC Power Entry Module
+PEM 1            REV 04   740-000000   XXXXXX20125       AC Power Entry Module
+Routing Engine 0 REV 07   750-000000   XXXXXX28          RE-MX-104
+AFEB 0                    BUILTIN      BUILTIN           Forwarding Engine Processor
+FPC 0                     BUILTIN      BUILTIN           MPC BUILTIN
+  MIC 0          REV 25   750-000000   XXXXXX26          3D 2x 10GE XFP
+    PIC 0                 BUILTIN      BUILTIN           1x 10GE XFP
+      Xcvr 0     REV 01   740-000000   XXXXXXXX0001      XFP-10G-LR
+    PIC 1                 BUILTIN      BUILTIN           1x 10GE XFP
+      Xcvr 0     REV 01   740-000000   XXXXXXXX0001      XFP-10G-LR
+  MIC 1          REV 25   750-000000   ABCV0000          3D 2x 10GE XFP
+    PIC 2                 BUILTIN      BUILTIN           1x 10GE XFP
+      Xcvr 0     REV 01   740-000000   XXXXXXXX0001      XFP-10G-LR
+    PIC 3                 BUILTIN      BUILTIN           1x 10GE XFP
+      Xcvr 0              NON-JNPR     AAAA0000A         XFP-10G-SR
+FPC 1                     BUILTIN      BUILTIN           MPC BUILTIN
+  MIC 0          REV 30   750-000000   AAAA000A          3D 20x 1GE(LAN) SFP
+    PIC 0                 BUILTIN      BUILTIN           10x 1GE(LAN) SFP
+      Xcvr 0     REV 02   740-000000   XXXXX1G22474      SFP-T
+      Xcvr 1     REV 02   740-000000   XXXXX1G22472      SFP-T
+      Xcvr 2     REV 01   740-000000   XXXXX23           SFP-T
+      Xcvr 3     REV 01   740-000000   XXXXX01           SFP-T
+      Xcvr 4     REV 02   740-000000   XXXXX1G22481      SFP-T
+      Xcvr 5     REV 02   740-000000   XXXXX1G22479      SFP-T
+    PIC 1                 BUILTIN      BUILTIN           10x 1GE(LAN) SFP
+      Xcvr 0     REV 01   740-000000   XXXXXX20000       SFP-T
+      Xcvr 1     REV 02   740-000000   XXXXX1G20000      SFP-T
+  MIC 1          REV 26   750-000000   XXXXX000          3D 2x 10GE XFP
+    PIC 2                 BUILTIN      BUILTIN           1x 10GE XFP
+      Xcvr 0     REV 01   740-000000   A00098A           XFP-10G-LR
+    PIC 3                 BUILTIN      BUILTIN           1x 10GE XFP
+      Xcvr 0     REV 01   740-000000   XXXXX00000        XFP-10G-LR
+FPC 2                     BUILTIN      BUILTIN           MPC BUILTIN
+  MIC 0                   BUILTIN      BUILTIN           4x 10GE(LAN) SFP+
+    PIC 0                 BUILTIN      BUILTIN           4x 10GE(LAN) SFP+
+      Xcvr 0     REV      740-000000   XXXXX00000        SFP+-10G-LR
+      Xcvr 1     REV 01   740-000000   XXXXX00000        SFP+-10G-SR
+      Xcvr 2     REV      740-000000   XXXXX00000        SFP+-10G-LR
+      Xcvr 3     REV      740-000000   XXXXX00000        SFP+-10G-LR
+Fan Tray 0       REV 03   711-000000   ABCD0000          Fan Tray
