@@ -1,19 +1,43 @@
 Value Filldown FPC (\d+)
 Value Filldown MIC (\d+)
 Value Filldown PIC (\d+)
-Value XCVR (\w+)
+Value XCVR (\d+)
 Value PART (\S+)
 Value SERIAL (\S+)
 Value DESCRIPTION (\S+)
 
 Start
-  ^\s+Hardware\s+
-  ^.*FPC\s+${FPC} -> Continue
-  ^\s+CPU.*
-  ^.*MIC\s+${MIC}\s+\S+\s+\S+\s+\S+.* -> Continue
-  ^.*PIC\s+${PIC}\s+\S+\s+\S+\s+\S+.* -> Continue
-  ^.*Xcvr\s+${XCVR}\s+(REV\s+\d+|)\s+${PART}\s+${SERIAL}\s+${DESCRIPTION} -> Continue.Record
-  ^\s*$$
-  ^(Power|Fan)\s+
+  # ^\s+Hardware\s+
+  ^Hardware.*
+  ^Item.*
+  ^Chassis.*
+  ^Midplane.* -> MIDP
+  ^.*(Mi\S+|CB|AFEB|Routing|PEM|TFEB|CPU).* -> NONCATCH
+  ^.*FPC\s+${FPC}.*$$ -> FPC
+  # #^\s+CPU.*
+  ^.*MIC\s+${MIC}\s+\S+\s+\S+\s+\S+.* -> FPC
+  ^.*PIC\s+${PIC}\s+\S+\s+\S+\s+\S+.* -> FPC
+  ^.*Xcvr\s+${XCVR}\s+(REV\s+(|\d+)|]|)\s+${PART}\s+${SERIAL}\s+${DESCRIPTION} -> FPC
+  # ^\s*$$
+  ^(Power|Fan)\s+.* -> Fan
+  ^\s*$$ 
+  ^. -> Error
 
 EOF
+
+NONCATCH
+  ^.*(Mi\S+|CB|AFEB|Routing|PEM|TFEB|CPU).* -> Start
+
+MIDP
+  ^.*(CB|AFEB|Routing|PEM|TFEB|CPU).* -> FPC
+
+Fan
+  ^(Power|Fan)\s+.* -> Start
+
+FPC
+  ^.*FPC\s+${FPC}.*$$ -> Continue
+  ^.*MIC\s+${MIC}\s+\S+\s+\S+\s+\S+.* -> Continue
+  ^.*PIC\s+${PIC}\s+\S+\s+\S+\s+\S+.* -> Continue
+  ^.*Xcvr\s+${XCVR}\s+(REV\s+(|\d+)|]|)\s+${PART}\s+${SERIAL}\s+${DESCRIPTION} -> Continue.Record
+  ^(Power|Fan)\s+.* -> Fan
+  
