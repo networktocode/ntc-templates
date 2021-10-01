@@ -8,12 +8,11 @@ Value LOCAL (\S+)
 Value MTU (\d+|Unlimited)
 
 Start
+  ^\s*\S+\s+interface -> Continue.Record
   ^Physical\s+interface:\s+${INTERFACE},\s+${ADMIN_STATE},\s+Physical\s+link\s+is\s+${LINK_STATUS}
   ^.*Description:\s+${DESCRIPTION}
-  ^.*ype:\s+${HARDWARE_TYPE},.*MTU:\s+${MTU}.* -> Record
+  ^.*ype:\s+${HARDWARE_TYPE},.*MTU:\s+${MTU}.*
   ^\s+Logical\s+interface\s+${INTERFACE}
-  ^.*Destination:\s+${DESTINATION},\s+Local:\s+${LOCAL},.* -> Record
+  ^.*Destination:\s+${DESTINATION},\s+Local:\s+${LOCAL},.*
   ^\s*$$
   ^{master:\d+}
-
-EOF
