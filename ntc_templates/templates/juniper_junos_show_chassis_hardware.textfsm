@@ -20,8 +20,6 @@ Start
   ^\s*$$ 
   ^. -> Error
 
-EOF
-
 NONCATCH
   ^.*(Mi\S+|CB|AFEB|Routing|PEM|TFEB|CPU).* -> Start
 
@@ -38,3 +36,4 @@ FPC
   ^.*Xcvr\s+${XCVR}\s+(REV\s+(|\d+)|]|)\s+${PART}\s+${SERIAL}\s+${DESCRIPTION} -> Continue.Record
   ^(Power|Fan)\s+.* -> Fan
   
+EOF
