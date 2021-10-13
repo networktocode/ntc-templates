@@ -11,7 +11,7 @@ Value CAPABILITIES (.*[^\s])
 Start
   ^Device ID:${DEST_HOST}
   ^System Name: ${SYSNAME}
-  ^Interface address\(es\): -> GetInterfaceIP
+  ^Interface address\(es\):\s*(^[1-9]\d*|$$) -> GetInterfaceIP
   ^Mgmt address\(es\): -> GetIP
   ^Platform: ${PLATFORM}, Capabilities: ${CAPABILITIES}\s*$$
   ^Interface: ${LOCAL_PORT}, Port ID \(outgoing port\): ${REMOTE_PORT}
