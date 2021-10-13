@@ -1,5 +1,5 @@
 Value Filldown INT_COUNT (\d+)
-Value Required NAME (\S+)
+Value Required NAME ([\S ]*(?<! ))
 Value PORT (\S+)
 Value VLAN (\S+)
 Value IP_ADDR (([\d1-9]+\.?){4})
