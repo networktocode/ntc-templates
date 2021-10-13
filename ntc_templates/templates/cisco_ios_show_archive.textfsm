@@ -1,7 +1,18 @@
 Value STATE (\w+\s\w+)
+Value NEXT_FILENAME (\S+)
+Value List FILENAMES (\S+)
+Value CURRENT_INDEX (\d+)
 
 Start
+  ^The\s+maximum\s+archive\s+configurations\s+allowed\s+is\s+\d+.
+  ^There\s+(are|is)\s+currently\s+\d+\s+archive\s+configuration(s|)\s+saved.
+  ^The\s+next\s+archive\s+file\s+will\s+be\s+named\s+${NEXT_FILENAME}
+  ^\s+Archive\s+#\s+Name
+  ^\s+${CURRENT_INDEX}\s+${FILENAMES}\s+<-\s+Most\s+Recent
+  ^\s+\d+\s+${FILENAMES}
+  ^\s+\d+ -> Record
   ^\sArchive feature ${STATE} -> Record
   # Capture time-stamp if vty line has command time-stamping turned on
   ^Load\s+for\s+
   ^Time\s+source\s+is
+  ^. -> Error
