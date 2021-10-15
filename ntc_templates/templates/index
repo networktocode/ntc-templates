@@ -71,7 +71,7 @@ arista_eos_show_mlag.textfsm, .*, arista_eos, sh[[ow]] ml[[ag]]
 arista_eos_show_vlan.textfsm, .*, arista_eos, sh[[ow]] vl[[an]]
 arista_eos_show_vrf.textfsm, .*, arista_eos, sh[[ow]] vrf
 
-aruba_aoscx_show_aaa_authentication_port-access_interface_all_client-status.textfsm , .*, aruba_aoscx, sh[[ow]] aa[[a]] authe[[ntication]] port-access interface all client-status 
+aruba_aoscx_show_aaa_authentication_port-access_interface_all_client-status.textfsm , .*, aruba_aoscx, sh[[ow]] aa[[a]] authe[[ntication]] port-access interface all client-status
 aruba_aoscx_show_lldp_neighbors-info_detail.textfsm, .*, aruba_aoscx, sh[[ow]] ll[[dp]] nei[[ghbors-info]] d[[etail]]
 aruba_aoscx_show_bgp_all-vrfs_all_summary.textfsm, .*, aruba_aoscx, sh[[ow]] bgp all-[[vrfs]] a[[ll]] s[[ummary]]
 aruba_aoscx_show_interface_dom_detail.textfsm , .*, aruba_aoscx, sh[[ow]] int[[erface]] dom d[[etail]]
@@ -277,6 +277,7 @@ cisco_ios_dir.textfsm,  .*, cisco_ios, dir
 cisco_nxos_show_l2rib_internal_permanently-frozen-list.textfsm, .*, cisco_nxos, sh[[ow]] l2ri[[b]] i[[nternal]] pe[[rmanently-frozen-list]]
 cisco_nxos_show_configuration_session_summary.textfsm, .*, cisco_nxos, sh[[ow]] configu[[ration]] s[[ession]] su[[mmary]]
 cisco_nxos_show_interface_transceiver_details.textfsm, .*, cisco_nxos, sh[[ow]] int[[erface]] tra[[nsceiver]] de[[tails]]
+cisco_nxos_show_bgp_ipv6_unicast_summary_vrf.textfsm, .*, cisco_nxos, sh[[ow]] b[[gp]] ipv6 unicast s[[ummary]] v[[rf]]
 cisco_nxos_show_environment_temperature.textfsm, .*, cisco_nxos, sh[[ow]] env[[ironment]] t[[emperature]]
 cisco_nxos_show_forwarding_ipv4_route.textfsm, .*, cisco_nxos, sh[[ow]] fo[[rwarding]] ipv4 ro[[ute]]
 cisco_nxos_show_interface_description.textfsm, .*, cisco_nxos, sh[[ow]] int[[erface]] desc[[ription]]
@@ -287,6 +288,7 @@ cisco_nxos_show_lldp_neighbors_detail.textfsm, .*, cisco_nxos, sh[[ow]] ll[[dp]]
 cisco_nxos_show_cdp_neighbors_detail.textfsm, .*, cisco_nxos, sh[[ow]] c[[dp]] neig[[hbors]] det[[ail]]
 cisco_nxos_show_forwarding_adjacency.textfsm, .*, cisco_nxos, sh[[ow]] fo[[rwarding]] (?:ipv4 )?ad[[jacency]]
 cisco_nxos_show_ip_interface_vrf_all.textfsm, .*, cisco_nxos, sh[[ow]] ip interf[[ace]] v[[rf]] a[[ll]]
+cisco_nxos_show_ipv6_bgp_summary_vrf.textfsm, .*, cisco_nxos, sh[[ow]] ipv6 b[[gp]] s[[ummary]] v[[rf]]
 cisco_nxos_show_ipv6_interface_brief.textfsm, .*, cisco_nxos, sh[[ow]] ipv[[6]] interf[[ace]] b[[rief]]
 cisco_nxos_show_port-channel_summary.textfsm, .*, cisco_nxos, sh[[ow]] po[[rt-channel]] sum[[mary]]
 cisco_nxos_show_cts_interface_brief.textfsm, .*, cisco_nxos, sh[[ow]] cts inte[[rface]] br[[ief]]

@@ -1,0 +1,16 @@
+BGP summary information for VRF INTERNET, address family IPv6 Unicast
+BGP router identifier 1.2.3.4, local AS number 65501
+BGP table version is 349, IPv6 Unicast config peers 3, capable peers 2
+11 network entries and 21 paths using 2216 bytes of memory
+BGP attribute entries [16/2752], BGP AS path entries [5/38]
+BGP community entries [0/0], BGP clusterlist entries [2/8]
+2 received paths for inbound soft reconfiguration
+0 identical, 2 modified, 0 filtered received paths using 16 bytes
+
+Neighbor        V    AS MsgRcvd MsgSent   TblVer  InQ OutQ Up/Down  State/PfxRcd
+2a00:12:0:1:1:1:1:1
+                4 65535   17990   12016      349    0    0 04:44:56 1
+2a00:12:0::101:1:2:3:4
+                4 65535       0       0        0    0    0    2d02h Idle
+2a00:12:0::1001::2
+                4 1212   19004   12034      349    0    0    2d02h 1
