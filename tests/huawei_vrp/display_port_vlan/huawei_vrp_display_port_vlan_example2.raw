@@ -1,0 +1,30 @@
+Port                        Link Type    PVID  Trunk VLAN List
+-------------------------------------------------------------------------------
+GigabitEthernet0/0/1        trunk        1     1-4094
+GigabitEthernet0/0/2        trunk        1     1 249-255
+GigabitEthernet0/0/3        trunk        999   255 300 999
+GigabitEthernet0/0/4        trunk        999   255 300 999
+GigabitEthernet0/0/5        access       330   -
+GigabitEthernet0/0/6        access       330   -
+GigabitEthernet0/0/7        access       330   -
+GigabitEthernet0/0/8        access       330   -
+GigabitEthernet0/0/9        access       330   -
+GigabitEthernet0/0/10       access       330   -
+GigabitEthernet0/0/11       access       330   -
+GigabitEthernet0/0/12       access       330   -
+GigabitEthernet0/0/13       access       300   -
+GigabitEthernet0/0/14       access       300   -
+GigabitEthernet0/0/15       access       300   -
+GigabitEthernet0/0/16       access       300   -
+GigabitEthernet0/0/17       access       300   -
+GigabitEthernet0/0/18       access       300   -
+GigabitEthernet0/0/19       access       300   -
+GigabitEthernet0/0/20       access       300   -
+GigabitEthernet0/0/21       auto         450   1-4094
+GigabitEthernet0/0/22       auto         450   1-4094
+GigabitEthernet0/0/23       auto         254   1-4094
+GigabitEthernet0/0/24       auto         255   1-4094
+GigabitEthernet0/0/25       auto         1     1-4094
+GigabitEthernet0/0/26       auto         1     1-4094
+GigabitEthernet0/0/27       trunk        1     1-4094
+GigabitEthernet0/0/28       trunk        1     1-4094

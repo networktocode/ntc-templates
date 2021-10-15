@@ -1,0 +1,41 @@
+PHY: Physical
+*down: administratively down
+#down: LBDT down
+(l): loopback
+(s): spoofing
+(E): E-Trunk down
+(b): BFD down
+(e): ETHOAM down
+(dl): DLDP down
+(lb): LBDT block
+Interface                     PHY     Protocol Description
+GE0/0/1                       up      up       <C4> work - station 1
+GE0/0/2                       up      up       <C4> work - station 1
+GE0/0/3                       up      up       <C4> work - station 1
+GE0/0/4                       up      up       <C4> work - station 1
+GE0/0/5                       up      up       <C4> work - station 1
+GE0/0/6                       up      up       <C4> work - station 1
+GE0/0/7                       up      up       <C4> work - station 1
+GE0/0/8                       up      up       <C4> work - station 1
+GE0/0/9                       up      up       <C4> work - station 1
+GE0/0/10                      up      up       <C4> work - station 1
+GE0/0/11                      up      up       <C4> work - station 1
+GE0/0/12                      up      up       <C4> work - station 1
+GE0/0/13                      up      up       <C4> work - station 1
+GE0/0/14                      up      up       <C4> work - station 1
+GE0/0/15                      up      up       <C4> work - station 1
+GE0/0/16                      down    down     <C4> work - station 1
+GE0/0/17                      up      up       <C4> work - station 1
+GE0/0/18                      up      up       <C4> work - station 1
+GE0/0/19                      down    down     <C4> work - station 1
+GE0/0/20                      up      up       <C4> work - station 1
+GE0/0/21                      down    down     <C4> work - station 1
+GE0/0/22                      up      up       <C4> work - station 1
+GE0/0/23                      up      up       <C4> work - station 1
+GE0/0/24                      up      up       <C4> work - station 1
+GE0/0/25                      *down   down
+GE0/0/26                      *down   down
+GE0/0/27                      up      up       spine Uplink
+GE0/0/28                      up      up       spine Uplink 2
+NULL0                         up      up(s)
+Vlanif1                       up      up
