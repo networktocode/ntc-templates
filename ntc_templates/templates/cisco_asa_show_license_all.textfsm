@@ -33,26 +33,30 @@ Value PRIVACY_HOSTNAME_CALLHOME (.+?)
 Value PRIVACY_HOSTNAME_SMART (.+?)
 Value PRIVACY_VERSION (.+?)
 Value TRANSPORT_TYPE (.+?)
+Value LICENSE_RESERVATION (.+?)
+Value List EXPORT_FEATURES (\S+)
 
 Start
   ^\s*$$
   ^Smart\s+Licensing\s+Status
   ^Smart\s+Licensing\s+is\s+${SMART_STATUS}\s*$$
   ^Utility:\s*$$ -> UTILITY
-  ^Data Privacy:\s*$$ -> PRIVACY
+  ^Data\s+Privacy:\s*$$ -> PRIVACY
   ^Transport:\s*$$ -> TRANSPORT
   ^Registration:\s*$$ -> REGISTRATION
   ^License\s+Authorization:\s*$$ -> AUTHORIZATION
   ^License\s+Usage\s*$$ -> LICENSE_USAGE
   ^Product\s+Information\s*$$ -> PRODUCT_INFORMATION
   ^Agent\s+Version\s*$$ -> AGENT_VERSION
+  ^Export\s+Authorization Key:\s*$$ -> EXPORT_AUTHORIZATION
+  ^Reservation\s+Info\s*$$ -> RESERVATION_INFO
   ^=+\s*$$
   ^. -> Error
 
 UTILITY
   ^\s*$$
   ^\s+Status:\s+${UTILITY_STATUS}\s*$$
-  ^Data Privacy:\s*$$ -> PRIVACY
+  ^Data\s+Privacy:\s*$$ -> PRIVACY
   ^Utility:\s*$$ -> UTILITY
   ^=+\s*$$
   ^. -> Error
@@ -64,7 +68,7 @@ PRIVACY
   ^\s+Smart Licensing hostname privacy:\s+${PRIVACY_HOSTNAME_SMART}\s*$$
   ^\s+Version privacy:\s+${PRIVACY_VERSION}\s*$$
   ^Transport:\s*$$ -> TRANSPORT
-  ^Data Privacy:\s*$$ -> PRIVACY
+  ^Data\s+Privacy:\s*$$ -> PRIVACY
   ^=+\s*$$
   ^. -> Error
 
@@ -112,6 +116,7 @@ AUTHORIZATION
   ^Registration:\s*$$ -> REGISTRATION
   ^License\s+Authorization:\s*$$ -> AUTHORIZATION
   ^Utility:\s*$$ -> UTILITY
+  ^Export\s+Authorization Key:\s*$$ -> EXPORT_AUTHORIZATION
   ^=+\s*$$
   ^. -> Error
 
@@ -152,5 +157,22 @@ AGENT_VERSION
   ^License\s+Usage\s*$$ -> LICENSE_USAGE
   ^Product\s+Information\s*$$ -> PRODUCT_INFORMATION
   ^Agent\s+Version\s*$$ -> AGENT_VERSION
+  ^Reservation\s+Info\s*$$ -> RESERVATION_INFO
+  ^=+\s*$$
+  ^. -> Error
+
+EXPORT_AUTHORIZATION
+  ^\s*$$
+  ^\s{4}${EXPORT_FEATURES}\s*$$
+  ^\s+Features Authorized:\s*$$ -> EXPORT_AUTHORIZATION
+  ^Export\s+Authorization Key:\s*$$ -> EXPORT_AUTHORIZATION
+  ^Utility:\s*$$ -> UTILITY
+  ^=+\s*$$
+  ^. -> Error
+
+RESERVATION_INFO
+  ^\s*$$
+  ^License\s+reservation:\s+${LICENSE_RESERVATION}\s*$$
+  ^Reservation\s+Info\s*$$ -> RESERVATION_INFO
   ^=+\s*$$
   ^. -> Error
