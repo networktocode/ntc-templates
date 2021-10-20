@@ -27,16 +27,52 @@ Value LICENSE_STATUS (.+?)
 Value PID (.+?)
 Value SN (.+?)
 Value SMART_AGENT_VERSION (.+?)
+Value UTILITY_STATUS (.+?)
+Value PRIVACY_SEND_HOSTNAME (.+?)
+Value PRIVACY_HOSTNAME_CALLHOME (.+?)
+Value PRIVACY_HOSTNAME_SMART (.+?)
+Value PRIVACY_VERSION (.+?)
+Value TRANSPORT_TYPE (.+?)
 
 Start
   ^\s*$$
   ^Smart\s+Licensing\s+Status
   ^Smart\s+Licensing\s+is\s+${SMART_STATUS}\s*$$
+  ^Utility:\s*$$ -> UTILITY
+  ^Data Privacy:\s*$$ -> PRIVACY
+  ^Transport:\s*$$ -> TRANSPORT
   ^Registration:\s*$$ -> REGISTRATION
   ^License\s+Authorization:\s*$$ -> AUTHORIZATION
   ^License\s+Usage\s*$$ -> LICENSE_USAGE
   ^Product\s+Information\s*$$ -> PRODUCT_INFORMATION
   ^Agent\s+Version\s*$$ -> AGENT_VERSION
+  ^=+\s*$$
+  ^. -> Error
+
+UTILITY
+  ^\s*$$
+  ^\s+Status:\s+${UTILITY_STATUS}\s*$$
+  ^Data Privacy:\s*$$ -> PRIVACY
+  ^Utility:\s*$$ -> UTILITY
+  ^=+\s*$$
+  ^. -> Error
+
+PRIVACY
+  ^\s*$$
+  ^\s+Sending Hostname:\s+${PRIVACY_SEND_HOSTNAME}\s*$$
+  ^\s+Callhome hostname privacy:\s+${PRIVACY_HOSTNAME_CALLHOME}\s*$$
+  ^\s+Smart Licensing hostname privacy:\s+${PRIVACY_HOSTNAME_SMART}\s*$$
+  ^\s+Version privacy:\s+${PRIVACY_VERSION}\s*$$
+  ^Transport:\s*$$ -> TRANSPORT
+  ^Data Privacy:\s*$$ -> PRIVACY
+  ^=+\s*$$
+  ^. -> Error
+
+TRANSPORT
+  ^\s*$$
+  ^\s+Type:\s+${TRANSPORT_TYPE}\s*$$
+  ^Registration:\s*$$ -> REGISTRATION
+  ^Transport:\s*$$ -> TRANSPORT
   ^=+\s*$$
   ^. -> Error
 
