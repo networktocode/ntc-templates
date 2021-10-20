@@ -73,6 +73,7 @@ TRANSPORT
   ^\s+Type:\s+${TRANSPORT_TYPE}\s*$$
   ^Registration:\s*$$ -> REGISTRATION
   ^Transport:\s*$$ -> TRANSPORT
+  ^License\s+Usage\s*$$ -> LICENSE_USAGE
   ^=+\s*$$
   ^. -> Error
 
@@ -110,6 +111,7 @@ AUTHORIZATION
   ^Smart\s+Licensing\s+is\s+${SMART_STATUS}\s*$$
   ^Registration:\s*$$ -> REGISTRATION
   ^License\s+Authorization:\s*$$ -> AUTHORIZATION
+  ^Utility:\s*$$ -> UTILITY
   ^=+\s*$$
   ^. -> Error
 
