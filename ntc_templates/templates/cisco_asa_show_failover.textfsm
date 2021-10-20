@@ -31,6 +31,7 @@ Value List INTERFACES_STATE_MATE (\S+)
 Start
   ^Failover\s+${STATE}\s*$$
   ^Failover\s+unit\s+${ROLE}\s*$$
+  ^Failover\s+LAN\s+Interface:\s+not Configured\s*$$
   ^Failover\s+LAN\s+Interface:\s+${LAN_INTF_NAME}\s+${LAN_INTF}\s+\(${LAN_INTF_STATE}\)\s*$$
   ^Version:\s+Ours\s+${SW_VERSION},\s+Mate\s+${SW_VERSION_MATE}\s*$$
   ^(?:Group\s+${FAILOVER_GROUP}\s+|)[Ll]ast\s+[Ff]ailover\s+at:\s+${LAST_FAILOVER_TIME}\s+${LAST_FAILOVER_TIMEZONE}\s+${LAST_FAILOVER_MONTH}\s+${LAST_FAILOVER_DAY}\s+${LAST_FAILOVER_YEAR}\s*$$
