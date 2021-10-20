@@ -24,6 +24,7 @@ Value LICENSE_DESCRIPTION (.+?)
 Value LICENSE_COUNT (\d+)
 Value LICENSE_VERSION (\S+)
 Value LICENSE_STATUS (.+?)
+Value LICENSE_EXPORT_STATUS (.+?)
 Value PID (.+?)
 Value SN (.+?)
 Value SMART_AGENT_VERSION (.+?)
@@ -127,6 +128,7 @@ LICENSE_USAGE
   ^\s+Count:\s+${LICENSE_COUNT}\s*$$
   ^\s+Version:\s+${LICENSE_VERSION}\s*$$
   ^\s+Status:\s+${LICENSE_STATUS}\s*$$
+  ^\s+Export\s+status:\s+${LICENSE_EXPORT_STATUS}\s*$$
   ^Product\s+Information\s*$$ -> PRODUCT_INFORMATION
   ^Agent\s+Version\s*$$ -> AGENT_VERSION
   ^Smart\s+Licensing\s+is\s+${SMART_STATUS}\s*$$
