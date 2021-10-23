@@ -25,7 +25,23 @@ TYPE2
   # Order of the group in brackets here matters
   ^\s*(?:\*\s+R|\*|R|\s)\s*(?:\d+|-+) -> Continue.Record
   ^\s*(?:\*\s+R|\*|R|\s)\s*${VLAN}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s*$$ -> Continue
-  ^\s*(?:\*\s+R|\*|R|\s)\s*${VLAN}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+(?!\S+?,)${DESTINATION_PORT}\s*$$ -> Continue
+  ^\s*(?:\*\s+R|\*|R|\s)\s*${VLAN}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+(?!\S+?,)${DESTINATION_PORT}\s*$$ -> Record
+  ^\s*(?:\*\s+R|\*|R|\s+)\s*${VLAN}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+${DESTINATION_PORT}  -> Continue
+  ^\s*(?:\*\s+R|\*|R|\s+)\s*${VLAN}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+\S+? ${DESTINATION_PORT}  -> Continue
+  ^\s*(?:\*\s+R|\*|R|\s+)\s*${VLAN}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+(?:\S+? ){2}${DESTINATION_PORT}  -> Continue
+  ^\s*(?:\*\s+R|\*|R|\s+)\s*${VLAN}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+(?:\S+? ){3}${DESTINATION_PORT}(?: |$$) -> Continue
+  ^\s*(?:\*\s+R|\*|R|\s+)\s*${VLAN}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+(?:\S+? ){4}${DESTINATION_PORT}(?: |$$) -> Continue
+  ^\s*(?:\*\s+R|\*|R|\s+)\s*${VLAN}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+(?:\S+? ){5}${DESTINATION_PORT}(?: |$$) -> Continue
+  ^\s*(?:\*\s+R|\*|R|\s+)\s*${VLAN}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+(?:\S+? ){6}${DESTINATION_PORT}(?: |$$) -> Continue
+  ^\s*(?:\*\s+R|\*|R|\s+)\s*${VLAN}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+(?:\S+? ){7}${DESTINATION_PORT}(?: |$$) -> Continue
+  ^\s{20}\s+${DESTINATION_PORT}  -> Continue
+  ^\s{20}\s+(?:\S+? )${DESTINATION_PORT}  -> Continue
+  ^\s{20}\s+(?:\S+? ){2}${DESTINATION_PORT}  -> Continue
+  ^\s{20}\s+(?:\S+? ){3}${DESTINATION_PORT}(?: |$$) -> Continue
+  ^\s{20}\s+(?:\S+? ){4}${DESTINATION_PORT}(?: |$$) -> Continue
+  ^\s{20}\s+(?:\S+? ){5}${DESTINATION_PORT}(?: |$$) -> Continue
+  ^\s{20}\s+(?:\S+? ){6}${DESTINATION_PORT}(?: |$$) -> Continue
+  ^\s{20}\s+(?:\S+? ){7}${DESTINATION_PORT}(?: |$$) -> Continue
   ^\s*(?:\*\s+R|\*|R|\s)\s*${VLAN}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+${DESTINATION_PORT}, -> Continue
   ^\s*(?:\*\s+R|\*|R|\s)\s*(?:\d+|-+)\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+\S+?,${DESTINATION_PORT}, -> Continue
   ^\s*(?:\*\s+R|\*|R|\s)\s*(?:\d+|-+)\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+(?:\S+?,){2}${DESTINATION_PORT}, -> Continue
