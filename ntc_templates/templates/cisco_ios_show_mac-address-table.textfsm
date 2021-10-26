@@ -1,7 +1,7 @@
 Value DESTINATION_ADDRESS ([0-9a-fA-F]{4}\.[0-9a-fA-F]{4}\.[0-9a-fA-F]{4})
 Value TYPE (\S+)
 Value VLAN (\S+)
-Value List DESTINATION_PORT (\S+?)
+Value List DESTINATION_PORT ([^,\s]+)
 
 Start
   ^Destination\s+Address\s+Address\s+Type\s+VLAN\s+Destination\s+Port -> TYPE1
@@ -23,46 +23,37 @@ TYPE1
 
 TYPE2
   # Order of the group in brackets here matters
-  ^\s*(?:\*\s+R|\*|R|\s)\s*(?:\d+|-+) -> Continue.Record
-  ^\s*(?:\*\s+R|\*|R|\s)\s*${VLAN}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s*$$ -> Continue
-  ^\s*(?:\*\s+R|\*|R|\s)\s*${VLAN}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+(?!\S+?,)${DESTINATION_PORT}\s*$$ -> Record
-  ^\s*(?:\*\s+R|\*|R|\s+)\s*${VLAN}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+${DESTINATION_PORT}  -> Continue
-  ^\s*(?:\*\s+R|\*|R|\s+)\s*${VLAN}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+\S+? ${DESTINATION_PORT}  -> Continue
-  ^\s*(?:\*\s+R|\*|R|\s+)\s*${VLAN}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+(?:\S+? ){2}${DESTINATION_PORT}  -> Continue
-  ^\s*(?:\*\s+R|\*|R|\s+)\s*${VLAN}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+(?:\S+? ){3}${DESTINATION_PORT}(?: |$$) -> Continue
-  ^\s*(?:\*\s+R|\*|R|\s+)\s*${VLAN}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+(?:\S+? ){4}${DESTINATION_PORT}(?: |$$) -> Continue
-  ^\s*(?:\*\s+R|\*|R|\s+)\s*${VLAN}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+(?:\S+? ){5}${DESTINATION_PORT}(?: |$$) -> Continue
-  ^\s*(?:\*\s+R|\*|R|\s+)\s*${VLAN}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+(?:\S+? ){6}${DESTINATION_PORT}(?: |$$) -> Continue
-  ^\s*(?:\*\s+R|\*|R|\s+)\s*${VLAN}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+(?:\S+? ){7}${DESTINATION_PORT}(?: |$$) -> Continue
-  ^\s{20}\s+${DESTINATION_PORT}  -> Continue
-  ^\s{20}\s+(?:\S+? )${DESTINATION_PORT}  -> Continue
-  ^\s{20}\s+(?:\S+? ){2}${DESTINATION_PORT}  -> Continue
-  ^\s{20}\s+(?:\S+? ){3}${DESTINATION_PORT}(?: |$$) -> Continue
-  ^\s{20}\s+(?:\S+? ){4}${DESTINATION_PORT}(?: |$$) -> Continue
-  ^\s{20}\s+(?:\S+? ){5}${DESTINATION_PORT}(?: |$$) -> Continue
-  ^\s{20}\s+(?:\S+? ){6}${DESTINATION_PORT}(?: |$$) -> Continue
-  ^\s{20}\s+(?:\S+? ){7}${DESTINATION_PORT}(?: |$$) -> Continue
-  ^\s*(?:\*\s+R|\*|R|\s)\s*${VLAN}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+${DESTINATION_PORT}, -> Continue
-  ^\s*(?:\*\s+R|\*|R|\s)\s*(?:\d+|-+)\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+\S+?,${DESTINATION_PORT}, -> Continue
-  ^\s*(?:\*\s+R|\*|R|\s)\s*(?:\d+|-+)\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+(?:\S+?,){2}${DESTINATION_PORT}, -> Continue
-  ^\s*(?:\*\s+R|\*|R|\s)\s*(?:\d+|-+)\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+(?:\S+?,){3}${DESTINATION_PORT}(?:,|$$) -> Continue
-  ^\s*(?:\*\s+R|\*|R|\s)\s*(?:\d+|-+)\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+(?:\S+?,){4}${DESTINATION_PORT}(?:,|$$) -> Continue
-  ^\s*(?:\*\s+R|\*|R|\s)\s*(?:\d+|-+)\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+(?:\S+?,){5}${DESTINATION_PORT}(?:,|$$) -> Continue
-  ^\s*(?:\*\s+R|\*|R|\s)\s*(?:\d+|-+)\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+(?:\S+?,){6}${DESTINATION_PORT}(?:,|$$) -> Continue
-  ^\s*(?:\*\s+R|\*|R|\s)\s*(?:\d+|-+)\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+(?:\S+?,){7}${DESTINATION_PORT}(?:,|$$) -> Continue
-  ^\s{20}\s+${DESTINATION_PORT}, -> Continue
-  ^\s{20}\s+(?:\S+?,)${DESTINATION_PORT}, -> Continue
-  ^\s{20}\s+(?:\S+?,){2}${DESTINATION_PORT}, -> Continue
-  ^\s{20}\s+(?:\S+?,){3}${DESTINATION_PORT}(?:,|$$) -> Continue
-  ^\s{20}\s+(?:\S+?,){4}${DESTINATION_PORT}(?:,|$$) -> Continue
-  ^\s{20}\s+(?:\S+?,){5}${DESTINATION_PORT}(?:,|$$) -> Continue
-  ^\s{20}\s+(?:\S+?,){6}${DESTINATION_PORT}(?:,|$$) -> Continue
-  ^\s{20}\s+(?:\S+?,){7}${DESTINATION_PORT}(?:,|$$) -> Continue
+  ^\s*(\*\s+R|\*|R|\s)\s*(\d+|-+|[Nn]/[Aa]) -> Continue.Record
+  # using 20 spaces should ensure that lines only match destination port flowing to next line
+  ^\s{20}\s+${DESTINATION_PORT}(\s+|,\s*)\S -> Continue
+  ^\s{20}\s+${DESTINATION_PORT},*\s*$$
+  ^\s{20}\s+[^,\s]+(\s+|,\s*)${DESTINATION_PORT}(\s+|,\s*)\S -> Continue
+  ^\s{20}\s+[^,\s]+(\s+|,\s*)${DESTINATION_PORT},*\s*$$
+  ^\s{20}\s+([^,\s]+(\s+|,\s*)){2}${DESTINATION_PORT}(\s+|,\s*)\S -> Continue
+  ^\s{20}\s+([^,\s]+(\s+|,\s*)){2}${DESTINATION_PORT},*\s*$$
+  ^\s{20}\s+([^,\s]+(\s+|,\s*)){3}${DESTINATION_PORT}(\s+|,\s*)\S -> Continue
+  ^\s{20}\s+([^,\s]+(\s+|,\s*)){3}${DESTINATION_PORT},*\s*$$
+  ^\s{20}\s+([^,\s]+(\s+|,\s*)){4}${DESTINATION_PORT}(\s+|,\s*)\S -> Continue
+  ^\s{20}\s+([^,\s]+(\s+|,\s*)){4}${DESTINATION_PORT},*\s*$$
+  ^\s{20}\s+([^,\s]+(\s+|,\s*)){5}${DESTINATION_PORT}(\s+|,\s*)\S -> Continue
+  ^\s{20}\s+([^,\s]+(\s+|,\s*)){5}${DESTINATION_PORT},*\s*$$
+  ^\s*(\*\s+R|\*|R|\s)\s*${VLAN}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s*$$
+  ^\s*(\*\s+R|\*|R|\s)\s*${VLAN}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+${DESTINATION_PORT}(\s+|,\s*)\S -> Continue
+  ^\s*(\*\s+R|\*|R|\s)\s*${VLAN}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+${DESTINATION_PORT},*\s*$$
+  ^\s*(\*\s+R|\*|R|\s)\s*${VLAN}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+[^,\s]+(\s+|,\s*)${DESTINATION_PORT}(\s+|,\s*)\S -> Continue
+  ^\s*(\*\s+R|\*|R|\s)\s*${VLAN}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+[^,\s]+?(\s+|,\s*)${DESTINATION_PORT},*\s*$$
+  ^\s*(\*\s+R|\*|R|\s)\s*${VLAN}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+([^,\s]+(\s+|,\s*)){2}${DESTINATION_PORT}(\s+|,\s*)\S -> Continue
+  ^\s*(\*\s+R|\*|R|\s)\s*${VLAN}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+([^,\s]+(\s+|,\s*)){2}${DESTINATION_PORT},*\s*$$
+  ^\s*(\*\s+R|\*|R|\s)\s*${VLAN}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+([^,\s]+(\s+|,\s*)){3}${DESTINATION_PORT}(\s+|,\s*)\S -> Continue
+  ^\s*(\*\s+R|\*|R|\s)\s*${VLAN}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+([^,\s]+(\s+|,\s*)){3}${DESTINATION_PORT},*\s*$$
+  ^\s*(\*\s+R|\*|R|\s)\s*${VLAN}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+([^,\s]+(\s+|,\s*)){4}${DESTINATION_PORT}(\s+|,\s*)\S -> Continue
+  ^\s*(\*\s+R|\*|R|\s)\s*${VLAN}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+([^,\s]+(\s+|,\s*)){4}${DESTINATION_PORT},*\s*$$
+  ^\s*(\*\s+R|\*|R|\s)\s*${VLAN}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+([^,\s]+(\s+|,\s*)){5}${DESTINATION_PORT}(\s+|,\s*)\S -> Continue
+  ^\s*(\*\s+R|\*|R|\s)\s*${VLAN}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+([^,\s]+(\s+|,\s*)){5}${DESTINATION_PORT},*\s*$$
   ^-+\+-+
   ^Displaying\s+entries
   ^\s+vlan\s+mac address\s+type\s+learn\s+age\s+ports
   ^\s*$$
-  ^\s*\S+
   ^Multicast\s+Entries -> End
   ^. -> Error
 
