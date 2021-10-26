@@ -1,16 +1,16 @@
 Value Key MODULE (\d+)
-Value PORT (\d+| {1})
-Value CARDTYPE (.+?)
-Value MODEL (\S+| {1})
-Value SERIAL (\w+| {1})
+Value PORT (\d+)
+Value CARDTYPE (\S.+?)
+Value MODEL (\S+)
+Value SERIAL (\w+)
 
 
 Start
-  ^Mod\s+Ports\s+Card\s+Type\s+Model\s+Serial -> HWInfo
+  ^Mod\s+Ports\s+Card\s+Type\s+Model\s+Serial -> Status
 
-HWInfo
+Status
   ^-+
-  ^\s*${MODULE}\s+${PORT}\s+${CARDTYPE}\s+${MODEL}\s+${SERIAL}\s*$$ -> Record
+  ^\s*${MODULE}\s+(${PORT}\s+)?${CARDTYPE}(\s+${MODEL})?(\s+${SERIAL})?\s*$$ -> Record
   ^(?:Mod|\s+M)\s+MAC\s+addresses\s+Hw\s+Fw\s+Sw\s+Status -> End
   ^Mod\s+Sub-Module\s+Model\s+Serial\s+Hw\s+Status -> End
   ^Mod\s+Redundancy\s+Role\s+Operating\s+Redundancy\s+Mode\s+Configured\s+Redundancy\s+Mode -> End
