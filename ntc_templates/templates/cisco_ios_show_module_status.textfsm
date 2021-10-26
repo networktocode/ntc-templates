@@ -7,7 +7,7 @@ Value STATUS (\w+)
 
 
 Start
-  ^Mod\s+MAC\s+addresses\s+Hw\s+Fw\s+Sw\s+Status\s*$$ -> ModStatus
+  ^\s*Mod\s+MAC\s+addresses\s+Hw\s+Fw\s+Sw\s+Status\s*$$ -> ModStatus
 
 ModStatus
   ^-+
