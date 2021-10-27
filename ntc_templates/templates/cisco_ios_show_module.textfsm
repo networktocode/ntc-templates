@@ -1,6 +1,6 @@
 Value Key MODULE (\d+)
 Value PORT (\d+)
-Value CARDTYPE (.+?)
+Value CARDTYPE (\S.+?)
 Value MODEL (\S+)
 Value SERIAL (\w+)
 
@@ -10,9 +10,11 @@ Start
 
 Status
   ^-+
-  ^\s*${MODULE}\s+${PORT}\s+${CARDTYPE}\s+${MODEL}\s+${SERIAL}\s*$$ -> Record
-  ^Mod\s+MAC\s+addresses\s+Hw\s+Fw\s+Sw\s+Status -> End
+  ^\s*${MODULE}\s+(${PORT}\s+)?${CARDTYPE}(\s+${MODEL})?(\s+${SERIAL})?\s*$$ -> Record
+  ^(?:Mod|\s+M)\s+MAC\s+addresses\s+Hw\s+Fw\s+Sw\s+Status -> End
   ^Mod\s+Sub-Module\s+Model\s+Serial\s+Hw\s+Status -> End
+  ^Mod\s+Redundancy\s+Role\s+Operating\s+Redundancy\s+Mode\s+Configured\s+Redundancy\s+Mode -> End
+  ^Mod\s+Redundancy\s+Role\s+Operating\s+Mode\s+Configured\s+Mode\s+Redundancy\s+Status -> End
   ^Mod\s+Online\s+Diag\s+Status -> End
   ^\s*$$
   ^. -> Error
