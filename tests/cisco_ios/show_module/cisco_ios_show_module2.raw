@@ -1,0 +1,32 @@
+Chassis Type : WS-C4510R+E
+
+Power consumed by backplane : 40 Watts
+
+Mod Ports Card Type                              Model              Serial No.
+---+-----+--------------------------------------+------------------+-----------
+ 1    48  10/100/1000BaseT UPOE E Series         AS-T4748-UPOE+E    ABC1234L0X3 
+ 2    48  10/100/1000BaseT UPOE E Series         AS-T4748-UPOE+E    ABC1234L15S 
+ 3    48  10/100/1000BaseT UPOE E Series         AS-T4748-UPOE+E    ABC1234L0WR 
+ 4    48  10/100/1000BaseT UPOE E Series         AS-T4748-UPOE+E    ABC1234L15B 
+ 5     4  Sup 7-E 10GE (SFP+), 1000BaseX (SFP)   AS-T45-SUP7-E      ABC1234L46Z 
+ 6     4  Sup 7-E 10GE (SFP+), 1000BaseX (SFP)   AS-T45-SUP7-E      ABC1234L0MU 
+ 8    48  10/100/1000BaseT UPOE E Series         AS-T4748-UPOE+E    ABC1234L4XM 
+ 9    48  10/100/1000BaseT UPOE E Series         AS-T4748-UPOE+E    ABC1234L17Y 
+10    12  1000BaseX (SFP)                        AS-T4612-SFP-E     ABC1234021X 
+
+ M MAC addresses                    Hw  Fw           Sw               Status
+--+--------------------------------+---+------------+----------------+---------
+ 1 ffff.ca83.ffff to ffff.ca83.ffff 1.2                               Ok       
+ 2 ffff.89a3.ffff to ffff.89a3.ffff 1.2                               Ok       
+ 3 ffff.ac5c.ffff to ffff.ac5c.ffff 1.2                               Ok       
+ 4 ffff.ca83.ffff to ffff.ca83.ffff 1.2                               Ok       
+ 5 ffff.aca5.ffff to ffff.aca5.ffff 2.1 15.0(1r)SG5  03.11.03a.E      Ok       
+ 6 ffff.aca5.ffff to ffff.aca5.ffff 2.1 15.0(1r)SG5  03.11.03a.E      Ok       
+ 8 ffff.2894.ffff to ffff.2894.ffff 1.2                               Ok       
+ 9 ffff.a78f.ffff to ffff.a78f.ffff 1.1                               Ok       
+10 ffff.0671.ffff to ffff.0671.ffff 2.0                               Ok       
+
+Mod  Redundancy role     Operating mode      Redundancy status
+----+-------------------+-------------------+----------------------------------
+ 5   Active Supervisor   SSO                 Active                            
+ 6   Standby Supervisor  SSO                 Standby hot                       
