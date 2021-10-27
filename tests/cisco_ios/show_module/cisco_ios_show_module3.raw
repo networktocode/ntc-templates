@@ -1,0 +1,38 @@
+Chassis Type : WS-C4510R+E
+
+Power consumed by backplane : 40 Watts
+
+Mod Ports Card Type                              Model              Serial No.
+---+-----+--------------------------------------+------------------+-----------
+ 1    48  10/100/1000BaseT UPOE E Series         AS-T4748-UPOE+E    ABC1234L2XQ 
+ 2    48  10/100/1000BaseT UPOE E Series         AS-T4748-UPOE+E    ABC1234L610 
+ 3    48  10/100/1000BaseT UPOE E Series         AS-T4748-UPOE+E    ABC1234L00D 
+ 4    48  10/100/1000BaseT UPOE E Series         AS-T4748-UPOE+E    ABC1234L040 
+ 5        Supervisor
+ 6     4  Sup 7-E 10GE (SFP+), 1000BaseX (SFP)   AS-T45-SUP7-E      ABC1234L1TE 
+ 7    48  10/100/1000BaseT UPOE E Series         AS-T4748-UPOE+E    ABC1234L2DR 
+ 8    48  10/100/1000BaseT UPOE E Series         AS-T4748-UPOE+E    ABC1234L2EM 
+ 9    48  10/100/1000BaseT UPOE E Series         AS-T4748-UPOE+E    ABC1234L1ND 
+10    48  10/100/1000BaseT UPOE E Series         AS-T4748-UPOE+E    ABC1234L0N7 
+
+ M MAC addresses                    Hw  Fw           Sw               Status
+--+--------------------------------+---+------------+----------------+---------
+ 1 ffff.50b0.ffff to ffff.50b0.ffff 1.0                               Ok       
+ 2 ffff.50b0.ffff to ffff.50b0.ffff 1.0                               Ok       
+ 3 ffff.50b0.ffff to ffff.50b0.ffff 1.0                               Ok       
+ 4 ffff.50b0.ffff to ffff.50b0.ffff 1.0                               Ok       
+ 5 Unknown                              Unknown      Unknown          Other    
+ 6 ffff.35a0.ffff to ffff.35a0.ffff 2.1 15.0(1r)SG5  03.11.03a.E      Ok       
+ 7 ffff.fc79.ffff to ffff.fc79.ffff 1.0                               Ok       
+ 8 ffff.f972.ffff to ffff.f972.ffff 1.0                               Ok       
+ 9 ffff.fc08.ffff to ffff.fc08.ffff 1.0                               Ok       
+10 ffff.50e2.ffff to ffff.50e2.ffff 1.0                               Ok       
+
+Mod  Redundancy role     Operating mode      Redundancy status
+----+-------------------+-------------------+----------------------------------
+ 5   Standby Supervisor  SSO                 Disabled                          
+ 6   Active Supervisor   SSO                 Active                            
+
+System Failures:
+----------------
+Power Supply: 	bad/off (see 'show power')

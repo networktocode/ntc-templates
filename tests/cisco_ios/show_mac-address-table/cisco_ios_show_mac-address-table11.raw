@@ -1,0 +1,27 @@
+Legend: * - primary entry
+        age - seconds since last seen
+        n/a - not available
+        S - secure entry
+        R - router's gateway mac address entry
+        D - Duplicate mac address entry
+        # - Fabric mac address entry. Clear mac cli doesn't clear this entry
+
+Displaying entries from active supervisor::
+
+      vlan   mac address    type   learn    age                 ports
+-----+----+---------------+-------+-----+----------+-----------------------------
+         50 5ca0.1545.f407  dynamic  Yes       20     Po50
+         50 f4ea.6748.92ad  dynamic  Yes        5     Po50
+         20 5ca0.15a8.682e  dynamic  Yes        0     Po80
+ *       38 b4e9.b0c8.0340  dynamic  Yes        0     Po5
+   R   N/A  b4e9.b0c8.01c0   static   No       -      Router
+ *      115 6064.05fa.cadd  dynamic  Yes       50     Gi3/35
+          5 a4ff.6d0d.dcf5  dynamic  Yes        0     Po10
+         40 c8f9.f9d7.a87b  dynamic  Yes       15     Po40
+          1 0100.0ccc.ccce   static   No       -    Gi1/14 Po5 Po10 Po20 
+                                                       Po30 Po40 Po50 Po60 
+                                                       Po70 Po80 Po90 
+         50 5ca0.15a9.103e  dynamic  Yes       15     Po50
+
+
+
