@@ -1,0 +1,17 @@
+Value NAME (\w{4}\/?\d?\d?)
+Value CARMEL ([0-9]{1,})
+Value PORT (\d+)
+Value IF_INDEX (\w+)
+Value UC_VERSION (\d+\.\d+)
+
+Start
+  ^\s*$$
+  ^Carmel\s+Port\s+Info:
+  ^name\s+\|log\|car\|mac\|flag\|adm\|opr\|m:s:l\|ipt\|fab\|xcar\|xpt\|if_index\|diag\|ucVer
+  ^[-+]{2,} -> Info
+  ^. -> Error
+
+Info
+  ^${NAME}\s*\|\d+\s*\|${CARMEL}\s*\|${PORT}\s+[\w-]\|\w+\s*\|\w+\s*\|\w+\s*\|\w:\w:\w\|\d+\s*\|\w+\s*\|\d+\s*\|\d+\s*\|${IF_INDEX}\|\w+\|\s*${UC_VERSION} -> Record
+  ^Done\.
+  ^. -> Error
