@@ -1,5 +1,6 @@
 Physical interface: ge-0/0/0, Enabled, Physical link is Up
   Interface index: 134, SNMP ifIndex: 502
+  Description: Test
   Link-level type: Ethernet, MTU: 1514, MRU: 0, LAN-PHY mode,
   Link-mode: Half-duplex, Speed: 1000mbps, BPDU Error: None,
   MAC-REWRITE Error: None, Loopback: Disabled, Source filtering: Disabled,
@@ -15,6 +16,16 @@ Physical interface: ge-0/0/0, Enabled, Physical link is Up
   Active alarms  : None
   Active defects : None
   Interface transmit statistics: Disabled
+
+  Logical interface ge-0/0/0.2036 (Index 74) (SNMP ifIndex 535)
+    Flags: Up SNMP-Traps 0x0 VLAN-Tag [ 0x8100.2036 ]  Encapsulation: ENET2
+    Input packets : 12439041
+    Output packets: 2552075
+    Security: Zone: Null
+    Protocol inet, MTU: 1500
+      Flags: Sendbcast-pkt-to-re, Sample-input, Sample-output
+      Addresses, Flags: Is-Preferred Is-Primary
+        Destination: 10.10.199.176/29, Local: 10.0.10.199.180, Broadcast: 10.10.199.183
 
 Physical interface: gr-0/0/0, Enabled, Physical link is Up
   Interface index: 139, SNMP ifIndex: 506
