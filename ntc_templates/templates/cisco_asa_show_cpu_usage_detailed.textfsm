@@ -1,0 +1,14 @@
+Value CORE (Core\s\d+)
+Value CPU_5_SEC (\d+\.\d+)
+Value CPU_5_SEC_DP (\d+\.\d+)
+Value CPU_5_SEC_CP (\d+\.\d+)
+Value CPU_1_MIN (\d+\.\d+)
+Value CPU_1_MIN_DP (\d+\.\d+)
+Value CPU_1_MIN_CP (\d+\.\d+)
+Value CPU_5_MIN (\d+\.\d+)
+Value CPU_5_MIN_DP (\d+\.\d+)
+Value CPU_5_MIN_CP (\d+\.\d+)
+
+
+Start
+  ^${CORE}\s+${CPU_5_SEC}\s+\(${CPU_5_SEC_DP}\s+\+\s+${CPU_5_SEC_CP}\)\s+${CPU_1_MIN}\s+\(${CPU_1_MIN_DP}\s+\+\s+${CPU_1_MIN_CP}\)\s+${CPU_5_MIN}\s+\(${CPU_5_MIN_DP}\s+\+\s+${CPU_5_MIN_CP}.+ -> Record
