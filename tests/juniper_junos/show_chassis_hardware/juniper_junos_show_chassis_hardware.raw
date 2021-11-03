@@ -1,0 +1,26 @@
+Hardware inventory:
+Item             Version  Part number  Serial number     Description
+Chassis                                A1111             MX10-T
+Midplane         REV 08   711-038213   XXXX2118          MX10-T
+PEM 0            Rev 05   740-028288   AJ00000           AC Power Entry Module
+PEM 1            Rev 05   740-028288   AJ00001           AC Power Entry Module
+Routing Engine            BUILTIN      BUILTIN           Routing Engine
+TFEB 0                    BUILTIN      BUILTIN           Forwarding Engine Processor
+  QXM 0          REV 05   711-028408   ABCB4000          MPC QXM
+FPC 0                     BUILTIN      BUILTIN           MPC BUILTIN
+  MIC 0                   BUILTIN      BUILTIN           4x 10GE XFP
+    PIC 0                 BUILTIN      BUILTIN           4x 10GE XFP
+      Xcvr 0     REV 01   740-011571   USASR24490        XFP-10G-SR
+FPC 1                     BUILTIN      BUILTIN           MPC BUILTIN
+  MIC 0          REV 30   750-028380   CALW4921          3D 2x 10GE XFP
+    PIC 0                 BUILTIN      BUILTIN           1x 10GE XFP
+      Xcvr 0     REV 01   740-011607   A1JACT3           XFP-10G-LR
+    PIC 1                 BUILTIN      BUILTIN           1x 10GE XFP
+      Xcvr 0     REV 01   740-011607   A1KBPNC           XFP-10G-LR
+  MIC 1          REV 20   750-028380   ABCC2190          3D 2x 10GE XFP
+    PIC 2                 BUILTIN      BUILTIN           1x 10GE XFP
+      Xcvr 0              NON-JNPR     CC37BK0PQ         XFP-10G-SR
+    PIC 3                 BUILTIN      BUILTIN           1x 10GE XFP
+      Xcvr 0     REV 01   740-014279   EOXH27560005      XFP-10G-LR
+      Xcvr 1     REV 01   740-014279   XXXXXXXXXXXX      XFP-10G-LR
+Fan Tray                                                 Fan Tray

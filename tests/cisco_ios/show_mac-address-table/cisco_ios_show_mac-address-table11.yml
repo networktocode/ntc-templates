@@ -1,0 +1,62 @@
+---
+parsed_sample:
+  - destination_address: "5ca0.1545.f407"
+    type: "dynamic"
+    vlan: "50"
+    destination_port:
+      - "Po50"
+  - destination_address: "f4ea.6748.92ad"
+    type: "dynamic"
+    vlan: "50"
+    destination_port:
+      - "Po50"
+  - destination_address: "5ca0.15a8.682e"
+    type: "dynamic"
+    vlan: "20"
+    destination_port:
+      - "Po80"
+  - destination_address: "b4e9.b0c8.0340"
+    type: "dynamic"
+    vlan: "38"
+    destination_port:
+      - "Po5"
+  - destination_address: "b4e9.b0c8.01c0"
+    type: "static"
+    vlan: "N/A"
+    destination_port:
+      - "Router"
+  - destination_address: "6064.05fa.cadd"
+    type: "dynamic"
+    vlan: "115"
+    destination_port:
+      - "Gi3/35"
+  - destination_address: "a4ff.6d0d.dcf5"
+    type: "dynamic"
+    vlan: "5"
+    destination_port:
+      - "Po10"
+  - destination_address: "c8f9.f9d7.a87b"
+    type: "dynamic"
+    vlan: "40"
+    destination_port:
+      - "Po40"
+  - destination_address: "0100.0ccc.ccce"
+    type: "static"
+    vlan: "1"
+    destination_port:
+      - "Gi1/14"
+      - "Po5"
+      - "Po10"
+      - "Po20"
+      - "Po30"
+      - "Po40"
+      - "Po50"
+      - "Po60"
+      - "Po70"
+      - "Po80"
+      - "Po90"
+  - destination_address: "5ca0.15a9.103e"
+    type: "dynamic"
+    vlan: "50"
+    destination_port:
+      - "Po50"
