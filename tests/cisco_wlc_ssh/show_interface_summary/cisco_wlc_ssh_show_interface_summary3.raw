@@ -1,0 +1,13 @@
+ Number of Interfaces.......................... 8
+
+Interface Name                   Port Vlan Id  IP Address      Type    Ap Mgr Guest
+-------------------------------- ---- -------- --------------- ------- ------ -----
+cisco-phons                      1    111      192.169.111.253 Dynamic No     No   
+test iphone                      1    114      192.168.114.252 Dynamic No     No   
+management                       1    113      192.168.113.253 Static  Yes    No   
+virtual                          N/A  N/A      1.1.1.1         Static  No     No   
+vlan1                            1    untagged 192.168.1.103   Dynamic No     No   
+wireless devices                 1    112      192.168.112.2   Dynamic No     No   
+wireless guest                   3    115      192.168.115.242 Dynamic No     No  
+office 221 space     warehouse   3    116      192.168.116.242 Dynamic No     No  
+(Test) with chars*/&#$%          3    117      192.168.117.242 Dynamic No     No
