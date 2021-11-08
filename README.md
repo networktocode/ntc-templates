@@ -72,22 +72,29 @@ $
 
 ### Define Custom Templates Directory
 
-To use a custom templates directory set the environmental variable `NTC_TEMPLATES_DIR`.
+To use a custom templates directory set the environmental variable `NTC_TEMPLATES_DIR` or pass the desired directory to `parse_output`.
 
 **Requirements**
 1. `index` file needs to be defined with standard structure. [See](#Index-File)
 2. Each custom template should be defined.
 
-To manaully set variable:
+To manually set the environment variable:
 ```shell
 export NTC_TEMPLATES_DIR=/path/to/new/location/templates
 ```
 
-To set within your program:
+To set the environment variable within your program:
 ```python
 import os
 os.environ["NTC_TEMPLATES_DIR"] = "/path/to/new/templates/location/templates"
 ```
+
+To specify the custom directory when calling `parse_output`:
+```python
+parse_output(platform="cisco_ios", command="show vlan", data=vlan_output, template_dir="/path/to/new/templates/location/templates")
+```
+
+Additionally, when specifying the templates directory in `parse_output`, the `try_fallback` flag can be set to use the default directory when no matching template is found in the custom directory.
 
 Contributing
 ------------
