@@ -5,3 +5,4 @@ Value TYPE (\S+)
 
 Start
  ^${INTERFACE}\s+${IP}\s+${MAC}\s+${TYPE} -> Record
+ ^. -> Error
