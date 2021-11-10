@@ -1,0 +1,32 @@
+Unicast Entries
+ vlan     mac address     type        protocols               port
+---------+---------------+--------+---------------------+-------------------------
+  10      0002.d160.47fb   dynamic ip,ipx,assigned,other Port-channel6              
+  10      0002.d160.47fc   dynamic ip,ipx,assigned,other Port-channel6              
+  10      000e.b67e.3a38   dynamic ip,ipx,assigned,other GigabitEthernet3/48        
+  10      0015.5dda.fa00   dynamic ip,ipx,assigned,other GigabitEthernet3/44        
+  10      1062.e563.0d5b   dynamic ip,ipx,assigned,other GigabitEthernet7/42        
+  10      1407.0805.1346   dynamic ip,ipx,assigned,other GigabitEthernet1/37        
+  10      149d.9981.52eb   dynamic ip,ipx,assigned,other Port-channel8              
+  10      1864.72c2.c5d8   dynamic ip,ipx,assigned,other Port-channel1              
+  10      2c44.fd03.edb5   dynamic ip,ipx,assigned,other GigabitEthernet4/37        
+  10      2c59.e5d6.bf5c   dynamic ip,ipx,assigned,other GigabitEthernet3/39        
+  10      3863.bb46.62f0   dynamic ip,ipx,assigned,other GigabitEthernet7/44        
+2062      a626.5311.40bb   dynamic ip,ipx,assigned,other GigabitEthernet7/48        
+2062      a89d.21d7.223f    static ip,ipx,assigned,other Switch                         
+
+Multicast Entries
+ vlan     mac address     type    ports
+---------+---------------+-------+--------------------------------------------
+   1      0100.0ccc.ccce   system Po1,Po6,Po8
+   1      ffff.ffff.ffff   system Po1,Po6,Po8
+  10      ffff.ffff.ffff   system Gi1/2,Gi1/3,Gi1/5,Gi1/7,Gi1/8,Gi1/9,Gi1/12
+                                  Gi1/13,Gi1/14,Gi1/15,Gi1/16,Gi1/18,Gi1/23
+                                  Switch,Po1,Po6,Po8
+  15      ffff.ffff.ffff   system Gi1/2,Gi1/3,Gi1/5,Gi1/7,Gi1/8,Gi1/9,Gi1/12
+                                  Gi8/43,Switch,Po1,Po2,Po6,Po8
+ 790      ffff.ffff.ffff   system Switch,Po1,Po6,Po8
+Gi1/48    ffff.ffff.ffff   system Gi1/48,Switch
+2060      ffff.ffff.ffff   system Gi8/48,Switch,Po1,Po6,Po8
+2061      ffff.ffff.ffff   system Gi7/48,Switch,Po1,Po6,Po8
+2062      ffff.ffff.ffff   system Gi7/48,Switch,Po1,Po6,Po8

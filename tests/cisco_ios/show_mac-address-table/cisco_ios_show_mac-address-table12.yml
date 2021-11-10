@@ -1,0 +1,67 @@
+---
+parsed_sample:
+  - destination_address: "0002.d160.47fb"
+    type: "dynamic"
+    vlan: "10"
+    destination_port:
+      - "Port-channel6"
+  - destination_address: "0002.d160.47fc"
+    type: "dynamic"
+    vlan: "10"
+    destination_port:
+      - "Port-channel6"
+  - destination_address: "000e.b67e.3a38"
+    type: "dynamic"
+    vlan: "10"
+    destination_port:
+      - "GigabitEthernet3/48"
+  - destination_address: "0015.5dda.fa00"
+    type: "dynamic"
+    vlan: "10"
+    destination_port:
+      - "GigabitEthernet3/44"
+  - destination_address: "1062.e563.0d5b"
+    type: "dynamic"
+    vlan: "10"
+    destination_port:
+      - "GigabitEthernet7/42"
+  - destination_address: "1407.0805.1346"
+    type: "dynamic"
+    vlan: "10"
+    destination_port:
+      - "GigabitEthernet1/37"
+  - destination_address: "149d.9981.52eb"
+    type: "dynamic"
+    vlan: "10"
+    destination_port:
+      - "Port-channel8"
+  - destination_address: "1864.72c2.c5d8"
+    type: "dynamic"
+    vlan: "10"
+    destination_port:
+      - "Port-channel1"
+  - destination_address: "2c44.fd03.edb5"
+    type: "dynamic"
+    vlan: "10"
+    destination_port:
+      - "GigabitEthernet4/37"
+  - destination_address: "2c59.e5d6.bf5c"
+    type: "dynamic"
+    vlan: "10"
+    destination_port:
+      - "GigabitEthernet3/39"
+  - destination_address: "3863.bb46.62f0"
+    type: "dynamic"
+    vlan: "10"
+    destination_port:
+      - "GigabitEthernet7/44"
+  - destination_address: "a626.5311.40bb"
+    type: "dynamic"
+    vlan: "2062"
+    destination_port:
+      - "GigabitEthernet7/48"
+  - destination_address: "a89d.21d7.223f"
+    type: "static"
+    vlan: "2062"
+    destination_port:
+      - "Switch"
