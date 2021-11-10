@@ -15,18 +15,18 @@ parsed_sample:
     vlan: "1"
     destination_port:
       - "Vl1"
-  - destination_address: "0013.c607.52f4"
+  - destination_address: "0019.ab11.1111"
     type: "DYNAMIC"
-    vlan: "800"
+    vlan: "87"
     destination_port:
-      - "Te1/1/1"
-  - destination_address: "28af.fd99.82d2"
+      - "Gi1/1/1"
+  - destination_address: "12db.dbdb.1919"
     type: "STATIC"
-    vlan: "800"
+    vlan: "87"
     destination_port:
-      - "Vl800"
-  - destination_address: "6c31.0e0e.aa09"
+      - "Vl87"
+  - destination_address: "1818.1818.1818"
     type: "DYNAMIC"
-    vlan: "800"
+    vlan: "87"
     destination_port:
-      - "Te1/1/1"
+      - "Gi1/1/1"
