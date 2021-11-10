@@ -1,0 +1,32 @@
+Unicast Entries
+ vlan     mac address     type        protocols               port
+---------+---------------+--------+---------------------+-------------------------
+  10      0002.d180.67fb   dynamic ip,ipx,assigned,other Port-channel15              
+  10      0012.e160.12ad   dynamic ip,ipx,assigned,other Port-channel15              
+  10      0012.b67e.1212   dynamic ip,ipx,assigned,other GigabitEthernet0/48        
+  10      0012.12da.1212   dynamic ip,ipx,assigned,other GigabitEthernet0/44        
+  10      1212.1263.1212   dynamic ip,ipx,assigned,other GigabitEthernet0/42        
+  10      1313.1212.1234   dynamic ip,ipx,assigned,other GigabitEthernet0/37        
+  10      1212.1281.1313   dynamic ip,ipx,assigned,other Port-channel82              
+  10      1234.5678.abcd   dynamic ip,ipx,assigned,other Port-channel100              
+  10      abcd.efab.8641   dynamic ip,ipx,assigned,other GigabitEthernet0/37        
+  10      dcba.beef.1236   dynamic ip,ipx,assigned,other GigabitEthernet0/39        
+  10      6789.feed.abc1   dynamic ip,ipx,assigned,other GigabitEthernet0/44        
+2099      5421.1222.9988   dynamic ip,ipx,assigned,other GigabitEthernet0/48        
+2099      deed.feed.fabd    static ip,ipx,assigned,other Switch                         
+
+Multicast Entries
+ vlan     mac address     type    ports
+---------+---------------+-------+--------------------------------------------
+   1      0100.0ccc.ccce   system Po100,Po15,Po82
+   1      ffff.ffff.ffff   system Po100,Po15,Po82
+  10      ffff.ffff.ffff   system Gi0/2,Gi0/3,Gi0/5,Gi0/7,Gi0/8,Gi0/9,Gi0/12
+                                  Gi0/13,Gi0/14,Gi0/15,Gi0/16,Gi0/18,Gi9/23
+                                  Switch,Po100,Po15,Po82
+  15      ffff.ffff.ffff   system Gi1/2,Gi1/3,Gi1/5,Gi1/7,Gi1/8,Gi1/9,Gi1/12
+                                  Gi8/43,Switch,Po100,Po2,Po15,Po82
+ 790      ffff.ffff.ffff   system Switch,Po100,Po15,Po82
+Gi1/48    ffff.ffff.ffff   system Gi1/48,Switch
+2060      ffff.ffff.ffff   system Gi8/48,Switch,Po100,Po15,Po82
+2061      ffff.ffff.ffff   system Gi7/48,Switch,Po100,Po15,Po82
+2099      ffff.ffff.ffff   system Gi7/48,Switch,Po100,Po15,Po82
