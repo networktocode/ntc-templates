@@ -1,10 +1,11 @@
-Value NODE (\S+)
-Value TYPE (\S+)
-Value STATE ((\S+(\s\S+)*))
+Value LOCATION (\S+)
+Value CARD_TYPE (\S+)
+Value HW_STATE ((\S+(\s\S+)*))
+Value SW_STATE ((\S+(\s\S+)*))
 Value CONFIG_STATE (\S+)
 
 Start
   ^\-+ -> Parse
 
 Parse
-  ^${NODE}\s+${TYPE}\s+${STATE}\s+(${CONFIG_STATE})? -> Record
+  ^${LOCATION}\s+${CARD_TYPE}\s+${HW_STATE}\s+${SW_STATE}\s+(${CONFIG_STATE})? -> Record
