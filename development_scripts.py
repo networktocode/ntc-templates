@@ -6,6 +6,7 @@ import numbers
 import argparse
 
 from ruamel.yaml import YAML
+from ruamel.yaml.comments import CommentedMap as CommentedMap
 from ruamel.yaml.scalarstring import DoubleQuotedScalarString as DQ
 from ntc_templates.parse import parse_output
 
@@ -337,15 +338,19 @@ def ensure_yaml_standards(parsed_object, output_path):
     Returns:
         None: File I/O is performed to write ``parsed_object`` to ``output_path``.
     """
+    sorted_entry = list()
     for entry in parsed_object["parsed_sample"]:
         # TextFSM conversion will allways be a list of dicts
-        for key, value in entry.items():
+        nd = CommentedMap()
+        for key, value in sorted(entry.items()):
             # TextFSM capture groups always return strings or lists
             # This also accounts for numbers incase the YAML was done by hand
             if isinstance(value, (str, numbers.Number)):
-                entry[key] = DQ(value)
+                nd[key] = DQ(value)
             else:
-                entry[key] = [DQ(val) for val in value]
+                nd[key] = [DQ(val) for val in value]
+        sorted_entry.append(nd)
+    parsed_object["parsed_sample"] = sorted_entry
     try:
         update_yaml_comments(parsed_object)
     except AttributeError:
