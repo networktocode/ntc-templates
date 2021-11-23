@@ -37,11 +37,11 @@ parsed_sample:
     outside_local_port: "513"
     protocol: "icmp"
   - inside_global_ip: "10.9.0.0"
-    inside_global_port: 
+    inside_global_port: ""
     inside_local_ip: "10.1.0.2"
     inside_local_port: ""
-    outside_global_ip: ---
-    outside_global_port: 
-    outside_local_ip: ---
+    outside_global_ip: "---"
+    outside_global_port: ""
+    outside_local_ip: "---"
     outside_local_port: ""
-    protocol: ---
+    protocol: "---"
