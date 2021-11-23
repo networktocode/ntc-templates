@@ -1,0 +1,14 @@
+Value PROTOCOL (tcp|udp|icmp|---)
+Value INSIDE_GLOBAL_IP (\d+\.\d+\.\d+\.\d+|---)
+Value INSIDE_GLOBAL_PORT (\S+)
+Value INSIDE_LOCAL_IP (\d+\.\d+\.\d+\.\d+|---)
+Value INSIDE_LOCAL_PORT (\S+)
+Value OUTSIDE_LOCAL_IP (\d+\.\d+\.\d+\.\d+|---)
+Value OUTSIDE_LOCAL_PORT (\S+)
+Value OUTSIDE_GLOBAL_IP (\d+\.\d+\.\d+\.\d+|---)
+Value OUTSIDE_GLOBAL_PORT (\S+)
+
+Start
+  ^Pro\s+Inside\sglobal\s+Inside\slocal\s+Outside\slocal\s+Outside\sglobal
+  ^${PROTOCOL}\s+${INSIDE_GLOBAL_IP}:${INSIDE_GLOBAL_PORT}\s+${INSIDE_LOCAL_IP}:${INSIDE_LOCAL_PORT}\s+${OUTSIDE_LOCAL_IP}:${OUTSIDE_GLOBAL_PORT}\s+${OUTSIDE_GLOBAL_IP}:${OUTSIDE_LOCAL_PORT} -> Record
+  ^${PROTOCOL}\s+${INSIDE_GLOBAL_IP}\s+${INSIDE_LOCAL_IP}\s+${OUTSIDE_LOCAL_IP}\s+${OUTSIDE_GLOBAL_IP} -> Record
