@@ -1,0 +1,43 @@
+Load for five secs: 21%/0%; one minute: 22%; five minutes: 22%
+Time source is NTP, 07:45:25.903 MES Thu Nov 25 2021
+
+groupname: def-TRAPS                        security model:v3 priv 
+contextname: <no context specified>         storage-type: nonvolatile
+readview : v1default                        writeview: v1default                       
+notifyview: *tv.FFFFFFFF.FFFFFFFF.FFFFFFFF.F
+row status: active
+
+groupname: abcSNMPv3                        security model:v3 priv 
+contextname: <no context specified>         storage-type: nonvolatile
+readview : <no readview specified>          writeview: <no writeview specified>        
+notifyview: *tv.FFFFFFFF.FFFFFFFF.FFFFFFFF.F
+row status: active
+
+groupname: #25dgz-v73a$we#                  security model:v1 
+contextname: <no context specified>         storage-type: volatile
+readview : v1default                        writeview: <no writeview specified>        
+notifyview: <no notifyview specified>       
+row status: active
+
+groupname: #25dgz-v73a$we#                  security model:v2c 
+contextname: <no context specified>         storage-type: volatile
+readview : v1default                        writeview: <no writeview specified>        
+notifyview: <no notifyview specified>       
+row status: active
+
+groupname: V1                               security model:v1 
+readview : v1default                        writeview: <no writeview specified> 
+notifyview: <no notifyview specified>       
+row status: active
+groupname: ILMI                             security model:v1 
+readview : *ilmi                            writeview: *ilmi                    
+notifyview: <no notifyview specified>       
+row status: active
+groupname: ILMI                             security model:v2c 
+readview : *ilmi                            writeview: *ilmi                    
+notifyview: <no notifyview specified>       
+row status: active
+groupname: group1                           security model:v1 
+readview : v1default                        writeview: <no writeview specified> 
+notifyview: <no notifyview specified>       
+row status: active

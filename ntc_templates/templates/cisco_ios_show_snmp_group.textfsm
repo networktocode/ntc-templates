@@ -1,0 +1,20 @@
+Value Required GROUP_NAME (\S+)
+Value SECURITY_MODEL (.*)
+Value READ_VIEW (<.*>|\S+)
+Value WRITE_VIEW (<.*>|\S+.*)
+Value NOTIFY_VIEW (<.*>|\S+)
+Value ROW_STATUS (\w+)
+Value CONTEXT_NAME (<.*>|\w+.*)
+Value STORAGE_TYPE (\w+)
+
+Start
+  ^groupname:\s+${GROUP_NAME}\s+security\s+model:${SECURITY_MODEL}$$
+  ^readview\s+:\s+${READ_VIEW}\s+writeview:\s+${WRITE_VIEW}\s+$$
+  ^contextname:\s+${CONTEXT_NAME}\s+storage-type:\s+${STORAGE_TYPE}.*$$
+  ^notifyview:\s+(<.*>|\S+).*$$
+  ^\s*$$
+  ^row\s+status:\s+${ROW_STATUS}$$ -> Record
+  # Capture time-stamp if vty line has command time-stamping turned on
+  ^Load\s+for\s+
+  ^Time\s+source\s+is
+  ^. -> Error
