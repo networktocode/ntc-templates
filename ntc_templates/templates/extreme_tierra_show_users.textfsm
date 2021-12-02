@@ -2,10 +2,11 @@ Value USERNAME (\S+)
 Value ROLE (\S+)
 Value HOST_IP (\S+)
 Value DEVICE (\S+)
-Value LOGIN_TIMESTAMP ([\s\S]+)
+Value LOGIN_DATE ([\d\-]+)
+Value LOGIN_TIME ([\d:]+)
 
 Start
  ^===== -> TABLE
 
 TABLE
- ^${USERNAME}\s+${ROLE}\s+${HOST_IP}\s+${DEVICE}\s+${LOGIN_TIMESTAMP}  -> Record
+ ^${USERNAME}\s+${ROLE}\s+${HOST_IP}\s+${DEVICE}\s+${LOGIN_DATE} ${LOGIN_TIME} -> Record
