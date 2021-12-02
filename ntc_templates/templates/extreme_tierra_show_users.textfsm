@@ -1,0 +1,11 @@
+Value USERNAME (\S+)
+Value ROLE (\S+)
+Value HOST_IP (\S+)
+Value DEVICE (\S+)
+Value LOGIN_TIMESTAMP ([\s\S]+)
+
+Start
+ ^===== -> TABLE
+
+TABLE
+ ^${USERNAME}\s+${ROLE}\s+${HOST_IP}\s+${DEVICE}\s+${LOGIN_TIMESTAMP}
