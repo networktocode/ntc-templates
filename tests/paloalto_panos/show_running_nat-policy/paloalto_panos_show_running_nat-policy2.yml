@@ -1,0 +1,12 @@
+---
+parsed_sample:
+  - name: "\"Rule 4 Nat-ID 4; index: 8\""
+    nat_type: "ipv4"
+    from: "[ Mgmt Data TRUSTED UNTRUSTED ]"
+    source: "[ 10.0.0.0/8 172.0.0.0/16 ]"
+    to: "[ UNTRUSTED DMZ ]"
+    to_interface: "ethernet1/5"
+    destination: "[ 1.1.1.1 2.2.2.2 ]"
+    service: "0:any/any/any"
+    translate_to: "src: 3.3.3.3 (dynamic-ip-and-port) (pool idx: 24)"
+    terminal: "no"

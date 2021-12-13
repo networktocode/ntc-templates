@@ -1,0 +1,11 @@
+"DMZ-PROXY-NAT; index: 1" {
+        nat-type ipv4;
+        from DMZ-APPS;
+        source [ 10.1.1.1 10.1.1.2 ];
+        to UNTRUSTED;
+        to-interface ethernet1/5 ;
+        destination any;
+        service 0:any/any/any;
+        translate-to "src: 2.2.2.2 (dynamic-ip-and-port) (pool idx: 1)";
+        terminal no;
+}
