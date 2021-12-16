@@ -1,3 +1,4 @@
+Value SWITCH_NUMBER (\d+)
 Value BOOT_PATH (\S+)
 Value CONFIG_FILE (\S+)
 Value PRIV_CONFIG_FILE (\S+)
@@ -11,19 +12,24 @@ Value BUFFER_SIZE (\d+)
 Value TIMEOUT_CONFIG_DOWNLOAD (\d+)
 Value CONFIG_DOWNLOAD_DHCP (enabled|disabled)
 Value CONFIG_DOWNLOAD_DHCP_NEXT_BOOT (enabled|disabled)
+Value BOOT_MODE (\S+)
+Value CURRENT_BOOT_VARIABLES (BOOT\s*variable\s*does\s*not\s*exist|BOOT\s*variable\s*=\s*\S+)
 
 Start
-  ^BOOT\s+path-list\s+:\s+${BOOT_PATH}
+  ^Current\s*Boot\s*Variables: -> CurrentBootVariables
+  ^Switch\s+${SWITCH_NUMBER}
+  ^BOOT\s+(path-list|variable)\s+(:|=)\s+${BOOT_PATH}
   ^Config\s+file\s+:\s+${CONFIG_FILE}
   ^Private\s+Config\s+file\s+:\s+${PRIV_CONFIG_FILE}
-  ^Enable\s+Break\s+:\s+${ENABLE_BREAK}
-  ^Manual\s+Boot\s+:\s+${MANUAL_BOOT}
+  ^Enable\s+Break\s+(:|=)\s+${ENABLE_BREAK}
+  ^Manual\s+Boot\s+(:|=)\s+${MANUAL_BOOT}
   ^Allow\s+Dev\s+Key\s+:\s+${ALLOW_DEV_KEY}
   ^HELPER\s+path-list\s+:.*
   ^Auto\s+upgrade\s+:\s+${AUTO_UPGRADE}
   ^Auto\s+upgrade\s+path\s+:.*
   ^NVRAM/Config\s+file
   ^\s+buffer\s+size:\s+${BUFFER_SIZE}
+  ^iPXE\s*Timeout\s*=\s*${TIMEOUT_CONFIG_DOWNLOAD}
   ^Timeout\s+for\s+Config
   ^\s+Download:\s+${TIMEOUT_CONFIG_DOWNLOAD}
   ^Config\s+Download
@@ -31,5 +37,12 @@ Start
   # Capture time-stamp if vty line has command time-stamping turned on
   ^Load\s+for\s+
   ^Time\s+source\s+is
+  ^Boot\s*Mode\s*=\s*${BOOT_MODE}
   ^\s*$$
+  ^-+
+  ^. -> Error
+  
+CurrentBootVariables
+  ^${CURRENT_BOOT_VARIABLES}
+  ^Boot\s*Variables\s*on\s*next\s*reload: -> Start
   ^. -> Error
