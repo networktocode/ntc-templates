@@ -1,6 +1,6 @@
 Value PORT (\S+)
 Value STATUS (up|down|admin\s+down)
-Value PROTOCOL (up|down|lowerlayerdown)
+Value PROTOCOL (up|down|lowerlayerdown|notpresent)
 Value DESCRIP (\S.*?)
 
 Start
