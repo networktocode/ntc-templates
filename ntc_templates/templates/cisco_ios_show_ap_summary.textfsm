@@ -18,11 +18,14 @@ Start
   ^AP\sName\s+AP\sModel\s+Ethernet\sMAC\s+Radio\sMAC\s+State.*$$ -> OldFormat
 
 NewFormat
+  # paginated results duplicate headers
+  ^AP\sName\s+Slots\s+AP\sModel\s+Ethernet\sMAC\s+Radio\sMAC\s+Location\s+Country\s+IP\sAddress\s+State.*$$ -> NewFormat
   ^\-+$$
   ^${AP_NAME}\s+${SLOT}\s+${AP_MODEL}\s+${ETHERNET_MAC}\s+${RADIO_MAC}\s+${LOCATION}\s+${COUNTRY}\s+${IP}\s+${STATE}.*$$ -> Record
   ^. -> Error
 
 OldFormat
+  ^AP\sName\s+AP\sModel\s+Ethernet\sMAC\s+Radio\sMAC\s+State.*$$
   ^\-+$$
   ^${AP_NAME}\s+${AP_MODEL}\s+${ETHERNET_MAC}\s+${RADIO_MAC}\s+${STATE}.*$$ -> Record
   ^. -> Error
