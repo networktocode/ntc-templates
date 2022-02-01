@@ -1,0 +1,17 @@
+Value VR (\S+)
+Value DESTINATION (\S+)
+Value MAC ([0-9A-Fa-f:]+|incomplete)
+Value PORT (\S+)
+Value STATIC (\S+)
+Value AGE (\d+)
+Value VLAN (\S+)
+Value VID (\S+)
+
+Start
+  ^VR\s+Destination\s+Mac\s+Age\s+Static\s+VLAN\s+VID\s+Port -> Start_record
+
+Start_record
+  ^\s*---
+  ^${VR}\s+${DESTINATION}\s+\(*${MAC}\)*\s+${AGE}\s+${STATIC}\s+${VLAN}\s+${VID}\s+${PORT} -> Record
+  ^\s*$$
+  ^. -> Error
