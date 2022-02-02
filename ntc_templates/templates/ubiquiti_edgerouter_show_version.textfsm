@@ -1,0 +1,18 @@
+Value VERSION (\S+)
+Value BUILD_ID (\S+)
+Value BUILD_ON (.+)
+Value COPYRIGHT (.+)
+Value HARDWARE_MODEL (.+)
+Value SERIAL_NUMBER (\S+)
+Value UPTIME (.+)
+
+Start
+  ^Version:\s+${VERSION}
+  ^Build\sID:\s+${BUILD_ID}
+  ^Build\son:\s+${BUILD_ON}
+  ^Copyright:\s+${COPYRIGHT}
+  ^HW\smodel:\s+${HARDWARE_MODEL}
+  ^HW\sS/N:\s+${SERIAL_NUMBER}
+  ^Uptime:\s+${UPTIME}
+  ^\s*$$
+  ^. -> Error
