@@ -507,6 +507,7 @@ ruckus_fastiron_show_mac-address.textfsm, .*, ruckus_fastiron, sh[[ow]] mac[[-ad
 ruckus_fastiron_show_version.textfsm, .*, ruckus_fastiron, sh[[ow]] v[[ersion]]
 ruckus_fastiron_show_arp.textfsm, .*, ruckus_fastiron, sh[[ow]] ar[[p]]
 
+ubiquiti_edgerouter_show_interfaces_ethernet_physical.textfsm, .*, ubiquiti_edgerouter, sh[[ow]] interfaces ethernet (\S+\s)?physical
 ubiquiti_edgerouter_show_dhcp_leases.textfsm, .*, ubiquiti_edgerouter, sh[[ow]] dhcp leases
 ubiquiti_edgerouter_show_version.textfsm, .*, ubiquiti_edgerouter, sh[[ow]] ve[[rsion]]
 
