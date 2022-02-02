@@ -527,6 +527,7 @@ watchguard_firebox_show_arp.textfsm, .*, watchguard_firebox, sh[[ow]] arp
 yamaha_show_environment.textfsm, .*, yamaha, sh[[ow]] en[[vironment]]
 yamaha_show_ip_route.textfsm, .*, yamaha, sh[[ow]] ip ro[[ute]]
 
+zyxel_os_cfg_lan_get_--Name_name.textfsm, .*, zyxel_os, cfg lan get --Name .+
 zyxel_os_cfg_firewall_acl_get.textfsm, .*, zyxel_os, cfg firewall(\s|_)acl get
 zyxel_os_cfg_intf_group_get.textfsm, .*, zyxel_os, cfg intf(\s|_)group get
 zyxel_os_cfg_ipalias_get.textfsm, .*, zyxel_os, cfg ipalias get
