@@ -46,6 +46,7 @@ OS_CHOICES = [
     "paloalto_panos",
     "quanta_mesh",
     "ruckus_fastiron",
+    "ubiquiti_edgerouter",
     "ubiquiti_edgeswitch",
     "vmware_nsxv",
     "vyatta_vyos",
