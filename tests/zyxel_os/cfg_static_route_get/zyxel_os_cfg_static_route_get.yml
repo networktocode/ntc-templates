@@ -1,0 +1,18 @@
+---
+parsed_sample:
+  - index: "1"
+    name: "route1"
+    enabled: "1"
+    ipver: "IPv4"
+    destination: "45.21.54.0"
+    netmask: "255.255.255.0"
+    interface: "data"
+    gateway: "192.168.1.130"
+  - index: "2"
+    name: "route2"
+    enabled: "1"
+    ipver: "IPv4"
+    destination: "185.24.67.123"
+    netmask: "255.255.255.255"
+    interface: "data"
+    gateway: "192.168.1.130"
