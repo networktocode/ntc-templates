@@ -1,0 +1,17 @@
+---
+parsed_sample:
+  - index: "1"
+    name: "Default"
+    wan_intf: "Any WAN"
+    interface: "LAN1,ZyXEL_F34D,ZyXEL_Guest_1,ZyXEL_Guest_2,ZyXEL_Guest_3"
+    criteria: "N/A"
+  - index: "2"
+    name: "LAN VOIX"
+    wan_intf: "WWAN,ADSL,VDSL"
+    interface: "LAN3,LAN4,LAN2"
+    criteria: "N/A"
+  - index: "3"
+    name: "data"
+    wan_intf: "Any WAN"
+    interface: "LAN1,LAN2,LAN3,LAN4,super wifi,ZyXEL_7F0D_guest1,ZyXEL_7F0D_guest2,ZyXEL_7F0D_guest3"
+    criteria: "N/A"
