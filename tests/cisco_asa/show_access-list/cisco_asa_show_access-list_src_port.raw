@@ -1,0 +1,6 @@
+access-list acl-in-fms line 1 extended permit object-group traffic-from-int-to-ext object-group Internal-Servers object-group External-Servers inactive (hitcnt=0) (inactive) 0x72853331
+  access-list acl-in-fms line 1 extended permit tcp host 192.168.1.2 eq www host 10.1.2.3 inactive (hitcnt=0) (inactive) 0x8223cbb5
+  access-list acl-in-fms line 1 extended permit tcp host 192.168.1.2 ne 12345 host 10.1.2.3 inactive (hitcnt=0) (inactive) 0x8223cbb6
+  access-list acl-in-fms line 1 extended permit tcp host 192.168.1.2 gt 1023 host 10.1.2.3 inactive (hitcnt=0) (inactive) 0x8223cbb7
+  access-list acl-in-fms line 1 extended permit tcp host 192.168.1.2 lt 65535 host 10.1.2.3 inactive (hitcnt=0) (inactive) 0x8223cbb8
+  access-list acl-in-fms line 1 extended permit tcp host 192.168.1.2 range gopher 1023 host 10.1.2.3 inactive (hitcnt=0) (inactive) 0x8223cbb9

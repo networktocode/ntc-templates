@@ -1,0 +1,35 @@
+access-list test line 2 extended deny udp host 10.10.10.11 host 10.10.12.12 ne dnsix (hitcnt=0) 0xfe42d16f 
+access-list test line 5 extended permit object-group svcgrp1 object test2 object test3 (hitcnt=0) 0xffc8818e 
+  access-list test line 5 extended permit tcp host 10.1.1.2 range 10.1.1.3 10.1.1.8 ne 60 (hitcnt=0) 0x09fd553e 
+  access-list test line 5 extended permit tcp host 10.1.1.2 range 10.1.1.3 10.1.1.8 ne www (hitcnt=0) 0xc366785c 
+access-list test line 7 extended permit object-group svcgrp4 object test3 object test2 (hitcnt=0) 0x866dbeab 
+  access-list test line 7 extended permit tcp range 10.1.1.3 10.1.1.8 host 10.1.1.2 ne domain (hitcnt=0) 0xbef61d61 
+  access-list test line 7 extended permit udp range 10.1.1.3 10.1.1.8 host 10.1.1.2 ne domain (hitcnt=0) 0x3f9b81a1 
+  access-list test line 7 extended permit tcp range 10.1.1.3 10.1.1.8 host 10.1.1.2 ne 55 (hitcnt=0) 0x99a487f5 
+  access-list test line 7 extended permit udp range 10.1.1.3 10.1.1.8 host 10.1.1.2 ne 55 (hitcnt=0) 0xcd700fb1 
+access-list test line 8 extended permit tcp object test1 object test1 object-group svcgrp6 (hitcnt=0) 0xd76472ac 
+  access-list test line 8 extended permit tcp fqdn test.com (unresolved) fqdn test.com (unresolved) ne aol (inactive) 0x64af6768 
+  access-list test line 8 extended permit tcp fqdn test.com (unresolved) fqdn test.com (unresolved) ne www (inactive) 0x29864b9c 
+  access-list test line 8 extended permit tcp fqdn test.com (unresolved) fqdn test.com (unresolved) ne 84 (inactive) 0x1f80e564 
+access-list test line 10 extended permit tcp object-group grptest1 object test1 object-group svcgrp8 (hitcnt=0) 0x0ca66136 
+  access-list test line 10 extended permit tcp host 10.1.1.10 fqdn test.com (unresolved) ne aol (inactive) 0xd93c8317 
+  access-list test line 10 extended permit tcp host 10.1.1.10 fqdn test.com (unresolved) ne www (inactive) 0x98d3e56f 
+  access-list test line 10 extended permit tcp host 10.1.1.10 fqdn test.com (unresolved) ne 84 (inactive) 0x45e3cb59 
+  access-list test line 10 extended permit tcp fqdn test.com (unresolved) fqdn test.com (unresolved) ne aol (inactive) 0x64af6768 
+  access-list test line 10 extended permit tcp fqdn test.com (unresolved) fqdn test.com (unresolved) ne www (inactive) 0x29864b9c 
+  access-list test line 10 extended permit tcp fqdn test.com (unresolved) fqdn test.com (unresolved) ne 84 (inactive) 0x1f80e564 
+  access-list test line 10 extended permit tcp 10.1.1.8 255.255.255.248 fqdn test.com (unresolved) ne aol (inactive) 0xddad57f9 
+  access-list test line 10 extended permit tcp 10.1.1.8 255.255.255.248 fqdn test.com (unresolved) ne www (inactive) 0x38389426 
+  access-list test line 10 extended permit tcp 10.1.1.8 255.255.255.248 fqdn test.com (unresolved) ne 84 (inactive) 0x883a126a 
+access-list test line 11 extended permit tcp object-group grptest1 object test1 object-group svcgrp7 (hitcnt=0) 0xb396512b 
+  access-list test line 11 extended permit tcp host 10.1.1.10 fqdn test.com (unresolved) ne domain (inactive) 0x5637d648 
+  access-list test line 11 extended permit tcp fqdn test.com (unresolved) fqdn test.com (unresolved) ne domain (inactive) 0x3cd20161 
+  access-list test line 11 extended permit tcp 10.1.1.8 255.255.255.248 fqdn test.com (unresolved) ne domain (inactive) 0x69655129 
+access-list test line 12 extended permit tcp 10.20.30.0 255.255.255.0 10.50.12.0 255.255.255.224 ne www (hitcnt=0) 0x3f0331e6 
+access-list test line 14 extended permit tcp host 10.20.30.22 10.50.12.0 255.255.255.224 eq www (hitcnt=0) 0x3f0331e6 
+access-list test line 36 extended permit tcp object-group test_gr object-group test_gr_02 ne ftp-data (hitcnt=0) 0x05e8add7 
+  access-list test line 36 extended permit tcp host 212.179.71.34 host 10.2.74.35 ne ftp-data (hitcnt=0) 0x9fb86c39 
+access-list test line 37 extended permit tcp object network-172.16.0.0 object aps03-aps04_gaibu_vip ne ssh inactive (hitcnt=0) (inactive) 0xcc9741b2 
+  access-list test line 37 extended permit tcp 172.16.0.0 255.240.0.0 host 10.2.66.237 ne ssh inactive (hitcnt=0) (inactive) 0xcc9741b2 
+access-list test line 39 extended permit tcp object-group NETWORK_88 object aps0506_VIP_10.2.66.53 ne 6991 log disable (hitcnt=55) 0xe547ccd6 
+  access-list test line 39 extended permit tcp 10.0.247.0 255.255.255.0 host 10.2.66.53 ne 6991 log disable (hitcnt=40) 0xea52300b 
