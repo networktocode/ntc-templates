@@ -1,0 +1,13 @@
+Value Key MODULE (\d+)
+Value STATUS (\S.+?)
+
+Start
+  ^\s*Mod\s+Status\s+Data\s+Plane\s+Status\s+Compatibility -> ModStatus
+
+ModStatus
+  ^-+
+  ^\s*${MODULE}\s+${STATUS}\s*Not Applicable\s*$$ -> Record
+  ^\s*$$
+  ^. -> Error
+
+End
