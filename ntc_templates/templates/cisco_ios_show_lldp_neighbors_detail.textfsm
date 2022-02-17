@@ -1,5 +1,5 @@
 Value LOCAL_INTERFACE (\S+)
-Value CHASSIS_ID (\S+)
+Value CHASSIS_ID ([^:]*)
 Value NEIGHBOR_PORT_ID (.*)
 Value NEIGHBOR_INTERFACE (.*)
 Value NEIGHBOR (.+?)
@@ -8,6 +8,12 @@ Value CAPABILITIES (.*)
 Value MANAGEMENT_IP (\S+)
 Value VLAN (\d+)
 Value SERIAL (\S+)
+Value POWER_PAIR (\S+)
+Value POWER_CLASS (\d+)
+Value POWER_DEVICE_TYPE (\S+)
+Value POWER_PRIORITY (\S+)
+Value POWER_SOURCE (\S+)
+Value POWER_REQUESTED (\d+)
 
 Start
   ^.*not advertised
@@ -45,6 +51,7 @@ Start
   ^\s+\(\S+\)
   ^(?:PoE|\s+Power)
   ^\s*-+\s*$$ -> Record
+  ^Power\s+via\s+MDI -> PowerMDI
   ^MED -> Med
   ^\s*\^\s*
   ^\s*Total\s+entries\s+displayed -> Record
@@ -62,6 +69,15 @@ IgnoreDescription
   ^\S*
   ^\s*$$
   ^.* -> Error
+
+PowerMDI
+  ^\s+Power\s+Pair:\s+${POWER_PAIR}
+  ^\s+Power\s+Class:\s+${POWER_CLASS}
+  ^\s+Power\s+Device\s+Type:\s+${POWER_DEVICE_TYPE}
+  ^\s+Power\s+Source:\s+${POWER_SOURCE}
+  ^\s+Power\s+Priority:\s+${POWER_PRIORITY}
+  ^\s+Power\s+Requested:\s+${POWER_REQUESTED}\s+mW
+  ^\s*$$ -> Start
 
 Med
   ^\s+Serial\s+number:\s+${SERIAL}
