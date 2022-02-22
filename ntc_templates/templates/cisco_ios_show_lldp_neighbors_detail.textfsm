@@ -1,5 +1,5 @@
 Value LOCAL_INTERFACE (\S+)
-Value CHASSIS_ID ([^:]*)
+Value CHASSIS_ID ([^:]+)
 Value NEIGHBOR_PORT_ID (.*)
 Value NEIGHBOR_INTERFACE (.*)
 Value NEIGHBOR (.+?)
@@ -33,7 +33,7 @@ Start
   ^Management\s+Addresses
   ^\s+OID
   ^\s+[\d+\.]{8,}
-  ^.*IP:\s+${MANAGEMENT_IP}
+  ^.*IP:\s+${MANAGEMENT_IP}\s*$$
   ^Auto\s+Negotiation
   ^Physical\s+media
   # Removed \(\s+\) from the template - The line 'Other/unknown' would not be captured
@@ -71,16 +71,16 @@ IgnoreDescription
   ^.* -> Error
 
 PowerMDI
-  ^\s+Power\s+Pair:\s+${POWER_PAIR}
-  ^\s+Power\s+Class:\s+${POWER_CLASS}
-  ^\s+Power\s+Device\s+Type:\s+${POWER_DEVICE_TYPE}
-  ^\s+Power\s+Source:\s+${POWER_SOURCE}
-  ^\s+Power\s+Priority:\s+${POWER_PRIORITY}
-  ^\s+Power\s+Requested:\s+${POWER_REQUESTED}\s+mW
+  ^\s+Power\s+Pair:\s+${POWER_PAIR}\s*$$
+  ^\s+Power\s+Class:\s+${POWER_CLASS}\s*$$
+  ^\s+Power\s+Device\s+Type:\s+${POWER_DEVICE_TYPE}\s*$$
+  ^\s+Power\s+Source:\s+${POWER_SOURCE}\s*$$
+  ^\s+Power\s+Priority:\s+${POWER_PRIORITY}\s*$$
+  ^\s+Power\s+Requested:\s+${POWER_REQUESTED}\s+mW\s*$$
   ^\s*$$ -> Start
 
 Med
-  ^\s+Serial\s+number:\s+${SERIAL}
+  ^\s+Serial\s+number:\s+${SERIAL}\s*$$
   ^\s+\S+
   ^\s*$$
   ^\s*Total\s+entries\s+displayed -> Record
