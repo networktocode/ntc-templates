@@ -1,7 +1,7 @@
 Value Key MODULE (\d+)
 Value MAC_ADDR (\S+\s+to\s+\S+)
 Value MOD_HW (\S+)
-Value MOD_FW (\S+)
+Value MOD_FW (\S+(\s+\[\w+\])?)
 Value MOD_SW (\S+)
 Value STATUS (\w+)
 
