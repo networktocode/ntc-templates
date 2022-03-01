@@ -9,8 +9,8 @@ Start
   ^. -> Error
 
 LANTable
-    ^${NAME}\s+${IP}\s+${IPV4_DHCP}\s+${IPV6_ENABLE}\s*$$ -> Record
-    ^${NAME}\s+${IPV4_DHCP}\s+${IPV6_ENABLE}\s*$$ -> Record
+  ^${NAME}\s+${IP}\s+${IPV4_DHCP}\s+${IPV6_ENABLE}\s*$$ -> Record
+  ^${NAME}\s+${IPV4_DHCP}\s+${IPV6_ENABLE}\s*$$ -> Record
   ^Command\sSuccessful.\s*$$
   ^\s*$$
   ^. -> Error
