@@ -1,0 +1,9 @@
+Value MEMORY_PERCENTAGE_USED ([\d\.]+)
+Value TOTAL_KB_MEMORY ([\d\.]+)
+Value TOTAL_KB_USED ([\d\.]+)
+Value TOTAL_KB_FREE ([\d\.]+)
+Value TOTAL_KB_CACHED ([\d\.]+)
+
+Start
+ ^%Memory Used: ${MEMORY_PERCENTAGE_USED} %; Total Memory: ${TOTAL_KB_MEMORY} KB; Total Used: ${TOTAL_KB_USED} KB
+ ^Total Free: ${TOTAL_KB_FREE} KB; Cached: ${TOTAL_KB_CACHED} KB -> Record
