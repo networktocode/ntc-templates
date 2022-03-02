@@ -1,0 +1,20 @@
+Value Key LOAD_BLADE ([\w/\d]+)
+Value LOAD_1MIN ([\d\.]+)
+Value LOAD_5MIN ([\d\.]+)
+Value LOAD_15MIN ([\d\.]+)
+Value CPU_BLADE ([\w/\d]+)
+Value CPU_CURRENT ([\d\.]+)
+Value CPU_USER ([\d\.]+)
+Value CPU_SYSTEM ([\d\.]+)
+Value CPU_IOWAIT ([\d\.]+)
+
+Start
+ ^Load Average: -> LOAD
+ ^Total CPU -> CPU
+
+LOAD
+ ^${LOAD_BLADE}:\s+${LOAD_1MIN}\s+${LOAD_5MIN}\s+${LOAD_15MIN} -> Record
+ ^Total CPU -> CPU
+
+CPU
+ ^${CPU_BLADE}:\s+${CPU_CURRENT}\s+${CPU_USER}\s+${CPU_SYSTEM}\s+${CPU_IOWAIT} -> Record
