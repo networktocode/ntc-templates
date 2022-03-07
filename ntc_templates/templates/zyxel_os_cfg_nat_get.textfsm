@@ -1,7 +1,7 @@
 Value INDEX (\d+)
 Value NAME (.+?)
 Value ENABLED (0|1)
-Value ORIGINATING_IP (.+?)
+Value ORIGINATING_IP (\d+\.\d+\.\d+\.\d+|N\/A)
 Value SERVER_IP (.+?)
 Value WAN_INTERFACE (.+?)
 Value START_PORT (\d+)
