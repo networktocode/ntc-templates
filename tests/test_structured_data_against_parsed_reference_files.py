@@ -2,6 +2,7 @@
 
 """Run tests against all the *.raw files."""
 import glob
+from pathlib import Path
 
 import pytest
 import yaml
@@ -29,8 +30,9 @@ def load_template_test(request):
 
 def raw_template_test(raw_file):
     """Return structured data along with reference data."""
-    parsed_file = "{0}.yml".format(raw_file[:-4])
-    parts = raw_file.split("/")
+    raw_file = Path(raw_file)
+    parsed_file = "{0}.yml".format(raw_file.as_posix()[:-4])
+    parts = raw_file.as_posix().split("/")
     platform = parts[1]
     command = " ".join(parts[2].split("_"))
     with open(raw_file, "r") as data:
