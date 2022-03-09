@@ -13,12 +13,12 @@ Value REMOTE_MANAGEMENT_ADDRESS (\S+)
 Start
   ^\s+LLDP\s+Remote\s+Device\s+Information\s+Detail$$
   ^\s+Local\s+Port\s+:\s+${LOCAL_PORT}$$
-  ^\s+ChassisType\s+:\s+${CHASSIS_TYPE}(\s+|$$)
-  ^\s+ChassisId\s+:\s+${CHASSIS_ID}(\s+|$$)
-  ^\s+PortId\s+:\s+${PORTID}(\s+|$$)
-  ^\s+SysName\s+:\s+${SYSNAME}(\s+|$$)
-  ^\s+System\s+Descr\s+:\s+${SYSTEM_DESCR}(\s+|$$)
-  ^\s+PortDescr\s+:\s+${PORTDESCR}(\s+|$$)
+  ^\s+ChassisType\s+:\s+${CHASSIS_TYPE}(\s*|$$)
+  ^\s+ChassisId\s+:\s+${CHASSIS_ID}(\s*|$$)
+  ^\s+PortId\s+:\s+${PORTID}(\s*|$$)
+  ^\s+SysName\s+:\s+${SYSNAME}(\s*|$$)
+  ^\s+System\s+Descr\s+:\s+${SYSTEM_DESCR}(\s*|$$)
+  ^\s+PortDescr\s+:\s+${PORTDESCR}(\s*|$$)
   ^\s+System\s+Capabilities\s+Supported\s+:\s+${CAPABILITIES}$$
   ^\s+System\s+Capabilities\s+Enabled\s+:\s+${CAPABILITIES_ENABLED}$$
   ^\s+Address\s+:\s+${REMOTE_MANAGEMENT_ADDRESS}$$
