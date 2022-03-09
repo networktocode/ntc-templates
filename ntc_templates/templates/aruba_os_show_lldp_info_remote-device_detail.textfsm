@@ -1,24 +1,24 @@
 Value Required LOCAL_PORT (\S+)
-Value Required CHASSIS_ID (.+)
-Value PORTID (.+)
-Value CHASSIS_TYPE (.+)
-Value SYSNAME (.+)
-Value SYSTEM_DESCR (.+)
-Value PORTDESCR (.+)
-Value CAPABILITIES (.+)
-Value CAPABILITIES_ENABLED (.+)
+Value Required CHASSIS_ID (.+\b)
+Value PORTID (.+\b)
+Value CHASSIS_TYPE (.+\b)
+Value SYSNAME (.+\b)
+Value SYSTEM_DESCR (.+\b)
+Value PORTDESCR (.+\b)
+Value CAPABILITIES (.+\b)
+Value CAPABILITIES_ENABLED (.+\b)
 Value REMOTE_MANAGEMENT_ADDRESS (\S+)
 
 
 Start
   ^\s+LLDP\s+Remote\s+Device\s+Information\s+Detail$$
   ^\s+Local\s+Port\s+:\s+${LOCAL_PORT}$$
-  ^\s+ChassisType\s+:\s+${CHASSIS_TYPE}$$
-  ^\s+ChassisId\s+:\s+${CHASSIS_ID}$$
-  ^\s+PortId\s+:\s+${PORTID}$$
-  ^\s+SysName\s+:\s+${SYSNAME}$$
-  ^\s+System\s+Descr\s+:\s+${SYSTEM_DESCR}$$
-  ^\s+PortDescr\s+:\s+${PORTDESCR}$$
+  ^\s+ChassisType\s+:\s+${CHASSIS_TYPE}(\s+|$$)
+  ^\s+ChassisId\s+:\s+${CHASSIS_ID}(\s+|$$)
+  ^\s+PortId\s+:\s+${PORTID}(\s+|$$)
+  ^\s+SysName\s+:\s+${SYSNAME}(\s+|$$)
+  ^\s+System\s+Descr\s+:\s+${SYSTEM_DESCR}(\s+|$$)
+  ^\s+PortDescr\s+:\s+${PORTDESCR}(\s+|$$)
   ^\s+System\s+Capabilities\s+Supported\s+:\s+${CAPABILITIES}$$
   ^\s+System\s+Capabilities\s+Enabled\s+:\s+${CAPABILITIES_ENABLED}$$
   ^\s+Address\s+:\s+${REMOTE_MANAGEMENT_ADDRESS}$$
