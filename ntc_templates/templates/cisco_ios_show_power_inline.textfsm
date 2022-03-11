@@ -1,0 +1,28 @@
+Value Required INTERFACE (\S+)
+Value ADMIN (auto)
+Value OPER (on|off)
+Value POWER (\d+\.\d+)
+Value DEV_POWER (\d+\.\d+)
+Value DEVICE (.+?)
+Value CLASS (n\/a|\d)
+Value MAX (\d+\.\d)
+
+Start
+# Checking for modules headers
+  ^Module\s+Available\s+Used\s+Remaining\s*$$
+  ^Available:\d+(\.\d+)?\(w\)\s+Used:\d+(\.\d+)?\(w\)\s+Remaining:\d+(\.\d+)?\(w\)\s*$$
+  ^[\s(Wats)]*$$
+  ^[-\s]*$$
+  ^\d+\s+(n\/a|\d+\.\d+)\s+(n\/a|\d+\.\d+)\s+(n\/a|\d+\.\d+)\s*$$
+  ^Interface\s+Admin\s+Oper\s+Power(\(Watts\))?\s+Device\s+Class.*$$
+  ^\s+From PS\s+To Device\s*$$
+# actual data
+  ^${INTERFACE}\s+${ADMIN}\s+${OPER}\s+${POWER}\s+${DEVICE}\s+${CLASS}\s+${MAX}\s*$$ -> Record
+  ^${INTERFACE}\s+${ADMIN}\s+${OPER}\s+${POWER}\s+${DEV_POWER}\s+${DEVICE}\s+${CLASS}\s*$$ -> Record
+# empty lines
+  ^\s*$$
+# Optional footer
+  ^Totals:\s+\d+\s+(on|off)\s+\d+\.\d+\s+\d+\.\d+\s*$$
+# Command unknown
+  ^% Invalid command .*$$ -> Error
+  ^.*$$
