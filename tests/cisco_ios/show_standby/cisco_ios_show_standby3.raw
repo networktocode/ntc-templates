@@ -1,0 +1,57 @@
+Vlan111 - Group 1
+  State is Standby
+    1 state change, last state change 26w2d
+  Virtual IP address is 192.168.77.62
+  Active virtual MAC address is 0000.0c07.ac01
+    Local virtual MAC address is 0000.0c07.ac01 (v1 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 0.704 secs
+  Preemption enabled, delay min 180 secs
+  Active router is 192.168.77.60, priority 255 (expires in 10.416 sec)
+  Standby router is local
+  Priority 255 (configured 255)
+    Track object 1 state Up decrement 60
+  Group name is "hsrp-Vl111-1" (default)
+BDI10 - Group 1
+  State is Active
+    14 state changes, last state change 17w6d
+    Track object 1 state Up
+  Virtual IP address is 203.57.147.1
+  Active virtual MAC address is 0000.0c07.ac01 (MAC In Use)
+    Local virtual MAC address is 0000.0c07.ac01 (v1 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 1.040 secs
+  Preemption enabled, delay min 180 secs
+  Active router is local
+  Standby router is 203.57.147.3, priority 230 (expires in 10.240 sec)
+  Priority 240 (configured 240)
+  Group name is "hsrp-BD10-1" (default)
+  FLAGS: 1/1
+Vlan703 - Group 4
+  State is Active
+    11 state changes, last state change 5d14h
+  Virtual IP address is 172.23.40.9
+  Active virtual MAC address is 0000.0c07.ac04
+    Local virtual MAC address is 0000.0c07.ac04 (v1 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 0.340 secs
+  Preemption enabled, delay min 180 secs
+  Active router is local
+  Standby router is unknown
+  Priority 200 (configured 200)
+    Track interface Dialer0 state Up decrement 10
+  IP redundancy name is "hsrp-Vl703-4" (default)
+GigabitEthernet0/1.2951 - Group 1 (version 2)
+  State is Active
+    2 state changes, last state change 3y37w
+  Virtual IP address is 111.222.230.17
+  Active virtual MAC address is 0000.0c9f.f001
+    Local virtual MAC address is 0000.0c9f.f001 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 2.720 secs
+  Preemption enabled, delay min 180 secs, reload 300 secs
+  Active router is local
+  Standby router is unknown
+  Priority 255 (configured 255)
+    Track object 1 (unknown)
+  Group name is "hsrp-Gi0/1.2951-1" (default)

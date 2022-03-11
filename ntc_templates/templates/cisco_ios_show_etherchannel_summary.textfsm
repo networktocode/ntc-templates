@@ -26,4 +26,6 @@ PortChannel
   ^\s+
   ^-+\++
   ^\s*$$
+  ^(RU|SU)\s+-\s+L(2|3)\s+port-channel\s+UP\s+(s|S)tate
+  ^(P|S)/(bndl|susp)\s+-\s+(Bundled|Suspended)
   ^. -> Error
