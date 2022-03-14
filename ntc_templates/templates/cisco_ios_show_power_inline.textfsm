@@ -25,4 +25,4 @@ Start
   ^Totals:\s+\d+\s+(on|off)\s+\d+\.\d+\s+\d+\.\d+\s*$$
 # Command unknown
   ^% Invalid command .*$$ -> Error
-  ^.*$$
+  ^. -> Error
