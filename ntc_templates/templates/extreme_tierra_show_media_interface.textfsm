@@ -1,0 +1,80 @@
+Value Key,Required INTERFACE ([\w]+ [\d/]+)
+Value CAGE (\d+)
+Value SLOT (\d+)
+Value QUAL (\w+)
+Value OPTICAL (\w+)
+Value STATE (\d+)
+Value MODULE_TYPE ([\w\d]+)
+Value PART_NUMBER ([\w\d\-_]+)
+Value SERIAL_NUMBER ([\w\d\-_]+)
+Value VENDOR ([\w\d\,\-]+)
+Value DESCRIPTION ([\S\s]+)
+Value CHANNELS (\d+)
+Value DATECODE (\d+)
+Value CHN_1_VOLTAGE (\S+)
+Value CHN_1_TEMPRATURE (\S+)
+Value CHN_1_RXPOWER (\S+)
+Value CHN_1_TXBIAS (\S+)
+Value CHN_1_TXPOWER (\S+)
+Value CHN_2_VOLTAGE (\S+)
+Value CHN_2_TEMPRATURE (\S+)
+Value CHN_2_RXPOWER (\S+)
+Value CHN_2_TXBIAS (\S+)
+Value CHN_2_TXPOWER (\S+)
+Value CHN_3_VOLTAGE (\S+)
+Value CHN_3_TEMPRATURE (\S+)
+Value CHN_3_RXPOWER (\S+)
+Value CHN_3_TXBIAS (\S+)
+Value CHN_3_TXPOWER (\S+)
+Value CHN_4_VOLTAGE (\S+)
+Value CHN_4_TEMPRATURE (\S+)
+Value CHN_4_RXPOWER (\S+)
+Value CHN_4_TXBIAS (\S+)
+Value CHN_4_TXPOWER (\S+)
+
+Start
+ ^\s*Interface:\s*${INTERFACE}
+ ^\s*Cage:\s*${CAGE}
+ ^\s*Slot:\s*${SLOT}
+ ^\s*Qual:\s*${QUAL}
+ ^\s*Optical:\s*${OPTICAL}
+ ^\s*State:\s*${STATE}
+ ^\s*Module Type:\s*${MODULE_TYPE}
+ ^\s*Part Number:\s*${PART_NUMBER}
+ ^\s*Serial Number:\s*${SERIAL_NUMBER}
+ ^\s*Vendor:\s*${VENDOR}
+ ^\s*Description:\s*${DESCRIPTION}
+ ^\s*Channels:\s*${CHANNELS}
+ ^\s*Datecode:\s*${DATECODE}
+ ^\s*Channel\[1\]: -> CHNL1
+
+CHNL1
+ ^\s*Voltage:\s*${CHN_1_VOLTAGE}
+ ^\s*Temperature:\s*${CHN_1_TEMPRATURE}
+ ^\s*RxPower:\s*${CHN_1_RXPOWER}
+ ^\s*TxBias:\s*${CHN_1_TXBIAS}
+ ^\s*TxPower:\s*${CHN_1_TXPOWER}
+ ^\s*Channel\[2\]: -> CHNL2
+
+CHNL2
+ ^\s*Voltage: ${CHN_2_VOLTAGE}
+ ^\s*Temperature: ${CHN_2_TEMPRATURE}
+ ^\s*RxPower: ${CHN_2_RXPOWER}
+ ^\s*TxBias: ${CHN_2_TXBIAS}
+ ^\s*TxPower: ${CHN_2_TXPOWER}
+ ^\s*Channel\[3\]: -> CHNL3
+
+CHNL3
+ ^\s*Voltage: ${CHN_3_VOLTAGE}
+ ^\s*Temperature: ${CHN_3_TEMPRATURE}
+ ^\s*RxPower: ${CHN_3_RXPOWER}
+ ^\s*TxBias: ${CHN_3_TXBIAS}
+ ^\s*TxPower: ${CHN_3_TXPOWER}
+ ^\s*Channel\[4\]: -> CHNL4
+
+CHNL4
+ ^\s*Voltage: ${CHN_4_VOLTAGE}
+ ^\s*Temperature: ${CHN_4_TEMPRATURE}
+ ^\s*RxPower: ${CHN_4_RXPOWER}
+ ^\s*TxBias: ${CHN_4_TXBIAS}
+ ^\s*TxPower: ${CHN_4_TXPOWER} -> Record Start
