@@ -1,0 +1,39 @@
+# Value Filldown TIMESTAMP (\d{2}:\d{2}:\d{2})
+# Value Filldown TASKS_TOTAL (\d+)
+# Value Filldown TASKS_RUNNING (\d+)
+# Value Filldown TASKS_SLEEPING (\d+)
+# Value Filldown TASKS_STOPPED (\d+)
+# Value Filldown TASKS_ZOMBIE (\d+)
+Value PID (\d+)
+Value USER (\S+)
+Value PRIORITY (\d+|rt)
+Value NICE (-?\d+)
+Value VIRTUAL_MEMORY_SIZE (\d+m?)
+Value RESIDENT_MEMORY_SIZE (\d+m?)
+Value SHARED_MEMORY_SIZE (\d+m?)
+Value PROCESS_STATUS (D|I|R|S|T|t|Z)
+  # 29. S  --  Process Status
+  #            The status of the task which can be one of:
+  #                D = uninterruptible sleep
+  #                I = idle
+  #                R = running
+  #                S = sleeping
+  #                T = stopped by job control signal
+  #                t = stopped by debugger during trace
+  #                Z = zombie
+Value PERCENT_CPU (\d+[.]\d+)
+Value PERCENT_MEMORY (\d+[.]\d+)
+Value CPU_TIME (\d+:\d+[.]\d+)
+Value COMMAND (\S+)
+
+Start
+  ^top - ${TIMESTAMP} up 3 days,  1:06,  2 users,  load average: 0.15, 0.08, 0.09
+  ^Tasks:\s+${TASKS_TOTAL} total,\s+${TASKS_RUNNING} running,\s+${TASKS_SLEEPING} sleeping,\s+${TASKS_STOPPED} stopped,\s+${TASKS_ZOMBIE} zombie
+  %Cpu(s):  2.8 us,  0.7 sy,  0.0 ni, 96.3 id,  0.0 wa,  0.2 hi,  0.0 si,  0.0 st
+  KiB Mem:   2014520 total,  1970928 used,    43592 free,   171340 buffers
+  KiB Swap:        0 total,        0 used,        0 free,  1156836 cached
+
+  ^  PID USER      PR  NI  VIRT  RES  SHR S  %CPU %MEM    TIME+  COMMAND$$ -> ProcessTable
+
+ProcessTable
+  ^\s*${PID} ${USER}\s*${PRIORITY}\s*${NICE}\s+${VIRTUAL_MEMORY_SIZE}\s+${RESIDENT_MEMORY_SIZE}\s+${SHARED_MEMORY_SIZE} ${PROCESS_STATUS}\s+${PERCENT_CPU}\s+${PERCENT_MEMORY}\s+${CPU_TIME} ${COMMAND}$$ -> Record
