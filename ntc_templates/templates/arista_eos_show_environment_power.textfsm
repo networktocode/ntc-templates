@@ -1,0 +1,21 @@
+# Tested against EOS version 4.14.15M and newer
+# Will not work against vEOS as there are no physical power supplies
+Value Required POWER_SUPPLY_LOCATION (\d+)
+Value POWER_SUPPLY_PID (\S+)
+Value POWER_SUPPLY_WATTS (\d+)
+Value POWER_SUPPLY_INPUT (\S+)
+Value POWER_SUPPLY_OUTPUT (\S+)
+Value POWER_SUPPLY_WATTS_USING (\d+[.]?\d+?)
+Value POWER_SUPPLY_STATUS (\S+( [a-zA-Z]+)?( [a-zA-Z]+)?)
+# The Uptime and total values below are not present in earlier versions of EOS
+Value POWER_SUPPLY_UPTIME (.*)
+Value Fillup SYSTEM_TOTAL_POWER_WATTS (\d+)
+Value Fillup SYSTEM_TOTAL_POWER_USED_WATTS (\d+[.]?\d+?)
+
+Start
+  ^Power\s+Input\s+Output\s+Output.*$$
+  ^Supply\s+Model\s+Capacity\s+Current\s+Current\s+Power\s+Status.*$$
+  ^-.*$$
+  ^${POWER_SUPPLY_LOCATION}\s+${POWER_SUPPLY_PID}\s+${POWER_SUPPLY_WATTS}W\s+${POWER_SUPPLY_INPUT}\s+${POWER_SUPPLY_OUTPUT}\s+${POWER_SUPPLY_WATTS_USING}W\s+${POWER_SUPPLY_STATUS} *${POWER_SUPPLY_UPTIME}\s*$$ -> Record
+  ^Total\s+-+\s+${SYSTEM_TOTAL_POWER_WATTS}W\s+-+\s+-+\s+${SYSTEM_TOTAL_POWER_USED_WATTS}W\s+.*$$
+  ^. -> Error
