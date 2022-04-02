@@ -1,0 +1,15 @@
+2960l#show boot
+BOOT path-list : flash:c2960l-universalk9-mz.152-7.E2/c2960l-universalk9-mz.152-7.E2.bin
+Config file : flash:/config.text
+Private Config file : flash:/private-config.text
+Enable Break : yes
+Manual Boot : no
+Allow Dev Key : yes
+HELPER path-list :
+Boot optimization : disabled
+NVRAM/Config file
+buffer size: 524288
+Timeout for Config
+Download: 0 seconds
+Config Download
+via DHCP: disabled (next boot: disabled)
