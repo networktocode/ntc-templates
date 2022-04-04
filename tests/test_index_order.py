@@ -44,7 +44,11 @@ OS_CHOICES = [
 =======
     "extreme_slx",
     "extreme_tierra",
+<<<<<<< HEAD
 >>>>>>> 8f1effb9 (extreme_tierra_show_media cmds, changed OS list.)
+=======
+    "extreme",
+>>>>>>> 636d5c4e (Addressed issue.)
     "f5_ltm",
     "fortinet",
     "hp_comware",
@@ -79,6 +83,7 @@ def check_order(  # pylint: disable=too-many-arguments,too-many-arguments,too-ma
     current_os, prior_os, cmd_len, prior_len, os_choices, used_os, cmd, prior_cmd
 =======
 def check_order(
+<<<<<<< HEAD
     current_os,
     prior_os,
     cmd_len,
@@ -88,6 +93,9 @@ def check_order(
     cmd,
     prior_cmd,
 >>>>>>> 8f1effb9 (extreme_tierra_show_media cmds, changed OS list.)
+=======
+    current_os, prior_os, cmd_len, prior_len, os_choices, used_os, cmd, prior_cmd
+>>>>>>> 636d5c4e (Addressed issue.)
 ):
     """Enforcing the complex logic to ensure that the index file is ordered correctly."""
     add_os_check = []

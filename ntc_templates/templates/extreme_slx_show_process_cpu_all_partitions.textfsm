@@ -13,12 +13,13 @@ Start
  ^Total CPU -> CPU
 
 LOAD
- ^${LOAD_BLADE}:\s+${LOAD_1MIN}\s+${LOAD_5MIN}\s+${LOAD_15MIN} -> Record
- ^Total CPU -> CPU
+ ^Blade\s+1-min\s+5-min\s+15-min
+ ^${LOAD_BLADE}:\s+${LOAD_1MIN}\s+${LOAD_5MIN}\s+${LOAD_15MIN} -> Record Start
  ^\s*$$
  ^. -> Error
 
 CPU
+ ^Blade\s+current\s+user\s+system\s+iowait
  ^${CPU_BLADE}:\s+${CPU_CURRENT}\s+${CPU_USER}\s+${CPU_SYSTEM}\s+${CPU_IOWAIT} -> Record
  ^\s*$$
  ^. -> Error
