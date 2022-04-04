@@ -15,6 +15,10 @@ Start
 LOAD
  ^${LOAD_BLADE}:\s+${LOAD_1MIN}\s+${LOAD_5MIN}\s+${LOAD_15MIN} -> Record
  ^Total CPU -> CPU
+ ^\s*$$
+ ^. -> Error
 
 CPU
  ^${CPU_BLADE}:\s+${CPU_CURRENT}\s+${CPU_USER}\s+${CPU_SYSTEM}\s+${CPU_IOWAIT} -> Record
+ ^\s*$$
+ ^. -> Error

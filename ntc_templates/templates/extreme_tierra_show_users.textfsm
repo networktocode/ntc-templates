@@ -10,3 +10,5 @@ Start
 
 TABLE
  ^${USERNAME}\s+${ROLE}\s+${HOST_IP}\s+${DEVICE}\s+${LOGIN_DATE} ${LOGIN_TIME} -> Record
+ ^\s*$$
+ ^. -> Error
