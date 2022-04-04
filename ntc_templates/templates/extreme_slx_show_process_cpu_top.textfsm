@@ -45,4 +45,6 @@ Start
  ^KiB Swap:\s+${SWAP_TOTAL} total,\s+${SWAP_USED} used,\s+${SWAP_FREE} free,\s+${SWAP_AVAIL} Avail Mem
  ^[PID\s]+ -> Continue
  ^\s*${PID}\s+${USER}\s+${PR}\s+${NI}\s+${VIRT}\s+${RES}\s+${SHR}\s+${S}\s+${CPU}\s+${MEM}\s+${TIME}\s+${COMMAND} -> Continue.Record
+ ^\s*$$
+ ^. -> Error
  
