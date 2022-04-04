@@ -1,0 +1,3 @@
+ipv6 access-list test
+ipv6 access-list v6_permit_any
+  seq 10 permit ipv6 any any count

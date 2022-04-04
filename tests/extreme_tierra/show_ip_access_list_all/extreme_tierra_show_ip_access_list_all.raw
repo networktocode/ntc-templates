@@ -1,0 +1,3 @@
+ip access-list test 
+ip access-list v4_permit_any 
+  seq 10 permit ip any any count ( 0 Packets, 0 Bytes, 0 Packets/sec, 0 Bits/sec )
