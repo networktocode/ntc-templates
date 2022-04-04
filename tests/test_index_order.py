@@ -34,6 +34,7 @@ OS_CHOICES = [
     "enterasys",
     "extreme_slx",
     "extreme_tierra",
+    "extreme",
     "f5_ltm",
     "fortinet",
     "hp_comware",
@@ -59,14 +60,7 @@ RE_TEMPLATE_OS = re.compile(rf"^({CHOICES_STRING})")
 
 
 def check_order(
-    current_os,
-    prior_os,
-    cmd_len,
-    prior_len,
-    os_choices,
-    used_os,
-    cmd,
-    prior_cmd,
+    current_os, prior_os, cmd_len, prior_len, os_choices, used_os, cmd, prior_cmd
 ):
     add_os_check = []
 
@@ -129,14 +123,7 @@ def test_index_ordering():
         cmd = "_".join(template.split("_")[2:])
         cmd_len = len(cmd)
         check_val, check_msg = check_order(
-            os,
-            prior_os,
-            cmd_len,
-            prior_len,
-            OS_CHOICES,
-            used_os,
-            cmd,
-            prior_cmd,
+            os, prior_os, cmd_len, prior_len, OS_CHOICES, used_os, cmd, prior_cmd
         )
         if not check_val:
             # assertFalse(check_val, msg=check_msg)
