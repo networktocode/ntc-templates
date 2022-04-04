@@ -1,0 +1,9 @@
+ip access-list test
+ip access-list v4_permit_any
+  seq 10 permit ip any any count
+ipv6 access-list test
+ipv6 access-list v6_permit_any
+  seq 10 permit ipv6 any any count
+mac access-list l2_permit_any
+  seq 10 permit any any count
+mac access-list test

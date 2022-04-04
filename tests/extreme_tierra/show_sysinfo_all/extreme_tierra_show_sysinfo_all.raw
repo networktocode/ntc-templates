@@ -1,0 +1,84 @@
+
+Fan Information
+Id     Status      RPM     Percentage SpeedLevel     Direction   
+--------------------------------------------------------------------------------------
+1      Up          8000    45         MEDIUM         FAN_DIR_F2B 
+2      Up          8100    46         MEDIUM         FAN_DIR_F2B 
+3      Up          8100    46         MEDIUM         FAN_DIR_F2B 
+4      Up          8100    46         MEDIUM         FAN_DIR_F2B 
+5      Up          8100    46         MEDIUM         FAN_DIR_F2B 
+
+FAN_DIR_F2B - Fan Airflow Direction is FrontToBack
+
+FanSpeedLevel - <40%[LOW],40-70%[MEDIUM],>70%[HIGH]
+
+Led Information
+Id     State     Color     Description    
+-------------------------------------------------------------
+led-0  Solid     GREEN     Power Supply Unit
+led-1  Solid     GREEN     Fan            
+led-2  Solid     GREEN     System Status  
+
+PSU Information
+Id     Status      Type    C[in]   C[out]  P[in]   P[out]  V[in]   V[out]  
+---------------------------------------------------------------------------------------------------------------------------------
+1      Up          AC      2       44      572     516     209     11      
+2      Up          AC      2       45      580     552     212     11      
+
+ **C - Current in Amps ,**P - Power in Watts ,**V - Voltage in Volts
+Total power budget for chassis = 3200 Watts
+Total power used by LC and system core = 2040 Watts
+Total power available = 1160 Watts
+Sensor Information
+Id        Name                Current(°C/Volt)    Warning(°C/Volt)    Critical(°C/Volt)   Shutdown(°C/Volt)   
+--------------------------------------------------------------------------------------
+1         CPU Core                 31.00               85.00               90.00               0.00                
+2         TF2 MAC                  41.00               75.00               80.00               95.00               
+3         TF2 Serdes1              49.00               80.00               85.00               95.00               
+4         TF2 Serdes2              44.00               80.00               85.00               95.00               
+5         TF2 Serdes3              48.00               80.00               85.00               95.00               
+6         TF2 Serdes4              47.00               80.00               85.00               95.00               
+7         LC1 PHY MAX              64.00               115.00              120.00              125.00              
+8         LC1 QSFP MAX             44.00               63.00               68.00               73.00               
+9         LC2 PHY MAX              65.00               115.00              120.00              125.00              
+10        LC2 QSFP MAX             45.00               63.00               68.00               73.00               
+11        LC3 PHY MAX              64.00               115.00              120.00              125.00              
+12        LC3 QSFP MAX             49.00               63.00               68.00               73.00               
+13        LC4 PHY MAX              57.00               115.00              120.00              125.00              
+14        LC4 QSFP MAX             34.00               63.00               68.00               73.00               
+15        LC5 PHY MAX              52.00               115.00              120.00              125.00              
+16        LC5 QSFP MAX             0.00                63.00               68.00               73.00               
+17        LC6 PHY MAX              52.00               115.00              120.00              125.00              
+18        LC6 QSFP MAX             0.00                63.00               68.00               73.00               
+19        LC7 PHY MAX              52.00               115.00              120.00              125.00              
+20        LC7 QSFP MAX             0.00                63.00               68.00               73.00               
+21        LC8 PHY MAX              52.00               115.00              120.00              125.00              
+22        LC8 QSFP MAX             0.00                63.00               68.00               73.00               
+23        DIMM1                    35.00               80.00               85.00               0.00                
+24        DIMM2                    31.00               80.00               85.00               0.00                
+25        DIMM3                    32.00               80.00               85.00               0.00                
+26        DIMM4                    32.00               80.00               85.00               0.00                
+27        SSD                      39.00               75.00               80.00               0.00                
+28        BMC-12V                  12.48               0.00                12.64               12.79               
+29        BMC-3_3V                 3.36                0.00                3.44                3.49                
+30        SWB-075V                 0.74                0.00                0.78                0.79                
+31        SWB-3_3V                 3.30                0.00                3.42                3.46                
+32        SWB-2_5V                 2.48                0.00                2.58                2.62                
+33        SWB-1_8V                 1.80                0.00                1.87                1.89                
+34        SWB-1_5V                 1.53                0.00                1.56                1.58                
+35        SWB-1_2V                 1.20                0.00                1.24                1.26                
+36        SWB-1V                   1.80                0.00                1.87                1.89                
+37        SWB-VCORE                0.85                0.00                0.86                0.87                
+38        SWB-1_7V                 1.64                0.00                1.76                1.78                
+
+Slot Information
+Slot  State         FRU-Type    Uptime    Insertion-Time       Extraction-Time      Description         
+-------------------------------------------------------------------------------------------------------
+1     Online        LC16x100G   1169h22m8 2022-02-15 02:19:36                       16x100G QSFP28 Line Card
+2     Online        LC16x100G   1169h22m6 2022-02-15 02:19:37                       16x100G QSFP28 Line Card
+3     Online        LC16x100G   1169h22m3 2022-02-15 02:19:38                       16x100G QSFP28 Line Card
+4     Online        LC16x100G   1169h22m1 2022-02-15 02:19:38                       16x100G QSFP28 Line Card
+5     Online        LC16x100G   1169h21m5 2022-02-15 02:19:39                       16x100G QSFP28 Line Card
+6     Online        LC16x100G   1169h21m5 2022-02-15 02:19:40                       16x100G QSFP28 Line Card
+7     Online        LC16x100G   1169h21m5 2022-02-15 02:19:42                       16x100G QSFP28 Line Card
+8     Online        LC16x100G   1169h21m5 2022-02-15 02:19:43                       16x100G QSFP28 Line Card

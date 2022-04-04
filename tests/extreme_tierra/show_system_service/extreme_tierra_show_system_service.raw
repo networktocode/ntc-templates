@@ -1,0 +1,25 @@
+SERVICE                     CURRENT         ROLLBACK      READY       STATE       RESTARTS  
+                            VERSION         VERSION       
+----------------------------------------------------------------------------------------------
+api-gw                      1.1.0           None          true        Running     1         
+chassis-mgr                 1.2.0           None          true        Running     1         
+cli                         1.1.0           None          true        Running     1         
+config-db                   1.1.0           None          true        Running     1         
+interface-agent             1.1.0           None          true        Running     1         
+interface-mgr               1.2.0           None          true        Running     1         
+lacp                        1.0.0           None          true        Running     1         
+lldp                        1.0.0           None          true        Running     1         
+msg-bus                     1.1.0           None          true        Running     1         
+nexthop-agent               1.1.0           None          true        Running     1         
+packet-mgr                  1.2.0           None          true        Running     1         
+pbd-agent                   1.1.0           None          true        Running     1         
+pcap-agent                  1.1.0           None          true        Running     1         
+persistent-state-db         1.1.0           None          true        Running     1         
+pipeline-agent              1.1.0           None          true        Running     1         
+security                    1.1.0           None          true        Running     1         
+sfcs-agent                  1.1.0           None          true        Running     1         
+snmp                        1.1.0           None          true        Running     1         
+state-db                    1.1.0           None          true        Running     1         
+stratum                     0.4.19-4.14.49  None          true        Running     1         
+svcplane-agent              1.1.0           None          true        Running     1         
+target-proxy-agent          1.1.0           None          true        Running     1         
