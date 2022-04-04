@@ -83,7 +83,7 @@ Start
   ^Swap.*:\s+${GLOBAL_SWAP_MEM_TOTAL}${GLOBAL_SWAP_MEM_UNIT}\stotal,\s+${GLOBAL_SWAP_MEM_USED}[kmgt]\sused,\s+${GLOBAL_SWAP_MEM_FREE}[kmgt]\sfree,\s+${GLOBAL_SWAP_MEM_CACHED}[kmgt]\scached$$
   ^$$     
   # Process table header
-  ^\s*PID\s+USER\s+PR\s+NI\s+VIRT\s+RES\s+SHR\s+S\s+.CPU\s+.MEM\s+TIME.\s+COMMAND$$
+  ^\s*PID\s+USER\s+PR\s+NI\s+VIRT\s+RES\s+SHR\s+S\s+.CPU\s+.MEM\s+TIME.\s+COMMAND\s*$$
   # Process line items in table
-  ^\s*${PID}\s+${USER}\s*${PRIORITY}\s*${NICE}\s+${VIRTUAL_MEMORY_SIZE}\s+${RESIDENT_MEMORY_SIZE}\s+${SHARED_MEMORY_SIZE}\s+${PROCESS_STATUS}\s+${PERCENT_CPU}\s+${PERCENT_MEMORY}\s+${CPU_TIME}\s+${COMMAND}$$ -> Record
+  ^\s*${PID}\s+${USER}\s*${PRIORITY}\s*${NICE}\s+${VIRTUAL_MEMORY_SIZE}\s+${RESIDENT_MEMORY_SIZE}\s+${SHARED_MEMORY_SIZE}\s+${PROCESS_STATUS}\s+${PERCENT_CPU}\s+${PERCENT_MEMORY}\s+${CPU_TIME}\s+${COMMAND}\s*$$ -> Record
   ^. -> Error
