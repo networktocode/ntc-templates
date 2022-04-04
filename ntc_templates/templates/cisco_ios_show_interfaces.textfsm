@@ -25,6 +25,7 @@ Value INPUT_ERRORS (\d+)
 Value CRC (\d+)
 Value ABORT (\d+)
 Value OUTPUT_ERRORS (\d+)
+Value VLAN_ID (\d+)
 
 Start
   ^\S+\s+is\s+.+?,\s+line\s+protocol.*$$ -> Continue.Record
@@ -34,6 +35,7 @@ Start
   ^\s+Description:\s+${DESCRIPTION}\s*$$
   ^\s+Internet\s+address\s+is\s+${IP_ADDRESS}\s*$$
   ^\s+MTU\s+${MTU}.*BW\s+${BANDWIDTH}.*DLY\s+${DELAY},\s*$$
+  ^\s+Encapsulation\s+${ENCAPSULATION}, Vlan ID\s+${VLAN_ID}.+$$
   ^\s+Encapsulation\s+${ENCAPSULATION},.+$$
   ^\s+Last\s+input\s+${LAST_INPUT},\s+output\s+${LAST_OUTPUT},\s+output\s+hang\s+${LAST_OUTPUT_HANG}\s*$$
   ^\s+Queueing\s+strategy:\s+${QUEUE_STRATEGY}\s*$$
