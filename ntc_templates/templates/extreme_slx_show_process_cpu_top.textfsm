@@ -26,7 +26,7 @@ Value Filldown SWAP_FREE (\d+)
 Value Filldown SWAP_AVAIL (\d+)
 Value Key,Required PID (\d+)
 Value USER ([\w\-]+)
-Value PR ([\d\w]+)
+Value PR ([\-\d\w]+)
 Value NI ([\d\w\-]+)
 Value VIRT ([\d]+)
 Value RES ([\d]+)
@@ -43,8 +43,8 @@ Start
  ^[Cpus\(\):]+\s+${CPU_US}[\s%\w\,]+\s${CPU_SY}[\s%\w\,]+\s${CPU_NI}[\s%\w\,]+\s${CPU_ID}[\s%\w\,]+\s${CPU_WA}[\s%\w\,]+\s${CPU_HI}[\s%\w\,]+\s${CPU_SI}[\s%\w\,]+\s${CPU_ST}
  ^KiB Mem :\s+${MEMORY_TOTAL} total,\s+${MEMORY_USED} used,\s+${MEMORY_FREE} free,\s+${MEMORY_CACHE} buff/cache
  ^KiB Swap:\s+${SWAP_TOTAL} total,\s+${SWAP_USED} used,\s+${SWAP_FREE} free,\s+${SWAP_AVAIL} Avail Mem
- ^[PID\s]+ -> Continue
- ^\s*${PID}\s+${USER}\s+${PR}\s+${NI}\s+${VIRT}\s+${RES}\s+${SHR}\s+${S}\s+${CPU}\s+${MEM}\s+${TIME}\s+${COMMAND} -> Continue.Record
+ ^\s*PID\s*USER\s*PR\s*NI\s*VIRT\s*RES\s*SHR\s*S\s*.CPU\s*.MEM\s*TIME.\s*COMMAND -> Next
+ ^\s*${PID}\s+${USER}\s+${PR}\s+${NI}\s+${VIRT}\s+${RES}\s+${SHR}\s+${S}\s+${CPU}\s+${MEM}\s+${TIME}\s+${COMMAND} -> Record
  ^\s*$$
  ^. -> Error
  
