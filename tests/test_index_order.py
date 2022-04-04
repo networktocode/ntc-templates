@@ -21,6 +21,7 @@ OS_CHOICES = [
     "brocade_vyos",
     "checkpoint_gaia",
     "ciena_saos",
+    "cisco_apic",
     "cisco_asa",
     "cisco_ftd",
     "cisco_ios",
