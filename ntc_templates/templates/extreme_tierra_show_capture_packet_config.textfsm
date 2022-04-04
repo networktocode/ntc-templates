@@ -1,0 +1,9 @@
+Value DIRECTION ([RT]X)
+Value INTERFACE ([\d/:]+)
+Value PACKET_COUNT (\d+)
+
+Start
+ ^\s*All protocol ${DIRECTION} capture is enabled on interface Eth ${INTERFACE}. Number of packet to capture ${PACKET_COUNT}. -> Record
+ ^\s*All protocol ${DIRECTION} capture is enabled on interface Eth ${INTERFACE}. -> Record
+ ^\s*$$
+ ^. -> Error

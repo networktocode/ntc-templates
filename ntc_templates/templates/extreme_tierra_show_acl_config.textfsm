@@ -1,0 +1,7 @@
+Value ACL_COUNTER (enable acl-counter)
+
+Start
+ ^\s*acl-config
+ ^\s*${ACL_COUNTER} -> Record
+ ^\s*$$
+ ^. -> Error
