@@ -47,6 +47,8 @@ Start
  ^\s*Channels:\s*${CHANNELS}
  ^\s*Datecode:\s*${DATECODE}
  ^\s*Channel\[1\]: -> CHNL1
+ ^\s*$$
+ ^. -> Error
 
 CHNL1
  ^\s*Voltage:\s*${CHN_1_VOLTAGE}
@@ -55,6 +57,8 @@ CHNL1
  ^\s*TxBias:\s*${CHN_1_TXBIAS}
  ^\s*TxPower:\s*${CHN_1_TXPOWER}
  ^\s*Channel\[2\]: -> CHNL2
+ ^\s*$$
+ ^. -> Error
 
 CHNL2
  ^\s*Voltage: ${CHN_2_VOLTAGE}
@@ -63,6 +67,8 @@ CHNL2
  ^\s*TxBias: ${CHN_2_TXBIAS}
  ^\s*TxPower: ${CHN_2_TXPOWER}
  ^\s*Channel\[3\]: -> CHNL3
+ ^\s*$$
+ ^. -> Error
 
 CHNL3
  ^\s*Voltage: ${CHN_3_VOLTAGE}
@@ -71,6 +77,8 @@ CHNL3
  ^\s*TxBias: ${CHN_3_TXBIAS}
  ^\s*TxPower: ${CHN_3_TXPOWER}
  ^\s*Channel\[4\]: -> CHNL4
+ ^\s*$$
+ ^. -> Error
 
 CHNL4
  ^\s*Voltage: ${CHN_4_VOLTAGE}
@@ -78,3 +86,5 @@ CHNL4
  ^\s*RxPower: ${CHN_4_RXPOWER}
  ^\s*TxBias: ${CHN_4_TXBIAS}
  ^\s*TxPower: ${CHN_4_TXPOWER} -> Record Start
+ ^\s*$$
+ ^. -> Error

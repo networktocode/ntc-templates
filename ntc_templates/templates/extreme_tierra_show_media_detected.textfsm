@@ -9,3 +9,5 @@ Value DESCRIPTION ([\S\s]+)
 
 Start
  ^\s*${INTERFACE}\s*${QUAL}\s*${OPTICAL}\s*${MODULE_TYPE}\s*${PART_NUMBER}\s*${SERIAL_NUMBER}\s*${VENDOR}\s*${DESCRIPTION} -> Record 
+ ^\s*$$
+ ^. -> Error
