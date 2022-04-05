@@ -21,47 +21,4 @@ clean up of temporary AOF files
 Failure:DB migration failed.
 Deleted: docker.io/library/db-migrator:1.1.0
 
-2021-12-20 06:11:21.034 UTC +0000 LogID:8002 info Msg: Firmware update file scp://ngnpb:Extremengnpb@10.254.128.91:22/davfs/NPB/21.1.2/build/TierraOS-21.1.2.0-NPB-20211219_143917_UTC/install/TierraOS-21.1.2.0-NPB-20211219_143917_UTC.bin downloaded
-2021-12-20 06:11:21.034 UTC +0000 LogID:8004 info Msg: Activating firmware TierraOS-21.1.2.0-NPB-20211219_143917_UTC.bin.  System will reboot if successful
-2021-12-20 06:20:45.299 UTC +0000 LogID:5021 info Msg: Firmware change successful.  Current Firmware Version is TierraOS-21.1.2.0-NPB-20211219_143917_UTC
 2021-12-20 07:14:24.191 UTC +0000 LogID:8003 error Msg: Failed to retrieve file scp://ngnpb:Extremengnpb@10.254.128.91:22/davfs/NPB/21.1.2/build/TierraOS-21.1.2.0-pre.4-NPB/install/TierraOS-21.1.2.0-pre.4-NPB.bin, Error: Input File does not exist
-2021-12-20 07:16:38.431 UTC +0000 LogID:8002 info Msg: Firmware update file scp://ngnpb:Extremengnpb@10.254.128.91:22/davfs/NPB/21.1.2.0-pre.4/build/TierraOS-21.1.2.0-pre.4-NPB/install/TierraOS-21.1.2.0-pre.4-NPB.bin downloaded
-2021-12-20 07:16:38.431 UTC +0000 LogID:8004 info Msg: Activating firmware TierraOS-21.1.2.0-pre.4-NPB.bin.  System will reboot if successful
-2021-12-20 07:26:25.486 UTC +0000 LogID:5021 info Msg: Firmware change successful.  Current Firmware Version is TierraOS-21.1.2.0-pre.4-NPB
-2021-12-21 06:27:53.700 UTC +0000 LogID:8003 error Msg: Failed to retrieve file scp://ngnpb:Extremengnpb@10.254.128.91:22/davfs/NPB/21.1.2/build/TierraOS-21.1.2.0-pre.2-NPB/install/TierraOS-21.1.2.0-pre.2-NPB.bin, Error: Input File does not exist
-2021-12-21 07:01:16.038 UTC +0000 LogID:8003 error Msg: Failed to retrieve file scp://password:user@10.37.19.28:22//home/user/akash/builds/TierraOS-21.1.2.0-NPB-GEN4-20211207_041040_UTC.bin, Error: Invalid user credentials
-2021-12-21 07:03:59.036 UTC +0000 LogID:8003 error Msg: Failed to retrieve file scp://user:password@10.37.19.28:22//home/user/akash/builds/TierraOS-21.1.2.0-NPB-GEN4-20211207_041040_UTC.bin, error reading from server: EOF
-2021-12-21 08:02:23.806 UTC +0000 LogID:8008 error Msg: Failed to resolve host engartifacts1.extremenetworks.com, err rpc error: code = Unknown desc = lookup engartifacts1.extremenetworks.com on 8.8.8.8:53: no such host
-2021-12-21 08:08:42.581 UTC +0000 LogID:8002 info Msg: Firmware update file scp://user:password@10.37.19.28:22//home/user/akash/builds/TierraOS-21.1.2.0-pre.2-NPB.bin downloaded
-2021-12-21 08:08:42.581 UTC +0000 LogID:8004 info Msg: Activating firmware TierraOS-21.1.2.0-pre.2-NPB.bin.  System will reboot if successful
-2021-12-21 08:08:42.595 UTC +0000 LogID:8005 error Msg: Failed to activate firmware TierraOS-21.1.2.0-pre.2-NPB.bin, err Activation failed -  Cannot determine version for /var/data/firmware/TierraOS-21.1.2.0-pre.2-NPB.bin
-2021-12-21 08:32:59.838 UTC +0000 LogID:8002 info Msg: Firmware update file scp://ngnpb:Extremengnpb@10.254.128.91:22//usr/home/ngnpb/build/TierraOS-21.1.2.0-pre.2-NPB.bin downloaded
-2021-12-21 08:32:59.838 UTC +0000 LogID:8004 info Msg: Activating firmware TierraOS-21.1.2.0-pre.2-NPB.bin.  System will reboot if successful
-2021-12-21 08:42:47.727 UTC +0000 LogID:5021 info Msg: Firmware change successful.  Current Firmware Version is TierraOS-21.1.2.0-pre.2-NPB
-2021-12-21 09:03:52.165 UTC +0000 LogID:8003 error Msg: Failed to retrieve file scp://ngnpb:Extremengnpb@10.254.128.91:22/davfs/NPB/21.1.2/build/TierraOS-21.1.2.0-pre.4-NPB/install/TierraOS-21.1.2.0-pre.4-NPB.bin, Error: Input File does not exist
-2021-12-21 09:06:00.862 UTC +0000 LogID:8003 error Msg: Failed to retrieve file scp://ngnpb:Extremengnpb@10.254.128.91:22/davfs/NPB/21.1.2/build/install/TierraOS-21.1.2.0-pre.4-NPB.bin, Error: Input File does not exist
-2021-12-21 09:29:53.887 UTC +0000 LogID:8002 info Msg: Firmware update file scp://ngnpb:Extremengnpb@10.254.128.91:22/davfs/NPB/21.1.2.0-pre.4/build/TierraOS-21.1.2.0-pre.4-NPB/install/TierraOS-21.1.2.0-pre.4-NPB.bin downloaded
-2021-12-21 09:29:53.887 UTC +0000 LogID:8004 info Msg: Activating firmware TierraOS-21.1.2.0-pre.4-NPB.bin.  System will reboot if successful
-2021-12-21 09:39:42.231 UTC +0000 LogID:5021 info Msg: Firmware change successful.  Current Firmware Version is TierraOS-21.1.2.0-pre.4-NPB
-2021-12-21 09:48:48.382 UTC +0000 LogID:8006 info Msg: Rolling back firmware to previous image.  System will reboot if successful
-2021-12-21 09:57:45.052 UTC +0000 LogID:5021 info Msg: Firmware change successful.  Current Firmware Version is TierraOS-21.1.2.0-pre.2-NPB
-2021-12-21 10:03:26.664 UTC +0000 LogID:8006 info Msg: Rolling back firmware to previous image.  System will reboot if successful
-2021-12-21 10:11:45.707 UTC +0000 LogID:5021 info Msg: Firmware change successful.  Current Firmware Version is TierraOS-21.1.2.0-pre.4-NPB
-2021-12-21 13:23:15.881 UTC +0000 LogID:8006 info Msg: Rolling back firmware to previous image.  System will reboot if successful
-2021-12-21 13:31:19.980 UTC +0000 LogID:5021 info Msg: Firmware change successful.  Current Firmware Version is TierraOS-21.1.2.0-pre.2-NPB
-2021-12-21 13:43:23.442 UTC +0000 LogID:8002 info Msg: Firmware update file scp://root:password@10.37.128.117/opt/imran_ngnpb_auto/saved_config/npb_63_config_before_upgrade.txt downloaded
-2021-12-21 13:50:17.143 UTC +0000 LogID:8002 info Msg: Firmware update file scp://root:password@10.37.128.117/opt/imran_ngnpb_auto/saved_config/npb_63_config_before_upgrade_imran_modify.txt downloaded
-2021-12-21 14:13:50.756 UTC +0000 LogID:8006 info Msg: Rolling back firmware to previous image.  System will reboot if successful
-2021-12-21 14:22:15.001 UTC +0000 LogID:5021 info Msg: Firmware change successful.  Current Firmware Version is TierraOS-21.1.2.0-pre.4-NPB
-2021-12-21 14:32:19.925 UTC +0000 LogID:8006 info Msg: Rolling back firmware to previous image.  System will reboot if successful
-2021-12-21 14:40:32.895 UTC +0000 LogID:5021 info Msg: Firmware change successful.  Current Firmware Version is TierraOS-21.1.2.0-pre.2-NPB
-2021-12-21 14:44:29.973 UTC +0000 LogID:8006 info Msg: Rolling back firmware to previous image.  System will reboot if successful
-2021-12-21 14:53:17.811 UTC +0000 LogID:5021 info Msg: Firmware change successful.  Current Firmware Version is TierraOS-21.1.2.0-pre.4-NPB
-2022-01-07 02:20:53.292 UTC +0000 LogID:8002 info Msg: Firmware update file http://10.25.101.80/npb/TierraOS-21.1.2.0-NPB-20220106_143833_UTC.bin downloaded
-2022-01-07 02:20:53.298 UTC +0000 LogID:8004 info Msg: Activating firmware TierraOS-21.1.2.0-NPB-20220106_143833_UTC.bin.  System will reboot if successful
-2022-01-07 02:31:25.368 UTC +0000 LogID:5021 info Msg: Firmware change successful.  Current Firmware Version is TierraOS-21.1.2.0-NPB-20220106_143833_UTC
-2016-11-03 17:23:59.371 UTC +0000 LogID:5021 info Msg: Firmware change successful.  Current Firmware Version is TierraOS-21.1.2.0-NPB-20220107_143827_UTC
-2022-01-11 01:49:58.681 UTC +0000 LogID:8002 info Msg: Firmware update file scp://user:brocade@10.25.101.74//home/user/perf_101.1.cfg downloaded
-2022-01-14 02:38:58.714 UTC +0000 LogID:8002 info Msg: Firmware update file http://10.25.101.80/npb/TierraOS-21.1.2.0-NPB.bin downloaded
-2022-01-14 02:38:58.714 UTC +0000 LogID:8004 info Msg: Activating firmware TierraOS-21.1.2.0-NPB.bin.  System will reboot if successful
-2022-01-14 02:48:07.954 UTC +0000 LogID:5021 info Msg: Firmware change successful.  Current Firmware Version is TierraOS-21.1.2.0-NPB

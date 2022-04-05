@@ -1,2 +1,33 @@
---------------------------------------^
-%Error: Command incomplete.
+Interface Statistics: ethernet 7/2
+ Carrier Transitions: 3
+           LastClear: 0s
+Input:
+              Total pkts: 5081114176364
+          Broadcast pkts: 36
+            Discard pkts: 0
+             Errors pkts: 0
+              FCS Errors: 0
+              MCast pkts: 1552884659896
+                  Octets: 1622748452672345
+              UCast pkts: 3528229516437
+               Runt pkts: 0
+              CRC Errors: 0
+Input Distribution:
+            64 byte pkts: 73246063
+        65-127 byte pkts: 42382435411
+       128-255 byte pkts: 2339385114344
+       256-511 byte pkts: 2417982702642
+      512-1023 byte pkts: 0
+     1024-1518 byte pkts: 281290677914
+              Jumbo pkts: 0
+Out:
+              Total pkts: 0
+          Broadcast pkts: 0
+            Discard pkts: 0
+             Errors pkts: 0
+              MCast pkts: 0
+                  Octets: 0
+              UCast pkts: 0
+Rate Info:
+                   Input: 11257.237913 Mbits/sec, 4146143 pkts/sec 11.26% of line-rate
+                  Output: 0.000000 Mbits/sec, 0 pkts/sec 0.00% of line-rate
