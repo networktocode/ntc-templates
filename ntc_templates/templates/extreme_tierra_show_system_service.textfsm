@@ -1,5 +1,14 @@
-Value 
+Value Key Service_name ([\w\-]+)
+Value Current ([\d\.]+)
+Value Rollback ([None|\d\.]+)
+Value Ready ([tTrue|fFalse]+)
+Value State ([\w\-]+)
+Value Restarts ([\d]+)
 
 Start
+ ^---- -> TABLE
+
+TABLE
+ ^\s*${Service_name}\s+${Current}\s+${Rollback}\s+${Ready}\s+${State}\s+${Restarts} -> Record
  ^\s*$$
  ^. -> Error
