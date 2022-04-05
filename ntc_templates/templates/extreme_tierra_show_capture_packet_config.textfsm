@@ -3,7 +3,6 @@ Value INTERFACE ([\d/:]+)
 Value PACKET_COUNT (\d+)
 
 Start
- ^\s*All protocol ${DIRECTION} capture is enabled on interface Eth ${INTERFACE}. Number of packet to capture ${PACKET_COUNT}. -> Record
- ^\s*All protocol ${DIRECTION} capture is enabled on interface Eth ${INTERFACE}. -> Record
+^\s*All\s+protocol\s+${DIRECTION}\s+capture\s+is\s+enabled\s+on\s+interface\s+Eth\s+${INTERFACE}\.\s*(Number\s+of\s+packet\s+to\s+capture\s+${PACKET_COUNT}\.)?\s* -> Record
  ^\s*$$
  ^. -> Error

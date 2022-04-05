@@ -1,5 +1,13 @@
-Value 
+Value PORT ([\w\s\d/:]+)
+Value LFS_STATUS (\S+)
+
 
 Start
+ ^===== ->  TABLE
+ ^\s*$$
+ ^. -> Error
+
+TABLE
+ ^${PORT}\s+${LFS_STATUS} -> Record
  ^\s*$$
  ^. -> Error

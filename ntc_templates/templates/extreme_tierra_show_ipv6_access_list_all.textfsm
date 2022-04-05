@@ -1,5 +1,43 @@
-Value 
+Value Filldown ACL_TYPE (ipv6)
+Value Filldown ACL_NAME ([\w+-]+)
+Value SEQ_NUM (\d+)
+Value FW_ACTION (permit|deny)
+Value PROTOCOL (esp|gre|gtpc|gtpu|icmpv6|igmpv6|ipv6|ipip|nvgre|tcp|udp|vxlan|\d+)
+Value NETWORK_ID (\d+)
+Value SRC_IP (any|[0-9a-fA-F\:]+)
+Value SRC_MASK (any|[0-9a-fA-F\:]+)
+Value DST_IP (any|[0-9a-fA-F\:]+) 
+Value DST_MASK (any|[0-9a-fA-F\:]+)
+Value DPORT (\d+)
+Value DPORT_END (\d+)
+Value SPORT (\d+)
+Value SPORT_END (\d+)
+Value LENGTH (\d+)
+Value LENGTH_END (\d+)
+Value DSCP (\d+)
+Value VLAN (\d+)
+Value IGMP_TYPE (\d+)
+Value ICMP_TYPE (\d+)
+Value ICMP_CODE (\d+)
+Value ACK (ACK)
+Value CWR (CWR)
+Value ECE (ECE)
+Value FIN (FIN)
+Value PUSH (PUSH)
+Value RESET (RESET)
+Value SYNC (SYNC)
+Value URG (URG)
+Value LOG (LOG)
+Value COUNT (COUNT)
+Value PACKETS (\d+)
+Value BYTES (\d+)
+Value PACKET_RATE (\d+)
+Value BIT_RATE (\d+)
+
 
 Start
+ ^${ACL_TYPE}\s+access-list\s+${ACL_NAME}\s*
+ ^\s*seq\s+${SEQ_NUM}\s*${FW_ACTION}\s+${PROTOCOL}\s*(${NETWORK_ID})?\s+${SRC_IP}\s*(${SRC_MASK})?\s+${DST_IP}\s*(${DST_MASK})?\s*(DPORT\s+${DPORT})?\s*(DPORT-end\s+${DPORT_END})?\s*(SPORT\s+${SPORT})?\s*(SPORT-end\s+${SPORT_END})?\s*(LENGTH\s+${LENGTH})?\s*(LENGTH-end\s+${LENGTH_END})?\s*(DSCP\s+${DSCP})?\s*(VLAN\s+${VLAN})?\s*(igmpv6-type\s+${IGMP_TYPE})?\s*(icmpv6-type\s+${ICMP_TYPE})?\s*(icmpv6-code\s+${ICMP_CODE})?\s*(${ACK})?\s*(${CWR})?\s*(${ECE})?\s*(${FIN})?\s*(${PUSH})?\s*(${RESET})?\s*(${SYNC})?\s*(${URG})?\s*(${LOG})?\s*(${COUNT})?\s*\(\s*${PACKETS}\s+Packets,\s+${BYTES}\s+Bytes,\s+${PACKET_RATE}\s+PacketRate,\s+${BIT_RATE}\s+BitRate\s*\) -> Continue.Record
  ^\s*$$
  ^. -> Error
+

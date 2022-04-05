@@ -1,5 +1,14 @@
-Value 
+Value PCAP_NAME (\S+)
+Value LAST_MODIFIED_TIME ([\w\d:\(\)\s]+)
+Value PCAP_SIZE ([\d\.\s\w]+)
+Value PACKET_COUNT (\d+)
 
 Start
+ ^\s*-+
+ ^\s*PCAP\s+File(s)\s+Details:\s*
+ ^\s*Pcap\s+File\s+Name\s+:\s+${PCAP_NAME}
+ ^\s*Last\s+Modified\s+:\s+${LAST_MODIFIED_TIME}
+ ^\s*PcapFile\s+Size\s+:\s+${PCAP_SIZE}
+ ^\s*Packet\s+Count\s+:\s+${PACKET_COUNT} -> Record
  ^\s*$$
  ^. -> Error

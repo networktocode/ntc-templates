@@ -1,5 +1,16 @@
-Value 
+Value PORT ([\w\s\d/:]+)
+Value LOCAL_FAULT_COUNT (\d+)
+Value LAST_LOCAL_FAULT (NA|[\d\-]+T[\d:\w]+)
+Value REMOTE_FAULT_COUNT (\d+)
+Value LAST_REMOTE_FAULT (NA|[\d\-]+T[\d:\w]+)
+
+
+
 
 Start
+ ^===== ->  TABLE
+
+TABLE
+ ^${PORT}\s+${LOCAL_FAULT_COUNT}\s+${LAST_LOCAL_FAULT}\s+${REMOTE_FAULT_COUNT}\s+${LAST_REMOTE_FAULT} -> Record
  ^\s*$$
  ^. -> Error
