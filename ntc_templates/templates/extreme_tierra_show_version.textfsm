@@ -1,5 +1,29 @@
-Value 
+Value Filldown ROLLBACK_FW_VERSION ([\S]+)
+Value Filldown CURRENT_FW_VERSION ([\S]+)
+Value Filldown BMC_FW_VERSION ([\S]+)
+Value Filldown KERNEL ([\S]+)
+Value Filldown SWITCH_CPLD_VERSION ([\S\s]+)
+Value Filldown FAN_CPLD_VERSION ([\S\s]+)
+Value Filldown POWER_CPLD_VERSION ([\S\s]+)
+Value Filldown FPGA_CPLD_VERSION ([\S]+)
+Value Filldown SYSTEM_UPTIME ([\d,\sdays\(\)\:]+)
+Value SERVICE_NAME ([\w\-]+)
+Value CURRENT ([\d\.]+)
+Value ROLLBACK ([None|\d\.]+)
+Value READY ([tTrue|fFalse]+)
+Value STATE ([\w\-]+)
+Value RESTARTS ([\d]+)
 
 Start
+ ^\s*CURRENT Firmware Version:\s+${CURRENT_FW_VERSION}
+ ^\s*ROLLBACK Firmware Version:\s+${ROLLBACK_FW_VERSION}
+ ^\s*BMC Firmware Version:\s+${BMC_FW_VERSION}
+ ^\s*Kernel:\s+${KERNEL}
+ ^Switch Board CPLD Version:\s+${SWITCH_CPLD_VERSION}
+ ^Fan Board CPLD Version:\s+${FAN_CPLD_VERSION}
+ ^Power Board CPLD Version:\s+${POWER_CPLD_VERSION}
+ ^FPGA Version:\s+v${FPGA_CPLD_VERSION}
+ ^\s*System\s*Uptime:\s*${SYSTEM_UPTIME}
+ ^\s*${SERVICE_NAME}\s+${CURRENT}\s+${ROLLBACK}\s+${READY}\s+${STATE}\s+${RESTARTS} -> Record
  ^\s*$$
  ^. -> Error
