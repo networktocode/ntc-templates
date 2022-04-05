@@ -1,5 +1,12 @@
-Value 
+Value PORT ([\w\s\d/:]+)
+Value FRAMEIN (\d+)
+Value FRAMEOUT (\d+)
+Value LAST_CLEAR (\d+)
 
 Start
+ ^LLDP Interface Statistics: ${PORT}
+ ^\s+FrameIn: ${FRAMEIN}
+ ^\s+FrameOut: ${FRAMEOUT}
+ ^\s+LastClear: ${LAST_CLEAR}s -> Record
  ^\s*$$
  ^. -> Error

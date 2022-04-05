@@ -1,5 +1,9 @@
-Value 
+Value Filldown acl_name (\w+)
+Value Filldown acl_version (\w+)
+Value rule ([\w+\?\-\d+\s+\.:/]*)
 
 Start
+  ^${acl_version}\s+access-list\s+${acl_name}
+  ^\s*seq\s+${rule} -> Record
  ^\s*$$
  ^. -> Error

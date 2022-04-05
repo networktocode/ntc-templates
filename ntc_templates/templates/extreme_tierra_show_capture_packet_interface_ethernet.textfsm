@@ -1,5 +1,21 @@
-Value 
+Value INTERFACE (\d+\/\d+|UNKNOWN)
+Value PACKETS (\d+)
+Value PACKET_LENGTH (\d+)
+Value PACKET_DIR (RX|TX)
+Value PACKET_FILTER (\S+)
 
 Start
+ ^\s*---.*
+ ^\s*Frames\s+Logged\s+on\s+interface\s+=\s+.*
+ ^\s*$$ -> PACKET_METADATA
+
+PACKET_METADATA
+ ^\s*---.*
+ ^\s*Pkt\s+Capture\s+Metadata\s*:\s+#\d+\s+of\s+${PACKETS}\s+Packets\s*
+ ^\s*Frame\s+Received\s+Time\s+:\s+.*
+ ^\s*Packet\s+Length\(bytes\)\s*:\s+${PACKET_LENGTH}
+ ^\s*Packet\s+Direction\s+:\s+${PACKET_DIR}
+ ^\s*Packet\s+Filter\s+:\s+${PACKET_FILTER}
+ ^\s*Front\s+Panel\s+Port\s+:\s+${INTERFACE} -> Record
  ^\s*$$
  ^. -> Error

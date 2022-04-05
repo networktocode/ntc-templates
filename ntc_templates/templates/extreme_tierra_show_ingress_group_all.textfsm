@@ -1,5 +1,25 @@
-Value 
+Value Filldown INGRESS_GROUP_COUNT (\d+)
+Value INGRESSGROUP_NAME (\S+)
+Value RMAP_NAME (\S+)
+Value DESC (\S+)
+Value INTERFACES (([ethrn\d\s/]+)|none)
+Value TRAFFIC_TYPE (\S+)
+Value TUNNEL_ID (\d+|any)
+Value MODE (\S+)
+Value DEST_IP ([any]+|[\d\w:\.]+)
+Value SOURCE_IP ([any]+|[\d\w:\.]+)
 
 Start
+ ^Number of ingress-groups: ${INGRESS_GROUP_COUNT}[\r\n]*
+ ^\s*Name\s+:\s+${INGRESSGROUP_NAME}
+ ^\s*Route-Map\s+:\s+${RMAP_NAME}
+ ^\s*Description\s+:\s+${DESC}
+ ^\s+Interfaces :\s+${INTERFACES}
+ ^\s*Traffic-Type\s+:\s+${TRAFFIC_TYPE}
+ ^\s*Tunnel-Id\s+:\s+${TUNNEL_ID}
+ ^\s*Mode\s+:\s+${MODE}
+ ^\s*Destination-ip-addr : ${DEST_IP}
+ ^\s*Source-ip-addr : ${SOURCE_IP}
+ ^ -> Record
  ^\s*$$
  ^. -> Error

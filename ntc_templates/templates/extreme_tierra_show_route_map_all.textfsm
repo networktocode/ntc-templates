@@ -1,5 +1,22 @@
-Value 
+Value rmap_name ([\-\w]+)
+Value fw_action (permit|deny)
+Value seq_num (\d+)
+Value acl_type (ip|ipv6|mac)
+Value acl_name ([\w\-]+)
+Value eg_name ([\w\-]+)
+Value truncate (\d+)
+Value packets (\d+)
+Value bytes (\d+)
+Value packet_rate (\d+)
+Value bit_rate (\d+)
 
 Start
+  ^\s*route-map\s+${rmap_name}\s+${seq_num}
+  ^\s*forward-action\s+${fw_action}
+  ^\s*match\s+${acl_type}\s+access-list\s+${acl_name} -> Record
+  ^\s*egress-group\s*${eg_name}
+  ^\s*truncate\s+${truncate}
+  ^\s*Policy\s+matches:\s+${packets}\s+packets,\s+${bytes}\s+bytes,\s*${packet_rate}\s+Packets\/sec,\s*${bit_rate}\s+Bits\/sec\s* -> Record
+
  ^\s*$$
  ^. -> Error

@@ -1,5 +1,17 @@
-Value 
+Value EGRESS_NAME ([\-\w]+)
+Value DESCRIPTION (\S+)
+Value ENCAP ([\-\w]+)
+Value LPOLICY_NAME ([\-\w]+)
+Value PRECEDENCE (\d+)
+Value INTERFACE (PORT-channel|ethernet)
+Value PORT (\d/\d+|\d+)
 
 Start
+ ^\s*Name\s+:\s+${EGRESS_NAME}
+ ^\s*Description\s+:\s+${DESCRIPTION}
+ ^\s*Encap\s+:\s+${ENCAP}
+ ^\s*Listener\s+Policy\s+:\s+${LPOLICY_NAME}
+ ^\s*Precedence\s+:\s+${PRECEDENCE}
+ ^\s*Interface\s+:\s+${INTERFACE}\s+${PORT} -> Record
  ^\s*$$
  ^. -> Error

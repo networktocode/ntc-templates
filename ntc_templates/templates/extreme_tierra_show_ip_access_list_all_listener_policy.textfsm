@@ -14,3 +14,5 @@ Start
   ^\s*Listener\s+policy\s*:\s*${lpolicy_name}
   ^\s*${acl_type}\s+access-list\s+${acl_name}\s*
   ^\s*seq\s+${seq_num}\s+${fw_action}\s+${acl_params}\s+\(\s*${packets}\s+Packets,\s+${bytes}\s+Bytes,\s+${packet_rate}\s+PacketRate,\s+${bit_rate}\s+BitRate\s*\) -> Continue.Record
+  ^\s*$$
+  ^. -> Error
