@@ -1,5 +1,11 @@
-Value 
+Value EGRESS_NAME ([\S]+)
+Value TX_FRAMES (\d+)
+Value TX_BYTES (\d+)
 
 Start
+ ^\s*Egress-group Packet Statistics :\s+${EGRESS_NAME}
+ ^\s*$$
+ ^\s*TX\s+Frames\s+:\s+${TX_FRAMES}
+ ^\s*TX\s+Bytes\s+:\s+${TX_BYTES} -> Record
  ^\s*$$
  ^. -> Error
