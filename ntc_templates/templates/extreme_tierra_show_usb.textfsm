@@ -1,5 +1,6 @@
-Value 
+Value USB_status (\w+)
 
 Start
+ ^USB Enabled:  ${USB_status}
  ^\s*$$
  ^. -> Error
