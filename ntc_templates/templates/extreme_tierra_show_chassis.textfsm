@@ -1,5 +1,46 @@
-Value 
+Value PROD_NAME (.+)
+Value PLAT_NAME (\S+)
+Value HW_REV (\S+)
+Value MFG_DATE (.+)
+Value MFG (.+)
+Value PART_NO (\S+)
+Value SERIAL_NO (\S+)
+Value VENDOR (.+)
+Value SYS_STATUS (Online|Offline)
+Value REBOOT_REASON (.+)
+Value SYS_DESC (.+)
+Value SYS_CONTACT (\S+)
+Value SYS_LOCATION (\S+)
+Value SYS_UPTIME (\S+)
+Value BASE_MAC ([\w:]+)
+Value MAC_RANGE (\d+)
+Value LC_SLOTS (\d+)
+Value FAN_COUNT (\d+)
+Value LED_COUNT (\d+)
+Value PSU_COUNT (\d+)
+Value T_SENSOR_COUNT (\d+)
 
 Start
+ ^\s+Product Name:\s+${PROD_NAME}
+ ^\s+Platform Name:\s*${PLAT_NAME}
+ ^\s+Hardware Rev:\s+${HW_REV}
+ ^\s+Manufacture Date:\s+${MFG_DATE}
+ ^\s+Manufacturer:\s+${MFG}
+ ^\s+Part Number:\s+${PART_NO}
+ ^\s+Serial Number:\s+${SERIAL_NO}
+ ^\s+Vendor:\s+${VENDOR}
+ ^\s+System Status:\s+${SYS_STATUS}
+ ^\s+Reboot Reason:\s+${REBOOT_REASON}
+ ^\s+System Description:\s+${SYS_DESC}
+ ^\s+System Contact:\s+${SYS_CONTACT}
+ ^\s+System Location:\s+${SYS_LOCATION}
+ ^\s+System Uptime:\s+${SYS_UPTIME}
+ ^\s+Base MAC Address:\s+${BASE_MAC}
+ ^\s+Mac Range:\s+${MAC_RANGE}
+ ^\s+LC Slots:\s+${LC_SLOTS}
+ ^\s+Fan Count:\s+${FAN_COUNT}
+ ^\s+LED Count:\s+${LED_COUNT}
+ ^\s+PSU Count:\s+${PSU_COUNT}
+ ^\s*Thermal Sensor Count:\s+${T_SENSOR_COUNT} -> Record
  ^\s*$$
  ^. -> Error
