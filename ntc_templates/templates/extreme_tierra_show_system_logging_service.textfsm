@@ -1,5 +1,9 @@
-Value 
+Value SERVICE (\S+)
+Value SEVERITY (\S+)
 
 Start
+ ^Service\s+Severity
+ ^[=\s]+
+ ^${SERVICE}\s+${SEVERITY}
  ^\s*$$
  ^. -> Error

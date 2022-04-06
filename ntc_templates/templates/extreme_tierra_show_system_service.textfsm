@@ -1,14 +1,14 @@
-Value Key Service_name ([\w\-]+)
-Value Current ([\d\.]+)
-Value Rollback ([None|\d\.]+)
-Value Ready ([tTrue|fFalse]+)
-Value State ([\w\-]+)
-Value Restarts ([\d]+)
+Value Key SERVICE_NAME ([\w\-]+)
+Value CURRENT ([\d\.]+)
+Value ROLLBACK ([None|\d\.]+)
+Value READY ([tTrue|fFalse]+)
+Value STATE ([\w\-]+)
+Value RESTARTS ([\d]+)
 
 Start
- ^---- -> TABLE
-
-TABLE
- ^\s*${Service_name}\s+${Current}\s+${Rollback}\s+${Ready}\s+${State}\s+${Restarts} -> Record
+ ^SERVICE\s+CURRENT\s+ROLLBACK\s+READY\s+STATE\s+RESTARTS  
+ ^\s+VERSION\s+VERSION       
+ ^[\-]+
+ ^\s*${SERVICE_NAME}\s+${CURRENT}\s+${ROLLBACK}\s+${READY}\s+${STATE}\s+${RESTARTS} -> Record
  ^\s*$$
  ^. -> Error
