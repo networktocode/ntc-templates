@@ -76,3 +76,5 @@ access-list test line 38 extended permit tcp object ClientPC object-group NETWOR
   access-list test line 38 extended permit tcp host 172.31.168.7 host 10.2.88.100 inactive (hitcnt=0) (inactive) 0x4094da11 
 access-list test line 39 extended permit tcp object-group NETWORK_88 object aps0506_VIP_10.2.66.53 eq 6991 log disable (hitcnt=55) 0xe547ccd6 
   access-list test line 39 extended permit tcp 10.0.247.0 255.255.255.0 host 10.2.66.53 eq 6991 log disable (hitcnt=40) 0xea52300b 
+access-list test line 40 extended permit tcp object-group TEST-OBJ object host.example.com eq https (hitcnt=3228758) 0x3e3d87a5
+  access-list test line 40 extended permit tcp host 10.0.1.10 fqdn host.example.com (unresolved) eq https 0xc6e4eca7
