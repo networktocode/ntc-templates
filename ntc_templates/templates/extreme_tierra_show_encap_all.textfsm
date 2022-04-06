@@ -1,23 +1,23 @@
-Value tto_name ([\-\w]+)
-Value src_ip ([\.\d]+)
-Value dst_ip ([\.\d]+)
-Value src_mac ([0-9a-fA-F\:]+)
-Value dst_mac ([0-9a-fA-F\:]+)
-Value vlan (\d+|none)
-Value pcp (\d+|none)
-Value tunnel_type (ERSPAN|GRE|none)
-Value tunnel_id (\d+|none)
+Value TTO_NAME ([\-\w]+)
+Value SRC_IP ([\.\d]+)
+Value DST_IP ([\.\d]+)
+Value SRC_MAC ([0-9a-fA-F\:]+)
+Value DST_MAC ([0-9a-fA-F\:]+)
+Value VLAN (\d+|none)
+Value PCP (\d+|none)
+Value TUNNEL_TYPE (ERSPAN|GRE|none)
+Value TUNNEL_ID (\d+|none)
 
 Start
-  ^\s*Name\s*:\s*${tto_name}
-  ^\s*Source-Ipv4-Addr\s*:\s*${src_ip}
-  ^\s*Destination-Ipv4-Addr\s*:\s*${dst_ip}
-  ^\s*Source-Mac-Addr\s*:\s*${src_mac}
-  ^\s*Destination-Mac-Addr\s*:\s*${dst_mac}
-  ^\s*Vlan-Id\s*:\s*${vlan}
-  ^\s*Vlan-Pcp\s*:\s*${pcp}
-  ^\s*Encap-Type\s*:\s*${tunnel_type}
-  ^\s*Encap-Id\s*:\s*${tunnel_id} -> Record
+  ^\s*Name\s*:\s*${TTO_NAME}
+  ^\s*Source-Ipv4-Addr\s*:\s*${SRC_IP}
+  ^\s*Destination-Ipv4-Addr\s*:\s*${DST_IP}
+  ^\s*Source-Mac-Addr\s*:\s*${SRC_MAC}
+  ^\s*Destination-Mac-Addr\s*:\s*${DST_MAC}
+  ^\s*Vlan-Id\s*:\s*${VLAN}
+  ^\s*Vlan-Pcp\s*:\s*${PCP}
+  ^\s*Encap-Type\s*:\s*${TUNNEL_TYPE}
+  ^\s*Encap-Id\s*:\s*${TUNNEL_ID} -> Record
 
  ^\s*$$
  ^. -> Error
