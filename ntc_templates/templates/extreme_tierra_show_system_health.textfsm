@@ -16,31 +16,31 @@ Value Filldown OS (\S+)
 Value Filldown PLATFORM (\S+)
 Value Filldown PLATFORM_VERSION (\S+)
 Value Filldown SYSTEM_UPTIME (\S+)
-Value SERVICE_NAME (\S+)
+Value Key SERVICE_NAME (\S+)
 Value SERVICE_CPU (\S+)
 Value SERVICE_MEM (\S+)
 
 Start
- ^BIOS Date: 02/02/2021
- ^BIOS Vendor: American Megatrends Inc.
- ^BIOS Version: 1201
- ^CPU Model: Intel(R) Xeon(R) D-2163IT CPU @ 2.10GHz
- ^CPU Procs: 2
- ^Disk Free: 65.35GB
- ^Disk Total: 81.07GB
- ^Disk Used: 11.59GB
- ^Kernel Arch: x86_64
- ^Kernel Version: 4.14.49-OpenNetworkLinux
- ^Memory Free: 121.03GB
- ^Memory Total: 125.50GB
- ^Memory Used: 3.12GB
- ^Memory Used \(%\): 2.49
- ^OS: linux
- ^Platform: alpine
- ^Platform Version: 3.13.5
- ^System Uptime: 24h49m27s
+ ^BIOS Date: ${BIOS_DATE}
+ ^BIOS Vendor: ${BIOS_VENDOR}
+ ^BIOS Version: ${BIOS_VERSION}
+ ^CPU Model: ${CPU_MODEL}
+ ^CPU Procs: ${CPU_PROCS}
+ ^Disk Free: ${DISK_FREE}
+ ^Disk Total: ${DISK_TOTAL}
+ ^Disk Used: ${DISK_USED}
+ ^Kernel Arch: ${KERNEL_ARCH}
+ ^Kernel Version: ${KERNEL_VERSION}
+ ^Memory Free: ${MEM_FREE}
+ ^Memory Total: ${MEM_TOTAL}
+ ^Memory Used: ${MEM_USED}
+ ^Memory Used \(%\): ${MEM_USED_PERCENTAGE}
+ ^OS: ${OS}
+ ^Platform: ${PLATFORM}
+ ^Platform Version: ${PLATFORM_VERSION}
+ ^System Uptime: ${SYSTEM_UPTIME}
  ^SERVICE\s+CPU\(cores\)\s+Memory\(bytes\)       
  ^[\-]+
- ^api-gw                      233m                137Mi               
+ ^${SERVICE_NAME}\s+${SERVICE_CPU}\s+${SERVICE_MEM}
  ^\s*$$
  ^. -> Error
