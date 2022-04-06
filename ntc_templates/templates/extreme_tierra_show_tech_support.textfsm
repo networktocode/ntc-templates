@@ -1,5 +1,7 @@
-Value 
+Value List FILES (\S+)
 
 Start
+ Tech-Support Files:
+ ^${FILES} -> Record
  ^\s*$$
  ^. -> Error
