@@ -1,5 +1,14 @@
-Value 
+Value Key ID (\S+)
+Value NAME ([\S\s]+)
+Value CURRENT (\S+)
+Value WARNING (\S+)
+Value CRITICAL (\S+)
+Value SHUTDOWN (\S+)
 
 Start
+ ^Sensor Information
+ ^Id\s+Name\s+Current\S+\s+Warning\S+\s+Critical\S+\s+Shutdown\S+
+ ^[-]+
+ ^${ID}\s+${NAME}\s+${CURRENT}\s+${WARNING}\s+${CRITICAL}\s+${SHUTDOWN} -> Record
  ^\s*$$
  ^. -> Error

@@ -1,5 +1,16 @@
-Value 
+Value Key ID (\S+)
+Value STATUS (\S+)
+Value RPM (\S+)
+Value PERCENTAGE (\S+)
+Value SPEEDLEVEL (\S+)
+Value DIRECTION (\S+)
 
 Start
+ ^Fan Information
+ ^Id     Status      RPM     Percentage SpeedLevel     Direction   
+ ^--------------------------------------------------------------------------------------
+ ^${ID}\s+${STATUS}\s+${RPM}\s+${PERCENTAGE}\s+${SPEEDLEVEL}\s+${DIRECTION} -> Record
+ ^FAN_DIR_F2B - Fan Airflow Direction is FrontToBack
+ ^FanSpeedLevel - <40%[LOW],40-70%[MEDIUM],>70%[HIGH]
  ^\s*$$
  ^. -> Error
