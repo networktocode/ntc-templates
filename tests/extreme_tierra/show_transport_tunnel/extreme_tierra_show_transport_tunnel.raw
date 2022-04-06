@@ -1,0 +1,8 @@
+name           : tunnel-1 
+tunnel-type    : erspan 
+tunnel-id      : 12345 
+source IP      : 10.10.10.0 
+source IP mask : 255.255.255.0 
+dest IP        : 20.20.20.0 
+dest IP mask   : 255.0.0.0 
+ingress-group  : ig1
