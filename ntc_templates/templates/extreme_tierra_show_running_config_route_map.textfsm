@@ -1,30 +1,30 @@
-Value rmap_name ([\-\w]+)
-Value fw_action (permit|deny)
-Value seq_num (\d+)
-Value ip_type (ip)
-Value ip_acl_name ([\w\-]+)
-Value ipv6_type (ipv6)
-Value ipv6_acl_name ([\w\-]+)
-Value mac_type (mac)
-Value mac_acl_name ([\w\-]+)
-Value acl_state (active|inactive)
-Value eg_name ([\w\-]+)
-Value truncate (\d+)
-Value packets (\d+)
-Value bytes (\d+)
-Value packet_rate (\d+)
-Value bit_rate (\d+)
+Value Key, RMAP_NAME (\S+)
+Value Fillup SEQ_NUM (\d+)
+Value Fillup DESCRIPTION (\S+)
+Value Fillup FW_ACTION (permit|deny)
+Value Fillup IP_ACL_NAME (\S+)
+Value Fillup IPV6_ACL_NAME (\S+)
+Value Fillup MAC_ACL_NAME (\S+)
+Value Fillup EGRESS_GROUP_NAME (\S+)
+Value Fillup TRUNCATE (\d+)
+Value Fillup DECAP (decap)
+Value Fillup NEW_SCOPE (new-scope)
+Value Fillup QOS_FORWARDING_GROUP (\S+)
+
+
 
 
 Start
-  ^\s*route-map\s+${rmap_name}\s+${seq_num}
-  ^\s*forward-action\s+${fw_action}
-  ^\s*match\s+${ip_type}\s+access-list\s+${ip_acl_name}\s+\(${acl_state}\)
-  ^\s*match\s+${ipv6_type}\s+access-list\s+${ipv6_acl_name}\s+\(${acl_state}\)
-  ^\s*match\s+${mac_type}\s+access-list\s+${mac_acl_name}\s+\(${acl_state}\)
-  ^\s*egress-group\s*${eg_name}
-  ^\s*truncate\s+${truncate}
-  ^\s*Policy\s+matches:\s+${packets}\s+packets,\s+${bytes}\s+bytes,\s+${packet_rate}\s+PacketRate,\s+${bit_rate}\s+BitRate\s* -> Record
-
- ^\s*$$
- ^. -> Error
+  ^\s*route-map\s+${RMAP_NAME}\s+${SEQ_NUM} -> Record
+  ^\s*description\s+${DESCRIPTION}
+  ^\s*forward-action\s+${FW_ACTION}
+  ^\s*match\s+ip\s+access-list\s+${IP_ACL_NAME}
+  ^\s*match\s+ipv6\s+access-list\s+${IPV6_ACL_NAME}
+  ^\s*match\s+mac\s+access-list\s+${MAC_ACL_NAME}
+  ^\s*set egress-group\s*${EGRESS_GROUP_NAME}
+  ^\s*truncate\s+${TRUNCATE}
+  ^\s*${DECAP}
+  ^\s*${NEW_SCOPE}
+  ^\s*qos-forwarding-group ${QOS_FORWARDING_GROUP}
+  ^\s*$$
+  ^. -> Error

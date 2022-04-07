@@ -1,5 +1,6 @@
-Value 
+Value SERVER (\S+)
 
 Start
+ ntp server ${SERVER} -> Record
  ^\s*$$
  ^. -> Error

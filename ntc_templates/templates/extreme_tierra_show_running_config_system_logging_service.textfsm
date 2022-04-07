@@ -1,5 +1,7 @@
-Value 
+Value SERVICE (\S+)
+Value SEVERITY (\S+)
 
 Start
+ ^system logging service ${SERVICE} severity ${SEVERITY} -> Record
  ^\s*$$
  ^. -> Error

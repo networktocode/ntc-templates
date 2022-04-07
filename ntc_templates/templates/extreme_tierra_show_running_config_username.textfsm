@@ -1,5 +1,9 @@
-Value 
+Value Key USERNAME (\S+)
+Value ROLE (\S+)
+Value PASSWORD (\S+)
+Value ENCRYPTION_LEVEL (\S+)
 
 Start
+ ^username ${USERNAME}\s+role ${ROLE}\s+password ${PASSWORD}\s+ encrpytion-level ${ENCRYPTION_LEVEL} -> Record
  ^\s*$$
  ^. -> Error

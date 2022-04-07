@@ -1,5 +1,8 @@
-Value 
+Value Key,Required TACACS_SERVER (\S+)
+Value Fillup TACACS_SHARED_SECRET (\S+)
 
 Start
+ ^tacacs-server host ${TACACS_SERVER} -> Record
+ ^\s+encrypted-key ${TACACS_SHARED_SECRET}
  ^\s*$$
  ^. -> Error
