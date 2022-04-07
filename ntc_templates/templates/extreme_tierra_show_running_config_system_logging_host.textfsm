@@ -1,5 +1,15 @@
-Value 
+Value Key,Required LOGGING_HOST (\S+)
+Value Fillup ADDRESS (\S+)
+Value Fillup TRANSPORT (\S+)
+Value Fillup PORT (\S+)
+Value Fillup SECURE_FORWARDING (\S+)
+
 
 Start
+ ^system logging host ${LOGGING_HOST} -> Record
+ ^\s+address ${ADDRESS}
+ ^\s+transport ${TRANSPORT}
+ ^\s+port ${PORT}
+ ^\s+secure-forwarding ${SECURE_FORWARDING}
  ^\s*$$
  ^. -> Error
