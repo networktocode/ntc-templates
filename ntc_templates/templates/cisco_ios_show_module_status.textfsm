@@ -1,5 +1,5 @@
 Value Key MODULE (\d+)
-Value MAC_ADDR (\S+\s+to\s+\S+)
+Value MAC_ADDR (\S{4}\.\S{4}\.\S{4}(\sto\s\S{4}\.\S{4}\.\S{4})?)
 Value MOD_HW (\S+)
 Value MOD_FW (\S+(\s+\[\w+\])?)
 Value MOD_SW (\S+)
@@ -8,9 +8,11 @@ Value STATUS (\w+)
 
 Start
   ^\s*Mod\s+MAC\s+addresses\s+Hw\s+Fw\s+Sw\s+Status\s*$$ -> ModStatus
+  # #1083 C9200L-24T
+  ^Switch\s+Ports\s+Model\s+Serial\sNo\.\s+MAC\saddress\s+Hw\sVer\.\s+Sw\sVer\. -> SwitchStack
 
 ModStatus
-  ^-+
+  ^---+
   ^\s*${MODULE}\s+${MAC_ADDR}\s+${MOD_HW}\s+${MOD_FW}\s+${MOD_SW}\s+${STATUS}\s*$$ -> Record
   ^Mod\s+Ports\s+Card\s+Type\s+Model\s+Serial -> End
   ^\s*Mod\s+Sub-Module\s+Model\s+Serial\s+Hw\s+Status\s*$$ -> End
@@ -18,6 +20,14 @@ ModStatus
   ^Mod\s+Redundancy\s+Role\s+Operating\s+Redundancy\s+Mode\s+Configured\s+Redundancy\s+Mode -> End
   ^Mod\s+Redundancy\s+Role\s+Operating\s+Mode\s+Configured\s+Mode\s+Redundancy\s+Status -> End
   ^\s*$$
-  ^. -> Error
+  ^. -> Error NotInModStatus
+
+SwitchStack
+  # #1083 C9200L-24T
+  ^---+
+  ^\s*${MODULE}\s+\d+\s+\S+\s+\S+\s+${MAC_ADDR}\s+${MOD_HW}\s+${MOD_SW}\s*$$ -> Record
+  #\s -> Record
+  ^\s*$$
+  ^. -> Error NotInSwtichStack
 
 End
