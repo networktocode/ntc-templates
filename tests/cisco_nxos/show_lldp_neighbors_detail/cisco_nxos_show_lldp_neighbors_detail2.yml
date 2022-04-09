@@ -1,0 +1,18 @@
+---
+parsed_sample:
+  - neighbor: "SW-NEXUS"
+    local_interface: "Eth1/52"
+    neighbor_interface: "Ethernet1/52"
+    chassis_id: "3473.2d00.0001"
+    mgmt_address: "192.168.1.2"
+    system_description: "Cisco Nexus Operating System (NX-OS) Software 9.3(8)"
+    capabilities: "B, R"
+    vlan: ""
+  - neighbor: "pure-storage"
+    local_interface: "Eth101/1/10"
+    neighbor_interface: "1a51.4800.0001"
+    chassis_id: "24a9.3700.0001"
+    mgmt_address: ""
+    system_description: "FlashArray FA-X20R3 pure-storage"
+    capabilities: "B"
+    vlan: "0"
