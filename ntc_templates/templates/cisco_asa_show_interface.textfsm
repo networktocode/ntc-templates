@@ -49,7 +49,7 @@ Start
   ^.*Received\s+\d+\s+broadcasts,\s+\d+\s+runts,\s+\d+\s+giants
   ^.*\d+\s+input\s+errors,\s+\d+\s+CRC,\s+\d+\s+frame,\s+\d+\s+overrun,\s+\d+\s+ignored,\s+\d+\s+abort
   ^.*\d+\s+pause\s+input,\s+\d+\s+resume\s+input
-  ^.*\d+\s+L2\s+decode\s+drops
+  ^.*\d+\s+(L2|output)\s+decode\s+drops
   ^.*\d+\s+packets\s+output,\s+\d+\s+bytes,\s+\d+\s+underruns
   ^.*\d+\s+pause\s+output,\s+\d+\s+resume\s+output
   ^.*\d+\s+output\s+errors,\s+\d+\s+collisions,\s+\d+\s+interface\s+resets
@@ -65,5 +65,8 @@ Start
   ^.*Input\s+flow\s+control\s+is\s+unsupported,\s+output\s+flow\s+control\s+is\s+unsupported
   ^.*Available\s+but\s+not\s+configured\s+via\s+nameif
   ^.*IP\s+address\s+unassigned
+  ^\s*\d+\s+lost\s+carrier,\s+\d+\s+no\s+carrier
+  ^\s*(input|output)\s+queue\s+\(curr\/max\s+packets\):\s+hardware\s+\(\d+\/\d+\)\s+software\s+\(\d+\/\d+\)
+  ^.*input\s+queue\s+\(blocks\s+free\s+curr\/low\):\s+hardware\s+\(\d+\/\d+\)
   ^\s*$$
   ^. -> Error

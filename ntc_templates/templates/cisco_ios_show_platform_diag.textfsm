@@ -1,5 +1,5 @@
 Value Filldown CHASSIS_TYPE (.*?)
-Value Required SLOT_NUMBER ((?:.*)[A-Z]\d+(?:.*))
+Value Required SLOT_NUMBER (.*?)
 Value MODULE_SKU (.+?)
 Value STATE (.+)
 Value RUNNING_STATE (.+)
@@ -9,6 +9,8 @@ Value INSERT_TIME (.*)
 Value UPTIME (.*)
 Value HARDWARE_SIGNAL (.*)
 Value PACKET_SIGNAL (.*)
+Value CPLD_VERSION (.*)
+Value FIRMWARE_VERSION (.*)
 
 Start
   ^Chassis type: ${CHASSIS_TYPE}(?:\s|$$)
@@ -21,7 +23,9 @@ Start
   ^.*Software declared up time\s*\:\s${UPTIME}
   ^.*Hardware ready signal time\s*\:\s${HARDWARE_SIGNAL}
   ^.*Packet ready signal time\s*\:\s${PACKET_SIGNAL}
+  ^.*CPLD version\s*\:\s${CPLD_VERSION}
+  ^.*Firmware version\s*\:\s${FIRMWARE_VERSION}
   # Capture time-stamp if vty line has command time-stamping turned on
   ^Load\s+for\s+
   ^Time\s+source\s+is
-  ^$$ -> Record 
+  ^$$ -> Record
