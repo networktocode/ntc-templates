@@ -1,0 +1,42 @@
+Port-channel1 is up, line protocol is up 
+  Hardware is 10GEChannel, address is dc8c.3700.0000 (bia dc8c.3700.0000)
+  Description: Interface
+  MTU 9216 bytes, BW 20000000 Kbit/sec, DLY 10 usec, 
+     reliability 255/255, txload 22/255, rxload 22/255
+  Encapsulation 802.1Q Virtual LAN, Vlan ID  1., loopback not set
+  Keepalive set (10 sec)
+  ARP type: ARPA, ARP Timeout 04:00:00
+    No. of active members in this channel: 2 
+        Member 0 : TenGigabitEthernet0/0/0 , Full-duplex, 10000Mb/s
+        Member 1 : TenGigabitEthernet0/0/1 , Full-duplex, 10000Mb/s
+    No. of PF_JUMBO supported members in this channel : 2
+  Last input 00:00:00, output 00:00:00, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/750/0/0 (size/max/drops/flushes); Total output drops: 0
+  Queueing strategy: fifo
+  Output queue: 0/80 (size/max)
+  5 minute input rate 1792809000 bits/sec, 172855 packets/sec
+  5 minute output rate 1798430000 bits/sec, 172826 packets/sec
+     301005604249 packets input, 389700154021690 bytes, 0 no buffer
+     Received 24269275 broadcasts (0 IP multicasts)
+     0 runts, 158509 giants, 0 throttles 
+     179928 input errors, 21419 CRC, 87 frame, 0 overrun, 0 ignored
+     0 watchdog, 158541575 multicast, 0 pause input
+     300823114354 packets output, 389618573453967 bytes, 0 underruns
+     Output 0 broadcasts (0 IP multicasts)
+     0 output errors, 0 collisions, 0 interface resets
+     428714 unknown protocol drops
+     0 babbles, 0 late collision, 0 deferred
+     0 lost carrier, 0 no carrier, 0 pause output
+     0 output buffer failures, 0 output buffers swapped out
+     0 carrier transitions
+Port-channel1.13 is up, line protocol is up 
+  Hardware is 10GEChannel, address is dc8c.3700.0000 (bia dc8c.3700.0000)
+  Description: SubInt
+  Internet address is 192.168.1.1/24
+  MTU 9216 bytes, BW 20000000 Kbit/sec, DLY 10 usec, 
+     reliability 255/255, txload 22/255, rxload 22/255
+  Encapsulation QinQ Virtual LAN, outer ID  813, inner ID 13
+  ARP type: ARPA, ARP Timeout 04:00:00
+  Keepalive set (10 sec)
+  Last clearing of "show interface" counters never
