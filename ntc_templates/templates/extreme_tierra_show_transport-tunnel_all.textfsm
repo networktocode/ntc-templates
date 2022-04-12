@@ -1,21 +1,20 @@
-Value TUNNEL_NAME ([\-\w]+)
-Value SRC_IP ([\.\d]+)
-Value SRC_MASK ([\.0254]+)
-Value DST_IP ([\.\d]+)
-Value DST_MASK ([\.0254]+)
-Value TUNNEL_TYPE (ERSPAN|GRE)
-Value TUNNEL_ID (\d+|none)
-Value List INGRESS_NAME ([\-\w]+|none)
+Value TUNNEL_NAME (\S+)
+Value SRC_IP (\S+)
+Value SRC_MASK (\S+)
+Value DST_IP (\S+)
+Value DST_MASK (\S+)
+Value TUNNEL_TYPE (\S+)
+Value TUNNEL_ID (\d+)
+Value List INGRESS_NAME (\S+)
 
 Start
-  ^\s*Name\s+:\s+${TUNNEL_NAME}
-  ^\s*Source-Ipv4-Addr\s+:\s+${SRC_IP}
-  ^\s*Source-Ipv4-Mask\s+:\s+${SRC_MASK}
-  ^\s*Destination-Ipv4-Addr\s+:\s+${DST_IP}
-  ^\s*Destination-Ipv4-Mask\s+:\s+${DST_MASK}
-  ^\s*Tunnel-Type\s+:\s+${TUNNEL_TYPE}
-  ^\s*Tunnel-Id\s+:\s+${TUNNEL_ID}
-  ^\s*Ingress-Group\s+:\s+${INGRESS_NAME} -> Continue
-  ^\s*$$ -> Record
+  ^\s*[nN]ame\s+:\s+${TUNNEL_NAME}
+  ^\s*[Ss]ource[\-\sIPpv4Adr]+\s+:\s+${SRC_IP}
+  ^\s*[Ss]ource[\-\sIPpv4Mmask]+\s+:\s+${SRC_MASK}
+  ^\s*[Dd]est[\-\sIPpv4Adr]+\s+:\s+${DST_IP}
+  ^\s*[Dd]est[\-\sIPpv4Mmask]+\s+:\s+${DST_MASK}
+  ^tunnel\-type\s+:\s+${TUNNEL_TYPE}
+  ^[Tt]unnel\-[Ii]d\s+:\s+${TUNNEL_ID}
+  ^ingress\-group\s+:\s+${INGRESS_NAME} -> Record
   ^\s*$$
   ^. -> Error

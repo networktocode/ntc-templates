@@ -1,8 +1,8 @@
 Value Filldown ENABLE (enable)
-Value Key SERVER (\S+)
+Value Key,Required SERVER (\S+)
 
 Start
- ntp ${ENABLE} -> Record
- ntp server ${SERVER} -> Record
+ ^ntp ${ENABLE} -> Record
+ ^ntp server ${SERVER} -> Record
  ^\s*$$
  ^. -> Error

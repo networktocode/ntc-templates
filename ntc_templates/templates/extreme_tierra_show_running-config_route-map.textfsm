@@ -1,21 +1,22 @@
-Value Key RMAP_NAME (\S+)
-Value Fillup SEQ_NUM (\d+)
-Value Fillup DESCRIPTION (\S+)
-Value Fillup FW_ACTION (permit|deny)
-Value Fillup IP_ACL_NAME (\S+)
-Value Fillup IPV6_ACL_NAME (\S+)
-Value Fillup MAC_ACL_NAME (\S+)
-Value Fillup EGRESS_GROUP_NAME (\S+)
-Value Fillup TRUNCATE (\d+)
-Value Fillup DECAP (decap)
-Value Fillup NEW_SCOPE (new-scope)
-Value Fillup QOS_FORWARDING_GROUP (\S+)
+Value Key,Required RMAP_NAME (\S+)
+Value SEQ_NUM (\d+)
+Value DESCRIPTION (\S+)
+Value FW_ACTION (permit|deny)
+Value IP_ACL_NAME (\S+)
+Value IPV6_ACL_NAME (\S+)
+Value MAC_ACL_NAME (\S+)
+Value EGRESS_GROUP_NAME (\S+)
+Value TRUNCATE (\d+)
+Value DECAP (decap)
+Value NEW_SCOPE (new-scope)
+Value QOS_FORWARDING_GROUP (\S+)
 
 
 
 
 Start
-  ^\s*route-map\s+${RMAP_NAME}\s+${SEQ_NUM} -> Record
+  ^\s*route -> Continue.Record
+  ^\s*route-map\s+${RMAP_NAME}\s+${SEQ_NUM}
   ^\s*description\s+${DESCRIPTION}
   ^\s*forward-action\s+${FW_ACTION}
   ^\s*match\s+ip\s+access-list\s+${IP_ACL_NAME}

@@ -1,9 +1,9 @@
-Value Key SERVICE_NAME ([\w\-]+)
-Value CURRENT ([\d\.]+)
-Value ROLLBACK ([None|\d\.]+)
-Value READY ([tTrue|fFalse]+)
-Value STATE ([\w\-]+)
-Value RESTARTS ([\d]+)
+Value Key SERVICE_NAME (\S+)
+Value CURRENT (\S+)
+Value ROLLBACK (\S+)
+Value READY (\S+)
+Value STATE (\S+)
+Value RESTARTS (\S+)
 
 Start
  ^SERVICE\s+CURRENT\s+ROLLBACK\s+READY\s+STATE\s+RESTARTS  

@@ -423,7 +423,7 @@ extreme_slx_show_process_memory_summary.textfsm, .*, extreme_slx, sh[[ow]] pr[[o
 extreme_slx_show_process_cpu_top.textfsm, .*, extreme_slx, sh[[ow]] pr[[ocess]] c[[pu]] t[[op]]
 
 extreme_tierra_show_counters_interface_ethernet_all_qos_queues.textfsm, .*, extreme_tierra, sh[[ow]] co[[unters]] int[[erface]] e[[thernet]] a[[ll]] q[[os]] q[[ueues]]
-extreme_tierra_show_running-config_qos_forwarding_group_all.textfsm, .*, extreme_tierra, sh[[ow]] ru[[nning-config]] q[[os]] f[[orwarding-group]] a[[ll]]
+extreme_tierra_show_running-config_qos_forwarding-group_all.textfsm, .*, extreme_tierra, sh[[ow]] ru[[nning-config]] q[[os]] f[[orwarding-group]] a[[ll]]
 extreme_tierra_show_lldp_neighbors_interface_ethernet_all.textfsm, .*, extreme_tierra, sh[[ow]] ll[[dp]] n[[eighbors]] i[[nterface]] e[[thernet]] all
 extreme_tierra_show_running-config_interface_port-channel.textfsm, .*, extreme_tierra, sh[[ow]] ru[[nning-config]] int[[erface]] p[[ort-channel]]
 extreme_tierra_show_running-config_interface_management_0.textfsm, .*, extreme_tierra, sh[[ow]] ru[[nning-config]] int[[erface]] m[[anagement]] 0
@@ -438,7 +438,7 @@ extreme_tierra_show_counters_interface_ethernet_brief.textfsm, .*, extreme_tierr
 extreme_tierra_show_lldp_neighbors_interface_ethernet.textfsm, .*, extreme_tierra, sh[[ow]] lldp neighbors interface ethernet
 extreme_tierra_show_running-config_interface_ethernet.textfsm, .*, extreme_tierra, sh[[ow]] ru[[nning-config]] interface ethernet
 extreme_tierra_show_running-config_ip_access-list_all.textfsm, .*, extreme_tierra, sh[[ow]] ru[[nning-config]] ip access-list a[[ll]]
-extreme_tierra_show_running-config_tacacs-server_host.textfsm, .*, extreme_tierra, sh[[ow]] ru[[nning-config]] tacacs-server host
+extreme_tierra_show_running-config_tacacs-server_host.textfsm, .*, extreme_tierra, sh[[ow]] ru[[nning-config]] tacacs-server h[[ost]]
 extreme_tierra_show_counters_lldp_interface_ethernet.textfsm, .*, extreme_tierra, sh[[ow]] co[[unters]] lldp interface ethernet
 extreme_tierra_show_counters_interface_ethernet_all.textfsm, .*, extreme_tierra, sh[[ow]] co[[unters]] int[[erface]] e[[thernet]] a[[ll]]
 extreme_tierra_show_counters_interface_management_0.textfsm, .*, extreme_tierra, sh[[ow]] co[[unters]] int[[erface]] m[[anagement]] 0
@@ -455,7 +455,6 @@ extreme_tierra_show_running-config_ip_access-list.textfsm, .*, extreme_tierra, s
 extreme_tierra_show_interface_port-channel_brief.textfsm, .*, extreme_tierra, sh[[ow]] interface port-channel brief
 extreme_tierra_show_capture_packet_pcapfile-info.textfsm, .*, extreme_tierra, sh[[ow]] ca[[pture]] packet pcapfile-info
 extreme_tierra_show_capture_packet_interface_all.textfsm, .*, extreme_tierra, sh[[ow]] ca[[pture]] packet interface all
-extreme_tierra_show_running-config_tacacs-server.textfsm, .*, extreme_tierra, sh[[ow]] ru[[nning-config]] tacacs-server
 extreme_tierra_show_running-config_ingress_group.textfsm, .*, extreme_tierra, sh[[ow]] ru[[nning-config]] ingress-group
 extreme_tierra_show_counters_interface_ethernet.textfsm, .*, extreme_tierra, sh[[ow]] co[[unters]] interface ethernet
 extreme_tierra_show_grpc_server_gnmi_statistics.textfsm, .*, extreme_tierra, sh[[ow]] grpc-server gnmi statistics
@@ -474,7 +473,7 @@ extreme_tierra_show_running-config_username.textfsm, .*, extreme_tierra, sh[[ow]
 extreme_tierra_show_lacp_interface_ethernet.textfsm, .*, extreme_tierra, sh[[ow]] lacp interface ethernet
 extreme_tierra_show_system_logging_service.textfsm, .*, extreme_tierra, sh[[ow]] system logging service
 extreme_tierra_show_sysinfo_sensor_voltage.textfsm, .*, extreme_tierra, sh[[ow]] sysinfo sensor voltage
-extreme_tierra_show_sysinfo_sensor_mem_mod.textfsm, .*, extreme_tierra, sh[[ow]] sysinfo sensor mem_mod
+extreme_tierra_show_sysinfo_sensor_mem.textfsm, .*, extreme_tierra, sh[[ow]] sysinfo sensor mem
 extreme_tierra_show_ntp_association_detail.textfsm, .*, extreme_tierra, sh[[ow]] ntp association detail
 extreme_tierra_show_logging_audit_security.textfsm, .*, extreme_tierra, sh[[ow]] logging audit security
 extreme_tierra_show_logging_audit_firmware.textfsm, .*, extreme_tierra, sh[[ow]] logging audit firmware
@@ -484,7 +483,6 @@ extreme_tierra_show_interface_port-channel.textfsm, .*, extreme_tierra, sh[[ow]]
 extreme_tierra_show_interface_management_0.textfsm, .*, extreme_tierra, sh[[ow]] interface management 0
 extreme_tierra_show_crypto_ca_certificates.textfsm, .*, extreme_tierra, sh[[ow]] crypto ca certificates
 extreme_tierra_show_counters_ingress-group.textfsm, .*, extreme_tierra, sh[[ow]] co[[unters]] ingress-group
-extreme_tierra_show_running-config_mirror.textfsm, .*, extreme_tierra, sh[[ow]] ru[[nning-config]] mirror
 extreme_tierra_show_running-config_ip_dns.textfsm, .*, extreme_tierra, sh[[ow]] ru[[nning-config]] ip dns
 extreme_tierra_show_running-config_egress.textfsm, .*, extreme_tierra, sh[[ow]] ru[[nning-config]] egress
 extreme_tierra_show_running-config_banner.textfsm, .*, extreme_tierra, sh[[ow]] ru[[nning-config]] banner
