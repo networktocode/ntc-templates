@@ -1,12 +1,13 @@
 Value Key,Required LOGGING_HOST (\S+)
-Value Fillup ADDRESS (\S+)
-Value Fillup TRANSPORT (\S+)
-Value Fillup PORT (\S+)
-Value Fillup SECURE_FORWARDING (\S+)
+Value ADDRESS (\S+)
+Value TRANSPORT (\S+)
+Value PORT (\S+)
+Value SECURE_FORWARDING (\S+)
 
 
 Start
- ^system logging host ${LOGGING_HOST} -> Record
+ ^sys -> Continue.Record
+ ^system logging host ${LOGGING_HOST} 
  ^\s+address ${ADDRESS}
  ^\s+transport ${TRANSPORT}
  ^\s+port ${PORT}

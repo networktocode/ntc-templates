@@ -1,4 +1,4 @@
-Value KEY ID (\d+)
+Value Key,Required ID (\d+)
 Value STATUS (\S+)
 Value TYPE (\S+)
 Value CURRENT_IN (\S+)
@@ -12,12 +12,11 @@ Value Fillup TOTAL_POWER_USED (\S+)
 Value Fillup TOTAL_POWER_AVAILABLE (\S+)
 
 Start
-
  ^PSU Information
  ^Id\s+Status\s+Type\s+C\S+\s+C\S+\s+P\S+\s+P\S+\s+V\S+\s+V\S+
  ^---------------------------------------------------------------------------------------------------------------------------------
- ^${KEY}\s+${STATUS}\s+${TYPE}\s+${CURRENT_IN}\s+${CURRENT_OUT}\s+${POWER_IN}\s+${POWER_OUT}\s+${VOLTAGE_IN}\s+${VOLTAGE_OUT} -> Record
- ^ \*\*C \- Current in Amps ,\*\*P \- Power in Watts ,\*\*V \- Voltage in Volts
+ ^${ID}\s+${STATUS}\s+${TYPE}\s+${CURRENT_IN}\s+${CURRENT_OUT}\s+${POWER_IN}\s+${POWER_OUT}\s+${VOLTAGE_IN}\s+${VOLTAGE_OUT} -> Record
+ ^[\S\s]+Current in Amps ,[\S\s]+Power in Watts ,[\S\s]+Voltage in Volts
  ^Total power budget for chassis = ${TOTAL_POWER_BUDGET} Watts
  ^Total power used by LC and system core = ${TOTAL_POWER_USED} Watts
  ^Total power available = ${TOTAL_POWER_AVAILABLE} Watts

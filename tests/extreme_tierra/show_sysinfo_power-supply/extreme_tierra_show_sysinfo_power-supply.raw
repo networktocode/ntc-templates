@@ -2,9 +2,10 @@
 PSU Information
 Id     Status      Type    C[in]   C[out]  P[in]   P[out]  V[in]   V[out]  
 ---------------------------------------------------------------------------------------------------------------------------------
-1      Up          AC      2       44      572     516     209     11      
-2      Up          AC      2       45      580     552     212     11      
+1      Up          AC      1       23      308     272     209     11      
+2      Up          AC      1       25      328     300     209     11      
 
  **C - Current in Amps ,**P - Power in Watts ,**V - Voltage in Volts
 Total power budget for chassis = 3200 Watts
-Total power used by LC and system core = 2040 Watts
+Total power used by LC and system core = 1520 Watts
+Total power available = 1680 Watts

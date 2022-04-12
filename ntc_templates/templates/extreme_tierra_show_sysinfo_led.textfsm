@@ -1,12 +1,12 @@
 Value Key ID (\S+)
 Value STATE (\S+)
 Value COLOR (\S+)
-Value DESCRIPTION ([\s\S]+)
+Value DESCRIPTION (\S+\s\S+\s\S+|\S+\s\S+|\S+)
 
 Start
  ^Led Information
  ^Id     State     Color     Description    
  ^[-]+
- ^${ID}\s+${STATE}\s+${COLOR}\s+${DESCRIPTION} -> Record
+ ^${ID}\s+${STATE}\s+${COLOR}\s+${DESCRIPTION}\s* -> Record
  ^\s*$$
  ^. -> Error
