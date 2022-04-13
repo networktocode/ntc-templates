@@ -1,10 +1,25 @@
-Value Filldown ingressgroup_name ([\-\w]+)
-Value rmap_name ([\-\w]+)
-Value traffic_type ([\-\w+\s+]+)
+Value Key,Required INGRESS_GROUP_NAME (\S+)
+Value DESCRIPTION (\S+)
+Value ROUTE_MAP_NAME (\S+)
+Value TRAFFIC_TYPE (\S+)
+Value TRAFFIC_MODE (\S+)
+Value TRAFFIC_IP_SRC_ADDR (any|[\d\./]+\s[\d\./]+)
+Value TRAFFIC_IP_DST_ADDR (any|[\d\./]+\s[\d\./]+)
+Value TRAFFIC_VNI (\S+)
+Value TRAFFIC_VSID (\S+)
+Value TRAFFIC_TEID (\S+)
+Value TRAFFIC_OUTER (outer)
+Value TRAFFIC_MPLS_LABEL (\S+)
+Value TRAFFIC_MPLS_TRAFFIC_CLASS (\S+)
+Value TRAFFIC_MPLS_TTL (\S+)
+Value TRAFFIC_MIRROR (\S+)
+
 
 Start
-  ^\s*ingress-group\s+${ingressgroup_name} -> Record
-  ^\s*route-map\s+${rmap_name} -> Record
-  ^\s*traffic-type\s+${traffic_type} -> Continue.Record
+ ^ing -> Continue.Record
+ ^\s*ingress-group\s+${INGRESS_GROUP_NAME}
+ ^\s*description ${DESCRIPTION}
+ ^\s*set route\-map\s+${ROUTE_MAP_NAME}
+ ^\s*traffic-type\s+${TRAFFIC_TYPE}((\smode\s${TRAFFIC_MODE})|(\sip ${TRAFFIC_IP_SRC_ADDR} ${TRAFFIC_IP_DST_ADDR})|(\svni\s${TRAFFIC_VNI})|(\svsid\s${TRAFFIC_VSID})|(\steid\s${TRAFFIC_TEID})|(\s${TRAFFIC_OUTER})|(\sheader1 ${TRAFFIC_MPLS_LABEL} ${TRAFFIC_MPLS_TRAFFIC_CLASS} ${TRAFFIC_MPLS_TTL})|(\smirror ${TRAFFIC_MIRROR}))*
  ^\s*$$
  ^. -> Error

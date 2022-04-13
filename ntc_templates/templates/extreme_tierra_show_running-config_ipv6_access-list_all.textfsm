@@ -1,5 +1,34 @@
-Value 
+Value Filldown ACL_TYPE (ipv6)
+Value Filldown ACL_NAME (\S+)
+Value Key,Required SEQ_NUM (\d+)
+Value FW_ACTION (permit|deny)
+Value PROTOCOL (\d+|esp|gre|gtpc|gtpu|icmpv6|igmpv6|ipip|ipv6|nvgre|tcp|udp|vxlan)
+Value NETWORK_ID (\d+)
+Value SRC_ADDR (any|[0-9a-fA-F\:]+\s+[a-fA-F\:]+)
+Value DST_ADDR (any|[0-9a-fA-F\:]+\s+[a-fA-F\:]+)
+Value ACK (ack)
+Value COUNT (count)
+Value CWR (cwr)
+Value DPORT (\d+)
+Value DPORT_END (\d+)
+Value DSCP (\d+)
+Value ECE (ece)
+Value FIN (fin)
+Value LENGTH (\d+)
+Value LENGTH_END (\d+)
+Value LOG (log)
+Value PUSH (push)
+Value QOS_FORWARDING_GROUP (\S+)
+Value RESET (reset)
+Value SPORT (\d+)
+Value SPORT_END (\d+)
+Value SYNC (sync)
+Value URG (urg)
+Value VLAN (\d+)
 
 Start
+ ^ipv6 -> Continue.Record
+ ^${ACL_TYPE}\s+access-list\s+${ACL_NAME}\s* 
+ ^\s*seq\s+${SEQ_NUM}\s+${FW_ACTION}\s${PROTOCOL}(\s${NETWORK_ID})?\s+${SRC_ADDR}\s+${DST_ADDR}((\s${ACK})|(\s${COUNT})|(\s${CWR})|(\sdport\s${DPORT})|(\sdport\S+\s${DPORT_END})|(\sdscp\s${DSCP})|(\s${ECE})|(\s${FIN})|(\slength\s${LENGTH})|(\slength\S+\s${LENGTH_END})|(\s${LOG})|(\s${PUSH})|(\sqos\S+\s${QOS_FORWARDING_GROUP})|(\s${RESET})|(\ssport\s${SPORT})|(\ssport\S+\s${SPORT_END})|(\s${SYNC})|(\s${URG})|(\svlan\s${VLAN}))* -> Record
  ^\s*$$
  ^. -> Error

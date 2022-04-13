@@ -1,0 +1,26 @@
+listener-policy test 1 
+  forward-action permit 
+  description mooof
+  match ip access-list v4_permit_any
+  match ipv6 access-list v6_permit_any
+  match mac access-list l2_permit_any
+  decap
+listener-policy test 2
+  forward-action permit 
+  match ip access-list v4_permit_any
+  match ipv6 access-list v6_permit_any
+  match mac access-list l2_permit_any
+  strip br-tag
+listener-policy test 3
+  forward-action permit 
+  match ip access-list v4_permit_any
+  match ipv6 access-list v6_permit_any
+  match mac access-list l2_permit_any
+  strip vlan-tag
+listener-policy test 4
+  forward-action permit 
+  match ip access-list v4_permit_any
+  match ipv6 access-list v6_permit_any
+  match mac access-list l2_permit_any
+  truncate 512
+  vlan 3000

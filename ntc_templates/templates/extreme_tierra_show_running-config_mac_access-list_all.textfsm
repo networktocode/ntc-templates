@@ -4,8 +4,8 @@ Value Required,Key SEQ_NUM (\d+)
 Value FW_ACTION (permit|deny)
 Value PROTOCOL (gre|gtpc|gtpu|ipip|nvgre|vxlan|\d+)
 Value NETWORK_ID (\d+)
-Value SRC_MAC (any|[0-9a-fA-F\:]+\s+[a-fA-F\:]+)
-Value DST_MAC (any|[0-9a-fA-F\:]+\s+[a-fA-F\:]+)
+Value SRC_ADDR (any|[0-9a-fA-F\:]+\s+[a-fA-F\:]+)
+Value DST_ADDR (any|[0-9a-fA-F\:]+\s+[a-fA-F\:]+)
 Value ETYPE (\S+)
 Value VLAN (\d+)
 Value PCP (\d+)
@@ -15,7 +15,6 @@ Value COUNT (count)
 
 Start
  ^${ACL_TYPE}\s+access-list\s+${ACL_NAME}\s*
- ^\s*seq\s+${SEQ_NUM}\s+${FW_ACTION}\s*(${PROTOCOL})?\s*(${NETWORK_ID})?\s+${SRC_MAC}\s+${DST_MAC}\s*(etype\s+${ETYPE})?\s*(vlan\s+${VLAN})?\s*(pcp\s+${PCP})?\s*(${LOG})?\s*(${COUNT})?\s* -> Record
- #^\s*seq\s+${SEQ_NUM}\s+${FW_ACTION}\s+(${SRC_MAC}\s+${SRC_MASK}|any)\s+(${DST_MAC}\s+${DST_MASK}|any)\s*(ETYPE\s+${ETYPE})?\s*(vlan\s+${vlan})?\s*(PCP\s+${PCP})?\s*(${LOG})?\s*(${COUNT})?\s* -> Record
+ ^\s*seq\s+${SEQ_NUM}\s+${FW_ACTION}\s*(${PROTOCOL})?\s*(${NETWORK_ID})?\s+${SRC_ADDR}\s+${DST_ADDR}\s*(etype\s+${ETYPE})?\s*(vlan\s+${VLAN})?\s*(pcp\s+${PCP})?\s*(${LOG})?\s*(${COUNT})?\s* -> Record
  ^\s*$$
  ^. -> Error

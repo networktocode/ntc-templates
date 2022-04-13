@@ -1,15 +1,57 @@
-Value port (\d/\d+)
-Value mtu (\d+)
-Value List ingress_group ([\w\-]+)
-Value desc ([\w\s]+)
-Value shut (shutdown|no shutdown)
+Value INTERFACE_TYPE (\S+)
+Value Key,Required INTERFACE (\S+)
+Value DESCRIPTION ([\S\s]+)
+Value IPV4_DHCP (ip address dhcp)
+Value IPV4_STATIC ([\d\.]+/\d+)
+Value IPV4_GATEWAY ([\d\.]+)
+Value IPV6_DHCP (ipv6 address dhcp)
+Value IPV6_STATIC ([0-9a-fA-F\:]+/\d+)
+Value IPV6_GATEWAY ([0-9a-fA-F\:]+)
+Value MTU (\S+)
+Value SPEED (\S+)
+Value ENABLE (no shutdown|shutdown)
+Value List INGRESS_GROUPS (\S+)
+Value LACP_PORT_PRIORITY (\S+)
+Value LACP_RATE (\S+)
+Value FEC (\S+)
+Value LLDP_ENABLE (no lldp enable)
+Value LLDP_RECIEVE (no lldp recieve)
+Value LLDP_TRANSMIT (no lldp transmit)
+Value CHANNEL_GRP_ID (\S+)
+Value CHANNEL_GRP_MODE (\S+)
+Value LINK_FAULT_SIGNALING (no link\S+)
+Value LACP_MIN_LINKS (\S+)
+Value LACP_SYSTEM_MAC (\S+)
+Value LACP_SYSTEM_PRIORITY (\S+)
+Value LOAD_BALANCE (\S+)
 
 Start
-  ^\s*interface\s+ethernet\s+${port}
-  ^\s*mtu\s+${mtu}
-  ^\s*ingress-group\s+${ingress_group} -> Continue
-  ^\s*description\s+${desc}
-  ^\s*${shut} -> Record
-
+ ^int -> Continue.Record
+ ^interface\s+${INTERFACE_TYPE}\s+${INTERFACE}
+ ^\s*channel\-group\s${CHANNEL_GRP_ID}\s*${CHANNEL_GRP_MODE}
+ ^\s*description\s+${DESCRIPTION}
+ ^\s*set ingress\-group\s+${INGRESS_GROUPS}
+ ^\s*${ENABLE}
+ ^\s*lacp min\-links ${LACP_MIN_LINKS}
+ ^\s*lacp system\-mac ${LACP_SYSTEM_MAC}
+ ^\s*lacp system\-priority ${LACP_SYSTEM_PRIORITY}
+ ^\s*lacp port\-priority ${LACP_PORT_PRIORITY}
+ ^\s*lacp rate ${LACP_RATE}
+ ^\s*${LINK_FAULT_SIGNALING}
+ ^\s*${LLDP_ENABLE}
+ ^\s*${LLDP_RECIEVE}
+ ^\s*${LLDP_TRANSMIT}
+ ^\s*load\-balance ${LOAD_BALANCE}
+ ^\s*mtu ${MTU}
+ ^\s*${IPV4_DHCP}
+ ^\s*no ip address dhcp
+ ^\s*ip address ${IPV4_STATIC}
+ ^\s*ip gateway ${IPV4_GATEWAY}
+ ^\s*${IPV6_DHCP}
+ ^\s*no ipv6 address dhcp
+ ^\s*ipv6 address ${IPV6_STATIC}
+ ^\s*ipv6 gateway ${IPV6_GATEWAY}
+ ^\s*fec\s+${FEC}
+ ^\s*speed\s+${FEC}
  ^\s*$$
  ^. -> Error

@@ -1,5 +1,31 @@
-Value 
+Value INTERFACE_TYPE (\S+)
+Value Key,Required INTERFACE (\S+)
+Value DESCRIPTION ([\S\s]+)
+Value IPV4_DHCP (ip address dhcp)
+Value IPV4_STATIC ([\d\.]+/\d+)
+Value IPV4_GATEWAY ([\d\.]+)
+Value IPV6_DHCP (ipv6 address dhcp)
+Value IPV6_STATIC ([0-9a-fA-F\:]+/\d+)
+Value IPV6_GATEWAY ([0-9a-fA-F\:]+)
+Value MTU (\S+)
+Value SPEED (\S+)
+Value ENABLE (no shutdown|shutdown)
+
 
 Start
+ ^int -> Continue.Record
+ ^interface\s+${INTERFACE_TYPE}\s+${INTERFACE}
+ ^\s*description\s+${DESCRIPTION}
+ ^\s*${IPV4_DHCP}
+ ^\s*no ip address dhcp
+ ^\s*ip address ${IPV4_STATIC}
+ ^\s*ip gateway ${IPV4_GATEWAY}
+ ^\s*${IPV6_DHCP}
+ ^\s*no ipv6 address dhcp
+ ^\s*ipv6 address ${IPV6_STATIC}
+ ^\s*ipv6 gateway ${IPV6_GATEWAY}
+ ^\s*mtu ${MTU}
+ ^\s*speed ${SPEED}
+ ^\s*${ENABLE}
  ^\s*$$
  ^. -> Error
