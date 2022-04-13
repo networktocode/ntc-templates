@@ -1,0 +1,22 @@
+---
+parsed_sample:
+  - dest_host: "redacted.test.com"
+    sysname: ""
+    mgmt_ip: "10.0.0.1"
+    platform: "C9300-48UXM"
+    remote_port: "TenGigabitEthernet1/1/7"
+    local_port: "Ethernet7/14"
+    version: "Cisco IOS Software [Everest], Catalyst L3 Switch Software (CAT9K_IOSXE),\
+      \ Version 16.6.6, RELEASE SOFTWARE (fc1)"
+    interface_ip: "10.0.0.1"
+    capabilities: "Switch IGMP Filtering"
+  - dest_host: "redacted.test.com"
+    sysname: ""
+    mgmt_ip: "10.0.0.4"
+    platform: "C9300-48UXM"
+    remote_port: "TenGigabitEthernet1/1/8"
+    local_port: "Ethernet7/15"
+    version: "Cisco IOS Software [Everest], Catalyst L3 Switch Software (CAT9K_IOSXE),\
+      \ Version 16.6.6, RELEASE SOFTWARE (fc1)"
+    interface_ip: "10.0.0.3"
+    capabilities: "Switch IGMP Filtering"

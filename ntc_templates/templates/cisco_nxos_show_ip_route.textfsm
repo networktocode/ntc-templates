@@ -23,13 +23,13 @@ Start
   ^\s*Route not found -> Record
   #
   # Match VXLAN Route Entry
-  ^\s+\*+via ${NEXTHOP_IP}(%${NEXTHOP_VRF})?, \[${DISTANCE}/${METRIC}\], ${UPTIME}, ${PROTOCOL}, ${TYPE}, tag ${TAG}\s+segid: ${SEGID}\s+tunnelid: ${TUNNELID}\s+encap: ${ENCAP} -> Record
+  ^\s+(\*+)?via ${NEXTHOP_IP}(%${NEXTHOP_VRF})?, \[${DISTANCE}/${METRIC}\], ${UPTIME}, ${PROTOCOL}, ${TYPE}, tag ${TAG}(\s+segid: ${SEGID}\s+tunnelid: ${TUNNELID}\s+encap: ${ENCAP})? -> Record
   #
   # Match routes with no type, but with a tag (e.g. statics out SVIs with a tag)
   ^\s+\*+via ${NEXTHOP_IP}(%${NEXTHOP_VRF})?, ${NEXTHOP_IF}, \[${DISTANCE}\/${METRIC}\], ${UPTIME}, ${PROTOCOL}, tag ${TAG} -> Record
   #
   # Match standard dynamic route line (with or without tag)
-  ^\s+\*+via ${NEXTHOP_IP}(%${NEXTHOP_VRF})?, ${NEXTHOP_IF}, \[${DISTANCE}/${METRIC}\], ${UPTIME}, ${PROTOCOL}, ${TYPE}(, tag ${TAG})? -> Record
+  ^\s+(\*+)?via ${NEXTHOP_IP}(%${NEXTHOP_VRF})?, ${NEXTHOP_IF}, \[${DISTANCE}/${METRIC}\], ${UPTIME}, ${PROTOCOL}, ${TYPE}(, tag ${TAG})? -> Record
   #
   # Match route without a type (e.g. direct, local)
   ^\s+\*+via ${NEXTHOP_IP}(%${NEXTHOP_VRF})?, ${NEXTHOP_IF}, \[${DISTANCE}\/${METRIC}\], ${UPTIME}, ${PROTOCOL} -> Record
@@ -41,7 +41,7 @@ Start
   ^\s+\*+via ${NEXTHOP_IP}(%${NEXTHOP_VRF})?, \[${DISTANCE}\/${METRIC}\], ${UPTIME}, ${PROTOCOL} -> Record
   #
   # Match route without a nexthop IP, only nexthop interface (e.g. null routes)
-  ^\s+\*+via ${NEXTHOP_IF}, \[${DISTANCE}\/${METRIC}\], ${UPTIME}, ${PROTOCOL} -> Record
+  ^\s+(\*+)?via ${NEXTHOP_IF}, \[${DISTANCE}\/${METRIC}\], ${UPTIME}, ${PROTOCOL} -> Record
   ^'\S+'\s+denotes\s
   ^'%<string>'
   ^\s*$$

@@ -186,7 +186,7 @@ Taking a look at the example template above, you notice that we're using **\s***
 The Index file binds the templates to the commands being run. Special care has been taken on ordering, as there is potential for issues. e.g. `show ip route` picking up for `show ip router vrf <vrf-name>`. We have used a combination of ordering, as defined:
 
  - OS in alphabetical order
- - Template name in length order
+ - Template name in length order (longest to shortest)
  - When length is the same, use alphabetical order of command name
  - Keep space between OS's
 

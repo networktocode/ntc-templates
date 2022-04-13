@@ -1,0 +1,28 @@
+Vlan53 - Group 53 (version 2)
+  State is Active
+    2 state changes, last state change 5d11h
+  Virtual IP address is 10.65.19.1
+  Active virtual MAC address is 0000.0c9f.f035 (MAC In Use)
+    Local virtual MAC address is 0000.0c9f.f035 (v2 default)
+  Hello time 1 sec, hold time 3 sec
+    Next hello sent in 0.656 secs
+  Authentication MD5, key-chain "HSRP-KEYS"
+  Preemption enabled
+  Active router is local
+  Standby router is unknown
+  Priority 110 (configured 110)
+  Group name is "hsrp-Vl53-53" (default)
+  FLAGS: 0/1
+Vlan700 - Group 1
+  State is Active
+    11 state changes, last state change 5d14h
+  Virtual IP address is 192.168.46.145
+  Active virtual MAC address is 0000.0c07.ac01
+    Local virtual MAC address is 0000.0c07.ac01 (v1 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 0.344 secs
+  Preemption disabled
+  Active router is local
+  Standby router is unknown
+  Priority 175 (configured 175)
+  IP redundancy name is "hsrp-Vl700-1" (default)

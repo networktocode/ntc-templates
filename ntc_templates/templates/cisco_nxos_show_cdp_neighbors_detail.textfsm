@@ -9,6 +9,7 @@ Value INTERFACE_IP (.*)
 Value CAPABILITIES (.*[^\s])
 
 Start
+  ^Device ID -> Continue.Record
   ^Device ID:${DEST_HOST}
   ^System Name: ${SYSNAME}
   ^Interface address\(es\):\s*(^[1-9]\d*|$$) -> GetInterfaceIP
@@ -16,7 +17,6 @@ Start
   ^Platform: ${PLATFORM}, Capabilities: ${CAPABILITIES}\s*$$
   ^Interface: ${LOCAL_PORT}, Port ID \(outgoing port\): ${REMOTE_PORT}
   ^Version: -> GetVersion
-  ^----- -> Record
 
 GetIP
   ^.*IP.+Address: ${MGMT_IP} -> Start
