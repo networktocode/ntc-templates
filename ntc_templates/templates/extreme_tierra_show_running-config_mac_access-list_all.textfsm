@@ -11,10 +11,12 @@ Value VLAN (\d+)
 Value PCP (\d+)
 Value LOG (log)
 Value COUNT (count)
+Value QOS_FORWARDING_GROUP (\S+)
 
 
 Start
  ^${ACL_TYPE}\s+access-list\s+${ACL_NAME}\s*
- ^\s*seq\s+${SEQ_NUM}\s+${FW_ACTION}\s*(${PROTOCOL})?\s*(${NETWORK_ID})?\s+${SRC_ADDR}\s+${DST_ADDR}\s*(etype\s+${ETYPE})?\s*(vlan\s+${VLAN})?\s*(pcp\s+${PCP})?\s*(${LOG})?\s*(${COUNT})?\s* -> Record
+ ^\s*seq\s+${SEQ_NUM}\s+${FW_ACTION}\s*(${PROTOCOL})?\s*(${NETWORK_ID})?\s+${SRC_ADDR}\s+${DST_ADDR}((\setype\s+${ETYPE})|(\svlan\s+${VLAN})|(\spcp\s+${PCP})|(\s${LOG})|(\s${COUNT})|(\sqos\S+\s${QOS_FORWARDING_GROUP}))* -> Record
+ #^\s*seq\s+${SEQ_NUM}\s+${FW_ACTION}\s+(${SRC_MAC}\s+${SRC_MASK}|any)\s+(${DST_MAC}\s+${DST_MASK}|any)\s*(ETYPE\s+${ETYPE})?\s*(vlan\s+${vlan})?\s*(PCP\s+${PCP})?\s*(${LOG})?\s*(${COUNT})?\s* -> Record
  ^\s*$$
  ^. -> Error

@@ -1,5 +1,10 @@
 egress ep_1-01
   description ep_1-01
+  precedence 10 interface ethernet 1/2:1
 egress ep_1-02
   description ep_1-02
-  precedence 10  interface ethernet 1/2
+  precedence 10 interface ethernet 1/2:1
+egress ep_1-02
+  description ep_1-02
+  precedence 10 interface port-channel 5
+  precedence 20 interface ethernet 8/14:1 

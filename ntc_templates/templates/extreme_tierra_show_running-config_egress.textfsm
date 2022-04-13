@@ -1,14 +1,15 @@
-Value Filldown egress_name ([\-\w]+)
-Value lpolicy_name ([\-\w]+)
-Value precedence (\d+)
-Value port_channel (\d+)
-Value port (\d/\d+)
+Value Key,Required EGRESS_NAME (\S+)
+Value DESCRIPTION ([\s\S]+)
+Value LISTENER_POLICY ([\-\w]+)
+Value List PRECEDENCE (\d+)
+Value List INTERFACE_TYPE (\S+)
+Value List INTERFACE (\S+)
 
 Start
-  ^\s*egress\s+${egress_name} -> Record
-  ^\s*listener-policy\s+${lpolicy_name} -> Record
-  ^\s*precedence\s+${precedence}\s+interface\s+port-channel\s+${port_channel} -> Record
-  ^\s*precedence\s+${precedence}\s+interface\s+ethernet\s+${port} -> Record
-
- ^\s*$$
- ^. -> Error
+  ^eg -> Continue.Record
+  ^\s*egress\s+${EGRESS_NAME}
+  ^\s*description ${DESCRIPTION}
+  ^\s*set\s+listener\-policy\s+${LISTENER_POLICY}
+  ^\s*precedence\s+${PRECEDENCE}\s+interface\s+${INTERFACE_TYPE}\s+${INTERFACE}
+  ^\s*$$
+  ^. -> Error

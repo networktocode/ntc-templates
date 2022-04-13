@@ -1,0 +1,11 @@
+---
+parsed_sample:
+  - egress_group_name: "eg_1-01"
+    description: "inert"
+    egress:
+      - "ep_1-01"
+      - "ep_1-05"
+  - egress_group_name: "eg_1-06"
+    description: ""
+    egress:
+      - "ep_1-06"

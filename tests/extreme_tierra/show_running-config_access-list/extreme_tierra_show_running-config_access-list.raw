@@ -1,9 +1,12 @@
 ip access-list test
 ip access-list v4_permit_any
   seq 10 permit ip any any count
+  seq 20 permit tcp 10.25.101.32 255.255.255 10.31.0.0 255.255.0.0 vlan 5 ack cwr sport 5000 dport 6000 dport-end 6500 sport-end 5350 sync urg log count dscp 1 length 500 length-end 750 qos-forwarding-group q1 reset push fin ece 
 ipv6 access-list test
 ipv6 access-list v6_permit_any
   seq 10 permit ipv6 any any count
+  seq 20 permit tcp 262d:6737:4d76:449d:: ffff:ffff:ffff:ffff:: 3c11:4ed2:c7d1:dae8::27 ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff vlan 5 ack cwr sport 5000 dport 6000 dport-end 6500 sport-end 5350 sync urg log count dscp 1 length 500 length-end 750 qos-forwarding-group q1 reset push fin ece 
 mac access-list l2_permit_any
   seq 10 permit any any count
 mac access-list test
+  seq 10 permit aa:aa:aa:bb:bb:bb ff:ff:ff:ff:ff:ff any qos-forwarding-group q1 etype arp count log vlan 20
