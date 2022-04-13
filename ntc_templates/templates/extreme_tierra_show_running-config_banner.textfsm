@@ -1,5 +1,8 @@
-Value 
+Value LOGIN ([\S\s]+)
+Value MOTD ([\S\s]+)
 
 Start
+ ^banner login ${LOGIN}
+ ^banner motd ${MOTD}
  ^\s*$$
  ^. -> Error

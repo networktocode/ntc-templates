@@ -1,0 +1,11 @@
+---
+parsed_sample:
+  - encap_name: "dummy"
+    description: "encapdescription"
+    dst_ipv4_addr: "2.2.2.2"
+    dst_mac_addr: "aa:aa:aa:bb:bb:bb:aa:aa:aa"
+    src_ipv4_addr: "1.1.1.1"
+    src_mac_addr: "aa:aa:aa:bb:bb:bb"
+    encap_type: "gre"
+    vlan_id: "4000"
+    vlan_pcp: "5"

@@ -1,8 +1,9 @@
-Value Authentication ([\s+a-zA-Z\/]+)
-Value Accounting ([\s+a-zA-Z\/]+)
+Value List AUTHENTICATION_METHODS (\S+)
+Value ACCOUNTING_METHOD ([\s+a-zA-Z\/]+)
 
 Start
-  ^\s*aaa\s+authentication\s+login\s+${Authentication}\s+local-auth-fallback
-  ^\s*aaa\s+accounting\s+commands\s+default\s+start-stop\s+${Accounting} -> Record
+ ^\s*aaa\s+authentication\s+login\s${AUTHENTICATION_METHODS} -> Continue
+ ^\s*aaa\s+authentication\s+login\s\S+\s${AUTHENTICATION_METHODS} 
+ ^\s*aaa\s+accounting\s+commands\s+default\s+start-stop\s+${ACCOUNTING_METHOD} -> Record
  ^\s*$$
  ^. -> Error

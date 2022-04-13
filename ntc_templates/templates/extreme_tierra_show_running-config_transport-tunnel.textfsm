@@ -1,0 +1,21 @@
+Value Key,Required TUNNEL_NAME (\S+)
+Value DESCRIPTION ([\S\s]+)
+Value SRC_IP (\S+)
+Value SRC_MASK (\S+)
+Value DENY_DST_IPv4 (\S+)
+Value DENY_DST_IPV4_MASK (\S+)
+Value DENY_DST_IPv6 (\S+)
+Value DENY_DST_IPV6_MASK (\S+)
+Value TUNNEL_TYPE (\S+)
+Value List INGRESS_NAME (\S+)
+
+Start
+  ^trans -> Continue.Record
+  ^transport-tunnel ${TUNNEL_NAME}
+  ^\s*description ${DESCRIPTION}
+  ^\s*deny ipv4-dest ${DENY_DST_IPv4} ${DENY_DST_IPV4_MASK}
+  ^\s*deny ipv6-dest ${DENY_DST_IPv6} ${DENY_DST_IPV6_MASK}
+  ^\s*tunnel-type ${TUNNEL_TYPE} (ipv4-src ${SRC_IP} ${SRC_MASK})*
+  ^\s*set ingress-group\s+${INGRESS_NAME}
+  ^\s*$$
+  ^. -> Error

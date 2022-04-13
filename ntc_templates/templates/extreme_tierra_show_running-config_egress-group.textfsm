@@ -1,8 +1,11 @@
-Value Filldown egressgroup_name ([\-\w]+)
-Value egress_name ([\-\w]+)
+Value Key,Required EGRESS_GROUP_NAME (\S+)
+Value DESCRIPTION ([\s\S]+)
+Value List EGRESS (\S+)
 
 Start
-  ^\s*egress-group\s+${egressgroup_name}
-  ^\s*egress\s+${egress_name} -> Continue.Record
+ ^egr -> Continue.Record
+ ^egress-group\s+${EGRESS_GROUP_NAME}
+ ^\s*description\s+${DESCRIPTION}
+ ^\s*set\s+egress\s+${EGRESS}
  ^\s*$$
  ^. -> Error

@@ -1,0 +1,9 @@
+encap dummy
+  description encapdescription
+  destination-ipv4-addr 2.2.2.2
+  destination-mac-addr aa:aa:aa:bb:bb:bb:aa:aa:aa
+  encap-type gre 
+  source-ipv4-addr 1.1.1.1
+  source-mac-addr aa:aa:aa:bb:bb:bb
+  vlan-id 4000
+  vlan-pcp 5

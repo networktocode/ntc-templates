@@ -1,0 +1,6 @@
+transport-tunnel dummy
+  description dummy_transport_tunnel
+  deny ipv4-dest 2.2.2.2 255.255.255.255
+  deny ipv6-dest 2001:: ffff:ffff:ffff:ffff::
+  tunnel-type gre ipv4-src 1.1.1.1 255.255.255.255
+  set ingress-group ig_1-01

@@ -1,5 +1,7 @@
-Value 
+Value ACL_COUNTER (no enable acl\-counter)
 
 Start
+ ^acl\-config
+ ^\s*${ACL_COUNTER}
  ^\s*$$
  ^. -> Error

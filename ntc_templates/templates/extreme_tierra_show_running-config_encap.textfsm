@@ -1,5 +1,24 @@
-Value 
+Value ENCAP_NAME (\S+)
+Value DESCRIPTION (\S+)
+Value DST_IPV4_ADDR (\S+)
+Value DST_MAC_ADDR (\S+)
+Value SRC_IPV4_ADDR (\S+)
+Value SRC_MAC_ADDR (\S+)
+Value ENCAP_TYPE (\S+)
+Value VLAN_ID (\S+)
+Value VLAN_PCP (\S+)
+
 
 Start
+ ^enc -> Continue.Record
+ ^encap ${ENCAP_NAME}
+ ^\s*description ${DESCRIPTION}
+ ^\s*destination\-ipv4\-addr ${DST_IPV4_ADDR}
+ ^\s*destination\-mac\-addr ${DST_MAC_ADDR}
+ ^\s*encap\-type ${ENCAP_TYPE} 
+ ^\s*source\-ipv4\-addr ${SRC_IPV4_ADDR}
+ ^\s*source\-mac\-addr ${SRC_MAC_ADDR}
+ ^\s*vlan\-id ${VLAN_ID}
+ ^\s*vlan\-pcp ${VLAN_PCP}
  ^\s*$$
  ^. -> Error
