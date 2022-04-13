@@ -1,391 +1,194 @@
+interface port-channel 1
+interface port-channel 11
+  set ingress-group ig_mpls
+  set ingress-group ig_fw
+  lacp min-links 4
+  no shutdown
+interface port-channel 255
+  description test!23
+  no shutdown
 interface ethernet 1/1
-  set ingress-group ig_2-01
-  no shutdown
+  shutdown
 interface ethernet 1/2
-  set ingress-group ig_2-02
-  no shutdown
+  shutdown
 interface ethernet 1/3
-  set ingress-group ig_2-03
-  no shutdown
+  shutdown
 interface ethernet 1/4
-  set ingress-group ig_2-04
-  no shutdown
+  shutdown
 interface ethernet 1/5
-  set ingress-group ig_2-05
-  no shutdown
+  shutdown
 interface ethernet 1/6
-  set ingress-group ig_2-06
-  no shutdown
+  shutdown
 interface ethernet 1/7
-  set ingress-group ig_2-07
-  no shutdown
+  shutdown
 interface ethernet 1/8
-  set ingress-group ig_2-08
-  no shutdown
+  shutdown
 interface ethernet 1/9
-  set ingress-group ig_2-09
-  no shutdown
+  shutdown
 interface ethernet 1/10
-  set ingress-group ig_2-10
-  no shutdown
+  shutdown
 interface ethernet 1/11
-  set ingress-group ig_2-11
-  no shutdown
+  shutdown
 interface ethernet 1/12
-  set ingress-group ig_2-12
-  no shutdown
+  shutdown
 interface ethernet 1/13
-  set ingress-group ig_2-13
-  no shutdown
+  shutdown
 interface ethernet 1/14
-  set ingress-group ig_2-14
-  no shutdown
+  shutdown
 interface ethernet 1/15
-  set ingress-group ig_2-15
-  no shutdown
+  shutdown
 interface ethernet 1/16
-  set ingress-group ig_2-16
-  no shutdown
-interface ethernet 2/1
-  set ingress-group ig_1-01
-  no shutdown
-interface ethernet 2/2
-  set ingress-group ig_1-02
-  no shutdown
-interface ethernet 2/3
-  set ingress-group ig_1-03
-  no shutdown
-interface ethernet 2/4
-  set ingress-group ig_1-04
-  no shutdown
-interface ethernet 2/5
-  set ingress-group ig_1-05
-  no shutdown
-interface ethernet 2/6
-  set ingress-group ig_1-06
-  no shutdown
-interface ethernet 2/7
-  set ingress-group ig_1-07
-  no shutdown
-interface ethernet 2/8
-  set ingress-group ig_1-08
-  no shutdown
-interface ethernet 2/9
-  set ingress-group ig_1-09
-  no shutdown
-interface ethernet 2/10
-  set ingress-group ig_1-10
-  no shutdown
-interface ethernet 2/11
-  set ingress-group ig_1-11
-  no shutdown
-interface ethernet 2/12
-  set ingress-group ig_1-12
-  no shutdown
-interface ethernet 2/13
-  set ingress-group ig_1-13
-  no shutdown
-interface ethernet 2/14
-  set ingress-group ig_1-14
-  no shutdown
-interface ethernet 2/15
-  set ingress-group ig_1-15
-  no shutdown
-interface ethernet 2/16
-  set ingress-group ig_1-16
-  no shutdown
-interface ethernet 3/1
-  set ingress-group ig_4-01
-  no shutdown
-interface ethernet 3/2
-  set ingress-group ig_4-02
-  no shutdown
-interface ethernet 3/3
-  set ingress-group ig_4-03
-  no shutdown
-interface ethernet 3/4
-  set ingress-group ig_4-04
-  no shutdown
-interface ethernet 3/5
-  set ingress-group ig_4-05
-  no shutdown
-interface ethernet 3/6
-  set ingress-group ig_4-06
-  no shutdown
-interface ethernet 3/7
-  set ingress-group ig_4-07
-  no shutdown
-interface ethernet 3/8
-  set ingress-group ig_4-08
-  no shutdown
-interface ethernet 3/9
-  set ingress-group ig_4-09
-  no shutdown
-interface ethernet 3/10
-  set ingress-group ig_4-10
-  no shutdown
-interface ethernet 3/11
-  set ingress-group ig_4-11
-  no shutdown
-interface ethernet 3/12
-  set ingress-group ig_4-12
-  no shutdown
-interface ethernet 3/13
-  set ingress-group ig_4-13
-  no shutdown
-interface ethernet 3/14
-  set ingress-group ig_4-14
-  no shutdown
-interface ethernet 3/15
-  set ingress-group ig_4-15
-  no shutdown
-interface ethernet 3/16
-  set ingress-group ig_4-16
-  no shutdown
+  shutdown
 interface ethernet 4/1
-  set ingress-group ig_3-01
-  no shutdown
+  shutdown
 interface ethernet 4/2
-  set ingress-group ig_3-02
-  no shutdown
+  shutdown
 interface ethernet 4/3
-  set ingress-group ig_3-03
-  no shutdown
+  shutdown
 interface ethernet 4/4
-  set ingress-group ig_3-04
-  no shutdown
+  shutdown
 interface ethernet 4/5
-  set ingress-group ig_3-05
-  no shutdown
+  shutdown
 interface ethernet 4/6
-  set ingress-group ig_3-06
-  no shutdown
+  shutdown
 interface ethernet 4/7
-  set ingress-group ig_3-07
-  no shutdown
+  shutdown
 interface ethernet 4/8
-  set ingress-group ig_3-08
-  no shutdown
+  shutdown
 interface ethernet 4/9
-  set ingress-group ig_3-09
-  no shutdown
+  shutdown
 interface ethernet 4/10
-  set ingress-group ig_3-10
-  no shutdown
+  shutdown
 interface ethernet 4/11
-  set ingress-group ig_3-11
-  no shutdown
+  shutdown
 interface ethernet 4/12
-  set ingress-group ig_3-12
-  no shutdown
+  shutdown
 interface ethernet 4/13
-  set ingress-group ig_3-13
-  no shutdown
+  shutdown
 interface ethernet 4/14
-  set ingress-group ig_3-14
-  no shutdown
+  shutdown
 interface ethernet 4/15
-  set ingress-group ig_3-15
-  no shutdown
+  shutdown
 interface ethernet 4/16
-  set ingress-group ig_3-16
-  no shutdown
-interface ethernet 5/1
-  set ingress-group ig_6-01
-  no shutdown
-interface ethernet 5/2
-  set ingress-group ig_6-02
-  no shutdown
-interface ethernet 5/3
-  set ingress-group ig_6-03
-  no shutdown
-interface ethernet 5/4
-  set ingress-group ig_6-04
-  no shutdown
-interface ethernet 5/5
-  set ingress-group ig_6-05
-  no shutdown
-interface ethernet 5/6
-  set ingress-group ig_6-06
-  no shutdown
-interface ethernet 5/7
-  set ingress-group ig_6-07
-  no shutdown
-interface ethernet 5/8
-  set ingress-group ig_6-08
-  no shutdown
-interface ethernet 5/9
-  set ingress-group ig_6-09
-  no shutdown
-interface ethernet 5/10
-  set ingress-group ig_6-10
-  no shutdown
-interface ethernet 5/11
-  set ingress-group ig_6-11
-  no shutdown
-interface ethernet 5/12
-  set ingress-group ig_6-12
-  no shutdown
-interface ethernet 5/13
-  set ingress-group ig_6-13
-  no shutdown
-interface ethernet 5/14
-  set ingress-group ig_6-14
-  no shutdown
-interface ethernet 5/15
-  set ingress-group ig_6-15
-  no shutdown
-interface ethernet 5/16
-  set ingress-group ig_6-16
-  no shutdown
-interface ethernet 6/1
-  set ingress-group ig_5-01
-  no shutdown
-interface ethernet 6/2
-  set ingress-group ig_5-02
-  no shutdown
-interface ethernet 6/3
-  set ingress-group ig_5-03
-  no shutdown
-interface ethernet 6/4
-  set ingress-group ig_5-04
-  no shutdown
-interface ethernet 6/5
-  set ingress-group ig_5-05
-  no shutdown
-interface ethernet 6/6
-  set ingress-group ig_5-06
-  no shutdown
-interface ethernet 6/7
-  set ingress-group ig_5-07
-  no shutdown
-interface ethernet 6/8
-  set ingress-group ig_5-08
-  no shutdown
-interface ethernet 6/9
-  set ingress-group ig_5-09
-  no shutdown
-interface ethernet 6/10
-  set ingress-group ig_5-10
-  no shutdown
-interface ethernet 6/11
-  set ingress-group ig_5-11
-  no shutdown
-interface ethernet 6/12
-  set ingress-group ig_5-12
-  no shutdown
-interface ethernet 6/13
-  set ingress-group ig_5-13
-  no shutdown
-interface ethernet 6/14
-  set ingress-group ig_5-14
-  no shutdown
-interface ethernet 6/15
-  set ingress-group ig_5-15
-  no shutdown
-interface ethernet 6/16
-  set ingress-group ig_5-16
-  no shutdown
+  shutdown
 interface ethernet 7/1
-  set ingress-group ig_8-01
+  fec rs-fec
+  set ingress-group ig_mpls
+  set ingress-group ig_fw
+  set ingress-group ig_gtp
+  set ingress-group ig_gre
+  set ingress-group ig_vcp
+  description S1_A2:0/29
   no shutdown
 interface ethernet 7/2
-  set ingress-group ig_8-02
+  set ingress-group ig_gre
+  set ingress-group ig_vcp
+  set ingress-group ig_mpls
+  set ingress-group ig_gtp
+  set ingress-group ig_fw
+  description S1_A1:0/29
   no shutdown
 interface ethernet 7/3
-  set ingress-group ig_8-03
-  no shutdown
+  shutdown
 interface ethernet 7/4
-  set ingress-group ig_8-04
-  no shutdown
+  shutdown
 interface ethernet 7/5
-  set ingress-group ig_8-05
-  no shutdown
+  shutdown
 interface ethernet 7/6
-  set ingress-group ig_8-06
-  no shutdown
+  shutdown
 interface ethernet 7/7
-  set ingress-group ig_8-07
-  no shutdown
+  shutdown
 interface ethernet 7/8
-  set ingress-group ig_8-08
+  speed 40000
   no shutdown
 interface ethernet 7/9
-  set ingress-group ig_8-09
-  no shutdown
+  shutdown
 interface ethernet 7/10
-  set ingress-group ig_8-10
-  no shutdown
+  shutdown
 interface ethernet 7/11
-  set ingress-group ig_8-11
-  no shutdown
+  shutdown
 interface ethernet 7/12
-  set ingress-group ig_8-12
-  no shutdown
+  shutdown
 interface ethernet 7/13
-  set ingress-group ig_8-13
-  no shutdown
+  shutdown
 interface ethernet 7/14
-  set ingress-group ig_8-14
-  no shutdown
+  shutdown
 interface ethernet 7/15
-  set ingress-group ig_8-15
+  set ingress-group ig_vcp
+  set ingress-group ig_gtp
+  set ingress-group ig_gre
+  set ingress-group ig_mpls
+  set ingress-group ig_fw
+  description S1_A3:0/29
   no shutdown
 interface ethernet 7/16
-  set ingress-group ig_8-16
-  no shutdown
+  shutdown
 interface ethernet 8/1
-  set ingress-group ig_7-01
+  set ingress-group ig_gre
+  set ingress-group ig_mpls
+  set ingress-group ig_fw
+  set ingress-group ig_vcp
+  set ingress-group ig_gtp
+  description S1_A2:0/30
   no shutdown
 interface ethernet 8/2
-  set ingress-group ig_7-02
+  set ingress-group ig_mpls
+  set ingress-group ig_gtp
+  set ingress-group ig_gre
+  set ingress-group ig_vcp
+  set ingress-group ig_fw
+  description S1_A1:0/30
   no shutdown
 interface ethernet 8/3
-  set ingress-group ig_7-03
-  no shutdown
+  shutdown
 interface ethernet 8/4
-  set ingress-group ig_7-04
-  no shutdown
+  shutdown
 interface ethernet 8/5
-  set ingress-group ig_7-05
+  set ingress-group ig_cloud_gre
+  description Cloud
   no shutdown
 interface ethernet 8/6
-  set ingress-group ig_7-06
-  no shutdown
+  shutdown
 interface ethernet 8/7
-  set ingress-group ig_7-07
-  no shutdown
+  shutdown
 interface ethernet 8/8
-  set ingress-group ig_7-08
+  speed 40000
   no shutdown
 interface ethernet 8/9
-  set ingress-group ig_7-09
-  no shutdown
+  shutdown
 interface ethernet 8/10
-  set ingress-group ig_7-10
-  no shutdown
+  shutdown
 interface ethernet 8/11
-  set ingress-group ig_7-11
-  no shutdown
+  shutdown
 interface ethernet 8/12
-  set ingress-group ig_7-12
+  shutdown
+interface ethernet 8/14:1
+  description ixia52:7/13
   no shutdown
-interface ethernet 8/13
-  set ingress-group ig_7-13
+interface ethernet 8/14:2
+  description ixia52:7/14
   no shutdown
-interface ethernet 8/14
-  set ingress-group ig_7-14
+interface ethernet 8/14:3
+  description ixia52:7/15
+  no shutdown
+interface ethernet 8/14:4
+  description ixia52:7/16
   no shutdown
 interface ethernet 8/15
-  set ingress-group ig_7-15
+  set ingress-group ig_gre
+  set ingress-group ig_vcp
+  set ingress-group ig_mpls
+  set ingress-group ig_fw
+  set ingress-group ig_gtp
+  description S1_A3:0/30
   no shutdown
 interface ethernet 8/16
-  set ingress-group ig_7-16
-  no shutdown
+  shutdown
 interface management 0
-  description Management
   no ip address dhcp
-  ip address 10.25.101.1/22
+  ip address 10.25.101.9/22
   ip gateway 10.25.100.1
-  ipv6 address dhcp
+  no ipv6 address dhcp
+  ipv6 address fc00::14:4288:2fff:fec1:5a01/64
+  ipv6 gateway fc00:0:0:14::
   no shutdown

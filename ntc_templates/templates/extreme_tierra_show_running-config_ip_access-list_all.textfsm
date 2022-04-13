@@ -1,40 +1,37 @@
-Value Filldown acl_type (ip)
-Value Filldown acl_name ([\w+-]+)
-Value seq_num (\d+)
-Value fw_action (permit|deny)
-Value protocol (esp|gre|gtpc|gtpu|icmp|igmp|ip|ipip|nvgre|tcp|udp|vxlan|\d+)
-Value network_id (\d+)
-Value src_ip (any|[\.\d]+)
-Value src_mask ([\.0254]+)
-Value dst_ip (any|[\.\d]+)
-Value dst_mask ([\.0254]+)
-Value dport (\d+)
-Value dport_end (\d+)
-Value sport (\d+)
-Value sport_end (\d+)
-Value length (\d+)
-Value length_end (\d+)
-Value dscp (\d+)
-Value vlan (\d+)
-Value igmp_type (\d+)
-Value icmp_type (\d+)
-Value icmp_code (\d+)
-Value fragment (morefragment|dontfragment)
-Value ack (ack)
-Value cwr (cwr)
-Value ece (ece)
-Value fin (fin)
-Value push (push)
-Value reset (reset)
-Value sync (sync)
-Value urg (urg)
-Value log (log)
-Value count (count)
+Value Filldown ACL_TYPE (ip)
+Value Filldown ACL_NAME (\S+)
+Value Key,Required SEQ_NUM (\d+)
+Value FW_ACTION (permit|deny)
+Value PROTOCOL (\d+|esp|gre|gtpc|gtpu|icmp|igmp|ip|ipip|nvgre|tcp|udp|vxlan)
+Value NETWORK_ID (\d+)
+Value SRC_ADDR (any|[\d\./]+\s[\d\./]+)
+Value DST_ADDR (any|[\d\./]+\s[\d\./]+)
+Value ACK (ack)
+Value COUNT (count)
+Value CWR (cwr)
+Value DPORT (\d+)
+Value DPORT_END (\d+)
+Value DSCP (\d+)
+Value ECE (ece)
+Value FIN (fin)
+Value FRAGMENT (morefragment|dontfragment)
+Value LENGTH (\d+)
+Value LENGTH_END (\d+)
+Value LOG (log)
+Value PUSH (push)
+Value QOS_FORWARDING_GROUP (\S+)
+Value RESET (reset)
+Value SPORT (\d+)
+Value SPORT_END (\d+)
+Value SYNC (sync)
+Value URG (urg)
+Value VLAN (\d+)
+
 
 Start
-  ^${acl_type}\s+access-list\s+${acl_name}\s*
-  ^\s*seq\s+${seq_num}\s+${fw_action}\s+${protocol}\s*(${network_id})?\s+${src_ip}\s*(${src_mask})?\s+${dst_ip}\s*(${dst_mask})?\s*(dport\s+${dport})?\s*(dport-end\s+${dport_end})?\s*(sport\s+${sport})?\s*(sport-end\s+${sport_end})?\s*(length\s+${length})?\s*(length-end\s+${length_end})?\s*(dscp\s+${dscp})?\s*(vlan\s+${vlan})?\s*(igmp-type\s+${igmp_type})?\s*(icmp-type\s+${icmp_type})?\s*(icmp-code\s+${icmp_code})?\s*(${fragment})?\s*(${ack})?\s*(${cwr})?\s*(${ece})?\s*(${fin})?\s*(${push})?\s*(${reset})?\s*(${sync})?\s*(${urg})?\s*(${log})?\s*(${count})?\s* -> Record
-  #^\s*seq\s+${seq_num}\s+${fw_action}\s+${protocol}\s+${src_ip}\s*(${src_mask})?\s+${dst_ip}\s*(${dst_mask})?\s*(dport\s+${dport})?\s*(dport-end\s+${dport_end})?\s*(sport\s+${sport})?\s*(sport-end\s+${sport_end})?\s*(length\s+${length})?\s*(length-end\s+${length_end})?\s*(dscp\s+${dscp})?\s*(vlan\s+${vlan})?\s*(igmp-type\s+${igmp_type})?\s*(icmp-type\s+${icmp_type})?\s*(icmp-code\s+${icmp_code})?\s*(${fragment})?\s*(${ack})?\s*(${fin})?\s*(${push})?\s*(${sync})?\s*(${reset})?\s*(${ece})?\s*(${cwr})?\s*(${urg})?\s*(${log})?\s*(${count})?\s* -> Record
-
+ ^ip -> Continue.Record
+ ^${ACL_TYPE}\s+access-list\s+${ACL_NAME}\s* 
+ ^\s*seq\s+${SEQ_NUM}\s+${FW_ACTION}\s${PROTOCOL}(\s${NETWORK_ID})?\s+${SRC_ADDR}\s+${DST_ADDR}((\s${ACK})|(\s${COUNT})|(\s${CWR})|(\sdport\s${DPORT})|(\sdport\S+\s${DPORT_END})|(\sdscp\s${DSCP})|(\s${ECE})|(\s${FIN})|(\s${FRAGMENT})|(\slength\s${LENGTH})|(\slength\S+\s${LENGTH_END})|(\s${LOG})|(\s${PUSH})|(\sqos\S+\s${QOS_FORWARDING_GROUP})|(\s${RESET})|(\ssport\s${SPORT})|(\ssport\S+\s${SPORT_END})|(\s${SYNC})|(\s${URG})|(\svlan\s${VLAN}))* -> Record
  ^\s*$$
  ^. -> Error
+

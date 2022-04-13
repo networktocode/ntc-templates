@@ -1,0 +1,23 @@
+---
+parsed_sample:
+  - interface_type: "ethernet"
+    interface: "7/2"
+    description: "S1_A1:0/29"
+    ingress_groups:
+      - "ig_gre"
+      - "ig_vcp"
+      - "ig_mpls"
+      - "ig_gtp"
+      - "ig_fw"
+    enable: "no shutdown"
+    lacp_port_priority: ""
+    lacp_rate: ""
+    fec: ""
+    lldp_enable: ""
+    lldp_recieve: ""
+    lldp_transmit: ""
+    channel_grp_id: "1"
+    channel_grp_mode: "mode"
+    link_fault_signaling: ""
+    mtu: ""
+    speed: ""

@@ -1,2 +1,3 @@
-------------------------------------------^
-%Error: Command incomplete.
+ipv6 access-list v6_fw_mob_https
+  seq 10 permit tcp any any dport 443 vlan 2581
+  seq 20 permit tcp 262d:6737:4d76:449d:: ffff:ffff:ffff:ffff:: 3c11:4ed2:c7d1:dae8::27 ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff vlan 5 ack cwr sport 5000 dport 6000 dport-end 6500 sport-end 5350 sync urg log count dscp 1 length 500 length-end 750 qos-forwarding-group q1 reset push fin ece 
