@@ -1,1023 +1,566 @@
-route-map mall_1-01 10
-forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_1-01
-Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
-
-route-map mall_1-02 10
-forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_1-02
-Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
-
-route-map mall_1-03 10
-forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_1-03
-Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
-
-route-map mall_1-04 10
-forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_1-04
-Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
-
-route-map mall_1-05 10
-forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_1-05
-Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
-
-route-map mall_1-06 10
-forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_1-06
-Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
-
-route-map mall_1-07 10
-forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_1-07
-Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
-
-route-map mall_1-08 10
-forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_1-08
-Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
-
-route-map mall_1-09 10
-forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_1-09
-Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
-
-route-map mall_1-10 10
-forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_1-10
-Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
-
-route-map mall_1-11 10
-forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_1-11
-Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
-
-route-map mall_1-12 10
-forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_1-12
-Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
-
-route-map mall_1-13 10
-forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_1-13
-Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
-
-route-map mall_1-14 10
-forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_1-14
-Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
-
-route-map mall_1-15 10
-forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_1-15
-Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
-
-route-map mall_1-16 10
-forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_1-16
-Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
-
-route-map mall_2-01 10
-forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_2-01
-Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
-
-route-map mall_2-02 10
-forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_2-02
-Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
-
-route-map mall_2-03 10
-forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_2-03
-Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
-
-route-map mall_2-04 10
-forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_2-04
-Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
-
-route-map mall_2-05 10
-forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_2-05
-Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
-
-route-map mall_2-06 10
-forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_2-06
-Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
-
-route-map mall_2-07 10
-forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_2-07
-Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
-
-route-map mall_2-08 10
-forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_2-08
-Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
-
-route-map mall_2-09 10
-forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_2-09
+match ipv6 access-list v6_gre_3 (active)
+egress-group eg_1540
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_2-10 10
+route-map map_gre 50
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_2-10
+match ip access-list v4_gre_4 (active)
+match ipv6 access-list v6_gre_4 (active)
+egress-group eg_1550
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_2-11 10
+route-map map_gre 60
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_2-11
+match ip access-list v4_gre_5 (active)
+match ipv6 access-list v6_gre_5 (active)
+egress-group eg_1560
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_2-12 10
+route-map map_gre 70
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_2-12
+match ip access-list v4_gre_6 (active)
+match ipv6 access-list v6_gre_6 (active)
+egress-group eg_1570
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_2-13 10
+route-map map_gre 80
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_2-13
+match ip access-list v4_gre_7 (active)
+match ipv6 access-list v6_gre_7 (active)
+egress-group eg_1580
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_2-14 10
+route-map map_gre 90
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_2-14
+match ip access-list v4_gre_8 (active)
+match ipv6 access-list v6_gre_8 (active)
+egress-group eg_1590
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_2-15 10
+route-map map_gre 100
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_2-15
+match ip access-list v4_gre_9 (active)
+match ipv6 access-list v6_gre_9 (active)
+egress-group eg_1600
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_2-16 10
+route-map map_gre 110
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_2-16
+match ip access-list v4_gre_10 (active)
+match ipv6 access-list v6_gre_10 (active)
+egress-group eg_1610
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_3-01 10
+route-map map_gre 120
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_3-01
+match ip access-list v4_gre_11 (active)
+match ipv6 access-list v6_gre_11 (active)
+egress-group eg_1620
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_3-02 10
+route-map map_gre 130
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_3-02
+match ip access-list v4_gre_12 (active)
+match ipv6 access-list v6_gre_12 (active)
+egress-group eg_1630
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_3-03 10
+route-map map_gre 140
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_3-03
+match ip access-list v4_gre_13 (active)
+match ipv6 access-list v6_gre_13 (active)
+egress-group eg_1640
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_3-04 10
+route-map map_gre 150
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_3-04
+match ip access-list v4_gre_14 (active)
+match ipv6 access-list v6_gre_14 (active)
+egress-group eg_1650
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_3-05 10
+route-map map_gre 160
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_3-05
+match ip access-list v4_gre_15 (active)
+match ipv6 access-list v6_gre_15 (active)
+egress-group eg_1660
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_3-06 10
+route-map map_gre 170
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_3-06
+match ip access-list v4_gre_16 (active)
+match ipv6 access-list v6_gre_16 (active)
+egress-group eg_1670
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_3-07 10
+route-map map_gre 180
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_3-07
+match ip access-list v4_gre_17 (active)
+match ipv6 access-list v6_gre_17 (active)
+egress-group eg_1680
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_3-08 10
+route-map map_gre 190
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_3-08
+match ip access-list v4_gre_18 (active)
+match ipv6 access-list v6_gre_18 (active)
+egress-group eg_1690
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_3-09 10
+route-map map_gre 200
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_3-09
+match ip access-list v4_gre_19 (active)
+match ipv6 access-list v6_gre_19 (active)
+egress-group eg_1700
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_3-10 10
+route-map map_gtp 10
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_3-10
+match ip access-list v4_gtp_0 (active)
+match ipv6 access-list v6_gtp_0 (active)
+egress-group eg_3010
+qos-forwarding-group q0
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_3-11 10
+route-map map_gtp 20
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_3-11
+match ip access-list v4_gtp_1 (active)
+match ipv6 access-list v6_gtp_1 (active)
+egress-group eg_3020
+qos-forwarding-group q0
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_3-12 10
+route-map map_gtp 30
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_3-12
+match ip access-list v4_gtp_2 (active)
+match ipv6 access-list v6_gtp_2 (active)
+egress-group eg_3030
+qos-forwarding-group q1
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_3-13 10
+route-map map_gtp 40
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_3-13
+match ip access-list v4_gtp_3 (active)
+match ipv6 access-list v6_gtp_3 (active)
+egress-group eg_3040
+qos-forwarding-group q2
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_3-14 10
+route-map map_gtp 50
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_3-14
+match ip access-list v4_gtp_4 (active)
+match ipv6 access-list v6_gtp_4 (active)
+egress-group eg_3050
+qos-forwarding-group q3
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_3-15 10
+route-map map_gtp 60
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_3-15
+match ip access-list v4_gtp_5 (active)
+match ipv6 access-list v6_gtp_5 (active)
+egress-group eg_3060
+qos-forwarding-group q4
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_3-16 10
+route-map map_gtp 70
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_3-16
+match ip access-list v4_gtp_6 (active)
+match ipv6 access-list v6_gtp_6 (active)
+egress-group eg_3070
+qos-forwarding-group q5
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_4-01 10
+route-map map_gtp 80
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_4-01
+match ip access-list v4_gtp_7 (active)
+match ipv6 access-list v6_gtp_7 (active)
+egress-group eg_3080
+qos-forwarding-group q6
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_4-02 10
+route-map map_gtp 90
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_4-02
+match ip access-list v4_gtp_8 (active)
+match ipv6 access-list v6_gtp_8 (active)
+egress-group eg_3090
+qos-forwarding-group q7
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_4-03 10
+route-map map_gtp 100
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_4-03
+match ip access-list v4_gtp_9 (active)
+match ipv6 access-list v6_gtp_9 (active)
+egress-group eg_3100
+qos-forwarding-group q1
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_4-04 10
+route-map map_gtp 110
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_4-04
+match ip access-list v4_gtp_10 (active)
+match ipv6 access-list v6_gtp_10 (active)
+egress-group eg_3110
+qos-forwarding-group q2
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_4-05 10
+route-map map_gtp 120
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_4-05
+match ip access-list v4_gtp_11 (active)
+match ipv6 access-list v6_gtp_11 (active)
+egress-group eg_3120
+qos-forwarding-group q3
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_4-06 10
+route-map map_gtp 130
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_4-06
+match ip access-list v4_gtp_12 (active)
+match ipv6 access-list v6_gtp_12 (active)
+egress-group eg_3130
+qos-forwarding-group q4
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_4-07 10
+route-map map_gtp 140
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_4-07
+match ip access-list v4_gtp_13 (active)
+match ipv6 access-list v6_gtp_13 (active)
+egress-group eg_3140
+qos-forwarding-group q5
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_4-08 10
+route-map map_gtp 150
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_4-08
+match ip access-list v4_gtp_14 (active)
+match ipv6 access-list v6_gtp_14 (active)
+egress-group eg_3150
+qos-forwarding-group q6
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_4-09 10
+route-map map_gtp 160
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_4-09
+match ip access-list v4_gtp_15 (active)
+match ipv6 access-list v6_gtp_15 (active)
+egress-group eg_3160
+qos-forwarding-group q7
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_4-10 10
+route-map map_gtp 170
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_4-10
+match ip access-list v4_gtp_16 (active)
+match ipv6 access-list v6_gtp_16 (active)
+egress-group eg_3170
+qos-forwarding-group q1
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_4-11 10
+route-map map_gtp 180
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_4-11
+match ip access-list v4_gtp_17 (active)
+match ipv6 access-list v6_gtp_17 (active)
+egress-group eg_3180
+qos-forwarding-group q2
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_4-12 10
+route-map map_gtp 190
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_4-12
+match ip access-list v4_gtp_18 (active)
+match ipv6 access-list v6_gtp_18 (active)
+egress-group eg_3190
+qos-forwarding-group q3
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_4-13 10
+route-map map_gtp 200
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_4-13
+match ip access-list v4_gtp_19 (active)
+match ipv6 access-list v6_gtp_19 (active)
+egress-group eg_3200
+qos-forwarding-group q4
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_4-14 10
+route-map map_gtp 2000
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_4-14
+match ip access-list v4_deny (active)
+match ipv6 access-list v6_deny (active)
+egress-group eg_3210
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_4-15 10
+route-map map_vcp 10
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_4-15
+match ip access-list v4_vcp_0 (active)
+match ipv6 access-list v6_vcp_0 (active)
+egress-group eg_1010
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_4-16 10
+route-map map_vcp 20
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_4-16
+match ip access-list v4_vcp_1 (active)
+match ipv6 access-list v6_vcp_1 (active)
+egress-group eg_1020
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_5-01 10
+route-map map_vcp 30
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_5-01
+match ip access-list v4_vcp_2 (active)
+match ipv6 access-list v6_vcp_2 (active)
+egress-group eg_1030
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_5-02 10
+route-map map_vcp 40
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_5-02
+match ip access-list v4_vcp_3 (active)
+match ipv6 access-list v6_vcp_3 (active)
+egress-group eg_1040
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_5-03 10
+route-map map_vcp 50
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_5-03
+match ip access-list v4_vcp_4 (active)
+match ipv6 access-list v6_vcp_4 (active)
+egress-group eg_1050
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_5-04 10
+route-map map_vcp 60
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_5-04
+match ip access-list v4_vcp_5 (active)
+match ipv6 access-list v6_vcp_5 (active)
+egress-group eg_1060
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_5-05 10
+route-map map_vcp 70
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_5-05
+match ip access-list v4_vcp_6 (active)
+match ipv6 access-list v6_vcp_6 (active)
+egress-group eg_1070
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_5-06 10
+route-map map_vcp 80
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_5-06
+match ip access-list v4_vcp_7 (active)
+match ipv6 access-list v6_vcp_7 (active)
+egress-group eg_1080
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_5-07 10
+route-map map_vcp 90
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_5-07
+match ip access-list v4_vcp_8 (active)
+match ipv6 access-list v6_vcp_8 (active)
+egress-group eg_1090
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_5-08 10
+route-map map_vcp 100
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_5-08
+match ip access-list v4_vcp_9 (active)
+match ipv6 access-list v6_vcp_9 (active)
+egress-group eg_1100
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_5-09 10
+route-map map_vcp 110
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_5-09
+match ip access-list v4_vcp_10 (active)
+match ipv6 access-list v6_vcp_10 (active)
+egress-group eg_1110
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_5-10 10
+route-map map_vcp 120
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_5-10
+match ip access-list v4_vcp_11 (active)
+match ipv6 access-list v6_vcp_11 (active)
+egress-group eg_1120
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_5-11 10
+route-map map_vcp 130
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_5-11
+match ip access-list v4_vcp_12 (active)
+match ipv6 access-list v6_vcp_12 (active)
+egress-group eg_1130
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_5-12 10
+route-map map_vcp 140
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_5-12
+match ip access-list v4_vcp_13 (active)
+match ipv6 access-list v6_vcp_13 (active)
+egress-group eg_1140
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_5-13 10
+route-map map_vcp 150
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_5-13
+match ip access-list v4_vcp_14 (active)
+match ipv6 access-list v6_vcp_14 (active)
+egress-group eg_1150
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_5-14 10
+route-map map_vcp 160
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_5-14
+match ip access-list v4_vcp_15 (active)
+match ipv6 access-list v6_vcp_15 (active)
+egress-group eg_1160
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_5-15 10
+route-map map_vcp 170
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_5-15
+match ip access-list v4_vcp_16 (active)
+match ipv6 access-list v6_vcp_16 (active)
+egress-group eg_1170
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_5-16 10
+route-map map_vcp 180
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_5-16
+match ip access-list v4_vcp_17 (active)
+match ipv6 access-list v6_vcp_17 (active)
+egress-group eg_1180
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_6-01 10
+route-map map_vcp 190
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_6-01
+match ip access-list v4_vcp_18 (active)
+match ipv6 access-list v6_vcp_18 (active)
+egress-group eg_1190
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_6-02 10
+route-map map_vcp 200
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_6-02
+match ip access-list v4_vcp_19 (active)
+match ipv6 access-list v6_vcp_19 (active)
+egress-group eg_1200
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_6-03 10
+route-map map-mpls 10
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_6-03
+match ip access-list v4_mpls (active)
+match mac access-list test123 (active)
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_6-04 10
+route-map map_mpls 1
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_6-04
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_6-05 10
+route-map map_mpls 10
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_6-05
+match ip access-list ip_mpls (active)
+egress-group eg_4210
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_6-06 10
+route-map map_fwtap 50
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_6-06
+match ip access-list v4_fw_mob_https (active)
+match ipv6 access-list v6_fw_mob_https (active)
+egress-group eg_2090
+qos-forwarding-group q7
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_6-07 10
+route-map map_fwtap 100
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_6-07
+match ip access-list v4_fw_mob_vlan2581 (active)
+match ipv6 access-list v6_fw_mob_vlan2581 (active)
+egress-group eg_2000
+qos-forwarding-group q6
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_6-08 10
+route-map map_fwtap 105
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_6-08
+match ip access-list v4_fw_mob_vlan2582 (active)
+match ipv6 access-list v6_fw_mob_vlan2582 (active)
+egress-group eg_2005
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_6-09 10
+route-map map_fwtap 110
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_6-09
+match ip access-list v4_fw_mob_vlan2583 (active)
+match ipv6 access-list v6_fw_mob_vlan2583 (active)
+egress-group eg_2010
+qos-forwarding-group q5
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_6-10 10
+route-map map_fwtap 115
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_6-10
+match ip access-list v4_fw_mob_vlan2584 (active)
+match ipv6 access-list v6_fw_mob_vlan2584 (active)
+egress-group eg_2015
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_6-11 10
+route-map map_fwtap 120
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_6-11
+match ip access-list v4_fw_mob_fwlog_vlan966 (active)
+match ipv6 access-list v6_fw_mob_fwlog_vlan966 (active)
+egress-group eg_2020
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_6-12 10
+route-map map_fwtap 125
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_6-12
+match ip access-list v4_fw_mob_vvm_vlan179 (active)
+match ipv6 access-list v6_fw_mob_vvm_vlan179 (active)
+egress-group eg_2025
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_6-13 10
+route-map map_fwtap 130
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_6-13
+match mac access-list l2_fw_mob_l2_arp-lacp (active)
+egress-group eg_2030
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_6-14 10
+route-map map_fwtap 135
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_6-14
+match ip access-list v4_fw_mob_psgw_vlans (pending)
+match ipv6 access-list v6_fw_mob_psgw_vlans (pending)
+egress-group eg_2035
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_6-15 10
+route-map map_fwtap 150
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_6-15
+match ip access-list v4_wxfw_mob_vlan2471 (active)
+match ipv6 access-list v6_wxfw_mob_vlan2471 (active)
+egress-group eg_2050
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_6-16 10
+route-map map_fwtap 155
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_6-16
+match ip access-list v4_wxfw_mob_vlan2475 (active)
+match ipv6 access-list v6_wxfw_mob_vlan2475 (active)
+egress-group eg_2055
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_7-01 10
+route-map map_fwtap 200
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_7-01
+match ip access-list v4_fw_svc_vlan2409 (active)
+match ipv6 access-list v6_fw_svc_vlan2409 (active)
+egress-group eg_2100
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_7-02 10
+route-map map_fwtap 205
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_7-02
+match ip access-list v4_fw_svc_vlan2429 (active)
+match ipv6 access-list v6_fw_svc_vlan2429 (active)
+egress-group eg_2105
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_7-03 10
+route-map map_fwtap 210
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_7-03
+match ip access-list v4_fw_svc_vlan2454 (active)
+match ipv6 access-list v6_fw_svc_vlan2454 (active)
+egress-group eg_2110
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_7-04 10
+route-map map_fwtap 230
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_7-04
+match mac access-list l2_fw_svc_l2_arp-lacp (pending)
+egress-group eg_2130
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_7-05 10
+route-map map_fwtap 235
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_7-05
+match ip access-list v4_fw_svc_psgw_vlan2649 (active)
+match ipv6 access-list v6_fw_svc_psgw_vlan2650 (active)
+egress-group eg_2135
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_7-06 10
+route-map map_fwtap 250
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_7-06
+match ip access-list v4_wxfw_svc_vlan2491 (active)
+match ipv6 access-list v6_wxfw_svc_vlan2491 (active)
+egress-group eg_2150
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_7-07 10
+route-map map_fwtap 255
 forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_7-07
+match ip access-list v4_wxfw_svc_vlan2493 (active)
+match ipv6 access-list v6_wxfw_svc_vlan2493 (active)
+egress-group eg_2155
 Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
 
-route-map mall_7-08 10
-forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_7-08
-Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
-
-route-map mall_7-09 10
-forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_7-09
-Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
-
-route-map mall_7-10 10
-forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_7-10
-Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
-
-route-map mall_7-11 10
-forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_7-11
-Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
-
-route-map mall_7-12 10
-forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_7-12
-Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
-
-route-map mall_7-13 10
-forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_7-13
-Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
-
-route-map mall_7-14 10
-forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_7-14
-Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
-
-route-map mall_7-15 10
-forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_7-15
-Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
-
-route-map mall_7-16 10
-forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_7-16
-Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
-
-route-map mall_8-01 10
-forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_8-01
-Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
-
-route-map mall_8-02 10
-forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_8-02
-Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
-
-route-map mall_8-03 10
-forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_8-03
-Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
-
-route-map mall_8-04 10
-forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_8-04
-Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
-
-route-map mall_8-05 10
-forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_8-05
-Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
-
-route-map mall_8-06 10
-forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_8-06
-Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
-
-route-map mall_8-07 10
-forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_8-07
-Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
-
-route-map mall_8-08 10
-forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_8-08
-Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
-
-route-map mall_8-09 10
-forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_8-09
-Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
-
-route-map mall_8-10 10
-forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_8-10
-Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
-
-route-map mall_8-11 10
-forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_8-11
-Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
-
-route-map mall_8-12 10
-forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_8-12
-Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
-
-route-map mall_8-13 10
-forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_8-13
-Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
-
-route-map mall_8-14 10
-forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_8-14
-Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
-
-route-map mall_8-15 10
-forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_8-15
-Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
-
-route-map mall_8-16 10
-forward-action permit 
-match ip access-list v4_permit_any (active)
-match ipv6 access-list v6_permit_any (active)
-match mac access-list l2_permit_any (active)
-egress-group eg_8-16
-Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec

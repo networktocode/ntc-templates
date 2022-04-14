@@ -1,5 +1,16 @@
-Value 
+Value LOG_ID (\S+)
+Value LEVEL ([\S\s]+)
+Value MESSAGE ([\S\s]+)
+Value PROBABLE_CAUSE ([\S\s]+)
+Value REMEDY ([\S\s]+)
+Value IMPACT ([\S\s]+)
 
 Start
+ ^Log ID: ${LOG_ID}
+ ^\s*Level\s+: ${LEVEL}
+ ^\s*Message\s+: ${MESSAGE}
+ ^\s*Probable cause: ${PROBABLE_CAUSE}
+ ^\s*Remedy\s+: ${REMEDY}
+ ^\s*Impact\s+: ${IMPACT}
  ^\s*$$
  ^. -> Error

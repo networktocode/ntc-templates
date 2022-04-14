@@ -1,5 +1,17 @@
-Value 
+Value Key INDEX (\d+)
+Value ASSOCIATION_ID (\S+)
+Value PEER_STATUS_WORD (\S+)
+Value CONFIGURED (\S+)
+Value REACHABLE (\S+)
+Value AUTH_STATUS (\S+)
+Value SELECTION_STATUS (\S+)
+Value EVENT (\S+)
+Value COUNT (\S+)
+
 
 Start
+ ^ind\s+assid\s+status\s+conf\s+reach\s+auth\s+condition\s+last_event\s+cnt
+ ^[=]+
+ ^\s*${INDEX}\s+${ASSOCIATION_ID}\s+${PEER_STATUS_WORD}\s+${CONFIGURED}\s+${REACHABLE}\s+${AUTH_STATUS}\s+${SELECTION_STATUS}\s+${EVENT}\s+${COUNT} -> Record
  ^\s*$$
  ^. -> Error
