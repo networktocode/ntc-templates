@@ -1,5 +1,10 @@
-Value 
+Value TIME_STAMP ([\d\-]+ [\.\d\-:]+\s+\S+\s\S+)
+Value LOG_ID (\S+)
+Value SEVERITY (\S+)
+Value MESSAGE ([\S\s]+)
 
 Start
+ ^${TIME_STAMP}\sLogID:${LOG_ID} ${SEVERITY} Msg: ${MESSAGE} -> Record
+ ^\s*${MESSAGE} -> Record
  ^\s*$$
  ^. -> Error

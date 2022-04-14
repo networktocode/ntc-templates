@@ -4,6 +4,6 @@ Value INTERFACE (\S+\s\S+)
 
 Start
  ^mir -> Continue.Record
- ^\s*Name\s+:\s+${MIRROR_NAME}
- ^\s*Description\s+:\s+${DESCRIPTION}
- ^\s*Interface\s+:\s+${INTERFACE}
+ ^mirror ${MIRROR_NAME}
+ ^\s*description ${DESCRIPTION}
+ ^\s*set interface ${INTERFACE}
