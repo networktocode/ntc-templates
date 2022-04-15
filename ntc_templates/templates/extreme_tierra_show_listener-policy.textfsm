@@ -1,24 +1,39 @@
-Value Filldown lpolicy_name ([\-\w]+)
-Value Filldown fw_action (permit|deny)
-Value Filldown seq_num (\d+)
-Value acl_type (ip|ipv6|mac)
-Value acl_name ([\w\-]+)
-Value truncate (\d+)
-Value strip (vn-tag|br-tag|vlan-tag)
-Value packets (\d+)
-Value bytes (\d+)
-Value packet_rate (\d+)
-Value bit_rate (\d+)
+Value LISTENER_POLICY_NAME (\S+)
+Value Required SEQ_NUM (\d+)
+Value DESCRIPTION ([\S\s]+)
+Value FW_ACTION (permit|deny)
+Value IP_ACL_NAME (\S+)
+Value IP_ACL_STATE (\S+)
+Value IPV6_ACL_NAME (\S+)
+Value IPV6_ACL_STATE (\S+)
+Value MAC_ACL_NAME (\S+)
+Value MAC_ACL_STATE (\S+)
+Value TRUNCATE_LENGTH (\d+)
+Value BR_STRIP (br\-tag)
+Value VLAN_STRIP (vlan\-tag)
+Value VN_STRIP (vn\-tag)
+Value DECAP (decap)
+Value VLAN_ID (\d+)
+Value PACKETS (\d+)
+Value BYTES (\d+)
+Value PACKET_RATE (\d+)
+Value BIT_RATE (\d+)
 
 
 Start
-  ^\s*listener-policy\s+${lpolicy_name}\s+${seq_num} -> Record
-  ^\s*forward-action\s+${fw_action} -> Record
-  ^\s*match\s+${acl_type}\s+access-list\s+${acl_name} -> Continue.Record
-  ^\s*truncate\s+${truncate} -> Record
-  ^\s*strip\s+${strip} -> Record
-  ^\s*Policy\s+matches:\s+${packets}\s+packets,\s+${bytes}\s+bytes,\s+${packet_rate}\s+PacketRate,\s+${bit_rate}\s+BitRate\s* -> Record
-
-
+ ^list -> Continue.Record
+ ^listener\-policy\s+${LISTENER_POLICY_NAME}\s+${SEQ_NUM}
+ ^\s*description\s+${DESCRIPTION}
+ ^\s*forward\-action\s+${FW_ACTION}
+ ^\s*match\s+ip\s+access-list\s+${IP_ACL_NAME}\s+\(${IP_ACL_STATE}\)
+ ^\s*match\s+ipv6\s+access-list\s+${IPV6_ACL_NAME}\s+\(${IPV6_ACL_STATE}\)
+ ^\s*match\s+mac\s+access-list\s+${MAC_ACL_NAME}\s+\(${MAC_ACL_STATE}\)
+ ^\s*truncate\s+${TRUNCATE_LENGTH}
+ ^\s*strip\s+${BR_STRIP}
+ ^\s*strip\s+${VLAN_STRIP}
+ ^\s*strip\s+${VN_STRIP}
+ ^\s*${DECAP}
+ ^\s*vlan\s+${VLAN_ID}
+ ^\s*Policy\s+matches:\s+${PACKETS}\s+packets,\s+${BYTES}\s+bytes,\s*${PACKET_RATE}\s+Packets\/sec,\s*${BIT_RATE}\s+Bits\/sec\s* -> Record
  ^\s*$$
  ^. -> Error

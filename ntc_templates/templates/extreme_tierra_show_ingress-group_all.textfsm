@@ -1,25 +1,35 @@
 Value Filldown INGRESS_GROUP_COUNT (\d+)
-Value INGRESSGROUP_NAME (\S+)
+Value Required INGRESSGROUP_NAME (\S+)
 Value RMAP_NAME (\S+)
-Value DESC (\S+)
-Value INTERFACES (([ethrn\d\s/]+)|none)
+Value DESCRIPTION (\S+)
+Value INTERFACES ([\S\s]+)
 Value TRAFFIC_TYPE (\S+)
 Value TUNNEL_ID (\d+|any)
 Value MODE (\S+)
 Value DEST_IP ([any]+|[\d\w:\.]+)
 Value SOURCE_IP ([any]+|[\d\w:\.]+)
+Value LABEL (\S+)
+Value TRAFFIC_CLASS (\S+)
+Value TTL (\S+)
+Value Mirror (\S+)
 
 Start
+ ^\s*Name -> Continue.Record
  ^Number of ingress-groups: ${INGRESS_GROUP_COUNT}[\r\n]*
  ^\s*Name\s+:\s+${INGRESSGROUP_NAME}
  ^\s*Route-Map\s+:\s+${RMAP_NAME}
- ^\s*Description\s+:\s+${DESC}
- ^\s+Interfaces :\s+${INTERFACES}
+ ^\s*Description\s+:\s+(\-\s+|${DESCRIPTION})
+ ^\s+Interfaces :\s+(${INTERFACES}|none\s+)*
+ ^\s*Outer Tunnel Config :
+ ^\s*Header1 \(Bottom of Stack\) :
  ^\s*Traffic-Type\s+:\s+${TRAFFIC_TYPE}
  ^\s*Tunnel-Id\s+:\s+${TUNNEL_ID}
  ^\s*Mode\s+:\s+${MODE}
  ^\s*Destination-ip-addr : ${DEST_IP}
  ^\s*Source-ip-addr : ${SOURCE_IP}
- ^ -> Record
+ ^\s*Label : ${LABEL}
+ ^\s*Traffic Class : ${TRAFFIC_CLASS}
+ ^\s*Time to Live : ${TTL}
+ ^\s*Mirror : ${Mirror}
  ^\s*$$
  ^. -> Error

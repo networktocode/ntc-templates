@@ -1,23 +1,27 @@
-Value tto_name ([\-\w]+)
-Value src_ip ([\.\d]+)
-Value dst_ip ([\.\d]+)
-Value src_mac ([0-9a-fA-F\:]+)
-Value dst_mac ([0-9a-fA-F\:]+)
-Value vlan (\d+|none)
-Value pcp (\d+|none)
-Value tunnel_type (ERSPAN|GRE|none)
-Value tunnel_id (\d+|none)
+Value Filldown ENCAP_COUNT (\d+)
+Value Key,Required NAME ([\-\w]+)
+Value DESCRIPTION (\S+)
+Value SOURCE_IPV4_ADDR ([\.\d]+)
+Value DST_IPV4_ADDR ([\.\d]+)
+Value SOURCE_MAC_ADDR ([0-9a-fA-F\:]+)
+Value DST_MAC_ADDR ([0-9a-fA-F\:]+)
+Value VLAN_ID (\d+|none)
+Value VLAN_PCP (\d+|none)
+Value TUNNEL_TYPE (\S+)
+Value TUNNEL_ID (\S+)
 
 Start
-  ^\s*Name\s*:\s*${tto_name}
-  ^\s*Source-Ipv4-Addr\s*:\s*${src_ip}
-  ^\s*Destination-Ipv4-Addr\s*:\s*${dst_ip}
-  ^\s*Source-Mac-Addr\s*:\s*${src_mac}
-  ^\s*Destination-Mac-Addr\s*:\s*${dst_mac}
-  ^\s*Vlan-Id\s*:\s*${vlan}
-  ^\s*Vlan-Pcp\s*:\s*${pcp}
-  ^\s*Encap-Type\s*:\s*${tunnel_type}
-  ^\s*Encap-Id\s*:\s*${tunnel_id} -> Record
-
+ ^Number of tunnel-encaps: ${ENCAP_COUNT}
+ ^\s*Name : ${NAME}
+ ^\s*Description : ${DESCRIPTION}
+ ^\s*Source-Ipv4-Addr : ${SOURCE_IPV4_ADDR}
+ ^\s*Destination-Ipv4-Addr : ${DST_IPV4_ADDR}
+ ^\s*Source-Mac-Addr : ${SOURCE_MAC_ADDR}
+ ^\s*Destination-Mac-Addr : ${DST_MAC_ADDR}
+ ^\s*Vlan-Id : ${VLAN_ID}
+ ^\s*Vlan-Pcp : ${VLAN_PCP}
+ ^\s*Encap-Type : ${TUNNEL_TYPE}
+ ^\s*Encap-Id : ${TUNNEL_ID} -> Record
  ^\s*$$
  ^. -> Error
+

@@ -2,6 +2,7 @@ Value Filldown ROLLBACK_FW_VERSION ([\S]+)
 Value Filldown CURRENT_FW_VERSION ([\S]+)
 Value Filldown BMC_FW_VERSION ([\S]+)
 Value Filldown CURRENT_FW_COMMITTED ([\S]+)
+Value Filldown ROLLBACK_FW_VERSION_AFTER_COMMIT (\S+)
 Value Filldown KERNEL ([\S]+)
 Value Filldown SWITCH_CPLD_VERSION ([\S\s]+)
 Value Filldown FAN_CPLD_VERSION ([\S\s]+)
@@ -23,6 +24,7 @@ Start
  ^\s*Rollback Firmware Version:\s+${ROLLBACK_FW_VERSION}
  ^\s*BMC Firmware Version:\s+${BMC_FW_VERSION}
  ^Is Current Firmware Committed:\s+${CURRENT_FW_COMMITTED}
+ ^Rollback Version after Commit:\s+${ROLLBACK_FW_VERSION_AFTER_COMMIT}
  ^\s*Kernel:\s+${KERNEL}
  ^Switch Board CPLD Version:\s+${SWITCH_CPLD_VERSION}
  ^Fan Board CPLD Version:\s+${FAN_CPLD_VERSION}

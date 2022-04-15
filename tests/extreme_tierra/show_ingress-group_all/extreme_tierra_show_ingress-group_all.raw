@@ -59,17 +59,3 @@ Number of ingress-groups: 7
            Description : -                     
             Interfaces :  ethernet 8/5
 
-s1_pb1# show ingress-g ig_mpls
-
-    Name : ig_mpls         
-             Route-Map : map_mpls              
-           Description : -                     
-            Interfaces :  ethernet 7/1  ethernet 7/2  ethernet 8/1  ethernet 8/2  ethernet 7/15  ethernet 8/15  port-channel 11
-
-   Outer Tunnel Config : 
-          Traffic-Type : MPLS                  
-     Header1 (Bottom of Stack) : 
-                 Label : any                   
-         Traffic Class : any                   
-          Time to Live : any                   
-                Mirror : none   

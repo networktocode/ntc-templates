@@ -1,5 +1,47 @@
-Value 
+Value INTERFACE (\S+\s\S+)
+Value INTERFACE_STATE (\S+)
+Value CHANNEL_GRP_ID (\S+)
+Value PORT_CHANNEL (\S+)
+Value PDU_TX (\S+)
+Value PDU_RX (\S+)
+Value LACP_RX_ERROR (\S+)
+Value LACP_TX_ERROR (\S+)
+Value LACP_UNKWN_ERROR (\S+)
+Value LACP_ERRORS (\S+)
+Value LOCAL_PORT (\S+\s\S+)
+Value MAC_ADDR (\S+)
+Value SYSTEM_ID (\S+)
+Value PORT_ID ([\s\S]+)
+Value OPERATIONAL_KEY (\S+)
+Value LACP_ACTIVITY (\S+)
+Value LACP_TIMEOUT ([\s\S]+)
+Value SYNCHRONIZATION (\S+)
+Value COLLECTING (\S+)
+Value DISTROBUTING (\S+)
+Value PARTNER_ID (\S+)
+Value PARTNER_KEY ([\S\s]+)
+
 
 Start
+ ^\s*interface ${INTERFACE} is ${INTERFACE_STATE}
+ ^\s*Channel group is ${CHANNEL_GRP_ID} port channel is ${PORT_CHANNEL}
+ ^\s*PDUs sent: ${PDU_TX}
+ ^\s*PDUs rcvd: ${PDU_RX}
+ ^\s*LACP Rx errors: ${LACP_RX_ERROR}
+ ^\s*LACP Tx errors: ${LACP_TX_ERROR}
+ ^\s*LACP unknown errors: ${LACP_UNKWN_ERROR}
+ ^\s*LACP errors: ${LACP_ERRORS}
+ ^\s*Local Port: ${LOCAL_PORT}\s+MAC Address = ${MAC_ADDR}
+ ^\s*System Identifier = ${SYSTEM_ID}
+ ^\s*Port Identifier = ${PORT_ID}
+ ^\s*Operational key = ${OPERATIONAL_KEY}
+ ^\s*LACP_Activity = ${LACP_ACTIVITY}
+ ^\s*LACP_Timeout = ${LACP_TIMEOUT}
+ ^\s*Synchronization = ${SYNCHRONIZATION}
+ ^\s*Collecting = ${COLLECTING}
+ ^\s*Distributing = ${DISTROBUTING}
+ ^\s*Partner information
+ ^\s*Partner\-id = ${PARTNER_ID}
+ ^\s*Partner\-key = ${PARTNER_KEY} -> Record
  ^\s*$$
  ^. -> Error

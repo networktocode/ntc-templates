@@ -1,103 +1,106 @@
-Value INTERFACE ([\d+\/:]+)
-Value ADMIN_STATUS ([a-zA-Z-]+)
-Value OPERATIONAL_STATUS ([a-zA-Z-]+)
+Value INTERFACE (\S+\s\S+)
+Value ADMIN_STATUS (\S+)
+Value OPERATIONAL_STATUS (\S+)
 Value INTERFACE_INDEX (\d+)
+Value INTERFACE_INDEX_HEX (0x[a-fA-f\d]+)
 Value MTU (\d+)
-Value HW_MAC_ADDRESS ([\d+[a-z+A-Z-\d\/:]+)
-Value SPEED (\d+[a-zA-Z-])
+Value HARDWARE_TYPE (\S+)
+Value MAC_ADDR (\S+)
+Value CURRENT_SPEED (\d+[a-zA-Z-])
 Value FEC_MODE ([a-zA-Z-]+\s*)
+Value LFS_ADMIN_STATE (\S+)
+Value LFS_STATUS ([\S\s]+)
 Value CARRIER_TRANSITION (\d+)
-Value TOTAL_PKTS_IN (\d+)
-Value BROADCAST_PKTS_IN (\d+)
-Value DISCARD_PKTS_IN (\d+)
-Value ERRORS_PKTS_IN (\d+)
-Value FCS_ERRORS_IN (\d+)
-Value MCAST_PKTS_IN (\d+)
-Value OCTETS_IN (\d+)
-Value UCAST_PKTS_IN (\d+)
-Value RUNTS_IN (\d+)
-Value CRC_ERRORS_IN (\d+)
-Value BYTE_64_PKTS (\d+)
-Value BYTE_65_127_PKTS (\d+)
-Value BYTE_128_255_PKTS (\d+)
-Value BYTE_256_511_PKTS (\d+)
-Value BYTE_512_1023_PKTS (\d+)
-Value BYTE_1024_1518_PKTS (\d+)
-Value JUMBO_PKTS (\d+)
-Value TOTAL_PKTS_OUT (\d+)
-Value BROADCAST_PKTS_OUT (\d+)
-Value DISCARD_PKTS_OUT (\d+)
-Value ERRORS_PKTS_OUT (\d+)
-Value MCAST_PKTS_OUT (\d+)
-Value OCTETS_OUT (\d+)
-Value UCAST_PKTS_OUT (\d+)
-Value RATE_IN_MBPS ([\d+\.\/]+)
-Value RATE_IN_PPS ([\d+\.\/]+)
-Value LINE_RATE_IN ([\d\.]+)
-Value RATE_OUT_MBPS ([\d+\.\/]+)
-Value RATE_OUT_PPS ([\d+\.\/]+)
-Value LINE_RATE_OUT ([\d\.]+)
+Value LAST_CLEAR (\S+)
+Value RX_BROADCAST_PKTS (\d+)
+Value RX_DISCARD_PKTS (\d+)
+Value RX_ERRORS_PKTS (\d+)
+Value RX_FCS_ERRORS (\d+)
+Value RX_MCAST_PKTS (\d+)
+Value RX_OCTETS (\d+)
+Value RX_UCAST_PKTS (\d+)
+Value RX_RUNTS (\d+)
+Value RX_CRC_ERRORS (\d+)
+Value RX_BYTE_64_PKTS (\d+)
+Value RX_BYTE_65_127_PKTS (\d+)
+Value RX_BYTE_128_255_PKTS (\d+)
+Value RX_BYTE_256_511_PKTS (\d+)
+Value RX_BYTE_512_1023_PKTS (\d+)
+Value RX_BYTE_1024_1518_PKTS (\d+)
+Value RX_JUMBO_PKTS (\d+)
+Value TX_TOTAL_PKTS (\d+)
+Value TX_BROADCAST_PKTS (\d+)
+Value TX_DISCARD_PKTS (\d+)
+Value TX_ERRORS_PKTS (\d+)
+Value TX_MCAST_PKTS (\d+)
+Value TX_OCTETS (\d+)
+Value TX_UCAST_PKTS (\d+)
+Value RX_MBITS_SEC (\S+)
+Value RX_PKTS_SEC (\S+)
+Value RX_PERCENT (\S+)
+Value TX_MBITS_SEC (\S+)
+Value TX_PKTS_SEC (\S+)
+Value TX_PERCENT (\S+)
 
 Start
-  ^\s*ethernet\s+${INTERFACE}\s+Admin\s+state\s+${ADMIN_STATUS}\s+Operational\s+state\s+${OPERATIONAL_STATUS}
-  ^\s*Interface\s+index\s+is\s+${INTERFACE_INDEX}
+  ^\s*${INTERFACE}\s+Admin\s+state\s+${ADMIN_STATUS}\s+Operational\s+state\s+${OPERATIONAL_STATUS}
+  ^\s*Interface\s+index\s+is\s+${INTERFACE_INDEX}\s+\(${INTERFACE_INDEX_HEX}\)
   ^\s*MTU\s+${MTU}\s+bytes
-  ^\s*Hardware\s+is\s+INTERFACE\s+mac\s+address\s+${HW_MAC_ADDRESS}
-  ^\s*Current\s+SPEED\s+${SPEED}
+  ^\s*Hardware is ${HARDWARE_TYPE}\s+mac address ${MAC_ADDR}
+  ^\s*Current Speed\s+${CURRENT_SPEED}
   ^\s*FEC\s+Mode:\s+${FEC_MODE}
-  ^\s*Statistics -> Statistics
+  ^\s*Link Fault Signaling:\s+${LFS_ADMIN_STATE}
+  ^\s*Link Fault Status:\s+${LFS_STATUS}
+  ^Statistics -> Statistics
+  ^Input: -> Input
+  ^Input Distribution: -> Distribution
+  ^Out: -> Out
+  ^Rate Info: -> Rate
   ^\s*$$
   ^. -> Error
 
 Statistics
   ^\s*Carrier\s+Transitions:\s+${CARRIER_TRANSITION}
-  ^\s*LastClear:\s+\S+
-  ^\s*Input: -> Input
+  ^\s*LastClear:\s+${LAST_CLEAR} -> Start
   ^\s*$$
   ^. -> Error
 
 Input
-  ^\s*Total pkts:\s+${TOTAL_PKTS_IN}
-  ^\s*Broadcast pkts:\s+${BROADCAST_PKTS_IN}
-  ^\s*Discard pkts:\s+${DISCARD_PKTS_IN}
-  ^\s*Errors pkts:\s+${ERRORS_PKTS_IN}
-  ^\s*FCS Errors:\s+${FCS_ERRORS_IN}
-  ^\s*MCast pkts:\s+${MCAST_PKTS_IN}
-  ^\s*Octets:\s+${OCTETS_IN}
-  ^\s*UCast pkts:\s+${UCAST_PKTS_IN}
-  ^\s*Runt pkts:\s+${RUNTS_IN}
-  ^\s*CRC Errors:\s+${CRC_ERRORS_IN}
-  ^\s*Input Distribution: -> Input_Distribution
+  ^\s*Total\s+\S+:\s+${RX_BROADCAST_PKTS}
+  ^\s*Broadcast\s+\S+:\s+${RX_BROADCAST_PKTS}
+  ^\s*Discard\s+\S+:\s+${RX_DISCARD_PKTS}
+  ^\s*Errors\s+\S+:\s+${RX_ERRORS_PKTS}
+  ^\s*FCS Errors:\s+${RX_FCS_ERRORS}
+  ^\s*MCast\s+\S+:\s+${RX_MCAST_PKTS}
+  ^\s*Octets:\s+${RX_OCTETS}
+  ^\s*UCast\s+\S+:\s+${RX_UCAST_PKTS}
+  ^\s*Runt\s+\S+:\s+${RX_RUNTS}
+  ^\s*CRC Errors:\s+${RX_CRC_ERRORS} -> Start
   ^\s*$$
   ^. -> Error
 
-Input_Distribution
-  ^\s*64 byte pkts:\s+${BYTE_64_PKTS}
-  ^\s*65-127 byte pkts:\s+${BYTE_65_127_PKTS}
-  ^\s*128-255 byte pkts:\s+${BYTE_128_255_PKTS}
-  ^\s*256-511 byte pkts:\s+${BYTE_256_511_PKTS}
-  ^\s*512-1023 byte pkts:\s+${BYTE_512_1023_PKTS}
-  ^\s*1024-1518 byte pkts:\s+${BYTE_1024_1518_PKTS}
-  ^\s*Jumbo pkts:\s+${JUMBO_PKTS}
-  ^\s*Out: -> Out
-  ^\s*$$
-  ^. -> Error
+Distribution
+  ^\s*64 byte pkts: ${RX_BYTE_64_PKTS}
+  ^\s*65\-127 byte pkts: ${RX_BYTE_65_127_PKTS}
+  ^\s*128\-255 byte pkts: ${RX_BYTE_128_255_PKTS}
+  ^\s*256\-511 byte pkts: ${RX_BYTE_256_511_PKTS}
+  ^\s*512\-1023 byte pkts: ${RX_BYTE_512_1023_PKTS}
+  ^\s*1024\-1518 byte pkts: ${RX_BYTE_1024_1518_PKTS}
+  ^\s*Jumbo pkts: ${RX_JUMBO_PKTS} -> Start
 
 Out
-  ^\s*Total pkts:\s+${TOTAL_PKTS_OUT}
-  ^\s*Broadcast pkts:\s+${BROADCAST_PKTS_OUT}
-  ^\s*Discard pkts:\s+${DISCARD_PKTS_OUT}
-  ^\s*Errors pkts:\s+${ERRORS_PKTS_OUT}
-  ^\s*MCast pkts:\s+${MCAST_PKTS_OUT}
-  ^\s*Octets:\s+${OCTETS_OUT}
-  ^\s*UCast pkts:\s+${UCAST_PKTS_OUT}
-  ^\s*Rate Info: -> Rate_Info
+  ^\s*Total\s+\S+:\s+${TX_BROADCAST_PKTS}
+  ^\s*Broadcast\s+\S+:\s+${TX_BROADCAST_PKTS}
+  ^\s*Discard\s+\S+:\s+${TX_DISCARD_PKTS}
+  ^\s*Errors\s+\S+:\s+${TX_ERRORS_PKTS}
+  ^\s*MCast\s+\S+:\s+${TX_MCAST_PKTS}
+  ^\s*Octets:\s+${TX_OCTETS}
+  ^\s*UCast\s+\S+:\s+${TX_UCAST_PKTS} -> Start
   ^\s*$$
   ^. -> Error
 
-
-Rate_Info
- ^\s*Input:\s+${RATE_IN_MBPS}[\s\w/]+,\s+${RATE_IN_PPS}[\s\w/]+\s${LINE_RATE_IN}[%\s\w\-]+
- ^\s*Output:\s+${RATE_OUT_MBPS}[\s\w/]+,\s+${RATE_OUT_PPS}[\s\w/]+\s${LINE_RATE_OUT}[%\s\w\-]+ -> Record
- ^\s*$$
- ^. -> Error
+Rate
+  ^\s+Input: ${RX_MBITS_SEC} Mbits/sec, ${RX_PKTS_SEC} pkts/sec ${RX_PERCENT}\% of line-rate
+  ^\s+Output: ${TX_MBITS_SEC} Mbits/sec, ${TX_PKTS_SEC} pkts/sec ${TX_PERCENT}\% of line-rate -> Record Start
+  ^\s*$$
+  ^. -> Error

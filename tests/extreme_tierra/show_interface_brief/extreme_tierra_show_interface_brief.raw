@@ -1,4 +1,4 @@
-Number of interfaces 129
+Number of interfaces 132
 Port         Mtu     Admin-State   Oper-State  Speed  Ifindex         Description                     
 -----------------------------------------------------------------------------------------------------------
 Eth 1/1      9216    UP            UP          100G   0x1000019e    Ethernet 1/1
@@ -130,3 +130,6 @@ Eth 8/14     9216    UP            DOWN        100G   0x10000024    Ethernet 8/1
 Eth 8/15     9216    UP            DOWN        100G   0x10000022    Ethernet 8/15
 Eth 8/16     9216    UP            DOWN        100G   0x10000020    Ethernet 8/16
 Mgmt 0       1514    UP            UP          1G     0x60000010    Management
+Po1          9216    DOWN          DOWN               0x40000200    Port-Channel Interface
+Po11         9216    UP            DOWN               0x4000020a    Port-Channel Interface
+Po255        9216    UP            DOWN               0x400002fe    test!23

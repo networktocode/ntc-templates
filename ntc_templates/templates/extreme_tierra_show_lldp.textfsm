@@ -1,5 +1,28 @@
-Value 
+Value Filldown GLOBAL_STATUS (\S+)
+Value Filldown GLOBAL_ADVERTISEMENT_TIME (\d+)
+Value Filldown GLOBAL_HOLD_TIME (\S+)
+Value Filldown GLOBAL_TX (\S+)
+Value Filldown GLOBAL_RX (\S+)
+Value Key,Required INTERFACE (\S+\s\S+)
+Value INTERFACE_STATE (\S+)
+Value INTERFACE_RX (\S+)
+Value INTERFACE_TX (\S+)
+
+
+
+
 
 Start
+ ^LLDP Config Info
+ ^Global LLDP Information:
+ ^Status: ${GLOBAL_STATUS}
+ ^LLDP advertisements are sent every ${GLOBAL_ADVERTISEMENT_TIME} seconds
+ ^LLDP hold time is ${GLOBAL_HOLD_TIME} seconds
+ ^LLDP transmit: ${GLOBAL_TX}
+ ^LLDP receive: ${GLOBAL_RX}
+ ^Interface LLDP Information:
+ ^Intf\s+State\s+Rx\s+Tx   
+ ^[\-]+
+ ^\s*${INTERFACE}\s+${INTERFACE_STATE}\s+${INTERFACE_RX}\s+${INTERFACE_TX} -> Record
  ^\s*$$
  ^. -> Error

@@ -13,7 +13,7 @@ Statistics
  Carrier Transitions: 0
            LastClear: 0s
 Input:
-          Broadcast pkts: 0
+          Broadcast pkts: 11
             Discard pkts: 0
              Errors pkts: 0
               FCS Errors: 0
@@ -22,13 +22,12 @@ Input:
               UCast pkts: 0
        Unknown Protocols: 0
 Out:
-          Broadcast pkts: 0
+          Broadcast pkts: 12
             Discard pkts: 0
              Errors pkts: 0
               MCast pkts: 0
                   Octets: 0
               UCast pkts: 0
-
 
 port-channel 255 is down 
     MTU 9216 Bytes
@@ -44,7 +43,7 @@ Statistics
  Carrier Transitions: 0
            LastClear: 0s
 Input:
-          Broadcast pkts: 0
+          Broadcast pkts: 255
             Discard pkts: 0
              Errors pkts: 0
               FCS Errors: 0
@@ -53,9 +52,39 @@ Input:
               UCast pkts: 0
        Unknown Protocols: 0
 Out:
-          Broadcast pkts: 0
+          Broadcast pkts: 256
             Discard pkts: 0
              Errors pkts: 0
               MCast pkts: 0
                   Octets: 0
               UCast pkts: 0
+
+port-channel 1 is up 
+    MTU 9216 Bytes 
+    IfIndex 0x40000201 
+    Port mode is Full Duplex, 100 Gb/s 
+    LagType is Static 
+    MinLinks is 1 
+    Load balance method uses Src/Dst IP, Src/Dst L4 port and protocol 
+    Active Members in this channel: Eth 1/1 
+    Members in this channel: Eth 1/1 
+ 
+Statistics 
+ Carrier Transitions: 3 
+           LastClear: 37m48.716951005s 
+Input: 
+          Broadcast pkts: 1 
+            Discard pkts: 0 
+             Errors pkts: 0 
+              FCS Errors: 0 
+              MCast pkts: 0 
+                  Octets: 0 
+              UCast pkts: 0 
+       Unknown Protocols: 0 
+Out: 
+          Broadcast pkts: 2 
+            Discard pkts: 0 
+             Errors pkts: 0 
+              MCast pkts: 0 
+                  Octets: 0 
+              UCast pkts: 0 
