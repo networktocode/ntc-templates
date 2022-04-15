@@ -1,71 +1,72 @@
-Value INTERFACE ([\d+\/:]+)
-Value STATUS ([a-zA-Z-]+)
+Value Key,Required INTERFACE (\S+\s\S+)
+Value STATUS (\S+)
 Value MTU (\d+)
-Value INTERFACE_INDEX ([\d+\a-zA-Z-]+)
-Value PORT_MODE ([a-zA-Z-]+\s+[a-zA-Z]+)
-Value SPEED (\d+\s+[a-zA-Z+\/+]+)
-Value LAG_TYPE ([a-zA-Z-]+\s*)
+Value INTERFACE_INDEX ([a-fA-Fx\-\d]+)
+Value PORT_MODE (\S+\s\S+)
+Value SPEED ([\S\s]+)
+Value LAG_TYPE ([\S\s]+)
 Value MINLINKS (\d+)
-Value LOAD_BALANCE_METHOD ([\s+a-zA-Z\/,\d+]+)
-Value ACTIVE_MEMBER ([\s+a-zA-Z\/,\d+:]+)
-Value MEMBERS ([\s+a-zA-Z\/,\d+:]+)
+Value LOAD_BALANCE_METHOD ([\S\s]+)
+Value ACTIVE_MEMBER ([\s\S]+)
+Value MEMBERS ([\s\S]+)
 Value CARRIER_TRANSITION (\d+)
-Value BROADCAST_PKTS_IN (\d+)
-Value DISCARD_PKTS_IN (\d+)
-Value ERRORS_PKTS_IN (\d+)
-Value FCS_ERRORS_IN (\d+)
-Value MCAST_PKTS_IN (\d+)
-Value OCTETS_IN (\d+)
-Value UCAST_PKTS_IN (\d+)
-Value UNKNOWN_PROTOCOLS (\d+)
-Value BROADCAST_PKTS_OUT (\d+)
-Value DISCARD_PKTS_OUT (\d+)
-Value ERRORS_PKTS_OUT (\d+)
-Value MCAST_PKTS_OUT (\d+)
-Value OCTETS_OUT (\d+)
-Value UCAST_PKTS_OUT (\d+)
+Value LAST_CLEAR (\S+)
+Value RX_BROADCAST_PKTS (\d+)
+Value RX_DISCARD_PKTS (\d+)
+Value RX_ERRORS_PKTS (\d+)
+Value RX_FCS_ERRORS (\d+)
+Value RX_MCAST_PKTS (\d+)
+Value RX_OCTETS (\d+)
+Value RX_UCAST_PKTS (\d+)
+Value RX_UNKNOWN_PROTOCOLS (\d+)
+Value TX_BROADCAST_PKTS (\d+)
+Value TX_DISCARD_PKTS (\d+)
+Value TX_ERRORS_PKTS (\d+)
+Value TX_MCAST_PKTS (\d+)
+Value TX_OCTETS (\d+)
+Value TX_UCAST_PKTS (\d+)
 
 Start
-  ^\s*port-channel\s+${INTERFACE}\s+is\s+${STATUS}
+  ^${INTERFACE}\s+is\s+${STATUS}
   ^\s*MTU\s+${MTU}\s+Bytes
   ^\s*IfIndex\s+${INTERFACE_INDEX}
   ^\s*Port\s+mode\s+is\s+${PORT_MODE},\s+${SPEED}
   ^\s*LagType\s+is\s+${LAG_TYPE}
-  ^\s*MINLINKS\s+is\s+${MINLINKS}
+  ^\s*MinLinks\s+is\s+${MINLINKS}
   ^\s*Load\s+balance\s+method\s+uses\s+${LOAD_BALANCE_METHOD}
   ^\s*Active\s+Members\s+in\s+this\s+channel:\s+${ACTIVE_MEMBER}
   ^\s*Members\s+in\s+this\s+channel:\s+${MEMBERS}
   ^\s*Statistics -> Statistics
+  ^\s*Input: -> Input
+  ^\s*Out: -> Out
   ^\s*$$
   ^. -> Error
 
 
 Statistics
   ^\s*Carrier\s+Transitions:\s+${CARRIER_TRANSITION}
-  ^\s*LastClear:\s+\S+
-  ^\s*Input: -> Input
+  ^\s*LastClear:\s+${LAST_CLEAR} -> Start
   ^\s*$$
   ^. -> Error
 
 Input
-  ^\s*Broadcast pkts:\s+${BROADCAST_PKTS_IN}
-  ^\s*Discard pkts:\s+${DISCARD_PKTS_IN}
-  ^\s*Errors pkts:\s+${ERRORS_PKTS_IN}
-  ^\s*FCS Errors:\s+${FCS_ERRORS_IN}
-  ^\s*MCast pkts:\s+${MCAST_PKTS_IN}
-  ^\s*Octets:\s+${OCTETS_IN}
-  ^\s*UCast pkts:\s+${UCAST_PKTS_IN}
-  ^\s*Unknown\s+Protocols:\s+${UNKNOWN_PROTOCOLS}
-  ^\s*Out: -> Out
+  ^\s*Broadcast\s+\S+:\s+${RX_BROADCAST_PKTS}
+  ^\s*Discard\s+\S+:\s+${RX_DISCARD_PKTS}
+  ^\s*Errors\s+\S+:\s+${RX_ERRORS_PKTS}
+  ^\s*FCS Errors:\s+${RX_FCS_ERRORS}
+  ^\s*MCast\s+\S+:\s+${RX_MCAST_PKTS}
+  ^\s*Octets:\s+${RX_OCTETS}
+  ^\s*UCast\s+\S+:\s+${RX_UCAST_PKTS}
+  ^\s*Unknown\s+Protocols:\s+${RX_UNKNOWN_PROTOCOLS} -> Start
   ^\s*$$
   ^. -> Error
 
 Out
-  ^\s*Broadcast pkts:\s+${BROADCAST_PKTS_OUT}
-  ^\s*Discard pkts:\s+${DISCARD_PKTS_OUT}
-  ^\s*Errors pkts:\s+${ERRORS_PKTS_OUT}
-  ^\s*MCast pkts:\s+${MCAST_PKTS_OUT}
-  ^\s*Octets:\s+${OCTETS_OUT}
-  ^\s*UCast pkts:\s+${UCAST_PKTS_OUT} -> Record
+  ^\s*Broadcast\s+\S+:\s+${TX_BROADCAST_PKTS}
+  ^\s*Discard\s+\S+:\s+${TX_DISCARD_PKTS}
+  ^\s*Errors\s+\S+:\s+${TX_ERRORS_PKTS}
+  ^\s*MCast\s+\S+:\s+${TX_MCAST_PKTS}
+  ^\s*Octets:\s+${TX_OCTETS}
+  ^\s*UCast\s+\S+:\s+${TX_UCAST_PKTS} -> Record Start
   ^\s*$$
   ^. -> Error

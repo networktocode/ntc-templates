@@ -1,5 +1,13 @@
-Value 
+Value Key,Required INTERFACE (\S+\s\S+)
+Value FRAMEIN (\d+)
+Value FRAMEOUT (\d+)
+Value LAST_CLEAR (\S+)
 
 Start
+ ^LLDP Interface Statistics: ${INTERFACE}
+ ^NOTE: Active ports except disabled or Link Down ports will be shown in all option.
+ ^\s+FrameIn: ${FRAMEIN}
+ ^\s+FrameOut: ${FRAMEOUT}
+ ^\s+LastClear: ${LAST_CLEAR} -> Record
  ^\s*$$
  ^. -> Error

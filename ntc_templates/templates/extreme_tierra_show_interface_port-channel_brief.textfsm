@@ -1,19 +1,16 @@
 Value Filldown PORT_CHANNEL_COUNT (\d+)
-Value PORTCHANNEL (\d+)
+Value Key,Required PORT_CHANNEL (\d+)
 Value MTU (\d+)
 Value ADMIN_STATE (UP|DOWN)
 Value OPER_STATE (UP|DOWN)
+Value SPEED (\S+)
 Value IFINDEX (0x\S+)
-Value DESCRIPTION (.*)
+Value DESCRIPTION ([\S\s]+)
 
 Start
  ^\s*Number\s+of\s+interfaces\s+${PORT_CHANNEL_COUNT}
- ^\s*Name\s+MTU\s+Admin-State\s+Oper-State\s+IFINDEX\s+DESCRIPTION\s*
- ^----- -> Interface
- ^\s*$$
- ^. -> Error
-
-Interface
- ^\s*Po${PORTCHANNEL}\s+${MTU}\s+${ADMIN_STATE}\s+${OPER_STATE}\s+${IFINDEX}\s+${DESCRIPTION}\s* -> Record
+ ^Port\s+Mtu\s+Admin\-State\s+Oper\-State\s+Speed\s+Ifindex\s+Description   
+ ^[\-]+
+ ^\s*Po${PORT_CHANNEL}\s+${MTU}\s+${ADMIN_STATE}\s+${OPER_STATE}(\s+${SPEED}|\s+)\s+${IFINDEX}\s+${DESCRIPTION}\s* -> Record
  ^\s*$$
  ^. -> Error

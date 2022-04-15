@@ -1,5 +1,17 @@
-Value 
+Value EGRESS_NAME (\S+)
+Value DESCRIPTION ([\s\S]+)
+Value ENCAP (\S+)
+Value LISTENER_POLICY (\S+)
+Value PRECEDENCE (\d+)
+Value INTERFACE ([\s\S]+)
 
 Start
+ ^\s*Name\s+:\s+${EGRESS_NAME}
+ ^\s*Description\s+:\s+${DESCRIPTION}
+ ^\s*Encap\s+:\s+${ENCAP}
+ ^\s*Listener\s+Policy\s+:\s+${LISTENER_POLICY}
+ ^\s*Precedence\s+:\s+${PRECEDENCE}
+ ^\s*Interface\s+:\s+${INTERFACE}
+ ^$$ -> Record
  ^\s*$$
  ^. -> Error

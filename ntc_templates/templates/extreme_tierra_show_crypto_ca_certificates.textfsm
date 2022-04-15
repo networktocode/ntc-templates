@@ -1,5 +1,15 @@
-Value 
+Value FINGERPRINT_HASH_METHOD (\S+)
+Value FINGERPRINT (\S+)
+Value SUBJECT (\S+)
+Value ISSUER ([\S\s]+)
+Value NOT_BEFORE ([\S\s]+)
+Value NOT_AFTER ([\S\s]+)
 
 Start
+ ^${FINGERPRINT_HASH_METHOD} Fingerprint=${FINGERPRINT}
+ ^\s*Subject: ${SUBJECT}
+ ^\s*Issuer: ${ISSUER}
+ ^\s*Not Before: ${NOT_BEFORE}
+ ^\s*Not After : ${NOT_AFTER} -> Record
  ^\s*$$
  ^. -> Error

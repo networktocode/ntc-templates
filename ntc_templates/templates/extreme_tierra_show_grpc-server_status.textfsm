@@ -1,5 +1,8 @@
-Value 
+Value GRPC_SERVER_PORT (\d+)
+Value GNMI_VERSION (\S+)
 
 Start
+ ^grpc-server is running on port: ${GRPC_SERVER_PORT}
+ ^gNMI version: ${GNMI_VERSION} -> Record
  ^\s*$$
  ^. -> Error

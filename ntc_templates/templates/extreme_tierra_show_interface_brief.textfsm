@@ -1,18 +1,17 @@
 Value Filldown NUM_INTERFACES (\d+)
-Value Required ETHERNET (\d+\/\d+)
+Value Required INTERFACE (\S+\s\S+|\S+)
 Value MTU (\d+)
 #Value Enabled (true|false)
 Value ADMIN_STATE (UP|DOWN)
 Value OPER_STATE (UP|DOWN)
+Value SPEED (\S+)
+Value IFINDEX (\S+)
 Value DESCRIPTION (.*)
 
 Start
-  ^\s*Number\s+of\s+interfaces\s+${NUM_INTERFACES}
-  ^\s*Name\s+MTU\s+Admin-State\s+Oper-State\s+Ifindex\s+DESCRIPTION\s*
-  ^.*-----.* -> Interface
-
-Interface
-  ^\s*Eth\s+${ETHERNET}\s+${MTU}\s+${ADMIN_STATE}\s+${OPER_STATE}\s+0x\S+\s+${DESCRIPTION}\s* -> Record
-
+ ^\s*Number\s+of\s+interfaces\s+${NUM_INTERFACES}
+ ^Port         Mtu     Admin-State   Oper-State  Speed  Ifindex         Description                     
+ ^[\-]+
+ ^\s*${INTERFACE}\s+${MTU}\s+${ADMIN_STATE}\s+${OPER_STATE}(\s+${SPEED}|\s+)\s+${IFINDEX}\s+${DESCRIPTION}\s* -> Record
  ^\s*$$
  ^. -> Error

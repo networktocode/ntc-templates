@@ -1,5 +1,23 @@
-Value 
+Value Key,Required MODULE (\S+)
+Value MODEL (\S+)
+Value SYSTEM_NUMBER (\S+)
+Value PART_NUMBER (\S+)
+Value SERIAL_NUMBER (\S+)
+Value VERSION (\S+)
+Value MFG ([\S\s]+)
+Value MFG_DATE ([\S\s]+)
+Value EC_VERSION (\S+)
+Value LC_CPLD_VERSION (\S+)
 
 Start
- ^\s*$$
- ^. -> Error
+ ^\s*Modu -> Continue.Record
+ ^\s*Module\s+: ${MODULE}
+ ^\s*Model\s+: ${MODEL}
+ ^\s*SystemNo\s+: ${SYSTEM_NUMBER}
+ ^\s*PartNo\s+: ${PART_NUMBER}
+ ^\s*SerialNo\s+: ${SERIAL_NUMBER}
+ ^\s*Version\s+: ${VERSION}
+ ^\s*Manufacturer\s+: ${MFG}
+ ^\s*Mfg Date\s+: ${MFG_DATE}
+ ^\s*ECVersion\s+: ${EC_VERSION}
+ ^\s*LC CPLD Version\s+: ${LC_CPLD_VERSION}
