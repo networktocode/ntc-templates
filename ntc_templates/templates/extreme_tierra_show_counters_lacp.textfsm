@@ -1,24 +1,18 @@
-Value PORT ([\w\s\d/:]+)
-Value PACKETS_RX (\d+)
-Value PACKETS_TX (\d+)
-Value ERRORS_RX (\d+)
-Value ERRORS_TX (\d+)
-Value UNKNOWNERR (\d+)
-Value LACP_ERR (\d+)
+Value Filldown PORT_CHANNEL (\d+)
+Value Required INTERFACE (\S+\s\S+)
+Value RX_PACKET (\d+)
+Value TX_PACKET (\d+)
+Value TX_ERRORS (\d+)
+Value RX_ERRORS (\d+)
+Value UNKNOWN_ERROR (\d+)
+Value LACP_ERROR (\d+)
 
 
 
 Start
-Port                          in-pkts       out-pkts        TxErr         RxErr         unknownErr          LacpErr       
---------------------------------------------------------------------------------------------------------------------------
-Channel group: 11
-ethernet 7/8                  0               1               0             0             0                   0             
-ethernet 8/8   
- ^===== ->  TABLE
- ^\s*$$
- ^. -> Error
-
-TABLE
- ^${PORT}\s+${PACKETS_RX}\s+${PACKETS_TX}\s+${ERRORS_TX}\s+${ERRORS_RX}\s+${UNKNOWNERR}\s+${LACP_ERR} -> Record
+ ^Port\s+in\-pkts\s+out\-pkts\s+TxErr\s+RxErr\s+unknownErr\s+LacpErr       
+ ^[\-]+
+ ^\s*Channel group: ${PORT_CHANNEL}
+ ^\s*${INTERFACE}\s+${RX_PACKET}\s+${TX_PACKET}\s+${TX_ERRORS}\s+${RX_ERRORS}\s+${UNKNOWN_ERROR}\s+${LACP_ERROR} -> Record
  ^\s*$$
  ^. -> Error

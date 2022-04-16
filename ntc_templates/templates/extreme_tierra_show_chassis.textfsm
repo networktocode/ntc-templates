@@ -1,18 +1,18 @@
-Value PROD_NAME (.+)
+Value PROD_NAME ([\s\S]+\S)
 Value PLAT_NAME (\S+)
-Value HW_REV (\S+)
-Value MFG_DATE (.+)
-Value MFG (.+)
+Value HW_REV ([\s\S]+\S)
+Value MFG_DATE ([\s\S]+\S)
+Value MFG ([\s\S]+\S)
 Value PART_NO (\S+)
 Value SERIAL_NO (\S+)
-Value VENDOR (.+)
-Value SYS_STATUS (Online|Offline)
-Value REBOOT_REASON (.+)
-Value SYS_DESC (.+)
-Value SYS_CONTACT (\S+)
-Value SYS_LOCATION (\S+)
+Value VENDOR ([\s\S]+\S)
+Value SYS_STATUS (\S+)
+Value REBOOT_REASON ([\s\S]+\S)
+Value SYS_DESC ([\s\S]+\S)
+Value SYS_CONTACT ([\s\S]+\S)
+Value SYS_LOCATION ([\s\S]+\S)
 Value SYS_UPTIME (\S+)
-Value BASE_MAC ([\w:]+)
+Value BASE_MAC (\S+)
 Value MAC_RANGE (\d+)
 Value LC_SLOTS (\d+)
 Value FAN_COUNT (\d+)
@@ -32,8 +32,8 @@ Start
  ^\s+System Status:\s+${SYS_STATUS}
  ^\s+Reboot Reason:\s+${REBOOT_REASON}
  ^\s+System Description:\s+${SYS_DESC}
- ^\s+System Contact:\s+${SYS_CONTACT}
- ^\s+System Location:\s+${SYS_LOCATION}
+ ^\s+System Contact:(\s*|\s+${SYS_CONTACT})
+ ^\s+System Location:(\s*|\s+${SYS_CONTACT})
  ^\s+System Uptime:\s+${SYS_UPTIME}
  ^\s+Base MAC Address:\s+${BASE_MAC}
  ^\s+Mac Range:\s+${MAC_RANGE}

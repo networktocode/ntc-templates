@@ -1,16 +1,18 @@
-Value ENCAP_COUNT {\d+}
-Value TUNNEL_NAME ([\S]+)
+Value Filldown ENCAP_COUNT (\d+)
+Value Key NAME (\S+)
 Value TUNNEL_TYPE (\S+)
-Value EGRESS_PORT ([\S\s]+)
-Value RX_FRAMES (\d+)
-Value RX_BYTES (\d+)
+Value EGRESS_PORT (\S+\s\S+)
+Value TX_FRAMES (\d+)
+Value TX_BYTES (\d+)
+Value NO_STATS (Error: encap stats not found)
 
 Start
- ^Number of tunnel-encaps:\s+${ENCAP_COUNT}
- ^\s+Name\s+:\s+${TUNNEL_NAME}
- ^Tunnel Encapsulation Statistics\(${TUNNEL_TYPE}) 
- ^\s+Egress port\s+:\s+${EGRESS_PORT}
- ^\s+RX Frames\s+:\s+${RX_FRAMES} 
- ^\s+RX Bytes\s+:\s+${RX_BYTES} 
+ ^Number of tunnel-encaps: ${ENCAP_COUNT}
+ ^\s+Name : ${NAME} 
+ ^Tunnel Encapsulation Statistics\(${TUNNEL_TYPE}\)
+ ^\s+Egress port : ${EGRESS_PORT}
+ ^\s+TX Frames : ${TX_FRAMES}         
+ ^\s+TX Bytes : ${TX_BYTES} -> Record
+ ^${NO_STATS} -> Record
  ^\s*$$
  ^. -> Error
