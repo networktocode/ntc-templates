@@ -1,0 +1,6 @@
+Value HOSTNAME (\S+)
+
+Start
+ ^system hostname ${HOSTNAME} -> Record
+ ^\s*$$
+ ^. -> Error

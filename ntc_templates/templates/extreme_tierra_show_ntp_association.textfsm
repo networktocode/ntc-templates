@@ -1,0 +1,21 @@
+Value TALLY ([\*#\+\-\~x])
+Value REMOTE (\S+)
+Value REFID (\S+)
+Value STRATUM (\S+)
+Value TYPE (\S+)
+Value WHEN (\S+)
+Value POLL (\S+)
+Value REACH (\S+)
+Value DELAY (\S+)
+Value OFFSET (\S+)
+Value JITTER (\S+)
+
+Start
+ ^\s+remote\s+refid\s+st\s+t\s+when\s+poll\s+reach\s+delay\s+offset\s+jitter
+ ^[=]+
+ ^\* synced, # selected, \+ candidate, \- outlayer, x falseticker, ~ configured
+ ^(${TALLY}|\s)${REMOTE}\s+${REFID}\s+${STRATUM}\s+${TYPE}\s+${WHEN}\s+${POLL}\s+${REACH}\s+${DELAY}\s+${OFFSET}\s+${JITTER} -> Record
+ ^(${TALLY}|\s)${REMOTE} 
+ ^\s+${REFID}\s+${STRATUM}\s+${TYPE}\s+${WHEN}\s+${POLL}\s+${REACH}\s+${DELAY}\s+${OFFSET}\s+${JITTER} -> Record
+ ^\s*$$
+ ^. -> Error

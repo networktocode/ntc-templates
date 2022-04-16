@@ -1,0 +1,28 @@
+ipv6 access-list v6_gre_0 
+  seq 10 permit ipv6 262d:6737:4d76:4476:: ffff:ffff:ffff:ffff:: 3c11:4ed2:c7d1:dae8:: ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff ( 1320325923 Packets, 338765916622 Bytes, 1577 Packets/sec, 3233256 Bits/sec )
+  seq 20 permit ipv6 262d:6737:4d76:4477:: ffff:ffff:ffff:ffff:: 3c11:4ed2:c7d1:dae8::1 ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff ( 1320322468 Packets, 338766798129 Bytes, 1568 Packets/sec, 3234608 Bits/sec )
+  seq 30 permit ipv6 262d:6737:4d76:4478:: ffff:ffff:ffff:ffff:: 3c11:4ed2:c7d1:dae8::2 ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff ( 1320323858 Packets, 338765265219 Bytes, 1857 Packets/sec, 3813528 Bits/sec )
+  seq 40 permit ipv6 262d:6737:4d76:4479:: ffff:ffff:ffff:ffff:: 3c11:4ed2:c7d1:dae8::3 ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff ( 1320321640 Packets, 338767246730 Bytes, 1567 Packets/sec, 3207240 Bits/sec )
+  seq 50 permit ipv6 262d:6737:4d76:447a:: ffff:ffff:ffff:ffff:: 3c11:4ed2:c7d1:dae8::4 ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff ( 1320323660 Packets, 338765504433 Bytes, 1566 Packets/sec, 3217504 Bits/sec )
+  seq 60 permit ipv6 262d:6737:4d76:447b:: ffff:ffff:ffff:ffff:: 3c11:4ed2:c7d1:dae8::5 ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff ( 1320322909 Packets, 338765444495 Bytes, 1562 Packets/sec, 3220232 Bits/sec )
+  seq 70 permit ipv6 262d:6737:4d76:447c:: ffff:ffff:ffff:ffff:: 3c11:4ed2:c7d1:dae8::6 ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff ( 1320326688 Packets, 338766742558 Bytes, 1564 Packets/sec, 3208840 Bits/sec )
+  seq 80 permit ipv6 262d:6737:4d76:447d:: ffff:ffff:ffff:ffff:: 3c11:4ed2:c7d1:dae8::7 ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff ( 1320325360 Packets, 338762929873 Bytes, 1849 Packets/sec, 3799784 Bits/sec )
+  seq 90 permit ipv6 262d:6737:4d76:447e:: ffff:ffff:ffff:ffff:: 3c11:4ed2:c7d1:dae8::8 ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff ( 1320325684 Packets, 338764837438 Bytes, 1847 Packets/sec, 3791520 Bits/sec )
+  seq 100 permit ipv6 262d:6737:4d76:447f:: ffff:ffff:ffff:ffff:: 3c11:4ed2:c7d1:dae8::9 ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff ( 1320323189 Packets, 338767267363 Bytes, 1569 Packets/sec, 3217352 Bits/sec )
+  seq 110 permit ipv6 262d:6737:4d76:4480:: ffff:ffff:ffff:ffff:: 3c11:4ed2:c7d1:dae8::a ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff ( 1320322073 Packets, 338765621300 Bytes, 1848 Packets/sec, 3803808 Bits/sec )
+  seq 120 permit ipv6 262d:6737:4d76:4481:: ffff:ffff:ffff:ffff:: 3c11:4ed2:c7d1:dae8::b ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff ( 1320326047 Packets, 338765427000 Bytes, 1572 Packets/sec, 3238440 Bits/sec )
+  seq 130 permit ipv6 262d:6737:4d76:4482:: ffff:ffff:ffff:ffff:: 3c11:4ed2:c7d1:dae8::c ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff ( 1320323069 Packets, 338763227721 Bytes, 1576 Packets/sec, 3236824 Bits/sec )
+  seq 140 permit ipv6 262d:6737:4d76:4483:: ffff:ffff:ffff:ffff:: 3c11:4ed2:c7d1:dae8::d ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff ( 1320321935 Packets, 338763329416 Bytes, 1568 Packets/sec, 3211112 Bits/sec )
+  seq 150 permit ipv6 262d:6737:4d76:4484:: ffff:ffff:ffff:ffff:: 3c11:4ed2:c7d1:dae8::e ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff ( 1320326644 Packets, 338769276882 Bytes, 1577 Packets/sec, 3253848 Bits/sec )
+  seq 160 permit ipv6 262d:6737:4d76:4485:: ffff:ffff:ffff:ffff:: 3c11:4ed2:c7d1:dae8::f ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff ( 1320323635 Packets, 338760278678 Bytes, 1859 Packets/sec, 3798344 Bits/sec )
+  seq 170 permit ipv6 262d:6737:4d76:4486:: ffff:ffff:ffff:ffff:: 3c11:4ed2:c7d1:dae8::10 ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff ( 1320325640 Packets, 338765417568 Bytes, 1571 Packets/sec, 3242912 Bits/sec )
+  seq 180 permit ipv6 262d:6737:4d76:4487:: ffff:ffff:ffff:ffff:: 3c11:4ed2:c7d1:dae8::11 ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff ( 1320324062 Packets, 338764683017 Bytes, 1566 Packets/sec, 3214264 Bits/sec )
+  seq 190 permit ipv6 262d:6737:4d76:4488:: ffff:ffff:ffff:ffff:: 3c11:4ed2:c7d1:dae8::12 ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff ( 1320322563 Packets, 338766630842 Bytes, 1571 Packets/sec, 3212976 Bits/sec )
+  seq 200 permit ipv6 262d:6737:4d76:4489:: ffff:ffff:ffff:ffff:: 3c11:4ed2:c7d1:dae8::13 ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff ( 1320321563 Packets, 338764794461 Bytes, 1574 Packets/sec, 3230136 Bits/sec )
+
+
+ipv6 access-list test 
+
+
+ipv6 access-list v6_permit_any 
+  seq 10 permit ipv6 any any count ( 0 Packets, 0 Bytes, 0 Packets/sec, 0 Bits/sec )

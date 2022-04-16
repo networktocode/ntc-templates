@@ -1,0 +1,14 @@
+Value CURRENT_FW_VERSION (\S+)
+Value ROLLBACK_FW_VERSION (\S+)
+Value CURRENT_FW_COMMITTED (\S+)
+Value ROLLBACK_FW_VERSION_AFTER_COMMIT (\S+)
+Value BMC_FW_VERSION ([\S]+)
+
+Start
+ ^\s*Current Firmware Version:\s+${CURRENT_FW_VERSION}
+ ^\s*Rollback Firmware Version:\s+${ROLLBACK_FW_VERSION}
+ ^\s*Is Current Firmware Committed:\s+${CURRENT_FW_COMMITTED}
+ ^\s*Rollback Version after Commit:\s+${ROLLBACK_FW_VERSION_AFTER_COMMIT}
+ ^\s*BMC Firmware Version:\s+${BMC_FW_VERSION} -> Record
+ ^\s*$$
+ ^. -> Error

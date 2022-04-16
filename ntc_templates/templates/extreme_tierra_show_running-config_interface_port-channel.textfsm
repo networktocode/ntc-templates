@@ -1,0 +1,24 @@
+Value INTERFACE_TYPE (\S+)
+Value Key,Required INTERFACE (\S+)
+Value DESCRIPTION ([\S\s]+)
+Value List INGRESS_GROUPS (\S+)
+Value ENABLE (no shutdown|shutdown)
+Value LACP_MIN_LINKS (\S+)
+Value LACP_SYSTEM_MAC (\S+)
+Value LACP_SYSTEM_PRIORITY (\S+)
+Value LOAD_BALANCE (\S+)
+Value MTU (\S+)
+
+Start
+ ^int -> Continue.Record
+ ^interface\s+${INTERFACE_TYPE}\s+${INTERFACE}
+ ^\s*description\s+${DESCRIPTION}
+ ^\s*set ingress\-group\s+${INGRESS_GROUPS}
+ ^\s*${ENABLE}
+ ^\s*lacp min\-links ${LACP_MIN_LINKS}
+ ^\s*lacp system\-mac ${LACP_SYSTEM_MAC}
+ ^\s*lacp system\-priority ${LACP_SYSTEM_PRIORITY}
+ ^\s*load\-balance ${LOAD_BALANCE}
+ ^\s*mtu ${MTU}
+ ^\s*$$
+ ^. -> Error

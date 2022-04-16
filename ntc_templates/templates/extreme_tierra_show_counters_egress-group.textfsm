@@ -1,0 +1,11 @@
+Value EGRESS_GROUP_NAME (\S+)
+Value TX_FRAMES (\d+)  
+Value TX_BYTES (\d+) 
+
+Start
+ ^Egress-group Packet Statistics : ${EGRESS_GROUP_NAME}
+ ^Egress-group Packet Statistics 
+ ^\s*TX Frames : ${TX_FRAMES}
+ ^\s*TX Bytes : ${TX_BYTES} -> Record
+ ^\s*$$
+ ^. -> Error

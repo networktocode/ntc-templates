@@ -1,0 +1,7 @@
+interface management 0
+  description Management
+  no ip address dhcp
+  ip address 10.25.101.1/22
+  ip gateway 10.25.100.1
+  ipv6 address dhcp
+  no shutdown

@@ -1,0 +1,18 @@
+Value Filldown PORT_CHANNEL (\d+)
+Value Required INTERFACE (\S+\s\S+)
+Value RX_PACKET (\d+)
+Value TX_PACKET (\d+)
+Value TX_ERRORS (\d+)
+Value RX_ERRORS (\d+)
+Value UNKNOWN_ERROR (\d+)
+Value LACP_ERROR (\d+)
+
+
+
+Start
+ ^Port\s+in\-pkts\s+out\-pkts\s+TxErr\s+RxErr\s+unknownErr\s+LacpErr       
+ ^[\-]+
+ ^\s*Channel group: ${PORT_CHANNEL}
+ ^\s*${INTERFACE}\s+${RX_PACKET}\s+${TX_PACKET}\s+${TX_ERRORS}\s+${RX_ERRORS}\s+${UNKNOWN_ERROR}\s+${LACP_ERROR} -> Record
+ ^\s*$$
+ ^. -> Error

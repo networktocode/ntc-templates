@@ -1,0 +1,9 @@
+Value FIRMWARE_VERSION (\S+)
+Value INSTALL_DATE ([\s\S]+\S+)
+
+Start
+ ^Firmware Version                          Install Date
+ ^------------------------------------------------------------------------
+ ^${FIRMWARE_VERSION}\s+${INSTALL_DATE} -> Record
+ ^\s*$$
+ ^. -> Error

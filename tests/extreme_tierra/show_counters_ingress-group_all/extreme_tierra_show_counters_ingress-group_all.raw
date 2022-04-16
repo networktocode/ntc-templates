@@ -1,0 +1,37 @@
+Number of ingress-groups: 7
+
+        Name : ig_fw     
+No ingress-group stats found
+
+
+        Name : test1     
+No ingress-group stats found
+
+
+        Name : ig_gre    
+
+Ingress-group Packet Statistics (IP-GRE Tunnel)
+
+   RX Frames : 2706767675608
+    RX Bytes : 693592574480976
+
+
+        Name : ig_gtp    
+Ingress-group Packet Statistics (GTPU Tunnel)
+
+   RX Frames : 8441525128154
+    RX Bytes : 2165707857946674
+
+
+        Name : ig_vcp    
+Outer tunnel (Vxlan):
+   RX Frames : 526840633632
+    RX Bytes : 737576887084800
+
+
+
+        Name : ig_mpls   
+Outer tunnel (MPLS):
+   RX Frames : 658550792338
+    RX Bytes : 921971109273200
+

@@ -1,0 +1,12 @@
+---
+parsed_sample:
+  - logging_host: "evm"
+    address: "10.25.102.132"
+    transport: "tcp"
+    port: "6555"
+    secure_forwarding: "tls"
+  - logging_host: "dummy"
+    address: "10.25.101.76"
+    transport: "udp"
+    port: ""
+    secure_forwarding: ""

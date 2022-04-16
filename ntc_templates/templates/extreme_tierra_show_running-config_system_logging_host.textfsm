@@ -1,0 +1,16 @@
+Value Key,Required LOGGING_HOST (\S+)
+Value ADDRESS (\S+)
+Value TRANSPORT (\S+)
+Value PORT (\S+)
+Value SECURE_FORWARDING (\S+)
+
+
+Start
+ ^sys -> Continue.Record
+ ^system logging host ${LOGGING_HOST} 
+ ^\s+address ${ADDRESS}
+ ^\s+transport ${TRANSPORT}
+ ^\s+port ${PORT}
+ ^\s+secure-forwarding ${SECURE_FORWARDING}
+ ^\s*$$
+ ^. -> Error

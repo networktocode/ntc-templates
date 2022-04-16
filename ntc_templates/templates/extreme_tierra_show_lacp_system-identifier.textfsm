@@ -1,0 +1,7 @@
+Value SYSTEM_PRIORITY (0x[a-fA-F\d]+)
+Value SYSTEM_MAC_ADDR ([a-fA-F\d:]+)
+
+Start
+ ^\s+System ID: ${SYSTEM_PRIORITY}, ${SYSTEM_MAC_ADDR} -> Record
+ ^\s*$$
+ ^. -> Error

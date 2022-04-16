@@ -1,0 +1,77 @@
+---
+parsed_sample:
+  - active_subcriptions: "6"
+    client: "10.42.150.39:53950"
+    mode: "STREAM"
+    path_count: "1"
+    keypath:
+      - "/interfaces/interface[name=*]/aggregation/state/lag-load-balance-method"
+    subscription_mode:
+      - "ON_CHANGE"
+    interval:
+      - "0s"
+  - active_subcriptions: "6"
+    client: "10.25.101.1"
+    mode: "STREAM"
+    path_count: "1"
+    keypath:
+      - "/pcap/files/file[name=*]"
+    subscription_mode:
+      - "ON_CHANGE"
+    interval:
+      - "0s"
+  - active_subcriptions: "6"
+    client: "10.25.101.1"
+    mode: "STREAM"
+    path_count: "5"
+    keypath:
+      - "/interfaces/interface[name=*]"
+      - "/npb-policy-data-sets/npb-policy-data-set[owner=POLICY_OWNER_ROUTEMAP]/policy-stats"
+      - "/npb-policy-data-sets/npb-policy-data-set[owner=POLICY_OWNER_LISTENERPOLICY]/policy-stats"
+      - "/saps/sap[name=*]"
+      - "/components/component[name=health]"
+    subscription_mode:
+      - "SAMPLE"
+      - "SAMPLE"
+      - "SAMPLE"
+      - "SAMPLE"
+      - "SAMPLE"
+    interval:
+      - "10s"
+      - "10s"
+      - "10s"
+      - "10s"
+      - "10s"
+  - active_subcriptions: "6"
+    client: "10.25.101.1"
+    mode: "STREAM"
+    path_count: "1"
+    keypath:
+      - "/components/component[name=*]"
+    subscription_mode:
+      - "ON_CHANGE"
+    interval:
+      - "0s"
+  - active_subcriptions: "6"
+    client: "10.42.150.61:53542"
+    mode: "STREAM"
+    path_count: "2"
+    keypath:
+      - "/interfaces/interface[name=management 0]/subinterfaces/subinterface[index=0]/ipv4/addresses"
+      - "/interfaces/interface[name=management 0]/subinterfaces/subinterface[index=0]/ipv6/addresses"
+    subscription_mode:
+      - "ON_CHANGE"
+      - "ON_CHANGE"
+    interval:
+      - "0s"
+      - "0s"
+  - active_subcriptions: "6"
+    client: "10.42.150.23:41348"
+    mode: "STREAM"
+    path_count: "1"
+    keypath:
+      - "/interfaces/interface[name=*]/state/oper-status"
+    subscription_mode:
+      - "ON_CHANGE"
+    interval:
+      - "0s"

@@ -1,0 +1,94 @@
+Value Filldown INTERFACE ([\s\S]+\S)
+Value Required PACKET_NUMBER (\d+)
+Value Filldown TOTAL_PACKET_COUNT (\d+)
+Value PACKET_CAPTURE_TIMESTAMP ([\s\S]+\S)
+Value PACKET_LENGTH (\d+)
+Value PACKET_DIRECTION (\S+)
+Value PACKET_FILTER (\S+)
+Value FRONT_PANEL_PORT ([\s\S]+\S)
+Value ETHER_SRC_ADDR (\S+)
+Value ETHER_DST_ADDR (\S+)
+Value ETHERTYPE (\S+)
+Value VLAN_DROP_OK (\S+)
+Value VLAN_PCP (\S+)
+Value VLAN_NEXT_HEADER (\S+)
+Value VLAN_ID (\S+)
+Value IPV4_SRC_ADDR (\S+)
+Value IPV4_DST_ADDR (\S+)
+Value IPV4_TOS (\S+)
+Value IPV4_LENGTH (\S+)
+Value IPV4_IDENTIFICATION (\S+)
+Value IPV4_FRAGMENTATION (\S+)
+Value IPV4_TTL (\S+)
+Value IPV4_PROTOCOL (\S+)
+Value IPV4_CHECKSUM (\S+)
+Value TCP_SRC_PORT (\S+)
+Value TCP_DST_PORT (\S+)
+Value TCP_SEQ (\S+)
+Value TCP_ACK (\S+)
+Value UDP_SRC_PORT (\S+)
+Value UDP_DST_PORT (\S+)
+
+Start
+ ^\s*[-:]+
+ ^\s*$$ -> Record 
+ ^\s*Frames\s+Logged\s+on\s+interface\s+\=\s+${INTERFACE}
+ ^\s*Pkt Capture Metadata:\s+\S${PACKET_NUMBER}\s+of\s+${TOTAL_PACKET_COUNT}\s+Packets
+ ^\s*Frame\s+Received\s+Time\s+:\s+${PACKET_CAPTURE_TIMESTAMP}
+ ^\s*Packet\s+Length\(bytes\)\s*:\s+${PACKET_LENGTH}
+ ^\s*Packet\s+Direction\s+:\s+${PACKET_DIRECTION}
+ ^\s*Packet\s+Filter\s+:\s+${PACKET_FILTER}
+ ^\s*Front\s+Panel\s+Port\s+:\s+${FRONT_PANEL_PORT}
+ ^\s*ETHERNET HEADER -> Ethernet
+ ^\s*DOT1Q HEADER -> Vlan
+ ^\s*IPv4 HEADER -> IPv4
+ ^\s*TCP DETAILS -> Tcp
+ ^\s*UDP DETAILS -> Udp
+ ^. -> Error
+
+Ethernet
+ ^\s*[-:]+
+ ^\s*SrcMAC\s+: ${ETHER_SRC_ADDR}
+ ^\s*DstMAC\s+: ${ETHER_DST_ADDR}
+ ^\s*EtherType\s+: ${ETHERTYPE} -> Start
+ ^\s*$$
+ ^. -> Error
+
+Vlan
+ ^\s*[-:]+
+ ^\s*DropEligible\s+: ${VLAN_DROP_OK}
+ ^\s*Priority\s+: ${VLAN_PCP}
+ ^\s*Type\s+: ${VLAN_NEXT_HEADER}
+ ^\s*VlanId\s+: ${VLAN_ID} -> Start
+ ^\s*$$
+ ^. -> Error
+
+IPv4
+ ^\s*[-:]+
+ ^\s*Src IP Address \s+: ${IPV4_SRC_ADDR}
+ ^\s*Dst IP Address\s+: ${IPV4_DST_ADDR}
+ ^\s*Type of service\s+: ${IPV4_TOS}
+ ^\s*Total Length\s+: ${IPV4_LENGTH}
+ ^\s*Identification\s+: ${IPV4_IDENTIFICATION}
+ ^\s*Fragmentation\s+: ${IPV4_FRAGMENTATION}
+ ^\s*TTL\s+: ${IPV4_TTL}
+ ^\s*Protocol\s+: ${IPV4_PROTOCOL}
+ ^\s*IP Checksum\s+: ${IPV4_CHECKSUM} -> Start
+ ^\s*$$
+ ^. -> Error
+
+Tcp
+ ^\s*[-:]+
+ ^\s*Source Port\s+: ${TCP_SRC_PORT}
+ ^\s*Destination Port\s+: ${TCP_DST_PORT}
+ ^\s*Seq Number\s+: ${TCP_SEQ}
+ ^\s*Ack Number\s+: ${TCP_ACK} -> Start
+ ^\s*$$
+ ^. -> Error
+
+Udp
+ ^\s*[-:]+
+ ^\s*Source Port\s+: ${UDP_SRC_PORT}
+ ^\s*Destination Port\s+: ${UDP_DST_PORT} -> Start
+ ^\s*$$
+ ^. -> Error

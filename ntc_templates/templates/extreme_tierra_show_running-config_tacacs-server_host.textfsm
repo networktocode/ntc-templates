@@ -1,0 +1,8 @@
+Value Key,Required HOSTNAME (\S+)
+Value KEY (\S+)
+
+Start
+ ^tacacs-server host ${HOSTNAME}
+ ^\s*encrypted\-key ${KEY} -> Record
+ ^\s*$$
+ ^. -> Error

@@ -1,0 +1,61 @@
+Number of ingress-groups: 7
+
+    Name : ig_fw           
+             Route-Map : map_fwtap             
+           Description : -                     
+            Interfaces :  ethernet 7/1  ethernet 7/2  ethernet 8/1  ethernet 8/2  ethernet 7/15  ethernet 8/15  port-channel 11
+
+    Name : test1           
+             Route-Map : test1                 
+           Description : -                     
+            Interfaces : none                  
+
+    Name : ig_gre          
+             Route-Map : map_gre               
+           Description : -                     
+            Interfaces :  ethernet 7/1  ethernet 7/2  ethernet 8/1  ethernet 8/2  ethernet 7/15  ethernet 8/15
+          Traffic-Type : IPGRE                 
+                  Mode : none                  
+   Destination-ip-addr : any                   
+        Source-ip-addr : any                   
+
+    Name : ig_gtp          
+             Route-Map : map_gtp               
+           Description : -                     
+            Interfaces :  ethernet 7/1  ethernet 7/2  ethernet 8/1  ethernet 8/2  ethernet 7/15  ethernet 8/15
+          Traffic-Type : GTPU                  
+             Tunnel-Id : any                   
+                  Mode : none                  
+   Destination-ip-addr : any                   
+        Source-ip-addr : any                   
+
+    Name : ig_vcp          
+             Route-Map : map_vcp               
+           Description : -                     
+            Interfaces :  ethernet 7/1  ethernet 7/2  ethernet 8/1  ethernet 8/2  ethernet 7/15  ethernet 8/15
+
+   Outer Tunnel Config : 
+          Traffic-Type : VxLAN                 
+             Tunnel-Id : any                   
+   Destination-ip-addr : any                   
+        Source-ip-addr : any                   
+                Mirror : none                  
+
+    Name : ig_mpls         
+             Route-Map : map_mpls              
+           Description : -                     
+            Interfaces :  ethernet 7/1  ethernet 7/2  ethernet 8/1  ethernet 8/2  ethernet 7/15  ethernet 8/15  port-channel 11
+
+   Outer Tunnel Config : 
+          Traffic-Type : MPLS                  
+     Header1 (Bottom of Stack) : 
+                 Label : any                   
+         Traffic Class : any                   
+          Time to Live : any                   
+                Mirror : none                  
+
+    Name : ig_cloud_gre    
+             Route-Map : -                     
+           Description : -                     
+            Interfaces :  ethernet 8/5
+

@@ -1,0 +1,9 @@
+Value Key,Required MIRROR_NAME (\S+)
+Value DESCRIPTION (\S+)
+Value INTERFACE (\S+\s\S+)
+
+Start
+ ^mir -> Continue.Record
+ ^\s*Name\s+:\s+${MIRROR_NAME}
+ ^\s*Description\s+:\s+${DESCRIPTION}
+ ^\s*Interface\s+:\s+${INTERFACE}

@@ -1,0 +1,26 @@
+Value SLOT (\d+)
+Value STATE (\S+)
+Value FRU_TYPE (\S+)
+Value UPTIME (\S+)
+Value INSERTION_TIME ([\d\-]+\s[\d:]+)
+Value EXTRACTION_TIME ([\d\-]+\s[\d:]+)
+Value DESCRIPTION ([\S\s]+)
+
+Start
+  ^Slot Information
+  ^Slot\s+State\s+FRU\-Id\s+FRU-Type\s+Description -> TABLE1_1FORMAT
+  ^Slot\s+State\s+FRU\-Type\s+Uptime\s+Insertion\-Time\s+Extraction\-Time\s+Description -> TABLE1_2FORMAT
+
+TABLE1_1FORMAT
+  ^[\-]+
+  ^${SLOT}\s+${STATE}\s+\d\s+${FRU_TYPE}\s+${DESCRIPTION} -> Record
+  ^${SLOT}\s+${STATE}\s+\d -> Record
+
+TABLE1_2FORMAT
+  ^[\-]+
+  ^${SLOT}\s+${STATE}\s+${FRU_TYPE}\s+${UPTIME}\s+${INSERTION_TIME}\s+${EXTRACTION_TIME}\s+${DESCRIPTION} -> Record
+  ^${SLOT}\s+${STATE}\s+${FRU_TYPE}\s+${UPTIME}\s+${INSERTION_TIME}\s+${DESCRIPTION} -> Record
+  ^${SLOT}\s+${STATE}\s+${FRU_TYPE}\s+${INSERTION_TIME}\s+${DESCRIPTION} -> Record
+  ^${SLOT}\s+${STATE} -> Record
+ ^\s*$$
+ ^. -> Error

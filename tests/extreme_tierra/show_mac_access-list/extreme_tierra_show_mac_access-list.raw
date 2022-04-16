@@ -1,0 +1,5 @@
+mac access-list l2_fw_mob_l2_arp-lacp 
+  seq 10 permit any any etype arp ( 0 Packets, 0 Bytes, 0 Packets/sec, 0 Bits/sec )
+  seq 20 permit any any etype 0x8809 ( 79697 Packets, 10201216 Bytes, 91 Packets/sec, 93184 Bits/sec )
+
+

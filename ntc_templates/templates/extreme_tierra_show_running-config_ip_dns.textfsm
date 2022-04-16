@@ -1,0 +1,8 @@
+Value DOMAIN_NAME (\S+)
+Value NAME_SERVER (\S+)
+
+Start
+ ^ip\s+dns\sdomain\-name ${DOMAIN_NAME} -> Record
+ ^ip\sdns\sname\-server ${NAME_SERVER} -> Record
+ ^\s*$$
+ ^. -> Error

@@ -1,0 +1,17 @@
+Value Key,Required CHASSIS_ID (\S+)
+Value LOCAL_PORT_ID (\S+\s\S+)
+Value DEAD_INTERVAL (\d+)
+Value TIME_REMAINING (\d+)
+Value REMOTE_PORT_ID ([\s\S]+)
+Value REMOTE_PORT_DESCRIPTION (\S+)
+Value SYSTEM_NAME (\S+)
+Value Fillup TOTAL_ENTRIES (\d+)
+
+Start
+ ^show LLDP Neighbors Information
+ ^Chassis ID\s+Local-Port\s+Dead  Rem\s+Remote\s+Remote\s+System         
+ ^\s+Intvl Life\s+Port-ID\s+Port Descr\s+Name           
+ ^${CHASSIS_ID}\s+${LOCAL_PORT_ID}\s+${DEAD_INTERVAL}\s+${TIME_REMAINING}\s+${REMOTE_PORT_ID}\s+${REMOTE_PORT_DESCRIPTION}\s+${SYSTEM_NAME} -> Record
+ ^Total entries displayed: ${TOTAL_ENTRIES}
+ ^\s*$$
+ ^. -> Error

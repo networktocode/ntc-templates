@@ -1,0 +1,6 @@
+Value Key,Required SERVER (\S+)
+
+Start
+ ^ntp server ${SERVER} -> Record
+ ^\s*$$
+ ^. -> Error

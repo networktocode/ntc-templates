@@ -1,0 +1,46 @@
+Value Filldown BIOS_DATE (\S+)
+Value Filldown BIOS_VENDOR ([\S\s]+)
+Value Filldown BIOS_VERSION (\S+)
+Value Filldown CPU_MODEL ([\S\s]+)
+Value Filldown CPU_PROCS (\d+)
+Value Filldown DISK_FREE (\S+)
+Value Filldown DISK_TOTAL (\S+)
+Value Filldown DISK_USED (\S+)
+Value Filldown KERNEL_ARCH (\S+)
+Value Filldown KERNEL_VERSION (\S+)
+Value Filldown MEM_FREE (\S+)
+Value Filldown MEM_TOTAL (\S+)
+Value Filldown MEM_USED (\S+)
+Value Filldown MEM_USED_PERCENTAGE (\S+)
+Value Filldown OS (\S+)
+Value Filldown PLATFORM (\S+)
+Value Filldown PLATFORM_VERSION (\S+)
+Value Filldown SYSTEM_UPTIME (\S+)
+Value Key,Required SERVICE_NAME (\S+)
+Value SERVICE_CPU (\S+)
+Value SERVICE_MEM (\S+)
+
+Start
+ ^\s*BIOS Date: ${BIOS_DATE}
+ ^\s*BIOS Vendor: ${BIOS_VENDOR}
+ ^\s*BIOS Version: ${BIOS_VERSION}
+ ^\s*CPU Model: ${CPU_MODEL}
+ ^\s*CPU Procs: ${CPU_PROCS}
+ ^\s*Disk Free: ${DISK_FREE}
+ ^\s*Disk Total: ${DISK_TOTAL}
+ ^\s*Disk Used: ${DISK_USED}
+ ^\s*Kernel Arch: ${KERNEL_ARCH}
+ ^\s*Kernel Version: ${KERNEL_VERSION}
+ ^\s*Memory Free: ${MEM_FREE}
+ ^\s*Memory Total: ${MEM_TOTAL}
+ ^\s*Memory Used: ${MEM_USED}
+ ^\s*Memory Used \(%\): ${MEM_USED_PERCENTAGE}
+ ^\s*OS: ${OS}
+ ^\s*Platform: ${PLATFORM}
+ ^\s*Platform Version: ${PLATFORM_VERSION}
+ ^\s*System Uptime: ${SYSTEM_UPTIME}
+ ^SERVICE\s+CPU\(cores\)\s+Memory\(bytes\)       
+ ^[\-]+
+ ^${SERVICE_NAME}\s+${SERVICE_CPU}\s+${SERVICE_MEM} -> Record
+ ^\s*$$
+ ^. -> Error

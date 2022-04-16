@@ -1,0 +1,24 @@
+2021-10-29 10:31:44.422 UTC +0000 LogID:5021 info Msg: Firmware change successful.  Current Firmware Version is TierraOS-21.1.2.0-NPB-20210830_212558_UTC
+2021-11-22 23:04:45.655 UTC +0000 LogID:5021 info Msg: Firmware change successful.  Current Firmware Version is TierraOS-21.1.2.0-pre.2-NPB
+2021-12-03 19:46:58.891 UTC +0000 LogID:8002 info Msg: Firmware update file http://10.25.101.80/npb/TierraOS-21.1.2.0-NPB-20211203_143935_UTC.bin downloaded
+2021-12-03 19:46:58.891 UTC +0000 LogID:8004 info Msg: Activating firmware TierraOS-21.1.2.0-NPB-20211203_143935_UTC.bin.  System will reboot if successful
+2021-12-03 19:57:05.557 UTC +0000 LogID:5021 info Msg: Firmware change successful.  Current Firmware Version is TierraOS-21.1.2.0-NPB-20211203_143935_UTC
+2021-12-14 03:20:12.015 UTC +0000 LogID:8002 info Msg: Firmware update file scp://user:brocade@10.25.101.79/home/user/builds/npb/TierraOS-21.1.2.0-NPB-20211213_143930_UTC.bin downloaded
+2021-12-14 03:20:12.016 UTC +0000 LogID:8004 info Msg: Activating firmware TierraOS-21.1.2.0-NPB-20211213_143930_UTC.bin.  System will reboot if successful
+2021-12-14 03:28:36.873 UTC +0000 LogID:5021 info Msg: Firmware change successful.  Current Firmware Version is TierraOS-21.1.2.0-NPB-20211213_143930_UTC
+2021-12-20 05:55:48.782 UTC +0000 LogID:8002 info Msg: Firmware update file scp://ngnpb:Extremengnpb@10.254.128.91:22/davfs/NPB/21.1.2.0-pre.4/build/TierraOS-21.1.2.0-pre.4-NPB/install/TierraOS-21.1.2.0-pre.4-NPB.bin downloaded
+2021-12-20 05:55:48.782 UTC +0000 LogID:8004 info Msg: Activating firmware TierraOS-21.1.2.0-pre.4-NPB.bin.  System will reboot if successful
+2021-12-20 05:56:28.991 UTC +0000 LogID:8005 error Msg: Failed to activate firmware TierraOS-21.1.2.0-pre.4-NPB.bin, err Activation failed -  DB Conversion failed for current image: 
+unpacking docker.io/library/db-migrator:1.1.0 (sha256:235b2835ffb49054291227f360b50cc9feb66b147f3b65b917fde27f31577a03)...done
+Success:Copied AOF file
+Success:Ran write instance of redis server
+Success:Ran read instance of redis server
+
+real	0m0.252s
+user	0m0.281s
+sys	0m0.102s
+clean up of temporary AOF files
+Failure:DB migration failed.
+Deleted: docker.io/library/db-migrator:1.1.0
+
+2021-12-20 07:14:24.191 UTC +0000 LogID:8003 error Msg: Failed to retrieve file scp://ngnpb:Extremengnpb@10.254.128.91:22/davfs/NPB/21.1.2/build/TierraOS-21.1.2.0-pre.4-NPB/install/TierraOS-21.1.2.0-pre.4-NPB.bin, Error: Input File does not exist

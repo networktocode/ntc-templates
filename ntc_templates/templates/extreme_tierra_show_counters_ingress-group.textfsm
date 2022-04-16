@@ -1,0 +1,17 @@
+Value Filldown GROUP_COUNT (\d+)
+Value Key NAME (\S+)
+Value TUNNEL_TYPE ([\S\s]+\S)
+Value RX_FRAMES (\d+)
+Value RX_BYTES (\d+)
+Value NO_STATS (No ingress-group stats found)
+
+Start
+ ^Number of ingress-groups: ${GROUP_COUNT}
+ ^\s+Name : ${NAME}
+ ^Ingress\-group Packet Statistics \(${TUNNEL_TYPE} Tunnel\)
+ ^\s*Outer tunnel \(${TUNNEL_TYPE}\)
+ ^\s+RX Frames\s+:\s+${RX_FRAMES}
+ ^\s+RX Bytes\s+:\s+${RX_BYTES} -> Record
+ ^${NO_STATS} -> Record
+ ^\s*$$ 
+ ^. -> Error

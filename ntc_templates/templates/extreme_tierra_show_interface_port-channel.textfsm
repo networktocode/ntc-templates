@@ -1,0 +1,72 @@
+Value Key,Required INTERFACE (\S+\s\S+)
+Value STATUS (\S+)
+Value MTU (\d+)
+Value INTERFACE_INDEX ([a-fA-Fx\-\d]+)
+Value PORT_MODE (\S+\s\S+)
+Value SPEED ([\S\s]+)
+Value LAG_TYPE ([\S\s]+)
+Value MINLINKS (\d+)
+Value LOAD_BALANCE_METHOD ([\S\s]+)
+Value ACTIVE_MEMBER ([\s\S]+)
+Value MEMBERS ([\s\S]+)
+Value CARRIER_TRANSITION (\d+)
+Value LAST_CLEAR (\S+)
+Value RX_BROADCAST_PKTS (\d+)
+Value RX_DISCARD_PKTS (\d+)
+Value RX_ERRORS_PKTS (\d+)
+Value RX_FCS_ERRORS (\d+)
+Value RX_MCAST_PKTS (\d+)
+Value RX_OCTETS (\d+)
+Value RX_UCAST_PKTS (\d+)
+Value RX_UNKNOWN_PROTOCOLS (\d+)
+Value TX_BROADCAST_PKTS (\d+)
+Value TX_DISCARD_PKTS (\d+)
+Value TX_ERRORS_PKTS (\d+)
+Value TX_MCAST_PKTS (\d+)
+Value TX_OCTETS (\d+)
+Value TX_UCAST_PKTS (\d+)
+
+Start
+  ^${INTERFACE}\s+is\s+${STATUS}
+  ^\s*MTU\s+${MTU}\s+Bytes
+  ^\s*IfIndex\s+${INTERFACE_INDEX}
+  ^\s*Port\s+mode\s+is\s+${PORT_MODE},\s+${SPEED}
+  ^\s*LagType\s+is\s+${LAG_TYPE}
+  ^\s*MinLinks\s+is\s+${MINLINKS}
+  ^\s*Load\s+balance\s+method\s+uses\s+${LOAD_BALANCE_METHOD}
+  ^\s*Active\s+Members\s+in\s+this\s+channel:\s+${ACTIVE_MEMBER}
+  ^\s*Members\s+in\s+this\s+channel:\s+${MEMBERS}
+  ^\s*Statistics -> Statistics
+  ^\s*Input: -> Input
+  ^\s*Out: -> Out
+  ^\s*$$
+  ^. -> Error
+
+
+Statistics
+  ^\s*Carrier\s+Transitions:\s+${CARRIER_TRANSITION}
+  ^\s*LastClear:\s+${LAST_CLEAR} -> Start
+  ^\s*$$
+  ^. -> Error
+
+Input
+  ^\s*Broadcast\s+\S+:\s+${RX_BROADCAST_PKTS}
+  ^\s*Discard\s+\S+:\s+${RX_DISCARD_PKTS}
+  ^\s*Errors\s+\S+:\s+${RX_ERRORS_PKTS}
+  ^\s*FCS Errors:\s+${RX_FCS_ERRORS}
+  ^\s*MCast\s+\S+:\s+${RX_MCAST_PKTS}
+  ^\s*Octets:\s+${RX_OCTETS}
+  ^\s*UCast\s+\S+:\s+${RX_UCAST_PKTS}
+  ^\s*Unknown\s+Protocols:\s+${RX_UNKNOWN_PROTOCOLS} -> Start
+  ^\s*$$
+  ^. -> Error
+
+Out
+  ^\s*Broadcast\s+\S+:\s+${TX_BROADCAST_PKTS}
+  ^\s*Discard\s+\S+:\s+${TX_DISCARD_PKTS}
+  ^\s*Errors\s+\S+:\s+${TX_ERRORS_PKTS}
+  ^\s*MCast\s+\S+:\s+${TX_MCAST_PKTS}
+  ^\s*Octets:\s+${TX_OCTETS}
+  ^\s*UCast\s+\S+:\s+${TX_UCAST_PKTS} -> Record Start
+  ^\s*$$
+  ^. -> Error

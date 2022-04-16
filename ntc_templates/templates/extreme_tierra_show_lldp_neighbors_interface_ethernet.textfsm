@@ -1,0 +1,36 @@
+Value INTERFACE (\S+\s\S+)
+Value LOCAL_PORT_ID (\S+\s\S+)
+Value CHASSIS_ID (\S+)
+Value REMOTE_PORT_ID ([\s\S]+)
+Value REMOTE_PORT_DESCRIPTION (\S+)
+Value SYSTEM_NAME (\S+)
+Value SYSTEM_DESCRIPTION ([\S\s]+)
+Value DEAD_INTERVAL (\d+)
+Value TIME_REMAINING (\d+)
+Value SYSTEM_CAPABILITIES ([BCOPRSTW]+)
+Value ENABLED_CAPABILITIES ([BCOPRSTW]+)
+Value MGMT_IPV4_ADDRESS ([\d\.]+)
+Value MGMT_IPV6_ADDRESS ([a-fA-F\d:]+)
+
+Start
+ ^LLDP Interface Neighbors:
+ ^Capability codes:
+ ^\s+\S+ Router, \S+ Bridge, \S+ Telephone, \S+ DOCSIS Cable Device
+ ^\s+\S+ WLAN Access Point, \S+ Repeater, \S+ Station, \S+ Other
+ ^NOTE: Active ports except disabled or Link Down ports will be shown in all option.
+ ^LLDP Interface:\s+${INTERFACE}
+ ^\s*Local Port id:\s+${LOCAL_PORT_ID}
+ ^\s*Chassis id:\s+${CHASSIS_ID}
+ ^\s*Remote Port id:\s+${REMOTE_PORT_ID}
+ ^\s*Remote Port Description:\s+${REMOTE_PORT_DESCRIPTION}
+ ^\s*System Name:\s+${SYSTEM_NAME}
+ ^\s*System Description:\s+${SYSTEM_DESCRIPTION}
+ ^\s*Dead Interval:\s+${DEAD_INTERVAL} seconds
+ ^\s*Time remaining:\s+${TIME_REMAINING} seconds
+ ^\s*System Capabilities:\s+(${SYSTEM_CAPABILITIES}|---)
+ ^\s*Enabled Capabilities:\s+(${ENABLED_CAPABILITIES}|---)
+ ^\s*Management Address:\s+(${MGMT_IPV4_ADDRESS}|not advertised)
+ ^\s*Management Address IPV6:\s+(${MGMT_IPV6_ADDRESS}|not advertised) -> Record
+ ^\s+[\S\s]+ 
+ ^\s*$$
+ ^. -> Error

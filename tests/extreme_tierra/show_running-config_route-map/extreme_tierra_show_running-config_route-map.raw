@@ -1,0 +1,444 @@
+route-map mall_1-01 10
+  forward-action permit 
+  match ip access-list v4_permit_any
+  match ipv6 access-list v6_permit_any
+  match mac access-list l2_permit_any
+  set egress-group eg_1-01
+route-map test 1
+  forward-action permit 
+route-map test1 10
+  forward-action permit 
+  match ip access-list test1
+  set egress-group test11
+  qos-forwarding-group q7
+route-map test1 11
+  forward-action permit 
+  match ipv6 access-list test1
+  set egress-group test11
+  qos-forwarding-group q7
+route-map map_gre 10
+  forward-action permit 
+  match ip access-list v4_gre_0
+  match ipv6 access-list v6_gre_0
+  set egress-group eg_1510
+route-map map_gre 20
+  forward-action permit 
+  match ip access-list v4_gre_1
+  match ipv6 access-list v6_gre_1
+  set egress-group eg_1520
+route-map map_gre 30
+  forward-action permit 
+  match ip access-list v4_gre_2
+  match ipv6 access-list v6_gre_2
+  set egress-group eg_1530
+route-map map_gre 40
+  forward-action permit 
+  match ip access-list v4_gre_3
+  match ipv6 access-list v6_gre_3
+  set egress-group eg_1540
+route-map map_gre 50
+  forward-action permit 
+  match ip access-list v4_gre_4
+  match ipv6 access-list v6_gre_4
+  set egress-group eg_1550
+route-map map_gre 60
+  forward-action permit 
+  match ip access-list v4_gre_5
+  match ipv6 access-list v6_gre_5
+  set egress-group eg_1560
+route-map map_gre 70
+  forward-action permit 
+  match ip access-list v4_gre_6
+  match ipv6 access-list v6_gre_6
+  set egress-group eg_1570
+route-map map_gre 80
+  forward-action permit 
+  match ip access-list v4_gre_7
+  match ipv6 access-list v6_gre_7
+  set egress-group eg_1580
+route-map map_gre 90
+  forward-action permit 
+  match ip access-list v4_gre_8
+  match ipv6 access-list v6_gre_8
+  set egress-group eg_1590
+route-map map_gre 100
+  forward-action permit 
+  match ip access-list v4_gre_9
+  match ipv6 access-list v6_gre_9
+  set egress-group eg_1600
+route-map map_gre 110
+  forward-action permit 
+  match ip access-list v4_gre_10
+  match ipv6 access-list v6_gre_10
+  set egress-group eg_1610
+route-map map_gre 120
+  forward-action permit 
+  match ip access-list v4_gre_11
+  match ipv6 access-list v6_gre_11
+  set egress-group eg_1620
+route-map map_gre 130
+  forward-action permit 
+  match ip access-list v4_gre_12
+  match ipv6 access-list v6_gre_12
+  set egress-group eg_1630
+route-map map_gre 140
+  forward-action permit 
+  match ip access-list v4_gre_13
+  match ipv6 access-list v6_gre_13
+  set egress-group eg_1640
+route-map map_gre 150
+  forward-action permit 
+  match ip access-list v4_gre_14
+  match ipv6 access-list v6_gre_14
+  set egress-group eg_1650
+route-map map_gre 160
+  forward-action permit 
+  match ip access-list v4_gre_15
+  match ipv6 access-list v6_gre_15
+  set egress-group eg_1660
+route-map map_gre 170
+  forward-action permit 
+  match ip access-list v4_gre_16
+  match ipv6 access-list v6_gre_16
+  set egress-group eg_1670
+route-map map_gre 180
+  forward-action permit 
+  match ip access-list v4_gre_17
+  match ipv6 access-list v6_gre_17
+  set egress-group eg_1680
+route-map map_gre 190
+  forward-action permit 
+  match ip access-list v4_gre_18
+  match ipv6 access-list v6_gre_18
+  set egress-group eg_1690
+route-map map_gre 200
+  forward-action permit 
+  match ip access-list v4_gre_19
+  match ipv6 access-list v6_gre_19
+  set egress-group eg_1700
+route-map map_gtp 10
+  forward-action permit 
+  match ip access-list v4_gtp_0
+  match ipv6 access-list v6_gtp_0
+  set egress-group eg_3010
+  qos-forwarding-group q0
+route-map map_gtp 20
+  forward-action permit 
+  match ip access-list v4_gtp_1
+  match ipv6 access-list v6_gtp_1
+  set egress-group eg_3020
+  qos-forwarding-group q0
+route-map map_gtp 30
+  forward-action permit 
+  match ip access-list v4_gtp_2
+  match ipv6 access-list v6_gtp_2
+  set egress-group eg_3030
+  qos-forwarding-group q1
+route-map map_gtp 40
+  forward-action permit 
+  match ip access-list v4_gtp_3
+  match ipv6 access-list v6_gtp_3
+  set egress-group eg_3040
+  qos-forwarding-group q2
+route-map map_gtp 50
+  forward-action permit 
+  match ip access-list v4_gtp_4
+  match ipv6 access-list v6_gtp_4
+  set egress-group eg_3050
+  qos-forwarding-group q3
+route-map map_gtp 60
+  forward-action permit 
+  match ip access-list v4_gtp_5
+  match ipv6 access-list v6_gtp_5
+  set egress-group eg_3060
+  qos-forwarding-group q4
+route-map map_gtp 70
+  forward-action permit 
+  match ip access-list v4_gtp_6
+  match ipv6 access-list v6_gtp_6
+  set egress-group eg_3070
+  qos-forwarding-group q5
+route-map map_gtp 80
+  forward-action permit 
+  match ip access-list v4_gtp_7
+  match ipv6 access-list v6_gtp_7
+  set egress-group eg_3080
+  qos-forwarding-group q6
+route-map map_gtp 90
+  forward-action permit 
+  match ip access-list v4_gtp_8
+  match ipv6 access-list v6_gtp_8
+  set egress-group eg_3090
+  qos-forwarding-group q7
+route-map map_gtp 100
+  forward-action permit 
+  match ip access-list v4_gtp_9
+  match ipv6 access-list v6_gtp_9
+  set egress-group eg_3100
+  qos-forwarding-group q1
+route-map map_gtp 110
+  forward-action permit 
+  match ip access-list v4_gtp_10
+  match ipv6 access-list v6_gtp_10
+  set egress-group eg_3110
+  qos-forwarding-group q2
+route-map map_gtp 120
+  forward-action permit 
+  match ip access-list v4_gtp_11
+  match ipv6 access-list v6_gtp_11
+  set egress-group eg_3120
+  qos-forwarding-group q3
+route-map map_gtp 130
+  forward-action permit 
+  match ip access-list v4_gtp_12
+  match ipv6 access-list v6_gtp_12
+  set egress-group eg_3130
+  qos-forwarding-group q4
+route-map map_gtp 140
+  forward-action permit 
+  match ip access-list v4_gtp_13
+  match ipv6 access-list v6_gtp_13
+  set egress-group eg_3140
+  qos-forwarding-group q5
+route-map map_gtp 150
+  forward-action permit 
+  match ip access-list v4_gtp_14
+  match ipv6 access-list v6_gtp_14
+  set egress-group eg_3150
+  qos-forwarding-group q6
+route-map map_gtp 160
+  forward-action permit 
+  match ip access-list v4_gtp_15
+  match ipv6 access-list v6_gtp_15
+  set egress-group eg_3160
+  qos-forwarding-group q7
+route-map map_gtp 170
+  forward-action permit 
+  match ip access-list v4_gtp_16
+  match ipv6 access-list v6_gtp_16
+  set egress-group eg_3170
+  qos-forwarding-group q1
+route-map map_gtp 180
+  forward-action permit 
+  match ip access-list v4_gtp_17
+  match ipv6 access-list v6_gtp_17
+  set egress-group eg_3180
+  qos-forwarding-group q2
+route-map map_gtp 190
+  forward-action permit 
+  match ip access-list v4_gtp_18
+  match ipv6 access-list v6_gtp_18
+  set egress-group eg_3190
+  qos-forwarding-group q3
+route-map map_gtp 200
+  forward-action permit 
+  match ip access-list v4_gtp_19
+  match ipv6 access-list v6_gtp_19
+  set egress-group eg_3200
+  qos-forwarding-group q4
+route-map map_gtp 2000
+  forward-action permit 
+  match ip access-list v4_deny
+  match ipv6 access-list v6_deny
+  set egress-group eg_3210
+route-map map_vcp 10
+  forward-action permit 
+  match ip access-list v4_vcp_0
+  match ipv6 access-list v6_vcp_0
+  set egress-group eg_1010
+route-map map_vcp 20
+  forward-action permit 
+  match ip access-list v4_vcp_1
+  match ipv6 access-list v6_vcp_1
+  set egress-group eg_1020
+route-map map_vcp 30
+  forward-action permit 
+  match ip access-list v4_vcp_2
+  match ipv6 access-list v6_vcp_2
+  set egress-group eg_1030
+route-map map_vcp 40
+  forward-action permit 
+  match ip access-list v4_vcp_3
+  match ipv6 access-list v6_vcp_3
+  set egress-group eg_1040
+route-map map_vcp 50
+  forward-action permit 
+  match ip access-list v4_vcp_4
+  match ipv6 access-list v6_vcp_4
+  set egress-group eg_1050
+route-map map_vcp 60
+  forward-action permit 
+  match ip access-list v4_vcp_5
+  match ipv6 access-list v6_vcp_5
+  set egress-group eg_1060
+route-map map_vcp 70
+  forward-action permit 
+  match ip access-list v4_vcp_6
+  match ipv6 access-list v6_vcp_6
+  set egress-group eg_1070
+route-map map_vcp 80
+  forward-action permit 
+  match ip access-list v4_vcp_7
+  match ipv6 access-list v6_vcp_7
+  set egress-group eg_1080
+route-map map_vcp 90
+  forward-action permit 
+  match ip access-list v4_vcp_8
+  match ipv6 access-list v6_vcp_8
+  set egress-group eg_1090
+route-map map_vcp 100
+  forward-action permit 
+  match ip access-list v4_vcp_9
+  match ipv6 access-list v6_vcp_9
+  set egress-group eg_1100
+route-map map_vcp 110
+  forward-action permit 
+  match ip access-list v4_vcp_10
+  match ipv6 access-list v6_vcp_10
+  set egress-group eg_1110
+route-map map_vcp 120
+  forward-action permit 
+  match ip access-list v4_vcp_11
+  match ipv6 access-list v6_vcp_11
+  set egress-group eg_1120
+route-map map_vcp 130
+  forward-action permit 
+  match ip access-list v4_vcp_12
+  match ipv6 access-list v6_vcp_12
+  set egress-group eg_1130
+route-map map_vcp 140
+  forward-action permit 
+  match ip access-list v4_vcp_13
+  match ipv6 access-list v6_vcp_13
+  set egress-group eg_1140
+route-map map_vcp 150
+  forward-action permit 
+  match ip access-list v4_vcp_14
+  match ipv6 access-list v6_vcp_14
+  set egress-group eg_1150
+route-map map_vcp 160
+  forward-action permit 
+  match ip access-list v4_vcp_15
+  match ipv6 access-list v6_vcp_15
+  set egress-group eg_1160
+route-map map_vcp 170
+  forward-action permit 
+  match ip access-list v4_vcp_16
+  match ipv6 access-list v6_vcp_16
+  set egress-group eg_1170
+route-map map_vcp 180
+  forward-action permit 
+  match ip access-list v4_vcp_17
+  match ipv6 access-list v6_vcp_17
+  set egress-group eg_1180
+route-map map_vcp 190
+  forward-action permit 
+  match ip access-list v4_vcp_18
+  match ipv6 access-list v6_vcp_18
+  set egress-group eg_1190
+route-map map_vcp 200
+  forward-action permit 
+  match ip access-list v4_vcp_19
+  match ipv6 access-list v6_vcp_19
+  set egress-group eg_1200
+route-map map-mpls 10
+  forward-action permit 
+  match ip access-list v4_mpls
+  match mac access-list test123
+route-map map_mpls 1
+  forward-action permit 
+route-map map_mpls 10
+  forward-action permit 
+  match ip access-list ip_mpls
+  set egress-group eg_4210
+route-map map_fwtap 50
+  forward-action permit 
+  match ip access-list v4_fw_mob_https
+  match ipv6 access-list v6_fw_mob_https
+  set egress-group eg_2090
+  qos-forwarding-group q7
+route-map map_fwtap 100
+  forward-action permit 
+  match ip access-list v4_fw_mob_vlan2581
+  match ipv6 access-list v6_fw_mob_vlan2581
+  set egress-group eg_2000
+  qos-forwarding-group q6
+route-map map_fwtap 105
+  forward-action permit 
+  match ip access-list v4_fw_mob_vlan2582
+  match ipv6 access-list v6_fw_mob_vlan2582
+  set egress-group eg_2005
+route-map map_fwtap 110
+  forward-action permit 
+  match ip access-list v4_fw_mob_vlan2583
+  match ipv6 access-list v6_fw_mob_vlan2583
+  set egress-group eg_2010
+  qos-forwarding-group q5
+route-map map_fwtap 115
+  forward-action permit 
+  match ip access-list v4_fw_mob_vlan2584
+  match ipv6 access-list v6_fw_mob_vlan2584
+  set egress-group eg_2015
+route-map map_fwtap 120
+  forward-action permit 
+  match ip access-list v4_fw_mob_fwlog_vlan966
+  match ipv6 access-list v6_fw_mob_fwlog_vlan966
+  set egress-group eg_2020
+route-map map_fwtap 125
+  forward-action permit 
+  match ip access-list v4_fw_mob_vvm_vlan179
+  match ipv6 access-list v6_fw_mob_vvm_vlan179
+  set egress-group eg_2025
+route-map map_fwtap 130
+  forward-action permit 
+  match mac access-list l2_fw_mob_l2_arp-lacp
+  set egress-group eg_2030
+route-map map_fwtap 135
+  forward-action permit 
+  match ip access-list v4_fw_mob_psgw_vlans
+  match ipv6 access-list v6_fw_mob_psgw_vlans
+  set egress-group eg_2035
+route-map map_fwtap 150
+  forward-action permit 
+  match ip access-list v4_wxfw_mob_vlan2471
+  match ipv6 access-list v6_wxfw_mob_vlan2471
+  set egress-group eg_2050
+route-map map_fwtap 155
+  forward-action permit 
+  match ip access-list v4_wxfw_mob_vlan2475
+  match ipv6 access-list v6_wxfw_mob_vlan2475
+  set egress-group eg_2055
+route-map map_fwtap 200
+  forward-action permit 
+  match ip access-list v4_fw_svc_vlan2409
+  match ipv6 access-list v6_fw_svc_vlan2409
+  set egress-group eg_2100
+route-map map_fwtap 205
+  forward-action permit 
+  match ip access-list v4_fw_svc_vlan2429
+  match ipv6 access-list v6_fw_svc_vlan2429
+  set egress-group eg_2105
+route-map map_fwtap 210
+  forward-action permit 
+  match ip access-list v4_fw_svc_vlan2454
+  match ipv6 access-list v6_fw_svc_vlan2454
+  set egress-group eg_2110
+route-map map_fwtap 230
+  forward-action permit 
+  match mac access-list l2_fw_svc_l2_arp-lacp
+  set egress-group eg_2130
+route-map map_fwtap 235
+  forward-action permit 
+  match ip access-list v4_fw_svc_psgw_vlan2649
+  match ipv6 access-list v6_fw_svc_psgw_vlan2650
+  set egress-group eg_2135
+route-map map_fwtap 250
+  forward-action permit 
+  match ip access-list v4_wxfw_svc_vlan2491
+  match ipv6 access-list v6_wxfw_svc_vlan2491
+  set egress-group eg_2150
+route-map map_fwtap 255
+  forward-action permit 
+  match ip access-list v4_wxfw_svc_vlan2493
+  match ipv6 access-list v6_wxfw_svc_vlan2493
+  set egress-group eg_2155

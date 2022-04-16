@@ -1,0 +1,10 @@
+Value Key,Required FORWARDING_GROUP (\S+) 
+Value QUEUE (\S+) 
+
+Start
+ ^qos
+ ^\s*for -> Continue.Record
+ ^\s*forwarding\-group\s+${FORWARDING_GROUP}
+ ^\s*queue\s+${QUEUE}
+ ^\s*$$
+ ^. -> Error

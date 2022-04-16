@@ -1,0 +1,8 @@
+Value DIRECTION ([RT]X)
+Value INTERFACE ([\d/:]+)
+Value PACKET_COUNT (\d+)
+
+Start
+ ^\s*All\s+protocol\s+${DIRECTION}\s+capture\s+is\s+enabled\s+on\s+interface\s+Eth\s+${INTERFACE}\.\s*(Number\s+of\s+packet\s+to\s+capture\s+${PACKET_COUNT}\.)?\s* -> Record
+ ^\s*$$
+ ^. -> Error

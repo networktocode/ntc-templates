@@ -1,0 +1,34 @@
+---
+parsed_sample:
+  - time_stamp: "2021-10-29 10:30:32.194 UTC +0000"
+    log_id: "8001"
+    severity: "info"
+    message: "nouser/norole/(null)/ssh/cli, Status:100 Command:'operational assigned\
+      \ to groups:  admin'"
+  - time_stamp: "2021-10-29 10:30:57.865 UTC +0000"
+    log_id: "7001"
+    severity: "info"
+    message: "none/none/none/http/grpc Method:/aaa.Accounting/UserLogged Status:OK\
+      \ Request:username:\"admin\""
+  - time_stamp: "2021-10-29 10:30:57.867 UTC +0000"
+    log_id: "8001"
+    severity: "info"
+    message: "LOGIN_MESSAGE_START admin/admin sudo//ssh/cli, Status:100'"
+  - time_stamp: "2021-10-29 10:30:58.466 UTC +0000"
+    log_id: "8001"
+    severity: "info"
+    message: "admin/admin sudo//ssh/cli, Status:0 Command:'operational show firmware'"
+  - time_stamp: "2021-10-29 10:30:59.144 UTC +0000"
+    log_id: "8001"
+    severity: "info"
+    message: "admin/admin sudo//ssh/cli, Status:0 Command:'operational show chassis'"
+  - time_stamp: "2022-04-04 19:44:20.839 UTC +0000"
+    log_id: "8001"
+    severity: "info"
+    message: "admin/admin sudo/134.141.56.22/ssh/cli, Status:0 Command:'operational\
+      \ show lldp neighbors'"
+  - time_stamp: "2022-04-04 19:44:21.214 UTC +0000"
+    log_id: "8001"
+    severity: "info"
+    message: "admin/admin sudo/134.141.56.22/ssh/cli, Status:0 Command:'operational\
+      \ show lldp neighbors interface ethernet all'"

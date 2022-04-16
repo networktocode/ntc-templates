@@ -1,0 +1,87 @@
+ -------------------------------------
+ Frames Logged on interface =  7/2
+ -------------------------------------
+
+ ----------------------------------------------------
+ Pkt Capture Metadata: #1 of 142494 Packets
+ --------------------:-------------------------------
+ Frame Received Time : Mon, 04 Apr 2022 23:24:57 UTC
+ Packet Length(bytes): 316
+ Packet Direction    : RX
+ Packet Filter       : All
+ Front Panel Port    : 7/2
+ --------------------:--------------------
+ ETHERNET HEADER     :
+ --------------------:
+ SrcMAC              : 41:55:42:67:7b:16
+ DstMAC              : 7f:b7:9e:de:31:87
+ EtherType           : Dot1Q(0x8100)
+ --------------------:--------------------
+ DOT1Q HEADER        :
+ --------------------:
+ DropEligible        : false
+ Priority            : 0
+ Type                : IPv4(0x800)
+ VlanId              : 2494
+ --------------------:--------------------
+ IPv4 HEADER         :
+ --------------------:
+ Src IP Address      : 101.57.148.248
+ Dst IP Address      : 80.59.178.10
+ Type of service     : 0
+ Total Length        : 298 Bytes
+ Identification      : 0x0
+ Fragmentation       : 0
+ TTL                 : 64
+ Protocol            : TCP(6)
+ IP Checksum         : 0x7d57
+ --------------------:--------------------
+ TCP DETAILS         :
+ --------------------:
+ Source Port         : 50437
+ Destination Port    : 43458
+ Seq Number          : 0x0
+ Ack Number          : 0x0
+ --------------------:--------------------
+
+ ----------------------------------------------------
+ Pkt Capture Metadata: #2 of 142494 Packets
+ --------------------:-------------------------------
+ Frame Received Time : Mon, 04 Apr 2022 23:24:57 UTC
+ Packet Length(bytes): 258
+ Packet Direction    : RX
+ Packet Filter       : All
+ Front Panel Port    : 7/2
+ --------------------:--------------------
+ ETHERNET HEADER     :
+ --------------------:
+ SrcMAC              : 82:aa:60:34:2b:fc
+ DstMAC              : 59:9f:67:21:34:a9
+ EtherType           : Dot1Q(0x8100)
+ --------------------:--------------------
+ DOT1Q HEADER        :
+ --------------------:
+ DropEligible        : false
+ Priority            : 0
+ Type                : IPv4(0x800)
+ VlanId              : 2582
+ --------------------:--------------------
+ IPv4 HEADER         :
+ --------------------:
+ Src IP Address      : 202.26.63.29
+ Dst IP Address      : 17.133.49.190
+ Type of service     : 0
+ Total Length        : 240 Bytes
+ Identification      : 0x0
+ Fragmentation       : 0
+ TTL                 : 64
+ Protocol            : TCP(6)
+ IP Checksum         : 0x2d8e
+ --------------------:--------------------
+ TCP DETAILS         :
+ --------------------:
+ Source Port         : 35378
+ Destination Port    : 34025
+ Seq Number          : 0x0
+ Ack Number          : 0x0
+ --------------------:--------------------
