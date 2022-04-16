@@ -1,53 +1,51 @@
-Value PORT_CHANNEL ([\d/\:]+)
-Value CARRIER_TRANSITION_COUNT (\d+)
-Value LAST_CLEAR (\d+)
-Value TOTAL_PKTS_IN (\d+)
-Value BROADCAST_PKTS_IN (\d+)
-Value DISCARD_PKTS_IN (\d+)
-Value ERRORS_PKTS_IN (\d+)
-Value FCS_ERRORS_IN (\d+)
-Value MCAST_PKTS_IN (\d+)
-Value OCTETS_IN (\d+)
-Value UCAST_PKTS_IN (\d+)
-Value TOTAL_PKTS_OUT (\d+)
-Value BROADCAST_PKTS_OUT (\d+)
-Value DISCARD_PKTS_OUT (\d+)
-Value ERRORS_PKTS_OUT (\d+)
-Value MCAST_PKTS_OUT (\d+)
-Value OCTETS_OUT (\d+)
-Value UCAST_PKTS_OUT (\d+)
+Value Key,Required INTERFACE (\S+\s\S+)
+Value CARRIER_TRANSITION (\d+)
+Value LAST_CLEAR (\S+)
+Value RX_TOTAL_PKTS (\d+)
+Value RX_BROADCAST_PKTS (\d+)
+Value RX_DISCARD_PKTS (\d+)
+Value RX_ERRORS_PKTS (\d+)
+Value RX_FCS_ERRORS (\d+)
+Value RX_MCAST_PKTS (\d+)
+Value RX_OCTETS (\d+)
+Value RX_UCAST_PKTS (\d+)
+Value RX_UNKNOWN_PROTOCOLS (\d+)
+Value TX_TOTAL_PKTS (\d+)
+Value TX_BROADCAST_PKTS (\d+)
+Value TX_DISCARD_PKTS (\d+)
+Value TX_ERRORS_PKTS (\d+)
+Value TX_MCAST_PKTS (\d+)
+Value TX_OCTETS (\d+)
+Value TX_UCAST_PKTS (\d+)
 
 Start
-  ^\s*Interface\s+Statistics:\s+port\-channel\s+${PORT_CHANNEL}
-  ^\s*Carrier\s+Transitions:\s+${CARRIER_TRANSITION_COUNT}
+  ^\s*Interface\s+Statistics:\s+${INTERFACE}
+  ^\s*Carrier\s+Transitions:\s+${CARRIER_TRANSITION}
   ^\s*LastClear:\s+${LAST_CLEAR}
-  ^\s*Input: -> INPUT
+  ^\s*Input: -> Input
+  ^\s*Out: -> Out
   ^\s*$$
   ^. -> Error
 
+Input
+  ^\s*Total\s+\S+:\s+${RX_TOTAL_PKTS}
+  ^\s*Broadcast\s+\S+:\s+${RX_BROADCAST_PKTS}
+  ^\s*Discard\s+\S+:\s+${RX_DISCARD_PKTS}
+  ^\s*Errors\s+\S+:\s+${RX_ERRORS_PKTS}
+  ^\s*FCS Errors:\s+${RX_FCS_ERRORS}
+  ^\s*MCast\s+\S+:\s+${RX_MCAST_PKTS}
+  ^\s*Octets:\s+${RX_OCTETS}
+  ^\s*UCast\s+\S+:\s+${RX_UCAST_PKTS} -> Start
+  ^\s*$$
+  ^. -> Error
 
-INPUT
- ^\s+Total pkts: ${TOTAL_PKTS_IN}
- ^\s+Broadcast pkts: ${BROADCAST_PKTS_IN}
- ^\s+Discard pkts: ${DISCARD_PKTS_IN}
- ^\s+Errors pkts: ${ERRORS_PKTS_IN}
- ^\s+FCS Errors: ${FCS_ERRORS_IN}
- ^\s+MCast pkts:${MCAST_PKTS_IN}
- ^\s+Octets: ${OCTETS_IN}
- ^\s+UCast pkts: ${UCAST_PKTS_IN}
- ^\s*Out: -> OUT
- ^\s*$$
- ^. -> Error
-
-
-OUT
- ^\s+Total pkts: ${TOTAL_PKTS_OUT}
- ^\s+Broadcast pkts: ${BROADCAST_PKTS_OUT}
- ^\s+Discard pkts: ${DISCARD_PKTS_OUT}
- ^\s+Errors pkts: ${ERRORS_PKTS_OUT}
- ^\s+MCast pkts: ${MCAST_PKTS_OUT}
- ^\s+Octets: ${OCTETS_OUT}
- ^\s+ UCast pkts: ${UCAST_PKTS_OUT} -> Record
- ^ -> Start
- ^\s*$$
- ^. -> Error
+Out
+  ^\s*Total\s+\S+:\s+${TX_TOTAL_PKTS}
+  ^\s*Broadcast\s+\S+:\s+${TX_BROADCAST_PKTS}
+  ^\s*Discard\s+\S+:\s+${TX_DISCARD_PKTS}
+  ^\s*Errors\s+\S+:\s+${TX_ERRORS_PKTS}
+  ^\s*MCast\s+\S+:\s+${TX_MCAST_PKTS}
+  ^\s*Octets:\s+${TX_OCTETS}
+  ^\s*UCast\s+\S+:\s+${TX_UCAST_PKTS} -> Record Start
+  ^\s*$$
+  ^. -> Error

@@ -1,90 +1,84 @@
-Value ETHERNET ([\d/\:]+)
-Value CARRIER_TRANSITION_COUNT (\d+)
-Value LAST_CLEAR (\d+)
-Value TOTAL_PKTS_IN (\d+)
-Value BROADCAST_PKTS_IN (\d+)
-Value DISCARD_PKTS_IN (\d+)
-Value ERRORS_PKTS_IN (\d+)
-Value FCS_ERRORS_IN (\d+)
-Value MCAST_PKTS_IN (\d+)
-Value OCTETS_IN (\d+)
-Value UCAST_PKTS_IN (\d+)
-Value RUNT_IN (\d+)
-Value CRC_IN (\d+)
-Value DISTRO_64B (\d+)
-Value DISTRO_65B_127B (\d+)
-Value DISTRO_128B_255B (\d+)
-Value DISTRO_256B_511B (\d+)
-Value DISTRO_512B_1023B (\d+)
-Value DISTRO_1024B_1518B (\d+)
-Value DISTRO_JUMBO (\d+)
-Value TOTAL_PKTS_OUT (\d+)
-Value BROADCAST_PKTS_OUT (\d+)
-Value DISCARD_PKTS_OUT (\d+)
-Value ERRORS_PKTS_OUT (\d+)
-Value MCAST_PKTS_OUT (\d+)
-Value OCTETS_OUT (\d+)
-Value UCAST_PKTS_OUT (\d+)
-Value RATE_IN_MBPS ([\d.]+)
-Value RATE_IN_PPS ([\d]+)
-Value RATE_IN_PERCENT ([\d.]+)
-Value RATE_OUT_MBPS ([\d.]+)
-Value RATE_OUT_PPS ([\d]+)
-Value RATE_OUT_PERCENT ([\d.]+)
+Value INTERFACE (\S+\s\S+)
+Value CARRIER_TRANSITION (\d+)
+Value LAST_CLEAR (\S+)
+Value RX_TOTAL_PKTS (\d+)
+Value RX_BROADCAST_PKTS (\d+)
+Value RX_DISCARD_PKTS (\d+)
+Value RX_ERRORS_PKTS (\d+)
+Value RX_FCS_ERRORS (\d+)
+Value RX_MCAST_PKTS (\d+)
+Value RX_OCTETS (\d+)
+Value RX_UCAST_PKTS (\d+)
+Value RX_RUNTS (\d+)
+Value RX_CRC_ERRORS (\d+)
+Value RX_BYTE_64_PKTS (\d+)
+Value RX_BYTE_65_127_PKTS (\d+)
+Value RX_BYTE_128_255_PKTS (\d+)
+Value RX_BYTE_256_511_PKTS (\d+)
+Value RX_BYTE_512_1023_PKTS (\d+)
+Value RX_BYTE_1024_1518_PKTS (\d+)
+Value RX_JUMBO_PKTS (\d+)
+Value TX_TOTAL_PKTS (\d+)
+Value TX_BROADCAST_PKTS (\d+)
+Value TX_DISCARD_PKTS (\d+)
+Value TX_ERRORS_PKTS (\d+)
+Value TX_MCAST_PKTS (\d+)
+Value TX_OCTETS (\d+)
+Value TX_UCAST_PKTS (\d+)
+Value RX_MBITS_SEC (\S+)
+Value RX_PKTS_SEC (\S+)
+Value RX_PERCENT (\S+)
+Value TX_MBITS_SEC (\S+)
+Value TX_PKTS_SEC (\S+)
+Value TX_PERCENT (\S+)
 
 Start
- ^\s*Interface\s+Statistics:\s+ethernet\s+${ETHERNET}
- ^\s*Carrier\s+Transitions:\s+${CARRIER_TRANSITION_COUNT}
- ^\s*LastClear:\s+${LAST_CLEAR}s
- ^\s*Input: -> INPUT
- ^\s*$$
- ^. -> Error
+  ^\s*Interface Statistics: ${INTERFACE}
+  ^\s*Carrier\s+Transitions:\s+${CARRIER_TRANSITION}
+  ^\s*LastClear:\s+${LAST_CLEAR}
+  ^Input: -> Input
+  ^Input Distribution: -> Distribution
+  ^Out: -> Out
+  ^Rate Info: -> Rate
+  ^\s*$$
+  ^. -> Error
 
-  
+Input
+  ^\s*Total\s+\S+:\s+${RX_TOTAL_PKTS}
+  ^\s*Broadcast\s+\S+:\s+${RX_BROADCAST_PKTS}
+  ^\s*Discard\s+\S+:\s+${RX_DISCARD_PKTS}
+  ^\s*Errors\s+\S+:\s+${RX_ERRORS_PKTS}
+  ^\s*FCS Errors:\s+${RX_FCS_ERRORS}
+  ^\s*MCast\s+\S+:\s+${RX_MCAST_PKTS}
+  ^\s*Octets:\s+${RX_OCTETS}
+  ^\s*UCast\s+\S+:\s+${RX_UCAST_PKTS}
+  ^\s*Runt\s+\S+:\s+${RX_RUNTS}
+  ^\s*CRC Errors:\s+${RX_CRC_ERRORS} -> Start
+  ^\s*$$
+  ^. -> Error
 
-INPUT
- ^\s+Total pkts: ${TOTAL_PKTS_IN}
- ^\s+Broadcast pkts: ${BROADCAST_PKTS_IN}
- ^\s+Discard pkts: ${DISCARD_PKTS_IN}
- ^\s+Errors pkts: ${ERRORS_PKTS_IN}
- ^\s+FCS Errors: ${FCS_ERRORS_IN}
- ^\s+MCast pkts:${MCAST_PKTS_IN}
- ^\s+Octets: ${OCTETS_IN}
- ^\s+UCast pkts: ${UCAST_PKTS_IN}
- ^\s+Runt pkts: ${RUNT_IN}
- ^\s+CRC Errors: ${CRC_IN} 
- ^\s*Input\s+Distribution: -> IN_DISTRO
- ^\s*$$
- ^. -> Error
+Distribution
+  ^\s*64 byte pkts: ${RX_BYTE_64_PKTS}
+  ^\s*65\-127 byte pkts: ${RX_BYTE_65_127_PKTS}
+  ^\s*128\-255 byte pkts: ${RX_BYTE_128_255_PKTS}
+  ^\s*256\-511 byte pkts: ${RX_BYTE_256_511_PKTS}
+  ^\s*512\-1023 byte pkts: ${RX_BYTE_512_1023_PKTS}
+  ^\s*1024\-1518 byte pkts: ${RX_BYTE_1024_1518_PKTS}
+  ^\s*Jumbo pkts: ${RX_JUMBO_PKTS} -> Start
 
-IN_DISTRO
- ^\s+64 byte pkts: ${DISTRO_64B}
- ^\s+65-127 byte pkts: ${DISTRO_65B_127B}
- ^\s+128-255 byte pkts: ${DISTRO_128B_255B}
- ^\s+256-511 byte pkts: ${DISTRO_256B_511B}
- ^\s+512-1023 byte pkts: ${DISTRO_512B_1023B}
- ^\s+1024-1518 byte pkts: ${DISTRO_1024B_1518B}
- ^\s+Jumbo pkts: ${DISTRO_JUMBO}
- ^\s*Out: -> OUT
- ^\s*$$
- ^. -> Error
+Out
+  ^\s*Total\s+\S+:\s+${TX_TOTAL_PKTS}
+  ^\s*Broadcast\s+\S+:\s+${TX_BROADCAST_PKTS}
+  ^\s*Discard\s+\S+:\s+${TX_DISCARD_PKTS}
+  ^\s*Errors\s+\S+:\s+${TX_ERRORS_PKTS}
+  ^\s*MCast\s+\S+:\s+${TX_MCAST_PKTS}
+  ^\s*Octets:\s+${TX_OCTETS}
+  ^\s*UCast\s+\S+:\s+${TX_UCAST_PKTS} -> Start
+  ^\s*$$
+  ^. -> Error
 
-OUT
- ^\s+Total pkts: ${TOTAL_PKTS_OUT}
- ^\s+Broadcast pkts: ${BROADCAST_PKTS_OUT}
- ^\s+Discard pkts: ${DISCARD_PKTS_OUT}
- ^\s+Errors pkts: ${ERRORS_PKTS_OUT}
- ^\s+MCast pkts: ${MCAST_PKTS_OUT}
- ^\s+Octets: ${OCTETS_OUT}
- ^\s+ UCast pkts: ${UCAST_PKTS_OUT}
- ^\s*Rate Info: -> RATE
- ^\s*$$
- ^. -> Error
-
-
-RATE
- ^\s+Input: ${RATE_IN_MBPS} Mbits/sec, ${RATE_IN_PPS} pkts/sec ${RATE_IN_PERCENT}% of line-rate
- ^\s+Output: ${RATE_OUT_MBPS} Mbits/sec, ${RATE_OUT_PPS} pkts/sec ${RATE_OUT_PERCENT}% of line-rate -> Record
- ^ -> Start
- ^\s*$$
- ^. -> Error
+Rate
+  ^\s+Input: ${RX_MBITS_SEC} Mbits/sec, ${RX_PKTS_SEC} pkts/sec ${RX_PERCENT}\% of line-rate
+  ^\s+Output: ${TX_MBITS_SEC} Mbits/sec, ${TX_PKTS_SEC} pkts/sec ${TX_PERCENT}\% of line-rate -> Record Start
+  ^\s*$$
+  ^. -> Error

@@ -12,6 +12,7 @@ Value LFS_ADMIN_STATE (\S+)
 Value LFS_STATUS ([\S\s]+)
 Value CARRIER_TRANSITION (\d+)
 Value LAST_CLEAR (\S+)
+Value RX_TOTAL_PKTS (\d+)
 Value RX_BROADCAST_PKTS (\d+)
 Value RX_DISCARD_PKTS (\d+)
 Value RX_ERRORS_PKTS (\d+)
@@ -66,7 +67,7 @@ Statistics
   ^. -> Error
 
 Input
-  ^\s*Total\s+\S+:\s+${RX_BROADCAST_PKTS}
+  ^\s*Total\s+\S+:\s+${RX_TOTAL_PKTS}
   ^\s*Broadcast\s+\S+:\s+${RX_BROADCAST_PKTS}
   ^\s*Discard\s+\S+:\s+${RX_DISCARD_PKTS}
   ^\s*Errors\s+\S+:\s+${RX_ERRORS_PKTS}
@@ -89,7 +90,7 @@ Distribution
   ^\s*Jumbo pkts: ${RX_JUMBO_PKTS} -> Start
 
 Out
-  ^\s*Total\s+\S+:\s+${TX_BROADCAST_PKTS}
+  ^\s*Total\s+\S+:\s+${TX_TOTAL_PKTS}
   ^\s*Broadcast\s+\S+:\s+${TX_BROADCAST_PKTS}
   ^\s*Discard\s+\S+:\s+${TX_DISCARD_PKTS}
   ^\s*Errors\s+\S+:\s+${TX_ERRORS_PKTS}

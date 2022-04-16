@@ -60,7 +60,7 @@ Statistics
   ^. -> Error
 
 Input
-  ^\s*Total\s+\S+:\s+${RX_BROADCAST_PKTS}
+  ^\s*Total\s+\S+:\s+${RX_TOTAL_PKTS}
   ^\s*Broadcast\s+\S+:\s+${RX_BROADCAST_PKTS}
   ^\s*Discard\s+\S+:\s+${RX_DISCARD_PKTS}
   ^\s*Errors\s+\S+:\s+${RX_ERRORS_PKTS}
@@ -71,7 +71,7 @@ Input
   ^. -> Error
 
 Out
-  ^\s*Total\s+\S+:\s+${TX_BROADCAST_PKTS}
+  ^\s*Total\s+\S+:\s+${TX_TOTAL_PKTS}
   ^\s*Broadcast\s+\S+:\s+${TX_BROADCAST_PKTS}
   ^\s*Discard\s+\S+:\s+${TX_DISCARD_PKTS}
   ^\s*Errors\s+\S+:\s+${TX_ERRORS_PKTS}
