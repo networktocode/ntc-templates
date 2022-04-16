@@ -5,9 +5,11 @@ Value MODULE_TYPE ([\w\d]+)
 Value PART_NUMBER ([\w\d\-_]+)
 Value SERIAL_NUMBER ([\w\d\-_]+)
 Value VENDOR ([\w\d\,\-]+)
-Value DESCRIPTION ([\S\s]+)
+Value DESCRIPTION ([\S\s]+\S)
 
 Start
- ^\s*${INTERFACE}\s*${QUAL}\s*${OPTICAL}\s*${MODULE_TYPE}\s*${PART_NUMBER}\s*${SERIAL_NUMBER}\s*${VENDOR}\s*${DESCRIPTION} -> Record 
+ ^S/C\s+Qual\s+Optical\s+Type\s+PartNum\s+SerialNum\s+Vendor\s+Description              
+ ^[-]+
+ ^\s*${INTERFACE}\s+${QUAL}\s+${OPTICAL}\s+${MODULE_TYPE}(\s+${PART_NUMBER}|\s+)(\s+${SERIAL_NUMBER}|\s+)(\s+${VENDOR}|\s+)\s+${DESCRIPTION} -> Record 
  ^\s*$$
  ^. -> Error
