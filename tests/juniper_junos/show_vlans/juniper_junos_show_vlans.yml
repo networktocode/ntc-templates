@@ -1,0 +1,34 @@
+- INTERFACES:
+  - ae0.0*
+  - et-0/0/24.0*
+  - ge-0/0/3.0
+  - xe-0/0/13.0*
+  - xe-0/0/15.0*
+  - xe-0/0/17.0*
+  - xe-0/0/9.0*
+  ROUTING_INSTANCE: default-switch
+  TAG: '100'
+  VLAN_NAME: v100-Control
+- INTERFACES:
+  - ae0.0*
+  - et-0/0/24.0*
+  - ge-0/0/7.0
+  - xe-0/0/13.0*
+  - xe-0/0/15.0*
+  - xe-0/0/17.0*
+  - xe-0/0/9.0*
+  ROUTING_INSTANCE: default-switch
+  TAG: '1005'
+  VLAN_NAME: v1005-HelpDesk
+- INTERFACES:
+  - ae0.0*
+  - et-0/0/24.0*
+  - ge-0/0/7.0
+  - xe-0/0/13.0*
+  - xe-0/0/15.0*
+  - xe-0/0/17.0*
+  - xe-0/0/22.0
+  - xe-0/0/9.0*
+  ROUTING_INSTANCE: default-switch
+  TAG: '109'
+  VLAN_NAME: v109-TEMP-Project-Data
