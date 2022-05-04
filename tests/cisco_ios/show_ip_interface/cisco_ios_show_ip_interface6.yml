@@ -1,0 +1,28 @@
+---
+parsed_sample:
+  - intf: "Vlan20"
+    link_status: "up"
+    protocol_status: "up"
+    ipaddr:
+      - "10.81.0.1"
+    mask:
+      - "24"
+    vrf: "WALKUP"
+    mtu: "9100"
+    ip_helper:
+      - "111.222.188.253"
+      - "111.222.189.253"
+    outgoing_acl: ""
+    inbound_acl: ""
+  - intf: "FastEthernet0"
+    link_status: "up"
+    protocol_status: "up"
+    ipaddr:
+      - "172.16.3.226"
+    mask:
+      - "29"
+    vrf: ""
+    mtu: "1500"
+    ip_helper: []
+    outgoing_acl: ""
+    inbound_acl: ""

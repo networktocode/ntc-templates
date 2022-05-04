@@ -15,7 +15,7 @@ Start
   ^kernel
   ^Codes:
   # Match for codes
-  ^\s+\S+\s+-\s+\S+
+  ^\s+.+-.+
   ^\s*$$ -> Routes
   ^. -> Error
 

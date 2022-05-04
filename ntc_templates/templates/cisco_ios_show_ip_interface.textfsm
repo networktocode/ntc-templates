@@ -57,6 +57,9 @@ Start
   ^\s+IP\s+(Routed|Bridged)\s+Flow
   ^\s+(Input|Output|Post)\s+.*features
   ^\s+(IPv4\s+)?WCCP
+  ^\s+IP\s+verify\s+source\s+reachable
+  ^\s+\d+\s+(suppressed\s+)?verification\s+drop(s)?
+  ^\s*IP\s+Distributed\s+switching\s+is
   ^\s*$$
   # Capture time-stamp if vty line has command time-stamping turned on
   ^Load\s+for\s+

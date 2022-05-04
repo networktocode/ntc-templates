@@ -1,5 +1,5 @@
 Value LOCAL_INTERFACE (\S+)
-Value CHASSIS_ID (\S+)
+Value CHASSIS_ID ([^:]+)
 Value NEIGHBOR_PORT_ID (.*)
 Value NEIGHBOR_INTERFACE (.*)
 Value NEIGHBOR (.+?)
@@ -8,6 +8,12 @@ Value CAPABILITIES (.*)
 Value MANAGEMENT_IP (\S+)
 Value VLAN (\d+)
 Value SERIAL (\S+)
+Value POWER_PAIR (\S+)
+Value POWER_CLASS (\d+)
+Value POWER_DEVICE_TYPE (\S+)
+Value POWER_PRIORITY (\S+)
+Value POWER_SOURCE (\S+)
+Value POWER_REQUESTED (\d+)
 
 Start
   ^.*not advertised
@@ -27,7 +33,7 @@ Start
   ^Management\s+Addresses
   ^\s+OID
   ^\s+[\d+\.]{8,}
-  ^.*IP:\s+${MANAGEMENT_IP}
+  ^.*IP:\s+${MANAGEMENT_IP}\s*$$
   ^Auto\s+Negotiation
   ^Physical\s+media
   # Removed \(\s+\) from the template - The line 'Other/unknown' would not be captured
@@ -45,6 +51,7 @@ Start
   ^\s+\(\S+\)
   ^(?:PoE|\s+Power)
   ^\s*-+\s*$$ -> Record
+  ^Power\s+via\s+MDI -> PowerMDI
   ^MED -> Med
   ^\s*\^\s*
   ^\s*Total\s+entries\s+displayed -> Record
@@ -63,8 +70,17 @@ IgnoreDescription
   ^\s*$$
   ^.* -> Error
 
+PowerMDI
+  ^\s+Power\s+Pair:\s+${POWER_PAIR}\s*$$
+  ^\s+Power\s+Class:\s+${POWER_CLASS}\s*$$
+  ^\s+Power\s+Device\s+Type:\s+${POWER_DEVICE_TYPE}\s*$$
+  ^\s+Power\s+Source:\s+${POWER_SOURCE}\s*$$
+  ^\s+Power\s+Priority:\s+${POWER_PRIORITY}\s*$$
+  ^\s+Power\s+Requested:\s+${POWER_REQUESTED}\s+mW\s*$$
+  ^\s*$$ -> Start
+
 Med
-  ^\s+Serial\s+number:\s+${SERIAL}
+  ^\s+Serial\s+number:\s+${SERIAL}\s*$$
   ^\s+\S+
   ^\s*$$
   ^\s*Total\s+entries\s+displayed -> Record

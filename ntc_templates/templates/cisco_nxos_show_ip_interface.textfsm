@@ -8,6 +8,8 @@ Value PRIMARY_IP_SUBNET (\S+)
 Value PRIMARY_BROADCAST_ADDRESS (\S+)
 Value List SECONDARY_IP_ADDRESS (\S+)
 Value List SECONDARY_IP_SUBNET (\S+)
+Value List SECONDARY_ROUTE_PREFERENCE (\d+)
+Value List SECONDARY_ROUTE_PREFERENCE_TAG (\d+)
 Value MULTICAST_GROUPS (224\..*?)
 Value MTU (\d+)
 Value ROUTE_PREFERENCE (\d+)
@@ -20,9 +22,10 @@ Value DIRECTED_BROADCAST (\S+)
 Value IP_FORWARDING (\S+)
 Value ICMP_UNREACHABLES (\S+)
 Value ICMP_PORT_UNREACHABLE (\S+)
-Value URPF (\S+)
+Value URPF (.*)
 Value LOAD_SHARING (\S+)
 Value LAST_RESET (\S+)
+Value ACL_OUT (\S+)
 Value UNICAST_PACKETS_SENT (\d+)
 Value UNICAST_PACKETS_RECEIVED (\d+)
 Value UNICAST_PACKETS_FORWARDED (\d+)
@@ -72,7 +75,8 @@ Start
   ^${INTERFACE},.*protocol-${PROTOCOL_STATUS}\/link-${LINK_STATUS}\/admin-${ADMIN_STATUS},.*$$
   ^\s*IP\s+address:\s+${PRIMARY_IP_ADDRESS},\s+IP\s+subnet:\s+${PRIMARY_IP_SUBNET}(\s+route-preference.+)?$$
   # Secondary IP addresses are stored as a list
-  ^\s*IP\s+address:\s+${SECONDARY_IP_ADDRESS},\s+IP\s+subnet:\s+${SECONDARY_IP_SUBNET}\s+secondary\s*$$
+  ^\s*IP\s+address:\s+${SECONDARY_IP_ADDRESS},\s+IP\s+subnet:\s+${SECONDARY_IP_SUBNET}\s+secondary\s*(route-preference:\s+${SECONDARY_ROUTE_PREFERENCE},\s+tag:\s+${SECONDARY_ROUTE_PREFERENCE_TAG}\s*)?$$
+#  (,\s+route-preference:\s+${SECONDARY_ROUTE_PREFERENCE},\s+tag:\d+)?
   ^\s*IP\s+broadcast\s+address:\s+${PRIMARY_BROADCAST_ADDRESS}\s*$$
   ^\s*IP\s+multicast\s+groups\s+locally\s+joined:.*$$
   # Multiple multicast groups are on the same line so we can't make a list out of those
@@ -91,6 +95,9 @@ Start
   ^\s*IP\s+load\s+sharing:\s+${LOAD_SHARING}\s*$$
   ^\s*IP\s+interface\s+statistics\s+last\s+reset:\s+${LAST_RESET}\s*$$
   ^\s*IP\s+interface\s+software\s+stats:.*$$
+  ^\s*Unnumbered\s+interfaces\s+of
+  ^\s*mti\d+:
+  ^\s*IP\s+outbound\s+access\s+list:\s+${ACL_OUT}
   ^\s*Unicast\s+packets\s+:\s+${UNICAST_PACKETS_SENT}\/${UNICAST_PACKETS_RECEIVED}\/${UNICAST_PACKETS_FORWARDED}\/${UNICAST_PACKETS_ORIGINATED}\/${UNICAST_PACKETS_CONSUMED}\s*$$
   ^\s*Unicast\s+bytes\s+:\s+${UNICAST_BYTES_SENT}\/${UNICAST_BYTES_RECEIVED}\/${UNICAST_BYTES_FORWARDED}\/${UNICAST_BYTES_ORIGINATED}\/${UNICAST_BYTES_CONSUMED}\s*$$
   ^\s*Multicast\s+packets\s+:\s+${MULTICAST_PACKETS_SENT}\/${MULTICAST_PACKETS_RECEIVED}\/${MULTICAST_PACKETS_FORWARDED}\/${MULTICAST_PACKETS_ORIGINATED}\/${MULTICAST_PACKETS_CONSUMED}\s*$$
