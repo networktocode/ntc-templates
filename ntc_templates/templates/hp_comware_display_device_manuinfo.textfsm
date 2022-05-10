@@ -1,7 +1,7 @@
 Value Filldown CHASSIS_ID (\d+)
 Value Required SLOT_TYPE (Slot|Subslot|Fan|Power|Chassis)
 Value SLOT_ID (\d+|self)
-Value DEVICE_NAME (\S+)
+Value DEVICE_NAME (.+)
 Value DEVICE_SERIAL_NUMBER (\S+)
 Value MANUFACTURING_DATE (\S+)
 Value VENDOR_NAME (\S+)
