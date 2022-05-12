@@ -1,0 +1,17 @@
+top - 23:02:13 up 314 days,  8:27,  1 user,  load average: 0.49, 0.54, 0.45
+Tasks: 249 total,   1 running, 248 sleeping,   0 stopped,   0 zombie
+Cpu(s): 12.5%us,  2.3%sy,  0.0%ni, 84.5%id,  0.0%wa,  0.7%hi,  0.1%si,  0.0%st
+Mem:   3981336k total,  2726640k used,  1254696k free,   156856k buffers
+Swap:        0k total,        0k used,        0k free,  1521744k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND
+ 2858 root      20   0  576m 136m  59m S 20.0  3.5  29937:31 SandSlice
+ 2386 root      20   0  520m  89m  28m S  6.7  2.3  32548:01 PhyBcm54980
+ 1651 root      20   0  571m 205m 100m S  1.7  5.3   5281:38 Sysdb
+ 1919 root      20   0  177m 110m  88m S  1.7  2.8 581:14.16 ribd
+ 2333 root      20   0  508m  73m  20m S  1.7  1.9 320:07.84 FanDetector
+12654 ntc       20   0 26148  12m 9668 R  1.7  0.3   0:00.11 top
+    1 root      20   0 26076  12m 9824 S  0.0  0.3   0:03.77 init
+    6 root      RT   0     0    0    0 S  0.0  0.0   1:27.06 migration/0
+   10 root      20   0     0    0    0 S  0.0  0.0   0:10.83 ksoftirqd/1
+   13 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 khelper

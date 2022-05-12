@@ -10,26 +10,47 @@ Value MODE (routed|access|trunk|pvlan|fabric)
 Value REASON (\S+((\s\w+)+)?)
 Value PORTCH (\S+)
 Value DESCRIPTION (\S+((\s\w+)+)?)
+Value PROTOCOL (\S+)
 
 Start
   ^Port\s+VRF\s+Status\s+IP\s+Address\s+Speed\s+MTU -> Management 
+  ^Ethernet\s+VLAN\s+Type\sMode\s+Status\s+Reason\s+Speed\s+Port\s*$$ -> Ethernet
   ^Interface\s+Ch\s+ -> Ethernet 
-  ^Interface\s+Status\s+Description -> Loopback
+  ^Interface\s+Status\s+Description\s*$$ -> Loopback
   ^Interface\s+Secondary\s+VLAN\(Type\)\s+Status\s+Reason -> VLAN
+  ^Port-channel\s+VLAN\s+Type\sMode\s+Status\s+Reason\s+Speed\s+Protocol -> PORTCHANNEL
+  ^---+$$
+  ^. -> Error Start
 
 Management
   ^${INTERFACE}\s+${VRF}\s+${STATUS}\s+${IP}\s+${SPEED}\s+${MTU} -> Record
   ^Ethernet\s+VLAN\s+Type\s+Mode\s+Status\s+Reason\s+Speed\s+Port -> Start
+  ^---+$$
+  ^\s*$$ -> Start
+  ^. -> Error Management
 
 Ethernet
+  ^Interface\s+Ch\s+#\s*$$
   ^${INTERFACE}\s+${VLAN}\s+${TYPE}\s+${MODE}\s+${STATUS}\s+${REASON}\s+${SPEED}\s+${PORTCH} -> Record
-  ^Interface\s+Status\s+Description -> Start
+  ^---+$$
+  ^\s*$$ -> Start
+  ^. -> Error Etherenet
 
 Loopback
   ^${INTERFACE}\s+${STATUS}\s+${DESCRIPTION} -> Record
-  ^Interface\s+Secondary\s+VLAN\(Type\)\s+Status\s+Reason -> Start
+  ^---+$$
+  ^\s*$$ -> Start
+  ^. -> Error Loopback
 
 VLAN
   ^${INTERFACE}\s+${TYPE}\s+${STATUS}\s+${REASON} -> Record
+  ^---+$$
+  ^\s*$$ -> Start
+  ^. -> Error VLAN
 
-
+PORTCHANNEL
+  ^Interface\s*$$
+  ^${INTERFACE}\s+${VLAN}\s+${TYPE}\s+${MODE}\s+${STATUS}\s+${REASON}\s+${SPEED}\s+${PROTOCOL} -> Record
+  ^---+$$
+  ^\s*$$ -> Start
+  ^. -> Error PORTCHANNEL
