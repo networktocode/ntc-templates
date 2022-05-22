@@ -479,6 +479,15 @@ juniper_screenos_get_route.textfsm, .*, juniper_screenos, get route
 
 linux_arp_-a.textfsm, .*, linux, arp -a
 
+mikrotik_routeros_ip_firewall_filter_print_all_without-paging.textfsm, .*, mikrotik_routeros, [[/]]ip(v6)? firewall filter print all without-paging
+mikrotik_routeros_ip_dhcp-server_lease_print_without-paging.textfsm, .*, mikrotik_routeros, [[/]]ip dhcp-server lease print without-paging
+mikrotik_routeros_ip_firewall_nat_print_all_without-paging.textfsm, .*, mikrotik_routeros, [[/]]ip(v6)? firewall nat print all without-paging
+mikrotik_routeros_interface_ethernet_monitor_name_once.textfsm, .*, mikrotik_routeros, [[/]]interface ethernet monitor (\S+) once
+mikrotik_routeros_snmp_community_print_without-paging.textfsm, .*, mikrotik_routeros, [[/]]snmp community print without-paging
+mikrotik_routeros_ip_route_print_without-paging.textfsm, .*, mikrotik_routeros, [[/]]ip(v6)? route print without-paging
+mikrotik_routeros_ip_arp_print_without-paging.textfsm, .*, mikrotik_routeros, [[/]]ip arp print without-paging
+mikrotik_routeros_system_routerboard_print.textfsm, .*, mikrotik_routeros, [[/]]system routerboard print
+
 paloalto_panos_show_running_security-policy.textfsm, .*, paloalto_panos, sh[[ow]] runn[[ing]] security[[-policy]]
 paloalto_panos_show_high-availability_all.textfsm, .*, paloalto_panos, sh[[ow]] high[[-availability]] all
 paloalto_panos_test_security-policy-match.textfsm, .*, paloalto_panos, test security-policy-match.*
