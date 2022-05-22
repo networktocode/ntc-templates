@@ -54,6 +54,7 @@ OS_CHOICES = [
     "vyos",
     "watchguard_firebox",
     "yamaha",
+    "zyxel_os",
 ]
 CHOICES_STRING = "|".join(OS_CHOICES)
 RE_TEMPLATE_OS = re.compile(rf"^({CHOICES_STRING})")
