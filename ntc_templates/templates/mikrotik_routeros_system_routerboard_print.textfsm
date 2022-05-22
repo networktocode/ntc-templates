@@ -1,0 +1,21 @@
+Value routerboard (\S+)
+Value board_name (\S+)
+Value hardware_model (\S+)
+Value revision (\S+)
+Value serial_number (\S+)
+Value firmware_type (\S+)
+Value factory_firmware ([\d.]+)
+Value current_firmware ([\d.]+)
+Value upgrade_firmware ([\d.]+)
+
+Start
+  ^\s*routerboard:\s${routerboard}
+  ^\s*board-name:\s${board_name}
+  ^\s*model:\s${hardware_model}
+  ^\s*revision:\s${revision}
+  ^\s*serial-number:\s${serial_number}
+  ^\s*firmware-type:\s${firmware_type}
+  ^\s*factory-firmware:\s${factory_firmware}
+  ^\s*current-firmware:\s${current_firmware}
+  ^\s*upgrade-firmware:\s${upgrade_firmware}
+  ^. -> Error
