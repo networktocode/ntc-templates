@@ -1,0 +1,14 @@
+Value INTERFACE (\S+)
+Value AUTO_NEGOTIATION (\S+)
+Value SPEED (\S+)
+Value DUPLEX (\S+)
+Value LINK_DETECTED (\S+)
+
+Start
+  ^Settings for ${INTERFACE}:
+  ^\s+Auto-negotiation:\s${AUTO_NEGOTIATION}
+  ^\s+Speed:\s${SPEED}
+  ^\s+Duplex:\s${DUPLEX}
+  ^\s+Link\sdetected:\s${LINK_DETECTED}
+  ^\s*$$
+  ^. -> Error
