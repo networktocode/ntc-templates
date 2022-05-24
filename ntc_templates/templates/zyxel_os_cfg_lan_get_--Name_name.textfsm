@@ -1,0 +1,24 @@
+Value NAME (\S.*)
+Value IP (\S*)
+Value NETMASK (\S*)
+Value DHCP (Enable|Disable)
+Value DHCP_START_IP (\S*)
+Value DHCP_END_IP (\S*)
+Value DHCP_AUTORESERVE (true|false)
+Value DHCP_LEASE (\S.*)
+Value IPV6_ACTIVE (true|false)
+
+Start
+  ^Group\sName\s+${NAME}\s*$$
+  ^IP\sAddress\s+${IP}\s*$$
+  ^Subnet\sMask\s+${NETMASK}\s*$$
+  ^DHCP\s+${DHCP}\s*$$
+  ^\s+Beginning\sIP\sAddress\s+${DHCP_START_IP}\s*$$
+  ^\s+Ending\sIP\sAddress\s+${DHCP_END_IP}\s*$$
+  ^\s+AutoReserveLanIp\s+${DHCP_AUTORESERVE}\s*$$
+  ^\s+DHCP\sServer\sLease\sTime\s+${DHCP_LEASE}\s*$$
+  ^\s+DNS\sValues\s.*$$
+  ^IPv6\sActive\s+${IPV6_ACTIVE}\s*$$
+  ^Command\sSuccessful.\s*$$
+  ^\s*$$
+  ^. -> Error

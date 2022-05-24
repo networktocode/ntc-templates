@@ -1,0 +1,17 @@
+---
+parsed_sample:
+  - index: "1"
+    name: "datas"
+    wan_intf: "Any WAN"
+    interface: "LAN2,LAN4,LAN3,LAN4,magic 2000,ZyXEL_8B91_guest1,ZyXEL_8B91_guest2,ZyXEL_8B91_guest3"
+    criteria: "N/A"
+  - index: "2"
+    name: "zzefzef"
+    wan_intf: "WWAN,VDSL"
+    interface: "N/A"
+    criteria: "vlangroup<datas>"
+  - index: "3"
+    name: "qsdq sdqsdqsd"
+    wan_intf: "ADSL"
+    interface: "N/A"
+    criteria: "op61<efsdfsdf>;op60<qs qsd>;mac<AA-AA-AA-AA-AA-AA,AA-BB-BB-BB-BB-BB>"
