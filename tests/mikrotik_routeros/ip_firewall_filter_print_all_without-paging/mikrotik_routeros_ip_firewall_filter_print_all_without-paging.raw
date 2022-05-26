@@ -1,0 +1,65 @@
+Flags: X - disabled, I - invalid, D - dynamic 
+ 0    ;;; defconf: accept established,related,untracked
+      chain=input action=accept connection-state=established,related,untracked 
+
+ 1    ;;; defconf: drop invalid
+      chain=input action=drop connection-state=invalid 
+
+ 2    ;;; FIREWALL-DMZ-1
+      chain=forward action=accept connection-state=established,related,new in-interface=dmz-1-vlan out-interface=pppoe-out1 
+
+ 3    chain=forward action=accept dst-address=185.163.212.156/30 
+
+ 4    ;;; defconf: accept ICMP
+      chain=input action=accept protocol=icmp 
+
+ 5    ;;; Acces VPN
+      chain=input action=accept protocol=udp dst-port=500,1701,4500 log-prefix="Acces VPN" 
+
+ 6    chain=input action=accept protocol=ipsec-esp 
+
+ 7    ;;; Acces WAN
+      chain=input action=accept protocol=tcp src-address-list=Supervision dst-port=4430,22,8291 
+
+ 8    ;;; Acces WAN SNMP
+      chain=input action=accept protocol=udp src-address-list=Supervision dst-port=161 
+
+ 9    ;;; defconf: accept to local loopback (for CAPsMAN)
+      chain=input action=accept dst-address=127.0.0.1 
+
+10    ;;; defconf: drop all not coming from LAN
+      chain=input action=drop in-interface-list=!LAN 
+
+11    ;;; defconf: accept in ipsec policy
+      chain=forward action=accept ipsec-policy=in,ipsec 
+
+12    ;;; defconf: accept out ipsec policy
+      chain=forward action=accept ipsec-policy=out,ipsec 
+
+13 X  ;;; defconf: fasttrack
+      chain=forward action=fasttrack-connection connection-state=established,related 
+
+14    ;;; defconf: accept established,related, untracked
+      chain=forward action=accept connection-state=established,related,untracked 
+
+15    ;;; defconf: drop invalid
+      chain=forward action=drop connection-state=invalid 
+
+16    ;;; defconf: drop all from WAN not DSTNATed
+      chain=forward action=drop connection-state=new connection-nat-state=!dstnat in-interface-list=WAN 
+
+17    ;;; Input
+      chain=input action=accept src-address-list=Eqinoxe 
+
+18    ;;; related established
+      chain=input connection-state=established,related 
+
+19    chain=forward connection-state=established,related 
+
+20    ;;; drop invalid connections
+      chain=forward action=drop connection-state=invalid protocol=tcp 
+
+21    ;;; Block all entrant
+      chain=input action=drop in-interface=all-ppp 
+
+22    chain=input action=drop in-interface=all-ethernet 

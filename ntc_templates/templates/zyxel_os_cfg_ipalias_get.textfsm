@@ -1,0 +1,16 @@
+Value NAME (.+?)
+Value IPALIAS_ACTIVE (0|1)
+Value IPALIAS_IP (\S+)
+Value IPALIAS_NETMASK (\S+)
+Value PUBLAN_ACTIVE (0|1)
+Value PUBLAN_IP (\S+)
+Value PUBLAN_NETMASK (\S+)
+
+Start
+  ^Group\sName\s+Active\s+IPv4\sArrdess\s+Subnet\smask\s+Active\s+IPv4\sArrdess\s+Subnet\smask\s+Offer\sPublic\sIP\sby\sDHCP\s+Enable\sARP\sProxy\s*$$ -> IPALIASTable
+
+IPALIASTable
+  ^${NAME}\s+${IPALIAS_ACTIVE}\s+${IPALIAS_IP}\s+${IPALIAS_NETMASK}\s+${PUBLAN_ACTIVE}\s+${PUBLAN_IP}\s+${PUBLAN_NETMASK}\s+(0|1)\s+(0|1)\s*$$ -> Record
+  ^Command\sSuccessful.\s*$$
+  ^\s*$$
+  ^. -> Error

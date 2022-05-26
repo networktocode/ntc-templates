@@ -1,0 +1,115 @@
+---
+parsed_sample:
+  - process_id: "1"
+    router_id: "172.16.0.1"
+    code: "P"
+    route: "172.16.0.1"
+    mask: "32"
+    successors: "1"
+    fd: "128256"
+    tag: ""
+    adv_router:
+      - "Connected"
+    adv_fd: []
+    adv_rd: []
+    out_interface:
+      - "Loopback0"
+    source: ""
+  - process_id: "1"
+    router_id: "172.16.0.1"
+    code: "P"
+    route: "172.16.0.2"
+    mask: "32"
+    successors: "1"
+    fd: "130816"
+    tag: ""
+    adv_router:
+      - "192.168.100.1"
+    adv_fd:
+      - "130816"
+    adv_rd:
+      - "128256"
+    out_interface:
+      - "GigabitEthernet0/0"
+    source: ""
+  - process_id: "1"
+    router_id: "172.16.0.1"
+    code: "P"
+    route: "10.2.2.0"
+    mask: "24"
+    successors: "1"
+    fd: "3072"
+    tag: ""
+    adv_router:
+      - "192.168.100.1"
+    adv_fd:
+      - "3072"
+    adv_rd:
+      - "2816"
+    out_interface:
+      - "GigabitEthernet0/0"
+    source: ""
+  - process_id: "1"
+    router_id: "172.16.0.1"
+    code: "P"
+    route: "192.168.100.4"
+    mask: "31"
+    successors: "1"
+    fd: "3072"
+    tag: ""
+    adv_router:
+      - "192.168.100.1"
+    adv_fd:
+      - "3072"
+    adv_rd:
+      - "2816"
+    out_interface:
+      - "GigabitEthernet0/0"
+    source: ""
+  - process_id: "1"
+    router_id: "172.16.0.1"
+    code: "P"
+    route: "192.168.100.0"
+    mask: "31"
+    successors: "1"
+    fd: "2816"
+    tag: ""
+    adv_router:
+      - "Connected"
+    adv_fd: []
+    adv_rd: []
+    out_interface:
+      - "GigabitEthernet0/0"
+    source: ""
+  - process_id: "1"
+    router_id: "172.16.0.1"
+    code: "P"
+    route: "192.168.100.2"
+    mask: "31"
+    successors: "1"
+    fd: "2816"
+    tag: ""
+    adv_router:
+      - "Connected"
+    adv_fd: []
+    adv_rd: []
+    out_interface:
+      - "GigabitEthernet0/1"
+    source: ""
+  - process_id: "1"
+    router_id: "172.16.0.1"
+    code: "P"
+    route: "192.168.100.6"
+    mask: "31"
+    successors: "1"
+    fd: "3072"
+    tag: ""
+    adv_router:
+      - "192.168.100.1"
+    adv_fd:
+      - "3072"
+    adv_rd:
+      - "2816"
+    out_interface:
+      - "GigabitEthernet0/0"
+    source: ""

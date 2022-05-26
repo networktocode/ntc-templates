@@ -7,6 +7,8 @@ Value SUCCESSORS (\d+)
 Value FD (\d+|Inaccessible)
 Value TAG (\d+)
 Value List ADV_ROUTER (\d+\.\d+\.\d+\.\d+|\w+)
+Value List ADV_FD (\d+)
+Value List ADV_RD (\d+)
 Value List OUT_INTERFACE (\S+)
 Value SOURCE (R\S+)
 
@@ -16,7 +18,7 @@ Start
   # Skips over the code line that explains what each code means
   ^Codes:
   # Skips over the definitions for the codes
-  ^\s+\S+\s+-\s+
+  ^\s*\S\s-\s\S+
   # Matches a route and captures if ${TAG} is use for the route and then moves to Gateway section
   ^${CODE}\s+${ROUTE}/${MASK},\s+${SUCCESSORS}\s+successors,\s+FD\s+is\s+${FD},\s+tag\s+is\s+${TAG} -> Gateway
   # Matches a route and captures it and then moves to Gateway section
@@ -27,10 +29,12 @@ Start
   ^. -> Error
 
 Gateway
+  # This captures adv router, FD to router, and Reported Distance(RD)
+  ^\s*via\s+${ADV_ROUTER}\s+\(${ADV_FD}/${ADV_RD}\),\s+${OUT_INTERFACE}
   # This captures the advertising router and outgoing interface
-  ^\s+via\s+${ADV_ROUTER},\s+${OUT_INTERFACE}
+  ^\s*via\s+${ADV_ROUTER},\s+${OUT_INTERFACE}
   # This captures the scenarion where the route is injected via Redistribution.
-  ^\s+via\s+${SOURCE}
+  ^\s*via\s+${SOURCE}
   # This will not capture anything but if it encounters another route, it will continue and record what it already captured
   ^\S+\s+(?:\d+(?:\.|)){4}/\d+,\s+\d+\s+successors -> Continue.Record
   # These are the same as above and capture the next set of routes

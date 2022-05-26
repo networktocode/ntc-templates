@@ -43,6 +43,7 @@ OS_CHOICES = [
     "juniper_junos",
     "juniper_screenos",
     "linux",
+    "mikrotik_routeros",
     "ovs_linux",
     "paloalto_panos",
     "quanta_mesh",
@@ -54,6 +55,7 @@ OS_CHOICES = [
     "vyos",
     "watchguard_firebox",
     "yamaha",
+    "zyxel_os",
 ]
 CHOICES_STRING = "|".join(OS_CHOICES)
 RE_TEMPLATE_OS = re.compile(rf"^({CHOICES_STRING})")

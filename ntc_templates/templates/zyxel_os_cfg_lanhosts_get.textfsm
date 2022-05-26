@@ -1,0 +1,17 @@
+Value HOSTNAME (\S+)
+Value IP (\d+\.\d+\.\d+\.\d+)
+Value IPV6 (\S+)
+Value MAC (\S+)
+Value SOURCE (\S+)
+Value CONN_TYPE (\S+)
+
+Start
+  ^Name\s+IP\sAddress\s+IPv6\sAddress\s+MAC\sAddress\s+Address\sSource\s+Connection\sType\s*$$ -> HOSTSTable
+  ^\s*$$
+  ^. -> Error
+
+HOSTSTable
+  ^${HOSTNAME}\s+${IP}\s+${IPV6}\s+${MAC}\s+${SOURCE}\s+${CONN_TYPE}\s*$$ -> Record
+  ^Command Successful.\s*$$
+  ^\s*$$
+  ^. -> Error

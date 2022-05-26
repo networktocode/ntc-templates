@@ -1,0 +1,30 @@
+Value Key index (\d+)
+Value flags ([XID]+)
+Value comment (\S+[\S ]*\S)
+Value chain (dstnat|srcnat)
+Value action (accept|add-dst-to-address-list|add-src-to-address-list|dst-nat|jump|log|masquerade|netmap|passthrough|redirect|return|same|src-nat)
+Value to_addresses ([\w!,./:\d]+)
+Value to_ports ([\d,-]+)
+Value protocol (!?(dccp|egp|etherip|gre|icmp|idpr-cmtp|ipencap|ipsec-ah|ipv6-encap|ipv6-nonxt|ipv6-route|l2tp|pim|rdp|rsvp|st|udp|vmtp|xns-idp|ddp|encap|ggp|hmp|icmpv6|igmp|ipip|ipsec-esp|ipv6-frag|ipv6-opts|iso-tp4|ospf|pup|rspf|sctp|tcp|udp-lite|vrrp|xtp))
+Value src_address ([\w!.:/\d]+)
+Value src_address_list (\S+)
+Value src_port (\S+)
+Value in_interface (\S+)
+Value out_interface (\S+)
+Value in_interface_list (\S+)
+Value out_interface_list (\S+)
+Value ipsec_policy (\S+)
+Value dst_address ([\w!.:/\d]+)
+Value dst_address_list (\S+)
+Value dst_port (\S+)
+Value log (yes|no)
+Value log_prefix (\S+[\S ]*\S)
+
+Start
+  ^Flags:.*$$ -> NATTable
+
+NATTable
+  ^\s?${index}\s+(${flags})?\s+;;;\s${comment}
+  ^\s+chain=${chain}\saction=${action}\s(to-addresses=${to_addresses}\s)?(to-ports=${to_ports}\s)?(protocol=${protocol}\s)?(src-address=${src_address}\s)?(dst-address=${dst_address}\s)?(src-address-list=${src_address_list}\s)?(dst-address-list=${dst_address_list}\s)?(in-interface=${in_interface}\s)?(in-interface-list=${in_interface_list}\s)?(out-interface=${out_interface}\s)?(out-interface-list=${out_interface_list}\s)?(src-port=${src_port}\s)?(dst-port=${dst_port}\s)?(log=${log}\s)?(log-prefix="(${log_prefix})?"\s)?(ipsec-policy=${ipsec_policy}\s)?\s*$$ -> Record
+  ^\s?${index}\s+(${flags})?\s+chain=${chain}\saction=${action}\s(to-addresses=${to_addresses}\s)?(to-ports=${to_ports}\s)?(protocol=${protocol}\s)?(src-address=${src_address}\s)?(dst-address=${dst_address}\s)?(src-address-list=${src_address_list}\s)?(dst-address-list=${dst_address_list}\s)?(in-interface=${in_interface}\s)?(in-interface-list=${in_interface_list}\s)?(out-interface=${out_interface}\s)?(out-interface-list=${out_interface_list}\s)?(src-port=${src_port}\s)?(dst-port=${dst_port}\s)?(log=${log}\s)?(log-prefix="(${log_prefix})?"\s)?(ipsec-policy=${ipsec_policy}\s)?\s*$$ -> Record
+  ^. -> Error
