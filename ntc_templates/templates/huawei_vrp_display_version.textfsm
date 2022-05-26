@@ -6,4 +6,4 @@ Value UPTIME (.+)
 
 Start
   ^.*software,\s+Version\s+${VRP_VERSION}\s+\(${PRODUCT_VERSION}\)
-  ^(HUAWEI|Quidway)\s+${MODEL}\s+uptime\s+is\s+${UPTIME}\s+ -> Record
+  ^(HUAWEI|Quidway)\s+${MODEL}\s+uptime\s+is\s+${UPTIME}$$ -> Record
