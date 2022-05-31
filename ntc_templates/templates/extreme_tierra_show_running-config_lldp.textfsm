@@ -1,0 +1,32 @@
+Value Filldown GLOBAL_LLDP_DISABLED (lldp)
+Value Filldown GLOBAL_LLDP_RX_DISABLED (recieve)
+Value Filldown GLOBAL_LLDP_TX_DISABLED (transmit)
+Value Filldown GLOBAL_HELLO_TIMER (\d+)
+Value Filldown GLOBAL_HOLD_TIME (\d+)
+Value Filldown GLOBAL_SUPPRESSED_TLV ([\S\s]+)
+Value Filldown GLOBAL_LLDP_MANAGEMENT_ADDRESS (\S+)
+Value Required INTERFACE ([\S\s]+)
+Value Filldown INTERFACE_LLDP_DISABLED (enable)
+Value Filldown INTERFACE_LLDP_RX_DISABLED (recieve)
+Value Filldown INTERFACE_LLDP_TX_DISABLED (transmit)
+Value Filldown INTERFACE_SUPPRESSED_TLV ([\S\s]+)
+Value Filldown INTERFACE_LLDP_MANAGEMENT_ADDRESS (\S+)
+
+Start
+ ^no protocol ${GLOBAL_LLDP_DISABLED}
+ ^no lldp ${GLOBAL_LLDP_RX_DISABLED}
+ ^no lldp ${GLOBAL_LLDP_TX_DISABLED}
+ ^lldp hello-timer\s*${GLOBAL_HELLO_TIMER}
+ ^lldp holdtime\s*${GLOBAL_HOLD_TIME}
+ ^lldp management-address\s*${GLOBAL_LLDP_MANAGEMENT_ADDRESS}
+ ^lldp suppress-tlv ${GLOBAL_SUPPRESSED_TLV}
+ ^interface\s* -> Continue.Record
+ ^interface\s*${INTERFACE}
+ ^\s+no lldp ${INTERFACE_LLDP_DISABLED}
+ ^\s+no lldp ${INTERFACE_LLDP_RX_DISABLED}
+ ^\s+no lldp ${INTERFACE_LLDP_TX_DISABLED}
+ ^\s+lldp management-address\s*${INTERFACE_LLDP_MANAGEMENT_ADDRESS}
+ ^\s+lldp suppress-tlv ${INTERFACE_SUPPRESSED_TLV}
+ ^!
+ ^\s*$$
+ ^. -> Error
