@@ -1,0 +1,20 @@
+fm (forward mode): T-Tunnel, S-Split, D-Decrypt Tunnel, B-Bridge (s-standard, p-persistent, b-backup, a-always), n-anyspot
+
+cluster (cluster role): U-UAC, A-AAC, sU-Standby UAC, sA-Standby AAC
+
+Aruba AP BSS Table
+------------------
+bss                ess                     port  ip             band/ht-mode/bandwidth  ch/EIRP/max-EIRP  type  cur-cl  ap name                in-t(s)  tot-t        mtu   acl-state  acl  fm  flags  cluster  active-clients  standby-clients  datazone
+---                ---                     ----  --             ----------------------  ----------------  ----  ------  -------                -------  -----        ---   ---------  ---  --  -----  -------  --------------  ---------------  --------
+aa:bb:cc:dd:ee:ff  test1               N/A   192.168.1.2   5GHz/HE/40MHz           136-/19.0/27.1    ap    0       test1-ap           0        11h:0m:35s   1500  -          2    T   KrT    A        0               0                no
+aa:bb:cc:dd:ee:fa  test1                  N/A   192.168.1.2   2.4GHz/HE/20MHz         6/9.0/26.9        ap    0       test1-ap           0        11h:1m:17s   1500  -          119  T   KT     A        0               0                no
+aa:bb:cc:dd:ee:fb  test1                  N/A   192.168.1.2   6GHz/HE/160MHz           197S/16.0/24.3    ap    0       test1-ap          0        11h:0m:56s   1500  -          119  T   KT     A        0               0                no
+aa:bb:cc:dd:ee:fc  multi word ssid                 N/A   192.168.1.3    2.4GHz/HE/20MHz           6/9.0/26.9    ap    0       test2-ap             0        11h:0m:57s   1500  -          2    T   KrT    A        0               0                no
+aa:bb:cc:dd:ee:fd  test 2                  N/A   192.168.1.3  5GHz/HE/40MHz           120-/19.0/28.7    ap    0       test2-ap  0        11h:1m:28s   1500  -          119  T   KT     A        0               0                no
+
+Channel followed by "*" indicates channel selected due to unsupported configured channel.
+"Spectrum" followed by "^" indicates Local Spectrum Override in effect.
+
+fm (forward mode): T-Tunnel, S-Split, D-Decrypt Tunnel, B-Bridge (s-standard, p-persistent, b-backup, a-always), n-anyspot
+
+cluster (cluster role): U-UAC, A-AAC, sU-Standby UAC, sA-Standby AAC
