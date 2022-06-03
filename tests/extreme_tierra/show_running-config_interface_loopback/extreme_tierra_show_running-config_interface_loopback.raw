@@ -1,0 +1,8 @@
+interface loopback 1
+  ip address 10.10.10.10/32
+  ipv6 address 10:10::10:10/128
+  no shutdown
+interface loopback 10
+  ip address 10.10.10.10/32
+  ipv6 address 10:10::10:10/128
+  no shutdown
