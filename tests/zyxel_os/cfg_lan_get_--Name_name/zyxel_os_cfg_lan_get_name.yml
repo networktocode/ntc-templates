@@ -1,0 +1,11 @@
+---
+parsed_sample:
+  - name: "lan_1"
+    ip: "192.168.1.1"
+    netmask: "255.255.255.0"
+    dhcp: "Enable"
+    dhcp_start_ip: "192.168.1.10"
+    dhcp_end_ip: "192.168.1.150"
+    dhcp_autoreserve: "false"
+    dhcp_lease: "1 Days 0 Hours 0 Minutes"
+    ipv6_active: "false"

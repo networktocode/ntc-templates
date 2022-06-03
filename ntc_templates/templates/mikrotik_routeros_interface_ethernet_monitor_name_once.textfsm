@@ -1,0 +1,21 @@
+Value name (\S+)
+Value status (\S+)
+Value auto_negotiation (\S+)
+Value rate (\S+)
+Value full_duplex (\S+)
+Value tx_flow_control (\S+)
+Value rx_flow_control (\S+)
+Value advertising (\S+)
+Value link_partner_advertising (\S+)
+
+Start
+  ^\s*name:\s${name}
+  ^\s*status:\s${status}
+  ^\s*auto-negotiation:\s${auto_negotiation}
+  ^\s*rate:\s${rate}
+  ^\s*full-duplex:\s${full_duplex}
+  ^\s*tx-flow-control:\s${tx_flow_control}
+  ^\s*rx-flow-control:\s${rx_flow_control}
+  ^\s*advertising:\s${advertising}
+  ^\s*link-partner-advertising:\s${link_partner_advertising}
+  ^. -> Error
