@@ -1,0 +1,17 @@
+Value INTERFACE (\S+\s+\S*) 
+Value List IP_ADDRESS_PRIMARY (\S+$|Unassigned) 
+Value List IP_ADDRESS_SECONDARY (\S+)
+Value List IPV6_ADDRESS_PRIMARY (\S+$|Unassigned)
+Value List IPV6_ADDRESS_SECONDARY (\S+)
+Value ENABLE (no shutdown|shutdown)
+					
+Start
+ ^\s*interface -> Continue.Record
+ ^\s*interface\s*${INTERFACE}
+ ^\s*ip\s*address\s*${IP_ADDRESS_SECONDARY}\s*secondary
+ ^\s*ip\s*address\s*${IP_ADDRESS_PRIMARY}
+ ^\s*ipv6\s*address\s*${IPV6_ADDRESS_SECONDARY}\s*secondary
+ ^\s*ipv6\s*address\s*${IPV6_ADDRESS_PRIMARY}
+ ^\s*${ENABLE}
+ ^\s*$$
+ ^. -> Error
