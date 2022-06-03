@@ -1,0 +1,28 @@
+Routing instance        VLAN name             Tag          Interfaces
+default-switch          v100-Control           100
+                                                           ae0.0*
+                                                           et-0/0/24.0*
+                                                           ge-0/0/3.0
+                                                           xe-0/0/13.0*
+                                                           xe-0/0/15.0*
+                                                           xe-0/0/17.0*
+                                                           xe-0/0/9.0*
+default-switch          v1005-HelpDesk        1005
+                                                           ae0.0*
+                                                           et-0/0/24.0*
+                                                           ge-0/0/7.0
+                                                           xe-0/0/13.0*
+                                                           xe-0/0/15.0*
+                                                           xe-0/0/17.0*
+                                                           xe-0/0/9.0*
+default-switch          v109-TEMP-Project-Data 109
+                                                           ae0.0*
+                                                           et-0/0/24.0*
+                                                           ge-0/0/7.0
+                                                           xe-0/0/13.0*
+                                                           xe-0/0/15.0*
+                                                           xe-0/0/17.0*
+                                                           xe-0/0/22.0
+                                                           xe-0/0/9.0*
+
+{master:0}

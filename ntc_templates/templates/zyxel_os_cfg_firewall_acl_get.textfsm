@@ -1,0 +1,20 @@
+Value INDEX (\d+)
+Value ENABLE (true|false)
+Value ORDER (\d+)
+Value NAME (.+\S)
+Value SOURCE_IP ((Any|\d+\.\d+\.\d+\.\d+)/\d+)
+Value DESTINATION_IP ((Any|\d+\.\d+\.\d+\.\d+)/\d+)
+Value PROTOCOL (ALL|ICMP|TCP|UDP|TCP/UDP)
+Value PORTS ((\d+|Any)(:\d+)?)
+Value ACTION (Accept|Drop)
+
+Start
+  ^Index\s+(Enable\s+)?Order\s+Name\s+Source\sIP\s+Destination\sIP\s+Service\s+Action\s*$$ -> FIREWALLTable
+  ^\s*$$
+  ^. -> Error
+
+FIREWALLTable
+  ^${INDEX}\s+(${ENABLE}\s+)?${ORDER}\s+${NAME}\s+${SOURCE_IP}\s+${DESTINATION_IP}\s+${PROTOCOL}(:Any-->${PORTS})?\s+${ACTION}\s*$$ -> Record
+  ^Command\sSuccessful.\s*$$
+  ^\s*$$
+  ^. -> Error

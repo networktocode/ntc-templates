@@ -1,0 +1,16 @@
+Value NAME (.+?)
+Value IP ((\d+\.){3}\d+)
+Value IPV4_DHCP (Enable|Disable)
+Value IPV6_ENABLE (true|false)
+
+Start
+  ^Group\sName\s+LAN\sIP\sAddress\s+IPv4\sDHCP\sServer\s+IPv6\sEnable\s*$$ -> LANTable
+  ^\s*$$
+  ^. -> Error
+
+LANTable
+  ^${NAME}\s+${IP}\s+${IPV4_DHCP}\s+${IPV6_ENABLE}\s*$$ -> Record
+  ^${NAME}\s+${IPV4_DHCP}\s+${IPV6_ENABLE}\s*$$ -> Record
+  ^Command\sSuccessful.\s*$$
+  ^\s*$$
+  ^. -> Error
