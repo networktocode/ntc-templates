@@ -1,0 +1,15 @@
+---
+parsed_sample:
+  - interface: "ve 10"
+    admin_status: "UP"
+    oper_status: "UP"
+    linklocal_address:
+      - "fe80:20:20:20/64"
+    primary_address:
+      - "10.10.10.1/32"
+      - "20:20:20:20/32"
+      - "30.30.30.30/24"
+      - "30.30.30.30/24"
+    ipaddress_unassigned: ""
+    secondary_address: []
+    vrf: ""

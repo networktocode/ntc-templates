@@ -1,0 +1,14 @@
+---
+parsed_sample:
+  - interface: "ethernet 0/1"
+    admin_status: "UP"
+    oper_status: "UP"
+    linklocal_address: []
+    primary_address:
+      - "10.10.10.1/24"
+      - "10.10.10.2/24"
+      - "20.20.20.1/24"
+    ipaddress_unassigned: ""
+    secondary_address:
+      - "20.20.20.2"
+    vrf: ""

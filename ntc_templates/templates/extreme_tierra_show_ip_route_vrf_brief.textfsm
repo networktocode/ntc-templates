@@ -1,0 +1,24 @@
+Value Filldown TOTAL_IP_COUNT (\d+)
+Value Filldown MAX_ROUTES (\d+|Not Set)
+Value Filldown TYPE_CODE ([\w\\: \/]+)
+Value Filldown BGP_CODE ([\w\\: \/]+)
+Value Filldown OSPF_CODE ([0-9\w\\: \/]+)
+Value Filldown HARDWARE_STATUS (\w+)
+Value Required IP_PREFIX (\S+)				  
+Value NEXT_HOP (\S+)
+Value INTERFACE (\S+\s+\S*)
+Value PREFERENCE_METRIC (\d+/\d+)
+Value TYPE (\S)
+
+Start
+ ^Total number of \S+ routes:\s*${TOTAL_IP_COUNT}\s*,\s*Max Routes:\s*${MAX_ROUTES}
+ ^Type\s*Codes\s*-\s*${TYPE_CODE}
+ ^BGP\s*Codes\s*-\s*${BGP_CODE} 
+ ^OSPF\s*Codes\s*-\s*${OSPF_CODE}
+ ^Hardware\s*Status\s*Codes\s*-\s*#\s*:\s*${HARDWARE_STATUS}
+ ^IP Prefix\s+Next Hop\s+Interface\s+Pref\/Metric\s+Type
+ ^[\-]+
+ ^\s*${IP_PREFIX}\s*${NEXT_HOP}\s*${INTERFACE}\s*${PREFERENCE_METRIC}\s*${TYPE} -> Record
+ ^[\=]+
+ ^\s*$$
+ ^. -> Error
