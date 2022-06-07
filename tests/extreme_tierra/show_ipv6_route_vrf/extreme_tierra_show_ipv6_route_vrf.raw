@@ -1,0 +1,14 @@
+Total number of IPv6 routes: 6, Max Routes: Not Set
+'[x/y]' denotes [preference/metric]
+10:0:3::/64, attached, [0/0], tag 0, 9m57s
+  via direct, ethernet 0/8
+10:1:2::/64, static, [10/1], tag 0, 9m57s
+  via 10:1:3::1, ethernet 0/7, [, ]
+10:1:3::/64, attached, [0/0], tag 0, 9m57s
+  via direct, ethernet 0/7
+10:1:4::/64, static, [10/1], tag 0, 9m57s
+  via 10:0:3::1, ethernet 0/8, [, ]
+10:0:3::1/128, attached, [254/0], tag 0, 9m57s
+  via 10:0:3::1, ethernet 0/8, [, ]
+10:1:3::1/128, attached, [254/0], tag 0, 9m57s
+  via 10:1:3::1, ethernet 0/7, [, ]

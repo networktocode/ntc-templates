@@ -1,0 +1,21 @@
+Value Filldown IP_ADDRESS_COUNT (\d+)
+Value Filldown MAX_ROUTES (\d+|Not Set)
+Value Required,Key IP_ADDRESS (\S+)
+Value ATTACHED_TYPE (\S+)
+Value PREFERENCE_METRIC (\S+)
+Value TAG (\d+)
+Value AGE (\S+)
+Value INTERFACE (\S+\s+\S+) 
+Value MAC_LEARN_INTERFACE ([\S+\,\s\S+\s+\S+]+)
+
+Start
+ ^Total number of \S+ routes:\s+${IP_ADDRESS_COUNT},\s+Max Routes:\s+${MAX_ROUTES}
+ ^\'\[x\/y\]\' denotes \[preference\/metric\] -> ARP
+ ^\s*$$
+ ^. -> Error
+
+ARP
+ ^${IP_ADDRESS}, ${ATTACHED_TYPE}, \[${PREFERENCE_METRIC}\], tag ${TAG}, ${AGE}
+ ^\s+via\s+${INTERFACE}, \[${MAC_LEARN_INTERFACE}\] -> Record
+ ^\s*$$
+ ^. -> Error

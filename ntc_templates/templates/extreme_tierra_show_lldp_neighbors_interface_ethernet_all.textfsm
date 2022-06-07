@@ -4,7 +4,7 @@ Value CHASSIS_ID (\S+)
 Value REMOTE_PORT_ID ([\s\S]+)
 Value REMOTE_PORT_DESCRIPTION (\S+)
 Value SYSTEM_NAME (\S+)
-Value SYSTEM_DESCRIPTION ([\S\s]+)
+Value List SYSTEM_DESCRIPTION ([\S\s]+)
 Value DEAD_INTERVAL (\d+)
 Value TIME_REMAINING (\d+)
 Value SYSTEM_CAPABILITIES ([BCOPRSTW]+)
@@ -31,6 +31,7 @@ Start
  ^\s*Enabled Capabilities:\s+(${ENABLED_CAPABILITIES}|---)
  ^\s*Management Address:\s+(${MGMT_IPV4_ADDRESS}|not advertised)
  ^\s*Management Address IPV6:\s+(${MGMT_IPV6_ADDRESS}|not advertised) -> Record
- ^\s+[\S\s]+ 
+ ^\s+${SYSTEM_DESCRIPTION}
  ^\s*$$
  ^. -> Error
+ 
