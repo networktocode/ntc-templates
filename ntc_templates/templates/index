@@ -522,6 +522,7 @@ extreme_tierra_show_ingress-group_all.textfsm, .*, extreme_tierra, sh[[ow]] ingr
 extreme_tierra_show_sysinfo_sensor_lc.textfsm, .*, extreme_tierra, sh[[ow]] sysinfo sensor lc
 extreme_tierra_show_egress-group_all.textfsm, .*, extreme_tierra, sh[[ow]] egress-group all
 extreme_tierra_show_firmware_history.textfsm, .*, extreme_tierra, sh[[ow]] firmware history
+extreme_tierra_show_ip_route_vrf_arp.textfsm, .*, extreme_tierra, show ip route vrf(\s\w+)? arp
 extreme_tierra_show_ipv6_access-list.textfsm, .*, extreme_tierra, sh[[ow]] ipv6 access-list
 extreme_tierra_show_transport-tunnel.textfsm, .*, extreme_tierra, sh[[ow]] tr[[ansport-tunnel]]
 extreme_tierra_show_counters_egress.textfsm, .*, extreme_tierra, sh[[ow]] co[[unters]] egress
@@ -534,6 +535,7 @@ extreme_tierra_show_ntp_association.textfsm, .*, extreme_tierra, sh[[ow]] ntp as
 extreme_tierra_show_counters_encap.textfsm, .*, extreme_tierra, sh[[ow]] co[[unters]] encap
 extreme_tierra_show_inventory_slot.textfsm, .*, extreme_tierra, sh[[ow]] inventory slot
 extreme_tierra_show_ip_access-list.textfsm, .*, extreme_tierra, sh[[ow]] ip access-list
+extreme_tierra_show_ipv6_route_vrf.textfsm, .*, extreme_tierra, show ipv6 route vrf
 extreme_tierra_show_lldp_neighbors.textfsm, .*, extreme_tierra, sh[[ow]] lldp neighbors
 extreme_tierra_show_media_detected.textfsm, .*, extreme_tierra, sh[[ow]] me[[dia]] d[[etected]]
 extreme_tierra_show_system_service.textfsm, .*, extreme_tierra, sh[[ow]] system service
@@ -543,6 +545,7 @@ extreme_tierra_show_inventory_all.textfsm, .*, extreme_tierra, sh[[ow]] inventor
 extreme_tierra_show_route-map_all.textfsm, .*, extreme_tierra, sh[[ow]] route-map all
 extreme_tierra_show_system_health.textfsm, .*, extreme_tierra, sh[[ow]] system health
 extreme_tierra_show_egress-group.textfsm, .*, extreme_tierra, sh[[ow]] egress-group
+extreme_tierra_show_ip_route_vrf.textfsm, .*, extreme_tierra, sh[[ow]] ip route vrf
 extreme_tierra_show_logging_file.textfsm, .*, extreme_tierra, sh[[ow]] logging file
 extreme_tierra_show_sysinfo_slot.textfsm, .*, extreme_tierra, sh[[ow]] sysinfo slot
 extreme_tierra_show_tech-support.textfsm, .*, extreme_tierra, sh[[ow]] tech-support

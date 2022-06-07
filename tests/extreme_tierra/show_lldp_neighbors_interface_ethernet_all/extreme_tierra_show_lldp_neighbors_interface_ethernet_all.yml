@@ -6,7 +6,7 @@ parsed_sample:
     remote_port_id: "Ethernet 0/29"
     remote_port_description: "P_Uplink_"
     system_name: "S1_A2"
-    system_description: ""
+    system_description: []
     dead_interval: "120"
     time_remaining: "115"
     system_capabilities: "BR"
@@ -19,7 +19,7 @@ parsed_sample:
     remote_port_id: "Ethernet 0/29"
     remote_port_description: "P_Uplink_"
     system_name: "S1_A1"
-    system_description: ""
+    system_description: []
     dead_interval: "120"
     time_remaining: "115"
     system_capabilities: "BR"
@@ -32,8 +32,10 @@ parsed_sample:
     remote_port_id: "00:24:38:8b:f1:c0"
     remote_port_description: "40GigabitEthernet5/1"
     system_name: "CHRXNCLHSMS-BCD1-01"
-    system_description: "Extreme Networks MLXe (System Mode: MLX), IronWare Version\
-      \ V6.3.0dT163 Comp \\"
+    system_description:
+      - "Extreme Networks MLXe (System Mode: MLX), IronWare Version V6.3.0dT163 Comp\
+        \ \\"
+      - "iled on May 31 2021 at 18:34:12 labeled as V6.3.00d"
     dead_interval: "120"
     time_remaining: "107"
     system_capabilities: "BR"
@@ -46,7 +48,8 @@ parsed_sample:
     remote_port_id: "Ethernet 0/29"
     remote_port_description: "P_Uplink_"
     system_name: "S1_A3"
-    system_description: "Extreme BR-SLX9240 Chassis"
+    system_description:
+      - "Extreme BR-SLX9240 Chassis"
     dead_interval: "120"
     time_remaining: "114"
     system_capabilities: "BR"
@@ -59,7 +62,7 @@ parsed_sample:
     remote_port_id: "Ethernet 0/30"
     remote_port_description: "P_Uplink_"
     system_name: "S1_A2"
-    system_description: ""
+    system_description: []
     dead_interval: "120"
     time_remaining: "94"
     system_capabilities: "BR"
@@ -72,7 +75,7 @@ parsed_sample:
     remote_port_id: "Ethernet 0/30"
     remote_port_description: "P_Uplink_"
     system_name: "S1_A1"
-    system_description: ""
+    system_description: []
     dead_interval: "120"
     time_remaining: "93"
     system_capabilities: "BR"
@@ -85,7 +88,7 @@ parsed_sample:
     remote_port_id: "Ethernet 0/36"
     remote_port_description: "Eth"
     system_name: "Cloud-1"
-    system_description: ""
+    system_description: []
     dead_interval: "120"
     time_remaining: "93"
     system_capabilities: "BR"
@@ -98,8 +101,10 @@ parsed_sample:
     remote_port_id: "00:24:38:8b:f1:c1"
     remote_port_description: "40GigabitEthernet5/2"
     system_name: "CHRXNCLHSMS-BCD1-01"
-    system_description: "Extreme Networks MLXe (System Mode: MLX), IronWare Version\
-      \ V6.3.0dT163 Comp \\"
+    system_description:
+      - "Extreme Networks MLXe (System Mode: MLX), IronWare Version V6.3.0dT163 Comp\
+        \ \\"
+      - "iled on May 31 2021 at 18:34:12 labeled as V6.3.00d"
     dead_interval: "120"
     time_remaining: "107"
     system_capabilities: "BR"
@@ -112,7 +117,8 @@ parsed_sample:
     remote_port_id: "Ethernet 0/30"
     remote_port_description: "P_Uplink_"
     system_name: "S1_A3"
-    system_description: "Extreme BR-SLX9240 Chassis"
+    system_description:
+      - "Extreme BR-SLX9240 Chassis"
     dead_interval: "120"
     time_remaining: "93"
     system_capabilities: "BR"
