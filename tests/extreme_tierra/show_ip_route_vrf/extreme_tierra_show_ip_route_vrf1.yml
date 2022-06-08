@@ -1,0 +1,24 @@
+---
+parsed_sample:
+  - vrf: ""
+    vrf_total_ip_count: ""
+    vrf_max_routes: ""
+    best_route_source: "*"
+    ip_address: "10.25.100.0/22"
+    attached_type: "attached"
+    preference_metric: "0/0"
+    tag: "0"
+    age: "7d19h21m21s,"
+    next_hop_group_id: "1"
+    ip_address_dest: ""
+    interface: ""
+    mac_learn_interface: ""
+    protocol_ip_address_dest: []
+    protocol_interface: []
+    protocol_mac_learn_interface: []
+    resolved_ip_address_dest:
+      - "direct"
+    resolved_interface:
+      - "management 0"
+    resolved_mac_learn_interface:
+      - "None"

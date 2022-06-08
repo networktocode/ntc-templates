@@ -1,6 +1,6 @@
 ---
 parsed_sample:
-  - interface: "ethernet 0/1"
+  - interface: "loopback 10"
     admin_status: "UP"
     oper_status: "UP"
     linklocal_address:
@@ -12,4 +12,4 @@ parsed_sample:
     secondary_address:
       - "10.10.10.2/24"
       - "20.20.20.2/24"
-    vrf: ""
+    vrf: "vrf_10"

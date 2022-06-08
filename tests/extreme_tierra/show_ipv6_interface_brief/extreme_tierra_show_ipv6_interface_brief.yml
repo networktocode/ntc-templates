@@ -1,0 +1,17 @@
+---
+parsed_sample:
+  - interface: "Eth 0/1"
+    ip_address: "10:10::10:10"
+    vrf: "VRF_10"
+    admin_status: "UP"
+    oper_status: "UP"
+  - interface: "Ve 20"
+    ip_address: "10:10::10:10"
+    vrf: ""
+    admin_status: "UP"
+    oper_status: "DOWN"
+  - interface: "po 10"
+    ip_address: "10:10::10:10"
+    vrf: "VRF_10"
+    admin_status: "UP"
+    oper_status: "DOWN"

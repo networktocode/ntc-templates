@@ -1,0 +1,11 @@
+Interface: port-channel 10 Admin-status:UP Oper-status DOWN
+
+Addresses:
+ 10:10::10:10/128
+ 10:10::10:20/123 secondary
+ 20:10::10:10/123
+ 20:10::10:20/123 secondary
+ 30:10::10:10/123
+ 30:10::10:20/123 secondary
+
+Vrf: VRF_10 

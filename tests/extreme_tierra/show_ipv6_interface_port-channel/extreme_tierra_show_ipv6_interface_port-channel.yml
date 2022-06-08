@@ -1,0 +1,16 @@
+---
+parsed_sample:
+  - interface: "port-channel 10"
+    admin_status: "UP"
+    oper_status: "DOWN"
+    linklocal_address: []
+    primary_address:
+      - "10:10::10:10/128"
+      - "20:10::10:10/123"
+      - "30:10::10:10/123"
+    ipaddress_unassigned: ""
+    secondary_address:
+      - "10:10::10:20/123"
+      - "20:10::10:20/123"
+      - "30:10::10:20/123"
+    vrf: "VRF_10"
