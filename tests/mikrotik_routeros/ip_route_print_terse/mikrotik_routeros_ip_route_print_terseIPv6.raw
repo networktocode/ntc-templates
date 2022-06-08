@@ -1,0 +1,5 @@
+ 0 ADS  dst-address=::/0 gateway=pppoe-out1 gateway-status=pppoe-out1 reachable distance=100 scope=30 target-scope=10 
+ 1 ADC  dst-address=2a05:c100:7::/64 gateway=bridge-lan gateway-status=bridge-lan reachable distance=0 scope=10 
+ 2   S  dst-address=9bb8:baac:d400::/38 gateway=ether4 gateway-status=ether4 unreachable distance=44 scope=30 target-scope=10 
+ 3 X S  dst-address=ec64:a7fd:bc1c:14c:7960:5000::/84 gateway=ether2 gateway-status=ether2 inactive distance=7 scope=30 target-scope=10 
+ 4   S  dst-address=fd79:f1d4:a400::/39 gateway=ether5 gateway-status=ether5 unreachable distance=24 scope=30 target-scope=10 
