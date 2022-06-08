@@ -432,7 +432,7 @@ extreme_tierra_show_counters_interface_ethernet_all_qos_queues.textfsm, .*, extr
 extreme_tierra_show_running-config_qos_forwarding-group_all.textfsm, .*, extreme_tierra, sh[[ow]] ru[[nning-config]] q[[os]] f[[orwarding-group]] a[[ll]]
 extreme_tierra_show_lldp_neighbors_interface_ethernet_all.textfsm, .*, extreme_tierra, sh[[ow]] ll[[dp]] n[[eighbors]] i[[nterface]] e[[thernet]] all
 extreme_tierra_show_running-config_interface_management_0.textfsm, .*, extreme_tierra, sh[[ow]] ru[[nning-config]] int[[erface]] m[[anagement]] 0
-extreme_tierra_show_running-config_interface_port-channel.textfsm, .*, extreme_tierra, sh[[ow]] ru[[nning-config]] int[[erface]] p[[ort-channel]]
+extreme_tierra_show_running-config_interface_port-channel.textfsm, .*, extreme_tierra, show running-config interface port-channel
 extreme_tierra_show_running-config_system_logging_service.textfsm, .*, extreme_tierra, sh[[ow]] ru[[nning-config]] sy[[stem]] l[[ogging]] s[[ervice]]
 extreme_tierra_show_counters_lldp_interface_ethernet_all.textfsm, .*, extreme_tierra, sh[[ow]] co[[unters]] ll[[dp]] i[[nterface]] e[[thernet]] all
 extreme_tierra_show_running-config_ipv6_access-list_all.textfsm, .*, extreme_tierra, sh[[ow]] ru[[nning-config]] ipv6 access-list all
@@ -464,18 +464,22 @@ extreme_tierra_show_interface_port-channel_brief.textfsm, .*, extreme_tierra, sh
 extreme_tierra_show_running-config_ingress-group.textfsm, .*, extreme_tierra, sh[[ow]] ru[[nning-config]] ingress-group
 extreme_tierra_show_counters_interface_ethernet.textfsm, .*, extreme_tierra, sh[[ow]] co[[unters]] interface ethernet
 extreme_tierra_show_grpc-server_gnmi_statistics.textfsm, .*, extreme_tierra, sh[[ow]] grpc-server gnmi statistics
+extreme_tierra_show_ipv6_interface_port-channel.textfsm, .*, extreme_tierra, sh[[ow]] ipv6 int[[erface]] port-channel
 extreme_tierra_show_running-config_egress-group.textfsm, .*, extreme_tierra, sh[[ow]] ru[[nning-config]] egress-group
 extreme_tierra_show_counters_ingress-group_all.textfsm, .*, extreme_tierra, sh[[ow]] co[[unters]] ingress-group all
 extreme_tierra_show_running-config_access-list.textfsm, .*, extreme_tierra, sh[[ow]] ru[[nning-config]] access-list
 extreme_tierra_show_running-config_snmp-server.textfsm, .*, extreme_tierra, sh[[ow]] ru[[nning-config]] snmp-server
 extreme_tierra_show_counters_egress-group_all.textfsm, .*, extreme_tierra, sh[[ow]] co[[unters]] egress-group all
 extreme_tierra_show_counters_transport-tunnel.textfsm, .*, extreme_tierra, sh[[ow]] co[[unters]] transport-tunnel
+extreme_tierra_show_ip_interface_port-channel.textfsm, .*, extreme_tierra, sh[[ow]] ip int[[erface]] port-channel
 extreme_tierra_show_running-config_acl-config.textfsm, .*, extreme_tierra, sh[[ow]] ru[[nning-config]] acl-config
 extreme_tierra_show_running-config_ntp_server.textfsm, .*, extreme_tierra, sh[[ow]] ru[[nning-config]] ntp server
-extreme_tierra_show_ipv6_route_vrf_connected.textfsm, .*, extreme_tierra, show ipv6 route vrf(\s\w+)? connected
+extreme_tierra_show_ipv6_route_vrf_connected.textfsm, .*, extreme_tierra, show ipv6 route vrf(\s\S+)? connected
 extreme_tierra_show_qos_forwarding-group_all.textfsm, .*, extreme_tierra, sh[[ow]] qos forwarding-group all
 extreme_tierra_show_running-config_interface.textfsm, .*, extreme_tierra, sh[[ow]] ru[[nning-config]] interface
 extreme_tierra_show_running-config_route-map.textfsm, .*, extreme_tierra, sh[[ow]] ru[[nning-config]] route-map
+extreme_tierra_show_ipv6_interface_ethernet.textfsm, .*, extreme_tierra, show ipv6 interface ethernet
+extreme_tierra_show_ipv6_interface_loopback.textfsm, .*, extreme_tierra, show ipv6 interface loopback
 extreme_tierra_show_lacp_interface_ethernet.textfsm, .*, extreme_tierra, sh[[ow]] lacp interface ethernet
 extreme_tierra_show_running-config_username.textfsm, .*, extreme_tierra, sh[[ow]] ru[[nning-config]] username
 extreme_tierra_show_counters_ingress-group.textfsm, .*, extreme_tierra, sh[[ow]] co[[unters]] ingress-group
@@ -483,7 +487,7 @@ extreme_tierra_show_crypto_ca_certificates.textfsm, .*, extreme_tierra, sh[[ow]]
 extreme_tierra_show_interface_management_0.textfsm, .*, extreme_tierra, sh[[ow]] interface management 0
 extreme_tierra_show_interface_port-channel.textfsm, .*, extreme_tierra, sh[[ow]] interface port-channel
 extreme_tierra_show_inventory_power-supply.textfsm, .*, extreme_tierra, sh[[ow]] inventory power-supply
-extreme_tierra_show_ip_route_vrf_connected.textfsm, .*, extreme_tierra, show ip route vrf(\s\w)? connected
+extreme_tierra_show_ip_route_vrf_connected.textfsm, .*, extreme_tierra, show ip route vrf(\s\S+)? connected
 extreme_tierra_show_lacp_system-identifier.textfsm, .*, extreme_tierra, sh[[ow]] lacp system-identifier
 extreme_tierra_show_logging_audit_firmware.textfsm, .*, extreme_tierra, sh[[ow]] logging audit firmware
 extreme_tierra_show_logging_audit_security.textfsm, .*, extreme_tierra, sh[[ow]] logging audit security
@@ -493,13 +497,15 @@ extreme_tierra_show_system_logging_service.textfsm, .*, extreme_tierra, sh[[ow]]
 extreme_tierra_show_capture_packet_config.textfsm, .*, extreme_tierra, sh[[ow]] ca[[pture]] packet config
 extreme_tierra_show_counters_egress-group.textfsm, .*, extreme_tierra, sh[[ow]] co[[unters]] egress-group
 extreme_tierra_show_counters_lldp_summary.textfsm, .*, extreme_tierra, sh[[ow]] co[[unters]] lldp summary
-extreme_tierra_show_ip_interface_ethernet.textfsm, .*, extreme_tierra, show ip interface ethernet(\s\w+\s*\w+)?
-extreme_tierra_show_ipv6_route_vrf_static.textfsm, .*, extreme_tierra, show ipv6 route vrf(\s\w+)? static
+extreme_tierra_show_ip_interface_ethernet.textfsm, .*, extreme_tierra, show ip interface ethernet
+extreme_tierra_show_ip_interface_loopback.textfsm, .*, extreme_tierra, show ip interface loopback
+extreme_tierra_show_ipv6_route_vrf_static.textfsm, .*, extreme_tierra, show ipv6 route vrf(\s\S+)? static
 extreme_tierra_show_running-config_banner.textfsm, .*, extreme_tierra, sh[[ow]] ru[[nning-config]] banner
 extreme_tierra_show_running-config_egress.textfsm, .*, extreme_tierra, sh[[ow]] ru[[nning-config]] egress
 extreme_tierra_show_running-config_ip_dns.textfsm, .*, extreme_tierra, sh[[ow]] ru[[nning-config]] ip dns
 extreme_tierra_show_running-config_mirror.textfsm, .*, extreme_tierra, sh[[ow]] ru[[nning-config]] mirror
 extreme_tierra_show_ipv6_access-list_all.textfsm, .*, extreme_tierra, sh[[ow]] ipv6 access-list all
+extreme_tierra_show_ipv6_interface_brief.textfsm, .*, extreme_tierra, sh[[ow]] ipv6 int[[erface]] brief
 extreme_tierra_show_ipv6_route_vrf_brief.textfsm, .*, extreme_tierra, show ipv6 route vrf(\s\w+)? brief
 extreme_tierra_show_link-fault-signaling.textfsm, .*, extreme_tierra, sh[[ow]] link-fault-signaling
 extreme_tierra_show_logging_audit_config.textfsm, .*, extreme_tierra, sh[[ow]] logging audit config
@@ -518,6 +524,7 @@ extreme_tierra_show_counters_encap_all.textfsm, .*, extreme_tierra, sh[[ow]] co[
 extreme_tierra_show_grpc-server_status.textfsm, .*, extreme_tierra, sh[[ow]] grpc-server status
 extreme_tierra_show_interface_ethernet.textfsm, .*, extreme_tierra, sh[[ow]] interface ethernet
 extreme_tierra_show_ip_access-list_all.textfsm, .*, extreme_tierra, sh[[ow]] ip access-list all
+extreme_tierra_show_ip_interface_brief.textfsm, .*, extreme_tierra, sh[[ow]] ip int[[erface]] brief
 extreme_tierra_show_ip_route_vrf_brief.textfsm, .*, extreme_tierra, show ip route vrf(\s\w+)? brief
 extreme_tierra_show_ipv6_route_vrf_all.textfsm, .*, extreme_tierra, show ipv6 route vrf all
 extreme_tierra_show_ipv6_route_vrf_arp.textfsm, .*, extreme_tierra, show ipv6 route vrf(\s\w+)? arp
@@ -528,16 +535,17 @@ extreme_tierra_show_sysinfo_sensor_all.textfsm, .*, extreme_tierra, sh[[ow]] sys
 extreme_tierra_show_sysinfo_sensor_cpu.textfsm, .*, extreme_tierra, sh[[ow]] sysinfo sensor cpu
 extreme_tierra_show_sysinfo_sensor_mem.textfsm, .*, extreme_tierra, sh[[ow]] sysinfo sensor mem
 extreme_tierra_show_ingress-group_all.textfsm, .*, extreme_tierra, sh[[ow]] ingress-group all
+extreme_tierra_show_ipv6_interface_ve.textfsm, .*, extreme_tierra, show ipv6 interface ve
 extreme_tierra_show_sysinfo_sensor_lc.textfsm, .*, extreme_tierra, sh[[ow]] sysinfo sensor lc
 extreme_tierra_show_egress-group_all.textfsm, .*, extreme_tierra, sh[[ow]] egress-group all
 extreme_tierra_show_firmware_history.textfsm, .*, extreme_tierra, sh[[ow]] firmware history
 extreme_tierra_show_ip_route_vrf_all.textfsm, .*, extreme_tierra, show ip route vrf all
-extreme_tierra_show_ip_route_vrf_arp.textfsm, .*, extreme_tierra, show ip route vrf(\s\w+)? arp
+extreme_tierra_show_ip_route_vrf_arp.textfsm, .*, extreme_tierra, show ip route vrf(\s\S+)? arp
 extreme_tierra_show_ipv6_access-list.textfsm, .*, extreme_tierra, sh[[ow]] ipv6 access-list
 extreme_tierra_show_transport-tunnel.textfsm, .*, extreme_tierra, sh[[ow]] tr[[ansport-tunnel]]
 extreme_tierra_show_counters_egress.textfsm, .*, extreme_tierra, sh[[ow]] co[[unters]] egress
 extreme_tierra_show_interface_brief.textfsm, .*, extreme_tierra, sh[[ow]] interface brief
-extreme_tierra_show_ip_interface_ve.textfsm, .*, extreme_tierra, show ip interface(\s\w+\s*\w+)?
+extreme_tierra_show_ip_interface_ve.textfsm, .*, extreme_tierra, show ip interface
 extreme_tierra_show_listener-policy.textfsm, .*, extreme_tierra, sh[[ow]] listener-policy
 extreme_tierra_show_mac_access-list.textfsm, .*, extreme_tierra, sh[[ow]] mac access-list
 extreme_tierra_show_media_interface.textfsm, .*, extreme_tierra, sh[[ow]] me[[dia]] i[[nterface]]

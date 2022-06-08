@@ -1,4 +1,15 @@
+interface port-channel 10
+  set ingress-group ig_mpls
+  set ingress-group ig_fw
+  lacp min-links 4
+  ip address 1.1.1.1/24
+  ip address 1.1.1.2/24 secondary
+  ipv6 address 1:1:1:1::1:1/32
+  ipv6 address 1:1:1:1::1:2/32 secondary
 interface port-channel 11
+  description test!23
+  no shutdown
+interface port-channel 13
   set ingress-group ig_mpls
   set ingress-group ig_fw
   lacp min-links 4

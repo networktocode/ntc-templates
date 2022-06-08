@@ -1,24 +1,66 @@
 ---
 parsed_sample:
   - interface_type: "port-channel"
-    interface: "11"
-    description: ""
-    ingress_groups:
+    interface: "10"
+    set_ingress_group:
       - "ig_mpls"
       - "ig_fw"
-    enable: "no shutdown"
     lacp_min_links: "4"
+    ip_address_primary:
+      - "1.1.1.1/24"
+    ip_address_secondary:
+      - "1.1.1.2/24"
+    ipv6_address_primary:
+      - "1:1:1:1::1:1/32"
+    ipv6_address_secondary:
+      - "1:1:1:1::1:2/32"
+    description: ""
     lacp_system_mac: ""
     lacp_system_priority: ""
     load_balance: ""
     mtu: ""
+    enable: ""
+  - interface_type: "port-channel"
+    interface: "11"
+    set_ingress_group: []
+    lacp_min_links: ""
+    ip_address_primary: []
+    ip_address_secondary: []
+    ipv6_address_primary: []
+    ipv6_address_secondary: []
+    description: "test!23"
+    lacp_system_mac: ""
+    lacp_system_priority: ""
+    load_balance: ""
+    mtu: ""
+    enable: "no shutdown"
+  - interface_type: "port-channel"
+    interface: "13"
+    set_ingress_group:
+      - "ig_mpls"
+      - "ig_fw"
+    lacp_min_links: "4"
+    ip_address_primary: []
+    ip_address_secondary: []
+    ipv6_address_primary: []
+    ipv6_address_secondary: []
+    description: ""
+    lacp_system_mac: ""
+    lacp_system_priority: ""
+    load_balance: ""
+    mtu: ""
+    enable: "no shutdown"
   - interface_type: "port-channel"
     interface: "255"
-    description: "test!23"
-    ingress_groups: []
-    enable: "no shutdown"
+    set_ingress_group: []
     lacp_min_links: ""
+    ip_address_primary: []
+    ip_address_secondary: []
+    ipv6_address_primary: []
+    ipv6_address_secondary: []
+    description: "test!23"
     lacp_system_mac: ""
     lacp_system_priority: ""
     load_balance: ""
     mtu: ""
+    enable: "no shutdown"

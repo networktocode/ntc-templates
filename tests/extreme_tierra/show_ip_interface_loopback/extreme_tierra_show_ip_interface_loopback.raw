@@ -1,4 +1,4 @@
-Interface: ethernet 0/1 Admin-status:UP Oper-status UP
+Interface: loopback 10 Admin-status:UP Oper-status UP
   
 Addresses:
  10.10.10.1/24
@@ -7,4 +7,4 @@ Addresses:
  20.20.20.2/24 secondary
  fe80:10/24
 
-Vrf:
+Vrf:vrf_10
