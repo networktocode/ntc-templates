@@ -1,54 +1,18 @@
 ---
 parsed_sample:
-  - interface_type: "loopback"
-    interface: "1"
-    description: ""
-    ipv4_dhcp: ""
-    ipv4_static: "10.10.10.10/32"
-    ipv4_gateway: ""
-    ipv6_dhcp: ""
-    ipv6_static: "10:10::10:10/128"
-    ipv6_gateway: ""
-    mtu: ""
-    speed: ""
+  - interface: "loopback 1"
+    ip_address_primary:
+      - "10.10.10.10/32"
+    ip_address_secondary: []
+    ipv6_address_primary:
+      - "10:10::10:10/128"
+    ipv6_address_secondary: []
     enable: "no shutdown"
-    ingress_groups: []
-    lacp_port_priority: ""
-    lacp_rate: ""
-    fec: ""
-    lldp_enable: ""
-    lldp_recieve: ""
-    lldp_transmit: ""
-    channel_grp_id: ""
-    channel_grp_mode: ""
-    link_fault_signaling: ""
-    lacp_min_links: ""
-    lacp_system_mac: ""
-    lacp_system_priority: ""
-    load_balance: ""
-  - interface_type: "loopback"
-    interface: "10"
-    description: ""
-    ipv4_dhcp: ""
-    ipv4_static: "10.10.10.10/32"
-    ipv4_gateway: ""
-    ipv6_dhcp: ""
-    ipv6_static: "10:10::10:10/128"
-    ipv6_gateway: ""
-    mtu: ""
-    speed: ""
+  - interface: "loopback 10"
+    ip_address_primary:
+      - "10.10.10.10/32"
+    ip_address_secondary: []
+    ipv6_address_primary:
+      - "10:10::10:10/128"
+    ipv6_address_secondary: []
     enable: "no shutdown"
-    ingress_groups: []
-    lacp_port_priority: ""
-    lacp_rate: ""
-    fec: ""
-    lldp_enable: ""
-    lldp_recieve: ""
-    lldp_transmit: ""
-    channel_grp_id: ""
-    channel_grp_mode: ""
-    link_fault_signaling: ""
-    lacp_min_links: ""
-    lacp_system_mac: ""
-    lacp_system_priority: ""
-    load_balance: ""

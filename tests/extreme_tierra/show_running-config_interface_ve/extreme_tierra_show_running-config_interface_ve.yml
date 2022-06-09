@@ -1,28 +1,10 @@
 ---
 parsed_sample:
-  - interface_type: "ve"
-    interface: "10"
-    description: ""
-    ipv4_dhcp: ""
-    ipv4_static: "1.1.1.2/24"
-    ipv4_gateway: ""
-    ipv6_dhcp: ""
-    ipv6_static: ""
-    ipv6_gateway: ""
-    mtu: ""
-    speed: ""
+  - interface: "ve 10"
+    ip_address_primary:
+      - "1.1.1.1/24"
+    ip_address_secondary:
+      - "1.1.1.2/24"
+    ipv6_address_primary: []
+    ipv6_address_secondary: []
     enable: "no shutdown"
-    ingress_groups: []
-    lacp_port_priority: ""
-    lacp_rate: ""
-    fec: ""
-    lldp_enable: ""
-    lldp_recieve: ""
-    lldp_transmit: ""
-    channel_grp_id: ""
-    channel_grp_mode: ""
-    link_fault_signaling: ""
-    lacp_min_links: ""
-    lacp_system_mac: ""
-    lacp_system_priority: ""
-    load_balance: ""
