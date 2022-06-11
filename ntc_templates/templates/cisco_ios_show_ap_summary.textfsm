@@ -1,0 +1,19 @@
+Value AP_NAME (\S+)
+Value SLOT (\d+)
+Value AP_MODEL (\S+)
+Value MAC ([a-fA-F0-9:\.]+)
+Value RadioMac ([a-fA-F0-9:\.]+)
+Value LOCATION (\S+\s\S+)
+Value COUNTRY (\S+)
+Value IP ([a-fA-F0-9:\.]+)
+Value State (\S+)
+
+Start
+  ^[a-zA-Z]+\s[a-z]+\s[a-zA-z]+:\s\d+$$
+  ^$$
+  ^AP\s+Name\s+Slots\s+AP\s+Model\s+Ethernet\s+MAC\s+Radio\sMAC\s+Location\s+Country\s+IP\s+Address\s+State\s*$$
+  ^-+$$
+  ^${AP_NAME}\s+${SLOT}\s+${AP_MODEL}\s+${MAC}\s+${RadioMac}\s+${LOCATION}\s+${COUNTRY}\s+${IP}\s+${State}\s+$$ -> Record
+  ^${AP_NAME}\s+${SLOT}\s+${AP_MODEL}\s+${MAC}\s+${RadioMac}\s+${LOCATION}\s+${COUNTRY}\s+${IP}\s+${State}$$ -> Record
+  ^\s*$$
+  ^. -> Error
