@@ -1,0 +1,19 @@
+Value Filldown INDEX (\d+)
+Value Filldown NAME (\w+)
+Value Filldown STATUS (\S+)
+Value Filldown MTU (\d+)
+Value Filldown MAC_ADDRESS ([0-9a-fA-F]{2}:[0-9a-fA-F]{2}:[0-9a-fA-F]{2}:[0-9a-fA-F]{2}:[0-9a-fA-F]{2}:[0-9a-fA-F]{2})
+Value List INET_ADDRESS (\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3})
+Value List INET_MASK (\d{1,3})
+Value List INET6_ADDRESS (\S+)
+Value List INET6_MASK (\d{1,3})
+
+Start
+  ^\d.+ -> Continue.Record
+  ^\d.+ -> Continue.Clearall
+  ^${INDEX}:\s+${NAME}:\s+<${STATUS}>\s+mtu\s+${MTU}\s.+
+  ^\s+\S+\s+${MAC_ADDRESS}\s
+  ^\s+inet\s+${INET_ADDRESS}/${INET_MASK}\s.+
+  ^\s+inet6\s+${INET6_ADDRESS}/${INET6_MASK}\s.+
+  ^\s.+
+  ^. -> Error

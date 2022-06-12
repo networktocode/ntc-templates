@@ -1,0 +1,69 @@
+---
+parsed_sample:
+  - index: "1"
+    inet6_address:
+      - "::1"
+    inet6_mask:
+      - "128"
+    inet_address:
+      - "127.0.0.1"
+    inet_mask:
+      - "8"
+    mac_address: "00:00:00:00:00:00"
+    mtu: "65536"
+    name: "lo"
+    status: "LOOPBACK,UP,LOWER_UP"
+  - index: "2"
+    inet6_address:
+      - "fe80::5054:ff:fe8c:6244"
+    inet6_mask:
+      - "64"
+    inet_address:
+      - "192.168.121.241"
+      - "192.168.121.45"
+    inet_mask:
+      - "24"
+      - "24"
+    mac_address: "52:54:00:8c:62:44"
+    mtu: "1500"
+    name: "eth0"
+    status: "BROADCAST,MULTICAST,UP,LOWER_UP"
+  - index: "3"
+    inet6_address:
+      - "fe80::b681:60db:7206:13a0"
+    inet6_mask:
+      - "64"
+    inet_address:
+      - "192.168.94.133"
+    inet_mask:
+      - "24"
+    mac_address: "00:0c:29:b0:21:7d"
+    mtu: "1500"
+    name: "ens33"
+    status: "BROADCAST,MULTICAST,UP,LOWER_UP"
+  - index: "4"
+    inet6_address:
+      - "fe80::6c2a:3447:5d99:700a"
+    inet6_mask:
+      - "64"
+    inet_address:
+      - "192.168.94.134"
+    inet_mask:
+      - "24"
+    mac_address: "00:50:56:20:47:14"
+    mtu: "1500"
+    name: "ens37"
+    status: "BROADCAST,MULTICAST,UP,LOWER_UP"
+  - index: "5"
+    inet6_address:
+      - "fe80::97ef:a3f1:a962:9ef0"
+    inet6_mask:
+      - "64"
+    inet_address:
+      - "192.168.94.135"
+    inet_mask:
+      - "24"
+    mac_address: "00:50:56:37:93:58"
+    mtu: "1500"
+    name: "ens38"
+    status: "BROADCAST,MULTICAST,UP,LOWER_UP"
