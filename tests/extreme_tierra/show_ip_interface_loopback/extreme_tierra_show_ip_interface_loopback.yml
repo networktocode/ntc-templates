@@ -1,15 +1,11 @@
 ---
 parsed_sample:
-  - interface: "loopback 10"
+  - interface: "Lo 1"
     admin_status: "UP"
-    oper_status: "UP"
-    linklocal_address:
-      - "fe80:10/24"
-    primary_address:
-      - "10.10.10.1/24"
-      - "20.20.20.1/24"
+    oper_status: ":DOWN"
     ipaddress_unassigned: ""
-    secondary_address:
-      - "10.10.10.2/24"
-      - "20.20.20.2/24"
-    vrf: "vrf_10"
+    linklocal_address: []
+    primary_address:
+      - "99.99.99.1/32"
+    secondary_address: []
+    vrf: ""

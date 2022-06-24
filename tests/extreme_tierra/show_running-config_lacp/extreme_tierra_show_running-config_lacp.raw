@@ -1,0 +1,27 @@
+protocol lacp
+interface port-channel 40
+  no shutdown
+!
+interface port-channel 200
+  no shutdown
+!
+interface ethernet 0/10
+  channel-group 40 mode active
+  no shutdown
+!
+interface ethernet 0/15
+  channel-group 40 mode active
+  no shutdown
+!
+interface ethernet 0/16
+  channel-group 200 mode passive
+  no shutdown
+!
+interface ethernet 0/20
+  channel-group 40 mode active
+  no shutdown
+!
+interface ethernet 0/24
+  channel-group 200 mode passive
+  no shutdown
+!

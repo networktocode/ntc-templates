@@ -1,10 +1,5 @@
-Interface: ethernet 0/1 Admin-status:UP Oper-status UP
-  
-Addresses:
- 10.10.10.1/24
- 10.10.10.2/24 secondary
- 20.20.20.1/24
- 20.20.20.2/24 secondary
- fe80:10/24
+Interface: Eth 0/1:2 Admin-status:UP Oper-status:UP
+Vrf: vrf1
 
-Vrf:
+Addresses:
+ 31.1.1.1/24

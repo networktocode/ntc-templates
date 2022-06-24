@@ -476,6 +476,7 @@ extreme_tierra_show_counters_transport-tunnel.textfsm, .*, extreme_tierra, sh[[o
 extreme_tierra_show_ip_interface_port-channel.textfsm, .*, extreme_tierra, sh[[ow]] ip int[[erface]] port-channel
 extreme_tierra_show_running-config_acl-config.textfsm, .*, extreme_tierra, sh[[ow]] ru[[nning-config]] acl-config
 extreme_tierra_show_running-config_ntp_server.textfsm, .*, extreme_tierra, sh[[ow]] ru[[nning-config]] ntp server
+extreme_tierra_show_interface_ethernet_brief.textfsm, .*, extreme_tierra, sh[[ow]] interface ethernet brief
 extreme_tierra_show_ipv6_route_vrf_connected.textfsm, .*, extreme_tierra, show ipv6 route vrf(\s\S+)? connected
 extreme_tierra_show_qos_forwarding-group_all.textfsm, .*, extreme_tierra, sh[[ow]] qos forwarding-group all
 extreme_tierra_show_running-config_interface.textfsm, .*, extreme_tierra, sh[[ow]] ru[[nning-config]] interface
@@ -520,6 +521,7 @@ extreme_tierra_show_counters_egress_all.textfsm, .*, extreme_tierra, sh[[ow]] co
 extreme_tierra_show_ip_route_vrf_static.textfsm, .*, extreme_tierra, show ip route vrf(\s\w+)? static
 extreme_tierra_show_listener-policy_all.textfsm, .*, extreme_tierra, sh[[ow]] listener-policy all
 extreme_tierra_show_mac_access-list_all.textfsm, .*, extreme_tierra, sh[[ow]] mac access-list all
+extreme_tierra_show_running-config_lacp.textfsm, .*, extreme_tierra, show running-config lacp
 extreme_tierra_show_running-config_lldp.textfsm, .*, extreme_tierra, sh[[ow]] running-config lldp
 extreme_tierra_show_system_logging_host.textfsm, .*, extreme_tierra, sh[[ow]] system logging host
 extreme_tierra_show_counters_encap_all.textfsm, .*, extreme_tierra, sh[[ow]] co[[unters]] encap all
@@ -647,6 +649,7 @@ juniper_junos_show_vlans.textfsm, .*, juniper_junos, sh[[ow]] vl[[ans]]
 
 juniper_screenos_get_route.textfsm, .*, juniper_screenos, get route
 
+linux_efa_version.textfsm, .*, linux, efa version
 linux_arp_-a.textfsm, .*, linux, arp -a
 
 mikrotik_routeros_ip_firewall_filter_print_all_without-paging.textfsm, .*, mikrotik_routeros, [[/]]ip(v6)? firewall filter print all without-paging

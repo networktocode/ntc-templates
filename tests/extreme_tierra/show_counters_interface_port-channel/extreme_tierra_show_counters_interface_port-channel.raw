@@ -1,5 +1,10 @@
-Interface Statistics: port-channel 11
- Carrier Transitions: 0
+Error: Failed retrieving data from State DB
+Error: Failed retrieving data from State DB
+Error: Failed retrieving data from State DB
+Error: Failed retrieving data from State DB
+Error: Failed retrieving data from State DB
+Interface Statistics: port-channel 40
+ Carrier Transitions: 1
            LastClear: 0s
 Input:
               Total pkts: 0
@@ -10,6 +15,16 @@ Input:
               MCast pkts: 0
                   Octets: 0
               UCast pkts: 0
+               Runt pkts: 0
+              CRC Errors: 0
+Input Distribution:
+            64 byte pkts: 0
+        65-127 byte pkts: 0
+       128-255 byte pkts: 0
+       256-511 byte pkts: 0
+      512-1023 byte pkts: 0
+     1024-1518 byte pkts: 0
+              Jumbo pkts: 0
 Out:
               Total pkts: 0
           Broadcast pkts: 0
@@ -18,3 +33,13 @@ Out:
               MCast pkts: 0
                   Octets: 0
               UCast pkts: 0
+Rate Info:
+                   Input: 0.000000 Mbits/sec, 0 pkts/sec 0.00% of line-rate
+                  Output: 0.000000 Mbits/sec, 0 pkts/sec 0.00% of line-rate
+
+
+Error: Failed retrieving data from State DB
+Error: Failed retrieving data from State DB
+Error: Failed retrieving data from State DB
+Error: Failed retrieving data from State DB
+Error: Failed retrieving data from State DB
