@@ -1,15 +1,11 @@
 ---
 parsed_sample:
-  - interface: "ve 10"
-    admin_status: "UP"
-    oper_status: "UP"
-    linklocal_address:
-      - "fe80:20:20:20/64"
-    primary_address:
-      - "10.10.10.1/32"
-      - "20:20:20:20/32"
-      - "30.30.30.30/24"
-      - "30.30.30.30/24"
+  - interface: "ve 801"
+    admin_status: "DOWN"
+    oper_status: ":DOWN"
     ipaddress_unassigned: ""
+    linklocal_address: []
+    primary_address:
+      - "80.1.1.1/24"
     secondary_address: []
     vrf: ""

@@ -1,51 +1,72 @@
-Value Key,Required INTERFACE (\S+\s\S+)
-Value CARRIER_TRANSITION (\d+)
-Value LAST_CLEAR (\S+)
-Value RX_TOTAL_PKTS (\d+)
-Value RX_BROADCAST_PKTS (\d+)
-Value RX_DISCARD_PKTS (\d+)
-Value RX_ERRORS_PKTS (\d+)
-Value RX_FCS_ERRORS (\d+)
-Value RX_MCAST_PKTS (\d+)
-Value RX_OCTETS (\d+)
-Value RX_UCAST_PKTS (\d+)
-Value RX_UNKNOWN_PROTOCOLS (\d+)
-Value TX_TOTAL_PKTS (\d+)
-Value TX_BROADCAST_PKTS (\d+)
-Value TX_DISCARD_PKTS (\d+)
-Value TX_ERRORS_PKTS (\d+)
-Value TX_MCAST_PKTS (\d+)
-Value TX_OCTETS (\d+)
-Value TX_UCAST_PKTS (\d+)
+Value Required PORT_NAME (\S+\s+\S+)
+Value CARRIER_TRANSITIONS (\d+)
+Value LAST_CLEAR (\d+s)
+Value INPUT_TOTAL_PKTS (\d+)
+Value INPUT_BROADCAST_PKTS (\d+)
+Value INPUT_DISCARD_PKTS (\d+)
+Value INPUT_ERRORS_PKTS (\d+)
+Value INPUT_FCS_ERRORS (\d+)
+Value INPUT_MCAST_PKTS (\d+)
+Value INPUT_OCTETS (\d+)
+Value INPUT_UCAST_PKTS (\d+)
+Value INPUT_RUNT_PKTS (\d+)
+Value INPUT_CRC_ERRORS (\d+)
+Value IP_DIST_64_PKTS (\d+)
+Value IP_DIST_65_127_PKTS (\d+)
+Value IP_DIST_128_255_PKTS (\d+)
+Value IP_DIST_256_511_PKTS (\d+)
+Value IP_DIST_512_1023_PKTS (\d+)
+Value IP_DIST_1024_1518_PKTS (\d+)
+Value IP_DIST_JUMBO_PKTS (\d+)
+Value OUTPUT_TOTAL_PKTS (\d+)
+Value OUTPUT_BROADCAST_PKTS (\d+)
+Value OUTPUT_DISCARD_PKTS (\d+)
+Value OUTPUT_ERRORS_PKTS (\d+)
+Value OUTPUT_MCAST_PKTS (\d+)
+Value OUTPUT_OCTETS (\d+)
+Value OUTPUT_UCAST_PKTS (\d+)
+Value RATE_INFO_INPUT ([\S\s]+)
+Value RATE_INFO_OUTPUT ([\S\s]+)
 
 Start
-  ^\s*Interface\s+Statistics:\s+${INTERFACE}
-  ^\s*Carrier\s+Transitions:\s+${CARRIER_TRANSITION}
-  ^\s*LastClear:\s+${LAST_CLEAR}
-  ^\s*Input: -> Input
-  ^\s*Out: -> Out
-  ^\s*$$
-  ^. -> Error
+ ^Error:
+ ^Interface Statistics:\s+${PORT_NAME}
+ ^\s+Carrier Transitions:\s+${CARRIER_TRANSITIONS}
+ ^\s+LastClear:\s+${LAST_CLEAR}
+ ^Input:
+ ^\s+Total pkts:\s+${INPUT_TOTAL_PKTS}
+ ^\s+Broadcast pkts:\s+${INPUT_BROADCAST_PKTS}
+ ^\s+Discard pkts:\s+${INPUT_DISCARD_PKTS}
+ ^\s+Errors pkts:\s+${INPUT_ERRORS_PKTS}
+ ^\s+FCS Errors:\s+${INPUT_FCS_ERRORS}
+ ^\s+MCast pkts:\s+${INPUT_MCAST_PKTS}
+ ^\s+Octets:\s+${INPUT_OCTETS}
+ ^\s+UCast pkts:\s+${INPUT_UCAST_PKTS}
+ ^\s+Runt pkts:\s+${INPUT_RUNT_PKTS}
+ ^\s+CRC Errors:\s+${INPUT_CRC_ERRORS}
+ ^Input Distribution:
+ ^\s+64 byte pkts:\s+${IP_DIST_64_PKTS}
+ ^\s+65-127 byte pkts:\s+${IP_DIST_65_127_PKTS}
+ ^\s+128-255 byte pkts:\s+${IP_DIST_128_255_PKTS}
+ ^\s+256-511 byte pkts:\s+${IP_DIST_256_511_PKTS}
+ ^\s+512-1023 byte pkts:\s+${IP_DIST_512_1023_PKTS}
+ ^\s+1024-1518 byte pkts:\s+${IP_DIST_1024_1518_PKTS}
+ ^\s+Jumbo pkts:\s+${IP_DIST_JUMBO_PKTS}
+ ^Out: -> OUTPUT
 
-Input
-  ^\s*Total\s+\S+:\s+${RX_TOTAL_PKTS}
-  ^\s*Broadcast\s+\S+:\s+${RX_BROADCAST_PKTS}
-  ^\s*Discard\s+\S+:\s+${RX_DISCARD_PKTS}
-  ^\s*Errors\s+\S+:\s+${RX_ERRORS_PKTS}
-  ^\s*FCS Errors:\s+${RX_FCS_ERRORS}
-  ^\s*MCast\s+\S+:\s+${RX_MCAST_PKTS}
-  ^\s*Octets:\s+${RX_OCTETS}
-  ^\s*UCast\s+\S+:\s+${RX_UCAST_PKTS} -> Start
-  ^\s*$$
-  ^. -> Error
+OUTPUT
+ ^\s+Total pkts:\s+${OUTPUT_TOTAL_PKTS}
+ ^\s+Broadcast pkts:\s+${OUTPUT_BROADCAST_PKTS}
+ ^\s+Discard pkts:\s+${OUTPUT_DISCARD_PKTS}
+ ^\s+Errors pkts:\s+${OUTPUT_ERRORS_PKTS}
+ ^\s+MCast pkts:\s+${OUTPUT_MCAST_PKTS}
+ ^\s+Octets:\s+${OUTPUT_OCTETS}
+ ^\s+UCast pkts:\s+${OUTPUT_UCAST_PKTS}
+ ^Rate Info: -> RATE_INFO
 
-Out
-  ^\s*Total\s+\S+:\s+${TX_TOTAL_PKTS}
-  ^\s*Broadcast\s+\S+:\s+${TX_BROADCAST_PKTS}
-  ^\s*Discard\s+\S+:\s+${TX_DISCARD_PKTS}
-  ^\s*Errors\s+\S+:\s+${TX_ERRORS_PKTS}
-  ^\s*MCast\s+\S+:\s+${TX_MCAST_PKTS}
-  ^\s*Octets:\s+${TX_OCTETS}
-  ^\s*UCast\s+\S+:\s+${TX_UCAST_PKTS} -> Record Start
-  ^\s*$$
-  ^. -> Error
+RATE_INFO
+ ^\s+Input:\s+${RATE_INFO_INPUT}
+ ^\s+Output:\s+${RATE_INFO_OUTPUT} -> Record
+ ^Error:
+ ^\s*$$
+ ^. -> Error

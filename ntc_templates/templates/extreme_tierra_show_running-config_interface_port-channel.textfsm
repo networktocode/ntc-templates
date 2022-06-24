@@ -2,17 +2,18 @@ Value INTERFACE_TYPE (\S+)
 Value Key,Required INTERFACE (\S+)
 Value List SET_INGRESS_GROUP (\S+)
 Value LACP_MIN_LINKS (\S+)
-Value List IP_ADDRESS_PRIMARY (\S+$|Unassigned) 
+Value List IP_ADDRESS_PRIMARY (\S+$|Unassigned)
 Value List IP_ADDRESS_SECONDARY (\S+)
 Value List IPV6_ADDRESS_PRIMARY (\S+$|Unassigned)
 Value List IPV6_ADDRESS_SECONDARY (\S+)
 Value DESCRIPTION (\S+)
+Value SUBINTERFACE ([\S\s]+)
 Value LACP_SYSTEM_MAC (\S+)
 Value LACP_SYSTEM_PRIORITY (\S+)
 Value LOAD_BALANCE (\S+)
 Value MTU (\S+)
 Value ENABLE (no shutdown|shutdown)
-					
+
 Start
  ^interface -> Continue.Record
  ^interface ${INTERFACE_TYPE}\s+${INTERFACE}
@@ -22,11 +23,13 @@ Start
  ^\s*ip address ${IP_ADDRESS_PRIMARY}
  ^\s*ipv6 address ${IPV6_ADDRESS_SECONDARY}\s*secondary
  ^\s*ipv6 address ${IPV6_ADDRESS_PRIMARY}
+ ^\s*subinterface ${SUBINTERFACE}
  ^\s*lacp system\-mac ${LACP_SYSTEM_MAC}
  ^\s*lacp system\-priority ${LACP_SYSTEM_PRIORITY}
  ^\s*load\-balance ${LOAD_BALANCE}
  ^\s*mtu ${MTU}
  ^\s*description ${DESCRIPTION}
  ^\s*${ENABLE}
+ ^!
  ^\s*$$
  ^. -> Error

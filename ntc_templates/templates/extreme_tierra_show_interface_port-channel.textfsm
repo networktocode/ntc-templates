@@ -1,6 +1,7 @@
 Value Key,Required INTERFACE (\S+\s\S+)
 Value STATUS (\S+)
 Value MTU (\d+)
+Value MAC_ADDRESS (\S+)
 Value INTERFACE_INDEX ([a-fA-Fx\-\d]+)
 Value PORT_MODE (\S+\s\S+)
 Value SPEED ([\S\s]+)
@@ -30,6 +31,7 @@ Start
   ^${INTERFACE}\s+is\s+${STATUS}
   ^\s*MTU\s+${MTU}\s+Bytes
   ^\s*IfIndex\s+${INTERFACE_INDEX}
+  ^\s*Mac address is\s*${MAC_ADDRESS}
   ^\s*Port\s+mode\s+is\s+${PORT_MODE},\s+${SPEED}
   ^\s*LagType\s+is\s+${LAG_TYPE}
   ^\s*MinLinks\s+is\s+${MINLINKS}

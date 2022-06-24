@@ -1,0 +1,16 @@
+Value Filldown INTERFACE_COUNT (\d+)
+Value Required PORT (\S+\s\S+)
+Value MTU (\d+)
+Value ADMIN_STATE (\S+)
+Value OPER_STATE (\S+)
+Value SPEED (\S+G)
+Value If_INDEX (\S+)
+Value DESCRIPTION (\S+\s\S+)				 
+
+Start
+ ^Number of interfaces\s*${INTERFACE_COUNT}
+ ^Port\s*Mtu\s*Admin-State\s*Oper-State\s*Speed\s*Ifindex\s*Description
+ ^[\-]+
+ ^${PORT}\s*${MTU}\s*${ADMIN_STATE}\s*${OPER_STATE}\s*(${SPEED}|\s*)\s*${If_INDEX}\s*${DESCRIPTION} -> Record
+ ^\s*$$
+ ^. -> Error

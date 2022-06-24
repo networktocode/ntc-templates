@@ -1,0 +1,19 @@
+Value VERSION (\S+)
+Value BUILD (\S+)
+Value TIME_STAMP (\S+)
+Value MODE (\S+)
+Value DEPLOYMENT_TYPE (\S+)
+Value DEPLOYMENT_PLATFORM (\S+)
+Value NODE_IP (\S+)
+Value TIME_ELAPSED (\S+)
+
+
+Start
+  ^Version : ${VERSION}
+  ^Build: ${BUILD}
+  ^Time Stamp: ${TIME_STAMP}
+  ^Mode: ${MODE}
+  ^Deployment Type: ${DEPLOYMENT_TYPE}
+  ^Deployment Platform: ${DEPLOYMENT_PLATFORM}
+  ^Node IP: ${NODE_IP}
+  ^[\-]+ Time Elapsed: ${TIME_ELAPSED} [\-]+
