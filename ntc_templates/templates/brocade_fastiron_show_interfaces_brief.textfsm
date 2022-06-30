@@ -1,5 +1,5 @@
 Value interface (\S+)
-Value linkstate (Up|Disable|Down)
+Value linkstate (Up|Disable|Down|ERR-DIS)
 Value portstate ([a-zA-Z\/]+)
 Value duplex ([a-zA-Z\/]+)
 Value speed ([a-zA-Z0-9\/]+)
