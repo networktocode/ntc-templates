@@ -1,0 +1,13 @@
+interface ethernet 0/1:1
+  no shutdown
+!
+interface ethernet 0/1:2
+  no shutdown
+!
+interface ethernet 0/1:3
+  no shutdown
+!
+interface ethernet 0/1:4
+  channel-group 13 mode on
+  no shutdown
+!

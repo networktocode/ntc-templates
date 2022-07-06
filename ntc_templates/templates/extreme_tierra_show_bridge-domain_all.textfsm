@@ -1,0 +1,20 @@
+Value Filldown BRIDGE_DOMAIN (\d+)
+Value Filldown MODE (\S+)
+Value Filldown VLAN_HEAD (\d+)
+Value Filldown TOTAL_NO_MEMBER_PORT (\d+)
+Value Required IF_MODE (\S+\s+\S+)
+Value VLAN (\S+)
+Value INNER_VLAN (\d+)
+Value ADMIN_STATUS (\w+)
+Value OPER_STATUS (\w+)
+
+Start
+ ^\*untag-s[\s\S]+
+ ^Bridge Domain -> Continue
+ ^Bridge Domain\s+${BRIDGE_DOMAIN}\s+Mode\s+${MODE}\s*(Vlan\s*${VLAN_HEAD}|\s*)
+ ^Total number of member ports\s+${TOTAL_NO_MEMBER_PORT}
+ ^If Name\s+Vlan\s+Inner Vlan\s+Admin Status\s+Oper Status
+ ^[\=]+
+ ^${IF_MODE}\s+${VLAN}\s+(${INNER_VLAN}|[\-]+)\s+${ADMIN_STATUS}\s+${OPER_STATUS} -> Record
+ ^\s*$$
+ ^. -> Error

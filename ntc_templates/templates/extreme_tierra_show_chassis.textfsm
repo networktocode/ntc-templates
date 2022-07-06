@@ -1,46 +1,46 @@
-Value PROD_NAME ([\s\S]+\S)
-Value PLAT_NAME (\S+)
-Value HW_REV ([\s\S]+\S)
-Value MFG_DATE ([\s\S]+\S)
-Value MFG ([\s\S]+\S)
-Value PART_NO (\S+)
-Value SERIAL_NO (\S+)
+Value PRODUCT_NAME ([\s\S]+\S)
+Value PLATFORM_NAME (\S+)
+Value HARDWARE_REV ([\s\S]+\S)
+Value MANUFACTURE_DATE ([\s\S]+\S)
+Value MANUFACTURER ([\s\S]+\S)
+Value PART_NUMBER (\S+)
+Value SERIAL_NUMBER (\S+)
 Value VENDOR ([\s\S]+\S)
-Value SYS_STATUS (\S+)
+Value SYSTEM_STATUS (\S+)
 Value REBOOT_REASON ([\s\S]+\S)
-Value SYS_DESC ([\s\S]+\S)
-Value SYS_CONTACT ([\s\S]+\S)
-Value SYS_LOCATION ([\s\S]+\S)
-Value SYS_UPTIME (\S+)
+Value SYSTEM_DESCRIPTION ([\s\S]+\S)
+Value SYSTEM_CONTACT ([\s\S]+\S)
+Value SYSTEM_LOCATION ([\s\S]+\S)
+Value SYSTEM_UPTIME (\S+)
 Value BASE_MAC (\S+)
 Value MAC_RANGE (\d+)
 Value LC_SLOTS (\d+)
 Value FAN_COUNT (\d+)
 Value LED_COUNT (\d+)
 Value PSU_COUNT (\d+)
-Value T_SENSOR_COUNT (\d+)
+Value THERMAL_SENSOR_COUNT (\d+)
 
 Start
- ^\s+Product Name:\s+${PROD_NAME}
- ^\s+Platform Name:\s*${PLAT_NAME}
- ^\s+Hardware Rev:\s+${HW_REV}
- ^\s+Manufacture Date:\s+${MFG_DATE}
- ^\s+Manufacturer:\s+${MFG}
- ^\s+Part Number:\s+${PART_NO}
- ^\s+Serial Number:\s+${SERIAL_NO}
+ ^\s+Product Name:\s+${PRODUCT_NAME}
+ ^\s+Platform Name:\s*${PLATFORM_NAME}
+ ^\s+Hardware Rev:\s+${HARDWARE_REV}
+ ^\s+Manufacture Date:\s+${MANUFACTURE_DATE}
+ ^\s+Manufacturer:\s+${MANUFACTURER}
+ ^\s+Part Number:\s+${PART_NUMBER}
+ ^\s+Serial Number:\s+${SERIAL_NUMBER}
  ^\s+Vendor:\s+${VENDOR}
- ^\s+System Status:\s+${SYS_STATUS}
+ ^\s+System Status:\s+${SYSTEM_STATUS}
  ^\s+Reboot Reason:\s+${REBOOT_REASON}
- ^\s+System Description:\s+${SYS_DESC}
- ^\s+System Contact:(\s*|\s+${SYS_CONTACT})
- ^\s+System Location:(\s*|\s+${SYS_CONTACT})
- ^\s+System Uptime:\s+${SYS_UPTIME}
+ ^\s+System Description:\s+${SYSTEM_DESCRIPTION}
+ ^\s+System Contact:(\s*|\s+${SYSTEM_CONTACT})
+ ^\s+System Location:(\s*|\s+${SYSTEM_LOCATION})
+ ^\s+System Uptime:\s+${SYSTEM_UPTIME}
  ^\s+Base MAC Address:\s+${BASE_MAC}
  ^\s+Mac Range:\s+${MAC_RANGE}
  ^\s+LC Slots:\s+${LC_SLOTS}
  ^\s+Fan Count:\s+${FAN_COUNT}
  ^\s+LED Count:\s+${LED_COUNT}
  ^\s+PSU Count:\s+${PSU_COUNT}
- ^\s*Thermal Sensor Count:\s+${T_SENSOR_COUNT} -> Record
+ ^\s*Thermal Sensor Count:\s+${THERMAL_SENSOR_COUNT} -> Record
  ^\s*$$
  ^. -> Error

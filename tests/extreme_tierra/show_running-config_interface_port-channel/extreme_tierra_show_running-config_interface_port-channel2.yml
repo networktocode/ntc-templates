@@ -1,23 +1,17 @@
 ---
 parsed_sample:
-  - interface: "ethernet 7/2"
-    set_ingress_group:
-      - "ig_gre"
-      - "ig_vcp"
-      - "ig_mpls"
-      - "ig_gtp"
-      - "ig_fw"
+  - interface: "port-channel 13"
+    set_ingress_group: []
     lacp_min_links: ""
     ip_address_primary: []
     ip_address_secondary: []
     ipv6_address_primary: []
     ipv6_address_secondary: []
-    description: "S1_A1:0/29"
+    description: ""
     subinterface: ""
     lacp_system_mac: ""
     lacp_system_priority: ""
     load_balance: ""
     mtu: ""
-    channel_group:
-      - "1 mode active "
+    channel_group: []
     enable: "no shutdown"

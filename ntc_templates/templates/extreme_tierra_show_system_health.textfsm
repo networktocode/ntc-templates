@@ -21,26 +21,27 @@ Value SERVICE_CPU (\S+)
 Value SERVICE_MEM (\S+)
 
 Start
- ^\s*BIOS Date: ${BIOS_DATE}
- ^\s*BIOS Vendor: ${BIOS_VENDOR}
- ^\s*BIOS Version: ${BIOS_VERSION}
- ^\s*CPU Model: ${CPU_MODEL}
- ^\s*CPU Procs: ${CPU_PROCS}
- ^\s*Disk Free: ${DISK_FREE}
- ^\s*Disk Total: ${DISK_TOTAL}
- ^\s*Disk Used: ${DISK_USED}
- ^\s*Kernel Arch: ${KERNEL_ARCH}
- ^\s*Kernel Version: ${KERNEL_VERSION}
- ^\s*Memory Free: ${MEM_FREE}
- ^\s*Memory Total: ${MEM_TOTAL}
- ^\s*Memory Used: ${MEM_USED}
- ^\s*Memory Used \(%\): ${MEM_USED_PERCENTAGE}
- ^\s*OS: ${OS}
- ^\s*Platform: ${PLATFORM}
- ^\s*Platform Version: ${PLATFORM_VERSION}
- ^\s*System Uptime: ${SYSTEM_UPTIME}
- ^SERVICE\s+CPU\(cores\)\s+Memory\(bytes\)       
+ ^\s*BIOS Date:\s*${BIOS_DATE}
+ ^\s*BIOS Vendor:\s*${BIOS_VENDOR}
+ ^\s*BIOS Version:\s*${BIOS_VERSION}
+ ^\s*CPU Model:\s*${CPU_MODEL}
+ ^\s*CPU Procs:\s*${CPU_PROCS}
+ ^\s*Disk Free:\s*${DISK_FREE}
+ ^\s*Disk Total:\s*${DISK_TOTAL}
+ ^\s*Disk Used:\s*${DISK_USED}
+ ^\s*Kernel Arch:\s*${KERNEL_ARCH}
+ ^\s*Kernel Version:\s*${KERNEL_VERSION}
+ ^\s*Memory Free:\s*${MEM_FREE}
+ ^\s*Memory Total:\s*${MEM_TOTAL}
+ ^\s*Memory Used:\s*${MEM_USED}
+ ^\s*Memory Used \(%\):\s*${MEM_USED_PERCENTAGE}
+ ^\s*OS:\s*${OS}
+ ^\s*Platform:\s*${PLATFORM}
+ ^\s*Platform Version:\s*${PLATFORM_VERSION}
+ ^\s*System Uptime:\s*${SYSTEM_UPTIME}
+ ^SERVICE\s+CPU\(cores\)\s+Memory\(bytes\)
  ^[\-]+
  ^${SERVICE_NAME}\s+${SERVICE_CPU}\s+${SERVICE_MEM} -> Record
  ^\s*$$
  ^. -> Error
+
