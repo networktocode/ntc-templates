@@ -429,12 +429,17 @@ extreme_slx_show_process_memory_summary.textfsm, .*, extreme_slx, sh[[ow]] pr[[o
 extreme_slx_show_process_cpu_top.textfsm, .*, extreme_slx, sh[[ow]] pr[[ocess]] c[[pu]] t[[op]]
 
 extreme_tierra_show_counters_interface_ethernet_all_qos_queues.textfsm, .*, extreme_tierra, sh[[ow]] co[[unters]] int[[erface]] e[[thernet]] a[[ll]] q[[os]] q[[ueues]]
+extreme_tierra_show_mac-address-table_bridge-domain_dynamic.textfsm, .*, extreme_tierra, show mac-address-table bridge-domain dynamic
 extreme_tierra_show_running-config_qos_forwarding-group_all.textfsm, .*, extreme_tierra, sh[[ow]] ru[[nning-config]] q[[os]] f[[orwarding-group]] a[[ll]]
+extreme_tierra_show_mac-address-table_bridge-domain_static.textfsm, .*, extreme_tierra, show mac-address-table bridge-domain static
 extreme_tierra_show_lldp_neighbors_interface_ethernet_all.textfsm, .*, extreme_tierra, sh[[ow]] ll[[dp]] n[[eighbors]] i[[nterface]] e[[thernet]] all
 extreme_tierra_show_running-config_interface_management_0.textfsm, .*, extreme_tierra, sh[[ow]] ru[[nning-config]] int[[erface]] m[[anagement]] 0
 extreme_tierra_show_running-config_interface_port-channel.textfsm, .*, extreme_tierra, show running-config interface port-channel
 extreme_tierra_show_running-config_system_logging_service.textfsm, .*, extreme_tierra, sh[[ow]] ru[[nning-config]] sy[[stem]] l[[ogging]] s[[ervice]]
 extreme_tierra_show_counters_lldp_interface_ethernet_all.textfsm, .*, extreme_tierra, sh[[ow]] co[[unters]] ll[[dp]] i[[nterface]] e[[thernet]] all
+extreme_tierra_show_interface_port-channel_subinterface.textfsm, .*, extreme_tierra, show interface port-channel(\s\S+)? subinterface
+extreme_tierra_show_mac-address-table_bridge-domain_all.textfsm, .*, extreme_tierra, show mac-address-table bridge-domain all
+extreme_tierra_show_mac-address-table_bridge-domain_mac.textfsm, .*, extreme_tierra, show mac-address-table bridge-domain mac
 extreme_tierra_show_running-config_ipv6_access-list_all.textfsm, .*, extreme_tierra, sh[[ow]] ru[[nning-config]] ipv6 access-list all
 extreme_tierra_show_running-config_qos_forwarding-group.textfsm, .*, extreme_tierra, sh[[ow]] ru[[nning-config]] qos forwarding-group
 extreme_tierra_show_running-config_mac_access-list_all.textfsm, .*, extreme_tierra, sh[[ow]] ru[[nning-config]] mac access-list all
@@ -450,6 +455,8 @@ extreme_tierra_show_counters_lldp_interface_ethernet.textfsm, .*, extreme_tierra
 extreme_tierra_show_counters_interface_ethernet_all.textfsm, .*, extreme_tierra, sh[[ow]] co[[unters]] int[[erface]] e[[thernet]] a[[ll]]
 extreme_tierra_show_counters_interface_management_0.textfsm, .*, extreme_tierra, sh[[ow]] co[[unters]] int[[erface]] m[[anagement]] 0
 extreme_tierra_show_counters_interface_port-channel.textfsm, .*, extreme_tierra, sh[[ow]] co[[unters]] int[[erface]] p[[ort-channel]]
+extreme_tierra_show_interface_ethernet_subinterface.textfsm, .*, extreme_tierra, show interface ethernet(\s\S+)? subinterface
+extreme_tierra_show_mac-address-table_bridge-domain.textfsm, .*, extreme_tierra, show mac-address-table bridge-domain
 extreme_tierra_show_running-config_ipv6_access-list.textfsm, .*, extreme_tierra, sh[[ow]] ru[[nning-config]] ipv6 access-list
 extreme_tierra_show_running-config_transport-tunnel.textfsm, .*, extreme_tierra, sh[[ow]] ru[[nning-config]] t[[ransport-tunnel]]
 extreme_tierra_show_running-config_listener-policy.textfsm, .*, extreme_tierra, sh[[ow]] ru[[nning-config]] listener-policy
@@ -462,6 +469,7 @@ extreme_tierra_show_running-config_ip_access-list.textfsm, .*, extreme_tierra, s
 extreme_tierra_show_capture_packet_interface_all.textfsm, .*, extreme_tierra, sh[[ow]] ca[[pture]] packet interface all
 extreme_tierra_show_capture_packet_pcapfile-info.textfsm, .*, extreme_tierra, sh[[ow]] ca[[pture]] packet pcapfile-info
 extreme_tierra_show_interface_port-channel_brief.textfsm, .*, extreme_tierra, sh[[ow]] interface port-channel brief
+extreme_tierra_show_running-config_bridge-domain.textfsm, .*, extreme_tierra, show running-config bridge-domain
 extreme_tierra_show_running-config_ingress-group.textfsm, .*, extreme_tierra, sh[[ow]] ru[[nning-config]] ingress-group
 extreme_tierra_show_counters_interface_ethernet.textfsm, .*, extreme_tierra, sh[[ow]] co[[unters]] interface ethernet
 extreme_tierra_show_grpc-server_gnmi_statistics.textfsm, .*, extreme_tierra, sh[[ow]] grpc-server gnmi statistics
@@ -538,6 +546,7 @@ extreme_tierra_show_running-config_qos.textfsm, .*, extreme_tierra, sh[[ow]] ru[
 extreme_tierra_show_sysinfo_sensor_all.textfsm, .*, extreme_tierra, sh[[ow]] sysinfo sensor all
 extreme_tierra_show_sysinfo_sensor_cpu.textfsm, .*, extreme_tierra, sh[[ow]] sysinfo sensor cpu
 extreme_tierra_show_sysinfo_sensor_mem.textfsm, .*, extreme_tierra, sh[[ow]] sysinfo sensor mem
+extreme_tierra_show_bridge-domain_all.textfsm, .*, extreme_tierra, show bridge-domain all
 extreme_tierra_show_ingress-group_all.textfsm, .*, extreme_tierra, sh[[ow]] ingress-group all
 extreme_tierra_show_ipv6_interface_ve.textfsm, .*, extreme_tierra, show ipv6 interface ve
 extreme_tierra_show_sysinfo_sensor_lc.textfsm, .*, extreme_tierra, sh[[ow]] sysinfo sensor lc
@@ -562,6 +571,7 @@ extreme_tierra_show_ipv6_route_vrf.textfsm, .*, extreme_tierra, show ipv6 route 
 extreme_tierra_show_lldp_neighbors.textfsm, .*, extreme_tierra, sh[[ow]] lldp neighbors
 extreme_tierra_show_media_detected.textfsm, .*, extreme_tierra, sh[[ow]] me[[dia]] d[[etected]]
 extreme_tierra_show_system_service.textfsm, .*, extreme_tierra, sh[[ow]] system service
+extreme_tierra_show_bridge-domain.textfsm, .*, extreme_tierra, sh[[ow]] bridge-domain
 extreme_tierra_show_counters_lacp.textfsm, .*, extreme_tierra, sh[[ow]] co[[unters]] lacp
 extreme_tierra_show_ingress-group.textfsm, .*, extreme_tierra, sh[[ow]] ingress-group
 extreme_tierra_show_inventory_all.textfsm, .*, extreme_tierra, sh[[ow]] inventory all
@@ -650,6 +660,7 @@ juniper_junos_show_vlans.textfsm, .*, juniper_junos, sh[[ow]] vl[[ans]]
 juniper_screenos_get_route.textfsm, .*, juniper_screenos, get route
 
 linux_efa_version.textfsm, .*, linux, efa version
+
 linux_arp_-a.textfsm, .*, linux, arp -a
 
 mikrotik_routeros_ip_firewall_filter_print_all_without-paging.textfsm, .*, mikrotik_routeros, [[/]]ip(v6)? firewall filter print all without-paging

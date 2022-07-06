@@ -1,5 +1,4 @@
-Value INTERFACE_TYPE (\S+)
-Value Key,Required INTERFACE (\S+)
+Value Key,Required INTERFACE (\S+\s\S+)
 Value List SET_INGRESS_GROUP (\S+)
 Value LACP_MIN_LINKS (\S+)
 Value List IP_ADDRESS_PRIMARY (\S+$|Unassigned)
@@ -12,11 +11,12 @@ Value LACP_SYSTEM_MAC (\S+)
 Value LACP_SYSTEM_PRIORITY (\S+)
 Value LOAD_BALANCE (\S+)
 Value MTU (\S+)
+Value List CHANNEL_GROUP ([\S\s]+)
 Value ENABLE (no shutdown|shutdown)
 
 Start
  ^interface -> Continue.Record
- ^interface ${INTERFACE_TYPE}\s+${INTERFACE}
+ ^interface\s+${INTERFACE}
  ^\s*set ingress-group ${SET_INGRESS_GROUP}
  ^\s*lacp min-links ${LACP_MIN_LINKS}
  ^\s*ip address ${IP_ADDRESS_SECONDARY}\s*secondary
@@ -29,6 +29,7 @@ Start
  ^\s*load\-balance ${LOAD_BALANCE}
  ^\s*mtu ${MTU}
  ^\s*description ${DESCRIPTION}
+ ^\s*channel-group\s${CHANNEL_GROUP}
  ^\s*${ENABLE}
  ^!
  ^\s*$$

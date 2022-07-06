@@ -1,35 +1,36 @@
-Value INTERFACE_TYPE (\S+)
-Value Key,Required INTERFACE (\S+)
-Value DESCRIPTION ([\S\s]+)
-Value List INGRESS_GROUPS (\S+)
-Value ENABLE (no shutdown|shutdown)
-Value LACP_PORT_PRIORITY (\S+)
-Value LACP_RATE (\S+)
-Value FEC (\S+)
-Value LLDP_ENABLE (no lldp enable)
-Value LLDP_RECIEVE (no lldp recieve)
-Value LLDP_TRANSMIT (no lldp transmit)
-Value CHANNEL_GRP_ID (\S+)
-Value CHANNEL_GRP_MODE (\S+)
-Value LINK_FAULT_SIGNALING (no link\S+)
+Value Key,Required INTERFACE (\S+\s\S+)
+Value List SET_INGRESS_GROUP (\S+)
+Value LACP_MIN_LINKS (\S+)
+Value List IP_ADDRESS_PRIMARY (\S+$|Unassigned)
+Value List IP_ADDRESS_SECONDARY (\S+)
+Value List IPV6_ADDRESS_PRIMARY (\S+$|Unassigned)
+Value List IPV6_ADDRESS_SECONDARY (\S+)
+Value DESCRIPTION (\S+)
+Value SUBINTERFACE ([\S\s]+)
+Value LACP_SYSTEM_MAC (\S+)
+Value LACP_SYSTEM_PRIORITY (\S+)
+Value LOAD_BALANCE (\S+)
 Value MTU (\S+)
-Value SPEED (\S+)
+Value List CHANNEL_GROUP ([\S\s]+)
+Value ENABLE (no shutdown|shutdown)
 
 Start
- ^int -> Continue.Record
- ^interface\s+${INTERFACE_TYPE}\s+${INTERFACE}
- ^\s*channel\-group\s${CHANNEL_GRP_ID}\s*${CHANNEL_GRP_MODE}
- ^\s*description\s+${DESCRIPTION}
- ^\s*fec\s+${FEC}
- ^\s*lacp port\-priority ${LACP_PORT_PRIORITY}
- ^\s*lacp rate ${LACP_RATE}
- ^\s*${LINK_FAULT_SIGNALING}
- ^\s*${LLDP_ENABLE}
- ^\s*${LLDP_RECIEVE}
- ^\s*${LLDP_TRANSMIT}
+ ^interface -> Continue.Record
+ ^interface\s+${INTERFACE}
+ ^\s*set ingress-group ${SET_INGRESS_GROUP}
+ ^\s*lacp min-links ${LACP_MIN_LINKS}
+ ^\s*ip address ${IP_ADDRESS_SECONDARY}\s*secondary
+ ^\s*ip address ${IP_ADDRESS_PRIMARY}
+ ^\s*ipv6 address ${IPV6_ADDRESS_SECONDARY}\s*secondary
+ ^\s*ipv6 address ${IPV6_ADDRESS_PRIMARY}
+ ^\s*subinterface ${SUBINTERFACE}
+ ^\s*lacp system\-mac ${LACP_SYSTEM_MAC}
+ ^\s*lacp system\-priority ${LACP_SYSTEM_PRIORITY}
+ ^\s*load\-balance ${LOAD_BALANCE}
  ^\s*mtu ${MTU}
- ^\s*set ingress\-group\s+${INGRESS_GROUPS}
+ ^\s*description ${DESCRIPTION}
+ ^\s*channel-group\s${CHANNEL_GROUP}
  ^\s*${ENABLE}
- ^\s*speed ${SPEED}
+ ^!
  ^\s*$$
  ^. -> Error
