@@ -1,0 +1,18 @@
+Value Filldown BRIDGE_DOMAIN (\d+)
+Value Filldown TOTAL_ENTRIES (\d+)
+Value Filldown HARDWARE_STATUS_CODE (\S+)
+Value MAC_ADDRESS (\S+)
+Value TYPE (\S+)
+Value INTERFACE (\S+\s+\S+)
+
+Start
+ ^Bridge-Domain: -> Continue
+ ^Bridge-Domain:${BRIDGE_DOMAIN}
+ ^[\-]+
+ ^Total number of Mac Entries:\s+${TOTAL_ENTRIES}
+ ^Hardware Status Codes - #:${HARDWARE_STATUS_CODE} 
+ ^Mac-Address\s+Type\s+Interface
+ ^[\-]+
+ ^${MAC_ADDRESS}\s+${TYPE}\s+${INTERFACE} -> Record
+ ^\s*$$
+ ^. -> Error

@@ -1,13 +1,27 @@
-Value Key,Required INTERFACE (\S+\s\S+)
-Value FRAMEIN (\d+)
-Value FRAMEOUT (\d+)
+Value Key,Required INTERFACE (\w+\s[\d/:]+)
+Value FRAME_IN (\S+)
+Value FRAME_OUT (\S+)
+Value ENTRIES_AGED_OUT (\S+)
+Value FRAME_DISCARD (\S+)
+Value FRAME_ERROR_IN (\S+)
+Value FRAME_ERROR_OUT (\S+)
+Value T1V_ACCEPTED (\S+)
+Value T1V_DISCARD (\S+)
+Value T1V_UNKNOWN (\S+)
 Value LAST_CLEAR (\S+)
-
+				   
 Start
- ^LLDP Interface Statistics: ${INTERFACE}
+ ^\s*LLDP Interface Statistics:\s*${INTERFACE}
  ^NOTE: Active ports except disabled or Link Down ports will be shown in all option.
- ^\s+FrameIn: ${FRAMEIN}
- ^\s+FrameOut: ${FRAMEOUT}
- ^\s+LastClear: ${LAST_CLEAR} -> Record
+ ^\s*FrameIn:\s*${FRAME_IN}
+ ^\s*FrameOut:\s*${FRAME_OUT}
+ ^\s*EntriesAgedOut:\s*${ENTRIES_AGED_OUT}
+ ^\s*FrameDiscard:\s*${FRAME_DISCARD}
+ ^\s*FrameErrorIn:\s*${FRAME_ERROR_IN}
+ ^\s*FrameErrorOut:\s*${FRAME_ERROR_OUT}
+ ^\s*TlvAccepted:\s*${T1V_ACCEPTED}
+ ^\s*TlvDiscard:\s*${T1V_DISCARD}
+ ^\s*TlvUnknown:\s*${T1V_UNKNOWN}
+ ^\s*LastClear:\s*${LAST_CLEAR} -> Record
  ^\s*$$
  ^. -> Error

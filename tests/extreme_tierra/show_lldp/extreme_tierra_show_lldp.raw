@@ -5,6 +5,8 @@ LLDP advertisements are sent every 30 seconds
 LLDP hold time is 120 seconds
 LLDP transmit: On
 LLDP receive: On
+LLDP Static Mgmtip: 10.1.1.1
+LLDP Suppress Tlvs: management-address
 Interface LLDP Information:
 Intf                	State     	Rx   	Tx   
 ---------------------------------------------------

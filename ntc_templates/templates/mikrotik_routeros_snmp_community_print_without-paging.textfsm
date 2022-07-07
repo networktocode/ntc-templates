@@ -1,0 +1,14 @@
+Value Key index (\d+)
+Value flags ([X*]+)
+Value name (\S+?)
+Value addresses (\S+?)
+Value security (authorized|none|private)
+Value read_access (yes|no)
+Value write_access (yes|no)
+
+Start
+  ^\s#\s+NAME\s+ADDRESSES\s+SECURITY\s+READ-ACCESS\s+WRITE-ACCESS\s*$$ -> SNMPCommunitiesTable
+
+SNMPCommunitiesTable
+  ^\s?${index}\s+(${flags})?\s+${name}\s+${addresses}\s+${security}\s+${read_access}\s+${write_access}\s+$$ -> Record
+  ^. -> Error

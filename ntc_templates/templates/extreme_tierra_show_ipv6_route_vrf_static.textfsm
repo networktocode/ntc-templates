@@ -1,0 +1,20 @@
+Value Filldown IP_ADDRESS_COUNT (\d+)
+Value Filldown MAX_ROUTES (\d+|Not Set)
+Value Required IP_ADDRESS (\S+)
+Value ATTACHED_TYPE (\S+)
+Value PREFERENCE_METRIC ([\d\/]+)
+Value TAG (tag\s+\d+)
+Value AGE (\S+)
+Value IP_ADDRESS_DEST (\S+)
+Value INTERFACE (\S+\s+\S*) 
+Value MAC_LEARN_INTERFACE (\[[\S\s\,]+\]|\S)
+
+Start
+ ^\s*Total number of \S+ routes:\s*${IP_ADDRESS_COUNT},\s*Max Routes:\s*${MAX_ROUTES} 
+ ^\'\[x\/y\]\' denotes \[preference\/metric\] -> STATIC
+
+STATIC
+ ^\s*${IP_ADDRESS}\s*,\s+${ATTACHED_TYPE}\s*,\s+\[${PREFERENCE_METRIC}\]\s*,\s*${TAG}\s*,\s*${AGE}
+ ^\s+via\s*${IP_ADDRESS_DEST}\s*,\s*${INTERFACE}\s*[,]*\s*(${MAC_LEARN_INTERFACE}|\s*|) -> Record
+ ^\s*$$
+ ^. -> Error

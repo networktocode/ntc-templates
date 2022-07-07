@@ -31,6 +31,6 @@ Start
  ^\s*Enabled Capabilities:\s+(${ENABLED_CAPABILITIES}|---)
  ^\s*Management Address:\s+(${MGMT_IPV4_ADDRESS}|not advertised)
  ^\s*Management Address IPV6:\s+(${MGMT_IPV6_ADDRESS}|not advertised) -> Record
- ^\s+[\S\s]+ 
+ ^\s+${SYSTEM_DESCRIPTION}
  ^\s*$$
  ^. -> Error

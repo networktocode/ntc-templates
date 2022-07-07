@@ -1,0 +1,15 @@
+Value Key index (\d+)
+Value flags ([XADCSrbomBUP ]+)
+Value dst_address ([\w.:/\d]+)
+Value pref_src (\S+?)
+Value gateway (\S+)
+Value distance (\d+)
+
+Start
+  ^ # +DST-ADDRESS +PREF-SRC +GATEWAY +DISTANCE$$ -> RoutesTable
+  ^ # +DST-ADDRESS +GATEWAY +DISTANCE$$ -> RoutesTable
+
+RoutesTable
+  ^\s?${index}\s+(${flags})?\s\s${dst_address}\s+${pref_src}\s+${gateway}\s+${distance}$$ -> Record
+  ^\s?${index}\s+(${flags})?\s\s${dst_address}\s+${gateway}\s+${distance}$$ -> Record
+  ^. -> Error

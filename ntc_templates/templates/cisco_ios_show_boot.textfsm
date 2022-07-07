@@ -13,9 +13,11 @@ Value TIMEOUT_CONFIG_DOWNLOAD (\d+)
 Value CONFIG_DOWNLOAD_DHCP (enabled|disabled)
 Value CONFIG_DOWNLOAD_DHCP_NEXT_BOOT (enabled|disabled)
 Value BOOT_MODE (\S+)
+Value BOOT_OPTIMIZATION (\S+)
 Value CURRENT_BOOT_VARIABLES (BOOT\s*variable\s*does\s*not\s*exist|BOOT\s*variable\s*=\s*\S+)
 
 Start
+  ^.+show\s+boot
   ^Current\s*Boot\s*Variables: -> CurrentBootVariables
   ^Switch\s+${SWITCH_NUMBER}
   ^BOOT\s+(path-list|variable)\s+(:|=)\s+${BOOT_PATH}
@@ -28,16 +30,17 @@ Start
   ^Auto\s+upgrade\s+:\s+${AUTO_UPGRADE}
   ^Auto\s+upgrade\s+path\s+:.*
   ^NVRAM/Config\s+file
-  ^\s+buffer\s+size:\s+${BUFFER_SIZE}
+  ^\s*buffer\s+size:\s+${BUFFER_SIZE}
   ^iPXE\s*Timeout\s*=\s*${TIMEOUT_CONFIG_DOWNLOAD}
   ^Timeout\s+for\s+Config
-  ^\s+Download:\s+${TIMEOUT_CONFIG_DOWNLOAD}
-  ^Config\s+Download
-  ^\s+via\s+DHCP:\s+${CONFIG_DOWNLOAD_DHCP}
+  ^\s*Download:\s+${TIMEOUT_CONFIG_DOWNLOAD}
+  ^\s*Config\s+Download
+  ^\s*via\s+DHCP:\s+${CONFIG_DOWNLOAD_DHCP}\s\(next\sboot:\s${CONFIG_DOWNLOAD_DHCP_NEXT_BOOT}
   # Capture time-stamp if vty line has command time-stamping turned on
   ^Load\s+for\s+
   ^Time\s+source\s+is
   ^Boot\s*Mode\s*=\s*${BOOT_MODE}
+  ^Boot\soptimization\s:\s${BOOT_OPTIMIZATION}
   ^\s*$$
   ^-+
   ^. -> Error

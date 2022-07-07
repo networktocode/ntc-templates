@@ -1,0 +1,24 @@
+AP Radio Database
+-----------------
+Name             Group         AP Type  IP Address     Status              Flags  Switch IP        Standby IP       Radio 0 Band/Chan/HT-Type/EIRP  Radio 1 Band/Chan/HT-Type/EIRP  Radio 2 Band/Chan/HT-Type/EIRP
+----             -----         -------  ----------     ------              -----  ---------        ----------       ------------------------------  ------------------------------  ------------------------------
+ap-building-1    building  635      192.168.1.1  Up 35d:23h:44m:14s  2Sf    192.168.2.2  192.168.2.3  AP:5GHz/132+/HE/20.0            AP:2.4GHz/6/HE/9.0              AP:6GHz/197S/HE/17.0
+ap-building-2    building  515      192.168.1.2  Up 35d:23h:44m:12s  2Sf    192.168.2.2  192.168.2.3  AP:5GHz/100+/HE/19.0            AP:2.4GHz/11/HE/9.0             N/A
+ap-building-3  building  505H      192.168.1.3  Up 35d:23h:44m:19s  2Sf    192.168.2.2  192.168.2.3  N/A             AP:2.4GHz/6/HE/9.0              N/A
+
+Flags: 1 = 802.1x authenticated AP use EAP-PEAP;   1+ = 802.1x use EST;    1- = 802.1x use factory cert
+       2 = Using IKE version 2;                    4 = WiFi Uplink
+       B = Built-in AP;                            C = Cellular RAP;       D = Dirty or no config
+       E = Regulatory Domain Mismatch;             F = AP failed 802.1x authentication
+       G = No such group;        I = Inactive;     J = USB cert at AP;     L = Unlicensed
+       M = Mesh node
+       N = Duplicate name;       P = PPPoe AP;     R = Remote AP;          R- = Remote AP requires Auth
+       S = Standby-mode AP;      T = Thermal ShutDown;    U = Unprovisioned;    X = Maintenance Mode
+       Y = Mesh Recovery
+       b = bypass of AP1x timeout;    c = CERT-based RAP;    e = Custom EST cert;    f = No Spectrum FFT support
+       i = Indoor;                    o = Outdoor;           l = LAG 802.3ad;        m = Protocol Mismatch
+       p = In deep-sleep status;      r = Power Restricted;  s = LACP striping;      t = Temperature Restricted
+       u = Custom-Cert RAP;           z = Datazone AP
+
+"Spectrum" followed by "^" indicates Local Spectrum Override in effect.
+

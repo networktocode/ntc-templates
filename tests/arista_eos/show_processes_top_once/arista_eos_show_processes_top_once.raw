@@ -1,0 +1,17 @@
+top - 18:53:50 up 3 days,  1:06,  2 users,  load average: 0.15, 0.08, 0.09
+Tasks: 202 total,   1 running, 201 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  2.8 us,  0.7 sy,  0.0 ni, 96.3 id,  0.0 wa,  0.2 hi,  0.0 si,  0.0 st
+KiB Mem:   2014520 total,  1970928 used,    43592 free,   171340 buffers
+KiB Swap:        0 total,        0 used,        0 free,  1156836 cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S  %CPU %MEM    TIME+  COMMAND
+    1 root      20   0  8608 5920 4376 S   0.0  0.3   0:12.51 systemd
+    2 root      20   0     0    0    0 S   0.0  0.0   0:00.01 kthreadd
+    3 root      20   0     0    0    0 S   0.0  0.0   0:04.69 ksoftirqd/0
+    5 root       0 -20     0    0    0 S   0.0  0.0   0:00.00 kworker/0:0H
+    6 root      20   0     0    0    0 S   0.0  0.0   0:00.00 kworker/u2:0
+    7 root      20   0     0    0    0 S   0.0  0.0   0:02.74 rcu_preempt
+    8 root      20   0     0    0    0 S   0.0  0.0   0:00.00 rcu_sched
+    9 root      20   0     0    0    0 S   0.0  0.0   0:00.00 rcu_bh
+ 2634 root      20   0  451m 136m 108m S   0.0  6.9  13:28.08 Etba
+ 2635 root      20   0  430m  15m    4 S   0.0  0.8   0:00.00 netnsd-session

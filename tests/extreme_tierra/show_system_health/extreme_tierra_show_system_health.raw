@@ -1,44 +1,41 @@
-                BIOS Date: 10/25/2021
-              BIOS Vendor: American Megatrends Inc.
-             BIOS Version: 1A25
-                CPU Model: Intel(R) Xeon(R) D-2163IT CPU @ 2.10GHz
-                CPU Procs: 2
-                Disk Free: 65.14GB
-               Disk Total: 81.07GB
-                Disk Used: 11.79GB
-              Kernel Arch: x86_64
-           Kernel Version: 4.14.49-OpenNetworkLinux
-              Memory Free: 116.32GB
-             Memory Total: 125.56GB
-              Memory Used: 3.64GB
-          Memory Used (%): 2.90
-                       OS: linux
-                 Platform: alpine
-         Platform Version: 3.13.5
-            System Uptime: 1169h31m5s
+BIOS Date:     10/30/2020
+BIOS Vendor:  American Megatrends Inc.
+BIOS Version:   3A01
+CPU Model:   Intel(R) Atom(TM) CPU C3758 @ 2.20GHz
+CPU Procs:    2
+Disk Free:     74.85GB
+Disk Total:     89.07GB
+Disk Used:   9.67GB
+Kernel Arch:  x86_64
+Kernel Version: 5.4.40-OpenNetworkLinux
+Memory Free: 12.02GB
+Memory Total: 15.60GB
+Memory Used: 3.04GB
+Memory Used (%): 19.51
+OS: linux
+Platform: alpine
+Platform Version: 3.13.5
+System Uptime: 1h56m3s
 
 ------------------------------------------------------------------
-SERVICE                     CPU(cores)          Memory(bytes)       
+SERVICE           CPU(cores)          Memory(bytes)
 ------------------------------------------------------------------
-api-gw                      121m                117Mi               
-chassis-mgr                 299m                53Mi                
-cli                         1m                  85Mi                
-config-db                   2m                  7Mi                 
-interface-agent             7m                  113Mi               
-interface-mgr               55m                 50Mi                
-lacp                        4m                  55Mi                
-lldp                        8m                  49Mi                
-msg-bus                     12m                 33Mi                
-nexthop-agent               15m                 46Mi                
-packet-mgr                  2m                  32Mi                
-pbd-agent                   49m                 52Mi                
-pcap-agent                  1m                  40Mi                
-persistent-state-db         2m                  8Mi                 
-pipeline-agent              1m                  27Mi                
-security                    1m                  33Mi                
-sfcs-agent                  1m                  76Mi                
-snmp                        1m                  28Mi                
-state-db                    5m                  13Mi                
-stratum                     210m                443Mi               
-svcplane-agent              1m                  42Mi                
-target-proxy-agent          2m                  36Mi                
+api-gw                      865m             101Mi
+arpnd                       269m                59Mi
+bfd                            293m                59Mi
+bgp                            260m             134Mi
+chassis-mgr               39m                67Mi
+classifiers                 268m                46Mi
+cli                                  1m                 99Mi
+config-db                   36m                   7Mi
+interface-mgr          239m                65Mi
+lacp                             76m                 29Mi
+lldp                           146m                  33Mi
+mct                             71m                  16Mi
+mftm                        277m                  53Mi
+msg-bus                   329m                100Mi
+persistent-state-db    2m                    3Mi
+security                        1m                  38Mi
+snmp                           53m                 48Mi
+state-db                      63m                   5Mi
+uftm                          289m                 55Mi

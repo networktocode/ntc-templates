@@ -1,0 +1,45 @@
+Value Filldown VRF (\S+)
+Value Filldown VRF_TOTAL_IP_COUNT (\d+)
+Value Filldown VRF_MAX_ROUTES (\d+|Not Set)
+Value BEST_ROUTE_SOURCE (\*)
+Value Required IP_ADDRESS (\S+)
+Value ATTACHED_TYPE (\S+)
+Value PREFERENCE_METRIC ([\d\/]+)
+Value TAG (\d+)
+Value AGE (\S+)
+Value NEXT_HOP_GROUP_ID (\d+)
+Value IP_ADDRESS_DEST (\S+) 
+Value INTERFACE (\S+\s+\S+)
+Value MAC_LEARN_INTERFACE (\[[\S\s\,]+\]|\S)
+Value List PROTOCOL_IP_ADDRESS_DEST (\S+)
+Value List PROTOCOL_INTERFACE (\S+\s+\S+)
+Value List PROTOCOL_MAC_LEARN_INTERFACE (\[[\S\s\,]+\]|\S)
+Value List RESOLVED_IP_ADDRESS_DEST (\S+)
+Value List RESOLVED_INTERFACE (\S+\s+\S+)
+Value List RESOLVED_MAC_LEARN_INTERFACE (\[[\S\s\,]+\]|\S)
+
+Start
+ ^[-]+
+ ^\S+ denotes \S+
+ ^\S+ denotes best \S+
+ ^\s+P\S+Nexthops: -> PROTOCOL
+ ^\s+R\S+Nexthops\(Aggregate\): -> RESOLVED
+ ^VRF\:${VRF}
+ ^\s*Total number of \S+ routes:\s*${VRF_TOTAL_IP_COUNT},\s*Max Routes:\s*${VRF_MAX_ROUTES}
+ ^(${BEST_ROUTE_SOURCE})?${IP_ADDRESS},\s+${ATTACHED_TYPE},\s+\[${PREFERENCE_METRIC}\],\s+tag\s+${TAG},\s+${AGE}([,\w\s]+${NEXT_HOP_GROUP_ID})?
+ ^\s*via\s+${IP_ADDRESS_DEST},\s+${INTERFACE}(,\s+${MAC_LEARN_INTERFACE})? -> Record
+ ^\s*$$
+ ^. -> Error
+
+PROTOCOL
+ ^\s*via\s+${PROTOCOL_IP_ADDRESS_DEST},\s+${PROTOCOL_INTERFACE}(,\s+${PROTOCOL_MAC_LEARN_INTERFACE})? 
+ ^\s+R\S+Nexthops\(Aggregate\): -> RESOLVED
+ ^\s*$$
+ ^. -> Error
+
+
+RESOLVED
+ ^\s*via\s+${RESOLVED_IP_ADDRESS_DEST},\s+${RESOLVED_INTERFACE}(,\s+${RESOLVED_MAC_LEARN_INTERFACE})? -> Continue.Record
+ ^\s* -> Record 
+ ^\s*$$
+ ^. -> Error

@@ -1,0 +1,16 @@
+Value BRIDGE_DOMAIN (\d+)
+Value VLAN_ID (\d+)
+Value List MEMBER_ETHERNET ([\S\s]+)
+Value List MEMBER_PORT_CHANNEL ([\S\s]+)
+Value List STATIC_MAC_ADDRESS ([\S\s]+)
+Value List STATIC_MAC_ADDRESS_VLAN_TAG (vlan \d+|untagged)
+
+Start
+ ^bridge-domain -> Continue.Record
+ ^bridge-domain\s+${BRIDGE_DOMAIN}\s*(mode vlan|\s*)
+ ^\s+vlan-id\s+${VLAN_ID}
+ ^\s+member ethernet\s+${MEMBER_ETHERNET}
+ ^\s+member port-channel\s+${MEMBER_PORT_CHANNEL}
+ ^\s+static-mac-address\s+${STATIC_MAC_ADDRESS}\s+${STATIC_MAC_ADDRESS_VLAN_TAG}
+ ^\s*$$
+ ^. -> Error
