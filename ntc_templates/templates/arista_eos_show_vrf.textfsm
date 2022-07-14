@@ -3,7 +3,7 @@ Value RD (\d\S+|<.+>)
 Value List INTERFACES (\w+)
 
 Start
-  ^\s+Vrf\s+RD\s+Protocols\s+State\s+Interfaces -> VRF
+  ^\s+V[rR][fF]\s+RD\s+Protocols\s+State\s+Interfaces -> VRF
   ^Maximum
   ^\s*$$
   ^. -> Error
