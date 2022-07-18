@@ -1,6 +1,6 @@
 Value VRF (\S+)
 Value RD (\d\S+|<.+>)
-Value List INTERFACES (\w+)
+Value List INTERFACES ([\w\./]+)
 
 Start
   ^\s+V[rR][fF]\s+RD\s+Protocols\s+State\s+Interfaces -> VRF
