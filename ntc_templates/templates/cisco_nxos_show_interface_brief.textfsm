@@ -1,4 +1,4 @@
-Value INTERFACE ([\w+/]+)
+Value INTERFACE ([\w+/\.]+)
 Value VRF (\S+)
 Value STATUS (up|down)
 Value IP ((\d+\.\d+\.\d+\.\d+)|--)
@@ -19,6 +19,7 @@ Start
   ^Interface\s+Status\s+Description\s*$$ -> Loopback
   ^Interface\s+Secondary\s+VLAN\(Type\)\s+Status\s+Reason -> VLAN
   ^Port-channel\s+VLAN\s+Type\sMode\s+Status\s+Reason\s+Speed\s+Protocol -> PORTCHANNEL
+  ^Port\s+Status\s+Reason\s+MTU\s+VRF -> MULTICAST
   ^---+$$
   ^. -> Error Start
 
@@ -54,3 +55,9 @@ PORTCHANNEL
   ^---+$$
   ^\s*$$ -> Start
   ^. -> Error PORTCHANNEL
+
+MULTICAST
+  ^${INTERFACE}\s+${STATUS}\s+${REASON}\s+${MTU}\s+${VRF} -> Record
+  ^---+$$
+  ^\s*$$ -> Start
+  ^. -> Error MULTICAST
