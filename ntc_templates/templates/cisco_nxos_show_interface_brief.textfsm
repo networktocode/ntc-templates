@@ -2,6 +2,7 @@ Value INTERFACE ([\w+/\.]+)
 Value VRF (\S+)
 Value STATUS (up|down)
 Value IP ((\d+\.\d+\.\d+\.\d+)|--)
+Value PEERIP (\d+\.\d+\.\d+\.\d+)
 Value SPEED (\S+)
 Value MTU (\d+)
 Value VLAN ([\d+-]+)
@@ -11,6 +12,7 @@ Value REASON (\S+((\s\w+)+)?)
 Value PORTCH (\S+)
 Value DESCRIPTION (\S+((\s\w+)+)?)
 Value PROTOCOL (\S+)
+Value VCID (\S+)
 
 Start
   ^Port\s+VRF\s+Status\s+IP\s+Address\s+Speed\s+MTU -> Management 
@@ -20,6 +22,7 @@ Start
   ^Interface\s+Secondary\s+VLAN\(Type\)\s+Status\s+Reason -> VLAN
   ^Port-channel\s+VLAN\s+Type\sMode\s+Status\s+Reason\s+Speed\s+Protocol -> PORTCHANNEL
   ^Port\s+Status\s+Reason\s+MTU\s+VRF -> MULTICAST
+  ^Interface\s+Status\s+Peer\s+IP\s+Address\s+VC\s+ID -> PSEUDOWIRE
   ^---+$$
   ^. -> Error Start
 
@@ -61,3 +64,6 @@ MULTICAST
   ^---+$$
   ^\s*$$ -> Start
   ^. -> Error MULTICAST
+
+PSEUDOWIRE
+  ^${INTERFACE}\s+${STATUS}\s+${PEERIP}\s+${VCID}
