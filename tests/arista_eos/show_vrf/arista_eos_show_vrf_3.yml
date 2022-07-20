@@ -1,0 +1,19 @@
+---
+parsed_sample:
+  - vrf: "default"
+    rd: "<not set>"
+    interfaces:
+      - "Ethernet1"
+      - "Ethernet50/1"
+      - "Loopback0"
+      - "Vlan100"
+      - "Vlan200"
+      - "Vlan300"
+      - "Vlan400"
+      - "Vlan500"
+  - vrf: "management"
+    rd: "<not set>"
+    interfaces:
+      - "Ethernet2.10"
+      - "Ethernet50/1.10"
+      - "Loopback1"

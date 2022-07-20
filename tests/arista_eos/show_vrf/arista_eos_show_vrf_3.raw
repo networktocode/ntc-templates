@@ -1,0 +1,8 @@
+Maximum number of vrfs allowed: 1023
+   VRF           RD              Protocols       State            Interfaces
+------------- --------------- --------------- ------------------- ------------------------------
+   default       <not set>       ipv4,ipv6       v4:routing,      Ethernet1, Ethernet50/1,
+                                                 v6:no routing    Loopback0, Vlan100, Vlan200,
+                                                                  Vlan300, Vlan400, Vlan500,
+   management    <not set>       ipv4,ipv6       v4:routing,      Ethernet2.10, Ethernet50/1.10,
+                                                 v6:no routing    Loopback1
