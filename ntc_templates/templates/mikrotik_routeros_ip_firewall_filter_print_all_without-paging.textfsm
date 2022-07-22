@@ -17,15 +17,16 @@ Value ipsec_policy (\S+)
 Value dst_address ([\w!.:/\d]+)
 Value dst_address_list (\S+)
 Value dst_port (\S+)
+Value src_mac_address (\S+)
 Value log (yes|no)
-Value log_prefix (\S+[\S ]+)
+Value log_prefix ((\S+[\S ]+)?)
 
 Start
   ^Flags:.*$$ -> FirewallTable
 
 FirewallTable
   ^\s?${index}\s+(${flags})?\s+;;;\s${comment}
-  ^\s+chain=${chain}\s(action=${action}\s)?(connection-state=${connection_state}\s)?(connection-nat-state=${connection_nat_state}\s)?\s*(protocol=${protocol}\s)?(src-address=${src_address}\s)?(dst-address=${dst_address}\s)?(src-address-list=${src_address_list}\s)?(dst-address-list=${dst_address_list}\s)?(in-interface-list=${in_interface_list}\s)?(out-interface-list=${out_interface_list}\s)?(src-port=${src_port}\s)?(dst-port=${dst_port}\s)?(in-interface=${in_interface}\s)?(out-interface=${out_interface}\s)?(ipsec-policy=${ipsec_policy}\s)?(log=${log}\s)?(log-prefix="${log_prefix}"\s)?$$ -> Record
-  ^\s?${index}\s+(${flags})?\s+chain=${chain}\s(action=${action}\s)?(connection-state=${connection_state}\s)?(connection-nat-state=${connection_nat_state}\s)?(protocol=${protocol}\s)?(src-address=${src_address}\s)?(dst-address=${dst_address}\s)?(src-address-list=${src_address_list}\s)?(dst-address-list=${dst_address_list}\s)?(in-interface-list=${in_interface_list}\s)?(out-interface-list=${out_interface_list}\s)?(src-port=${src_port}\s)?(dst-port=${dst_port}\s)?(in-interface=${in_interface}\s)?(out-interface=${out_interface}\s)?(ipsec-policy=${ipsec_policy}\s)?(log=${log}\s)?(log-prefix="${log_prefix}"\s)?$$ -> Record
+  ^\s+chain=${chain}(\saction=${action})?(\sconnection-state=${connection_state})?(\sconnection-nat-state=${connection_nat_state})?\s*(\sprotocol=${protocol})?(\ssrc-address=${src_address})?(\sdst-address=${dst_address})?(\ssrc-address-list=${src_address_list})?(\sdst-address-list=${dst_address_list})?(\sin-interface-list=${in_interface_list})?(\sout-interface-list=${out_interface_list})?(\ssrc-port=${src_port})?(\sdst-port=${dst_port})?(\ssrc-mac-address=${src_mac_address})?(\sin-interface=${in_interface})?(\sout-interface=${out_interface})?(\sipsec-policy=${ipsec_policy})?(\slog=${log})?(\slog-prefix="${log_prefix}")?\s*$$ -> Record
+  ^\s?${index}\s+(${flags})?\s+chain=${chain}(\saction=${action})?(\sconnection-state=${connection_state})?(\sconnection-nat-state=${connection_nat_state})?(\sprotocol=${protocol})?(\ssrc-address=${src_address})?(\sdst-address=${dst_address})?(\ssrc-address-list=${src_address_list})?(\sdst-address-list=${dst_address_list})?(\sin-interface-list=${in_interface_list})?(\sout-interface-list=${out_interface_list})?(\ssrc-port=${src_port})?(\sdst-port=${dst_port})?(\ssrc-mac-address=${src_mac_address})?(\sin-interface=${in_interface})?(\sout-interface=${out_interface})?(\sipsec-policy=${ipsec_policy})?(\slog=${log})?(\slog-prefix="${log_prefix}")?\s*$$ -> Record
   ^\s*(?:\d{2}:){2}\d{2}\s+echo:\s*.*$$ -> Next
   ^. -> Error

@@ -55,7 +55,7 @@ Flags: X - disabled, I - invalid, D - dynamic
 18    ;;; related established
       chain=input connection-state=established,related 
 
-19    chain=forward connection-state=established,related 
+19    chain=forward connection-state=established,related src-mac-address=67:33:EB:0E:EB:A8
 
 20    ;;; drop invalid connections
 17:20:06 echo: system,error,critical login failure for user admin from 65.160.140.13 via ssh
@@ -64,4 +64,4 @@ Flags: X - disabled, I - invalid, D - dynamic
 21    ;;; Block all entrant
       chain=input action=drop in-interface=all-ppp 
 
-22    chain=input action=drop in-interface=all-ethernet 
+22    chain=input action=drop in-interface=all-ethernet log-prefix=""
