@@ -11,6 +11,7 @@ Value DUPLEX (.+?)
 Value SPEED (.+?b/s)
 Value BANDWIDTH (\d+\s+\w+)
 Value ENCAPSULATION (\w+)
+Value LINK_TYPE (.*?)
 
 Start
   ^\S+\s+is -> Continue.Record
@@ -20,4 +21,5 @@ Start
   ^\s+[Ii]nternet\s+[Aa]ddress\s+is\s+${IP_ADDRESS}\s*$$
   ^\s+MTU\s+${MTU}.*BW\s+${BANDWIDTH}
   ^\s+Encapsulation\s+${ENCAPSULATION}
-  ^\s+(?:[Dd]uplex\s+|)${DUPLEX}(?:-[Dd]uplex|),\s+${SPEED}
+  ^\s+(?:[Dd]uplex\s+|)${DUPLEX}(?:-[Dd]uplex|),\s+${SPEED},\s+${LINK_TYPE},
+  
