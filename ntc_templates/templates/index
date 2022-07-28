@@ -49,7 +49,9 @@ arista_eos_show_interfaces_status.textfsm, .*, arista_eos, sh[[ow]] int[[erfaces
 arista_eos_show_ip_helper-address.textfsm, .*, arista_eos, sh[[ow]] ip he[[lper-address]]
 arista_eos_show_mac_address-table.textfsm, .*, arista_eos, sh[[ow]] m[[ac]] ad[[dress-table]]
 arista_eos_show_ip_ospf_database.textfsm, .*, arista_eos, sh[[ow]] i[[p]] o[[spf]] data[[base]]
+arista_eos_show_ip_ospf_interface_brief.textfsm, .*, arista_eos, sh[[ow]] i[[p]] o[[spf]] int[[erface]] br[[ief]]
 arista_eos_show_ip_ospf_neighbor.textfsm, .*, arista_eos, sh[[ow]] i[[p]] o[[spf]] nei[[ghbor]]
+arista_eos_show_ip_ospf_summary.textfsm, .*, arista_eos, sh[[ow]] i[[p]] o[[spf]] sum[[mary]]
 arista_eos_show_ip_access-lists.textfsm, .*, arista_eos, sh[[ow]] i[[p]] acce[[ss-lists]]
 arista_eos_show_ip_bgp_summary.textfsm, .*, arista_eos, sh[[ow]] (?:i[[p]] bg[[p]]|bg[[p]] ev[[pn]]) su[[mmary]]
 arista_eos_show_isis_neighbors.textfsm, .*, arista_eos, sh[[ow]] isis ne[[ighbors]]
@@ -71,8 +73,10 @@ arista_eos_dir_flash.textfsm, .*, arista_eos, dir fl[[ash:]]
 arista_eos_show_mlag.textfsm, .*, arista_eos, sh[[ow]] ml[[ag]]
 arista_eos_show_vlan.textfsm, .*, arista_eos, sh[[ow]] vl[[an]]
 arista_eos_show_vrf.textfsm, .*, arista_eos, sh[[ow]] vrf
+arista_eos_show_pim_ipv4_interface.textfsm, .*, arista_eos, sh[[ow]] pim ipv4 int[[erface]]
+arista_eos_show_pim_ipv4_neighbor.textfsm, .*, arista_eos, sh[[ow]] pim ipv4 nei[[ghbor]]
 
-aruba_aoscx_show_aaa_authentication_port-access_interface_all_client-status.textfsm , .*, aruba_aoscx, sh[[ow]] aa[[a]] authe[[ntication]] port-access interface all client-status 
+aruba_aoscx_show_aaa_authentication_port-access_interface_all_client-status.textfsm , .*, aruba_aoscx, sh[[ow]] aa[[a]] authe[[ntication]] port-access interface all client-status
 aruba_aoscx_show_lldp_neighbors-info_detail.textfsm, .*, aruba_aoscx, sh[[ow]] ll[[dp]] nei[[ghbors-info]] d[[etail]]
 aruba_aoscx_show_bgp_all-vrfs_all_summary.textfsm, .*, aruba_aoscx, sh[[ow]] bgp all-[[vrfs]] a[[ll]] s[[ummary]]
 aruba_aoscx_show_interface_dom_detail.textfsm , .*, aruba_aoscx, sh[[ow]] int[[erface]] dom d[[etail]]
