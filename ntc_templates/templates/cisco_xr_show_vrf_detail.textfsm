@@ -1,0 +1,17 @@
+Value VRF (\S+)
+Value RD (\S+|not set)
+Value VPN_ID (\S+|not set)
+Value MODE (\S+)
+Value DESCRIPTION (\S+|not set)
+Value List INTERFACES ([\w\./-]+)
+
+Start
+  ^\s*VRF ${VRF}; RD ${RD}; VPN ID ${VPN_ID}\s*$$
+  ^\s*VRF mode: ${MODE}\s*$$
+  ^\s*Description ${DESCRIPTION}\s*$$
+  ^\s*Address family.+$$ -> Record
+  ^\s*Interfaces:+s*$$ -> Interfaces
+
+Interfaces
+  ^\s*${INTERFACES}\s*$$
+  ^\s*Address family.+$$ -> Record Start
