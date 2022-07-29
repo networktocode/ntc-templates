@@ -1,4 +1,5 @@
 """ntc_templates.parse."""
+
 import os
 
 # Due to TextFSM library issues on Windows, it is better to not fail on import
