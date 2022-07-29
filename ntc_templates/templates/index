@@ -390,6 +390,7 @@ cisco_xr_show_controllers_all_phy.textfsm, .*, cisco_xr, sh[[ow]] contr[[ollers]
 cisco_xr_show_cef_drops_location.textfsm, .*, cisco_xr, sh[[ow]] cef drops loc[[ation]]
 cisco_xr_show_interfaces_summary.textfsm, .*, cisco_xr, sh[[ow]] int[[erfaces]] summ[[ary]]
 cisco_xr_show_ip_interface_brief.textfsm, .*, cisco_xr, sh[[ow]] ip int[[erface]] br[[ief]]
+cisco_xr_show_ipv4_vrf_interface_brief.textfsm, .*, cisco_xr, sh[[ow]] ipv4 vrf (\S+) int[[erface]] br[[ief]]
 cisco_xr_show_redundancy_summary.textfsm, .*, cisco_xr, sh[[ow]] redun[[dancy]] summ[[ary]]
 cisco_xr_admin_show_inventory.textfsm, .*, cisco_xr, adm[[in]] sh[[ow]] inven[[tory]]
 cisco_xr_show_interface_brief.textfsm, .*, cisco_xr, sh[[ow]] int[[erface]] br[[ief]]
@@ -401,7 +402,10 @@ cisco_xr_show_isis_neighbors.textfsm, .*, cisco_xr, sh[[ow]] isis ne[[ighbors]]
 cisco_xr_show_lldp_neighbors.textfsm, .*, cisco_xr, sh[[ow]] lld[[p]] neig[[hbors]]
 cisco_xr_show_rsvp_neighbors.textfsm, .*, cisco_xr, sh[[ow]] rs[[vp]] neigh[[bors]]
 cisco_xr_show_bgp_neighbors.textfsm, .*, cisco_xr, sh[[ow]] bg[[p]] nei[[ghbors]]
+cisco_xr_show_bgp_instance_summary.textfsm, .*, cisco_xr, sh[[ow]] bg[[p]] ins[[tance]] (\S+) sum[[mary]]
 cisco_xr_show_ospf_neighbor.textfsm, .*, cisco_xr, sh[[ow]] ospf nei[[ghbor]]
+cisco_xr_show_ospf_vrf_neighbor.textfsm, .*, cisco_xr, sh[[ow]] ospf vrf (\S+) nei[[ghbor]]
+cisco_xr_show_ospf_vrf_interface_brief.textfsm, .*, cisco_xr, sh[[ow]] ospf vrf (\S+) int[[erface]] brief
 cisco_xr_show_processes_cpu.textfsm, .*, cisco_xr, sh[[ow]] proc[[esses]] c[[pu]]
 cisco_xr_show_bfd_sessions.textfsm, .*, cisco_xr, sh[[ow]] bf[[d]] sess[[ions]]
 cisco_xr_show_drops_np_all.textfsm, .*, cisco_xr, sh[[ow]] drops np all
@@ -409,10 +413,16 @@ cisco_xr_show_pim_neighbor.textfsm, .*, cisco_xr, sh[[ow]] pi[[m]] neigh[[bor]]
 cisco_xr_show_interfaces.textfsm, .*, cisco_xr, sh[[ow]] inte[[rfaces]]
 cisco_xr_admin_show_vm.textfsm, .*, cisco_xr, adm[[in]] sh[[ow]] vm
 cisco_xr_show_ip_route.textfsm, .*, cisco_xr, sh[[ow]] (?:ip )?ro[[ute]]
+cisco_xr_show_version_brief.textfsm, .*, cisco_xr, sh[[ow]] ver[[sion]] br[[ief]]
 cisco_xr_show_version.textfsm, .*, cisco_xr, sh[[ow]] ver[[sion]]
 cisco_xr_show_hsrp.textfsm, .*, cisco_xr, sh[[ow]] hs[[rp]]
 cisco_xr_show_arp.textfsm, .*, cisco_xr, sh[[ow]] arp
 cisco_xr_show_bgp.textfsm, .*, cisco_xr, sh[[ow]] bg[[p]]
+cisco_xr_show_vrf_detail.textfsm, .*, cisco_xr, sh[[ow]] vrf (\S+) det[[ail]]
+cisco_xr_show_pim_ipv4_group-map.textfsm, .*, cisco_xr, sh[[ow]] pim ipv4 group-map
+cisco_xr_show_pim_ipv4_interface.textfsm, .*, cisco_xr, sh[[ow]] pim ipv4 int[[erface]]
+cisco_xr_show_pim_ipv4_neighbor.textfsm, .*, cisco_xr, sh[[ow]] pim ipv4 nei[[ghbor]]
+cisco_xr_show_platform_summary_location.textfsm, .*, cisco_xr, sh[[ow]] plat[[form]] sum[[mary]] loc[[ation]] (\S+)
 
 dell_force10_show_ip_interface_brief.textfsm, .*, dell_force10, sh[[ow]] ip int[[erface]] br[[ief]]
 dell_force10_show_vlan_brief.textfsm, .*, dell_force10, sh[[ow]] vl[[an]] br[[ief]]
