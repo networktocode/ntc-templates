@@ -1,0 +1,14 @@
+
+Wed Jul 27 17:18:36.472 CST
+
+IP PIM Group Mapping Table
+(* indicates group mappings being used)
+(+ indicates BSR group mappings active in MRIB)
+
+Group Range         Proto Client   Groups RP address      Info
+
+224.0.1.1/32*       DM    perm     0      0.0.0.0
+224.0.1.2/32*       DM    perm     1      0.0.0.0
+224.0.0.0/24*       NO    perm     0      0.0.0.0
+232.0.0.0/8*        SSM   config   40     0.0.0.0
+224.0.0.0/4*        SM    static   7      0.0.0.0         RPF: Null,0.0.0.0
