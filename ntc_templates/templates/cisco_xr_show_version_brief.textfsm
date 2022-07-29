@@ -1,0 +1,14 @@
+Value VERSION (\S[^\[]+)
+Value HOSTNAME (\S+)
+Value UPTIME (.+?)
+Value BOOT_IMAGE (\S+)
+Value FAMILY (\S+)
+Value MODEL (ASR \S+)
+
+
+Start
+  ^\s*Cisco .+ Software, Version\s+${VERSION}
+  ^\s*${HOSTNAME} uptime is ${UPTIME}\s*$$
+  ^\s*System image file is "${BOOT_IMAGE}"\s*$$
+  ^\s*cisco ${FAMILY}.*processor.+$$
+  ^\s*${MODEL}.+$$ -> Record
