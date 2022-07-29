@@ -1,0 +1,43 @@
+
+Wed Jul 27 17:18:33.921 CST
+
+* Indicates MADJ interface
+# Indicates Neighbor awaiting BFD session up
+
+Neighbors for OSPF 1, VRF red
+
+Neighbor ID     Pri   State           Dead Time   Address         Interface
+192.0.2.1       0     FULL/  -        00:00:39    192.0.2.2       Bundle-Ether10.10
+    Neighbor is up for 5w0d
+192.0.2.3       1     FULL/DR         00:00:39    192.0.2.4       TenGigE0/0/0/10.10
+    Neighbor is up for 35w1d
+
+Total neighbor count: 2
+
+
+* Indicates MADJ interface
+# Indicates Neighbor awaiting BFD session up
+
+Neighbors for OSPF 1, VRF green
+
+Neighbor ID     Pri   State           Dead Time   Address         Interface
+192.0.2.5       0     FULL/  -        00:00:34    192.0.2.6       Bundle-Ether10.20
+    Neighbor is up for 6d16h
+192.0.2.7       1     FULL/DR         00:00:38    192.0.2.8       TenGigE0/0/0/10.20
+    Neighbor is up for 35w1d
+
+Total neighbor count: 2
+
+
+* Indicates MADJ interface
+# Indicates Neighbor awaiting BFD session up
+
+Neighbors for OSPF 1, VRF blue
+
+Neighbor ID     Pri   State           Dead Time   Address         Interface
+192.0.2.9       1     FULL/BDR        00:00:39    192.0.2.10      Bundle-Ether10.30
+    Neighbor is up for 35w1d
+192.0.2.11      1     FULL/BDR        00:00:39    192.0.2.12      GigabitEthernet100/0/0/0
+    Neighbor is up for 35w1d
+
+Total neighbor count: 2
