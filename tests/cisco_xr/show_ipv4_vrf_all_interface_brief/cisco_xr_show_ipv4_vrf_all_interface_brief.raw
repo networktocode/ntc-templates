@@ -1,0 +1,21 @@
+
+Wed Jul 27 17:18:32.918 CST
+
+Interface                      IP-Address      Status          Protocol Vrf-Name
+BVI10                          192.0.2.1       Up              Up       red
+BVI20                          192.0.2.1       Shutdown        Down     red
+BVI30                          192.0.2.1       Down            Down     red
+Bundle-Ether1                  192.0.2.1       Up              Up       **brown
+Bundle-Ether1.10               192.0.2.1       Up              Up       green
+Bundle-Ether1.20               192.0.2.1       Up              Up       blue
+Bundle-Ether1.30               192.0.2.1       Up              Up       blue
+Bundle-Ether2                  192.0.2.1       Up              Up       **brown
+Bundle-Ether3                  192.0.2.1       Up              Up       **brown
+Loopback0                      192.0.2.1       Up              Up       purple
+Loopback1                      192.0.2.1       Up              Up       green
+GigabitEthernet100/0/0/0       192.0.2.1       Up              Up       blue
+GigabitEthernet200/0/0/0.10    192.0.2.1       Up              Up       purple
+GigabitEthernet200/0/0/0.20    192.0.2.1       Up              Up       purple
+GigabitEthernet200/0/0/0.30    192.0.2.1       Down            Down     purple
+TenGigE0/1/0/0                 192.0.2.1       Up              Up       green
+TenGigE0/2/0/0.10              192.0.2.1       Up              Up       green
