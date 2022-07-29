@@ -379,8 +379,8 @@ cisco_xr_show_controllers_HundredGigabitEthernet.textfsm, .*, cisco_xr, sh[[ow]]
 cisco_xr_show_bgp_vrf_all_ipv4_unicast_summary.textfsm, .*, cisco_xr, sh[[ow]] bg[[p]] v[[rf]] all ip[[v4]] uni[[cast]] summ[[ary]]
 cisco_xr_admin_show_controller_fabric_health.textfsm, .*, cisco_xr, adm[[in]] sh[[ow]] controller fab[[ric]] hea[[lth]]
 cisco_xr_show_platform_summary_location_all.textfsm, .*, cisco_xr, sh[[ow]] plat[[form]] sum[[mary]] loc[[ation]] (\S+)
-cisco_xr_show_ospf_vrf_all_interface_brief.textfsm, .*, cisco_xr, sh[[ow]] ospf vrf (\S+) int[[erface]] brief
 cisco_xr_show_ipv4_vrf_all_interface_brief.textfsm, .*, cisco_xr, sh[[ow]] ipv4 vrf (\S+) int[[erface]] br[[ief]]
+cisco_xr_show_ospf_vrf_all_interface_brief.textfsm, .*, cisco_xr, sh[[ow]] ospf vrf (\S+) int[[erface]] brief
 cisco_xr_show_controller_fabric_plane_all.textfsm, .*, cisco_xr, sh[[ow]] controller fab[[ric]] pla[[ne]] all
 cisco_xr_show_configuration_commit_list.textfsm, .*, cisco_xr, sh[[ow]] conf[[iguration]] c[[ommit]] l[[ist]]
 cisco_xr_show_asic-errors_all_location.textfsm, .*, cisco_xr, sh[[ow]] asic-er[[rors]] all loc[[ation]]
@@ -395,9 +395,9 @@ cisco_xr_show_controllers_all_phy.textfsm, .*, cisco_xr, sh[[ow]] contr[[ollers]
 cisco_xr_show_cef_drops_location.textfsm, .*, cisco_xr, sh[[ow]] cef drops loc[[ation]]
 cisco_xr_show_interfaces_summary.textfsm, .*, cisco_xr, sh[[ow]] int[[erfaces]] summ[[ary]]
 cisco_xr_show_ip_interface_brief.textfsm, .*, cisco_xr, sh[[ow]] ip int[[erface]] br[[ief]]
-cisco_xr_show_redundancy_summary.textfsm, .*, cisco_xr, sh[[ow]] redun[[dancy]] summ[[ary]]
 cisco_xr_show_pim_ipv4_group-map.textfsm, .*, cisco_xr, sh[[ow]] pim ipv4 group-map
 cisco_xr_show_pim_ipv4_interface.textfsm, .*, cisco_xr, sh[[ow]] pim ipv4 int[[erface]]
+cisco_xr_show_redundancy_summary.textfsm, .*, cisco_xr, sh[[ow]] redun[[dancy]] summ[[ary]]
 cisco_xr_show_pim_ipv4_neighbor.textfsm, .*, cisco_xr, sh[[ow]] pim ipv4 nei[[ghbor]]
 cisco_xr_admin_show_inventory.textfsm, .*, cisco_xr, adm[[in]] sh[[ow]] inven[[tory]]
 cisco_xr_show_interface_brief.textfsm, .*, cisco_xr, sh[[ow]] int[[erface]] br[[ief]]
