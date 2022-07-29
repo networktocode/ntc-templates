@@ -1,0 +1,14 @@
+Value Filldown VRF (\S+)
+Value Required ADDRESS (\d+\.\d+\.\d+\.\d+)
+Value INTERFACE ([\w\./-]+)
+Value STATE (\w+)
+Value NEIGHBORS (\d+)
+Value HELLO_INTERVAL (\d+)
+Value DR_PRIORITY (\d+)
+Value DR (\d+\.\d+\.\d+\.\d+)
+
+Start
+  ^\s*PIM interfaces in VRF ${VRF}\s*$$
+  ^\s*Address\s+Interface\s+PIM\s+Nbr\s+Hello\s+DR\s+DR\s*$$
+  ^\s*Count\s+Intvl\s+Prior\s*$$
+  ^\s*${ADDRESS}(\*)?\s+${INTERFACE}\s+${STATE}\s+${NEIGHBORS}\s+${HELLO_INTERVAL}\s+${DR_PRIORITY}\s+${DR}\s*$$ -> Record
