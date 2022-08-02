@@ -1,6 +1,10 @@
 ntp enable
-ntp server 198.251.86.68 
-ntp server 204.2.134.163 
-ntp server 138.236.128.36 
-ntp server 44.190.40.123 
-ntp server fc00::14:5054:ff:fe8c:c905 
+ntp server 198.251.86.68
+ntp server 204.2.134.163
+ntp server 138.236.128.36
+ntp server 44.190.40.123
+ntp server fc00::14:5054:ff:fe8c:c905
+ntp peer 10.10.10.1
+ntp peer 10.10.20.1
+ntp peer 10.10.30.1
+!

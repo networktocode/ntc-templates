@@ -1,0 +1,12 @@
+---
+parsed_sample:
+  - host: "1.1.1.2"
+    basedn: "extreme"
+    ldaps: "ldaps"
+    map_role: "group"
+    test_role: "admin"
+  - host: "1::1"
+    basedn: "extremev6"
+    ldaps: "ldaps"
+    map_role: "group"
+    test_role: "admin"

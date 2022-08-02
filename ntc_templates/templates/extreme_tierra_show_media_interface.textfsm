@@ -33,6 +33,7 @@ Value CHN_4_TXBIAS (\S+)
 Value CHN_4_TXPOWER (\S+)
 
 Start
+ ^\s*Interface: -> Continue.Record
  ^\s*Interface:\s*${INTERFACE}
  ^\s*Cage:\s*${CAGE}
  ^\s*Slot:\s*${SLOT}
@@ -47,6 +48,9 @@ Start
  ^\s*Channels:\s*${CHANNELS}
  ^\s*Datecode:\s*${DATECODE}
  ^\s*Channel\[1\]: -> CHNL1
+ ^\s*Channel\[2\]: -> CHNL2
+ ^\s*Channel\[3\]: -> CHNL3
+ ^\s*Channel\[4\]: -> CHNL4
  ^\s*$$
  ^. -> Error
 
@@ -55,36 +59,26 @@ CHNL1
  ^\s*Temperature:\s*${CHN_1_TEMPRATURE}
  ^\s*RxPower:\s*${CHN_1_RXPOWER}
  ^\s*TxBias:\s*${CHN_1_TXBIAS}
- ^\s*TxPower:\s*${CHN_1_TXPOWER}
- ^\s*Channel\[2\]: -> CHNL2
- ^\s*$$
- ^. -> Error
+ ^\s*TxPower:\s*${CHN_1_TXPOWER} -> Start
 
 CHNL2
  ^\s*Voltage: ${CHN_2_VOLTAGE}
  ^\s*Temperature: ${CHN_2_TEMPRATURE}
  ^\s*RxPower: ${CHN_2_RXPOWER}
  ^\s*TxBias: ${CHN_2_TXBIAS}
- ^\s*TxPower: ${CHN_2_TXPOWER}
- ^\s*Channel\[3\]: -> CHNL3
- ^\s*$$
- ^. -> Error
+ ^\s*TxPower: ${CHN_2_TXPOWER} -> Start
 
 CHNL3
  ^\s*Voltage: ${CHN_3_VOLTAGE}
  ^\s*Temperature: ${CHN_3_TEMPRATURE}
  ^\s*RxPower: ${CHN_3_RXPOWER}
  ^\s*TxBias: ${CHN_3_TXBIAS}
- ^\s*TxPower: ${CHN_3_TXPOWER}
- ^\s*Channel\[4\]: -> CHNL4
- ^\s*$$
- ^. -> Error
+ ^\s*TxPower: ${CHN_3_TXPOWER} -> Start
 
 CHNL4
  ^\s*Voltage: ${CHN_4_VOLTAGE}
  ^\s*Temperature: ${CHN_4_TEMPRATURE}
  ^\s*RxPower: ${CHN_4_RXPOWER}
  ^\s*TxBias: ${CHN_4_TXBIAS}
- ^\s*TxPower: ${CHN_4_TXPOWER} -> Record Start
- ^\s*$$
- ^. -> Error
+ ^\s*TxPower: ${CHN_4_TXPOWER} -> Start
+

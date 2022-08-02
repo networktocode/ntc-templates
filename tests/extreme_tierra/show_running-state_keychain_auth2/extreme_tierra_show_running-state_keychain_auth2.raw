@@ -1,0 +1,17 @@
+keychain auth2 
+
+  tolerance 300 
+
+  key-id 500 
+
+    hash-secret-key eNwgxuFBo2iN1AbB5vkGprglZBfbQFm0HQnhZ3a3qqaRNDLWghW8CuiDAlZPJM+n0cZwuJaK9P5KAz1ZAcbYCQ== 
+
+    crypto aes_28_cmac_96 
+
+    send-lifetime start-time 2022-06-06T18:20:30 end-time 2022-06-06T19:20:30 send-receive true 
+
+    receive-lifetime start-time 2022-06-06T18:20:30 end-time 2022-06-06T19:20:30 
+
+  ! 
+
+! 

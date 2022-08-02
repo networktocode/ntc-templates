@@ -1,4 +1,13 @@
-snmp-server community extremero
-snmp-server user superuser auth sha auth-key password priv aes priv-key passwrod
-snmp-server host 10.25.101.76 extremero 162 version 2c
-snmp-server host 10.25.101.77 superuser 162 version 3
+snmp-server community extremenet
+snmp-server user user1 auth noauth
+snmp-server user user2 auth md5 auth-key Pass@123 priv nopriv
+snmp-server user user3 auth md5 auth-key Pass@123 priv des priv-key Pass@123
+snmp-server user user4 auth sha auth-key Pass@123 priv aes priv-key Pass@123
+snmp-server user user5 auth sha auth-key Pass@123 priv des priv-key Pass@123
+snmp-server user user7 auth md5 auth-key Pass@123 priv aes priv-key pass@123
+snmp-server host 1.1.3.1 user6 157 version 3
+snmp-server host 2005::7 user3 56 version 3
+snmp-server host 1.1.1.1 extrement 162 version 1
+snmp-server host 1.1.1.1 extrement2 161 version 2c
+snmp-server host 2000::4 extremenet 6001 version 1
+snmp-server host 2001::4 extremenet 6000 version 2c
