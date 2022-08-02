@@ -1,0 +1,104 @@
+Value FAN_ID (\d+)
+Value FAN_STATUS (\S+)
+Value RPM (\S+)
+Value PERCENTAGE (\S+)
+Value SPEEDLEVEL (\S+)
+Value DIRECTION (\S+)
+Value LED_ID (\S+)
+Value LED_STATE (\S+)
+Value COLOR (\S+)
+Value LED_DESCRIPTION (\S+\s\S+\s\S+|\S+\s\S+|\S+)
+Value PSU_ID (\d+)
+Value PSU_STATUS (\S+)
+Value TYPE (\S+)
+Value CURRENT_IN (\S+)
+Value CURRENT_OUT (\S+)
+Value POWER_IN (\S+)
+Value POWER_OUT (\S+)
+Value VOLTAGE_IN (\S+)
+Value VOLTAGE_OUT (\S+)
+Value Fillup TOTAL_POWER_BUDGET (\S+)
+Value Fillup TOTAL_POWER_USED (\S+)
+Value Fillup TOTAL_POWER_AVAILABLE (\S+)
+Value SENSOR_ID (\S+)
+Value NAME ([\S\s]+)
+Value CURRENT (\S+)
+Value WARNING (\S+)
+Value CRITICAL (\S+)
+Value SHUTDOWN (\S+)
+Value SLOT (\d+)
+Value SLOT_STATE (\S+)
+Value FRU_TYPE (\S+)
+Value UPTIME (\S+)
+Value INSERTION_TIME ([\d\-]+\s[\d:]+)
+Value EXTRACTION_TIME ([\d\-]+\s[\d:]+)
+Value SLOT_DESCRIPTION ([\S\s]+)
+
+Start
+ ^Fan Information -> Fan
+ ^Led Information -> Led
+ ^PSU Information -> PSU
+ ^Sensor Information -> Sensor
+ ^Slot Information -> Slot
+ ^\s*$$
+ ^. -> Error
+
+Fan
+ ^Id\s+Status\s+RPM\s+Percentage SpeedLevel\s+Direction   
+ ^[\-]+
+ ^${FAN_ID}\s+${FAN_STATUS}\s+${RPM}\s+${PERCENTAGE}\s+${SPEEDLEVEL}\s+${DIRECTION} -> Record
+ ^FAN_DIR_F2B - Fan Airflow Direction is FrontToBack
+ ^FanSpeedLevel[\S\s]+ -> Start
+ ^\s*$$ 
+ ^. -> Error
+
+
+Led
+ ^Id     State     Color     Description    
+ ^[\-]+
+ ^${LED_ID}\s+${LED_STATE}\s+${COLOR}\s+${LED_DESCRIPTION}\s* -> Record
+ ^\s*$$ -> Start
+ ^. -> Error
+
+PSU
+ ^Id\s+Status\s+Type\s+C\S+\s+C\S+\s+P\S+\s+P\S+\s+V\S+\s+V\S+
+ ^[\-]+
+ ^${PSU_ID}\s+${PSU_STATUS}\s+${TYPE}\s+${CURRENT_IN}\s+${CURRENT_OUT}\s+${POWER_IN}\s+${POWER_OUT}\s+${VOLTAGE_IN}\s+${VOLTAGE_OUT} -> Record
+ ^[\S\s]+Current in Amps ,[\S\s]+Power in Watts ,[\S\s]+Voltage in Volts
+ ^Total power budget for chassis = ${TOTAL_POWER_BUDGET} Watts
+ ^Total power used by LC and system core = ${TOTAL_POWER_USED} Watts
+ ^Total power available = ${TOTAL_POWER_AVAILABLE} Watts -> Start
+ ^\s*$$
+ ^. -> Error
+
+Sensor
+ ^Id\s+Name\s+Current\S+\s+Warning\S+\s+Critical\S+\s+Shutdown\S+
+ ^[\-]+
+ ^${SENSOR_ID}\s+${NAME}\s+${CURRENT}\s+${WARNING}\s+${CRITICAL}\s+${SHUTDOWN} -> Record
+ ^\s*$$ -> Start
+ ^. -> Error
+
+
+
+Slot
+ ^Slot\s+State\s+FRU\-Id\s+FRU-Type\s+Description -> TABLE1_1FORMAT
+ ^Slot\s+State\s+FRU\-Type\s+Uptime\s+Insertion\-Time\s+Extraction\-Time\s+Description -> TABLE1_2FORMAT
+ ^\s*$$
+ ^. -> Error
+
+TABLE1_1FORMAT
+  ^[\-]+
+  ^${SLOT}\s+${SLOT_STATE}\s+\d\s+${FRU_TYPE}\s+${SLOT_DESCRIPTION} -> Record
+  ^${SLOT}\s+${SLOT_STATE}\s+\d -> Record
+  ^\s*$$ -> Start
+  ^. -> Error
+
+
+TABLE1_2FORMAT
+ ^[\-]+
+ ^${SLOT}\s+${SLOT_STATE}\s+${FRU_TYPE}\s+${UPTIME}\s+${INSERTION_TIME}\s+${EXTRACTION_TIME}\s+${SLOT_DESCRIPTION} -> Record
+ ^${SLOT}\s+${SLOT_STATE}\s+${FRU_TYPE}\s+${UPTIME}\s+${INSERTION_TIME}\s+${SLOT_DESCRIPTION} -> Record
+ ^${SLOT}\s+${SLOT_STATE}\s+${FRU_TYPE}\s+${INSERTION_TIME}\s+${SLOT_DESCRIPTION} -> Record
+ ^${SLOT}\s+${SLOT_STATE} -> Record
+ ^\s*$$ -> Start
+ ^. -> Error

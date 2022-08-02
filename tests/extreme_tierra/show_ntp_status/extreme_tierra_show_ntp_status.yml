@@ -1,5 +1,16 @@
 ---
 parsed_sample:
+  - clock_state: "synchronized"
+    clock_stratum: "5"
+    reference_clock: "10.37.16.212"
+    precision: "-24"
+    reference_time_epoch: "e66eb8cc.02233067"
+    reference_time_human: "Tue, Jul  5 2022 13:19:08.008,"
+    offset: "-0.372286"
+    root_delay: "206.380"
+    root_dispersion: "1233.163"
+    peer_dispersion: "20537"
+    client_mode: "enabled"
   - clock_state: "unsynchronized"
     clock_stratum: ""
     reference_clock: ""

@@ -1,6 +1,6 @@
 ---
 parsed_sample:
   - authentication_methods:
-      - "tacacs+"
       - "local-auth-fallback"
-    accounting_method: "tacacs+"
+    accounting_command: "tacacs+"
+    accounting_exec: "tacacs+"

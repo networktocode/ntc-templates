@@ -1,2 +1,5 @@
-aaa authentication login tacacs+ local-auth-fallback
-aaa accounting commands default start-stop tacacs+
+aaa authentication login tacacs+ local-auth-fallback 
+aaa accounting commands default start-stop tacacs+ 
+aaa accounting exec default start-stop tacacs+
+!
+

@@ -1,6 +1,7 @@
 Value Filldown ROLLBACK_FW_VERSION ([\S]+)
 Value Filldown CURRENT_FW_VERSION ([\S]+)
 Value Filldown BMC_FW_VERSION ([\S]+)
+Value Filldown FPGA_VERSION ([\S\s]+)
 Value Filldown CURRENT_FW_COMMITTED ([\S]+)
 Value Filldown ROLLBACK_FW_VERSION_AFTER_COMMIT (\S+)
 Value Filldown KERNEL ([\S]+)
@@ -23,6 +24,7 @@ Start
  ^\s*Current Firmware Version:\s+${CURRENT_FW_VERSION}
  ^\s*Rollback Firmware Version:\s+${ROLLBACK_FW_VERSION}
  ^\s*BMC Firmware Version:\s+${BMC_FW_VERSION}
+ ^\s*FPGA Version:\s+v\s+${FPGA_VERSION}
  ^Is Current Firmware Committed:\s+${CURRENT_FW_COMMITTED}
  ^Rollback Version after Commit:\s+${ROLLBACK_FW_VERSION_AFTER_COMMIT}
  ^\s*Kernel:\s+${KERNEL}

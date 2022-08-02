@@ -21,3 +21,5 @@ Start
  ^\s*Mfg Date\s+: ${MFG_DATE}
  ^\s*ECVersion\s+: ${EC_VERSION}
  ^\s*LC CPLD Version\s+: ${LC_CPLD_VERSION}
+ ^\s*$$
+ ^. -> Error
