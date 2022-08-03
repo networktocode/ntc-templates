@@ -10,7 +10,7 @@ Value TRAP_PORT (\S+)
 Value TRAP_VERSION (\S+)
 
 Start
- ^snmp-server user ${V3_USER} auth ${V3_AUTH}( auth-key ${V3_AUTH_KEY})?( priv ${V3_PRIV})?( priv-key ${V3_PRIV_KEY})? -> Record
+ ^snmp-server user ${V3_USER} auth ${V3_AUTH}( (hash-)?auth-key ${V3_AUTH_KEY})?( priv ${V3_PRIV})?( (hash-)?priv-key ${V3_PRIV_KEY})? -> Record
  ^snmp-server host ${TRAP_HOST} ${TRAP_CREDS} ${TRAP_PORT} version ${TRAP_VERSION} -> Record
  ^snmp-server community ${V2C_COMMUNITY} -> Record
  ^\s*$$
