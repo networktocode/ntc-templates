@@ -1,0 +1,9 @@
+Value HOST_ADDRESS (\S+)
+Value HASH_KEY (\S+)
+
+Start
+ ^tacacs-server host\s+${HOST_ADDRESS}
+ ^\s+hash-key\s+${HASH_KEY} -> Record
+ ^!
+ ^\s*$$
+ ^. -> Error

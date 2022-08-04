@@ -481,6 +481,7 @@ extreme_tierra_show_ipv6_interface_port-channel.textfsm, .*, extreme_tierra, sh[
 extreme_tierra_show_running-config_egress-group.textfsm, .*, extreme_tierra, sh[[ow]] ru[[nning-config]] egress-group
 extreme_tierra_show_running-config_include_user.textfsm, .*, extreme_tierra, show running-config(\s\|+)? include user
 extreme_tierra_show_running-config_interface_ve.textfsm, .*, extreme_tierra, show running-config interface ve
+extreme_tierra_show_running-state_tacacs-server.textfsm, .*, extreme_tierra, show running-state tacacs-server
 extreme_tierra_show_counters_ingress-group_all.textfsm, .*, extreme_tierra, sh[[ow]] co[[unters]] ingress-group all
 extreme_tierra_show_running-config_access-list.textfsm, .*, extreme_tierra, sh[[ow]] ru[[nning-config]] access-list
 extreme_tierra_show_running-config_include_ntp.textfsm, .*, extreme_tierra, show running-config include ntp
@@ -495,6 +496,7 @@ extreme_tierra_show_running-config_ntp_server.textfsm, .*, extreme_tierra, sh[[o
 extreme_tierra_show_running-config_ssh-server.textfsm, .*, extreme_tierra, show running-config ssh-server
 extreme_tierra_show_running-state_include_ntp.textfsm, .*, extreme_tierra, show running-state include ntp
 extreme_tierra_show_running-state_ldap-server.textfsm, .*, extreme_tierra, show running-state ldap-server
+extreme_tierra_show_running-state_snmp-server.textfsm, .*, extreme_tierra, sh[[ow]] ru[[nning-state]] snmp-server
 extreme_tierra_show_interface_ethernet_brief.textfsm, .*, extreme_tierra, sh[[ow]] interface ethernet brief
 extreme_tierra_show_ipv6_route_vrf_connected.textfsm, .*, extreme_tierra, show ipv6 route vrf(\s\S+)? connected
 extreme_tierra_show_qos_forwarding-group_all.textfsm, .*, extreme_tierra, sh[[ow]] qos forwarding-group all
@@ -564,6 +566,7 @@ extreme_tierra_show_sysinfo_sensor_mem.textfsm, .*, extreme_tierra, sh[[ow]] sys
 extreme_tierra_show_bridge-domain_all.textfsm, .*, extreme_tierra, show bridge-domain all
 extreme_tierra_show_ingress-group_all.textfsm, .*, extreme_tierra, sh[[ow]] ingress-group all
 extreme_tierra_show_ipv6_interface_ve.textfsm, .*, extreme_tierra, show ipv6 interface ve
+extreme_tierra_show_running-state_aaa.textfsm, .*, extreme_tierra, show running-state aaa
 extreme_tierra_show_running-state_ntp.textfsm, .*, extreme_tierra, show running-state ntp
 extreme_tierra_show_sysinfo_sensor_lc.textfsm, .*, extreme_tierra, sh[[ow]] sysinfo sensor lc
 extreme_tierra_show_egress-group_all.textfsm, .*, extreme_tierra, sh[[ow]] egress-group all
@@ -676,8 +679,9 @@ juniper_junos_show_vlans.textfsm, .*, juniper_junos, sh[[ow]] vl[[ans]]
 
 juniper_screenos_get_route.textfsm, .*, juniper_screenos, get route
 
-linux_efa_version.textfsm, .*, linux, efa version
 linux_arp_-a.textfsm, .*, linux, arp -a
+
+linux_efa_version.textfsm, .*, linux, efa version
 
 mikrotik_routeros_ip_firewall_filter_print_all_without-paging.textfsm, .*, mikrotik_routeros, [[/]]ip(v6)? firewall filter print all without-paging
 mikrotik_routeros_ip_dhcp-server_lease_print_without-paging.textfsm, .*, mikrotik_routeros, [[/]]ip dhcp-server lease print without-paging

@@ -1,0 +1,11 @@
+Value List AUTHENTICATION_METHODS (\S+)
+Value ACCOUNTING_COMMAND ([\S]+) 
+Value ACCOUNTING_EXEC ([\S]+) 
+
+Start
+ ^\s*aaa\s+authentication\s+login\s+(\S+|\s*)\s*${AUTHENTICATION_METHODS}
+ ^\s*aaa\s+accounting\s+commands\s+default\s+start-stop\s+${ACCOUNTING_COMMAND} 
+ ^\s*aaa\s+accounting\s+exec\s+default\s+start-stop\s+${ACCOUNTING_EXEC} -> Record
+ ^!
+ ^\s*$$
+ ^. -> Error
