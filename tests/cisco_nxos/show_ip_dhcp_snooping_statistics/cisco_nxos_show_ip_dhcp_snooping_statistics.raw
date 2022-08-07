@@ -1,0 +1,34 @@
+---------------------------------------------------------------------- 
+Message Type             Rx              Tx           Drops  
+---------------------------------------------------------------------- 
+Discover                 10              10              10
+Offer                    20              20              20
+Request                  30              30              30
+Ack                      40              40              40
+Release                  50              50              50
+Decline                  60              60              60
+Inform                   70              70              70
+Nack                     80              80              80
+---------------------------------------------------------------------- 
+Total                  5000            5000            5000
+---------------------------------------------------------------------- 
+DHCP L2 Forwarding:
+Total Packets Forwarded                          :       100
+Total Packets Received                           :       200
+Total Packets Dropped                            :       300
+Non DHCP:
+Total Packets Received                           :       400
+Total Packets Forwarded                          :       500
+Total Packets Dropped                            :       600
+DROP:
+Received on untrusted port                       :       700
+Unknown Failure                                  :       800
+Source mac validation failed                     :       900
+Binding entry validation Failed                  :      1000
+Invalid DHCP message type                        :      1100
+Interface error                                  :      1200
+Tx over trusted port failed                      :      1300
+Trust port not configured                        :      1400
+Vlan validation failure                          :      1500
+Insertion of option 82 failed                    :      1600
+Packet Malformed                                 :      1700
