@@ -1,0 +1,29 @@
+Value Required INTERFACE (\S+)
+Value LINK_STATUS (\S+)
+Value PROTOCOL (\S+)
+Value PROTOCOL_STATUS (\S+)
+Value VRF (\S+)
+Value IP_ADDRESS (\S+)
+Value MTU (\d+)
+
+
+Start
+  ^(Mon?)|(Tue?)|(Wed?)|(Thu?)|(Fri?)|(Sat?)|(Sun?)\s.*$$
+  ^\S+\s+is -> Continue.Record
+  ^${INTERFACE}\sis\s${LINK_STATUS},\s+${PROTOCOL}\sprotocol\sis\s${PROTOCOL_STATUS}.*$$
+  ^\s+Vrf\sis\s${VRF}\s.*$$
+  ^\s+Internet\saddress\sis\s${IP_ADDRESS}.*$$
+  ^\s+MTU\sis\s${MTU}\s.*$$
+  ^\s+Helper.*$$
+  ^\s+Multicast.*$$
+  ^\s+2(?:2[4-9]|3\d)(?:\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d?|0)){3}$$
+  ^\s+Directed.*$$
+  ^\s+Outgoing.*$$
+  ^\s+Inbound.*$$
+  ^\s+Proxy.*$$
+  ^\s+ICMP redirects.*$$
+  ^\s+ICMP unreachables.*$$
+  ^\s+ICMP mask.*$$
+  ^\s+Table.*$$
+  ^\s*$$
+  ^. -> Error
