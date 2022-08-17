@@ -1,5 +1,10 @@
 # Changelog
 
+## [unreleased]
+
+### What's Changed
+* New template: cisco_ios_show_ip_eigrp_interfaces_detail.textfsm by @nsnelson402
+
 ## [3.0.0](https://github.com/networktocode/ntc-templates/tree/3.0.0) (2021-10-28)
 
 [Full Changlog](https://github.com/networktocode/ntc-templates/compare/v2.3.2...3.0.0)
