@@ -1,0 +1,14 @@
+Value ADDRESS (\d+\.\d+\.\d+\.\d+)
+Value Required INTERFACE ([\w\./-]+)
+Value MODE (\S+)
+Value NEIGHBORS (\d+)
+Value HELLO_INTERVAL (\d+)
+Value DR_PRIORITY (\d+)
+Value DR_ADDRESS (\d+\.\d+\.\d+\.\d+)
+Value PACKETS_QUEUED (\d+)
+Value PACKETS_DROPPED (\d+)
+
+Start
+  ^\s*Address\s+Interface\s+Mode\s+Neighbor\s+Hello\s+DR\s+DR Address\s+PktsQed\s+PktsDropped\s*$$
+  ^\s*Count\s+Intvl\s+Pri\s*$$
+  ^\s*${ADDRESS}\s+${INTERFACE}\s+${MODE}\s+${NEIGHBORS}\s+${HELLO_INTERVAL}\s+${DR_PRIORITY}\s+${DR_ADDRESS}\s+${PACKETS_QUEUED}\s+${PACKETS_DROPPED}\s*$$ -> Record
