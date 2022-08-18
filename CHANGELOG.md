@@ -4,6 +4,7 @@
 
 ### What's Changed
 * New template: cisco_ios_show_ip_eigrp_interfaces_detail.textfsm by @nsnelson402
+* New template: cisco_ios_show_snmp_group.textfsm by @nsnelson402
 
 ## [3.0.0](https://github.com/networktocode/ntc-templates/tree/3.0.0) (2021-10-28)
 
