@@ -1,0 +1,41 @@
+groupname: GROUP1                           security model:v3 priv 
+contextname: <no context specified>         storage-type: nonvolatile
+readview : g1readview                       writeview: <no writeview specified>        
+notifyview: g1notifyview                     
+row status: active      access-list: snmp-acl-name
+
+groupname: ILMI                             security model:v1 
+contextname: <no context specified>         storage-type: permanent
+readview : *ilmi                            writeview: *ilmi                           
+notifyview: <no notifyview specified>       
+row status: active
+
+groupname: ILMI                             security model:v2c 
+contextname: <no context specified>         storage-type: permanent
+readview : *ilmi                            writeview: *ilmi                           
+notifyview: <no notifyview specified>       
+row status: active
+
+groupname: GROUP2                           security model:v1 
+contextname: <no context specified>         storage-type: nonvolatile
+readview : v1default                        writeview: <no writeview specified>        
+notifyview: <no notifyview specified>       
+row status: active      access-list: snmp-acl-name
+
+groupname: GROUP2                           security model:v2c 
+contextname: <no context specified>         storage-type: nonvolatile
+readview : v1default                        writeview: <no writeview specified>        
+notifyview: <no notifyview specified>       
+row status: active      access-list: snmp-acl-name
+
+groupname: GROUP3                           security model:v1 
+contextname: <no context specified>         storage-type: nonvolatile
+readview : v1default                        writeview: <no writeview specified>        
+notifyview: <no notifyview specified>       
+row status: active      access-list: snmp-acl-name
+
+groupname: GROUP3                           security model:v2c 
+contextname: <no context specified>         storage-type: nonvolatile
+readview : v1default                        writeview: <no writeview specified>        
+notifyview: <no notifyview specified>       
+row status: active      access-list: snmp-acl-name
