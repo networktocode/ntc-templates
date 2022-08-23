@@ -1,0 +1,25 @@
+
+VLAN 2 - STP instance 0
+--------------------------------------------------------------------
+STP Bridge Parameters:
+
+Bridge           Bridge Bridge Bridge Hold  LastTopology Topology
+Identifier       MaxAge Hello  FwdDly Time  Change       Change
+hex              sec    sec    sec    sec   sec          cnt
+8000002438a51c00 20     2      15     1     2456092      8       
+
+RootBridge       RootPath  DesignatedBridge Root  Max Hel Fwd
+Identifier       Cost      Identifier       Port  Age lo  Dly
+hex                        hex                    sec sec sec
+8000002438a51c00 0         8000002438a51c00 Root  20  2   15  
+
+STP Port Parameters:
+
+Port  Prio Path      State      Designat- Designated       Designated
+Num   rity Cost                 ed Cost   Root             Bridge
+1/1   128  4         FORWARDING 0         8000002438a51c00 8000002438a51c00 
+1/6   128  4         FORWARDING 0         8000002438a51c00 8000002438a51c00 
+1/17  128  4         FORWARDING 0         8000002438a51c00 8000002438a51c00 
+2/1   128  4         FORWARDING 0         8000002438a51c00 8000002438a51c00 
+2/6   128  4         FORWARDING 0         8000002438a51c00 8000002438a51c00 
+2/17  128  4         FORWARDING 0         8000002438a51c00 8000002438a51c00 
