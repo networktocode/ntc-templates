@@ -1,13 +1,13 @@
 Value VRF (\S+)
 Value RD (\d\S+|<.+>)
-Value List INTERFACES (\w+)
+Value List INTERFACES ([\w\./-]+)
 
 Start
-  ^\s+Vrf\s+RD\s+Protocols\s+State\s+Interfaces -> VRF
+  ^\s+V[rR][fF]\s+RD\s+Protocols\s+State\s+Interfaces -> VRF
   ^Maximum
   ^\s*$$
   ^. -> Error
-  
+
 VRF
   # match a vrf with interfaces
   # key on the first line of a VRF
@@ -29,7 +29,7 @@ VRF
   # three interfaces displayed per line
   ^\s+\S+\s+\S+(\s\S+)*\s+\S+\s+\S+:\S+(\s\S+)*,?\s+(?:\S+,\s){2}${INTERFACES}\s*$$ -> Continue
   #
-  # match first line of a vrf, second interface when there are more than two interfaces 
+  # match first line of a vrf, second interface when there are more than two interfaces
   # two or three interfaces displayed per line
   ^\s+\S+\s+\S+(\s\S+)*\s+\S+\s+\S+:\S+(\s\S+)*,?\s+(?:\S+,\s){1}${INTERFACES}, -> Continue
   #
@@ -39,7 +39,7 @@ VRF
   #
   ############## Lines that contains state ##################
   #
-  # match state only line 
+  # match state only line
   ^\s+(\S+:\S+(?:\s\S+)*)\s*$$
   #
   # match first interface of the line when it also has a state and it is the last interface
@@ -51,7 +51,7 @@ VRF
   # match second interface of the line when it also has a state and it is the last interface
   # two interfaces displayed per line
   ^\s+\S+:\S+(\s\S+)*\s+(?:\S+,\s){1}${INTERFACES}\s*$$ -> Continue
-  # 
+  #
   # match third interface of the line when it also has a state and it is the last interface
   # three interfaces displayed per line
   ^\s+\S+:\S+(\s\S+)*\s+(?:\S+,\s){2}${INTERFACES}\s*$$ -> Continue
@@ -66,7 +66,7 @@ VRF
   #
   ################# Lines that have whitespace preceding the interface list ####################
   #
-  # 
+  #
   # match first interface of the line when it only has whitespace and it is the last interface
   ^\s+${INTERFACES}\s*$$ -> Continue
   #

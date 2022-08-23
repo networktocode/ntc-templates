@@ -1,0 +1,21 @@
+Value Filldown INSTANCE (\d+)
+Value Filldown ROUTER_ID (\d+\.\d+\.\d+\.\d+)
+Value Filldown VRF (\S+)
+Value AREA (\d+\.\d+\.\d+\.\d+)
+Value TYPE (\S+)
+Value INTERFACES (\d+)
+Value NEIGHBORS (\d+)
+Value NEIGHBORS_FULL (\d+)
+Value ROUTER_LSAS (\d+)
+Value NETWORK_LSAS (\d+)
+Value SUMMARY_LSAS (\d+)
+Value ASBR_LSAS (\d+)
+Value NSSA_LSAS (\d+)
+
+Start
+  ^OSPF instance ${INSTANCE} with ID ${ROUTER_ID}, VRF ${VRF},.*$$
+  ^Time since.*$$
+  ^Max LSAs.*$$
+  ^Type-5.*$$
+  ^ID\s+Type\s+Intf\s+Nbrs\s+\(full\)\s+RTR LSA\s+NW LSA\s+SUM LSA\s+ASBR LSA\s+TYPE-7 LSA\s*$$
+  ^${AREA}\s+${TYPE}\s+${INTERFACES}\s+${NEIGHBORS}\s+\(${NEIGHBORS_FULL}\s*\)\s+${ROUTER_LSAS}\s+${NETWORK_LSAS}\s+${SUMMARY_LSAS}\s+${ASBR_LSAS}\s+${NSSA_LSAS}\s*$$ -> Record

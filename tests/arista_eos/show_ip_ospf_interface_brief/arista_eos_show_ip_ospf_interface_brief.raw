@@ -1,0 +1,8 @@
+   Interface    Instance VRF        Area            IP Address         Cost  State      Nbrs
+   Lo0          1        default    0.0.0.10        192.0.2.1/32       10    DR         0
+   Vl100        1        default    0.0.0.10        192.0.2.1/32       10    DR         0
+   Vl200        1        default    0.0.0.10        192.0.2.1/32       10    DR         0
+   Et10         1        default    0.0.0.10        192.0.2.1/32       10    DR         0
+   Et20/1       1        default    0.0.0.10        192.0.2.1/32       50    P2P        1
+   Et20/1.10    2        mgmtVrf    0.0.0.0         192.0.2.1/32       10    P2P        1
+   Po1.10       2        mgmtVrf    0.0.0.0         192.0.2.1/32       10    P2P        1

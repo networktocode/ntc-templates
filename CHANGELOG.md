@@ -1,5 +1,64 @@
 # Changelog
 
+## [3.1.0]
+
+### What's Changed
+* New template: cisco_ios_show_ip_eigrp_interfaces_detail.textfsm by @nsnelson402 in https://github.com/networktocode/ntc-templates/pull/1181
+* New template: cisco_ios_show_snmp_group.textfsm by @nsnelson402 in https://github.com/networktocode/ntc-templates/pull/1183
+* New templates & updates: Updated support for Arista EOS devices by @ReK42 in https://github.com/networktocode/ntc-templates/pull/1174
+* New template: cisco_xr_show_ipv4_interface.textfsm by @dainok in https://github.com/networktocode/ntc-templates/pull/1162
+* New templates: Add multiple zyxel templates by @elavaud in https://github.com/networktocode/ntc-templates/pull/1142
+* Bug fix: Change huawei_vrf shortest command by @Elinpf in https://github.com/networktocode/ntc-templates/pull/1141
+* Bug fix: Path separator error on windows by  @Elinpf in https://github.com/networktocode/ntc-templates/pull/1139
+* New templates: Adding multiple mikrotik routeros templates by @elavaud in https://github.com/networktocode/ntc-templates/pull/1136
+* New template: aruba_os_show_ap_database_long.textfsm by @hagleyj in https://github.com/networktocode/ntc-templates/pull/1134
+* New template: aruba_os_show_ap_radio-database.textfsm by @hagleyj in https://github.com/networktocode/ntc-templates/pull/1133
+* Bug fix: EOS 4.28.XF updated output of codes in `show ip route` by @networkop in https://github.com/networktocode/ntc-templates/pull/1127
+* New template: juniper_junos_show_vlans.textfsm by @showipintbri in https://github.com/networktocode/ntc-templates/pull/1125
+* Bug fix: cisco_ios show ip bgp neighbors advertised-routes output where metric is wider than 6 chars by @viktorkertesz in https://github.com/networktocode/ntc-templates/pull/1124
+* Bug fix: cisco_ios show ip bgp output where metric is wider than 6 chars by @viktorkertesz in https://github.com/networktocode/ntc-templates/pull/1123
+* Bug fix: cisco_nxos_show_int_breief do not match mgmt and vlan by @diepes in https://github.com/networktocode/ntc-templates/pull/1119
+* Bug fix: cisco_ios_show_module updated output for c9200 @diepes in https://github.com/networktocode/ntc-templates/pull/1117
+* Changed: add vlan_id to cisco_ios_show_interfaces by @dainok in https://github.com/networktocode/ntc-templates/pull/1115
+* Bug fix: fix not advertised vlan in cisco_nxos_show_lldp_neighbors_detail by @dainok in https://github.com/networktocode/ntc-templates/pull/1114
+* Added: Additional fields for cisco_ios_show_ip_access-lists.textfsm by @mjuenema in https://github.com/networktocode/ntc-templates/pull/1113
+* Bug fix: Multiple line parsing using lists with textfsm extracting wrong details by @diepes in https://github.com/networktocode/ntc-templates/pull/1112
+* Bug fix: Cisco IOS show boot missing parameter by @diepes in https://github.com/networktocode/ntc-templates/pull/1111
+* New template: arista_eos_show_processes_top_once.textfsm by @pauljorgenson in https://github.com/networktocode/ntc-templates/pull/1110
+* Bug fix: Adding a record without the vlan field for very old HP Procurve switches by @dainok in https://github.com/networktocode/ntc-templates/pull/1108
+* New template: cisco_xr_show_install_active.textfsm by @verbosemode in https://github.com/networktocode/ntc-templates/pull/1105
+* Changed: Clarifies docs about length order by @jvanderaa in https://github.com/networktocode/ntc-templates/pull/1099
+* New template: ubiquiti_edgerouter_show_dhcp_leases.textfsm by @jvanderaa in https://github.com/networktocode/ntc-templates/pull/1097
+* Bug fix: hanges the CRLF to LF to pass tests by @jvanderaa in https://github.com/networktocode/ntc-templates/pull/1096
+* Changed: Additional fields for cisco_nxos_show_ip_route.textfsm by @lamiskin in https://github.com/networktocode/ntc-templates/pull/1093
+* Changed: Additional fields for cisco_nxos_show_ip_interface.textfsm by @lamiskin in https://github.com/networktocode/ntc-templates/pull/1092
+* Changed: Additional fields for cisco_ios_show_standby.textfsm by @lamiskin in https://github.com/networktocode/ntc-templates/pull/1091
+* Changed: Additional fields for cisco_ios_show_module_status.textfsm by @lamiskin in https://github.com/networktocode/ntc-templates/pull/1090
+* Changed: Additional fields for cisco_ios_show_ip_interface.textfsm by @lamiskin in https://github.com/networktocode/ntc-templates/pull/1089
+* Changed: Additional fields for cisco_ios_show_interfaces_switchport.textfsm by @lamiskin in https://github.com/networktocode/ntc-templates/pull/1088
+* Changed: Additional fields for cisco_ios_show_etherchannel_summary.textfsm by @lamiskin in https://github.com/networktocode/ntc-templates/pull/1087
+* Changed: Additional fields for cisco_ios_show_lldp_neighbors_detail.textfsm by @lamiskin in https://github.com/networktocode/ntc-templates/pull/1086
+* Changed: Additional fields for cisco_asa_show_interface.textfsm by @lamiskin in https://github.com/networktocode/ntc-templates/pull/1084
+* Bug fix: show platform diag does not return the rommon version of the line cards by @network-shark in https://github.com/networktocode/ntc-templates/pull/1081
+* New template: zyxel_os_cfg_nat_get.textfsm by @elavaud in https://github.com/networktocode/ntc-templates/pull/1073
+* New template: zyxel_os_cfg_ipalias_get.textfsm by @elavaud in https://github.com/networktocode/ntc-templates/pull/1068
+* New template: ubiquiti_edgerouter_show_version.textfsm by @elavaud in https://github.com/networktocode/ntc-templates/pull/1065
+* New template: ubiquiti_edgerouter_show_interfaces_ethernet_physical.textfsm by @elavaud in https://github.com/networktocode/ntc-templates/pull/1064
+* New template: ubiquiti_edgerouter_show_arp.textfsm by @elavaud in https://github.com/networktocode/ntc-templates/pull/1062
+* Bug fix: aruba_os_show_ap_database model parsing error by @hagleyj in https://github.com/networktocode/ntc-templates/pull/1055
+* Bug fix: cisco_nxos_show_ip_interface parsing error by @diepes in https://github.com/networktocode/ntc-templates/pull/1046
+* Bug fix: Update choices for Protocol to include 'notpresent' option on arista_eos_show_interfaces_description by @scetron in https://github.com/networktocode/ntc-templates/pull/1044
+* New template: aruba_os_show_ap_database.textfsm by @hagleyj in https://github.com/networktocode/ntc-templates/pull/1042
+* Bug fix: cisco_nxos_show_cdp_neighbors_detail update for supporting multiple versions by @Niltak in https://github.com/networktocode/ntc-templates/pull/1039
+* Changed: Updated show boot template to include new formatting for Cisco IOS Gibraltar output by @shanecbauman in https://github.com/networktocode/ntc-templates/pull/1038
+* Bug fix: cisco_nxos_show_ip_bgp.textfsm not parsing correctly by @diepes in https://github.com/networktocode/ntc-templates/pull/1033
+* Added: FTD output example from Cisco support site by @jvanderaa in https://github.com/networktocode/ntc-templates/pull/1032
+* New template: cisco_ios_show_ip_nat_translations.textfsm by @ksaegusa in https://github.com/networktocode/ntc-templates/pull/1028
+* Bug fix: cisco_ios_show_interfaces_status.textfsm State Error by @ZamElek in https://github.com/networktocode/ntc-templates/pull/1023
+* Bug fix: IOS show mac address Type3 and Type4. Additional test files by @armartirosyan in https://github.com/networktocode/ntc-templates/pull/1019
+* New template: cisco_asa_show_cpu_usage_detailed.textfsm by @yone2ks in https://github.com/networktocode/ntc-templates/pull/1014
+* Bug fix: cisco_ios_show_ip_eigrp_topology not parsing correctly by @diepes in https://github.com/networktocode/ntc-templates/pull/1013
+
 ## [3.0.0](https://github.com/networktocode/ntc-templates/tree/3.0.0) (2021-10-28)
 
 [Full Changlog](https://github.com/networktocode/ntc-templates/compare/v2.3.2...3.0.0)
