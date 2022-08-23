@@ -77,23 +77,24 @@ SLOT
  ^Monitor\s+ -> MONITOR
  ^IronWare\s+ -> IRONWARE
  ^FPGA versions -> FPGA
- ^Board ID -> FPGA
+ ^Board ID\s+:\s+${FPGA_BOARDID}\s+${FPGA_TYPE}\s+Revision\s+:\s+${FPGA_VERSION} -> FPGA
  ^\d+ MHz -> CPU
  ^[\S\s]+ uptime is [\S\s]+ -> Record Start
  ^\s*$$
  ^. -> Error
 
 FPGA
- ^Valid ${FPGA_TYPE} Version = ${FPGA_VERSION}[ \(${FPGA_MODE}\)]*, Build Time = ${FPGA_TIMESTAMP}
+ ^Valid ${FPGA_TYPE} Version = ${FPGA_VERSION}( \S${FPGA_MODE}\S)*, Build Time = ${FPGA_TIMESTAMP}
  ^Valid ${FPGA_TYPE} Version = ${FPGA_VERSION}, Build Time = ${FPGA_TIMESTAMP}
- ^Board ID : ${FPGA_BOARDID} ${FPGA_TYPE} Revision : ${FPGA_VERSION}
+ ^Board ID\s+:\s+${FPGA_BOARDID}\s+${FPGA_TYPE}\s+Revision\s+:\s+${FPGA_VERSION}
  ^MACXPP\d+G \d+
- ^\d -> CPU
+ ^${CPU_CLOCKSPEED} MHz ${CPU_MODEL} \Sversion ${CPU_VERSION}\S ${CPU_BUSCLOCKSPEED} MHz bus -> CPU
  ^\s*$$
  ^. -> Error
  
 CPU
- ^${CPU_CLOCKSPEED} MHz ${CPU_MODEL} \(version ${CPU_VERSION}\) ${CPU_BUSCLOCKSPEED} MHz bus
+ ^MACXPP\d+G \d+ 
+ ^${CPU_CLOCKSPEED} MHz ${CPU_MODEL} \Sversion ${CPU_VERSION}\S ${CPU_BUSCLOCKSPEED} MHz bus
  ^${BOOTFLASH_SIZE} KB Boot Flash \(${BOOTFLASH_MODEL}\), ${CODEFLASH_SIZE} MB Code Flash \(${CODEFLASH_MODEL}\)
  ^${DRAM} MB DRAM INSTALLED
  ^${DRAM_ADDRESSABLE} MB DRAM ADDRESSABLE -> SLOT
