@@ -1,0 +1,79 @@
+Certificate
+  Status: Available
+  Certificate Serial Number (hex): 1234567890ABCDEFGHIJK
+  Certificate Usage: General Purpose
+  Issuer: 
+    e=email.address@domain.com
+    cn=CommonName
+    ou=OrganizationalUnit
+    o=Organization
+    l=Locality
+    st=StateOrProvinceName
+    c=CountryName
+  Subject:
+    Name: ROUTERNAME.domain.com
+    Serial Number: 1234ABCD
+    hostname=ROUTERNAME.domain.com
+    serialNumber=1234ABCD
+  CRL Distribution Points: 
+    http://cdp.domain.com/crl/issuing-ca.crl
+  Validity Date: 
+    start date: 09:17:52 UTC Jun 22 2022
+    end   date: 09:17:52 UTC Jun 22 2023
+    renew date: 09:19:52 UTC Apr 10 2023
+  Associated Trustpoints: caserver.domain.com 
+  Storage: nvram:certfile.cer
+
+CA Certificate
+  Status: Available
+  Certificate Serial Number (hex): ABCDEFGHIJK1234567890
+  Certificate Usage: Signature
+  Issuer: 
+    e=email.address@domain.com
+    cn=CommonName
+    ou=OrganizationalUnit
+    o=Organization
+    l=Locality
+    st=StateOrProvinceName
+    c=CountryName
+  Subject: 
+    e=email.address@domain.com
+    cn=CommonName
+    ou=OrganizationalUnit
+    o=Organization
+    l=Locality
+    st=StateOrProvinceName
+    c=CountryName
+  CRL Distribution Points: 
+    http://cdp.domain.com/crl/issuing-ca.crl
+  Validity Date: 
+    start date: 00:00:00 UTC Nov 9 2018
+    end   date: 00:00:00 UTC Nov 9 2028
+  Associated Trustpoints: caserver.domain.com
+  Storage: nvram:certfile.cer
+
+CA Certificate
+  Status: Available
+  Certificate Serial Number (hex): 12345ABCDEFGHIJK67890
+  Certificate Usage: Signature
+  Issuer: 
+    e=email.address@domain.com
+    cn=CommonName
+    ou=OrganizationalUnit
+    o=Organization
+    l=Locality
+    st=StateOrProvinceName
+    c=CountryName
+  Subject: 
+    e=email.address@domain.com
+    cn=CommonName
+    ou=OrganizationalUnit
+    o=Organization
+    l=Locality
+    st=StateOrProvinceName
+    c=CountryName
+  Validity Date: 
+    start date: 00:00:00 UTC Nov 5 2018
+    end   date: 00:00:00 UTC Nov 5 2038
+  Associated Trustpoints: ROOT-CA 
+  Storage: nvram:certfile.cer
