@@ -1,0 +1,61 @@
+interface ve 2801
+ ip address 10.92.176.219/29
+ ip address 10.92.191.67/26
+ ip address 10.201.214.35/28
+ ip address 10.231.184.211/28
+ ip address 10.251.229.83/28
+ ip helper-address 10.0.113.10
+ ip helper-address 10.0.113.20
+ ipv6 address 2001:2aaf:14:8::3/120
+ ipv6 nd suppress-ra
+ disable
+ ip vrrp-extended auth-type simple-text-auth VLAN2801
+ ip vrrp-extended vrid 1
+  backup priority 90 track-priority 50
+  ip-address 10.92.176.217
+  advertise backup
+  dead-interval 12
+  hello-interval 4
+  track-port ethernet 1/1
+  activate
+ ip vrrp-extended vrid 2
+  backup priority 90 track-priority 50
+  ip-address 10.251.229.81
+  advertise backup
+  dead-interval 12
+  hello-interval 4
+  track-port ethernet 1/1
+  activate
+ ip vrrp-extended vrid 3
+  backup priority 90 track-priority 50
+  ip-address 10.231.184.209
+  advertise backup
+  dead-interval 12
+  hello-interval 4
+  track-port ethernet 1/1
+  activate
+ ip vrrp-extended vrid 4
+  backup priority 90 track-priority 50
+  ip-address 10.201.214.33
+  advertise backup
+  dead-interval 12
+  hello-interval 4
+  track-port ethernet 1/1
+  activate
+ ip vrrp-extended vrid 5
+  backup priority 90 track-priority 50
+  ip-address 10.92.191.65
+  advertise backup
+  dead-interval 12
+  hello-interval 4
+  track-port ethernet 1/1
+  activate
+ ipv6 vrrp-extended vrid 6
+  backup priority 90 track-priority 50
+  ipv6-address 2001:2aaf:14:8::1
+  advertise backup
+  hello-interval 4
+  track-port ethernet 1/1
+  activate
+!
+interface ve 2802

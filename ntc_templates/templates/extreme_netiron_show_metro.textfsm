@@ -1,0 +1,31 @@
+Value ringid (\d+)
+Value Required vlantype (\w+)
+Value ringname ([a-zA-Z0-9\-\"\ ]+)
+Value ringstate (enabled|disabled)
+Value ringrole (member|master)
+Value mastervlan (\d+)
+Value topogroup (\d+|not conf)
+Value hellotime (\d+)
+Value prefwingtime (\d+)
+Value port1interface ([0-9\/]+)
+Value port1role (primary|secondary)
+Value port1state (\w+)
+Value port1inttype (\w+)
+Value port2interface ([0-9\/]+)
+Value port2role (primary|secondary)
+Value port2state (\w+)
+Value port2inttype (\w+)
+Value rhpssent (\d+)
+Value rhpsrecvd (\d+)
+Value tcrbpdusrecvd (\d+)
+Value statechanges (\d+)
+
+Start
+  ^Metro Ring ${ringid} - VLAN Type ${vlantype} -> Continue
+  ^Metro Ring ${ringid} - VLAN Type ${vlantype} - ${ringname}
+  ^\d+\s+${ringstate}\s+${ringrole}\s+${mastervlan}\s+${topogroup}\s+${hellotime}\s+${prefwingtime}
+  ^${rhpssent}\s+${rhpsrecvd}\s+${tcrbpdusrecvd}\s+${statechanges} -> Record
+  ^ethernet\s+${port1interface}\s+${port1role}\s+${port1state}\s+${port1inttype} -> PORT2
+
+PORT2
+  ^ethernet\s+${port2interface}\s+${port2role}\s+${port2state}\s+${port2inttype} -> Start
