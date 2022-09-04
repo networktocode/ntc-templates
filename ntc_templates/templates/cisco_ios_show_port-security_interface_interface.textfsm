@@ -8,7 +8,7 @@ Value MAX_MAC_ADDRS (\d+)
 Value TOTAL_MAC_ADDRS (\d+)
 Value CONFIG_MAC_ADDRS (\d+)
 Value STICKY_MAC_ADDRS (\d+)
-Value LAST_SRC_MAC_ADDR_VLAN (\d.+:\d+)
+Value LAST_SRC_MAC_ADDR_VLAN (\w.+:\d+)
 Value VIOLATION_COUNT (\d+)
 
 Start
