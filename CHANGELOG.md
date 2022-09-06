@@ -1,5 +1,10 @@
 # Changelog
 
+## [Unreleased]
+
+### What's Changed
+* New template: cisco_ios_show_crypto_pki_certificates.textfsm by @nsnelson402
+
 ## [3.1.0]
 
 ### What's Changed
