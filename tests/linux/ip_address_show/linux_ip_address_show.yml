@@ -12,9 +12,10 @@ parsed_sample:
     type: "loopback"
     address: "00:00:00:00:00:00"
     broadcast: "00:00:00:00:00:00"
-    ip_address: "127.0.0.1"
-    ip_mask: "8"
-    ip_broadcast: ""
+    ip_addresses:
+      - "127.0.0.1"
+    ip_masks:
+      - "8"
   - id: "2"
     interface: "ens32"
     flags: "BROADCAST,MULTICAST,UP,LOWER_UP"
@@ -27,9 +28,10 @@ parsed_sample:
     type: "ether"
     address: "00:0c:29:56:07:1b"
     broadcast: "ff:ff:ff:ff:ff:ff"
-    ip_address: "192.168.131.128"
-    ip_mask: "24"
-    ip_broadcast: "192.168.131.255"
+    ip_addresses:
+      - "192.168.131.128"
+    ip_masks:
+      - "24"
   - id: "3"
     interface: "gpd0"
     flags: "POINTOPOINT,MULTICAST,NOARP,UP,LOWER_UP"
@@ -42,9 +44,10 @@ parsed_sample:
     type: "none"
     address: ""
     broadcast: ""
-    ip_address: "10.20.20.12"
-    ip_mask: "32"
-    ip_broadcast: ""
+    ip_addresses:
+      - "10.20.20.12"
+    ip_masks:
+      - "32"
   - id: "4"
     interface: "br-218f5e637867"
     flags: "NO-CARRIER,BROADCAST,MULTICAST,UP"
@@ -57,9 +60,10 @@ parsed_sample:
     type: "ether"
     address: "02:42:5d:d7:c2:c1"
     broadcast: "ff:ff:ff:ff:ff:ff"
-    ip_address: "172.21.0.1"
-    ip_mask: "16"
-    ip_broadcast: "172.21.255.255"
+    ip_addresses:
+      - "172.21.0.1"
+    ip_masks:
+      - "16"
   - id: "5"
     interface: "vrf-blue"
     flags: "NOARP,MASTER,UP,LOWER_UP"
@@ -72,9 +76,8 @@ parsed_sample:
     type: "ether"
     address: "ee:be:e9:28:70:69"
     broadcast: "ff:ff:ff:ff:ff:ff"
-    ip_address: ""
-    ip_mask: ""
-    ip_broadcast: ""
+    ip_addresses: []
+    ip_masks: []
   - id: "6"
     interface: "brblue"
     flags: "BROADCAST,MULTICAST,UP,LOWER_UP"
@@ -87,6 +90,9 @@ parsed_sample:
     type: "ether"
     address: "66:37:23:9b:9e:e4"
     broadcast: "ff:ff:ff:ff:ff:ff"
-    ip_address: "10.0.0.1"
-    ip_mask: "24"
-    ip_broadcast: ""
+    ip_addresses:
+      - "10.0.0.1"
+      - "192.168.0.1"
+    ip_masks:
+      - "24"
+      - "25"
