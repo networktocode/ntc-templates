@@ -1,7 +1,0 @@
-Flags: X - disabled, A - active, D - dynamic, C - connect, S - static, r - rip, b - bgp, o - ospf, m - mme, B - blackhole, U - unreachable, P - prohibit 
- #      DST-ADDRESS        PREF-SRC        GATEWAY            DISTANCE
- 0 A S  0.0.0.0/0                          23.90.232.243            10
- 1  Db  0.0.0.0/0                          23.90.232.243            20
- 2  DS  0.0.0.0/0                          pppoe-out1              100
- 3 ADC  23.90.232.243/32   100.95.1.127    pppoe-out1                0
- 4 ADC  185.163.212.156/30 185.163.212.157 dmz-1-vlan                0
