@@ -1,0 +1,8 @@
+default via 10.0.0.4 dev brblue
+unreachable default metric 4278198272
+broadcast 10.0.0.0 dev brblue proto kernel scope link src 10.0.0.1
+10.0.0.0/24 dev brblue proto kernel scope link src 10.0.0.1
+local 10.0.0.1 dev brblue proto kernel scope host src 10.0.0.1
+broadcast 10.0.0.255 dev brblue proto kernel scope link src 10.0.0.1
+192.168.0.0/24 via 10.0.0.2 dev brblue
+192.168.131.2 dev ens32 proto dhcp scope link src 192.168.131.128 metric 100
