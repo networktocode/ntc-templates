@@ -1,5 +1,5 @@
 Value routerboard (\S+)
-Value board_name (\S+)
+Value board_name (.+)
 Value hardware_model (\S+)
 Value revision (\S+)
 Value serial_number (\S+)
@@ -9,6 +9,7 @@ Value current_firmware ([\d.]+)
 Value upgrade_firmware ([\d.]+)
 
 Start
+  ^\s*;;;.* -> Next
   ^\s*routerboard:\s${routerboard}
   ^\s*board-name:\s${board_name}
   ^\s*model:\s${hardware_model}
