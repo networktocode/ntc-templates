@@ -1,0 +1,7 @@
+Value SERIAL_NUMBER (\S+)
+
+
+Start
+  ^.*ESN of device:\s${SERIAL_NUMBER}$$
+  ^. -> Error
+
