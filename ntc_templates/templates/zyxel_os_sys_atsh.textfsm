@@ -6,6 +6,7 @@ Value SERIAL_NUMBER (\S+)
 Value MAC_ADDRESS ([0-9A-F]{12})
 
 Start
+  ^\d{4}-\d{2}-\d{2}.* -> Next
   ^Firmware\sVersion\s*:\s${VERSION}
   ^Bootbase\sVersion\s*:\s${BOOT_VERSION}
   ^Vendor\sName\s*:\s${VENDOR}
