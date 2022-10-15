@@ -4,7 +4,7 @@ Value MAC (\S+)
 Value INTERFACE (\S+)
 Value PHYSICAL_INTERFACE (\S+)
 Value FLAGS (\S*)
-Value VRF (\S+)
+Value VRF (\S*)
 
 Start
   #Ignore junk
@@ -18,5 +18,5 @@ Start
   ^. -> Error
 
 Data
-  ^${ADDRESS}\s+${AGE}\s+${MAC}\s+${INTERFACE}\s+${PHYSICAL_INTERFACE}\s+${FLAGS}\s+${VRF}\s*$$ -> Record
+  ^${ADDRESS}\s+${AGE}\s+${MAC}\s+${INTERFACE}\s+${PHYSICAL_INTERFACE}\s*${FLAGS}\s*${VRF}\s*$$ -> Record
   ^. -> Error
