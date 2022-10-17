@@ -6,7 +6,8 @@ Value HOST (\S+)
 
 Start
   ^IP\saddress\s+Hardware\sAddress\s+Lease\sexpiration\s+Pool\s+Client\sName\s*$$
-  ^-+\s+-+\s+-+\s+-+\s+-+\s*$$
+  ^-+\s+-+\s+-+\s+-+\s+-+\s*$$ -> Entries
+
+Entries
   ^${IP}\s+${MAC}\s+${EXPIRATION}\s+${POOL}\s+${HOST}\s*$$ -> Record
-  ^\s*$$
   ^. -> Error
