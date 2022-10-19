@@ -14,7 +14,7 @@ Start
   ^.+\sRO\s-\s
   ^\s*IP\sARP\sTable\s
   ^\s*Total\snumber\sof\sentries:
-  ^\s*Address\s+Age\s+MAC\s+Address\s+Interface\s+Physical\sInterface\s+Flags\s+VRF\sName\s*$$ -> Data
+  ^\s*Address\s+Age\s+MAC\s+Address\s+Interface\s+Physical\sInterface\s+Flags\s*(VRF\sName)*\s*$$ -> Data
   ^. -> Error
 
 Data
