@@ -16,4 +16,5 @@ EntriesTable
   ^\s*${index}\s(${flags})?\s{,4}${ip}\s+(${rate_limit})?\s+${status}\s+${last_seen}\s+$$ -> Record
   ^\s*${index}\s(${flags})?\s{,4}(${ip})?\s+${mac}\s+(${rate_limit})?\s+${status}\s+${last_seen}\s+$$ -> Record
   ^\s*${index}\s(${flags})?\s{,4}(${ip})?\s+(${mac}|\s{17})\s(${hostname})?\s+(${server})?\s+(${rate_limit})?\s+${status}\s+${last_seen}\s+$$ -> Record
+  ^\s*(?:\d{2}:){2}\d{2}\s+echo:\s*.*$$ -> Next
   ^. -> Error
