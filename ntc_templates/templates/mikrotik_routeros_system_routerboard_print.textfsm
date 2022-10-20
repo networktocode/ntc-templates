@@ -19,4 +19,5 @@ Start
   ^\s*factory-firmware:\s${factory_firmware}
   ^\s*current-firmware:\s${current_firmware}
   ^\s*upgrade-firmware:\s${upgrade_firmware}
+  ^\s*(?:\d{2}:){2}\d{2}\s+echo:\s*.*$$ -> Next
   ^. -> Error
