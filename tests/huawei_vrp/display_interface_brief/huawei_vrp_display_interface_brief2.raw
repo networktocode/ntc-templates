@@ -1,0 +1,27 @@
+PHY: Physical
+*down: administratively down
+(l): loopback
+(s): spoofing
+(b): BFD down
+^down: standby
+(e): ETHOAM down
+(v): VirtualPort
+InUti/OutUti: input utility/output utility
+Interface                   PHY   Protocol  InUti OutUti   inErrors  outErrors
+Cellular0/0/0               down  down         0%     0%          0          0
+Dialer1                     up    up(s)        --     --          0          0
+Ethernet0/0/0               down  down         0%     0%          0          0
+GigabitEthernet0/0/0        down  down         0%     0%          0          0
+GigabitEthernet0/0/1        ^down  down         0%     0%          0          0
+GigabitEthernet0/0/2        up(l) up        0.01%  0.01%          0          0
+GigabitEthernet0/0/3        down  down         0%     0%          0          0
+GigabitEthernet0/0/4        up    down      0.01%  0.01%          0          0
+GigabitEthernet0/0/5(v)     up    down      0.01%     0%          0          0
+NULL0                       up    up(s)        --     --          0          0
+Vlanif1                     up    up           --     --          0          0
+Vlanif2                     down  down         --     --          0          0
+Vlanif100                   up    up           --     --          0          0
+Wlan-Bss1                   up    up           --     --          0          0
+Wlan-Bss7                   up    up           --     --          0          0
+Wlan-Radio0/0/0             up    up           --     --          0          0
+Wlan-Radio0/0/1             up    up           --     --          0          0
