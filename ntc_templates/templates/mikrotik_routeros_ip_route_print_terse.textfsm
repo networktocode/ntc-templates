@@ -1,5 +1,6 @@
 Value Key index (\d+)
 Value flags ([XADCSrbomBUP ]+)
+Value comment (.*)
 Value dst_address ([\w.:/\d]+)
 Value pref_src (\S+?)
 Value gateway (\S+)
@@ -9,5 +10,5 @@ Value scope (\d+)
 Value target_scope (\d+)
 
 Start
-  ^\s?${index}\s${flags}\s\sdst-address=${dst_address}(\spref-src=${pref_src})?\sgateway=${gateway}\sgateway-status=${gateway_status}\sdistance=${distance}\sscope=${scope}(\starget-scope=${target_scope})?.*$$ -> Record
+  ^\s?${index}\s${flags}\s\s(comment=${comment}\s)?dst-address=${dst_address}(\spref-src=${pref_src})?\sgateway=${gateway}\sgateway-status=${gateway_status}\sdistance=${distance}\sscope=${scope}(\starget-scope=${target_scope})?.*$$ -> Record
   ^. -> Error

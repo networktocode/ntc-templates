@@ -5,3 +5,4 @@
  4 ADC  dst-address=185.163.212.156/30 pref-src=185.163.212.157 gateway=dmz-1-vlan gateway-status=dmz-1-vlan reachable distance=0 scope=10 
  5 ADC  dst-address=192.168.1.0/24 pref-src=192.168.1.1 gateway=bridge-lan gateway-status=bridge-lan reachable distance=0 scope=10 
  6 A S  dst-address=0.0.0.0/0 gateway=185.138.116.222,185.138.116.223 gateway-status=185.138.116.222 unreachable,185.138.116.223 reachable via  pppoe-out1 distance=10 scope=30 target-scope=10 
+ 7   S  comment=Test IP-220929-95531 dst-address=10.199.199.75/32 gateway=pppoe-out1 gateway-status=pppoe-out1 unreachable distance=10 scope=30 target-scope=10 
