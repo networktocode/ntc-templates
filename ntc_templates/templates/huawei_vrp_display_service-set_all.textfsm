@@ -1,0 +1,10 @@
+Value ID (\d+)
+Value NAME (\w+)
+Value SSID (\w+)
+
+Start
+  ^\s*-+ -> Next
+  ^\s*ID.+$$ -> Next
+  ^\s*${ID}\s+${NAME}\s+${SSID}\s*$$ -> Record
+  ^\s*Total:.+$$ -> Next
+  ^.*$$ -> Error
