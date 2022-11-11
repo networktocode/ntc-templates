@@ -1,3 +1,7 @@
+---
+name: 🐛 Bug Report
+about: Report a reproducible bug in the current release of ntc-templates
+---
 <!---
 NOTE: Request for new template and adding data captured in template is not considered.
 Please see README for more information.
