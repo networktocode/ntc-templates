@@ -1,7 +1,7 @@
 # NTC Templates
 
 <p align="center">
-  <img src="./images/icon-ntc-templates.png" class="logo" height="200px">
+  <img src="https://raw.githubusercontent.com/networktocode/ntc-templates/master/docs/images/icon-ntc-templates.png" class="logo" height="200px">
   <br>
   <a href="https://github.com/networktocode/ntc-templates/actions"><img src="https://github.com/networktocode/ntc-templates/actions/workflows/ci.yml/badge.svg?branch=main"></a>
   <a href="https://ntc-templates.readthedocs.io/en/latest"><img src="https://readthedocs.org/projects/ntc-templates/badge/"></a>
