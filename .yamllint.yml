@@ -8,9 +8,5 @@ rules:
   line-length: "disable"
   quoted-strings:
     quote-type: "double"
-
 ignore: |
-  tests/mocks/
-  .tox/
   .venv/
-  venv/
