@@ -5,10 +5,10 @@ Value ACTION (deny|permit)
 Value PROTOCOL (\d+|icmp(v6)?|tcp|udp|gre|igmp|ip(v6)?|ipinip|ospf)
 Value SOURCE (((\d+.){3}\d+|[0-9a-fA-F]{1,4}([0-9a-fA-F]{0,4}:){1,7}[0-9a-fA-F]{0,4})[\/\s]((\d+.){3}\d+|\d+))
 Value SOURCE_PORT_MODIFIER (eq|lt|gt|range)
-Value SOURCE_PORT_RANGE ((\d+)(\s(\d+))?)
+Value SOURCE_PORT_RANGE ((\S+)(\s(\S+))?)
 Value DESTINATION (((\d+.){3}\d+|[0-9a-fA-F]{1,4}([0-9a-fA-F]{0,4}:){1,7}[0-9a-fA-F]{0,4})[\/\s]((\d+.){3}\d+|\d+))
 Value DESTINATION_PORT_MODIFIER (eq|lt|gt|range)
-Value DESTINATION_PORT_RANGE ((\d+)(\s(\d+))?)
+Value DESTINATION_PORT_RANGE ((\S+)(\s(\S+))?)
 Value MATCHES (\d+)
 
 Start

@@ -17,8 +17,9 @@ Acl's step is 5
 Advanced ACL REGLE_NAT 3998, 3 rules
 Acl's step is 5
  rule 5 permit tcp source 85.14.167.234 0 destination 192.214.198.156 0 destination-port eq 8022 (18 matches)
- rule 10 deny tcp destination 192.214.198.156 0 destination-port eq 8022 (8 matches)
- rule 15 permit ip (278450 matches)
+ rule 10 deny tcp destination 192.214.198.156 0 destination-port eq www (8 matches)
+ rule 15 deny tcp destination 192.23.26.1 0.0.255.255 destination-port range 50 80 (8 matches)
+ rule 20 permit ip (278450 matches)
 
 Advanced ACL qsdqsd 3999, 0 rule
 Acl's step is 5
