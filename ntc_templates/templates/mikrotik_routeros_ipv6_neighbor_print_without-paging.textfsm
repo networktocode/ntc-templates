@@ -1,0 +1,14 @@
+Value Key INDEX (\d+)
+Value FLAGS ([R]+)
+Value IP (\S+)
+Value INTERFACE (\S+)
+Value MAC ([0-9a-fA-F]{2}(:[0-9a-fA-F]{2}){5})
+Value STATUS (noarp|incomplete|stale|reachable|delay|probe|failed)
+
+Start
+  ^Flags:.*$$ -> NeighborsTable
+
+NeighborsTable
+  ^\s*${INDEX}\s*(${FLAGS}\s+)?address=${IP}\s+interface=${INTERFACE}\s+(mac-address=${MAC}\s+)?status="${STATUS}"\s*$$ -> Record
+  ^\s*$$
+  ^. -> Error

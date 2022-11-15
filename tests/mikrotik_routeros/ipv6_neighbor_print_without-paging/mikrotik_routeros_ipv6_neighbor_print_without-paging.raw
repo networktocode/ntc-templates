@@ -1,0 +1,8 @@
+Flags: R - router 
+ 0   address=ff02::5 interface=main mac-address=33:33:00:00:00:05 status="noarp" 
+
+ 1   address=ff02::1 interface=main mac-address=33:33:00:00:00:01 status="noarp" 
+
+ 2 R address=fe80::d7:4cff:fec1:2e32 interface=main mac-address=00:0C:42:28:79:45 status="stale" 
+
+ 3   address=2a05:c100:1d::351c interface=bridge-lan status="failed"
