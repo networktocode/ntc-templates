@@ -14,7 +14,8 @@ Value MATCHES (\d+)
 Start
   ^\s*Total\squantity\sof\snonempty\sACL\snumber\sis\s\d+\s*$$
   ^\s*Total\snonempty\sacl6\snumber\sis\s\d+\s*$$
-  ^\S+(\sIPv6)?\sACL\s(${ACL_NAME}\s)?${ACL_NUMBER},\s\d+.*$$
+  ^\S+\sIPv6\sACL\s${ACL_NUMBER}(\sname\s${ACL_NAME})?,\s\d+.*$$
+  ^\S+\sACL\s(${ACL_NAME}\s)?${ACL_NUMBER},\s\d+.*$$
   ^\s*Acl's\sstep\sis\s\d+\s*$$
   ^\s*rule\s${SN}\s${ACTION}(\s${PROTOCOL})?(\ssource\s${SOURCE})?(\ssource-port\s${SOURCE_PORT_MODIFIER}\s${SOURCE_PORT_RANGE})?(\sdestination\s${DESTINATION})?(\sdestination-port\s${DESTINATION_PORT_MODIFIER}\s${DESTINATION_PORT_RANGE})?(\s\(${MATCHES}\smatch(es)?\))?\s*$$ -> Record
   ^\s*$$
