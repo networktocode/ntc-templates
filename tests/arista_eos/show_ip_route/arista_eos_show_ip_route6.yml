@@ -1,23 +1,24 @@
 ---
-- DIRECT: ""
-  DISTANCE: "1"
-  INTERFACE:
-    - "Management0"
-  MASK: "0"
-  METRIC: "0"
-  NETWORK: "0.0.0.0"
-  NEXT_HOP:
-    - "172.20.20.1"
-  PROTOCOL: "S"
-  VRF: "MGMT"
-- DIRECT: "directly"
-  DISTANCE: ""
-  INTERFACE:
-    - "Management0"
-  MASK: "24"
-  METRIC: ""
-  NETWORK: "172.20.20.0"
-  NEXT_HOP:
-    - "connected"
-  PROTOCOL: "C"
-  VRF: "MGMT"
+parsed_sample:
+  - DIRECT: ""
+    DISTANCE: "1"
+    INTERFACE:
+      - "Management0"
+    MASK: "0"
+    METRIC: "0"
+    NETWORK: "0.0.0.0"
+    NEXT_HOP:
+      - "172.20.20.1"
+    PROTOCOL: "S"
+    VRF: "MGMT"
+  - DIRECT: "directly"
+    DISTANCE: ""
+    INTERFACE:
+      - "Management0"
+    MASK: "24"
+    METRIC: ""
+    NETWORK: "172.20.20.0"
+    NEXT_HOP:
+      - "connected"
+    PROTOCOL: "C"
+    VRF: "MGMT"
