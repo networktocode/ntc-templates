@@ -17,6 +17,9 @@ Start
   # Match for codes
   ^\s+.+-.+
   ^\s*$$ -> Routes
+  # Ignore IP routing not enabled
+  ^\! IP routing not enabled
+  # Error on everything else
   ^. -> Error
 
 Routes
@@ -27,4 +30,7 @@ Routes
   ^\s*$$ -> Record
   ^VRF(\s+name)?:\s+${VRF}\s*$$ -> Start
   ^Gateway\s+of\s+last
+  # Ignore IP routing not enabled
+  ^\! IP routing not enabled
+  # Error on everything else
   ^. -> Error
