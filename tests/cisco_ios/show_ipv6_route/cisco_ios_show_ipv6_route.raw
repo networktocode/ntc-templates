@@ -1,0 +1,19 @@
+IPv6 Routing Table - default - 6 entries
+Codes: C - Connected, L - Local, S - Static, U - Per-user Static route
+       B - BGP, HA - Home Agent, MR - Mobile Router, R - RIP
+       H - NHRP, D - EIGRP, EX - EIGRP external, ND - ND Default
+       NDp - ND Prefix, DCE - Destination, NDr - Redirect, O - OSPF Intra
+       OI - OSPF Inter, OE1 - OSPF ext 1, OE2 - OSPF ext 2, ON1 - OSPF NSSA ext 1
+       ON2 - OSPF NSSA ext 2, l - LISP
+C   2A05:C100:2A::/64 [0/0]
+     via Vlan1, directly connected
+B   2001:DB8:4::2/48 [20/0]
+     via FE80::A8BB:CCFF:FE02:8B00, Serial6/0
+     via A8BB::FE80:CCFF:FE02:8B00, Serial4/0
+L   FF00::/8 [0/0]
+     via Null0, receive
+S   5555:4444::4/128 [1/0]
+     via 2A05:C100:2A::56
+     via 2A05:C100:2A::5765
+     via 2A05:C100:2A::3:344, Vlan1
+     via Vlan1, directly connected
