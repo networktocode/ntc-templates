@@ -1,0 +1,88 @@
+
+		Bridge-Aggregation10
+		Current state: UP
+		Line protocol state: UP
+		IP packet frame type: Ethernet II, hardware address: 7848-5933-6485
+		Description: TO_DIST_01_GND_FLOOR
+		Bandwidth: 40000000 kbps
+		40Gbps-speed mode, full-duplex mode
+		Link speed type is autonegotiation, link duplex type is autonegotiation
+		PVID: 1
+		Port link-type: Trunk
+		 VLAN Passing:   1(default vlan), 4001
+		 VLAN permitted: 1(default vlan), 2001-2020, 2056, 2190, 4001
+		 Trunk port encapsulation: IEEE 802.1q
+		Last clearing of counters: Never
+		Last 300 seconds input:  198 packets/sec 55873 bytes/sec 0%
+		Last 300 seconds output:  283 packets/sec 242533 bytes/sec 0%
+		Input (total):  2584125930 packets, 964139691145 bytes
+				2576964392 unicasts, 36 broadcasts, 7161502 multicasts, 0 pauses
+		Input (normal):  2584125930 packets, - bytes
+				2576964392 unicasts, 36 broadcasts, 7161502 multicasts, 0 pauses
+		Input:  0 input errors, 0 runts, 0 giants, 0 throttles
+				0 CRC, 0 frame, - overruns, 0 aborts
+				- ignored, - parity errors
+		Output (total): 4390318003 packets, 3699857154010 bytes
+				4378526539 unicasts, 4672 broadcasts, 11786792 multicasts, 0 pauses
+		Output (normal): 4390318003 packets, - bytes
+				4378526539 unicasts, 4672 broadcasts, 11786792 multicasts, 0 pauses
+		Output: 0 output errors, - underruns, - buffer failures
+				0 aborts, 0 deferred, 0 collisions, 0 late collisions
+				0 lost carrier, - no carrier
+				
+		
+		GigabitEthernet1/1/0/1
+		Current state: UP
+		Line protocol state: UP
+		IP packet frame type: Ethernet II, hardware address: 7848-5933-6485
+		Description: GigabitEthernet1/1/0/1 Interface
+		Bandwidth: 1000000 kbps
+		Loopback is not set
+		Media type is twisted pair, port hardware type is 1000_BASE_T
+		1000Mbps-speed mode, full-duplex mode
+		Link speed type is autonegotiation, link duplex type is autonegotiation
+		Flow-control is not enabled
+		Maximum frame length: 9216
+		Allow jumbo frames to pass
+		Broadcast max-ratio: 100%
+		Multicast max-ratio: 100%
+		Unicast max-ratio: 100%
+		PVID: 2000
+		MDI type: Automdix
+		Port link-type: Access
+		 Tagged VLANs:   None
+		 Untagged VLANs: 2000
+		Port priority: 0
+		Last link flapping: 11 weeks 6 days 13 hours 16 minutes
+		Last clearing of counters: Never
+		Current system time:2022-11-23 06:46:56 SAR+03:00:00
+		Last time when physical state changed to up:2022-08-31 17:29:38 SAR+03:00:00
+		Last time when physical state changed to down:2022-08-31 17:29:08 SAR+03:00:00
+		 Peak input rate: 92112 bytes/sec, at 2022-09-07 15:31:54 
+		 Peak output rate: 2529797 bytes/sec, at 2022-11-09 06:50:46 
+		 Last 300 seconds input: 1 packets/sec 383 bytes/sec 0%
+		 Last 300 seconds output: 2 packets/sec 337 bytes/sec 0%
+		 Input (total):  11737127 packets, 2195295590 bytes
+				 11623808 unicasts, 112822 broadcasts, 497 multicasts, 0 pauses
+		 Input (normal):  11737127 packets, - bytes
+				 11623808 unicasts, 112822 broadcasts, 497 multicasts, 0 pauses
+		 Input:  0 input errors, 0 runts, 0 giants, 0 throttles
+				 0 CRC, 0 frame, - overruns, 0 aborts
+				 - ignored, - parity errors
+		 Output (total): 23383663 packets, 5411926528 bytes
+				 11082589 unicasts, 7724789 broadcasts, 4576285 multicasts, 0 pauses
+		 Output (normal): 23383663 packets, - bytes
+				 11082589 unicasts, 7724789 broadcasts, 4576285 multicasts, 0 pauses
+		 Output: 0 output errors, - underruns, - buffer failures
+				 0 aborts, 0 deferred, 0 collisions, 0 late collisions
+				 0 lost carrier, - no carrier
+		IPv4 traffic statistics:
+		 Last 300 seconds input rate: 0 packets/sec, 0 bytes/sec
+		 Last 300 seconds output rate: 0 packets/sec, 0 bytes/sec
+		 Input: 0 packets, 0 bytes
+		 Output: 0 packets, 0 bytes
+		IPv6 traffic statistics:
+		 Last 300 seconds input rate: 0 packets/sec, 0 bytes/sec
+		 Last 300 seconds output rate: 0 packets/sec, 0 bytes/sec
+		 Input: 0 packets, 0 bytes
+		 Output: 0 packets, 0 bytes
