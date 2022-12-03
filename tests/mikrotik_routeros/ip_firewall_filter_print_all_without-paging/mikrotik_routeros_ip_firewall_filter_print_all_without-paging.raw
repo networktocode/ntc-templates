@@ -23,6 +23,7 @@ Flags: X - disabled, I - invalid, D - dynamic
 
  8    ;;; Acces WAN SNMP
       chain=input action=accept protocol=udp src-address-list=Supervision dst-port=161 
+17:20:06 echo: system,error,critical login failure for user admin from 65.160.140.13 via ssh
 
  9    ;;; defconf: accept to local loopback (for CAPsMAN)
       chain=input action=accept dst-address=127.0.0.1 
@@ -57,6 +58,7 @@ Flags: X - disabled, I - invalid, D - dynamic
 19    chain=forward connection-state=established,related 
 
 20    ;;; drop invalid connections
+17:20:06 echo: system,error,critical login failure for user admin from 65.160.140.13 via ssh
       chain=forward action=drop connection-state=invalid protocol=tcp 
 
 21    ;;; Block all entrant

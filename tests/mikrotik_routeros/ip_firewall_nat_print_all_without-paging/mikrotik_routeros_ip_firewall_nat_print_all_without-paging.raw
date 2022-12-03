@@ -1,10 +1,12 @@
 Flags: X - disabled, I - invalid, D - dynamic 
+17:20:06 echo: system,error,critical login failure for user admin from 65.160.140.13 via ssh
  0    ;;; dmz-1: masquerade
       chain=srcnat action=masquerade src-address=!185.163.212.156/30 out-interface-list=WAN ipsec-policy=out,none 
 
  1    chain=dstnat action=redirect protocol=icmp src-address=192.168.1.16 dst-address=31.31.31.31 in-interface-list=dmz-1 log=no log-prefix="" 
 
  2 X  ;;; qsdqsdqsd
+17:20:06 echo: system,error,critical login failure for user admin from 65.160.140.13 via ssh
       chain=srcnat action=accept protocol=vmtp in-interface=all-ethernet out-interface=ether4 log=no log-prefix="" 
 
  3 X  chain=srcnat action=accept protocol=tcp src-address-list=Supervision dst-address-list=Eqinoxe src-port=80 dst-port=8080 log=no log-prefix="" 

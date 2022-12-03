@@ -11,4 +11,5 @@ Value target_scope (\d+)
 
 Start
   ^\s?${index}\s${flags}\s\s(comment=${comment}\s)?dst-address=${dst_address}(\spref-src=${pref_src})?\sgateway=${gateway}\sgateway-status=${gateway_status}\sdistance=${distance}\sscope=${scope}(\starget-scope=${target_scope})?.*$$ -> Record
+  ^\s*(?:\d{2}:){2}\d{2}\s+echo:\s*.*$$ -> Next
   ^. -> Error
