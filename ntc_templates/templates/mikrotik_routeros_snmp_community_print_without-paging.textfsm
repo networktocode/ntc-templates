@@ -11,4 +11,5 @@ Start
 
 SNMPCommunitiesTable
   ^\s?${index}\s+(${flags})?\s+${name}\s+${addresses}\s+${security}\s+${read_access}\s+${write_access}\s+$$ -> Record
+  ^\s*(?:\d{2}:){2}\d{2}\s+echo:\s*.*$$ -> Next
   ^. -> Error

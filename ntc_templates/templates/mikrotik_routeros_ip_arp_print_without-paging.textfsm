@@ -9,4 +9,5 @@ Start
 
 EntriesTable
   ^\s*${index}\s*(${flags})?\s*${ip}\s*(${mac})?\s+(${interface})?\s+$$ -> Record
+  ^\s*(?:\d{2}:){2}\d{2}\s+echo:\s*.*$$ -> Next
   ^. -> Error
