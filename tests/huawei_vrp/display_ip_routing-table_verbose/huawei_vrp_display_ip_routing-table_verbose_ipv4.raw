@@ -1,0 +1,159 @@
+Route Flags: R - relay, D - download to fib, T - to vpn-instance
+------------------------------------------------------------------------------
+Routing Tables: Public
+         Destinations : 13       Routes : 14       
+
+
+Destination: 0.0.0.0/0
+     Protocol: Static           Process ID: 0
+   Preference: 60                     Cost: 0
+      NextHop: 192.214.198.156   Neighbour: 0.0.0.0
+        State: Active Adv              Age: 1d01h58m07s
+          Tag: 0                  Priority: medium
+        Label: NULL                QoSInfo: 0x0
+   IndirectID: 0x0              
+ RelayNextHop: 0.0.0.0           Interface: Dialer1
+     TunnelID: 0x0                   Flags:  D
+
+Destination: 0.0.0.0/0
+     Protocol: EBGP             Process ID: 0
+   Preference: 255                    Cost: 0
+      NextHop: 23.90.232.243     Neighbour: 23.90.232.243
+        State: Inactive Adv            Age: 1d01h57m50s
+          Tag: 0                  Priority: low
+        Label: NULL                QoSInfo: 0x0
+   IndirectID: 0x1              
+ RelayNextHop: 0.0.0.0           Interface: Dialer1
+     TunnelID: 0x0                   Flags: 
+
+Destination: 23.90.232.243/32
+     Protocol: Direct           Process ID: 0
+   Preference: 0                      Cost: 0
+      NextHop: 23.90.232.243     Neighbour: 0.0.0.0
+        State: Active Adv              Age: 1d01h58m07s
+          Tag: 0                  Priority: high
+        Label: NULL                QoSInfo: 0x0
+   IndirectID: 0x0              
+ RelayNextHop: 0.0.0.0           Interface: Dialer1
+     TunnelID: 0x0                   Flags:  D
+
+Destination: 100.95.15.240/30
+     Protocol: Direct           Process ID: 0
+   Preference: 0                      Cost: 0
+      NextHop: 100.95.15.241     Neighbour: 0.0.0.0
+        State: Active Adv              Age: 1d01h58m15s
+          Tag: 0                  Priority: high
+        Label: NULL                QoSInfo: 0x0
+   IndirectID: 0x0              
+ RelayNextHop: 0.0.0.0           Interface: Vlanif100
+     TunnelID: 0x0                   Flags:  D
+
+Destination: 100.95.15.241/32
+     Protocol: Direct           Process ID: 0
+   Preference: 0                      Cost: 0
+      NextHop: 127.0.0.1         Neighbour: 0.0.0.0
+        State: Active NoAdv            Age: 1d01h58m15s
+          Tag: 0                  Priority: high
+        Label: NULL                QoSInfo: 0x0
+   IndirectID: 0x0              
+ RelayNextHop: 0.0.0.0           Interface: Vlanif100
+     TunnelID: 0x0                   Flags:  D
+
+Destination: 100.95.15.243/32
+     Protocol: Direct           Process ID: 0
+   Preference: 0                      Cost: 0
+      NextHop: 127.0.0.1         Neighbour: 0.0.0.0
+        State: Active NoAdv            Age: 1d01h58m19s
+          Tag: 0                  Priority: high
+        Label: NULL                QoSInfo: 0x0
+   IndirectID: 0x0              
+ RelayNextHop: 0.0.0.0           Interface: Vlanif100
+     TunnelID: 0x0                   Flags:  D
+
+Destination: 127.0.0.0/8
+     Protocol: Direct           Process ID: 0
+   Preference: 0                      Cost: 0
+      NextHop: 127.0.0.1         Neighbour: 0.0.0.0
+        State: Active NoAdv            Age: 1d01h59m26s
+          Tag: 0                  Priority: high
+        Label: NULL                QoSInfo: 0x0
+   IndirectID: 0x0              
+ RelayNextHop: 0.0.0.0           Interface: InLoopBack0
+     TunnelID: 0x0                   Flags:  D
+
+Destination: 127.0.0.1/32
+     Protocol: Direct           Process ID: 0
+   Preference: 0                      Cost: 0
+      NextHop: 127.0.0.1         Neighbour: 0.0.0.0
+        State: Active NoAdv            Age: 1d01h59m26s
+          Tag: 0                  Priority: high
+        Label: NULL                QoSInfo: 0x0
+   IndirectID: 0x0              
+ RelayNextHop: 0.0.0.0           Interface: InLoopBack0
+     TunnelID: 0x0                   Flags:  D
+
+Destination: 127.255.255.255/32
+     Protocol: Direct           Process ID: 0
+   Preference: 0                      Cost: 0
+      NextHop: 127.0.0.1         Neighbour: 0.0.0.0
+        State: Active NoAdv            Age: 1d01h59m26s
+          Tag: 0                  Priority: high
+        Label: NULL                QoSInfo: 0x0
+   IndirectID: 0x0              
+ RelayNextHop: 0.0.0.0           Interface: InLoopBack0
+     TunnelID: 0x0                   Flags:  D
+
+Destination: 192.168.1.0/24               
+     Protocol: Direct           Process ID: 0
+   Preference: 0                      Cost: 0
+      NextHop: 192.168.1.1       Neighbour: 0.0.0.0
+        State: Active Adv              Age: 1d01h58m54s
+          Tag: 0                  Priority: high
+        Label: NULL                QoSInfo: 0x0
+   IndirectID: 0x0              
+ RelayNextHop: 0.0.0.0           Interface: Vlanif1
+     TunnelID: 0x0                   Flags:  D
+
+Destination: 192.168.1.1/32
+     Protocol: Direct           Process ID: 0
+   Preference: 0                      Cost: 0
+      NextHop: 127.0.0.1         Neighbour: 0.0.0.0
+        State: Active NoAdv            Age: 1d01h58m55s
+          Tag: 0                  Priority: high
+        Label: NULL                QoSInfo: 0x0
+   IndirectID: 0x0              
+ RelayNextHop: 0.0.0.0           Interface: Vlanif1
+     TunnelID: 0x0                   Flags:  D
+
+Destination: 192.168.1.255/32
+     Protocol: Direct           Process ID: 0
+   Preference: 0                      Cost: 0
+      NextHop: 127.0.0.1         Neighbour: 0.0.0.0
+        State: Active NoAdv            Age: 1d01h58m55s
+          Tag: 0                  Priority: high
+        Label: NULL                QoSInfo: 0x0
+   IndirectID: 0x0              
+ RelayNextHop: 0.0.0.0           Interface: Vlanif1
+     TunnelID: 0x0                   Flags:  D
+
+Destination: 192.214.198.156/32
+     Protocol: Direct           Process ID: 0
+   Preference: 0                      Cost: 0
+      NextHop: 127.0.0.1         Neighbour: 0.0.0.0
+        State: Active Adv              Age: 1d01h58m13s
+          Tag: 0                  Priority: high
+        Label: NULL                QoSInfo: 0x0
+   IndirectID: 0x0              
+ RelayNextHop: 0.0.0.0           Interface: Dialer1
+     TunnelID: 0x0                   Flags:  D
+
+Destination: 255.255.255.255/32
+     Protocol: Direct           Process ID: 0
+   Preference: 0                      Cost: 0
+      NextHop: 127.0.0.1         Neighbour: 0.0.0.0
+        State: Active NoAdv            Age: 1d01h59m27s
+          Tag: 0                  Priority: high
+        Label: NULL                QoSInfo: 0x0
+   IndirectID: 0x0              
+ RelayNextHop: 0.0.0.0           Interface: InLoopBack0
+     TunnelID: 0x0                   Flags:  D
