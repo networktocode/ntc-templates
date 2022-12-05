@@ -1,0 +1,11 @@
+Value INTF (\S+(?:\s\S+)?)
+Value IPADDR (\S+)
+Value OK (YES|NO|Yes|No|yes|no)
+Value STATUS (up|down|administratively down)
+Value PROTO (up|down)
+Value IFDESCR (.*)
+
+Start
+  ^${INTF}\s+${IPADDR}\s+${OK}\s+${STATUS}\s+${PROTO}\s+${IFDESCR} -> Record
+  ^.*$$
+  ^. -> Error
