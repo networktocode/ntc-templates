@@ -1,0 +1,9 @@
+Value AAA_PROTOCOL (authentication|authorization|accounting)
+Value AAA_COMMAND (\w+)
+Value List AAA_CONFIG (.*)
+
+Start
+  ^\s*aaa\s+${AAA_PROTOCOL}\s+${AAA_COMMAND}\s+${AAA_CONFIG}\s*$$ -> Record
+  ^.*$$
+  ^. -> Error
+

@@ -526,6 +526,17 @@ mikrotik_routeros_ip_arp_print_without-paging.textfsm, .*, mikrotik_routeros, [[
 mikrotik_routeros_system_routerboard_print.textfsm, .*, mikrotik_routeros, [[/]]system routerboard print
 mikrotik_routeros_ip_route_print_terse.textfsm, .*, mikrotik_routeros, [[/]]ip(v6)? route print terse
 
+oneaccess_oneos_show_helpers.textfsm, .*, oneaccess_oneos, show helpers
+oneaccess_oneos_hostname.textfsm, .*, oneaccess_oneos, hostname
+oneaccess_oneos_show_product-info-area.textfsm, .*, oneaccess_oneos, sh[[ow]] product\-info\-area
+oneaccess_oneos_show_system_status.textfsm, .*, oneaccess_oneos, sh[[ow]] system status
+oneaccess_oneos_show_tacacs-server.textfsm, .*, oneaccess_oneos, sh[[ow]] tacacs\-server
+oneaccess_oneos_show_tacacs.textfsm, .*, oneaccess_oneos, sh[[ow]] tacacs
+oneaccess_oneos_show_running-config_aaa.textfsm, .*, oneaccess_oneos, sh[[ow]] run[[ning-config]] \|?aaa
+oneaccess_oneos_show_ip_vrf_brief.textfsm, .*, oneaccess_oneos, sh[[ow]] ip vrf brief
+oneaccess_oneos_show_ip_interface_brief.textfsm, .*, oneaccess_oneos, sh[[ow]] ip int[[erface]] brief
+oneaccess_oneos_show_running-config_ip-route.textfsm, .*, oneaccess_oneos, sh[[ow]] run[[ning-config]] (\| i[[nclude]] )?ip route
+
 paloalto_panos_show_running_security-policy.textfsm, .*, paloalto_panos, sh[[ow]] runn[[ing]] security[[-policy]]
 paloalto_panos_show_high-availability_all.textfsm, .*, paloalto_panos, sh[[ow]] high[[-availability]] all
 paloalto_panos_test_security-policy-match.textfsm, .*, paloalto_panos, test security-policy-match.*
