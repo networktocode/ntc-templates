@@ -1,0 +1,20 @@
+Loadsharing Type: Shar -- Loadsharing, NonS -- Non-Loadsharing
+Port Status: S -- Selected, U -- Unselected
+Flags:  A -- LACP_Activity, B -- LACP_Timeout, C -- Aggregation,
+        D -- Synchronization, E -- Collecting, F -- Distributing,
+        G -- Defaulted, H -- Expired
+
+Aggregation Interface: Bridge-Aggregation1
+Aggregation Mode: Dynamic
+Loadsharing Type: Shar
+System ID: 0x8000, 5c8a-3830-e4fe
+Local:
+  Port             Status  Priority Oper-Key  Flag
+--------------------------------------------------------------------------------
+  XGE1/0/29        S       32768    1         {ACDEF}
+  XGE1/0/30        S       32768    1         {ACDEF}
+Remote:
+  Actor            Partner Priority Oper-Key  SystemID               Flag
+--------------------------------------------------------------------------------
+  XGE1/0/29        17      32768    2         0x8000, bcea-fa19-8be8 {ACDEF}
+  XGE1/0/30        222     32768    2         0x8000, bcea-fa19-8be8 {ACDEF}
