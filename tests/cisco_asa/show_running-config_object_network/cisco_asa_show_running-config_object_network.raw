@@ -2,15 +2,13 @@ object network corp
  subnet 10.0.0.0 255.0.0.0
 object network internal
  subnet 192.168.0.0 255.255.255.0
-object network any
- subnet 0.0.0.0 0.0.0.0
 object network host-10.10.11.1
  host 10.10.11.1
 object network block
  host 10.75.51.11
 object network dmz
- description dmz GW ip
  host 11.1.2.2
+ description dmz GW ip
 object network server-vip
  host 10.1.11.8
 object network visitors
@@ -25,3 +23,5 @@ object network internal-ipv6-range
  range fd00:: fd00::ffff
 object network internal-ipv6-subnet
  subnet fd00::/8
+object network fqdn_test
+ fqdn google.com
