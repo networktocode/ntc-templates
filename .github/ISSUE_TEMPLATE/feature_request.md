@@ -7,6 +7,7 @@ about: Propose a new feature or enhancement
 ### Important Note
 
 Feature request for new templates will be closed.
+Feature request for adding data captured to existing templates will be closed.
 
 ### Environment
 * ntc-templates version:  <!-- Example: 1.0.0 -->
