@@ -7,6 +7,7 @@ Value MASK (\S+)
 Value CIDR (\/\d+)
 Value START_IP (\S+)
 Value END_IP (\S+)
+Value FQDN (\S+)
 
 
 Start
@@ -18,4 +19,5 @@ Start
   ^\s+subnet\s+${NETWORK}${CIDR}\s*
   ^\s+range\s+${START_IP}\s+${END_IP}\s*
   ^\s+host\s+${HOST}\s*
+  ^\s+fqdn\s+${FQDN}\s*
   ^. -> Error
