@@ -1,0 +1,41 @@
+Value Required INTF (\S+)
+Value LINE_STATUS (UP|DOWN|Administratively DOWN)
+Value PROTOCOL_STATUS (UP(\(spoofing\))?|DOWN)
+Value List IPADDR (\S+)
+Value MTU (\d+)
+Value List HW_ADDRESS ([a-zA-Z0-9]+-[a-zA-Z0-9]+-[a-zA-Z0-9]+)
+Value DESCRIPTION (.*)
+Value BANDWIDTH (.*)
+Value DUPLEX (\S+)
+Value SPEED (\S+)
+Value PORT_LINK_TYPE (\S+)
+Value TRUNK_MODE (.*)
+Value VLAN_PASSING (.*)
+Value VLAN_PERMITTED (.*)
+
+Start
+  ^\S+$$ -> Continue.Record
+  ^${INTF}$$
+  ^Current\s+state:\s+${LINE_STATUS}
+  ^Line\s+protocol\s+state:\s+${PROTOCOL_STATUS}
+  ^Description:\s+${DESCRIPTION}
+  ^Bandwidth:\s+${BANDWIDTH}
+  ^Maximum\s+transmission\s+unit:\s+${MTU}
+  ^Internet\s+address:\s+${IPADDR}\s+\(Primary\)
+  ^Internet\s+address:\s+${IPADDR}\s+\(Sub\)
+  ^IP\s+packet\s+frame\s+type:\s+Ethernet\s+II,\s+hardware\s+address:\s+${HW_ADDRESS}
+  ^IPv6\s+packet\s+frame\s+type:\s+Ethernet\s+II,\s+hardware\s+address:\s+${HW_ADDRESS}
+  ^${SPEED}\s+mode,\s+${DUPLEX}\s+mode
+  ^Port\s+link-type:\s+${PORT_LINK_TYPE}
+  ^\s+VLAN\s+Passing:\s+${VLAN_PASSING}
+  ^\s+VLAN\s+permitted:\s+${VLAN_PERMITTED}
+  ^\s+Trunk\s+port\s+encapsulation:\s+${TRUNK_MODE}
+  ^\s*\S+\s+\S+.*
+  ^\s*$$
+  ^. -> Error
+
+Trunk
+  ^Port\s+link-type:\s+${PORT_LINK_TYPE}
+  ^\s+VLAN\s+Passing:\s+${VLAN_PASSING}
+  ^\s+VLAN\s+permitted:\s+${VLAN_PERMITTED}
+  ^\s+Trunk\s+port\s+encapsulation:\s+${TRUNK_MODE}
