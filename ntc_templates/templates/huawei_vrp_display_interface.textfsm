@@ -1,0 +1,74 @@
+Value Required INTERFACE (\S*)
+Value LINK_STATUS (.*)
+Value PROTOCOL_STATUS (\S*|\S*\s+\(\w+\))
+Value INTERFACE_DESCRIPTION (.*)
+Value PORT_TYPE (\S*)
+Value PVID (\d+)
+Value INTERNET_ADDRESS (\S*)
+Value INTERNET_PROTOCOL (disabled|enabled)
+Value HARDWARE_ADDRESS (\S{4}-\S{4}-\S{4})
+Value LAST_PHYSICAL_UP_TIME (\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2}|-)
+Value LAST_PHYSICAL_DOWN_TIME (\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2}|-)
+Value CURRENT_SYSTEM_TIME (\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2})
+Value PORT_MODE ([\S\s]*)
+Value SPEED (\d*)
+Value LOOPBACK (\S*)
+Value DUPLEX (HALF|FULL)
+Value NEGOTIATION (DISABLE|ENABLE)
+
+Start
+  ^\S*\s+current\s+state\s+:.*$$ -> Continue.Record
+  ^${INTERFACE}\s+current\s+state\s+:\s+${LINK_STATUS}\s*$$
+  ^Line\s+protocol\s+current\s+state\s+:\s+${PROTOCOL_STATUS}\s*$$
+  ^Last\sline\sprotocol\sup\stime\s*:\s+(\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2}|-)\s*$$
+  ^Description:${INTERFACE_DESCRIPTION}\s*$$
+  ^${PORT_TYPE}\s+Port(,\s+PVID\s+:\s*${PVID},)?.*$$
+  ^Internet\s+Address\s+is\s+negotiated,\s+${INTERNET_ADDRESS}\s*$$
+  ^Internet\s+Address\s+is\s+${INTERNET_ADDRESS}\s*$$
+  ^.*,\s+Hardware\s+address\s+is\s+${HARDWARE_ADDRESS}\s*$$
+  ^Internet\s+protocol\s+processing\s+:\s+${INTERNET_PROTOCOL}\s*$$
+  ^Last\s+physical\s+up\s+time\s*:\s+${LAST_PHYSICAL_UP_TIME}\s*
+  ^Last\s+physical\s+down\s+time\s+:\s+${LAST_PHYSICAL_DOWN_TIME}\s*
+  ^IP\sSending\sFrames'\sFormat\sis\s\S+\s*,\sHardware\saddress\sis\s\S+\s*$$
+  ^Current\s+system\s+time:\s+${CURRENT_SYSTEM_TIME}\s*
+  ^Modem\sState:\s+\S+\s*$$
+  ^Model\s=\s+\S+\s*$$
+  ^Current\sNetwork\sConnection\s=\sLTE\(LTE\)\s*$$
+  ^Current\sNetwork\sConnection\s=\sUnknown\s*$$
+  ^Current\sRSSI\s<?=\s+(-)?\d+\sdBm.*$$
+  ^Current\sSINR\s=\s+(-)?\d+\sdB\s\(weak\)\s*$$
+  ^\s+Input\sbandwidth\sutilization(\sthreshold)?\s*:.*$$
+  ^\s+Output\sbandwidth\sutilization(\sthreshold)?\s*:.*$$
+  ^Port\s+Mode:\s+${PORT_MODE}\s*$$
+  ^Speed\s+:\s+${SPEED},\s*Loopback:\s+${LOOPBACK}\s*$$
+  ^Duplex:\s+${DUPLEX},\s*Negotiation:\s+${NEGOTIATION}\s*$$
+  ^Mdi\s*:\s+\S+,\s*Clock\s*:\s+\S+\s*$$
+  ^Port\sPHY\stype\s+:\s+\S+\s*$$
+  ^\s*Last\s\d+\sseconds\s(input|output)\srate\s(\d+\sbytes\/sec(,)?\s)?\d+\sbits\/sec(,)?\s\d+\spackets\/sec\s*$$
+  ^\s*(Input|Output)\speak\srate\s\d+\sbits\/sec\s*,\s*Record\stime:\s+.*$$
+  ^Link\slayer\sprotocol\sis.*$$
+  ^LCP\sinitial\s*$$
+  ^Physical\sis.*$$
+  ^Bound\sto.*$$
+  ^\s*LCP\s\S+,\s+IPCP\s\S+,\s+IP6CP\s\S+\s*$$
+  ^Packets\sstatistics:\s*$$
+  ^\s+(Input|Output)\spackets\s*:\s*\d+,\s+\d+\sbytes\s*$$
+  ^\s+FCS\serror\spackets:\s*\d+\s*$$
+  ^\s+Address\serror\spackets:\s*\d+\s*$$
+  ^\s+Control\sfield\scontrol\serror\spackets:\s*\d+\s*$$
+  ^\s+Control\sfield\scontrol\serror\spackets:\s*\d+\s*$$
+  ^\s*(Input|Output)\s*:\s*\d+\spackets,\s+\d+\sbytes\s*$$
+  ^\s+Unicast:\s+(\d|-)+,\s+(Multicast:\s+\d+|Ununicast:\s+(\d|-)+)\s*$$
+  ^\s+Broadcast:\s+(\d|-)+,\s+Jumbo:\s+(\d|-)+\s*$$
+  ^\s+Discard:\s+(\d|-)+,\s+Total\sError:\s+(\d|-)+\s*$$
+  ^\s+CRC:\s+(\d|-)+,\s+Giants:\s+(\d|-)+\s*$$
+  ^\s+Jabbers:\s+(\d|-)+,\s+Throttles:\s+(\d|-)+\s*$$
+  ^\s+Runts:\s+(\d|-)+,\s+Symbols:\s+(\d|-)+\s*$$
+  ^\s+Ignoreds:\s+(\d|-)+,\s+Frames:\s+(\d|-)+\s*$$
+  ^\s+Collisions:\s+(\d|-)+,\s+ExcessiveCollisions:\s+(\d|-)+\s*$$
+  ^\s+Late\sCollisions:\s+(\d|-)+,\s+Deferreds:\s+(\d|-)+\s*$$
+  ^\s+OAM\sCells:\s+(\d|-)+,\s+ASM\sCells:\s+(\d|-)+\s*$$
+  ^\s+Packet\sErrors:\s+(\d|-)+,\s+Packet\sDiscards:\s+(\d|-)+\s*$$
+  ^\s+Cell\sErrors:\s+(\d|-)+\s*$$
+  ^\s+
+  ^. -> Error
