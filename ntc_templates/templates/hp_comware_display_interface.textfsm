@@ -10,8 +10,9 @@ Value DUPLEX (\S+)
 Value SPEED (\S+)
 Value PORT_LINK_TYPE (\S+)
 Value TRUNK_MODE (.*)
-Value VLAN_PASSING (.*)
-Value VLAN_PERMITTED (.*)
+Value VLAN_NATIVE (\d+)
+Value List VLAN_PASSING ([^,]+)
+Value List VLAN_PERMITTED ([^,]+)
 
 Start
   ^\S+$$ -> Continue.Record
@@ -26,16 +27,21 @@ Start
   ^IP\s+packet\s+frame\s+type:\s+Ethernet\s+II,\s+hardware\s+address:\s+${HW_ADDRESS}
   ^IPv6\s+packet\s+frame\s+type:\s+Ethernet\s+II,\s+hardware\s+address:\s+${HW_ADDRESS}
   ^${SPEED}\s+mode,\s+${DUPLEX}\s+mode
+  ^PVID:\s+${VLAN_NATIVE}
   ^Port\s+link-type:\s+${PORT_LINK_TYPE}
-  ^\s+VLAN\s+Passing:\s+${VLAN_PASSING}
+  ^\s+VLAN\s+Passing: -> PassedVLAN
   ^\s+VLAN\s+permitted:\s+${VLAN_PERMITTED}
   ^\s+Trunk\s+port\s+encapsulation:\s+${TRUNK_MODE}
   ^\s*\S+\s+\S+.*
   ^\s*$$
   ^. -> Error
 
-Trunk
-  ^Port\s+link-type:\s+${PORT_LINK_TYPE}
-  ^\s+VLAN\s+Passing:\s+${VLAN_PASSING}
-  ^\s+VLAN\s+permitted:\s+${VLAN_PERMITTED}
-  ^\s+Trunk\s+port\s+encapsulation:\s+${TRUNK_MODE}
+PassedVLAN
+  ^\s+VLAN\s+Passing:\s+${VLAN_PASSING},* -> Continue
+  ^\s+VLAN\s+Passing:(\s+[^,]+,){2}\s+${VLAN_PASSING},* -> Continue
+  ^\S+ -> Done
+  ^\sVLAN -> Done
+  ^. -> Error
+
+Done
+  ^.*
