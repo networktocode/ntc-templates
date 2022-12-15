@@ -1,8 +1,9 @@
 Value Required INTF (\S+)
 Value LINE_STATUS (UP|DOWN|Administratively DOWN)
 Value PROTOCOL_STATUS (UP(\(spoofing\))?|DOWN)
-Value List IPADDR (\S+)
+Value List IP_ADDRESS (\S+)
 Value MTU (\d+)
+Value L2MTU (\d+)
 Value List HW_ADDRESS ([a-zA-Z0-9]+-[a-zA-Z0-9]+-[a-zA-Z0-9]+)
 Value DESCRIPTION (.*)
 Value BANDWIDTH (.*)
@@ -22,8 +23,9 @@ Start
   ^Description:\s+${DESCRIPTION}
   ^Bandwidth:\s+${BANDWIDTH}
   ^Maximum\s+transmission\s+unit:\s+${MTU}
-  ^Internet\s+address:\s+${IPADDR},\s+\(Primary\)
-  ^Internet\s+address:\s+${IPADDR},\s+\(Sub\)
+  ^Maximum\s+frame\s+length:\s+${L2MTU}
+  ^Internet\s+address:\s+${IP_ADDRESS}\s+\(Primary\)
+  ^Internet\s+address:\s+${IP_ADDRESS}\s+\(Sub\)
   ^IP\s+packet\s+frame\s+type:\s+Ethernet\s+II,\s+hardware\s+address:\s+${HW_ADDRESS}
   ^IPv6\s+packet\s+frame\s+type:\s+Ethernet\s+II,\s+hardware\s+address:\s+${HW_ADDRESS}
   ^${SPEED},\s+mode,\s+${DUPLEX},\s+mode
