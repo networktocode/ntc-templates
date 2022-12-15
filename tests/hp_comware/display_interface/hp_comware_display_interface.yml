@@ -3,22 +3,27 @@ parsed_sample:
   - interface: "Vlan-interface2000"
     state: "UP"
     link_protocol: "UP"
-    hw_address: ""
+    hw_address: 
+      - "abab-cdcd-6486"
+      - "abab-cdcd-6486"
     description: "Servers-VLAN"
     bandwidth: "10000000 kbps"
     mtu: "1500"
+    l2mtu: ""
     pvid: ""
     ip_address: "10.1.200.1/24"
     port_link_type: ""
-    vlan_passing: 
-    vlan_permitted:
+    vlan_passing: []
+    vlan_permitted: []
   - interface: "Bridge-Aggregation20"
     state: "UP"
     link_protocol: "UP"
-    hw_address: "abab-cdcd-6485"
+    hw_address:
+      - "abab-cdcd-6485"
     description: "TO_DIST_02_3rd_FLOOR"
     bandwidth: "40000000 kbps"
     mtu: ""
+    l2mtu: ""
     pvid: "1"
     ip_address: "10.1.200.1/24"
     port_link_type: "Trunk"
@@ -33,10 +38,12 @@ parsed_sample:
   - interface: "GigabitEthernet1/1/0/31"
     state: "DOWN"
     link_protocol: "DOWN"
-    hw_address: "abab-cdcd-6485"
+    hw_address:
+      - "abab-cdcd-6485"
     description: "Aruba-WLC"
     bandwidth: "1000000 kbps"
-    mtu: "9216"
+    mtu: ""
+    l2mtu: "9216"
     pvid: "2190"
     ip_address: "10.1.200.1/24"
     port_link_type: "Trunk"
@@ -47,3 +54,17 @@ parsed_sample:
       - "4049-4052"
     vlan_permitted:
       - "2-4094"
+  - interface: "GigabitEthernet1/1/0/1"
+    state: "DOWN"
+    link_protocol: "DOWN"
+    hw_address:
+      - "000c-2963-b767"
+    description: "Ten-GigabitEthernet1/0/1 Interface"
+    bandwidth: "100000 kbps"
+    mtu: ""
+    l2mtu: "9216"
+    pvid: "1"
+    ip_address: ""
+    port_link_type: "Access"
+    vlan_passing: []
+    vlan_permitted: []
