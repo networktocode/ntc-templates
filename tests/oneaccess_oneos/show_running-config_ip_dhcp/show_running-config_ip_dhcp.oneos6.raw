@@ -1,0 +1,8 @@
+ip dhcp excluded-address 192.168.202.1
+ip dhcp pool POOL
+ default-router 192.168.202.1
+ dns-server 212.224.255.252 212.224.255.254
+ lease 0 8 0
+ netmask    255.255.255.0
+ network 192.168.202.0 255.255.255.0
+exit
