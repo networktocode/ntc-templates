@@ -11,7 +11,8 @@ parsed_sample:
     mtu: "1500"
     l2mtu: ""
     pvid: ""
-    ip_address: "10.1.200.1/24"
+    ip_address:
+      - "10.1.200.1/24"
     port_link_type: ""
     vlan_passing: []
     vlan_permitted: []
@@ -25,7 +26,8 @@ parsed_sample:
     mtu: ""
     l2mtu: ""
     pvid: "1"
-    ip_address: "10.1.200.1/24"
+    ip_address:
+      - "10.1.200.1/24"
     port_link_type: "Trunk"
     vlan_passing:
       - "1"
@@ -45,7 +47,8 @@ parsed_sample:
     mtu: ""
     l2mtu: "9216"
     pvid: "2190"
-    ip_address: "10.1.200.1/24"
+    ip_address:
+      - "10.1.200.1/24"
     port_link_type: "Trunk"
     vlan_passing:
       - "2000"
@@ -64,7 +67,7 @@ parsed_sample:
     mtu: ""
     l2mtu: "9216"
     pvid: "1"
-    ip_address: ""
+    ip_address: []
     port_link_type: "Access"
     vlan_passing: []
     vlan_permitted: []

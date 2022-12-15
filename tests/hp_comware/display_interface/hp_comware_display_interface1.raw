@@ -11,11 +11,6 @@ Port link-type: Trunk
                  140-144, 160-164, 180, 182-193, 200-201, 213-222, 225-240, 243
                  250, 255, 411-413, 460, 555, 702, 777, 825, 829, 832, 836-837
                  845, 849, 852, 856-857, 865, 869, 872, 876-877, 1000-1002
-                 1005-1006, 1011, 1013, 1020-1021, 1025-1026, 1028-1029
-                 1031-1034, 1036-1037, 1039-1041, 1046, 1048, 1050, 1061-1063
-                 1066-1067, 1069, 1071-1081, 1085-1090, 1095-1103, 1105-1136
-                 1996-1999, 2017, 2501-2502, 2510, 2521, 2541, 2561, 2602, 2621
-                 2641, 2661, 2701-2800, 3088, 3090-3093, 3260, 3280, 4000
  VLAN permitted: 2-4094
  Trunk port encapsulation: IEEE 802.1q
 Last clearing of counters: 13:42:38 Sun 11/27/2022
@@ -35,38 +30,3 @@ Output (normal): 1492615087837 packets, - bytes
 Output: 0 output errors, - underruns, 0 buffer failures
         0 aborts, 0 deferred, 0 collisions, 0 late collisions
         0 lost carrier, - no carrier
-
-Ten-GigabitEthernet2/0/0/48
-Current state: UP
-IP packet frame type: Ethernet II, hardware address: aaaa-bbbb-cdcd
-Description: Ten-GigabitEthernet2/0/0/48 Interface
-Bandwidth: 10000000 kbps
-Loopback is not set
-Media type is optical fiber, port hardware type is 10G_BASE_SR_SFP
-10Gbps-speed mode, full-duplex mode
-Link speed type is autonegotiation, link duplex type is autonegotiation
-Maximum frame length: 9216
-MDI type: Automdix
-Last link flapping: 1 weeks 4 days 1 hours 18 minutes
-Last clearing of counters: Never
-Current system time:2022-12-14 16:05:22 SAR+03:00:00
-Last time when physical state changed to up:2022-12-03 14:46:58 SAR+03:00:00
-Last time when physical state changed to down:2022-12-03 14:46:07 SAR+03:00:00
- Peak input rate: 121060 bytes/sec, at 2022-12-03 14:51:15
- Peak output rate: 28103 bytes/sec, at 2022-12-03 14:52:19
- Last 300 seconds input: 44 packets/sec 24328 bytes/sec 0%
- Last 300 seconds output: 36 packets/sec 10419 bytes/sec 0%
- Input (total):  30504263 packets, 11903620816 bytes
-         3695347 unicasts, 0 broadcasts, 26808916 multicasts, 0 pauses
- Input (normal):  30504263 packets, - bytes
-         3695347 unicasts, 0 broadcasts, 26808916 multicasts, 0 pauses
- Input:  0 input errors, 0 runts, 0 giants, 0 throttles
-         0 CRC, 0 frame, - overruns, 0 aborts
-         - ignored, - parity errors
- Output (total): 36247403 packets, 10258414619 bytes
-         23819222 unicasts, 0 broadcasts, 12428181 multicasts, 0 pauses
- Output (normal): 36247403 packets, - bytes
-         23819222 unicasts, 0 broadcasts, 12428181 multicasts, 0 pauses
- Output: 0 output errors, - underruns, - buffer failures
-         0 aborts, 0 deferred, 0 collisions, 0 late collisions
-         0 lost carrier, - no carrier
