@@ -28,56 +28,56 @@ Start
   ^IPv6\s+packet\s+frame\s+type:\s+Ethernet\s+II,\s+hardware\s+address:\s+${HW_ADDRESS}
   ^${SPEED},\s+mode,\s+${DUPLEX},\s+mode
   ^PVID:\s+${VLAN_NATIVE}
-  #^Port\s+link-type: -> PortType
   ^Port\s+link-type:\s+${PORT_LINK_TYPE}
-  # Trunk - Passing VLANs
+  # Trunk - Passing VLANs (parsing multiple times with Continue)
   ^\s+VLAN\s+Passing:\s+${VLAN_PASSING},* -> Continue
-  # Skip initial VLANs and read the Nth
-  #^\s+VLAN\s+Passing:(\s+[^,]+,){1} -> Continue
-  ^\s+VLAN\s+Passing:(\s+[^,]+,){0},\s+${VLAN_PASSING},* -> Continue
-  ^\s+VLAN\s+Passing:(\s+[^,]+,){1},\s+${VLAN_PASSING},* -> Continue
-  ^\s+VLAN\s+Passing:(\s+[^,]+,){2},\s+${VLAN_PASSING},* -> Continue
-  ^\s+VLAN\s+Passing:(\s+[^,]+,){3},\s+${VLAN_PASSING},* -> Continue
-  ^\s+VLAN\s+Passing:(\s+[^,]+,){4},\s+${VLAN_PASSING},* -> Continue
-  ^\s+VLAN\s+Passing:(\s+[^,]+,){5},\s+${VLAN_PASSING},* -> Continue
-  ^\s+VLAN\s+Passing:(\s+[^,]+,){6},\s+${VLAN_PASSING},* -> Continue
-  ^\s+VLAN\s+Passing:(\s+[^,]+,){7},\s+${VLAN_PASSING},* -> Continue
-  ^\s+VLAN\s+Passing:(\s+[^,]+,){8},\s+${VLAN_PASSING},* -> Continue
-  ^\s+VLAN\s+Passing:(\s+[^,]+,){9},\s+${VLAN_PASSING},* -> Continue
-  ^\s+VLAN\s+Passing:(\s+[^,]+,){10},\s+${VLAN_PASSING},* -> Continue
-  ^\s+VLAN\s+Passing:(\s+[^,]+,){11},\s+${VLAN_PASSING},* -> Continue
-  ^\s+VLAN\s+Passing:(\s+[^,]+,){12},\s+${VLAN_PASSING},* -> Continue
-  ^\s+VLAN\s+Passing:(\s+[^,]+,){13},\s+${VLAN_PASSING},* -> Continue
-  ^\s+VLAN\s+Passing:(\s+[^,]+,){14},\s+${VLAN_PASSING},* -> Continue
-  ^\s+VLAN\s+Passing:(\s+[^,]+,){15},\s+${VLAN_PASSING},* -> Continue
-  ^\s+VLAN\s+Passing:(\s+[^,]+,){16},\s+${VLAN_PASSING},* -> Continue
-  ^\s+VLAN\s+Passing:(\s+[^,]+,){17},\s+${VLAN_PASSING},* -> Continue
-  ^\s+VLAN\s+Passing:(\s+[^,]+,){18},\s+${VLAN_PASSING},* -> Continue
-  ^\s+VLAN\s+Passing:(\s+[^,]+,){19},\s+${VLAN_PASSING},* -> Continue
-  ^\s+VLAN\s+Passing:(\s+[^,]+,){20},\s+${VLAN_PASSING},*
-  # Trunk - Permitted VLANs
+  # Skip initial VLANs and read the Nth + 1
+  ^\s+VLAN\s+Passing:(?:\s+[^,]+,){1}\s+${VLAN_PASSING},* -> Continue
+  ^\s+VLAN\s+Passing:(?:\s+[^,]+,){2}\s+${VLAN_PASSING},* -> Continue
+  ^\s+VLAN\s+Passing:(?:\s+[^,]+,){3}\s+${VLAN_PASSING},* -> Continue
+  ^\s+VLAN\s+Passing:(?:\s+[^,]+,){4}\s+${VLAN_PASSING},* -> Continue
+  ^\s+VLAN\s+Passing:(?:\s+[^,]+,){5}\s+${VLAN_PASSING},* -> Continue
+  ^\s+VLAN\s+Passing:(?:\s+[^,]+,){6}\s+${VLAN_PASSING},* -> Continue
+  ^\s+VLAN\s+Passing:(?:\s+[^,]+,){7}\s+${VLAN_PASSING},* -> Continue
+  ^\s+VLAN\s+Passing:(?:\s+[^,]+,){8}\s+${VLAN_PASSING},* -> Continue
+  ^\s+VLAN\s+Passing:(?:\s+[^,]+,){9}\s+${VLAN_PASSING},* -> Continue
+  ^\s+VLAN\s+Passing:(?:\s+[^,]+,){10}\s+${VLAN_PASSING},* -> Continue
+  ^\s+VLAN\s+Passing:(?:\s+[^,]+,){11}\s+${VLAN_PASSING},* -> Continue
+  ^\s+VLAN\s+Passing:(?:\s+[^,]+,){12}\s+${VLAN_PASSING},* -> Continue
+  ^\s+VLAN\s+Passing:(?:\s+[^,]+,){13}\s+${VLAN_PASSING},* -> Continue
+  ^\s+VLAN\s+Passing:(?:\s+[^,]+,){14}\s+${VLAN_PASSING},* -> Continue
+  ^\s+VLAN\s+Passing:(?:\s+[^,]+,){15}\s+${VLAN_PASSING},* -> Continue
+  ^\s+VLAN\s+Passing:(?:\s+[^,]+,){16}\s+${VLAN_PASSING},* -> Continue
+  ^\s+VLAN\s+Passing:(?:\s+[^,]+,){17}\s+${VLAN_PASSING},* -> Continue
+  ^\s+VLAN\s+Passing:(?:\s+[^,]+,){18}\s+${VLAN_PASSING},* -> Continue
+  ^\s+VLAN\s+Passing:(?:\s+[^,]+,){19}\s+${VLAN_PASSING},* -> Continue
+  ^\s+VLAN\s+Passing:(?:\s+[^,]+,){20}\s+${VLAN_PASSING},* -> Continue
+  # Clearing the line
+  ^\s+VLAN\s+Passing:
+  # Trunk - Permitted VLANs (parsing multiple times with Continue)
   ^\s+VLAN\s+permitted:\s+${VLAN_PERMITTED},* -> Continue
-  # Skip initial VLANs and read the Nth
-  ^\s+VLAN\s+permitted:(\s+[^,]+,){1},\s+${VLAN_PERMITTED},* -> Continue
-  ^\s+VLAN\s+permitted:(\s+[^,]+,){2},\s+${VLAN_PERMITTED},* -> Continue
-  ^\s+VLAN\s+permitted:(\s+[^,]+,){3},\s+${VLAN_PERMITTED},* -> Continue
-  ^\s+VLAN\s+permitted:(\s+[^,]+,){4},\s+${VLAN_PERMITTED},* -> Continue
-  ^\s+VLAN\s+permitted:(\s+[^,]+,){5},\s+${VLAN_PERMITTED},* -> Continue
-  ^\s+VLAN\s+permitted:(\s+[^,]+,){6},\s+${VLAN_PERMITTED},* -> Continue
-  ^\s+VLAN\s+permitted:(\s+[^,]+,){7},\s+${VLAN_PERMITTED},* -> Continue
-  ^\s+VLAN\s+permitted:(\s+[^,]+,){8},\s+${VLAN_PERMITTED},* -> Continue
-  ^\s+VLAN\s+permitted:(\s+[^,]+,){9},\s+${VLAN_PERMITTED},* -> Continue
-  ^\s+VLAN\s+permitted:(\s+[^,]+,){10},\s+${VLAN_PERMITTED},* -> Continue
-  ^\s+VLAN\s+permitted:(\s+[^,]+,){11},\s+${VLAN_PERMITTED},* -> Continue
-  ^\s+VLAN\s+permitted:(\s+[^,]+,){12},\s+${VLAN_PERMITTED},* -> Continue
-  ^\s+VLAN\s+permitted:(\s+[^,]+,){13},\s+${VLAN_PERMITTED},* -> Continue
-  ^\s+VLAN\s+permitted:(\s+[^,]+,){14},\s+${VLAN_PERMITTED},* -> Continue
-  ^\s+VLAN\s+permitted:(\s+[^,]+,){15},\s+${VLAN_PERMITTED},* -> Continue
-  ^\s+VLAN\s+permitted:(\s+[^,]+,){16},\s+${VLAN_PERMITTED},* -> Continue
-  ^\s+VLAN\s+permitted:(\s+[^,]+,){17},\s+${VLAN_PERMITTED},* -> Continue
-  ^\s+VLAN\s+permitted:(\s+[^,]+,){18},\s+${VLAN_PERMITTED},* -> Continue
-  ^\s+VLAN\s+permitted:(\s+[^,]+,){19},\s+${VLAN_PERMITTED},* -> Continue
-  ^\s+VLAN\s+permitted:(\s+[^,]+,){20},\s+${VLAN_PERMITTED},*
+  # Skip initial VLANs and read the Nth + 1
+  ^\s+VLAN\s+permitted:(?:\s+[^,]+,){1}\s+${VLAN_PERMITTED},* -> Continue
+  ^\s+VLAN\s+permitted:(?:\s+[^,]+,){2}\s+${VLAN_PERMITTED},* -> Continue
+  ^\s+VLAN\s+permitted:(?:\s+[^,]+,){3}\s+${VLAN_PERMITTED},* -> Continue
+  ^\s+VLAN\s+permitted:(?:\s+[^,]+,){4}\s+${VLAN_PERMITTED},* -> Continue
+  ^\s+VLAN\s+permitted:(?:\s+[^,]+,){5}\s+${VLAN_PERMITTED},* -> Continue
+  ^\s+VLAN\s+permitted:(?:\s+[^,]+,){6}\s+${VLAN_PERMITTED},* -> Continue
+  ^\s+VLAN\s+permitted:(?:\s+[^,]+,){7}\s+${VLAN_PERMITTED},* -> Continue
+  ^\s+VLAN\s+permitted:(?:\s+[^,]+,){8}\s+${VLAN_PERMITTED},* -> Continue
+  ^\s+VLAN\s+permitted:(?:\s+[^,]+,){9}\s+${VLAN_PERMITTED},* -> Continue
+  ^\s+VLAN\s+permitted:(?:\s+[^,]+,){10}\s+${VLAN_PERMITTED},* -> Continue
+  ^\s+VLAN\s+permitted:(?:\s+[^,]+,){11}\s+${VLAN_PERMITTED},* -> Continue
+  ^\s+VLAN\s+permitted:(?:\s+[^,]+,){12}\s+${VLAN_PERMITTED},* -> Continue
+  ^\s+VLAN\s+permitted:(?:\s+[^,]+,){13}\s+${VLAN_PERMITTED},* -> Continue
+  ^\s+VLAN\s+permitted:(?:\s+[^,]+,){14}\s+${VLAN_PERMITTED},* -> Continue
+  ^\s+VLAN\s+permitted:(?:\s+[^,]+,){15}\s+${VLAN_PERMITTED},* -> Continue
+  ^\s+VLAN\s+permitted:(?:\s+[^,]+,){16}\s+${VLAN_PERMITTED},* -> Continue
+  ^\s+VLAN\s+permitted:(?:\s+[^,]+,){17}\s+${VLAN_PERMITTED},* -> Continue
+  ^\s+VLAN\s+permitted:(?:\s+[^,]+,){18}\s+${VLAN_PERMITTED},* -> Continue
+  ^\s+VLAN\s+permitted:(?:\s+[^,]+,){19}\s+${VLAN_PERMITTED},* -> Continue
+  ^\s+VLAN\s+permitted:(?:\s+[^,]+,){20}\s+${VLAN_PERMITTED},* -> Continue
+  ^\s+VLAN\s+permitted:
   # Dropping other items (e.g. Last Input...)
   #^\S+\s+.*
   # Testing
