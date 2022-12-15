@@ -44,6 +44,7 @@ OS_CHOICES = [
     "juniper_screenos",
     "linux",
     "mikrotik_routeros",
+    "oneaccess_oneos",
     "ovs_linux",
     "paloalto_panos",
     "quanta_mesh",
@@ -62,7 +63,14 @@ RE_TEMPLATE_OS = re.compile(rf"^({CHOICES_STRING})")
 
 
 def check_order(  # pylint: disable=too-many-arguments,too-many-arguments,too-many-return-statements
-    current_os, prior_os, cmd_len, prior_len, os_choices, used_os, cmd, prior_cmd
+    current_os,
+    prior_os,
+    cmd_len,
+    prior_len,
+    os_choices,
+    used_os,
+    cmd,
+    prior_cmd,
 ):
     """Enforcing the complex logic to ensure that the index file is ordered correctly."""
     add_os_check = []
@@ -85,7 +93,11 @@ def check_order(  # pylint: disable=too-many-arguments,too-many-arguments,too-ma
     if not prior_os and prior_len == 0:
         # Starting Point
         return True, ""
-    if current_os == prior_os and cmd_len == prior_len and cmd == min(prior_cmd, cmd):
+    if (
+        current_os == prior_os
+        and cmd_len == prior_len
+        and cmd == min(prior_cmd, cmd)
+    ):
         msg = f"OS is the same and command same length, please set {cmd} before {prior_cmd} to be in alphabetical order"
         return False, msg
     if current_os == prior_os and cmd_len <= prior_len:
@@ -118,7 +130,14 @@ def test_index_ordering():
         cmd = "_".join(template.split("_")[2:])
         cmd_len = len(cmd)
         check_val, check_msg = check_order(
-            current_os, prior_os, cmd_len, prior_len, OS_CHOICES, used_os, cmd, prior_cmd
+            current_os,
+            prior_os,
+            cmd_len,
+            prior_len,
+            OS_CHOICES,
+            used_os,
+            cmd,
+            prior_cmd,
         )
         if not check_val:
             # assertFalse(check_val, msg=check_msg)

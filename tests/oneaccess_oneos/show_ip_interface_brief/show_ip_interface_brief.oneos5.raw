@@ -1,0 +1,21 @@
+Interface              IP-Address      OK? Status                Protocol Description         
+GigabitEthernet 0/0       <unassigned>    YES up                    up      *** PBXPLUG 212 - BACKUP TEST - 94.105.1.119 ***
+GigabitEthernet 0/1       <unassigned>    YES up                    up      *** PBXPLUG 401 - BACKUP TEST - 94.105.34.2 ***
+GigabitEthernet 0/2       <unassigned>    YES up                    down    *IPERF*
+GigabitEthernet 0/3       <unassigned>    YES up                    down    
+FastEthernet 1/0          <unassigned>    YES up                    up      *** WAN INTERFACE ***
+FastEthernet 1/0.1        192.168.1.2     YES up                    up      *** management A-modem (modem ip = 192.168.1.1) ***
+FastEthernet 1/0.10       <unassigned>    YES up                    up      *** VT096910 - GS20170330107 - IP-VPN - VDSL2 SHARED VLAN - NOS-EMLP-01/ANT-EMLP-01 - Loopback503941 ***
+Dialer 1                  94.105.163.30   YES up                    up      *** VT096910 - GS20170330107 - IP-VPN - VDSL2 SHARED VLAN - NOS-EMLP-01/ANT-EMLP-01 - Loopback503941
+Dialer 2                  <unassigned>    NO  administratively down down    *** VT108085 - GS20190640686 - CI - VDSL2 SHARED VLAN - NOS-EMLP-01/ANT-EMLP-01 - LOOPBACK 503899 ***
+Dialer 3                  94.104.254.138  YES up                    up      *** DATA VDSL shared VLAN - GSID0004_MAIN - CI TEST - NOS-EMLP-01/ANT-EMLP-01 - LOOPBACK 500000***
+Loopback 0                127.0.0.1       YES up                    up      
+Loopback 1                94.105.12.148   YES up                    up      *** VT096910 - GS20170330107 ***
+Loopback 777              94.107.245.249  YES up                    up      
+Bvi 10                    192.168.10.1    YES up                    up      *** VT108085 - GS20190640686 - CI ACCESS ***
+Bvi 100                   192.168.100.1   YES up                    up      *** TEST MAARTEN - BACKUP SCRIPT PBXPLUG ***
+Bvi 200                   94.105.16.129   YES up                    down    *IPERF*
+dot11radio 0/0.1          <unassigned>    YES up                    up      
+dot11radio 0/0.2          <unassigned>    YES up                    up      
+Null 0                    <unassigned>    YES up                    up      
+dot11radio 0/0            <unassigned>    YES up                    up      

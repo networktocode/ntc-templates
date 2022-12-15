@@ -1,0 +1,20 @@
+---
+parsed_sample:
+  - pool: ""
+    vrf: ""
+    default_router: ""
+    domain_name: ""
+    dns: []
+    network: ""
+    lease: ""
+    excluded: "192.168.202.1"
+  - pool: "POOL"
+    vrf: ""
+    default_router: "192.168.202.1"
+    domain_name: ""
+    dns:
+      - "212.224.255.252"
+      - "212.224.255.254"
+    network: "192.168.202.0 255.255.255.0"
+    lease: "0 8 0"
+    excluded: ""
