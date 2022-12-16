@@ -1,0 +1,32 @@
+interface Bvi 20, inbound IP access list GUEST_WIFI_IN
+
+IP access list extended GRE-Tunnel21
+permit gre host 10.94.55.207 host 94.105.25.2 log (0 matches)
+
+IP access list extended GRE-Tunnel11
+permit gre host 10.94.55.207 host 94.105.25.9 log (0 matches)
+
+IP access list extended GUEST_WIFI_IN
+deny any 10.0.0.0 0.255.255.255 (0 matches)
+deny any 172.16.0.0 0.15.255.255 (0 matches)
+deny any 192.168.0.0 0.0.255.255 (0 matches)
+permit any any (5164438 matches)
+
+IP access list standard 52
+permit 91.208.220.0 0.0.0.255 any (4519825 matches)
+
+IP access list extended MANAGEMENT_IN
+permit tcp 91.208.220.0 0.0.0.255 any eq ssh (2896 matches)
+permit tcp 91.208.220.0 0.0.0.255 any eq telnet (0 matches)
+permit tcp 94.104.18.0 0.0.1.255 any eq ssh (0 matches)
+permit tcp 94.104.18.0 0.0.1.255 any eq telnet (0 matches)
+permit tcp 192.4.21.0 0.0.0.255 any eq ssh (0 matches)
+permit tcp 192.4.21.0 0.0.0.255 any eq telnet (0 matches)
+permit tcp 192.4.91.0 0.0.0.255 any eq ssh (0 matches)
+permit tcp 192.4.91.0 0.0.0.255 any eq telnet (0 matches)
+permit tcp host 10.0.96.16 10.110.0.0 0.0.255.255 eq telnet (0 matches)
+permit tcp 192.0.2.0 0.0.0.255 any eq ssh (0 matches)
+permit tcp 192.0.2.0 0.0.0.255 any eq telnet (0 matches)
+deny any any (0 matches)
+
+For info on ACLs used by IPSEC, please refer to show crypto acl [detail <name>] command. 
