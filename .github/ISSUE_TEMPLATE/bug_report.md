@@ -6,6 +6,7 @@ about: Report a reproducible bug in the current release of ntc-templates
 NOTE: The following are not considered and will be immediately closed:
 * Request for new templates.
 * Request for adding data captured in an existing template.
+* Request for help with building a TextFSM template, please use the #networktocode channel, on [Slack](http://slack.networktocode.com/)
 * Request for Template issues without both the included error and raw data.
 * Feature Requests in the form of a Bug.
 * ISSUES raised without following instructions.
