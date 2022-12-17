@@ -66,7 +66,9 @@ def all_entries_have_the_same_keys_test(processed, reference):
     """
     for count, value in enumerate(processed):
         proc = set(value.keys())
+        print(len(proc))
         ref = set(reference[count].keys())
+        print(len(ref))
         diff = proc.symmetric_difference(ref)
         assert not diff, "Key diffs: " + ", ".join(diff)
 
