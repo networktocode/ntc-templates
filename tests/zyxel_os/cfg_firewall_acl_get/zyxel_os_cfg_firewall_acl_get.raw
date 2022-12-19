@@ -1,0 +1,11 @@
+Index  Order  Name          Source IP                                 Destination IP                            Service                                  Action
+1      6      Acces Bureau  85.14.167.234/32                          Any/32                                    ALL                                      Accept
+2      5      Eqinoxe_1     185.48.253.0/27                           Any/32                                    ALL                                      Accept
+3      4      Eqinoxe_2     185.48.254.0/28                           Any/32                                    ALL                                      Accept
+4      3      Eqinoxe_3     185.163.212.48/28                         Any/32                                    ALL                                      Accept
+5      2      Eqinoxe_4     185.163.212.64/28                         Any/32                                    ALL                                      Accept
+6      1      Eqinoxe_5     185.197.109.16/28                         Any/32                                    ALL                                      Accept
+7      7      DMZ0          Any/32                                    23.90.196.120/30                          ALL                                      Accept
+8      8      firewall-rabbitmq0 192.168.1.13/32                           185.24.67.123/32                          TCP/UDP:Any-->80                         Drop
+9      9      block-phone0  192.168.1.1/32                            192.168.1.0/24                            TCP/UDP:Any-->Any                        Drop
+Command Successful.

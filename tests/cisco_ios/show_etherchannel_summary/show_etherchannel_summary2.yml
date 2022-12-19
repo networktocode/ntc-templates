@@ -1,0 +1,12 @@
+---
+parsed_sample:
+  - group: "10"
+    po_name: "Po10"
+    po_status: "RU"
+    protocol: "LACP"
+    interfaces:
+      - "Te0/0/2"
+      - "Te0/0/3"
+    interfaces_status:
+      - "bndl"
+      - "bndl"

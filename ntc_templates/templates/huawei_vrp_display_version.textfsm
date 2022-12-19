@@ -1,9 +1,11 @@
 Value VRP_VERSION (\S+)
 Value PRODUCT_VERSION (.+)
-Value MODEL (.+)
+Value MODEL (((?!\sRouter).)+)
 Value UPTIME (.+)
+Value PATCH_VERSION (\S+)
 
 
 Start
   ^.*software,\s+Version\s+${VRP_VERSION}\s+\(${PRODUCT_VERSION}\)
-  ^HUAWEI\s+${MODEL}\s+uptime\s+is\s+${UPTIME}$$
+  ^H(UAWEI|uawei)\s+${MODEL}\s+(Router\s+)?uptime\s+is\s+${UPTIME}$$
+  ^Patch\s+[Vv]ersion\s*:\s+${PATCH_VERSION}

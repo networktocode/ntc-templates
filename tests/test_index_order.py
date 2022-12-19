@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+"""Tests to check the order of the index file."""
 import re
 
 from tests import load_index_data
@@ -21,6 +21,7 @@ OS_CHOICES = [
     "brocade_vyos",
     "checkpoint_gaia",
     "ciena_saos",
+    "cisco_apic",
     "cisco_asa",
     "cisco_ftd",
     "cisco_ios",
@@ -38,28 +39,33 @@ OS_CHOICES = [
     "hp_comware",
     "hp_procurve",
     "huawei_vrp",
+    "ipinfusion_ocnos",
     "juniper",
     "juniper_junos",
     "juniper_screenos",
     "linux",
+    "mikrotik_routeros",
     "ovs_linux",
     "paloalto_panos",
     "quanta_mesh",
     "ruckus_fastiron",
+    "ubiquiti_edgerouter",
     "ubiquiti_edgeswitch",
     "vmware_nsxv",
     "vyatta_vyos",
     "vyos",
     "watchguard_firebox",
     "yamaha",
+    "zyxel_os",
 ]
 CHOICES_STRING = "|".join(OS_CHOICES)
 RE_TEMPLATE_OS = re.compile(rf"^({CHOICES_STRING})")
 
 
-def check_order(
+def check_order(  # pylint: disable=too-many-arguments,too-many-arguments,too-many-return-statements
     current_os, prior_os, cmd_len, prior_len, os_choices, used_os, cmd, prior_cmd
 ):
+    """Enforcing the complex logic to ensure that the index file is ordered correctly."""
     add_os_check = []
 
     if current_os not in used_os and used_os is not None:
@@ -67,44 +73,36 @@ def check_order(
         add_os_check.append(current_os)
 
     if used_os != sorted(used_os):
-        msg = "OS's are not in alpabetical order, current order: '{0}'".format(used_os)
+        msg = f"OS's are not in alpabetical order, current order: '{used_os}'"
         return False, msg
-    elif add_os_check != sorted(add_os_check):
-        msg = "OS's are not in alpabetical order, current order: '{0}'".format(
-            add_os_check
-        )
+    if add_os_check != sorted(add_os_check):
+        msg = f"OS's are not in alpabetical order, current order: '{add_os_check}'"
         return False, msg
 
     if current_os not in os_choices:
-        msg = "'{0}' is not one of the valid options '{1}'".format(current_os, used_os)
+        msg = f"'{current_os}' is not one of the valid options '{used_os}'"
         return False, msg
 
     if not prior_os and prior_len == 0:
         # Starting Point
         return True, ""
-    elif current_os == prior_os and cmd_len == prior_len and cmd == min(prior_cmd, cmd):
-        msg = (
-            "OS is the same and command same length, "
-            "please set {0} before {1} to be in alphabetical order".format(cmd, prior_cmd)
-        )
+    if current_os == prior_os and cmd_len == prior_len and cmd == min(prior_cmd, cmd):
+        msg = f"OS is the same and command same length, please set {cmd} before {prior_cmd} to be in alphabetical order"
         return False, msg
-    elif current_os == prior_os and cmd_len <= prior_len:
+    if current_os == prior_os and cmd_len <= prior_len:
         # OS is the same as previous, and cmd_len is smaller or equal to prior so good
         return True, ""
-    elif current_os != prior_os and current_os not in used_os:
+    if current_os != prior_os and current_os not in used_os:
         # prior OS has changed, do not need to check for length yet
         return True, ""
-    elif current_os == prior_os and cmd_len > prior_len:
-        msg = "Current Command len '{0}' larger then previous '{1}', for command '{2}'".format(
-            cmd_len, prior_len, cmd
-        )
+    if current_os == prior_os and cmd_len > prior_len:
+        msg = f"Current Command len '{cmd_len}' larger then previous '{prior_len}', for command '{cmd}'"
         return False, msg
-    elif current_os != prior_os and current_os in used_os:
-        msg = "'{0}' OS was already used in list on command '{1}'".format(current_os, cmd)
+    if current_os != prior_os and current_os in used_os:
+        msg = f"'{current_os}' OS was already used in list on command '{cmd}'"
         return False, msg
-    else:
-        msg = "Failed for unknown reason"
-        return False, msg
+    msg = "Failed for unknown reason"
+    return False, msg
 
 
 def test_index_ordering():
@@ -117,19 +115,19 @@ def test_index_ordering():
     for row in index:
         template = row[0].strip()
         os_match = RE_TEMPLATE_OS.match(template)
-        os = os_match.group(0)
+        current_os = os_match.group(0)
         cmd = "_".join(template.split("_")[2:])
         cmd_len = len(cmd)
         check_val, check_msg = check_order(
-            os, prior_os, cmd_len, prior_len, OS_CHOICES, used_os, cmd, prior_cmd
+            current_os, prior_os, cmd_len, prior_len, OS_CHOICES, used_os, cmd, prior_cmd
         )
         if not check_val:
             # assertFalse(check_val, msg=check_msg)
-            print("Error on line: {0}".format(row))
-            print("Error Message: {0}".format(check_msg))
+            print(f"Error on line: {row}")
+            print(f"Error Message: {check_msg}")
         assert check_val
-        if os not in used_os:
-            used_os.append(os)
+        if current_os not in used_os:
+            used_os.append(current_os)
         prior_len = cmd_len
         prior_cmd = cmd
-        prior_os = os
+        prior_os = current_os

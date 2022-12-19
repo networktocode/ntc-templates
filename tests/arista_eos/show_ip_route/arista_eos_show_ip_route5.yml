@@ -1,0 +1,80 @@
+---
+parsed_sample:
+  - vrf: "default"
+    protocol: "C"
+    network: "162.220.49.0"
+    mask: "26"
+    distance: ""
+    metric: ""
+    direct: "directly"
+    next_hop:
+      - "connected"
+    interface:
+      - "Vlan105"
+  - vrf: "default"
+    protocol: "C"
+    network: "162.220.49.64"
+    mask: "26"
+    distance: ""
+    metric: ""
+    direct: "directly"
+    next_hop:
+      - "connected"
+    interface:
+      - "Vlan104"
+  - vrf: "default"
+    protocol: "C"
+    network: "162.220.49.128"
+    mask: "31"
+    distance: ""
+    metric: ""
+    direct: "directly"
+    next_hop:
+      - "connected"
+    interface:
+      - "Tunnel11, Static Interface GRE tunnel index 11, dst 184.170.244.12, src 216.201.90.212"
+  - vrf: "default"
+    protocol: "B I"
+    network: "162.220.49.130"
+    mask: "31"
+    distance: "200"
+    metric: "0"
+    direct: ""
+    next_hop:
+      - "199.229.255.1"
+    interface:
+      - "Vlan50"
+  - vrf: "default"
+    protocol: "B I"
+    network: "162.220.49.132"
+    mask: "31"
+    distance: "200"
+    metric: "0"
+    direct: ""
+    next_hop:
+      - "199.229.255.1"
+    interface:
+      - "Vlan50"
+  - vrf: "default"
+    protocol: "C"
+    network: "162.220.49.134"
+    mask: "31"
+    distance: ""
+    metric: ""
+    direct: "directly"
+    next_hop:
+      - "connected"
+    interface:
+      - "Tunnel12, Static Interface GRE tunnel index 12, dst 104.200.133.181, src\
+        \ 216.201.90.212"
+  - vrf: "default"
+    protocol: "S"
+    network: "162.220.49.0"
+    mask: "24"
+    distance: ""
+    metric: ""
+    direct: "directly"
+    next_hop:
+      - "connected"
+    interface:
+      - "Null0"

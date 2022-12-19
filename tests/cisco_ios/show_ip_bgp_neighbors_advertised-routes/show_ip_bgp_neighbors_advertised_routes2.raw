@@ -1,0 +1,15 @@
+BGP table version is 175123, local router ID is 1.2.3.4
+Status codes: s suppressed, d damped, h history, * valid, > best, i - internal, 
+              r RIB-failure, S Stale, m multipath, b backup-path, f RT-Filter, 
+              x best-external, a additional-path, c RIB-compressed, 
+Origin codes: i - IGP, e - EGP, ? - incomplete
+RPKI validation codes: V valid, I invalid, N Not found
+
+     Network          Next Hop            Metric LocPrf Weight Path
+ *>  11.222.33.123/29 111.222.123.202    1762560    350      0 65000 ?
+ *>  11.222.33.123/29 111.222.123.202 4000000000    350      0 65000 ?
+ *>  11.222.12.0/23   11.222.1.202          3072    350      0 65000 ?
+ *>  123.233.111.222/24
+                       11.222.1.202         28416    350      0 65000 ?
+
+Total number of prefixes 4

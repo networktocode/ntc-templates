@@ -1,0 +1,14 @@
+Value Filldown INSTANCE_TYPE (Interface|Traffic profile)
+Value Required INSTANCE (\S+)
+Value Required DIRECTION (inbound|outbound)
+Value IP_VERSION ((ip|IP)v(4|6))
+Value ACL_NB (\d+)
+Value ACL_NAME (\S+)
+
+Start
+  ^-+ -> Next
+  ^\s*${INSTANCE_TYPE}\s+Direction\s+AppliedRecord\s*$$
+  ^\s*${INSTANCE}\s+${DIRECTION}\s+(${IP_VERSION}\s+)?(ACL|acl)\s+name\s+${ACL_NAME} -> Record
+  ^\s*${INSTANCE}\s+${DIRECTION}\s+(${IP_VERSION}\s+)?(ACL|acl)\s+${ACL_NB} -> Record
+  ^\s*Total:\d+\s*$$ -> Next
+  ^.*$$ -> Error

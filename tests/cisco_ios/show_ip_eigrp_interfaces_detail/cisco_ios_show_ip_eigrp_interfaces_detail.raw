@@ -1,0 +1,30 @@
+EIGRP-IPv4 Interfaces for AS(12345)
+                              Xmit Queue   PeerQ        Mean   Pacing Time   Multicast    Pending
+Interface              Peers  Un/Reliable  Un/Reliable  SRTT   Un/Reliable   Flow Timer   Routes
+Tu10                   1        0/0       0/0          97       1/45         433           0
+  Hello-interval is 5, Hold-time is 15
+  Split-horizon is enabled
+  Next xmit serial <none>
+  Packetized sent/expedited: 13389/102
+  Hello's sent/expedited: 23525118/224
+  Un/reliable mcasts: 0/0  Un/reliable ucasts: 14237/1554
+  Mcast exceptions: 0  CR packets: 0  ACKs suppressed: 298
+  Retransmissions sent: 662  Out-of-sequence rcvd: 738
+  Topology-ids on interface - 0 
+  Authentication mode is not set
+  Topologies advertised on this interface:  base
+  Topologies not advertised on this interface:
+
+Tu20                   1        0/0       0/0          88       1/45         397           0
+  Hello-interval is 5, Hold-time is 15
+  Split-horizon is enabled
+  Next xmit serial <none>
+  Packetized sent/expedited: 13095/136
+  Hello's sent/expedited: 23525540/259
+  Un/reliable mcasts: 0/0  Un/reliable ucasts: 17661/1561
+  Mcast exceptions: 0  CR packets: 0  ACKs suppressed: 713
+  Retransmissions sent: 701  Out-of-sequence rcvd: 2865
+  Topology-ids on interface - 0 
+  Authentication mode is not set
+  Topologies advertised on this interface:  base
+  Topologies not advertised on this interface:

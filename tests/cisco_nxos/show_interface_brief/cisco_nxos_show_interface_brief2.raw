@@ -1,0 +1,72 @@
+--------------------------------------------------------------------------------
+Ethernet      VLAN   Type Mode   Status  Reason                   Speed     Port
+Interface                                                                   Ch #
+--------------------------------------------------------------------------------
+Eth1/1        401     eth  access down    Link not connected         auto(D) --
+Eth1/2        401     eth  access up      none                       1000(D) --
+Eth1/3        401     eth  access up      none                       1000(D) --
+Eth1/4        401     eth  access down    Link not connected         auto(D) --
+Eth1/5        401     eth  access down    Link not connected         auto(D) --
+Eth1/6        401     eth  access up      none                       1000(D) --
+Eth1/7        401     eth  access down    Link not connected         auto(D) --
+Eth1/8        401     eth  access up      none                       1000(D) --
+Eth1/9        401     eth  access up      none                       1000(D) --
+Eth1/10       401     eth  access down    Link not connected         auto(D) --
+Eth1/11       401     eth  access up      none                       1000(D) --
+Eth1/12       401     eth  access up      none                       1000(D) --
+Eth1/13       401     eth  access down    Link not connected         auto(D) --
+Eth1/14       401     eth  access down    Link not connected         auto(D) --
+Eth1/15       401     eth  access up      none                       1000(D) --
+Eth1/16       401     eth  access down    Link not connected         auto(D) --
+Eth1/17       401     eth  access down    Link not connected         auto(D) --
+Eth1/18       401     eth  access up      none                       1000(D) --
+Eth1/19       401     eth  access up      none                       1000(D) --
+Eth1/20       401     eth  access down    Link not connected         auto(D) --
+Eth1/21       401     eth  access down    Link not connected         auto(D) --
+Eth1/22       401     eth  access down    Link not connected         auto(D) --
+Eth1/23       401     eth  access down    Link not connected         auto(D) --
+Eth1/24       401     eth  access down    Link not connected         auto(D) --
+Eth1/25       401     eth  access up      none                       1000(D) --
+Eth1/26       401     eth  access down    Link not connected         auto(D) --
+Eth1/27       401     eth  access down    Link not connected         auto(D) --
+Eth1/28       401     eth  access down    Link not connected         auto(D) --
+Eth1/29       401     eth  access down    Link not connected         auto(D) --
+Eth1/30       401     eth  access down    Link not connected         auto(D) --
+Eth1/31       401     eth  access down    Link not connected         auto(D) --
+Eth1/32       401     eth  access down    Link not connected         auto(D) --
+Eth1/33       401     eth  access down    Link not connected         auto(D) --
+Eth1/34       401     eth  access down    Link not connected         auto(D) --
+Eth1/35       401     eth  access up      none                       1000(D) --
+Eth1/36       401     eth  access down    Link not connected         auto(D) --
+Eth1/37       401     eth  access down    Link not connected         auto(D) --
+Eth1/38       401     eth  access down    Administratively down      auto(D) --
+Eth1/39       401     eth  access up      none                       1000(D) --
+Eth1/40       401     eth  access up      none                        100(D) --
+Eth1/41       401     eth  access down    Link not connected         auto(D) --
+Eth1/42       401     eth  access down    Link not connected         auto(D) --
+Eth1/43       401     eth  access up      none                       1000(D) --
+Eth1/44       401     eth  access up      none                       1000(D) --
+Eth1/45       401     eth  access up      none                       1000(D) --
+Eth1/46       401     eth  access up      none                       1000(D) --
+Eth1/47       --      eth  routed up      none                       1000(D) --
+Eth1/48       --      eth  routed up      none                       1000(D) --
+Eth1/49       1       eth  access down    SFP not inserted            10G(D) --
+Eth1/50       1       eth  access down    SFP not inserted            10G(D) --
+Eth1/51       1       eth  access down    SFP not inserted            10G(D) --
+Eth1/52       --      eth  routed down    SFP not inserted            10G(D) --
+
+--------------------------------------------------------------------------------
+Port-channel VLAN    Type Mode   Status  Reason                    Speed   Protocol
+Interface                                                                  
+--------------------------------------------------------------------------------
+Po100        --      eth  routed down    No operational members      auto(I)  lacp
+
+--------------------------------------------------------------------------------
+Port   VRF          Status IP Address                              Speed    MTU
+--------------------------------------------------------------------------------
+mgmt0  --           down   1.2.3.4                           --       1500
+
+-------------------------------------------------------------------------------
+Interface Secondary VLAN(Type)                    Status Reason                 
+-------------------------------------------------------------------------------
+Vlan1     --                                      down   Admin

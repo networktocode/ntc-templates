@@ -1,0 +1,16 @@
+
+Wed Jul 27 17:18:37.203 CST
+
+PIM neighbors in VRF default
+Flag: B - Bidir capable, P - Proxy capable, DR - Designated Router,
+      E - ECMP Redirect capable
+      * indicates the neighbor created for this router
+
+Neighbor Address             Interface              Uptime    Expires  DR pri   Flags
+
+192.0.2.1*                   Bundle-Ether10.10      1d09h     00:01:29 1      B E
+192.0.2.2                    Bundle-Ether10.20      02:26:23  00:01:26 1 (DR)
+192.0.2.3                    BVI10                  2y51w     00:01:27 2 (DR) B
+192.0.2.4                    BVI10                  2y51w     00:01:24 0
+192.0.2.5                    BVI10                  45w1d     00:01:19 1      P
+192.0.2.6*                   BVI10                  2y51w     00:01:25 1      B

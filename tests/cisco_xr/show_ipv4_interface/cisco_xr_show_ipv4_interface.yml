@@ -1,0 +1,16 @@
+---
+parsed_sample:
+  - interface: "GigabitEthernet0/0/0/0"
+    ip_address: "10.2.0.2/30"
+    link_status: "Up"
+    mtu: "1514"
+    protocol: "ipv4"
+    protocol_status: "Up"
+    vrf: "default"
+  - interface: "GigabitEthernet0/0/0/1"
+    ip_address: "10.0.7.1/30"
+    link_status: "Up"
+    mtu: "1514"
+    protocol: "ipv4"
+    protocol_status: "Up"
+    vrf: "default"

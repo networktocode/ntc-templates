@@ -1,0 +1,38 @@
+HA Health Status: OK
+Model: FortiGate
+Mode: HA A-P
+Group: 0
+Debug: 0
+Cluster Uptime: 40 days 19:16:5
+Cluster state change time: 2021-10-12 11:24:28
+Primary selected using:
+<2021/10/12 11:24:28> FGXXXXXXXXXXXXXX is selected as the primary because it has the largest value of uptime.
+<2021/09/30 14:23:14> FGXXXXXXXXXXXXXX is selected as the primary because it's the only member in the cluster.
+ses_pickup: enable, ses_pickup_delay=disable
+override: disable
+Configuration Status:
+FGXXXXXXXXXXXXXX(updated 5 seconds ago): in-sync
+FGXXXXXXXXXXXXXX(updated 4 seconds ago): in-sync
+System Usage stats:
+FGXXXXXXXXXXXXXX(updated 5 seconds ago):
+sessions=31, average-cpu-user/nice/system/idle=0%/0%/0%/99%, memory=21%
+FGXXXXXXXXXXXXXX(updated 4 seconds ago):
+sessions=1, average-cpu-user/nice/system/idle=0%/0%/0%/99%, memory=19%
+HBDEV stats:
+FGXXXXXXXXXXXXXX(updated 5 seconds ago):
+ha1: physical/1000auto, up, rx-bytes/packets/dropped/errors=2331903443/16290391/0/0, tx=2864477616/16192604/0/0
+FGXXXXXXXXXXXXXX(updated 4 seconds ago):
+ha1: physical/1000auto, up, rx-bytes/packets/dropped/errors=2903932192/16487841/0/0, tx=2291801577/15994696/0/0
+MONDEV stats:
+FGXXXXXXXXXXXXXX(updated 5 seconds ago):
+LAN: aggregate/00, up, rx-bytes/packets/dropped/errors=515688432/224905809/0/0, tx=973281315/15326089/0/0
+WAN: aggregate/00, up, rx-bytes/packets/dropped/errors=2329268140/249384307/0/0, tx=1740434745/10897044/0/0
+FGXXXXXXXXXXXXXX(updated 4 seconds ago):
+LAN: aggregate/00, up, rx-bytes/packets/dropped/errors=1437258973/405727633/0/0, tx=0/0/0/0
+WAN: aggregate/00, up, rx-bytes/packets/dropped/errors=1119476884/410223012/0/0, tx=0/0/0/0
+Primary : FW, FGXXXXXXXXXXXXXX, HA cluster index = 0
+Secondary : FW, FGXXXXXXXXXXXXXX, HA cluster index = 1
+number of vcluster: 1
+vcluster 1: work 169.254.0.1
+Primary: FGXXXXXXXXXXXXXX, HA operating index = 0
+Secondary: FGXXXXXXXXXXXXXX, HA operating index = 1

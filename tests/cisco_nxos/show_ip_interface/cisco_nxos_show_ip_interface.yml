@@ -10,6 +10,8 @@ parsed_sample:
     primary_broadcast_address: "255.255.255.255"
     secondary_ip_address: []
     secondary_ip_subnet: []
+    secondary_route_preference: []
+    secondary_route_preference_tag: []
     multicast_groups: "224.0.0.100"
     mtu: "1500"
     route_preference: "0"
@@ -25,6 +27,7 @@ parsed_sample:
     urpf: "none"
     load_sharing: "none"
     last_reset: "never"
+    acl_out: ""
     unicast_packets_sent: "5356711"
     unicast_packets_received: "10702083"
     unicast_packets_forwarded: "0"
@@ -80,6 +83,10 @@ parsed_sample:
       - "172.16.69.209"
     secondary_ip_subnet:
       - "172.16.69.192/26"
+    secondary_route_preference:
+      - "None"
+    secondary_route_preference_tag:
+      - "None"
     multicast_groups: "224.0.0.100"
     mtu: "1500"
     route_preference: "0"
@@ -95,6 +102,7 @@ parsed_sample:
     urpf: "none"
     load_sharing: "none"
     last_reset: "never"
+    acl_out: ""
     unicast_packets_sent: "363766868"
     unicast_packets_received: "434448766"
     unicast_packets_forwarded: "1840111"
@@ -148,6 +156,8 @@ parsed_sample:
     primary_broadcast_address: "255.255.255.255"
     secondary_ip_address: []
     secondary_ip_subnet: []
+    secondary_route_preference: []
+    secondary_route_preference_tag: []
     multicast_groups: "224.0.0.13  224.0.0.10  224.0.0.2  224.0.0.1"
     mtu: "1500"
     route_preference: "0"
@@ -163,6 +173,7 @@ parsed_sample:
     urpf: "none"
     load_sharing: "none"
     last_reset: "never"
+    acl_out: ""
     unicast_packets_sent: "0"
     unicast_packets_received: "0"
     unicast_packets_forwarded: "0"
@@ -216,6 +227,8 @@ parsed_sample:
     primary_broadcast_address: "255.255.255.255"
     secondary_ip_address: []
     secondary_ip_subnet: []
+    secondary_route_preference: []
+    secondary_route_preference_tag: []
     multicast_groups: "224.0.0.22  224.0.0.13  224.0.0.10  224.0.0.2  224.0.0.1"
     mtu: "9216"
     route_preference: "0"
@@ -231,6 +244,7 @@ parsed_sample:
     urpf: "none"
     load_sharing: "none"
     last_reset: "never"
+    acl_out: ""
     unicast_packets_sent: "1756"
     unicast_packets_received: "605867934"
     unicast_packets_forwarded: "0"
@@ -284,6 +298,8 @@ parsed_sample:
     primary_broadcast_address: "255.255.255.255"
     secondary_ip_address: []
     secondary_ip_subnet: []
+    secondary_route_preference: []
+    secondary_route_preference_tag: []
     multicast_groups: "224.0.0.13  224.0.0.10  224.0.0.2  224.0.0.1"
     mtu: "9216"
     route_preference: "0"
@@ -299,6 +315,7 @@ parsed_sample:
     urpf: "none"
     load_sharing: "none"
     last_reset: "never"
+    acl_out: ""
     unicast_packets_sent: "401266"
     unicast_packets_received: "4198994"
     unicast_packets_forwarded: "3316"
@@ -352,6 +369,8 @@ parsed_sample:
     primary_broadcast_address: "255.255.255.255"
     secondary_ip_address: []
     secondary_ip_subnet: []
+    secondary_route_preference: []
+    secondary_route_preference_tag: []
     multicast_groups: "224.0.0.20  224.0.0.10  224.0.0.2  224.0.0.1"
     mtu: "9216"
     route_preference: "0"
@@ -367,6 +386,7 @@ parsed_sample:
     urpf: "none"
     load_sharing: "none"
     last_reset: "never"
+    acl_out: ""
     unicast_packets_sent: "113285373"
     unicast_packets_received: "23742404"
     unicast_packets_forwarded: "556"
@@ -420,6 +440,8 @@ parsed_sample:
     primary_broadcast_address: "255.255.255.255"
     secondary_ip_address: []
     secondary_ip_subnet: []
+    secondary_route_preference: []
+    secondary_route_preference_tag: []
     multicast_groups: ""
     mtu: "1500"
     route_preference: "0"
@@ -435,6 +457,7 @@ parsed_sample:
     urpf: "none"
     load_sharing: "none"
     last_reset: "never"
+    acl_out: ""
     unicast_packets_sent: "578811674"
     unicast_packets_received: "517277696"
     unicast_packets_forwarded: "0"
@@ -488,6 +511,8 @@ parsed_sample:
     primary_broadcast_address: "255.255.255.255"
     secondary_ip_address: []
     secondary_ip_subnet: []
+    secondary_route_preference: []
+    secondary_route_preference_tag: []
     multicast_groups: ""
     mtu: "1500"
     route_preference: "0"
@@ -503,6 +528,7 @@ parsed_sample:
     urpf: "none"
     load_sharing: "none"
     last_reset: "never"
+    acl_out: ""
     unicast_packets_sent: "169393306"
     unicast_packets_received: "169195583"
     unicast_packets_forwarded: "0"

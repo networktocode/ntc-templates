@@ -1,0 +1,13 @@
+---
+parsed_sample:
+  - interface: "SM1/1"
+    switchport: "Enabled"
+    switchport_monitor: ""
+    switchport_negotiation: "On"
+    mode: "down"
+    admin_mode: "dynamic auto"
+    access_vlan: "1"
+    native_vlan: "1"
+    voice_vlan: "none"
+    trunking_vlans:
+      - "ALL"

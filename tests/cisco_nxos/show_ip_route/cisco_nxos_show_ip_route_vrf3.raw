@@ -1,0 +1,21 @@
+IP Route Table for VRF "default"
+'*' denotes best ucast next-hop
+'**' denotes best mcast next-hop
+'[x/y]' denotes [preference/metric]
+'%<string>' in via output denotes VRF <string>
+
+10.138.224.32/28, ubest/mbest: 1/0 time
+    *via 222.111.19.38, [1/0], 1w0d, static
+     via 172.16.2.37, Vlan22, [110/21], 3w1d, ospf-UNDERLAY, type-1
+152.98.240.64/27, ubest/mbest: 1/0 time
+    *via 111.222.236.188, [1/0], 8w4d, static
+     via 172.16.2.37, Vlan22, [110/21], 3w1d, ospf-UNDERLAY, type-1
+
+IP Route Table for VRF "management"
+'*' denotes best ucast next-hop
+'**' denotes best mcast next-hop
+'[x/y]' denotes [preference/metric]
+'%<string>' in via output denotes VRF <string>
+
+0.0.0.0/0, ubest/mbest: 1/0 time
+    *via 172.16.170.193, [1/0], 1y16w, static

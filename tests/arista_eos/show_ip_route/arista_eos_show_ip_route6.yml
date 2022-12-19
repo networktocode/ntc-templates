@@ -1,0 +1,24 @@
+---
+parsed_sample:
+  - direct: ""
+    distance: "1"
+    interface:
+      - "Management0"
+    mask: "0"
+    metric: "0"
+    network: "0.0.0.0"
+    next_hop:
+      - "172.20.20.1"
+    protocol: "S"
+    vrf: "MGMT"
+  - direct: "directly"
+    distance: ""
+    interface:
+      - "Management0"
+    mask: "24"
+    metric: ""
+    network: "172.20.20.0"
+    next_hop:
+      - "connected"
+    protocol: "C"
+    vrf: "MGMT"

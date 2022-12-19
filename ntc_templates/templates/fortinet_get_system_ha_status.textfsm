@@ -1,9 +1,5 @@
 #
-# Refried Jello
-#
-# 2021-01-08: Initial Version
-#
-# FG Version: 5.6, 6.0, 6.2
+# FG Version: 5.6, 6.0, 6.2, 6.4
 # HW        : varied
 #
 Value HA_HEALTH (\S+)
@@ -30,25 +26,36 @@ Start
   ^Debug:\s+\d+
   ^Cluster\s+Uptime:\s+${CLUSTER_UPTIME}
   ^Cluster\s+state\s+change\s+time:\s+${CLUSTER_STATE_CHANGED_TIME}
-  ^Master\s+selected\s+using:
-  ^\s+\<\S+
+  ^(Master|Primary)\s+selected\s+using:
+  ^\s*\<\S+
   ^ses_pickup:\s+${HA_SESSION_PICKUP_STATUS},\s+ses_pickup_delay=${HA_SESSION_PICKUP_DELAY}
   ^override:\s+${HA_OVERRIDE_STATUS}
-  ^Configuration\s+Status:
-  ^\s+\S+\([\S\s]+\):
-  ^System\s+Usage\s+stats:
-  ^\s+\S+:\s+
-  ^\s+sessions=
-  ^HBDEV\s+stats:
-  ^\s+\S+:\s+
-  ^\sha:+\S+:\s+
+  ^Configuration\s+Status: -> Configuration_Status
+  # Catch old 6.0_noha with no "Configuraton Status"
+  ^System\s+Usage\s+stats: ->  System_Usage_stats
+  ^. -> Error "in-Start"
+
+Configuration_Status
+  ^System\s+Usage\s+stats: ->  System_Usage_stats
+  ^\s*\S+\([\S\s]+\):\s\S+$$
+  ^. -> Error "in-Configuration_Status"
+
+System_Usage_stats
+  ^HBDEV\s+stats: -> HBDEV_MONDEV_stats
+  ^\s*\S+\([\S\s]+\):$$
+  #^\s*\S+:\s+
+  ^\s*sessions=
+  ^. -> Error "in-System_Usage_stats"
+
+HBDEV_MONDEV_stats
+  # Combine stats, no MONDEV in older FW's
+  ^\s*\S+\([\S\s]+\):$$
+  ^\s*\S+:\s.+rx.+tx.+$$
   ^MONDEV\s+stats:
-  ^\s+\S+:\s+
-  ^\s:+\S+:\s+
-  ^Master\s*:\s+${HA_MASTER_UNIT_NAME}\s*,\s+${HA_MASTER_UNIT_SERIAL},\s+(HA\s+cluster\s+index|cluster\s+index)\s+=\s+${HA_MASTER_UNIT_INDEX}
-  ^Slave\s*:\s+${HA_SLAVE_UNIT_NAME}\s*,\s+${HA_SLAVE_UNIT_SERIAL},\s+(|HA)\s*cluster\s+index\s+=\s+${HA_SLAVE_UNIT_INDEX}
+  ^(Master|Primary)\s*:\s+${HA_MASTER_UNIT_NAME}\s*,\s+${HA_MASTER_UNIT_SERIAL},\s+(HA\s+cluster\s+index|cluster\s+index)\s+=\s+${HA_MASTER_UNIT_INDEX}
+  ^(Slave|Secondary)\s*:\s+${HA_SLAVE_UNIT_NAME}\s*,\s+${HA_SLAVE_UNIT_SERIAL},\s+(|HA)\s*cluster\s+index\s+=\s+${HA_SLAVE_UNIT_INDEX}
   ^number\s+of\s+vcluster:\s+\d+
   ^vcluster\s+\d+:
-  ^(Master|Slave)\s*:\s+\S+,\s+(operating\s+cluster\s+index|HA\s+operating\s+index)\s+=\s+\d+ -> Record
+  ^(Master|Slave|Primary|Secondary)\s*:\s+\S+,\s+(operating\s+cluster\s+index|HA\s+operating\s+index)\s+=\s+\d+ -> Record
   ^\s*$$
-  ^. -> Error
+  ^. -> Error "in-HBDEV_MONDEV_stats"

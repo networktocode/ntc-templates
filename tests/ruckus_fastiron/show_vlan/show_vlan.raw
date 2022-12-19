@@ -1,0 +1,61 @@
+Total PORT-VLAN entries: 10
+Maximum PORT-VLAN entries: 1024
+
+Legend: [Stk=Stack-Id, S=Slot]
+
+PORT-VLAN 1, Name OPS, Priority level0, Off
+ Untagged Ports: (U1/M1)   4   5   6   7   8   9
+   Tagged Ports: (U1/M2)   1
+ Mac-Vlan Ports: None
+     Monitoring: Disabled
+PORT-VLAN 2, Name REG, Priority level0, Off
+ Untagged Ports: (U1/M1)  10  11  12
+   Tagged Ports: (U1/M2)   1
+ Mac-Vlan Ports: None
+     Monitoring: Disabled
+PORT-VLAN 3, Name DVR, Priority level0, Off
+ Untagged Ports: (U1/M1)  13  14  15  16  17  18  19  20  21  22  23  24
+ Untagged Ports: (U1/M1)  25  26  27  28  29  30  31  32  33  34  35  36
+ Untagged Ports: (U1/M1)  37  38  39  40  41  42  43  44  45  46
+   Tagged Ports: (U1/M2)   1
+ Mac-Vlan Ports: None
+     Monitoring: Disabled
+PORT-VLAN 4, Name SIPS, Priority level0, Off
+ Untagged Ports: (U1/M1)  47  48
+   Tagged Ports: (U1/M2)   1
+ Mac-Vlan Ports: None
+     Monitoring: Disabled
+PORT-VLAN 5, Name APS, Priority level0, Off
+ Untagged Ports: (U1/M1)   1   2   3
+   Tagged Ports: (U1/M2)   1
+ Mac-Vlan Ports: None
+     Monitoring: Disabled
+PORT-VLAN 7, Name P2PE, Priority level0, Off
+ Untagged Ports: None
+   Tagged Ports: (U1/M2)   1
+ Mac-Vlan Ports: None
+     Monitoring: Disabled
+PORT-VLAN 10, Name 901SIPS, Priority level0, Off
+ Untagged Ports: None
+   Tagged Ports: (U1/M1)   1   2   3
+   Tagged Ports: (U1/M2)   1
+ Mac-Vlan Ports: None
+     Monitoring: Disabled
+PORT-VLAN 11, Name CUSTOMERWIFI, Priority level0, Off
+ Untagged Ports: None
+   Tagged Ports: (U1/M1)   1   2   3
+   Tagged Ports: (U1/M2)   1
+ Mac-Vlan Ports: None
+     Monitoring: Disabled
+PORT-VLAN 12, Name SYOD, Priority level0, Off
+ Untagged Ports: None
+   Tagged Ports: (U1/M1)   1   2   3
+   Tagged Ports: (U1/M2)   1
+ Mac-Vlan Ports: None
+     Monitoring: Disabled
+PORT-VLAN 666, Name DEFAULT-VLAN, Priority level0, Off
+ Untagged Ports: (U1/M2)   1   2
+ Untagged Ports: (U1/M3)   1   2   3   4
+   Tagged Ports: None
+ Mac-Vlan Ports: None
+     Monitoring: Disabled

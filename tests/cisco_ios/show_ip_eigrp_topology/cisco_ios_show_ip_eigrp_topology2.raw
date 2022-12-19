@@ -1,0 +1,19 @@
+EIGRP-IPv4 Topology Table for AS(1)/ID(172.16.0.1)
+Codes: P - Passive, A - Active, U - Update, Q - Query, R - Reply,
+r - reply Status, s - sia Status
+
+P 172.16.0.1/32, 1 successors, FD is 128256
+via Connected, Loopback0
+P 172.16.0.2/32, 1 successors, FD is 130816
+via 192.168.100.1 (130816/128256), GigabitEthernet0/0
+P 10.2.2.0/24, 1 successors, FD is 3072
+via 192.168.100.1 (3072/2816), GigabitEthernet0/0
+P 192.168.100.4/31, 1 successors, FD is 3072
+via 192.168.100.1 (3072/2816), GigabitEthernet0/0
+P 192.168.100.0/31, 1 successors, FD is 2816
+via Connected, GigabitEthernet0/0
+P 192.168.100.2/31, 1 successors, FD is 2816
+via Connected, GigabitEthernet0/1
+P 192.168.100.6/31, 1 successors, FD is 3072
+via 192.168.100.1 (3072/2816), GigabitEthernet0/0
+
