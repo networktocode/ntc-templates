@@ -1,0 +1,18 @@
+---
+parsed_sample:
+  - interface: "Route-Aggregation1"
+    creation_mode: ""
+    aggregation_mode: "Dynamic"
+    loadsharing: "Shar"
+    local_interfaces:
+      - port: "GE0/0/0"
+        status: "S"
+        flag: "ACDEF"
+      - port: "GE0/0/1"
+        status: "S"
+        flag: "ACDEF"
+    remote_interfaces:
+      - port: "GE0/0/0"
+        flag: "ACDEF"
+      - port: "GE0/0/1"
+        flag: "ACDEF"
