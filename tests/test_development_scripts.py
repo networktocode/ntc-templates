@@ -9,7 +9,7 @@ import pytest
 
 from ruamel.yaml import YAML
 from ruamel.yaml.compat import StringIO
-from ruamel.yaml.comments import CommentedMap as CommentedMap
+from ruamel.yaml.comments import CommentedMap
 from ruamel.yaml.scalarstring import DoubleQuotedScalarString as DQ
 
 from ntc_templates.parse import parse_output
@@ -347,15 +347,15 @@ def ensure_yaml_standards(parsed_object, output_path):
     sorted_entry = []
     for entry in parsed_object["parsed_sample"]:
         # TextFSM conversion will allways be a list of dicts
-        nd = CommentedMap()
+        new_dict = CommentedMap()
         for key, value in sorted(entry.items()):
             # TextFSM capture groups always return strings or lists
             # This also accounts for numbers incase the YAML was done by hand
             if isinstance(value, (str, numbers.Number)):
-                nd[key] = DQ(value)
+                new_dict[key] = DQ(value)
             else:
-                nd[key] = [DQ(val) for val in value]
-        sorted_entry.append(nd)
+                new_dict[key] = [DQ(val) for val in value]
+        sorted_entry.append(new_dict)
     parsed_object["parsed_sample"] = sorted_entry
     try:
         update_yaml_comments(parsed_object)
