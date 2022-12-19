@@ -129,3 +129,4 @@ Start
   # Drop
   ^.*
   ^. -> Error
+  ^\s*$$ ^. -> Error
