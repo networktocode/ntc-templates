@@ -1,0 +1,17 @@
+---
+parsed_sample:
+  - ha_health: "OK"
+    model: "FortiGate"
+    ha_mode: "HA A-P"
+    ha_group: "0"
+    cluster_uptime: "40 days 19:16:5"
+    cluster_state_changed_time: "2021-10-12 11:24:28"
+    ha_session_pickup_status: "enable"
+    ha_session_pickup_delay: "disable"
+    ha_override_status: "disable"
+    ha_master_unit_name: "FW"
+    ha_slave_unit_name: "FW"
+    ha_master_unit_serial: "FGXXXXXXXXXXXXXX"
+    ha_slave_unit_serial: "FGXXXXXXXXXXXXXX"
+    ha_master_unit_index: "0"
+    ha_slave_unit_index: "1"
