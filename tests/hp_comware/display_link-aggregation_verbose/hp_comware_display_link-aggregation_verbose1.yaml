@@ -5,14 +5,8 @@ parsed_sample:
     aggregation_mode: "Dynamic"
     loadsharing: "Shar"
     local_interfaces:
-      - port: "GE0/0/0"
-        status: "S"
-        flag: "ACDEF"
-      - port: "GE0/0/1"
-        status: "S"
-        flag: "ACDEF"
+      - "GE0/0/0"
+      - "GE0/0/1"
     remote_interfaces:
-      - port: "GE0/0/0"
-        flag: "ACDEF"
-      - port: "GE0/0/1"
-        flag: "ACDEF"
+      - "GE0/0/0"
+      - "GE0/0/1"
