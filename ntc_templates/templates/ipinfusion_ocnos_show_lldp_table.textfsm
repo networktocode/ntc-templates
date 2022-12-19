@@ -1,0 +1,17 @@
+Value LOCAL_INTERFACE (\S+)
+Value NEIGHBOR (\S+)
+Value NEIGHBOR_INTERFACE (\S+)
+Value CAPABILITY (R|B|O|RO|RB|BR|BO|OR|OB|RBO|ROB|BRO|BOR|ORB|OBR)
+Value NEIGHBOR_INTERFACE_DESCR (\S+)
+
+Start
+  ^Capability\s+codes:\s+\(R\)\s+Router,\s+\(B\)\s+Bridge,\s+\(O\)\s+Other
+  ^LocalPort\s+RemoteDevice\s+RemotePortID\s+Capability\s+RemotePortDescr
+  ^[-+\s+]+ -> Row
+  ^. -> Error
+
+Row  
+  ^${LOCAL_INTERFACE}\s+${NEIGHBOR}\s+${NEIGHBOR_INTERFACE}\s+${CAPABILITY}\s+${NEIGHBOR_INTERFACE_DESCR} -> Record
+  ^-+
+  ^[\w+\s+]*:\s+\d+
+  ^. -> Error
