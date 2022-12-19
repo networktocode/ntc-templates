@@ -10,7 +10,6 @@ Value BANDWIDTH (.*)
 Value DUPLEX (\S+)
 Value SPEED (\S+)
 Value PORT_LINK_TYPE (\S+)
-Value TRUNK_MODE (.*)
 Value VLAN_NATIVE (\d+)
 Value List VLAN_PASSING ([^,]+)
 Value List VLAN_PERMITTED ([^,]+)
@@ -28,7 +27,7 @@ Start
   ^Internet\s+address:\s+${IP_ADDRESS}\s+\(Sub\)
   ^IP\s+packet\s+frame\s+type:\s+Ethernet\s+II,\s+hardware\s+address:\s+${HW_ADDRESS}
   ^IPv6\s+packet\s+frame\s+type:\s+Ethernet\s+II,\s+hardware\s+address:\s+${HW_ADDRESS}
-  ^${SPEED},\s+mode,\s+${DUPLEX},\s+mode
+  ^${SPEED}\s+mode,\s+${DUPLEX}\s+mode
   ^PVID:\s+${VLAN_NATIVE}
   ^Port\s+link-type:\s+${PORT_LINK_TYPE}
   # Trunk - Passing VLANs (parsing multiple times with Continue)

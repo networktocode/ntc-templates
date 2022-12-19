@@ -5,7 +5,7 @@ parsed_sample:
     aggregation_mode: "Dynamic"
     loadsharing: "Shar"
     local_interfaces:
-      - "XGE1/0/0/1"
+      - "XGE1/0/0/1(R)"
       - "XGE1/0/0/2"
       - "XGE2/0/0/1"
       - "XGE2/0/0/2"
@@ -19,7 +19,7 @@ parsed_sample:
     aggregation_mode: "Dynamic"
     loadsharing: "Shar"
     local_interfaces:
-      - "XGE1/0/0/5"
+      - "XGE1/0/0/5(R)"
       - "XGE1/0/0/6"
       - "XGE2/0/0/5"
       - "XGE2/0/0/6"
@@ -33,7 +33,7 @@ parsed_sample:
     aggregation_mode: "Dynamic"
     loadsharing: "Shar"
     local_interfaces:
-      - "XGE1/0/0/9"
+      - "XGE1/0/0/9(R)"
       - "XGE1/0/0/10"
       - "XGE2/0/0/9"
       - "XGE2/0/0/10"
