@@ -1,11 +1,11 @@
 ---
 parsed_sample:
-  - AP_MODEL: "9120AXI"
-    AP_NAME: "device-name"
+  - AP_NAME: "device-name"
+    SLOT: "2"
+    AP_MODEL: "9120AXI"
+    MAC: "0000.0000.000a"
+    RADIO_MAC: "000a.000a.0000"
+    LOCATION: "default location"
     COUNTRY: "US"
     IP: "1.1.1.1"
-    LOCATION: "default location"
-    MAC: "0000.0000.000a"
-    RadioMac: "000a.000a.0000"
-    SLOT: "2"
-    State: "Registered"
+    STATE: "Registered"
