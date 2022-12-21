@@ -190,3 +190,54 @@ Neighbor Port-ID               : 1/1/1
 Neighbor Port-Desc             : 1/1/1
 Neighbor Port VLAN ID          : 3560
 TTL                            : 120
+--------------------------------------------------------------------------------
+Port                           : 1/1/34
+Neighbor Entries               : 1
+Neighbor Entries Deleted       : 1
+Neighbor Entries Dropped       : 0
+Neighbor Entries Aged-Out      : 1
+Neighbor System-Name           : SIP-T33G
+Neighbor System-Description    : 124.86.0.40
+Neighbor Chassis-ID            : 10.90.20.186
+Neighbor Management-Address    :
+Chassis Capabilities Available : Bridge, Telephone
+Chassis Capabilities Enabled   : Bridge, Telephone
+Neighbor Port-ID               : 80:5e:0c:76:eb:78
+Neighbor Port-Desc             : WAN PORT
+Neighbor Port VLAN ID          :
+TTL                            : 180
+
+Neighbor PoE information       : MED
+Neighbor Power Type            : PD
+Neighbor Power Priority        : High
+Neighbor Power Source          : PSE
+PD Requested Power Value       : 3.80 W
+PSE Allocated Power Value      : 3.80 W
+PD Associated TLV              : med
+PD Requested TLV types         : med
+
+Neighbor MED Capabilities
+Neighbor Device class          : CLASS_III
+MED capabilities enabled       : Capabilities, Network Policy, PD, Inventory
+MED capabilities supported     : Capabilities, Network Policy, PD, Inventory
+
+Neighbor Med Network Policy
+Neighbor Med Application type  : voice
+Neighbor Med Policy VLAN ID    : 0
+Neighbor Med Policy Priority   : 0
+Neighbor Med Policy DSCP       : 0
+Neighbor Med Policy Unknown    : true
+Neighbor Med Policy Tagged     : false
+
+Neighbor Mac-Phy details
+Neighbor Auto-neg Supported    : true
+Neighbor Auto-Neg Enabled      : true
+Neighbor Auto-Neg Advertised   : 1000 BASE_TFD, 100 BASE_TXFD, 100 BASE_TX, 10 BASET_FD, 10 BASE_T
+Neighbor MAU type              : 1000 BASETFD
+
+Neighbor EEE information       : DOT3
+Neighbor TX Wake time          : 0 us
+Neighbor RX Wake time          : 0 us
+Neighbor Fallback time         : 0 us
+Neighbor TX Echo time          : 0 us
+Neighbor RX Echo time          : 0 us
