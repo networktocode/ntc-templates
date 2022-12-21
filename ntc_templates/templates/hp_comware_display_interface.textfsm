@@ -127,6 +127,30 @@ Start
   # Next
   ^$$ -> Next.Record
   # Drop
-  ^.*
+  ^\s*Link
+  ^\s*Last
+  ^\s*Trunk\s+port
+  ^\s*Loopback
+  ^\s*Media
+  ^\s*Flow
+  ^\s*Allow\s+jumbo
+  ^\s*Broadcast
+  ^\s*Multicast
+  ^\s*Unicast
+  ^\s*MDI\s+type
+  ^\s*Port\s+priority
+  ^\s*Current\s*system
+  ^\s*Peak
+  ^\s*IPv4\s+traffic
+  ^\s*IPv6\s+traffic
+  ^\s+Tagged\s+VLAN
+  ^\s+UnTagged\s+VLAN
+  ^\s*Input
+  ^\s*Output
+  ^\s{6,}\d+\s+unicasts
+  ^\s{6,}\d+\s+CRC
+  ^\s{6,}\d+\s+aborts
+  ^\s{6,}\d+\s+lost
+  ^\s{6,}.*ignored
   ^. -> Error
   ^\s*$$ ^. -> Error
