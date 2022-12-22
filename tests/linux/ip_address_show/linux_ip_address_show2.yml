@@ -16,6 +16,10 @@ parsed_sample:
       - "127.0.0.1"
     ip_masks:
       - "8"
+    ipv6_addresses:
+      - "::1"
+    ipv6_masks:
+      - "128"
   - id: "2"
     interface: "eth0"
     flags: "BROADCAST,MULTICAST,UP,LOWER_UP"
@@ -29,10 +33,14 @@ parsed_sample:
     address: "52:54:00:8c:62:44"
     broadcast: "ff:ff:ff:ff:ff:ff"
     ip_addresses:
+      - "192.168.121.241"
       - "192.168.121.45"
-      - "fe80::5054:ff:fe8c:6244"
     ip_masks:
       - "24"
+      - "24"
+    ipv6_addresses:
+      - "fe80::5054:ff:fe8c:6244"
+    ipv6_masks:
       - "64"
   - id: "3"
     interface: "ens33"
@@ -48,9 +56,11 @@ parsed_sample:
     broadcast: "ff:ff:ff:ff:ff:ff"
     ip_addresses:
       - "192.168.94.133"
-      - "fe80::b681:60db:7206:13a0"
     ip_masks:
       - "24"
+    ipv6_addresses:
+      - "fe80::b681:60db:7206:13a0"
+    ipv6_masks:
       - "64"
   - id: "4"
     interface: "ens37"
@@ -66,9 +76,11 @@ parsed_sample:
     broadcast: "ff:ff:ff:ff:ff:ff"
     ip_addresses:
       - "192.168.94.134"
-      - "fe80::6c2a:3447:5d99:700a"
     ip_masks:
       - "24"
+    ipv6_addresses:
+      - "fe80::6c2a:3447:5d99:700a"
+    ipv6_masks:
       - "64"
   - id: "5"
     interface: "ens38"
@@ -84,7 +96,9 @@ parsed_sample:
     broadcast: "ff:ff:ff:ff:ff:ff"
     ip_addresses:
       - "192.168.94.135"
-      - "fe80::97ef:a3f1:a962:9ef0"
     ip_masks:
       - "24"
+    ipv6_addresses:
+      - "fe80::97ef:a3f1:a962:9ef0"
+    ipv6_masks:
       - "64"
