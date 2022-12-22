@@ -1,69 +1,90 @@
 ---
 parsed_sample:
-  - index: "1"
-    inet6_address:
-      - "::1"
-    inet6_mask:
-      - "128"
-    inet_address:
-      - "127.0.0.1"
-    inet_mask:
-      - "8"
-    mac_address: "00:00:00:00:00:00"
+  - id: "1"
+    interface: "lo"
+    flags: "LOOPBACK,UP,LOWER_UP"
     mtu: "65536"
-    name: "lo"
-    status: "LOOPBACK,UP,LOWER_UP"
-  - index: "2"
-    inet6_address:
-      - "fe80::5054:ff:fe8c:6244"
-    inet6_mask:
-      - "64"
-    inet_address:
-      - "192.168.121.241"
+    qdisc: "noqueue"
+    state: "UNKNOWN"
+    group: "default"
+    qlen: "1000"
+    master: ""
+    type: "loopback"
+    address: "00:00:00:00:00:00"
+    broadcast: "00:00:00:00:00:00"
+    ip_addresses:
+      - "127.0.0.1"
+    ip_masks:
+      - "8"
+  - id: "2"
+    interface: "eth0"
+    flags: "BROADCAST,MULTICAST,UP,LOWER_UP"
+    mtu: "1500"
+    qdisc: "fq_codel"
+    state: "UP"
+    group: "default"
+    qlen: "1000"
+    master: ""
+    type: "ether"
+    address: "52:54:00:8c:62:44"
+    broadcast: "ff:ff:ff:ff:ff:ff"
+    ip_addresses:
       - "192.168.121.45"
-    inet_mask:
+      - "fe80::5054:ff:fe8c:6244"
+    ip_masks:
       - "24"
-      - "24"
-    mac_address: "52:54:00:8c:62:44"
-    mtu: "1500"
-    name: "eth0"
-    status: "BROADCAST,MULTICAST,UP,LOWER_UP"
-  - index: "3"
-    inet6_address:
-      - "fe80::b681:60db:7206:13a0"
-    inet6_mask:
       - "64"
-    inet_address:
+  - id: "3"
+    interface: "ens33"
+    flags: "BROADCAST,MULTICAST,UP,LOWER_UP"
+    mtu: "1500"
+    qdisc: "fq_codel"
+    state: "UP"
+    group: "default"
+    qlen: "1000"
+    master: ""
+    type: "ether"
+    address: "00:0c:29:b0:21:7d"
+    broadcast: "ff:ff:ff:ff:ff:ff"
+    ip_addresses:
       - "192.168.94.133"
-    inet_mask:
+      - "fe80::b681:60db:7206:13a0"
+    ip_masks:
       - "24"
-    mac_address: "00:0c:29:b0:21:7d"
-    mtu: "1500"
-    name: "ens33"
-    status: "BROADCAST,MULTICAST,UP,LOWER_UP"
-  - index: "4"
-    inet6_address:
-      - "fe80::6c2a:3447:5d99:700a"
-    inet6_mask:
       - "64"
-    inet_address:
+  - id: "4"
+    interface: "ens37"
+    flags: "BROADCAST,MULTICAST,UP,LOWER_UP"
+    mtu: "1500"
+    qdisc: "fq_codel"
+    state: "UP"
+    group: "default"
+    qlen: "1000"
+    master: ""
+    type: "ether"
+    address: "00:50:56:20:47:14"
+    broadcast: "ff:ff:ff:ff:ff:ff"
+    ip_addresses:
       - "192.168.94.134"
-    inet_mask:
+      - "fe80::6c2a:3447:5d99:700a"
+    ip_masks:
       - "24"
-    mac_address: "00:50:56:20:47:14"
-    mtu: "1500"
-    name: "ens37"
-    status: "BROADCAST,MULTICAST,UP,LOWER_UP"
-  - index: "5"
-    inet6_address:
-      - "fe80::97ef:a3f1:a962:9ef0"
-    inet6_mask:
       - "64"
-    inet_address:
-      - "192.168.94.135"
-    inet_mask:
-      - "24"
-    mac_address: "00:50:56:37:93:58"
+  - id: "5"
+    interface: "ens38"
+    flags: "BROADCAST,MULTICAST,UP,LOWER_UP"
     mtu: "1500"
-    name: "ens38"
-    status: "BROADCAST,MULTICAST,UP,LOWER_UP"
+    qdisc: "fq_codel"
+    state: "UP"
+    group: "default"
+    qlen: "1000"
+    master: ""
+    type: "ether"
+    address: "00:50:56:37:93:58"
+    broadcast: "ff:ff:ff:ff:ff:ff"
+    ip_addresses:
+      - "192.168.94.135"
+      - "fe80::97ef:a3f1:a962:9ef0"
+    ip_masks:
+      - "24"
+      - "64"
