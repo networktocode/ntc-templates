@@ -1,0 +1,31 @@
+Value AP_NAME (\S+)
+Value SLOT (\d+?)
+Value AP_MODEL (\S+)
+Value ETHERNET_MAC ([a-fA-F0-9:\.]+)
+Value RADIO_MAC ([a-fA-F0-9:\.]+)
+Value LOCATION ([\w\s]+?)
+Value COUNTRY (\S+)
+Value IP ([a-fA-F0-9:\.]+)
+Value STATE (\S+)
+
+
+Start
+  ^Number\sof\sAPs:\s\d+.*$$
+  ^\s*$$
+  ^Global\sAP\sUser\sName:.*$$
+  ^Global\sAP\sDot1x\sUser\sName:.*$$
+  ^AP\sName\s+Slots\s+AP\sModel\s+Ethernet\sMAC\s+Radio\sMAC\s+Location\s+Country\s+IP\sAddress\s+State.*$$ -> NewFormat
+  ^AP\sName\s+AP\sModel\s+Ethernet\sMAC\s+Radio\sMAC\s+State.*$$ -> OldFormat
+
+NewFormat
+  ^${AP_NAME}\s+${SLOT}\s+${AP_MODEL}\s+${ETHERNET_MAC}\s+${RADIO_MAC}\s+${LOCATION}\s+${COUNTRY}\s+${IP}\s+${STATE}.*$$ -> Record
+  # paginated results duplicate headers
+  ^AP\sName\s+Slots\s+AP\sModel\s+Ethernet\sMAC\s+Radio\sMAC\s+Location\s+Country\s+IP\sAddress\s+State.*$$
+  ^\-+$$
+  ^. -> Error
+
+OldFormat
+  ^${AP_NAME}\s+${AP_MODEL}\s+${ETHERNET_MAC}\s+${RADIO_MAC}\s+${STATE}.*$$ -> Record
+  ^AP\sName\s+AP\sModel\s+Ethernet\sMAC\s+Radio\sMAC\s+State.*$$
+  ^\-+$$
+  ^. -> Error
