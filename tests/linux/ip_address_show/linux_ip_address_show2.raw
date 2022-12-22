@@ -1,0 +1,35 @@
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 52:54:00:8c:62:44 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.121.241/24 brd 192.168.121.255 scope global dynamic eth0
+       valid_lft 3515sec preferred_lft 3515sec
+    inet 192.168.121.45/24 scope global secondary eth0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::5054:ff:fe8c:6244/64 scope link
+       valid_lft forever preferred_lft forever
+3: ens33: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 00:0c:29:b0:21:7d brd ff:ff:ff:ff:ff:ff
+    altname enp2s1
+    inet 192.168.94.133/24 brd 192.168.94.255 scope global dynamic noprefixroute ens33
+       valid_lft 1541sec preferred_lft 1541sec
+    inet6 fe80::b681:60db:7206:13a0/64 scope link noprefixroute
+       valid_lft forever preferred_lft forever
+4: ens37: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 00:50:56:20:47:14 brd ff:ff:ff:ff:ff:ff
+    altname enp2s5
+    inet 192.168.94.134/24 brd 192.168.94.255 scope global dynamic noprefixroute ens37
+       valid_lft 1541sec preferred_lft 1541sec
+    inet6 fe80::6c2a:3447:5d99:700a/64 scope link noprefixroute
+       valid_lft forever preferred_lft forever
+5: ens38: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 00:50:56:37:93:58 brd ff:ff:ff:ff:ff:ff
+    altname enp2s6
+    inet 192.168.94.135/24 brd 192.168.94.255 scope global dynamic noprefixroute ens38
+       valid_lft 1540sec preferred_lft 1540sec
+    inet6 fe80::97ef:a3f1:a962:9ef0/64 scope link noprefixroute
+       valid_lft forever preferred_lft forever
