@@ -43,7 +43,7 @@
 * Add aruba_os show ap bss-table details by @hagleyj in [#1147](https://github.com/networktocode/ntc-templates/pull/1147)
 * Fix cisco ipv6 neighbors by @guillaume-mbali in [#1230](https://github.com/networktocode/ntc-templates/pull/1230)
 * Minor doc update by @itdependsnetworks in [#1244](https://github.com/networktocode/ntc-templates/pull/1244)
-* Create xr show controllers hundred gig all, add test files focom/r show c… by @itdependsnetworks in [#1245](https://github.com/)networktocode/ntc-templates/pull/1245)
+* Create xr show controllers hundred gig all, add test files focom/r show c… by @itdependsnetworks in [#1245](https://github.com/networktocode/ntc-templates/pull/1245)
 * Modified arista_eos_show_vlan to list Ports issue #908 by @jmcgilltes/298 in [#1248](https://github.com/networktocode/ntc-templates/pull/1248)
 * Armartirosyan/cisco ios show ip bgp neighbors by @jmcgill298 in [#1250](https://github.com/networktocode/ntc-templates/pull/1250)
 * Add ipinfusion_ocnos_show_lldp_table template by @jmcgill298 in [#1251](https://github.com/networktocode/ntc-templates/pull/1251)
