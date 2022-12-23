@@ -1,0 +1,164 @@
+40GigabitEthernet2/3/3 is up, line protocol is up
+  Port up for 128 day(s) 19 hour(s) 49 minute(s) 25 second(s)
+  Hardware is 40GigabitEthernet, address is d4c1.9e16.8d10 (bia d4c1.9e16.8d10)
+  Interface type is 40Gig Copper
+  Configured speed 40Gbit, actual 40Gbit, configured duplex fdx, actual fdx
+  Configured mdi mode AUTO, actual MDI
+  Stacking Port, port state is FORWARDING
+  BPDU guard is Disabled, ROOT protect is Disabled, Designated protect is Disabled
+  Link Error Dampening is Disabled
+  STP configured to OFF, priority is level0, mac-learning is enabled
+  Openflow is Disabled, Openflow Hybrid mode is Disabled,  Flow Control is config enabled, oper disabled, negotiation disabled
+  Mirror disabled, Monitor disabled
+  Mac-notification is disabled
+  Not member of any active trunks
+  Not member of any configured trunks
+  No port name
+  IPG MII 64 bits-time, IPG GMII 64 bits-time
+  MTU 1500 bytes, encapsulation ethernet
+  MMU Mode is Store-and-forward
+  300 second input rate: 25496 bits/sec, 18 packets/sec, 0.00% utilization
+  300 second output rate: 4208 bits/sec, 5 packets/sec, 0.00% utilization
+  130393421 packets input, 26755527458 bytes, 0 no buffer
+  Received 1819460 broadcasts, 128573834 multicasts, 127 unicasts
+  0 input errors, 0 CRC, 0 frame, 0 ignored
+  0 runts, 0 giants
+  24082238 packets output, 2734736336 bytes, 0 underruns
+  Transmitted 32 broadcasts, 24082204 multicasts, 2 unicasts
+  0 output errors, 0 collisions
+  Relay Agent Information option: Disabled
+  Protected: No
+  MAC Port Security: Disabled
+ 
+UC Egress queues:
+Queue counters      Queued packets    Dropped Packets
+         0                   0                   0
+         1                   0                   0
+         2                   0                   0
+         3                   0                   0
+         4                   0                   0
+         5                   0                   0
+         6                   0                   0
+         7                   0                   0
+         8                   0                   0
+         9            11119857                   0
+ 
+ 
+MC Egress queues:
+Queue counters    Queued packets    Dropped Packets
+         0                2480                   0
+         1                   0                   0
+         2                   0                   0
+         3                   0                   0
+         4                  34                   0
+         5                   0                   0
+         6            12959867                   0
+         7                   0                   0
+         8                   0                   0
+         9                   0                   0
+ 
+Oversubscribed ingress drop counters:
+High priority drop                     0
+Low priority drop                     0
+Total drop                             0
+40GigabitEthernet2/3/4 is down, line protocol is down
+  Port down for 128 day(s) 19 hour(s) 49 minute(s) 29 second(s)
+  Hardware is 40GigabitEthernet, address is d4c1.9e16.8d11 (bia d4c1.9e16.8d11)
+  Interface type is 40Gig Fiber
+  Configured speed 40Gbit, actual unknown, configured duplex fdx, actual unknown
+  Configured mdi mode AUTO, actual unknown
+  Member of L2 VLAN ID 0, port is untagged, port state is BLOCKING
+  BPDU guard is Disabled, ROOT protect is Disabled, Designated protect is Disabled
+  Link Error Dampening is Disabled
+  STP configured to ON, priority is level0, mac-learning is enabled
+  Openflow is Disabled, Openflow Hybrid mode is Disabled,  Flow Control is config enabled, oper enabled, negotiation disabled
+  Mirror disabled, Monitor disabled
+  Mac-notification is disabled
+  Not member of any active trunks
+  Not member of any configured trunks
+  No port name
+  IPG MII 64 bits-time, IPG GMII 64 bits-time
+  MTU 1500 bytes, encapsulation ethernet
+  MMU Mode is Store-and-forward
+  300 second input rate: 0 bits/sec, 0 packets/sec, 0.00% utilization
+  300 second output rate: 0 bits/sec, 0 packets/sec, 0.00% utilization
+  0 packets input, 0 bytes, 0 no buffer
+  Received 0 broadcasts, 0 multicasts, 0 unicasts
+  0 input errors, 0 CRC, 0 frame, 0 ignored
+  0 runts, 0 giants
+  0 packets output, 0 bytes, 0 underruns
+  Transmitted 0 broadcasts, 0 multicasts, 0 unicasts
+  0 output errors, 0 collisions
+  Relay Agent Information option: Disabled
+  Protected: No
+  MAC Port Security: Disabled
+ 
+UC Egress queues:
+Queue counters      Queued packets    Dropped Packets
+         0                   0                   0
+         1                   0                   0
+         2                   0                   0
+         3                   0                   0
+         4                   0                   0
+         5                   0                   0
+         6                   0                   0
+        7                   0                   0
+         8                   0                   0
+         9                   0                   0
+ 
+ 
+MC Egress queues:
+Queue counters    Queued packets    Dropped Packets
+         0                   0                   0
+         1                   0                   0
+         2                   0                   0
+         3                   0                   0
+         4                   0                   0
+         5                   0                   0
+         6                   0                   0
+         7                   0                   0
+         8                   0                   0
+         9                   0                   0
+ 
+Oversubscribed ingress drop counters:
+High priority drop                     0
+Low priority drop                     0
+Total drop                             0
+Lag lg10 is up, line protocol is up
+  Configured speed 20G, actual 20G, configured duplex fdx, actual fdx
+  Member of 17 L2 VLANs, port is tagged, port state is Forward
+  BPDU guard is Disabled, ROOT protect is Disabled, Designated protect is Disabled
+  STP configured to ON, priority is level0, mac-learning is enabled
+  Openflow is Disabled,  Openflow Hybrid mode is Disabled
+  Mirror disabled, Monitor disabled
+  Mac-notification is disabled
+  Member of active trunk ports 1/2/1,2/2/1,lg10, Lag Interface is lg10
+  Member of configured trunk ports 1/2/1,2/2/1,lg10, Lag Interface is lg10
+  No port name
+  300 second input rate: 4824 bits/sec, 6 packets/sec, 0.00% utilization
+  300 second output rate: 3856 bits/sec, 5 packets/sec, 0.00% utilization
+  42361177 packets input, 3884151979 bytes, 0 no buffer
+  Received 3638818 broadcasts, 38722115 multicasts, 244 unicasts
+  0 input errors, 0 CRC, 0 frame, 0 ignored
+  0 runts, 0 giants
+  23699093 packets output, 2526068617 bytes, 0 underruns
+  Transmitted 12 broadcasts, 23699080 multicasts, 0 unicasts
+  0 output errors, 0 collisions
+  Relay Agent Information option: Disabled
+GigEthernetmgmt1 is up, line protocol is up
+  Port up for 66 day(s) 7 hour(s) 10 minute(s) 15 second(s)
+  Hardware is GigEthernet, address is d4c1.9e16.9e87 (bia d4c1.9e16.9eb7)
+  Configured speed auto, actual 1Gbit, configured duplex fdx, actual fdx
+  Configured mdi mode AUTO, actual none
+  Not a Member of any VLAN , port is untagged, port state is NONE
+  No port name
+  Internet address is 10.203.35.106/24, MTU 1500 bytes, encapsulation ethernet
+  300 second input rate: 4208 bits/sec, 6 packets/sec, 0.00% utilization
+  300 second output rate: 14656 bits/sec, 6 packets/sec, 0.00% utilization
+  12656202 packets input, 1480617278 bytes, 0 no buffer
+  Received 0 broadcasts, 0 multicasts, 12656202 unicasts
+  0 input errors, 0 CRC, 0 frame, 0 ignored
+  0 runts, 0 giants
+  72034 packets output, 8813479 bytes, 0 underruns
+  Transmitted 0 broadcasts, 0 multicasts, 72034 unicasts
+  0 output errors, 0 collisions
