@@ -99,6 +99,7 @@ ExportIPv4Targets
   ^\s{4,}(?:\s+\d+:\d+){6}\s+${IPV4_EXPORT_RTS} -> Continue
   ^\s{4,}\d+:\d+
   ^\s*Import\s+VPN\s+Targets -> ImportIPv4Targets
+  ^. -> Error
 
 ImportIPv4Targets
   ^\s{4,}${IPV4_IMPORT_RTS} -> Continue
@@ -109,3 +110,4 @@ ImportIPv4Targets
   ^\s{4,}(?:\s+\d+:\d+){5}\s+${IPV4_IMPORT_RTS} -> Continue
   ^\s{4,}(?:\s+\d+:\d+){6}\s+${IPV4_IMPORT_RTS} -> Continue
   ^\s{4,}\d+:\d+
+  ^. -> Error
