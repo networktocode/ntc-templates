@@ -32,6 +32,7 @@ OS_CHOICES = [
     "cisco_xr",
     "dell_force10",
     "dell_powerconnect",
+    "dlink_ds",
     "enterasys",
     "extreme",
     "f5_ltm",
