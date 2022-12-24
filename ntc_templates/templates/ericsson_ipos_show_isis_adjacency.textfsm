@@ -1,0 +1,15 @@
+Value SYSTEM_ID ((\d+.\d+.\d+)|\S+)
+Value INTERFACE (\S+)
+Value L (\S+)
+Value MT (\S+)
+Value STAT (\S+)
+Value HOLD (\d+)
+Value SNPA ((\d+.\d+.\d+)|\S+)
+Value UPTIME (\S+)
+
+Start
+  ^IS-IS\s+Adjacenc\S+\s+for\s+tag\s+\S+:
+  ^SystemId\s+Interface\s+L\s+MT\s+Stat\s+Hold\s+SNPA\s+Uptime
+  ^${SYSTEM_ID}\s+${INTERFACE}\s+${L}\s+${MT}\s+${STAT}\s+${HOLD}\s+${SNPA}\s+${UPTIME} -> Record
+  ^Total\s+IS-IS\s+Adjacenc\S+:\s+\d+
+  ^. -> Error
