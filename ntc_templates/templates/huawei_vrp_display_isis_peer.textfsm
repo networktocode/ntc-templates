@@ -12,3 +12,5 @@ Start
   ^-+
   ^${SYSTEM_ID}\s+${INTERFACE}\s+${CIRCUIT_ID}\s+${STATE}\s+${HOLD_TIME}\s+${TYPE}\s+${PRI} -> Record
   ^Total\s+Peer\S+:\s+\d+
+  ^\s*$$
+  ^. -> Error
