@@ -1,0 +1,31 @@
+Value Key index (\d+)
+Value flags ([XID]+)
+Value comment (\S+[\S ]*\S)
+Value chain (dstnat|srcnat)
+Value action (accept|add-dst-to-address-list|add-src-to-address-list|dst-nat|jump|log|masquerade|netmap|passthrough|redirect|return|same|src-nat)
+Value to_addresses ([\w!,./:\d]+)
+Value to_ports ([\d,-]+)
+Value protocol (!?(dccp|egp|etherip|gre|icmp|idpr-cmtp|ipencap|ipsec-ah|ipv6-encap|ipv6-nonxt|ipv6-route|l2tp|pim|rdp|rsvp|st|udp|vmtp|xns-idp|ddp|encap|ggp|hmp|icmpv6|igmp|ipip|ipsec-esp|ipv6-frag|ipv6-opts|iso-tp4|ospf|pup|rspf|sctp|tcp|udp-lite|vrrp|xtp))
+Value src_address ([\w!.:/\d]+)
+Value src_address_list (\S+)
+Value src_port (\S+)
+Value in_interface (\S+)
+Value out_interface (\S+)
+Value in_interface_list (\S+)
+Value out_interface_list (\S+)
+Value ipsec_policy (\S+)
+Value dst_address ([\w!.:/\d]+)
+Value dst_address_list (\S+)
+Value dst_port (\S+)
+Value log (yes|no)
+Value log_prefix (\S+[\S ]*\S)
+
+Start
+  ^Flags:.*$$ -> NATTable
+
+NATTable
+  ^\s?${index}\s+(${flags})?\s+;;;\s${comment}
+  ^\s+chain=${chain}\saction=${action}(\sto-addresses=${to_addresses})?(\sto-ports=${to_ports})?(\sprotocol=${protocol})?(\ssrc-address=${src_address})?(\sdst-address=${dst_address})?(\ssrc-address-list=${src_address_list})?(\sdst-address-list=${dst_address_list})?(\sin-interface=${in_interface})?(\sin-interface-list=${in_interface_list})?(\sout-interface=${out_interface})?(\sout-interface-list=${out_interface_list})?(\ssrc-port=${src_port})?(\sdst-port=${dst_port})?(\slog=${log})?(\slog-prefix="(${log_prefix})?")?(\sipsec-policy=${ipsec_policy})?\s*$$ -> Record
+  ^\s?${index}\s+(${flags})?\s+chain=${chain}\saction=${action}(\sto-addresses=${to_addresses})?(\sto-ports=${to_ports})?(\sprotocol=${protocol})?(\ssrc-address=${src_address})?(\sdst-address=${dst_address})?(\ssrc-address-list=${src_address_list})?(\sdst-address-list=${dst_address_list})?(\sin-interface=${in_interface})?(\sin-interface-list=${in_interface_list})?(\sout-interface=${out_interface})?(\sout-interface-list=${out_interface_list})?(\ssrc-port=${src_port})?(\sdst-port=${dst_port})?(\slog=${log})?(\slog-prefix="(${log_prefix})?")?(\sipsec-policy=${ipsec_policy})?\s*$$ -> Record
+  ^\s*(?:\d{2}:){2}\d{2}\s+echo:\s*.*$$ -> Next
+  ^. -> Error

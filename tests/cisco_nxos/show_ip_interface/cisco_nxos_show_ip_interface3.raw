@@ -1,0 +1,64 @@
+Vlan249, Interface status: protocol-up/link-up/admin-up, iod: 94,
+  IP address: 172.16.170.194, IP subnet: 172.16.170.192/26 route-preference: 0, tag: 0
+  IP address: 172.16.168.66, IP subnet: 172.16.168.64/27 secondary route-preference: 0, tag: 0
+  IP broadcast address: 255.255.255.255
+  IP multicast groups locally joined:
+      224.0.0.2  224.0.0.13  224.0.0.1  224.0.0.102
+  IP MTU: 1500 bytes (using link MTU)
+  IP primary address route-preference: 0, tag: 0
+  IP proxy ARP : disabled
+  IP Local Proxy ARP : disabled
+  IP multicast routing: enabled
+  IP icmp redirects: disabled
+  IP directed-broadcast: disabled
+  IP Forwarding: disabled
+  IP icmp unreachables (except port): disabled
+  IP icmp port-unreachable: enabled
+  IP unicast reverse path forwarding: none
+  IP load sharing: none
+  IP outbound access list: MAN_out
+  IP interface statistics last reset: never
+  IP interface software stats: (sent/received/forwarded/originated/consumed)
+    Unicast packets    : 2244/1789802/530/1714/5919406
+    Unicast bytes      : 265221/150279513/178557/127056/495850266
+    Multicast packets  : 1470831/16436403/0/1470831/32872800
+    Multicast bytes    : 73541550/1570424758/0/100016508/1570424550
+    Broadcast packets  : 0/0/0/0/0
+    Broadcast bytes    : 0/0/0/0/0
+    Labeled packets    : 0/0/0/0/0
+    Labeled bytes      : 0/0/0/0/0
+  WCCP Redirect outbound: disabled
+  WCCP Redirect inbound: disabled
+  WCCP Redirect exclude: disabled
+Vlan783, Interface status: protocol-up/link-up/admin-up, iod: 62,
+  IP address: 152.98.241.32, IP subnet: 152.98.241.0/24 route-preference: 0, tag: 0
+  IP address: 152.98.246.32, IP subnet: 152.98.246.0/24 secondary route-preference: 0, tag: 0
+  IP address: 192.168.29.32, IP subnet: 192.168.29.0/24 secondary route-preference: 0, tag: 0
+  IP broadcast address: 255.255.255.255
+  IP multicast groups locally joined:
+      224.0.0.2  224.0.0.13  224.0.0.1  224.0.0.102
+  IP MTU: 1500 bytes (using link MTU)
+  IP primary address route-preference: 0, tag: 0
+  IP proxy ARP : disabled
+  IP Local Proxy ARP : disabled
+  IP multicast routing: enabled
+  IP icmp redirects: disabled
+  IP directed-broadcast: disabled
+  IP Forwarding: disabled
+  IP icmp unreachables (except port): disabled
+  IP icmp port-unreachable: enabled
+  IP unicast reverse path forwarding: loose allow default
+  IP load sharing: none
+  IP interface statistics last reset: never
+  IP interface software stats: (sent/received/forwarded/originated/consumed)
+    Unicast packets    : 6981/6679953/3319/3663/27712276
+    Unicast bytes      : 1262676/506182750/756646/266576/2028632576
+    Multicast packets  : 1471045/57482658/0/1471045/74522267
+    Multicast bytes    : 73553346/8727589702/0/100032156/8455329787
+    Broadcast packets  : 0/0/0/0/0
+    Broadcast bytes    : 0/0/0/0/0
+    Labeled packets    : 0/0/0/0/0
+    Labeled bytes      : 0/0/0/0/0
+  WCCP Redirect outbound: disabled
+  WCCP Redirect inbound: disabled
+  WCCP Redirect exclude: disabled

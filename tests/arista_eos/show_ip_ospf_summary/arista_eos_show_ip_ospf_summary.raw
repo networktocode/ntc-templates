@@ -1,0 +1,13 @@
+OSPF instance 1 with ID 65.87.229.70, VRF default, ASBR
+Time since last SPF: 14 s
+Max LSAs: 12000, Total LSAs: 6
+Type-5 Ext LSAs: 3
+ID               Type   Intf   Nbrs (full) RTR LSA NW LSA  SUM LSA ASBR LSA TYPE-7 LSA
+0.0.0.10         normal 6      2    (2   ) 3       0       0       0       0
+
+OSPF instance 2 with ID 192.168.28.193, VRF mgmtVrf, ASBR
+Time since last SPF: 1673 s
+Max LSAs: 12000, Total LSAs: 357
+Type-5 Ext LSAs: 152
+ID               Type   Intf   Nbrs (full) RTR LSA NW LSA  SUM LSA ASBR LSA TYPE-7 LSA
+0.0.0.0          normal 2      2    (2   ) 113     92      0       0       0

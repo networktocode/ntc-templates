@@ -1,0 +1,96 @@
+Value DHCP_DISCOVER_RX (\d+)
+Value DHCP_DISCOVER_TX (\d+)
+Value DHCP_DISCOVER_DROPS (\d+)
+Value DHCP_OFFER_RX (\d+)
+Value DHCP_OFFER_TX (\d+)
+Value DHCP_OFFER_DROPS (\d+)
+Value DHCP_REQUEST_RX (\d+)
+Value DHCP_REQUEST_TX (\d+)
+Value DHCP_REQUEST_DROPS (\d+)
+Value DHCP_ACK_RX (\d+)
+Value DHCP_ACK_TX (\d+)
+Value DHCP_ACK_DROPS (\d+)
+Value DHCP_RELEASE_RX (\d+)
+Value DHCP_RELEASE_TX (\d+)
+Value DHCP_RELEASE_DROPS (\d+)
+Value DHCP_DECLINE_RX (\d+)
+Value DHCP_DECLINE_TX (\d+)
+Value DHCP_DECLINE_DROPS (\d+)
+Value DHCP_INFORM_RX (\d+)
+Value DHCP_INFORM_TX (\d+)
+Value DHCP_INFORM_DROPS (\d+)
+Value DHCP_NACK_RX (\d+)
+Value DHCP_NACK_TX (\d+)
+Value DHCP_NACK_DROPS (\d+)
+Value DHCP_TOTAL_MESSAGES_RX (\d+)
+Value DHCP_TOTAL_MESSAGES_TX (\d+)
+Value DHCP_TOTAL_MESSAGES_DROPS (\d+)
+Value DHCP_L2_FORWARDING_TOTAL_PACKETS_TX (\d+)
+Value DHCP_L2_FORWARDING_TOTAL_PACKETS_RX (\d+)
+Value DHCP_L2_FORWARDING_TOTAL_PACKETS_DROPPED (\d+)
+Value NON_DHCP_TOTAL_PACKETS_RX (\d+)
+Value NON_DHCP_TOTAL_PACKETS_TX (\d+)
+Value NON_DHCP_TOTAL_PACKETS_DROPPED (\d+)
+Value DHCP_DROP_RECEIVED_ON_UNTRUSTED_PORT (\d+)
+Value DHCP_DROP_UNKNOWN_FAILURE (\d+)
+Value DHCP_DROP_SOURCE_MAC_VALIDATION_FAILED (\d+)
+Value DHCP_DROP_BINDING_ENTRY_VALIDATION_FAILED (\d+)
+Value DHCP_DROP_INVALID_DHCP_MESSAGE_TYPE (\d+)
+Value DHCP_DROP_INTERFACE_ERROR (\d+)
+Value DHCP_DROP_TX_OVER_TRUSTED_PORT_FAILED (\d+)
+Value DHCP_DROP_TRUST_PORT_NOT_CONFIGURED (\d+)
+Value DHCP_DROP_VLAN_VALIDATION_FAILURE (\d+)
+Value DHCP_DROP_INSERTION_OF_OPTION_82_FAILED (\d+)
+Value DHCP_DROP_PACKET_MALFORMED (\d+)
+
+Start
+  ^Message\s+Type\s+Rx\s+Tx\s+Drops\s*$$ -> DHCP_MESSAGE_TYPES
+  ^DHCP\s+L2\s+Forwarding:$$ -> DHCP_L2_FORWARDING
+  ^Non\s+DHCP:$$ -> NON_DHCP
+  ^DROP:$$ -> DROP
+  ^-+\s*$$
+  ^\s*$$
+  ^. -> Error
+ 
+DHCP_MESSAGE_TYPES
+  ^Discover\s+${DHCP_DISCOVER_RX}\s+${DHCP_DISCOVER_TX}\s+${DHCP_DISCOVER_DROPS}$$
+  ^Offer\s+${DHCP_OFFER_RX}\s+${DHCP_OFFER_TX}\s+${DHCP_OFFER_DROPS}$$
+  ^Request\s+${DHCP_REQUEST_RX}\s+${DHCP_REQUEST_TX}\s+${DHCP_REQUEST_DROPS}$$
+  ^Ack\s+${DHCP_ACK_RX}\s+${DHCP_ACK_TX}\s+${DHCP_ACK_DROPS}$$
+  ^Release\s+${DHCP_RELEASE_RX}\s+${DHCP_RELEASE_TX}\s+${DHCP_RELEASE_DROPS}$$
+  ^Decline\s+${DHCP_DECLINE_RX}\s+${DHCP_DECLINE_TX}\s+${DHCP_DECLINE_DROPS}$$
+  ^Inform\s+${DHCP_INFORM_RX}\s+${DHCP_INFORM_TX}\s+${DHCP_INFORM_DROPS}$$
+  ^Nack\s+${DHCP_NACK_RX}\s+${DHCP_NACK_TX}\s+${DHCP_NACK_DROPS}$$
+  ^Total\s+${DHCP_TOTAL_MESSAGES_RX}\s+${DHCP_TOTAL_MESSAGES_TX}\s+${DHCP_TOTAL_MESSAGES_DROPS}$$ -> Start
+  ^-+\s*$$
+  ^\s*$$
+  ^. -> Error
+
+DHCP_L2_FORWARDING
+  ^Total\s+Packets\s+Forwarded\s+:\s+${DHCP_L2_FORWARDING_TOTAL_PACKETS_TX}$$
+  ^Total\s+Packets\s+Received\s+:\s+${DHCP_L2_FORWARDING_TOTAL_PACKETS_RX}$$
+  ^Total\s+Packets\s+Dropped\s+:\s+${DHCP_L2_FORWARDING_TOTAL_PACKETS_DROPPED}$$ -> Start
+  ^\s*$$
+  ^. -> Error
+ 
+NON_DHCP
+  ^Total\s+Packets\s+Forwarded\s+:\s+${NON_DHCP_TOTAL_PACKETS_RX}$$
+  ^Total\s+Packets\s+Received\s+:\s+${NON_DHCP_TOTAL_PACKETS_TX}$$
+  ^Total\s+Packets\s+Dropped\s+:\s+${NON_DHCP_TOTAL_PACKETS_DROPPED}$$ -> Start
+  ^\s*$$
+  ^. -> Error
+
+DROP
+  ^Received\s+on\s+untrusted\s+port\s+:\s+${DHCP_DROP_RECEIVED_ON_UNTRUSTED_PORT}$$
+  ^Unknown\s+Failure\s+:\s+${DHCP_DROP_UNKNOWN_FAILURE}$$
+  ^Source\s+mac\s+validation\s+failed\s+:\s+${DHCP_DROP_SOURCE_MAC_VALIDATION_FAILED}$$
+  ^Binding\s+entry\s+validation\s+Failed\s+:\s+${DHCP_DROP_BINDING_ENTRY_VALIDATION_FAILED}$$
+  ^Invalid\s+DHCP\s+message\s+type\s+:\s+${DHCP_DROP_INVALID_DHCP_MESSAGE_TYPE}$$
+  ^Interface\s+error\s+:\s+${DHCP_DROP_INTERFACE_ERROR}$$
+  ^Tx\s+over\s+trusted\s+port\s+failed\s+:\s+${DHCP_DROP_TX_OVER_TRUSTED_PORT_FAILED}$$
+  ^Trust\s+port\s+not\s+configured\s+:\s+${DHCP_DROP_TRUST_PORT_NOT_CONFIGURED}$$
+  ^Vlan\s+validation\s+failure\s+:\s+${DHCP_DROP_VLAN_VALIDATION_FAILURE}$$
+  ^Insertion\s+of\s+option\s+82\s+failed\s+:\s+${DHCP_DROP_INSERTION_OF_OPTION_82_FAILED}$$
+  ^Packet\s+Malformed\s+:\s+${DHCP_DROP_PACKET_MALFORMED}$$ -> Start
+  ^\s*$$
+  ^. -> Error

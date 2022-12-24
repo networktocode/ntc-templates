@@ -1,0 +1,24 @@
+ Total quantity of nonempty ACL number is 3 
+
+Basic ACL 2000, 7 rules
+Acl's step is 5
+ rule 5 permit source 85.14.167.234 0 (94 matches)
+ rule 10 permit source 85.14.167.193 0 (26939 matches)
+ rule 15 permit source 5.10.130.152 0.0.0.3 (24 matches)
+ rule 20 permit source 185.48.254.19 0 
+ rule 25 permit source 10.0.0.0 0.255.255.255 
+ rule 30 permit source 172.0.0.0 0.15.255.255 
+ rule 35 permit source 192.168.0.0 0.0.255.255 
+
+Basic ACL 2500, 1 rule
+Acl's step is 5
+ rule 35 permit source 192.168.0.0 0.0.255.255 (5431 matches)
+
+Advanced ACL REGLE_NAT 3998, 3 rules
+Acl's step is 5
+ rule 5 permit tcp source 85.14.167.234 0 destination 192.214.198.156 0 destination-port eq 8022 (18 matches)
+ rule 10 deny tcp destination 192.214.198.156 0 destination-port eq 8022 (8 matches)
+ rule 15 permit ip (278450 matches)
+
+Advanced ACL qsdqsd 3999, 0 rule
+Acl's step is 5

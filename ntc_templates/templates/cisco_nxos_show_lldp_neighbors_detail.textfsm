@@ -9,7 +9,6 @@ Value VLAN ([0-9]+)
 
 
 Start
-  ^.*not advertised
   ^[Cc]hassis\s[idID]{2}\:\s${CHASSIS_ID}$$
   ^[Pp]ort\s[idID]{2}\:\s${NEIGHBOR_INTERFACE}$$
   ^[Ll]ocal\s[Pp]ort\s[idID]{2}\:\s${LOCAL_INTERFACE}$$
@@ -18,3 +17,4 @@ Start
   ^[Ee]nabled\s[Cc]apabilities\:\s${CAPABILITIES}$$
   ^[Mm]anagement\s[Aa]ddress\:\s${MGMT_ADDRESS}$$
   ^[Vv]lan\s[idID]{2}\:\s${VLAN}$$ -> Record
+  ^[Vv]lan\s[idID]{2}\:\snot advertised -> Record

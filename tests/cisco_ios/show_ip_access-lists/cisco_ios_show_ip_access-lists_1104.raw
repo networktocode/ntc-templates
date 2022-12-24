@@ -1,0 +1,21 @@
+Extended IP access list access-acl
+    10 permit udp object-group SRC_NETWORK_OBJECT_GROUP object-group DST_NETWORK_OBJECT_GROUP eq domain
+    20 permit tcp object-group SRC_NETWORK_OBJECT_GROUP eq snmp object-group DST_NETWORK_OBJECT_GROUP
+    30 permit tcp object-group SRC_NETWORK_OBJECT_GROUP object-group DST_NETWORK_OBJECT_GROUP
+    40 permit udp object-group SRC_NETWORK_OBJECT_GROUP host 10.1.2.3 eq domain
+    50 permit udp object-group SRC_NETWORK_OBJECT_GROUP 10.1.2.0 0.0.0.255 eq www
+    60 permit udp host 10.1.2.3 object-group DST_NETWORK_OBJECT_GROUP eq domain
+    70 permit udp 10.1.2.0 0.0.0.255 object-group DST_NETWORK_OBJECT_GROUP eq www
+    80 permit tcp object-group SRC_NETWORK_OBJECT_GROUP eq snmp host 10.1.2.3
+    90 permit tcp object-group SRC_NETWORK_OBJECT_GROUP eq snmp 10.1.2.0 0.0.0.255
+    100 permit tcp host 10.1.2.3 eq snmp object-group DST_NETWORK_OBJECT_GROUP
+    110 permit tcp 10.1.2.0 0.0.0.255 eq snmp object-group DST_NETWORK_OBJECT_GROUP
+    120 permit tcp object-group SRC_NETWORK_OBJECT_GROUP host 10.1.2.3
+    130 permit tcp object-group SRC_NETWORK_OBJECT_GROUP 10.1.2.0 0.0.0.255
+    140 permit tcp host 10.1.2.3 object-group DST_NETWORK_OBJECT_GROUP
+    150 permit tcp 10.1.2.0 0.0.0.255 object-group DST_NETWORK_OBJECT_GROUP
+    160 permit SERVICE_OBJECT_GROUP object-group SRC_NETWORK_OBJECT_GROUP object-group DST_NETWORK_OBJECT_GROUP
+    170 permit SERVICE_OBJECT_GROUP object-group SRC_NETWORK_OBJECT_GROUP host 10.1.2.3 
+    180 permit SERVICE_OBJECT_GROUP object-group SRC_NETWORK_OBJECT_GROUP 10.1.2.0 0.0.0.255
+    190 permit SERVICE_OBJECT_GROUP host 10.1.2.3 object-group DST_NETWORK_OBJECT_GROUP
+    200 permit SERVICE_OBJECT_GROUP 10.1.2.0 0.0.0.255 object-group DST_NETWORK_OBJECT_GROUP

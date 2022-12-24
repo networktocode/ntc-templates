@@ -11,6 +11,8 @@ parsed_sample:
     adv_router:
       - "10.254.11.9"
       - "10.254.11.33"
+    adv_fd: []
+    adv_rd: []
     out_interface:
       - "TenGigabitEthernet1/1"
       - "TenGigabitEthernet2/1"
@@ -25,6 +27,8 @@ parsed_sample:
     tag: ""
     adv_router:
       - "10.254.6.14"
+    adv_fd: []
+    adv_rd: []
     out_interface:
       - "Port-channel10"
     source: ""
@@ -39,6 +43,8 @@ parsed_sample:
     adv_router:
       - "10.254.11.9"
       - "10.254.11.33"
+    adv_fd: []
+    adv_rd: []
     out_interface:
       - "TenGigabitEthernet1/1"
       - "TenGigabitEthernet2/1"
@@ -53,6 +59,8 @@ parsed_sample:
     tag: ""
     adv_router:
       - "10.254.10.34"
+    adv_fd: []
+    adv_rd: []
     out_interface:
       - "GigabitEthernet9/29"
     source: ""
@@ -66,6 +74,8 @@ parsed_sample:
     tag: ""
     adv_router:
       - "10.254.1.34"
+    adv_fd: []
+    adv_rd: []
     out_interface:
       - "Port-channel3"
     source: ""
@@ -79,6 +89,8 @@ parsed_sample:
     tag: ""
     adv_router:
       - "10.254.2.22"
+    adv_fd: []
+    adv_rd: []
     out_interface:
       - "TenGigabitEthernet3/3"
     source: ""
@@ -99,6 +111,8 @@ parsed_sample:
       - "10.254.4.10"
       - "10.254.4.14"
       - "10.254.54.6"
+    adv_fd: []
+    adv_rd: []
     out_interface:
       - "TenGigabitEthernet1/4"
       - "TenGigabitEthernet1/6"
@@ -120,6 +134,8 @@ parsed_sample:
     adv_router:
       - "10.4.0.1"
       - "10.4.0.2"
+    adv_fd: []
+    adv_rd: []
     out_interface:
       - "GigabitEthernet1/1"
       - "GigabitEthernet1/2"
@@ -135,6 +151,8 @@ parsed_sample:
     adv_router:
       - "10.4.0.1"
       - "10.4.0.2"
+    adv_fd: []
+    adv_rd: []
     out_interface:
       - "GigabitEthernet1/1"
       - "GigabitEthernet1/2"
@@ -148,6 +166,8 @@ parsed_sample:
     fd: "2816"
     tag: ""
     adv_router: []
+    adv_fd: []
+    adv_rd: []
     out_interface: []
     source: "Rstatic"
   - process_id: "65000"
@@ -159,5 +179,7 @@ parsed_sample:
     fd: "3840256"
     tag: "5507497"
     adv_router: []
+    adv_fd: []
+    adv_rd: []
     out_interface: []
     source: "Redistributed"

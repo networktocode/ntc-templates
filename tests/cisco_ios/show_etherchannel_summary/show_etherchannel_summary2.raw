@@ -1,0 +1,23 @@
+Flags:  D - down        P/bndl - bundled in port-channel
+        I - stand-alone s/susp - suspended
+        H - Hot-standby (LACP only)
+        R - Layer3      S - Layer2
+        U - in use      f - failed to allocate aggregator
+
+        M - not in use, minimum links not met
+        u - unsuitable for bundling
+        w - waiting to be aggregated
+        d - default port
+
+
+Number of channel-groups in use: 1
+Number of aggregators:           1
+
+Group  Port-channel  Protocol    Ports
+------+-------------+-----------+-----------------------------------------------
+10	Po10(RU)		LACP	 Te0/0/2(bndl) Te0/0/3(bndl)
+
+RU - L3 port-channel UP State
+SU - L2 port-channel UP state
+P/bndl -  Bundled
+S/susp  - Suspended

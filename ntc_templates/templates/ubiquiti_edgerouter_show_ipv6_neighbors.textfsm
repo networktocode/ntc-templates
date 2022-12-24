@@ -1,0 +1,9 @@
+Value Required IP (\S+)
+Value INTERFACE (\S+)
+Value MAC ((?:[0-9a-fA-F]{2}\:){5}[0-9a-fA-F]{2})
+Value STATE (\S+)
+
+Start
+  ^${IP}\sdev\s${INTERFACE}\slladdr\s${MAC}\s(router\s)?${STATE}\s*$$ -> Record
+  ^\s*$$
+  ^. -> Error
