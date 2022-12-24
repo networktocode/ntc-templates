@@ -1,0 +1,17 @@
+Value Required IP_ADDRESS (\d+\.\d+\.\d+\.\d+)
+Value Required MAC_ADDRESS (\S+)
+Value EXPIRE (\d+)
+Value Required TYPE (\S+\s\S+|\S+)
+Value Required INTERFACE (\S+)
+Value VPN_INSTANCE (\S+)
+
+Start
+  ^IP\s+ADDRESS\s+MAC\s+ADDRESS\s+EXPIRE\S+\s+TYPE\s+INTERFACE\s+VPN-INSTANCE
+  ^\s+VLAN\/CEVLAN\s+PVC
+  ^-+
+  ^${IP_ADDRESS}\s+${MAC_ADDRESS}\s+${EXPIRE}?\s+${TYPE}\s+${INTERFACE}(\s+)?${VPN_INSTANCE}?$$ -> Record
+  ^\s+(\d+)\/(\S+)
+  ^Total:(\d+)\s+Dynamic:(\d+)\s+Static:(\d+)\s+Interface:(\d+)\s+Remote:(\d+)
+  ^Redirect:(\d+)
+  ^\s*$$
+  ^. -> Error
