@@ -4,9 +4,10 @@ Value MAC (\S+)
 Value TYPE (\S+)
 
 Start
- ^\s+ARP\s+Aging\s+Time\s+:\s+\d+
- ^Interface\s+IP Address\s+MAC Address\s+Type
- ^\-+\s+\-+\s+\-+\s+\-+$$
- ^Total Entries:\s+\d+
- ^${INTERFACE}\s+${IP}\s+${MAC}\s+${TYPE} -> Record
- ^. -> Error
+  ^\s+ARP\s+Aging\s+Time\s+:\s+\d+
+  ^Interface\s+IP Address\s+MAC Address\s+Type
+  ^\-+\s+\-+\s+\-+\s+\-+$$
+  ^Total Entries:\s+\d+
+  ^${INTERFACE}\s+${IP}\s+${MAC}\s+${TYPE} -> Record
+  ^\s*$$
+  ^. -> Error
