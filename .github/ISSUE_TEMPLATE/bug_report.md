@@ -3,10 +3,15 @@ name: 🐛 Bug Report
 about: Report a reproducible bug in the current release of ntc-templates
 ---
 <!---
-NOTE: Request for new template and adding data captured in template is not considered.
-Please see README for more information.
+NOTE: The following are not considered and will be immediately closed:
+* Request for new templates.
+* Request for adding data captured in an existing template.
+* Request for help with building a TextFSM template, please use the #networktocode channel, on [Slack](http://slack.networktocode.com/).
+* Request for Template issues without both the included error and raw data.
+* Feature Requests in the form of a Bug.
+* ISSUES raised without following instructions.
 
-ISSUES raised without following instructions will be immediately closed.
+Please see README for more information.
 -->
 
 
@@ -17,8 +22,9 @@ Also test if the latest release, and master branch are affected too.
 
 ##### ISSUE TYPE
 <!--- Pick one below and delete the rest: -->
- - Bug Report
- - Feature Idea
+ - Template Issue with error and raw data
+ - Bug Report with the library
+ - Feature - This is only relevant to the library, not templates
  - Documentation Report
 
 ##### TEMPLATE USING

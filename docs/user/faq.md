@@ -2,6 +2,13 @@
 
 From an outsiders view, some design choices, requirements, and testing procedures can seem arbitrary. The following list of FAQ is intended to help provide context and better guide users and contributors of ntc-templates.
 
+## How do I test my templates?
+
+You can follow the local development procedures, but for your convenience here are included locations to test your template:
+
+* [textfsm.nornir.tech](https://textfsm.nornir.tech/) - An online textfsm editor.
+* [Itential](https://template.itential.io/) - An online textfsm editor by Itential.
+
 ## Why is there a requirement to use `Error` in every template?
 
 Ensuring that the textfsm template can account for every line is the only method to ensure that data was not accidentally missed. Take the following example. Initially we account for status to be:
@@ -18,7 +25,7 @@ Gi0/0/3                        down           down
 
 The output would miss the G0/0/1 interface, since the `STATUS` of `admin down` not known. If this was a low percentage use case, it can go undetected, and result in incorrect information being returned. Instead, by ensuring that we fail fast, an `Error` is raised and hopefully GitHub Issue is put in. 
 
-## Then why isn't `Error` used in all templates?
+### Then why isn't `Error` used in all templates?
 
 Initially the controls were not as strong, so many templates were put in until issues like the previous became an issue.
 
@@ -52,6 +59,8 @@ The most likely reasons are:
 
 - Did not follow the Issue creation template.
 - Did not provide the data required to act upon the request.
+- Did not provide the error that was created.
+- Was actually a feature request that is not supported.
 - A prolonged time with no response.  
 
 ## What is meant that this is a parsing project, not a data modeling project?

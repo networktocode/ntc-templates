@@ -2,6 +2,7 @@
 
 To contribute new templates, each new pull request must include the following:
 
+- Only update or create a single template per Pull Request
 - TextFSM template
 - Modified version of the **index** file
 - Tests

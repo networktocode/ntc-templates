@@ -16,6 +16,8 @@ parsed_sample:
       - "127.0.0.1"
     ip_masks:
       - "8"
+    ipv6_addresses: []
+    ipv6_masks: []
   - id: "2"
     interface: "ens32"
     flags: "BROADCAST,MULTICAST,UP,LOWER_UP"
@@ -32,6 +34,8 @@ parsed_sample:
       - "192.168.131.128"
     ip_masks:
       - "24"
+    ipv6_addresses: []
+    ipv6_masks: []
   - id: "3"
     interface: "gpd0"
     flags: "POINTOPOINT,MULTICAST,NOARP,UP,LOWER_UP"
@@ -48,6 +52,8 @@ parsed_sample:
       - "10.20.20.12"
     ip_masks:
       - "32"
+    ipv6_addresses: []
+    ipv6_masks: []
   - id: "4"
     interface: "br-218f5e637867"
     flags: "NO-CARRIER,BROADCAST,MULTICAST,UP"
@@ -64,6 +70,8 @@ parsed_sample:
       - "172.21.0.1"
     ip_masks:
       - "16"
+    ipv6_addresses: []
+    ipv6_masks: []
   - id: "5"
     interface: "vrf-blue"
     flags: "NOARP,MASTER,UP,LOWER_UP"
@@ -78,6 +86,8 @@ parsed_sample:
     broadcast: "ff:ff:ff:ff:ff:ff"
     ip_addresses: []
     ip_masks: []
+    ipv6_addresses: []
+    ipv6_masks: []
   - id: "6"
     interface: "brblue"
     flags: "BROADCAST,MULTICAST,UP,LOWER_UP"
@@ -96,3 +106,5 @@ parsed_sample:
     ip_masks:
       - "24"
       - "25"
+    ipv6_addresses: []
+    ipv6_masks: []

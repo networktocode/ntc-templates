@@ -1,6 +1,6 @@
 ##### ISSUE TYPE
 <!--- Pick one below and delete the rest: -->
- - New Template Pull Request
+ - New Template Pull Request (Only one template at a time is allowed)
  - Bugfix Pull Request
  - Additional Testing
  - Docs Pull Request
