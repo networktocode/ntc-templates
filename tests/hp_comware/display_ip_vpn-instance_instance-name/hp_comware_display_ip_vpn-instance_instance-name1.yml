@@ -1,0 +1,22 @@
+---
+parsed_sample:
+  - name: "vpn1"
+    id: "1"
+    rd: "101:1"
+    description: "This is vpn1"
+    ipv4_export_rts:
+      - "1:1"
+    ipv4_import_rts:
+      - "1:2"
+    ipv4_export_policy: "policy2"
+    ipv4_import_policy: "policy3"
+    ipv4_tunnel_policy: "policy1"
+    ipv6_export_rts:
+      - "2:1"
+    ipv6_import_rts:
+      - "2:2"
+    ipv6_export_policy: "policy1"
+    ipv6_import_policy: "policy4"
+    ipv6_tunnel_policy: "policy1"
+    interfaces:
+      - "Ten-GigabitEthernet1/0/52"
