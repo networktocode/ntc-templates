@@ -22,6 +22,6 @@ Start
   ^Romfile\sChecksum\s*:.+
   ^Main\sFeature\sBits\s*:.+
   ^Other\sFeature\sBits\s*:.*
-  ^[0-9a-f]{8}:\s[0-9a-f]{8}\s[0-9a-f]{8}\s[0-9a-f]{8}\s[0-9a-f]{8}
-  ^[0-9a-f]{8}:\s[0-9a-f]{8}\s[0-9a-f]{8}\s[0-9a-f]{8}\s[0-9a-f]{4}
+  ^[0-9a-f]{1,8}:\s[0-9a-f]{1,8}\s[0-9a-f]{1,8}\s[0-9a-f]{1,8}\s[0-9a-f]{1,8}
+  ^[0-9a-f]{1,8}:\s[0-9a-f]{1,8}\s[0-9a-f]{1,8}\s[0-9a-f]{1,8}(\s[0-9a-f]{1,8})?
   ^. -> Error
