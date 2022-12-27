@@ -1,0 +1,18 @@
+Value Required,Key BANK (Active|Alternate)
+Value SOFTWARE (\S+)
+Value CREATED (.*)
+Value CHECKSUM (\S+)
+
+Start
+  ^-+\s${BANK}\sbank\s-+ -> BANK
+  ^.*$$
+  ^. -> Error
+
+BANK
+  ^Software\sversion\s+:\s${SOFTWARE}
+  ^Creation\sdate\s+:\s${CREATED}
+  ^Header\schecksum\s+:\s${CHECKSUM}
+  ^-+ -> Continue.Record
+  ^-+\s${BANK}\sbank\s-+ -> BANK
+  ^$$
+  ^. -> Error

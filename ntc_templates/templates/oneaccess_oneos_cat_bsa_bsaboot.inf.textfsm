@@ -1,0 +1,12 @@
+Value BOOTFILE (\S+)
+Value BOOTFOLDER (/BSA/binaries)
+Value CONFIGFILE (\S+)
+Value CONFIGFOLDER (/BSA/config)
+
+Start
+  ^.*${BOOTFOLDER} -> Continue
+  ^.*/BSA/binaries/${BOOTFILE}
+  ^.*${CONFIGFOLDER} -> Continue
+  ^.*/BSA/config/${CONFIGFILE}
+  ^.*$$
+  ^. -> Error
