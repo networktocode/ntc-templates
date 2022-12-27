@@ -1,0 +1,17 @@
+Value CODE (\w{1,2})
+Value IP (\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3})
+Value CIDR (\d{1,2})
+Value DISTANCE (\d+)
+Value METRIC (\d+)
+Value NEXTHOP_IP (\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3})
+Value INTERFACE (\w+)
+
+Start
+  ^.*IP\sRoute\sTable -> IP
+
+IP
+  ^${CODE}\s+\*>\s${IP}/${CIDR}\sis\sdirectly\sconnected,\s${INTERFACE}\s* -> Record
+  ^${CODE}\s+\*>\s${IP}/${CIDR}\sis\sdirectly\sconnected\s* -> Record
+  ^${CODE}\s+\*>\s${IP}/${CIDR}\s\[${DISTANCE}/${METRIC}\]\sis\sdirectly\sconnected,\s${INTERFACE}\s* -> Record
+  ^${CODE}\s+\*>\s${IP}/${CIDR}\s\[${DISTANCE}/${METRIC}\]\svia\s${NEXTHOP_IP}\s\(recursive is directly connected,\s${INTERFACE}\)\s* -> Record
+  ^. -> Error
