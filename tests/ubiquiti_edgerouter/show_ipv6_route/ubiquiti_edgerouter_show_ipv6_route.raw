@@ -1,0 +1,15 @@
+IPv6 Routing Table
+Codes: K - kernel route, C - connected, S - static, R - RIP, O - OSPF,
+       IA - OSPF inter area, E1 - OSPF external type 1,
+       E2 - OSPF external type 2, N1 - OSPF NSSA external type 1,
+       N2 - OSPF NSSA external type 2, B - BGP
+Timers: Uptime
+
+IP Route Table for VRF "default"
+S      ::/0 [50/0] via ::, pppoe4, 01w0d05h
+C      ::1/128 via ::, lo, 01w0d05h
+C      2a05:b780:0:1d::/64 via ::, pppoe4, 01w0d05h
+C      2a05:c100:1d::/64 via ::, eth1, 01:11:26
+C      fe80::/10 via ::, pppoe4, 01w0d05h
+C      fe80::/64 via ::, eth1, 01:11:25
+
