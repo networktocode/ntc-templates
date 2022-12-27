@@ -1,0 +1,15 @@
+Value Required FILE (\S+)
+Value BYTES (\d+)
+	   
+Start
+  ^Listing -> ONEOS5
+  ^\S+\s+\d+\s+${BYTES}\s+.*\s+${FILE}$$ -> Record ONEOS6
+  ^$$
+  ^. -> Error
+
+ONEOS5
+  ^\.
+  ^${FILE}\s+${BYTES} -> Record
+
+ONEOS6
+  ^\S+\s+\d+\s+${BYTES}\s+.*\s+${FILE}$$ -> Record
