@@ -1,0 +1,63 @@
+Loadsharing Type: Shar -- Loadsharing, NonS -- Non-Loadsharing 
+Port Status: S -- Selected, U -- Unselected, I -- Individual 
+Port: A -- Auto port, M -- Management port, R -- Reference port 
+Flags:  A -- LACP_Activity, B -- LACP_Timeout, C -- Aggregation, 
+        D -- Synchronization, E -- Collecting, F -- Distributing, 
+        G -- Defaulted, H -- Expired 
+
+Aggregate Interface: Bridge-Aggregation10
+Creation Mode: Manual
+Aggregation Mode: Dynamic
+Loadsharing Type: Shar
+Management VLANs: None
+System ID: 0x8000, 7848-5933-6485
+Local: 
+  Port                Status   Priority Index    Oper-Key               Flag
+  XGE1/0/0/1(R)       S        32768    1        1                      {ACDEF}
+  XGE1/0/0/2          S        32768    6        1                      {ACDEF}
+  XGE2/0/0/1          S        32768    11       1                      {ACDEF}
+  XGE2/0/0/2          S        32768    16       1                      {ACDEF}
+Remote: 
+  Actor               Priority Index    Oper-Key SystemID               Flag   
+  XGE1/0/0/1          32768    47       9        0x8000, aaaa-bbbb-8be8 {ACDEF}
+  XGE1/0/0/2          32768    252      9        0x8000, aaaa-bbbb-8be8 {ACDEF}
+  XGE2/0/0/1          32768    48       9        0x8000, aaaa-bbbb-8be8 {ACDEF}
+  XGE2/0/0/2          32768    253      9        0x8000, aaaa-bbbb-8be8 {ACDEF}
+
+Aggregate Interface: Bridge-Aggregation20
+Creation Mode: Manual
+Aggregation Mode: Dynamic
+Loadsharing Type: Shar
+Management VLANs: None
+System ID: 0x8000, 7848-5933-6485
+Local: 
+  Port                Status   Priority Index    Oper-Key               Flag
+  XGE1/0/0/5(R)       S        32768    2        2                      {ACDEF}
+  XGE1/0/0/6          S        32768    7        2                      {ACDEF}
+  XGE2/0/0/5          S        32768    12       2                      {ACDEF}
+  XGE2/0/0/6          S        32768    17       2                      {ACDEF}
+Remote: 
+  Actor               Priority Index    Oper-Key SystemID               Flag   
+  XGE1/0/0/5          32768    47       13       0x8000, bcea-fa0d-b0e0 {ACDEF}
+  XGE1/0/0/6          32768    48       13       0x8000, bcea-fa0d-b0e0 {ACDEF}
+  XGE2/0/0/5          32768    252      13       0x8000, bcea-fa0d-b0e0 {ACDEF}
+  XGE2/0/0/6          32768    253      13       0x8000, bcea-fa0d-b0e0 {ACDEF}
+
+Aggregate Interface: Bridge-Aggregation30
+Creation Mode: Manual
+Aggregation Mode: Dynamic
+Loadsharing Type: Shar
+Management VLANs: None
+System ID: 0x8000, 7848-5933-6485
+Local: 
+  Port                Status   Priority Index    Oper-Key               Flag
+  XGE1/0/0/9(R)       S        32768    3        3                      {ACDEF}
+  XGE1/0/0/10         S        32768    8        3                      {ACDEF}
+  XGE2/0/0/9          S        32768    13       3                      {ACDEF}
+  XGE2/0/0/10         S        32768    18       3                      {ACDEF}
+Remote: 
+  Actor               Priority Index    Oper-Key SystemID               Flag   
+  XGE1/0/0/9          32768    252      13       0x8000, bcea-fa0d-c7d8 {ACDEF}
+  XGE1/0/0/10         32768    253      13       0x8000, bcea-fa0d-c7d8 {ACDEF}
+  XGE2/0/0/9          32768    47       13       0x8000, bcea-fa0d-c7d8 {ACDEF}
+  XGE2/0/0/10         32768    48       13       0x8000, bcea-fa0d-c7d8 {ACDEF}
