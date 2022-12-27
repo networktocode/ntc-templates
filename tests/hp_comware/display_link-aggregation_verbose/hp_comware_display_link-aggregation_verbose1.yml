@@ -1,0 +1,12 @@
+---
+parsed_sample:
+  - interface: "Route-Aggregation1"
+    creation_mode: ""
+    aggregation_mode: "Dynamic"
+    loadsharing: "Shar"
+    local_interfaces:
+      - "GE0/0/0"
+      - "GE0/0/1"
+    remote_interfaces:
+      - "GE0/0/0"
+      - "GE0/0/1"
