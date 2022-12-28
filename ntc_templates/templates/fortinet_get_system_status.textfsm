@@ -77,4 +77,5 @@ Start
   ^FortiOS\s+x86-64:\s+${FORTIOS_X86_64}
   ^System\s+time:\s+${SYSTEM_TIME}
   ^Last\s+reboot\s+reason:\s+${LAST_REBOOT_REASON}
-  ^EOF -> Record
+  ^\s*$$
+  ^. -> Error
