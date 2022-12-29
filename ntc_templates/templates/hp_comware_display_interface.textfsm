@@ -23,8 +23,8 @@ Start
   ^Bandwidth:\s+${BANDWIDTH}
   ^Maximum\s+transmission\s+unit:\s+${MTU}
   ^Maximum\s+frame\s+length:\s+${L2MTU}
-  ^Internet\s+address:\s+${IP_ADDRESS}\s+\(Primary\)
-  ^Internet\s+address:\s+${IP_ADDRESS}\s+\(Sub\)
+  ^Internet\s+[Aa]ddress:\s+${IP_ADDRESS}\s+\([Pp]rimary\)
+  ^Internet\s+[Aa]ddress:\s+${IP_ADDRESS}\s+\([Ss]ub\)
   ^IP\s+packet\s+frame\s+type:\s+Ethernet\s+II,\s+hardware\s+address:\s+${HW_ADDRESS}
   ^IPv6\s+packet\s+frame\s+type:\s+Ethernet\s+II,\s+hardware\s+address:\s+${HW_ADDRESS}
   ^${SPEED}\s+mode,\s+${DUPLEX}\s+mode
@@ -144,13 +144,21 @@ Start
   ^\s*IPv4\s+traffic
   ^\s*IPv6\s+traffic
   ^\s+Tagged\s+VLAN
-  ^\s+UnTagged\s+VLAN
-  ^\s*Input
-  ^\s*Output
+  ^\s+Un[tT]agged\s+VLAN
+  ^\s*[Ii]nput
+  ^\s*[Oo]utput
+  ^\s*Physical
+  ^\s*Internet\s+protocol
+  ^\s*Port\s+hardware
   ^\s{6,}\d+\s+unicasts
   ^\s{6,}\d+\s+CRC
   ^\s{6,}\d+\s+aborts
   ^\s{6,}\d+\s+lost
-  ^\s{6,}.*ignored
+  ^\s{6,}\d+\s+broadcasts
+  ^\s{6,}\d+\s+ignored
+  ^\s{6,}-\s+ignored
+  ^\s{6,}-\s+frame
+  ^\s{6,}-\s+aborts
+  ^\s{6,}-\s+lost\s+carrier
   ^. -> Error
   ^\s*$$ ^. -> Error
