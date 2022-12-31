@@ -150,15 +150,15 @@ Start
   ^\s*Physical
   ^\s*Internet\s+protocol
   ^\s*Port\s+hardware
-  ^\s{6,}\d+\s+unicasts
-  ^\s{6,}\d+\s+CRC
-  ^\s{6,}\d+\s+aborts
-  ^\s{6,}\d+\s+lost
-  ^\s{6,}\d+\s+broadcasts
-  ^\s{6,}\d+\s+ignored
-  ^\s{6,}-\s+ignored
-  ^\s{6,}-\s+frame
-  ^\s{6,}-\s+aborts
-  ^\s{6,}-\s+lost\s+carrier
+  ^\s+\d+\s+unicasts
+  ^\s+\d+\s+CRC
+  ^\s+\d+\s+aborts
+  ^\s+\d+\s+lost
+  ^\s+\d+\s+broadcasts
+  ^\s+\d+\s+ignored
+  ^\s+-\s+ignored
+  ^\s+-\s+frame
+  ^\s+-\s+aborts
+  ^\s+-\s+lost\s+carrier
   ^. -> Error
   ^\s*$$ ^. -> Error
