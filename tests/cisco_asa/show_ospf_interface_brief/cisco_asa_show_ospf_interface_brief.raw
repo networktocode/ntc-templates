@@ -1,0 +1,4 @@
+Interface    PID   Area            IP Address/Mask    Cost  State Nbrs F/C
+Outside      101   101             10.10.100.10/255.255.255.248    10   P2P 1/1
+Transit      100   100             10.255.111.1/255.255.255.248    10   BDR 1/1
+Inside       100   110             10.25.1.17/255.255.255.240    10    DR 2/2
