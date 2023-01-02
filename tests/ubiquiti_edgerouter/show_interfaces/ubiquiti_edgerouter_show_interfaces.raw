@@ -1,0 +1,12 @@
+Codes: S - State, L - Link, u - Up, D - Down, A - Admin Down
+Interface    IP Address                        S/L  Description                 
+---------    ----------                        ---  -----------                 
+eth0         -                                 u/u  Port
+eth1         192.168.1.1/24                    u/u  Eth 1
+             2a05:c100:1d::1/64
+eth2         -                                 u/D  Port
+eth3         -                                 u/D  Port
+lo           127.0.0.1/8                       u/u
+             ::1/128      
+eth4         192.168.1.1/24                    u/u  datas
+eth5         2a05:c100:1d::1/64                u/u
