@@ -1,0 +1,71 @@
+Failover On
+Failover unit Primary
+Failover LAN Interface: HA-Control-Failover GigabitEthernet0/7 (up)
+Reconnect timeout 0:00:00
+Unit Poll frequency 1 seconds, holdtime 15 seconds
+Interface Poll frequency 5 seconds, holdtime 25 seconds
+Interface Policy 1
+Monitored Interfaces 5 of 1299 maximum
+MAC Address Move Notification Interval not set
+Version: Ours 9.12(4)37, Mate 9.12(4)37
+Serial Number: Ours JAD123456Q7, Mate JAD123456EW
+Last Failover at: 19:05:55 GMT/BST Jan 26 2022
+        This host: Primary - Active
+                Active time: 29083269 (sec)
+                slot 0: ASA5585-SSP-10 hw/sw rev (2.2/9.12(4)37) status (Up Sys)
+                  Interface Outside (10.10.100.2): Normal (Waiting)
+                  Interface Security-Management (10.20.10.10): Normal (Monitored)
+                  Interface DMZ_Trunk (0.0.0.0): Normal (Waiting)
+                  Interface Inside (10.30.1.17): Normal (Not-Monitored)
+                slot 1: ASA5585-SSP-IPS10 hw/sw rev (2.2/7.3(5)E4) status (Up/Up)
+                  IPS, 7.3(5)E4, Up, (Monitored)
+                slot 1: ASA5585-SSP-IPS10 hw/sw rev (2.2/7.3(5)E4) status (Up/Up)
+                  IPS, 7.3(5)E4, Up, (Monitored)
+        Other host: Secondary - Standby Ready
+                Active time: 258 (sec)
+                slot 0: ASA5585-SSP-10 hw/sw rev (2.2/9.12(4)37) status (Up Sys)
+                  Interface Outside (0.0.0.0): Normal (Waiting)
+                  Interface Security-Management (10.20.10.11): Normal (Monitored)
+                  Interface DMZ_Trunk (0.0.0.0): Normal (Waiting)
+                  Interface Inside (0.0.0.0): Normal (Not-Monitored)
+                slot 1: ASA5585-SSP-IPS10 hw/sw rev (2.0/7.3(5)E4) status (Up/Up)
+                  IPS, 7.3(5)E4, Up, (Monitored)
+                slot 1: ASA5585-SSP-IPS10 hw/sw rev (2.0/7.3(5)E4) status (Up/Up)
+                  IPS, 7.3(5)E4, Up, (Monitored)
+
+Stateful Failover Logical Update Statistics
+        Link : HA-State-Sync-Data TenGigabitEthernet0/9 (up)
+        Stateful Obj    xmit       xerr       rcv        rerr
+        General         22111809051 0          4156242    70
+        sys cmd         3877955    0          3877954    0
+        up time         0          0          0          0
+        RPC services    0          0          0          0
+        TCP conn        13524250579 0          214505     0
+        UDP conn        8064826558 0          55238      70
+        ARP tbl         34413697   0          517        0
+        Xlate_Timeout   0          0          0          0
+        IPv6 ND tbl     0          0          0          0
+        VPN IKEv1 SA    0          0          0          0
+        VPN IKEv1 P2    0          0          0          0
+        VPN IKEv2 SA    3560749    0          45         0
+        VPN IKEv2 P2    121119     0          0          0
+        VPN CTCP upd    0          0          0          0
+        VPN SDI upd     0          0          0          0
+        VPN DHCP upd    0          0          0          0
+        SIP Session     273713991  0          3614       0
+        SIP Tx  205219097  0          2790       0
+        SIP Pinhole     1244619    0          521        0
+        Route Session   580685     0          1056       0
+        Router ID       1          0          1          0
+        User-Identity   1          0          1          0
+        CTS SGTNAME     0          0          0          0
+        CTS PAC         0          0          0          0
+        TrustSec-SXP    0          0          0          0
+        IPv6 Route      0          0          0          0
+        STS Table       0          0          0          0
+        Umbrella Device-ID      0          0          0          0
+
+        Logical Update Queue Information
+                        Cur     Max     Total
+        Recv Q:         0       28      33235360
+        Xmit Q:         0       206     21746731593
