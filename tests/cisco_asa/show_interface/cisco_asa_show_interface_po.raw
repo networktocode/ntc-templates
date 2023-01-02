@@ -1,0 +1,50 @@
+Interface GigabitEthernet1/2 "", is up, line protocol is up
+  Hardware is Accelerator rev01, BW 1000 Mbps, DLY 10 usec
+        Auto-Duplex(Full-duplex), Auto-Speed(1000 Mbps)
+        Input flow control is unsupported, output flow control is off
+        Description: SWI01 - Gi0/2
+        Active member of Port-channel1
+        MAC address 00ea.bd1c.f7d9, MTU not set
+        IP address unassigned
+        2472564 packets input, 274906603 bytes, 0 no buffer
+        Received 89 broadcasts, 0 runts, 0 giants
+        0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored, 0 abort
+        0 pause input, 0 resume input
+        0 L2 decode drops
+        15654312 packets output, 16658308355 bytes, 0 underruns
+        0 pause output, 0 resume output
+        0 output errors, 0 collisions, 0 interface resets
+        0 late collisions, 0 deferred
+        0 input reset drops, 0 output reset drops
+        input queue (blocks free curr/low): hardware (979/803)
+        output queue (blocks free curr/low): hardware (1023/849)
+Interface GigabitEthernet1/3 "", is up, line protocol is up
+  Hardware is Accelerator rev01, BW 1000 Mbps, DLY 10 usec
+        Auto-Duplex(Full-duplex), Auto-Speed(1000 Mbps)
+        Input flow control is unsupported, output flow control is off
+        Description: SWI01 - Gi0/3
+        Active member of Port-channel1
+        MAC address 00ea.bd1c.f7da, MTU not set
+        IP address unassigned
+        10990481 packets input, 4531931760 bytes, 0 no buffer
+        Received 17258 broadcasts, 0 runts, 0 giants
+        0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored, 0 abort
+        0 pause input, 0 resume input
+        0 L2 decode drops
+        10453275 packets output, 11970461815 bytes, 0 underruns
+        0 pause output, 0 resume output
+        0 output errors, 0 collisions, 0 interface resets
+        0 late collisions, 0 deferred
+        0 input reset drops, 0 output reset drops
+        input queue (blocks free curr/low): hardware (969/800)
+        output queue (blocks free curr/low): hardware (1023/857)
+Interface Port-channel1 "", is up, line protocol is up
+  Hardware is EtherChannel/LACP, BW 2000 Mbps, DLY 10 usec
+        Auto-Duplex(Full-duplex), Auto-Speed(1000 Mbps)
+        Input flow control is unsupported, output flow control is off
+        Description: UPLINK > HME-C3560-SWI01 - Po11
+        Available but not configured via nameif
+        MAC address 00ea.bd1c.f7d9, MTU not set
+        IP address unassigned
+  Members in this channel:
+      Active:   Gi1/2 Gi1/3 
