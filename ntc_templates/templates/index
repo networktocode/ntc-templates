@@ -698,6 +698,7 @@ oneaccess_oneos_show_ip_access-lists.textfsm, .*, oneaccess_oneos, sh[[ow]] ip a
 oneaccess_oneos_cat_bsa_bsaboot.inf.textfsm, .*, oneaccess_oneos, cat (\/|)BSA(\/| )bsaBoot.inf
 oneaccess_oneos_show_ip_prefix-list.textfsm, .*, oneaccess_oneos, sh[[ow]] ip prefix-list
 oneaccess_oneos_show_snmp_community.textfsm, .*, oneaccess_oneos, sh[[ow]] snmp comm[[unity]]
+oneaccess_oneos_show_soft-file_info.textfsm, .*, oneaccess_oneos, sh[[ow]] soft\-file info.*
 oneaccess_oneos_show_software-image.textfsm, .*, oneaccess_oneos, sh[[ow]] software-image
 oneaccess_oneos_show_system_status.textfsm, .*, oneaccess_oneos, sh[[ow]] system status
 oneaccess_oneos_show_tacacs-server.textfsm, .*, oneaccess_oneos, sh[[ow]] tacacs\-server
@@ -710,6 +711,7 @@ oneaccess_oneos_show_tacacs.textfsm, .*, oneaccess_oneos, sh[[ow]] tacacs
 oneaccess_oneos_show_sntp.textfsm, .*, oneaccess_oneos, sh[[ow]] sntp
 oneaccess_oneos_hostname.textfsm, .*, oneaccess_oneos, hostname
 oneaccess_oneos_ls.textfsm, .*, oneaccess_oneos, ls( -[lh][lh]? )?.*
+
 
 paloalto_panos_show_running_security-policy.textfsm, .*, paloalto_panos, sh[[ow]] runn[[ing]] security[[-policy]]
 paloalto_panos_show_high-availability_all.textfsm, .*, paloalto_panos, sh[[ow]] high[[-availability]] all
