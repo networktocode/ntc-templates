@@ -1,0 +1,46 @@
+	voice port				5/0
+		physical type			E1
+		protocol descriptor		E1_PRI
+		config state			up
+		loop state			down 
+		framing				MF
+		layer 1 status			activated
+		 Alarm Indication Signal (AIS)	OFF
+		 Loss Off Signal (LOS)		OFF
+		 Remote Alarm Indication (RAI)	OFF
+		 pri AIS occurrence(s)		0
+		 pri LOS occurrence(s)		0
+		 pri RAI occurrence(s)		0
+		layer 2 status			activated
+                                                 ces:  1 ,   0 , established
+
+		 pri Tx frames on D channel	4466
+		 pri Rx frames on D channel	4466
+		attached voip dial peer		0
+		number of voice communication	0
+		Channel(s) used			
+ 
+		Outgoing calls				0
+		Outgoing calls failures			0
+			Insufficient pots-group resource	0
+			Physical Interface down			0
+			Cause Class 0 (normal event)		0
+			Cause Class 1 (normal event)		0
+				Normal Cause (16)		0
+				User busy (17)			0
+				No answer (18)			0
+			Cause Class 2 (unavailable resources)	0
+			Cause Class 3 (unavailable service)	0
+			Cause Class 4 (service not provided)	0
+			Cause Class 5 (invalid message)		0
+			Cause Class 6 (protocol error)		0
+			Cause Class 7 (interworking)		0
+ 
+		Incoming calls				0
+		Incoming calls backup invoked		0
+		Incoming calls failures			0
+			Remote failure				0
+			Unknown number				0
+			DSP unavailable				0
+			No VoIP resource available		0
+			Not specified				0
