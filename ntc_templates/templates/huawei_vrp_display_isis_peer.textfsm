@@ -1,0 +1,16 @@
+Value SYSTEM_ID ((\d+.\d+.\d+)|\S+)
+Value INTERFACE (\S+)
+Value CIRCUIT_ID (\d+)
+Value STATE (\S+)
+Value HOLD_TIME (\S+)
+Value TYPE ((L\d)+)
+Value PRI (\S+)
+
+Start
+  ^\s+Peer\s+information\s+for\s+\S+
+  ^\s+System\s+Id\s+Interface\s+Circuit\s+Id\s+State\s+HoldTime\s+Type\s+PRI
+  ^-+
+  ^${SYSTEM_ID}\s+${INTERFACE}\s+${CIRCUIT_ID}\s+${STATE}\s+${HOLD_TIME}\s+${TYPE}\s+${PRI} -> Record
+  ^Total\s+Peer\S+:\s+\d+
+  ^\s*$$
+  ^. -> Error

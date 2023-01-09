@@ -9,6 +9,8 @@
 # CLUSTER MODE: AP
 # VDOMS       : ENABLED
 #
+# 2022-11-27: Update for 7.0 by Klaus
+#
 Value Required HOSTNAME (\S+)
 Value VERSION (.*)
 Value SIGNATURE (.*)
@@ -39,12 +41,15 @@ Value BRANCH_POINT (\S+)
 Value RELEASE_VERSION_INFORMATION (\S+)
 Value FORTIOS_X86_64 (\S+)
 Value SYSTEM_TIME (.*)
+Value AV_AI_ML_MODEL (.+)
+Value LAST_REBOOT_REASON (.+)
 
 Start
   ^Version:\s+${VERSION}
   ^Firmware Signature:\s+${SIGNATURE}
   ^Virus-DB:\s+${VIRUS_DB}
   ^Extended\s+DB:\s+${EXTENDED_DB}
+  ^AV\s+AI/ML\s+Model:\s+${AV_AI_ML_MODEL}
   ^Extreme\s+DB:\s+${EXTREME_DB}
   ^IPS-DB:\s+${IPS_DB}
   ^IPS-ETDB:\s+${IPS_ETDB}
@@ -70,7 +75,7 @@ Start
   ^Branch\s+point:\s+${BRANCH_POINT}
   ^Release\s+Version\s+Information:\s+${RELEASE_VERSION_INFORMATION}
   ^FortiOS\s+x86-64:\s+${FORTIOS_X86_64}
-  ^System\s+time:\s+${SYSTEM_TIME} -> Record
+  ^System\s+time:\s+${SYSTEM_TIME}
+  ^Last\s+reboot\s+reason:\s+${LAST_REBOOT_REASON}
   ^\s*$$
   ^. -> Error
-

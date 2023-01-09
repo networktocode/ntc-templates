@@ -4,6 +4,8 @@ Value List INTERFACE (\S+)
 
 Start
   ^Prefix.*Next.*Interface.*Labels.*Partial.*Install\s*$$ -> FIB
+  # N5K doesn't have Partial Install field
+  ^Prefix.*Next.*Interface.*Labels\s*$$ -> FIB
 
 FIB
   # Start Record on encountering a Prefix, don't substitute any values yet

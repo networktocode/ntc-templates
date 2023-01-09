@@ -1,0 +1,145 @@
+Vlan-interface2000
+Current state: UP
+Line protocol state: UP
+Description: Servers-VLAN
+Bandwidth: 10000000 kbps
+Maximum transmission unit: 1500
+Internet address: 10.1.200.1/24 (Primary)
+IP packet frame type: Ethernet II, hardware address: abab-cdcd-6486
+IPv6 packet frame type: Ethernet II, hardware address: abab-cdcd-6486
+Last clearing of counters: Never
+Last 300 seconds input rate: 7 bytes/sec, 56 bits/sec, 0 packets/sec
+Last 300 seconds output rate: 16 bytes/sec, 128 bits/sec, 0 packets/sec
+Input: 9103 packets, 611444 bytes, 0 drops
+Output: 18587 packets, 1143610 bytes, 0 drops
+
+Bridge-Aggregation20
+Current state: UP
+Line protocol state: UP
+IP packet frame type: Ethernet II, hardware address: abab-cdcd-6485
+Description: TO_DIST_02_3rd_FLOOR
+Bandwidth: 40000000 kbps
+40Gbps-speed mode, full-duplex mode
+Link speed type is autonegotiation, link duplex type is autonegotiation
+PVID: 1
+Port link-type: Trunk
+ VLAN Passing:   1(default vlan), 4001-4002
+ VLAN permitted: 1(default vlan), 2001-2020, 2190, 4001-4002
+ Trunk port encapsulation: IEEE 802.1q
+Last clearing of counters: Never
+Last 300 seconds input:  3143 packets/sec 929430 bytes/sec 0%
+Last 300 seconds output:  5674 packets/sec 5945156 bytes/sec 0%
+Input (total):  80274398 packets, 24384580165 bytes
+        80218843 unicasts, 12 broadcasts, 55543 multicasts, 0 pauses
+Input (normal):  80274398 packets, - bytes
+        80218843 unicasts, 12 broadcasts, 55543 multicasts, 0 pauses
+Input:  0 input errors, 0 runts, 0 giants, 0 throttles
+        0 CRC, 0 frame, - overruns, 0 aborts
+        - ignored, - parity errors
+Output (total): 110103849 packets, 90115617821 bytes
+        109953707 unicasts, 9 broadcasts, 150133 multicasts, 0 pauses
+Output (normal): 110103849 packets, - bytes
+        109953707 unicasts, 9 broadcasts, 150133 multicasts, 0 pauses
+Output: 0 output errors, - underruns, - buffer failures
+        0 aborts, 0 deferred, 0 collisions, 0 late collisions
+        0 lost carrier, - no carrier
+
+GigabitEthernet1/1/0/31
+Current state: DOWN
+Line protocol state: DOWN
+IP packet frame type: Ethernet II, hardware address: abab-cdcd-6485
+Description: Aruba-WLC
+Bandwidth: 1000000 kbps
+Loopback is not set
+Media type is twisted pair, port hardware type is 1000_BASE_T
+Unknown-speed mode, unknown-duplex mode
+Link speed type is autonegotiation, link duplex type is autonegotiation
+Flow-control is not enabled
+Maximum frame length: 9216
+Allow jumbo frames to pass
+Broadcast max-ratio: 100%
+Multicast max-ratio: 100%
+Unicast max-ratio: 100%
+PVID: 2190
+MDI type: Automdix
+Port link-type: Trunk
+ VLAN Passing:   2000, 3230, 4001-4005, 4049-4052
+ VLAN permitted: 2-4094
+ Trunk port encapsulation: IEEE 802.1q
+Port priority: 0
+Last link flapping: Never
+Last clearing of counters: Never
+Current system time:2022-12-04 09:59:42 SAR+03:00:00
+Last time when physical state changed to up:-
+Last time when physical state changed to down:2022-12-03 14:48:11 SAR+03:00:00
+Peak input rate: 0 bytes/sec, at 2022-12-03 14:48:40 
+Peak output rate: 0 bytes/sec, at 2022-12-03 14:48:40 
+Last 300 seconds input: 0 packets/sec 0 bytes/sec -%
+Last 300 seconds output: 0 packets/sec 0 bytes/sec -%
+Input (total):  0 packets, 0 bytes
+        0 unicasts, 0 broadcasts, 0 multicasts, 0 pauses
+Input (normal):  0 packets, - bytes
+        0 unicasts, 0 broadcasts, 0 multicasts, 0 pauses
+Input:  0 input errors, 0 runts, 0 giants, 0 throttles
+        0 CRC, 0 frame, - overruns, 0 aborts
+        - ignored, - parity errors
+Output (total): 0 packets, 0 bytes
+        0 unicasts, 0 broadcasts, 0 multicasts, 0 pauses
+Output (normal): 0 packets, - bytes
+        0 unicasts, 0 broadcasts, 0 multicasts, 0 pauses
+Output: 0 output errors, - underruns, - buffer failures
+        0 aborts, 0 deferred, 0 collisions, 0 late collisions
+        0 lost carrier, - no carrier
+IPv4 traffic statistics:
+ Last 300 seconds input rate: 0 packets/sec, 0 bytes/sec
+ Last 300 seconds output rate: 0 packets/sec, 0 bytes/sec
+ Input: 0 packets, 0 bytes
+ Output: 0 packets, 0 bytes
+IPv6 traffic statistics:
+ Last 300 seconds input rate: 0 packets/sec, 0 bytes/sec
+ Last 300 seconds output rate: 0 packets/sec, 0 bytes/sec
+ Input: 0 packets, 0 bytes
+ Output: 0 packets, 0 bytes
+
+Ten-GigabitEthernet1/0/1
+Current state: DOWN
+Line protocol state: DOWN
+IP packet frame type: Ethernet II, hardware address: 000c-2963-b767
+Description: Ten-GigabitEthernet1/0/1 Interface
+Bandwidth: 100000 kbps
+Loopback is not set
+Media type is twisted pair, port hardware type is 1000_BASE_T_AN_SFP
+Unknown-speed mode, unknown-duplex mode
+Link speed type is autonegotiation, link duplex type is autonegotiation
+Flow-control is not enabled
+Maximum frame length: 9216
+Allow jumbo frame to pass
+Broadcast max-ratio: 100%
+Multicast max-ratio: 100%
+Unicast max-ratio: 100%
+PVID: 1
+MDI type: Automdix
+Port link-type: Access
+ Tagged VLANs:   None
+ UnTagged VLANs: 1
+Port priority: 2
+Last link flapping: 6 hours 39 minutes 25 seconds
+Last clearing of counters:  14:34:09 Tue 11/01/2011
+Peak input rate: 0 bytes/sec, at 2013-07-17 22:06:19
+Peak output rate: 0 bytes/sec, at 2013-07-17 22:06:19
+Last 300 second input:  0 packets/sec 0 bytes/sec -%
+Last 300 second output:  0 packets/sec 0 bytes/sec -%
+Input (total):  0 packets, 0 bytes
+        0 unicasts, 0 broadcasts, 0 multicasts, 0 pauses
+Input (normal):  0 packets, 0 bytes
+        0 unicasts, 0 broadcasts, 0 multicasts, 0 pauses
+Input:  0 input errors, 0 runts, 0 giants, 0 throttles
+        0 CRC, 0 frame, 0 overruns, 0 aborts
+        0 ignored, 0 parity errors
+Output (total): 0 packets, 0 bytes
+        0 unicasts, 0 broadcasts, 0 multicasts, 0 pauses
+Output (normal): 0 packets, 0 bytes
+        0 unicasts, 0 broadcasts, 0 multicasts, 0 pauses
+Output: 0 output errors, 0 underruns, 0 buffer failures
+        0 aborts, 0 deferred, 0 collisions, 0 late collisions
+        0 lost carrier, 0 no carrier

@@ -1,0 +1,79 @@
+FortyGigE1/0/49
+Current state: DOWN
+Line protocol state: DOWN
+IP packet frame type: Ethernet II, hardware address: bcea-fa19-5f8c
+Description: FortyGigE1/0/49 Interface
+Bandwidth: 40000000 kbps
+Loopback is not set
+Media type is not sure, port hardware type is No connector
+Unknown-speed mode, unknown-duplex mode
+Link speed type is autonegotiation, link duplex type is autonegotiation
+Flow-control is not enabled
+Maximum frame length: 10000
+Allow jumbo frames to pass
+Broadcast max-ratio: 100%
+Multicast max-ratio: 100%
+Unicast max-ratio: 100%
+PVID: 1
+MDI type: Automdix
+Port link-type: Access
+ Tagged VLANs:   None
+ Untagged VLANs: 1
+Port priority: 0
+Last link flapping: Never
+Last clearing of counters: Never
+ Peak input rate: 0 bytes/sec, at 2011-01-01 03:03:20 
+ Peak output rate: 0 bytes/sec, at 2011-01-01 03:03:20 
+ Last 300 second input: 0 packets/sec 0 bytes/sec -%
+ Last 300 second output: 0 packets/sec 0 bytes/sec -%
+ Input (total):  0 packets, 0 bytes
+         0 unicasts, 0 broadcasts, 0 multicasts, 0 pauses
+ Input (normal):  0 packets, - bytes
+         0 unicasts, 0 broadcasts, 0 multicasts, 0 pauses
+ Input:  0 input errors, 0 runts, 0 giants, 0 throttles
+         0 CRC, 0 frame, - overruns, 0 aborts
+         - ignored, - parity errors
+ Output (total): 0 packets, 0 bytes
+         0 unicasts, 0 broadcasts, 0 multicasts, 0 pauses
+ Output (normal): 0 packets, - bytes
+         0 unicasts, 0 broadcasts, 0 multicasts, 0 pauses
+ Output: 0 output errors, - underruns, - buffer failures
+         0 aborts, 0 deferred, 0 collisions, 0 late collisions
+         0 lost carrier, - no carrier
+
+InLoopBack0
+Current state: UP
+Line protocol state: UP(spoofing)
+Description: InLoopBack0 Interface
+Bandwidth: 0 kbps
+Maximum transmission unit: 1536
+Physical: InLoopBack
+Last 300 seconds input rate: 0 bytes/sec, 0 bits/sec, 0 packets/sec
+Last 300 seconds output rate: 0 bytes/sec, 0 bits/sec, 0 packets/sec
+Input: 0 packets, 0 bytes, 0 drops
+Output: 5 packets, 420 bytes, 0 drops
+
+M-GigabitEthernet0/0/0
+Current state: DOWN
+Line protocol state: DOWN
+Description: M-GigabitEthernet0/0/0 Interface
+Bandwidth: 1000000 kbps
+Maximum transmission unit: 1500
+Internet protocol processing: Disabled
+IP packet frame type: Ethernet II, hardware address: bcea-fa19-8bec
+IPv6 packet frame type: Ethernet II, hardware address: bcea-fa19-8bec
+Last link flapping: Never
+Last clearing of counters: Never
+Media type is twisted pair, loopback not set
+Port hardware type is 1000_BASE_T
+Unknown-speed mode, unknown-duplex mode
+Link speed type is autonegotiation , Link duplex type is autonegotiation
+input:   0 packets, 0 bytes
+         0 broadcasts,0 multicasts
+input:   - input errors,- runts,- giants,- throttles,0 CRC
+         - frame,- overruns,- aborts,- ignored,- parity errors
+output:  0 packets, 0 bytes
+         0 broadcasts,0 multicasts
+output:  - output errors,- underruns,- buffer failures
+         - aborts,- deferred,0 collisions,0 late collisions
+         - lost carrier,- no carrier
