@@ -1,0 +1,10 @@
+Value Required INTERFACE (\d\S+)
+Value VENDOR (\S+)
+Value OPTIC_DESCRIPTION (.*)
+Value OPTIC_TYPE (\S+)
+
+Start
+  ^\s*Port\s+Supported\.*
+  ^\s*-+
+  ^${INTERFACE}\s+\w+\s+${VENDOR}\s+Type\s+:\s+${OPTIC_DESCRIPTION}\s+\(${OPTIC_TYPE}\)\s*$$ -> Record
+  ^. -> Error

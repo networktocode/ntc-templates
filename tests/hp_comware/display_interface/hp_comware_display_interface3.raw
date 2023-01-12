@@ -1,0 +1,29 @@
+Bridge-Aggregation1
+Current state: UP
+IP packet frame type: Ethernet II, hardware address: bcea-fa19-5f6c
+Description: FL00-Z01
+Bandwidth: 20000000 kbps
+20Gbps-speed mode, full-duplex mode
+Link speed type is autonegotiation, link duplex type is autonegotiation
+PVID: 1
+Port link-type: Trunk
+ VLAN Passing:   1(default vlan), 1000-1002, 1031, 1051, 1100, 2191, 3231, 4001
+ VLAN permitted: 1(default vlan), 2-4094
+ Trunk port encapsulation: IEEE 802.1q
+Last clearing of counters: Never
+Last 300 seconds input:  1 packets/sec 495 bytes/sec 0%
+Last 300 seconds output:  4 packets/sec 606 bytes/sec 0%
+Input (total):  5540021 packets, 1395572601 bytes
+	3138997 unicasts, 1270 broadcasts, 2399754 multicasts, 0 pauses
+Input (normal):  5540021 packets, - bytes
+	3138997 unicasts, 1270 broadcasts, 2399754 multicasts, 0 pauses
+Input:  0 input errors, 0 runts, 0 giants, 0 throttles
+	0 CRC, 0 frame, - overruns, 0 aborts
+	- ignored, - parity errors
+Output (total): 18114817 packets, 5095908012 bytes
+	4250899 unicasts, 2347877 broadcasts, 11516041 multicasts, 0 pauses
+Output (normal): 18114817 packets, - bytes
+	4250899 unicasts, 2347877 broadcasts, 11516041 multicasts, 0 pauses
+Output: 0 output errors, - underruns, - buffer failures
+	0 aborts, 0 deferred, 0 collisions, 0 late collisions
+	0 lost carrier, - no carrier

@@ -37,7 +37,6 @@ def _clitable_to_dict(cli_table):
 
 def parse_output(platform=None, command=None, data=None):
     """Return the structured data based on the output from a network device."""
-
     if not HAS_CLITABLE:
         msg = """
 The TextFSM library is not currently supported on Windows. If you are NOT using Windows
@@ -56,12 +55,8 @@ https://github.com/google/textfsm/pull/82
     try:
         cli_table.ParseCmd(data, attrs)
         structured_data = _clitable_to_dict(cli_table)
-    except clitable.CliTableError as e:
-        raise Exception(
-            'Unable to parse command "{0}" on platform {1} - {2}'.format(
-                command, platform, str(e)
-            )
-        )
+    except clitable.CliTableError as err:
+        raise Exception(f'Unable to parse command "{command}" on platform {platform} - {str(err)}') from err
         # Invalid or Missing template
         # module.fail_json(msg='parsing error', error=str(e))
         # rather than fail, fallback to return raw text

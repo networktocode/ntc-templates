@@ -1,0 +1,9 @@
+  VPN-Instance Name and Index : vpnb, 2
+  Route Distinguisher : 100:2
+  Interfaces : Vlan-interface20, FortyGigE1/0/53,
+               GigabitEthernet1/0/25
+  Address-family IPv4:
+   Export VPN Targets :
+       222:2
+   Import VPN Targets :
+       222:2 111:1

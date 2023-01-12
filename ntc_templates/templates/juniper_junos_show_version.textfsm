@@ -7,6 +7,7 @@ Value KERNEL_SOFTWARE_SUITE (\S+)
 Value CRYPTO_SOFTWARE_SUITE (\S+)
 Value PACKET_FORWARDING_ENGINE_SUPPORT_M_T_EX_COMMON (\S+)
 Value PACKET_FORWARDING_ENGINE_SUPPORT_MX_COMMON (\S+)
+Value FIPS_MODE_UTILITIES (\S+)
 Value ONLINE_DOCUMENTATION (\S+)
 Value SERVICES_AACL_CONTAINER_PACKAGE (\S+)
 Value SERVICES_APPLICATION_LEVEL_GATEWAYS (\S+)
@@ -36,17 +37,20 @@ Value SERIAL_NUMBER (\S+)
 Value QFABRIC_SYSTEM_ID (\S+)
 Value List OTHER_DEVICE_PROPERTIES ([^\[]*)
 Value List OTHER_PROPERTIES_VERSIONS (\S+)
+Value REDIS_VERSION (\S+)
 
 Start
-  ^Hostname:\s+${HOSTNAME} 
+  ^Hostname:\s+${HOSTNAME}
   ^Model:\s+${MODEL}
   ^Junos:\s+${JUNOS_VERSION}
+  ^JUNOS\s+EX\s*Software\s+Suite\s+\[${JUNOS_VERSION}\]
   ^JUNOS\s+Base\s+OS\s+boot\s+\[${BASE_OS_BOOT}\]
   ^JUNOS\s+Base\s+OS\s+Software\s+Suite\s+\[${BASE_OS_SOFTWARE_SUITE}\]
   ^JUNOS\s+Kernel\s+Software\s+Suite\s+\[${KERNEL_SOFTWARE_SUITE}\]
   ^JUNOS\s+Crypto\s+Software\s+Suite\s+\[${CRYPTO_SOFTWARE_SUITE}\]
   ^JUNOS\s+Packet\s+Forwarding\s+Engine\s+Support\s+\(M/T/EX\s+Common\)\s+\[${PACKET_FORWARDING_ENGINE_SUPPORT_M_T_EX_COMMON}\]
   ^JUNOS\s+Packet\s+Forwarding\s+Engine\s+Support\s+\(MX\s+Common\)\s+\[${PACKET_FORWARDING_ENGINE_SUPPORT_MX_COMMON}\]
+  ^JUNOS\s+FIPS\s+mode\s+utilities\s+\[${FIPS_MODE_UTILITIES}\]
   ^JUNOS\s+Online\s+Documentation\s+\[${ONLINE_DOCUMENTATION}\]
   ^JUNOS\s+Services\s+AACL\s+Container\s+package\s+\[${SERVICES_AACL_CONTAINER_PACKAGE}\]
   ^JUNOS\s+Services\s+Application\s+Level\s+Gateways\s+\[${SERVICES_APPLICATION_LEVEL_GATEWAYS}\]
@@ -75,7 +79,11 @@ Start
   ^Serial\s+Number:\s+${SERIAL_NUMBER}
   ^QFabric\s+System\s+ID:\s+${QFABRIC_SYSTEM_ID}
   ^JUNOS\s+${OTHER_DEVICE_PROPERTIES}\[${OTHER_PROPERTIES_VERSIONS}\]
+  ^Redis\s+\[${REDIS_VERSION}\]
   ^fpc\d+
+  ^node\d+
   ^-----
   ^{master:\d+}
+  ^{primary:\S+}
+  ^\s*$$
   ^. -> Error

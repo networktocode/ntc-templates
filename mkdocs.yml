@@ -1,0 +1,129 @@
+---
+dev_addr: "127.0.0.1:8001"
+edit_uri: "edit/develop/docs"
+site_dir: "ntc-templates/static/ntc-templates/docs"
+site_name: "NTC Templates Documentation"
+site_url: "https://ntc-templates.readthedocs.io/en/latest/"
+repo_url: "https://github.com/networktocode/ntc-templates"
+copyright: "Copyright &copy; The Authors"
+theme:
+  name: "material"
+  navigation_depth: 4
+  custom_dir: "docs/assets/overrides"
+  hljs_languages:
+    - "python"
+    - "yaml"
+  features:
+    - "navigation.tracking"
+    - "navigation.tabs"
+    - "navigation.tabs.sticky"
+    - "search.suggest"
+    - "search.highlight"
+    - "search.share"
+    - "navigation.indexes"
+  favicon: "assets/favicon.ico"
+  logo: "assets/networktocode_logo.svg"
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: "default"
+      primary: "black"
+      toggle:
+        icon: "material/weather-sunny"
+        name: "Switch to dark mode"
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: "slate"
+      primary: "black"
+      toggle:
+        icon: "material/weather-night"
+        name: "Switch to light mode"
+extra_css:
+  - "assets/extra.css"
+
+# needed for RTD version flyout menu
+# jquery is not (yet) injected by RTD automatically and it might be dropped
+# as a dependency in the future
+extra_javascript:
+  - "https://code.jquery.com/jquery-3.6.0.min.js"
+
+extra:
+  generator: false
+  ntc_sponsor: true
+  social:
+    - icon: "fontawesome/solid/rss"
+      link: "https://blog.networktocode.com/"
+      name: "Network to Code Blog"
+    - icon: "fontawesome/brands/youtube"
+      link: "https://www.youtube.com/channel/UCwBh-dDdoqzxXKyvTw3BuTw"
+      name: "Network to Code Videos"
+    - icon: "fontawesome/brands/slack"
+      link: "https://www.networktocode.com/community/"
+      name: "Network to Code Community"
+    - icon: "fontawesome/brands/github"
+      link: "https://github.com/networktocode/"
+      name: "GitHub Organization"
+    - icon: "fontawesome/brands/twitter"
+      link: "https://twitter.com/networktocode"
+      name: "Network to Code Twitter"
+markdown_extensions:
+  - "admonition"
+  - "toc":
+      permalink: true
+  - "attr_list"
+  - "md_in_html"
+  - "pymdownx.highlight":
+      anchor_linenums: true
+  - "pymdownx.inlinehilite"
+  - "pymdownx.snippets"
+  - "pymdownx.superfences"
+  - "footnotes"
+plugins:
+  - "search"
+  - "mkdocs-version-annotations"
+  - "mkdocstrings":
+      default_handler: "python"
+      handlers:
+        python:
+          paths: ["."]
+          options:
+            show_root_heading: true
+watch:
+  - "README.md"
+
+nav:
+  - Overview: "index.md"
+  - User Guide:
+      - Library Overview: "user/lib_overview.md"
+      - Using the Library: "user/lib_use_cases.md"
+      - Getting Started: "user/lib_getting_started.md"
+      - Frequently Asked Questions: "user/faq.md"
+  - Administrator Guide:
+      - Install and Configure: "admin/install.md"
+      - Upgrade: "admin/upgrade.md"
+      - Uninstall: "admin/uninstall.md"
+      - Release Notes:
+          - "admin/release_notes/index.md"
+          - v0.9: "admin/release_notes/version_0.9.md"
+          - v1.1: "admin/release_notes/version_1.1.md"
+          - v1.2: "admin/release_notes/version_1.2.md"
+          - v1.3: "admin/release_notes/version_1.3.md"
+          - v1.4: "admin/release_notes/version_1.4.md"
+          - v1.5: "admin/release_notes/version_1.5.md"
+          - v1.6: "admin/release_notes/version_1.6.md"
+          - v1.7: "admin/release_notes/version_1.7.md"
+          - v2.0: "admin/release_notes/version_2.0.md"
+          - v2.1: "admin/release_notes/version_2.1.md"
+          - v2.2: "admin/release_notes/version_2.2.md"
+          - v2.3: "admin/release_notes/version_2.3.md"
+          - v3.0: "admin/release_notes/version_3.0.md"
+          - v3.1: "admin/release_notes/version_3.1.md"
+          - v3.2: "admin/release_notes/version_3.2.md"
+  - Developer Guide:
+      - Extending the Library: "dev/extending.md"
+      - Contributing to the Library: "dev/contributing.md"
+      - Development Environment: "dev/dev_environment.md"
+      - TextFSM Parser Development: "dev/dev_parser.md"
+      - Code Reference:
+          - Parse: "dev/code_reference/parse.md"

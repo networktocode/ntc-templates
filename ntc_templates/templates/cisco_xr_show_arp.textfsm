@@ -4,7 +4,7 @@ Value Required MAC (\S+)
 Value Required STATE (\S+)
 Value Required TYPE (\S+)
 Value Required INTERFACE (\S+)
-Value Filldown CPU (\d+/\d+/CPU\d+$)
+Value Filldown CPU (\d+/\S*\d+/CPU\d+$)
 
 Start
   # Match the timestamp at beginning of command output

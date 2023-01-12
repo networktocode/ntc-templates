@@ -8,11 +8,10 @@ Start
   ^NAME:\s+"${NAME}",\s+DESCR:\s+"${DESCR}"
   ^NAME:\s+${NAME},\s+DESCR:\s+${DESCR}
   ^PID:\s+${PID}.*,.*VID:\s+${VID}.*SN:\s+${SN} -> Record
-  ^PID:\s+,.*VID:\s+${VID}.*SN: -> Record
   ^PID:\s+${PID}.*,.*VID:\s+${VID}.*SN: -> Record
   ^PID:\s+,.*VID:\s+${VID}.*SN:\s+${SN} -> Record
+  ^PID:\s+,.*VID:\s+${VID}.*SN: -> Record
   ^PID:\s+${PID}.*,.*VID:\s+${VID}.*
   ^PID:\s+,.*VID:\s+${VID}.*
   ^.*SN:\s+${SN} -> Record
   ^.*SN: -> Record
-

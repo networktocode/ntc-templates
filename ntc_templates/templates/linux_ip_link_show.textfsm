@@ -1,0 +1,28 @@
+Value Required ID (\d+)
+Value Required INTERFACE ([^:]+)
+Value Required FLAGS (\S+)
+Value Required MTU (\d+)
+Value Required QDISC (\S+)
+Value Required STATE (\S+)
+Value Required MODE (\S+)
+Value Required GROUP (\S+)
+Value QLEN (\d+)
+Value MASTER (\S+)
+Value Required TYPE (\S+)
+Value ADDRESS ([a-fA-F0-9]{2}:[a-fA-F0-9]{2}:[a-fA-F0-9]{2}:[a-fA-F0-9]{2}:[a-fA-F0-9]{2}:[a-fA-F0-9]{2})
+Value BROADCAST ([a-fA-F0-9]{2}:[a-fA-F0-9]{2}:[a-fA-F0-9]{2}:[a-fA-F0-9]{2}:[a-fA-F0-9]{2}:[a-fA-F0-9]{2})
+
+Start
+  ^\d+ -> Continue.Record
+  # loopback
+  ^${ID}: ${INTERFACE}: <${FLAGS}> mtu ${MTU} qdisc ${QDISC} state ${STATE} mode ${MODE} group ${GROUP}$$ -> Continue
+  # physical, bridge
+  ^${ID}: ${INTERFACE}: <${FLAGS}> mtu ${MTU} qdisc ${QDISC} state ${STATE} mode ${MODE} group ${GROUP} qlen ${QLEN}$$ -> Continue
+  # vrf
+  ^${ID}: ${INTERFACE}: <${FLAGS}> mtu ${MTU} qdisc ${QDISC} master ${MASTER} state ${STATE} mode ${MODE} group ${GROUP} qlen ${QLEN}$$ -> Continue
+  # Link type and MAC address
+  ^\s+link/${TYPE}$$
+  ^\s+link/${TYPE} ${ADDRESS} brd ${BROADCAST}$$
+  ^\d+
+  ^\s+
+  ^. -> Error

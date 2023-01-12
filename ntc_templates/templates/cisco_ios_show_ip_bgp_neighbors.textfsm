@@ -1,4 +1,5 @@
 Value NEIGHBOR (\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})
+Value VRF (\S+)
 Value REMOTE_AS (\d+)
 Value PEER_GROUP (\S+)
 Value REMOTE_ROUTER_ID (\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})
@@ -13,7 +14,7 @@ Value OUTBOUND_ROUTEMAP (\S+)
 Start
   # Capture first line, which shows the BGP neighor and remote AS number
   ^BGP\s+neighbor\s+is -> Continue.Record
-  ^BGP\s+neighbor\s+is\s+${NEIGHBOR},\s+remote\s+AS\s+${REMOTE_AS}
+  ^BGP\s+neighbor\s+is\s+${NEIGHBOR},(\s+vrf\s+${VRF},)?\s+remote\s+AS\s+${REMOTE_AS}
   # Capture BGP peer group
   # Example: 'Member of peer-group RR_SERVERS for session parameters'
   ^\s*Member\s+of\s+peer-group\s+${PEER_GROUP}

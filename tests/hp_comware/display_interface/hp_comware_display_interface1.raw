@@ -1,0 +1,32 @@
+Bridge-Aggregation41
+Current state: UP
+IP packet frame type: Ethernet II, hardware address: aaaa-bbbb-0200
+Description: Agg41-to-VBLOCK-14
+Bandwidth: 160000000 kbps
+160Gbps-speed mode, full-duplex mode
+Link speed type is autonegotiation, link duplex type is autonegotiation
+PVID: 1
+Port link-type: Trunk
+ VLAN Passing:   2-31, 40-45, 49, 60-64, 66, 80-81, 98-104, 107, 110, 119-127
+                 140-144, 160-164, 180, 182-193, 200-201, 213-222, 225-240, 243
+                 250, 255, 411-413, 460, 555, 702, 777, 825, 829, 832, 836-837
+                 845, 849, 852, 856-857, 865, 869, 872, 876-877, 1000-1002
+ VLAN permitted: 2-4094
+ Trunk port encapsulation: IEEE 802.1q
+Last clearing of counters: 13:42:38 Sun 11/27/2022
+Last 300 seconds input:  653795 packets/sec 620328920 bytes/sec 3%
+Last 300 seconds output:  752413 packets/sec 767574527 bytes/sec 3%
+Input (total):  1378318211088 packets, 1485686536611046 bytes
+        1378272321334 unicasts, 43421092 broadcasts, 2468662 multicasts, 0 pauses
+Input (normal):  1378318204300 packets, - bytes
+        1378272321256 unicasts, 43421092 broadcasts, 2468662 multicasts, 0 pauses
+Input:  0 input errors, 0 runts, 0 giants, 0 throttles
+        0 CRC, 0 frame, - overruns, 0 aborts
+        - ignored, - parity errors
+Output (total): 1492615088260 packets, 1670292936644909 bytes
+        1492073645475 unicasts, 395257295 broadcasts, 146185490 multicasts, 0 pauses
+Output (normal): 1492615087837 packets, - bytes
+        1492073645355 unicasts, 395257296 broadcasts, 146185490 multicasts, 0 pauses
+Output: 0 output errors, - underruns, 0 buffer failures
+        0 aborts, 0 deferred, 0 collisions, 0 late collisions
+        0 lost carrier, - no carrier

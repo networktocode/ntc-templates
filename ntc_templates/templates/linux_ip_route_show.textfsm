@@ -1,0 +1,23 @@
+Value PROTOCOL (\S+)
+Value METRIC (\d+)
+Value NETWORK (\S+)
+Value NEXTHOP_IP (\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3})
+Value NEXTHOP_IF (\S+)
+Value SCOPE (\S+)
+Value SRC (\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3})
+
+Start
+  # dhcp (discarded)
+  ^.*proto dhcp.*
+  ^\S+ dev \S+ proto dhcp .*
+  # unreachable, broadcast, local (discarded)
+  ^unreachable
+  ^broadcast*
+  ^local
+  # default
+  ^${NETWORK} via ${NEXTHOP_IP} dev ${NEXTHOP_IF} -> Record
+  # local (network)
+  ^${NETWORK} dev ${NEXTHOP_IF} proto ${PROTOCOL} scope ${SCOPE} src ${SRC} -> Record
+  # static
+  ^${NETWORK} via ${NEXTHOP_IP} dev ${NEXTHOP_IF} -> Record
+  ^. -> Error

@@ -1,0 +1,244 @@
+---
+name: "CI"
+concurrency:  # Cancel any existing runs of this workflow for this same PR
+  group: "${{ github.workflow }}-${{ github.ref }}"
+  cancel-in-progress: true
+on: # yamllint disable-line rule:truthy rule:comments
+  push:
+    branches:
+      - "master"
+    tags:
+      - "v*"
+  pull_request: ~
+
+env:
+  IMAGE_NAME: "ntc-templates"
+
+jobs:
+  black:
+    runs-on: "ubuntu-20.04"
+    env:
+      INVOKE_LOCAL: "True"
+    steps:
+      - name: "Check out repository code"
+        uses: "actions/checkout@v2"
+      - name: "Setup environment"
+        uses: "networktocode/gh-action-setup-poetry-environment@v2"
+      - name: "Linting: black"
+        run: "poetry run invoke black"
+  bandit:
+    runs-on: "ubuntu-20.04"
+    env:
+      INVOKE_LOCAL: "True"
+    steps:
+      - name: "Check out repository code"
+        uses: "actions/checkout@v2"
+      - name: "Setup environment"
+        uses: "networktocode/gh-action-setup-poetry-environment@v2"
+      - name: "Linting: bandit"
+        run: "poetry run invoke bandit"
+    needs:
+      - "black"
+  pydocstyle:
+    runs-on: "ubuntu-20.04"
+    env:
+      INVOKE_LOCAL: "True"
+    steps:
+      - name: "Check out repository code"
+        uses: "actions/checkout@v2"
+      - name: "Setup environment"
+        uses: "networktocode/gh-action-setup-poetry-environment@v2"
+      - name: "Linting: pydocstyle"
+        run: "poetry run invoke pydocstyle"
+    needs:
+      - "black"
+  flake8:
+    runs-on: "ubuntu-20.04"
+    env:
+      INVOKE_LOCAL: "True"
+    steps:
+      - name: "Check out repository code"
+        uses: "actions/checkout@v2"
+      - name: "Setup environment"
+        uses: "networktocode/gh-action-setup-poetry-environment@v2"
+      - name: "Linting: flake8"
+        run: "poetry run invoke flake8"
+    needs:
+      - "black"
+  yamllint:
+    runs-on: "ubuntu-20.04"
+    env:
+      INVOKE_LOCAL: "True"
+    steps:
+      - name: "Check out repository code"
+        uses: "actions/checkout@v2"
+      - name: "Setup environment"
+        uses: "networktocode/gh-action-setup-poetry-environment@v2"
+      - name: "Linting: yamllint"
+        run: "poetry run invoke yamllint"
+    needs:
+      - "black"
+  build:
+    strategy:
+      fail-fast: true
+      matrix:
+        python-version: ["3.7", "3.8", "3.9", "3.10"]
+    runs-on: "ubuntu-20.04"
+    env:
+      PYTHON_VER: "${{ matrix.python-version }}"
+    steps:
+      - name: "Check out repository code"
+        uses: "actions/checkout@v2"
+      - name: "Setup environment"
+        uses: "networktocode/gh-action-setup-poetry-environment@v2"
+      - name: "Get image version"
+        run: "echo IMAGE_VER=`poetry version -s`-py${{ matrix.python-version }} >> $GITHUB_ENV"
+      - name: "Set up Docker Buildx"
+        id: "buildx"
+        uses: "docker/setup-buildx-action@v1"
+      - name: "Build"
+        uses: "docker/build-push-action@v2"
+        with:
+          builder: "${{ steps.buildx.outputs.name }}"
+          context: "./"
+          push: false
+          tags: "${{ env.IMAGE_NAME }}:${{ env.IMAGE_VER }}"
+          file: "./Dockerfile"
+          cache-from: "type=gha,scope=${{ env.IMAGE_NAME }}-${{ env.IMAGE_VER }}-py${{ matrix.python-version }}"
+          cache-to: "type=gha,scope=${{ env.IMAGE_NAME }}-${{ env.IMAGE_VER }}-py${{ matrix.python-version }}"
+          build-args: |
+            PYTHON_VER=${{ env.PYTHON_VER }}
+    needs:
+      - "bandit"
+      - "pydocstyle"
+      - "flake8"
+      - "yamllint"
+  pylint:
+    runs-on: "ubuntu-20.04"
+    strategy:
+      fail-fast: true
+      matrix:
+        python-version: ["3.7"]
+    env:
+      PYTHON_VER: "${{ matrix.python-version }}"
+    steps:
+      - name: "Check out repository code"
+        uses: "actions/checkout@v2"
+      - name: "Setup environment"
+        uses: "networktocode/gh-action-setup-poetry-environment@v2"
+      - name: "Get image version"
+        run: "echo IMAGE_VER=`poetry version -s`-py${{ matrix.python-version }} >> $GITHUB_ENV"
+      - name: "Set up Docker Buildx"
+        id: "buildx"
+        uses: "docker/setup-buildx-action@v1"
+      - name: "Load the image from cache"
+        uses: "docker/build-push-action@v2"
+        with:
+          builder: "${{ steps.buildx.outputs.name }}"
+          context: "./"
+          push: false
+          load: true
+          tags: "${{ env.IMAGE_NAME }}:${{ env.IMAGE_VER }}"
+          file: "./Dockerfile"
+          cache-from: "type=gha,scope=${{ env.IMAGE_NAME }}-${{ env.IMAGE_VER }}-py${{ matrix.python-version }}"
+          cache-to: "type=gha,scope=${{ env.IMAGE_NAME }}-${{ env.IMAGE_VER }}-py${{ matrix.python-version }}"
+          build-args: |
+            PYTHON_VER=${{ env.PYTHON_VER }}
+      - name: "Debug: Show docker images"
+        run: "docker image ls"
+      - name: "Linting: Pylint"
+        run: "poetry run invoke pylint"
+    needs:
+      - "build"
+  pytest:
+    strategy:
+      fail-fast: true
+      matrix:
+        python-version: ["3.7", "3.8", "3.9", "3.10"]
+    runs-on: "ubuntu-20.04"
+    env:
+      PYTHON_VER: "${{ matrix.python-version }}"
+    steps:
+      - name: "Check out repository code"
+        uses: "actions/checkout@v2"
+      - name: "Setup environment"
+        uses: "networktocode/gh-action-setup-poetry-environment@v2"
+      - name: "Get image version"
+        run: "echo IMAGE_VER=`poetry version -s`-py${{ matrix.python-version }} >> $GITHUB_ENV"
+      - name: "Set up Docker Buildx"
+        id: "buildx"
+        uses: "docker/setup-buildx-action@v1"
+      - name: "Load the image from cache"
+        uses: "docker/build-push-action@v2"
+        with:
+          builder: "${{ steps.buildx.outputs.name }}"
+          context: "./"
+          push: false
+          load: true
+          tags: "${{ env.IMAGE_NAME }}:${{ env.IMAGE_VER }}"
+          file: "./Dockerfile"
+          cache-from: "type=gha,scope=${{ env.IMAGE_NAME }}-${{ env.IMAGE_VER }}-py${{ matrix.python-version }}"
+          cache-to: "type=gha,scope=${{ env.IMAGE_NAME }}-${{ env.IMAGE_VER }}-py${{ matrix.python-version }}"
+          build-args: |
+            PYTHON_VER=${{ env.PYTHON_VER }}
+      - name: "Debug: Show docker images"
+        run: "docker image ls"
+      - name: "Run Tests"
+        run: "poetry run invoke pytest"
+    needs:
+      - "pylint"
+  publish_gh:
+    name: "Publish to GitHub"
+    runs-on: "ubuntu-20.04"
+    if: "startsWith(github.ref, 'refs/tags/v')"
+    steps:
+      - name: "Check out repository code"
+        uses: "actions/checkout@v2"
+      - name: "Set up Python"
+        uses: "actions/setup-python@v2"
+        with:
+          python-version: "3.9"
+      - name: "Install Python Packages"
+        run: "pip install poetry"
+      - name: "Set env"
+        run: "echo RELEASE_VERSION=${GITHUB_REF:10} >> $GITHUB_ENV"
+      - name: "Run Poetry Version"
+        run: "poetry version $RELEASE_VERSION"
+      - name: "Run Poetry Build"
+        run: "poetry build"
+      - name: "Upload binaries to release"
+        uses: "svenstaro/upload-release-action@v2"
+        with:
+          repo_token: "${{ secrets.NTC_GITHUB_TOKEN }}"
+          file: "dist/*"
+          tag: "${{ github.ref }}"
+          overwrite: true
+          file_glob: true
+    needs:
+      - "pytest"
+  publish_pypi:
+    name: "Push Package to PyPI"
+    runs-on: "ubuntu-20.04"
+    if: "startsWith(github.ref, 'refs/tags/v')"
+    steps:
+      - name: "Check out repository code"
+        uses: "actions/checkout@v2"
+      - name: "Set up Python"
+        uses: "actions/setup-python@v2"
+        with:
+          python-version: "3.9"
+      - name: "Install Python Packages"
+        run: "pip install poetry"
+      - name: "Set env"
+        run: "echo RELEASE_VERSION=${GITHUB_REF:10} >> $GITHUB_ENV"
+      - name: "Run Poetry Version"
+        run: "poetry version $RELEASE_VERSION"
+      - name: "Run Poetry Build"
+        run: "poetry build"
+      - name: "Push to PyPI"
+        uses: "pypa/gh-action-pypi-publish@release/v1"
+        with:
+          user: "__token__"
+          password: "${{ secrets.PYPI_API_TOKEN }}"
+    needs:
+      - "pytest"

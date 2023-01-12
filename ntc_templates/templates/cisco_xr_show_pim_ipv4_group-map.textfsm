@@ -1,0 +1,10 @@
+Value Required GROUP_RANGE (\d+\.\d+\.\d+\.\d+/\d+)
+Value PROTOCOL (\w+)
+Value CLIENT (\w+)
+Value GROUPS (\d+)
+Value RP_ADDRESS (\d+\.\d+\.\d+\.\d+)
+Value INFO ((\S+(\s\S+)*))
+
+Start
+  ^\s*Group Range\s+Proto\s+Client\s+Groups\s+RP address\s+Info\s*$$
+  ^\s*${GROUP_RANGE}(\*)?\s+${PROTOCOL}\s+${CLIENT}\s+${GROUPS}\s+${RP_ADDRESS}(\s+${INFO})?\s*$$ -> Record

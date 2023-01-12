@@ -1,0 +1,107 @@
+
+Wed Jul 27 17:18:32.001 CST
+
+VRF red; RD not set; VPN ID not set
+VRF mode: Regular
+Description not set
+Address family IPV4 Unicast
+  No import VPN route-target communities
+  No export VPN route-target communities
+  No import route policy
+  No export route policy
+Address family IPV6 Unicast
+  No import VPN route-target communities
+  No export VPN route-target communities
+  No import route policy
+  No export route policy
+
+VRF blue; RD not set; VPN ID not set
+VRF mode: Regular
+Description not set
+Interfaces:
+  BVI10
+Address family IPV4 Unicast
+  No import VPN route-target communities
+  No export VPN route-target communities
+  No import route policy
+  No export route policy
+Address family IPV6 Unicast
+  No import VPN route-target communities
+  No export VPN route-target communities
+  No import route policy
+  No export route policy
+
+VRF green; RD not set; VPN ID not set
+VRF mode: Regular
+Description not set
+Interfaces:
+  GigabitEthernet200/0/0/1
+  GigabitEthernet200/0/0/2
+  GigabitEthernet300/0/0/1
+  GigabitEthernet300/0/0/2
+  TenGigE0/0/0/10.10
+  Bundle-Ether10.10
+  Bundle-Ether10.20
+  Bundle-Ether20.10
+  Bundle-Ether20.20
+  Bundle-Ether30.10
+  Bundle-Ether40.10
+  Bundle-Ether50.10
+  Loopback0
+Address family IPV4 Unicast
+  No import VPN route-target communities
+  No export VPN route-target communities
+  No import route policy
+  No export route policy
+Address family IPV6 Unicast
+  No import VPN route-target communities
+  No export VPN route-target communities
+  No import route policy
+  No export route policy
+
+VRF purple; RD not set; VPN ID not set
+VRF mode: Regular
+Description not set
+Interfaces:
+  Loopback1
+  Bundle-Ether10.10
+  Bundle-Ether10.20
+  Bundle-Ether10.30
+  GigabitEthernet100/0/0/10.10
+  GigabitEthernet100/0/0/10.20
+  GigabitEthernet200/0/0/20.10
+  GigabitEthernet200/0/0/20.20
+  GigabitEthernet300/0/0/30.10
+  GigabitEthernet300/0/0/30.20
+  TenGigE0/0/0/10.10
+  TenGigE0/2/0/20.10
+  TenGigE0/2/0/20.20
+Address family IPV4 Unicast
+  No import VPN route-target communities
+  No export VPN route-target communities
+  No import route policy
+  No export route policy
+Address family IPV6 Unicast
+  No import VPN route-target communities
+  No export VPN route-target communities
+  No import route policy
+  No export route policy
+
+VRF brown; RD not set; VPN ID not set
+VRF mode: Regular
+Description not set
+Interfaces:
+  GigabitEthernet100/0/0/10
+  GigabitEthernet300/0/0/20
+  Bundle-Ether10.10
+  Bundle-Ether10.20
+Address family IPV4 Unicast
+  No import VPN route-target communities
+  No export VPN route-target communities
+  No import route policy
+  No export route policy
+Address family IPV6 Unicast
+  No import VPN route-target communities
+  No export VPN route-target communities
+  No import route policy
+  No export route policy
