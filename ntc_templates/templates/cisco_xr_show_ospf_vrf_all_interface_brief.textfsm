@@ -1,0 +1,13 @@
+Value Filldown VRF (\S+)
+Value Required INTERFACE ([\w\./-]+)
+Value PROCESS (\d+)
+Value AREA ([\d\.]+)
+Value ADDRESS (\d+.\d+.\d+.\d+/\d+)
+Value COST (\d+)
+Value STATE (\S+)
+Value NEIGHBORS (\d+/\d+)
+
+Start
+  ^\s*Interfaces for OSPF \d+, VRF ${VRF}\s*$$
+  ^\s+Interface\s+PID\s+Area\s+IP Address/Mask\s+Cost\s+State\s+Nbrs\s+F/C\s*$$
+  ^\s*${INTERFACE}\s+${PROCESS}\s+${AREA}\s+${ADDRESS}\s+${COST}\s+${STATE}\s+${NEIGHBORS}\s*$$ -> Record

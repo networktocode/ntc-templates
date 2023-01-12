@@ -20,3 +20,7 @@ parsed_sample:
     vlan: "3590"
     type: "dynamic"
     port: "lag100"
+  - mac: "80:5e:0c:76:ed:bb"
+    vlan: "2015"
+    type: "port-access-security"
+    port: "1/1/30"

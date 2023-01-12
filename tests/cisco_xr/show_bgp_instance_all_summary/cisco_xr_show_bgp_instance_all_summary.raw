@@ -1,0 +1,34 @@
+
+Wed Jul 27 17:18:35.642 CST
+
+BGP instance 0: 'default'
+=========================
+BGP router identifier 192.0.2.1, local AS number 65533
+BGP generic scan interval 60 secs
+Non-stop routing is enabled
+BGP table state: Active
+Table ID: 0xe0000000   RD version: 2308648196
+BGP main routing table version 2308648196
+BGP NSR Initial initsync version 2063371958 (Reached)
+BGP NSR/ISSU Sync-Group versions 2308648196/0
+BGP scan interval 60 secs
+
+BGP is operating in STANDALONE mode.
+
+
+Process       RcvTblVer   bRIB/RIB   LabelVer  ImportVer  SendTblVer  StandbyVer
+Speaker       2308648196  2308648196  2308648196  2308648196  2308648196  2308648196
+
+Some configured eBGP neighbors (under default or non-default vrfs)
+do not have both inbound and outbound policies configured for IPv4 Unicast
+address family. These neighbors will default to sending and/or
+receiving no routes and are marked with '!' in the output below.
+Use the 'show bgp neighbor <nbr_address>' command for details.
+
+Neighbor        Spk    AS MsgRcvd MsgSent   TblVer  InQ OutQ  Up/Down  St/PfxRcd
+192.0.2.1         0 65533 3687720 44027503 2308648193    0    0     6w0d          4
+192.0.2.1         0 65533 2998156       0        0    0    0    1y11w Active
+192.0.2.1         0 65533  740185  712198 2308648196    0    0    6d12h          0
+192.0.2.1         0 65533   19179   11983 2308648196    0    0 01:57:59         10
+192.0.2.1         0 65533 3372692  355977 2308648196    0    0     1w6d          0!
+192.0.2.1         0 65533 5765678       0        0    0    0    45w1d Idle!

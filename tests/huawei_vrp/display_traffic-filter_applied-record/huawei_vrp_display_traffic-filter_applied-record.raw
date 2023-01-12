@@ -1,0 +1,18 @@
+-----------------------------------------------------------
+Interface                   Direction  AppliedRecord       
+-----------------------------------------------------------
+Vlanif1                     inbound    acl name ACL_Test
+Vlanif1                     outbound   ipv6 acl name MyACL_IPv6
+Vlanif3                     inbound    acl 3998
+Vlanif3                     inbound    ipv6 acl name MyACL_IPv6
+Wlan-Bss0                   outbound   IPv4 ACL 4000
+Wlan-Bss1                   outbound   IPv4 ACL 4000
+-----------------------------------------------------------             
+Total:6                                                                         
+-----------------------------------------------------------             
+Traffic profile             Direction  AppliedRecord                    
+-----------------------------------------------------------             
+p1                          inbound    IPv4 ACL 3000                         
+p2                          outbound   IPv6 ACL 3001                    
+-----------------------------------------------------------             
+Total:2 

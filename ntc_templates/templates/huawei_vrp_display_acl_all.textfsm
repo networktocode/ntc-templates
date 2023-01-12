@@ -1,0 +1,21 @@
+Value Filldown ACL_NAME (.*?)
+Value Filldown ACL_NUMBER (\d+)
+Value Required SN (\d+)
+Value ACTION (deny|permit)
+Value PROTOCOL (\d+|icmp(v6)?|tcp|udp|gre|igmp|ip(v6)?|ipinip|ospf)
+Value SOURCE (((\d+.){3}\d+|[0-9a-fA-F]{1,4}([0-9a-fA-F]{0,4}:){1,7}[0-9a-fA-F]{0,4})[\/\s]((\d+.){3}\d+|\d+))
+Value SOURCE_PORT_MODIFIER (eq|lt|gt|range)
+Value SOURCE_PORT_RANGE ((\d+)(\s(\d+))?)
+Value DESTINATION (((\d+.){3}\d+|[0-9a-fA-F]{1,4}([0-9a-fA-F]{0,4}:){1,7}[0-9a-fA-F]{0,4})[\/\s]((\d+.){3}\d+|\d+))
+Value DESTINATION_PORT_MODIFIER (eq|lt|gt|range)
+Value DESTINATION_PORT_RANGE ((\d+)(\s(\d+))?)
+Value MATCHES (\d+)
+
+Start
+  ^\s*Total\squantity\sof\snonempty\sACL\snumber\sis\s\d+\s*$$
+  ^\s*Total\snonempty\sacl6\snumber\sis\s\d+\s*$$
+  ^\S+(\sIPv6)?\sACL\s(${ACL_NAME}\s)?${ACL_NUMBER},\s\d+.*$$
+  ^\s*Acl's\sstep\sis\s\d+\s*$$
+  ^\s*rule\s${SN}\s${ACTION}(\s${PROTOCOL})?(\ssource\s${SOURCE})?(\ssource-port\s${SOURCE_PORT_MODIFIER}\s${SOURCE_PORT_RANGE})?(\sdestination\s${DESTINATION})?(\sdestination-port\s${DESTINATION_PORT_MODIFIER}\s${DESTINATION_PORT_RANGE})?(\s\(${MATCHES}\smatch(es)?\))?\s*$$ -> Record
+  ^\s*$$
+  ^. -> Error

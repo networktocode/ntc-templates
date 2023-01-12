@@ -9,11 +9,12 @@ Value status (waiting|testing|authorizing|busy|offered|bound)
 Value last_seen (\w+)
 
 Start
-  ^\s#\s+ADDRESS\s+MAC-ADDRESS\s+HOST-NAME\s+SERVER\s+RATE-LIMIT\s+STATUS\s+LAST-SEEN\s+$$ -> EntriesTable
+  ^\s*#\s+ADDRESS\s+MAC-ADDRESS\s+HOST-NAME\s+SERVER\s+RATE-LIMIT\s+STATUS\s+LAST-SEEN\s+$$ -> EntriesTable
 
 EntriesTable
-  ^\s*${index}\s+(${rate_limit})?\s+(${status})?\s+(${last_seen})?\s+$$ -> Record
-  ^\s*${index}\s(${flags})?\s{,4}${ip}\s+(${rate_limit})?\s+${status}\s+${last_seen}\s+$$ -> Record
-  ^\s*${index}\s(${flags})?\s{,4}(${ip})?\s+${mac}\s+(${rate_limit})?\s+${status}\s+${last_seen}\s+$$ -> Record
-  ^\s*${index}\s(${flags})?\s{,4}(${ip})?\s+(${mac}|\s{17})\s(${hostname})?\s+(${server})?\s+(${rate_limit})?\s+${status}\s+${last_seen}\s+$$ -> Record
+  ^\s*${index}\s+(${rate_limit})?\s+(${status})?\s+(${last_seen})?\s*$$ -> Record
+  ^\s*${index}\s(${flags})?\s{,4}${ip}\s+(${rate_limit})?\s+${status}\s+${last_seen}\s*$$ -> Record
+  ^\s*${index}\s(${flags})?\s{,4}(${ip})?\s+${mac}\s+(${rate_limit})?\s+${status}\s+${last_seen}\s*$$ -> Record
+  ^\s*${index}\s(${flags})?\s{,4}(${ip})?\s+(${mac}|\s{17})\s(${hostname})?\s+(${server})?\s+(${rate_limit})?\s+${status}\s+${last_seen}\s*$$ -> Record
+  ^\s*(?:\d{2}:){2}\d{2}\s+echo:\s*.*$$ -> Next
   ^. -> Error

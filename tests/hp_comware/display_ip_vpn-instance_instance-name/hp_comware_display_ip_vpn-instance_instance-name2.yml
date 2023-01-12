@@ -1,0 +1,23 @@
+---
+parsed_sample:
+  - name: "vpnb"
+    id: "2"
+    rd: "100:2"
+    description: ""
+    ipv4_export_rts:
+      - "222:2"
+    ipv4_import_rts:
+      - "222:2"
+      - "111:1"
+    ipv4_export_policy: ""
+    ipv4_import_policy: ""
+    ipv4_tunnel_policy: ""
+    ipv6_export_rts: []
+    ipv6_import_rts: []
+    ipv6_export_policy: ""
+    ipv6_import_policy: ""
+    ipv6_tunnel_policy: ""
+    interfaces:
+      - "Vlan-interface20"
+      - "FortyGigE1/0/53"
+      - "GigabitEthernet1/0/25"

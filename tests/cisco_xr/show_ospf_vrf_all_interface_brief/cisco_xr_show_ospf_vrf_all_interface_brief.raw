@@ -1,0 +1,22 @@
+
+Wed Jul 27 17:18:34.807 CST
+
+* Indicates MADJ interface, (P) Indicates fast detect hold down state
+
+Interfaces for OSPF 1, VRF red
+
+Interface          PID   Area            IP Address/Mask    Cost  State Nbrs F/C
+BE1.10             1     0               192.0.2.1/30       1     DR    1/1
+Te0/0/0/10.10      1     0               192.0.2.1/30       1     BDR   1/1
+
+
+Interfaces for OSPF 1, VRF green
+
+BE1.20             1     0               192.0.2.1/30       1000  P2P   0/0
+Gi300/0/0/0.10     1     0               192.0.2.1/30       1     DR    0/0
+
+
+Interfaces for OSPF 1, VRF blue
+
+BE1.30             1     0               192.0.2.1/30       1     DR    1/1
+Gi300/0/0/0        1     0               192.0.2.1/30       1     DR    0/0

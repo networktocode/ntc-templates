@@ -5,8 +5,9 @@ Value mac (([0-9a-fA-F]{2}[:]){5}([0-9a-fA-F]{2}))
 Value interface (\S+)
 
 Start
-  ^\s+#\s*ADDRESS\s*MAC-ADDRESS\s*INTERFACE\s*$$ -> EntriesTable
+  ^\s*#\s*ADDRESS\s*MAC-ADDRESS\s*INTERFACE\s*$$ -> EntriesTable
 
 EntriesTable
-  ^\s*${index}\s*(${flags})?\s*${ip}\s*(${mac})?\s+(${interface})?\s+$$ -> Record
+  ^\s*${index}\s*(${flags})?\s*${ip}\s*(${mac})?\s+(${interface})?\s*$$ -> Record
+  ^\s*(?:\d{2}:){2}\d{2}\s+echo:\s*.*$$ -> Next
   ^. -> Error

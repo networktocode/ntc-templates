@@ -1,0 +1,24 @@
+Value IP_ADDRESS (\S+)
+Value LINK_lAYER (([\d\w]{4}-){2}[\d\w]{4})
+Value STATE (INCMP|REACH|STALE|DELAY|PROBE)
+Value INTERFACE (\S+)
+Value AGE (\S+)
+Value VLAN ([-\d]+)
+Value CEVLAN ([-\d]+)
+Value VPN_NAME (\S+|\s{0})
+Value IS_ROUTER (TRUE|FALSE)
+Value SECURE_FLAG (SECURE|UNSECURE|UN-SECURE)
+Value NICKNAME (\S+)
+
+Start
+  ^\s*$$
+  ^\s*-+\s*$$
+  ^\s*IPv6\sAddress\s*:\s*\S+\s*$$ -> Continue.Record
+  ^\s*IPv6\sAddress\s*:\s*${IP_ADDRESS}\s*$$
+  ^\s*Link-layer\s*:\s*${LINK_lAYER}\s+State\s*:\s*${STATE}\s*$$
+  ^\s*Interface\s*:\s*${INTERFACE}\s+Age\s*:\s*${AGE}\s*$$
+  ^\s*VLAN\s*:\s*${VLAN}\s+CEVLAN\s*:\s*${CEVLAN}\s*$$
+  ^\s*(VPN\sname\s*:\s*${VPN_NAME}\s+)?Is\sRouter\s*:\s*${IS_ROUTER}\s*$$
+  ^\s*Secure FLAG\s*:\s*${SECURE_FLAG}\s*(Nickname\s*:\s*${NICKNAME}\s*)?$$
+  ^\s*Total:\s+\d+\s+Dynamic:\s+\d+\s+Static:\s+\d+\s*$$
+  ^. -> Error

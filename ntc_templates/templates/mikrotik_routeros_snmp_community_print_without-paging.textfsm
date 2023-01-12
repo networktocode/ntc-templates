@@ -10,5 +10,6 @@ Start
   ^\s#\s+NAME\s+ADDRESSES\s+SECURITY\s+READ-ACCESS\s+WRITE-ACCESS\s*$$ -> SNMPCommunitiesTable
 
 SNMPCommunitiesTable
-  ^\s?${index}\s+(${flags})?\s+${name}\s+${addresses}\s+${security}\s+${read_access}\s+${write_access}\s+$$ -> Record
+  ^\s?${index}\s+(${flags})?\s+${name}\s+${addresses}\s+${security}\s+${read_access}\s+${write_access}\s*$$ -> Record
+  ^\s*(?:\d{2}:){2}\d{2}\s+echo:\s*.*$$ -> Next
   ^. -> Error
