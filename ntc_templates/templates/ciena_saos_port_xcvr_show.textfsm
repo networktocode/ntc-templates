@@ -1,0 +1,15 @@
+Value PORT (\S+)
+Value ADMIN_STATE (\S+)
+Value OPER_STATE (\S+)
+Value VENDOR (\S.*\S)
+Value CIENA_REV (\S+)
+Value CONNECTOR_TYPE (\S+)
+Value DIAG (\S+)
+
+Start
+  ^\+-+
+  ^\|\s*${PORT}\s*\|${ADMIN_STATE}\s*\|(${OPER_STATE}|)\s*\|(${VENDOR}|)\s*\|(${CIENA_REV}|)\s*\|(${CONNECTOR_TYPE}|)\s*\|(${DIAG}|)\s*\| -> Record
+  ^\|.*
+  ^\s*$$
+  ^. -> Error
+  

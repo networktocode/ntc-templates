@@ -1,0 +1,12 @@
++------------------------ PORT ETHERNET CONFIGURATION -------------------------+
+|        |         |       |      |     |    |    |     |      |    Mirror     |
+| Port   | Port    | Admin |      |     |    | FC | Auto| MTU  |    Status     |
+| Name   | Type    | Status| Speed| Dplx| FC | Adv| Neg | Size |State| Eg | Ig |
++--------+---------+-------+------+-----+----+----+-----+------+-----+----+----+
+| 1      | 10/100/G| Dis   | Auto | ??  |off |off | On  | 9100 | Off | 0  | 0  |
+| 2      | 10/100/G| Ena   | Auto | ??  |off |off | On  | 9100 | Off | 0  | 0  |
+| 3      | 100/G   | Ena   | 100  | ??  |off |off | Off | 9100 | Off | 0  | 0  |
+| 4      | 100/G   | Ena   | 1000 | ??  |off |off | On  | 9100 | Off | 0  | 0  |
+| 5      | Gig     | Ena   | 1000 | Full|off |off | Off | 9216 | Off | 0  | 0  |
+| 6      | Gig     | Ena   | 1000 | Full|off |off | Off | 9216 | Off | 0  | 0  |
++--------+---------+-------+------+-----+----+----+-----+------+-----+----+----+
