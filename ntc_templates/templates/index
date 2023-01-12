@@ -510,6 +510,7 @@ extreme_tierra_show_running-config_transport-tunnel.textfsm, .*, extreme_tierra,
 extreme_tierra_show_running-config_listener-policy.textfsm, .*, extreme_tierra, sh[[ow]] ru[[nning-config]] listener-policy
 extreme_tierra_show_running-config_mac_access-list.textfsm, .*, extreme_tierra, sh[[ow]] ru[[nning-config]] mac access-list
 extreme_tierra_show_running-config_system_hostname.textfsm, .*, extreme_tierra, sh[[ow]] ru[[nning-config]] system hostname
+extreme_tierra_show_sysinfo_inventory_power-supply.textfsm, .*, extreme_tierra, sh[[ow]] sysinfo inventory power-supply
 extreme_tierra_show_counters_link-fault-signaling.textfsm, .*, extreme_tierra, sh[[ow]] co[[unters]] link-fault-signaling
 extreme_tierra_show_counters_transport-tunnel_all.textfsm, .*, extreme_tierra, sh[[ow]] co[[unters]] transport-tunnel all
 extreme_tierra_show_grpc-server_gnmi_capabilities.textfsm, .*, extreme_tierra, sh[[ow]] grpc-server gnmi capabilities
@@ -534,6 +535,7 @@ extreme_tierra_show_running-config_include_ntp.textfsm, .*, extreme_tierra, show
 extreme_tierra_show_running-config_ldap-server.textfsm, .*, extreme_tierra, show running-config ldap-server
 extreme_tierra_show_running-config_snmp-server.textfsm, .*, extreme_tierra, sh[[ow]] ru[[nning-config]] snmp-server
 extreme_tierra_show_running-state_include_user.textfsm, .*, extreme_tierra, show running-state(\s\|+)? include user
+extreme_tierra_show_sysinfo_inventory_linecard.textfsm, .*, extreme_tierra, sh[[ow]] sysinfo inventory linecard
 extreme_tierra_show_counters_egress-group_all.textfsm, .*, extreme_tierra, sh[[ow]] co[[unters]] egress-group all
 extreme_tierra_show_counters_transport-tunnel.textfsm, .*, extreme_tierra, sh[[ow]] co[[unters]] transport-tunnel
 extreme_tierra_show_ip_interface_port-channel.textfsm, .*, extreme_tierra, sh[[ow]] ip int[[erface]] port-channel
@@ -554,6 +556,8 @@ extreme_tierra_show_ipv6_interface_loopback.textfsm, .*, extreme_tierra, show ip
 extreme_tierra_show_lacp_interface_ethernet.textfsm, .*, extreme_tierra, sh[[ow]] lacp interface ethernet
 extreme_tierra_show_running-config_keychain.textfsm, .*, extreme_tierra, show running-config keychain
 extreme_tierra_show_running-config_username.textfsm, .*, extreme_tierra, sh[[ow]] ru[[nning-config]] username
+extreme_tierra_show_sysinfo_media_interface.textfsm, .*, extreme_tierra, sh[[ow]] sysinfo me[[dia]] i[[nterface]]
+extreme_tierra_show_sysinfo_media_supported.textfsm, .*, extreme_tierra, sh[[ow]] sysinfo me[[dia]] s[[upported]]
 extreme_tierra_show_counters_ingress-group.textfsm, .*, extreme_tierra, sh[[ow]] co[[unters]] ingress-group
 extreme_tierra_show_crypto_ca_certificates.textfsm, .*, extreme_tierra, sh[[ow]] crypto ca certificates
 extreme_tierra_show_interface_management_0.textfsm, .*, extreme_tierra, sh[[ow]] interface management 0
@@ -566,6 +570,7 @@ extreme_tierra_show_logging_audit_security.textfsm, .*, extreme_tierra, sh[[ow]]
 extreme_tierra_show_ntp_association_detail.textfsm, .*, extreme_tierra, sh[[ow]] ntp association detail
 extreme_tierra_show_running-state_keychain.textfsm, .*, extreme_tierra, show running-state keychain 
 extreme_tierra_show_running-state_username.textfsm, .*, extreme_tierra, show running-state username
+extreme_tierra_show_sysinfo_media_detected.textfsm, .*, extreme_tierra, sh[[ow]] sysinfo me[[dia]] d[[etected]]
 extreme_tierra_show_sysinfo_sensor_voltage.textfsm, .*, extreme_tierra, sh[[ow]] sysinfo sensor voltage
 extreme_tierra_show_system_logging_service.textfsm, .*, extreme_tierra, sh[[ow]] system logging service
 extreme_tierra_show_capture_packet_config.textfsm, .*, extreme_tierra, sh[[ow]] ca[[pture]] packet config
@@ -578,6 +583,7 @@ extreme_tierra_show_running-config_banner.textfsm, .*, extreme_tierra, sh[[ow]] 
 extreme_tierra_show_running-config_egress.textfsm, .*, extreme_tierra, sh[[ow]] ru[[nning-config]] egress
 extreme_tierra_show_running-config_ip_dns.textfsm, .*, extreme_tierra, sh[[ow]] ru[[nning-config]] ip dns
 extreme_tierra_show_running-config_mirror.textfsm, .*, extreme_tierra, sh[[ow]] ru[[nning-config]] mirror
+extreme_tierra_show_sysinfo_inventory_all.textfsm, .*, extreme_tierra, sh[[ow]] sysinfo inventory all
 extreme_tierra_show_ipv6_access-list_all.textfsm, .*, extreme_tierra, sh[[ow]] ipv6 access-list all
 extreme_tierra_show_ipv6_interface_brief.textfsm, .*, extreme_tierra, sh[[ow]] ipv6 int[[erface]] brief
 extreme_tierra_show_ipv6_route_vrf_brief.textfsm, .*, extreme_tierra, show ipv6 route vrf(\s\w+)? brief
@@ -620,6 +626,7 @@ extreme_tierra_show_firmware_history.textfsm, .*, extreme_tierra, sh[[ow]] firmw
 extreme_tierra_show_ip_route_vrf_all.textfsm, .*, extreme_tierra, show ip route vrf all
 extreme_tierra_show_ip_route_vrf_arp.textfsm, .*, extreme_tierra, show ip route vrf(\s\S+)? arp
 extreme_tierra_show_ipv6_access-list.textfsm, .*, extreme_tierra, sh[[ow]] ipv6 access-list
+extreme_tierra_show_sysinfo_linecard.textfsm, .*, extreme_tierra, sh[[ow]] sysinfo linecard
 extreme_tierra_show_transport-tunnel.textfsm, .*, extreme_tierra, sh[[ow]] tr[[ansport-tunnel]]
 extreme_tierra_show_counters_egress.textfsm, .*, extreme_tierra, sh[[ow]] co[[unters]] egress
 extreme_tierra_show_interface_brief.textfsm, .*, extreme_tierra, sh[[ow]] interface brief
@@ -629,6 +636,7 @@ extreme_tierra_show_mac_access-list.textfsm, .*, extreme_tierra, sh[[ow]] mac ac
 extreme_tierra_show_media_interface.textfsm, .*, extreme_tierra, sh[[ow]] me[[dia]] i[[nterface]]
 extreme_tierra_show_media_supported.textfsm, .*, extreme_tierra, sh[[ow]] me[[dia]] s[[upported]]
 extreme_tierra_show_ntp_association.textfsm, .*, extreme_tierra, sh[[ow]] ntp association
+extreme_tierra_show_sysinfo_chassis.textfsm, .*, extreme_tierra, sh[[ow]] sysinfo ch[[assis]]
 extreme_tierra_show_counters_encap.textfsm, .*, extreme_tierra, sh[[ow]] co[[unters]] encap
 extreme_tierra_show_inventory_slot.textfsm, .*, extreme_tierra, sh[[ow]] inventory slot
 extreme_tierra_show_ip_access-list.textfsm, .*, extreme_tierra, sh[[ow]] ip access-list
