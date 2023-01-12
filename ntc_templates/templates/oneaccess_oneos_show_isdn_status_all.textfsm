@@ -15,7 +15,8 @@ Value PRI_RDI_OCCURRENCES (\d+)
 Value L2_STATUS (\S+)
 Value L2_TXFRAMES_DCHANNEL (\d+)
 Value L2_RXFRAMES_DCHANNEL (\d+)
-Value L3_STATUS (no active call)
+Value L3_ACTIVE_CALLS (\d+|no active call)
+Value List L3_CALL_DETAILS (.*)
 
 
 
@@ -44,6 +45,7 @@ ISDNLINE
   ^\s*isdn\sline\s+${ISDN_LINE} -> ISDNLINE
 
 L3Status
-  ^\s*${L3_STATUS}
+  ^\s*(active\scall\s*|)${L3_ACTIVE_CALLS}
+  ^\s*->\s${L3_CALL_DETAILS}
   ^\s*$$ -> Record ISDNLINE
 

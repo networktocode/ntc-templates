@@ -6,10 +6,6 @@ Value DATE_LAST_RESET (.*)
 Value MAX_CHANNELS_USED (\d+)
 Value MAX_CHANNELS_AVAILABLE (\d+)
 
-
-
-
-					  
 Start
   ^\s*voice\sport\s+${PORT} -> VoicePort
   ^\s*$$

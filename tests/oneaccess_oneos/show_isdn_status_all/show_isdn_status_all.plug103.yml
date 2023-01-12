@@ -17,7 +17,8 @@ parsed_sample:
     l2_status: "deactivated"
     l2_txframes_dchannel: "0"
     l2_rxframes_dchannel: "0"
-    l3_status: "no active call"
+    l3_active_calls: "no active call"
+    l3_call_details: []
   - isdn_line: "5/1"
     physical_type: ""
     proto_descriptor: "BRI_NT"
@@ -35,7 +36,8 @@ parsed_sample:
     l2_status: "deactivated"
     l2_txframes_dchannel: "0"
     l2_rxframes_dchannel: "0"
-    l3_status: "no active call"
+    l3_active_calls: "no active call"
+    l3_call_details: []
   - isdn_line: "5/2"
     physical_type: ""
     proto_descriptor: "BRI_NT"
@@ -53,4 +55,5 @@ parsed_sample:
     l2_status: "deactivated"
     l2_txframes_dchannel: "0"
     l2_rxframes_dchannel: "0"
-    l3_status: "no active call"
+    l3_active_calls: "no active call"
+    l3_call_details: []
