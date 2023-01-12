@@ -1,0 +1,21 @@
+Total number of LAGs	: 12, 100/40g : 0
+Total number of deployed LAGs	: 12, 100/40g : 0
+Total number of trunks created	: 12 (116 available), 100/40g : 0 (8 available)
+LACP System Priority / ID	:1 / 0024.38a5.5f00
+LACP Long timeout	:90, default: 90
+LACP Short timeout	:3, default: 3
+
+LAG                Type      Deploy Trunk Primary        Port List
+Akamai Uplink     dynamic      Y     11     1/13        e 1/13 e 2/13
+CLMAMOFW-FLTNHT   dynamic      Y     7      4/2         e 3/2 e 4/2
+LAG5              dynamic      Y     5      3/3         e 3/3 to 3/4
+LAG6              dynamic      Y     6      4/3         e 4/3 to 4/4
+MLX-1a            dynamic      Y     4      2/2         e 2/2
+MLX-CLMAMOXE      dynamic      Y     3      2/1         e 2/1
+Switch1e.clmamofw dynamic      Y     10     1/5         e 1/5 e 2/21
+fw1-inside        dynamic      Y     12     1/24        e 1/24 e 2/24
+fw1-outside       dynamic      Y     13     1/10        e 1/10 e 2/10
+speedtest         dynamic      Y     9      2/23        e 1/11 e 2/23
+switch1c-MLX-FW   dynamic      Y     2      1/1         e 1/1
+videouplink       static       Y     8      2/15        e 1/15 to 1/18 e 2/15 t
+                                                        o 2/18

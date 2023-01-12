@@ -1,0 +1,8 @@
+Value TIMESTAMP (\S+\s\S+\sUTC\s\S+)
+Value LOG_ID (\d+)
+Value INFO_MSG ([\S\s]+)
+
+Start
+ ^${TIMESTAMP}\s+LogID:${LOG_ID}\s+info Msg:\s+${INFO_MSG} -> Record
+ ^\s*$$
+ ^. -> Error

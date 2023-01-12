@@ -1,0 +1,34 @@
+keychain auth1 
+
+  tolerance forever 
+
+  key-id 1000 
+
+    hash-secret-key m3HSJL1i83hdltRq0+o9czGb+8KJDKra4t/3JRlnPKcjI8PZm6XBHXx6zG4UuMXaDEZjR1wuXDre9G9zvN7AQw== 
+
+    crypto hmac_sha_1 
+
+    send-lifetime start-time 2022-06-06T18:20:30 end-time 2022-06-06T19:20:30 send-receive true 
+
+    receive-lifetime start-time 2022-06-06T18:20:30 end-time 2022-06-06T19:20:30 
+
+  ! 
+!
+
+keychain auth2 
+
+  tolerance 300
+
+  key-id 500 
+
+    hash-secret-key eNwgxuFBo2iN1AbB5vkGprglZBfbQFm0HQnhZ3a3qqaRNDLWghW8CuiDAlZPJM+n0cZwuJaK9P5KAz1ZAcbYCQ== 
+
+    crypto aes_28_cmac_96 
+
+    send-lifetime start-time 2022-06-06T18:20:30 end-time 2022-06-06T19:20:30 send-receive true 
+
+    receive-lifetime start-time 2022-06-06T18:20:30 end-time 2022-06-06T19:20:30 
+
+  ! 
+
+! 

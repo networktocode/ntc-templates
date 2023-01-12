@@ -1,0 +1,16 @@
+Value Required HOST (\S+)
+Value BASEDN (\S+)
+Value LDAPS (ldaps)
+Value Fillup MAP_ROLE (\S+)
+Value Fillup TEST_ROLE (\S+)
+
+Start
+ ^ldap-server
+ ^\s+host -> Continue.Record
+ ^\s+host ${HOST}
+ ^\s+basedn ${BASEDN}
+ ^\s+${LDAPS}
+ ^\s+map-role ${MAP_ROLE} test role ${TEST_ROLE} 
+ ^\s*!
+ ^\s*$$
+ ^. -> Error

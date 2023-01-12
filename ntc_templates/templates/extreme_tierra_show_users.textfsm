@@ -1,13 +1,23 @@
-Value USERNAME (\S+)
-Value ROLE (\S+)
-Value HOST_IP (\S+)
-Value DEVICE (\S+)
-Value LOGIN_DATE ([\d\-]+)
-Value LOGIN_TIME ([\d:]+)
-
+Value List ACTIVE_USERNAME (\S+)
+Value List ACTIVE_ROLE (\S+)
+Value List ACTIVE_HOST_IP (\S+)
+Value List ACTIVE_DEVICE (\S+)
+Value List ACTIVE_LOGIN_DATE ([\d\-]+)
+Value List ACTIVE_LOGIN_TIME ([\d:]+)
+Value TOTAL_ACTIVE_USERS (\S+)
+Value List LOCKED_USERNAME (\w+)
+Value TOTAL_LOCKED_USERS (\S+)
+							
 Start
+ ^Active user sessions:
  ^Username\s+Role\s+Host IP\s+Device\s+Time Logged In
  ^[=\s]+
- ^${USERNAME}\s+${ROLE}\s+${HOST_IP}\s+${DEVICE}\s+${LOGIN_DATE} ${LOGIN_TIME} -> Record
+ ^${ACTIVE_USERNAME}\s+${ACTIVE_ROLE}\s+${ACTIVE_HOST_IP}\s+${ACTIVE_DEVICE}\s+${ACTIVE_LOGIN_DATE} ${ACTIVE_LOGIN_TIME}
+ ^Total number of active user sessions \: ${TOTAL_ACTIVE_USERS}
+ ^Locked users:
+ ^Username
+ ^[-]+
+ ^${LOCKED_USERNAME}$$
+ ^Total number of locked users \: ${TOTAL_LOCKED_USERS}
  ^\s*$$
  ^. -> Error

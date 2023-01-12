@@ -2,8 +2,10 @@ Value Key,Required USERNAME (\S+)
 Value ROLE (\S+)
 Value PASSWORD ([\S\.\$]+)
 Value ENCRYPTION_LEVEL (\S+)
+Value INACTIVITY_EXPIRY_PERIOD (\S+)
 
 Start
- ^username ${USERNAME}\s+role ${ROLE}\s+password ${PASSWORD}\s+encryption-level ${ENCRYPTION_LEVEL} -> Record
+ ^!
+ ^username ${USERNAME}\s+role ${ROLE}\s+password ${PASSWORD}\s+encryption-level ${ENCRYPTION_LEVEL}\s*(inactivity-expiry-period\s+${INACTIVITY_EXPIRY_PERIOD}|\s*) -> Record
  ^\s*$$
  ^. -> Error

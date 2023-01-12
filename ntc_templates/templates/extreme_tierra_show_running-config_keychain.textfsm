@@ -1,0 +1,22 @@
+Value KEYCHAIN (\S+)
+Value TOLERANCE (\S+)
+Value KEY_ID (\S+)
+Value HASH_SECRET_KEY (\S+)
+Value CRYPTO (\S+)
+Value SEND_START_TIME (\S+)
+Value SEND_END_TIME (\S+)
+Value SEND_RECEIVE_STATUS (\S+)
+Value RECEIVE_START_TIME (\S+)
+Value RECEIVE_END_TIME (\S+)
+
+Start
+ ^keychain ${KEYCHAIN}
+ ^\s+tolerance ${TOLERANCE}
+ ^\s+key-id ${KEY_ID}
+ ^\s+hash-secret-key ${HASH_SECRET_KEY}
+ ^\s+crypto ${CRYPTO}
+ ^\s+send-lifetime start-time ${SEND_START_TIME} end-time ${SEND_END_TIME} send-receive ${SEND_RECEIVE_STATUS}
+ ^\s+receive-lifetime start-time ${RECEIVE_START_TIME} end-time ${RECEIVE_END_TIME} -> Record
+ ^\s*!
+ ^\s*$$
+ ^. -> Error
