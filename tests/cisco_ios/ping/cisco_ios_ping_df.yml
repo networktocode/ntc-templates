@@ -5,7 +5,8 @@ parsed_sample:
     destination: "192.168.0.1"
     timeout: "2"
     source: ""
-    response_stream: "!!!!"
+    response_stream:
+      - "!!!!"
     success_pct: "100"
     success_qty: "4"
     rtt_min: "1"
