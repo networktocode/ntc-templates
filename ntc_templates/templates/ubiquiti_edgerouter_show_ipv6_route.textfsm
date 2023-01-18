@@ -1,0 +1,17 @@
+Value CODE (\w{1,2})
+Value IP ([A-Za-z0-9:]+)
+Value PREFIX_LENGTH (\d{1,3})
+Value DISTANCE (\d+)
+Value METRIC (\d+)
+Value NEXTHOP_IP ([A-F0-9:]+)
+Value INTERFACE (\w+)
+Value UPTIME (\d[\w:\.]+)
+
+Start
+  ^.*IP\sRoute\sTable -> IP
+
+IP
+  ^${CODE}\s+${IP}/${PREFIX_LENGTH}\s\[${DISTANCE}/${METRIC}\]\svia\s${NEXTHOP_IP},\s${INTERFACE},\s${UPTIME}\s* -> Record
+  ^${CODE}\s+${IP}/${PREFIX_LENGTH}\svia\s${NEXTHOP_IP},\s${INTERFACE},\s${UPTIME}\s* -> Record
+  ^\s*$$
+  ^. -> Error
