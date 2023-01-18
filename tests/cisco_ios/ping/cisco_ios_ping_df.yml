@@ -1,0 +1,14 @@
+---
+parsed_sample:
+  - sent_qty: "4"
+    sent_type: "1500-byte ICMP Echos"
+    destination: "192.168.0.1"
+    timeout: "2"
+    source: ""
+    response_stream:
+      - "!!!!"
+    success_pct: "100"
+    success_qty: "4"
+    rtt_min: "1"
+    rtt_avg: "8"
+    rtt_max: "17"
