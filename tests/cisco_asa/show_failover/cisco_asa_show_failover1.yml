@@ -1,0 +1,89 @@
+---
+parsed_sample:
+  - state: "On"
+    role: "Primary"
+    lan_intf_name: "HA-Control-Failover"
+    lan_intf: "GigabitEthernet0/7"
+    lan_intf_state: "up"
+    sw_version: "9.12(4)37"
+    sw_version_mate: "9.12(4)37"
+    failover_group:
+      - "None"
+    last_failover_time:
+      - "19:05:55"
+    last_failover_timezone:
+      - "GMT/BST"
+    last_failover_month:
+      - "Jan"
+    last_failover_day:
+      - "26"
+    last_failover_year:
+      - "2022"
+    service_state:
+      - "Active"
+    service_state_mate:
+      - "Standby Ready"
+    ssp_slot:
+      - "0"
+      - "1"
+      - "1"
+    ssp_model:
+      - "ASA5585-SSP-10"
+      - "ASA5585-SSP-IPS10"
+      - "ASA5585-SSP-IPS10"
+    ssp_status:
+      - "Up"
+      - "Up/Up"
+      - "Up/Up"
+    ssp_slot_mate:
+      - "0"
+      - "1"
+      - "1"
+    ssp_model_mate:
+      - "ASA5585-SSP-10"
+      - "ASA5585-SSP-IPS10"
+      - "ASA5585-SSP-IPS10"
+    ssp_status_mate:
+      - "Up"
+      - "Up/Up"
+      - "Up/Up"
+    interfaces_context:
+      - "None"
+      - "None"
+      - "None"
+      - "None"
+    interfaces:
+      - "Outside"
+      - "Security-Management"
+      - "DMZ_Trunk"
+      - "Inside"
+    interfaces_status:
+      - "Normal"
+      - "Normal"
+      - "Normal"
+      - "Normal"
+    interfaces_state:
+      - "Waiting"
+      - "Monitored"
+      - "Waiting"
+      - "Not-Monitored"
+    interfaces_context_mate:
+      - "None"
+      - "None"
+      - "None"
+      - "None"
+    interfaces_mate:
+      - "Outside"
+      - "Security-Management"
+      - "DMZ_Trunk"
+      - "Inside"
+    interfaces_status_mate:
+      - "Normal"
+      - "Normal"
+      - "Normal"
+      - "Normal"
+    interfaces_state_mate:
+      - "Waiting"
+      - "Monitored"
+      - "Waiting"
+      - "Not-Monitored"
