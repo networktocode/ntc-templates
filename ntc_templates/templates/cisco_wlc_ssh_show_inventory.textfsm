@@ -8,6 +8,7 @@ Value SN (\w+)
 
 Start
   ^Burned-in\s+MAC\s+Address\.+\s+${BIA_MAC}
+  ^Power\sSupply\s\d\.*\s(Present|Absent)
   ^Maximum\s+number\s+of\s+APs\s+supported\.+\s+${MAX_AP_NUM}
   ^NAME:\s+"${NAME}"\s+,\s*DESCR:\s+"${DESCRIPTION}"
   ^PID:\s+${PID},\s*VID:\s+${VID},\s*SN:\s+${SN} -> Record
