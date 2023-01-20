@@ -1,0 +1,14 @@
+Codes: K - kernel, C - connected, S - static, R - RIP, B - BGP
+       O - OSPF, IA - OSPF inter area
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2
+       > - selected route, * - FIB route, p - stale info
+
+IP Route Table for VRF "default"
+S    *> 0.0.0.0/0 [50/0] is directly connected, pppoe4
+S    *> 22.22.23.0/24 [1/0] via 198.168.0.1 (recursive is directly connected, pppoe4) )
+S    *> 23.23.23.0/24 [1/0] via 198.168.0.1 (recursive is directly connected, pppoe4) )
+C    *> 23.90.232.243/32 is directly connected, pppoe4
+S    *> 25.22.23.0/24 [35/0] via 198.168.0.1 (recursive is directly connected, pppoe4) )
+C    *> 100.95.11.96/32 is directly connected, pppoe4
+C    *> 127.0.0.0/8 is directly connected, lo
