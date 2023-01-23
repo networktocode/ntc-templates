@@ -1,0 +1,81 @@
+Session Type: LAN-to-LAN Detailed
+
+Connection   : 169.254.107.100
+Index        : 26386                  IP Addr      : 169.254.107.100
+Protocol     : IKEv2 IPsecOverNatT
+Encryption   : IKEv2: (1)AES-GCM-256  IPsecOverNatT: (1)AES-GCM-256
+Hashing      : IKEv2: (1)none  IPsecOverNatT: (1)none
+Bytes Tx     : 1280775975169          Bytes Rx     : 574642385274
+Login Time   : 07:30:58 GMT/BST Mon Nov 7 2022
+Duration     : 52d 6h:35m:23s
+
+IKEv2 Tunnels: 1
+IPsecOverNatT Tunnels: 1
+
+IKEv2:
+  Tunnel ID    : 26386.1
+  UDP Src Port : 4500                   UDP Dst Port : 4500
+  Rem Auth Mode: preSharedKeys
+  Loc Auth Mode: preSharedKeys
+  Encryption   : AES-GCM-256            Hashing      : none
+  Rekey Int (T): 86400 Seconds          Rekey Left(T): 59552 Seconds
+  PRF          : SHA512                 D/H Group    : 21
+  Filter Name  :
+
+IPsecOverNatT:
+  Tunnel ID    : 26386.2
+  Local Addr   : 0.0.0.0/0.0.0.0/0/0
+  Remote Addr  : 0.0.0.0/0.0.0.0/0/0
+  Encryption   : AES-GCM-256            Hashing      : none
+  Encapsulation: Tunnel                 PFS Group    : 21
+  Rekey Int (T): 28800 Seconds          Rekey Left(T): 27490 Seconds
+  Rekey Int (D): 4608000 K-Bytes        Rekey Left(D): 0 K-Bytes
+  Idle Time Out: 0 Minutes              Idle TO Left : 0 Minutes
+  Bytes Tx     : 1280775975169          Bytes Rx     : 574642385274
+  Pkts Tx      : 1906513623             Pkts Rx      : 1363147628
+
+Connection   : 169.254.107.101
+Index        : 27194                  IP Addr      : 169.254.107.101
+Protocol     : IKEv2 IPsecOverNatT
+Encryption   : IKEv2: (1)AES256  IPsecOverNatT: (2)AES-GCM-128
+Hashing      : IKEv2: (1)SHA256  IPsecOverNatT: (2)none
+Bytes Tx     : 10244425635            Bytes Rx     : 512502763
+Login Time   : 11:52:46 GMT/BST Mon Dec 12 2022
+Duration     : 17d 2h:13m:35s
+
+IKEv2 Tunnels: 1
+IPsecOverNatT Tunnels: 2
+
+IKEv2:
+  Tunnel ID    : 27194.1
+  UDP Src Port : 4500                   UDP Dst Port : 4500
+  Rem Auth Mode: preSharedKeys
+  Loc Auth Mode: preSharedKeys
+  Encryption   : AES256                 Hashing      : SHA256
+  Rekey Int (T): 86400 Seconds          Rekey Left(T): 73172 Seconds
+  PRF          : SHA256                 D/H Group    : 19
+  Filter Name  :
+
+IPsecOverNatT:
+  Tunnel ID    : 27194.3
+  Local Addr   : 10.20.10.0/255.255.255.0/0/0
+  Remote Addr  : 10.40.10.248/255.255.255.248/0/0
+  Encryption   : AES-GCM-128            Hashing      : none
+  Encapsulation: Tunnel                 PFS Group    : 19
+  Rekey Int (T): 28800 Seconds          Rekey Left(T): 4953 Seconds
+  Rekey Int (D): 4608000 K-Bytes        Rekey Left(D): 0 K-Bytes
+  Idle Time Out: 30 Minutes             Idle TO Left : 29 Minutes
+  Bytes Tx     : 10244425635            Bytes Rx     : 512502763
+  Pkts Tx      : 11516820               Pkts Rx      : 6090406
+
+IPsecOverNatT:
+  Tunnel ID    : 27194.810
+  Local Addr   : 10.30.120.0/255.255.255.0/0/0
+  Remote Addr  : 10.40.10.248/255.255.255.248/0/0
+  Encryption   : AES-GCM-128            Hashing      : none
+  Encapsulation: Tunnel                 PFS Group    : 19
+  Rekey Int (T): 28800 Seconds          Rekey Left(T): 28794 Seconds
+  Rekey Int (D): 4608000 K-Bytes        Rekey Left(D): 4608000 K-Bytes
+  Idle Time Out: 30 Minutes             Idle TO Left : 29 Minutes
+  Bytes Tx     : 0                      Bytes Rx     : 0
+  Pkts Tx      : 0                      Pkts Rx      : 0
