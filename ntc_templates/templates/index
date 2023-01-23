@@ -698,6 +698,7 @@ oneaccess_oneos_show_voice_voice-port_pri_all_reset.textfsm, .*, oneaccess_oneos
 oneaccess_oneos_show_voice_voip-call_active_all.textfsm, .*, oneaccess_oneos, sh[[ow]] voice voip-call active
 oneaccess_oneos_show_cellular-radio_equipment.textfsm, .*, oneaccess_oneos, sh[[ow]] cell[[ular-radio]] equipment
 oneaccess_oneos_show_voice_voice-port_pri_all.textfsm, .*, oneaccess_oneos, sh[[ow]] voice voice-port pri all
+oneaccess_oneos_show_policy-interface_output.textfsm, .*, oneaccess_oneos, sh[[ow]] policy-interface output
 oneaccess_oneos_show_running-config_ip_route.textfsm, .*, oneaccess_oneos, sh[[ow]] run[[ning-config]] (\| i[[nclude]] )?ip route
 oneaccess_oneos_show_voice_sip-gateway_reset.textfsm, .*, oneaccess_oneos, sh[[ow]] voice sip-gateway reset
 oneaccess_oneos_show_voice_voip-call_any_all.textfsm, .*, oneaccess_oneos, sh[[ow]] voice voip-call any all
@@ -705,6 +706,7 @@ oneaccess_oneos_show_cellular-radio_context.textfsm, .*, oneaccess_oneos, sh[[ow
 oneaccess_oneos_show_cellular-radio_network.textfsm, .*, oneaccess_oneos, sh[[ow]] cell[[ular-radio]] network
 oneaccess_oneos_show_ip_as-path-access-list.textfsm, .*, oneaccess_oneos, sh[[ow]] ip as-path-access-list
 oneaccess_oneos_show_running-config_ip_dhcp.textfsm, .*, oneaccess_oneos, sh[[ow]] run[[ning-config]] \|?b?ip dhcp
+oneaccess_oneos_show_transceiver_equipment.textfsm, .*, oneaccess_oneos, sh[[ow]] transceiver equipment
 oneaccess_oneos_show_voice_voice-port_all.textfsm, .*, oneaccess_oneos, sh[[ow]] voice voice-port all
 oneaccess_oneos_show_running-config_bind.textfsm, .*, oneaccess_oneos, sh[[ow]] run[[ning-config]] \|?bind
 oneaccess_oneos_show_ip_interface_brief.textfsm, .*, oneaccess_oneos, sh[[ow]] ip int[[erface]] brief
