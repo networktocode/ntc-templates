@@ -8,7 +8,7 @@ Value Filldown HASHING (.+?)
 Value Filldown TOTAL_BYTES_TRANSMITTED (\d+)
 Value Filldown TOTAL_BYTES_RECEIVED (\d+)
 Value Filldown LOGIN_TIME (\d+:\d+:\d+)
-Value Filldown LOGIN_TIME_ZONE (\w+)
+Value Filldown LOGIN_TIME_ZONE (\S+)
 Value Filldown LOGIN_WEEKDAY (\w+)
 Value Filldown LOGIN_MONTH (\w+)
 Value Filldown LOGIN_DAY (\d+)
@@ -25,7 +25,7 @@ Value NEGOTIAION_MODE (\w+)
 Value AUTHENTICATION_MODE (\w+)
 Value REMOTE_AUTHENTICATION_MODE (\S+|)
 Value LOCAL_AUTHENTICATION_MODE (\S+|)
-Value ENCRYPTION_METHOD (\w+)
+Value ENCRYPTION_METHOD (\S+)
 Value HASH_METHOD (\w+)
 Value REKEY_INTERVAL (\d+)
 Value REKEY_INTERVAL_UNIT (\S+)
@@ -83,6 +83,7 @@ Connection
   ^\s*IKE(?:[Vv]\d|)\s+Sessions:\s+${TOTAL_IKE_SESSIONS}\s+IPSec\s+Sessions:\s+${TOTAL_IPSEC_SESSIONS}\s*$$
   ^\s*IKE(?:[Vv]\d|)\s+Tunnels:\s*${TOTAL_IKE_SESSIONS}\s*$$
   ^\s*IP[Ss]ec\s+Tunnels:\s*${TOTAL_IPSEC_SESSIONS}\s*$$
+  ^\s*IP[Ss]ecOverNatT\s+Tunnels:\s*${TOTAL_IPSEC_SESSIONS}\s*$$
   ^\s*${CONNECTION_TYPE}:\s*$$ -> Continue
   ^\s*IKE(?:[Vv]\d|): -> IKE
   ^\s*IP[Ss]ec: -> IPSec
@@ -111,7 +112,7 @@ IKE
   ^\s*\S+:\s*$$ -> Continue.Record
   ^\s*${CONNECTION_TYPE}:\s*$$ -> Continue
   ^\s*IKE(?:[Vv]\d|): -> IKE
-  ^\s*IP[Ss]ec: -> IPSec
+  ^\s*IP[Ss]ec(?:OverNatT|): -> IPSec
   ^\s*NAC: -> NAC
   ^\s*Connection\s*: -> Continue.Record
   ^\s*Connection\s*:\s+${CONNECTION}\s*$$ -> Connection
@@ -135,7 +136,7 @@ IPSec
   ^\s*\S+:\s*$$ -> Continue.Record
   ^\s*${CONNECTION_TYPE}:\s*$$ -> Continue
   ^\s*IKE(?:[Vv]\d|): -> IKE
-  ^\s*IP[Ss]ec: -> IPSec
+  ^\s*IP[Ss]ec(?:OverNatT|): -> IPSec
   ^\s*NAC: -> NAC
   ^\s*Connection\s*: -> Continue.Record
   ^\s*Connection\s*:\s+${CONNECTION}\s*$$ -> Connection
@@ -153,7 +154,7 @@ NAC
   ^\s*\S+:\s*$$ -> Continue.Record
   ^\s*${CONNECTION_TYPE}:\s*$$ -> Continue
   ^\s*IKE(?:[Vv]\d|): -> IKE
-  ^\s*IP[Ss]ec: -> IPSec
+  ^\s*IP[Ss]ec(?:OverNatT|): -> IPSec
   ^\s*NAC: -> NAC
   ^\s*Connection\s*: -> Continue.Record
   ^\s*Connection\s*:\s+${CONNECTION}\s*$$ -> Connection
@@ -162,3 +163,4 @@ NAC
   ^Session\s+Type:\s+${SESSION_TYPE}\s+Detailed\s*$$ -> Connection
   ^\s*$$
   ^. -> Error
+  
