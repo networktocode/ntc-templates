@@ -1,0 +1,23 @@
+IPv6 access list ACL2_IPv6
+    deny ipv6 2A01:728::/29 any sequence 10
+IPv6 access list ACL3_IPv6
+    permit tcp 2A01:720::/29 any log auth routing sequence 10
+IPv6 access list ACL_IPv6
+    deny ipv6 2A01:728::/29 any sequence 10
+IPv6 access list WAN_LOCAL
+    permit tcp AAAA:BBBB::/64 2A05:C100:53::/64 eq 6543 sequence 11
+    permit udp AAAA:BBBB::/64 2A05:C100:53::/64 eq 6543 sequence 12
+    deny udp host 2A05:C100:53::17 host 2A05:C100:53::145 eq 45 sequence 14
+    deny tcp host 2A05:C100:53::14 host 2A05:C100:53::17 range 46 48 sequence 15
+    permit tcp any any established sequence 9996
+    permit icmp any any sequence 9997
+    permit udp any any sequence 9998
+    deny ipv6 any any sequence 9999
+IPv6 access list WAN_ROUTEUR
+    permit ipv6 2A05:C100:53::/64 any sequence 10
+    permit ipv6 2A05:C100:53:1::/64 any sequence 20
+    permit ipv6 2A05:C100::/48 any sequence 30
+    permit ipv6 2A00:41E0::/48 any sequence 40
+    permit ipv6 2A05:C100:43::/64 any sequence 45
+    deny ipv6 any any sequence 50
+    permit tcp any any established sequence 9996
