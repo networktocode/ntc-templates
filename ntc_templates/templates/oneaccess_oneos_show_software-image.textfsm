@@ -5,6 +5,7 @@ Value CHECKSUM (\S+)
 
 Start
   ^-+\s${BANK}\sbank\s-+ -> BANK
+  ^Installation status.*
   ^.*$$
   ^. -> Error
 
@@ -14,5 +15,6 @@ BANK
   ^Header\schecksum\s+:\s${CHECKSUM}
   ^-+ -> Continue.Record
   ^-+\s${BANK}\sbank\s-+ -> BANK
+  ^Installation status.*
   ^$$
   ^. -> Error
