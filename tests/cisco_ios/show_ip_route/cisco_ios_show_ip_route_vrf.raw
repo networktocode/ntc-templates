@@ -1,0 +1,52 @@
+HME-C3560-SWI01#show ip route vrf TRI
+
+Routing Table: TRI
+Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area 
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+       ia - IS-IS inter area, * - candidate default, U - per-user static route
+       o - ODR, P - periodic downloaded static route, H - NHRP, l - LISP
+       a - application route
+       + - replicated route, % - next hop override, p - overrides from PfR
+
+Gateway of last resort is 10.10.254.3 to network 0.0.0.0
+
+B*    0.0.0.0/0 [200/0] via 10.10.254.3, 1d05h
+      10.0.0.0/8 is variably subnetted, 22 subnets, 8 masks
+B        10.0.0.0/8 [200/0] via 10.10.254.3, 1d05h
+B        10.10.0.0/18 [200/0], 3w4d, Null0
+B        10.10.5.0/24 is directly connected, 3w4d, Vlan5
+L        10.10.5.1/32 is directly connected, Vlan5
+B        10.10.10.0/24 is directly connected, 3w4d, Vlan10
+L        10.10.10.1/32 is directly connected, Vlan10
+B        10.10.20.0/24 is directly connected, 3w4d, Vlan20
+L        10.10.20.1/32 is directly connected, Vlan20
+B        10.10.64.0/19 [200/0], 3w4d, Null0
+B        10.10.64.0/24 is directly connected, 01:04:17, Vlan64
+L        10.10.64.1/32 is directly connected, Vlan64
+B        10.10.96.0/19 [200/0], 3w4d, Null0
+B        10.10.96.0/24 is directly connected, 3w4d, Vlan96
+L        10.10.96.1/32 is directly connected, Vlan96
+B        10.10.128.0/20 [200/0], 3w4d, Null0
+B        10.10.128.0/24 is directly connected, 3w4d, Vlan128
+L        10.10.128.1/32 is directly connected, Vlan128
+C        10.10.254.0/29 is directly connected, Vlan3101
+L        10.10.254.1/32 is directly connected, Vlan3101
+B        10.10.255.11/32 is directly connected, 3w4d, Loopback11
+B        10.10.255.12/32 is directly connected, 3w4d, Loopback12
+B        10.20.0.0/16 [200/0] via 10.10.254.10 (AMB), 3w4d
+B        10.30.0.0/16 [200/0] via 10.10.254.2 (BLU), 3w4d
+B        10.40.0.0/16 [200/0] via 10.10.254.2 (GRN), 3w4d
+B     172.16.0.0/12 [200/0] via 10.10.254.3, 1d05h
+B     192.168.0.0/16 [200/0] via 10.10.254.3, 1d05h
+      50.0.0.0/32 is subnetted, 1 subnets
+C        50.1.1.1 is directly connected, Loopback50
+B        10.12.1.0/27 [200/1000] via 192.168.12.5, 1w1d
+                      [200/1000] via 192.168.12.1, 1w1d
+B        10.12.242.64/28 [200/1000] via 192.168.12.5, 1w1d
+                         [200/1000] via 192.168.12.1, 1w1d
+      172.16.0.0/24 is subnetted, 2 subnets
+B        172.16.10.0 [200/0] via 10.80.10.2, 04:42:57
+B        172.16.20.0 [200/0] via 10.80.10.2, 04:42:52
