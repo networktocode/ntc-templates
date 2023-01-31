@@ -1,0 +1,14 @@
+ OSPF Process ID BLU1 VRF BLU
+ Total number of interface: 1
+ Interface               ID     Area            Cost   State    Neighbors Status
+ Vlan10                  1      0.0.0.10        10     DR       2         up 
+ 
+ OSPF Process ID DC_UNDERLAY VRF default
+ Total number of interface: 6
+ Interface               ID     Area            Cost   State    Neighbors Status
+ Vlan2                   3      0.0.0.0         100    P2P      1         up 
+ Lo1                     1      0.0.0.0         1      LOOPBACK 0         up 
+ Lo2                     2      0.0.0.0         1      LOOPBACK 0         up 
+ Lo3                     4      0.0.0.0         1      LOOPBACK 0         up 
+ Eth1/1                  6      0.0.0.0         1      P2P      1         up 
+ Eth1/2                  5      0.0.0.0         1      P2P      1         up 
