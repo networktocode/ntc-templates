@@ -1,4 +1,5 @@
 Value Filldown VRF (\S+)
+Value Filldown ADDRESS_FAMILY (\S+\s\S+)
 Value Filldown ROUTER_ID (\d+?\.\d+?\.\d+?\.\d+?)
 Value Filldown LOCAL_AS (\d+)
 Value Required BGP_NEIGH (\d+?\.\d+?\.\d+?\.\d+?)
@@ -14,7 +15,7 @@ Value STATE_PFXRCD (\S+?\s+\S+?|\S+?)
 
 Start
   # Match BGP VRF
-  ^BGP summary information for VRF ${VRF}, address family IPv4 Unicast
+  ^BGP summary information for VRF ${VRF}, address family ${ADDRESS_FAMILY}
   # Match RID and Local AS
   ^BGP router identifier ${ROUTER_ID}, local AS number ${LOCAL_AS}
   # Match Neighbor lines
