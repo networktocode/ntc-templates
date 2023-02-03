@@ -7,6 +7,7 @@ Timers: Uptime
 
 IP Route Table for VRF "default"
 S      ::/0 [50/0] via ::, pppoe4, 01w0d05h
+S      ::/64 [50/0] via 2a05:c100:1d::2, eth1, 00:00:04
 C      ::1/128 via ::, lo, 01w0d05h
 C      2a05:b780:0:1d::/64 via ::, pppoe4, 01w0d05h
 C      2a05:c100:1d::/64 via ::, eth1, 01:11:26
