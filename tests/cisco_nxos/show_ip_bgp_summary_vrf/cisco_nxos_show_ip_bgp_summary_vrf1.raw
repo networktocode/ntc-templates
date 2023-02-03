@@ -1,0 +1,108 @@
+BGP summary information for VRF AMB, address family IPv4 Unicast
+ 
+BGP summary information for VRF AMB, address family IPv6 Unicast
+ 
+BGP summary information for VRF BLU, address family IPv4 Unicast
+BGP router identifier 172.16.101.101, local AS number 65161
+BGP table version is 2301549, IPv4 Unicast config peers 1, capable peers 1
+827 network entries and 1406 paths using 105308 bytes of memory
+BGP attribute entries [107/18404], BGP AS path entries [26/272]
+BGP community entries [0/0], BGP clusterlist entries [6/24]
+ 
+Neighbor        V    AS MsgRcvd MsgSent   TblVer  InQ OutQ Up/Down  State/PfxRcd
+10.25.113.1     4 65001 21968368 22451737  2301549    0    0    24w2d 0        
+ 
+BGP summary information for VRF BLU, address family IPv6 Unicast
+ 
+BGP summary information for VRF GRN, address family IPv4 Unicast
+ 
+BGP summary information for VRF GRN, address family IPv6 Unicast
+ 
+BGP summary information for VRF GRY, address family IPv4 Unicast
+ 
+BGP summary information for VRF GRY, address family IPv6 Unicast
+ 
+BGP summary information for VRF NPE, address family IPv4 Unicast
+ 
+BGP summary information for VRF NPE, address family IPv6 Unicast
+ 
+BGP summary information for VRF RED, address family IPv4 Unicast
+ 
+BGP summary information for VRF RED, address family IPv6 Unicast
+ 
+BGP summary information for VRF TRI, address family IPv4 Unicast
+BGP router identifier 172.16.101.123, local AS number 65161
+BGP table version is 8526, IPv4 Unicast config peers 1, capable peers 1
+55 network entries and 102 paths using 9940 bytes of memory
+BGP attribute entries [11/1892], BGP AS path entries [8/80]
+BGP community entries [0/0], BGP clusterlist entries [6/24]
+ 
+Neighbor        V    AS MsgRcvd MsgSent   TblVer  InQ OutQ Up/Down  State/PfxRcd
+10.23.1.74      4 65171 3078819 3074406     8526    0    0     2w5d 24    
+ 
+BGP summary information for VRF TRI, address family IPv6 Unicast
+ 
+BGP summary information for VRF default, address family IPv4 Unicast
+BGP router identifier 172.16.101.37, local AS number 65161
+BGP table version is 14450, IPv4 Unicast config peers 5, capable peers 5
+36 network entries and 56 paths using 11184 bytes of memory
+BGP attribute entries [24/4128], BGP AS path entries [13/102]
+BGP community entries [0/0], BGP clusterlist entries [6/24]
+ 
+Neighbor        V    AS MsgRcvd MsgSent   TblVer  InQ OutQ Up/Down  State/PfxRcd
+172.16.14.2     4 65164 8429603 8531693    14450    0    0    1d08h 2        
+172.16.31.1     4 65191 8081582 8260415    14450    0    0     1w0d 2        
+172.16.31.17    4 65193 8167842 8348036    14450    0    0     1w0d 2        
+172.16.102.2    4 65161 1166456 1165743    14450    0    0     2y0w 28       
+172.16.151.2    4 65162 1074723 1073151    14450    0    0     1w1d 18       
+ 
+BGP summary information for VRF default, address family IPv6 Unicast
+ 
+BGP summary information for VRF default, address family VPNv4 Unicast
+ 
+BGP summary information for VRF default, address family VPNv6 Unicast
+ 
+BGP summary information for VRF default, address family IPv4 MVPN
+ 
+BGP summary information for VRF default, address family IPv6 MVPN
+
+BGP summary information for VRF default, address family L2VPN EVPN
+BGP router identifier 172.16.101.37, local AS number 65161
+BGP table version is 63025110, L2VPN EVPN config peers 7, capable peers 7
+4630 network entries and 8017 paths using 1210960 bytes of memory
+BGP attribute entries [796/136912], BGP AS path entries [31/334]
+BGP community entries [0/0], BGP clusterlist entries [6/24]
+ 
+Neighbor        V    AS MsgRcvd MsgSent   TblVer  InQ OutQ Up/Down  State/PfxRcd
+172.23.129.240  4 65191 8081498 8246843 63025110    0    0     1w0d 6        
+172.23.133.240  4 65193 8167863 8334538 63025110    0    0     1w0d 6        
+172.16.101.33   4 65161 40997672 23273121 63025110    0    0    2y11w 1782     
+172.16.101.34   4 65161 40992491 23273008 63025110    0    0    2y11w 1782     
+172.16.201.37   4 65162 23261970 26520909 63025110    0    0     1w1d 698      
+172.16.201.38   4 65162 23309853 26564632 63025110    0    0     2y2w 698      
+172.16.255.42   4 65164 20901792 21346308 63025110    0    0    1d08h 14       
+ 
+Neighbor        T    AS PfxRcd     Type-2     Type-3     Type-4     Type-5   
+172.23.129.240  I 65191 6          0          0          0          6        
+172.23.133.240  I 65193 6          0          0          0          6        
+172.16.101.33   I 65161 1782       1434       14         0          334      
+172.16.101.34   I 65161 1782       1434       14         0          334      
+172.16.201.37   E 65162 698        481        7          0          210      
+172.16.201.38   E 65162 698        481        7          0          210      
+172.16.255.42   I 65164 14         0          0          0          14
+
+
+Value Filldown VRF (\S+)
+Value Filldown ADDRESS_FAMILY (\S+\s\S+)
+Value Filldown ROUTER_ID (\d+?\.\d+?\.\d+?\.\d+?)
+Value Filldown LOCAL_AS (\d+)
+Value Required BGP_NEIGH (\d+?\.\d+?\.\d+?\.\d+?)
+Value BGP_VER (\d)
+Value Required NEIGH_AS (\S+)
+Value MSG_RCVD (\d+)
+Value MSG_SENT (\d+)
+Value TBLVER (\d+)
+Value IN_QUEUE (\d+)
+Value OUT_QUEUE (\d+)
+Value UP_DOWN (\S+)
+Value STATE_PFXRCD (\S+?\s+\S+?|\S+?)
