@@ -1,4 +1,4 @@
-Value Filldown OSPF_PID (\d+)
+Value Filldown OSPF_PID (\S+)
 Value Filldown VRF (\S+)
 Value NEIGHBOR_IPADDR (\d+\.\d+\.\d+\.\d+)
 Value STATE (\S+.\/.\S+)
