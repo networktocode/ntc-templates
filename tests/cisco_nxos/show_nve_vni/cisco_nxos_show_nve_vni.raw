@@ -1,0 +1,15 @@
+Codes: CP - Control Plane        DP - Data Plane         
+       UC - Unconfigured         SA - Suppress ARP       
+       SU - Suppress Unknown Unicast
+       Xconn - Crossconnect     
+       MS-IR - Multisite Ingress Replication
+Interface VNI      Multicast-group   State Mode Type [BD/VRF]      Flags
+--------- -------- ----------------- ----- ---- ------------------ -----
+nve1      1006    UnicastBGP          Up    CP   L2 [6]             SA   
+nve1      1105    UnicastBGP          Up    CP   L2 [1105]          SA  
+nve1      2111    UnicastBGP          Up    CP   L2 [111]           SA  
+nve1      3098    UnicastBGP          Up    CP   L2 [98]            SA  
+nve1      10301 n/a                   Up    CP   L3 [BLU]               
+nve1      10302 n/a                   Up    CP   L3 [GRN]               
+nve1      10303 n/a                   Up    CP   L3 [AMB]                              
+nve1      10306 n/a                   Up    CP   L3 [GRY]               

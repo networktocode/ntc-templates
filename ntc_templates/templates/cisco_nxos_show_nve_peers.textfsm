@@ -1,0 +1,12 @@
+Value INTERFACE (\S+)
+Value PEER (\d+.\d+.\d+.\d+)
+Value STATE (Up|Down)
+Value TYPE (\S+)
+Value RMAC (.*)
+
+Start
+  ^Interface\s+Peer-IP\s+State\s+LearnType\s+Uptime\s+Router-Mac\s*$$
+  ^-+
+  ^${INTERFACE}\s+${PEER}\s+${STATE}\s+${TYPE}\s+\S+\s+${RMAC}\s+ -> Record
+  ^\s*$$
+  ^. -> Error
