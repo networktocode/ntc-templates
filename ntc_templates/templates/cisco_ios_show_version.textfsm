@@ -18,7 +18,8 @@ Value List MAC ([0-9a-fA-F]{2}(:[0-9a-fA-F]{2}){5})
 Value RESTARTED (.+)
 
 Start
-  ^.*Software\s\(${SOFTWARE_IMAGE}+\),\sVersion\s${VERSION},*\s+RELEASE.*\(${RELEASE}\)
+  ^.*Software,*\s+\(${SOFTWARE_IMAGE}\),\sVersion\s${VERSION},*\s+RELEASE.*\(${RELEASE}\)
+  ^.*Software,*\s+\(${SOFTWARE_IMAGE}\),\sVersion\s${VERSION},
   ^ROM:\s+${ROMMON}
   ^\s*${HOSTNAME}\s+uptime\s+is\s+${UPTIME} -> Continue
   ^.*\s+uptime\s+is.*\s+${UPTIME_YEARS}\syear -> Continue
