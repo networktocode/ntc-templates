@@ -1,0 +1,13 @@
+Value INTERFACE (\S+)
+Value VNI (\d+)
+Value TYPE (L2CP|L3CP)
+Value PEER (\d+.\d+.\d+.\d+)
+Value RMAC ([0-9a-fA-F]{4}\.[0-9a-fA-F]{4}\.[0-9a-fA-F]{4})
+Value STATE (UP|DOWN)
+
+Start
+  ^Interface\s+VNI\s+Type\s+Peer-IP\s+RMAC/Num_RTs\s+eVNI\s+state\s+flags\s+UP\s+time\s*$$
+  ^${INTERFACE}\s+${VNI}\s+${TYPE}\s+${PEER}\s+${RMAC}\s+\d+\s+${STATE} -> Record
+  ^\s*$$
+  ^. -> Error
+  
