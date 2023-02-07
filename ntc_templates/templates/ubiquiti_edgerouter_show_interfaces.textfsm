@@ -1,0 +1,14 @@
+Value Required INTERFACE (\w+)
+Value List IP (\S+)
+Value STATE (\w)
+Value LINK_STATUS (\w)
+Value DESCRIPTION ([\w\d\-\s]+)
+
+Start
+  ^[-\s]+ -> Interfaces
+ 
+Interfaces
+  ^(\w+) -> Continue.Record
+  ^${INTERFACE}\s+${IP}\s+(${STATE}/${LINK_STATUS})(\s+${DESCRIPTION})?
+  ^\s+${IP}
+  ^. -> Error

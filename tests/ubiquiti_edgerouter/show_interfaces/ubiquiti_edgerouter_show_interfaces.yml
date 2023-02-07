@@ -1,0 +1,37 @@
+---
+parsed_sample:
+  - interface: "eth0"
+    description: "Port"
+    ip: ["-"]
+    link_status: "u"
+    state: "u"
+  - interface: "eth1"
+    description: "Eth 1"
+    ip: ["192.168.1.1/24", "2a05:c100:1d::1/64"]
+    link_status: "u"
+    state: "u"
+  - interface: "eth2"
+    description: "Port"
+    ip: ["-"]
+    link_status: "D"
+    state: "u"
+  - interface: "eth3"
+    description: "Port"
+    ip: ["-"]
+    link_status: "D"
+    state: "u"
+  - interface: "lo"
+    description: ""
+    ip: ["127.0.0.1/8", "::1/128"]
+    link_status: "u"
+    state: "u"
+  - interface: "eth4"
+    description: "datas"
+    ip: ["192.168.1.1/24"]
+    link_status: "u"
+    state: "u"
+  - interface: "eth5"
+    description: ""
+    ip: ["2a05:c100:1d::1/64"]
+    link_status: "u"
+    state: "u"
