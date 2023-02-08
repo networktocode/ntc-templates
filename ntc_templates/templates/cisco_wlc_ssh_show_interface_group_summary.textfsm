@@ -5,4 +5,8 @@ Value TOTAL_AP_GROUPS (\d+)
 
 
 Start
+  ^Interface\s*Group\s*Name\s*Total\s*Interfaces\s*Total\s*Wlans\s*Total\s*AP\s*Groups\s*Quarantine\s*$$
+  ^-+
   ^${INTERFACE_GROUP_NAME}\s+${TOTAL_INTERFACES}\s+${TOTAL_WLANS}\s+${TOTAL_AP_GROUPS} -> Record
+  ^\s*$$
+  ^. -> Error
