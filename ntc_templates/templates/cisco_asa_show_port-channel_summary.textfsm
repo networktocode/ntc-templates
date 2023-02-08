@@ -8,8 +8,6 @@ Value List INTERFACES_STATUS (\D+)
 Start
   ^Group\s+Port-channel\s+Protocol\s+Span-cluster\s+Ports -> PortChannel
   ^\s*$$
-  
-	
 
 PortChannel
   ^\d+ -> Continue.Record
@@ -25,7 +23,8 @@ PortChannel
   ^\d+
   ^\s+
   ^-+\++
-  ^\s*$$
   ^(RU|SU)\s+-\s+L(2|3)\s+port-channel\s+UP\s+(s|S)tate
   ^(P|S)/(bndl|susp)\s+-\s+(Bundled|Suspended)
+  ^\s*$$
   ^. -> Error
+  
