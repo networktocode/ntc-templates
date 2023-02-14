@@ -1,0 +1,16 @@
+---
+parsed_sample:
+  - interface: "MgmtEth0/0/CPU0/0"
+    ip_address: "172.25.82.44/24"
+    link_status: "Up"
+    mtu: "1514"
+    protocol: "ipv4"
+    protocol_status: "Up"
+    vrf: "default"
+  - interface: "GigabitEthernet0/0/0/0"
+    ip_address: ""
+    link_status: "Shutdown"
+    mtu: ""
+    protocol: "ipv4"
+    protocol_status: "Down"
+    vrf: "default"
