@@ -1,0 +1,11 @@
+Flags:  D - down        P - bundled in port-channel
+        I - stand-alone s - suspended
+        H - Hot-standby (LACP only)
+        U - in use      N - not in use, no aggregation/nameif
+        M - not in use, no aggregation due to minimum links not met
+        w - waiting to be aggregated
+Number of channel-groups in use: 3
+Group  Port-channel  Protocol  Span-cluster  Ports
+------+-------------+---------+------------+------------------------------------
+1      Po1(U)            LACP          No     Gi0/0(P)   Gi0/1(P)
+2      Po2(U)            LACP          No     Gi0/2(P)   Gi0/3(P)

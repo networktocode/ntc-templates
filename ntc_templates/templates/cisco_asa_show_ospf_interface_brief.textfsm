@@ -1,0 +1,13 @@
+Value INTERFACE (\S+)
+Value PROCESS (\d+)
+Value AREA (\d+)
+Value IP_ADDRESS_MASK (\d+\.\d+\.\d+\.\d+/\d+\.\d+\.\d+\.\d+)
+Value COST (\d+)
+Value STATE (\S+)
+Value NEIGHBORS_FC (\d+/\d+)
+
+Start
+  ^Interface\s+PID\s+Area\s+IP\s+Address/Mask\s+Cost\s+State\s+Nbrs\s+F/C\s*$$
+  ^${INTERFACE}\s+${PROCESS}\s+${AREA}\s+${IP_ADDRESS_MASK}\s+${COST}\s+${STATE}\s+${NEIGHBORS_FC} -> Record
+  ^\s*$$
+  ^. -> Error
