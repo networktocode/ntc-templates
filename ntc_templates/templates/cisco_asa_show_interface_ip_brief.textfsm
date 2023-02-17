@@ -1,0 +1,10 @@
+Value INTF (\S+)
+Value IPADDR (\S+)
+Value STATUS (up|down|administratively down)
+Value PROTO (up|down)
+
+Start
+  ^Interface\s+IP-Address\s+Method\s+Status\s+Protocol\s*$$
+  ^${INTF}\s+${IPADDR}\s+\w+\s+\w+\s+${STATUS}\s+${PROTO} -> Record
+  ^\s*$$
+  ^. -> Error

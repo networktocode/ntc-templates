@@ -1,0 +1,22 @@
+---
+parsed_sample:
+  - group: "1"
+    po_name: "Po1"
+    po_status: "U"
+    protocol: "LACP"
+    interfaces:
+      - "Gi0/0"
+      - "Gi0/1"
+    interfaces_status:
+      - "P"
+      - "P"
+  - group: "2"
+    po_name: "Po2"
+    po_status: "U"
+    protocol: "LACP"
+    interfaces:
+      - "Gi0/2"
+      - "Gi0/3"
+    interfaces_status:
+      - "P"
+      - "P"
