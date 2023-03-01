@@ -725,11 +725,14 @@ oneaccess_oneos_show_ip_prefix-list.textfsm, .*, oneaccess_oneos, sh[[ow]] ip pr
 oneaccess_oneos_show_snmp_community.textfsm, .*, oneaccess_oneos, sh[[ow]] snmp comm[[unity]]
 oneaccess_oneos_show_soft-file_info.textfsm, .*, oneaccess_oneos, sh[[ow]] soft\-file info.*
 oneaccess_oneos_show_software-image.textfsm, .*, oneaccess_oneos, sh[[ow]] software-image
+oneaccess_oneos_show_vrrp_interface.textfsm, .*, oneaccess_oneos, sh[[ow]] vrrp int[[erface]]
 oneaccess_oneos_show_system_status.textfsm, .*, oneaccess_oneos, sh[[ow]] system status
 oneaccess_oneos_show_tacacs-server.textfsm, .*, oneaccess_oneos, sh[[ow]] tacacs\-server
 oneaccess_oneos_show_ip_vrf_brief.textfsm, .*, oneaccess_oneos, sh[[ow]] ip vrf brief
 oneaccess_oneos_show_isdn_active.textfsm, .*, oneaccess_oneos, sh[[ow]] isdn active
+oneaccess_oneos_show_interfaces.textfsm, .*, oneaccess_oneos, sh[[ow]] interfaces
 oneaccess_oneos_show_route-map.textfsm, .*, oneaccess_oneos, sh[[ow]] route-map
+oneaccess_oneos_show_track_all.textfsm, .*, oneaccess_oneos, sh[[ow]] track all
 oneaccess_oneos_show_voice_mos.textfsm, .*, oneaccess_oneos, sh[[ow]] voice mos
 oneaccess_oneos_show_helpers.textfsm, .*, oneaccess_oneos, sh[[ow]] helpers
 oneaccess_oneos_show_ip_ssh.textfsm, .*, oneaccess_oneos, sh[[ow]] ip ssh
@@ -738,6 +741,7 @@ oneaccess_oneos_show_tacacs.textfsm, .*, oneaccess_oneos, sh[[ow]] tacacs
 oneaccess_oneos_show_sntp.textfsm, .*, oneaccess_oneos, sh[[ow]] sntp
 oneaccess_oneos_hostname.textfsm, .*, oneaccess_oneos, hostname
 oneaccess_oneos_ls.textfsm, .*, oneaccess_oneos, ls( -[lh][lh]? )?.*
+
 
 paloalto_panos_show_running_security-policy.textfsm, .*, paloalto_panos, sh[[ow]] runn[[ing]] security[[-policy]]
 paloalto_panos_show_high-availability_all.textfsm, .*, paloalto_panos, sh[[ow]] high[[-availability]] all
