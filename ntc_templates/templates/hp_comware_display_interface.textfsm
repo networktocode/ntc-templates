@@ -16,43 +16,48 @@ Value List VLAN_PERMITTED ([^,]+)
 
 Start
   #^\S+$$.Record
-  ^${INTF}$$
-  ^Current\s+state:\s+${LINE_STATUS}
-  ^Line\s+protocol\s+state:\s+${PROTOCOL_STATUS}
-  ^Description:\s+${DESCRIPTION}
-  ^Bandwidth:\s+${BANDWIDTH}
-  ^Maximum\s+transmission\s+unit:\s+${MTU}
-  ^Maximum\s+frame\s+length:\s+${L2MTU}
-  ^Internet\s+[Aa]ddress:\s+${IP_ADDRESS}\s+\([Pp]rimary\)
-  ^Internet\s+[Aa]ddress:\s+${IP_ADDRESS}\s+\([Ss]ub\)
-  ^IP\s+packet\s+frame\s+type:\s+Ethernet\s+II,\s+hardware\s+address:\s+${HW_ADDRESS}
-  ^IPv6\s+packet\s+frame\s+type:\s+Ethernet\s+II,\s+hardware\s+address:\s+${HW_ADDRESS}
-  ^${SPEED}\s+mode,\s+${DUPLEX}\s+mode
-  ^PVID:\s+${VLAN_NATIVE}
-  ^Port\s+link-type:\s+${PORT_LINK_TYPE}
+  ^\s*${INTF}$$
+  ^\s*Current\s+state:\s+${LINE_STATUS}
+  ^\s*${INTF}\s+current\s+state\s*:\s*${LINE_STATUS}
+  ^\s*Line\s+protocol\s+state:\s+${PROTOCOL_STATUS}
+  ^\s*Line\s+protocol\s+current\s+state:\s+${PROTOCOL_STATUS}
+  ^\s*Description:\s+${DESCRIPTION}
+  ^\s*Bandwidth:\s+${BANDWIDTH}
+  ^\s*Maximum\s+transmission\s+unit:\s+${MTU}
+  ^\s*The\sMaximum\s+Transmit\s+Unit\sis\s+${MTU}
+  ^\s*Maximum\s+frame\s+length:\s+${L2MTU}
+  ^\s*The\sMaximum\s+Frame\s+Length\sis\s+${L2MTU}
+  ^\s*Internet\s+[Aa]ddress:\s+${IP_ADDRESS}\s+\([Pp]rimary\)
+  ^\s*Internet\s+[Aa]ddress\sis\s+${IP_ADDRESS}\s+[Pp]rimary
+  ^\s*Internet\s+[Aa]ddress:\s+${IP_ADDRESS}\s+\([Ss]ub\)
+  ^\s*IP\s+[Pp]acket\s+[Ff]rame\s+[Tt]ype:\s+[^,]+,\s+[Hh]ardware\s+[Aa]ddress:\s+${HW_ADDRESS}
+  ^\s*IPv6\s+[Pp]acket\s+[Ff]rame\s+[Tt]ype:\s+[^,]+,\s+[Hh]ardware\s+[Aa]ddress:\s+${HW_ADDRESS}
+  ^\s*${SPEED}\s+mode,\s+${DUPLEX}\s+mode
+  ^\s*PVID:\s+${VLAN_NATIVE}
+  ^\s*Port\s+link-type:\s+${PORT_LINK_TYPE}
   # Trunk - Passing VLANs (parsing multiple times with Continue)
-  ^\s+VLAN\s+Passing:\s+${VLAN_PASSING},* -> Continue
+  ^\s+VLAN\s+[Pp]assing\s*:\s+${VLAN_PASSING},* -> Continue
   # Skip initial VLANs and read the Nth + 1
-  ^\s+VLAN\s+Passing:(?:\s+[^,]+,){1}\s+${VLAN_PASSING},* -> Continue
-  ^\s+VLAN\s+Passing:(?:\s+[^,]+,){2}\s+${VLAN_PASSING},* -> Continue
-  ^\s+VLAN\s+Passing:(?:\s+[^,]+,){3}\s+${VLAN_PASSING},* -> Continue
-  ^\s+VLAN\s+Passing:(?:\s+[^,]+,){4}\s+${VLAN_PASSING},* -> Continue
-  ^\s+VLAN\s+Passing:(?:\s+[^,]+,){5}\s+${VLAN_PASSING},* -> Continue
-  ^\s+VLAN\s+Passing:(?:\s+[^,]+,){6}\s+${VLAN_PASSING},* -> Continue
-  ^\s+VLAN\s+Passing:(?:\s+[^,]+,){7}\s+${VLAN_PASSING},* -> Continue
-  ^\s+VLAN\s+Passing:(?:\s+[^,]+,){8}\s+${VLAN_PASSING},* -> Continue
-  ^\s+VLAN\s+Passing:(?:\s+[^,]+,){9}\s+${VLAN_PASSING},* -> Continue
-  ^\s+VLAN\s+Passing:(?:\s+[^,]+,){10}\s+${VLAN_PASSING},* -> Continue
-  ^\s+VLAN\s+Passing:(?:\s+[^,]+,){11}\s+${VLAN_PASSING},* -> Continue
-  ^\s+VLAN\s+Passing:(?:\s+[^,]+,){12}\s+${VLAN_PASSING},* -> Continue
-  ^\s+VLAN\s+Passing:(?:\s+[^,]+,){13}\s+${VLAN_PASSING},* -> Continue
-  ^\s+VLAN\s+Passing:(?:\s+[^,]+,){14}\s+${VLAN_PASSING},* -> Continue
-  ^\s+VLAN\s+Passing:(?:\s+[^,]+,){15}\s+${VLAN_PASSING},* -> Continue
-  ^\s+VLAN\s+Passing:(?:\s+[^,]+,){16}\s+${VLAN_PASSING},* -> Continue
-  ^\s+VLAN\s+Passing:(?:\s+[^,]+,){17}\s+${VLAN_PASSING},* -> Continue
-  ^\s+VLAN\s+Passing:(?:\s+[^,]+,){18}\s+${VLAN_PASSING},* -> Continue
-  ^\s+VLAN\s+Passing:(?:\s+[^,]+,){19}\s+${VLAN_PASSING},* -> Continue
-  ^\s+VLAN\s+Passing:(?:\s+[^,]+,){20}\s+${VLAN_PASSING},* -> Continue
+  ^\s+VLAN\s+[Pp]assing\s*:(?:\s+[^,]+,){1}\s+${VLAN_PASSING},* -> Continue
+  ^\s+VLAN\s+[Pp]assing\s*:(?:\s+[^,]+,){2}\s+${VLAN_PASSING},* -> Continue
+  ^\s+VLAN\s+[Pp]assing\s*:(?:\s+[^,]+,){3}\s+${VLAN_PASSING},* -> Continue
+  ^\s+VLAN\s+[Pp]assing\s*:(?:\s+[^,]+,){4}\s+${VLAN_PASSING},* -> Continue
+  ^\s+VLAN\s+[Pp]assing\s*:(?:\s+[^,]+,){5}\s+${VLAN_PASSING},* -> Continue
+  ^\s+VLAN\s+[Pp]assing\s*:(?:\s+[^,]+,){6}\s+${VLAN_PASSING},* -> Continue
+  ^\s+VLAN\s+[Pp]assing\s*:(?:\s+[^,]+,){7}\s+${VLAN_PASSING},* -> Continue
+  ^\s+VLAN\s+[Pp]assing\s*:(?:\s+[^,]+,){8}\s+${VLAN_PASSING},* -> Continue
+  ^\s+VLAN\s+[Pp]assing\s*:(?:\s+[^,]+,){9}\s+${VLAN_PASSING},* -> Continue
+  ^\s+VLAN\s+[Pp]assing\s*:(?:\s+[^,]+,){10}\s+${VLAN_PASSING},* -> Continue
+  ^\s+VLAN\s+[Pp]assing\s*:(?:\s+[^,]+,){11}\s+${VLAN_PASSING},* -> Continue
+  ^\s+VLAN\s+[Pp]assing\s*:(?:\s+[^,]+,){12}\s+${VLAN_PASSING},* -> Continue
+  ^\s+VLAN\s+[Pp]assing\s*:(?:\s+[^,]+,){13}\s+${VLAN_PASSING},* -> Continue
+  ^\s+VLAN\s+[Pp]assing\s*:(?:\s+[^,]+,){14}\s+${VLAN_PASSING},* -> Continue
+  ^\s+VLAN\s+[Pp]assing\s*:(?:\s+[^,]+,){15}\s+${VLAN_PASSING},* -> Continue
+  ^\s+VLAN\s+[Pp]assing\s*:(?:\s+[^,]+,){16}\s+${VLAN_PASSING},* -> Continue
+  ^\s+VLAN\s+[Pp]assing\s*:(?:\s+[^,]+,){17}\s+${VLAN_PASSING},* -> Continue
+  ^\s+VLAN\s+[Pp]assing\s*:(?:\s+[^,]+,){18}\s+${VLAN_PASSING},* -> Continue
+  ^\s+VLAN\s+[Pp]assing\s*:(?:\s+[^,]+,){19}\s+${VLAN_PASSING},* -> Continue
+  ^\s+VLAN\s+[Pp]assing\s*:(?:\s+[^,]+,){20}\s+${VLAN_PASSING},* -> Continue
   ^\s{14,}${VLAN_PASSING},* -> Continue
   ^\s{14,}(?:\s+[^,]+,){1}\s+${VLAN_PASSING},* -> Continue
   ^\s{14,}(?:\s+[^,]+,){2}\s+${VLAN_PASSING},* -> Continue
@@ -75,7 +80,7 @@ Start
   ^\s{14,}(?:\s+[^,]+,){19}\s+${VLAN_PASSING},* -> Continue
   ^\s{14,}(?:\s+[^,]+,){20}\s+${VLAN_PASSING},* -> Continue
   # End od VLAN Passing
-  ^\s+VLAN\s+Passing:
+  ^\s+VLAN\s+[Pp]assing\s*:
   ^\s{14,}
   # Trunk - Permitted VLANs (parsing multiple times with Continue)
   ^\s+VLAN\s+permitted:\s+${VLAN_PERMITTED},* -> Continue
@@ -137,7 +142,7 @@ Start
   ^\s*Broadcast
   ^\s*Multicast
   ^\s*Unicast
-  ^\s*MDI\s+type
+  ^\s*M[Dd][Ii]\s+type
   ^\s*Port\s+priority
   ^\s*Current\s*system
   ^\s*Peak
@@ -153,6 +158,8 @@ Start
   ^\s+\d+\s+unicasts
   ^\s+\d+\s+CRC
   ^\s+\d+\s+aborts
+  ^\s+\d+\s+packets\s+input
+  ^\s+\d+\s+packets\s+output
   ^\s+\d+\s+lost
   ^\s+\d+\s+broadcasts
   ^\s+\d+\s+ignored
