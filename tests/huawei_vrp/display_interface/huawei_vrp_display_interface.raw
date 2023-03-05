@@ -6,11 +6,11 @@ Internet protocol processing : disabled
 Last physical up time   : -
 Last physical down time : 2022-10-12 15:43:36
 Current system time: 2022-10-13 08:58:09
-Modem State: Present
+Modem State: Non Present
 Model = ME909s-120
 Current Network Connection = LTE(LTE)
 Current RSSI = -75 dBm
-Current SINR = -1 dB (weak)
+Current SINR = -1 dB (normal)
 Last 300 seconds input rate 0 bytes/sec 0 bits/sec 0 packets/sec
 Last 300 seconds output rate 0 bytes/sec 0 bits/sec 0 packets/sec
 Input: 0 packets, 0 bytes
@@ -37,7 +37,7 @@ Dialer1:0 current state : UP ,
 Line protocol current state : UP
 
 Link layer protocol is PPP
-LCP opened, IPCP opened, IP6CP opened
+LCP opened, IPCP opened
 Packets statistics:
   Input packets:396,  39552 bytes
   Output packets:560, 41892 bytes
@@ -438,3 +438,35 @@ Output: 0 packets, 0 bytes
  RtsSuccess: 0 , SendFail: 0
     Input bandwidth utilization  : --
     Output bandwidth utilization : --
+
+Tunnel0/0/2 current state : UP
+Line protocol current state : UP
+Description:HUAWEI, AC Series, Tunnel0/0/2 Interface
+Route Port,The Maximum Transmit Unit is 1500
+Internet protocol processing : disabled
+Encapsulation is TUNNEL, loopback not set
+Tunnel source 10.10.10.1 (Vlanif10), destination 1.1.1.1
+Tunnel protocol/transport GRE/IP, key disabled
+keepalive disabled
+Checksumming of packets disabled
+Current system time: 2012-08-09 18:53:47
+    300 seconds input rate 0 bits/sec, 0 packets/sec
+    300 seconds output rate 0 bits/sec, 0 packets/sec
+    15 seconds input rate 0 bits/sec, 0 packets/sec
+    15 seconds output rate 0 bits/sec, 0 packets/sec
+    0 packets input,  0 bytes
+    0 input error
+    0 packets output,  0 bytes
+    0 output error
+    Input bandwidth utilization  : --
+    Output bandwidth utilization : --
+
+Virtual-Ethernet0/0/1 current state : UP
+Line protocol current state : UP
+Description:HUAWEI, AC Series, Virtual-Ethernet0/0/1 Interface
+Switch Port, PVID :    1, TPID : 8100(Hex), The Maximum Transmit Unit is 1500
+IP Sending Frames' Format is PKTFMT_ETHNT_2, Hardware address is dcd2-fcf9-b5ca
+Current system time: 2018-01-25 19:42:36
+
+    Input bandwidth utilization  :    0%
+    Output bandwidth utilization :    0%
