@@ -27,16 +27,20 @@ Start
   ^Internet\s+Address\s+is\s+${INTERNET_ADDRESS}\s*$$
   ^.*,\s+Hardware\s+address\s+is\s+${HARDWARE_ADDRESS}\s*$$
   ^Internet\s+protocol\s+processing\s+:\s+${INTERNET_PROTOCOL}\s*$$
+  ^Encapsulation\sis\s.+\s*$$
+  ^Tunnel\ssource\s\S+\s\(.+\),\sdestination\s\S+\s*$$
+  ^Tunnel\sprotocol\/transport\sGRE\/IP,\skey\s.+\s*$$
+  ^keepalive\s\S+\s*$$
+  ^Checksumming\sof\spackets\s\S+\s*$$
   ^Last\s+physical\s+up\s+time\s*:\s+${LAST_PHYSICAL_UP_TIME}\s*
   ^Last\s+physical\s+down\s+time\s+:\s+${LAST_PHYSICAL_DOWN_TIME}\s*
   ^IP\sSending\sFrames'\sFormat\sis\s\S+\s*,\sHardware\saddress\sis\s\S+\s*$$
   ^Current\s+system\s+time:\s+${CURRENT_SYSTEM_TIME}\s*
-  ^Modem\sState:\s+\S+\s*$$
-  ^Model\s=\s+\S+\s*$$
-  ^Current\sNetwork\sConnection\s=\sLTE\(LTE\)\s*$$
-  ^Current\sNetwork\sConnection\s=\sUnknown\s*$$
+  ^Modem\sState:\s+.+\s*$$
+  ^Model\s=\s+.+\s*$$
+  ^Current\sNetwork\sConnection\s=\s.+\s*$$
   ^Current\sRSSI\s<?=\s+(-)?\d+\sdBm.*$$
-  ^Current\sSINR\s=\s+(-)?\d+\sdB\s\(weak\)\s*$$
+  ^Current\sSINR\s([<>])?=\s+(-)?\d+\sdB\s\(.+\)\s*$$
   ^\s+Input\sbandwidth\sutilization(\sthreshold)?\s*:.*$$
   ^\s+Output\sbandwidth\sutilization(\sthreshold)?\s*:.*$$
   ^Port\s+Mode:\s+${PORT_MODE}\s*$$
@@ -50,7 +54,7 @@ Start
   ^LCP\sinitial\s*$$
   ^Physical\sis.*$$
   ^Bound\sto.*$$
-  ^\s*LCP\s\S+,\s+IPCP\s\S+,\s+IP6CP\s\S+\s*$$
+  ^\s*LCP\s\S+,\s+IPCP\s\S+(,\s+IP6CP\s\S+)?\s*$$
   ^Packets\sstatistics:\s*$$
   ^\s+(Input|Output)\spackets\s*:\s*\d+,\s+\d+\sbytes\s*$$
   ^\s+FCS\serror\spackets:\s*\d+\s*$$
