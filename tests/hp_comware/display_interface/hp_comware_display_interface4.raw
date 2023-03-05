@@ -1,0 +1,40 @@
+ Bridge-Aggregation1 current state: UP
+ IP Packet Frame Type: PKTFMT_ETHNT_2, Hardware Address: 5c8a-3800-0000
+ Description: Bridge-Aggregation1 Interface
+ 20Gbps-speed mode, full-duplex mode
+ Link speed type is autonegotiation, link duplex type is autonegotiation
+ PVID: 1
+ Port link-type: trunk
+  VLAN passing  : 1(default vlan), 1000, 1100
+  VLAN permitted: 1(default vlan), 2-4094
+  Trunk port encapsulation: IEEE 802.1q
+ Last clearing of counters:  Never
+ Last 300 seconds input:  7 packets/sec 1173 bytes/sec    0%
+ Last 300 seconds output:  2 packets/sec 627 bytes/sec    0%
+ Input (total):  12780551 packets, 3686268373 bytes
+	 3708742 unicasts, 1208702 broadcasts, 7863107 multicasts
+ Input (normal):  12780551 packets, - bytes
+	 3708742 unicasts, 1208702 broadcasts, 7863107 multicasts
+ Input:  0 input errors, 0 runts, 0 giants, 0 throttles
+	 0 CRC, 0 frame, - overruns, 0 aborts
+	 - ignored, - parity errors
+ Output (total): 3188930 packets, 1014669367 bytes
+	 2841863 unicasts, 4809 broadcasts, 342258 multicasts, 0 pauses
+ Output (normal): 3188930 packets, - bytes
+	 2841863 unicasts, 4809 broadcasts, 342258 multicasts, 0 pauses
+ Output: 0 output errors, - underruns, - buffer failures
+	 0 aborts, 0 deferred, 0 collisions, 0 late collisions
+	 0 lost carrier, - no carrier
+
+Vlan-interface123 current state: UP
+Line protocol current state: UP
+Description: Vlan-interface1231 Interface
+The Maximum Transmit Unit is 1500
+Internet Address is 10.0.1.1/24 Primary
+IP Packet Frame Type: PKTFMT_ETHNT_2,  Hardware Address: 5c8a-3830-0001
+IPv6 Packet Frame Type: PKTFMT_ETHNT_2,  Hardware Address: 5c8a-3830-0001
+ Last clearing of counters:  Never
+    Last 300 seconds input rate: 0 bytes/sec, 0 bits/sec, 0 packets/sec
+    Last 300 seconds output rate: 0 bytes/sec, 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes, 0 drops
+    0 packets output, 0 bytes, 0 drops
