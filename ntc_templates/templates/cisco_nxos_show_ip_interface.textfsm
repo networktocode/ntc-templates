@@ -71,7 +71,9 @@ Value WCCP_REDIRECT_INBOUND (\S+)
 Value WCCP_REDIRECT_EXCLUDE (\S+)
 
 Start
+  ^IP\s+Interface\s+Status.*$$ -> Continue.Record
   ^IP\s+Interface\s+Status\s+for\s+VRF\s+\"${VRF_NAME}\"\s*$$
+  ^\S+\s+Interface\s+status.*$$ -> Continue.Record
   ^${INTERFACE},.*protocol-${PROTOCOL_STATUS}\/link-${LINK_STATUS}\/admin-${ADMIN_STATUS},.*$$
   ^\s*IP\s+address:\s+${PRIMARY_IP_ADDRESS},\s+IP\s+subnet:\s+${PRIMARY_IP_SUBNET}(\s+route-preference.+)?$$
   # Secondary IP addresses are stored as a list
@@ -108,6 +110,6 @@ Start
   ^\s*Labeled\s+bytes\s+:\s+${LABELED_BYTES_SENT}\/${LABELED_BYTES_RECEIVED}\/${LABELED_BYTES_FORWARDED}\/${LABELED_BYTES_ORIGINATED}\/${LABELED_BYTES_CONSUMED}\s*$$
   ^\s*WCCP\s+Redirect\s+outbound:\s+${WCCP_REDIRECT_OUTBOUND}\s*$$
   ^\s*WCCP\s+Redirect\s+inbound:\s+${WCCP_REDIRECT_INBOUND}\s*$$
-  ^\s*WCCP\s+Redirect\s+exclude:\s+${WCCP_REDIRECT_EXCLUDE}\s*$$ -> Record
+  ^\s*WCCP\s+Redirect\s+exclude:\s+${WCCP_REDIRECT_EXCLUDE}\s*$$
   ^\s*$$
   ^. -> Error
