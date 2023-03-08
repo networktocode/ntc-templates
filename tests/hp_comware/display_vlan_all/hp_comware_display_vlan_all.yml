@@ -1,0 +1,46 @@
+---
+parsed_sample:
+  - description: "VLAN 0001"
+    ipv4_address: ""
+    ipv4_subnet: ""
+    name: "VLAN 0001"
+    route_interface: "Not configured"
+    tagged_ports: []
+    untagged_ports:
+      - "Bridge-Aggregation1"
+      - "Bridge-Aggregation2"
+      - "Bridge-Aggregation3"
+      - "Bridge-Aggregation4"
+      - "Ten-GigabitEthernet1/0/1"
+      - "Ten-GigabitEthernet1/0/2"
+    type: "Static"
+    vlan_id: "1"
+  - description: "User VLAN"
+    ipv4_address: "10.9.0.1"
+    ipv4_subnet: "255.255.255.0"
+    name: "VLAN_100"
+    route_interface: "Configured"
+    tagged_ports: []
+      - "Bridge-Aggregation1"
+      - "Bridge-Aggregation2"
+      - "Ten-GigabitEthernet1/0/1"
+      - "Ten-GigabitEthernet1/0/3"
+    untagged_ports: []
+    type: "Static"
+    vlan_id: "100"
+  - description: "VLAN 101"
+    ipv4_address: "10.9.1.1"
+    ipv4_subnet: "255.255.255.0"
+    name: "VLAN_101"
+    route_interface: "Static"
+    tagged_ports:
+      - "Bridge-Aggregation1"
+      - "Bridge-Aggregation2"
+      - "Bridge-Aggregation3"
+      - "Bridge-Aggregation4"
+      - "Ten-GigabitEthernet2/0/35"
+      - "Ten-GigabitEthernet2/0/37"
+    untagged_ports:
+      - "Ten-GigabitEthernet1/0/46"
+    type: "Static"
+    vlan_id: "101"
