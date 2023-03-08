@@ -5,11 +5,6 @@ Value TYPE (.*)
 Value ROUTE_INTERFACE (.*)
 Value IPV4_ADDRESS (\S+)
 Value IPV4_SUBNET (\S+)
-Value List TAGGED_PORTS (\S+)
-Value List UNTAGGED_PORTS (\S+)
-
-#Start
-#  ^\s*VLAN\s+ID -> VLAN
 
 Start
   ^\s*VLAN\s+ID\s*: -> Continue.Record
@@ -20,10 +15,3 @@ Start
   ^\s*IPv4\s+subnet\s+mask\s*:\s*${IPV4_SUBNET}
   ^\s*Description\s*:\s*${DESCRIPTION}
   ^\s*Name\s*:\s*${NAME}
-  ^\s*Tagged\s+ports\s*:
-  ^\s{3,}${TAGGED_PORTS}\s*
-  ^\s{3,}\S+\s+${TAGGED_PORTS}
-  ^\s*Untagged\s+ports\s*:
-  ^\s{3,}${UNTAGGED_PORTS}\s*
-  ^\s{3,}\S+\s+${UNTAGGED_PORTS}
-  ^. -> Error

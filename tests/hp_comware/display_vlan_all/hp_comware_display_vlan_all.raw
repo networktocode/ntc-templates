@@ -18,8 +18,7 @@
  Description: User VLAN
  Name: VLAN_100
  Tagged ports:   
-    Bridge-Aggregation1           Bridge-Aggregation2           
-    Bridge-Aggregation3           Bridge-Aggregation4           
+    Bridge-Aggregation5           Bridge-Aggregation6           
     Ten-GigabitEthernet1/0/1      
     Ten-GigabitEthernet1/0/3      
  Untagged ports: None
@@ -32,9 +31,8 @@
  Description: VLAN 101
  Name: VLAN_101
  Tagged ports:   
-    Bridge-Aggregation1           Bridge-Aggregation2           
-    Bridge-Aggregation3           Bridge-Aggregation4           
+    Bridge-Aggregation7           Bridge-Aggregation8           
     Ten-GigabitEthernet2/0/35     
     Ten-GigabitEthernet2/0/37     
- Untagged ports: None
+ Untagged ports:
     Ten-GigabitEthernet1/0/46     
