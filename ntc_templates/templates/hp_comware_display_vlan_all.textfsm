@@ -15,3 +15,8 @@ Start
   ^\s*IPv4\s+subnet\s+mask\s*:\s*${IPV4_SUBNET}
   ^\s*Description\s*:\s*${DESCRIPTION}
   ^\s*Name\s*:\s*${NAME}
+  ^\s*Tagged\sports
+  ^\s*Untagged\sports
+  ^\s{3,}\S+\s*$$
+  ^\s{3,}\S+\s+\S+\s*$$
+  ^. -> Error

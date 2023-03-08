@@ -9,3 +9,4 @@ Start
   ^.*Nearest\s+bridge\s+neighbor
   ^System\s+Name
   ^\s*${NEIGHBOR}\s+${LOCAL_INTERFACE}\s+${CHASSIS_ID}\s+${NEIGHBOR_INTERFACE}\s*$$ -> Record Start
+  ^. -> Error
