@@ -3,6 +3,7 @@ Value flags ([XID]+)
 Value comment (\S+[\S ]*\S)
 Value chain (input|forward|output)
 Value action (accept|add-dst-to-address-list|add-src-to-address-list|drop|fasttrack-connection|jump|log|passthrough|reject|return|tarpit)
+Value hw_offload (yes|no)
 Value connection_state (\S+)
 Value connection_nat_state (\S+)
 Value protocol (!?(dccp|egp|etherip|gre|icmp|idpr-cmtp|ipencap|ipsec-ah|ipv6-encap|ipv6-nonxt|ipv6-route|l2tp|pim|rdp|rsvp|st|udp|vmtp|xns-idp|ddp|encap|ggp|hmp|icmpv6|igmp|ipip|ipsec-esp|ipv6-frag|ipv6-opts|iso-tp4|ospf|pup|rspf|sctp|tcp|udp-lite|vrrp|xtp))
@@ -26,7 +27,7 @@ Start
 
 FirewallTable
   ^\s?${index}\s+(${flags})?\s+;;;\s${comment}
-  ^\s+chain=${chain}(\saction=${action})?(\sconnection-state=${connection_state})?(\sconnection-nat-state=${connection_nat_state})?\s*(\sprotocol=${protocol})?(\ssrc-address=${src_address})?(\sdst-address=${dst_address})?(\ssrc-address-list=${src_address_list})?(\sdst-address-list=${dst_address_list})?(\sin-interface-list=${in_interface_list})?(\sout-interface-list=${out_interface_list})?(\ssrc-port=${src_port})?(\sdst-port=${dst_port})?(\ssrc-mac-address=${src_mac_address})?(\sin-interface=${in_interface})?(\sout-interface=${out_interface})?(\sipsec-policy=${ipsec_policy})?(\slog=${log})?(\slog-prefix="${log_prefix}")?\s*$$ -> Record
-  ^\s?${index}\s+(${flags})?\s+chain=${chain}(\saction=${action})?(\sconnection-state=${connection_state})?(\sconnection-nat-state=${connection_nat_state})?(\sprotocol=${protocol})?(\ssrc-address=${src_address})?(\sdst-address=${dst_address})?(\ssrc-address-list=${src_address_list})?(\sdst-address-list=${dst_address_list})?(\sin-interface-list=${in_interface_list})?(\sout-interface-list=${out_interface_list})?(\ssrc-port=${src_port})?(\sdst-port=${dst_port})?(\ssrc-mac-address=${src_mac_address})?(\sin-interface=${in_interface})?(\sout-interface=${out_interface})?(\sipsec-policy=${ipsec_policy})?(\slog=${log})?(\slog-prefix="${log_prefix}")?\s*$$ -> Record
+  ^\s+chain=${chain}(\saction=${action})?(\shw-offload=${hw_offload})?(\sconnection-state=${connection_state})?(\sconnection-nat-state=${connection_nat_state})?\s*(\sprotocol=${protocol})?(\ssrc-address=${src_address})?(\sdst-address=${dst_address})?(\ssrc-address-list=${src_address_list})?(\sdst-address-list=${dst_address_list})?(\sin-interface-list=${in_interface_list})?(\sout-interface-list=${out_interface_list})?(\ssrc-port=${src_port})?(\sdst-port=${dst_port})?(\ssrc-mac-address=${src_mac_address})?(\sin-interface=${in_interface})?(\sout-interface=${out_interface})?(\sipsec-policy=${ipsec_policy})?(\slog=${log})?(\slog-prefix="${log_prefix}")?\s*$$ -> Record
+  ^\s?${index}\s+(${flags})?\s+chain=${chain}(\saction=${action})?(\shw-offload=${hw_offload})?(\sconnection-state=${connection_state})?(\sconnection-nat-state=${connection_nat_state})?(\sprotocol=${protocol})?(\ssrc-address=${src_address})?(\sdst-address=${dst_address})?(\ssrc-address-list=${src_address_list})?(\sdst-address-list=${dst_address_list})?(\sin-interface-list=${in_interface_list})?(\sout-interface-list=${out_interface_list})?(\ssrc-port=${src_port})?(\sdst-port=${dst_port})?(\ssrc-mac-address=${src_mac_address})?(\sin-interface=${in_interface})?(\sout-interface=${out_interface})?(\sipsec-policy=${ipsec_policy})?(\slog=${log})?(\slog-prefix="${log_prefix}")?\s*$$ -> Record
   ^\s*(?:\d{2}:){2}\d{2}\s+echo:\s*.*$$ -> Next
   ^. -> Error
