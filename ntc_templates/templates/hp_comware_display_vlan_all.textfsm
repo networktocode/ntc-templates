@@ -1,0 +1,22 @@
+Value Required VLAN_ID (\d+)
+Value Required NAME (.*)
+Value DESCRIPTION (.*)
+Value TYPE (.*)
+Value ROUTE_INTERFACE (.*)
+Value IPV4_ADDRESS (\S+)
+Value IPV4_SUBNET (\S+)
+
+Start
+  ^\s*VLAN\s+ID\s*: -> Continue.Record
+  ^\s*VLAN\s+ID\s*:\s*${VLAN_ID}
+  ^\s*VLAN\s+type\s*:\s*${TYPE}
+  ^\s*Route\s+interface\s*:\s*${ROUTE_INTERFACE}
+  ^\s*IPv4\s+address\s*:\s*${IPV4_ADDRESS}
+  ^\s*IPv4\s+subnet\s+mask\s*:\s*${IPV4_SUBNET}
+  ^\s*Description\s*:\s*${DESCRIPTION}
+  ^\s*Name\s*:\s*${NAME}
+  ^\s*Tagged\sports
+  ^\s*Untagged\sports
+  ^\s{3,}\S+\s*$$
+  ^\s{3,}\S+\s+\S+\s*$$
+  ^. -> Error

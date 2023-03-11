@@ -1,0 +1,12 @@
+Value Required LOCAL_INTERFACE (\S+)
+Value Required CHASSIS_ID (\S+)
+Value Required NEIGHBOR_INTERFACE (\S+)
+Value Required NEIGHBOR (\S+)
+
+Start
+  ^.*Nearest\s+nontpmr\s+bridge\s+neighbor
+  ^.*Nearest\s+customer\s+bridge\s+neighbor
+  ^.*Nearest\s+bridge\s+neighbor
+  ^System\s+Name
+  ^\s*${NEIGHBOR}\s+${LOCAL_INTERFACE}\s+${CHASSIS_ID}\s+${NEIGHBOR_INTERFACE}\s*$$ -> Record Start
+  ^. -> Error

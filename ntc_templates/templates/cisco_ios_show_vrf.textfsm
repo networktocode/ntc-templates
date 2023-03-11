@@ -4,14 +4,15 @@ Value PROTOCOLS (\S+)
 Value List INTERFACES (\S+)
 
 Start
-  ^\s+Name\s+Default RD\s+Protocols\s+Interfaces -> Start_record
+  ^\s*Name\s+Default RD\s+Protocols\s+Interfaces -> Start_record
   # Capture time-stamp if vty line has command time-stamping turned on
   ^Load\s+for\s+
   ^Time\s+source\s+is
+  ^. -> Error
 
 Start_record
   ^\s{2}\S+ -> Continue.Record
   ^\s{60}\s+${INTERFACES}
   ^\s+${NAME}\s+${DEFAULT_RD}\s+${PROTOCOLS}\s+${INTERFACES}
   ^\s+${NAME}\s+${DEFAULT_RD}\s+${PROTOCOLS}
-
+  ^. -> Error

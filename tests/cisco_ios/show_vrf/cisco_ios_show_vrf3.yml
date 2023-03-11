@@ -1,0 +1,12 @@
+---
+parsed_sample:
+  - default_rd: "100:100"
+    interfaces:
+      - "Gi0/0.100"
+    name: "SUBNET100"
+    protocols: "ipv4"
+  - default_rd: "120:120"
+    interfaces:
+      - "Gi0/0.120"
+    name: "SUBNET120"
+    protocols: "ipv4"
