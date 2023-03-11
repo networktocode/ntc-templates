@@ -23,16 +23,17 @@ Start
   ^\s*Line\s+protocol\s+current\s+state:\s+${PROTOCOL_STATUS}
   ^\s*Description:\s+${DESCRIPTION}
   ^\s*Bandwidth:\s+${BANDWIDTH}
-  ^\s*Maximum\s+transmission\s+unit:\s+${MTU}
+  ^\s*Maximum\s+[Tt]ransmi\S+\s+[Uu]nit:\s+${MTU}
   ^\s*The\sMaximum\s+Transmit\s+Unit\sis\s+${MTU}
   ^\s*Maximum\s+frame\s+length:\s+${L2MTU}
   ^\s*The\sMaximum\s+Frame\s+Length\sis\s+${L2MTU}
   ^\s*Internet\s+[Aa]ddress:\s+${IP_ADDRESS}\s+\([Pp]rimary\)
   ^\s*Internet\s+[Aa]ddress\sis\s+${IP_ADDRESS}\s+[Pp]rimary
   ^\s*Internet\s+[Aa]ddress:\s+${IP_ADDRESS}\s+\([Ss]ub\)
-  ^\s*IP\s+[Pp]acket\s+[Ff]rame\s+[Tt]ype:\s+[^,]+,\s+[Hh]ardware\s+[Aa]ddress:\s+${HW_ADDRESS}
-  ^\s*IPv6\s+[Pp]acket\s+[Ff]rame\s+[Tt]ype:\s+[^,]+,\s+[Hh]ardware\s+[Aa]ddress:\s+${HW_ADDRESS}
+  ^\s*IP\s+[Pp]acket\s+[Ff]rame\s+[Tt]ype\s*:\s*[^,]+,\s+[Hh]ardware\s+[Aa]ddress:\s+${HW_ADDRESS}
+  ^\s*IPv6\s+[Pp]acket\s+[Ff]rame\s+[Tt]ype\s*:\s*[^,]+,\s+[Hh]ardware\s+[Aa]ddress:\s+${HW_ADDRESS}
   ^\s*${SPEED}\s+mode,\s+${DUPLEX}\s+mode
+  ^\s*${SPEED},\s+${DUPLEX},\s+link\s+type:\s+\S+,
   ^\s*PVID:\s+${VLAN_NATIVE}
   ^\s*Port\s+link-type:\s+${PORT_LINK_TYPE}
   # Trunk - Passing VLANs (parsing multiple times with Continue)
@@ -137,11 +138,12 @@ Start
   ^\s*Trunk\s+port
   ^\s*Loopback
   ^\s*Media
-  ^\s*Flow
+  ^\s*[Ff]low
   ^\s*Allow\s+jumbo
   ^\s*Broadcast
   ^\s*Multicast
   ^\s*Unicast
+  ^\s*No\sconnector
   ^\s*M[Dd][Ii]\s+type
   ^\s*Port\s+priority
   ^\s*Current\s*system
@@ -156,11 +158,13 @@ Start
   ^\s*Internet\s+protocol
   ^\s*Port\s+hardware
   ^\s+\d+\s+unicasts
-  ^\s+\d+\s+CRC
+  ^\s+\d+\s+[Cc][Rr][Cc]
   ^\s+\d+\s+aborts
-  ^\s+\d+\s+packets\s+input
-  ^\s+\d+\s+packets\s+output
+  ^\s+\d+\s+packets,*\s+
+  ^\s+\d+\s+errors,*\s+
   ^\s+\d+\s+lost
+  ^\s+\d+\s+drops,*\s+
+  ^\s+\d+\s+deferred,*\s+
   ^\s+\d+\s+broadcasts
   ^\s+\d+\s+ignored
   ^\s+-\s+ignored
