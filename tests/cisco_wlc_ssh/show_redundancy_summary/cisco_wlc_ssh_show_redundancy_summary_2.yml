@@ -1,0 +1,13 @@
+---
+parsed_sample:
+  - redundancy_mode: "SSO ENABLED"
+    local_state: "ACTIVE"
+    peer_state: "STANDBY HOT"
+    unit: "Primary"
+    unit_id: "00:00:00:00:12:34"
+    redundancy_state: "SSO"
+    mobility_mac: "00:00:00:00:12:34"
+    redundancy_port: "UP"
+    bulksync_status: "Complete"
+    avg_redundancy_peer_latency: "199"
+    avg_mgmt_gw_latency: "570"
