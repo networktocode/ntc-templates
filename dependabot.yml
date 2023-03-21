@@ -1,0 +1,12 @@
+---
+version: 2
+updates:
+  - package-ecosystem: "pip"
+    directory: "/"
+    allow:
+      - dependency-type: "direct"
+    versioning-strategy: "increase"
+  - package-ecosystem: "pip"
+    directory: "/"
+    ignore:
+      - dependency-type: "indirect"
