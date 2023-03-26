@@ -1,0 +1,23 @@
+ VLAN ID: 1
+ VLAN Type: static
+ Route Interface: not configured
+ Description: VLAN 0001
+ Name: VLAN 0001
+ Tagged   Ports: none
+ Untagged Ports:
+    Bridge-Aggregation1
+    GigabitEthernet1/0/25    GigabitEthernet1/0/26    GigabitEthernet1/0/27
+    GigabitEthernet1/0/28
+
+ VLAN ID: 1002
+ VLAN Type: static
+ Route Interface: not configured
+ Description: VLAN 1002
+ Name: VLAN 1002
+ Tagged   Ports:
+    Bridge-Aggregation1
+    Ten-GigabitEthernet1/0/29
+    Ten-GigabitEthernet1/0/30
+ Untagged Ports:
+    GigabitEthernet1/0/1     GigabitEthernet1/0/2     GigabitEthernet1/0/3
+    GigabitEthernet1/0/4     GigabitEthernet1/0/5     GigabitEthernet1/0/6
