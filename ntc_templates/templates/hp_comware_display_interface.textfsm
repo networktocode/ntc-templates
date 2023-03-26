@@ -26,6 +26,7 @@ Start
   ^\s*Maximum\s+[Tt]ransmi\S+\s+[Uu]nit:\s+${MTU}
   ^\s*The\sMaximum\s+Transmit\s+Unit\sis\s+${MTU}
   ^\s*Maximum\s+frame\s+length:\s+${L2MTU}
+  ^\s*Forbid\s+jumbo\s+frames\s+to\s+pass
   ^\s*The\sMaximum\s+Frame\s+Length\sis\s+${L2MTU}
   ^\s*Internet\s+[Aa]ddress:\s+${IP_ADDRESS}\s+\([Pp]rimary\)
   ^\s*Internet\s+[Aa]ddress\sis\s+${IP_ADDRESS}\s+[Pp]rimary
@@ -33,7 +34,7 @@ Start
   ^\s*IP\s+[Pp]acket\s+[Ff]rame\s+[Tt]ype\s*:\s*[^,]+,\s+[Hh]ardware\s+[Aa]ddress:\s+${HW_ADDRESS}
   ^\s*IPv6\s+[Pp]acket\s+[Ff]rame\s+[Tt]ype\s*:\s*[^,]+,\s+[Hh]ardware\s+[Aa]ddress:\s+${HW_ADDRESS}
   ^\s*${SPEED}\s+mode,\s+${DUPLEX}\s+mode
-  ^\s*${SPEED},\s+${DUPLEX},\s+link\s+type:\s+\S+,
+  ^\s*${SPEED},\s+${DUPLEX},\s+link\s+type
   ^\s*PVID:\s+${VLAN_NATIVE}
   ^\s*Port\s+link-type:\s+${PORT_LINK_TYPE}
   # Trunk - Passing VLANs (parsing multiple times with Continue)
@@ -134,6 +135,8 @@ Start
   ^$$ -> Next.Record
   # Drop
   ^\s*Link
+  ^\s*Encapsulation\s+is
+  ^\s*Phy-mru
   ^\s*Last
   ^\s*Trunk\s+port
   ^\s*Loopback
@@ -158,18 +161,26 @@ Start
   ^\s*Internet\s+protocol
   ^\s*Port\s+hardware
   ^\s+\d+\s+unicasts
+  ^\s+-\s+unicasts
   ^\s+\d+\s+[Cc][Rr][Cc]
   ^\s+\d+\s+aborts
-  ^\s+\d+\s+packets,*\s+
-  ^\s+\d+\s+errors,*\s+
+  ^\s+\d+\s+packets,*\s*
+  ^\s+\d+\s+errors,*\s*
   ^\s+\d+\s+lost
-  ^\s+\d+\s+drops,*\s+
-  ^\s+\d+\s+deferred,*\s+
+  ^\s+\d+\s+input\s+error
+  ^\s+\d+\s+output\s+error
+  ^\s+\d+\s+drops,*\s*
+  ^\s+\d+\s+deferred,*\s*
   ^\s+\d+\s+broadcasts
   ^\s+\d+\s+ignored
+  ^\s+\d+\s+dribbles
+  ^\s*Tunnel\s
+  ^\s*GRE
+  ^\s*Checksumming\sof\sGRE
   ^\s+-\s+ignored
   ^\s+-\s+frame
   ^\s+-\s+aborts
   ^\s+-\s+lost\s+carrier
+  ^\s*DCD:
   ^. -> Error
   ^\s*$$ ^. -> Error

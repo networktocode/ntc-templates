@@ -1,0 +1,48 @@
+GigabitEthernet0/0/0 current state: UP
+Line protocol current state: DOWN
+Description: GigabitEthernet0/0/0 Interface
+The Maximum Transmit Unit is 1500
+Internet protocol processing : disabled
+IP Packet Frame Type: PKTFMT_ETHNT_2,  Hardware Address: 7848-5932-0001
+IPv6 Packet Frame Type: PKTFMT_ETHNT_2,  Hardware Address: 7848-5932-0001
+Media type is twisted pair, loopback not set, promiscuous mode not set
+1000M, Full, link type is autonegotiation
+Output flow-control is disabled, input flow-control is disabled
+Output queue : (Urgent queuing : Size/Length/Discards)  0/100/0
+Output queue : (Protocol queuing : Size/Length/Discards)  0/500/0
+Output queue : (FIFO queuing : Size/Length/Discards)  0/1024/0
+Last clearing of counters: Never
+    Last 300 seconds input rate 2552703.00 bytes/sec, 20421624 bits/sec, 5670.94 packets/sec
+    Last 300 seconds output rate 12046604.00 bytes/sec, 96372832 bits/sec, 13608.96 packets/sec
+    Input: 7568736934 packets, 2754557243319 bytes, 0 no buffers
+           7 broadcasts, 3290052 multicasts, 0 pauses
+           0 errors, 0 runts, 0 giants
+           0 crc, 0 align errors, 0 overruns
+           0 dribbles, 0 drops
+    Output:13614549367 packets, 13897729745246 bytes
+           1499499 broadcasts, 176467 multicasts, 0 pauses
+           0 errors, 0 underruns, 0 collisions
+           0 deferred, 0 lost carriers
+
+Tunnel100 current state: UP
+Line protocol current state: UP
+Description: << default route >>
+The Maximum Transmit Unit is 1476
+Internet Address is 10.1.1.1/30 Primary
+Encapsulation is TUNNEL, service-loopback-group ID not set.
+Tunnel source 192.168.1.1, destination 192.168.1.2
+Tunnel bandwidth 64 (kbps)
+Tunnel keepalive disabled
+Tunnel protocol/transport GRE/IP
+    GRE key disabled
+    Checksumming of GRE packets disabled
+Output queue : (Urgent queuing : Size/Length/Discards)  0/100/0
+Output queue : (Protocol queuing : Size/Length/Discards)  0/500/0
+Output queue : (FIFO queuing : Size/Length/Discards)  0/75/0
+Last clearing of counters:  Never
+    Last 300 seconds input:  0 bytes/sec, 0 packets/sec
+    Last 300 seconds output:  10375 bytes/sec, 45 packets/sec
+    0 packets input,  0 bytes
+    0 input error
+    1350253832 packets output,  516083014949 bytes
+    0 output error

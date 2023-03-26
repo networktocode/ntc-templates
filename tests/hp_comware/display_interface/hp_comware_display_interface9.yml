@@ -1,0 +1,35 @@
+---
+parsed_sample:
+  - intf: "GigabitEthernet0/0/0"
+    line_status: "UP"
+    protocol_status: "DOWN"
+    hw_address:
+      - "7848-5932-0001"
+      - "7848-5932-0001"
+    description: "GigabitEthernet0/0/0 Interface"
+    bandwidth: ""
+    speed: "1000M"
+    duplex: "Full"
+    mtu: "1500"
+    l2mtu: ""
+    vlan_native: ""
+    ip_address: []
+    port_link_type: ""
+    vlan_passing: []
+    vlan_permitted: []
+  - intf: "Tunnel100"
+    line_status: "UP"
+    protocol_status: "UP"
+    hw_address: []
+    description: "<< default route >>"
+    bandwidth: ""
+    speed: ""
+    duplex: ""
+    mtu: "1476"
+    l2mtu: ""
+    vlan_native: ""
+    ip_address:
+      - "10.1.1.1/30"
+    port_link_type: ""
+    vlan_passing: []
+    vlan_permitted: []
