@@ -3,3 +3,8 @@
 Advanced IPv6 ACL 3344, 1 rule, match-order is auto
 Acl's step is 5
  rule 5 permit ipv6 destination 34::/128 
+
+Advanced IPv6 ACL 3999 name MyACL_IPv6, 2 rules
+Acl's step is 5
+ rule 5 deny ipv6 source 2A01:728::/29 
+ rule 10 permit ipv6 source 1291:3050:f5ed:9760::/23
