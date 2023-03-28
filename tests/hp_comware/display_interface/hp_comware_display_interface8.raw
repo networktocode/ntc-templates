@@ -1,0 +1,91 @@
+Aux0
+Current state: UP
+Description: Aux0 Interface
+Bandwidth: 9 kbps
+Internet protocol processing: Disabled
+Output queue - Urgent queuing: Size/Length/Discards 0/1024/0
+Output queue - Protocol queuing: Size/Length/Discards 0/500/0
+Output queue - FIFO queuing: Size/Length/Discards 0/75/0
+Last link flapping: 62 weeks 4 days 14 hours 41 minutes
+Last clearing of counters: Never
+Current system time:2023-03-13 14:27:45 SAR+03:00:00
+Last time when physical state changed to up:2021-12-29 23:46:09 SAR+03:00:00
+Last time when physical state changed to down:2021-12-29 23:45:05 SAR+03:00:00
+Physical layer: asynchronous, Baudrate: 9600 bps
+Phy-mru: 1700
+Last 300 seconds input rate: 0.00 bytes/sec, 0 bits/sec, 0.00 packets/sec
+Last 300 seconds output rate: 0.00 bytes/sec, 0 bits/sec, 0.00 packets/sec
+Input: 
+  0 packets, 0 bytes
+  0 broadcasts, 0 multicasts
+  0 errors, 0 runts, 0 giants
+  0 CRC, 0 align errors, 0 overruns
+  0 aborts, 0 no buffers, 0 frame errors
+Output: 
+  0 packets, 0 bytes
+  0 errors, 0 underruns, 0 collisions
+  0 deferred
+DCD: DOWN, DTR: DOWN, DSR: DOWN, RTS: DOWN, CTS: DOWN 
+
+GigabitEthernet0/0
+Current state: UP
+Line protocol state: UP
+Description: WAN ZONE
+Bandwidth: 300000 kbps
+Maximum transmission unit: 1500
+Internet address: 192.168.1.1/24 (Primary)
+IP packet frame type: Ethernet II, hardware address: ec9b-8b00-004c
+IPv6 packet frame type: Ethernet II, hardware address: ec9b-8b00-004c
+Media type: Twisted pair, loopback: Not set, promiscuous mode: Not set
+1000Mbps-speed mode, full-duplex mode
+Link speed type is autonegotiation, link duplex type is autonegotiation
+Flow-control: Disabled
+Port priority: 0
+Output queue - Urgent queuing: Size/Length/Discards 0/1024/0
+Output queue - Protocol queuing: Size/Length/Discards 0/500/0
+Output queue - FIFO queuing: Size/Length/Discards 0/75/0
+Last link flapping: 62 weeks 4 days 14 hours 19 minutes
+Last clearing of counters: Never
+Current system time:2023-03-13 14:27:45 SAR+03:00:00
+Last time when physical state changed to up:2021-12-30 00:08:22 SAR+03:00:00
+Last time when physical state changed to down:2021-12-30 00:07:40 SAR+03:00:00
+ Peak input rate: 37521564 bytes/sec, at 2023-03-12 17:41:29 
+ Peak output rate: 36577892 bytes/sec, at 2022-12-29 10:56:29 
+ Last 300 second input: 14471 packets/sec 12902049 bytes/sec 11%
+ Last 300 second output: 6727 packets/sec 2012919 bytes/sec 2%
+ Input (total):  58477926410 packets, 59087427091503 bytes
+	 - unicasts, - broadcasts, - multicasts, - pauses
+ Input (normal):  58477926410 packets, - bytes
+	 58477926391 unicasts, 1 broadcasts, 18 multicasts, 0 pauses
+ Input:  0 input errors, 0 runts, 0 giants, - throttles
+	 0 CRC, - frame, - overruns, 0 aborts
+	 - ignored, - parity errors
+ Output (total): 28469091813 packets, 9710797419692 bytes
+	 - unicasts, - broadcasts, - multicasts, - pauses
+ Output (normal): 28469091813 packets, - bytes
+	 28467822832 unicasts, 5760 broadcasts, 1263221 multicasts, 0 pauses
+ Output: 0 output errors, - underruns, - buffer failures
+	 0 aborts, 0 deferred, 0 collisions, 0 late collisions
+	 - lost carrier, - no carrier
+
+Tunnel100
+Current state: UP
+Line protocol state: UP
+Description: To_FW
+Bandwidth: 64 kbps
+Maximum transmission unit: 1476
+Internet address: 172.16.1.1/24 (Primary)
+Tunnel source 1.2.3.4, destination 5.6.7.8
+Tunnel keepalive disabled
+Tunnel TTL 255
+Tunnel protocol/transport GRE/IP
+    GRE key disabled
+    Checksumming of GRE packets disabled
+Output queue - Urgent queuing: Size/Length/Discards 0/1024/0
+Output queue - Protocol queuing: Size/Length/Discards 0/500/0
+Output queue - FIFO queuing: Size/Length/Discards 0/75/0
+Last clearing of counters: Never
+Last 300 seconds input rate: 0 bytes/sec, 0 bits/sec, 0 packets/sec
+Last 300 seconds output rate: 0 bytes/sec, 0 bits/sec, 0 packets/sec
+Input: 0 packets, 0 bytes, 0 drops
+Output: 5644201 packets, 335832962 bytes, 0 drops
