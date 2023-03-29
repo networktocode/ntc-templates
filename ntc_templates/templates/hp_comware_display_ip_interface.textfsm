@@ -3,6 +3,7 @@ Value LINE_STATUS (UP|DOWN|Administratively DOWN)
 Value PROTOCOL_STATUS (UP(\(spoofing\))?|DOWN)
 Value List IPADDR (\S+)
 Value MTU (\d+)
+Value ROUTE_MAP (\S+)
 
 
 Start
@@ -18,6 +19,7 @@ Interface
   ^Internet\s+Address\s+is\s+${IPADDR}\s+Sub
   ^Broadcast\s+address\s*:\s*\S+
   ^The\s+Maximum\s+Transmit\s+Unit\s*:\s*${MTU}\s+bytes
+  ^Policy\s+routing\s+is\s+enabled,\s+using\s+route\s+map\s+${ROUTE_MAP}
   ^input\spackets\s*:\s*\d+,\sbytes\s*:\s*\d+,\smulticasts\s*:\s*\d+
   ^output\spackets\s*:\s*\d+,\sbytes\s*:\s*\d+,\smulticasts\s*:\s*\d+
   ^TTL\sinvalid\spacket\snumber\s*:\s*\d+
