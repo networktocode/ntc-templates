@@ -5,7 +5,7 @@ parsed_sample:
     protocol_status: ""
     hw_address:
       - "bcea-fa19-5f6c"
-    description: "FL00-Z01"
+    description: "GROUND-FLOOR"
     bandwidth: "20000000 kbps"
     speed: "20Gbps-speed"
     duplex: "full-duplex"
@@ -18,11 +18,6 @@ parsed_sample:
       - "1(default vlan)"
       - "1000-1002"
       - "1031"
-      - "1051"
-      - "1100"
-      - "2191"
-      - "3231"
-      - "4001"
     vlan_permitted:
       - "1(default vlan)"
       - "2-4094"
