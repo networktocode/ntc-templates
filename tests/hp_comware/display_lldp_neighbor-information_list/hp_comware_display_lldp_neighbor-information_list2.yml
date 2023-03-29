@@ -1,0 +1,14 @@
+---
+parsed_sample:
+  - local_interface: "GE1/0/24"
+    chassis_id: "10.1.2.3"
+    neighbor_interface: "AABBCCDDEEFF:P1"
+    neighbor: "SEP0000000000A0.exam"
+  - local_interface: "XGE1/0/29"
+    chassis_id: "bcea-fa00-0033"
+    neighbor_interface: "Ten-GigabitEthernet1/0/17"
+    neighbor: "SWITCH01"
+  - local_interface: "GE2/0/45"
+    chassis_id: "SEP0000000000A0"
+    neighbor_interface: "Port 1"
+    neighbor: "-"
