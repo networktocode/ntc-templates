@@ -1,0 +1,9 @@
+---
+parsed_sample:
+  - intf: "Route-Aggregation1.4"
+    ipaddr:
+      - "10.1.1.1/24"
+    mtu: "1500"
+    line_status: "UP"
+    protocol_status: "UP"
+    route_map: "TO_INTERNET"
