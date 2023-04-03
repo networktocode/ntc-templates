@@ -1,0 +1,11 @@
+Value Key INDEX (\d+)
+Value FLAGS ([XD])
+Value LIST (\S+)
+Value ADDRESS (\S+)
+Value CREATION_TIME (\S+\s\S+)
+Value TIMEOUT (\S+)
+Value DYNAMIC (yes|no)
+
+Start
+  ^\s*${INDEX}\s+(${FLAGS}\s)?list=${LIST}\saddress=${ADDRESS}(\screation-time=${CREATION_TIME})?(\stimeout=${TIMEOUT})?(\sdynamic=${DYNAMIC})?.*$$ -> Record
+  ^. -> Error
