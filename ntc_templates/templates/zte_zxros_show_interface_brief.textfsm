@@ -1,0 +1,14 @@
+Value INTERFACE (\S+)
+Value ATTR (\S+)
+Value MODE (\S+)
+Value BW (\S+)
+Value ADMIN (up|down|administratively down)
+Value PHY (up|down|administratively down)
+Value PROT (up|down|administratively down)
+Value DESCRIPTION (\S.*?)
+
+Start
+  ^Interface\s+Attribute\s+Mode\s+BW\s+Admin\s+Phy\s+Prot\s+Description
+  ^${INTERFACE}\s+${ATTR}\s+${MODE}\s+${BW}\s+${ADMIN}\s+${PHY}\s+${PROT}(?:\s+${DESCRIPTION})?\s*$$ -> Record
+  ^\s*$$
+  ^. -> Error
