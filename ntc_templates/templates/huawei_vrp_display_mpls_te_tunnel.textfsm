@@ -1,0 +1,15 @@
+Value SRC (\d+\.\d+\.\d+\.\d+)
+Value DST (\d+\.\d+\.\d+\.\d+)
+Value ID (\d+)
+Value INLABEL (\S+)
+Value OUTLABEL (\S+)
+Value ROLE (\S+)
+Value NAME (\S+)
+
+Start
+  ^-+
+  ^Ingress\s+LsrId\s+Destination\s+LSPID\s+In/OutLabel\s+R\s+Tunnel-name
+  ^-+
+  ^${SRC}\s+${DST}\s+${ID}?\s+${INLABEL}/${OUTLABEL}\s+${ROLE}\s+${NAME}\s*$$ -> Record
+  ^-+
+  ^\s*$$
