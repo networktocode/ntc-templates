@@ -1,0 +1,23 @@
+Value Filldown FTAG (\w+)
+Value Filldown SWITCHID (\w+)
+Value SUBSWITCHID (\w+)
+Value List PORTS ([^,\s]+)
+Value DISTANCE (\d+)
+Value METRIC (\d+)
+Value TYPE (\S+)
+Value AGE (\S+)
+Value NTFY ([TF])
+
+Start
+  # initiate collection 
+  ^FabricPath\s+Unicast\s+Route\s+Table\s+for\s+Topology-Default -> Start_record
+
+Start_record
+  # ftag/switch-id/subswitch-id
+  ^${FTAG}/${SWITCHID}/${SUBSWITCHID} -> Record
+  #
+  ^.+via\s+${PORTS},\s\[${DISTANCE}/${METRIC}\],\s
+  #
+  ^.+via\s+${PORTS}\s,\s\[${DISTANCE}/${METRIC}\],\s
+  # 
+  ^\s* -> Clearall
