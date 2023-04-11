@@ -10,6 +10,8 @@ Value MTU (\d+)
 Value MODE (\S+)
 Value DUPLEX (.+duplex?)
 Value SPEED (.+?)
+Value INPUT_RATE (\d+)
+Value OUTPUT_RATE (\d+)
 Value INPUT_PACKETS (\d+)
 Value OUTPUT_PACKETS (\d+)
 Value INPUT_ERRORS (\d+)
@@ -29,6 +31,8 @@ Start
   ^\s+Internet\s+Address\s+is\s+${IP_ADDRESS}
   ^\s+Port\s+mode\s+is\s+${MODE}
   ^\s+${DUPLEX}, ${SPEED}(,|$$)
+  ^.*input\s+rate\s+${INPUT_RATE}.+$$
+  ^.*output\s+rate\s+${OUTPUT_RATE}.+$$
   ^\s+MTU\s+${MTU}.*BW\s+${BANDWIDTH}.*DLY\s+${DELAY}
   ^\s+Encapsulation\s+${ENCAPSULATION}
   ^\s+${INPUT_PACKETS}\s+input\s+packets\s+\d+\s+bytes\s*$$
