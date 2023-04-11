@@ -1,0 +1,107 @@
+access-list NTC_Test-ACL; 89 elements; name hash: 0xfef68f95
+access-list NTC_Test-ACL line 1 remark Simple entries
+access-list NTC_Test-ACL line 2 extended permit tcp host 10.10.10.20 host 20.20.20.10 eq ssh log default (hitcnt=0) 0x03d99b12
+access-list NTC_Test-ACL line 3 extended permit tcp host 10.10.10.20 20.20.0.0 255.255.0.0 gt 1024 log disable inactive (hitcnt=0) (inactive) 0x8b7c4bc4
+access-list NTC_Test-ACL line 4 extended permit tcp 20.20.0.0 255.255.0.0 host 10.10.10.20 lt ftp log alerts interval 300 (hitcnt=0) 0x4b3b9fb1
+access-list NTC_Test-ACL line 5 extended permit udp any host 8.8.8.8 eq domain (hitcnt=0) 0x3fb17257
+access-list NTC_Test-ACL line 6 extended permit icmp any any (hitcnt=0) 0x939c7976
+access-list NTC_Test-ACL line 7 extended permit icmp object Network any traceroute (hitcnt=0) 0xdba52ef6
+  access-list NTC_Test-ACL line 7 extended permit icmp 10.0.0.0 255.0.0.0 any traceroute (hitcnt=0) 0xdba52ef6
+access-list NTC_Test-ACL line 8 extended deny icmp object Network any 55 3 (hitcnt=0) 0x494c0c90
+  access-list NTC_Test-ACL line 8 extended deny icmp 10.0.0.0 255.0.0.0 any 55 3 (hitcnt=0) 0x494c0c90
+access-list NTC_Test-ACL line 9 remark with Network Objects and Groups
+access-list NTC_Test-ACL line 10 extended deny udp object-group NetworkGroup host 8.8.8.8 eq dnsix log alerts interval 300 (hitcnt=0) 0xd418ce5b
+  access-list NTC_Test-ACL line 10 extended deny udp host 10.10.10.20 host 8.8.8.8 eq dnsix log alerts interval 300 (hitcnt=0) 0x0c74d425
+  access-list NTC_Test-ACL line 10 extended deny udp 11.11.11.0 255.255.255.0 host 8.8.8.8 eq dnsix log alerts interval 300 (hitcnt=0) 0xa3d83644
+  access-list NTC_Test-ACL line 10 extended deny udp host 10.10.10.10 host 8.8.8.8 eq dnsix log alerts interval 300 (hitcnt=0) 0xa539105b
+  access-list NTC_Test-ACL line 10 extended deny udp 10.0.0.0 255.0.0.0 host 8.8.8.8 eq dnsix log alerts interval 300 (hitcnt=0) 0xb44f340f
+  access-list NTC_Test-ACL line 10 extended deny udp fqdn www.test.com (unresolved) host 8.8.8.8 eq dnsix log alerts interval 300 (inactive) 0x7cc91f10
+  access-list NTC_Test-ACL line 10 extended deny udp fqdn www.test-v4.com (unresolved) host 8.8.8.8 eq dnsix log alerts interval 300 (inactive) 0x1b434e1c
+access-list NTC_Test-ACL line 11 extended deny tcp host 8.8.8.8 object-group NetworkGroup eq ssh (hitcnt=0) 0x1a96027a
+  access-list NTC_Test-ACL line 11 extended deny tcp host 8.8.8.8 host 10.10.10.20 eq ssh (hitcnt=0) 0x2496f800
+  access-list NTC_Test-ACL line 11 extended deny tcp host 8.8.8.8 11.11.11.0 255.255.255.0 eq ssh (hitcnt=0) 0xdb913cb8
+  access-list NTC_Test-ACL line 11 extended deny tcp host 8.8.8.8 host 10.10.10.10 eq ssh (hitcnt=0) 0xe48a4295
+  access-list NTC_Test-ACL line 11 extended deny tcp host 8.8.8.8 10.0.0.0 255.0.0.0 eq ssh (hitcnt=0) 0x43e96711
+  access-list NTC_Test-ACL line 11 extended deny tcp host 8.8.8.8 fqdn www.test.com (unresolved) eq ssh (inactive) 0xe3f5e81a
+  access-list NTC_Test-ACL line 11 extended deny tcp host 8.8.8.8 fqdn www.test-v4.com (unresolved) eq ssh (inactive) 0xffe97f3f
+access-list NTC_Test-ACL line 12 remark with Service Objects and Groups
+access-list NTC_Test-ACL line 13 extended permit object TestService any object-group NetworkGroup inactive (hitcnt=0) (inactive) 0x20437f76
+  access-list NTC_Test-ACL line 13 extended permit udp any host 10.10.10.20 eq 55555 inactive (hitcnt=0) (inactive) 0xea3d83b6
+  access-list NTC_Test-ACL line 13 extended permit udp any 11.11.11.0 255.255.255.0 eq 55555 inactive (hitcnt=0) (inactive) 0xf0b57c68
+  access-list NTC_Test-ACL line 13 extended permit udp any host 10.10.10.10 eq 55555 inactive (hitcnt=0) (inactive) 0xf2d17c99
+  access-list NTC_Test-ACL line 13 extended permit udp any 10.0.0.0 255.0.0.0 eq 55555 inactive (hitcnt=0) (inactive) 0x5c154a88
+  access-list NTC_Test-ACL line 13 extended permit udp any fqdn www.test.com (unresolved) eq 55555 inactive (inactive) 0x520d38e5
+  access-list NTC_Test-ACL line 13 extended permit udp any fqdn www.test-v4.com (unresolved) eq 55555 inactive (inactive) 0xa4cbde91
+access-list NTC_Test-ACL line 14 extended permit object-group ServiceGroup 10.0.0.0 255.0.0.0 host 20.20.20.1 log informational interval 300 (hitcnt=0) 0x1d9c5959
+  access-list NTC_Test-ACL line 14 extended permit udp 10.0.0.0 255.0.0.0 host 20.20.20.1 lt 55554 log informational interval 300 (hitcnt=0) 0x2565b1d9
+  access-list NTC_Test-ACL line 14 extended permit udp 10.0.0.0 255.0.0.0 host 20.20.20.1 eq 55555 log informational interval 300 (hitcnt=0) 0x37dd8b25
+  access-list NTC_Test-ACL line 14 extended permit udp 10.0.0.0 255.0.0.0 host 20.20.20.1 gt 55556 log informational interval 300 (hitcnt=0) 0x0675db0d
+access-list NTC_Test-ACL line 15 remark with Protocol Groups
+access-list NTC_Test-ACL line 16 extended permit object-group ProtocolGroupTCPUDP object-group NetworkGroup host 10.10.10.10 range 20 22 (hitcnt=0) 0x7d4ce070
+  access-list NTC_Test-ACL line 16 extended permit tcp host 10.10.10.20 host 10.10.10.10 range ftp-data ssh (hitcnt=0) 0x9d86b09b
+  access-list NTC_Test-ACL line 16 extended permit tcp 11.11.11.0 255.255.255.0 host 10.10.10.10 range ftp-data ssh (hitcnt=0) 0x11e2bfd6
+  access-list NTC_Test-ACL line 16 extended permit tcp host 10.10.10.10 host 10.10.10.10 range ftp-data ssh (hitcnt=0) 0xe35529cb
+  access-list NTC_Test-ACL line 16 extended permit tcp 10.0.0.0 255.0.0.0 host 10.10.10.10 range ftp-data ssh (hitcnt=0) 0x0c3249a6
+  access-list NTC_Test-ACL line 16 extended permit tcp fqdn www.test.com (unresolved) host 10.10.10.10 range ftp-data ssh (inactive) 0x7bba62f3
+  access-list NTC_Test-ACL line 16 extended permit tcp fqdn www.test-v4.com (unresolved) host 10.10.10.10 range ftp-data ssh (inactive) 0x1f4b6250
+  access-list NTC_Test-ACL line 16 extended permit udp host 10.10.10.20 host 10.10.10.10 range 20 22 (hitcnt=0) 0xcdf4e9f6
+  access-list NTC_Test-ACL line 16 extended permit udp 11.11.11.0 255.255.255.0 host 10.10.10.10 range 20 22 (hitcnt=0) 0xe08afac8
+  access-list NTC_Test-ACL line 16 extended permit udp host 10.10.10.10 host 10.10.10.10 range 20 22 (hitcnt=0) 0x97e71487
+  access-list NTC_Test-ACL line 16 extended permit udp 10.0.0.0 255.0.0.0 host 10.10.10.10 range 20 22 (hitcnt=0) 0x306bebbc
+  access-list NTC_Test-ACL line 16 extended permit udp fqdn www.test.com (unresolved) host 10.10.10.10 range 20 22 (inactive) 0xc73d2430
+  access-list NTC_Test-ACL line 16 extended permit udp fqdn www.test-v4.com (unresolved) host 10.10.10.10 range 20 22 (inactive) 0xa3be6fce
+access-list NTC_Test-ACL line 17 extended permit object-group ProtocolGroupTCPUDP object Host object-group NetworkGroup gt 1024 (hitcnt=0) 0x588ac39a
+  access-list NTC_Test-ACL line 17 extended permit tcp host 10.10.10.10 host 10.10.10.20 gt 1024 (hitcnt=0) 0xbd45c256
+  access-list NTC_Test-ACL line 17 extended permit tcp host 10.10.10.10 11.11.11.0 255.255.255.0 gt 1024 (hitcnt=0) 0x662d9941
+  access-list NTC_Test-ACL line 17 extended permit tcp host 10.10.10.10 host 10.10.10.10 gt 1024 (hitcnt=0) 0xc9d6f64d
+  access-list NTC_Test-ACL line 17 extended permit tcp host 10.10.10.10 10.0.0.0 255.0.0.0 gt 1024 (hitcnt=0) 0x5546dd81
+  access-list NTC_Test-ACL line 17 extended permit tcp host 10.10.10.10 fqdn www.test.com (unresolved) gt 1024 (inactive) 0x5662d2eb
+  access-list NTC_Test-ACL line 17 extended permit tcp host 10.10.10.10 fqdn www.test-v4.com (unresolved) gt 1024 (inactive) 0x4b2a4340
+  access-list NTC_Test-ACL line 17 extended permit udp host 10.10.10.10 host 10.10.10.20 gt 1024 (hitcnt=0) 0x294b5ca6
+  access-list NTC_Test-ACL line 17 extended permit udp host 10.10.10.10 11.11.11.0 255.255.255.0 gt 1024 (hitcnt=0) 0xbc37b47d
+  access-list NTC_Test-ACL line 17 extended permit udp host 10.10.10.10 host 10.10.10.10 gt 1024 (hitcnt=0) 0x890f4265
+  access-list NTC_Test-ACL line 17 extended permit udp host 10.10.10.10 10.0.0.0 255.0.0.0 gt 1024 (hitcnt=0) 0xb7839cbc
+  access-list NTC_Test-ACL line 17 extended permit udp host 10.10.10.10 fqdn www.test.com (unresolved) gt 1024 (inactive) 0xed30d94b
+  access-list NTC_Test-ACL line 17 extended permit udp host 10.10.10.10 fqdn www.test-v4.com (unresolved) gt 1024 (inactive) 0x9fb459ae
+access-list NTC_Test-ACL line 18 extended deny object-group ProtocolGroupTCPUDP object Network object-group NetworkGroup lt 20 (hitcnt=0) 0x34215f40
+  access-list NTC_Test-ACL line 18 extended deny tcp 10.0.0.0 255.0.0.0 host 10.10.10.20 lt ftp-data (hitcnt=0) 0xa02b6ada
+  access-list NTC_Test-ACL line 18 extended deny tcp 10.0.0.0 255.0.0.0 11.11.11.0 255.255.255.0 lt ftp-data (hitcnt=0) 0xca3f685a
+  access-list NTC_Test-ACL line 18 extended deny tcp 10.0.0.0 255.0.0.0 host 10.10.10.10 lt ftp-data (hitcnt=0) 0xcfcba90d
+  access-list NTC_Test-ACL line 18 extended deny tcp 10.0.0.0 255.0.0.0 10.0.0.0 255.0.0.0 lt ftp-data (hitcnt=0) 0xf6510830
+  access-list NTC_Test-ACL line 18 extended deny tcp 10.0.0.0 255.0.0.0 fqdn www.test.com (unresolved) lt ftp-data (inactive) 0xe9c1a969
+  access-list NTC_Test-ACL line 18 extended deny tcp 10.0.0.0 255.0.0.0 fqdn www.test-v4.com (unresolved) lt ftp-data (inactive) 0x9d72e63d
+  access-list NTC_Test-ACL line 18 extended deny udp 10.0.0.0 255.0.0.0 host 10.10.10.20 lt 20 (hitcnt=0) 0x1b41a550
+  access-list NTC_Test-ACL line 18 extended deny udp 10.0.0.0 255.0.0.0 11.11.11.0 255.255.255.0 lt 20 (hitcnt=0) 0x05e073e1
+  access-list NTC_Test-ACL line 18 extended deny udp 10.0.0.0 255.0.0.0 host 10.10.10.10 lt 20 (hitcnt=0) 0x070bc251
+  access-list NTC_Test-ACL line 18 extended deny udp 10.0.0.0 255.0.0.0 10.0.0.0 255.0.0.0 lt 20 (hitcnt=0) 0x6fc435e8
+  access-list NTC_Test-ACL line 18 extended deny udp 10.0.0.0 255.0.0.0 fqdn www.test.com (unresolved) lt 20 (inactive) 0x6d8d6ce3
+  access-list NTC_Test-ACL line 18 extended deny udp 10.0.0.0 255.0.0.0 fqdn www.test-v4.com (unresolved) lt 20 (inactive) 0x6d389f7d
+access-list NTC_Test-ACL line 19 extended permit object-group ProtocolGroupTCPUDP object-group NetworkGroup any4 eq 443 (hitcnt=0) 0x8df2d3c1
+  access-list NTC_Test-ACL line 19 extended permit tcp host 10.10.10.20 any4 eq https (hitcnt=0) 0x008fc95e
+  access-list NTC_Test-ACL line 19 extended permit tcp 11.11.11.0 255.255.255.0 any4 eq https (hitcnt=0) 0x088e4163
+  access-list NTC_Test-ACL line 19 extended permit tcp host 10.10.10.10 any4 eq https (hitcnt=0) 0x4c0e167d
+  access-list NTC_Test-ACL line 19 extended permit tcp 10.0.0.0 255.0.0.0 any4 eq https (hitcnt=0) 0x43daa7a0
+  access-list NTC_Test-ACL line 19 extended permit tcp fqdn www.test.com (unresolved) any4 eq https (inactive) 0xf42cd510
+  access-list NTC_Test-ACL line 19 extended permit tcp fqdn www.test-v4.com (unresolved) any4 eq https (inactive) 0xd1aaa39e
+  access-list NTC_Test-ACL line 19 extended permit udp host 10.10.10.20 any4 eq 443 (hitcnt=0) 0xbdc14a91
+  access-list NTC_Test-ACL line 19 extended permit udp 11.11.11.0 255.255.255.0 any4 eq 443 (hitcnt=0) 0xb7514d19
+  access-list NTC_Test-ACL line 19 extended permit udp host 10.10.10.10 any4 eq 443 (hitcnt=0) 0x11022a40
+  access-list NTC_Test-ACL line 19 extended permit udp 10.0.0.0 255.0.0.0 any4 eq 443 (hitcnt=0) 0xacfe687f
+  access-list NTC_Test-ACL line 19 extended permit udp fqdn www.test.com (unresolved) any4 eq 443 (inactive) 0xa26cc2a0
+  access-list NTC_Test-ACL line 19 extended permit udp fqdn www.test-v4.com (unresolved) any4 eq 443 (inactive) 0x5146554a
+access-list NTC_Test-ACL line 20 extended permit object-group ProtocolGroupTCPUDP any6 object FQDNv6 eq 6666 (hitcnt=0) 0x5be0f682
+  access-list NTC_Test-ACL line 20 extended permit tcp any6 fqdn www.test-v6.com (unresolved) eq 6666 (inactive) 0x5705cd11
+  access-list NTC_Test-ACL line 20 extended permit udp any6 fqdn www.test-v6.com (unresolved) eq 6666 (inactive) 0xef757e22
+access-list NTC_Test-ACL line 21 extended permit object-group ProtocolGroupTCPUDP 10.0.0.0 255.0.0.0 host 8.8.8.8 range 2000 2023 (hitcnt=0) 0xe9158d1e
+  access-list NTC_Test-ACL line 21 extended permit tcp 10.0.0.0 255.0.0.0 host 8.8.8.8 range 2000 2023 (hitcnt=0) 0xdac8b1b6
+  access-list NTC_Test-ACL line 21 extended permit udp 10.0.0.0 255.0.0.0 host 8.8.8.8 range 2000 2023 (hitcnt=0) 0xa5ec5160
+access-list NTC_Test-ACL line 22 extended deny object-group ProtocolGroupTCPUDP any any (hitcnt=0) 0x313bd836
+  access-list NTC_Test-ACL line 22 extended deny tcp any any (hitcnt=0) 0x163657c2
+  access-list NTC_Test-ACL line 22 extended deny udp any any (hitcnt=0) 0xb1f846a5
+access-list NTC_Test-ACL line 23 extended permit ip 2001:db8:abcd:12::/64 2a02:810b:e40:322c::/112 log debugging interval 300 (hitcnt=0) 0x79d40bb1
+access-list NTC_Test-ACL line 24 extended permit udp object IP_Range host 8.8.8.8 eq domain log informational interval 300 (hitcnt=0) 0xf15287f6
+  access-list NTC_Test-ACL line 24 extended permit udp range 10.10.10.5 10.10.10.15 host 8.8.8.8 eq domain log informational interval 300 (hitcnt=0) 0xf15287f6
+access-list NTC_Test-ACL line 25 extended permit ip object-group NetworkGroupV6 2a02:810b:e40:322c::/112 time-range TimeRange9to5 (hitcnt=0) 0x85e22db6
+  access-list NTC_Test-ACL line 25 extended permit ip fqdn www.test-v6.com (unresolved) 2a02:810b:e40:322c::/112 time-range TimeRange9to5 (inactive) 0x4fac368c
+  access-list NTC_Test-ACL line 25 extended permit ip host 2a02:540f:0:1c:d1d2:2046:740:842d 2a02:810b:e40:322c::/112 time-range TimeRange9to5 (hitcnt=0) 0xfeb96801
+  access-list NTC_Test-ACL line 25 extended permit ip 2000:810b:e40:322c::/96 2a02:810b:e40:322c::/112 time-range TimeRange9to5 (hitcnt=0) 0x92394d36
