@@ -1,0 +1,50 @@
+Flags: * - Adjacencies learnt on non-active FHRP router
+       + - Adjacencies synced via CFSoE
+       # - Adjacencies Throttled for Glean
+       CP - Added via L2RIB, Control plane Adjacencies
+       PS - Added via L2RIB, Peer Sync
+       RO - Re-Originated Peer Sync Entry
+
+IP ARP Table for all contexts
+Total number of entries: 350
+Address         Age       MAC Address     Interface        Physical Interface  Flags    VRF Name
+10.255.0.2      00:09:24  14a2.a070.52a7  Vlan666          port-channel1000             default
+10.255.0.1      00:17:20  14a2.a070.52a0  mgmt0            mgmt0                        management
+172.23.5.8      00:06:48  b8a3.771c.255b  Ethernet1/49     Ethernet1/49                 default
+172.23.5.10     00:06:50  d477.98e9.c6bf  Ethernet1/50     Ethernet1/50                 default
+10.233.6.3      00:14:55  14a2.a070.52a7  Vlan3            port-channel1000             PRIMARY
+10.233.6.5      00:11:24  c8e7.f0fb.d6a7  Vlan3            Ethernet1/8                  PRIMARY
+10.233.6.6      00:14:04  d0d0.fd61.ecc1  Vlan3            Ethernet1/9         +        PRIMARY
+10.233.6.7      00:12:05  44aa.502f.c150  Vlan3            Ethernet1/13                 PRIMARY
+10.233.6.8      00:07:12  8418.88ac.9741  Vlan3            port-channel12               PRIMARY
+10.233.6.9      00:13:41  8418.88aa.c641  Vlan3            port-channel13               PRIMARY
+10.233.6.10     00:05:29  0881.f4ae.4841  Vlan3            port-channel14               PRIMARY
+10.233.6.11     00:10:51  b0a8.6e03.ce81  Vlan3            port-channel11               PRIMARY
+10.233.6.12     00:04:35  2c21.7299.8ac1  Vlan3            Ethernet1/6                  PRIMARY
+10.233.6.13     00:13:25  78fe.3d35.7b41  Vlan3            Ethernet1/21                 PRIMARY
+10.233.6.14     00:09:43  8071.1fe7.f041  Vlan3            Ethernet1/29                 PRIMARY
+10.233.6.15     00:06:38  8071.1fe7.ef41  Vlan3            Ethernet1/28                 PRIMARY
+10.233.6.16     00:17:54  3c61.04f9.6bc1  Vlan3            Ethernet1/12                 PRIMARY
+10.233.6.18     00:13:17  2c21.7298.8b41  Vlan3            Ethernet1/10                 PRIMARY
+10.233.6.19     00:11:53  2c21.7299.8e81  Vlan3            Ethernet1/11                 PRIMARY
+10.233.6.20     00:00:01  28c0.da35.dc01  Vlan3            Ethernet1/16                 PRIMARY
+10.233.6.21     00:01:08  c8e7.f0fb.c487  Vlan3            port-channel10               PRIMARY
+10.233.6.30     00:09:24  7819.f79a.82c1  Vlan3            Ethernet1/2                  PRIMARY
+10.233.6.31     00:01:54  2c21.728a.0581  Vlan3            Ethernet1/22                 PRIMARY
+10.233.6.32     00:02:05  78fe.3d35.a101  Vlan3            Ethernet1/1         +        PRIMARY
+10.233.6.33     00:05:25  2c21.7296.b501  Vlan3            Ethernet1/3                  PRIMARY
+10.233.6.34     00:16:36  2c21.7296.8c81  Vlan3            Ethernet1/23                 PRIMARY
+10.233.6.35     00:08:06  2c21.7293.a401  Vlan3            Ethernet1/24                 PRIMARY
+10.233.6.36     00:14:56  2c21.7296.9081  Vlan3            Ethernet1/4                  PRIMARY
+10.233.6.37     00:12:56  7819.f79b.8801  Vlan3            Ethernet1/25                 PRIMARY
+10.233.6.38     00:14:49  2c21.7296.a401  Vlan3            Ethernet1/26                 PRIMARY
+10.233.6.39     00:17:42  2c21.3111.0701  Vlan3            port-channel18               PRIMARY
+10.233.6.48     00:08:50  7c25.8629.ab83  Vlan3            Ethernet1/15                 PRIMARY
+10.233.6.50     00:13:21  f8c0.01c9.e501  Vlan3            port-channel15               PRIMARY
+10.233.6.60     00:05:02  8418.88ac.9ec1  Vlan3            port-channel16      +        PRIMARY
+10.233.6.70     00:12:04  8418.88ac.a0c1  Vlan3            port-channel17               PRIMARY
+10.233.6.193    00:03:29  2829.862b.0dfc  Vlan3            port-channel13               PRIMARY
+10.233.6.194    00:02:38  2829.863f.5708  Vlan3            Ethernet1/2                  PRIMARY
+10.233.6.196    00:02:15  2829.8615.4bd3  Vlan3            Ethernet1/4                  PRIMARY
+10.233.6.197    00:08:54  2829.8617.5b14  Vlan3            Ethernet1/21                 PRIMARY
+10.233.6.1         -      0000.5e00.0101  Vlan9            -
