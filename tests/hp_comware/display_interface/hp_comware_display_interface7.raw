@@ -1,0 +1,56 @@
+GigabitEthernet1/1/0/48
+Current state: UP
+Line protocol state: UP
+IP packet frame type: Ethernet II, hardware address: 7848-5900-0085
+Description: Internal-LAN
+Bandwidth: 1000000 kbps
+Loopback is not set
+Media type is twisted pair, port hardware type is 1000_BASE_T
+1000Mbps-speed mode, full-duplex mode
+Link speed type is autonegotiation, link duplex type is autonegotiation
+Flow-control is not enabled
+Maximum frame length: 1536
+Forbid jumbo frames to pass
+Broadcast max-ratio: 100%
+Multicast max-ratio: 100%
+Unicast max-ratio: 100%
+PVID: 1
+MDI type: Automdix
+Port link-type: Trunk
+ VLAN Passing:   4050
+ VLAN permitted: 4050
+ Trunk port encapsulation: IEEE 802.1q
+Port priority: 0
+Last link flapping: 3 weeks 2 days 12 hours 36 minutes
+Last clearing of counters: Never
+Current system time:2023-03-12 09:28:20 SAR+03:00:00
+Last time when physical state changed to up:2023-02-16 20:51:25 SAR+03:00:00
+Last time when physical state changed to down:2023-02-16 20:50:56 SAR+03:00:00
+ Peak input rate: 31568817 bytes/sec, at 2023-03-05 16:34:23 
+ Peak output rate: 30891579 bytes/sec, at 2023-03-09 15:45:00 
+ Last 300 seconds input: 12373 packets/sec 12813386 bytes/sec 10%
+ Last 300 seconds output: 5850 packets/sec 1754759 bytes/sec 1%
+ Input (total):  8921849313 packets, 8824002336096 bytes
+	 8920362260 unicasts, 1148150 broadcasts, 338903 multicasts, 0 pauses
+ Input (normal):  8921849313 packets, - bytes
+	 8920362260 unicasts, 1148150 broadcasts, 338903 multicasts, 0 pauses
+ Input:  0 input errors, 0 runts, 0 giants, 0 throttles
+	 0 CRC, 0 frame, - overruns, 0 aborts
+	 - ignored, - parity errors
+ Output (total): 5144360317 packets, 2083476745314 bytes
+	 5142107281 unicasts, 5 broadcasts, 2185269 multicasts, 0 pauses
+ Output (normal): 5144292555 packets, - bytes
+	 5142107281 unicasts, 5 broadcasts, 2185269 multicasts, 0 pauses
+ Output: 0 output errors, - underruns, - buffer failures
+	 0 aborts, 0 deferred, 0 collisions, 0 late collisions
+	 0 lost carrier, - no carrier
+IPv4 traffic statistics:
+ Last 300 seconds input rate: 0 packets/sec, 0 bytes/sec
+ Last 300 seconds output rate: 0 packets/sec, 0 bytes/sec
+ Input: 0 packets, 0 bytes
+ Output: 0 packets, 0 bytes
+IPv6 traffic statistics:
+ Last 300 seconds input rate: 0 packets/sec, 0 bytes/sec
+ Last 300 seconds output rate: 0 packets/sec, 0 bytes/sec
+ Input: 0 packets, 0 bytes
+ Output: 0 packets, 0 bytes
