@@ -1,0 +1,3 @@
+mac access-list l2_fw_mob_l2_arp-lacp
+  seq 10 permit any any etype arp
+  seq 20 permit any any etype 0x8809

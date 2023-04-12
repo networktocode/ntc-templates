@@ -1,0 +1,13 @@
+Value Filldown EGRESS_GROUP_COUNT (\d+)
+Value Key,Required NAME (\S+)
+Value DESCRIPTION (\S+)
+Value List EGRESS_NAME (\S+)
+
+Start
+ ^Number[\w\-\s:]+\s+${EGRESS_GROUP_COUNT}
+ ^[\r\n\s]*[Name]+\s+:\s+${NAME}
+ ^\s+Description\s+:\s+${DESCRIPTION}
+ ^\s+egress\s+:\s+${EGRESS_NAME}
+ ^$$ -> Record
+ ^\s*$$
+ ^. -> Error

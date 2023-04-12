@@ -1,0 +1,13 @@
+---
+parsed_sample:
+  - tunnel_name: "dummy"
+    description: "dummy_transport_tunnel"
+    src_ip: "1.1.1.1"
+    src_mask: "255.255.255.255"
+    deny_dst_ipv4: "2.2.2.2"
+    deny_dst_ipv4_mask: "255.255.255.255"
+    deny_dst_ipv6: "2001::"
+    deny_dst_ipv6_mask: "ffff:ffff:ffff:ffff::"
+    tunnel_type: "gre"
+    ingress_name:
+      - "ig_1-01"

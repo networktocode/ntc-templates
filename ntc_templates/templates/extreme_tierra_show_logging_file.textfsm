@@ -1,0 +1,7 @@
+Value Key,Required TIME_STAMP ([\d\-]+ [\.\d\-:]+)
+Value MESSAGE ([\[\]\-:\.\S\s]+)
+
+Start
+ ^${TIME_STAMP}\s${MESSAGE} -> Record
+ ^\s*$$
+ ^. -> Error

@@ -1,0 +1,4 @@
+snmp-server community extremero
+snmp-server user superuser auth sha auth-key password priv aes priv-key passwrod
+snmp-server host 10.25.101.76 extremero 162 version 2c
+snmp-server host 10.25.101.77 superuser 162 version 3

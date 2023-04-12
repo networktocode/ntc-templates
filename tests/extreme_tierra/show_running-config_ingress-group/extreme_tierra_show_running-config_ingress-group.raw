@@ -1,0 +1,17 @@
+ingress-group ig_fw
+  set route-map map_fwtap
+ingress-group test1
+  set route-map test1
+ingress-group ig_gre
+  traffic-type gre ip any any
+  set route-map map_gre
+ingress-group ig_gtp
+  traffic-type gtpu ip any any
+  set route-map map_gtp
+ingress-group ig_vcp
+  traffic-type vxlan outer ip any any
+  set route-map map_vcp
+ingress-group ig_mpls
+  traffic-type mpls outer header1 any any any
+  set route-map map_mpls
+ingress-group ig_cloud_gre

@@ -1,0 +1,22 @@
+Value CLOCK_STATE (\S+)
+Value CLOCK_STRATUM (\S+)
+Value REFERENCE_CLOCK (\S+)
+Value PRECISION (\S+)
+Value REFERENCE_TIME_EPOCH (\S+)
+Value REFERENCE_TIME_HUMAN ([\s\S]+)
+Value OFFSET (\S+)
+Value ROOT_DELAY (\S+)
+Value ROOT_DISPERSION (\S+)
+Value PEER_DISPERSION (\S+)
+Value CLIENT_MODE (\S+)
+
+Start
+ ^Clock is ${CLOCK_STATE}, no reference clock
+ ^Clock is ${CLOCK_STATE},  stratum ${CLOCK_STRATUM}, reference clock is ${REFERENCE_CLOCK},
+ ^precision is ${PRECISION},
+ ^reference time is ${REFERENCE_TIME_EPOCH}  ${REFERENCE_TIME_HUMAN}
+ ^clock offset is ${OFFSET}, root delay is ${ROOT_DELAY},
+ ^root dispersion is ${ROOT_DISPERSION}, peer dispersion is ${PEER_DISPERSION},
+ ^NTP client mode is ${CLIENT_MODE} -> Record
+ ^\s*$$
+ ^. -> Error

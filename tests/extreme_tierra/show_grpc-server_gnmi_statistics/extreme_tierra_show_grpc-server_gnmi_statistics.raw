@@ -1,0 +1,43 @@
+Number of active subscriptions: 6
+Subscription Details:
+
+Client:10.42.150.39:53950   Mode:STREAM     Subscribed Path Count:1                   
+Keypath                                                                                             Subscription Mode   Interval            
+----------------------------------------------------------------------------------------------------------------------------------
+/interfaces/interface[name=*]/aggregation/state/lag-load-balance-method                             ON_CHANGE           0s                  
+----------------------------------------------------------------------------------------------------------------------------------
+
+Client:10.25.101.1          Mode:STREAM     Subscribed Path Count:1                   
+Keypath                                                                                             Subscription Mode   Interval            
+----------------------------------------------------------------------------------------------------------------------------------
+/pcap/files/file[name=*]                                                                            ON_CHANGE           0s                  
+----------------------------------------------------------------------------------------------------------------------------------
+
+Client:10.25.101.1          Mode:STREAM     Subscribed Path Count:5                   
+Keypath                                                                                             Subscription Mode   Interval            
+----------------------------------------------------------------------------------------------------------------------------------
+/interfaces/interface[name=*]                                                                       SAMPLE              10s                 
+/npb-policy-data-sets/npb-policy-data-set[owner=POLICY_OWNER_ROUTEMAP]/policy-stats                 SAMPLE              10s                 
+/npb-policy-data-sets/npb-policy-data-set[owner=POLICY_OWNER_LISTENERPOLICY]/policy-stats           SAMPLE              10s                 
+/saps/sap[name=*]                                                                                   SAMPLE              10s                 
+/components/component[name=health]                                                                  SAMPLE              10s                 
+----------------------------------------------------------------------------------------------------------------------------------
+
+Client:10.25.101.1          Mode:STREAM     Subscribed Path Count:1                   
+Keypath                                                                                             Subscription Mode   Interval            
+----------------------------------------------------------------------------------------------------------------------------------
+/components/component[name=*]                                                                       ON_CHANGE           0s                  
+----------------------------------------------------------------------------------------------------------------------------------
+
+Client:10.42.150.61:53542   Mode:STREAM     Subscribed Path Count:2                   
+Keypath                                                                                             Subscription Mode   Interval            
+----------------------------------------------------------------------------------------------------------------------------------
+/interfaces/interface[name=management 0]/subinterfaces/subinterface[index=0]/ipv4/addresses         ON_CHANGE           0s                  
+/interfaces/interface[name=management 0]/subinterfaces/subinterface[index=0]/ipv6/addresses         ON_CHANGE           0s                  
+----------------------------------------------------------------------------------------------------------------------------------
+
+Client:10.42.150.23:41348   Mode:STREAM     Subscribed Path Count:1                   
+Keypath                                                                                             Subscription Mode   Interval            
+----------------------------------------------------------------------------------------------------------------------------------
+/interfaces/interface[name=*]/state/oper-status                                                     ON_CHANGE           0s                  
+----------------------------------------------------------------------------------------------------------------------------------

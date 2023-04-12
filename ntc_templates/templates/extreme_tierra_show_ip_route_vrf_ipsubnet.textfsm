@@ -1,0 +1,27 @@
+Value IP_ADDRESS (\S+)
+Value ATTACHED_TYPE ([\S]+)
+Value PREFERENCE_METRIC ([\d\/]+)
+Value TAG (tag\s+\d+)
+Value AGE (\S+)
+Value GROUP_ID (\d+)
+Value PROTOCOL_IP_ADDRESS (\S+)
+Value PROTOCOL_INTERFACE (\S+\s+\S*)
+Value PROTOCOL_MAC_LEARN_INTERFACE (\S*\,\s\S*)
+Value RESOLVED_IP_ADDRESS (\S+)
+Value RESOLVED_INTERFACE (\S+\s+\S*)
+Value RESOLVED_MAC_LEARN_INTERFACE (\S*\,\s\S*)
+
+Start
+ ^\'\*\' denotes best route-source	
+ ^\'\[x\/y\]\' denotes \[preference\/metric\]
+ ^\s*\*${IP_ADDRESS}\s*,\s+${ATTACHED_TYPE}\s*,\s+\[${PREFERENCE_METRIC}\]\s*,\s*${TAG}\s*,\s*${AGE}\s*,\s*nhGrpId\s+${GROUP_ID}
+ ^\s*Protocol-Nexthops:\s* -> IPSUBNET1
+ ^\s*Resolved-Nexthops\(Aggregate\):\s* -> IPSUBNET2
+ ^\s*$$
+ ^. -> Error
+
+IPSUBNET1
+ ^\s*via\s*${PROTOCOL_IP_ADDRESS}\s*,\s*${PROTOCOL_INTERFACE}\s*,\s*${PROTOCOL_MAC_LEARN_INTERFACE} -> Start
+
+IPSUBNET2
+ ^\s*via\s*${RESOLVED_IP_ADDRESS}\s*,\s*${RESOLVED_INTERFACE}\s*,\s*${RESOLVED_MAC_LEARN_INTERFACE} -> Record

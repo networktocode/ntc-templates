@@ -1,0 +1,14 @@
+Value Required MAC_ADDRESS ([\d:*]+)
+Value TYPE (\S+)
+Value INTERFACE (\S+\s+\S+)
+Value LAST_CHANGE (\S+)
+Value SEQ_NO (\S+)
+Value HARDWARE_STATUS (\S+)
+
+Start
+ ^'\*' denotes best route-source
+ ^Mac-Address\s+Type\s+Interface\s+Last Change\s+Seq No\s+Hardware Status
+ ^[\-]+
+ ^${MAC_ADDRESS}\s+${TYPE}\s+${INTERFACE}\s+${LAST_CHANGE}\s*(${SEQ_NO}|\s+|)\s*(${HARDWARE_STATUS}|\s+|) -> Record
+ ^\s*$$
+ ^. -> Error

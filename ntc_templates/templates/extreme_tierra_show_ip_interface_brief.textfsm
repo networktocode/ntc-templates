@@ -1,0 +1,12 @@
+Value Required INTERFACE (\S+\s\S+)
+Value Required IP_ADDRESS (\S+)
+Value VRF (\S+)
+Value ADMIN_STATUS (\S+)
+Value OPER_STATUS (\S+)
+
+Start
+ ^Interface\s+IP-Address\s+Vrf\s+Admin status\s+Oper status
+ ^[\=]+
+ ^\s*${INTERFACE}\s+${IP_ADDRESS}\s+(${VRF}|\s+|)\s+${ADMIN_STATUS}\s+${OPER_STATUS} -> Record
+ ^\s*$$
+ ^. -> Error

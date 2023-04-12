@@ -1,0 +1,11 @@
+mac access-list any 
+  seq 10 permit any any ( 0 Packets, 0 Bytes, 0 Packets/sec, 0 Bits/sec )
+mac access-list test123 
+  seq 10 permit any any ( 0 Packets, 0 Bytes, 0 Packets/sec, 0 Bits/sec )
+mac access-list l2_deny_any 
+  seq 10 deny any any ( 0 Packets, 0 Bytes, 0 Packets/sec, 0 Bits/sec )
+mac access-list l2_permit_any 
+  seq 10 permit any any ( 0 Packets, 0 Bytes, 0 Packets/sec, 0 Bits/sec )
+mac access-list l2_fw_mob_l2_arp-lacp 
+  seq 10 permit any any etype arp ( 0 Packets, 0 Bytes, 0 Packets/sec, 0 Bits/sec )
+  seq 20 permit any any etype 0x8809 ( 77440 Packets, 9912320 Bytes, 90 Packets/sec, 92768 Bits/sec )

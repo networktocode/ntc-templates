@@ -1,0 +1,15 @@
+Value Filldown PROTOCOL (\S+)
+Value Required INTERFACE ([\s\S]+)
+Value CHANNEL_GROUP (\d+)
+Value MODE (active|passive)
+Value ENABLE (no shutdown|shutdown)
+
+Start
+ ^protocol ${PROTOCOL}
+ ^interface -> Continue.Record
+ ^interface ${INTERFACE}
+ ^\s+channel-group ${CHANNEL_GROUP} mode ${MODE}
+ ^\s+${ENABLE}
+ ^!
+ ^\s*$$
+ ^. -> Error

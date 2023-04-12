@@ -1,0 +1,87 @@
+Value Key,Required INTERFACE (\S+\s\S+)
+Value ADMIN_STATUS (\S+)
+Value OPERATIONAL_STATUS (\S+)
+Value MTU (\d+)
+Value HARDWARE_TYPE (\S+)
+Value MAC_ADDR (\S+)
+Value CURRENT_SPEED (\S+)
+Value DHCPV4_STATE ([\S]+)
+Value DHCPV4_ADDR ([\S\s]+)
+Value IPV4_ADDR (\S+)
+Value IPV4_GATEWAY (\S+)
+Value DHCPV6_STATE ([\S]+)
+Value DHCPV6_ADDR ([\S\s]+)
+Value IPV6_ADDR (\S+)
+Value IPV6_GATEWAY (\S+)
+Value CARRIER_TRANSITION (\d+)
+Value LAST_CLEAR (\S+)
+Value RX_TOTAL_PKTS (\d+)
+Value RX_BROADCAST_PKTS (\d+)
+Value RX_DISCARD_PKTS (\d+)
+Value RX_ERRORS_PKTS (\d+)
+Value RX_CRC_ERRORS (\d+)
+Value RX_MCAST_PKTS (\d+)
+Value RX_OCTETS (\d+)
+Value TX_TOTAL_PKTS (\d+)
+Value TX_BROADCAST_PKTS (\d+)
+Value TX_DISCARD_PKTS (\d+)
+Value TX_ERRORS_PKTS (\d+)
+Value TX_MCAST_PKTS (\d+)
+Value TX_OCTETS (\d+)
+Value RX_MBITS_SEC (\S+)
+Value RX_PKTS_SEC (\S+)
+Value RX_PERCENT (\S+)
+Value TX_MBITS_SEC (\S+)
+Value TX_PKTS_SEC (\S+)
+Value TX_PERCENT (\S+)
+
+Start
+  ^\s*${INTERFACE} Admin state ${ADMIN_STATUS}\s+Operational state ${OPERATIONAL_STATUS}
+  ^\s*MTU ${MTU} bytes 
+  ^\s*Hardware is ${HARDWARE_TYPE}  mac address ${MAC_ADDR}
+  ^\s*Current Speed  ${CURRENT_SPEED}
+  ^\s*DHCPv4 ${DHCPV4_STATE}\s*(\[(${DHCPV4_ADDR}| )\])*
+  ^\s*IPv4 address ${IPV4_ADDR}
+  ^\s*IPv4 gateway ${IPV4_GATEWAY}
+  ^\s*DHCPv6 ${DHCPV6_STATE}\s*(\[(${DHCPV6_ADDR}| )\])*
+  ^\s*IPv6 address ${IPV6_ADDR}
+  ^\s*IPv6 gateway ${IPV6_GATEWAY}
+  ^Statistics -> Statistics
+  ^Input: -> Input
+  ^Out: -> Out
+  ^Rate Info: -> Rate
+  ^\s*$$
+  ^. -> Error
+
+Statistics
+  ^\s*Carrier\s+Transitions:\s+${CARRIER_TRANSITION}
+  ^\s*LastClear:\s+${LAST_CLEAR} -> Start
+  ^\s*$$
+  ^. -> Error
+
+Input
+  ^\s*Total\s+\S+:\s+${RX_TOTAL_PKTS}
+  ^\s*Broadcast\s+\S+:\s+${RX_BROADCAST_PKTS}
+  ^\s*Discard\s+\S+:\s+${RX_DISCARD_PKTS}
+  ^\s*Errors\s+\S+:\s+${RX_ERRORS_PKTS}
+  ^\s*CRC Errors:\s+${RX_CRC_ERRORS}
+  ^\s*MCast\s+\S+:\s+${RX_MCAST_PKTS}
+  ^\s*Octets:\s+${RX_OCTETS} -> Start
+  ^\s*$$
+  ^. -> Error
+
+Out
+  ^\s*Total\s+\S+:\s+${TX_TOTAL_PKTS}
+  ^\s*Broadcast\s+\S+:\s+${TX_BROADCAST_PKTS}
+  ^\s*Discard\s+\S+:\s+${TX_DISCARD_PKTS}
+  ^\s*Errors\s+\S+:\s+${TX_ERRORS_PKTS}
+  ^\s*MCast\s+\S+:\s+${TX_MCAST_PKTS}
+  ^\s*Octets:\s+${TX_OCTETS} -> Start
+  ^\s*$$
+  ^. -> Error
+
+Rate
+  ^\s+Input: ${RX_MBITS_SEC} Mbits/sec, ${RX_PKTS_SEC} pkts/sec ${RX_PERCENT}\% of line-rate
+  ^\s+Output: ${TX_MBITS_SEC} Mbits/sec, ${TX_PKTS_SEC} pkts/sec ${TX_PERCENT}\% of line-rate -> Record Start
+  ^\s*$$
+  ^. -> Error

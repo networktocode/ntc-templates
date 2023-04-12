@@ -1,0 +1,12 @@
+no lldp transmit
+lldp hello-timer 1
+lldp holdtime 10
+lldp management-address 1.1.1.1
+lldp suppress-tlv system-name,system-description,port-description
+interface ethernet 0/1
+  no lldp enable
+interface ethernet 0/2
+  no lldp transmit
+  lldp management-address 2.2.2.2
+  lldp suppress-tlv port-description,management-address
+!

@@ -1,0 +1,19 @@
+Value Filldown TRANSPORT_TUNNEL_COUNT (\d+)
+Value NAME (\S+)
+Value INGRESS_GROUP (\S+)
+Value RX_FRAMES (\d+)
+Value RX_BYTES (\d+)
+Value DROPPED_FRAMES (\d+)
+Value DROPPED_BYTES (\d+)
+
+Start
+ ^\s*Number of transport-tunnels: ${TRANSPORT_TUNNEL_COUNT}
+ ^\s*Name : ${NAME}
+ ^\S+ \S+ Packet Statistics 
+ ^\s+Ingress-Group : ${INGRESS_GROUP}
+ ^\s*RX Frames\s+: ${RX_FRAMES}
+ ^\s*RX Bytes\s+: ${RX_BYTES}
+ ^\s+Dropped Frames : ${DROPPED_FRAMES}
+ ^\s+Dropped Bytes : ${DROPPED_BYTES} -> Record
+ ^\s*$$
+ ^. -> Error

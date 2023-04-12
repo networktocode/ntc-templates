@@ -1,0 +1,38 @@
+
+TierraOS Software
+Copyright (c) 2021 Extreme Networks Inc.
+
+Firmware Info: 
+Current Firmware Version:	 TierraOS-22.0.0.3-SR-050
+Rollback Firmware Version:	 None
+Is Current Firmware Committed:	 true
+BMC Firmware Version:		 2.04
+FPGA Version: 			 v [ UPDATE NEEDED v2.12 ]
+Kernel: 			 5.4.40-OpenNetworkLinux
+
+System Uptime: 			 0 day(s), 03:48:33
+
+MicroService Info:
+SERVICE                     CURRENT         ROLLBACK      READY       STATE       RESTARTS  
+                            VERSION         VERSION       
+----------------------------------------------------------------------------------------------
+api-gw                      1.1.0           None          true        Running     0         
+arpnd                       0.1.0           None          true        Running     0         
+bfd                         0.1.0           None          true        Running     0         
+bgp                         0.1.0           None          true        Running     0         
+chassis-mgr                 1.2.0           None          true        Running     0         
+classifiers                 0.1.0           None          true        Running     0         
+cli                         1.1.0           None          true        Running     0         
+config-db                   1.1.0           None          true        Running     0         
+fwd-hal                     0.1.0           None          true        Running     0         
+interface-mgr               1.2.0           None          true        Running     0         
+lacp                        1.0.0           None          true        Running     0         
+lldp                        1.0.0           None          true        Running     0         
+mct                         0.1.0           None          true        Running     0         
+mftm                        0.1.0           None          true        Running     0         
+msg-bus                     1.1.0           None          true        Running     0         
+persistent-state-db         1.1.0           None          true        Running     0         
+security                    1.1.0           None          true        Running     0         
+snmp                        1.1.0           None          true        Running     0         
+state-db                    1.1.0           None          true        Running     0         
+uftm                        0.1.0           None          true        Running     0 

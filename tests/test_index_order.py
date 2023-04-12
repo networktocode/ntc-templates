@@ -34,6 +34,8 @@ OS_CHOICES = [
     "dell_powerconnect",
     "dlink_ds",
     "enterasys",
+    "extreme_slx",
+    "extreme_tierra",
     "ericsson_ipos",
     "extreme",
     "f5_ltm",

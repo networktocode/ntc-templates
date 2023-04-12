@@ -1,0 +1,6 @@
+Value TIMEZONE (\S+)
+
+Start
+ ^clock timezone ${TIMEZONE}
+ ^\s*$$
+ ^. -> Error

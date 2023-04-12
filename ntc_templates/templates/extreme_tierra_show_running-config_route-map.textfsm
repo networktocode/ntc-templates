@@ -1,0 +1,31 @@
+Value Key,Required RMAP_NAME (\S+)
+Value SEQ_NUM (\d+)
+Value DESCRIPTION (\S+)
+Value FW_ACTION (permit|deny)
+Value IP_ACL_NAME (\S+)
+Value IPV6_ACL_NAME (\S+)
+Value MAC_ACL_NAME (\S+)
+Value EGRESS_GROUP_NAME (\S+)
+Value TRUNCATE (\d+)
+Value DECAP (decap)
+Value NEW_SCOPE (new-scope)
+Value QOS_FORWARDING_GROUP (\S+)
+
+
+
+
+Start
+  ^\s*route -> Continue.Record
+  ^\s*route-map\s+${RMAP_NAME}\s+${SEQ_NUM}
+  ^\s*description\s+${DESCRIPTION}
+  ^\s*forward-action\s+${FW_ACTION}
+  ^\s*match\s+ip\s+access-list\s+${IP_ACL_NAME}
+  ^\s*match\s+ipv6\s+access-list\s+${IPV6_ACL_NAME}
+  ^\s*match\s+mac\s+access-list\s+${MAC_ACL_NAME}
+  ^\s*set egress-group\s*${EGRESS_GROUP_NAME}
+  ^\s*truncate\s+${TRUNCATE}
+  ^\s*${DECAP}
+  ^\s*${NEW_SCOPE}
+  ^\s*qos-forwarding-group ${QOS_FORWARDING_GROUP}
+  ^\s*$$
+  ^. -> Error

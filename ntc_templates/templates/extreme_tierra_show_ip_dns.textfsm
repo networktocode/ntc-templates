@@ -1,0 +1,10 @@
+Value List DOMAIN_NAME (\S+)
+Value List NAME_SERVER ([\d\.]+)
+
+Start
+ ^ip\s+dns domain name
+ ^ip dns name\-server
+ ^\s+${NAME_SERVER}
+ ^\s+${DOMAIN_NAME}
+ ^\s*$$ -> Record
+ ^. -> Error

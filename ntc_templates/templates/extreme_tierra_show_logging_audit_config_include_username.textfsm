@@ -1,0 +1,16 @@
+Value TIMESTAMP (\S+\s\S+\sUTC\s\S+)
+Value LOG_ID (\d+)
+Value INFO_MSG (\S+|\S+\s\S+)
+Value METHOD (\S+)
+Value STATUS (\S+)
+Value CLIENT_IP (\S+)
+Value TOKEN (\S+)
+Value USERNAME (\S+)
+Value ROLE (\S+)
+Value COMMAND ([\S\s]+)
+
+
+Start
+ ^${TIMESTAMP}\s+LogID:${LOG_ID}\s+info Msg:\s+${INFO_MSG}\s+(Method:${METHOD}|\s*)\s*Status:${STATUS}\s*(Request:|\s*)(clientIP:\"${CLIENT_IP}\"|\s*)(token:\"${TOKEN}\"|\s*)(username:\"${USERNAME}\"|\s*)(\s*role:${ROLE}|\s*)(Command:\'${COMMAND}\'|\s*) -> Record
+ ^\s*$$
+ ^. -> Error

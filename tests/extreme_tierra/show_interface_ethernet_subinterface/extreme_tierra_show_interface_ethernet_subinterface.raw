@@ -1,0 +1,21 @@
+Interface ethernet 0/1:1
+Vlan      Inner Vlan Admin Status Oper Status If Mode
+========  ========== ============ =========== ========
+untag(90) -          UP           UP          IF_MODE_L2
+34        0          UP           UP          IF_MODE_L2
+34        67         UP           UP          IF_MODE_L2
+
+Interface ethernet 0/1:2
+Vlan     Inner Vlan Admin Status Oper Status If Mode
+======== ========== ============ =========== ========
+untag-s  -          UP           UP          IF_MODE_L2
+90       0          UP           UP          IF_MODE_L2
+
+Interface ethernet 0/1:3
+Vlan     Inner Vlan Admin Status Oper Status If Mode
+======== ========== ============ =========== ========
+untag-s  -          UP           UP          IF_MODE_L2
+
+Interface ethernet 0/1:4
+Vlan     Inner Vlan Admin Status Oper Status If Mode
+======== ========== ============ =========== ========

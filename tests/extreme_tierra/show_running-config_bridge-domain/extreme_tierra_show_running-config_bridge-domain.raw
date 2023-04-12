@@ -1,0 +1,34 @@
+bridge-domain 1
+bridge-domain 2 mode vlan
+  vlan-id 50
+  member ethernet 0/1:1
+  member ethernet 0/1:2 untagged
+  member ethernet 0/1:3 untagged
+  member ethernet 0/9
+  member ethernet 0/10 untagged
+  member ethernet 0/11 untagged
+  member port-channel 27
+  member port-channel 30 untagged
+  member port-channel 40 untagged
+ static-mac-address 00:11:22:33:44:00 ethernet 0/1:1 vlan 50
+ static-mac-address 00:11:22:33:44:55 ethernet 0/11 untagged
+ static-mac-address 00:11:22:33:44:66 port-channel 27 vlan 50
+ static-mac-address 00:11:22:33:44:aa port-channel 30 untagged
+ static-mac-address 00:11:22:33:44:44 ethernet 0/10 untagged
+ static-mac-address 00:11:22:33:44:bb port-channel 40 untagged
+ static-mac-address 00:11:22:33:44:11 ethernet 0/1:2 untagged
+ static-mac-address 00:11:22:33:44:22 ethernet 0/1:3 untagged
+ static-mac-address 00:11:22:33:44:33 ethernet 0/9 vlan 50
+bridge-domain 3 mode vlan
+  vlan-id 90
+bridge-domain 4
+  member ethernet 0/18 vlan 159
+bridge-domain 5 mode vlan
+  vlan-id 987
+  member ethernet 0/22
+bridge-domain 6 mode vlan
+bridge-domain 7
+ static-mac-address 00:11:22:33:44:33 ethernet 0/23 vlan 147
+bridge-domain 8 mode vlan
+  vlan-id 63
+ static-mac-address 00:11:22:33:22:11 ethernet 0/23 vlan 63

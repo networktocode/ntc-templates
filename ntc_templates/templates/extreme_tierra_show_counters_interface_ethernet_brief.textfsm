@@ -1,0 +1,17 @@
+Value INTERFACE (\S+\s\S+)
+Value RX_PACKETS (\d+)
+Value TX_PACKETS (\d+)
+Value RX_ERRORS (\d+)
+Value TX_ERRORS (\d+)
+Value RX_DISCARDS (\d+)
+Value TX_DISCARDS (\d+)
+Value RX_CRC (\d+)
+
+
+Start
+ ^\s+Packets\s+Errors\s+Discards\s+CRC       
+ ^Port\s+rx\s+tx\s+rx\s+tx\s+rx\s+tx\s+rx        
+ ^[=]+
+ ^${INTERFACE}\s+${RX_PACKETS}\s+${TX_PACKETS}\s+${RX_ERRORS}\s+${TX_ERRORS}\s+${RX_DISCARDS}\s+${TX_DISCARDS}\s+${RX_CRC} -> Record
+ ^\s*$$
+ ^. -> Error

@@ -1,0 +1,17 @@
+*untag-s --accepts untagged only  *untag --accepts untagged+tagged
+
+Bridge Domain 1    Mode L2VSI_P2MP
+Total number of member ports  3
+If Name   Vlan     Inner Vlan Admin Status Oper Status
+========  ======== ========== ============ ===========
+Eth 0/1:1 34       --         UP           UP
+Eth 0/1:1 34       67         UP           UP
+Eth 0/1:2 untag-s  --         UP           UP
+
+Bridge Domain 2    Mode L2VSI_VLAN Vlan 90
+Total number of member ports  3
+If Name   Vlan     Inner Vlan Admin Status Oper Status
+========  ======== ========== ============ ===========
+Eth 0/1:1 untag    --         UP           UP
+Eth 0/1:2 --       --         UP           UP
+Eth 0/1:3 untag-s  --         UP           UP

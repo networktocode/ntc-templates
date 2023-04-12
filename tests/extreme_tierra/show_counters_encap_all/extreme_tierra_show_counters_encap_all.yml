@@ -1,0 +1,16 @@
+---
+parsed_sample:
+  - encap_count: "1"
+    name: "sdf"
+    tunnel_type: "GRE"
+    egress_port: "ethernet 8/14:4"
+    tx_frames: "0"
+    tx_bytes: "0"
+    no_stats: ""
+  - encap_count: "1"
+    name: "sdfsdf"
+    tunnel_type: ""
+    egress_port: ""
+    tx_frames: ""
+    tx_bytes: ""
+    no_stats: "Error: encap stats not found"

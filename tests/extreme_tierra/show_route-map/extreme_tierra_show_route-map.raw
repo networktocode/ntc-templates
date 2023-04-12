@@ -1,0 +1,166 @@
+route-map map_gtp 10
+forward-action permit 
+match ip access-list v4_gtp_0 (active)
+match ipv6 access-list v6_gtp_0 (active)
+egress-group eg_3010
+qos-forwarding-group q0
+Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
+
+route-map map_gtp 20
+forward-action permit 
+match ip access-list v4_gtp_1 (active)
+match ipv6 access-list v6_gtp_1 (active)
+egress-group eg_3020
+qos-forwarding-group q0
+Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
+
+route-map map_gtp 30
+forward-action permit 
+match ip access-list v4_gtp_2 (active)
+match ipv6 access-list v6_gtp_2 (active)
+egress-group eg_3030
+qos-forwarding-group q1
+Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
+
+route-map map_gtp 40
+forward-action permit 
+match ip access-list v4_gtp_3 (active)
+match ipv6 access-list v6_gtp_3 (active)
+egress-group eg_3040
+qos-forwarding-group q2
+Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
+
+route-map map_gtp 50
+forward-action permit 
+match ip access-list v4_gtp_4 (active)
+match ipv6 access-list v6_gtp_4 (active)
+egress-group eg_3050
+qos-forwarding-group q3
+Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
+
+route-map map_gtp 60
+forward-action permit 
+match ip access-list v4_gtp_5 (active)
+match ipv6 access-list v6_gtp_5 (active)
+egress-group eg_3060
+qos-forwarding-group q4
+Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
+
+route-map map_gtp 70
+forward-action permit 
+match ip access-list v4_gtp_6 (active)
+match ipv6 access-list v6_gtp_6 (active)
+egress-group eg_3070
+qos-forwarding-group q5
+Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
+
+route-map map_gtp 80
+forward-action permit 
+match ip access-list v4_gtp_7 (active)
+match ipv6 access-list v6_gtp_7 (active)
+egress-group eg_3080
+qos-forwarding-group q6
+Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
+
+route-map map_gtp 90
+forward-action permit 
+match ip access-list v4_gtp_8 (active)
+match ipv6 access-list v6_gtp_8 (active)
+egress-group eg_3090
+qos-forwarding-group q7
+Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
+
+route-map map_gtp 100
+forward-action permit 
+match ip access-list v4_gtp_9 (active)
+match ipv6 access-list v6_gtp_9 (active)
+egress-group eg_3100
+qos-forwarding-group q1
+Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
+
+route-map map_gtp 110
+forward-action permit 
+match ip access-list v4_gtp_10 (active)
+match ipv6 access-list v6_gtp_10 (active)
+egress-group eg_3110
+qos-forwarding-group q2
+Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
+
+route-map map_gtp 120
+forward-action permit 
+match ip access-list v4_gtp_11 (active)
+match ipv6 access-list v6_gtp_11 (active)
+egress-group eg_3120
+qos-forwarding-group q3
+Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
+
+route-map map_gtp 130
+forward-action permit 
+match ip access-list v4_gtp_12 (active)
+match ipv6 access-list v6_gtp_12 (active)
+egress-group eg_3130
+qos-forwarding-group q4
+Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
+
+route-map map_gtp 140
+forward-action permit 
+match ip access-list v4_gtp_13 (active)
+match ipv6 access-list v6_gtp_13 (active)
+egress-group eg_3140
+qos-forwarding-group q5
+Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
+
+route-map map_gtp 150
+forward-action permit 
+match ip access-list v4_gtp_14 (active)
+match ipv6 access-list v6_gtp_14 (active)
+egress-group eg_3150
+qos-forwarding-group q6
+Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
+
+route-map map_gtp 160
+forward-action permit 
+match ip access-list v4_gtp_15 (active)
+match ipv6 access-list v6_gtp_15 (active)
+egress-group eg_3160
+qos-forwarding-group q7
+Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
+
+route-map map_gtp 170
+forward-action permit 
+match ip access-list v4_gtp_16 (active)
+match ipv6 access-list v6_gtp_16 (active)
+egress-group eg_3170
+qos-forwarding-group q1
+Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
+
+route-map map_gtp 180
+forward-action permit 
+match ip access-list v4_gtp_17 (active)
+match ipv6 access-list v6_gtp_17 (active)
+egress-group eg_3180
+qos-forwarding-group q2
+Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
+
+route-map map_gtp 190
+forward-action permit 
+match ip access-list v4_gtp_18 (active)
+match ipv6 access-list v6_gtp_18 (active)
+egress-group eg_3190
+qos-forwarding-group q3
+Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
+
+route-map map_gtp 200
+forward-action permit 
+match ip access-list v4_gtp_19 (active)
+match ipv6 access-list v6_gtp_19 (active)
+egress-group eg_3200
+qos-forwarding-group q4
+Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec
+
+route-map map_gtp 2000
+forward-action permit 
+match ip access-list v4_deny (active)
+match ipv6 access-list v6_deny (active)
+egress-group eg_3210
+Policy matches: 0 packets, 0 bytes, 0 Packets/sec, 0 Bits/sec

@@ -1,0 +1,11 @@
+---
+parsed_sample:
+  - tunnel_name: "tunnel-1"
+    src_ip: "10.10.10.0"
+    src_mask: "255.255.255.0"
+    dst_ip: "20.20.20.0"
+    dst_mask: "255.0.0.0"
+    tunnel_type: "erspan"
+    tunnel_id: "12345"
+    ingress_name:
+      - "ig1"

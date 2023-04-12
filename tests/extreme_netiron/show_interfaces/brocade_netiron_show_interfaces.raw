@@ -1,0 +1,170 @@
+GigabitEthernet1/1 is up, line protocol is up 
+  STP Root Guard is disabled, STP BPDU Guard is disabled
+  Hardware is GigabitEthernet, address is 0024.38a5.1c00 (bia 0024.38a5.1c00)
+  Configured speed auto, actual 1Gbit, configured duplex fdx, actual fdx
+  Member of Control VLAN 4095, 36 L2 VLAN(S) (tagged), port is in tagged mode, port state is Forwarding
+  STP configured to ON, Priority is level0, flow control enabled
+  Priority force disabled, Drop precedence level 0, Drop precedence force disabled
+  dhcp-snooping-trust configured to OFF
+  mirror disabled, monitor disabled
+  LACP BPDU Forwarding:Disabled 
+  LLDP BPDU Forwarding:Disabled 
+  Not member of any active trunks
+  Not member of any configured trunks
+  Port name is ATM1-G0-1
+  Port is not enabled to receive all vlan packets for pbr
+  MTU 9216 bytes, encapsulation ethernet
+  Openflow: Disabled, Openflow Index 1
+  Cluster L2 protocol forwarding enabled
+  300 second input rate: 235649647 bits/sec, 27522 packets/sec, 24.00% utilization
+  300 second output rate: 140641094 bits/sec, 31382 packets/sec, 14.56% utilization
+  74818592872 packets input, 72400348503374 bytes, 0 no buffer
+  Received 3639493 broadcasts, 2736343 multicasts, 74812217036 unicasts
+  0 input errors, 0 CRC, 0 frame, 0 ignored
+  0 runts, 16192705827 giants                                     
+  NP received 74819287581 packets, Sent to TM 74819282240 packets
+  NP Ingress dropped 5369 packets
+  95864830955 packets output, 54017992924883 bytes, 0 underruns
+  Transmitted 2406581209 broadcasts, 82143416 multicasts, 93376106330 unicasts
+  0 output errors, 0 collisions
+  NP transmitted 95865699894 packets, Received from TM 95872239709 packets
+GigabitEthernet1/2 is disabled, line protocol is down 
+  STP Root Guard is disabled, STP BPDU Guard is disabled
+  Hardware is GigabitEthernet, address is 0024.38a5.1c01 (bia 0024.38a5.1c01)
+  Configured speed auto, actual unknown, configured duplex fdx, actual unknown
+  Member of Control VLAN 4095, VLAN 1 (untagged), port is in untagged mode, port state is Disabled
+  STP configured to ON, Priority is level0, flow control enabled
+  Priority force disabled, Drop precedence level 0, Drop precedence force disabled
+  dhcp-snooping-trust configured to OFF
+  mirror disabled, monitor disabled
+  LACP BPDU Forwarding:Disabled 
+  LLDP BPDU Forwarding:Disabled 
+  Not member of any active trunks
+  Not member of any configured trunks
+  No port name
+  Port is not enabled to receive all vlan packets for pbr
+  MTU 9216 bytes, encapsulation ethernet
+  Openflow: Disabled, Openflow Index 2                            
+  Cluster L2 protocol forwarding enabled
+  300 second input rate: 0 bits/sec, 0 packets/sec, 0.00% utilization
+  300 second output rate: 0 bits/sec, 0 packets/sec, 0.00% utilization
+  0 packets input, 0 bytes, 0 no buffer
+  Received 0 broadcasts, 0 multicasts, 0 unicasts
+  0 input errors, 0 CRC, 0 frame, 0 ignored
+  0 runts, 0 giants
+  NP received 0 packets, Sent to TM 0 packets
+  NP Ingress dropped 0 packets
+  0 packets output, 0 bytes, 0 underruns
+  Transmitted 0 broadcasts, 0 multicasts, 0 unicasts
+  0 output errors, 0 collisions
+  NP transmitted 0 packets, Received from TM 0 packets
+10GigabitEthernet3/4 is up, line protocol is up 
+  STP Root Guard is disabled, STP BPDU Guard is disabled
+  Hardware is 10GigabitEthernet, address is 0024.38a5.1c00 (bia 0024.38a5.1c63)
+  Configured speed 10Gbit, actual 10Gbit, configured duplex fdx, actual fdx
+  Member of Control VLAN 4095, 77 L2 VLAN(S) (tagged), port is in tagged mode, port state is Forwarding
+  STP configured to ON, Priority is level0, flow control enabled
+  Priority force disabled, Drop precedence level 0, Drop precedence force disabled
+  dhcp-snooping-trust configured to OFF
+  mirror disabled, monitor disabled
+  LACP BPDU Forwarding:Disabled 
+  LLDP BPDU Forwarding:Disabled 
+  Not member of any active trunks
+  Not member of any configured trunks
+  Port name is OL2.CLMAMO-ten3/0/0
+  Port is not enabled to receive all vlan packets for pbr
+  MTU 9216 bytes, encapsulation ethernet
+  Openflow: Disabled, Openflow Index 100
+  Cluster L2 protocol forwarding enabled
+  30 second input rate: 300338645 bits/sec, 41100 packets/sec, 3.07% utilization
+  30 second output rate: 190540328 bits/sec, 39304 packets/sec, 1.97% utilization
+  121863253313 packets input, 99644389312061 bytes, 0 no buffer
+  Received 44852728 broadcasts, 9170942 multicasts, 121809229643 unicasts
+  0 input errors, 0 CRC, 0 frame, 0 ignored
+  0 runts, 26930828870 giants
+  NP received 121864501462 packets, Sent to TM 121862218321 packets
+  NP Ingress dropped 5 packets
+  145158405355 packets output, 102580338487220 bytes, 0 underruns
+  Transmitted 9556629 broadcasts, 65490504 multicasts, 145083358222 unicasts
+  0 output errors, 0 collisions
+  NP transmitted 145159557118 packets, Received from TM 145218386173 packets
+10GigabitEthernet3/5 is up, line protocol is up 
+  STP Root Guard is disabled, STP BPDU Guard is disabled
+  Hardware is 10GigabitEthernet, address is 0024.38a5.1c00 (bia 0024.38a5.1c64)
+  Configured speed 10Gbit, actual 10Gbit, configured duplex fdx, actual fdx
+  Member of Control VLAN 4095, 9 L2 VLAN(S) (tagged), port is in tagged mode, port state is Forwarding
+  STP configured to ON, Priority is level0, flow control enabled
+  Priority force disabled, Drop precedence level 0, Drop precedence force disabled
+  dhcp-snooping-trust configured to OFF
+  mirror disabled, monitor disabled
+  LACP BPDU Forwarding:Disabled 
+  LLDP BPDU Forwarding:Disabled 
+  Member of active trunk ports 3/5, primary port
+  Member of configured trunk ports 3/5, primary port
+  Port name is CLMA-STLS 10G-Centurylink
+  Port is not enabled to receive all vlan packets for pbr         
+  MTU 9216 bytes, encapsulation ethernet
+  Openflow: Disabled, Openflow Index 101
+  Cluster L2 protocol forwarding enabled
+  30 second input rate: 2602741516 bits/sec, 269941 packets/sec, 26.46% utilization
+  30 second output rate: 262142094 bits/sec, 111277 packets/sec, 2.79% utilization
+  924970842630 packets input, 1088460975408035 bytes, 0 no buffer
+  Received 4575649 broadcasts, 102909425 multicasts, 924863357556 unicasts
+  0 input errors, 0 CRC, 0 frame, 0 ignored
+  0 runts, 321137547437 giants
+  NP received 924979272212 packets, Sent to TM 924677624613 packets
+  NP Ingress dropped 213578234 packets
+  526574341236 packets output, 159588031939808 bytes, 0 underruns
+  Transmitted 121307096 broadcasts, 317528800 multicasts, 526135505340 unicasts
+  0 output errors, 0 collisions
+  NP transmitted 526580335261 packets, Received from TM 526680374565 packets
+10GigabitEthernet3/6 is disabled, line protocol is down 
+  STP Root Guard is disabled, STP BPDU Guard is disabled
+  Hardware is 10GigabitEthernet, address is 0024.38a5.1c65 (bia 0024.38a5.1c65)
+  Configured speed 10Gbit, actual unknown, configured duplex fdx, actual unknown
+  Member of Control VLAN 4095, VLAN 1 (untagged), port is in untagged mode, port state is Disabled
+  STP configured to ON, Priority is level0, flow control enabled
+  Priority force disabled, Drop precedence level 0, Drop precedence force disabled
+  dhcp-snooping-trust configured to OFF                           
+  mirror disabled, monitor disabled
+  LACP BPDU Forwarding:Disabled 
+  LLDP BPDU Forwarding:Disabled 
+  Not member of any active trunks
+  Not member of any configured trunks
+  No port name
+  Port is not enabled to receive all vlan packets for pbr
+  MTU 9216 bytes, encapsulation ethernet
+  Openflow: Disabled, Openflow Index 102
+  Cluster L2 protocol forwarding enabled
+  300 second input rate: 0 bits/sec, 0 packets/sec, 0.00% utilization
+  300 second output rate: 0 bits/sec, 0 packets/sec, 0.00% utilization
+  0 packets input, 0 bytes, 0 no buffer
+  Received 0 broadcasts, 0 multicasts, 0 unicasts
+  0 input errors, 0 CRC, 0 frame, 0 ignored
+  0 runts, 0 giants
+  NP received 0 packets, Sent to TM 0 packets
+  NP Ingress dropped 0 packets
+  0 packets output, 0 bytes, 0 underruns
+  Transmitted 0 broadcasts, 0 multicasts, 0 unicasts
+  0 output errors, 0 collisions
+  NP transmitted 0 packets, Received from TM 0 packets
+Ve1395 is up, line protocol is up 
+  Type is Vlan (Vlan Id: 1395)
+  Hardware is Virtual Ethernet, address is 0024.38a5.1c00 (bia 0024.38a5.1c00)
+  Port name is TA5000A.CLMAMOXI-PON-VOICE 
+  Vlan id: 1395
+  Internet address is 172.24.18.1/24, IP MTU 1500 bytes, encapsulation ethernet
+Ve1400 is up, line protocol is down 
+  Type is Vlan (Vlan Id: 1400)
+  Hardware is Virtual Ethernet, address is 0024.38a5.1c00 (bia 0024.38a5.1c00)
+  No port name
+  Vlan id: 1400
+  Internet address is 0.0.0.0/0, IP MTU 1500 bytes, encapsulation ethernet
+Loopback1 is up, line protocol is up 
+  Hardware is Loopback
+  Port name is MPLS Loopback
+  Internet address is 174.34.31.29/32, IP MTU 1500 bytes, encapsulation LOOPBACK
+Loopback6 is up, line protocol is up 
+  Hardware is Loopback
+  No port name
+  IP MTU 1500 bytes, encapsulation LOOPBACK

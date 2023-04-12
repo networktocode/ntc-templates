@@ -1,0 +1,16 @@
+Interface: loopback 10 Admin-status:UP Oper-status UP
+
+Addresses:
+ 10:10::10:10/64
+ 10:10::10:20/64 secondary
+ fe80::4288:2fff:fefa:5/128
+ fe80:428/128
+ 30:30::30:30/64
+ 30:30::30:40/64 secondary
+ 40::40:40:40:5/64
+ 40::40:40:40:6/64 secondary
+ 2001:4567:1212:b2:21b:2bff:fece:4ee3/64
+ 2001:4567:1212:b2:21b:2bff:fece:4ee4/64 secondary
+ 30::30/64
+
+Vrf: vrf_10

@@ -1,0 +1,9 @@
+interface ethernet 7/2
+  set ingress-group ig_gre
+  set ingress-group ig_vcp
+  set ingress-group ig_mpls
+  set ingress-group ig_gtp
+  set ingress-group ig_fw
+  description S1_A1:0/29
+  channel-group 1 mode active 
+  no shutdown

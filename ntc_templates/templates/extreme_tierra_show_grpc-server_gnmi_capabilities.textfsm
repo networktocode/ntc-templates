@@ -1,0 +1,16 @@
+Value Filldown GNMI_VERSION (\S+)
+Value Required YANG_MODULE_NAME (\S+)
+Value YANG_MODULE_ORGANIZATION ([\s\S]+\S+)
+Value YANG_MODULE_VERSION (\S+)
+Value Fillup,List ENCODING (\S+)
+
+Start
+ ^\s*gNMI version: ${GNMI_VERSION}
+ ^\s*Supported YANG modules:
+ ^\s*Module Name\s+Organization\s+Version                         
+ ^\s*[\-]+
+ ^\s*${YANG_MODULE_NAME}\s+${YANG_MODULE_ORGANIZATION}\s+${YANG_MODULE_VERSION} -> Record
+ ^\s*Supported Encoding:
+ ^\s*${ENCODING}
+ ^\s*$$
+ ^. -> Error

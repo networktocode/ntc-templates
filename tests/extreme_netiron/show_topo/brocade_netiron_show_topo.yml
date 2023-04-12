@@ -1,0 +1,71 @@
+---
+parsed_sample:
+  - topogroup: "10"
+    topohwindex: "2"
+    mastervlan: "10"
+    l2proto: "MRP"
+    vplsvlanpresent: "FALSE"
+    membervlans: "146 149 151 to 152 154 200 300 to 303 350 400 453 1280 to 1283 1295\
+      \ 1335 1395 2005 2022 2024 2030 2033 2035 2039 2049 to 2050 2054 2069 to 2070\
+      \ 2086 2091 to 2092 2096 to 2097 2099 to 2100 2129 2184 2188 to 2189 2204 2215\
+      \ 2226 2241 to 2242 2250 2253 2277 2325 to 2326 2340 2342 2349 to 2351 2360\
+      \ 2367 2414 to 2415 2442 2895 3008 3840 4001 "
+    membergroup: "None"
+    controlports: "e 1/4 e 1/7 e 2/4 e 2/7 "
+    freeports: ""
+  - topogroup: "11"
+    topohwindex: "65535"
+    mastervlan: "11"
+    l2proto: ""
+    vplsvlanpresent: "FALSE"
+    membervlans: "201 501 1400 "
+    membergroup: "None                                              "
+    controlports: ""
+    freeports: ""
+  - topogroup: "13"
+    topohwindex: "8"
+    mastervlan: "513"
+    l2proto: "MRP"
+    vplsvlanpresent: "FALSE"
+    membervlans: "94 207 223 to 224 280 to 282 290 310 to 311 320 to 321 330 to 331\
+      \ 340 345 355 360 365 375 380 385 390 401 517 to 518 619 623 999 1290 1345 1355\
+      \ to 1356 1380 1385 1390 2004 2006 2011 2018 2043 2045 to 2046 2058 to 2059\
+      \ 2063 to 2065 2072 2075 2102 2104 to 2107 2133 2137 2173 2180 to 2181 2190\
+      \ 2195 2197 2199 to 2200 2235 2257 2261 2265 2267 2270 to 2272 2274 2278 2282\
+      \ 2284 to 2287 2293 to 2296 2298 2301 to 2302 2305 to 2306 2314 to 2317 2320\
+      \ 2323 to 2324 2329 2332 2343 to 2345 2352 to 2353 2355 2357 2359 2362 to 2363\
+      \ 2366 2368 to 2369 2372 2374 to 2376 2379 2381 2384 2386 to 2387 2393 2395\
+      \ 2399 to 2401 2403 2408 2412 2416 2418 to 2420 2435 to 2440 2443 to 2446 2449\
+      \ to 2451 2453 to 2456 2460 2466 to 2470 2472 2475 2483 2571 2575 to 2576 2718\
+      \ 2766 3004 3006 to 3007 "
+    membergroup: "None"
+    controlports: "e 3/1 e 3/3 e 4/1 e 4/3 "
+    freeports: ""
+  - topogroup: "14"
+    topohwindex: "3"
+    mastervlan: "14"
+    l2proto: "MRP"
+    vplsvlanpresent: "FALSE"
+    membervlans: "370 1370 2025 2031 2057 2134 2138 2210 2256 2263 2356 2404 2506\
+      \ 2896 "
+    membergroup: "None"
+    controlports: "e 1/4 e 1/7 e 2/4 e 2/7 "
+    freeports: ""
+  - topogroup: "60"
+    topohwindex: "7"
+    mastervlan: "60"
+    l2proto: "MRP"
+    vplsvlanpresent: "FALSE"
+    membervlans: "2371                                              "
+    membergroup: "None"
+    controlports: "e 3/1 e 3/3 e 3/5 e 4/1 e 4/3 "
+    freeports: ""
+  - topogroup: "170"
+    topohwindex: "4"
+    mastervlan: "170"
+    l2proto: "MRP"
+    vplsvlanpresent: "FALSE"
+    membervlans: "144 to 145 220 454 2040 2191 2422 2459 "
+    membergroup: "None"
+    controlports: "e 3/1 e 3/3 e 4/1 e 4/3 "
+    freeports: ""

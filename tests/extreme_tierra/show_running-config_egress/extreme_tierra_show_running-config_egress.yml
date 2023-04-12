@@ -1,0 +1,32 @@
+---
+parsed_sample:
+  - egress_name: "ep_1-01"
+    description: "ep_1-01"
+    listener_policy: ""
+    precedence:
+      - "10"
+    interface_type:
+      - "ethernet"
+    interface:
+      - "1/2:1"
+  - egress_name: "ep_1-02"
+    description: "ep_1-02"
+    listener_policy: ""
+    precedence:
+      - "10"
+    interface_type:
+      - "ethernet"
+    interface:
+      - "1/2:1"
+  - egress_name: "ep_1-02"
+    description: "ep_1-02"
+    listener_policy: ""
+    precedence:
+      - "10"
+      - "20"
+    interface_type:
+      - "port-channel"
+      - "ethernet"
+    interface:
+      - "5"
+      - "8/14:1"

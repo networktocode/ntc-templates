@@ -1,0 +1,8 @@
+ssh-server
+  cipher  aes128-cbc
+  mac  hmac-sha1
+  key-exchange  curve25519-sha256
+  idle-timeout 600
+  key rsa 2048
+  key ecdsa 256
+!

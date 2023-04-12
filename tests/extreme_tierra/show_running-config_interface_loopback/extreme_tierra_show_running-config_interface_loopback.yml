@@ -1,0 +1,18 @@
+---
+parsed_sample:
+  - interface: "loopback 1"
+    ip_address_primary:
+      - "10.10.10.10/32"
+    ip_address_secondary: []
+    ipv6_address_primary:
+      - "10:10::10:10/128"
+    ipv6_address_secondary: []
+    enable: "no shutdown"
+  - interface: "loopback 10"
+    ip_address_primary:
+      - "10.10.10.10/32"
+    ip_address_secondary: []
+    ipv6_address_primary:
+      - "10:10::10:10/128"
+    ipv6_address_secondary: []
+    enable: "no shutdown"

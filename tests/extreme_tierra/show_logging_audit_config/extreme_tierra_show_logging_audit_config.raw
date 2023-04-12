@@ -1,0 +1,7 @@
+2021-10-29 10:30:32.194 UTC +0000 LogID:8001 info Msg: nouser/norole/(null)/ssh/cli, Status:100 Command:'operational assigned to groups:  admin'
+2021-10-29 10:30:57.865 UTC +0000 LogID:7001 info Msg: none/none/none/http/grpc Method:/aaa.Accounting/UserLogged Status:OK Request:username:"admin"
+2021-10-29 10:30:57.867 UTC +0000 LogID:8001 info Msg: LOGIN_MESSAGE_START admin/admin sudo//ssh/cli, Status:100'
+2021-10-29 10:30:58.466 UTC +0000 LogID:8001 info Msg: admin/admin sudo//ssh/cli, Status:0 Command:'operational show firmware'
+2021-10-29 10:30:59.144 UTC +0000 LogID:8001 info Msg: admin/admin sudo//ssh/cli, Status:0 Command:'operational show chassis'
+2022-04-04 19:44:20.839 UTC +0000 LogID:8001 info Msg: admin/admin sudo/134.141.56.22/ssh/cli, Status:0 Command:'operational show lldp neighbors'
+2022-04-04 19:44:21.214 UTC +0000 LogID:8001 info Msg: admin/admin sudo/134.141.56.22/ssh/cli, Status:0 Command:'operational show lldp neighbors interface ethernet all'

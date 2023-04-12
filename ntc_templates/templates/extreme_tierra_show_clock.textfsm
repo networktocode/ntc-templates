@@ -1,0 +1,13 @@
+Value YEAR (\d{4})
+Value MONTH (\d{2})
+Value DAY (\d{2})
+Value HOUR (\d{2})
+Value MINUTE (\d{2})
+Value SECOND (\d{2})
+Value TIME_ZONE (\S+)
+Value TIME_ZONE_OFFSET (\S+)
+
+Start
+ ^${YEAR}\-${MONTH}\-${DAY} ${HOUR}:${MINUTE}:${SECOND} ${TIME_ZONE} ${TIME_ZONE_OFFSET} -> Record
+ ^\s*$$
+ ^. -> Error

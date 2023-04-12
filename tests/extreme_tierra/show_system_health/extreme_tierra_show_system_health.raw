@@ -1,0 +1,41 @@
+BIOS Date:     10/30/2020
+BIOS Vendor:  American Megatrends Inc.
+BIOS Version:   3A01
+CPU Model:   Intel(R) Atom(TM) CPU C3758 @ 2.20GHz
+CPU Procs:    2
+Disk Free:     74.85GB
+Disk Total:     89.07GB
+Disk Used:   9.67GB
+Kernel Arch:  x86_64
+Kernel Version: 5.4.40-OpenNetworkLinux
+Memory Free: 12.02GB
+Memory Total: 15.60GB
+Memory Used: 3.04GB
+Memory Used (%): 19.51
+OS: linux
+Platform: alpine
+Platform Version: 3.13.5
+System Uptime: 1h56m3s
+
+------------------------------------------------------------------
+SERVICE           CPU(cores)          Memory(bytes)
+------------------------------------------------------------------
+api-gw                      865m             101Mi
+arpnd                       269m                59Mi
+bfd                            293m                59Mi
+bgp                            260m             134Mi
+chassis-mgr               39m                67Mi
+classifiers                 268m                46Mi
+cli                                  1m                 99Mi
+config-db                   36m                   7Mi
+interface-mgr          239m                65Mi
+lacp                             76m                 29Mi
+lldp                           146m                  33Mi
+mct                             71m                  16Mi
+mftm                        277m                  53Mi
+msg-bus                   329m                100Mi
+persistent-state-db    2m                    3Mi
+security                        1m                  38Mi
+snmp                           53m                 48Mi
+state-db                      63m                   5Mi
+uftm                          289m                 55Mi

@@ -1,0 +1,16 @@
+Value PORT ([\d/:]+)
+Value Q1 (\d+)
+Value Q2 (\d+)
+Value Q3 (\d+)
+Value Q4 (\d+)
+Value Q5 (\d+)
+Value Q6 (\d+)
+Value Q7 (\d+)
+Value Q8 (\d+)
+
+Start
+ ^Port\s+\S+\s+\S+\s+\S+\s+\S+\s+\S+\s+\S+\s+\S+\s+\S+
+ ^[=\-]+
+ ^${PORT}\s+${Q1}\s+${Q2}\s+${Q3}\s+${Q4}\s+${Q5}\s+${Q6}\s+${Q7}\s+${Q8} -> Record
+ ^\s*$$
+ ^. -> Error

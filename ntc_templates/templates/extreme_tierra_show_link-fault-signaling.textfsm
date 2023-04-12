@@ -1,0 +1,11 @@
+Value PORT (\S+\s+\S+)
+Value LFS_STATUS (\S+)
+
+
+Start
+ ^Rx and Tx link-fault-signaling status
+ ^Port\s+Link-Faults
+ ^[\s=]+
+ ^${PORT}\s+${LFS_STATUS} -> Record
+ ^\s*$$
+ ^. -> Error

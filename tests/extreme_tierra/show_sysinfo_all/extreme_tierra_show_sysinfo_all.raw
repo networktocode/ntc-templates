@@ -1,0 +1,51 @@
+
+Fan Information
+Id     Status      RPM     Percentage SpeedLevel     Direction   
+--------------------------------------------------------------------------------------
+1      Up          500     50         MEDIUM         FAN_DIR_F2B 
+2      Up          500     50         MEDIUM         FAN_DIR_F2B 
+3      Up          500     50         MEDIUM         FAN_DIR_F2B 
+4      Up          500     50         MEDIUM         FAN_DIR_F2B 
+5      Up          500     50         MEDIUM         FAN_DIR_F2B 
+
+FAN_DIR_F2B - Fan Airflow Direction is FrontToBack
+
+FanSpeedLevel - <40%[LOW],40-70%[MEDIUM],>70%[HIGH]
+
+Led Information
+Id     State     Color     Description    
+-------------------------------------------------------------
+led-0  Solid     GREEN     Power Supply Unit
+led-1  Solid     GREEN     Fan            
+led-2  Solid     GREEN     System Status  
+
+PSU Information
+Id     Status      Type    C[in]   C[out]  P[in]   P[out]  V[in]   V[out]  
+---------------------------------------------------------------------------------------------------------------------------------
+1      Up          AC      1000    1100    3600    3600    12000   1200    
+2      Up          AC      1000    1100    3600    3600    12000   1200    
+
+ **C - Current in Amps ,**P - Power in Watts ,**V - Voltage in Volts
+Total power budget for chassis = 0 Watts
+Total power used by LC and system core = 0 Watts
+Total power available = 0 Watts
+Sensor Information
+Id        Name                Current(°C/Volt)    Warning(°C/Volt)    Critical(°C/Volt)   Shutdown(°C/Volt)   
+--------------------------------------------------------------------------------------
+1         CPU Core                 40.00               0.00                0.00                0.00                
+2         Chassis Thermal Sensor 1 40.00               0.00                0.00                0.00                
+3         Chassis Thermal Sensor 2 41.00               0.00                0.00                0.00                
+4         Chassis Thermal Sensor 3 42.00               0.00                0.00                0.00                
+5         Chassis Thermal Sensor 4 43.00               0.00                0.00                0.00                
+
+Slot Information
+Slot  State       FRU-Type    Uptime    Insertion-Time       Extraction-Time      Description         
+-------------------------------------------------------------------------------------------------------
+1     Empty                                                                                           
+2     Empty                                                                                           
+3     Empty                                                                                           
+4     Empty                                                                                           
+5     Empty                                                                                           
+6     Empty                                                                                           
+7     Empty                                                                                           
+8     Empty 

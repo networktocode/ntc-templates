@@ -1,0 +1,10 @@
+Value ROLE_NAME (\S+)
+Value ROLE_TYPE (\S+)
+Value DESCRIPTION ([\s\S]+)
+
+Start
+ ^Role: ${ROLE_NAME}
+ ^Type: ${ROLE_TYPE}
+ ^Description: ${DESCRIPTION} -> Record
+ ^\s*$$
+ ^. -> Error

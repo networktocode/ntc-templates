@@ -1,0 +1,11 @@
+Value Key,Required EGRESS_GROUP_NAME (\S+)
+Value DESCRIPTION ([\s\S]+)
+Value List EGRESS (\S+)
+
+Start
+ ^egr -> Continue.Record
+ ^egress-group\s+${EGRESS_GROUP_NAME}
+ ^\s*description\s+${DESCRIPTION}
+ ^\s*set\s+egress\s+${EGRESS}
+ ^\s*$$
+ ^. -> Error

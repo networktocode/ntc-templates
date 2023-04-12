@@ -1,0 +1,21 @@
+ldap-server 
+
+  host 1.1.1.2 
+
+    basedn extreme 
+
+    ldaps 
+
+  ! 
+
+  host 1::1 
+
+    basedn extremev6 
+
+    ldaps 
+
+  ! 
+
+  map-role group test role admin 
+
+! 

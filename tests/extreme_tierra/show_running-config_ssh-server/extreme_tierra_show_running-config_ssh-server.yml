@@ -1,0 +1,9 @@
+---
+parsed_sample:
+  - cipher: "aes128-cbc"
+    mac: "hmac-sha1"
+    key_exchange: "curve25519-sha256"
+    idle_timeout: "600"
+    key:
+      - "rsa 2048"
+      - "ecdsa 256"

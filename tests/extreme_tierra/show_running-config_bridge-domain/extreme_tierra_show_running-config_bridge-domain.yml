@@ -1,0 +1,83 @@
+---
+parsed_sample:
+  - bridge_domain: "1"
+    vlan_id: ""
+    member_ethernet: []
+    member_port_channel: []
+    static_mac_address: []
+    static_mac_address_vlan_tag: []
+  - bridge_domain: "2"
+    vlan_id: "50"
+    member_ethernet:
+      - "0/1:1"
+      - "0/1:2 untagged"
+      - "0/1:3 untagged"
+      - "0/9"
+      - "0/10 untagged"
+      - "0/11 untagged"
+    member_port_channel:
+      - "27"
+      - "30 untagged"
+      - "40 untagged"
+    static_mac_address:
+      - "00:11:22:33:44:00 ethernet 0/1:1"
+      - "00:11:22:33:44:55 ethernet 0/11"
+      - "00:11:22:33:44:66 port-channel 27"
+      - "00:11:22:33:44:aa port-channel 30"
+      - "00:11:22:33:44:44 ethernet 0/10"
+      - "00:11:22:33:44:bb port-channel 40"
+      - "00:11:22:33:44:11 ethernet 0/1:2"
+      - "00:11:22:33:44:22 ethernet 0/1:3"
+      - "00:11:22:33:44:33 ethernet 0/9"
+    static_mac_address_vlan_tag:
+      - "vlan 50"
+      - "untagged"
+      - "vlan 50"
+      - "untagged"
+      - "untagged"
+      - "untagged"
+      - "untagged"
+      - "untagged"
+      - "vlan 50"
+  - bridge_domain: "3"
+    vlan_id: "90"
+    member_ethernet: []
+    member_port_channel: []
+    static_mac_address: []
+    static_mac_address_vlan_tag: []
+  - bridge_domain: "4"
+    vlan_id: ""
+    member_ethernet:
+      - "0/18 vlan 159"
+    member_port_channel: []
+    static_mac_address: []
+    static_mac_address_vlan_tag: []
+  - bridge_domain: "5"
+    vlan_id: "987"
+    member_ethernet:
+      - "0/22"
+    member_port_channel: []
+    static_mac_address: []
+    static_mac_address_vlan_tag: []
+  - bridge_domain: "6"
+    vlan_id: ""
+    member_ethernet: []
+    member_port_channel: []
+    static_mac_address: []
+    static_mac_address_vlan_tag: []
+  - bridge_domain: "7"
+    vlan_id: ""
+    member_ethernet: []
+    member_port_channel: []
+    static_mac_address:
+      - "00:11:22:33:44:33 ethernet 0/23"
+    static_mac_address_vlan_tag:
+      - "vlan 147"
+  - bridge_domain: "8"
+    vlan_id: "63"
+    member_ethernet: []
+    member_port_channel: []
+    static_mac_address:
+      - "00:11:22:33:22:11 ethernet 0/23"
+    static_mac_address_vlan_tag:
+      - "vlan 63"

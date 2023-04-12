@@ -1,0 +1,15 @@
+Value Filldown INTERFACE (\S+\s+\S+)
+Value VLAN (\S+)
+Value INNER_VLAN (\d+)
+Value ADMIN_STATUS (\w+)
+Value OPER_STATUS (\w+)
+Value IF_MODE (\S+)
+
+Start
+ ^Interface -> Continue
+ ^Interface\s+${INTERFACE}
+ ^Vlan\s+Inner Vlan\s+Admin Status\s+Oper Status\s+If Mode
+ ^[\=]+
+ ^${VLAN}\s+(${INNER_VLAN}|[\-]*)\s+${ADMIN_STATUS}\s+${OPER_STATUS}\s+${IF_MODE} -> Record
+ ^\s*$$
+ ^. -> Error
