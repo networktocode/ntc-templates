@@ -66,4 +66,10 @@ access-list test line 31 extended permit icmp any4 169.254.147.0 255.255.0.0 tim
 access-list test line 32 extended permit icmp any4 169.254.151.0 255.255.0.0 echo (hitcnt=0) 0x0f3edcdd
 access-list test line 33 extended permit icmp any4 169.254.151.0 255.255.0.0 unreachable (hitcnt=0) 0x7887741b
 access-list test line 34 extended permit icmp any4 169.254.151.0 255.255.0.0 time-exceeded (hitcnt=0) 0x480bef5c
+access-list test line 34 extended permit icmp any4 169.254.151.0 255.255.0.0 traceroute (hitcnt=0) 0x480bef5c
 access-list test line 35 extended deny icmp any any (hitcnt=3) 0xff7fd0ca
+access-list test line 36 extended permit udp object-group netic-monitor object-group test-subnets object-group test-services (hitcnt=163176) 0xfb290ba6
+  access-list test line 36 extended permit udp 2001.db8:0:f159::/64 169.254.152.0 255.255.255.128 eq ntp (hitcnt=0) 0xc01192ad
+  access-list test line 36 extended permit udp 2001.db8:0:f159::/64 169.254.152.0 255.255.255.128 eq snmp (hitcnt=0) 0xae3c968e
+  access-list test line 36 extended permit udp 169.254.151.0 255.255.255.240 169.254.152.0 255.255.255.128 eq ntp (hitcnt=163144) 0xc154ab9c
+  access-list test line 36 extended permit udp 169.254.151.0 255.255.255.240 169.254.152.0 255.255.255.128 eq snmp (hitcnt=32) 0xea2f0967
