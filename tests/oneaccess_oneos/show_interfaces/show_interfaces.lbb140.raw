@@ -1,0 +1,211 @@
+GigabitEthernet 0/0 is up, line protocol is up
+  Flags: (0x8063) BROADCAST MULTICAST ARP, interface index is 111
+  Promiscuous mode active
+  Encapsulation: Ethernet v2, MTU 1500 bytes
+  Up-time 396d21h16m, status change count 3
+  Hardware address is 70:fc:8c:02:bb:4f, ARP timeout 7200 sec
+  Auto-negotiation, full-duplex, flowcontrol disabled
+  Line speed 1000000 kbps
+  Mean input/output rate 504776/397392 bits/s, 226/198 packets/s (over the last 4 seconds)
+  Mean input/output load percentage 0.050/0.039 percent (over the last 4 seconds)
+  Congestion Management Dropped packets: RX:0, CPU:0, Total:0
+  Bridged to group 1
+  Output queuing strategy: fifo, output queue length/depth 0/126
+  Reliability: 255/255
+  IN:  4578563266 packets, 2133875155484 bytes, 0 queue drops
+       735617600 broadcasts, 136187244 multicasts, 0 errors, 164 discards, 0 mac acl discards
+       0 unknown protocols
+  OUT: 3838465524 packets, 2752454327149 bytes, 3357 queue drops
+       20941718 broadcasts, 0 multicasts, 0 errors, 1 discards, 0 collisions
+GigabitEthernet 0/1 is up, line protocol is up
+  Flags: (0x8063) BROADCAST MULTICAST ARP, interface index is 112
+  Promiscuous mode active
+  Encapsulation: Ethernet v2, MTU 1500 bytes
+  Up-time 11d21h45m, status change count 31
+  Hardware address is 70:fc:8c:06:bb:4f, ARP timeout 7200 sec
+  Auto-negotiation, full-duplex, flowcontrol disabled
+  Line speed 1000000 kbps
+  Mean input/output rate 243736/256456 bits/s, 152/114 packets/s (over the last 4 seconds)
+  Mean input/output load percentage 0.024/0.025 percent (over the last 4 seconds)
+  Congestion Management Dropped packets: RX:0, CPU:0, Total:0
+  Bridged to group 2
+  Output queuing strategy: fifo, output queue length/depth 0/126
+  Reliability: 255/255
+  IN:  1125009328 packets, 189632230943 bytes, 0 queue drops
+       745390714 broadcasts, 123018268 multicasts, 0 errors, 887632010 discards, 0 mac acl discards
+       887631923 unknown protocols
+  OUT: 351229701 packets, 302436379177 bytes, 23658 queue drops
+       2298782 broadcasts, 0 multicasts, 0 errors, 0 discards, 0 collisions
+GigabitEthernet 0/2 is up, line protocol is down
+  Flags: (0x8023) BROADCAST MULTICAST ARP, interface index is 113
+  Promiscuous mode active
+  Encapsulation: Ethernet v2, MTU 1500 bytes
+  Down-time 448d10h36m, status change count 0
+  Hardware address is 70:fc:8c:0a:bb:4f, ARP timeout 7200 sec
+  Line speed unknown
+  Mean input/output rate 0/0 bits/s, 0/0 packets/s (over the last 4 seconds)
+  Mean input/output load percentage 0.000/0.000 percent (over the last 4 seconds)
+  Congestion Management Dropped packets: RX:0, CPU:0, Total:0
+  Bridged to group 1
+  Output queuing strategy: fifo, output queue length/depth 0/126
+  Reliability: 255/255
+  IN:  0 packets, 0 bytes, 0 queue drops
+       0 broadcasts, 0 multicasts, 0 errors, 0 discards, 0 mac acl discards
+       0 unknown protocols            
+  OUT: 0 packets, 0 bytes, 0 queue drops
+       0 broadcasts, 0 multicasts, 0 errors, 0 discards, 0 collisions
+GigabitEthernet 0/3 is up, line protocol is down
+  Flags: (0x8023) BROADCAST MULTICAST ARP, interface index is 114
+  Promiscuous mode active
+  Encapsulation: Ethernet v2, MTU 1500 bytes
+  Down-time 448d10h36m, status change count 0
+  Hardware address is 70:fc:8c:0e:bb:4f, ARP timeout 7200 sec
+  Line speed unknown
+  Mean input/output rate 0/0 bits/s, 0/0 packets/s (over the last 4 seconds)
+  Mean input/output load percentage 0.000/0.000 percent (over the last 4 seconds)
+  Congestion Management Dropped packets: RX:0, CPU:0, Total:0
+  Bridged to group 1
+  Output queuing strategy: fifo, output queue length/depth 0/126
+  Reliability: 255/255
+  IN:  0 packets, 0 bytes, 0 queue drops
+       0 broadcasts, 0 multicasts, 0 errors, 0 discards, 0 mac acl discards
+       0 unknown protocols
+  OUT: 0 packets, 0 bytes, 0 queue drops
+       0 broadcasts, 0 multicasts, 0 errors, 0 discards, 0 collisions
+FastEthernet 1/0 is up, line protocol is up
+  Flags: (0x8063) BROADCAST MULTICAST ARP, interface index is 106
+  Description: *** WAN INTERFACE ***
+  Encapsulation: Ethernet v2, MTU 1546 bytes
+  Up-time 448d10h36m, status change count 1
+  Hardware address is 70:fc:8c:12:bb:4f, ARP timeout 7200 sec
+  Auto-negotiation, full-duplex, flowcontrol enabled
+  Line speed 100000 kbps
+  Media-type rj45
+  Mean input/output rate 229312/237176 bits/s, 104/102 packets/s (over the last 4 seconds)
+  Mean input/output load percentage 0.229/0.237 percent (over the last 4 seconds)
+  Congestion Management Dropped packets: RX:0, CPU:0, Total:0
+  Output queuing strategy: cbq
+  Reliability: 255/255
+  IN:  3777818556 packets, 2813130486707 bytes, 0 queue drops
+       608769 broadcasts, 0 multicasts, 0 errors, 608769 discards, 0 mac acl discards
+       608769 unknown protocols
+  OUT: 3537518750 packets, 1904299986411 bytes, 1944226 queue drops
+       0 broadcasts, 0 multicasts, 0 errors, 114820 discards, 0 collisions
+FastEthernet 1/0.10 is up, line protocol is up
+  Flags: (0x8063) BROADCAST MULTICAST ARP, interface index is 22017
+  Description: *** VDSL2 SHARED VLAN ***
+  Encapsulation: 802.1Q Virtual LAN, VLAN ID 10, MTU 1500 bytes
+  Up-time 448d10h36m, status change count 1
+  Hardware address is 70:fc:8c:12:bb:4f, ARP timeout 7200 sec
+  Line speed 100000 kbps
+  Mean input/output rate 229312/237176 bits/s, 104/102 packets/s (over the last 4 seconds)
+  Mean input/output load percentage 0.229/0.237 percent (over the last 4 seconds)
+  Congestion Management Dropped packets: RX:0, CPU:0, Total:0
+  Output queuing strategy: fifo, output queue length/depth 0/126
+  Reliability: 255/255
+  IN:  3777209791 packets, 2812914388764 bytes, 0 queue drops
+       0 broadcasts, 0 multicasts, 0 errors, 0 discards, 0 mac acl discards
+       0 unknown protocols
+  OUT: 3539577808 packets, 1907203054251 bytes, 0 queue drops
+       0 broadcasts, 0 multicasts, 3 errors, 0 discards, 0 collisions
+Dialer 1 is up, line protocol is up
+  Flags: (0x90f1) POINT-TO-POINT MULTICAST, interface index is 11101
+  Description: *** VT096413 - GS99999941512 - IP-VPN - ['VDSL2 SHARED VLAN'] - NOS-EMLP-01/ANT-EMLP-01 - LOOPBACK
+  Encapsulation: Point-to-Point Protocol, MTU 1492 bytes
+  Up-time 196d20h26m, status change count 7
+  Internet address is 94.105.238.194/32, destination address is 94.105.238.193
+  Line speed 100000 kbps, bandwidth limit 70000 kbps
+  Mean input/output rate 240208/217472 bits/s, 104/102 packets/s (over the last 4 seconds)
+  Mean input/output load percentage 0.240/0.310 percent (over the last 4 seconds)
+  Congestion Management Dropped packets: RX:0, CPU:0, Total:0
+  Output queuing strategy: fifo+shaper, output queue length/depth 0/126
+  Shaper: packets dequeued -763131925, burst(current/max) 874602/875000
+  Reliability: 255/255
+  IN:  3769467815 packets, 2899812744256 bytes, 0 queue drops
+       0 broadcasts, 0 multicasts, 0 errors, 0 discards, 0 mac acl discards
+       0 unknown protocols
+  OUT: 3531835372 packets, 1821912521847 bytes, 0 queue drops
+       0 broadcasts, 0 multicasts, 0 errors, 0 discards
+Loopback 0 is up, line protocol is up
+  Flags: (0x80e9) LOOPBACK MULTICAST, interface index is 9902
+  MTU 32768 bytes
+  Up-time 448d10h36m, status change count 0
+  Internet address is 127.0.0.1/32
+  IPv6 address is ::1/128
+  IPv6 address is fe80::1/64
+  Line speed unknown
+  Mean input/output rate 0/0 bits/s, 0/0 packets/s (over the last 4 seconds)
+  Mean input/output load percentage 0.000/0.000 percent (over the last 4 seconds)
+  Congestion Management Dropped packets: RX:0, CPU:0, Total:0
+  Output queuing strategy: fifo, output queue length/depth 0/126
+  IN:  1749 packets, 164332 bytes, 0 queue drops
+       0 broadcasts, 0 multicasts, 0 errors, 0 discards, 0 mac acl discards
+       0 unknown protocols
+  OUT: 1749 packets, 164332 bytes, 0 queue drops
+       0 broadcasts, 0 multicasts, 0 errors, 0 discards
+Loopback 1 is up, line protocol is up
+  Flags: (0x80e9) LOOPBACK MULTICAST, interface index is 9903
+  Firewall zone: management
+  Description: *** VT096413 - GS99999941512 ***
+  MTU 32768 bytes
+  Up-time 448d10h36m, status change count 0
+  Internet address is 94.105.25.111/32
+  Line speed unknown
+  Mean input/output rate 6280/6280 bits/s, 9/9 packets/s (over the last 4 seconds)
+  Mean input/output load percentage 0.000/0.000 percent (over the last 4 seconds)
+  Congestion Management Dropped packets: RX:0, CPU:0, Total:0
+  Output queuing strategy: fifo, output queue length/depth 0/126
+  IN:  6346421 packets, 472102678 bytes, 0 queue drops
+       0 broadcasts, 0 multicasts, 0 errors, 0 discards, 0 mac acl discards
+       0 unknown protocols            
+  OUT: 6346427 packets, 472103054 bytes, 0 queue drops
+       0 broadcasts, 0 multicasts, 0 errors, 0 discards
+Bvi 1 is up, line protocol is up
+  Flags: (0x8063) BROADCAST MULTICAST ARP, interface index is 9501
+  Description: Connection to Customer LAN
+  Encapsulation: Ethernet v2, MTU 1500 bytes
+  Up-time 396d21h16m, status change count 3
+  Hardware address is 70:fc:8c:02:bb:4f, ARP timeout 7200 sec
+  Internet address is 192.168.5.1/24, broadcast address is 192.168.5.255
+  Line speed 1000000 kbps
+  Mean input/output rate 504776/397352 bits/s, 226/198 packets/s (over the last 4 seconds)
+  Mean input/output load percentage 0.000/0.000 percent (over the last 4 seconds)
+  Congestion Management Dropped packets: RX:0, CPU:0, Total:0
+  Bridged to group 1
+  Output queuing strategy: fifo, output queue length/depth 0/126
+  IN:  4578208775 packets, 2133846516522 bytes, 0 queue drops
+       735617627 broadcasts, 136187246 multicasts, 0 errors, 0 discards, 0 mac acl discards
+       683928098 unknown protocols
+  OUT: 3814474945 packets, 2750982891198 bytes, 0 queue drops
+       20941724 broadcasts, 0 multicasts, 1 errors, 22341208 discards
+Bvi 55 is up, line protocol is up
+  Flags: (0x8063) BROADCAST MULTICAST ARP, interface index is 9555
+  Encapsulation: Ethernet v2, MTU 1500 bytes
+  Up-time 11d21h45m, status change count 31
+  Hardware address is 70:fc:8c:06:bb:4f, ARP timeout 7200 sec
+  Internet address is 192.168.55.1/24, broadcast address is 192.168.55.255
+  Line speed 1000000 kbps
+  Mean input/output rate 186144/256456 bits/s, 113/114 packets/s (over the last 4 seconds)
+  Mean input/output load percentage 0.000/0.000 percent (over the last 4 seconds)
+  Congestion Management Dropped packets: RX:0, CPU:0, Total:0
+  Bridged to group 2
+  Output queuing strategy: fifo, output queue length/depth 0/126
+  IN:  237375069 packets, 58811387749 bytes, 0 queue drops
+       182857 broadcasts, 19575274 multicasts, 0 errors, 0 discards, 0 mac acl discards
+       18243239 unknown protocols
+  OUT: 351253527 packets, 302442538460 bytes, 0 queue drops
+       2298786 broadcasts, 0 multicasts, 1 errors, 2496554 discards
+Null 0 is up, line protocol is up
+  Flags: (0x80e1) MULTICAST, interface index is 9901
+  MTU 32768 bytes
+  Up-time 448d10h36m, status change count 0
+  Line speed unknown
+  Mean input/output rate 0/0 bits/s, 0/0 packets/s (over the last 4 seconds)
+  Mean input/output load percentage 0.000/0.000 percent (over the last 4 seconds)
+  Congestion Management Dropped packets: RX:0, CPU:0, Total:0
+  Output queuing strategy: fifo, output queue length/depth 0/126
+  IN:  0 packets, 0 bytes, 0 queue drops
+       0 broadcasts, 0 multicasts, 0 errors, 0 discards, 0 mac acl discards
+       0 unknown protocols
+  OUT: 0 packets, 0 bytes, 0 queue drops
+       0 broadcasts, 0 multicasts, 0 errors, 0 discards

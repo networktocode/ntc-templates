@@ -1,0 +1,15 @@
+ip forward-protocol udp 137
+ip forward-protocol udp 138
+ip forward-protocol udp 67
+ip forward-protocol udp 68
+ip forward-protocol udp 69
+ip forward-protocol udp 37
+ip forward-protocol udp 42
+ip forward-protocol udp 49
+ip forward-protocol udp 53
+Bvi 1: 0 broadcasts forwarded
+  10.1.0.151  10.2.0.20  10.88.1.11
+Bvi 2: 0 broadcasts forwarded
+  10.2.0.20  10.1.0.151  10.88.1.11
+Bvi 3: 0 broadcasts forwarded
+  10.1.0.151  10.2.0.20  10.88.1.11

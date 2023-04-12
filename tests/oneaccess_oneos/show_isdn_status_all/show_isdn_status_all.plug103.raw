@@ -1,0 +1,39 @@
+	isdn line                       5/0
+		physical type                  E1
+		protocol descriptor            E1_PRI
+		 linecode                      hdb3
+		 framing                       DF
+		config state                   up
+		loop state                     down 
+		-layer 1 status                deactivated
+		Alarm Indication Signal (AIS)  OFF
+		Loss Off Signal (LOS)          ON
+		Remote Indication Signal (RAI) OFF
+		pri AIS occurrence(s)          0
+		pri LOS occurrence(s)          1
+		pri RDI occurrence(s)          0
+		-layer 2 status                deactivated
+		Tx frames on D channel         0
+		Rx frames on D channel         0
+		-layer 3 status
+		    no active call
+
+	isdn line                       5/1
+		protocol descriptor     BRI_NT
+		config state            down
+		-layer 1 status         deactivated
+		-layer 2 status         deactivated
+		Tx frames on D channel  0
+		Rx frames on D channel  0
+		-layer 3 status
+		    no active call
+
+	isdn line                       5/2
+		protocol descriptor     BRI_NT
+		config state            down
+		-layer 1 status         deactivated
+		-layer 2 status         deactivated
+		Tx frames on D channel  0
+		Rx frames on D channel  0
+		-layer 3 status
+		    no active call

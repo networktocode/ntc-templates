@@ -1,0 +1,12 @@
++----------------------------- PORT NETWORK CONFIGURATION ------------------------------+
+|         |     | Accpt  |Untag  |VLAN   |VS     |Egress |VS     |Ingress| VPLS  |Eth VC|
+| Port    |     | Frame  |Ingress|Ingress|Ingress|Untag  |Egress |CoS    | Port  |Ether-|
+| Name    |PVID | Type   |Vid    |Filter |Filter |VLAN   |Filter |Policy | Type  |Type  |
++---------+-----+--------+-------+-------+-------+-------+-------+-------+-------+------+
+| 1       | 1   | All    | 0     | Ena   | Dis   | 1     | Dis   | leave | Subsc | 8100 |
+| 2       | 1   | All    | 0     | Ena   | Dis   | 1     | Dis   | leave | Subsc | 8100 |
+| 3       | 1   | All    | 0     | Ena   | Dis   | 1     | Dis   | leave | Subsc | 8100 |
+| 4       | 1   | All    | 0     | Ena   | Ena   | 1     | Dis   | leave | Subsc | 8100 |
+| 5       | 1   | All    | 0     | Ena   | Ena   | 1     | Dis   | leave | Ntwrk | 8100 |
+| 6       | 1   | All    | 0     | Ena   | Dis   | 1     | Dis   | leave | Ntwrk | 8100 |
++---------+-----+--------+-------+-------+-------+-------+-------+-------+-------+------+

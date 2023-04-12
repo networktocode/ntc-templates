@@ -1,0 +1,22 @@
+Interface                  IP-Address       OK?  Status                 Protocol Description         
+GigabitEthernet 0/0        94.107.208.169   Yes  up                     down     *** LAN INTERFACE ***
+GigabitEthernet 0/1        20.20.20.1       Yes  up                     up       *** LAB_C891F - GigabitEthernet0 ***
+GigabitEthernet 0/2        <unassigned>     Yes  up                     down                         
+GigabitEthernet 0/3        10.100.1.254     Yes  up                     up       TO LBB156           
+GigabitEthernet 1/0        <unassigned>     Yes  up                     down     *** WAN INTERFACE ***
+GigabitEthernet 1/0.1      <unassigned>     Yes  up                     down                         
+GigabitEthernet 1/0.10     <unassigned>     No   administratively down  down                         
+GigabitEthernet 1/0.200    <unassigned>     Yes  up                     down     * VT108085 -  - GS20190640686 - CORPORATE INTERNET - VDSL2 SHARED VLAN - NOS-EMLP-01/ANT-EMLP-01 - LOOPBACK 503899 *
+GigabitEthernet 1/0.300    <unassigned>     No   administratively down  down     * VT096908 - - GS20170330105 - IP-VPN - VDSL2 SHARED VLAN - NOS-EMLP-01/ANT-EMLP-01 - Loopback503210 *
+Bvi 300                    94.107.224.226   Yes  up                     down                         
+Virtual-Ethernet 1         10.94.50.22      Yes  up                     up       * Mobile access 4G  - UNTRUST - CORPORATE INTERNET - 4G *
+Null 0                     <unassigned>     Yes  up                     up       Null 0              
+Loopback 0                 <unassigned>     Yes  up                     up                           
+Loopback 1                 94.105.9.192     Yes  up                     up                           
+Loopback 21                192.4.21.238     Yes  up                     up       *** Mobile access 4G - BGP PEER LOOPBACK ANT ***
+Loopback 91                192.4.91.238     Yes  up                     up       *** Mobile access 4G - BGP PEER LOOPBACK NOS ***
+Tunnel 21                  94.105.9.192     Yes  up                     up       GRE tunnel to ANT-IPSEC-02 - NO IPSEC
+Tunnel 91                  94.105.9.192     Yes  up                     up       GRE tunnel to NOS-IPSEC-02
+Dialer 1                   <unassigned>     Yes  up                     down     * VT108085 -  - GS20190640686 - CORPORATE INTERNET - VDSL2 SHARED VLAN - NOS-EMLP-01/ANT-EMLP-01 - LOOPBACK 503899 *
+Dialer 3                   <unassigned>     No   administratively down  down     * VT096908 - - GS20170330105 - IP-VPN - VDSL2 SHARED VLAN - NOS-EMLP-01/ANT-EMLP-01 - Loopback503210 *
+Dialer 32                  <unassigned>     Yes  up                     down                         

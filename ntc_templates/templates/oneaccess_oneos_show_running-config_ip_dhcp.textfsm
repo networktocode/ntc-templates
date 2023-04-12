@@ -1,0 +1,31 @@
+Value POOL (\S+)
+Value VRF (\S+)
+Value DEFAULT_ROUTER (\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})
+Value DOMAIN_NAME (\S+)
+Value List DNS (\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})
+Value NETWORK (\S+\s\S+)
+Value LEASE (.*)
+Value EXCLUDED (\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}(\s\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})?)
+ 
+Start
+  # DHCP SCOPE records have a dhcp pool name
+  ^ip\sdhcp\spool\s${POOL} -> Pool
+  # EXCLUDE records do not have a dhcp pool name
+  ^ip\sdhcp\s(vrf ${VRF}\s)?excluded-address\s${EXCLUDED} -> Record
+  ^.*$$
+  ^. -> Error
+ 
+Pool
+  #^ip\sdhcp\spool -> Continue.Record
+  ^\s+lease\s${LEASE}
+  #^ip\sdhcp\spool\s${POOL}
+  ^\s+vrf\s${VRF}
+  ^\s+domain-name\s+${DOMAIN_NAME}
+  ^\s+default-router\s${DEFAULT_ROUTER}
+  ^\s+dns-server\s${DNS} -> Continue
+  ^\s+dns-server\s(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\s){1}${DNS} -> Continue
+  ^\s+dns-server\s(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\s){2}${DNS} -> Continue
+  ^\s+dns-server\s(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\s){3}${DNS} -> Continue
+  ^\s+dns-server\s(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\s){4}${DNS} -> Continue
+  ^\s+network\s${NETWORK}
+  ^(exit|!) -> Record Start

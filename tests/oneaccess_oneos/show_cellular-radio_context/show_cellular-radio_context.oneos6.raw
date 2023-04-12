@@ -1,0 +1,41 @@
+ Context 1
+ =========
+
+  Cellular controller: 0
+  Internal context Id: 1
+  Interface          : Virtual-Ethernet 1, USB-Path: /sys/class/net/wwan0
+  Cellular profile   : 1
+
+  rxSpeed/max                    : 0/0
+  txSpeed/max                    : 0/0
+
+  Call manager state             : _connected
+  Mtu                            : 1500
+  Data bearer technology         : LTE
+
+  Ipv4 connection
+   Address                       : 101.194.59.47
+   Subnet                        : 255.255.255.224
+   Gateway                       : 101.194.59.48
+   Primary Dns                   : 2.2.2.90
+   Secondary Dns                 : 2.2.2.94
+   Packet data connection        : Connected
+   Last call end reason          : <not available>
+   Data statistics               : 
+    Tx packets                   : 603031
+    Rx packets                   : 572105
+    Tx packet errors             : 0
+    Rx packet errors             : 0
+    Tx packet overflows          : 0
+    Rx packet overflows          : 0
+    Tx bytes                     : 83925324
+    Rx bytes                     : 87179616
+
+  Ipv6 connection
+   Address                       : <not available>
+   Gateway                       : <not available>
+   Primary Dns                   : <not available>
+   Secondary Dns                 : <not available>
+   Packet data connection        : <not available>
+   Last call end reason          : <not available>
+   Data statistics               : <not available>

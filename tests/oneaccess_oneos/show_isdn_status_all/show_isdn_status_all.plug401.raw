@@ -1,0 +1,122 @@
+        isdn line                       5/0
+                physical type                  E1
+                protocol descriptor            E1_PRI
+                 linecode                      hdb3
+                 framing                       DF
+                config state                   up
+                loop state                     down 
+                -layer 1 status                activated
+                Alarm Indication Signal (AIS)  OFF
+                Loss Off Signal (LOS)          OFF
+                Remote Indication Signal (RAI) OFF
+                pri AIS occurrence(s)          0
+                pri LOS occurrence(s)          1
+                pri RDI occurrence(s)          0
+                -layer 2 status                activated
+                                                ces=  1 , tei=  0 , state= established
+                Tx frames on D channel         1775901
+                Rx frames on D channel         1775901
+                -layer 3 status
+                    active call         10
+                         -> App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type= In , BChan= 5 , call-ref= 22175 , call-id= 284, IsmConnect.
+                         -> App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type=Out , BChan=20 , call-ref= 14020 , call-id= 839, IsmConnect.
+                         -> App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type=Out , BChan=15 , call-ref= 22212 , call-id= 951, IsmConnect.
+                         -> App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type=Out , BChan=14 , call-ref= 21956 , call-id= 948, IsmConnect.
+                         -> App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type=Out , BChan=13 , call-ref= 21700 , call-id= 945, IsmConnect.
+                         -> App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type=Out , BChan=12 , call-ref= 20932 , call-id= 936, IsmConnect.
+                         -> App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type=Out , BChan= 2 , call-ref= 14532 , call-id= 845, IsmConnect.
+                         -> App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type=Out , BChan= 9 , call-ref= 20420 , call-id= 930, IsmConnect.
+                         -> App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type=Out , BChan= 7 , call-ref= 19140 , call-id= 914, IsmConnect.
+                         -> App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type=Out , BChan= 6 , call-ref= 22724 , call-id= 957, IsmConnect.
+
+        isdn line                       5/1
+                physical type                  E1
+                protocol descriptor            E1_PRI
+                 linecode                      hdb3
+                 framing                       DF
+                config state                   up
+                loop state                     down 
+                -layer 1 status                activated
+                Alarm Indication Signal (AIS)  OFF
+                Loss Off Signal (LOS)          OFF
+                Remote Indication Signal (RAI) OFF
+                pri AIS occurrence(s)          0
+                pri LOS occurrence(s)          1
+                pri RDI occurrence(s)          0
+                -layer 2 status                activated
+                                                ces=  1 , tei=  0 , state= established
+                Tx frames on D channel         1760092
+                Rx frames on D channel         1760092
+                -layer 3 status
+                    active call         14
+                         -> App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type= In , BChan=18 , call-ref= 23786 , call-id= 901, IsmConnect.
+                         -> App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type= In , BChan= 4 , call-ref= 23784 , call-id= 876, IsmConnect.
+                         -> App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type= In , BChan=15 , call-ref= 23780 , call-id= 799, IsmConnect.
+                         -> App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type=Out , BChan=17 , call-ref= 25266 , call-id= 900, IsmConnect.
+                         -> App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type=Out , BChan= 3 , call-ref= 28338 , call-id= 952, IsmConnect.
+                         -> App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type=Out , BChan= 6 , call-ref= 13189 , call-id= 331, IsmConnect.
+                         -> App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type=Out , BChan=12 , call-ref= 27058 , call-id= 924, IsmConnect.
+                         -> App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type=Out , BChan=11 , call-ref= 26802 , call-id= 921, IsmConnect.
+                         -> App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type=Out , BChan= 9 , call-ref= 26546 , call-id= 918, IsmConnect.
+                         -> App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type=Out , BChan= 7 , call-ref= 23986 , call-id= 881, IsmConnect.
+                         -> App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type=Out , BChan= 8 , call-ref= 28850 , call-id= 958, IsmConnect.
+                         -> App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type=Out , BChan= 5 , call-ref= 27826 , call-id= 937, IsmConnect.
+                         -> App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type=Out , BChan= 2 , call-ref= 28082 , call-id= 949, IsmConnect.
+                         -> App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type=Out , BChan= 1 , call-ref= 28594 , call-id= 955, IsmConnect.
+
+        isdn line                       5/2
+                physical type                  E1
+                protocol descriptor            E1_PRI
+                 linecode                      hdb3
+                 framing                       DF
+                config state                   down
+                loop state                     down 
+                -layer 1 status                deactivated
+                Alarm Indication Signal (AIS)  OFF
+                Loss Off Signal (LOS)          OFF
+                Remote Indication Signal (RAI) OFF
+                pri AIS occurrence(s)          0
+                pri LOS occurrence(s)          0
+                pri RDI occurrence(s)          0
+                -layer 2 status                deactivated
+                Tx frames on D channel         0
+                Rx frames on D channel         0
+                -layer 3 status
+                    no active call
+
+        isdn line                       5/3
+                physical type                  E1
+                protocol descriptor            E1_PRI
+                 linecode                      hdb3
+                 framing                       DF
+                config state                   up
+                loop state                     down 
+                -layer 1 status                activated
+                Alarm Indication Signal (AIS)  OFF
+                Loss Off Signal (LOS)          OFF
+                Remote Indication Signal (RAI) OFF
+                pri AIS occurrence(s)          0
+                pri LOS occurrence(s)          1
+                pri RDI occurrence(s)          0
+                -layer 2 status                activated
+                                                ces=  1 , tei=  0 , state= established
+                Tx frames on D channel         1775555
+                Rx frames on D channel         1775555
+                -layer 3 status
+                    active call         16
+                         -> App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type= In , BChan=12 , call-ref= 22164 , call-id= 332, IsmConnect.
+                         -> App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type=Out , BChan= 1 , call-ref= 15812 , call-id= 956, IsmConnect.
+                         -> App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type=Out , BChan=18 , call-ref= 14788 , call-id= 944, IsmConnect.
+                         -> App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type=Out , BChan=14 , call-ref= 12996 , call-id= 922, IsmConnect.
+                         -> App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type=Out , BChan=17 , call-ref= 14532 , call-id= 941, IsmConnect.
+                         -> App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type=Out , BChan=20 , call-ref= 10948 , call-id= 892, IsmConnect.
+                         -> App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type=Out , BChan=15 , call-ref= 14276 , call-id= 938, IsmConnect.
+                         -> App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type=Out , BChan=11 , call-ref= 15556 , call-id= 953, IsmConnect.
+                         -> App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type=Out , BChan= 5 , call-ref= 14020 , call-id= 935, IsmConnect.
+                         -> App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type=Out , BChan= 8 , call-ref= 15300 , call-id= 950, IsmConnect.
+                         -> App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type=Out , BChan= 4 , call-ref= 18067 , call-id= 283, IsmConnect.
+                         -> App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type=Out , BChan= 3 , call-ref= 13252 , call-id= 925, IsmConnect.
+                         -> App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type=Out , BChan= 7 , call-ref= 8900 , call-id= 864, IsmConnect.
+                         -> App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type=Out , BChan= 9 , call-ref= 16068 , call-id= 959, IsmConnect.
+                         -> App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type=Out , BChan= 6 , call-ref= 12484 , call-id= 916, IsmConnect.
+                         -> App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type=Out , BChan= 2 , call-ref= 15044 , call-id= 947, IsmConnect.

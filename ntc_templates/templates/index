@@ -152,12 +152,20 @@ checkpoint_gaia_show_lom.textfsm, .*, checkpoint_gaia, show lom
 checkpoint_gaia_fw_stat.textfsm, .*, checkpoint_gaia, fw stat
 
 ciena_saos_traffic-profiling_standard-profile_show.textfsm, .*, ciena_saos, traffic-p[[rofiling]] st[[andard-profile]] sh[[ow]]
+ciena_saos_port_show_ethernet-config.textfsm, .*, ciena_saos, po[[rt]] sh[[ow]] ethernet-config
 ciena_saos_chassis_show_temperature.textfsm, .*, ciena_saos, ch[[assis]] sh[[ow]] te[[mperature]]
+ciena_saos_port_show_network-config.textfsm, .*, ciena_saos, po[[rt]] sh[[ow]] network-config
+ciena_saos_lldp_show_neighbors.textfsm, .*, ciena_saos, lldp sh[[ow]] nei[[ghbors]]
 ciena_saos_ssh_server_show_key.textfsm, .*, ciena_saos, ssh se[[rver]] sh[[ow]] k[[ey]]
+ciena_saos_port_show_status.textfsm, .*, ciena_saos, po[[rt]] sh[[ow]] status
+ciena_saos_port_xcvr_show.textfsm, .*, ciena_saos, po[[rt]] xcvr sh[[ow]]
 ciena_saos_software_show.textfsm, .*, ciena_saos, so[[ftware]] sh[[ow]]
 ciena_saos_port_show.textfsm, .*, ciena_saos, po[[rt]] sh[[ow]]
 ciena_saos_rstp_show.textfsm, .*, ciena_saos, rs[[tp]] sh[[ow]]
 ciena_saos_vlan_show.textfsm, .*, ciena_saos, vl[[an]] sh[[ow]]
+
+
+
 
 cisco_apic_fabric_show_vlan_extended.textfsm, .*, cisco_apic, fabric sh[[ow]] vlan ex[[tended]]
 
@@ -561,6 +569,57 @@ mikrotik_routeros_ipv6_neighbor_print_without-paging.textfsm, .*, mikrotik_route
 mikrotik_routeros_ip_arp_print_without-paging.textfsm, .*, mikrotik_routeros, [[/]]ip arp print without-paging
 mikrotik_routeros_system_routerboard_print.textfsm, .*, mikrotik_routeros, [[/]]system routerboard print
 mikrotik_routeros_ip_route_print_terse.textfsm, .*, mikrotik_routeros, [[/]]ip(v6)? route print terse
+
+oneaccess_oneos_show_voice_dial-peer_voice_voip_all.textfsm, .*, oneaccess_oneos, sh[[ow]] voice dial-peer voice voip all( al)?
+oneaccess_oneos_show_voice_voice-port_pri_all_histo.textfsm, .*, oneaccess_oneos, sh[[ow]] voice voice-port pri all histo
+oneaccess_oneos_show_voice_voice-port_pri_all_reset.textfsm, .*, oneaccess_oneos, sh[[ow]] voice voice-port pri all reset
+oneaccess_oneos_show_voice_voip-call_active_all.textfsm, .*, oneaccess_oneos, sh[[ow]] voice voip-call active
+oneaccess_oneos_show_cellular-radio_equipment.textfsm, .*, oneaccess_oneos, sh[[ow]] cell[[ular-radio]] equipment
+oneaccess_oneos_show_voice_voice-port_pri_all.textfsm, .*, oneaccess_oneos, sh[[ow]] voice voice-port pri all
+oneaccess_oneos_show_policy-interface_output.textfsm, .*, oneaccess_oneos, sh[[ow]] policy-interface output
+oneaccess_oneos_show_running-config_ip_route.textfsm, .*, oneaccess_oneos, sh[[ow]] run[[ning-config]] (\| i[[nclude]] )?ip route
+oneaccess_oneos_show_voice_sip-gateway_reset.textfsm, .*, oneaccess_oneos, sh[[ow]] voice sip-gateway reset
+oneaccess_oneos_show_voice_voip-call_any_all.textfsm, .*, oneaccess_oneos, sh[[ow]] voice voip-call any all
+oneaccess_oneos_show_cellular-radio_context.textfsm, .*, oneaccess_oneos, sh[[ow]] cell[[ular-radio]] context
+oneaccess_oneos_show_cellular-radio_network.textfsm, .*, oneaccess_oneos, sh[[ow]] cell[[ular-radio]] network
+oneaccess_oneos_show_ip_as-path-access-list.textfsm, .*, oneaccess_oneos, sh[[ow]] ip as-path-access-list
+oneaccess_oneos_show_running-config_ip_dhcp.textfsm, .*, oneaccess_oneos, sh[[ow]] run[[ning-config]] \|?b?ip dhcp
+oneaccess_oneos_show_system_secure-crashlog.textfsm, .*, oneaccess_oneos, sh[[ow]] system secure-crashlog
+oneaccess_oneos_show_transceiver_equipment.textfsm, .*, oneaccess_oneos, sh[[ow]] transceiver equipment
+oneaccess_oneos_show_voice_voice-port_all.textfsm, .*, oneaccess_oneos, sh[[ow]] voice voice-port all
+oneaccess_oneos_show_running-config_bind.textfsm, .*, oneaccess_oneos, sh[[ow]] run[[ning-config]] \|?bind
+oneaccess_oneos_show_ip_interface_brief.textfsm, .*, oneaccess_oneos, sh[[ow]] ip int[[erface]] brief
+oneaccess_oneos_show_running-config_aaa.textfsm, .*, oneaccess_oneos, sh[[ow]] run[[ning-config]] \|?aaa
+oneaccess_oneos_show_product-info-area.textfsm, .*, oneaccess_oneos, sh[[ow]] product\-info\-area
+oneaccess_oneos_show_voice_sip-gateway.textfsm, .*, oneaccess_oneos, sh[[ow]] voice sip-gateway
+oneaccess_oneos_show_ip_access-lists.textfsm, .*, oneaccess_oneos, sh[[ow]] ip access-lists[[s]]
+oneaccess_oneos_show_isdn_led-status.textfsm, .*, oneaccess_oneos, sh[[ow]] isdn led-status
+oneaccess_oneos_show_isdn_status_all.textfsm, .*, oneaccess_oneos, sh[[ow]] isdn status all
+oneaccess_oneos_show_reboot_counters.textfsm, .*, oneaccess_oneos, sh[[ow]] reboot counters
+oneaccess_oneos_show_system_hardware.textfsm, .*, oneaccess_oneos, sh[[ow]] system hardware
+oneaccess_oneos_cat_bsa_bsaboot.inf.textfsm, .*, oneaccess_oneos, cat (\/|)(BSA|bsa)(\/| )bsa(B|b)oot.inf
+oneaccess_oneos_show_ip_bgp_summary.textfsm, .*, oneaccess_oneos, sh[[ow]] ip bgp summary
+oneaccess_oneos_show_ip_prefix-list.textfsm, .*, oneaccess_oneos, sh[[ow]] ip prefix-list
+oneaccess_oneos_show_snmp_community.textfsm, .*, oneaccess_oneos, sh[[ow]] snmp comm[[unity]]
+oneaccess_oneos_show_soft-file_info.textfsm, .*, oneaccess_oneos, sh[[ow]] soft\-file info.*
+oneaccess_oneos_show_software-image.textfsm, .*, oneaccess_oneos, sh[[ow]] software-image
+oneaccess_oneos_show_vrrp_interface.textfsm, .*, oneaccess_oneos, sh[[ow]] vrrp int[[erface]]
+oneaccess_oneos_show_system_status.textfsm, .*, oneaccess_oneos, sh[[ow]] system status
+oneaccess_oneos_show_tacacs-server.textfsm, .*, oneaccess_oneos, sh[[ow]] tacacs\-server
+oneaccess_oneos_show_ip_vrf_brief.textfsm, .*, oneaccess_oneos, sh[[ow]] ip vrf brief
+oneaccess_oneos_show_isdn_active.textfsm, .*, oneaccess_oneos, sh[[ow]] isdn active
+oneaccess_oneos_show_interfaces.textfsm, .*, oneaccess_oneos, sh[[ow]] interface[[s]]
+oneaccess_oneos_show_route-map.textfsm, .*, oneaccess_oneos, sh[[ow]] route-map
+oneaccess_oneos_show_track_all.textfsm, .*, oneaccess_oneos, sh[[ow]] track all
+oneaccess_oneos_show_voice_mos.textfsm, .*, oneaccess_oneos, sh[[ow]] voice mos
+oneaccess_oneos_show_helpers.textfsm, .*, oneaccess_oneos, sh[[ow]] helpers
+oneaccess_oneos_show_ip_ssh.textfsm, .*, oneaccess_oneos, sh[[ow]] ip ssh
+oneaccess_oneos_show_memory.textfsm, .*, oneaccess_oneos, sh[[ow]] memory
+oneaccess_oneos_show_tacacs.textfsm, .*, oneaccess_oneos, sh[[ow]] tacacs
+oneaccess_oneos_show_sntp.textfsm, .*, oneaccess_oneos, sh[[ow]] sntp
+oneaccess_oneos_hostname.textfsm, .*, oneaccess_oneos, hostname
+oneaccess_oneos_ls.textfsm, .*, oneaccess_oneos, ls( -[lh][lh]? )?.*
+
 
 paloalto_panos_show_running_security-policy.textfsm, .*, paloalto_panos, sh[[ow]] runn[[ing]] security[[-policy]]
 paloalto_panos_show_high-availability_all.textfsm, .*, paloalto_panos, sh[[ow]] high[[-availability]] all

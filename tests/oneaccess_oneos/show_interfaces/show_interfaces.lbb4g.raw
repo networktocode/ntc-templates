@@ -1,0 +1,209 @@
+GigabitEthernet 0/0 is up, line protocol is up
+  Flags: (0x8063) BROADCAST MULTICAST ARP, interface index is 111
+  Description: Connection to Customer LAN
+  Encapsulation: Ethernet v2, MTU 1500 bytes
+  Up-time 90d17h48m, status change count 1
+  Hardware address is 70:fc:8c:05:1d:9a, ARP timeout 7200 sec
+  Internet address is 192.168.140.3/24, broadcast address is 192.168.140.255
+  Auto-negotiation, full-duplex, flowcontrol enabled
+  Line speed 1000000 kbps
+  Mean input/output rate 0/0 bits/s, 0/0 packets/s (over the last 4 seconds)
+  Mean input/output load percentage 0.000/0.000 percent (over the last 4 seconds)
+  Output queuing strategy: fifo, output queue length/depth 0/126
+  Reliability: 255/255
+  IN:  1595000 packets, 104199354 bytes, 0 queue drops
+       26164 broadcasts, 1567985 multicasts, 0 errors, 12 discards, 0 mac acl discards
+       16 unknown protocols
+  OUT: 975 packets, 184194 bytes, 0 queue drops
+       98 broadcasts, 14 multicasts, 0 errors, 2 discards, 0 collisions
+GigabitEthernet 0/1 is down, line protocol is down
+  Flags: (0x8022) BROADCAST MULTICAST ARP, interface index is 112
+  Encapsulation: Ethernet v2, MTU 1500 bytes
+  Down-time 90d17h48m, status change count 0
+  Hardware address is 70:fc:8c:09:1d:9a, ARP timeout 7200 sec
+  Line speed unknown
+  Mean input/output rate 0/0 bits/s, 0/0 packets/s (over the last 4 seconds)
+  Mean input/output load percentage 0.000/0.000 percent (over the last 4 seconds)
+  Output queuing strategy: fifo, output queue length/depth 0/126
+  Reliability: 255/255
+  IN:  0 packets, 0 bytes, 0 queue drops
+       0 broadcasts, 0 multicasts, 0 errors, 0 discards, 0 mac acl discards
+       0 unknown protocols
+  OUT: 0 packets, 0 bytes, 0 queue drops
+       0 broadcasts, 0 multicasts, 0 errors, 0 discards, 0 collisions
+GigabitEthernet 0/2 is down, line protocol is down
+  Flags: (0x8022) BROADCAST MULTICAST ARP, interface index is 113
+  Encapsulation: Ethernet v2, MTU 1500 bytes
+  Down-time 90d17h48m, status change count 0
+  Hardware address is 70:fc:8c:0d:1d:9a, ARP timeout 7200 sec
+  Line speed unknown
+  Mean input/output rate 0/0 bits/s, 0/0 packets/s (over the last 4 seconds)
+  Mean input/output load percentage 0.000/0.000 percent (over the last 4 seconds)
+  Output queuing strategy: fifo, output queue length/depth 0/126
+  Reliability: 255/255
+  IN:  0 packets, 0 bytes, 0 queue drops
+       0 broadcasts, 0 multicasts, 0 errors, 0 discards, 0 mac acl discards
+       0 unknown protocols
+  OUT: 0 packets, 0 bytes, 0 queue drops
+       0 broadcasts, 0 multicasts, 0 errors, 0 discards, 0 collisions
+GigabitEthernet 0/3 is down, line protocol is down
+  Flags: (0x8022) BROADCAST MULTICAST ARP, interface index is 114
+  Encapsulation: Ethernet v2, MTU 1500 bytes
+  Down-time 90d17h48m, status change count 0
+  Hardware address is 70:fc:8c:11:1d:9a, ARP timeout 7200 sec
+  Line speed unknown
+  Mean input/output rate 0/0 bits/s, 0/0 packets/s (over the last 4 seconds)
+  Mean input/output load percentage 0.000/0.000 percent (over the last 4 seconds)
+  Output queuing strategy: fifo, output queue length/depth 0/126
+  Reliability: 255/255
+  IN:  0 packets, 0 bytes, 0 queue drops
+       0 broadcasts, 0 multicasts, 0 errors, 0 discards, 0 mac acl discards
+       0 unknown protocols            
+  OUT: 0 packets, 0 bytes, 0 queue drops
+       0 broadcasts, 0 multicasts, 0 errors, 0 discards, 0 collisions
+GigabitEthernet 1/0 is up, line protocol is down
+  Flags: (0x8023) BROADCAST MULTICAST ARP, interface index is 116
+  Encapsulation: Ethernet v2, MTU 1500 bytes
+  Down-time 90d17h48m, status change count 0
+  Hardware address is 70:fc:8c:15:1d:9a, ARP timeout 7200 sec
+  negotiation unknown, duplex unknown
+  Line speed unknown
+  Media-type rj45
+  Mean input/output rate 0/0 bits/s, 0/0 packets/s (over the last 4 seconds)
+  Mean input/output load percentage 0.000/0.000 percent (over the last 4 seconds)
+  Output queuing strategy: fifo, output queue length/depth 0/126
+  Reliability: 255/255
+  IN:  0 packets, 0 bytes, 0 queue drops
+       0 broadcasts, 0 multicasts, 0 errors, 0 discards, 0 mac acl discards
+       0 unknown protocols
+  OUT: 0 packets, 0 bytes, 0 queue drops
+       0 broadcasts, 0 multicasts, 0 errors, 0 discards, 0 collisions
+Loopback 0 is up, line protocol is up
+  Flags: (0x80e9) LOOPBACK MULTICAST, interface index is 9902
+  MTU 32768 bytes
+  Up-time 90d17h48m, status change count 0
+  Internet address is 127.0.0.1/32
+  IPv6 address is ::1/128
+  IPv6 address is fe80::1/64
+  Line speed unknown
+  Mean input/output rate 0/0 bits/s, 0/0 packets/s (over the last 4 seconds)
+  Mean input/output load percentage 0.000/0.000 percent (over the last 4 seconds)
+  Output queuing strategy: fifo, output queue length/depth 0/126
+  IN:  792892 packets, 50304174 bytes, 0 queue drops
+       0 broadcasts, 0 multicasts, 0 errors, 0 discards, 0 mac acl discards
+       0 unknown protocols
+  OUT: 792892 packets, 50304174 bytes, 0 queue drops
+       0 broadcasts, 0 multicasts, 0 errors, 0 discards
+Loopback 1 is up, line protocol is up
+  Flags: (0x80e9) LOOPBACK MULTICAST, interface index is 9903
+  Description: VT93757
+  MTU 32768 bytes
+  Up-time 90d17h48m, status change count 0
+  Internet address is 94.105.19.13/32
+  Line speed unknown
+  Mean input/output rate 8064/8064 bits/s, 11/11 packets/s (over the last 4 seconds)
+  Mean input/output load percentage 0.000/0.000 percent (over the last 4 seconds)
+  Output queuing strategy: fifo, output queue length/depth 0/126
+  IN:  1205685 packets, 94253106 bytes, 0 queue drops
+       0 broadcasts, 0 multicasts, 0 errors, 0 discards, 0 mac acl discards
+       0 unknown protocols
+  OUT: 1205685 packets, 94253106 bytes, 0 queue drops
+       0 broadcasts, 0 multicasts, 0 errors, 0 discards
+Loopback 21 is up, line protocol is up
+  Flags: (0x80e9) LOOPBACK MULTICAST, interface index is 9923
+  Description: *** Mobile access 4G - BGP PEER LOOPBACK ***
+  MTU 32768 bytes
+  Up-time 90d17h48m, status change count 0
+  Internet address is 192.4.21.3/32
+  Line speed unknown
+  Mean input/output rate 0/0 bits/s, 0/0 packets/s (over the last 4 seconds)
+  Mean input/output load percentage 0.000/0.000 percent (over the last 4 seconds)
+  Output queuing strategy: fifo, output queue length/depth 0/126
+  IN:  547665 packets, 27577399 bytes, 0 queue drops
+       0 broadcasts, 0 multicasts, 0 errors, 0 discards, 0 mac acl discards
+       0 unknown protocols
+  OUT: 547665 packets, 27577399 bytes, 0 queue drops
+       0 broadcasts, 0 multicasts, 0 errors, 0 discards
+Loopback 91 is up, line protocol is up
+  Flags: (0x80e9) LOOPBACK MULTICAST, interface index is 9993
+  Description: *** Mobile access 4G - BGP PEER LOOPBACK ***
+  MTU 32768 bytes
+  Up-time 90d17h48m, status change count 0
+  Internet address is 192.4.91.3/32
+  Line speed unknown
+  Mean input/output rate 0/0 bits/s, 0/0 packets/s (over the last 4 seconds)
+  Mean input/output load percentage 0.000/0.000 percent (over the last 4 seconds)
+  Output queuing strategy: fifo, output queue length/depth 0/126
+  IN:  547767 packets, 27648173 bytes, 0 queue drops
+       0 broadcasts, 0 multicasts, 0 errors, 0 discards, 0 mac acl discards
+       0 unknown protocols
+  OUT: 547767 packets, 27648173 bytes, 0 queue drops
+       0 broadcasts, 0 multicasts, 0 errors, 0 discards
+Tunnel 21 is up, line protocol is up
+  Flags: (0x80f1) POINT-TO-POINT MULTICAST, interface index is 9822
+  This interface is associated to Tunnel VRF UNTRUST
+  Encapsulation: TUNNEL, MTU 1434 bytes
+  Keepalive not set
+  Tunnel source 10.94.48.156, destination 94.105.25.2  
+  Tunnel protocol/transport GRE/IP
+  Up-time 1d22h3m, status change count 87
+  Interface is unnumbered, use address of Loopback 1 (94.105.19.13)
+  Line speed 50000 kbps
+  Mean input/output rate 0/0 bits/s, 0/0 packets/s (over the last 4 seconds)
+  Mean input/output load percentage 0.000/0.000 percent (over the last 4 seconds)
+  Output queuing strategy: fifo, output queue length/depth 0/126
+  IN:  548361 packets, 53110629 bytes, 0 queue drops
+       0 broadcasts, 0 multicasts, 0 errors, 0 discards, 0 mac acl discards
+       0 unknown protocols
+       0 bad checksum, 0 bad key id, 0 bad sequence
+  OUT: 553132 packets, 66072336 bytes, 0 queue drops
+       0 broadcasts, 0 multicasts, 0 errors, 0 discards
+Tunnel 91 is up, line protocol is up
+  Flags: (0x80f1) POINT-TO-POINT MULTICAST, interface index is 9892
+  This interface is associated to Tunnel VRF UNTRUST
+  Encapsulation: TUNNEL, MTU 1434 bytes
+  Keepalive not set
+  Tunnel source 10.94.48.156, destination 94.105.25.9  
+  Tunnel protocol/transport GRE/IP
+  Up-time 04:03:43, status change count 267
+  Interface is unnumbered, use address of Loopback 1 (94.105.19.13)
+  Line speed 50000 kbps
+  Mean input/output rate 13016/16640 bits/s, 11/12 packets/s (over the last 4 seconds)
+  Mean input/output load percentage 0.026/0.033 percent (over the last 4 seconds)
+  Output queuing strategy: fifo, output queue length/depth 0/126
+  IN:  1752769 packets, 208283715 bytes, 0 queue drops
+       0 broadcasts, 0 multicasts, 0 errors, 0 discards, 0 mac acl discards
+       0 unknown protocols
+       0 bad checksum, 0 bad key id, 0 bad sequence
+  OUT: 1896077 packets, 284630648 bytes, 0 queue drops
+       0 broadcasts, 0 multicasts, 0 errors, 0 discards
+Null 0 is up, line protocol is up
+  Flags: (0x80e1) MULTICAST, interface index is 9901
+  MTU 32768 bytes
+  Up-time 90d17h48m, status change count 0
+  Line speed unknown
+  Mean input/output rate 0/0 bits/s, 0/0 packets/s (over the last 4 seconds)
+  Mean input/output load percentage 0.000/0.000 percent (over the last 4 seconds)
+  Output queuing strategy: fifo, output queue length/depth 0/126
+  IN:  0 packets, 0 bytes, 0 queue drops
+       0 broadcasts, 0 multicasts, 0 errors, 0 discards, 0 mac acl discards
+       0 unknown protocols
+  OUT: 0 packets, 0 bytes, 0 queue drops
+       0 broadcasts, 0 multicasts, 0 errors, 0 discards
+virtual-ethernet 1 is up, line protocol is up
+  Flags: (0x8063) BROADCAST MULTICAST ARP, interface index is 10701
+  Description: *** Mobile access 4G testing - WAN INTF ***
+  This interface is associated to VRF UNTRUST
+  Encapsulation: Ethernet v2, MTU 1500 bytes
+  Up-time 47d12h55m, status change count 5
+  Hardware address is 70:fc:8c:21:1d:9a, ARP timeout 7200 sec
+  Internet address is 10.94.48.156/29, broadcast address is 10.94.48.159
+  Line speed 50000 kbps
+  Mean input/output rate 25040/39352 bits/s, 19/20 packets/s (over the last 4 seconds)
+  Mean input/output load percentage 0.050/0.078 percent (over the last 4 seconds)
+  Output queuing strategy: fifo, output queue length/depth 0/126
+  IN:  2484298 packets, 371202556 bytes, 0 queue drops
+       0 broadcasts, 0 multicasts, 0 errors, 0 discards, 0 mac acl discards
+       0 unknown protocols
+  OUT: 2679534 packets, 421781451 bytes, 0 queue drops
+       2220 broadcasts, 0 multicasts, 0 errors, 8 discards
