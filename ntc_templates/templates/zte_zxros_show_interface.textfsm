@@ -1,0 +1,30 @@
+Value Required INTERFACE (\S+)
+Value LINK_STATUS (.+?)
+Value INTFINDEX (\d+)
+Value DESCRIPTION (.*?)
+Value PROTOCOL_STATUS (.+?)
+Value IPV4PROTOCOL (.+?)
+Value IPV6PROTOCOL (.+?)
+Value DETECT_STATUS (\S+)
+Value UPTIME (.+?)
+Value HARDWARE_TYPE (.+?)
+Value MAC (\S+)
+Value IPADDR (\S+?)
+Value MASK (\d*)
+Value BANDWITH (.+?)
+Value List MTU (\d+)
+
+Start
+  ^\S -> Continue.Record
+  ^${INTERFACE}\s+is\s+${LINK_STATUS},\s+ifindex:\s+${INTFINDEX}\s*$$
+  ^\s+Description:\s+${DESCRIPTION}\s*$$
+  ^\s+Line\s+protocol\s+is\s+${PROTOCOL_STATUS},\s+IPv4\s+protocol\s+is\s+${IPV4PROTOCOL},\s+IPv6\s+protocol\s+is\s+${IPV6PROTOCOL},\s*$$
+  ^\s+detected\s+status\s+is\s+${DETECT_STATUS}\s*$$
+  ^\s+Last\s+line\s+protocol\s+up\s+time\s+:\s+${UPTIME}\s*$$
+  ^\s+Hardware\s+is\s+${HARDWARE_TYPE},\s+address\s+is\s+${MAC}\s*$$
+  ^\s+Internet\s+address\s+is\s+${IPADDR}/?${MASK}\s*$$
+  ^\s+BW\s+${BANDWITH}\s*$$
+  ^\s+IP\s+MTU\s+${MTU}\s+bytes
+  ^\s+MTU\s+${MTU}\s+bytes
+  ^\s+IPv6\s+MTU\s+${MTU}\s+bytes
+  ^\s+MPLS\s+MTU\s+${MTU}\s+bytes

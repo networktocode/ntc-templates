@@ -1,0 +1,132 @@
+xxvgei-1/1/0/24 is up, ifindex: 8225
+  Description: R-xxxxx-01Z_xxvgei-1/1/0/24_to_R-xxxxx02-01Z_xxvgei-1/1/0/20;by:XXX;CID:XXXXXXX 
+  Line protocol is up, IPv4 protocol is up, IPv6 protocol is down,
+ detected status is RX-OK/TX-OK
+  Last line protocol up time :  2023-04-02 15:42:13 
+  Hardware is XXVGigabit Ethernet, address is 744a.a42b.2010
+  Internet address is 10.206.185.2/31 
+  BW 10 Gbit/s
+  IP MTU 9178 bytes
+  MTU 9192 bytes
+  MPLS MTU 9178 bytes
+
+  Fec-eth : N/A
+  Fec-bypass : disable
+  ARP type ARP
+  ARP Timeout 04:00:00 
+  Last Clear Time : 2023-03-15 00:23:16  Last Refresh Time: 2023-04-07 11:17:50
+  Rate period     : 30 s                                     
+   Input          : 54070488 bit/s       17263 packet/s      
+   Output         : 181452736 bit/s      19848 packet/s      
+  Peak rate:                                                 
+   Input          : 193604816 bit/s      peak time          2023-03-18 19:13:50
+   Output         : 1832230896 bit/s     peak time          2023-03-18 20:36:40
+  Intf utilization: input 0.54%          output 1.81%        
+  HardwareCounters:                                          
+  In_Bytes          9284060783182        In_Packets         37909098091
+  In_Broadcasts     3                    In_Multicasts      1009767
+  In_Unicasts       37908088321          In_CRC_ERROR       0
+  In_Fragments      0                    In_64B             39549
+  In_65_127B        23801374871          In_128_255B        7867332105
+  In_256_511B       1669025875           In_512_1023B       1998802757
+  In_1024_1518B     2559890154           In_1519_MaxB       12632780
+  In_Undersize      0                    In_Oversize        0
+  E_Bytes           91949543490869       E_Packets          79122043711
+  E_Broadcasts      5                    E_Multicasts       1086970
+  E_Unicasts        79120956747          E_CRC_ERROR        0
+  E_64B             20521174             E_65_127B          7788975586
+  E_128_255B        5664052345           E_256_511B         1768390101
+  E_512_1023B       1247046702           E_1024_1518B       62105204361
+  E_1519_MaxB       527853452            E_Oversize         0
+  StreamCounters  :                                          
+  In_Bytes          9284060783182        In_Packets         37909098091
+  E_Bytes           91949543490869       E_Packets          79122043711
+xxvgei-1/1/0/32 is administratively down, ifindex: 8233
+  The interface is configured shutdown
+  Line protocol is down, IPv4 protocol is down, IPv6 protocol is down,
+ detected status is RX-OK/TX-OK
+  Last line protocol up time :  - 
+  Hardware is XXVGigabit Ethernet, address is 744a.a42b.2010
+  Internet address is unassigned
+  BW 25 Gbit/s
+  IP MTU 1500 bytes
+  MTU 1600 bytes
+  MPLS MTU 1550 bytes
+
+  Fec-eth : enable
+  Fec-bypass : disable
+  ARP type ARP
+  ARP Timeout 04:00:00 
+  Last Clear Time : 2023-03-15 00:23:16  Last Refresh Time: 2023-03-15 00:23:16
+  Rate period     : 30 s                                     
+   Input          : 0 bit/s              0 packet/s          
+   Output         : 0 bit/s              0 packet/s          
+  Peak rate:                                                 
+   Input          : 0 bit/s              peak time          N/A
+   Output         : 0 bit/s              peak time          N/A
+  Intf utilization: input 0%             output 0%           
+  HardwareCounters:                                          
+  In_Bytes          0                    In_Packets         0
+  In_Broadcasts     0                    In_Multicasts      0
+  In_Unicasts       0                    In_CRC_ERROR       0
+  In_Fragments      0                    In_64B             0
+  In_65_127B        0                    In_128_255B        0
+  In_256_511B       0                    In_512_1023B       0
+  In_1024_1518B     0                    In_1519_MaxB       0
+  In_Undersize      0                    In_Oversize        0
+  E_Bytes           0                    E_Packets          0
+  E_Broadcasts      0                    E_Multicasts       0
+  E_Unicasts        0                    E_CRC_ERROR        0
+  E_64B             0                    E_65_127B          0
+  E_128_255B        0                    E_256_511B         0
+  E_512_1023B       0                    E_1024_1518B       0
+  E_1519_MaxB       0                    E_Oversize         0
+  StreamCounters  :                                          
+  In_Bytes          0                    In_Packets         0
+  E_Bytes           0                    E_Packets          0
+mgmt_eth is down, ifindex: 262145
+  Line protocol is down, IPv4 protocol is down, IPv6 protocol is down,
+ detected status is RX-OK/TX-OK
+  Last line protocol up time :  2023-03-15 00:21:14 
+  Hardware is Management Ethernet, address is 744a.a42b.2011
+  Internet address is 192.168.1.11/24 
+  BW 100 Mbit/s
+  IP MTU 1500 bytes
+  MTU 1514 bytes
+  ARP type ARP
+  ARP Timeout 04:00:00 
+  Last Clear Time : 2023-03-15 00:21:14  Last Refresh Time: 2023-03-15 00:21:20
+  Rate period     : 30 s                                     
+   Input          : 0 bit/s              0 packet/s          
+   Output         : 0 bit/s              0 packet/s          
+  Peak rate:                                                 
+   Input          : 0 bit/s              peak time          N/A
+   Output         : 0 bit/s              peak time          N/A
+  Intf utilization: input 0%             output 0%           
+  HardwareCounters:                                          
+  In_Bytes          0                    In_Packets         0
+  In_Broadcasts     N/A                  In_Multicasts      0
+  In_Unicasts       N/A                  In_CRC_ERROR       N/A
+  In_Fragments      N/A                  In_64B             N/A
+  In_65_127B        N/A                  In_128_255B        N/A
+  In_256_511B       N/A                  In_512_1023B       N/A
+  In_1024_1518B     N/A                  In_1519_MaxB       N/A
+  In_Undersize      N/A                  In_Oversize        0
+  E_Bytes           836                  E_Packets          11
+  E_Broadcasts      N/A                  E_Multicasts       N/A
+  E_Unicasts        N/A                  E_CRC_ERROR        N/A
+  E_64B             N/A                  E_65_127B          N/A
+  E_128_255B        N/A                  E_256_511B         N/A
+  E_512_1023B       N/A                  E_1024_1518B       N/A
+  E_1519_MaxB       N/A                  E_Oversize         0
+loopback0 is up, ifindex: 8234
+  Description: Management&Traffic address 
+  Line protocol is up, IPv4 protocol is up, IPv6 protocol is up,
+ detected status is RX-OK/TX-OK
+  Last line protocol up time :  2023-03-15 00:21:12 
+  Hardware is Loopback, address is 744a.a42b.2010
+  Internet address is 10.10.10.108/32 
+  BW 8 Gbit/s
+  IP MTU 1500 bytes
+  IPv6 MTU 1500 bytes
+  MPLS MTU 1550 bytes
