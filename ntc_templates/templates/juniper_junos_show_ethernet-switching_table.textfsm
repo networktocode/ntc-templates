@@ -11,7 +11,7 @@ Start
   ^Routing\sinstance\s:\sdefault-switch$$
   ^\s+Vlan\s+MAC\s+MAC\s+Age\s+Logical\s*\S*\s*\S*\s*$$
   ^\s+name\s+address\s+flags\s+interface\s*\S*\s*\S*\s*$$
-  ^\s+Vlan${VLAN}\s+${MAC_ADDRESS}\s+${MAC_FLAG}\s+${AGE}\s+${LOGICAL_INTERFACE}\s*\S*\s*\S* -> Record
+  ^\s+${VLAN}\s+${MAC_ADDRESS}\s+${MAC_FLAG}\s+${AGE}\s+${LOGICAL_INTERFACE}\s*\S*\s*\S* -> Record
   ^\s*$$
   ^{master:\d+}
   ^. -> Error
