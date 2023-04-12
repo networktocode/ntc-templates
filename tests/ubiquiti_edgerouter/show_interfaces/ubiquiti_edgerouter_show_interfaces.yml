@@ -30,8 +30,18 @@ parsed_sample:
     ip: ["192.168.1.1/24"]
     link_status: "u"
     state: "u"
+  - interface: "eth4.2900"
+    description: ""
+    ip: ["-"]
+    link_status: "u"
+    state: "u"
   - interface: "eth5"
     description: ""
     ip: ["2a05:c100:1d::1/64"]
+    link_status: "u"
+    state: "u"
+  - interface: "switch0.1"
+    description: "vl1-siege-serveurs"
+    ip: ["192.168.10.251/24"]
     link_status: "u"
     state: "u"
