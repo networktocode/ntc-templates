@@ -1,0 +1,15 @@
+Threading mode: BGP I/O
+Groups: 2 Peers: 6 Down peers: 0
+Peer                     AS      InPkt     OutPkt    OutQ   Flaps Last Up/Dwn State|#Active/Received/Accepted/Damped...
+192.0.2.254           64496    1165670    1238837       0       1 9w2d 5:23:37 Establ
+  wanTrusted.inet.0: 23/224/224/0
+192.0.2.252           64496     753373     783304       0      50 35w2d 3:57:43 Establ
+  wanTrusted.inet.0: 65/224/224/0
+198.51.100.100        64496     814804     865022       0      19 6w3d 13:02:17 Establ
+  wanTrusted.inet.0: 30/226/226/0
+198.51.100.200        64496     768547     816071       0      47 36w5d 12:18:32 Establ
+  wanUntrust.inet.0: 1/70/70/0
+203.0.113.0           64496     811361     865023       0      20 6w3d 13:02:22 Establ
+  wanUntrust.inet.0: 6/74/74/0
+203.0.113.0           64496    1162649    1238837       0       1 9w2d 5:23:33 Establ
+  wanUntrust.inet.0: 4/72/72/0
