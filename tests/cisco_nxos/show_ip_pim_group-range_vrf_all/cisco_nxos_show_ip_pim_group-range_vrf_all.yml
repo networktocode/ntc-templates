@@ -1,0 +1,16 @@
+---
+parsed_sample:
+  - vrf: "default"
+    group_range: "224.0.0.0/8"
+    action: "Accept"
+    mode: "SSM"
+    rp_address: "-"
+    shared_tree_range: "-"
+    origin: "Local"
+  - vrf: "red"
+    group_range: "224.0.0.0/8"
+    action: "Accept"
+    mode: "SSM"
+    rp_address: "-"
+    shared_tree_range: "-"
+    origin: "Local"
