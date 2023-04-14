@@ -10,3 +10,4 @@ Start
   ^\s*Interface\s+IP Address\s+PIM DR Address\s+Neighbor\s+Border\s*$$
   ^\s*Count\s+Interface\s*$$
   ^\s*${INTERFACE}\s+${IP_ADDRESS}\s+${PIM_DR_ADDRESS}\s+${NEIGHBOR_COUNT}\s+${BORDER_INTERFACE}\s*$$ -> Record
+  ^. -> Error

@@ -11,3 +11,5 @@ Start
   ^\s*PIM Group-Range Configuration for VRF "${VRF}"\s*$$
   ^\s*Group-range\s+Action\s+Mode\s+RP-address\s+Shrd-tree-range\s+Origin\s*$$
   ^\s*${GROUP_RANGE}\s+${ACTION}\s+${MODE}\s+${RP_ADDRESS}\s+${SHARED_TREE_RANGE}\s+${ORIGIN}\s*$$ -> Record
+  ^. -> Error
+ 

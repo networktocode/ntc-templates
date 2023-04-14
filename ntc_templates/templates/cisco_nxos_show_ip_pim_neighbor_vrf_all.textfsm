@@ -14,3 +14,4 @@ Start
   ^\s*Neighbor\s+Interface\s+Uptime\s+Expires\s+DR\s+Bidir-\s+BFD\s+ECMP Redirect\s*$$
   ^\s*Priority\s+Capable\s+State\s+Capable\s*$$
   ^\s*${NEIGHBOR}\s+${INTERFACE}\s+${UPTIME}\s+${EXPIRES}\s+${DR_PRIORITY}\s+${BIDIR_CAPABLE}\s+${BFD_STATE}\s+${ECMP_REDIRECT_CAPABLE}\s*$$ -> Record
+  ^. -> Error

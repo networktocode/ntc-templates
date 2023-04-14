@@ -14,3 +14,4 @@ Start
   ^\s*BSR RP policy: ${BSR_POLICY}\s*$$
   ^\s*Auto-RP Announce policy: ${AUTO_RP_ANNOUNCE_POLICY}\s*$$
   ^\s*Auto-RP Discovery policy: ${AUTO_RP_DISCOVERY_POLICY}\s*$$ -> Record
+  ^. -> Error
