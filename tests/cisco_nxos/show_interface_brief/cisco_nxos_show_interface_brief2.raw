@@ -52,21 +52,28 @@ Eth1/47       --      eth  routed up      none                       1000(D) --
 Eth1/48       --      eth  routed up      none                       1000(D) --
 Eth1/49       1       eth  access down    SFP not inserted            10G(D) --
 Eth1/50       1       eth  access down    SFP not inserted            10G(D) --
-Eth1/51       1       eth  access down    SFP not inserted            10G(D) --
+Eth1/51       1       eth  f-path up      none                        10G(D) --
 Eth1/52       --      eth  routed down    SFP not inserted            10G(D) --
+Eth1/52.111   111     eth  routed down    none                        10G(D) --
 
 --------------------------------------------------------------------------------
 Port-channel VLAN    Type Mode   Status  Reason                    Speed   Protocol
-Interface                                                                  
+Interface
 --------------------------------------------------------------------------------
 Po100        --      eth  routed down    No operational members      auto(I)  lacp
 
 --------------------------------------------------------------------------------
 Port   VRF          Status IP Address                              Speed    MTU
 --------------------------------------------------------------------------------
-mgmt0  --           down   1.2.3.4                           --       1500
+mgmt0  --           down   --                                      --       1500
 
 -------------------------------------------------------------------------------
-Interface Secondary VLAN(Type)                    Status Reason                 
+Interface Secondary VLAN(Type)                    Status Reason
 -------------------------------------------------------------------------------
 Vlan1     --                                      down   Admin
+
+-----------------------------------------------------------------------------------------------------------
+Interface                Status     IP Address                                   Encap type       MTU
+-----------------------------------------------------------------------------------------------------------
+Tunnel101                up         10.0.0.1/31                                  GRE/IP             1476
+Tunnel102                down       --                                           IPIP/IP            1480
