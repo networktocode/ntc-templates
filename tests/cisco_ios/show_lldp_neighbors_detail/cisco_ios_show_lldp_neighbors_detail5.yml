@@ -64,14 +64,12 @@ parsed_sample:
     fw_revision: ""
     sw_revision: ""
   - local_interface: ""
-    chassis_id:
-      "S7-1200                   6DS7 212-1BH40-0XB0  S V-LCCC5820     \
+    chassis_id: "S7-1200                   6DS7 212-1BH40-0XB0  S V-LCCC5820     \
       \   10 V  4  3  1"
     neighbor_port_id: "port-001.ploobdfad"
     neighbor_interface: "Siemens, SIMATIC S7, Ethernet Port, X1 P1"
     neighbor: ""
-    system_description:
-      "Siemens, SIMATIC S7, CPU-1200, 6ES7 211-1CC40-0XB0, HW: 10,\
+    system_description: "Siemens, SIMATIC S7, CPU-1200, 6ES7 211-1CC40-0XB0, HW: 10,\
       \ FW: V.4.3.1, S V-LDCE8620"
     capabilities: "B,S"
     management_ip: "10.176.0.245"
