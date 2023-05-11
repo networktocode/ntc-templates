@@ -1,0 +1,6 @@
+Standard IP access list 1
+10 permit 4.5.6.0 log
+20 permit any
+Standard IP access list 2
+10 permit 0.0.0.0, wildcard bits 255.255.255.252 log (4556 matches)
+20 permit any (11665 matches)

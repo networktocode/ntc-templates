@@ -1,0 +1,11 @@
+PIM Interface Status for VRF "default"
+Interface            IP Address      PIM DR Address  Neighbor  Border
+                                                     Count     Interface
+Vlan100              192.0.2.1       192.0.2.2       0         no
+Ethernet1/1.10       192.0.2.3       192.0.2.4       1         no
+
+PIM Interface Status for VRF "red"
+Interface            IP Address      PIM DR Address  Neighbor  Border
+                                                     Count     Interface
+Ethernet1/1.20       192.0.2.5       192.0.2.6       1         no
+

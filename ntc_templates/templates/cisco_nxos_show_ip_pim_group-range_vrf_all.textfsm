@@ -1,0 +1,14 @@
+Value Filldown VRF (\S+)
+Value Required GROUP_RANGE (\d+\.\d+\.\d+\.\d+/\d+)
+Value ACTION (\S+)
+Value MODE (\S+)
+Value RP_ADDRESS (\S+)
+Value SHARED_TREE_RANGE (\S+)
+Value ORIGIN (\S+)
+
+
+Start
+  ^\s*PIM Group-Range Configuration for VRF "${VRF}"\s*$$
+  ^\s*Group-range\s+Action\s+Mode\s+RP-address\s+Shrd-tree-range\s+Origin\s*$$
+  ^\s*${GROUP_RANGE}\s+${ACTION}\s+${MODE}\s+${RP_ADDRESS}\s+${SHARED_TREE_RANGE}\s+${ORIGIN}\s*$$ -> Record
+  ^. -> Error
