@@ -1,0 +1,23 @@
+---
+parsed_sample:
+  - vrf: "Management"
+    rd: "<not set>"
+    vpn_id: "<not set>"
+    description: ""
+    rt_import: []
+    rt_export: []
+    interfaces: ["Gi1"]
+  - vrf: "testr"
+    rd: "65000:42"
+    vpn_id: "<not set>"
+    description: ""
+    rt_import: ["65000:43", "65000:44"]
+    rt_export: ["65000:42"]
+    interfaces: []
+  - vrf: "test2"
+    rd: "<not set>"
+    vpn_id: "<not set>"
+    description: "test2 description"
+    rt_import: []
+    rt_export: []
+    interfaces: []
