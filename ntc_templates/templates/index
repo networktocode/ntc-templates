@@ -311,9 +311,9 @@ cisco_nxos_show_interface_transceiver_details.textfsm, .*, cisco_nxos, sh[[ow]] 
 cisco_nxos_show_ip_dhcp_snooping_statistics.textfsm, .*, cisco_nxos, sh[[ow]] ip dh[[cp]] sn[[ooping]] st[[atistics]]
 cisco_nxos_show_ip_pim_group-range_vrf_all.textfsm, .*, cisco_nxos, sh[[ow]] ip pim group[[-range]] vrf all
 cisco_nxos_show_environment_temperature.textfsm, .*, cisco_nxos, sh[[ow]] env[[ironment]] t[[emperature]]
+cisco_nxos_show_ip_msdp_summary_vrf_all.textfsm, .*, cisco_nxos, sh[[ow]] ip msdp summary vrf all
 cisco_nxos_show_ip_ospf_interface_brief.textfsm, .*, cisco_nxos, sh[[ow]] ip ospf int[[erface]] b[[rief]](?: vrf \S+)?\s*$
 cisco_nxos_show_ip_pim_neighbor_vrf_all.textfsm, .*, cisco_nxos, sh[[ow]] ip pim nei[[ghbor]] vrf all
-cisco_nxos_show_ip_msdp_summary_vrf_all.textfsm, .*, cisco_nxos, sh[[ow]] ip msdp summary vrf all
 cisco_nxos_show_forwarding_ipv4_route.textfsm, .*, cisco_nxos, sh[[ow]] fo[[rwarding]] ipv4 ro[[ute]]
 cisco_nxos_show_interface_description.textfsm, .*, cisco_nxos, sh[[ow]] int[[erface]] desc[[ription]]
 cisco_nxos_show_interface_transceiver.textfsm, .*, cisco_nxos, sh[[ow]] int[[erface]] tra[[nsceiver]]
@@ -353,6 +353,7 @@ cisco_nxos_show_interface.textfsm, .*, cisco_nxos, sh[[ow]] inte[[rface]]
 cisco_nxos_show_inventory.textfsm, .*, cisco_nxos, sh[[ow]] inv[[entory]]
 cisco_nxos_show_nve_peers.textfsm, .*, cisco_nxos, sh[[ow]] nv[[e]] p[[eers]]
 cisco_nxos_show_route-map.textfsm, .*, cisco_nxos, sh[[ow]] route-m[[ap]]
+cisco_nxos_show_span_root.textfsm, .*, cisco_nxos, sh[[ow]] sp[[an]] root
 cisco_nxos_show_hostname.textfsm, .*, cisco_nxos, sh[[ow]] hostn[[ame]]
 cisco_nxos_show_hsrp_all.textfsm, .*, cisco_nxos, sh[[ow]] hsrp all
 cisco_nxos_show_ip_route.textfsm, .*, cisco_nxos, sh[[ow]] ip route
