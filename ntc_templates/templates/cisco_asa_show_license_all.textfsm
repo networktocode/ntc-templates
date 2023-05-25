@@ -24,9 +24,17 @@ Value LICENSE_DESCRIPTION (.+?)
 Value LICENSE_COUNT (\d+)
 Value LICENSE_VERSION (\S+)
 Value LICENSE_STATUS (.+?)
+Value LICENSE_EXPORT_STATUS (.+?)
 Value PID (.+?)
 Value SN (.+?)
 Value SMART_AGENT_VERSION (.+?)
+Value UTILITY_STATUS (.+?)
+Value PRIVACY_SENDING_HOSTNAME (.+?)
+Value PRIVACY_CALLHOME_HOSTNAME_PRIVACY (.+?)
+Value PRIVACY_SMART_LICENSING_HOSTNAME_PRIVACY (.+?)
+Value PRIVACY_VERSION_PRIVACY (.+?)
+Value TRANSPORT_TYPE (.+?)
+Value LICENSE_RESERVATION (.+?)
 
 Start
   ^\s*$$
@@ -37,6 +45,10 @@ Start
   ^License\s+Usage\s*$$ -> LICENSE_USAGE
   ^Product\s+Information\s*$$ -> PRODUCT_INFORMATION
   ^Agent\s+Version\s*$$ -> AGENT_VERSION
+  ^Utility:\s*$$ -> UTILITY
+  ^Data\s+Privacy:\s*$$ -> PRIVACY
+  ^Transport:\s*$$ -> TRANSPORT
+  ^No\s+licenses\s+in\s+use\s*$$
   ^=+\s*$$
   ^. -> Error
 
@@ -74,6 +86,8 @@ AUTHORIZATION
   ^Smart\s+Licensing\s+is\s+${SMART_STATUS}\s*$$
   ^Registration:\s*$$ -> REGISTRATION
   ^License\s+Authorization:\s*$$ -> AUTHORIZATION
+  ^Utility:\s*$$ -> UTILITY
+  ^Export\s+Authorization\s+Key:\s*$$ -> EXPORT_AUTHORIZATION_KEY
   ^=+\s*$$
   ^. -> Error
 
@@ -84,12 +98,14 @@ LICENSE_USAGE
   ^\s+Count:\s+${LICENSE_COUNT}\s*$$
   ^\s+Version:\s+${LICENSE_VERSION}\s*$$
   ^\s+Status:\s+${LICENSE_STATUS}\s*$$
+  ^\s+Export\s+status:\s+${LICENSE_EXPORT_STATUS}\s*$$
   ^Product\s+Information\s*$$ -> PRODUCT_INFORMATION
   ^Agent\s+Version\s*$$ -> AGENT_VERSION
   ^Smart\s+Licensing\s+is\s+${SMART_STATUS}\s*$$
   ^Registration:\s*$$ -> REGISTRATION
   ^License\s+Authorization:\s*$$ -> AUTHORIZATION
   ^License\s+Usage\s*$$ -> LICENSE_USAGE
+  ^No\s+licenses\s+in\s+use\s*$$
   ^=+\s*$$
   ^. -> Error
 
@@ -114,5 +130,50 @@ AGENT_VERSION
   ^License\s+Usage\s*$$ -> LICENSE_USAGE
   ^Product\s+Information\s*$$ -> PRODUCT_INFORMATION
   ^Agent\s+Version\s*$$ -> AGENT_VERSION
+  ^Reservation\s+Info\s*$$ -> RESERVATION_INFO
+  ^=+\s*$$
+  ^. -> Error
+
+RESERVATION_INFO
+  ^\s*$$
+  ^\s*License\s+reservation:\s+${LICENSE_RESERVATION}\s*$$
+  ^=+\s*$$
+  ^. -> Error
+
+UTILITY
+  ^\s*$$
+  ^\s+Status:\s+${UTILITY_STATUS}\s*$$
+  ^Data\s+Privacy:\s*$$ -> PRIVACY
+  ^=+\s*$$
+  ^. -> Error
+
+PRIVACY
+  ^\s*$$
+  ^\s+Sending\s+Hostname:\s+${PRIVACY_SENDING_HOSTNAME}\s*$$
+  ^\s+Callhome\s+hostname\s+privacy:\s+${PRIVACY_CALLHOME_HOSTNAME_PRIVACY}\s*$$
+  ^\s+Smart\s+Licensing\s+hostname\s+privacy:\s+${PRIVACY_SMART_LICENSING_HOSTNAME_PRIVACY}\s*$$
+  ^\s+Version\s+privacy:\s+${PRIVACY_VERSION_PRIVACY}\s*$$
+  ^Transport:\s*$$ -> TRANSPORT
+  ^=+\s*$$
+  ^. -> Error
+
+TRANSPORT
+  ^\s*$$
+  ^\s+Type:\s+${TRANSPORT_TYPE}\s*$$
+  ^License\s+Usage\s*$$ -> LICENSE_USAGE
+  ^=+\s*$$
+  ^. -> Error
+
+EXPORT_AUTHORIZATION_KEY
+  ^\s*$$
+  ^\s+Features\s+Authorized:\s*$$
+  ^\s+<none>\s*$$
+  ^License\s+Usage\s*$$ -> LICENSE_USAGE
+  ^Product\s+Information\s*$$ -> PRODUCT_INFORMATION
+  ^Agent\s+Version\s*$$ -> AGENT_VERSION
+  ^Smart\s+Licensing\s+is\s+${SMART_STATUS}\s*$$
+  ^Registration:\s*$$ -> REGISTRATION
+  ^License\s+Authorization:\s*$$ -> AUTHORIZATION
+  ^Utility:\s*$$ -> UTILITY
   ^=+\s*$$
   ^. -> Error
