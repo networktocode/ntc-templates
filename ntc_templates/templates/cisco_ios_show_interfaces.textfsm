@@ -9,7 +9,7 @@ Value IP_ADDRESS (\d+\.\d+\.\d+\.\d+\/\d+)
 Value MTU (\d+)
 Value DUPLEX (([Ff]ull|[Aa]uto|[Hh]alf|[Aa]-).*?)
 Value SPEED (.*?)
-Value MEDIA_TYPE (\S+(\s+\S+)?)
+Value MEDIA_TYPE (\S+.*)
 Value BANDWIDTH (\d+\s+\w+)
 Value DELAY (\d+\s+\S+)
 Value ENCAPSULATION (.+?)
@@ -49,6 +49,8 @@ Start
   ^\s+Last\s+input\s+${LAST_INPUT},\s+output\s+${LAST_OUTPUT},\s+output\s+hang\s+${LAST_OUTPUT_HANG}\s*$$
   ^\s+Queueing\s+strategy:\s+${QUEUE_STRATEGY}\s*$$
   ^\s+${DUPLEX},\s+${SPEED},.+media\stype\sis\s${MEDIA_TYPE}$$
+  ^\s+${DUPLEX},\s+${SPEED},.+TX/FX$$
+  ^\s+${DUPLEX},\s+${SPEED}$$
   ^.*input\s+rate\s+${INPUT_RATE}\s+\w+/sec,\s+${INPUT_PPS}\s+packets.+$$
   ^.*output\s+rate\s+${OUTPUT_RATE}\s+\w+/sec,\s+${OUTPUT_PPS}\s+packets.+$$
   ^\s+${INPUT_PACKETS}\s+packets\s+input,\s+\d+\s+bytes,\s+\d+\s+no\s+buffer\s*$$

@@ -8,6 +8,11 @@ Value CAPABILITIES (.*)
 Value MANAGEMENT_IP (\S+)
 Value VLAN (\d+)
 Value SERIAL (\S+)
+Value MANUFACTURER (.*)
+Value HW_REVISION (\S+)
+Value FW_REVISION (\S+)
+Value SW_REVISION (\S+)
+Value MODEL (.*)
 Value POWER_PAIR (\S+)
 Value POWER_CLASS (\d+)
 Value POWER_DEVICE_TYPE (\S+)
@@ -81,6 +86,11 @@ PowerMDI
 
 Med
   ^\s+Serial\s+number:\s+${SERIAL}\s*$$
+  ^\s+Manufacturer:\s+${MANUFACTURER}\s*$$
+  ^\s+Model:\s+${MODEL}\s*$$
+  ^\s+H/W revision:\s+${HW_REVISION}\s*$$
+  ^\s+F/W revision:\s+${FW_REVISION}\s*$$
+  ^\s+S/W revision:\s+${SW_REVISION}\s*$$
   ^\s+\S+
   ^\s*$$
   ^\s*Total\s+entries\s+displayed -> Record
