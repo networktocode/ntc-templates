@@ -1,0 +1,139 @@
+ceos1#show  interface
+
+Ethernet1 is up, line protocol is up (connected)
+  Hardware is Ethernet, address is aac1.ab3b.1c7a (bia aac1.ab3b.1c7a)
+  Description: "Test interface Et1"
+  Internet address is 10.0.0.1/30
+  Broadcast address is 255.255.255.255
+  IPv6 link-local address is fe80::a8c1:abff:fe3b:1c7a/64
+  No IPv6 global unicast address is assigned
+  IP MTU 1500 bytes (default), BW 1000000 kbit
+  Full-duplex, 1Gb/s, auto negotiation: off, uni-link: n/a
+  Up 21 minutes, 40 seconds
+  Loopback Mode : None
+  2 link status changes since last clear
+  Last clearing of "show interface" counters never
+  5 minutes input rate 0 bps (0.0% with framing overhead), 0 packets/sec
+  5 minutes output rate 0 bps (0.0% with framing overhead), 0 packets/sec
+     5280 packets input, 381190 bytes
+     Received 1 broadcasts, 273 multicast
+     0 runts, 0 giants
+     0 input errors, 0 CRC, 0 alignment, 0 symbol, 0 input discards
+     0 PAUSE input
+     0 packets output, 0 bytes
+     Sent 0 broadcasts, 0 multicast
+     0 output errors, 0 collisions
+     0 late collision, 0 deferred, 0 output discards
+     0 PAUSE output
+Ethernet2 is up, line protocol is up (connected)
+  Hardware is Ethernet, address is aac1.ab31.e593 (bia aac1.ab31.e593)
+  Description: "Test int Et2"
+  Internet address is 192.168.1.1/30
+  Broadcast address is 255.255.255.255
+  IPv6 link-local address is fe80::a8c1:abff:fe31:e593/64
+  No IPv6 global unicast address is assigned
+  IP MTU 1500 bytes (default), BW 1000000 kbit
+  Full-duplex, 1Gb/s, auto negotiation: off, uni-link: n/a
+  Up 21 minutes, 40 seconds
+  Loopback Mode : None
+  2 link status changes since last clear
+  Last clearing of "show interface" counters never
+  5 minutes input rate 0 bps (0.0% with framing overhead), 0 packets/sec
+  5 minutes output rate 0 bps (0.0% with framing overhead), 0 packets/sec
+     5061 packets input, 362112 bytes
+     Received 1 broadcasts, 61 multicast
+     0 runts, 0 giants
+     0 input errors, 0 CRC, 0 alignment, 0 symbol, 0 input discards
+     0 PAUSE input
+     0 packets output, 0 bytes
+     Sent 0 broadcasts, 0 multicast
+     0 output errors, 0 collisions
+     0 late collision, 0 deferred, 0 output discards
+     0 PAUSE output
+Ethernet3 is up, line protocol is up (connected)
+  Hardware is Ethernet, address is aac1.ab23.bb13 (bia aac1.ab23.bb13)
+  Ethernet MTU 9214 bytes, BW 1000000 kbit
+  Full-duplex, 1Gb/s, auto negotiation: off, uni-link: n/a
+  Up 21 minutes, 40 seconds
+  Loopback Mode : None
+  2 link status changes since last clear
+  Last clearing of "show interface" counters never
+  5 minutes input rate 0 bps (0.0% with framing overhead), 0 packets/sec
+  5 minutes output rate 0 bps (0.0% with framing overhead), 0 packets/sec
+     900 packets input, 106797 bytes
+     Received 0 broadcasts, 900 multicast
+     0 runts, 0 giants
+     0 input errors, 0 CRC, 0 alignment, 0 symbol, 0 input discards
+     0 PAUSE input
+     187 packets output, 16634 bytes
+     Sent 0 broadcasts, 187 multicast
+     0 output errors, 0 collisions
+     0 late collision, 0 deferred, 0 output discards
+     0 PAUSE output
+Ethernet4 is up, line protocol is up (connected)
+  Hardware is Ethernet, address is aac1.abb1.4f2c (bia aac1.abb1.4f2c)
+  Ethernet MTU 9214 bytes, BW 1000000 kbit
+  Full-duplex, 1Gb/s, auto negotiation: off, uni-link: n/a
+  Up 21 minutes, 40 seconds
+  Loopback Mode : None
+  2 link status changes since last clear
+  Last clearing of "show interface" counters never
+  5 minutes input rate 0 bps (0.0% with framing overhead), 0 packets/sec
+  5 minutes output rate 0 bps (0.0% with framing overhead), 0 packets/sec
+     705 packets input, 90157 bytes
+     Received 0 broadcasts, 705 multicast
+     0 runts, 0 giants
+     0 input errors, 0 CRC, 0 alignment, 0 symbol, 0 input discards
+     0 PAUSE input
+     0 packets output, 0 bytes
+     Sent 0 broadcasts, 0 multicast
+     0 output errors, 0 collisions
+     0 late collision, 0 deferred, 0 output discards
+     0 PAUSE output
+Loopback0 is up, line protocol is up (connected)
+  Hardware is Loopback
+  Internet address is 1.1.1.1/32
+  Broadcast address is 255.255.255.255
+  IP MTU 65535 bytes (default)
+  Up 21 minutes, 51 seconds
+Management0 is up, line protocol is up (connected)
+  Hardware is Ethernet, address is 001c.7338.71c6 (bia 001c.7338.71c6)
+  Internet address is 172.20.20.2/24
+  Broadcast address is 255.255.255.255
+  IP MTU 1500 bytes (default), BW 1000000 kbit
+  Full-duplex, 1Gb/s, auto negotiation: on, uni-link: n/a
+  Up 21 minutes, 53 seconds
+  Loopback Mode : None
+  3 link status changes since last clear
+  Last clearing of "show interface" counters never
+  5 minutes input rate 426 bps (0.0% with framing overhead), 0 packets/sec
+  5 minutes output rate 424 bps (0.0% with framing overhead), 0 packets/sec
+     884 packets input, 108713 bytes
+     Received 0 broadcasts, 0 multicast
+     0 runts, 0 giants
+     0 input errors, 0 CRC, 0 alignment, 0 symbol, 47 input discards
+     0 PAUSE input
+     878 packets output, 127164 bytes
+     Sent 0 broadcasts, 0 multicast
+     0 output errors, 0 collisions
+     0 late collision, 0 deferred, 0 output discards
+     0 PAUSE output
+Vlan100 is up, line protocol is up (connected)
+  Hardware is Vlan, address is 001c.7338.71c7 (bia 001c.7338.71c7)
+  Description: VLAN100
+  Internet address is 10.100.0.1/24
+  Broadcast address is 255.255.255.255
+  IPv6 link-local address is fe80::21c:73ff:fe38:71c7/64
+  No IPv6 global unicast address is assigned
+  IP MTU 1500 bytes (default)
+  Up 21 minutes, 56 seconds
+Vlan500 is up, line protocol is up (connected)
+  Hardware is Vlan, address is 001c.7338.71c7 (bia 001c.7338.71c7)
+  Description: VLAN500
+  Internet address is 192.168.5.1/24
+  Broadcast address is 255.255.255.255
+  IPv6 link-local address is fe80::21c:73ff:fe38:71c7/64
+  IPv6 global unicast address(es):
+    2001:192:168:5::1, subnet is 2001:192:168:5::/64
+  IP MTU 1500 bytes (default)
+  Up 21 minutes, 56 seconds
