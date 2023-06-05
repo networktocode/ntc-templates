@@ -12,9 +12,9 @@ parsed_sample:
   priority: "10"
   root_id: "1211.a111.1112"
   root_cost: "3"
-  hello_time: "2" 
-  max_age: "20" 
-  fwd_dly: "10" 
+  hello_time: "2"
+  max_age: "20"
+  fwd_dly: "10"
   root_port: "port-channel10"
 - vlan: "VLAN0003"
   priority: "1111"
@@ -32,3 +32,4 @@ parsed_sample:
   max_age: "20"
   fwd_dly: "10"
   root_port: "This bridge is root"
+  
