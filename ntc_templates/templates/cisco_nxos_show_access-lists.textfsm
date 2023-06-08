@@ -23,8 +23,8 @@ Value MODIFIER (.*)
 Value REMARK (.*)
 
 Start
-  # ACL name is catched. This is a FILLDOWN value, so everyother line without a NAME would inherits the last value matched.
-  ^.*\saccess\slist\s+${NAME}$$
+  # ACL name is catched. This is a FILLDOWN value, so every other line without a NAME would inherits the last value matched.
+  ^[^\s].*\slist\s+${NAME}$$
   # Catch remarks as uniq type, capture Action first and then Action=remark
   ^\s+${SN}\s+${ACTION}\s -> Continue
   ^\s+${SN}\s+remark\s${REMARK}$$ -> Record

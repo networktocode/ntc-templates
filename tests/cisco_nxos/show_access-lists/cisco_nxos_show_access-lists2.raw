@@ -13,5 +13,5 @@ IP access list TEST-ACL
         110 permit tcp 5.5.5.5/32 any eq 80 [match=0]
         120 remark AnotherOne
         130 permit tcp 6.6.6.6/32 any eq 443 [match=0]
-        140 remark contains list should not parsed_sample
-        150 remark missing remark
+        140 remark addTest: contains list should not become name
+        150 remark addTest: dont "miss" 'me'
