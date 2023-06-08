@@ -1,0 +1,17 @@
+IP access list TEST-ACL
+        statistics per-entry
+        10 remark established connections
+        20 permit tcp any 10.10.10.0/24 established [match=66]
+        30 remark Test
+        40 permit tcp 1.1.1.1/32 any eq 80 [match=0]
+        50 permit tcp 2.2.2.2/32 any eq 443 [match=0]
+        60 remark Allow NAT IP
+        70 permit tcp 3.3.3.3/32 any eq 80 [match=0]
+        80 remark TestRemark
+        90 permit tcp 4.4.4.4/32 any eq 443 [match=0]
+        100 remark Test Remark
+        110 permit tcp 5.5.5.5/32 any eq 80 [match=0]
+        120 remark AnotherOne
+        130 permit tcp 6.6.6.6/32 any eq 443 [match=0]
+        140 remark addTest: contains list should not become name
+        150 remark addTest: dont "miss" 'me'
