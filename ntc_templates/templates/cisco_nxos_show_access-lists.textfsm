@@ -23,7 +23,7 @@ Value MODIFIER (.*)
 Value REMARK (.*)
 
 Start
-  # ACL name is catched. This is a FILLDOWN value, so every other line without a NAME would inherits the last value matched.
+  # ACL name is matched not starting with space. FILLDOWN, other line's inherit last NAME
   ^[^\s].*\slist\s+${NAME}$$
   # Catch remarks as uniq type, capture Action first and then Action=remark
   ^\s+${SN}\s+${ACTION}\s -> Continue
