@@ -1,0 +1,15 @@
+Value Required VLAN (\S+)
+Value Required PRIORITY (\S+)
+Value Required ROOT_ID (\S+)
+Value Required ROOT_COST (\d+)
+Value Required HELLO_TIME (\d+)
+Value Required MAX_AGE (\d+)
+Value Required FWD_DLY (\d+)
+Value Required ROOT_PORT (.*)
+
+Start
+  ^\s*Root\s*Hello\s*Max\s*Fwd$$
+  ^\s*Vlan\s*Root\sID\s*Cost\s*Time\s*Age\s*Dly\s*Root\s*Port$$
+  ^\s*- 
+  ^\s*${VLAN}\s+${PRIORITY}\s+${ROOT_ID}+\s+${ROOT_COST}+\s+${HELLO_TIME}+\s+${MAX_AGE}+\s+${FWD_DLY}+\s+${ROOT_PORT} -> Record
+ ^. -> Error
