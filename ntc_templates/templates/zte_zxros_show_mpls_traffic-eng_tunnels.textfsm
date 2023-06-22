@@ -13,6 +13,7 @@ Value SRC (\S+)
 Value DST (\S+)
 Value ID (\d+)
 Value INSTANCE (\d+)
+Value List IP_ROUTE (\d+\.\d+\.\d+\.\d+|NONE)
 
 
 Start
@@ -24,3 +25,13 @@ Start
   ^\s+InLabel:\s+${INLABEL}(,\s+${INLABEL_ID})?\s*$$
   ^\s+OutLabel:\s+${OUTLABEL}(,\s+${OUTLABEL_ID})?\s*$$
   ^\s+Src\s+${SRC},\s+Dst\s+${DST},\s+Tun-ID\s+${ID},\s+Tun-Instance\s+${INSTANCE}\s*$$
+  ^\s+Explicit\s+Route:\s+${IP_ROUTE},* -> Continue
+  ^\s+Explicit\s+(?:\S+\s+){2}${IP_ROUTE},* -> Continue
+  ^\s+Explicit\s+(?:\S+\s+){3}${IP_ROUTE},* -> Continue
+  ^\s+Explicit\s+(?:\S+\s+){4}${IP_ROUTE},* -> Continue
+  ^\s+Explicit\s+(?:\S+\s+){5}${IP_ROUTE},* -> Continue
+  ^\s+${IP_ROUTE},* -> Continue
+  ^\s+\d+\.\d+\.\d+\.\d+\s+${IP_ROUTE},* -> Continue
+  ^\s+(?:\d+\.\d+\.\d+\.\d+\s+){2}${IP_ROUTE},* -> Continue
+  ^\s+(?:\d+\.\d+\.\d+\.\d+\s+){3}${IP_ROUTE},* -> Continue
+  ^\s+(?:\d+\.\d+\.\d+\.\d+\s+){4}${IP_ROUTE},* -> Continue
