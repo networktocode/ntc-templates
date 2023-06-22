@@ -9,7 +9,7 @@ Value NEXT_HOP ([A-Fa-f0-9:\.]+)
 Value METRIC (\d+)
 Value LOCAL_PREF (\d+)
 Value WEIGHT (\d+)
-Value AS_PATH (\d+(\s\d+)*)
+Value AS_PATH (\d+(\s.*?)*)
 # Origin codes: i - IGP, e - EGP, ? - incomplete, | - multipath, & - backup
 Value ORIGIN ([ie\?\|&])
 
