@@ -1,0 +1,28 @@
+Type Codes:  SRC - source, DST - destination, MASQ - masquerade
+              X at the front of rule implies rule is excluded
+
+rule   type  intf     translation                                               
+----   ----  ----     -----------                                               
+1      DST   pppoe4   daddr 23.90.233.198 to 192.168.1.100                      
+    proto-tcp         dport 8080 to 80                                              
+
+2      DST   pppoe4   daddr 23.90.233.198 to 192.168.1.231                      
+    proto-tcp         dport 65001 to 3389                                           
+
+3      DST   pppoe4   daddr 23.90.233.198 to 192.168.1.2                        
+    proto-tcp         dport 6666 to 6666                                            
+
+4      DST   pppoe4   daddr 23.90.233.198 to 192.168.1.111                      
+    proto-tcp_udp     dport 83 to 83                                                
+
+5      DST   pppoe4   daddr 23.90.233.198 to 192.168.1.110                      
+    proto-tcp_udp     dport 80 to 80                                                
+
+6      DST   pppoe4   daddr 23.90.233.198 to 192.168.1.1                        
+    proto-tcp_udp     dport 81 to 81                                                
+
+5001   MASQ  pppoe4   saddr 192.168.1.0/24 to 23.90.233.198                     
+    proto-all         sport ANY                                                     
+
+5002   MASQ  pppoe4   saddr 192.168.42.0/24 to 23.90.233.198                    
+    proto-all         sport ANY
