@@ -1,4 +1,4 @@
-Value Required INTF (\S+)
+Value Required INTERFACE (\S+)
 Value LINE_STATUS (UP|DOWN|Administratively DOWN)
 Value PROTOCOL_STATUS (UP(\(spoofing\))?|DOWN)
 Value List IP_ADDRESS (\S+)
@@ -16,9 +16,9 @@ Value List VLAN_PERMITTED ([^,]+)
 
 Start
   #^\S+$$.Record
-  ^\s*${INTF}$$
+  ^\s*${INTERFACE}$$
   ^\s*Current\s+state:\s+${LINE_STATUS}
-  ^\s*${INTF}\s+current\s+state\s*:\s*${LINE_STATUS}
+  ^\s*${INTERFACE}\s+current\s+state\s*:\s*${LINE_STATUS}
   ^\s*Line\s+protocol\s+state:\s+${PROTOCOL_STATUS}
   ^\s*Line\s+protocol\s+current\s+state:\s+${PROTOCOL_STATUS}
   ^\s*Description:\s+${DESCRIPTION}

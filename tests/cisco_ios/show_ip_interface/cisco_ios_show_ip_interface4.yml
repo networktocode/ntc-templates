@@ -1,7 +1,7 @@
 ---
 parsed_sample:
   - inbound_acl: ""
-    intf: "Loopback0"
+    interface: "Loopback0"
     ip_helper: []
     ipaddr:
       - "10.0.0.0"
@@ -13,7 +13,7 @@ parsed_sample:
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
-    intf: "Virtual-Access1"
+    interface: "Virtual-Access1"
     ip_helper: []
     ipaddr: []
     link_status: "up"
@@ -23,7 +23,7 @@ parsed_sample:
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
-    intf: "Virtual-Access2"
+    interface: "Virtual-Access2"
     ip_helper: []
     ipaddr: []
     link_status: "up"
@@ -33,7 +33,7 @@ parsed_sample:
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
-    intf: "Serial0/0/0:0"
+    interface: "Serial0/0/0:0"
     ip_helper: []
     ipaddr:
       - "172.1.1.110"

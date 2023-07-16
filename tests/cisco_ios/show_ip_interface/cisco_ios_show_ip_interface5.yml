@@ -1,12 +1,12 @@
 ---
 parsed_sample:
-  - intf: "Tunnel500"
-    link_status: "up"
-    protocol_status: "down"
-    ipaddr: []
-    mask: []
-    vrf: ""
-    mtu: "1456"
+  - inbound_acl: ""
+    interface: "Tunnel500"
     ip_helper: []
+    ipaddr: []
+    link_status: "up"
+    mask: []
+    mtu: "1456"
     outgoing_acl: ""
-    inbound_acl: ""
+    protocol_status: "down"
+    vrf: ""

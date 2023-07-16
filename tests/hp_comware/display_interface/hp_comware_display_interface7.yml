@@ -1,19 +1,19 @@
 ---
 parsed_sample:
-  - intf: "GigabitEthernet1/1/0/48"
-    line_status: "UP"
-    protocol_status: "UP"
+  - bandwidth: "1000000 kbps"
+    description: "Internal-LAN"
+    duplex: "full-duplex"
     hw_address:
       - "7848-5900-0085"
-    description: "Internal-LAN"
-    bandwidth: "1000000 kbps"
-    speed: "1000Mbps-speed"
-    duplex: "full-duplex"
-    mtu: ""
-    l2mtu: "1536"
-    vlan_native: "1"
+    interface: "GigabitEthernet1/1/0/48"
     ip_address: []
+    l2mtu: "1536"
+    line_status: "UP"
+    mtu: ""
     port_link_type: "Trunk"
+    protocol_status: "UP"
+    speed: "1000Mbps-speed"
+    vlan_native: "1"
     vlan_passing:
       - "4050"
     vlan_permitted:
