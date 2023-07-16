@@ -3,7 +3,7 @@ Value MAC_ADDRESS ((\w+-?)+)
 Value EXPIRE (\d+)
 Value TYPE (I\s-|[DS][F-][\d\s])
 Value INTERFACE (\S+)
-Value VLAN (\d+/(\d+|-))
+Value VLAN_ID (\d+/(\d+|-))
 Value PVC (\S+)
 
 Start
@@ -11,7 +11,7 @@ Start
   ^\s+VLAN.+$$ -> Next
   ^-+ -> Next
   ^\s*\d+.\d+.\d+.\d+ -> Continue.Record
-  ^\s*${IP_ADDRESS}\s+(${MAC_ADDRESS}\s+)?(${EXPIRE}\s+)?${TYPE}\s+${INTERFACE}(\s+${VLAN})?(\s+${PVC})?\s*$$
-  ^\s*${VLAN}(\s+${PVC})?\s*$$
+  ^\s*${IP_ADDRESS}\s+(${MAC_ADDRESS}\s+)?(${EXPIRE}\s+)?${TYPE}\s+${INTERFACE}(\s+${VLAN_ID})?(\s+${PVC})?\s*$$
+  ^\s*${VLAN_ID}(\s+${PVC})?\s*$$
   ^Total:.+$$ -> Next
   ^.*$$ -> Error

@@ -1,5 +1,5 @@
 Value MAC (\S+)
-Value VLAN (\d+)
+Value VLAN_ID (\d+)
 Value TYPE (\S+)
 Value PORT (\S+)
 
@@ -8,6 +8,6 @@ Start
   ^Number\s+of\s+MAC.*$$
   ^MAC\s+Address\s+VLAN\s+Type\s+Port
   ^-+$$
-  ^${MAC}\s+${VLAN}\s+${TYPE}\s+${PORT} -> Record
+  ^${MAC}\s+${VLAN_ID}\s+${TYPE}\s+${PORT} -> Record
   ^\s*$$
   ^. -> Error
