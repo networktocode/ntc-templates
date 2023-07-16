@@ -1,33 +1,33 @@
-Value Key index (\d+)
-Value flags ([XID]+)
-Value comment (\S+[\S ]*\S)
-Value chain (input|forward|output)
-Value action (accept|add-dst-to-address-list|add-src-to-address-list|drop|fasttrack-connection|jump|log|passthrough|reject|return|tarpit)
-Value hw_offload (yes|no)
-Value connection_state (\S+)
-Value connection_nat_state (\S+)
-Value protocol (!?(dccp|egp|etherip|gre|icmp|idpr-cmtp|ipencap|ipsec-ah|ipv6-encap|ipv6-nonxt|ipv6-route|l2tp|pim|rdp|rsvp|st|udp|vmtp|xns-idp|ddp|encap|ggp|hmp|icmpv6|igmp|ipip|ipsec-esp|ipv6-frag|ipv6-opts|iso-tp4|ospf|pup|rspf|sctp|tcp|udp-lite|vrrp|xtp))
-Value src_address ([\w!.:/\d]+)
-Value src_address_list (\S+)
-Value src_port (\S+)
-Value in_interface_list (\S+)
-Value out_interface_list (\S+)
-Value in_interface (\S+)
-Value out_interface (\S+)
-Value ipsec_policy (\S+)
-Value dst_address ([\w!.:/\d]+)
-Value dst_address_list (\S+)
-Value dst_port (\S+)
-Value src_mac_address (\S+)
-Value log (yes|no)
-Value log_prefix ((\S+[\S ]+)?)
+Value Key INDEX (\d+)
+Value FLAGS ([XID]+)
+Value COMMENT (\S+[\S ]*\S)
+Value CHAIN (input|forward|output)
+Value ACTION (accept|add-dst-to-address-list|add-src-to-address-list|drop|fasttrack-connection|jump|log|passthrough|reject|return|tarpit)
+Value HW_OFFLOAD (yes|no)
+Value CONNECTION_STATE (\S+)
+Value CONNECTION_NAT_STATE (\S+)
+Value PROTOCOL (!?(dccp|egp|etherip|gre|icmp|idpr-cmtp|ipencap|ipsec-ah|ipv6-encap|ipv6-nonxt|ipv6-route|l2tp|pim|rdp|rsvp|st|udp|vmtp|xns-idp|ddp|encap|ggp|hmp|icmpv6|igmp|ipip|ipsec-esp|ipv6-frag|ipv6-opts|iso-tp4|ospf|pup|rspf|sctp|tcp|udp-lite|vrrp|xtp))
+Value SRC_ADDRESS ([\w!.:/\d]+)
+Value SRC_ADDRESS_LIST (\S+)
+Value SRC_PORT (\S+)
+Value IN_INTERFACE_LIST (\S+)
+Value OUT_INTERFACE_LIST (\S+)
+Value IN_INTERFACE (\S+)
+Value OUT_INTERFACE (\S+)
+Value IPSEC_POLICY (\S+)
+Value DST_ADDRESS ([\w!.:/\d]+)
+Value DST_ADDRESS_LIST (\S+)
+Value DST_PORT (\S+)
+Value SRC_MAC_ADDRESS (\S+)
+Value LOG (yes|no)
+Value LOG_PREFIX ((\S+[\S ]+)?)
 
 Start
   ^Flags:.*$$ -> FirewallTable
 
 FirewallTable
-  ^\s?${index}\s+(${flags})?\s+;;;\s${comment}
-  ^\s+chain=${chain}(\saction=${action})?(\shw-offload=${hw_offload})?(\sconnection-state=${connection_state})?(\sconnection-nat-state=${connection_nat_state})?\s*(\sprotocol=${protocol})?(\ssrc-address=${src_address})?(\sdst-address=${dst_address})?(\ssrc-address-list=${src_address_list})?(\sdst-address-list=${dst_address_list})?(\sin-interface-list=${in_interface_list})?(\sout-interface-list=${out_interface_list})?(\ssrc-port=${src_port})?(\sdst-port=${dst_port})?(\ssrc-mac-address=${src_mac_address})?(\sin-interface=${in_interface})?(\sout-interface=${out_interface})?(\sipsec-policy=${ipsec_policy})?(\slog=${log})?(\slog-prefix="${log_prefix}")?\s*$$ -> Record
-  ^\s?${index}\s+(${flags})?\s+chain=${chain}(\saction=${action})?(\shw-offload=${hw_offload})?(\sconnection-state=${connection_state})?(\sconnection-nat-state=${connection_nat_state})?(\sprotocol=${protocol})?(\ssrc-address=${src_address})?(\sdst-address=${dst_address})?(\ssrc-address-list=${src_address_list})?(\sdst-address-list=${dst_address_list})?(\sin-interface-list=${in_interface_list})?(\sout-interface-list=${out_interface_list})?(\ssrc-port=${src_port})?(\sdst-port=${dst_port})?(\ssrc-mac-address=${src_mac_address})?(\sin-interface=${in_interface})?(\sout-interface=${out_interface})?(\sipsec-policy=${ipsec_policy})?(\slog=${log})?(\slog-prefix="${log_prefix}")?\s*$$ -> Record
+  ^\s?${INDEX}\s+(${FLAGS})?\s+;;;\s${COMMENT}
+  ^\s+chain=${CHAIN}(\saction=${ACTION})?(\shw-offload=${HW_OFFLOAD})?(\sconnection-state=${CONNECTION_STATE})?(\sconnection-nat-state=${CONNECTION_NAT_STATE})?\s*(\sprotocol=${PROTOCOL})?(\ssrc-address=${SRC_ADDRESS})?(\sdst-address=${DST_ADDRESS})?(\ssrc-address-list=${SRC_ADDRESS_LIST})?(\sdst-address-list=${DST_ADDRESS_LIST})?(\sin-interface-list=${IN_INTERFACE_LIST})?(\sout-interface-list=${OUT_INTERFACE_LIST})?(\ssrc-port=${SRC_PORT})?(\sdst-port=${DST_PORT})?(\ssrc-mac-address=${SRC_MAC_ADDRESS})?(\sin-interface=${IN_INTERFACE})?(\sout-interface=${OUT_INTERFACE})?(\sipsec-policy=${IPSEC_POLICY})?(\slog=${LOG})?(\slog-prefix="${LOG_PREFIX}")?\s*$$ -> Record
+  ^\s?${INDEX}\s+(${FLAGS})?\s+chain=${CHAIN}(\saction=${ACTION})?(\shw-offload=${HW_OFFLOAD})?(\sconnection-state=${CONNECTION_STATE})?(\sconnection-nat-state=${CONNECTION_NAT_STATE})?(\sprotocol=${PROTOCOL})?(\ssrc-address=${SRC_ADDRESS})?(\sdst-address=${DST_ADDRESS})?(\ssrc-address-list=${SRC_ADDRESS_LIST})?(\sdst-address-list=${DST_ADDRESS_LIST})?(\sin-interface-list=${IN_INTERFACE_LIST})?(\sout-interface-list=${OUT_INTERFACE_LIST})?(\ssrc-port=${SRC_PORT})?(\sdst-port=${DST_PORT})?(\ssrc-mac-address=${SRC_MAC_ADDRESS})?(\sin-interface=${IN_INTERFACE})?(\sout-interface=${OUT_INTERFACE})?(\sipsec-policy=${IPSEC_POLICY})?(\slog=${LOG})?(\slog-prefix="${LOG_PREFIX}")?\s*$$ -> Record
   ^\s*(?:\d{2}:){2}\d{2}\s+echo:\s*.*$$ -> Next
   ^. -> Error

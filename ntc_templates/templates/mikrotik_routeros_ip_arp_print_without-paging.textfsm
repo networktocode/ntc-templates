@@ -1,13 +1,13 @@
-Value Key index (\d+)
-Value flags ([XIHDPC]+)
-Value ip (\S+)
-Value mac (([0-9a-fA-F]{2}[:]){5}([0-9a-fA-F]{2}))
-Value interface (\S+)
+Value Key INDEX (\d+)
+Value FLAGS ([XIHDPC]+)
+Value IP (\S+)
+Value MAC (([0-9a-fA-F]{2}[:]){5}([0-9a-fA-F]{2}))
+Value INTERFACE (\S+)
 
 Start
   ^\s*#\s*ADDRESS\s*MAC-ADDRESS\s*INTERFACE\s*$$ -> EntriesTable
 
 EntriesTable
-  ^\s*${index}\s*(${flags})?\s*${ip}\s*(${mac})?\s+(${interface})?\s*$$ -> Record
+  ^\s*${INDEX}\s*(${FLAGS})?\s*${IP}\s*(${MAC})?\s+(${INTERFACE})?\s*$$ -> Record
   ^\s*(?:\d{2}:){2}\d{2}\s+echo:\s*.*$$ -> Next
   ^. -> Error

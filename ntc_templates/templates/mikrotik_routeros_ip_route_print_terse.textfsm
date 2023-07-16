@@ -1,15 +1,15 @@
-Value Key index (\d+)
-Value flags ([XADCSrbomBUP ]+)
-Value comment (.*)
-Value dst_address ([\w.:/\d]+)
-Value pref_src (\S+?)
-Value gateway (\S+)
-Value gateway_status (.+)
-Value distance (\d+)
-Value scope (\d+)
-Value target_scope (\d+)
+Value Key INDEX (\d+)
+Value FLAGS ([XADCSrbomBUP ]+)
+Value COMMENT (.*)
+Value DST_ADDRESS ([\w.:/\d]+)
+Value PREF_SRC (\S+?)
+Value GATEWAY (\S+)
+Value GATEWAY_STATUS (.+)
+Value DISTANCE (\d+)
+Value SCOPE (\d+)
+Value TARGET_SCOPE (\d+)
 
 Start
-  ^\s?${index}\s${flags}\s\s(comment=${comment}\s)?dst-address=${dst_address}(\spref-src=${pref_src})?\sgateway=${gateway}\sgateway-status=${gateway_status}\sdistance=${distance}\sscope=${scope}(\starget-scope=${target_scope})?.*$$ -> Record
+  ^\s?${INDEX}\s${FLAGS}\s\s(comment=${COMMENT}\s)?dst-address=${DST_ADDRESS}(\spref-src=${PREF_SRC})?\sgateway=${GATEWAY}\sgateway-status=${GATEWAY_STATUS}\sdistance=${DISTANCE}\sscope=${SCOPE}(\starget-scope=${TARGET_SCOPE})?.*$$ -> Record
   ^\s*(?:\d{2}:){2}\d{2}\s+echo:\s*.*$$ -> Next
   ^. -> Error

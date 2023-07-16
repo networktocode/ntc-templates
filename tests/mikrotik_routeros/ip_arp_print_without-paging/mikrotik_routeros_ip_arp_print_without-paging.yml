@@ -1,12 +1,12 @@
 ---
 parsed_sample:
-  - index: "0"
-    flags: "D"
+  - flags: "D"
+    index: "0"
+    interface: "dmz-1-vlan"
     ip: "185.163.212.158"
     mac: ""
-    interface: "dmz-1-vlan"
-  - index: "1"
-    flags: ""
+  - flags: ""
+    index: "1"
+    interface: "vlan-2"
     ip: "185.163.212.159"
     mac: "AF:D6:C8:F2:36:16"
-    interface: "vlan-2"

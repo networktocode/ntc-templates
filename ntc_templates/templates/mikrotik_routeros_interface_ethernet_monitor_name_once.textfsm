@@ -1,23 +1,23 @@
-Value name (\S+)
-Value status (\S+)
-Value auto_negotiation (\S+)
-Value rate (\S+)
-Value full_duplex (\S+)
-Value tx_flow_control (\S+)
-Value rx_flow_control (\S+)
-Value advertising (\S+)
-Value link_partner_advertising (\S+)
+Value NAME (\S+)
+Value STATUS (\S+)
+Value AUTO_NEGOTIATION (\S+)
+Value RATE (\S+)
+Value FULL_DUPLEX (\S+)
+Value TX_FLOW_CONTROL (\S+)
+Value RX_FLOW_CONTROL (\S+)
+Value ADVERTISING (\S+)
+Value LINK_PARTNER_ADVERTISING (\S+)
 
 Start
-  ^\s*name:\s${name}
-  ^\s*status:\s${status}
-  ^\s*auto-negotiation:\s${auto_negotiation}
-  ^\s*rate:\s${rate}
-  ^\s*full-duplex:\s${full_duplex}
-  ^\s*tx-flow-control:\s${tx_flow_control}
-  ^\s*rx-flow-control:\s${rx_flow_control}
-  ^\s*advertising:\s${advertising}
+  ^\s*name:\s${NAME}
+  ^\s*status:\s${STATUS}
+  ^\s*auto-negotiation:\s${AUTO_NEGOTIATION}
+  ^\s*rate:\s${RATE}
+  ^\s*full-duplex:\s${FULL_DUPLEX}
+  ^\s*tx-flow-control:\s${TX_FLOW_CONTROL}
+  ^\s*rx-flow-control:\s${RX_FLOW_CONTROL}
+  ^\s*advertising:\s${ADVERTISING}
   ^\s*link-partner-advertising:\s*$$
-  ^\s*link-partner-advertising:\s${link_partner_advertising}$$
+  ^\s*link-partner-advertising:\s${LINK_PARTNER_ADVERTISING}$$
   ^\s*(?:\d{2}:){2}\d{2}\s+echo:\s*.*$$ -> Next
   ^. -> Error
