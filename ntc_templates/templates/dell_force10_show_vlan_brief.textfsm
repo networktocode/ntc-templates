@@ -1,5 +1,5 @@
 Value VLAN_ID (\d+)
-Value NAME (\S+(\s\S+)*)
+Value VLAN_NAME (\S+(\s\S+)*)
 Value STG (\d+)
 Value MAC_AGING (\d+)
 Value IP ((?:[0-9]{1,3}\.){3}[0-9]{1,3}(/\d{1,2})?|\w+)
@@ -8,4 +8,4 @@ Start
   ^\s*VLAN\s+Name -> VLAN
 
 VLAN
-  ^\s*${VLAN_ID}\s+${NAME}?\s+${STG}\s+${MAC_AGING}\s+${IP} -> Record
+  ^\s*${VLAN_ID}\s+${VLAN_NAME}?\s+${STG}\s+${MAC_AGING}\s+${IP} -> Record

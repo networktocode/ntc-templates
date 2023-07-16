@@ -1,5 +1,5 @@
 Value Required VLAN_ID (\d+)
-Value NAME (\S+)
+Value VLAN_NAME (\S+)
 Value STATUS (active|suspended)
 Value List INTERFACES ([\w\./]+)
 
@@ -9,8 +9,8 @@ Start
 
 VLANS
   ^\d+ -> Continue.Record
-  ^${VLAN_ID}\s+${NAME}\s+${STATUS}\s*$$
-  ^${VLAN_ID}\s+${NAME}\s+${STATUS}\s+${INTERFACES},* -> Continue
+  ^${VLAN_ID}\s+${VLAN_NAME}\s+${STATUS}\s*$$
+  ^${VLAN_ID}\s+${VLAN_NAME}\s+${STATUS}\s+${INTERFACES},* -> Continue
   ^\d+\s+(?:\S+\s+){3}${INTERFACES},* -> Continue
   ^\d+\s+(?:\S+\s+){4}${INTERFACES},* -> Continue
   ^\d+\s+(?:\S+\s+){5}${INTERFACES},* -> Continue
