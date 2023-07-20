@@ -1,4 +1,5 @@
 Value NEIGHBOR (\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})
+Value PEER_GROUP (\S+)
 Value DESCRIPTION (.*)
 Value ASN (\d+)
 Value BGP_STATE ([\(\)\w\s]+)
@@ -54,6 +55,7 @@ Value OUTBOUND_ROUTEMAP (\S+)
 Start
   ^BGP\s+neighbor\s+is -> Continue.Record
   ^BGP neighbor is ${NEIGHBOR},\s+remote AS\s+${ASN},.*
+  ^\s+Inherits.+\s${PEER_GROUP}
   ^\s+Description:\s+${DESCRIPTION}
   ^\s+BGP state = ${BGP_STATE}, \w+ for ${UPTIME}
   ^\s+Using ${SOURCE_IFACE} as [\w\s]+
