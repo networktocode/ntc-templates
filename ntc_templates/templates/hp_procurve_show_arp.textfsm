@@ -4,7 +4,14 @@ Value TYPE (\S+)
 Value PORT (\S+)
 
 Start
-  ^.*IP ARP table -> ARP
+  ^.*IP ARP table
+  ^.*IP Address -> ARP
+  ^\s*$$
+  ^. -> Error
 
 ARP
   ^\s+${IP}\s+${MAC}\s+${TYPE}\s+${PORT} -> Record
+  ^\s+${IP}\s+${MAC}\s+${TYPE} -> Record
+  ^\s*------
+  ^\s*$$
+  ^. -> Error
