@@ -1,0 +1,17 @@
+ Internet (IP) Service
+
+  IP Routing : Disabled
+
+  Default Gateway : 10.11.11.254   
+  Default TTL     : 64   
+  Arp Age         : 20  
+  Domain Suffix   :                               
+  DNS server      :                                         
+
+                       |                                            Proxy ARP 
+  VLAN                 | IP Config  IP Address      Subnet Mask     Std  Local
+  -------------------- + ---------- --------------- --------------- ----------
+  DEFAULT_VLAN         | Disabled 
+  ISP                  | Disabled 
+  ISP 1                | Disabled 
+  MGMTVLAN             | Manual     10.11.11.200    255.255.255.0    No    No
