@@ -90,6 +90,7 @@ Start
 AddrFamCap
   ^\s+${ADDR_FAM_ADV} -> Start
   ^BGP\s+neighbor\s+is -> Continue.Record
+  ^BGP\s+neighbor\s+is\s+${NEIGHBOR},\s+remote AS\s+${ASN},.* -> Continue
   ^BGP\s+neighbor\s+is\s+${NEIGHBOR},\s+remote\s+AS\s+${REMOTE_ASN},\s+local\s+AS\s+${LOCAL_ASN}.* -> Start
   ^BGP\s+neighbor\s+is\s+${NEIGHBOR},\s+remote\s+AS\s+${REMOTE_ASN},.* -> Start
 
@@ -105,5 +106,6 @@ AddrFamState
   ^\s+Foreign host:\s+${REMOTE_IP}, Foreign port:\s+${REMOTE_PORT}
   ^\s+No\s+established\s+BGP\s+session\s+with\s+peer
   ^BGP\s+neighbor\s+is -> Continue.Record
+  ^BGP\s+neighbor\s+is\s+${NEIGHBOR},\s+remote AS\s+${ASN},.* -> Continue
   ^BGP\s+neighbor\s+is\s+${NEIGHBOR},\s+remote\s+AS\s+${REMOTE_ASN},\s+local\s+AS\s+${LOCAL_ASN}.* -> Start
   ^BGP\s+neighbor\s+is\s+${NEIGHBOR},\s+remote\s+AS\s+${REMOTE_ASN},.* -> Start
