@@ -90,9 +90,7 @@ Start
 AddrFamCap
   ^\s+${ADDR_FAM_ADV} -> Start
   ^BGP\s+neighbor\s+is -> Continue.Record
-  ^BGP\s+neighbor\s+is\s+${NEIGHBOR},\s+remote AS\s+${ASN},.* -> Continue
-  ^BGP\s+neighbor\s+is\s+${NEIGHBOR},\s+remote\s+AS\s+${REMOTE_ASN},\s+local\s+AS\s+${LOCAL_ASN}.* -> Start
-  ^BGP\s+neighbor\s+is\s+${NEIGHBOR},\s+remote\s+AS\s+${REMOTE_ASN},.* -> Start
+  ^BGP\s+neighbor\s+is\s+${NEIGHBOR},\s+remote\s+AS\s+${ASN},.* -> Start
 
 AddrFamState
   ^\s+For address family:\s+${ADDR_FAMILY}
