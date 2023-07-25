@@ -56,9 +56,9 @@ Value OUTBOUND_ROUTEMAP (\S+)
 
 Start
   ^BGP\s+neighbor\s+is -> Continue.Record
-  ^BGP neighbor is ${NEIGHBOR},\s+remote AS\s+${ASN},.* -> Continue
-  ^BGP neighbor is ${NEIGHBOR},\s+remote AS\s+${REMOTE_ASN},\slocal\s+AS\s+${LOCAL_ASN}.*
-  ^BGP neighbor is ${NEIGHBOR},\s+remote AS\s+${REMOTE_ASN},.*
+  ^BGP\s+neighbor\s+is\s+${NEIGHBOR},\s+remote\s+AS\s+${ASN},.* -> Continue
+  ^BGP\s+neighbor\s+is\s+${NEIGHBOR},\s+remote\s+AS\s+${REMOTE_ASN},\s+local\s+AS\s+${LOCAL_ASN}.*
+  ^BGP\s+neighbor\s+is\s+${NEIGHBOR},\s+remote\s+AS\s+${REMOTE_ASN},.*
   ^\s+Inherits.+\s${PEER_GROUP}
   ^\s+Description:\s+${DESCRIPTION}
   ^\s+BGP state = ${BGP_STATE}, \w+ for ${UPTIME}
@@ -104,6 +104,6 @@ AddrFamState
   ^\s+Foreign host:\s+${REMOTE_IP}, Foreign port:\s+${REMOTE_PORT}
   ^\s+No\s+established\s+BGP\s+session\s+with\s+peer
   ^BGP\s+neighbor\s+is -> Continue.Record
-  ^BGP\s+neighbor\s+is\s+${NEIGHBOR},\s+remote AS\s+${ASN},.* -> Continue
+  ^BGP\s+neighbor\s+is\s+${NEIGHBOR},\s+remote\s+AS\s+${ASN},.* -> Continue
   ^BGP\s+neighbor\s+is\s+${NEIGHBOR},\s+remote\s+AS\s+${REMOTE_ASN},\s+local\s+AS\s+${LOCAL_ASN}.* -> Start
   ^BGP\s+neighbor\s+is\s+${NEIGHBOR},\s+remote\s+AS\s+${REMOTE_ASN},.* -> Start
