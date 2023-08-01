@@ -13,7 +13,7 @@ This is a quick reference guide if you're already familiar with the development 
 
 The [Invoke](http://www.pyinvoke.org/) library is used to provide some helper commands based on the environment. There are a few configuration parameters which can be passed to Invoke to override the default configuration:
 
-- `local`: a boolean flag indicating if invoke tasks should be run on the host or inside the docker containers (default: False, commands will be run in docker containers)
+- `--local`: a boolean flag indicating if invoke tasks should be run on the host or inside the docker containers (default: False, when ommitting `--local` tasks will be run in docker containers) [Local testing example](dev_parser.md#local-testing)
 
 Using **Invoke** these configuration options can be overridden using [several methods](https://docs.pyinvoke.org/en/stable/concepts/configuration.html). Perhaps the simplest is setting an environment variable `INVOKE_NETUTILS_VARIABLE_NAME` where `VARIABLE_NAME` is the variable you are trying to override. There is an example `invoke.yml` (`invoke.example.yml`) in this directory which can be used as a starting point.
 
