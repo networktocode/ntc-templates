@@ -8,6 +8,7 @@
 #
 #
 Value Filldown NAME (\S+)
+Value Filldown TYPE (\S+)
 Value Required SN (\d+)
 Value ACTION (\w+)
 Value PROTOCOL (\w+)
@@ -18,11 +19,13 @@ Value SOURCE (host\s\d+\.\d+\.\d+\.\d+|any|\d+\.\d+\.\d+\.\d+\s\d+\.\d+\.\d+\.\d
 #
 # We can specify protocols to match. 'eq', 'gt', 'lt', 'range' and 'neq' are supported.
 #
-Value PORT (eq|gt|lt|neq|range)
+Value OPERATOR_SOURCE_PORT (eq|gt|lt|neq|range)
+Value OPERATOR_DESTINATION_PORT (eq|gt|lt|neq|range)
 #
 # This can be either a single port or a list.
 #
-Value RANGE ([(\S+\s\S+)]+)
+Value SOURCE_PORT ([\s\S]+)
+Value DESTINATION_PORT ([\s\S]+)
 #
 # DESTINATION RegEx must be able to catch every possible source combination including masks. 'any' and 'host' and 'wildcard bits' are possible too.
 #
@@ -32,10 +35,13 @@ Value MODIFIER ((\w+\s)?\w+)
 Value MATCHES (\d+)
 
 Start
-  ^.*list\s+${NAME}
+  ^${TYPE}.*list\s+${NAME}
+  ^\s+${SN}\s+${ACTION}\s+${PROTOCOL}\s+${SOURCE}\s+${OPERATOR_SOURCE_PORT}\s${SOURCE_PORT}\s${DESTINATION}\s${OPERATOR_DESTINATION_PORT}\s${DESTINATION_PORT} -> Record
+  ^\s+${SN}\s+${ACTION}\s+${PROTOCOL}\s+${SOURCE}\s+${DESTINATION}(\s+${OPERATOR_SOURCE_PORT})*(\s${SOURCE_PORT})* -> Record
   ^\s+${SN}\s+${ACTION}\s+${PROTOCOL}\s+${SOURCE}(\s+${PORT})*(\s${RANGE})*\s+${DESTINATION}(\s+${MODIFIER})* -> Record
+  ^\s+${SN}\s+${ACTION}\s+${PROTOCOL}\s+${SOURCE}(\s+${OPERATOR_SOURCE_PORT})*(\s${SOURCE_PORT})*\s+${DESTINATION}(\s+${MODIFIER})* -> Record
   ^\s*${SN}\s+${ACTION}\s+${SOURCE}(\s+${MODIFIER}(\s\(${MATCHES} matches\))?)? -> Record
-  # Capture time-stamp if vty line has command time-stamping turned on
+  ^\s+${SN}\s+${ACTION}\s+${SOURCE}(\s+${MODIFIER})* -> Record
   ^Load\s+for\s+
   ^Time\s+source\s+is
   ^\s*$$

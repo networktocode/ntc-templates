@@ -20,4 +20,7 @@ Extended IP access list ciao
     10 permit tcp any eq www whois uucp domain ident host 10.10.10.10 tos normal
     20 deny tcp any eq www any log
     30 deny tcp any range www domain 10.10.10.10 0.0.0.255
-
+Standard IP access list 10
+    10 permit 192.168.1.0, wildcard bits 0.0.0.255 (5177 matches)
+    16 deny udp host 192.168.1.3 host 192.168.2.12 range 12 15
+    17 deny tcp host 192.168.1.12 eq 12 host 192.168.2.30 eq 40
