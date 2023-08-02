@@ -9,7 +9,7 @@ Value IP_ADDRESS (\d.*)
 Value INTERFACE (.*)
 Value RADIO_SIGNAL_STRENGTH_INDICATOR (\S+)
 Value SIGNAL_TO_NOISE_RATIO (\d+)
-Value VLAN (.*)
+Value VLAN_ID (.*)
 
 
 Start
@@ -23,7 +23,7 @@ Start
   ^\s+Radio\s+Signal\s+Strength\s+Indicator\s*\.+\s*${RADIO_SIGNAL_STRENGTH_INDICATOR}\s+dBm\s*$$
   ^Interface\s*\.+\s*${INTERFACE}\s*$$
   ^\s+Signal\s+to\s+Noise\s+Ratio\s*\.+\s*${SIGNAL_TO_NOISE_RATIO}\s+dB\s*$$
-  ^VLAN\s*\.+\s*${VLAN}\s*$$
+  ^VLAN\s*\.+\s*${VLAN_ID}\s*$$
   ^.+\.+
   ^\s+AP.+\(.+\)
   ^Client\s+Capabilities:

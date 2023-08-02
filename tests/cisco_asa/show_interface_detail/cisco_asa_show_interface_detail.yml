@@ -67,7 +67,7 @@ parsed_sample:
     txring_packets: []
     txring_underrun: []
     underruns: "0"
-    vlan: ""
+    vlan_id: ""
   - abort: "0"
     address: "f0f7.5543.a523"
     bandwidth: "1000 Mbps"
@@ -135,7 +135,7 @@ parsed_sample:
     txring_packets: []
     txring_underrun: []
     underruns: "0"
-    vlan: ""
+    vlan_id: ""
   - abort: "0"
     address: "f0f7.5543.a524"
     bandwidth: "1000 Mbps"
@@ -203,7 +203,7 @@ parsed_sample:
     txring_packets: []
     txring_underrun: []
     underruns: "0"
-    vlan: ""
+    vlan_id: ""
   - abort: "0"
     address: "f0f7.5543.a525"
     bandwidth: "1000 Mbps"
@@ -271,7 +271,7 @@ parsed_sample:
     txring_packets: []
     txring_underrun: []
     underruns: "0"
-    vlan: ""
+    vlan_id: ""
   - abort: "0"
     address: "f0f7.5543.a526"
     bandwidth: "1000 Mbps"
@@ -339,7 +339,7 @@ parsed_sample:
     txring_packets: []
     txring_underrun: []
     underruns: "0"
-    vlan: ""
+    vlan_id: ""
   - abort: "0"
     address: "f0f7.5543.a527"
     bandwidth: "1000 Mbps"
@@ -407,7 +407,7 @@ parsed_sample:
     txring_packets: []
     txring_underrun: []
     underruns: "0"
-    vlan: ""
+    vlan_id: ""
   - abort: "0"
     address: "0000.0001.0001"
     bandwidth: "10000 Mbps"
@@ -543,7 +543,7 @@ parsed_sample:
       - "0"
       - "0"
     underruns: "0"
-    vlan: ""
+    vlan_id: ""
   - abort: "0"
     address: "0000.0001.0002"
     bandwidth: "10000 Mbps"
@@ -680,7 +680,7 @@ parsed_sample:
       - "0"
       - "0"
     underruns: "0"
-    vlan: ""
+    vlan_id: ""
   - abort: "0"
     address: "0000.0001.0004"
     bandwidth: "10000 Mbps"
@@ -817,7 +817,7 @@ parsed_sample:
       - "2905646"
       - "0"
     underruns: "2905646"
-    vlan: ""
+    vlan_id: ""
   - abort: "0"
     address: "0000.0001.0003"
     bandwidth: "10000 Mbps"
@@ -947,7 +947,7 @@ parsed_sample:
       - "0"
       - "0"
     underruns: "0"
-    vlan: ""
+    vlan_id: ""
   - abort: "0"
     address: "0000.0100.001d"
     bandwidth: "10000 Mbps"
@@ -1015,7 +1015,7 @@ parsed_sample:
     txring_packets: []
     txring_underrun: []
     underruns: "0"
-    vlan: ""
+    vlan_id: ""
   - abort: "0"
     address: "0000.0100.001e"
     bandwidth: "10000 Mbps"
@@ -1083,7 +1083,7 @@ parsed_sample:
     txring_packets: []
     txring_underrun: []
     underruns: "0"
-    vlan: ""
+    vlan_id: ""
   - abort: "0"
     address: "0000.0100.001f"
     bandwidth: "10000 Mbps"
@@ -1151,7 +1151,7 @@ parsed_sample:
     txring_packets: []
     txring_underrun: []
     underruns: "0"
-    vlan: ""
+    vlan_id: ""
   - abort: "0"
     address: "0000.0100.0020"
     bandwidth: "10000 Mbps"
@@ -1219,7 +1219,7 @@ parsed_sample:
     txring_packets: []
     txring_underrun: []
     underruns: "0"
-    vlan: ""
+    vlan_id: ""
   - abort: "0"
     address: "f0f7.5543.a520"
     bandwidth: "1000 Mbps"
@@ -1287,7 +1287,7 @@ parsed_sample:
     txring_packets: []
     txring_underrun: []
     underruns: "0"
-    vlan: ""
+    vlan_id: ""
   - abort: "0"
     address: "f0f7.5543.a521"
     bandwidth: "1000 Mbps"
@@ -1355,7 +1355,7 @@ parsed_sample:
     txring_packets: []
     txring_underrun: []
     underruns: "0"
-    vlan: ""
+    vlan_id: ""
   - abort: "0"
     address: "f0f7.5543.a528"
     bandwidth: "10000 Mbps"
@@ -1423,7 +1423,7 @@ parsed_sample:
     txring_packets: []
     txring_underrun: []
     underruns: "0"
-    vlan: ""
+    vlan_id: ""
   - abort: "0"
     address: "f0f7.5543.a529"
     bandwidth: "10000 Mbps"
@@ -1491,7 +1491,7 @@ parsed_sample:
     txring_packets: []
     txring_underrun: []
     underruns: "0"
-    vlan: ""
+    vlan_id: ""
   - abort: "0"
     address: "f0f7.5543.a52a"
     bandwidth: "1000 Mbps"
@@ -1559,7 +1559,7 @@ parsed_sample:
     txring_packets: []
     txring_underrun: []
     underruns: "0"
-    vlan: ""
+    vlan_id: ""
   - abort: "0"
     address: "f0f7.5543.a52b"
     bandwidth: "1000 Mbps"
@@ -1627,7 +1627,7 @@ parsed_sample:
     txring_packets: []
     txring_underrun: []
     underruns: "0"
-    vlan: ""
+    vlan_id: ""
   - abort: ""
     address: "f0f7.5543.a528"
     bandwidth: "20000 Mbps"
@@ -1695,7 +1695,7 @@ parsed_sample:
     txring_packets: []
     txring_underrun: []
     underruns: ""
-    vlan: ""
+    vlan_id: ""
   - abort: ""
     address: ""
     bandwidth: "20000 Mbps"
@@ -1763,7 +1763,7 @@ parsed_sample:
     txring_packets: []
     txring_underrun: []
     underruns: ""
-    vlan: "355"
+    vlan_id: "355"
   - abort: ""
     address: "f0f7.5543.a52a"
     bandwidth: "2000 Mbps"
@@ -1831,7 +1831,7 @@ parsed_sample:
     txring_packets: []
     txring_underrun: []
     underruns: ""
-    vlan: ""
+    vlan_id: ""
   - abort: ""
     address: ""
     bandwidth: "2000 Mbps"
@@ -1899,4 +1899,4 @@ parsed_sample:
     txring_packets: []
     txring_underrun: []
     underruns: ""
-    vlan: "283"
+    vlan_id: "283"

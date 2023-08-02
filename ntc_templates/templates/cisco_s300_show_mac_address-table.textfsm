@@ -1,6 +1,6 @@
 Value DESTINATION_ADDRESS ((\w\w:){5}\w\w)
 Value TYPE (dynamic|self)
-Value VLAN (\w+)
+Value VLAN_ID (\w+)
 Value DESTINATION_PORT (\S+)
 
 Start
@@ -12,6 +12,6 @@ Start
 
 Begin
   ^-+
-  ^\s+${VLAN}\s+${DESTINATION_ADDRESS}\s+${DESTINATION_PORT}\s+${TYPE} -> Record
+  ^\s+${VLAN_ID}\s+${DESTINATION_ADDRESS}\s+${DESTINATION_PORT}\s+${TYPE} -> Record
   ^\s*$$
   ^. -> Error
