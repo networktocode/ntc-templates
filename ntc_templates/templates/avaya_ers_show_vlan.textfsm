@@ -9,7 +9,7 @@ Value VLAN_MGMT (\S+)
 Value List VLAN_PORT_MEMBERS (\S+)
 
 Start
-  ^Total\s+VLAN_s: -> Done
+  ^Total\s+VLANs: -> Done
   ^\d+ -> Continue.Record
   ^${VLAN_ID}\s+${VLAN_NAME}\s+${VLAN_TYPE}\s+${VLAN_PROTOCOL}\s+${VLAN_PID}\s+${VLAN_ACTIVE}\s+${VLAN_IVL_SVL}\s+${VLAN_MGMT}$$
   ^\t+Port Members:\s+${VLAN_PORT_MEMBERS}$$
