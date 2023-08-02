@@ -1,5 +1,5 @@
 Value VLAN (\S+)
-Value MAC (\S+)
+Value MAC_ADDRESS (\S+)
 Value TYPE (\S+)
 Value AGE (\S+)
 Value SECURE ([TF])
@@ -8,6 +8,6 @@ Value PORTS (\S+)
 
 Start
   ^VLAN\s+MAC\s+Address\s+Type\s+age\s+Secure\s+NTFY\s+Ports -> Continue
-  ^.*\s${VLAN}\s+${MAC}\s+${TYPE}\s+${AGE}\s+${SECURE}\s+${NTFY}\s+${PORTS} -> Record
+  ^.*\s${VLAN}\s+${MAC_ADDRESS}\s+${TYPE}\s+${AGE}\s+${SECURE}\s+${NTFY}\s+${PORTS} -> Record
 
 

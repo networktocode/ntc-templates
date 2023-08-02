@@ -6,7 +6,7 @@ Value FRU_NUMBER (.+)
 Value PART_NUMBER (.+)
 Value MAINTENANCE_LEVEL (.+)
 Value MANUFACTURER (.+)
-Value MAC (.+)
+Value MAC_ADDRESS (.+)
 Value VERSION (.+)
 Value OS_VERSION (.+)
 Value NETWORK_PROCESSING_DEVICE (.+)
@@ -29,7 +29,7 @@ Start
   ^\s*Part\s*Number\s*\.+\s*${PART_NUMBER}$$
   ^\s*Maintenance\s*Level\s*\.+\s*${MAINTENANCE_LEVEL}$$
   ^\s*Manufacturer\s*\.+\s*${MANUFACTURER}$$
-  ^\s*Burned\s*In\s*MAC\s*Address\s*\.+\s*${MAC}$$
+  ^\s*Burned\s*In\s*MAC\s*Address\s*\.+\s*${MAC_ADDRESS}$$
   ^\s*Software\s*Version\s*\.+\s*${VERSION}$$
   ^\s*Operating\s*System\s*\.+\s*${OS_VERSION}$$
   ^\s*Network\s*Processing\s*Device\s*\.+\s*${NETWORK_PROCESSING_DEVICE}$$

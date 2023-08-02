@@ -1,5 +1,5 @@
 Value VLAN (\S+)
-Value MAC (\S+)
+Value MAC_ADDRESS (\S+)
 Value INTERFACE (\S+)
 Value INDEX (\S+)
 Value STATUS (\S+)
@@ -10,6 +10,6 @@ Start
   # Raw data is the same in the case of all those devices
   ^\s*VLAN\s+ID\s+MAC\s+Address\s+Interface\s+IfIndex\s+Status
   ^-+
-  ^\s*${VLAN}\s+${MAC}\s+${INTERFACE}\s+${INDEX}\s+${STATUS} -> Record
+  ^\s*${VLAN}\s+${MAC_ADDRESS}\s+${INTERFACE}\s+${INDEX}\s+${STATUS} -> Record
   ^\s*$$
   ^. -> Error

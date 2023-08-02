@@ -1,22 +1,22 @@
 ---
 parsed_sample:
-  - software_image: "VIOS-ADVENTERPRISEK9-M"
-    version: "15.8(3)M2"
-    release: "fc2"
-    rommon: "Bootstrap"
+  - config_register: "0x0"
+    hardware:
+      - "IOSv"
     hostname: "rtr-01"
+    mac_address: []
+    release: "fc2"
+    reload_reason: "Unknown reason"
+    restarted: ""
+    rommon: "Bootstrap"
+    running_image: "/vios-adventerprisek9-m"
+    serial:
+      - "991UCMIHG4UAJ1J010CQG"
+    software_image: "VIOS-ADVENTERPRISEK9-M"
     uptime: "1 week, 3 days, 16 hours, 11 minutes"
     uptime_days: "3"
     uptime_hours: "16"
     uptime_minutes: "11"
     uptime_weeks: "1"
     uptime_years: ""
-    reload_reason: "Unknown reason"
-    running_image: "/vios-adventerprisek9-m"
-    hardware:
-      - "IOSv"
-    serial:
-      - "991UCMIHG4UAJ1J010CQG"
-    config_register: "0x0"
-    mac: []
-    restarted: ""
+    version: "15.8(3)M2"

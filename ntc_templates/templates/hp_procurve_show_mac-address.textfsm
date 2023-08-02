@@ -1,4 +1,4 @@
-Value MAC ([0-9a-fA-F]{6}-[0-9a-fA-F]{6})
+Value MAC_ADDRESS ([0-9a-fA-F]{6}-[0-9a-fA-F]{6})
 Value PORT (\S+)
 Value VLAN (\d+)
 
@@ -6,7 +6,7 @@ Start
   ^\s*--- -> Start_record
 
 Start_record
-  ^\s+${MAC}\s+${PORT}\s+${VLAN} -> Record
-  ^\s+${MAC}\s+${PORT} -> Record
+  ^\s+${MAC_ADDRESS}\s+${PORT}\s+${VLAN} -> Record
+  ^\s+${MAC_ADDRESS}\s+${PORT} -> Record
   ^\s*$$
   ^. -> Error

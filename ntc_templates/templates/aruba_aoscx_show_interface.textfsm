@@ -5,7 +5,7 @@ Value LINK_STATE_INFO (\.*)
 Value LINK_TRANSITIONS (\d+)
 Value INTERFACE_DESC (.*)
 Value HW_TYPE (\w+)
-Value MAC (\S+)
+Value MAC_ADDRESS (\S+)
 Value MTU (\d+)
 Value IF_TYPE (\S+)
 Value DUPLEX (\w+)
@@ -40,7 +40,7 @@ Start
   ^\s*Link\s*transitions:\s*${LINK_TRANSITIONS}
   ^\s*Description:\s${INTERFACE_DESC}
   ^\s*State\s*information:\s*${LINK_STATE_INFO}
-  ^\s*Hardware:\s*${HW_TYPE},?\s*MAC\s*Address:\s+${MAC}
+  ^\s*Hardware:\s*${HW_TYPE},?\s*MAC\s*Address:\s+${MAC_ADDRESS}
   ^\s*MTU\s*${MTU}
   ^\s*Type\s*${IF_TYPE}
   ^\s*${DUPLEX}-duplex
