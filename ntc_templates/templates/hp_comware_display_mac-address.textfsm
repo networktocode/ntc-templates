@@ -1,8 +1,8 @@
-Value MACADDRESS (^[\d\w-]+)
+Value MAC_ADDRESS (^[\d\w-]+)
 Value VLAN ([\d]+)
 Value STATE (\S+)
 Value INTERFACE (\S+)
 Value AGING (\S+)
 
 Start
-  ^${MACADDRESS}\s+${VLAN}\s+${STATE}\s+${INTERFACE}\s+${AGING} -> Record
+  ^${MAC_ADDRESS}\s+${VLAN}\s+${STATE}\s+${INTERFACE}\s+${AGING} -> Record
