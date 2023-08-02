@@ -1,5 +1,5 @@
 Value Key MODULE (\d+)
-Value MAC_ADDR (\S{4}\.\S{4}\.\S{4}(\sto\s\S{4}\.\S{4}\.\S{4})?)
+Value MAC_ADDRESS (\S{4}\.\S{4}\.\S{4}(\sto\s\S{4}\.\S{4}\.\S{4})?)
 Value MOD_HW (\S+)
 Value MOD_FW (\S+(\s+\[\w+\])?)
 Value MOD_SW (\S+)
@@ -13,7 +13,7 @@ Start
 
 ModStatus
   ^---+
-  ^\s*${MODULE}\s+${MAC_ADDR}\s+${MOD_HW}\s+${MOD_FW}\s+${MOD_SW}\s+${STATUS}\s*$$ -> Record
+  ^\s*${MODULE}\s+${MAC_ADDRESS}\s+${MOD_HW}\s+${MOD_FW}\s+${MOD_SW}\s+${STATUS}\s*$$ -> Record
   ^Mod\s+Ports\s+Card\s+Type\s+Model\s+Serial -> End
   ^\s*Mod\s+Sub-Module\s+Model\s+Serial\s+Hw\s+Status\s*$$ -> End
   ^Mod\s+Online\s+Diag\s+Status -> End
@@ -25,7 +25,7 @@ ModStatus
 SwitchStack
   # #1083 C9200L-24T
   ^---+
-  ^\s*${MODULE}\s+\d+\s+\S+\s+\S+\s+${MAC_ADDR}\s+${MOD_HW}\s+${MOD_SW}\s*$$ -> Record
+  ^\s*${MODULE}\s+\d+\s+\S+\s+\S+\s+${MAC_ADDRESS}\s+${MOD_HW}\s+${MOD_SW}\s*$$ -> Record
   #\s -> Record
   ^\s*$$
   ^. -> Error NotInSwtichStack
