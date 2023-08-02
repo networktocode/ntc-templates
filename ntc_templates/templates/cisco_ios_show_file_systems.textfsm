@@ -1,0 +1,10 @@
+Value Size (\S+)
+Value Free (\S+)
+Value Type (\S+)
+Value Flags (\S+)
+Value Prefixes (\S+)
+
+Start
+  ^\s*${Size}\s+${Free}\s+${Type}\s+${Flags}\s+${Prefixes}\s*$$ -> Record
+
+EOF
