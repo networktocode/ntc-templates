@@ -1,4 +1,4 @@
-Value MAC_ADDR (\S+)
+Value MAC_ADDRESS (\S+)
 Value VID (\d+)
 Value TYPE (\S+)
 Value PORT (\d+)
@@ -6,6 +6,6 @@ Value PORT (\d+)
 Start
   ^\s+MAC Address.*
   ^-+ -+ -+ -+
-  ^${MAC_ADDR}\s+${VID}\s+${TYPE}\s+\w*:*\s*${PORT}* -> Record
+  ^${MAC_ADDRESS}\s+${VID}\s+${TYPE}\s+\w*:*\s*${PORT}* -> Record
 
 Done

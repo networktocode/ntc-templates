@@ -1,6 +1,6 @@
 Value ADDRESS (\d+\.\d+\.\d+\.\d+)
 Value AGE (\S+)
-Value MAC (\S+)
+Value MAC_ADDRESS (\S+)
 Value INTERFACE (\S+)
 Value PHYSICAL_INTERFACE (\S+)
 
@@ -13,5 +13,5 @@ Start
   ^. -> Error
 
 Data
-  ^${ADDRESS}\s+${AGE}\s+${MAC}\s+${INTERFACE}\s+${PHYSICAL_INTERFACE}\s*$$ -> Record
+  ^${ADDRESS}\s+${AGE}\s+${MAC_ADDRESS}\s+${INTERFACE}\s+${PHYSICAL_INTERFACE}\s*$$ -> Record
   ^. -> Error

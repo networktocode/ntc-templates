@@ -1,5 +1,5 @@
 Value VLAN_ID (\S+)
-Value MAC ([0-9a-fA-F:]+)
+Value MAC_ADDRESS ([0-9a-fA-F:]+)
 Value INTERFACE (\S+)
 Value STATUS (\S+)
 Value TTL (\d+)
@@ -8,6 +8,6 @@ Start
   ^\s*--- -> Start_record
 
 Start_record
-  ^${VLAN_ID}\s+${MAC}\s+${INTERFACE}\s+${STATUS}\s+${TTL} -> Record
+  ^${VLAN_ID}\s+${MAC_ADDRESS}\s+${INTERFACE}\s+${STATUS}\s+${TTL} -> Record
   ^\s*$$
   ^. -> Error

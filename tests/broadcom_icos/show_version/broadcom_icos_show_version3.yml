@@ -1,21 +1,6 @@
 ---
 parsed_sample:
-  - description: "LY2R - 48 TENGIG, Four 40GbE  PORTS, 3.2.2.42, Linux 3.8.13-rt9-4143e257,\
-      \ U-Boot 2010.12 (Feb 10 2015 - 10:01:12) - ONIE 2014.05.03-d"
-    switch_type: "LY2R - 48 TENGIG, Four 40GbE  PORTS"
-    switch_model: "LY2R"
-    serial: "QTFCEA530009C"
-    fru_number: "1LY2BZZ001A"
-    part_number: ""
-    maintenance_level: "A"
-    manufacturer: "0xbc00"
-    mac: "2C:60:0C:C0:6A:0C"
-    version: "3.2.2.42"
-    os_version: "Linux 3.8.13-rt9-4143e257"
-    network_processing_device: "BCM56846_A1"
-    cpld_version: "0x1"
-    board_revision: ""
-    additional_packages:
+  - additional_packages:
       - "BGP-4"
       - "QOS"
       - "Multicast"
@@ -24,3 +9,18 @@ parsed_sample:
       - "Data Center"
       - "OpEN API"
       - "Prototype Open API"
+    board_revision: ""
+    cpld_version: "0x1"
+    description: "LY2R - 48 TENGIG, Four 40GbE  PORTS, 3.2.2.42, Linux 3.8.13-rt9-4143e257,\
+      \ U-Boot 2010.12 (Feb 10 2015 - 10:01:12) - ONIE 2014.05.03-d"
+    fru_number: "1LY2BZZ001A"
+    mac_address: "2C:60:0C:C0:6A:0C"
+    maintenance_level: "A"
+    manufacturer: "0xbc00"
+    network_processing_device: "BCM56846_A1"
+    os_version: "Linux 3.8.13-rt9-4143e257"
+    part_number: ""
+    serial: "QTFCEA530009C"
+    switch_model: "LY2R"
+    switch_type: "LY2R - 48 TENGIG, Four 40GbE  PORTS"
+    version: "3.2.2.42"

@@ -1,6 +1,6 @@
 Value INTERFACE (\S+)
 Value STATE (\w+)
-Value MAC (.*)
+Value MAC_ADDRESS (.*)
 Value TYPE (\S+)
 Value LINK_STATE (.*)
 Value MTU (\d+)
@@ -16,7 +16,7 @@ Value IPV6_LL_MASK (\d+)
 Start
   ^Interface\s${INTERFACE}
   ^\s+state\s${STATE}
-  ^\s+mac-addr\s${MAC}
+  ^\s+mac-addr\s${MAC_ADDRESS}
   ^\s+type\s${TYPE}
   ^\s+link-state\s${LINK_STATE}
   ^\s+mtu\s${MTU}
