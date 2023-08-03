@@ -6,7 +6,7 @@ Value REMOTE_HEARD (\S+)
 Value HOLDDOWN (\d+)
 Value MULTIPLIER (\d{1,2})
 Value STATE (\w+)
-Value IFACE (\S+)
+Value INTERFACE (\S+)
 Value ECHO_FUNCTION ((?:\w+\s+)?\w+\s+echo\s+function)
 Value ECHO_INTERVAL (\d+)
 Value DIAGNOSTIC_BIT (\d)
@@ -39,9 +39,9 @@ Start
   ^. -> Error
 
 BFD
-  ^\s*${OUR_ADDR}\s*${NEIGHBOR_ADDR}\s+${LOCAL_DISCRIM}\/${REMOTE_DISCRIM}\s+${REMOTE_HEARD}\s+\d+\s+\(\s*\d+\s*\)\s+${STATE}\s+${IFACE}\s*$$
+  ^\s*${OUR_ADDR}\s*${NEIGHBOR_ADDR}\s+${LOCAL_DISCRIM}\/${REMOTE_DISCRIM}\s+${REMOTE_HEARD}\s+\d+\s+\(\s*\d+\s*\)\s+${STATE}\s+${INTERFACE}\s*$$
   #
-  ^\s*${NEIGHBOR_ADDR}\s+${LOCAL_DISCRIM}\/${REMOTE_DISCRIM}\s+${REMOTE_HEARD}\s+${STATE}\s+${IFACE}\s*$$
+  ^\s*${NEIGHBOR_ADDR}\s+${LOCAL_DISCRIM}\/${REMOTE_DISCRIM}\s+${REMOTE_HEARD}\s+${STATE}\s+${INTERFACE}\s*$$
   ^\s*OurAddr:\s+${OUR_ADDR}\s*$$
   #
   # common BFD details

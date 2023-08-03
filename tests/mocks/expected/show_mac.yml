@@ -4,44 +4,44 @@ parsed_sample:
     destination_port:
       - "FastEthernet0/1"
     type: "Dynamic"
-    vlan: "1"
+    vlan_id: "1"
   - destination_address: "0010.7b00.1540"
     destination_port:
       - "FastEthernet0/5"
     type: "Dynamic"
-    vlan: "2"
+    vlan_id: "2"
   - destination_address: "0010.7b00.1545"
     destination_port:
       - "FastEthernet0/5"
     type: "Dynamic"
-    vlan: "2"
+    vlan_id: "2"
   - destination_address: "0060.5cf4.0076"
     destination_port:
       - "FastEthernet0/1"
     type: "Dynamic"
-    vlan: "1"
+    vlan_id: "1"
   - destination_address: "0060.5cf4.0077"
     destination_port:
       - "FastEthernet0/1"
     type: "Dynamic"
-    vlan: "1"
+    vlan_id: "1"
   - destination_address: "0060.5cf4.1315"
     destination_port:
       - "FastEthernet0/1"
     type: "Dynamic"
-    vlan: "1"
+    vlan_id: "1"
   - destination_address: "0060.70cb.f301"
     destination_port:
       - "FastEthernet0/1"
     type: "Dynamic"
-    vlan: "1"
+    vlan_id: "1"
   - destination_address: "00e0.1e42.9978"
     destination_port:
       - "FastEthernet0/1"
     type: "Dynamic"
-    vlan: "1"
+    vlan_id: "1"
   - destination_address: "00e0.1e9f.3900"
     destination_port:
       - "FastEthernet0/1"
     type: "Dynamic"
-    vlan: "1"
+    vlan_id: "1"

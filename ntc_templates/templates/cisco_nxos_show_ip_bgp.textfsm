@@ -29,12 +29,16 @@ Bgp_table
   #             Network            Next Hop            Metric     LocPrf     Weight Path
   # Example: *>e10.10.101.4/30     10.10.2.1                                      0 64102 i
   # Example: *>e                   10.10.1.1                                      0 64101 64002 i
+  ^\s+${PATH_SELECTION}${ROUTE_SOURCE}\s\s\s{16}(\s{0,12}${NEXT_HOP}\s{4}|\s{20})(\s{2,14}${METRIC}|\s{8})(\s{1,18}${LOCAL_PREF}|\s{8})(\s{1,22}${WEIGHT})(\s${AS_PATH})?\s${ORIGIN}$$ -> Record
   ^${STATUS}${PATH_SELECTION}${ROUTE_SOURCE}${NETWORK}(\s{0,12}${NEXT_HOP}\s{4}|\s{20})(\s{2,14}${METRIC}|\s{8})(\s{1,18}${LOCAL_PREF}|\s{8})(\s{1,22}${WEIGHT})(\s${AS_PATH})?\s${ORIGIN}$$ -> Record
+  ^\s+${PATH_SELECTION}${ROUTE_SOURCE}${NETWORK}(\s{0,12}${NEXT_HOP}\s{4}|\s{20})(\s{2,14}${METRIC}|\s{8})(\s{1,18}${LOCAL_PREF}|\s{8})(\s{1,22}${WEIGHT})(\s${AS_PATH})?\s${ORIGIN}$$ -> Record
   ^${STATUS}${PATH_SELECTION}${ROUTE_SOURCE}\s\s\s{16}(\s{0,12}${NEXT_HOP}\s{4}|\s{20})(\s{2,14}${METRIC}|\s{8})(\s{1,18}${LOCAL_PREF}|\s{8})(\s{1,22}${WEIGHT})(\s${AS_PATH})?\s${ORIGIN}$$ -> Record
   #
   # Match newer format (cisco_nxos_show_ip_bgp1.raw)
   # Example: * e0.0.0.0/0 1.2.3.4 4294967295 0 12345.102 
+  ^\s+${PATH_SELECTION}${ROUTE_SOURCE}${NETWORK}\s${NEXT_HOP}\s${METRIC}\s${LOCAL_PREF}\s${WEIGHT}(\s${AS_PATH})?\s${ORIGIN}$$ -> Record
   ^${STATUS}${PATH_SELECTION}${ROUTE_SOURCE}${NETWORK}\s${NEXT_HOP}\s${METRIC}\s${LOCAL_PREF}\s${WEIGHT}(\s${AS_PATH})?\s${ORIGIN}$$ -> Record
+  ^\s+${PATH_SELECTION}${ROUTE_SOURCE}\s${NEXT_HOP}\s${METRIC}\s${LOCAL_PREF}\s${WEIGHT}(\s${AS_PATH})?\s${ORIGIN}$$ -> Record
   ^${STATUS}${PATH_SELECTION}${ROUTE_SOURCE}\s${NEXT_HOP}\s${METRIC}\s${LOCAL_PREF}\s${WEIGHT}(\s${AS_PATH})?\s${ORIGIN}$$ -> Record
   ^. -> Error
 

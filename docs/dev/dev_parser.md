@@ -239,6 +239,8 @@ To add additional raw/parsed tests for a command:
 
 You can test your changes locally within your Git branch before submitting a PR.
 
+### Dockerized Testing
+
 ```bash
 % invoke tests
 DOCKER - Running command: black --check --diff . container: ntc_templates:3.1.0-py3.7
@@ -255,3 +257,23 @@ DOCKER - Running command: yamllint . container: ntc_templates:3.1.0-py3.7
 ```
 
 > Note: Omitted for brevity.
+
+### Local Testing
+
+```bash
+% poetry shell
+% poetry install
+% invoke tests --local
+LOCAL - Running command black --check --diff .
+All done! ✨ 🍰 ✨
+9 files would be left unchanged.
+LOCAL - Running command flake8 . --config .flake8
+LOCAL - Running command find . -name "*.py" | xargs pylint
+
+--------------------------------------------------------------------
+Your code has been rated at 10.00/10 (previous run: 10.00/10, +0.00)
+
+LOCAL - Running command yamllint .
+
+[... skipping remaining output for brevity ...]
+```

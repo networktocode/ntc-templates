@@ -1,4 +1,4 @@
-Value Required INTF (\S+)
+Value Required INTERFACE (\S+)
 Value LINK_STATUS (.+?)
 Value PROTOCOL_STATUS (.+?)
 Value List IPADDR (\S+?)
@@ -12,7 +12,7 @@ Value INBOUND_ACL (.*?)
 
 Start
   ^\S -> Continue.Record
-  ^${INTF}\s+is\s+${LINK_STATUS},\s+line\s+protocol\s+is\s+${PROTOCOL_STATUS}\s*$$
+  ^${INTERFACE}\s+is\s+${LINK_STATUS},\s+line\s+protocol\s+is\s+${PROTOCOL_STATUS}\s*$$
   ^\s+Internet\s+address\s+is\s+${IPADDR}/?${MASK}\s*$$
   ^\s+Internet\s+address\s+will\s+be\s+negotiated
   ^\s+Secondary\s+address\s+${IPADDR}/?${MASK}\s*$$

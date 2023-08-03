@@ -1,7 +1,7 @@
 Value PROFILE (\S+)
 #Value PROFILE (\S+)
 Value BAND (\d\.?4? GHz)
-Value DESC ((\S+(.?\S+)+))
+Value DESCRIPTION ((\S+(.?\S+)+))
 Value N_ONLY (\w+)
 Value APPLIED (\w+)
 
@@ -14,7 +14,7 @@ Start
 
 Profile
   ^(?:High|Low|Typical)-Client-Density-802.11
-  ^${PROFILE}\s+${BAND}\s+${DESC}\s+${N_ONLY}\s+${APPLIED} -> Record
+  ^${PROFILE}\s+${BAND}\s+${DESCRIPTION}\s+${N_ONLY}\s+${APPLIED} -> Record
   ^-+[\s|-]+$$
   ^\s*$$
   ^. -> Error

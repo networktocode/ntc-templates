@@ -1,6 +1,6 @@
 Value Required ADDRESS (\d+\.\d+\.\d+\.\d+)
 Value Required AGE (\S+)
-Value Required MAC ([0-9a-f]{4}\.[0-9a-f]{4}\.[0-9a-f]{4})
+Value Required MAC_ADDRESS ([0-9a-f]{4}\.[0-9a-f]{4}\.[0-9a-f]{4})
 Value STATE (\S+)
 Value Required TYPE (\S+)
 Value Required INTERFACE (\S+)
@@ -13,7 +13,7 @@ Start
   ^Protocol\s+Address\s+Age\s+\(min\)\s+Hardware\s+Addr\s+Type\s+Interface$$
   ^-+
   ^${CPU}
-  ^${ADDRESS}\s+${AGE}\s+${MAC}\s+${STATE}\s+${TYPE}\s+${INTERFACE}\s*$$ -> Record
+  ^${ADDRESS}\s+${AGE}\s+${MAC_ADDRESS}\s+${STATE}\s+${TYPE}\s+${INTERFACE}\s*$$ -> Record
   ^\S+\s+${ADDRESS}\s+${AGE}\s+${MAC}\s+${TYPE}\s+${INTERFACE}\s*$$ -> Record
   ^\s*$$
   ^. -> Error

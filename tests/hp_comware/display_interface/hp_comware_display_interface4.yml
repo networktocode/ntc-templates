@@ -1,19 +1,19 @@
 ---
 parsed_sample:
-  - intf: "Bridge-Aggregation1"
-    line_status: "UP"
-    protocol_status: ""
+  - bandwidth: ""
+    description: "Bridge-Aggregation1 Interface"
+    duplex: "full-duplex"
     hw_address:
       - "5c8a-3800-0000"
-    description: "Bridge-Aggregation1 Interface"
-    bandwidth: ""
-    speed: "20Gbps-speed"
-    duplex: "full-duplex"
-    mtu: ""
-    l2mtu: ""
-    vlan_native: "1"
+    interface: "Bridge-Aggregation1"
     ip_address: []
+    l2mtu: ""
+    line_status: "UP"
+    mtu: ""
     port_link_type: "trunk"
+    protocol_status: ""
+    speed: "20Gbps-speed"
+    vlan_native: "1"
     vlan_passing:
       - "1(default vlan)"
       - "1000"
@@ -21,21 +21,21 @@ parsed_sample:
     vlan_permitted:
       - "1(default vlan)"
       - "2-4094"
-  - intf: "Vlan-interface123"
-    line_status: "UP"
-    protocol_status: "UP"
+  - bandwidth: ""
+    description: "Vlan-interface1231 Interface"
+    duplex: ""
     hw_address:
       - "5c8a-3830-0001"
       - "5c8a-3830-0001"
-    description: "Vlan-interface1231 Interface"
-    bandwidth: ""
-    speed: ""
-    duplex: ""
-    mtu: "1500"
-    l2mtu: ""
-    vlan_native: ""
+    interface: "Vlan-interface123"
     ip_address:
       - "10.0.1.1/24"
+    l2mtu: ""
+    line_status: "UP"
+    mtu: "1500"
     port_link_type: ""
+    protocol_status: "UP"
+    speed: ""
+    vlan_native: ""
     vlan_passing: []
     vlan_permitted: []

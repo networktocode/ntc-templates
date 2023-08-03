@@ -1,4 +1,4 @@
-Value IFACE (\S+)
+Value INTERFACE (\S+)
 Value IFACE_TYPE (\S+)
 Value List CHANNEL (\d+)
 Value TEMPERATURE (-?\d+\.\d+\w)
@@ -50,7 +50,7 @@ Value List TX_LOW_WARN_THRESHOLD (\d+\.\d+\w+)
 
 Start
   ^Transceiver -> Continue.Record
-  ^Transceiver\s+in\s+${IFACE} 
+  ^Transceiver\s+in\s+${INTERFACE} 
   ^\s+Type:\s${IFACE_TYPE}
   ^\s+% No DOM information available -> Next.Clear
   ^\s+Temperature:\s+${TEMPERATURE} -> Common
@@ -110,5 +110,5 @@ Details
   ^\s+Tx Power low warning threshold: ${TX_LOW_WARN_THRESHOLD}
   ^\s*$$
   ^Transceiver -> Continue.Record
-  ^Transceiver\s+in\s+${IFACE} -> Start
+  ^Transceiver\s+in\s+${INTERFACE} -> Start
   ^\. -> Error

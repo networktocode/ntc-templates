@@ -48,7 +48,7 @@ Value RATE_LIMIT_DROPS (\d+)
 Value SWITCH_EGRESS_POLICY_DROPS (\d+)
 Value IN_RESET_DROPS (\d+)
 Value OUT_RESET_DROPS (\d+)
-Value VLAN (\d+)
+Value VLAN_ID (\d+)
 #
 # Control Point Interface States
 #
@@ -106,7 +106,7 @@ Start
   ^\s+input\s+queue
   ^\s+output\s+queue
   ^\s+Queue\s+Stats:
-  ^\s+VLAN\s+identifier\s+${VLAN}
+  ^\s+VLAN\s+identifier\s+${VLAN_ID}
   ^\s+Control\s+Point\s+Interface\s+States -> ControlPoint
   ^\s+RX\[${RXRING_NUMBER}\]:\s+${RXRING_PACKETS}\s+packets,\s+${RXRING_BYTES}\s+bytes,\s+${RXRING_OVERRUN}\s+overrun -> RXRingBlocks
   ^\s+TX\[${TXRING_NUMBER}\]:\s+${TXRING_PACKETS}\s+packets,\s+${TXRING_BYTES}\s+bytes,\s+${TXRING_UNDERRUN}\s+underruns -> TXRingBlocks
