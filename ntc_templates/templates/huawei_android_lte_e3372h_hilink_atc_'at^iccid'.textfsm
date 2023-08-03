@@ -1,0 +1,9 @@
+Value ICCID (\S+)
+
+
+Start
+  ^\s*Waiting for response...\s*$$
+  ^\^ICCID\:\s+${ICCID}\s*$$ -> Record
+  ^\s*OK\s*$$
+  ^\s*$$
+  ^. -> Error

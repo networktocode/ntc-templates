@@ -1,0 +1,18 @@
+Value CID (\d+)
+Value PDP_TYPE (\S*)
+Value APN (\S*)
+Value PDP_ADDRESS (\S*)
+Value DATA_COMPRESSION (\d+)
+Value HEADER_COMPRESSION (\d+)
+Value PD1 (\d+)
+Value PD2 (\d+)
+Value PD3 (\d+)
+Value PD4 (\d+)
+
+
+Start
+  ^\s*Waiting\s+for\s+response...\s*$$
+  ^\+CGDCONT\:\s+${CID}\,\"${PDP_TYPE}\"\,\"${APN}\"\,\"${PDP_ADDRESS}\"\,${DATA_COMPRESSION}\,${HEADER_COMPRESSION}\,${PD1}\,${PD2}\,${PD3}\,${PD4}\s*$$ -> Record
+  ^\s*OK\s*$$
+  ^\s*$$
+  ^. -> Error

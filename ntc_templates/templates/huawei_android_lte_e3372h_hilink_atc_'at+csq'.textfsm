@@ -1,0 +1,9 @@
+Value CSQ (\S+)
+
+
+Start
+  ^\s*Waiting\s+for\s+response...\s*$$
+  ^\+CSQ:\s+${CSQ}\s*$$ -> Record
+  ^\s*OK\s*$$
+  ^\s*$$
+  ^. -> Error
