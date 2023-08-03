@@ -1,9 +1,9 @@
 ---
 parsed_sample:
   - inbound_acl: ""
-    intf: "GigabitEthernet2/23"
-    ipaddr: []
+    interface: "GigabitEthernet2/23"
     ip_helper: []
+    ipaddr: []
     link_status: "up"
     mask: []
     mtu: ""
@@ -11,9 +11,9 @@ parsed_sample:
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
-    intf: "GigabitEthernet2/24"
-    ipaddr: []
+    interface: "GigabitEthernet2/24"
     ip_helper: []
+    ipaddr: []
     link_status: "administratively down"
     mask: []
     mtu: ""
@@ -21,10 +21,10 @@ parsed_sample:
     protocol_status: "down"
     vrf: ""
   - inbound_acl: ""
-    intf: "GigabitEthernet2/25"
+    interface: "GigabitEthernet2/25"
+    ip_helper: []
     ipaddr:
       - "192.168.102.45"
-    ip_helper: []
     link_status: "up"
     mask:
       - "30"
@@ -33,9 +33,9 @@ parsed_sample:
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
-    intf: "Tunnel0"
-    ipaddr: []
+    interface: "Tunnel0"
     ip_helper: []
+    ipaddr: []
     link_status: "up"
     mask: []
     mtu: "1486"
@@ -43,14 +43,14 @@ parsed_sample:
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
-    intf: "Vlan1"
-    ipaddr:
-      - "192.168.1.1"
-      - "192.168.1.3"
+    interface: "Vlan1"
     ip_helper:
       - "192.168.1.27"
       - "192.168.1.88"
       - "10.17.5.255"
+    ipaddr:
+      - "192.168.1.1"
+      - "192.168.1.3"
     link_status: "up"
     mask:
       - "24"
@@ -60,12 +60,12 @@ parsed_sample:
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
-    intf: "Vlan2"
-    ipaddr:
-      - "192.168.2.1"
+    interface: "Vlan2"
     ip_helper:
       - "192.168.1.27"
       - "192.168.1.88"
+    ipaddr:
+      - "192.168.2.1"
     link_status: "administratively down"
     mask:
       - "24"
@@ -74,10 +74,10 @@ parsed_sample:
     protocol_status: "down"
     vrf: ""
   - inbound_acl: "ACL-IN"
-    intf: "TenGigabitEthernet0/1/0"
+    interface: "TenGigabitEthernet0/1/0"
+    ip_helper: []
     ipaddr:
       - "1.1.1.1"
-    ip_helper: []
     link_status: "up"
     mask:
       - "30"
@@ -86,9 +86,9 @@ parsed_sample:
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
-    intf: "GigabitEthernet0"
-    ipaddr: []
+    interface: "GigabitEthernet0"
     ip_helper: []
+    ipaddr: []
     link_status: "administratively down"
     mask: []
     mtu: ""
@@ -96,10 +96,10 @@ parsed_sample:
     protocol_status: "down"
     vrf: ""
   - inbound_acl: ""
-    intf: "Loopback0"
+    interface: "Loopback0"
+    ip_helper: []
     ipaddr:
       - "10.255.255.1"
-    ip_helper: []
     link_status: "up"
     mask:
       - "32"

@@ -1,19 +1,19 @@
 ---
 parsed_sample:
-  - intf: "Bridge-Aggregation41"
-    line_status: "UP"
-    protocol_status: ""
+  - bandwidth: "160000000 kbps"
+    description: "Servers"
+    duplex: "full-duplex"
     hw_address:
       - "aaaa-bbbb-0200"
-    description: "Servers"
-    bandwidth: "160000000 kbps"
-    speed: "160Gbps-speed"
-    duplex: "full-duplex"
-    mtu: ""
-    l2mtu: ""
-    vlan_native: "1"
+    interface: "Bridge-Aggregation41"
     ip_address: []
+    l2mtu: ""
+    line_status: "UP"
+    mtu: ""
     port_link_type: "Trunk"
+    protocol_status: ""
+    speed: "160Gbps-speed"
+    vlan_native: "1"
     vlan_passing:
       - "2-21"
       - "41-42"

@@ -1,14 +1,14 @@
 ---
 parsed_sample:
-  - intf: "Loopback1001"
-    link_status: "up"
-    protocol_status: "up"
+  - inbound_acl: ""
+    interface: "Loopback1001"
+    ip_helper: []
     ipaddr:
       - "10.0.0.0"
+    link_status: "up"
     mask:
       - "32"
-    vrf: ""
     mtu: "1514"
-    ip_helper: []
     outgoing_acl: ""
-    inbound_acl: ""
+    protocol_status: "up"
+    vrf: ""

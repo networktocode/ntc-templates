@@ -1,4 +1,4 @@
-Value INTF (\S+)
+Value INTERFACE (\S+)
 Value ID (\d+)
 Value VSYS (\d+)
 Value ZONE (\S+)
@@ -7,5 +7,5 @@ Value VLAN_ID (\d+)
 Value ADDRESS (\S+)
 
 Start
-  ^${INTF}\s+${ID}\s+${VSYS}\s+${ZONE}\s+${FORWARDING}+\s+${VLAN_ID}\s+${ADDRESS} -> Record
-  ^${INTF}\s+${ID}\s+${VSYS}\s+${FORWARDING}\s+${VLAN_ID}\s+${ADDRESS} -> Record
+  ^${INTERFACE}\s+${ID}\s+${VSYS}\s+${ZONE}\s+${FORWARDING}+\s+${VLAN_ID}\s+${ADDRESS} -> Record
+  ^${INTERFACE}\s+${ID}\s+${VSYS}\s+${FORWARDING}\s+${VLAN_ID}\s+${ADDRESS} -> Record

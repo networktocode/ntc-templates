@@ -1,4 +1,4 @@
-Value IFACE (\S+)
+Value INTERFACE (\S+)
 Value GROUP (\d+)
 Value PRIORITY (\d+)
 Value PREEMPT (.)
@@ -14,8 +14,8 @@ Start
   ^Time\s+source\s+is
 
 Standby
-  ^${IFACE}\s+${GROUP}\s+${PRIORITY}\s+${PREEMPT}\s+${STATE}\s+${ACTIVE}\s+${STANDBY}\s+${VIRTUALIP} -> Record
-  ^${IFACE}\s*$$
+  ^${INTERFACE}\s+${GROUP}\s+${PRIORITY}\s+${PREEMPT}\s+${STATE}\s+${ACTIVE}\s+${STANDBY}\s+${VIRTUALIP} -> Record
+  ^${INTERFACE}\s*$$
   ^\s*${GROUP}\s+${PRIORITY}\s+${PREEMPT}\s+${STATE}\s+${ACTIVE}\s+${STANDBY}\s+${VIRTUALIP} -> Record
   ^\s*$$
   ^. -> Error

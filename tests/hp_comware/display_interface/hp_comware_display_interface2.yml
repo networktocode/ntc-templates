@@ -1,50 +1,50 @@
 ---
 parsed_sample:
-  - intf: "FortyGigE1/0/49"
-    line_status: "DOWN"
-    protocol_status: "DOWN"
+  - bandwidth: "40000000 kbps"
+    description: "FortyGigE1/0/49 Interface"
+    duplex: "unknown-duplex"
     hw_address:
       - "bcea-fa19-5f8c"
-    description: "FortyGigE1/0/49 Interface"
-    bandwidth: "40000000 kbps"
-    speed: "Unknown-speed"
-    duplex: "unknown-duplex"
-    mtu: ""
+    interface: "FortyGigE1/0/49"
+    ip_address: []
     l2mtu: "10000"
-    vlan_native: "1"
-    ip_address: []
-    port_link_type: "Access"
-    vlan_passing: []
-    vlan_permitted: []
-  - intf: "InLoopBack0"
-    line_status: "UP"
-    protocol_status: "UP(spoofing)"
-    hw_address: []
-    description: "InLoopBack0 Interface"
-    bandwidth: "0 kbps"
-    speed: ""
-    duplex: ""
-    mtu: "1536"
-    l2mtu: ""
-    vlan_native: ""
-    ip_address: []
-    port_link_type: ""
-    vlan_passing: []
-    vlan_permitted: []
-  - intf: "M-GigabitEthernet0/0/0"
     line_status: "DOWN"
+    mtu: ""
+    port_link_type: "Access"
     protocol_status: "DOWN"
+    speed: "Unknown-speed"
+    vlan_native: "1"
+    vlan_passing: []
+    vlan_permitted: []
+  - bandwidth: "0 kbps"
+    description: "InLoopBack0 Interface"
+    duplex: ""
+    hw_address: []
+    interface: "InLoopBack0"
+    ip_address: []
+    l2mtu: ""
+    line_status: "UP"
+    mtu: "1536"
+    port_link_type: ""
+    protocol_status: "UP(spoofing)"
+    speed: ""
+    vlan_native: ""
+    vlan_passing: []
+    vlan_permitted: []
+  - bandwidth: "1000000 kbps"
+    description: "M-GigabitEthernet0/0/0 Interface"
+    duplex: "unknown-duplex"
     hw_address:
       - "bcea-fa19-8bec"
       - "bcea-fa19-8bec"
-    description: "M-GigabitEthernet0/0/0 Interface"
-    bandwidth: "1000000 kbps"
-    speed: "Unknown-speed"
-    duplex: "unknown-duplex"
-    mtu: "1500"
-    l2mtu: ""
-    vlan_native: ""
+    interface: "M-GigabitEthernet0/0/0"
     ip_address: []
+    l2mtu: ""
+    line_status: "DOWN"
+    mtu: "1500"
     port_link_type: ""
+    protocol_status: "DOWN"
+    speed: "Unknown-speed"
+    vlan_native: ""
     vlan_passing: []
     vlan_permitted: []

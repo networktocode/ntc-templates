@@ -1,8 +1,8 @@
-Value INTF (.+?)
+Value INTERFACE (.+?)
 Value IPADDR (\S+)
 Value STATUS (Up|Down|Shutdown)
 Value PROTO (Up|Down)
 Value VRF (\S+)
 
 Start
-  ^${INTF}\s+${IPADDR}\s+${STATUS}\s+${PROTO}\s+${VRF} -> Record
+  ^${INTERFACE}\s+${IPADDR}\s+${STATUS}\s+${PROTO}\s+${VRF} -> Record
