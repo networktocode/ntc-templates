@@ -4,7 +4,7 @@ Value STATUS (up|down)
 Value IP (\S+)
 Value SPEED (\S+)
 Value MTU (\d+)
-Value VLAN ([\d+-]+)
+Value VLAN_ID ([\d+-]+)
 Value TYPE (\S+)
 Value MODE (\S+)
 Value REASON (\S+((\s\w+)+)?)
@@ -32,7 +32,7 @@ Management
 
 Ethernet
   ^Interface\s+Ch\s+#\s*$$
-  ^${INTERFACE}\s+${VLAN}\s+${TYPE}\s+${MODE}\s+${STATUS}\s+${REASON}\s+${SPEED}\s+${PORTCH} -> Record
+  ^${INTERFACE}\s+${VLAN_ID}\s+${TYPE}\s+${MODE}\s+${STATUS}\s+${REASON}\s+${SPEED}\s+${PORTCH} -> Record
   ^---+$$
   ^\s*$$ -> Start
   ^. -> Error Etherenet
@@ -51,7 +51,7 @@ VLAN
 
 PORTCHANNEL
   ^Interface\s*$$
-  ^${INTERFACE}\s+${VLAN}\s+${TYPE}\s+${MODE}\s+${STATUS}\s+${REASON}\s+${SPEED}\s+${PROTOCOL} -> Record
+  ^${INTERFACE}\s+${VLAN_ID}\s+${TYPE}\s+${MODE}\s+${STATUS}\s+${REASON}\s+${SPEED}\s+${PROTOCOL} -> Record
   ^---+$$
   ^\s*$$ -> Start
   ^. -> Error PORTCHANNEL

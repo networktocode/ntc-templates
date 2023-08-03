@@ -1,4 +1,4 @@
-Value MAC (([\da-fA-F]{2}[-:]){5}[\da-fA-F]{2})
+Value MAC_ADDRESS (([\da-fA-F]{2}[-:]){5}[\da-fA-F]{2})
 Value COMMENT (.*)
 
 Start
@@ -10,5 +10,5 @@ Start
 ManuallyDisabled
   ^---
   ^MAC\s+Address\s+Description
-  ^${MAC}\s+${COMMENT} -> Record
+  ^${MAC_ADDRESS}\s+${COMMENT} -> Record
   ^\s*$$ -> Start

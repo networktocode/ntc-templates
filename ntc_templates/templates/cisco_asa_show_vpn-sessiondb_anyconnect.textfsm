@@ -21,7 +21,7 @@ Value LOGIN_YEAR (\d+)
 Value DURATION (.+?)
 Value INACTIVITY (.+?)
 Value VLAN_MAPPING (\S+)
-Value VLAN (.+?)
+Value VLAN_ID (.+?)
 Value AUDT_SESS_ID (.+?)
 Value SECURITY_GRP (\S+)
 
@@ -47,7 +47,7 @@ Connection
   ^\s*Login\s+Time\s+:\s+${LOGIN_TIME}\s+${LOGIN_TIME_ZONE}\s+${LOGIN_WEEKDAY}\s+${LOGIN_MONTH}\s+${LOGIN_DAY}\s+${LOGIN_YEAR}$$
   ^\s*Duration\s+:\s+${DURATION}$$
   ^\s*Inactivity\s+:\s+${INACTIVITY}$$
-  ^\s*VLAN\s+Mapping\s+:\s+${VLAN_MAPPING}\s+VLAN\s+:\s+${VLAN}$$
+  ^\s*VLAN\s+Mapping\s+:\s+${VLAN_MAPPING}\s+VLAN\s+:\s+${VLAN_ID}$$
   ^\s*Audt\s+Sess\s+ID\s+:\s+${AUDT_SESS_ID}$$
   ^\s*Security\s+Grp\s+:\s+${SECURITY_GRP}\s*$$ -> Record
   ^\s*$$

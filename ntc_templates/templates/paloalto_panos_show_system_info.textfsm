@@ -2,7 +2,7 @@ Value HOSTNAME (\S+)
 Value IP_ADDRESS (\S+)
 Value NETMASK (\S+)
 Value GATEWAY (\S+)
-Value MAC (\S+)
+Value MAC_ADDRESS (\S+)
 Value UPTIME ([\S+\s+]+)
 Value FAMILY (\S+)
 Value MODEL (\S+)
@@ -20,7 +20,7 @@ Start
   ^ip-address:\s+${IP_ADDRESS}
   ^netmask:\s+${NETMASK}
   ^default-gateway:\s+${GATEWAY}
-  ^mac-address:\s+${MAC}
+  ^mac-address:\s+${MAC_ADDRESS}
   ^uptime:\s+${UPTIME}
   ^family:\s+${FAMILY}
   ^model:\s+${MODEL} 

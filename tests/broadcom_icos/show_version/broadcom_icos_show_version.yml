@@ -1,21 +1,6 @@
 ---
 parsed_sample:
-  - description: "Accton AS4610-54P , 3.2.2.42, Linux 3.6.5, U-Boot 2012.10-gd563f4a\
-      \ (Apr 13 2017 - 12:08:06) - 2012.10.0.5"
-    switch_type: "Accton AS4610-54P"
-    switch_model: "BCM-56643"
-    serial: "EC1726004357"
-    fru_number: ""
-    part_number: ""
-    maintenance_level: "A"
-    manufacturer: "0xbc00"
-    mac: "A8:2B:B5:55:58:01"
-    version: "3.2.2.42"
-    os_version: "Linux 3.6.5"
-    network_processing_device: "BCM56340_A0"
-    cpld_version: ""
-    board_revision: ""
-    additional_packages:
+  - additional_packages:
       - "BGP-4"
       - "QOS"
       - "Multicast"
@@ -24,3 +9,18 @@ parsed_sample:
       - "Data Center"
       - "OpEN API"
       - "Prototype Open API"
+    board_revision: ""
+    cpld_version: ""
+    description: "Accton AS4610-54P , 3.2.2.42, Linux 3.6.5, U-Boot 2012.10-gd563f4a\
+      \ (Apr 13 2017 - 12:08:06) - 2012.10.0.5"
+    fru_number: ""
+    mac_address: "A8:2B:B5:55:58:01"
+    maintenance_level: "A"
+    manufacturer: "0xbc00"
+    network_processing_device: "BCM56340_A0"
+    os_version: "Linux 3.6.5"
+    part_number: ""
+    serial: "EC1726004357"
+    switch_model: "BCM-56643"
+    switch_type: "Accton AS4610-54P"
+    version: "3.2.2.42"
