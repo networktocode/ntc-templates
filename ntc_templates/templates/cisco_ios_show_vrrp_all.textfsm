@@ -4,7 +4,7 @@ Value ADDR_FAMILY (\S+)
 Value STATE (\w+)
 Value STATE_DURATION (.+)
 Value VIRTUALIP ([a-fA-F\d\.\:]+)
-Value VIRTUAL_MAC ([a-fA-F\d\.\:]+)
+Value VIRTUAL_MAC_ADDRESS ([a-fA-F\d\.\:]+)
 Value ADV_INTERVAL (\S+)
 Value PREEMPT (\w+)
 Value PRIORITY (\d+)
@@ -23,7 +23,7 @@ Start
   ^\s+State is\s+${STATE}.*\s*$$
   ^\s*State duration\s+${STATE_DURATION}\s*$$
   ^\s+Virtual IP address is\s+${VIRTUALIP}\s*$$
-  ^\s+Virtual MAC address is\s+${VIRTUAL_MAC}\s*$$
+  ^\s+Virtual MAC address is\s+${VIRTUAL_MAC_ADDRESS}\s*$$
   ^\s+Advertisement interval is\s+${ADV_INTERVAL}
   ^\s+Preemption\s+${PREEMPT}\s*$$
   ^\s+Priority is\s+${PRIORITY}(\s+\((cfgd|[cC]onfigured)\s+${PRIORITY_CONFIGURED}\))?\s*$$
