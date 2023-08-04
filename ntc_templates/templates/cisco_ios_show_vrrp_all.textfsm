@@ -12,7 +12,7 @@ Value PRIORITY_CONFIGURED (\d+)
 Value TRACK_OBJ (\d+)
 Value TRACK_STATUS (\S+)
 Value TRACK_ACTION (\S+(\s+\S+)?)
-Value MASTER_IP (\S+)
+Value MASTER_IP_ADDRESS (\S+)
 Value MASTER_PRIORITY (\S+)
 Value MASTER_ADV_INTERVAL (\S+)
 Value MASTER_DOWN_INTERVAL (\S+)
@@ -31,7 +31,7 @@ Start
   # ignore authentication output since later VRRP versions do not even support it
   ^\s+Authentication\s
   # ignoring the "local" designation since we can use the STATE value to determine who the master is
-  ^\s+Master Router is\s+${MASTER_IP}(\s+\(local\))?, priority is\s+${MASTER_PRIORITY}\s*$$
+  ^\s+Master Router is\s+${MASTER_IP_ADDRESS}(\s+\(local\))?, priority is\s+${MASTER_PRIORITY}\s*$$
   ^\s+Master Advertisement interval is\s+${MASTER_ADV_INTERVAL}
   ^\s+Master Down interval is\s+${MASTER_DOWN_INTERVAL}
   # Capture time-stamp if vty line has command time-stamping turned on
