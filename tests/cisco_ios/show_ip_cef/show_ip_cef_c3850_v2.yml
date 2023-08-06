@@ -1,34 +1,42 @@
 ---
 parsed_sample:
-  - prefix: "0.0.0.0/0"
+  - interface: []
+    ip_address: "0.0.0.0"
     nexthop:
       - "no route"
-    interface: []
-  - prefix: "0.0.0.0/8"
+    prefix_length: "0"
+  - interface: []
+    ip_address: "0.0.0.0"
     nexthop:
       - "drop"
-    interface: []
-  - prefix: "0.0.0.0/32"
+    prefix_length: "8"
+  - interface: []
+    ip_address: "0.0.0.0"
     nexthop:
       - "receive"
-    interface: []
-  - prefix: "127.0.0.0/8"
+    prefix_length: "32"
+  - interface: []
+    ip_address: "127.0.0.0"
     nexthop:
       - "drop"
-    interface: []
-  - prefix: "224.0.0.0/4"
+    prefix_length: "8"
+  - interface: []
+    ip_address: "224.0.0.0"
     nexthop:
       - "drop"
-    interface: []
-  - prefix: "224.0.0.0/24"
+    prefix_length: "4"
+  - interface: []
+    ip_address: "224.0.0.0"
     nexthop:
       - "receive"
-    interface: []
-  - prefix: "240.0.0.0/4"
+    prefix_length: "24"
+  - interface: []
+    ip_address: "240.0.0.0"
     nexthop:
       - "drop"
-    interface: []
-  - prefix: "255.255.255.255/32"
+    prefix_length: "4"
+  - interface: []
+    ip_address: "255.255.255.255"
     nexthop:
       - "receive"
-    interface: []
+    prefix_length: "32"
