@@ -9,10 +9,9 @@ Value Filldown CPU (\d+/\S*\d+/CPU\d+$)
 Start
   # Match the timestamp at beginning of command output
   ^\S+\s+\S+\s+\d+\s+\d+:\d+:\d+\.\d+\s+\S+\s*$$
-  ^Address\s+Age\s+Hardware\s+Addr(\s+\(min\))?\s+State\s+Type\s+Interface$$
-  ^Protocol\s+Address\s+Age\s+\(min\)\s+Hardware\s+Addr\s+Type\s+Interface$$
+  ^Address\s+Age\s+Hardware\s+Addr\s+State\s+Type\s+Interface$$
   ^-+
   ^${CPU}
-  ^${ADDRESS}\s+${AGE}\s+${MAC_ADDRESS}\s+${STATE}\s+${TYPE}\s+${INTERFACE}\s*$$ -> Record
   ^\s*$$
+  ^${ADDRESS}\s+${AGE}\s+${MAC_ADDRESS}\s+${STATE}\s+${TYPE}\s+${INTERFACE}\s*$$ -> Record
   ^. -> Error
