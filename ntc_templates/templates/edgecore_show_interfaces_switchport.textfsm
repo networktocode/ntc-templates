@@ -1,0 +1,32 @@
+Value INTERFACE (\S+\s+\d+\s*\/\s*\d+)
+Value VLAN_MEMBERSHIP_MODE (\S+)
+Value NATIVE_VLAN (\d+)
+Value List ALLOWED_VLAN (\d+)
+Value List ALLOWED_VLAN_TAG (\w+)
+
+
+Start
+  ^\s*Information\sof\s.* -> Continue.Record
+  ^\s*Information\sof\s${INTERFACE}\s*
+  ^\s*VLAN\sMembership\sMode:\s+${VLAN_MEMBERSHIP_MODE}\s*
+  ^\s*Native\sVLAN:\s+${NATIVE_VLAN}\s*
+  ^\s*Allowed\sVLAN:\s+${ALLOWED_VLAN}\(${ALLOWED_VLAN_TAG}\),\s* -> Continue
+  ^\s*Allowed\sVLAN:\s+(\d+\(\w+\),\s*){1}${ALLOWED_VLAN}\(${ALLOWED_VLAN_TAG}\),\s* -> Continue
+  ^\s*Allowed\sVLAN:\s+(\d+\(\w+\),\s*){2}${ALLOWED_VLAN}\(${ALLOWED_VLAN_TAG}\),\s* -> Continue
+  ^\s*Allowed\sVLAN:\s+(\d+\(\w+\),\s*){3}${ALLOWED_VLAN}\(${ALLOWED_VLAN_TAG}\),\s* -> Continue
+  ^\s*Allowed\sVLAN:\s+(\d+\(\w+\),\s*){4}${ALLOWED_VLAN}\(${ALLOWED_VLAN_TAG}\),\s* -> Continue
+  ^\s*Allowed\sVLAN:\s+(\d+\(\w+\),\s*){5}${ALLOWED_VLAN}\(${ALLOWED_VLAN_TAG}\),\s* -> Continue
+  ^\s*Allowed\sVLAN:\s+(\d+\(\w+\),\s*){6}${ALLOWED_VLAN}\(${ALLOWED_VLAN_TAG}\),\s* -> Continue
+  ^\s*Allowed\sVLAN:\s+(\d+\(\w+\),\s*){7}${ALLOWED_VLAN}\(${ALLOWED_VLAN_TAG}\),\s* -> Continue
+  ^\s*Allowed\sVLAN:\s+(\d+\(\w+\),\s*){8}${ALLOWED_VLAN}\(${ALLOWED_VLAN_TAG}\),\s* -> Continue
+  ^\s*Allowed\sVLAN:\s+(\d+\(\w+\),\s*){9}${ALLOWED_VLAN}\(${ALLOWED_VLAN_TAG}\),\s* -> Continue
+  ^\s+${ALLOWED_VLAN}\(${ALLOWED_VLAN_TAG}\),\s* -> Continue
+  ^\s+(\d+\(\w+\),\s*){1}${ALLOWED_VLAN}\(${ALLOWED_VLAN_TAG}\),\s* -> Continue
+  ^\s+(\d+\(\w+\),\s*){2}${ALLOWED_VLAN}\(${ALLOWED_VLAN_TAG}\),\s* -> Continue
+  ^\s+(\d+\(\w+\),\s*){3}${ALLOWED_VLAN}\(${ALLOWED_VLAN_TAG}\),\s* -> Continue
+  ^\s+(\d+\(\w+\),\s*){4}${ALLOWED_VLAN}\(${ALLOWED_VLAN_TAG}\),\s* -> Continue
+  ^\s+(\d+\(\w+\),\s*){5}${ALLOWED_VLAN}\(${ALLOWED_VLAN_TAG}\),\s* -> Continue
+  ^\s+(\d+\(\w+\),\s*){6}${ALLOWED_VLAN}\(${ALLOWED_VLAN_TAG}\),\s* -> Continue
+  ^\s+(\d+\(\w+\),\s*){7}${ALLOWED_VLAN}\(${ALLOWED_VLAN_TAG}\),\s* -> Continue
+  ^\s+(\d+\(\w+\),\s*){8}${ALLOWED_VLAN}\(${ALLOWED_VLAN_TAG}\),\s* -> Continue
+  ^\s+(\d+\(\w+\),\s*){9}${ALLOWED_VLAN}\(${ALLOWED_VLAN_TAG}\),\s* -> Continue

@@ -1,0 +1,16 @@
+Value Required INTERFACE (\S+\s+\d+(\s*\/\s*\d+)*)
+Value PORT_TYPE (\S+)
+Value ADDRESS ([a-zA-Z0-9]{2}-[a-zA-Z0-9]{2}-[a-zA-Z0-9]{2}-[a-zA-Z0-9]{2}-[a-zA-Z0-9]{2}-[a-zA-Z0-9]{2})
+Value NAME (\S+(\s+\S+)*)
+Value PORT_ADMIN (\S+)
+Value LINK_STATUS (\S+)
+
+
+Start
+  ^\s*Information\s+of -> Continue.Record
+  ^\s*Information\s+of\s+${INTERFACE}\s*$$
+  ^\s*Port\s+Type:\s*${PORT_TYPE}\s*$$
+  ^\s*M(ac|AC)\s+Address:\s*${ADDRESS}\s*$$
+  ^\s*Name:\s*${NAME}\s*$$
+  ^\s*Port\s+Admin:\s*${PORT_ADMIN}\s*$$
+  ^\s*Link\s+Status:\s*${LINK_STATUS}\s*$$

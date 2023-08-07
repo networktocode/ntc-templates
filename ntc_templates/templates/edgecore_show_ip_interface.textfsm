@@ -1,0 +1,7 @@
+Value IP (\S+)
+Value NETMASK (\S+)
+Value IFACE (.*)
+
+
+Start
+  ^\s*IP\s+Address\s+and\s+Netmask\:\s+${IP}\s+${NETMASK}\s+on\s+${IFACE}\,\s*$$ -> Record
