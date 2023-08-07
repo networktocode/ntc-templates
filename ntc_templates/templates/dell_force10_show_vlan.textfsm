@@ -1,7 +1,7 @@
 Value Required VLAN_ID (\d+)
 # Name is really the description and it currently only supports a single word (no spaces)
 Value Required STATUS (\w+)
-Value NAME ([^TU][^\s]\S+(\s\S+)*)
+Value VLAN_NAME ([^TU][^\s]\S+(\s\S+)*)
 Value PORTS_U_GI (\S+)
 Value PORTS_T_GI (\S+)
 Value PORTS_U_TE (\S+)
@@ -13,7 +13,7 @@ Value PORTS_T_MA (\S+)
 
 Start
   ^(\*)?\s+\d+.* -> Continue.Record
-  ^(\*)?\s+${VLAN_ID}\s+${STATUS}(\s+${NAME})?(\s+(U Gi ${PORTS_U_GI}|T Gi ${PORTS_T_GI}|U Ma ${PORTS_U_MA}|T Ma ${PORTS_T_MA}|U Te ${PORTS_U_TE}|T Te ${PORTS_T_TE}|U Fo ${PORTS_U_FO}|T Fo ${PORTS_T_FO}))?
+  ^(\*)?\s+${VLAN_ID}\s+${STATUS}(\s+${VLAN_NAME})?(\s+(U Gi ${PORTS_U_GI}|T Gi ${PORTS_T_GI}|U Ma ${PORTS_U_MA}|T Ma ${PORTS_T_MA}|U Te ${PORTS_U_TE}|T Te ${PORTS_T_TE}|U Fo ${PORTS_U_FO}|T Fo ${PORTS_T_FO}))?
   ^\s+U Gi ${PORTS_U_GI}
   ^\s+T Gi ${PORTS_T_GI}
   ^\s+U Ma ${PORTS_U_MA}

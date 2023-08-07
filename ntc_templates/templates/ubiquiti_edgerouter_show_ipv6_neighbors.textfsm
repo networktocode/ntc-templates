@@ -1,9 +1,9 @@
 Value Required IP (\S+)
 Value INTERFACE (\S+)
-Value MAC ((?:[0-9a-fA-F]{2}\:){5}[0-9a-fA-F]{2})
+Value MAC_ADDRESS ((?:[0-9a-fA-F]{2}\:){5}[0-9a-fA-F]{2})
 Value STATE (\S+)
 
 Start
-  ^${IP}\s+(dev\s${INTERFACE})?\s*(lladdr\s${MAC})?\s*(router\s)?${STATE}\s*$$ -> Record
+  ^${IP}\s+(dev\s${INTERFACE})?\s*(lladdr\s${MAC_ADDRESS})?\s*(router\s)?${STATE}\s*$$ -> Record
   ^\s*$$
   ^. -> Error

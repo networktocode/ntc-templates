@@ -1,4 +1,4 @@
-Value INTF (\S+)
+Value INTERFACE (\S+)
 Value LINE_STATUS (UP|DOWN|Administratively DOWN)
 Value PROTOCOL_STATUS (UP(\(spoofing\))?|DOWN)
 Value ROUTE_MAP (\S+)
@@ -7,13 +7,13 @@ Value MTU (\d+)
 
 
 Start
-  ^${INTF}\s+current\s+state\s*:\s*${LINE_STATUS} -> Interface
+  ^${INTERFACE}\s+current\s+state\s*:\s*${LINE_STATUS} -> Interface
   ^. -> Error
 
 
 Interface
   ^\S+\s+current\s+state -> Continue.Record
-  ^${INTF}\s+current\s+state\s*:\s*${LINE_STATUS}
+  ^${INTERFACE}\s+current\s+state\s*:\s*${LINE_STATUS}
   ^Line\s+protocol\s+current\s+state\s*:\s*${PROTOCOL_STATUS}
   ^Internet\s+Address\s+is\s+${IPADDR}\s+Primary
   ^Internet\s+Address\s+is\s+${IPADDR}\s+Sub

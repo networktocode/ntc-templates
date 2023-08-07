@@ -1,9 +1,9 @@
 ---
 parsed_sample:
-  - index: "0"
+  - addresses: "::/0"
     flags: "*"
+    index: "0"
     name: "Monitoring"
-    addresses: "::/0"
-    security: "none"
     read_access: "yes"
+    security: "none"
     write_access: "no"

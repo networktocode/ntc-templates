@@ -5,7 +5,7 @@ Value TYPE (\S+)
 Value AGE (\S+)
 Value Required PORT (\S+)
 Value STATUS (\S+)
-Value VLAN (\S+)
+Value VLAN_ID (\S+)
 
 Start
   ^All\s+ARPs:\s+\d+,\s+maximum\s+capacity:\s+\d+
@@ -17,7 +17,7 @@ Start
   ^. -> Error 
 
 Layer2
-  ^${NUMBER}\s+${IP_ADDRESS}\s+${MAC_ADDRESS}\s+${TYPE}\s+${AGE}\s+${PORT}\s+${STATUS}\s+${VLAN} -> Record
+  ^${NUMBER}\s+${IP_ADDRESS}\s+${MAC_ADDRESS}\s+${TYPE}\s+${AGE}\s+${PORT}\s+${STATUS}\s+${VLAN_ID} -> Record
   ^Total\s+ARP\s+Entries\s*:\s+\d+
   ^\s*$$
   ^. -> Error 

@@ -7,7 +7,7 @@ Value DAYLIGHT_RULE (\S+)
 Value SOFTWARE_VERSION (\S+)
 Value ROM_VERSION (\S+)
 Value ALLOW_MODS ([Yy]es|[Nn]o)
-Value MAC (\S+)
+Value MAC_ADDRESS (\S+)
 Value SERIAL (\S+)
 Value UPTIME (\d+ \w+)
 Value CPU_UTIL (\d+)
@@ -30,7 +30,7 @@ INFO
   ^\s*MAC Age Time[^:]*:\s+${MAC_AGE}
   ^\s*Time Zone\s+:\s+${TIMEZONE}
   ^\s*Daylight Time Rule\s+:\s+${DAYLIGHT_RULE}
-  ^\s*Software revision\s+:\s+${SOFTWARE_VERSION}\s+Base MAC Addr\s+:\s+${MAC}
+  ^\s*Software revision\s+:\s+${SOFTWARE_VERSION}\s+Base MAC Addr\s+:\s+${MAC_ADDRESS}
   ^\s*ROM Version\s+:\s+${ROM_VERSION}\s+Serial Number\s+:\s+${SERIAL}
   ^\s*Allow V1 Modules\s+:\s+${ALLOW_MODS}
   ^\s*Up Time\s+:\s+${UPTIME}\s+Memory\s+- Total\s+:\s+${MEM_TOT}

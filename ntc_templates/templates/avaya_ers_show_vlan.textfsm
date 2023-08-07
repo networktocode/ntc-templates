@@ -1,19 +1,19 @@
-Value VLANID (\d+)
-Value VLANNAME (\S.*?)
-Value VLANTYPE (\S+)
-Value VLANPROTOCOL (\S+)
-Value VLANPID (\S+)
-Value VLANACTIVE (\S+)
-Value VLANIVLSVL (\S+)
-Value VLANMGMT (\S+)
-Value List VLANPORTMEMBERS (\S+)
+Value VLAN_ID (\d+)
+Value VLAN_NAME (\S.*?)
+Value VLAN_TYPE (\S+)
+Value VLAN_PROTOCOL (\S+)
+Value VLAN_PID (\S+)
+Value VLAN_ACTIVE (\S+)
+Value VLAN_IVL_SVL (\S+)
+Value VLAN_MGMT (\S+)
+Value List VLAN_PORT_MEMBERS (\S+)
 
 Start
-  ^Total\s+VLANs: -> Done
+  ^Total\s+VLAN_s: -> Done
   ^\d+ -> Continue.Record
-  ^${VLANID}\s+${VLANNAME}\s+${VLANTYPE}\s+${VLANPROTOCOL}\s+${VLANPID}\s+${VLANACTIVE}\s+${VLANIVLSVL}\s+${VLANMGMT}$$
-  ^\t+Port Members:\s+${VLANPORTMEMBERS}$$
-  ^\t+\s{14}${VLANPORTMEMBERS}$$
+  ^${VLAN_ID}\s+${VLAN_NAME}\s+${VLAN_TYPE}\s+${VLAN_PROTOCOL}\s+${VLAN_PID}\s+${VLAN_ACTIVE}\s+${VLAN_IVL_SVL}\s+${VLAN_MGMT}$$
+  ^\t+Port Members:\s+${VLAN_PORT_MEMBERS}$$
+  ^\t+\s{14}${VLAN_PORT_MEMBERS}$$
 
 
 Done

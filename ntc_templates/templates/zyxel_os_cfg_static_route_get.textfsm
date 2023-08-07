@@ -1,7 +1,7 @@
 Value INDEX (\d+)
 Value NAME (.+?)
 Value ENABLED (0|1)
-Value IPVER (IPv4|IPv6)
+Value IP_VERSION (IPv4|IPv6)
 Value DESTINATION (((([0-9]{1,3}\.){3}[0-9]{1,3}(/\d{1-2})?)|[0-9a-f:]+/\d{1,3})?)
 Value NETMASK ((([0-9]{1,3}\.){3}[0-9]{1,3})?)
 Value INTERFACE (\S+?)
@@ -13,7 +13,7 @@ Start
   ^. -> Error
 
 ROUTETable
-  ^${INDEX}\s+${NAME}\s+${ENABLED}\s+${IPVER}\s+${DESTINATION}\s+${NETMASK}\s+${INTERFACE}\s+${GATEWAY}\s*$$ -> Record
+  ^${INDEX}\s+${NAME}\s+${ENABLED}\s+${IP_VERSION}\s+${DESTINATION}\s+${NETMASK}\s+${INTERFACE}\s+${GATEWAY}\s*$$ -> Record
   ^Command Successful.\s*$$
   ^\s*$$
   ^. -> Error

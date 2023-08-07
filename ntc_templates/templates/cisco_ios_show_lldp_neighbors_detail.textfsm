@@ -6,7 +6,7 @@ Value NEIGHBOR (.+?)
 Value SYSTEM_DESCRIPTION (.*)
 Value CAPABILITIES (.*)
 Value MANAGEMENT_IP (\S+)
-Value VLAN (\d+)
+Value VLAN_ID (\d+)
 Value SERIAL (\S+)
 Value MANUFACTURER (.*)
 Value HW_REVISION (\S+)
@@ -52,7 +52,7 @@ Start
   ^\s+Power\s+requirements
   ^\s+Location
   ^Time\s+remaining
-  ^Vlan\s+ID:\s+(?:${VLAN}|-\s+not\s+advertised)\s*$$
+  ^Vlan\s+ID:\s+(?:${VLAN_ID}|-\s+not\s+advertised)\s*$$
   ^\s+\(\S+\)
   ^(?:PoE|\s+Power)
   ^\s*-+\s*$$ -> Record

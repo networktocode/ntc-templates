@@ -1,7 +1,10 @@
 Value NEIGHBOR (\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})
+Value PEER_GROUP (\S+)
 Value DESCRIPTION (.*)
-Value ASN (\d+)
-Value BGP_STATE ([\w\s\(\)]+)
+Value ASN (\d+|\d+\.\d+)
+Value REMOTE_ASN (\d+|\d+\.\d+)
+Value LOCAL_ASN (\d+|\d+\.\d+)
+Value BGP_STATE ([\(\)\w\s]+)
 Value UPTIME (\w+)
 Value SOURCE_IFACE (\w+[\/\d+]+)
 Value CONN_ESTAB (\w+)
@@ -53,7 +56,10 @@ Value OUTBOUND_ROUTEMAP (\S+)
 
 Start
   ^BGP\s+neighbor\s+is -> Continue.Record
-  ^BGP neighbor is ${NEIGHBOR},\s+remote AS\s+${ASN},.*
+  ^BGP\s+neighbor\s+is\s+${NEIGHBOR},\s+remote\s+AS\s+${ASN},.* -> Continue
+  ^BGP\s+neighbor\s+is\s+${NEIGHBOR},\s+remote\s+AS\s+${REMOTE_ASN},\s+local\s+AS\s+${LOCAL_ASN}.*
+  ^BGP\s+neighbor\s+is\s+${NEIGHBOR},\s+remote\s+AS\s+${REMOTE_ASN},.*
+  ^\s+Inherits.+\s${PEER_GROUP}
   ^\s+Description:\s+${DESCRIPTION}
   ^\s+BGP state = ${BGP_STATE}, \w+ for ${UPTIME}
   ^\s+Using ${SOURCE_IFACE} as [\w\s]+
@@ -73,7 +79,7 @@ Start
   ^\s+Extended Next Hop Encoding Capability:\s+${EXT_NH_CAP}
   ^\s+Opens:\s+${OPENS_COUNT_SENT}\s+${OPENS_COUNT_RCVD}
   ^\s+Notifications:\s+${NOTIFICATIONS_COUNT_SENT}\s+${NOTIFICATIONS_COUNT_RCVD}
-  ^\s+Updates:\s+${UPDATES_COUNT_SENT}\s+${OPENS_COUNT_RCVD}
+  ^\s+Updates:\s+${UPDATES_COUNT_SENT}\s+${UPDATES_COUNT_RCVD}
   ^\s+Keepalives:\s+${KEEPALIVES_COUNT_SENT}\s+${KEEPALIVES_COUNT_RCVD}
   ^\s+Route Refresh:\s+${ROUTE_REFRESH_COUNT_SENT}\s+${ROUTE_REFRESH_COUNT_RCVD}
   ^\s+Capability:\s+${CAPABILITY_COUNT_SENT}\s+${CAPABILITY_COUNT_RCVD}
@@ -98,4 +104,6 @@ AddrFamState
   ^\s+Foreign host:\s+${REMOTE_IP}, Foreign port:\s+${REMOTE_PORT}
   ^\s+No\s+established\s+BGP\s+session\s+with\s+peer
   ^BGP\s+neighbor\s+is -> Continue.Record
-  ^BGP\s+neighbor\s+is\s+${NEIGHBOR},\s+remote\s+AS\s+${ASN},.* -> Start
+  ^BGP\s+neighbor\s+is\s+${NEIGHBOR},\s+remote\s+AS\s+${ASN},.* -> Continue
+  ^BGP\s+neighbor\s+is\s+${NEIGHBOR},\s+remote\s+AS\s+${REMOTE_ASN},\s+local\s+AS\s+${LOCAL_ASN}.* -> Start
+  ^BGP\s+neighbor\s+is\s+${NEIGHBOR},\s+remote\s+AS\s+${REMOTE_ASN},.* -> Start

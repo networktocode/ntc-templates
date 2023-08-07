@@ -4,7 +4,7 @@ Value NEIGHBOR_PORT_ID (.*)
 Value NEIGHBOR_INTERFACE (.*)
 Value NEIGHBOR (\S+)
 Value MANAGEMENT_IP (\S+)
-Value VLAN (\d+)
+Value VLAN_ID (\d+)
 
 Start
   ^The\s+LLDP\s+service\s+is\s+not\s+running -> EOF
@@ -23,5 +23,5 @@ Start
   ^\s+Management\s+address\s+interface\s+type
   ^\s+Management\s+address\s+interface\s+ID
   ^\s+Management\s+address\s+OID
-  ^\s+Port\s+VLAN\s+ID\(PVID\)\s+:\s+${VLAN}
+  ^\s+Port\s+VLAN\s+ID\(PVID\)\s+:\s+${VLAN_ID}
   ^\s+Maximum\s+frame\s+size -> Record Start

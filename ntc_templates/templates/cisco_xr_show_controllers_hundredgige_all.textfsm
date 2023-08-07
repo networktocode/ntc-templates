@@ -46,8 +46,8 @@ Value TX_WARN_DBM_HIGH (\S+)
 Value TX_WARN_DBM_LOW (\S+)
 Value FEC_CORRECTED (\d+)
 Value FEC_UNCORRECTED (\d+)
-Value MAC_OPS_ADD (\S+)
-Value MAC_BIA_ADD (\S+)
+Value MAC_ADDRESS (\S+)
+Value BIA (\S+)
 Value AUTONEGOTIATION (\S+)
 Value SPEED (\S+)
 Value DUPLEX (.*)
@@ -136,8 +136,8 @@ Stats
   ^.* -> Error "LINE NOT FOUND"
   
 MacInfo
-  ^\s+Operational\s+address:\s+${MAC_OPS_ADD}
-  ^\s+Burnt-in\s+address:\s+${MAC_BIA_ADD}
+  ^\s+Operational\s+address:\s+${MAC_ADDRESS}
+  ^\s+Burnt-in\s+address:\s+${BIA}
   ^\s+No\s+unicast.*
   ^\s+Operating\s+in.*
   ^\s+$$ -> Record StateChanger

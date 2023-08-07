@@ -1,5 +1,5 @@
 Value Required VLAN_ID (\d+)
-Value Required NAME (.*)
+Value Required VLAN_NAME (.*)
 Value DESCRIPTION (.*)
 Value TYPE (.*)
 Value ROUTE_INTERFACE (.*)
@@ -14,7 +14,7 @@ Start
   ^\s*IPv4\s+[Aa]ddress\s*:\s*${IPV4_ADDRESS}
   ^\s*IPv4\s+[Ss]ubnet\s+mask\s*:\s*${IPV4_SUBNET}
   ^\s*Description\s*:\s*${DESCRIPTION}
-  ^\s*Name\s*:\s*${NAME}
+  ^\s*Name\s*:\s*${VLAN_NAME}
   ^\s*Tagged\s+[Pp]orts
   ^\s*Untagged\s+[Pp]orts
   ^\s{3,}\S+\s*$$

@@ -6,7 +6,7 @@ Value Required PEER (\S+)
 Value PORT (\d+)
 Value FVRF (\S+)
 Value IVRF (\S+)
-Value DESC (\S+)
+Value DESCRIPTION (\S+)
 Value PHASE1_ID (\S+)
 Value SESSION_ID (\d+)
 Value LOCAL_IP (\S+)
@@ -38,7 +38,7 @@ Start
  ^Session\s+status:\s+${SESSION_STATUS}
  ^Uptime:\s+${UPTIME}
  ^Peer:\s+${PEER}\s+port\s+${PORT}\s+fvrf:\s+${FVRF}\s+ivrf:\s+${IVRF}
- ^\s+Desc:\s+${DESC}
+ ^\s+Desc:\s+${DESCRIPTION}
  ^\s+Phase1_id:\s+${PHASE1_ID}
  ^\s+Session\s+ID:\s+${SESSION_ID}
  ^\s+IKEv[1|2]\s+SA:\s+local\s+${LOCAL_IP}/${LOCAL_PORT}\s+remote\s+${REMOTE_IP}/${REMOTE_PORT}\s+${IKEV1_STATUS}

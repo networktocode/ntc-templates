@@ -1,5 +1,5 @@
 Value INTERFACE (.+?)
-Value MAC (.+?)
+Value MAC_ADDRESS (.+?)
 Value METHOD (.+?)
 Value DOMAIN (.+?)
 Value STATUS (.+?)
@@ -13,5 +13,5 @@ Start
 
 Catch
   ^-+$$
-  ^${INTERFACE}\s+${MAC}\s+${METHOD}\s+${DOMAIN}\s+${STATUS}\s+${SESSION}$$ -> Record
+  ^${INTERFACE}\s+${MAC_ADDRESS}\s+${METHOD}\s+${DOMAIN}\s+${STATUS}\s+${SESSION}$$ -> Record
   ^.* -> Start

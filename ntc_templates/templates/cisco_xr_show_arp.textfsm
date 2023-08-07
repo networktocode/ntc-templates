@@ -1,6 +1,6 @@
 Value Required ADDRESS (\d+\.\d+\.\d+\.\d+)
 Value Required AGE (\S+)
-Value Required MAC (\S+)
+Value Required MAC_ADDRESS (\S+)
 Value Required STATE (\S+)
 Value Required TYPE (\S+)
 Value Required INTERFACE (\S+)
@@ -13,5 +13,5 @@ Start
   ^-+
   ^${CPU}
   ^\s*$$
-  ^${ADDRESS}\s+${AGE}\s+${MAC}\s+${STATE}\s+${TYPE}\s+${INTERFACE}\s*$$ -> Record
+  ^${ADDRESS}\s+${AGE}\s+${MAC_ADDRESS}\s+${STATE}\s+${TYPE}\s+${INTERFACE}\s*$$ -> Record
   ^. -> Error

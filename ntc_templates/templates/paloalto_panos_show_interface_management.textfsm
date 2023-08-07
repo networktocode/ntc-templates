@@ -1,5 +1,5 @@
 Value NAME (.+)
-Value MACADDRESS ([a-fA-F0-9]{2}\:[a-fA-F0-9]{2}\:[a-fA-F0-9]{2}\:[a-fA-F0-9]{2}\:[a-fA-F0-9]{2}\:[a-fA-F0-9]{2})
+Value MAC_ADDRESS ([a-fA-F0-9]{2}\:[a-fA-F0-9]{2}\:[a-fA-F0-9]{2}\:[a-fA-F0-9]{2}\:[a-fA-F0-9]{2}\:[a-fA-F0-9]{2})
 Value IPV4_ADDRESS (\S+)
 Value IPV4_NETMASK (\S+)
 Value IPV4_GATEWAY (\S+)
@@ -14,7 +14,7 @@ Start
   ^\s+Runtime
   ^\s+Configured\s+link
   ^MAC\s+address
-  ^\s+Port\s+MAC\s+address\s+${MACADDRESS}
+  ^\s+Port\s+MAC\s+address\s+${MAC_ADDRESS}
   ^Ip\s+address:\s+${IPV4_ADDRESS}
   ^Netmask:\s+${IPV4_NETMASK}
   ^Default\s+gateway:\s+${IPV4_GATEWAY}

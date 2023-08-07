@@ -1,5 +1,5 @@
 Value IP (\S+)
-Value MAC ([0-9a-fA-F]{6}-[0-9a-fA-F]{6})
+Value MAC_ADDRESS ([0-9a-fA-F]{6}-[0-9a-fA-F]{6})
 Value TYPE (\S+)
 Value PORT (\S+)
 
@@ -10,8 +10,8 @@ Start
   ^. -> Error
 
 ARP
-  ^\s+${IP}\s+${MAC}\s+${TYPE}\s+${PORT} -> Record
-  ^\s+${IP}\s+${MAC}\s+${TYPE} -> Record
+  ^\s+${IP}\s+${MAC_ADDRESS}\s+${TYPE}\s+${PORT} -> Record
+  ^\s+${IP}\s+${MAC_ADDRESS}\s+${TYPE} -> Record
   ^\s*------
   ^\s*$$
   ^. -> Error
