@@ -2,14 +2,20 @@ Value Filldown,Required ROUTER_ID ([0-9a-f:\.]+)
 Value Filldown LOCAL_AS (\d+(\.\d+)?)
 Value Filldown ADDR_FAMILY (.+?)
 Value BGP_NEIGH (\d+?\.\d+?\.\d+?\.\d+?)
+Value NEIGH_V (\d+)
 Value NEIGH_AS (\d+)
+Value MSG_RCVD (\d+)
+Value MSG_SENT (\d+)
+Value TB_VER (\d+)
+Value IN_Q (\d+)
+Value OUT_Q (\d+)
 Value UP_DOWN (\S+?)
 Value STATE_PFXRCD (\S+?\s+\S+?|\S+?)
 
 Start
   ^For\s+address\s+family:\s+${ADDR_FAMILY}$$
   ^BGP\s+router\s+identifier\s+${ROUTER_ID},\s+local\s+AS\s+number\s+${LOCAL_AS}\s*$$
-  ^${BGP_NEIGH}\s+\S+\s+${NEIGH_AS}(\s+\d+?){5}\s+${UP_DOWN}\s+${STATE_PFXRCD}\s*$$ -> Record
+  ^${BGP_NEIGH}\s+${NEIGH_V}\s+${NEIGH_AS}\s+${MSG_RCVD}\s+${MSG_SENT}\s+${TB_VER}\s+${IN_Q}\s+${OUT_Q}\s+${UP_DOWN}\s+${STATE_PFXRCD}\s*$$ -> Record
   # Capture time-stamp if vty line has command time-stamping turned on
   ^Load\s+for\s+
   ^Time\s+source\s+is
