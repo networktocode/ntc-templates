@@ -1,0 +1,8 @@
+Value List RESULT (\s*(?!\[\S+\]\s*\>\s*)\S.*)
+
+Start
+  ^\[\S+\]\s*\>\s* -> Row
+
+Row
+  ^${RESULT}
+  ^\[\S+\]\s*\>\s* -> Record

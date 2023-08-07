@@ -1,0 +1,12 @@
+Value STATUS (\S+)
+Value DOWNLOADED (\S+)
+Value DURATION (\S+)
+
+
+Start
+  ^\s*status:\s+${STATUS}\s*$$
+  ^\s*downloaded:\s+${DOWNLOADED}\s*$$
+  ^\s*duration:\s+${DURATION}\s*$$
+  ^\s*-*\s*\[Q\s+quit\|D\s+dump\|C-z\s+pause\]\s*$$
+  ^\s*$$
+  ^. -> Error

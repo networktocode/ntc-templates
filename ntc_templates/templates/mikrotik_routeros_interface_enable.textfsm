@@ -1,0 +1,10 @@
+Value List RESULT_ROWS (\s*(?!\[\S+\]\s*\>\s*)\S.*)
+
+Start
+  ^\[\S+\]\s*\>\s* -> Row
+  ^\s*$$
+  ^. -> Error
+
+Row
+  ^${RESULT_ROWS}
+  ^\[\S+\]\s*\>\s* -> Record
