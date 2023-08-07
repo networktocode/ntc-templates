@@ -1,0 +1,13 @@
+Value PORT ((?!Port|Ch)[^-]\S+)
+Value DESCRIPTION (\S.*?)
+
+
+Start
+  ^Port\s+Description\s*$$ -> Column1
+  ^Ch\s+Description\s*$$ -> Column2
+
+Column1
+  ^${PORT}\s*(\s+${DESCRIPTION})?\s*$$ -> Record Column1
+
+Column2
+  ^${PORT}\s*(\s+${DESCRIPTION})?\s*$$ -> Record Column2

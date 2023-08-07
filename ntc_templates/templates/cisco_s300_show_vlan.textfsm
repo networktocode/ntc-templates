@@ -1,0 +1,13 @@
+Value Required VLAN_ID (\d+)
+Value NAME (\S+)
+
+# Костыльный шаблон: обрезает все переносы в выводе, не собирает интерфейсы
+Start
+  ^\s*Vlan\s+Name\s+Ports\s+Type\s+Authorization\s*$$ -> AllPortTypes
+  ^.* -> SeparatedPortTypes
+
+AllPortTypes
+  ^\s*${VLAN_ID}\s+${NAME}.\s+((fa|gi|te|Po)\S+)?\s+(Default|permanent) -> Record
+
+SeparatedPortTypes
+  ^\s*${VLAN_ID}\s+${NAME}.* -> Record

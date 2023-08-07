@@ -1,0 +1,14 @@
+Value Filldown PORT (\S+)
+Value Filldown PORT_MODE (\S+)
+Value Filldown NATIVE_VLAN (\S+)
+Value List VLAN (\d+)
+Value List NAME ((\s*\S+)+)
+Value List EGRESS_RULE (Untagged|Tagged)
+
+
+Start
+  ^Port\s*\:\s+ -> Continue.Record
+  ^Port\s*\:\s+${PORT}
+  ^Port\s+Mode\s*\:\s+${PORT_MODE}
+  ^Ingress\s+UnTagged\s+VLAN\s*\(\s*NATIVE\s*\)\s*\:\s*${NATIVE_VLAN}
+  ^\s*${VLAN}\s+${NAME}\s+${EGRESS_RULE}.*$$
