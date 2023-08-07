@@ -1,0 +1,6 @@
+Value TIMEZONE_NAME (\S+)
+Value HOURS (\d+)
+Value MINUTES (\d+)
+
+Start
+  ^\s*clock\stimezone\s${TIMEZONE_NAME}\s+${HOURS}\s+${MINUTES}\s*$$ -> Record

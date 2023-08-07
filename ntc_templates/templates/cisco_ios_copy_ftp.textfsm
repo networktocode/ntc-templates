@@ -1,0 +1,7 @@
+Value BYTES (\d+)
+Value SECONDS (\d+(?:\.\d+)?)
+Value SPEED (\d+)
+
+
+Start
+  ^\s*${BYTES}\s+bytes\s+copied\s+in\s+${SECONDS}\s+secs\s+\(${SPEED}\s+bytes\/sec\)\s*$$ -> Record

@@ -1,0 +1,11 @@
+Value INTERFACE (\w+)
+
+
+Start
+  ^\s*configure\s+terminal\s*$$
+  ^\s*Enter\s+configuration\s+commands,\s+one\s+per\s+line.\s+End\s+with\s+CNTL/Z\.\s*$$
+  ^.*\(config\)#interface\s+${INTERFACE}\s*$$
+  ^.*\(config-if\)#no shutdown\s*$$
+  ^.*\(config-if\)#end\s*$$ -> Record
+  ^\s*$$
+  ^. -> Error
