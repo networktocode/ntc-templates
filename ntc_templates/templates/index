@@ -569,11 +569,12 @@ mikrotik_routeros_snmp_community_print_without-paging.textfsm, .*, mikrotik_rout
 mikrotik_routeros_ipv6_neighbor_print_without-paging.textfsm, .*, mikrotik_routeros, [[/]]ipv6 neighbor print without-paging
 mikrotik_routeros_ip_arp_print_without-paging.textfsm, .*, mikrotik_routeros, [[/]]ip arp print without-paging
 mikrotik_routeros_system_routerboard_print.textfsm, .*, mikrotik_routeros, [[/]]system routerboard print
+mikrotik_routeros_ip_address_get_address.textfsm, .*, mikrotik_routeros, \s*:\s*put\s+\(\s*\[\s*/\s*ip\s+address\s+get\s+\[\s*find\s+interface\s*=\w+\s*\]\s*\]\s*->\s*"address"\s*\)\s*
 mikrotik_routeros_ip_route_print_terse.textfsm, .*, mikrotik_routeros, [[/]]ip(v6)? route print terse
-mikrotik_routeros_interface_disable.textfsm, .*, mikrotik_routeros, /interface disable \w+
-mikrotik_routeros_interface_enable.textfsm, .*, mikrotik_routeros, /interface enable \w+
+mikrotik_routeros_interface_disable.textfsm, .*, mikrotik_routeros, [[/]]interface disable \w+
+mikrotik_routeros_interface_enable.textfsm, .*, mikrotik_routeros, [[/]]interface enable \w+
 mikrotik_routeros_system_reboot.textfsm, .*, mikrotik_routeros, :execute {/system reboot}
-mikrotik_routeros_tool_fetch.textfsm, .*, mikrotik_routeros, /tool fetch .*
+mikrotik_routeros_tool_fetch.textfsm, .*, mikrotik_routeros, [[/]]tool fetch .*
 mikrotik_routeros_resolve.textfsm, .*, mikrotik_routeros, :put \[:resolve server=.* domain-name=.*\]
 
 paloalto_panos_show_running_security-policy.textfsm, .*, paloalto_panos, sh[[ow]] runn[[ing]] security[[-policy]]
