@@ -1,0 +1,19 @@
+Value PORT ((?!Port|Ch|-)\S+)
+Value PORT_MODE (Trunk|Access(?:\s*\(\d+\))?|Customer(?:\s*\(\d+\))?)
+Value ADMIN_STATE (Up|Down)
+Value LINK_STATE (Up|Down|Not Present)
+Value DESCRIPTION (\S.*?)
+
+Start
+  ^Port\s+Description\s*$$ -> Column2
+  ^Port\s+State\s+State\s+Description\s*$$ -> Column4
+  ^Port\s+Port\s+Mode\s+\(VLAN\)\s+State\s+State\s+Description\s*$$ -> Column5
+
+Column2
+  ^\s*${PORT}\s*(\s+${DESCRIPTION})?\s*$$ -> Record Column2
+
+Column4
+  ^\s*${PORT}\s+${ADMIN_STATE}\s+${LINK_STATE}(?:\s+${DESCRIPTION})?\s*$$ -> Record Column4
+
+Column5
+  ^\s*${PORT}\s+(?:${PORT_MODE}\s+)?${ADMIN_STATE}\s+${LINK_STATE}(?:\s+${DESCRIPTION})?\s*$$ -> Record Column5

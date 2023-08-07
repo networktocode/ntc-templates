@@ -1,0 +1,50 @@
+Value PORT (\S+)
+Value TYPE (\S+)
+Value DUPLEX (\S+)
+Value SPEED (\d+|--)
+Value BW (\S+)
+Value NEG (Enabled|Disabled|--)
+Value FLOW_CTRL (On|Off|--)
+Value LINK_STATE ((Up|Down(?:\s+\(\S+\))?|Not Present))
+Value UP_TIME (\d+\,\d{2}\:\d{2}\:\d{2}|--)
+Value BACK_PRESSURE (\S+)
+Value MDIX_MODE (On|Off|--)
+Value PORT_MODE (\S+)
+
+Start
+  ^Port\s+Type\s+Speed\s+control\s+State\s+Port\s+Mode\s*$$ -> Port6
+  ^Port\s+Type\s+Duplex\s+Speed\s+Neg\s+ctrl\s+State\s+\(d\,h\:m\:s\)\s+Pressure\s+Mode\s+Port\s+Mode.*$$ -> Port11
+  ^Port\s+Type\s+Duplex\s+Speed\s+Neg\s+ctrl\s+State\s+Pressure\s+Mode\s+Port\s+Mode\s*$$ -> Port10
+
+Port6
+  ^${PORT}\s+${TYPE}\s+${SPEED}\s+${FLOW_CTRL}\s+${LINK_STATE}\s+${PORT_MODE}\s*$$ -> Record Port6
+  ^Ch\s+BW\s+control\s+State\s+Port\s+Mode\s*$$ -> Ch5
+  ^Ch\s+Duplex\s+BW\s+Neg\s+control\s+State\s+Port\s+Mode\s*$$ -> Ch7
+  ^Ch\s+Type\s+Duplex\s+Speed\s+Neg\s+control\s+State\s+Port\s+Mode.*$$ -> Ch8
+
+Port11
+  ^${PORT}\s+${TYPE}\s+${DUPLEX}\s+${SPEED}\s+${NEG}\s+${FLOW_CTRL}\s+${LINK_STATE}\s+${UP_TIME}\s*${BACK_PRESSURE}\s+${MDIX_MODE}\s+${PORT_MODE}\s*$$ -> Record Port11
+  ^Ch\s+BW\s+control\s+State\s+Port\s+Mode\s*$$ -> Ch5
+  ^Ch\s+Duplex\s+BW\s+Neg\s+control\s+State\s+Port\s+Mode\s*$$ -> Ch7
+  ^Ch\s+Type\s+Duplex\s+Speed\s+Neg\s+control\s+State\s+Port\s+Mode.*$$ -> Ch8
+
+Port10
+  ^${PORT}\s+${TYPE}\s+${DUPLEX}\s+${SPEED}\s+${NEG}\s+${FLOW_CTRL}\s+${LINK_STATE}\s+${BACK_PRESSURE}\s+${MDIX_MODE}\s+${PORT_MODE}\s*$$ -> Record Port10
+  ^Ch\s+BW\s+control\s+State\s+Port\s+Mode\s*$$ -> Ch5
+  ^Ch\s+Duplex\s+BW\s+Neg\s+control\s+State\s+Port\s+Mode\s*$$ -> Ch7
+  ^Ch\s+Type\s+Duplex\s+Speed\s+Neg\s+control\s+State\s+Port\s+Mode.*$$ -> Ch8
+
+Ch5
+  ^${PORT}\s+${BW}\s+${FLOW_CTRL}\s+${LINK_STATE}\s+${PORT_MODE}\s*$$ -> Record Ch5
+  ^Oob\s+ -> Oob
+
+Ch7
+  ^${PORT}\s+${DUPLEX}\s+${BW}\s+${NEG}\s+${FLOW_CTRL}\s+${LINK_STATE}\s+${PORT_MODE}\s*$$ -> Record Ch7
+  ^Oob\s+ -> Oob
+
+Ch8
+  ^${PORT}\s+${TYPE}\s+${DUPLEX}\s+${SPEED}\s+${NEG}\s+${FLOW_CTRL}\s+${LINK_STATE}\s+${PORT_MODE}\s*$$ -> Record Ch8
+  ^Oob\s+ -> Oob
+
+Oob
+  ^${PORT}\s*${TYPE}\s*${DUPLEX}\s*${SPEED}\s*${NEG}\s*${LINK_STATE}.*$$ -> Record Oob

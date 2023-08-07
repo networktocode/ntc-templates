@@ -1,0 +1,16 @@
+Value Required VLAN_ID (\d+)
+Value NAME (\S+)
+
+
+# Not complete template: cut multiline descriptions, does not parse interfaces
+Start
+  # Some firmwares/models return all interfaces in one column
+  ^\s*Vlan\s+Name\s+Ports\s+Type\s+Authorization\s*$$ -> AllPortTypes
+  # And some firmwares/models return tagged and untagged interfaces in different columns
+  ^.* -> SeparatedPortTypes
+
+AllPortTypes
+  ^\s*${VLAN_ID}\s+${NAME}.\s+((fa|gi|te|Po)\S+)?\s+(Default|permanent) -> Record
+
+SeparatedPortTypes
+  ^\s*${VLAN_ID}\s+${NAME}.* -> Record

@@ -1,0 +1,21 @@
+Value DESCRIPTION (.*)
+Value UP_TIME (\S+)
+Value CONTACT (.*)
+Value HOSTNAME (\S+)
+Value LOCATION (.*)
+Value ADDRESS ([a-zA-Z0-9]{2}:[a-zA-Z0-9]{2}:[a-zA-Z0-9]{2}:[a-zA-Z0-9]{2}:[a-zA-Z0-9]{2}:[a-zA-Z0-9]{2})
+Value OID (\d+(\.\d+)*)
+Value RESET_BTN_STATUS (\S+)
+Value FANS_STATUS (\S+)
+
+
+Start
+  ^System\s+Description:\s*${DESCRIPTION}\s*$$
+  ^System\s+Up\s+Time\s+\(days,hour:min:sec\):\s*${UP_TIME}\s*$$
+  ^System\s+Contact:\s*${CONTACT}\s*$$
+  ^System\s+Name:\s*${HOSTNAME}\s*$$
+  ^System\s+Location:\s*${LOCATION}\s*$$
+  ^System\s+MAC\s+Address:\s*${ADDRESS}\s*$$
+  ^System\s+Object\s+ID:\s*${OID}\s*$$
+  ^Reset-Button:\s*${RESET_BTN_STATUS}\s*$$
+  ^Fans\s+Status:\s*${FANS_STATUS}\s*$$ -> Record
