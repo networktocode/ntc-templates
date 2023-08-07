@@ -1,0 +1,8 @@
+Value LINE ((\*\s+)?\d+\s+(con|aux|tty|vty)\s+\d+)
+Value USER (\S*)
+Value HOSTS (\S*)
+Value IDLE (\S+)
+Value LOCATION (\S*)
+
+Start
+  ^\s*${LINE}\s+${USER}\s+${HOSTS}\s+${IDLE}\s+${LOCATION}\s*$$ -> Record

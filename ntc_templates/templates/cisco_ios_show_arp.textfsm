@@ -1,0 +1,10 @@
+Value PROTOCOL (\S+)
+Value ADDRESS (\d+\.\d+\.\d+\.\d+)
+Value AGE_MIN (\S+)
+Value HARDWARE_ADDR (([a-f0-9]{4}\.){2}[a-f0-9]{4})
+Value TYPE (\S+)
+Value INTERFACE (\S+)
+
+
+Start
+  ^\s*${PROTOCOL}\s+${ADDRESS}\s+${AGE_MIN}\s+${HARDWARE_ADDR}\s+${TYPE}\s+${INTERFACE}\s*$$ -> Record

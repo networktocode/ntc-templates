@@ -1,0 +1,39 @@
+Value NEIGHBOR_ID (\d+.\d+.\d+.\d+)
+Value ADDRESS (\d+.\d+.\d+.\d+)
+Value AREA (\S+)
+Value INTERFACE (\S+)
+Value PRIORITY (\d+)
+Value STATE (\S+\/\s+\-|\S+)
+Value STATE_CHANGES (\d+)
+Value DR (\d+.\d+.\d+.\d+)
+Value BDR (\d+.\d+.\d+.\d+)
+Value OPTIONS (0[xX][0-9a-fA-F]+)
+Value LLS_OPTIONS (.+?(?=,))
+Value LAST_OOB_RESYNC (\d+:\d+:\d+)
+Value DEAD_TIME (\d+:\d+:\d+)
+Value UP_TIME (\d+:\d+:\d+)
+Value RQ_INDEX (\d+\/\d+)
+Value RQ_LENGTH (\d+)
+Value RETRANSMISSION_NUMBER (\d+)
+Value FIRST_PACKET (\S+)
+Value NEXT_PACKET (\S+)
+Value LAST_RETRANSMISSION_SCAN_LENGTH (\d+)
+Value MAX_RETRANSMISSION_SCAN_LENGTH (\d+)
+Value LAST_RETRANSMISSION_SCAN_TIME (\d+)
+Value MAX_RETRANSMISSION_SCAN_TIME (\d+)
+
+
+
+Start
+  ^\s*Neighbor\s${NEIGHBOR_ID}\,\sinterface\saddress\s${ADDRESS}\s*$$ -> Continue
+  ^\s*In\sthe\sarea\s${AREA}\svia\sinterface\s${INTERFACE}\s*$$ -> Continue
+  ^\s*Neighbor\spriority\sis\s${PRIORITY}\,\sState\sis\s${STATE}\,\s+${STATE_CHANGES}\sstate\schanges\s*$$ -> Continue
+  ^\s*DR\sis\s${DR}\sBDR\sis\s${BDR}\s*$$ -> Continue
+  ^\s*Options\sis\s${OPTIONS}\s*$$ -> Continue
+  ^\s*LLS\sOptions\sis\s${LLS_OPTIONS}\,\slast\sOOB\-Resync\s${LAST_OOB_RESYNC}\sago\s*$$ -> Continue
+  ^\s*Dead\stimer\sdue\sin\s${DEAD_TIME}\s*$$ -> Continue
+  ^\s*Neighbor\sis\sup\sfor\s${UP_TIME}\s*$$ -> Continue
+  ^\s*Index\s${RQ_INDEX}\,\sretransmission\squeue\slength\s${RQ_LENGTH}\,\snumber\sof\sretransmission\s${RETRANSMISSION_NUMBER}\s*$$ -> Continue
+  ^\s*First\s${FIRST_PACKET}\sNext\s${NEXT_PACKET}\s*$$ -> Continue
+  ^\s*Last\sretransmission\sscan\slength\sis\s${LAST_RETRANSMISSION_SCAN_LENGTH}\,\smaximum\sis\s${MAX_RETRANSMISSION_SCAN_LENGTH}\s*$$ -> Continue
+  ^\s*Last\sretransmission\sscan\stime\sis\s${LAST_RETRANSMISSION_SCAN_TIME}\smsec\,\smaximum\sis\s${MAX_RETRANSMISSION_SCAN_TIME}\smsec\s*$$ -> Continue.Record
