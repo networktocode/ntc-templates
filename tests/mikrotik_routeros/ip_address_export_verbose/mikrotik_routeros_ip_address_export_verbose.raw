@@ -1,0 +1,7 @@
+# jul/21/2023 09:42:42 by RouterOS 6.48.6
+# software id = C6UR-NT34
+#
+# model = RouterBOARD 750UP r2
+# serial number = 5BBD05EA05E2
+/ip address
+add address=10.160.1.230/30 disabled=no interface=ether1_MAIN network=10.160.1.228

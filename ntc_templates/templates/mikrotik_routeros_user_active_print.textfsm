@@ -1,0 +1,7 @@
+Value WHEN ([a-z]{3}\/\d{1,2}\/\d{4} \d{1,2}:\d{1,2}:\d{1,2})
+Value NAME ([a-zA-Z0-9*_.@]+)
+Value ADDRESS (\S+)
+Value VIA (local|telnet|ssh|winbox|api|web|tikapp|ftp|dude)
+
+Start
+  ^\s*\d+\s+${WHEN}\s+${NAME}\s+${ADDRESS}\s+${VIA}\s*$$ -> Record

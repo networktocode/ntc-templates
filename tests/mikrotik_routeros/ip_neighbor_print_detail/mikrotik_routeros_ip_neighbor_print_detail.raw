@@ -1,0 +1,5 @@
+Flags: X - disabled, R - radius, D - dynamic, B - blocked
+ #   ADDRESS                                      MAC-ADDRESS       HOST-NAME                             SERVER                             RATE-LIMIT                             STATUS  LAST-SEEN
+[arm@KFC-MSK-Zoo-Cisco_BOX] > /ip neighbor print detail
+ 0 interface=ether1_MAIN address=10.160.1.229 address4=10.160.1.229 mac-address=48:8F:5A:5A:87:E7 identity="KFC-MSK-Zoo-Cisco_MAIN" platform="MikroTik" version="6.48.6 (long-term)" unpack=none age=17s uptime=1w5d2h31m30s
+   software-id="1BM9-GUEU" board="RB750UPr2" interface-name="ether2_BOX" system-description="MikroTik RouterOS 6.48.6 (long-term) RB750UPr2" system-caps=bridge,router system-caps-enabled=bridge,router

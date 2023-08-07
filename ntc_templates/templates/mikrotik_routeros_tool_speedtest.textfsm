@@ -1,0 +1,21 @@
+Value STATUS (\S+)
+Value TIME_REMAINING (\S+)
+Value PING_MIN_AVG_MAX (\S+\s*\/\s*\S+\s*\/\s*\S+)
+Value JITTER_MIN_AVG_MAX (\S+\s*\/\s*\S+\s*\/\s*\S+)
+Value LOSS (\d+\%\s*\(\d+\/\d+\))
+Value TCP_DOWNLOAD (\S+)
+Value TCP_UPLOAD (\S+)
+Value UDP_DOWNLOAD (\S+)
+Value UDP_UPLOAD (\S+)
+
+
+Start
+  ^\s*status\:\s*${STATUS}\s*$$ -> Continue
+  ^\s*time\-remaining\:\s*${TIME_REMAINING}\s*$$ -> Continue
+  ^\s*ping\-min\-avg\-max\:\s*${PING_MIN_AVG_MAX}\s*$$ -> Continue
+  ^\s*jitter\-min\-avg\-max\:\s*${JITTER_MIN_AVG_MAX}\s*$$ -> Continue
+  ^\s*loss\:\s*${LOSS}\s*$$ -> Continue
+  ^\s*tcp\-download\:\s*${TCP_DOWNLOAD}.*$$ -> Continue
+  ^\s*tcp\-upload\:\s*${TCP_UPLOAD}.*$$ -> Continue
+  ^\s*udp\-download\:\s*${UDP_DOWNLOAD}.*$$ -> Continue
+  ^\s*udp\-upload\:\s*${UDP_UPLOAD}.*$$ -> Continue

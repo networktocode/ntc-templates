@@ -1,0 +1,22 @@
+Value NUM (\d+)
+Value INTERFACE (\S+)
+Value ADDRESS (\S+)
+Value ADDRESS4 (\S+)
+Value MAC_ADDRESS ([0-9A-Fa-f]{2}\:[0-9A-Fa-f]{2}\:[0-9A-Fa-f]{2}\:[0-9A-Fa-f]{2}\:[0-9A-Fa-f]{2}\:[0-9A-Fa-f]{2})
+Value IDENTITY (.*)
+Value PLATFORM (.*)
+Value VERSION (.*)
+Value UNPACK (none|simple|uncompressed-headers|uncompressed-all)
+Value AGE ([0-9a-z]+)
+Value UPTIME ([0-9a-z]+)
+Value SOFTWARE_ID (\S+)
+Value BOARD (\S+)
+Value IPV6 (yes|no)
+Value INTERFACE_NAME (.*?(?="))
+Value SYSTEM_DESCRIPTION (.*?(?="))
+Value SYSTEM_CAPS ([a-zA-Z0-9,]*)
+Value SYSTEM_CAPS_ENABLED ([a-zA-Z0-9,]*)
+
+
+Start
+  ^\s*${NUM}\s+interface=${INTERFACE}(\s+address=${ADDRESS})?(\s+address4=${ADDRESS4})?\s+mac-address=${MAC_ADDRESS}\s+identity="${IDENTITY}"\s+platform="${PLATFORM}"\s+version="${VERSION}"\s+unpack=${UNPACK}\s+age=${AGE}(\s+uptime=${UPTIME})?(\s+software-id="${SOFTWARE_ID}")?(\s+board="${BOARD}")?(\s+ipv6=${IPV6})?\s+interface-name="${INTERFACE_NAME}"(\s+system-description="${SYSTEM_DESCRIPTION}")?\s+system-caps="?${SYSTEM_CAPS}"?\s+system-caps-enabled="?${SYSTEM_CAPS_ENABLED}"?\s*$$ -> Record
