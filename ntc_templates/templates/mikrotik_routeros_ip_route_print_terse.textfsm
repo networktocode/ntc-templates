@@ -1,15 +1,19 @@
-Value Key INDEX (\d+)
-Value FLAGS ([XADCSrbomBUP ]+)
+Value INDEX (\d+)
+Value FLAGS ([XADCSrbvomcBUP\s]+(?<!\s))
 Value COMMENT (.*)
 Value DST_ADDRESS ([\w.:/\d]+)
-Value PREF_SRC (\S+?)
+Value ROUTING_TABLE (\S+)
+Value PREF_SRC (\S*)
 Value GATEWAY (\S+)
 Value GATEWAY_STATUS (.+)
+Value IMMEDIATE_GW (\S+)
 Value DISTANCE (\d+)
 Value SCOPE (\d+)
 Value TARGET_SCOPE (\d+)
+Value SUPPRESS_HW_OFFLOAD (\S+)
+Value LOCAL_ADDRESS (\S+)
 
 Start
-  ^\s?${INDEX}\s${FLAGS}\s\s(comment=${COMMENT}\s)?dst-address=${DST_ADDRESS}(\spref-src=${PREF_SRC})?\sgateway=${GATEWAY}\sgateway-status=${GATEWAY_STATUS}\sdistance=${DISTANCE}\sscope=${SCOPE}(\starget-scope=${TARGET_SCOPE})?.*$$ -> Record
+  ^(\s?${INDEX}\s*)?${FLAGS}\s+(comment=${COMMENT}\s)?dst-address=${DST_ADDRESS}(\srouting-table=${ROUTING_TABLE})?(\spref-src=${PREF_SRC})?\sgateway=${GATEWAY}(\sgateway-status=${GATEWAY_STATUS})?(\simmediate-gw=${IMMEDIATE_GW})?\sdistance=${DISTANCE}\sscope=${SCOPE}(\starget-scope=${TARGET_SCOPE})?(\ssuppress-hw-offload=${SUPPRESS_HW_OFFLOAD})?(\slocal-address=${LOCAL_ADDRESS})?.*$$ -> Record
   ^\s*(?:\d{2}:){2}\d{2}\s+echo:\s*.*$$ -> Next
   ^. -> Error

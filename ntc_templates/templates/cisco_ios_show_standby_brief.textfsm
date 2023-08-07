@@ -5,7 +5,7 @@ Value PREEMPT (.)
 Value STATE (\w+)
 Value ACTIVE (\S+)
 Value STANDBY (\S+)
-Value VIRTUALIP (\S+)
+Value VIRTUAL_IP_ADDRESS (\S+)
 
 Start
   ^Interface\s+Grp\s+Pri\s+P\s+State\s+Active\s+Standby\s+Virtual\s+IP\s*$$ -> Standby
@@ -14,8 +14,8 @@ Start
   ^Time\s+source\s+is
 
 Standby
-  ^${INTERFACE}\s+${GROUP}\s+${PRIORITY}\s+${PREEMPT}\s+${STATE}\s+${ACTIVE}\s+${STANDBY}\s+${VIRTUALIP} -> Record
+  ^${INTERFACE}\s+${GROUP}\s+${PRIORITY}\s+${PREEMPT}\s+${STATE}\s+${ACTIVE}\s+${STANDBY}\s+${VIRTUAL_IP_ADDRESS} -> Record
   ^${INTERFACE}\s*$$
-  ^\s*${GROUP}\s+${PRIORITY}\s+${PREEMPT}\s+${STATE}\s+${ACTIVE}\s+${STANDBY}\s+${VIRTUALIP} -> Record
+  ^\s*${GROUP}\s+${PRIORITY}\s+${PREEMPT}\s+${STATE}\s+${ACTIVE}\s+${STANDBY}\s+${VIRTUAL_IP_ADDRESS} -> Record
   ^\s*$$
   ^. -> Error

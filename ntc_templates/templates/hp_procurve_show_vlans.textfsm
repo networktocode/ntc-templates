@@ -1,5 +1,5 @@
 Value VLAN_ID (\d+)
-Value NAME (.*?)
+Value VLAN_NAME (.*?)
 Value STATUS (\S+)
 Value VOICE (Yes|No)
 Value JUMBO (Yes|No)
@@ -8,7 +8,7 @@ Start
   ^.*VLAN ID -> VLAN
 
 VLAN
-  ^\s+${VLAN_ID}\s+${NAME}\s+(\|\s+|)${STATUS}\s+${VOICE}(\s+${JUMBO}|)\s*$$ -> Record
+  ^\s+${VLAN_ID}\s+${VLAN_NAME}\s+(\|\s+|)${STATUS}\s+${VOICE}(\s+${JUMBO}|)\s*$$ -> Record
   ^\s+-+\s+-+\s+(\+\s+|)-+\s+-+(\s+-+|)\s*$$
   ^\s*$$
   ^.*$$ -> Error

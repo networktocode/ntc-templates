@@ -7,3 +7,7 @@
  5 ADC  dst-address=192.168.1.0/24 pref-src=192.168.1.1 gateway=bridge-lan gateway-status=bridge-lan reachable distance=0 scope=10 
  6 A S  dst-address=0.0.0.0/0 gateway=185.138.116.222,185.138.116.223 gateway-status=185.138.116.222 unreachable,185.138.116.223 reachable via  pppoe-out1 distance=10 scope=30 target-scope=10 
  7   S  comment=Test IP-220929-95531 dst-address=10.199.199.75/32 gateway=pppoe-out1 gateway-status=pppoe-out1 unreachable distance=10 scope=30 target-scope=10 
+DAc dst-address=192.168.1.0/24 routing-table=main gateway=bridge-lan immediate-gw=bridge-lan distance=0 scope=10 suppress-hw-offload=no local-address=192.168.1.254%bridge-lan
+DAc dst-address=217.171.23.66/32 routing-table=main gateway=pppoe-out1 immediate-gw=pppoe-out1 distance=0 scope=10 suppress-hw-offload=no local-address=185.87.103.236%pppoe-out1
+DAv dst-address=0.0.0.0/0 routing-table=main pref-src=≈ gateway=pppoe-out1 immediate-gw=pppoe-out1 distance=100 scope=30 target-scope=10 vrf-interface=pppoe-out1 suppress-hw-offload=no
+DAv dst-address=0.0.0.0/0 routing-table=main pref-src= gateway=pppoe-out1 immediate-gw=pppoe-out1 distance=100 scope=30 target-scope=10 vrf-interface=pppoe-out1 suppress-hw-offload=no

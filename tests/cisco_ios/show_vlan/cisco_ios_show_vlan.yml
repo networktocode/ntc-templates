@@ -1,18 +1,15 @@
 ---
 parsed_sample:
-  - vlan_id: "1"
-    name: "default"
-    status: "active"
-    interfaces:
+  - interfaces:
       - "Gi0/1"
-  - vlan_id: "10"
-    name: "Management"
     status: "active"
-    interfaces: []
-  - vlan_id: "50"
-    name: "VLan50"
+    vlan_id: "1"
+    vlan_name: "default"
+  - interfaces: []
     status: "active"
-    interfaces:
+    vlan_id: "10"
+    vlan_name: "Management"
+  - interfaces:
       - "Fa0/1"
       - "Fa0/2"
       - "Fa0/3"
@@ -25,10 +22,10 @@ parsed_sample:
       - "Fa0/10"
       - "Fa0/11"
       - "Fa0/12"
-  - vlan_id: "60"
-    name: "VLan60"
     status: "active"
-    interfaces:
+    vlan_id: "50"
+    vlan_name: "VLan50"
+  - interfaces:
       - "Fa0/13"
       - "Fa0/14"
       - "Fa0/15"
@@ -41,19 +38,22 @@ parsed_sample:
       - "Fa0/22"
       - "Fa0/23"
       - "Fa0/24"
-  - vlan_id: "1002"
-    name: "fddi-default"
+    status: "active"
+    vlan_id: "60"
+    vlan_name: "VLan60"
+  - interfaces: []
     status: "act/unsup"
-    interfaces: []
-  - vlan_id: "1003"
-    name: "token-ring-default"
+    vlan_id: "1002"
+    vlan_name: "fddi-default"
+  - interfaces: []
     status: "act/unsup"
-    interfaces: []
-  - vlan_id: "1004"
-    name: "fddinet-default"
+    vlan_id: "1003"
+    vlan_name: "token-ring-default"
+  - interfaces: []
     status: "act/unsup"
-    interfaces: []
-  - vlan_id: "1005"
-    name: "trnet-default"
+    vlan_id: "1004"
+    vlan_name: "fddinet-default"
+  - interfaces: []
     status: "act/unsup"
-    interfaces: []
+    vlan_id: "1005"
+    vlan_name: "trnet-default"
