@@ -1,0 +1,7 @@
+Value NAME (\S+)
+Value ID (\d+)
+Value DESCRIPTION ((\s*\S+)*)
+
+
+Start
+  ^\s*${NAME}\s+${ID}\s*(${DESCRIPTION})? -> Record

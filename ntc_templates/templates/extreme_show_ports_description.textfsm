@@ -1,0 +1,5 @@
+Value PORT (\d+)
+Value DESCRIPTION ((\s*\S+)+)
+
+Start
+  ^${PORT}\s*(\s*${DESCRIPTION})? -> Record

@@ -1,0 +1,11 @@
+Value INTERFACE (\S+)
+Value IP (\S+)
+Value SUBNET (\/\d+)
+Value FLAGS (\S+)
+Value NSIA (\d+)
+
+Start
+  ^Interface\s+IP\s+Address\s+Flags\s+nSIA\s*$$ -> Ip
+
+Ip
+  ^${INTERFACE}\s+${IP}\s+${SUBNET}\s+${FLAGS}\s+${NSIA}\s*$$ -> Record Ip

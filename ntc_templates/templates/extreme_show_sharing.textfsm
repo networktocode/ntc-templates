@@ -1,0 +1,15 @@
+Value Filldown CONFIG_MASTER (\d+)
+Value Filldown CURRENT_MASTER (\d+)
+Value Filldown AGG_CONTROL (\S+)
+Value List LD_SHARE_ALGORITHM (L2|L3|L3_L4|custom)
+Value List LD_SHARE_GROUP (\d+)
+Value List AGG_MBR (\S+)
+Value List LINK_STATE (A|D|R|NP|L)
+Value List LINK_UP_TRANSITIONS (\d+)
+
+
+Start
+  ^\s{4}(\s)?\d -> Continue.Record
+  ^\s+${CONFIG_MASTER}(\s+${CURRENT_MASTER})?\s+${AGG_CONTROL}\s+${LD_SHARE_ALGORITHM}\s+${LD_SHARE_GROUP}\s+${AGG_MBR}\s+${LINK_STATE}\s+${LINK_UP_TRANSITIONS}
+  ^\s+${LD_SHARE_ALGORITHM}\s+${LD_SHARE_GROUP}\s+${AGG_MBR}\s+${LINK_STATE}\s+${LINK_UP_TRANSITIONS}
+

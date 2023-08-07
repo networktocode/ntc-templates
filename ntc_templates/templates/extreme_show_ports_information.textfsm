@@ -1,0 +1,6 @@
+Value PORT (\d+)
+Value FLAGS (\S+)
+Value LINK_STATE (\S+)
+
+Start
+  ^\s*${PORT}\s+${FLAGS}\s+${LINK_STATE} -> Record

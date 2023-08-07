@@ -1,0 +1,13 @@
+Value PORT (\d+)
+Value DESCRIPTION (((\s*\S+)*)?)
+Value ADMIN_STATE (.*)
+Value LINK_STATE (\S+)
+Value List VLAN_ID (\d+)
+
+Start
+  ^\s*Port:\s.* -> Continue.Record
+  ^\s*Port:\s*${PORT}
+  ^\s*Description\sString:\s*\"${DESCRIPTION}\"
+  ^\s*Admin\sstate:\s*${ADMIN_STATE}
+  ^\s*Link\sState:\s+${LINK_STATE}(\,)?(\s)?
+  ^.*VLAN\sID:\s*${VLAN_ID}
