@@ -1,9 +1,6 @@
 ---
 parsed_sample:
-  - vlan_id: "1"
-    name: "default"
-    status: "active"
-    interfaces:
+  - interfaces:
       - "Eth1/2"
       - "Eth1/3"
       - "Eth1/4"
@@ -61,24 +58,27 @@ parsed_sample:
       - "Eth2/9"
       - "Eth2/10"
       - "Eth2/11"
-  - vlan_id: "10"
-    name: "WEB"
     status: "active"
-    interfaces: []
-  - vlan_id: "20"
-    name: "VLAN0020"
+    vlan_id: "1"
+    vlan_name: "default"
+  - interfaces: []
     status: "active"
-    interfaces:
+    vlan_id: "10"
+    vlan_name: "WEB"
+  - interfaces:
       - "Eth2/12"
-  - vlan_id: "30"
-    name: "VLAN0030"
     status: "active"
-    interfaces: []
-  - vlan_id: "40"
-    name: "VLAN0040"
+    vlan_id: "20"
+    vlan_name: "VLAN0020"
+  - interfaces: []
     status: "active"
-    interfaces: []
-  - vlan_id: "50"
-    name: "VLAN0050"
+    vlan_id: "30"
+    vlan_name: "VLAN0030"
+  - interfaces: []
     status: "active"
-    interfaces: []
+    vlan_id: "40"
+    vlan_name: "VLAN0040"
+  - interfaces: []
+    status: "active"
+    vlan_id: "50"
+    vlan_name: "VLAN0050"

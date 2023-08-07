@@ -1,9 +1,9 @@
 ---
 parsed_sample:
-  - vlan_id: "1"
-    name: "default"
-    status: "active"
-    interfaces:
+  - interfaces:
       - "Po1"
       - "Eth1/53"
       - "Eth1/54"
+    status: "active"
+    vlan_id: "1"
+    vlan_name: "default"
