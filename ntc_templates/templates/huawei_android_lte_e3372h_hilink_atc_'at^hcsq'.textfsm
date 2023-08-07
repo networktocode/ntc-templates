@@ -1,0 +1,17 @@
+Value TYPE (GSM|WCDMA|LTE)
+Value RSSI (-?\d+)
+Value RSCP_RSRP (-?\d+)
+Value ECIO_SINR (-?\d+)
+Value RSRQ (-?\d+)
+
+
+Start
+  # Example:
+  # Waiting for response...
+  # ^HCSQ:"LTE",63,50,136,12
+  # OK
+  ^\s*Waiting\s+for\s+response...\s*$$
+  ^\s*\^HCSQ:"${TYPE}",${RSSI}(,${RSCP_RSRP})?(,${ECIO_SINR})?(,${RSRQ})?\s*$$ -> Record
+  ^\s*OK\s*$$
+  ^\s*$$
+  ^. -> Error
