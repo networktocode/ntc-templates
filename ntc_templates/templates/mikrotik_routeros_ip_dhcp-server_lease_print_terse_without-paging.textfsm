@@ -1,0 +1,22 @@
+Value INDEX (\d+)
+Value FLAG (X|R|D|B)
+Value COMMENT (.*)
+Value ADDRESS (\d+\.\d+\.\d+\.\d+)
+Value MAC_ADDRESS ((\S{2}\:){5}\S{2})
+Value CLIENT_ID (\S+)
+Value ADDRESS_LISTS (\S+)
+Value SERVER (\S+)
+Value ALWAYS_BROADCAST (yes|no)
+Value DHCP_OPTION (\S+)
+Value STATUS (\S+)
+Value EXPIRES_AFTER (\S+)
+Value LAST_SEEN (\S+)
+Value ACTIVE_ADDRESS (\d+\.\d+\.\d+\.\d+)
+Value ACTIVE_MAC_ADDRESS ((\S{2}\:){5}\S{2})
+Value ACTIVE_CLIENT_ID (\S+)
+Value ACTIVE_SERVER (\S+)
+Value HOST_NAME (\S+)
+
+
+Start
+  ^\s*${INDEX}\s+(${FLAG})?\s(comment=${COMMENT}\s+)?address=${ADDRESS}\s+mac-address=${MAC_ADDRESS}(\s+client-id=${CLIENT_ID})?(\s+address-lists=((\"\"|${ADDRESS_LISTS})))?(\s+server=${SERVER})?(\s+dhcp-option=((\"\"|${DHCP_OPTION})))?(\s+status=${STATUS})?(\s+expires-after=${EXPIRES_AFTER})?(\s+last-seen=${LAST_SEEN})?(\s+active-address=${ACTIVE_ADDRESS})?(\s+active-mac-address=${ACTIVE_MAC_ADDRESS})?(\s+active-client-id=${ACTIVE_CLIENT_ID})?(\s+active-server=${ACTIVE_SERVER})?(\s+host-name=${HOST_NAME})?\s* -> Record

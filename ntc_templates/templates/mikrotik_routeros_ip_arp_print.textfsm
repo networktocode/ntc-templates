@@ -1,0 +1,13 @@
+Value NUM (\d+)
+Value FLAGS ([XIHDPC]*)
+Value ADDRESS (\S+)
+Value MAC (\S+)
+Value INTERFACE (\S+)
+
+
+Start
+  ^Flags:.*$$
+  ^\s*#\s*ADDRESS\s+MAC-ADDRESS\s+INTERFACE\s*$$
+  ^\s*${NUM}\s+${FLAGS}\s+${ADDRESS}\s+${MAC}\s+${INTERFACE}\s*$$ -> Record
+  ^\s*$$
+  ^. -> Error

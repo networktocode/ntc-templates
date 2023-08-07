@@ -1,0 +1,14 @@
+Value ID (\d+)
+Value DYNAMIC (D)
+Value STATUS (X|R)
+Value SLAVE (S)
+Value NAME (\S+)
+Value TYPE (\S+)
+Value ACTUAL_MTU (\d+)
+Value L2MTU (\d+)
+Value MAX_L2MTU (\d+)
+Value MAC_ADDRESS (\S+)
+
+
+Start
+  ^\s*${ID}\s(${DYNAMIC}|\s)(${STATUS}|\s)(${SLAVE}|\s)\s+${NAME}\s+${TYPE}\s+(${ACTUAL_MTU})?\s*(${L2MTU})?\s*(${MAX_L2MTU})?\s*${MAC_ADDRESS} -> Record

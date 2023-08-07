@@ -1,0 +1,15 @@
+Value ID (\d+)
+Value DYNAMIC (D)
+Value STATUS (X|R)
+Value SLAVE (S)
+Value NAME (\S+)
+Value DEFAULT_NAME (\S+)
+Value TYPE (\S+)
+Value MTU (\S+)
+Value MAC_ADDRESS (\S+)
+
+
+Start
+  ^\s*${ID}\s(${DYNAMIC}|\s)(${STATUS}|\s)(${SLAVE}|\s)\s;{3} -> Continue
+  ^\s*name\=\"${NAME}\"(\s+default\-name\=\"${DEFAULT_NAME}\")?\s+type\=\"${TYPE}\"\s+mtu\=${MTU}\s+.*mac\-address\=${MAC_ADDRESS}\s.*$$ -> Record
+  ^\s*${ID}\s(${DYNAMIC}|\s)(${STATUS}|\s)(${SLAVE}|\s)\s+name\=\"${NAME}\"(\s+default\-name\=\"${DEFAULT_NAME}\")?\s+type\=\"${TYPE}\"\s+mtu\=${MTU}\s+.*mac\-address\=${MAC_ADDRESS}\s.*$$ -> Record

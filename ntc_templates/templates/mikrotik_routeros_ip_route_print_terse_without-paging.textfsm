@@ -1,0 +1,23 @@
+Value Key INDEX (\d+)
+Value FLAGS ([XADCSrbomBUP ]{4})
+Value COMMENT (.*?(?=[^\=]\S+\=))
+Value DST_ADDRESS ([\w.:/\d]+)
+Value DST_ADDRESS_SUBNET (\d+)
+Value TYPE (.+?(?=[^\=]\S+\=))
+Value ROUTING_TABLE (.+?(?=[^\=]\S+\=))
+Value PREF_SRC (\S+?)
+Value GATEWAY (.+?(?=[^\=]\S+\=))
+Value GATEWAY_STATUS (.+?(?=[^\=]\S+\=))
+Value IMMEDIATE_GW (.+?(?=[^\=]\S+\=))
+Value CHECK_GATEWAY (.+?(?=[^\=]\S+\=))
+Value DISTANCE (\d+)
+Value SCOPE (\d+)
+Value TARGET_SCOPE (\d+)
+Value VRF_INTERFACE (.+?(?=[^\=]\S+\=))
+Value SUPPRESS_HW_OFFLOAD (yes|no)
+Value LOCAL_ADDRESS (.+?(?=[^\=]\S+\=))
+Value ROUTING_MARK (.*?(?=\s))
+
+
+Start
+  ^\s*${INDEX}\s+${FLAGS}(\s+comment\=${COMMENT})?\s+dst\-address\=${DST_ADDRESS}\/${DST_ADDRESS_SUBNET}(\s+type\=${TYPE})?(\s+routing\-table\=${ROUTING_TABLE})?(\s+pref\-src\=${PREF_SRC})?(\s+gateway\=${GATEWAY})?(\s+gateway\-status\=${GATEWAY_STATUS})?(\s+immediate\-gw\=${IMMEDIATE_GW})?(\s+check\-gateway\=${CHECK_GATEWAY})?(\s+distance\=${DISTANCE})?(\s+scope\=${SCOPE})?(\s+target\-scope\=${TARGET_SCOPE})?(\s+vrf\-interface\=${VRF_INTERFACE})?(\s+suppress\-hw\-offload\=${SUPPRESS_HW_OFFLOAD})?(\s+local\-address\=${LOCAL_ADDRESS})?(\s+routing\-mark\=${ROUTING_MARK})?\s*$$ -> Record
