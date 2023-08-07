@@ -1,0 +1,14 @@
+Value ADDRESS (\S+)
+Value TRANSMITTED (\d+)
+Value RECEIVED (\d+)
+Value PACKET_LOSS (\d+)
+Value MIN_RTT (\d+(?:\.\d+)?)
+Value AVG_RTT (\d+(?:\.\d+)?)
+Value MAX_RTT (\d+(?:\.\d+)?)
+
+
+Start
+  ^\-\-\-\s+\S+\s+ping\s+statistics\s+\-\-\-\s*$$ -> Continue.Record
+  ^\-\-\-\s+${ADDRESS}\s+ping\s+statistics\s+\-\-\-\s*$$
+  ^${TRANSMITTED}\s+packets\s+transmitted\,\s+${RECEIVED}\s+packets\s+received\,\s+${PACKET_LOSS}\%\s+packet\s+loss\s*$$
+  ^round\-trip\s+min\/avg\/max\s+\=\s+${MIN_RTT}\/${AVG_RTT}\/${MAX_RTT}\s+ms\s*$$

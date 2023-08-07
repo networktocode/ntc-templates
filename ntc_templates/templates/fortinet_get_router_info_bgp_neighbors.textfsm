@@ -1,0 +1,43 @@
+Value NEIGHBOR (\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})
+Value REMOTE_ASN (\d+)
+Value LOCAL_ASN (\d+)
+Value REMOTE_ROUTER_ID (\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})
+Value BGP_STATE ([\w\s\(\)]+)
+Value UPTIME (\S+)
+Value List ADDR_FAMILY ([\w\s]+)
+Value List TABLE_VERSION (\d+)
+Value List NEI_TABLE_VERSION (\d+)
+Value List INBOUND_ROUTEMAP (\S+)
+Value List OUTBOUND_ROUTEMAP (\S+)
+Value List ACCEPTED_PREFIXES (\d+)
+Value List ACCEPTED_PREFIXES_RIB (\d+)
+Value List ANNOUNCED_PREFIXES (\d+)
+Value LOCALHOST_IP (\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})
+Value LOCALHOST_PORT (\d+)
+Value REMOTE_IP (\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})
+Value REMOTE_PORT (\d+)
+Value NEXTHOP_IP (\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})
+Value NEXTHOP_INTERFACE (\S+)
+
+
+Start
+  ^BGP\s+neighbor\s+is -> Continue.Record
+  ^BGP neighbor is ${NEIGHBOR},\s+remote AS\s+${REMOTE_ASN},\s+local AS\s+${LOCAL_ASN},.*
+  ^.+remote\s+router\s+ID\s+${REMOTE_ROUTER_ID}
+  ^\s+BGP state = ${BGP_STATE}, \w+ for ${UPTIME}
+  ^\s+Minimum time between advertisement runs is \d+ seconds -> AddrFamState
+
+
+AddrFamState
+  ^\s+For address family:\s+${ADDR_FAMILY}
+  ^\s+BGP table version ${TABLE_VERSION}, neighbor version ${NEI_TABLE_VERSION}
+  ^\s+Route\s+map\s+for\s+incoming\s+advertisements\s+is\s+${INBOUND_ROUTEMAP}
+  ^\s+Route\s+map\s+for\s+outgoing\s+advertisements\s+is\s+${OUTBOUND_ROUTEMAP}
+  ^\s+${ACCEPTED_PREFIXES}\saccepted\sprefixes,\s${ACCEPTED_PREFIXES_RIB}\sprefixes\sin\srib
+  ^\s+${ANNOUNCED_PREFIXES}\sannounced\sprefixes -> AddrFamState
+  ^\s*Local host:\s+${LOCALHOST_IP}, Local port:\s+${LOCALHOST_PORT}
+  ^\s*Foreign host:\s+${REMOTE_IP}, Foreign port:\s+${REMOTE_PORT}
+  ^\s*Nexthop:\s+${NEXTHOP_IP}
+  ^\s*Nexthop interface:\s+${NEXTHOP_INTERFACE}
+  ^BGP\s+neighbor\s+is -> Continue.Record
+  ^BGP\s+neighbor\s+is\s+${NEIGHBOR},\s+remote\s+AS\s+${REMOTE_ASN},\s+local AS\s+${LOCAL_ASN},.* -> Start

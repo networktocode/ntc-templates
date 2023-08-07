@@ -1,0 +1,24 @@
+Value MSG_NUM (\d+)
+Value YEAR (\d{4})
+Value MONTH (\d{2})
+Value DAY (\d{2})
+Value HOUR (\d{2})
+Value MINUTE (\d{2})
+Value SECOND (\d{2})
+Value MESSAGE (.+?)
+# Aggregating values
+Value DATE (\d{4}-\d{2}-\d{2})
+Value TIME (\d{2}:\d{2}:\d{2})
+Value WHOLE_MESSAGE (.+?)
+
+Start
+  # Check the general structure to skip all the data that are not log messages
+  ^\s*${MSG_NUM}:\s+date=${DATE}\s+time=${TIME}\s+${WHOLE_MESSAGE}\s*$$ -> LogMessages
+
+LogMessages
+  # Here we do more general parsing to get the log messages' time and text as a whole
+  ^\s*${MSG_NUM}:\s+date=${DATE}\s+time=${TIME}\s+${WHOLE_MESSAGE}\s*$$ -> Continue
+  # and then extract specific values
+  ^\s*${MSG_NUM}:\s+date=${YEAR}-${MONTH}-${DAY}\s+time=${HOUR}:${MINUTE}:${SECOND}\s+${MESSAGE}\s*$$ -> Record
+  ^\s*$$
+  ^. -> Error

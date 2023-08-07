@@ -1,0 +1,12 @@
+Value Filldown TYPE (.{7})
+Value Filldown DESTINATION ((\d+\.){3}\d+\/\d+)
+Value DISTANCE (\d+)
+Value METRIC (\d+)
+Value Required GATEWAY (.*?(?=,))
+Value Required INTERFACE (\S+)
+Value LAST_TIME_UPDATE (\S+)
+
+
+Start
+  ^\s*${TYPE}\s*${DESTINATION}\s+(\[${DISTANCE}/${METRIC}\]\s+)?${GATEWAY}\,\s*${INTERFACE}(\s*\,\s*${LAST_TIME_UPDATE})?\s*$$ -> Record
+  ^\s+(\[${DISTANCE}/${METRIC}\]\s+)?${GATEWAY}\,\s*${INTERFACE}(\s*\,\s*${LAST_TIME_UPDATE})?\s*$$ -> Record
