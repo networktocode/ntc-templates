@@ -20,8 +20,8 @@ Start
 
 Interface
   ^\s*----
-  ^\s*${VLAN}\s+\|\s+${CONFIG}\s+${IP_ADDRESS}\s+${SUBNET_MASK}\s+${PROXY}\s+${LOCAL}\s*$$ -> Record
-  ^\s*${VLAN}\s+\|\s+${CONFIG}\s+${IP_ADDRESS}\s+${SUBNET_MASK} -> Record
-  ^\s*${VLAN}\s+\|\s+${CONFIG}\s*$$ -> Record
+  ^\s*${VLAN_NAME}\s+\|\s+${CONFIG}\s+${IP_ADDRESS}\s+${SUBNET_MASK}\s+${PROXY}\s+${LOCAL}\s*$$ -> Record
+  ^\s*${VLAN_NAME}\s+\|\s+${CONFIG}\s+${IP_ADDRESS}\s+${SUBNET_MASK} -> Record
+  ^\s*${VLAN_NAME}\s+\|\s+${CONFIG}\s*$$ -> Record
   ^\s*$$
   ^. -> Error
