@@ -3,7 +3,7 @@ parsed_sample:
   - gateway: "8.8.8.1"
     interface_name: "my-interface"
     ip_address: "8.8.8.8"
-    ip_netmask: "255.255.254.0"
     mac_address: "c0:12:43:56:78:90"
+    netmask: "255.255.254.0"
     primary_dhcp_server: "Unconfigured"
     secondary_dhcp_server: "Unconfigured"
