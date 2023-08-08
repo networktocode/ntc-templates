@@ -1,4 +1,4 @@
-Value Required IPADDRESS (\S+)
+Value Required IP_ADDRESS (\S+)
 Value Required MAC_ADDRESS (\S+)
 Value Required PREF (\d+)
 Value Required SOURCE (\S+)
@@ -21,7 +21,7 @@ Start
 
 Entries
   # Entry with optional flags
-  ^${IPADDRESS}\s+${MAC_ADDRESS}\s+${PREF}\s+${SOURCE}\s+${INTERFACE}\s*${FLAGS}$$ -> Record
+  ^${IP_ADDRESS}\s+${MAC_ADDRESS}\s+${PREF}\s+${SOURCE}\s+${INTERFACE}\s*${FLAGS}$$ -> Record
   # Process empty and unknown lines
   ^\s*$$
   ^. -> Error
