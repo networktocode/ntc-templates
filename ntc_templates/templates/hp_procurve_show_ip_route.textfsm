@@ -1,6 +1,6 @@
 Value DESTINATION ([0-9./]+)
 Value GATEWAY ([0-9.]*|\S*)
-Value VLAN (\d*)
+Value VLAN_NAME (\d*)
 Value TYPE (\S+)
 Value SUBTYPE (\S*)
 Value METRIC (\d+)
@@ -14,6 +14,6 @@ Start
 
 Route
   ^\s*----
-  ^\s*${DESTINATION}\s+${GATEWAY}\s+${VLAN}\s+${TYPE}\s+${SUBTYPE}\s+${METRIC}\s+${DISTANCE} -> Record
+  ^\s*${DESTINATION}\s+${GATEWAY}\s+${VLAN_NAME}\s+${TYPE}\s+${SUBTYPE}\s+${METRIC}\s+${DISTANCE} -> Record
   ^\s*$$
   ^. -> Error
