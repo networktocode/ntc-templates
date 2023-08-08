@@ -1,6 +1,6 @@
 Value VRF (\S+)
 Value INTERFACE (\S+)
-Value IPADDR ([a-zA-Z0-9./]+)
+Value IP_ADDRESS ([a-zA-Z0-9./]+)
 Value STATUS (\S+-\S+)
 Value LINK (\S+-\S+)
 Value PROTO (\S+-\S+)
@@ -27,7 +27,7 @@ Value WCCP_REDIRECT_EXCLUDE (\S+)
 Start
   ^IP\s+Interface\s+Status\s+for\s+VRF\s+"${VRF}"
   ^${INTERFACE},\s+Interface\s+status:\s+${PROTO}/${LINK}/${STATUS}
-  ^\s+IP\s+address:\s+${IPADDR},\s+IP\s+subnet:\s+${SUBNET}\s+route-preference:\s+${ROUTE_PREF},\s+tag:\s+${ROUTE_TAG}
+  ^\s+IP\s+address:\s+${IP_ADDRESS},\s+IP\s+subnet:\s+${SUBNET}\s+route-preference:\s+${ROUTE_PREF},\s+tag:\s+${ROUTE_TAG}
   ^\s+IP\s+broadcast\s+address:\s+${BROADCAST}
   ^\s+IP\s+multicast\s+groups\s+locally\s+joined:\s+${MULTICAST_GROUPS}
   ^\s+IP\s+MTU:\s+${MTU}\s+bytes
