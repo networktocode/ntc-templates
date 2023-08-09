@@ -7,11 +7,11 @@ Value DST_ACTIVE (yes|no)
 
 
 Start
-  ^\s*time\:\s+${TIME}\s*$$
-  ^\s*date\:\s+${DATE}\s*$$
-  ^\s*time\-zone\-autodetect\:\s+${TIME_ZONE_AUTODETECT}\s*$$
-  ^\s*time\-zone\-name\:\s+${TIME_ZONE_NAME}\s*$$
-  ^\s*gmt\-offset\:\s+${GMT_OFFSET}\s*$$
-  ^\s*dst\-active\:\s+${DST_ACTIVE}\s*$$ -> Record
+  ^\s*time:\s+${TIME}\s*$$
+  ^\s*date:\s+${DATE}\s*$$
+  ^\s*time-zone-autodetect:\s+${TIME_ZONE_AUTODETECT}\s*$$
+  ^\s*time-zone-name:\s+${TIME_ZONE_NAME}\s*$$
+  ^\s*gmt-offset:\s+${GMT_OFFSET}\s*$$
+  ^\s*dst-active:\s+${DST_ACTIVE}\s*$$ -> Record
   ^\s*$$
   ^. -> Error
