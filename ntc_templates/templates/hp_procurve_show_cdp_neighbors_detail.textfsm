@@ -1,0 +1,21 @@
+Value Required LOCAL_PORT (.+?)
+Value NEIGHBOR_ID (.+?)
+Value NEIGHBOR_ADDRESS (.+?)
+Value NEIGHBOR_PLATFORM (.+?)
+Value NEIGHBOR_CAPABILITY (.+?)
+Value NEIGHBOR_PORT (.+?)
+Value NEIGHBOR_VERSION (.+?)
+
+Start
+  ^\s*CDP\s+neighbors\s+information
+  ^\s*Port\s*:\s*${LOCAL_PORT}\s*$$
+  ^\s*Device\s+ID\s*:\s*${NEIGHBOR_ID}\s*$$
+  ^\s*Address\s+Type
+  ^\s*Address\s*:\s*${NEIGHBOR_ADDRESS}\s*$$
+  ^\s*Platform\s*:\s*${NEIGHBOR_PLATFORM}\s*$$
+  ^\s*Capability\s*:\s*${NEIGHBOR_CAPABILITY}\s*$$
+  ^\s*Device\s+Port\s*:\s*${NEIGHBOR_PORT}\s*$$
+  ^\s*Version\s*:\s*${NEIGHBOR_VERSION}\s*$$ -> Record
+  ^\s*$$
+  ^\s*----
+  ^. -> Error

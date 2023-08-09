@@ -5,9 +5,9 @@ parsed_sample:
     ip_helper: []
     ipaddr: []
     link_status: "administratively down"
-    mask: []
     mtu: ""
     outgoing_acl: ""
+    prefix_length: []
     protocol_status: "down"
     vrf: ""
   - inbound_acl: ""
@@ -15,9 +15,9 @@ parsed_sample:
     ip_helper: []
     ipaddr: []
     link_status: "administratively down"
-    mask: []
     mtu: ""
     outgoing_acl: ""
+    prefix_length: []
     protocol_status: "down"
     vrf: ""
   - inbound_acl: ""
@@ -25,9 +25,9 @@ parsed_sample:
     ip_helper: []
     ipaddr: []
     link_status: "administratively down"
-    mask: []
     mtu: ""
     outgoing_acl: ""
+    prefix_length: []
     protocol_status: "down"
     vrf: ""
   - inbound_acl: ""
@@ -35,9 +35,9 @@ parsed_sample:
     ip_helper: []
     ipaddr: []
     link_status: "administratively down"
-    mask: []
     mtu: ""
     outgoing_acl: ""
+    prefix_length: []
     protocol_status: "down"
     vrf: ""
   - inbound_acl: ""
@@ -45,9 +45,9 @@ parsed_sample:
     ip_helper: []
     ipaddr: []
     link_status: "administratively down"
-    mask: []
     mtu: ""
     outgoing_acl: ""
+    prefix_length: []
     protocol_status: "down"
     vrf: ""
   - inbound_acl: ""
@@ -55,9 +55,9 @@ parsed_sample:
     ip_helper: []
     ipaddr: []
     link_status: "administratively down"
-    mask: []
     mtu: ""
     outgoing_acl: ""
+    prefix_length: []
     protocol_status: "down"
     vrf: ""
   - inbound_acl: ""
@@ -65,9 +65,9 @@ parsed_sample:
     ip_helper: []
     ipaddr: []
     link_status: "up"
-    mask: []
     mtu: ""
     outgoing_acl: ""
+    prefix_length: []
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
@@ -75,9 +75,9 @@ parsed_sample:
     ip_helper: []
     ipaddr: []
     link_status: "up"
-    mask: []
     mtu: ""
     outgoing_acl: ""
+    prefix_length: []
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
@@ -85,9 +85,9 @@ parsed_sample:
     ip_helper: []
     ipaddr: []
     link_status: "up"
-    mask: []
     mtu: ""
     outgoing_acl: ""
+    prefix_length: []
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
@@ -96,10 +96,10 @@ parsed_sample:
     ipaddr:
       - "172.21.2.3"
     link_status: "up"
-    mask:
-      - "24"
     mtu: "1500"
     outgoing_acl: ""
+    prefix_length:
+      - "24"
     protocol_status: "up"
     vrf: "Mgmt-intf"
   - inbound_acl: ""
@@ -108,10 +108,10 @@ parsed_sample:
     ipaddr:
       - "88.16.255.249"
     link_status: "up"
-    mask:
-      - "32"
     mtu: "1514"
     outgoing_acl: ""
+    prefix_length:
+      - "32"
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
@@ -120,10 +120,10 @@ parsed_sample:
     ipaddr:
       - "88.16.255.1"
     link_status: "up"
-    mask:
-      - "32"
     mtu: "1514"
     outgoing_acl: ""
+    prefix_length:
+      - "32"
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
@@ -132,10 +132,10 @@ parsed_sample:
     ipaddr:
       - "192.168.100.100"
     link_status: "up"
-    mask:
-      - "32"
     mtu: "1514"
     outgoing_acl: ""
+    prefix_length:
+      - "32"
     protocol_status: "up"
     vrf: "DATA"
   - inbound_acl: ""
@@ -144,10 +144,10 @@ parsed_sample:
     ipaddr:
       - "192.168.200.100"
     link_status: "up"
-    mask:
-      - "32"
     mtu: "1514"
     outgoing_acl: ""
+    prefix_length:
+      - "32"
     protocol_status: "up"
     vrf: "SIG"
   - inbound_acl: ""
@@ -156,10 +156,10 @@ parsed_sample:
     ipaddr:
       - "172.18.0.24"
     link_status: "up"
-    mask:
-      - "32"
     mtu: "1514"
     outgoing_acl: ""
+    prefix_length:
+      - "32"
     protocol_status: "up"
     vrf: "MYCOMPANY"
   - inbound_acl: ""
@@ -168,10 +168,10 @@ parsed_sample:
     ipaddr:
       - "172.22.255.255"
     link_status: "up"
-    mask:
-      - "32"
     mtu: "1514"
     outgoing_acl: ""
+    prefix_length:
+      - "32"
     protocol_status: "up"
     vrf: "VRF_WL_SIG"
   - inbound_acl: ""
@@ -180,10 +180,10 @@ parsed_sample:
     ipaddr:
       - "88.16.245.1"
     link_status: "up"
-    mask:
-      - "32"
     mtu: "1514"
     outgoing_acl: ""
+    prefix_length:
+      - "32"
     protocol_status: "up"
     vrf: "7650C2814C784BACBBE23BB30B47D3A1"
   - inbound_acl: ""
@@ -191,9 +191,9 @@ parsed_sample:
     ip_helper: []
     ipaddr: []
     link_status: "up"
-    mask: []
     mtu: ""
     outgoing_acl: ""
+    prefix_length: []
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
@@ -202,10 +202,10 @@ parsed_sample:
     ipaddr:
       - "172.18.16.42"
     link_status: "up"
-    mask:
-      - "29"
     mtu: "9000"
     outgoing_acl: ""
+    prefix_length:
+      - "29"
     protocol_status: "up"
     vrf: "MYCOMPANY"
   - inbound_acl: ""
@@ -214,10 +214,10 @@ parsed_sample:
     ipaddr:
       - "88.16.254.61"
     link_status: "up"
-    mask:
-      - "31"
     mtu: "8000"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
@@ -226,10 +226,10 @@ parsed_sample:
     ipaddr:
       - "172.20.0.149"
     link_status: "up"
-    mask:
-      - "30"
     mtu: "1500"
     outgoing_acl: ""
+    prefix_length:
+      - "30"
     protocol_status: "up"
     vrf: "MYCOMPANY"
   - inbound_acl: ""
@@ -238,10 +238,10 @@ parsed_sample:
     ipaddr:
       - "88.16.254.65"
     link_status: "up"
-    mask:
-      - "31"
     mtu: "8000"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
@@ -250,10 +250,10 @@ parsed_sample:
     ipaddr:
       - "172.20.2.1"
     link_status: "up"
-    mask:
-      - "30"
     mtu: "1500"
     outgoing_acl: ""
+    prefix_length:
+      - "30"
     protocol_status: "up"
     vrf: "MYCOMPANY"
   - inbound_acl: ""
@@ -262,10 +262,10 @@ parsed_sample:
     ipaddr:
       - "169.254.0.114"
     link_status: "up"
-    mask:
-      - "29"
     mtu: "9000"
     outgoing_acl: ""
+    prefix_length:
+      - "29"
     protocol_status: "up"
     vrf: "C617529B810A48F6AD40FEBCB163B286"
   - inbound_acl: ""
@@ -273,9 +273,9 @@ parsed_sample:
     ip_helper: []
     ipaddr: []
     link_status: "deleted"
-    mask: []
     mtu: ""
     outgoing_acl: ""
+    prefix_length: []
     protocol_status: "down"
     vrf: ""
   - inbound_acl: ""
@@ -284,10 +284,10 @@ parsed_sample:
     ipaddr:
       - "169.254.0.1"
     link_status: "up"
-    mask:
-      - "30"
     mtu: "9000"
     outgoing_acl: ""
+    prefix_length:
+      - "30"
     protocol_status: "up"
     vrf: "7650C2814C784BACBBE23BB30B47D3A1"
   - inbound_acl: ""
@@ -295,9 +295,9 @@ parsed_sample:
     ip_helper: []
     ipaddr: []
     link_status: "deleted"
-    mask: []
     mtu: ""
     outgoing_acl: ""
+    prefix_length: []
     protocol_status: "down"
     vrf: ""
   - inbound_acl: ""
@@ -305,9 +305,9 @@ parsed_sample:
     ip_helper: []
     ipaddr: []
     link_status: "deleted"
-    mask: []
     mtu: ""
     outgoing_acl: ""
+    prefix_length: []
     protocol_status: "down"
     vrf: ""
   - inbound_acl: ""
@@ -315,9 +315,9 @@ parsed_sample:
     ip_helper: []
     ipaddr: []
     link_status: "deleted"
-    mask: []
     mtu: ""
     outgoing_acl: ""
+    prefix_length: []
     protocol_status: "down"
     vrf: ""
   - inbound_acl: ""
@@ -325,9 +325,9 @@ parsed_sample:
     ip_helper: []
     ipaddr: []
     link_status: "deleted"
-    mask: []
     mtu: ""
     outgoing_acl: ""
+    prefix_length: []
     protocol_status: "down"
     vrf: ""
   - inbound_acl: ""
@@ -335,9 +335,9 @@ parsed_sample:
     ip_helper: []
     ipaddr: []
     link_status: "deleted"
-    mask: []
     mtu: ""
     outgoing_acl: ""
+    prefix_length: []
     protocol_status: "down"
     vrf: ""
   - inbound_acl: ""
@@ -346,10 +346,10 @@ parsed_sample:
     ipaddr:
       - "169.254.0.1"
     link_status: "up"
-    mask:
-      - "30"
     mtu: "9000"
     outgoing_acl: ""
+    prefix_length:
+      - "30"
     protocol_status: "up"
     vrf: "6281BBEF467947E4949F989BBC891138"
   - inbound_acl: ""
@@ -357,9 +357,9 @@ parsed_sample:
     ip_helper: []
     ipaddr: []
     link_status: "deleted"
-    mask: []
     mtu: ""
     outgoing_acl: ""
+    prefix_length: []
     protocol_status: "down"
     vrf: ""
   - inbound_acl: ""
@@ -367,9 +367,9 @@ parsed_sample:
     ip_helper: []
     ipaddr: []
     link_status: "deleted"
-    mask: []
     mtu: ""
     outgoing_acl: ""
+    prefix_length: []
     protocol_status: "down"
     vrf: ""
   - inbound_acl: ""
@@ -377,9 +377,9 @@ parsed_sample:
     ip_helper: []
     ipaddr: []
     link_status: "deleted"
-    mask: []
     mtu: ""
     outgoing_acl: ""
+    prefix_length: []
     protocol_status: "down"
     vrf: ""
   - inbound_acl: ""
@@ -388,10 +388,10 @@ parsed_sample:
     ipaddr:
       - "169.254.0.50"
     link_status: "up"
-    mask:
-      - "29"
     mtu: "9000"
     outgoing_acl: ""
+    prefix_length:
+      - "29"
     protocol_status: "up"
     vrf: "C617529B810A48F6AD40FEBCB163B286"
   - inbound_acl: ""
@@ -399,9 +399,9 @@ parsed_sample:
     ip_helper: []
     ipaddr: []
     link_status: "deleted"
-    mask: []
     mtu: ""
     outgoing_acl: ""
+    prefix_length: []
     protocol_status: "down"
     vrf: ""
   - inbound_acl: ""
@@ -409,9 +409,9 @@ parsed_sample:
     ip_helper: []
     ipaddr: []
     link_status: "deleted"
-    mask: []
     mtu: ""
     outgoing_acl: ""
+    prefix_length: []
     protocol_status: "down"
     vrf: ""
   - inbound_acl: ""
@@ -419,9 +419,9 @@ parsed_sample:
     ip_helper: []
     ipaddr: []
     link_status: "deleted"
-    mask: []
     mtu: ""
     outgoing_acl: ""
+    prefix_length: []
     protocol_status: "down"
     vrf: ""
   - inbound_acl: ""
@@ -429,9 +429,9 @@ parsed_sample:
     ip_helper: []
     ipaddr: []
     link_status: "deleted"
-    mask: []
     mtu: ""
     outgoing_acl: ""
+    prefix_length: []
     protocol_status: "down"
     vrf: ""
   - inbound_acl: ""
@@ -439,9 +439,9 @@ parsed_sample:
     ip_helper: []
     ipaddr: []
     link_status: "deleted"
-    mask: []
     mtu: ""
     outgoing_acl: ""
+    prefix_length: []
     protocol_status: "down"
     vrf: ""
   - inbound_acl: ""
@@ -450,10 +450,10 @@ parsed_sample:
     ipaddr:
       - "169.254.0.5"
     link_status: "up"
-    mask:
-      - "30"
     mtu: "9000"
     outgoing_acl: ""
+    prefix_length:
+      - "30"
     protocol_status: "up"
     vrf: "6281BBEF467947E4949F989BBC891138"
   - inbound_acl: ""
@@ -461,9 +461,9 @@ parsed_sample:
     ip_helper: []
     ipaddr: []
     link_status: "deleted"
-    mask: []
     mtu: ""
     outgoing_acl: ""
+    prefix_length: []
     protocol_status: "down"
     vrf: ""
   - inbound_acl: ""
@@ -472,10 +472,10 @@ parsed_sample:
     ipaddr:
       - "88.16.254.103"
     link_status: "up"
-    mask:
-      - "31"
     mtu: "8000"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
@@ -484,10 +484,10 @@ parsed_sample:
     ipaddr:
       - "88.16.254.94"
     link_status: "up"
-    mask:
-      - "31"
     mtu: "8000"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
@@ -496,10 +496,10 @@ parsed_sample:
     ipaddr:
       - "88.16.254.17"
     link_status: "up"
-    mask:
-      - "31"
     mtu: "8000"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
@@ -508,10 +508,10 @@ parsed_sample:
     ipaddr:
       - "88.16.255.53"
     link_status: "up"
-    mask:
-      - "31"
     mtu: "8000"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
@@ -520,10 +520,10 @@ parsed_sample:
     ipaddr:
       - "88.16.254.0"
     link_status: "up"
-    mask:
-      - "31"
     mtu: "8000"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
@@ -532,10 +532,10 @@ parsed_sample:
     ipaddr:
       - "88.16.254.2"
     link_status: "up"
-    mask:
-      - "31"
     mtu: "8000"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
@@ -544,10 +544,10 @@ parsed_sample:
     ipaddr:
       - "88.16.254.4"
     link_status: "up"
-    mask:
-      - "31"
     mtu: "8000"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
@@ -556,10 +556,10 @@ parsed_sample:
     ipaddr:
       - "172.19.0.90"
     link_status: "up"
-    mask:
-      - "31"
     mtu: "8000"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: "MYCOMPANY"
   - inbound_acl: ""
@@ -568,10 +568,10 @@ parsed_sample:
     ipaddr:
       - "88.16.234.10"
     link_status: "administratively down"
-    mask:
-      - "29"
     mtu: "9000"
     outgoing_acl: ""
+    prefix_length:
+      - "29"
     protocol_status: "down"
     vrf: ""
   - inbound_acl: ""
@@ -580,10 +580,10 @@ parsed_sample:
     ipaddr:
       - "169.254.64.0"
     link_status: "up"
-    mask:
-      - "31"
     mtu: "1472"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: "MYCOMPANY"
   - inbound_acl: ""
@@ -592,10 +592,10 @@ parsed_sample:
     ipaddr:
       - "169.254.64.4"
     link_status: "up"
-    mask:
-      - "31"
     mtu: "1472"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: "MYCOMPANY"
   - inbound_acl: ""
@@ -604,10 +604,10 @@ parsed_sample:
     ipaddr:
       - "169.254.64.36"
     link_status: "up"
-    mask:
-      - "31"
     mtu: "1472"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: "MYCOMPANY"
   - inbound_acl: ""
@@ -616,10 +616,10 @@ parsed_sample:
     ipaddr:
       - "169.254.64.2"
     link_status: "up"
-    mask:
-      - "31"
     mtu: "1472"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "down"
     vrf: "MYCOMPANY"
   - inbound_acl: ""
@@ -628,10 +628,10 @@ parsed_sample:
     ipaddr:
       - "169.254.64.6"
     link_status: "up"
-    mask:
-      - "31"
     mtu: "1472"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "down"
     vrf: "MYCOMPANY"
   - inbound_acl: ""
@@ -640,10 +640,10 @@ parsed_sample:
     ipaddr:
       - "88.16.254.10"
     link_status: "up"
-    mask:
-      - "31"
     mtu: "9216"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
@@ -652,10 +652,10 @@ parsed_sample:
     ipaddr:
       - "100.66.0.2"
     link_status: "up"
-    mask:
-      - "31"
     mtu: "9216"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
@@ -664,10 +664,10 @@ parsed_sample:
     ipaddr:
       - "100.66.0.64"
     link_status: "up"
-    mask:
-      - "31"
     mtu: "9216"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
@@ -676,10 +676,10 @@ parsed_sample:
     ipaddr:
       - "100.66.0.102"
     link_status: "up"
-    mask:
-      - "31"
     mtu: "9216"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
@@ -688,10 +688,10 @@ parsed_sample:
     ipaddr:
       - "100.66.0.82"
     link_status: "up"
-    mask:
-      - "31"
     mtu: "9216"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
@@ -700,10 +700,10 @@ parsed_sample:
     ipaddr:
       - "100.66.0.74"
     link_status: "up"
-    mask:
-      - "31"
     mtu: "9216"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
@@ -712,10 +712,10 @@ parsed_sample:
     ipaddr:
       - "100.66.0.130"
     link_status: "up"
-    mask:
-      - "31"
     mtu: "9216"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
@@ -724,10 +724,10 @@ parsed_sample:
     ipaddr:
       - "100.66.0.158"
     link_status: "up"
-    mask:
-      - "31"
     mtu: "9216"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
@@ -736,10 +736,10 @@ parsed_sample:
     ipaddr:
       - "100.66.0.162"
     link_status: "up"
-    mask:
-      - "31"
     mtu: "9216"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
@@ -748,10 +748,10 @@ parsed_sample:
     ipaddr:
       - "100.66.0.174"
     link_status: "up"
-    mask:
-      - "31"
     mtu: "9216"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
@@ -760,10 +760,10 @@ parsed_sample:
     ipaddr:
       - "100.66.0.194"
     link_status: "up"
-    mask:
-      - "31"
     mtu: "9216"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
@@ -772,10 +772,10 @@ parsed_sample:
     ipaddr:
       - "100.66.0.214"
     link_status: "up"
-    mask:
-      - "31"
     mtu: "9216"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
@@ -784,10 +784,10 @@ parsed_sample:
     ipaddr:
       - "100.66.1.2"
     link_status: "up"
-    mask:
-      - "31"
     mtu: "9216"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
@@ -796,10 +796,10 @@ parsed_sample:
     ipaddr:
       - "88.16.254.11"
     link_status: "up"
-    mask:
-      - "31"
     mtu: "9216"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: "MYCOMPANY"
   - inbound_acl: ""
@@ -808,10 +808,10 @@ parsed_sample:
     ipaddr:
       - "100.66.0.3"
     link_status: "up"
-    mask:
-      - "31"
     mtu: "9216"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: "C617529B810A48F6AD40FEBCB163B286"
   - inbound_acl: ""
@@ -820,10 +820,10 @@ parsed_sample:
     ipaddr:
       - "100.66.0.65"
     link_status: "up"
-    mask:
-      - "31"
     mtu: "9216"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: "28FBAE630B934EB5AFA7FCE43E52393E"
   - inbound_acl: ""
@@ -832,10 +832,10 @@ parsed_sample:
     ipaddr:
       - "100.66.0.103"
     link_status: "up"
-    mask:
-      - "31"
     mtu: "9216"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: "4CB342232A7B4D04ADEF7DE3EC2679EC"
   - inbound_acl: ""
@@ -844,10 +844,10 @@ parsed_sample:
     ipaddr:
       - "100.66.0.83"
     link_status: "up"
-    mask:
-      - "31"
     mtu: "9216"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: "F76D90EAB6474F5BBB433939BA52FB14"
   - inbound_acl: ""
@@ -856,10 +856,10 @@ parsed_sample:
     ipaddr:
       - "100.66.0.75"
     link_status: "up"
-    mask:
-      - "31"
     mtu: "9216"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: "6281BBEF467947E4949F989BBC891138"
   - inbound_acl: ""
@@ -868,10 +868,10 @@ parsed_sample:
     ipaddr:
       - "100.66.0.131"
     link_status: "up"
-    mask:
-      - "31"
     mtu: "9216"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: "7650C2814C784BACBBE23BB30B47D3A1"
   - inbound_acl: ""
@@ -880,10 +880,10 @@ parsed_sample:
     ipaddr:
       - "100.66.0.159"
     link_status: "up"
-    mask:
-      - "31"
     mtu: "9216"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: "AF1C8AE356D94BBBB377257D047D3D4D"
   - inbound_acl: ""
@@ -892,10 +892,10 @@ parsed_sample:
     ipaddr:
       - "100.66.0.163"
     link_status: "up"
-    mask:
-      - "31"
     mtu: "9216"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: "41ECD4DB33314E949FD8D96D98252919"
   - inbound_acl: ""
@@ -904,10 +904,10 @@ parsed_sample:
     ipaddr:
       - "100.66.0.175"
     link_status: "up"
-    mask:
-      - "31"
     mtu: "9216"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: "A1E5B05D1D914A109BE1EE71B7C994B7"
   - inbound_acl: ""
@@ -916,10 +916,10 @@ parsed_sample:
     ipaddr:
       - "100.66.0.195"
     link_status: "up"
-    mask:
-      - "31"
     mtu: "9216"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: "CC462DCE24DD43B28EA8EA9BAD49044E"
   - inbound_acl: ""
@@ -928,10 +928,10 @@ parsed_sample:
     ipaddr:
       - "100.66.0.215"
     link_status: "up"
-    mask:
-      - "31"
     mtu: "9216"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: "C5DE7D3B149B4AF7BF398F45F0AD90A6"
   - inbound_acl: ""
@@ -940,9 +940,9 @@ parsed_sample:
     ipaddr:
       - "100.66.1.3"
     link_status: "up"
-    mask:
-      - "31"
     mtu: "9216"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: "8B3C2CFAD23841D1BC9FA2A178BA5855"
