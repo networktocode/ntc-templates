@@ -9,4 +9,8 @@ Value SWITCH (\S+)
 
 
 Start
-  ^\s*${ID}\s+(${STATUS})?(${SLAVE})?\s+${NAME}\s+${MTU}\s+${MAC_ADDRESS}\s+${ARP}\s+${SWITCH}\s*$$ -> Record
+  ^\s*Flags:\s+X\s+-\s+disabled,\s+R\s+-\s+running,\s+S\s+-\s+slave\s*$$
+  ^\s*#\s+NAME\s+MTU\s+MAC-ADDRESS\s+ARP\s+SWITCH\s*$$
+  ^\s*${ID}\s+(?:${STATUS})?(?:${SLAVE})?\s+${NAME}\s+${MTU}\s+${MAC_ADDRESS}\s+${ARP}\s+${SWITCH}\s*$$ -> Record
+  ^\s*$$
+  ^.*$$ -> Error
