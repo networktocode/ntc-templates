@@ -5,9 +5,9 @@ parsed_sample:
     ip_helper: []
     ipaddr: []
     link_status: "up"
-    mask: []
     mtu: ""
     outgoing_acl: ""
+    prefix_length: []
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
@@ -15,9 +15,9 @@ parsed_sample:
     ip_helper: []
     ipaddr: []
     link_status: "administratively down"
-    mask: []
     mtu: ""
     outgoing_acl: ""
+    prefix_length: []
     protocol_status: "down"
     vrf: ""
   - inbound_acl: ""
@@ -26,10 +26,10 @@ parsed_sample:
     ipaddr:
       - "192.168.102.45"
     link_status: "up"
-    mask:
-      - "30"
     mtu: "1500"
     outgoing_acl: ""
+    prefix_length:
+      - "30"
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
@@ -37,9 +37,9 @@ parsed_sample:
     ip_helper: []
     ipaddr: []
     link_status: "up"
-    mask: []
     mtu: "1486"
     outgoing_acl: ""
+    prefix_length: []
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
@@ -52,11 +52,11 @@ parsed_sample:
       - "192.168.1.1"
       - "192.168.1.3"
     link_status: "up"
-    mask:
-      - "24"
-      - "24"
     mtu: "1500"
     outgoing_acl: ""
+    prefix_length:
+      - "24"
+      - "24"
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
@@ -67,10 +67,10 @@ parsed_sample:
     ipaddr:
       - "192.168.2.1"
     link_status: "administratively down"
-    mask:
-      - "24"
     mtu: "1500"
     outgoing_acl: ""
+    prefix_length:
+      - "24"
     protocol_status: "down"
     vrf: ""
   - inbound_acl: "ACL-IN"
@@ -79,10 +79,10 @@ parsed_sample:
     ipaddr:
       - "1.1.1.1"
     link_status: "up"
-    mask:
-      - "30"
     mtu: "1500"
     outgoing_acl: "ACL-OUT"
+    prefix_length:
+      - "30"
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
@@ -90,9 +90,9 @@ parsed_sample:
     ip_helper: []
     ipaddr: []
     link_status: "administratively down"
-    mask: []
     mtu: ""
     outgoing_acl: ""
+    prefix_length: []
     protocol_status: "down"
     vrf: ""
   - inbound_acl: ""
@@ -101,9 +101,9 @@ parsed_sample:
     ipaddr:
       - "10.255.255.1"
     link_status: "up"
-    mask:
-      - "32"
     mtu: "1514"
     outgoing_acl: ""
+    prefix_length:
+      - "32"
     protocol_status: "up"
     vrf: ""

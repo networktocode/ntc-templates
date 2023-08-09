@@ -6,10 +6,10 @@ parsed_sample:
     ipaddr:
       - "10.0.0.0"
     link_status: "up"
-    mask:
-      - "32"
     mtu: "1514"
     outgoing_acl: ""
+    prefix_length:
+      - "32"
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
@@ -17,9 +17,9 @@ parsed_sample:
     ip_helper: []
     ipaddr: []
     link_status: "up"
-    mask: []
     mtu: ""
     outgoing_acl: ""
+    prefix_length: []
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
@@ -27,9 +27,9 @@ parsed_sample:
     ip_helper: []
     ipaddr: []
     link_status: "up"
-    mask: []
     mtu: ""
     outgoing_acl: ""
+    prefix_length: []
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
@@ -38,9 +38,9 @@ parsed_sample:
     ipaddr:
       - "172.1.1.110"
     link_status: "up"
-    mask:
-      - "30"
     mtu: ""
     outgoing_acl: ""
+    prefix_length:
+      - "30"
     protocol_status: "up"
     vrf: ""

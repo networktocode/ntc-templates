@@ -6,9 +6,9 @@ parsed_sample:
     ipaddr:
       - "10.0.0.0"
     link_status: "up"
-    mask:
-      - "32"
     mtu: "1514"
     outgoing_acl: ""
+    prefix_length:
+      - "32"
     protocol_status: "up"
     vrf: ""

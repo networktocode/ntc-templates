@@ -10,7 +10,8 @@
 # Template is able to recognize both versions and captures
 # same structured data regardless of IOS version.
 #
-Value Required PREFIX ((?:\d{1,3}\.){3}\d{1,3}\/\d{1,2})
+Value Required IP_ADDRESS ((?:\d{1,3}\.){3}\d{1,3})
+Value Required PREFIX_LENGTH (\d{1,2})
 # Nexthop and Interface are lists to support ECMP
 # Usually these will be single item lists
 # However, if there are multiple paths available
@@ -40,7 +41,7 @@ Start
   #
   # >>>>>> Cisco IOS >v15.x
   # Extract prefix (no flags)
-  ^${PREFIX},\s+epoch
+  ^${IP_ADDRESS}\/${PREFIX_LENGTH},\s+epoch
   # Extract nexthop for recursive entries
   ^\s+recursive\s+via\s+${NEXTHOP} -> Recursive
   # Extract nexthop (receive) and interface
@@ -60,7 +61,7 @@ Start
   #
   # >>>>>> Cisco IOS 12.x ISR G1 (legacy CEF formatting)
   # Extract prefix
-  ^${PREFIX},\s+version -> Continue
+  ^${IP_ADDRESS}\/${PREFIX_LENGTH},\s+version -> Continue
   # Extract nexthop (receive and attached)
   ^.*?epoch\s+\d+,.+?${NEXTHOP}(?<=receive)
   ^.*?epoch\s+\d+,.+?${NEXTHOP}(?<=attached)
