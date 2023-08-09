@@ -5,7 +5,7 @@ Value USAGE (\d+|\d+.\d+)
 
 Start
   ^\s*NAME\s+CPU\s+USAGE\s*$$
-  ^\s*${NAME}\s*(\s+${CPU})?\s+${USAGE}\%\s*$$ -> Record
+  ^\s*${NAME}\s*(\s+${CPU})?\s+${USAGE}%\s*$$ -> Record
   ^\s*--\s+\[Q\s+quit\|D\s+dump\|C-z\s+pause\]\s*$$
   ^\s*--\s+\[Q\s+quit\|C-z\s+pause\]\s*$$
   ^\s*$$
