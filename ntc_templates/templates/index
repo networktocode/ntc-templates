@@ -568,7 +568,7 @@ mikrotik_routeros_interface_print_terse_without-paging.textfsm, .*, mikrotik_rou
 mikrotik_routeros_ip_firewall_address-list_print_terse.textfsm, .*, mikrotik_routeros, [[/]]ip(v6)? firewall address-list print terse
 mikrotik_routeros_snmp_community_print_without-paging.textfsm, .*, mikrotik_routeros, [[/]]snmp community print without-paging
 mikrotik_routeros_ipv6_neighbor_print_without-paging.textfsm, .*, mikrotik_routeros, [[/]]ipv6 neighbor print without-paging
-mikrotik_routeros_log_print_detail_without_paging.textfsm, .*, mikrotik_routeros, [[/]]log print detail without-paging(\s+.*)?
+mikrotik_routeros_log_print_detail_without-paging.textfsm, .*, mikrotik_routeros, [[/]]log print detail without-paging(\s+.*)?
 mikrotik_routeros_routing_bgp_peer_print_status.textfsm, .*, mikrotik_routeros, [[/]]routing bgp peer print status
 mikrotik_routeros_ip_arp_print_without-paging.textfsm, .*, mikrotik_routeros, [[/]]ip arp print without-paging
 mikrotik_routeros_routing_ospf_neighbor_print.textfsm, .*, mikrotik_routeros, [[/]]routing ospf neighbor print
