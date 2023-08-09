@@ -1,8 +1,14 @@
 Value IP (\d+\.\d+\.\d+\.\d+)
 Value MASK (\d+)
+Value COMMENT (.*?)
+Value DISABLED (yes|no)
 Value INTERFACE (\S+)
 Value NETWORK (\d+\.\d+\.\d+\.\d+)
 
 
 Start
-  ^.*address\=${IP}\/${MASK}.*interface\=${INTERFACE}.*network=${NETWORK}.*$$ -> Record
+  ^\s*#.*$$
+  ^/ip\s+address\s*$$
+  ^\s*add\s+address=${IP}/${MASK}(?:\s+comment="${COMMENT}")?\s+disabled=${DISABLED}\s+interface=${INTERFACE}\s+network=${NETWORK}\s*$$ -> Record
+  ^\s*$$
+  ^. -> Error
