@@ -1,8 +1,13 @@
-Value DATETIME ((\w{3}/\d{2}(/\d{4})?\s+)?\d{2}:\d{2}:\d{2})
-Value TOPIC (\S+)
+Value MONTH (\w{3})
+Value DAY (\d{2})
+Value YEAR (\d{4})
+Value HOUR (\d{2})
+Value MINUTE (\d{2})
+Value SECOND (\d{2})
+Value TOPICS (\S+)
 Value MESSAGE (.+)
 
 Start
-  ^\s*time=${DATETIME}\s+topics=${TOPIC}\s+message="${MESSAGE}"\s*$$ -> Record
+  ^\s*time=(${MONTH}/${DAY}(/${YEAR})?\s+)?${HOUR}:${MINUTE}:${SECOND}\s+topics=${TOPICS}\s+message="${MESSAGE}"\s*$$ -> Record
   ^\s*$$
   ^. -> Error
