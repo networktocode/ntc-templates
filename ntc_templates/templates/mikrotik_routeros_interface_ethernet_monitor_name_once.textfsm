@@ -32,7 +32,6 @@ Value List EEPROM ([0-9a-f]+:(?:\s+[0-9a-f]{2})+.*)
 Value ADVERTISING (\S+)
 Value LINK_PARTNER_ADVERTISING (\S+)
 
-
 Start
   ^\s*name:\s${NAME}
   ^\s*status:\s${STATUS}

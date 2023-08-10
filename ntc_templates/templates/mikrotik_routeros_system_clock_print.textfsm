@@ -5,7 +5,6 @@ Value TIME_ZONE_NAME (\S+)
 Value GMT_OFFSET (\+\d{2}\:\d{2})
 Value DST_ACTIVE (yes|no)
 
-
 Start
   ^\s*time:\s+${TIME}\s*$$
   ^\s*date:\s+${DATE}\s*$$

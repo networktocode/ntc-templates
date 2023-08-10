@@ -5,10 +5,11 @@ Value GROUP (\S+)
 Value ADDRESS (\S+)
 Value LAST_LOGGED_IN ([a-z]{3}/\d{1,2}/\d{4} \d{1,2}:\d{1,2}:\d{1,2})
 
-
 Start
   ^\s*Flags:\s+X\s+-\s+disabled\s*$$
-  ^\s*#\s+NAME\s+GROUP\s+ADDRESS\s+LAST-LOGGED-IN\s*$$
+  ^\s*#\s+NAME\s+GROUP\s+ADDRESS\s+LAST-LOGGED-IN\s*$$ -> UsersTable
+
+UsersTable
   ^\s*${ID}\s+${NAME}\s+${GROUP}\s+(?:${ADDRESS})?\s+${LAST_LOGGED_IN}\s*$$ -> Record
   ^\s*${ID}\s+;;;\s+${COMMENT}\s*$$
   ^\s*${NAME}\s+${GROUP}\s+(?:${ADDRESS})?\s+${LAST_LOGGED_IN}\s*$$ -> Record

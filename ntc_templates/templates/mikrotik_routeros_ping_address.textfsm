@@ -11,9 +11,10 @@ Value MIN_RTT (\d+)
 Value AVG_RTT (\d+)
 Value MAX_RTT (\d+)
 
-
 Start
-  ^\s*SEQ\s+HOST\s+SIZE\s+TTL\s+TIME\s+STATUS\s*$$
+  ^\s*SEQ\s+HOST\s+SIZE\s+TTL\s+TIME\s+STATUS\s*$$ -> PingsTable
+
+PingsTable
   ^\s*${SEQ}\s+${HOST}(?:\s+${SIZE})?(?:\s+${TTL})?(?:\s+${TIME}ms)?(?:\s+${STATUS})?\s*$$
   ^\s*sent=${SENT}\s+received=${RECEIVED}\s+packet-loss=${PACKET_LOSS}%(?:\s+min-rtt=${MIN_RTT}ms\s+avg-rtt=${AVG_RTT}ms\s+max-rtt=${MAX_RTT}ms)?\s*$$ -> Record
   ^\s*$$

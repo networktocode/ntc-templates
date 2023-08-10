@@ -2,9 +2,10 @@ Value NAME (\S+)
 Value CPU (\S+)
 Value USAGE (\d+|\d+.\d+)
 
-
 Start
-  ^\s*NAME\s+CPU\s+USAGE\s*$$
+  ^\s*NAME\s+CPU\s+USAGE\s*$$ -> ProfilingTable
+
+ProfilingTable
   ^\s*${NAME}\s*(\s+${CPU})?\s+${USAGE}%\s*$$ -> Record
   ^\s*--\s+\[Q\s+quit\|D\s+dump\|C-z\s+pause\]\s*$$
   ^\s*--\s+\[Q\s+quit\|C-z\s+pause\]\s*$$

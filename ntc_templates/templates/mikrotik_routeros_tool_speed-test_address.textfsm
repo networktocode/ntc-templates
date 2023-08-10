@@ -9,7 +9,6 @@ Value TCP_UPLOAD (.*)
 Value UDP_DOWNLOAD (.*)
 Value UDP_UPLOAD (.*)
 
-
 Start
   ^\s*address:\s*${ADDRESS}\s*$$
   ^\s*status:\s*${STATUS}\s*$$

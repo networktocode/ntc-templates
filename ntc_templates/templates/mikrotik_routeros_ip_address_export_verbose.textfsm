@@ -5,7 +5,6 @@ Value DISABLED (yes|no)
 Value INTERFACE (\S+)
 Value NETWORK (\d+\.\d+\.\d+\.\d+)
 
-
 Start
   ^\s*#.*$$
   ^/ip\s+address\s*$$
