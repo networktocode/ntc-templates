@@ -1,14 +1,14 @@
+Value DESTINATION_ADDRESS ([0-9a-fA-F.:]+)
+Value HOPS_MAX (\d+)
+Value PACKETS_PER_HOP (\d+)
+Value PACKET_SIZE (\d+)
 Value HOP_NUM (\d+)
-Value ADDRESS ((?:\d{1,3}\.){3}\d{1,3})
+Value ADDRESS ([0-9a-fA-F.:]+)
 Value DETAILS (.*)
 
-
 Start
-  # Output example:
-  # traceroute to 8.8.8.8 (8.8.8.8), 32 hops max, 3 probe packets per hop, 84 byte packets
-  # 1  81.33.33.333  0.392 ms
-  ^\s*traceroute.*$$
-  ^\s*${HOP_NUM}\s+(${ADDRESS})?\s+${DETAILS}\s*$$ -> Record
+  ^\s*traceroute\s+to\s+${DESTINATION_ADDRESS}\s+\(.*?\),\s+${HOPS_MAX}\s+hops\s+max,\s+${PACKETS_PER_HOP}\s+probe\s+packets\s+per\s+hop,\s+${PACKET_SIZE}\s+byte\s+packets\s*$$
+  ^\s*${HOP_NUM}(?:\s+${ADDRESS})?\s+${DETAILS}\s*$$ -> Record
   ^\s*\*\s*$$
   ^\s*$$
   ^. -> Error
