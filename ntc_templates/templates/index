@@ -492,7 +492,7 @@ fortinet_get_system_interface.textfsm, .*, fortinet, g[[et]] sy[[stem]] in[[terf
 fortinet_execute_log_display.textfsm, .*, fortinet, exec[[ute]] log display
 fortinet_execute_traceroute.textfsm, .*, fortinet, exec[[ute]] traceroute
 fortinet_get_system_status.textfsm, .*, fortinet, g[[et]] sy[[stem]] stat[[us]]
-fortinet_diagnose_sys_top.textfsm, .*, fortinet, diagnose sys top .*
+fortinet_diagnose_sys_top.textfsm, .*, fortinet, diagnose sys top(?:(?:\s\d+)|(?:\s\d+){2}|(?:\s\d+){3})?
 fortinet_get_hardware_nic.textfsm, .*, fortinet, g[[et]] hard[[ware]] n[[ic]]
 fortinet_get_system_arp.textfsm, .*, fortinet, g[[et]] sy[[stem]] arp
 fortinet_execute_date.textfsm, .*, fortinet, exec[[ute]] date
