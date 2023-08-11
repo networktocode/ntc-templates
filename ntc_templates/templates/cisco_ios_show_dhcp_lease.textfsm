@@ -1,4 +1,4 @@
-Value ADDRESS (\d+\.\d+\.\d+\.\d+)
+Value IP_ADDRESS (\d+\.\d+\.\d+\.\d+)
 Value NETMASK (\d+\.\d+\.\d+\.\d+)
 Value INTERFACE (\S+)
 Value SERVER (\d+\.\d+\.\d+\.\d+)
@@ -15,7 +15,7 @@ Value CLIENT_ID (\S+)
 Value HOSTNAME (\S+)
 
 Start
-  ^\s*Temp\s+IP\s+addr:\s+${ADDRESS}\s+for\s+peer\s+on\s+Interface: ${INTERFACE}
+  ^\s*Temp\s+IP\s+addr:\s+${IP_ADDRESS}\s+for\s+peer\s+on\s+Interface: ${INTERFACE}
   ^\s*Temp\s+sub\s+net\s+mask:\s+${NETMASK}
   ^\s*DHCP\s+Lease\s+server:\s+${SERVER},\s+state:\s+${STATE_ID}\s+${STATE}
   ^\s*DHCP\s+transaction\s+id:\s+${TRANSACTION_ID}
