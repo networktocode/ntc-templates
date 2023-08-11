@@ -1,9 +1,11 @@
-Value NIC (\w+)
-Value LINK_ENCAP (\w+)
+Value NIC (.*?)
+Value LINK_ENCAP (.*?)
 Value HW_ADDR ([a-zA-Z0-9]{2}(:[a-zA-Z0-9]{2}){5})
-Value INET_ADDR (\d+\.\d+\.\d+\.\d+)
-Value BCAST (\d+\.\d+\.\d+\.\d+)
-Value MASK (\d+\.\d+\.\d+\.\d+)
+Value INET_ADDR ([0-9a-fA-F.:]+)
+Value BCAST ([0-9a-fA-F.:]+)
+Value MASK ([0-9a-fA-F.:]+)
+Value LINK_LOCAL6 ([0-9a-fA-F:]+)
+Value LINK_LOCAL6_PREFIXLEN (\d+)
 Value MULTICAST (.*(?<!\s))
 Value MTU (\d+)
 Value METRIC (\d+)
@@ -22,12 +24,14 @@ Value TX_QUEUE_LEN (\d+)
 Value RX_BYTES (\d+)
 Value TX_BYTES (\d+)
 
-
 Start
-  ^\s*${NIC}\s+Link\s+encap\:${LINK_ENCAP}\s+HWaddr\s+${HW_ADDR}\s*$$ -> Continue
-  ^\s*inet\s+addr\:${INET_ADDR}\s+Bcast\:${BCAST}\s+Mask\:${MASK}\s*$$ -> Continue
-  ^\s*${MULTICAST}\s+MTU\:${MTU}\s+Metric\:${METRIC}\s*$$ -> Continue
-  ^\s*RX\s+packets\:${RX_PACKETS}\s+errors\:${RX_ERRORS}\s+dropped\:${RX_DROPPED}\s+overruns\:${RX_OVERRUNS}\s+frame\:${RX_FRAME}\s*$$ -> Continue
-  ^\s*TX\s+packets\:${TX_PACKETS}\s+errors\:${TX_ERRORS}\s+dropped\:${TX_DROPPED}\s+overruns\:${TX_OVERRUNS}\s+carrier\:${TX_CARRIER}\s*$$ -> Continue
-  ^\s*collisions\:${COLLISIONS}\s+txqueuelen\:${TX_QUEUE_LEN}\s*$$ -> Continue
-  ^\s*RX\s+bytes\:${RX_BYTES}\s+\(.*\)\s+TX\s+bytes\:${TX_BYTES}\s+\(.*\)\s*$$ -> Record
+  ^\s*${NIC}\s+Link\s+encap:${LINK_ENCAP}(?:\s+HWaddr\s+${HW_ADDR})?\s*$$
+  ^\s*inet\s+addr:${INET_ADDR}(?:\s+Bcast:${BCAST})?\s+Mask:${MASK}\s*$$
+  ^\s*link-local6:\s+${LINK_LOCAL6}\s+prefixlen\s+${LINK_LOCAL6_PREFIXLEN}\s*$$
+  ^\s*${MULTICAST}\s+MTU:${MTU}\s+Metric:${METRIC}\s*$$
+  ^\s*RX\s+packets:${RX_PACKETS}\s+errors:${RX_ERRORS}\s+dropped:${RX_DROPPED}\s+overruns:${RX_OVERRUNS}\s+frame:${RX_FRAME}\s*$$
+  ^\s*TX\s+packets:${TX_PACKETS}\s+errors:${TX_ERRORS}\s+dropped:${TX_DROPPED}\s+overruns:${TX_OVERRUNS}\s+carrier:${TX_CARRIER}\s*$$
+  ^\s*collisions:${COLLISIONS}\s+txqueuelen:${TX_QUEUE_LEN}\s*$$
+  ^\s*RX\s+bytes:${RX_BYTES}\s+\(.*\)\s+TX\s+bytes:${TX_BYTES}\s+\(.*\)\s*$$ -> Record
+  ^\s*$$
+  ^. -> Error
