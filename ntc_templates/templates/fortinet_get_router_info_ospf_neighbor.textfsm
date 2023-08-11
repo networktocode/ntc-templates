@@ -1,10 +1,17 @@
-Value NEIGHBOR_ID (\d+.\d+.\d+.\d+)
+Value NEIGHBOR_ID ([0-9a-fA-F.:]+)
 Value PRI (\d+)
 Value STATE (.*?(?= ))
 Value DEAD_TIME (\d+:\d+:\d+)
-Value ADDRESS (\d+.\d+.\d+.\d+)
+Value ADDRESS ([0-9a-fA-F.:]+)
 Value INTERFACE (\S+)
 
-
 Start
+  ^\s*OSPF\s+process\s+\d+,\s+VRF\s+\d+:\s*$$
+  ^\s*Neighbor\s+ID\s+Pri\s+State\s+Dead\s+Time\s+Address\s+Interface\s*$$ -> NeighborsTable
+  ^\s*$$
+  ^. -> Error
+
+NeighborsTable
   ^\s*${NEIGHBOR_ID}\s+${PRI}\s+${STATE}\s+${DEAD_TIME}\s+${ADDRESS}\s+${INTERFACE}\s*$$ -> Record
+  ^\s*$$
+  ^. -> Error
