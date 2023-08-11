@@ -7,6 +7,8 @@ Value VIA (local|telnet|ssh|winbox|api|web|tikapp|ftp|dude)
 Start
   ^\s*Flags:\s+R\s+-\s+radius,\s+M\s+-\s+by-romon\s*$$
   ^\s*#\s+WHEN\s+NAME\s+ADDRESS\s+VIA\s*$$ -> ActiveUsersTable
+  ^\s*$$
+  ^. -> Error
 
 ActiveUsersTable
   ^\s*${ID}\s+${WHEN}\s+${NAME}\s+${ADDRESS}\s+${VIA}\s*$$ -> Record

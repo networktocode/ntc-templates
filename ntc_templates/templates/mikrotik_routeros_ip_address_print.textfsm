@@ -9,6 +9,8 @@ Value INTERFACE (.*)
 Start
   ^\s*Flags:\s+X\s+-\s+disabled,\s+I\s+-\s+invalid,\s+D\s+-\s+dynamic\s*$$
   ^\s*#\s+ADDRESS\s+NETWORK\s+INTERFACE\s*$$ -> IPsTable
+  ^\s*$$
+  ^. -> Error
 
 IPsTable
   ^\s*${NUM}\s+(?:${FLAGS}\s+)?${IP}/${SUBNET}\s+${NETWORK}\s+${INTERFACE}\s*$$ -> Record

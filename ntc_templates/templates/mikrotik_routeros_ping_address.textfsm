@@ -13,6 +13,8 @@ Value MAX_RTT (\d+)
 
 Start
   ^\s*SEQ\s+HOST\s+SIZE\s+TTL\s+TIME\s+STATUS\s*$$ -> PingsTable
+  ^\s*$$
+  ^. -> Error
 
 PingsTable
   ^\s*${SEQ}\s+${HOST}(?:\s+${SIZE})?(?:\s+${TTL})?(?:\s+${TIME}ms)?(?:\s+${STATUS})?\s*$$

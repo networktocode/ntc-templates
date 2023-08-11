@@ -1,9 +1,9 @@
-Value IP (\d+\.\d+\.\d+\.\d+)
+Value IP (\S+)
 Value MASK (\d+)
 Value COMMENT (.*?)
 Value DISABLED (yes|no)
 Value INTERFACE (\S+)
-Value NETWORK (\d+\.\d+\.\d+\.\d+)
+Value NETWORK (\S+)
 
 Start
   ^\s*#.*$$
