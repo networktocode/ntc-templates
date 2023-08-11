@@ -1,8 +1,8 @@
-Value NEIGHBOR_ID ([0-9a-fA-F.:]+)
+Value NEIGHBOR_ID (\S+)
 Value PRI (\d+)
 Value STATE (.*?(?= ))
 Value DEAD_TIME (\d+:\d+:\d+)
-Value ADDRESS ([0-9a-fA-F.:]+)
+Value ADDRESS (\S+)
 Value INTERFACE (\S+)
 
 Start

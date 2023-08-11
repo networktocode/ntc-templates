@@ -40,6 +40,8 @@ Start
   ^Permanent_HWaddr\s*${PERMANENT_HWADDR}\s*$$
   ^=+\s+Link\s+Status\s+=+ -> LinkStatus
   ^=+\s+Counters\s+=+ -> Counters
+  ^\s*$$
+  ^. -> Error
 
 LinkStatus
   ^Admin\s*:${ADMIN}\s*$$
@@ -51,6 +53,8 @@ LinkStatus
   ^Speed\s*:${SPEED}\s*$$
   ^Duplex\s*:${DUPLEX}\s*$$
   ^link_status\s*:${LINK_STATUS}\s*$$ -> Start
+  ^\s*$$
+  ^. -> Error
 
 Counters
   ^Rx\s+Pkts\s*:${RX_PKTS}\s*$$

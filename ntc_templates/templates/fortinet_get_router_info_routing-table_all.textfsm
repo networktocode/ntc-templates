@@ -1,8 +1,8 @@
 Value Filldown TYPE ((?:K|C|S|R|B|O|IA|N1|N2|E1|E2|i|L1|L2|ia|\*|\s)+?)
-Value Filldown DESTINATION ((?:\d+\.){3}\d+/\d+)
+Value Filldown DESTINATION (\S+)
 Value DISTANCE (\d+)
 Value METRIC (\d+)
-Value Required GATEWAY (.*?(?=,))
+Value Required GATEWAY (\S+|is\s+directly\s+connected)
 Value Required INTERFACE (\S+)
 Value LAST_TIME_UPDATE (\S+)
 

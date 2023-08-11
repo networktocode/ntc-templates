@@ -1,5 +1,5 @@
 Value Filldown INTERFACE (\S+)
-Value Required IP (\d+.\d+.\d+.\d+)
+Value Required IP (\S+)
 Value MAC_ADDRESS (([a-f0-9]{2}:){5}[a-f0-9]{2})
 Value HOSTNAME ([^ ].+?(?=\s{2}))
 Value VCI ([^ ].+?(?=\s{2}))
@@ -11,6 +11,8 @@ Start
   ^\s*${INTERFACE}\s*$$
   ^\s*IP\s+MAC-Address\s+Hostname\s+VCI\s+SSID\s+AP\s+Expiry\s*$$ -> SevenColumns
   ^\s*IP\s+MAC-Address\s+Hostname\s+VCI\s+Expiry\s*$$ -> FiveColumns
+  ^\s*$$
+  ^. -> Error
 
 SevenColumns
   ^\s*IP\s+MAC-Address\s+Hostname\s+VCI\s+SSID\s+AP\s+Expiry\s*$$

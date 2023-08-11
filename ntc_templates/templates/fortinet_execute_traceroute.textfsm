@@ -1,9 +1,9 @@
-Value DESTINATION_ADDRESS ([0-9a-fA-F.:]+)
+Value DESTINATION_ADDRESS (\S+)
 Value HOPS_MAX (\d+)
 Value PACKETS_PER_HOP (\d+)
 Value PACKET_SIZE (\d+)
 Value HOP_NUM (\d+)
-Value ADDRESS ([0-9a-fA-F.:]+)
+Value ADDRESS ((?!\*(?:\s+\*)*)\S+)
 Value DETAILS (.*)
 
 Start
