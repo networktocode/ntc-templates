@@ -576,14 +576,14 @@ mikrotik_routeros_ip_address_export_verbose.textfsm, .*, mikrotik_routeros, [[/]
 mikrotik_routeros_interface_ethernet_print.textfsm, .*, mikrotik_routeros, [[/]]interface ethernet print
 mikrotik_routeros_ip_neighbor_print_detail.textfsm, .*, mikrotik_routeros, [[/]]ip neighbor print detail
 mikrotik_routeros_system_routerboard_print.textfsm, .*, mikrotik_routeros, [[/]]system routerboard print
-mikrotik_routeros_tool_speed-test_address.textfsm, .*, mikrotik_routeros, [[/]]tool speed-test .*
+mikrotik_routeros_tool_speed-test_address.textfsm, .*, mikrotik_routeros, [[/]]tool speed-test (\S+)
 mikrotik_routeros_system_identity_print.textfsm, .*, mikrotik_routeros, [[/]]system identity print
 mikrotik_routeros_system_resource_print.textfsm, .*, mikrotik_routeros, [[/]]system resource print
 mikrotik_routeros_ip_route_print_terse.textfsm, .*, mikrotik_routeros, [[/]]ip(v6)? route print terse
 mikrotik_routeros_system_clock_print.textfsm, .*, mikrotik_routeros, [[/]]system clock print
 mikrotik_routeros_user_active_print.textfsm, .*, mikrotik_routeros, [[/]]user active print
 mikrotik_routeros_ip_address_print.textfsm, .*, mikrotik_routeros, [[/]]ip address print
-mikrotik_routeros_ping_address.textfsm, .*, mikrotik_routeros, [[/]]ping .*
+mikrotik_routeros_ping_address.textfsm, .*, mikrotik_routeros, [[/]]ping (\S+)
 mikrotik_routeros_tool_profile.textfsm, .*, mikrotik_routeros, [[/]]tool profile
 mikrotik_routeros_user_print.textfsm, .*, mikrotik_routeros, [[/]]user print
 
