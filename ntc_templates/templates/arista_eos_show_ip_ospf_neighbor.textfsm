@@ -1,4 +1,4 @@
-Value Required NEIGHBOR_ID (\d+.\d+.\d+.\d+)
+Value Required ROUTER_ID (\d+.\d+.\d+.\d+)
 Value INSTANCE (\d+)
 Value VRF (\S+)
 Value PRIORITY (\d+)
@@ -8,5 +8,5 @@ Value IP_ADDRESS (\d+.\d+.\d+.\d+)
 Value INTERFACE ([\w\./-]+)
 
 Start
-  ^${NEIGHBOR_ID}\s+${VRF}\s+${PRIORITY}\s+${STATE}\s+${DEAD_TIME}\s+${IP_ADDRESS}\s+${INTERFACE} -> Record
-  ^\s*${NEIGHBOR_ID}\s+${INSTANCE}\s+${VRF}\s+${PRIORITY}\s+${STATE}\s+${DEAD_TIME}\s+${IP_ADDRESS}\s+${INTERFACE}\s*$$ -> Record
+  ^${ROUTER_ID}\s+${VRF}\s+${PRIORITY}\s+${STATE}\s+${DEAD_TIME}\s+${IP_ADDRESS}\s+${INTERFACE} -> Record
+  ^\s*${ROUTER_ID}\s+${INSTANCE}\s+${VRF}\s+${PRIORITY}\s+${STATE}\s+${DEAD_TIME}\s+${IP_ADDRESS}\s+${INTERFACE}\s*$$ -> Record

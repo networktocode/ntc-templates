@@ -1,4 +1,4 @@
-Value NEIGHBOR_ID (\d+.\d+.\d+.\d+)
+Value ROUTER_ID (\d+.\d+.\d+.\d+)
 Value PRIORITY (\d+)
 Value STATE (\S+\/\s+\-|\S+)
 Value DEAD_TIME (\d+:\d+:\d+)
@@ -7,5 +7,5 @@ Value INTERFACE (\S+)
 Value NEIGHBOR_UPTIME (\S+)
 
 Start
-  ^${NEIGHBOR_ID}\s+${PRIORITY}\s+${STATE}\s+${DEAD_TIME}\s+${IP_ADDRESS}\s+${INTERFACE}
+  ^${ROUTER_ID}\s+${PRIORITY}\s+${STATE}\s+${DEAD_TIME}\s+${IP_ADDRESS}\s+${INTERFACE}
   ^\s+Neighbor is up for ${NEIGHBOR_UPTIME} -> Record

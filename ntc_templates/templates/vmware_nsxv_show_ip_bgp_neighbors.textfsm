@@ -1,4 +1,4 @@
-Value NEIGHBOR_ID (\d+(\.\d+){3})
+Value ROUTER_ID (\d+(\.\d+){3})
 Value REMOTE_AS (\d+)
 Value STATE (\D.*)
 Value HOLD_INTERVAL (\d+)
@@ -9,7 +9,7 @@ Value PFX_ADV (\d+)
 
 Start
 	^BGP neighbor.* -> Continue.Record
-	^BGP neighbor is ${NEIGHBOR_ID},\s+remote AS ${REMOTE_AS}
+	^BGP neighbor is ${ROUTER_ID},\s+remote AS ${REMOTE_AS}
 	^BGP state = ${STATE}
 	^Hold time is ${HOLD_INTERVAL}, Keep alive interval is ${KEEPALIVE_INTERVAL}
 	^\s+Prefixes received ${PFX_RECV} sent ${PFX_SENT} advertised ${PFX_ADV}
