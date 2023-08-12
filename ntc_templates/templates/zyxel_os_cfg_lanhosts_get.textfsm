@@ -11,7 +11,7 @@ Start
   ^. -> Error
 
 HOSTSTable
-  ^${HOSTNAME}\s+${IP}\s+${IPV6_ADDRESS}\s+${MAC_ADDRESS}\s+${SOURCE}\s+${CONN_TYPE}\s*$$ -> Record
+  ^${HOSTNAME}\s+${IP_ADDRESS}\s+${IPV6_ADDRESS}\s+${MAC_ADDRESS}\s+${SOURCE}\s+${CONN_TYPE}\s*$$ -> Record
   ^Command Successful.\s*$$
   ^\s*$$
   ^. -> Error
