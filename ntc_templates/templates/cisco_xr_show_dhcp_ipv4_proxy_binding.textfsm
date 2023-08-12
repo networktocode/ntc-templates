@@ -1,4 +1,4 @@
-Value ADDRESS (\d+\.\d+\.\d+\.\d+)
+Value IP_ADDRESS (\d+\.\d+\.\d+\.\d+)
 Value STATE (\S+)
 Value LEASE_REMAINING (\S+)
 Value MAC_ADDRESS (\S+)
@@ -7,4 +7,4 @@ Value VRF (\S+)
 Value SUBLABEL (\S+)
 
 Start
-  ^${MAC_ADDRESS}\s+${ADDRESS}\s+${STATE}\s+${LEASE_REMAINING}\s+${INTERFACE}\s+${VRF}\s+${SUBLABEL} -> Record
+  ^${MAC_ADDRESS}\s+${IP_ADDRESS}\s+${STATE}\s+${LEASE_REMAINING}\s+${INTERFACE}\s+${VRF}\s+${SUBLABEL} -> Record

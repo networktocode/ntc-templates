@@ -1,10 +1,10 @@
 Value INTERFACE (\S+)
-Value IPADDR (\S+)
+Value IP_ADDRESS (\S+)
 Value STATUS (up|down|administratively down)
 Value PROTO (up|down)
 
 Start
   ^Interface\s+IP-Address\s+OK\?\s+Method\s+Status\s+Protocol\s*$$
-  ^${INTERFACE}\s+${IPADDR}\s+\w+\s+\w+\s+${STATUS}\s+${PROTO} -> Record
+  ^${INTERFACE}\s+${IP_ADDRESS}\s+\w+\s+\w+\s+${STATUS}\s+${PROTO} -> Record
   ^\s*$$
   ^. -> Error

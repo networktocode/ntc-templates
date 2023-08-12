@@ -1,5 +1,5 @@
 Value Required INTERFACE (\S+)
-Value Required IPADDRESS (\S+)
+Value Required IP_ADDRESS (\S+)
 Value Required VRF (\S+)
 Value Required PROTO_STATE (\S+)
 
@@ -13,6 +13,6 @@ Start
   ^. -> Error
 
 Entries
-  ^${INTERFACE}\s+${IPADDRESS}\s+${VRF}\s+${PROTO_STATE} -> Record
+  ^${INTERFACE}\s+${IP_ADDRESS}\s+${VRF}\s+${PROTO_STATE} -> Record
   ^\s*$$
   ^. -> Error
