@@ -1,5 +1,5 @@
 Value MAC_ADDRESS (([\d1-9a-f]{2}\:?){6})
-Value IP_ADDR (([\d1-9]+\.?){4})
+Value IP_ADDRESS (([\d1-9]+\.?){4})
 Value GROUP_NAME (\S+)
 Value MULTICAST_IP (([\d1-9]+\.?){4})
 Value STATUS (.+?)
@@ -18,6 +18,6 @@ Start
 
 
 Mobility_Controllers
-  ^\s+${MAC_ADDRESS}\s+${IP_ADDR}\s+${GROUP_NAME}\s+${MULTICAST_IP}\s+${STATUS}s*$$ -> Record
+  ^\s+${MAC_ADDRESS}\s+${IP_ADDRESS}\s+${GROUP_NAME}\s+${MULTICAST_IP}\s+${STATUS}s*$$ -> Record
   ^\s*$$
   ^. -> Error
