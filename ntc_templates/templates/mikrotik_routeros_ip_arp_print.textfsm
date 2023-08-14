@@ -1,13 +1,17 @@
 Value NUM (\d+)
-Value FLAGS ([XIHDPC]*)
+Value FLAGS ([XIHDPC]+)
 Value ADDRESS (\S+)
-Value MAC (\S+)
+Value MAC ((?:[0-9a-fA-F]{2}:){5}[0-9a-fA-F]{2})
 Value INTERFACE (\S+)
 
-
 Start
-  ^Flags:.*$$
-  ^\s*#\s*ADDRESS\s+MAC-ADDRESS\s+INTERFACE\s*$$
-  ^\s*${NUM}\s+${FLAGS}\s+${ADDRESS}\s+${MAC}\s+${INTERFACE}\s*$$ -> Record
+  ^\s*Flags:\s+X\s+-\s+disabled,\s+I\s+-\s+invalid,\s+H\s+-\s+DHCP,\s+D\s+-\s+dynamic,\s+P\s+-\s+published,\s+C\s+-\s+complete\s*$$
+  ^\s*#\s+ADDRESS\s+MAC-ADDRESS\s+INTERFACE\s*$$ -> EntriesTable
+  ^\s*$$
+  ^. -> Error
+
+EntriesTable
+  ^\s*${NUM}(?:\s+${FLAGS})?\s+${ADDRESS}(?:\s+${MAC})?(?:\s+${INTERFACE})?\s*$$ -> Record
+  ^\s*(?:\d{2}:){2}\d{2}\s+echo:\s*.*$$
   ^\s*$$
   ^. -> Error
