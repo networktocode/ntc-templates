@@ -1,0 +1,42 @@
+Value Required VLAN_ID (\d+)
+Value NAME (.*)
+Value STATUS (\S+)
+Value INTERFACES (\S+)
+
+Start
+  ^\s*\{\s*$$
+  ^\s+"TABLE_.*$$
+  ^\s+"ROW_vlanbrief.*$$ -> VlanBrief
+  ^\s+"ROW_mtuinfo.*$$ -> MtuInfo
+  ^\s*\},?\s*$$
+  ^\s*$$
+  ^. -> Error
+
+VlanBrief
+  ^\s+\{\s*$$
+  ^\s+\[\s*$$
+  ^\s+"TABLE_.*$$
+  ^\s+"ROW_.*$$
+  ^\s+"vlanshowbr-vlanid":\s+"${VLAN_ID}",?\s*$$
+  ^\s+"vlanshowbr-vlanid-utf":\s+"\d+",?\s*$$
+  ^\s+"vlanshowbr-vlanname":\s+"${NAME}",?\s*$$
+  ^\s+"vlanshowbr-vlanstate":\s+"${STATUS}",?\s*$$
+  ^\s+"vlanshowbr-shutstate":\s+"\S+",?\s*$$
+  ^\s+"vlanshowplist-ifidx":\s+"${INTERFACES}",?\s*$$
+  ^\s+\},?\s*$$ -> Record
+  ^\s+\],?\s*$$ -> Start
+  ^\s*$$
+  ^. -> Error
+
+MtuInfo
+  ^\s+\{\s*$$
+  ^\s+\[\s*$$
+  ^\s+"TABLE_.*$$
+  ^\s+"ROW_.*$$
+  ^\s+"vlanshowinfo-vlanid":\s+"\d+",?\s*$$
+  ^\s+"vlanshowinfo-media-type":\s+"\S+",?\s*$$
+  ^\s+"vlanshowinfo-vlanmode":\s+"\S+",?\s*$$
+  ^\s+\},?\s*$$ -> Record
+  ^\s+\],?\s*$$ -> Start
+  ^\s*$$
+  ^. -> Error
