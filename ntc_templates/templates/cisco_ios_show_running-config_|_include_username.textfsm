@@ -3,3 +3,5 @@ Value PRIVILEGE (\d+)
 
 Start
   ^\s*username\s+${USERNAME}\s+privilege\s+${PRIVILEGE}.*$$ -> Record
+  ^\s*$$
+  ^. -> Error
