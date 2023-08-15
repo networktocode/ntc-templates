@@ -4,3 +4,5 @@ Value MINUTES (\d+)
 
 Start
   ^\s*clock\stimezone\s${TIMEZONE_NAME}\s+${HOURS}\s+${MINUTES}\s*$$ -> Record
+  ^\s*$$
+  ^. -> Error
