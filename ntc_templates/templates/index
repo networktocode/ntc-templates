@@ -211,6 +211,7 @@ cisco_ios_interface_iface-name_no_shutdown.textfsm, .*, cisco_ios, interface (\S
 cisco_ios_show_capability_feature_routing.textfsm, .*, cisco_ios, sh[[ow]] cap[[ability]] f[[eature]] r[[outing]]
 cisco_ios_show_ip_bgp_vpnv4_all_neighbors.textfsm, .*, cisco_ios, sh[[ow]] ip bgp vpnv4 all nei[[ghbors]]
 cisco_ios_show_ip_eigrp_interfaces_detail.textfsm, .*, cisco_ios, sh[[ow]] ip ei[[grp]] i[[nterfaces]] de[[tail]]
+cisco_ios_interface_iface-name_shutdown.textfsm, .*, cisco_ios, interface (\S+) shutdown
 cisco_ios_show_ip_ospf_database_network.textfsm, .*, cisco_ios, sh[[ow]] ip ospf data[[base]] ne[[twork]]
 cisco_ios_show_authentication_sessions.textfsm, .*, cisco_ios, show authen[[tication]] ses[[sions]]
 cisco_ios_show_crypto_pki_certificates.textfsm, .*, cisco_ios, sh[[ow]] cry[[pto]] p[[ki]] ce[[rtificates]]
@@ -258,7 +259,6 @@ cisco_ios_show_isis_neighbors.textfsm, .*, cisco_ios, sh[[ow]] isis ne[[ighbors]
 cisco_ios_show_lldp_neighbors.textfsm, .*, cisco_ios, sh[[ow]] lld[[p]] neig[[hbors]]
 cisco_ios_show_power_supplies.textfsm,  .*, cisco_ios, sh[[ow]] pow[[er]] su[[pplies]]
 cisco_ios_show_snmp_community.textfsm, .*, cisco_ios, sh[[ow]] sn[[mp]] com[[munity]]
-cisco_ios_interface_shutdown.textfsm, .*, cisco_ios, interface \w+, shutdown
 cisco_ios_show_cdp_neighbors.textfsm, .*, cisco_ios, sh[[ow]] c[[dp]] neig[[hbors]]
 cisco_ios_show_controller_t1.textfsm, .*, cisco_ios, sh[[ow]] cont[[rollers]] t1
 cisco_ios_show_hosts_summary.textfsm, .*, cisco_ios, sh[[ow]] ho[[sts]] summary
