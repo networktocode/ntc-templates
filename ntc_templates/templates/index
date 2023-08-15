@@ -263,6 +263,7 @@ cisco_ios_show_platform_diag.textfsm, .*, cisco_ios, sh[[ow]] plat[[form]] di[[a
 cisco_ios_show_processes_cpu.textfsm, .*, cisco_ios, sh[[ow]] proc[[esses]] [[cpu]]
 cisco_ios_show_spanning-tree.textfsm, .*, cisco_ios, sh[[ow]] sp[[anning-tree]]
 cisco_ios_show_standby_brief.textfsm, .*, cisco_ios, sh[[ow]] standby(?:\s+\S+)? br[[ief]]
+cisco_ios_show_file_systems.textfsm, .*, cisco_ios, sh[[ow]] fi[[le]] s[[ystems]]
 cisco_ios_show_ip_interface.textfsm, .*, cisco_ios, sh[[ow]] ip int[[erface]]
 cisco_ios_show_object-group.textfsm, .*, cisco_ios, sh[[ow]] ob[[ject-group]]
 cisco_ios_show_power_status.textfsm, .*, cisco_ios, sh[[ow]] pow[[er]] st[[atus]]
@@ -305,7 +306,6 @@ cisco_ios_show_vlan.textfsm, .*, cisco_ios, sh[[ow]] vlan
 cisco_ios_show_vrf.textfsm, .*, cisco_ios, sh[[ow]] vrf
 cisco_ios_ping.textfsm, .*, cisco_ios, ping
 cisco_ios_dir.textfsm,  .*, cisco_ios, dir
-cisco_ios_show_file_systems.textfsm, .*, cisco_ios, sh[[ow]] fi[[le]] s[[ystems]]
 
 cisco_nxos_show_l2rib_internal_permanently-frozen-list.textfsm, .*, cisco_nxos, sh[[ow]] l2ri[[b]] i[[nternal]] pe[[rmanently-frozen-list]]
 cisco_nxos_show_bgp_vrf_all_ipv4_unicast_neighbors.textfsm, .*, cisco_nxos, sh[[ow]] bg[[p]] v[[rf]] all ip[[v4]] uni[[cast]] neigh[[bors]]
