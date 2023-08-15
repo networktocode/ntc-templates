@@ -2,6 +2,12 @@ Value BYTES (\d+)
 Value SECONDS (\d+(?:\.\d+)?)
 Value SPEED (\d+)
 
-
 Start
-  ^\s*${BYTES}\s+bytes\s+copied\s+in\s+${SECONDS}\s+secs\s+\(${SPEED}\s+bytes\/sec\)\s*$$ -> Record
+  ^\s*Address\s+or\s+name\s+of\s+remote\s+host.*$$
+  ^\s*Source\s+filename.*$$
+  ^\s*Destination\s+filename.*$$
+  ^\s*Accessing\s+ftp://.*$$
+  ^\s*\[OK\s+-\s+\d+\s+bytes\]\s*$$
+  ^\s*${BYTES}\s+bytes\s+copied\s+in\s+${SECONDS}\s+secs(?:\s+\(${SPEED}\s+bytes/sec\))?\s*$$ -> Record
+  ^\s*$$
+  ^. -> Error
