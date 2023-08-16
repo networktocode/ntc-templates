@@ -571,7 +571,7 @@ mikrotik_routeros_ip_arp_print_without-paging.textfsm, .*, mikrotik_routeros, [[
 mikrotik_routeros_system_routerboard_print.textfsm, .*, mikrotik_routeros, [[/]]system routerboard print
 mikrotik_routeros_interface_disable_iface.textfsm, .*, mikrotik_routeros, [[/]]interface disable (\S+)
 mikrotik_routeros_interface_enable_iface.textfsm, .*, mikrotik_routeros, [[/]]interface enable (\S+)
-mikrotik_routeros_ip_address_get_address.textfsm, .*, mikrotik_routeros, \s*:\s*put\s+\(\s*\[\s*/\s*ip\s+address\s+get\s+\[\s*find\s+interface\s*=\w+\s*\]\s*\]\s*->\s*"address"\s*\)\s*
+mikrotik_routeros_ip_address_get_iface.textfsm, .*, mikrotik_routeros, [[:]]put \(\[/?ip address get \[find interface=(\w+)\]\]\s*->\s*"address"\)
 mikrotik_routeros_ip_route_print_terse.textfsm, .*, mikrotik_routeros, [[/]]ip(v6)? route print terse
 mikrotik_routeros_put_[resolve_name].textfsm, .*, mikrotik_routeros, [[:]]put \[:?resolve (.+)\]
 mikrotik_routeros_system_reboot.textfsm, .*, mikrotik_routeros, :execute {/system reboot}
