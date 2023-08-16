@@ -1,10 +1,7 @@
-Value List RESULT_ROWS (\s*(?!\[\S+\]\s*\>\s*)\S.*)
+Value OUTPUT ()
 
 Start
-  ^\[\S+\]\s*\>\s* -> Row
+  ^\s*Received\s+disconnect\s+from.*$$
+  ^${OUTPUT}$$ -> Record
   ^\s*$$
   ^. -> Error
-
-Row
-  ^${RESULT_ROWS}
-  ^\[\S+\]\s*\>\s* -> Record

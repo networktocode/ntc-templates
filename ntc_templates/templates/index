@@ -574,7 +574,7 @@ mikrotik_routeros_interface_enable_iface.textfsm, .*, mikrotik_routeros, [[/]]in
 mikrotik_routeros_ip_address_get_iface.textfsm, .*, mikrotik_routeros, [[:]]put \(\[/?ip address get \[find interface=(\w+)\]\]\s*->\s*"address"\)
 mikrotik_routeros_ip_route_print_terse.textfsm, .*, mikrotik_routeros, [[/]]ip(v6)? route print terse
 mikrotik_routeros_put_[resolve_name].textfsm, .*, mikrotik_routeros, [[:]]put \[:?resolve (.+)\]
-mikrotik_routeros_system_reboot.textfsm, .*, mikrotik_routeros, :execute {/system reboot}
+mikrotik_routeros_system_reboot.textfsm, .*, mikrotik_routeros, [[:]]execute {/?system reboot}
 mikrotik_routeros_tool_fetch.textfsm, .*, mikrotik_routeros, [[/]]tool fetch .*
 
 paloalto_panos_show_running_security-policy.textfsm, .*, paloalto_panos, sh[[ow]] runn[[ing]] security[[-policy]]
