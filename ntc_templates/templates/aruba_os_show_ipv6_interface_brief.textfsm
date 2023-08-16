@@ -1,5 +1,5 @@
 Value INTERFACE (\S+\s\S+|\S+)
-Value List IP_ADDRESS (\S+)
+Value List IPV6_ADDRESS (\S+)
 Value ADMIN (\S+)
 Value PROTOCOL (\S+)
 
@@ -9,4 +9,4 @@ Start
 Interfaces
   ^(\S+\s\S+|\S+)\s+\[\s+(\S+)/(\S+)\s+\] -> Continue.Record
   ^${INTERFACE}\s+\[\s+${ADMIN}/${PROTOCOL}\s+\]
-  ^\s+${IP_ADDRESS}
+  ^\s+${IPV6_ADDRESS}
