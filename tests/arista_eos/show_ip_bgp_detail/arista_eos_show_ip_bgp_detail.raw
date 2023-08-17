@@ -1,0 +1,14 @@
+BGP routing table information for VRF default
+Router identifier 10.103.1.1, local AS number 103
+BGP routing table entry for 10.103.1.0/24
+ Paths: 2 available
+  6333 623566 42669611124 4266644366 4266643244
+    10.10.23.2 from 10.10.23.2 (10.10.1.1)
+      Origin INCOMPLETE, metric 0, localpref 100, IGP metric 1, weight 0, received 19d16h ago, valid, external, best
+      Community: 10050:200 10222:10010 3223:0 1000:1701
+      Rx SAFI: Unicast
+  6333 623566 42669611124 4266644366 4266643244
+    10.10.25.2 from 10.10.25.2 (10.10.1.1)
+      Origin INCOMPLETE, metric 0, localpref 100, IGP metric 1, weight 0, received 21:13:51 ago, valid, internal
+      Community: 10050:200 10222:10010 3223:0 1000:17088
+      Rx SAFI: Unicast
