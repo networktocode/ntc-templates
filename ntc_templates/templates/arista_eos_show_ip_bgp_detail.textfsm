@@ -11,7 +11,7 @@ Value NEIGHBOR (\d+\.\d+\.\d+\.\d+)
 Value NEIGHBOR_ID (\S+)
 Value Filldown ROUTER_ID (\S+)
 Value Filldown LOCAL_AS (\S+)
-				
+
 Start
   ^BGP\s+routing\s+table\sinformation.+
   ^Router\s+identifier\s+${ROUTER_ID},\s+local\s+AS\s+number\s+${LOCAL_AS} -> Path
@@ -20,18 +20,19 @@ Path
   ^BGP\s+routing\s+table\s+entry\s+for\s+${PREFIX}
   ^\s+Paths:\s+\d+\s+available
   ^\s+Local$$
+  ^\s+Local\s+\(aggregated.*$$
   ^\s+${AS_PATH}$$
   ^\s+\-\s+from\s+\S+\s+\(${NEIGHBOR_ID}\)
   ^\s+${NEIGHBOR}\s+from\s+\S+\s+\(${NEIGHBOR_ID}\)
   ^\s+Origin\s+${ORIGIN},\s+metric\s+\d+,\s+localpref\s+${LOCAL_PREF},\s+IGP\s+metric\s+\S+,\s+weight\s+\-,\s+received\s+\S+\s+ago,\s+${VALID},\s+${PATH_TYPE},\s+${ACTIVE}
   ^\s+Origin\s+${ORIGIN},\s+metric\s+\d+,\s+localpref\s+${LOCAL_PREF},\s+IGP\s+metric\s+\S+,\s+weight\s+${WEIGHT},\s+received\s+\S+\s+ago,\s+${VALID},\s+${PATH_TYPE},\s+${ACTIVE}
+  ^\s+Origin\s+${ORIGIN},\s+metric\s+\d+,\s+localpref\s+${LOCAL_PREF},\s+IGP\s+metric\s+\S+,\s+weight\s+${WEIGHT},\s+received\s+\S+\s+ago,\s+${VALID},\s+${PATH_TYPE},\s+atomic-aggregate
   ^\s+Origin\s+${ORIGIN},\s+metric\s+\d+,\s+localpref\s+${LOCAL_PREF},\s+IGP\s+metric\s+\S+,\s+weight\s+${WEIGHT},\s+received\s+\S+\s+ago,\s+${VALID},\s+${PATH_TYPE}
   ^\s+Community:\s+${COMMUNITY}$$
   ^\s+Extended\s+Community:\s+\S+
   ^\s+Rx\s+SAFI:\s+\S+ -> Record
   ^\s+\d+\s+Contributing\s+routes:
-  ^\s+\S+\s+Proto:\s+\S+\s+Origin:\s+\S+\s+AS\s+Path:\s+\S+
-  ^\s+Community:\s+\S+$$
+  ^\s+\S+\s+Proto:\s+\S+\s+Origin:\s+\S+\s+AS\s+Path:\s+\S+ -> Clear
   ^. -> Error
 
 EOF
