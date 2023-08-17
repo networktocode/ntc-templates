@@ -7,14 +7,14 @@ BGP routing table entry for 10.103.1.0/24
       Origin INCOMPLETE, metric 0, localpref 100, IGP metric 1, weight 0, received 19d16h ago, valid, external, best
       Community: internet 10050:200 10222:10010 3223:0 1000:1701
       Rx SAFI: Unicast
-  6333 623566 42669611124 4266644366 4266643244
+  6333 623566 42669.611124 4266644366 4266643244
     10.10.25.2 from 10.10.25.2 (10.10.1.1)
       Origin INCOMPLETE, metric 0, localpref 100, IGP metric 1, weight 0, received 21:13:51 ago, valid, internal
       Community: 10050:200 10222:10010 3223:0 1000:17088
       Rx SAFI: Unicast
 BGP routing table entry for 10.104.1.0/24
  Paths: 1 available
-  6333 623566 42669611124 432556
+  6333 623566 42669611124 {432556}
     10.10.11.2 from 10.10.11.2 (10.10.11.1)
       Origin IGP, metric 0, localpref 200, IGP metric 1, weight 0, received 19:13:51 ago, valid, internal, best
       Community: 10050:300 10222:10010 3223:0 1000:17088
