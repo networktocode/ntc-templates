@@ -20,3 +20,17 @@ BGP routing table entry for 10.104.1.0/24
       Community: 10050:300 10222:10010 3223:0 1000:17088
       Extended Community: Route-Target-AS:1234:12
       Rx SAFI: Unicast
+BGP routing table entry for 10.105.1.0/24
+ Paths: 1 available
+  6333 623566 42669611124 {432556}
+    10.10.11.2 from 10.10.11.2 (10.10.11.1)
+      Origin IGP, metric 0, localpref 300, IGP metric 1, weight 0, received 19:13:51 ago, valid, internal, best
+      Community: 10050:300 10222:10010 3223:0 1000:17088
+      Rx SAFI: Unicast
+      27 Contributing routes:
+        10.105.1.59/32     Proto: Connected     Origin: IGP          AS Path: Local
+        10.105.1.6/32      Proto: Connected     Origin: IGP          AS Path: Local
+        10.105.1.29/32     Proto: BGP           Origin: IGP          AS Path: 3245.235
+          Community: 999:10 347:234 1240:155
+        10.105.1.28/32     Proto: BGP           Origin: IGP          AS Path: 3245.235
+          Community: 999:10 347:234 1240:155
