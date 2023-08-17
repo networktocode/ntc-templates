@@ -29,6 +29,9 @@ Path
   ^\s+Community:\s+${COMMUNITY}$$
   ^\s+Extended\s+Community:\s+\S+
   ^\s+Rx\s+SAFI:\s+\S+ -> Record
+  ^\s+\d+\s+Contributing\s+routes:
+  ^\s+\S+\s+Proto:\s+\S+\s+Origin:\s+\S+\s+AS\s+Path:\s+\S+
+  ^\s+Community:\s+\S+$$
   ^. -> Error
 
 EOF
