@@ -30,6 +30,7 @@ Path
   ^\s+Origin\s+${ORIGIN},\s+metric\s+\d+,\s+localpref\s+${LOCAL_PREF},\s+IGP\s+metric\s+\S+,\s+weight\s+${WEIGHT},\s+received\s+\S+\s+ago,\s+${VALID},\s+${PATH_TYPE}
   ^\s+Community:\s+${COMMUNITY}$$
   ^\s+Extended\s+Community:\s+\S+
+  ^\s+Rx\s+path\s+id:\s+\S+
   ^\s+Rx\s+SAFI:\s+\S+ -> Record
   ^\s+\d+\s+Contributing\s+routes:
   ^\s+\S+\s+Proto:\s+\S+\s+Origin:\s+\S+\s+AS\s+Path:\s+\S+ -> Clear
