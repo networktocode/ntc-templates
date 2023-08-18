@@ -20,7 +20,7 @@ Path
   ^BGP\s+routing\s+table\s+entry\s+for\s+${PREFIX}
   ^\s+Paths:\s+\d+\s+available
   ^\s+Local$$
-  ^\s+Local\s+\(aggregated.*$$
+  ^\s+Local\s+\(.*$$
   ^\s+${AS_PATH}$$
   ^\s+\-\s+from\s+\S+\s+\(${NEIGHBOR_ID}\)
   ^\s+${NEIGHBOR}\s+from\s+\S+\s+\(${NEIGHBOR_ID}\)
