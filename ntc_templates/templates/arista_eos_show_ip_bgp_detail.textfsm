@@ -1,33 +1,36 @@
 Value LOCAL_PREF (\d+)
 Value WEIGHT (\S+)
 Value ORIGIN (.+)
-Value Filldown PREFIX (\S+)
+Value Filldown NETWORK (\S+)
 Value AS_PATH (\d+(\s.*?)*(\s.?)*|\d+\.\d+(\s.*?)*)
 Value VALID (\S+)
 Value PATH_TYPE (\S+)
 Value ACTIVE (best)
 Value COMMUNITY ((?:(?:(?:no-export|no-advertise|local-as|internet)|\d+\s?:\s?\d+)\s?)*)
-Value NEIGHBOR (\d+\.\d+\.\d+\.\d+)
+Value NEXT_HOP (\d+\.\d+\.\d+\.\d+)
+Value NEIGHBOR (\S+)
 Value NEIGHBOR_ID (\S+)
 Value Filldown ROUTER_ID (\S+)
 Value Filldown LOCAL_AS (\S+)
+Value METRIC (\d+)
 
 Start
   ^BGP\s+routing\s+table\sinformation.+
   ^Router\s+identifier\s+${ROUTER_ID},\s+local\s+AS\s+number\s+${LOCAL_AS} -> Path
 
 Path
-  ^BGP\s+routing\s+table\s+entry\s+for\s+${PREFIX}
+  ^BGP\s+routing\s+table\s+entry\s+for\s+${NETWORK}
   ^\s+Paths:\s+\d+\s+available
   ^\s+Local$$
   ^\s+Local\s+\(.*$$
   ^\s+${AS_PATH}$$
   ^\s+\-\s+from\s+\S+\s+\(${NEIGHBOR_ID}\)
-  ^\s+${NEIGHBOR}\s+from\s+\S+\s+\(${NEIGHBOR_ID}\)
-  ^\s+Origin\s+${ORIGIN},\s+metric\s+\d+,\s+localpref\s+${LOCAL_PREF},\s+IGP\s+metric\s+\S+,\s+weight\s+\-,\s+received\s+\S+\s+ago,\s+${VALID},\s+${PATH_TYPE},\s+${ACTIVE}
-  ^\s+Origin\s+${ORIGIN},\s+metric\s+\d+,\s+localpref\s+${LOCAL_PREF},\s+IGP\s+metric\s+\S+,\s+weight\s+${WEIGHT},\s+received\s+\S+\s+ago,\s+${VALID},\s+${PATH_TYPE},\s+${ACTIVE}
-  ^\s+Origin\s+${ORIGIN},\s+metric\s+\d+,\s+localpref\s+${LOCAL_PREF},\s+IGP\s+metric\s+\S+,\s+weight\s+${WEIGHT},\s+received\s+\S+\s+ago,\s+${VALID},\s+${PATH_TYPE},\s+atomic-aggregate
-  ^\s+Origin\s+${ORIGIN},\s+metric\s+\d+,\s+localpref\s+${LOCAL_PREF},\s+IGP\s+metric\s+\S+,\s+weight\s+${WEIGHT},\s+received\s+\S+\s+ago,\s+${VALID},\s+${PATH_TYPE}
+  ^\s+\-\s+from\s+${NEIGHBOR}\s+\(${NEIGHBOR_ID}\)
+  ^\s+${NEXT_HOP}\s+from\s+${NEIGHBOR}\s+\(${NEIGHBOR_ID}\)
+  ^\s+Origin\s+${ORIGIN},\s+metric\s+${METRIC},\s+localpref\s+${LOCAL_PREF},\s+IGP\s+metric\s+\S+,\s+weight\s+\-,\s+received\s+\S+\s+ago,\s+${VALID},\s+${PATH_TYPE},\s+${ACTIVE}
+  ^\s+Origin\s+${ORIGIN},\s+metric\s+${METRIC},\s+localpref\s+${LOCAL_PREF},\s+IGP\s+metric\s+\S+,\s+weight\s+${WEIGHT},\s+received\s+\S+\s+ago,\s+${VALID},\s+${PATH_TYPE},\s+${ACTIVE}
+  ^\s+Origin\s+${ORIGIN},\s+metric\s+${METRIC},\s+localpref\s+${LOCAL_PREF},\s+IGP\s+metric\s+\S+,\s+weight\s+${WEIGHT},\s+received\s+\S+\s+ago,\s+${VALID},\s+${PATH_TYPE},\s+atomic-aggregate
+  ^\s+Origin\s+${ORIGIN},\s+metric\s+${METRIC},\s+localpref\s+${LOCAL_PREF},\s+IGP\s+metric\s+\S+,\s+weight\s+${WEIGHT},\s+received\s+\S+\s+ago,\s+${VALID},\s+${PATH_TYPE}
   ^\s+Community:\s+${COMMUNITY}$$
   ^\s+Extended\s+Community:\s+\S+
   ^\s+Rx\s+path\s+id:\s+\S+
