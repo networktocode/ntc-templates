@@ -27,7 +27,7 @@ BGP routing table entry for 10.105.1.0/24
       Origin IGP, metric 0, localpref 300, IGP metric 1, weight 0, received 13:43:11 ago, valid, internal, best, atomic-aggregate
       Community: 10050:300 10222:10010 3223:0 1000:17077
       Rx SAFI: Unicast
-      27 Contributing routes:
+      4 Contributing routes:
         10.105.1.59/32     Proto: Connected     Origin: IGP          AS Path: Local
         10.105.1.6/32      Proto: Connected     Origin: IGP          AS Path: Local
         10.105.1.29/32     Proto: BGP           Origin: IGP          AS Path: 3245.235
@@ -45,4 +45,11 @@ BGP routing table entry for 10.106.1.0/24
     10.10.12.2 from 10.10.12.2 (10.10.12.1)
       Origin INCOMPLETE, metric 0, localpref 200, IGP metric 1, weight 0, received 19:34:12 ago, valid, external, best
       Community: 10050:300 10222:10010 3223:0 1000:17099
+      Rx SAFI: Unicast
+BGP routing table entry for 10.107.1.0/24
+ Paths: 1 available
+  Local (Received from a RR-client)
+    10.10.13.2 from 10.10.13.2 (10.10.13.1)
+      Origin IGP, metric 0, localpref 250, IGP metric 1, weight 0, received 19:34:12 ago, valid, internal, best
+      Community: 10050:300 10222:10010 3223:0 1000:17100
       Rx SAFI: Unicast
