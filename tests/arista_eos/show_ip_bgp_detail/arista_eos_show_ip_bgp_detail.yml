@@ -80,7 +80,7 @@ parsed_sample:
     weight: "0"
   - active: "best"
     as_path: ""
-    community: "10050:300 10222:10010 3223:0 1000:17100"
+    community: "no-export"
     local_as: "103"
     local_pref: "250"
     neighbor: "10.10.13.2"
