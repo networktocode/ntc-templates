@@ -1,7 +1,7 @@
 Value Filldown PROCESS_ID (\d+)
 Value Filldown ROUTER_ID (\d+\.\d+\.\d+\.\d+)
 Value Required CODE (\S+)
-Value ROUTE (\d+\.\d+\.\d+\.\d+)
+Value NETWORK (\d+\.\d+\.\d+\.\d+)
 Value PREFIX_LENGTH (\d+)
 Value SUCCESSORS (\d+)
 Value FD (\d+|Inaccessible)
@@ -20,9 +20,9 @@ Start
   # Skips over the definitions for the codes
   ^\s*\S\s-\s\S+
   # Matches a route and captures if ${TAG} is use for the route and then moves to Gateway section
-  ^${CODE}\s+${ROUTE}/${PREFIX_LENGTH},\s+${SUCCESSORS}\s+successors,\s+FD\s+is\s+${FD},\s+tag\s+is\s+${TAG} -> Gateway
+  ^${CODE}\s+${NETWORK}/${PREFIX_LENGTH},\s+${SUCCESSORS}\s+successors,\s+FD\s+is\s+${FD},\s+tag\s+is\s+${TAG} -> Gateway
   # Matches a route and captures it and then moves to Gateway section
-  ^${CODE}\s+${ROUTE}/${PREFIX_LENGTH},\s+${SUCCESSORS}\s+successors,\s+FD\s+is\s+${FD} -> Gateway
+  ^${CODE}\s+${NETWORK}/${PREFIX_LENGTH},\s+${SUCCESSORS}\s+successors,\s+FD\s+is\s+${FD} -> Gateway
   # If it doesn't match anything above, this just acknowledges a new line
   ^\s*$$
   # This will throw an error if there are no matches
@@ -38,8 +38,8 @@ Gateway
   # This will not capture anything but if it encounters another route, it will continue and record what it already captured
   ^\S+\s+(?:\d+(?:\.|)){4}/\d+,\s+\d+\s+successors -> Continue.Record
   # These are the same as above and capture the next set of routes
-  ^${CODE}\s+${ROUTE}/${PREFIX_LENGTH},\s+${SUCCESSORS}\s+successors,\s+FD\s+is\s+${FD},\s+tag\s+is\s+${TAG}
-  ^${CODE}\s+${ROUTE}/${PREFIX_LENGTH},\s+${SUCCESSORS}\s+successors,\s+FD\s+is\s+${FD}
+  ^${CODE}\s+${NETWORK}/${PREFIX_LENGTH},\s+${SUCCESSORS}\s+successors,\s+FD\s+is\s+${FD},\s+tag\s+is\s+${TAG}
+  ^${CODE}\s+${NETWORK}/${PREFIX_LENGTH},\s+${SUCCESSORS}\s+successors,\s+FD\s+is\s+${FD}
   # If it encounters another AS/Router ID it will continue and record what it just captured
   ^.+AS\(\d+\)/ID -> Continue.Record
   # If it encounters it again, it will continue, but clear all captured data other than Filldown Values
