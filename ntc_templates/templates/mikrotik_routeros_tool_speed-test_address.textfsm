@@ -1,0 +1,26 @@
+Value ADDRESS (\S+)
+Value STATUS (.*)
+Value TIME_REMAINING (\d+\w+)
+Value PING_MIN_AVG_MAX (\S+\s*/\s*\S+\s*/\s*\S+)
+Value JITTER_MIN_AVG_MAX (\S+\s*/\s*\S+\s*/\s*\S+)
+Value LOSS (\d+%\s*\(\d+/\d+\))
+Value TCP_DOWNLOAD (.*)
+Value TCP_UPLOAD (.*)
+Value UDP_DOWNLOAD (.*)
+Value UDP_UPLOAD (.*)
+
+Start
+  ^\s*address:\s*${ADDRESS}\s*$$
+  ^\s*status:\s*${STATUS}\s*$$
+  ^\s*time-remaining:\s*${TIME_REMAINING}\s*$$
+  ^\s*ping-min-avg-max:\s*${PING_MIN_AVG_MAX}\s*$$
+  ^\s*jitter-min-avg-max:\s*${JITTER_MIN_AVG_MAX}\s*$$
+  ^\s*loss:\s*${LOSS}\s*$$
+  ^\s*tcp-download:\s*${TCP_DOWNLOAD}\s*$$
+  ^\s*tcp-upload:\s*${TCP_UPLOAD}\s*$$
+  ^\s*udp-download:\s*${UDP_DOWNLOAD}\s*$$
+  ^\s*udp-upload:\s*${UDP_UPLOAD}\s*$$
+  ^\s*--\s+\[Q\s+quit\|D\s+dump\|C-z\s+pause\]\s*$$
+  ^\s*--\s+\[Q\s+quit\|C-z\s+pause\]\s*$$
+  ^\s*$$
+  ^. -> Error
