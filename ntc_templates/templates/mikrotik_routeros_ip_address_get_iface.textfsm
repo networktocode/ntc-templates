@@ -1,0 +1,8 @@
+Value IP (\S+)
+Value SUBNET (\S+)
+
+Start
+  ^\s*no\s+such\s+item\s*$$
+  ^\s*${IP}/${SUBNET}\s*$$ -> Record
+  ^\s*$$
+  ^. -> Error

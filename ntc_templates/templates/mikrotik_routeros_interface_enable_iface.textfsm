@@ -1,0 +1,6 @@
+Value OUTPUT ()
+
+Start
+  ^${OUTPUT}$$ -> Record
+  ^\s*$$
+  ^. -> Error

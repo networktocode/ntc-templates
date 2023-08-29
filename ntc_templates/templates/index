@@ -616,19 +616,25 @@ mikrotik_routeros_ip_address_export_verbose.textfsm, .*, mikrotik_routeros, [[/]
 mikrotik_routeros_interface_ethernet_print.textfsm, .*, mikrotik_routeros, [[/]]interface ethernet print
 mikrotik_routeros_ip_neighbor_print_detail.textfsm, .*, mikrotik_routeros, [[/]]ip neighbor print detail
 mikrotik_routeros_system_routerboard_print.textfsm, .*, mikrotik_routeros, [[/]]system routerboard print
+mikrotik_routeros_interface_disable_iface.textfsm, .*, mikrotik_routeros, [[/]]interface disable (\S+)
 mikrotik_routeros_tool_speed-test_address.textfsm, .*, mikrotik_routeros, [[/]]tool speed-test (\S+)
+mikrotik_routeros_interface_enable_iface.textfsm, .*, mikrotik_routeros, [[/]]interface enable (\S+)
 mikrotik_routeros_interface_print_detail.textfsm, .*, mikrotik_routeros, [[/]]interface print detail
 mikrotik_routeros_interface_print_brief.textfsm, .*, mikrotik_routeros, [[/]]interface print brief
 mikrotik_routeros_ip_route_print_detail.textfsm, .*, mikrotik_routeros, [[/]]ip route print detail
 mikrotik_routeros_system_identity_print.textfsm, .*, mikrotik_routeros, [[/]]system identity print
 mikrotik_routeros_system_resource_print.textfsm, .*, mikrotik_routeros, [[/]]system resource print
+mikrotik_routeros_ip_address_get_iface.textfsm, .*, mikrotik_routeros, [[:]]put \(\[/?ip address get \[find interface=(\w+)\]\]\s*->\s*"address"\)
 mikrotik_routeros_ip_route_print_terse.textfsm, .*, mikrotik_routeros, [[/]]ip(v6)? route print terse
+mikrotik_routeros_put_[resolve_name].textfsm, .*, mikrotik_routeros, [[:]]put \[:?resolve (.+)\]
 mikrotik_routeros_system_clock_print.textfsm, .*, mikrotik_routeros, [[/]]system clock print
 mikrotik_routeros_user_active_print.textfsm, .*, mikrotik_routeros, [[/]]user active print
 mikrotik_routeros_ip_address_print.textfsm, .*, mikrotik_routeros, [[/]]ip address print
+mikrotik_routeros_system_reboot.textfsm, .*, mikrotik_routeros, [[:]]execute {/?system reboot}
 mikrotik_routeros_ip_arp_print.textfsm, .*, mikrotik_routeros, [[/]]ip arp print
 mikrotik_routeros_ping_address.textfsm, .*, mikrotik_routeros, [[/]]ping (\S+)
 mikrotik_routeros_tool_profile.textfsm, .*, mikrotik_routeros, [[/]]tool profile
+mikrotik_routeros_tool_fetch.textfsm, .*, mikrotik_routeros, [[/]]tool fetch
 mikrotik_routeros_user_print.textfsm, .*, mikrotik_routeros, [[/]]user print
 
 paloalto_panos_show_running_security-policy.textfsm, .*, paloalto_panos, sh[[ow]] runn[[ing]] security[[-policy]]
