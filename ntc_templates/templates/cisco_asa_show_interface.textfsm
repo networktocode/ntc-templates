@@ -10,7 +10,7 @@ Value SPEED (\d+\w+\s\w+)
 Value DESCRIPTION (.*)
 Value BONDED_PORT (.+?)
 Value BONDED_PORT_MEMBERS (.*)
-Value ADDRESS ([a-zA-Z0-9]+.[a-zA-Z0-9]+.[a-zA-Z0-9]+)
+Value MAC_ADDRESS ([a-zA-Z0-9]+.[a-zA-Z0-9]+.[a-zA-Z0-9]+)
 Value MTU (\d+)
 Value VLAN_ID (\d+)
 Value IP_ADDRESS (\d+\.\d+\.\d+\.\d+)
@@ -44,8 +44,8 @@ Start
   ^.*Duplex,\s+Auto-Speed
   ^.*Description:\s+${DESCRIPTION}
   ^.*VLAN\s+identifier\s+${VLAN_ID}
-  ^.*MAC\s+address\s+${ADDRESS},\s+MTU\s+${MTU}
-  ^.*MAC\s+address\s+${ADDRESS},\s+MTU\s+not\s+set
+  ^.*MAC\s+address\s+${MAC_ADDRESS},\s+MTU\s+${MTU}
+  ^.*MAC\s+address\s+${MAC_ADDRESS},\s+MTU\s+not\s+set
   ^\s+Available\s+but\s+not\s+configured\s+via\s+nameif
   ^.*MAC\s+address\s+N/A,\s+MTU\s+${MTU}
   ^.*IP\s+address\s+${IP_ADDRESS},\s+subnet\s+mask\s+${NETMASK}

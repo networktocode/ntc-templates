@@ -1,9 +1,9 @@
-Value ADDRESS (\d+\.\d+\.\d+\.\d+)
+Value IP_ADDRESS (\d+\.\d+\.\d+\.\d+)
 Value MAC_ADDRESS (\S+)
 
 Start
   ^Dynamic\sArp\sParameters
   ^IP\sAddress\s+Mac\sAddress
-  ^${ADDRESS}\s+${MAC_ADDRESS} -> Record
+  ^${IP_ADDRESS}\s+${MAC_ADDRESS} -> Record
  ^\s*$$
  ^. -> Error

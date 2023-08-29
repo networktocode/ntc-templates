@@ -2,11 +2,11 @@
 parsed_sample:
   - inbound_acl: ""
     interface: "Vlan20"
+    ip_address:
+      - "10.81.0.1"
     ip_helper:
       - "111.222.188.253"
       - "111.222.189.253"
-    ipaddr:
-      - "10.81.0.1"
     link_status: "up"
     mtu: "9100"
     outgoing_acl: ""
@@ -16,9 +16,9 @@ parsed_sample:
     vrf: "WALKUP"
   - inbound_acl: ""
     interface: "FastEthernet0"
-    ip_helper: []
-    ipaddr:
+    ip_address:
       - "172.16.3.226"
+    ip_helper: []
     link_status: "up"
     mtu: "1500"
     outgoing_acl: ""

@@ -1,10 +1,10 @@
 ---
 parsed_sample:
-  - name: "Default"
-    ip: ""
+  - ip_address: ""
     ipv4_dhcp: "Disable"
     ipv6_enable: "false"
-  - name: "LAN VOIX"
-    ip: "192.168.72.253"
+    name: "Default"
+  - ip_address: "192.168.72.253"
     ipv4_dhcp: "Disable"
     ipv6_enable: "false"
+    name: "LAN VOIX"

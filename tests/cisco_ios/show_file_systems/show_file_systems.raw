@@ -1,0 +1,19 @@
+File Systems:
+
+       Size(b)       Free(b)      Type  Flags  Prefixes
+             -             -    opaque     rw   system:
+             -             -    opaque     rw   tmpsys:
+    1651314688    1561067520      disk     rw   crashinfo:
+*  11353194496    9936510976      disk     rw   flash:
+    3846701056    3758395392      disk     ro   webui:
+             -             -    opaque     rw   null:
+             -             -    opaque     ro   tar:
+             -             -   network     rw   tftp:
+       2097152       2057602     nvram     rw   nvram:
+             -             -   network     rw   rcp:
+             -             -   network     rw   http:
+             -             -   network     rw   ftp:
+             -             -   network     rw   scp:
+             -             -   network     rw   sftp:
+             -             -   network     rw   https:
+             -             -    opaque     ro   cns:

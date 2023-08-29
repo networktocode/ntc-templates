@@ -12,7 +12,7 @@ Value IPROUTERISIS (isis)
 Value ISISMETRIC (\d+)
 Value List IPHELPERS (.+?)
 Value IPREDIRECT ([no]*)
-Value List IP_ADDR (\S+?)
+Value List IP_ADDRESS (\S+?)
 Value List IP_ADDR_CIDR (\d*)
 Value List IPV6_ADDR (\S+?)
 Value List IPV6_ADDR_CIDR (\d*)
@@ -41,7 +41,7 @@ Start
   ^\s+ip\s+helper-address\s+${IPHELPERS}\s*$$
   ^\s+ip\s+access-group\s+${ACL_IN}\s+in
   ^\s+ip\s+access-group\s+${ACL_OUT}\s+out
-  ^\s+ip\s+address\s+${IP_ADDR}/*${IP_ADDR_CIDR}\s*$$
+  ^\s+ip\s+address\s+${IP_ADDRESS}/*${IP_ADDR_CIDR}\s*$$
   ^\s+ipv6\s+address\s+${IPV6_ADDR}/*${IPV6_ADDR_CIDR}\s*$$
   ^\s+ip(?:v6|)\s+vrrp-extended\s+vrid\s+${VRID} -> VRRPEXTENDED
 

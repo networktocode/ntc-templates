@@ -1,5 +1,5 @@
 Value CODE (\w{1,2})
-Value IP ([A-Za-z0-9:]+)
+Value IPV6_ADDRESS ([A-Za-z0-9:]+)
 Value PREFIX_LENGTH (\d{1,3})
 Value DISTANCE (\d+)
 Value METRIC (\d+)
@@ -11,7 +11,7 @@ Start
   ^.*IP\sRoute\sTable -> IP
 
 IP
-  ^${CODE}\s+${IP}/${PREFIX_LENGTH}\s\[${DISTANCE}/${METRIC}\]\svia\s${NEXTHOP_IP},\s${INTERFACE},\s${UPTIME}\s* -> Record
-  ^${CODE}\s+${IP}/${PREFIX_LENGTH}\svia\s${NEXTHOP_IP},\s${INTERFACE},\s${UPTIME}\s* -> Record
+  ^${CODE}\s+${IPV6_ADDRESS}/${PREFIX_LENGTH}\s\[${DISTANCE}/${METRIC}\]\svia\s${NEXTHOP_IP},\s${INTERFACE},\s${UPTIME}\s* -> Record
+  ^${CODE}\s+${IPV6_ADDRESS}/${PREFIX_LENGTH}\svia\s${NEXTHOP_IP},\s${INTERFACE},\s${UPTIME}\s* -> Record
   ^\s*$$
   ^. -> Error
