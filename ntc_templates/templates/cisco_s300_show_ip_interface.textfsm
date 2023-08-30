@@ -13,8 +13,8 @@ Start
 
 Gateway
   ^(\s*-*)*\s*$$
-  ^\s*\S+\s+\S+\s+\S+\s*$$ -> Record
   ^\s*IP\s+Address\s+I/F\s+Type\s+Status\s*$$ -> IpAddress4Column
+  ^\s*\S+\s+\S+\s+\S+\s*$$ -> Record
   ^\s*$$
   ^. -> Error
 
@@ -27,7 +27,7 @@ IpAddress4Column
 IpAddress5Column
   ^\s*admin/oper\s*$$
   ^(\s*-*)*\s*$$
-  ^\s*${IP}\s+${I_F}\s+${I_F_STATUS_ADMIN_OPER}\s+${TYPE}\s+${STATUS}\s*$$ -> Record
   ^\s*Gateway\s+IP\s+Address\s+Activity\s+status\s+Type\s*$$ -> Gateway
+  ^\s*${IP}\s+${I_F}\s+${I_F_STATUS_ADMIN_OPER}\s+${TYPE}\s+${STATUS}\s*$$ -> Record
   ^\s*$$
   ^. -> Error
