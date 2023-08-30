@@ -215,6 +215,7 @@ cisco_ios_show_crypto_pki_certificates.textfsm, .*, cisco_ios, sh[[ow]] cry[[pto
 cisco_ios_show_environment_temperature.textfsm, .*, cisco_ios, sh[[ow]] envi[[ronment]] t[[emperature]]
 cisco_ios_show_ip_ospf_database_router.textfsm, .*, cisco_ios, sh[[ow]] ip ospf data[[base]] r[[outer]]
 cisco_ios_show_ip_ospf_interface_brief.textfsm, .*, cisco_ios, sh[[ow]] ip ospf int[[erface]]
+cisco_ios_show_ip_ospf_neighbor_detail.textfsm, .*, cisco_ios, sh[[ow]] ip ospf nei[[ghbors]] d[[etail]]
 cisco_ios_show_processes_memory_sorted.textfsm, .*, cisco_ios, sh[[ow]] pro[[cesses]] mem[[ory]] so[[rted]]
 cisco_ios_show_crypto_ipsec_sa_detail.textfsm, .*, cisco_ios, sh[[ow]] cry[[pto]] ip[[sec]] sa d[[etail]]
 cisco_ios_show_interfaces_description.textfsm, .*, cisco_ios, sh[[ow]] int[[erfaces]](?: (?:\S+))? des[[cription]]
@@ -230,6 +231,7 @@ cisco_ios_show_cdp_neighbors_detail.textfsm, .*, cisco_ios, sh[[ow]] c[[dp]] nei
 cisco_ios_show_etherchannel_summary.textfsm, .*, cisco_ios, sh[[ow]] etherchann[[el]] summ[[ary]]
 cisco_ios_show_ipv6_interface_brief.textfsm, .*, cisco_ios, sh[[ow]] ipv[[6]] i[[nterface]] b[[rief]]
 cisco_ios_show_ip_nat_translations.textfsm, .*, cisco_ios, sh[[ow]] ip nat translation[[s]]
+cisco_ios_show_mpls_l2transport_vc.textfsm, .*, cisco_ios, sh[[ow]] m[[pls]] l2[[transport]] v[[c]]
 cisco_ios_show_ip_eigrp_neighbors.textfsm, .*, cisco_ios, sh[[ow]] ip ei[[grp]] nei[[ghbors]]
 cisco_ios_show_ip_flow_toptalkers.textfsm, .*, cisco_ios, sh[[ow]] ip fl[[ow]] top[[-talkers]]
 cisco_ios_show_ip_interface_brief.textfsm, .*, cisco_ios, sh[[ow]] ip int[[erface]] br[[ief]]
@@ -244,6 +246,7 @@ cisco_ios_show_ip_ospf_database.textfsm, .*, cisco_ios, sh[[ow]] ip ospf data[[b
 cisco_ios_show_ip_ospf_neighbor.textfsm, .*, cisco_ios, sh[[ow]] ip ospf nei[[ghbor]]
 cisco_ios_show_ip_route_summary.textfsm, .*, cisco_ios, sh[[ow]] ip ro[[ute]] sum[[mary]]
 cisco_ios_show_ip_access-lists.textfsm, .*, cisco_ios, sh[[ow]] ip acce[[ss-lists]]
+cisco_ios_show_ip_dhcp_binding.textfsm, .*, cisco_ios, sh[[ow]] ip dh[[cp]] b[[inding]]
 cisco_ios_show_mpls_interfaces.textfsm, .*, cisco_ios, sh[[ow]] mpls interfa[[ces]]
 cisco_ios_show_power_available.textfsm,  .*, cisco_ios, sh[[ow]] pow[[er]] a[[vailable]]
 cisco_ios_show_access-session.textfsm, .*, cisco_ios, show access-s[[ession]]
@@ -301,9 +304,11 @@ cisco_ios_show_ip_cef.textfsm, .*, cisco_ios, sh[[ow]] ip ce[[f]](?: vrf? \S+)?\
 cisco_ios_show_tacacs.textfsm, .*, cisco_ios, sh[[ow]] tacacs
 cisco_ios_show_clock.textfsm, .*, cisco_ios, sh[[ow]] clo[[ck]]
 cisco_ios_show_dmvpn.textfsm, .*, cisco_ios, sh[[ow]] dm[[vpn]]
+cisco_ios_show_users.textfsm, .*, cisco_ios, sh[[ow]] users(\s+all)?
 cisco_ios_traceroute.textfsm, .*, cisco_ios, tr[[aceroute]]
 cisco_ios_show_boot.textfsm, .*, cisco_ios, sh[[ow]] boot
 cisco_ios_show_vlan.textfsm, .*, cisco_ios, sh[[ow]] vlan
+cisco_ios_show_arp.textfsm, .*, cisco_ios, sh[[ow]] arp
 cisco_ios_show_vrf.textfsm, .*, cisco_ios, sh[[ow]] vrf
 cisco_ios_ping.textfsm, .*, cisco_ios, ping
 cisco_ios_dir.textfsm,  .*, cisco_ios, dir
