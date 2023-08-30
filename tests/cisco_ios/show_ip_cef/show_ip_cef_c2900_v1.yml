@@ -1,56 +1,68 @@
 ---
 parsed_sample:
-  - prefix: "0.0.0.0/0"
+  - interface:
+      - "GigabitEthernet0/1"
+    ip_address: "0.0.0.0"
     nexthop:
       - "10.180.122.153"
-    interface:
-      - "GigabitEthernet0/1"
-  - prefix: "0.0.0.0/8"
+    prefix_length: "0"
+  - interface: []
+    ip_address: "0.0.0.0"
     nexthop:
       - "drop"
-    interface: []
-  - prefix: "0.0.0.0/32"
+    prefix_length: "8"
+  - interface: []
+    ip_address: "0.0.0.0"
     nexthop:
       - "receive"
-    interface: []
-  - prefix: "10.0.0.0/16"
+    prefix_length: "32"
+  - interface:
+      - "GigabitEthernet0/1"
+    ip_address: "10.0.0.0"
     nexthop:
       - "10.180.122.153"
-    interface:
-      - "GigabitEthernet0/1"
-  - prefix: "10.157.1.0/24"
+    prefix_length: "16"
+  - interface:
+      - "Tunnel60701"
+    ip_address: "10.157.1.0"
     nexthop:
       - "172.17.100.101"
-    interface:
-      - "Tunnel60701"
-  - prefix: "10.180.122.7/32"
+    prefix_length: "24"
+  - interface:
+      - "Loopback0"
+    ip_address: "10.180.122.7"
     nexthop:
       - "receive"
-    interface:
-      - "Loopback0"
-  - prefix: "10.180.122.152/29"
+    prefix_length: "32"
+  - interface:
+      - "GigabitEthernet0/1"
+    ip_address: "10.180.122.152"
     nexthop:
       - "attached"
-    interface:
+    prefix_length: "29"
+  - interface:
       - "GigabitEthernet0/1"
-  - prefix: "10.180.122.152/32"
+    ip_address: "10.180.122.152"
     nexthop:
       - "receive"
-    interface:
-      - "GigabitEthernet0/1"
-  - prefix: "224.0.0.0/4"
+    prefix_length: "32"
+  - interface: []
+    ip_address: "224.0.0.0"
     nexthop:
       - "drop"
-    interface: []
-  - prefix: "224.0.0.0/24"
+    prefix_length: "4"
+  - interface: []
+    ip_address: "224.0.0.0"
     nexthop:
       - "receive"
-    interface: []
-  - prefix: "240.0.0.0/4"
+    prefix_length: "24"
+  - interface: []
+    ip_address: "240.0.0.0"
     nexthop:
       - "drop"
-    interface: []
-  - prefix: "255.255.255.255/32"
+    prefix_length: "4"
+  - interface: []
+    ip_address: "255.255.255.255"
     nexthop:
       - "receive"
-    interface: []
+    prefix_length: "32"

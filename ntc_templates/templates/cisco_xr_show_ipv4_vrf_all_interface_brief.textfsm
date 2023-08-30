@@ -1,9 +1,9 @@
 Value Required INTERFACE ([\w\./-]+)
-Value IPADDR (\d+\.\d+\.\d+\.\d+)
+Value IP_ADDRESS (\d+\.\d+\.\d+\.\d+)
 Value STATUS (\w+)
 Value PROTO (\w+)
 Value VRF (\S+)
 
 Start
   ^\s*Interface\s+IP-Address\s+Status\s+Protocol(\s+Vrf-Name)?\s*$$
-  ^\s*${INTERFACE}\s+${IPADDR}\s+${STATUS}\s+${PROTO}(\s+${VRF})?\s*$$ -> Record
+  ^\s*${INTERFACE}\s+${IP_ADDRESS}\s+${STATUS}\s+${PROTO}(\s+${VRF})?\s*$$ -> Record

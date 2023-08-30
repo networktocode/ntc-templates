@@ -3,8 +3,8 @@ Value DESCRIPTION (.+)
 Value TYPE ([hostubnerag]+)
 Value HOST (\S+)
 Value NETWORK (\S+)
-Value MASK (\S+)
-Value CIDR (\/\d+)
+Value NETMASK (\S+)
+Value PREFIX_LENGTH (\d+)
 Value START_IP (\S+)
 Value END_IP (\S+)
 
@@ -14,8 +14,8 @@ Start
   ^object\s+network\s+${NAME}\s*
   ^\s+description\s+${DESCRIPTION}\s*
   ^\s+${TYPE} -> Continue
-  ^\s+subnet\s+${NETWORK}\s+${MASK}\s*
-  ^\s+subnet\s+${NETWORK}${CIDR}\s*
+  ^\s+subnet\s+${NETWORK}\s+${NETMASK}\s*
+  ^\s+subnet\s+${NETWORK}\/${PREFIX_LENGTH}\s*
   ^\s+range\s+${START_IP}\s+${END_IP}\s*
   ^\s+host\s+${HOST}\s*
   ^. -> Error

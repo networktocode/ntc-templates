@@ -1,5 +1,6 @@
-Value PREFIX (\d+\.\d+\.\d+\.+\d+\/\d+)
-Value Required,List NEXTHOP (Drop|Receive|Attached|\d+\.\d+\.\d+\.\d+)
+Value IP_ADDRESS (\d+(\.\d+){3})
+Value PREFIX_LENGTH (\d{1,2})
+Value Required,List NEXTHOP (Drop|Receive|Attached|\d+(\.\d+){3})
 Value List INTERFACE (\S+)
 
 Start
@@ -11,9 +12,9 @@ FIB
   # Start Record on encountering a Prefix, don't substitute any values yet
   ^\*?(\d+\.\d+\.\d+\.+\d+\/\d+) -> Continue.Record
   # Match lines with all Values present, some entries can start with * (for multiple entries in RIB, one in FIB prefixes)
-  ^\*?${PREFIX}\s+${NEXTHOP}\s+${INTERFACE}\s*$$
+  ^\*?${IP_ADDRESS}\/${PREFIX_LENGTH}\s+${NEXTHOP}\s+${INTERFACE}\s*$$
   # Match lines which do not have an interface, strange but can exists
-  ^\*?${PREFIX}\s+${NEXTHOP}\s*$$
+  ^\*?${IP_ADDRESS}\/${PREFIX_LENGTH}\s+${NEXTHOP}\s*$$
   # Match lines which have Nexthop and interface, and fill in the list; these are for prefixes which have multiple equal cost paths
   ^\s+${NEXTHOP}\s+${INTERFACE}\s*$$
   # Match other lines before erroring out on unknown input lines  

@@ -1,0 +1,9 @@
+
+                                                                                                                                                                                                                                                       IP Route Entries
+
+  Destination        Gateway         VLAN Type      Sub-Type   Metric     Dist.
+  ------------------ --------------- ---- --------- ---------- ---------- -----
+  0.0.0.0/0          10.11.11.254    1111 static               250        1
+  10.11.11.0/24      mgmt            1111 connected            1          0
+  127.0.0.0/8        reject               static               0          0
+  127.0.0.1/32                            connected            1          0    

@@ -4,7 +4,7 @@ Value TYPE ([newrkguphsobjct]+)
 Value HOST (\d+.\d+.\d+.\d+)
 Value NET_OBJECT (\S+)
 Value NETWORK (\d+.\d+.\d+.\d+)
-Value MASK (\d+.\d+.\d+.\d+)
+Value NETMASK (\d+.\d+.\d+.\d+)
 Value GRP_OBJECT (\S+)
 
 Start
@@ -13,7 +13,7 @@ Start
   ^\s+description:?\s+${DESCRIPTION}\s*
   ^\s+network-object\s+${TYPE}\s+${HOST}\s* -> Record
   ^\s+network-object\s+${TYPE}\s+${NET_OBJECT}\s* -> Record
-  ^\s+${TYPE}-object\s+${NETWORK}\s+${MASK}\s* -> Record
+  ^\s+${TYPE}-object\s+${NETWORK}\s+${NETMASK}\s* -> Record
   ^\s+${TYPE}-object\s+${GRP_OBJECT}\s* -> Record
 
 EOF

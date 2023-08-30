@@ -1,8 +1,8 @@
 Value INTERFACE (\S+)
-Value IP (\S+)
+Value IP_ADDRESS (\S+)
 Value STATUS (\S+)
 Value PROTOCOL (\S+)
 Value MTU (\d+)
 
 Start
-  ^${INTERFACE}\s+${IP}\s+${STATUS}\s+${PROTOCOL}\s+${MTU} -> Record
+  ^${INTERFACE}\s+${IP_ADDRESS}\s+${STATUS}\s+${PROTOCOL}\s+${MTU} -> Record

@@ -1,4 +1,4 @@
-Value IP_ADDRESS (\S+)
+Value IPV6_ADDRESS (\S+)
 Value LINK_LAYER (([\d\w]{4}-){2}[\d\w]{4})
 Value STATE (INCMP|REACH|STALE|DELAY|PROBE)
 Value INTERFACE (\S+)
@@ -14,7 +14,7 @@ Start
   ^\s*$$
   ^\s*-+\s*$$
   ^\s*IPv6\sAddress\s*:\s*\S+\s*$$ -> Continue.Record
-  ^\s*IPv6\sAddress\s*:\s*${IP_ADDRESS}\s*$$
+  ^\s*IPv6\sAddress\s*:\s*${IPV6_ADDRESS}\s*$$
   ^\s*Link-layer\s*:\s*${LINK_LAYER}\s+State\s*:\s*${STATE}\s*$$
   ^\s*Interface\s*:\s*${INTERFACE}\s+Age\s*:\s*${AGE}\s*$$
   ^\s*VLAN\s*:\s*${VLAN_ID}\s+CEVLAN\s*:\s*${CE_VLAN}\s*$$

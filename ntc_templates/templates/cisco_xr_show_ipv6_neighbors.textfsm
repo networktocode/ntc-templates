@@ -1,4 +1,4 @@
-Value ADDRESS (.+?)
+Value IPV6_ADDRESS (.+?)
 Value AGE (\S+)
 Value MAC_ADDRESS (\S+)
 Value STATE (\S+)
@@ -12,6 +12,6 @@ Start
   ^. -> Error
 
 Begin
-  ^\[?${ADDRESS}\]?\s+${AGE}\s+${MAC_ADDRESS}\s+${STATE}\s+${INTERFACE}\s+${LOCATION}\s*$$ -> Record
+  ^\[?${IPV6_ADDRESS}\]?\s+${AGE}\s+${MAC_ADDRESS}\s+${STATE}\s+${INTERFACE}\s+${LOCATION}\s*$$ -> Record
   ^\s*$$
   ^. -> Error

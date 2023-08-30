@@ -1,7 +1,7 @@
-Value ADDRESS (\d+\.\d+\.\d+\.\d+)
+Value IP_ADDRESS (\d+\.\d+\.\d+\.\d+)
 Value AGE ((\d+|N\/A))
 Value MAC_ADDRESS (\S+)
 Value INTERFACE (.*)
 
 Start
-  ^${ADDRESS}\s+${AGE}\s+${MAC_ADDRESS}\s+${INTERFACE} -> Record
+  ^${IP_ADDRESS}\s+${AGE}\s+${MAC_ADDRESS}\s+${INTERFACE} -> Record
