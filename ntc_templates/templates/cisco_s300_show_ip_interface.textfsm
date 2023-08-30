@@ -1,17 +1,33 @@
 Value IP (\S+)
 Value I_F (\S+(?:\s\d+)?)
-Value I_F_STATUS_ADMIN_OPER (\S+\/\S+)
+Value I_F_STATUS_ADMIN_OPER (\S+/\S+)
 Value TYPE (Static|DHCP)
-# Not full 'STATUS' value, because of line break
 Value STATUS (\S+)
 
-
 Start
-  ^\s*IP\s+Address\s+I\/F\s+Type\s+Status\s* -> Column4
-  ^\s*IP\s+Address\s+I\/F\s+I\/F\s+Status\s+Type\s+Status\s* -> Column6
+  ^\s*Gateway\s+IP\s+Address\s+Activity\s+status\s+Type\s*$$ -> Gateway
+  ^\s*IP\s+Address\s+I/F\s+Type\s+Status\s*$$ -> IpAddress4Column
+  ^\s*IP\s+Address\s+I/F\s+I/F\s+Status\s+Type\s+Status\s*$$ -> IpAddress5Column
+  ^\s*$$
+  ^. -> Error
 
-Column4
-  ^${IP}\s+${I_F}\s+${TYPE}\s+${STATUS}\s*$$ -> Record Column4
+Gateway
+  ^(\s*-*)*\s*$$
+  ^\s*\S+\s+\S+\s+\S+\s*$$ -> Record
+  ^\s*IP\s+Address\s+I/F\s+Type\s+Status\s*$$ -> IpAddress4Column
+  ^\s*$$
+  ^. -> Error
 
-Column6
-  ^${IP}\s+${I_F}\s+${I_F_STATUS_ADMIN_OPER}\s+${TYPE}\s+${STATUS}\s*$$ -> Record Column6
+IpAddress4Column
+  ^(\s*-*)*\s*$$
+  ^\s*${IP}\s+${I_F}\s+${TYPE}\s+${STATUS}\s*$$ -> Record
+  ^\s*$$
+  ^. -> Error
+
+IpAddress5Column
+  ^\s*admin/oper\s*$$
+  ^(\s*-*)*\s*$$
+  ^\s*${IP}\s+${I_F}\s+${I_F_STATUS_ADMIN_OPER}\s+${TYPE}\s+${STATUS}\s*$$ -> Record
+  ^\s*Gateway\s+IP\s+Address\s+Activity\s+status\s+Type\s*$$ -> Gateway
+  ^\s*$$
+  ^. -> Error
