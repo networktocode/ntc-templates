@@ -1,7 +1,7 @@
 Value PORT (\S+)
 Value NAME (.+?)
 Value STATUS (err-disabled|disabled|connected|notconnect|inactive|up|down|monitoring|suspended)
-Value VLAN_ID (\S+)
+Value VLAN_ID (\d+|trunk|routed)
 Value DUPLEX (\S+)
 Value SPEED (\S+)
 Value TYPE (.*)

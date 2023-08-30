@@ -3,7 +3,7 @@ Value NAME (.+?)
 Value COUNTRY_CODE (\S+)
 Value COUNTRY (.+?)
 Value MAC_ADDRESS (.+?)
-Value IP (.+?)
+Value IP_ADDRESS (.+?)
 Value NETMASK (.+?)
 Value GATEWAY (.+?)
 Value AP_GROUP (.+?)
@@ -31,7 +31,7 @@ Start
   ^Cisco\s+AP\s+Name\.*\s+${NAME}\s*$$
   ^Country\s+code\.*\s+${COUNTRY_CODE}\s+-\s+${COUNTRY}\s*$$
   ^MAC\s+Address\.*\s+${MAC_ADDRESS}\s*$$
-  ^IP\s+Address\.*\s+${IP}\s*$$
+  ^IP\s+Address\.*\s+${IP_ADDRESS}\s*$$
   ^IP\s+NetMask\.*\s+${NETMASK}\s*$$
   ^Gateway\s+IP\s+Addr\.*\s+${GATEWAY}\s*$$
   ^Cisco\s+AP\s+Group\s+Name\.*\s+${AP_GROUP}\s*$$

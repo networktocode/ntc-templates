@@ -1,5 +1,5 @@
 Value Required,Filldown HOP_NUM (\d+)
-Value ADDRESS ((?:\d{1,3}\.){3}\d{1,3})
+Value IP_ADDRESS ((?:\d{1,3}\.){3}\d{1,3})
 Value FQDN (\S+)
 # Captures RTT (in milliseconds), or faults, like
 #   - * (probe timed out)
@@ -28,8 +28,8 @@ Start
 
 Entries
   ^\s+${HOP_NUM}\s+ -> Continue
-  ^.*?${FQDN}\s+\(${ADDRESS}\)\s+(?:\[${DETAILS}\])? -> Continue
-  ^.*?${ADDRESS}\s+(?:\[${DETAILS}\])? -> Continue
+  ^.*?${FQDN}\s+\(${IP_ADDRESS}\)\s+(?:\[${DETAILS}\])? -> Continue
+  ^.*?${IP_ADDRESS}\s+(?:\[${DETAILS}\])? -> Continue
   ^.*?${RTT_RESPONSE} -> Continue
   ^.*?(?:(?:\d+\s+msec|![A-Z]|\*|\?)\s+){1}${RTT_RESPONSE} -> Continue
   ^.*?(?:(?:\d+\s+msec|![A-Z]|\*|\?)\s+){2}${RTT_RESPONSE} -> Continue

@@ -1,10 +1,10 @@
 Value Required INTERFACE (\S+)
-Value Required IPADDR ([a-zA-Z0-9:/]+)
+Value Required IPV6_ADDRESS ([a-zA-Z0-9:/]+)
 Value LINKIPADDR ([a-zA-Z0-9:/]+)
 Value STATUS (\S+/\S+)
 Value PROTO (\S+)
 
 Start
-  ^${INTERFACE}\s+${IPADDR}\s+${STATUS}/${PROTO}
+  ^${INTERFACE}\s+${IPV6_ADDRESS}\s+${STATUS}/${PROTO}
   ^\s+${LINKIPADDR} -> Record
 

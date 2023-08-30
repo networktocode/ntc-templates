@@ -2,7 +2,7 @@ Value Filldown INT_COUNT (\d+)
 Value Required NAME (\S+)
 Value PORT (\S+)
 Value VLAN_ID (\S+)
-Value IP_ADDR (([\d1-9]+\.?){4})
+Value IP_ADDRESS (([\d1-9]+\.?){4})
 Value TYPE (\S+)
 Value AP_MGR (\S+)
 Value GUEST (\S+)
@@ -15,6 +15,6 @@ Start
 
 Type_One
   ^-+\s
-  ^${NAME}\s\s+${PORT}\s+${VLAN_ID}\s+${IP_ADDR}\s+${TYPE}\s+${AP_MGR}\s+${GUEST} -> Record
+  ^${NAME}\s\s+${PORT}\s+${VLAN_ID}\s+${IP_ADDRESS}\s+${TYPE}\s+${AP_MGR}\s+${GUEST} -> Record
   ^\s*$$
   ^. -> Error
