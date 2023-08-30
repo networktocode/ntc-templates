@@ -8,8 +8,8 @@ Start
   ^. -> Error
 
 Column1
-  ^\s*Ch\s+Description\s*$$ -> Column2
   ^(\s*-*)*\s*$$
+  ^\s*Ch\s+Description\s*$$ -> Column2
   ^\s*${PORT}(\s+${DESCRIPTION})?\s*$$ -> Record
   ^\s*$$
   ^. -> Error
