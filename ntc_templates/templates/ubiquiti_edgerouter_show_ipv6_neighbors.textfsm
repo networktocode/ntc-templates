@@ -1,9 +1,9 @@
-Value Required IP (\S+)
+Value Required IPV6_ADDRESS (\S+)
 Value INTERFACE (\S+)
 Value MAC_ADDRESS ((?:[0-9a-fA-F]{2}\:){5}[0-9a-fA-F]{2})
 Value STATE (\S+)
 
 Start
-  ^${IP}\s+(dev\s${INTERFACE})?\s*(lladdr\s${MAC_ADDRESS})?\s*(router\s)?${STATE}\s*$$ -> Record
+  ^${IPV6_ADDRESS}\s+(dev\s${INTERFACE})?\s*(lladdr\s${MAC_ADDRESS})?\s*(router\s)?${STATE}\s*$$ -> Record
   ^\s*$$
   ^. -> Error

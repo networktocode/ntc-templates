@@ -1,4 +1,4 @@
-Value Required IP (\S+)
+Value Required IP_ADDRESS (\S+)
 Value EXPIRATION (\d{4}(\/\d{2}){2}\s\d{2}(:\d{2}){2})
 Value STATE (\S+)
 
@@ -7,6 +7,6 @@ Start
   ^-+\s+-+\s+-+\s*$$ -> DHCPv6Table
 
 DHCPv6Table
-  ^${IP}\s+${EXPIRATION}\s+${STATE}\s*$$ -> Record
+  ^${IP_ADDRESS}\s+${EXPIRATION}\s+${STATE}\s*$$ -> Record
   ^\s*$$
   ^. -> Error

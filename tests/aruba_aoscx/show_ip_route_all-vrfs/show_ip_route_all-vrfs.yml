@@ -3,115 +3,129 @@ parsed_sample:
   - interface:
       - "172.25.0.189"
       - "172.25.0.185"
-    ip: "0.0.0.0/0"
+    ip_address: "0.0.0.0"
     metric:
       - "[20/0]"
       - "[20/0]"
+    prefix_length: "0"
     status:
       - "bgp"
       - "bgp"
     vrf: "default"
   - interface:
       - "loopback0"
-    ip: "10.252.14.109/32"
+    ip_address: "10.252.14.109"
     metric:
       - "[0/0]"
+    prefix_length: "32"
     status:
       - "local"
     vrf: "default"
   - interface:
       - "vlan3564"
-    ip: "10.252.22.128/26"
+    ip_address: "10.252.22.128"
     metric:
       - "[0/0]"
+    prefix_length: "26"
     status:
       - "connected"
     vrf: "default"
   - interface:
       - "vlan3564"
-    ip: "10.252.22.129/32"
+    ip_address: "10.252.22.129"
     metric:
       - "[0/0]"
+    prefix_length: "32"
     status:
       - "local"
     vrf: "default"
   - interface:
       - "vlan3560"
-    ip: "10.252.34.224/27"
+    ip_address: "10.252.34.224"
     metric:
       - "[0/0]"
+    prefix_length: "27"
     status:
       - "connected"
     vrf: "default"
   - interface:
       - "vlan3560"
-    ip: "10.252.34.225/32"
+    ip_address: "10.252.34.225"
     metric:
       - "[0/0]"
+    prefix_length: "32"
     status:
       - "local"
     vrf: "default"
   - interface:
       - "vlan3561"
-    ip: "10.252.71.0/25"
+    ip_address: "10.252.71.0"
     metric:
       - "[0/0]"
+    prefix_length: "25"
     status:
       - "connected"
     vrf: "default"
   - interface:
       - "vlan3561"
-    ip: "10.252.71.1/32"
+    ip_address: "10.252.71.1"
     metric:
       - "[0/0]"
+    prefix_length: "32"
     status:
       - "local"
     vrf: "default"
   - interface:
       - "vlan3590"
-    ip: "10.252.151.0/24"
+    ip_address: "10.252.151.0"
     metric:
       - "[0/0]"
+    prefix_length: "24"
     status:
       - "connected"
     vrf: "default"
   - interface:
       - "vlan3590"
-    ip: "10.252.151.1/32"
+    ip_address: "10.252.151.1"
     metric:
       - "[0/0]"
+    prefix_length: "32"
     status:
       - "local"
     vrf: "default"
   - interface:
       - "1/1/28"
-    ip: "172.25.0.184/30"
+    ip_address: "172.25.0.184"
     metric:
       - "[0/0]"
+    prefix_length: "30"
     status:
       - "connected"
     vrf: "default"
   - interface:
       - "1/1/28"
-    ip: "172.25.0.186/32"
+    ip_address: "172.25.0.186"
     metric:
       - "[0/0]"
+    prefix_length: "32"
     status:
       - "local"
     vrf: "default"
   - interface:
       - "2/1/28"
-    ip: "172.25.0.188/30"
+    ip_address: "172.25.0.188"
     metric:
       - "[0/0]"
+    prefix_length: "30"
     status:
       - "connected"
     vrf: "default"
   - interface:
       - "2/1/28"
-    ip: "172.25.0.190/32"
+    ip_address: "172.25.0.190"
     metric:
       - "[0/0]"
+    prefix_length: "32"
     status:
       - "local"
     vrf: "default"

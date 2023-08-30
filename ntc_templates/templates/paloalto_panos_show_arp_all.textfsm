@@ -1,5 +1,5 @@
 Value INTERFACE (\S+)
-Value IP (\S+)
+Value IP_ADDRESS (\S+)
 Value MAC_ADDRESS ([0-9A-Fa-f:]+|incomplete)
 Value PORT (\S+)
 Value STATUS (\S+)
@@ -10,6 +10,6 @@ Start
 
 Start_record
   ^\s*---
-  ^${INTERFACE}\s+${IP}\s+\(*${MAC_ADDRESS}\)*\s+${PORT}\s+${STATUS}\s+${TTL} -> Record
+  ^${INTERFACE}\s+${IP_ADDRESS}\s+\(*${MAC_ADDRESS}\)*\s+${PORT}\s+${STATUS}\s+${TTL} -> Record
   ^\s*$$
   ^. -> Error
