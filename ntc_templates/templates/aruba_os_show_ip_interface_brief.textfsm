@@ -1,8 +1,8 @@
 Value INTERFACE (\S+\s\S+)
-Value IPADDR (\S+)
-Value MASK (\S+)
+Value IP_ADDRESS (\S+)
+Value NETMASK (\S+)
 Value ADMIN (\S+)
 Value PROTOCOL (\S+)
 
 Start
-  ^${INTERFACE}\s+${IPADDR}\s+/\s+${MASK}\s+${ADMIN}\s+${PROTOCOL} -> Record
+  ^${INTERFACE}\s+${IP_ADDRESS}\s+/\s+${NETMASK}\s+${ADMIN}\s+${PROTOCOL} -> Record

@@ -1,31 +1,31 @@
 ---
 parsed_sample:
-  - interface_type: "ve"
+  - acl_in: ""
+    acl_out: ""
+    admin_state: ""
     interface: "1390"
-    portname: "TA5000A.CLMAMOXI-VoIP"
-    qostostrust: "ip-prec"
-    qostosmark: ""
-    ospfarea: ""
-    ospfpassive: ""
-    ospfcost: ""
-    vrf: "SocketVoIP"
-    ippimsparse: ""
-    iprouterisis: ""
-    isismetric: ""
-    iphelpers:
-      - "10.154.0.180"
-      - "10.154.0.181"
-    ipredirect: "no"
-    ip_addr:
-      - "10.192.0.129"
-      - "10.192.4.1"
+    interface_type: "ve"
     ip_addr_cidr:
       - "27"
       - "24"
     ip_addr_vrrpe: []
+    ip_address:
+      - "10.192.0.129"
+      - "10.192.4.1"
+    iphelpers:
+      - "10.154.0.180"
+      - "10.154.0.181"
+    ippimsparse: ""
+    ipredirect: "no"
+    iprouterisis: ""
     ipv6_addr: []
     ipv6_addr_cidr: []
-    admin_state: ""
-    acl_in: ""
-    acl_out: ""
+    isismetric: ""
+    ospfarea: ""
+    ospfcost: ""
+    ospfpassive: ""
+    portname: "TA5000A.CLMAMOXI-VoIP"
+    qostosmark: ""
+    qostostrust: "ip-prec"
+    vrf: "SocketVoIP"
     vrid: []

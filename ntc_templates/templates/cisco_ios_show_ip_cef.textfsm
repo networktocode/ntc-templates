@@ -4,7 +4,8 @@
 # This is enforced by INDEX file
 # Check cisco_ios_show_ip_cef_detail.textfsm for more details
 #
-Value Required PREFIX ((?:\d{1,3}\.){3}\d{1,3}\/\d{1,2})
+Value Required IP_ADDRESS ((?:\d{1,3}\.){3}\d{1,3})
+Value Required PREFIX_LENGTH (\d{1,2})
 # To support ECMP, NEXTHOP and INTERFACE are defined as lists
 # When no ECMP is available, these will be single item lists
 # However, if there are multiple paths available
@@ -31,9 +32,9 @@ Entries
   # Entry detected
   ^(?:\d{1,3}\.){3}\d{1,3}\/\d{1,2} -> Continue.Record
   # Parse prefix/nexthop
-  ^${PREFIX}\s+${NEXTHOP}\s*$$
+  ^${IP_ADDRESS}\/${PREFIX_LENGTH}\s+${NEXTHOP}\s*$$
   # Parse prefix, nexthop and interface
-  ^${PREFIX}\s+${NEXTHOP}\s+${INTERFACE}$$
+  ^${IP_ADDRESS}\/${PREFIX_LENGTH}\s+${NEXTHOP}\s+${INTERFACE}$$
   # Parse nexthop and interface for ECMP prefixes
   ^\s+${NEXTHOP}\s+${INTERFACE}$$
   #

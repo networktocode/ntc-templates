@@ -1,10 +1,10 @@
 Value INTERFACE ([\w+/\.]+)
 Value VRF (\S+)
 Value STATUS (up|down)
-Value IP (\S+)
+Value IP_ADDRESS (\S+)
 Value SPEED (\S+)
 Value MTU (\d+)
-Value VLAN_ID ([\d+-]+)
+Value VLAN_ID (\S+)
 Value TYPE (\S+)
 Value MODE (\S+)
 Value REASON (\S+((\s\w+)+)?)
@@ -20,11 +20,12 @@ Start
   ^Interface\s+Secondary\s+VLAN\(Type\)\s+Status\s+Reason -> VLAN
   ^Port-channel\s+VLAN\s+Type\sMode\s+Status\s+Reason\s+Speed\s+Protocol -> PORTCHANNEL
   ^Interface\s+Status\s+IP\s+Address\s+Encap\s+type\s+MTU -> TUNNEL
+  ^Port\s+Status\s+Reason\s+MTU\s*$$ -> NVE
   ^---+$$
   ^. -> Error Start
 
 Management
-  ^${INTERFACE}\s+${VRF}\s+${STATUS}\s+${IP}\s+${SPEED}\s+${MTU} -> Record
+  ^${INTERFACE}\s+${VRF}\s+${STATUS}\s+${IP_ADDRESS}\s+${SPEED}\s+${MTU} -> Record
   ^Ethernet\s+VLAN\s+Type\s+Mode\s+Status\s+Reason\s+Speed\s+Port -> Start
   ^---+$$
   ^\s*$$ -> Start
@@ -57,8 +58,14 @@ PORTCHANNEL
   ^. -> Error PORTCHANNEL
 
 TUNNEL
-  ^${INTERFACE}\s+${STATUS}\s+${IP}\s+${TYPE}\s+${MTU} -> Record
+  ^${INTERFACE}\s+${STATUS}\s+${IP_ADDRESS}\s+${TYPE}\s+${MTU} -> Record
   ^---+$$
   ^\s*$$ -> Start
   ^. -> Error TUNNEL
 
+NVE
+  ^Interface\s*$$
+  ^${INTERFACE}\s+${STATUS}\s+${REASON}\s+${MTU} -> Record
+  ^---+$$
+  ^\s*$$ -> Start
+  ^. -> Error NVE

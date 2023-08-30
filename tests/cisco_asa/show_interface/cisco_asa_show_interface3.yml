@@ -1,7 +1,6 @@
 ---
 parsed_sample:
-  - address: "11df.0fa6.364c"
-    bandwidth: "100 Mbps"
+  - bandwidth: "100 Mbps"
     bonded_port: ""
     bonded_port_members: ""
     delay: "100 usec"
@@ -17,8 +16,9 @@ parsed_sample:
     interface_zone: "management"
     ip_address: "172.16.178.58"
     link_status: "up"
+    mac_address: "11df.0fa6.364c"
     mtu: "1500"
-    net_mask: "255.255.255.0"
+    netmask: "255.255.255.0"
     onemin_drop_rate: ""
     onemin_in_pps: ""
     onemin_in_rate: ""

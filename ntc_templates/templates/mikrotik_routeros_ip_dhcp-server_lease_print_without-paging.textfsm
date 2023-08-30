@@ -1,6 +1,6 @@
 Value Key INDEX (\d+)
 Value FLAGS ([XRDB]+)
-Value IP ([\w.:]+)
+Value IP_ADDRESS ([\w.:]+)
 Value MAC_ADDRESS (([0-9a-fA-F]{2}[:]){5}([0-9a-fA-F]{2}))
 Value HOSTNAME (\S+)
 Value SERVER (\w+?)
@@ -13,8 +13,8 @@ Start
 
 EntriesTable
   ^\s*${INDEX}\s+(${RATE_LIMIT})?\s+(${STATUS})?\s+(${LAST_SEEN})?\s*$$ -> Record
-  ^\s*${INDEX}\s(${FLAGS})?\s{,4}${IP}\s+(${RATE_LIMIT})?\s+${STATUS}\s+${LAST_SEEN}\s*$$ -> Record
-  ^\s*${INDEX}\s(${FLAGS})?\s{,4}(${IP})?\s+${MAC_ADDRESS}\s+(${RATE_LIMIT})?\s+${STATUS}\s+${LAST_SEEN}\s*$$ -> Record
-  ^\s*${INDEX}\s(${FLAGS})?\s{,4}(${IP})?\s+(${MAC_ADDRESS}|\s{17})\s(${HOSTNAME})?\s+(${SERVER})?\s+(${RATE_LIMIT})?\s+${STATUS}\s+${LAST_SEEN}\s*$$ -> Record
+  ^\s*${INDEX}\s(${FLAGS})?\s{,4}${IP_ADDRESS}\s+(${RATE_LIMIT})?\s+${STATUS}\s+${LAST_SEEN}\s*$$ -> Record
+  ^\s*${INDEX}\s(${FLAGS})?\s{,4}(${IP_ADDRESS})?\s+${MAC_ADDRESS}\s+(${RATE_LIMIT})?\s+${STATUS}\s+${LAST_SEEN}\s*$$ -> Record
+  ^\s*${INDEX}\s(${FLAGS})?\s{,4}(${IP_ADDRESS})?\s+(${MAC_ADDRESS}|\s{17})\s(${HOSTNAME})?\s+(${SERVER})?\s+(${RATE_LIMIT})?\s+${STATUS}\s+${LAST_SEEN}\s*$$ -> Record
   ^\s*(?:\d{2}:){2}\d{2}\s+echo:\s*.*$$ -> Next
   ^. -> Error

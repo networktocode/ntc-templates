@@ -1,7 +1,6 @@
 ---
 parsed_sample:
-  - address: "885a.9211.8ece"
-    bandwidth: "10000 Mbps"
+  - bandwidth: "10000 Mbps"
     bonded_port: ""
     bonded_port_members: ""
     delay: "10 usec"
@@ -17,8 +16,9 @@ parsed_sample:
     interface_zone: "DMZ_Trunk"
     ip_address: ""
     link_status: "up"
+    mac_address: "885a.9211.8ece"
     mtu: "1500"
-    net_mask: ""
+    netmask: ""
     onemin_drop_rate: "0"
     onemin_in_pps: "0"
     onemin_in_rate: "0"

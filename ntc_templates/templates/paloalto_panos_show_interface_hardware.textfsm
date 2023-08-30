@@ -3,7 +3,7 @@ Value ID (\S+)
 Value SPEED (\[n/a\]|\S+)
 Value DUPLEX (\[n/a\]|\S+)
 Value STATE (\S+)
-Value ADDRESS ([a-fA-F0-9]{2}\:[a-fA-F0-9]{2}\:[a-fA-F0-9]{2}\:[a-fA-F0-9]{2}\:[a-fA-F0-9]{2}\:[a-fA-F0-9]{2})
+Value MAC_ADDRESS ([a-fA-F0-9]{2}(\:[a-fA-F0-9]{2}){5})
 
 Start
-  ^${INTERFACE}\s+${ID}\s+${SPEED}/${DUPLEX}/${STATE}\s+${ADDRESS} -> Record
+  ^${INTERFACE}\s+${ID}\s+${SPEED}/${DUPLEX}/${STATE}\s+${MAC_ADDRESS} -> Record

@@ -1,0 +1,14 @@
+Value SIZE (\S+)
+Value FREE (\S+)
+Value TYPE (\S+)
+Value FLAGS (\S+)
+Value PREFIXES (\S+)
+
+Start
+  ^\s*Size -> FILE_SYSTEM
+
+FILE_SYSTEM
+  ^\s*${SIZE}\s+${FREE}\s+${TYPE}\s+${FLAGS}\s+${PREFIXES}\s*$$ -> Record
+  ^\s*$$
+
+EOF

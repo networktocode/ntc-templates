@@ -40,11 +40,12 @@ OS_CHOICES = [
     "fortinet",
     "hp_comware",
     "hp_procurve",
+    "huawei_android_lte_e3372h_hilink",
     "huawei_vrp",
     "ipinfusion_ocnos",
-    "juniper",
     "juniper_junos",
     "juniper_screenos",
+    "juniper",
     "linux",
     "mikrotik_routeros",
     "ovs_linux",
@@ -118,7 +119,8 @@ def test_index_ordering():
         template = row[0].strip()
         os_match = RE_TEMPLATE_OS.match(template)
         current_os = os_match.group(0)
-        cmd = "_".join(template.split("_")[2:])
+        cmd_start_index = len(current_os) + 1
+        cmd = template[cmd_start_index:]
         cmd_len = len(cmd)
         check_val, check_msg = check_order(
             current_os, prior_os, cmd_len, prior_len, OS_CHOICES, used_os, cmd, prior_cmd
