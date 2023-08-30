@@ -481,25 +481,25 @@ ericsson_ipos_show_isis_adjacency.textfsm, .*, ericsson_ipos, sh[[ow]] isis adja
 ericsson_ipos_show_version.textfsm, .*, ericsson_ipos, sh[[ow]] ver[[sion]]
 ericsson_ipos_show_arp.textfsm, .*, ericsson_ipos, sh[[ow]] ar[[p]]
 
-fortinet_get_router_info_routing-table_all.textfsm, .*, fortinet, g[[et]] router info routing-table all
-fortinet_get_router_info_bgp_neighbors.textfsm, .*, fortinet, g[[et]] router info bgp neighbors
-fortinet_get_router_info_ospf_neighbor.textfsm, .*, fortinet, g[[et]] router info ospf neighbor
+fortinet_get_router_info_routing-table_all.textfsm, .*, fortinet, g[[et]] r[[outer]] info ro[[uting-table]] a[[ll]]
+fortinet_get_router_info_bgp_neighbors.textfsm, .*, fortinet, g[[et]] r[[outer]] info bg[[p]] nei[[ghbors]]
+fortinet_get_router_info_ospf_neighbor.textfsm, .*, fortinet, g[[et]] r[[outer]] info o[[spf]] n[[eighbor]]
 fortinet_get_system_interface_physical.textfsm, .*, fortinet, g[[et]] sy[[stem]] in[[terface]] p[[hysical]]
 fortinet_get_router_info_bgp_summary.textfsm, .*, fortinet, g[[et]] r[[outer]] info bg[[p]] su[[mmary]]
-fortinet_fnsysctl_ifconfig_nic-name.textfsm, .*, fortinet, fnsysctl ifconfig (\S+)
 fortinet_get_hardware_nic_nic-name.textfsm, .*, fortinet, g[[et]] hard[[ware]] n[[ic]] (\S+)
-fortinet_execute_dhcp_lease-list.textfsm, .*, fortinet, exec[[ute]] dhcp lease-list
+fortinet_execute_dhcp_lease-list.textfsm, .*, fortinet, exec[[ute]] dhcp lease-l[[ist]]
 fortinet_get_system_ha_status.textfsm, .*, fortinet, g[[et]] sy[[stem]] ha s[[tatus]]
 fortinet_get_system_interface.textfsm, .*, fortinet, g[[et]] sy[[stem]] in[[terface]]
-fortinet_execute_log_display.textfsm, .*, fortinet, exec[[ute]] log display
+fortinet_execute_log_display.textfsm, .*, fortinet, exec[[ute]] l[[og]] di[[splay]]
 fortinet_execute_traceroute.textfsm, .*, fortinet, exec[[ute]] traceroute
+fortinet_fnsysctl_ifconfig.textfsm, .*, fortinet, fnsysctl ifconfig
 fortinet_get_system_status.textfsm, .*, fortinet, g[[et]] sy[[stem]] stat[[us]]
-fortinet_diagnose_sys_top.textfsm, .*, fortinet, diagnose sys top(?:(?:\s\d+)|(?:\s\d+){2}|(?:\s\d+){3})?
+fortinet_diagnose_sys_top.textfsm, .*, fortinet, d[[iagnose]] sy[[s]] top
 fortinet_get_hardware_nic.textfsm, .*, fortinet, g[[et]] hard[[ware]] n[[ic]]
 fortinet_get_system_arp.textfsm, .*, fortinet, g[[et]] sy[[stem]] arp
-fortinet_execute_date.textfsm, .*, fortinet, exec[[ute]] date
+fortinet_execute_date.textfsm, .*, fortinet, exec[[ute]] da[[te]]
 fortinet_execute_ping.textfsm, .*, fortinet, exec[[ute]] ping
-fortinet_execute_time.textfsm, .*, fortinet, exec[[ute]] time
+fortinet_execute_time.textfsm, .*, fortinet, exec[[ute]] ti[[me]]
 
 hp_comware_display_lldp_neighbor-information_verbose.textfsm, .*, hp_comware, di[[splay]] ll[[dp]] n[[eighbor-information]] v[[erbose]]
 hp_comware_display_lldp_neighbor-information_list.textfsm, .*, hp_comware, di[[splay]] ll[[dp]] n[[eighbor-information]] l[[ist]]
