@@ -1,25 +1,30 @@
 ---
 parsed_sample:
-  - prefix: "0.0.0.0/0"
+  - interface:
+      - "Vlan1801"
+    ip_address: "0.0.0.0"
     nexthop:
       - "10.158.0.198"
-    interface:
-      - "Vlan1801"
-  - prefix: "0.0.0.0/8"
+    prefix_length: "0"
+  - interface: []
+    ip_address: "0.0.0.0"
     nexthop:
       - "drop"
-    interface: []
-  - prefix: "0.0.0.0/32"
+    prefix_length: "8"
+  - interface: []
+    ip_address: "0.0.0.0"
     nexthop:
       - "receive"
-    interface: []
-  - prefix: "10.0.0.0/16"
+    prefix_length: "32"
+  - interface:
+      - "Vlan1801"
+    ip_address: "10.0.0.0"
     nexthop:
       - "10.158.0.198"
-    interface:
+    prefix_length: "16"
+  - interface:
       - "Vlan1801"
-  - prefix: "10.0.120.0/24"
+    ip_address: "10.0.120.0"
     nexthop:
       - "10.158.0.198"
-    interface:
-      - "Vlan1801"
+    prefix_length: "24"

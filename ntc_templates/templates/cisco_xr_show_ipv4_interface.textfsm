@@ -16,7 +16,7 @@ Start
   ^\s+MTU\sis\s${MTU}\s.*$$
   ^\s+Helper.*$$
   ^\s+Multicast.*$$
-  ^\s+2(?:2[4-9]|3\d)(?:\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d?|0)){3}$$
+  ^\s{4,}2(?:2[4-9]|3\d)(?:\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d?|0)){3}.*$$
   ^\s+Internet\s+protocol.*$$
   ^\s+Directed.*$$
   ^\s+Outgoing.*$$
@@ -26,5 +26,8 @@ Start
   ^\s+ICMP unreachables.*$$
   ^\s+ICMP mask.*$$
   ^\s+Table.*$$
+  ^\s+mLACP.*$$
+  ^IP\s+unicast\s+RPF.*$$
+  ^RPF\s+mode.*$$
   ^\s*$$
   ^. -> Error

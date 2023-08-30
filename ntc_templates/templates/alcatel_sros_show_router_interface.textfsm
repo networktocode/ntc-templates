@@ -4,7 +4,7 @@ Value Required OPER_STATE_V4 (Up|Down)
 Value Required OPER_STATE_V6 (Up|Down)
 Value Required MODE (\S+)
 Value Required PORT_SAP_ID (\S+)
-Value List ADDRESS (\S+)
+Value List IP_ADDRESS (\S+)
 Value List PFX_STATE (\S+)
 
 Start
@@ -19,7 +19,7 @@ Interface
   ^-+
   ^.*?\s+(Up|Down) -> Continue.Record
   ^${INTERFACE}\s+${ADMIN_STATE}\s+${OPER_STATE_V4}\/${OPER_STATE_V6}\s+${MODE}\s+${PORT_SAP_ID} 
-  ^\s+${ADDRESS}\s+${PFX_STATE}
+  ^\s+${IP_ADDRESS}\s+${PFX_STATE}
   ^Interfaces -> Done
   ^=+
   ^\s*$$

@@ -1,6 +1,7 @@
 Value IN_OUT_USE (\*>i|u\*>i|\*i)
 Value RD (\d+\:\d+)
-Value Required PREFIX (\d+\.\d+\.\d+\.\d+\/[1-9][0-9]?)
+Value Required NETWORK (\d+(\.\d+){3})
+Value Required PREFIX_LENGTH (\d{1,2})
 Value LOCAL_PREF (\d+)
 Value MED (None|d\+)
 Value NEXT_HOP (\d+\.\d+\.\d+\.\d+)
@@ -12,6 +13,6 @@ Start
   ^----------- -> Prefix
 
 Prefix
-  ^${IN_OUT_USE}\s+${RD}\:${PREFIX}\s+${LOCAL_PREF}\s+${MED}
+  ^${IN_OUT_USE}\s+${RD}\:${NETWORK}\/${PREFIX_LENGTH}\s+${LOCAL_PREF}\s+${MED}
   ^\s+${NEXT_HOP}\s+${PATH_ID}\s+${LABEL}
   ^\s+${AS_PATH} -> Record

@@ -2,13 +2,13 @@
 parsed_sample:
   - inbound_acl: ""
     interface: "Loopback1001"
-    ip_helper: []
-    ipaddr:
+    ip_address:
       - "10.0.0.0"
+    ip_helper: []
     link_status: "up"
-    mask:
-      - "32"
     mtu: "1514"
     outgoing_acl: ""
+    prefix_length:
+      - "32"
     protocol_status: "up"
     vrf: ""

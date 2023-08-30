@@ -5,13 +5,13 @@ Value OPERATIONAL_STATE (on|off)
 Value SPANNING_TREE_1X1 (on|off)
 Value SPANNING_TREE_FLAT (on|off)
 Value AUTH (on|off)
-Value IP (on|off)
+Value IP_STATE (on|off)
 Value MBLETAG (on|off)
 Value SOURCE_LEARN (on|off)
 Value VLAN_NAME ((\S+\s*)+\S+)
 
 Start
-  ^\s*${VLAN_ID}\s+${TYPE}\s+${ADMIN_STATE}\s+${OPERATIONAL_STATE}\s+${SPANNING_TREE_1X1}\s+${SPANNING_TREE_FLAT}\s+${AUTH}\s+${IP}\s+${MBLETAG}\s+${SOURCE_LEARN}\s+${VLAN_NAME}\s*$$ -> Record
+  ^\s*${VLAN_ID}\s+${TYPE}\s+${ADMIN_STATE}\s+${OPERATIONAL_STATE}\s+${SPANNING_TREE_1X1}\s+${SPANNING_TREE_FLAT}\s+${AUTH}\s+${IP_STATE}\s+${MBLETAG}\s+${SOURCE_LEARN}\s+${VLAN_NAME}\s*$$ -> Record
   ^\s*stree\s+mble\s+src\s*$$
   ^\s*vlan\s+type\s+admin\s+oper\s+1x1\s+flat\s+auth\s+ip\s+tag\s+lrn\s+name\s*$$
   ^-----\+-----\+------\+------\+------\+------\+----\+-----\+-----\+------\+----------
