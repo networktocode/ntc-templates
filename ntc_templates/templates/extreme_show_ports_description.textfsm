@@ -13,6 +13,6 @@ Start
 
 Ports
   ^(\s*=+)+\s*$$
-  ^\s*${PORT}(\s+${DESCRIPTION})?\s*$$ -> Record
+  ^\s*${PORT}(?:\s+${DESCRIPTION})?\s*$$ -> Record
   ^\s*
   ^. -> Error
