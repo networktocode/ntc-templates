@@ -1,0 +1,84 @@
+---
+parsed_sample:
+  - agg_control: "LACP"
+    agg_mbr:
+      - "-"
+      - "-"
+      - "-"
+      - "-"
+    config_master: "1"
+    current_master: ""
+    ld_share_algorithm:
+      - "L3_L4"
+      - "L3_L4"
+      - "L3_L4"
+      - "L3_L4"
+    ld_share_group:
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+    link_state:
+      - "R"
+      - "R"
+      - "R"
+      - "R"
+    link_up_transitions:
+      - "0"
+      - "1"
+      - "7"
+      - "0"
+  - agg_control: "LACP"
+    agg_mbr:
+      - "-"
+      - "-"
+    config_master: "29"
+    current_master: ""
+    ld_share_algorithm:
+      - "L3_L4"
+      - "L3_L4"
+    ld_share_group:
+      - "29"
+      - "34"
+    link_state:
+      - "R"
+      - "R"
+    link_up_transitions:
+      - "12"
+      - "7"
+  - agg_control: "LACP"
+    agg_mbr:
+      - "Y"
+      - "Y"
+    config_master: "33"
+    current_master: "33"
+    ld_share_algorithm:
+      - "L2"
+      - "L2"
+    ld_share_group:
+      - "33"
+      - "35"
+    link_state:
+      - "A"
+      - "A"
+    link_up_transitions:
+      - "2"
+      - "1"
+  - agg_control: "LACP"
+    agg_mbr:
+      - "-"
+      - "-"
+    config_master: "38"
+    current_master: ""
+    ld_share_algorithm:
+      - "L3_L4"
+      - "L3_L4"
+    ld_share_group:
+      - "38"
+      - "39"
+    link_state:
+      - "R"
+      - "R"
+    link_up_transitions:
+      - "0"
+      - "0"
