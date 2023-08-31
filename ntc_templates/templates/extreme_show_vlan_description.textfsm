@@ -1,7 +1,17 @@
 Value NAME (\S+)
 Value ID (\d+)
-Value DESCRIPTION ((\s*\S+)*)
-
+Value DESCRIPTION (.*)
 
 Start
-  ^\s*${NAME}\s+${ID}\s*(${DESCRIPTION})? -> Record
+  ^(\s*=+)+\s*$$
+  ^\s*Name\s+VID\s+Description\s*$$ -> VlanTable
+  ^\s*
+  ^. -> Error
+
+VlanTable
+  ^(\s*=+)+\s*$$
+  ^\s*${NAME}\s+${ID}(?:\s+${DESCRIPTION})?\s*$$ -> Record
+  ^\s*>\s+Indicates\s+description\s+string\s+truncated\s+past\s+\d+\s+characters\s*$$
+  ^\s*Total\s+number\s+of\s+VLAN\(s\)\s*:\s*\d+\s*$$
+  ^\s*
+  ^. -> Error
