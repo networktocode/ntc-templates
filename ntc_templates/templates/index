@@ -202,12 +202,10 @@ cisco_asa_dir.textfsm, .*, cisco_asa, dir
 
 cisco_ios_show_module.textfsm:cisco_ios_show_module_status.textfsm:cisco_ios_show_module_submodule.textfsm:cisco_ios_show_module_online_diag.textfsm, .*, cisco_ios, sh[[ow]] mod[[ule]]
 cisco_ios_show_switch_detail.textfsm:cisco_ios_show_switch_detail_stack_ports.textfsm, .*, cisco_ios, sh[[ow]] sw[[itch]] d[[etail]]
-cisco_ios_show_running-config_|_include_clock_timezone.textfsm, .*, cisco_ios, sh[[ow]] ru[[nning-config]] \| include clock timezone
 cisco_ios_show_running-config_partition_access-list.textfsm, .*, cisco_ios, sh[[ow]] ru[[nning-config]] p[[artition]] a[[ccess-list]]
 cisco_ios_show_ip_bgp_neighbors_advertised-routes.textfsm, .*, cisco_ios, sh[[ow]] ip bgp nei[[ghbors]](\s+\d+\.\d+\.\d+\.\d+)? adv[[ertised-routes]]
 cisco_ios_show_running-config_partition_route-map.textfsm, .*, cisco_ios, sh[[ow]] ru[[nning-config]] p[[artition]] route-[[map]]
 cisco_ios_show_port-security_interface_interface.textfsm, .*, cisco_ios, sh[[ow]] por[[t-security]] i[[nterface]] (\S+)
-cisco_ios_show_running-config_|_include_username.textfsm, .*, cisco_ios, sh[[ow]] ru[[nning-config]] \| include username
 cisco_ios_interface_iface-name_no_shutdown.textfsm, .*, cisco_ios, interface (\S+) no shutdown
 cisco_ios_show_capability_feature_routing.textfsm, .*, cisco_ios, sh[[ow]] cap[[ability]] f[[eature]] r[[outing]]
 cisco_ios_show_ip_bgp_vpnv4_all_neighbors.textfsm, .*, cisco_ios, sh[[ow]] ip bgp vpnv4 all nei[[ghbors]]
@@ -344,7 +342,6 @@ cisco_nxos_show_cts_interface_brief.textfsm, .*, cisco_nxos, sh[[ow]] cts inte[[
 cisco_nxos_show_ip_bgp_summary_vrf.textfsm, .*, cisco_nxos, sh[[ow]] ip b[[gp]] s[[ummary]] v[[rf]]
 cisco_nxos_show_ip_interface_brief.textfsm, .*, cisco_nxos, sh[[ow]] ip int[[erface]] b[[rief]](?: vrf \S+)?\s*$
 cisco_nxos_show_spanning-tree_root.textfsm, .*, cisco_nxos, sh[[ow]] sp[[an]]ning-tree root
-cisco_nxos_show_vlan_|_json-pretty.textfsm, .*, cisco_nxos, sh[[ow]] vl[[an]] | json-pretty
 cisco_nxos_show_cts_interface_all.textfsm, .*, cisco_nxos, sh[[ow]] ct[[s]] inter[[face]] al[[l]]
 cisco_nxos_show_ip_community-list.textfsm, .*, cisco_nxos, sh[[ow]] ip comm[[unity-list]]
 cisco_nxos_show_ip_pim_rp_vrf_all.textfsm, .*, cisco_nxos, sh[[ow]] ip pim rp vrf all
@@ -393,7 +390,6 @@ cisco_s300_show_interfaces_status.textfsm, .*, cisco_s300, sh[[ow]] int[[erfaces
 cisco_s300_show_mac_address-table.textfsm, .*, cisco_s300, sh[[ow]] mac address-[[table]]
 cisco_s300_show_lldp_neighbors.textfsm, .*, cisco_s300, sh[[ow]] lld[[p]] neig[[hbors]]
 cisco_s300_show_ip_interface.textfsm, .*, cisco_s300, sh[[ow]] ip interface
-cisco_s300_show_interfaces.textfsm, .*, cisco_s300, sh[[ow]] int[[erfaces]]
 cisco_s300_show_system_id.textfsm, .*, cisco_s300, sh[[ow]] system id
 cisco_s300_show_version.textfsm, .*, cisco_s300, sh[[ow]] ver[[sion]]
 cisco_s300_show_system.textfsm, .*, cisco_s300, sh[[ow]] system
@@ -639,13 +635,10 @@ mikrotik_routeros_interface_print_brief.textfsm, .*, mikrotik_routeros, [[/]]in[
 mikrotik_routeros_ip_route_print_detail.textfsm, .*, mikrotik_routeros, [[/]]ip r[[oute]] p[[rint]] d[[etail]]
 mikrotik_routeros_system_identity_print.textfsm, .*, mikrotik_routeros, [[/]]sy[[stem]] i[[dentity]] p[[rint]]
 mikrotik_routeros_system_resource_print.textfsm, .*, mikrotik_routeros, [[/]]sy[[stem]] re[[source]] p[[rint]]
-mikrotik_routeros_ip_address_get_iface.textfsm, .*, mikrotik_routeros, [[:]]put \(\[/?ip address get \[find interface=(\w+)\]\]\s*->\s*"address"\)
 mikrotik_routeros_ip_route_print_terse.textfsm, .*, mikrotik_routeros, [[/]]ip(v6)? route print terse
-mikrotik_routeros_put_[resolve_name].textfsm, .*, mikrotik_routeros, [[:]]put \[:?resolve (.+)\]
 mikrotik_routeros_system_clock_print.textfsm, .*, mikrotik_routeros, [[/]]sy[[stem]] cl[[ock]] p[[rint]]
 mikrotik_routeros_user_active_print.textfsm, .*, mikrotik_routeros, [[/]]us[[er]] ac[[tive]] p[[rint]]
 mikrotik_routeros_ip_address_print.textfsm, .*, mikrotik_routeros, [[/]]ip ad[[dress]] p[[rint]]
-mikrotik_routeros_system_reboot.textfsm, .*, mikrotik_routeros, [[:]]execute {/?system reboot}
 mikrotik_routeros_ip_arp_print.textfsm, .*, mikrotik_routeros, [[/]]ip a[[rp]] p[[rint]]
 mikrotik_routeros_tool_profile.textfsm, .*, mikrotik_routeros, [[/]]too[[l]] pr[[ofile]]
 mikrotik_routeros_tool_fetch.textfsm, .*, mikrotik_routeros, [[/]]tool fetch

@@ -1,6 +1,0 @@
-Value RESULT (.*)
-
-Start
-  ^\s*${RESULT}\s*$$ -> Record
-  ^\s*$$
-  ^. -> Error

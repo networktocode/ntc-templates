@@ -1,7 +1,0 @@
-Value OUTPUT ()
-
-Start
-  ^\s*Received\s+disconnect\s+from.*$$
-  ^${OUTPUT}$$ -> Record
-  ^\s*$$
-  ^. -> Error
