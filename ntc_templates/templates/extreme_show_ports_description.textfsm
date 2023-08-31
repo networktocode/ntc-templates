@@ -1,5 +1,18 @@
 Value PORT (\d+)
-Value DESCRIPTION ((\s*\S+)+)
+Value DISPLAY_STRING (\S+)
+Value DESCRIPTION (.*)
+
+# Broken. There is no good way to differ 'Display String' and 'Description' since
+# both columns can be anything and empty. Since 'Display String' is empty often,
+# just skip it.
 
 Start
-  ^${PORT}\s*(\s*${DESCRIPTION})? -> Record
+  ^\s*Port\s+Display\s+String\s+Description\s+String\s*$$ -> Ports
+  ^\s*
+  ^. -> Error
+
+Ports
+  ^(\s*=+)+\s*$$
+  ^\s*${PORT}(\s+${DESCRIPTION})?\s*$$ -> Record
+  ^\s*
+  ^. -> Error
