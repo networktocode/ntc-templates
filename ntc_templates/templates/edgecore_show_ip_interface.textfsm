@@ -1,7 +1,11 @@
 Value IP (\S+)
 Value NETMASK (\S+)
 Value IFACE (.*)
-
+Value ADDR_MODE (.*)
 
 Start
-  ^\s*IP\s+Address\s+and\s+Netmask\:\s+${IP}\s+${NETMASK}\s+on\s+${IFACE}\,\s*$$ -> Record
+  ^\s*IP\s+Address\s+and\s+Netmask:.*$$ -> Continue.Record
+  ^\s*IP\s+Address\s+and\s+Netmask:\s+${IP}\s+${NETMASK}\s+on\s+${IFACE},\s*$$
+  ^\s*Address\s+Mode:\s+${ADDR_MODE}\s*$$
+  ^\s*$$
+  ^. -> Error
