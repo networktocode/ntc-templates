@@ -1,0 +1,33 @@
+       Use Redirects : Disabled
+       IpOption LSRR : Enabled
+       IpOption SSRR : Enabled
+         IpOption RR : Enabled
+         IpOption TS : Enabled
+         IpOption RA : Enabled
+       Route Sharing : Disabled
+   Route Compression : Disabled
+  Originated Packets : Don't require ipforwarding
+ Max Shared Gateways : Current: 4  Configured: 4
+  Route Sharing Hash : CRC Lower
+
+      IRDP:
+         Advertisement Address: 255.255.255.255      Maximum Interval: 600
+         Minimum Interval: 450     Lifetime: 1800  Preference: 0
+
+Interface    IP Address          Flags                   nSIA
+VLAN0255     10.255.254.3    /16 EU----MPuRX---------    0
+VLAN2222     10.1.222.3      /24 EUf---MPuRX---------    0
+
+Flags: (A) Address Mask Reply Enabled (B) BOOTP Enabled
+       (b) Broadcast Forwarding Enabled
+       (D) Duplicate address detected on VLAN, (E) Interface Enabled
+       (f) Forwarding Enabled (g) Ignore IP Broadcast Enabled
+       (h) Directed Broadcast Forwarding by Hardware Enabled
+       (I) IRDP Advertisement Enabled, (M) Send Parameter Problem Enabled
+       (m) Multicast forwarding Enabled, (n) Multinetted VLAN
+       (nSIA ) Number of Secondary IP Addresses
+       (P) Send Port Unreachables Enabled, (R) Send Redirects Enabled
+       (r) Unicast Reverse Path Enabled on at least one port of the VLAN
+       (t) Tentative address, (T) Time Stamp Reply Enabled
+       (u) Send Unreachables Enabled, (U) Interface Up
+       (v) VRRP Enabled, (X) Send Time Exceeded Enabled
