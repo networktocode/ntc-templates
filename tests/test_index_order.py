@@ -30,6 +30,7 @@ OS_CHOICES = [
     "cisco_wlc",
     "cisco_xe",
     "cisco_xr",
+    "comware",
     "dell_force10",
     "dell_powerconnect",
     "dlink_ds",
