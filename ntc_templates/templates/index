@@ -463,8 +463,6 @@ cisco_xr_show_hsrp.textfsm, .*, cisco_xr, sh[[ow]] hs[[rp]]
 cisco_xr_show_arp.textfsm, .*, cisco_xr, sh[[ow]] arp
 cisco_xr_show_bgp.textfsm, .*, cisco_xr, sh[[ow]] bg[[p]]
 
-comware_display_interface_brief.textfsm, .*, comware, display interface brief
-
 dell_force10_show_ip_interface_brief.textfsm, .*, dell_force10, sh[[ow]] ip int[[erface]] br[[ief]]
 dell_force10_show_vlan_brief.textfsm, .*, dell_force10, sh[[ow]] vl[[an]] br[[ief]]
 dell_force10_show_version.textfsm, .*, dell_force10, sh[[ow]] ver[[sion]]
@@ -495,6 +493,7 @@ hp_comware_display_counters_bound_interface.textfsm, .*, hp_comware, di[[splay]]
 hp_comware_display_link-aggregation_verbose.textfsm, .*, hp_comware, di[[splay]] link[[-aggregation]] v[[erbose]]
 hp_comware_display_ip_routing-table.textfsm, .*, hp_comware, di[[splay]] ip r[[outing-table]]
 hp_comware_display_device_manuinfo.textfsm, .*, hp_comware, di[[splay]] dev[[ice]] m[[anuinfo]]
+hp_comware_display_interface_brief.textfsm, .*, hp_comware, di[[splay]] int[[erface]] brief
 hp_comware_display_ip_vpn-instance.textfsm, .*, hp_comware, di[[splay]] ip vpn[[-instance]]
 hp_comware_display_ip_interface.textfsm, .*, hp_comware, dis[[play]] ip i[[nterface]]
 hp_comware_display_mac-address.textfsm, .*, hp_comware, di[[splay]] mac-ad[[dress]]
