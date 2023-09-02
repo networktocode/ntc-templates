@@ -2,11 +2,11 @@ Value Required LOCAL_INTERFACE (\S+)
 Value Required CHASSIS_ID (\S+)
 Value CHASSIS_NAME (\S+)
 Value CHASSIS_DESC (.+)
+Value CAPABILITIES_SUPPORTED (.+)
 Value CAPABILITIES (.+)
-Value CAPABILITIES_ENABLED (.+)
 Value MGMT_ADDR (\S+)
 Value PORT_ID (\S+)
-Value PORT_DESC (\S+)
+Value NEIGHBOR_INTERFACE (\S+)
 
 
 Start
@@ -17,10 +17,10 @@ Start
   ^Neighbor\s+System-Description\s*:\s*${CHASSIS_DESC}
   ^Neighbor\s*Chassis-ID\s*:\s*${CHASSIS_ID}
   ^Neighbor\s*Management-Address\s*:\s*${MGMT_ADDR}
-  ^Chassis\s*Capabilities\s*Available\s*:\s*${CAPABILITIES}
-  ^Chassis\s*Capabilities\s*Enabled\s*:\s*${CAPABILITIES_ENABLED}
+  ^Chassis\s*Capabilities\s*Available\s*:\s*${CAPABILITIES_SUPPORTED}
+  ^Chassis\s*Capabilities\s*Enabled\s*:\s*${CAPABILITIES}
   ^Neighbor\s*Port-ID\s*:\s*${PORT_ID}
-  ^Neighbor\s*Port-Desc\s*:\s*${PORT_DESC} 
+  ^Neighbor\s*Port-Desc\s*:\s*${NEIGHBOR_INTERFACE} 
   ^-+$$ -> Record
   ^Neighbor\.*
   ^TTL\.*
