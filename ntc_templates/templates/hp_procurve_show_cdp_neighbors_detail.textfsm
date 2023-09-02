@@ -1,4 +1,4 @@
-Value Required LOCAL_PORT (.+?)
+Value Required LOCAL_INTERFACE (.+?)
 Value NEIGHBOR_ID (.+?)
 Value NEIGHBOR_ADDRESS (.+?)
 Value NEIGHBOR_PLATFORM (.+?)
@@ -8,7 +8,7 @@ Value NEIGHBOR_VERSION (.+?)
 
 Start
   ^\s*CDP\s+neighbors\s+information
-  ^\s*Port\s*:\s*${LOCAL_PORT}\s*$$
+  ^\s*Port\s*:\s*${LOCAL_INTERFACE}\s*$$
   ^\s*Device\s+ID\s*:\s*${NEIGHBOR_ID}\s*$$
   ^\s*Address\s+Type
   ^\s*Address\s*:\s*${NEIGHBOR_ADDRESS}\s*$$

@@ -1,4 +1,4 @@
-Value Required LOCAL_PORT (\S+)
+Value Required LOCAL_INTERFACE (\S+)
 Value Required CHASSIS_ID (\S+)
 Value CHASSIS_NAME (\S+)
 Value CHASSIS_DESC (.+)
@@ -10,7 +10,7 @@ Value PORT_DESC (\S+)
 
 
 Start
-  ^Port\s*:\s*${LOCAL_PORT}
+  ^Port\s*:\s*${LOCAL_INTERFACE}
   ^Neighbor\s*Chassis-Name\s*:\s*${CHASSIS_NAME}
   ^Neighbor\s+System-Name\s*:\s*${CHASSIS_NAME}
   ^Neighbor\s*Chassis-Description\s*:\s*${CHASSIS_DESC}

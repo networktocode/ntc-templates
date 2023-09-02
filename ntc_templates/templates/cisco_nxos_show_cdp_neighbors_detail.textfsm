@@ -3,7 +3,7 @@ Value SYSNAME (.*)
 Value MGMT_IP (.*)
 Value PLATFORM (.*)
 Value REMOTE_PORT (.*)
-Value LOCAL_PORT (.*)
+Value LOCAL_INTERFACE (.*)
 Value VERSION (.*)
 Value INTERFACE_IP (.*)
 Value CAPABILITIES (.*[^\s])
@@ -15,7 +15,7 @@ Start
   ^Interface address\(es\):\s*(^[1-9]\d*|$$) -> GetInterfaceIP
   ^Mgmt address\(es\): -> GetIP
   ^Platform: ${PLATFORM}, Capabilities: ${CAPABILITIES}\s*$$
-  ^Interface: ${LOCAL_PORT}, Port ID \(outgoing port\): ${REMOTE_PORT}
+  ^Interface: ${LOCAL_INTERFACE}, Port ID \(outgoing port\): ${REMOTE_PORT}
   ^Version: -> GetVersion
 
 GetIP

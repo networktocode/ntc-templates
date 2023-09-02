@@ -3,7 +3,7 @@ Value SYSNAME (.*)
 Value MGMT_IP (.*)
 Value PLATFORM (.*)
 Value REMOTE_PORT (.*)
-Value LOCAL_PORT (.*)
+Value LOCAL_INTERFACE (.*)
 Value VERSION (.*)
 Value CAPABILITIES (.*)
 
@@ -12,7 +12,7 @@ Start
   ^SysName : ${SYSNAME}
   ^Entry address\(es\): -> GetIP
   ^Platform: ${PLATFORM},  Capabilities: ${CAPABILITIES}
-  ^Interface: ${LOCAL_PORT}
+  ^Interface: ${LOCAL_INTERFACE}
   ^Port ID \(outgoing port\): ${REMOTE_PORT}
   ^Version : -> GetVersion
 
