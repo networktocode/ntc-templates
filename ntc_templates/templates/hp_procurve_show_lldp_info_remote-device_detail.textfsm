@@ -8,7 +8,7 @@ Value SYSTEM_DESCR (.*?)
 Value PORT_DESCR (\S+|.*?)
 Value PVID (\d+|.*?)
 Value CAPABILITIES_SUPPORTED (.*?)
-Value SYSTEM_CAPABILITIES_ENABLED (.*?)
+Value CAPABILITIES (.*?)
 Value REMOTE_MANAGEMENT_ADDRESS (\S+|.*?)
 
 Start
@@ -27,7 +27,7 @@ LLDP
   ^\s+PortDescr\s+:\s${PORT_DESCR}\s*$$
   ^\s+Pvid\s+:\s${PVID}\s*$$
   ^\s+System\s+Capabilities\s+Supported\s+:\s${CAPABILITIES_SUPPORTED}\s*$$
-  ^\s+System\s+Capabilities\s+Enabled\s+:\s${SYSTEM_CAPABILITIES_ENABLED}\s*$$
+  ^\s+System\s+Capabilities\s+Enabled\s+:\s${CAPABILITIES}\s*$$
   ^\s+Remote\s+Management\s+Address\s*$$
   ^\s+Type.*$$
   ^\s+Address\s:\s${REMOTE_MANAGEMENT_ADDRESS}
