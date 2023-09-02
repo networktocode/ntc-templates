@@ -34,7 +34,7 @@ NTC-Templates will observes semantic versioning. This may result in an quick tur
 
 ## Release Policy
 
-NTC Templates has currently no intended scheduled release schedule, and will release new features in minor versions.
+NTC Templates currently does not have an intended release schedule cadence, and will release new features in minor versions.
 
 When a new release is created the following should happen.
 
