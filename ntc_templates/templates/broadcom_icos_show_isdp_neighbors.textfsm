@@ -1,9 +1,9 @@
-Value ID (\S+)
-Value INTERFACE (\S+)
+Value NEIGHBOR_NAME (\S+)
+Value LOCAL_INTERFACE (\S+)
 Value HOLDTIME (\S+)
-Value CAPABILITY ([\w]{1}(?:\s[\w]){0,2})
+Value CAPABILITIES ([\w]{1}(?:\s[\w]){0,2})
 Value PLATFORM ((\S+\s\S+)|(\S+))
-Value PORT (.+)
+Value NEIGHBOR_INTERFACE (.+)
 
 Start
   # Captures show isdp neighbors for:
@@ -13,6 +13,6 @@ Start
   ^\s+\S+\s+-
   ^\s*Device\s+ID\s+Intf\s+Holdtime\s+Capability\s+Platform\s+Port\s+ID$$
   ^-+
-  ^\s*${ID}\s+${INTERFACE}\s+${HOLDTIME}\s+${CAPABILITY}\s+${PLATFORM}\s+${PORT} -> Record
+  ^\s*${NEIGHBOR_NAME}\s+${LOCAL_INTERFACE}\s+${HOLDTIME}\s+${CAPABILITIES}\s+${PLATFORM}\s+${NEIGHBOR_INTERFACE} -> Record
   ^\s*$$
   ^. -> Error
