@@ -31,6 +31,7 @@ Example: Imagine the extra programming logic needed to consume structured data w
 | `IPV6_ADDRESS`     | for a single IPv6 address |
 | `IPV6_ADDRESSES`   | for lists of IPv6 addresses |
 | `IPV6_GATEWAY`     | for IPv6 gateway address |
+| `LOCAL_INTERFACE`  | often represents local interface or port for CDP or LLDP |
 | `LOCAL_IP_ADDRESS` | local IP address in the case of First Hop Redundancy Protocols (FHRP)
 | `MAC_ADDRESS`      | instead of MAC or MACADDR |
 | `MGMT_IP_ADDRESS`  | instead of MGMT_IP or MGMT_ADDRESS or MANAGEMENT_IP or REMOTE_MANAGEMENT_ADDRESS |
