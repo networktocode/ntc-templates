@@ -21,7 +21,8 @@ Example: Imagine the extra programming logic needed to consume structured data w
 | Capture Group            | Usage Description |
 |--------------------------|:------------------|
 | `BIA`                    | use this if the template already has MAC_ADDRESS in use for the active MAC address |
-| `CAPABILITIES_SUPPORTED` | often represents neighbor capabilities from CDP or LLDP |
+| `CAPABILITIES`           | often represents active/operational neighbor capabilities shared via CDP or LLDP |
+| `CAPABILITIES_SUPPORTED` | often represents supported neighbor capabilities shared via CDP or LLDP |
 | `DESCRIPTION`            | often used for port or interface descriptions |
 | `GATEWAY`                | gateway address for a subnet |
 | `INTERFACE`              | full word instead of IFACE, INTF, INTFC, etc |
