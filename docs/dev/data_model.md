@@ -25,6 +25,7 @@ Example: Imagine the extra programming logic needed to consume structured data w
 | `BUNDLE_PROTOCOL`         | virtual interface protocol type (LACP, PAgP) for etherchannel or port-channel interfaces |
 | `BUNDLE_PROTOCOL_STATE`   | virtual interface protocol state for etherchannel or port-channel interfaces |
 | `BUNDLE_STATUS`           | virtual interface status for etherchannel, LACP, LAG, or port-channel interfaces |
+| `CAPABILITIES_SUPPORTED`  | often represents neighbor capabilities from CDP or LLDP |
 | `DESCRIPTION`             | often used for port or interface descriptions |
 | `GATEWAY`                 | gateway address for a subnet |
 | `INTERFACE`               | full word instead of IFACE, INTF, INTFC, etc |
