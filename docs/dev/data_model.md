@@ -35,7 +35,8 @@ Example: Imagine the extra programming logic needed to consume structured data w
 | `IPV6_ADDRESS`            | for a single IPv6 address |
 | `IPV6_ADDRESSES`          | for lists of IPv6 addresses |
 | `IPV6_GATEWAY`            | for IPv6 gateway address |
-| `LOCAL_IP_ADDRESS`        | local IP address in the case of First Hop Redundancy Protocols (FHRP)
+| `LOCAL_INTERFACE`         | often represents local interface or port for CDP or LLDP |
+| `LOCAL_IP_ADDRESS`        | local IP address in the case of First Hop Redundancy Protocols (FHRP) |
 | `MAC_ADDRESS`             | instead of MAC or MACADDR |
 | `MEMBER_INTERFACE`        | list of physical member interface names that are bundled to make an etherchannel, LACP, LAG, or port-channel interface |
 | `MEMBER_INTERFACE_STATUS` | list of member interface statuses for an etherchannel, LACP, LAG, or port-channel interface |
