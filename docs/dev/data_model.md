@@ -42,6 +42,7 @@ Example: Imagine the extra programming logic needed to consume structured data w
 | `MEMBER_INTERFACE_STATUS` | list of member interface statuses for an etherchannel, LACP, LAG, or port-channel interface |
 | `MGMT_IP_ADDRESS`         | instead of MGMT_IP or MGMT_ADDRESS or MANAGEMENT_IP or REMOTE_MANAGEMENT_ADDRESS |
 | `NEIGHBOR_ID`             | for router IDs remote to the system being parsed |
+| `NEIGHBOR_INTERFACE`      | often represents neighbor or remote interface or port for CDP or LLDP |
 | `NETMASK`                 | for IPv4 dotted quad masks |
 | `NETWORK`                 | for network numbers or subnet address (without the mask or prefix/slash notation); in place of ROUTE |
 | `PREFIX_LENGTH`           | instead of PREFIX or CIDR for the numbers of a slash notation or CIDR mask |
