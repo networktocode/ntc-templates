@@ -2,7 +2,7 @@ Value Required DEST_HOST (\S+)
 Value SYSNAME (.*)
 Value MGMT_IP (.*)
 Value PLATFORM (.*)
-Value REMOTE_PORT (.*)
+Value NEIGHBOR_INTERFACE (.*)
 Value LOCAL_INTERFACE (.*)
 Value VERSION (.*)
 Value CAPABILITIES (.*)
@@ -13,7 +13,7 @@ Start
   ^Entry address\(es\): -> GetIP
   ^Platform: ${PLATFORM},  Capabilities: ${CAPABILITIES}
   ^Interface: ${LOCAL_INTERFACE}
-  ^Port ID \(outgoing port\): ${REMOTE_PORT}
+  ^Port ID \(outgoing port\): ${NEIGHBOR_INTERFACE}
   ^Version : -> GetVersion
 
 GetIP
