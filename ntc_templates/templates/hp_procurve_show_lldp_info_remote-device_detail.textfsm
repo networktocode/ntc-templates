@@ -7,7 +7,7 @@ Value NEIGHBOR_SYSNAME (.*?)
 Value SYSTEM_DESCR (.*?)
 Value PORT_DESCR (\S+|.*?)
 Value PVID (\d+|.*?)
-Value SYSTEM_CAPABILITIES_SUPPORTED (.*?)
+Value CAPABILITIES_SUPPORTED (.*?)
 Value SYSTEM_CAPABILITIES_ENABLED (.*?)
 Value REMOTE_MANAGEMENT_ADDRESS (\S+|.*?)
 
@@ -26,7 +26,7 @@ LLDP
   ^\s+System\sDescr\s:\s${SYSTEM_DESCR}\s*$$
   ^\s+PortDescr\s+:\s${PORT_DESCR}\s*$$
   ^\s+Pvid\s+:\s${PVID}\s*$$
-  ^\s+System\s+Capabilities\s+Supported\s+:\s${SYSTEM_CAPABILITIES_SUPPORTED}\s*$$
+  ^\s+System\s+Capabilities\s+Supported\s+:\s${CAPABILITIES_SUPPORTED}\s*$$
   ^\s+System\s+Capabilities\s+Enabled\s+:\s${SYSTEM_CAPABILITIES_ENABLED}\s*$$
   ^\s+Remote\s+Management\s+Address\s*$$
   ^\s+Type.*$$
