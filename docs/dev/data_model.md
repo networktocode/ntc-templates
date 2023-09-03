@@ -51,6 +51,7 @@ Example: Imagine the extra programming logic needed to consume structured data w
 | `NEIGHBOR_NAME`                  | often represents neighbor name for CDP or LLDP |
 | `NETMASK`                        | for IPv4 dotted quad masks |
 | `NETWORK`                        | for network numbers or subnet address (without the mask or prefix/slash notation); in place of ROUTE |
+| `PLATFORM`                       | often represents CDP or LLDP neighbor's platform or model name/number |
 | `PREFIX_LENGTH`                  | instead of PREFIX or CIDR for the numbers of a slash notation or CIDR mask |
 | `PROTOCOL`                       | instead of PROTO |
 | `ROUTER_ID`                      | for local router IDs (local to the device being parsed) |
