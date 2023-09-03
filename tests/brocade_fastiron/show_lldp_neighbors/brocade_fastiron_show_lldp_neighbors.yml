@@ -1,7 +1,7 @@
 ---
 parsed_sample:
-  - neighbor: "core-sw01"
-    local_interface: "Gi1/3"
+  - capabilities: "B,R"
     hold_time: "120"
-    capabilities: "B,R"
+    local_interface: "Gi1/3"
     neighbor_interface: "Gi0/3"
+    neighbor_name: "core-sw01"

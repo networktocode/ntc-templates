@@ -2,7 +2,7 @@ Value LOCAL_INTERFACE (\S+)
 Value CHASSIS_ID ([^:]+)
 Value NEIGHBOR_PORT_ID (.*)
 Value NEIGHBOR_INTERFACE (.*)
-Value NEIGHBOR (.+?)
+Value NEIGHBOR_NAME (.+?)
 Value SYSTEM_DESCRIPTION (.*)
 Value CAPABILITIES (.*)
 Value MANAGEMENT_IP (\S+)
@@ -31,7 +31,7 @@ Start
   ^Port\s+Description:\s+${NEIGHBOR_INTERFACE}\s*$$
   ^System\s+Name(\s+-\s+not\s+advertised)\s*$$
   ^System\s+Name:?\s*$$
-  ^System\s+Name(:\s+${NEIGHBOR})\s*$$
+  ^System\s+Name(:\s+${NEIGHBOR_NAME})\s*$$
   ^System\s+Description -> GetDescription
   ^Time
   ^System\s+Capabilities
