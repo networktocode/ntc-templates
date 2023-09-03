@@ -1,12 +1,12 @@
 Value Required LOCAL_INTERFACE (\S+)
 Value NEIGHBOR_CHASSIS_TYPE (\S+)
-Value NEIGHBOR_CHASSIS_ID ([a-f0-9]{6}-[a-f0-9]{6}|(?:[a-z0-9]{2}\s){5}[a-z0-9]{2}|\S+)
+Value CHASSIS_ID ([a-f0-9]{6}-[a-f0-9]{6}|(?:[a-z0-9]{2}\s){5}[a-z0-9]{2}|\S+)
 Value PORT_TYPE (\S+)
 Value NEIGHBOR_PORTID (.*?)
 Value NEIGHBOR_SYSNAME (.*?)
 Value SYSTEM_DESCR (.*?)
 Value NEIGHBOR_INTERFACE_DESCRIPTION (\S+|.*?)
-Value PVID (\d+|.*?)
+Value VLAN_ID (\d+|.*?)
 Value CAPABILITIES_SUPPORTED (.*?)
 Value CAPABILITIES (.*?)
 Value REMOTE_MANAGEMENT_ADDRESS (\S+|.*?)
@@ -19,13 +19,14 @@ Start
 LLDP
   ^\s+Local\sPort\s+:\s${LOCAL_INTERFACE}\s*$$
   ^\s+ChassisType\s+:\s${NEIGHBOR_CHASSIS_TYPE}\s*$$
-  ^\s+ChassisId\s+:\s${NEIGHBOR_CHASSIS_ID}\s*$$
+  ^\s+ChassisId\s+:\s${CHASSIS_ID}\s*$$
   ^\s+PortType\s+:\s${PORT_TYPE}\s*$$
   ^\s+PortId\s+:\s${NEIGHBOR_PORTID}\s*$$
   ^\s+SysName\s+:\s${NEIGHBOR_SYSNAME}\s*$$
   ^\s+System\sDescr\s:\s${SYSTEM_DESCR}\s*$$
   ^\s+PortDescr\s+:\s${NEIGHBOR_INTERFACE_DESCRIPTION}\s*$$
-  ^\s+Pvid\s+:\s${PVID}\s*$$
+# Port VLAN ID
+  ^\s+Pvid\s+:\s${VLAN_ID}\s*$$
   ^\s+System\s+Capabilities\s+Supported\s+:\s${CAPABILITIES_SUPPORTED}\s*$$
   ^\s+System\s+Capabilities\s+Enabled\s+:\s${CAPABILITIES}\s*$$
   ^\s+Remote\s+Management\s+Address\s*$$
