@@ -9,6 +9,9 @@ parsed_sample:
     management_ip: "11.11.11.11"
     manufacturer: ""
     model: ""
+    neighbor_description: "Cisco NX-OS(tm) n7700, Software (n7700-s2-dk9), Version\
+      \ 6.2(10), RELEASE SOFTWARE Copyright (c) 2002-2013 by Cisco Systems, Inc. Compiled\
+      \ 10/9/2014 12:00:00"
     neighbor_interface: "PO2631-10Gx2-R261R5"
     neighbor_name: "USSC-CAMPUS-CORE-GW2"
     neighbor_port_id: "Eth1/6"
@@ -20,9 +23,6 @@ parsed_sample:
     power_source: ""
     serial: ""
     sw_revision: ""
-    system_description: "Cisco NX-OS(tm) n7700, Software (n7700-s2-dk9), Version 6.2(10),\
-      \ RELEASE SOFTWARE Copyright (c) 2002-2013 by Cisco Systems, Inc. Compiled 10/9/2014\
-      \ 12:00:00"
     vlan_id: "1"
   - capabilities: "B,R"
     chassis_id: "2222.0642.7333"
@@ -33,6 +33,9 @@ parsed_sample:
     management_ip: "33.33.33.3"
     manufacturer: ""
     model: ""
+    neighbor_description: "Cisco NX-OS(tm) n7700, Software (n7700-s2-dk9), Version\
+      \ 6.2(10), RELEASE SOFTWARE Copyright (c) 2002-2013 by Cisco Systems, Inc. Compiled\
+      \ 10/9/2014 12:00:00"
     neighbor_interface: "PO2631-10Gx2-R261R5"
     neighbor_name: "USSC-CAMPUS-CORE-GW1.acme123.com"
     neighbor_port_id: "Eth1/6"
@@ -44,9 +47,6 @@ parsed_sample:
     power_source: ""
     serial: ""
     sw_revision: ""
-    system_description: "Cisco NX-OS(tm) n7700, Software (n7700-s2-dk9), Version 6.2(10),\
-      \ RELEASE SOFTWARE Copyright (c) 2002-2013 by Cisco Systems, Inc. Compiled 10/9/2014\
-      \ 12:00:00"
     vlan_id: "1"
   - capabilities: "B"
     chassis_id: "0015.2222.c330"
@@ -57,6 +57,8 @@ parsed_sample:
     management_ip: "55.55.55.55"
     manufacturer: ""
     model: ""
+    neighbor_description: "Cisco IOS Software, C3750 Software (C3750-IPSERVICESK9-M),\
+      \ Version 12.2(53)SE2, RELEASE SOFTWARE (fc3)"
     neighbor_interface: "GigabitEthernet2/0/24"
     neighbor_name: "DMZ-SW1"
     neighbor_port_id: "Gi2/0/24"
@@ -68,8 +70,6 @@ parsed_sample:
     power_source: ""
     serial: ""
     sw_revision: ""
-    system_description: "Cisco IOS Software, C3750 Software (C3750-IPSERVICESK9-M),\
-      \ Version 12.2(53)SE2, RELEASE SOFTWARE (fc3)"
     vlan_id: ""
   - capabilities: ""
     chassis_id: "0022.1111.2222"
@@ -80,6 +80,7 @@ parsed_sample:
     management_ip: ""
     manufacturer: ""
     model: ""
+    neighbor_description: ""
     neighbor_interface: ""
     neighbor_name: ""
     neighbor_port_id: "g2"
@@ -91,5 +92,4 @@ parsed_sample:
     power_source: ""
     serial: ""
     sw_revision: ""
-    system_description: ""
     vlan_id: ""
