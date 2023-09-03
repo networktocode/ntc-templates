@@ -4,26 +4,27 @@ parsed_sample:
     chassis_id: "AAA.pizza.com(FXS1828Q2JH)"
     local_interface: "GigabitEthernet0/0/2"
     management_ip: "1.2.3.4"
+    neighbor_description: "Cisco Nexus Operating System (NX-OS) Software, Version\
+      \ 6.2(10)"
     neighbor_interface: "Ethernet1/15"
     platform: "N77-C7706"
-    software_version: "Cisco Nexus Operating System (NX-OS) Software, Version 6.2(10)"
   - capabilities: "Router Switch IGMP"
     chassis_id: "BBB.beer.com"
     local_interface: "GigabitEthernet0/0/7"
     management_ip: "172.5.6.7"
-    neighbor_interface: "GigabitEthernet1/0/11"
-    platform: "cisco WS-C3750G-12S"
-    software_version: "Cisco IOS Software, C3750 Software (C3750-IPSERVICESK9-M),\
+    neighbor_description: "Cisco IOS Software, C3750 Software (C3750-IPSERVICESK9-M),\
       \ Version 12.2(55)SE11, RELEASE SOFTWARE (fc3) Technical Support: http://www.cisco.com/techsupport\
       \ Copyright (c) 1986-2016 by Cisco Systems, Inc. Compiled Wed 17-Aug-16 13:28\
       \ by prod_rel_team"
+    neighbor_interface: "GigabitEthernet1/0/11"
+    platform: "cisco WS-C3750G-12S"
   - capabilities: "Router Switch IGMP"
     chassis_id: "CCC.cake.com"
     local_interface: "GigabitEthernet0/0/8"
     management_ip: "172.9.10.11"
-    neighbor_interface: "GigabitEthernet1/0/1"
-    platform: "cisco WS-C3750G-12S"
-    software_version: "Cisco IOS Software, C3750 Software (C3750-IPSERVICESK9-M),\
+    neighbor_description: "Cisco IOS Software, C3750 Software (C3750-IPSERVICESK9-M),\
       \ Version 12.2(55)SE11, RELEASE SOFTWARE (fc3) Technical Support: http://www.cisco.com/techsupport\
       \ Copyright (c) 1986-2016 by Cisco Systems, Inc. Compiled Wed 17-Aug-16 13:28\
       \ by prod_rel_team"
+    neighbor_interface: "GigabitEthernet1/0/1"
+    platform: "cisco WS-C3750G-12S"
