@@ -5,7 +5,7 @@ Value PORT_TYPE (\S+)
 Value NEIGHBOR_PORTID (.*?)
 Value NEIGHBOR_SYSNAME (.*?)
 Value SYSTEM_DESCR (.*?)
-Value PORT_DESCR (\S+|.*?)
+Value NEIGHBOR_INTERFACE_DESCRIPTION (\S+|.*?)
 Value PVID (\d+|.*?)
 Value CAPABILITIES_SUPPORTED (.*?)
 Value CAPABILITIES (.*?)
@@ -24,7 +24,7 @@ LLDP
   ^\s+PortId\s+:\s${NEIGHBOR_PORTID}\s*$$
   ^\s+SysName\s+:\s${NEIGHBOR_SYSNAME}\s*$$
   ^\s+System\sDescr\s:\s${SYSTEM_DESCR}\s*$$
-  ^\s+PortDescr\s+:\s${PORT_DESCR}\s*$$
+  ^\s+PortDescr\s+:\s${NEIGHBOR_INTERFACE_DESCRIPTION}\s*$$
   ^\s+Pvid\s+:\s${PVID}\s*$$
   ^\s+System\s+Capabilities\s+Supported\s+:\s${CAPABILITIES_SUPPORTED}\s*$$
   ^\s+System\s+Capabilities\s+Enabled\s+:\s${CAPABILITIES}\s*$$
