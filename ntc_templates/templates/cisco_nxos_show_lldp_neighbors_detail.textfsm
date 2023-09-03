@@ -1,4 +1,4 @@
-Value Required NEIGHBOR (\S+)
+Value Required NEIGHBOR_NAME (\S+)
 Value Required LOCAL_INTERFACE (\S+)
 Value Required NEIGHBOR_INTERFACE (\S+)
 Value CHASSIS_ID (\w+?\.\w+?\.\w+?)
@@ -12,7 +12,7 @@ Start
   ^[Cc]hassis\s[idID]{2}\:\s${CHASSIS_ID}$$
   ^[Pp]ort\s[idID]{2}\:\s${NEIGHBOR_INTERFACE}$$
   ^[Ll]ocal\s[Pp]ort\s[idID]{2}\:\s${LOCAL_INTERFACE}$$
-  ^[Ss]ystem\s[Nn]ame\:\s${NEIGHBOR}$$
+  ^[Ss]ystem\s[Nn]ame\:\s${NEIGHBOR_NAME}$$
   ^[Ss]ystem\s[Dd]escription\:\s${SYSTEM_DESCRIPTION}$$
   ^[Ee]nabled\s[Cc]apabilities\:\s${CAPABILITIES}$$
   ^[Mm]anagement\s[Aa]ddress\:\s${MGMT_ADDRESS}$$

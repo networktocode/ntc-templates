@@ -1,4 +1,4 @@
-Value Required NEIGHBOR (\S+)
+Value Required NEIGHBOR_NAME (\S+)
 Value LOCAL_INTERFACE (\S+(?:\s\S+)?)
 Value CAPABILITIES ((?:\w\s)*\w)
 Value PLATFORM ((?:[IiPp]{2}\s)?\S+)
@@ -11,6 +11,6 @@ Start
   ^Time\s+source\s+is
 
 CDP
-  ^${NEIGHBOR}$$
+  ^${NEIGHBOR_NAME}$$
   ^\s*${LOCAL_INTERFACE}\s+\d+\s+${CAPABILITIES}\s+${PLATFORM}\s+${NEIGHBOR_INTERFACE}\s*$$ -> Record
-  ^${NEIGHBOR}\s+${LOCAL_INTERFACE}\s+\d+\s+${CAPABILITIES}\s+${PLATFORM}\s+${NEIGHBOR_INTERFACE}\s*$$ -> Record
+  ^${NEIGHBOR_NAME}\s+${LOCAL_INTERFACE}\s+\d+\s+${CAPABILITIES}\s+${PLATFORM}\s+${NEIGHBOR_INTERFACE}\s*$$ -> Record
