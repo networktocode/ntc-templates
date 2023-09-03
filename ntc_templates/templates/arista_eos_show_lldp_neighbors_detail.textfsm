@@ -1,7 +1,7 @@
 Value Required NEIGHBOR_NAME (\S+)
 Value CHASSIS_ID (.+?)
 Value MGMT_ADDRESS (.+?)
-Value PLATFORM_VERSION (.+?)
+Value NEIGHBOR_DESCRIPTION (.+?)
 Value NEIGHBOR_INTERFACE (.+?)
 Value Filldown LOCAL_INTERFACE (\S+?)
 Value Filldown NEIGHBOR_COUNT ([1-9]\d*)
@@ -15,7 +15,7 @@ Interface
   ^\s+Chassis ID\s+:\s+${CHASSIS_ID}$$
   ^\s+-\s+Port ID type -> Port_ID
   ^\s+-\s+\S+\s+Name:\s+\"${NEIGHBOR_NAME}\"
-  ^.*System Description:\s+\"${PLATFORM_VERSION}(\"|$$)
+  ^.*System Description:\s+\"${NEIGHBOR_DESCRIPTION}(\"|$$)
   ^\s+\S+\s+Address\s+:\s+${MGMT_ADDRESS}$$
   ^\s*$$ -> Record Start
 
