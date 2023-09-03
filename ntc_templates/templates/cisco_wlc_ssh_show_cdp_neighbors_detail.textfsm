@@ -1,4 +1,4 @@
-Value Required DESTINATION_HOST (\S+)
+Value Required CHASSIS_ID (\S+)
 Value MANAGEMENT_IP (\d+\.\d+\.\d+\.\d+|\w+\.\w+\.\w+)
 Value PLATFORM (.*)
 Value NEIGHBOR_INTERFACE (.*)
@@ -7,7 +7,7 @@ Value SOFTWARE_VERSION (.*$)
 Value CAPABILITIES (.*)
 
 Start
-  ^Device ID: ${DESTINATION_HOST}
+  ^Device ID: ${CHASSIS_ID}
   ^Entry address\(es\)\s*:\s* -> ParseIP
   ^Platform\s*:\s*${PLATFORM}\s*,\s*Capabilities\s*:\s*${CAPABILITIES}
   ^Interface: ${LOCAL_INTERFACE},  Port ID \(outgoing port\): ${NEIGHBOR_INTERFACE}

@@ -1,5 +1,5 @@
-Value Required DEST_HOST (.*)
-Value SYSNAME (.*)
+Value Required CHASSIS_ID (.*)
+Value NEIGHBOR_NAME (.*)
 Value MGMT_IP (.*)
 Value PLATFORM (.*)
 Value NEIGHBOR_INTERFACE (.*)
@@ -10,8 +10,8 @@ Value CAPABILITIES (.*[^\s])
 
 Start
   ^Device ID -> Continue.Record
-  ^Device ID:${DEST_HOST}
-  ^System Name: ${SYSNAME}
+  ^Device ID:${CHASSIS_ID}
+  ^System Name: ${NEIGHBOR_NAME}
   ^Interface address\(es\):\s*(^[1-9]\d*|$$) -> GetInterfaceIP
   ^Mgmt address\(es\): -> GetIP
   ^Platform: ${PLATFORM}, Capabilities: ${CAPABILITIES}\s*$$
