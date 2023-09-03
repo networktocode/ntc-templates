@@ -26,7 +26,8 @@ Example: Imagine the extra programming logic needed to consume structured data w
 | `BUNDLE_PROTOCOL_STATE`          | virtual interface protocol state for etherchannel or port-channel interfaces |
 | `BUNDLE_STATUS`                  | virtual interface status for etherchannel, LACP, LAG, or port-channel interfaces |
 | `CAPABILITIES`                   | often represents active/operational neighbor capabilities shared via CDP or LLDP |
-| `CAPABILITIES_SUPPORTED`         | often represents neighbor capabilities from CDP or LLDP |
+| `CAPABILITIES_SUPPORTED`         | often represents supported neighbor capabilities shared via CDP or LLDP |
+| `CHASSIS_ID`                     | often represents CDP or LLDP neighbor chassis ID |
 | `DESCRIPTION`                    | often used for port or interface descriptions |
 | `GATEWAY`                        | gateway address for a subnet |
 | `INTERFACE`                      | full word instead of IFACE, INTF, INTFC, etc |
