@@ -2,9 +2,9 @@ Value Required LOCAL_INTERFACE (\S+)
 Value NEIGHBOR_CHASSIS_TYPE (\S+)
 Value CHASSIS_ID ([a-f0-9]{6}-[a-f0-9]{6}|(?:[a-z0-9]{2}\s){5}[a-z0-9]{2}|\S+)
 Value PORT_TYPE (\S+)
-Value NEIGHBOR_PORTID (.*?)
+Value NEIGHBOR_INTERFACE (.*?)
 Value NEIGHBOR_NAME (.*?)
-Value SYSTEM_DESCR (.*?)
+Value NEIGHBOR_DESCRIPTION (.*?)
 Value NEIGHBOR_INTERFACE_DESCRIPTION (\S+|.*?)
 Value VLAN_ID (\d+|.*?)
 Value CAPABILITIES_SUPPORTED (.*?)
@@ -21,9 +21,9 @@ LLDP
   ^\s+ChassisType\s+:\s${NEIGHBOR_CHASSIS_TYPE}\s*$$
   ^\s+ChassisId\s+:\s${CHASSIS_ID}\s*$$
   ^\s+PortType\s+:\s${PORT_TYPE}\s*$$
-  ^\s+PortId\s+:\s${NEIGHBOR_PORTID}\s*$$
+  ^\s+PortId\s+:\s${NEIGHBOR_INTERFACE}\s*$$
   ^\s+SysName\s+:\s${NEIGHBOR_NAME}\s*$$
-  ^\s+System\sDescr\s:\s${SYSTEM_DESCR}\s*$$
+  ^\s+System\sDescr\s:\s${NEIGHBOR_DESCRIPTION}\s*$$
   ^\s+PortDescr\s+:\s${NEIGHBOR_INTERFACE_DESCRIPTION}\s*$$
 # Port VLAN ID
   ^\s+Pvid\s+:\s${VLAN_ID}\s*$$
