@@ -1,34 +1,34 @@
 ---
 parsed_sample:
   - capabilities: "Switch IGMP"
-    destination_host: "desktop-switch"
     local_interface: "GigabitEthernet1/0/16"
     management_ip: "10.1.1.2"
     neighbor_interface: "GigabitEthernet0/1"
+    neighbor_name: "desktop-switch"
     platform: "cisco WS-C2960-8TC-L"
     software_version: "Cisco IOS Software, C2960 Software (C2960-LANBASEK9-M), Version\
       \ 12.2(55)SE9, RELEASE SOFTWARE (fc1)"
   - capabilities: "Router Switch IGMP"
-    destination_host: "ce-router"
     local_interface: "GigabitEthernet1/0/22"
     management_ip: "10.1.1.1"
     neighbor_interface: "GigabitEthernet0/0"
+    neighbor_name: "ce-router"
     platform: "Cisco 3825"
     software_version: "Cisco IOS Software, 3800 Software (C3825-ADVENTERPRISEK9-M),\
       \ Version 12.4(24)T1, RELEASE SOFTWARE (fc3)"
   - capabilities: "Host"
-    destination_host: "server"
     local_interface: "GigabitEthernet1/0/19"
     management_ip: "10.1.1.232"
     neighbor_interface: "eth0"
+    neighbor_name: "server"
     platform: "VMware"
     software_version: "Linux 2.6.32-431.20.3.el6.x86_64 #1 SMP Fri Jun 6 18:30:54\
       \ EDT 2014 CCM:10.5.2.10000-5.i386"
   - capabilities: "Router Switch IGMP"
-    destination_host: "vIOS-L2-1"
     local_interface: "GigabitEthernet0/3"
     management_ip: ""
     neighbor_interface: "GigabitEthernet0/3"
+    neighbor_name: "vIOS-L2-1"
     platform: "Cisco "
     software_version: "Cisco IOS Software, vios_l2 Software (vios_l2-ADVENTERPRISEK9-M),\
       \ Version 15.2(CML_NIGHTLY_20150414)FLO_DSGS7, EARLY DEPLOYMENT DEVELOPMENT\

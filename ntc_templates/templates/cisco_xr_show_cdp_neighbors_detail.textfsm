@@ -1,5 +1,5 @@
-Value Required DEST_HOST (\S+)
-Value SYSNAME (.*)
+Value Required CHASSIS_ID (\S+)
+Value NEIGHBOR_NAME (.*)
 Value MGMT_IP (.*)
 Value PLATFORM (.*)
 Value NEIGHBOR_INTERFACE (.*)
@@ -8,8 +8,8 @@ Value VERSION (.*)
 Value CAPABILITIES (.*)
 
 Start
-  ^Device ID: ${DEST_HOST}
-  ^SysName : ${SYSNAME}
+  ^Device ID: ${CHASSIS_ID}
+  ^SysName : ${NEIGHBOR_NAME}
   ^Entry address\(es\): -> GetIP
   ^Platform: ${PLATFORM},  Capabilities: ${CAPABILITIES}
   ^Interface: ${LOCAL_INTERFACE}

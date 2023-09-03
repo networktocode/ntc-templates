@@ -1,10 +1,10 @@
 ---
 parsed_sample:
   - capabilities: "Switch IGMP"
-    destination_host: "switchxxxxx"
     local_interface: "GigabitEthernet0/3"
     management_ip: "1.1.1.1"
     neighbor_interface: "GigabitEthernet0/8"
+    neighbor_name: "switchxxxxx"
     platform: "cisco WS-C3560X-24P"
     software_version: "Cisco IOS Software, C3560E Software (C3560E-UNIVERSALK9-M),\
       \ Version 12.2(55)SE10, RELEASE SOFTWARE (fc2)"
