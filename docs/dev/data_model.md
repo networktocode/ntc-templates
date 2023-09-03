@@ -23,6 +23,7 @@ Example: Imagine the extra programming logic needed to consume structured data w
 | `BIA`                            | use this if the template already has MAC_ADDRESS in use for the active MAC address |
 | `CAPABILITIES`                   | often represents active/operational neighbor capabilities shared via CDP or LLDP |
 | `CAPABILITIES_SUPPORTED`         | often represents supported neighbor capabilities shared via CDP or LLDP |
+| `CHASSIS_ID`                     | often represents CDP or LLDP neighbor chassis ID |
 | `DESCRIPTION`                    | often used for port or interface descriptions |
 | `GATEWAY`                        | gateway address for a subnet |
 | `INTERFACE`                      | full "interface" word instead of IFACE, INTF, INTFC, etc |
