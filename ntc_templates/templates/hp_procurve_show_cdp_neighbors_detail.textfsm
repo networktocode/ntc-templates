@@ -1,6 +1,6 @@
 Value Required LOCAL_INTERFACE (.+?)
 Value CHASSIS_ID (.+?)
-Value NEIGHBOR_ADDRESS (.+?)
+Value MGMT_ADDRESS (.+?)
 Value PLATFORM (.+?)
 Value CAPABILITIES (.+?)
 Value NEIGHBOR_INTERFACE (.+?)
@@ -11,7 +11,7 @@ Start
   ^\s*Port\s*:\s*${LOCAL_INTERFACE}\s*$$
   ^\s*Device\s+ID\s*:\s*${CHASSIS_ID}\s*$$
   ^\s*Address\s+Type
-  ^\s*Address\s*:\s*${NEIGHBOR_ADDRESS}\s*$$
+  ^\s*Address\s*:\s*${MGMT_ADDRESS}\s*$$
   ^\s*Platform\s*:\s*${PLATFORM}\s*$$
   ^\s*Capability\s*:\s*${CAPABILITIES}\s*$$
   ^\s*Device\s+Port\s*:\s*${NEIGHBOR_INTERFACE}\s*$$

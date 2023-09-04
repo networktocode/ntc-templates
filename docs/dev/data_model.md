@@ -37,7 +37,8 @@ Example: Imagine the extra programming logic needed to consume structured data w
 | `LOCAL_INTERFACE`                | often represents CDP or LLDP local interface or port |
 | `LOCAL_IP_ADDRESS`               | local IP address in the case of First Hop Redundancy Protocols (FHRP) |
 | `MAC_ADDRESS`                    | instead of MAC or MACADDR |
-| `MGMT_IP_ADDRESS`                | instead of MGMT_IP or MGMT_ADDRESS or MANAGEMENT_IP or REMOTE_MANAGEMENT_ADDRESS |
+| `MGMT_ADDRESS`                   | management address, used when data could be an Ethernet MAC address or an IP address (ex: CDP or LLDP templates) |
+| `MGMT_IP_ADDRESS`                | use when management address data is exclusively IP addresses |
 | `NEIGHBOR_DESCRIPTION`           | often represents CDP or LLDP neighbor or system name description |
 | `NEIGHBOR_ID`                    | for router IDs remote to the system being parsed |
 | `NEIGHBOR_INTERFACE`             | often represents CDP or LLDP neighbor (remote host) interface or port, but sometimes descriptions that contain interface names |
