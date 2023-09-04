@@ -3,7 +3,7 @@ parsed_sample:
   - capabilities: "Router Switch IGMP"
     chassis_id: "AAA.pizza.com(FXS1828Q2JH)"
     local_interface: "GigabitEthernet0/0/2"
-    management_ip: "1.2.3.4"
+    mgmt_address: "1.2.3.4"
     neighbor_description: "Cisco Nexus Operating System (NX-OS) Software, Version\
       \ 6.2(10)"
     neighbor_interface: "Ethernet1/15"
@@ -11,7 +11,7 @@ parsed_sample:
   - capabilities: "Router Switch IGMP"
     chassis_id: "BBB.beer.com"
     local_interface: "GigabitEthernet0/0/7"
-    management_ip: "172.5.6.7"
+    mgmt_address: "172.5.6.7"
     neighbor_description: "Cisco IOS Software, C3750 Software (C3750-IPSERVICESK9-M),\
       \ Version 12.2(55)SE11, RELEASE SOFTWARE (fc3) Technical Support: http://www.cisco.com/techsupport\
       \ Copyright (c) 1986-2016 by Cisco Systems, Inc. Compiled Wed 17-Aug-16 13:28\
@@ -21,7 +21,7 @@ parsed_sample:
   - capabilities: "Router Switch IGMP"
     chassis_id: "CCC.cake.com"
     local_interface: "GigabitEthernet0/0/8"
-    management_ip: "172.9.10.11"
+    mgmt_address: "172.9.10.11"
     neighbor_description: "Cisco IOS Software, C3750 Software (C3750-IPSERVICESK9-M),\
       \ Version 12.2(55)SE11, RELEASE SOFTWARE (fc3) Technical Support: http://www.cisco.com/techsupport\
       \ Copyright (c) 1986-2016 by Cisco Systems, Inc. Compiled Wed 17-Aug-16 13:28\

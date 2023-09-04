@@ -2,7 +2,7 @@
 parsed_sample:
   - capabilities: "Switch IGMP"
     local_interface: "GigabitEthernet0/3"
-    management_ip: "1.1.1.1"
+    mgmt_address: "1.1.1.1"
     neighbor_description: "Cisco IOS Software, C3560E Software (C3560E-UNIVERSALK9-M),\
       \ Version 12.2(55)SE10, RELEASE SOFTWARE (fc2)"
     neighbor_interface: "GigabitEthernet0/8"

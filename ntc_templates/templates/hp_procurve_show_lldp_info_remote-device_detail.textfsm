@@ -9,7 +9,7 @@ Value NEIGHBOR_INTERFACE_DESCRIPTION (\S+|.*?)
 Value VLAN_ID (\d+|.*?)
 Value CAPABILITIES_SUPPORTED (.*?)
 Value CAPABILITIES (.*?)
-Value REMOTE_MANAGEMENT_ADDRESS (\S+|.*?)
+Value MGMT_ADDRESS (\S+|.*?)
 
 Start
   ^\s*$$
@@ -31,7 +31,7 @@ LLDP
   ^\s+System\s+Capabilities\s+Enabled\s+:\s${CAPABILITIES}\s*$$
   ^\s+Remote\s+Management\s+Address\s*$$
   ^\s+Type.*$$
-  ^\s+Address\s:\s${REMOTE_MANAGEMENT_ADDRESS}
+  ^\s+Address\s:\s${MGMT_ADDRESS}
   ^\s+Poe\s+Plus\s+Information\s+Detail\s*$$
   ^\s+Poe\s+Device\s+Type.*
   ^\s+Power\s+Source.*

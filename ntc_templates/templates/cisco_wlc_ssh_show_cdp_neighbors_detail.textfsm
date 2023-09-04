@@ -1,5 +1,5 @@
 Value Required CHASSIS_ID (\S+)
-Value MANAGEMENT_IP (\d+\.\d+\.\d+\.\d+|\w+\.\w+\.\w+)
+Value MGMT_ADDRESS (\d+\.\d+\.\d+\.\d+|\w+\.\w+\.\w+)
 Value PLATFORM (.*)
 Value NEIGHBOR_INTERFACE (.*)
 Value LOCAL_INTERFACE (.*)
@@ -14,7 +14,7 @@ Start
   ^Version : -> GetVersion
 
 ParseIP
-  ^.*IP address: ${MANAGEMENT_IP} -> Start
+  ^.*IP address: ${MGMT_ADDRESS} -> Start
   ^Platform\s*:\s*${PLATFORM}\s*,\s*Capabilities\s*:\s*${CAPABILITIES} -> Start
   ^.* -> Start
 

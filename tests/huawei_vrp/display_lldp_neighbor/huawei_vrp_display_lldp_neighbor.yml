@@ -3,8 +3,8 @@ parsed_sample:
   - capabilities: "bridge"
     chassis_id: "f55f-c2c5-e180"
     local_interface: "GigabitEthernet0/0/1"
-    management_ip: "192.168.0.240"
     manufacturer: "Cisco Systems, Inc."
+    mgmt_address: "192.168.0.240"
     neighbor_description:
       - "Cisco IOS Software, C2960S Software (C2960S-UNIVERSALK9-M), Version 12.2(55)SE7,\
         \ RELEASE SOFTWARE (fc1)"
@@ -20,8 +20,8 @@ parsed_sample:
   - capabilities: "bridge"
     chassis_id: "f41f-c2c5-e180"
     local_interface: "GigabitEthernet0/0/8"
-    management_ip: "192.168.0.241"
     manufacturer: "Cisco Systems, Inc."
+    mgmt_address: "192.168.0.241"
     neighbor_description:
       - "Cisco IOS Software, C2960S Software (C2960S-UNIVERSALK9-M), Version 12.2(55)SE7,\
         \ RELEASE SOFTWARE (fc1)"
