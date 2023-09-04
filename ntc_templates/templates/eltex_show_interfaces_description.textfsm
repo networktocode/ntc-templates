@@ -2,18 +2,72 @@ Value PORT ((?!Port|Ch|-)\S+)
 Value PORT_MODE (Trunk|Access(?:\s*\(\d+\))?|Customer(?:\s*\(\d+\))?)
 Value ADMIN_STATE (Up|Down)
 Value LINK_STATE (Up|Down|Not Present)
-Value DESCRIPTION (\S.*?)
+Value DESCRIPTION (.*?)
 
 Start
-  ^Port\s+Description\s*$$ -> Column2
-  ^Port\s+State\s+State\s+Description\s*$$ -> Column4
-  ^Port\s+Port\s+Mode\s+\(VLAN\)\s+State\s+State\s+Description\s*$$ -> Column5
+  ^\s*Admin\s+Link\s*$$
+  ^\s*Port\s+Description\s*$$ -> Port2
+  ^\s*Port\s+State\s+State\s+Description\s*$$ -> Port4
+  ^\s*Port\s+Port\s+Mode\s+\(VLAN\)\s+State\s+State\s+Description\s*$$ -> Port5
+  ^\s*Ch\s+Description\s*$$ -> Ch2
+  ^\s*Ch\s+State\s+State\s+Description\s*$$ -> Ch4
+  ^\s*Ch\s+Port\s+Mode\s+\(VLAN\)\s+State\s+State\s+Description\s*$$ -> Ch5
+  ^\s*Vlan\s+Admin\s+State\s+Link\s+State\s+Description\s*$$ -> Vlan
+  ^\s*Loopback\s+State\s+State\s+Description\s*$$ -> Loopback
+  ^\s*Oob-eth\s+State\s+State\s+Description\s*$$ -> Oob
+  ^\s*$$
+  ^. -> Error
 
-Column2
-  ^\s*${PORT}\s*(\s+${DESCRIPTION})?\s*$$ -> Record Column2
+Port2
+  ^(?:\s*-+)+\s*$$
+  ^\s*${PORT}(?:\s+${DESCRIPTION})?\s*$$ -> Record
+  ^\s*$$ -> Start
+  ^. -> Error
 
-Column4
-  ^\s*${PORT}\s+${ADMIN_STATE}\s+${LINK_STATE}(?:\s+${DESCRIPTION})?\s*$$ -> Record Column4
+Port4
+  ^(?:\s*-+)+\s*$$
+  ^\s*${PORT}\s+${ADMIN_STATE}\s+${LINK_STATE}(?:\s+${DESCRIPTION})?\s*$$ -> Record
+  ^\s*$$ -> Start
+  ^. -> Error
 
-Column5
-  ^\s*${PORT}\s+(?:${PORT_MODE}\s+)?${ADMIN_STATE}\s+${LINK_STATE}(?:\s+${DESCRIPTION})?\s*$$ -> Record Column5
+Port5
+  ^(?:\s*-+)+\s*$$
+  ^\s*${PORT}(?:\s+${PORT_MODE})?\s+${ADMIN_STATE}\s+${LINK_STATE}(?:\s+${DESCRIPTION})?\s*$$ -> Record
+  ^\s*$$ -> Start
+  ^. -> Error
+
+Ch2
+  ^(?:\s*-+)+\s*$$
+  ^\s*${PORT}(?:\s+${DESCRIPTION})?\s*$$ -> Record
+  ^\s*$$ -> Start
+  ^. -> Error
+
+Ch4
+  ^(?:\s*-+)+\s*$$
+  ^\s*${PORT}\s+${ADMIN_STATE}\s+${LINK_STATE}(?:\s+${DESCRIPTION})?\s*$$ -> Record
+  ^\s*$$ -> Start
+  ^. -> Error
+
+Ch5
+  ^(?:\s*-+)+\s*$$
+  ^\s*${PORT}(?:\s+${PORT_MODE})?\s+${ADMIN_STATE}\s+${LINK_STATE}(?:\s+${DESCRIPTION})?\s*$$ -> Record
+  ^\s*$$ -> Start
+  ^. -> Error
+
+Vlan
+  ^(?:\s*-+)+\s*$$
+  ^\s*${PORT}\s+${ADMIN_STATE}\s+${LINK_STATE}(?:\s+${DESCRIPTION})?\s*$$ -> Record
+  ^\s*$$ -> Start
+  ^. -> Error
+
+Loopback
+  ^(?:\s*-+)+\s*$$
+  ^\s*${PORT}\s+${ADMIN_STATE}\s+${LINK_STATE}(?:\s+${DESCRIPTION})?\s*$$ -> Record
+  ^\s*$$ -> Start
+  ^. -> Error
+
+Oob
+  ^(?:\s*-+)+\s*$$
+  ^\s*${PORT}\s+${ADMIN_STATE}\s+${LINK_STATE}(?:\s+${DESCRIPTION})?\s*$$ -> Record
+  ^\s*$$ -> Start
+  ^. -> Error
