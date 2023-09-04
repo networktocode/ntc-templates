@@ -4,7 +4,7 @@ Value MGMT_ADDRESS (.*)
 Value PLATFORM (.*)
 Value NEIGHBOR_INTERFACE (.*)
 Value LOCAL_INTERFACE (.*)
-Value VERSION (.*)
+Value NEIGHBOR_DESCRIPTION (.*)
 Value CAPABILITIES (.*)
 
 Start
@@ -20,5 +20,5 @@ GetIP
   ^.*IP.+address: ${MGMT_ADDRESS} -> Start
 
 GetVersion
-  ^${VERSION} -> Record Start
+  ^${NEIGHBOR_DESCRIPTION} -> Record Start
 

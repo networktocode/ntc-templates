@@ -4,7 +4,7 @@ Value MGMT_ADDRESS (.*)
 Value PLATFORM (.*)
 Value NEIGHBOR_INTERFACE (.*)
 Value LOCAL_INTERFACE (.*)
-Value VERSION (.*)
+Value NEIGHBOR_DESCRIPTION (.*)
 Value INTERFACE_IP (.*)
 Value CAPABILITIES (.*[^\s])
 
@@ -25,4 +25,4 @@ GetInterfaceIP
   ^.*IP.+Address: ${INTERFACE_IP} -> Start
 
 GetVersion
-  ^${VERSION} -> Start
+  ^${NEIGHBOR_DESCRIPTION} -> Start
