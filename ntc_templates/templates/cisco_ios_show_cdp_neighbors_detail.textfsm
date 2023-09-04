@@ -1,5 +1,5 @@
 Value Required NEIGHBOR_NAME (\S+)
-Value MANAGEMENT_IP (\d+\.\d+\.\d+\.\d+|\w+\.\w+\.\w+)
+Value MGMT_ADDRESS (\d+\.\d+\.\d+\.\d+|\w+\.\w+\.\w+)
 Value PLATFORM (.*)
 Value NEIGHBOR_INTERFACE (.*)
 Value LOCAL_INTERFACE (.*)
@@ -18,7 +18,7 @@ Start
   ^Time\s+source\s+is
 
 ParseIP
-  ^.*IP address: ${MANAGEMENT_IP} -> Start
+  ^.*IP address: ${MGMT_ADDRESS} -> Start
   ^Platform\s*:\s*${PLATFORM}\s*,\s*Capabilities\s*:\s*${CAPABILITIES}\s+$$ -> Start
   ^Platform\s*:\s*${PLATFORM}\s*,\s*Capabilities\s*:\s*${CAPABILITIES}$$ -> Start
   ^.* -> Start

@@ -4,7 +4,7 @@ Value NEIGHBOR_NAME (\S+)
 Value NEIGHBOR_DESCRIPTION (.+)
 Value CAPABILITIES_SUPPORTED (.+)
 Value CAPABILITIES (.+)
-Value MGMT_ADDR (\S+)
+Value MGMT_ADDRESS (\S+)
 Value NEIGHBOR_PORT_ID (\S+)
 Value NEIGHBOR_INTERFACE (\S+)
 
@@ -16,7 +16,7 @@ Start
   ^Neighbor\s*Chassis-Description\s*:\s*${NEIGHBOR_DESCRIPTION}
   ^Neighbor\s+System-Description\s*:\s*${NEIGHBOR_DESCRIPTION}
   ^Neighbor\s*Chassis-ID\s*:\s*${CHASSIS_ID}
-  ^Neighbor\s*Management-Address\s*:\s*${MGMT_ADDR}
+  ^Neighbor\s*Management-Address\s*:\s*${MGMT_ADDRESS}
   ^Chassis\s*Capabilities\s*Available\s*:\s*${CAPABILITIES_SUPPORTED}
   ^Chassis\s*Capabilities\s*Enabled\s*:\s*${CAPABILITIES}
   ^Neighbor\s*Port-ID\s*:\s*${NEIGHBOR_PORT_ID}

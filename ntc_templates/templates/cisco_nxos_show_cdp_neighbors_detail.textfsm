@@ -1,6 +1,6 @@
 Value Required CHASSIS_ID (.*)
 Value NEIGHBOR_NAME (.*)
-Value MGMT_IP (.*)
+Value MGMT_ADDRESS (.*)
 Value PLATFORM (.*)
 Value NEIGHBOR_INTERFACE (.*)
 Value LOCAL_INTERFACE (.*)
@@ -19,7 +19,7 @@ Start
   ^Version: -> GetVersion
 
 GetIP
-  ^.*IP.+Address: ${MGMT_IP} -> Start
+  ^.*IP.+Address: ${MGMT_ADDRESS} -> Start
 
 GetInterfaceIP
   ^.*IP.+Address: ${INTERFACE_IP} -> Start
