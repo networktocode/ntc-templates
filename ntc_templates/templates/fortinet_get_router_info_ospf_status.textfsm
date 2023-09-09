@@ -1,5 +1,5 @@
 Value PROCESS_NAME (.*)
-Value ROUTING_PROCESS_ID (\S+)
+Value PROCESS_ID (\S+)
 Value PROCESS_STATUS (.+)
 Value ATTACHED_AREAS_NUMBER (\d+)
 Value List ATTACHED_AREA (.*)
