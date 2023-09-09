@@ -9,7 +9,7 @@ Value List ATTACHED_AREA_FULLY_ADJACENT_NEIGHBORS (\d+)
 
 Start
   ^\s*Routing\s+Process\s+\".*\".* -> Continue.Record
-  ^\s*Routing\s+Process\s+\"${ROUTING_PROCESS_NAME}\"\s+with\s+ID\s+${ROUTING_PROCESS_ID}\s*$$
+  ^\s*Routing\s+Process\s+\"${PROCESS_NAME}\"\s+with\s+ID\s+${PROCESS_ID}\s*$$
   ^\s*Process\s+is\s+${PROCESS_STATUS}\s*$$
   ^\s*Process\s+bound.*$$
   ^\s*Conforms\s+to.*$$
