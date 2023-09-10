@@ -1,74 +1,89 @@
 ---
 parsed_sample:
-  - prefix: "0.0.0.0/0"
+  - interface:
+      - "Port-channel1.1"
+    ip_address: "0.0.0.0"
     nexthop:
       - "10.255.1.1"
-    interface:
-      - "Port-channel1.1"
-  - prefix: "0.0.0.0/8"
+    prefix_length: "0"
+  - interface: []
+    ip_address: "0.0.0.0"
     nexthop:
       - "drop"
-    interface: []
-  - prefix: "0.0.0.0/32"
+    prefix_length: "8"
+  - interface: []
+    ip_address: "0.0.0.0"
     nexthop:
       - "receive"
-    interface: []
-  - prefix: "10.180.195.0/32"
+    prefix_length: "32"
+  - interface:
+      - "GigabitEthernet1/0/1"
+      - "GigabitEthernet1/0/2"
+    ip_address: "10.180.195.0"
     nexthop:
       - "10.180.101.5"
       - "10.180.101.10"
-    interface:
-      - "GigabitEthernet1/0/1"
-      - "GigabitEthernet1/0/2"
-  - prefix: "10.255.0.0/30"
+    prefix_length: "32"
+  - interface:
+      - "Port-channel1.1"
+    ip_address: "10.255.0.0"
     nexthop:
       - "10.255.1.1"
-    interface:
+    prefix_length: "30"
+  - interface:
       - "Port-channel1.1"
-  - prefix: "10.255.1.0/24"
+    ip_address: "10.255.1.0"
     nexthop:
       - "attached"
-    interface:
+    prefix_length: "24"
+  - interface:
       - "Port-channel1.1"
-  - prefix: "10.255.1.0/32"
+    ip_address: "10.255.1.0"
     nexthop:
       - "receive"
-    interface:
+    prefix_length: "32"
+  - interface:
       - "Port-channel1.1"
-  - prefix: "10.255.1.1/32"
+    ip_address: "10.255.1.1"
     nexthop:
       - "attached"
-    interface:
+    prefix_length: "32"
+  - interface:
       - "Port-channel1.1"
-  - prefix: "10.255.1.11/32"
+    ip_address: "10.255.1.11"
     nexthop:
       - "receive"
-    interface:
-      - "Port-channel1.1"
-  - prefix: "10.180.163.0/32"
-    nexthop:
-      - "receive"
-    interface:
+    prefix_length: "32"
+  - interface:
       - "Loopback180"
-  - prefix: "10.180.163.129/32"
+    ip_address: "10.180.163.0"
     nexthop:
       - "receive"
-    interface:
+    prefix_length: "32"
+  - interface:
       - "Vlan1831"
-  - prefix: "10.180.163.133/32"
+    ip_address: "10.180.163.129"
+    nexthop:
+      - "receive"
+    prefix_length: "32"
+  - interface:
+      - "Vlan1831"
+    ip_address: "10.180.163.133"
     nexthop:
       - "attached"
-    interface:
-      - "Vlan1831"
-  - prefix: "127.0.0.0/8"
+    prefix_length: "32"
+  - interface: []
+    ip_address: "127.0.0.0"
     nexthop:
       - "drop"
-    interface: []
-  - prefix: "240.0.0.0/4"
+    prefix_length: "8"
+  - interface: []
+    ip_address: "240.0.0.0"
     nexthop:
       - "drop"
-    interface: []
-  - prefix: "255.255.255.255/32"
+    prefix_length: "4"
+  - interface: []
+    ip_address: "255.255.255.255"
     nexthop:
       - "receive"
-    interface: []
+    prefix_length: "32"

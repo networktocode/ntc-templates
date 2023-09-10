@@ -2,947 +2,947 @@
 parsed_sample:
   - inbound_acl: ""
     interface: "GigabitEthernet0/0/0"
+    ip_address: []
     ip_helper: []
-    ipaddr: []
     link_status: "administratively down"
-    mask: []
     mtu: ""
     outgoing_acl: ""
+    prefix_length: []
     protocol_status: "down"
     vrf: ""
   - inbound_acl: ""
     interface: "GigabitEthernet0/0/1"
+    ip_address: []
     ip_helper: []
-    ipaddr: []
     link_status: "administratively down"
-    mask: []
     mtu: ""
     outgoing_acl: ""
+    prefix_length: []
     protocol_status: "down"
     vrf: ""
   - inbound_acl: ""
     interface: "GigabitEthernet0/0/2"
+    ip_address: []
     ip_helper: []
-    ipaddr: []
     link_status: "administratively down"
-    mask: []
     mtu: ""
     outgoing_acl: ""
+    prefix_length: []
     protocol_status: "down"
     vrf: ""
   - inbound_acl: ""
     interface: "GigabitEthernet0/0/3"
+    ip_address: []
     ip_helper: []
-    ipaddr: []
     link_status: "administratively down"
-    mask: []
     mtu: ""
     outgoing_acl: ""
+    prefix_length: []
     protocol_status: "down"
     vrf: ""
   - inbound_acl: ""
     interface: "GigabitEthernet0/0/4"
+    ip_address: []
     ip_helper: []
-    ipaddr: []
     link_status: "administratively down"
-    mask: []
     mtu: ""
     outgoing_acl: ""
+    prefix_length: []
     protocol_status: "down"
     vrf: ""
   - inbound_acl: ""
     interface: "GigabitEthernet0/0/5"
+    ip_address: []
     ip_helper: []
-    ipaddr: []
     link_status: "administratively down"
-    mask: []
     mtu: ""
     outgoing_acl: ""
+    prefix_length: []
     protocol_status: "down"
     vrf: ""
   - inbound_acl: ""
     interface: "TenGigabitEthernet0/1/0"
+    ip_address: []
     ip_helper: []
-    ipaddr: []
     link_status: "up"
-    mask: []
     mtu: ""
     outgoing_acl: ""
+    prefix_length: []
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
     interface: "TenGigabitEthernet0/2/0"
+    ip_address: []
     ip_helper: []
-    ipaddr: []
     link_status: "up"
-    mask: []
     mtu: ""
     outgoing_acl: ""
+    prefix_length: []
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
     interface: "TenGigabitEthernet0/3/0"
+    ip_address: []
     ip_helper: []
-    ipaddr: []
     link_status: "up"
-    mask: []
     mtu: ""
     outgoing_acl: ""
+    prefix_length: []
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
     interface: "GigabitEthernet0"
-    ip_helper: []
-    ipaddr:
+    ip_address:
       - "172.21.2.3"
+    ip_helper: []
     link_status: "up"
-    mask:
-      - "24"
     mtu: "1500"
     outgoing_acl: ""
+    prefix_length:
+      - "24"
     protocol_status: "up"
     vrf: "Mgmt-intf"
   - inbound_acl: ""
     interface: "Loopback0"
-    ip_helper: []
-    ipaddr:
+    ip_address:
       - "88.16.255.249"
+    ip_helper: []
     link_status: "up"
-    mask:
-      - "32"
     mtu: "1514"
     outgoing_acl: ""
+    prefix_length:
+      - "32"
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
     interface: "Loopback1"
-    ip_helper: []
-    ipaddr:
+    ip_address:
       - "88.16.255.1"
+    ip_helper: []
     link_status: "up"
-    mask:
-      - "32"
     mtu: "1514"
     outgoing_acl: ""
+    prefix_length:
+      - "32"
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
     interface: "Loopback505"
-    ip_helper: []
-    ipaddr:
+    ip_address:
       - "192.168.100.100"
+    ip_helper: []
     link_status: "up"
-    mask:
-      - "32"
     mtu: "1514"
     outgoing_acl: ""
+    prefix_length:
+      - "32"
     protocol_status: "up"
     vrf: "DATA"
   - inbound_acl: ""
     interface: "Loopback506"
-    ip_helper: []
-    ipaddr:
+    ip_address:
       - "192.168.200.100"
+    ip_helper: []
     link_status: "up"
-    mask:
-      - "32"
     mtu: "1514"
     outgoing_acl: ""
+    prefix_length:
+      - "32"
     protocol_status: "up"
     vrf: "SIG"
   - inbound_acl: ""
     interface: "Loopback1001"
-    ip_helper: []
-    ipaddr:
+    ip_address:
       - "172.18.0.24"
+    ip_helper: []
     link_status: "up"
-    mask:
-      - "32"
     mtu: "1514"
     outgoing_acl: ""
+    prefix_length:
+      - "32"
     protocol_status: "up"
     vrf: "MYCOMPANY"
   - inbound_acl: ""
     interface: "Loopback5999"
-    ip_helper: []
-    ipaddr:
+    ip_address:
       - "172.22.255.255"
+    ip_helper: []
     link_status: "up"
-    mask:
-      - "32"
     mtu: "1514"
     outgoing_acl: ""
+    prefix_length:
+      - "32"
     protocol_status: "up"
     vrf: "VRF_WL_SIG"
   - inbound_acl: ""
     interface: "Loopback12345"
-    ip_helper: []
-    ipaddr:
+    ip_address:
       - "88.16.245.1"
+    ip_helper: []
     link_status: "up"
-    mask:
-      - "32"
     mtu: "1514"
     outgoing_acl: ""
+    prefix_length:
+      - "32"
     protocol_status: "up"
     vrf: "7650C2814C784BACBBE23BB30B47D3A1"
   - inbound_acl: ""
     interface: "Port-channel1"
+    ip_address: []
     ip_helper: []
-    ipaddr: []
     link_status: "up"
-    mask: []
     mtu: ""
     outgoing_acl: ""
+    prefix_length: []
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
     interface: "Port-channel1.10"
-    ip_helper: []
-    ipaddr:
+    ip_address:
       - "172.18.16.42"
+    ip_helper: []
     link_status: "up"
-    mask:
-      - "29"
     mtu: "9000"
     outgoing_acl: ""
+    prefix_length:
+      - "29"
     protocol_status: "up"
     vrf: "MYCOMPANY"
   - inbound_acl: ""
     interface: "Port-channel1.102"
-    ip_helper: []
-    ipaddr:
+    ip_address:
       - "88.16.254.61"
+    ip_helper: []
     link_status: "up"
-    mask:
-      - "31"
     mtu: "8000"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
     interface: "Port-channel1.105"
-    ip_helper: []
-    ipaddr:
+    ip_address:
       - "172.20.0.149"
+    ip_helper: []
     link_status: "up"
-    mask:
-      - "30"
     mtu: "1500"
     outgoing_acl: ""
+    prefix_length:
+      - "30"
     protocol_status: "up"
     vrf: "MYCOMPANY"
   - inbound_acl: ""
     interface: "Port-channel1.106"
-    ip_helper: []
-    ipaddr:
+    ip_address:
       - "88.16.254.65"
+    ip_helper: []
     link_status: "up"
-    mask:
-      - "31"
     mtu: "8000"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
     interface: "Port-channel1.107"
-    ip_helper: []
-    ipaddr:
+    ip_address:
       - "172.20.2.1"
+    ip_helper: []
     link_status: "up"
-    mask:
-      - "30"
     mtu: "1500"
     outgoing_acl: ""
+    prefix_length:
+      - "30"
     protocol_status: "up"
     vrf: "MYCOMPANY"
   - inbound_acl: ""
     interface: "Port-channel1.501"
-    ip_helper: []
-    ipaddr:
+    ip_address:
       - "169.254.0.114"
+    ip_helper: []
     link_status: "up"
-    mask:
-      - "29"
     mtu: "9000"
     outgoing_acl: ""
+    prefix_length:
+      - "29"
     protocol_status: "up"
     vrf: "C617529B810A48F6AD40FEBCB163B286"
   - inbound_acl: ""
     interface: "Port-channel1.502"
+    ip_address: []
     ip_helper: []
-    ipaddr: []
     link_status: "deleted"
-    mask: []
     mtu: ""
     outgoing_acl: ""
+    prefix_length: []
     protocol_status: "down"
     vrf: ""
   - inbound_acl: ""
     interface: "Port-channel1.504"
-    ip_helper: []
-    ipaddr:
+    ip_address:
       - "169.254.0.1"
+    ip_helper: []
     link_status: "up"
-    mask:
-      - "30"
     mtu: "9000"
     outgoing_acl: ""
+    prefix_length:
+      - "30"
     protocol_status: "up"
     vrf: "7650C2814C784BACBBE23BB30B47D3A1"
   - inbound_acl: ""
     interface: "Port-channel1.523"
+    ip_address: []
     ip_helper: []
-    ipaddr: []
     link_status: "deleted"
-    mask: []
     mtu: ""
     outgoing_acl: ""
+    prefix_length: []
     protocol_status: "down"
     vrf: ""
   - inbound_acl: ""
     interface: "Port-channel1.524"
+    ip_address: []
     ip_helper: []
-    ipaddr: []
     link_status: "deleted"
-    mask: []
     mtu: ""
     outgoing_acl: ""
+    prefix_length: []
     protocol_status: "down"
     vrf: ""
   - inbound_acl: ""
     interface: "Port-channel1.527"
+    ip_address: []
     ip_helper: []
-    ipaddr: []
     link_status: "deleted"
-    mask: []
     mtu: ""
     outgoing_acl: ""
+    prefix_length: []
     protocol_status: "down"
     vrf: ""
   - inbound_acl: ""
     interface: "Port-channel1.528"
+    ip_address: []
     ip_helper: []
-    ipaddr: []
     link_status: "deleted"
-    mask: []
     mtu: ""
     outgoing_acl: ""
+    prefix_length: []
     protocol_status: "down"
     vrf: ""
   - inbound_acl: ""
     interface: "Port-channel1.533"
+    ip_address: []
     ip_helper: []
-    ipaddr: []
     link_status: "deleted"
-    mask: []
     mtu: ""
     outgoing_acl: ""
+    prefix_length: []
     protocol_status: "down"
     vrf: ""
   - inbound_acl: ""
     interface: "Port-channel1.535"
-    ip_helper: []
-    ipaddr:
+    ip_address:
       - "169.254.0.1"
+    ip_helper: []
     link_status: "up"
-    mask:
-      - "30"
     mtu: "9000"
     outgoing_acl: ""
+    prefix_length:
+      - "30"
     protocol_status: "up"
     vrf: "6281BBEF467947E4949F989BBC891138"
   - inbound_acl: ""
     interface: "Port-channel1.536"
+    ip_address: []
     ip_helper: []
-    ipaddr: []
     link_status: "deleted"
-    mask: []
     mtu: ""
     outgoing_acl: ""
+    prefix_length: []
     protocol_status: "down"
     vrf: ""
   - inbound_acl: ""
     interface: "Port-channel1.537"
+    ip_address: []
     ip_helper: []
-    ipaddr: []
     link_status: "deleted"
-    mask: []
     mtu: ""
     outgoing_acl: ""
+    prefix_length: []
     protocol_status: "down"
     vrf: ""
   - inbound_acl: ""
     interface: "Port-channel1.538"
+    ip_address: []
     ip_helper: []
-    ipaddr: []
     link_status: "deleted"
-    mask: []
     mtu: ""
     outgoing_acl: ""
+    prefix_length: []
     protocol_status: "down"
     vrf: ""
   - inbound_acl: ""
     interface: "Port-channel1.601"
-    ip_helper: []
-    ipaddr:
+    ip_address:
       - "169.254.0.50"
+    ip_helper: []
     link_status: "up"
-    mask:
-      - "29"
     mtu: "9000"
     outgoing_acl: ""
+    prefix_length:
+      - "29"
     protocol_status: "up"
     vrf: "C617529B810A48F6AD40FEBCB163B286"
   - inbound_acl: ""
     interface: "Port-channel1.602"
+    ip_address: []
     ip_helper: []
-    ipaddr: []
     link_status: "deleted"
-    mask: []
     mtu: ""
     outgoing_acl: ""
+    prefix_length: []
     protocol_status: "down"
     vrf: ""
   - inbound_acl: ""
     interface: "Port-channel1.614"
+    ip_address: []
     ip_helper: []
-    ipaddr: []
     link_status: "deleted"
-    mask: []
     mtu: ""
     outgoing_acl: ""
+    prefix_length: []
     protocol_status: "down"
     vrf: ""
   - inbound_acl: ""
     interface: "Port-channel1.615"
+    ip_address: []
     ip_helper: []
-    ipaddr: []
     link_status: "deleted"
-    mask: []
     mtu: ""
     outgoing_acl: ""
+    prefix_length: []
     protocol_status: "down"
     vrf: ""
   - inbound_acl: ""
     interface: "Port-channel1.618"
+    ip_address: []
     ip_helper: []
-    ipaddr: []
     link_status: "deleted"
-    mask: []
     mtu: ""
     outgoing_acl: ""
+    prefix_length: []
     protocol_status: "down"
     vrf: ""
   - inbound_acl: ""
     interface: "Port-channel1.619"
+    ip_address: []
     ip_helper: []
-    ipaddr: []
     link_status: "deleted"
-    mask: []
     mtu: ""
     outgoing_acl: ""
+    prefix_length: []
     protocol_status: "down"
     vrf: ""
   - inbound_acl: ""
     interface: "Port-channel1.620"
-    ip_helper: []
-    ipaddr:
+    ip_address:
       - "169.254.0.5"
+    ip_helper: []
     link_status: "up"
-    mask:
-      - "30"
     mtu: "9000"
     outgoing_acl: ""
+    prefix_length:
+      - "30"
     protocol_status: "up"
     vrf: "6281BBEF467947E4949F989BBC891138"
   - inbound_acl: ""
     interface: "Port-channel1.621"
+    ip_address: []
     ip_helper: []
-    ipaddr: []
     link_status: "deleted"
-    mask: []
     mtu: ""
     outgoing_acl: ""
+    prefix_length: []
     protocol_status: "down"
     vrf: ""
   - inbound_acl: ""
     interface: "Port-channel1.1012"
-    ip_helper: []
-    ipaddr:
+    ip_address:
       - "88.16.254.103"
+    ip_helper: []
     link_status: "up"
-    mask:
-      - "31"
     mtu: "8000"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
     interface: "Port-channel1.1013"
-    ip_helper: []
-    ipaddr:
+    ip_address:
       - "88.16.254.94"
+    ip_helper: []
     link_status: "up"
-    mask:
-      - "31"
     mtu: "8000"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
     interface: "Port-channel1.1014"
-    ip_helper: []
-    ipaddr:
+    ip_address:
       - "88.16.254.17"
+    ip_helper: []
     link_status: "up"
-    mask:
-      - "31"
     mtu: "8000"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
     interface: "Port-channel1.1087"
-    ip_helper: []
-    ipaddr:
+    ip_address:
       - "88.16.255.53"
+    ip_helper: []
     link_status: "up"
-    mask:
-      - "31"
     mtu: "8000"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
     interface: "Port-channel1.3201"
-    ip_helper: []
-    ipaddr:
+    ip_address:
       - "88.16.254.0"
+    ip_helper: []
     link_status: "up"
-    mask:
-      - "31"
     mtu: "8000"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
     interface: "Port-channel1.3202"
-    ip_helper: []
-    ipaddr:
+    ip_address:
       - "88.16.254.2"
+    ip_helper: []
     link_status: "up"
-    mask:
-      - "31"
     mtu: "8000"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
     interface: "Port-channel1.3204"
-    ip_helper: []
-    ipaddr:
+    ip_address:
       - "88.16.254.4"
+    ip_helper: []
     link_status: "up"
-    mask:
-      - "31"
     mtu: "8000"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
     interface: "Port-channel1.3251"
-    ip_helper: []
-    ipaddr:
+    ip_address:
       - "172.19.0.90"
+    ip_helper: []
     link_status: "up"
-    mask:
-      - "31"
     mtu: "8000"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: "MYCOMPANY"
   - inbound_acl: ""
     interface: "Port-channel1.3262"
-    ip_helper: []
-    ipaddr:
+    ip_address:
       - "88.16.234.10"
+    ip_helper: []
     link_status: "administratively down"
-    mask:
-      - "29"
     mtu: "9000"
     outgoing_acl: ""
+    prefix_length:
+      - "29"
     protocol_status: "down"
     vrf: ""
   - inbound_acl: ""
     interface: "Tunnel5001"
-    ip_helper: []
-    ipaddr:
+    ip_address:
       - "169.254.64.0"
+    ip_helper: []
     link_status: "up"
-    mask:
-      - "31"
     mtu: "1472"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: "MYCOMPANY"
   - inbound_acl: ""
     interface: "Tunnel5002"
-    ip_helper: []
-    ipaddr:
+    ip_address:
       - "169.254.64.4"
+    ip_helper: []
     link_status: "up"
-    mask:
-      - "31"
     mtu: "1472"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: "MYCOMPANY"
   - inbound_acl: ""
     interface: "Tunnel5010"
-    ip_helper: []
-    ipaddr:
+    ip_address:
       - "169.254.64.36"
+    ip_helper: []
     link_status: "up"
-    mask:
-      - "31"
     mtu: "1472"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: "MYCOMPANY"
   - inbound_acl: ""
     interface: "Tunnel6001"
-    ip_helper: []
-    ipaddr:
+    ip_address:
       - "169.254.64.2"
+    ip_helper: []
     link_status: "up"
-    mask:
-      - "31"
     mtu: "1472"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "down"
     vrf: "MYCOMPANY"
   - inbound_acl: ""
     interface: "Tunnel6002"
-    ip_helper: []
-    ipaddr:
+    ip_address:
       - "169.254.64.6"
+    ip_helper: []
     link_status: "up"
-    mask:
-      - "31"
     mtu: "1472"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "down"
     vrf: "MYCOMPANY"
   - inbound_acl: ""
     interface: "vasileft1"
-    ip_helper: []
-    ipaddr:
+    ip_address:
       - "88.16.254.10"
+    ip_helper: []
     link_status: "up"
-    mask:
-      - "31"
     mtu: "9216"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
     interface: "vasileft21"
-    ip_helper: []
-    ipaddr:
+    ip_address:
       - "100.66.0.2"
+    ip_helper: []
     link_status: "up"
-    mask:
-      - "31"
     mtu: "9216"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
     interface: "vasileft22"
-    ip_helper: []
-    ipaddr:
+    ip_address:
       - "100.66.0.64"
+    ip_helper: []
     link_status: "up"
-    mask:
-      - "31"
     mtu: "9216"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
     interface: "vasileft23"
-    ip_helper: []
-    ipaddr:
+    ip_address:
       - "100.66.0.102"
+    ip_helper: []
     link_status: "up"
-    mask:
-      - "31"
     mtu: "9216"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
     interface: "vasileft24"
-    ip_helper: []
-    ipaddr:
+    ip_address:
       - "100.66.0.82"
+    ip_helper: []
     link_status: "up"
-    mask:
-      - "31"
     mtu: "9216"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
     interface: "vasileft25"
-    ip_helper: []
-    ipaddr:
+    ip_address:
       - "100.66.0.74"
+    ip_helper: []
     link_status: "up"
-    mask:
-      - "31"
     mtu: "9216"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
     interface: "vasileft26"
-    ip_helper: []
-    ipaddr:
+    ip_address:
       - "100.66.0.130"
+    ip_helper: []
     link_status: "up"
-    mask:
-      - "31"
     mtu: "9216"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
     interface: "vasileft27"
-    ip_helper: []
-    ipaddr:
+    ip_address:
       - "100.66.0.158"
+    ip_helper: []
     link_status: "up"
-    mask:
-      - "31"
     mtu: "9216"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
     interface: "vasileft28"
-    ip_helper: []
-    ipaddr:
+    ip_address:
       - "100.66.0.162"
+    ip_helper: []
     link_status: "up"
-    mask:
-      - "31"
     mtu: "9216"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
     interface: "vasileft29"
-    ip_helper: []
-    ipaddr:
+    ip_address:
       - "100.66.0.174"
+    ip_helper: []
     link_status: "up"
-    mask:
-      - "31"
     mtu: "9216"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
     interface: "vasileft30"
-    ip_helper: []
-    ipaddr:
+    ip_address:
       - "100.66.0.194"
+    ip_helper: []
     link_status: "up"
-    mask:
-      - "31"
     mtu: "9216"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
     interface: "vasileft31"
-    ip_helper: []
-    ipaddr:
+    ip_address:
       - "100.66.0.214"
+    ip_helper: []
     link_status: "up"
-    mask:
-      - "31"
     mtu: "9216"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
     interface: "vasileft32"
-    ip_helper: []
-    ipaddr:
+    ip_address:
       - "100.66.1.2"
+    ip_helper: []
     link_status: "up"
-    mask:
-      - "31"
     mtu: "9216"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
     interface: "vasiright1"
-    ip_helper: []
-    ipaddr:
+    ip_address:
       - "88.16.254.11"
+    ip_helper: []
     link_status: "up"
-    mask:
-      - "31"
     mtu: "9216"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: "MYCOMPANY"
   - inbound_acl: ""
     interface: "vasiright21"
-    ip_helper: []
-    ipaddr:
+    ip_address:
       - "100.66.0.3"
+    ip_helper: []
     link_status: "up"
-    mask:
-      - "31"
     mtu: "9216"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: "C617529B810A48F6AD40FEBCB163B286"
   - inbound_acl: ""
     interface: "vasiright22"
-    ip_helper: []
-    ipaddr:
+    ip_address:
       - "100.66.0.65"
+    ip_helper: []
     link_status: "up"
-    mask:
-      - "31"
     mtu: "9216"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: "28FBAE630B934EB5AFA7FCE43E52393E"
   - inbound_acl: ""
     interface: "vasiright23"
-    ip_helper: []
-    ipaddr:
+    ip_address:
       - "100.66.0.103"
+    ip_helper: []
     link_status: "up"
-    mask:
-      - "31"
     mtu: "9216"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: "4CB342232A7B4D04ADEF7DE3EC2679EC"
   - inbound_acl: ""
     interface: "vasiright24"
-    ip_helper: []
-    ipaddr:
+    ip_address:
       - "100.66.0.83"
+    ip_helper: []
     link_status: "up"
-    mask:
-      - "31"
     mtu: "9216"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: "F76D90EAB6474F5BBB433939BA52FB14"
   - inbound_acl: ""
     interface: "vasiright25"
-    ip_helper: []
-    ipaddr:
+    ip_address:
       - "100.66.0.75"
+    ip_helper: []
     link_status: "up"
-    mask:
-      - "31"
     mtu: "9216"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: "6281BBEF467947E4949F989BBC891138"
   - inbound_acl: ""
     interface: "vasiright26"
-    ip_helper: []
-    ipaddr:
+    ip_address:
       - "100.66.0.131"
+    ip_helper: []
     link_status: "up"
-    mask:
-      - "31"
     mtu: "9216"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: "7650C2814C784BACBBE23BB30B47D3A1"
   - inbound_acl: ""
     interface: "vasiright27"
-    ip_helper: []
-    ipaddr:
+    ip_address:
       - "100.66.0.159"
+    ip_helper: []
     link_status: "up"
-    mask:
-      - "31"
     mtu: "9216"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: "AF1C8AE356D94BBBB377257D047D3D4D"
   - inbound_acl: ""
     interface: "vasiright28"
-    ip_helper: []
-    ipaddr:
+    ip_address:
       - "100.66.0.163"
+    ip_helper: []
     link_status: "up"
-    mask:
-      - "31"
     mtu: "9216"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: "41ECD4DB33314E949FD8D96D98252919"
   - inbound_acl: ""
     interface: "vasiright29"
-    ip_helper: []
-    ipaddr:
+    ip_address:
       - "100.66.0.175"
+    ip_helper: []
     link_status: "up"
-    mask:
-      - "31"
     mtu: "9216"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: "A1E5B05D1D914A109BE1EE71B7C994B7"
   - inbound_acl: ""
     interface: "vasiright30"
-    ip_helper: []
-    ipaddr:
+    ip_address:
       - "100.66.0.195"
+    ip_helper: []
     link_status: "up"
-    mask:
-      - "31"
     mtu: "9216"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: "CC462DCE24DD43B28EA8EA9BAD49044E"
   - inbound_acl: ""
     interface: "vasiright31"
-    ip_helper: []
-    ipaddr:
+    ip_address:
       - "100.66.0.215"
+    ip_helper: []
     link_status: "up"
-    mask:
-      - "31"
     mtu: "9216"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: "C5DE7D3B149B4AF7BF398F45F0AD90A6"
   - inbound_acl: ""
     interface: "vasiright32"
-    ip_helper: []
-    ipaddr:
+    ip_address:
       - "100.66.1.3"
+    ip_helper: []
     link_status: "up"
-    mask:
-      - "31"
     mtu: "9216"
     outgoing_acl: ""
+    prefix_length:
+      - "31"
     protocol_status: "up"
     vrf: "8B3C2CFAD23841D1BC9FA2A178BA5855"

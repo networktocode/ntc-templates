@@ -2,7 +2,7 @@ Value INTERFACE (\S+)
 Value LINE_STATUS (UP|DOWN|Administratively DOWN)
 Value PROTOCOL_STATUS (UP(\(spoofing\))?|DOWN)
 Value ROUTE_MAP (\S+)
-Value List IPADDR (\S+)
+Value List IP_ADDRESS (\S+)
 Value MTU (\d+)
 
 
@@ -15,8 +15,8 @@ Interface
   ^\S+\s+current\s+state -> Continue.Record
   ^${INTERFACE}\s+current\s+state\s*:\s*${LINE_STATUS}
   ^Line\s+protocol\s+current\s+state\s*:\s*${PROTOCOL_STATUS}
-  ^Internet\s+Address\s+is\s+${IPADDR}\s+Primary
-  ^Internet\s+Address\s+is\s+${IPADDR}\s+Sub
+  ^Internet\s+Address\s+is\s+${IP_ADDRESS}\s+Primary
+  ^Internet\s+Address\s+is\s+${IP_ADDRESS}\s+Sub
   ^Broadcast\s+address\s*:\s*\S+
   ^The\s+Maximum\s+Transmit\s+Unit\s*:\s*${MTU}\s+bytes
   ^Policy\s+routing\s+is\s+enabled,\s+using\s+route\s+map\s+${ROUTE_MAP}

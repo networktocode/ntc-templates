@@ -4,8 +4,8 @@ Value VSYS (\d+)
 Value ZONE (\S+)
 Value FORWARDING (\S+)
 Value VLAN_ID (\d+)
-Value ADDRESS (\S+)
+Value IP_ADDRESS (\S+)
 
 Start
-  ^${INTERFACE}\s+${ID}\s+${VSYS}\s+${ZONE}\s+${FORWARDING}+\s+${VLAN_ID}\s+${ADDRESS} -> Record
-  ^${INTERFACE}\s+${ID}\s+${VSYS}\s+${FORWARDING}\s+${VLAN_ID}\s+${ADDRESS} -> Record
+  ^${INTERFACE}\s+${ID}\s+${VSYS}\s+${ZONE}\s+${FORWARDING}+\s+${VLAN_ID}\s+${IP_ADDRESS} -> Record
+  ^${INTERFACE}\s+${ID}\s+${VSYS}\s+${FORWARDING}\s+${VLAN_ID}\s+${IP_ADDRESS} -> Record
