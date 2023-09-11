@@ -1,6 +1,6 @@
 Value DESCRIPTION (.*)
 Value OID (\d+(\.\d+)*)
-Value UP_TIME (.*)
+Value UPTIME (.*)
 Value HOSTNAME (\S+)
 Value LOCATION (.*)
 Value CONTACT (.*)
@@ -24,7 +24,7 @@ Start
   ^. -> Error
 
 SystemInfo
-  ^\s*System\s+Up\s+Time:\s+${UP_TIME}\s*$$
+  ^\s*System\s+Up\s+Time:\s+${UPTIME}\s*$$
   ^\s*System\s+Name:\s+${HOSTNAME}\s*$$
   ^\s*System\s+Location:\s+${LOCATION}\s*$$
   ^\s*System\s+Contact:\s+${CONTACT}\s*$$

@@ -1,6 +1,6 @@
 ---
 parsed_sample:
-  - name: "DefaultVlan"
+  - vlan_name: "DefaultVlan"
     ports:
       - "Eth1/ 2"
       - "Eth1/ 3"
@@ -15,7 +15,7 @@ parsed_sample:
     status: "Active"
     type: "Static"
     vlan_id: "1"
-  - name: "Management"
+  - vlan_name: "Management"
     ports:
       - "Eth1/ 2"
       - "Eth1/ 9"
@@ -24,7 +24,7 @@ parsed_sample:
     status: "Active"
     type: "Static"
     vlan_id: "203"
-  - name: ""
+  - vlan_name: ""
     ports:
       - "Eth1/ 1"
       - "Eth1/ 2"
@@ -37,7 +37,7 @@ parsed_sample:
     status: "Active"
     type: "Static"
     vlan_id: "226"
-  - name: ""
+  - vlan_name: ""
     ports:
       - "Eth1/ 3"
       - "Eth1/ 5"

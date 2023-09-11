@@ -1,6 +1,6 @@
 Value VLAN_ID (\d+)
 Value TYPE (\S+)
-Value NAME (.*)
+Value VLAN_NAME (.*)
 Value STATUS (\S+)
 Value List PORTS (\S+\s*\d+\s*/\s*\d+)
 
@@ -9,7 +9,7 @@ Start
   ^\s*VLAN\s+ID:\s*\d+\s*$$ -> Continue.Record
   ^\s*VLAN\s+ID:\s*${VLAN_ID}\s*$$
   ^\s*Type:\s*${TYPE}\s*$$
-  ^\s*Name:\s*(?:${NAME})?\s*$$
+  ^\s*Name:\s*(?:${VLAN_NAME})?\s*$$
   ^\s*Status:\s*${STATUS}\s*$$
   ^\s*Ports/Port\s+Channels:\s*${PORTS}\s*\(\w+\).*$$ -> Continue
   ^\s*Ports/Port\s+Channels:\s*(\S+\s*\d+\s*/\s*\d+\s*\(\w+\)\s*){1}${PORTS}\s*\(\w+\).*$$ -> Continue

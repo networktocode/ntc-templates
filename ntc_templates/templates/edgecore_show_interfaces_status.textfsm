@@ -1,4 +1,4 @@
-Value Required INTERFACE (.*)
+Value Required PORT (.*)
 Value PORT_TYPE (.*)
 Value ADDRESS (.*)
 Value NAME (.*)
@@ -28,7 +28,7 @@ Value FLOW_CONTROL_TYPE (.*)
 
 Start
   ^\s*Information\s+of.*$$ -> Continue.Record
-  ^\s*Information\s+of\s+${INTERFACE}\s*$$
+  ^\s*Information\s+of\s+${PORT}\s*$$
   ^\s*M(ac|AC)\s+Address:\s*${ADDRESS}\s*$$
   ^\s*Basic\s+Information:\s*$$ -> BasicInfo
   ^\s*$$
