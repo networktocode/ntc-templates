@@ -14,3 +14,6 @@ Flags: D - dynamic, X - disabled, R - running, S - slave
  6 D S name="lte1" type="lte" mtu=1500 actual-mtu=1500 mac-address=12:34:56:78:90:BA last-link-down-time=jul/21/2023 07:47:40 last-link-up-time=jul/21/2023 07:47:46 link-downs=114
 
  7 DRS name="pptp-out1" type="pptp-out" mtu=1450 actual-mtu=1450 last-link-down-time=jul/21/2023 07:47:03 last-link-up-time=jul/21/2023 07:47:56 link-downs=304
+ 
+ 8  RS ;;; Free Wi-Fi HTTPS
+       name="pptp-to-AH1100-HS" type="pptp-out" mtu=1596 actual-mtu=1596 last-link-down-time=nov/03/1970 12:24:10 last-link-up-time=nov/03/1970 12:24:10 link-downs=38 
