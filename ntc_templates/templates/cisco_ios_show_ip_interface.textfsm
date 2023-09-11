@@ -1,8 +1,8 @@
 Value Required INTERFACE (\S+)
 Value LINK_STATUS (.+?)
 Value PROTOCOL_STATUS (.+?)
-Value List IPADDR (\S+?)
-Value List MASK (\d*)
+Value List IP_ADDRESS (\S+?)
+Value List PREFIX_LENGTH (\d*)
 Value VRF (\S+)
 Value MTU (\d+)
 Value List IP_HELPER (\d+\.\d+\.\d+\.\d+)
@@ -13,9 +13,9 @@ Value INBOUND_ACL (.*?)
 Start
   ^\S -> Continue.Record
   ^${INTERFACE}\s+is\s+${LINK_STATUS},\s+line\s+protocol\s+is\s+${PROTOCOL_STATUS}\s*$$
-  ^\s+Internet\s+address\s+is\s+${IPADDR}/?${MASK}\s*$$
+  ^\s+Internet\s+address\s+is\s+${IP_ADDRESS}/?${PREFIX_LENGTH}\s*$$
   ^\s+Internet\s+address\s+will\s+be\s+negotiated
-  ^\s+Secondary\s+address\s+${IPADDR}/?${MASK}\s*$$
+  ^\s+Secondary\s+address\s+${IP_ADDRESS}/?${PREFIX_LENGTH}\s*$$
   ^.+VPN\s+Routing/Forwarding\s+"${VRF}"
   ^\s+MTU\s+is\s+${MTU}\s+bytes
   ^\s+Helper\s+address(es|)\s(is|are)\s+${IP_HELPER}\s*$$ -> HELPERS

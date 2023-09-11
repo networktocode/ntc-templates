@@ -1,5 +1,5 @@
 Value NAME (\S.*)
-Value IP (\S*)
+Value IP_ADDRESS (\S*)
 Value NETMASK (\S*)
 Value DHCP (Enable|Disable)
 Value DHCP_START_IP (\S*)
@@ -10,7 +10,7 @@ Value IPV6_ACTIVE (true|false)
 
 Start
   ^Group\sName\s+${NAME}\s*$$
-  ^IP\sAddress\s+${IP}\s*$$
+  ^IP\sAddress\s+${IP_ADDRESS}\s*$$
   ^Subnet\sMask\s+${NETMASK}\s*$$
   ^DHCP\s+${DHCP}\s*$$
   ^\s+Beginning\sIP\sAddress\s+${DHCP_START_IP}\s*$$

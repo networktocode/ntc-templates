@@ -1,107 +1,101 @@
 ---
 parsed_sample:
-  - process_id: "100"
-    router_id: "10.255.11.6"
-    code: "P"
-    route: "66.128.208.232"
-    mask: "32"
-    successors: "2"
-    fd: "264448"
-    tag: ""
+  - adv_fd: []
+    adv_rd: []
     adv_router:
       - "10.254.11.9"
       - "10.254.11.33"
-    adv_fd: []
-    adv_rd: []
+    code: "P"
+    fd: "264448"
     out_interface:
       - "TenGigabitEthernet1/1"
       - "TenGigabitEthernet2/1"
-    source: ""
-  - process_id: "100"
+    prefix_length: "32"
+    process_id: "100"
+    route: "66.128.208.232"
     router_id: "10.255.11.6"
-    code: "P"
-    route: "10.254.6.8"
-    mask: "30"
-    successors: "1"
-    fd: "1024"
+    source: ""
+    successors: "2"
     tag: ""
+  - adv_fd: []
+    adv_rd: []
     adv_router:
       - "10.254.6.14"
-    adv_fd: []
-    adv_rd: []
+    code: "P"
+    fd: "1024"
     out_interface:
       - "Port-channel10"
-    source: ""
-  - process_id: "100"
+    prefix_length: "30"
+    process_id: "100"
+    route: "10.254.6.8"
     router_id: "10.255.11.6"
-    code: "P"
-    route: "67.230.223.128"
-    mask: "28"
-    successors: "2"
-    fd: "5632"
-    tag: "53471"
+    source: ""
+    successors: "1"
+    tag: ""
+  - adv_fd: []
+    adv_rd: []
     adv_router:
       - "10.254.11.9"
       - "10.254.11.33"
-    adv_fd: []
-    adv_rd: []
+    code: "P"
+    fd: "5632"
     out_interface:
       - "TenGigabitEthernet1/1"
       - "TenGigabitEthernet2/1"
-    source: ""
-  - process_id: "100"
+    prefix_length: "28"
+    process_id: "100"
+    route: "67.230.223.128"
     router_id: "10.255.11.6"
-    code: "P"
-    route: "10.255.10.5"
-    mask: "32"
-    successors: "1"
-    fd: "130816"
-    tag: ""
+    source: ""
+    successors: "2"
+    tag: "53471"
+  - adv_fd: []
+    adv_rd: []
     adv_router:
       - "10.254.10.34"
-    adv_fd: []
-    adv_rd: []
+    code: "P"
+    fd: "130816"
     out_interface:
       - "GigabitEthernet9/29"
-    source: ""
-  - process_id: "100"
+    prefix_length: "32"
+    process_id: "100"
+    route: "10.255.10.5"
     router_id: "10.255.11.6"
-    code: "P"
-    route: "10.255.1.14"
-    mask: "32"
+    source: ""
     successors: "1"
-    fd: "128768"
     tag: ""
+  - adv_fd: []
+    adv_rd: []
     adv_router:
       - "10.254.1.34"
-    adv_fd: []
-    adv_rd: []
+    code: "P"
+    fd: "128768"
     out_interface:
       - "Port-channel3"
-    source: ""
-  - process_id: "100"
+    prefix_length: "32"
+    process_id: "100"
+    route: "10.255.1.14"
     router_id: "10.255.11.6"
-    code: "P"
-    route: "10.254.2.12"
-    mask: "30"
+    source: ""
     successors: "1"
-    fd: "768"
     tag: ""
+  - adv_fd: []
+    adv_rd: []
     adv_router:
       - "10.254.2.22"
-    adv_fd: []
-    adv_rd: []
+    code: "P"
+    fd: "768"
     out_interface:
       - "TenGigabitEthernet3/3"
-    source: ""
-  - process_id: "100"
+    prefix_length: "30"
+    process_id: "100"
+    route: "10.254.2.12"
     router_id: "10.255.11.6"
-    code: "P"
-    route: "10.255.11.4"
-    mask: "32"
-    successors: "4"
-    fd: "128768"
+    source: ""
+    successors: "1"
     tag: ""
+  - adv_fd: []
+    adv_rd: []
     adv_router:
       - "10.254.56.6"
       - "10.254.55.6"
@@ -111,8 +105,8 @@ parsed_sample:
       - "10.254.4.10"
       - "10.254.4.14"
       - "10.254.54.6"
-    adv_fd: []
-    adv_rd: []
+    code: "P"
+    fd: "128768"
     out_interface:
       - "TenGigabitEthernet1/4"
       - "TenGigabitEthernet1/6"
@@ -122,4 +116,10 @@ parsed_sample:
       - "TenGigabitEthernet4/4"
       - "TenGigabitEthernet4/5"
       - "TenGigabitEthernet1/3"
+    prefix_length: "32"
+    process_id: "100"
+    route: "10.255.11.4"
+    router_id: "10.255.11.6"
     source: ""
+    successors: "4"
+    tag: ""

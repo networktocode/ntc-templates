@@ -1,62 +1,75 @@
 ---
 parsed_sample:
-  - prefix: "0.0.0.0/0"
+  - interface:
+      - "Vlan1"
+    ip_address: "0.0.0.0"
     nexthop:
       - "10.255.1.1"
-    interface:
-      - "Vlan1"
-  - prefix: "0.0.0.0/8"
+    prefix_length: "0"
+  - interface: []
+    ip_address: "0.0.0.0"
     nexthop:
       - "drop"
-    interface: []
-  - prefix: "0.0.0.0/32"
+    prefix_length: "8"
+  - interface: []
+    ip_address: "0.0.0.0"
     nexthop:
       - "receive"
-    interface: []
-  - prefix: "10.180.195.0/32"
+    prefix_length: "32"
+  - interface:
+      - "GigabitEthernet1/0/1"
+      - "GigabitEthernet1/0/2"
+    ip_address: "10.180.195.0"
     nexthop:
       - "10.180.101.5"
       - "10.180.101.10"
-    interface:
-      - "GigabitEthernet1/0/1"
-      - "GigabitEthernet1/0/2"
-  - prefix: "10.255.1.0/24"
+    prefix_length: "32"
+  - interface:
+      - "Vlan1"
+    ip_address: "10.255.1.0"
     nexthop:
       - "attached"
-    interface:
+    prefix_length: "24"
+  - interface:
       - "Vlan1"
-  - prefix: "10.255.1.0/32"
+    ip_address: "10.255.1.0"
     nexthop:
       - "receive"
-    interface:
-      - "Vlan1"
-  - prefix: "10.255.255.192/30"
+    prefix_length: "32"
+  - interface:
+      - "Port-channel1.1825"
+    ip_address: "10.255.255.192"
     nexthop:
       - "10.255.2.1"
-    interface:
-      - "Port-channel1.1825"
-  - prefix: "10.255.200.0/24"
+    prefix_length: "30"
+  - interface:
+      - "GigabitEthernet0/0/2.200"
+    ip_address: "10.255.200.0"
     nexthop:
       - "attached"
-    interface:
-      - "GigabitEthernet0/0/2.200"
-  - prefix: "127.0.0.0/8"
+    prefix_length: "24"
+  - interface: []
+    ip_address: "127.0.0.0"
     nexthop:
       - "drop"
-    interface: []
-  - prefix: "224.0.0.0/4"
+    prefix_length: "8"
+  - interface: []
+    ip_address: "224.0.0.0"
     nexthop:
       - "drop"
-    interface: []
-  - prefix: "224.0.0.0/24"
+    prefix_length: "4"
+  - interface: []
+    ip_address: "224.0.0.0"
     nexthop:
       - "receive"
-    interface: []
-  - prefix: "240.0.0.0/4"
+    prefix_length: "24"
+  - interface: []
+    ip_address: "240.0.0.0"
     nexthop:
       - "drop"
-    interface: []
-  - prefix: "255.255.255.255/32"
+    prefix_length: "4"
+  - interface: []
+    ip_address: "255.255.255.255"
     nexthop:
       - "receive"
-    interface: []
+    prefix_length: "32"

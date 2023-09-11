@@ -1,71 +1,86 @@
 ---
 parsed_sample:
-  - prefix: "0.0.0.0/0"
+  - interface:
+      - "Tunnel0"
+    ip_address: "0.0.0.0"
     nexthop:
       - "172.17.40.1"
-    interface:
-      - "Tunnel0"
-  - prefix: "0.0.0.0/8"
+    prefix_length: "0"
+  - interface: []
+    ip_address: "0.0.0.0"
     nexthop:
       - "drop"
-    interface: []
-  - prefix: "0.0.0.0/32"
+    prefix_length: "8"
+  - interface: []
+    ip_address: "0.0.0.0"
     nexthop:
       - "receive"
-    interface: []
-  - prefix: "10.0.0.0/16"
+    prefix_length: "32"
+  - interface:
+      - "Tunnel0"
+    ip_address: "10.0.0.0"
     nexthop:
       - "172.17.40.1"
-    interface:
-      - "Tunnel0"
-  - prefix: "10.191.64.0/24"
+    prefix_length: "16"
+  - interface:
+      - "GigabitEthernet0/0"
+    ip_address: "10.191.64.0"
     nexthop:
       - "attached"
-    interface:
+    prefix_length: "24"
+  - interface:
       - "GigabitEthernet0/0"
-  - prefix: "10.191.64.0/32"
+    ip_address: "10.191.64.0"
     nexthop:
       - "receive"
-    interface:
+    prefix_length: "32"
+  - interface:
       - "GigabitEthernet0/0"
-  - prefix: "10.191.64.1/32"
+    ip_address: "10.191.64.1"
     nexthop:
       - "receive"
-    interface:
+    prefix_length: "32"
+  - interface:
       - "GigabitEthernet0/0"
-  - prefix: "10.191.64.2/32"
+    ip_address: "10.191.64.2"
     nexthop:
       - "attached"
-    interface:
-      - "GigabitEthernet0/0"
-  - prefix: "172.17.40.0/24"
+    prefix_length: "32"
+  - interface:
+      - "Tunnel0"
+    ip_address: "172.17.40.0"
     nexthop:
       - "attached"
-    interface:
+    prefix_length: "24"
+  - interface:
       - "Tunnel0"
-  - prefix: "172.17.40.0/32"
+    ip_address: "172.17.40.0"
     nexthop:
       - "receive"
-    interface:
+    prefix_length: "32"
+  - interface:
       - "Tunnel0"
-  - prefix: "172.17.40.158/32"
+    ip_address: "172.17.40.158"
     nexthop:
       - "receive"
-    interface:
-      - "Tunnel0"
-  - prefix: "224.0.0.0/4"
+    prefix_length: "32"
+  - interface: []
+    ip_address: "224.0.0.0"
     nexthop:
       - "drop"
-    interface: []
-  - prefix: "224.0.0.0/24"
+    prefix_length: "4"
+  - interface: []
+    ip_address: "224.0.0.0"
     nexthop:
       - "receive"
-    interface: []
-  - prefix: "240.0.0.0/4"
+    prefix_length: "24"
+  - interface: []
+    ip_address: "240.0.0.0"
     nexthop:
       - "drop"
-    interface: []
-  - prefix: "255.255.255.255/32"
+    prefix_length: "4"
+  - interface: []
+    ip_address: "255.255.255.255"
     nexthop:
       - "receive"
-    interface: []
+    prefix_length: "32"

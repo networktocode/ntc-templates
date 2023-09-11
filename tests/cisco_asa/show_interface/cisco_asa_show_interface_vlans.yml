@@ -1,7 +1,6 @@
 ---
 parsed_sample:
-  - address: "0c29.a40a.f201"
-    bandwidth: "1000 Mbps"
+  - bandwidth: "1000 Mbps"
     bonded_port: ""
     bonded_port_members: ""
     delay: "10 usec"
@@ -17,8 +16,9 @@ parsed_sample:
     interface_zone: "FINANCE"
     ip_address: "10.29.60.1"
     link_status: "up"
+    mac_address: "0c29.a40a.f201"
     mtu: "1500"
-    net_mask: "255.255.255.0"
+    netmask: "255.255.255.0"
     onemin_drop_rate: ""
     onemin_in_pps: ""
     onemin_in_rate: ""

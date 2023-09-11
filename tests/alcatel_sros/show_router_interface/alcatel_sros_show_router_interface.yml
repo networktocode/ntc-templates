@@ -1,10 +1,10 @@
 ---
 parsed_sample:
-  - address:
+  - admin_state: "Up"
+    interface: "L3-Telecom-IXR01-1"
+    ip_address:
       - "2001:4888:2062:357a:645:400:0:2/64"
       - "fe80::645:400:0:2/64"
-    admin_state: "Up"
-    interface: "L3-Telecom-IXR01-1"
     mode: "IES"
     oper_state_v4: "Down"
     oper_state_v6: "Up"
@@ -12,11 +12,11 @@ parsed_sample:
       - "PREFERRED"
       - "PREFERRED"
     port_sap_id: "lag-21:300"
-  - address:
+  - admin_state: "Up"
+    interface: "L3-Telecom-IXR02-1"
+    ip_address:
       - "2001:4888:2062:3591:645:400:0:2/64"
       - "fe80::645:400:0:2/64"
-    admin_state: "Up"
-    interface: "L3-Telecom-IXR02-1"
     mode: "IES"
     oper_state_v4: "Down"
     oper_state_v6: "Up"
@@ -24,11 +24,11 @@ parsed_sample:
       - "PREFERRED"
       - "PREFERRED"
     port_sap_id: "lag-22:300"
-  - address:
+  - admin_state: "Up"
+    interface: "TO_EDGE_IXR01"
+    ip_address:
       - "192.168.28.1/24"
       - "192.168.47.1/24"
-    admin_state: "Up"
-    interface: "TO_EDGE_IXR01"
     mode: "Network"
     oper_state_v4: "Down"
     oper_state_v6: "Down"
@@ -36,11 +36,11 @@ parsed_sample:
       - "n/a"
       - "n/a"
     port_sap_id: "n/a"
-  - address:
+  - admin_state: "Up"
+    interface: "system"
+    ip_address:
       - "10.115.43.64/32"
       - "2001:4888:2062:3000:645:400:0:1a0/128"
-    admin_state: "Up"
-    interface: "system"
     mode: "Network"
     oper_state_v4: "Up"
     oper_state_v6: "Up"
@@ -48,12 +48,12 @@ parsed_sample:
       - "n/a"
       - "PREFERRED"
     port_sap_id: "system"
-  - address:
+  - admin_state: "Up"
+    interface: "to-7750-02"
+    ip_address:
       - "172.25.214.121/31"
       - "2001:4888:206a:335c:645:400:0:1/64"
       - "fe80::c9:ffff:fe00:0/64"
-    admin_state: "Up"
-    interface: "to-7750-02"
     mode: "Network"
     oper_state_v4: "Up"
     oper_state_v6: "Up"
@@ -62,12 +62,12 @@ parsed_sample:
       - "PREFERRED"
       - "PREFERRED"
     port_sap_id: "1/1/c4/1:2415"
-  - address:
+  - admin_state: "Up"
+    interface: "to-BTS0415-7750-H1"
+    ip_address:
       - "172.25.198.123/31"
       - "2001:4888:206a:335f:645:400:0:1/64"
       - "fe80::c9:ffff:fe00:14b/64"
-    admin_state: "Up"
-    interface: "to-BTS0415-7750-H1"
     mode: "Network"
     oper_state_v4: "Down"
     oper_state_v6: "Down"

@@ -11,10 +11,10 @@ Value FLOWCONTROL_IN (\w+)
 Value FLOWCONTROL_OUT (\w+)
 Value BONDED_PORT (.+?)
 Value DESCRIPTION (.*)
-Value ADDRESS ([a-zA-Z0-9]+\.[a-zA-Z0-9]+\.[a-zA-Z0-9]+)
+Value MAC_ADDRESS ([a-zA-Z0-9]+\.[a-zA-Z0-9]+\.[a-zA-Z0-9]+)
 Value MTU (.+?)
 Value IP_ADDRESS (.+?)
-Value NET_MASK (.+?)
+Value NETMASK (.+?)
 Value IN_PACKETS (\d+)
 Value IN_BYTES (\d+)
 Value NO_BUFFER (\d+)
@@ -85,8 +85,8 @@ Start
   ^\s+Input\s+flow\s+control\s+is\s+${FLOWCONTROL_IN},\s+output\s+flow\s+control\s+is\s+${FLOWCONTROL_OUT}
   ^\s+Active\s+member\s+of\s+${BONDED_PORT}\s*$$
   ^\s+Description:\s+${DESCRIPTION}
-  ^\s+MAC\s+address\s+${ADDRESS}.*MTU\s+${MTU}\s*$$
-  ^\s+IP\s+[Aa]ddress\s+${IP_ADDRESS}(?:,\s+[Ss]ubnet\s+[Mm]ask\s+${NET_MASK})?\s*$$
+  ^\s+MAC\s+address\s+${MAC_ADDRESS}.*MTU\s+${MTU}\s*$$
+  ^\s+IP\s+[Aa]ddress\s+${IP_ADDRESS}(?:,\s+[Ss]ubnet\s+[Mm]ask\s+${NETMASK})?\s*$$
   ^\s+${IN_PACKETS}\s+packets\s+input,\s+${IN_BYTES}\s+bytes,\s+${NO_BUFFER}\s+no\s+buffer
   ^\s+Received\s+${BROADCASTS}\s+broadcasts,\s+${RUNTS}\s+runts,\s+${GIANTS}\s+giants
   ^\s+${IN_ERRORS}\s+input\s+errors,\s+${CRC}\s+CRC,\s+${FRAME}\s+frame,\s+${OVERRUN}\s+overrun,\s+${IGNORED}\s+ignored,\s+${ABORT}\s+abort
