@@ -47,6 +47,7 @@ Start
   ^BGP\s+connection:\s+.*$$
   ^Last\s+Reset:\s+\S+,\s+.*$$
   ^Notification\s+Error\s+Message:\s+.*$$
+  ^\s*\%\s+No\s+neighbor\s+exist\s*$$
   ^\s*$$
   ^. -> Error
 
