@@ -2,7 +2,7 @@ Value INTERFACE (\S+\s+\d+\s*/\s*\d+)
 Value NAME (.*?)
 Value STATUS (\S+)
 Value PVID (\d+)
-Value PRI (\d+)
+Value PRIORITY (\d+)
 Value SPEED_DUPLEX (\S+)
 Value TYPE (\S+)
 Value TRUNK (\S+)
@@ -14,6 +14,6 @@ Start
 
 IfacesTable
   ^(?:\s*-+)+\s*$$
-  ^\s*${INTERFACE}(?:\s+${NAME})?\s+${STATUS}\s+${PVID}\s+${PRI}\s+${SPEED_DUPLEX}\s+${TYPE}\s+${TRUNK}\s*$$ -> Record
+  ^\s*${INTERFACE}(?:\s+${NAME})?\s+${STATUS}\s+${PVID}\s+${PRIORITY}\s+${SPEED_DUPLEX}\s+${TYPE}\s+${TRUNK}\s*$$ -> Record
   ^\s*$$
   ^. -> Error
