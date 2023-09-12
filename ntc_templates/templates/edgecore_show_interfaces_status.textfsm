@@ -4,7 +4,9 @@ Value ADDRESS (.*)
 Value NAME (.*)
 Value PORT_ADMIN (.*)
 Value MDIX_MODE (.*)
-Value SPEED_DUPLEX (.*)
+Value NEGOTIATION (Auto)
+Value SPEED (\d+)
+Value DUPLEX (\S+)
 Value CAPABILITIES (.*)
 Value BROADCAST_STORM (.*)
 Value BROADCAST_STORM_LIMIT (.*)
@@ -22,7 +24,6 @@ Value MEDIA_TYPE (.*)
 Value GIGA_PHY_MODE (.*)
 Value LINK_STATUS (.*)
 Value OPERATION_STATUS (.*)
-Value OPERATION_SPEED_DUPLEX (.*)
 Value PORT_UPTIME (.*)
 Value FLOW_CONTROL_TYPE (.*)
 
@@ -45,7 +46,7 @@ Configuration
   ^\s*Name:\s*${NAME}\s*$$
   ^\s*Port\s+Admin:\s*${PORT_ADMIN}\s*$$
   ^\s*MDIX\s+mode:\s*${MDIX_MODE}\s*$$
-  ^\s*Speed-duplex:\s*${SPEED_DUPLEX}\s*$$
+  ^\s*Speed-duplex:\s*${NEGOTIATION}\s*$$
   ^\s*Capabilities:\s*${CAPABILITIES}\s*$$
   ^\s*Broadcast\s+Storm:\s*${BROADCAST_STORM}\s*$$
   ^\s*Broadcast\s+Storm\s+Limit:\s*${BROADCAST_STORM_LIMIT}\s*$$
@@ -68,7 +69,7 @@ Configuration
 CurrentStatus
   ^\s*Link\s+Status:\s*${LINK_STATUS}\s*$$
   ^\s*Port\s+Operation\s+Status:\s*${OPERATION_STATUS}\s*$$
-  ^\s*Operation\s+Speed-duplex:\s*${OPERATION_SPEED_DUPLEX}\s*$$
+  ^\s*Operation\s+Speed-duplex:\s*${SPEED}${DUPLEX}\s*$$
   ^\s*Port\s+Uptime:\s*${PORT_UPTIME}\s*$$
   ^\s*Flow\s+Control\s+Type:\s*${FLOW_CONTROL_TYPE}\s*$$
   ^\s*$$ -> Start
