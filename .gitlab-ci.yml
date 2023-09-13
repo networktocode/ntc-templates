@@ -6,6 +6,8 @@ variables:
 
 run tests:
   stage: run tests
+  rules:
+    - if: '$CI_MERGE_REQUEST_TARGET_BRANCH_NAME == "master"'
   tags:
     - prod_docker_run
   image: python:3.11-slim
