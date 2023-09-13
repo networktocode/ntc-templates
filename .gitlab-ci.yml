@@ -3,6 +3,7 @@ stages:
 
 variables:
   POETRY_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pypoetry"
+  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
 
 run tests:
   stage: run tests
@@ -12,11 +13,16 @@ run tests:
     - prod_docker_run
   image: python:3.11-slim
   cache:
-    key:
-      files:
-        - poetry.lock
-    paths:
-      - .cache/pypoetry
+    - key:
+        files:
+          - poetry.lock
+      paths:
+        - .cache/pypoetry
+    - key:
+        files:
+          - requirements-tests.txt
+      paths:
+        - .cache/pip
   before_script:
     - pip install --upgrade pip
     - pip install poetry
