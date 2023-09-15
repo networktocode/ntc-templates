@@ -1,0 +1,15 @@
+Created by: D-Default, S-Static, G-GVRP, R-Radius Assigned VLAN
+
+Vlan       Name                   Ports               Created by
+---- ----------------- --------------------------- ----------------
+ 1           1         fa1-2,fa4-8,fa10-14,               D
+                       fa17-18,fa20
+ 29         29                     gi1                    S
+402  Test-Long-Vlan-Na           fa5,gi1                  S
+     me1
+3130       3130                 fa20,gi1                  S
+3131 Test-Long-Vlan-Na fa1-2,fa11,fa15-18,fa21-22,        S
+     me2               gi1-4
+3132       3132                                           S
+3133 Test-Long-Vlan-Na                                    S
+     me3
