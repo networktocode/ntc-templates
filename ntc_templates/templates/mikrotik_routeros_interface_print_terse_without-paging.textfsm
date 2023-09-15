@@ -16,6 +16,6 @@ Value LAST_LINK_UP_TIME ([a-z]{3}\/\d+\/\d+\s\d+\:\d+\:\d+)
 Value LINK_DOWNS (\d+)
 
 Start
-  ^\s*${ID}\s+(?:${DYNAMIC})?(?:${STATUS}|\s)?(?:${SLAVE})?\s+(comment=${COMMENT}\s+)?name=${NAME}(\s+default-name=${DEFAULT_NAME})?\s+type=${TYPE}\s+mtu=${MTU}(\s+actual-mtu=${ACTUAL_MTU})?(\s+l2mtu=${L2MTU})?(\s+max-l2mtu=${MAX_L2MTU})?(\s+mac-address=${MAC_ADDRESS})?(\s+last-link-down-time=${LAST_LINK_DOWN_TIME})?(\s+last-link-up-time=${LAST_LINK_UP_TIME})?(\s+link-downs=${LINK_DOWNS})?\s*$$ -> Record
+  ^\s*${ID}\s+(?:${DYNAMIC})?(?:${STATUS}|\s)?(?:${SLAVE})?\s+(comment=${COMMENT}\s+)?name=${NAME}(\s+default-name=${DEFAULT_NAME})?\s+type=${TYPE}(\s+mtu=${MTU})?(\s+actual-mtu=${ACTUAL_MTU})?(\s+l2mtu=${L2MTU})?(\s+max-l2mtu=${MAX_L2MTU})?(\s+mac-address=${MAC_ADDRESS})?(\s+last-link-down-time=${LAST_LINK_DOWN_TIME})?(\s+last-link-up-time=${LAST_LINK_UP_TIME})?(\s+link-downs=${LINK_DOWNS})?\s*$$ -> Record
   ^\s*$$
   ^. -> Error
