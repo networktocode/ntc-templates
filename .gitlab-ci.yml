@@ -1,0 +1,34 @@
+stages:
+  - run tests
+
+variables:
+  POETRY_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pypoetry"
+  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+
+run tests:
+  stage: run tests
+  rules:
+    - if: '$CI_MERGE_REQUEST_TARGET_BRANCH_NAME == "master"'
+  tags:
+    - prod_docker_run
+  image: python:3.11-slim
+  cache:
+    - key:
+        files:
+          - poetry.lock
+      paths:
+        - .cache/pypoetry
+    - key:
+        files:
+          - requirements-tests.txt
+      paths:
+        - .cache/pip
+  before_script:
+    - pip install --upgrade pip
+    - pip install poetry
+    - poetry config virtualenvs.in-project true
+    - poetry install
+    - source .venv/bin/activate
+    - pip install pytest-xdist
+  script:
+    - pytest -n auto

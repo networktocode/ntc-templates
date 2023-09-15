@@ -1,0 +1,3 @@
+Flags: X - disabled, E - established
+ 0   name="peer1" instance=default remote-address=192.168.1.134 remote-as=65001 tcp-md5-key="" nexthop-choice=default multihop=no route-reflect=no hold-time=3m
+     ttl=255 in-filter="" out-filter="" address-families=ip,ipv6 default-originate=never remove-private-as=no as-override=no passive=no use-bfd=no state=opensent

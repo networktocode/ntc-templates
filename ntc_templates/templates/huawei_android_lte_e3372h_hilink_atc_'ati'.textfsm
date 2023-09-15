@@ -1,0 +1,17 @@
+Value MANUFACTURER (\S+)
+Value MODEL (\S+)
+Value REVISION (\S+)
+Value IMEI (\S+)
+Value GCAP (\S+)
+
+
+Start
+  ^\s*Waiting for response...\s*$$
+  ^Manufacturer\:\s+${MANUFACTURER}\s*$$
+  ^Model\:\s+${MODEL}\s*$$
+  ^Revision\:\s+${REVISION}\s*$$
+  ^IMEI\:\s+${IMEI}\s*$$
+  ^\+GCAP\:\s+${GCAP}\s*$$ -> Record
+  ^\s*OK\s*$$
+  ^\s*$$
+  ^. -> Error

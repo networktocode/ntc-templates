@@ -1,7 +1,8 @@
 ---
 parsed_sample:
   - hostname: "fgt-600e"
-    version: "FortiGate-600E v6.2.6,build1175,201110 (GA)"
+    hardware: "FortiGate-600E"
+    version: "6.2.6,build1175,201110 (GA)"
     signature: "certified"
     virus_db: "83.00146(2021-01-08 11:20)"
     extended_db: "83.00146(2021-01-08 11:20)"
@@ -15,7 +16,7 @@ parsed_sample:
     botnet_db: "1.00000(2012-05-28 22:51)"
     bios_version: "05000006"
     system_part_number: "P24088-03"
-    log_hard_disk: "Not"
+    log_hard_disk: "Not available"
     private_encryption: "Disable"
     operation_mode: "NAT"
     current_virtual_domain: "root"
