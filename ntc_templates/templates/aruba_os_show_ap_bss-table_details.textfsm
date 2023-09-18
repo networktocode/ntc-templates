@@ -2,7 +2,7 @@ Value BSS ([a-fA-F0-9]{2}(:[a-fA-F0-9]{2}){5})
 Value ESS (\S+(\s\S+){0,})
 Value PORT (\S+)
 Value IP_ADDRESS ((([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5]))
-Value PHY (a-HE|a-VHT|g-HE|g-HT)
+Value PHY (a-HE|a-VHT|g-HE)
 Value BAND (\S+)
 Value CHANNEL (\S+)
 Value TYPE (\S+)
@@ -14,14 +14,14 @@ Value MTU (\S+)
 Value ACL_STATE (\S+)
 Value ACL (\S+)
 Value FM (\S+)
-Value FLAGS (\S+)
-Value CLUSTER (\S+)
+Value FLAGS (T|Td|\s+)
+Value CLUSTER ((A|sA|U).*?)
 Value ACTIVE_CLIENTS (\S+)
 Value STANDBY_CLIENTS (\S+)
 Value DATAZONE (\S+)
 
 Start
-  ^${BSS}\s+${ESS}\s+${PORT}\s+${IP_ADDRESS}\s+${PHY}\s+${TYPE}\s+${CHANNEL}\s+${CUR_CL}\s+${AP_NAME}\s+${IN_T}\s+${TOT_T}\s+${MTU}\s+${ACL_STATE}\s+${ACL}\s+${FM}\s+ -> Record
+  ^${BSS}\s+${ESS}\s+${PORT}\s+${IP_ADDRESS}\s+${PHY}\s+${TYPE}\s+${CHANNEL}\s+${CUR_CL}\s+${AP_NAME}\s+${IN_T}\s+${TOT_T}\s+${MTU}\s+${ACL_STATE}\s+${ACL}\s+${FM}\s+${FLAGS}\s+${CLUSTER}{ACTIVE_CLIENTS}\s+${STANDBY_CLIENTS}\s+${DATAZONE}\s*$$  -> Record
   ^${BSS}\s+${ESS}\s+${PORT}\s+${IP_ADDRESS}\s+${BAND}\s+${CHANNEL}\s+${TYPE}\s+${CUR_CL}\s+${AP_NAME}\s+${IN_T}\s+${TOT_T}\s+${MTU}\s+${ACL_STATE}\s+${ACL}\s+${FM}\s+${FLAGS}\s+${CLUSTER}\s+${ACTIVE_CLIENTS}\s+${STANDBY_CLIENTS}\s+${DATAZONE}\s*$$ -> Record
   ^Aruba AP
   ^.+\.+
