@@ -1,0 +1,11 @@
+Value NEIGHBOR_ID (\S+)
+Value PRIORITY (\d+)
+Value STATE (\S+)
+Value UP_TIME (\S+)
+Value ADDRESS (\S+)
+Value INTERFACE (\S+)
+
+Start
+  ^.*router-id=${NEIGHBOR_ID}.*address=${ADDRESS}.*interface=${INTERFACE}.*priority=${PRIORITY}.*state=\"${STATE}\".*adjacency=${UP_TIME}.*$$ -> Record
+  ^\s*$$
+  ^. -> Error

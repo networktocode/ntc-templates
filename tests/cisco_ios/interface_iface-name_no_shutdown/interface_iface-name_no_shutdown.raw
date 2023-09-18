@@ -1,0 +1,5 @@
+configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Device-Hostname(config)#interface FastEthernet0
+Device-Hostname(config-if)#no shutdown
+Device-Hostname(config-if)#end
