@@ -1,7 +1,8 @@
 ---
 parsed_sample:
   - hostname: "fw1"
-    version: "FortiGate-60F v7.0.7,build0367,221005 (GA.F)"
+    hardware: "FortiGate-60F"
+    version: "7.0.7,build0367,221005 (GA.F)"
     signature: "certified"
     virus_db: "90.02571(2022-05-23 20:26)"
     extended_db: "90.02571(2022-05-23 20:26)"
@@ -15,7 +16,7 @@ parsed_sample:
     botnet_db: ""
     bios_version: "05000009"
     system_part_number: "P24286-03"
-    log_hard_disk: "Not"
+    log_hard_disk: "Not available"
     private_encryption: "Disable"
     operation_mode: "NAT"
     current_virtual_domain: "root"
