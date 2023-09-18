@@ -1,0 +1,26 @@
+Vlan       Name           Tagged Ports      UnTagged Ports      Created by
+---- ----------------- ------------------ ------------------ ----------------
+ 1           -                                gi1/0/18,             D
+                                             gi1/0/20-38,
+                                          gi1/0/40,te1/0/1,
+                                             gi2/0/18-23,
+                                            te2/0/1,Po2-48
+130     Servers_OS        gi1/0/1-16,     gi1/0/46,gi2/0/46,        S
+                       gi1/0/22,te1/0/1,         Po1
+                           gi2/0/1-16
+355        Mgmt             te1/0/1       gi1/0/39,gi1/0/45         S
+359      Kol-iSCSI        gi1/0/1-16,      te1/0/2,te2/0/2          S
+                       gi1/0/21,te1/0/1,
+                         gi2/0/1-16,Po1
+360     VM_Testing        gi1/0/1-16,                               S
+                       te1/0/1,gi2/0/1-16
+604  VeryImportantCust gi1/0/1-16,te1/0/1                           S
+           omer
+1337    mgmt-Blade          te1/0/1                                 S
+1600 Coolaid_WIFI_Camb    gi1/0/1-16,                               S
+            ium        te1/0/1,gi2/0/1-16
+1609        iLo           gi1/0/1-16,         gi1/0/19,             S
+                       te1/0/1,gi2/0/1-16    gi1/0/41-43,
+                                             gi1/0/47-48,
+                                          gi2/0/24,gi2/0/30,
+                                             gi2/0/47-48
