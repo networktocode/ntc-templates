@@ -1,0 +1,14 @@
+fm (forward mode): T-Tunnel, S-Split, D-Decrypt Tunnel, B-Bridge (s-standard, p-persistent, b-backup, a-always), n-anyspot
+
+cluster (cluster role): U-UAC, A-AAC, sU-Standby UAC, sA-Standby AAC
+
+Aruba AP BSS Table
+------------------
+bss                ess             port  ip              phy    type  ch/EIRP/max-EIRP  cur-cl  ap name        in-t(s)  tot-t            mtu   acl-state  acl  fm  flags  cluster                     active-clients  standby-clients  datazone
+---                ---             ----  --              ---    ----  ----------------  ------  -------        -------  -----            ---   ---------  ---  --  -----  -------                     --------------  ---------------  --------
+aa:bb:cc:dd:ee:ff  test1         N/A   192.168.0.1   g-HE   ap    1/14.0/24.7       2       test1-ap        9d:11h:29m:4s    1500  -          2    T   T      U  (AAC=192.168.0.21)        1               0                no
+aa:bb:cc:dd:ee:fa  test1         N/A   192.168.0.1     g-HT   ap    1/12.0/21.1       0       test1-ap  0        204d:0h:47m:6s   1500  -          2    T          A                           0               0                no
+aa:bb:cc:dd:ee:fb  multi word ssid  N/A   192.168.0.2    a-VHT  ap    100/17.0/30.0     29      test2-ap  0        3h:43m:36s       1500  -          2    T   T      U sU  (AAC=192.168.0.30)     7               7                no
+aa:bb:cc:dd:ee:fc  test3         N/A   192.168.0.3   g-HE   ap    1/14.0/24.7       0       test1-ap3  0        16d:1h:14m:48s   1500  -          2    T   T      A                           0               0                no
+aa:bb:cc:dd:ee:fd  test3         N/A   192.168.0.3   g-HE   ap    11/14.0/24.7      0       test1-ap3  0        26d:2h:7m:52s    1500  -          2    T   T      A                           0               0                no
+
