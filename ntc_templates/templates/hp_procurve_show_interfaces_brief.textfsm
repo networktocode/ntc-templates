@@ -9,7 +9,7 @@ Value FLOW_CTRL (on|off)
 Value BCAST_LIMIT (\d+)
 
 Start
-  ^\s+Status.*Status\s*
+  ^\s+Status.*Status\s*$$
   ^\s*$$
   ^\s+\|\s+Intrusion\s+MDI\s+Flow(?:\s+Bcast)?\s*$$
   ^\s+Port\s+Type\s+\|\s+Alert\s+Enabled\s+Status\s+Mode\s+Mode\s+Ctrl\s*$$ -> showintbrief1
@@ -21,6 +21,7 @@ showintbrief1
   ^\s*-+(?:\s|-|\+)+$$
   ^\s*\*\s+third-party.*$$
   ^\s*$$
+  ^\s+\*.*$$
   ^. -> Error
 
 showintbrief2
@@ -28,5 +29,5 @@ showintbrief2
   ^\s*-+(?:\s|-|\+)+$$
   ^\s*\*\s+third-party.*$$
   ^\s*$$
+  ^\s+\*.*$$
   ^. -> Error
-
