@@ -1,0 +1,18 @@
+Value FEATURE (.+)
+Value DESCRIPTION (.+)
+Value SERIAL (.+)
+Value AUTHCODE (.+)
+Value ISSUED (.+)
+Value EXPIRES (.+)
+Value EXPIRED (yes|no)
+
+Start
+  ^License entry:
+  ^Feature: ${FEATURE}
+  ^Description: ${DESCRIPTION}
+  ^Serial: ${SERIAL}
+  ^Authcode: ${AUTHCODE}
+  ^Issued: ${ISSUED}
+  ^Expires: ${EXPIRES}
+  ^Expired\?: ${EXPIRED} -> Record
+  ^. -> Error
