@@ -1,0 +1,77 @@
+config system interface
+    edit "wan"
+        set vdom "root"
+        set ip 1.2.3.4 255.255.255.252
+        set allowaccess ping https ssh snmp
+        set type physical
+        set role wan
+        set snmp-index 1
+    next
+    edit "lan3"
+        set vdom "root"
+        set type physical
+        set snmp-index 20
+    next
+    edit "modem"
+        set vdom "root"
+        set mode pppoe
+        set type physical
+        set snmp-index 3
+    next
+    edit "ssl.root"
+        set vdom "root"
+        set type tunnel
+        set alias "SSL VPN interface"
+        set snmp-index 4
+    next
+    edit "lan"
+        set vdom "root"
+        set ip 10.152.1.230 255.255.255.252
+        set allowaccess ping https ssh snmp
+        set type hard-switch
+        set alias "LAN"
+        set stp enable
+        set device-identification enable
+        set lldp-reception enable
+        set lldp-transmission enable
+        set role lan
+        set snmp-index 5
+    next
+    edit "Vlan70"
+        set vdom "root"
+        set ip 10.100.105.193 255.255.255.224
+        set allowaccess ping
+        set alias "MGMT"
+        set device-identification enable
+        set role lan
+        set snmp-index 13
+        set interface "lan"
+        set vlanid 70
+    next
+    edit "Loopback0"
+        set vdom "root"
+        set status down
+        set type loopback
+        set description "Virtual Interface for Config version control"
+        set alias "FG C-9"
+        set role lan
+        set snmp-index 14
+    next
+    edit "port3_vl10"
+        set vdom "root"
+        set allowaccess ping https ssh snmp http
+        set device-identification enable
+        set role lan
+        set snmp-index 21
+        set interface "lan3"
+        set vlanid 10
+    next
+    edit "Tu-Hub01-Main"
+        set vdom "root"
+        set ip 192.168.64.10 255.255.255.255
+        set type tunnel
+        set remote-ip 192.168.64.9 255.255.255.252
+        set snmp-index 18
+        set interface "wan"
+    next
+end

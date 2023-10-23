@@ -1,0 +1,77 @@
+Value NAME (\S+)
+Value VDOM (\S+)
+Value FORTILINK (\S+)
+Value MODE (\S+)
+Value List IP (\S+)
+Value List SUBNET (\S+)
+Value List ALLOW_ACCESS (.*?)
+Value STATUS (\S+)
+Value TYPE (\S+)
+Value DESCRIPTION (.*?)
+Value ALIAS (.*?)
+Value STP (\S+)
+Value DEVICE_IDENTIFICATION (\S+)
+Value LLDP_RECEPTION (\S+)
+Value LLDP_TRANSMISSION (\S+)
+Value MONITOR_BANDWIDTH (\S+)
+Value ROLE (\S+)
+Value REMOTE_IP (\S+)
+Value REMOTE_IP_SUBNET (\S+)
+Value SNMP_INDEX (\d+)
+Value SECONDARY_IP_STATUS (\S+)
+Value MTU_OVERRIDE (\S+)
+Value MTU (\S+)
+Value DEFAULT_GATEWAY (\S+)
+Value DNS_SERVER_OVERRIDE (\S+)
+Value INTERFACE (\S+)
+Value VLAN_ID (\d+)
+
+
+Start
+  ^\s*config\s+system\s+interface\s*$$
+  ^\s*edit\s+"\S+"\s*$$ -> Continue.Record
+  ^\s*edit\s+"${NAME}"\s*$$ -> Interface
+  ^\s*end\s*$$
+  ^\s*$$
+  ^. -> Error
+
+Interface
+  ^\s*set\s+vdom\s+"${VDOM}"\s*$$
+  ^\s*set\s+fortilink\s+${FORTILINK}\s*$$
+  ^\s*set\s+mode\s+${MODE}\s*$$
+  ^\s*set\s+ip\s+${IP}\s+${SUBNET}\s*$$
+  ^\s*set\s+status\s+${STATUS}.*$$
+  ^\s*set\s+allowaccess\s+${ALLOW_ACCESS}\s*$$
+  ^\s*set\s+type\s+${TYPE}\s*$$
+  ^\s*set\s+description\s+${DESCRIPTION}\s*$$
+  ^\s*set\s+alias\s+"${ALIAS}"\s*$$
+  ^\s*set\s+role\s+${ROLE}\s*$$
+  ^\s*set\s+stp\s+${STP}\s*$$
+  ^\s*set\s+device-identification\s+${DEVICE_IDENTIFICATION}\s*$$
+  ^\s*set\s+lldp-reception\s+${LLDP_RECEPTION}\s*$$
+  ^\s*set\s+lldp-transmission\s+${LLDP_TRANSMISSION}\s*$$
+  ^\s*set\s+monitor-bandwidth\s+${MONITOR_BANDWIDTH}\s*$$
+  ^\s*set\s+remote-ip\s+${REMOTE_IP}\s+${REMOTE_IP_SUBNET}\s*$$
+  ^\s*set\s+snmp-index\s+${SNMP_INDEX}\s*$$
+  ^\s*set\s+secondary-IP\s+${SECONDARY_IP_STATUS}\s*$$
+  ^\s*set\s+mtu-override\s+${MTU_OVERRIDE}\s*$$
+  ^\s*set\s+mtu\s+${MTU}\s*$$
+  ^\s*set\s+defaultgw\s+${DEFAULT_GATEWAY}\s*$$
+  ^\s*set\s+dns-server-override\s+${DNS_SERVER_OVERRIDE}\s*$$
+  ^\s*set\s+interface\s+"${INTERFACE}"\s*$$
+  ^\s*set\s+vlanid\s+${VLAN_ID}\s*$$
+  ^\s*config\s+secondaryip\s*$$ -> SecondaryIp
+  ^\s*next\s*$$ -> Start
+  ^\s*$$
+  ^. -> Error
+
+SecondaryIp
+  ^\s*edit\s+\d+\s*$$
+  ^\s*set\s+ip\s+${IP}\s+${SUBNET}\s*$$
+  # 'allowaccess' is not mandatory for a secorndary IP so values in the array 'ALLOW_ACCESS'
+  # might not be aligned with 'IP' and 'SUBNET' values
+  ^\s*set\s+allowaccess\s+${ALLOW_ACCESS}\s*$$
+  ^\s*next\s*$$
+  ^\s*end\s*$$ -> Interface
+  ^\s*$$
+  ^. -> Error
