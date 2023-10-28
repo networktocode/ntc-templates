@@ -1,13 +1,30 @@
 """Tasks for use with Invoke."""
 import os
 import sys
-from distutils.util import strtobool
 from invoke import task
 
 try:
     import toml
 except ImportError:
     sys.exit("Please make sure to `pip install toml` or enable the Poetry shell and run `poetry install`.")
+
+
+def strtobool(val: str) -> bool:
+    """Convert a string representation of truth to true (1) or false (0).
+
+    Args:
+        val (str): String representation of truth.
+
+    Returns:
+        bool: True or False
+    """
+    val = val.lower()
+    if val in ("y", "yes", "t", "true", "on", "1"):
+        return True
+    elif val in ("n", "no", "f", "false", "off", "0"):
+        return False
+    else:
+        raise ValueError("invalid truth value %r" % (val,))
 
 
 def is_truthy(arg):
