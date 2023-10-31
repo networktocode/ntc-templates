@@ -43,7 +43,7 @@ Interface
   ^\s*set\s+status\s+${STATUS}.*$$
   ^\s*set\s+allowaccess\s+${ALLOW_ACCESS}\s*$$
   ^\s*set\s+type\s+${TYPE}\s*$$
-  ^\s*set\s+description\s+${DESCRIPTION}\s*$$
+  ^\s*set\s+description\s+"${DESCRIPTION}"\s*$$
   ^\s*set\s+alias\s+"${ALIAS}"\s*$$
   ^\s*set\s+role\s+${ROLE}\s*$$
   ^\s*set\s+stp\s+${STP}\s*$$
