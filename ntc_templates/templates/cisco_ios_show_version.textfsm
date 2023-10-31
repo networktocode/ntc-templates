@@ -16,6 +16,7 @@ Value List SERIAL (\S+)
 Value CONFIG_REGISTER (\S+)
 Value List MAC_ADDRESS ([0-9a-fA-F]{2}(:[0-9a-fA-F]{2}){5})
 Value RESTARTED (.+)
+Value List PID (\S+)
 
 Start
   ^.*Software,*\s+\(${SOFTWARE_IMAGE}\),\sVersion\s${VERSION},*\s+RELEASE.*\(${RELEASE}\)
@@ -31,6 +32,7 @@ Start
   ^(?:[lL]ast\s+reload\s+reason:|System\s+returned\s+to\s+ROM\s+by)\s+${RELOAD_REASON}\s*$$
   ^[Pp]rocessor\s+board\s+ID\s+${SERIAL}
   ^[Cc]isco\s+${HARDWARE}\s+\(.+\).+
+  ^Device#\s+PID\s+SN -> PidSnTable
   ^[Cc]onfiguration\s+register\s+is\s+${CONFIG_REGISTER}
   ^Base\s+[Ee]thernet\s+MAC\s+[Aa]ddress\s+:\s+${MAC_ADDRESS}
   ^System\s+restarted\s+at\s+${RESTARTED}$$
@@ -46,3 +48,11 @@ Stack
   ^[Mm]odel\s+[Nn]umber\s+:\s+${HARDWARE}\s*
   ^[Cc]onfiguration\s+register\s+is\s+${CONFIG_REGISTER}
   ^Base [Ee]thernet MAC [Aa]ddress\s+:\s+${MAC_ADDRESS}
+
+
+PidSnTable
+  ^-*$$
+  ^\s*\*\d+\s+${PID}\s+\S+\s*$$
+  ^License Information.*$$ -> Start
+  ^Technology Package License.*$$ -> Start
+  ^. -> Error
