@@ -3,6 +3,7 @@ import pytest
 
 from tasks import strtobool
 
+
 @pytest.mark.parametrize(
     "test_case, expected",
     [
@@ -23,6 +24,7 @@ from tasks import strtobool
 def test_strtobool(test_case, expected):
     """Test strtobool function."""
     assert strtobool(test_case) == expected
+
 
 def test_strtobool_error():
     """Test generation of the error message."""

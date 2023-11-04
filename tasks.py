@@ -19,11 +19,11 @@ def strtobool(val: str) -> bool:
         bool: True or False
     """
     val = val.lower()
-    
+
     # Check for valid truth values
     if val in ("y", "yes", "t", "true", "on", "1"):
         return True
-    
+
     # Check for valid false values
     if val in ("n", "no", "f", "false", "off", "0"):
         return False
