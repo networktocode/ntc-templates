@@ -19,12 +19,17 @@ def strtobool(val: str) -> bool:
         bool: True or False
     """
     val = val.lower()
+    
+    # Check for valid truth values
     if val in ("y", "yes", "t", "true", "on", "1"):
         return True
-    elif val in ("n", "no", "f", "false", "off", "0"):
+    
+    # Check for valid false values
+    if val in ("n", "no", "f", "false", "off", "0"):
         return False
-    else:
-        raise ValueError("invalid truth value %r" % (val,))
+
+    # Raise error if not valid truth value
+    raise ValueError("invalid truth value %r" % (val,))
 
 
 def is_truthy(arg):
