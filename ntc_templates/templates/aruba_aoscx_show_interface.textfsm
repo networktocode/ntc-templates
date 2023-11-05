@@ -102,10 +102,11 @@ Rate
   ^\s+Multicast
   ^\s+Broadcast
   ^\s+Utilization
-  ^\s*$$ -> Record Start
+  ^\s*$$ -> Statistic
   ^. -> Error
 
 Statistic
+  ^\s*Statistic\s+RX\s+TX\s+Total
   ^\s*----
   ^\s*Packets\s+\d+\s+\d+\s+${TX_TOTAL_PACKETS}
   ^\s+Unicast\s+\d+\s+\d+\s+${TX_UNICAST_PACKETS}
