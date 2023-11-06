@@ -1,0 +1,30 @@
+Flags:  D - Down        P - Up in port-channel (members)
+        I - Individual  H - Hot-standby (LACP only)
+        s - Suspended   r - Module-removed
+        S - Switched    R - Routed
+        U - Up (port-channel)
+        M - Not in use. Min-links not met
+--------------------------------------------------------------------------------
+Group Port-       Type     Protocol  Member Ports
+      Channel
+--------------------------------------------------------------------------------
+131   Po131(SU)   Eth      LACP      Eth1/1(P)    
+132   Po132(SU)   Eth      LACP      Eth1/2(P)    
+133   Po133(SU)   Eth      LACP      Eth1/3(P)    
+134   Po134(SU)   Eth      LACP      Eth1/4(P)    
+135   Po135(SD)   Eth      NONE      --
+136   Po136(SD)   Eth      LACP      Eth1/6(D)    
+137   Po137(SD)   Eth      NONE      --
+138   Po138(SD)   Eth      LACP      Eth1/24(D)   
+141   Po141(SD)   Eth      NONE      --
+142   Po142(SD)   Eth      NONE      --
+151   Po151(SD)   Eth      NONE      --
+171   Po171(SU)   Eth      LACP      Eth1/14(P)   
+172   Po172(SU)   Eth      LACP      Eth1/15(P)   
+173   Po173(SU)   Eth      LACP      Eth1/16(P)   
+174   Po174(SU)   Eth      LACP      Eth1/17(P)   
+175   Po175(SD)   Eth      LACP      Eth1/25(D)   
+176   Po176(SD)   Eth      LACP      Eth1/27(D)   
+177   Po177(SD)   Eth      LACP      Eth1/28(D)   
+178   Po178(SD)   Eth      NONE      --
+200   Po200(SU)   Eth      LACP      Eth1/21(P)   Eth1/22(P)  
