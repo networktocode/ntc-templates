@@ -8,7 +8,7 @@ Value PROTECTED (.*?)
 Value List VLAN (\d+)
 Value List NAME (.*?)
 Value List EGRESS_RULE (Untagged|Tagged)
-Value List PORT_MEMBERSHIP_TYPE (\S+)
+Value List INTERFACE_MEMBERSHIP_TYPE (\S+)
 Value List ADDED_BY (\S+)
 Value List FORBIDDEN_VLAN (\d+)
 Value List FORBIDDEN_VLAN_NAME (.*?)
@@ -22,8 +22,8 @@ Value List SUBNET_BASED_VLAN_ID (\d+)
 Start
   ^\s*Added\s+by\s*:\s+D-Default,\s+S-Static,\s+G-GVRP,\s+R-Radius\s+Assigned\s+VLAN,\s+T-Guest\s+VLAN,\s+V-Voice\s+VLAN\s*$$
   ^\s*Port\s*:.*$$ -> Continue.Record
-  ^\s*Port\s*:\s*${PORT}\s*$$
-  ^\s*Port\s+Mode\s*:\s*${PORT_MODE}\s*$$
+  ^\s*Port\s*:\s*${INTERFACE}\s*$$
+  ^\s*Port\s+Mode\s*:\s*${INTERFACE_MODE}\s*$$
   ^\s*Gvrp\s+Status\s*:\s*${GVRP_STATUS}\s*$$
   ^\s*Ingress\s+Filtering\s*:\s*${INGRESS_FILTERING}\s*$$
   ^\s*Acceptable\s+Frame\s+Type\s*:\s*${ACCEPTABLE_FRAME_TYPE}\s*$$
@@ -46,7 +46,7 @@ VlanMemberTable
 
 VlanMemberTableType1
   ^(?:\s*-+)+\s*$$
-  ^\s*${VLAN}\s+${NAME}\s+${EGRESS_RULE}\s+${PORT_MEMBERSHIP_TYPE}\s*$$
+  ^\s*${VLAN}\s+${NAME}\s+${EGRESS_RULE}\s+${INTERFACE_MEMBERSHIP_TYPE}\s*$$
   ^\s*$$ -> Start
   ^. -> Error
 

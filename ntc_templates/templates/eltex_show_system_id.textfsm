@@ -11,6 +11,6 @@ Start
 
 Firmware1
   ^(\s*-+)*\s*$$
-  ^\s*${UNIT}\s+${MAC}\s+${HARDWARE_VERSION}\s+${SERIAL_NUMBER}\s*$$ -> Record
+  ^\s*${UNIT}\s+${MAC_ADDRESS}\s+${HARDWARE_VERSION}\s+${SERIAL_NUMBER}\s*$$ -> Record
   ^\s*$$
   ^. -> Error
