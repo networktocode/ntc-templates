@@ -1,5 +1,5 @@
 Value UNIT (\d+)
-Value MAC ([a-zA-Z0-9]{2}(?::[a-zA-Z0-9]{2}){5})
+Value MAC_ADDRESS ([a-zA-Z0-9]{2}(?::[a-zA-Z0-9]{2}){5})
 Value HARDWARE_VERSION (\S+)
 Value SERIAL_NUMBER (\S+)
 
