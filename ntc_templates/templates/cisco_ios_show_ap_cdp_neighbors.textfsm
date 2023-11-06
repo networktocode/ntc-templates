@@ -1,0 +1,13 @@
+Value AP_NAME (\S+)
+Value AP_IP ([a-fA-F0-9:\.]+)
+Value NEIGHBOR_NAME (\S+)
+Value NEIGHBOR_IP ([a-fA-F0-9:\.]+)
+Value NEIGHBOR_PORT ([a-zA-Z0-9\/\.]+)
+
+Start
+  ^[a-zA-Z]+\s[a-z]+\s[a-zA-z]+:\s\d+$$
+  ^AP\sName\s+AP\sIP\s+Neighbor\sName\s+Neighbor\sIP\s+Neighbor\sPort\s*$$
+  ^-+\s*$$
+  ^${AP_NAME}\s+${AP_IP}\s+${NEIGHBOR_NAME}\s+${NEIGHBOR_IP}\s+${NEIGHBOR_PORT}\s*$$ -> Record
+  ^\s*$$
+  ^. -> Error
