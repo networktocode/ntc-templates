@@ -1,6 +1,6 @@
 Value IP (\S+)
-Value I_F (\S+(?:\s\d+)?)
-Value I_F_STATUS_ADMIN_OPER (\S+/\S+)
+Value INTERFACE (\S+(?:\s\d+)?)
+Value INTERFACE_STATUS_ADMIN_OPER (\S+/\S+)
 Value TYPE (Static|DHCP)
 Value STATUS (\S+)
 
@@ -20,7 +20,7 @@ Gateway
 
 IpAddress4Column
   ^(\s*-*)*\s*$$
-  ^\s*${IP}\s+${I_F}\s+${TYPE}\s+${STATUS}\s*$$ -> Record
+  ^\s*${IP}\s+${INTERFACE}\s+${TYPE}\s+${STATUS}\s*$$ -> Record
   ^\s*$$
   ^. -> Error
 
@@ -28,6 +28,6 @@ IpAddress5Column
   ^\s*admin/oper\s*$$
   ^(\s*-*)*\s*$$
   ^\s*Gateway\s+IP\s+Address\s+Activity\s+status\s+Type\s*$$ -> Gateway
-  ^\s*${IP}\s+${I_F}\s+${I_F_STATUS_ADMIN_OPER}\s+${TYPE}\s+${STATUS}\s*$$ -> Record
+  ^\s*${IP}\s+${INTERFACE}\s+${INTERFACE_STATUS_ADMIN_OPER}\s+${TYPE}\s+${STATUS}\s*$$ -> Record
   ^\s*$$
   ^. -> Error
