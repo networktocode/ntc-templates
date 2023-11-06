@@ -10,6 +10,7 @@ Value BANDWIDTH (.*)
 Value DUPLEX (\S+)
 Value SPEED (\S+)
 Value PORT_LINK_TYPE (\S+)
+Value UNTAGGED_VLAN_ID (\d+)
 Value VLAN_NATIVE (\d+)
 Value List VLAN_PASSING ([^,]+)
 Value List VLAN_PERMITTED ([^,]+)
@@ -37,6 +38,7 @@ Start
   ^\s*${SPEED},\s+${DUPLEX},\s+link\s+type
   ^\s*PVID:\s+${VLAN_NATIVE}
   ^\s*Port\s+link-type:\s+${PORT_LINK_TYPE}
+  ^\s*Un[Tt]agged\s+VLAN\s+ID\s*:\s*${UNTAGGED_VLAN_ID}
   # Trunk - Passing VLANs (parsing multiple times with Continue)
   ^\s+VLAN\s+[Pp]assing\s*:\s+${VLAN_PASSING},* -> Continue
   # Skip initial VLANs and read the Nth + 1
