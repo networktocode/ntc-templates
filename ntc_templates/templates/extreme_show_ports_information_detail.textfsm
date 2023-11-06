@@ -13,7 +13,7 @@ Value List VLAN_ID (\d+)
 
 Start
   ^\s*Port:.*$$ -> Continue.Record
-  ^\s*Port:\s*${PORT}\s*$$
+  ^\s*Port:\s*${INTERFACE}\s*$$
   ^\s*Description\s+String:\s*\"${DESCRIPTION}\"\s*$$
   ^\s*Virtual-router:\s*${VIRTUAL_ROUTER}\s*$$
   ^\s*Type:\s*${TYPE}\s*$$
