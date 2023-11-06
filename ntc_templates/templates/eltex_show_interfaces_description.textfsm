@@ -1,5 +1,5 @@
-Value PORT ((?!Port|Ch|-)\S+)
-Value PORT_MODE (Trunk|Access(?:\s*\(\d+\))?|Customer(?:\s*\(\d+\))?)
+Value INTERFACE ((?!Port|Ch|-)\S+)
+Value INTERFACE_MODE (Trunk|Access(?:\s*\(\d+\))?|Customer(?:\s*\(\d+\))?)
 Value ADMIN_STATE (Up|Down)
 Value LINK_STATE (Up|Down|Not Present)
 Value DESCRIPTION (.*?)
