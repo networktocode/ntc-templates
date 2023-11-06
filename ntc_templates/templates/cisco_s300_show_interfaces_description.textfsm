@@ -1,4 +1,4 @@
-Value PORT (\S+)
+Value INTERFACE (\S+)
 Value DESCRIPTION (\S.*?)
 
 Start
@@ -10,12 +10,12 @@ Start
 Column1
   ^(\s*-*)*\s*$$
   ^\s*Ch\s+Description\s*$$ -> Column2
-  ^\s*${PORT}(\s+${DESCRIPTION})?\s*$$ -> Record
+  ^\s*${INTERFACE}(\s+${DESCRIPTION})?\s*$$ -> Record
   ^\s*$$
   ^. -> Error
 
 Column2
   ^(\s*-*)*\s*$$
-  ^\s*${PORT}(\s+${DESCRIPTION})?\s*$$ -> Record
+  ^\s*${INTERFACE}(\s+${DESCRIPTION})?\s*$$ -> Record
   ^\s*$$
   ^. -> Error
