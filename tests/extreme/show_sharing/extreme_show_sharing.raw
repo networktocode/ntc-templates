@@ -1,0 +1,21 @@
+Load Sharing Monitor
+Config    Current    Agg       Ld Share    Ld Share  Agg   Link    Link Up
+Master    Master     Control   Algorithm   Group     Mbr   State   Transitions
+==============================================================================
+     1               LACP      L3_L4       1          -      R        0
+                               L3_L4       2          -      R        1
+                               L3_L4       3          -      R        7
+                               L3_L4       4          -      R        0
+    29               LACP      L3_L4       29         -      R       12
+                               L3_L4       34         -      R        7
+    33     33        LACP      L2          33         Y      A        2
+                               L2          35         Y      A        1
+    38               LACP      L3_L4       38         -      R        0
+                               L3_L4       39         -      R        0
+==============================================================================
+Link State: A-Active, D-Disabled, R-Ready, NP-Port not present, L-Loopback
+Load Sharing Algorithm: (L2) Layer 2 address based, (L3) Layer 3 address based
+                        (L3_L4) Layer 3 address and Layer 4 port based
+                        (custom) User-selected address-based configuration
+Custom Algorithm Configuration: ipv4 L3-and-L4, xor
+Number of load sharing trunks: 4
