@@ -1,0 +1,48 @@
+---
+parsed_sample:
+  - inbound_acl: ""
+    interface: "GigabitEthernet0/0/0"
+    ip_address:
+      - "10.1.1.1"
+    ip_helper: []
+    link_status: "up"
+    mtu: "1500"
+    outgoing_acl: ""
+    prefix_length:
+      - "30"
+    protocol_status: "up"
+    vrf: ""
+  - inbound_acl: ""
+    interface: "GigabitEthernet0/0/1"
+    ip_address: []
+    ip_helper: []
+    link_status: "up"
+    mtu: ""
+    outgoing_acl: ""
+    prefix_length: []
+    protocol_status: "up"
+    vrf: ""
+  - inbound_acl: ""
+    interface: "GigabitEthernet0/0/1.10"
+    ip_address:
+      - "172.2.2.2"
+    ip_helper: []
+    link_status: "up"
+    mtu: "1500"
+    outgoing_acl: ""
+    prefix_length:
+      - "25"
+    protocol_status: "up"
+    vrf: ""
+  - inbound_acl: ""
+    interface: "Tunnel102"
+    ip_address:
+      - "10.1.0.214"
+    ip_helper: []
+    link_status: "up"
+    mtu: "1400"
+    outgoing_acl: ""
+    prefix_length:
+      - "30"
+    protocol_status: "up"
+    vrf: ""
