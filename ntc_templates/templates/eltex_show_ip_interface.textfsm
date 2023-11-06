@@ -2,9 +2,9 @@ Value GATEWAY_IP (\S+)
 Value GATEWAY_STATUS (\S+)
 Value GATEWAY_TYPE (\S+)
 Value IP (\S+)
-Value I_F (.*?)
-Value I_F_STATUS_ADMIN (\S+)
-Value I_F_STATUS_OPER (\S+)
+Value INTERFACE (.*?)
+Value INTERFACE_STATUS_ADMIN (\S+)
+Value INTERFACE_STATUS_OPER (\S+)
 Value TYPE (Static|DHCP)
 Value DIRECTED_BROADCAST (disable|enable)
 Value PRECEDENCE (Yes|No)
@@ -28,7 +28,7 @@ Gateway
 
 Column4
   ^(?:\s*-+)+\s*$$
-  ^${IP}\s+${I_F}\s+${TYPE}\s+${STATUS}\s*$$ -> Record
+  ^${IP}\s+${INTERFACE}\s+${TYPE}\s+${STATUS}\s*$$ -> Record
   # Skip wrapped lines
   ^\s+received\s*$$
   ^\s*$$
@@ -37,7 +37,7 @@ Column4
 Column6
   ^(?:\s*-+)+\s*$$
   ^\s+Broadcast\s*$$
-  ^${IP}\s+${I_F}\s+${TYPE}\s+${DIRECTED_BROADCAST}\s+${PRECEDENCE}\s+${STATUS}\s*$$ -> Record
+  ^${IP}\s+${INTERFACE}\s+${TYPE}\s+${DIRECTED_BROADCAST}\s+${PRECEDENCE}\s+${STATUS}\s*$$ -> Record
   # Skip wrapped lines
   ^\s+received\s*$$
   ^\s*$$
@@ -46,7 +46,7 @@ Column6
 Column8
   ^\s+admin/oper\s+Broadcast\s*$$
   ^(?:\s*-+)+\s*$$
-  ^${IP}\s+${I_F}(?:\s+${I_F_STATUS_ADMIN}/${I_F_STATUS_OPER})?\s+${TYPE}\s+${DIRECTED_BROADCAST}\s+${PRECEDENCE}\s+${REDIRECT}\s+${STATUS}\s*$$ -> Record
+  ^${IP}\s+${INTERFACE}(?:\s+${INTERFACE_STATUS_ADMIN}/${INTERFACE_STATUS_OPER})?\s+${TYPE}\s+${DIRECTED_BROADCAST}\s+${PRECEDENCE}\s+${REDIRECT}\s+${STATUS}\s*$$ -> Record
   # Skip wrapped lines
   ^\s+received\s*$$
   ^\s*$$

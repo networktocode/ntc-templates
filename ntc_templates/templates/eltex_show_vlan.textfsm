@@ -1,5 +1,5 @@
 Value Required VLAN_ID (\d+)
-Value NAME (\S+)
+Value VLAN_NAME (\S+)
 Value TYPE (\S+)
 Value AUTHORIZATION (\S+)
 Value CREATED_BY (\S+)
@@ -17,7 +17,7 @@ Start
 
 TableType1
   ^(?:\s*-+)+\s*$$
-  ^\s*${VLAN_ID}\s+(?:${NAME}|-)\s+\S+\s+\S+\s+${TYPE}\s+${AUTHORIZATION}\s*$$ -> Record
+  ^\s*${VLAN_ID}\s+(?:${VLAN_NAME}|-)\s+\S+\s+\S+\s+${TYPE}\s+${AUTHORIZATION}\s*$$ -> Record
   # Skip wrapped lines
   ^\s{5}\s*\S+(?:\s+\S+)*\s*$$
   ^\s*$$
@@ -25,7 +25,7 @@ TableType1
 
 TableType2
   ^(?:\s*-+)+\s*$$
-  ^\s*${VLAN_ID}\s+${NAME}(?:\s+\S+)?\s+${TYPE}\s+${AUTHORIZATION}\s*$$ -> Record
+  ^\s*${VLAN_ID}\s+${VLAN_NAME}(?:\s+\S+)?\s+${TYPE}\s+${AUTHORIZATION}\s*$$ -> Record
   # Skip wrapped lines
   ^\s{5}\s*\S+(?:\s+\S+)*\s*$$
   ^\s*$$
@@ -33,7 +33,7 @@ TableType2
 
 TableType3
   ^(?:\s*-+)+\s*$$
-  ^\s*${VLAN_ID}\s+(?:${NAME}|-)(?:\s+\S+)?(?:\s+\S+)?\s+${CREATED_BY}\s*$$ -> Record
+  ^\s*${VLAN_ID}\s+(?:${VLAN_NAME}|-)(?:\s+\S+)?(?:\s+\S+)?\s+${CREATED_BY}\s*$$ -> Record
   # Skip wrapped lines
   ^\s{5}\s*\S+(?:\s+\S+)*\s*$$
   ^\s*$$

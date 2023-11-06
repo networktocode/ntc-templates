@@ -1,5 +1,5 @@
 Value DESCRIPTION (.*)
-Value UP_TIME (.*)
+Value UPTIME (.*)
 Value CONTACT (.*)
 Value HOSTNAME (.*)
 Value LOCATION (.*)
@@ -22,7 +22,7 @@ Value List UNIT_TEMP_STATUS (.*)
 
 Start
   ^\s*System\s+Description:\s*${DESCRIPTION}\s*$$
-  ^\s*System\s+Up\s+Time\s+\(days,hour:min:sec\):\s*${UP_TIME}\s*$$
+  ^\s*System\s+Up\s+Time\s+\(days,hour:min:sec\):\s*${UPTIME}\s*$$
   ^\s*System\s+Contact:\s*${CONTACT}\s*$$
   ^\s*System\s+Name:\s*${HOSTNAME}\s*$$
   ^\s*System\s+Location:\s*${LOCATION}\s*$$

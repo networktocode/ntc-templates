@@ -1,4 +1,4 @@
-Value PORT (\S+)
+Value INTERFACE (\S+)
 Value TYPE (\S+)
 Value DUPLEX (\S+)
 Value SPEED (\d+|--)
@@ -9,7 +9,7 @@ Value LINK_STATE ((Up|Down(?:\s+\(\S+\))?|Not Present))
 Value UP_TIME (\d+,\d{2}:\d{2}:\d{2}|--)
 Value BACK_PRESSURE (\S+)
 Value MDIX_MODE (On|Off|--)
-Value PORT_MODE (.*?)
+Value INTERFACE_MODE (.*?)
 
 Start
   ^\s*(?:Flow\s+)?Link(?:(?:\s+Up(\s+)?[Tt]ime)?\s+Back\s+Mdix)?\s*$$
@@ -28,42 +28,42 @@ Start
 
 Port6
   ^(?:\s*-+)+\s*$$
-  ^${PORT}\s+${TYPE}\s+${SPEED}\s+${FLOW_CTRL}\s+${LINK_STATE}\s+${PORT_MODE}\s*$$ -> Record
+  ^${INTERFACE}\s+${TYPE}\s+${SPEED}\s+${FLOW_CTRL}\s+${LINK_STATE}\s+${INTERFACE_MODE}\s*$$ -> Record
   ^\s*$$ -> Start
   ^. -> Error
 
 Port11
   ^(?:\s*-+)+\s*$$
-  ^\s*${PORT}\s+${TYPE}\s+${DUPLEX}\s+${SPEED}\s+${NEG}\s+${FLOW_CTRL}\s+${LINK_STATE}\s+${UP_TIME}\s+${BACK_PRESSURE}\s+${MDIX_MODE}\s+${PORT_MODE}\s*$$ -> Record
+  ^\s*${INTERFACE}\s+${TYPE}\s+${DUPLEX}\s+${SPEED}\s+${NEG}\s+${FLOW_CTRL}\s+${LINK_STATE}\s+${UP_TIME}\s+${BACK_PRESSURE}\s+${MDIX_MODE}\s+${INTERFACE_MODE}\s*$$ -> Record
   ^\s*$$ -> Start
   ^. -> Error
 
 Port10
   ^(?:\s*-+)+\s*$$
-  ^${PORT}\s+${TYPE}\s+${DUPLEX}\s+${SPEED}\s+${NEG}\s+${FLOW_CTRL}\s+${LINK_STATE}\s+${BACK_PRESSURE}\s+${MDIX_MODE}\s+${PORT_MODE}\s*$$ -> Record
+  ^${INTERFACE}\s+${TYPE}\s+${DUPLEX}\s+${SPEED}\s+${NEG}\s+${FLOW_CTRL}\s+${LINK_STATE}\s+${BACK_PRESSURE}\s+${MDIX_MODE}\s+${INTERFACE_MODE}\s*$$ -> Record
   ^\s*$$ -> Start
   ^. -> Error
 
 Ch5
   ^(?:\s*-+)+\s*$$
-  ^\s*${PORT}\s+${BW}\s+${FLOW_CTRL}\s+${LINK_STATE}\s+${PORT_MODE}\s*$$ -> Record
+  ^\s*${INTERFACE}\s+${BW}\s+${FLOW_CTRL}\s+${LINK_STATE}\s+${INTERFACE_MODE}\s*$$ -> Record
   ^\s*$$ -> Start
   ^. -> Error
 
 Ch7
   ^(?:\s*-+)+\s*$$
-  ^\s*${PORT}\s+${DUPLEX}\s+${BW}\s+${NEG}\s+${FLOW_CTRL}\s+${LINK_STATE}\s+${PORT_MODE}\s*$$ -> Record
+  ^\s*${INTERFACE}\s+${DUPLEX}\s+${BW}\s+${NEG}\s+${FLOW_CTRL}\s+${LINK_STATE}\s+${INTERFACE_MODE}\s*$$ -> Record
   ^\s*$$ -> Start
   ^. -> Error
 
 Ch8
   ^(?:\s*-+)+\s*$$
-  ^\s*${PORT}\s+${TYPE}\s+${DUPLEX}\s+${SPEED}\s+${NEG}\s+${FLOW_CTRL}\s+${LINK_STATE}\s+${PORT_MODE}\s*$$ -> Record
+  ^\s*${INTERFACE}\s+${TYPE}\s+${DUPLEX}\s+${SPEED}\s+${NEG}\s+${FLOW_CTRL}\s+${LINK_STATE}\s+${INTERFACE_MODE}\s*$$ -> Record
   ^\s*$$ -> Start
   ^. -> Error
 
 Oob
   ^(?:\s*-+)+\s*$$
-  ^\s*${PORT}\s+${TYPE}\s+${DUPLEX}\s+${SPEED}\s+${NEG}\s+${LINK_STATE}\s*$$ -> Record
+  ^\s*${INTERFACE}\s+${TYPE}\s+${DUPLEX}\s+${SPEED}\s+${NEG}\s+${LINK_STATE}\s*$$ -> Record
   ^\s*$$ -> Start
   ^. -> Error

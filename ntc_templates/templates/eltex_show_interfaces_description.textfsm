@@ -1,5 +1,5 @@
-Value PORT ((?!Port|Ch|-)\S+)
-Value PORT_MODE (Trunk|Access(?:\s*\(\d+\))?|Customer(?:\s*\(\d+\))?)
+Value INTERFACE ((?!Port|Ch|-)\S+)
+Value INTERFACE_MODE (Trunk|Access(?:\s*\(\d+\))?|Customer(?:\s*\(\d+\))?)
 Value ADMIN_STATE (Up|Down)
 Value LINK_STATE (Up|Down|Not Present)
 Value DESCRIPTION (.*?)
@@ -20,54 +20,54 @@ Start
 
 Port2
   ^(?:\s*-+)+\s*$$
-  ^\s*${PORT}(?:\s+${DESCRIPTION})?\s*$$ -> Record
+  ^\s*${INTERFACE}(?:\s+${DESCRIPTION})?\s*$$ -> Record
   ^\s*$$ -> Start
   ^. -> Error
 
 Port4
   ^(?:\s*-+)+\s*$$
-  ^\s*${PORT}\s+${ADMIN_STATE}\s+${LINK_STATE}(?:\s+${DESCRIPTION})?\s*$$ -> Record
+  ^\s*${INTERFACE}\s+${ADMIN_STATE}\s+${LINK_STATE}(?:\s+${DESCRIPTION})?\s*$$ -> Record
   ^\s*$$ -> Start
   ^. -> Error
 
 Port5
   ^(?:\s*-+)+\s*$$
-  ^\s*${PORT}(?:\s+${PORT_MODE})?\s+${ADMIN_STATE}\s+${LINK_STATE}(?:\s+${DESCRIPTION})?\s*$$ -> Record
+  ^\s*${INTERFACE}(?:\s+${INTERFACE_MODE})?\s+${ADMIN_STATE}\s+${LINK_STATE}(?:\s+${DESCRIPTION})?\s*$$ -> Record
   ^\s*$$ -> Start
   ^. -> Error
 
 Ch2
   ^(?:\s*-+)+\s*$$
-  ^\s*${PORT}(?:\s+${DESCRIPTION})?\s*$$ -> Record
+  ^\s*${INTERFACE}(?:\s+${DESCRIPTION})?\s*$$ -> Record
   ^\s*$$ -> Start
   ^. -> Error
 
 Ch4
   ^(?:\s*-+)+\s*$$
-  ^\s*${PORT}\s+${ADMIN_STATE}\s+${LINK_STATE}(?:\s+${DESCRIPTION})?\s*$$ -> Record
+  ^\s*${INTERFACE}\s+${ADMIN_STATE}\s+${LINK_STATE}(?:\s+${DESCRIPTION})?\s*$$ -> Record
   ^\s*$$ -> Start
   ^. -> Error
 
 Ch5
   ^(?:\s*-+)+\s*$$
-  ^\s*${PORT}(?:\s+${PORT_MODE})?\s+${ADMIN_STATE}\s+${LINK_STATE}(?:\s+${DESCRIPTION})?\s*$$ -> Record
+  ^\s*${INTERFACE}(?:\s+${INTERFACE_MODE})?\s+${ADMIN_STATE}\s+${LINK_STATE}(?:\s+${DESCRIPTION})?\s*$$ -> Record
   ^\s*$$ -> Start
   ^. -> Error
 
 Vlan
   ^(?:\s*-+)+\s*$$
-  ^\s*${PORT}\s+${ADMIN_STATE}\s+${LINK_STATE}(?:\s+${DESCRIPTION})?\s*$$ -> Record
+  ^\s*${INTERFACE}\s+${ADMIN_STATE}\s+${LINK_STATE}(?:\s+${DESCRIPTION})?\s*$$ -> Record
   ^\s*$$ -> Start
   ^. -> Error
 
 Loopback
   ^(?:\s*-+)+\s*$$
-  ^\s*${PORT}\s+${ADMIN_STATE}\s+${LINK_STATE}(?:\s+${DESCRIPTION})?\s*$$ -> Record
+  ^\s*${INTERFACE}\s+${ADMIN_STATE}\s+${LINK_STATE}(?:\s+${DESCRIPTION})?\s*$$ -> Record
   ^\s*$$ -> Start
   ^. -> Error
 
 Oob
   ^(?:\s*-+)+\s*$$
-  ^\s*${PORT}\s+${ADMIN_STATE}\s+${LINK_STATE}(?:\s+${DESCRIPTION})?\s*$$ -> Record
+  ^\s*${INTERFACE}\s+${ADMIN_STATE}\s+${LINK_STATE}(?:\s+${DESCRIPTION})?\s*$$ -> Record
   ^\s*$$ -> Start
   ^. -> Error
