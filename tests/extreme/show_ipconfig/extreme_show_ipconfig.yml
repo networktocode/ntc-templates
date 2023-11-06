@@ -1,0 +1,34 @@
+---
+parsed_sample:
+  - flags:
+      - "EU----MPuRX---------"
+      - "EUf---MPuRX---------"
+    interface:
+      - "VLAN0255"
+      - "VLAN2222"
+    ip:
+      - "10.255.254.3"
+      - "10.1.222.3"
+    ip_option_lsrr: "Enabled"
+    ip_option_ra: "Enabled"
+    ip_option_rr: "Enabled"
+    ip_option_ssrr: "Enabled"
+    ip_option_ts: "Enabled"
+    irdp_advertisement_address: "255.255.255.255"
+    irdp_lifetime: "1800"
+    irdp_max_interval: "600"
+    irdp_min_interval: "450"
+    irdp_preference: "0"
+    max_shared_gateways_configured: "4"
+    max_shared_gateways_current: "4"
+    nsia:
+      - "0"
+      - "0"
+    originated_packets: "Don't require ipforwarding"
+    route_compression: "Disabled"
+    route_sharing: "Disabled"
+    route_sharing_hash: "CRC Lower"
+    subnet:
+      - "/16"
+      - "/24"
+    use_redirects: "Disabled"
