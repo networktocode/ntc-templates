@@ -18,9 +18,9 @@ Start
 Column5
   ^(\s*-*)*\s*$$
   ^\s*\d+.* -> Continue.Record
-  ^\s*${VLAN_ID}\s+${VLAN_NAME}(?:\s+${INTERFACE})?\s+${TYPE}\s+${AUTHORIZATION}\s*$$
+  ^\s*${VLAN_ID}\s+${VLAN_NAME}(?:\s+${INTERFACES})?\s+${TYPE}\s+${AUTHORIZATION}\s*$$
 
 Column4
   ^(\s*-*)*\s*$$
   ^\s*\d+.* -> Continue.Record
-  ^\s*${VLAN_ID}\s+${VLAN_NAME}(?:\s+${INTERFACE})?\s+${CREATED_BY}\s*$$
+  ^\s*${VLAN_ID}\s+${VLAN_NAME}(?:\s+${INTERFACES})?\s+${CREATED_BY}\s*$$
