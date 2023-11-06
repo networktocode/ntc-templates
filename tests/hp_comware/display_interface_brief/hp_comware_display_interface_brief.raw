@@ -1,0 +1,21 @@
+The brief information of interface(s) under route mode:
+Link: ADM - administratively down; Stby - standby
+Protocol: (s) - spoofing
+Interface            Link Protocol Main IP         Description
+Aux0                 UP   UP       --
+Cellular0/0          DOWN DOWN     --
+GE0/0                UP   UP       192.168.100.1   The interface for connecting RouterA.
+Loop0                UP   UP(s)    --              --
+MP0                  DOWN DOWN     --
+NULL0                UP   UP(s)    --              --
+Vlan1                DOWN DOWN     192.168.1.1
+
+The brief information of interface(s) under bridge mode:
+Link: ADM - administratively down; Stby - standby
+Speed or Duplex: (a)/A - auto; H - half; F - full
+Type: A - access; T - trunk; H - hybrid
+Interface            Link Speed   Duplex Type PVID Description
+GE0/1                DOWN auto    A      A    1
+GE0/2                DOWN auto    A      A    1
+GE0/3                DOWN auto    A      A    1
+GE0/4                DOWN auto    A      A    1

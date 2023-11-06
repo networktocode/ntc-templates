@@ -1,0 +1,69 @@
+Port      Flags               Link      ELSM Link Num Num  Num   Jumbo QOS     Load
+                              State     /OAM UPS  STP VLAN Proto Size  profile Master
+=====================================================================================
+1         Dmjla---e--fMB---x- ready     - / -  0    1 3288   1   9216  none    1 a
+2         Dmjla---e--fMB---x- ready     - / -  1    1 3288   1   9216  none    1 a
+3         Dmjla---e--fMB---x- ready     - / -  7    1 3288   1   9216  none    1 a
+4         Dmjla---e--fMB---x- ready     - / -  0    1 3288   1   9216  none    1 a
+5         Emj-----e--fMB---x- active    - / -  1    0    1   0   9216  none
+6         Emj-----e--fMB---x- active    - / -  2    0   74   0   9216  none
+7         Emj-----e--fMB---x- active    - / -  2    0   74   0   9216  none
+8         Emj-----e--fMB---x- ready     - / -  0    0    0   0   9216  none
+9         Dmj-----e--fMB---x- ready     - / -  0    0    0   0   9216  none
+10        Emj-----e--fMB---x- ready     - / -  0    0    0   0   9216  none
+11        Emj-----e--fMB---x- ready     - / -  0    0    1   1   9216  none
+12        Emj-----e--fMB---x- active    - / -  0    0   97   0   9216  none
+13        Emj-----e--fMB---x- active    - / -  1    1   55   1   9216  none
+14        Emj-----e--fMB---x- active    - / - 10    1  130   1   9216  none
+15        Emj-----e--fMB---x- active    - / -  0    1  191   1   9216  none
+16        Emj-----e--fMB---x- active    - / -  1    1  312   1   9216  none
+17        Emj-----e--fMB---x- ready     - / -  0    0 3289   0   9216  none
+18        Emj-----e--fMB---x- ready     - / -  0    0    0   0   9216  none
+19        Emj-----e--fMB---x- active    - / - 22    0  176   0   9216  none
+20        Emj-----e--fMB---x- ready     - / -  0    1    7   1   9216  none
+21        Dmj-----e--fMB---x- ready     - / -  4    0    1   1   9216  none
+22        Emj-----e--fMB---x- ready     - / -  0    1   11   1   9216  none
+23        Emj-----e--fMB---x- active    - / -  2    1 3324   1   9216  none
+24        Emj-----e--fMB---x- ready     - / -  2    0    1   0   9216  none
+25        Dmj-----e--fMB---x- ready     - / -  3    0    5   0   9216  none
+26        Emj-----e--fMB---x- ready     - / -  4    0    5   0   9216  none
+27        Emj-----e--fMB---x- ready     - / - 11    0    5   0   9216  none
+28        Emj-----e--fMB---x- ready     - / -  0    0    5   0   9216  none
+29        Emjla---e--fMB---x- ready     - / - 12    0   72   0   9216  none    29 a
+30        Dmj-----e--fMB---x- ready     - / -  2    1  532   1   9216  none
+31        Emj-----e--fMB---x- ready     - / -  0    0    0   0   9216  none
+32        Emj-----e--fMB---x- ready     - / -  0    0    0   0   9216  none
+33        Emjla---e--fMB---x- active    - / -  2    0  856   0   9216  none    33 a
+34        Emjla---e--fMB---x- ready     - / -  7    0   72   0   9216  none    29 a
+35        Emjla---e--fMB---x- active    - / -  1    0  856   0   9216  none    33 a
+36        Emj-----e--fMB---x- active    - / - 10    0    0   0   9216  none
+37        Emj-----e--fMB---x- active    - / -  0    0    0   0   9216  none
+38        Emjla---e--fMB---x- ready     - / -  0    0   26   0   9216  none    38 a
+39        Emjla---e--fMB---x- ready     - / -  0    0   26   0   9216  none    38 a
+40        Emj-----e--fMB---x- ready     - / -  0    0    7   0   9216  none
+41        Emj-----e--fMB---x- ready     - / -  0    1  118   1   9216  none
+42        Emj-----e--fMB---x- ready     - / -  0    1  317   1   9216  none
+43        Emj-----e--fMB---x- ready     - / -  5    1    2   1   9216  none
+44        Emj-----e--fMB---x- active    - / -  2    0    1   1   9216  none
+45        Emj-----e--fMB----- active    - / -  1    0  388   0   9216  none
+46        Emj-----e--fMB----- active    - / - 17    0    6   0   9216  none
+47        Emj-----e--fMB----- active    - / -  0    0  261   0   9216  none
+48        Emj-----e--fMB----- active    - / -  0    0  265   0   9216  none
+=====================================================================================
+> indicates Port Display Name truncated past 8 characters
+Flags : a - Load Sharing Algorithm address-based, D - Port Disabled,
+        e - Extreme Discovery Protocol Enabled, E - Port Enabled,
+        g - Egress TOS Enabled, i - Isolation, j - Jumbo Frame Enabled,
+        l - Load Sharing Enabled, m - MACLearning Enabled,
+        n - Ingress TOS Enabled, o - Dot1p Replacement Enabled,
+        P - Software redundant port(Primary),
+        R - Software redundant port(Redundant),
+        q - Background QOS Monitoring Enabled,
+        s - diffserv Replacement Enabled,
+        v - Vman Enabled, f - Unicast Flooding Enabled,
+        M - Multicast Flooding Enabled, B - Broadcast Flooding Enabled
+        L - Extreme Link Status Monitoring Enabled
+        O - Ethernet OAM Enabled
+        w - MACLearning Disabled with Forwarding
+        b - Rx and Tx Flow Control Enabled, x - Rx Flow Control Enabled
+        p - Priority Flow Control Enabled
