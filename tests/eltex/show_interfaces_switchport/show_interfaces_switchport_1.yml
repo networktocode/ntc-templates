@@ -15,11 +15,11 @@ parsed_sample:
       - "test101"
       - "test102"
     native_vlan: "1"
-    port: "gi1/0/1"
-    port_membership_type:
+    interface: "gi1/0/1"
+    interface_membership_type:
       - "Static"
       - "Static"
-    port_mode: "Access"
+    interface_mode: "Access"
     protected: "Disabled"
     protocol_based_vlan_group_id: []
     protocol_based_vlan_id: []

@@ -17,9 +17,9 @@ parsed_sample:
       - "Servers_OS"
       - "NULL"
     native_vlan: "4094"
-    port: "gi1/0/1"
-    port_membership_type: []
-    port_mode: "Trunk"
+    interface: "gi1/0/1"
+    interface_membership_type: []
+    interface_mode: "Trunk"
     protected: "Disabled"
     protocol_based_vlan_group_id: []
     protocol_based_vlan_id: []
