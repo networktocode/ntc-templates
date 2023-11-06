@@ -2,7 +2,7 @@ Value Required,Filldown BUNDLE_IFACE (Po\d+)
 Value Filldown BUNDLE_STATUS (\(\w+\))
 Value Filldown BUNDLE_PROTO (\w+)
 Value Filldown BUNDLE_PROTO_STATE (\(\w+\))
-Value List PHYS_IFACE (Et.+?)
+Value List PHYS_IFACE ([\w\/]+|\-\-)
 Value List PHYS_IFACE_STATUS (\(.+?\))
 
 
@@ -43,3 +43,4 @@ CASE2_RTE
   ^\s{37}Et.+?\s+${PHYS_IFACE}${PHYS_IFACE_STATUS}(\s|$$) -> Continue
   ^\s{37}Et.+?\s+Et.+?\s+${PHYS_IFACE}${PHYS_IFACE_STATUS}(\s|$$) -> Continue
   ^\s{37}Et.+?\s+Et.+?\s+Et.+?\s+${PHYS_IFACE}${PHYS_IFACE_STATUS}(\s|$$) -> Continue
+  ^\d+\s+${BUNDLE_IFACE}${BUNDLE_STATUS}\s+\w+\s+${BUNDLE_PROTO}\s+${PHYS_IFACE}($$) -> Next
