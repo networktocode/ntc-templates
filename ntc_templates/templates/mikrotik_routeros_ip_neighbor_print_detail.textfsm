@@ -18,6 +18,6 @@ Value SYSTEM_CAPS ([a-zA-Z0-9,]*)
 Value SYSTEM_CAPS_ENABLED ([a-zA-Z0-9,]*)
 
 Start
-  ^\s*${NUM}\s+interface=${INTERFACE}(?:\s+address=${ADDRESS})?(?:\s+address4=${ADDRESS4})?\s+mac-address=${MAC_ADDRESS}\s+identity="${IDENTITY}"\s+platform="${PLATFORM}"\s+version="${VERSION}"\s+unpack=${UNPACK}\s+age=${AGE}(?:\s+uptime=${UPTIME})?(?:\s+software-id="${SOFTWARE_ID}")?(?:\s+board="${BOARD}")?(?:\s+ipv6=${IPV6})?\s+interface-name="${INTERFACE_NAME}"(?:\s+system-description="${SYSTEM_DESCRIPTION}")?\s+system-caps="?${SYSTEM_CAPS}"?\s+system-caps-enabled="?${SYSTEM_CAPS_ENABLED}"?\s*$$ -> Record
+  ^\s*${NUM}\s+interface=${INTERFACE}(?:\s+address=${IP_ADDRESS})?(?:\s+address4=${ADDRESS4})?\s+mac-address=${MAC_ADDRESS}\s+identity="${IDENTITY}"\s+platform="${PLATFORM}"\s+version="${VERSION}"\s+unpack=${UNPACK}\s+age=${AGE}(?:\s+uptime=${UPTIME})?(?:\s+software-id="${SOFTWARE_ID}")?(?:\s+board="${BOARD}")?(?:\s+ipv6=${IPV6})?\s+interface-name="${INTERFACE_NAME}"(?:\s+system-description="${SYSTEM_DESCRIPTION}")?\s+system-caps="?${SYSTEM_CAPS}"?\s+system-caps-enabled="?${SYSTEM_CAPS_ENABLED}"?\s*$$ -> Record
   ^\s*$$
   ^. -> Error
