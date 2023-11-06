@@ -1,6 +1,6 @@
 Value NUM (\d+)
 Value INTERFACE (\S+)
-Value ADDRESS (\S+)
+Value IP_ADDRESS (\S+)
 Value ADDRESS4 (\S+)
 Value MAC_ADDRESS ([a-zA-Z0-9]{2}(:[a-zA-Z0-9]{2}){5})
 Value IDENTITY (.*)
