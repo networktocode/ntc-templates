@@ -11,15 +11,14 @@ Value COMMUNITY ((?:(?:(?:no-export|no-advertise|local-as|internet)|\d+\s?:\s?\d
 Value NEXT_HOP (\d+\.\d+\.\d+\.\d+)
 Value NEIGHBOR (\S+)
 Value NEIGHBOR_ID (\S+)
+Value Filldown VRF (\S+)
 Value Filldown ROUTER_ID (\S+)
 Value Filldown LOCAL_AS (\S+)
 Value METRIC (\d+)
 
 Start
-  ^BGP\s+routing\s+table\sinformation.+
-  ^Router\s+identifier\s+${ROUTER_ID},\s+local\s+AS\s+number\s+${LOCAL_AS} -> Path
-
-Path
+  ^BGP\s+routing\s+table\sinformation\s+for\s+VRF\s+${VRF}
+  ^Router\s+identifier\s+${ROUTER_ID},\s+local\s+AS\s+number\s+${LOCAL_AS}
   ^BGP\s+routing\s+table\s+entry\s+for\s+${PREFIX}(?:/${PREFIX_LENGTH})?
   ^\s+Paths:\s+\d+\s+available
   ^\s+${AS_PATH}\s*$$

@@ -73,3 +73,12 @@ BGP routing table entry for 10.107.1.0/24
       Community: no-export
       Rx path id: 0x1
       Rx SAFI: Unicast
+BGP routing table information for VRF CLOUD
+Router identifier 10.105.1.1, local AS number 105
+BGP routing table entry for 10.105.1.0/24
+ Paths: 1 available
+  6111 6211566 42669611124 4266644366 4266643244
+    10.99.1.2 from 10.105.6.2 (10.15.1.1)
+      Origin INCOMPLETE, metric 0, localpref 100, IGP metric 1, weight 0, received 13d11h ago, valid, external, best
+      Community: internet 10050:200 10222:10010 3223:0 1000:17044
+      Rx SAFI: Unicast
