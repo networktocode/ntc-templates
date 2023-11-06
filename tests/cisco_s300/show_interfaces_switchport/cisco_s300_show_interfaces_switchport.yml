@@ -14,11 +14,11 @@ parsed_sample:
       - "203"
       - "VOIP-1"
     native_vlan: "203"
-    port: "fa1"
-    port_membership_type:
+    interface: "fa1"
+    interface_membership_type:
       - "Static"
       - "Static"
-    port_mode: "Trunk"
+    interface_mode: "Trunk"
     vlan:
       - "203"
       - "222"
