@@ -8,14 +8,14 @@ Value LOCAL_PREF (\S+)
 Value WEIGHT (\S+)
 Value AS_PATH (.*?)
 Value ORIGIN ([ie\?])
+Value Filldown VRF (\S+)
+Value Filldown LOCAL_AS (\d+\.\d+|\d+)
+Value Filldown ROUTER_ID (\S+)
 
 Start
-  # Since using mostly position, play it safe and ensure we see header first
-  ^AS Path Attributes.+ -> Bgp_table
-
-Bgp_table
-  # Example:
-  # *     0.0.0.0/0           100.100.10.226   0       350     0       65000 65000 65000 64810 64800 i
+  ^BGP\s+routing\s+table\s+information\s+for\s+VRF\s+${VRF}
+  ^Router\s+identifier\s+${ROUTER_ID},\s+local\s+AS\s+number\s+${LOCAL_AS}
+  ^AS Path Attributes.+
   ^\s${STATUS}${PATH_SELECTION}${ROUTE_SOURCE}\s+${NETWORK}\s+${NEXT_HOP}\s+${METRIC}\s+${LOCAL_PREF}\s+${WEIGHT}\s+${AS_PATH}\s+${ORIGIN}$$ -> Record
 
 EOF
