@@ -1,6 +1,6 @@
 Value Required VLAN_ID (\d+)
-Value NAME (.*?)
-Value PORTS ((?:fa|gi|te|Po)\d+(?:-\d+)?(?:,(?:fa|gi|te|Po)\d+(?:-\d+)?)*,?)
+Value VLAN_NAME (.*?)
+Value INTERFACES ((?:fa|gi|te|Po)\d+(?:-\d+)?(?:,(?:fa|gi|te|Po)\d+(?:-\d+)?)*,?)
 Value TYPE (\S+)
 Value AUTHORIZATION (\S+)
 Value CREATED_BY (\S+)
@@ -18,9 +18,9 @@ Start
 Column5
   ^(\s*-*)*\s*$$
   ^\s*\d+.* -> Continue.Record
-  ^\s*${VLAN_ID}\s+${NAME}(?:\s+${PORTS})?\s+${TYPE}\s+${AUTHORIZATION}\s*$$
+  ^\s*${VLAN_ID}\s+${VLAN_NAME}(?:\s+${INTERFACE})?\s+${TYPE}\s+${AUTHORIZATION}\s*$$
 
 Column4
   ^(\s*-*)*\s*$$
   ^\s*\d+.* -> Continue.Record
-  ^\s*${VLAN_ID}\s+${NAME}(?:\s+${PORTS})?\s+${CREATED_BY}\s*$$
+  ^\s*${VLAN_ID}\s+${VLAN_NAME}(?:\s+${INTERFACE})?\s+${CREATED_BY}\s*$$
