@@ -1,0 +1,33 @@
+---
+parsed_sample:
+  - number: ""
+    month: "Sep"
+    day: "14"
+    time: "05:59:54.113"
+    timezone: ""
+    facility: "LINEPROTO"
+    severity: "5"
+    mnemonic: "UPDOWN"
+    message:
+      - "Line protocol on Interface Virtual-PPP2, changed state to up"
+  - number: ""
+    month: "Sep"
+    day: "14"
+    time: "06:00:45.693"
+    timezone: ""
+    facility: "CRYPTO"
+    severity: "4"
+    mnemonic: "PKT_REPLAY_ERR"
+    message:
+      - "decrypt: replay check failed"
+      - "        connection id=29, sequence number=219"
+  - number: ""
+    month: "Sep"
+    day: "14"
+    time: "06:07:26.245"
+    timezone: ""
+    facility: "LINEPROTO"
+    severity: "5"
+    mnemonic: "UPDOWN"
+    message:
+      - "Line protocol on Interface Virtual-PPP2, changed state to down"
