@@ -1,5 +1,5 @@
-Value PORT (\S+)
-Value PORT_MODE (\S+)
+Value INTERFACE (\S+)
+Value INTERFACE_MODE (\S+)
 Value GVRP_STATUS (\S+)
 Value INGRESS_FILTERING_STATUS (\S+)
 Value ACCEPTABLE_FRAME_TYPE (\S+)
@@ -7,15 +7,15 @@ Value NATIVE_VLAN (\S+)
 Value List VLAN (\d+)
 Value List NAME (.*?)
 Value List EGRESS_RULE (Untagged|Tagged)
-Value List PORT_MEMBERSHIP_TYPE (\S+)
+Value List INTERFACE_MEMBERSHIP_TYPE (\S+)
 Value List FORBIDDEN_VLAN (\d+)
 Value List FORBIDDEN_VLAN_NAME (.*)
 Value List MAC_BASED_VLAN_GROUP_ID (\d+)
 Value List MAC_BASED_VLAN_ID (\d+)
 
 Start
-  ^\s*Port\s*:\s*${PORT}\s*$$
-  ^\s*Port\s+Mode\s*:\s*${PORT_MODE}\s*$$
+  ^\s*Port\s*:\s*${INTERFACE}\s*$$
+  ^\s*Port\s+Mode\s*:\s*${INTERFACE_MODE}\s*$$
   ^\s*Gvrp\s+Status\s*:\s*${GVRP_STATUS}\s*$$
   ^\s*Ingress\s+Filtering\s*:\s*${INGRESS_FILTERING_STATUS}\s*$$
   ^\s*Acceptable\s+Frame\s+Type\s*:\s*${ACCEPTABLE_FRAME_TYPE}\s*$$
@@ -27,7 +27,7 @@ Start
 PartOfVlan
   ^\s*Vlan\s+Name\s+Egress\s+rule\s+Port\s+Membership\s+Type\s*$$
   ^(\s*-*)*\s*$$
-  ^\s*${VLAN}\s+${NAME}\s+${EGRESS_RULE}\s+${PORT_MEMBERSHIP_TYPE}\s*$$
+  ^\s*${VLAN}\s+${NAME}\s+${EGRESS_RULE}\s+${INTERFACE_MEMBERSHIP_TYPE}\s*$$
   ^\s*Forbidden\s+VLANS:\s*$$ -> ForbiddenVlans
   ^\s*$$
   ^. -> Error
