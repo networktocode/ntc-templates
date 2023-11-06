@@ -1,6 +1,7 @@
 Value NEIGHBOR (\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})
 Value PEER_GROUP (\S+)
 Value DESCRIPTION (.*)
+Value VRF (\S+)
 Value ASN (\d+|\d+\.\d+)
 Value REMOTE_ASN (\d+|\d+\.\d+)
 Value LOCAL_ASN (\d+|\d+\.\d+)
@@ -62,6 +63,7 @@ Start
   ^\s+Inherits.+\s${PEER_GROUP}
   ^\s+Description:\s+${DESCRIPTION}
   ^\s+BGP state = ${BGP_STATE}, \w+ for ${UPTIME}
+  ^\s+Neighbor\s+vrf:\s+${VRF}
   ^\s+Using ${SOURCE_IFACE} as [\w\s]+
   ^\s+[\w\s]+, interface ${SOURCE_IFACE}
   ^\s+Connections established ${CONN_ESTAB}, dropped ${CONN_DROPPED}
