@@ -98,7 +98,7 @@ Each command can be executed with `invoke <command>`. Each command also has its 
   flake8             Run flake8 to check that Python files adhere to its style standards.
   mypy               Run mypy to validate typing-hints.
   pylint             Run pylint code analysis.
-  pydocstyle         Run pydocstyle to validate docstring formatting adheres to NTC defined standards.
+  ruff         Run ruff to validate docstring formatting adheres to NTC defined standards.
   pytest             Run pytest for the specified name and Python version.
   tests              Run all tests for the specified name and Python version.
   yamllint           Run yamllint to validate formatting adheres to NTC defined YAML standards.
