@@ -1,4 +1,4 @@
-Value INTERFACE (\S+)
+Value Required INTERFACE (\S+)
 Value LINK_STATUS (\w+)
 Value LINK_ADMIN (\w+)
 Value LINK_STATE_INFO (\.*)
@@ -39,8 +39,8 @@ Value TX_CRC_FCS (\d+)
 Value TX_COLLISION (\d+)
 
 Start
-  ^\s*Interface\s*${INTERFACE}\s*is\s*${LINK_STATUS}
-  ^\s*Aggregate\s*${INTERFACE}\s*is\s*${LINK_STATUS}
+  ^\s*(Interface|Aggregate)\s+\S+\s+is -> Continue.Record
+  ^\s*(Interface|Aggregate)\s+${INTERFACE}\s+is\s+${LINK_STATUS}
   ^\s*Admin\s*state\s*is\s*${LINK_ADMIN}
   ^\s*Link\s*transitions\s*:\s*${LINK_TRANSITIONS}
   ^\s*Description\s*:\s*${INTERFACE_DESC}
@@ -107,7 +107,7 @@ Tx
   ^\s*${TX_ERRORS} errors\s*${TX_DROPPED} dropped
   ^\s*${TX_CRC_FCS} CRC/FCS
   ^\s*${TX_COLLISION}\s*collision
-  ^\s*$$ -> Record Start
+  ^\s*$$ -> Start
   ^. -> Error
 
 Rate
@@ -138,5 +138,5 @@ Statistic
   ^\s*Runts
   ^\s*Giants
   ^\s*L3\s+Packets
-  ^\s*$$ -> Record Start
+  ^\s*$$ -> Start
   ^. -> Error
