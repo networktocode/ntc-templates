@@ -30,6 +30,8 @@ Start
   ^\s+ -> Next
   ^\S+#\.* -> Next
   ^LLDP\.*
+  ^Link\s+aggregation 
+  ^Aggregation\s+port
   ^Total\.*
   ^=+
   ^. -> Error
