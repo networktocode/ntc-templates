@@ -108,3 +108,18 @@ build-backend = "poetry.core.masonry.api"
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = "-vv --doctest-modules"
+
+[tool.ruff]
+extend-exclude = ["tests"]
+
+[tool.ruff.lint]
+# Enable all `pydocstyle` rules, limiting to those that adhere to the
+# Google convention via `convention = "google"`, below.
+select = ["D"]
+
+# On top of the Google convention, disable `D417`, which requires
+# documentation for every function parameter.
+ignore = ["D417"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
