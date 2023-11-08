@@ -40,7 +40,6 @@ importlib-metadata = "<5.0"
 pylint = "*"
 pytest = "*"
 pyyaml = "*"
-pydocstyle = "*"
 sphinx-rtd-theme = "*"
 toml = "*"
 yamllint = "*"
@@ -78,11 +77,11 @@ exclude = '''
 '''
 
 [tool.pylint.master]
-ignore=".venv"
+ignore = ".venv"
 
 [tool.pylint.basic]
 # No docstrings required for private methods (Pylint default), or for test_ functions, or for inner Meta classes.
-no-docstring-rgx="^(_|test_|Meta$)"
+no-docstring-rgx = "^(_|test_|Meta$)"
 
 [tool.pylint.messages_control]
 # Line length is enforced by Black, so pylint doesn't need to check it.
@@ -99,24 +98,10 @@ notes = """,
     XXX,
     """
 
-[tool.pydocstyle]
-convention = "google"
-inherit = false
-match = "(?!__init__).*\\.py"
-match-dir = "(?!tests|migrations|development)[^\\.].*"
-# D212 is enabled by default in google convention, and complains if we have a docstring like:
-# """
-# My docstring is on the line after the opening quotes instead of on the same line as them.
-# """
-# We've discussed and concluded that we consider this to be a valid style choice.
-add_ignore = "D212"
-
 [build-system]
 requires = ["poetry_core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.pytest.ini_options]
-testpaths = [
-    "tests"
-]
+testpaths = ["tests"]
 addopts = "-vv --doctest-modules"
