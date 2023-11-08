@@ -35,7 +35,7 @@ Value TX_MCAST_PACKETS (\d+)
 Value TX_BROADCAST_PACKETS (\d+)
 Value TX_ERRORS (\d+)
 Value TX_DROPPED (\d+)
-Value TX_CRC_FCS (\d+)
+Value TX_CRC_FCS (\S+)
 Value TX_COLLISION (\d+)
 
 Start
@@ -124,17 +124,17 @@ Rate
 Statistic
   ^\s*Statistic\s+RX\s+TX\s+Total
   ^\s*----
-  ^\s*Packets\s+\d+\s+\d+\s+${TX_TOTAL_PACKETS}
-  ^\s+Unicast\s+\d+\s+\d+\s+${TX_UNICAST_PACKETS}
-  ^\s+Multicast\s+\d+\s+\d+\s+${TX_MCAST_PACKETS}
-  ^\s+Broadcast\s+\d+\s+\d+\s+${TX_BROADCAST_PACKETS}
-  ^\s*Bytes\s+\d+\s+\d+\s+${TX_TOTAL_BYTES}
+  ^\s*Packets\s+${RX_TOTAL_PACKETS}\s+${TX_TOTAL_PACKETS}\s+\d+
+  ^\s+Unicast\s+${RX_UNICAST_PACKETS}\s+${TX_UNICAST_PACKETS}\s+\d+
+  ^\s+Multicast\s+${RX_MCAST_PACKETS}\s+${TX_MCAST_PACKETS}\s+\d+
+  ^\s+Broadcast\s+${RX_BROADCAST_PACKETS}\s+${TX_BROADCAST_PACKETS}\s+\d+
+  ^\s*Bytes\s+${RX_TOTAL_BYTES}\s+${TX_TOTAL_BYTES}\s+\d+
   ^\s*Jumbos
-  ^\s*Dropped
   ^\s*Pause\s+Frames
-  ^\s*Errors
-  ^\s+CRC/FCS\s+\S+\s+\S+\s+${TX_CRC_FCS}
-  ^\s+Collision\s+\S+\s+\S+\s+${TX_COLLISION}
+  ^\s*Dropped\s+${RX_DROPPED}\s+${TX_DROPPED}\s+\d+
+  ^\s*Errors\s+${RX_ERRORS}\s+${TX_ERRORS}\s+\d+
+  ^\s+CRC/FCS\s+${RX_CRC_FCS}\s+${TX_CRC_FCS}\s+\d+
+  ^\s+Collision\s+\S+\s+${TX_COLLISION}\s+\d+
   ^\s*Runts
   ^\s*Giants
   ^\s*L3\s+Packets
