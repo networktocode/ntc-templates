@@ -52,7 +52,7 @@ Start
   ^\s*Type\s*${IF_TYPE}
   ^\s*${DUPLEX}-duplex
   ^\s*qos\s*trust\s*${QOS_TRUST}
-  ^\s*Speed\s*${SPEED}
+  ^\s*Speed\s*:*\s*${SPEED}
   ^\s*Auto-negotiation\s*is\s*${AUTO_NEG}
   ^\s*Flow-control\s*:\s*${FLOW_CONTROL}
   ^\s*Error-control\s*:\s*${ERROR_CONTROL}
