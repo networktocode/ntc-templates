@@ -53,6 +53,9 @@ mkdocs-version-annotations = "1.0.0"
 [tool.poetry.extras]
 test = ["pytest"]
 
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.1.4"
+
 [tool.black]
 line-length = 120
 target-version = ['py38']
