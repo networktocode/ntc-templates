@@ -91,7 +91,8 @@ no-docstring-rgx = "^(_|test_|Meta$)"
 # Pylint and Black disagree about how to format multi-line arrays; Black wins.
 disable = """,
     line-too-long,
-    redefined-outer-name
+    redefined-outer-name,
+    broad-exception-raised
     """
 
 [tool.pylint.miscellaneous]
