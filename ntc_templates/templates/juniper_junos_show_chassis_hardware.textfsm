@@ -1,35 +1,97 @@
-Value Filldown FPC (\d+)
-Value Filldown MIC (\d+)
-Value Filldown PIC (\d+)
-Value XCVR (\d+)
-Value PART (\S+)
-Value SERIAL (\S+)
-Value DESCRIPTION (\S+)
+Value CHASSIS_SN (\w+)
+Value CHASSIS_DESC (.*)
+Value MID_VER ([RrEeVv]+\s+\d+|]|[RrEeVv]+|)
+Value MID_PART (\w+-\w+|\w+)
+Value MID_SN (\w+)
+Value MID_DESC (.*)
+Value FPM_VER ([RrEeVv]+\s+\d+|]|[RrEeVv]+|)
+Value FPM_PART (\w+-\w+|\w+)
+Value FPM_SN (\w+)
+Value FPM_DESC (.*)
+Value PS_NUM (\d+|)
+Value PS_VER ([RrEeVv]+\s+\d+|]|[RrEeVv]+|)
+Value PS_PART (\w+-\w+|\w+)
+Value PS_SN (\w+)
+Value PS_DESC (.*)
+Value RE_NUM (\d+|)
+Value RE_VER ([RrEeVv]+\s+\d+|]|[RrEeVv]+|)
+Value RE_PART (\w+-\w+|\w+)
+Value RE_SN (\w+)
+Value RE_DESC (.*)
+Value TFEB_NUM (\d+|)
+Value TFEB_VER ([RrEeVv]+\s+\d+|]|[RrEeVv]+|)
+Value TFEB_PART (\w+-\w+|\w+)
+Value TFEB_SN (\w+)
+Value TFEB_DESC (.*)
+Value QXM_NUM (\d+|)
+Value QXM_VER ([RrEeVv]+\s+\d+|]|[RrEeVv]+|)
+Value QXM_PART (\w+-\w+|\w+)
+Value QXM_SN (\w+)
+Value QXM_DESC (.*)
+Value AFEB_NUM (\d+|)
+Value AFEB_VER ([RrEeVv]+\s+\d+|]|[RrEeVv]+|)
+Value AFEB_PART (\w+-\w+|\w+)
+Value AFEB_SN (\w+)
+Value AFEB_DESC (.*)
+Value CB_NUM (\d+|)
+Value CB_VER ([RrEeVv]+\s+\d+|]|[RrEeVv]+|)
+Value CB_PART (\w+-\w+|\w+)
+Value CB_SN (\w+)
+Value CB_DESC (.*)
+Value Filldown FPC_NUM (\d+|)
+Value Filldown FPC_VER ([RrEeVv]+\s+\d+|]|[RrEeVv]+|)
+Value Filldown FPC_PART (\w+-\w+|\w+)
+Value Filldown FPC_SN (\w+)
+Value Filldown FPC_DESC (.*)
+Value Filldown CPU_VER ([RrEeVv]+\s+\d+|]|[RrEeVv]+|)
+Value Filldown CPU_PART (\w+-\w+|\w+)
+Value Filldown CPU_SN (\w+)
+Value Filldown CPU_DESC (.*)
+Value Filldown MIC_NUM (\d+|)
+Value Filldown MIC_VER ([RrEeVv]+\s+\d+|]|[RrEeVv]+|)
+Value Filldown MIC_PART (\w+-\w+|\w+)
+Value Filldown MIC_SN (\w+)
+Value Filldown MIC_DESC (.*)
+Value Filldown PIC_NUM (\d+|)
+Value Filldown PIC_VER ([RrEeVv]+\s+\d+|]|[RrEeVv]+|)
+Value Filldown PIC_PART (\w+-\w+|\w+)
+Value Filldown PIC_SN (\w+)
+Value Filldown PIC_DESC (.*)
+Value XCVR_NUM (\d+|)
+Value XCVR_VER ([RrEeVv]+\s+\d+|]|[RrEeVv]+|)
+Value XCVR_PART (\w+-\w+|\w+)
+Value XCVR_SN (\w+)
+Value XCVR_DESC (.*)
+Value FAN_NUM (\d+|)
+Value FAN_VER ([RrEeVv]+\s+\d+|)
+Value FAN_PART (\w+-\w+|BUILTIN)
+Value FAN_SN (\w+)
+Value FAN_DESC (.*)
 
 Start
   ^Hardware.*
   ^Item\s+Version\s+Part\s+number\s+Serial\s+number\s+Description\s*$$
-  ^\s*(Chassis|Midplane|Pseudo|FPM|Routing\s+Engine|Mi\S+|CB|AFEB|Routing|PEM|TFEB|CPU|QXM|Power\s+Supply|Fan\s+Tray).*
-  ^.*FPC\s+${FPC}.*$$ -> FPC
-  ^{master
+  ^Chassis.*\s+${CHASSIS_SN}\s+${CHASSIS_DESC}$$ -> Record
+  ^\s*Midplane\s+${MID_VER}\s+${MID_PART}\s+${MID_SN}\s+${MID_DESC}$$ -> Record
+  ^\s*FPM\sBoard\s+${FPM_VER}\s+${FPM_PART}\s+${FPM_SN}\s+${FPM_DESC}$$ -> Record
+  ^\s*Routing\s+Engine\s+${RE_NUM}\s+${RE_VER}\s+${RE_PART}\s+${RE_SN}\s+${RE_DESC}$$ -> Record
+  ^\s*TFEB\s+${TFEB_NUM}\s+${TFEB_VER}\s+${TFEB_PART}\s+${TFEB_SN}\s+${TFEB_DESC}$$ -> Continue
+  ^\s*QXM\s+${QXM_NUM}\s+${QXM_VER}\s+${QXM_PART}\s+${QXM_SN}\s+${QXM_DESC}$$ -> Record
+  ^\s*AFEB\s+${AFEB_NUM}\s+${AFEB_VER}\s+${AFEB_PART}\s+${AFEB_SN}\s+${AFEB_DESC}$$ -> Record
+  ^\s*CB\s+${CB_NUM}\s+${CB_VER}\s+${CB_PART}\s+${CB_SN}\s+${CB_DESC}$$ -> Record
+  ^\s*FPC\s+${FPC_NUM}\s+${FPC_VER}\s+${FPC_PART}\s+${FPC_SN}\s+${FPC_DESC}$$
+  ^\s*CPU\s+${CPU_VER}\s+${CPU_PART}\s+${CPU_SN}\s+${CPU_DESC}$$
+  ^\s*MIC\s+${MIC_NUM}\s+${MIC_VER}\s+${MIC_PART}\s+${MIC_SN}\s+${MIC_DESC}$$
+  ^\s*PIC\s+${PIC_NUM}\s+${PIC_VER}\s+${PIC_PART}\s+${PIC_SN}\s+${PIC_DESC}$$
+  ^\s*Xcvr\s+${XCVR_NUM}\s+${XCVR_VER}\s+${XCVR_PART}\s+${XCVR_SN}\s+${XCVR_DESC} -> Record
+  ^\s*(PEM|Power\s+Supply) -> Continue.Clearall
+  ^\s*(PEM|Power\s+Supply)\s+${PS_NUM}\s+${PS_VER}\s+${PS_PART}\s+${PS_SN}\s+${PS_DESC}$$ -> Record
+  ^\s*(Fan|Fan\sTray) -> Continue.Clearall
+  ^\s*(Fan|Fan\sTray)\s+${FAN_NUM}\s+${FAN_VER}\s+${FAN_PART}\s+${FAN_SN}\s+${FAN_DESC}$$ -> Record
+  ^\s*(Fan|Fan\sTray)\s+${FAN_NUM}\s+${FAN_DESC}$$ -> Record
+  ^\s*(Pseudo|AFEB|TFEB|CPU|QXM|Fan\s+Tray).*
+  ^{master:\d+}
   ^\s*$$ 
-  ^. -> Error
-
-FPC
-  ^\s*FPC\s+${FPC}
-  ^\s*MIC\s+${MIC}
-  ^\s*PIC\s+${PIC} -> XCVR
-  ^\s*CPU
-  ^\s*$$
-  ^. -> Error
-
-XCVR
-  ^\s*Xcvr\s+${XCVR}\s+(REV\s+(|\d+)|]|)\s+${PART}\s+${SERIAL}\s+${DESCRIPTION} -> Record
-  ^\s*FPC\s+${FPC} -> FPC
-  ^\s*MIC\s+${MIC} -> FPC
-  ^\s*PIC\s+${PIC}
-  ^\s*(Chassis|Midplane|Pseudo|FPM|Routing\s+Engine|Mi\S+|CB|AFEB|Routing|PEM|TFEB|CPU|QXM|Power\s+Supply|Fan\s+Tray).* -> Start
-  ^\s*$$
   ^. -> Error
 
 EOF
