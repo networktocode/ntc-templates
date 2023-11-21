@@ -1,6 +1,7 @@
 """Tasks for use with Invoke."""
 import os
 import sys
+
 from invoke import task
 
 try:
@@ -164,9 +165,9 @@ def yamllint(context, local=INVOKE_LOCAL):
 
 
 @task(help={"local": "Run locally or within the Docker container"})
-def pydocstyle(context, local=INVOKE_LOCAL):
-    """Run pydocstyle to validate docstring formatting adheres to NTC defined standards."""
-    exec_cmd = "pydocstyle ."
+def ruff(context, local=INVOKE_LOCAL):
+    """Run ruff to validate docstring formatting adheres to NTC defined standards."""
+    exec_cmd = "ruff ."
     run_cmd(context, exec_cmd, local)
 
 
@@ -191,7 +192,7 @@ def tests(context, local=INVOKE_LOCAL):
     flake8(context, local)
     pylint(context, local)
     yamllint(context, local)
-    pydocstyle(context, local)
+    ruff(context, local)
     bandit(context, local)
     pytest(context, local)
 

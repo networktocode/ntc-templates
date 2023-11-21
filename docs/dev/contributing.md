@@ -8,7 +8,7 @@ The project is packaged with a light development environment based on `Docker` t
 
 The project is following Network to Code software development guidelines and are leveraging the following:
 
-- Black, Pylint, Bandit, Mypy, flake8, and pydocstyle for Python linting and formatting.
+- Black, Pylint, Bandit, Mypy, flake8, and ruff for Python linting and formatting.
 - pytest, coverage, and unittest for unit tests.
 
 There are a number of things that are required in order to have a successful PR.
