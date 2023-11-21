@@ -1,0 +1,92 @@
+VRF 0 neighbor table:
+BGP neighbor is 10.105.1.254, remote AS 65400, local AS 65400, internal link
+  BGP version 4, remote router ID 10.105.3.254
+  BGP state = Established, up for 4d14h28m
+  Last read 00:00:00, hold time is 3, keepalive interval is 1 seconds
+  Configured hold time is 3, keepalive interval is 1 seconds
+  Neighbor capabilities:
+    Route refresh: advertised and received (old and new)
+    Address family IPv4 Unicast: advertised and received
+    Address family IPv6 Unicast: advertised and received
+  Received 1517339 messages, 2 notifications, 0 in queue
+  Sent 1482858 messages, 6 notifications, 0 in queue
+  Route refresh request: received 0, sent 0
+  Minimum time between advertisement runs is 1 seconds
+
+ For address family: IPv4 Unicast
+  BGP table version 31, neighbor version 25
+  Index 1, Offset 0, Mask 0x2
+    Additional Path:
+      Send-mode: received
+      Receive-mode: advertised
+  NEXT_HOP is always this router
+  Community attribute sent to this neighbor (both)
+  Inbound path policy configured
+  Route map for incoming advertisements is *prefer_vpn1root
+  423 accepted prefixes, 423 prefixes in rib
+  3 announced prefixes
+
+ For address family: IPv6 Unicast
+  BGP table version 1, neighbor version 1
+  Index 1, Offset 0, Mask 0x2
+  Community attribute sent to this neighbor (both)
+  0 accepted prefixes, 0 prefixes in rib
+  0 announced prefixes
+
+ Connections established 9; dropped 8
+Local host: 10.105.1.2, Local port: 3777
+Foreign host: 10.105.1.254, Foreign port: 179
+Nexthop: 10.105.1.2
+Nexthop interface: VPN1_0
+Nexthop global: ::
+Nexthop local: ::
+BGP connection: non shared network
+Last Reset: 4d14h38m, due to BGP Notification sent
+Notification Error Message: (Hold Timer Expired/Unspecified Error Subcode)
+
+BGP neighbor is 10.105.2.254, remote AS 65400, local AS 65400, internal link
+  BGP version 4, remote router ID 10.105.3.254
+  BGP state = Established, up for 12:41:52
+  Last read 00:00:00, hold time is 3, keepalive interval is 1 seconds
+  Configured hold time is 3, keepalive interval is 1 seconds
+  Neighbor capabilities:
+    Route refresh: advertised and received (old and new)
+    Address family IPv4 Unicast: advertised and received
+    Address family IPv6 Unicast: advertised and received
+  Received 1517182 messages, 4 notifications, 0 in queue
+  Sent 1481876 messages, 16 notifications, 0 in queue
+  Route refresh request: received 0, sent 0
+  Minimum time between advertisement runs is 1 seconds
+
+ For address family: IPv4 Unicast
+  BGP table version 31, neighbor version 30
+  Index 2, Offset 0, Mask 0x4
+    Additional Path:
+      Send-mode: received
+      Receive-mode: advertised
+  NEXT_HOP is always this router
+  Community attribute sent to this neighbor (both)
+  Inbound path policy configured
+  Route map for incoming advertisements is *prefer_vpn2root
+  423 accepted prefixes, 423 prefixes in rib
+  3 announced prefixes
+
+ For address family: IPv6 Unicast
+  BGP table version 1, neighbor version 1
+  Index 2, Offset 0, Mask 0x4
+  Community attribute sent to this neighbor (both)
+  0 accepted prefixes, 0 prefixes in rib
+  0 announced prefixes
+
+ Connections established 21; dropped 20
+Local host: 10.105.2.2, Local port: 21489
+Foreign host: 10.105.2.254, Foreign port: 179
+Nexthop: 10.105.2.2
+Nexthop interface: VPN2_0
+Nexthop global: ::
+Nexthop local: ::
+BGP connection: non shared network
+Last Reset: 12:55:18, due to BGP Notification sent
+Notification Error Message: (Hold Timer Expired/Unspecified Error Subcode)
+
+
