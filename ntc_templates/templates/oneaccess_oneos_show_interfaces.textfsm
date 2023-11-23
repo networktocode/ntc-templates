@@ -12,6 +12,8 @@ Value IPV6_MTU (\d+)
 Value UPTIME (\S+)
 Value DOWNTIME (\S+)
 Value STATUS_CHANGES (\d+)
+Value NEGOTIATION ([aA]uto|no)
+Value DUPLEX (full|half)
 Value IPV4 (\d+\.\d+\.\d+\.\d+\/\d+|unnumbered)
 Value IPV4_UNNUMBERED_INTF (.*)
 Value IPV4_UNNUMBERED_IP (\S+)
@@ -67,7 +69,7 @@ Value OUT_MULTICASTS (\d+)
 Value OUT_ERRORS (\d+)
 Value OUT_DISCARDS (\d+)
 Value VRF (\S+)
-
+					
 
 Start
   ^\S+(?:\s\S+)?\s+is\s+(?:up|down),\s+line\s+protocol.*$$ -> Continue.Record
@@ -84,6 +86,8 @@ Start
   ^\s+This\sinterface\sis\sassociated\sto\sVRF\s${VRF}
   ^\s+Up-time\s${UPTIME},\sstatus\schange\scount\s${STATUS_CHANGES}
   ^\s+Down-time\s${DOWNTIME},\sstatus\schange\scount\s${STATUS_CHANGES}
+  ^\s+${NEGOTIATION}[\-\s]negotiation, -> Continue
+  ^\s+.*\s${DUPLEX}[\-\s]duplex, -> Continue
   ^\s+Internet\saddress\sis\s${IPV4},\sdestination\saddress\sis\s${IPV4_GW}
   ^\s+Internet\saddress\sis\s${IPV4},\sbroadcast\saddress\sis\s${IPV4_BROADCAST}
   ^\s+Internet\saddress\sis\s${IPV4}
