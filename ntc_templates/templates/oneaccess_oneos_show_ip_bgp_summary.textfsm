@@ -29,6 +29,5 @@ Start
   ^${BGP_NEIGH}\s+${ADDR_FAMILY}\s+${NEIGH_AS}\s+${MSG_RCVD}\s+${MSG_SENT}\s+${TBL_VER}\s+${IN_Q}\s+${OUT_Q}\s+${UP_DOWN}\s+${STATE_PFXRCD} -> Record
   ^Total\snumber\sof\sneighbors\s${TOTAL_NEIGHBORS}
   ^\s*$$
-  ^. -> Error
 
 EOF
