@@ -24,7 +24,7 @@ Value PLATFORM (.+)
 
 Start
   ^\s*uptime\:\s+${UPTIME}\s*$$ -> Continue
-  ^\s*uptime\:\s+(?:${UPTIME_WEEKS}w)?(?:${UPTIME_DAYS}d)?(?:${UPTIME_HOURS}h)?(?:${UPTIME_MINUTES}m)?(?:${UPTIME_SECONDS})?s\s*$$
+  ^\s*uptime\:\s+(?:${UPTIME_WEEKS}w)?(?:${UPTIME_DAYS}d)?(?:${UPTIME_HOURS}h)?(?:${UPTIME_MINUTES}m)?(?:${UPTIME_SECONDS}s)?\s*$$
   ^\s*version\:\s+${VERSION}\s*$$
   ^\s*build\-time\:\s+${BUILD_TIME}\s*$$
   ^\s*factory\-software\:\s+${FACTORY_SOFTWARE}\s*$$
