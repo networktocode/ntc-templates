@@ -4,6 +4,7 @@ Value PROTOCOL_STATUS (\S*|\S*\s+\(\w+\))
 Value INTERFACE_DESCRIPTION (.*)
 Value PORT_TYPE (\S*)
 Value PVID (\d+)
+Value MTU (\d+)
 Value INTERNET_ADDRESS (\S*)
 Value INTERNET_PROTOCOL (disabled|enabled)
 Value HARDWARE_ADDRESS (\S{4}-\S{4}-\S{4})
@@ -15,6 +16,7 @@ Value SPEED (\d*)
 Value LOOPBACK (\S*)
 Value DUPLEX (HALF|FULL)
 Value NEGOTIATION (DISABLE|ENABLE)
+Value List AGGREGATED_INTERFACES (\S+)
 
 Start
   ^\S*\s+current\s+state\s+:.*$$ -> Continue.Record
@@ -22,7 +24,10 @@ Start
   ^Line\s+protocol\s+current\s+state\s+:\s+${PROTOCOL_STATUS}\s*$$
   ^Last\sline\sprotocol\sup\stime\s*:\s+(\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2}|-)\s*$$
   ^Description:${INTERFACE_DESCRIPTION}\s*$$
+  ^${PORT_TYPE}\s+Port,\s*The\s+MTU\s+is\s+${MTU}
+  ^${PORT_TYPE}\s+Port,\s*The\s+Maximum\s+Transmit\s+Unit\s+is\s+${MTU}
   ^${PORT_TYPE}\s+Port(,\s+PVID\s+:\s*${PVID},)?.*$$
+  ^PVID\s*:\s+${PVID},(?:\s*[^,]+,){0,}\s+The\s+Maximum\s+Frame\s+Length\s+is\s+${MTU}
   ^Internet\s+Address\s+is\s+negotiated,\s+${INTERNET_ADDRESS}\s*$$
   ^Internet\s+Address\s+is\s+${INTERNET_ADDRESS}\s*$$
   ^.*,\s+Hardware\s+address\s+is\s+${HARDWARE_ADDRESS}\s*$$
@@ -74,5 +79,19 @@ Start
   ^\s+OAM\sCells:\s+(\d|-)+,\s+ASM\sCells:\s+(\d|-)+\s*$$
   ^\s+Packet\sErrors:\s+(\d|-)+,\s+Packet\sDiscards:\s+(\d|-)+\s*$$
   ^\s+Cell\sErrors:\s+(\d|-)+\s*$$
+  ^\s*Last\s+\d+\s+seconds
+  ^\s*Input:\s+\d+\s+Packets,\s+\d+\s+Bytes
+  ^\s*Output:\s+\d+\s+Packets,\s+\d+\s+Bytes
+  ^\s*Mdi\s+:\s+
+  ^-{6}
+  ^PortName -> Trunk
   ^\s+
+  ^. -> Error
+
+Trunk
+  ^-{6}
+  ^${AGGREGATED_INTERFACES}\s+\S+\s+\d+\s*$$
+  ^The\s+Number\s+of\s+Ports\s+in\s+Trunk\s*:\s*\d+\s*$$
+  ^The\s+Number\s+of\s+UP\s+Ports\s+in\s+Trunk\s*:\s*\d+\s*$$
+  ^\s*$$ -> Start
   ^. -> Error
