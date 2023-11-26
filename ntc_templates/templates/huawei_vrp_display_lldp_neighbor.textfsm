@@ -12,7 +12,7 @@ Value VLAN_ID (\d+)
 Value SERIAL (\S+)
 
 Start
-  ^${LOCAL_INTERFACE}\s+has\s+\d+\s+neighbors:$$
+  ^${LOCAL_INTERFACE}\s+has\s+\d+\s+neighbor(s|\(s\)):$$
   ^\S+\s+has\s+\d+\s+neighbors
   ^Neighbor\s+index
   ^Chassis\s+type
@@ -25,7 +25,7 @@ Start
   ^System\s+capabilities\s+supported
   ^System\s+capabilities\s+enabled\s+:${CAPABILITIES}\s*$$
   ^Management\s+address\s+type
-  ^Management\s+address\s*:\s*${MANAGEMENT_IP}
+  ^Management\s+address\s*(?:value\s*):\s*${MANAGEMENT_IP}
   ^Expired\s+time
   ^Port\s+VLAN\s+ID\(PVID\)\s+:${VLAN_ID}
   ^VLAN\s+name\s+of\s+VLAN
@@ -33,6 +33,7 @@ Start
   ^Auto-negotiation
   ^OperMau
   ^Power
+  ^OID
   ^PSE
   ^Port\s+power
   ^Link\s+aggregation
