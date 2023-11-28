@@ -323,6 +323,7 @@ cisco_nxos_show_environment_temperature.textfsm, .*, cisco_nxos, sh[[ow]] env[[i
 cisco_nxos_show_ip_msdp_summary_vrf_all.textfsm, .*, cisco_nxos, sh[[ow]] ip msdp summary vrf all
 cisco_nxos_show_ip_ospf_interface_brief.textfsm, .*, cisco_nxos, sh[[ow]] ip ospf int[[erface]] b[[rief]](?: vrf \S+)?\s*$
 cisco_nxos_show_ip_pim_neighbor_vrf_all.textfsm, .*, cisco_nxos, sh[[ow]] ip pim nei[[ghbor]] vrf all
+cisco_nxos_show_interface_snmp-ifindex.textfsm, .*, cisco_nxos, sh[[ow]] int[[erface]] sn[[mp-ifindex]]
 cisco_nxos_show_forwarding_ipv4_route.textfsm, .*, cisco_nxos, sh[[ow]] fo[[rwarding]] ipv4 ro[[ute]]
 cisco_nxos_show_interface_description.textfsm, .*, cisco_nxos, sh[[ow]] int[[erface]] desc[[ription]]
 cisco_nxos_show_interface_transceiver.textfsm, .*, cisco_nxos, sh[[ow]] int[[erface]] tra[[nsceiver]]
