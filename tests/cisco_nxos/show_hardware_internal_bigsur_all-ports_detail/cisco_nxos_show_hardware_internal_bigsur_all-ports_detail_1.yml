@@ -284,7 +284,7 @@ parsed_sample:
     logical_port: "1"
     mac_status_polling: "0"
     mm_inst: "1"
-    mm_mode: SUP
+    mm_mode: "SUP"
     mm_port_state: "PORT_ST_ENABLED"
     mm_port_state_dec: "15"
     mm_port_timer: "0h"
@@ -311,7 +311,7 @@ parsed_sample:
     port_name: "sup0"
     port_speed: "1000"
     port_state: ""
-    port_type: sup-lo
+    port_type: "sup-lo"
     port_type_dec: "2"
     qsa_status: ""
     remote_fault_disable: "0"
@@ -490,7 +490,7 @@ parsed_sample:
     logical_port: "0"
     mac_status_polling: "1"
     mm_inst: "0"
-    mm_mode: 40G
+    mm_mode: "40G"
     mm_port_state: "PORT_ST_ENABLED"
     mm_port_state_dec: "15"
     mm_port_timer: "0h"
@@ -681,7 +681,7 @@ parsed_sample:
     link_debounced_with_link_up_hex: "0x0"
     link_debounced_with_link_up_since_last_en_dec: "0"
     link_debounced_with_link_up_since_last_en_hex: "0x0"
-    link_dn_debounce_start: 0 usecs after Thu Jan  1 00:00:00 1970
+    link_dn_debounce_start: "0 usecs after Thu Jan  1 00:00:00 1970"
     link_down_dec: "0"
     link_down_hex: "0x0"
     link_fail_inhibit_timer: "0h"
@@ -722,7 +722,7 @@ parsed_sample:
     port_flow_ctrl: "0"
     port_name: "40gb1/2"
     port_speed: "40000"
-    port_state: UP
+    port_state: "UP"
     port_type: "40gbe"
     port_type_dec: "12"
     qsa_status: "0"
