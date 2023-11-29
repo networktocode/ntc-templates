@@ -20,6 +20,10 @@ VLANS
   ^${VLAN_ID}\s+${VLAN_TYPE}\s*$$
   # VLAN with untagged interfaces (can have tagged interfaces)
   ^${VLAN_ID}\s+${VLAN_TYPE}\s+UT:${INTERFACES_UNTAGGED}\(\w+\)\s* -> Continue
+  ^${VLAN_ID}\s+${VLAN_TYPE}\s+UT:(?:\S+\s+){1}\s+${INTERFACES_UNTAGGED}\(\w+\)\s* -> Continue
+  ^${VLAN_ID}\s+${VLAN_TYPE}\s+UT:(?:\S+\s+){2}\s+${INTERFACES_UNTAGGED}\(\w+\)\s* -> Continue
+  ^${VLAN_ID}\s+${VLAN_TYPE}\s+UT:(?:\S+\s+){3}\s+${INTERFACES_UNTAGGED}\(\w+\)\s* -> Continue
+  ^${VLAN_ID}\s+${VLAN_TYPE}\s+UT:(?:\S+\s+){4}\s+${INTERFACES_UNTAGGED}\(\w+\)\s* -> Continue
   # ^${VLAN_ID}\s+${VLAN_TYPE}\s+UT:${INTERFACES_UNTAGGED}\(\w+\)\s* -> Continue
   # ^${VLAN_ID}\s+${VLAN_TYPE}\s+UT:(?:\S+\s+){2}\s+${INTERFACES_UNTAGGED}\(\w+\)\s* -> Continue
   # ^${VLAN_ID}\s+${VLAN_TYPE}\s+UT:(?:\S+\s+){3}\s+${INTERFACES_UNTAGGED}\(\w+\)\s* -> Continue
@@ -33,6 +37,30 @@ VLANS
   ^\s{6}
   ^\s*$$ -> Start
   ^. -> Error
+
+#NEW
+  # VLAN without interfaces
+  # ^${VLAN_ID}\s+${VLAN_TYPE}\s*$$
+  # VLAN with untagged interfaces (can have tagged interfaces)
+  # ^${VLAN_ID}\s+${VLAN_TYPE}\s+UT:${INTERFACES_UNTAGGED}\(\w+\)\s* -> Continue
+  # ^${VLAN_ID}\s+${VLAN_TYPE}\s+UT:(?:\S+\s+){1}\s+${INTERFACES_UNTAGGED}\(\w+\)\s* -> Continue
+  # ^${VLAN_ID}\s+${VLAN_TYPE}\s+UT:(?:\S+\s+){2}\s+${INTERFACES_UNTAGGED}\(\w+\)\s* -> Continue
+  # ^${VLAN_ID}\s+${VLAN_TYPE}\s+UT:(?:\S+\s+){3}\s+${INTERFACES_UNTAGGED}\(\w+\)\s* -> Continue
+  # ^${VLAN_ID}\s+${VLAN_TYPE}\s+UT:(?:\S+\s+){4}\s+${INTERFACES_UNTAGGED}\(\w+\)\s* -> Continue
+  # ^\d+
+  # ^\d+
+  # ^\s{6}\s+${INTERFACES_UNTAGGED}\(\w+\)\s* -> Continue
+  # ^\s{6}\s+TG:${INTERFACES_UNTAGGED}\(\w+\)\s* -> Continue
+
+
+  # ^${VLAN_ID}\s+${VLAN_TYPE}\s+UT:(?:\S+\s+){3}\s+${INTERFACES_UNTAGGED}\(\w+\)\s* -> Continue
+  # ^\s+(?:\S+\s+){60}${INTERFACES},* -> Continue
+  # ^${VLAN_ID}\s+${VLAN_TYPE}\s+UT:${INTERFACES_UNTAGGED}\(U|D\)\s* -> Continue
+  # VLAN with tagged interfaces (without untagged interfaces)
+  # ^\d+ -> Continue.Record
+  # ^${VLAN_ID}\s+${VLAN_TYPE}\s+TG:${INTERFACES_TAGGED}\(U|D\)\s* -> Continue
+  # ^\d+
+  # ^\s{6}
 
 STATISTICS
   ^-+$$
