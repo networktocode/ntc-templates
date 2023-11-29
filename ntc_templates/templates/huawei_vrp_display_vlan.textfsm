@@ -1,0 +1,40 @@
+Value VLAN_ID (\d+)
+Value VLAN_TYPE (\w+)
+Value List INTERFACES_UNTAGGED ([^\(]+)
+Value List INTERFACES_TAGGED ([^\(]+)
+
+Start
+  ^The\s+total\s+number\s+of\s+VLANs
+  ^-+$$
+  ^U:\s+Up;\s+D:\s+Down;\s+TG:\s+Tagged;\s+UT:\s+Untagged;
+  ^MP:\s+Vlan-mapping;\s+ST:\s+Vlan-stacking;
+  ^#:\s+ProtocolTransparent-vlan;\s+\*:\s+Management-vlan;
+  ^VID\s+Type\s+Ports -> VLANS
+  ^VID\s+Status\s+Property -> STATISTICS
+  ^. -> Error
+
+VLANS
+  ^-+$$
+  ^\d+ -> Continue.Record
+  # VLAN without interfaces
+  ^${VLAN_ID}\s+${VLAN_TYPE}\s*$$
+  # VLAN with untagged interfaces (can have tagged interfaces)
+  ^${VLAN_ID}\s+${VLAN_TYPE}\s+UT:${INTERFACES_UNTAGGED}\(\w+\)\s* -> Continue
+  # ^${VLAN_ID}\s+${VLAN_TYPE}\s+UT:${INTERFACES_UNTAGGED}\(\w+\)\s* -> Continue
+  # ^${VLAN_ID}\s+${VLAN_TYPE}\s+UT:(?:\S+\s+){2}\s+${INTERFACES_UNTAGGED}\(\w+\)\s* -> Continue
+  # ^${VLAN_ID}\s+${VLAN_TYPE}\s+UT:(?:\S+\s+){3}\s+${INTERFACES_UNTAGGED}\(\w+\)\s* -> Continue
+  # ^\s+(?:\S+\s+){60}${INTERFACES},* -> Continue
+  # ^${VLAN_ID}\s+${VLAN_TYPE}\s+UT:${INTERFACES_UNTAGGED}\(U|D\)\s* -> Continue
+  # ^\s{6}\s+TG:${INTERFACES_UNTAGGED}\(U|D\)\s* -> Continue
+  # VLAN with tagged interfaces (without untagged interfaces)
+  # ^\d+ -> Continue.Record
+  # ^${VLAN_ID}\s+${VLAN_TYPE}\s+TG:${INTERFACES_TAGGED}\(U|D\)\s* -> Continue
+  ^\d+
+  ^\s{6}
+  ^\s*$$ -> Start
+  ^. -> Error
+
+STATISTICS
+  ^-+$$
+  ^\d+\s+\S+\s+\S+\s+\S+\s+\S+\s+
+  ^. -> Error
