@@ -1,7 +1,7 @@
-Value VLAN_ID (\d+)
-Value VLAN_TYPE (\w+)
-Value List INTERFACES_UNTAGGED ([^\(]+)
-Value List INTERFACES_TAGGED ([^\(]+)
+Value Filldown VLAN_ID (\d+)
+Value Filldown VLAN_TYPE (\w+)
+Value Filldown MODE ((TG|UT))
+Value INTERFACE ([A-Z0-9/]+)
 
 Start
   ^The\s+total\s+number\s+of\s+VLANs
@@ -10,59 +10,32 @@ Start
   ^MP:\s+Vlan-mapping;\s+ST:\s+Vlan-stacking;
   ^#:\s+ProtocolTransparent-vlan;\s+\*:\s+Management-vlan;
   ^VID\s+Type\s+Ports -> VLANS
-  ^VID\s+Status\s+Property -> STATISTICS
+  ^VID\s+Status\s+Property -> STATUS
   ^. -> Error
 
 VLANS
   ^-+$$
-  ^\d+ -> Continue.Record
   # VLAN without interfaces
-  ^${VLAN_ID}\s+${VLAN_TYPE}\s*$$
+  ^${VLAN_ID}\s+${VLAN_TYPE}\s*$$ -> Record
   # VLAN with untagged interfaces (can have tagged interfaces)
-  ^${VLAN_ID}\s+${VLAN_TYPE}\s+UT:${INTERFACES_UNTAGGED}\(\w+\)\s* -> Continue
-  ^${VLAN_ID}\s+${VLAN_TYPE}\s+UT:(?:\S+\s+){1}\s+${INTERFACES_UNTAGGED}\(\w+\)\s* -> Continue
-  ^${VLAN_ID}\s+${VLAN_TYPE}\s+UT:(?:\S+\s+){2}\s+${INTERFACES_UNTAGGED}\(\w+\)\s* -> Continue
-  ^${VLAN_ID}\s+${VLAN_TYPE}\s+UT:(?:\S+\s+){3}\s+${INTERFACES_UNTAGGED}\(\w+\)\s* -> Continue
-  ^${VLAN_ID}\s+${VLAN_TYPE}\s+UT:(?:\S+\s+){4}\s+${INTERFACES_UNTAGGED}\(\w+\)\s* -> Continue
-  # ^${VLAN_ID}\s+${VLAN_TYPE}\s+UT:${INTERFACES_UNTAGGED}\(\w+\)\s* -> Continue
-  # ^${VLAN_ID}\s+${VLAN_TYPE}\s+UT:(?:\S+\s+){2}\s+${INTERFACES_UNTAGGED}\(\w+\)\s* -> Continue
-  # ^${VLAN_ID}\s+${VLAN_TYPE}\s+UT:(?:\S+\s+){3}\s+${INTERFACES_UNTAGGED}\(\w+\)\s* -> Continue
-  # ^\s+(?:\S+\s+){60}${INTERFACES},* -> Continue
-  # ^${VLAN_ID}\s+${VLAN_TYPE}\s+UT:${INTERFACES_UNTAGGED}\(U|D\)\s* -> Continue
-  # ^\s{6}\s+TG:${INTERFACES_UNTAGGED}\(U|D\)\s* -> Continue
-  # VLAN with tagged interfaces (without untagged interfaces)
-  # ^\d+ -> Continue.Record
-  # ^${VLAN_ID}\s+${VLAN_TYPE}\s+TG:${INTERFACES_TAGGED}\(U|D\)\s* -> Continue
+  ^${VLAN_ID}\s+${VLAN_TYPE}\s+${MODE}:${INTERFACE}\(\w+\)\s* -> Continue.Record
+  ^${VLAN_ID}\s+${VLAN_TYPE}\s+${MODE}:(?:\S+\s+){1}\s+${INTERFACE}\(\w+\)\s* -> Continue.Record
+  ^${VLAN_ID}\s+${VLAN_TYPE}\s+${MODE}:(?:\S+\s+){2}\s+${INTERFACE}\(\w+\)\s* -> Continue.Record
+  ^${VLAN_ID}\s+${VLAN_TYPE}\s+${MODE}:(?:\S+\s+){3}\s+${INTERFACE}\(\w+\)\s* -> Continue.Record
+  ^${VLAN_ID}\s+${VLAN_TYPE}\s+${MODE}:(?:\S+\s+){4}\s+${INTERFACE}\(\w+\)\s* -> Continue.Record
   ^\d+
-  ^\s{6}
+  ^\s{6,}${MODE}:${INTERFACE}\(\w+\)\s* -> Continue.Record
+  ^\s{6,}${INTERFACE}\(\w+\)\s* -> Continue.Record
+  ^\s{6,}(?:\S+\s+){1}${INTERFACE}\(\w+\)\s* -> Continue.Record
+  ^\s{6,}(?:\S+\s+){2}${INTERFACE}\(\w+\)\s* -> Continue.Record
+  ^\s{6,}(?:\S+\s+){3}${INTERFACE}\(\w+\)\s* -> Continue.Record
+  ^\s{6,}(?:\S+\s+){4}${INTERFACE}\(\w+\)\s* -> Continue.Record
+  ^\s{6,}
   ^\s*$$ -> Start
   ^. -> Error
 
-#NEW
-  # VLAN without interfaces
-  # ^${VLAN_ID}\s+${VLAN_TYPE}\s*$$
-  # VLAN with untagged interfaces (can have tagged interfaces)
-  # ^${VLAN_ID}\s+${VLAN_TYPE}\s+UT:${INTERFACES_UNTAGGED}\(\w+\)\s* -> Continue
-  # ^${VLAN_ID}\s+${VLAN_TYPE}\s+UT:(?:\S+\s+){1}\s+${INTERFACES_UNTAGGED}\(\w+\)\s* -> Continue
-  # ^${VLAN_ID}\s+${VLAN_TYPE}\s+UT:(?:\S+\s+){2}\s+${INTERFACES_UNTAGGED}\(\w+\)\s* -> Continue
-  # ^${VLAN_ID}\s+${VLAN_TYPE}\s+UT:(?:\S+\s+){3}\s+${INTERFACES_UNTAGGED}\(\w+\)\s* -> Continue
-  # ^${VLAN_ID}\s+${VLAN_TYPE}\s+UT:(?:\S+\s+){4}\s+${INTERFACES_UNTAGGED}\(\w+\)\s* -> Continue
-  # ^\d+
-  # ^\d+
-  # ^\s{6}\s+${INTERFACES_UNTAGGED}\(\w+\)\s* -> Continue
-  # ^\s{6}\s+TG:${INTERFACES_UNTAGGED}\(\w+\)\s* -> Continue
 
-
-  # ^${VLAN_ID}\s+${VLAN_TYPE}\s+UT:(?:\S+\s+){3}\s+${INTERFACES_UNTAGGED}\(\w+\)\s* -> Continue
-  # ^\s+(?:\S+\s+){60}${INTERFACES},* -> Continue
-  # ^${VLAN_ID}\s+${VLAN_TYPE}\s+UT:${INTERFACES_UNTAGGED}\(U|D\)\s* -> Continue
-  # VLAN with tagged interfaces (without untagged interfaces)
-  # ^\d+ -> Continue.Record
-  # ^${VLAN_ID}\s+${VLAN_TYPE}\s+TG:${INTERFACES_TAGGED}\(U|D\)\s* -> Continue
-  # ^\d+
-  # ^\s{6}
-
-STATISTICS
+STATUS
   ^-+$$
   ^\d+\s+\S+\s+\S+\s+\S+\s+\S+\s+
   ^. -> Error
