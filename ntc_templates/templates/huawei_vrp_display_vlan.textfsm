@@ -2,6 +2,8 @@ Value Filldown VLAN_ID (\d+)
 Value Filldown VLAN_TYPE (\w+)
 Value Filldown MODE ((TG|UT))
 Value INTERFACE ([A-Z0-9/]+)
+Value VLAN_NAME (.+)
+Value VLAN_STATUS (\S+)
 
 Start
   ^The\s+total\s+number\s+of\s+VLANs
@@ -15,9 +17,7 @@ Start
 
 VLANS
   ^-+$$
-  # VLAN without interfaces
   ^${VLAN_ID}\s+${VLAN_TYPE}\s*$$ -> Record
-  # VLAN with untagged interfaces (can have tagged interfaces)
   ^${VLAN_ID}\s+${VLAN_TYPE}\s+${MODE}:${INTERFACE}\(\w+\)\s* -> Continue.Record
   ^${VLAN_ID}\s+${VLAN_TYPE}\s+${MODE}:(?:\S+\s+){1}\s+${INTERFACE}\(\w+\)\s* -> Continue.Record
   ^${VLAN_ID}\s+${VLAN_TYPE}\s+${MODE}:(?:\S+\s+){2}\s+${INTERFACE}\(\w+\)\s* -> Continue.Record
@@ -36,6 +36,7 @@ VLANS
 
 
 STATUS
-  ^-+$$
-  ^\d+\s+\S+\s+\S+\s+\S+\s+\S+\s+
+  ^-+$$ -> Clearall
+  ^${VLAN_ID}\s+${VLAN_STATUS}\s+\S+\s+\S+\s+\S+\s+${VLAN_NAME} -> Continue.Record
+  ^\d+ -> Clearall
   ^. -> Error
