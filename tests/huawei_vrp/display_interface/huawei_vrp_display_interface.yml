@@ -17,6 +17,8 @@ parsed_sample:
     loopback: ""
     duplex: ""
     negotiation: ""
+    mtu: "1500"
+    aggregated_interfaces: []
   - interface: "Dialer1"
     link_status: "UP"
     protocol_status: "UP (spoofing)"
@@ -34,6 +36,8 @@ parsed_sample:
     loopback: ""
     duplex: ""
     negotiation: ""
+    mtu: "1492"
+    aggregated_interfaces: []
   - interface: "Dialer1:0"
     link_status: "UP ,"
     protocol_status: "UP"
@@ -51,6 +55,8 @@ parsed_sample:
     loopback: ""
     duplex: ""
     negotiation: ""
+    mtu: ""
+    aggregated_interfaces: []
   - interface: "Ethernet0/0/0"
     link_status: "DOWN"
     protocol_status: "DOWN"
@@ -68,6 +74,8 @@ parsed_sample:
     loopback: ""
     duplex: ""
     negotiation: ""
+    mtu: "1500"
+    aggregated_interfaces: []
   - interface: "GigabitEthernet0/0/0"
     link_status: "DOWN"
     protocol_status: "DOWN"
@@ -85,6 +93,8 @@ parsed_sample:
     loopback: "NONE"
     duplex: "HALF"
     negotiation: "DISABLE"
+    mtu: "9596"
+    aggregated_interfaces: []
   - interface: "GigabitEthernet0/0/1"
     link_status: "DOWN"
     protocol_status: "DOWN"
@@ -102,6 +112,8 @@ parsed_sample:
     loopback: "NONE"
     duplex: "FULL"
     negotiation: "ENABLE"
+    mtu: "9596"
+    aggregated_interfaces: []
   - interface: "GigabitEthernet0/0/2"
     link_status: "UP"
     protocol_status: "UP"
@@ -119,6 +131,8 @@ parsed_sample:
     loopback: "PHY"
     duplex: "FULL"
     negotiation: "ENABLE"
+    mtu: "9596"
+    aggregated_interfaces: []
   - interface: "GigabitEthernet0/0/3"
     link_status: "DOWN"
     protocol_status: "DOWN"
@@ -136,6 +150,8 @@ parsed_sample:
     loopback: "NONE"
     duplex: "FULL"
     negotiation: "ENABLE"
+    mtu: "9596"
+    aggregated_interfaces: []
   - interface: "GigabitEthernet0/0/4"
     link_status: "UP"
     protocol_status: "DOWN"
@@ -153,6 +169,8 @@ parsed_sample:
     loopback: "NONE"
     duplex: "FULL"
     negotiation: "ENABLE"
+    mtu: "1500"
+    aggregated_interfaces: []
   - interface: "GigabitEthernet0/0/5"
     link_status: "UP"
     protocol_status: "DOWN"
@@ -170,6 +188,8 @@ parsed_sample:
     loopback: "NONE"
     duplex: "FULL"
     negotiation: "ENABLE"
+    mtu: "1500"
+    aggregated_interfaces: []
   - interface: "NULL0"
     link_status: "UP"
     protocol_status: "UP (spoofing)"
@@ -187,6 +207,8 @@ parsed_sample:
     loopback: ""
     duplex: ""
     negotiation: ""
+    mtu: "1500"
+    aggregated_interfaces: []
   - interface: "Vlanif1"
     link_status: "UP"
     protocol_status: "UP"
@@ -204,6 +226,8 @@ parsed_sample:
     loopback: ""
     duplex: ""
     negotiation: ""
+    mtu: "1500"
+    aggregated_interfaces: []
   - interface: "Vlanif2"
     link_status: "DOWN"
     protocol_status: "DOWN"
@@ -221,6 +245,8 @@ parsed_sample:
     loopback: ""
     duplex: ""
     negotiation: ""
+    mtu: "1500"
+    aggregated_interfaces: []
   - interface: "Vlanif100"
     link_status: "UP"
     protocol_status: "UP"
@@ -238,6 +264,8 @@ parsed_sample:
     loopback: ""
     duplex: ""
     negotiation: ""
+    mtu: "1500"
+    aggregated_interfaces: []
   - interface: "Wlan-Bss1"
     link_status: "UP"
     protocol_status: "UP"
@@ -255,6 +283,8 @@ parsed_sample:
     loopback: ""
     duplex: ""
     negotiation: ""
+    mtu: "1500"
+    aggregated_interfaces: []
   - interface: "Wlan-Bss7"
     link_status: "UP"
     protocol_status: "UP"
@@ -272,6 +302,8 @@ parsed_sample:
     loopback: ""
     duplex: ""
     negotiation: ""
+    mtu: "1500"
+    aggregated_interfaces: []
   - interface: "Wlan-Radio0/0/0"
     link_status: "UP"
     protocol_status: "UP"
@@ -289,6 +321,8 @@ parsed_sample:
     loopback: ""
     duplex: ""
     negotiation: ""
+    mtu: "1500"
+    aggregated_interfaces: []
   - interface: "Wlan-Radio0/0/1"
     link_status: "UP"
     protocol_status: "UP"
@@ -306,6 +340,8 @@ parsed_sample:
     loopback: ""
     duplex: ""
     negotiation: ""
+    mtu: "1500"
+    aggregated_interfaces: []
   - interface: "Tunnel0/0/2"
     link_status: "UP"
     protocol_status: "UP"
@@ -323,6 +359,8 @@ parsed_sample:
     loopback: ""
     duplex: ""
     negotiation: ""
+    mtu: "1500"
+    aggregated_interfaces: []
   - interface: "Virtual-Ethernet0/0/1"
     link_status: "UP"
     protocol_status: "UP"
@@ -340,3 +378,5 @@ parsed_sample:
     loopback: ""
     duplex: ""
     negotiation: ""
+    mtu: "1500"
+    aggregated_interfaces: []
