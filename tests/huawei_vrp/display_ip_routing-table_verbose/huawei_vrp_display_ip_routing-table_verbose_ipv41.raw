@@ -1,0 +1,93 @@
+Route Flags: R - relay, D - download to fib, T - to vpn-instance
+------------------------------------------------------------------------------
+Routing Tables: Public
+         Destinations : 363      Routes : 363      
+
+
+Destination: 0.0.0.0/0
+     Protocol: O_ASE            Process ID: 1
+   Preference: 150                    Cost: 1
+      NextHop: 10.10.0.1      Neighbour: 0.0.0.0
+        State: Active Adv              Age: 30d22h50m33s
+          Tag: 0                  Priority: high
+        Label: NULL                QoSInfo: 0x0
+   IndirectID: 0x0              
+ RelayNextHop: 0.0.0.0           Interface: Vlanif10
+     TunnelID: 0x0                   Flags:  D
+
+Destination: 10.2.8.0/21
+     Protocol: OSPF             Process ID: 1
+   Preference: 10                     Cost: 81
+      NextHop: 10.10.0.1      Neighbour: 0.0.0.0
+        State: Active Adv              Age: 30d22h50m33s
+          Tag: 0                  Priority: medium
+        Label: NULL                QoSInfo: 0x0
+   IndirectID: 0x0              
+ RelayNextHop: 0.0.0.0           Interface: Vlanif10
+     TunnelID: 0x0                   Flags:  D
+
+Destination: 10.10.10.0/24
+     Protocol: OSPF             Process ID: 1
+   Preference: 10                     Cost: 81
+      NextHop: 10.10.0.1      Neighbour: 0.0.0.0
+        State: Active Adv              Age: 30d22h50m33s
+          Tag: 0                  Priority: medium
+        Label: NULL                QoSInfo: 0x0
+   IndirectID: 0x0              
+ RelayNextHop: 0.0.0.0           Interface: Vlanif10
+     TunnelID: 0x0                   Flags:  D
+
+Destination: 10.20.0.0/21
+     Protocol: OSPF             Process ID: 1
+   Preference: 10                     Cost: 81
+      NextHop: 10.10.0.1      Neighbour: 0.0.0.0
+        State: Active Adv              Age: 30d22h50m36s
+          Tag: 0                  Priority: medium
+        Label: NULL                QoSInfo: 0x0
+   IndirectID: 0x0              
+ RelayNextHop: 0.0.0.0           Interface: Vlanif10
+     TunnelID: 0x0                   Flags:  D
+
+Destination: 10.30.0.0/21
+     Protocol: OSPF             Process ID: 1
+   Preference: 10                     Cost: 51
+      NextHop: 10.10.0.1      Neighbour: 0.0.0.0
+        State: Active Adv              Age: 3d13h36m52s
+          Tag: 0                  Priority: medium
+        Label: NULL                QoSInfo: 0x0
+   IndirectID: 0x0              
+ RelayNextHop: 0.0.0.0           Interface: Vlanif10
+     TunnelID: 0x0                   Flags:  D
+
+Destination: 10.54.16.64/26
+     Protocol: O_ASE            Process ID: 1
+   Preference: 150                    Cost: 20
+      NextHop: 10.10.0.1      Neighbour: 0.0.0.0
+        State: Active Adv              Age: 30d22h50m37s
+          Tag: 0                  Priority: medium
+        Label: NULL                QoSInfo: 0x0
+   IndirectID: 0x0              
+ RelayNextHop: 0.0.0.0           Interface: Vlanif10
+     TunnelID: 0x0                   Flags:  D
+
+Destination: 10.54.17.0/24
+     Protocol: OSPF             Process ID: 1
+   Preference: 10                     Cost: 51
+      NextHop: 10.10.0.1      Neighbour: 0.0.0.0
+        State: Active Adv              Age: 30d22h50m37s
+          Tag: 0                  Priority: medium
+        Label: NULL                QoSInfo: 0x0
+   IndirectID: 0x0              
+ RelayNextHop: 0.0.0.0           Interface: Vlanif10
+     TunnelID: 0x0                   Flags:  D
+
+Destination: 10.54.24.128/26
+     Protocol: OSPF             Process ID: 1
+   Preference: 10                     Cost: 15
+      NextHop: 10.10.0.1      Neighbour: 0.0.0.0
+        State: Active Adv              Age: 5d13h51m01s
+          Tag: 0                  Priority: medium
+        Label: NULL                QoSInfo: 0x0
+   IndirectID: 0x0              
+ RelayNextHop: 0.0.0.0           Interface: Vlanif10
+     TunnelID: 0x0                   Flags:  D
