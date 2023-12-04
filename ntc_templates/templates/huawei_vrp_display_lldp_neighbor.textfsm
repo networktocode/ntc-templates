@@ -25,7 +25,7 @@ Start
   ^System\s+capabilities\s+supported
   ^System\s+capabilities\s+enabled\s+:${CAPABILITIES}\s*$$
   ^Management\s+address\s+type
-  ^Management\s+address\s*(?:value\s*):\s*${MANAGEMENT_IP}
+  ^Management\s+address\s*(value\s*)?:\s*${MANAGEMENT_IP}
   ^Expired\s+time
   ^Port\s+VLAN\s+ID\(PVID\)\s+:${VLAN_ID}
   ^VLAN\s+name\s+of\s+VLAN
