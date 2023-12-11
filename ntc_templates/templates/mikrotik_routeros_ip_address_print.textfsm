@@ -1,5 +1,5 @@
 Value NUM (\d+)
-Value FLAGS (X|I|D)
+Value FLAGS ((?:X|I|D)+)
 Value COMMENT (.*)
 Value IP (\S+)
 Value SUBNET (\d+)
