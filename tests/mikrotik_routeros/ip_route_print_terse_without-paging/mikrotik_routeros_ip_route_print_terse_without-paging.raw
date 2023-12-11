@@ -1,0 +1,5 @@
+ 0 A S  dst-address=0.0.0.0/0 gateway=192.168.8.1 gateway-status=192.168.8.1 reachable via  lte1 distance=2 scope=30 target-scope=10 vrf-interface=lte1
+ 1 ADC  dst-address=10.160.1.228/30 pref-src=10.160.1.230 gateway=ether1 gateway-status=ether1 reachable distance=0 scope=10
+ 2 A S  comment=to Internet dst-address=134.0.0.0/8 gateway=10.160.1.230 gateway-status=10.160.1.230 reachable via  ether2 distance=1 scope=30 target-scope=10 routing-mark=reserve
+ 3 A S  dst-address=172.0.0.0/8 gateway=1.2.3.4 gateway-status=1.2.3.4 recursive via 10.152.1.230 ether5 distance=1 scope=30 target-scope=10 routing-mark=Free_Wi-Fi
+ 4 A SB dst-address=10.0.0.0/8 type=blackhole distance=100 routing-mark=Free_Wi-Fi
