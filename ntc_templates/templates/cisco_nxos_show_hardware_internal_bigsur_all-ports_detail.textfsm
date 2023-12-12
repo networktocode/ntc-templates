@@ -208,7 +208,7 @@ Value LINK_DEBOUNCED_WITH_LINK_UP_SINCE_LAST_EN_DEC (\S+)
 
 Start
   ^\s*Bigsur\s*port\s*${PORT_NAME}\s*card-config\s*info:\s*$$
-  ^\s*if_index\s*:\s*${IF_INDEX}\s*$$
+  ^\s*if_index\s*:\s*${INTERFACE_INDEX}\s*$$
   ^\s*instance\s*index\s*:\s*${INSTANCE_INDEX}\s*$$
   ^\s*instance\s*slot\s*:\s*${INSTANCE_SLOT}\s*$$
   ^\s*instance\s*asic\s*:\s*${INSTANCE_ASIC}\s*$$
