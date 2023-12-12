@@ -36,7 +36,7 @@ OS_CHOICES = [
     "eltex",
     "enterasys",
     "ericsson_ipos",
-    "extreme",
+    "extreme_exos",
     "f5_ltm",
     "fortinet",
     "hp_comware",
