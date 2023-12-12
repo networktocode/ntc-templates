@@ -8,8 +8,8 @@ Value LOGICAL_PORT (\S+)
 Value FRONT_PORT (\S+)
 Value STATE ([\S\s]+?)
 Value BIGSUR_EPORT (\S+)
-Value PORT_TYPE (\S+)
-Value PORT_TYPE_DEC (\S+)
+Value PORT (\S+)
+Value PORT_DEC (\S+)
 Value TYPE (\S+)
 Value FIREWALL_INSTANCE (\S+)
 Value SPEED (\S+)
@@ -217,9 +217,9 @@ Start
   ^\s*front_port\s*:\s*${FRONT_PORT}\s*$$
   ^\s*state\s*:\s*${STATE}\s*$$
   ^\s*bigsur\s*eport\s*:\s*${BIGSUR_EPORT}\s*$$
-  ^\s*port_type\s*:\s*${PORT_TYPE}\(${PORT_TYPE_DEC}\)\s*$$
+  ^\s*port_type\s*:\s*${PORT}\(${PORT_DEC}\)\s*$$
   ^\s*type\s*:\s*${TYPE}\s*$$
-  ^\s*fw_instance\s*:\s*${FW_INSTANCE}\s*$$
+  ^\s*fw_instance\s*:\s*${FIREWALL_INSTANCE}\s*$$
   ^\s*speed\s*:\s*${SPEED}\s*$$
   ^\s*Bigsur\s*port\s*\S+\s*port-client-config\s*info:\s*$$ -> PortClientConfig
   ^\s*link_state\s*:\s*${LINK_STATE}\(${LINK_STATE_DEC}\)\s*$$
