@@ -1,0 +1,32 @@
+Added by: D-Default, S-Static, G-GVRP, R-Radius Assigned VLAN, T-Guest VLAN, V-Voice VLAN
+Port : gi1/0/1
+Port Mode: Trunk
+Gvrp Status: disabled
+Ingress Filtering: true
+Acceptable Frame Type: admitAll
+Ingress UnTagged VLAN ( NATIVE ): 4094
+Protected: Disabled
+
+Port is member in:
+
+Vlan               Name               Egress rule     Added by
+---- -------------------------------- ----------- ----------------
+130             Servers_OS              Tagged           S
+4094               NULL                Untagged          S
+
+
+Forbidden VLANS:
+Vlan               Name
+---- --------------------------------
+
+
+Classification rules:
+
+Protocol based VLANs:
+  Group ID   Vlan ID
+------------ -------
+
+
+Mac based VLANs:
+  Group ID   Vlan ID
+------------ -------
