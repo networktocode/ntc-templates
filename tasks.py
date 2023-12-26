@@ -151,8 +151,8 @@ def flake8(context, local=INVOKE_LOCAL):
 
 @task(help={"local": "Run locally or within the Docker container"})
 def pylint(context, local=INVOKE_LOCAL):
-    """Run pylint code analysis."""
-    exec_cmd = 'find . -name "*.py" | xargs pylint'
+    """Run pylint code analysis excluding .venv directory."""
+    exec_cmd = 'find . -name "*.py" -not -path "./.venv/*" | xargs pylint'
     run_cmd(context, exec_cmd, local)
 
 
