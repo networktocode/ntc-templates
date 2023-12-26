@@ -56,3 +56,7 @@ parsed_sample:
     status: "up"
     protocol: "up"
     descrip: "Carrier VLAN"
+  - port: "Gi0/10.30"
+    status: "reset"
+    protocol: "down"
+    descrip: "Garbage"
