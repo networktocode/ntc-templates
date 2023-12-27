@@ -1,0 +1,14 @@
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT 
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP mode DEFAULT 
+    link/ether 01:02:03:04:05:06 brd ff:ff:ff:ff:ff:ff
+    alias WAN
+3: eth1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP mode DEFAULT 
+    link/ether 01:02:03:04:05:07 brd ff:ff:ff:ff:ff:ff
+    alias LAN
+4: eth2: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP mode DEFAULT 
+    link/ether 01:02:03:04:05:08 brd ff:ff:ff:ff:ff:ff
+    alias WAN2
+5: imq0: <NOARP,UP,LOWER_UP> mtu 16000 qdisc pfifo_fast state UNKNOWN mode DEFAULT qlen 11000
+    link/void 
+    alias Priority Queue

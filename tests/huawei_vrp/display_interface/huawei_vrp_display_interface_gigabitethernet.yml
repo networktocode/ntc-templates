@@ -17,6 +17,8 @@ parsed_sample:
     loopback: "NONE"
     duplex: "FULL"
     negotiation: "DISABLE"
+    mtu: "9596"
+    aggregated_interfaces: []
   - interface: "GigabitEthernet0/0/1"
     link_status: "DOWN"
     protocol_status: "DOWN"
@@ -34,6 +36,8 @@ parsed_sample:
     loopback: "NONE"
     duplex: "FULL"
     negotiation: "ENABLE"
+    mtu: "9596"
+    aggregated_interfaces: []
   - interface: "GigabitEthernet0/0/2"
     link_status: "UP"
     protocol_status: "UP"
@@ -51,6 +55,8 @@ parsed_sample:
     loopback: "PHY"
     duplex: "FULL"
     negotiation: "ENABLE"
+    mtu: "9596"
+    aggregated_interfaces: []
   - interface: "GigabitEthernet0/0/3"
     link_status: "DOWN"
     protocol_status: "DOWN"
@@ -68,6 +74,8 @@ parsed_sample:
     loopback: "NONE"
     duplex: "FULL"
     negotiation: "ENABLE"
+    mtu: "9596"
+    aggregated_interfaces: []
   - interface: "GigabitEthernet0/0/4"
     link_status: "UP"
     protocol_status: "DOWN"
@@ -85,6 +93,8 @@ parsed_sample:
     loopback: "NONE"
     duplex: "FULL"
     negotiation: "ENABLE"
+    mtu: "1500"
+    aggregated_interfaces: []
   - interface: "GigabitEthernet0/0/5"
     link_status: "UP"
     protocol_status: "DOWN"
@@ -102,3 +112,5 @@ parsed_sample:
     loopback: "NONE"
     duplex: "FULL"
     negotiation: "ENABLE"
+    mtu: "1500"
+    aggregated_interfaces: []
