@@ -6,7 +6,6 @@ concurrency:  # Cancel any existing runs of this workflow for this same PR
 on: # yamllint disable-line rule:truthy rule:comments
   push:
     branches:
-      - "jorlando-patch-3"
       - "master"
     tags:
       - "v*"
