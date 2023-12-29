@@ -12,7 +12,7 @@ Value FLOWCONTROL_OUT (\w+)
 Value BONDED_PORT (.+?)
 Value DESCRIPTION (.*)
 Value MAC_ADDRESS ([a-zA-Z0-9]+\.[a-zA-Z0-9]+\.[a-zA-Z0-9]+)
-Value MTU (.+?)
+Value MTU (.+)
 Value IP_ADDRESS (.+?)
 Value NETMASK (.+?)
 Value IN_PACKETS (\d+)
@@ -81,6 +81,7 @@ Start
   ^Interface -> Continue.Record
   ^Interface\s+${INTERFACE}\s+"${INTERFACE_NAME}",\s+is\s+${LINK_STATUS},\s+line\s+protocol\s+is\s+${PROTOCOL_STATUS}
   ^\s+Hardware\s+is\s+${HARDWARE_TYPE}.*BW\s+${BANDWIDTH}.*DLY\s+${DELAY}
+  ^\s+Hardware\s+is\s+${HARDWARE_TYPE}.*MAC\s+address\s+${MAC_ADDRESS},\s+MTU\s+${MTU}
   ^\s+\S*${DUPLEX}\S*,\s+\S*?${SPEED}(?:\)|\S+)\s*$$
   ^\s+Input\s+flow\s+control\s+is\s+${FLOWCONTROL_IN},\s+output\s+flow\s+control\s+is\s+${FLOWCONTROL_OUT}
   ^\s+Active\s+member\s+of\s+${BONDED_PORT}\s*$$
@@ -88,6 +89,7 @@ Start
   ^\s+MAC\s+address\s+${MAC_ADDRESS}.*MTU\s+${MTU}\s*$$
   ^\s+IP\s+[Aa]ddress\s+${IP_ADDRESS}(?:,\s+[Ss]ubnet\s+[Mm]ask\s+${NETMASK})?\s*$$
   ^\s+${IN_PACKETS}\s+packets\s+input,\s+${IN_BYTES}\s+bytes,\s+${NO_BUFFER}\s+no\s+buffer
+  ^\s+${IN_PACKETS}\s+packets\s+input,\s+${IN_BYTES}\s+bytes
   ^\s+Received\s+${BROADCASTS}\s+broadcasts,\s+${RUNTS}\s+runts,\s+${GIANTS}\s+giants
   ^\s+${IN_ERRORS}\s+input\s+errors,\s+${CRC}\s+CRC,\s+${FRAME}\s+frame,\s+${OVERRUN}\s+overrun,\s+${IGNORED}\s+ignored,\s+${ABORT}\s+abort
   ^\s+${IN_PAUSE_RESUME}\s+pause/resume\s+input
@@ -95,6 +97,7 @@ Start
   ^\s+${L2_DECODE_DROPS}\s+L2\s+decode\s+drops
   ^\s+${SWITCH_INGRESS_POLICY_DROPS}\s+switch\s+ingress\s+policy\s+drops
   ^\s+${OUT_PACKETS}\s+packets\s+output,\s+${OUT_BYTES}\s+bytes,\s+${UNDERRUNS}\s+underruns
+  ^\s+${OUT_PACKETS}\s+packets\s+output,\s+${OUT_BYTES}\s+bytes
   ^\s+${OUT_PAUSE_RESUME}\s+pause/resume\s+output
   ^\s+${OUT_PAUSE}\s+pause\s+output,\s+${OUT_RESUME}\s+resume\s+output
   ^\s+${OUT_ERRORS}\s+output\s+errors,\s+${COLLISIONS}\s+collisions,\s+${INTERFACE_RESETS}\s+interface\s+resets
@@ -106,6 +109,9 @@ Start
   ^\s+input\s+queue
   ^\s+output\s+queue
   ^\s+Queue\s+Stats:
+  ^\s+Traffic\s+Statistics
+  ^\s+\d+\s+packets\s+dropped
+  ^\s+\d+\s+minute\s+\w+\s+rate
   ^\s+VLAN\s+identifier\s+${VLAN_ID}
   ^\s+Control\s+Point\s+Interface\s+States -> ControlPoint
   ^\s+RX\[${RXRING_NUMBER}\]:\s+${RXRING_PACKETS}\s+packets,\s+${RXRING_BYTES}\s+bytes,\s+${RXRING_OVERRUN}\s+overrun -> RXRingBlocks
