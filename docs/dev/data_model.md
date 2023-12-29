@@ -25,7 +25,7 @@ Example: Imagine the extra programming logic needed to consume structured data w
 | `GATEWAY`          | gateway address for a subnet |
 | `INTERFACE`        | full word instead of IFACE, INTF, INTFC, etc |
 | `IP_ADDRESS`       | for a single IP address, often IPv4 |
-| `IP_ADDRESSES`     | for lists of IPv4 addresses, but in some cases |
+| `IP_ADDRESSES`     | for lists of IPv4 addresses, but in the case of some templates there may be a mix of IP protocol versions |
 | `IP_HELPER`        | for lists DHCP IP helper addresses |
 | `IP_VERSION`       | Internet Protocol (IP) version in the case of multiple versions appearing in output (use where necessary) |
 | `IPV6_ADDRESS`     | for a single IPv6 address |
