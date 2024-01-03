@@ -42,7 +42,7 @@ Value OUT_ERRORS (\d+)
 Value COLLISIONS (\d+)
 Value INTERFACE_RESETS (\d+)
 Value LATE_COLLISIONS (\d+)
-Value DEFFERED (\d+)
+Value DEFERRED (\d+)
 Value OUT_DECODE_DROPS (\d+)
 Value RATE_LIMIT_DROPS (\d+)
 Value SWITCH_EGRESS_POLICY_DROPS (\d+)
@@ -101,7 +101,7 @@ Start
   ^\s+${OUT_PAUSE_RESUME}\s+pause/resume\s+output
   ^\s+${OUT_PAUSE}\s+pause\s+output,\s+${OUT_RESUME}\s+resume\s+output
   ^\s+${OUT_ERRORS}\s+output\s+errors,\s+${COLLISIONS}\s+collisions,\s+${INTERFACE_RESETS}\s+interface\s+resets
-  ^\s+${LATE_COLLISIONS}\s+late\s+collisions,\s+${DEFFERED}\s+deferred
+  ^\s+${LATE_COLLISIONS}\s+late\s+collisions,\s+${DEFERRED}\s+deferred
   ^\s+${OUT_DECODE_DROPS}\s+output\s+decode\s+drops
   ^\s+${RATE_LIMIT_DROPS}\s+rate\s+limit\s+drops
   ^\s+${SWITCH_EGRESS_POLICY_DROPS}\s+switch\s+egress\s+policy\s+drops
