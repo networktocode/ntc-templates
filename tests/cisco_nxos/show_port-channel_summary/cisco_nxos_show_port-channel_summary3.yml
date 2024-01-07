@@ -4,7 +4,7 @@ parsed_sample:
     bundle_protocol: "LACP"
     bundle_protocol_state: ""
     bundle_status: "(SU)"
-    phys_iface:
+    member_interface:
       - "Eth1/1"
     phys_iface_status:
       - "(P)"
@@ -12,7 +12,7 @@ parsed_sample:
     bundle_protocol: "LACP"
     bundle_protocol_state: ""
     bundle_status: "(SU)"
-    phys_iface:
+    member_interface:
       - "Eth1/2"
     phys_iface_status:
       - "(P)"
@@ -20,7 +20,7 @@ parsed_sample:
     bundle_protocol: "LACP"
     bundle_protocol_state: ""
     bundle_status: "(SU)"
-    phys_iface:
+    member_interface:
       - "Eth1/3"
     phys_iface_status:
       - "(P)"
@@ -28,7 +28,7 @@ parsed_sample:
     bundle_protocol: "LACP"
     bundle_protocol_state: ""
     bundle_status: "(SU)"
-    phys_iface:
+    member_interface:
       - "Eth1/4"
     phys_iface_status:
       - "(P)"
@@ -36,14 +36,14 @@ parsed_sample:
     bundle_protocol: "NONE"
     bundle_protocol_state: ""
     bundle_status: "(SD)"
-    phys_iface:
+    member_interface:
       - "--"
     phys_iface_status: []
   - bundle_name: "Po136"
     bundle_protocol: "LACP"
     bundle_protocol_state: ""
     bundle_status: "(SD)"
-    phys_iface:
+    member_interface:
       - "Eth1/6"
     phys_iface_status:
       - "(D)"
@@ -51,14 +51,14 @@ parsed_sample:
     bundle_protocol: "NONE"
     bundle_protocol_state: ""
     bundle_status: "(SD)"
-    phys_iface:
+    member_interface:
       - "--"
     phys_iface_status: []
   - bundle_name: "Po138"
     bundle_protocol: "LACP"
     bundle_protocol_state: ""
     bundle_status: "(SD)"
-    phys_iface:
+    member_interface:
       - "Eth1/24"
     phys_iface_status:
       - "(D)"
@@ -66,28 +66,28 @@ parsed_sample:
     bundle_protocol: "NONE"
     bundle_protocol_state: ""
     bundle_status: "(SD)"
-    phys_iface:
+    member_interface:
       - "--"
     phys_iface_status: []
   - bundle_name: "Po142"
     bundle_protocol: "NONE"
     bundle_protocol_state: ""
     bundle_status: "(SD)"
-    phys_iface:
+    member_interface:
       - "--"
     phys_iface_status: []
   - bundle_name: "Po151"
     bundle_protocol: "NONE"
     bundle_protocol_state: ""
     bundle_status: "(SD)"
-    phys_iface:
+    member_interface:
       - "--"
     phys_iface_status: []
   - bundle_name: "Po171"
     bundle_protocol: "LACP"
     bundle_protocol_state: ""
     bundle_status: "(SU)"
-    phys_iface:
+    member_interface:
       - "Eth1/14"
     phys_iface_status:
       - "(P)"
@@ -95,7 +95,7 @@ parsed_sample:
     bundle_protocol: "LACP"
     bundle_protocol_state: ""
     bundle_status: "(SU)"
-    phys_iface:
+    member_interface:
       - "Eth1/15"
     phys_iface_status:
       - "(P)"
@@ -103,7 +103,7 @@ parsed_sample:
     bundle_protocol: "LACP"
     bundle_protocol_state: ""
     bundle_status: "(SU)"
-    phys_iface:
+    member_interface:
       - "Eth1/16"
     phys_iface_status:
       - "(P)"
@@ -111,7 +111,7 @@ parsed_sample:
     bundle_protocol: "LACP"
     bundle_protocol_state: ""
     bundle_status: "(SU)"
-    phys_iface:
+    member_interface:
       - "Eth1/17"
     phys_iface_status:
       - "(P)"
@@ -119,7 +119,7 @@ parsed_sample:
     bundle_protocol: "LACP"
     bundle_protocol_state: ""
     bundle_status: "(SD)"
-    phys_iface:
+    member_interface:
       - "Eth1/25"
     phys_iface_status:
       - "(D)"
@@ -127,7 +127,7 @@ parsed_sample:
     bundle_protocol: "LACP"
     bundle_protocol_state: ""
     bundle_status: "(SD)"
-    phys_iface:
+    member_interface:
       - "Eth1/27"
     phys_iface_status:
       - "(D)"
@@ -135,7 +135,7 @@ parsed_sample:
     bundle_protocol: "LACP"
     bundle_protocol_state: ""
     bundle_status: "(SD)"
-    phys_iface:
+    member_interface:
       - "Eth1/28"
     phys_iface_status:
       - "(D)"
@@ -143,14 +143,14 @@ parsed_sample:
     bundle_protocol: "NONE"
     bundle_protocol_state: ""
     bundle_status: "(SD)"
-    phys_iface:
+    member_interface:
       - "--"
     phys_iface_status: []
   - bundle_name: "Po200"
     bundle_protocol: "LACP"
     bundle_protocol_state: ""
     bundle_status: "(SU)"
-    phys_iface:
+    member_interface:
       - "Eth1/21"
       - "Eth1/22"
     phys_iface_status:

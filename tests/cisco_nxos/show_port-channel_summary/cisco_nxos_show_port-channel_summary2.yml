@@ -4,7 +4,7 @@ parsed_sample:
     bundle_protocol: "LACP"
     bundle_protocol_state: ""
     bundle_status: "(RU)"
-    phys_iface:
+    member_interface:
       - "Eth1/1"
       - "Eth2/1"
     phys_iface_status:
@@ -14,7 +14,7 @@ parsed_sample:
     bundle_protocol: "LACP"
     bundle_protocol_state: ""
     bundle_status: "(RU)"
-    phys_iface:
+    member_interface:
       - "Eth1/2"
       - "Eth2/2"
     phys_iface_status:
@@ -24,7 +24,7 @@ parsed_sample:
     bundle_protocol: "LACP"
     bundle_protocol_state: ""
     bundle_status: "(RU)"
-    phys_iface:
+    member_interface:
       - "Eth1/3"
       - "Eth2/3"
     phys_iface_status:
@@ -34,7 +34,7 @@ parsed_sample:
     bundle_protocol: "LACP"
     bundle_protocol_state: ""
     bundle_status: "(RU)"
-    phys_iface:
+    member_interface:
       - "Eth1/4"
       - "Eth2/4"
     phys_iface_status:
@@ -44,7 +44,7 @@ parsed_sample:
     bundle_protocol: "LACP"
     bundle_protocol_state: ""
     bundle_status: "(RU)"
-    phys_iface:
+    member_interface:
       - "Eth1/5"
       - "Eth2/5"
     phys_iface_status:
@@ -54,7 +54,7 @@ parsed_sample:
     bundle_protocol: "LACP"
     bundle_protocol_state: ""
     bundle_status: "(RU)"
-    phys_iface:
+    member_interface:
       - "Eth1/6"
       - "Eth2/6"
     phys_iface_status:
@@ -64,7 +64,7 @@ parsed_sample:
     bundle_protocol: "LACP"
     bundle_protocol_state: ""
     bundle_status: "(RU)"
-    phys_iface:
+    member_interface:
       - "Eth1/7"
       - "Eth2/7"
     phys_iface_status:
@@ -74,7 +74,7 @@ parsed_sample:
     bundle_protocol: "LACP"
     bundle_protocol_state: ""
     bundle_status: "(RU)"
-    phys_iface:
+    member_interface:
       - "Eth5/6"
       - "Eth6/6"
     phys_iface_status:
@@ -84,7 +84,7 @@ parsed_sample:
     bundle_protocol: "LACP"
     bundle_protocol_state: ""
     bundle_status: "(RU)"
-    phys_iface:
+    member_interface:
       - "Eth5/7"
       - "Eth6/7"
     phys_iface_status:
@@ -94,7 +94,7 @@ parsed_sample:
     bundle_protocol: "LACP"
     bundle_protocol_state: ""
     bundle_status: "(RU)"
-    phys_iface:
+    member_interface:
       - "Eth15/17"
       - "Eth16/17"
     phys_iface_status:
@@ -104,7 +104,7 @@ parsed_sample:
     bundle_protocol: "LACP"
     bundle_protocol_state: ""
     bundle_status: "(RU)"
-    phys_iface:
+    member_interface:
       - "Eth15/24"
       - "Eth16/24"
     phys_iface_status:
@@ -114,7 +114,7 @@ parsed_sample:
     bundle_protocol: "LACP"
     bundle_protocol_state: ""
     bundle_status: "(RU)"
-    phys_iface:
+    member_interface:
       - "Eth15/8"
       - "Eth15/28"
       - "Eth16/8"
@@ -128,7 +128,7 @@ parsed_sample:
     bundle_protocol: "LACP"
     bundle_protocol_state: ""
     bundle_status: "(RU)"
-    phys_iface:
+    member_interface:
       - "Eth15/36"
       - "Eth16/36"
       - "Eth17/8"
@@ -142,7 +142,7 @@ parsed_sample:
     bundle_protocol: "LACP"
     bundle_protocol_state: ""
     bundle_status: "(RU)"
-    phys_iface:
+    member_interface:
       - "Eth15/15"
       - "Eth16/15"
     phys_iface_status:
@@ -152,7 +152,7 @@ parsed_sample:
     bundle_protocol: "LACP"
     bundle_protocol_state: ""
     bundle_status: "(RU)"
-    phys_iface:
+    member_interface:
       - "Eth15/22"
       - "Eth16/22"
     phys_iface_status:
@@ -162,7 +162,7 @@ parsed_sample:
     bundle_protocol: "LACP"
     bundle_protocol_state: ""
     bundle_status: "(RU)"
-    phys_iface:
+    member_interface:
       - "Eth15/30"
       - "Eth16/30"
       - "Eth17/29"
@@ -176,7 +176,7 @@ parsed_sample:
     bundle_protocol: "LACP"
     bundle_protocol_state: ""
     bundle_status: "(RU)"
-    phys_iface:
+    member_interface:
       - "Eth15/38"
       - "Eth16/38"
       - "Eth17/30"
@@ -190,7 +190,7 @@ parsed_sample:
     bundle_protocol: "LACP"
     bundle_protocol_state: ""
     bundle_status: "(RU)"
-    phys_iface:
+    member_interface:
       - "Eth3/9"
       - "Eth4/9"
     phys_iface_status:
@@ -200,7 +200,7 @@ parsed_sample:
     bundle_protocol: "LACP"
     bundle_protocol_state: ""
     bundle_status: "(RU)"
-    phys_iface:
+    member_interface:
       - "Eth3/10"
       - "Eth4/10"
     phys_iface_status:
@@ -210,7 +210,7 @@ parsed_sample:
     bundle_protocol: "LACP"
     bundle_protocol_state: ""
     bundle_status: "(RU)"
-    phys_iface:
+    member_interface:
       - "Eth3/3"
     phys_iface_status:
       - "(P)"
@@ -218,7 +218,7 @@ parsed_sample:
     bundle_protocol: "LACP"
     bundle_protocol_state: ""
     bundle_status: "(RU)"
-    phys_iface:
+    member_interface:
       - "Eth4/3"
     phys_iface_status:
       - "(P)"
@@ -226,7 +226,7 @@ parsed_sample:
     bundle_protocol: "LACP"
     bundle_protocol_state: ""
     bundle_status: "(RU)"
-    phys_iface:
+    member_interface:
       - "Eth5/3"
     phys_iface_status:
       - "(P)"
@@ -234,7 +234,7 @@ parsed_sample:
     bundle_protocol: "LACP"
     bundle_protocol_state: ""
     bundle_status: "(RU)"
-    phys_iface:
+    member_interface:
       - "Eth6/3"
     phys_iface_status:
       - "(P)"
