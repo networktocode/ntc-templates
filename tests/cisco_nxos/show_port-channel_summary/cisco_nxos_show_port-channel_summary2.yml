@@ -1,6 +1,6 @@
 ---
 parsed_sample:
-  - bundle_iface: "Po1"
+  - bundle_name: "Po1"
     bundle_proto: "LACP"
     bundle_proto_state: ""
     bundle_status: "(RU)"
@@ -10,7 +10,7 @@ parsed_sample:
     phys_iface_status:
       - "(P)"
       - "(P)"
-  - bundle_iface: "Po2"
+  - bundle_name: "Po2"
     bundle_proto: "LACP"
     bundle_proto_state: ""
     bundle_status: "(RU)"
@@ -20,7 +20,7 @@ parsed_sample:
     phys_iface_status:
       - "(P)"
       - "(P)"
-  - bundle_iface: "Po3"
+  - bundle_name: "Po3"
     bundle_proto: "LACP"
     bundle_proto_state: ""
     bundle_status: "(RU)"
@@ -30,7 +30,7 @@ parsed_sample:
     phys_iface_status:
       - "(P)"
       - "(P)"
-  - bundle_iface: "Po4"
+  - bundle_name: "Po4"
     bundle_proto: "LACP"
     bundle_proto_state: ""
     bundle_status: "(RU)"
@@ -40,7 +40,7 @@ parsed_sample:
     phys_iface_status:
       - "(P)"
       - "(P)"
-  - bundle_iface: "Po12"
+  - bundle_name: "Po12"
     bundle_proto: "LACP"
     bundle_proto_state: ""
     bundle_status: "(RU)"
@@ -50,7 +50,7 @@ parsed_sample:
     phys_iface_status:
       - "(P)"
       - "(P)"
-  - bundle_iface: "Po13"
+  - bundle_name: "Po13"
     bundle_proto: "LACP"
     bundle_proto_state: ""
     bundle_status: "(RU)"
@@ -60,7 +60,7 @@ parsed_sample:
     phys_iface_status:
       - "(P)"
       - "(P)"
-  - bundle_iface: "Po14"
+  - bundle_name: "Po14"
     bundle_proto: "LACP"
     bundle_proto_state: ""
     bundle_status: "(RU)"
@@ -70,7 +70,7 @@ parsed_sample:
     phys_iface_status:
       - "(P)"
       - "(P)"
-  - bundle_iface: "Po801"
+  - bundle_name: "Po801"
     bundle_proto: "LACP"
     bundle_proto_state: ""
     bundle_status: "(RU)"
@@ -80,7 +80,7 @@ parsed_sample:
     phys_iface_status:
       - "(P)"
       - "(P)"
-  - bundle_iface: "Po802"
+  - bundle_name: "Po802"
     bundle_proto: "LACP"
     bundle_proto_state: ""
     bundle_status: "(RU)"
@@ -90,7 +90,7 @@ parsed_sample:
     phys_iface_status:
       - "(P)"
       - "(P)"
-  - bundle_iface: "Po803"
+  - bundle_name: "Po803"
     bundle_proto: "LACP"
     bundle_proto_state: ""
     bundle_status: "(RU)"
@@ -100,7 +100,7 @@ parsed_sample:
     phys_iface_status:
       - "(P)"
       - "(P)"
-  - bundle_iface: "Po804"
+  - bundle_name: "Po804"
     bundle_proto: "LACP"
     bundle_proto_state: ""
     bundle_status: "(RU)"
@@ -110,7 +110,7 @@ parsed_sample:
     phys_iface_status:
       - "(P)"
       - "(P)"
-  - bundle_iface: "Po811"
+  - bundle_name: "Po811"
     bundle_proto: "LACP"
     bundle_proto_state: ""
     bundle_status: "(RU)"
@@ -124,7 +124,7 @@ parsed_sample:
       - "(P)"
       - "(P)"
       - "(P)"
-  - bundle_iface: "Po812"
+  - bundle_name: "Po812"
     bundle_proto: "LACP"
     bundle_proto_state: ""
     bundle_status: "(RU)"
@@ -138,7 +138,7 @@ parsed_sample:
       - "(P)"
       - "(P)"
       - "(P)"
-  - bundle_iface: "Po813"
+  - bundle_name: "Po813"
     bundle_proto: "LACP"
     bundle_proto_state: ""
     bundle_status: "(RU)"
@@ -148,7 +148,7 @@ parsed_sample:
     phys_iface_status:
       - "(P)"
       - "(P)"
-  - bundle_iface: "Po814"
+  - bundle_name: "Po814"
     bundle_proto: "LACP"
     bundle_proto_state: ""
     bundle_status: "(RU)"
@@ -158,7 +158,7 @@ parsed_sample:
     phys_iface_status:
       - "(P)"
       - "(P)"
-  - bundle_iface: "Po821"
+  - bundle_name: "Po821"
     bundle_proto: "LACP"
     bundle_proto_state: ""
     bundle_status: "(RU)"
@@ -172,7 +172,7 @@ parsed_sample:
       - "(P)"
       - "(P)"
       - "(P)"
-  - bundle_iface: "Po822"
+  - bundle_name: "Po822"
     bundle_proto: "LACP"
     bundle_proto_state: ""
     bundle_status: "(RU)"
@@ -186,7 +186,7 @@ parsed_sample:
       - "(P)"
       - "(P)"
       - "(P)"
-  - bundle_iface: "Po823"
+  - bundle_name: "Po823"
     bundle_proto: "LACP"
     bundle_proto_state: ""
     bundle_status: "(RU)"
@@ -196,7 +196,7 @@ parsed_sample:
     phys_iface_status:
       - "(P)"
       - "(P)"
-  - bundle_iface: "Po824"
+  - bundle_name: "Po824"
     bundle_proto: "LACP"
     bundle_proto_state: ""
     bundle_status: "(RU)"
@@ -206,7 +206,7 @@ parsed_sample:
     phys_iface_status:
       - "(P)"
       - "(P)"
-  - bundle_iface: "Po825"
+  - bundle_name: "Po825"
     bundle_proto: "LACP"
     bundle_proto_state: ""
     bundle_status: "(RU)"
@@ -214,7 +214,7 @@ parsed_sample:
       - "Eth3/3"
     phys_iface_status:
       - "(P)"
-  - bundle_iface: "Po826"
+  - bundle_name: "Po826"
     bundle_proto: "LACP"
     bundle_proto_state: ""
     bundle_status: "(RU)"
@@ -222,7 +222,7 @@ parsed_sample:
       - "Eth4/3"
     phys_iface_status:
       - "(P)"
-  - bundle_iface: "Po827"
+  - bundle_name: "Po827"
     bundle_proto: "LACP"
     bundle_proto_state: ""
     bundle_status: "(RU)"
@@ -230,7 +230,7 @@ parsed_sample:
       - "Eth5/3"
     phys_iface_status:
       - "(P)"
-  - bundle_iface: "Po828"
+  - bundle_name: "Po828"
     bundle_proto: "LACP"
     bundle_proto_state: ""
     bundle_status: "(RU)"

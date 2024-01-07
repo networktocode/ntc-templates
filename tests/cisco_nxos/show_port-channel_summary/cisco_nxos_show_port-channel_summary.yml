@@ -1,6 +1,6 @@
 ---
 parsed_sample:
-  - bundle_iface: "Po1"
+  - bundle_name: "Po1"
     bundle_proto: "LACP"
     bundle_proto_state: "(a)"
     bundle_status: "(U)"
@@ -8,7 +8,7 @@ parsed_sample:
       - "Et3/36/1"
     phys_iface_status:
       - "(PG+)"
-  - bundle_iface: "Po25"
+  - bundle_name: "Po25"
     bundle_proto: "LACP"
     bundle_proto_state: "(a)"
     bundle_status: "(D)"
@@ -16,7 +16,7 @@ parsed_sample:
       - "Et3/12/1"
     phys_iface_status:
       - "(G-)"
-  - bundle_iface: "Po101"
+  - bundle_name: "Po101"
     bundle_proto: "LACP"
     bundle_proto_state: "(a)"
     bundle_status: "(U)"
@@ -38,7 +38,7 @@ parsed_sample:
       - "(PSG+)"
       - "(PSG+)"
       - "(PSG+)"
-  - bundle_iface: "Po102"
+  - bundle_name: "Po102"
     bundle_proto: "LACP"
     bundle_proto_state: "(a)"
     bundle_status: "(U)"
