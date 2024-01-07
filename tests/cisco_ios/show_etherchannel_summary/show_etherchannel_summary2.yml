@@ -4,9 +4,9 @@ parsed_sample:
     bundle_protocol: "LACP"
     bundle_status: "RU"
     group: "10"
-    interfaces_status:
-      - "bndl"
-      - "bndl"
     member_interface:
       - "Te0/0/2"
       - "Te0/0/3"
+    member_interface_status:
+      - "bndl"
+      - "bndl"
