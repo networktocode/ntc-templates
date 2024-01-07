@@ -1,6 +1,7 @@
 ---
 parsed_sample:
   - bundle_name: "Po1"
+    bundle_status: "SU"
     group: "1"
     interfaces:
       - "Te6/4"
@@ -12,9 +13,9 @@ parsed_sample:
       - "P"
       - "P"
       - "P"
-    po_status: "SU"
     protocol: "LACP"
   - bundle_name: "Po3"
+    bundle_status: "SU"
     group: "3"
     interfaces:
       - "Te4/2"
@@ -22,9 +23,9 @@ parsed_sample:
     interfaces_status:
       - "P"
       - "P"
-    po_status: "SU"
     protocol: "LACP"
   - bundle_name: "Po7"
+    bundle_status: "SU"
     group: "7"
     interfaces:
       - "Te3/3"
@@ -32,25 +33,25 @@ parsed_sample:
     interfaces_status:
       - "P"
       - "P"
-    po_status: "SU"
     protocol: "LACP"
   - bundle_name: "Po13"
+    bundle_status: "SU"
     group: "13"
     interfaces:
       - "Te2/8"
     interfaces_status:
       - "P"
-    po_status: "SU"
     protocol: "LACP"
   - bundle_name: "Po14"
+    bundle_status: "SU"
     group: "14"
     interfaces:
       - "Te1/8"
     interfaces_status:
       - "P"
-    po_status: "SU"
     protocol: "LACP"
   - bundle_name: "Po51"
+    bundle_status: "SU"
     group: "51"
     interfaces:
       - "Te2/10"
@@ -58,5 +59,4 @@ parsed_sample:
     interfaces_status:
       - "P"
       - "P"
-    po_status: "SU"
     protocol: "LACP"

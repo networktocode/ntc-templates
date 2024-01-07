@@ -1,6 +1,7 @@
 ---
 parsed_sample:
   - bundle_name: "Po10"
+    bundle_status: "RU"
     group: "10"
     interfaces:
       - "Te0/0/2"
@@ -8,5 +9,4 @@ parsed_sample:
     interfaces_status:
       - "bndl"
       - "bndl"
-    po_status: "RU"
     protocol: "LACP"
