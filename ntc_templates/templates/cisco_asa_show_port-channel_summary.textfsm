@@ -2,7 +2,7 @@ Value Required GROUP (\d+)
 Value BUNDLE_NAME (\S+)
 Value BUNDLE_STATUS (\D+)
 Value BUNDLE_PROTOCOL (\S+)
-Value List INTERFACES ([\w\.\/]+)
+Value List MEMBER_INTERFACE ([\w\.\/]+)
 Value List INTERFACES_STATUS (\D+)
 
 Start
@@ -12,14 +12,14 @@ Start
 PortChannel
   ^\d+ -> Continue.Record
   ^${GROUP}\s+${BUNDLE_NAME}\(${BUNDLE_STATUS}\)\s+${BUNDLE_PROTOCOL}\s* -> Continue
-  ^.+(-|LACP|PAgP)\s+${INTERFACES}\(${INTERFACES_STATUS}\) -> Continue
-  ^.+(-|LACP|PAgP)\s+[\w\.\/\(\)]+\s+${INTERFACES}\(${INTERFACES_STATUS}\) -> Continue
-  ^.+(-|LACP|PAgP)\s+[\w\.\/\(\)]+\s+[\w\.\/\(\)]+\s+${INTERFACES}\(${INTERFACES_STATUS}\) -> Continue
-  ^.+(-|LACP|PAgP)\s+[\w\.\/\(\)]+\s+[\w\.\/\(\)]+\s+[\w\.\/\(\)]+\s+${INTERFACES}\(${INTERFACES_STATUS}\) -> Continue
-  ^\s+${INTERFACES}\(${INTERFACES_STATUS}\) -> Continue
-  ^\s+[\w\.\/\(\)]+\s+${INTERFACES}\(${INTERFACES_STATUS}\) -> Continue
-  ^\s+[\w\.\/\(\)]+\s+[\w\.\/\(\)]+\s+${INTERFACES}\(${INTERFACES_STATUS}\) -> Continue
-  ^\s+[\w\.\/\(\)]+\s+[\w\.\/\(\)]+\s+[\w\.\/\(\)]+\s+${INTERFACES}\(${INTERFACES_STATUS}\) -> Continue
+  ^.+(-|LACP|PAgP)\s+${MEMBER_INTERFACE}\(${INTERFACES_STATUS}\) -> Continue
+  ^.+(-|LACP|PAgP)\s+[\w\.\/\(\)]+\s+${MEMBER_INTERFACE}\(${INTERFACES_STATUS}\) -> Continue
+  ^.+(-|LACP|PAgP)\s+[\w\.\/\(\)]+\s+[\w\.\/\(\)]+\s+${MEMBER_INTERFACE}\(${INTERFACES_STATUS}\) -> Continue
+  ^.+(-|LACP|PAgP)\s+[\w\.\/\(\)]+\s+[\w\.\/\(\)]+\s+[\w\.\/\(\)]+\s+${MEMBER_INTERFACE}\(${INTERFACES_STATUS}\) -> Continue
+  ^\s+${MEMBER_INTERFACE}\(${INTERFACES_STATUS}\) -> Continue
+  ^\s+[\w\.\/\(\)]+\s+${MEMBER_INTERFACE}\(${INTERFACES_STATUS}\) -> Continue
+  ^\s+[\w\.\/\(\)]+\s+[\w\.\/\(\)]+\s+${MEMBER_INTERFACE}\(${INTERFACES_STATUS}\) -> Continue
+  ^\s+[\w\.\/\(\)]+\s+[\w\.\/\(\)]+\s+[\w\.\/\(\)]+\s+${MEMBER_INTERFACE}\(${INTERFACES_STATUS}\) -> Continue
   ^\d+
   ^\s+
   ^-+\++

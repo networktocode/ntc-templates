@@ -4,19 +4,19 @@ parsed_sample:
     bundle_protocol: "LACP"
     bundle_status: "U"
     group: "1"
-    interfaces:
-      - "Gi0/0"
-      - "Gi0/1"
     interfaces_status:
       - "P"
       - "P"
+    member_interface:
+      - "Gi0/0"
+      - "Gi0/1"
   - bundle_name: "Po2"
     bundle_protocol: "LACP"
     bundle_status: "U"
     group: "2"
-    interfaces:
-      - "Gi0/2"
-      - "Gi0/3"
     interfaces_status:
       - "P"
       - "P"
+    member_interface:
+      - "Gi0/2"
+      - "Gi0/3"
