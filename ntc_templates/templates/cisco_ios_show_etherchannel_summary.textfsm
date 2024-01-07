@@ -1,7 +1,7 @@
 Value Required GROUP (\d+)
 Value BUNDLE_NAME (\S+)
 Value BUNDLE_STATUS (\D+)
-Value PROTOCOL (\S+)
+Value BUNDLE_PROTOCOL (\S+)
 Value List INTERFACES ([\w\.\/]+)
 Value List INTERFACES_STATUS (\D+)
 
@@ -13,7 +13,7 @@ Start
 
 PortChannel
   ^\d+ -> Continue.Record
-  ^${GROUP}\s+${BUNDLE_NAME}\(${BUNDLE_STATUS}\)\s+${PROTOCOL}\s* -> Continue
+  ^${GROUP}\s+${BUNDLE_NAME}\(${BUNDLE_STATUS}\)\s+${BUNDLE_PROTOCOL}\s* -> Continue
   ^.+(-|LACP|PAgP)\s+${INTERFACES}\(${INTERFACES_STATUS}\) -> Continue
   ^.+(-|LACP|PAgP)\s+[\w\.\/\(\)]+\s+${INTERFACES}\(${INTERFACES_STATUS}\) -> Continue
   ^.+(-|LACP|PAgP)\s+[\w\.\/\(\)]+\s+[\w\.\/\(\)]+\s+${INTERFACES}\(${INTERFACES_STATUS}\) -> Continue

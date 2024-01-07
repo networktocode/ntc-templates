@@ -1,6 +1,7 @@
 ---
 parsed_sample:
   - bundle_name: "Po1"
+    bundle_protocol: "LACP"
     bundle_status: "U"
     group: "1"
     interfaces:
@@ -9,8 +10,8 @@ parsed_sample:
     interfaces_status:
       - "P"
       - "P"
-    protocol: "LACP"
   - bundle_name: "Po2"
+    bundle_protocol: "LACP"
     bundle_status: "U"
     group: "2"
     interfaces:
@@ -19,4 +20,3 @@ parsed_sample:
     interfaces_status:
       - "P"
       - "P"
-    protocol: "LACP"

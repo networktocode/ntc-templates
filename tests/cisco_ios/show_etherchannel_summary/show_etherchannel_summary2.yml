@@ -1,6 +1,7 @@
 ---
 parsed_sample:
   - bundle_name: "Po10"
+    bundle_protocol: "LACP"
     bundle_status: "RU"
     group: "10"
     interfaces:
@@ -9,4 +10,3 @@ parsed_sample:
     interfaces_status:
       - "bndl"
       - "bndl"
-    protocol: "LACP"
