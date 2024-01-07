@@ -1,7 +1,7 @@
 Value Required,Filldown BUNDLE_NAME (Po\d+)
 Value Filldown BUNDLE_STATUS (\(\w+\))
 Value Filldown BUNDLE_PROTOCOL (\w+)
-Value Filldown BUNDLE_PROTO_STATE (\(\w+\))
+Value Filldown BUNDLE_PROTOCOL_STATE (\(\w+\))
 Value List PHYS_IFACE ([\w\/]+|\-\-)
 Value List PHYS_IFACE_STATUS (\(.+?\))
 
@@ -16,7 +16,7 @@ CASE1
 
 CASE1_RTE
   ^Po -> Continue.Record
-  ^${BUNDLE_NAME}${BUNDLE_STATUS}\s+${BUNDLE_PROTOCOL}${BUNDLE_PROTO_STATE}\s+${PHYS_IFACE}${PHYS_IFACE_STATUS}(\s|$$) -> Continue
+  ^${BUNDLE_NAME}${BUNDLE_STATUS}\s+${BUNDLE_PROTOCOL}${BUNDLE_PROTOCOL_STATE}\s+${PHYS_IFACE}${PHYS_IFACE_STATUS}(\s|$$) -> Continue
   ^Po\d+\(\w+\)\s+\w+\(\w+\)\s+Et.+?\(.+?\)\s+${PHYS_IFACE}${PHYS_IFACE_STATUS}(\s|$$) -> Continue
   ^Po\d+\(\w+\)\s+\w+\(\w+\)\s+Et.+?\(.+?\)\s+Et.+?\(.+?\)\s+${PHYS_IFACE}${PHYS_IFACE_STATUS}(\s|$$) -> Continue
   ^Po\d+\(\w+\)\s+\w+\(\w+\)\s+Et.+?\(.+?\)\s+Et.+?\(.+?\)\s+Et.+?\(.+?\)\s+${PHYS_IFACE}${PHYS_IFACE_STATUS}(\s|$$) -> Continue
