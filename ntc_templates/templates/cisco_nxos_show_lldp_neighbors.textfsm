@@ -7,5 +7,5 @@ Start
 
 LLDP
   ^${NEIGHBOR}\s+${LOCAL_INTERFACE}\s+\d+\s+(\w+?\s+)?${NEIGHBOR_INTERFACE} -> Record
-  ^${NEIGHBOR}$$
+  ^${NEIGHBOR}\s*$$
   ^\s+${LOCAL_INTERFACE}\s+\d+\s+(\w+?\s+)?${NEIGHBOR_INTERFACE} -> Record
