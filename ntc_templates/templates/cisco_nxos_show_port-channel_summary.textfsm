@@ -1,6 +1,6 @@
 Value Required,Filldown BUNDLE_NAME (Po\d+)
 Value Filldown BUNDLE_STATUS (\(\w+\))
-Value Filldown BUNDLE_PROTO (\w+)
+Value Filldown BUNDLE_PROTOCOL (\w+)
 Value Filldown BUNDLE_PROTO_STATE (\(\w+\))
 Value List PHYS_IFACE ([\w\/]+|\-\-)
 Value List PHYS_IFACE_STATUS (\(.+?\))
@@ -16,7 +16,7 @@ CASE1
 
 CASE1_RTE
   ^Po -> Continue.Record
-  ^${BUNDLE_NAME}${BUNDLE_STATUS}\s+${BUNDLE_PROTO}${BUNDLE_PROTO_STATE}\s+${PHYS_IFACE}${PHYS_IFACE_STATUS}(\s|$$) -> Continue
+  ^${BUNDLE_NAME}${BUNDLE_STATUS}\s+${BUNDLE_PROTOCOL}${BUNDLE_PROTO_STATE}\s+${PHYS_IFACE}${PHYS_IFACE_STATUS}(\s|$$) -> Continue
   ^Po\d+\(\w+\)\s+\w+\(\w+\)\s+Et.+?\(.+?\)\s+${PHYS_IFACE}${PHYS_IFACE_STATUS}(\s|$$) -> Continue
   ^Po\d+\(\w+\)\s+\w+\(\w+\)\s+Et.+?\(.+?\)\s+Et.+?\(.+?\)\s+${PHYS_IFACE}${PHYS_IFACE_STATUS}(\s|$$) -> Continue
   ^Po\d+\(\w+\)\s+\w+\(\w+\)\s+Et.+?\(.+?\)\s+Et.+?\(.+?\)\s+Et.+?\(.+?\)\s+${PHYS_IFACE}${PHYS_IFACE_STATUS}(\s|$$) -> Continue
@@ -35,7 +35,7 @@ CASE2
 CASE2_RTE
   ^------------ -> Next
   ^\d+ -> Continue.Record
-  ^\d+\s+${BUNDLE_NAME}${BUNDLE_STATUS}\s+\w+\s+${BUNDLE_PROTO}\s+${PHYS_IFACE}${PHYS_IFACE_STATUS}(\s|$$) -> Continue
+  ^\d+\s+${BUNDLE_NAME}${BUNDLE_STATUS}\s+\w+\s+${BUNDLE_PROTOCOL}\s+${PHYS_IFACE}${PHYS_IFACE_STATUS}(\s|$$) -> Continue
   ^\d+\s+Po\d+\(\w+\)\s+\w+\s+\w+\s+Et.+?\s+${PHYS_IFACE}${PHYS_IFACE_STATUS}(\s|$$) -> Continue
   ^\d+\s+Po\d+\(\w+\)\s+\w+\s+\w+\s+Et.+?\s+Et.+?\s+${PHYS_IFACE}${PHYS_IFACE_STATUS}(\s|$$) -> Continue
   ^\d+\s+Po\d+\(\w+\)\s+\w+\s+\w+\s+Et.+?\s+Et.+?\s+Et.+?\s+${PHYS_IFACE}${PHYS_IFACE_STATUS}(\s|$$) -> Continue
@@ -43,4 +43,4 @@ CASE2_RTE
   ^\s{37}Et.+?\s+${PHYS_IFACE}${PHYS_IFACE_STATUS}(\s|$$) -> Continue
   ^\s{37}Et.+?\s+Et.+?\s+${PHYS_IFACE}${PHYS_IFACE_STATUS}(\s|$$) -> Continue
   ^\s{37}Et.+?\s+Et.+?\s+Et.+?\s+${PHYS_IFACE}${PHYS_IFACE_STATUS}(\s|$$) -> Continue
-  ^\d+\s+${BUNDLE_NAME}${BUNDLE_STATUS}\s+\w+\s+${BUNDLE_PROTO}\s+${PHYS_IFACE}($$) -> Next
+  ^\d+\s+${BUNDLE_NAME}${BUNDLE_STATUS}\s+\w+\s+${BUNDLE_PROTOCOL}\s+${PHYS_IFACE}($$) -> Next
