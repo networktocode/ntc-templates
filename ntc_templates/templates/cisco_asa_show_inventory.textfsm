@@ -5,7 +5,7 @@ Value VID (\S+)
 Value SN (\S+)
 
 Start
-  ^Name:\s+"${NAME}"\s*,\s+DESCR:\s+"${DESCR}"
+  ^Name:\s+"${NAME}"\s*,\s+DESCR:\s*"${DESCR}"
   ^PID:\s+${PID}\s*,\s+VID:\s+${VID}\s*,\s+SN:\s+${SN} -> Record
   ^PID:\s+${PID}\s*,\s+VID:\s+${VID}\s*,\s+SN: -> Record
   ^\s*$$
