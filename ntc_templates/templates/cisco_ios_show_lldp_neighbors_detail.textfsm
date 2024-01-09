@@ -7,6 +7,7 @@ Value SYSTEM_DESCRIPTION (.*)
 Value CAPABILITIES (.*)
 Value MANAGEMENT_IP (\S+)
 Value VLAN_ID (\d+)
+Value MAC_ADDRESS ([0-9a-fA-F]{4}\.[0-9a-fA-F]{4}\.[0-9a-fA-F]{4})
 Value SERIAL (\S+)
 Value MANUFACTURER (.*)
 Value HW_REVISION (\S+)
@@ -53,6 +54,7 @@ Start
   ^\s+Location
   ^Time\s+remaining
   ^Vlan\s+ID:\s+(?:${VLAN_ID}|-\s+not\s+advertised)\s*$$
+  ^Peer\s+Source\s+MAC:\s+${MAC_ADDRESS}
   ^\s+\(\S+\)
   ^(?:PoE|\s+Power)
   ^\s*-+\s*$$ -> Record
