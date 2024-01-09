@@ -1,0 +1,28 @@
+VRF WALKUP (VRF Id = 6); default RD 172.21.129.45:103; default VPNID <not set>
+  New CLI format, supports multiple address-families
+  Flags: 0x180C
+  Interfaces:
+    Tu5
+Address family ipv4 unicast (Table ID = 0x6):
+  Flags: 0x0
+  Export VPN route-target communities
+    RT:64512:1030
+  Import VPN route-target communities
+    RT:64512:1030
+  No import route-map
+  No global export route-map
+  No export route-map
+  VRF label distribution protocol: not configured
+  VRF label allocation mode: per-prefix
+Address family ipv6 unicast (Table ID = 0x1E000006):
+  Flags: 0x0
+  Export VPN route-target communities
+    RT:64512:1030
+  Import VPN route-target communities
+    RT:64512:1030
+  No import route-map
+  No global export route-map
+  No export route-map
+  VRF label distribution protocol: not configured
+  VRF label allocation mode: per-prefix
+Address family ipv4 multicast not active

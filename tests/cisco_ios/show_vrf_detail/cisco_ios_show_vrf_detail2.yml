@@ -1,0 +1,18 @@
+---
+parsed_sample:
+  - name: "WALKUP"
+    id: "6"
+    vpnid: "<not set>"
+    description: ""
+    intfs:
+      - "Tu5"
+    default_rd: "172.21.129.45:103"
+    table_id:
+      - "0x6"
+      - "0x1E000006"
+    table_address_family:
+      - "ipv4"
+      - "ipv6"
+    table_address_type:
+      - "unicast"
+      - "unicast"

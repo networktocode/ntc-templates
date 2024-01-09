@@ -1,40 +1,70 @@
-Value VRF (\S+)
-Value RD (\S+|<not set>)
-Value List RT_IMPORT (\S+)
-Value List RT_EXPORT (\S+)
-Value VPN_ID (\S+|<not set>)
-Value DESCRIPTION ([\S\s]+)
-Value List INTERFACES ([\w\./-]+)
+Value Required NAME (\S+)
+Value ID (\S+)
+Value VPNID (<not set>|\S+)
+Value DESCRIPTION (.*)
+Value List INTFS (\S+)
+Value DEFAULT_RD ((\d+|\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3}):\d+|<not set>)
+Value List TABLE_ID (\S+)
+Value List TABLE_ADDRESS_FAMILY (\S+)
+Value List TABLE_ADDRESS_TYPE (\S+)
 
 Start
-  ^\s*VRF\s.+default\sRD\s.+;\sdefault\sVPNID\s.+$$ -> Continue.Record
-  ^\s*Old\sCLI\sformat,\ssupports\s\S+\sonly
-  ^\s*Flags:\s\S+
-  ^\s*\s*VRF\s${VRF}\s.+;\sdefault\sRD\s${RD};\sdefault\sVPNID\s${VPN_ID}\s*$$
-  ^\s*\s*Description:\s${DESCRIPTION}
-  ^\s*No\sinterfaces.*\s*$$
-  ^\s*Interfaces:+s*$$ -> Interfaces
-  ^\s*Flags:\s\S+
-  ^\s*Export\sVPN.*\s*$$ -> Rt_Export
-  ^\s*Import\sVPN.*\s*$$ -> Rt_Import
-  ^\s*No\sExport.*\s*$$
-  ^\s*No\sImport.*\s*$$
-  ^\s*No\simport.*\s*$$
-  ^\s*No\sexport.*\s*$$
-  ^\s*No\sglobal.*\s*$$
-  ^\s*VRF\slabel.*\s*$$
-  ^\s*Address\sfamily.*\s*$$
-  ^. -> Error
+  ^VRF ${NAME}\s+\(VRF\s+Id\s+\=\s+${ID}\);\s+default\s+RD\s+${DEFAULT_RD};\s+default\s+VPNID\s+${VPNID}
+  ^\s*Interfaces: -> INTERFACES
+  ^\s+No\s*interfaces
+  ^\s+Description:\s+${DESCRIPTION}\s*$$
+  ^\s+No\s*Export\s*VPN\s*route\-target communities
+  ^\s+No\s*Import\s*VPN\s*route\-target\s*communities
+  ^\s+No\s*import\s*route-map
+  ^\s+No\s*export\s*route-map
+  ^\s+VRF\s*label\s*distribution\s*protocol:\s*not\s*configured
+  ^\s+VRF\s*label\s*allocation\s*mode:
+  ^\s+vrf-conn-aggr\s*for\s*connected\s*and\s*BGP\s*aggregates\s*\(Label\s*516\)
+  ^\s*Address\s*family\s*\w+\s*not\s*active
+  ^\s+No\s*global\s*export\s*route\-map
+  ^\s+vrf-conn-aggr\s*for\s*connected\s*and\s*BGP\s*aggregates
+  ^\s+Export\s*VPN\s*route\-target\s*communities -> EXPORT
+  ^\s+Import\s*VPN\s*route\-target\s*communities -> IMPORT
+  ^\s*Address\s*family\s*\w+\s*\w+\s*not\s*active
+  ^Address\s+family\s+${TABLE_ADDRESS_FAMILY}\s+\(Table\s+ID\s+=\s+${TABLE_ID}\s+\(\w+\)\)\:
+  ^Address\s+family\s+${TABLE_ADDRESS_FAMILY}\s+${TABLE_ADDRESS_TYPE}\s+\(Table ID\s+=\s+${TABLE_ID}\)\:
+  ^\s+New\s+CLI\s+format\,\s+supports\s+multiple\s+address\-families
+  ^\s+No\s+\w+\s+VPN\s+route\-target\s+stitching\s+communities
+  ^\s+Old\s+CLI\s+format,
+  ^\s+Flags\: \S+$$
+  ^\s*$$ -> Record
+  ^$$ -> Record
+  ^. -> Error Start
 
-Interfaces
-  ^\s*${INTERFACES}\s*$$
-  ^\s*Address\sfamily.+$$ -> Start
-  
-Rt_Export
-  ^\s*RT:${RT_EXPORT}\s*$$
-  ^\s*(Import\sVPN.*|No\simport\sroute-map)+\s*$$ -> Rt_Import
+EXPORT
+  ^\s*RT\:\S+\:\d+\s+\S+.* -> Continue
+  ^\s+\S+\s+RT\:\S+\:\d+\s+\S+ -> Continue
+  ^\s+RT\:\S+\:\d+\s*$$
+  ^\s+\S+\s+RT\:\S+\:\d+\s*$$
+  ^\s+\S+\s+\S+\s+RT\:\S+\:\d+\s*$$
+  ^\s+No\s*Import\s*VPN\s*route\-target\s*communities -> Start
+  ^\s+Import\s*VPN\s*route\-target\s*communities -> IMPORT
+  ^. -> Error EXPORT
 
-Rt_Import
-  ^\s*RT:${RT_IMPORT}\s*$$
-  ^\s*No\simport\sroute-map\s*$$ -> Start
-  
+IMPORT
+  ^\s*RT\:\S+\:\d+\s+\S+.* -> Continue
+  ^\s+\S+\s+RT\:\S+\:\d+\s+\S+ -> Continue
+  ^\s+RT\:\S+\:\d+\s*$$
+  ^\s+\S+\s+RT\:\S+\:\d+\s*$$
+  ^\s+\S+\s+\S+\s+RT\:\S+\:\d+\s*$$
+  ^\s+No\s*import\s*route\-map -> Start
+  ^.*route-map.* -> Start
+  ^.*route-target.* -> Start
+  ^. -> Error IMPORT
+
+INTERFACES
+  ^Address\s*family\s*${TABLE_ADDRESS_FAMILY}\s*\(Table\s*ID\s*=\s*${TABLE_ID}\s*\(\w+\)\)\: -> Start
+  ^Address\s*family\s*${TABLE_ADDRESS_FAMILY}\s*${TABLE_ADDRESS_TYPE}\s*\(Table\s*ID\s*=\s*${TABLE_ID}\)\: -> Start
+  ^\s*Address\s+family\s+\w+\s+\w+\s+not\s+active -> Start
+  ^\s*${INTFS}\s+\S+.* -> Continue
+  ^\s+\S+\s+${INTFS}\s+\S+ -> Continue
+  ^\s+${INTFS}\s*$$
+  ^\s+\S+\s+${INTFS}\s*$$
+  ^\s+\S+\s+\S+\s+${INTFS}\s*$$
+  ^VRF\s*Table\s*ID\s*=\s*${TABLE_ID} -> Start
+  ^. -> Error INTERFACES
