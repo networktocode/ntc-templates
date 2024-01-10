@@ -12,7 +12,9 @@ Value PORT_DESC (\S+)
 Start
   ^Port\s*:\s*${LOCAL_PORT}
   ^Neighbor\s*Chassis-Name\s*:\s*${CHASSIS_NAME}
+  ^Neighbor\s+System-Name\s*:\s*${CHASSIS_NAME}
   ^Neighbor\s*Chassis-Description\s*:\s*${CHASSIS_DESC}
+  ^Neighbor\s+System-Description\s*:\s*${CHASSIS_DESC}
   ^Neighbor\s*Chassis-ID\s*:\s*${CHASSIS_ID}
   ^Neighbor\s*Management-Address\s*:\s*${MGMT_ADDR}
   ^Chassis\s*Capabilities\s*Available\s*:\s*${CAPABILITIES}
@@ -24,9 +26,12 @@ Start
   ^TTL\.*
   ^P[D|SE]\.*
   ^Power\.*
+  ^MED\s+capabilities
   ^\s+ -> Next
   ^\S+#\.* -> Next
   ^LLDP\.*
+  ^Link\s+aggregation 
+  ^Aggregation\s+port
   ^Total\.*
   ^=+
   ^. -> Error
