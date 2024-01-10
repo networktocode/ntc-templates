@@ -1,0 +1,25 @@
+---
+parsed_sample:
+  - group: "225.1.0.1/32"
+    incoming_interface: "Ethernet1/1"
+    last_uptime: "2w3d"
+    oif_list:
+      - "Ethernet1/3"
+    rpf_neighbor: "10.1.1.1"
+    source: "*"
+    vrf: "default"
+  - group: "225.1.0.1/32"
+    incoming_interface: "Ethernet1/1"
+    last_uptime: "06:33:34"
+    oif_list:
+      - "Ethernet1/3"
+    rpf_neighbor: "10.1.1.1"
+    source: "10.1.13.10/32"
+    vrf: "default"
+  - group: "232.0.0.0/8"
+    incoming_interface: "Null"
+    last_uptime: "2w3d"
+    oif_list: []
+    rpf_neighbor: "0.0.0.0"
+    source: "*"
+    vrf: "default"

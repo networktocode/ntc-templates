@@ -7,11 +7,11 @@ Value VPN_INSTANCE (\S+)
 
 Start
   ^IP\s+ADDRESS\s+MAC\s+ADDRESS\s+EXPIRE\S+\s+TYPE\s+INTERFACE\s+VPN-INSTANCE
-  ^\s+VLAN\/CEVLAN\s+PVC
+  ^\s+VLAN\/CEVLAN
   ^-+
   ^${IP_ADDRESS}\s+${MAC_ADDRESS}\s+${EXPIRE}?\s+${TYPE}\s+${INTERFACE}(\s+)?${VPN_INSTANCE}?$$ -> Record
   ^\s+(\d+)\/(\S+)
-  ^Total:(\d+)\s+Dynamic:(\d+)\s+Static:(\d+)\s+Interface:(\d+)\s+Remote:(\d+)
+  ^Total:(\d+)\s+Dynamic:(\d+)\s+Static:(\d+)\s+Interface:(\d+)
   ^Redirect:(\d+)
   ^\s*$$
   ^. -> Error
