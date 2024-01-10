@@ -164,6 +164,7 @@ ciena_saos_vlan_show.textfsm, .*, ciena_saos, vl[[an]] sh[[ow]]
 
 cisco_apic_fabric_show_vlan_extended.textfsm, .*, cisco_apic, fabric sh[[ow]] vlan ex[[tended]]
 
+cisco_asa_show_module.textfsm:cisco_asa_show_module_details.textfsm:cisco_asa_show_module_status.textfsm, .*, cisco_asa, sh[[ow]] modu[[le]]
 cisco_asa_show_running-config_all_crypto_map.textfsm, .*, cisco_asa, sh[[ow]] ru[[nning-config]] all cr[[ypto]] m[[ap]]
 cisco_asa_show_running-config_object_network.textfsm, .*, cisco_asa, sh[[ow]] ru[[nning-config]] o[[bject]] n[[etwork]]
 cisco_asa_show_asp_table_vpn-context_detail.textfsm, .*, cisco_asa, sh[[ow]] asp t[[able]] vpn-co[[ntext]] d[[etail]]
@@ -205,6 +206,7 @@ cisco_ftd_show_vpn-sessiondb_anyconnect.textfsm, .*, cisco_ftd, sh[[ow]] vpn-[[s
 
 cisco_ios_show_module.textfsm:cisco_ios_show_module_status.textfsm:cisco_ios_show_module_submodule.textfsm:cisco_ios_show_module_online_diag.textfsm, .*, cisco_ios, sh[[ow]] mod[[ule]]
 cisco_ios_show_switch_detail.textfsm:cisco_ios_show_switch_detail_stack_ports.textfsm, .*, cisco_ios, sh[[ow]] sw[[itch]] d[[etail]]
+cisco_ios_show_authentication_sessions_method_details.textfsm, .*, cisco_ios, show authen[[tication]] ses[[sions]] met[[hod]](\s+d[[ot1x]]|\s+m[[ab]])? det[[ails]]
 cisco_ios_show_running-config_partition_access-list.textfsm, .*, cisco_ios, sh[[ow]] ru[[nning-config]] p[[artition]] a[[ccess-list]]
 cisco_ios_show_ip_bgp_neighbors_advertised-routes.textfsm, .*, cisco_ios, sh[[ow]] ip bgp nei[[ghbors]](\s+\d+\.\d+\.\d+\.\d+)? adv[[ertised-routes]]
 cisco_ios_show_running-config_partition_route-map.textfsm, .*, cisco_ios, sh[[ow]] ru[[nning-config]] p[[artition]] route-[[map]]
@@ -364,6 +366,7 @@ cisco_nxos_show_access-lists.textfsm, .*, cisco_nxos, sh[[ow]] acc[[ess-lists]]
 cisco_nxos_show_ip_adjacency.textfsm, .*, cisco_nxos, sh[[ow]] ip ad[[jacency]]
 cisco_nxos_show_ip_interface.textfsm, .*, cisco_nxos, sh[[ow]] ip int[[erface]]
 cisco_nxos_show_environment.textfsm, .*, cisco_nxos, sh[[ow]] env[[ironment]]
+cisco_nxos_show_vrf_detail.textfsm, .*, cisco_nxos, sh[[ow]] vrf det[[ail]]
 cisco_nxos_show_interface.textfsm, .*, cisco_nxos, sh[[ow]] inte[[rface]]
 cisco_nxos_show_inventory.textfsm, .*, cisco_nxos, sh[[ow]] inv[[entory]]
 cisco_nxos_show_nve_peers.textfsm, .*, cisco_nxos, sh[[ow]] nv[[e]] p[[eers]]
@@ -384,6 +387,7 @@ cisco_nxos_show_fex.textfsm, .*, cisco_nxos, sh[[ow]] fex
 cisco_nxos_show_vdc.textfsm, .*, cisco_nxos, sh[[ow]] vdc
 cisco_nxos_show_vpc.textfsm, .*, cisco_nxos, sh[[ow]] vpc
 cisco_nxos_show_vrf.textfsm, .*, cisco_nxos, sh[[ow]] vrf
+cisco_nxos_dir.textfsm,  .*, cisco_nxos, dir
 
 cisco_s300_show_interfaces_description.textfsm, .*, cisco_s300, sh[[ow]] int[[erfaces]] description
 cisco_s300_show_interfaces_switchport.textfsm, .*, cisco_s300, sh[[ow]] int[[erfaces]] switchport

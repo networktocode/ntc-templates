@@ -1,56 +1,32 @@
-VRF Management (VRF Id = 1); default RD <not set>; default VPNID <not set>
-  Old CLI format, supports IPv4 only
-  Flags: 0x8
+VRF BACKUP-F (VRF Id = 22); default RD 11:120; default VPNID <not set>
   Interfaces:
-    Gi1                     
-Address family ipv4 unicast (Table ID = 0x1):
-  Flags: 0x0
-  No Export VPN route-target communities
-  No Import VPN route-target communities
-  No import route-map
-  No global export route-map
-  No export route-map
-  VRF label distribution protocol: not configured
-  VRF label allocation mode: per-prefix
-Address family ipv6 unicast not active
-Address family ipv4 multicast not active
-Address family ipv6 multicast not active
-
-VRF testr (VRF Id = 2); default RD 65000:42; default VPNID <not set>
-  Old CLI format, supports IPv4 only
-  Flags: 0xC
-  No interfaces
-Address family ipv4 unicast (Table ID = 0x2):
-  Flags: 0x0
+    Vl665                    Vl666                    Vl2666
+Address family ipv4 (Table ID = 22 (0x16)):
   Export VPN route-target communities
-    RT:65000:42             
+    RT:11:120
   Import VPN route-target communities
-    RT:65000:43 
-    RT:65000:44             
+    RT:11:121                RT:11:131                RT:12:1
+    RT:11:50                 RT:11:1                  RT:11:20
+    RT:11:50
   No import route-map
-  No global export route-map
   No export route-map
   VRF label distribution protocol: not configured
   VRF label allocation mode: per-prefix
-Address family ipv6 unicast not active
-Address family ipv4 multicast not active
-Address family ipv6 multicast not active
+    vrf-conn-aggr for connected and BGP aggregates (Label 514)
+Address family ipv6 not active.
 
-VRF test2 (VRF Id = 3); default RD <not set>; default VPNID <not set>
-  Description: test2 description
-  Old CLI format, supports IPv4 only
-  Flags: 0x8
-  No interfaces
-Address family ipv4 unicast (Table ID = 0x3):
-  Flags: 0x0
-  No Export VPN route-target communities
-  No Import VPN route-target communities
+VRF BROADY-FE (VRF Id = 21); default RD 11:30; default VPNID <not set>
+  Interfaces:
+    Vl610                    Vl611                    Vl612
+    Vl613                    Vl614
+Address family ipv4 (Table ID = 21 (0x15)):
+  Export VPN route-target communities
+    RT:11:30
+  Import VPN route-target communities
+    RT:11:31                 RT:11:121                RT:11:120
   No import route-map
-  No global export route-map
   No export route-map
   VRF label distribution protocol: not configured
   VRF label allocation mode: per-prefix
-Address family ipv6 unicast not active
-Address family ipv4 multicast not active
-Address family ipv6 multicast not active
-
+    vrf-conn-aggr for connected and BGP aggregates (Label 513)
+Address family ipv6 not active.
