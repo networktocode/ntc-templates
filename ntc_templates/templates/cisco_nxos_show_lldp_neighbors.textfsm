@@ -1,11 +1,12 @@
 Value NEIGHBOR (\S+)
 Value LOCAL_INTERFACE (\S+)
 Value NEIGHBOR_INTERFACE (\S+)
+Value CAPABILITIES (\w+)
 
 Start
   ^Device.*ID -> LLDP
 
 LLDP
-  ^${NEIGHBOR}\s+${LOCAL_INTERFACE}\s+\d+\s+(\w+?\s+)?${NEIGHBOR_INTERFACE} -> Record
+  ^${NEIGHBOR}\s+${LOCAL_INTERFACE}\s+\d+\s+(${CAPABILITIES}?\s+)?${NEIGHBOR_INTERFACE} -> Record
   ^${NEIGHBOR}\s*$$
-  ^\s+${LOCAL_INTERFACE}\s+\d+\s+(\w+?\s+)?${NEIGHBOR_INTERFACE} -> Record
+  ^\s+${LOCAL_INTERFACE}\s+\d+\s+(${CAPABILITIES}?\s+)?${NEIGHBOR_INTERFACE} -> Record

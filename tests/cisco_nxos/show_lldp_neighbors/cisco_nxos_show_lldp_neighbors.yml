@@ -1,11 +1,14 @@
 ---
 parsed_sample:
-  - local_interface: "Eth1/1"
+  - capabilities: "BR"
+    local_interface: "Eth1/1"
     neighbor: "nx-osv9000-3-long-name.com"
     neighbor_interface: "Ethernet1/1"
-  - local_interface: "Eth1/2"
+  - capabilities: "BR"
+    local_interface: "Eth1/2"
     neighbor: "nx-osv9000-4-extremely-long-name"
     neighbor_interface: "Ethernet1/1"
-  - local_interface: "Eth1/3"
+  - capabilities: "BR"
+    local_interface: "Eth1/3"
     neighbor: "nx-osv9000-2"
     neighbor_interface: "Ethernet1/3"
