@@ -1,0 +1,730 @@
+
+Bigsur port sup1 card-config info:
+        if_index           : 0x15010000
+        instance index     : 0
+        instance slot      : 17
+        instance asic      : 0
+        asic_eport         : 0
+        logical_port       : 0
+        front_port         : 0
+        state              : va swi hw1 hw2 hwf 
+        bigsur eport       : 0
+        port_type          : sup-hi(1)
+        type               : 5
+        fw_instance        : 0
+        speed              : 1
+
+Bigsur port sup1 port-client-config info:
+        admin_state        : en(1)
+        mtu                : 2280
+        duplexity          : full(2)
+        auto_neg_state     : (on)1
+        Fast 1G AN timer is: on
+        speed              : 1000
+        debounce time      : 100ms
+        linkup_debounce time : 0ms
+        sat_fabric_mode    : off(0x0)
+        port_flow_ctrl     : 0
+        class_flow_ctrl7-0 : 0000 0000
+        class_flow_ctrl msk: rx 0x0, tx 0x0
+Bigsur port sup1 port-oper info:
+        link_state         : dn(2)
+        oper speed         : 1000
+        oper duplexity     : full(2)
+        oper port_flow_ctrl: 0
+        up count           : 0
+        down count         : 0
+
+Bigsur port sup1 miscellaneous info:
+        slot               : 17
+        mm_inst            : 0
+        mm_mode            : SUP
+        diag sts           : pass
+        mac status polling : 0
+
+Clause 73 AN:
+        AN state               : 0 (AN_ST_IDLE)
+        AN timer               : 0h
+        Link Fail Inhibit timer: 0h
+        AN disabled            : 0
+
+MM Port Bring Up state-machine:
+        MM port state          : 15 (PORT_ST_ENABLED)
+        MM port timer          : 0h
+
+Remote fault disable       : 0
+Adaptive tuning disable    : 0
+Link recovery disable      : 0
+Link bring down disable    : 0
+DFE tuning disable         : 0
+Force QSFP removal         : 0
+Force QSFP insertion       : 0
+Force QSFP fiber type      : 0
+Force QSFP copper type     : 0
+
+
+SBus addresses:
+        Serdes             : 47 (2fh)
+        DFE Tune result   :
+
+        FI block lock 0h: f
+        FI block lock 1h: f
+        FI block lock 2h: f
+        FI block lock 3h: f
+
+MAC statistics:
+MAC Statistic                  | Value                             
+-------------------------------+-----------------------------------
+TX_PKT_SIZE_LT_64              | 0
+TX_PKT_SIZE_IS_64              | 0
+TX_PKT_SIZE_IS_65_TO_127       | 2823262146
+TX_PKT_SIZE_IS_128_TO_255      | 4795287371
+TX_PKT_SIZE_IS_256_TO_511      | 117237451
+TX_PKT_SIZE_IS_512_TO_1023     | 36844691
+TX_PKT_SIZE_IS_1024_TO_1518    | 1414252162
+TX_PKT_SIZE_IS_1519_TO_2047    | 79288810
+TX_PKT_SIZE_IS_2048_TO_4095    | 0
+TX_PKT_SIZE_IS_4095_TO_8191    | 0
+TX_PKT_SIZE_IS_8192_TO_9216    | 0
+TX_PKT_SIZE_GT_9216            | 0
+TX_PKT_TOTAL                   | 13561139927
+TX_PKT_OCTETS                  | 4246363557157
+TX_PKT_GOOD                    | 13561139369
+TX_PKT_UCAST                   | 211
+TX_PKT_MCAST                   | 13561139158
+TX_PKT_BCAST                   | 0
+TX_PKT_VLAN                    | 0
+TX_PKT_802.3x_PAUSE            | 0
+TX_PKT_PER_PRIORITY_PAUSE      | 0
+TX_PKT_FRAME_ERROR             | 558
+RX_PKT_SIZE_LT_64              | 0
+RX_PKT_SIZE_IS_64              | 0
+RX_PKT_SIZE_IS_65_TO_127       | 779403235
+RX_PKT_SIZE_IS_128_TO_255      | 247806975
+RX_PKT_SIZE_IS_256_TO_511      | 46761364
+RX_PKT_SIZE_IS_512_TO_1023     | 650380
+RX_PKT_SIZE_IS_1024_TO_1518    | 148887
+RX_PKT_SIZE_IS_1519_TO_2047    | 0
+RX_PKT_SIZE_IS_2048_TO_4095    | 0
+RX_PKT_SIZE_IS_4095_TO_8191    | 0
+RX_PKT_SIZE_IS_8192_TO_9216    | 0
+RX_PKT_SIZE_GT_9216            | 0
+RX_PKT_TOTAL                   | 1074770841
+RX_PKT_OCTETS                  | 130446639665
+RX_PKT_GOOD                    | 7488
+RX_PKT_UCAST                   | 0
+RX_PKT_MCAST                   | 7488
+RX_PKT_BCAST                   | 0
+RX_PKT_VLAN                    | 0
+RX_PKT_OVERSIZE                | 0
+RX_PKT_TOOLONG                 | 0
+RX_PKT_DISCARD                 | 0
+RX_PKT_UNDERSIZE               | 0
+RX_PKT_FRAGMENT                | 0
+RX_PKT_CRC_NOT_STOMPED         | 0
+RX_PKT_CRC_STOMPED             | 0
+RX_PKT_IN_RANGE_ERR            | 1074763353
+RX_PKT_JABBER                  | 0
+RX_PKT_802.3x_PAUSE            | 0
+RX_PKT_PER_PRIORITY_PAUSE      | 0
+TX_PKT_GOOD_OCTETS             | 4246363466864
+RX_PKT_GOOD_OCTETS             | 3784988
+Done.
+
+Bigsur port sup0 card-config info:
+        if_index           : 0x15020000
+        instance index     : 0
+        instance slot      : 17
+        instance asic      : 0
+        asic_eport         : 1
+        logical_port       : 1
+        front_port         : 0
+        state              : va swi hw1 hw2 hwf 
+        bigsur eport       : 1
+        port_type          : sup-lo(2)
+        type               : 5
+        fw_instance        : 1
+        speed              : 1
+
+Bigsur port sup0 port-client-config info:
+        admin_state        : en(1)
+        mtu                : 2280
+        duplexity          : full(2)
+        auto_neg_state     : (on)1
+        Fast 1G AN timer is: on
+        speed              : 1000
+        debounce time      : 100ms
+        linkup_debounce time : 0ms
+        sat_fabric_mode    : off(0x0)
+        port_flow_ctrl     : 0
+        class_flow_ctrl7-0 : 0000 0000
+        class_flow_ctrl msk: rx 0x0, tx 0x0
+Bigsur port sup0 port-oper info:
+        link_state         : dn(2)
+        oper speed         : 1000
+        oper duplexity     : full(2)
+        oper port_flow_ctrl: 0
+        up count           : 0
+        down count         : 0
+
+Bigsur port sup0 miscellaneous info:
+        slot               : 17
+        mm_inst            : 1
+        mm_mode            : SUP
+        diag sts           : pass
+        mac status polling : 0
+
+Clause 73 AN:
+        AN state               : 0 (AN_ST_IDLE)
+        AN timer               : 0h
+        Link Fail Inhibit timer: 0h
+        AN disabled            : 0
+
+MM Port Bring Up state-machine:
+        MM port state          : 15 (PORT_ST_ENABLED)
+        MM port timer          : 0h
+
+Remote fault disable       : 0
+Adaptive tuning disable    : 0
+Link recovery disable      : 0
+Link bring down disable    : 0
+DFE tuning disable         : 0
+Force QSFP removal         : 0
+Force QSFP insertion       : 0
+Force QSFP fiber type      : 0
+Force QSFP copper type     : 0
+
+
+SBus addresses:
+        Serdes             : 49 (31h)
+        DFE Tune result   :
+
+        FI block lock 0h: f
+        FI block lock 1h: f
+        FI block lock 2h: f
+        FI block lock 3h: f
+
+MAC statistics:
+MAC Statistic                  | Value                             
+-------------------------------+-----------------------------------
+TX_PKT_SIZE_LT_64              | 0
+TX_PKT_SIZE_IS_64              | 0
+TX_PKT_SIZE_IS_65_TO_127       | 0
+TX_PKT_SIZE_IS_128_TO_255      | 0
+TX_PKT_SIZE_IS_256_TO_511      | 0
+TX_PKT_SIZE_IS_512_TO_1023     | 0
+TX_PKT_SIZE_IS_1024_TO_1518    | 0
+TX_PKT_SIZE_IS_1519_TO_2047    | 0
+TX_PKT_SIZE_IS_2048_TO_4095    | 0
+TX_PKT_SIZE_IS_4095_TO_8191    | 0
+TX_PKT_SIZE_IS_8192_TO_9216    | 0
+TX_PKT_SIZE_GT_9216            | 0
+TX_PKT_TOTAL                   | 0
+TX_PKT_OCTETS                  | 0
+TX_PKT_GOOD                    | 0
+TX_PKT_UCAST                   | 0
+TX_PKT_MCAST                   | 0
+TX_PKT_BCAST                   | 0
+TX_PKT_VLAN                    | 0
+TX_PKT_802.3x_PAUSE            | 0
+TX_PKT_PER_PRIORITY_PAUSE      | 0
+TX_PKT_FRAME_ERROR             | 0
+RX_PKT_SIZE_LT_64              | 0
+RX_PKT_SIZE_IS_64              | 0
+RX_PKT_SIZE_IS_65_TO_127       | 232035201
+RX_PKT_SIZE_IS_128_TO_255      | 78530597
+RX_PKT_SIZE_IS_256_TO_511      | 49134037
+RX_PKT_SIZE_IS_512_TO_1023     | 2680457976
+RX_PKT_SIZE_IS_1024_TO_1518    | 150725864
+RX_PKT_SIZE_IS_1519_TO_2047    | 69560111
+RX_PKT_SIZE_IS_2048_TO_4095    | 0
+RX_PKT_SIZE_IS_4095_TO_8191    | 0
+RX_PKT_SIZE_IS_8192_TO_9216    | 0
+RX_PKT_SIZE_GT_9216            | 0
+RX_PKT_TOTAL                   | 3260443786
+RX_PKT_OCTETS                  | 2176458795398
+RX_PKT_GOOD                    | 64
+RX_PKT_UCAST                   | 0
+RX_PKT_MCAST                   | 64
+RX_PKT_BCAST                   | 0
+RX_PKT_VLAN                    | 0
+RX_PKT_OVERSIZE                | 0
+RX_PKT_TOOLONG                 | 0
+RX_PKT_DISCARD                 | 0
+RX_PKT_UNDERSIZE               | 0
+RX_PKT_FRAGMENT                | 0
+RX_PKT_CRC_NOT_STOMPED         | 0
+RX_PKT_CRC_STOMPED             | 0
+RX_PKT_IN_RANGE_ERR            | 3260443722
+RX_PKT_JABBER                  | 0
+RX_PKT_802.3x_PAUSE            | 0
+RX_PKT_PER_PRIORITY_PAUSE      | 0
+TX_PKT_GOOD_OCTETS             | 0
+RX_PKT_GOOD_OCTETS             | 5602
+Done.
+
+Bigsur port 40gb1/1 card-config info:
+        if_index           : 0x1a070000
+        instance index     : 1
+        instance slot      : 0
+        instance asic      : 0
+        asic_eport         : 0
+        logical_port       : 0
+        front_port         : 0
+        state              : va swi hw1 hw2 hwf 
+        bigsur eport       : 0
+        port_type          : 40gbe(12)
+        type               : 6
+        fw_instance        : 0
+        speed              : 5
+
+Bigsur port 40gb1/1 port-client-config info:
+        admin_state        : en(1)
+        mtu                : 9260
+        duplexity          : full(2)
+        auto_neg_state     : (off)2
+        Fast 1G AN timer is: on
+        speed              : 40000
+        debounce time      : 100ms
+        linkup_debounce time : 0ms
+        sat_fabric_mode    : off(0x0)
+        port_flow_ctrl     : 0
+        class_flow_ctrl7-0 : 0000 0000
+        class_flow_ctrl msk: rx 0x0, tx 0x0
+Bigsur port 40gb1/1 port-oper info:
+        link_state         : up(1)
+        oper speed         : 40000
+        oper duplexity     : full(2)
+        oper port_flow_ctrl: 0
+        up count           : 1
+        down count         : 0
+
+Bigsur port 40gb1/1 miscellaneous info:
+        slot               : 0
+        mm_inst            : 0
+        mm_mode            : 40G
+        diag sts           : pass
+        mac status polling : 1
+
+Clause 73 AN:
+        AN state               : 0 (AN_ST_IDLE)
+        AN timer               : 0h
+        Link Fail Inhibit timer: 0h
+        AN disabled            : 0
+
+MM Port Bring Up state-machine:
+        MM port state          : 15 (PORT_ST_ENABLED)
+        MM port timer          : 0h
+
+Remote fault disable       : 0
+Adaptive tuning disable    : 0
+Link recovery disable      : 0
+Link bring down disable    : 0
+DFE tuning disable         : 0
+Force QSFP removal         : 0
+Force QSFP insertion       : 0
+Force QSFP fiber type      : 0
+Force QSFP copper type     : 0
+
+
+SBus addresses:
+        Serdes lanes 0-3   : 47 (2fh), 49 (31h), 51 (33h), 53 (35h) 
+        DFE Tune result   :
+                Lane 0:
+                <0 0.ln0>:DFE A: 92 0x 0 0-2 1 1 41 -2
+                <0 0.ln0>:DFE B: 93 0x 0 0-1 0-1 41  1
+                <0 0.ln0> DFE Tune [0x67-B,D]: 98426/33/88226/21/5d005c  0
+                Lane 1:
+                <0 0.ln1>:DFE A: 98 0x-3 0-4 1 0 30  1
+                <0 0.ln1>:DFE B: 97 0x 1 0-5 0 0 30  1
+                <0 0.ln1> DFE Tune [0x67-B,D]: 240b0402/1/20b8002/1/610062  0
+                Lane 2:
+                <0 0.ln2>:DFE A: 90 0x-6 1-3 0 0 31 -1
+                <0 0.ln2>:DFE B: 92 0x-6 0-2-1 0 31  0
+                <0 0.ln2> DFE Tune [0x67-B,D]: 2b190002/31/2a09c402/20/5c005a  0
+                Lane 3:
+                <0 0.ln3>:DFE A: 101 0x-9 0-3 1 0 01 -1
+                <0 0.ln3>:DFE B: 95 0x-8 0-4 1 0 01 -5
+                <0 0.ln3> DFE Tune [0x67-B,D]: 3a090400/31/380b0400/37/5f0065  0
+
+        FI block lock 0h: f
+        FI block lock 1h: f
+        FI block lock 2h: f
+        FI block lock 3h: f
+
+MAC statistics:
+MAC Statistic                  | Value                             
+-------------------------------+-----------------------------------
+TX_PKT_SIZE_LT_64              | 0
+TX_PKT_SIZE_IS_64              | 18664463
+TX_PKT_SIZE_IS_65_TO_127       | 238330564005
+TX_PKT_SIZE_IS_128_TO_255      | 208519091965
+TX_PKT_SIZE_IS_256_TO_511      | 52508123590
+TX_PKT_SIZE_IS_512_TO_1023     | 31784748589
+TX_PKT_SIZE_IS_1024_TO_1518    | 68228288123
+TX_PKT_SIZE_IS_1519_TO_2047    | 655538327602
+TX_PKT_SIZE_IS_2048_TO_4095    | 12004245922
+TX_PKT_SIZE_IS_4095_TO_8191    | 52439440105
+TX_PKT_SIZE_IS_8192_TO_9216    | 103249777669
+TX_PKT_SIZE_GT_9216            | 0
+TX_PKT_TOTAL                   | 1422621272033
+TX_PKT_OCTETS                  | 2416042841135777
+TX_PKT_GOOD                    | 1422621272034
+TX_PKT_UCAST                   | 1422526412248
+TX_PKT_MCAST                   | 94859785
+TX_PKT_BCAST                   | 1
+TX_PKT_VLAN                    | 0
+TX_PKT_802.3x_PAUSE            | 0
+TX_PKT_PER_PRIORITY_PAUSE      | 0
+TX_PKT_FRAME_ERROR             | 0
+RX_PKT_SIZE_LT_64              | 0
+RX_PKT_SIZE_IS_64              | 13493183
+RX_PKT_SIZE_IS_65_TO_127       | 242229594382
+RX_PKT_SIZE_IS_128_TO_255      | 170715085186
+RX_PKT_SIZE_IS_256_TO_511      | 52962213518
+RX_PKT_SIZE_IS_512_TO_1023     | 15954313004
+RX_PKT_SIZE_IS_1024_TO_1518    | 154045143557
+RX_PKT_SIZE_IS_1519_TO_2047    | 748698164670
+RX_PKT_SIZE_IS_2048_TO_4095    | 11890366490
+RX_PKT_SIZE_IS_4095_TO_8191    | 55672237707
+RX_PKT_SIZE_IS_8192_TO_9216    | 103016468728
+RX_PKT_SIZE_GT_9216            | 0
+RX_PKT_TOTAL                   | 1555197080425
+RX_PKT_OCTETS                  | 2684618846662334
+RX_PKT_GOOD                    | 1555196893875
+RX_PKT_UCAST                   | 1268271913848
+RX_PKT_MCAST                   | 271281819207
+RX_PKT_BCAST                   | 15643160820
+RX_PKT_VLAN                    | 0
+RX_PKT_OVERSIZE                | 0
+RX_PKT_TOOLONG                 | 0
+RX_PKT_DISCARD                 | 0
+RX_PKT_UNDERSIZE               | 0
+RX_PKT_FRAGMENT                | 0
+RX_PKT_CRC_NOT_STOMPED         | 315
+RX_PKT_CRC_STOMPED             | 186235
+RX_PKT_IN_RANGE_ERR            | 0
+RX_PKT_JABBER                  | 0
+RX_PKT_802.3x_PAUSE            | 0
+RX_PKT_PER_PRIORITY_PAUSE      | 0
+TX_PKT_GOOD_OCTETS             | 2416042841147997
+RX_PKT_GOOD_OCTETS             | 2684618748170285
+
+
+XCVR port info:
+Card Config info
+        logical_port       : 0
+        sfp_ctrl_bigsur    : 0
+        sfp_ctrl_port      : 0
+        phy_bigsur         : 0
+        phy_mdio_addr      : 0
+        phy_mdio_master    : 1
+        phy_reset_bigsur   : 0
+        phy_reset_spio     : 0
+        phy_prom_shared    : 0
+        Serdes txdata[0]   : 0x0
+        Serdes txdata[1]   : 0x0
+        Serdes txdata[2]   : 0x0
+        Serdes txdata[3]   : 0x0
+        phy_pmd_tx[0]      : 0x0
+        phy_pmd_tx[1]      : 0x0
+        phy_pmd_tx[2]      : 0x0
+Dev address info
+        pma_pmd_devaddr    : 1
+        pcs_devaddr        : 3
+        phyxs_devaddr      : 4
+        xcvr_devaddr       : 1
+Misc info
+        phy_present        : 0
+        phy_type           : 0
+        sfp_acc_type       : 8
+        dfe_timer          : 0
+        dfe_timer_running  : 0
+        init_wait_count    : 0
+        do_tx_disable_clr  : 0
+        tx_disable_clr_cnt : 0
+        qsa_status         : 0
+        Connector type     : FIBER
+        usb_bus_num        : 1
+        usb_dev_num        : 8
+        usb_priv           : available
+        Reset done         : N
+Xcvr flags
+        XCVR_FLAG_PRESENT              : Y
+        XCVR_FLAG_XCVR_NOT_SFP         : Y
+        XCVR_FLAG_10G_CAPABLE          : Y
+        XCVR_FLAG_CKSUM_OK             : Y
+        XCVR_FLAG_SECURITY_CRC_OK      : Y
+        XCVR_FLAG_CISCO_CHK_OK         : N
+        XCVR_FLAG_DDM_CAPABLE          : N
+        XCVR_FLAG_PMA_PMD_PRESENT      : N
+        XCVR_FLAG_PCS_PRESENT          : N
+        XCVR_FLAG_PHYXS_PRESENT        : N
+        XCVR_FLAG_XCVR_OPERATIONAL     : Y
+        XCVR_FLAG_PMA_PMD_LOW_PWR_MODE : N
+        XCVR_FLAG_PCS_LOW_PWR_MODE     : N
+        XCVR_FLAG_PHYXS_LOW_PWR_MODE   : N
+        XCVR_FLAG_LINK_UP              : Y
+        XCVR_FLAG_TYPE_FIBER           : Y
+        XCVR_FLAG_SPROM_READ_OK        : Y
+Link states:HF-HwFailure, ED-ErrDisabled, DB-Debounced, UP and DN-Down
+
+Port 0/0:
+State: UP
+XCVR insert debounce timer not running
+XCVR link debounce timer not running
+XCVR linkup debounce timer not running
+XCVR presence detect timer running
+TX enable signal is off
+Debounce timeout: 0.030 seconds
+
+Linkup Debounce timeout: 0.000 seconds
+
+Link up : 941735 usecs after Sun Oct 27 06:14:48 2019
+Link dn debounce start : 0 usecs after Thu Jan  1 00:00:00 1970
+Link debounce end : 0 usecs after Thu Jan  1 00:00:00 1970
+
+Counters:
+  Interrupt cntrs:
+  Bit error cntrs:
+    Bit Error Rate: 0x0000000000000000 Bit Error Rate(since linkup): 0x00000000
+    Error blocks  : 0x0000000000000000 Error blocks(since linkup)  : 0x00000000
+  Link cntrs:
+    Link up: 0x1 (1)
+    Link dn: 0x0 (0)
+    Link debounced with link up: 0x0 (0)
+    Link debounced with link up since  last enable: 0x0 (0)
+Done.
+
+Bigsur port 40gb1/2 card-config info:
+        if_index           : 0x1a071000
+        instance index     : 1
+        instance slot      : 0
+        instance asic      : 0
+        asic_eport         : 1
+        logical_port       : 1
+        front_port         : 1
+        state              : va swi hw1 hw2 hwf 
+        bigsur eport       : 1
+        port_type          : 40gbe(12)
+        type               : 6
+        fw_instance        : 4
+        speed              : 5
+
+Bigsur port 40gb1/2 port-client-config info:
+        admin_state        : en(1)
+        mtu                : 9260
+        duplexity          : full(2)
+        auto_neg_state     : (off)2
+        Fast 1G AN timer is: on
+        speed              : 40000
+        debounce time      : 100ms
+        linkup_debounce time : 0ms
+        sat_fabric_mode    : off(0x0)
+        port_flow_ctrl     : 0
+        class_flow_ctrl7-0 : 0000 0000
+        class_flow_ctrl msk: rx 0x0, tx 0x0
+Bigsur port 40gb1/2 port-oper info:
+        link_state         : up(1)
+        oper speed         : 40000
+        oper duplexity     : full(2)
+        oper port_flow_ctrl: 0
+        up count           : 1
+        down count         : 0
+
+Bigsur port 40gb1/2 miscellaneous info:
+        slot               : 0
+        mm_inst            : 1
+        mm_mode            : 40G
+        diag sts           : pass
+        mac status polling : 1
+
+Clause 73 AN:
+        AN state               : 0 (AN_ST_IDLE)
+        AN timer               : 0h
+        Link Fail Inhibit timer: 0h
+        AN disabled            : 0
+
+MM Port Bring Up state-machine:
+        MM port state          : 15 (PORT_ST_ENABLED)
+        MM port timer          : 0h
+
+Remote fault disable       : 0
+Adaptive tuning disable    : 0
+Link recovery disable      : 0
+Link bring down disable    : 0
+DFE tuning disable         : 0
+Force QSFP removal         : 0
+Force QSFP insertion       : 0
+Force QSFP fiber type      : 0
+Force QSFP copper type     : 0
+
+
+SBus addresses:
+        Serdes lanes 0-3   : 55 (37h), 57 (39h), 59 (3bh), 61 (3dh) 
+        DFE Tune result   :
+                Lane 0:
+                <0 0.ln4>:DFE A: 97 0x-3 0-1 0 0 40 -2
+                <0 0.ln4>:DFE B: 100 0x-2 0-2 1 0 40 -1
+                <0 0.ln4> DFE Tune [0x67-B,D]: 24088006/13/26098406/11/640061  0
+                Lane 1:
+                <0 0.ln5>:DFE A: 98 0x-6 0-5 1 0 01  0
+                <0 0.ln5>:DFE B: 100 0x-8 0-5 1 0 01  1
+                <0 0.ln5> DFE Tune [0x67-B,D]: 2a0b8400/20/380b8400/21/640062  0
+                Lane 2:
+                <0 0.ln6>:DFE A: 95 0x-4 0-2 0 0 41  1
+                <0 0.ln6>:DFE B: 90 0x-1 0-3 0-1 41  1
+                <0 0.ln6> DFE Tune [0x67-B,D]: 2c098006/21/22090226/21/5a005f  0
+                Lane 3:
+                <0 0.ln7>:DFE A: 102 0x-9 0-3 2 1 01  0
+                <0 0.ln7>:DFE B: 103 0x-b 0 0 0 0 01  0
+                <0 0.ln7> DFE Tune [0x67-B,D]: 3a090c20/20/3c000000/20/670066  0
+
+        FI block lock 0h: f
+        FI block lock 1h: f
+        FI block lock 2h: f
+        FI block lock 3h: f
+
+MAC statistics:
+MAC Statistic                  | Value                             
+-------------------------------+-----------------------------------
+TX_PKT_SIZE_LT_64              | 0
+TX_PKT_SIZE_IS_64              | 0
+TX_PKT_SIZE_IS_65_TO_127       | 221696905275
+TX_PKT_SIZE_IS_128_TO_255      | 194761555926
+TX_PKT_SIZE_IS_256_TO_511      | 52118735247
+TX_PKT_SIZE_IS_512_TO_1023     | 28101578047
+TX_PKT_SIZE_IS_1024_TO_1518    | 51755254532
+TX_PKT_SIZE_IS_1519_TO_2047    | 708624997790
+TX_PKT_SIZE_IS_2048_TO_4095    | 12210800606
+TX_PKT_SIZE_IS_4095_TO_8191    | 47301205375
+TX_PKT_SIZE_IS_8192_TO_9216    | 101005431860
+TX_PKT_SIZE_GT_9216            | 0
+TX_PKT_TOTAL                   | 1417576464658
+TX_PKT_OCTETS                  | 2423284879830834
+TX_PKT_GOOD                    | 1417576464659
+TX_PKT_UCAST                   | 1416864425571
+TX_PKT_MCAST                   | 388555955
+TX_PKT_BCAST                   | 323483133
+TX_PKT_VLAN                    | 0
+TX_PKT_802.3x_PAUSE            | 0
+TX_PKT_PER_PRIORITY_PAUSE      | 0
+TX_PKT_FRAME_ERROR             | 0
+RX_PKT_SIZE_LT_64              | 0
+RX_PKT_SIZE_IS_64              | 13723786
+RX_PKT_SIZE_IS_65_TO_127       | 236486911378
+RX_PKT_SIZE_IS_128_TO_255      | 181809874494
+RX_PKT_SIZE_IS_256_TO_511      | 58190299575
+RX_PKT_SIZE_IS_512_TO_1023     | 15742772244
+RX_PKT_SIZE_IS_1024_TO_1518    | 94593384424
+RX_PKT_SIZE_IS_1519_TO_2047    | 548720562260
+RX_PKT_SIZE_IS_2048_TO_4095    | 12264718059
+RX_PKT_SIZE_IS_4095_TO_8191    | 54765198272
+RX_PKT_SIZE_IS_8192_TO_9216    | 103065149039
+RX_PKT_SIZE_GT_9216            | 0
+RX_PKT_TOTAL                   | 1305652593531
+RX_PKT_OCTETS                  | 2287031513403995
+RX_PKT_GOOD                    | 1305652327716
+RX_PKT_UCAST                   | 1035478421252
+RX_PKT_MCAST                   | 259688831694
+RX_PKT_BCAST                   | 10485074770
+RX_PKT_VLAN                    | 0
+RX_PKT_OVERSIZE                | 0
+RX_PKT_TOOLONG                 | 0
+RX_PKT_DISCARD                 | 0
+RX_PKT_UNDERSIZE               | 0
+RX_PKT_FRAGMENT                | 0
+RX_PKT_CRC_NOT_STOMPED         | 5
+RX_PKT_CRC_STOMPED             | 265810
+RX_PKT_IN_RANGE_ERR            | 0
+RX_PKT_JABBER                  | 0
+RX_PKT_802.3x_PAUSE            | 0
+RX_PKT_PER_PRIORITY_PAUSE      | 0
+TX_PKT_GOOD_OCTETS             | 2423284879835690
+RX_PKT_GOOD_OCTETS             | 2287031285388567
+
+
+XCVR port info:
+Card Config info
+        logical_port       : 1
+        sfp_ctrl_bigsur    : 0
+        sfp_ctrl_port      : 1
+        phy_bigsur         : 0
+        phy_mdio_addr      : 0
+        phy_mdio_master    : 1
+        phy_reset_bigsur   : 0
+        phy_reset_spio     : 0
+        phy_prom_shared    : 0
+        Serdes txdata[0]   : 0x0
+        Serdes txdata[1]   : 0x0
+        Serdes txdata[2]   : 0x0
+        Serdes txdata[3]   : 0x0
+        phy_pmd_tx[0]      : 0x0
+        phy_pmd_tx[1]      : 0x0
+        phy_pmd_tx[2]      : 0x0
+Dev address info
+        pma_pmd_devaddr    : 1
+        pcs_devaddr        : 3
+        phyxs_devaddr      : 4
+        xcvr_devaddr       : 1
+Misc info
+        phy_present        : 0
+        phy_type           : 0
+        sfp_acc_type       : 8
+        dfe_timer          : 0
+        dfe_timer_running  : 0
+        init_wait_count    : 0
+        do_tx_disable_clr  : 0
+        tx_disable_clr_cnt : 0
+        qsa_status         : 0
+        Connector type     : FIBER
+        usb_bus_num        : 1
+        usb_dev_num        : 8
+        usb_priv           : available
+        Reset done         : N
+Xcvr flags
+        XCVR_FLAG_PRESENT              : Y
+        XCVR_FLAG_XCVR_NOT_SFP         : Y
+        XCVR_FLAG_10G_CAPABLE          : Y
+        XCVR_FLAG_CKSUM_OK             : Y
+        XCVR_FLAG_SECURITY_CRC_OK      : Y
+        XCVR_FLAG_CISCO_CHK_OK         : N
+        XCVR_FLAG_DDM_CAPABLE          : N
+        XCVR_FLAG_PMA_PMD_PRESENT      : N
+        XCVR_FLAG_PCS_PRESENT          : N
+        XCVR_FLAG_PHYXS_PRESENT        : N
+        XCVR_FLAG_XCVR_OPERATIONAL     : Y
+        XCVR_FLAG_PMA_PMD_LOW_PWR_MODE : N
+        XCVR_FLAG_PCS_LOW_PWR_MODE     : N
+        XCVR_FLAG_PHYXS_LOW_PWR_MODE   : N
+        XCVR_FLAG_LINK_UP              : Y
+        XCVR_FLAG_TYPE_FIBER           : Y
+        XCVR_FLAG_SPROM_READ_OK        : Y
+Link states:HF-HwFailure, ED-ErrDisabled, DB-Debounced, UP and DN-Down
+
+Port 0/1:
+State: UP
+XCVR insert debounce timer not running
+XCVR link debounce timer not running
+XCVR linkup debounce timer not running
+XCVR presence detect timer running
+TX enable signal is on
+Debounce timeout: 0.030 seconds
+
+Linkup Debounce timeout: 0.000 seconds
+
+Link up : 294003 usecs after Sun Oct 27 06:14:53 2019
+Link dn debounce start : 0 usecs after Thu Jan  1 00:00:00 1970
+Link debounce end : 0 usecs after Thu Jan  1 00:00:00 1970
+
+Counters:
+  Interrupt cntrs:
+  Bit error cntrs:
+    Bit Error Rate: 0x0000000000000000 Bit Error Rate(since linkup): 0x00000000
+    Error blocks  : 0x0000000000000000 Error blocks(since linkup)  : 0x00000000
+  Link cntrs:
+    Link up: 0x1 (1)
+    Link dn: 0x0 (0)
+    Link debounced with link up: 0x0 (0)
+    Link debounced with link up since  last enable: 0x0 (0)
+Done.
