@@ -4,7 +4,7 @@ Value COMMENT (.*)
 Value IP (\S+)
 Value SUBNET (\d+)
 Value NETWORK (\S+)
-Value INTERFACE (.*)
+Value INTERFACE (.*?)
 
 Start
   ^\s*Flags:\s+X\s+-\s+disabled,\s+I\s+-\s+invalid,\s+D\s+-\s+dynamic\s*$$
