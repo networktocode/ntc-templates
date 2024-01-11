@@ -2,7 +2,7 @@
 parsed_sample:
   - name: "WALKUP"
     id: "17"
-    vpnid: "<not set>"
+    vpn_id: "<not set>"
     description: "device loopback interface"
     intfs:
       - "Vl20"
@@ -20,7 +20,7 @@ parsed_sample:
       - "unicast"
   - name: "__Platform_iVRF:_ID00_"
     id: "1034"
-    vpnid: "<not set>"
+    vpn_id: "<not set>"
     description: ""
     intfs:
       - "LI3/2"

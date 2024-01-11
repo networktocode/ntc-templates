@@ -1,6 +1,6 @@
 Value Required NAME (\S+)
 Value ID (\S+)
-Value VPNID (<not set>|\S+)
+Value VPN_ID (<not set>|\S+)
 Value DESCRIPTION (.*)
 Value List INTFS (\S+)
 Value DEFAULT_RD ((\d+|\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3}):\d+|<not set>)
@@ -9,7 +9,7 @@ Value List TABLE_ADDRESS_FAMILY (\S+)
 Value List TABLE_ADDRESS_TYPE (\S+)
 
 Start
-  ^VRF ${NAME}\s+\(VRF\s+Id\s+\=\s+${ID}\);\s+default\s+RD\s+${DEFAULT_RD};\s+default\s+VPNID\s+${VPNID}
+  ^VRF ${NAME}\s+\(VRF\s+Id\s+\=\s+${ID}\);\s+default\s+RD\s+${DEFAULT_RD};\s+default\s+VPNID\s+${VPN_ID}
   ^\s*Interfaces: -> INTERFACES
   ^\s+No\s*interfaces
   ^\s+Description:\s+${DESCRIPTION}\s*$$
