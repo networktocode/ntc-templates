@@ -1,0 +1,45 @@
+Value Required INTERFACE (\S+)
+Value LINK_STATUS (.+?)
+Value PROTOCOL_STATUS (.+?)
+Value List IP_ADDRESS (\S+?)
+Value List PREFIX_LENGTH (\d*)
+Value VRF (\S+)
+Value MTU (\d+)
+Value IP_MTU (\d+)
+Value List MULTICAST_GROUPS (\S+)
+
+Start
+  ^\S{3}\s+\S{3}\s+\d{1,2}\s+\d+:\d+:\d+
+  ^${INTERFACE}\s+is\s+${LINK_STATUS},\s+ipv4\s+protocol\s+is\s+${PROTOCOL_STATUS}\s*$$
+  ^\s+Vrf\s+is\s+${VRF}\s+\(.*\)
+  ^\s+Internet\s+address\s+is\s+${IP_ADDRESS}/?${PREFIX_LENGTH}\s*$$
+  ^\s+MTU\s+is\s+${MTU}\s+\(${IP_MTU}\s+is\s+available\s+to\s+IP\)
+  ^\s+Helper\s+address\s+is\s+not\s+set
+  ^\s+Multicast\s+reserved\s+groups\s+joined\:\s+${MULTICAST_GROUPS} -> Continue
+  ^\s+Multicast\s+reserved\s+groups\s+joined\:\s+\S+\s+${MULTICAST_GROUPS} -> Continue
+  ^\s+Multicast\s+reserved\s+groups\s+joined\:\s+\S+\s+\S+\s+${MULTICAST_GROUPS} -> Continue
+  ^\s+Multicast\s+reserved\s+groups\s+joined\:\s+ -> MULTICAST
+  ^\s+Directed\s+broadcast\s+forwarding\s+is\s+disabled
+  ^\s+Outgoing\s+access\s+list\s+is\s+not\s+set
+  ^\s+Inbound\s+common\s+access\s+list\s+is\s+not\s+set,\s+access\s+list\s+is\s+not\s+set
+  ^\s+Proxy\s+ARP\s+is\s+disabled
+  ^\s+ICMP\s+(unreachables|redirects|mask\s+replies)\s+are\s+(never|always)\s+sent
+  ^\s+Table\s+Id\s+is\s+ -> Record
+  ^\s+Internet\s+protocol\s+processing\s+disabled -> Record
+  ^. -> Error
+
+MULTICAST
+  ^\s+${MULTICAST_GROUPS}\s*$$ -> Start
+  ^\s+(?:\S+\s+){0}${MULTICAST_GROUPS} -> Continue
+  ^\s+(?:\S+\s+){1}${MULTICAST_GROUPS} -> Continue
+  ^\s+(?:\S+\s+){2}${MULTICAST_GROUPS} -> Continue
+  ^\s+(?:\S+\s+){3}${MULTICAST_GROUPS} -> Continue
+  ^\s+(?:\S+\s+){4}${MULTICAST_GROUPS} -> Continue
+  ^\s+(?:\S+\s+){5}${MULTICAST_GROUPS} -> Continue
+  ^\s+(?:\S+\s+){6}${MULTICAST_GROUPS} -> Continue
+  ^\s+(?:\S+\s+){7}${MULTICAST_GROUPS} -> Continue
+  ^\s+(?:\S+\s+){8}${MULTICAST_GROUPS} -> Continue
+  ^\s+(?:\S+\s+){9}${MULTICAST_GROUPS} -> Continue
+  ^\s+(?:\S+\s+){10}${MULTICAST_GROUPS} -> Continue
+  ^.* -> Start
+  ^. -> Error MULTICAST
