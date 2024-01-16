@@ -1,0 +1,11 @@
+Value NAME (.*)
+Value DESCR (.*)
+Value PID (([\S+]+|.*))
+Value VID (\S+)
+Value SN ([\w+\d+]+)
+
+Start
+  ^\S{3}\s+\S{3}\s+\d{1,2}\s+\d+:\d+:\d+
+  ^NAME:\s+"${NAME}",\s+DESCR:\s+"${DESCR}"
+  ^PID\:\s+${PID}\s+,\s+VID\:\s+${VID}\s*\,\s+SN\:\s+${SN} -> Record
+  ^. -> Error
