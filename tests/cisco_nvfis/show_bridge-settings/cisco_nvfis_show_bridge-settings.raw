@@ -6,7 +6,7 @@ bridge-settings wan-br
  ip-info link-local ipv6 prefixlen 64
  ip-info global ipv6 address ::
  ip-info global ipv6 prefixlen 0
- ip-info mac_address  9c:d5:7d:40:ed:5e
+ ip-info mac_address  9c:d5:ff:ff:ff:ff
  ip-info mtu          9216
  ip-info txqueuelen   1000
  ip-info secondary-ip 0.0.0.0
@@ -31,13 +31,13 @@ bridge-settings wan-br
  dpdk-enabled false
 bridge-settings lan-br
  ip-info interface lan-br
- ip-info ipv4_address 129.39.74.118
+ ip-info ipv4_address 11.22.33.44
  ip-info netmask 255.255.255.240
  ip-info link-local ipv6 address fe80::5808:76ff:fea9:ca44
  ip-info link-local ipv6 prefixlen 64
  ip-info global ipv6 address ::
  ip-info global ipv6 prefixlen 0
- ip-info mac_address 9c:d5:7d:40:ed:5f
+ ip-info mac_address 9c:d5:ff:ff:ff:ff
  ip-info mtu  9216
  ip-info txqueuelen 1000
  stats rx_packets 10965426
