@@ -313,6 +313,18 @@ cisco_ios_show_vrf.textfsm, .*, cisco_ios, sh[[ow]] vrf
 cisco_ios_ping.textfsm, .*, cisco_ios, ping
 cisco_ios_dir.textfsm,  .*, cisco_ios, dir
 
+cisco_nvfis_show_running-config_system_settings.textfsm, .*, cisco_nvfis, show running-config system settings
+cisco_nvfis_show_running-config_system_upgrade.textfsm, .*, cisco_nvfis, show running-config system upgrade
+cisco_nvfis_show_configuration_commit_changes.textfsm, .*, cisco_nvfis, show configuration commit changes
+cisco_nvfis_show_running-config_snmp_enable.textfsm, .*, cisco_nvfis, show running-config snmp enable
+cisco_nvfis_show_running-config_system_time.textfsm, .*, cisco_nvfis, show running-config system time
+cisco_nvfis_show_running-config_snmp_group.textfsm, .*, cisco_nvfis, show running-config snmp group
+cisco_nvfis_show_running-config_snmp_host.textfsm, .*, cisco_nvfis, show running-config snmp host
+cisco_nvfis_show_running-config_snmp_user.textfsm, .*, cisco_nvfis, show running-config snmp user
+cisco_nvfis_show_bridge-settings.textfsm, .*, cisco_nvfis, show bridge-settings
+cisco_nvfis_show_version.textfsm, .*, cisco_nvfis, show version
+cisco_nvfis_show_nic.textfsm, .*, cisco_nvfis, show nic
+
 cisco_nxos_show_bgp_vrf_all_ipv4_unicast_neighbors_routes.textfsm, .*, cisco_nxos, sh[[ow]] bg[[p]] v[[rf]] (\S+) ipv4 uni[[cast]] neigh[[bors]] (ro[[utes]]|re[[ceived-routes]]|a[[dvertised-routes]])
 cisco_nxos_show_hardware_internal_bigsur_all-ports_detail.textfsm, .*, cisco_nxos, sh[[ow]] ha[[rdware]] i[[nternal]] bi[[gsur]] al[[l-ports]] d[[etail]]
 cisco_nxos_show_l2rib_internal_permanently-frozen-list.textfsm, .*, cisco_nxos, sh[[ow]] l2ri[[b]] i[[nternal]] pe[[rmanently-frozen-list]]
