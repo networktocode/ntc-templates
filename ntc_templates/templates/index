@@ -316,6 +316,7 @@ cisco_ios_dir.textfsm,  .*, cisco_ios, dir
 cisco_nxos_show_bgp_vrf_all_ipv4_unicast_neighbors_routes.textfsm, .*, cisco_nxos, sh[[ow]] bg[[p]] v[[rf]] (\S+) ipv4 uni[[cast]] neigh[[bors]] (ro(utes)?|a(dvertised-routes)?|re(ceived-routes)?)
 cisco_nxos_show_hardware_internal_bigsur_all-ports_detail.textfsm, .*, cisco_nxos, sh[[ow]] ha[[rdware]] i[[nternal]] bi[[gsur]] al[[l-ports]] d[[etail]]
 cisco_nxos_show_l2rib_internal_permanently-frozen-list.textfsm, .*, cisco_nxos, sh[[ow]] l2ri[[b]] i[[nternal]] pe[[rmanently-frozen-list]]
+cisco_nxos_show_bgp_vrf_all_ipv4_unicast_detail.textfsm, .*, cisco_nxos, sh[[ow]] bg[[p]] v[[rf]] (\S+) ipv4 uni[[cast]] d[[etail]]
 cisco_nxos_show_ip_pim_interface_brief_vrf_all.textfsm, .*, cisco_nxos, sh[[ow]] ip pim int[[erface]] br[[ief]] vrf all
 cisco_nxos_show_configuration_session_summary.textfsm, .*, cisco_nxos, sh[[ow]] configu[[ration]] s[[ession]] su[[mmary]]
 cisco_nxos_show_interface_transceiver_details.textfsm, .*, cisco_nxos, sh[[ow]] int[[erface]] tra[[nsceiver]] de[[tails]]
