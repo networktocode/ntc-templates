@@ -1,4 +1,4 @@
-Value VERSION (\w+)
+Value VERSION (\S+)
 Value BUILD_DATE (.+)
 Value LAST_REBOOT (.+)
 
