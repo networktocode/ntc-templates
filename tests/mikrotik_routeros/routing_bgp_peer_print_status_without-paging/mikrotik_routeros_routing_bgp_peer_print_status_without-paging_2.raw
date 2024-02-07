@@ -1,0 +1,5 @@
+Flags: X - disabled, E - established 
+ 0 E name="Hub02" instance=default remote-address=172.16.66.254 remote-as=64564 tcp-md5-key="" nexthop-choice=default multihop=no route-reflect=no hold-time=9s keepalive-time=3s ttl=default in-filter="" out-filter=bgp_out_isp2 address-families=ip default-originate=never remove-private-as=no as-override=no passive=no use-bfd=no remote-id=100.64.164.253 local-address=172.16.66.1 uptime=5w3d1h12m48s prefix-count=8 updates-sent=43 updates-received=361 withdrawn-sent=42 withdrawn-received=353 
+     remote-hold-time=9s used-hold-time=9s used-keepalive-time=3s refresh-capability=yes as4-capability=yes state=established 
+
+ 1   name="Hub01" instance=default remote-address=172.16.65.254 remote-as=64564 tcp-md5-key="" nexthop-choice=default multihop=no route-reflect=no hold-time=9s keepalive-time=3s ttl=default in-filter=bgp_in_isp1 out-filter="" address-families=ip default-originate=never remove-private-as=no as-override=no passive=no use-bfd=no state=idle 
