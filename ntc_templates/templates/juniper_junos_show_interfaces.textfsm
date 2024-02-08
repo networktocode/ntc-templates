@@ -13,6 +13,8 @@ Start
   ^.*Description:\s+${DESCRIPTION}
   ^.*ype:\s+${HARDWARE_TYPE},.*MTU:\s+${MTU}.*
   ^\s+Logical\s+interface\s+${INTERFACE}
+  ^\s+Flags:\s+${LINK_STATUS}\s+\S+\s+\w+\s+(\S+\s+)*Encapsulation:
+  ^\s+Protocol\s+inet.*,\s+MTU:\s+${MTU}
   ^.*Destination:\s+${DESTINATION},\s+Local:\s+${LOCAL},.*
   ^\s*$$
   ^{master:\d+}
