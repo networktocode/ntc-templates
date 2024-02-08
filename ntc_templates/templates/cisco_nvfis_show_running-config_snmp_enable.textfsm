@@ -1,0 +1,9 @@
+Value TRAP (linkUp|linkDown)
+Value STATUS (\w+)
+
+
+Start
+  ^snmp\s${STATUS}\straps\s${TRAP} -> Record
+  ^snmp\s${STATUS}\straps\s${TRAP}-> Record
+  
+EOF
