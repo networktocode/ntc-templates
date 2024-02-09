@@ -1,0 +1,16 @@
+snmp user orwell
+ user-version  3
+ user-group    ReadWrite
+ auth-protocol sha
+ priv-protocol aes
+ auth-key      b5:2d:00:d5:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff
+ priv-key      b5:2d:00:d5:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff
+!
+snmp user SNMP_User
+ user-version  3
+ user-group    ReadOnly
+ auth-protocol sha
+ priv-protocol aes
+ auth-key      47:79:91:5d:bf:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff
+ priv-key      47:79:91:5d:bf:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff
+!

@@ -1,0 +1,60 @@
+bridge-settings wan-br
+ ip-info interface    wan-br
+ ip-info ipv4_address 0.0.0.0
+ ip-info netmask      0.0.0.0
+ ip-info link-local ipv6 address fe80::9474:baff:fe6b:904d
+ ip-info link-local ipv6 prefixlen 64
+ ip-info global ipv6 address ::
+ ip-info global ipv6 prefixlen 0
+ ip-info mac_address  9c:d5:ff:ff:ff:ff
+ ip-info mtu          9216
+ ip-info txqueuelen   1000
+ ip-info secondary-ip 0.0.0.0
+ ip-info secondary-ip-netmask 0.0.0.0
+ stats rx_packets 31866
+ stats rx_bytes 1465956
+ stats rx_errors 0
+ stats rx_dropped 0
+ stats rx_overruns 0
+ stats rx_frame 0
+ stats tx_packets 5
+ stats tx_bytes 446
+ stats tx_errors 0
+ stats tx_dropped 0
+ stats tx_overruns 0
+ stats tx_carrier 0
+ stats tx_collisions 0
+ vlan tag untagged
+ dhcp disabled
+ dhcp-ipv6 disabled
+ slaac-ipv6 disabled
+ dpdk-enabled false
+bridge-settings lan-br
+ ip-info interface lan-br
+ ip-info ipv4_address 11.22.33.44
+ ip-info netmask 255.255.255.240
+ ip-info link-local ipv6 address fe80::5808:76ff:fea9:ca44
+ ip-info link-local ipv6 prefixlen 64
+ ip-info global ipv6 address ::
+ ip-info global ipv6 prefixlen 0
+ ip-info mac_address 9c:d5:ff:ff:ff:ff
+ ip-info mtu  9216
+ ip-info txqueuelen 1000
+ stats rx_packets 10965426
+ stats rx_bytes 1612107737
+ stats rx_errors 0
+ stats rx_dropped 0
+ stats rx_overruns 0
+ stats rx_frame 0
+ stats tx_packets 10390988
+ stats tx_bytes 1976951266
+ stats tx_errors 0
+ stats tx_dropped 0
+ stats tx_overruns 0
+ stats tx_carrier 0
+ stats tx_collisions 0
+ vlan tag untagged
+ dhcp disabled
+ dhcp-ipv6 disabled
+ slaac-ipv6 disabled
+ dpdk-enabled false

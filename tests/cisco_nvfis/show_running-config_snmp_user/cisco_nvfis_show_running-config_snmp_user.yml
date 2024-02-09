@@ -1,0 +1,16 @@
+---
+parsed_sample:
+  - auth_key: "b5:2d:00:d5:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff"
+    auth_protocol: "sha"
+    priv_key: "b5:2d:00:d5:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff"
+    priv_protocol: "aes"
+    user_group: "ReadWrite"
+    username: "orwell"
+    version: "3"
+  - auth_key: "47:79:91:5d:bf:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff"
+    auth_protocol: "sha"
+    priv_key: "47:79:91:5d:bf:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff"
+    priv_protocol: "aes"
+    user_group: "ReadOnly"
+    username: "SNMP_User"
+    version: "3"

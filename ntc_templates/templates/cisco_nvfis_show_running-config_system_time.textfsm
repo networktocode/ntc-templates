@@ -1,0 +1,15 @@
+Value TIMEZONE (\w+)
+Value PREFERRED_NTP_SERVER ([A-F0-9\.\:]+)
+Value PREFERRED_NTP_SERVER_TYPE (\w+)
+Value BACKUP_NTP_SERVER ([A-F0-9\.\:]+)
+Value BACKUP_NTP_SERVER_TYPE (\w+)
+
+
+Start
+  ^system\stime\stimezone\s${TIMEZONE}
+  ^system\stime\sntp\spreferred_server\s${PREFERRED_NTP_SERVER}
+  ^system\stime\sntp\sbackup_server\s${BACKUP_NTP_SERVER}
+  ^system\stime\sntp\spreferred_server_type\s${PREFERRED_NTP_SERVER_TYPE}
+  ^system\stime\sntp\sbackup_server_type\s${BACKUP_NTP_SERVER_TYPE} -> Record
+
+EOF
