@@ -4,11 +4,36 @@ Value VERSION (\S+)
 Value HOSTNAME (\S+)
 
 Start
- ^Base\s+\d+\s+Base\s+${HARDWARE}\s+\S+\s+${SERIAL}
- ^Base\s+\d+\s+${HARDWARE}\s+\S+\s+${SERIAL}
- ^Current\ssoftware\s+:\s${VERSION}
- ^\sSystem Name
- ^\s${HOSTNAME} -> Record
- # Capture time-stamp if vty line has command time-stamping turned on
- ^Load\s+for\s+
- ^Time\s+source\s+is
+  ^\s*Base\s+\d+\s+Base\s+${HARDWARE}\s+\S+\s+${SERIAL}
+  ^\s*Base\s+\d+\s+${HARDWARE}\s+\S+\s+${SERIAL}
+  ^\s*Current\ssoftware\s+:\s${VERSION}
+  ^\s*System\s+Name -> SystemName
+  ^\s*System\s+Contact -> SystemContact
+  ^\s*System\s+Location -> SystemLocation
+  ^\s*System\s+Status
+  ^\s*Board\s+ID\s+Bay\s+Board\s+Name
+  ^\s*---
+  ^\s*RAM:\s+Total
+  ^\s*Flash:
+  ^\s*Environment\s+Status
+  ^\s*Uptime
+  ^\s*Bootloader\s+version
+  ^\s*Software\s+version
+  ^\s*Build\s+date
+  ^\s*Current\s+boot\s+config
+  # Capture time-stamp if vty line has command time-stamping turned on
+  ^Load\s+for\s+
+  ^Time\s+source\s+is
+  ^. -> Error
+
+SystemName
+  ^\s+${HOSTNAME}
+  ^. -> Start
+
+SystemContact
+  ^\s+
+  ^. -> Start
+
+SystemLocation
+  ^\s+
+  ^. -> Start
