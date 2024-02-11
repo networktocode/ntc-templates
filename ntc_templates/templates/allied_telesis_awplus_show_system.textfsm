@@ -1,0 +1,14 @@
+Value HARDWARE (\S+)
+Value SERIAL (\S+)
+Value VERSION (\S+)
+Value HOSTNAME (\S+)
+
+Start
+ ^Base\s+\d+\s+Base\s+${HARDWARE}\s+\S+\s+${SERIAL}
+ ^Base\s+\d+\s+${HARDWARE}\s+\S+\s+${SERIAL}
+ ^Current\ssoftware\s+:\s${VERSION}
+ ^\sSystem Name
+ ^\s${HOSTNAME} -> Record
+ # Capture time-stamp if vty line has command time-stamping turned on
+ ^Load\s+for\s+
+ ^Time\s+source\s+is
