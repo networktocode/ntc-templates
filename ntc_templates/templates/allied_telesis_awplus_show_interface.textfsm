@@ -1,0 +1,25 @@
+Value Required INTERFACE (\S+)
+Value LINK_STATUS (\w+)
+Value PROTOCOL_STATUS (\w+)
+Value HARDWARE_TYPE (\w+)
+Value MAC_ADDRESS (\S+)
+Value DESCRIPTION (\S.*)
+Value MTU (\d+)
+Value DUPLEX (([Ff]ull|[Aa]uto|[Hh]alf|[Aa]-).*?)
+Value SPEED (\w+)
+Value CURRENT_DUPLEX (([Ff]ull|[Aa]uto|[Hh]alf|[Aa]-).*?)
+Value CURRENT_SPEED (\w+)
+
+Start
+ ^Interface\s\S+ -> Continue.Record
+ ^Interface\s${INTERFACE}
+ ^\s+Link is ${LINK_STATUS},\sadministrative state is ${PROTOCOL_STATUS}
+ ^\s+Hardware is ${HARDWARE_TYPE}, address is ${MAC_ADDRESS}
+ ^\s+Hardware is ${HARDWARE_TYPE}
+ ^\s+Description:\s${DESCRIPTION}
+ ^\s+index \d+ metric \d+ mru ${MTU}
+ ^\s+current duplex ${CURRENT_DUPLEX}, current speed ${CURRENT_SPEED}, \S.*
+ ^\s+configured duplex ${DUPLEX}, configured speed ${SPEED}, \S.*
+ # Capture time-stamp if vty line has command time-stamping turned on
+ ^Load\s+for\s+
+ ^Time\s+source\s+is
