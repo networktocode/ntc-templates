@@ -1,0 +1,18 @@
+Value LOCAL_INTERFACE (\w+\.\w+\.\w+)
+Value CHASSIS_ID (.+)
+Value NEIGHBOR_PORT_TYPE (.+)
+Value NEIGHBOR_PORT_ID (.+)
+Value NEIGHBOR (.+)
+Value MANAGEMENT_IP (.+)
+
+Start
+ ^Local\s${LOCAL_INTERFACE}
+ ^\s\sChassis\sID\s\S+\s${CHASSIS_ID}
+ ^\s\sPort\sID\sType\s\.*\s${NEIGHBOR_PORT_TYPE}
+ ^\s\sPort\sID\s\.*\s${NEIGHBOR_PORT_ID}
+ ^\s\sSystem\sName\s\S+\s${NEIGHBOR}
+ ^\s\sManagement\sAddresses\s\S+\s${MANAGEMENT_IP}
+ ^\s\sVLAN\sNames -> Record
+ # Capture time-stamp if vty line has command time-stamping turned on
+ ^Load\s+for\s+
+ ^Time\s+source\s+is
