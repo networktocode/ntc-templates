@@ -6,13 +6,49 @@ Value NEIGHBOR (.+)
 Value MANAGEMENT_IP (.+)
 
 Start
- ^Local\s${LOCAL_INTERFACE}
- ^\s\sChassis\sID\s\S+\s${CHASSIS_ID}
- ^\s\sPort\sID\sType\s\.*\s${NEIGHBOR_PORT_TYPE}
- ^\s\sPort\sID\s\.*\s${NEIGHBOR_PORT_ID}
- ^\s\sSystem\sName\s\S+\s${NEIGHBOR}
- ^\s\sManagement\sAddresses\s\S+\s${MANAGEMENT_IP}
- ^\s\sVLAN\sNames -> Record
- # Capture time-stamp if vty line has command time-stamping turned on
- ^Load\s+for\s+
- ^Time\s+source\s+is
+  ^LLDP\s+Detailed\s+Neighbor\s+Information -> Neighbor
+  ^. -> Error
+
+Neighbor
+  ^Local -> Continue.Record
+  ^Local\s+${LOCAL_INTERFACE}:
+  ^\s+Neighbors\s+table\s+last\s+updated
+  ^\s+TTL
+  ^\s+Port\s+Description
+  ^\s+System\s+Description
+  ^\s+System\s+Capabilities
+  ^\s+Port\s+VLAN\s+ID
+  ^\s+Port\s+&\s+Protocol\s+VLAN
+  ^\s+Protocol\s+IDs
+  ^\s+MAC/PHY\s+Auto-negotiation
+  ^\s+Advertised\s+Capability
+  ^\s+Operational\s+MAU\s+Type
+  ^\s+Power\s+Via\s+MDI
+  ^\s+Link\s+Aggregation
+  ^\s+Maximum\s+Frame\s+Size
+  ^\s+LLDP-MED\s+Device\s+Type
+  ^\s+LLDP-MED\s+Capabilities
+  ^\s+Network\s+Policy
+  ^\s+Location\s+Identification
+  ^\s+Extended\s+Power\s+Via\s+MDI
+  ^\s+Firmware\s+Revision
+  ^\s+Software\s+Revision
+  ^\s+Serial\s+Number
+  ^\s+Manufacturer\s+Name
+  ^\s+Model\s+Name
+  ^\s+Asset\s+ID
+  ^\s+Port\s+Class
+  ^\s+Pair\s+Control\s+Ability
+  ^\s+Power\s+Class
+  ^\s+Aggregated\s+Port-ID
+  ^\s+Chassis\s+ID\s+\S+\s+${CHASSIS_ID}
+  ^\s+Port\s+ID\s+Type\s+\.*\s+${NEIGHBOR_PORT_TYPE}
+  ^\s+Port\s+ID\s+\.*\s+${NEIGHBOR_PORT_ID}
+  ^\s+System\s+Name\s+\S+\s+${NEIGHBOR}
+  ^\s+Management\s+Addresses\s+\S+\s+${MANAGEMENT_IP}
+  ^\s+VLAN\s+Names
+  ^\s+Inventory\s+Management
+  ^\s+Hardware\s+Revision
+  # Drop multi line options
+  ^\s{8,}
+  ^. -> Error
