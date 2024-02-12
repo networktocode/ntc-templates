@@ -7,7 +7,6 @@ Value DESCRIPTION (\S.*)
 Value MTU (\d+)
 Value DUPLEX (([Ff]ull|[Aa]uto|[Hh]alf|[Aa]-).*?)
 Value SPEED (\w+)
-Value BANDWIDTH (\S+)
 
 Start
   ^Interface\s\S+ -> Continue.Record
@@ -19,10 +18,9 @@ Start
   ^\s+Hardware is ${HARDWARE_TYPE}, address is ${MAC_ADDRESS}
   ^\s+Hardware is ${HARDWARE_TYPE}
   ^\s+Description:\s${DESCRIPTION}
-  ^\s+index\s+\d+\s+metric\s+\d+\s+mtu\s+${MTU}
-  ^\s+index\s+\d+\s+metric\s+\d+\s+mru\s+
+  ^\s+index\s+\d+\s+metric\s+\d+\s+m[tr]u\s+${MTU}
   ^\s+arp\s+ageing\s+timeout
-  ^\s+Bandwidth\s+${BANDWIDTH}
+  ^\s+Bandwidth
   ^\s+input\s+packets
   ^\s+output\s+packets
   ^\s+current\s+duplex\s+
@@ -30,7 +28,4 @@ Start
   ^\s+<.*>
   ^\s+SNMP\s+link-status\s+traps
   ^\s+Time\s+since\s+last\s+state\s+change
-  # Capture time-stamp if vty line has command time-stamping turned on
-  ^Load\s+for\s+
-  ^Time\s+source\s+is
   ^. -> Error
