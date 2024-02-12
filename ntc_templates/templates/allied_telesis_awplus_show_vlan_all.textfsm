@@ -4,65 +4,31 @@ Value STATUS (\S+)
 Value List INTERFACES (\w+\.\d\.\d+\(\S\)|\S+\(\S\))
 
 Start
- ^\d+\s+ -> VLANS
- ^\s+\S+ -> VLANS
- # Capture time-stamp if vty line has command time-stamping turned on
- ^Load\s+for\s+
- ^Time\s+source\s+is
+  ^\s*VLAN\s+ID\s+Name\s+Type\s+State\s+Member\s+ports
+  ^\s{8,}\(u\)-Untagged,\s+\(t\)-Tagged
+  ^=== -> VLANS
+  ^. -> Error
 
 VLANS
- ^\d+ -> Continue.Record
- ^${VLAN_ID}\s+${NAME}\s+\w+\s+${STATUS}\s*$$
- ^${VLAN_ID}\s+${NAME}\s+\w+\s+${STATUS}\s+${INTERFACES}\s\S* -> Continue
- ^\d+\s+(?:\S+\s+){4}${INTERFACES}\s* -> Continue
- ^\d+\s+(?:\S+\s+){5}${INTERFACES}\s* -> Continue
- ^\d+\s+(?:\S+\s+){6}${INTERFACES}\s* -> Continue
- ^\d+\s+(?:\S+\s+){7}${INTERFACES}\s* -> Continue
- ^\d+\s+(?:\S+\s+){8}${INTERFACES}\s* -> Continue
- ^\d+\s+(?:\S+\s+){9}${INTERFACES}\s* -> Continue
- ^\d+\s+(?:\S+\s+){10}${INTERFACES}\s* -> Continue
- ^\d+\s+(?:\S+\s+){11}${INTERFACES}\s* -> Continue
- ^\d+\s+(?:\S+\s+){12}${INTERFACES}\s* -> Continue
- ^\d+\s+(?:\S+\s+){13}${INTERFACES}\s* -> Continue
- ^\d+\s+(?:\S+\s+){14}${INTERFACES}\s* -> Continue
- ^\d+\s+(?:\S+\s+){15}${INTERFACES}\s* -> Continue
- ^\d+\s+(?:\S+\s+){16}${INTERFACES}\s* -> Continue
- ^\d+\s+(?:\S+\s+){17}${INTERFACES}\s* -> Continue
- ^\d+\s+(?:\S+\s+){18}${INTERFACES}\s* -> Continue
- ^\d+\s+(?:\S+\s+){19}${INTERFACES}\s* -> Continue
- ^\d+\s+(?:\S+\s+){20}${INTERFACES}\s* -> Continue
- ^\d+\s+(?:\S+\s+){21}${INTERFACES}\s* -> Continue
- ^\d+\s+(?:\S+\s+){22}${INTERFACES}\s* -> Continue
- ^\d+\s+(?:\S+\s+){23}${INTERFACES}\s* -> Continue
- ^\d+\s+(?:\S+\s+){24}${INTERFACES}\s* -> Continue
- ^\d+\s+(?:\S+\s+){25}${INTERFACES}\s* -> Continue
- ^\d+\s+(?:\S+\s+){26}${INTERFACES}\s* -> Continue
- ^\d+\s+(?:\S+\s+){27}${INTERFACES}\s* -> Continue
- ^\d+\s+(?:\S+\s+){28}${INTERFACES}\s* -> Continue
- ^\d+\s+(?:\S+\s+){29}${INTERFACES}\s* -> Continue
- ^\d+\s+(?:\S+\s+){30}${INTERFACES}\s* -> Continue
- ^\d+\s+(?:\S+\s+){31}${INTERFACES}\s* -> Continue
- ^\d+\s+(?:\S+\s+){32}${INTERFACES}\s* -> Continue
- ^\d+\s+(?:\S+\s+){33}${INTERFACES}\s* -> Continue
- ^\d+\s+(?:\S+\s+){34}${INTERFACES}\s* -> Continue
- ^\d+\s+(?:\S+\s+){35}${INTERFACES}\s* -> Continue
- ^\d+\s+(?:\S+\s+){36}${INTERFACES}\s* -> Continue
- ^\d+\s+(?:\S+\s+){37}${INTERFACES}\s* -> Continue
- ^\d+\s+(?:\S+\s+){38}${INTERFACES}\s* -> Continue
- ^\d+\s+(?:\S+\s+){39}${INTERFACES}\s* -> Continue
- ^\d+\s+(?:\S+\s+){40}${INTERFACES}\s* -> Continue
- ^\d+\s+(?:\S+\s+){41}${INTERFACES}\s* -> Continue
- ^\d+\s+(?:\S+\s+){42}${INTERFACES}\s* -> Continue
- ^\d+\s+(?:\S+\s+){43}${INTERFACES}\s* -> Continue
- ^\d+\s+(?:\S+\s+){44}${INTERFACES}\s* -> Continue
- ^\d+\s+(?:\S+\s+){45}${INTERFACES}\s* -> Continue
- ^\d+\s+(?:\S+\s+){46}${INTERFACES}\s* -> Continue
- ^\d+\s+(?:\S+\s+){47}${INTERFACES}\s* -> Continue
- ^\d+\s+(?:\S+\s+){48}${INTERFACES}\s* -> Continue
- ^\d+\s+(?:\S+\s+){49}${INTERFACES}\s* -> Continue
- ^\s+${INTERFACES}\s* -> Continue
- ^\s+(?:\S+\s+){1}${INTERFACES}\s* -> Continue
- ^\s+(?:\S+\s+){2}${INTERFACES}\s* -> Continue
- ^\s+(?:\S+\s+){3}${INTERFACES}\s* -> Continue
- ^\s+(?:\S+\s+){4}${INTERFACES}\s* -> Continue
- ^\s+(?:\S+\s+){5}${INTERFACES}\s* -> Continue
+  ^\d+ -> Continue.Record
+  ^${VLAN_ID}\s+${NAME}\s+\w+\s+${STATUS}\s*$$
+  ^${VLAN_ID}\s+${NAME}\s+\w+\s+${STATUS}\s+${INTERFACES}\s\S* -> Continue
+  ^\d+\s+(?:\S+\s+){4}${INTERFACES}\s* -> Continue
+  ^\d+\s+(?:\S+\s+){5}${INTERFACES}\s* -> Continue
+  ^\d+\s+(?:\S+\s+){6}${INTERFACES}\s* -> Continue
+  ^\d+\s+(?:\S+\s+){7}${INTERFACES}\s* -> Continue
+  ^\d+\s+(?:\S+\s+){8}${INTERFACES}\s* -> Continue
+  ^\d+\s+(?:\S+\s+){9}${INTERFACES}\s* -> Continue
+  ^\d+\s+(?:\S+\s+){10}${INTERFACES}\s* -> Continue
+  ^\d+\s+
+  ^\s{8,}${INTERFACES}\s* -> Continue
+  ^\s{8,}(?:\S+\s+){1}${INTERFACES}\s* -> Continue
+  ^\s{8,}(?:\S+\s+){2}${INTERFACES}\s* -> Continue
+  ^\s{8,}(?:\S+\s+){3}${INTERFACES}\s* -> Continue
+  ^\s{8,}(?:\S+\s+){4}${INTERFACES}\s* -> Continue
+  ^\s{8,}(?:\S+\s+){5}${INTERFACES}\s* -> Continue
+  ^\s{8,}(?:\S+\s+){6}${INTERFACES}\s* -> Continue
+  ^\s{8,}(?:\S+\s+){7}${INTERFACES}\s* -> Continue
+  ^\s{8,}(?:\S+\s+){8}${INTERFACES}\s* -> Continue
+  ^\s{8,}
+  ^. -> Error
