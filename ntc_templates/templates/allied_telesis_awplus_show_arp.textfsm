@@ -7,7 +7,4 @@ Value PORT (\S+)
 Start
   ^.*IP\s+Address\s+MAC\s+Address\s+Interface\s+Port\s+Type
   ^${IP_ADDRESS}\s+${MAC_ADDRESS}\s+${INTERFACE}\s+${PORT}\s+${TYPE} -> Record
-  # Capture time-stamp if vty line has command time-stamping turned on
-  ^Load\s+for\s+
-  ^Time\s+source\s+is
   ^. -> Error
