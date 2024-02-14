@@ -1,0 +1,20 @@
+Value Required DESTINATION (\S+)
+Value Required SENT_QTY (\d+)
+Value Required SUCCESS_QTY (\d+)
+Value Required LOSS_PCT (\S+)
+Value RTT_AVG (\S+)
+Value RTT_MAX (\S+)
+Value RTT_MIN (\S+)
+Value STD_DEV (\S+)
+Value PKT_SIZE (\S+)
+
+
+Start
+  ^PING\s+${DESTINATION}\s+${PKT_SIZE}\s+data\s+bytes*$$
+  ^\.*$$
+  ^\s*$$
+  ^-+
+  ^${SENT_QTY}\s+packets\s+transmitted,\s+${SUCCESS_QTY}\s+packets\s+received,\s+${LOSS_PCT}%\s+packet\s+loss
+  ^(?:round-trip\s+min\s+=\s+${RTT_MIN}ms,\s+avg\s+=\s+${RTT_AVG}ms,\s+max\s+=\s+${RTT_MAX}ms,\s+stddev\s+=\s+${STD_DEV}ms)?
+  # Error out if raw data does not match any above rules.
+  ^.* -> Error "Could not parse line:"
