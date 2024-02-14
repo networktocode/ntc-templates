@@ -1,6 +1,6 @@
 ---
 parsed_sample:
-  - ADM_STATE: Up
+  - ADM_STATE: "Up"
     IFACE_NAME: "Gigaesat-1/1/5:7"
     IFACE_QTY: "1"
     IP_ADD:
@@ -9,8 +9,8 @@ parsed_sample:
     - "fe80::22e0:9cff:fe20:d401/64"
     OPR_STATE_V4V6: Up/Up
     PFXSTATE:
-    - n/a
-    - PREFERRED
-    - PREFERRED
+    - "n/a"
+    - "PREFERRED"
+    - "PREFERRED"
     PORT_SAP_ID: "esat-1/1/5:7.0"
-    TYPE: IES
+    TYPE: "IES"
