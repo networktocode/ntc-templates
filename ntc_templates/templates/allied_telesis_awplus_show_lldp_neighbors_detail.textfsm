@@ -1,5 +1,6 @@
 Value LOCAL_INTERFACE (\w+\.\w+\.\w+)
 Value CHASSIS_ID (.+)
+Value NEIGHBOR_PORT_DESCRIPTION (.+)
 Value NEIGHBOR_PORT_TYPE (.+)
 Value NEIGHBOR_PORT_ID (.+)
 Value NEIGHBOR (.+)
@@ -14,7 +15,6 @@ Neighbor
   ^Local\s+${LOCAL_INTERFACE}:
   ^\s+Neighbors\s+table\s+last\s+updated
   ^\s+TTL
-  ^\s+Port\s+Description
   ^\s+System\s+Description
   ^\s+System\s+Capabilities
   ^\s+Port\s+VLAN\s+ID
@@ -44,6 +44,7 @@ Neighbor
   ^\s+Chassis\s+ID\s+\S+\s+${CHASSIS_ID}
   ^\s+Port\s+ID\s+Type\s+\.*\s+${NEIGHBOR_PORT_TYPE}
   ^\s+Port\s+ID\s+\.*\s+${NEIGHBOR_PORT_ID}
+  ^\s+Port\s+Description\s+\.*\s+${NEIGHBOR_PORT_DESCRIPTION}
   ^\s+System\s+Name\s+\S+\s+${NEIGHBOR}
   ^\s+Management\s+Addresses\s+\S+\s+${MANAGEMENT_IP}
   ^\s+VLAN\s+Names
