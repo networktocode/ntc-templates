@@ -1,6 +1,6 @@
 Value Required PORT_ID (\S+)
 Value Required SERVICE_ID (\d+)
-Value Required INGRESS_QOS (\d+)
+Value Required INGRESS_QOS (\S+)
 Value Required INGRESS_FILTER (\S+)
 Value Required EGRESS_QOS (\d+)
 Value Required EGRESS_FILTER (\S+)
@@ -22,6 +22,7 @@ SAPS
   ^=+
   ^Number\s+of
   ^\s*$$
+  ^\S+
   ^. -> Error
 
 Done
