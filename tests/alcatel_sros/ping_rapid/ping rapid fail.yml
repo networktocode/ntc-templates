@@ -1,14 +1,14 @@
 ---
 parsed_sample:
-  - DESTINATION: "10.39.119.105"
-    LOSS_PCT: "100"
-    PKT_SIZE: "56"
-    RESPONSE_STREAM:
+  - destination: "10.39.119.105"
+    loss_pct: "100"
+    pkt_size: "56"
+    response_stream:
       - "....."
-    RTT_AVG: ""
-    RTT_MAX: ""
-    RTT_MIN: ""
-    SENT_QTY: "5"
-    SOURCE: ""
-    STD_DEV: ""
-    SUCCESS_QTY: "0"
+    rtt_avg: ""
+    rtt_max: ""
+    rtt_min: ""
+    sent_qty: "5"
+    source: ""
+    std_dev: ""
+    success_qty: "0"
