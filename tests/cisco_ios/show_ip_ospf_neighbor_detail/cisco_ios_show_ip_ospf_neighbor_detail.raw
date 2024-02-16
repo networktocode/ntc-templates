@@ -1,0 +1,24 @@
+Neighbor 192.168.5.2, interface address 10.225.200.28
+    In the area 0 via interface GigabitEthernet1/0/0
+    Neighbor priority is 1, State is FULL, 6 state changes
+    DR is 10.225.200.28 BDR is 10.225.200.30
+    Options is 0x42
+    LLS Options is 0x1 (LR), last OOB-Resync 00:03:08 ago
+    Dead timer due in 00:00:36
+    Neighbor is up for 00:09:46
+   Index 1/1, retransmission queue length 0, number of retransmission 1
+    First 0x0(0)/0x0(0) Next 0x0(0)/0x0(0)
+    Last retransmission scan length is 1, maximum is 1
+    Last retransmission scan time is 0 msec, maximum is 0 msec
+
+Neighbor 10.0.0.2, interface address 10.0.0.2
+    In the area 0 via interface FastEthernet0/0
+    Neighbor priority is 1, State is FULL, 6 state changes
+    DR is 10.0.0.1 BDR is 10.0.0.2
+    Options is 0x52
+    Dead timer due in 00:00:39
+    Neighbor is up for 00:03:15
+    Index 1/1, retransmission queue length 0, number of retransmission 1
+    First 0x0(0)/0x0(0) Next 0x0(0)/0x0(0)
+    Last retransmission scan length is 1, maximum is 1
+    Last retransmission scan time is 0 msec, maximum is 0 msec
