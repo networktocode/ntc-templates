@@ -2,6 +2,7 @@ Value Required INTERFACE (\S+)
 Value LINK_STATUS (\w+)
 Value PROTOCOL_STATUS (\w+)
 Value HARDWARE_TYPE (\w+)
+Value VRF (\S+)
 Value MAC_ADDRESS (\S+)
 Value DESCRIPTION (\S.*)
 Value MTU (\d+)
@@ -21,6 +22,8 @@ Start
   ^\s+Hardware is ${HARDWARE_TYPE}
   ^\s+IPv4\s+address\s+${IP_ADDRESS}/${PREFIX_LENGTH}\s+broadcast
   ^\s+Description:\s${DESCRIPTION}
+  ^\s+VRF\s+Binding:\s+Associated\s+with\s+${VRF}
+  ^\s+VRF\s+Binding:\s+Not\s+bound
   ^\s+index\s+\d+\s+metric\s+\d+\s+m[tr]u\s+${MTU}
   ^\s+index\s+\d+\s+metric
   ^\s+arp\s+ageing\s+timeout
@@ -31,6 +34,16 @@ Start
   ^\s+configured\s+duplex\s+${DUPLEX},\s+configured\s+speed\s+${SPEED},\s+
   ^\s+<.*>
   ^\s+SNMP\s+link-status\s+traps
+  ^\s+Link-status\s+trap\s+delay
+  ^\s+input\s+packets
+  ^\s+output\s+packets
+  ^\s+input\s+average
+  ^\s+output\s+average
+  ^\s+input\s+peak
+  ^\s+output\s+peak
+  ^\s+Router\s+Advertisement\s+is
+  ^\s+Router\s+Advertisement\s+default\s+routes
+  ^\s+Router\s+Advertisement\s+prefix
   ^\s+Egress\s+Rate\s+Limit
   ^\s+Time\s+since\s+last\s+state\s+change
   ^. -> Error
