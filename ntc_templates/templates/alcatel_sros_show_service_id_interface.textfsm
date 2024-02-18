@@ -1,5 +1,5 @@
 Value IFACE_NAME (\S+)
-Value List IP_ADD (\S+)
+Value List IP_ADDRESS (\S+)
 Value List PFXSTATE (\S+)
 Value OPR_STATE_V4V6 (\S+)
 Value TYPE (\S+)
@@ -15,7 +15,7 @@ Start
   ^\s+IP-Address\s+PfxState*$$
   ^-*$$
   ^${IFACE_NAME}\s+${ADM_STATE}\s+${OPR_STATE_V4V6}\s+${TYPE}\s+${PORT_SAP_ID}$$
-  ^\s+${IP_ADD}\s+${PFXSTATE}$$
+  ^\s+${IP_ADDRESS}\s+${PFXSTATE}$$
   ^-+$$
   ^Interfaces\s+:\s+${IFACE_QTY}$$
   ^=*$$
