@@ -1,5 +1,5 @@
-Value HARDWARE (\S+)
-Value SERIAL (\S+)
+Value List HARDWARE (\S+)
+Value List SERIAL (\S+)
 Value VERSION (\S+)
 Value HOSTNAME (\S+)
 
@@ -11,11 +11,14 @@ Start
   ^\s*System\s+Contact -> SystemContact
   ^\s*System\s+Location -> SystemLocation
   ^\s*System\s+Status
+  ^\s*Switch\s+System\s+Status
+  ^\s*Stack\s+member
   ^\s*Board\s+ID\s+Bay\s+Board\s+Name
   ^\s*---
   ^\s*RAM:\s+Total
   ^\s*Flash:
   ^\s*Environment\s+Status
+  ^\s*User\s+Configured\s+Territory
   ^\s*Uptime
   ^\s*Bootloader\s+version
   ^\s*Software\s+version
