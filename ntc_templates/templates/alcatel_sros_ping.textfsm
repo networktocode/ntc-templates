@@ -14,7 +14,7 @@ Start
   ^\.*$$
   ^\s*$$
   ^-+
-  ^${SENT_QTY}\s+packets\s+transmitted,\s+${SUCCESS_QTY}\s+packets\s+received,\s+${LOSS_PCT}%\s+packet\s+loss
+  ^${SENT_QTY}\s+packets\s+transmitted,(?:\s+${BOUNCE_QTY}\s+packets\s+bounced,)?\s+${SUCCESS_QTY}\s+packets\s+received,\s+${LOSS_PCT}%\s+packet\s+loss
   ^(?:round-trip\s+min\s+=\s+${RTT_MIN}ms,\s+avg\s+=\s+${RTT_AVG}ms,\s+max\s+=\s+${RTT_MAX}ms,\s+stddev\s+=\s+${STD_DEV}ms)?
   # Error out if raw data does not match any above rules.
   ^.* -> Error "Could not parse line:"
