@@ -3,11 +3,11 @@ Value Required SENT_QTY (\d+)
 Value Required SUCCESS_QTY (\d+)
 Value Required LOSS_PCT (\S+)
 Value BOUNCE_QTY (\d+)
-Value RTT_AVG (\S+)
-Value RTT_MAX (\S+)
-Value RTT_MIN (\S+)
-Value STD_DEV (\S+)
-Value PKT_SIZE (\S+)
+Value RTT_AVG (\d+.\d+)
+Value RTT_MAX (\d+.\d+)
+Value RTT_MIN (\d+.\d+)
+Value STD_DEV (\d+.\d+)
+Value PKT_SIZE (\d+)
 
 
 Start
