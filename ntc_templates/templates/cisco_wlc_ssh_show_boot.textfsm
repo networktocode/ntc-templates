@@ -1,9 +1,9 @@
-Value IMAGE (\S+\s+\S+\s+[A-z]+)
-Value VERSION (\S+)
-Value STATUS ((?:\(\S+\))\s*(?:\(\S+\))?)
+Value IMAGE_TYPE (\S+\s+\S+\s+[A-z]+)
+Value IMAGE_VERSION (\S+)
+Value IMAGE_STATUS ((?:\(\S+\))\s*(?:\(\S+\))?)
 
 
 Start
-  ^${IMAGE}\.+\s+${VERSION}\s*(${STATUS})?$$ -> Record
+  ^${IMAGE_TYPE}\.+\s+${IMAGE_VERSION}\s*(${IMAGE_STATUS})?$$ -> Record
   ^\s*$$
   ^. -> Error
