@@ -1,8 +1,8 @@
 Value LOCAL_INTERFACE (\S+)
 Value REMOTE_ID (\S+)
 Value CHASSIS_ID (\S+)
-Value PORT_ID (\S+)
-Value SYSTEM_NAME (\S+)
+Value NEIGHBOR_INTERFACE (\S+)
+Value NEIGHBOR_NAME (\S+)
 
 Start
   # Captures show lldp remote-device all for:
@@ -12,7 +12,7 @@ Start
   ^Local
   ^\s*Interface\s+RemID\s+Chassis\s+ID\s+Port\s+ID\s+System\s+Name$$
   ^-+
-  ^\s*${LOCAL_INTERFACE}\s+${REMOTE_ID}\s+${CHASSIS_ID}\s+${PORT_ID}\s+${SYSTEM_NAME} -> Record
+  ^\s*${LOCAL_INTERFACE}\s+${REMOTE_ID}\s+${CHASSIS_ID}\s+${NEIGHBOR_INTERFACE}\s+${NEIGHBOR_NAME} -> Record
   # Match records that only include the interface value
   ^\s*${LOCAL_INTERFACE} -> Record
   ^\s*$$

@@ -1,8 +1,8 @@
-Value Required LOCAL_PORT (\S+)
-Value NEIGHBOR_CHASSIS_ID ((?:[a-z0-9]{2}\s){5}[a-z0-9]{2}|\S+)
-Value NEIGHBOR_PORTID ((?:[a-z0-9]{2}\s){5}[a-z0-9]{2}|\S+)
-Value NEIGHBOR_DESCR (\S+|.*?)
-Value NEIGHBOR_SYSNAME (\S+)
+Value Required LOCAL_INTERFACE (\S+)
+Value CHASSIS_ID ((?:[a-z0-9]{2}\s){5}[a-z0-9]{2}|\S+)
+Value NEIGHBOR_INTERFACE ((?:[a-z0-9]{2}\s){5}[a-z0-9]{2}|\S+)
+Value NEIGHBOR_DESCRIPTION (\S+|.*?)
+Value NEIGHBOR_NAME (\S+)
 
 Start
   ^\s*LLDP\sRemote\sDevices\sInformation\s*$$
@@ -12,9 +12,9 @@ Start
   ^. -> Error
 
 LLDP
-  ^\s+${LOCAL_PORT}\s+\|\s${NEIGHBOR_CHASSIS_ID}\s+${NEIGHBOR_PORTID}\s*$$ -> Record
-  ^\s+${LOCAL_PORT}\s+\|\s${NEIGHBOR_CHASSIS_ID}\s+${NEIGHBOR_PORTID}\s+${NEIGHBOR_SYSNAME}\s*$$ -> Record
-  ^\s+${LOCAL_PORT}\s+\|\s${NEIGHBOR_CHASSIS_ID}\s+${NEIGHBOR_PORTID}\s+${NEIGHBOR_DESCR}\s+${NEIGHBOR_SYSNAME}\s*$$ -> Record
+  ^\s+${LOCAL_INTERFACE}\s+\|\s${CHASSIS_ID}\s+${NEIGHBOR_INTERFACE}\s*$$ -> Record
+  ^\s+${LOCAL_INTERFACE}\s+\|\s${CHASSIS_ID}\s+${NEIGHBOR_INTERFACE}\s+${NEIGHBOR_NAME}\s*$$ -> Record
+  ^\s+${LOCAL_INTERFACE}\s+\|\s${CHASSIS_ID}\s+${NEIGHBOR_INTERFACE}\s+${NEIGHBOR_DESCRIPTION}\s+${NEIGHBOR_NAME}\s*$$ -> Record
   ^\S+\#\s*$$
   ^\s*$$
   ^. -> Error

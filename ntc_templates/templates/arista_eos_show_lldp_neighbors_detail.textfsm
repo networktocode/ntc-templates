@@ -1,23 +1,23 @@
-Value Required DEST_HOST (\S+)
-Value SYSTEM_ID (.+?)
+Value Required NEIGHBOR_NAME (\S+)
+Value CHASSIS_ID (.+?)
 Value MGMT_ADDRESS (.+?)
-Value PLATFORM_VERSION (.+?)
-Value REMOTE_PORT (.+?)
-Value Filldown LOCAL_PORT (\S+?)
-Value Filldown NEIGH_COUNT ([1-9]\d*)
+Value NEIGHBOR_DESCRIPTION (.+?)
+Value NEIGHBOR_INTERFACE (.+?)
+Value Filldown LOCAL_INTERFACE (\S+?)
+Value Filldown NEIGHBOR_COUNT ([1-9]\d*)
 Value AGE (.+?)
 
 Start
-  ^\S+\s+${LOCAL_PORT}\s+\S+\s+${NEIGH_COUNT}.*
+  ^\S+\s+${LOCAL_INTERFACE}\s+\S+\s+${NEIGHBOR_COUNT}.*
   ^.*age\s+${AGE}$$ -> Interface
 
 Interface
-  ^\s+Chassis ID\s+:\s+${SYSTEM_ID}$$
+  ^\s+Chassis ID\s+:\s+${CHASSIS_ID}$$
   ^\s+-\s+Port ID type -> Port_ID
-  ^\s+-\s+\S+\s+Name:\s+\"${DEST_HOST}\"
-  ^.*System Description:\s+\"${PLATFORM_VERSION}(\"|$$)
+  ^\s+-\s+\S+\s+Name:\s+\"${NEIGHBOR_NAME}\"
+  ^.*System Description:\s+\"${NEIGHBOR_DESCRIPTION}(\"|$$)
   ^\s+\S+\s+Address\s+:\s+${MGMT_ADDRESS}$$
   ^\s*$$ -> Record Start
 
 Port_ID
-  ^\s+Port ID\s+:(\s+\"|\s+)${REMOTE_PORT}(\"|$$) -> Interface
+  ^\s+Port ID\s+:(\s+\"|\s+)${NEIGHBOR_INTERFACE}(\"|$$) -> Interface
