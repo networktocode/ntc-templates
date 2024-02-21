@@ -1,9 +1,9 @@
 Value Required LOCAL_INTERFACE (\S+)
 Value CHASSIS_ID (\S+)
-Value NEIGHBOR_PORT_ID (.*)
 Value NEIGHBOR_INTERFACE (.*)
-Value NEIGHBOR (\S+)
-Value MANAGEMENT_IP (\S+)
+Value NEIGHBOR_INTERFACE_DESCRIPTION (.*)
+Value NEIGHBOR_NAME (\S+)
+Value MGMT_ADDRESS (\S+)
 Value VLAN_ID (\d+)
 
 Start
@@ -15,11 +15,11 @@ Start
   ^\s+Chassis\s+type\s+:.*
   ^\s+Chassis\s+ID\s+:\s+${CHASSIS_ID}
   ^\s+Port\s+ID\s+type\s+:.*
-  ^\s+Port\s+ID\s+:\s+${NEIGHBOR_PORT_ID}
+  ^\s+Port\s+ID\s+:\s+${NEIGHBOR_INTERFACE}
   ^\s+Time\s+to\s+live\d+:.*
-  ^\s+Port\s+description\s+:\s+${NEIGHBOR_INTERFACE}
-  ^\s+System\s+name\s+:\s+${NEIGHBOR}
-  ^\s+Management\s+address\s+:\s+${MANAGEMENT_IP}
+  ^\s+Port\s+description\s+:\s+${NEIGHBOR_INTERFACE_DESCRIPTION}
+  ^\s+System\s+name\s+:\s+${NEIGHBOR_NAME}
+  ^\s+Management\s+address\s+:\s+${MGMT_ADDRESS}
   ^\s+Management\s+address\s+interface\s+type
   ^\s+Management\s+address\s+interface\s+ID
   ^\s+Management\s+address\s+OID

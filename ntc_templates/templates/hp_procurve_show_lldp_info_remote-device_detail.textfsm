@@ -1,15 +1,15 @@
-Value Required LOCAL_PORT (\S+)
+Value Required LOCAL_INTERFACE (\S+)
 Value NEIGHBOR_CHASSIS_TYPE (\S+)
-Value NEIGHBOR_CHASSIS_ID ([a-f0-9]{6}-[a-f0-9]{6}|(?:[a-z0-9]{2}\s){5}[a-z0-9]{2}|\S+)
+Value CHASSIS_ID ([a-f0-9]{6}-[a-f0-9]{6}|(?:[a-z0-9]{2}\s){5}[a-z0-9]{2}|\S+)
 Value PORT_TYPE (\S+)
-Value NEIGHBOR_PORTID (.*?)
-Value NEIGHBOR_SYSNAME (.*?)
-Value SYSTEM_DESCR (.*?)
-Value PORT_DESCR (\S+|.*?)
-Value PVID (\d+|.*?)
-Value SYSTEM_CAPABILITIES_SUPPORTED (.*?)
-Value SYSTEM_CAPABILITIES_ENABLED (.*?)
-Value REMOTE_MANAGEMENT_ADDRESS (\S+|.*?)
+Value NEIGHBOR_INTERFACE (.*?)
+Value NEIGHBOR_NAME (.*?)
+Value NEIGHBOR_DESCRIPTION (.*?)
+Value NEIGHBOR_INTERFACE_DESCRIPTION (\S+|.*?)
+Value VLAN_ID (\d+|.*?)
+Value CAPABILITIES_SUPPORTED (.*?)
+Value CAPABILITIES (.*?)
+Value MGMT_ADDRESS (\S+|.*?)
 
 Start
   ^\s*$$
@@ -17,20 +17,21 @@ Start
   ^. -> Error
 
 LLDP
-  ^\s+Local\sPort\s+:\s${LOCAL_PORT}\s*$$
+  ^\s+Local\sPort\s+:\s${LOCAL_INTERFACE}\s*$$
   ^\s+ChassisType\s+:\s${NEIGHBOR_CHASSIS_TYPE}\s*$$
-  ^\s+ChassisId\s+:\s${NEIGHBOR_CHASSIS_ID}\s*$$
+  ^\s+ChassisId\s+:\s${CHASSIS_ID}\s*$$
   ^\s+PortType\s+:\s${PORT_TYPE}\s*$$
-  ^\s+PortId\s+:\s${NEIGHBOR_PORTID}\s*$$
-  ^\s+SysName\s+:\s${NEIGHBOR_SYSNAME}\s*$$
-  ^\s+System\sDescr\s:\s${SYSTEM_DESCR}\s*$$
-  ^\s+PortDescr\s+:\s${PORT_DESCR}\s*$$
-  ^\s+Pvid\s+:\s${PVID}\s*$$
-  ^\s+System\s+Capabilities\s+Supported\s+:\s${SYSTEM_CAPABILITIES_SUPPORTED}\s*$$
-  ^\s+System\s+Capabilities\s+Enabled\s+:\s${SYSTEM_CAPABILITIES_ENABLED}\s*$$
+  ^\s+PortId\s+:\s${NEIGHBOR_INTERFACE}\s*$$
+  ^\s+SysName\s+:\s${NEIGHBOR_NAME}\s*$$
+  ^\s+System\sDescr\s:\s${NEIGHBOR_DESCRIPTION}\s*$$
+  ^\s+PortDescr\s+:\s${NEIGHBOR_INTERFACE_DESCRIPTION}\s*$$
+# Port VLAN ID
+  ^\s+Pvid\s+:\s${VLAN_ID}\s*$$
+  ^\s+System\s+Capabilities\s+Supported\s+:\s${CAPABILITIES_SUPPORTED}\s*$$
+  ^\s+System\s+Capabilities\s+Enabled\s+:\s${CAPABILITIES}\s*$$
   ^\s+Remote\s+Management\s+Address\s*$$
   ^\s+Type.*$$
-  ^\s+Address\s:\s${REMOTE_MANAGEMENT_ADDRESS}
+  ^\s+Address\s:\s${MGMT_ADDRESS}
   ^\s+Poe\s+Plus\s+Information\s+Detail\s*$$
   ^\s+Poe\s+Device\s+Type.*
   ^\s+Power\s+Source.*

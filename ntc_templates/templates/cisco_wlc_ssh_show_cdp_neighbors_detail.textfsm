@@ -1,22 +1,22 @@
-Value Required DESTINATION_HOST (\S+)
-Value MANAGEMENT_IP (\d+\.\d+\.\d+\.\d+|\w+\.\w+\.\w+)
+Value Required CHASSIS_ID (\S+)
+Value MGMT_ADDRESS (\d+\.\d+\.\d+\.\d+|\w+\.\w+\.\w+)
 Value PLATFORM (.*)
-Value REMOTE_PORT (.*)
-Value LOCAL_PORT (.*)
-Value SOFTWARE_VERSION (.*$)
+Value NEIGHBOR_INTERFACE (.*)
+Value LOCAL_INTERFACE (.*)
+Value NEIGHBOR_DESCRIPTION (.*$)
 Value CAPABILITIES (.*)
 
 Start
-  ^Device ID: ${DESTINATION_HOST}
+  ^Device ID: ${CHASSIS_ID}
   ^Entry address\(es\)\s*:\s* -> ParseIP
   ^Platform\s*:\s*${PLATFORM}\s*,\s*Capabilities\s*:\s*${CAPABILITIES}
-  ^Interface: ${LOCAL_PORT},  Port ID \(outgoing port\): ${REMOTE_PORT}
+  ^Interface: ${LOCAL_INTERFACE},  Port ID \(outgoing port\): ${NEIGHBOR_INTERFACE}
   ^Version : -> GetVersion
 
 ParseIP
-  ^.*IP address: ${MANAGEMENT_IP} -> Start
+  ^.*IP address: ${MGMT_ADDRESS} -> Start
   ^Platform\s*:\s*${PLATFORM}\s*,\s*Capabilities\s*:\s*${CAPABILITIES} -> Start
   ^.* -> Start
 
 GetVersion
-  ^${SOFTWARE_VERSION} -> Record Start
+  ^${NEIGHBOR_DESCRIPTION} -> Record Start

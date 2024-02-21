@@ -1,0 +1,132 @@
+SWITCH-NAME# show lldp neighbor-info detail
+--------------------------------------------------------------------------------
+LLDP Neighbor Information
+=========================
+
+Total Neighbor Entries          : 3
+Total Neighbor Entries Deleted  : 0
+Total Neighbor Entries Dropped  : 0
+Total Neighbor Entries Aged-Out : 0
+
+--------------------------------------------------------------------------------
+
+Port                           : 1/1/10
+Neighbor Entries               : 1
+Neighbor Entries Deleted       : 0
+Neighbor Entries Dropped       : 0
+Neighbor Entries Aged-Out      : 0
+Neighbor System-Name           : SYSNAME_TEXT
+Neighbor System-Description    : ArubaOS (MODEL: 503H), Version Aruba AP
+Neighbor Chassis-ID            : xx:xx:xx:xx:xx:xx
+Neighbor Management-Address    : 123.123.123.123
+Chassis Capabilities Available : Bridge, WLAN
+Chassis Capabilities Enabled   : WLAN
+Neighbor Port-ID               : xx:xx:xx:xx:xx:xx
+Neighbor Port-Desc             : eth0
+Neighbor Port VLAN ID          : 1
+TTL                            : 120
+
+Neighbor Mac-Phy details
+Neighbor Auto-neg Supported    : true
+Neighbor Auto-Neg Enabled      : true
+Neighbor Auto-Neg Advertised   : 1000 BASE_TFD, 100 BASE_TXFD, 100 BASE_TX, 10 BASET_FD, 10 BASE_T
+Neighbor MAU type              : 1000 BASETFD
+
+Neighbor EEE information       : DOT3
+Neighbor TX Wake time          : 0 us
+Neighbor RX Wake time          : 0 us
+Neighbor Fallback time         : 0 us
+Neighbor TX Echo time          : 0 us
+Neighbor RX Echo time          : 0 us
+
+--------------------------------------------------------------------------------
+
+Port                           : 1/1/11
+Neighbor Entries               : 1
+Neighbor Entries Deleted       : 0
+Neighbor Entries Dropped       : 0
+Neighbor Entries Aged-Out      : 0
+Neighbor System-Name           : AP3-4-3
+Neighbor System-Description    : ArubaOS (MODEL: 315), Version Aruba AP
+Neighbor Chassis-ID            : xx:xx:xx:xx:xx:xx
+Neighbor Management-Address    : 123.123.123.123
+Chassis Capabilities Available : Bridge, WLAN
+Chassis Capabilities Enabled   : WLAN
+Neighbor Port-ID               : xx:xx:xx:xx:xx:xx
+Neighbor Port-Desc             : bond0
+Neighbor Port VLAN ID          : 1
+TTL                            : 120
+
+Neighbor PoE information       : DOT3
+Neighbor Power Type            : Type 2 PD
+Neighbor Power Priority        : Unknown
+Neighbor Power Source          : PSE
+PD Requested Power Value       : 20.80 W
+PSE Allocated Power Value      : 20.80 W
+Neighbor Power Supported       : No
+Neighbor Power Enabled         : No
+Neighbor Power Class           : Class4
+Neighbor Power Paircontrol     : No
+PSE Power Pairs                : SIGNAL
+Neighbor Power Down Request    :
+PD Associated TLV              : dot3
+PD Requested TLV types         : dot3
+
+Neighbor Mac-Phy details
+Neighbor Auto-neg Supported    : true
+Neighbor Auto-Neg Enabled      : true
+Neighbor Auto-Neg Advertised   : 1000 BASE_TFD, 100 BASE_TXFD, 100 BASE_TX, 10 BASET_FD, 10 BASE_T
+Neighbor MAU type              : 1000 BASETFD
+
+Neighbor EEE information       : DOT3
+Neighbor TX Wake time          : 0 us
+Neighbor RX Wake time          : 0 us
+Neighbor Fallback time         : 0 us
+Neighbor TX Echo time          : 0 us
+Neighbor RX Echo time          : 0 us
+
+--------------------------------------------------------------------------------
+
+Port                           : 1/1/12
+Neighbor Entries               : 1
+Neighbor Entries Deleted       : 0
+Neighbor Entries Dropped       : 0
+Neighbor Entries Aged-Out      : 0
+Neighbor System-Name           : SYSNAME_TEXT
+Neighbor System-Description    : HP J9851A Switch 5412Rzl2, revision KB.16.10.0020, ROM KB.16.01.0009 (/ws/swbuildm/rel_ajanta_qaoff/code/build/bom(swbuildm_rel_ajanta_qaoff_rel_ajanta))
+Neighbor Chassis-ID            : xx:xx:xx:xx:xx:xx
+Neighbor Management-Address    : 123.123.123.123
+Chassis Capabilities Available : Bridge, Router
+Chassis Capabilities Enabled   : Bridge
+Neighbor Port-ID               : 106
+Neighbor Port-Desc             : D10
+Neighbor Port VLAN ID          : 61
+TTL                            : 120
+
+Neighbor PoE information       : DOT3
+Neighbor Power Type            : PSE
+Neighbor Power Priority        : Unknown
+Neighbor Power Source          : Unknown
+PD Requested Power Value       : 0.00 W
+PSE Allocated Power Value      : 0.00 W
+Neighbor Power Supported       : Yes
+Neighbor Power Enabled         : Yes
+Neighbor Power Class           : Class0
+Neighbor Power Paircontrol     : No
+PSE Power Pairs                : SIGNAL
+Neighbor Power Down Request    :
+PD Associated TLV              : dot3
+PD Requested TLV types         : None
+
+Neighbor Mac-Phy details
+Neighbor Auto-neg Supported    : true
+Neighbor Auto-Neg Enabled      : true
+Neighbor Auto-Neg Advertised   : 1000 BASE_TFD, 100 BASE_TXFD, 100 BASE_TX, 10 BASET_FD, 10 BASE_T
+Neighbor MAU type              : 1000 BASETFD
+
+Neighbor EEE information       : DOT3
+Neighbor TX Wake time          : 0 us
+Neighbor RX Wake time          : 0 us
+Neighbor Fallback time         : 0 us
+Neighbor TX Echo time          : 0 us
+Neighbor RX Echo time          : 0 us

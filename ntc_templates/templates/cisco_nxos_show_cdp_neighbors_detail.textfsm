@@ -1,28 +1,28 @@
-Value Required DEST_HOST (.*)
-Value SYSNAME (.*)
-Value MGMT_IP (.*)
+Value Required CHASSIS_ID (.*)
+Value NEIGHBOR_NAME (.*)
+Value MGMT_ADDRESS (.*)
 Value PLATFORM (.*)
-Value REMOTE_PORT (.*)
-Value LOCAL_PORT (.*)
-Value VERSION (.*)
+Value NEIGHBOR_INTERFACE (.*)
+Value LOCAL_INTERFACE (.*)
+Value NEIGHBOR_DESCRIPTION (.*)
 Value INTERFACE_IP (.*)
 Value CAPABILITIES (.*[^\s])
 
 Start
   ^Device ID -> Continue.Record
-  ^Device ID:${DEST_HOST}
-  ^System Name: ${SYSNAME}
+  ^Device ID:${CHASSIS_ID}
+  ^System Name: ${NEIGHBOR_NAME}
   ^Interface address\(es\):\s*(^[1-9]\d*|$$) -> GetInterfaceIP
   ^Mgmt address\(es\): -> GetIP
   ^Platform: ${PLATFORM}, Capabilities: ${CAPABILITIES}\s*$$
-  ^Interface: ${LOCAL_PORT}, Port ID \(outgoing port\): ${REMOTE_PORT}
+  ^Interface: ${LOCAL_INTERFACE}, Port ID \(outgoing port\): ${NEIGHBOR_INTERFACE}
   ^Version: -> GetVersion
 
 GetIP
-  ^.*IP.+Address: ${MGMT_IP} -> Start
+  ^.*IP.+Address: ${MGMT_ADDRESS} -> Start
 
 GetInterfaceIP
   ^.*IP.+Address: ${INTERFACE_IP} -> Start
 
 GetVersion
-  ^${VERSION} -> Start
+  ^${NEIGHBOR_DESCRIPTION} -> Start
