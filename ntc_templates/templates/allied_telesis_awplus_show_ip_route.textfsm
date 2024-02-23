@@ -15,6 +15,7 @@ Start
   ^\s{4,}O\s-\sOSPF
   ^\s{4,}N1\s-\sOSPF
   ^\s{4,}E1\s-\sOSPF
+  ^\s{4,}i\s-\sIS-IS
   ^\s{4,}\*\s-\scandidate -> Routes
   ^. -> Error
 

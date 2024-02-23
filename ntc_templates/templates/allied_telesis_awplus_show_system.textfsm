@@ -6,6 +6,7 @@ Value HOSTNAME (\S+)
 Start
   ^\s*Base\s+\d+\s+Base\s+${HARDWARE}\s+\S+\s+${SERIAL}
   ^\s*Base\s+\d+\s+${HARDWARE}\s+\S+\s+${SERIAL}
+  ^\s*PSU
   ^\s*Current\ssoftware\s+:\s${VERSION}
   ^\s*System\s+Name -> SystemName
   ^\s*System\s+Contact -> SystemContact

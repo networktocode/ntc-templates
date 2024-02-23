@@ -22,6 +22,8 @@ Start
   ^\s*Configured\s+Vlans\s*:\s*(?:\d+\s+){9}${TRUNKING_VLANS} -> Continue
   ^\s*Configured\s+Vlans\s*:\s*(?:\d+\s+){10}${TRUNKING_VLANS} -> Continue
   ^\s*Configured\s+Vlans
+  ^\s*Translated\s+Vlans
+  ^\s*Translated\s+Default
   ^\s{8,}${TRUNKING_VLANS} -> Continue
   ^\s{8,}(?:\d+\s+){1}${TRUNKING_VLANS} -> Continue
   ^\s{8,}(?:\d+\s+){2}${TRUNKING_VLANS} -> Continue

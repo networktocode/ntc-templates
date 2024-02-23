@@ -49,7 +49,11 @@ Neighbor
   ^\s+Management\s+Addresses\s+\S+\s+${MANAGEMENT_IP}
   ^\s+VLAN\s+Names
   ^\s+Inventory\s+Management
+  ^\s+Power\s+Source
+  ^\s+Power\s+Priority
+  ^\s+Power\s+Value
   ^\s+Hardware\s+Revision
+  ^\s*------
   # Drop multi line options
   ^\s{8,}
   ^. -> Error
