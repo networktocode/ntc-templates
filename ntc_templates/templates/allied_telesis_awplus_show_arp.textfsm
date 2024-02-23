@@ -6,5 +6,6 @@ Value PORT (\S+)
 
 Start
   ^.*IP\s+Address\s+MAC\s+Address\s+Interface\s+Port\s+Type
+  ^.*IP\s+Address\s+LL\s+Address\s+Interface\s+Port\s+Type
   ^${IP_ADDRESS}\s+${MAC_ADDRESS}\s+${INTERFACE}\s+${PORT}\s+${TYPE} -> Record
   ^. -> Error
