@@ -1,8 +1,6 @@
 ---
 parsed_sample:
-  - sent_qty: "2"
-    sent_type: "100-byte ICMP Echos"
-    destination: "10.32.20.255"
+  - destination: "10.32.20.255"
     responders:
       - "10.32.20.2"
       - "10.32.20.222"
@@ -12,11 +10,13 @@ parsed_sample:
       - "10.32.20.1"
       - "10.32.20.2"
       - "10.32.20.222"
-    timeout: "2"
-    source: ""
     response_stream: []
-    success_pct: ""
-    success_qty: ""
-    rtt_min: ""
     rtt_avg: ""
     rtt_max: ""
+    rtt_min: ""
+    sent_qty: "2"
+    sent_type: "100-byte ICMP Echos"
+    source: ""
+    success_pct: ""
+    success_qty: ""
+    timeout: "2"
