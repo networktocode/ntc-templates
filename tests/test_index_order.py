@@ -42,6 +42,7 @@ OS_CHOICES = [
     "fortinet",
     "hp_comware",
     "hp_procurve",
+    "huawei_olt",
     "huawei_vrp",
     "ipinfusion_ocnos",
     "juniper_junos",
