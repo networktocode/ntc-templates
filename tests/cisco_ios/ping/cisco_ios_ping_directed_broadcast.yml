@@ -1,23 +1,20 @@
-{
-	"DESTINATION": "10.32.20.255",
-	"RESPONDERS": [
-		"10.32.20.2",
-		"10.32.20.222",
-		"10.32.20.1",
-		"10.32.20.3",
-		"10.32.20.3",
-		"10.32.20.1",
-		"10.32.20.2",
-		"10.32.20.222"
-	],
-	"RESPONSE_STREAM": [],
-	"RTT_AVG": "",
-	"RTT_MAX": "",
-	"RTT_MIN": "",
-	"SENT_QTY": "2",
-	"SENT_TYPE": "100-byte ICMP Echos",
-	"SOURCE": "",
-	"SUCCESS_PCT": "",
-	"SUCCESS_QTY": "",
-	"TIMEOUT": "2"
-}
+DESTINATION: 10.32.20.255
+RESPONDERS:
+- 10.32.20.2
+- 10.32.20.222
+- 10.32.20.1
+- 10.32.20.3
+- 10.32.20.3
+- 10.32.20.1
+- 10.32.20.2
+- 10.32.20.222
+RESPONSE_STREAM: []
+RTT_AVG: ''
+RTT_MAX: ''
+RTT_MIN: ''
+SENT_QTY: '2'
+SENT_TYPE: 100-byte ICMP Echos
+SOURCE: ''
+SUCCESS_PCT: ''
+SUCCESS_QTY: ''
+TIMEOUT: '2'
