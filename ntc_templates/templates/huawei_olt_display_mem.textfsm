@@ -1,4 +1,4 @@
-Value MEMORY_OCCUPANCY (\S+)
+Value MEMORY_OCCUPANCY (\d+)
 
 Start
  ^\s+Memory\s+occupancy:\s+${MEMORY_OCCUPANCY}%
