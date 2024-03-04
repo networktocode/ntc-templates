@@ -1,17 +1,29 @@
 Value VRF (\S+)
 Value RD (\S+|not set)
+Value List RT_IMPORT (\S+)
+Value List RT_EXPORT (\S+)
 Value VPN_ID (\S+|not set)
 Value MODE (\S+)
-Value DESCRIPTION (\S+|not set)
+Value DESCRIPTION ([\S\s]+|not set)
 Value List INTERFACES ([\w\./-]+)
 
 Start
+  ^\s*VRF\s\S+;\sRD\s.+;\sVPN\sID\s.+\s*$$ -> Continue.Record
   ^\s*VRF ${VRF}; RD ${RD}; VPN ID ${VPN_ID}\s*$$
   ^\s*VRF mode: ${MODE}\s*$$
   ^\s*Description ${DESCRIPTION}\s*$$
-  ^\s*Address family.+$$ -> Record
+  ^\s*Import\sVPN.*:+\s*$$ -> Rt_Import
+  ^\s*Export\sVPN.*:+\s*$$ -> Rt_Export
   ^\s*Interfaces:+s*$$ -> Interfaces
 
 Interfaces
   ^\s*${INTERFACES}\s*$$
-  ^\s*Address family.+$$ -> Record Start
+  ^\s*Address family.+$$ -> Start
+
+Rt_Import
+  ^\s*${RT_IMPORT}\s*$$
+  ^\s*(Export\sVPN.*:|No\simport\sroute\spolicy)+\s*$$ -> Rt_Export
+
+Rt_Export
+  ^\s*${RT_EXPORT}\s*$$
+  ^\s*No\simport\sroute\spolicy+\s*$$ -> Start
