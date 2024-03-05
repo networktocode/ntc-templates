@@ -1,0 +1,12 @@
+Value Required FSP (\w+\/\s\w+\/\w+)
+Value Key ONT_ID (\d+)
+Value DESCRIPTION (\S+)
+
+
+Start
+ ^\s+-
+ ^\s+F\/S\/P\s+ONT\s+Description -> Descriptions
+
+Descriptions
+ ^\s+${FSP}\s+${ONT_ID}\s+${DESCRIPTION} -> Record
+ ^\s*$$

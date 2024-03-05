@@ -1,0 +1,16 @@
+Value Required FSP (\w+\/\s\w+\/\w+)
+Value Key ONT_ID (\d+)
+Value SN (\w+)
+Value CONTROL_FLAG (\w+)
+Value RUN_STATE (\w+)
+Value CONFIG_STATE (\w+)
+Value MATCH_STATE (\w+)
+Value PROTECT_SIDE (\w+)
+
+Start
+ ^\s+-
+ ^\s+F\/S\/P -> SNs
+
+SNs
+ ^\s+${FSP}\s+${ONT_ID}\s+${SN}\s+${CONTROL_FLAG}\s+${RUN_STATE}\s+${CONFIG_STATE}\s+${MATCH_STATE}\s+${PROTECT_SIDE}\s -> Record
+ ^\s*$$
