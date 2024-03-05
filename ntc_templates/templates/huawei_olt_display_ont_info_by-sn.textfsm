@@ -40,6 +40,32 @@ Value QOS_MODE (\w+)
 Value MAPPING_MODE (\w+)
 Value TR069_MANAGEMENT (\w+)
 Value TR069_IP_INDEX (\d+)
+Value SERVICE_PROFILE_ID (\d+)
+Value SERVICE_PROFILE_NAME (\w+)
+Value TDM_PORT_TYPE (\w+)
+Value TDM_SERVICE_TYPE (\w+)
+Value MAC_LEARNING_FUNCTION_SWITCH (\w+)
+Value ONT_TRANSPARENT_FUNCTION_SWITCH (\w+)
+Value RING_CHECK_SWITCH (\w+)
+Value RING_PORT_AUTO_SHUTDOWN (\w+)
+Value RING_DETECT_FREQUENCY (\w+\s\(\w*\))
+Value RING_RESUME_INTERVAL (\w+\s\(\w*\))
+Value RING_DETECT_PERIOD (\w+\s\(\w*\))
+Value MULTICAST_FORWARD_MODE (\w+)
+Value MULTICAST_FORWARD_VLAN (\w+)
+Value MULTICAST_MODE (\w+)
+Value UPSTREAM_IGMP_PACKET_FORWARD_MODE (\w+)
+Value UPSTREAM_IGMP_PACKET_FORWARD_VLAN (\w+)
+Value UPSTREAM_IGMP_PACKET_PRIORITY (\w+)
+Value NATIVE_VLAN_OPTION (\w+)
+Value UPSTREAM_PQ_COLOR_POLICY (\w+)
+Value DOWNSTREAM_PQ_COLOR_POLICY (\w+)
+Value MONITOR_LINK (\w+)
+Value MTU_BYTE (\w+)
+Value ALARM_POLICY_PROFILE_ID (\d+)
+Value ALARM_POLICY_PROFILE_NAME (\S+)
+Value TR069_SERVER_PROFILE_ID (\d+)
+Value TR069_SERVER_PROFILE_NAME (\S+)
 
 Start
  ^\s+F/S/P\s+:\s+${FSP}
@@ -87,4 +113,28 @@ Start
  ^\s+Mapping\s+mode\s+:\s*${MAPPING_MODE}
  ^\s+TR069\s+management\s+:\s*${TR069_MANAGEMENT}
  ^\s+TR069\s+IP\s+index\s+:\s*${TR069_IP_INDEX}
- 
+ ^\s+Service\s+profile\s+ID\s+:\s+${SERVICE_PROFILE_ID}
+ ^\s+Service\s+profile\s+name\s+:\s+${SERVICE_PROFILE_NAME}
+ ^\s+TDM\s+port\s+type\s+:\s+${TDM_PORT_TYPE}
+ ^\s+TDM\s+service\s+type\s+:\s+${TDM_SERVICE_TYPE}
+ ^\s+MAC\s+learning\s+function\s+switch\s+:\s+${MAC_LEARNING_FUNCTION_SWITCH}
+ ^\s+ONT\s+transparent\s+function\s+switch\s+:\s+${ONT_TRANSPARENT_FUNCTION_SWITCH}
+ ^\s+Ring\s+check\s+switch\s+:\s+${RING_CHECK_SWITCH}
+ ^\s+Ring\s+port\s+auto-shutdown\s+:\s+${RING_PORT_AUTO_SHUTDOWN}
+ ^\s+Ring\s+detect\s+frequency\s+:\s+${RING_RESUME_INTERVAL}
+ ^\s+Ring\s+resume\s+interval\s+:\s+${RING_DETECT_PERIOD}
+ ^\s+Multicast\s+forward\s+mode\s+:\s+${MULTICAST_FORWARD_MODE}
+ ^\s+Multicast\s+forward\s+VLAN\s+:\s+${MULTICAST_FORWARD_VLAN}
+ ^\s+Multicast\s+mode\s+:\s+${MULTICAST_MODE}
+ ^\s+Upstream\s+IGMP\s+packet\s+forward\s+mode\s+:\s+${UPSTREAM_IGMP_PACKET_FORWARD_MODE}
+ ^\s+Upstream\s+IGMP\s+packet\s+forward\s+VLAN\s+:\s+${UPSTREAM_IGMP_PACKET_FORWARD_VLAN}
+ ^\s+Upstream\s+IGMP\s+packet\s+priority\s+:\s+${UPSTREAM_IGMP_PACKET_PRIORITY}
+ ^\s+Native\s+VLAN\s+option\s+:\s+${NATIVE_VLAN_OPTION}
+ ^\s+Upstream\s+PQ\s+color\s+policy\s+:\s+${UPSTREAM_PQ_COLOR_POLICY}
+ ^\s+Downstream\s+PQ\s+color\s+policy\s+:\s+${DOWNSTREAM_PQ_COLOR_POLICY}
+ ^\s+Monitor\s+link\s+:\s+${MONITOR_LINK}
+ ^\s+MTU\(byte\)\s+:\s+${MTU_BYTE}
+ ^\s+Alarm\s+policy\s+profile\s+ID\s+:\s+${ALARM_POLICY_PROFILE_ID}
+ ^\s+Alarm\s+policy\s+profile\s+name\s+:\s+${ALARM_POLICY_PROFILE_NAME}
+ ^\s+TR069\s+server\s+profile\s+ID\s+:\s+${TR069_SERVER_PROFILE_ID}
+ ^\s+TR069\s+server\s+profile\s+name\s+:\s+${TR069_SERVER_PROFILE_NAME}
