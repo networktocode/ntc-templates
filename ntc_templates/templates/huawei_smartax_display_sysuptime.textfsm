@@ -4,6 +4,6 @@ Value MINUTE (\d+)
 Value SECOND (\d+)
 
 Start
- ^\s+System\s+up\s+time:\s+${DAY}\s+day\s+${HOUR}\s+hour\s+${MINUTE}\s+minute\s+${SECOND}\s+
- ^\s*$$ -> EOF
- ^. -> Error
+  ^\s+System\s+up\s+time:\s+${DAY}\s+day\s+${HOUR}\s+hour\s+${MINUTE}\s+minute\s+${SECOND}\s+
+  ^\s*$$ -> EOF
+  ^. -> Error
