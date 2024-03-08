@@ -1,0 +1,12 @@
+Value Required VLAN_ID (\d+)
+Value List INTERFACES (\S+)
+Value List IP_ADDRESSES (\S+)
+
+Start
+  ^VLAN\s+ID:\s+${VLAN_ID} -> Data
+
+Data
+  ^VLAN\s+ID:\s+\d+ -> Continue.Record
+  ^VLAN\s+ID:\s+${VLAN_ID}
+  ^${INTERFACES}\s+\(\d+\)\s*$$
+  ^\s+IP:\s+${IP_ADDRESSES}\s*$$
