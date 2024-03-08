@@ -393,7 +393,7 @@ cisco_nxos_show_nve_vni.textfsm, .*, cisco_nxos, sh[[ow]] nv[[e]] vn[[i]]
 cisco_nxos_show_version.textfsm, .*, cisco_nxos, sh[[ow]] ver[[sion]]
 cisco_nxos_show_fex_id.textfsm, .*, cisco_nxos, sh[[ow]] fex (\S+)
 cisco_nxos_show_ip_arp.textfsm, .*, cisco_nxos, sh[[ow]] i[[p]] a[[rp]]
-cisco_nxos_show_ip_bgp.textfsm, .*, cisco_nxos, sh[[ow]] i[[p]] bgp
+cisco_nxos_show_ip_bgp.textfsm, .*, cisco_nxos, sh[[ow]] i[[p]] bgp(?: vrf \S+)?
 cisco_nxos_show_module.textfsm, .*, cisco_nxos, sh[[ow]] mod[[ule]]
 cisco_nxos_show_clock.textfsm, .*, cisco_nxos, sh[[ow]] clo[[ck]]
 cisco_nxos_show_vlan.textfsm, .*, cisco_nxos, sh[[ow]] vl[[an]]
