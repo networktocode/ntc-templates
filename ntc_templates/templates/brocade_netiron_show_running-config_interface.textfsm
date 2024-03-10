@@ -10,7 +10,7 @@ Value VRF (.+?)
 Value IPPIMSPARSE (pim-sparse)
 Value IPROUTERISIS (isis)
 Value ISISMETRIC (\d+)
-Value List IPHELPERS (.+?)
+Value List IP_HELPER (.+?)
 Value IPREDIRECT ([no]*)
 Value List IP_ADDRESS (\S+?)
 Value List IP_ADDR_CIDR (\d*)
@@ -38,7 +38,7 @@ Start
   ^\s+ip\s+router\s+${IPROUTERISIS}
   ^\s+isis\s+metric\s+${ISISMETRIC}\s*$$
   ^\s+${IPREDIRECT}\s*ip\s+redirect
-  ^\s+ip\s+helper-address\s+${IPHELPERS}\s*$$
+  ^\s+ip\s+helper-address\s+${IP_HELPER}\s*$$
   ^\s+ip\s+access-group\s+${ACL_IN}\s+in
   ^\s+ip\s+access-group\s+${ACL_OUT}\s+out
   ^\s+ip\s+address\s+${IP_ADDRESS}/*${IP_ADDR_CIDR}\s*$$
