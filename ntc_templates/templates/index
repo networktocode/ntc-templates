@@ -393,7 +393,7 @@ cisco_nxos_show_nve_vni.textfsm, .*, cisco_nxos, sh[[ow]] nv[[e]] vn[[i]]
 cisco_nxos_show_version.textfsm, .*, cisco_nxos, sh[[ow]] ver[[sion]]
 cisco_nxos_show_fex_id.textfsm, .*, cisco_nxos, sh[[ow]] fex (\S+)
 cisco_nxos_show_ip_arp.textfsm, .*, cisco_nxos, sh[[ow]] i[[p]] a[[rp]]
-cisco_nxos_show_ip_bgp.textfsm, .*, cisco_nxos, sh[[ow]] i[[p]] bgp
+cisco_nxos_show_ip_bgp.textfsm, .*, cisco_nxos, sh[[ow]] i[[p]] bgp(?: vrf \S+)?
 cisco_nxos_show_module.textfsm, .*, cisco_nxos, sh[[ow]] mod[[ule]]
 cisco_nxos_show_clock.textfsm, .*, cisco_nxos, sh[[ow]] clo[[ck]]
 cisco_nxos_show_vlan.textfsm, .*, cisco_nxos, sh[[ow]] vl[[an]]
@@ -412,6 +412,7 @@ cisco_s300_show_ip_interface.textfsm, .*, cisco_s300, sh[[ow]] ip interface
 cisco_s300_show_system_id.textfsm, .*, cisco_s300, sh[[ow]] system id
 cisco_s300_show_version.textfsm, .*, cisco_s300, sh[[ow]] ver[[sion]]
 cisco_s300_show_system.textfsm, .*, cisco_s300, sh[[ow]] system
+cisco_s300_show_vlan.textfsm, .*, cisco_s300, sh[[ow]] vlan
 
 cisco_wlc_ssh_show_flexconnect_group_summary.textfsm, .*, cisco_wlc_ssh, sh[[ow]] fl[[exconnect]] gr[[oup]] s[[ummary]]
 cisco_wlc_ssh_show_advanced_802.11a_channel.textfsm, .*, cisco_wlc_ssh, sh[[ow]] ad[[vanced]] 802\.11[ab] ch[[annel]]
@@ -439,6 +440,7 @@ cisco_wlc_ssh_show_inventory.textfsm, .*, cisco_wlc_ssh, sh[[ow]] inve[[ntory]]
 cisco_wlc_ssh_show_wlan_sum.textfsm, .*, cisco_wlc_ssh, sh[[ow]] wl[[an]] s[[ummary]]
 cisco_wlc_ssh_show_802.11a.textfsm, .*, cisco_wlc_ssh, show 802\.11[ab]
 cisco_wlc_ssh_show_sysinfo.textfsm, .*, cisco_wlc_ssh, sh[[ow]] sysi[[nfo]]
+cisco_wlc_ssh_show_boot.textfsm, .*, cisco_wlc_ssh, sh[[ow]] bo[[ot]]
 cisco_wlc_ssh_show_time.textfsm, .*, cisco_wlc_ssh, sh[[ow]] ti[[me]]
 
 cisco_xr_show_controllers_fabric_fia_errors_ingress_location.textfsm, .*, cisco_xr, sh[[ow]] contr[[ollers]] fabric fi[[a]] err[[ors]] in[[gress]] loc[[ation]]
@@ -641,6 +643,7 @@ mikrotik_routeros_ip_route_print_terse.textfsm, .*, mikrotik_routeros, [[/]]ip(v
 mikrotik_routeros_system_clock_print.textfsm, .*, mikrotik_routeros, [[/]]sy[[stem]] cl[[ock]] p[[rint]]
 mikrotik_routeros_user_active_print.textfsm, .*, mikrotik_routeros, [[/]]us[[er]] ac[[tive]] p[[rint]]
 mikrotik_routeros_ip_address_print.textfsm, .*, mikrotik_routeros, [[/]]ip ad[[dress]] p[[rint]]
+mikrotik_routeros_ping.textfsm, .*, mikrotik_routeros, [[/]]pin[[g]]
 
 paloalto_panos_show_running_security-policy.textfsm, .*, paloalto_panos, sh[[ow]] runn[[ing]] security[[-policy]]
 paloalto_panos_show_high-availability_all.textfsm, .*, paloalto_panos, sh[[ow]] high[[-availability]] all
