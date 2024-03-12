@@ -11,7 +11,7 @@ Start
   ^\s+ID\s+\(m\)\s+\(dBm\) -> SNs
 
 SNs
-  ^\s+${ONT_ID}\s+${SN}\s+${ONT_MODEL_TYPE}\s+${DISTANCE_M}\s+${RX_TX_POWER_DBM}\s+${DESCRIPTION} -> Record
+  ^\s+${ONT_ID}\s+${SERIAL_NUMBER}\s+${ONT_MODEL_TYPE}\s+${DISTANCE_M}\s+${RX_TX_POWER_DBM}\s+${DESCRIPTION} -> Record
   ^\s+-
   ^\s*$$
   ^. -> Error
