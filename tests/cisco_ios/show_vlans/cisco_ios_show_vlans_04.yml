@@ -1,0 +1,11 @@
+---
+parsed_sample:
+  - interfaces:
+      - "GigabitEthernet0/0/1"
+    ip_addresses: []
+    vlan_id: "1"
+  - interfaces:
+      - "GigabitEthernet0/0/1.103"
+    ip_addresses:
+      - "10.16.16.129"
+    vlan_id: "103"
