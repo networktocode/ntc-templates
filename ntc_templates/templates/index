@@ -573,17 +573,7 @@ hp_procurve_show_vlans.textfsm, .*, hp_procurve, sh[[ow]] vl[[ans]]
 hp_procurve_show_arp.textfsm, .*, hp_procurve, sh[[ow]] ar[[p]]
 hp_procurve_show_ip.textfsm, .*, hp_procurve, sh[[ow]] ip
 
-huawei_smartax_display_ont_info_summary_ont.textfsm:huawei_smartax_display_ont_info_summary_sn.textfsm, .*, huawei_smartax, di[[splay]] ont i[[nfo]] su[[mmary]] \S+ *$
-huawei_smartax_display_ont_info_fsp.textfsm:huawei_smartax_display_ont_info_description.textfsm, .*, huawei_smartax, di[[splay]] ont i[[nfo]] \S+ *$
-huawei_smartax_display_board_serial-number.textfsm, .*, huawei_smartax, di[[splay]] bo[[ard]] s[[erial-number]]\s*
-huawei_smartax_display_ont_info_by-sn_sn.textfsm, .*, huawei_smartax, di[[splay]] ont i[[nfo]] by-sn \S+
-huawei_smartax_display_ont_autofind.textfsm, .*, huawei_smartax, di[[splay]] ont a[[utofind]]\s*
 huawei_smartax_display_temperature.textfsm, .*, huawei_smartax, di[[splay]] tem[[perature]]\s*
-huawei_smartax_display_sysuptime.textfsm, .*, huawei_smartax, di[[splay]] sys[[uptime]]
-huawei_smartax_display_version.textfsm, .*, huawei_smartax, di[[splay]] ver[[sion]]
-huawei_smartax_display_board.textfsm, .*^, huawei_smartax, di[[splay]] bo[[ard]]\s*
-huawei_smartax_display_cpu.textfsm, .*, huawei_smartax, di[[splay]] cpu\s*
-huawei_smartax_display_mem.textfsm, .*, huawei_smartax, di[[splay]] mem[[ory]]\s*
 
 huawei_vrp_display_traffic-filter_applied-record.textfsm, .*, huawei_vrp, dis[[play]] traffic-filter applied-record
 huawei_vrp_display_ip_vpn-instance_interface.textfsm, .*, huawei_vrp, di[[splay]] ip vpn[[-instance]] interface
