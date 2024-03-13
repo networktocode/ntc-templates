@@ -1,9 +1,0 @@
-Value SLOTID (\d+)
-Value BOARDNAME (\S+)
-Value TEMPERATURE_C (\d+)
-Value TEMPERATURE_D (\d+)
-
-Start
-  ^\s+SlotID:\s+${SLOTID}\s+BoardName:\s+${BOARDNAME}\s+ Temperature:\s+${TEMPERATURE_C}C\(\s*${TEMPERATURE_D}F\) -> Record
-  ^\s*$$
-  ^. -> Error
