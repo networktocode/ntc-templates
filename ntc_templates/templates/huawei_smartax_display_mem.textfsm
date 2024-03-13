@@ -1,6 +1,0 @@
-Value MEMORY_OCCUPANCY (\d+)
-
-Start
-  ^\s+Memory\s+occupancy:\s+${MEMORY_OCCUPANCY}%
-  ^\s*$$
-  ^. -> Error
