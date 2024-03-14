@@ -1,4 +1,5 @@
 """Tests to check the order of the index file."""
+
 import re
 
 from tests import load_index_data
