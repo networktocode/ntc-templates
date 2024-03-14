@@ -1,8 +1,7 @@
 ---
 parsed_sample:
   - interface: "GigabitEthernet0/0/0/0"
-    ip_address:
-      - "10.2.0.2"
+    ip_address: "10.2.0.2"
     ip_mtu: "1500"
     link_status: "Up"
     mtu: "1514"
@@ -11,14 +10,12 @@ parsed_sample:
       - "224.0.0.1"
       - "224.0.0.9"
       - "224.0.0.10"
-    prefix_length:
-      - "30"
+    prefix_length: "30"
     protocol: "ipv4"
     protocol_status: "Up"
     vrf: "default"
   - interface: "GigabitEthernet0/0/0/1"
-    ip_address:
-      - "10.0.7.1"
+    ip_address: "10.0.7.1"
     ip_mtu: "1500"
     link_status: "Up"
     mtu: "1514"
@@ -27,8 +24,7 @@ parsed_sample:
       - "224.0.0.1"
       - "224.0.0.5"
       - "224.0.0.6"
-    prefix_length:
-      - "30"
+    prefix_length: "30"
     protocol: "ipv4"
     protocol_status: "Up"
     vrf: "default"
