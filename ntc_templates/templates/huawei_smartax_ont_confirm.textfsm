@@ -1,0 +1,8 @@
+Value Filldown ADDED (\d+)
+Value Filldown SUCCESS (\d+)
+Value PORT_ID (\d+)
+Value ONT_ID (\d+)
+
+Start
+  ^\s*Number\s+of\s+ONTs\s+that\s+be\s+added:\s*${ADDED},\s*success:\s*${SUCCESS}
+  ^\s*PortID\s*:\s*${PORT_ID},\s*ONTID\s*:\s*${ONT_ID} -> Record
