@@ -1,4 +1,5 @@
 """CLI for acitool."""
+
 import click
 
 from tests.test_development_scripts import (
