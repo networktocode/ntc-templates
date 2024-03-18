@@ -1,7 +1,7 @@
 Value Required INTERFACE (\S+)
 Value LINK_STATUS (.+?)
 Value PROTOCOL_STATUS (.+?)
-Value HARDWARE_TYPE ([\w ]+)
+Value HARDWARE_TYPE ([\w \-]+)
 Value MAC_ADDRESS ([a-fA-F0-9]{4}\.[a-fA-F0-9]{4}\.[a-fA-F0-9]{4})
 Value BIA ([a-fA-F0-9]{4}\.[a-fA-F0-9]{4}\.[a-fA-F0-9]{4})
 Value DESCRIPTION (.+?)
