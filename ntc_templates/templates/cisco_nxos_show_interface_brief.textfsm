@@ -2,6 +2,7 @@ Value INTERFACE ([\w+/\.]+)
 Value VRF (\S+)
 Value STATUS (up|down)
 Value IP_ADDRESS (\S+)
+Value PEER_IP_ADDRESS (\d+\.\d+\.\d+\.\d+)
 Value SPEED (\S+)
 Value MTU (\d+)
 Value VLAN_ID (\S+)
@@ -11,6 +12,7 @@ Value REASON (\S+((\s\w+)+)?)
 Value PORTCH (\S+)
 Value DESCRIPTION (\S+((\s\w+)+)?)
 Value PROTOCOL (\S+)
+Value VCID (\S+)
 
 Start
   ^Port\s+VRF\s+Status\s+IP\s+Address\s+Speed\s+MTU -> Management
@@ -19,8 +21,10 @@ Start
   ^Interface\s+Status\s+Description\s*$$ -> Loopback
   ^Interface\s+Secondary\s+VLAN\(Type\)\s+Status\s+Reason -> VLAN
   ^Port-channel\s+VLAN\s+Type\sMode\s+Status\s+Reason\s+Speed\s+Protocol -> PORTCHANNEL
-  ^Interface\s+Status\s+IP\s+Address\s+Encap\s+type\s+MTU -> TUNNEL
+  ^Port\s+Status\s+Reason\s+MTU\s+VRF -> NVE
   ^Port\s+Status\s+Reason\s+MTU\s*$$ -> NVE
+  ^Interface\s+Status\s+IP\s+Address\s+Encap\s+type\s+MTU -> TUNNEL
+  ^Interface\s+Status\s+Peer\s+IP\s+Address\s+VC\s+ID -> PSEUDOWIRE
   ^---+$$
   ^. -> Error Start
 
@@ -64,8 +68,11 @@ TUNNEL
   ^. -> Error TUNNEL
 
 NVE
-  ^Interface\s*$$
+  ^${INTERFACE}\s+${STATUS}\s+${REASON}\s+${MTU}\s+${VRF} -> Record
   ^${INTERFACE}\s+${STATUS}\s+${REASON}\s+${MTU} -> Record
   ^---+$$
   ^\s*$$ -> Start
   ^. -> Error NVE
+
+PSEUDOWIRE
+  ^${INTERFACE}\s+${STATUS}\s+${PEER_IP_ADDRESS}\s+${VCID}
