@@ -12,10 +12,12 @@ Value WEIGHT (\d+)
 Value AS_PATH (\d+(\s.*?)*)
 # Origin codes: i - IGP, e - EGP, ? - incomplete, | - multipath, & - backup
 Value ORIGIN ([ie\?\|&])
+Value Filldown VRF (\S+)
 
 
 Start
-  ^BGP\s+(routing|table)\s 
+  ^BGP\s+routing\s.+VRF\s+${VRF},.+
+  ^BGP\s+table\s+
   ^Status:
   ^Path type:
   ^Origin codes:
@@ -40,6 +42,8 @@ Bgp_table
   ^${STATUS}${PATH_SELECTION}${ROUTE_SOURCE}${NETWORK}\s${NEXT_HOP}\s${METRIC}\s${LOCAL_PREF}\s${WEIGHT}(\s${AS_PATH})?\s${ORIGIN}$$ -> Record
   ^\s+${PATH_SELECTION}${ROUTE_SOURCE}\s${NEXT_HOP}\s${METRIC}\s${LOCAL_PREF}\s${WEIGHT}(\s${AS_PATH})?\s${ORIGIN}$$ -> Record
   ^${STATUS}${PATH_SELECTION}${ROUTE_SOURCE}\s${NEXT_HOP}\s${METRIC}\s${LOCAL_PREF}\s${WEIGHT}(\s${AS_PATH})?\s${ORIGIN}$$ -> Record
+  ^\s*$$ -> Clearall
+  ^BGP\s+routing\s.+VRF\s+${VRF},.+ -> Start
   ^. -> Error
 
 EOF
