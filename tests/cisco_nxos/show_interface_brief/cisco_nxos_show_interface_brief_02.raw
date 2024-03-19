@@ -1,0 +1,146 @@
+
+--------------------------------------------------------------------------------
+Port   VRF          Status IP Address                              Speed    MTU
+--------------------------------------------------------------------------------
+mgmt0  --           up     172.16.111.254                          1000     1500
+
+--------------------------------------------------------------------------------
+Ethernet      VLAN    Type Mode   Status  Reason                   Speed     Port
+Interface                                                                    Ch #
+--------------------------------------------------------------------------------
+Eth1/1        --      eth  routed up      none                        40G(D) 10
+Eth1/2        --      eth  routed up      none                        40G(D) --
+Eth1/3        --      eth  routed up      none                        40G(D) --
+Eth1/4        --      eth  routed down    XCVR not inserted          auto(D) --
+Eth1/5        --      eth  routed down    XCVR not inserted          auto(D) --
+Eth1/6        --      eth  routed down    XCVR not inserted          auto(D) --
+Eth1/7        --      eth  routed down    XCVR not inserted          auto(D) --
+Eth1/8        --      eth  routed down    XCVR not inserted          auto(D) --
+Eth1/9        --      eth  routed down    XCVR not inserted          auto(D) --
+Eth1/10       --      eth  routed up      none                       100G(D) 100
+Eth1/11       --      eth  routed up      none                       100G(D) 100
+Eth1/12       --      eth  routed up      none                       100G(D) --
+Eth2/1        --      eth  routed up      none                        10G(D) --
+Eth2/2        --      eth  routed up      none                        10G(D) --
+Eth2/3        --      eth  routed down    Link not connected         auto(D) --
+Eth2/4        --      eth  routed down    SFP not inserted           auto(D) --
+Eth2/5        --      eth  routed down    SFP not inserted           auto(D) --
+Eth2/6        --      eth  routed down    SFP not inserted           auto(D) --
+Eth2/7        --      eth  routed down    SFP not inserted           auto(D) --
+Eth2/8        --      eth  routed down    SFP not inserted           auto(D) --
+Eth2/9        --      eth  routed down    SFP not inserted           auto(D) --
+Eth2/10       --      eth  routed up      none                       1000(D) --
+Eth2/10.2137  2137    eth  routed up      none                       1000(D) --
+Eth2/10.2139  2139    eth  routed up      none                       1000(D) --
+Eth2/11       --      eth  routed down    SFP not inserted           auto(D) --
+Eth2/12       --      eth  routed down    SFP not inserted           auto(D) --
+Eth2/13       --      eth  routed down    SFP not inserted           auto(D) --
+Eth2/14       --      eth  routed down    SFP not inserted           auto(D) --
+Eth2/15       --      eth  routed down    SFP not inserted           auto(D) --
+Eth2/16       --      eth  routed down    SFP not inserted           auto(D) --
+Eth2/17       --      eth  routed down    SFP not inserted           auto(D) --
+Eth2/18       --      eth  routed down    SFP not inserted           auto(D) --
+Eth2/19       --      eth  routed down    SFP not inserted           auto(D) --
+Eth2/20       --      eth  routed down    SFP not inserted           auto(D) --
+Eth2/21       --      eth  routed down    SFP not inserted           auto(D) --
+Eth2/22       --      eth  routed down    SFP not inserted           auto(D) --
+Eth2/23       --      eth  routed down    SFP not inserted           auto(D) --
+Eth2/24       --      eth  routed down    SFP not inserted           auto(D) --
+Eth2/25       --      eth  routed down    SFP not inserted           auto(D) --
+Eth2/26       --      eth  routed down    SFP not inserted           auto(D) --
+Eth2/27       --      eth  routed down    SFP not inserted           auto(D) --
+Eth2/28       --      eth  routed down    SFP not inserted           auto(D) --
+Eth2/29       --      eth  routed down    SFP not inserted           auto(D) --
+Eth2/30       --      eth  routed down    SFP not inserted           auto(D) --
+Eth2/31       --      eth  routed down    SFP not inserted           auto(D) --
+Eth2/32       --      eth  routed down    SFP not inserted           auto(D) --
+Eth2/33       1       eth  fabric up      none                        10G(D) 4000
+Eth2/34       --      eth  routed down    SFP not inserted           auto(D) --
+Eth2/35       --      eth  routed down    SFP not inserted           auto(D) --
+Eth2/36       --      eth  routed down    SFP not inserted           auto(D) --
+Eth2/37       --      eth  routed down    SFP not inserted           auto(D) --
+Eth2/38       --      eth  routed down    SFP not inserted           auto(D) --
+Eth2/39       --      eth  routed down    SFP not inserted           auto(D) --
+Eth2/40       --      eth  routed down    SFP not inserted           auto(D) --
+Eth2/41       --      eth  routed down    SFP not inserted           auto(D) --
+Eth2/42       --      eth  routed down    SFP not inserted           auto(D) --
+Eth2/43       --      eth  routed down    SFP not inserted           auto(D) --
+Eth2/44       --      eth  routed down    SFP not inserted           auto(D) --
+Eth2/45       --      eth  routed down    SFP not inserted           auto(D) --
+Eth2/46       --      eth  routed down    SFP not inserted           auto(D) --
+Eth2/47       --      eth  routed down    SFP not inserted           auto(D) --
+Eth2/48       --      eth  routed down    SFP not inserted           auto(D) --
+
+--------------------------------------------------------------------------------
+Port-channel VLAN    Type Mode   Status  Reason                    Speed   Protocol
+Interface                                                                  
+--------------------------------------------------------------------------------
+Po10         --      eth  routed up      none                       a-40G(D)  lacp
+Po10.300     300     eth  routed up      none                       a-40G(D)    --
+Po100        --      eth  routed up      none                      a-100G(D)  lacp
+Po4000       1       eth  fabric up      none                       a-10G(D)  none
+
+--------------------------------------------------------------------------------
+Interface     Status     Description
+--------------------------------------------------------------------------------
+Lo0           up         device loopback interface
+Lo2           down       --
+
+-------------------------------------------------------------------------------
+Interface Secondary VLAN(Type)                    Status Reason                 
+-------------------------------------------------------------------------------
+Vlan1     --                                      down   Administratively down  
+Vlan144   --                                      up     --        
+Vlan145   --                                      up     --        
+Vlan146   --                                      up     --        
+Vlan2090  --                                      up     --        
+Vlan2091  --                                      up     --        
+
+--------------------------------------------------------------------------------
+Port           Status Reason          MTU   VRF             
+--------------------------------------------------------------------------------
+mti3           up     none            1500  VRF1
+mti4           up     none            1500  VRF2
+mti5           up     none            1500  VRF3
+
+--------------------------------------------------------------------------------
+Ethernet       VLAN    Type Mode   Status  Reason                  Speed     Port
+Interface                                                                    Ch #
+--------------------------------------------------------------------------------
+Eth101/1/1     1       eth  trunk  up      none                       10G(D) --
+Eth101/1/2     1       eth  trunk  up      none                       10G(D) --
+Eth101/1/3     1       eth  trunk  up      none                      1000(D) --
+Eth101/1/4     1       eth  trunk  up      none                      1000(D) --
+Eth101/1/5     1       eth  trunk  up      none                       10G(D) --
+Eth101/1/6     1       eth  trunk  up      none                       10G(D) --
+Eth101/1/7     1       eth  trunk  up      none                      1000(D) --
+Eth101/1/8     1       eth  trunk  up      none                      1000(D) --
+Eth101/1/9     1       eth  trunk  up      none                       10G(D) --
+Eth101/1/10    1       eth  trunk  up      none                       10G(D) --
+Eth101/1/11    1       eth  trunk  up      none                      1000(D) --
+Eth101/1/12    1       eth  trunk  up      none                      1000(D) --
+Eth101/1/13    --      eth  routed down    SFP not inserted          auto(D) --
+Eth101/1/14    --      eth  routed down    SFP not inserted          auto(D) --
+Eth101/1/15    --      eth  routed down    SFP not inserted          auto(D) --
+Eth101/1/16    --      eth  routed down    SFP not inserted          auto(D) --
+Eth101/1/17    --      eth  routed down    SFP not inserted          auto(D) --
+Eth101/1/18    --      eth  routed down    SFP not inserted          auto(D) --
+Eth101/1/19    --      eth  routed down    SFP not inserted          auto(D) --
+Eth101/1/20    --      eth  routed down    SFP not inserted          auto(D) --
+Eth101/1/21    --      eth  routed down    SFP not inserted          auto(D) --
+Eth101/1/22    --      eth  routed down    SFP not inserted          auto(D) --
+Eth101/1/23    --      eth  routed down    SFP not inserted          auto(D) --
+Eth101/1/24    --      eth  routed down    SFP not inserted          auto(D) --
+Eth101/1/25    --      eth  routed down    SFP not inserted          auto(D) --
+Eth101/1/26    --      eth  routed down    SFP not inserted          auto(D) --
+Eth101/1/27    --      eth  routed down    SFP not inserted          auto(D) --
+Eth101/1/28    --      eth  routed down    SFP not inserted          auto(D) --
+Eth101/1/29    --      eth  routed down    SFP not inserted          auto(D) --
+Eth101/1/30    --      eth  routed down    SFP not inserted          auto(D) --
+Eth101/1/31    --      eth  routed down    SFP not inserted          auto(D) --
+Eth101/1/32    --      eth  routed down    SFP not inserted          auto(D) --
+
+--------------------------------------------------------------------------------
+Interface     Status     Peer IP Address    VC ID
+--------------------------------------------------------------------------------
+pw100002      up         172.21.128.111     6668
