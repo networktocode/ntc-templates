@@ -1,0 +1,23 @@
+Value Required VLAN_ID (\d+)
+Value List INTERFACES ([\w\./]+)
+Value List IP_ADDRESSES (\S+)
+
+Start
+  ^VLAN\s+ID:\s+${VLAN_ID} -> Data
+  ^\s*$$
+  ^. -> Error
+
+Data
+  ^VLAN\s+ID:\s+\d+ -> Continue.Record
+  ^VLAN\s+ID:\s+${VLAN_ID}
+  ^\s+This\s+is\s+configured\s+as\s+native\s+Vlan\s+for\s+the\s+following\s+interface\(s\)\s+:\s*$$
+  ^\S+\s+Native-vlan\s+Tx-type:\s+\S+\s*$$
+  ^\s+Protocols\s+Configured
+  ^\s+IP\s+\d+\s+\d+
+  ^VLAN\s+trunk\s+interfaces
+  ^[\w\./]+\s*$$
+  ^${INTERFACES}\s+\(\d+\)\s*$$
+  ^\s+IP:\s+${IP_ADDRESSES}\s*$$
+  ^\s+Total\s\d+
+  ^\s*$$
+  ^. -> Error

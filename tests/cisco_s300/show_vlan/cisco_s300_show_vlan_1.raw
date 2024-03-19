@@ -1,0 +1,15 @@
+Vlan       Name                   Ports                Type     Authorization
+---- ----------------- --------------------------- ------------ -------------
+ 1           1         fa3-4,fa12-14,fa17,fa19,      Default      Required
+                       gi1,gi4,Po1-8
+222  IP Phones network       fa9,fa13-19,gi1          static      Required
+223        VOIP        fa1-2,fa11,fa15-18,fa21-22,    static      Required
+                       gi1-4
+402  Test-Long-Vlan-Na           fa5,gi1              static      Required
+     me1
+3130       3130                 fa20,gi1              static      Required
+3131 Test-Long-Vlan-Na fa1-2,fa11,fa15-18,fa21-22,    static      Required
+     me2               gi1-4
+3132       3132                                       static      Required
+3133 Test-Long-Vlan-Na                                static      Required
+     me3
