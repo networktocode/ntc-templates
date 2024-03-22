@@ -1,0 +1,55 @@
+Interface port1.0.1
+  Scope: both
+  Link is UP, administrative state is UP
+  Thrash-limiting
+    Status Not Detected, Action none, Timeout 1(s)
+  Hardware is Ethernet, address is 001a.eb95.4e20
+  index 5001 metric 1 mru 1500
+  current duplex full, current speed 1000, current polarity mdi
+  configured duplex auto, configured speed auto, configured polarity auto
+  <UP,BROADCAST,RUNNING,MULTICAST>
+  SNMP link-status traps: Disabled
+    input packets 35457780210, bytes 29356254911026, dropped 0, multicast packets 7082784
+    output packets 61413690728, bytes 62394902353246, multicast packets 9113540874 broadcast packets 5601988788
+  Time since last state change: 49539 days 22:34:06
+Interface port1.0.2
+  Scope: both
+  Link is UP, administrative state is UP
+  Thrash-limiting
+    Status Not Detected, Action none, Timeout 1(s)
+  Hardware is Ethernet, address is 001a.eb95.4e20
+  index 5002 metric 1 mru 1500
+  current duplex full, current speed 1000, current polarity mdi
+  configured duplex auto, configured speed auto, configured polarity auto
+  <UP,BROADCAST,RUNNING,MULTICAST>
+  SNMP link-status traps: Disabled
+    input packets 72759596856, bytes 89425248242431, dropped 0, multicast packets 5826911
+    output packets 62557166490, bytes 52200393594867, multicast packets 9113496890 broadcast packets 5576876122
+  Time since last state change: 49539 days 22:34:06
+Interface port1.0.3
+  Scope: both
+  Link is UP, administrative state is UP
+  Thrash-limiting
+    Status Not Detected, Action none, Timeout 1(s)
+  Hardware is Ethernet, address is 001a.eb95.4e20
+  index 5003 metric 1 mru 1500
+  current duplex full, current speed 1000, current polarity mdix
+  configured duplex auto, configured speed auto, configured polarity auto
+  <UP,BROADCAST,RUNNING,MULTICAST>
+  SNMP link-status traps: Disabled
+    input packets 197371973, bytes 283642833678, dropped 0, multicast packets 0
+    output packets 113228616, bytes 116911193423, multicast packets 702313 broadcast packets 247
+  Time since last state change: 49539 days 22:34:06
+Interface vlan2222
+  Scope: both
+  Link is UP, administrative state is UP
+  Hardware is VLAN, address is 001a.eb95.4e20
+  IPv4 address 20.0.0.1/24 broadcast 20.0.0.255
+  index 2522 metric 1 mtu 1500
+  arp ageing timeout 300
+  <UP,BROADCAST,RUNNING,MULTICAST>
+  SNMP link-status traps: Disabled
+  Bandwidth 1g
+    input packets 0, bytes 0, dropped 0, multicast packets 0
+    output packets 0, bytes 0, multicast packets 0 broadcast packets 0
+  Time since last state change: 49644 days 18:39:24
