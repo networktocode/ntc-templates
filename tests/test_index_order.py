@@ -9,6 +9,7 @@ OS_CHOICES = [
     "a10",
     "alcatel_aos",
     "alcatel_sros",
+    "allied_telesis_awplus",
     "arista_eos",
     "aruba_aoscx",
     "aruba_os",
