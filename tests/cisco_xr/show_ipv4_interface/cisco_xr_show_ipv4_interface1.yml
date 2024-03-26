@@ -1,16 +1,24 @@
 ---
 parsed_sample:
   - interface: "MgmtEth0/0/CPU0/0"
-    ip_address: "172.25.82.44/24"
+    ip_address: "172.25.82.44"
+    ip_mtu: "1500"
     link_status: "Up"
     mtu: "1514"
+    multicast_groups:
+      - "224.0.0.2"
+      - "224.0.0.1"
+    prefix_length: "24"
     protocol: "ipv4"
     protocol_status: "Up"
     vrf: "default"
   - interface: "GigabitEthernet0/0/0/0"
     ip_address: ""
+    ip_mtu: ""
     link_status: "Shutdown"
     mtu: ""
+    multicast_groups: []
+    prefix_length: ""
     protocol: "ipv4"
     protocol_status: "Down"
     vrf: "default"
