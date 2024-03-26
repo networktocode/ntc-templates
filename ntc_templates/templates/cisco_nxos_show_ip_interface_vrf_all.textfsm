@@ -1,14 +1,14 @@
-Value VRF (\S+)
+Value Filldown VRF (\S+)
 Value INTERFACE (\S+)
 Value IP_ADDRESS ([a-zA-Z0-9./]+)
 Value STATUS (\S+-\S+)
 Value LINK (\S+-\S+)
 Value PROTO (\S+-\S+)
-Value SUBNET (\d+.\d+.\d+.\d+\/\d+)
+Value SUBNET (\S+)
 Value ROUTE_PREF (\d+)
 Value ROUTE_TAG (\d+)
 Value BROADCAST ([a-zA-Z0-9./]+)
-Value MULTICAST_GROUPS (\S+)
+Value List MULTICAST_GROUPS (\S+)
 Value MTU (\d+)
 Value PROXY_ARP (\S+)
 Value IP_LOCAL_PROXY_ARP (\S+)
@@ -23,15 +23,26 @@ Value IP_LOAD_SHARING (\S+)
 Value WCCP_REDIRECT_OUTBOUND (\S+)
 Value WCCP_REDIRECT_INBOUND (\S+)
 Value WCCP_REDIRECT_EXCLUDE (\S+)
+Value List SECONDARY_IP_ADDRESS (\S+)
+Value List SECONDARY_IP_SUBNET (\S+)
+Value List SECONDARY_ROUTE_PREF (\d+)
+Value List SECONDARY_ROUTE_TAG (\d+)
+Value ACL_OUT (\S+)
+Value UNNUMBERED_PARENT_INTF (\S+)
+Value List UNNUMBERED_CHILD_INTFS (\S+)
 
 Start
   ^IP\s+Interface\s+Status\s+for\s+VRF\s+"${VRF}"
+  ^${INTERFACE},\s+Interface\s+status:\s+${PROTO}\/${LINK}\/${STATUS},\s+iod:\s+\d+,
   ^${INTERFACE},\s+Interface\s+status:\s+${PROTO}/${LINK}/${STATUS}
   ^\s+IP\s+address:\s+${IP_ADDRESS},\s+IP\s+subnet:\s+${SUBNET}\s+route-preference:\s+${ROUTE_PREF},\s+tag:\s+${ROUTE_TAG}
+  ^\s+IP\s+address:\s+${SECONDARY_IP_ADDRESS},\s+IP\s+subnet:\s+${SECONDARY_IP_SUBNET}\s+secondary\s+route-preference:\s+${SECONDARY_ROUTE_PREF},\s+tag:\s+${SECONDARY_ROUTE_TAG}
+  ^\s+IP\s+address:\s+${IP_ADDRESS},\s+IP\s+subnet:\s+${SUBNET}
   ^\s+IP\s+broadcast\s+address:\s+${BROADCAST}
   ^\s+IP\s+multicast\s+groups\s+locally\s+joined:\s+${MULTICAST_GROUPS}
+  ^\s+IP\s+multicast\s+groups\s+locally\s+joined:* -> MULTICAST
   ^\s+IP\s+MTU:\s+${MTU}\s+bytes
-  ^\s+IP\s+primary\s+address\s+route-preference:
+  ^\s+IP\s+primary\s+address\s+route-preference:\s+${ROUTE_PREF},\s+tag:\s+${ROUTE_TAG}
   ^\s+IP\s+proxy\s+ARP\s+:\s+${PROXY_ARP}
   ^\s+IP\s+Local\s+Proxy\s+ARP\s+:\s+${IP_LOCAL_PROXY_ARP}
   ^\s+IP\s+multicast\s+routing:\s+${MULTICAST_ROUTING}
@@ -42,7 +53,7 @@ Start
   ^\s+IP\s+icmp\s+port-unreachable:\s+${ICMP_PORT_UNREACHABLES}
   ^\s+IP\s+unicast\s+reverse\s+path\s+forwarding:\s+${IP_UNICAST_RPF}
   ^\s+IP\s+load\s+sharing:\s+${IP_LOAD_SHARING}
-  ^\s+IP\s+interface\s+statistics\s+last\s+reset:
+  ^\s+(ip|IP)\s+interface\s+statistics\s+last\s+reset:
   ^\s+IP\s+interface\s+software\s+stats:
   ^\s+Unicast\s+packets\s+:\s+\d+\/\d+\/\d+\/\d+\/\d+
   ^\s+Unicast\s+bytes\s+:\s+\d+\/\d+\/\d+\/\d+\/\d+
@@ -52,8 +63,56 @@ Start
   ^\s+Broadcast\s+bytes\s+:\s+\d+\/\d+\/\d+\/\d+\/\d+
   ^\s+Labeled\s+packets\s+:\s+\d+\/\d+\/\d+\/\d+\/\d+
   ^\s+Labeled\s+bytes\s+:\s+\d+\/\d+\/\d+\/\d+\/\d+
+  ^\s+IP\s+outbound\s+access\s+list:\s+${ACL_OUT}
+  ^\s+IP\s+unnumbered\s+interface\s+\(${UNNUMBERED_PARENT_INTF}\)
+  ^\s*Unnumbered\s+interfaces\s+of -> UNNUMBERED
   ^\s+WCCP\s+Redirect\s+outbound:\s+${WCCP_REDIRECT_OUTBOUND}
   ^\s+WCCP\s+Redirect\s+inbound:\s+${WCCP_REDIRECT_INBOUND}
   ^\s+WCCP\s+Redirect\s+exclude:\s+${WCCP_REDIRECT_EXCLUDE} -> Record
   ^\s*$$
   ^. -> Error
+
+MULTICAST
+  ^\s+${MULTICAST_GROUPS}\s*$$ -> Start
+  ^\s+(?:\S+\s+){0}${MULTICAST_GROUPS} -> Continue
+  ^\s+(?:\S+\s+){1}${MULTICAST_GROUPS} -> Continue
+  ^\s+(?:\S+\s+){2}${MULTICAST_GROUPS} -> Continue
+  ^\s+(?:\S+\s+){3}${MULTICAST_GROUPS} -> Continue
+  ^\s+(?:\S+\s+){4}${MULTICAST_GROUPS} -> Continue
+  ^\s+(?:\S+\s+){5}${MULTICAST_GROUPS} -> Continue
+  ^\s+(?:\S+\s+){6}${MULTICAST_GROUPS} -> Continue
+  ^\s+(?:\S+\s+){7}${MULTICAST_GROUPS} -> Continue
+  ^\s+(?:\S+\s+){8}${MULTICAST_GROUPS} -> Continue
+  ^\s+(?:\S+\s+){9}${MULTICAST_GROUPS} -> Continue
+  ^\s+(?:\S+\s+){10}${MULTICAST_GROUPS} -> Continue
+  ^.* -> Start
+  ^. -> Error
+
+UNNUMBERED
+  ^\s*${UNNUMBERED_CHILD_INTFS}:\s*$$ -> Continue
+  ^(?:\S+\s+){0}${UNNUMBERED_CHILD_INTFS}: -> Continue
+  ^(?:\S+\s+){1}${UNNUMBERED_CHILD_INTFS}: -> Continue
+  ^(?:\S+\s+){2}${UNNUMBERED_CHILD_INTFS}: -> Continue
+  ^(?:\S+\s+){3}${UNNUMBERED_CHILD_INTFS}: -> Continue
+  ^(?:\S+\s+){4}${UNNUMBERED_CHILD_INTFS}: -> Continue
+  ^(?:\S+\s+){5}${UNNUMBERED_CHILD_INTFS}: -> Continue
+  ^(?:\S+\s+){6}${UNNUMBERED_CHILD_INTFS}: -> Continue
+  ^(?:\S+\s+){7}${UNNUMBERED_CHILD_INTFS}: -> Continue
+  ^(?:\S+\s+){8}${UNNUMBERED_CHILD_INTFS}: -> Continue
+  ^(?:\S+\s+){9}${UNNUMBERED_CHILD_INTFS}: -> Continue
+  ^(?:\S+\s+){10}${UNNUMBERED_CHILD_INTFS}: -> Continue
+  ^(?:\S+\s+){11}${UNNUMBERED_CHILD_INTFS}: -> Continue
+  ^(?:\S+\s+){12}${UNNUMBERED_CHILD_INTFS}: -> Continue
+  ^(?:\S+\s+){13}${UNNUMBERED_CHILD_INTFS}: -> Continue
+  ^(?:\S+\s+){14}${UNNUMBERED_CHILD_INTFS}: -> Continue
+  ^(?:\S+\s+){15}${UNNUMBERED_CHILD_INTFS}: -> Continue
+  ^(?:\S+\s+){16}${UNNUMBERED_CHILD_INTFS}: -> Continue
+  ^(?:\S+\s+){17}${UNNUMBERED_CHILD_INTFS}: -> Continue
+  ^(?:\S+\s+){18}${UNNUMBERED_CHILD_INTFS}: -> Continue
+  ^(?:\S+\s+){19}${UNNUMBERED_CHILD_INTFS}: -> Continue
+  ^(?:\S+\s+){20}${UNNUMBERED_CHILD_INTFS}: -> Continue
+  ^.* -> Start
+  ^. -> Error
+
+
+EOF
