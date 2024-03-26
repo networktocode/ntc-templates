@@ -33,7 +33,13 @@ alcatel_sros_oam_mac-ping.textfsm, .*, alcatel_sros, oam mac-pi[[ng]]
 alcatel_sros_show_port.textfsm, .*, alcatel_sros, show port
 alcatel_sros_show_lag.textfsm, .*, alcatel_sros, show lag
 
+allied_telesis_awplus_show_lldp_neighbors_detail.textfsm, .*, allied_telesis_awplus, sh[[ow]] ll[[dp]] n[[eighbors]] d[[etail]]
 allied_telesis_awplus_show_interface_switchport.textfsm, .*, allied_telesis_awplus, sh[[ow]] in[[terface]] s[[witchport]]
+allied_telesis_awplus_show_static-channel-group.textfsm, .*, allied_telesis_awplus, sh[[ow]] st[[atic-channel-group]]
+allied_telesis_awplus_show_mac_address-table.textfsm, .*, allied_telesis_awplus, sh[[ow]] mac a[[ddress-table]]
+allied_telesis_awplus_show_ip_route.textfsm, .*, allied_telesis_awplus, sh[[ow]] ip ro[[ute]]
+allied_telesis_awplus_show_vlan_all.textfsm, .*, allied_telesis_awplus, sh[[ow]] vl[[an]] al[[l]]
+allied_telesis_awplus_show_system.textfsm, .*, allied_telesis_awplus, sh[[ow]] sy[[stem]]
 
 arista_eos_show_mac_security_participants_detail.textfsm, .*, arista_eos, sh[[ow]] ma[[c]] secu[[rity]] part[[icipants]] det[[ail]]
 arista_eos_show_interfaces_transceiver_detail.textfsm, .*, arista_eos, sh[[ow]] inte[[rfaces]] tr[[ansceiver]] de[[tail]]
@@ -482,7 +488,7 @@ cisco_xr_show_interface_brief.textfsm, .*, cisco_xr, sh[[ow]] int[[erface]] br[[
 cisco_xr_admin_show_platform.textfsm, .*, cisco_xr, adm[[in]] sh[[ow]] pla[[tform]]
 cisco_xr_show_install_active.textfsm, .*, cisco_xr, sh[[ow]] install active
 cisco_xr_show_ip_bgp_summary.textfsm, .*, cisco_xr, sh[[ow]] ip b[[gp]] s[[ummary]]
-cisco_xr_show_ipv4_interface.textfsm, .*, cisco_xr, sh[[ow]] ipv4 int[[erface]]
+cisco_xr_show_ipv4_interface.textfsm, .*, cisco_xr, sh[[ow]] ip[[v4]] int[[erface]]
 cisco_xr_show_ipv6_neighbors.textfsm, .*, cisco_xr, sh[[ow]] ipv6 ne[[ighbors]]
 cisco_xr_show_isis_neighbors.textfsm, .*, cisco_xr, sh[[ow]] isis ne[[ighbors]]
 cisco_xr_show_lldp_neighbors.textfsm, .*, cisco_xr, sh[[ow]] lld[[p]] neig[[hbors]]
