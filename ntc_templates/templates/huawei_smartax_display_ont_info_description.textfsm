@@ -1,0 +1,14 @@
+Value Required FSP (\w+\/\s\w+\/\w+)
+Value Key ONT_ID (\d+)
+Value DESCRIPTION (\S+)
+
+
+Start
+  ^\s+F\/S\/P\s+ONT\s+Description -> Descriptions
+
+Descriptions
+  ^\s+ID
+  ^\s+-
+  ^\s+${FSP}\s+${ONT_ID}\s+${DESCRIPTION} -> Record
+  ^\s+In\s+port\s+\w+\/\s\w+\/\w+\s+,\s+the\s+total\s+of\s+ONTs\s+are:\s+\d+,\s+online:\s+\d+ -> EOF
+  ^. -> Error
