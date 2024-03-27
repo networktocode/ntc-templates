@@ -103,3 +103,23 @@ BGP is operating in STANDALONE mode.
 
 Process       RcvTblVer   bRIB/RIB   LabelVer  ImportVer  SendTblVer  StandbyVer
 Speaker        31259922   31259922   31259922   31259922    31259922    31259922
+
+
+VRF: vrf-test
+-------------
+BGP VRF vrf-test, state: Active
+BGP Route Distinguisher: 65000:42
+VRF ID: 0x60000003
+BGP router identifier 0.0.0.0, local AS number 65000
+Non-stop routing is enabled
+BGP table state: Active
+Table ID: 0xe0000012   RD version: 0
+BGP main routing table version 1
+BGP NSR Initial initsync version 0 (Not Reached)
+BGP NSR/ISSU Sync-Group versions 0/0
+
+BGP is operating in STANDALONE mode.
+
+
+Process       RcvTblVer   bRIB/RIB   LabelVer  ImportVer  SendTblVer  StandbyVer
+Speaker               1          1          0          0           1           0

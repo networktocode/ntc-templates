@@ -1,4 +1,5 @@
 """Tests to check the order of the index file."""
+
 import re
 
 from tests import load_index_data
@@ -8,6 +9,7 @@ OS_CHOICES = [
     "a10",
     "alcatel_aos",
     "alcatel_sros",
+    "allied_telesis_awplus",
     "arista_eos",
     "aruba_aoscx",
     "aruba_os",
@@ -25,6 +27,7 @@ OS_CHOICES = [
     "cisco_asa",
     "cisco_ftd",
     "cisco_ios",
+    "cisco_nvfis",
     "cisco_nxos",
     "cisco_s300",
     "cisco_wlc",
@@ -33,6 +36,7 @@ OS_CHOICES = [
     "dell_force10",
     "dell_powerconnect",
     "dlink_ds",
+    "eltex",
     "enterasys",
     "ericsson_ipos",
     "extreme",
@@ -40,6 +44,7 @@ OS_CHOICES = [
     "fortinet",
     "hp_comware",
     "hp_procurve",
+    "huawei_smartax",
     "huawei_vrp",
     "ipinfusion_ocnos",
     "juniper_junos",

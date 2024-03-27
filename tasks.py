@@ -1,13 +1,36 @@
 """Tasks for use with Invoke."""
+
 import os
 import sys
-from distutils.util import strtobool
 from invoke import task
 
 try:
     import toml
 except ImportError:
     sys.exit("Please make sure to `pip install toml` or enable the Poetry shell and run `poetry install`.")
+
+
+def strtobool(val: str) -> bool:
+    """Convert a string representation of truth to true (1) or false (0).
+
+    Args:
+        val (str): String representation of truth.
+
+    Returns:
+        bool: True or False
+    """
+    val = val.lower()
+
+    # Check for valid truth values
+    if val in ("y", "yes", "t", "true", "on", "1"):
+        return True
+
+    # Check for valid false values
+    if val in ("n", "no", "f", "false", "off", "0"):
+        return False
+
+    # Raise error if not valid truth value
+    raise ValueError(f"Invalid truth value {val}")
 
 
 def is_truthy(arg):
@@ -30,7 +53,7 @@ PYPROJECT_CONFIG = toml.load("pyproject.toml")
 TOOL_CONFIG = PYPROJECT_CONFIG["tool"]["poetry"]
 
 # Can be set to a separate Python version to be used for launching or building image
-PYTHON_VER = os.getenv("PYTHON_VER", "3.7")
+PYTHON_VER = os.getenv("PYTHON_VER", "3.9")
 # Name of the docker image/image
 IMAGE_NAME = os.getenv("IMAGE_NAME", TOOL_CONFIG["name"])
 # Tag for the image
@@ -129,8 +152,8 @@ def flake8(context, local=INVOKE_LOCAL):
 
 @task(help={"local": "Run locally or within the Docker container"})
 def pylint(context, local=INVOKE_LOCAL):
-    """Run pylint code analysis."""
-    exec_cmd = 'find . -name "*.py" | xargs pylint'
+    """Run pylint code analysis excluding .venv directory."""
+    exec_cmd = 'find . -name "*.py" -not -path "./.venv/*" | xargs pylint'
     run_cmd(context, exec_cmd, local)
 
 
