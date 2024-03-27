@@ -1,0 +1,14 @@
+Value Key NETWORK_SERVICE (\S+)
+Value PORT (\d+)
+Value STATE (enable|disable)
+
+Start
+  ^\s*--+
+  ^\s*Network\s*service\s*Port\s*State
+  ^\s*--+
+  ^\s*${NETWORK_SERVICE}\s+${PORT}\s+${STATE} -> Record
+  ^\s*${NETWORK_SERVICE}\s+-+\s+${STATE} -> Record
+  ^\s*${NETWORK_SERVICE}\s+${PORT}+\s-+ -> Record
+  ^\s*${NETWORK_SERVICE}\s+-+\s+-+ -> Record
+  ^\s*$$ -> EOF
+  ^. -> Error

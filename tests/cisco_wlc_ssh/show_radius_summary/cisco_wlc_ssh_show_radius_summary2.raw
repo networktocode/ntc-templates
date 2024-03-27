@@ -19,6 +19,8 @@ Authentication Servers
 
 Idx  Type  Server Address    Port    State     Tout  MgmtTout  RFC3576  IPSec - state/Profile Name/RadiusRegionString
 ---  ----  ----------------  ------  --------  ----  --------  -------  -------------------------------------------------------
+1    NM    10.255.255.11       1812    Disabled  5     5         Disabled  Disabled - /none
+2    NM    10.255.255.12       1812    Disabled  5     5         Disabled  Disabled - /none
 3  * NM    10.255.255.24       1812    Enabled   5     5         Disabled  Disabled - /none
 4  * NM    10.255.255.25       1812    Enabled   5     5         Disabled  Disabled - /none
 
@@ -26,5 +28,7 @@ Accounting Servers
 
 Idx  Type  Server Address    Port    State     Tout  MgmtTout  RFC3576  IPSec - state/Profile Name/RadiusRegionString
 ---  ----  ----------------  ------  --------  ----  --------  -------  -------------------------------------------------------
+1    N     10.255.255.11       1813    Disabled  5     5         N/A       Disabled - /none
+2    N     10.255.255.12       1813    Disabled  5     5         N/A       Disabled - /none
 3  * N     10.255.255.26       1813    Enabled   5     5         N/A       Disabled - /none
 4  * N     10.255.255.27       1813    Enabled   5     5         N/A       Disabled - /none

@@ -1,4 +1,5 @@
 """Tests to check the order of the index file."""
+
 import re
 
 from tests import load_index_data
@@ -8,6 +9,7 @@ OS_CHOICES = [
     "a10",
     "alcatel_aos",
     "alcatel_sros",
+    "allied_telesis_awplus",
     "arista_eos",
     "aruba_aoscx",
     "aruba_os",

@@ -1,0 +1,140 @@
+Value FSP (\d+\/\d+\/\d+)
+Value ONT_ID (\d+)
+Value CONTROL_FLAG (\w+)
+Value CONFIG_STATE (\w+)
+Value MATCH_STATE (\w+)
+Value DBA_TYPE (\w+)
+Value DISTANCE_M (\d+)
+Value LAST_DISTANCE_M (\d+)
+Value BATTERY_STATE (\w+\s*\w*)
+Value POWER_TYPE (\w+)
+Value MEMORY_OCCUPATION (\d+)
+Value CPU_OCCUPATION (\d+)
+Value TEMPERATURE (\d+\(\w\))
+Value AUTHENTIC_TYPE (\S+)
+Value SERIAL_NUMBER (\w+\s*\(*\S*\))
+Value MANAGEMENT_MODE (\w+)
+Value SOFTWARE_WORK_MODE (\w+)
+Value ISOLATION_STATE (\w+)
+Value IP_0_ADDRESS_MASK (\S+)
+Value IP_1_ADDRESS_MASK (\S+)
+Value DESCRIPTION (\S+)
+Value LAST_DOWN_CAUSE (\S+)
+Value LAST_UP_TIME (\w+\/\w+\/\w+\s\w+:\w+:\w+\+\w+:\w+)
+Value LAST_DOWN_TIME (\w+\/\w+\/\w+\s\w+:\w+:\w+\+\w+:\w+)
+Value LAST_DYING_GASP_TIME (\w+\/\w+\/\w+\s\w+:\w+:\w+\+\w+:\w+)
+Value LAST_RESTART_REASON (\w+)
+Value TYPE_C_SUPPORT (\w+\s*\w*)
+Value INTEROPERABILITY_MODE (\S+)
+Value POWER_REDUCTION_STATUS (\w+)
+Value FEC_UPSTREAM_STATE (\S+)
+Value VS_ID (\d+)
+Value VS_NAME (\S+)
+Value GLOBAL_ONT_ID (\d+)
+Value VOIP_CONFIGURE_METHOD (\w+)
+Value LINE_PROFILE_ID (\d+)
+Value LINE_PROFILE_NAME (\w+)
+Value FEC_UPSTREAM_SWITCH (\w+)
+Value OMCC_ENCRYPT_SWITCH (\w+)
+Value QOS_MODE (\w+)
+Value MAPPING_MODE (\w+)
+Value TR069_MANAGEMENT (\w+)
+Value TR069_IP_INDEX (\d+)
+Value SERVICE_PROFILE_ID (\d+)
+Value SERVICE_PROFILE_NAME (\w+)
+Value TDM_PORT_TYPE (\w+)
+Value TDM_SERVICE_TYPE (\w+)
+Value MAC_LEARNING_FUNCTION_SWITCH (\w+)
+Value ONT_TRANSPARENT_FUNCTION_SWITCH (\w+)
+Value RING_CHECK_SWITCH (\w+)
+Value RING_PORT_AUTO_SHUTDOWN (\w+)
+Value RING_DETECT_FREQUENCY (\w+\s\(\w*\))
+Value RING_RESUME_INTERVAL (\w+\s\(\w*\))
+Value RING_DETECT_PERIOD (\w+\s\(\w*\))
+Value MULTICAST_FORWARD_MODE (\w+)
+Value MULTICAST_FORWARD_VLAN (\w+)
+Value MULTICAST_MODE (\w+)
+Value UPSTREAM_IGMP_PACKET_FORWARD_MODE (\w+)
+Value UPSTREAM_IGMP_PACKET_FORWARD_VLAN (\w+)
+Value UPSTREAM_IGMP_PACKET_PRIORITY (\w+)
+Value NATIVE_VLAN_OPTION (\w+)
+Value UPSTREAM_PQ_COLOR_POLICY (\w+)
+Value DOWNSTREAM_PQ_COLOR_POLICY (\w+)
+Value MONITOR_LINK (\w+)
+Value MTU_BYTE (\w+)
+Value ALARM_POLICY_PROFILE_ID (\d+)
+Value ALARM_POLICY_PROFILE_NAME (\S+)
+Value TR069_SERVER_PROFILE_ID (\d+)
+Value TR069_SERVER_PROFILE_NAME (\S+)
+
+Start
+  ^\s+F/S/P\s+:\s+${FSP}
+  ^\s+ONT-ID\s+:\s+${ONT_ID}
+  ^\s+Control\s+flag\s+:\s+${CONTROL_FLAG}
+  ^\s+Config\s+state\s+:\s+${CONFIG_STATE}
+  ^\s+Match\s+state\s+:\s+${MATCH_STATE}
+  ^\s+DBA\s+type\s+:\s+${DBA_TYPE}
+  ^\s+ONT\s+distance\(m\)\s+:\s+${DISTANCE_M}
+  ^\s+ONT\s+last\s+distance\(m\)\s+:\s+${LAST_DISTANCE_M}
+  ^\s+ONT\s+battery\s+state\s+:\s+${BATTERY_STATE}
+  ^\s+ONT\s+power\s+type\s+:\s+${POWER_TYPE}
+  ^\s+Memory\s+occupation\s+:\s+${MEMORY_OCCUPATION}%
+  ^\s+CPU\s+occupation\s+:\s+${CPU_OCCUPATION}%
+  ^\s+Temperature\s+:\s+${TEMPERATURE}
+  ^\s+Authentic\s+type\s+:\s+${AUTHENTIC_TYPE}
+  ^\s+SN\s+:\s+${SERIAL_NUMBER}
+  ^\s+Management\s+mode\s+:\s+${MANAGEMENT_MODE}
+  ^\s+Software\s+work\s+mode\s+:\s+${SOFTWARE_WORK_MODE}
+  ^\s+Isolation\s+state\s+:\s+${ISOLATION_STATE}
+  ^\s+ONT\s+IP\s+0\s+address\/mask\s+:\s+${IP_0_ADDRESS_MASK}
+  ^\s+ONT\s+IP\s+1\s+address\/mask\s+:\s+${IP_1_ADDRESS_MASK}
+  ^\s+Description\s+:\s+${DESCRIPTION}
+  ^\s+Last\s+down\s+cause\s+:\s+${LAST_DOWN_CAUSE}
+  ^\s+Last\s+up\s+time\s+:\s+${LAST_UP_TIME}
+  ^\s+Last\s+down\s+time\s+:\s+${LAST_DOWN_TIME}
+  ^\s+Last\s+dying\s+gasp\s+time\s+:\s+${LAST_DYING_GASP_TIME}
+  ^\s+Last\s+restart\s+reason\s+:\s+${LAST_RESTART_REASON}
+  ^\s+Type\s+C\s+support\s+:\s+${TYPE_C_SUPPORT}
+  ^\s+Interoperability-mode\s+:\s+${INTEROPERABILITY_MODE}
+  ^\s+Power\s+reduction\s+status\s+:\s+${POWER_REDUCTION_STATUS}
+  ^\s+FEC\s+upstream\s+state\s+:\s+${FEC_UPSTREAM_STATE}
+  ^\s+VS-ID\s+:\s+${VS_ID}
+  ^\s+VS\s+name\s+:\s+${VS_NAME}
+  ^\s+Global\s+ONT-ID\s+:\s+${GLOBAL_ONT_ID}
+  ^\s+- -> Next
+  ^\s+VoIP\s+configure\s+method\s+:\s+${VOIP_CONFIGURE_METHOD}
+  ^\s+- -> Next
+  ^\s+Line\s+profile\s+ID\s+:\s+${LINE_PROFILE_ID}
+  ^\s+Line\s+profile\s+name\s+:\s+${LINE_PROFILE_NAME}
+  ^\s+- -> Next
+  ^\s+FEC\s+upstream\s+switch\s+:\s*${FEC_UPSTREAM_SWITCH}
+  ^\s+OMCC\s+encrypt\s+switch\s+:\s*${OMCC_ENCRYPT_SWITCH}
+  ^\s+Qos\s+mode\s+:\s*${QOS_MODE}
+  ^\s+Mapping\s+mode\s+:\s*${MAPPING_MODE}
+  ^\s+TR069\s+management\s+:\s*${TR069_MANAGEMENT}
+  ^\s+TR069\s+IP\s+index\s+:\s*${TR069_IP_INDEX}
+  ^\s+Service\s+profile\s+ID\s+:\s+${SERVICE_PROFILE_ID}
+  ^\s+Service\s+profile\s+name\s+:\s+${SERVICE_PROFILE_NAME}
+  ^\s+TDM\s+port\s+type\s+:\s+${TDM_PORT_TYPE}
+  ^\s+TDM\s+service\s+type\s+:\s+${TDM_SERVICE_TYPE}
+  ^\s+MAC\s+learning\s+function\s+switch\s+:\s+${MAC_LEARNING_FUNCTION_SWITCH}
+  ^\s+ONT\s+transparent\s+function\s+switch\s+:\s+${ONT_TRANSPARENT_FUNCTION_SWITCH}
+  ^\s+Ring\s+check\s+switch\s+:\s+${RING_CHECK_SWITCH}
+  ^\s+Ring\s+port\s+auto-shutdown\s+:\s+${RING_PORT_AUTO_SHUTDOWN}
+  ^\s+Ring\s+detect\s+frequency\s+:\s+${RING_RESUME_INTERVAL}
+  ^\s+Ring\s+resume\s+interval\s+:\s+${RING_DETECT_PERIOD}
+  ^ \s+Multicast\s+forward\s+mode\s+:\s+${MULTICAST_FORWARD_MODE}
+  ^\s+Multicast\s+forward\s+VLAN\s+:\s+${MULTICAST_FORWARD_VLAN}
+  ^\s+Multicast\s+mode\s+:\s+${MULTICAST_MODE}
+  ^\s+Upstream\s+IGMP\s+packet\s+forward\s+mode\s+:\s+${UPSTREAM_IGMP_PACKET_FORWARD_MODE}
+  ^\s+Upstream\s+IGMP\s+packet\s+forward\s+VLAN\s+:\s+${UPSTREAM_IGMP_PACKET_FORWARD_VLAN}
+  ^\s+Upstream\s+IGMP\s+packet\s+priority\s+:\s+${UPSTREAM_IGMP_PACKET_PRIORITY}
+  ^\s+Native\s+VLAN\s+option\s+:\s+${NATIVE_VLAN_OPTION}
+  ^\s+Upstream\s+PQ\s+color\s+policy\s+:\s+${UPSTREAM_PQ_COLOR_POLICY}
+  ^\s+Downstream\s+PQ\s+color\s+policy\s+:\s+${DOWNSTREAM_PQ_COLOR_POLICY}
+  ^\s+Monitor\s+link\s+:\s+${MONITOR_LINK}
+  ^\s+MTU\(byte\)\s+:\s+${MTU_BYTE}
+  ^\s+Alarm\s+policy\s+profile\s+ID\s+:\s+${ALARM_POLICY_PROFILE_ID}
+  ^\s+Alarm\s+policy\s+profile\s+name\s+:\s+${ALARM_POLICY_PROFILE_NAME}
+  ^\s+TR069\s+server\s+profile\s+ID\s+:\s+${TR069_SERVER_PROFILE_ID}
+  ^\s+TR069\s+server\s+profile\s+name\s+:\s+${TR069_SERVER_PROFILE_NAME}
