@@ -15,7 +15,7 @@ Data
   ^VLAN\s+ID:\s+\d+ -> Continue.Record
   ^VLAN\s+ID:\s+${VLAN_ID}
   ^\s+This\s+is\s+configured\s+as\s+native\s+Vlan\s+for\s+the\s+following\s+interface\(s\)\s+:\s*$$
-  ^\S+\s+Native-vlan\s+Tx-type:\s+\S+\s*$$
+  ^\S+(\s+Native-vlan\s+Tx-type:\s+\S+)?\s*$$
   ^\s+Protocols\s+Configured
   ^\s+IP\s+\d+\s+\d+
   ^\s+MPLS\s+\d+\s+\d+
