@@ -1,0 +1,24 @@
+Value INTERFACE_NAME (\S+)
+Value List IP_ADDRESS (\S+)
+Value List PFXSTATE (\S+)
+Value OPR_STATE_V4V6 (\S+)
+Value TYPE (\S+)
+Value PORT_SAP_ID (\S+)
+Value ADM_STATE (\S+)
+Value INTERFACE_QTY (\d+)
+
+Start
+  ^=+
+  ^Interface\s+Table
+  ^=+
+  ^Interface-Name\s+Adm\s+Opr\(v4/v6\)\s+Type\s+Port/SapId
+  ^\s+IP-Address\s+PfxState*$$
+  ^-*$$
+  ^${INTERFACE_NAME}\s+${ADM_STATE}\s+${OPR_STATE_V4V6}\s+${TYPE}\s+${PORT_SAP_ID}$$
+  ^\s+${IP_ADDRESS}\s+${PFXSTATE}$$
+  ^-+$$
+  ^Interfaces\s+:\s+${INTERFACE_QTY}$$
+  ^=*$$
+  ^(?:\.*)?
+  # Error out if raw data does not match any above rules.
+  ^.* -> Error "Could not parse line:"
