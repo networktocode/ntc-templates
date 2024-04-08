@@ -12,6 +12,10 @@ except ImportError:
     HAS_CLITABLE = False
 
 
+class ParsingException(Exception):
+    """Error that is raised when TextFSM hits an `Error` state."""
+
+
 def _get_template_dir():
     template_dir = os.environ.get("NTC_TEMPLATES_DIR")
     if template_dir is None:
@@ -57,9 +61,7 @@ https://github.com/google/textfsm/pull/82
         cli_table.ParseCmd(data, attrs)
         structured_data = _clitable_to_dict(cli_table)
     except clitable.CliTableError as err:
-        raise Exception(  # pylint: disable=broad-exception-raised
-            f'Unable to parse command "{command}" on platform {platform} - {str(err)}'
-        ) from err
+        raise ParsingException(f'Unable to parse command "{command}" on platform {platform} - {str(err)}') from err
         # Invalid or Missing template
         # module.fail_json(msg='parsing error', error=str(e))
         # rather than fail, fallback to return raw text
