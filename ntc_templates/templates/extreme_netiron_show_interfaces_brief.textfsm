@@ -1,13 +1,15 @@
-Value interface ([0-9\/velb]+)
-Value linkstate (Up|Disabled|Down)
-Value portstate ([a-zA-Z\/]+)
-Value duplex ([a-zA-Z\/]+)
-Value speed ([a-zA-Z0-9\/]+)
-Value trunkid (\d+|None)
-Value tagonly (Yes|No|N\/A)
-Value pvid (\d+|N\/A)
-Value priority ([a-zA-Z0-9\/]+)
-Value mac (\w+\.\w+\.\w+|N\/A)
+Value INTERFACE ([0-9\/velb]+)
+Value LINK_STATE (Up|Disabled|Down)
+Value PORT_STATE ([a-zA-Z\/-]+)
+Value DUPLEX ([a-zA-Z\/]+)
+Value SPEED ([a-zA-Z0-9\/]+)
+Value TRUNK_ID (\d+|None)
+Value TAG_ONLY (Yes|No|N\/A)
+Value PRIORITY ([a-zA-Z0-9\/]+)
+Value MAC_ADDRESS (\w+\.\w+\.\w+|N\/A)
 
 Start
-  ^${interface}\s+${linkstate}\s+${portstate}\s+${duplex}\s+${speed}\s+${trunkid}\s+${tagonly}\s+${priority}\s+${mac} -> Next.Record
+  ^${INTERFACE}\s+${LINK_STATE}\s+${PORT_STATE}\s+${DUPLEX}\s+${SPEED}\s+${TRUNK_ID}\s+${TAG_ONLY}\s+${PRIORITY}\s+${MAC_ADDRESS} -> Next.Record
+  ^Port\s+Link\s+Port-State\s+Dupl\s+Speed\s+Trunk\s+Tag\s+Priori\s+MAC\s+Name\s+Type\s*$$
+  ^\s*$$
+  ^. -> Error

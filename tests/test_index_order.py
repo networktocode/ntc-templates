@@ -40,6 +40,7 @@ OS_CHOICES = [
     "enterasys",
     "ericsson_ipos",
     "extreme_exos",
+    "extreme_netiron",
     "extreme_slx",
     "extreme_tierra",
     "f5_ltm",

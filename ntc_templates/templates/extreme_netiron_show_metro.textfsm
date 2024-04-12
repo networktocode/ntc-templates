@@ -1,31 +1,40 @@
-Value ringid (\d+)
-Value Required vlantype (\w+)
-Value ringname ([a-zA-Z0-9\-\"\ ]+)
-Value ringstate (enabled|disabled)
-Value ringrole (member|master)
-Value mastervlan (\d+)
-Value topogroup (\d+|not conf)
-Value hellotime (\d+)
-Value prefwingtime (\d+)
-Value port1interface ([0-9\/]+)
-Value port1role (primary|secondary)
-Value port1state (\w+)
-Value port1inttype (\w+)
-Value port2interface ([0-9\/]+)
-Value port2role (primary|secondary)
-Value port2state (\w+)
-Value port2inttype (\w+)
-Value rhpssent (\d+)
-Value rhpsrecvd (\d+)
-Value tcrbpdusrecvd (\d+)
-Value statechanges (\d+)
+Value RING_ID (\d+)
+Value Required VLAN_TYPE (\w+)
+Value RING_NAME ([a-zA-Z0-9\-\"\ ]+)
+Value RING_STATE (enabled|disabled)
+Value RING_ROLE (member|master)
+Value MASTER_VLAN (\d+)
+Value TOPOLOGY_GROUP (\d+|not conf)
+Value HELLO_TIME (\d+)
+Value PRE_FORWARDING_TIME (\d+)
+Value PORT1_INTERFACE ([0-9\/]+)
+Value PORT1_ROLE (primary|secondary)
+Value PORT1_STATE (\w+)
+Value PORT1_INTERFACE_TYPE (\w+)
+Value PORT2_INTERFACE ([0-9\/]+)
+Value PORT2_ROLE (primary|secondary)
+Value PORT2_STATE (\w+)
+Value PORT2_INTERFACE_TYPE (\w+)
+Value RHPS_SENT (\d+)
+Value RHPS_RECEIVED (\d+)
+Value TCR_BPDUS_RECEIVED (\d+)
+Value STATE_CHANGES (\d+)
 
 Start
-  ^Metro Ring ${ringid} - VLAN Type ${vlantype} -> Continue
-  ^Metro Ring ${ringid} - VLAN Type ${vlantype} - ${ringname}
-  ^\d+\s+${ringstate}\s+${ringrole}\s+${mastervlan}\s+${topogroup}\s+${hellotime}\s+${prefwingtime}
-  ^${rhpssent}\s+${rhpsrecvd}\s+${tcrbpdusrecvd}\s+${statechanges} -> Record
-  ^ethernet\s+${port1interface}\s+${port1role}\s+${port1state}\s+${port1inttype} -> PORT2
+  ^Metro\s+Ring\s+\d+\s+-\s+VLAN\s+Type\s+ -> Continue.Record
+  ^Metro Ring ${RING_ID} - VLAN Type ${VLAN_TYPE}( - ${RING_NAME})?
+  ^\d+\s+${RING_STATE}\s+${RING_ROLE}\s+${MASTER_VLAN}\s+${TOPOLOGY_GROUP}\s+${HELLO_TIME}\s+${PRE_FORWARDING_TIME}
+  ^${RHPS_SENT}\s+${RHPS_RECEIVED}\s+${TCR_BPDUS_RECEIVED}\s+${STATE_CHANGES}
+  ^ethernet\s+${PORT1_INTERFACE}\s+${PORT1_ROLE}\s+${PORT1_STATE}\s+${PORT1_INTERFACE_TYPE} -> PORT2
+  ^=+\s*$$
+  ^Ring\s+State\s+Ring\s+Master\s+Topo\s+Hello\s+Prefwing\s*$$
+  ^id\s+role\s+vlan\s+group\s+time\(ms\)\s+time\(ms\)\s*$$
+  ^Ring\s+interfaces\s+Interface\s+role\s+Interface\s+state\s+interface\s+type\s*$$
+  ^RHPs\s+sent\s+RHPs\s+rcvd\s+TC\s+rcvd\s+TC\s+sent\s+State\s+changes\s*$$
+  ^\s*$$
+  ^. -> Error
 
 PORT2
-  ^ethernet\s+${port2interface}\s+${port2role}\s+${port2state}\s+${port2inttype} -> Start
+  ^ethernet\s+${PORT2_INTERFACE}\s+${PORT2_ROLE}\s+${PORT2_STATE}\s+${PORT2_INTERFACE_TYPE} -> Start
+  ^\s*$$
+  ^. -> Error

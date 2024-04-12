@@ -1,12 +1,12 @@
 Value Filldown SYSTEM_MODE (\S+)
 Value Filldown CHASSIS_MODEL (\S+)
-Value Filldown CHASSIS_SLOTCOUNT (\S+)
-Value Filldown CHASSIS_SERIALNUMBER (\S+)
-Value Filldown CHASSIS_PARTNUMBER (\S+)
+Value Filldown CHASSIS_SLOT_COUNT (\S+)
+Value Filldown CHASSIS_SERIAL_NUMBER (\S+)
+Value Filldown CHASSIS_PART_NUMBER (\S+)
 Value SFM_MODEL (\S+)
 Value SFM_SLOT (\S+)
-Value SFM_SERIALNUMBER (\S+)
-Value SFM_PARTNUMBER (\S+)
+Value SFM_SERIAL_NUMBER (\S+)
+Value SFM_PART_NUMBER (\S+)
 Value SFM_FE1_TYPE (\S+)
 Value SFM_FE1_VERSION (\S+)
 Value SFM_FE2_TYPE (\S+)
@@ -18,9 +18,9 @@ Value SFM_FE4_VERSION (\S+)
 Value SFM_UPTIME ([\S\s]+)
 Value SLOT_NUMBER (\S+)
 Value SLOT_MODEL (\S+)
-Value MGMT_STATE (\S+)
-Value SLOT_SERIALNUMBER (\S+)
-Value SLOT_PARTNUMBER (\S+)
+Value MANAGEMENT_STATE (\S+)
+Value SLOT_SERIAL_NUMBER (\S+)
+Value SLOT_PART_NUMBER (\S+)
 Value SLOT_LICENSE (\S+)
 Value SLOT_LID (\S+)
 Value BOOT_VERSION (\S+)
@@ -38,15 +38,15 @@ Value IRONWARE_DATE ([\S\s]+)
 Value IRONWARE_LABEL (\S+)
 Value IRONWARE_SIZE (\S+)
 Value IRONWARE_LOCATION ([\S\s]+)
-Value List FPGA_BOARDID (\S+)
+Value List FPGA_BOARD_ID (\S+)
 Value List FPGA_TYPE (\S+)
 Value List FPGA_VERSION (\S+)
 Value List FPGA_MODE (NPB)
 Value List FPGA_TIMESTAMP ([\S\s]+)
-Value CPU_CLOCKSPEED (\S+)
+Value CPU_CLOCK_SPEED (\S+)
 Value CPU_MODEL ([\S\s]+)
 Value CPU_VERSION (\S+)
-Value CPU_BUSCLOCKSPEED (\S+)
+Value CPU_BUS_CLOCK_SPEED (\S+)
 Value BOOTFLASH_SIZE (\S+)
 Value BOOTFLASH_MODEL (\S+)
 Value CODEFLASH_SIZE (\S+)
@@ -58,8 +58,8 @@ Value SRAM_SIZE (\S+)
 Start
  ^[=]+ -> SLOT
  ^System Mode: ${SYSTEM_MODE}
- ^Chassis: ${CHASSIS_MODEL} ${CHASSIS_SLOTCOUNT}\-slot \(Serial #: ${CHASSIS_SERIALNUMBER},  Part #: ${CHASSIS_PARTNUMBER}\)
- ^${SFM_MODEL} Switch Fabric Module ${SFM_SLOT} \(Serial #: ${SFM_SERIALNUMBER},  Part #: ${SFM_PARTNUMBER}\)
+ ^Chassis: ${CHASSIS_MODEL} ${CHASSIS_SLOT_COUNT}\-slot \(Serial #: ${CHASSIS_SERIAL_NUMBER},  Part #: ${CHASSIS_PART_NUMBER}\)
+ ^${SFM_MODEL} Switch Fabric Module ${SFM_SLOT} \(Serial #: ${SFM_SERIAL_NUMBER},  Part #: ${SFM_PART_NUMBER}\)
  ^FE 1: Type ${SFM_FE1_TYPE},  Version ${SFM_FE1_VERSION}
  ^FE 2: Type ${SFM_FE2_TYPE},  Version ${SFM_FE2_VERSION}
  ^FE 3: Type ${SFM_FE3_TYPE},  Version ${SFM_FE3_VERSION}
@@ -70,14 +70,14 @@ Start
 
 SLOT
  ^All show version done -> Clearall Start 
- ^SL\s+${SLOT_NUMBER}\:\s+${SLOT_MODEL}\s+Management\s+Module\s+${MGMT_STATE}\s+\(Serial\s+\#\:\s+${SLOT_SERIALNUMBER},\s+Part\s+\#\:\s+${SLOT_PARTNUMBER}\):
- ^SL\s+${SLOT_NUMBER}\:\s+${SLOT_MODEL}\s+[\S\s]+\(Serial\s+\#\:\s+${SLOT_SERIALNUMBER},\s+Part\s+\#\:\s+${SLOT_PARTNUMBER}\)
+ ^SL\s+${SLOT_NUMBER}\:\s+${SLOT_MODEL}\s+Management\s+Module\s+${MANAGEMENT_STATE}\s+\(Serial\s+\#\:\s+${SLOT_SERIAL_NUMBER},\s+Part\s+\#\:\s+${SLOT_PART_NUMBER}\):
+ ^SL\s+${SLOT_NUMBER}\:\s+${SLOT_MODEL}\s+[\S\s]+\(Serial\s+\#\:\s+${SLOT_SERIAL_NUMBER},\s+Part\s+\#\:\s+${SLOT_PART_NUMBER}\)
  ^License: ${SLOT_LICENSE} \SLID: ${SLOT_LID}\S
  ^Boot\s+ -> BOOT
  ^Monitor\s+ -> MONITOR
  ^IronWare\s+ -> IRONWARE
  ^FPGA versions -> FPGA
- ^Board ID\s+:\s+${FPGA_BOARDID}\s+${FPGA_TYPE}\s+Revision\s+:\s+${FPGA_VERSION} -> FPGA
+ ^Board ID\s+:\s+${FPGA_BOARD_ID}\s+${FPGA_TYPE}\s+Revision\s+:\s+${FPGA_VERSION} -> FPGA
  ^\d+ MHz -> CPU
  ^[\S\s]+ uptime is [\S\s]+ -> Record Start
  ^\s*$$
@@ -86,15 +86,15 @@ SLOT
 FPGA
  ^Valid ${FPGA_TYPE} Version = ${FPGA_VERSION}( \S${FPGA_MODE}\S)*, Build Time = ${FPGA_TIMESTAMP}
  ^Valid ${FPGA_TYPE} Version = ${FPGA_VERSION}, Build Time = ${FPGA_TIMESTAMP}
- ^Board ID\s+:\s+${FPGA_BOARDID}\s+${FPGA_TYPE}\s+Revision\s+:\s+${FPGA_VERSION}
+ ^Board ID\s+:\s+${FPGA_BOARD_ID}\s+${FPGA_TYPE}\s+Revision\s+:\s+${FPGA_VERSION}
  ^MACXPP\d+G \d+
- ^${CPU_CLOCKSPEED} MHz ${CPU_MODEL} \Sversion ${CPU_VERSION}\S ${CPU_BUSCLOCKSPEED} MHz bus -> CPU
+ ^${CPU_CLOCK_SPEED} MHz ${CPU_MODEL} \Sversion ${CPU_VERSION}\S ${CPU_BUS_CLOCK_SPEED} MHz bus -> CPU
  ^\s*$$
  ^. -> Error
  
 CPU
  ^MACXPP\d+G \d+ 
- ^${CPU_CLOCKSPEED} MHz ${CPU_MODEL} \Sversion ${CPU_VERSION}\S ${CPU_BUSCLOCKSPEED} MHz bus
+ ^${CPU_CLOCK_SPEED} MHz ${CPU_MODEL} \Sversion ${CPU_VERSION}\S ${CPU_BUS_CLOCK_SPEED} MHz bus
  ^${BOOTFLASH_SIZE} KB Boot Flash \(${BOOTFLASH_MODEL}\), ${CODEFLASH_SIZE} MB Code Flash \(${CODEFLASH_MODEL}\)
  ^${DRAM} MB DRAM INSTALLED
  ^${DRAM_ADDRESSABLE} MB DRAM ADDRESSABLE -> SLOT

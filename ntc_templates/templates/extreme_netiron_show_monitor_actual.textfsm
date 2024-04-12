@@ -1,9 +1,11 @@
-Value monitoredport ([0-9\/]+)
-Value inputmirror ([0-9\/\(\)\ UM]+)
-Value outputmirror ([0-9\/\(\)\ UM]+)
+Value MONITORED_PORT ([0-9\/]+)
+Value INPUT_MIRROR ([0-9\/\(\)\ UM]+)
+Value OUTPUT_MIRROR ([0-9\/\(\)\ UM]+)
 
 Start
-  ^\w -> Continue.Record
-  ^Monitored Port ${monitoredport} -> Continue
-  ^\s+Input traffic mirrored to:\s+${inputmirror} -> Continue
-  ^\s+Output traffic mirrored to:\s+${outputmirror} -> Continue
+  ^Monitored\s+Port -> Continue.Record
+  ^Monitored\s+Port\s+${MONITORED_PORT}
+  ^\s+Input\s+traffic\s+mirrored\s+to:\s+${INPUT_MIRROR}
+  ^\s+Output\s+traffic\s+mirrored\s+to:\s+${OUTPUT_MIRROR}
+  ^\s*$$
+  ^. -> Error

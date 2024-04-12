@@ -1,12 +1,22 @@
-Value lagnameshort ([0-9\/\sA-Za-z\-\.]+)
-Value lagtype (dynamic|static)
-Value deployed (Y|N)
-Value trunkid (\d+)
-Value primaryinterface ([0-9\/]+)
-Value portlist ([eto0-9\/\s\r\n]+)
-Value portlistcont ([eto0-9\/\s\r\n]+)
+Value LAG_NAME_SHORT ([0-9\/\sA-Za-z\-\.]+?)
+Value LAG_TYPE (dynamic|static)
+Value DEPLOYED (Y|N)
+Value TRUNK_ID (\d+)
+Value PRIMARY_INTERFACE ([0-9\/]+)
+Value PORT_LIST ([eto0-9\/\s\r\n]+)
+Value PORT_LIST_CONTINUED ([eto0-9\/\s\r\n]+)
 
 Start
+  ^Total\s+number\s+of
+  ^LACP\s+System\s+Priority
+  ^LACP\s+(Long|Short)\s+timeout
+  ^LAG\s+Type\s+Deploy\s+Trunk\s+Primary\s+Port\s+List\s*$$ -> Data
+  ^\s*$$
+  ^. -> Error
+
+Data
   ^\S -> Continue.Record
-  ^${lagnameshort}${lagtype}\s+${deployed}\s+${trunkid}\s+${primaryinterface}\s+${portlist}
-  ^\s+${portlistcont}
+  ^${LAG_NAME_SHORT}\s+${LAG_TYPE}\s+${DEPLOYED}\s+${TRUNK_ID}\s+${PRIMARY_INTERFACE}\s+${PORT_LIST}
+  ^\s+${PORT_LIST_CONTINUED}
+  ^\s*$$
+  ^. -> Error

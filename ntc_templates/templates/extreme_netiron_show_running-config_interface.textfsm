@@ -1,52 +1,65 @@
 Value INTERFACE_TYPE (.+?)
 Value Required INTERFACE (.+?)
-Value PORTNAME (.+?)
-Value QOSTOSTRUST ([a-z\-]+)
-Value QOSTOSMARK ([a-z\-]+)
-Value OSPFAREA (\d+)
-Value OSPFPASSIVE (.+?)
-Value OSPFCOST (\d+)
+Value PORT_NAME (.+?)
+Value QOS_TOS_TRUST ([a-z\-]+)
+Value QOS_TOS_MARK ([a-z\-]+)
+Value OSPF_AREA (\d+)
+Value OSPF_PASSIVE (.+?)
+Value OSPF_COST (\d+)
 Value VRF (.+?)
-Value IPPIMSPARSE (pim-sparse)
-Value IPROUTERISIS (isis)
-Value ISISMETRIC (\d+)
-Value List IPHELPERS (.+?)
-Value IPREDIRECT ([no]*)
-Value List IP_ADDR (\S+?)
-Value List IP_ADDR_CIDR (\d*)
-Value List IPV6_ADDR (\S+?)
-Value List IPV6_ADDR_CIDR (\d*)
+Value IP_PIM_SPARSE (pim-sparse)
+Value IP_ROUTER_ISIS (isis)
+Value ISIS_METRIC (\d+)
+Value List IP_HELPERS (.+?)
+Value IP_REDIRECT ([no]*)
+Value List IPV4_ADDRESS (\S+?)
+Value List IPV4_NETMASK (\d*)
+Value List IPV6_ADDRESS (\S+?)
+Value List IPV6_NETMASK (\d*)
 Value ADMIN_STATE (disable)
 Value ACL_IN (\S+)
 Value ACL_OUT (\S+)
 Value List VRID (\d+)
-Value List IP_ADDR_VRRPE (\S+)
+Value List IP_ADDRESS_VRRPE (\S+)
 
 
 Start
   ^interface -> Continue.Record
   ^interface\s+${INTERFACE_TYPE}\s+${INTERFACE}\s*$$
   ^\s+${ADMIN_STATE}\s*$$
-  ^\s+port-name\s+${PORTNAME}\s*$$
-  ^\s+qos-tos\s+trust\s+${QOSTOSTRUST}
-  ^\s+qos-tos\s+mark\s+${QOSTOSMARK}
-  ^\s+ip\s+ospf\s+area\s+${OSPFAREA}\s*$$
-  ^\s+ip\s+ospf\s+${OSPFPASSIVE}
-  ^\s+ip\s+ospf\s+cost\s+${OSPFCOST}
+  ^\s+port-name\s+${PORT_NAME}\s*$$
+  ^\s+qos-tos\s+trust\s+${QOS_TOS_TRUST}
+  ^\s+qos-tos\s+mark\s+${QOS_TOS_MARK}
+  ^\s+ip\s+ospf\s+area\s+${OSPF_AREA}\s*$$
+  ^\s+ip\s+ospf\s+${OSPF_PASSIVE}
+  ^\s+ip\s+ospf\s+cost\s+${OSPF_COST}
   ^\s+vrf\s+forwarding\s+${VRF}\s*$$
-  ^\s+ip\s+${IPPIMSPARSE}\s*$$
-  ^\s+ip\s+router\s+${IPROUTERISIS}
-  ^\s+isis\s+metric\s+${ISISMETRIC}\s*$$
-  ^\s+${IPREDIRECT}\s*ip\s+redirect
-  ^\s+ip\s+helper-address\s+${IPHELPERS}\s*$$
+  ^\s+ip\s+${IP_PIM_SPARSE}\s*$$
+  ^\s+ip\s+router\s+${IP_ROUTER_ISIS}
+  ^\s+isis\s+metric\s+${ISIS_METRIC}\s*$$
+  ^\s+${IP_REDIRECT}\s*ip\s+redirect
+  ^\s+ip\s+helper-address\s+${IP_HELPERS}\s*$$
   ^\s+ip\s+access-group\s+${ACL_IN}\s+in
   ^\s+ip\s+access-group\s+${ACL_OUT}\s+out
-  ^\s+ip\s+address\s+${IP_ADDR}/*${IP_ADDR_CIDR}\s*$$
-  ^\s+ipv6\s+address\s+${IPV6_ADDR}/*${IPV6_ADDR_CIDR}\s*$$
+  ^\s+ip\s+address\s+${IPV4_ADDRESS}/*${IPV4_NETMASK}\s*$$
+  ^\s+ipv6\s+address\s+${IPV6_ADDRESS}/*${IPV6_NETMASK}\s*$$
   ^\s+ip(?:v6|)\s+vrrp-extended\s+vrid\s+${VRID} -> VRRPEXTENDED
+  ^\s+ipv6\s+nd\s+suppress-ra
+  ^\s+ip\s+vrrp-extended\s+auth-type
+  ^\s*!
+  ^\s*$$
+  ^. -> Error
 
 VRRPEXTENDED
-  ^\s+ip(?:v6|)-address\s+${IP_ADDR_VRRPE}
+  ^\s+ip(?:v6|)-address\s+${IP_ADDRESS_VRRPE}
   ^\s+ip(?:v6|)\s+vrrp-extended\s+vrid\s+${VRID}
   ^interface -> Continue.Record
   ^interface\s+${INTERFACE_TYPE}\s+${INTERFACE}\s*$$ -> Start
+  ^\s+backup\s+priority
+  ^\s+advertise\s+backup
+  ^\s+(hello|dead)-interval
+  ^\s+track-port
+  ^\s+activate
+  ^\s*!
+  ^\s*$$
+  ^. -> Error

@@ -1,22 +1,33 @@
-Value mastervlan (\d+)
-Value instance (\d+)
-Value bridgeid ([0-9a-f]+)
-Value bridgemaxage (\d+)
-Value bridgehello (\d+)
-Value bridgefwddly (\d+)
-Value holdtime (\d+)
-Value lasttopochange (\d+)
-Value topochangecount (\d+)
-Value rootbridgeid ([0-9a-f]+)
-Value rootpathcost (\d+)
-Value designatedbridgeid ([0-9a-f]+)
-Value rootport ([0-9a-zA-Z]+)
-Value rbmaxage (\d+)
-Value rbhello (\d+)
-Value rbfwddly (\d+)
-Value portstates (\d+)
+Value MASTER_VLAN (\d+)
+Value INSTANCE (\d+)
+Value BRIDGE_ID ([0-9a-f]+)
+Value BRIDGE_MAX_AGE (\d+)
+Value BRIDGE_HELLO (\d+)
+Value BRIDGE_FORWARD_DELAY (\d+)
+Value HOLD_TIME (\d+)
+Value LAST_TOPOLOGY_CHANGE (\d+)
+Value TOPOLOGY_CHANGE_COUNT (\d+)
+Value ROOT_BRIDGE_ID ([0-9a-f]+)
+Value ROOT_PATH_COST (\d+)
+Value DESIGNATED_BRIDGE_ID ([0-9a-f]+)
+Value ROOT_PORT ([0-9a-zA-Z]+)
+Value ROOT_BRIDGE_MAX_AGE (\d+)
+Value ROOT_BRIDGE_HELLO (\d+)
+Value ROOT_BRIDGE_FORWARD_DELAY (\d+)
 
 Start
-  ^VLAN ${mastervlan} - STP instance ${instance}
-  ^${bridgeid}\s+${bridgemaxage}\s+${bridgehello}\s+${bridgefwddly}\s+${holdtime}\s+${lasttopochange}\s+${topochangecount}
-  ^${rootbridgeid}\s+${rootpathcost}\s+${designatedbridgeid}\s+${rootport}\s+${rbmaxage}\s+${rbhello}\s+${rbfwddly} -> Next.Record
+  ^VLAN ${MASTER_VLAN} - STP instance ${INSTANCE}
+  ^${BRIDGE_ID}\s+${BRIDGE_MAX_AGE}\s+${BRIDGE_HELLO}\s+${BRIDGE_FORWARD_DELAY}\s+${HOLD_TIME}\s+${LAST_TOPOLOGY_CHANGE}\s+${TOPOLOGY_CHANGE_COUNT}
+  ^${ROOT_BRIDGE_ID}\s+${ROOT_PATH_COST}\s+${DESIGNATED_BRIDGE_ID}\s+${ROOT_PORT}\s+${ROOT_BRIDGE_MAX_AGE}\s+${ROOT_BRIDGE_HELLO}\s+${ROOT_BRIDGE_FORWARD_DELAY} -> Next.Record
+  ^-+\s*$$
+  ^STP\s+(Bridge|Port)\s+Parameters:\s*$$
+  ^Bridge\s+Bridge\s+Bridge\s+Bridge\s+Hold\s+LastTopology\s+Topology\s*$$
+  ^Identifier\s+MaxAge\s+Hello\s+FwdDly\s+Time\s+Change\s+Change\s*$$
+  ^hex\s+sec\s+sec\s+sec\s+sec\s+sec\s+cnt\s*$$
+  ^RootBridge\s+RootPath\s+DesignatedBridge\s+Root\s+Max\s+Hel\s+Fwd\s*$$
+  ^Identifier\s+Cost\s+Identifier\s+Port\s+Age\s+lo\s+Dly\s*$$
+  ^hex\s+hex\s+sec\s+sec\s+sec\s*$$
+  ^Port\s+Prio\s+Path\s+State\s+Designat-\s+Designated\s+Designated\s*$$
+  ^Num\s+rity\s+Cost\s+ed\s+Cost\s+Root\s+Bridge\s*$$ -> End
+  ^\s*$$
+  ^. -> Error

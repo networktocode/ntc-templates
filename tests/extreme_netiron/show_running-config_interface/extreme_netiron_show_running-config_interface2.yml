@@ -5,42 +5,42 @@ parsed_sample:
     admin_state: "disable"
     interface: "2801"
     interface_type: "ve"
-    ip_addr:
+    ipv4_address:
       - "10.92.176.219"
       - "10.92.191.67"
       - "10.201.214.35"
       - "10.231.184.211"
       - "10.251.229.83"
-    ip_addr_cidr:
+    ipv4_netmask:
       - "29"
       - "26"
       - "28"
       - "28"
       - "28"
-    ip_addr_vrrpe:
+    ip_address_vrrpe:
       - "10.92.176.217"
       - "10.251.229.81"
       - "10.231.184.209"
       - "10.201.214.33"
       - "10.92.191.65"
       - "2001:2aaf:14:8::1"
-    iphelpers:
+    ip_helpers:
       - "10.0.113.10"
       - "10.0.113.20"
-    ippimsparse: ""
-    ipredirect: ""
-    iprouterisis: ""
-    ipv6_addr:
+    ip_pim_sparse: ""
+    ip_redirect: ""
+    ip_router_isis: ""
+    ipv6_address:
       - "2001:2aaf:14:8::3"
-    ipv6_addr_cidr:
+    ipv6_netmask:
       - "120"
-    isismetric: ""
-    ospfarea: ""
-    ospfcost: ""
-    ospfpassive: ""
-    portname: ""
-    qostosmark: ""
-    qostostrust: ""
+    isis_metric: ""
+    ospf_area: ""
+    ospf_cost: ""
+    ospf_passive: ""
+    port_name: ""
+    qos_tos_mark: ""
+    qos_tos_trust: ""
     vrf: ""
     vrid:
       - "1"
@@ -54,21 +54,21 @@ parsed_sample:
     admin_state: ""
     interface: "2802"
     interface_type: "ve"
-    ip_addr: []
-    ip_addr_cidr: []
-    ip_addr_vrrpe: []
-    iphelpers: []
-    ippimsparse: ""
-    ipredirect: ""
-    iprouterisis: ""
-    ipv6_addr: []
-    ipv6_addr_cidr: []
-    isismetric: ""
-    ospfarea: ""
-    ospfcost: ""
-    ospfpassive: ""
-    portname: ""
-    qostosmark: ""
-    qostostrust: ""
+    ipv4_address: []
+    ipv4_netmask: []
+    ip_address_vrrpe: []
+    ip_helpers: []
+    ip_pim_sparse: ""
+    ip_redirect: ""
+    ip_router_isis: ""
+    ipv6_address: []
+    ipv6_netmask: []
+    isis_metric: ""
+    ospf_area: ""
+    ospf_cost: ""
+    ospf_passive: ""
+    port_name: ""
+    qos_tos_mark: ""
+    qos_tos_trust: ""
     vrf: ""
     vrid: []

@@ -1,0 +1,31 @@
+---
+parsed_sample:
+  - interface_type: "ve"
+    interface: "1390"
+    port_name: "TA5000A.CLMAMOXI-VoIP"
+    qos_tos_trust: "ip-prec"
+    qos_tos_mark: ""
+    ospf_area: ""
+    ospf_passive: ""
+    ospf_cost: ""
+    vrf: "SocketVoIP"
+    ip_pim_sparse: ""
+    ip_router_isis: ""
+    isis_metric: ""
+    ip_helpers:
+      - "10.154.0.180"
+      - "10.154.0.181"
+    ip_redirect: "no"
+    ipv4_address:
+      - "10.192.0.129"
+      - "10.192.4.1"
+    ipv4_netmask:
+      - "27"
+      - "24"
+    ip_address_vrrpe: []
+    ipv6_address: []
+    ipv6_netmask: []
+    admin_state: ""
+    acl_in: ""
+    acl_out: ""
+    vrid: []

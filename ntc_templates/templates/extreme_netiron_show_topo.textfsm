@@ -1,20 +1,26 @@
-Value topogroup (\d+)
-Value topohwindex (\d+)
-Value mastervlan (\d+)
-Value l2proto (MRP|STP|RSTP|VSRP|ERP)
-Value vplsvlanpresent (TRUE|FALSE)
-Value membervlans ([0-9\ to]+)
-Value membergroup ([0-9a-zA-Z\/\ ]+)
-Value controlports ([0-9\ \/eto]+)
-Value freeports ([0-9\ \/eto]+)
+Value TOPOLOGY_GROUP (\d+)
+Value TOPOLOGY_HARDWARE_INDEX (\d+)
+Value MASTER_VLAN (\d+)
+Value L2_PROTOCOL (MRP|STP|RSTP|VSRP|ERP)
+Value VPLS_VLAN_PRESENT (TRUE|FALSE)
+Value MEMBER_VLANS ([0-9\ to]+)
+Value MEMBER_GROUP ([0-9a-zA-Z\/\ ]+)
+Value CONTROL_PORTS ([0-9\ \/eto]+)
 
 Start
-  ^Topology Group\s+${topogroup}
-  ^Topo HW Index\s+${topohwindex}
-  ^Master VLAN\s+:\s+${mastervlan}
-  ^L2 Protocol\s+:\s+${l2proto}
-  ^VPLS VLAN exist\s+:\s+${vplsvlanpresent}
-  ^Member VLAN\s+:\s+${membervlans}
-  ^Member Group\s+:\s+${membergroup}
-  ^Control Ports\s+:\s+${controlports}
-  ^Free -> Record
+  ^Topology\s+Group -> Continue.Record
+  ^Topology Group\s+${TOPOLOGY_GROUP}
+  ^Topo HW Index\s+${TOPOLOGY_HARDWARE_INDEX}
+  ^Master VLAN\s+:\s+${MASTER_VLAN}
+  ^L2 Protocol\s+:\s+${L2_PROTOCOL}
+  ^VPLS VLAN exist\s+:\s+${VPLS_VLAN_PRESENT}
+  ^Member VLAN\s+:\s+${MEMBER_VLANS}
+  ^Member Group\s+:\s+${MEMBER_GROUP}
+  ^Control Ports\s+:\s+${CONTROL_PORTS}
+  ^Free\s+Ports
+  ^=+\s*$$
+  ^VLAN:\s+\d+\s+-\s+
+  ^L2\s+Protocol\s+:
+  ^Control\s+Ports\s+:
+  ^\s*$$
+  ^. -> Error
