@@ -2,15 +2,15 @@ Value Key,Required ID (\d+)
 Value STATUS (\S+)
 Value RPM (\S+)
 Value PERCENTAGE (\S+)
-Value SPEEDLEVEL (\S+)
+Value SPEED_LEVEL (\S+)
 Value DIRECTION (\S+)
 
 Start
- ^Fan Information
- ^Id\s+Status\s+RPM\s+Percentage SpeedLevel\s+Direction   
- ^[\-]+
- ^${ID}\s+${STATUS}\s+${RPM}\s+${PERCENTAGE}\s+${SPEEDLEVEL}\s+${DIRECTION} -> Record
- ^FAN_DIR_F2B - Fan Airflow Direction is FrontToBack
- ^FanSpeedLevel[\S\s]+
- ^\s*$$
- ^. -> Error
+  ^Fan Information
+  ^Id\s+Status\s+RPM\s+Percentage SpeedLevel\s+Direction   
+  ^[\-]+
+  ^${ID}\s+${STATUS}\s+${RPM}\s+${PERCENTAGE}\s+${SPEED_LEVEL}\s+${DIRECTION} -> Record
+  ^FAN_DIR_F2B - Fan Airflow Direction is FrontToBack
+  ^FanSpeedLevel[\S\s]+
+  ^\s*$$
+  ^. -> Error

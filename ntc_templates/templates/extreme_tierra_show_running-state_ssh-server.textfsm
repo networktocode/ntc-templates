@@ -5,13 +5,13 @@ Value IDLE_TIMEOUT (\S+)
 Value List KEY ([\S\s]+)
 
 Start
- ^ssh-server
- ^\s+cipher\s+${CIPHER}
- ^\s+mac\s+${MAC}
- ^\s+key-exchange\s+${KEY_EXCHANGE}
- ^\s+idle-timeout\s+${IDLE_TIMEOUT}
- ^\s+key ${KEY}
- ^\s+key ${KEY}
- ^!
- ^\s*$$
- ^. -> Error
+  ^ssh-server
+  ^\s+cipher\s+${CIPHER}
+  ^\s+mac\s+${MAC}
+  ^\s+key-exchange\s+${KEY_EXCHANGE}
+  ^\s+idle-timeout\s+${IDLE_TIMEOUT}
+  ^\s+key ${KEY}
+  ^\s+key ${KEY}
+  ^!
+  ^\s*$$
+  ^. -> Error

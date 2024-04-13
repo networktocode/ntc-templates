@@ -18,25 +18,25 @@ Value STATE ([\w\-]+)
 Value RESTARTS ([\d]+)
 
 Start
- ^TierraOS Software
- ^Copyright \(c\) \d+ Extreme Networks Inc.
- ^Firmware Info: 
- ^\s*Current Firmware Version:\s+${CURRENT_FW_VERSION}
- ^\s*Rollback Firmware Version:\s+${ROLLBACK_FW_VERSION}
- ^\s*BMC Firmware Version:\s+${BMC_FW_VERSION}
- ^\s*FPGA Version:\s+v\s+${FPGA_VERSION}
- ^Is Current Firmware Committed:\s+${CURRENT_FW_COMMITTED}
- ^Rollback Version after Commit:\s+${ROLLBACK_FW_VERSION_AFTER_COMMIT}
- ^\s*Kernel:\s+${KERNEL}
- ^Switch Board CPLD Version:\s+${SWITCH_CPLD_VERSION}
- ^Fan Board CPLD Version:\s+${FAN_CPLD_VERSION}
- ^Power Board CPLD Version:\s+${POWER_CPLD_VERSION}
- ^FPGA Version:\s+v${FPGA_CPLD_VERSION}
- ^\s*System\s*Uptime:\s*${SYSTEM_UPTIME}
- ^MicroService Info:
- ^SERVICE\s+CURRENT\s+ROLLBACK\s+READY\s+STATE\s+RESTARTS  
- ^\s+VERSION\s+VERSION       
- ^[\-]+
- ^\s*${SERVICE_NAME}\s+${CURRENT}\s+${ROLLBACK}\s+${READY}\s+${STATE}\s+${RESTARTS} -> Record
- ^\s*$$
- ^. -> Error
+  ^TierraOS Software
+  ^Copyright \(c\) \d+ Extreme Networks Inc.
+  ^Firmware Info: 
+  ^\s*Current Firmware Version:\s+${CURRENT_FW_VERSION}
+  ^\s*Rollback Firmware Version:\s+${ROLLBACK_FW_VERSION}
+  ^\s*BMC Firmware Version:\s+${BMC_FW_VERSION}
+  ^\s*FPGA Version:\s+v\s+${FPGA_VERSION}
+  ^Is Current Firmware Committed:\s+${CURRENT_FW_COMMITTED}
+  ^Rollback Version after Commit:\s+${ROLLBACK_FW_VERSION_AFTER_COMMIT}
+  ^\s*Kernel:\s+${KERNEL}
+  ^Switch Board CPLD Version:\s+${SWITCH_CPLD_VERSION}
+  ^Fan Board CPLD Version:\s+${FAN_CPLD_VERSION}
+  ^Power Board CPLD Version:\s+${POWER_CPLD_VERSION}
+  ^FPGA Version:\s+v${FPGA_CPLD_VERSION}
+  ^\s*System\s*Uptime:\s*${SYSTEM_UPTIME}
+  ^MicroService Info:
+  ^SERVICE\s+CURRENT\s+ROLLBACK\s+READY\s+STATE\s+RESTARTS  
+  ^\s+VERSION\s+VERSION       
+  ^[\-]+
+  ^\s*${SERVICE_NAME}\s+${CURRENT}\s+${ROLLBACK}\s+${READY}\s+${STATE}\s+${RESTARTS} -> Record
+  ^\s*$$
+  ^. -> Error

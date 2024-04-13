@@ -6,9 +6,9 @@ Value STATE (\S+)
 Value RESTARTS (\S+)
 
 Start
- ^SERVICE\s+CURRENT\s+ROLLBACK\s+READY\s+STATE\s+RESTARTS
- ^\s*VERSION\s+VERSION
- ^[\-]+
- ^\s*${SERVICE_NAME}\s+${CURRENT}\s+${ROLLBACK}\s+${READY}\s+${STATE}\s+${RESTARTS} -> Record
- ^\s*$$
- ^. -> Error
+  ^SERVICE\s+CURRENT\s+ROLLBACK\s+READY\s+STATE\s+RESTARTS
+  ^\s*VERSION\s+VERSION
+  ^[\-]+
+  ^\s*${SERVICE_NAME}\s+${CURRENT}\s+${ROLLBACK}\s+${READY}\s+${STATE}\s+${RESTARTS} -> Record
+  ^\s*$$
+  ^. -> Error

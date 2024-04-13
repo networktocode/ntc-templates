@@ -4,9 +4,9 @@ Value COLOR (\S+)
 Value DESCRIPTION (\S+\s\S+\s\S+|\S+\s\S+|\S+)
 
 Start
- ^Led Information
- ^Id     State     Color     Description    
- ^[-]+
- ^${ID}\s+${STATE}\s+${COLOR}\s+${DESCRIPTION}\s* -> Record
- ^\s*$$
- ^. -> Error
+  ^Led Information
+  ^Id     State     Color     Description    
+  ^[-]+
+  ^${ID}\s+${STATE}\s+${COLOR}\s+${DESCRIPTION}\s* -> Record
+  ^\s*$$
+  ^. -> Error

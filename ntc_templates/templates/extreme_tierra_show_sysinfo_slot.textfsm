@@ -20,12 +20,11 @@ TABLE1_1FORMAT
   ^\s*$$
   ^. -> Error
 
-
 TABLE1_2FORMAT
   ^[\-]+
   ^${SLOT}\s+${STATE}\s+${FRU_TYPE}\s+${UPTIME}\s+${INSERTION_TIME}\s+${EXTRACTION_TIME}\s+${DESCRIPTION} -> Record
   ^${SLOT}\s+${STATE}\s+${FRU_TYPE}\s+${UPTIME}\s+${INSERTION_TIME}\s+${DESCRIPTION} -> Record
   ^${SLOT}\s+${STATE}\s+${FRU_TYPE}\s+${INSERTION_TIME}\s+${DESCRIPTION} -> Record
   ^${SLOT}\s+${STATE} -> Record
- ^\s*$$
- ^. -> Error
+  ^\s*$$
+  ^. -> Error

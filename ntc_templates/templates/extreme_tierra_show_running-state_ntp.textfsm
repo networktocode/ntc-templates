@@ -3,9 +3,9 @@ Value Required SERVER (\S+)
 Value Fillup PEER (\S+)
 
 Start
- ^ntp ${STATUS}$$
- ^ntp server ${SERVER} -> Record
- ^ntp peer ${PEER}
- ^!
- ^\s*$$
- ^. -> Error
+  ^ntp ${STATUS}$$
+  ^ntp server ${SERVER} -> Record
+  ^ntp peer ${PEER}
+  ^!
+  ^\s*$$
+  ^. -> Error

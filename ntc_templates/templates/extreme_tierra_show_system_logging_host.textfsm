@@ -5,8 +5,8 @@ Value TRANSPORT (\S+)
 Value SECURE_FORWARDING (\S+)
 
 Start
- ^HOSTNAME\s+ADDRESS\s+PORT\s+TRANSPORT\s+SECURE\-FORWARDING
- ^[=\s]+
- ^${HOSTNAME}\s+${ADDRESS}\s+${PORT}\s+${TRANSPORT}\s+${SECURE_FORWARDING} -> Record
- ^\s*$$
- ^. -> Error
+  ^HOSTNAME\s+ADDRESS\s+PORT\s+TRANSPORT\s+SECURE\-FORWARDING
+  ^[=\s]+
+  ^${HOSTNAME}\s+${ADDRESS}\s+${PORT}\s+${TRANSPORT}\s+${SECURE_FORWARDING} -> Record
+  ^\s*$$
+  ^. -> Error

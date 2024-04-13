@@ -9,15 +9,15 @@ Value List LOCKED_USERNAME (\w+)
 Value TOTAL_LOCKED_USERS (\S+)
 							
 Start
- ^Active user sessions:
- ^Username\s+Role\s+Host IP\s+Device\s+Time Logged In
- ^[=\s]+
- ^${ACTIVE_USERNAME}\s+${ACTIVE_ROLE}\s+${ACTIVE_HOST_IP}\s+${ACTIVE_DEVICE}\s+${ACTIVE_LOGIN_DATE} ${ACTIVE_LOGIN_TIME}
- ^Total number of active user sessions \: ${TOTAL_ACTIVE_USERS}
- ^Locked users:
- ^Username
- ^[-]+
- ^${LOCKED_USERNAME}$$
- ^Total number of locked users \: ${TOTAL_LOCKED_USERS}
- ^\s*$$
- ^. -> Error
+  ^Active user sessions:
+  ^Username\s+Role\s+Host IP\s+Device\s+Time Logged In
+  ^[=\s]+
+  ^${ACTIVE_USERNAME}\s+${ACTIVE_ROLE}\s+${ACTIVE_HOST_IP}\s+${ACTIVE_DEVICE}\s+${ACTIVE_LOGIN_DATE} ${ACTIVE_LOGIN_TIME}
+  ^Total number of active user sessions \: ${TOTAL_ACTIVE_USERS}
+  ^Locked users:
+  ^Username
+  ^[-]+
+  ^${LOCKED_USERNAME}$$
+  ^Total number of locked users \: ${TOTAL_LOCKED_USERS}
+  ^\s*$$
+  ^. -> Error
