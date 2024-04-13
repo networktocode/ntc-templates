@@ -1,9 +1,9 @@
 Value Filldown CHASSIS_NAME (\S+)
-Value Filldown SWITCHTYPE (\S+)
+Value Filldown SWITCH_TYPE (\S+)
 Value FRU_TYPE ([\S\s]+)
 Value FRU_UNIT (\S+)
 Value FRU_POWER_CONSUME_FACTOR (\S+)
-Value FRU_PARTNUM (\S+)
+Value FRU_PART_NUMBER (\S+)
 Value FRU_SERIAL (\S+)
 Value FRU_ID (\S+)
 Value FRU_MFG_DAY (\S+)
@@ -12,31 +12,28 @@ Value FRU_MFG_YEAR (\S+)
 Value FRU_UPDATE_DAY (\S+)
 Value FRU_UPDATE_MONTH (\S+)
 Value FRU_UPDATE_YEAR (\S+)
-Value FRU_TIMEAWAKE (\S+)
-Value FRU_TIMEALIVE (\S+)
+Value FRU_TIME_AWAKE (\S+)
+Value FRU_TIME_ALIVE (\S+)
 Value Fillup AIRFLOW ([\S\s]+)
 
 
-
-
-
 Start
- ^Chassis Name:\s+${CHASSIS_NAME}
- ^switchType: ${SWITCHTYPE}
- ^${FRU_TYPE}\s+Unit:\s+${FRU_UNIT} -> Fru
- ^Airflow direction : ${AIRFLOW}
- ^\s*$$
- ^. -> Error
+  ^Chassis Name:\s+${CHASSIS_NAME}
+  ^switchType: ${SWITCH_TYPE}
+  ^${FRU_TYPE}\s+Unit:\s+${FRU_UNIT} -> Fru
+  ^Airflow direction : ${AIRFLOW}
+  ^\s*$$
+  ^. -> Error
 
 Fru
- ^(Factory )?Part Num:\s+(\s|${FRU_PARTNUM})
- ^(Factory )?Serial Num:\s+(\s|${FRU_SERIAL})
- ^ID:\s+${FRU_ID}
- ^Power Consume Factor:   ${FRU_POWER_CONSUME_FACTOR}
- ^Manufacture:\s+Day:\s+${FRU_MFG_DAY}\s+Month:\s+${FRU_MFG_MONTH}\s+Year:\s+${FRU_MFG_YEAR}
- ^Update:\s+Day:\s+${FRU_UPDATE_DAY}\s+Month:\s+${FRU_UPDATE_MONTH}\s+Year:\s+${FRU_UPDATE_YEAR}
- ^Time Alive:\s+${FRU_TIMEALIVE} days
- ^Time Awake:\s+${FRU_TIMEAWAKE} days 
- ^\s* -> Record Start
- ^\s*$$
- ^. -> Error
+  ^(Factory )?Part Num:\s+(\s|${FRU_PART_NUMBER})
+  ^(Factory )?Serial Num:\s+(\s|${FRU_SERIAL})
+  ^ID:\s+${FRU_ID}
+  ^Power Consume Factor:   ${FRU_POWER_CONSUME_FACTOR}
+  ^Manufacture:\s+Day:\s+${FRU_MFG_DAY}\s+Month:\s+${FRU_MFG_MONTH}\s+Year:\s+${FRU_MFG_YEAR}
+  ^Update:\s+Day:\s+${FRU_UPDATE_DAY}\s+Month:\s+${FRU_UPDATE_MONTH}\s+Year:\s+${FRU_UPDATE_YEAR}
+  ^Time Alive:\s+${FRU_TIME_ALIVE} days
+  ^Time Awake:\s+${FRU_TIME_AWAKE} days 
+  ^\s* -> Record Start
+  ^\s*$$
+  ^. -> Error

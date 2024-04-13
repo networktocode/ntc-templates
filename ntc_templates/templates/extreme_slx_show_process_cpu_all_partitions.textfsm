@@ -9,17 +9,19 @@ Value CPU_SYSTEM ([\d\.]+)
 Value CPU_IOWAIT ([\d\.]+)
 
 Start
- ^Load Average: -> LOAD
- ^Total CPU -> CPU
+  ^Load Average: -> LOAD
+  ^Total CPU -> CPU
+  ^\s*$$
+  ^. -> Error
 
 LOAD
- ^Blade\s+1-min\s+5-min\s+15-min
- ^${LOAD_BLADE}:\s+${LOAD_1MIN}\s+${LOAD_5MIN}\s+${LOAD_15MIN} -> Record Start
- ^\s*$$
- ^. -> Error
+  ^Blade\s+1-min\s+5-min\s+15-min
+  ^${LOAD_BLADE}:\s+${LOAD_1MIN}\s+${LOAD_5MIN}\s+${LOAD_15MIN} -> Record Start
+  ^\s*$$
+  ^. -> Error
 
 CPU
- ^Blade\s+current\s+user\s+system\s+iowait
- ^${CPU_BLADE}:\s+${CPU_CURRENT}\s+${CPU_USER}\s+${CPU_SYSTEM}\s+${CPU_IOWAIT} -> Record
- ^\s*$$
- ^. -> Error
+  ^Blade\s+current\s+user\s+system\s+iowait
+  ^${CPU_BLADE}:\s+${CPU_CURRENT}\s+${CPU_USER}\s+${CPU_SYSTEM}\s+${CPU_IOWAIT} -> Record
+  ^\s*$$
+  ^. -> Error

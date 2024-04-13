@@ -17,35 +17,35 @@ Value List STATUS (\S+)
 
 
 Start
- ^SLX-OS Operating System Software
- ^SLX-OS Operating System Version: ${SLXOS_VERSION}
- ^Copyright [\S\s]+
- ^Firmware name:\s+${FIRMWARE}
- ^Build Time:\s+${BUILD_TIME}
- ^Install Time:\s+${INSTALL_TIME}
- ^Kernel:\s+${KERNEL}
- ^Host Version:\s+${HOST_VERSION}
- ^Host Kernel:\s+${HOST_KERNEL}
- ^Control Processor:\s+${CPU}
- ^System Uptime:\s+${UPTIME}
- ^Microcode Version:  ${MICROCODE}
- ^Memory Size:        System Total: ${MEMORY_SIZE} MB
- ^Slot\s+Name\s+Primary/Secondary Versions\s+Status -> Table1
- ^Name\s+Primary/Secondary Versions -> Table2
- ^[\-]+
- ^\s*$$
- ^. -> Error
+  ^SLX-OS Operating System Software
+  ^SLX-OS Operating System Version: ${SLXOS_VERSION}
+  ^Copyright [\S\s]+
+  ^Firmware name:\s+${FIRMWARE}
+  ^Build Time:\s+${BUILD_TIME}
+  ^Install Time:\s+${INSTALL_TIME}
+  ^Kernel:\s+${KERNEL}
+  ^Host Version:\s+${HOST_VERSION}
+  ^Host Kernel:\s+${HOST_KERNEL}
+  ^Control Processor:\s+${CPU}
+  ^System Uptime:\s+${UPTIME}
+  ^Microcode Version:  ${MICROCODE}
+  ^Memory Size:        System Total: ${MEMORY_SIZE} MB
+  ^Slot\s+Name\s+Primary/Secondary Versions\s+Status -> Table1
+  ^Name\s+Primary/Secondary Versions -> Table2
+  ^[\-]+
+  ^\s*$$
+  ^. -> Error
 
 Table1
- ^[\-]+
- ^${SLOT}\s+${NAME}\s+${PRIMARY}\s+${STATUS}
- ^\s+${SECONDARY} -> Record
- ^\s*$$
- ^. -> Error                                         
+  ^[\-]+
+  ^${SLOT}\s+${NAME}\s+${PRIMARY}\s+${STATUS}
+  ^\s+${SECONDARY} -> Record
+  ^\s*$$
+  ^. -> Error                                         
 
 Table2
- ^[\-]+
- ^${NAME}\s+${PRIMARY}
- ^\s+${SECONDARY} -> Record
- ^\s*$$
- ^. -> Error
+  ^[\-]+
+  ^${NAME}\s+${PRIMARY}
+  ^\s+${SECONDARY} -> Record
+  ^\s*$$
+  ^. -> Error
