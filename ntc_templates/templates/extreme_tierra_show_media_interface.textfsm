@@ -11,26 +11,26 @@ Value VENDOR ([\w\d\,\-]+)
 Value DESCRIPTION ([\S\s]+)
 Value CHANNELS (\d+)
 Value DATECODE (\d+)
-Value CHN_1_VOLTAGE (\S+)
-Value CHN_1_TEMPRATURE (\S+)
-Value CHN_1_RXPOWER (\S+)
-Value CHN_1_TXBIAS (\S+)
-Value CHN_1_TXPOWER (\S+)
-Value CHN_2_VOLTAGE (\S+)
-Value CHN_2_TEMPRATURE (\S+)
-Value CHN_2_RXPOWER (\S+)
-Value CHN_2_TXBIAS (\S+)
-Value CHN_2_TXPOWER (\S+)
-Value CHN_3_VOLTAGE (\S+)
-Value CHN_3_TEMPRATURE (\S+)
-Value CHN_3_RXPOWER (\S+)
-Value CHN_3_TXBIAS (\S+)
-Value CHN_3_TXPOWER (\S+)
-Value CHN_4_VOLTAGE (\S+)
-Value CHN_4_TEMPRATURE (\S+)
-Value CHN_4_RXPOWER (\S+)
-Value CHN_4_TXBIAS (\S+)
-Value CHN_4_TXPOWER (\S+)
+Value CHANNEL_1_VOLTAGE (\S+)
+Value CHANNEL_1_TEMPRATURE (\S+)
+Value CHANNEL_1_RXPOWER (\S+)
+Value CHANNEL_1_TXBIAS (\S+)
+Value CHANNEL_1_TXPOWER (\S+)
+Value CHANNEL_2_VOLTAGE (\S+)
+Value CHANNEL_2_TEMPRATURE (\S+)
+Value CHANNEL_2_RXPOWER (\S+)
+Value CHANNEL_2_TXBIAS (\S+)
+Value CHANNEL_2_TXPOWER (\S+)
+Value CHANNEL_3_VOLTAGE (\S+)
+Value CHANNEL_3_TEMPRATURE (\S+)
+Value CHANNEL_3_RXPOWER (\S+)
+Value CHANNEL_3_TXBIAS (\S+)
+Value CHANNEL_3_TXPOWER (\S+)
+Value CHANNEL_4_VOLTAGE (\S+)
+Value CHANNEL_4_TEMPRATURE (\S+)
+Value CHANNEL_4_RXPOWER (\S+)
+Value CHANNEL_4_TXBIAS (\S+)
+Value CHANNEL_4_TXPOWER (\S+)
 
 Start
  ^\s*Interface: -> Continue.Record
@@ -55,30 +55,37 @@ Start
  ^. -> Error
 
 CHNL1
- ^\s*Voltage:\s*${CHN_1_VOLTAGE}
- ^\s*Temperature:\s*${CHN_1_TEMPRATURE}
- ^\s*RxPower:\s*${CHN_1_RXPOWER}
- ^\s*TxBias:\s*${CHN_1_TXBIAS}
- ^\s*TxPower:\s*${CHN_1_TXPOWER} -> Start
+ ^\s*Voltage:\s*${CHANNEL_1_VOLTAGE}
+ ^\s*Temperature:\s*${CHANNEL_1_TEMPRATURE}
+ ^\s*RxPower:\s*${CHANNEL_1_RXPOWER}
+ ^\s*TxBias:\s*${CHANNEL_1_TXBIAS}
+ ^\s*TxPower:\s*${CHANNEL_1_TXPOWER} -> Start
+ ^\s*$$
+ ^. -> Error
 
 CHNL2
- ^\s*Voltage: ${CHN_2_VOLTAGE}
- ^\s*Temperature: ${CHN_2_TEMPRATURE}
- ^\s*RxPower: ${CHN_2_RXPOWER}
- ^\s*TxBias: ${CHN_2_TXBIAS}
- ^\s*TxPower: ${CHN_2_TXPOWER} -> Start
+ ^\s*Voltage: ${CHANNEL_2_VOLTAGE}
+ ^\s*Temperature: ${CHANNEL_2_TEMPRATURE}
+ ^\s*RxPower: ${CHANNEL_2_RXPOWER}
+ ^\s*TxBias: ${CHANNEL_2_TXBIAS}
+ ^\s*TxPower: ${CHANNEL_2_TXPOWER} -> Start
+ ^\s*$$
+ ^. -> Error
 
 CHNL3
- ^\s*Voltage: ${CHN_3_VOLTAGE}
- ^\s*Temperature: ${CHN_3_TEMPRATURE}
- ^\s*RxPower: ${CHN_3_RXPOWER}
- ^\s*TxBias: ${CHN_3_TXBIAS}
- ^\s*TxPower: ${CHN_3_TXPOWER} -> Start
+ ^\s*Voltage: ${CHANNEL_3_VOLTAGE}
+ ^\s*Temperature: ${CHANNEL_3_TEMPRATURE}
+ ^\s*RxPower: ${CHANNEL_3_RXPOWER}
+ ^\s*TxBias: ${CHANNEL_3_TXBIAS}
+ ^\s*TxPower: ${CHANNEL_3_TXPOWER} -> Start
+ ^\s*$$
+ ^. -> Error
 
 CHNL4
- ^\s*Voltage: ${CHN_4_VOLTAGE}
- ^\s*Temperature: ${CHN_4_TEMPRATURE}
- ^\s*RxPower: ${CHN_4_RXPOWER}
- ^\s*TxBias: ${CHN_4_TXBIAS}
- ^\s*TxPower: ${CHN_4_TXPOWER} -> Start
-
+ ^\s*Voltage: ${CHANNEL_4_VOLTAGE}
+ ^\s*Temperature: ${CHANNEL_4_TEMPRATURE}
+ ^\s*RxPower: ${CHANNEL_4_RXPOWER}
+ ^\s*TxBias: ${CHANNEL_4_TXBIAS}
+ ^\s*TxPower: ${CHANNEL_4_TXPOWER} -> Start
+ ^\s*$$
+ ^. -> Error

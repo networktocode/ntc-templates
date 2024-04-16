@@ -10,16 +10,16 @@ parsed_sample:
     tag: "0"
     age: "8m28s,"
     next_hop_group_id: "6"
-    ip_address_dest: ""
+    ip_address_destination: ""
     interface: ""
     mac_learn_interface: ""
-    protocol_ip_address_dest:
+    protocol_ip_address_destination:
       - "10.0.3.1"
     protocol_interface:
       - "ethernet 0/8,"
     protocol_mac_learn_interface:
       - "None"
-    resolved_ip_address_dest:
+    resolved_ip_address_destination:
       - "10.0.3.1"
     resolved_interface:
       - "ethernet 0/8,"

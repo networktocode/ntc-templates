@@ -4,7 +4,7 @@ parsed_sample:
     client: "10.42.150.39:53950"
     mode: "STREAM"
     path_count: "1"
-    keypath:
+    key_path:
       - "/interfaces/interface[name=*]/aggregation/state/lag-load-balance-method"
     subscription_mode:
       - "ON_CHANGE"
@@ -14,7 +14,7 @@ parsed_sample:
     client: "10.25.101.1"
     mode: "STREAM"
     path_count: "1"
-    keypath:
+    key_path:
       - "/pcap/files/file[name=*]"
     subscription_mode:
       - "ON_CHANGE"
@@ -24,7 +24,7 @@ parsed_sample:
     client: "10.25.101.1"
     mode: "STREAM"
     path_count: "5"
-    keypath:
+    key_path:
       - "/interfaces/interface[name=*]"
       - "/npb-policy-data-sets/npb-policy-data-set[owner=POLICY_OWNER_ROUTEMAP]/policy-stats"
       - "/npb-policy-data-sets/npb-policy-data-set[owner=POLICY_OWNER_LISTENERPOLICY]/policy-stats"
@@ -46,7 +46,7 @@ parsed_sample:
     client: "10.25.101.1"
     mode: "STREAM"
     path_count: "1"
-    keypath:
+    key_path:
       - "/components/component[name=*]"
     subscription_mode:
       - "ON_CHANGE"
@@ -56,7 +56,7 @@ parsed_sample:
     client: "10.42.150.61:53542"
     mode: "STREAM"
     path_count: "2"
-    keypath:
+    key_path:
       - "/interfaces/interface[name=management 0]/subinterfaces/subinterface[index=0]/ipv4/addresses"
       - "/interfaces/interface[name=management 0]/subinterfaces/subinterface[index=0]/ipv6/addresses"
     subscription_mode:
@@ -69,7 +69,7 @@ parsed_sample:
     client: "10.42.150.23:41348"
     mode: "STREAM"
     path_count: "1"
-    keypath:
+    key_path:
       - "/interfaces/interface[name=*]/state/oper-status"
     subscription_mode:
       - "ON_CHANGE"

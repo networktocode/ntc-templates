@@ -1,5 +1,5 @@
 Value RMAP_NAME (\S+)
-Value Key,Required SEQ_NUM (\d+)
+Value Key,Required SEQUENCE_NUMBER (\d+)
 Value FW_ACTION (permit|deny)
 Value IP_ACL_NAME (\S+)
 Value IP_ACL_STATE (\S+)
@@ -20,7 +20,7 @@ Value QOS_FORWARDING_GROUP (\S+)
 
 Start
  ^rout -> Continue.Record
- ^\s*route-map\s+${RMAP_NAME}\s+${SEQ_NUM} 
+ ^\s*route-map\s+${RMAP_NAME}\s+${SEQUENCE_NUMBER} 
  ^\s*forward-action\s+${FW_ACTION}
  ^\s*match\s+ip\s+access-list\s+${IP_ACL_NAME}\s+\(${IP_ACL_STATE}\)
  ^\s*match\s+ipv6\s+access-list\s+${IPV6_ACL_NAME}\s+\(${IPV6_ACL_STATE}\)

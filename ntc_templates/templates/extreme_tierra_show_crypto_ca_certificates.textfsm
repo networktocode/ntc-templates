@@ -1,12 +1,12 @@
-Value FINGERPRINT_HASH_METHOD (\S+)
-Value FINGERPRINT (\S+)
+Value FINGER_PRINT_HASH_METHOD (\S+)
+Value FINGER_PRINT (\S+)
 Value SUBJECT (\S+)
 Value ISSUER ([\S\s]+)
 Value NOT_BEFORE ([\S\s]+)
 Value NOT_AFTER ([\S\s]+)
 
 Start
- ^${FINGERPRINT_HASH_METHOD} Fingerprint=${FINGERPRINT}
+ ^${FINGER_PRINT_HASH_METHOD} Fingerprint=${FINGER_PRINT}
  ^\s*Subject: ${SUBJECT}
  ^\s*Issuer: ${ISSUER}
  ^\s*Not Before: ${NOT_BEFORE}

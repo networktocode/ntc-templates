@@ -4,8 +4,8 @@ Value SYSTEM_NUMBER (\S+)
 Value PART_NUMBER (\S+)
 Value SERIAL_NUMBER (\S+)
 Value VERSION (\S+)
-Value MFG ([\S\s]+)
-Value MFG_DATE ([\S\s]+)
+Value MANUFACTURER ([\S\s]+)
+Value MANUFACTURING_DATE ([\S\s]+)
 Value EC_VERSION (\S+)
 Value LC_CPLD_VERSION (\S+)
 
@@ -17,8 +17,8 @@ Start
  ^\s*PartNo\s+: ${PART_NUMBER}
  ^\s*SerialNo\s+: ${SERIAL_NUMBER}
  ^\s*Version\s+: ${VERSION}
- ^\s*Manufacturer\s+: ${MFG}
- ^\s*Mfg Date\s+: ${MFG_DATE}
+ ^\s*Manufacturer\s+: ${MANUFACTURER}
+ ^\s*Mfg Date\s+: ${MANUFACTURING_DATE}
  ^\s*ECVersion\s+: ${EC_VERSION}
  ^\s*LC CPLD Version\s+: ${LC_CPLD_VERSION}
  ^\s*$$

@@ -1,5 +1,5 @@
 Value LISTENER_POLICY_NAME (\S+)
-Value Required SEQ_NUM (\d+)
+Value Required SEQUENCE_NUMBER (\d+)
 Value DESCRIPTION ([\S\s]+)
 Value FW_ACTION (permit|deny)
 Value IP_ACL_NAME (\S+)
@@ -22,7 +22,7 @@ Value BIT_RATE (\d+)
 
 Start
  ^list -> Continue.Record
- ^listener\-policy\s+${LISTENER_POLICY_NAME}\s+${SEQ_NUM}
+ ^listener\-policy\s+${LISTENER_POLICY_NAME}\s+${SEQUENCE_NUMBER}
  ^\s*description\s+${DESCRIPTION}
  ^\s*forward\-action\s+${FW_ACTION}
  ^\s*match\s+ip\s+access-list\s+${IP_ACL_NAME}\s+\(${IP_ACL_STATE}\)

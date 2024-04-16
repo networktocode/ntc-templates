@@ -22,6 +22,10 @@ Start
 
 IPSUBNET1
  ^\s*via\s*${PROTOCOL_IP_ADDRESS}\s*,\s*${PROTOCOL_INTERFACE}\s*,\s*${PROTOCOL_MAC_LEARN_INTERFACE} -> Start
+ ^\s*$$
+ ^. -> Error
 
 IPSUBNET2
  ^\s*via\s*${RESOLVED_IP_ADDRESS}\s*,\s*${RESOLVED_INTERFACE}\s*,\s*${RESOLVED_MAC_LEARN_INTERFACE} -> Record
+ ^\s*$$
+ ^. -> Error

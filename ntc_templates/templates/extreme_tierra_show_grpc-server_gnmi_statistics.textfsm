@@ -2,20 +2,18 @@ Value Filldown ACTIVE_SUBCRIPTIONS (\d+)
 Value Key,Required CLIENT (\S+)
 Value MODE (\S+)
 Value PATH_COUNT (\S+)
-Value List KEYPATH ([\S\s]+\S+)
+Value List KEY_PATH (/.+?)
 Value List SUBSCRIPTION_MODE (\S+)
-Value List INTERVAL (\S+)
-
-
-
+Value List INTERVAL (\d+\S)
 
 Start
  ^\s*Number of active subscriptions:\s+${ACTIVE_SUBCRIPTIONS}
  ^Subscription Details:
+ ^Keypath\s+Subscription\s+Mode\s+Interval\s*$$
  ^Cli -> Continue.Record
  ^Client:${CLIENT}\s+Mode:${MODE}\s+Subscribed Path Count:${PATH_COUNT}                 
- ^Keypath\s+Subscription Mode\s+Interval            
+ ^_\s+Subscription Mode\s+Interval            
  ^[\-]+
- ^\s*${KEYPATH}\s+${SUBSCRIPTION_MODE}\s+${INTERVAL}
+ ^\s*${KEY_PATH}\s+${SUBSCRIPTION_MODE}\s+${INTERVAL}
  ^\s*$$
  ^. -> Error

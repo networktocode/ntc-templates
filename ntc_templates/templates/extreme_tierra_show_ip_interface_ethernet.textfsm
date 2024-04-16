@@ -1,17 +1,17 @@
 Value INTERFACE (\S+\s\S+|\w+)
 Value ADMIN_STATUS (\S+)
-Value OPER_STATUS (\S+)
-Value IPADDRESS_UNASSIGNED (Unassigned)
-Value List LINKLOCAL_ADDRESS ((fe80:[\d:\w]+\/\d+)|Unassigned)
+Value OPERATIONAL_STATUS (\S+)
+Value IP_ADDRESS_UNASSIGNED (Unassigned)
+Value List LINK_LOCAL_ADDRESS ((fe80:[\d:\w]+\/\d+)|Unassigned)
 Value List PRIMARY_ADDRESS ([\d\.:\/a-fA-F]+$) 
 Value List SECONDARY_ADDRESS ([\d\.:\/a-fA-F]+)
 Value VRF (\S+)
 
 Start
- ^Interface:\s+${INTERFACE}\s*Admin-status:${ADMIN_STATUS}\s*Oper-status\s*${OPER_STATUS}
+ ^Interface:\s+${INTERFACE}\s*Admin-status:${ADMIN_STATUS}\s*Oper-status\s*${OPERATIONAL_STATUS}
  ^Vrf:\s*(${VRF}|\s*)
- ^Addresses:\s*(${IPADDRESS_UNASSIGNED}|\s*)
- ^\s*${LINKLOCAL_ADDRESS}
+ ^Addresses:\s*(${IP_ADDRESS_UNASSIGNED}|\s*)
+ ^\s*${LINK_LOCAL_ADDRESS}
  ^\s+${PRIMARY_ADDRESS}
  ^\s+${SECONDARY_ADDRESS}\s+secondary
  ^\s*$$

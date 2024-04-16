@@ -2,9 +2,9 @@
 parsed_sample:
   - interface: "Eth 0/1:2"
     admin_status: "UP"
-    oper_status: ":UP"
-    ipaddress_unassigned: ""
-    linklocal_address: []
+    operational_status: ":UP"
+    ip_address_unassigned: ""
+    link_local_address: []
     primary_address:
       - "31.1.1.1/24"
     secondary_address: []

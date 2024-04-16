@@ -4,9 +4,6 @@ Value LAST_LOCAL_FAULT (NA|[\d\-]+T[\d:\w]+)
 Value REMOTE_FAULT_COUNT (\d+)
 Value LAST_REMOTE_FAULT (NA|[\d\-]+T[\d:\w]+)
 
-
-
-
 Start
  ^Port\s+Local\S+\s+Last\S+\s+Remote\S+\s+Last\S+
  ^[\s=]+ 

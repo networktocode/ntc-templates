@@ -9,7 +9,7 @@ Value LACP_TX_ERROR (\S+)
 Value LACP_UNKWN_ERROR (\S+)
 Value LACP_ERRORS (\S+)
 Value LOCAL_PORT (\S+\s\S+)
-Value MAC_ADDR (\S+)
+Value MAC_ADDRESS (\S+)
 Value SYSTEM_ID (\S+)
 Value PORT_ID ([\s\S]+)
 Value OPERATIONAL_KEY (\S+)
@@ -31,7 +31,7 @@ Start
  ^\s*LACP Tx errors: ${LACP_TX_ERROR}
  ^\s*LACP unknown errors: ${LACP_UNKWN_ERROR}
  ^\s*LACP errors: ${LACP_ERRORS}
- ^\s*Local Port: ${LOCAL_PORT}\s+MAC Address = ${MAC_ADDR}
+ ^\s*Local Port: ${LOCAL_PORT}\s+MAC Address = ${MAC_ADDRESS}
  ^\s*System Identifier = ${SYSTEM_ID}
  ^\s*Port Identifier = ${PORT_ID}
  ^\s*Operational key = ${OPERATIONAL_KEY}

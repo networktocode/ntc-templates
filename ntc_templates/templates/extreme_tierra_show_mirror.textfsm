@@ -7,3 +7,5 @@ Start
  ^\s*Name\s+:\s+${MIRROR_NAME}
  ^\s*Description\s+:\s+${DESCRIPTION}
  ^\s*Interface\s+:\s+${INTERFACE}
+ ^\s*$$
+ ^. -> Error

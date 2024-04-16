@@ -12,20 +12,20 @@ Value ACTIVE_MEMBER ([\s\S]+)
 Value MEMBERS ([\s\S]+)
 Value CARRIER_TRANSITION (\d+)
 Value LAST_CLEAR (\S+)
-Value RX_BROADCAST_PKTS (\d+)
-Value RX_DISCARD_PKTS (\d+)
-Value RX_ERRORS_PKTS (\d+)
+Value RX_BROADCAST_PACKETS (\d+)
+Value RX_DISCARD_PACKETS (\d+)
+Value RX_ERRORS_PACKETS (\d+)
 Value RX_FCS_ERRORS (\d+)
-Value RX_MCAST_PKTS (\d+)
+Value RX_MCAST_PACKETS (\d+)
 Value RX_OCTETS (\d+)
-Value RX_UCAST_PKTS (\d+)
+Value RX_UCAST_PACKETS (\d+)
 Value RX_UNKNOWN_PROTOCOLS (\d+)
-Value TX_BROADCAST_PKTS (\d+)
-Value TX_DISCARD_PKTS (\d+)
-Value TX_ERRORS_PKTS (\d+)
-Value TX_MCAST_PKTS (\d+)
+Value TX_BROADCAST_PACKETS (\d+)
+Value TX_DISCARD_PACKETS (\d+)
+Value TX_ERRORS_PACKETS (\d+)
+Value TX_MCAST_PACKETS (\d+)
 Value TX_OCTETS (\d+)
-Value TX_UCAST_PKTS (\d+)
+Value TX_UCAST_PACKETS (\d+)
 
 Start
   ^${INTERFACE}\s+is\s+${STATUS}
@@ -52,23 +52,23 @@ Statistics
   ^. -> Error
 
 Input
-  ^\s*Broadcast\s+\S+:\s+${RX_BROADCAST_PKTS}
-  ^\s*Discard\s+\S+:\s+${RX_DISCARD_PKTS}
-  ^\s*Errors\s+\S+:\s+${RX_ERRORS_PKTS}
+  ^\s*Broadcast\s+\S+:\s+${RX_BROADCAST_PACKETS}
+  ^\s*Discard\s+\S+:\s+${RX_DISCARD_PACKETS}
+  ^\s*Errors\s+\S+:\s+${RX_ERRORS_PACKETS}
   ^\s*FCS Errors:\s+${RX_FCS_ERRORS}
-  ^\s*MCast\s+\S+:\s+${RX_MCAST_PKTS}
+  ^\s*MCast\s+\S+:\s+${RX_MCAST_PACKETS}
   ^\s*Octets:\s+${RX_OCTETS}
-  ^\s*UCast\s+\S+:\s+${RX_UCAST_PKTS}
+  ^\s*UCast\s+\S+:\s+${RX_UCAST_PACKETS}
   ^\s*Unknown\s+Protocols:\s+${RX_UNKNOWN_PROTOCOLS} -> Start
   ^\s*$$
   ^. -> Error
 
 Out
-  ^\s*Broadcast\s+\S+:\s+${TX_BROADCAST_PKTS}
-  ^\s*Discard\s+\S+:\s+${TX_DISCARD_PKTS}
-  ^\s*Errors\s+\S+:\s+${TX_ERRORS_PKTS}
-  ^\s*MCast\s+\S+:\s+${TX_MCAST_PKTS}
+  ^\s*Broadcast\s+\S+:\s+${TX_BROADCAST_PACKETS}
+  ^\s*Discard\s+\S+:\s+${TX_DISCARD_PACKETS}
+  ^\s*Errors\s+\S+:\s+${TX_ERRORS_PACKETS}
+  ^\s*MCast\s+\S+:\s+${TX_MCAST_PACKETS}
   ^\s*Octets:\s+${TX_OCTETS}
-  ^\s*UCast\s+\S+:\s+${TX_UCAST_PKTS} -> Record Start
+  ^\s*UCast\s+\S+:\s+${TX_UCAST_PACKETS} -> Record Start
   ^\s*$$
   ^. -> Error

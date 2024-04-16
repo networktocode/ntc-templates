@@ -11,6 +11,8 @@ Value MAC_LEARN_INTERFACE ([\S*\,\s\S+\s+\S*]+)
 Start
  ^\s*Total number of \S+ routes:\s*${IP_ADDRESS_COUNT},\s*Max Routes:\s*${MAX_ROUTES}
  ^\'\[x\/y\]\' denotes \[preference\/metric\] -> ARP
+ ^\s*$$
+ ^. -> Error
 
 ARP
  ^\s*${IP_ADDRESS}\s*,\s+${ATTACHED_TYPE}\s*,\s+\[${PREFERENCE_METRIC}\s*\],\s*${TAG}\s*,\s*${AGE}

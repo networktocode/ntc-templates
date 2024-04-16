@@ -7,3 +7,5 @@ Start
  ^mirror ${MIRROR_NAME}
  ^\s*description ${DESCRIPTION}
  ^\s*set interface ${INTERFACE}
+ ^\s*$$
+ ^. -> Error

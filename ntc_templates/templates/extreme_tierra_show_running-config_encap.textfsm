@@ -1,9 +1,9 @@
 Value ENCAP_NAME (\S+)
 Value DESCRIPTION (\S+)
-Value DST_IPV4_ADDR (\S+)
-Value DST_MAC_ADDR (\S+)
-Value SRC_IPV4_ADDR (\S+)
-Value SRC_MAC_ADDR (\S+)
+Value DESTINATION_IPV4_ADDRESS (\S+)
+Value DESTINATION_MAC_ADDRESS (\S+)
+Value SOURCE_IPV4_ADDRESS (\S+)
+Value SOURCE_MAC_ADDRESS (\S+)
 Value ENCAP_TYPE (\S+)
 Value VLAN_ID (\S+)
 Value VLAN_PCP (\S+)
@@ -13,11 +13,11 @@ Start
  ^enc -> Continue.Record
  ^encap ${ENCAP_NAME}
  ^\s*description ${DESCRIPTION}
- ^\s*destination\-ipv4\-addr ${DST_IPV4_ADDR}
- ^\s*destination\-mac\-addr ${DST_MAC_ADDR}
+ ^\s*destination\-ipv4\-addr ${DESTINATION_IPV4_ADDRESS}
+ ^\s*destination\-mac\-addr ${DESTINATION_MAC_ADDRESS}
  ^\s*encap\-type ${ENCAP_TYPE} 
- ^\s*source\-ipv4\-addr ${SRC_IPV4_ADDR}
- ^\s*source\-mac\-addr ${SRC_MAC_ADDR}
+ ^\s*source\-ipv4\-addr ${SOURCE_IPV4_ADDRESS}
+ ^\s*source\-mac\-addr ${SOURCE_MAC_ADDRESS}
  ^\s*vlan\-id ${VLAN_ID}
  ^\s*vlan\-pcp ${VLAN_PCP}
  ^\s*$$
