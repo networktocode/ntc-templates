@@ -1,8 +1,9 @@
 Value Required DESTINATION (\S+)
 Value Required SENT_QTY (\d+)
 Value Required SUCCESS_QTY (\d+)
-Value Required LOSS_PCT (\S+)
+Value LOSS_PCT (\S+)
 Value RESPONSE_STREAM ([\.\!/U/Q]+)
+Value DUPLICATE_QTY (\d+)
 Value BOUNCE_QTY (\d+)
 Value RTT_AVG (\d+.\d+)
 Value RTT_MAX (\d+.\d+)
@@ -17,7 +18,7 @@ Start
   ^\.*$$
   ^\s*$$
   ^-+
-  ^${SENT_QTY}\s+packets\s+transmitted,(?:\s+${BOUNCE_QTY}\s+packets\s+bounced,)?\s+${SUCCESS_QTY}\s+packets\s+received,\s+${LOSS_PCT}%\s+packet\s+loss
+  ^${SENT_QTY}\s+packets\s+transmitted,(?:\s+${BOUNCE_QTY}\s+packets\s+bounced,)?\s+${SUCCESS_QTY}\s+packets\s+received,\s+(?:${DUPLICATE_QTY}\s+duplicate(?:s)?)?(?:${LOSS_PCT}%\s+packet\s+loss)?
   ^(?:round-trip\s+min\s+=\s+${RTT_MIN}ms,\s+avg\s+=\s+${RTT_AVG}ms,\s+max\s+=\s+${RTT_MAX}ms,\s+stddev\s+=\s+${STD_DEV}ms)?
   # Error out if raw data does not match any above rules.
   ^.* -> Error "Could not parse line:"
