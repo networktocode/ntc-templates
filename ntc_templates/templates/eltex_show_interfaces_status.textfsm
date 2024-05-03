@@ -18,6 +18,7 @@ Start
   ^\s*Port\s+Type\s+Duplex\s+Speed\s+Neg\s+ctrl\s+State\s+Pressure\s+Mode\s+Port\s+Mode\s*$$ -> Port10
   ^\s*Ch\s+BW\s+control\s+State\s+Port\s+Mode\s*$$ -> Ch5
   ^\s*Ch\s+Duplex\s+BW\s+Neg\s+control\s+State\s+Port\s+Mode\s*$$ -> Ch7
+  ^\s*Ch\s+Type\s+Duplex\s+Speed\s+Neg\s+control\s+State\s*$$ -> Ch7_v2
   ^\s*Ch\s+Type\s+Duplex\s+Speed\s+Neg\s+control\s+State\s+Port\s+Mode.*$$ -> Ch8
   ^\s*Oob\s+ -> Oob
   ^\s*nc\s+\(not\s+connected\)\s*:\s+The\s+interface\s+is\s+not\s+connected\.\s*$$
@@ -34,7 +35,7 @@ Port6
 
 Port11
   ^(?:\s*-+)+\s*$$
-  ^\s*${INTERFACE}\s+${TYPE}\s+${DUPLEX}\s+${SPEED}\s+${NEG}\s+${FLOW_CTRL}\s+${LINK_STATE}\s+${UP_TIME}\s+${BACK_PRESSURE}\s+${MDIX_MODE}\s+${INTERFACE_MODE}\s*$$ -> Record
+  ^\s*${INTERFACE}\s+${TYPE}\s+${DUPLEX}\s+${SPEED}\s+${NEG}\s+${FLOW_CTRL}\s+${LINK_STATE}\s+${UP_TIME}\s*${BACK_PRESSURE}\s+${MDIX_MODE}\s+${INTERFACE_MODE}\s*$$ -> Record
   ^\s*$$ -> Start
   ^. -> Error
 
@@ -53,6 +54,12 @@ Ch5
 Ch7
   ^(?:\s*-+)+\s*$$
   ^\s*${INTERFACE}\s+${DUPLEX}\s+${BW}\s+${NEG}\s+${FLOW_CTRL}\s+${LINK_STATE}\s+${INTERFACE_MODE}\s*$$ -> Record
+  ^\s*$$ -> Start
+  ^. -> Error
+
+Ch7_v2
+  ^(?:\s*-+)+\s*$$
+  ^\s*${INTERFACE}\s+${TYPE}\s+${DUPLEX}\s+${SPEED}\s+${NEG}\s+${FLOW_CTRL}\s+${LINK_STATE}\s*$$ -> Record
   ^\s*$$ -> Start
   ^. -> Error
 
