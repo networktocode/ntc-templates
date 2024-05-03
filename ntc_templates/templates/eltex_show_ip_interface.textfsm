@@ -31,6 +31,8 @@ Column4
   ^${IP}\s+${INTERFACE}\s+${TYPE}\s+${STATUS}\s*$$ -> Record
   # Skip wrapped lines
   ^\s+received\s*$$
+  ^\s+receiv\s*$$
+  ^\s+ed\s*$$
   ^\s*$$
   ^. -> Error
 
@@ -40,6 +42,8 @@ Column6
   ^${IP}\s+${INTERFACE}\s+${TYPE}\s+${DIRECTED_BROADCAST}\s+${PRECEDENCE}\s+${STATUS}\s*$$ -> Record
   # Skip wrapped lines
   ^\s+received\s*$$
+  ^\s+receiv\s*$$
+  ^\s+ed\s*$$
   ^\s*$$
   ^. -> Error
 
@@ -49,5 +53,7 @@ Column8
   ^${IP}\s+${INTERFACE}(?:\s+${INTERFACE_STATUS_ADMIN}/${INTERFACE_STATUS_OPER})?\s+${TYPE}\s+${DIRECTED_BROADCAST}\s+${PRECEDENCE}\s+${REDIRECT}\s+${STATUS}\s*$$ -> Record
   # Skip wrapped lines
   ^\s+received\s*$$
+  ^\s+receiv\s*$$
+  ^\s+ed\s*$$
   ^\s*$$
   ^. -> Error
