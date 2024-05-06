@@ -1,0 +1,31 @@
+Value Required SLOTPORT (\S+)
+Value OPERATIONAL_STATE (up|down)
+Value LAST_CHANGE ([\S\s]+)
+Value NUM_CHANGES (\d+)
+Value PORT_TYPE (\S+)
+Value TRANSCEIVER ([\s\S]+)
+Value MAC_ADDRESS ([\d\S]+)
+Value BANDWIDTH_MBPS ([\d\S]+)
+Value DUPLEX (\S+)
+Value AUTONEG (\d+)
+Value MTU (\d+)
+
+Start
+  ^\sSlot\/Port[\s\S]+:\s*$$ -> Continue.Record
+  ^\sSlot\/Port\s+${SLOTPORT}\s+:\s*$$
+  ^\s+Operational\sStatus\s+:\s${OPERATIONAL_STATE},[\s\S]+$$
+  ^\s+Last\sTime\sLink\sChanged\s: ${LAST_CHANGE}\s,$$
+  ^\s+Number\sof\sStatus\sChange:\s${NUM_CHANGES},$$
+  ^\s+Type\s+:\s${PORT_TYPE},$$
+  ^\s+SFP\/SFP\+\/XFP\s+:\s${TRANSCEIVER},$$
+  ^\s+MAC\saddress\s+:\s${MAC_ADDRESS},$$
+  ^\s+BandWidth\s\(Megabits\)\s+:\s+${BANDWIDTH_MBPS},.*Duplex\s+:\s*${DUPLEX},$$
+  ^\s+Autonegotiation\s+:\s+${AUTONEG}\s+\S[\s\S]+,$$
+  ^\s+Long\sFrame\sSize\(Bytes\)\s:\s${MTU},$$
+  ^\s+[R,T]x\s+:$$
+  ^\s+Bytes.*,$$
+  ^\s+Broadcast\sFrames:\s+.*,$$
+  ^\s+UnderSize\sFrames:\s+.*,$$
+  ^\s+Lost\sFrames.*,$$
+  ^.*Error\sFrames\s*:\s+.*$$
+  #^.*$$ -> Error
