@@ -7,7 +7,7 @@ Value NETMASK (\S+)
 Value PREFIX_LENGTH (\d+)
 Value START_IP (\S+)
 Value END_IP (\S+)
-
+Value FQDN ((v[46]\s+){0,1}\S+)
 
 Start
   ^object\s+network -> Continue.Record
@@ -18,4 +18,5 @@ Start
   ^\s+subnet\s+${NETWORK}\/${PREFIX_LENGTH}\s*
   ^\s+range\s+${START_IP}\s+${END_IP}\s*
   ^\s+host\s+${HOST}\s*
+  ^\s+fqdn\s+${FQDN}\s*
   ^. -> Error
