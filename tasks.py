@@ -79,14 +79,15 @@ def run_cmd(context, exec_cmd, local=INVOKE_LOCAL, port=None):
         print(f"LOCAL - Running command {exec_cmd}")
         result = context.run(exec_cmd, pty=True)
     else:
-        print(f"DOCKER - Running command: {exec_cmd} container: {IMAGE_NAME}:{IMAGE_VER}")
+        print(f"DOCKER - Running command: {exec_cmd} container: {IMAGE_NAME}:{IMAGE_VER}")  # noqa: E231
         if port:
             result = context.run(
-                f"docker run -it -p {port} -v {PWD}:/local {IMAGE_NAME}:{IMAGE_VER} sh -c '{exec_cmd}'", pty=True
+                f"docker run -it -p {port} -v {PWD}:/local {IMAGE_NAME}:{IMAGE_VER} sh -c '{exec_cmd}'",  # noqa: E231
+                pty=True,
             )
         else:
             result = context.run(
-                f"docker run -it -v {PWD}:/local {IMAGE_NAME}:{IMAGE_VER} sh -c '{exec_cmd}'", pty=True
+                f"docker run -it -v {PWD}:/local {IMAGE_NAME}:{IMAGE_VER} sh -c '{exec_cmd}'", pty=True  # noqa: E231
             )
 
     return result
@@ -101,8 +102,10 @@ def run_cmd(context, exec_cmd, local=INVOKE_LOCAL, port=None):
 )
 def build(context, cache=True, force_rm=False, hide=False):
     """Build a Docker image."""
-    print(f"Building image {IMAGE_NAME}:{IMAGE_VER}")
-    command = f"docker build --tag {IMAGE_NAME}:{IMAGE_VER} --build-arg PYTHON_VER={PYTHON_VER} -f Dockerfile ."
+    print(f"Building image {IMAGE_NAME}:{IMAGE_VER}")  # noqa: E231
+    command = (
+        f"docker build --tag {IMAGE_NAME}:{IMAGE_VER} --build-arg PYTHON_VER={PYTHON_VER} -f Dockerfile ."  # noqa: E231
+    )
 
     if not cache:
         command += " --no-cache"
@@ -111,15 +114,15 @@ def build(context, cache=True, force_rm=False, hide=False):
 
     result = context.run(command, hide=hide)
     if result.exited != 0:
-        print(f"Failed to build image {IMAGE_NAME}:{IMAGE_VER}\nError: {result.stderr}")
+        print(f"Failed to build image {IMAGE_NAME}:{IMAGE_VER}\nError: {result.stderr}")  # noqa: E231
 
 
 @task
 def clean(context):
     """Remove the project specific image."""
-    print(f"Attempting to forcefully remove image {IMAGE_NAME}:{IMAGE_VER}")
-    context.run(f"docker rmi {IMAGE_NAME}:{IMAGE_VER} --force")
-    print(f"Successfully removed image {IMAGE_NAME}:{IMAGE_VER}")
+    print(f"Attempting to forcefully remove image {IMAGE_NAME}:{IMAGE_VER}")  # noqa: E231
+    context.run(f"docker rmi {IMAGE_NAME}:{IMAGE_VER} --force")  # noqa: E231
+    print(f"Successfully removed image {IMAGE_NAME}:{IMAGE_VER}")  # noqa: E231
 
 
 @task
@@ -181,7 +184,7 @@ def bandit(context, local=INVOKE_LOCAL):
 @task
 def cli(context):
     """Enter the image to perform troubleshooting or dev work."""
-    dev = f"docker run -it -v {PWD}:/local {IMAGE_NAME}:{IMAGE_VER} /bin/bash"
+    dev = f"docker run -it -v {PWD}:/local {IMAGE_NAME}:{IMAGE_VER} /bin/bash"  # noqa: E231
     context.run(f"{dev}", pty=True)
 
 
