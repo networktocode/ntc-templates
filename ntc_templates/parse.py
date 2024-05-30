@@ -40,31 +40,45 @@ def _clitable_to_dict(cli_table):
     return objs
 
 
-def parse_output(platform=None, command=None, data=None):
-    """Return the structured data based on the output from a network device."""
+def parse_output(
+    platform=None,
+    command=None,
+    data=None,
+    template_dir=None,
+    try_fallback=False,
+):
+    """Return the structured data based on the output from a network device.
+
+    Args:
+        platform: The platform the command was run on (e.g., `cisco_ios`).
+        command: The command run on the platform (e.g., `show int status`).
+        data: The output from running the command.
+        template_dir: The directory to look for TextFSM templates.
+            Defaults to setting of environment variable or default ntc-templates dir.
+            The specified directory must have a properly configured index file.
+        try_fallback: Whether to fallback to using the default template directory upon failure with `template_dir`.
+
+    Returns:
+        list: The TextFSM table entries as dictionaries.
+    """
     if not HAS_CLITABLE:
-        msg = """
-The TextFSM library is not currently supported on Windows. If you are NOT using Windows
-you should be able to 'pip install textfsm' to fix this issue. If you are using Windows
-then you will need to install the patch referenced here:
-
-https://github.com/google/textfsm/pull/82
-
-"""
+        msg = (
+            "The TextFSM library is not currently supported on Windows. If you are NOT using Windows "
+            "you should be able to 'pip install textfsm' to fix this issue. If you are using Windows "
+            "then you will need to install the patch referenced here:\n\n"
+            "https://github.com/google/textfsm/pull/82\n\n"
+        )
         raise ImportError(msg)
 
-    template_dir = _get_template_dir()
+    template_dir = template_dir or _get_template_dir()
     cli_table = clitable.CliTable("index", template_dir)
-
     attrs = {"Command": command, "Platform": platform}
     try:
         cli_table.ParseCmd(data, attrs)
         structured_data = _clitable_to_dict(cli_table)
     except clitable.CliTableError as err:
+        if try_fallback and template_dir != _get_template_dir():
+            return parse_output(platform, command, data)
         raise ParsingException(f'Unable to parse command "{command}" on platform {platform} - {str(err)}') from err
-        # Invalid or Missing template
-        # module.fail_json(msg='parsing error', error=str(e))
-        # rather than fail, fallback to return raw text
-        # structured_data = [data]
 
     return structured_data
