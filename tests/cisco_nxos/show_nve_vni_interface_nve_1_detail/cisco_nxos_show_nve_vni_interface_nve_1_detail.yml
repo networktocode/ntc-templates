@@ -1,0 +1,187 @@
+- DCI_MCAST_ADDR: ''
+  MCAST_ADDR: 239.1.1.1
+  MODE: control-plane
+  NVE_INTERFACE: nve1
+  PROVISION_STATE: vni-add-complete
+  SVI_STATE: n/a
+  VLAN_BD: '36'
+  VNI: '100036'
+  VNI_FLAGS: SA
+  VNI_STATE: Up
+  VNI_TYPE: L2 [36]
+- DCI_MCAST_ADDR: ''
+  MCAST_ADDR: 239.1.1.19
+  MODE: control-plane
+  NVE_INTERFACE: nve1
+  PROVISION_STATE: vni-init
+  SVI_STATE: n/a
+  VLAN_BD: '0'
+  VNI: '31473'
+  VNI_FLAGS: SA
+  VNI_STATE: Down
+  VNI_TYPE: L2 [UC]
+- DCI_MCAST_ADDR: ''
+  MCAST_ADDR: 239.1.1.26
+  MODE: control-plane
+  NVE_INTERFACE: nve1
+  PROVISION_STATE: vni-add-complete
+  SVI_STATE: n/a
+  VLAN_BD: '498'
+  VNI: '10498'
+  VNI_FLAGS: SA
+  VNI_STATE: Up
+  VNI_TYPE: L2 [498]
+- DCI_MCAST_ADDR: ''
+  MCAST_ADDR: 239.1.1.153
+  MODE: control-plane
+  NVE_INTERFACE: nve1
+  PROVISION_STATE: vni-add-complete
+  SVI_STATE: n/a
+  VLAN_BD: '446'
+  VNI: '10446'
+  VNI_FLAGS: SA
+  VNI_STATE: Up
+  VNI_TYPE: L2 [446]
+- DCI_MCAST_ADDR: ''
+  MCAST_ADDR: 239.1.1.23
+  MODE: control-plane
+  NVE_INTERFACE: nve1
+  PROVISION_STATE: vni-add-complete
+  SVI_STATE: n/a
+  VLAN_BD: '404'
+  VNI: '10404'
+  VNI_FLAGS: SA
+  VNI_STATE: Up
+  VNI_TYPE: L2 [404]
+- DCI_MCAST_ADDR: ''
+  MCAST_ADDR: 239.1.1.23
+  MODE: control-plane
+  NVE_INTERFACE: nve1
+  PROVISION_STATE: vni-add-complete
+  SVI_STATE: n/a
+  VLAN_BD: '400'
+  VNI: '10400'
+  VNI_FLAGS: SA
+  VNI_STATE: Up
+  VNI_TYPE: L2 [400]
+- DCI_MCAST_ADDR: ''
+  MCAST_ADDR: 239.1.1.23
+  MODE: control-plane
+  NVE_INTERFACE: nve1
+  PROVISION_STATE: vni-add-complete
+  SVI_STATE: n/a
+  VLAN_BD: '374'
+  VNI: '10374'
+  VNI_FLAGS: SA
+  VNI_STATE: Up
+  VNI_TYPE: L2 [374]
+- DCI_MCAST_ADDR: ''
+  MCAST_ADDR: UnicastBGP
+  MODE: control-plane
+  NVE_INTERFACE: nve1
+  PROVISION_STATE: vni-add-complete
+  SVI_STATE: n/a
+  VLAN_BD: '370'
+  VNI: '10370'
+  VNI_FLAGS: SA
+  VNI_STATE: Up
+  VNI_TYPE: L2 [370]
+- DCI_MCAST_ADDR: ''
+  MCAST_ADDR: 239.1.1.1
+  MODE: control-plane
+  NVE_INTERFACE: nve1
+  PROVISION_STATE: vni-add-complete
+  SVI_STATE: n/a
+  VLAN_BD: '230'
+  VNI: '10230'
+  VNI_FLAGS: SA
+  VNI_STATE: Up
+  VNI_TYPE: L2 [230]
+- DCI_MCAST_ADDR: ''
+  MCAST_ADDR: 239.1.2.222
+  MODE: control-plane
+  NVE_INTERFACE: nve1
+  PROVISION_STATE: vni-add-complete
+  SVI_STATE: n/a
+  VLAN_BD: '222'
+  VNI: '10222'
+  VNI_FLAGS: SA
+  VNI_STATE: Up
+  VNI_TYPE: L2 [222]
+- DCI_MCAST_ADDR: ''
+  MCAST_ADDR: 239.1.1.21
+  MODE: control-plane
+  NVE_INTERFACE: nve1
+  PROVISION_STATE: vni-add-complete
+  SVI_STATE: n/a
+  VLAN_BD: '191'
+  VNI: '10191'
+  VNI_FLAGS: SA
+  VNI_STATE: Up
+  VNI_TYPE: L2 [191]
+- DCI_MCAST_ADDR: ''
+  MCAST_ADDR: n/a
+  MODE: control-plane
+  NVE_INTERFACE: nve1
+  PROVISION_STATE: vni-add-complete
+  SVI_STATE: 'UP [vrf-id: 3]'
+  VLAN_BD: '77'
+  VNI: '10077'
+  VNI_FLAGS: ''
+  VNI_STATE: Up
+  VNI_TYPE: L3 [TENANT77]
+- DCI_MCAST_ADDR: ''
+  MCAST_ADDR: 239.1.1.5
+  MODE: control-plane
+  NVE_INTERFACE: nve1
+  PROVISION_STATE: vni-add-complete
+  SVI_STATE: n/a
+  VLAN_BD: '60'
+  VNI: '10060'
+  VNI_FLAGS: SA
+  VNI_STATE: Up
+  VNI_TYPE: L2 [60]
+- DCI_MCAST_ADDR: ''
+  MCAST_ADDR: n/a
+  MODE: control-plane
+  NVE_INTERFACE: nve1
+  PROVISION_STATE: vni-add-complete
+  SVI_STATE: 'UP [vrf-id: 4]'
+  VLAN_BD: '2'
+  VNI: '10026'
+  VNI_FLAGS: ''
+  VNI_STATE: Up
+  VNI_TYPE: L3 [blobber]
+- DCI_MCAST_ADDR: Unconfigured
+  MCAST_ADDR: 239.1.1.33
+  MODE: control-plane
+  NVE_INTERFACE: nve1
+  PROVISION_STATE: vni-add-complete
+  SVI_STATE: 'DOWN [vrf-id: 0] [L3VNI: 0]'
+  VLAN_BD: '3008'
+  VNI: '603008'
+  VNI_FLAGS: SA
+  VNI_STATE: Up
+  VNI_TYPE: L2 [3008]
+- DCI_MCAST_ADDR: Unconfigured
+  MCAST_ADDR: 239.1.1.34
+  MODE: control-plane
+  NVE_INTERFACE: nve1
+  PROVISION_STATE: vni-add-complete
+  SVI_STATE: 'DOWN [vrf-id: 0] [L3VNI: 0]'
+  VLAN_BD: '3007'
+  VNI: '603007'
+  VNI_FLAGS: SA
+  VNI_STATE: Up
+  VNI_TYPE: L2 [3007]
+- DCI_MCAST_ADDR: Unconfigured
+  MCAST_ADDR: 239.1.1.35
+  MODE: control-plane
+  NVE_INTERFACE: nve1
+  PROVISION_STATE: vni-add-complete
+  SVI_STATE: 'DOWN [vrf-id: 0] [L3VNI: 0]'
+  VLAN_BD: '3006'
+  VNI: '603006'
+  VNI_FLAGS: SA
+  VNI_STATE: Up
+  VNI_TYPE: L2 [3006]
