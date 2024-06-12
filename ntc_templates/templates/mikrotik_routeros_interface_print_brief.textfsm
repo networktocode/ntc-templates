@@ -1,0 +1,21 @@
+Value ID (\d+)
+Value DYNAMIC (D)
+Value STATUS (X|R)
+Value SLAVE (S)
+Value NAME (\S+)
+Value TYPE (\S+)
+Value ACTUAL_MTU (\d+)
+Value L2MTU (\d+)
+Value MAX_L2MTU (\d+)
+Value MAC_ADDRESS ([0-9a-fA-F]{2}(?::[0-9a-fA-F]{2}){5})
+
+Start
+  ^\s*Flags:\s+D\s+-\s+dynamic,\s+X\s+-\s+disabled,\s+R\s+-\s+running,\s+S\s+-\s+slave\s*$$
+  ^\s*#\s+NAME\s+TYPE\s+ACTUAL-MTU\s+L2MTU\s+MAX-L2MTU\s+MAC-ADDRESS\s*$$ -> IfaceTable
+  ^\s*$$
+  ^. -> Error
+
+IfaceTable
+  ^\s*${ID}(?:\s+${DYNAMIC})?(?:\s*${STATUS})?(?:\s*${SLAVE})?\s+${NAME}\s+${TYPE}\s+${ACTUAL_MTU}(?:\s+${L2MTU})?(?:\s+${MAX_L2MTU})?(?:\s+${MAC_ADDRESS})?\s*$$ -> Record
+  ^\s*$$
+  ^. -> Error
