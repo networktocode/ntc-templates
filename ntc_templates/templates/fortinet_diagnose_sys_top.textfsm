@@ -1,0 +1,27 @@
+Value UPTIME_DAYS (\d+)
+Value UPTIME_HOURS (\d+)
+Value UPTIME_MINUTES (\d+)
+Value USERSPACE_APP_CPU (\d+)
+Value N_CPU (\d+)
+Value SYSTEM_APP_CPU (\d+)
+Value IDLE_CPU (\d+)
+Value WA_CPU (\d+)
+Value HI_CPU (\d+)
+Value SI_CPU (\d+)
+Value ST_CPU (\d+)
+Value TOTAL_MEMORY (\d+)
+Value FREE_MEMORY (\d+)
+Value TOTAL_SHARED_MEMORY_PAGES (\d+)
+Value PROCESS_NAME (\S+)
+Value PROCESS_ID (\d+)
+Value PROCESS_STATE ((R|S|Z|D)(\s+(<|N))?)
+Value PROCESS_CPU_USAGE (\d+\.\d+)
+Value PROCESS_MEMORY_USAGE (\d+\.\d+)
+Value PROCESS_CPU_CORE (\d+)
+
+Start
+  ^\s*Run\s+Time:\s+${UPTIME_DAYS}\s+days,\s+${UPTIME_HOURS}\s+hours\s+and\s+${UPTIME_MINUTES}\s+minutes\s*$$
+  ^\s*${USERSPACE_APP_CPU}U(,\s+${N_CPU}N)?,\s+${SYSTEM_APP_CPU}S,\s+${IDLE_CPU}I(,\s+${WA_CPU}WA)?(,\s+${HI_CPU}HI)?(,\s+${SI_CPU}SI)?(,\s+${ST_CPU}ST)?;\s+${TOTAL_MEMORY}T,\s+${FREE_MEMORY}F(,\s+${TOTAL_SHARED_MEMORY_PAGES}KF)?\s*$$
+  ^\s*${PROCESS_NAME}\s+${PROCESS_ID}\s+${PROCESS_STATE}\s+${PROCESS_CPU_USAGE}\s+${PROCESS_MEMORY_USAGE}(\s+${PROCESS_CPU_CORE})?\s*$$ -> Record
+  ^\s*$$
+  ^. -> Error
