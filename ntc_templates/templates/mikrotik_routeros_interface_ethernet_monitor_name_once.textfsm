@@ -1,10 +1,34 @@
 Value NAME (\S+)
-Value STATUS (\S+)
-Value AUTO_NEGOTIATION (\S+)
-Value RATE (\S+)
-Value FULL_DUPLEX (\S+)
-Value TX_FLOW_CONTROL (\S+)
-Value RX_FLOW_CONTROL (\S+)
+Value STATUS (link-ok|no-link|unknown)
+Value AUTO_NEGOTIATION (disabled|done|failed|incomplete)
+Value DEFAULT_CABLE_SETTINGS (short|standard)
+Value RATE (10Mbps|100Mbps|1Gbps|2\.5Gbps|5Gbps|10Gbps|40Gbps)
+Value FULL_DUPLEX (yes|no)
+Value TX_FLOW_CONTROL (yes|no)
+Value RX_FLOW_CONTROL (yes|no)
+Value COMBO_STATE (copper|sfp)
+Value SFP_MODULE_PRESENT (yes|no)
+Value SFP_RX_LOSS (yes|no)
+Value SFP_TX_FAULT (yes|no)
+Value SFP_TYPE (SFP-or-SFP\+|DWDM-SFP|QSFP\+)
+Value SFP_CONNECTOR_TYPE (SC|LC|optical-pigtail|copper-pigtail|multifiber-parallel-optic-1x12|no-separable-connector|RJ45)
+Value SFP_LINK_LENGTH_9UM (\S+m)
+Value SFP_LINK_LENGTH_50UM (\S+m)
+Value SFP_LINK_LENGTH_62UM (\S+m)
+Value SFP_LINK_LENGTH_COPPER (\S+m)
+Value SFP_VENDOR_NAME (\S+)
+Value SFP_VENDOR_PART_NUMBER (\S+)
+Value SFP_VENDOR_REVISION (\S+)
+Value SFP_VENDOR_SERIAL (\S+)
+Value SFP_MANUFACTURING_DATE (\S+)
+Value SFP_WAVELENGTH (\S+nm)
+Value SFP_TEMPERATURE (\S+C)
+Value SFP_SUPPLY_VOLTAGE (\S+V)
+Value SFP_TX_BIAS_CURRENT (\S+mA)
+Value SFP_TX_POWER (\S+dBm)
+Value SFP_RX_POWER (\S+dBm)
+Value EEPROM_CHECKSUM (good|bad)
+Value List EEPROM ([0-9a-f]+:(?:\s+[0-9a-f]{2})+.*)
 Value ADVERTISING (\S+)
 Value LINK_PARTNER_ADVERTISING (\S+)
 
@@ -12,12 +36,39 @@ Start
   ^\s*name:\s${NAME}
   ^\s*status:\s${STATUS}
   ^\s*auto-negotiation:\s${AUTO_NEGOTIATION}
+  ^\s*default-cable-settings:\s${DEFAULT_CABLE_SETTINGS}
   ^\s*rate:\s${RATE}
   ^\s*full-duplex:\s${FULL_DUPLEX}
   ^\s*tx-flow-control:\s${TX_FLOW_CONTROL}
   ^\s*rx-flow-control:\s${RX_FLOW_CONTROL}
+  ^\s*combo-state:\s${COMBO_STATE}
+  ^\s*sfp-module-present:\s${SFP_MODULE_PRESENT}
+  ^\s*sfp-rx-loss:\s${SFP_RX_LOSS}
+  ^\s*sfp-tx-fault:\s${SFP_TX_FAULT}
+  ^\s*sfp-type:\s${SFP_TYPE}
+  ^\s*sfp-connector-type:\s${SFP_CONNECTOR_TYPE}
+  ^\s*sfp-link-length-9um:\s${SFP_LINK_LENGTH_9UM}
+  ^\s*sfp-link-length-50um:\s${SFP_LINK_LENGTH_50UM}
+  ^\s*sfp-link-length-62um:\s${SFP_LINK_LENGTH_62UM}
+  ^\s*sfp-link-length-copper:\s${SFP_LINK_LENGTH_COPPER}
+  ^\s*sfp-vendor-name:\s${SFP_VENDOR_NAME}
+  ^\s*sfp-vendor-part-number:\s${SFP_VENDOR_PART_NUMBER}
+  ^\s*sfp-vendor-revision:\s${SFP_VENDOR_REVISION}
+  ^\s*sfp-vendor-serial:\s${SFP_VENDOR_SERIAL}
+  ^\s*sfp-manufacturing-date:\s${SFP_MANUFACTURING_DATE}
+  ^\s*sfp-wavelength:\s${SFP_WAVELENGTH}
+  ^\s*sfp-temperature:\s${SFP_TEMPERATURE}
+  ^\s*sfp-supply-voltage:\s${SFP_SUPPLY_VOLTAGE}
+  ^\s*sfp-tx-bias-current:\s${SFP_TX_BIAS_CURRENT}
+  ^\s*sfp-tx-power:\s${SFP_TX_POWER}
+  ^\s*sfp-rx-power:\s${SFP_RX_POWER}
+  ^\s*eeprom-checksum:\s${EEPROM_CHECKSUM}
+  ^\s*eeprom:\s${EEPROM}
+  ^\s*${EEPROM}
+  ^\s*advertising:\s*$$
   ^\s*advertising:\s${ADVERTISING}
   ^\s*link-partner-advertising:\s*$$
   ^\s*link-partner-advertising:\s${LINK_PARTNER_ADVERTISING}$$
   ^\s*(?:\d{2}:){2}\d{2}\s+echo:\s*.*$$ -> Next
+  ^\s*$$
   ^. -> Error
