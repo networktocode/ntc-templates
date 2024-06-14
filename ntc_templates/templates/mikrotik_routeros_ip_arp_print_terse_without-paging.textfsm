@@ -1,0 +1,11 @@
+Value INDEX (\d+)
+Value FLAGS ([XIHDPC]+)
+Value ADDRESS (\S+)
+Value MAC_ADDRESS (\S+)
+Value INTERFACE (\S+)
+Value PUBLISHED (yes|no)
+
+Start
+  ^\s*${INDEX}(?:\s+${FLAGS})?\s+address=${ADDRESS}\s+mac-address=${MAC_ADDRESS}\s+interface=${INTERFACE}\s+published=${PUBLISHED}\s*$$ -> Record
+  ^\s*$$
+  ^. -> Error
