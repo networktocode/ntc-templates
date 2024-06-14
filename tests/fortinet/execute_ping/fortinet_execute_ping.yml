@@ -1,0 +1,39 @@
+---
+parsed_sample:
+  - address: "8.8.8.8"
+    avg_rtt: "25.8"
+    max_rtt: "25.9"
+    min_rtt: "25.8"
+    packet_loss: "0"
+    received: "5"
+    sent_packet_address:
+      - "8.8.8.8"
+      - "8.8.8.8"
+      - "8.8.8.8"
+      - "8.8.8.8"
+      - "8.8.8.8"
+    sent_packet_icmp_seq:
+      - "0"
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+    sent_packet_size:
+      - "64"
+      - "64"
+      - "64"
+      - "64"
+      - "64"
+    sent_packet_time:
+      - "25.9"
+      - "25.8"
+      - "25.8"
+      - "25.8"
+      - "25.8"
+    sent_packet_ttl:
+      - "110"
+      - "110"
+      - "110"
+      - "110"
+      - "110"
+    transmitted: "5"
