@@ -1,10 +1,20 @@
-Value CPU_5_SEC (\d+)
-Value CPU_1_MIN (\d+)
-Value CPU_5_MIN (\d+)
-Value INTERRUPTS (\d+)
+Value Filldown CPU_USAGE_5_SEC (\d+)
+Value Filldown CPU_INTERRUPTION_5_SEC (\d+)
+Value Filldown CPU_USAGE_1_MIN (\d+)
+Value Filldown CPU_USAGE_5_MIN (\d+)
+Value Required PROCESS_PID (\d+)
+Value PROCESS_RUNTIME (\d+)
+Value PROCESS_INVOKED (\d+)
+Value PROCESS_CPU_TIME_FOR_INVOCATION (\d+)
+Value PROCESS_CPU_USAGE_5_SEC (\d+\.\d+)
+Value PROCESS_CPU_USAGE_1_MIN (\d+\.\d+)
+Value PROCESS_CPU_USAGE_5_MIN (\d+\.\d+)
+Value PROCESS_TTY (\d+)
+Value PROCESS_NAME (.*?)
 
 Start
-  ^CPU utilization for five seconds:\W+${CPU_5_SEC}%/${INTERRUPTS}%; one minute:\W+${CPU_1_MIN}%; five minutes:\W+${CPU_5_MIN}% -> Record
-  # Capture time-stamp if vty line has command time-stamping turned on
-  ^Load\s+for\s+
-  ^Time\s+source\s+is
+  ^\s*CPU\s+utilization\s+for\s+five\s+seconds:\s+${CPU_USAGE_5_SEC}%/${CPU_INTERRUPTION_5_SEC}%;\s+one\s+minute:\s+${CPU_USAGE_1_MIN}%;\s+five\s+minutes:\s+${CPU_USAGE_5_MIN}%\s*$$
+  ^\s*PID\s+Runtime\(ms\)\s+Invoked\s+uSecs\s+5Sec\s+1Min\s+5Min\s+TTY\s+Process\s*$$
+  ^\s*${PROCESS_PID}\s+${PROCESS_RUNTIME}\s+${PROCESS_INVOKED}\s+${PROCESS_CPU_TIME_FOR_INVOCATION}\s+${PROCESS_CPU_USAGE_5_SEC}%\s+${PROCESS_CPU_USAGE_1_MIN}%\s+${PROCESS_CPU_USAGE_5_MIN}%\s+${PROCESS_TTY}\s+${PROCESS_NAME}\s*$$ -> Record
+  ^\s*$$
+  ^. -> Error
