@@ -1,0 +1,70 @@
+---
+parsed_sample:
+  - accepted_prefixes:
+      - "423"
+      - "0"
+    accepted_prefixes_rib:
+      - "423"
+      - "0"
+    addr_family:
+      - "IPv4 Unicast"
+      - "IPv6 Unicast"
+    announced_prefixes:
+      - "3"
+      - "0"
+    bgp_state: "Established"
+    bgp_version: "4"
+    inbound_routemap:
+      - "*prefer_vpn1root"
+    local_asn: "65400"
+    localhost_ip: "10.105.1.2"
+    localhost_port: "3777"
+    nei_table_version:
+      - "25"
+      - "1"
+    neighbor: "10.105.1.254"
+    nexthop_interface: "VPN1_0"
+    nexthop_ip: "10.105.1.2"
+    outbound_routemap: []
+    remote_asn: "65400"
+    remote_ip: "10.105.1.254"
+    remote_port: "179"
+    remote_router_id: "10.105.3.254"
+    table_version:
+      - "31"
+      - "1"
+    uptime: "4d14h28m"
+  - accepted_prefixes:
+      - "423"
+      - "0"
+    accepted_prefixes_rib:
+      - "423"
+      - "0"
+    addr_family:
+      - "IPv4 Unicast"
+      - "IPv6 Unicast"
+    announced_prefixes:
+      - "3"
+      - "0"
+    bgp_state: "Established"
+    bgp_version: "4"
+    inbound_routemap:
+      - "*prefer_vpn2root"
+    local_asn: "65400"
+    localhost_ip: "10.105.2.2"
+    localhost_port: "21489"
+    nei_table_version:
+      - "30"
+      - "1"
+    neighbor: "10.105.2.254"
+    nexthop_interface: "VPN2_0"
+    nexthop_ip: "10.105.2.2"
+    outbound_routemap: []
+    remote_asn: "65400"
+    remote_ip: "10.105.2.254"
+    remote_port: "179"
+    remote_router_id: "10.105.3.254"
+    table_version:
+      - "31"
+      - "1"
+    uptime: "12:41:52"
