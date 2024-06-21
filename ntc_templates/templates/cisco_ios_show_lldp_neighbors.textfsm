@@ -1,4 +1,4 @@
-Value Required NEIGHBOR (.{0,20}(?<! ))
+Value Required NEIGHBOR_NAME (.{0,20}(?<! ))
 Value Required LOCAL_INTERFACE (\S+)
 Value CAPABILITIES (\S*)
 Value Required NEIGHBOR_INTERFACE (\S+)
@@ -10,6 +10,6 @@ Start
   ^Time\s+source\s+is
 
 LLDP
-  ^${NEIGHBOR}\s*${LOCAL_INTERFACE}\s+\d+\s+${CAPABILITIES}\s+${NEIGHBOR_INTERFACE} -> Record
-  ^${NEIGHBOR}
+  ^${NEIGHBOR_NAME}\s*${LOCAL_INTERFACE}\s+\d+\s+${CAPABILITIES}\s+${NEIGHBOR_INTERFACE} -> Record
+  ^${NEIGHBOR_NAME}
   ^\s+${LOCAL_INTERFACE}\s+\d+\s+${CAPABILITIES}\s+${NEIGHBOR_INTERFACE} -> Record

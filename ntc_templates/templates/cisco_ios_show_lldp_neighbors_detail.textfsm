@@ -2,10 +2,10 @@ Value LOCAL_INTERFACE (\S+)
 Value CHASSIS_ID ([^:]+)
 Value NEIGHBOR_PORT_ID (.*)
 Value NEIGHBOR_INTERFACE (.*)
-Value NEIGHBOR (.+?)
-Value SYSTEM_DESCRIPTION (.*)
+Value NEIGHBOR_NAME (.+?)
+Value NEIGHBOR_DESCRIPTION (.*)
 Value CAPABILITIES (.*)
-Value MANAGEMENT_IP (\S+)
+Value MGMT_ADDRESS (\S+)
 Value VLAN_ID (\d+)
 Value MAC_ADDRESS ([0-9a-fA-F]{4}\.[0-9a-fA-F]{4}\.[0-9a-fA-F]{4})
 Value SERIAL (\S+)
@@ -13,7 +13,7 @@ Value MANUFACTURER (.*)
 Value HW_REVISION (\S+)
 Value FW_REVISION (\S+)
 Value SW_REVISION (\S+)
-Value MODEL (.*)
+Value PLATFORM (.*)
 Value POWER_PAIR (\S+)
 Value POWER_CLASS (\d+)
 Value POWER_DEVICE_TYPE (\S+)
@@ -31,7 +31,7 @@ Start
   ^Port\s+Description:\s+${NEIGHBOR_INTERFACE}\s*$$
   ^System\s+Name(\s+-\s+not\s+advertised)\s*$$
   ^System\s+Name:?\s*$$
-  ^System\s+Name(:\s+${NEIGHBOR})\s*$$
+  ^System\s+Name(:\s+${NEIGHBOR_NAME})\s*$$
   ^System\s+Description -> GetDescription
   ^Time
   ^System\s+Capabilities
@@ -39,7 +39,7 @@ Start
   ^Management\s+Addresses
   ^\s+OID
   ^\s+[\d+\.]{8,}
-  ^.*IP:\s+${MANAGEMENT_IP}\s*$$
+  ^.*IP:\s+${MGMT_ADDRESS}\s*$$
   ^Auto\s+Negotiation
   ^Physical\s+media
   # Removed \(\s+\) from the template - The line 'Other/unknown' would not be captured
@@ -69,7 +69,7 @@ Start
   ^.*$$ -> Error
 
 GetDescription
-  ^${SYSTEM_DESCRIPTION} -> IgnoreDescription
+  ^${NEIGHBOR_DESCRIPTION} -> IgnoreDescription
 
 IgnoreDescription
   ^Time\s+remaining -> Start
@@ -89,7 +89,7 @@ PowerMDI
 Med
   ^\s+Serial\s+number:\s+${SERIAL}\s*$$
   ^\s+Manufacturer:\s+${MANUFACTURER}\s*$$
-  ^\s+Model:\s+${MODEL}\s*$$
+  ^\s+Model:\s+${PLATFORM}\s*$$
   ^\s+H/W revision:\s+${HW_REVISION}\s*$$
   ^\s+F/W revision:\s+${FW_REVISION}\s*$$
   ^\s+S/W revision:\s+${SW_REVISION}\s*$$
