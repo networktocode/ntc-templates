@@ -30,7 +30,7 @@ The branching policy includes the following tenets:
 - PRs intended to address bug fixes and security patches should be sourced from the master branch.
 - PRs intended to add new features that break backward compatibility should be discussed before a PR is created.
 
-NTC-Templates will observe semantic versioning. This may result in an quick turn around in minor versions to keep pace with an ever growing feature set.
+NTC-Templates observes semantic versioning. This may result in a quick turn around in minor/major versions to keep pace with an ever growing feature set.
 
 ## Release Policy
 
