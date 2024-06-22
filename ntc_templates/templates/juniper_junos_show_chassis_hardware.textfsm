@@ -60,7 +60,7 @@ Value Filldown PIC_DESCRIPTION (.*)
 Value XCVR_NUMBER (\d+|)
 Value XCVR_VERSION ([RrEeVv]+\s+\d+|]|[RrEeVv]+|)
 Value XCVR_PART (\w+-\w+|\w+)
-Value XCVR_SERIAL_NUMBER (\w+)
+Value XCVR_SERIAL_NUMBER (\S+)
 Value XCVR_DESCRIPTION (.*)
 Value FAN_NUMBER (\d+|)
 Value FAN_VERSION ([RrEeVv]+\s+\d+|)
@@ -83,7 +83,7 @@ Start
   ^\s*CPU\s+${CPU_VERSION}\s+${CPU_PART}\s+${CPU_SERIAL_NUMBER}\s+${CPU_DESCRIPTION}$$
   ^\s*MIC\s+${MIC_NUMBER}\s+${MIC_VERSION}\s+${MIC_PART}\s+${MIC_SERIAL_NUMBER}\s+${MIC_DESCRIPTION}$$
   ^\s*PIC\s+${PIC_NUMBER}\s+${PIC_VERSION}\s+${PIC_PART}\s+${PIC_SERIAL_NUMBER}\s+${PIC_DESCRIPTION}$$
-  ^\s*Xcvr\s+${XCVR_NUMBER}\s+${XCVR_VERSION}\s+${XCVR_PART}\s+${XCVR_SERIAL_NUMBER}\s+${XCVR_DESCRIPTION} -> Record
+  ^\s*Xcvr\s+${XCVR_NUMBER}\s+(?:${XCVR_VERSION}\s+)?${XCVR_PART}\s+${XCVR_SERIAL_NUMBER}\s+${XCVR_DESCRIPTION} -> Record
   ^\s*(PEM|Power\s+Supply) -> Continue.Clearall
   ^\s*(PEM|Power\s+Supply)\s+${PS_NUMBER}\s+${PS_VERSION}\s+${PS_PART}\s+${PS_SERIAL_NUMBER}\s+${PS_DESCRIPTION}$$ -> Record
   ^\s*(Fan|Fan\sTray) -> Continue.Clearall
