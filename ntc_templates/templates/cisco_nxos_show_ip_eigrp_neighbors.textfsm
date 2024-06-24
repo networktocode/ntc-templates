@@ -17,5 +17,6 @@ Start
   ^\s*\(sec\)\s+\(ms\)\s+Cnt\s+Num\s*$$
   # Match the data lines
   ^\d+\s+${IP_ADDRESS}\s+${INTERFACE}\s+${HOLD}\s+${UPTIME}\s+${SRTT}\s+${RTO}\s+${Q_CNT}\s+${SEQ_NUM}\s*$$ -> Record
+  ^. -> Error
 
 EOF
