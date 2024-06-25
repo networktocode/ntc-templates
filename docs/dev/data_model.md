@@ -43,7 +43,7 @@ Example: Imagine the extra programming logic needed to consume structured data w
 | `MAC_ADDRESS`                    | instead of MAC or MACADDR |
 | `MEMBER_INTERFACE`               | list of physical member interface names that are bundled to make an etherchannel, LACP, LAG, or port-channel interface |
 | `MEMBER_INTERFACE_STATUS`        | list of member interface statuses for an etherchannel, LACP, LAG, or port-channel interface |
-| `MGMT_ADDRESS`                   | management address, used when data could be an Ethernet MAC address or an IP address (ex: CDP or LLDP templates) |
+| `MGMT_ADDRESS`                   | management address, used when data could be an ***Ethernet MAC address or an IP address*** (ex: CDP or LLDP templates) |
 | `MGMT_IP_ADDRESS`                | instead of MGMT_IP or MGMT_ADDRESS or MANAGEMENT_IP or REMOTE_MANAGEMENT_ADDRESS |
 | `NEIGHBOR_DESCRIPTION`           | often represents CDP or LLDP neighbor or system name description |
 | `NEIGHBOR_ID`                    | for router IDs remote to the system being parsed |
