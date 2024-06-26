@@ -30,6 +30,7 @@ OS_CHOICES = [
     "cisco_nvfis",
     "cisco_nxos",
     "cisco_s300",
+    "cisco_viptela",
     "cisco_wlc",
     "cisco_xe",
     "cisco_xr",
