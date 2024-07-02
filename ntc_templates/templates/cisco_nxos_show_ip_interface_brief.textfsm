@@ -1,6 +1,6 @@
 Value Filldown VRF (\S+)
 Value Required INTERFACE (\S+)
-Value Required IP_ADDRESS ([a-zA-Z0-9./]+)
+Value Required IP_ADDRESS ([a-zA-Z0-9./]+|forward-enabled)
 Value STATUS (\S+-\S+)
 Value LINK (\S+-\S+)
 Value PROTO (\S+-\S+)
