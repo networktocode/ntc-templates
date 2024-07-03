@@ -12,8 +12,6 @@ Start
   ^Interface\s+Table
   ^Interface-Name\s+Adm\s+Opr\(v4\/v6\)\s+Type\s+Port/SapId\s*$$ -> Interface
   ^\s*$$
-  # added to avoid errors with trucated values alert message
-  ^\S+
   ^. -> Error
 
 Interface
@@ -24,8 +22,6 @@ Interface
   ^\s+${IP_ADDRESS}\s+${PFX_STATE}
   ^Interfaces\s*:\s+\d+\s*$$
   ^=+
+  ^\*\s+indicates
   ^\s*$$
-  # added to avoid errors with trucated values alert message
-  ^\S+
   ^. -> Error
-
