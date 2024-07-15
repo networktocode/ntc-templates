@@ -22,5 +22,3 @@ BGP
   ^${PEER_IP}\s+${PEER_AS}\s+${IN_PKT}\s+${OUT_PKT}\s+${OUT_Q}\s+${FLAPS}\s+${LAST_FLAP}\s+${UP_DOWN}\s+${STATE} 
   ^\s+${INTERFACE}:\s+${ACTIVE}\/${RECEIVED}\/${ACCEPTED}\/${DAMPED} -> Record
   ^\s+. -> Error
-
-EOF
