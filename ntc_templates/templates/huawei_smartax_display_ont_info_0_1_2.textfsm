@@ -11,6 +11,7 @@ Start
   ^\s+-
   ^\s+F\/S\/P\s+ONT\s+SN\s+Control\s+Run\s+Config\s+Match\s+Protect
   ^\s+ID\s+flag\s+state\s+state\s+state\s+side -> SNs
+  ^. -> Error
 
 SNs
   ^\s*${FSP}\s*${ONT_ID}\s*${SERIAL_NUMBER}\s*${CONTROL_FLAG}\s*(${RUN_STATE}|-)\s*(${CONFIG_STATE}|-)\s*(${MATCH_STATE}|-)\s*${PROTECT_SIDE}\s* -> Record
