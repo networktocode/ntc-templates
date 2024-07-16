@@ -101,11 +101,7 @@ def check_order(  # pylint: disable=too-many-arguments,too-many-arguments,too-ma
     if not prior_os and prior_len == 0:
         # Starting Point
         return True, ""
-    if (
-        current_os == prior_os
-        and cmd_len == prior_len
-        and cmd == min(prior_cmd, cmd)
-    ):
+    if current_os == prior_os and cmd_len == prior_len and cmd == min(prior_cmd, cmd):
         msg = f"OS is the same and command same length, please set {cmd} before {prior_cmd} to be in alphabetical order"
         return False, msg
     if current_os == prior_os and cmd_len <= prior_len:
