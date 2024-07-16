@@ -10,6 +10,10 @@ Start
 ONEOS5
   ^\.
   ^${FILE}\s+${BYTES} -> Record
+  ^\s*$$
+  ^. -> Error
 
 ONEOS6
   ^\S+\s+\d+\s+${BYTES}\s+.*\s+${FILE}$$ -> Record
+  ^\s*$$
+  ^. -> Error
