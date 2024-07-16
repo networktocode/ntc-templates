@@ -1,9 +1,9 @@
-Value ADDRESS (\d+\.\d+\.\d+\.\d+)
+Value IP_ADDRESS (\d+\.\d+\.\d+\.\d+)
 Value AGE (\S+)
-Value MAC (\S+)
+Value MAC_ADDRESS (\S+)
 Value INTERFACE (\S+)
 Value PHYSICAL_INTERFACE (\S+)
-Value FLAGS (\S*)
+Value FLAGS (\*|\+|#|CP|PS|RO)
 Value VRF (\S*)
 
 Start
@@ -18,5 +18,5 @@ Start
   ^. -> Error
 
 Data
-  ^${ADDRESS}\s+${AGE}\s+${MAC}\s+${INTERFACE}\s+${PHYSICAL_INTERFACE}\s*${FLAGS}\s*${VRF}\s*$$ -> Record
+  ^${IP_ADDRESS}\s+${AGE}\s+${MAC_ADDRESS}\s+${INTERFACE}\s+${PHYSICAL_INTERFACE}\s*${FLAGS}?\s*${VRF}\s*$$ -> Record
   ^. -> Error
