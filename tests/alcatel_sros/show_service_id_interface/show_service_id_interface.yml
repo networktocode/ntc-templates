@@ -1,0 +1,16 @@
+---
+parsed_sample:
+  - admin_state: "Up"
+    interface_name: "Gigaesat-1/1/5:7"
+    ip_address:
+      - "10.42.255.73/30"
+      - "fe80:a8:2:90::8d5/126"
+      - "fe80::22e0:9cff:fe20:d401/64"
+    oper_state_v4: "Up"
+    oper_state_v6: "Up"
+    pfx_state:
+      - "n/a"
+      - "PREFERRED"
+      - "PREFERRED"
+    port_sap_id: "esat-1/1/5:7.0"
+    type: "IES"

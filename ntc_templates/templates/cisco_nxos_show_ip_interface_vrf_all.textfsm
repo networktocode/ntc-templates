@@ -1,5 +1,5 @@
 Value Filldown VRF (\S+)
-Value INTERFACE (\S+)
+Value Required INTERFACE (\S+)
 Value IP_ADDRESS ([a-zA-Z0-9./]+)
 Value STATUS (\S+-\S+)
 Value LINK (\S+-\S+)
@@ -32,12 +32,15 @@ Value UNNUMBERED_PARENT_INTF (\S+)
 Value List UNNUMBERED_CHILD_INTFS (\S+)
 
 Start
+  ^IP\s+Interface\s+Status\s+for\s+VRF -> Continue.Record
   ^IP\s+Interface\s+Status\s+for\s+VRF\s+"${VRF}"
+  ^\S+,\s+Interface\s+status: -> Continue.Record
   ^${INTERFACE},\s+Interface\s+status:\s+${PROTO}\/${LINK}\/${STATUS},\s+iod:\s+\d+,
   ^${INTERFACE},\s+Interface\s+status:\s+${PROTO}/${LINK}/${STATUS}
   ^\s+IP\s+address:\s+${IP_ADDRESS},\s+IP\s+subnet:\s+${SUBNET}\s+route-preference:\s+${ROUTE_PREF},\s+tag:\s+${ROUTE_TAG}
   ^\s+IP\s+address:\s+${SECONDARY_IP_ADDRESS},\s+IP\s+subnet:\s+${SECONDARY_IP_SUBNET}\s+secondary\s+route-preference:\s+${SECONDARY_ROUTE_PREF},\s+tag:\s+${SECONDARY_ROUTE_TAG}
   ^\s+IP\s+address:\s+${IP_ADDRESS},\s+IP\s+subnet:\s+${SUBNET}
+  ^\s+IP\s+address: none
   ^\s+IP\s+broadcast\s+address:\s+${BROADCAST}
   ^\s+IP\s+multicast\s+groups\s+locally\s+joined:\s+${MULTICAST_GROUPS}
   ^\s+IP\s+multicast\s+groups\s+locally\s+joined:* -> MULTICAST
@@ -68,9 +71,10 @@ Start
   ^\s*Unnumbered\s+interfaces\s+of -> UNNUMBERED
   ^\s+WCCP\s+Redirect\s+outbound:\s+${WCCP_REDIRECT_OUTBOUND}
   ^\s+WCCP\s+Redirect\s+inbound:\s+${WCCP_REDIRECT_INBOUND}
-  ^\s+WCCP\s+Redirect\s+exclude:\s+${WCCP_REDIRECT_EXCLUDE} -> Record
+  ^\s+WCCP\s+Redirect\s+exclude:\s+${WCCP_REDIRECT_EXCLUDE}
   ^\s*$$
   ^. -> Error
+
 
 MULTICAST
   ^\s+${MULTICAST_GROUPS}\s*$$ -> Start
@@ -113,6 +117,3 @@ UNNUMBERED
   ^(?:\S+\s+){20}${UNNUMBERED_CHILD_INTFS}: -> Continue
   ^.* -> Start
   ^. -> Error
-
-
-EOF
