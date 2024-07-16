@@ -53,7 +53,6 @@ OS_CHOICES = [
     "juniper",
     "linux",
     "mikrotik_routeros",
-    "oneaccess_oneos",
     "ovs_linux",
     "paloalto_panos",
     "quanta_mesh",
