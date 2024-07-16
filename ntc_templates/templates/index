@@ -170,13 +170,8 @@ checkpoint_gaia_show_lom.textfsm, .*, checkpoint_gaia, show lom
 checkpoint_gaia_fw_stat.textfsm, .*, checkpoint_gaia, fw stat
 
 ciena_saos_traffic-profiling_standard-profile_show.textfsm, .*, ciena_saos, traffic-p[[rofiling]] st[[andard-profile]] sh[[ow]]
-ciena_saos_port_show_ethernet-config.textfsm, .*, ciena_saos, po[[rt]] sh[[ow]] ethernet-config
 ciena_saos_chassis_show_temperature.textfsm, .*, ciena_saos, ch[[assis]] sh[[ow]] te[[mperature]]
-ciena_saos_port_show_network-config.textfsm, .*, ciena_saos, po[[rt]] sh[[ow]] network-config
-ciena_saos_lldp_show_neighbors.textfsm, .*, ciena_saos, lldp sh[[ow]] nei[[ghbors]]
 ciena_saos_ssh_server_show_key.textfsm, .*, ciena_saos, ssh se[[rver]] sh[[ow]] k[[ey]]
-ciena_saos_port_show_status.textfsm, .*, ciena_saos, po[[rt]] sh[[ow]] status
-ciena_saos_port_xcvr_show.textfsm, .*, ciena_saos, po[[rt]] xcvr sh[[ow]]
 ciena_saos_software_show.textfsm, .*, ciena_saos, so[[ftware]] sh[[ow]]
 ciena_saos_port_show.textfsm, .*, ciena_saos, po[[rt]] sh[[ow]]
 ciena_saos_rstp_show.textfsm, .*, ciena_saos, rs[[tp]] sh[[ow]]
@@ -689,7 +684,6 @@ mikrotik_routeros_user_active_print.textfsm, .*, mikrotik_routeros, [[/]]us[[er]
 mikrotik_routeros_ip_address_print.textfsm, .*, mikrotik_routeros, [[/]]ip ad[[dress]] p[[rint]]
 mikrotik_routeros_ping.textfsm, .*, mikrotik_routeros, [[/]]pin[[g]]
 
-
 oneaccess_oneos_show_voice_dial-peer_voice_voip_all.textfsm, .*, oneaccess_oneos, sh[[ow]] voice dial-peer voice voip all( al)?
 oneaccess_oneos_show_voice_voice-port_pri_all_histo.textfsm, .*, oneaccess_oneos, sh[[ow]] voice voice-port pri all histo
 oneaccess_oneos_show_voice_voice-port_pri_all_reset.textfsm, .*, oneaccess_oneos, sh[[ow]] voice voice-port pri all reset
@@ -740,7 +734,6 @@ oneaccess_oneos_show_tacacs.textfsm, .*, oneaccess_oneos, sh[[ow]] tacacs
 oneaccess_oneos_show_sntp.textfsm, .*, oneaccess_oneos, sh[[ow]] sntp
 oneaccess_oneos_hostname.textfsm, .*, oneaccess_oneos, hostname
 oneaccess_oneos_ls.textfsm, .*, oneaccess_oneos, ls( -[lh][lh]? )?.*
-
 
 paloalto_panos_show_running_security-policy.textfsm, .*, paloalto_panos, sh[[ow]] runn[[ing]] security[[-policy]]
 paloalto_panos_show_high-availability_all.textfsm, .*, paloalto_panos, sh[[ow]] high[[-availability]] all
