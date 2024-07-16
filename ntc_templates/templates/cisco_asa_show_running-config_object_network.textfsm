@@ -1,6 +1,6 @@
 Value Required NAME (\S+)
 Value DESCRIPTION (.+)
-Value TYPE ([hostubnerag]+)
+Value TYPE (host|subnet|range|fqdn)
 Value HOST (\S+)
 Value NETWORK (\S+)
 Value NETMASK (\S+)
