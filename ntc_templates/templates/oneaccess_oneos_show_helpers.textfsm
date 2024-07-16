@@ -1,12 +1,15 @@
 Value Required INTERFACE (.*)
-Value List HELPERS (\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})
+Value List HELPERS (\d+\.\d+\.\d+\.\d+)
 
 Start
-  ^.*:\s\d+\sbroadcasts\sforwarded -> Continue.Record
+  ^ip\s+forward-protocol
   ^${INTERFACE}:\s\d+\sbroadcasts\sforwarded
+  ^\s*${HELPERS}\s*$$ -> Record
   ^\s*${HELPERS} -> Continue
-  ^(\s*\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\s+){1}${HELPERS} -> Continue
-  ^(\s*\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\s+){2}${HELPERS} -> Continue
-  ^(\s*\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\s+){3}${HELPERS}
-  ^.*$$
+  ^(\s*\d+\.\d+\.\d+\.\d+\s+){1}${HELPERS}\s*$$ -> Record
+  ^(\s*\d+\.\d+\.\d+\.\d+\s+){1}${HELPERS} -> Continue
+  ^(\s*\d+\.\d+\.\d+\.\d+\s+){2}${HELPERS}\s*$$ -> Record
+  ^(\s*\d+\.\d+\.\d+\.\d+\s+){2}${HELPERS} -> Continue
+  ^(\s*\d+\.\d+\.\d+\.\d+\s+){3}${HELPERS}\s*$$ -> Record
+  ^\s*$$
   ^. -> Error

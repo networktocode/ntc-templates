@@ -3,11 +3,11 @@ Value Required,List ENTRIES (.*)
 
 Start
   ^AS\spath\saccess\slist\s${NAME}$$ -> ASPATH
-  ^.+ -> Error
+  ^. -> Error
 
 ASPATH
   ^[\s\t]+${ENTRIES}.*
   ^\s+$$ -> Record Start
   ^AS\spath -> Continue.Record
   ^AS\spath\saccess\slist\s${NAME}$$ -> ASPATH
-  ^.+ -> Error
+  ^. -> Error
