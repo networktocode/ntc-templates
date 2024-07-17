@@ -2,7 +2,7 @@
 parsed_sample:
   - ssh: "Enabled"
     scp: "enabled"
-    encr: "ssh-rsa"
+    encryption: "ssh-rsa"
     bits: "4096"
     fingerprint: "bc:f8:c3:67:8f:de:f3:ec:5c:29:b5:a4:e4:25:de:7a"
     max_sessions: "5"

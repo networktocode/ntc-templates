@@ -1,7 +1,7 @@
-Value Required,Filldown PROTCOL (\S+)
+Value Required,Filldown PROTOCOL (\S+)
 Value Required,Filldown NAME (\S+)
 Value Filldown DESCRIPTION (.*)
-Value Required SEQ (\d+)
+Value Required SEQUENCE (\d+)
 Value ACTION (\S+)
 Value NETWORK ([0-9a-f:\.]+|any)
 Value NETMASK (\d+)
@@ -9,9 +9,8 @@ Value LE (\d+)
 Value GE (\d+)
 
 Start
-  ^${PROTCOL}:\sip\s+prefix-list\s+${NAME}
+  ^${PROTOCOL}:\sip\s+prefix-list\s+${NAME}
   ^\s+Description:\s${DESCRIPTION}
-  ^\s+seq\s+${SEQ}\s+${ACTION}\s+${NETWORK}(/${NETMASK}|)(?:\s+ge\s+${GE}|)(?:\s+le\s+${LE}|)\s*$$ -> Record
+  ^\s+seq\s+${SEQUENCE}\s+${ACTION}\s+${NETWORK}(/${NETMASK}|)(?:\s+ge\s+${GE}|)(?:\s+le\s+${LE}|)\s*$$ -> Record
   ^\s*$$
   ^.+ -> Error
-

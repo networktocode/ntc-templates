@@ -1,11 +1,12 @@
-Value INTF (\S+(?:\s\S+)?)
-Value IPADDR (\S+)
+Value INTERFACE (\S+(?:\s\S+)?)
+Value IP_ADDRESS (\S+)
 Value OK (YES|NO|Yes|No|yes|no)
 Value STATUS (up|down|administratively down)
-Value PROTO (up|down)
-Value IFDESCR (.*)
+Value PROTOCOL (up|down)
+Value DESCRIPTION (.*?)
 
 Start
-  ^${INTF}\s+${IPADDR}\s+${OK}\s+${STATUS}\s+${PROTO}\s+${IFDESCR} -> Record
-  ^.*$$
+  ^Interface\s+IP[-\s]Address\s+OK\?\s+Status\s+Protocol\s+Description\s*$$
+  ^${INTERFACE}\s+${IP_ADDRESS}\s+${OK}\s+${STATUS}\s+${PROTOCOL}\s+${DESCRIPTION}\s*$$ -> Record
+  ^\s*$$
   ^. -> Error
