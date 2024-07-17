@@ -1,5 +1,0 @@
-Value HOSTNAME (.*)
-
-Start
-  ^${HOSTNAME}$$ -> Record
-  ^. -> Error
