@@ -20,5 +20,5 @@ Start
   ^\s+target\sdevice\s+=\s+${TARGET_DEVICE}
   ^\s*---
   ^[fF]ile\sis\s${STATUS} -> Record
-  ^$$
+  ^\s*$$
   ^. -> Error

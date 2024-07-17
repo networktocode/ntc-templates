@@ -8,5 +8,5 @@ Start
   ^SNMP\s${SECURITY_NAME}\s+community\s*:\s+${NAME}.*
   ^SNMP\s\S+\s+community\s*:\s+\S+\s+v2group\s+${GROUP}
   ^SNMP\saccess\scontrol\slists\s*:\s*${ACL}
-  ^.*$$
+  ^\s*$$
   ^. -> Error
