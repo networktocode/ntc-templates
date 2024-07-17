@@ -21,5 +21,19 @@ Start
   ^\s*\|\s+\-\suser\s+\|\s+${USER_PARTITION_TOTAL}\s+\|\s+${USER_PARTITION_FREE}\s+\|\s+${USER_PARTITION_USED}\s+\|
   ^\s*\|\s+used\s+\|\s+${USER_PARTITION_USED}\s+\|
   ^\s*\|\s+free\s+\|\s+${USER_PARTITION_FREE}\s+\|
-  ^.*
+  ^\s*=+\s*$$
+  ^\s*\|\s*Memory\s+status\s+report\s+\|\s+Total\s+\|\s+Free\s+\|\s+Use\s*%\s+\|\s*$$
+  ^\s*\|\s*Memory\s+status\s+report\s+\|\s+Kbytes\s+\|\s+\|\s*$$
+  ^\s*\|\-+\|
+  ^\s*\|\s*(Shared|Control|Forwarding)\s+Partition\s+\|
+  ^\s*\|\s+\-\s*((Shared|Core\s+0)\s+Pool|Binary)\s+\|
+  ^\s*\|\s+\|
+  ^\s*\|\s+\-\s*(Linux\s+(RAM|cached|buffers|File\s+Systems)|system\s+free)
+  ^\s*\|\s+\-\s*(root|tmp)\s+\|
+  ^\s*\|\s*File\s+systems\s+\|
+  ^\s*\|\s*Removable\s+disks\s+\|
+  ^\s*\|\s*:(\s+:)?\.\.
+  ^\s*\|\s*:(\s+:)?\s+(used|free)\s+\|
+  ^\s*\|\s*Flash\s+size\s+\|
+  ^\s*$$
   ^. -> Error

@@ -31,31 +31,30 @@ Start
   ^\s*${DIALPEER_VOIP_UP}\sDial\-peer\svoip\sup
   ^\s*Sip\-gateway\sstatus\sis\s${SIP_GATEWAY_STATUS} -> SipGateway
   ^\s*${SIP_GATEWAY_STATUS}
-  ^\s*Sip\-server\sstatus\sis\s${SIP_SERVER_STATUS} -> SipServer
+  ^\s*Sip\-server\sstatus\sis\s${SIP_SERVER_STATUS}
   ^\s*${SIP_SERVER_STATUS}
-  ^\s*voice com\sstatus\sis\s${VOICE_COM_STATUS} -> VoiceCom
+  ^\s*voice\s+com\sstatus\sis\s${VOICE_COM_STATUS}
   ^\s*${VOICE_COM_STATUS}
   ^\s*voice\sled\strack-conditions -> Track
-  ^\s*Sys LEDs -> SysLed
-
-
+  ^\s*Sys\s+LEDs -> SysLed
+  ^\s*Status\s+of\s+VOIP\s+service
+  ^\s*Isdn\s+virtual\s+LEDs
+  ^\s*(isdnshut|Layer1State|nbcomm)
+  ^\s*$$
+  ^. -> Error
 
 SipGateway
   ^\s*->\sis\s${SIP_GATEWAY_REGISTERED}
   ^\s*${SIP_GATEWAY_NBR_REGISTERED}\/${SIP_GATEWAY_NBR_AVAILABLE}\sep\sis.*with\sregistrar\s${SIP_GATEWAY_REGISTRAR}
   ^\s*->\sIF\s${SIP_GATEWAY_INTF}\s\[${SIP_GATEWAY_INTF_IP}\]\sis\s${SIP_GATEWAY_INTF_STATUS}\.
   ^\s*$$ -> Start
-
-SipServer
-  ^\s*$$ -> Start
-
-VoiceCom
-  ^\s*$$ -> Start
+  ^. -> Error
 
 Track
   ^\s*voice-gw\s+${TRACK_COND_VOICE_GW}
   ^\s*voice-port\s+${TRACK_COND_VOICE_PORT}
   ^\s*$$ -> Start
+  ^. -> Error
 
 SysLed
   ^\s*SYS\sLED\s(VoIP|VOIP)\s*color=\s*${SYSLED_VOIP_COLOR}\s*,?\sstate=${SYSLED_VOIP_STATE}
@@ -64,3 +63,5 @@ SysLed
   ^\s*SYS\sLED\sPRI\s*color=\s*${SYSLED_PRI_COLOR}\s*,?\sstate=${SYSLED_PRI_STATE}
   ^\s*SYS\sLED\sBRI1\s*color=\s*${SYSLED_BRI1_COLOR}\s*,?\sstate=${SYSLED_BRI1_STATE}
   ^\s*SYS\sLED\sBRI2\s*color=\s*${SYSLED_BRI2_COLOR}\s*,?\sstate=${SYSLED_BRI2_STATE}
+  ^\s*$$
+  ^. -> Error

@@ -1,8 +1,8 @@
 Value Required ISDN_LINE (\d+\/\d+)
 Value PHYSICAL_TYPE (\S+)
-Value PROTO_DESCRIPTOR (\S+)
-Value PROTO_LINECODE (\S+)
-Value PROTO_FRAMING (\S+)
+Value PROTOCOL_DESCRIPTOR (\S+)
+Value PROTOCOL_LINECODE (\S+)
+Value PROTOCOL_FRAMING (\S+)
 Value CONFIG_STATE (\S+)
 Value LOOP_STATE (\S+)
 Value L1_STATUS (\S+)
@@ -13,21 +13,21 @@ Value PRI_AIS_OCCURRENCES (\d+)
 Value PRI_LOS_OCCURRENCES (\d+)
 Value PRI_RDI_OCCURRENCES (\d+)
 Value L2_STATUS (\S+)
-Value L2_TXFRAMES_DCHANNEL (\d+)
-Value L2_RXFRAMES_DCHANNEL (\d+)
+Value L2_TX_FRAMES_DCHANNEL (\d+)
+Value L2_RX_FRAMES_DCHANNEL (\d+)
 Value L3_ACTIVE_CALLS (\d+|no active call)
 Value List L3_CALL_DETAILS (.*)
 
-
-
 Start
   ^\s*isdn\sline\s+${ISDN_LINE} -> ISDNLINE
+  ^\s*$$
+  ^. -> Error
 
 ISDNLINE
   ^\s+physical\stype\s+${PHYSICAL_TYPE}
-  ^\s+protocol\sdescriptor\s+${PROTO_DESCRIPTOR}
-  ^\s+linecode\s+${PROTO_LINECODE}
-  ^\s+framing\s+${PROTO_FRAMING}
+  ^\s+protocol\sdescriptor\s+${PROTOCOL_DESCRIPTOR}
+  ^\s+linecode\s+${PROTOCOL_LINECODE}
+  ^\s+framing\s+${PROTOCOL_FRAMING}
   ^\s+config\sstate\s+${CONFIG_STATE}
   ^\s+loop\sstate\s+${LOOP_STATE}
   ^\s+\-layer\s1\sstatus\s+${L1_STATUS}
@@ -38,14 +38,17 @@ ISDNLINE
   ^\s*pri\sLOS\soccurrence\(s\)\s+${PRI_LOS_OCCURRENCES}
   ^\s*pri\sRDI\soccurrence\(s\)\s+${PRI_RDI_OCCURRENCES}
   ^\s+\-layer\s2\sstatus\s+${L2_STATUS}
-  ^\s+Tx\sframes\son\sD\schannel\s+${L2_TXFRAMES_DCHANNEL}
-  ^\s+Rx\sframes\son\sD\schannel\s+${L2_RXFRAMES_DCHANNEL}
+  ^\s+Tx\sframes\son\sD\schannel\s+${L2_TX_FRAMES_DCHANNEL}
+  ^\s+Rx\sframes\son\sD\schannel\s+${L2_RX_FRAMES_DCHANNEL}
   ^\s+-layer\s3\sstatus -> L3Status
   ^\s*$$ -> Record
   ^\s*isdn\sline\s+${ISDN_LINE} -> ISDNLINE
+  ^\s+ces=\s+
+  ^. -> Error
 
 L3Status
   ^\s*(active\scall\s*|)${L3_ACTIVE_CALLS}
   ^\s*->\s${L3_CALL_DETAILS}
   ^\s*$$ -> Record ISDNLINE
+  ^. -> Error
 
