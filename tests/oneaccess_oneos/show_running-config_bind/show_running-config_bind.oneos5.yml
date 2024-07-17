@@ -1,6 +1,6 @@
 ---
 parsed_sample:
-  - proto: "ssh"
+  - protocol: "ssh"
     interface:
       - "loopback 1"
       - "loopback 21"
@@ -12,7 +12,7 @@ parsed_sample:
     vrf:
       - "UNTRUST-SSH"
       - "default-router"
-  - proto: "telnet"
+  - protocol: "telnet"
     interface:
       - "loopback 1"
       - "loopback 21"
