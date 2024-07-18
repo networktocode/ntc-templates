@@ -4,16 +4,11 @@ Value CREATED (.*)
 Value CHECKSUM (\S+)
 
 Start
-  ^-+\s${BANK}\sbank\s-+ -> BANK
-  ^.*$$
-  ^. -> Error
-
-BANK
+  ^-+\s+\S+\s+bank -> Continue.Record
+  ^-+\s${BANK}\sbank\s-+
   ^Software\sversion\s+:\s${SOFTWARE}
   ^Creation\sdate\s+:\s${CREATED}
   ^Header\schecksum\s+:\s${CHECKSUM}
-  ^-+ -> Continue.Record
-  ^-+\s${BANK}\sbank\s-+ -> BANK
   ^Installation\sstatus.*
-  ^$$
+  ^\s*$$
   ^. -> Error
