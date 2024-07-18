@@ -9,7 +9,6 @@ Value FAILED_CONNECTIONS (\d+)
 Value PACKETS_SENT (\d+)
 Value PACKET_RECEIVED (\d+)
 
-
 Start
   ^\s+Tacacs\+\s+Server\s+Address\s+:\s.*$$ -> Continue.Record
   ^\s+Tacacs\+\s+Server\s+Address\s+:\s+${TACACS_SERVER}\s*$$
@@ -22,5 +21,7 @@ Start
   ^\s+Number\sof\sconnect\sfails\s+:\s+${FAILED_CONNECTIONS}\s*$$
   ^\s+Number\sof\spackets\ssent\s+:\s+${PACKETS_SENT}\s*$$
   ^\s+Number\sof\spackets\sreceived\s+:\s+${PACKET_RECEIVED}\s*$$
-  ^.*$$
+  ^\s*TACACS\+\s+SERVER\s+Statistics\s*$$
+  ^\s*-+\s*$$
+  ^\s*$$
   ^. -> Error

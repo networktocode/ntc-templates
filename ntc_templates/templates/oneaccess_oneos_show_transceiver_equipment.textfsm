@@ -3,14 +3,14 @@ Value Required PHYSICAL_DEVICE (.*\S)
 Value CONNECTOR (\S+)
 Value VENDOR_NAME (.*\S)
 Value VENDOR_ID (.*\S)
-Value VENDOR_PARTNR (.*\S)
+Value VENDOR_PARTNER (.*\S)
 Value VENDOR_REVISION (.*\S)
 Value VENDOR_DATECODE (.*\S)
 Value TCVR_ETHER_COMPLIANCE (.*\S)
 Value TCVR_10G_ETHER_COMPLIANCE (.*\S)
 Value TCVR_FIBER_LINKLEN (.*\S)
 Value TCVR_FIBER_TECH (.*\S)
-Value TCVR_FIBER_TXMEDIA (.*\S)
+Value TCVR_FIBER_TX_MEDIA (.*\S)
 Value TCVR_FIBER_SPEED (.*\S)
 Value WAVELENGTH (.*\S)
 Value ENCODING (.*\S)
@@ -49,7 +49,9 @@ Value MEASURED_TX_OUTPUT_POWER (\S.*\S)
 Value MEASURED_RX_INPUT_POWER (\S.*\S)
 
 Start
-  ^SFP\s${PORT}: -> Record
+  ^SFP -> Continue.Record
+  ^SFP\s${PORT}:
+  ^\s*No\s+(Inventory\s+data\s+available|SFP\s+module\s+present)
   ^\s*Physical\sdevice\s+=\s+${PHYSICAL_DEVICE}
   ^\s*connector\s+=\s+${CONNECTOR}
   ^\s*vendor: -> VENDOR
@@ -59,25 +61,32 @@ Start
   ^\s*Link\slength\sin: -> LINK_LENGTH
   ^\s*[mM]in\sbit\srate\s+=\s+${MIN_BIT_RATE}
   ^\s*Diagnostics\scalibration\sis\sinternal -> DIAGNOSTICS
-  ^.*
+  ^\s*SFP\s+module\s+inventory\s+information\s*:
+  ^\s*$$
   ^. -> Error
 
 VENDOR
   ^\s*name\s+=\s+${VENDOR_NAME}
   ^\s*id\s+=\s+${VENDOR_ID}
-  ^\s*partNumber\s+=\s+${VENDOR_PARTNR}
+  ^\s*partNumber\s+=\s+${VENDOR_PARTNER}
   ^\s*revision\s+=\s+${VENDOR_REVISION}
   ^\s*dateCode\s+=\s+${VENDOR_DATECODE}
   ^\s*transceiver: -> TRANSCEIVER
+  ^\s+serialNumber\s+=
+  ^\s*$$
+  ^. -> Error
 
 TRANSCEIVER
   ^\s*ethernetComplianceCode\s+=\s+${TCVR_ETHER_COMPLIANCE}
   ^\s*10G\sethernetComplianceCode\s+=\s+${TCVR_10G_ETHER_COMPLIANCE}
   ^\s*fiberLinkLen\s+=\s+${TCVR_FIBER_LINKLEN}
   ^\s*fiberTech\s+=\s+${TCVR_FIBER_TECH}
-  ^\s*fiberTxMedia\s+=\s+${TCVR_FIBER_TXMEDIA}
+  ^\s*fiberTxMedia\s+=\s+${TCVR_FIBER_TX_MEDIA}
   ^\s*fiberSpeed\s+=\s+${TCVR_FIBER_SPEED} -> Continue
   ^\s*fiberSpeed -> Start
+  ^\s+sonet
+  ^\s*$$
+  ^. -> Error
 
 LINK_LENGTH
   ^\s*single\sfiber\smode\s+=\s+${LINKLEN_SM}
@@ -85,11 +94,15 @@ LINK_LENGTH
   ^\s*62\.5u\smulti-mode\sfiber\s+=\s+${LINKLEN_625_MM}
   ^\s*copper\scable\s+=\s+${LINKLEN_COPPER} -> Continue
   ^\s*copper\scable -> OPTIONS
+  ^\s*$$
+  ^. -> Error
 
 OPTIONS
   ^\s*Max\sbit\srate\s+=\s+${MAX_BIT_RATE} -> Start
   ^\s*options\s+=\s${OPTIONS}
   ^\s+${OPTIONS}
+  ^\s*$$
+  ^. -> Error
 
 DIAGNOSTICS
   ^\s*Temp\sHigh\sAlarm\s+=\s+${TEMP_HIGH_ALARM}
@@ -117,5 +130,9 @@ DIAGNOSTICS
   ^\s*Internally\sMeasured\sTx\sBias\sCurrent\s+=\s+${MEASURED_TX_BIAS_CURRENT}
   ^\s*Measured\sTx\sOutput\sPower\s+=\s+${MEASURED_TX_OUTPUT_POWER}
   ^\s*Measured\sRx\sInput\sPower\s+=\s+${MEASURED_RX_INPUT_POWER}
-  ^SFP\s${PORT}: -> Record Start
-  ^.* -> Start
+  ^\s*Optional\s+Status
+  ^\s*Alarm
+  ^SFP -> Continue.Record
+  ^SFP\s+${PORT}: -> Start
+  ^\s*$$
+  ^. -> Error

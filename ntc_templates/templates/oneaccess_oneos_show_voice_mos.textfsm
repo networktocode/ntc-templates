@@ -37,6 +37,8 @@ CurrentHour
   ^\s*Average\sof\sMax\sdelay\s+:\s+${CURR_AVG_MAX_DELAY}
   ^\s*Average\sPdd\s+:\s+${CURR_AVG_PDD}
   ^\s*-+\sPrevious\shour\s-+ -> PreviousHour
+  ^\s*$$
+  ^. -> Error
 
 PreviousHour
   ^\s*Number\sof\sCall\s+:\s+${PREV_NBR_CALL}
@@ -49,3 +51,6 @@ PreviousHour
   ^\s*Average\sof\sjitter\s+:\s+${PREV_AVG_JITTER}
   ^\s*Average\sof\sMax\sdelay\s+:\s+${PREV_AVG_MAX_DELAY}
   ^\s*Average\sPdd\s+:\s+${PREV_AVG_PDD}
+  ^\s*-+\s*$$
+  ^\s*$$
+  ^. -> Error

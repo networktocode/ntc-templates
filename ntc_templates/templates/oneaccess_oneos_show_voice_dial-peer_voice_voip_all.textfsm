@@ -1,7 +1,7 @@
 # global vars
 Value DIAL_PEER (\d+)
 Value CONFIG_STATE (\S+)
-Value OPER_STATUS (\S+)
+Value OPERATIONAL_STATUS (\S+)
 Value REGISTRATION_STATUS (\S+)
 Value CURRENT_PROTOCOL (\S+)
 Value LAST_OK (\d+)
@@ -60,13 +60,13 @@ Value INCOMING_FAILURES_NOT_SPECIFIED (\d+)
 # VOICE & FAX STATS
 Value VOICE_FAX_REAL_DSP_SWITCHING (\d+)
 # RTP vars
-Value RTP_PKTS_TRANSMITTED (\d+)
-Value RTP_PKTS_RECEIVED (\d+)
+Value RTP_PACKETS_TRANSMITTED (\d+)
+Value RTP_PACKETS_RECEIVED (\d+)
 Value RTP_BYTES_TRANSMITTED (\d+)
 Value RTP_BYTES_RECEIVED (\d+)
 Value RTP_EXCESSIVE_JITTER_EVENTS (\d+)
-Value RTP_PKTS_LOST (\d+)
-Value RTP_PKTS_INVALID (\d+)
+Value RTP_PACKETS_LOST (\d+)
+Value RTP_PACKETS_INVALID (\d+)
 # frame error call vars
 Value FRAME_ERROR_RATE_TOTAL (\d+)
 Value FRAME_ERROR_RATE_LT_0_01 (\d+)
@@ -84,17 +84,17 @@ Value FAX_FAILURES (\d+)
 Value FAX_FAILURES_REQUEST_MODE (\d+)
 Value FAX_FAILURES_PRE_MSG (\d+)
 Value FAX_FAILURES_PAGE (\d+)
-Value FAX_PKTS_TRANSMITTED (\d+)
-Value FAX_PKTS_RECEIVED (\d+)
+Value FAX_PACKETS_TRANSMITTED (\d+)
+Value FAX_PACKETS_RECEIVED (\d+)
 Value FAX_BYTES_TRANSMITTED (\d+)
 Value FAX_BYTES_RECEIVED (\d+)
-Value FAX_PKTS_LOST (\d+)
+Value FAX_PACKETS_LOST (\d+)
 
 
 Start
   ^\s*Dial\sPeer\s+${DIAL_PEER}
   ^\s*Config\sstate\s+${CONFIG_STATE}
-  ^\s*Operstatus\s+${OPER_STATUS}
+  ^\s*Operstatus\s+${OPERATIONAL_STATUS}
   ^\s*Registration\sstatus\s+${REGISTRATION_STATUS}
   ^\s*Current\sprotocol\s+${CURRENT_PROTOCOL}
   ^\s*lastOK\s+${LAST_OK}
@@ -109,7 +109,6 @@ Start
   ^\s*Number\sof\scalls\swith\sframe\serror\srate\s*$$ -> CallsWithFrameError
   ^\s*Modem\spassthrough\s*$$ -> MODEM
   ^\s*T38\sFAX\sCalls\s*$$ -> FAX
-  ^.*
   ^\s*$$
   ^. -> Error
 
@@ -139,6 +138,8 @@ OutgoingCalls
   ^\s*RTP\sdynamic-payload\serror\s+${OUTGOING_FAILURES_RTP_PAYLOAD}
   ^\s*Not\sspecified\s+${OUTGOING_FAILURES_NOT_SPECIFIED}
   ^\s*Incoming\sCalls\s*$$ -> IncomingCalls
+  ^\s*$$
+  ^. -> Error
 
 IncomingCalls
   ^\s*Incoming\scalls\s+${INCOMING_CALLS}
@@ -158,30 +159,39 @@ IncomingCalls
   ^\s*Not\sspecified\s+${INCOMING_FAILURES_NOT_SPECIFIED}
   ^\s*Voice\s.\sFax\sstatistics\s*$$ -> VoiceFax
   ^\s*RTP\sstatistics\s*$$ -> RTP
+  ^\s*$$
+  ^. -> Error
 
 VoiceFax
   ^\s*Number\sof\sreal\sdsp\sswitching\s+${VOICE_FAX_REAL_DSP_SWITCHING}
   ^\s*RTP\sstatistics\s*$$ -> RTP
+  ^\s*$$
+  ^. -> Error
 
 RTP
-  ^\s*Number\sof\stransmitted\spackets\s+${RTP_PKTS_TRANSMITTED}
-  ^\s*Number\sof\sreceived\spackets\s+${RTP_PKTS_RECEIVED}
+  ^\s*Number\sof\stransmitted\spackets\s+${RTP_PACKETS_TRANSMITTED}
+  ^\s*Number\sof\sreceived\spackets\s+${RTP_PACKETS_RECEIVED}
   ^\s*Number\sof\stransmitted\sbytes\s+${RTP_BYTES_TRANSMITTED}
   ^\s*Number\sof\sreceived\sbytes\s+${RTP_BYTES_RECEIVED}
   ^\s*Number\sof\sexcessive\sjitter\sevents\s+${RTP_EXCESSIVE_JITTER_EVENTS}
-  ^\s*Number\sof\slost\spackets\s+${RTP_PKTS_LOST}
-  ^\s*Number\sof\sinvalid\spackets\s+${RTP_PKTS_INVALID}
+  ^\s*Number\sof\slost\spackets\s+${RTP_PACKETS_LOST}
+  ^\s*Number\sof\sinvalid\spackets\s+${RTP_PACKETS_INVALID}
   ^\s*Number\sof\scalls\swith\sframe\serror\srate\s*$$ -> CallsWithFrameError
+  ^\s*$$
+  ^. -> Error
 
 CallsWithFrameError
   ^\s*total
   ^\s*${FRAME_ERROR_RATE_TOTAL}\s*${FRAME_ERROR_RATE_LT_0_01}\s*${FRAME_ERROR_RATE_LT_0_1}\s*${FRAME_ERROR_RATE_LT_0_5}\s*${FRAME_ERROR_RATE_LT_1}\s*${FRAME_ERROR_RATE_LT_5}\s*${FRAME_ERROR_RATE_GE_5}\s*
   ^\s*Modem\spassthrough\s*$$ -> MODEM
+  ^\s*$$
+  ^. -> Error
 
 MODEM
   ^\s*Number\sof\sswitching\sto\smodem\smode\s+${MODEM_SWITCHES}
   ^\s*T38\sFAX\sCalls\s*$$ -> FAX
-
+  ^\s*$$
+  ^. -> Error
 
 FAX
   ^\s*Number\sof\soutgoing\sfax\s+${FAX_OUTGOING}
@@ -190,10 +200,10 @@ FAX
   ^\s*Request\sMode\sfailure\s+${FAX_FAILURES_REQUEST_MODE}
   ^\s*Pre-message\sprocedure\sfailure\s+${FAX_FAILURES_PRE_MSG}
   ^\s*Page\sfailure\s+${FAX_FAILURES_PAGE}
-  ^\s*Number\sof\stransmitted\spackets\s+${FAX_PKTS_TRANSMITTED}
-  ^\s*Number\sof\sreceived\spackets\s+${FAX_PKTS_RECEIVED}
+  ^\s*Number\sof\stransmitted\spackets\s+${FAX_PACKETS_TRANSMITTED}
+  ^\s*Number\sof\sreceived\spackets\s+${FAX_PACKETS_RECEIVED}
   ^\s*Number\sof\stransmitted\sbytes\s+${FAX_BYTES_TRANSMITTED}
   ^\s*Number\sof\sreceived\sbytes\s+${FAX_BYTES_RECEIVED}
-  ^\s*Number\sof\slost\spackets\s+${FAX_PKTS_LOST}
-  ^\s*$$ -> Start
-
+  ^\s*Number\sof\slost\spackets\s+${FAX_PACKETS_LOST}
+  ^\s*$$
+  ^. -> Error
