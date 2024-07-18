@@ -1,6 +1,6 @@
 Value Required PORT (\d+\/\d+)
 Value PHYSICAL_TYPE (\S+)
-Value PROTO_DESCRIPTOR (\S+)
+Value PROTOCOL_DESCRIPTOR (\S+)
 Value CONFIG_STATE (\S+)
 Value LOOP_STATE (\S+)
 Value FRAMING (\S+)
@@ -39,12 +39,11 @@ Value INCOMING_FAILURES_DSP_UNAVAILABLE (\d+)
 Value INCOMING_FAILURES_NO_VOIP_RESOURCE_AVAILABLE (\d+)
 Value INCOMING_FAILURES_NOT_SPECIFIED (\d+)
 
-
 Start
   ^\s*voice\sport -> Continue.Record
   ^\s*voice\sport\s+${PORT}
   ^\s*physical\stype\s+${PHYSICAL_TYPE}
-  ^\s*protocol\sdescriptor\s+${PROTO_DESCRIPTOR}
+  ^\s*protocol\sdescriptor\s+${PROTOCOL_DESCRIPTOR}
   ^\s*config\sstate\s+${CONFIG_STATE}
   ^\s*loop\sstate\s+${LOOP_STATE}
   ^\s*framing\s+${FRAMING}
@@ -82,8 +81,8 @@ Start
   ^\s*DSP\sunavailable\s+${INCOMING_FAILURES_DSP_UNAVAILABLE}
   ^\s*No\sVoIP\sresource\savailable\s+${INCOMING_FAILURES_NO_VOIP_RESOURCE_AVAILABLE}
   ^\s*Not\sspecified\s+${INCOMING_FAILURES_NOT_SPECIFIED}
-  ^.*
+  ^\s+Channel\(s\)\s+used
+  ^\s+ces\s*:
+  ^\s+Insufficient
   ^\s*$$
   ^. -> Error
-
-
