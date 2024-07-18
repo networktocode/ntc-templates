@@ -1,11 +1,11 @@
-Value Required IFACE (\S+(?:\s\S+)?)
+Value Required INTERFACE (\S+(?:\s\S+)?)
 Value GROUP (\d+)
 Value STATE (\S+)
 Value VERSION (\d+)
-Value VIRTUALIP ([a-fA-F\d\.\:]+)
-Value VIRTUALNETMASK ([a-fA-F\d\.\:]+)
+Value VIRTUAL_IP ([a-fA-F\d\.\:]+)
+Value VIRTUAL_NETMASK ([a-fA-F\d\.\:]+)
 Value VIRTUAL_MAC ([a-fA-F\d\.\:]+)
-Value ADV_INTERVAL (\S+)
+Value ADVERTISE_INTERVAL (\S+)
 Value PREEMPT (\w+)
 Value PREEMPT_MIN_DELAY (\d+)
 Value PRIORITY (\d+)
@@ -16,12 +16,14 @@ Value MASTER_STATE (\S+)
 
 Start
   ^\S+.*\s\-\sGroup -> Continue.Record
-  ^${IFACE}\s\-\sGroup\s${GROUP}
+  ^${INTERFACE}\s\-\sGroup\s${GROUP}
   ^\s+State\sis\s${STATE}
   ^\s+Version\s${VERSION}
-  ^\s+Virtual\sIP\saddress\s${VIRTUALIP},\sNetmask\s${VIRTUALNETMASK}
+  ^\s+Virtual\sIP\saddress\s${VIRTUAL_IP},\sNetmask\s${VIRTUAL_NETMASK}
   ^\s+Virtual\sMAC\saddress\sis\s${VIRTUAL_MAC}
-  ^\s+Advertisement\sinterval\sis\s${ADV_INTERVAL}\ssec
+  ^\s+Advertisement\sinterval\sis\s${ADVERTISE_INTERVAL}\ssec
   ^\s+Preemption\sis\s${PREEMPT}(,\smin\sdelay\sis\s${PREEMPT_MIN_DELAY}\ssec)?
   ^\s+Priority\s${PRIORITY}
   ^\s+Master\srouter\sis\s${MASTER_IP}\s\(${MASTER_STATE}\),\spriority\sis\s${MASTER_PRIORITY}
+  ^\s*$$
+  ^. -> Error
