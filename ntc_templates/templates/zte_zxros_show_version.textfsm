@@ -6,4 +6,8 @@ Value UPTIME (.+?)
 Start
   ^ZXCTN${HARDWARE}
   ^ZTE.+Software,\s+Version:\s+${VERSION},\s+Release\s+software
-  ^.+uptime\s+is\s+${UPTIME}\s*$$
+  ^.+uptime\s+is\s+${UPTIME}\s*$$ -> EOF
+  ^Copyright
+  ^System\s+image
+  ^\s*$$
+  ^. -> Error
