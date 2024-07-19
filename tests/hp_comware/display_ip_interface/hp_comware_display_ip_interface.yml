@@ -1,36 +1,36 @@
 ---
 parsed_sample:
-  - intf: "LoopBack0"
-    ipaddr:
+  - interface: "LoopBack0"
+    ip_address:
       - "172.18.255.63/32"
-    mtu: "1536"
     line_status: "UP"
+    mtu: "1536"
     protocol_status: "UP(spoofing)"
     route_map: ""
-  - intf: "M-GigabitEthernet0/0/0"
-    ipaddr: []
-    mtu: ""
+  - interface: "M-GigabitEthernet0/0/0"
+    ip_address: []
     line_status: "Administratively DOWN"
+    mtu: ""
     protocol_status: "DOWN"
     route_map: ""
-  - intf: "Vlan-interface66"
-    ipaddr:
+  - interface: "Vlan-interface66"
+    ip_address:
       - "172.18.69.101/24"
-    mtu: "1500"
     line_status: "UP"
+    mtu: "1500"
     protocol_status: "UP"
     route_map: ""
-  - intf: "Vlan-interface89"
-    ipaddr:
+  - interface: "Vlan-interface89"
+    ip_address:
       - "172.18.89.3/24"
-    mtu: "1500"
     line_status: "UP"
+    mtu: "1500"
     protocol_status: "UP"
     route_map: ""
-  - intf: "Vlan-interface206"
-    ipaddr:
+  - interface: "Vlan-interface206"
+    ip_address:
       - "172.18.41.22/24"
-    mtu: "1500"
     line_status: "UP"
+    mtu: "1500"
     protocol_status: "UP"
     route_map: ""

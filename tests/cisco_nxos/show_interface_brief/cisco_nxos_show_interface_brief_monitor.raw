@@ -1,0 +1,103 @@
+
+--------------------------------------------------------------------------------
+Port   VRF          Status IP Address                              Speed    MTU
+--------------------------------------------------------------------------------
+mgmt0  --           up     10.80.0.11                              1000     1500
+
+--------------------------------------------------------------------------------
+Ethernet      VLAN    Type Mode   Status  Reason                   Speed     Port
+Interface                                                                    Ch #
+--------------------------------------------------------------------------------
+Eth1/1        --      eth  routed down    Administratively down      auto(D) --
+Eth1/2        --      eth  routed down    Administratively down      auto(D) --
+Eth1/3        --      eth  routed down    Administratively down      auto(D) --
+Eth1/4        --      eth  routed down    Administratively down      auto(D) --
+Eth1/5        --      eth  routed down    Administratively down      auto(D) --
+Eth1/6        --      eth  routed down    Administratively down      auto(D) --
+Eth1/7        --      eth  routed down    Administratively down      auto(D) --
+Eth1/8        --      eth  routed down    Administratively down      auto(D) --
+Eth1/9        --      eth  routed down    XCVR not inserted          auto(D) --
+Eth1/10       1       eth  trunk  up      none                        10G(D) 19
+Eth1/11       1       eth  trunk  up      none                        10G(D) 27
+Eth1/12       --      eth  routed down    XCVR not inserted          auto(D) --
+Eth1/13       --      eth  routed down    XCVR not inserted          auto(D) --
+Eth1/14       --      eth  routed down    XCVR not inserted          auto(D) --
+Eth1/15       1       eth  trunk  up      none                        10G(D) --
+Eth1/16       1       eth  trunk  up      none                       1000(D) 28
+Eth1/17       1       eth  trunk  up      none                       1000(D) 22
+Eth1/18       1       eth  trunk  up      none                       1000(D) --
+Eth1/19       --      eth  routed down    Administratively down      auto(D) --
+Eth1/20       1       eth  trunk  up      none                       1000(D) 23
+Eth1/21       1       eth  trunk  up      none                        10G(D) 24
+Eth1/22       --      eth  routed down    Administratively down      auto(D) --
+Eth1/23       --      eth  routed down    Administratively down      auto(D) --
+Eth1/24       --      eth  routed down    XCVR not inserted          auto(D) --
+Eth1/25       1       eth  trunk  up      none                        10G(D) --
+Eth1/26       1       eth  trunk  up      none                        10G(D) --
+Eth1/27       1       eth  trunk  up      none                       1000(D) --
+Eth1/28       --      eth  routed down    Administratively down      auto(D) --
+Eth1/29       --      eth  routed down    XCVR not inserted          auto(D) --
+Eth1/30       --      eth  routed down    XCVR not inserted          auto(D) --
+Eth1/31       --      eth  routed down    Administratively down      auto(D) --
+Eth1/32       1       eth  trunk  up      none                       1000(D) 17
+Eth1/33       --      eth  routed down    XCVR not inserted          auto(D) --
+Eth1/34       --      eth  routed down    XCVR not inserted          auto(D) --
+Eth1/35       monitor eth  access up      none                       1000(D) --
+Eth1/36       monitor eth  access up      none                       1000(D) --
+Eth1/37       1       eth  trunk  up      none                        10G(D) 200
+Eth1/38       1       eth  trunk  up      none                       1000(D) 10
+Eth1/39       506     eth  access up      none                        10G(D) 6
+Eth1/40       1       eth  trunk  up      none                        10G(D) 200
+Eth1/41       1       eth  trunk  up      none                        10G(D) --
+Eth1/42       1       eth  trunk  up      none                        10G(D) 1
+Eth1/43       1       eth  trunk  up      none                       1000(D) 4
+Eth1/44       1       eth  trunk  up      none                       1000(D) 5
+Eth1/45       --      eth  routed up      none                        10G(D) --
+Eth1/46       --      eth  routed up      none                        10G(D) --
+Eth1/47       --      eth  routed up      none                        10G(D) --
+Eth1/48       --      eth  routed up      none                        10G(D) --
+Eth1/49       --      eth  routed down    XCVR not inserted          auto(D) --
+Eth1/50       --      eth  routed down    XCVR not inserted          auto(D) --
+Eth1/51       --      eth  routed down    XCVR not inserted          auto(D) --
+Eth1/52       --      eth  routed down    XCVR not inserted          auto(D) --
+Eth1/53       --      eth  routed down    XCVR not inserted          auto(D) --
+Eth1/54       --      eth  routed down    XCVR not inserted          auto(D) --
+
+--------------------------------------------------------------------------------
+Port-channel VLAN    Type Mode   Status  Reason                    Speed   Protocol
+Interface                                                                  
+--------------------------------------------------------------------------------
+Po1          1       eth  trunk  up      none                       a-10G(D)  lacp
+Po4          1       eth  trunk  up      none                      a-1000(D)  lacp
+Po5          1       eth  trunk  up      none                      a-1000(D)  lacp
+Po6          506     eth  access up      none                       a-10G(D)  lacp
+Po10         1       eth  trunk  up      none                      a-1000(D)  lacp
+Po17         1       eth  trunk  up      none                      a-1000(D)  lacp
+Po19         1       eth  trunk  up      none                       a-10G(D)  lacp
+Po22         1       eth  trunk  up      none                      a-1000(D)  lacp
+Po23         1       eth  trunk  up      none                      a-1000(D)  lacp
+Po24         1       eth  trunk  up      none                       a-10G(D)  lacp
+Po27         1       eth  trunk  up      none                       a-10G(D)  lacp
+Po28         1       eth  trunk  up      none                      a-1000(D)  lacp
+Po200        1       eth  trunk  up      none                       a-10G(D)  lacp
+
+--------------------------------------------------------------------------------
+Interface     Status     Description
+--------------------------------------------------------------------------------
+Lo0           up         BGP-Loopback
+Lo1           up         VXLAN-Loopback
+Lo2           up         RP-Loopback
+Lo3           up         RP-Loopback
+
+-------------------------------------------------------------------------------
+Interface Secondary VLAN(Type)                    Status Reason                 
+-------------------------------------------------------------------------------
+Vlan1     --                                      down   Administratively down  
+Vlan289   --                                      down   Administratively down  
+Vlan442   --                                      down   Administratively down  
+Vlan1350  --                                      up     --        
+
+--------------------------------------------------------------------------------
+Port           Status Reason          MTU  
+--------------------------------------------------------------------------------
+nve1           up     none            9216  

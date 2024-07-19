@@ -37,6 +37,8 @@ Start
   ^\s+Interface transmit statistics
   #
   ^\s+Logical\s+interface\s+${INTERFACE}
+  ^\s+Flags:\s+${LINK_STATUS}\s+\S+\s+\w+\s+(\S+\s+)*Encapsulation:
+  ^\s+Protocol\s+inet.*,\s+MTU:\s+${MTU}
   ^\s{2,4}Flags
   ^\s+Input packets
   ^\s+Output packets
@@ -45,6 +47,6 @@ Start
   ^\s{6}Flags
   ^\s{6}Address
   ^\s+Destination:\s+${DESTINATION},\s+Local:\s+${LOCAL},.*
-  #
   ^{master:\d+}
+  ^\s*$$
   ^. -> Error

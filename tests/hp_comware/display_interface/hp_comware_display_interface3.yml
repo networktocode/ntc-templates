@@ -1,19 +1,20 @@
 ---
 parsed_sample:
-  - intf: "Bridge-Aggregation1"
-    line_status: "UP"
-    protocol_status: ""
+  - bandwidth: "20000000 kbps"
+    description: "GROUND-FLOOR"
+    duplex: "full-duplex"
     hw_address:
       - "bcea-fa19-5f6c"
-    description: "GROUND-FLOOR"
-    bandwidth: "20000000 kbps"
-    speed: "20Gbps-speed"
-    duplex: "full-duplex"
-    mtu: ""
-    l2mtu: ""
-    vlan_native: "1"
+    interface: "Bridge-Aggregation1"
     ip_address: []
+    l2mtu: ""
+    line_status: "UP"
+    mtu: ""
     port_link_type: "Trunk"
+    protocol_status: ""
+    speed: "20Gbps-speed"
+    untagged_vlan_id: ""
+    vlan_native: "1"
     vlan_passing:
       - "1(default vlan)"
       - "1000-1002"

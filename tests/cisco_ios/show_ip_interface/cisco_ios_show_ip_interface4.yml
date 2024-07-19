@@ -1,46 +1,46 @@
 ---
 parsed_sample:
   - inbound_acl: ""
-    intf: "Loopback0"
-    ip_helper: []
-    ipaddr:
+    interface: "Loopback0"
+    ip_address:
       - "10.0.0.0"
+    ip_helper: []
     link_status: "up"
-    mask:
-      - "32"
     mtu: "1514"
     outgoing_acl: ""
+    prefix_length:
+      - "32"
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
-    intf: "Virtual-Access1"
+    interface: "Virtual-Access1"
+    ip_address: []
     ip_helper: []
-    ipaddr: []
     link_status: "up"
-    mask: []
     mtu: ""
     outgoing_acl: ""
+    prefix_length: []
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
-    intf: "Virtual-Access2"
+    interface: "Virtual-Access2"
+    ip_address: []
     ip_helper: []
-    ipaddr: []
     link_status: "up"
-    mask: []
     mtu: ""
     outgoing_acl: ""
+    prefix_length: []
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
-    intf: "Serial0/0/0:0"
-    ip_helper: []
-    ipaddr:
+    interface: "Serial0/0/0:0"
+    ip_address:
       - "172.1.1.110"
+    ip_helper: []
     link_status: "up"
-    mask:
-      - "30"
     mtu: ""
     outgoing_acl: ""
+    prefix_length:
+      - "30"
     protocol_status: "up"
     vrf: ""

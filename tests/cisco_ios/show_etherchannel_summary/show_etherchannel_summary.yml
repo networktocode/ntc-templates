@@ -1,62 +1,62 @@
 ---
 parsed_sample:
-  - "group": "1"
-    "po_name": "Po1"
-    "po_status": "SU"
-    "protocol": "LACP"
-    "interfaces":
+  - bundle_name: "Po1"
+    bundle_protocol: "LACP"
+    bundle_status: "SU"
+    group: "1"
+    member_interface:
       - "Te6/4"
       - "Te3/5"
       - "Te9/4"
       - "Te5/5"
-    "interfaces_status":
+    member_interface_status:
       - "P"
       - "P"
       - "P"
       - "P"
-  - "group": "3"
-    "po_name": "Po3"
-    "po_status": "SU"
-    "protocol": "LACP"
-    "interfaces":
+  - bundle_name: "Po3"
+    bundle_protocol: "LACP"
+    bundle_status: "SU"
+    group: "3"
+    member_interface:
       - "Te4/2"
       - "Te2/2"
-    "interfaces_status":
+    member_interface_status:
       - "P"
       - "P"
-  - "group": "7"
-    "po_name": "Po7"
-    "po_status": "SU"
-    "protocol": "LACP"
-    "interfaces":
+  - bundle_name: "Po7"
+    bundle_protocol: "LACP"
+    bundle_status: "SU"
+    group: "7"
+    member_interface:
       - "Te3/3"
       - "Te1/3"
-    "interfaces_status":
+    member_interface_status:
       - "P"
       - "P"
-  - "group": "13"
-    "po_name": "Po13"
-    "po_status": "SU"
-    "protocol": "LACP"
-    "interfaces":
+  - bundle_name: "Po13"
+    bundle_protocol: "LACP"
+    bundle_status: "SU"
+    group: "13"
+    member_interface:
       - "Te2/8"
-    "interfaces_status":
+    member_interface_status:
       - "P"
-  - "group": "14"
-    "po_name": "Po14"
-    "po_status": "SU"
-    "protocol": "LACP"
-    "interfaces":
+  - bundle_name: "Po14"
+    bundle_protocol: "LACP"
+    bundle_status: "SU"
+    group: "14"
+    member_interface:
       - "Te1/8"
-    "interfaces_status":
+    member_interface_status:
       - "P"
-  - "group": "51"
-    "po_name": "Po51"
-    "po_status": "SU"
-    "protocol": "LACP"
-    "interfaces":
+  - bundle_name: "Po51"
+    bundle_protocol: "LACP"
+    bundle_status: "SU"
+    group: "51"
+    member_interface:
       - "Te2/10"
       - "Te4/10"
-    "interfaces_status":
+    member_interface_status:
       - "P"
       - "P"

@@ -1,50 +1,50 @@
 ---
 parsed_sample:
   - inbound_acl: ""
-    intf: "GigabitEthernet2/23"
-    ipaddr: []
+    interface: "GigabitEthernet2/23"
+    ip_address: []
     ip_helper: []
     link_status: "up"
-    mask: []
     mtu: ""
     outgoing_acl: ""
+    prefix_length: []
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
-    intf: "GigabitEthernet2/24"
-    ipaddr: []
+    interface: "GigabitEthernet2/24"
+    ip_address: []
     ip_helper: []
     link_status: "administratively down"
-    mask: []
     mtu: ""
     outgoing_acl: ""
+    prefix_length: []
     protocol_status: "down"
     vrf: ""
   - inbound_acl: ""
-    intf: "GigabitEthernet2/25"
-    ipaddr:
+    interface: "GigabitEthernet2/25"
+    ip_address:
       - "192.168.102.45"
     ip_helper: []
     link_status: "up"
-    mask:
-      - "30"
     mtu: "1500"
     outgoing_acl: ""
+    prefix_length:
+      - "30"
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
-    intf: "Tunnel0"
-    ipaddr: []
+    interface: "Tunnel0"
+    ip_address: []
     ip_helper: []
     link_status: "up"
-    mask: []
     mtu: "1486"
     outgoing_acl: ""
+    prefix_length: []
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
-    intf: "Vlan1"
-    ipaddr:
+    interface: "Vlan1"
+    ip_address:
       - "192.168.1.1"
       - "192.168.1.3"
     ip_helper:
@@ -52,58 +52,58 @@ parsed_sample:
       - "192.168.1.88"
       - "10.17.5.255"
     link_status: "up"
-    mask:
-      - "24"
-      - "24"
     mtu: "1500"
     outgoing_acl: ""
+    prefix_length:
+      - "24"
+      - "24"
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
-    intf: "Vlan2"
-    ipaddr:
+    interface: "Vlan2"
+    ip_address:
       - "192.168.2.1"
     ip_helper:
       - "192.168.1.27"
       - "192.168.1.88"
     link_status: "administratively down"
-    mask:
-      - "24"
     mtu: "1500"
     outgoing_acl: ""
+    prefix_length:
+      - "24"
     protocol_status: "down"
     vrf: ""
   - inbound_acl: "ACL-IN"
-    intf: "TenGigabitEthernet0/1/0"
-    ipaddr:
+    interface: "TenGigabitEthernet0/1/0"
+    ip_address:
       - "1.1.1.1"
     ip_helper: []
     link_status: "up"
-    mask:
-      - "30"
     mtu: "1500"
     outgoing_acl: "ACL-OUT"
+    prefix_length:
+      - "30"
     protocol_status: "up"
     vrf: ""
   - inbound_acl: ""
-    intf: "GigabitEthernet0"
-    ipaddr: []
+    interface: "GigabitEthernet0"
+    ip_address: []
     ip_helper: []
     link_status: "administratively down"
-    mask: []
     mtu: ""
     outgoing_acl: ""
+    prefix_length: []
     protocol_status: "down"
     vrf: ""
   - inbound_acl: ""
-    intf: "Loopback0"
-    ipaddr:
+    interface: "Loopback0"
+    ip_address:
       - "10.255.255.1"
     ip_helper: []
     link_status: "up"
-    mask:
-      - "32"
     mtu: "1514"
     outgoing_acl: ""
+    prefix_length:
+      - "32"
     protocol_status: "up"
     vrf: ""

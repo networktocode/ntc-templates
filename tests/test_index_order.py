@@ -1,4 +1,5 @@
 """Tests to check the order of the index file."""
+
 import re
 
 from tests import load_index_data
@@ -8,6 +9,7 @@ OS_CHOICES = [
     "a10",
     "alcatel_aos",
     "alcatel_sros",
+    "allied_telesis_awplus",
     "arista_eos",
     "aruba_aoscx",
     "aruba_os",
@@ -25,26 +27,30 @@ OS_CHOICES = [
     "cisco_asa",
     "cisco_ftd",
     "cisco_ios",
+    "cisco_nvfis",
     "cisco_nxos",
     "cisco_s300",
+    "cisco_viptela",
     "cisco_wlc",
     "cisco_xe",
     "cisco_xr",
     "dell_force10",
     "dell_powerconnect",
     "dlink_ds",
+    "eltex",
     "enterasys",
     "ericsson_ipos",
-    "extreme",
+    "extreme_exos",
     "f5_ltm",
     "fortinet",
     "hp_comware",
     "hp_procurve",
+    "huawei_smartax",
     "huawei_vrp",
     "ipinfusion_ocnos",
-    "juniper",
     "juniper_junos",
     "juniper_screenos",
+    "juniper",
     "linux",
     "mikrotik_routeros",
     "ovs_linux",
@@ -118,7 +124,8 @@ def test_index_ordering():
         template = row[0].strip()
         os_match = RE_TEMPLATE_OS.match(template)
         current_os = os_match.group(0)
-        cmd = "_".join(template.split("_")[2:])
+        cmd_start_index = len(current_os) + 1
+        cmd = template[cmd_start_index:]
         cmd_len = len(cmd)
         check_val, check_msg = check_order(
             current_os, prior_os, cmd_len, prior_len, OS_CHOICES, used_os, cmd, prior_cmd

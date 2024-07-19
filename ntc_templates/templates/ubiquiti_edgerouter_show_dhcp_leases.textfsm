@@ -1,5 +1,5 @@
-Value IP ((?:[0-9]{1,3}\.){3}[0-9]{1,3})
-Value MAC ((?:[0-9a-fA-F]{2}\:){5}[0-9a-fA-F]{2})
+Value IP_ADDRESS ((?:[0-9]{1,3}\.){3}[0-9]{1,3})
+Value MAC_ADDRESS ((?:[0-9a-fA-F]{2}\:){5}[0-9a-fA-F]{2})
 Value EXPIRATION (.+\S)
 Value POOL (\S+)
 Value HOST (\S+)
@@ -9,5 +9,5 @@ Start
   ^-+\s+-+\s+-+\s+-+\s+-+\s*$$ -> Entries
 
 Entries
-  ^${IP}\s+${MAC}\s+${EXPIRATION}\s+${POOL}\s+${HOST}\s*$$ -> Record
+  ^${IP_ADDRESS}\s+${MAC_ADDRESS}\s+${EXPIRATION}\s+${POOL}\s+${HOST}\s*$$ -> Record
   ^. -> Error

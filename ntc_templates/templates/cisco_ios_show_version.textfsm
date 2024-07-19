@@ -12,9 +12,9 @@ Value UPTIME_MINUTES (\d+)
 Value RELOAD_REASON (.+?)
 Value RUNNING_IMAGE (\S+)
 Value List HARDWARE (\S+|\S+\d\S+)
-Value List SERIAL (\S+)
+Value List SERIAL (\w+)
 Value CONFIG_REGISTER (\S+)
-Value List MAC ([0-9a-fA-F]{2}(:[0-9a-fA-F]{2}){5})
+Value List MAC_ADDRESS ([0-9a-fA-F]{2}(:[0-9a-fA-F]{2}){5})
 Value RESTARTED (.+)
 
 Start
@@ -32,7 +32,7 @@ Start
   ^[Pp]rocessor\s+board\s+ID\s+${SERIAL}
   ^[Cc]isco\s+${HARDWARE}\s+\(.+\).+
   ^[Cc]onfiguration\s+register\s+is\s+${CONFIG_REGISTER}
-  ^Base\s+[Ee]thernet\s+MAC\s+[Aa]ddress\s+:\s+${MAC}
+  ^Base\s+[Ee]thernet\s+MAC\s+[Aa]ddress\s+:\s+${MAC_ADDRESS}
   ^System\s+restarted\s+at\s+${RESTARTED}$$
   ^Switch\s+Port -> Stack
   # Capture time-stamp if vty line has command time-stamping turned on
@@ -45,4 +45,4 @@ Stack
   ^[Ss]ystem\s+[Ss]erial\s+[Nn]umber\s+:\s+${SERIAL}
   ^[Mm]odel\s+[Nn]umber\s+:\s+${HARDWARE}\s*
   ^[Cc]onfiguration\s+register\s+is\s+${CONFIG_REGISTER}
-  ^Base [Ee]thernet MAC [Aa]ddress\s+:\s+${MAC}
+  ^Base [Ee]thernet MAC [Aa]ddress\s+:\s+${MAC_ADDRESS}

@@ -1,18 +1,19 @@
 ---
 parsed_sample:
-  - intf: "Ten-GigabitEthernet1/1/1"
-    line_status: "DOWN"
-    protocol_status: ""
+  - bandwidth: ""
+    description: "Ten-GigabitEthernet1/1/1 Interface"
+    duplex: "full-duplex"
     hw_address:
       - "bcea-fa00-0082"
-    description: "Ten-GigabitEthernet1/1/1 Interface"
-    bandwidth: ""
-    speed: "10Gbps-speed"
-    duplex: "full-duplex"
-    mtu: ""
-    l2mtu: "12288"
-    vlan_native: "1"
+    interface: "Ten-GigabitEthernet1/1/1"
     ip_address: []
+    l2mtu: "12288"
+    line_status: "DOWN"
+    mtu: ""
     port_link_type: "access"
+    protocol_status: ""
+    speed: "10Gbps-speed"
+    untagged_vlan_id: "1"
+    vlan_native: "1"
     vlan_passing: []
     vlan_permitted: []

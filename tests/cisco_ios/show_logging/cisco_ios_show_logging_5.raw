@@ -1,0 +1,45 @@
+Syslog logging: enabled (0 messages dropped, 21 messages rate-limited, 0 flushes, 0 overruns, xml disabled, filtering disabled)
+
+No Active Message Discriminator.
+
+
+
+No Inactive Message Discriminator.
+
+
+    Console logging: level debugging, 10027 messages logged, xml disabled,
+                     filtering disabled
+    Monitor logging: level debugging, 0 messages logged, xml disabled,
+                     filtering disabled
+    Buffer logging:  level informational, 10048 messages logged, xml disabled,
+                    filtering disabled
+    Exception Logging: size (8192 bytes)
+    Count and timestamp logging messages: disabled
+    Persistent logging: disabled
+
+No active filter modules.
+
+    Trap logging: level debugging, 10180 message lines logged
+        Logging to 81.95.32.138  (udp port 514, audit disabled,
+              link up),
+              10179 message lines logged,
+              0 message lines rate-limited,
+              0 message lines dropped-by-MD,
+              xml disabled, sequence number disabled
+              filtering disabled
+        Logging to 192.168.214.143  (udp port 514, audit disabled,
+              link up),
+              10180 message lines logged,
+              0 message lines rate-limited,
+              0 message lines dropped-by-MD,
+              xml disabled, sequence number disabled
+              filtering disabled
+        Logging Source-Interface:       VRF Name:
+
+Log Buffer (100000 bytes):
+rtual-PPP2, changed state to down
+*Sep 14 05:59:54.113: %LINEPROTO-5-UPDOWN: Line protocol on Interface Virtual-PPP2, changed state to up
+*Sep 14 06:00:45.693: %CRYPTO-4-PKT_REPLAY_ERR: decrypt: replay check failed
+        connection id=29, sequence number=219
+
+*Sep 14 06:07:26.245: %LINEPROTO-5-UPDOWN: Line protocol on Interface Virtual-PPP2, changed state to down

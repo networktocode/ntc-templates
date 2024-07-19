@@ -1,0 +1,6 @@
+Value CPU_OCCUPANCY (\d+)
+
+Start
+  ^\s+CPU\s+occupancy:\s+${CPU_OCCUPANCY}%
+  ^\s*$$
+  ^. -> Error

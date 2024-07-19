@@ -1,0 +1,91 @@
+BGP routing table information for VRF default
+Router identifier 10.103.1.1, local AS number 103
+BGP routing table entry for 10.103.1.0/24
+ Paths: 2 available
+  6333 623566 42669611124 4266644366 4266643244
+    10.10.23.2 from 10.10.23.2 (10.10.1.1)
+      Origin INCOMPLETE, metric 0, localpref 100, IGP metric 1, weight 0, received 19d16h ago, valid, external, best
+      Community: internet 10050:200 10222:10010 3223:0 1000:17044
+      Rx SAFI: Unicast
+  6333 623566 42669.611124 4266644366 4266643244
+    10.10.25.2 from 10.10.25.2 (10.10.1.1)
+      Origin INCOMPLETE, metric 0, localpref 100, IGP metric 1, weight 0, received 21:13:51 ago, valid, internal
+      Community: 10050:200 10222:10010 3223:0 1000:17055
+      Rx SAFI: Unicast
+BGP routing table entry for 10.104.1.0/24
+ Paths: 1 available
+  6333 623566 42669611124 {432556}
+    10.10.11.2 from 10.10.11.2 (10.10.11.1)
+      Origin IGP, metric 0, localpref 200, IGP metric 1, weight 0, received 19:13:51 ago, valid, internal, best
+      Community: 10050:300 10222:10010 3223:0 1000:17066
+      Extended Community: Route-Target-AS:1234:12
+      Rx SAFI: Unicast
+BGP routing table entry for 10.105.1.0/24
+ Paths: 2 available
+  6333 623566 42669611124 {432556}
+    10.10.11.2 from 10.10.11.2 (10.10.11.1)
+      Origin IGP, metric 0, localpref 300, IGP metric 1, weight 0, received 13:43:11 ago, valid, internal, best, atomic-aggregate
+      Community: 10050:300 10222:10010 3223:0 1000:17077
+      Rx SAFI: Unicast
+      4 Contributing routes:
+        10.105.1.59/32     Proto: Connected     Origin: IGP          AS Path: Local
+        10.105.1.6/32      Proto: Connected     Origin: IGP          AS Path: Local
+        10.105.1.29/32     Proto: BGP           Origin: IGP          AS Path: 3245.235
+          Community: 999:10 347:234 1240:155
+        10.105.1.28/32     Proto: BGP           Origin: IGP          AS Path: 3245.235
+          Community: 999:10 347:234 1240:155
+  Local (aggregated by 2345223 10.10.11.3)
+    10.10.11.3 from 10.10.11.3 (10.10.11.1)
+      Origin IGP, metric 0, localpref 200, IGP metric 1, weight 0, received 19:34:12 ago, valid, internal, atomic-aggregate
+      Community: 10050:300 10222:10010 3223:0 1000:17088
+      Rx SAFI: Unicast
+BGP routing table entry for 10.105.100.0
+ Paths: 2 available
+  6333 623566 42669611124 {432556}
+    10.10.11.2 from 10.10.11.2 (10.10.11.1)
+      Origin IGP, metric 0, localpref 300, IGP metric 1, weight 0, received 13:43:11 ago, valid, internal, best, atomic-aggregate
+      Community: 10050:300 10222:10010 3223:0 1000:17077
+      Rx SAFI: Unicast
+      4 Contributing routes:
+        10.105.1.59/32     Proto: Connected     Origin: IGP          AS Path: Local
+        10.105.1.6/32      Proto: Connected     Origin: IGP          AS Path: Local
+        10.105.1.29/32     Proto: BGP           Origin: IGP          AS Path: 3245.235
+          Community: 999:10 347:234 1240:155
+        10.105.1.28/32     Proto: BGP           Origin: IGP          AS Path: 3245.235
+          Community: 999:10 347:234 1240:155
+  Local (aggregated by 2345223 10.10.11.3)
+    10.10.11.3 from 10.10.11.3 (10.10.11.1)
+      Origin IGP, metric 0, localpref 200, IGP metric 1, weight 0, received 19:34:12 ago, valid, internal, atomic-aggregate
+      Community: 10050:300 10222:10010 3223:0 1000:17088
+      Rx SAFI: Unicast
+BGP routing table entry for 10.106.1.0/24
+ Paths: 1 available
+  Local
+    10.10.12.2 from 10.10.12.2 (10.10.12.1)
+      Origin INCOMPLETE, metric 0, localpref 200, IGP metric 1, weight 0, received 19:34:12 ago, valid, external, best
+      Community: 10050:300 10222:10010 3223:0 1000:17099
+      Rx SAFI: Unicast
+BGP routing table entry for 10.107.1.0/24
+ Paths: 1 available
+  Local (Received from a RR-client)
+    10.10.13.2 from 10.10.13.2 (10.10.13.1)
+      Origin IGP, metric 0, localpref 250, IGP metric 1, weight 0, received 19:34:12 ago, valid, internal, best
+      Community: no-export
+      Rx path id: 0x1
+      Rx SAFI: Unicast
+BGP routing table information for VRF CLOUD
+Router identifier 10.105.1.1, local AS number 105
+BGP routing table entry for 10.105.1.0/24
+ Paths: 1 available
+  6111 6211566 42669611124 4266644366 4266643244
+    10.99.1.2 from 10.105.6.2 (10.15.1.1)
+      Origin INCOMPLETE, metric 0, localpref 200, IGP metric 1, weight 0, received 13d11h ago, valid, external, best
+      Community: internet 10050:200 10222:10010 3223:0 1000:17044
+      Rx SAFI: Unicast
+BGP routing table entry for 10.106.1.0/24
+ Paths: 1 available
+  6111 6211566 42669611124 4266644366 4266643244
+    10.99.1.3 from 10.105.6.3 (10.15.1.2)
+      Origin INCOMPLETE, metric 0, localpref 100, IGP metric 1, weight 0, received 13d11h ago, valid, external, backup
+      Community: internet 10050:200 10222:10010 3223:0 1000:17044
+      Rx SAFI: Unicast

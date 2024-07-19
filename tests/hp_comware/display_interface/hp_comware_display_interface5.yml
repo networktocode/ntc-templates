@@ -1,19 +1,20 @@
 ---
 parsed_sample:
-  - intf: "GigabitEthernet2/0"
-    line_status: "UP"
-    protocol_status: "UP"
+  - bandwidth: "1000000kbps"
+    description: "GigabitEthernet2/0 Interface"
+    duplex: "Full-duplex"
     hw_address:
       - "5001-0011-0001"
       - "5001-0011-0001"
-    description: "GigabitEthernet2/0 Interface"
-    bandwidth: "1000000kbps"
-    speed: "1000Mb/s"
-    duplex: "Full-duplex"
-    mtu: "1500"
-    l2mtu: ""
-    vlan_native: ""
+    interface: "GigabitEthernet2/0"
     ip_address: []
+    l2mtu: ""
+    line_status: "UP"
+    mtu: "1500"
     port_link_type: ""
+    protocol_status: "UP"
+    speed: "1000Mb/s"
+    untagged_vlan_id: ""
+    vlan_native: ""
     vlan_passing: []
     vlan_permitted: []

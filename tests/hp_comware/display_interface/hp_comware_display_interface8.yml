@@ -1,51 +1,54 @@
 ---
 parsed_sample:
-  - intf: "Aux0"
-    line_status: "UP"
-    protocol_status: ""
-    hw_address: []
+  - bandwidth: "9 kbps"
     description: "Aux0 Interface"
-    bandwidth: "9 kbps"
-    speed: ""
     duplex: ""
-    mtu: ""
-    l2mtu: ""
-    vlan_native: ""
+    hw_address: []
+    interface: "Aux0"
     ip_address: []
+    l2mtu: ""
+    line_status: "UP"
+    mtu: ""
     port_link_type: ""
+    protocol_status: ""
+    speed: ""
+    untagged_vlan_id: ""
+    vlan_native: ""
     vlan_passing: []
     vlan_permitted: []
-  - intf: "GigabitEthernet0/0"
-    line_status: "UP"
-    protocol_status: "UP"
+  - bandwidth: "300000 kbps"
+    description: "WAN ZONE"
+    duplex: "full-duplex"
     hw_address:
       - "ec9b-8b00-004c"
       - "ec9b-8b00-004c"
-    description: "WAN ZONE"
-    bandwidth: "300000 kbps"
-    speed: "1000Mbps-speed"
-    duplex: "full-duplex"
-    mtu: "1500"
-    l2mtu: ""
-    vlan_native: ""
+    interface: "GigabitEthernet0/0"
     ip_address:
       - "192.168.1.1/24"
+    l2mtu: ""
+    line_status: "UP"
+    mtu: "1500"
     port_link_type: ""
+    protocol_status: "UP"
+    speed: "1000Mbps-speed"
+    untagged_vlan_id: ""
+    vlan_native: ""
     vlan_passing: []
     vlan_permitted: []
-  - intf: "Tunnel100"
-    line_status: "UP"
-    protocol_status: "UP"
-    hw_address: []
+  - bandwidth: "64 kbps"
     description: "To_FW"
-    bandwidth: "64 kbps"
-    speed: ""
     duplex: ""
-    mtu: "1476"
-    l2mtu: ""
-    vlan_native: ""
+    hw_address: []
+    interface: "Tunnel100"
     ip_address:
       - "172.16.1.1/24"
+    l2mtu: ""
+    line_status: "UP"
+    mtu: "1476"
     port_link_type: ""
+    protocol_status: "UP"
+    speed: ""
+    untagged_vlan_id: ""
+    vlan_native: ""
     vlan_passing: []
     vlan_permitted: []

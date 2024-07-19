@@ -1,15 +1,19 @@
-Value Key index (\d+)
-Value flags ([XADCSrbomBUP ]+)
-Value comment (.*)
-Value dst_address ([\w.:/\d]+)
-Value pref_src (\S+?)
-Value gateway (\S+)
-Value gateway_status (.+)
-Value distance (\d+)
-Value scope (\d+)
-Value target_scope (\d+)
+Value INDEX (\d+)
+Value FLAGS ([XADCSrbvomcBUP\s]+(?<!\s))
+Value COMMENT (.*)
+Value DST_ADDRESS ([\w.:/\d]+)
+Value ROUTING_TABLE (\S+)
+Value PREF_SRC (\S*)
+Value GATEWAY (\S+)
+Value GATEWAY_STATUS (.+)
+Value IMMEDIATE_GW (\S+)
+Value DISTANCE (\d+)
+Value SCOPE (\d+)
+Value TARGET_SCOPE (\d+)
+Value SUPPRESS_HW_OFFLOAD (\S+)
+Value LOCAL_ADDRESS (\S+)
 
 Start
-  ^\s?${index}\s${flags}\s\s(comment=${comment}\s)?dst-address=${dst_address}(\spref-src=${pref_src})?\sgateway=${gateway}\sgateway-status=${gateway_status}\sdistance=${distance}\sscope=${scope}(\starget-scope=${target_scope})?.*$$ -> Record
+  ^(\s?${INDEX}\s*)?${FLAGS}\s+(comment=${COMMENT}\s)?dst-address=${DST_ADDRESS}(\srouting-table=${ROUTING_TABLE})?(\spref-src=${PREF_SRC})?\sgateway=${GATEWAY}(\sgateway-status=${GATEWAY_STATUS})?(\simmediate-gw=${IMMEDIATE_GW})?\sdistance=${DISTANCE}\sscope=${SCOPE}(\starget-scope=${TARGET_SCOPE})?(\ssuppress-hw-offload=${SUPPRESS_HW_OFFLOAD})?(\slocal-address=${LOCAL_ADDRESS})?.*$$ -> Record
   ^\s*(?:\d{2}:){2}\d{2}\s+echo:\s*.*$$ -> Next
   ^. -> Error

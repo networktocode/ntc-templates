@@ -1,22 +1,22 @@
 ---
 parsed_sample:
-  - software_image: "X86_64_LINUX_IOSD-UNIVERSALK9-M"
-    version: "15.3(2)S1"
-    release: "fc1"
-    rommon: "IOS-XE"
+  - config_register: "0x2102"
+    hardware:
+      - "ASR1001"
     hostname: "my_device"
+    mac_address: []
+    release: "fc1"
+    reload_reason: "LocalSoft"
+    restarted: "23:02:42 MET-DST Fri Jul 25 2014"
+    rommon: "IOS-XE"
+    running_image: "asr1001-universalk9.03.09.01.S.153-2.S1.bin"
+    serial:
+      - "SSI1289001MH"
+    software_image: "X86_64_LINUX_IOSD-UNIVERSALK9-M"
     uptime: "1 day, 15 hours, 32 minutes"
     uptime_days: "1"
     uptime_hours: "15"
     uptime_minutes: "32"
     uptime_weeks: ""
     uptime_years: ""
-    reload_reason: "LocalSoft"
-    running_image: "asr1001-universalk9.03.09.01.S.153-2.S1.bin"
-    hardware:
-      - "ASR1001"
-    serial:
-      - "SSI1289001MH"
-    config_register: "0x2102"
-    mac: []
-    restarted: "23:02:42 MET-DST Fri Jul 25 2014"
+    version: "15.3(2)S1"

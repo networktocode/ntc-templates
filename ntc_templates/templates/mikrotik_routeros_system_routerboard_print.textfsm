@@ -1,23 +1,23 @@
-Value routerboard (\S+)
-Value board_name (.+)
-Value hardware_model (\S+)
-Value revision (\S+)
-Value serial_number (\S+)
-Value firmware_type (\S+)
-Value factory_firmware ([\d.]+)
-Value current_firmware ([\d.]+)
-Value upgrade_firmware ([\d.]+)
+Value ROUTERBOARD (\S+)
+Value BOARD_NAME (.+)
+Value HARDWARE_MODEL (.+)
+Value REVISION (.+)
+Value SERIAL_NUMBER (\S+)
+Value FIRMWARE_TYPE (\S+)
+Value FACTORY_FIRMWARE ([\d.]+)
+Value CURRENT_FIRMWARE ([\d.]+)
+Value UPGRADE_FIRMWARE ([\d.]+)
 
 Start
   ^\s*;;;.* -> Next
-  ^\s*routerboard:\s${routerboard}
-  ^\s*board-name:\s${board_name}
-  ^\s*model:\s${hardware_model}
-  ^\s*revision:\s${revision}
-  ^\s*serial-number:\s${serial_number}
-  ^\s*firmware-type:\s${firmware_type}
-  ^\s*factory-firmware:\s${factory_firmware}
-  ^\s*current-firmware:\s${current_firmware}
-  ^\s*upgrade-firmware:\s${upgrade_firmware}
+  ^\s*routerboard:\s${ROUTERBOARD}
+  ^\s*board-name:\s${BOARD_NAME}
+  ^\s*model:\s${HARDWARE_MODEL}
+  ^\s*revision:\s${REVISION}
+  ^\s*serial-number:\s${SERIAL_NUMBER}
+  ^\s*firmware-type:\s${FIRMWARE_TYPE}
+  ^\s*factory-firmware:\s${FACTORY_FIRMWARE}
+  ^\s*current-firmware:\s${CURRENT_FIRMWARE}
+  ^\s*upgrade-firmware:\s${UPGRADE_FIRMWARE}
   ^\s*(?:\d{2}:){2}\d{2}\s+echo:\s*.*$$ -> Next
   ^. -> Error

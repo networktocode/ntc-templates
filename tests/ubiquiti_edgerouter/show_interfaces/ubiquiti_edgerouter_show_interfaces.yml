@@ -1,47 +1,58 @@
 ---
 parsed_sample:
-  - interface: "eth0"
-    description: "Port"
-    ip: ["-"]
+  - description: "Port"
+    interface: "eth0"
+    ip_address:
+      - "-"
     link_status: "u"
     state: "u"
-  - interface: "eth1"
-    description: "Eth 1"
-    ip: ["192.168.1.1/24", "2a05:c100:1d::1/64"]
+  - description: "Eth 1"
+    interface: "eth1"
+    ip_address:
+      - "192.168.1.1/24"
+      - "2a05:c100:1d::1/64"
     link_status: "u"
     state: "u"
-  - interface: "eth2"
-    description: "Port"
-    ip: ["-"]
+  - description: "Port"
+    interface: "eth2"
+    ip_address:
+      - "-"
     link_status: "D"
     state: "u"
-  - interface: "eth3"
-    description: "Port"
-    ip: ["-"]
+  - description: "Port"
+    interface: "eth3"
+    ip_address:
+      - "-"
     link_status: "D"
     state: "u"
-  - interface: "lo"
-    description: ""
-    ip: ["127.0.0.1/8", "::1/128"]
+  - description: ""
+    interface: "lo"
+    ip_address:
+      - "127.0.0.1/8"
+      - "::1/128"
     link_status: "u"
     state: "u"
-  - interface: "eth4"
-    description: "datas"
-    ip: ["192.168.1.1/24"]
+  - description: "datas"
+    interface: "eth4"
+    ip_address:
+      - "192.168.1.1/24"
     link_status: "u"
     state: "u"
-  - interface: "eth4.2900"
-    description: ""
-    ip: ["-"]
+  - description: ""
+    interface: "eth4.2900"
+    ip_address:
+      - "-"
     link_status: "u"
     state: "u"
-  - interface: "eth5"
-    description: ""
-    ip: ["2a05:c100:1d::1/64"]
+  - description: ""
+    interface: "eth5"
+    ip_address:
+      - "2a05:c100:1d::1/64"
     link_status: "u"
     state: "u"
-  - interface: "switch0.1"
-    description: "vl1-siege-serveurs"
-    ip: ["192.168.10.251/24"]
+  - description: "vl1-siege-serveurs"
+    interface: "switch0.1"
+    ip_address:
+      - "192.168.10.251/24"
     link_status: "u"
     state: "u"
