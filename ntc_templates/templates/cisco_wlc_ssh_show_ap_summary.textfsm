@@ -17,7 +17,7 @@ Start
   # Skip lines 
   ^Number\s+of\s+APs -> Record
   # Match the various record patterns
-  ^${AP_NAME}\s+${SLOT}\s+${AP_MODEL}\s+${MAC_ADDRESS}\s+${LOCATION}\s+${COUNTRY}\s+${IP}\s+${CLIENTS}\s+${DSE_LOCATION}\s*$$ -> Record
+  ^${AP_NAME}\s+${SLOT}\s+${AP_MODEL}\s+${MAC_ADDRESS}\s+${LOCATION}\s+${COUNTRY}\s+${IP_ADDRESS}\s+${CLIENTS}\s+${DSE_LOCATION}\s*$$ -> Record
   ^${AP_NAME}\s+${SLOT}\s+${AP_MODEL}\s+${MAC_ADDRESS}\s+${LOCATION}\s+${PORT}\s+${COUNTRY}\s+${PRIORITY}\s*$$ -> Record
   ^${AP_NAME}\s+${SLOT}\s+${AP_MODEL}\s+${MAC_ADDRESS}\s+${RADIO_MAC}\s${LOCATION}\s+${COUNTRY}\s+${IP_ADDRESS}\s+${STATE}\s*$$ -> Record
   ^.+\.+
