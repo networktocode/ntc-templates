@@ -38,7 +38,7 @@ Start
   ^\s+Logical\s+interface\s+${INTERFACE}
   ^\s+Flags:\s+${LINK_STATUS}\s+\S+\s+\w+\s+(\S+\s+)*Encapsulation:
   ^\s+Protocol\s+inet.*,\s+MTU:\s+${MTU}
-  ^\s{2,4}Flags
+  ^\s+Flags
   ^\s+Input packets
   ^\s+Output packets
   ^\s+Security
