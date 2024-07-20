@@ -11,6 +11,7 @@ Value BCAST_LIMIT (\d+)
 Start
   ^\s+Status.*Status\s*
   ^\s*$$
+  ^\s*Note:\s*\*.*$$
   ^\s+\|\s+Intrusion\s+MDI\s+Flow(?:\s+Bcast)?\s*$$
   ^\s+Port\s+Type\s+\|\s+Alert\s+Enabled\s+Status\s+Mode\s+Mode\s+Ctrl\s*$$ -> showintbrief1
   ^\s+Port\s+Type\s+\|\s+Alert\s+Enabled\s+Status\s+Mode\s+Mode\s+Ctrl\s+Limit\s*$$ -> showintbrief2
