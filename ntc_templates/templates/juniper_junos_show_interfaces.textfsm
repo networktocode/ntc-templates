@@ -43,8 +43,11 @@ Start
   ^\s+Output packets
   ^\s+Security
   ^\s+Protocol
-  ^\s{6}Flags
-  ^\s{6}Address
+  ^\s+Flags
+  ^\s+Address
+  ^\s+Bandwidth
+  ^\s+Routing
+  ^\s+Max
   ^\s+Destination:\s+${DESTINATION},\s+Local:\s+${LOCAL},.*
   ^\s+MAC:
   ^{master:\d+}
