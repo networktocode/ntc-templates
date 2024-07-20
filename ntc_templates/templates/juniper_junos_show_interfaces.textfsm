@@ -47,6 +47,7 @@ Start
   ^\s{6}Flags
   ^\s{6}Address
   ^\s+Destination:\s+${DESTINATION},\s+Local:\s+${LOCAL},.*
+  ^\s+MAC:
   ^{master:\d+}
   ^\s*$$
   ^. -> Error
