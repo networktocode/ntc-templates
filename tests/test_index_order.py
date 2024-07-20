@@ -53,6 +53,7 @@ OS_CHOICES = [
     "juniper",
     "linux",
     "mikrotik_routeros",
+    "oneaccess_oneos",
     "ovs_linux",
     "paloalto_panos",
     "quanta_mesh",
@@ -72,7 +73,14 @@ RE_TEMPLATE_OS = re.compile(rf"^({CHOICES_STRING})")
 
 
 def check_order(  # pylint: disable=too-many-arguments,too-many-arguments,too-many-return-statements
-    current_os, prior_os, cmd_len, prior_len, os_choices, used_os, cmd, prior_cmd
+    current_os,
+    prior_os,
+    cmd_len,
+    prior_len,
+    os_choices,
+    used_os,
+    cmd,
+    prior_cmd,
 ):
     """Enforcing the complex logic to ensure that the index file is ordered correctly."""
     add_os_check = []
@@ -129,7 +137,14 @@ def test_index_ordering():
         cmd = template[cmd_start_index:]
         cmd_len = len(cmd)
         check_val, check_msg = check_order(
-            current_os, prior_os, cmd_len, prior_len, OS_CHOICES, used_os, cmd, prior_cmd
+            current_os,
+            prior_os,
+            cmd_len,
+            prior_len,
+            OS_CHOICES,
+            used_os,
+            cmd,
+            prior_cmd,
         )
         if not check_val:
             # assertFalse(check_val, msg=check_msg)

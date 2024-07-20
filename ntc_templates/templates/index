@@ -689,6 +689,10 @@ mikrotik_routeros_user_active_print.textfsm, .*, mikrotik_routeros, [[/]]us[[er]
 mikrotik_routeros_ip_address_print.textfsm, .*, mikrotik_routeros, [[/]]ip ad[[dress]] p[[rint]]
 mikrotik_routeros_ping.textfsm, .*, mikrotik_routeros, [[/]]pin[[g]]
 
+oneaccess_oneos_show_voice_voip-call_active_all.textfsm, .*, oneaccess_oneos, sh[[ow]] voice voip-call active
+oneaccess_oneos_show_voice_voip-call_any_all.textfsm, .*, oneaccess_oneos, sh[[ow]] voice voip-call any all
+oneaccess_oneos_show_vrrp_interface.textfsm, .*, oneaccess_oneos, sh[[ow]] vrrp int[[erface]]
+
 paloalto_panos_show_running_security-policy.textfsm, .*, paloalto_panos, sh[[ow]] runn[[ing]] security[[-policy]]
 paloalto_panos_show_high-availability_all.textfsm, .*, paloalto_panos, sh[[ow]] high[[-availability]] all
 paloalto_panos_test_security-policy-match.textfsm, .*, paloalto_panos, test security-policy-match.*
