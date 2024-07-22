@@ -20,6 +20,11 @@ Value DELAY (\d+\s+\w+)
 Value ENCAPSULATION ([\w\.]+)
 Value LAST_LINK_FLAPPED (.+?)
 Value VLAN_ID (\d+)
+Value PACKET_INPUT_RATE (.+?)
+Value PACKET_OUTPUT_RATE (.+?)
+Value BANDWIDTH_INPUT_RATE (.+?)
+Value BANDWIDTH_OUTPUT_RATE (.+?)
+Value MEDIA_TYPE (.+?)
 
 Start
   ^\S+\s+is.+ -> Continue.Record
@@ -30,7 +35,7 @@ Start
   ^\s+Description:\s+${DESCRIPTION}\s*$$
   ^\s+Internet\s+Address\s+is\s+${IP_ADDRESS}\/${PREFIX_LENGTH}
   ^\s+Port\s+mode\s+is\s+${MODE}
-  ^\s+${DUPLEX}, ${SPEED}(,|$$)
+  ^\s+${DUPLEX}, ${SPEED}(,\s+media\s+type\s+is\s+${MEDIA_TYPE})?\s*$$
   ^\s+MTU\s+${MTU}.*BW\s+${BANDWIDTH}.*DLY\s+${DELAY}
   ^\s+Encapsulation\s+${ENCAPSULATION}(,)?(\s+Virtual\s+LAN,\s+Vlan\s+ID\s+${VLAN_ID},)?
   ^\s+${INPUT_PACKETS}\s+input\s+packets\s+\d+\s+bytes\s*$$
@@ -38,3 +43,5 @@ Start
   ^\s+${OUTPUT_PACKETS}\s+output\s+packets\s+\d+\s+bytes\s*$$
   ^\s+${OUTPUT_ERRORS}\s+output\s+error\s+\d+\s+collision\s+\d+\s+deferred\s+\d+\s+late\s+collision\s*$$
   ^\s+Last\s+link\s+flapped\s+${LAST_LINK_FLAPPED}\s*$$
+  ^\s+\d+\s+seconds\s+input\s+rate\s+${BANDWIDTH_INPUT_RATE}\s+bits/sec,\s+${PACKET_INPUT_RATE}\s+packets/sec
+  ^\s+\d+\s+seconds\s+output\s+rate\s+${BANDWIDTH_OUTPUT_RATE}\s+bits/sec,\s+${PACKET_OUTPUT_RATE}\s+packets/sec
