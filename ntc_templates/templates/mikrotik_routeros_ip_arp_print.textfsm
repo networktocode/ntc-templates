@@ -1,7 +1,7 @@
 Value NUM (\d+)
 Value FLAGS ([XIHDPC]+)
-Value ADDRESS (\S+)
-Value MAC ((?:[0-9a-fA-F]{2}:){5}[0-9a-fA-F]{2})
+Value IP_ADDRESS (\S+)
+Value MAC_ADDRESS ((?:[0-9a-fA-F]{2}:){5}[0-9a-fA-F]{2})
 Value INTERFACE (\S+)
 
 Start
@@ -11,7 +11,7 @@ Start
   ^. -> Error
 
 EntriesTable
-  ^\s*${NUM}(?:\s+${FLAGS})?\s+${ADDRESS}(?:\s+${MAC})?(?:\s+${INTERFACE})?\s*$$ -> Record
+  ^\s*${NUM}(?:\s+${FLAGS})?\s+${IP_ADDRESS}(?:\s+${MAC_ADDRESS})?(?:\s+${INTERFACE})?\s*$$ -> Record
   ^\s*(?:\d{2}:){2}\d{2}\s+echo:\s*.*$$
   ^\s*$$
   ^. -> Error
