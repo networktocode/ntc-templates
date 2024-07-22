@@ -1,0 +1,127 @@
+Interface port1.1.1
+  Scope: both
+  Link is UP, administrative state is UP
+  Thrash-limiting
+    Status Not Detected, Action learn-disable, Timeout 1(s)
+  Hardware is Ethernet, address is 0000.cd37.0fcf
+  Description: To XXXXXXXXXXXX
+  index 5101 metric 1 mru 1500
+  current duplex full, current speed 10000, current polarity mdi
+  configured duplex auto, configured speed auto, configured polarity auto
+  <UP,BROADCAST,RUNNING,MULTICAST>
+  SNMP link-status traps: Sending (suppressed after 20 traps in 60 sec)
+    Link-status trap delay: 0 sec
+    input packets 9455362865, bytes 11289114945786, dropped 0, multicast packets 3410881
+    output packets 17173058785, bytes 12752872494347, multicast packets 513043665, broadcast packets 830156481
+    input average rate : 30 seconds 1.05 Mbps, 5 minutes 590.97 Kbps
+    output average rate: 30 seconds 1.64 Mbps, 5 minutes 919.28 Kbps
+    input peak rate 806.73 Mbps at 2023/01/12 23:32:30
+    output peak rate 806.80 Mbps at 2023/01/12 23:32:30
+  Time since last state change: 0 days 01:14:20
+Interface vlan1
+  Scope: both
+  Link is UP, administrative state is UP
+  Hardware is VLAN, address is 0000.cd37.0fcf
+  IPv4 address 192.168.1.1/24 broadcast 192.168.1.255
+  index 301 metric 1 mtu 1500
+  arp ageing timeout 300
+  <UP,BROADCAST,RUNNING,MULTICAST>
+  VRF Binding: Associated with VRF01
+  SNMP link-status traps: Disabled
+  Router Advertisement is disabled
+  Router Advertisement default routes are accepted
+  Router Advertisement prefix info is accepted
+    input packets 30729674, bytes 2331109561, dropped 206, multicast packets 1014964
+    output packets 117039344, bytes 5218779216, multicast packets 0, broadcast packets 0
+  Time since last state change: 134 days 01:22:08
+Interface vlan2
+  Scope: both
+  Link is UP, administrative state is UP
+  Hardware is VLAN, address is 0000.cd37.0fcf
+  index 302 metric 1 mtu 1500
+  arp ageing timeout 300
+  <UP,BROADCAST,RUNNING,MULTICAST>
+  VRF Binding: Not bound
+  SNMP link-status traps: Disabled
+  Router Advertisement is disabled
+  Router Advertisement default routes are accepted
+  Router Advertisement prefix info is accepted
+    input packets 0, bytes 0, dropped 0, multicast packets 0
+    output packets 0, bytes 0, multicast packets 0, broadcast packets 0
+  Time since last state change: 134 days 01:22:08
+Interface vlan3
+  Scope: both
+  Link is UP, administrative state is UP
+  Hardware is VLAN, address is 0000.cd37.0fcf
+  IPv4 address 192.168.3.1/24 broadcast 192.168.3.255
+  index 303 metric 1 mtu 1500
+  arp ageing timeout 300
+  <UP,BROADCAST,RUNNING,MULTICAST>
+  VRF Binding: Associated with VRF01
+  SNMP link-status traps: Disabled
+  Router Advertisement is disabled
+  Router Advertisement default routes are accepted
+  Router Advertisement prefix info is accepted
+    input packets 35361512, bytes 2570082989, dropped 0, multicast packets 360213
+    output packets 24669070, bytes 1441930633, multicast packets 0, broadcast packets 0
+  Time since last state change: 134 days 01:22:08
+Interface lo
+  Scope: both
+  Link is UP, administrative state is UP
+  Hardware is Loopback
+  index 1 metric 1
+  <UP,LOOPBACK,RUNNING>
+  VRF Binding: Not bound
+  SNMP link-status traps: Disabled
+  Router Advertisement is disabled
+  Router Advertisement default routes are accepted
+  Router Advertisement prefix info is accepted
+  Time since last state change: 134 days 01:59:44
+Interface lo1
+  Scope: both
+  Link is UP, administrative state is UP
+  Hardware is Loopback
+  index 5 metric 1
+  <UP,RUNNING,NOARP>
+  VRF Binding: Associated with VRF01
+  SNMP link-status traps: Disabled
+  Router Advertisement is disabled
+  Router Advertisement default routes are accepted
+  Router Advertisement prefix info is accepted
+  Time since last state change: 134 days 01:59:44
+Interface lo2
+  Scope: both
+  Link is UP, administrative state is UP
+  Hardware is Loopback
+  index 6 metric 1
+  <UP,RUNNING,NOARP>
+  VRF Binding: Associated with VRF02
+  SNMP link-status traps: Disabled
+  Router Advertisement is disabled
+  Router Advertisement default routes are accepted
+  Router Advertisement prefix info is accepted
+  Time since last state change: 134 days 01:59:44
+Interface lo3
+  Scope: both
+  Link is UP, administrative state is UP
+  Hardware is Loopback
+  index 7 metric 1
+  <UP,RUNNING,NOARP>
+  VRF Binding: Associated with VRF03
+  SNMP link-status traps: Disabled
+  Router Advertisement is disabled
+  Router Advertisement default routes are accepted
+  Router Advertisement prefix info is accepted
+  Time since last state change: 134 days 01:59:44
+Interface lo4
+  Scope: both
+  Link is UP, administrative state is UP
+  Hardware is Loopback
+  index 8 metric 1
+  <UP,RUNNING,NOARP>
+  VRF Binding: Associated with VRF04
+  SNMP link-status traps: Disabled
+  Router Advertisement is disabled
+  Router Advertisement default routes are accepted
+  Router Advertisement prefix info is accepted
+  Time since last state change: 134 days 01:59:44

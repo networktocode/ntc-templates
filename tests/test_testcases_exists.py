@@ -1,4 +1,5 @@
 """Ensure that testcases exist for all templates."""
+
 import os
 import glob
 import re

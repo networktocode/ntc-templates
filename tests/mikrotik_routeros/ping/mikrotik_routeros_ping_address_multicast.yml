@@ -1,0 +1,14 @@
+---
+parsed_sample:
+  - seq: ["0", "1", "2", "3"]
+    host: ["fe80::20c:42ff:fe49:fceb", "fe80::20c:42ff:fe72:a1b0", "fe80::20c:42ff:fe28:7945", "fe80::21a:4dff:fe5d:8e56"]
+    size: ["56", "56", "56", "56"]
+    ttl: ["64", "64", "64", "64"]
+    time: ["1", "1", "1", "3"]
+    status: ["echo reply", "echo reply", "echo reply", "echo reply"]
+    sent: "1"
+    received: "4"
+    packet_loss: "-300"
+    min_rtt: "1"
+    avg_rtt: "1"
+    max_rtt: "3"

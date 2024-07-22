@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "ntc_templates"
-version = "4.0.1"
+version = "6.0.0"
 description = "TextFSM Templates for Network Devices, and Python wrapper for TextFSM's CliTable."
 authors = ["Network to Code <info@networktocode.com>"]
 license = "Apache-2.0"
@@ -13,10 +13,11 @@ classifiers = [
     "Intended Audience :: Developers",
     "Development Status :: 4 - Beta",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.7",
     "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
 ]
 include = [
     "LICENSE",
@@ -26,7 +27,7 @@ include = [
 ]
 
 [tool.poetry.dependencies]
-python = "^3.7"
+python = "^3.8"
 textfsm = "^1.1.0"
 
 [tool.poetry.dev-dependencies]
@@ -44,10 +45,10 @@ sphinx-rtd-theme = "*"
 toml = "*"
 yamllint = "*"
 "ruamel.yaml" = "*"
-mkdocs = "1.3.1"
-mkdocs-material = "8.3.9"
-mkdocstrings = "0.19"
-mkdocstrings-python = "0.7.1"
+mkdocs = "1.5.2"
+mkdocs-material = "9.1.15"
+mkdocstrings = "0.22.0"
+mkdocstrings-python = "1.5.2"
 mkdocs-version-annotations = "1.0.0"
 
 [tool.poetry.extras]
@@ -55,7 +56,7 @@ test = ["pytest"]
 
 [tool.black]
 line-length = 120
-target-version = ['py37']
+target-version = ['py38']
 include = '\.pyi?$'
 exclude = '''
 (
@@ -77,11 +78,11 @@ exclude = '''
 '''
 
 [tool.pylint.master]
-ignore=".venv"
+ignore = ".venv"
 
 [tool.pylint.basic]
 # No docstrings required for private methods (Pylint default), or for test_ functions, or for inner Meta classes.
-no-docstring-rgx="^(_|test_|Meta$)"
+no-docstring-rgx = "^(_|test_|Meta$)"
 
 [tool.pylint.messages_control]
 # Line length is enforced by Black, so pylint doesn't need to check it.
@@ -115,7 +116,5 @@ requires = ["poetry_core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.pytest.ini_options]
-testpaths = [
-    "tests"
-]
+testpaths = ["tests"]
 addopts = "-vv --doctest-modules"

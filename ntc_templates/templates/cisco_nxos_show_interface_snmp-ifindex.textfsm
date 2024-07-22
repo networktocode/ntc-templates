@@ -1,0 +1,12 @@
+Value PORT (\S+)
+Value IFMIB (\S+)
+Value IFINDEX_HEX (\S+)
+
+Start
+  ^Port\s+IFMIB\s+Ifindex\s+\(hex\)\s*$$
+  ^${PORT}\s+${IFMIB}\s+\(${IFINDEX_HEX}\s*\)\s*$$ -> Record
+  ^-*$$
+  ^\s*$$
+  ^. -> Error
+
+EOF

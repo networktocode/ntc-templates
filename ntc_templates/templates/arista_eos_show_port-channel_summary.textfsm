@@ -1,9 +1,9 @@
-Value PORT_CHANNEL (Po\d+)
-Value PORT_CHANNEL_STATUS (\S+)
-Value PROTOCOL (\w+)
-Value PROTOCOL_STATE (\S+)
-Value List PHYS_IFACE (Et\S+)
-Value List PHYS_IFACE_STATUS (\S+)
+Value BUNDLE_NAME (Po\d+)
+Value BUNDLE_STATUS (\S+)
+Value BUNDLE_PROTOCOL (\w+)
+Value BUNDLE_PROTOCOL_STATE (\S+)
+Value List MEMBER_INTERFACE (Et\S+)
+Value List MEMBER_INTERFACE_STATUS (\S+)
 
 
 Start
@@ -19,14 +19,14 @@ Start
 
 PCS
   ^\s*Po\d+ -> Continue.Record
-  ^\s*${PORT_CHANNEL}\(${PORT_CHANNEL_STATUS}\)\s+${PROTOCOL}\(${PROTOCOL_STATE}\)\s+${PHYS_IFACE}\(${PHYS_IFACE_STATUS}\)(\s|$$) -> Continue
-  ^\s*Po\d+.+(Et.+?\(.+?\)\s){1}${PHYS_IFACE}\(${PHYS_IFACE_STATUS}\)(\s|$$) -> Continue
-  ^\s*Po\d+.+(Et.+?\(.+?\)\s){2}${PHYS_IFACE}\(${PHYS_IFACE_STATUS}\)(\s|$$) -> Continue
-  ^\s*Po\d+.+(Et.+?\(.+?\)\s){3}${PHYS_IFACE}\(${PHYS_IFACE_STATUS}\)(\s|$$) -> Continue
-  ^\s*Po\d+.+(Et.+?\(.+?\)\s){4}${PHYS_IFACE}\(${PHYS_IFACE_STATUS}\)(\s|$$) -> Continue
-  ^\s+${PHYS_IFACE}\(${PHYS_IFACE_STATUS}\)(\s|$$) -> Continue
-  ^\s+(Et.+?\(.+?\)\s){1}${PHYS_IFACE}\(${PHYS_IFACE_STATUS}\)(\s|$$) -> Continue
-  ^\s+(Et.+?\(.+?\)\s){2}${PHYS_IFACE}\(${PHYS_IFACE_STATUS}\)(\s|$$) -> Continue
-  ^\s+(Et.+?\(.+?\)\s){3}${PHYS_IFACE}\(${PHYS_IFACE_STATUS}\)(\s|$$) -> Continue
-  ^\s+(Et.+?\(.+?\)\s){4}${PHYS_IFACE}\(${PHYS_IFACE_STATUS}\)(\s|$$) -> Continue
+  ^\s*${BUNDLE_NAME}\(${BUNDLE_STATUS}\)\s+${BUNDLE_PROTOCOL}\(${BUNDLE_PROTOCOL_STATE}\)\s+${MEMBER_INTERFACE}\(${MEMBER_INTERFACE_STATUS}\)(\s|$$) -> Continue
+  ^\s*Po\d+.+(Et.+?\(.+?\)\s){1}${MEMBER_INTERFACE}\(${MEMBER_INTERFACE_STATUS}\)(\s|$$) -> Continue
+  ^\s*Po\d+.+(Et.+?\(.+?\)\s){2}${MEMBER_INTERFACE}\(${MEMBER_INTERFACE_STATUS}\)(\s|$$) -> Continue
+  ^\s*Po\d+.+(Et.+?\(.+?\)\s){3}${MEMBER_INTERFACE}\(${MEMBER_INTERFACE_STATUS}\)(\s|$$) -> Continue
+  ^\s*Po\d+.+(Et.+?\(.+?\)\s){4}${MEMBER_INTERFACE}\(${MEMBER_INTERFACE_STATUS}\)(\s|$$) -> Continue
+  ^\s+${MEMBER_INTERFACE}\(${MEMBER_INTERFACE_STATUS}\)(\s|$$) -> Continue
+  ^\s+(Et.+?\(.+?\)\s){1}${MEMBER_INTERFACE}\(${MEMBER_INTERFACE_STATUS}\)(\s|$$) -> Continue
+  ^\s+(Et.+?\(.+?\)\s){2}${MEMBER_INTERFACE}\(${MEMBER_INTERFACE_STATUS}\)(\s|$$) -> Continue
+  ^\s+(Et.+?\(.+?\)\s){3}${MEMBER_INTERFACE}\(${MEMBER_INTERFACE_STATUS}\)(\s|$$) -> Continue
+  ^\s+(Et.+?\(.+?\)\s){4}${MEMBER_INTERFACE}\(${MEMBER_INTERFACE_STATUS}\)(\s|$$) -> Continue
 
