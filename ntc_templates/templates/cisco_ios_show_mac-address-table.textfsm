@@ -23,7 +23,7 @@ TYPE1
 
 TYPE2
   # Order of the group in brackets here matters
-  ^\s*(\*\s+R|\*|R|\s)\s*(\d+|-+|[Nn]/[Aa]) -> Continue.Record
+  ^\s*(\*\s+[R,S,D]|\*|[R,S,D]|\s)\s*(\d+|-+|[Nn]/[Aa]) -> Continue.Record
   # using 20 spaces should ensure that lines only match destination port flowing to next line
   ^\s{20}\s+${DESTINATION_PORT}(\s+|,\s*)\S -> Continue
   ^\s{20}\s+${DESTINATION_PORT},*\s*$$
@@ -37,19 +37,19 @@ TYPE2
   ^\s{20}\s+([^,\s]+(\s+|,\s*)){4}${DESTINATION_PORT},*\s*$$
   ^\s{20}\s+([^,\s]+(\s+|,\s*)){5}${DESTINATION_PORT}(\s+|,\s*)\S -> Continue
   ^\s{20}\s+([^,\s]+(\s+|,\s*)){5}${DESTINATION_PORT},*\s*$$
-  ^\s*(\*\s+R|\*|R|\s)\s*${VLAN_ID}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s*$$
-  ^\s*(\*\s+R|\*|R|\s)\s*${VLAN_ID}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+${DESTINATION_PORT}(\s+|,\s*)\S -> Continue
-  ^\s*(\*\s+R|\*|R|\s)\s*${VLAN_ID}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+${DESTINATION_PORT},*\s*$$
-  ^\s*(\*\s+R|\*|R|\s)\s*${VLAN_ID}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+[^,\s]+(\s+|,\s*)${DESTINATION_PORT}(\s+|,\s*)\S -> Continue
-  ^\s*(\*\s+R|\*|R|\s)\s*${VLAN_ID}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+[^,\s]+?(\s+|,\s*)${DESTINATION_PORT},*\s*$$
-  ^\s*(\*\s+R|\*|R|\s)\s*${VLAN_ID}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+([^,\s]+(\s+|,\s*)){2}${DESTINATION_PORT}(\s+|,\s*)\S -> Continue
-  ^\s*(\*\s+R|\*|R|\s)\s*${VLAN_ID}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+([^,\s]+(\s+|,\s*)){2}${DESTINATION_PORT},*\s*$$
-  ^\s*(\*\s+R|\*|R|\s)\s*${VLAN_ID}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+([^,\s]+(\s+|,\s*)){3}${DESTINATION_PORT}(\s+|,\s*)\S -> Continue
-  ^\s*(\*\s+R|\*|R|\s)\s*${VLAN_ID}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+([^,\s]+(\s+|,\s*)){3}${DESTINATION_PORT},*\s*$$
-  ^\s*(\*\s+R|\*|R|\s)\s*${VLAN_ID}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+([^,\s]+(\s+|,\s*)){4}${DESTINATION_PORT}(\s+|,\s*)\S -> Continue
-  ^\s*(\*\s+R|\*|R|\s)\s*${VLAN_ID}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+([^,\s]+(\s+|,\s*)){4}${DESTINATION_PORT},*\s*$$
-  ^\s*(\*\s+R|\*|R|\s)\s*${VLAN_ID}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+([^,\s]+(\s+|,\s*)){5}${DESTINATION_PORT}(\s+|,\s*)\S -> Continue
-  ^\s*(\*\s+R|\*|R|\s)\s*${VLAN_ID}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+([^,\s]+(\s+|,\s*)){5}${DESTINATION_PORT},*\s*$$
+  ^\s*(\*\s+[R,S,D]|\*|[R,S,D]|\s)\s*${VLAN_ID}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s*$$
+  ^\s*(\*\s+[R,S,D]|\*|[R,S,D]|\s)\s*${VLAN_ID}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+${DESTINATION_PORT}(\s+|,\s*)\S -> Continue
+  ^\s*(\*\s+[R,S,D]|\*|[R,S,D]|\s)\s*${VLAN_ID}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+${DESTINATION_PORT},*\s*$$
+  ^\s*(\*\s+[R,S,D]|\*|[R,S,D]|\s)\s*${VLAN_ID}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+[^,\s]+(\s+|,\s*)${DESTINATION_PORT}(\s+|,\s*)\S -> Continue
+  ^\s*(\*\s+[R,S,D]|\*|[R,S,D]|\s)\s*${VLAN_ID}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+[^,\s]+?(\s+|,\s*)${DESTINATION_PORT},*\s*$$
+  ^\s*(\*\s+[R,S,D]|\*|[R,S,D]|\s)\s*${VLAN_ID}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+([^,\s]+(\s+|,\s*)){2}${DESTINATION_PORT}(\s+|,\s*)\S -> Continue
+  ^\s*(\*\s+[R,S,D]|\*|[R,S,D]|\s)\s*${VLAN_ID}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+([^,\s]+(\s+|,\s*)){2}${DESTINATION_PORT},*\s*$$
+  ^\s*(\*\s+[R,S,D]|\*|[R,S,D]|\s)\s*${VLAN_ID}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+([^,\s]+(\s+|,\s*)){3}${DESTINATION_PORT}(\s+|,\s*)\S -> Continue
+  ^\s*(\*\s+[R,S,D]|\*|[R,S,D]|\s)\s*${VLAN_ID}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+([^,\s]+(\s+|,\s*)){3}${DESTINATION_PORT},*\s*$$
+  ^\s*(\*\s+[R,S,D]|\*|[R,S,D]|\s)\s*${VLAN_ID}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+([^,\s]+(\s+|,\s*)){4}${DESTINATION_PORT}(\s+|,\s*)\S -> Continue
+  ^\s*(\*\s+[R,S,D]|\*|[R,S,D]|\s)\s*${VLAN_ID}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+([^,\s]+(\s+|,\s*)){4}${DESTINATION_PORT},*\s*$$
+  ^\s*(\*\s+[R,S,D]|\*|[R,S,D]|\s)\s*${VLAN_ID}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+([^,\s]+(\s+|,\s*)){5}${DESTINATION_PORT}(\s+|,\s*)\S -> Continue
+  ^\s*(\*\s+[R,S,D]|\*|[R,S,D]|\s)\s*${VLAN_ID}\s+${DESTINATION_ADDRESS}\s+${TYPE}\s+\S+\s+\S+\s+([^,\s]+(\s+|,\s*)){5}${DESTINATION_PORT},*\s*$$
   ^-+\+-+
   ^Displaying\s+entries
   ^\s+vlan\s+mac address\s+type\s+learn\s+age\s+ports

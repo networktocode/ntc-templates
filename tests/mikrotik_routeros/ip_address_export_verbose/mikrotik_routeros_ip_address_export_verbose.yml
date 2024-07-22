@@ -1,0 +1,14 @@
+---
+parsed_sample:
+  - ip: "10.159.1.159"
+    mask: "30"
+    comment: ""
+    disabled: "no"
+    interface: "ether2"
+    network: "10.159.1.158"
+  - ip: "10.80.90.5"
+    mask: "27"
+    comment: "test comment"
+    disabled: "yes"
+    interface: "eth3_vlan1"
+    network: "10.80.90.0"

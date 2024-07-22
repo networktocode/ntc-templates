@@ -18,8 +18,8 @@ Start
   ^Time\s+source\s+is
 
 Tag
-  ^Link ID\s+ADV Router\s+Age\s+Seq#\s+Checksum\s+Tag -> Next.Clearall
-  ^${LINK_ID}\s+${ADV_ROUTER}\s+${AGE}\s+\S+\s+\S+\s+${TAG} -> Next
+  ^Link ID\s+ADV Router\s+Age\s+Seq#\s+Checksum\s+Tag -> Clearall
+  ^${LINK_ID}\s+${ADV_ROUTER}\s+${AGE}\s+\S+\s+\S+\s+${TAG} -> Record
   ^\s -> Start
 
 EOF

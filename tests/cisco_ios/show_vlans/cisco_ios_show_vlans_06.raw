@@ -1,0 +1,61 @@
+VLAN ID: 1 (IEEE 802.1Q Encapsulation)
+
+ This is configured as native Vlan for the following interface(s) :
+Port-channel14
+
+   Protocols Configured:          Received:        Transmitted:
+
+VLAN trunk interfaces for VLAN ID 1:
+Port-channel14
+
+Port-channel14 (1)
+
+
+      Total 3867754 packets, 493565540 bytes input
+      Total 0 packets, 0 bytes output
+
+VLAN ID: 2 (IEEE 802.1Q Encapsulation)
+
+   Protocols Configured:          Received:        Transmitted:
+                     IP                  0                   0
+
+VLAN trunk interfaces for VLAN ID 2:
+Port-channel14.2
+
+Port-channel14.2 (2)
+
+                     IP: 192.0.2.1
+
+      Total 0 packets, 0 bytes input
+      Total 3 packets, 156 bytes output
+
+VLAN ID: 501 (IEEE 802.1Q Encapsulation)
+
+   Protocols Configured:          Received:        Transmitted:
+                     IP           58754559            58753288
+
+VLAN trunk interfaces for VLAN ID 501:
+Port-channel14.501
+
+Port-channel14.501 (501)
+
+                     IP: 192.0.2.2
+
+      Total 19585317 packets, 1371519814 bytes input
+      Total 19584978 packets, 1371484403 bytes output
+Port-channel14.5013017
+
+Port-channel14.5013017 (501/3017)
+
+                     IP: 192.0.2.3
+
+      Total 19584857 packets, 1449827169 bytes input
+      Total 19585367 packets, 1449851410 bytes output
+Port-channel14.5013141
+
+Port-channel14.5013141 (501/3141)
+
+                     IP: 192.0.2.4
+
+      Total 19584796 packets, 1449822964 bytes input
+      Total 19585192 packets, 1449838944 bytes output

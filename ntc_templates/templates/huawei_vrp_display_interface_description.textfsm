@@ -8,7 +8,7 @@ Start
   ^Interface\s+PHY\s+Protocol\s+Description\s*$$ -> Begin
   ^\s*$$
   ^PHY:\s+Physical
-  ^(?:\*|\^|\#)down:
+  ^(?:\*|\^|\#|\-)down:
   ^\(\w+\):\s+\S+
   ^. -> Error
 
