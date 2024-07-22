@@ -1,4 +1,4 @@
-Value NEIGHBOR (\S+)
+Value NEIGHBOR_NAME (\S+)
 Value LOCAL_INTERFACE (\S+)
 Value NEIGHBOR_INTERFACE (\S+)
 
@@ -6,5 +6,5 @@ Start
   ^Port.*TTL -> LLDP
 
 LLDP
-  ^${LOCAL_INTERFACE}\s+${NEIGHBOR}\s+${NEIGHBOR_INTERFACE}\s+.* -> Record
+  ^${LOCAL_INTERFACE}\s+${NEIGHBOR_NAME}\s+${NEIGHBOR_INTERFACE}\s+.* -> Record
 
