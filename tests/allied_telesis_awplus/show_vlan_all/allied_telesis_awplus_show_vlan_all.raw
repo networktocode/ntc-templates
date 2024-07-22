@@ -1,0 +1,19 @@
+VLAN ID  Name            Type    State   Member ports
+                                         (u)-Untagged, (t)-Tagged
+======= ================ ======= ======= ====================================
+1       default          STATIC  ACTIVE
+479     VLAN0479         STATIC  ACTIVE  port1.0.13(t) port1.0.14(t)
+504     VLAN0504         STATIC  ACTIVE  sa1(t) port1.0.23(t) port1.0.24(t)
+508     VLAN0508         STATIC  ACTIVE  sa1(t) port1.0.25(t) port1.0.26(t)
+511     DMZ-G            STATIC  ACTIVE
+767     VLAN0767         STATIC  ACTIVE  sa1(t) port1.0.1(t) port1.0.2(t)
+                                         port1.0.13(t) port1.0.14(t)
+                                         port1.0.21(t) port1.0.22(t)
+                                         port1.0.23(t) port1.0.24(t)
+793     VLAN0793         STATIC  ACTIVE  sa1(t) port1.0.1(t) port1.0.2(t)
+                                         port1.0.4(t) port1.0.13(t)
+                                         port1.0.14(t) port1.0.17(t)
+                                         port1.0.24(t) port1.0.25(t)
+                                         port1.0.26(t) port1.0.28(t)
+795     VLAN0795         STATIC  ACTIVE  port1.0.3(t) port1.0.12(t)
+                                         port1.0.29(t)

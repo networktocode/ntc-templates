@@ -1,0 +1,17 @@
+---
+parsed_sample:
+  - address: "1.2.3.4"
+    destination_address: "8.8.8.8"
+    details: "0.454 ms  0.503 ms  0.262 ms  0.191 ms  0.187 ms  0.191 ms  0.191 ms\
+      \  0.192 ms  0.193 ms  0.185 ms"
+    hop_num: "1"
+    hops_max: "32"
+    packet_size: "84"
+    packets_per_hop: "10"
+  - address: "5.6.7.8"
+    destination_address: ""
+    details: "1.225 ms * * *"
+    hop_num: "2"
+    hops_max: ""
+    packet_size: ""
+    packets_per_hop: ""
