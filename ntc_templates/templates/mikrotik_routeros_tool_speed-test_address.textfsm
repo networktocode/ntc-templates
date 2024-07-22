@@ -1,12 +1,12 @@
 Value ADDRESS (\S+)
 Value STATUS (.*)
 Value TIME_REMAINING (\d+\w+)
-Value PING_MIN (\d+\s*\S+)
-Value PING_AVG (\d+\s*\S+)
-Value PING_MAX (\d+\s*\S+)
-Value JITTER_MIN (\d+\s*\S+)
-Value JITTER_AVG (\d+\s*\S+)
-Value JITTER_MAX (\d+\s*\S+)
+Value PING_MIN (\S+)
+Value PING_AVG (\S+)
+Value PING_MAX (\S+)
+Value JITTER_MIN (\S+)
+Value JITTER_AVG (\S+)
+Value JITTER_MAX (\S+)
 Value LOSS (\d+%\s*\(\d+/\d+\))
 Value TCP_DOWNLOAD_BW (\S+)
 Value TCP_DOWNLOAD_LOCAL_CPU (\d+)
@@ -26,7 +26,7 @@ Start
   ^\s*status:\s*${STATUS}\s*$$
   ^\s*time-remaining:\s*${TIME_REMAINING}\s*$$
   ^\s*ping-min-avg-max:\s*${PING_MIN}\s+/\s+${PING_AVG}\s+/\s+${PING_MAX}\s*$$
-  ^\s*jitter-min-avg-max:\s*${JITTER_MIN}\s+/\s+${JITTER_AVG}\s+/\s+{JITTER_MAX}\s*$$
+  ^\s*jitter-min-avg-max:\s*${JITTER_MIN}\s+/\s+${JITTER_AVG}\s+/\s+${JITTER_MAX}\s*$$
   ^\s*loss:\s*${LOSS}\s*$$
   ^\s*tcp-download:\s*${TCP_DOWNLOAD_BW}(\s+local-cpu-load:\s*${TCP_DOWNLOAD_LOCAL_CPU}%)?(\s+remote-cpu-load:\s*${TCP_DOWNLOAD_REMOTE_CPU}%)?\s*$$
   ^\s*tcp-upload:\s*${TCP_UPLOAD_BW}(\s+local-cpu-load:\s*${TCP_UPLOAD_LOCAL_CPU}%)?(\s+remote-cpu-load:\s*${TCP_UPLOAD_REMOTE_CPU}%)?\s*$$
