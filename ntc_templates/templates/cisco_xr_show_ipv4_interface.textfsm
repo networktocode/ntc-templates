@@ -3,20 +3,24 @@ Value LINK_STATUS (\S+)
 Value PROTOCOL (\S+)
 Value PROTOCOL_STATUS (\S+)
 Value VRF (\S+)
-Value IP_ADDRESS (\S+)
+Value IP_ADDRESS (\S+?)
+Value PREFIX_LENGTH (\d*)
 Value MTU (\d+)
-
+Value IP_MTU (\d+)
+Value List MULTICAST_GROUPS (\d+\.\d+\.\d+\.\d+)
 
 Start
   ^(Mon?)|(Tue?)|(Wed?)|(Thu?)|(Fri?)|(Sat?)|(Sun?)\s.*$$
   ^\S+\s+is -> Continue.Record
   ^${INTERFACE}\sis\s${LINK_STATUS},\s+${PROTOCOL}\sprotocol\sis\s${PROTOCOL_STATUS}.*$$
   ^\s+Vrf\sis\s${VRF}\s.*$$
-  ^\s+Internet\saddress\sis\s${IP_ADDRESS}.*$$
-  ^\s+MTU\sis\s${MTU}\s.*$$
+  ^\s+Internet\s+address\s+is\s+${IP_ADDRESS}/?${PREFIX_LENGTH}\s*$$
+  ^\s+MTU\s+is\s+${MTU}\s+\(${IP_MTU}\s+is\s+available\s+to\s+IP\)
   ^\s+Helper.*$$
-  ^\s+Multicast.*$$
-  ^\s{4,}2(?:2[4-9]|3\d)(?:\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d?|0)){3}.*$$
+  ^\s+Multicast\s+reserved\s+groups\s+joined\:\s+${MULTICAST_GROUPS} -> Continue
+  ^\s+Multicast\s+reserved\s+groups\s+joined\:\s+\S+\s+${MULTICAST_GROUPS} -> Continue
+  ^\s+Multicast\s+reserved\s+groups\s+joined\:\s+\S+\s+\S+\s+${MULTICAST_GROUPS} -> Continue
+  ^\s+Multicast\s+reserved\s+groups\s+joined\:\s+ -> MULTICAST
   ^\s+Internet\s+protocol.*$$
   ^\s+Directed.*$$
   ^\s+Outgoing.*$$
@@ -31,3 +35,19 @@ Start
   ^RPF\s+mode.*$$
   ^\s*$$
   ^. -> Error
+
+MULTICAST
+  ^\s+${MULTICAST_GROUPS}\s*$$ -> Start
+  ^\s+(?:\S+\s+){0}${MULTICAST_GROUPS} -> Continue
+  ^\s+(?:\S+\s+){1}${MULTICAST_GROUPS} -> Continue
+  ^\s+(?:\S+\s+){2}${MULTICAST_GROUPS} -> Continue
+  ^\s+(?:\S+\s+){3}${MULTICAST_GROUPS} -> Continue
+  ^\s+(?:\S+\s+){4}${MULTICAST_GROUPS} -> Continue
+  ^\s+(?:\S+\s+){5}${MULTICAST_GROUPS} -> Continue
+  ^\s+(?:\S+\s+){6}${MULTICAST_GROUPS} -> Continue
+  ^\s+(?:\S+\s+){7}${MULTICAST_GROUPS} -> Continue
+  ^\s+(?:\S+\s+){8}${MULTICAST_GROUPS} -> Continue
+  ^\s+(?:\S+\s+){9}${MULTICAST_GROUPS} -> Continue
+  ^\s+(?:\S+\s+){10}${MULTICAST_GROUPS} -> Continue
+  ^.* -> Start
+  ^. -> Error MULTICAST

@@ -2,6 +2,7 @@
 parsed_sample:
   - autoneg: "on"
     comment: ""
+    instance: ""
     interface: "Mgmt"
     ipv4_address: "192.168.1.1/24"
     ipv6_address: ""
@@ -15,6 +16,7 @@ parsed_sample:
     type: "ethernet"
   - autoneg: "on"
     comment: ""
+    instance: ""
     interface: "eth1-01"
     ipv4_address: ""
     ipv6_address: ""
@@ -28,6 +30,7 @@ parsed_sample:
     type: "ethernet"
   - autoneg: "on (eth1-01)"
     comment: "This-is-a-comment"
+    instance: ""
     interface: "eth1-01.264"
     ipv4_address: "10.10.10.0/29"
     ipv6_address: ""

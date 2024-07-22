@@ -1,17 +1,18 @@
 Value NEIGHBOR (\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})
 Value PEER_GROUP (\S+)
 Value DESCRIPTION (.*)
+Value VRF (\S+)
 Value ASN (\d+|\d+\.\d+)
 Value REMOTE_ASN (\d+|\d+\.\d+)
 Value LOCAL_ASN (\d+|\d+\.\d+)
 Value BGP_STATE ([\(\)\w\s]+)
-Value UPTIME (\w+)
+Value UPTIME ([\w:]+)
 Value SOURCE_IFACE (\w+[\/\d+]+)
 Value CONN_ESTAB (\w+)
 Value CONN_DROPPED (\w+)
-Value LAST_RESET (\w+)
+Value LAST_RESET (\S+)
 Value LAST_RESET_REASON (.*)
-Value LAST_PEER_RESET (\w+)
+Value LAST_PEER_RESET (\S+)
 Value LAST_PEER_RESET_REASON (.*)
 Value List ADDR_FAMILY ([\w\s]+)
 Value List TABLE_VERSION (\d+)
@@ -62,6 +63,7 @@ Start
   ^\s+Inherits.+\s${PEER_GROUP}
   ^\s+Description:\s+${DESCRIPTION}
   ^\s+BGP state = ${BGP_STATE}, \w+ for ${UPTIME}
+  ^\s+Neighbor\s+vrf:\s+${VRF}
   ^\s+Using ${SOURCE_IFACE} as [\w\s]+
   ^\s+[\w\s]+, interface ${SOURCE_IFACE}
   ^\s+Connections established ${CONN_ESTAB}, dropped ${CONN_DROPPED}

@@ -1,0 +1,20 @@
+---
+parsed_sample:
+  - ftag: "0"
+    switch_id: "10"
+    subswitch_id: "0"
+    ports: ["----"]
+    distance: "60"
+    metric: "0"
+  - ftag: "1"
+    switch_id: "20"
+    subswitch_id: "0"
+    ports: ["Po2", "Eth7/2"]
+    distance: "115"
+    metric: "40"
+  - ftag: "1"
+    switch_id: "35"
+    subswitch_id: "0"
+    ports: ["----"]
+    distance: "60"
+    metric: "0"
