@@ -8,7 +8,7 @@ Value SRTT (\d+)
 Value RTO (\d+)
 Value Q_CNT (\d+)
 Value SEQ_NUM (\d+)
-Value Version (\S+)
+Value VERSION (\S+)
 Value RETRANS (\d+)
 Value RETRIES (\d+)
 Value PREFIXES (\d+)
@@ -24,7 +24,7 @@ Start
 
 Neighbors
   ^\s*${H}\s+${IP_ADDRESS}\s+${INTERFACE}\s+${HOLD}\s+${UPTIME}\s+${SRTT}\s+${RTO}\s+${Q_CNT}\s+${SEQ_NUM}\s*$$
-  ^\s*Version\s+${Version},\s+Retrans:\s+${RETRANS},\s+Retries:\s+${RETRIES},\s+Prefixes:\s+${PREFIXES}\s*$$
+  ^\s*Version\s+${VERSION},\s+Retrans:\s+${RETRANS},\s+Retries:\s+${RETRIES},\s+Prefixes:\s+${PREFIXES}\s*$$
   ^\s*Topology-ids\s+from\s+peer\s+\-\s+${TOPOLOGY_IDS_FROM_PEER}\s*$$ -> Record
   ^\s*Max\s+Nbrs\:\s+${MAX_NEIGHBORS}\,\s+Current\s+Nbrs\:\s+${CURRENT_NEIGHBORS}\s*$$
   ^\s*$$
