@@ -1,0 +1,37 @@
+Value NIC (.*?)
+Value LINK_ENCAP (.*?)
+Value HARDWARE_ADDRESS ([a-zA-Z0-9]{2}(:[a-zA-Z0-9]{2}){5})
+Value IP_ADDRESS (\S+)
+Value BCAST (\S+)
+Value MASK (\S+)
+Value LINK_LOCAL6 (\S+)
+Value LINK_LOCAL6_PREFIXLEN (\d+)
+Value MULTICAST (.*(?<!\s))
+Value MTU (\d+)
+Value METRIC (\d+)
+Value RX_PACKETS (\d+)
+Value RX_ERRORS (\d+)
+Value RX_DROPPED (\d+)
+Value RX_OVERRUNS (\d+)
+Value RX_FRAME (\d+)
+Value TX_PACKETS (\d+)
+Value TX_ERRORS (\d+)
+Value TX_DROPPED (\d+)
+Value TX_OVERRUNS (\d+)
+Value TX_CARRIER (\d+)
+Value COLLISIONS (\d+)
+Value TX_QUEUE_LEN (\d+)
+Value RX_BYTES (\d+)
+Value TX_BYTES (\d+)
+
+Start
+  ^\s*${NIC}\s+Link\s+encap:${LINK_ENCAP}(?:\s+HWaddr\s+${HARDWARE_ADDRESS})?\s*$$
+  ^\s*inet\s+addr:${IP_ADDRESS}(?:\s+Bcast:${BCAST})?\s+Mask:${MASK}\s*$$
+  ^\s*link-local6:\s+${LINK_LOCAL6}\s+prefixlen\s+${LINK_LOCAL6_PREFIXLEN}\s*$$
+  ^\s*${MULTICAST}\s+MTU:${MTU}\s+Metric:${METRIC}\s*$$
+  ^\s*RX\s+packets:${RX_PACKETS}\s+errors:${RX_ERRORS}\s+dropped:${RX_DROPPED}\s+overruns:${RX_OVERRUNS}\s+frame:${RX_FRAME}\s*$$
+  ^\s*TX\s+packets:${TX_PACKETS}\s+errors:${TX_ERRORS}\s+dropped:${TX_DROPPED}\s+overruns:${TX_OVERRUNS}\s+carrier:${TX_CARRIER}\s*$$
+  ^\s*collisions:${COLLISIONS}\s+txqueuelen:${TX_QUEUE_LEN}\s*$$
+  ^\s*RX\s+bytes:${RX_BYTES}\s+\(.*\)\s+TX\s+bytes:${TX_BYTES}\s+\(.*\)\s*$$ -> Record
+  ^\s*$$
+  ^. -> Error
