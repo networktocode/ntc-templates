@@ -1,0 +1,164 @@
+VLAN ID: 1 (IEEE 802.1Q Encapsulation)
+ This is configured as native Vlan for the following interface(s) :
+GigabitEthernet0/0/0    Native-vlan Tx-type: Untagged
+GigabitEthernet0/0/1    Native-vlan Tx-type: Untagged
+TenGigabitEthernet0/1/0    Native-vlan Tx-type: Untagged
+   Protocols Configured:          Received:        Transmitted:
+                     IP         2192679791          2184903327
+VLAN trunk interfaces for VLAN ID 1:
+GigabitEthernet0/0/0
+GigabitEthernet0/0/0 (1)
+                     IP: 10.0.2.86
+      Total 9958707 packets, 3870632644 bytes input
+      Total 943133 packets, 357934647 bytes output
+      Total 0 oversubscription packet drops
+GigabitEthernet0/0/1
+GigabitEthernet0/0/1 (1)
+                     IP: 10.0.2.225
+      Total 10048435 packets, 3854174982 bytes input
+      Total 942969 packets, 357871090 bytes output
+      Total 0 oversubscription packet drops
+TenGigabitEthernet0/1/0
+TenGigabitEthernet0/1/0 (1)
+                     IP: 10.252.212.189
+      Total 129733168 packets, 42443829815 bytes input
+      Total 793182 packets, 36432663 bytes output
+      Total 0 oversubscription packet drops
+VLAN ID: 3141 (IEEE 802.1Q Encapsulation)
+   Protocols Configured:          Received:        Transmitted:
+                     IP       144695187064         11111892659
+VLAN trunk interfaces for VLAN ID 3141:
+GigabitEthernet0/0/0.3141
+GigabitEthernet0/0/0.3141 (3141)
+                     IP: 10.0.2.94
+      Total 143692091694 packets, 80311269603551 bytes input
+      Total 10027923256 packets, 1021853446362 bytes output
+      Total 0 oversubscription packet drops
+GigabitEthernet0/0/1.3141
+GigabitEthernet0/0/1.3141 (3141)
+                     IP: 10.0.2.233
+      Total 1003101498 packets, 70246942495 bytes input
+      Total 1083981803 packets, 122490850063 bytes output
+      Total 0 oversubscription packet drops
+
+VLAN ID: 100 (IEEE 802.1Q Encapsulation)
+   Protocols Configured:          Received:        Transmitted:
+                     IP         9082316335        142649676727
+VLAN trunk interfaces for VLAN ID 100:
+TenGigabitEthernet0/1/0.100
+TenGigabitEthernet0/1/0.100 (100)
+                     IP: 10.0.2.149
+      Total 13377307173 packets, 915523477657 bytes input
+      Total 142649815357 packets, 80766632402700 bytes output
+      Total 0 oversubscription packet drops
+
+VLAN ID: 101 (IEEE 802.1Q Encapsulation)
+   Protocols Configured:          Received:        Transmitted:
+                     IP           10049693              624835
+VLAN trunk interfaces for VLAN ID 101:
+TenGigabitEthernet0/1/0.101
+TenGigabitEthernet0/1/0.101 (101)
+                     IP: 10.0.2.145
+      Total 10063958 packets, 711071685 bytes input
+      Total 2563528 packets, 155505178 bytes output
+      Total 0 oversubscription packet drops
+
+VLAN ID: 102 (IEEE 802.1Q Encapsulation)
+   Protocols Configured:          Received:        Transmitted:
+                     IP            7643307              501212
+VLAN trunk interfaces for VLAN ID 102:
+TenGigabitEthernet0/1/0.102
+TenGigabitEthernet0/1/0.102 (102)
+                     IP: 10.0.2.153
+      Total 7653711 packets, 536047078 bytes input
+      Total 2107241 packets, 127679557 bytes output
+      Total 0 oversubscription packet drops
+
+VLAN ID: 103 (IEEE 802.1Q Encapsulation)
+   Protocols Configured:          Received:        Transmitted:
+                     IP           16964732             1016648
+VLAN trunk interfaces for VLAN ID 103:
+TenGigabitEthernet0/1/0.103
+TenGigabitEthernet0/1/0.103 (103)
+                     IP: 10.0.2.157
+      Total 16988470 packets, 1189442738 bytes input
+      Total 1155284 packets, 80642016 bytes output
+      Total 0 oversubscription packet drops
+
+VLAN ID: 104 (IEEE 802.1Q Encapsulation)
+   Protocols Configured:          Received:        Transmitted:
+                     IP           85800249            93390973
+VLAN trunk interfaces for VLAN ID 104:
+TenGigabitEthernet0/1/0.104
+TenGigabitEthernet0/1/0.104 (104)
+                     IP: 10.0.231.229
+      Total 85813215 packets, 55432999639 bytes input
+      Total 93432033 packets, 10854590863 bytes output
+      Total 0 oversubscription packet drops
+
+VLAN ID: 3228 (IEEE 802.1Q Encapsulation)
+   Protocols Configured:          Received:        Transmitted:
+                     IP         2039324150          2128294473
+VLAN trunk interfaces for VLAN ID 3228:
+GigabitEthernet0/0/0.3228
+GigabitEthernet0/0/0.3228 (3228)
+                     IP: 10.0.231.242
+      Total 976946299 packets, 73982774167 bytes input
+      Total 1279353761 packets, 207713874159 bytes output
+      Total 0 oversubscription packet drops
+GigabitEthernet0/0/1.3228
+GigabitEthernet0/0/1.3228 (3228)
+                     IP: 10.0.231.233
+      Total 1062383291 packets, 101338350618 bytes input
+      Total 848951745 packets, 62850598908 bytes output
+      Total 0 oversubscription packet drops
+VLAN ID: 3000 (IEEE 802.1Q Encapsulation)
+   Protocols Configured:          Received:        Transmitted:
+                     IP         1965781161          1965862226
+VLAN trunk interfaces for VLAN ID 3000:
+GigabitEthernet0/0/0.3000
+GigabitEthernet0/0/0.3000 (3000)
+                     IP: 10.0.2.90
+      Total 962685934 packets, 67415074722 bytes input
+      Total 962758529 packets, 71277047385 bytes output
+      Total 0 oversubscription packet drops
+GigabitEthernet0/0/1.3000
+GigabitEthernet0/0/1.3000 (3000)
+                     IP: 10.0.2.229
+      Total 1003101351 packets, 70246933000 bytes input
+      Total 1003116090 packets, 74260358613 bytes output
+      Total 0 oversubscription packet drops
+VLAN ID: 3017 (IEEE 802.1Q Encapsulation)
+   Protocols Configured:          Received:        Transmitted:
+                     IP         1965764076          1965783813
+VLAN trunk interfaces for VLAN ID 3017:
+GigabitEthernet0/0/0.3017
+GigabitEthernet0/0/0.3017 (3017)
+                     IP: 10.0.2.98
+      Total 962668297 packets, 67413748724 bytes input
+      Total 962679932 packets, 71269330446 bytes output
+      Total 0 oversubscription packet drops
+GigabitEthernet0/0/1.3017
+GigabitEthernet0/0/1.3017 (3017)
+                     IP: 10.0.2.237
+      Total 1003101905 packets, 70246968079 bytes input
+      Total 1003116275 packets, 74260373320 bytes output
+      Total 0 oversubscription packet drops
+VLAN ID: 3062 (IEEE 802.1Q Encapsulation)
+   Protocols Configured:          Received:        Transmitted:
+                     IP         1965727740          1965748350
+
+VLAN trunk interfaces for VLAN ID 3062:
+GigabitEthernet0/0/0.3062
+GigabitEthernet0/0/0.3062 (3062)
+                     IP: 10.0.2.102
+      Total 962634040 packets, 67411184249 bytes input
+      Total 962647204 packets, 71266733940 bytes output
+      Total 0 oversubscription packet drops
+GigabitEthernet0/0/1.3062
+GigabitEthernet0/0/1.3062 (3062)
+                     IP: 10.0.2.241
+
+      Total 1003099825 packets, 70246823077 bytes input
+      Total 1003113541 packets, 74260171809 bytes output
+      Total 0 oversubscription packet drops

@@ -1,0 +1,36 @@
+Port : gi1/0/1
+Port Mode: Access
+Gvrp Status: disabled
+Ingress Filtering: true
+Acceptable Frame Type: all
+Ingress UnTagged VLAN ( NATIVE ): 1
+Protected: Disabled
+
+Port is member in:
+
+Vlan               Name               Egress rule Port Membership Type
+---- -------------------------------- ----------- --------------------
+101              test101                Tagged           Static
+102              test102                Tagged           Static
+
+
+Forbidden VLANS:
+Vlan               Name
+---- --------------------------------
+
+
+Classification rules:
+
+Protocol based VLANs:
+  Group ID   Vlan ID
+------------ -------
+
+
+Mac based VLANs:
+  Group ID   Vlan ID
+------------ -------
+
+
+Subnet based VLANs:
+  Group ID   Vlan ID
+------------ -------
