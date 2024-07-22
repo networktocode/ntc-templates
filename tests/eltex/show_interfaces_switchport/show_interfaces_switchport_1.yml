@@ -1,0 +1,30 @@
+---
+parsed_sample:
+  - acceptable_frame_type: "all"
+    added_by: []
+    egress_rule:
+      - "Tagged"
+      - "Tagged"
+    forbidden_vlan: []
+    forbidden_vlan_name: []
+    gvrp_status: "disabled"
+    ingress_filtering: "true"
+    mac_based_vlan_group_id: []
+    mac_based_vlan_id: []
+    name:
+      - "test101"
+      - "test102"
+    native_vlan: "1"
+    interface: "gi1/0/1"
+    interface_membership_type:
+      - "Static"
+      - "Static"
+    interface_mode: "Access"
+    protected: "Disabled"
+    protocol_based_vlan_group_id: []
+    protocol_based_vlan_id: []
+    subnet_based_vlan_group_id: []
+    subnet_based_vlan_id: []
+    vlan:
+      - "101"
+      - "102"

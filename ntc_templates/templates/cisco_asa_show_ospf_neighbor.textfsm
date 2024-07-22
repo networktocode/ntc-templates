@@ -1,5 +1,5 @@
 Value NEIGHBOR_ID (\d+\.\d+\.\d+\.\d+)
-Value PRIORITY (\d+)
+Value PRIORITY (\S+)
 Value STATE (\S+\/\s+\-|\S+)
 Value DEAD_TIME (\d+:\d+:\d+)
 Value IP_ADDRESS (\d+\.\d+\.\d+\.\d+)

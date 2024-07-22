@@ -1,50 +1,50 @@
 ---
 parsed_sample:
-  - aggregated_interface: "ae33"
+  - bundle_name: "ae33"
     member_interface:
       - "xe-0/0/0:0"
+    mux_state:
+      - "Collecting distributing"
     receive_state:
       - "Current"
     transmit_state:
       - "Slow periodic"
-    mux_state:
-      - "Collecting distributing"
-  - aggregated_interface: "ae111"
+  - bundle_name: "ae111"
     member_interface:
       - "et-0/0/32"
       - "et-0/0/33"
+    mux_state:
+      - "Collecting distributing"
+      - "Collecting distributing"
     receive_state:
       - "Current"
       - "Current"
     transmit_state:
       - "Fast periodic"
       - "Fast periodic"
-    mux_state:
-      - "Collecting distributing"
-      - "Collecting distributing"
-  - aggregated_interface: "ae112"
+  - bundle_name: "ae112"
     member_interface:
       - "et-0/0/34"
       - "et-0/0/35"
+    mux_state:
+      - "Collecting distributing"
+      - "Collecting distributing"
     receive_state:
       - "Current"
       - "Current"
     transmit_state:
       - "Fast periodic"
       - "Fast periodic"
-    mux_state:
-      - "Collecting distributing"
-      - "Collecting distributing"
-  - aggregated_interface: "ae115"
+  - bundle_name: "ae115"
     member_interface:
       - "et-0/0/25"
       - "et-0/0/29"
+    mux_state:
+      - "Collecting distributing"
+      - "Collecting distributing"
     receive_state:
       - "Current"
       - "Current"
     transmit_state:
       - "Fast periodic"
       - "Fast periodic"
-    mux_state:
-      - "Collecting distributing"
-      - "Collecting distributing"
