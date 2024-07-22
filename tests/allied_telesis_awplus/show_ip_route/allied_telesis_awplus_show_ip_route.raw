@@ -1,0 +1,25 @@
+Codes: C - connected, S - static, R - RIP, B - BGP
+       O - OSPF, D - DHCP, IA - OSPF inter area
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2
+       * - candidate default
+
+Gateway of last resort is 192.168.254.251 to network 0.0.0.0
+
+S*      0.0.0.0/0 [1/0] via 192.168.254.251, vlan954
+C       10.255.255.0/24 is directly connected, vlan795
+C       192.168.254.0/24 is directly connected, vlan954
+O       10.0.0.0/8 [110/20] via 192.168.254.251, vlan954
+O E1    172.16.23.0/24 [110/30] via 192.168.254.251, vlan954
+
+[VRF: DMZ]
+Gateway of last resort is 20.0.0.254 to network 0.0.0.0
+
+S*      0.0.0.0/0 [1/0] via 20.0.0.254, vlan511
+C       20.0.0.0/24 is directly connected, vlan511
+
+[VRF: AAA]
+Gateway of last resort is 2.0.0.254 to network 0.0.0.0
+
+S*      0.0.0.0/0 [1/0] via 2.0.0.254, vlan51
+C       2.0.0.0/24 is directly connected, vlan51

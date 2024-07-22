@@ -1,0 +1,109 @@
+
+            Interface:  TenGigabitEthernet2/0/39
+               IIF-ID:  0x16191B90
+          MAC Address:  0060.aaaa.bbbb
+         IPv6 Address:  Unknown
+         IPv4 Address:  10.11.11.117
+            User-Name:  00-60-AA-AA-BB-BB
+          Device-type:  IP-Phone
+          Device-name:  Unknown Device
+               Status:  Authorized
+               Domain:  VOICE
+       Oper host mode:  multi-auth
+     Oper control dir:  both
+      Session timeout:  N/A
+  Acct update timeout:  172800s (local), Remaining: 77097s
+    Common Session ID:  123414AC000066635A83835D
+      Acct Session ID:  0x00002dfd
+               Handle:  0xb100018c
+       Current Policy:  PMAP_DefaultWDot1xClosedAuth_1X
+
+Local Policies:
+
+Server Policies:
+             VN Value:  STAFF_VN
+           Vlan Group:  Vlan: 1133
+            SGT Value:  20
+            SGT Value:  20
+
+Resultant Policies:
+             VN Value:  STAFF_VN
+           Vlan Group:  Vlan: 1133
+            SGT Value:  20
+            SGT Value:  20
+
+Method status list:
+       Method           State
+        dot1x           Authc Success
+          mab           Stopped
+
+----------------------------------------
+
+            Interface:  GigabitEthernet1/0/21
+               IIF-ID:  0x1239EA14
+          MAC Address:  707d.b9aa.bbcc
+         IPv6 Address:  fe80::727d:abcd:abcd:abcd
+         IPv4 Address:  172.22.5.2
+            User-Name:  70-7D-B9-AA-BB-CC
+          Device-type:  Cisco-AIR-LAP
+          Device-name:  cisco AIR-AP2802I-Z-K9
+               Status:  Authorized
+               Domain:  DATA
+       Oper host mode:  multi-auth
+     Oper control dir:  both
+      Session timeout:  N/A
+  Acct update timeout:  172800s (local), Remaining: 145579s
+    Common Session ID:  118214AC11110C6A86D02356
+      Acct Session ID:  0x00001da4
+               Handle:  0x5c000c60
+       Current Policy:  PMAP_DefaultWiredDot1xClosedAuth_1X
+
+
+Local Policies:
+
+Server Policies:
+             VN Value:  INFRA_VN
+           Vlan Group:  Vlan: 1000
+            SGT Value:  35
+            SGT Value:  35
+
+
+Method status list:
+       Method           State
+        dot1x           Stopped
+          mab           Authc Success
+
+----------------------------------------
+
+            Interface:  GigabitEthernet2/0/1
+               IIF-ID:  0x12776C48
+          MAC Address:  3814.28aa.bbcc
+         IPv6 Address:  fe80::75e2:aaaa:bbbb:cccc
+         IPv4 Address:  10.11.12.83
+            User-Name:  DOMAIN\\koli
+          Device-type:  Microsoft-Workstation
+          Device-name:  IDC-2AE53D34
+               Status:  Authorized
+               Domain:  DATA
+       Oper host mode:  multi-auth
+     Oper control dir:  both
+      Session timeout:  N/A
+  Acct update timeout:  172800s (local), Remaining: 169278s
+    Common Session ID:  118214AC000017C56C52F101
+      Acct Session ID:  0x00003a04
+               Handle:  0x0e0007c3
+       Current Policy:  PMAP_DefaultWiredDot1xClosedAuth_1X
+
+
+Local Policies:
+
+Server Policies:
+             VN Value:  STAFF_VN
+           Vlan Group:  Vlan: 1133
+            SGT Value:  20
+            SGT Value:  20
+
+
+Method status list:
+       Method           State
+        dot1x           Authc Success

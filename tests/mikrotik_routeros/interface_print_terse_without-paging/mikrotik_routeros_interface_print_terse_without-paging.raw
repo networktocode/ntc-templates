@@ -1,0 +1,11 @@
+ 0 D   name=ether1 default-name=ether1 type=ether mtu=1500 actual-mtu=1500 l2mtu=1598 max-l2mtu=2028 mac-address=12:34:56:78:90:AA last-link-up-time=aug/16/1970 13:05:43 link-downs=0
+ 1 DR  name=ether2_UniFi2 default-name=ether2 type=ether mtu=1500 actual-mtu=1500 l2mtu=1598 max-l2mtu=2028 mac-address=12:34:56:78:90:AB last-link-down-time=aug/17/1970 13:33:01 last-link-up-time=aug/17/1970 13:23:11 link-downs=3
+ 2     name=ether3_UniFi1 default-name=ether3 type=ether mtu=1500 actual-mtu=1500 l2mtu=1598 max-l2mtu=2028 mac-address=12:34:56:78:90:AC link-downs=0
+ 3  R  name=bridge-VLAN1 type=bridge mtu=auto actual-mtu=1500 l2mtu=1594 mac-address=12:34:56:78:90:AD last-link-up-time=aug/16/1970 13:05:35 link-downs=0
+ 4  X  name=bridge-VLAN2 type=bridge mac-address=12:34:56:78:90:AE link-downs=0
+ 5   S name=eth3_vlan1 type=vlan mtu=1500 actual-mtu=1500 l2mtu=1594 mac-address=12:34:56:78:90:AF last-link-down-time=aug/17/1970 13:33:01 last-link-up-time=aug/17/1970 13:23:11 link-downs=3
+ 6   S name=eth4_vlan2 type=vlan mtu=1500 actual-mtu=1500 l2mtu=1594 mac-address=12:34:56:78:90:BA link-downs=0
+ 7  RS name=eth4_vlan3 type=vlan mtu=1500 actual-mtu=1500 l2mtu=1594 mac-address=12:34:56:78:90:BB link-downs=0
+ 8 D S name=eth4_vlan4 type=vlan mtu=1500 actual-mtu=1500 l2mtu=1594 mac-address=12:34:56:78:90:BC link-downs=0
+ 9 DXS name=eth5_vlan5 type=vlan mtu=1500 actual-mtu=1500 l2mtu=1594 mac-address=12:34:56:78:90:BD last-link-up-time=aug/16/1970 13:05:43 link-downs=0
+10  R  name=eth6_vlan6 type=vlan mtu=1500 actual-mtu=1500 l2mtu=1598 mac-address=12:34:56:78:90:BE fast-path=yes last-link-down-time=sep/08/2023 01:07:00 last-link-up-time=sep/08/2023 01:07:09 link-downs=7

@@ -145,3 +145,12 @@ parsed_sample:
       - "Po4"
     type: "dynamic"
     vlan_id: "401"
+  - destination_address: "0000.0000.0004"
+    destination_port:
+      - "Te1/5/11"
+    type: "static"
+    vlan_id: "67"
+  - destination_address: "0000.0000.0003"
+    destination_port: []
+    type: "static"
+    vlan_id: "728"
