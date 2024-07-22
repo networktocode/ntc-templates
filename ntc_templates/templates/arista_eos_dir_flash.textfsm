@@ -12,6 +12,8 @@ Start
 DIR
   ^\s+${PERMISSIONS}\s+${SIZE}\s+${DATE_TIME}\s+${NAME} -> Record
   ^${TOTAL_SIZE}\s+\S+\s+\S+\s+\(${TOTAL_FREE}\s+\S+\s+\S+\)
+  ^\s*No space information
+  ^\s*No files in
   ^\s+$$
   ^$$
   ^.* -> Error "LINE NOT FOUND"
