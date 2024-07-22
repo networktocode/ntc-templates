@@ -188,7 +188,7 @@ def cli(context):
     context.run(f"{dev}", pty=True)
 
 
-@task(help={"local": "Run locally or within the Docker container"})
+@task(help={"local": "Run locally or within the Docker container"}, aliases=["test"])
 def tests(context, local=INVOKE_LOCAL):
     """Run all tests for this repository."""
     black(context, local)
