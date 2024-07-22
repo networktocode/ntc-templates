@@ -1,4 +1,4 @@
-Value Required AGGREGATED_INTERFACE (\S+)
+Value Required BUNDLE_NAME (\S+)
 Value List MEMBER_INTERFACE (\S+)
 Value List RECEIVE_STATE (\S+\s?\w+)
 Value List TRANSMIT_STATE (\S+\s?periodic)
@@ -6,7 +6,7 @@ Value List MUX_STATE (\S+\s?\S*)
 
 Start
   ^Aggregated -> Continue.Record
-  ^Aggregated\sinterface:\s${AGGREGATED_INTERFACE}(\s|$$)
+  ^Aggregated\sinterface:\s${BUNDLE_NAME}(\s|$$)
   ^\s+LACP\s+state:
   ^\s+LACP\sprotocol: -> LACP_PROTO
   ^\s+\S+
@@ -18,6 +18,6 @@ LACP_PROTO
   ^\s+${MEMBER_INTERFACE}\s+${RECEIVE_STATE}\s+${TRANSMIT_STATE}\s+${MUX_STATE}(\s|$$)
   ^\s*$$
   ^Aggregated -> Continue.Record
-  ^Aggregated\sinterface:\s${AGGREGATED_INTERFACE}(\s|$$) -> Start
+  ^Aggregated\sinterface:\s${BUNDLE_NAME}(\s|$$) -> Start
   ^{master:\d+}
   ^. -> Error
