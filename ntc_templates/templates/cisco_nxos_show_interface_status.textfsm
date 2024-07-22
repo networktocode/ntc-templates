@@ -4,10 +4,10 @@ Value STATUS (\S+)
 Value VLAN_ID (\d+|routed|trunk|f-path|--)
 Value DUPLEX (\S+)
 Value SPEED (\S+)
-Value TYPE (\S*?(\s\S+)*)
+Value TYPE (\S+(\s\S+)*)
 
 Start
-  ^${PORT}\s+${NAME}\s+${STATUS}\s+${VLAN_ID}\s+${DUPLEX}\s+${SPEED}\s*${TYPE}\s*$$ -> Record
+  ^${PORT}\s+${NAME}\s+${STATUS}\s+${VLAN_ID}\s+${DUPLEX}\s+${SPEED}(?:\s+${TYPE})?\s*$$ -> Record
   ^[Pp]ort\s+[Nn]ame\s+[Ss]tatus\s+[Vv]lan\s+[Dd]uplex\s+[Ss]peed\s+[Tt]ype\s*$$
   ^-+
   ^\s*$$

@@ -1,0 +1,18 @@
+---
+parsed_sample:
+  - vlan_id: "900"
+    destination_port: "sa1"
+    destination_address: "0009.0f09.0000"
+    fwd: "forward"
+  - vlan_id: "900"
+    destination_port: "sa1"
+    destination_address: "0015.5d00.ab14"
+    fwd: "forward"
+  - vlan_id: "900"
+    destination_port: "sa1"
+    destination_address: "0015.5d00.ab15"
+    fwd: "forward"
+  - vlan_id: "989"
+    destination_port: "port1.0.19"
+    destination_address: "0050.566a.1aca"
+    fwd: "forward"

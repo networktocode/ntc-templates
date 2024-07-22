@@ -8,11 +8,15 @@ Start
   # Capture time-stamp if vty line has command time-stamping turned on
   ^Load\s+for\s+
   ^Time\s+source\s+is
+  ^\s*__Platform_iVRF\:_ID00_
+  ^\s*mgmtVrf\s+<not set>
   ^. -> Error
 
 Start_record
   ^\s{2}\S+ -> Continue.Record
   ^\s{60}\s+${INTERFACES}
-  ^\s+${NAME}\s+${DEFAULT_RD}\s+${PROTOCOLS}\s+${INTERFACES}
-  ^\s+${NAME}\s+${DEFAULT_RD}\s+${PROTOCOLS}
-  ^. -> Error
+  ^\s+${NAME}\s+${DEFAULT_RD}\s+${PROTOCOLS}\s+${INTERFACES}\s*$$
+  ^\s+${NAME}\s+${DEFAULT_RD}\s+${PROTOCOLS}\s*$$
+  ^\s+${NAME}\s+${DEFAULT_RD}\s*$$
+  ^\s*Platform\s+iVRF\s+Name -> Start
+  ^. -> Error "VRFError"
