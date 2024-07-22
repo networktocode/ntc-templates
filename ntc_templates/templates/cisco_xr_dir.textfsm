@@ -1,0 +1,20 @@
+Value Filldown FILE_SYSTEM (\S+)
+Value PERMISSIONS (.+?)
+Value SIZE (\d+)
+Value Fillup TOTAL_SIZE (\d+)
+Value Fillup TOTAL_FREE (\d+)
+Value DATE_MONTH (\w+)
+Value DATE_DAY (\d+)
+Value DATE_TIME (\d+:\d+)
+Value DATE_YEAR (\d+)
+Value NAME (\S+)
+
+Start
+  ^\s*$$
+  ^\S{3}\s+\S{3}\s+\d{1,2}\s+\d+:\d+:\d+
+  ^Directory\s+of\s+${FILE_SYSTEM}
+  ^${PERMISSIONS}\.\s+\d+\s+${SIZE}\s+${DATE_MONTH}\s+${DATE_DAY}\s+(${DATE_TIME}|${DATE_YEAR})\s+${NAME} -> Record
+  ^${TOTAL_SIZE}\s+kbytes\s+total\s+\(${TOTAL_FREE}\s+kbytes\s+free\)
+  ^.* -> Error
+
+EOF

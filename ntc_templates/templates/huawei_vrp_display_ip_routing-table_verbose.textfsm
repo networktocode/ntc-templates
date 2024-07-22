@@ -1,6 +1,6 @@
 Value DESTINATION (\S+)
 Value PREFIX_LENGTH (\d+)
-Value PROTOCOL (Direct|Static|EBGP|IBGP||ISIS|OSPF|RIP|UNR)
+Value PROTOCOL (Direct|Static|EBGP|IBGP||ISIS|OSPF|RIP|UNR|O_ASE)
 Value PROCESS_ID (\d+)
 Value LABEL (\S+)
 Value QOS_INFO (\S+)

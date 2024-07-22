@@ -1,0 +1,66 @@
+Value Required CALL_IDX (\d+)
+Value CALLING_FROM (.*)
+Value CALLING_TO (.*)
+Value CALL_ID (.*\S)
+Value CALLING_NUMBER (\S+)
+Value CALLED_NUMBER (\S+)
+Value SETUP_TIME (.*\S)
+Value CONNECTION_TIME (.*\S)
+Value List B_CHANNELS (\S+)
+Value DISCONNECTED_BY (.*\S)
+Value DISCONNECT_CAUSE_CODE (\d+)
+Value DISCONNECT_CAUSE_TEXT (.*)
+Value CALL_DURATION (\S+)
+Value PDD_DURATION (.*)
+Value ADVICE_OF_CHARGE (.*)
+Value CALL_PRIORITY (\d+)
+Value RTP_SOURCE_IP (\d+\.\d+\.\d+\.\d+)
+Value RTP_SOURCE_PORT (\d+)
+Value RTP_DESTINATION_IP (\d+\.\d+\.\d+\.\d+)
+Value RTP_DESTINATION_PORT (\d+)
+Value RTP_PLAY_TIME (\S+)
+Value RTP_TX_CODER (.*\S)
+Value RTP_RX_CODER (.*\S)
+Value RTP_PACKETS_RX (\d+)
+Value RTP_PACKETS_TX (\d+)
+Value RTP_PACKETS_LOST_RX (\d+)
+Value RTP_PACKETS_LOST_TX (\d+)
+Value RTP_EXCESSIVE_JITTER (\d+)
+Value RTP_MOS_CQ (\d+\.\d+)
+Value RTP_MOS_LQ (\d+\.\d+)
+Value RTP_ERL_DB (\d+)
+Value RTP_ACOM_DB (\d+)
+
+
+Start
+  ^\s*\d+\s-\s -> Continue.Record
+  ^\s*\d+\/\d+\/\d+\s\d
+  ^\s*${CALL_IDX}\s-\sCall\sfrom\s${CALLING_FROM},\sto\s${CALLING_TO}\scall-id:\s${CALL_ID} ->  NewCall
+  ^\s*RTP\sSource\sip\s*:${RTP_SOURCE_IP}\srtp:${RTP_SOURCE_PORT}\s*\/\s*Dest\sip\s*:${RTP_DESTINATION_IP}\srtp:${RTP_DESTINATION_PORT} -> RTP
+  ^\s*$$
+  ^.* -> Error
+
+NewCall
+  ^\s*calling\s*:\s*${CALLING_NUMBER},\s*called\s*:\s*${CALLED_NUMBER}
+  ^\s*setup\stime:\s*${SETUP_TIME}
+  ^\s*connexion\stime:\s*${CONNECTION_TIME} -> BChannels
+  ^\s*call\sduration:\s*${CALL_DURATION}
+  ^\s*PDD\sduration:\s*${PDD_DURATION}
+  ^\s*advice-of-charge:\s*${ADVICE_OF_CHARGE}
+  ^\s*call\spriority:\s${CALL_PRIORITY}
+  ^\s*$$ -> Start
+
+BChannels
+  ^\s*B\schannel\s\(from\s\S+\)\s:\s${B_CHANNELS}
+  ^\s*disconnected\sby\s${DISCONNECTED_BY}\scause\s*:\(${DISCONNECT_CAUSE_CODE}\)\[${DISCONNECT_CAUSE_TEXT}\] -> NewCall
+
+RTP
+  ^\s*Play\stime\s\(voice\)\s*:\s*${RTP_PLAY_TIME}
+  ^\s*Tx\sCoder\s*:\s*${RTP_TX_CODER}\s*;\s*Rx\sCoder\s*:\s*${RTP_RX_CODER}
+  ^\s*RTP\sPackets\sRX\s*\/\s*TX\s*:\s*${RTP_PACKETS_RX}\s*\/\s*${RTP_PACKETS_TX}
+  ^\s*RTP\sPacket\slost.*RX\s*\/\s*TX\s\(RTCP\sreported\)\s*:\s*(${RTP_PACKETS_LOST_RX}|\-+)\s*\/\s*(${RTP_PACKETS_LOST_TX}|\-+)
+  ^\s*Number\sof\sExcessive\sJitter\sevents\s*:\s*${RTP_EXCESSIVE_JITTER}
+  ^\s*MOS-CQ\s*\/\s*MOS-LQ\s*:\s*${RTP_MOS_CQ}\s*\/\s*${RTP_MOS_LQ}
+  ^\s*ERL\s*:\s*${RTP_ERL_DB}
+  ^\s*ACOM\s*:\s*${RTP_ACOM_DB}
+  ^\s*$$ -> Start
