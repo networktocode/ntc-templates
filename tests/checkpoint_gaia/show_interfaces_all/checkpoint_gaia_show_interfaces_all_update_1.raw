@@ -1,0 +1,159 @@
+Interface Mgmt
+    state on
+    mac-addr 00:1c:7f:43:08:28
+    type ethernet
+    link-state link up
+    instance 0
+    mtu 1500
+    auto-negotiation on
+    speed 1000M
+    ipv6-autoconfig Not configured
+    monitor-mode Not configured
+    duplex full
+    link-speed 1000M/full
+    comments
+    ipv4-address 2.2.2.2/29
+    ipv6-address Not Configured
+    ipv6-local-link-address Not Configured
+
+Statistics:
+    TX bytes:65587685757 packets:135150363 errors:0 dropped:0 overruns:0 carrier:0
+    RX bytes:8575369842 packets:80348499 errors:0 dropped:0 overruns:0 frame:0
+
+
+Interface Sync
+    state on
+    mac-addr 00:1c:7f:43:08:29
+    type ethernet
+    link-state link up
+    instance 0
+    mtu 1500
+    auto-negotiation Not configured
+    speed 1000M
+    ipv6-autoconfig Not configured
+    monitor-mode Not configured
+    duplex full
+    link-speed Not configured
+    comments
+    ipv4-address 192.168.0.1/30
+    ipv6-address Not Configured
+    ipv6-local-link-address Not Configured
+
+Statistics:
+    TX bytes:259664923573 packets:2251872598 errors:0 dropped:0 overruns:0 carrier:0
+    RX bytes:259266301613 packets:2251102479 errors:0 dropped:0 overruns:0 frame:0
+
+
+Interface bond18
+    state on
+    mac-addr 00:1c:7f:64:10:9e
+    type bond
+    link-state not available
+    instance 0
+    mtu 1500
+    auto-negotiation Not configured
+    speed N/A
+    ipv6-autoconfig Not configured
+    monitor-mode Not configured
+    duplex N/A
+    link-speed Not configured
+    comments
+    ipv4-address Not Configured
+    ipv6-address Not Configured
+    ipv6-local-link-address Not Configured
+
+Statistics:
+    TX bytes:488671526784 packets:6484144830 errors:0 dropped:0 overruns:0 carrier:0
+    RX bytes:30726434732106 packets:22116800051 errors:0 dropped:0 overruns:0 frame:0
+
+
+Interface bond18.51
+    state on
+    mac-addr 00:1c:7f:64:10:9e
+    type vlan
+    link-state not available
+    instance 2
+    mtu 1500
+    auto-negotiation Not configured
+    speed N/A (bond18)
+    ipv6-autoconfig Not configured
+    monitor-mode Not configured
+    duplex N/A (bond18)
+    link-speed Not configured
+    comments
+    ipv4-address 1.1.1.1/27
+    ipv6-address Not Configured
+    ipv6-local-link-address Not Configured
+
+Statistics:
+    TX bytes:4378789096 packets:35892004 errors:0 dropped:0 overruns:0 carrier:0
+    RX bytes:3878961582 packets:35887605 errors:0 dropped:0 overruns:0 frame:0
+
+
+Interface eth1-01
+    state on
+    mac-addr 00:1c:7f:64:10:9e
+    type ethernet
+    link-state link up
+    instance 0
+    mtu 1500
+    auto-negotiation Not configured
+    speed 10G
+    ipv6-autoconfig Not configured
+    monitor-mode Not configured
+    duplex full
+    link-speed Not configured
+    comments
+    ipv4-address Not Configured
+    ipv6-address Not Configured
+    ipv6-local-link-address Not Configured
+
+Statistics:
+    TX bytes:250113820171 packets:3347079150 errors:0 dropped:0 overruns:0 carrier:0
+    RX bytes:15432889269477 packets:11081410222 errors:0 dropped:0 overruns:0 frame:0
+
+
+Interface lo
+    state on
+    mac-addr Not configured
+    type loopback
+    link-state not available
+    instance 0
+    mtu 65536
+    auto-negotiation Not configured
+    speed N/A
+    ipv6-autoconfig Not configured
+    monitor-mode Not configured
+    duplex N/A
+    link-speed Not configured
+    comments
+    ipv4-address 127.0.0.1/8
+    ipv6-address Not Configured
+    ipv6-local-link-address Not Configured
+
+Statistics:
+    TX bytes:16669231829 packets:78838857 errors:0 dropped:0 overruns:0 carrier:0
+    RX bytes:16669231829 packets:78838857 errors:0 dropped:0 overruns:0 frame:0
+
+
+Interface wrp128
+    state on
+    mac-addr 00:00:00:00:00:00
+    type wrp
+    link-state not available
+    instance 2
+    mtu 1500
+    auto-negotiation Not configured
+    speed N/A
+    ipv6-autoconfig Not configured
+    monitor-mode Not configured
+    duplex N/A
+    link-speed Not configured
+    comments
+    ipv4-address 1.1.1.1/32
+    ipv6-address Not Configured
+    ipv6-local-link-address Not Configured
+
+Statistics:
+    TX bytes:9367255 packets:222957 errors:0 dropped:0 overruns:0 carrier:0
+    RX bytes:6242740 packets:222940 errors:0 dropped:0 overruns:0 frame:0

@@ -1,0 +1,17 @@
+IP Multicast Routing Table for VRF "default"
+
+(*, 225.1.0.1/32), uptime: 2w3d, igmp ip pim
+  Incoming interface: Ethernet1/1, RPF nbr: 10.1.1.1
+  Outgoing interface list: (count: 1)
+    Ethernet1/3, uptime: 2w3d, igmp
+
+
+(10.1.13.10/32, 225.1.0.1/32), uptime: 06:33:34, ip mrib pim
+  Incoming interface: Ethernet1/1, RPF nbr: 10.1.1.1
+  Outgoing interface list: (count: 1)
+    Ethernet1/3, uptime: 06:33:34, mrib
+
+
+(*, 232.0.0.0/8), uptime: 2w3d, pim ip
+  Incoming interface: Null, RPF nbr: 0.0.0.0
+  Outgoing interface list: (count: 0)

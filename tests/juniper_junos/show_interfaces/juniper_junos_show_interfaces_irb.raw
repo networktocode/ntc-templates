@@ -1,0 +1,14 @@
+  Logical interface irb.6013 (Index 361) (SNMP ifIndex 600)
+    Description: Customer-irb-interface11A
+    Flags: Down SNMP-Traps 0x4000 Encapsulation: ENET2
+    MAC: 0e:00:05:0b:bb:bb
+    Bandwidth: 1Gbps
+    Routing Instance: DEFAULT-VSWITCH Bridging Domain: BD6013
+    Input packets : 0
+    Output packets: 0
+    Protocol inet, MTU: 1514
+    Max nh cache: 100000, New hold nh limit: 100000, Curr nh cnt: 0, Curr new hold cnt: 0, NH drop cnt: 0
+      Flags: Sendbcast-pkt-to-re
+      Addresses, Flags: Preferred Dest-route-down Is-Preferred Is-Primary
+        Destination: x.x.x.x/28, Local: x.x.x.x, Broadcast: x.x.x.x
+    Protocol multiservice, MTU: 1514

@@ -1,0 +1,174 @@
+VNI: 100036
+  NVE-Interface       : nve1
+  Mcast-Addr          : 239.1.1.1
+  VNI State           : Up
+  Mode                : control-plane
+  VNI Type            : L2 [36]
+  VNI Flags           : SA
+  Provision State     : vni-add-complete
+  Vlan-BD             : 36
+  SVI State           : n/a
+VNI: 31473
+  NVE-Interface       : nve1
+  Mcast-Addr          : 239.1.1.19
+  VNI State           : Down
+  Mode                : control-plane
+  VNI Type            : L2 [UC]
+  VNI Flags           : SA
+  Provision State     : vni-init
+  Vlan-BD             : 0
+  SVI State           : n/a
+VNI: 10498
+  NVE-Interface       : nve1
+  Mcast-Addr          : 239.1.1.26
+  VNI State           : Up
+  Mode                : control-plane
+  VNI Type            : L2 [498]
+  VNI Flags           : SA
+  Provision State     : vni-add-complete
+  Vlan-BD             : 498
+  SVI State           : n/a
+VNI: 10446
+  NVE-Interface       : nve1
+  Mcast-Addr          : 239.1.1.153
+  VNI State           : Up
+  Mode                : control-plane
+  VNI Type            : L2 [446]
+  VNI Flags           : SA
+  Provision State     : vni-add-complete
+  Vlan-BD             : 446
+  SVI State           : n/a
+VNI: 10404
+  NVE-Interface       : nve1
+  Mcast-Addr          : 239.1.1.23
+  VNI State           : Up
+  Mode                : control-plane
+  VNI Type            : L2 [404]
+  VNI Flags           : SA
+  Provision State     : vni-add-complete
+  Vlan-BD             : 404
+  SVI State           : n/a
+VNI: 10400
+  NVE-Interface       : nve1
+  Mcast-Addr          : 239.1.1.23
+  VNI State           : Up
+  Mode                : control-plane
+  VNI Type            : L2 [400]
+  VNI Flags           : SA
+  Provision State     : vni-add-complete
+  Vlan-BD             : 400
+  SVI State           : n/a
+VNI: 10374
+  NVE-Interface       : nve1
+  Mcast-Addr          : 239.1.1.23
+  VNI State           : Up
+  Mode                : control-plane
+  VNI Type            : L2 [374]
+  VNI Flags           : SA
+  Provision State     : vni-add-complete
+  Vlan-BD             : 374
+  SVI State           : n/a
+VNI: 10370
+  NVE-Interface       : nve1
+  Mcast-Addr          : UnicastBGP
+  VNI State           : Up
+  Mode                : control-plane
+  VNI Type            : L2 [370]
+  VNI Flags           : SA
+  Provision State     : vni-add-complete
+  Vlan-BD             : 370
+  SVI State           : n/a
+VNI: 10230
+  NVE-Interface       : nve1
+  Mcast-Addr          : 239.1.1.1
+  VNI State           : Up
+  Mode                : control-plane
+  VNI Type            : L2 [230]
+  VNI Flags           : SA
+  Provision State     : vni-add-complete
+  Vlan-BD             : 230
+  SVI State           : n/a
+VNI: 10222
+  NVE-Interface       : nve1
+  Mcast-Addr          : 239.1.2.222
+  VNI State           : Up
+  Mode                : control-plane
+  VNI Type            : L2 [222]
+  VNI Flags           : SA
+  Provision State     : vni-add-complete
+  Vlan-BD             : 222
+  SVI State           : n/a
+VNI: 10191
+  NVE-Interface       : nve1
+  Mcast-Addr          : 239.1.1.21
+  VNI State           : Up
+  Mode                : control-plane
+  VNI Type            : L2 [191]
+  VNI Flags           : SA
+  Provision State     : vni-add-complete
+  Vlan-BD             : 191
+  SVI State           : n/a
+VNI: 10077
+  NVE-Interface       : nve1
+  Mcast-Addr          : n/a
+  VNI State           : Up
+  Mode                : control-plane
+  VNI Type            : L3 [TENANT77]
+  VNI Flags           :
+  Provision State     : vni-add-complete
+  Vlan-BD             : 77
+  SVI State           : UP [vrf-id: 3]
+VNI: 10060
+  NVE-Interface       : nve1
+  Mcast-Addr          : 239.1.1.5
+  VNI State           : Up
+  Mode                : control-plane
+  VNI Type            : L2 [60]
+  VNI Flags           : SA
+  Provision State     : vni-add-complete
+  Vlan-BD             : 60
+  SVI State           : n/a
+VNI: 10026
+  NVE-Interface       : nve1
+  Mcast-Addr          : n/a
+  VNI State           : Up
+  Mode                : control-plane
+  VNI Type            : L3 [blobber]
+  VNI Flags           :
+  Provision State     : vni-add-complete
+  Vlan-BD             : 2
+  SVI State           : UP [vrf-id: 4]
+VNI: 603008
+  NVE-Interface       : nve1
+  Mcast-Addr          : 239.1.1.33
+  VNI State           : Up
+  Mode                : control-plane
+  VNI Type            : L2 [3008]
+  VNI Flags           : SA
+  DCI Mcast-Addr      : Unconfigured
+  Provision State     : vni-add-complete
+  Vlan-BD             : 3008
+  SVI State           : DOWN [vrf-id: 0] [L3VNI: 0]
+VNI: 603007
+  NVE-Interface       : nve1
+  Mcast-Addr          : 239.1.1.34
+  VNI State           : Up
+  Mode                : control-plane
+  VNI Type            : L2 [3007]
+  VNI Flags           : SA
+  DCI Mcast-Addr      : Unconfigured
+  Provision State     : vni-add-complete
+  Vlan-BD             : 3007
+  SVI State           : DOWN [vrf-id: 0] [L3VNI: 0]
+VNI: 603006
+  NVE-Interface       : nve1
+  Mcast-Addr          : 239.1.1.35
+  VNI State           : Up
+  Mode                : control-plane
+  VNI Type            : L2 [3006]
+  VNI Flags           : SA
+  DCI Mcast-Addr      : Unconfigured
+  Provision State     : vni-add-complete
+  Vlan-BD             : 3006
+  SVI State           : DOWN [vrf-id: 0] [L3VNI: 0]
+

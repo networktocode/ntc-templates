@@ -1,0 +1,11 @@
+
+                                        IF      IF      IF                                                                TCP
+                  AF                    ADMIN   OPER    TRACKER  ENCAP                                     SPEED          MSS                 RX       TX
+VPN  INTERFACE    TYPE  IP ADDRESS      STATUS  STATUS  STATUS   TYPE   PORT TYPE  MTU  HWADDR             MBPS   DUPLEX  ADJUST  UPTIME      PACKETS  PACKETS
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+0    eth0         ipv4  10.10.20.90/24  Up      Up      -        null   transport  -    00:50:56:bf:8a:02  1000   full    -       0:00:18:51  24175    21348
+0    eth1         ipv4  -               Down    Down    -        -      -          -    00:50:56:bf:f2:1a  1000   full    -       -           -        -
+0    eth2         ipv4  -               Down    Down    -        -      -          -    00:50:56:bf:47:34  1000   full    -       -           -        -
+0    system       ipv4  10.10.1.1/32    Up      Up      -        null   loopback   -    -                  1000   full    -       0:00:21:54  0        0
+0    docker0      ipv4  -               Down    Down    -        -      -          -    02:42:39:23:37:dd  1000   full    -       -           -        -
+0    cbr-vmanage  ipv4  -               Down    Up      -        -      -          -    02:42:d6:c0:0b:66  1000   full    -       -           -        -

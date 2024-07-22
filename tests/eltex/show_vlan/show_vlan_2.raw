@@ -1,0 +1,12 @@
+Vlan mode: Basic
+
+Vlan       Name                   Ports                Type     Authorization
+---- ----------------- --------------------------- ------------ -------------
+ 1           1         gi1/0/4-10,gi1/0/14-22,       Default      Required
+                       te1/0/1,te1/0/3-4,Po1-12
+ 2      Something12         te1/0/1,te1/0/3-4       permanent     Required
+173         173                 te1/0/1-4           permanent     Required
+175      VLAN0175               te1/0/1-4           permanent     Required
+228  wwwbasicprovider1      te1/0/1,te1/0/3-4       permanent     Required
+     23
+692    SS-Test12345         gi1/0/22,te1/0/3        permanent     Required
