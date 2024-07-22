@@ -195,6 +195,7 @@ cisco_asa_show_port-channel_summary.textfsm, .*, cisco_asa, sh[[ow]] po[[rt-chan
 cisco_asa_show_running-config_ipsec.textfsm, .*, cisco_asa, sh[[ow]] ru[[nning-config]] ips[[ec]]
 cisco_asa_show_cpu_usage_detailed.textfsm, .*, cisco_asa, sh[[ow]] cpu u[[sage]] d[[etailed]]
 cisco_asa_show_interface_ip_brief.textfsm, .*, cisco_asa, sh[[ow]] int[[erface]] ip br[[ief]]
+cisco_asa_show_access-list_brief.textfsm, .*, cisco_asa, sh[[ow]] ac[[cess-list]] (\S+ )?br[[ief]]
 cisco_asa_show_interface_detail.textfsm, .*, cisco_asa, sh[[ow]] int[[erface]] d[[etail]]
 cisco_asa_show_crypto_ipsec_sa.textfsm, .*, cisco_asa, sh[[ow]] (?:cry[[pto]] ip[[sec]]|ipsec) sa
 cisco_asa_show_resource_usage.textfsm, .*, cisco_asa, sh[[ow]] res[[ource]] u[[sage]]
@@ -229,6 +230,7 @@ cisco_ios_show_port-security_interface_interface.textfsm, .*, cisco_ios, sh[[ow]
 cisco_ios_show_capability_feature_routing.textfsm, .*, cisco_ios, sh[[ow]] cap[[ability]] f[[eature]] r[[outing]]
 cisco_ios_show_ip_bgp_vpnv4_all_neighbors.textfsm, .*, cisco_ios, sh[[ow]] ip bgp vpnv4 all nei[[ghbors]]
 cisco_ios_show_ip_eigrp_interfaces_detail.textfsm, .*, cisco_ios, sh[[ow]] ip ei[[grp]] i[[nterfaces]] de[[tail]]
+cisco_ios_show_ip_dhcp_snooping_binding.textfsm, .*, cisco_ios, sh[[ow]] ip dhcp sn[[ooping]] bi[[nding]]
 cisco_ios_show_ip_ospf_database_network.textfsm, .*, cisco_ios, sh[[ow]] ip ospf data[[base]] ne[[twork]]
 cisco_ios_show_authentication_sessions.textfsm, .*, cisco_ios, show authen[[tication]] ses[[sions]]
 cisco_ios_show_crypto_pki_certificates.textfsm, .*, cisco_ios, sh[[ow]] cry[[pto]] p[[ki]] ce[[rtificates]]
@@ -362,6 +364,7 @@ cisco_nxos_show_forwarding_ipv4_route.textfsm, .*, cisco_nxos, sh[[ow]] fo[[rwar
 cisco_nxos_show_interface_description.textfsm, .*, cisco_nxos, sh[[ow]] int[[erface]] desc[[ription]]
 cisco_nxos_show_interface_transceiver.textfsm, .*, cisco_nxos, sh[[ow]] int[[erface]] tra[[nsceiver]]
 cisco_nxos_show_interfaces_switchport.textfsm, .*, cisco_nxos, sh[[ow]] int[[erfaces]] sw[[itchport]]
+cisco_nxos_show_ip_arp_detail_vrf_all.textfsm, .*, cisco_nxos, sh[[ow]] i[[p]] a[[rp]] det[[ail]] vrf all
 cisco_nxos_show_ip_dhcp_relay_address.textfsm, .*, cisco_nxos, sh[[ow]] ip dh[[cp]] r[[elay]] a[[ddress]]
 cisco_nxos_show_lldp_neighbors_detail.textfsm, .*, cisco_nxos, sh[[ow]] ll[[dp]] nei[[ghbors]] d[[etail]]
 cisco_nxos_show_cdp_neighbors_detail.textfsm, .*, cisco_nxos, sh[[ow]] c[[dp]] neig[[hbors]] det[[ail]]
@@ -610,6 +613,8 @@ huawei_smartax_display_version.textfsm, .*, huawei_smartax, di[[splay]] ver[[sio
 huawei_smartax_display_board.textfsm, .*^, huawei_smartax, di[[splay]] bo[[ard]]\s*
 huawei_smartax_display_cpu.textfsm, .*, huawei_smartax, di[[splay]] cpu\s*
 huawei_smartax_display_mem.textfsm, .*, huawei_smartax, di[[splay]] mem[[ory]]\s*
+huawei_smartax_port_vlan.textfsm, .*, huawei_smartax, port vlan\s*
+huawei_smartax_ont_add.textfsm, .*, huawei_smartax, ont add\s*
 
 huawei_vrp_display_traffic-filter_applied-record.textfsm, .*, huawei_vrp, dis[[play]] traffic-filter applied-record
 huawei_vrp_display_ip_vpn-instance_interface.textfsm, .*, huawei_vrp, di[[splay]] ip vpn[[-instance]] interface
@@ -684,9 +689,12 @@ mikrotik_routeros_user_active_print.textfsm, .*, mikrotik_routeros, [[/]]us[[er]
 mikrotik_routeros_ip_address_print.textfsm, .*, mikrotik_routeros, [[/]]ip ad[[dress]] p[[rint]]
 mikrotik_routeros_ping.textfsm, .*, mikrotik_routeros, [[/]]pin[[g]]
 
+oneaccess_oneos_show_voice_voip-call_active_all.textfsm, .*, oneaccess_oneos, sh[[ow]] voice voip-call active
+oneaccess_oneos_show_voice_voip-call_any_all.textfsm, .*, oneaccess_oneos, sh[[ow]] voice voip-call any all
 oneaccess_oneos_show_ip_interface_brief.textfsm, .*, oneaccess_oneos, sh[[ow]] ip int[[erface]] brief
 oneaccess_oneos_show_ip_bgp_summary.textfsm, .*, oneaccess_oneos, sh[[ow]] ip bgp summary
 oneaccess_oneos_show_ip_prefix-list.textfsm, .*, oneaccess_oneos, sh[[ow]] ip prefix-list
+oneaccess_oneos_show_vrrp_interface.textfsm, .*, oneaccess_oneos, sh[[ow]] vrrp int[[erface]]
 oneaccess_oneos_show_ip_vrf_brief.textfsm, .*, oneaccess_oneos, sh[[ow]] ip vrf brief
 oneaccess_oneos_show_ip_ssh.textfsm, .*, oneaccess_oneos, sh[[ow]] ip ssh
 
@@ -738,6 +746,13 @@ watchguard_firebox_show_arp.textfsm, .*, watchguard_firebox, sh[[ow]] arp
 
 yamaha_show_environment.textfsm, .*, yamaha, sh[[ow]] en[[vironment]]
 yamaha_show_ip_route.textfsm, .*, yamaha, sh[[ow]] ip ro[[ute]]
+
+zte_zxros_show_mpls_traffic-eng_tunnels.textfsm, .*, zte_zxros, sh[[ow]] mpls traffic-eng tunnels
+zte_zxros_show_interface_brief.textfsm, .*, zte_zxros, sh[[ow]] inter[[face]] br[[ief]]
+zte_zxros_show_isis_adjacency.textfsm, .*, zte_zxros, sh[[ow]] is[[is]] ad[[jacency]]
+zte_zxros_show_interface.textfsm, .*, zte_zxros, sh[[ow]] int[[erface]]
+zte_zxros_show_version.textfsm, .*, zte_zxros, sh[[ow]] ver[[sion]]
+zte_zxros_show_arp.textfsm, .*, zte_zxros, sh[[ow]] arp
 
 zyxel_os_cfg_lan_get_--Name_name.textfsm, .*, zyxel_os, cfg lan get --Name .+
 zyxel_os_zycli_Ethctl_media-type.textfsm, .*, zyxel_os, zycli Ethctl media-type(\s\w+)*
