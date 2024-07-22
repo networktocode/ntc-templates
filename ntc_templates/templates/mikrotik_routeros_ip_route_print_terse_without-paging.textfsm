@@ -1,8 +1,8 @@
-Value Key INDEX (\d+)
+Value INDEX (\d+)
 Value FLAGS ([XADCSrbomBUP ]{4})
 Value COMMENT (.*?(?=(?:[^=]\S+=)|\s*$))
-Value DST_ADDRESS (\S+)
-Value DST_ADDRESS_SUBNET (\d+)
+Value DESTINATION_ADDRESS (\S+)
+Value DESTINATION_ADDRESS_SUBNET (\d+)
 Value TYPE (.+?(?=(?:[^=]\S+=)|\s*$))
 Value ROUTING_TABLE (.+?(?=(?:[^=]\S+=)|\s*$))
 Value PREF_SRC (\S+?)
@@ -19,6 +19,6 @@ Value LOCAL_ADDRESS (.+?(?=(?:[^=]\S+=)|\s*$))
 Value ROUTING_MARK (.*?(?=(?:[^=]\S+=)|\s*$))
 
 Start
-  ^\s*${INDEX}\s+${FLAGS}(?:\s+comment=${COMMENT})?\s+dst-address=${DST_ADDRESS}/${DST_ADDRESS_SUBNET}(?:\s+type=${TYPE})?(?:\s+routing-table=${ROUTING_TABLE})?(?:\s+pref-src=${PREF_SRC})?(?:\s+gateway=${GATEWAY})?(?:\s+gateway-status=${GATEWAY_STATUS})?(?:\s+immediate-gw=${IMMEDIATE_GW})?(?:\s+check-gateway=${CHECK_GATEWAY})?(?:\s+distance=${DISTANCE})?(?:\s+scope=${SCOPE})?(?:\s+target-scope=${TARGET_SCOPE})?(?:\s+vrf-interface=${VRF_INTERFACE})?(?:\s+suppress-hw-offload=${SUPPRESS_HW_OFFLOAD})?(?:\s+local-address=${LOCAL_ADDRESS})?(?:\s+routing-mark=${ROUTING_MARK})?\s*$$ -> Record
+  ^\s*${INDEX}\s+${FLAGS}(?:\s+comment=${COMMENT})?\s+dst-address=${DESTINATION_ADDRESS}/${DESTINATION_ADDRESS_SUBNET}(?:\s+type=${TYPE})?(?:\s+routing-table=${ROUTING_TABLE})?(?:\s+pref-src=${PREF_SRC})?(?:\s+gateway=${GATEWAY})?(?:\s+gateway-status=${GATEWAY_STATUS})?(?:\s+immediate-gw=${IMMEDIATE_GW})?(?:\s+check-gateway=${CHECK_GATEWAY})?(?:\s+distance=${DISTANCE})?(?:\s+scope=${SCOPE})?(?:\s+target-scope=${TARGET_SCOPE})?(?:\s+vrf-interface=${VRF_INTERFACE})?(?:\s+suppress-hw-offload=${SUPPRESS_HW_OFFLOAD})?(?:\s+local-address=${LOCAL_ADDRESS})?(?:\s+routing-mark=${ROUTING_MARK})?\s*$$ -> Record
   ^\s*$$
   ^. -> Error
