@@ -1,0 +1,25 @@
+Port : fa1
+Port Mode: Trunk
+Gvrp Status: disabled
+Ingress Filtering: true
+Acceptable Frame Type: admitAll
+Ingress UnTagged VLAN ( NATIVE ): 203
+
+Port is member in:
+
+Vlan               Name               Egress rule Port Membership Type
+---- -------------------------------- ----------- --------------------
+203                203                 Untagged          Static
+222               VOIP-1                Tagged           Static
+
+
+Forbidden VLANS:
+Vlan               Name
+---- --------------------------------
+
+
+Classification rules:
+
+Mac based VLANs:
+  Group ID   Vlan ID
+------------ -------

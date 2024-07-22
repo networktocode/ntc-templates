@@ -1,0 +1,23 @@
+---
+parsed_sample:
+  - name: "cftv"
+    id: "1"
+    interface_list:
+      - "Vlanif1823"
+      - "Vlanif1847"
+      - "LoopBack5"
+  - name: "met"
+    id: "2"
+    interface_list:
+      - "40GE0/0/3"
+      - "Vlanif1774"
+      - "Vlanif1797"
+      - "LoopBack2"
+      - "Vlanif1769"
+  - name: "tel"
+    id: "3"
+    interface_list:
+      - "Vlanif755"
+      - "Vlanif773"
+      - "Vlanif797"
+      - "LoopBack1"

@@ -1,7 +1,7 @@
-Value NEIGHBOR (\S+)
+Value NEIGHBOR_NAME (\S+)
 Value LOCAL_INTERFACE (\S+)
 Value NEIGHBOR_INTERFACE (\S+)
-Value DEVICE_ID (([0-9a-f]{2}[:-]){5}([0-9a-f]{2}))
+Value CHASSIS_ID (([0-9a-f]{2}[:-]){5}([0-9a-f]{2}))
 
 Start
   ^System\s+capability\s+legend
@@ -12,6 +12,6 @@ Start
 
 Begin
   ^-+
-  ^${LOCAL_INTERFACE}\s+${DEVICE_ID}\s+${NEIGHBOR_INTERFACE}\s+${NEIGHBOR}.+ -> Record
+  ^${LOCAL_INTERFACE}\s+${CHASSIS_ID}\s+${NEIGHBOR_INTERFACE}\s+${NEIGHBOR_NAME}.+ -> Record
   ^\s*$$
   ^. -> Error

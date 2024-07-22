@@ -1,0 +1,33 @@
+            Interface:  GigabitEthernet1/0/31
+               IIF-ID:  0x18438F31
+          MAC Address:  cc96.abcd.1234
+         IPv6 Address:  Unknown
+         IPv4 Address:  10.10.10.190
+            User-Name:  CC-96-AA-BB-CC-DD
+          Device-type:  Microsoft-Workstation
+          Device-name:  MOED-9212345
+               Status:  Authorized
+               Domain:  DATA
+       Oper host mode:  multi-auth
+     Oper control dir:  both
+      Session timeout:  43200s (server), Remaining: 3574s
+       Timeout action:  Reauthenticate
+  Acct update timeout:  172800s (local), Remaining: 89824s
+    Common Session ID:  0A4014AC0000002F555FD224
+      Acct Session ID:  0x00000027
+               Handle:  0xe0000025
+       Current Policy:  PMAP_DefaultWiredDot1xClosedAuth_1X
+
+Local Policies:
+
+Server Policies:
+             VN Value:  WALKUPED_VN
+      Session-Timeout: 43200 sec
+           Vlan Group:  Vlan: 1011
+   Interface Template:  PXE-ClosedMode-Template
+            SGT Value:  40
+
+Method status list:
+       Method           State
+        dot1x           Stopped
+          mab           Authc Success

@@ -9,7 +9,7 @@ Start
   ^Cisco.+Software.+Version\s+${VERSION}
   ^Build\s+Information: -> Build_Info
   ^.+uptime\s+is\s+${UPTIME}\s*$$
-  ^(?:\s*[Cc]isco\s+)?${HARDWARE}\s\(.*\) processor
+  ^\s*[Cc]isco\s+${HARDWARE}\s\(.*\)
   ^\S{3}\s+\S{3}\s+\d{1,2}\s+\d+:\d+:\d+
   ^Copyright
   ^ROM:
@@ -19,6 +19,7 @@ Start
   ^\d+\w\s+bytes
   ^Boot\s+device
   ^Package\s+active
+  ^[Cc]isco\s+\S+\s+\d+RU.*$$
   ^hfr-doc -> CRS
   ^\s*$$
   ^. -> Error
