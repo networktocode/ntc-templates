@@ -1,0 +1,19 @@
+---
+parsed_sample:
+  - vlan_id: "1"
+    vlan_name: "DEFAULT_VLAN_1"
+    status: "up"
+    reason: "ok"
+    type: "default"
+    interfaces:
+      - "1/1/34-1/1/52"
+  - vlan_id: "3072"
+    vlan_name: "mgmt"
+    status: "up"
+    reason: "ok"
+    type: "static"
+    interfaces:
+      - "1/1/2-1/1/4"
+      - "1/1/6-1/1/8"
+      - "1/1/17-1/1/19"
+      - "1/1/47-1/1/52"

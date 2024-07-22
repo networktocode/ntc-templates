@@ -12,6 +12,7 @@ Value SPEED (.+?b/s)
 Value BANDWIDTH (\d+\s+\w+)
 Value ENCAPSULATION ([\w\.\s]+)
 Value VLAN_ID (\d+)
+Value HARDWARE_MEDIA (.*?)
 
 Start
   ^\S+\s+is -> Continue.Record
@@ -22,4 +23,5 @@ Start
   ^\s+MTU\s+${MTU}.*BW\s+${BANDWIDTH}
   ^\s+Encapsulation\s+${ENCAPSULATION}, (Vlan|VLAN) I(D|d)\s+${VLAN_ID}.+$$
   ^\s+Encapsulation\s+${ENCAPSULATION},.*$$
-  ^\s+(?:[Dd]uplex\s+|)${DUPLEX}(?:-[Dd]uplex|),\s+${SPEED}
+  ^\s+(?:[Dd]uplex\s+|)${DUPLEX}(?:-[Dd]uplex|),\s+${SPEED}(?:,\s+${HARDWARE_MEDIA},)?
+  

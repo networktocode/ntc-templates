@@ -1,0 +1,42 @@
+---
+parsed_sample:
+  - broadcast: "00:00:00:00:00:00"
+    flags: "LOOPBACK,UP,LOWER_UP"
+    group: ""
+    id: "1"
+    interface: "lo"
+    ip_addresses:
+      - "127.0.0.1"
+    ip_masks:
+      - "8"
+    ipv6_addresses:
+      - "::1"
+    ipv6_masks:
+      - "128"
+    mac_address: "00:00:00:00:00:00"
+    master: ""
+    mtu: "65536"
+    qdisc: "noqueue"
+    qlen: ""
+    state: "UNKNOWN"
+    type: "loopback"
+  - broadcast: "ff:ff:ff:ff:ff:ff"
+    flags: "BROADCAST,MULTICAST,UP,LOWER_UP"
+    group: ""
+    id: "2"
+    interface: "eth0"
+    ip_addresses:
+      - "192.168.1.1"
+    ip_masks:
+      - "24"
+    ipv6_addresses:
+      - "fe80::302:03ff:fe04:0506"
+    ipv6_masks:
+      - "64"
+    mac_address: "01:02:03:04:05:06"
+    master: ""
+    mtu: "1500"
+    qdisc: "noqueue"
+    qlen: ""
+    state: "UP"
+    type: "ether"
