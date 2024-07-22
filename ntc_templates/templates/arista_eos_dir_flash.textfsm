@@ -1,7 +1,7 @@
 Value Filldown FILE_SYSTEM (\S+)
 Value PERMISSIONS (\S+)
 Value SIZE (\d+)
-Value DATE_TIME (\S+\s+\d+\s+((\d+)|(\d+:\d+)))
+Value DATE_TIME (\S+\s+\d+\s+((\d+)|(\d+:\d+))|\<no date\>)
 Value NAME (\S+)
 Value Fillup TOTAL_SIZE (\d+)
 Value Fillup TOTAL_FREE (\d+)
