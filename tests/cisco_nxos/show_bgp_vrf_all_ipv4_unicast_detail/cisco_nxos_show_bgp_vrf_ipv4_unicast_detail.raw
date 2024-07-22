@@ -1,0 +1,96 @@
+BGP routing table information for VRF TEST_1, address family IPv4 Unicast
+BGP routing table entry for 10.1.1.0/24, version 3446
+Paths: (1 available, best #0)
+Flags: (0x8000002) (high32 00000000) on xmit-list, is not in urib, is not in HW
+
+  Path type: local, path is invalid(not in urib), no labeled nexthop
+  AS-Path: NONE, path locally originated
+    0.0.0.0 (metric 0) from 0.0.0.0 (10.0.1.1)
+      Origin IGP, MED not set, localpref 100, weight 32768
+
+
+BGP routing table information for VRF default, address family IPv4 Unicast
+BGP routing table entry for 0.0.0.0/0, version 461888
+Paths: (2 available, best #1)
+Flags: (0x8008001a) (high32 00000000) on xmit-list, is in urib, is best urib route, is in HW
+
+  Advertised path-id 1
+  Path type: internal, path is valid, is best path, no labeled nexthop, in rib
+  AS-Path: 65111.1233 65111.4566 65111.7899 12345 , path sourced external to AS
+    10.2.2.252 (metric 0) from 10.2.2.252 (10.12.2.100)
+      Origin IGP, MED not set, localpref 5000, weight 0
+      Community: 12345:1111 3000:4444 44444:1111 
+
+  Path type: external, path is valid, not best reason: Local Preference, no labeled nexthop
+  AS-Path: 65111.1233 65111.4566 65111.7899 22222 , path sourced external to AS
+    10.1.1.226 (metric 0) from 10.1.1.226 (10.9.1.100)
+      Origin IGP, MED not set, localpref 4000, weight 0
+      Community: 12345:1111 3000:4444 44444:2222
+
+  Path-id 1 advertised to peers:
+    172.16.251.13  
+BGP routing table entry for 2.22.22.0/27, version 98
+Paths: (1 available, best #1)
+Flags: (0x8008001a) (high32 00000000) on xmit-list, is in urib, is best urib route, is in HW
+
+  Advertised path-id 1
+  Path type: internal, path is valid, is best path, no labeled nexthop, in rib
+  AS-Path: 65222.1111 653333 , path sourced external to AS
+    10.3.3.252 (metric 0) from 10.3.3.252 (10.9.1.200)
+      Origin IGP, MED 100, localpref 5000, weight 0
+      Community: 10104:10030 20311:0 41000:11501 
+
+  Path-id 1 advertised to peers:
+    10.3.10.123        10.3.9.234        172.16.10.123  
+BGP routing table entry for 10.10.10.0/24, version 336212
+Paths: (3 available, best #1)
+Flags: (0x8008001a) (high32 00000000) on xmit-list, is in urib, is best urib route, is in HW
+
+  Advertised path-id 1
+  Path type: internal, path is valid, is best path, no labeled nexthop, in rib
+  AS-Path: 65444.3444 65444.100 65444.200 , path sourced external to AS
+    10.9.9.252 (metric 0) from 10.9.10.252 (10.16.100.100)
+      Origin IGP, MED not set, localpref 5000, weight 0
+      Aggregated by 172.16.100.100, aggregator AS 65444.3444
+      Community: 100:200 300:400 500:600
+      Extcommunity: RT:33333:2222
+
+  Path type: external, path is valid, not best reason: Local Preference, no labeled nexthop
+  AS-Path: 65444.3444 65444.100 65444.300 , path sourced external to AS
+    10.15.5.214 (metric 0) from 10.15.5.214 (172.16.5.100)
+      Origin IGP, MED not set, localpref 4000, weight 0
+      Aggregated by 172.16.5.100, aggregator AS 65444.500
+      Community: 100:200 300:400 500:700
+      Extcommunity: RT:33333:2222
+
+  Path type: external, path is valid, received only, no labeled nexthop
+  AS-Path: 65108.50007 65108.51000 65108.53002 , path sourced external to AS
+    10.19.9.214 (metric 0) from 10.19.9.214 (172.26.156.121)
+      Origin IGP, MED 100, localpref 100, weight 0
+      Aggregated by 172.26.156.121, aggregator AS 65108.50007
+      Community: 100:200 300:400 500:800
+      Extcommunity: RT:33333:2222
+
+  Path-id 1 advertised to peers:
+    172.16.251.13  
+BGP routing table entry for 10.13.13.0/22, version 450373
+Paths: (2 available, best #1)
+Flags: (0x8008001a) (high32 00000000) on xmit-list, is in urib, is best urib route, is in HW
+
+  Advertised path-id 1
+  Path type: external, path is valid, is best path, no labeled nexthop, in rib
+  AS-Path: 65100.30037 65100.30032 2222 2222 , path sourced external to AS
+    10.19.19.19 (metric 0) from 10.19.19.19 (172.16.2.2)
+      Origin IGP, MED not set, localpref 5000, weight 0
+      Aggregated by 10.9.1.90, aggregator AS 64675, atomic-aggregate set
+      Community: 10308:10030 30006:0 41000:11501 
+
+  Path type: external, path is valid, received only, no labeled nexthop
+  AS-Path: 65100.30037 65100.30032 2222 2222 2222 , path sourced external to AS
+    10.19.19.19 (metric 0) from 10.19.19.19 (172.16.2.2)
+      Origin IGP, MED not set, localpref 100, weight 0
+      Aggregated by 10.9.1.90, aggregator AS 64675, atomic-aggregate set
+      Community: 10308:10030 30006:0 41000:11501 
+
+  Path-id 1 advertised to peers:
+    10.19.10.253 

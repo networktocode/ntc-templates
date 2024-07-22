@@ -18,8 +18,11 @@ Start
   ^\s*External\s+NAT\s+IP\s+Address.*$$
   ^\s*Link\s+Local\s+IPv6\s+Address.*$$
   ^\s*STATE.*$$
+  ^\s*Primary\s+IPv6\s+Address.*$$
   ^\s*IPv6\s+Address.*$$
+  ^\s*Primary\s+IPv6\s+Gateway.*$$
   ^\s*IPv6\s+Gateway.*$$
+  ^\s*Primary\s+IPv6\s+Gateway\s+Mac\s+Address.*$$
   ^\s*IPv6\s+Gateway\s+Mac\s+Address.*$$
   ^\s*VLAN.*$$
   ^\s*Quarantine-vlan.*$$
@@ -29,14 +32,15 @@ Start
   ^\s*Backup\s+Physical\s+Port.*$$
   ^\s*DHCP\s+Proxy\s+Mode.*$$
   ^\s*DHCP\s+Option\s+82.*$$
-  ^\s*DHCP\s+Option\s+82\s+bridge\s+mode\s+insertion.*$$
+  ^\s*DHCP\s+Option\s+82\s+bridge.*$$
   ^\s*DHCP\s+Option\s+6\s+Opendns\s+Override.*$$
   ^\s*IPv4\s+ACL.*$$
+  ^\s*URL\s+ACL.*$$
   ^\s*mDNS\s+Profile\s+Name.*$$
   ^\s*AP\s+Manager.*$$
   ^\s*Guest\s+Interface.*$$
   ^\s*3G\s+VLAN.*$$
   ^\s*L2\s+Multicast.*$$
-  ^\s*URL\s+ACL.*$$
+  ^\s*IPv6\s+ACL.*$$
   ^\s*$$
-  ^. -> Error
+  ^.* -> Error
