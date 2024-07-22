@@ -9,10 +9,12 @@
 # CLUSTER MODE: AP
 # VDOMS       : ENABLED
 #
+# 2023-10-25: Update for 7.4 by Sebastian
 # 2022-11-27: Update for 7.0 by Klaus
 #
 Value Required HOSTNAME (\S+)
 Value VERSION (.*)
+Value SECURITYLEVEL (.*)
 Value SIGNATURE (.*)
 Value VIRUS_DB (.*)
 Value EXTENDED_DB (.*)
@@ -20,13 +22,19 @@ Value EXTREME_DB (.*)
 Value IPS_DB (.*)
 Value IPS_ETDB (.*)
 Value APP_DB (.*)
+Value FMWP_DB (.*) 
 Value INDUSTRIAL_DB (.*)
 Value SERIAL_NUMBER (\S+)
 Value IPS_MALICIOUS_URL_DATABASE (.*)
+Value IOT_DETECT (.*)
+Value OT_DETECT_DB (.*)
+Value OT_PATCH_DB (.*)
+Value OT_THREAT_DB (.*)
+Value IPS_ENGINE (.*)
 Value BOTNET_DB (.*)
 Value BIOS_VERSION (\S+)
 Value SYSTEM_PART_NUMBER (\S+)
-Value LOG_HARD_DISK (\S+)
+Value LOG_HARD_DISK (.*)
 Value PRIVATE_ENCRYPTION (\S+)
 Value OPERATION_MODE (\S+)
 Value CURRENT_VIRTUAL_DOMAIN (\S+)
@@ -46,6 +54,7 @@ Value LAST_REBOOT_REASON (.+)
 
 Start
   ^Version:\s+${VERSION}
+  ^Security Level:\s+${SECURITYLEVEL}
   ^Firmware Signature:\s+${SIGNATURE}
   ^Virus-DB:\s+${VIRUS_DB}
   ^Extended\s+DB:\s+${EXTENDED_DB}
@@ -54,9 +63,15 @@ Start
   ^IPS-DB:\s+${IPS_DB}
   ^IPS-ETDB:\s+${IPS_ETDB}
   ^APP-DB:\s+${APP_DB}
+  ^FMWP-DB:\s+${APP_DB}
   ^INDUSTRIAL-DB:\s+${INDUSTRIAL_DB}
   ^Serial-Number:\s+${SERIAL_NUMBER}
   ^IPS\s+Malicious\s+URL\s+Database:\s+${IPS_MALICIOUS_URL_DATABASE}
+  ^IoT-Detect:\s+${APP_DB}
+  ^OT-Detect-DB:\s+${APP_DB}
+  ^OT-Patch-DB:\s+${APP_DB}
+  ^OT-Threat-DB:\s+${APP_DB}
+  ^IPS-Engine:\s+${APP_DB}
   ^Botnet\s+DB:\s+${BOTNET_DB}
   ^BIOS\s+version:\s+${BIOS_VERSION}
   ^System\s+Part-Number:\s+${SYSTEM_PART_NUMBER}

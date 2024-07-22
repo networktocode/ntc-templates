@@ -42,6 +42,12 @@ Start
   ^${TIME}\s+${TIMEZONE}\s+${DAYWEEK}\s+${DAY}/${MONTH}/${YEAR} -> Record
   ^. -> Error
 ```
+
+!!! tip
+    Use [standard capture group names](https://github.com/networktocode/ntc-templates/blob/master/docs/dev/data_model.md) where possible to achieve a level of normalization.
+
+    If templates you are creating or editing have capture groups that might be in common with others, please check other templates for similar capture groups as there might already be one in use. If you have a suggestion for a standard capture group name, suggest the change(s) to Network to Code for discussion and consideration.
+
 ### States
 
 If the raw output has a heading, the `Start` state should match on the column headings and then transition to another state that will match the device's output table with the capture groups. This helps ensure the regex patterns for the capture groups are attempting to match the correct information, and allows templates to easily add additional States for tables that have different headings. 

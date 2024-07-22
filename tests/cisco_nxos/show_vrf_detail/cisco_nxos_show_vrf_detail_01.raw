@@ -1,0 +1,20 @@
+VRF-Name: HUB, VRF-ID: 9, State: Up
+    VPNID: 123:456
+    RD: 172.21.111.112:197
+    Max Routes: 0  Mid-Threshold: 0
+    Table-ID: 0x80000009, AF: IPv6, Fwd-ID: 0x80000009, State: Up
+    Table-ID: 0x00000009, AF: IPv4, Fwd-ID: 0x00000009, State: Up
+
+VRF-Name: INSTRUMENTS, VRF-ID: 10, State: Up
+    VPNID: 3211:65
+    RD: 172.21.111.112:108
+    Max Routes: 0  Mid-Threshold: 0
+    Table-ID: 0x8000000a, AF: IPv6, Fwd-ID: 0x8000000a, State: Up
+    Table-ID: 0x0000000a, AF: IPv4, Fwd-ID: 0x0000000a, State: Up
+
+VRF-Name: LAB, VRF-ID: 11, State: Up
+    VPNID: 890:765
+    RD: 172.21.123.111:107
+    Max Routes: 0  Mid-Threshold: 0
+    Table-ID: 0x8000000b, AF: IPv6, Fwd-ID: 0x8000000b, State: Up
+    Table-ID: 0x0000000b, AF: IPv4, Fwd-ID: 0x0000000b, State: Up

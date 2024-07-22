@@ -1,0 +1,17 @@
+Value Key MODULE (\d+|sfr|ips|cxsc)
+Value CARDTYPE (\S.+?)
+Value MODEL (\S+)
+Value SERIAL (\w+)
+
+Start
+  ^Mod\s+Card\s+Type\s+Model\s+Serial\s+No\. -> Status
+  ^. -> Error
+
+Status
+  ^-+
+  ^\s*${MODULE}\s+${CARDTYPE}(\s+${MODEL})?(\s+${SERIAL})?\s*$$ -> Record
+  ^\s*Mod\s+MAC\s+Address\s+Range\s+Hw\s+Version\s+Fw\s+Version\s+Sw\s+Version -> End
+  ^\s*$$
+  ^. -> Error Status
+
+End

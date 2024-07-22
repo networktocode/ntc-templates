@@ -1,0 +1,59 @@
+---
+parsed_sample:
+  - name: "HUB"
+    id: "9"
+    vpn_id: "123:456"
+    state: "Up"
+    default_rd: "172.21.111.112:197"
+    max_routes: "0"
+    mid_threshold: "0"
+    table_id:
+      - "0x80000009"
+      - "0x00000009"
+    address_family:
+      - "IPv6"
+      - "IPv4"
+    fwd_id:
+      - "0x80000009"
+      - "0x00000009"
+    table_status:
+      - "Up"
+      - "Up"
+  - name: "INSTRUMENTS"
+    id: "10"
+    vpn_id: "3211:65"
+    state: "Up"
+    default_rd: "172.21.111.112:108"
+    max_routes: "0"
+    mid_threshold: "0"
+    table_id:
+      - "0x8000000a"
+      - "0x0000000a"
+    address_family:
+      - "IPv6"
+      - "IPv4"
+    fwd_id:
+      - "0x8000000a"
+      - "0x0000000a"
+    table_status:
+      - "Up"
+      - "Up"
+  - name: "LAB"
+    id: "11"
+    vpn_id: "890:765"
+    state: "Up"
+    default_rd: "172.21.123.111:107"
+    max_routes: "0"
+    mid_threshold: "0"
+    table_id:
+      - "0x8000000b"
+      - "0x0000000b"
+    address_family:
+      - "IPv6"
+      - "IPv4"
+    fwd_id:
+      - "0x8000000b"
+      - "0x0000000b"
+    table_status:
+      - "Up"
+      - "Up"

@@ -1,0 +1,91 @@
+Interface 1/1/1 is up 
+ Admin state is up
+ Link state: up for 9 months (since Wed Jan 18 15:55:56 CET 2023)
+ Link transitions: 9
+ Description: Wifi
+ Hardware: Ethernet, MAC Address: 88:25:10:38:11:ff 
+ MTU 1500 
+ Type 1GbT
+ Full-duplex 
+ qos trust cos
+ Speed 100 Mb/s 
+ Auto-negotiation is on
+ Energy-Efficient Ethernet is disabled
+ Flow-control: off 
+ Error-control: off 
+ MDI mode: MDIX 
+ VLAN Mode: native-untagged
+ Native VLAN: 2033
+ Allowed VLAN List: 2033
+ Rate collection interval: 300 seconds
+
+ Rate                               RX                   TX        Total (RX+TX)
+ ---------------- -------------------- -------------------- --------------------
+ Mbits / sec                      0.00                 0.00                 0.00
+ KPkts / sec                      0.00                 0.00                 0.00
+   Unicast                        0.00                 0.00                 0.00
+   Multicast                      0.00                 0.00                 0.00
+   Broadcast                      0.00                 0.00                 0.00
+ Utilization                      0.00                 0.00                 0.00
+
+ Statistic                          RX                   TX                Total
+ ---------------- -------------------- -------------------- --------------------
+ Packets                      24612099             39673355             64285454
+   Unicast                    24608471             25244890             49853361
+   Multicast                         0             12741453             12741453
+   Broadcast                      3628              1687012              1690640
+ Bytes                      9074606512          10743380379          19817986891
+ Jumbos                              0                    0                    0
+ Dropped                             0                    0                    0
+ Pause Frames                        0                    0                    0
+ Errors                              0                    0                    0
+   CRC/FCS                           0                  n/a                    0
+   Collision                       n/a                    0                    0
+   Runts                             0                  n/a                    0
+   Giants                            0                  n/a                    0
+
+Interface 1/1/2 is up 
+ Admin state is up
+ Link state: up for 6 months (since Sat Apr 15 09:56:35 CEST 2023)
+ Link transitions: 25
+ Description: AP
+ Hardware: Ethernet, MAC Address: 88:25:10:38:32:fe 
+ MTU 1500 
+ Type 1GbT
+ Full-duplex 
+ qos trust cos
+ Speed 1000 Mb/s 
+ Auto-negotiation is on
+ Energy-Efficient Ethernet is disabled
+ Flow-control: off 
+ Error-control: off 
+ MDI mode: MDIX 
+ VLAN Mode: native-untagged
+ Native VLAN: 2016
+ Allowed VLAN List: 19,23-24,2016
+ Rate collection interval: 300 seconds
+
+ Rate                               RX                   TX        Total (RX+TX)
+ ---------------- -------------------- -------------------- --------------------
+ Mbits / sec                      0.00                 0.01                 0.01
+ KPkts / sec                      0.00                 0.01                 0.01
+   Unicast                        0.00                 0.00                 0.00
+   Multicast                      0.00                 0.01                 0.01
+   Broadcast                      0.00                 0.00                 0.00
+ Utilization                      0.00                 0.00                 0.00
+
+ Statistic                          RX                   TX                Total
+ ---------------- -------------------- -------------------- --------------------
+ Packets                      68597611            209496767            278094378
+   Unicast                    59941378             58469524            118410902
+   Multicast                   8566811            130470677            139037488
+   Broadcast                     89422             20556566             20645988
+ Bytes                     32713606499          53876121819          86589728318
+ Jumbos                           9186                 3488                12674
+ Dropped                             0                    0                    0
+ Pause Frames                        0                    0                    0
+ Errors                              0                    0                    0
+   CRC/FCS                           0                  n/a                    0
+   Collision                       n/a                    0                    0
+   Runts                             0                  n/a                    0
+   Giants                            0                  n/a                    0

@@ -1,0 +1,9 @@
+Value PO_NAME (\S+)
+Value List INTERFACES (\w+\.\d\.\w+)
+
+Start
+  ^Aggregator -> Continue.Record
+  ^Aggregator\s+${PO_NAME}
+  ^\s+Admin\s+Key
+  ^\s+Link:\s+${INTERFACES}
+  ^. -> Error

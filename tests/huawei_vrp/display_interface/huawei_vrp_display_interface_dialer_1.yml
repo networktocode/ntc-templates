@@ -17,6 +17,8 @@ parsed_sample:
     loopback: ""
     duplex: ""
     negotiation: ""
+    mtu: "1492"
+    aggregated_interfaces: []
   - interface: "Dialer1:0"
     link_status: "UP ,"
     protocol_status: "UP"
@@ -34,3 +36,5 @@ parsed_sample:
     loopback: ""
     duplex: ""
     negotiation: ""
+    mtu: ""
+    aggregated_interfaces: []

@@ -1,0 +1,24 @@
+  ---------------------------------------------------------------------------
+  Network service                                   Port           State
+  ---------------------------------------------------------------------------
+  telnet                                            23             disable
+  trace                                             1026           disable
+  ssh                                               22             enable
+  snmp                                              161            enable
+  ftp-client                                        ----           ----
+  sftp-client                                       ----           ----
+  ntp                                               123            enable
+  radius                                            ----           enable
+  dhcp-relay                                        67             disable
+  dhcpv6-relay                                      547            disable
+  ntp6                                              123            disable
+  ipdr                                              4737           enable
+  twamp                                             4294967295     enable
+  netconf                                           830            enable
+  telnetv6                                          23             disable
+  sshv6                                             22             disable
+  snmpv6                                            161            disable
+  web-proxy                                         8024           disable
+  portal                                            2000           disable
+  capwap                                            5246           disable
+  ---------------------------------------------------------------------------
