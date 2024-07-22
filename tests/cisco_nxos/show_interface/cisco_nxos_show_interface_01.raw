@@ -1,0 +1,156 @@
+Ethernet2/1 is up
+admin state is up, Dedicated Interface
+  Hardware: 1000/10000 Ethernet, address: 00de.dddd.ffff (bia aaaa.cccc.dddd)
+  Description: bolty t0/0/4
+  Internet Address is 172.160.22.44/31
+  MTU 9100 bytes, BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is routed
+  full-duplex, 10 Gb/s, media type is 10G
+  Beacon is turned off
+  Auto-Negotiation is turned on
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Rate mode is dedicated
+  Switchport monitor is off
+  EtherType is 0x8100
+  EEE (efficient-ethernet) : n/a
+  Last link flapped 7week(s) 1day(s)
+  Last clearing of "show interface" counters never
+  1 interface resets
+  Load-Interval #1: 30 seconds
+    30 seconds input rate 6872 bits/sec, 9 packets/sec
+    30 seconds output rate 6048 bits/sec, 10 packets/sec
+    input rate 6.87 Kbps, 9 pps; output rate 6.05 Kbps, 10 pps
+  Load-Interval #2: 5 minute (300 seconds)
+    300 seconds input rate 6144 bits/sec, 9 packets/sec
+    300 seconds output rate 5952 bits/sec, 9 packets/sec
+    input rate 6.14 Kbps, 9 pps; output rate 5.95 Kbps, 9 pps
+  L3 in Switched:
+    ucast: 45538523 pkts, 3231860787 bytes - mcast: 2403008 pkts, 414347120 bytes
+  L3 out Switched:
+    ucast: 23164966 pkts, 1746333310 bytes - mcast: 0 pkts, 0 bytes
+  RX
+    45601286 unicast packets  2491720 multicast packets  2 broadcast packets
+    48034291 input packets  3680032221 bytes
+    27282 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC/FCS  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    45998742 unicast packets  1916622 multicast packets  2 broadcast packets
+    47856816 output packets  3813447142 bytes
+    37125 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+port-channel12.548 is up
+admin state is up, [parent interface is port-channel12]
+  Hardware: Port-Channel, address: 00de.aaaa.bbbb (bia 00d6.dddd.cccc)
+  Description: R:Northcoast2:ABC-NBN-EE 11767#111
+  Internet Address is 200.200.180.224/31
+  MTU 1550 bytes, BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation 802.1Q Virtual LAN, Vlan ID 548, medium is broadcast
+  Port mode is routed
+  Auto-mdix is turned off
+  Switchport monitor is off
+  EtherType is 0x8100
+  2 interface resets
+  L3 in Switched:
+    ucast: 105553314 pkts, 31139448927 bytes - mcast: 1143709 pkts, 186553774 bytes
+  L3 out Switched:
+    ucast: 263754073 pkts, 312073046665 bytes - mcast: 0 pkts, 0 bytes
+
+Ethernet1/1 is down (SFP not inserted)
+ Dedicated Interface
+  Belongs to Po1
+  Hardware: 1000/10000 Ethernet, address: 547f.3243.1212 (bia 547f.aaa.1111)
+  Description: 01-5342-DC1-smp-cluster-switch01     Te1/0/45
+  MTU 1500 bytes, BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA
+  Port mode is trunk
+  auto-duplex, 10 Gb/s
+  Beacon is turned off
+  Input flow-control is off, output flow-control is off
+  Switchport monitor is off
+  EtherType is 0x8100
+  Last link flapped 65week(s) 0day(s)
+  Last clearing of "show interface" counters never
+  30 seconds input rate 0 bits/sec, 0 packets/sec
+  30 seconds output rate 0 bits/sec, 0 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    27290543796 unicast packets  2736887973 multicast packets  114230711 broadcast packets
+    30141662480 input packets  38445458291444 bytes
+    4565017581 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    13164107930 unicast packets  54447058 multicast packets  6142236 broadcast packets
+    13224697224 output packets  9808040292632 bytes
+    5790403578 jumbo packets
+    0 output errors  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble 0 output discard
+    0 Tx pause
+  3 interface resets
+
+Ethernet12/4 is up
+admin state is up, Dedicated Interface
+  Hardware: 40000/100000 Ethernet, address: 00de.333.111 (bia 0027.addc.a1da)
+  Description: 114-114-a01.router  HundredGigE1/0/52
+  Internet Address is 172.168.55.4/31
+  MTU 9100 bytes, BW 40000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is routed
+  full-duplex, 40 Gb/s, media type is 40G
+  Beacon is turned off
+  Auto-Negotiation is turned on
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Rate mode is dedicated
+  Switchport monitor is off
+  EtherType is 0x8100
+  EEE (efficient-ethernet) : n/a
+  Last link flapped 41week(s) 6day(s)
+  Last clearing of "show interface" counters 63w1d
+  11 interface resets
+  Load-Interval #1: 30 seconds
+    30 seconds input rate 102376720 bits/sec, 15969 packets/sec
+    30 seconds output rate 191599760 bits/sec, 26152 packets/sec
+    input rate 102.38 Mbps, 15.97 Kpps; output rate 191.60 Mbps, 26.15 Kpps
+  Load-Interval #2: 5 minute (300 seconds)
+    300 seconds input rate 107345336 bits/sec, 18912 packets/sec
+    300 seconds output rate 188299016 bits/sec, 26514 packets/sec
+    input rate 107.35 Mbps, 18.91 Kpps; output rate 188.30 Mbps, 26.51 Kpps
+  L3 in Switched:
+    ucast: 700080767096 pkts, 521188577105668 bytes - mcast: 703331253 pkts, 166824111596 bytes
+  L3 out Switched:
+    ucast: 811419575834 pkts, 846667197111977 bytes - mcast: 14731559620 pkts, 3796888783680 bytes
+  RX
+    700083467006 unicast packets  705449599 multicast packets  24 broadcast packets
+    700787642244 input packets  521355976957180 bytes
+    229026 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  20 CRC/FCS  0 no buffer
+    20 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    811700709524 unicast packets  14760104808 multicast packets  21 broadcast packets
+    826463803454 output packets  850569611828489 bytes
+    313106 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+    admin fec state is auto, oper fec state is off

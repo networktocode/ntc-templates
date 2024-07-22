@@ -1,0 +1,28 @@
+r1-services# show lldp neighbor
+Capability codes:
+  (R) Router, (B) Bridge, (T) Telephone, (C) DOCSIS Cable Device
+  (W) WLAN Access Point, (P) Repeater, (S) Station, (O) Other
+Device ID            Local Intf      Hold-time  Capability  Port ID  
+dcx3.org.local
+                     mgmt0           120        B            Gi1/0/37      
+r2-services          Eth1/1          120        BR           Eth1/1        
+dx1.org.local
+                     Eth1/3          120        B            Te1/1/1       
+fw1-clinical-partner 
+                     Eth1/5          120                     ethernet1/9   
+fw1-clinical-partner 
+                     Eth1/6          120                     ethernet1/10  
+fw2-clinical-partner 
+                     Eth1/7          120                     ethernet1/9   
+fw2-clinical-partner 
+                     Eth1/8          120                     ethernet1/10  
+cr-ebc.org.local  Eth3/1          120        BR           Fo1/0/8       
+r2-services          Eth3/13         120        BR           Eth3/13       
+fw1-services         Eth3/23         120                     ethernet1/21  
+fw2-services         Eth3/24         120                     ethernet1/23  
+cr-park.org.local 
+                     Eth4/1          120        BR           Fo1/0/8       
+r2-services          Eth4/13         120        BR           Eth4/13       
+fw1-services         Eth4/23         120                     ethernet1/22  
+fw2-services         Eth4/24         120                     ethernet1/24  
+Total entries displayed: 15

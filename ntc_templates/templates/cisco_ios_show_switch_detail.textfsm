@@ -3,7 +3,7 @@ Value ROLE (\w+)
 Value MAC_ADDRESS (\S+)
 Value PRIORITY (\d+)
 Value VERSION (\S+)
-Value STATE (.+?)
+Value STATE (\w+)
 
 Start
   ^Switch/Stack
@@ -15,6 +15,7 @@ Start
   ^. -> Error
 
 Status
+  ^\*?\s*${SWITCH}\s+${ROLE}\s+${MAC_ADDRESS}\s+${PRIORITY}\s+${STATE}\s*$$ -> Record
   ^\*?\s*${SWITCH}\s+${ROLE}\s+${MAC_ADDRESS}\s+${PRIORITY}\s+${VERSION}\s+${STATE}\s*$$ -> Record
   ^\s*Stack\s+Port\s+Status -> Stack
   ^\s*$$

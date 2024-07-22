@@ -1,0 +1,19 @@
+Value USERNAME ([-\w]+)
+Value VERSION (\d+)
+Value USER_GROUP (\w+)
+Value AUTH_PROTOCOL (\w+)
+Value PRIV_PROTOCOL (\w+)
+Value AUTH_KEY ([0-9A-f:]+)
+Value PRIV_KEY ([0-9A-f:]+)
+
+
+Start
+  ^snmp\suser\s${USERNAME}
+  ^\suser-version\s+${VERSION}
+  ^\suser-group\s+${USER_GROUP}
+  ^\sauth-protocol\s+${AUTH_PROTOCOL}
+  ^\spriv-protocol\s+${PRIV_PROTOCOL}
+  ^\sauth-key\s+${AUTH_KEY}
+  ^\spriv-key\s+${PRIV_KEY} -> Record
+
+EOF

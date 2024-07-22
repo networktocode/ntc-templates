@@ -1,0 +1,11 @@
+Vlan            Name                    Tagged ports               Untagged ports            Type     Authorization
+---- --------------------------- --------------------------- --------------------------- ------------ -------------
+ 1                -                           -              gi1/0/2,gi1/0/4-23,te1/0/1,   Default      Required
+                                                             te1/0/3-4,Po1-12
+ 2          Telia-Sonera               te1/0/1,te1/0/4                    -               permanent     Required
+111               -                    te1/0/1,te1/0/4                    -               permanent     Required
+237           managment                te1/0/1,te1/0/4                 gi1/0/3            permanent     Required
+255              NMS                   te1/0/1,te1/0/3-4                  -               permanent     Required
+693  SS_1234567890-KOO-Y10-Golgo       te1/0/1,te1/0/4                    -               permanent     Required
+     fa
+914               -                       te1/0/3-4                       -               permanent     Required

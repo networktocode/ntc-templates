@@ -1,4 +1,5 @@
 Value Key MODULE (\d+)
+Value Filldown SWITCH_NUMBER (\d+)
 Value PORT (\d+)
 Value CARDTYPE (\S.+?)
 Value MODEL (\S+)
@@ -6,6 +7,7 @@ Value SERIAL (\w+)
 
 
 Start
+  ^Switch Number:? ${SWITCH_NUMBER}
   ^Mod\s+Ports\s+Card\s+Type\s+Model\s+Serial -> Status
   ^Chassis\sType\s?:\s
   ^Power\sconsumed\sby\sbackplane\s:\s

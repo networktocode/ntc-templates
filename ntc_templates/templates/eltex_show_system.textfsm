@@ -1,0 +1,73 @@
+Value DESCRIPTION (.*)
+Value UPTIME (.*)
+Value CONTACT (.*)
+Value HOSTNAME (.*)
+Value LOCATION (.*)
+Value ADDRESS (.*)
+Value OID (.*)
+Value MAIN_POWER_SUPPLY_STATUS (.*)
+Value REDUNDANT_POWER_SUPPLY_STATUS (.*)
+Value RESET_BTN_STATUS (.*)
+Value List FAN_ID (\d+)
+Value List FANS_STATUS (.*)
+Value List SENSOR_ID (\d+)
+Value List SENSOR_TEMP (\d+)
+Value List SENSOR_STATUS (.*)
+Value List UNIT_DESCRIPTIONS (\S+(?:\s+\S+)*)
+Value List UNIT_MAIN_POWER_SUPPLY (OK|NOT\s+PRESENT|\S+)
+Value List UNIT_REDUNDANT_POWER_SUPPLY (OK|NOT\s+PRESENT|\S+)
+Value List UNIT_FANS_STATUS (.*)
+Value List UNIT_TEMP (\d+)
+Value List UNIT_TEMP_STATUS (.*)
+
+Start
+  ^\s*System\s+Description:\s*${DESCRIPTION}\s*$$
+  ^\s*System\s+Up\s+Time\s+\(days,hour:min:sec\):\s*${UPTIME}\s*$$
+  ^\s*System\s+Contact:\s*${CONTACT}\s*$$
+  ^\s*System\s+Name:\s*${HOSTNAME}\s*$$
+  ^\s*System\s+Location:\s*${LOCATION}\s*$$
+  ^\s*System\s+MAC\s+Address:\s*${ADDRESS}\s*$$
+  ^\s*System\s+Object\s+ID:\s*${OID}\s*$$
+  ^\s*Reset-Button:\s*${RESET_BTN_STATUS}\s*$$
+  ^\s*Main\s+Power\s+Supply\s+Status(?:\s+\[AC\])?:\s*${MAIN_POWER_SUPPLY_STATUS}\s*$$
+  ^\s*Redundant\s+Power\s+Supply\s+Status(?:\s+\[DC\])?:\s*${REDUNDANT_POWER_SUPPLY_STATUS}\s*$$
+  ^\s*Fan(?:\s+Module)?\s+${FAN_ID}\s+Status:\s*${FANS_STATUS}\s*$$
+  ^\s*Sensor\s+Index\s+Temperature\s+\(Celsius\)\s+Status\s*$$ -> Sensors
+  ^\s*Unit\s+Device\s*$$ -> UnitsDescription
+  ^\s*$$
+  ^. -> Error
+
+Sensors
+  ^(\s*-+)*\s*$$
+  ^\s*${SENSOR_ID}\s+${SENSOR_TEMP}\s+${SENSOR_STATUS}\s*$$
+  ^\s*$$
+  ^. -> Error
+
+UnitsDescription
+  ^(\s*-+)*\s*$$
+  ^\s*\d+\s+${UNIT_DESCRIPTIONS}\s*$$
+  ^\s*Unit\s+Fans\s+Status\s*$$ -> UnitsFansStatuses
+  ^\s*Unit\s+Main\s+Power\s+Supply\s+Redundant\s+Power\s+Supply -> UnitsPowerSupplies
+  ^\s*${UNIT_DESCRIPTIONS}\s*$$
+  ^\s*$$
+  ^. -> Error
+
+UnitsPowerSupplies
+  ^(\s*-+)*\s*$$
+  ^\s*\d+\s+${UNIT_MAIN_POWER_SUPPLY}\s+${UNIT_REDUNDANT_POWER_SUPPLY}\s*$$
+  ^\s*Unit\s+Fans\s+Status\s*$$ -> UnitsFansStatuses
+  ^\s*$$
+  ^. -> Error
+
+UnitsFansStatuses
+  ^(\s*-+)*\s*$$
+  ^\s*\d+\s+${UNIT_FANS_STATUS}\s*$$
+  ^\s*Unit\s+Temperature\s+\(Celsius\)\s+Status\s*$$ -> UnitsTempStatuses
+  ^\s*$$
+  ^. -> Error
+
+UnitsTempStatuses
+  ^(\s*-+)*\s*$$
+  ^\s*\d+\s+${UNIT_TEMP}\s+${UNIT_TEMP_STATUS}\s*$$
+  ^\s*$$
+  ^. -> Error

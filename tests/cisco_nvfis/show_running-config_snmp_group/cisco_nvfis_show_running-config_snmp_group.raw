@@ -1,0 +1,8 @@
+snmp group Laurel "" 3 authPriv
+ read   snmp
+ notify snmp
+!
+snmp group Hardy "" 3 authPriv
+ read   snmp
+ notify snmp
+!
