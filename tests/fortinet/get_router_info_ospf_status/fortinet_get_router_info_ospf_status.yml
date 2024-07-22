@@ -1,0 +1,12 @@
+---
+parsed_sample:
+  - process_name: "ospf 0"
+    process_id: "10.123.105.1"
+    process_status: "not up"
+    attached_areas_number: "1"
+    attached_area:
+      - "0.0.0.0 (BACKBONE)"
+    attached_area_interfaces:
+      - "9(11)"
+    attached_area_fully_adjacent_neighbors:
+      - "2"

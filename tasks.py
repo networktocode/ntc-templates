@@ -1,13 +1,36 @@
 """Tasks for use with Invoke."""
+
 import os
 import sys
-from distutils.util import strtobool
 from invoke import task
 
 try:
     import toml
 except ImportError:
     sys.exit("Please make sure to `pip install toml` or enable the Poetry shell and run `poetry install`.")
+
+
+def strtobool(val: str) -> bool:
+    """Convert a string representation of truth to true (1) or false (0).
+
+    Args:
+        val (str): String representation of truth.
+
+    Returns:
+        bool: True or False
+    """
+    val = val.lower()
+
+    # Check for valid truth values
+    if val in ("y", "yes", "t", "true", "on", "1"):
+        return True
+
+    # Check for valid false values
+    if val in ("n", "no", "f", "false", "off", "0"):
+        return False
+
+    # Raise error if not valid truth value
+    raise ValueError(f"Invalid truth value {val}")
 
 
 def is_truthy(arg):
@@ -30,7 +53,7 @@ PYPROJECT_CONFIG = toml.load("pyproject.toml")
 TOOL_CONFIG = PYPROJECT_CONFIG["tool"]["poetry"]
 
 # Can be set to a separate Python version to be used for launching or building image
-PYTHON_VER = os.getenv("PYTHON_VER", "3.7")
+PYTHON_VER = os.getenv("PYTHON_VER", "3.9")
 # Name of the docker image/image
 IMAGE_NAME = os.getenv("IMAGE_NAME", TOOL_CONFIG["name"])
 # Tag for the image
@@ -56,14 +79,15 @@ def run_cmd(context, exec_cmd, local=INVOKE_LOCAL, port=None):
         print(f"LOCAL - Running command {exec_cmd}")
         result = context.run(exec_cmd, pty=True)
     else:
-        print(f"DOCKER - Running command: {exec_cmd} container: {IMAGE_NAME}:{IMAGE_VER}")
+        print(f"DOCKER - Running command: {exec_cmd} container: {IMAGE_NAME}:{IMAGE_VER}")  # noqa: E231
         if port:
             result = context.run(
-                f"docker run -it -p {port} -v {PWD}:/local {IMAGE_NAME}:{IMAGE_VER} sh -c '{exec_cmd}'", pty=True
+                f"docker run -it -p {port} -v {PWD}:/local {IMAGE_NAME}:{IMAGE_VER} sh -c '{exec_cmd}'",  # noqa: E231
+                pty=True,
             )
         else:
             result = context.run(
-                f"docker run -it -v {PWD}:/local {IMAGE_NAME}:{IMAGE_VER} sh -c '{exec_cmd}'", pty=True
+                f"docker run -it -v {PWD}:/local {IMAGE_NAME}:{IMAGE_VER} sh -c '{exec_cmd}'", pty=True  # noqa: E231
             )
 
     return result
@@ -78,8 +102,10 @@ def run_cmd(context, exec_cmd, local=INVOKE_LOCAL, port=None):
 )
 def build(context, cache=True, force_rm=False, hide=False):
     """Build a Docker image."""
-    print(f"Building image {IMAGE_NAME}:{IMAGE_VER}")
-    command = f"docker build --tag {IMAGE_NAME}:{IMAGE_VER} --build-arg PYTHON_VER={PYTHON_VER} -f Dockerfile ."
+    print(f"Building image {IMAGE_NAME}:{IMAGE_VER}")  # noqa: E231
+    command = (
+        f"docker build --tag {IMAGE_NAME}:{IMAGE_VER} --build-arg PYTHON_VER={PYTHON_VER} -f Dockerfile ."  # noqa: E231
+    )
 
     if not cache:
         command += " --no-cache"
@@ -88,15 +114,15 @@ def build(context, cache=True, force_rm=False, hide=False):
 
     result = context.run(command, hide=hide)
     if result.exited != 0:
-        print(f"Failed to build image {IMAGE_NAME}:{IMAGE_VER}\nError: {result.stderr}")
+        print(f"Failed to build image {IMAGE_NAME}:{IMAGE_VER}\nError: {result.stderr}")  # noqa: E231
 
 
 @task
 def clean(context):
     """Remove the project specific image."""
-    print(f"Attempting to forcefully remove image {IMAGE_NAME}:{IMAGE_VER}")
-    context.run(f"docker rmi {IMAGE_NAME}:{IMAGE_VER} --force")
-    print(f"Successfully removed image {IMAGE_NAME}:{IMAGE_VER}")
+    print(f"Attempting to forcefully remove image {IMAGE_NAME}:{IMAGE_VER}")  # noqa: E231
+    context.run(f"docker rmi {IMAGE_NAME}:{IMAGE_VER} --force")  # noqa: E231
+    print(f"Successfully removed image {IMAGE_NAME}:{IMAGE_VER}")  # noqa: E231
 
 
 @task
@@ -129,8 +155,8 @@ def flake8(context, local=INVOKE_LOCAL):
 
 @task(help={"local": "Run locally or within the Docker container"})
 def pylint(context, local=INVOKE_LOCAL):
-    """Run pylint code analysis."""
-    exec_cmd = 'find . -name "*.py" | xargs pylint'
+    """Run pylint code analysis excluding .venv directory."""
+    exec_cmd = 'find . -name "*.py" -not -path "./.venv/*" | xargs pylint'
     run_cmd(context, exec_cmd, local)
 
 
@@ -158,11 +184,11 @@ def bandit(context, local=INVOKE_LOCAL):
 @task
 def cli(context):
     """Enter the image to perform troubleshooting or dev work."""
-    dev = f"docker run -it -v {PWD}:/local {IMAGE_NAME}:{IMAGE_VER} /bin/bash"
+    dev = f"docker run -it -v {PWD}:/local {IMAGE_NAME}:{IMAGE_VER} /bin/bash"  # noqa: E231
     context.run(f"{dev}", pty=True)
 
 
-@task(help={"local": "Run locally or within the Docker container"})
+@task(help={"local": "Run locally or within the Docker container"}, aliases=["test"])
 def tests(context, local=INVOKE_LOCAL):
     """Run all tests for this repository."""
     black(context, local)

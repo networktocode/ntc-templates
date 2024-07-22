@@ -1,0 +1,11 @@
+---
+parsed_sample:
+  - name: "BLDGMGMT"
+    default_rd: "172.22.111.32:104"
+    protocols: ""
+    interfaces: []
+  - name: "MANAGEMENT"
+    default_rd: "172.22.111.32:117"
+    protocols: "ipv4"
+    interfaces:
+      - "Lo0"

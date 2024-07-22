@@ -1,6 +1,7 @@
 ---
 parsed_sample:
-  - broadcast: "255.255.255.255"
+  - acl_out: ""
+    broadcast: "255.255.255.255"
     icmp_port_unreachables: "enabled"
     icmp_redirects: "enabled"
     icmp_unreachables: "disabled"
@@ -13,19 +14,27 @@ parsed_sample:
     ip_unicast_rpf: "none"
     link: "link-up"
     mtu: "1500"
-    multicast_groups: "none"
+    multicast_groups:
+      - "none"
     multicast_routing: "disabled"
     proto: "protocol-up"
     proxy_arp: "disabled"
     route_pref: "0"
     route_tag: "0"
-    status: "admin-up,"
+    secondary_ip_address: []
+    secondary_ip_subnet: []
+    secondary_route_pref: []
+    secondary_route_tag: []
+    status: "admin-up"
     subnet: "192.168.101.0/24"
+    unnumbered_child_intfs: []
+    unnumbered_parent_intf: ""
     vrf: "default"
     wccp_redirect_exclude: "disabled"
     wccp_redirect_inbound: "disabled"
     wccp_redirect_outbound: "disabled"
-  - broadcast: "255.255.255.255"
+  - acl_out: ""
+    broadcast: "255.255.255.255"
     icmp_port_unreachables: "enabled"
     icmp_redirects: "enabled"
     icmp_unreachables: "disabled"
@@ -38,14 +47,21 @@ parsed_sample:
     ip_unicast_rpf: "none"
     link: "link-up"
     mtu: "1500"
-    multicast_groups: "none"
+    multicast_groups:
+      - "none"
     multicast_routing: "disabled"
     proto: "protocol-up"
     proxy_arp: "disabled"
     route_pref: "0"
     route_tag: "0"
-    status: "admin-up,"
+    secondary_ip_address: []
+    secondary_ip_subnet: []
+    secondary_route_pref: []
+    secondary_route_tag: []
+    status: "admin-up"
     subnet: "10.100.0.0/24"
+    unnumbered_child_intfs: []
+    unnumbered_parent_intf: ""
     vrf: "management"
     wccp_redirect_exclude: "disabled"
     wccp_redirect_inbound: "disabled"

@@ -2,12 +2,16 @@ Value NAME (\S+)
 Value INDEX (\S+)
 Value SECURITY_NAME (\S+)
 Value STORAGE_TYPE (\S+)
+Value ACCESS_LIST_NUMBER (\S+)
 
 Start
-  ^Community\s+name:\s+${NAME}.*
+  ^Community\s+name: -> Continue.Record
+  ^Community\s+name:\s+${NAME}\s*$$
   ^Community\sIndex:\s+${INDEX}
   ^Community\sSecurityName:\s+${SECURITY_NAME}
-  ^storage-type:\s${STORAGE_TYPE} -> Record
+  ^storage-type:\s${STORAGE_TYPE}\s+active(\s+access-list:\s${ACCESS_LIST_NUMBER})?
   # Capture time-stamp if vty line has command time-stamping turned on
   ^Load\s+for\s+
   ^Time\s+source\s+is
+  ^\s*$$
+  ^. -> Error

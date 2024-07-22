@@ -1,0 +1,10 @@
+Flags: D - dynamic, X - disabled, R - running, S - slave
+ #     NAME                                TYPE       ACTUAL-MTU L2MTU  MAX-L2MTU MAC-ADDRESS
+ 0     ether1                              ether            1500  1598       2028 12:34:56:78:90:AA
+ 1 D   ether2                              ether            1500  1598            12:34:56:78:90:AB
+ 2  R  ether3                              ether            1500                  12:34:56:78:90:AC
+ 3   S ether4                              ether            1500  1598
+ 4 DR  ether5                              ether            1500
+ 5  RS ether6                              ether            1500  1598       2028 12:34:56:78:90:AD
+ 6 D S lte1                                lte              1500  1598       2028 12:34:56:78:90:AE
+ 7 DRS pptp-out1                           pptp-out         1450  1598       2028
