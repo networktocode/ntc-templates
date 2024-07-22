@@ -15,13 +15,13 @@ Value DUPLEX_SETTING (\d+)
 Value SPEED (\d+)
 Value DUPLEX (\S+)
 Value LINK_STATUS (\S+)
-Value RX_PKTS (\d+)
+Value RX_PACKETS (\d+)
 Value RX_BYTES (\d+)
-Value TX_PKTS (\d+)
+Value TX_PACKETS (\d+)
 Value TX_BYTES (\d+)
-Value HOST_RX_PKTS (\d+)
+Value HOST_RX_PACKETS (\d+)
 Value HOST_RX_BYTES (\d+)
-Value HOST_TX_PKTS (\d+)
+Value HOST_TX_PACKETS (\d+)
 Value HOST_TX_BYTES (\d+)
 Value HOST_TX_DROPPED (\d+)
 Value FRAGTXCREATE (\d+)
@@ -57,13 +57,13 @@ LinkStatus
   ^. -> Error
 
 Counters
-  ^Rx\s+Pkts\s*:${RX_PKTS}\s*$$
+  ^Rx\s+Pkts\s*:${RX_PACKETS}\s*$$
   ^Rx\s+Bytes\s*:${RX_BYTES}\s*$$
-  ^Tx\s+Pkts\s*:${TX_PKTS}\s*$$
+  ^Tx\s+Pkts\s*:${TX_PACKETS}\s*$$
   ^Tx\s+Bytes\s*:${TX_BYTES}\s*$$
-  ^Host\s+Rx\s+Pkts\s*:${HOST_RX_PKTS}\s*$$
+  ^Host\s+Rx\s+Pkts\s*:${HOST_RX_PACKETS}\s*$$
   ^Host\s+Rx\s+Bytes\s*:${HOST_RX_BYTES}\s*$$
-  ^Host\s+Tx\s+Pkts\s*:${HOST_TX_PKTS}\s*$$
+  ^Host\s+Tx\s+Pkts\s*:${HOST_TX_PACKETS}\s*$$
   ^Host\s+Tx\s+Bytes\s*:${HOST_TX_BYTES}\s*$$
   ^Host\s+Tx\s+dropped\s*:${HOST_TX_DROPPED}\s*$$
   ^FragTxCreate\s*:${FRAGTXCREATE}\s*$$
