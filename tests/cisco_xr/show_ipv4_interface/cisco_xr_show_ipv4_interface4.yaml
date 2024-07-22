@@ -18,7 +18,7 @@ parsed_sample:
     sec_ip_address:
       - "10.90.15.3"
     sec_prefix_length:
-    - "30"
+      - "30"
     vrf: "default"
     vrf_id: "0x60000000"
   - interface: "TenGigE0/4/0/4.18846"
@@ -39,7 +39,7 @@ parsed_sample:
     sec_ip_address:
       - "10.55.55.1"
     sec_prefix_length:
-    - "30"
+      - "30"
     vrf: "default"
     vrf_id: "0x60000000"
   - interface: "TenGigE0/4/0/4.22006"
@@ -81,7 +81,7 @@ parsed_sample:
     sec_ip_address:
       - "10.21.21.11"
     sec_prefix_length:
-    - "30"
+      - "30"
     vrf: "default"
     vrf_id: "0x60000000"
   - interface: "TenGigE0/4/0/4.15025"
