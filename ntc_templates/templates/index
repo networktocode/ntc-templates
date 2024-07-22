@@ -87,8 +87,7 @@ arista_eos_show_ip_bgp.textfsm, .*, arista_eos, sh[[ow]] i[[p]] bg[[p]]
 arista_eos_show_module.textfsm, .*, arista_eos, sh[[ow]] modu[[le]]
 arista_eos_bash_df_-h.textfsm, .*, arista_eos, bas[[h]] d[[f]] [[-h]]
 arista_eos_show_clock.textfsm, .*, arista_eos, sh[[ow]] clo[[ck]]
-# arista_eos_dir_flash.textfsm, .*, arista_eos, dir fl[[ash:]]
-arista_eos_dir_flash.textfsm, .*, arista_eos, dir (?:fl[[ash:]]|fi[[le:]])?
+arista_eos_dir_flash.textfsm, .*, arista_eos, dir
 arista_eos_show_mlag.textfsm, .*, arista_eos, sh[[ow]] ml[[ag]]
 arista_eos_show_vlan.textfsm, .*, arista_eos, sh[[ow]] vl[[an]]
 arista_eos_show_vrf.textfsm, .*, arista_eos, sh[[ow]] vrf
