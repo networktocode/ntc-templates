@@ -26,3 +26,5 @@ Interface
   ^\s*name="${NAME}"(?:\s+default-name="${DEFAULT_NAME}")?\s+type="${TYPE}"(\s+mtu=${MTU})?(?:\s+actual-mtu=${ACTUAL_MTU})?(?:\s+l2mtu=${L2MTU})?(?:\s+max-l2mtu=${MAX_L2MTU})?(?:\s+mac-address=${MAC_ADDRESS})?(?:\s+last-link-down-time=${LAST_LINK_DOWN_TIME})?(?:\s+last-link-up-time=${LAST_LINK_UP_TIME})?(?:\s+link-downs=${LINK_DOWNS})?\s*$$
   ^\s*${ID}(?:\s+${DYNAMIC})?(?:\s*${STATUS})?(?:\s*${SLAVE})?\s+;{3}\s+${DESCRIPTION}\s*$$
   ^${DESCRIPTION}\s*$$
+  ^\s*$$
+  ^. -> Error
