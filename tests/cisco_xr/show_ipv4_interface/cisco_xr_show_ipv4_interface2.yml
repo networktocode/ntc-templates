@@ -1,6 +1,6 @@
 ---
 parsed_sample:
-  - interface: "TengigE0/0/0/6"
+  - interface: "TenGigE0/0/0/6"
     in_acl: "not set"
     ip_address: "10.1.1.1"
     ip_mtu: "9202"
@@ -40,7 +40,7 @@ parsed_sample:
     sec_prefix_length: []
     vrf: "default"
     vrf_id: "0x60000000"
-  - interface: "TengigE0/5/0/2.3"
+  - interface: "TenGigE0/5/0/2.3"
     in_acl: "BLOCK"
     ip_address: "10.2.2.1"
     ip_mtu: "1500"
