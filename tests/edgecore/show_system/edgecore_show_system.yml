@@ -1,0 +1,23 @@
+---
+parsed_sample:
+  - address: "00-12-34-56-78-90"
+    auth_enabled: "Local RADIUS None"
+    auth_login: "Local RADIUS None"
+    contact: "[NONE]"
+    description: "Layer2+ Fast Ethernet Standalone Switch ES3526XA"
+    hostname: "DMIT-EdgeCore-near-side-0"
+    jumbo_frame_status: "Disabled"
+    location: "1428 Elm Street"
+    oid: "1.3.6.1.4.1.259.8.1.5"
+    post_results:
+      - "DUMMY Test 1 ................. PASS"
+      - "UART Loopback Test ........... PASS"
+      - "DRAM Test .................... PASS"
+      - "I2C Bus Initialization ....... PASS"
+    secure_server_port: "443"
+    secure_server_status: "Enabled"
+    server_port: "80"
+    server_status: "Enabled"
+    telnet_server_port: "23"
+    telnet_server_status: "Enable"
+    uptime: "56 days, 21 hours, 46 minutes, and 56.65 seconds"

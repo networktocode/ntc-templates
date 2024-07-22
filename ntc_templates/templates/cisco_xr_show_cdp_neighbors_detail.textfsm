@@ -1,24 +1,24 @@
-Value Required DEST_HOST (\S+)
-Value SYSNAME (.*)
-Value MGMT_IP (.*)
+Value Required CHASSIS_ID (\S+)
+Value NEIGHBOR_NAME (.*)
+Value MGMT_ADDRESS (.*)
 Value PLATFORM (.*)
-Value REMOTE_PORT (.*)
-Value LOCAL_PORT (.*)
-Value VERSION (.*)
+Value NEIGHBOR_INTERFACE (.*)
+Value LOCAL_INTERFACE (.*)
+Value NEIGHBOR_DESCRIPTION (.*)
 Value CAPABILITIES (.*)
 
 Start
-  ^Device ID: ${DEST_HOST}
-  ^SysName : ${SYSNAME}
+  ^Device ID: ${CHASSIS_ID}
+  ^SysName : ${NEIGHBOR_NAME}
   ^Entry address\(es\): -> GetIP
   ^Platform: ${PLATFORM},  Capabilities: ${CAPABILITIES}
-  ^Interface: ${LOCAL_PORT}
-  ^Port ID \(outgoing port\): ${REMOTE_PORT}
+  ^Interface: ${LOCAL_INTERFACE}
+  ^Port ID \(outgoing port\): ${NEIGHBOR_INTERFACE}
   ^Version : -> GetVersion
 
 GetIP
-  ^.*IP.+address: ${MGMT_IP} -> Start
+  ^.*IP.+address: ${MGMT_ADDRESS} -> Start
 
 GetVersion
-  ^${VERSION} -> Record Start
+  ^${NEIGHBOR_DESCRIPTION} -> Record Start
 

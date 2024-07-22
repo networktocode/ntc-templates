@@ -1,0 +1,65 @@
+VLAN ID: 1 (IEEE 802.1Q Encapsulation)
+
+ This is configured as native Vlan for the following interface(s) :
+Port-channel10    Native-vlan Tx-type: Untagged
+Port-channel11    Native-vlan Tx-type: Untagged
+
+   Protocols Configured:          Received:        Transmitted:
+
+VLAN trunk interfaces for VLAN ID 1:
+Port-channel10
+
+Port-channel10 (1)
+
+
+      Total 29551336 packets, 1832182864 bytes input
+      Total 0 packets, 0 bytes output
+Port-channel11
+
+Port-channel11 (1)
+
+
+      Total 29561946 packets, 1832840652 bytes input
+      Total 0 packets, 0 bytes output
+
+VLAN ID: 3101 (IEEE 802.1Q Encapsulation)
+
+   Protocols Configured:          Received:        Transmitted:
+                     IP          336012206           193168082
+
+VLAN trunk interfaces for VLAN ID 3101:
+Port-channel10.3101
+
+Port-channel10.3101 (3101)
+
+                     IP: 172.16.16.54
+
+      Total 197509734 packets, 13014622294 bytes input
+      Total 3675632 packets, 142534940 bytes output
+Port-channel11.3101
+
+Port-channel11.3101 (3101)
+
+      Total 197615730 packets, 13022620720 bytes input
+      Total 189496440 packets, 7203948912 bytes output
+
+VLAN ID: 3102 (IEEE 802.1Q Encapsulation)
+
+   Protocols Configured:          Received:        Transmitted:
+                     IP          335978702                   2
+
+VLAN trunk interfaces for VLAN ID 3102:
+Port-channel10.3102
+
+Port-channel10.3102 (3102)
+
+                     IP: 172.17.17.58
+
+      Total 197509117 packets, 13014594010 bytes input
+      Total 1996 packets, 91828 bytes output
+Port-channel11.3102
+
+Port-channel11.3102 (3102)
+
+      Total 197582843 packets, 13019439520 bytes input
+      Total 1992 packets, 91644 bytes output

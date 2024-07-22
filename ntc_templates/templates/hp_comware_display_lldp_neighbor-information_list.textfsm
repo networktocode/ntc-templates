@@ -1,7 +1,7 @@
 Value Required LOCAL_INTERFACE (\S+)
 Value Required CHASSIS_ID (\S+)
 Value Required NEIGHBOR_INTERFACE ((\S+)|(Port\s\d+))
-Value Required NEIGHBOR (\S+)
+Value Required NEIGHBOR_NAME (\S+)
 
 Start
   ^.*Nearest\s+nontpmr\s+bridge\s+neighbor
@@ -12,11 +12,11 @@ Start
   ^. -> Error
 
 Format1
-  ^\s*${NEIGHBOR}\s+${LOCAL_INTERFACE}\s+${CHASSIS_ID}\s+${NEIGHBOR_INTERFACE}\s*$$ -> Record Format1
+  ^\s*${NEIGHBOR_NAME}\s+${LOCAL_INTERFACE}\s+${CHASSIS_ID}\s+${NEIGHBOR_INTERFACE}\s*$$ -> Record Format1
   # Dropping long hostnames
   ^\s*\S+\s*$$
   ^. -> Error
 
 Format2
-  ^\s*${LOCAL_INTERFACE}\s+${CHASSIS_ID}\s+${NEIGHBOR_INTERFACE}\s+${NEIGHBOR}\s*$$ -> Record Format2
+  ^\s*${LOCAL_INTERFACE}\s+${CHASSIS_ID}\s+${NEIGHBOR_INTERFACE}\s+${NEIGHBOR_NAME}\s*$$ -> Record Format2
   ^. -> Error

@@ -1,0 +1,174 @@
+
+Interface 1/1/1 is up 
+ Admin state is up
+ Link state: up for 2 months (since Thu Jul 27 07:18:49 CEST 2023)
+ Link transitions: 73
+ Description: PORT-ACCESS
+ Persona: 
+ Hardware: Ethernet, MAC Address: bc:d7:a5:be:a5:3f 
+ MTU 1500 
+ Type 1GbT
+ Full-duplex 
+ qos trust none
+ rate-limit broadcast 10240 kbps (10240 actual)
+ Speed 1000 Mb/s 
+ Auto-negotiation is on
+ Energy-Efficient Ethernet is disabled
+ Flow-control: off 
+ Error-control: off 
+ MDI mode: MDIX 
+ VLAN Mode: access
+ Access VLAN: 3077
+ Rate collection interval: 300 seconds
+
+ Rate                               RX                   TX        Total (RX+TX)
+ ---------------- -------------------- -------------------- --------------------
+ Mbits / sec                      0.00                 0.00                 0.00
+ KPkts / sec                      0.00                 0.00                 0.00
+   Unicast                        0.00                 0.00                 0.00
+   Multicast                      0.00                 0.00                 0.00
+   Broadcast                      0.00                 0.00                 0.00
+ Utilization %                    0.00                 0.00                 0.00
+
+ Statistic                          RX                   TX                Total
+ ---------------- -------------------- -------------------- --------------------
+ Packets                      18874893             34277015             53151908
+   Unicast                    18644933             23561231             42206164
+   Multicast                    229165             10466742             10695907
+   Broadcast                       795               249042               249837
+ Bytes                      4202228838           8657633387          12859862225
+ Jumbos                              0                    0                    0
+ Dropped                             0                    0                    0
+ Pause Frames                        0                    0                    0
+ Errors                              0                    0                    0
+   CRC/FCS                           0                  n/a                    0
+   Collision                       n/a                    0                    0
+   Runts                             0                  n/a                    0
+   Giants                            0                  n/a                    0
+
+Interface 1/1/51 is up 
+ Admin state is up
+ Link state: up for 2 months (since Thu Jul 27 06:23:42 CEST 2023)
+ Link transitions: 1
+ Description: Uplink_xx
+ Persona: 
+ Hardware: Ethernet, MAC Address: bc:d7:a5:be:a5:00 
+ MTU 1500 
+ Type 10G-SR / 8500-176a
+ Full-duplex 
+ qos trust none
+ Speed 10000 Mb/s 
+ Auto-negotiation is off
+ Flow-control: off 
+ Error-control: off 
+ Rate collection interval: 300 seconds
+
+ Rate                               RX                   TX        Total (RX+TX)
+ ---------------- -------------------- -------------------- --------------------
+ Mbits / sec                      0.01                 0.05                 0.06
+ KPkts / sec                      0.01                 0.03                 0.04
+   Unicast                        0.00                 0.03                 0.03
+   Multicast                      0.00                 0.00                 0.00
+   Broadcast                      0.00                 0.00                 0.00
+ Utilization %                    0.00                 0.00                 0.00
+
+ Statistic                          RX                   TX                Total
+ ---------------- -------------------- -------------------- --------------------
+ Packets                     103446835            401143191            504590026
+   Unicast                    30270030            398587240            428857270
+   Multicast                  50094726               826188             50920914
+   Broadcast                  23082079              1729763             24811842
+ Bytes                     34152848118         137605609767         171758457885
+ Jumbos                         279596              7991529              8271125
+ Dropped                             0                    4                    4
+ Pause Frames                        0                    0                    0
+ Errors                              0                    0                    0
+   CRC/FCS                           0                  n/a                    0
+   Collision                       n/a                    0                    0
+   Runts                             0                  n/a                    0
+   Giants                            0                  n/a                    0
+
+Interface 1/1/52 is up 
+ Admin state is up
+ Link state: up for 2 months (since Thu Jul 27 06:23:42 CEST 2023)
+ Link transitions: 1
+ Description: Uplink_xx
+ Persona: 
+ Hardware: Ethernet, MAC Address: bc:d7:a5:be:a5:00 
+ MTU 1500 
+ Type 10G-SR / 8500-176a
+ Full-duplex 
+ qos trust none
+ Speed 10000 Mb/s 
+ Auto-negotiation is off
+ Flow-control: off 
+ Error-control: off 
+ Rate collection interval: 300 seconds
+
+ Rate                               RX                   TX        Total (RX+TX)
+ ---------------- -------------------- -------------------- --------------------
+ Mbits / sec                      0.06                 0.02                 0.08
+ KPkts / sec                      0.06                 0.01                 0.07
+   Unicast                        0.03                 0.01                 0.04
+   Multicast                      0.01                 0.00                 0.01
+   Broadcast                      0.01                 0.00                 0.01
+ Utilization %                    0.00                 0.00                 0.00
+
+ Statistic                          RX                   TX                Total
+ ---------------- -------------------- -------------------- --------------------
+ Packets                    1436539051            180190047           1616729098
+   Unicast                  1174876405            178162596           1353039001
+   Multicast                 183849339              1139712            184989051
+   Broadcast                  77813307               887739             78701046
+ Bytes                   1236265418235          53527759879        1289793178114
+ Jumbos                      340970660              1094788            342065448
+ Dropped                             0                   13                   13
+ Pause Frames                        0                    0                    0
+ Errors                              0                    0                    0
+   CRC/FCS                           0                  n/a                    0
+   Collision                       n/a                    0                    0
+   Runts                             0                  n/a                    0
+   Giants                            0                  n/a                    0
+
+Interface vlan1 is up 
+ Admin state is up
+ Description: 
+ Hardware: Ethernet, MAC Address: bc:d7:a5:be:a5:00 
+ L3 Counters: Rx Disabled, Tx Disabled 
+
+Interface vlan3072 is up 
+ Admin state is up
+ Description: mgmt
+ Hardware: Ethernet, MAC Address: bc:d7:a5:be:a5:00 
+ IPv4 address 10.1.2.1/24
+ L3 Counters: Rx Disabled, Tx Disabled 
+
+Aggregate lag1 is up 
+ Admin state is up 
+ Description : 
+ MAC Address                 : bc:d7:a5:be:a5:00 
+ Aggregated-interfaces       : 1/1/51 1/1/52 
+ Aggregation-key             : 1
+ Aggregate mode              : active 
+ Speed                       : 20000 Mb/s 
+ qos trust none
+ VLAN Mode: native-untagged
+ Native VLAN: 666
+ Allowed VLAN List: all
+ L3 Counters: Rx Disabled, Tx Disabled 
+
+ Statistic                          RX                   TX                Total
+ ---------------- -------------------- -------------------- --------------------
+ Packets                    1539985886            581333238           2121319124
+   Unicast                  1205146435            576749836           1781896271
+   Multicast                 233944065              1965900            235909965
+   Broadcast                 100895386              2617502            103512888
+ Bytes                   1270418266353         191133369646        1461551635999
+ Jumbos                      341250256              9086317            350336573
+ Dropped                             0                   17                   17
+ Pause Frames                        0                    0                    0
+ Errors                              0                    0                    0
+   CRC/FCS                           0                  n/a                    0
+   Collision                       n/a                    0                    0
+   Runts                             0                  n/a                    0
+   Giants                            0                  n/a                    0

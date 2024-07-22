@@ -1,0 +1,9 @@
+Value Required VLAN_ID (\d+)
+Value DESTINATION_PORT (\S+)
+Value DESTINATION_ADDRESS (\S+)
+Value FWD (\S+)
+
+Start
+  ^VLAN\s+port
+  ^${VLAN_ID}\s+${DESTINATION_PORT}\s+${DESTINATION_ADDRESS}\s+${FWD} -> Record
+  ^. -> Error

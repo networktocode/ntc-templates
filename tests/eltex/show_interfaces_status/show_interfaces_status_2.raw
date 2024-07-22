@@ -1,0 +1,164 @@
+                                             Flow Link           Uptime       Back   Mdix
+Port     Type         Duplex  Speed Neg      ctrl State         (d,h:m:s)   Pressure Mode    Port Mode (VLAN)
+-------- ------------ ------  ----- -------- ---- ----------- ------------- -------- ------- ------------------------
+gi1/0/1  1G-Copper    Full    1000  Enabled  Off  Up          183,19:35:02  Disabled Off     Trunk
+gi1/0/2  1G-Copper    Full    1000  Enabled  Off  Up          183,19:34:59  Disabled On      Trunk
+gi1/0/3  1G-Copper    Full    1000  Enabled  Off  Up          183,19:35:00  Disabled On      Trunk
+gi1/0/4  1G-Copper    Full    1000  Enabled  Off  Up          183,19:34:59  Disabled Off     Trunk
+gi1/0/5  1G-Copper      --      --     --     --  Down (nc)         --         --     --     Trunk
+gi1/0/6  1G-Copper    Full    1000  Enabled  Off  Up          183,19:34:56  Disabled On      Trunk
+gi1/0/7  1G-Copper    Full    1000  Enabled  Off  Up          181,20:48:48  Disabled On      Trunk
+gi1/0/8  1G-Copper    Full    1000  Enabled  Off  Up          183,19:35:00  Disabled On      Trunk
+gi1/0/9  1G-Copper    Full    1000  Enabled  Off  Up          183,19:34:56  Disabled On      Trunk
+gi1/0/10 1G-Copper    Full    1000  Enabled  Off  Up          183,19:34:50  Disabled On      Trunk
+gi1/0/11 1G-Copper    Full    1000  Enabled  Off  Up          183,19:34:50  Disabled On      Trunk
+gi1/0/12 1G-Copper    Full    1000  Enabled  Off  Up          183,19:34:50  Disabled Off     Trunk
+gi1/0/13 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Trunk
+gi1/0/14 1G-Copper    Full    1000  Enabled  Off  Up          183,19:34:51  Disabled Off     Trunk
+gi1/0/15 1G-Copper    Full    1000  Enabled  Off  Up                --      Disabled Off     Trunk
+gi1/0/16 1G-Copper    Full    1000  Enabled  Off  Up          183,19:34:51  Disabled Off     Trunk
+gi1/0/17 1G-Copper    Full    1000  Enabled  Off  Up                --      Disabled Off     Access (1610)
+gi1/0/18 1G-Copper    Full    1000  Enabled  Off  Up          00,07:41:23   Disabled On      Access (1)
+gi1/0/19 1G-Copper      --      --     --     --  Down (adm)        --         --     --     Access (1609)
+gi1/0/20 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (1)
+gi1/0/21 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Trunk
+gi1/0/22 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Trunk
+gi1/0/23 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (1)
+gi1/0/24 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (1)
+gi1/0/25 1G-Copper    Full    100   Enabled  Off  Up          01,05:52:26   Disabled On      Access (1)
+gi1/0/26 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (1)
+gi1/0/27 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (1)
+gi1/0/28 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (1)
+gi1/0/29 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (1)
+gi1/0/30 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (1)
+gi1/0/31 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (1)
+gi1/0/32 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (1)
+gi1/0/33 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (1)
+gi1/0/34 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (1)
+gi1/0/35 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (1)
+gi1/0/36 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (1)
+gi1/0/37 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (1)
+gi1/0/38 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (1)
+gi1/0/39 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (355)
+gi1/0/40 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (1)
+gi1/0/41 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (1609)
+gi1/0/42 1G-Copper    Full    100   Enabled  Off  Up          183,19:35:23  Disabled Off     Access (1609)
+gi1/0/43 1G-Copper    Full    1000  Enabled  Off  Up          31,05:07:01   Disabled Off     Access (1609)
+gi1/0/44 1G-Copper    Full    1000  Enabled  Off  Up          31,05:07:01   Disabled On      Access (3800)
+gi1/0/45 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (355)
+gi1/0/46 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (130)
+gi1/0/47 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (1609)
+gi1/0/48 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (1609)
+te1/0/1  10G-Fiber    Full    10000 Disabled Off  Up          183,19:35:22  Disabled Off     Trunk
+te1/0/2  10G-Fiber      --      --     --     --  Down (nc)         --         --     --     Trunk
+gi2/0/1  1G-Copper      --      --     --     --  Down (nc)         --         --     --     Trunk
+gi2/0/2  1G-Copper      --      --     --     --  Down (nc)         --         --     --     Trunk
+gi2/0/3  1G-Copper      --      --     --     --  Down (nc)         --         --     --     Trunk
+gi2/0/4  1G-Copper      --      --     --     --  Down (nc)         --         --     --     Trunk
+gi2/0/5  1G-Copper      --      --     --     --  Down (nc)         --         --     --     Trunk
+gi2/0/6  1G-Copper      --      --     --     --  Down (nc)         --         --     --     Trunk
+gi2/0/7  1G-Copper      --      --     --     --  Down (nc)         --         --     --     Trunk
+gi2/0/8  1G-Copper      --      --     --     --  Down (nc)         --         --     --     Trunk
+gi2/0/9  1G-Copper      --      --     --     --  Down (nc)         --         --     --     Trunk
+gi2/0/10 1G-Copper    Full    1000  Enabled  Off  Up                --      Disabled On      Trunk
+gi2/0/11 1G-Copper    Full    1000  Enabled  Off  Up                --      Disabled On      Trunk
+gi2/0/12 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Trunk
+gi2/0/13 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Trunk
+gi2/0/14 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Trunk
+gi2/0/15 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Trunk
+gi2/0/16 1G-Copper    Full    1000  Enabled  Off  Up                --      Disabled On      Trunk
+gi2/0/17 1G-Copper    Full    1000  Enabled  Off  Up                --      Disabled Off     Access (1610)
+gi2/0/18 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (1)
+gi2/0/19 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (1)
+gi2/0/20 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (1)
+gi2/0/21 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (1)
+gi2/0/22 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (1)
+gi2/0/23 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (1)
+gi2/0/24 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (1609)
+gi2/0/25 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (1)
+gi2/0/26 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (1)
+gi2/0/27 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (1)
+gi2/0/28 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (1)
+gi2/0/29 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (1)
+gi2/0/30 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (1609)
+gi2/0/31 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (1)
+gi2/0/32 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (1)
+gi2/0/33 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (1)
+gi2/0/34 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (1)
+gi2/0/35 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (1)
+gi2/0/36 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (1)
+gi2/0/37 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (1)
+gi2/0/38 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (1)
+gi2/0/39 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (1)
+gi2/0/40 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (1)
+gi2/0/41 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (1)
+gi2/0/42 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (1)
+gi2/0/43 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (1)
+gi2/0/44 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (1)
+gi2/0/45 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (1)
+gi2/0/46 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (130)
+gi2/0/47 1G-Copper    Full    1000  Enabled  Off  Up          183,19:37:01  Disabled Off     Access (1609)
+gi2/0/48 1G-Copper      --      --     --     --  Down (nc)         --         --     --     Access (1609)
+te2/0/1  10G-Fiber      --      --     --     --  Down (nc)         --         --     --     Access (1)
+te2/0/2  10G-Fiber      --      --     --     --  Down (nc)         --         --     --     Trunk
+
+                                          Flow    Link
+Ch       Type    Duplex  Speed  Neg      control  State         Port Mode (VLAN)
+-------- ------- ------  -----  -------- -------  ------------- ------------------------
+Po1         --     --      --      --       --    Not Present   Trunk
+Po2         --     --      --      --       --    Not Present   Trunk
+Po3         --     --      --      --       --    Not Present   Trunk
+Po4         --     --      --      --       --    Not Present   Trunk
+Po5         --     --      --      --       --    Not Present   Trunk
+Po6         --     --      --      --       --    Not Present   Trunk
+Po7         --     --      --      --       --    Not Present   Trunk
+Po8         --     --      --      --       --    Not Present   Trunk
+Po9         --     --      --      --       --    Not Present   Trunk
+Po10        --     --      --      --       --    Not Present   Trunk
+Po11        --     --      --      --       --    Not Present   Trunk
+Po12        --     --      --      --       --    Not Present   Trunk
+Po13        --     --      --      --       --    Not Present   Trunk
+Po14        --     --      --      --       --    Not Present   Trunk
+Po15        --     --      --      --       --    Not Present   Trunk
+Po16        --     --      --      --       --    Not Present   Trunk
+Po17        --     --      --      --       --    Not Present   Access (1)
+Po18        --     --      --      --       --    Not Present   Access (1)
+Po19        --     --      --      --       --    Not Present   Access (1)
+Po20        --     --      --      --       --    Not Present   Access (1)
+Po21        --     --      --      --       --    Not Present   Access (1)
+Po22        --     --      --      --       --    Not Present   Access (1)
+Po23        --     --      --      --       --    Not Present   Access (1)
+Po24        --     --      --      --       --    Not Present   Access (1)
+Po25        --     --      --      --       --    Not Present   Access (1)
+Po26        --     --      --      --       --    Not Present   Access (1)
+Po27        --     --      --      --       --    Not Present   Access (1)
+Po28        --     --      --      --       --    Not Present   Access (1)
+Po29        --     --      --      --       --    Not Present   Access (1)
+Po30        --     --      --      --       --    Not Present   Access (1)
+Po31        --     --      --      --       --    Not Present   Access (1)
+Po32        --     --      --      --       --    Not Present   Access (1)
+Po33        --     --      --      --       --    Not Present   Access (1)
+Po34        --     --      --      --       --    Not Present   Access (1)
+Po35        --     --      --      --       --    Not Present   Access (1)
+Po36        --     --      --      --       --    Not Present   Access (1)
+Po37        --     --      --      --       --    Not Present   Access (1)
+Po38        --     --      --      --       --    Not Present   Access (1)
+Po39        --     --      --      --       --    Not Present   Access (1)
+Po40        --     --      --      --       --    Not Present   Access (1)
+Po41        --     --      --      --       --    Not Present   Access (1)
+Po42        --     --      --      --       --    Not Present   Access (1)
+Po43        --     --      --      --       --    Not Present   Access (1)
+Po44        --     --      --      --       --    Not Present   Access (1)
+Po45        --     --      --      --       --    Not Present   Access (1)
+Po46        --     --      --      --       --    Not Present   Access (1)
+Po47        --     --      --      --       --    Not Present   Access (1)
+Po48        --     --      --      --       --    Not Present   Access (1)
+
+                                              Link
+Oob       Type         Duplex  Speed Neg      State
+--------  ------------ ------  ----- -------- -----------
+oob       1G-Copper      --      --     --    Down
+
+nc (not connected): The interface is not connected.
+err (error-disabled): The interface was suspended by the system.
+adm (admin.shutdown): The interface was suspended by administrator.

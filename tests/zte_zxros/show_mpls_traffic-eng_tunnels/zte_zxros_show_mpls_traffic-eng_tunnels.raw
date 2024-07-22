@@ -1,0 +1,495 @@
+
+Name: tunnel_1
+      (Tunnel1) Destination: 10.10.10.87
+  Status:
+    Admin: up  Oper: up  Path:  valid  Signalling: connected
+    Path option: 1, type explicit name: Tunnel_RAW-XXXXX0056-01Z_to_R-PTABR-01 (Basis for Setup)
+    Path option: 2, type explicit name: Tunnel_RAW-XXXXX0056-01Z_to_R-PTABR-01-hsb
+    Pre-setup Path: none
+    Actual Bandwidth:                N/A      Tunnel Utilize:              N/A
+    Actual Bandwidth In:             N/A      Tunnel Utilize In:           N/A
+    Hot-standby protection:
+      protect option: 1, type dynamic (Basis for Setup)
+    PCE-authorized: NO
+    PCE-auto-init tunnel: NO
+    Active-MPLS-binding-SID: none
+  Config Parameters:
+    Resv-Style: SE
+    Metric Type: IGP (default)   Upper Limit: 4294967295
+    Hop Prior: disabled         Upper Limit: -
+    Hot Hop Limit: -
+    Record-Route: enabled
+    Facility Fast-reroute: disabled
+    Detour Fast-reroute: disabled
+    Protect Coexist: disabled
+    Protect Nest: disabled
+    Main LSP Fast-reroute Block: disabled
+    Bandwidth Protection: disabled
+    Hot-standby-lsp Fast-reroute: disabled
+    E2E: disabled
+    BFD: disabled
+    Policy Class: N/A
+    Track Name: 
+    Auto-reoptimize: enabled        Time remaining:(3600/1198)
+    Hot-standby-lsp Auto-reoptimize: enabled        Time remaining:(3600/1193)
+    Reference Hot-standby: enabled
+    Tunnel-Status: enabled
+    Bandwidth: 0 kbps (Global) Priority: 7  7
+    CBS: 0 byte  EIR: 0 kbps  EBS: 0 byte
+    Main affinity:
+      Exclude-any: None
+      Include-any: None
+      Include-all: None
+    HSB affinity:
+      Exclude-any: None
+      Include-any: None
+      Include-all: None
+    FRR affinity:
+      Exclude-any: None
+      Include-any: None
+      Include-all: None
+    AutoRoute: disabled
+    AUTO-BW: disabled
+    Forwarding-adjacency: disabled
+    Co-routed Bidirect: disabled
+    Associated Bidirect: disabled
+    Rate-limit: disabled
+    Crankback: disabled
+    Soft Preemption: disabled
+    Soft Preemption Status: not pending
+    Addresses of preempting links: 0.0.0.0
+    Graceful shutdown address: NULL
+    Without-CSPF: disabled
+    Ultralimit discard: disabled
+    PCEP slave name: 
+    PCE-initiate: disabled
+    Advertise None-null: disabled
+  InLabel: -
+  OutLabel: smartgroup2, 282291
+  LSP recoverd from GR: NO
+  RSVP Signalling Info :
+    Src 10.10.10.1, Dst 10.10.10.87, Tun-ID 1, Tun-Instance 335
+    RSVP Path Info:
+      Explicit Route: 10.10.10.22 10.10.10.23 10.10.10.194
+                      10.10.10.195 10.10.10.87
+      Exclude Route: NULL
+      Record Route: NULL
+      Tspec: ave rate= 0 kb, burst= 1000 byte, peak rate= 0 kb
+    RSVP Resv Info:
+      Record Route: 10.10.10.23(282291) 10.10.10.195(3)
+      Fspec: ave rate= 0 kb, burst= 1000 byte, peak rate= 0 kb
+
+  History:
+    Tunnel:
+    Time Since Created: 3 days, 17 hours, 21 minutes, 25 seconds
+    Time Since Up     : 3 days, 17 hours, 18 minutes, 17 seconds
+    Prior LSP(main): path option 1
+    Current LSP: Uptime:2 days, 1 hours, 49 minutes, 41 seconds
+    Last LSP Error Information:
+      Cspf failed(lspid:762,errcode:1,errvalue:44).
+      Cspf failed(lspid:761,errcode:1,errvalue:44).
+      Cspf failed(lspid:760,errcode:1,errvalue:44).
+
+Name: tunnel_1
+      (hot)(Tunnel1) Destination: 10.10.10.87
+  Status:
+    Signalling: up
+    Actual Bandwidth:                N/A      Tunnel Utilize:              N/A
+    Actual Bandwidth In:             N/A      Tunnel Utilize In:           N/A
+    Hot-standby protection:
+    PCE-authorized: NO
+    PCE-auto-init tunnel: NO
+    Active-MPLS-binding-SID: none
+  Config Parameters:
+    BFD: disabled
+    Hot-standby-lsp Fast-reroute: disabled
+    Hot-standby-lsp Auto-reoptimize: enabled        Time remaining:(3600/1192)
+    Bandwidth: 0 kbps (Global) Priority: 7  7
+    CBS: 0 byte  EIR: 0 kbps  EBS: 0 byte
+    Main affinity:
+      Exclude-any: None
+      Include-any: None
+      Include-all: None
+    HSB affinity:
+      Exclude-any: None
+      Include-any: None
+      Include-all: None
+    FRR affinity:
+      Exclude-any: None
+      Include-any: None
+      Include-all: None
+    AutoRoute: disabled
+    AUTO-BW: disabled
+    Forwarding-adjacency: disabled
+    Co-routed Bidirect: disabled
+    Associated Bidirect: disabled
+    Rate-limit: disabled
+    Crankback: disabled
+    Soft Preemption: disabled
+    Soft Preemption Status: not pending
+    Addresses of preempting links: 0.0.0.0
+    Graceful shutdown address: NULL
+    Without-CSPF: disabled
+    Ultralimit discard: disabled
+    PCEP slave name: 
+    PCE-initiate: disabled
+    Advertise None-null: disabled
+  InLabel: -
+  OutLabel: smartgroup1, 475765
+  LSP recoverd from GR: NO
+  RSVP Signalling Info :
+    Src 10.10.10.1, Dst 10.10.10.87, Tun-ID 1, Tun-Instance 336
+    RSVP Path Info:
+      Explicit Route: 10.10.10.21 10.10.10.20 10.10.10.24
+                      10.10.10.25 10.10.10.87
+      Exclude Route: NULL
+      Record Route: NULL
+      Tspec: ave rate= 0 kb, burst= 1000 byte, peak rate= 0 kb
+    RSVP Resv Info:
+      Record Route: 10.10.10.10(475765) 10.10.10.20(475765)
+                    10.10.10.25(3)
+      Fspec: ave rate= 0 kb, burst= 1000 byte, peak rate= 0 kb
+
+  History:
+    Tunnel:
+    Time Since Created: 3 days, 17 hours, 21 minutes, 26 seconds
+    Time Since Up     : 3 days, 17 hours, 18 minutes, 18 seconds
+    Prior LSP(HSB): path option 1
+    Current LSP: Uptime:2 days, 1 hours, 49 minutes, 42 seconds
+    Last LSP Error Information:
+      Cspf failed(lspid:762,errcode:1,errvalue:44).
+      Cspf failed(lspid:761,errcode:1,errvalue:44).
+      Cspf failed(lspid:760,errcode:1,errvalue:44).
+
+Name: tunnel_2
+      (Tunnel2) Destination: 10.10.10.117
+  Status:
+    Admin: up  Oper: up  Path:  valid  Signalling: connected
+    Path option: 1, type explicit name: Tunnel_RAW-XXXXX0056-01Z_to_AG-PTPMK-01 (Basis for Setup)
+    Path option: 2, type explicit name: Tunnel_RAW-XXXXX0056-01Z_to_AG-PTPMK-01-hsb
+    Pre-setup Path: none
+    Actual Bandwidth:                N/A      Tunnel Utilize:              N/A
+    Actual Bandwidth In:             N/A      Tunnel Utilize In:           N/A
+    Hot-standby protection:
+      protect option: 1, type dynamic (Basis for Setup)
+    PCE-authorized: NO
+    PCE-auto-init tunnel: NO
+    Active-MPLS-binding-SID: none
+  Config Parameters:
+    Resv-Style: SE
+    Metric Type: IGP (default)   Upper Limit: 4294967295
+    Hop Prior: disabled         Upper Limit: -
+    Hot Hop Limit: -
+    Record-Route: enabled
+    Facility Fast-reroute: disabled
+    Detour Fast-reroute: disabled
+    Protect Coexist: disabled
+    Protect Nest: disabled
+    Main LSP Fast-reroute Block: disabled
+    Bandwidth Protection: disabled
+    Hot-standby-lsp Fast-reroute: disabled
+    E2E: disabled
+    BFD: disabled
+    Policy Class: N/A
+    Track Name: 
+    Auto-reoptimize: enabled        Time remaining:(3600/1197)
+    Hot-standby-lsp Auto-reoptimize: enabled        Time remaining:(3600/1192)
+    Reference Hot-standby: enabled
+    Tunnel-Status: enabled
+    Bandwidth: 0 kbps (Global) Priority: 7  7
+    CBS: 0 byte  EIR: 0 kbps  EBS: 0 byte
+    Main affinity:
+      Exclude-any: None
+      Include-any: None
+      Include-all: None
+    HSB affinity:
+      Exclude-any: None
+      Include-any: None
+      Include-all: None
+    FRR affinity:
+      Exclude-any: None
+      Include-any: None
+      Include-all: None
+    AutoRoute: disabled
+    AUTO-BW: disabled
+    Forwarding-adjacency: disabled
+    Co-routed Bidirect: disabled
+    Associated Bidirect: disabled
+    Rate-limit: disabled
+    Crankback: disabled
+    Soft Preemption: disabled
+    Soft Preemption Status: not pending
+    Addresses of preempting links: 0.0.0.0
+    Graceful shutdown address: NULL
+    Without-CSPF: disabled
+    Ultralimit discard: disabled
+    PCEP slave name: 
+    PCE-initiate: disabled
+    Advertise None-null: disabled
+  InLabel: -
+  OutLabel: smartgroup2, 3
+  LSP recoverd from GR: NO
+  RSVP Signalling Info :
+    Src 10.10.10.1, Dst 10.10.10.117, Tun-ID 2, Tun-Instance 336
+    RSVP Path Info:
+      Explicit Route: 10.10.10.22 10.10.10.23 10.10.10.117
+      Exclude Route: NULL
+      Record Route: NULL
+      Tspec: ave rate= 0 kb, burst= 1000 byte, peak rate= 0 kb
+    RSVP Resv Info:
+      Record Route: 10.10.10.23(3)
+      Fspec: ave rate= 0 kb, burst= 1000 byte, peak rate= 0 kb
+
+  History:
+    Tunnel:
+    Time Since Created: 3 days, 17 hours, 21 minutes, 26 seconds
+    Time Since Up     : 2 days, 1 hours, 52 minutes, 11 seconds
+    Prior LSP(main): path option 1
+    Current LSP: Uptime:2 days, 1 hours, 50 minutes, 34 seconds
+    Last LSP Error Information:
+      Cspf failed(lspid:765,errcode:1,errvalue:44).
+      Cspf failed(lspid:764,errcode:1,errvalue:44).
+      Cspf failed(lspid:763,errcode:1,errvalue:44).
+
+Name: tunnel_2
+      (hot)(Tunnel2) Destination: 10.10.10.117
+  Status:
+    Signalling: up
+    Actual Bandwidth:                N/A      Tunnel Utilize:              N/A
+    Actual Bandwidth In:             N/A      Tunnel Utilize In:           N/A
+    Hot-standby protection:
+    PCE-authorized: NO
+    PCE-auto-init tunnel: NO
+    Active-MPLS-binding-SID: none
+  Config Parameters:
+    BFD: disabled
+    Hot-standby-lsp Fast-reroute: disabled
+    Hot-standby-lsp Auto-reoptimize: enabled        Time remaining:(3600/1192)
+    Bandwidth: 0 kbps (Global) Priority: 7  7
+    CBS: 0 byte  EIR: 0 kbps  EBS: 0 byte
+    Main affinity:
+      Exclude-any: None
+      Include-any: None
+      Include-all: None
+    HSB affinity:
+      Exclude-any: None
+      Include-any: None
+      Include-all: None
+    FRR affinity:
+      Exclude-any: None
+      Include-any: None
+      Include-all: None
+    AutoRoute: disabled
+    AUTO-BW: disabled
+    Forwarding-adjacency: disabled
+    Co-routed Bidirect: disabled
+    Associated Bidirect: disabled
+    Rate-limit: disabled
+    Crankback: disabled
+    Soft Preemption: disabled
+    Soft Preemption Status: not pending
+    Addresses of preempting links: 0.0.0.0
+    Graceful shutdown address: NULL
+    Without-CSPF: disabled
+    Ultralimit discard: disabled
+    PCEP slave name: 
+    PCE-initiate: disabled
+    Advertise None-null: disabled
+  InLabel: -
+  OutLabel: smartgroup1, 475764
+  LSP recoverd from GR: NO
+  RSVP Signalling Info :
+    Src 10.10.10.1, Dst 10.10.10.117, Tun-ID 2, Tun-Instance 337
+    RSVP Path Info:
+      Explicit Route: 10.10.10.21 10.10.10.20 10.10.10.24
+                      10.10.10.25 10.10.10.195 10.10.10.194
+                      10.10.10.117
+      Exclude Route: NULL
+      Record Route: NULL
+      Tspec: ave rate= 0 kb, burst= 1000 byte, peak rate= 0 kb
+    RSVP Resv Info:
+      Record Route: 10.10.10.10(475764) 10.10.10.20(475764)
+                    10.10.10.25(269025) 10.10.10.194(3)
+      Fspec: ave rate= 0 kb, burst= 1000 byte, peak rate= 0 kb
+
+  History:
+    Tunnel:
+    Time Since Created: 3 days, 17 hours, 21 minutes, 26 seconds
+    Time Since Up     : 2 days, 1 hours, 52 minutes, 11 seconds
+    Prior LSP(HSB): path option 1
+    Current LSP: Uptime:2 days, 1 hours, 50 minutes, 33 seconds
+    Last LSP Error Information:
+      Cspf failed(lspid:765,errcode:1,errvalue:44).
+      Cspf failed(lspid:764,errcode:1,errvalue:44).
+      Cspf failed(lspid:763,errcode:1,errvalue:44).
+
+Name: tunnel_1
+      (remote)(Tunnel1) Destination: 10.10.10.87
+  Status:
+    Signalling: up
+  RSVP Signalling Info :
+    InLabel: smartgroup1, 205844
+    OutLabel: smartgroup2, 282288
+  LSP recoverd from GR: NO
+    Src 10.10.10.10, Dst 10.10.10.87, Tun-ID 1, Tun-Instance 35831
+    RSVP Path Info:
+      Explicit Route: 10.10.10.21 10.10.10.22 10.10.10.23
+                      10.10.10.194 10.10.10.195 10.10.10.87
+      Exclude Route: NULL
+      Record Route: 10.10.10.10 10.10.10.20
+      Tspec: ave rate= 0 kb, burst= 1000 byte, peak rate= 0 kb
+      Affinity(Bit position):
+        Exclude-any: None
+        Include-any: None
+        Include-all: None
+    RSVP Resv Info:
+      Record Route: 10.10.10.23(282288) 10.10.10.195(3)
+      Fspec: ave rate= 0 kb, burst= 1000 byte, peak rate= 0 kb
+
+  History:
+    Tunnel:
+    Time Since Created: 2 days, 1 hours, 50 minutes, 45 seconds
+    Current LSP: Uptime:2 days, 1 hours, 50 minutes, 41 seconds
+
+Name: tunnel_2
+      (remote)(Tunnel2) Destination: 10.10.10.117
+  Status:
+    Signalling: up
+  RSVP Signalling Info :
+    InLabel: smartgroup1, 205845
+    OutLabel: smartgroup2, 3
+  LSP recoverd from GR: NO
+    Src 10.10.10.10, Dst 10.10.10.117, Tun-ID 2, Tun-Instance 35956
+    RSVP Path Info:
+      Explicit Route: 10.10.10.21 10.10.10.22 10.10.10.23
+                      10.10.10.117
+      Exclude Route: NULL
+      Record Route: 10.10.10.10 10.10.10.20
+      Tspec: ave rate= 0 kb, burst= 1000 byte, peak rate= 0 kb
+      Affinity(Bit position):
+        Exclude-any: None
+        Include-any: None
+        Include-all: None
+    RSVP Resv Info:
+      Record Route: 10.10.10.23(3)
+      Fspec: ave rate= 0 kb, burst= 1000 byte, peak rate= 0 kb
+
+  History:
+    Tunnel:
+    Time Since Created: 2 days, 1 hours, 49 minutes, 14 seconds
+    Current LSP: Uptime:2 days, 1 hours, 49 minutes, 13 seconds
+
+Name: tunnel_101
+      (remote)(Tunnel101) Destination: 10.169.120.220
+  Status:
+    Signalling: up
+  RSVP Signalling Info :
+    InLabel: xxvgei-1/1/0/20, 205926
+    OutLabel: smartgroup2, 283792
+  LSP recoverd from GR: NO
+    Src 10.10.10.4, Dst 10.169.120.220, Tun-ID 101, Tun-Instance 24849
+    RSVP Path Info:
+      Explicit Route: 10.10.10.2 10.10.10.22 10.10.10.23
+                      10.10.10.194 10.10.10.195 10.10.10.57
+                      10.10.10.56 10.169.120.220
+      Exclude Route: NULL
+      Record Route: 10.10.10.2 10.10.10.3 10.10.10.3
+                    10.10.10.5 10.10.10.4 10.10.10.7
+      Tspec: ave rate= 0 kb, burst= 1000 byte, peak rate= 0 kb
+      Affinity(Bit position):
+        Exclude-any: None
+        Include-any: None
+        Include-all: None
+    RSVP Resv Info:
+      Record Route: 10.10.10.23(283792) 10.10.10.195(270881)
+                    10.10.10.56(3)
+      Fspec: ave rate= 0 kb, burst= 1000 byte, peak rate= 0 kb
+
+  History:
+    Tunnel:
+    Time Since Created: 0 days, 18 hours, 6 minutes, 44 seconds
+    Current LSP: Uptime:0 days, 18 hours, 6 minutes, 43 seconds
+
+Name: AG-PTPMK-01-to-RAW-XXXXX0056-01Z
+      (remote)(Tunnel8011) Destination: 10.10.10.1
+  Status:
+    Signalling: up
+  RSVP Signalling Info :
+    InLabel: smartgroup2, 3
+    OutLabel: -
+  LSP recoverd from GR: NO
+    Src 10.10.10.117, Dst 10.10.10.1, Tun-ID 8011, Tun-Instance 103
+    RSVP Path Info:
+      Explicit Route: NULL
+      Exclude Route: NULL
+      Record Route: 10.10.10.23
+      Tspec: ave rate= 0 kb, burst= 0 byte, peak rate= inf kb
+      Affinity(Bit position):
+        Exclude-any: None
+        Include-any: None
+        Include-all: None
+    RSVP Resv Info:
+      Record Route: NULL
+      Fspec: ave rate= 0 kb, burst= 0 byte, peak rate= inf kb
+
+  History:
+    Tunnel:
+    Time Since Created: 2 days, 1 hours, 40 minutes, 56 seconds
+    Current LSP: Uptime:2 days, 1 hours, 40 minutes, 56 seconds
+
+Name: Bypass->10.10.10.78->10.10.10.242
+      (remote)(Tunnel14243) Destination: 10.10.10.73
+  Status:
+    Signalling: up
+  RSVP Signalling Info :
+    InLabel: smartgroup1, 205843
+    OutLabel: smartgroup2, 282252
+  LSP recoverd from GR: NO
+    Src 10.10.10.87, Dst 10.10.10.73, Tun-ID 14243, Tun-Instance 1
+    RSVP Path Info:
+      Explicit Route: 10.10.10.21 10.10.10.22 10.10.10.23
+                      10.10.10.246 10.10.10.249
+      Exclude Route: NULL
+      Record Route: 10.10.10.10 10.10.10.20 10.10.10.25
+      Tspec: ave rate= 0 kb, burst= 0 byte, peak rate= inf kb
+      Affinity(Bit position):
+        Exclude-any: None
+        Include-any: None
+        Include-all: None
+    RSVP Resv Info:
+      Record Route: 10.10.10.23(282252) 10.10.10.74(397)
+                    10.10.10.250(397) 10.10.10.73(3)
+                    10.10.10.249(3)
+      Fspec: ave rate= 0 kb, burst= 0 byte, peak rate= inf kb
+
+  History:
+    Tunnel:
+    Time Since Created: 2 days, 1 hours, 51 minutes, 26 seconds
+    Current LSP: Uptime:2 days, 1 hours, 51 minutes, 23 seconds
+
+Name: R-PTABR-01-to-RAW-XXXXX0056-01Z
+      (remote)(Tunnel53991) Destination: 10.10.10.1
+  Status:
+    Signalling: up
+  RSVP Signalling Info :
+    InLabel: smartgroup2, 3
+    OutLabel: -
+  LSP recoverd from GR: NO
+    Src 10.10.10.87, Dst 10.10.10.1, Tun-ID 53991, Tun-Instance 80
+    RSVP Path Info:
+      Explicit Route: NULL
+      Exclude Route: NULL
+      Record Route: 10.10.10.23 10.10.10.195
+      Tspec: ave rate= 0 kb, burst= 0 byte, peak rate= inf kb
+      Affinity(Bit position):
+        Exclude-any: None
+        Include-any: None
+        Include-all: None
+    RSVP Resv Info:
+      Record Route: NULL
+      Fspec: ave rate= 0 kb, burst= 0 byte, peak rate= inf kb
+
+  History:
+    Tunnel:
+    Time Since Created: 2 days, 1 hours, 51 minutes, 13 seconds
+    Current LSP: Uptime:2 days, 1 hours, 51 minutes, 13 seconds

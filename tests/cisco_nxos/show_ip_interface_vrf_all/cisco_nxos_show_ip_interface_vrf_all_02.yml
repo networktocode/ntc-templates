@@ -1,0 +1,35 @@
+---
+parsed_sample:
+  - acl_out: ""
+    broadcast: "255.255.255.255"
+    icmp_port_unreachables: "enabled"
+    icmp_redirects: "disabled"
+    icmp_unreachables: "disabled"
+    interface: "Vlan142"
+    ip_address: "172.16.178.46"
+    ip_directed_broadcast: "disabled"
+    ip_forwarding: ""
+    ip_load_sharing: "none"
+    ip_local_proxy_arp: "disabled"
+    ip_unicast_rpf: "none"
+    link: "link-up"
+    mtu: "1500"
+    multicast_groups:
+      - "none"
+    multicast_routing: "disabled"
+    proto: "protocol-up"
+    proxy_arp: "disabled"
+    route_pref: "0"
+    route_tag: "0"
+    secondary_ip_address: []
+    secondary_ip_subnet: []
+    secondary_route_pref: []
+    secondary_route_tag: []
+    status: "admin-up"
+    subnet: "172.16.178.0/24"
+    unnumbered_child_intfs: []
+    unnumbered_parent_intf: ""
+    vrf: "default"
+    wccp_redirect_exclude: "disabled"
+    wccp_redirect_inbound: "disabled"
+    wccp_redirect_outbound: "disabled"
