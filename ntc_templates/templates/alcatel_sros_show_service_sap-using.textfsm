@@ -1,6 +1,6 @@
 Value Required PORT_ID (\S+)
 Value Required SERVICE_ID (\d+)
-Value Required INGRESS_QOS (\d+)
+Value Required INGRESS_QOS (\S+)
 Value Required INGRESS_FILTER (\S+)
 Value Required EGRESS_QOS (\d+)
 Value Required EGRESS_FILTER (\S+)
@@ -18,10 +18,8 @@ SAPS
   ^\s+QoS\s+Fltr\s+QoS\s+Fltr        
   ^-+
   ^${PORT_ID}\s+${SERVICE_ID}\s+${INGRESS_QOS}\s+${INGRESS_FILTER}\s+${EGRESS_QOS}\s+${EGRESS_FILTER}\s+${ADMIN_STATE}\s+${OPER_STATE} -> Record
-  ^-+ -> Done
   ^=+
   ^Number\s+of
+  ^\*\s+indicates
   ^\s*$$
   ^. -> Error
-
-Done

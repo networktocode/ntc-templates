@@ -1,0 +1,12 @@
+Value SLOTID (\d+)
+Value ADAPTER (.+?)
+Value VENDOR (\d+)
+Value DEVID (\d+)
+Value MODE (\w+)
+Value DEVNO (\w+)
+Value PNICS (\[.+\])
+
+Start
+  ^${SLOTID}\s+${ADAPTER}\s+${VENDOR}\s+${DEVID}\s+${MODE}\s+${DEVNO}\s+${PNICS} -> Record
+
+EOF
