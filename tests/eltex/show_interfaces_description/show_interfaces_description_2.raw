@@ -1,0 +1,59 @@
+                                  Admin Link
+Port     Port Mode (VLAN)         State State       Description
+-------- ------------------------ ----- ----------- -----------
+gi1/0/1  Trunk                    Up    Up          link_to_MGTS_ADSL
+gi1/0/2  Trunk                    Up    Up          BS12700_-LAN (Office)
+gi1/0/3  Trunk                    Up    Up          Eltex1124M - gi1/0/1
+gi1/0/4  Trunk                    Up    Up          L2_OST_M9
+gi1/0/5  Access (1)               Down  Down
+gi1/0/6  Access (1)               Down  Down
+gi1/0/7  Access (1)               Down  Down
+gi1/0/8  Access (1)               Down  Down
+gi1/0/9  Access (1)               Down  Down
+gi1/0/10 Access (1)               Down  Down
+gi1/0/11 Access (111)             Up    Up          ASR920-1 - Gi0
+gi1/0/12 Access (111)             Up    Up          ASR920-2 - Gi0
+gi1/0/13 Access (1)               Down  Down
+gi1/0/14 Access (1)               Down  Down
+gi1/0/15 Access (1)               Down  Down
+gi1/0/16 Access (1)               Down  Down
+gi1/0/17 Access (1)               Down  Down
+gi1/0/18 Access (1)               Down  Down
+gi1/0/19 Access (1)               Down  Down
+gi1/0/20 Access (1)               Down  Down
+gi1/0/21 Access (1)               Down  Down
+gi1/0/22 Access (1)               Down  Down
+gi1/0/23 Access (1)               Down  Down
+gi1/0/24 Access (1)               Down  Down
+te1/0/1  Trunk                    Up    Up          N9K-1 - eth1/18 (Po1)
+te1/0/2  Trunk                    Up    Up          N9K-1 - eth1/19 (Po1)
+te1/0/3  Access (1)               Down  Down
+te1/0/4  Trunk                    Up    Up          Eltex3124-2 - te1/0/1
+
+                                  Admin Link
+Ch       Port Mode (VLAN)         State State       Description
+-------- ------------------------ ----- ----------- -----------
+Po1      Trunk                    Up    Up          N9K-1 - po25
+Po2      Access (1)               Up    Not Present
+Po3      Access (1)               Up    Not Present
+Po4      Access (1)               Up    Not Present
+Po5      Access (1)               Up    Not Present
+Po6      Access (1)               Up    Not Present
+Po7      Access (1)               Up    Not Present
+Po8      Access (1)               Up    Not Present
+Po9      Access (1)               Up    Not Present
+Po10     Access (1)               Up    Not Present
+Po11     Access (1)               Up    Not Present
+Po12     Access (1)               Up    Not Present
+
+Vlan Admin State Link State           Description
+---- ----------- ---------- --------------------------------
+1    Up          Up         -
+4    Up          Up         SW_MGMT
+634  Up          Up         Multicast Office
+
+
+         Admin Link
+Oob-eth  State State       Description
+-------- ----- ----------- -----------
+oob      Up    Up          ASR920-1 - Gi0/0/0

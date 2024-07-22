@@ -11,6 +11,7 @@ Value Filldown FALLBACK_TEST_INTERVAL (\d+)
 Value Filldown MAC_DELIM_AUTHENTICATION_MSG (\S+)
 Value Filldown MAC_DELIM_ACCOUNTING_MSG (\S+)
 Value Filldown AUTHENTICATION_FRAMED_MTU (\d+)
+Value Filldown AP_EVENTS_ACCOUNTING (\S+)
 Value Required INDEX (\d+)
 Value AUTHENTICATION_ADDR (\S+)
 Value ACCOUNTING_ADDR (\S+)
@@ -39,6 +40,7 @@ Start
   ^\s*MAC Delimiter for Authentication Messages\s*\.+\s+${MAC_DELIM_AUTHENTICATION_MSG}\s*$$
   ^\s*MAC Delimiter for Accounting Messages\s*\.+\s+${MAC_DELIM_ACCOUNTING_MSG}\s*$$
   ^\s*RADIUS Authentication Framed-MTU\s*\.+\s+${AUTHENTICATION_FRAMED_MTU}\s[bB]ytes\s*$$
+  ^\s*AP Events Accounting\s*\.+\s+${AP_EVENTS_ACCOUNTING}\s*$$
   ^\s*Authentication Servers\s*$$ -> AuthC_Servers
   ^\s*Accounting Servers\s*$$ -> Acct_Servers
   ^\s*$$
@@ -47,7 +49,7 @@ Start
 AuthC_Servers
   ^\s*Idx\s+Type\s+Server Address\s+Port\s+State\s+Tout\s+MgmtTout\s+RFC3576\s+IPSec - state\/Profile Name\/RadiusRegionString\s*$$
   ^-+
-  ^\s*${INDEX}\s+\*\s+${TYPE}\s+${AUTHENTICATION_ADDR}\s+${PORT}\s+${STATE}\s+${TIMEOUT}\s+${MGMT_TIMEOUT}\s+${RFC3576}\s+${IPSEC_STATE}\s+${IPSEC_PROFILE}\s+\/${IPSEC_REGION}\s*$$ -> Record
+  ^\s*${INDEX}\s+(\*)?\s+${TYPE}\s+${AUTHENTICATION_ADDR}\s+${PORT}\s+${STATE}\s+${TIMEOUT}\s+${MGMT_TIMEOUT}\s+${RFC3576}\s+${IPSEC_STATE}\s+${IPSEC_PROFILE}\s+\/${IPSEC_REGION}\s*$$ -> Record
   ^\s*$$
   ^\s*Accounting Servers\s*$$ -> Acct_Servers
   ^. -> Error
@@ -55,7 +57,7 @@ AuthC_Servers
 Acct_Servers
   ^\s*Idx\s+Type\s+Server Address\s+Port\s+State\s+Tout\s+MgmtTout\s+RFC3576\s+IPSec - state\/Profile Name\/RadiusRegionString\s*$$
   ^-+
-  ^\s*${INDEX}\s+\*\s+${TYPE}\s+${ACCOUNTING_ADDR}\s+${PORT}\s+${STATE}\s+${TIMEOUT}\s+${MGMT_TIMEOUT}\s+${RFC3576}\s+${IPSEC_STATE}\s+${IPSEC_PROFILE}\s+\/${IPSEC_REGION}\s*$$ -> Record
+  ^\s*${INDEX}\s+(\*)?\s+${TYPE}\s+${ACCOUNTING_ADDR}\s+${PORT}\s+${STATE}\s+${TIMEOUT}\s+${MGMT_TIMEOUT}\s+${RFC3576}\s+${IPSEC_STATE}\s+${IPSEC_PROFILE}\s+\/${IPSEC_REGION}\s*$$ -> Record
   ^\s*Authentication Servers\s*$$ -> AuthC_Servers
   ^\s*$$
   ^. -> Error

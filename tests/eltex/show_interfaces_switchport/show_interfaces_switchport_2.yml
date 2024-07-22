@@ -1,0 +1,30 @@
+---
+parsed_sample:
+  - acceptable_frame_type: "admitAll"
+    added_by:
+      - "S"
+      - "S"
+    egress_rule:
+      - "Tagged"
+      - "Untagged"
+    forbidden_vlan: []
+    forbidden_vlan_name: []
+    gvrp_status: "disabled"
+    ingress_filtering: "true"
+    mac_based_vlan_group_id: []
+    mac_based_vlan_id: []
+    name:
+      - "Servers_OS"
+      - "NULL"
+    native_vlan: "4094"
+    interface: "gi1/0/1"
+    interface_membership_type: []
+    interface_mode: "Trunk"
+    protected: "Disabled"
+    protocol_based_vlan_group_id: []
+    protocol_based_vlan_id: []
+    subnet_based_vlan_group_id: []
+    subnet_based_vlan_id: []
+    vlan:
+      - "130"
+      - "4094"
