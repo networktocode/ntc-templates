@@ -1,0 +1,8 @@
+Flags: X - disabled, I - invalid, D - dynamic
+ #   ADDRESS            NETWORK         INTERFACE
+ 0   1.2.3.6/30         1.2.3.4         ether1
+ 1   ;;; test ip1
+     192.167.1.5/27     192.167.1.0     eth2_vlan1
+ 2 D 192.168.1.53/24    192.168.1.0     lte1
+ 3 X ;;; test ip2
+     192.167.1.99/27    192.167.1.0     eth2_vlan2

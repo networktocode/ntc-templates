@@ -1,6 +1,6 @@
 Value NAME (.*)
 Value DESCR (.*)
-Value PID (\S+)
+Value PID ([\w\d\s/-]+[\S]+)
 Value VID (\S+)
 Value SN (\S+)
 

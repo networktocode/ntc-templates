@@ -1,0 +1,31 @@
+Chassis Type: C9410R
+
+Mod Ports Card Type                                   Model          Serial No.
+---+-----+--------------------------------------+--------------+--------------
+1   48   48-Port UPOE 10/100/1000 (RJ-45)            C9400-LC-48U     JAE22AAAAAA
+2   48   48-Port UPOE 10/100/1000 (RJ-45)            C9400-LC-48U     JAE22AAAAAB
+3   48   48-Port UPOE 10/100/1000 (RJ-45)            C9400-LC-48U     JAE22AAAAAC
+4   0    Unknown Module
+5   11   Supervisor 1 XL Module                      C9400-SUP-1XL    JAE22AAAAAD
+7   48   48-Port UPOE 10/100/1000 (RJ-45)            C9400-LC-48U     JAE22AAAAAE
+8   48   48-Port UPOE 10/100/1000 (RJ-45)            C9400-LC-48U     JAE22AAAAAF
+9   48   48-Port UPOE w/ 24p mGig 24p RJ-45          C9400-LC-48UX    JAE22AAAAAG
+10  48   48-Port UPOE w/ 24p mGig 24p RJ-45          C9400-LC-48UX    JAE22AAAAAH
+
+Mod MAC addresses                    Hw   Fw           Sw                 Status
+---+--------------------------------+----+------------+------------------+--------
+1   A093.511A.AAAA to A093.511C.BBBB 1.1  17.6.1r[FC2]  17.09.03           ok
+2   780C.F01A.BBBB to 780C.F0BC.CCCC 1.1  17.6.1r[FC2]  17.09.03           ok
+3   40CE.241A.CCCC to 40CE.2499.DDDD 1.0  17.6.1r[FC2]  17.09.03           ok
+4                                         17.6.1r[FC2]  17.09.03           hw-faulty
+5   00FC.BA1A.DDDD to 00FC.BA9D.AAAA 1.0  17.6.1r[FC2]  17.09.03           ok
+7   502F.A81A.1111 to 502F.A87D.2222 1.1  17.6.1r[FC2]  17.09.03           ok
+8   A093.511A.2222 to A093.51B6.3333 1.1  17.6.1r[FC2]  17.09.03           ok
+9   DC77.4C1A.4444 to DC77.4CB3.5555 3.0  17.6.1r[FC2]  17.09.03           ok
+10  689E.0B1A.6666 to 689E.0B7A.7777 3.0  17.6.1r[FC2]  17.09.03           ok
+
+Mod Redundancy Role     Operating Mode  Configured Mode  Redundancy Status
+---+-------------------+---------------+---------------+------------------
+5   Active              non-redundant   sso              Active
+
+Chassis MAC address range: 44 addresses from 00fc.AAAA.1111 to 00fc.BBBB.2222

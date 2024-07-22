@@ -1,0 +1,47 @@
+                                             Flow Link          Back   Mdix
+Port     Type         Duplex  Speed Neg      ctrl State       Pressure Mode    Port Mode
+-------- ------------ ------  ----- -------- ---- ----------- -------- ------- ---------
+gi1/0/1  1G-Copper    Full    1000  Enabled  Off  Up          Disabled On      Access
+gi1/0/2  1G-Copper      --      --     --     --  Down           --     --     Access
+gi1/0/3  1G-Copper    Full    1000  Enabled  Off  Up          Disabled On      Trunk
+gi1/0/4  1G-Copper      --      --     --     --  Down           --     --     Access
+gi1/0/5  1G-Copper      --      --     --     --  Down           --     --     Trunk
+gi1/0/6  1G-Copper      --      --     --     --  Down           --     --     Trunk
+gi1/0/7  1G-Copper    Full    1000  Enabled  Off  Up          Disabled On      Trunk
+gi1/0/8  1G-Copper    Full    1000  Enabled  Off  Up          Disabled Off     Trunk
+gi1/0/9  1G-Copper    Full    1000  Enabled  Off  Up          Disabled On      Access
+gi1/0/10 1G-Copper    Full    1000  Enabled  Off  Up          Disabled On      Access
+gi1/0/11 1G-Copper    Full    100   Enabled  Off  Up          Disabled On      Access
+gi1/0/12 1G-Copper    Full    1000  Enabled  Off  Up          Disabled On      Trunk
+gi1/0/13 1G-Copper    Full    1000  Enabled  Off  Up          Disabled Off     Access
+gi1/0/14 1G-Copper    Full    1000  Enabled  Off  Up          Disabled On      Access
+gi1/0/15 1G-Copper    Full    1000  Enabled  Off  Up          Disabled On      Access
+gi1/0/16 1G-Copper    Full    1000  Enabled  Off  Up          Disabled Off     Access
+gi1/0/17 1G-Copper    Full    1000  Enabled  Off  Up          Disabled Off     Trunk
+gi1/0/18 1G-Copper    Full    1000  Enabled  Off  Up          Disabled Off     Access
+gi1/0/19 1G-Copper    Full    1000  Enabled  Off  Up          Disabled Off     Trunk
+gi1/0/20 1G-Copper      --      --     --     --  Down           --     --     Access
+gi1/0/21 1G-Copper      --      --     --     --  Down           --     --     Access
+gi1/0/22 1G-Copper    Full    1000  Enabled  Off  Up          Disabled Off     Trunk
+gi1/0/23 1G-Copper    Full    1000  Enabled  Off  Up          Disabled On      Trunk
+gi1/0/24 1G-Copper      --      --     --     --  Down           --     --     Access
+te1/0/1  10G-Fiber    Full    10000 Disabled Off  Up          Disabled Off     Trunk
+te1/0/2  10G-Fiber      --      --     --     --  Down           --     --     Access
+te1/0/3  10G-Fiber      --      --     --     --  Down           --     --     Access
+te1/0/4  10G-Fiber      --      --     --     --  Down           --     --     Access
+
+                                          Flow    Link
+Ch       Type    Duplex  Speed  Neg      control  State        Port Mode
+-------- ------- ------  -----  -------- -------  -----------  ---------
+Po1         --     --      --      --       --    Not Present  Access
+Po2         --     --      --      --       --    Not Present  Access
+Po3         --     --      --      --       --    Not Present  Access
+Po4         --     --      --      --       --    Not Present  Access
+Po5         --     --      --      --       --    Not Present  Access
+Po6         --     --      --      --       --    Not Present  Access
+Po7         --     --      --      --       --    Not Present  Access
+Po8         --     --      --      --       --    Not Present  Access
+Po9         --     --      --      --       --    Not Present  Access
+Po10     1G      Full    1000   Enabled  Off      Up           Trunk
+Po11        --     --      --      --       --    Not Present  Access
+Po12        --     --      --      --       --    Not Present  Access 

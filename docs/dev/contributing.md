@@ -19,22 +19,22 @@ There are a number of things that are required in order to have a successful PR.
 
 Documentation is built using [mkdocs](https://www.mkdocs.org/). The [Docker based development environment](dev_environment.md#docker-development-environment) can be started by running `invoke docs` [http://localhost:8001](http://localhost:8001) that auto-refreshes when you make any changes to your local files.
 
-
+> If creating a new vendor template, please see existing templates to look for the keys to be used. It is good to maintain a consistent data model to help in a multi-vendor environment.
 ## Branching Policy
 
 The branching policy includes the following tenets:
 
-- The develop branch is the primary branch to develop off of.
+- The master branch is the primary branch to develop off of.
 - If there is a reason to have a patch version, the maintainers may use cherry-picking strategy.
-- PRs intended to add new features should be sourced from the develop branch.
-- PRs intended to address bug fixes and security patches should be sourced from the develop branch.
+- PRs intended to add new features should be sourced from the master branch.
+- PRs intended to address bug fixes and security patches should be sourced from the master branch.
 - PRs intended to add new features that break backward compatibility should be discussed before a PR is created.
 
 NTC-Templates will observes semantic versioning. This may result in an quick turn around in minor versions to keep pace with an ever growing feature set.
 
 ## Release Policy
 
-NTC Templates has currently no intended scheduled release schedule, and will release new features in minor versions.
+NTC Templates has currently no intended scheduled release schedule, and will release new features in minor versions. Any breaking changes will be done in _major_ releases. There is some development to maintain a data model that is applicable across multiple vendors.
 
 When a new release is created the following should happen.
 
@@ -48,8 +48,6 @@ When a new release is created the following should happen.
     - The tag should be in the form of `v<major>.<minor>.<patch>`.
     - The title should be in the form of `v<major>.<minor>.<patch>`.
     - The description should be the changes that were added to the `version_<major>.<minor>.md` document.
-- If merged into `master`, then push from `master` to `develop`, in order to retain the merge commit created when the PR was merged
 - A post release PR is created with.
     - Change the version from `<major>.<minor>.<patch>` to `<major>.<minor>.<patch + 1>-beta` pyproject.toml.
-    - Set the PR to the `develop`.
     - Once tests pass, merge.
