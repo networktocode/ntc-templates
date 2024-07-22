@@ -65,6 +65,7 @@ OS_CHOICES = [
     "vyos",
     "watchguard_firebox",
     "yamaha",
+    "zte_zxros",
     "zyxel_os",
 ]
 CHOICES_STRING = "|".join(OS_CHOICES)
