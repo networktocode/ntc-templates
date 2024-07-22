@@ -1,7 +1,7 @@
 Value LOGS_FOUND (\d+)
 Value LOGS_RETURNED (\d+)
 Value LOGS_SEARCHED (\d+(?:\.\d+)?)
-Value MSG_NUM (\d+)
+Value MESSAGE_NUMER (\d+)
 Value YEAR (\d{4})
 Value MONTH (\d{2})
 Value DAY (\d{2})
@@ -14,6 +14,6 @@ Start
   ^\s*${LOGS_FOUND}\s+logs\s+found\.\s*$$
   ^\s*${LOGS_RETURNED}\s+logs\s+returned\.\s*$$
   ^\s*${LOGS_SEARCHED}%\s+of\s+logs\s+has\s+been\s+searched\.\s*$$
-  ^\s*${MSG_NUM}:\s+date=${YEAR}-${MONTH}-${DAY}\s+time=${HOUR}:${MINUTE}:${SECOND}\s+${MESSAGE}\s*$$ -> Record
+  ^\s*${MESSAGE_NUMBER}:\s+date=${YEAR}-${MONTH}-${DAY}\s+time=${HOUR}:${MINUTE}:${SECOND}\s+${MESSAGE}\s*$$ -> Record
   ^\s*$$
   ^. -> Error
