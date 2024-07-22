@@ -43,6 +43,8 @@ Start
   ^\s+Active\s+router\s+is\s+${ACTIVE_IP_ADDRESS}\s?,\s+priority\s+${ACTIVE_PRIORITY}\s+expires\s+in\s+${ACTIVE_EXPIRE}.*$$
   ^\s+Standby\s+router\s+is\s+${STANDBY_ROUTER}\s*$$
   ^\s+Standby\s+router\s+is\s+${STANDBY_IP_ADDRESS}\s?,\s+priority\s+${STANDBY_PRIORITY}\s+expires\s+in\s+${STANDBY_EXPIRE}.*$$
+  # catch clear text authetication:
+  ^\s+Authentication\stext\s+.*$$
   ^\s+Authentication\s+${AUTHENTICATION},.*$$
   ^\s+Virtual\s+mac\s+address\s+is\s+${VIRTUAL_MAC_ADDRESS} \(${VIRTUAL_MAC_ADDRESS_STATUS}\)\s*$$
   ^\s+${NUM_STATE_CHANGES}\s+state\s+changes,\s+last\s+state\s+change\s+${LAST_STATE_CHANGE}\s*$$

@@ -1,0 +1,19 @@
+Value INDEX (\d+)
+Value INSTANCE (\S+)
+Value ROUTER_ID (\S+)
+Value ADDRESS (\S+)
+Value INTERFACE (\S+)
+Value PRIORITY (\d+)
+Value DR_ADDRESS (\S+)
+Value BACKUP_DR_ADDRESS (\S+)
+Value STATE (\S+)
+Value STATE_CHANGES (\d+)
+Value LS_RETRANSMITS (\d+)
+Value LS_REQUESTS (\d+)
+Value DB_SUMMARIES (\d+)
+Value ADJACENCY (\S+)
+
+Start
+  ^\s*${INDEX}\s+instance=${INSTANCE}\s+router-id=${ROUTER_ID}\s+address=${ADDRESS}\s+interface=${INTERFACE}\s+priority=${PRIORITY}(\s+dr-address=${DR_ADDRESS})?(\s+backup-dr-address=${BACKUP_DR_ADDRESS})?(\s+state=${STATE})?(\s+state-changes=${STATE_CHANGES})?(\s+ls-retransmits=${LS_RETRANSMITS})?(\s+ls-requests=${LS_REQUESTS})?(\s+db-summaries=${DB_SUMMARIES})?(\s+adjacency=${ADJACENCY})?\s*$$ -> Record
+  ^\s*$$
+  ^. -> Error

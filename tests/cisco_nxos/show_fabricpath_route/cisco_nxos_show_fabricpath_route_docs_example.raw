@@ -1,0 +1,13 @@
+FabricPath Unicast Route Table
+'a/b/c' denotes ftag/switch-id/subswitch-id
+'[x/y]' denotes [admin distance/metric]
+ftag 0 is local ftag
+subswitch-id 0 is default subswitch-id
+FabricPath Unicast Route Table for Topology-Default
+0/10/0, number of next-hops: 0
+  via ----, [60/0], 5 day/s 11:35:56, local
+1/20/0, number of next-hops: 1
+  via Po2, [115/40], 5 day/s 11:35:23, isis_l2mp-default
+  via Eth7/2, [115/40], 5 day/s 11:35:28, isis_l2mp-default
+1/35/0, number of next-hops: 0
+  via ----, [60/0], 5 day/s 11:35:26, local

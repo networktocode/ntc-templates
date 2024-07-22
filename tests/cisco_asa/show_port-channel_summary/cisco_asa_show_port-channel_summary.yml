@@ -1,22 +1,22 @@
 ---
 parsed_sample:
-  - group: "1"
-    po_name: "Po1"
-    po_status: "U"
-    protocol: "LACP"
-    interfaces:
+  - bundle_name: "Po1"
+    bundle_protocol: "LACP"
+    bundle_status: "U"
+    group: "1"
+    member_interface:
       - "Gi0/0"
       - "Gi0/1"
-    interfaces_status:
+    member_interface_status:
       - "P"
       - "P"
-  - group: "2"
-    po_name: "Po2"
-    po_status: "U"
-    protocol: "LACP"
-    interfaces:
+  - bundle_name: "Po2"
+    bundle_protocol: "LACP"
+    bundle_status: "U"
+    group: "2"
+    member_interface:
       - "Gi0/2"
       - "Gi0/3"
-    interfaces_status:
+    member_interface_status:
       - "P"
       - "P"
