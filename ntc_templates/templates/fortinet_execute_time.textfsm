@@ -1,0 +1,10 @@
+Value HOUR (\d{2})
+Value MINUTE (\d{2})
+Value SECOND (\d{2})
+Value LAST_NTP_SYNC (.*?)
+
+Start
+  ^\s*current\s+time\s+is:\s+${HOUR}:${MINUTE}:${SECOND}\s*$$
+  ^\s*last\s+ntp\s+sync:\s+${LAST_NTP_SYNC}\s*$$ -> Record
+  ^\s*$$
+  ^. -> Error

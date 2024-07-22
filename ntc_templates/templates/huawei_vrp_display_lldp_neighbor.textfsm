@@ -1,13 +1,13 @@
 Value Required LOCAL_INTERFACE (\S+)
 Value CHASSIS_ID (.+?)
-Value MANUFACTURER_NAME (.*?)
-Value MODEL_NAME (.*?)
+Value MANUFACTURER (.*?)
+Value PLATFORM (.*?)
 Value NEIGHBOR_PORT_ID (.*?)
 Value NEIGHBOR_INTERFACE (.*?)
-Value NEIGHBOR (.+?)
-Value List SYSTEM_DESCRIPTION (.*)
+Value NEIGHBOR_NAME (.+?)
+Value List NEIGHBOR_DESCRIPTION (.*)
 Value CAPABILITIES (.*?)
-Value MANAGEMENT_IP (\S+)
+Value MGMT_ADDRESS (\S+)
 Value VLAN_ID (\d+)
 Value SERIAL (\S+)
 
@@ -20,12 +20,12 @@ Start
   ^Port\s+ID\s+type
   ^Port\s+ID\s+:${NEIGHBOR_PORT_ID}\s*$$
   ^Port\s+description\s+:${NEIGHBOR_INTERFACE}\s*$$
-  ^System\s+name\s+:${NEIGHBOR}\s*$$
-  ^System\s+description\s+:${SYSTEM_DESCRIPTION} -> SystemDescription
+  ^System\s+name\s+:${NEIGHBOR_NAME}\s*$$
+  ^System\s+description\s+:${NEIGHBOR_DESCRIPTION} -> SystemDescription
   ^System\s+capabilities\s+supported
   ^System\s+capabilities\s+enabled\s+:${CAPABILITIES}\s*$$
   ^Management\s+address\s+type
-  ^Management\s+address\s*(value\s*)?:\s*${MANAGEMENT_IP}
+  ^Management\s+address\s*(value\s*)?:\s*${MGMT_ADDRESS}
   ^Expired\s+time
   ^Port\s+VLAN\s+ID\(PVID\)\s+:${VLAN_ID}
   ^VLAN\s+name\s+of\s+VLAN
@@ -44,11 +44,11 @@ Start
   ^. -> Error
 
 SystemDescription
-  ^${SYSTEM_DESCRIPTION} -> IgnoreDescription
+  ^${NEIGHBOR_DESCRIPTION} -> IgnoreDescription
 
 IgnoreDescription
   ^System\s+capabilities\s+supported -> Start
-  ^${SYSTEM_DESCRIPTION}
+  ^${NEIGHBOR_DESCRIPTION}
   ^\s*$$
   ^.*$$ -> Error
 
@@ -58,8 +58,8 @@ MED
   ^FirmwareRev
   ^SoftwareRev
   ^SerialNum\s+:${SERIAL}
-  ^Manufacturer\s+name\s+:${MANUFACTURER_NAME}\s*$$
-  ^Model\s+name\s+:${MODEL_NAME}\s*$$
+  ^Manufacturer\s+name\s+:${MANUFACTURER}\s*$$
+  ^Model\s+name\s+:${PLATFORM}\s*$$
   ^Asset\s+tracking
   ^Media\s+policy\s+type
   ^Unknown\s+Policy

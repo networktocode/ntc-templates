@@ -5,13 +5,22 @@ Value MAC_ADDRESS ([a-fA-F0-9:\.]+)
 Value RADIO_MAC ([a-fA-F0-9:\.]+)
 Value LOCATION (.+?)
 Value COUNTRY (\S+)
+Value REGULATORY_DOMAIN (\S+)
 Value IP_ADDRESS ([a-fA-F0-9:\.]+)
 Value STATE (\S+)
 
 Start
+  # AP count summary
   ^[a-zA-Z]+\s[a-z]+\s[a-zA-z]+:\s\d+$$
-  ^AP\s+Name\s+Slots\s+AP\s+Model\s+Ethernet\s+MAC\s+Radio\sMAC\s+Location\s+Country\s+IP\s+Address\s+State\s*$$
+  # abbreviation legend
+  ^[A-Z]+\s+=\s+.*$$
+  # line of dashes
   ^-+\s*$$
+  # legacy ios-xe wlc
+  ^AP\s+Name\s+Slots\s+AP\s+Model\s+Ethernet\s+MAC\s+Radio\sMAC\s+Location\s+Country\s+IP\s+Address\s+State\s*$$
   ^${AP_NAME}\s+${SLOT}\s+${AP_MODEL}\s+${MAC_ADDRESS}\s+${RADIO_MAC}\s+${LOCATION}\s+${COUNTRY}\s+${IP_ADDRESS}\s+${STATE}\s*$$ -> Record
+  # ios-xe wlc approximately 17.9.4 and later
+  ^AP\s+Name\s+Slots\s+AP\s+Model\s+Ethernet\s+MAC\s+Radio\sMAC\s+CC\s+RD\s+IP\s+Address\s+State\s+Location\s*$$
+  ^${AP_NAME}\s+${SLOT}\s+${AP_MODEL}\s+${MAC_ADDRESS}\s+${RADIO_MAC}\s+${COUNTRY}\s+${REGULATORY_DOMAIN}\s+${IP_ADDRESS}\s+${STATE}\s+${LOCATION}\s*$$ -> Record
   ^\s*$$
   ^. -> Error

@@ -1,0 +1,132 @@
+  -----------------------------------------------------------------------------
+  F/S/P                   : 0/ 0/6
+  ONT-ID                  : 2
+  Control flag            : active
+  Run state               : online
+  Config state            : normal
+  Match state             : match
+  ONT LLID                : -
+  ONT distance(m)         : 47
+  ONT last distance(m)    : 39
+  ONT RTT(TQ)             : -
+  Memory occupation       : 44
+  CPU occupation          : 84
+  Temperature             : 57
+  Authentic type          : SN-auth
+  SN                      : 8XN7J0FFL8NL6I3W
+  Management mode         : OMCI
+  Software work mode      : normal
+  Multicast mode          : IGMP-Snooping
+  Description             : New_link
+  Last down cause         : dying-gasp
+  Last up time            : 2023-01-05 08:56:12+08:00
+  Last down time          : 2023-01-05 08:55:28+08:00
+  Last dying gasp time    : 2023-01-05 08:55:28+08:00
+  ONT online duration     : 0 day(s), 0 hour(s), 3 minute(s), 0 second(s)
+  Type D support          : Not support
+  Isolation state         : normal
+  ONT NNI type            : auto
+  ONT actual NNI type     : auto
+  Last ONT actual NNI type: auto
+  Interoperability-mode   : unknown
+  FEC upstream state      :
+  VS-ID                   : 0
+  VS name                 : admin-vs
+  Global ONT-ID           : 93
+  Fiber route             : none
+  -----------------------------------------------------------------------------
+  Line profile ID      : 500
+  Line profile name    : new_link
+  -----------------------------------------------------------------------------
+  FEC upstream switch :Disable
+  OMCC Encrypt switch :On
+  Qos mode            :Pq
+  Mapping mode        :Vlan
+  Tr069 management    :Disable
+  -----------------------------------------------------------------------------
+  Notes: * indicates Discrete TCONT(TCONT Unbound)
+  -----------------------------------------------------------------------------
+  <T-CONT   0>          DBA Profile-ID:1
+  <T-CONT   1>          DBA Profile-ID:2
+  <T-CONT   4>          DBA Profile-ID:5
+    <Gem Index 126>
+    ------------------------------------------------------------------------
+    |Serv-Type:ETH |Encrypt:off |Cascade:off |GEM-CAR:-            |
+    |Upstream-priority-queue:-  |Downstream-priority-queue:-       |
+    ------------------------------------------------------------------------
+     Mapping VLAN  Priority Port   Port  Bundle  Flow  Transparent
+     index                  type   ID    ID      CAR
+    ------------------------------------------------------------------------
+     0       500   -        -      -     -       -     -
+    ------------------------------------------------------------------------
+  <T-CONT   5>          DBA Profile-ID:5
+    <Gem Index 126>
+    ------------------------------------------------------------------------
+    |Serv-Type:ETH |Encrypt:off |Cascade:off |GEM-CAR:-            |
+    |Upstream-priority-queue:-  |Downstream-priority-queue:-       |
+    ------------------------------------------------------------------------
+     Mapping VLAN  Priority Port   Port  Bundle  Flow  Transparent
+     index                  type   ID    ID      CAR
+    ------------------------------------------------------------------------
+     0       500   -        -      -     -       -     -
+    ------------------------------------------------------------------------
+  -----------------------------------------------------------------------------
+  Service profile ID   : 500
+  Service profile name : new_link
+  -----------------------------------------------------------------------------
+  Port-type     Port-number
+  -----------------------------------------------------------------------------
+  POTS          4
+  ETH           4
+  TDM           0
+  MOCA          0
+  CATV          0
+  -----------------------------------------------------------------------------
+  TDM port type                     : E1
+  TDM service type                  : TDMoGem
+  MAC learning function switch      : enable
+  ONT transparent function switch   : disable
+  Multicast forward mode            : Unconcern
+  Multicast forward VLAN            : -
+  Multicast mode                    : Unconcern
+  Upstream IGMP packet forward mode : Unconcern
+  Upstream IGMP packet forward VLAN : -
+  Upstream IGMP packet priority     : -
+  Native VLAN option                : Concern
+  Upstream PQ color policy          : None
+  Downstream PQ color policy        : None
+  -----------------------------------------------------------------------------
+  Port-type Port-ID QinQmode  PriorityPolicy Inbound     Outbound
+  -----------------------------------------------------------------------------
+  ETH       1       unconcern unconcern      unconcern   unconcern
+  ETH       2       unconcern unconcern      unconcern   unconcern
+  ETH       3       unconcern unconcern      unconcern   unconcern
+  ETH       4       unconcern unconcern      unconcern   unconcern
+  -----------------------------------------------------------------------------
+  Notes: * indicates the discretely configured traffic profile
+  -----------------------------------------------------------------------------
+  Port-type Port-ID Dscp-mapping-table-index
+  -----------------------------------------------------------------------------
+  ETH       1       0
+  ETH       2       0
+  ETH       3       0
+  ETH       4       0
+  IPHOST    1       0
+  -----------------------------------------------------------------------------
+  Port   Port   Service-type Index S-VLAN S-PRI C-VLAN C-PRI ENCAP      S-PRI
+  type   ID                                                             POLICY
+  -----------------------------------------------------------------------------
+  ETH    1      Translation  1     500    -     500    -     -          -
+  -----------------------------------------------------------------------------
+  Notes: * indicates transparent attribute of the vlan
+  -----------------------------------------------------------------------------
+  Port-type  Port-ID    IGMP-mode         IGMP-VLAN  IGMP-PRI  Max-MAC-Count
+  -----------------------------------------------------------------------------
+  ETH              1    -                         -         -      Unlimited
+  ETH              2    -                         -         -      Unlimited
+  ETH              3    -                         -         -      Unlimited
+  ETH              4    -                         -         -      Unlimited
+  -----------------------------------------------------------------------------
+  Alarm policy profile ID      : 0
+  Alarm policy profile name    : alarm-policy_0
+  -----------------------------------------------------------------------------

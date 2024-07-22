@@ -1,6 +1,7 @@
 Value Required VLAN_ID (\d+)
 Value List INTERFACES ([\w\./-]+)
 Value List IP_ADDRESSES (\S+)
+Value List IPV6_ADDRESSES (\S+)
 
 Start
   ^VLAN\s+ID:\s+${VLAN_ID} -> Data
@@ -26,7 +27,10 @@ Data
   ^${INTERFACES}\s+\(\d+\)\s*$$
   ^\s+IP:\s+${IP_ADDRESSES}\s*$$
   ^\s+IP\s+${IP_ADDRESSES}\s+\d+\s+\d+
+  ^\s+IPv6:\s+${IPV6_ADDRESSES}\s*$$
+  ^\s+IPv6\s+${IPV6_ADDRESSES}\s+\d+\s+\d+
   ^\s+Other\s+\d+\s+\d+
+  ^\s+IPv6\s+\d+\s+\d+
   ^\s+Total\s\d+
   ^\s+\d+\s+packets,
   ^\s*$$
@@ -37,6 +41,7 @@ Interface
   ^\s*\S+\s+\(\S+\)$$
   ^\s+Total\s+\d+\s+
   ^\s+IP\:\s+${IP_ADDRESSES}
+  ^\s+IPv6\:\s+${IPV6_ADDRESSES}
   ^\s+MPLS\:\s+
   ^\s+Protocols\s+Configured\: -> Data
   ^\s+This\s+is\s+configured\s+as\s+native\s+Vlan -> Data
