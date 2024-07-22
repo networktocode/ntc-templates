@@ -1,4 +1,4 @@
-Value INTERFACE (\S+)
+Value Required INTERFACE (\S+)
 Value LINK_STATUS (\w+)
 Value LINK_ADMIN (\w+)
 Value LINK_STATE_INFO (\.*)
@@ -8,6 +8,7 @@ Value HW_TYPE (\w+)
 Value MAC_ADDRESS (\S+)
 Value MTU (\d+)
 Value IF_TYPE (\S+)
+Value IP_ADDRESS (\S+)
 Value DUPLEX (\w+)
 Value QOS_TRUST (\S+)
 Value SPEED (\S+\s\S+) 
@@ -16,6 +17,9 @@ Value FLOW_CONTROL (\S+)
 Value ERROR_CONTROL (\S+)
 Value VLAN_MODE (\S+)
 Value VLAN_ACCESS (\S+)
+Value VLAN_NATIVE (\S+)
+Value List VLAN_TRUNK ([^,]+)
+Value List AGGREGATED_INTERFACES (\S+)
 Value RX_TOTAL_PACKETS (\d+)
 Value RX_TOTAL_BYTES (\d+)
 Value RX_UNICAST_PACKETS (\d+)
@@ -31,28 +35,58 @@ Value TX_MCAST_PACKETS (\d+)
 Value TX_BROADCAST_PACKETS (\d+)
 Value TX_ERRORS (\d+)
 Value TX_DROPPED (\d+)
-Value TX_CRC_FCS (\d+)
+Value TX_CRC_FCS (\S+)
 Value TX_COLLISION (\d+)
 
 Start
-  ^\s*Interface\s*${INTERFACE}\s*is\s*${LINK_STATUS}
+  ^\s*(Interface|Aggregate)\s+\S+\s+is -> Continue.Record
+  ^\s*(Interface|Aggregate)\s+${INTERFACE}\s+is\s+${LINK_STATUS}
   ^\s*Admin\s*state\s*is\s*${LINK_ADMIN}
-  ^\s*Link\s*transitions:\s*${LINK_TRANSITIONS}
-  ^\s*Description:\s${INTERFACE_DESC}
-  ^\s*State\s*information:\s*${LINK_STATE_INFO}
-  ^\s*Hardware:\s*${HW_TYPE},?\s*MAC\s*Address:\s+${MAC_ADDRESS}
+  ^\s*Link\s*transitions\s*:\s*${LINK_TRANSITIONS}
+  ^\s*Description\s*:\s*${INTERFACE_DESC}
+  ^\s*State\s*information\s*:\s*${LINK_STATE_INFO}
+  ^\s*Hardware\s*:\s*${HW_TYPE},?\s*MAC\s*Address:\s+${MAC_ADDRESS}
+  ^\s*MAC\s+Address\s*:\s*${MAC_ADDRESS}
+  ^\s*IPv4\s+address\s+${IP_ADDRESS}
   ^\s*MTU\s*${MTU}
   ^\s*Type\s*${IF_TYPE}
   ^\s*${DUPLEX}-duplex
   ^\s*qos\s*trust\s*${QOS_TRUST}
-  ^\s*Speed\s*${SPEED}
+  ^\s*Speed\s*:*\s*${SPEED}
   ^\s*Auto-negotiation\s*is\s*${AUTO_NEG}
-  ^\s*Flow-control: ${FLOW_CONTROL}
-  ^\s*Error-control: ${ERROR_CONTROL}
-  ^\s*VLAN Mode: ${VLAN_MODE}
-  ^\s*Access VLAN: ${VLAN_ACCESS}
+  ^\s*Flow-control\s*:\s*${FLOW_CONTROL}
+  ^\s*Error-control\s*:\s*${ERROR_CONTROL}
+  ^\s*VLAN Mode\s*:\s*${VLAN_MODE}
+  ^\s*Access VLAN\s*:\s*${VLAN_ACCESS}
+  ^\s*Native VLAN\s*:\s*${VLAN_NATIVE}
+  ^\s*Allowed VLAN List\s*:\s+${VLAN_TRUNK},* -> Continue
+  ^\s*Allowed VLAN List\s*:\s+(?:[^,]+,){1}${VLAN_TRUNK},* -> Continue
+  ^\s*Allowed VLAN List\s*:\s+(?:[^,]+,){2}${VLAN_TRUNK},* -> Continue
+  ^\s*Allowed VLAN List\s*:\s+(?:[^,]+,){3}${VLAN_TRUNK},* -> Continue
+  ^\s*Allowed VLAN List\s*:\s+(?:[^,]+,){4}${VLAN_TRUNK},* -> Continue
+  ^\s*Allowed VLAN List\s*:\s+(?:[^,]+,){5}${VLAN_TRUNK},* -> Continue
+  ^\s*Allowed VLAN List\s*:
+  ^\s*Link state
+  ^\s*Aggregated-interfaces\s*:\s+${AGGREGATED_INTERFACES}\s* -> Continue
+  ^\s*Aggregated-interfaces\s*:\s+(?:\S+\s+){1}${AGGREGATED_INTERFACES}\s* -> Continue
+  ^\s*Aggregated-interfaces\s*:\s+(?:\S+\s+){2}${AGGREGATED_INTERFACES}\s* -> Continue
+  ^\s*Aggregated-interfaces\s*:\s+(?:\S+\s+){3}${AGGREGATED_INTERFACES}\s* -> Continue
+  ^\s*Aggregated-interfaces\s*:\s+(?:\S+\s+){4}${AGGREGATED_INTERFACES}\s* -> Continue
+  ^\s*Aggregated-interfaces\s*:\s+(?:\S+\s+){5}${AGGREGATED_INTERFACES}\s* -> Continue
+  ^\s*Aggregated-interfaces\s*:\s+(?:\S+\s+){6}${AGGREGATED_INTERFACES}\s* -> Continue
+  ^\s*Aggregated-interfaces\s*:\s+(?:\S+\s+){7}${AGGREGATED_INTERFACES}\s* -> Continue
+  ^\s*Aggregated-interfaces\s*:
+  ^\s*Aggregation-key
+  ^\s*Aggregate\s+mode
+  ^\s*Persona
+  ^\s*rate-limit\s+broadcast
+  ^\s*L3\s+Counters
+  ^\s*MDI mode
+  ^\s*Rate collection interval
+  ^\s*Energy-Efficient
   ^\s*Rx -> Rx
-  ^\s*Description:
+  ^\s*Rate\s+RX\s+TX\s+Total -> Rate
+  ^\s*Statistic\s+RX\s+TX\s+Total -> Statistic
   ^. -> Error
 
 Rx
@@ -73,5 +107,36 @@ Tx
   ^\s*${TX_ERRORS} errors\s*${TX_DROPPED} dropped
   ^\s*${TX_CRC_FCS} CRC/FCS
   ^\s*${TX_COLLISION}\s*collision
-  ^\s*$$ -> Record Start
+  ^\s*$$ -> Start
+  ^. -> Error
+
+Rate
+  ^\s*----
+  ^\s*Mbits\s+/\s+sec
+  ^\s*KPkts\s+/\s+sec
+  ^\s+Unicast
+  ^\s+Multicast
+  ^\s+Broadcast
+  ^\s+Utilization
+  ^\s*$$ -> Statistic
+  ^. -> Error
+
+Statistic
+  ^\s*Statistic\s+RX\s+TX\s+Total
+  ^\s*----
+  ^\s*Packets\s+${RX_TOTAL_PACKETS}\s+${TX_TOTAL_PACKETS}\s+\d+
+  ^\s+Unicast\s+${RX_UNICAST_PACKETS}\s+${TX_UNICAST_PACKETS}\s+\d+
+  ^\s+Multicast\s+${RX_MCAST_PACKETS}\s+${TX_MCAST_PACKETS}\s+\d+
+  ^\s+Broadcast\s+${RX_BROADCAST_PACKETS}\s+${TX_BROADCAST_PACKETS}\s+\d+
+  ^\s*Bytes\s+${RX_TOTAL_BYTES}\s+${TX_TOTAL_BYTES}\s+\d+
+  ^\s*Jumbos
+  ^\s*Pause\s+Frames
+  ^\s*Dropped\s+${RX_DROPPED}\s+${TX_DROPPED}\s+\d+
+  ^\s*Errors\s+${RX_ERRORS}\s+${TX_ERRORS}\s+\d+
+  ^\s+CRC/FCS\s+${RX_CRC_FCS}\s+${TX_CRC_FCS}\s+\d+
+  ^\s+Collision\s+\S+\s+${TX_COLLISION}\s+\d+
+  ^\s*Runts
+  ^\s*Giants
+  ^\s*L3\s+Packets
+  ^\s*$$ -> Start
   ^. -> Error

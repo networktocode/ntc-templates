@@ -1,7 +1,7 @@
 ---
 parsed_sample:
-  - neighbor: "acc-sw101"
+  - capabilities: "R"
     local_interface: "Ten 3/7"
-    capability: "R"
-    platform: "AS5610-52"
     neighbor_interface: "0/47"
+    neighbor_name: "acc-sw101"
+    platform: "AS5610-52"

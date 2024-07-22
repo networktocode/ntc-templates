@@ -24,6 +24,8 @@ Start
   ^\s*No\sglobal.*\s*$$
   ^\s*VRF\slabel.*\s*$$
   ^\s*Address\sfamily.*\s*$$
+  ^\s*New\sCLI\sformat.*\s*$$
+  ^\s*Old\sCLI\sformat.*\s*$$
   ^. -> Error
 
 Interfaces

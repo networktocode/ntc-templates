@@ -1,0 +1,10 @@
+Value Filldown CONFIGURED_SWITCHING_MODE ([\S\s]+?)
+Value Required MODULE_NUMBER (\S+)
+Value Required OPERATIONAL_MODE ([\S\s]+?)
+
+Start
+  ^\s*Configured\s*switching\s*mode:\s*${CONFIGURED_SWITCHING_MODE}\s*$$
+  ^\s*Module\s*Number\s*Operational\s*Mode\s*$$
+  ^\s*${MODULE_NUMBER}\s*${OPERATIONAL_MODE}\s*$$ -> Record
+  ^\s*$$
+ ^. -> Error
