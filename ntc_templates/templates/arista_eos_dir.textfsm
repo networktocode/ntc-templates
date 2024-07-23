@@ -9,7 +9,7 @@ Value Fillup TOTAL_FREE (\d+)
 Start
   ^Directory\s+of\s+${FILE_SYSTEM} -> Dispatcher
   ^\s*$$
-  ^. -> Error
+  ^. -> Error "LINE NOT FOUND"
 
 Dispatcher
   ^\s+${PERMISSIONS}\s+${SIZE}\s+${DATE_TIME}\s+${NAME} -> Record Files
@@ -17,7 +17,7 @@ Dispatcher
   ^Directory\s+of\s+${FILE_SYSTEM}
   ^No\s+files -> NoFiles
   ^\s*$$
-  ^\. -> Error
+  ^\. -> Error "LINE NOT FOUND"
 
 Files
   ^\s+${PERMISSIONS}\s+${SIZE}\s+${DATE_TIME}\s+${NAME} -> Record
@@ -25,13 +25,13 @@ Files
   ^Directory\s+of\s+${FILE_SYSTEM} -> Dispatcher
   ^No\s+space\s+information -> Start
   ^\s*$$
-  ^. -> Error
+  ^. -> Error "LINE NOT FOUND"
 
 NoFiles
   ^${TOTAL_SIZE}\s+\S+\s+\S+\s+\(${TOTAL_FREE}\s+\S+\s+\S+\) -> Record Start
   ^Directory\s+of -> Continue.Record
   ^Directory\s+of\s+${FILE_SYSTEM} -> Dispatcher
   ^\s*$$
-  ^\. -> Error
+  ^\. -> Error "LINE NOT FOUND"
 
 EOF
