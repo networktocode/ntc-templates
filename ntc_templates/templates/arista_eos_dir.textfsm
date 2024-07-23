@@ -7,20 +7,31 @@ Value Fillup TOTAL_SIZE (\d+)
 Value Fillup TOTAL_FREE (\d+)
 
 Start
-  ^Directory of\s+${FILE_SYSTEM}
-  ^\s+${PERMISSIONS}\s+${SIZE}\s+${DATE_TIME}\s+${NAME} -> Record
-  ^${TOTAL_SIZE}\s+\S+\s+\S+\s+\(${TOTAL_FREE}\s+\S+\s+\S+\)
-  ^\s*No\s+space\s+information
-  ^\s*No\s+files\s+in -> EmptyFileSystem
+  ^Directory\s+of\s+${FILE_SYSTEM} -> Dispatcher
   ^\s*$$
-  ^. -> Error "LINE NOT FOUND"
+  ^. -> Error
 
-EmptyFileSystem
-  ^${TOTAL_SIZE}\s+\S+\s+\S+\s+\(${TOTAL_FREE}\s+\S+\s+\S+\) -> Record
-  ^\s*No\s+space\s+information -> Record
+Dispatcher
+  ^\s+${PERMISSIONS}\s+${SIZE}\s+${DATE_TIME}\s+${NAME} -> Record Files
+  ^Directory\s+of -> Continue.Record
+  ^Directory\s+of\s+${FILE_SYSTEM}
+  ^No\s+files -> NoFiles
   ^\s*$$
-  ^Directory of -> Continue.Record
-  ^Directory of\s+${FILE_SYSTEM} -> Start
-  ^. -> Error "LINE NOT FOUND"
+  ^\. -> Error
+
+Files
+  ^\s+${PERMISSIONS}\s+${SIZE}\s+${DATE_TIME}\s+${NAME} -> Record
+  ^${TOTAL_SIZE}\s+\S+\s+\S+\s+\(${TOTAL_FREE}\s+\S+\s+\S+\) -> Start
+  ^Directory\s+of\s+${FILE_SYSTEM} -> Dispatcher
+  ^No\s+space\s+information -> Start
+  ^\s*$$
+  ^. -> Error
+
+NoFiles
+  ^${TOTAL_SIZE}\s+\S+\s+\S+\s+\(${TOTAL_FREE}\s+\S+\s+\S+\) -> Record Start
+  ^Directory\s+of -> Continue.Record
+  ^Directory\s+of\s+${FILE_SYSTEM} -> Dispatcher
+  ^\s*$$
+  ^\. -> Error
 
 EOF
