@@ -745,10 +745,14 @@ oneaccess_oneos_show_voice_voip-call_any_all.textfsm, .*, oneaccess_oneos, sh[[o
 oneaccess_oneos_show_cellular-radio_context.textfsm, .*, oneaccess_oneos, sh[[ow]] cell[[ular-radio]] context
 oneaccess_oneos_show_cellular-radio_network.textfsm, .*, oneaccess_oneos, sh[[ow]] cell[[ular-radio]] network
 oneaccess_oneos_show_ip_as-path-access-list.textfsm, .*, oneaccess_oneos, sh[[ow]] ip as-path-access-list
+oneaccess_oneos_show_running-config_bind.textfsm, .*, oneaccess_oneos, sh[[ow]] run[[ning-config]] \|?bind
 oneaccess_oneos_show_ip_interface_brief.textfsm, .*, oneaccess_oneos, sh[[ow]] ip int[[erface]] brief
+oneaccess_oneos_show_running-config_aaa.textfsm, .*, oneaccess_oneos, sh[[ow]] run[[ning-config]] \|?aaa
+oneaccess_oneos_show_product-info-area.textfsm, .*, oneaccess_oneos, sh[[ow]] product\-info\-area
 oneaccess_oneos_show_ip_access-lists.textfsm, .*, oneaccess_oneos, sh[[ow]] ip access-lists[[s]]
 oneaccess_oneos_show_isdn_led-status.textfsm, .*, oneaccess_oneos, sh[[ow]] isdn led-status
 oneaccess_oneos_show_isdn_status_all.textfsm, .*, oneaccess_oneos, sh[[ow]] isdn status all
+oneaccess_oneos_show_reboot_counters.textfsm, .*, oneaccess_oneos, sh[[ow]] reboot counters
 oneaccess_oneos_cat_bsa_bsaboot.inf.textfsm, .*, oneaccess_oneos, cat (\/|)(BSA|bsa)(\/| )bsa(B|b)oot.inf
 oneaccess_oneos_show_ip_bgp_summary.textfsm, .*, oneaccess_oneos, sh[[ow]] ip bgp summary
 oneaccess_oneos_show_ip_prefix-list.textfsm, .*, oneaccess_oneos, sh[[ow]] ip prefix-list
@@ -756,6 +760,7 @@ oneaccess_oneos_show_vrrp_interface.textfsm, .*, oneaccess_oneos, sh[[ow]] vrrp 
 oneaccess_oneos_show_ip_vrf_brief.textfsm, .*, oneaccess_oneos, sh[[ow]] ip vrf brief
 oneaccess_oneos_show_isdn_active.textfsm, .*, oneaccess_oneos, sh[[ow]] isdn active
 oneaccess_oneos_show_interfaces.textfsm, .*, oneaccess_oneos, sh[[ow]] interface[[s]]
+oneaccess_oneos_show_route-map.textfsm, .*, oneaccess_oneos, sh[[ow]] route-map
 oneaccess_oneos_show_helpers.textfsm, .*, oneaccess_oneos, sh[[ow]] helpers
 oneaccess_oneos_show_ip_ssh.textfsm, .*, oneaccess_oneos, sh[[ow]] ip ssh
 oneaccess_oneos_show_memory.textfsm, .*, oneaccess_oneos, sh[[ow]] memory

@@ -1,0 +1,114 @@
+---
+parsed_sample:
+  - aaa_group: "TACGROUP"
+    aaa_servers:
+      - "1.2.3.4"
+      - "11.22.33.44"
+    aaa_protocol: "authentication"
+    aaa_command: "login"
+    aaa_config:
+      - "default TACGROUP"
+  - aaa_group: "TACGROUP"
+    aaa_servers:
+      - "1.2.3.4"
+      - "11.22.33.44"
+    aaa_protocol: "authentication"
+    aaa_command: "login"
+    aaa_config:
+      - "console TACGROUP"
+  - aaa_group: "TACGROUP"
+    aaa_servers:
+      - "1.2.3.4"
+      - "11.22.33.44"
+    aaa_protocol: "authentication"
+    aaa_command: "banner"
+    aaa_config:
+      - "sequence 1 *-TACACS SERVER UNAVAILABLE-*"
+  - aaa_group: "TACGROUP"
+    aaa_servers:
+      - "1.2.3.4"
+      - "11.22.33.44"
+    aaa_protocol: "authentication"
+    aaa_command: "enable"
+    aaa_config:
+      - "default TACGROUP"
+  - aaa_group: "TACGROUP"
+    aaa_servers:
+      - "1.2.3.4"
+      - "11.22.33.44"
+    aaa_protocol: "authentication"
+    aaa_command: "enable"
+    aaa_config:
+      - "console TACGROUP"
+  - aaa_group: "TACGROUP"
+    aaa_servers:
+      - "1.2.3.4"
+      - "11.22.33.44"
+    aaa_protocol: "authorization"
+    aaa_command: "network"
+    aaa_config:
+      - "group TACGROUP"
+  - aaa_group: "TACGROUP"
+    aaa_servers:
+      - "1.2.3.4"
+      - "11.22.33.44"
+    aaa_protocol: "authorization"
+    aaa_command: "command"
+    aaa_config:
+      - "1 TACGROUP none"
+  - aaa_group: "TACGROUP"
+    aaa_servers:
+      - "1.2.3.4"
+      - "11.22.33.44"
+    aaa_protocol: "authorization"
+    aaa_command: "command"
+    aaa_config:
+      - "7 TACGROUP none"
+  - aaa_group: "TACGROUP"
+    aaa_servers:
+      - "1.2.3.4"
+      - "11.22.33.44"
+    aaa_protocol: "authorization"
+    aaa_command: "command"
+    aaa_config:
+      - "15 TACGROUP none"
+  - aaa_group: "TACGROUP"
+    aaa_servers:
+      - "1.2.3.4"
+      - "11.22.33.44"
+    aaa_protocol: "accounting"
+    aaa_command: "exec"
+    aaa_config:
+      - "default start-stop group TACGROUP"
+  - aaa_group: "TACGROUP"
+    aaa_servers:
+      - "1.2.3.4"
+      - "11.22.33.44"
+    aaa_protocol: "accounting"
+    aaa_command: "system"
+    aaa_config:
+      - "default start-stop group TACGROUP"
+  - aaa_group: "TACGROUP"
+    aaa_servers:
+      - "1.2.3.4"
+      - "11.22.33.44"
+    aaa_protocol: "accounting"
+    aaa_command: "commands"
+    aaa_config:
+      - "1 default stop-only group TACGROUP"
+  - aaa_group: "TACGROUP"
+    aaa_servers:
+      - "1.2.3.4"
+      - "11.22.33.44"
+    aaa_protocol: "accounting"
+    aaa_command: "commands"
+    aaa_config:
+      - "7 default stop-only group TACGROUP"
+  - aaa_group: "TACGROUP"
+    aaa_servers:
+      - "1.2.3.4"
+      - "11.22.33.44"
+    aaa_protocol: "accounting"
+    aaa_command: "commands"
+    aaa_config:
+      - "15 default stop-only group TACGROUP"
