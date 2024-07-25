@@ -11,10 +11,8 @@ Value NEIGHBOR_INTERFACE (\S+)
 
 Start
   ^Port\s*:\s*${LOCAL_INTERFACE}
-  ^Neighbor\s*Chassis-Name\s*:\s*${NEIGHBOR_NAME}
-  ^Neighbor\s+System-Name\s*:\s*${NEIGHBOR_NAME}
-  ^Neighbor\s*Chassis-Description\s*:\s*${NEIGHBOR_DESCRIPTION}
-  ^Neighbor\s+System-Description\s*:\s*${NEIGHBOR_DESCRIPTION}
+  ^Neighbor\s*(Chassis|System)-Name\s*:\s*${NEIGHBOR_NAME}
+  ^Neighbor\s*(Chassis|System)-Description\s*:\s*${NEIGHBOR_DESCRIPTION}
   ^Neighbor\s*Chassis-ID\s*:\s*${CHASSIS_ID}
   ^Neighbor\s*Management-Address\s*:\s*${MGMT_ADDRESS}
   ^Chassis\s*Capabilities\s*Available\s*:\s*${CAPABILITIES_SUPPORTED}

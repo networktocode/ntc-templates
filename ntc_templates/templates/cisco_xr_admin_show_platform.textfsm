@@ -7,4 +7,7 @@ Start
   ^\-+ -> Parse
 
 Parse
+  # show platform
   ^${NODE}\s+${TYPE}\s+${STATE}\s+(${CONFIG_STATE})? -> Record
+  # admin show platform
+  ^${NODE}\s+${TYPE}\s+\S+\s+${STATE}\s+(${CONFIG_STATE})? -> Record
