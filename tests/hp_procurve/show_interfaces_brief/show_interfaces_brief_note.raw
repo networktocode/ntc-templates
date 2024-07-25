@@ -1,0 +1,26 @@
+
+ Status and Counters - Port Status
+
+ Note: * indicates values dynamically overridden by RADIUS.
+
+                          | Intrusion                           MDI  Flow Bcast
+  Port         Type       | Alert     Enabled Status Mode       Mode Ctrl Limit
+  ------------ ---------- + --------- ------- ------ ---------- ---- ---- -----
+  A1           1000SX     | No        Yes     Up     1000FDx    NA   off  0    
+  A8*          SFP+SR     | No        Yes     Up     10GigFD    NA   off  0    
+  B1           1000SX     | No        Yes     Up     1000FDx    NA   off  0    
+  B7*          1000SX     | No        Yes     Up     1000FDx    NA   off  0    
+  B8           SFP+SR     | No        Yes     Up     10GigFD    NA   off  0    
+  C1           100/1000T  | No        Yes     Up     1000FDx    MDIX off  0    
+  C2           100/1000T  | No        Yes     Up     1000FDx    MDI  off  0    
+  C4           100/1000T  | No        Yes     Up     100FDx     MDIX off  0    
+  D1-Trk1      100/1000T  | No        Yes     Up     1000FDx    MDIX off  0    
+  D5           100/1000T  | No        No      Down   1000FDx    NA   off  0    
+  D7           100/1000T  | No        Yes     Down   1000FDx    Auto off  0    
+  E1           SFP+DA3    | No        No      Down   10GigFD    NA   off  0    
+  E3                      | No        Yes     Down   .               off  0    
+  F1           10GbE-T    | No        Yes     Up     2500FDx*   MDIX off  0    
+  F2           10GbE-T    | No        Yes     Up     2500FDx*   MDI  off  0    
+  G17          100/1000T  | No        Yes     Up     1000FDx*   MDIX off  0    
+  G18          100/1000T  | No        Yes     Down   1000FDx    NA   off  0    
+ * third-party transceiver

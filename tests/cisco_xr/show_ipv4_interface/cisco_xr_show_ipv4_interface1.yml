@@ -1,6 +1,7 @@
 ---
 parsed_sample:
   - interface: "MgmtEth0/0/CPU0/0"
+    in_acl: "not set, access list is not set"
     ip_address: "172.25.82.44"
     ip_mtu: "1500"
     link_status: "Up"
@@ -8,17 +9,28 @@ parsed_sample:
     multicast_groups:
       - "224.0.0.2"
       - "224.0.0.1"
+    out_acl: "not set"
     prefix_length: "24"
     protocol: "ipv4"
     protocol_status: "Up"
+    rpf_check: ""
+    sec_ip_address: []
+    sec_prefix_length: []
     vrf: "default"
+    vrf_id: "0x60000000"
   - interface: "GigabitEthernet0/0/0/0"
+    in_acl: ""
     ip_address: ""
     ip_mtu: ""
     link_status: "Shutdown"
     mtu: ""
     multicast_groups: []
+    out_acl: ""
     prefix_length: ""
     protocol: "ipv4"
     protocol_status: "Down"
+    rpf_check: ""
+    sec_ip_address: []
+    sec_prefix_length: []
     vrf: "default"
+    vrf_id: "0x60000000"

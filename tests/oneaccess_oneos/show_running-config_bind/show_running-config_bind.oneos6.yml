@@ -1,0 +1,16 @@
+---
+parsed_sample:
+  - protocol: "ssh"
+    interface:
+      - "gigabitethernet 1/0.300"
+      - "loopback 1"
+    acl: "MANAGEMENT_IN"
+    vrf:
+      - "default-router"
+  - protocol: "telnet"
+    interface:
+      - "gigabitethernet 1/0.300"
+      - "loopback 1"
+    acl: "MANAGEMENT_IN"
+    vrf:
+      - "default-router"

@@ -1,6 +1,7 @@
 ---
 parsed_sample:
   - interface: "TenGigE0/0/0/6"
+    in_acl: "not set"
     ip_address: "10.1.1.1"
     ip_mtu: "9202"
     link_status: "Up"
@@ -12,11 +13,17 @@ parsed_sample:
       - "224.0.0.6"
       - "224.0.0.13"
       - "224.0.0.22"
+    out_acl: "not set"
     prefix_length: "31"
     protocol: "ipv4"
     protocol_status: "Up"
+    rpf_check: ""
+    sec_ip_address: []
+    sec_prefix_length: []
     vrf: "default"
+    vrf_id: "0x60000000"
   - interface: "Bundle-Ether10.23"
+    in_acl: "not set"
     ip_address: "10.1.1.7"
     ip_mtu: "9100"
     link_status: "Up"
@@ -24,11 +31,17 @@ parsed_sample:
     multicast_groups:
       - "224.0.0.1"
       - "224.0.0.6"
+    out_acl: "not set"
     prefix_length: "31"
     protocol: "ipv4"
     protocol_status: "Down"
+    rpf_check: ""
+    sec_ip_address: []
+    sec_prefix_length: []
     vrf: "default"
+    vrf_id: "0x60000000"
   - interface: "TenGigE0/5/0/2.3"
+    in_acl: "BLOCK"
     ip_address: "10.2.2.1"
     ip_mtu: "1500"
     link_status: "Up"
@@ -38,7 +51,12 @@ parsed_sample:
       - "224.0.0.1"
       - "224.0.0.13"
       - "224.0.0.22"
+    out_acl: "not set"
     prefix_length: "30"
     protocol: "ipv4"
     protocol_status: "Up"
+    rpf_check: "enabled"
+    sec_ip_address: []
+    sec_prefix_length: []
     vrf: "default"
+    vrf_id: "0x60000000"
