@@ -739,8 +739,10 @@ mikrotik_routeros_user_print.textfsm, .*, mikrotik_routeros, [[/]]us[[er]] p[[ri
 mikrotik_routeros_ping.textfsm, .*, mikrotik_routeros, [[/]]pin[[g]]
 
 oneaccess_oneos_show_voice_dial-peer_voice_voip_all.textfsm, .*, oneaccess_oneos, sh[[ow]] voice dial-peer voice voip all( al)?
+oneaccess_oneos_show_voice_voice-port_pri_all_histo.textfsm, .*, oneaccess_oneos, sh[[ow]] voice voice-port pri all histo
 oneaccess_oneos_show_voice_voip-call_active_all.textfsm, .*, oneaccess_oneos, sh[[ow]] voice voip-call active
 oneaccess_oneos_show_cellular-radio_equipment.textfsm, .*, oneaccess_oneos, sh[[ow]] cell[[ular-radio]] equipment
+oneaccess_oneos_show_voice_voice-port_pri_all.textfsm, .*, oneaccess_oneos, sh[[ow]] voice voice-port pri all
 oneaccess_oneos_show_policy-interface_output.textfsm, .*, oneaccess_oneos, sh[[ow]] policy-interface output
 oneaccess_oneos_show_running-config_ip_route.textfsm, .*, oneaccess_oneos, sh[[ow]] run[[ning-config]] (\| i[[nclude]] )?ip route
 oneaccess_oneos_show_voice_voip-call_any_all.textfsm, .*, oneaccess_oneos, sh[[ow]] voice voip-call any all
@@ -750,10 +752,12 @@ oneaccess_oneos_show_ip_as-path-access-list.textfsm, .*, oneaccess_oneos, sh[[ow
 oneaccess_oneos_show_running-config_ip_dhcp.textfsm, .*, oneaccess_oneos, sh[[ow]] run[[ning-config]] (\| be[[gin]] )?ip dhcp
 oneaccess_oneos_show_system_secure-crashlog.textfsm, .*, oneaccess_oneos, sh[[ow]] system secure-crashlog
 oneaccess_oneos_show_transceiver_equipment.textfsm, .*, oneaccess_oneos, sh[[ow]] transceiver equipment
+oneaccess_oneos_show_voice_voice-port_all.textfsm, .*, oneaccess_oneos, sh[[ow]] voice voice-port all
 oneaccess_oneos_show_running-config_bind.textfsm, .*, oneaccess_oneos, sh[[ow]] run[[ning-config]] \|?bind
 oneaccess_oneos_show_ip_interface_brief.textfsm, .*, oneaccess_oneos, sh[[ow]] ip int[[erface]] brief
 oneaccess_oneos_show_running-config_aaa.textfsm, .*, oneaccess_oneos, sh[[ow]] run[[ning-config]] \|?aaa
 oneaccess_oneos_show_product-info-area.textfsm, .*, oneaccess_oneos, sh[[ow]] product\-info\-area
+oneaccess_oneos_show_voice_sip-gateway.textfsm, .*, oneaccess_oneos, sh[[ow]] voice sip-gateway
 oneaccess_oneos_show_ip_access-lists.textfsm, .*, oneaccess_oneos, sh[[ow]] ip access-lists[[s]]
 oneaccess_oneos_show_isdn_led-status.textfsm, .*, oneaccess_oneos, sh[[ow]] isdn led-status
 oneaccess_oneos_show_isdn_status_all.textfsm, .*, oneaccess_oneos, sh[[ow]] isdn status all
