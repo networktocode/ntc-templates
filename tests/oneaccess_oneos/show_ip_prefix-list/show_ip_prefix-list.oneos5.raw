@@ -1,0 +1,15 @@
+RIP: ip prefix-list DENY-BGP: 3 entries
+   Description: ** do not advertise to BGP neighbors **
+   seq 5 permit 192.4.21.0/24 le 32
+   seq 10 permit 192.4.91.0/24 le 32
+   seq 15 deny any
+OSPF: ip prefix-list DENY-BGP: 3 entries
+   Description: ** do not advertise to BGP neighbors **
+   seq 5 permit 192.4.21.0/24 le 32
+   seq 10 permit 192.4.91.0/24 le 32
+   seq 15 deny any
+BGP: ip prefix-list DENY-BGP: 3 entries
+   Description: ** do not advertise to BGP neighbors **
+   seq 5 permit 192.4.21.0/24 le 32
+   seq 10 permit 192.4.91.0/24 le 32
+   seq 15 deny any

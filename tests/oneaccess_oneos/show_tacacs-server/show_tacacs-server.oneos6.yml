@@ -1,0 +1,17 @@
+---
+parsed_sample:
+  - tacacs_server: "1.1.1.1"
+    server_port: "49"
+    secret_key: "1400cea433ff79c9d69b58da81d2c7a3a29091c751cf"
+    source: "loopback 1"
+    vrf: ""
+  - tacacs_server: "2.2.2.2"
+    server_port: "49"
+    secret_key: "1400cea433ff79c9d69b58da81d2c7a3a29091c751cf"
+    source: "loopback 1"
+    vrf: ""
+  - tacacs_server: "3.3.3.3"
+    server_port: "49"
+    secret_key: "1400cea433ff79c9d69b58da81d2c7a3a29091c751cf"
+    source: "loopback 1"
+    vrf: ""

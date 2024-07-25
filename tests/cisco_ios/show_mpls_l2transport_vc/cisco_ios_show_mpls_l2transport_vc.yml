@@ -1,0 +1,17 @@
+---
+parsed_sample:
+  - dest_address: "10.0.0.1"
+    interface: "Se5/0"
+    local_circuit: "FR DLCI 55        "
+    status: "UP"
+    vc_id: "55"
+  - dest_address: "10.0.0.1"
+    interface: "AT4/0"
+    local_circuit: "ATM AAL5 0/100    "
+    status: "UP"
+    vc_id: "100"
+  - dest_address: "10.0.0.1"
+    interface: "AT4/0.300"
+    local_circuit: "ATM AAL5 0/300    "
+    status: "UP"
+    vc_id: "300"

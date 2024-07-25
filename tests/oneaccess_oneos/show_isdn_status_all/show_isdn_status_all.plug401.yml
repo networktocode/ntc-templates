@@ -1,0 +1,158 @@
+---
+parsed_sample:
+  - isdn_line: "5/0"
+    physical_type: "E1"
+    protocol_descriptor: "E1_PRI"
+    protocol_linecode: "hdb3"
+    protocol_framing: "DF"
+    config_state: "up"
+    loop_state: "down"
+    l1_status: "activated"
+    ais: "OFF"
+    los: "OFF"
+    rai: "OFF"
+    pri_ais_occurrences: "0"
+    pri_los_occurrences: "1"
+    pri_rdi_occurrences: "0"
+    l2_status: "activated"
+    l2_tx_frames_dchannel: "1775901"
+    l2_rx_frames_dchannel: "1775901"
+    l3_active_calls: "10"
+    l3_call_details:
+      - "App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type= In , BChan= 5 , call-ref=\
+        \ 22175 , call-id= 284, IsmConnect."
+      - "App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type=Out , BChan=20 , call-ref=\
+        \ 14020 , call-id= 839, IsmConnect."
+      - "App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type=Out , BChan=15 , call-ref=\
+        \ 22212 , call-id= 951, IsmConnect."
+      - "App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type=Out , BChan=14 , call-ref=\
+        \ 21956 , call-id= 948, IsmConnect."
+      - "App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type=Out , BChan=13 , call-ref=\
+        \ 21700 , call-id= 945, IsmConnect."
+      - "App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type=Out , BChan=12 , call-ref=\
+        \ 20932 , call-id= 936, IsmConnect."
+      - "App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type=Out , BChan= 2 , call-ref=\
+        \ 14532 , call-id= 845, IsmConnect."
+      - "App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type=Out , BChan= 9 , call-ref=\
+        \ 20420 , call-id= 930, IsmConnect."
+      - "App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type=Out , BChan= 7 , call-ref=\
+        \ 19140 , call-id= 914, IsmConnect."
+      - "App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type=Out , BChan= 6 , call-ref=\
+        \ 22724 , call-id= 957, IsmConnect."
+  - isdn_line: "5/1"
+    physical_type: "E1"
+    protocol_descriptor: "E1_PRI"
+    protocol_linecode: "hdb3"
+    protocol_framing: "DF"
+    config_state: "up"
+    loop_state: "down"
+    l1_status: "activated"
+    ais: "OFF"
+    los: "OFF"
+    rai: "OFF"
+    pri_ais_occurrences: "0"
+    pri_los_occurrences: "1"
+    pri_rdi_occurrences: "0"
+    l2_status: "activated"
+    l2_tx_frames_dchannel: "1760092"
+    l2_rx_frames_dchannel: "1760092"
+    l3_active_calls: "14"
+    l3_call_details:
+      - "App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type= In , BChan=18 , call-ref=\
+        \ 23786 , call-id= 901, IsmConnect."
+      - "App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type= In , BChan= 4 , call-ref=\
+        \ 23784 , call-id= 876, IsmConnect."
+      - "App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type= In , BChan=15 , call-ref=\
+        \ 23780 , call-id= 799, IsmConnect."
+      - "App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type=Out , BChan=17 , call-ref=\
+        \ 25266 , call-id= 900, IsmConnect."
+      - "App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type=Out , BChan= 3 , call-ref=\
+        \ 28338 , call-id= 952, IsmConnect."
+      - "App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type=Out , BChan= 6 , call-ref=\
+        \ 13189 , call-id= 331, IsmConnect."
+      - "App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type=Out , BChan=12 , call-ref=\
+        \ 27058 , call-id= 924, IsmConnect."
+      - "App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type=Out , BChan=11 , call-ref=\
+        \ 26802 , call-id= 921, IsmConnect."
+      - "App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type=Out , BChan= 9 , call-ref=\
+        \ 26546 , call-id= 918, IsmConnect."
+      - "App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type=Out , BChan= 7 , call-ref=\
+        \ 23986 , call-id= 881, IsmConnect."
+      - "App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type=Out , BChan= 8 , call-ref=\
+        \ 28850 , call-id= 958, IsmConnect."
+      - "App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type=Out , BChan= 5 , call-ref=\
+        \ 27826 , call-id= 937, IsmConnect."
+      - "App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type=Out , BChan= 2 , call-ref=\
+        \ 28082 , call-id= 949, IsmConnect."
+      - "App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type=Out , BChan= 1 , call-ref=\
+        \ 28594 , call-id= 955, IsmConnect."
+  - isdn_line: "5/2"
+    physical_type: "E1"
+    protocol_descriptor: "E1_PRI"
+    protocol_linecode: "hdb3"
+    protocol_framing: "DF"
+    config_state: "down"
+    loop_state: "down"
+    l1_status: "deactivated"
+    ais: "OFF"
+    los: "OFF"
+    rai: "OFF"
+    pri_ais_occurrences: "0"
+    pri_los_occurrences: "0"
+    pri_rdi_occurrences: "0"
+    l2_status: "deactivated"
+    l2_tx_frames_dchannel: "0"
+    l2_rx_frames_dchannel: "0"
+    l3_active_calls: "no active call"
+    l3_call_details: []
+  - isdn_line: "5/3"
+    physical_type: "E1"
+    protocol_descriptor: "E1_PRI"
+    protocol_linecode: "hdb3"
+    protocol_framing: "DF"
+    config_state: "up"
+    loop_state: "down"
+    l1_status: "activated"
+    ais: "OFF"
+    los: "OFF"
+    rai: "OFF"
+    pri_ais_occurrences: "0"
+    pri_los_occurrences: "1"
+    pri_rdi_occurrences: "0"
+    l2_status: "activated"
+    l2_tx_frames_dchannel: "1775555"
+    l2_rx_frames_dchannel: "1775555"
+    l3_active_calls: "16"
+    l3_call_details:
+      - "App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type= In , BChan=12 , call-ref=\
+        \ 22164 , call-id= 332, IsmConnect."
+      - "App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type=Out , BChan= 1 , call-ref=\
+        \ 15812 , call-id= 956, IsmConnect."
+      - "App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type=Out , BChan=18 , call-ref=\
+        \ 14788 , call-id= 944, IsmConnect."
+      - "App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type=Out , BChan=14 , call-ref=\
+        \ 12996 , call-id= 922, IsmConnect."
+      - "App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type=Out , BChan=17 , call-ref=\
+        \ 14532 , call-id= 941, IsmConnect."
+      - "App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type=Out , BChan=20 , call-ref=\
+        \ 10948 , call-id= 892, IsmConnect."
+      - "App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type=Out , BChan=15 , call-ref=\
+        \ 14276 , call-id= 938, IsmConnect."
+      - "App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type=Out , BChan=11 , call-ref=\
+        \ 15556 , call-id= 953, IsmConnect."
+      - "App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type=Out , BChan= 5 , call-ref=\
+        \ 14020 , call-id= 935, IsmConnect."
+      - "App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type=Out , BChan= 8 , call-ref=\
+        \ 15300 , call-id= 950, IsmConnect."
+      - "App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type=Out , BChan= 4 , call-ref=\
+        \ 18067 , call-id= 283, IsmConnect."
+      - "App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type=Out , BChan= 3 , call-ref=\
+        \ 13252 , call-id= 925, IsmConnect."
+      - "App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type=Out , BChan= 7 , call-ref=\
+        \ 8900 , call-id= 864, IsmConnect."
+      - "App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type=Out , BChan= 9 , call-ref=\
+        \ 16068 , call-id= 959, IsmConnect."
+      - "App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type=Out , BChan= 6 , call-ref=\
+        \ 12484 , call-id= 916, IsmConnect."
+      - "App=Voice , BC=[Speech,64 kbit/s,G.711 A-law], type=Out , BChan= 2 , call-ref=\
+        \ 15044 , call-id= 947, IsmConnect."
