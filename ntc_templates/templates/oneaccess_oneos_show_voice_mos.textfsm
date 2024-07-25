@@ -1,0 +1,56 @@
+Value CURR_NBR_CALL (\d+\.\d+|\d+)
+Value CURR_AVG_MOS (\d+\.\d+|\d+)
+Value CURR_MIN_MOS (\d+\.\d+|\d+)
+Value CURR_MAX_MOS (\d+\.\d+|\d+)
+Value CURR_AVG_ERL (\d+\.\d+|\d+)
+Value CURR_AVG_ACOM (\d+\.\d+|\d+)
+Value CURR_AVG_LOSS_RATE (\d+\.\d+|\d+)
+Value CURR_AVG_JITTER (\d+\.\d+|\d+)
+Value CURR_AVG_MAX_DELAY (\d+\.\d+|\d+)
+Value CURR_AVG_PDD (\d+\.\d+|\d+)
+Value PREV_NBR_CALL (\d+\.\d+|\d+)
+Value PREV_AVG_MOS (\d+\.\d+|\d+)
+Value PREV_MIN_MOS (\d+\.\d+|\d+)
+Value PREV_MAX_MOS (\d+\.\d+|\d+)
+Value PREV_AVG_ERL (\d+\.\d+|\d+)
+Value PREV_AVG_ACOM (\d+\.\d+|\d+)
+Value PREV_AVG_LOSS_RATE (\d+\.\d+|\d+)
+Value PREV_AVG_JITTER (\d+\.\d+|\d+)
+Value PREV_AVG_MAX_DELAY (\d+\.\d+|\d+)
+Value PREV_AVG_PDD (\d+\.\d+|\d+)
+
+Start
+  ^\s*-+\sCurrent\shour\s-+ -> CurrentHour
+  ^\s*$$
+  ^\s*-*
+  ^. -> Error
+
+CurrentHour
+  ^\s*Number\sof\sCall\s+:\s+${CURR_NBR_CALL}
+  ^\s*Average\sof\sMOS\s+:\s+${CURR_AVG_MOS}
+  ^\s*Minimum\sMOS\s+:\s+${CURR_MIN_MOS}
+  ^\s*Maximum\sMOS\s+:\s+${CURR_MAX_MOS}
+  ^\s*Average\sof\sERL\s+:\s+${CURR_AVG_ERL}
+  ^\s*Average\sof\sACOM\s+:\s+${CURR_AVG_ACOM}
+  ^\s*Average\sof\sloss-rate\s+:\s+${CURR_AVG_LOSS_RATE}
+  ^\s*Average\sof\sjitter\s+:\s+${CURR_AVG_JITTER}
+  ^\s*Average\sof\sMax\sdelay\s+:\s+${CURR_AVG_MAX_DELAY}
+  ^\s*Average\sPdd\s+:\s+${CURR_AVG_PDD}
+  ^\s*-+\sPrevious\shour\s-+ -> PreviousHour
+  ^\s*$$
+  ^. -> Error
+
+PreviousHour
+  ^\s*Number\sof\sCall\s+:\s+${PREV_NBR_CALL}
+  ^\s*Average\sof\sMOS\s+:\s+${PREV_AVG_MOS}
+  ^\s*Minimum\sMOS\s+:\s+${PREV_MIN_MOS}
+  ^\s*Maximum\sMOS\s+:\s+${PREV_MAX_MOS}
+  ^\s*Average\sof\sERL\s+:\s+${PREV_AVG_ERL}
+  ^\s*Average\sof\sACOM\s+:\s+${PREV_AVG_ACOM}
+  ^\s*Average\sof\sloss-rate\s+:\s+${PREV_AVG_LOSS_RATE}
+  ^\s*Average\sof\sjitter\s+:\s+${PREV_AVG_JITTER}
+  ^\s*Average\sof\sMax\sdelay\s+:\s+${PREV_AVG_MAX_DELAY}
+  ^\s*Average\sPdd\s+:\s+${PREV_AVG_PDD}
+  ^\s*-+\s*$$
+  ^\s*$$
+  ^. -> Error
