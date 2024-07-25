@@ -1,0 +1,18 @@
+Codes: K - kernel, C - connected, S - static, R - RIP, B - BGP
+       O - OSPF, IA - OSPF inter area
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2
+       i - IS-IS, L1 - IS-IS level-1, L2 - IS-IS level-2, ia - IS-IS inter area
+       * - candidate default
+
+Routing table for VRF=0
+O*E2    0.0.0.0/0 [110/10] via 10.149.127.253, Tu-Hub01-Main, 03w2d20h
+S       8.8.8.8/32 [200/0] via 4.3.2.1, wan
+O       10.80.58.224/27 [110/201] via 10.149.127.253, Tu-Hub01-Main, 3d13h31m
+O E2    10.80.130.0/24 [110/20] via 10.149.127.253, Tu-Hub01-Main, 22:00:53
+C       10.100.105.224/27 is directly connected, Vlan40
+C       10.149.0.0/16 is directly connected, Tu-Hub01-Main
+                      is directly connected, Tu-Hub02-Main
+B       10.160.0.0/23 [20/0] via 10.142.0.74, port3, 2d18h02m
+S       1.2.3.4/32 [10/0] via 10.152.1.229, lan
+                   [10/0] via 4.3.2.1, wan

@@ -1,0 +1,26 @@
+---
+parsed_sample:
+  - protocol: "ssh"
+    interface:
+      - "loopback 1"
+      - "loopback 21"
+      - "loopback 91"
+      - "tunnel 21"
+      - "tunnel 91"
+      - "virtual-ethernet 1"
+    acl: "MANAGEMENT_IN_SSH"
+    vrf:
+      - "UNTRUST-SSH"
+      - "default-router"
+  - protocol: "telnet"
+    interface:
+      - "loopback 1"
+      - "loopback 21"
+      - "loopback 91"
+      - "tunnel 21"
+      - "tunnel 91"
+      - "virtual-ethernet 1"
+    acl: "MANAGEMENT_IN_TELNET"
+    vrf:
+      - "UNTRUST-TELNET"
+      - "default-router"

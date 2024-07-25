@@ -1,0 +1,42 @@
+ip access-list standard 52
+ 1 permit 91.208.220.0 0.0.0.255 (988908 matches)
+
+ip access-list standard 5
+ 1 permit 172.16.8.0 0.0.0.255 (0 matches)
+
+ip access-list extended GRE-Tunnel21
+ 1 permit ip 47 10.94.57.196 0.0.0.0 94.105.25.2 0.0.0.0 log (0 matches)
+
+ip access-list extended GRE-Tunnel91
+ 1 permit ip 47 10.94.57.196 0.0.0.0 94.105.25.9 0.0.0.0 log (0 matches)
+
+ip access-list extended MANAGEMENT
+ 1 permit ip 0.0.0.0 255.255.255.255 91.208.220.0 0.0.0.255 (1273326 matches)
+ 2 permit ip 91.208.220.0 0.0.0.255 0.0.0.0 255.255.255.255 (0 matches)
+
+ip access-list extended REAL-TIME
+
+ip access-list extended PREMIUM
+
+ip access-list extended GOLD
+
+ip access-list extended SILVER
+
+ip access-list extended BRONZE
+
+ip access-list extended MANAGEMENT_IN
+ 1 permit tcp 91.208.220.0 0.0.0.255 0.0.0.0 255.255.255.255 22 (1128 matches)
+ 2 permit tcp 91.208.220.0 0.0.0.255 0.0.0.0 255.255.255.255 23 (0 matches)
+ 3 permit tcp 94.104.18.0 0.0.1.255 0.0.0.0 255.255.255.255 22 (0 matches)
+ 4 permit tcp 94.104.18.0 0.0.1.255 0.0.0.0 255.255.255.255 23 (0 matches)
+ 5 permit tcp 94.105.225.124 0.0.0.3 0.0.0.0 255.255.255.255 22 (0 matches)
+ 6 permit tcp 94.105.225.124 0.0.0.3 0.0.0.0 255.255.255.255 23 (0 matches)
+ 7 permit tcp 192.4.21.0 0.0.0.255 0.0.0.0 255.255.255.255 22 (0 matches)
+ 8 permit tcp 192.4.21.0 0.0.0.255 0.0.0.0 255.255.255.255 23 (0 matches)
+ 9 permit tcp 192.4.91.0 0.0.0.255 0.0.0.0 255.255.255.255 22 (0 matches)
+ 10 permit tcp 192.4.91.0 0.0.0.255 0.0.0.0 255.255.255.255 23 (0 matches)
+ 11 permit tcp 10.0.96.16 0.0.0.0 10.110.0.0 0.0.255.255 23 (0 matches)
+ 12 permit tcp 10.0.32.16 0.0.0.0 10.110.0.0 0.0.255.255 23 (0 matches)
+ 13 permit tcp 192.0.2.0 0.0.0.255 0.0.0.0 255.255.255.255 22 (0 matches)
+ 14 permit tcp 192.0.2.0 0.0.0.255 0.0.0.0 255.255.255.255 23 (0 matches)
+ 15 deny ip 0.0.0.0 255.255.255.255 0.0.0.0 255.255.255.255 (0 matches)
