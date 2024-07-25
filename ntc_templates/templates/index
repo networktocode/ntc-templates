@@ -740,9 +740,14 @@ mikrotik_routeros_ping.textfsm, .*, mikrotik_routeros, [[/]]pin[[g]]
 oneaccess_oneos_show_voice_voip-call_active_all.textfsm, .*, oneaccess_oneos, sh[[ow]] voice voip-call active
 oneaccess_oneos_show_cellular-radio_equipment.textfsm, .*, oneaccess_oneos, sh[[ow]] cell[[ular-radio]] equipment
 oneaccess_oneos_show_voice_voip-call_any_all.textfsm, .*, oneaccess_oneos, sh[[ow]] voice voip-call any all
+oneaccess_oneos_show_cellular-radio_network.textfsm, .*, oneaccess_oneos, sh[[ow]] cell[[ular-radio]] network
 oneaccess_oneos_show_cellular-radio_context.textfsm, .*, oneaccess_oneos, sh[[ow]] cell[[ular-radio]] context
-oneaccess_oneos_cat_bsa_bsaboot.inf.textfsm, .*, oneaccess_oneos, cat (\/|)(BSA|bsa)(\/| )bsa(B|b)oot.inf
+oneaccess_oneos_show_ip_as-path-access-list.textfsm, .*, oneaccess_oneos, sh[[ow]] ip as-path-access-list
+oneaccess_oneos_show_ip_access-lists.textfsm, .*, oneaccess_oneos, sh[[ow]] ip access-lists[[s]]
 oneaccess_oneos_show_vrrp_interface.textfsm, .*, oneaccess_oneos, sh[[ow]] vrrp int[[erface]]
+oneaccess_oneos_cat_bsa_bsaboot.inf.textfsm, .*, oneaccess_oneos, cat (\/|)(BSA|bsa)(\/| )bsa(B|b)oot.inf
+oneaccess_oneos_show_interfaces.textfsm, .*, oneaccess_oneos, sh[[ow]] interface[[s]]
+oneaccess_oneos_show_helpers.textfsm, .*, oneaccess_oneos, sh[[ow]] helpers
 oneaccess_oneos_hostname.textfsm, .*, oneaccess_oneos, hostname
 oneaccess_oneos_ls.textfsm, .*, oneaccess_oneos, ls( -[lh][lh]? )?.*
 
