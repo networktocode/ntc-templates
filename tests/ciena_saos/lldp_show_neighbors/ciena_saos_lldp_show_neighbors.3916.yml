@@ -1,0 +1,44 @@
+---
+parsed_sample:
+  - remote_ipv4_address:
+      - "10.8.91.1"
+      - "10.8.128.39"
+    remote_ipv6_address:
+      - "fe80::9e7a:3ff:fed1:cd1"
+      - "fe80::9e7a:3ff:fed1:cdf"
+    system_name: "LAB_00009-SDS39-100"
+    system_description: "Ciena 3916 Service Delivery Switch"
+    local_port: "5"
+    remote_port: "6"
+    remote_chassis_id: "9C7A03A10D60"
+    remote_mgmt_ipv4_address:
+      - "10.8.91.2"
+      - "10.8.128.40"
+    remote_mgmt_ipv6_address:
+      - "fe80::9e7a:3ff:fed1:d61"
+      - "fe80::9e7a:3ff:fed1:d6f"
+    remote_system_name: "LAB_SDS39-200"
+    remote_system_description: "Ciena 3916 Service Delivery Switch"
+    remote_synce_support: "Not Supported"
+    remote_synce_config: "Not Configured"
+  - remote_ipv4_address:
+      - "10.8.91.1"
+      - "10.8.128.39"
+    remote_ipv6_address:
+      - "fe80::9e7a:3ff:fed1:cd1"
+      - "fe80::9e7a:3ff:fed1:cdf"
+    system_name: "LAB_00009-SDS39-100"
+    system_description: "Ciena 3916 Service Delivery Switch"
+    local_port: "6"
+    remote_port: "3"
+    remote_chassis_id: "9C7A03B86040"
+    remote_mgmt_ipv4_address:
+      - "10.8.90.250"
+      - "10.8.130.1"
+    remote_mgmt_ipv6_address:
+      - "fe80::9e7a:3ff:fec8:6040"
+      - "fe80::9e7a:3ff:fec8:6041"
+    remote_system_name: "LAB_SAS51-100"
+    remote_system_description: "Ciena 5142 Service Aggregation Switch"
+    remote_synce_support: "Input and Output"
+    remote_synce_config: "Not Configured"
