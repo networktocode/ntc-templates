@@ -19,6 +19,8 @@ Value RESTARTED (.+)
 
 Start
   ^.*Software,*\s+\(${SOFTWARE_IMAGE}\),\sVersion\s${VERSION},*\s+RELEASE.*\(${RELEASE}\)
+  # CUST-SPECIAL:
+  ^.*Software,*\s+\(${SOFTWARE_IMAGE}\),\sVersion\s${VERSION},*\s+\S+.*:${RELEASE}
   ^.*Software,*\s+\(${SOFTWARE_IMAGE}\),\sVersion\s${VERSION},
   ^ROM:\s+${ROMMON}
   ^\s*${HOSTNAME}\s+uptime\s+is\s+${UPTIME} -> Continue
