@@ -1,0 +1,17 @@
+---
+parsed_sample:
+  - network: "94.105.1.119"
+    mask: "255.255.255.255"
+    nexthop_ip: "192.168.100.2"
+    nexthop_interface: ""
+    vrf: ""
+  - network: "94.105.16.130"
+    mask: "255.255.255.255"
+    nexthop_ip: ""
+    nexthop_interface: "Bvi 200"
+    vrf: ""
+  - network: "94.105.34.2"
+    mask: "255.255.255.255"
+    nexthop_ip: "192.168.100.3"
+    nexthop_interface: ""
+    vrf: ""

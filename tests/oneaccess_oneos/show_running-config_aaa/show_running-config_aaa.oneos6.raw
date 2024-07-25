@@ -1,0 +1,18 @@
+aaa group server tacacs TACGROUP
+ server 1.2.3.4
+ server 11.22.33.44
+exit
+aaa authentication login default TACGROUP
+aaa authentication login console TACGROUP
+aaa authentication banner sequence 1 *-TACACS SERVER UNAVAILABLE-*
+aaa authentication enable default TACGROUP
+aaa authentication enable console TACGROUP
+aaa authorization network group TACGROUP
+aaa authorization command 1 TACGROUP none
+aaa authorization command 7 TACGROUP none
+aaa authorization command 15 TACGROUP none
+aaa accounting exec default start-stop group TACGROUP
+aaa accounting system default start-stop group TACGROUP
+aaa accounting commands 1 default stop-only group TACGROUP
+aaa accounting commands 7 default stop-only group TACGROUP
+aaa accounting commands 15 default stop-only group TACGROUP
