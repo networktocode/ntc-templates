@@ -5,7 +5,7 @@ Value ONLINE_STATUS (\w+)
 Value POWER_STATUS (\S+)
 Value REGISTER_STATUS (\w+)
 Value ALARM_STATUS (\S+)
-Value PRIMARY_STATUS (\w+)
+Value HA_STATUS (\w+)
 
 Start
   ^\*.*$$
@@ -23,6 +23,6 @@ Card
 DeviceStatus
   ^\-+$$
   ^Slot.+$$
-  ^\s+${CARD}\s+${PID}\s+${ONLINE_STATUS}\s+${POWER_STATUS}\s+${REGISTER_STATUS}\s+${ALARM_STATUS}\s+${PRIMARY_STATUS}\s*$$ -> Record
-  ^${SLOT}\s+${CARD}\s+\*?${PID}\s+${ONLINE_STATUS}\s+${POWER_STATUS}\s+${REGISTER_STATUS}\s+${ALARM_STATUS}\s+${PRIMARY_STATUS}\s*$$ -> Record
+  ^\s+${CARD}\s+${PID}\s+${ONLINE_STATUS}\s+${POWER_STATUS}\s+${REGISTER_STATUS}\s+${ALARM_STATUS}\s+${HA_STATUS}\s*$$ -> Record
+  ^${SLOT}\s+${CARD}\s+\*?${PID}\s+${ONLINE_STATUS}\s+${POWER_STATUS}\s+${REGISTER_STATUS}\s+${ALARM_STATUS}\s+${HA_STATUS}\s*$$ -> Record
   ^. -> Error
