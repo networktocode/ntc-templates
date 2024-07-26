@@ -1,0 +1,15 @@
+Value SLOT (\w+)
+Value CARD (\S+)
+Value Required DEVICE_TYPE (\S+)
+Value ONLINE_STATUS (\w+)
+Value POWER_STATUS (\w+)
+Value REGISTER_STATUS (\w+)
+Value ALARM_STATUS (\w+)
+Value PRIMARY_STATUS (\w+)
+
+Start
+  ^\S+\s+Device\s+status\S+$$
+  ^\-+$$
+  ^Slot.*$$
+  ^${SLOT}\s+${CARD}\s+${DEVICE_TYPE}\s+${ONLINE_STATUS}\s+${POWER_STATUS}\s+${REGISTER_STATUS}\s+${ALARM_STATUS}\s+${PRIMARY_STATUS}\s+$$ -> Record
+  ^. -> Error
