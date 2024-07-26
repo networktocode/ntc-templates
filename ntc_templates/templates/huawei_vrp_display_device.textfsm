@@ -9,7 +9,11 @@ Value PRIMARY_STATUS (\w+)
 
 Start
   ^\*.*$$
-  ^(\S+\s+)?Device\s+status\S+$$
+  ^(\S+\s+)?Device\s+status\S+$$ -> DeviceStatus
+  ^. -> Error
+
+# device and device all
+DeviceStatus
   ^\-+$$
   ^Slot.*$$
   ^\s+${CARD}\s+${DEVICE_TYPE}\s+${ONLINE_STATUS}\s+${POWER_STATUS}\s+${REGISTER_STATUS}\s+${ALARM_STATUS}\s+${PRIMARY_STATUS}\s*$$ -> Record
