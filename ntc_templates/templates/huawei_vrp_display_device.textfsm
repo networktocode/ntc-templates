@@ -1,4 +1,4 @@
-Value SLOT (\w+)
+Value Filldown SLOT (\w+)
 Value CARD (\S+)
 Value Required DEVICE_TYPE (\S+)
 Value ONLINE_STATUS (\w+)
@@ -12,5 +12,6 @@ Start
   ^\S+\s+Device\s+status\S+$$
   ^\-+$$
   ^Slot.*$$
-  ^${SLOT}?\s+${CARD}\s+\*?${DEVICE_TYPE}\s+${ONLINE_STATUS}\s+${POWER_STATUS}\s+${REGISTER_STATUS}\s+${ALARM_STATUS}\s+${PRIMARY_STATUS}\s*$$ -> Record
+  ^\s+${CARD}\s+${DEVICE_TYPE}\s+${ONLINE_STATUS}\s+${POWER_STATUS}\s+${REGISTER_STATUS}\s+${ALARM_STATUS}\s+${PRIMARY_STATUS}\s*$$ -> Record
+  ^${SLOT}\s+${CARD}\s+\*?${DEVICE_TYPE}\s+${ONLINE_STATUS}\s+${POWER_STATUS}\s+${REGISTER_STATUS}\s+${ALARM_STATUS}\s+${PRIMARY_STATUS}\s*$$ -> Record
   ^. -> Error
