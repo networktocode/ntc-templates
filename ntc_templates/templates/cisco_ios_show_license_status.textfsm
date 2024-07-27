@@ -1,6 +1,6 @@
 Value SL_ENABLED (\S+)
 Value SL_REG_STATUS (\S+)
-Value SL_VIRT_ACCT (\S+)
+Value SL_VIRT_ACCT (.*)
 
 Start
   ^Smart\s+Licensing\s+is\s+${SL_ENABLED}\s*$$ -> Continue
