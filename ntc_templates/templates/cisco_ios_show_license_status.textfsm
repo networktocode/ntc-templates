@@ -1,8 +1,36 @@
 Value SL_ENABLED (\S+)
+Value SL_TRANSPORT (.*)
 Value SL_REG_STATUS (\S+)
 Value SL_VIRT_ACCT (.*)
+Value SL_SMART_ACCT (.*)
+Value SL_LICENSE_AUTH (.*)
 
 Start
-  ^Smart\s+Licensing\s+is\s+${SL_ENABLED}\s*$$ -> Continue
+  ^Smart\s+Licensing\s+is\s+${SL_ENABLED}\s*$$
+  ^Transport:\s*$$ -> Transport
+  ^Registration:\s*$$ -> Registration
+  ^License\s+Authorization:\s* -> LicenseAuth
+  # match other sections
+  ^\s*(\S+\s*)+$$
+  ^. -> Error
+
+Transport
+  ^\s+Type:\s+${SL_TRANSPORT}\s*$$
+  ^\s*$$ -> Start
+  ^. -> Error
+
+Registration
   ^\s+Status:\s+${SL_REG_STATUS}\s*$$
+  ^\s+Smart\s+Account:\s+${SL_SMART_ACCT}\s*$$
   ^\s+Virtual\s+Account:\s+${SL_VIRT_ACCT}\s*$$
+  # match other lines
+  ^\s+(\S+\s*)+$$
+  ^\s*$$ -> Start
+  ^. -> Error
+
+LicenseAuth
+  ^\s+Status:\s+${SL_LICENSE_AUTH}(\s+\S+){6}$$
+  # match other lines
+  ^\s+(\S+\s*)+$$
+  ^\s*$$ -> Start
+  ^. -> Error
