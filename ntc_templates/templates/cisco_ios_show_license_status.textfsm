@@ -3,6 +3,6 @@ Value SL_REG_STATUS (\S+)
 Value SL_VIRT_ACCT (\S+)
 
 Start
-  ^Smart\sLicensing\sis\s${SL_ENABLED}\s*$$ -> Continue
-  ^\s+Status:\s${SL_REG_STATUS}$$
-  ^\s+Virtual\sAccount:\s${SL_VIRT_ACCT}
+  ^Smart\s+Licensing\s+is\s+${SL_ENABLED}\s*$$ -> Continue
+  ^\s+Status:\s+${SL_REG_STATUS}\s*$$
+  ^\s+Virtual\s+Account:\s+${SL_VIRT_ACCT}\s*$$
