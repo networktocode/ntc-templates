@@ -1,5 +1,6 @@
 Value SL_ENABLED (\S+)
 Value SL_TRANSPORT (.*)
+Value SL_URL (\S+)
 Value SL_REG_STATUS (\S+)
 Value SL_VIRT_ACCT (.*)
 Value SL_SMART_ACCT (.*)
@@ -13,10 +14,13 @@ Start
   ^License\s+Authorization:\s* -> LicenseAuth
   # match other sections
   ^\s*(\S+\s*)+$$
+  ^\s*$$
   ^. -> Error
 
 Transport
   ^\s+Type:\s+${SL_TRANSPORT}\s*$$
+  ^\s+URL:\s+${SL_URL}\s*$$
+  ^\s+(\S+\s*)+$$
   ^\s*$$ -> Start
   ^. -> Error
 
