@@ -9,6 +9,7 @@ Start
   ^Smart\s+Licensing\s+is\s+${SL_ENABLED}\s*$$
   ^Transport:\s*$$ -> Transport
   ^Registration:\s*$$ -> Registration
+  ^Account\s+Information:\s*$$ -> Registration
   ^License\s+Authorization:\s* -> LicenseAuth
   # match other sections
   ^\s*(\S+\s*)+$$
