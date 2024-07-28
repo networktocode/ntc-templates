@@ -21,7 +21,7 @@ Start
   ^\s+Description:\s+${DESCRIPTION}\s*$$
   ^\s+[Ii]nternet\s+[Aa]ddress\s+is\s+${IP_ADDRESS}\s*$$
   ^\s+MTU\s+${MTU}.*BW\s+${BANDWIDTH}
-  ^\s+Encapsulation\s+${ENCAPSULATION}, (Vlan|VLAN) I(D|d)\s+${VLAN_ID}.+$$
+  ^\s+Encapsulation\s+${ENCAPSULATION},\s+(Vlan|VLAN)\s+I(D|d)\s+${VLAN_ID}.+$$
   ^\s+Encapsulation\s+${ENCAPSULATION},.*$$
   ^\s+(?:[Dd]uplex\s+|)${DUPLEX}(?:-[Dd]uplex|),\s+${SPEED}(?:,\s+${HARDWARE_MEDIA},)?
   
