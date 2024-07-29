@@ -35,3 +35,7 @@ Any PRs with fixes or improvements are very welcome!
 ## Questions
 
 For any questions or comments, please check the [FAQ](https://ntc-templates.readthedocs.io/en/latest/user/faq/) first. Feel free to also swing by the [Network to Code Slack](https://networktocode.slack.com/) (channel `#networktocode`), sign up [here](http://slack.networktocode.com/) if you don't have an account.
+
+## Additional Automation Resources
+
+There are situations where one solution or tool might not fulfill needs or as well as another. Fortunately there are often alternatives and the [Awesome Network Automation](https://github.com/networktocode/awesome-network-automation) list can help introduce you to additional resources and solutions!
