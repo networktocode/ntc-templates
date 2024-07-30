@@ -7,10 +7,10 @@ Value VLAN_TYPE (\S+)
 Value S_VLAN (\d+)
 Value S_PRI (\d+)
 Value S_PRI_POLICY (\S+)
-Value NATIVE_VLAN (\d+)
-Value DEFAULT_PRIORITY (\d+)
-Value DOWNSTREAM_MODE (\S+)
-Value MISMATCH_POLICY (\S+)
+Value Fillup NATIVE_VLAN (\d+)
+Value Fillup DEFAULT_PRIORITY (\d+)
+Value Fillup DOWNSTREAM_MODE (\S+)
+Value Fillup MISMATCH_POLICY (\S+)
 
 Start
   ^\s*Port\s*Port\s*C-VLAN\s*C-PRI\s*ETH-type\s*VLAN-type\s*S-VLAN\s*S-PRI\s*S-PRI\s*
@@ -20,7 +20,5 @@ Start
   ^\s*Default\s*priority\s*:\s*${DEFAULT_PRIORITY}\s*
   ^\s*Downstream\s*mode\s*:\s*${DOWNSTREAM_MODE}\s*
   ^\s*Mismatch\s*policy\s*:\s*${MISMATCH_POLICY}\s* 
-  ^\s*
-  ^. -> Error
   ^\s*
   ^. -> Error
