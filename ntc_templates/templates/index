@@ -511,7 +511,7 @@ cisco_xr_show_pim_ipv4_group-map.textfsm, .*, cisco_xr, sh[[ow]] pim ipv4 group-
 cisco_xr_show_pim_ipv4_interface.textfsm, .*, cisco_xr, sh[[ow]] pim ipv4 int[[erface]]
 cisco_xr_show_redundancy_summary.textfsm, .*, cisco_xr, sh[[ow]] redun[[dancy]] summ[[ary]]
 cisco_xr_show_pim_ipv4_neighbor.textfsm, .*, cisco_xr, sh[[ow]] pim ipv4 nei[[ghbor]]
-cisco_xr_admin_show_inventory.textfsm, .*, cisco_xr, adm[[in]] sh[[ow]] inven[[tory]]
+cisco_xr_admin_show_inventory.textfsm, .*, cisco_xr, (adm[[in]] )?sh[[ow]] inven[[tory]]
 cisco_xr_show_interface_brief.textfsm, .*, cisco_xr, sh[[ow]] int[[erface]] br[[ief]]
 cisco_xr_admin_show_platform.textfsm, .*, cisco_xr, (adm[[in]] )?sh[[ow]] pla[[tform]]
 cisco_xr_show_install_active.textfsm, .*, cisco_xr, sh[[ow]] install active
@@ -530,7 +530,6 @@ cisco_xr_show_bfd_sessions.textfsm, .*, cisco_xr, sh[[ow]] bf[[d]] sess[[ions]]
 cisco_xr_show_drops_np_all.textfsm, .*, cisco_xr, sh[[ow]] drops np all
 cisco_xr_show_pim_neighbor.textfsm, .*, cisco_xr, sh[[ow]] pi[[m]] neigh[[bor]]
 cisco_xr_show_interfaces.textfsm, .*, cisco_xr, sh[[ow]] inte[[rfaces]]
-cisco_xr_show_inventory.textfsm, .*, cisco_xr, sh[[ow]] inv[[entory]]
 cisco_xr_admin_show_vm.textfsm, .*, cisco_xr, adm[[in]] sh[[ow]] vm
 cisco_xr_show_ip_route.textfsm, .*, cisco_xr, sh[[ow]] (?:ip )?ro[[ute]]
 cisco_xr_show_version.textfsm, .*, cisco_xr, sh[[ow]] ver[[sion]]
@@ -635,8 +634,10 @@ hp_procurve_show_ip.textfsm, .*, hp_procurve, sh[[ow]] ip
 
 huawei_smartax_display_ont_info_summary_ont.textfsm:huawei_smartax_display_ont_info_summary_sn.textfsm, .*, huawei_smartax, di[[splay]] ont i[[nfo]] su[[mmary]] \S+ *$
 huawei_smartax_display_ont_info_0_1_2.textfsm:huawei_smartax_display_ont_info_description.textfsm, .*, huawei_smartax, di[[splay]] ont i[[nfo]] (\d+\s*|\d+ \d+ \d+\s*) *$
+huawei_smartax_display_ont_port_vlan_0_1_byvlan_0.textfsm, .*, huawei_smartax, di[[splay]] ont p[[ort]] v[[lan]] \d+ \d+ byvlan \d+
 huawei_smartax_display_ont_optical-info_0_all.textfsm, .*, huawei_smartax, di[[splay]] ont o[[ptical-info]] \d+ all
 huawei_smartax_display_ont_snmp-profile_0_all.textfsm, .*, huawei_smartax, di[[splay]] ont s[[nmp-profile]] \d+ all
+huawei_smartax_display_ont_gemport_0_ontid_0.textfsm, .*, huawei_smartax, di[[splay]] ont g[[emport]] \d+ ontid \d+\s*
 huawei_smartax_display_sysman_service_state.textfsm, .*, huawei_smartax, di[[splay]] sysman s[[ervice]] s[[tate]]
 huawei_smartax_display_board_serial-number.textfsm, .*, huawei_smartax, di[[splay]] bo[[ard]] s[[erial-number]]\s*
 huawei_smartax_display_ont_autofind.textfsm, .*, huawei_smartax, di[[splay]] ont a[[utofind]]\s*
