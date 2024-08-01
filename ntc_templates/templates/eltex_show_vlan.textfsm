@@ -9,6 +9,7 @@ Value CREATED_BY (\S+)
 
 Start
   ^\s*Vlan\s+mode:.*$$
+  ^\s*Created by:.*$$
   ^\s*Vlan\s+Name\s+Tagged\s+ports\s+Untagged\s+ports\s+Type\s+Authorization\s*$$ -> TableType1
   ^\s*Vlan\s+Name\s+Ports\s+Type\s+Authorization\s*$$ -> TableType2
   ^\s*Vlan\s+Name\s+Tagged\s+Ports\s+UnTagged\s+Ports\s+Created\s+by\s*$$ -> TableType3
