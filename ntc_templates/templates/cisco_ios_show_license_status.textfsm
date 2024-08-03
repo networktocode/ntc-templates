@@ -10,6 +10,13 @@ Value SL_REG_STATUS (\S+)
 Value SL_VIRT_ACCT (.*)
 Value SL_SMART_ACCT (.*?)
 Value SL_LICENSE_AUTH (.*)
+Value LAST_ACK_RECEIVED (.*)
+Value NEXT_ACK_DEADLINE (.*)
+Value RPT_PUSH_INTERVAL (.*)
+Value NEXT_ACK_PUSH_CHECK (.*)
+Value NEXT_RPT_PUSH (.*)
+Value LAST_RPT_PUSH (.*)
+Value LAST_RPT_FILE_WRITE (.*)
 
 Start
   ^Smart\s+Licensing\s+is\s+${SL_ENABLED}\s*$$
@@ -17,7 +24,8 @@ Start
   ^Transport:\s*$$ -> Transport
   ^Registration:\s*$$ -> Registration
   ^Account\s+Information:\s*$$ -> Registration
-  ^License\s+Authorization:\s* -> LicenseAuth
+  ^License\s+Authorization:\s*$$ -> LicenseAuth
+  ^Usage\s+Reporting:\s*$$ -> UsageReporting
   # match other sections
   ^\s*(\S+\s*)+$$
   ^\s*$$
@@ -53,5 +61,16 @@ LicenseAuth
   ^\s+Status:\s+${SL_LICENSE_AUTH}(\s+\S+){6}$$
   # match other lines
   ^\s+(\S+\s*)+$$
+  ^\s*$$ -> Start
+  ^. -> Error
+
+UsageReporting
+  ^\s+Last\s+ACK\s+received:\s+${LAST_ACK_RECEIVED}\s*$$
+  ^\s+Next\s+ACK\s+deadline:\s+${NEXT_ACK_DEADLINE}\s*$$
+  ^\s+Reporting\s+push\s+interval:\s+${RPT_PUSH_INTERVAL}\s*$$
+  ^\s+Next\s+ACK\s+push\s+check:\s+${NEXT_ACK_PUSH_CHECK}\s*$$
+  ^\s+Next\s+report\s+push:\s+${NEXT_RPT_PUSH}\s*$$
+  ^\s+Last\s+report\s+push:\s+${LAST_RPT_PUSH}\s*$$
+  ^\s+Last\s+report\s+file\s+write:\s+${LAST_RPT_FILE_WRITE}\s*$$
   ^\s*$$ -> Start
   ^. -> Error

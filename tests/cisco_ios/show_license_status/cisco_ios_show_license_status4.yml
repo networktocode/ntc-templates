@@ -1,6 +1,13 @@
 ---
 parsed_sample:
-  - sl_enabled: "ENABLED"
+  - last_ack_received: "Aug 03 09:03:25 2024 est"
+    last_rpt_file_write: "<none>"
+    last_rpt_push: "Aug 03 09:03:26 2024 est"
+    next_ack_deadline: "Aug 03 09:03:25 2025 est"
+    next_ack_push_check: "Aug 03 09:05:29 2024 est"
+    next_rpt_push: "<none>"
+    rpt_push_interval: "0 (no reporting)"
+    sl_enabled: "ENABLED"
     sl_license_auth: ""
     sl_proxy_address: "proxy.foo.bar.com"
     sl_proxy_password: "<empty>"
