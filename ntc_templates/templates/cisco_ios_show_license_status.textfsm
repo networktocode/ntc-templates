@@ -3,7 +3,7 @@ Value SL_TRANSPORT (.*)
 Value SL_URL (\S+)
 Value SL_REG_STATUS (\S+)
 Value SL_VIRT_ACCT (.*)
-Value SL_SMART_ACCT (.*)
+Value SL_SMART_ACCT (.*?)
 Value SL_LICENSE_AUTH (.*)
 
 Start
@@ -26,7 +26,7 @@ Transport
 
 Registration
   ^\s+Status:\s+${SL_REG_STATUS}\s*$$
-  ^\s+Smart\s+Account:\s+${SL_SMART_ACCT}\s*$$
+  ^\s+Smart\s+Account:\s+${SL_SMART_ACCT}(\s+As\s+of(\s+\S+)+)?\s*$$
   ^\s+Virtual\s+Account:\s+${SL_VIRT_ACCT}\s*$$
   # match other lines
   ^\s+(\S+\s*)+$$
