@@ -1,15 +1,15 @@
 Value SL_ENABLED (\S+)
-Value SL_TRANSPORT (.*)
-Value SL_URL (\S+)
-Value SL_PROXY_ADDRESS (\S+)
-Value SL_PROXY_PORT (\d+)
-Value SL_PROXY_USERNAME (\S+)
-Value SL_PROXY_PASSWORD (\S+)
-Value SL_VRF (\S+)
-Value SL_REG_STATUS (\S+)
-Value SL_VIRT_ACCT (.*)
-Value SL_SMART_ACCT (.*?)
-Value SL_LICENSE_AUTH (.*)
+Value TRANSPORT_TYPE (.*)
+Value URL (\S+)
+Value PROXY_ADDRESS (\S+)
+Value PROXY_PORT (\d+)
+Value PROXY_USERNAME (\S+)
+Value PROXY_PASSWORD (\S+)
+Value VRF (\S+)
+Value REG_STATUS (\S+)
+Value VIRT_ACCT (.*)
+Value SMART_ACCT (.*?)
+Value LICENSE_AUTH (.*)
 Value LAST_ACK_RECEIVED (.*)
 Value NEXT_ACK_DEADLINE (.*)
 Value RPT_PUSH_INTERVAL (.*)
@@ -37,28 +37,28 @@ UsingPolicy
   ^. -> Error
 
 Transport
-  ^\s+Type:\s+${SL_TRANSPORT}\s*$$
-  ^\s+URL:\s+${SL_URL}\s*$$
-  ^\s+Address:\s+${SL_PROXY_ADDRESS}\s*$$
-  ^\s+Port:\s+${SL_PROXY_PORT}\s*$$
-  ^\s+Username:\s+${SL_PROXY_USERNAME}\s*$$
-  ^\s+Password:\s+${SL_PROXY_PASSWORD}\s*$$
-  ^\s+VRF:\s+${SL_VRF}\s*$$
+  ^\s+Type:\s+${TRANSPORT_TYPE}\s*$$
+  ^\s+URL:\s+${URL}\s*$$
+  ^\s+Address:\s+${PROXY_ADDRESS}\s*$$
+  ^\s+Port:\s+${PROXY_PORT}\s*$$
+  ^\s+Username:\s+${PROXY_USERNAME}\s*$$
+  ^\s+Password:\s+${PROXY_PASSWORD}\s*$$
+  ^\s+VRF:\s+${VRF}\s*$$
   ^\s+(\S+\s*)+$$
   ^\s*$$ -> Start
   ^. -> Error
 
 Registration
-  ^\s+Status:\s+${SL_REG_STATUS}\s*$$
-  ^\s+Smart\s+Account:\s+${SL_SMART_ACCT}(\s+As\s+of(\s+\S+)+)?\s*$$
-  ^\s+Virtual\s+Account:\s+${SL_VIRT_ACCT}\s*$$
+  ^\s+Status:\s+${REG_STATUS}\s*$$
+  ^\s+Smart\s+Account:\s+${SMART_ACCT}(\s+As\s+of(\s+\S+)+)?\s*$$
+  ^\s+Virtual\s+Account:\s+${VIRT_ACCT}\s*$$
   # match other lines
   ^\s+(\S+\s*)+$$
   ^\s*$$ -> Start
   ^. -> Error
 
 LicenseAuth
-  ^\s+Status:\s+${SL_LICENSE_AUTH}(\s+\S+){6}$$
+  ^\s+Status:\s+${LICENSE_AUTH}(\s+\S+){6}$$
   # match other lines
   ^\s+(\S+\s*)+$$
   ^\s*$$ -> Start
