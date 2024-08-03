@@ -1,6 +1,11 @@
 Value SL_ENABLED (\S+)
 Value SL_TRANSPORT (.*)
 Value SL_URL (\S+)
+Value SL_PROXY_ADDRESS (\S+)
+Value SL_PROXY_PORT (\d+)
+Value SL_PROXY_USERNAME (\S+)
+Value SL_PROXY_PASSWORD (\S+)
+Value SL_VRF (\S+)
 Value SL_REG_STATUS (\S+)
 Value SL_VIRT_ACCT (.*)
 Value SL_SMART_ACCT (.*?)
@@ -8,6 +13,7 @@ Value SL_LICENSE_AUTH (.*)
 
 Start
   ^Smart\s+Licensing\s+is\s+${SL_ENABLED}\s*$$
+  ^Smart\s+Licensing\s+Using\s+Policy:\s*$$ -> UsingPolicy
   ^Transport:\s*$$ -> Transport
   ^Registration:\s*$$ -> Registration
   ^Account\s+Information:\s*$$ -> Registration
@@ -17,9 +23,19 @@ Start
   ^\s*$$
   ^. -> Error
 
+UsingPolicy
+  ^\s+Status:\s+${SL_ENABLED}\s*$$
+  ^\s*$$ -> Start
+  ^. -> Error
+
 Transport
   ^\s+Type:\s+${SL_TRANSPORT}\s*$$
   ^\s+URL:\s+${SL_URL}\s*$$
+  ^\s+Address:\s+${SL_PROXY_ADDRESS}\s*$$
+  ^\s+Port:\s+${SL_PROXY_PORT}\s*$$
+  ^\s+Username:\s+${SL_PROXY_USERNAME}\s*$$
+  ^\s+Password:\s+${SL_PROXY_PASSWORD}\s*$$
+  ^\s+VRF:\s+${SL_VRF}\s*$$
   ^\s+(\S+\s*)+$$
   ^\s*$$ -> Start
   ^. -> Error
