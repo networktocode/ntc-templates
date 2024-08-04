@@ -14,6 +14,7 @@ Start
   ^Slot\/Card.+$$ -> Card
   ^. -> Error
 
+# device card
 Card
   ^${SLOT}/${CARD}\s+${PID}\s+${ONLINE_STATUS}\s+${POWER_STATUS}\s+${REGISTER_STATUS}\s+${ALARM_STATUS}\s*$$ -> Record
   ^\-+$$
