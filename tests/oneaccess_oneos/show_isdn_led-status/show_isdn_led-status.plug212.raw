@@ -1,0 +1,30 @@
+
+ Status of VOIP service
+
+ 1 Dial-peer pots up.
+ 1 Dial-peer voip up.
+
+ Sip-gateway status is no shutdown,
+ -> is registered
+    1/1 ep is registered with registrar sip.blabla.be:5060
+ -> IF loopback 1 [1.2.3.4] is up.
+
+ No Sip-server,
+
+ no voice com...
+
+Isdn virtual LEDs
+isdnshut    = 1  0  0 
+Layer1State = A  -  - 
+nbcomm      = 0  0  0 
+
+voice led track-conditions
+ voice-gw   any
+ voice-port any
+
+Sys LEDs
+SYS LED VOIP color=GREEN state=ON
+
+SYS LED PRI  color=GREEN state=OFF
+SYS LED BRI1 color=- state=OFF
+SYS LED BRI2 color=- state=OFF

@@ -1,0 +1,19 @@
+route-map BGP-MAP-OUT permit 10
+ match as-path 102
+ set origin igp
+ set metric 50
+exit
+route-map BGP_SECONDARY_OUT permit 10
+ set as-path prepend 65000 65000 65000
+ set origin       igp
+ set local-preference 50
+ set metric       100
+exit
+route-map CONNECTED-BGP deny 5
+ match ip address prefix-list DENY-BGP
+exit
+route-map CONNECTED-BGP permit 10
+ set origin       igp
+ set local-preference 100
+ set metric       50
+exit

@@ -4,7 +4,7 @@ Value SPEED (\d+G?)
 Value DESCRIPTION (\S.*?)
 
 Start
-  ^Interface\s+Description\s*$$ -> Begin
+  ^(Interface\s+Description|Port\s+Type\s+Speed\s+Description)\s*$$ -> Begin
 
 Begin
   ^-+

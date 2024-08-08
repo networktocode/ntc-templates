@@ -28,6 +28,7 @@ Start
   ^${PORT_TYPE}\s+Port,\s*The\s+Maximum\s+Transmit\s+Unit\s+is\s+${MTU}
   ^${PORT_TYPE}\s+Port,(\s+PVID\s+:\s*${PVID},)?(\s*[^,]+,){1,}(\s+The\s+Maximum\s+(Frame\s+Length|Transmit\s+Unit)\s+is\s+${MTU})?
   ^PVID\s*:\s+${PVID},(\s*[^,]+,){0,}\s+The\s+Maximum\s+Frame\s+Length\s+is\s+${MTU}
+  ^Internet\s+Address\s+is\s+allocated\s+by\s+DHCP,\s+${INTERNET_ADDRESS}\s*$$
   ^Internet\s+Address\s+is\s+negotiated,\s+${INTERNET_ADDRESS}\s*$$
   ^Internet\s+Address\s+is\s+${INTERNET_ADDRESS}\s*$$
   ^.*,\s+Hardware\s+address\s+is\s+${HARDWARE_ADDRESS}\s*$$

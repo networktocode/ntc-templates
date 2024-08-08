@@ -1,0 +1,61 @@
+
+Utility:
+  Status: DISABLED
+
+Smart Licensing Using Policy:
+  Status: ENABLED
+
+Account Information:
+  Smart Account: Eg-SA As of Dec 03 15:26:02 2021 UTC
+  Virtual Account: Eg-VA
+
+Data Privacy:
+  Sending Hostname: yes
+    Callhome hostname privacy: DISABLED
+    Smart Licensing hostname privacy: DISABLED
+  Version privacy: DISABLED
+
+Transport:
+  Type: Smart
+  URL: https://smartreceiver.cisco.com/licservice/license
+  Proxy:
+    Not Configured
+  VRF:
+    Not Configured
+          
+Policy:   
+  Policy in use: Installed On Dec 03 08:23:45 2021 UTC
+  Policy name: SLE Policy
+  Reporting ACK required: yes (Customer Policy)
+  Unenforced/Non-Export Perpetual Attributes:
+    First report requirement (days): 30 (Customer Policy)
+    Reporting frequency (days): 60 (Customer Policy)
+    Report on change (days): 60 (Customer Policy)
+  Unenforced/Non-Export Subscription Attributes:
+    First report requirement (days): 120 (Customer Policy)
+    Reporting frequency (days): 111 (Customer Policy)
+    Report on change (days): 111 (Customer Policy)
+  Enforced (Perpetual/Subscription) License Attributes:
+    First report requirement (days): 30 (Customer Policy)
+    Reporting frequency (days): 90 (Customer Policy)
+    Report on change (days): 60 (Customer Policy)
+  Export (Perpetual/Subscription) License Attributes:
+    First report requirement (days): 30 (Customer Policy)
+    Reporting frequency (days): 30 (Customer Policy)
+    Report on change (days): 30 (Customer Policy)
+          
+Miscellaneous:
+  Custom Id: <empty>
+          
+Usage Reporting:
+  Last ACK received: Dec 03 08:34:58 2021 UTC
+  Next ACK deadline: Jan 02 08:34:58 2022 UTC
+  Reporting push interval: 30  days
+  Next ACK push check: Dec 07 08:31:32 2021 UTC
+  Next report push: Jan 02 08:30:57 2022 UTC
+  Last report push: Dec 03 08:30:57 2021 UTC
+  Last report file write: <none>
+          
+Trust Code Installed: Dec 03 08:23:45 2021 UTC
+
+

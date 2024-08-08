@@ -1,0 +1,10 @@
+VRF: MGMT
+Address         Age (sec)  Hardware Addr   Interface
+10.1.1.1          0:00:00  004c.6211.113e  Vlan1
+
+VRF: default
+Address         Age (sec)  Hardware Addr   Interface
+172.16.0.1               0 004c.6211.223b  Vlan101, Port-Channel2
+172.16.0.2               0 004c.6214.333c  Vlan1000, Port-Channel1
+172.16.0.3               0 004c.6219.444d  Ethernet1
+10.10.1.1              N/A 0002.00ff.555e  Vlan1, not learned

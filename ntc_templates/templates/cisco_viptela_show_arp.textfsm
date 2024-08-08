@@ -1,0 +1,14 @@
+Value VPN (\d+)
+Value NAME (\S+)
+Value IP_ADDRESS (\S+)
+Value MAC_ADDRESS (\S+)
+Value STATE (\S+)
+Value IDLE_TIMER (\S+)
+Value UPTIME (\S+)
+
+Start
+  ^\s*IF
+  ^\s*VPN\s+(IF\s+)?NAME\s+IP\s+MAC\s+STATE\s+IDLE\s+TIMER\s+UPTIME
+  ^-+
+  ^\s*${VPN}\s+${NAME}\s+${IP_ADDRESS}\s+${MAC_ADDRESS}\s+${STATE}\s+${IDLE_TIMER}\s+${UPTIME} -> Record
+  ^. -> Error

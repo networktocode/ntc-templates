@@ -1,0 +1,64 @@
+SFP 1/0:
+    Physical device             = SFP transceiver
+    connector                   = LC
+    vendor: 
+        name                    = ONE ACCESS      
+        id                      = unspecified
+        partNumber              = OA40681         
+        revision                = A   
+        serialNumber            = F79B0FE         
+        dateCode                = 191218  
+    transceiver:
+        sonetOc48               = not available
+        sonetOc12_3             = not available
+        ethernetComplianceCode  = 1000BASE-SX
+        10G ethernetComplianceCode  = not available
+        fiberLinkLen            = intermediate distance
+        fiberTech               = Shortwave laser w/o OFC
+        fiberTxMedia            = not available
+        fiberSpeed              = 100 MBytes/Sec
+    wavelength                  = 20995 nm
+    encoding                    = 8B10B
+    nominalBitRate              =  1300 Mbps
+    Link length in: 
+        single fiber mode       = 0 m
+        50u multi-mode fiber    = 550 m
+        62.5u multi-mode fiber  = 270 m
+        copper cable            = Not supported
+    options                     = Loss of Signal
+                                  TX_FAULT signal
+                                  TX_DISABLE signal
+    Max bit rate                = not specified
+    Min bit rate                = not specified
+
+    Diagnostics calibration is internal
+    Temp High Alarm       = 85.0 C
+    Temp Low Alarm        = -10.0 C
+    Temp High Warning     = 80.0 C
+    Temp Low Warning      = -5.0 C
+    Voltage High Alarm    = 3.60 V
+    Voltage Low Alarm     = 2.90 V
+    Voltage High Warning  = 3.50 V
+    Voltage Low Warning   = 3.00 V
+    Bias High Alarm       = 50.000 mA
+    Bias Low Alarm        = 0.500 mA
+    Bias High Warning     = 40.000 mA
+    Bias Low Warning      = 0.100 mA
+    TX Power High Alarm   = 0.7943 mW
+    TX Power Low Alarm    = 0.0631 mW
+    TX Power High Warning = 0.6310 mW
+    TX Power Low Warning  = 0.0794 mW
+    RX Power High Alarm   = 1.2589 mW
+    RX Power Low Alarm    = 0.0100 mW
+    RX Power High Warning = 1.0000 mW
+    RX Power Low Warning  = 0.0126 mW
+    Internally Measured Module Temperature = 57.4 C
+    Internally Measured Supply Voltage     = 3.30 V
+    Internally Measured Tx Bias Current    = 10.700 mA
+    Measured Tx Output Power               = 0.2153 mW (-6.67 dBm)
+    Measured Rx Input Power                = 0.1287 mW (-8.90 dBm)
+    Optional Status Control Reg            = 0x00
+    Alarm and Warning Flag Reg offset 112  = 0x00
+    Alarm and Warning Flag Reg offset 113  = 0x00
+    Alarm and Warning Flag Reg offset 116  = 0x00
+    Alarm and Warning Flag Reg offset 117  = 0x00
