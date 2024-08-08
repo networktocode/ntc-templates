@@ -19,6 +19,7 @@ VID  Type    Ports
                 XGE0/0/17(D)    XGE0/0/18(D)
              TG:40GE0/0/1(D)    40GE0/0/2(D)    40GE0/0/3(D)    40GE0/0/4(D)
                 40GE0/0/5(D)    40GE0/0/6(D)
+1555 common  TG:Eth-Trunk0(U)
 
 VID  Status  Property      MAC-LRN Statistics Description
 --------------------------------------------------------------------------------
@@ -26,3 +27,4 @@ VID  Status  Property      MAC-LRN Statistics Description
 10   enable  default       enable  disable    VLAN 0010
 20   enable  default       enable  disable    VLAN 0020
 30   enable  default       enable  disable    VLAN 0030
+1555 enable  multicastVLAN enable  disable    VLAN 1555

@@ -4,6 +4,7 @@ Value MAC_ADDRESS (.*)
 Value TYPE (\S+)
 Value LINK_STATE (.*)
 Value MTU (\d+)
+Value INSTANCE (\d+)
 Value AUTONEG (.*)
 Value SPEED (.*)
 Value COMMENT (\S.*)
@@ -19,6 +20,7 @@ Start
   ^\s+mac-addr\s${MAC_ADDRESS}
   ^\s+type\s${TYPE}
   ^\s+link-state\s${LINK_STATE}
+  ^\s+instance\s${INSTANCE}
   ^\s+mtu\s${MTU}
   ^\s+auto-negotiation\s${AUTONEG}
   ^\s+speed\s${SPEED}
@@ -28,4 +30,3 @@ Start
   ^\s+ipv6-address\s${IPV6_ADDRESS}\s*$$
   ^\s+ipv6-local-link-address\s${IPV6_LL_ADDRESS}/${IPV6_LL_MASK}
   ^Statistics: -> Record
-

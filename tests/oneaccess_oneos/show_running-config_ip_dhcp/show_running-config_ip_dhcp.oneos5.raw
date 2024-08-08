@@ -1,0 +1,40 @@
+ip dhcp vrf INTERNET excluded-address 192.168.10.1
+ip dhcp pool DHCP_LBB                
+ vrf INTERNET
+ lease 0 8 0
+default-router 192.168.10.1
+dns-server 212.224.255.252 212.224.255.254
+network 192.168.10.0 255.255.255.0
+exit
+ip dhcp pool OrangeShopWifi-VLAN20
+lease 0 8 0
+domain-name  OrangeShopWifi
+default-router 10.32.60.1
+dns-server 212.224.129.90 212.224.129.94
+network 10.32.60.0 255.255.255.0
+exit
+ip dhcp pool OrangeShopDigitalSignage-VLAN30
+lease 0 8 0
+default-router 10.42.60.1
+domain-name  OrangeShopDigitalSignage
+dns-server 212.224.129.90 212.224.129.94
+network 10.42.60.0 255.255.255.0
+exit
+ip dhcp pool OrangeShopSecurity-VLAN40
+lease 0 8 0
+default-router 10.52.60.1
+domain-name  OrangeShopSecurity
+dns-server 212.224.129.90 212.224.129.94
+network 10.52.60.0 255.255.255.0
+exit
+ip dhcp pool TEST-MAARTEN
+dns-server 10.200.19.4 10.200.19.5
+exit
+ip dhcp pool TEST-FEDERALE-WOUTER
+dns-server 10.20.25.6 10.0.1.228 172.20.64.13
+domain-name  federale.be
+exit
+ip dhcp pool TEST1
+dns-server 1.1.1.1 192.168.50.20 192.168.50.30 2.2.2.2 3.3.3.3
+exit
+!

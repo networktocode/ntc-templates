@@ -1,0 +1,23 @@
+Switch Number: 2 Role: Virtual Switch Standby
+
+Chassis Type : WS-C4507R+E
+
+Power consumed by backplane : 40 Watts
+
+Mod Ports Card Type                              Model              Serial No.
+---+-----+--------------------------------------+------------------+-----------
+ 1    12  10GE SFP+                              WS-X4712-SFP+E     CAT1715L0SK
+ 2    12  10GE SFP+                              WS-X4712-SFP+E     CAT1715L0W1
+ 3     4  Sup 7-E 10GE (SFP+), 1000BaseX (SFP)   WS-X45-SUP7-E      CAT1711L1U0
+ 5    12  10GE SFP+                              WS-X4712-SFP+E     CAT1715L0UG
+
+ M MAC addresses                    Hw  Fw           Sw               Status
+--+--------------------------------+---+------------+----------------+---------
+ 1 bc16.65c6.8350 to bc16.65c6.835b 1.1                               Ok
+ 2 bc16.65c6.8854 to bc16.65c6.885f 1.1                               Ok
+ 3 4c4e.35a0.7f40 to 4c4e.35a0.7f43 2.1 15.0(1r)SG5  03.07.02.E       Ok
+ 5 bc16.65c6.8818 to bc16.65c6.8823 1.1                               Ok
+
+Mod  Redundancy role     Operating mode      Redundancy status
+----+-------------------+-------------------+----------------------------------
+ 3   Standby Supervisor  SSO                 Standby hot

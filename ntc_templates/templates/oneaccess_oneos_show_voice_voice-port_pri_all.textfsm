@@ -1,0 +1,88 @@
+Value Required PORT (\d+\/\d+)
+Value PHYSICAL_TYPE (\S+)
+Value PROTOCOL_DESCRIPTOR (\S+)
+Value CONFIG_STATE (\S+)
+Value LOOP_STATE (\S+)
+Value FRAMING (\S+)
+Value L1_STATUS (\S+)
+Value AIS (\S+)
+Value LOS (\S+)
+Value RAI (\S+)
+Value PRI_AIS_OCCURRENCES (\d+)
+Value PRI_LOS_OCCURRENCES (\d+)
+Value PRI_RAI_OCCURRENCES (\d+)
+Value L2_STATUS (\S+)
+Value PRI_TX_FRAMES_ON_D_CHANNEL (\d+)
+Value PRI_RX_FRAMES_ON_D_CHANNEL (\d+)
+Value ATTACHED_VOIP_DIAL_PEER (\d+)
+Value NBR_VOICE_COMMunication (\d+)
+Value OUTGOING_CALLS (\d+)
+Value OUTGOING_FAILURES (\d+)
+Value OUTGOING_FAILURES_PHYSICAL_INTF_DOWN (\d+)
+Value OUTGOING_FAILURES_0_NORMAL (\d+)
+Value OUTGOING_FAILURES_1_NORMAL (\d+)
+Value OUTGOING_FAILURES_16_NORMAL (\d+)
+Value OUTGOING_FAILURES_17_BUSY (\d+)
+Value OUTGOING_FAILURES_18_NO_ANSWER (\d+)
+Value OUTGOING_FAILURES_2_UNAVAILABLE_RESOURCES (\d+)
+Value OUTGOING_FAILURES_3_UNAVAILABLE_SERVICE (\d+)
+Value OUTGOING_FAILURES_4_SERVICE_NOT_PROVIDED (\d+)
+Value OUTGOING_FAILURES_5_INVALID_MESSAGE (\d+)
+Value OUTGOING_FAILURES_6_PROTOCOL (\d+)
+Value OUTGOING_FAILURES_7_INTERWORKING (\d+)
+Value INCOMING_CALLS (\d+)
+Value INCOMING_CALLS_BACKUP_INVOKED (\d+)
+Value INCOMING_FAILURES (\d+)
+Value INCOMING_FAILURES_REMOTE (\d+)
+Value INCOMING_FAILURES_UNKOWN_NUMBER (\d+)
+Value INCOMING_FAILURES_DSP_UNAVAILABLE (\d+)
+Value INCOMING_FAILURES_NO_VOIP_RESOURCE_AVAILABLE (\d+)
+Value INCOMING_FAILURES_NOT_SPECIFIED (\d+)
+
+Start
+  ^\s*voice\sport -> Continue.Record
+  ^\s*voice\sport\s+${PORT}
+  ^\s*physical\stype\s+${PHYSICAL_TYPE}
+  ^\s*protocol\sdescriptor\s+${PROTOCOL_DESCRIPTOR}
+  ^\s*config\sstate\s+${CONFIG_STATE}
+  ^\s*loop\sstate\s+${LOOP_STATE}
+  ^\s*framing\s+${FRAMING}
+  ^\s*layer\s1\sstatus\s+${L1_STATUS}
+  ^\s*Alarm\sIndication\sSignal\s+\(AIS\)\s+${AIS}
+  ^\s*Loss\sOff\sSignal\s+\(LOS\)\s+${LOS}
+  ^\s*Remote\sAlarm\sIndication\s+\(RAI\)\s+${RAI}
+  ^\s*pri\sAIS\soccurrence\(s\)\s+${PRI_AIS_OCCURRENCES}
+  ^\s*pri\sLOS\soccurrence\(s\)\s+${PRI_LOS_OCCURRENCES}
+  ^\s*pri\sRAI\soccurrence\(s\)\s+${PRI_RAI_OCCURRENCES}
+  ^\s*layer\s2\sstatus\s+${L2_STATUS}
+  ^\s*pri\sTx\sframes\son\sD\schannel\s+${PRI_TX_FRAMES_ON_D_CHANNEL}
+  ^\s*pri\sRx\sframes\son\sD\schannel\s+${PRI_RX_FRAMES_ON_D_CHANNEL}
+  ^\s*attached\svoip\sdial\speer\s+${ATTACHED_VOIP_DIAL_PEER}
+  ^\s*number\sof\svoice\scommunication\s+${NBR_VOICE_COMMunication}
+  ^\s*Outgoing\scalls\s+${OUTGOING_CALLS}
+  ^\s*Outgoing\scalls\sfailures\s+${OUTGOING_FAILURES}
+  ^\s*Physical\sInterface\sdown\s+${OUTGOING_FAILURES_PHYSICAL_INTF_DOWN}
+  ^\s*Cause\sClass\s0\s+.*${OUTGOING_FAILURES_0_NORMAL}
+  ^\s*Cause\sClass\s1\s+.*${OUTGOING_FAILURES_1_NORMAL}
+  ^\s*Normal\sCause\s\(16\)\s+${OUTGOING_FAILURES_16_NORMAL}
+  ^\s*User\sbusy\s\(17\)\s+${OUTGOING_FAILURES_17_BUSY}
+  ^\s*No\sanswer\s\(18\)\s+${OUTGOING_FAILURES_18_NO_ANSWER}
+  ^\s*Cause\sClass\s2\s+.*${OUTGOING_FAILURES_2_UNAVAILABLE_RESOURCES}
+  ^\s*Cause\sClass\s3\s+.*${OUTGOING_FAILURES_3_UNAVAILABLE_SERVICE}
+  ^\s*Cause\sClass\s4\s+.*${OUTGOING_FAILURES_4_SERVICE_NOT_PROVIDED}
+  ^\s*Cause\sClass\s5\s+.*${OUTGOING_FAILURES_5_INVALID_MESSAGE}
+  ^\s*Cause\sClass\s6\s+.*${OUTGOING_FAILURES_6_PROTOCOL}
+  ^\s*Cause\sClass\s7\s+.*${OUTGOING_FAILURES_7_INTERWORKING}
+  ^\s*Incoming\scalls\s+${INCOMING_CALLS}
+  ^\s*Incoming\scalls\sbackup\sinvoked\s+${INCOMING_CALLS_BACKUP_INVOKED}
+  ^\s*Incoming\scalls\sfailures\s+${INCOMING_FAILURES}
+  ^\s*Remote\sfailure\s+${INCOMING_FAILURES_REMOTE}
+  ^\s*Unknown\snumber\s+${INCOMING_FAILURES_UNKOWN_NUMBER}
+  ^\s*DSP\sunavailable\s+${INCOMING_FAILURES_DSP_UNAVAILABLE}
+  ^\s*No\sVoIP\sresource\savailable\s+${INCOMING_FAILURES_NO_VOIP_RESOURCE_AVAILABLE}
+  ^\s*Not\sspecified\s+${INCOMING_FAILURES_NOT_SPECIFIED}
+  ^\s+Channel\(s\)\s+used
+  ^\s+ces\s*:
+  ^\s+Insufficient
+  ^\s*$$
+  ^. -> Error

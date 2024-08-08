@@ -1,0 +1,16 @@
+Value C_VLAN (\d+)
+Value C_PRI (\d+)
+Value ETH_TYPE (\S+)
+Value VLAN_TYPE (\S+)
+Value PORT_TYPE (\S+)
+Value PORT_ID (\d+)
+Value S_VLAN (\d+)
+Value S_PRI (\d+)
+Value S_PRI_POLICY (\S+)
+
+Start
+  ^\s*C-VLAN\s*C-PRI\s*ETH-type\s*VLAN-type\s*Port\s*Port\s*S-VLAN\s*S-PRI\s*
+  ^\s*type\s*ID\s*POLICY
+  ^\s+${C_VLAN}\s+(-|${C_PRI})\s+${ETH_TYPE}\s+${VLAN_TYPE}\s+${PORT_TYPE}\s+${PORT_ID}\s+${S_VLAN}\s+(-|${S_PRI})\s*(-|${S_PRI_POLICY})\s* -> Record
+  ^\s*
+  ^. -> Error

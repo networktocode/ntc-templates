@@ -1,5 +1,6 @@
 Value UPTIME ((\d+\s\w+.s.,?\s?){4})
 Value LAST_REBOOT_REASON (.+)
+Value BIOS (\d+.\d+(.+)?)
 Value OS (\d+.\d+(.+)?)
 Value BOOT_IMAGE (.*)
 Value PLATFORM (\w+)
@@ -7,6 +8,7 @@ Value HOSTNAME (.*)
 Value SERIAL (\w+)
 
 Start
+  ^\s+(BIOS:\s+version)\s+${BIOS}\s*$$
   ^\s+(NXOS: version|system:\s+version)\s+${OS}\s*$$
   ^\s+(NXOS|kickstart)\s+image\s+file\s+is:\s+${BOOT_IMAGE}\s*$$
   ^\s+cisco\s+${PLATFORM}\s+[cC]hassis

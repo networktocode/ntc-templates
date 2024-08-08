@@ -1,0 +1,64 @@
+Utility:
+  Status: DISABLED
+
+Smart Licensing Using Policy:
+  Status: ENABLED
+
+Account Information:
+  Smart Account: Sample Smart Account As of Aug 03 09:03:25 2024 est
+  Virtual Account: DEFAULT
+
+Data Privacy:
+  Sending Hostname: yes
+    Callhome hostname privacy: DISABLED
+    Smart Licensing hostname privacy: DISABLED
+  Version privacy: DISABLED
+
+Transport:
+  Type: Smart
+  URL: https://smartreceiver.cisco.com/licservice/license
+  Proxy:
+    Address: proxy.foo.bar.com
+    Port: 80
+    Username: <empty>
+    Password: <empty>
+  VRF: <empty>
+
+Policy:
+  Policy in use: Merged from multiple sources.
+  Reporting ACK required: yes (CISCO default)
+  Unenforced/Non-Export Perpetual Attributes:
+    First report requirement (days): 365 (CISCO default)
+    Reporting frequency (days): 0 (CISCO default)
+    Report on change (days): 90 (CISCO default)
+  Unenforced/Non-Export Subscription Attributes:
+    First report requirement (days): 90 (CISCO default)
+    Reporting frequency (days): 90 (CISCO default)
+    Report on change (days): 90 (CISCO default)
+  Enforced (Perpetual/Subscription) License Attributes:
+    First report requirement (days): 0 (CISCO default)
+    Reporting frequency (days): 0 (CISCO default)
+    Report on change (days): 0 (CISCO default)
+  Export (Perpetual/Subscription) License Attributes:
+    First report requirement (days): 0 (CISCO default)
+    Reporting frequency (days): 0 (CISCO default)
+    Report on change (days): 0 (CISCO default)
+
+Miscellaneous:
+  Custom Id: <empty>
+
+Usage Reporting:
+  Last ACK received: Aug 03 09:03:25 2024 est
+  Next ACK deadline: Aug 03 09:03:25 2025 est
+  Reporting push interval: 0 (no reporting)
+  Next ACK push check: Aug 03 09:05:29 2024 est
+  Next report push: <none>
+  Last report push: Aug 03 09:03:26 2024 est
+  Last report file write: <none>
+
+Trust Code Installed: Aug 03 09:02:50 2024 est
+ 
+Device Telemetry Report Summary:
+================================
+Data Channel: AVAILABLE
+Reports on disk: 0 

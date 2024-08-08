@@ -3,7 +3,7 @@ Value MAC_ADDRESS (\S{4}\.\S{4}\.\S{4}(\sto\s\S{4}\.\S{4}\.\S{4})?)
 Value MOD_HW (\S+)
 Value MOD_FW (\S+(\s+\[\w+\])?)
 Value MOD_SW (\S+)
-Value STATUS (\w+)
+Value STATUS (\S+)
 
 
 Start
@@ -14,6 +14,7 @@ Start
 ModStatus
   ^---+
   ^\s*${MODULE}\s+${MAC_ADDRESS}\s+${MOD_HW}\s+${MOD_FW}\s+${MOD_SW}\s+${STATUS}\s*$$ -> Record
+  ^\s*${MODULE}\s+${MOD_FW}\s+${MOD_SW}\s+${STATUS}\s*$$ -> Record
   ^Mod\s+Ports\s+Card\s+Type\s+Model\s+Serial -> End
   ^\s*Mod\s+Sub-Module\s+Model\s+Serial\s+Hw\s+Status\s*$$ -> End
   ^Mod\s+Online\s+Diag\s+Status -> End

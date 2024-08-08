@@ -1,0 +1,10 @@
+  --------------------------------------------------------------------
+  C-VLAN C-PRI ETH-type   VLAN-type   Port   Port S-VLAN S-PRI  S-PRI
+                                      type   ID                 POLICY
+  --------------------------------------------------------------------
+  100    -     IPoE       QINQ        ETH    2    20     3        DSCP
+  100    -     0x6321     QINQ        ETH    4    70     -        -
+  --------------------------------------------------------------------
+  Notes: IPoE indicates IPv4-IPoE, * indicates transparent attribute of
+  the vlan, In the Ethernet encapsulation list, the hexadecimal digits
+  indicate the user-defined Ethernet encapsulation type

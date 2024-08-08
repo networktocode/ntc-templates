@@ -1,0 +1,10 @@
+Value Required PORT (\d+)
+Value Required LP (\d+)
+Value SENSE (\S+|\S+\s\[\S+\])
+Value INTERFACE_STATE (\w+)
+Value VP_STATE (\w+)
+
+Start
+  ^\s*port\s+:\s+${PORT}\s+lp\s+:\s+${LP}\s+sense\s+:\s+${SENSE}\s+(if-state\s+:\s+${INTERFACE_STATE})?\s*\(?vp-state\s*:\s+${VP_STATE}\s*\)? -> Record
+  ^\s*$$
+  ^. -> Error

@@ -1,0 +1,31 @@
+---
+parsed_sample:
+  - name: "ADVERTISE-LOCAL-ONLY"
+    action: "permit"
+    sequence: "10"
+    match_clauses:
+      - "as-path 102"
+    set_clauses: []
+  - name: "BGP-MAP-OUT"
+    action: "permit"
+    sequence: "10"
+    match_clauses:
+      - "as-path 102"
+    set_clauses:
+      - "as-path prepend 65000 65000 65000"
+      - "origin igp"
+      - "metric 100"
+  - name: "CONNECTED-BGP"
+    action: "deny"
+    sequence: "5"
+    match_clauses:
+      - "ip address prefix-list DENY-BGP"
+    set_clauses: []
+  - name: "CONNECTED-BGP"
+    action: "permit"
+    sequence: "10"
+    match_clauses: []
+    set_clauses:
+      - "origin       igp"
+      - "local-preference 50"
+      - "metric       100"

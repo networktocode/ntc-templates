@@ -105,3 +105,19 @@ Address family IPV6 Unicast
   No export VPN route-target communities
   No import route policy
   No export route policy
+
+VRF vrf-test; RD not set; VPN ID not set
+VRF mode: Regular
+Description this is a description
+Address family IPV4 Unicast
+  Import VPN route-target communities:
+    RT:65000:42
+  Export VPN route-target communities:
+    RT:65000:43
+  No import route policy
+  No export route policy
+Address family IPV6 Unicast
+  No import VPN route-target communities
+  No export VPN route-target communities
+  No import route policy
+  No export route policy
