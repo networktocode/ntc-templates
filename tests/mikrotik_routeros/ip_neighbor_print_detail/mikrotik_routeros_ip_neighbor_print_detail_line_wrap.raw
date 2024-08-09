@@ -1,0 +1,6 @@
+ 0 interface=ether2,bridge_local mac-address=12:34:56:78:90:AB identity="CLEAR" platform="MikroTik" version="6.49.14 (stable)" unpack=none age=37s uptime=1d8h37m17s software-id="AAAA-BBBB" board="RB750UPr2" interface-name="ether1" system-description="MikroTik RouterOS 6.49.14 (stable) RB750UPr2" system-caps=bridge,router system-caps-enabled=router
+
+ 1 interface=ether10,bridge_255_mgmt address=1.2.4.5 address4=1.2.4.5 address6=2001:0db8:11a3:09d7:1f34:8a2e:07a0:765d mac-address=12:34:56:78:90:AC identity="Device_1" platform="MikroTik" version="7.15.1 (stable) 2024-06-07 12:49:11" unpack=none age=7s uptime=1d8h37m20s software-id="CCCC-DDDD" board="RB450Gx4" ipv6=yes interface-name="ether1" system-description="MikroTik RouterOS 7.15.1 (stable) 2024-06-07 12:49:11 RB450Gx4" system-caps=bridge,router
+   system-caps-enabled=router
+
+ 2 interface=eth1-vlan255,bridge_255_mgmt mac-address=12:34:56:78:90:AD identity="Device-2" platform="MikroTik" version="6.43.14 (long-term)" unpack=none age=23s uptime=48w3d9h41m36s software-id="AAAA-ZZZZ" board="RB1100x4" ipv6=no interface-name="bridge_vlan255" system-caps="" system-caps-enabled=""
