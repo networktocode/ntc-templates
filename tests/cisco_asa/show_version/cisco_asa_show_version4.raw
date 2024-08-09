@@ -1,0 +1,55 @@
+Cisco Adaptive Security Appliance Software Version 9.16(3)19
+SSP Operating System Version 2.10(1.207)
+Device Manager Version 7.18(1)152
+
+Compiled on Wed 03-Aug-22 03:28 GMT by builders
+System image file is "disk0:/asa9-16-3-19-lfbff-k8.SPA"
+Config file at boot was "startup-config"
+
+asa1 up 1 year 97 days
+
+Hardware:   ISA-3000-2C2F, 8192 MB RAM, CPU Atom C2000 series 1250 MHz, 1 CPU (4 cores)
+Internal ATA Compact Flash, 14336MB
+BIOS Flash M25P64 @ 0xfed01000, 16384KB
+
+
+ 1: Ext: GigabitEthernet1/1  : address is c26c.5531.9a6e, irq 255
+ 2: Ext: GigabitEthernet1/2  : address is 8e40.4a87.b466, irq 255
+ 3: Ext: GigabitEthernet1/3  : address is 1c06.c894.7a97, irq 255
+ 4: Ext: GigabitEthernet1/4  : address is 3a8d.db44.5557, irq 255
+ 5: Int: Internal-Data1/1    : address is 70cf.7e81.9101, irq 255
+ 6: Int: Internal-Data1/2    : address is 435f.d309.232a, irq 0
+ 7: Int: Internal-Control1/1 : address is d9e9.218d.e220, irq 0
+ 8: Int: Internal-Data1/3    : address is 0c45.93df.97a6, irq 0
+ 9: Ext: Management1/1       : address is b63f.1592.7a17, irq 0
+10: Int: Internal-Data1/4    : address is ad46.152b.74bd, irq 0
+The Running Activation Key feature: 2 security contexts exceed the limit on the platform, reduced to 0 security contexts.
+
+Licensed features for this platform:
+Maximum Physical Interfaces       : Unlimited      perpetual
+Maximum VLANs                     : 5              perpetual
+Inside Hosts                      : Unlimited      perpetual
+Failover                          : Disabled       perpetual
+Encryption-DES                    : Enabled        perpetual
+Encryption-3DES-AES               : Enabled        perpetual
+Carrier                           : Disabled       perpetual
+AnyConnect Premium Peers          : 2              perpetual
+AnyConnect Essentials             : Disabled       perpetual
+Other VPN Peers                   : 5              perpetual
+Total VPN Peers                   : 7              perpetual
+AnyConnect for Mobile             : Disabled       perpetual
+AnyConnect for Cisco VPN Phone    : Disabled       perpetual
+Advanced Endpoint Assessment      : Disabled       perpetual
+Shared License                    : Disabled       perpetual
+Total TLS Proxy Sessions          : 2              perpetual
+Botnet Traffic Filter             : Disabled       perpetual
+Cluster                           : Disabled       perpetual
+
+This platform has a Base license.
+             
+Serial Number: 9AT1L9EX0DF
+Running Permanent Activation Key: 0x1 0x2 0x3 0x4 0x5
+Configuration register is 0x1
+Image type                : Release
+Key Version               : A
+Configuration last modified by some_user at 09:40:52.309 CST Thu Jun 6 2024
