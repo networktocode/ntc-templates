@@ -2,7 +2,7 @@ Value DESCRIPTION (.*)
 Value UPTIME (.*)
 Value CONTACT (.*)
 Value HOSTNAME (.*)
-Value LOCATION (.*)
+Value List LOCATION (.*)
 Value ADDRESS (.*)
 Value OID (.*)
 Value MAIN_POWER_SUPPLY_STATUS (.*)
@@ -25,15 +25,21 @@ Start
   ^\s*System\s+Up\s+Time\s+\(days,hour:min:sec\):\s*${UPTIME}\s*$$
   ^\s*System\s+Contact:\s*${CONTACT}\s*$$
   ^\s*System\s+Name:\s*${HOSTNAME}\s*$$
-  ^\s*System\s+Location:\s*${LOCATION}\s*$$
+  ^\s*System\s+Location:\s*${LOCATION}\s*$$ -> SystemLocation
   ^\s*System\s+MAC\s+Address:\s*${ADDRESS}\s*$$
   ^\s*System\s+Object\s+ID:\s*${OID}\s*$$
   ^\s*Reset-Button:\s*${RESET_BTN_STATUS}\s*$$
   ^\s*Main\s+Power\s+Supply\s+Status(?:\s+\[AC\])?:\s*${MAIN_POWER_SUPPLY_STATUS}\s*$$
-  ^\s*Redundant\s+Power\s+Supply\s+Status(?:\s+\[DC\])?:\s*${REDUNDANT_POWER_SUPPLY_STATUS}\s*$$
+  ^\s*Redundant\s+Power\s+Supply\s+Status(?:\s+\[[AD]C\])?:\s*${REDUNDANT_POWER_SUPPLY_STATUS}\s*$$
   ^\s*Fan(?:\s+Module)?\s+${FAN_ID}\s+Status:\s*${FANS_STATUS}\s*$$
   ^\s*Sensor\s+Index\s+Temperature\s+\(Celsius\)\s+Status\s*$$ -> Sensors
   ^\s*Unit\s+Device\s*$$ -> UnitsDescription
+  ^\s*$$
+  ^. -> Error
+
+SystemLocation
+  ^\s*System\s+MAC\s+Address:\s*${ADDRESS}\s*$$ -> Start
+  ^\s*${LOCATION}\s*$$
   ^\s*$$
   ^. -> Error
 

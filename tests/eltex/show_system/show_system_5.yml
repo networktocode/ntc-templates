@@ -1,7 +1,7 @@
 ---
 parsed_sample:
-  - address: "12:34:56:78:90:00"
-    contact: "email@email.com"
+  - address: "aa:bb:cc:dd:ff:00"
+    contact: ""
     description: "MES3124 28-port 1G/10G Managed Switch"
     fan_id:
       - "1"
@@ -13,13 +13,14 @@ parsed_sample:
       - "OK"
       - "OK"
       - "OK"
-    hostname: "Eltex3124-3"
+    hostname: "ZOO-Eltex3124-8"
     location:
-      - "Elm street, 1428"
+      - "Moscow, Unknown street, 55, Rac"
+      - "k#3-03"
     main_power_supply_status: "OK"
-    oid: "1.3.6.1.4.1.35265.1.24"
+    oid: "1.3.6.1.4.1.35264.1.24"
     redundant_power_supply_status: "OK"
-    reset_btn_status: ""
+    reset_btn_status: "enable"
     sensor_id:
       - "1"
       - "2"
@@ -29,13 +30,13 @@ parsed_sample:
       - "OK"
       - "OK"
     sensor_temp:
-      - "29"
-      - "43"
       - "45"
+      - "43"
+      - "44"
     unit_descriptions: []
     unit_fans_status: []
     unit_main_power_supply: []
     unit_redundant_power_supply: []
     unit_temp: []
     unit_temp_status: []
-    uptime: "67,08:57:53"
+    uptime: "374,23:14:02"
