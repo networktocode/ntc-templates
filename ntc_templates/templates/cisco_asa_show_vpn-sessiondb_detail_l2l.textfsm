@@ -1,5 +1,5 @@
 Value Filldown,Required SESSION_TYPE (\S+)
-Value Filldown CONNECTION (\d+\.\d+\.\d+\.\d+)
+Value Filldown CONNECTION (\S+)
 Value Filldown INDEX (\d+)
 Value Filldown IP_ADDRESS (\d+\.\d+\.\d+\.\d+)
 Value Filldown PROTOCOL (.+?)
@@ -68,6 +68,8 @@ Value REDIRECT_URL (.*?)
 
 Start
   ^Session\s+Type:\s+${SESSION_TYPE}\s+Detailed\s*$$ -> Connection
+  ^\s*$$
+  ^. -> Error
 
 Connection
   ^\s*Connection\s*:\s+${CONNECTION}\s*$$
