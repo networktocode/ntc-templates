@@ -1,0 +1,42 @@
+---
+parsed_sample:
+  - chassis_id: "f8:b1:56:ac:07:64"
+    local_interface: "gi10"
+    neighbor_interface:
+      - "f8:b1:56:ac:0"
+      - "7:64"
+    neighbor_name:
+      - "None"
+  - chassis_id: "28:6f:7f:0b:75:a0"
+    local_interface: "gi21"
+    neighbor_interface:
+      - "Gi0"
+    neighbor_name:
+      - "Fjallarodgardsfor"
+      - "skola-AP03.net.no"
+      - "rob.se"
+  - chassis_id: "a0:e0:af:ec:e9:d0"
+    local_interface: "gi22"
+    neighbor_interface:
+      - "a0:e0:af:ec:e"
+      - "9:d0"
+    neighbor_name:
+      - "Fjallarodgardsfor"
+      - "skola-AP01.net.no"
+      - "rob.se"
+  - chassis_id: "a0:e0:af:b1:c8:a0"
+    local_interface: "gi23"
+    neighbor_interface:
+      - "Gi0"
+    neighbor_name:
+      - "Fjallarodgardsfor"
+      - "skola-AP04.net.no"
+      - "rob.se"
+  - chassis_id: "a0:e0:af:22:3d:40"
+    local_interface: "gi24"
+    neighbor_interface:
+      - "Gi0"
+    neighbor_name:
+      - "Fjallarodgardsfor"
+      - "skola-AP02.net.no"
+      - "rob.se"
