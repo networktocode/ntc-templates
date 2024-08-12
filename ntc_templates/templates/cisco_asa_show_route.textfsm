@@ -33,9 +33,10 @@ ROUTES
   # Match directly connected routes
   ^${PROTOCOL}\s${TYPE}\s+${NETWORK}\sis\sdirectly\sconnected,\s${NEXTHOPIF} -> Record
   ^${PROTOCOL}(\*){0,1}\s${TYPE}\s+${NETWORK}\s+${NETMASK}\sis\sdirectly\sconnected,\s${NEXTHOPIF} -> Record
+  ^\s+is\sdirectly\sconnected,\s${NEXTHOPIF} -> Record
   #
   # Clear all variables on empty lines
-  ^\s* -> Clearall
+  ^\s*$$ -> Clearall
   #^${TYPE} -> Continue.Record
   #^${TYPE}\s+${NETWORK}\s+${NETMASK}\s+\[\d+\/\d+\]\s+via\s+${GATEWAY}\,\s+${UPTIME},\s+${INTFC}\s*$$ -> Record
   #^\s+\[\d+\/\d+\]\s+via\s+${GATEWAY}\,\s+${UPTIME},\s+${INTFC}\s*$$ -> Record
