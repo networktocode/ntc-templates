@@ -43,10 +43,10 @@ Start
   ^.*\(${DUPLEX}\),\s+\(${SPEED}\)
   ^.*Duplex,\s+Auto-Speed
   ^.*Description:\s+${DESCRIPTION}
-  ^.*VLAN\s+identifier\s+${VLAN_ID}
+  ^.*VLAN\s+identifier\s+(${VLAN_ID}|(?:none))
   ^.*MAC\s+address\s+${MAC_ADDRESS},\s+MTU\s+${MTU}
   ^.*MAC\s+address\s+${MAC_ADDRESS},\s+MTU\s+not\s+set
-  ^\s+Available\s+but\s+not\s+configured\s+via\s+nameif
+  ^\s+Available\s+but\s+not\s+configured\s+(?:with\s+VLAN|via\s+nameif)
   ^.*MAC\s+address\s+N/A,\s+MTU\s+${MTU}
   ^.*IP\s+address\s+${IP_ADDRESS},\s+subnet\s+mask\s+${NETMASK}
   ^.*1\s+minute\s+input\s+rate\s+${ONEMIN_IN_PPS}\s+pkts/sec,\s+${ONEMIN_IN_RATE}\s+bytes/sec
