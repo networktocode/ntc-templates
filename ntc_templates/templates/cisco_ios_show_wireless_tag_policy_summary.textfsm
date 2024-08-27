@@ -1,0 +1,29 @@
+Value Required POLICY_TAG_NAME (\S+)
+Value DESCRIPTION (.+)
+
+Start
+  # Match blank lines
+  ^\s*$$
+  # Skip the header lines
+  ^Number of Policy Tags:.*
+  ^Policy Tag Name\s+Description
+  # Start capturing output
+  ^-+ -> PolicyTag
+  # Capture time-stamp if vty line has command time-stamping turned on
+  ^Load\s+for\s+
+  ^Time\s+source\s+is
+  # Match blank lines
+  ^\s*$$
+  # Error out if raw data does not match any above rules.
+	^. -> Error
+
+PolicyTag
+  ^${POLICY_TAG_NAME}\s+${DESCRIPTION} -> Record
+  # Handle cases where the description is missing
+  ^${POLICY_TAG_NAME} -> Record
+  # Match blank lines
+  ^\s*$$
+  # Error out if raw data does not match any above rules.
+	^. -> Error
+
+EOF
