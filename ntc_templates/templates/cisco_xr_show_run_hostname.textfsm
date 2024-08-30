@@ -1,0 +1,9 @@
+Value HOSTNAME (\S+)
+
+Start
+  # Capture date output by XR by 'show run hostname' first
+  ^\S+ \S+ \S+ .*$$
+  # Capture hostname
+  ^hostname ${HOSTNAME}$$
+  ^\s*$$
+  ^. -> Error
