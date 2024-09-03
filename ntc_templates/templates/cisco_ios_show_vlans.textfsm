@@ -26,10 +26,10 @@ Data
   ^[\w\./]+\s*$$
   ^${INTERFACES}\s+\(\d+\)\s*$$
   ^\s+IP:\s+${IP_ADDRESSES}\s*$$
-  ^\s+IP\s+${IP_ADDRESSES}\s+\d+\s+\d+
+  ^\s+IP\s+${IP_ADDRESSES}\s+
   ^\s+IPv6:\s+${IPV6_ADDRESSES}\s*$$
   ^\s+IPv6\s+${IPV6_ADDRESSES}\s+\d+\s+\d+
-  ^\s+Other\s+\d+\s+\d+
+  ^\s+Other\s+
   ^\s+IPv6\s+\d+\s+\d+
   ^\s+Total\s\d+
   ^\s+\d+\s+packets,
