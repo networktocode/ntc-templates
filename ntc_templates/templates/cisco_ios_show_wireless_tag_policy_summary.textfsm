@@ -4,7 +4,7 @@ Value DESCRIPTION (.+)
 Start
   # Skip the header lines
   ^Number of Policy Tags:.*
-  ^Policy Tag Name\s+Description
+  ^Policy Tag Name\s+Description\s*$$
   ^-+
   # Capturing output
   ^${NAME}\s+${DESCRIPTION} -> Record
