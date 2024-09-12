@@ -1,0 +1,235 @@
+GigabitEthernet0/0/1 has 1 neighbor(s):
+
+Neighbor index :1
+Chassis type   :MAC address 
+Chassis ID     :aaaa-aaaa-aaaa 
+Port ID type   :Interface alias 
+Port ID        :0
+Port description    :lan port 0
+System name         :Oficina
+System description  :Meraki Z3 Cloud Managed Teleworker Gateway
+System capabilities supported   :router 
+System capabilities enabled     :router 
+Expired time   :120s
+
+
+GigabitEthernet0/0/10 has 1 neighbor(s):
+
+Neighbor index :1
+Chassis type   :MAC address 
+Chassis ID     :aaaa-aaaa-aaaa 
+Port ID type   :MAC address 
+Port ID        :aaaa-aaaa-aaaa
+Port description    :eth0
+System name         :aa:aa:aa:aa:aa:aa
+System description  :ArubaOS (MODEL: 515), Version Aruba IAP
+System capabilities supported   :bridge wlanAccessPoint 
+System capabilities enabled     :wlanAccessPoint 
+Management address type  :ipv4
+Management address value :1.1.1.1
+OID  :  
+Expired time   :109s
+
+
+Auto-negotiation supported    :Yes 
+Auto-negotiation enabled      :Yes
+OperMau   :speed(1000)/duplex(Full)
+
+Power port class            :PD 
+PSE power supported         :No 
+PSE power enabled           :No 
+PSE pairs control ability   :No 
+Power pairs                 :Signal 
+Port power classification   :Class4
+Power type                  :Type 2 PD 
+Power source                :PSE 
+Power priority              :Unknown 
+PD requested power value    :25.5(w) 
+PSE allocated power value   :25.5(w)
+
+Link aggregation supported:No 
+Link aggregation enabled :No 
+Aggregation port ID      :0
+
+Maximum frame Size       :1522
+
+GigabitEthernet0/0/24 has 9 neighbor(s):
+
+Neighbor index :1
+Chassis type   :MAC address 
+Chassis ID     :aaaa-aaaa-aaaa 
+Port ID type   :Interface name 
+Port ID        :ether2 - SWITCH
+System name         :MK_2
+System description  :MikroTik RouterOS 1.1.1 (stable) Jan/1/2000 01:01:01 CCR1036-12G-4S
+System capabilities supported   :bridge router 
+System capabilities enabled     :bridge router 
+Management address type  :ipv6
+Management address value :AAAA::AAAA:AAAA:AAAA:AAAA
+OID  :  
+Expired time   :84s
+
+
+
+Neighbor index :2
+Chassis type   :MAC address 
+Chassis ID     :aaaa-aaaa-aaaa 
+Port ID type   :Interface name 
+Port ID        :vlan1 - GPON
+System name         :MK_2
+System description  :MikroTik RouterOS 1.1.1 (stable) Jan/1/2000 01:01:01 CCR1036-12G-4S
+System capabilities supported   :bridge router 
+System capabilities enabled     :bridge router 
+Management address type  :ipv4
+Management address value :192.168.1.1
+OID  :  
+Management address type  :ipv6
+Management address value :AAAA::AAAA:AAAA:AAAA:AAAA
+OID  :  
+Expired time   :84s
+
+
+
+Neighbor index :3
+Chassis type   :MAC address 
+Chassis ID     :aaaa-aaaa-aaaa 
+Port ID type   :Interface name 
+Port ID        :vlan100 - Somethign
+System name         :MK_2
+System description  :MikroTik RouterOS 1.1.1 (stable) Jan/1/2000 01:01:01 CCR1036-12G-4S
+System capabilities supported   :bridge router 
+System capabilities enabled     :bridge router 
+Management address type  :ipv4
+Management address value :192.168.1.1
+OID  :  
+Management address type  :ipv6
+Management address value :AAAA::AAAA:AAAA:AAAA:AAAA
+OID  :  
+Expired time   :84s
+
+
+
+Neighbor index :4
+Chassis type   :MAC address 
+Chassis ID     :aaaa-aaaa-aaaa 
+Port ID type   :Interface name 
+Port ID        :vlan303-TEST
+System name         :MK_2
+System description  :MikroTik RouterOS 1.1.1 (stable) Jan/1/2000 01:01:01 CCR1036-12G-4S
+System capabilities supported   :bridge router 
+System capabilities enabled     :bridge router 
+Management address type  :ipv4
+Management address value :192.168.1.1
+OID  :  
+Management address type  :ipv6
+Management address value :AAAA::AAAA:AAAA:AAAA:AAAA
+OID  :  
+Expired time   :84s
+
+
+
+Neighbor index :5
+Chassis type   :MAC address 
+Chassis ID     :aaaa-aaaa-aaaa 
+Port ID type   :Interface name 
+Port ID        :vlan80
+System name         :MK_2
+System description  :MikroTik RouterOS 1.1.1 (stable) Jan/1/2000 01:01:01 CCR1036-12G-4S
+System capabilities supported   :bridge router 
+System capabilities enabled     :bridge router 
+Management address type  :ipv4
+Management address value :192.168.1.1
+OID  :  
+Management address type  :ipv6
+Management address value :AAAA::AAAA:AAAA:AAAA:AAAA
+OID  :  
+Expired time   :84s
+
+
+
+Neighbor index :6
+Chassis type   :MAC address 
+Chassis ID     :aaaa-aaaa-aaaa 
+Port ID type   :Interface name 
+Port ID        :vlan33
+System name         :MK_2
+System description  :MikroTik RouterOS 1.1.1 (stable) Jan/1/2000 01:01:01 CCR1036-12G-4S
+System capabilities supported   :bridge router 
+System capabilities enabled     :bridge router 
+Management address type  :ipv4
+Management address value :192.168.1.1
+OID  :  
+Management address type  :ipv6
+Management address value :AAAA::AAAA:AAAA:AAAA:AAAA
+OID  :  
+Expired time   :84s
+
+
+
+Neighbor index :7
+Chassis type   :MAC address 
+Chassis ID     :aaaa-aaaa-aaaa 
+Port ID type   :Interface name 
+Port ID        :vlan20
+System name         :MK_2
+System description  :MikroTik RouterOS 1.1.1 (stable) Jan/1/2000 01:01:01 CCR1036-12G-4S
+System capabilities supported   :bridge router 
+System capabilities enabled     :bridge router 
+Management address type  :ipv4
+Management address value :192.168.1.1
+OID  :  
+Management address type  :ipv6
+Management address value :AAAA::AAAA:AAAA:AAAA:AAAA
+OID  :  
+Expired time   :84s
+
+
+
+Neighbor index :8
+Chassis type   :MAC address 
+Chassis ID     :aaaa-aaaa-aaaa 
+Port ID type   :Interface name 
+Port ID        :bridge-vlan1001
+System name         :MK_2
+System description  :MikroTik RouterOS 1.1.1 (stable) Jan/1/2000 01:01:01 CCR1036-12G-4S
+System capabilities supported   :bridge router 
+System capabilities enabled     :bridge router 
+Management address type  :ipv4
+Management address value :192.168.1.1
+OID  :  
+Management address type  :ipv6
+Management address value :AAAA::AAAA:AAAA:AAAA:AAAA
+OID  :  
+Expired time   :84s
+
+
+
+Neighbor index :9
+Chassis type   :MAC address 
+Chassis ID     :aaaa-aaaa-aaaa 
+Port ID type   :Interface name 
+Port ID        :eoip-m2
+System name         :MK_HS
+System description  :MikroTik RouterOS 1.1.1 (stable) Jan/1/2000 01:01:01 CCR1036-12G-4S
+System capabilities supported   :bridge router 
+System capabilities enabled     :bridge router 
+Expired time   :90s
+
+
+XGigabitEthernet0/0/4 has 1 neighbor(s):
+
+Neighbor index :1
+Chassis type   :MAC address 
+Chassis ID     :aaaa-aaaa-aaaa 
+Port ID type   :Interface name 
+Port ID        :ethernet0/3/3
+Port description    :Huawei-EA5800-V0000000-ETHERNET 0/3/3
+System name         :OLT
+System description  :Huawei Integrated Access Software
+System capabilities supported   :bridge 
+System capabilities enabled     :bridge 
+Management address type  :all000
+Management address value :aaaa-aaaa-aaaa
+OID  :  
+Expired time   :113s
+
