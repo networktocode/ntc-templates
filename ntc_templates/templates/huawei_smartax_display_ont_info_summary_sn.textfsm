@@ -1,8 +1,8 @@
 Value Key ONT_ID (\d+)
 Value SERIAL_NUMBER (\w+)
 Value ONT_MODEL_TYPE (\S+)
-Value DISTANCE_M (\d+)
-Value RX_TX_POWER_DBM (\S+\/\S+)
+Value DISTANCE_M (\d+|-)
+Value RX_TX_POWER_DBM (-?\d+\.\d+\/-?\d+\.\d+|\S+)
 Value DESCRIPTION (\S+)
 
 Start
