@@ -7,8 +7,10 @@ Value VLAN (\d+)
 
 Start
   ^\s*-
-  ^\s*F\/S\/P\s+ONTID\s+ONT\s+ONT\s+MAC-ADDRESS\s+VLAN
-  ^\s*port-type\s+port-ID -> Macs
+  ^\s*F\/S\/P\s+ONTID\s+ONT\s+ONT\s+MAC-ADDRESS\s+VLAN\s*$$
+  ^\s*port-type\s+port-ID\s*$$ -> Macs
+  ^\s*$$
+  ^. -> Error
 
 Macs
   ^\s*${FSP}\s+${ONT_ID}\s+${ONT_PORT_TYPE}\s+${ONT_PORT_ID}\s+${MAC}\s+${VLAN} -> Record
