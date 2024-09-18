@@ -10,18 +10,18 @@ GigabitEthernet9    Native-vlan Tx-type: Untagged
    Protocols Configured:   Address:              Received:        Transmitted:
 
 GigabitEthernet8 (1)
-           IP              10.249.2.6           903996720           917275590
-        Other                                           0             6689172
+           IP              10.249.2.6           952594690           966563130
+        Other                                           0             7017796
 
-   861876081 packets, 104351032620 bytes input
-   886447918 packets, 315385944437 bytes output
+   896616646 packets, 110232659966 bytes input
+   924074783 packets, 324677228613 bytes output
 
 GigabitEthernet9 (1)
            IP              10.252.202.197 
-        Other                                           0             6689172
+        Other                                           0             7017796
 
-   43228243 packets, 8882119957 bytes input
-   37516844 packets, 4952240355 bytes output
+   57180601 packets, 11807308540 bytes input
+   49506143 packets, 6620920117 bytes output
 
 Virtual LAN ID:  2 (IEEE 802.1Q Encapsulation)
 
@@ -30,16 +30,16 @@ Virtual LAN ID:  2 (IEEE 802.1Q Encapsulation)
    Protocols Configured:   Address:              Received:        Transmitted:
 
 GigabitEthernet9.2 (2)
-           IP              10.253.60.65          66096377            63057013
-        Other                                           0              268232
+           IP              10.253.60.65          87088580            83189217
+        Other                                           0              351919
 
-   66096377 packets, 17476917909 bytes input
-   63325245 packets, 11174981744 bytes output
+   87088580 packets, 23119923448 bytes input
+   83541136 packets, 14856114147 bytes output
 
 Virtual LAN ID:  1280 (IEEE 802.1Q Encapsulation)
 
    vLAN Trunk Interface:   GigabitEthernet9.1280
-
+          
    Protocols Configured:   Address:              Received:        Transmitted:
 
 GigabitEthernet9.1280 (1280)
@@ -48,3 +48,4 @@ GigabitEthernet9.1280 (1280)
 
    0 packets, 0 bytes input
    2 packets, 92 bytes output
+
