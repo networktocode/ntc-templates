@@ -10,7 +10,7 @@ Start
   ^\s+ID\s+State\s+UpTime\s+DownTime\s+DownCause -> ONTs
 
 ONTs
-  ^\s+${ONT_ID}\s+${RUN_STATE}\s+${LAST_UPTIME}\s+${LAST_DOWNTIME}\s+${LAST_DOWNCAUSE} -> Record
+  ^\s+${ONT_ID}\s+${RUN_STATE}\s+(-|${LAST_UPTIME})\s*(-|${LAST_DOWNTIME})\s+(-|${LAST_DOWNCAUSE}) -> Record
   ^\s+-
   ^\s+ONT\s+SN\s+Type\s+Distance\s+Rx\/Tx\s+power\s+Description
   ^\s+ID\s+\(m\)\s+\(dBm\) -> EOF
