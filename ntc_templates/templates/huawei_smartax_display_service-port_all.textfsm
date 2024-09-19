@@ -15,11 +15,13 @@ Value STATE (\S+)
 Start
   ^Switch-Oriented\s*Flow\s*List
   ^\s*-
-  ^\s*INDEX\s+VLAN\s+VLAN\s+PORT\s+F\/\s*S\/\s*P\s*VPI\s*VCI\s*FLOW\s*FLOW\s*RX\s*TX\s*STATE
-  ^\s*ID\s*ATTR\s*TYPE\s*TYPE\s*PARA -> ServicePorts
+  ^\s*INDEX\s+VLAN\s+VLAN\s+PORT\s+F\/\s*S\/\s*P\s*VPI\s*VCI\s*FLOW\s*FLOW\s*RX\s*TX\s*STATE\s*$$
+  ^\s*ID\s*ATTR\s*TYPE\s*TYPE\s*PARA\s*$$ -> ServicePorts
+  ^\s*$$
+  ^. -> Error
 
 ServicePorts
-  ^\s*${INDEX}\s*${VLAN_ID}\s*${VLAN_ATTR}\s*${PORT_TYPE}\s*${FSP}\s*${ONT_ID}\s*${GEM_INDEX}\s*${FLOW_TYPE}\s*${VLAN_ACCESS}\s*(-|${RX})\s*(-|${TX})\s*${STATE} -> Record
+  ^\s*${INDEX}\s*${VLAN_ID}\s*${VLAN_ATTR}\s*${PORT_TYPE}\s*${FSP}\s*${ONT_ID}\s*${GEM_INDEX}\s*${FLOW_TYPE}\s*${VLAN_ACCESS}\s*(-|${RX})\s*(-|${TX})\s*${STATE}\s* -> Record
   ^\s*.
   ^\s*$$
   ^. -> Error
