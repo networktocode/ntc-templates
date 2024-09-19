@@ -39,6 +39,7 @@ Data
 Interface
   ^\s*${INTERFACES}\s*$$
   ^\s*\S+\s+\(\S+\)$$
+  ^\s*$$
   ^\s+Total\s+\d+\s+
   ^\s+IP\:\s+${IP_ADDRESSES}
   ^\s+IPv6\:\s+${IPV6_ADDRESSES}

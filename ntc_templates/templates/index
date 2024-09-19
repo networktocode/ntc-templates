@@ -638,13 +638,16 @@ hp_procurve_show_ip.textfsm, .*, hp_procurve, sh[[ow]] ip
 huawei_smartax_display_ont_info_summary_ont.textfsm:huawei_smartax_display_ont_info_summary_sn.textfsm, .*, huawei_smartax, di[[splay]] ont i[[nfo]] su[[mmary]] \S+ *$
 huawei_smartax_display_ont_info_0_1_2.textfsm:huawei_smartax_display_ont_info_description.textfsm, .*, huawei_smartax, di[[splay]] ont i[[nfo]] (\d+\s*|\d+ \d+ \d+\s*)\s*[[all]] *$
 huawei_smartax_display_ont_port_vlan_0_1_byport_eth_0.textfsm, .*, huawei_smartax, di[[splay]] ont p[[ort]] vl[[an]] \d+ \d+ byport eth \d+\s*
+huawei_smartax_display_ont_port_state_0_1_eth-state.textfsm, .*, huawei_smartax, di[[splay]] on[[t]] por[[t]] st[[ate]] \d+ \d+ e[[th-port]]
 huawei_smartax_display_ont_port_state_0_1_eth-port.textfsm, .*, huawei_smartax, di[[splay]] on[[t]] por[[t]] st[[ate]] \d+ \d+ e[[th-port]]
 huawei_smartax_display_ont_port_vlan_0_1_byvlan_0.textfsm, .*, huawei_smartax, di[[splay]] ont p[[ort]] v[[lan]] \d+ \d+ byvlan \d+
+huawei_smartax_display_mac-address_ont_0_1_2_0.textfsm, .*, huawei_smartax, di[[splay]] mac-a[[ddress]] o[[nt]] \d+(\/)?\s*\d+(\/)?\s*\d+ \d+ *$
 huawei_smartax_display_ont_optical-info_0_all.textfsm, .*, huawei_smartax, di[[splay]] ont o[[ptical-info]] \d+ all
 huawei_smartax_display_ont_snmp-profile_0_all.textfsm, .*, huawei_smartax, di[[splay]] ont s[[nmp-profile]] \d+ all
 huawei_smartax_display_ont_gemport_0_ontid_0.textfsm, .*, huawei_smartax, di[[splay]] ont g[[emport]] \d+ ontid \d+\s*
 huawei_smartax_display_sysman_service_state.textfsm, .*, huawei_smartax, di[[splay]] sysman s[[ervice]] s[[tate]]
 huawei_smartax_display_board_serial-number.textfsm, .*, huawei_smartax, di[[splay]] bo[[ard]] s[[erial-number]]\s*
+huawei_smartax_display_service-port_all.textfsm, .*, huawei_smartax, disp[[lay]] ser[[vice-port]] a[[ll]] *$
 huawei_smartax_display_ont_autofind.textfsm, .*, huawei_smartax, di[[splay]] ont a[[utofind]]\s*
 huawei_smartax_display_ont_info_0_1.textfsm, .*, huawei_smartax, di[[splay]] ont i[[nfo]] (by-sn \w*\s*|\d+ \d+\s*|\d+ \d+ \d+ \d+\s*)
 huawei_smartax_display_temperature.textfsm, .*, huawei_smartax, di[[splay]] tem[[perature]]\s*

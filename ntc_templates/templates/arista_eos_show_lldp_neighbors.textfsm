@@ -6,5 +6,8 @@ Start
   ^Port.*TTL -> LLDP
 
 LLDP
+  # Skip the hyphen header line
+  ^--------.*$$
   ^${LOCAL_INTERFACE}\s+${NEIGHBOR_NAME}\s+${NEIGHBOR_INTERFACE}\s+.* -> Record
-
+  ^\s*$$
+  ^. -> Error
