@@ -1,0 +1,16 @@
+top - 18:31:25 up 203 days,  9:59,  1 user,  load average: 0.18, 0.20, 0.20
+Tasks: 143 total,   1 running, 142 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.0 us,  0.0 sy,  0.0 ni,100.0 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+MiB Mem :   3906.5 total,   1284.1 free,    617.5 used,   2005.0 buff/cache
+MiB Swap:      0.0 total,      0.0 free,      0.0 used.   3046.3 avail Mem 
+  PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+31753 pyclass   20   0    9956   5356   4700 R   0.0   0.1   0:00.06 top
+    1 root      20   0   15096   8404   6732 S   0.0   0.2  13:52.11 systemd
+    2 root      20   0       0      0      0 S   0.0   0.0   0:09.44 kthreadd
+    3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp
+    4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_par_gp
+    6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/0:0H-kblockd
+    8 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 mm_percpu_wq
+    9 root      20   0       0      0      0 S   0.0   0.0  20:39.06 ksoftirqd/0
+   10 root      20   0       0      0      0 I   0.0   0.0   1043:15 rcu_preempt
+   11 root      20   0       0      0      0 I   0.0   0.0   0:00.03 rcu_sched
