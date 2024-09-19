@@ -59,10 +59,10 @@ Start
   ^Tasks:\s+${GLOBAL_TASKS_TOTAL} total,\s+${GLOBAL_TASKS_RUNNING} running,\s+${GLOBAL_TASKS_SLEEPING} sleeping,\s+${GLOBAL_TASKS_STOPPED} stopped,\s+${GLOBAL_TASKS_ZOMBIE} zombie$$
   # CPU - 1st format
   # %Cpu(s):  2.8 us,  0.7 sy,  0.0 ni, 96.3 id,  0.0 wa,  0.2 hi,  0.0 si,  0.0 st
-  ^%Cpu[(]s[)]:\s+${GLOBAL_CPU_PERCENT_USER}\sus,\s+${GLOBAL_CPU_PERCENT_SYSTEM}\ssy,\s+${GLOBAL_CPU_PERCENT_NICE}\sni,\s+${GLOBAL_CPU_PERCENT_IDLE}\sid,\s+${GLOBAL_CPU_PERCENT_IOWAIT}\swa,\s+${GLOBAL_CPU_PERCENT_HI}\shi,\s+${GLOBAL_CPU_PERCENT_SI}\ssi,\s+${GLOBAL_CPU_PERCENT_STOLEN}\sst$$
+  ^%Cpu[(]s[)]:\s*${GLOBAL_CPU_PERCENT_USER}\sus,\s*${GLOBAL_CPU_PERCENT_SYSTEM}\ssy,\s*${GLOBAL_CPU_PERCENT_NICE}\sni,\s*${GLOBAL_CPU_PERCENT_IDLE}\sid,\s*${GLOBAL_CPU_PERCENT_IOWAIT}\swa,\s*${GLOBAL_CPU_PERCENT_HI}\shi,\s*${GLOBAL_CPU_PERCENT_SI}\ssi,\s*${GLOBAL_CPU_PERCENT_STOLEN}\sst$$
   # CPU - 2nd format
   # Cpu(s): 12.5%us,  2.3%sy,  0.0%ni, 84.5%id,  0.0%wa,  0.7%hi,  0.1%si,  0.0%st
-  ^Cpu[(]s[)]:\s+${GLOBAL_CPU_PERCENT_USER}%us,\s+${GLOBAL_CPU_PERCENT_SYSTEM}%sy,\s+${GLOBAL_CPU_PERCENT_NICE}%ni,\s+${GLOBAL_CPU_PERCENT_IDLE}%id,\s+${GLOBAL_CPU_PERCENT_IOWAIT}%wa,\s+${GLOBAL_CPU_PERCENT_HI}%hi,\s+${GLOBAL_CPU_PERCENT_SI}%si,\s+${GLOBAL_CPU_PERCENT_STOLEN}%st$$
+  ^Cpu[(]s[)]:\s*${GLOBAL_CPU_PERCENT_USER}%us,\s*${GLOBAL_CPU_PERCENT_SYSTEM}%sy,\s*${GLOBAL_CPU_PERCENT_NICE}%ni,\s*${GLOBAL_CPU_PERCENT_IDLE}%id,\s*${GLOBAL_CPU_PERCENT_IOWAIT}%wa,\s*${GLOBAL_CPU_PERCENT_HI}%hi,\s*${GLOBAL_CPU_PERCENT_SI}%si,\s*${GLOBAL_CPU_PERCENT_STOLEN}%st$$
   # Memory - 1st format
   # KiB Mem:   2014520 total,  1970928 used,    43592 free,   171340 buffers
   ^${GLOBAL_MEM_UNIT}\s+Mem.*:\s+${GLOBAL_MEM_TOTAL}\stotal,\s+${GLOBAL_MEM_USED}\sused,\s+${GLOBAL_MEM_FREE}\sfree,\s+${GLOBAL_MEM_BUFFERS}\sbuffers$$
@@ -77,7 +77,7 @@ Start
   ^${GLOBAL_SWAP_MEM_UNIT}\s+Swap.*:\s+${GLOBAL_SWAP_MEM_TOTAL}\stotal,\s+${GLOBAL_SWAP_MEM_USED}\sused,\s+${GLOBAL_SWAP_MEM_FREE}\sfree,\s+${GLOBAL_SWAP_MEM_CACHED}\scached$$
   # Swap - 2nd format
   # MiB Swap:   0.0 total,   0.0 free,   0.0 used.  5325.2 avail Mem
-  ^${GLOBAL_SWAP_MEM_UNIT}\s+Swap.*:\s+${GLOBAL_SWAP_MEM_TOTAL}\stotal,\s+${GLOBAL_SWAP_MEM_FREE}\sfree,\s+${GLOBAL_SWAP_MEM_USED}\sused.\s+${GLOBAL_SWAP_MEM_CACHED}\savail Mem$$
+  ^${GLOBAL_SWAP_MEM_UNIT}\s+Swap.*:\s+${GLOBAL_SWAP_MEM_TOTAL}\stotal,\s+${GLOBAL_SWAP_MEM_FREE}\sfree,\s+${GLOBAL_SWAP_MEM_USED}\sused.\s+${GLOBAL_SWAP_MEM_CACHED}\savail Mem\s*$$
   # Swap - 3rd format
   # Swap:        0k total,        0k used,        0k free,  1521744k cached
   ^Swap.*:\s+${GLOBAL_SWAP_MEM_TOTAL}${GLOBAL_SWAP_MEM_UNIT}\stotal,\s+${GLOBAL_SWAP_MEM_USED}[kmgt]\sused,\s+${GLOBAL_SWAP_MEM_FREE}[kmgt]\sfree,\s+${GLOBAL_SWAP_MEM_CACHED}[kmgt]\scached$$
