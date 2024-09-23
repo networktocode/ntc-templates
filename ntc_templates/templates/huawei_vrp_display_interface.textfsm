@@ -2,9 +2,12 @@ Value Required INTERFACE (\S*)
 Value LINK_STATUS (.*)
 Value PROTOCOL_STATUS (\S*|\S*\s+\(\w+\))
 Value INTERFACE_DESCRIPTION (.*)
+Value LINK_TYPE (\S+)
 Value PORT_TYPE (\S*)
 Value PVID (\d+)
+Value TPID (\S+)
 Value MTU (\d+)
+Value HOLD_TIMER (\d+)
 Value INTERNET_ADDRESS (\S*)
 Value INTERNET_PROTOCOL (disabled|enabled)
 Value HARDWARE_ADDRESS (\S{4}-\S{4}-\S{4})
@@ -24,9 +27,9 @@ Start
   ^Line\s+protocol\s+current\s+state\s+:\s+${PROTOCOL_STATUS}\s*$$
   ^Last\sline\sprotocol\sup\stime\s*:\s+(\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2}|-)\s*$$
   ^Description:${INTERFACE_DESCRIPTION}\s*$$
-  ^${PORT_TYPE}\s+Port,\s*The\s+MTU\s+is\s+${MTU}
-  ^${PORT_TYPE}\s+Port,\s*The\s+Maximum\s+Transmit\s+Unit\s+is\s+${MTU}
-  ^${PORT_TYPE}\s+Port,(\s+PVID\s+:\s*${PVID},)?(\s*[^,]+,){1,}(\s+The\s+Maximum\s+(Frame\s+Length|Transmit\s+Unit)\s+is\s+${MTU})?
+  ^${PORT_TYPE}\s+Port,\s*Link-type\s*:\s*${LINK_TYPE},\s*$$
+  ^${PORT_TYPE}\s+Port,\s*The\s+(MTU|Maximum\s+Transmit\s+Unit)\s+is\s+${MTU}(,\s*Hold\s*timer\s*is\s*${HOLD_TIMER}\(sec\))?\s*$$
+  ^${PORT_TYPE}\s+Port,(\s*PVID\s*:\s*${PVID},)?\s*TPID\s*:\s*${TPID},\s*The\s*Maximum\s*(Frame\s*Length|Transmit\s*Unit)\s*is\s*${MTU}\s*$$
   ^PVID\s*:\s+${PVID},(\s*[^,]+,){0,}\s+The\s+Maximum\s+Frame\s+Length\s+is\s+${MTU}
   ^Internet\s+Address\s+is\s+allocated\s+by\s+DHCP,\s+${INTERNET_ADDRESS}\s*$$
   ^Internet\s+Address\s+is\s+negotiated,\s+${INTERNET_ADDRESS}\s*$$
