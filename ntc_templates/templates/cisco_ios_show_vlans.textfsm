@@ -2,6 +2,7 @@ Value Required VLAN_ID (\d+)
 Value List INTERFACES ([\w\./-]+)
 Value List IP_ADDRESSES (\S+)
 Value List IPV6_ADDRESSES (\S+)
+Value List INNER_VLANS (\d+)
 
 Start
   ^VLAN\s+ID:\s+${VLAN_ID} -> Data
@@ -38,6 +39,7 @@ Data
 
 Interface
   ^\s*${INTERFACES}\s*$$
+  ^\s*\S+\s+\(\d+\/${INNER_VLANS}\)\s*$$
   ^\s*\S+\s+\(\S+\)$$
   ^\s*$$
   ^\s+Total\s+\d+\s+

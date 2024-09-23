@@ -1,0 +1,85 @@
+---
+parsed_sample:
+  - vlan_id: "1"
+    interfaces:
+      - "TenGigabitEthernet2/1/8"
+      - "TenGigabitEthernet2/1/9"
+      - "Port-channel10"
+      - "Port-channel11"
+      - "Port-channel12"
+    ip_addresses:
+      - "10.250.1.41"
+    ipv6_addresses: []
+    inner_vlans: []
+  - vlan_id: "2"
+    interfaces:
+      - "Port-channel10.2"
+      - "Port-channel11.2"
+      - "Port-channel12.2"
+    ip_addresses:
+      - "10.252.219.225"
+      - "10.252.216.57"
+      - "10.252.216.53"
+    ipv6_addresses: []
+    inner_vlans: []
+  - vlan_id: "101"
+    interfaces:
+      - "TenGigabitEthernet2/1/9.101"
+      - "TenGigabitEthernet2/1/9.1013000"
+      - "TenGigabitEthernet2/1/9.1013015"
+      - "TenGigabitEthernet2/1/9.1013062"
+      - "TenGigabitEthernet2/1/9.1013120"
+      - "TenGigabitEthernet2/1/9.1013141"
+      - "TenGigabitEthernet2/1/9.1013142"
+      - "TenGigabitEthernet2/1/9.1013187"
+    ip_addresses:
+      - "10.250.45.49"
+      - "10.250.45.21"
+      - "10.250.45.45"
+      - "10.250.45.29"
+      - "10.250.45.25"
+      - "10.250.45.41"
+      - "10.250.45.37"
+      - "10.250.45.33"
+    ipv6_addresses: []
+    inner_vlans:
+      - "3000"
+      - "3015"
+      - "3062"
+      - "3120"
+      - "3141"
+      - "3142"
+      - "3187"
+  - vlan_id: "102"
+    interfaces:
+      - "TenGigabitEthernet2/1/9.102"
+      - "TenGigabitEthernet2/1/9.1023000"
+      - "TenGigabitEthernet2/1/9.1023062"
+      - "TenGigabitEthernet2/1/9.1023141"
+      - "TenGigabitEthernet2/1/9.1023142"
+      - "TenGigabitEthernet2/1/9.1023162"
+      - "TenGigabitEthernet2/1/9.1023182"
+      - "TenGigabitEthernet2/1/9.1023187"
+    ip_addresses:
+      - "10.250.51.157"
+      - "10.250.51.161"
+      - "10.250.51.185"
+      - "10.250.51.165"
+      - "10.250.51.173"
+      - "10.250.51.181"
+      - "10.250.51.169"
+      - "10.250.51.177"
+    ipv6_addresses: []
+    inner_vlans:
+      - "3000"
+      - "3062"
+      - "3141"
+      - "3142"
+      - "3162"
+      - "3182"
+      - "3187"
+  - vlan_id: "104"
+    interfaces: []
+    ip_addresses: []
+    ipv6_addresses: []
+    inner_vlans: []
