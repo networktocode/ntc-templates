@@ -5,3 +5,5 @@ Value DESCRIPTION (\S.*\s*\S*)
 
 Start
   ^${INTERFACE}\s+${STATUS}\s+${PROTOCOL}(?:\s+)?(?:${DESCRIPTION})? -> Record
+  # Error out if raw data does not match any above rules.
+  ^.* -> Error "Could not parse line:"
