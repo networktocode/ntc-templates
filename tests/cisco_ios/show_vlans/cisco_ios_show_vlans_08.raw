@@ -1,0 +1,51 @@
+Virtual LAN ID:  1 (IEEE 802.1Q Encapsulation)
+
+   vLAN Trunk Interfaces:  GigabitEthernet8
+GigabitEthernet9
+
+ This is configured as native Vlan for the following interface(s) :
+GigabitEthernet8    Native-vlan Tx-type: Untagged
+GigabitEthernet9    Native-vlan Tx-type: Untagged
+
+   Protocols Configured:   Address:              Received:        Transmitted:
+
+GigabitEthernet8 (1)
+           IP              10.249.2.6           952594690           966563130
+        Other                                           0             7017796
+
+   896616646 packets, 110232659966 bytes input
+   924074783 packets, 324677228613 bytes output
+
+GigabitEthernet9 (1)
+           IP              10.252.202.197 
+        Other                                           0             7017796
+
+   57180601 packets, 11807308540 bytes input
+   49506143 packets, 6620920117 bytes output
+
+Virtual LAN ID:  2 (IEEE 802.1Q Encapsulation)
+
+   vLAN Trunk Interface:   GigabitEthernet9.2
+
+   Protocols Configured:   Address:              Received:        Transmitted:
+
+GigabitEthernet9.2 (2)
+           IP              10.253.60.65          87088580            83189217
+        Other                                           0              351919
+
+   87088580 packets, 23119923448 bytes input
+   83541136 packets, 14856114147 bytes output
+
+Virtual LAN ID:  1280 (IEEE 802.1Q Encapsulation)
+
+   vLAN Trunk Interface:   GigabitEthernet9.1280
+          
+   Protocols Configured:   Address:              Received:        Transmitted:
+
+GigabitEthernet9.1280 (1280)
+           IP              10.49.14.129                 0                   0
+        Other                                           0                   2
+
+   0 packets, 0 bytes input
+   2 packets, 92 bytes output
+

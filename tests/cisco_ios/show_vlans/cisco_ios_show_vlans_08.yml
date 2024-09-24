@@ -1,0 +1,29 @@
+---
+parsed_sample:
+  - interfaces:
+      - "GigabitEthernet8"
+      - "GigabitEthernet9"
+      - "GigabitEthernet8"
+      - "GigabitEthernet9"
+    ip_addresses:
+      - "10.249.2.6"
+      - "10.252.202.197"
+    ipv6_addresses: []
+    inner_vlans: []
+    vlan_id: "1"
+  - interfaces:
+      - "GigabitEthernet9.2"
+      - "GigabitEthernet9.2"
+    ip_addresses:
+      - "10.253.60.65"
+    ipv6_addresses: []
+    inner_vlans: []
+    vlan_id: "2"
+  - interfaces:
+      - "GigabitEthernet9.1280"
+      - "GigabitEthernet9.1280"
+    ip_addresses:
+      - "10.49.14.129"
+    ipv6_addresses: []
+    inner_vlans: []
+    vlan_id: "1280"

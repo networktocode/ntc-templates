@@ -1,0 +1,20 @@
+Value FSP (\d+\/\s*\d+\/\d+)
+Value ONT_ID (\d+)
+Value ONT_PORT_TYPE (\S+)
+Value ONT_PORT_ID (\d+)
+Value MAC (\w+-\w+-\w+)
+Value VLAN (\d+)
+
+Start
+  ^\s*-
+  ^\s*F\/S\/P\s+ONTID\s+ONT\s+ONT\s+MAC-ADDRESS\s+VLAN
+  ^\s*port-type\s+port-ID -> Macs
+  ^\s*$$
+  ^. -> Error
+
+Macs
+  ^\s*${FSP}\s+${ONT_ID}\s+${ONT_PORT_TYPE}\s+${ONT_PORT_ID}\s+${MAC}\s+(-|${VLAN}) -> Record
+  ^\s*-
+  ^\s*Total:\s*\d+\s*$$ -> EOF
+  ^\s*$$
+  ^. -> Error

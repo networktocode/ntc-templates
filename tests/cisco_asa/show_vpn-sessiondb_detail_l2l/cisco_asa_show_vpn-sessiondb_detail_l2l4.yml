@@ -1,7 +1,7 @@
 ---
 parsed_sample:
   - session_type: "LAN-to-LAN"
-    connection: "169.254.107.100"
+    connection: "DefaultL2LGroup"
     index: "26386"
     ip_address: "169.254.107.100"
     protocol: "IKEv2 IPsecOverNatT"
@@ -67,7 +67,7 @@ parsed_sample:
     posture_token: ""
     redirect_url: ""
   - session_type: "LAN-to-LAN"
-    connection: "169.254.107.100"
+    connection: "DefaultL2LGroup"
     index: "26386"
     ip_address: "169.254.107.100"
     protocol: "IKEv2 IPsecOverNatT"

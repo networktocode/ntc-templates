@@ -1,0 +1,15 @@
+  --------------------------------------------------------------------
+  Port   Port C-VLAN C-PRI ETH-type   VLAN-type   S-VLAN S-PRI  S-PRI
+  type   ID                                                     POLICY
+  --------------------------------------------------------------------
+  eth    1    -      2     -          Translation 1      7      -
+  eth    2    -      2     -          Translation 1      7      -
+  --------------------------------------------------------------------
+  Native VLAN     : 1
+  Default priority: 0
+  Downstream mode : operation
+  Mismatch policy : discard
+  --------------------------------------------------------------------
+  Notes: IPoE indicates IPv4-IPoE,  * indicates transparent attribute of
+  the vlan, In the Ethernet encapsulation list, the hexadecimal digits
+  indicate the user-defined Ethernet encapsulation type

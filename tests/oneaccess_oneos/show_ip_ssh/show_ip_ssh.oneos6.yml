@@ -1,0 +1,13 @@
+---
+parsed_sample:
+  - ssh: "Enabled"
+    scp: "disabled"
+    encryption: "RSA"
+    bits: "4096"
+    fingerprint: "5e:70:36:5a:20:93:14:18:93:04:03:df:f0:72:f4:fc"
+    max_sessions: "5"
+    max_channels_session: "10"
+    method: "all"
+    session_timeout: "900"
+    auth_timeout: "30"
+    auth_retries: "3"

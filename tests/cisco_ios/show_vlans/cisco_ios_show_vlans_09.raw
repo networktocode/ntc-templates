@@ -1,0 +1,232 @@
+VLAN ID: 1 (IEEE 802.1Q Encapsulation)
+
+ This is configured as native Vlan for the following interface(s) :
+TenGigabitEthernet2/1/8    Native-vlan Tx-type: Untagged
+TenGigabitEthernet2/1/9    Native-vlan Tx-type: Untagged
+Port-channel10    Native-vlan Tx-type: Untagged
+Port-channel11    Native-vlan Tx-type: Untagged
+Port-channel12    Native-vlan Tx-type: Untagged
+
+   Protocols Configured:          Received:        Transmitted:
+                     IP         7827384633          6797206314
+
+VLAN trunk interfaces for VLAN ID 1:
+TenGigabitEthernet2/1/8
+
+TenGigabitEthernet2/1/8 (1)
+
+                     IP: 10.250.1.41
+
+      Total 592860 packets, 219666945 bytes input
+      Total 592908 packets, 225079541 bytes output
+      Total 0 oversubscription packet drops
+TenGigabitEthernet2/1/9
+
+TenGigabitEthernet2/1/9 (1)
+
+
+      Total 0 packets, 0 bytes input
+      Total 41896 packets, 3225992 bytes output
+      Total 0 oversubscription packet drops
+Port-channel10
+
+Port-channel10 (1)
+
+
+      Total 132410176 packets, 16921682510 bytes input
+      Total 48655 packets, 3746435 bytes output
+Port-channel11
+
+Port-channel11 (1)
+
+          
+      Total 33153380 packets, 4229669206 bytes input
+      Total 48655 packets, 3746435 bytes output
+Port-channel12
+
+Port-channel12 (1)
+
+
+      Total 33096355 packets, 4229678203 bytes input
+      Total 48655 packets, 3746435 bytes output
+
+VLAN ID: 2 (IEEE 802.1Q Encapsulation)
+
+   Protocols Configured:          Received:        Transmitted:
+                     IP           79544415            74955768
+
+VLAN trunk interfaces for VLAN ID 2:
+Port-channel10.2
+
+Port-channel10.2 (2)
+
+                     IP: 10.252.219.225
+
+      Total 18374949 packets, 6023967815 bytes input
+      Total 17407397 packets, 4958445257 bytes output
+Port-channel11.2
+
+Port-channel11.2 (2)
+
+                     IP: 10.252.216.57
+
+      Total 23068652 packets, 7468483953 bytes input
+      Total 21598550 packets, 4960715572 bytes output
+Port-channel12.2
+
+Port-channel12.2 (2)
+
+                     IP: 10.252.216.53
+
+      Total 38106725 packets, 16257560490 bytes input
+      Total 35961638 packets, 12198476327 bytes output
+
+VLAN ID: 101 (IEEE 802.1Q Encapsulation)
+
+   Protocols Configured:          Received:        Transmitted:
+                     IP          355700586           370406725
+
+VLAN trunk interfaces for VLAN ID 101:
+TenGigabitEthernet2/1/9.101
+
+TenGigabitEthernet2/1/9.101 (101)
+
+                     IP: 10.250.45.49
+
+      Total 61224684 packets, 7797393413 bytes input
+      Total 62896469 packets, 6709121358 bytes output
+      Total 0 oversubscription packet drops
+TenGigabitEthernet2/1/9.1013000
+
+TenGigabitEthernet2/1/9.1013000 (101/3000)
+
+                     IP: 10.250.45.21
+
+      Total 42372558 packets, 3218374484 bytes input
+      Total 44995728 packets, 5492872488 bytes output
+TenGigabitEthernet2/1/9.1013015
+
+TenGigabitEthernet2/1/9.1013015 (101/3015)
+
+                     IP: 10.250.45.45
+
+      Total 42324511 packets, 3160716335 bytes input
+      Total 44000059 packets, 3460825174 bytes output
+TenGigabitEthernet2/1/9.1013062
+
+TenGigabitEthernet2/1/9.1013062 (101/3062)
+
+                     IP: 10.250.45.29
+
+      Total 41676057 packets, 3085188435 bytes input
+      Total 43307977 packets, 3379179800 bytes output
+TenGigabitEthernet2/1/9.1013120
+
+TenGigabitEthernet2/1/9.1013120 (101/3120)
+
+                     IP: 10.250.45.25
+
+      Total 43138586 packets, 3209922551 bytes input
+      Total 45350705 packets, 3570799743 bytes output
+TenGigabitEthernet2/1/9.1013141
+
+TenGigabitEthernet2/1/9.1013141 (101/3141)
+          
+                     IP: 10.250.45.41
+
+      Total 41678719 packets, 3085385415 bytes input
+      Total 43310315 packets, 3379362004 bytes output
+TenGigabitEthernet2/1/9.1013142
+
+TenGigabitEthernet2/1/9.1013142 (101/3142)
+
+                     IP: 10.250.45.37
+
+      Total 41680647 packets, 3085528270 bytes input
+      Total 43312160 packets, 3379506266 bytes output
+TenGigabitEthernet2/1/9.1013187
+
+TenGigabitEthernet2/1/9.1013187 (101/3187)
+
+                     IP: 10.250.45.33
+
+      Total 41669156 packets, 3084677717 bytes input
+      Total 43299826 packets, 3378543518 bytes output
+
+VLAN ID: 102 (IEEE 802.1Q Encapsulation)
+
+   Protocols Configured:          Received:        Transmitted:
+                     IP          503878506           577372482
+
+VLAN trunk interfaces for VLAN ID 102:
+TenGigabitEthernet2/1/9.102
+
+TenGigabitEthernet2/1/9.102 (102)
+
+                     IP: 10.250.51.157
+
+      Total 51019109 packets, 5042110380 bytes input
+      Total 51663724 packets, 4401020936 bytes output
+      Total 0 oversubscription packet drops
+TenGigabitEthernet2/1/9.1023000
+
+TenGigabitEthernet2/1/9.1023000 (102/3000)
+
+                     IP: 10.250.51.161
+          
+      Total 41650415 packets, 3083640780 bytes input
+      Total 43280737 packets, 3377401707 bytes output
+TenGigabitEthernet2/1/9.1023062
+
+TenGigabitEthernet2/1/9.1023062 (102/3062)
+
+                     IP: 10.250.51.185
+
+      Total 41594132 packets, 3079250012 bytes input
+      Total 43224476 packets, 3372786879 bytes output
+TenGigabitEthernet2/1/9.1023141
+
+TenGigabitEthernet2/1/9.1023141 (102/3141)
+
+                     IP: 10.250.51.165
+
+      Total 76289978 packets, 9496242779 bytes input
+      Total 94466179 packets, 59143016792 bytes output
+TenGigabitEthernet2/1/9.1023142
+
+TenGigabitEthernet2/1/9.1023142 (102/3142)
+
+                     IP: 10.250.51.173
+
+      Total 41609383 packets, 3080371423 bytes input
+      Total 43240362 packets, 3374022781 bytes output
+TenGigabitEthernet2/1/9.1023162
+
+TenGigabitEthernet2/1/9.1023162 (102/3162)
+
+                     IP: 10.250.51.181
+
+      Total 48442684 packets, 5275991725 bytes input
+      Total 50254748 packets, 7620183216 bytes output
+TenGigabitEthernet2/1/9.1023182
+
+TenGigabitEthernet2/1/9.1023182 (102/3182)
+
+                     IP: 10.250.51.169
+
+      Total 161751356 packets, 36734127884 bytes input
+      Total 208026385 packets, 160561796528 bytes output
+TenGigabitEthernet2/1/9.1023187
+
+TenGigabitEthernet2/1/9.1023187 (102/3187)
+
+                     IP: 10.250.51.177
+
+      Total 41589320 packets, 3078886618 bytes input
+      Total 43219244 packets, 3372374987 bytes output
+
+VLAN ID: 104 (IEEE 802.1Q Encapsulation)
+
+   Protocols Configured:          Received:        Transmitted:
+                     IP         2773718351          2874677338
+

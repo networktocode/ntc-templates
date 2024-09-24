@@ -1,0 +1,16 @@
+---
+parsed_sample:
+  - vrf: "MODEM"
+    vrf_id: "1"
+    interfaces:
+      - "FastEthernet 1/0.1"
+  - vrf: "INTERNET"
+    vrf_id: "2"
+    interfaces:
+      - "Dialer 2"
+      - "Dialer 3"
+      - "Loopback 777"
+      - "Bvi 10"
+  - vrf: "TEST"
+    vrf_id: "3"
+    interfaces: []

@@ -2,7 +2,7 @@ Value INTERFACE ((?!Port|Ch|-)\S+)
 Value INTERFACE_MODE (Trunk|Access(?:\s*\(\d+\))?|Customer(?:\s*\(\d+\))?)
 Value ADMIN_STATE (Up|Down)
 Value LINK_STATE (Up|Down|Not Present)
-Value DESCRIPTION (.*?)
+Value List DESCRIPTION (.*?)
 
 Start
   ^\s*Admin\s+Link\s*$$
@@ -56,8 +56,10 @@ Ch5
 
 Vlan
   ^(?:\s*-+)+\s*$$
-  ^\s*${INTERFACE}\s+${ADMIN_STATE}\s+${LINK_STATE}(?:\s+${DESCRIPTION})?\s*$$ -> Record
+  ^(?:\s*(?!Port|Ch|-)\S+\s+(?:Up|Down).*|\s*)$$ -> Continue.Record
   ^\s*$$ -> Start
+  ^\s*${INTERFACE}\s+${ADMIN_STATE}\s+${LINK_STATE}(?:\s+${DESCRIPTION})?\s*$$
+  ^\s*${DESCRIPTION}\s*$$
   ^. -> Error
 
 Loopback

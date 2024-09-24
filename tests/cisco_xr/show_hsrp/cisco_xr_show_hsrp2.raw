@@ -1,0 +1,26 @@
+Mon Jul 29 00:05:16.882 UTC
+IPv4 Groups:
+                        P indicates configured to preempt.
+                        |
+Interface      Grp  Pri P State   Active addr     Standby addr   Group addr    
+Gi0/0/0/0         1 110 P Active  local           10.0.0.3       10.0.0.1      
+Gi0/0/0/0.123   123  90 P Standby 10.1.2.4        local          10.1.2.1      
+Gi0/0/0/0.456   456 100   Active  local           10.4.56.3      10.4.56.1     
+IPv6 Groups:
+                        P indicates configured to preempt.
+                        |
+Interface      Grp  Pri P State   Active addr     Standby addr   Group addr    
+Gi0/0/0/0         6 110 P Active  local           fe80::5054:ff:fe0d:1111
+                                                                 fe80::1       
+Gi0/0/0/0.66     66 100   Active  local           fe80::5054:ff:fe0d:1111
+                                                                 fe80::4:5:6:66
+Gi0/0/0/0.123   123  90 P Standby fe80::5054:ff:fe0d:1111 
+                                                  local          
+                                                              fe80:1:2:3:4:5:6:7
+Gi0/0/0/0.234   234  90   Standby fe80::5054:ff:fe0d:1111 
+                                                  local          
+                                                              fe80:7:6:5:4:3:2:1
+Gi0/0/0/0.456   456 100   Active  local           fe80::5054:ff:fe0d:1111
+                                                                 fe80::4:5:6:456
+Gi0/0/0/0.789   788 100   Active  local           fe80::9        fe80::788     
+Gi0/0/0/0.789   789 110 P Active  local           fe80::9        fe80::789     

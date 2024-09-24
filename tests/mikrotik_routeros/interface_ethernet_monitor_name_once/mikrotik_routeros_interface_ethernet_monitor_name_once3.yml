@@ -1,0 +1,52 @@
+---
+parsed_sample:
+  - name: "sfp-sfpplus24"
+    status: "link-ok"
+    auto_negotiation: "done"
+    rate: "10Gbps"
+    full_duplex: "yes"
+    tx_flow_control: "no"
+    rx_flow_control: "no"
+    advertising: ""
+    link_partner_advertising: ""
+    default_cable_settings: ""
+    combo_state: ""
+    sfp_module_present: "yes"
+    sfp_rx_loss: "no"
+    sfp_tx_fault: "no"
+    sfp_type: "SFP-or-SFP+"
+    sfp_connector_type: "LC"
+    sfp_link_length_9um: ""
+    sfp_link_length_copper: ""
+    sfp_link_length_50um: "80m"
+    sfp_link_length_62um: "30m"
+    sfp_vendor_name: "Mikrotik"
+    sfp_vendor_part_number: "S+85DLC03D"
+    sfp_vendor_revision: "A"
+    sfp_vendor_serial: "STST85S84700155"
+    sfp_manufacturing_date: "18-12-07"
+    sfp_wavelength: "850nm"
+    sfp_temperature: "33C"
+    sfp_supply_voltage: "3.251V"
+    sfp_tx_bias_current: "6mA"
+    sfp_tx_power: "-2.843dBm"
+    sfp_rx_power: "-1.203dBm"
+    eeprom_checksum: "good"
+    eeprom: [
+      "0000: 03 04 07 10 00 00 00 20  40 0c c0 06 67 00 00 00  .......  @...g...",
+      "0010: 08 03 00 1e 4d 69 6b 72  6f 74 69 6b 20 20 20 20  ....Mikr otik",
+      "0020: 20 20 20 20 00 00 00 00  53 2b 38 35 44 4c 43 30      .... S+85DLC0",
+      "0030: 33 44 20 20 20 20 20 20  41 20 20 20 03 52 00 45  3D       A   .R.E",
+      "0040: 00 1a 00 00 53 54 53 54  38 35 53 38 34 37 30 30  ....STST 85S84700",
+      "0050: 31 35 35 20 31 38 31 32  30 37 20 20 68 f0 05 b6  155 1812 07  h...",
+      "0060: 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00  ........ ........",
+      "0070: 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00  ........ ........",
+      "0080: 64 00 d8 00 5f 00 dd 00  8c a0 6d 60 88 b8 71 48  d..._... ..m`..qH",
+      "0090: 1d 4c 00 fa 17 70 01 f4  31 2d 04 ea 27 10 06 30  .L...p.. 1-..'..0",
+      "00a0: 31 2d 01 3c 27 10 01 8e  00 00 00 00 00 00 00 00  1-.<'... ........",
+      "00b0: 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00  ........ ........",
+      "00c0: 00 00 00 00 3f 80 00 00  00 00 00 00 01 00 00 00  ....?... ........",
+      "00d0: 01 00 00 00 01 00 00 00  01 00 00 00 00 00 00 26  ........ .......&",
+      "00e0: 21 8a 7f 00 0c cd 14 4c  1d 9c 00 00 00 00 00 00  !......L ........",
+      "00f0: 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00  ........ ........"
+    ]
