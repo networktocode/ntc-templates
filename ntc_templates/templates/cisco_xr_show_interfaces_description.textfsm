@@ -1,6 +1,6 @@
 Value INTERFACE (\S+)
 Value STATUS (up|down|deleted|admin\-down|reset)
-Value PROTOCOL (up|down|admin\-down)
+Value PROTOCOL (up|down|deleted|admin\-down)
 Value DESCRIPTION (\S.*\s*\S*)
 
 Start
