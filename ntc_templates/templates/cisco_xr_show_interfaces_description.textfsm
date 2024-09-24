@@ -1,0 +1,7 @@
+Value INTERFACE (\S+)
+Value STATUS (up|down|deleted|admin\-down|reset)
+Value PROTOCOL (up|down|admin\-down)
+Value DESCRIPTION (\S.*\s*\S*)
+
+Start
+  ^${INTERFACE}\s+${STATUS}\s+${PROTOCOL}(?:\s+)?(?:${DESCRIPTION})? -> Record
