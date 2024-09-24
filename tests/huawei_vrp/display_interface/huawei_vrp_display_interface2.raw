@@ -1,0 +1,74 @@
+GigabitEthernet0/0/00 current state : UP
+Line protocol current state : UP 
+Description:LINK
+Switch Port, Link-type : access(negotiated), 
+TPID : 8100(Hex), The Maximum Frame Length is 10240
+IP Sending Frames' Format is PKTFMT_ETHNT_2, Hardware address is aaaa-aaaa-aaaa
+Last physical up time   : 2000-01-01 00:00:00 UTC+01:00 DST
+Last physical down time : 2000-01-01 00:00:00 UTC+01:00 DST
+Current system time: 2000-01-01 01:01:01+00:00
+Port Mode: COMMON FIBER, Transceiver: 1X_CopperPassive_SFP
+Speed : 2500,   Loopback: NONE
+Duplex: FULL,   Negotiation: DISABLE
+Mdi   : -,      Flow-control: DISABLE
+Last 300 seconds input rate 0 bits/sec, 0 packets/sec
+Last 300 seconds output rate 0 bits/sec, 0 packets/sec
+Input peak rate 0 bits/sec, Record time: 2024-08-27 23:51:54
+Output peak rate 0 bits/sec, Record time: 2024-08-31 17:30:14
+
+Input:  0 packets, 0 bytes
+  Unicast:                          0,  Multicast:                           0
+  Broadcast:                        0,  Jumbo:                               0
+  Discard:                          0,  Pause:                               0
+  Frames:                           0
+
+  Total Error:                      0
+  CRC:                              0,  Giants:                              0
+  Runts:                            0,  DropEvents:                          0
+  Alignments:                       0,  Symbols:                             0
+  Ignoreds:                         0
+
+Output:  0 packets, 0 bytes
+  Unicast:                          0,  Multicast:                           0
+  Broadcast:                        0,  Jumbo:                               0
+  Discard:                          0,  Pause:                               0
+
+  Total Error:                      0
+  Collisions:                       0,  Late Collisions:                     0
+  Deferreds:                        0  
+
+    Input bandwidth utilization threshold : 80.00%
+    Output bandwidth utilization threshold: 80.00%
+    Input bandwidth utilization  : 0.09%
+    Output bandwidth utilization : 0.12%
+
+NULL0 current state : UP
+Line protocol current state : UP (spoofing)
+Description:
+Route Port,The Maximum Transmit Unit is 1500
+Internet protocol processing : disabled
+Physical is NULL DEV
+Current system time: 2024-09-13 17:06:10+01:00
+    Last 300 seconds input rate 0 bits/sec, 0 packets/sec
+    Last 300 seconds output rate 0 bits/sec, 0 packets/sec
+    Realtime 201 seconds input rate 0 bits/sec, 0 packets/sec
+    Realtime 201 seconds output rate 0 bits/sec, 0 packets/sec
+    Input: 0 packets,0 bytes
+           0 unicast,0 broadcast,0 multicast
+           0 errors,0 unknownprotocol
+    Output:0 packets,0 bytes
+           0 unicast,0 broadcast,0 multicast
+           0 errors
+    Input bandwidth utilization  :    0%
+    Output bandwidth utilization :    0%
+
+Vlanif01 current state : UP
+Line protocol current state : UP 
+Last line protocol up time : 2000-01-01 00:00:00 UTC+00:00 DST
+Description:LINK_VLAN
+Route Port,The Maximum Transmit Unit is 1500
+Internet Address is 0.0.0.0/24 
+IP Sending Frames' Format is PKTFMT_ETHNT_2, Hardware address is aaaa-aaaa-aaaa
+Current system time: 2000-00-00 00:00:00+00:00
+    Input bandwidth utilization  : --
+    Output bandwidth utilization : --
