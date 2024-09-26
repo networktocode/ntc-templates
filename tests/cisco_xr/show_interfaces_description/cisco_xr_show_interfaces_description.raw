@@ -1,0 +1,23 @@
+Tue Sep 24 10:49:25.293 BRA
+
+Interface          Status      Protocol    Description
+--------------------------------------------------------------------------------
+BE100              up          up          Ligacao -SAT01 | 10G | (satellite100)
+Lo0                up          up          Endereco de Acesso ao Roteador
+Lo10               up          up          SPB | BGP | ASN 123456
+Lo20               up          up          *** Management Loopback ***
+Nu0                up          up
+Gi100/0/0/0        up          up          LINK ETHERNET
+Gi100/0/0/0.10     up          up          MULTIPLANNING
+Gi100/0/0/0.150012 admin-down  admin-down  ADMIN DOWN
+Gi100/0/0/2        admin-down  admin-down
+Gi100/0/0/9        deleted     deleted     DELETED
+nG100/0/0/42       deleted     deleted
+nG100/0/0/43       down        down
+nT100/0/0/47       up          up
+PT0/RSP0/CPU0/0    admin-down  admin-down
+Mg0/RSP1/CPU0/0    admin-down  admin-down
+Mg0/RSP1/CPU0/1    admin-down  admin-down
+Te0/3/0/0          up          up          Ligacao | 10G | 10G/061 | (ten0/4/0/1/0)
+Te0/4/0/0          up          up          Ligacao | 10G | 10G/062 | (ten0/3/0/1/7)
+Te0/5/0/3          up          up          Ligacao -SAT04 | 10G | (satellite400)
