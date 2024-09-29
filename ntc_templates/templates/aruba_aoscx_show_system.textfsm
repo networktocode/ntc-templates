@@ -29,6 +29,7 @@ Start
   ^.*${UPTIME_DAYS}\s+(day|days) -> Continue
   ^.*${UPTIME_HOURS}\s+(hour|hours) -> Continue
   ^.*${UPTIME_MINUTES}\s+(minute|minutes) -> Record
+  ^.*under\s+a\s+minute -> Record
   ^CPU
   ^Memory
   ^-+$$
