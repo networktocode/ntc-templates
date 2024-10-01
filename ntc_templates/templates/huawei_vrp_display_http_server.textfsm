@@ -25,3 +25,5 @@ Start
   ^\s*HTTP\s*IPv6\s*Secure-server\s*Status\s*:\s*${HTTP_IPV6_SERVER_PORT}
   ^\s*HTTP\s*IPv6\s*Secure-server\s*Port\s*:\s*${HTTPS_IPV6_STATUS}
   ^\s*HTTP\s*server\s*source\s*address\s*:\s*${HTTP_SERVER_SOURCE_ADDRESS}
+  ^\s*$$
+  ^. -> Error
