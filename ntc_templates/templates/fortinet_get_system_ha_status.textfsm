@@ -38,7 +38,7 @@ Start
 
 UnhealthyStatus
   # semicolon necessary to anchor
-  ^${HA_HEALTH};$$
+  ^\s+${HA_HEALTH};$$
   ^Model:\s+${MODEL} -> Start
 
 Configuration_Status
