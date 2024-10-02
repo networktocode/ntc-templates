@@ -19,8 +19,8 @@ Value HA_MASTER_UNIT_INDEX (\S+)
 Value HA_SLAVE_UNIT_INDEX (\S+)
 
 Start
-  ^HA\s+Health\s+Status:\s+${HA_HEALTH}$$
-  ^HA\s+Health\s+Status:$$ -> UnhealthyStatus
+  ^HA\s+Health\s+Status:\s+${HA_HEALTH}
+  ^HA\s+Health\s+Status:\s*$$ -> UnhealthyStatus
   ^Model:\s+${MODEL}
   ^Mode:\s+${HA_MODE}
   ^Group:\s+${HA_GROUP}
