@@ -12,3 +12,5 @@ Start
   ^\s*TELNET\s*server\s*source\s*address\s*:\s*${TELNET_SERVER_SOURCE_ADDRESS}
   ^\s*ACL4\s*number\s*:\s*${ACL4_NUMBER}
   ^\s*ACL6\s*number\s*:\s*${ACL6_NUMBER}
+  ^\s*$$
+  ^. -> Error
