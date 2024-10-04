@@ -1,0 +1,16 @@
+Value TELNET_IPV4_SERVER (\S+)
+Value TELNET_IPV6_SERVER (\S+)
+Value TELNET_SERVICE_PORT (\d+)
+Value TELNET_SERVER_SOURCE_ADDRESS (\S+)
+Value ACL4_NUMBER (\d+)
+Value ACL6_NUMBER (\d+)
+
+Start
+  ^\s*TELNET\s*IPv4\s*server\s*:\s*${TELNET_IPV4_SERVER}
+  ^\s*TELNET\s*IPv6\s*server\s*:\s*${TELNET_IPV6_SERVER}
+  ^\s*TELNET\s*server\s*port\s*:\s*${TELNET_SERVICE_PORT}
+  ^\s*TELNET\s*server\s*source\s*address\s*:\s*${TELNET_SERVER_SOURCE_ADDRESS}
+  ^\s*ACL4\s*number\s*:\s*${ACL4_NUMBER}
+  ^\s*ACL6\s*number\s*:\s*${ACL6_NUMBER}
+  ^\s*$$
+  ^. -> Error
