@@ -1,0 +1,43 @@
+HA Health Status:
+    WARNING: FGT40XXXXXXXXXXX has hbdev down;
+    WARNING: FGT40YYYYYYYYYYY has hbdev down;
+Model: FortiGate-40F
+Mode: HA A-P
+Group: 28
+Debug: 0
+Cluster Uptime: 23 days 1:31:39
+Cluster state change time: 2024-09-16 13:03:51
+Primary selected using:
+    <2024/09/16 13:03:51> FGT40XXXXXXXXXXX is selected as the primary because its override priority is larger than peer member FGT40YYYYYYYYYYY.
+    <2024/09/11 12:13:30> FGT40XXXXXXXXXXX is selected as the primary because it's the only member in the cluster.
+    <2024/09/09 16:15:43> FGT40XXXXXXXXXXX is selected as the primary because it's the only member in the cluster.
+ses_pickup: enable, ses_pickup_delay=disable
+override: enable
+Configuration Status:
+    FGT40XXXXXXXXXXX(updated 3 seconds ago): in-sync
+    FGT40YYYYYYYYYYY(updated 4 seconds ago): in-sync
+System Usage stats:
+    FGT40XXXXXXXXXXX(updated 3 seconds ago):
+        sessions=196, average-cpu-user/nice/system/idle=0%/0%/0%/100%, memory=34%
+    FGT40YYYYYYYYYYY(updated 4 seconds ago):
+        sessions=43, average-cpu-user/nice/system/idle=0%/0%/0%/99%, memory=31%
+HBDEV stats:
+    FGT40XXXXXXXXXXX(updated 3 seconds ago):
+        lan2: physical/00, down, rx-bytes/packets/dropped/errors=2289976940/6414484/0/0, tx=2334914934/6414604/0/0
+        lan3: physical/1000auto, up, rx-bytes/packets/dropped/errors=2859911090/8634708/0/0, tx=4096246721/11393870/0/0
+    FGT40YYYYYYYYYYY(updated 4 seconds ago):
+        lan2: physical/00, down, rx-bytes/packets/dropped/errors=2334910566/6414592/0/0, tx=2289993719/6414531/0/0
+        lan3: physical/1000auto, up, rx-bytes/packets/dropped/errors=4096363031/11393865/0/0, tx=2859518832/8634703/0/0
+MONDEV stats:
+    FGT40XXXXXXXXXXX(updated 3 seconds ago):
+        lan1: physical/100auto, up, rx-bytes/packets/dropped/errors=81549709010/222074671/0/0, tx=215809491211/241726140/0/0
+        wan: physical/100auto, up, rx-bytes/packets/dropped/errors=235849981176/264545599/0/0, tx=96429336043/236634292/0/0
+    FGT40YYYYYYYYYYY(updated 4 seconds ago):
+        lan1: physical/100auto, up, rx-bytes/packets/dropped/errors=422928973/3422783/0/0, tx=12363136/46749/0/0
+        wan: physical/100auto, up, rx-bytes/packets/dropped/errors=43917368/544179/0/0, tx=86212/874/0/0
+Primary     : FGT-fw-a       , FGT40XXXXXXXXXXX, HA cluster index = 1
+Secondary   : FGT-fw-b       , FGT40YYYYYYYYYYY, HA cluster index = 0
+number of vcluster: 1
+vcluster 1: work 169.254.0.2
+Primary: FGT40XXXXXXXXXXX, HA operating index = 0
+Secondary: FGT40YYYYYYYYYYY, HA operating index = 1
