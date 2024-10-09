@@ -1,0 +1,18 @@
+Value MODEL (\S+)
+Value VERSION (\d+.\d+.\d+.\d+\s*\S+)
+Value COMPILATION (.+)
+Value FIPS_MODE (\S+)
+Value UPTIME (.+)
+Value REBOOT_CAUSE (.+)
+
+Start
+  ^\s*Aruba\s*Operating\s*System\s*Software
+  ^\s*ArubaOS\s*\(MODEL:\s*${MODEL}\),\s*Version\s*${VERSION}
+  ^\s*Website:\s*http://www.arubanetworks.com
+  ^\s*\(c\)\s*Copyright\s*\d+\s*Hewlett\s*Packard\s*Enterprise\s*Development\s*LP\.
+  ^\s*Compiled\s*on\s*${COMPILATION}
+  ^\s*FIPS\s*Mode\s*:\s*${FIPS_MODE}
+  ^\s*AP\s*uptime\s*is\s*${UPTIME}
+  ^\s*Reboot\s*Time\s*and\s*Cause\s*:\s*${REBOOT_CAUSE}
+  ^\s*$$
+  ^.*$$ -> Error
