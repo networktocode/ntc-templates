@@ -53,6 +53,8 @@ BFD
   # some legacy output spells holddown with one d
   ^\s*Holdd?own\s+\(hits\):\s+${HOLDDOWN}\(${HOLDDOWN_HITS}\),\s+Hello\s+\(hits\):\s+${HELLO_INTERVAL}\(${HELLO_HITS}\)\s*$$
   #
+  ^\s*Rx\s+Count:\s+${RX_COUNT},(?:\s+\S+){5}\s*$$
+  ^\s*Tx\s+Count:\s+${TX_COUNT},(?:\s+\S+){5}\s*$$
   ^\s*Rx\s+Count:\s+${RX_COUNT},(?:\s+\S+){6}\s+${RX_LAST}(?:\s+\S+){2}\s*$$
   ^\s*Tx\s+Count:\s+${TX_COUNT},(?:\s+\S+){6}\s+${TX_LAST}(?:\s+\S+){2}\s*$$
   ^\s*Registered\s+protocols:\s+${REGISTERED_PROTOCOLS}\s*$$
