@@ -13,7 +13,6 @@ OS_CHOICES = [
     "arista_eos",
     "aruba_aoscx",
     "aruba_os",
-    "aruba_procurve",
     "avaya_ers",
     "avaya_vsp",
     "broadcom_icos",
