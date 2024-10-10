@@ -14,8 +14,8 @@
 #
 Value Required HOSTNAME (\S+)
 Value VERSION (.*)
-Value SECURITYLEVEL (.*)
-Value SIGNATURE (.*)
+Value SECURITY_LEVEL (.*)
+Value FIRMWARE_SIGNATURE (.*)
 Value VIRUS_DB (.*)
 Value EXTENDED_DB (.*)
 Value EXTREME_DB (.*)
@@ -25,6 +25,8 @@ Value APP_DB (.*)
 Value FMWP_DB (.*) 
 Value INDUSTRIAL_DB (.*)
 Value SERIAL_NUMBER (\S+)
+Value LICENSE_STATUS (.*)
+Value VM_RESOURCES (.*)
 Value IPS_MALICIOUS_URL_DATABASE (.*)
 Value IOT_DETECT (.*)
 Value OT_DETECT_DB (.*)
@@ -54,8 +56,8 @@ Value LAST_REBOOT_REASON (.+)
 
 Start
   ^Version:\s+${VERSION}
-  ^Security Level:\s+${SECURITYLEVEL}
-  ^Firmware Signature:\s+${SIGNATURE}
+  ^Security Level:\s+${SECURITY_LEVEL}
+  ^Firmware Signature:\s+${FIRMWARE_SIGNATURE}
   ^Virus-DB:\s+${VIRUS_DB}
   ^Extended\s+DB:\s+${EXTENDED_DB}
   ^AV\s+AI/ML\s+Model:\s+${AV_AI_ML_MODEL}
@@ -63,15 +65,17 @@ Start
   ^IPS-DB:\s+${IPS_DB}
   ^IPS-ETDB:\s+${IPS_ETDB}
   ^APP-DB:\s+${APP_DB}
-  ^FMWP-DB:\s+${APP_DB}
+  ^FMWP-DB:\s+${FMWP_DB}
   ^INDUSTRIAL-DB:\s+${INDUSTRIAL_DB}
   ^Serial-Number:\s+${SERIAL_NUMBER}
+  ^License Status:\s+${LICENSE_STATUS}
+  ^VM Resources:\s+${VM_RESOURCES}
   ^IPS\s+Malicious\s+URL\s+Database:\s+${IPS_MALICIOUS_URL_DATABASE}
-  ^IoT-Detect:\s+${APP_DB}
-  ^OT-Detect-DB:\s+${APP_DB}
-  ^OT-Patch-DB:\s+${APP_DB}
-  ^OT-Threat-DB:\s+${APP_DB}
-  ^IPS-Engine:\s+${APP_DB}
+  ^IoT-Detect:\s+${IOT_DETECT}
+  ^OT-Detect-DB:\s+${OT_DETECT_DB}
+  ^OT-Patch-DB:\s+${OT_PATCH_DB}
+  ^OT-Threat-DB:\s+${OT_THREAT_DB}
+  ^IPS-Engine:\s+${IPS_ENGINE}
   ^Botnet\s+DB:\s+${BOTNET_DB}
   ^BIOS\s+version:\s+${BIOS_VERSION}
   ^System\s+Part-Number:\s+${SYSTEM_PART_NUMBER}
