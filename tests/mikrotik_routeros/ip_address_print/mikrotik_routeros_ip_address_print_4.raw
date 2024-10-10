@@ -1,0 +1,12 @@
+Columns: ADDRESS, NETWORK, INTERFACE
+# ADDRESS           NETWORK        INTERFACE
+0 100.64.3.207/27   100.64.3.192   vlan906  
+1 100.64.1.207/27   100.64.1.192   vlan991  
+;;; MGMT Loopback
+2 100.64.1.135/32   100.64.1.135   Lo0      
+;;; INET Loopback
+3 1.1.1.1/32        1.1.1.1        Lo1      
+;;; INET
+4 1.1.1.82/30       1.1.1.80       vlan203  
+;;; INET
+5 1.1.1.86/30       1.1.1.84       vlan204
