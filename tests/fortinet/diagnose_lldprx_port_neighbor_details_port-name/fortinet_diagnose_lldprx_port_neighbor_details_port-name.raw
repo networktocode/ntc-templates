@@ -1,0 +1,56 @@
+1 port: 6
+1 port.txt: lan1
+1 mac: 00:11:22:33:44:55
+1 chassis.type: 4
+1 chassis.type.txt: interface-mac
+1 chassis.data: 00:11:22:33:44:55
+1 port.id.type: 5
+1 port.id.type.txt: interface-name
+1 port.id.len: 20
+1 port.id.data: GigabitEthernet1/0/5
+1 ttl: 120
+1 port.desc.len: 10
+1 port.desc.data: Port
+1 system.name.len: 15
+1 system.name.data: Switch
+1 system.desc.len: 179
+1 system.desc.data: Huawei Switch S5735-L48T4S-A1
+Huawei Versatile Routing Platform Software
+VRP (R) software, Version 5.170 (S5735 V200R022C00SPC500)
+Copyright (C) 2000-2022 HUAWEI TECH Co., Ltd.
+1 system.caps.available: 0014
+1 system.caps.available.txt: bridge router
+1 system.caps.enabled: 0014
+1 system.caps.enabled.txt: bridge router
+1 address.count: 1
+1 address.1.type: 1
+1 address.1.type.txt: ipv4
+1 address.1.len: 4
+1 address.1.addr: aaa.bbb.ccc.ddd
+1 address.1.addr.interface.type: 2
+1 address.1.addr.interface.type.txt: if-index
+1 address.1.addr.interface.number: 269
+1 vlan.id: 1
+1 vlan.protocol.count: 1
+1 vlan.protocol.1.flag: 0
+1 vlan.protocol.1.flag.txt:
+1 vlan.protocol.1.id: 0
+1 vlan.name.count: 1
+1 vlan.name.1.id: 1
+1 vlan.name.1.len: 9
+1 vlan.name.1.data: VLAN 0001
+1 aggregation.status: 1
+1 aggregation.status.txt: capable
+1 aggregation.port: 0
+1 mac_phy.auto: 3
+1 mac_phy.auto.txt: supported enabled
+1 mac_phy.pmd: 7c05
+1 mac_phy.pmd.txt: 10BaseT 10BaseTFD 100BaseT4 100BaseTX 100baseTXFD 1000baseXFd
+1 mac_phy.mau: 001e
+1 mac_phy.mau.txt: 1000baseTFD
+1 power.status: 0
+1 power.status.txt: PD
+1 power.pair: 0
+1 power.class: 0
+1 max-frame-size: 10240
+
