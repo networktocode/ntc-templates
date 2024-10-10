@@ -1,0 +1,3 @@
+Flags: X - disabled, R - running
+ 0  R ;;; To Cisco Te1/3 - Te1/4
+      name="bond1" mtu=9000 mac-address=4C:5E:0C:14:3F:9D arp=enabled arp-timeout=auto slaves=sfp-sfpplus7,sfp-sfpplus8 mode=802.3ad primary=none link-monitoring=mii arp-interval=100ms arp-ip-targets="" mii-interval=100ms down-delay=0ms up-delay=0ms lacp-rate=1sec transmit-hash-policy=layer-3-and-4 min-links=0
