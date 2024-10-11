@@ -621,21 +621,21 @@ hp_comware_display_vlan_all.textfsm, .*, hp_comware, di[[splay]] v[[lan]] a[[ll]
 hp_comware_display_clock.textfsm, .*, hp_comware, di[[splay]] clo[[ck]]
 hp_comware_display_arp.textfsm, .*, hp_comware, di[[splay]] a[[rp]]
 
-hp_procurve_show_lldp_info_remote-device_detail.textfsm, .*, hp_procurve, sh[[ow]] ll[[dp]] i[[nfo]] r[[emote-device]] .+
-hp_procurve_show_lldp_info_remote-device.textfsm, .*, hp_procurve, sh[[ow]] ll[[dp]] i[[nfo]] r[[emote-device]]
-hp_procurve_show_cdp_neighbors_detail.textfsm, .*, hp_procurve, sh[[ow]] cd[[p]] nei[[ghbors]] d[[etail]]
-hp_procurve_show_interfaces_brief.textfsm, .*, hp_procurve, sh[[ow]] int[[erfaces]] b[[rief]]
-hp_procurve_show_port-security.textfsm, .*, hp_procurve, sh[[ow]] port-s[[ecurity]]
-hp_procurve_show_tech_buffers.textfsm, .*, hp_procurve, sh[[ow]] tec[[h]] buf[[ffers]]
-hp_procurve_show_mac-address.textfsm, .*, hp_procurve, sh[[ow]] mac-a[[ddress]]
-hp_procurve_show_interfaces.textfsm, .*, hp_procurve, sh[[ow]] int[[erfaces]]
-hp_procurve_show_ip_route.textfsm, .*, hp_procurve, sh[[ow]] ip ro[[ute]]
-hp_procurve_show_version.textfsm, .*, hp_procurve, sh[[ow]] ve[[rsion]]
-hp_procurve_show_system.textfsm, .*, hp_procurve, sh[[ow]] syst[[em]]
-hp_procurve_show_trunks.textfsm, .*, hp_procurve, sh[[ow]] tr[[unks]]
-hp_procurve_show_vlans.textfsm, .*, hp_procurve, sh[[ow]] vl[[ans]]
-hp_procurve_show_arp.textfsm, .*, hp_procurve, sh[[ow]] ar[[p]]
-hp_procurve_show_ip.textfsm, .*, hp_procurve, sh[[ow]] ip
+hp_procurve_show_lldp_info_remote-device_detail.textfsm, .*, (hp|aruba)_procurve, sh[[ow]] ll[[dp]] i[[nfo]] r[[emote-device]] .+
+hp_procurve_show_lldp_info_remote-device.textfsm, .*, (hp|aruba)_procurve, sh[[ow]] ll[[dp]] i[[nfo]] r[[emote-device]]
+hp_procurve_show_cdp_neighbors_detail.textfsm, .*, (hp|aruba)_procurve, sh[[ow]] cd[[p]] nei[[ghbors]] d[[etail]]
+hp_procurve_show_interfaces_brief.textfsm, .*, (hp|aruba)_procurve, sh[[ow]] int[[erfaces]] b[[rief]]
+hp_procurve_show_port-security.textfsm, .*, (hp|aruba)_procurve, sh[[ow]] port-s[[ecurity]]
+hp_procurve_show_tech_buffers.textfsm, .*, (hp|aruba)_procurve, sh[[ow]] tec[[h]] buf[[ffers]]
+hp_procurve_show_mac-address.textfsm, .*, (hp|aruba)_procurve, sh[[ow]] mac-a[[ddress]]
+hp_procurve_show_interfaces.textfsm, .*, (hp|aruba)_procurve, sh[[ow]] int[[erfaces]]
+hp_procurve_show_ip_route.textfsm, .*, (hp|aruba)_procurve, sh[[ow]] ip ro[[ute]]
+hp_procurve_show_version.textfsm, .*, (hp|aruba)_procurve, sh[[ow]] ve[[rsion]]
+hp_procurve_show_system.textfsm, .*, (hp|aruba)_procurve, sh[[ow]] syst[[em]]
+hp_procurve_show_trunks.textfsm, .*, (hp|aruba)_procurve, sh[[ow]] tr[[unks]]
+hp_procurve_show_vlans.textfsm, .*, (hp|aruba)_procurve, sh[[ow]] vl[[ans]]
+hp_procurve_show_arp.textfsm, .*, (hp|aruba)_procurve, sh[[ow]] ar[[p]]
+hp_procurve_show_ip.textfsm, .*, (hp|aruba)_procurve, sh[[ow]] ip
 
 huawei_smartax_display_ont_info_summary_ont.textfsm:huawei_smartax_display_ont_info_summary_sn.textfsm, .*, huawei_smartax, di[[splay]] ont i[[nfo]] su[[mmary]] \S+ *$
 huawei_smartax_display_ont_info_0_1_2.textfsm:huawei_smartax_display_ont_info_description.textfsm, .*, huawei_smartax, di[[splay]] ont i[[nfo]] (\d+\s*|\d+ \d+ \d+\s*)\s*[[all]] *$
