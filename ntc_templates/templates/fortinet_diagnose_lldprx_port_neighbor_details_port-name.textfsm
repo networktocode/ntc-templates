@@ -127,3 +127,5 @@ Start
 MultipleLines
   ^${SYSTEM_DESC_DATA}
   ^1\s+system\.caps\.available:\s+${SYSTEM_CAPS_AVAILABLE} -> Start  
+  ^\s*$$
+  ^. -> Error
