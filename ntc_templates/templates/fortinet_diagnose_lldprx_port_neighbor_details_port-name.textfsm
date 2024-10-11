@@ -69,7 +69,8 @@ Value MAX_FRAME_SIZE (\S+)
 Start
   ^1\s+port:\s+${PORT}
   ^1\s+port\.txt:\s+${PORT_TXT}
-  ^1\s+mac:\s+${MAC}
+  ^1\s+mac:\s+${MAC_ADDRESS}
+
   ^1\s+chassis\.type:\s+${CHASSIS_TYPE}
   ^1\s+chassis\.type\.txt:\s+${CHASSIS_TYPE_TXT}
   ^1\s+chassis\.data:\s+${CHASSIS_DATA}
