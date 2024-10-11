@@ -1,0 +1,32 @@
+== [ wan ]
+name: wan   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 0.0.0.0 0.0.0.0   status: up    netbios-forward: disable    type: physical   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    mtu-override: disable    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable
+== [ lan1 ]
+name: lan1   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 0.0.0.0 0.0.0.0   status: up    netbios-forward: disable    type: physical   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    mtu-override: disable    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable
+== [ lan2 ]
+name: lan2   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 0.0.0.0 0.0.0.0   status: up    netbios-forward: disable    type: physical   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    mtu-override: disable    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable
+== [ lan3 ]
+name: lan3   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 0.0.0.0 0.0.0.0   status: up    netbios-forward: disable    type: physical   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    mtu-override: disable    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable
+== [ a ]
+name: a   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 0.0.0.0 0.0.0.0   status: up    netbios-forward: disable    type: physical   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    mtu-override: disable    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable
+== [ modem ]
+name: modem   mode: pppoe    management-ip: 0.0.0.0 0.0.0.0   ip: 0.0.0.0 0.0.0.0   status: down    netbios-forward: disable    type: physical   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    mtu-override: disable    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable
+== [ naf.root ]
+name: naf.root   ip: 0.0.0.0 0.0.0.0   status: up    netbios-forward: disable    type: tunnel   netflow-sampler: disable    sflow-sampler: disable    src-check: disable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    wccp: disable
+== [ l2t.root ]
+name: l2t.root   ip: 0.0.0.0 0.0.0.0   status: up    netbios-forward: disable    type: tunnel   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    wccp: disable
+== [ ssl.root ]
+name: ssl.root   ip: 0.0.0.0 0.0.0.0   status: up    netbios-forward: disable    type: tunnel   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    wccp: disable
+== [ lo0.100 ]
+name: lo0.100   management-ip: 0.0.0.0 0.0.0.0   ip: 10.0.0.0 255.255.255.255   status: up    type: loopback   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable
+== [ wan.100 ]
+name: wan.100   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 10.0.0.0 255.255.255.252   status: up    netbios-forward: disable    type: vlan   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    switch-controller-feature: none    mtu-override: disable    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable
+== [ lan1.10 ]
+name: lan1.10   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 10.0.0.0 255.255.255.0   status: up    netbios-forward: disable    type: vlan   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    switch-controller-feature: none    mtu-override: disable    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable
+== [ lan1.20 ]
+name: lan1.20   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 10.0.0.0 255.255.255.0   status: up    netbios-forward: disable    type: vlan   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    switch-controller-feature: none    mtu-override: disable    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable
+== [ lan1.30 ]
+name: lan1.30   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 10.0.0.0 255.255.255.192   status: up    netbios-forward: disable    type: vlan   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    switch-controller-feature: none    mtu-override: disable    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable
+== [ TUNNEL1 ]
+name: TUNNEL1   ip: 0.0.0.0 0.0.0.0   status: up    netbios-forward: disable    type: tunnel   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    mtu-override: disable    wccp: disable
+== [ TUNNEL2 ]
+name: TUNNEL2   ip: 0.0.0.0 0.0.0.0   status: up    netbios-forward: disable    type: tunnel   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    mtu-override: disable    wccp: disable
