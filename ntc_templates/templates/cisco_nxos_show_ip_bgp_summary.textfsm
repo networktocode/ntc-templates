@@ -17,7 +17,7 @@ Start
   ^${BGP_NEIGH}\s+\d+\s+${NEIGH_AS}\s+${MSG_RCVD}\s+${MSG_SENT}\s+\d+\s+${IN_QUEUE}\s+${OUT_QUEUE}\s+${UP_DOWN}\s+${STATE_PFXRCD}\s*$$ -> Record
   ^${BGP_NEIGH}\s+\d+\s+${NEIGH_AS}
   ^\s+${MSG_RCVD}\s+${MSG_SENT}\s+\d+\s+${IN_QUEUE}\s+${OUT_QUEUE}\s+${UP_DOWN}\s+${STATE_PFXRCD}\s*$$ -> Record
-  #ignoring all lines ending in bytes of memory
+  # ignoring all lines ending in bytes of memory
   ^.*\s+bytes\s+of\s+memory
   ^BGP\s+table\s+version
   ^\d+\s+network\s+entries
