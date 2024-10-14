@@ -2,7 +2,7 @@ Value Required ID (\d+)
 Value STATUS (X|R)
 Value NAME (\S+)
 Value SLAVES (\S+(?:,)?)
-Value List DESCRIPTION (.+)
+Value List DESCRIPTION (\s*.+?)
 Value MODE (\S+)
 
 Start
