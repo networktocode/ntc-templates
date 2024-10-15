@@ -1,0 +1,17 @@
+---
+parsed_sample:
+  - interfaces:
+      - "GigabitEthernet0/1"
+      - "GigabitEthernet0/2"
+    ip_addresses:
+      - "172.16.16.65"
+    ipv6_addresses: []
+    inner_vlans: []
+    vlan_id: "1"
+  - interfaces:
+      - "GigabitEthernet0/1.106"
+    ip_addresses:
+      - "10.10.10.1"
+    ipv6_addresses: []
+    inner_vlans: []
+    vlan_id: "106"

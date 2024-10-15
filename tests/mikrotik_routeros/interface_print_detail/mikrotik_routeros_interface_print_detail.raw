@@ -1,0 +1,21 @@
+Flags: D - dynamic, X - disabled, R - running, S - slave
+ 0     name="ether1" default-name="ether1" type="ether" mtu=1500 actual-mtu=1500 l2mtu=1598 max-l2mtu=2028 mac-address=12:34:56:78:90:AA last-link-down-time=jul/09/2023 07:18:33 last-link-up-time=jul/09/2023 07:18:42 link-downs=20
+
+ 1 D   name="ether2" default-name="ether2" type="ether" mtu=1500 actual-mtu=1500 l2mtu=1598 max-l2mtu=2028 mac-address=12:34:56:78:90:AB last-link-down-time=jul/09/2023 07:18:34 last-link-up-time=jul/09/2023 07:18:43 link-downs=20
+
+ 2  R  name="ether3" default-name="ether3" type="ether" mtu=1500 actual-mtu=1500 l2mtu=1598 max-l2mtu=2028 mac-address=12:34:56:78:90:AC link-downs=0
+
+ 3   S name="ether4" default-name="ether4" type="ether" mtu=1500 actual-mtu=1500 l2mtu=1598 max-l2mtu=2028 mac-address=12:34:56:78:90:AD link-downs=0
+
+ 4 DR  name="ether5" default-name="ether5" type="ether" mtu=1500 actual-mtu=1500 l2mtu=1598 max-l2mtu=2028 mac-address=12:34:56:78:90:AE link-downs=0
+
+ 5  RS name="ether6" default-name="ether6" type="ether" mtu=1500 actual-mtu=1500 l2mtu=1598 max-l2mtu=2028 mac-address=12:34:56:78:90:AF link-downs=0
+
+ 6 D S name="lte1" type="lte" mtu=1500 actual-mtu=1500 mac-address=12:34:56:78:90:BA last-link-down-time=jul/21/2023 07:47:40 last-link-up-time=jul/21/2023 07:47:46 link-downs=114
+
+ 7 DRS ;;; very very long
+multiline description 
+       name="pptp-out1" type="pptp-out" mtu=1450 actual-mtu=1450 last-link-down-time=jul/21/2023 07:47:03 last-link-up-time=jul/21/2023 07:47:56 link-downs=304
+ 
+ 8  RS ;;; Free Wi-Fi HTTPS
+       name="pptp-to-AH1100-HS" type="pptp-out" mtu=1596 actual-mtu=1596 last-link-down-time=nov/03/1970 12:24:10 last-link-up-time=nov/03/1970 12:24:10 link-downs=38 

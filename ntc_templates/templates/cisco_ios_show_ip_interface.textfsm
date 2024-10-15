@@ -42,7 +42,7 @@ Start
   ^\s+Security
   ^\s+Split
   ^\s+ICMP
-  ^\s+IP\s+(?:fast|Flow|CEF|Null|multicast|route|output|access|Clear)
+  ^\s+IP\s+(?:fast|Fast|Flow|Normal|CEF|Null|multicast|route|output|access|Clear)
   ^\s+Downstream
   ^\s+Associated
   ^\s+Topology

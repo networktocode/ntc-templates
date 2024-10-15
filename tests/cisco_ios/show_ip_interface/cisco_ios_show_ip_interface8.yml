@@ -1,0 +1,54 @@
+---
+parsed_sample:
+  - inbound_acl: ""
+    interface: "Vlan1"
+    ip_address: []
+    ip_helper: []
+    link_status: "administratively down"
+    mtu: ""
+    outgoing_acl: ""
+    prefix_length: []
+    protocol_status: "down"
+    vrf: ""
+  - inbound_acl: ""
+    interface: "Vlan2"
+    ip_address:
+      - "10.253.11.8"
+    ip_helper: []
+    link_status: "up"
+    mtu: "1500"
+    outgoing_acl: ""
+    prefix_length:
+      - "25"
+    protocol_status: "up"
+    vrf: ""
+  - inbound_acl: ""
+    interface: "Vlan300"
+    ip_address: []
+    ip_helper: []
+    link_status: "up"
+    mtu: ""
+    outgoing_acl: ""
+    prefix_length: []
+    protocol_status: "up"
+    vrf: ""
+  - inbound_acl: ""
+    interface: "GigabitEthernet1/1"
+    ip_address: []
+    ip_helper: []
+    link_status: "up"
+    mtu: ""
+    outgoing_acl: ""
+    prefix_length: []
+    protocol_status: "up"
+    vrf: ""
+  - inbound_acl: ""
+    interface: "GigabitEthernet1/2"
+    ip_address: []
+    ip_helper: []
+    link_status: "up"
+    mtu: ""
+    outgoing_acl: ""
+    prefix_length: []
+    protocol_status: "up"
+    vrf: ""

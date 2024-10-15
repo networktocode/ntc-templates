@@ -1,0 +1,33 @@
+---
+parsed_sample:
+  - accounting_update_remaining_seconds: "89824"
+    accounting_update_seconds: "172800"
+    current_policy: "PMAP_DefaultWiredDot1xClosedAuth_1X"
+    device_name: "MOED-9212345"
+    device_type: "Microsoft-Workstation"
+    domain: "DATA"
+    interface: "GigabitEthernet1/0/31"
+    ipv6_address: "Unknown"
+    ipv4_address: "10.10.10.190"
+    mac_address: "cc96.abcd.1234"
+    method_state_list:
+      - "Stopped"
+      - "Authc Success"
+    method_type_list:
+      - "dot1x"
+      - "mab"
+    operational_control_dir: "both"
+    operational_host_mode: "multi-auth"
+    resultant_policy_sgt: []
+    resultant_policy_vlan_group: ""
+    resultant_policy_vn: ""
+    server_policy_sgt:
+      - "40"
+    server_policy_vlan_group: "1011"
+    server_policy_vn: "WALKUPED_VN"
+    server_session_timeout: "43200"
+    server_template: "PXE-ClosedMode-Template"
+    session_timeout: "43200s"
+    status: "Authorized"
+    timeout_action: "Reauthenticate"
+    username: "CC-96-AA-BB-CC-DD"

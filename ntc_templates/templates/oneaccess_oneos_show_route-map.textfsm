@@ -1,0 +1,13 @@
+Value Required NAME (\S+)
+Value Required ACTION (\S+)
+Value Required SEQUENCE (\d+)
+Value List MATCH_CLAUSES (.+)
+Value List SET_CLAUSES (.+)
+
+Start
+  ^route-map\s+${NAME}\s${ACTION}\s+${SEQUENCE}\s*$$
+  ^\s+match\s+${MATCH_CLAUSES}
+  ^\s+set\s+${SET_CLAUSES}
+  ^exit -> Record
+  ^\s*$$
+  ^. -> Error

@@ -1,0 +1,28 @@
+---
+parsed_sample:
+  - interfaces:
+      - "Port-channel14"
+    ip_addresses: []
+    ipv6_addresses: []
+    inner_vlans: []
+    vlan_id: "1"
+  - interfaces:
+      - "Port-channel14.2"
+    ip_addresses:
+      - "192.0.2.1"
+    ipv6_addresses: []
+    inner_vlans: []
+    vlan_id: "2"
+  - interfaces:
+      - "Port-channel14.501"
+      - "Port-channel14.5013017"
+      - "Port-channel14.5013141"
+    ip_addresses:
+      - "192.0.2.2"
+      - "192.0.2.3"
+      - "192.0.2.4"
+    ipv6_addresses: []
+    inner_vlans:
+      - "3017"
+      - "3141"
+    vlan_id: "501"

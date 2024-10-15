@@ -12,13 +12,15 @@ Value UPTIME_MINUTES (\d+)
 Value RELOAD_REASON (.+?)
 Value RUNNING_IMAGE (\S+)
 Value List HARDWARE (\S+|\S+\d\S+)
-Value List SERIAL (\S+)
+Value List SERIAL (\w+)
 Value CONFIG_REGISTER (\S+)
 Value List MAC_ADDRESS ([0-9a-fA-F]{2}(:[0-9a-fA-F]{2}){5})
 Value RESTARTED (.+)
 
 Start
   ^.*Software,*\s+\(${SOFTWARE_IMAGE}\),\sVersion\s${VERSION},*\s+RELEASE.*\(${RELEASE}\)
+  # CUST-SPECIAL:
+  ^.*Software,*\s+\(${SOFTWARE_IMAGE}\),\sVersion\s${VERSION},*\s+\S+.*:${RELEASE}
   ^.*Software,*\s+\(${SOFTWARE_IMAGE}\),\sVersion\s${VERSION},
   ^ROM:\s+${ROMMON}
   ^\s*${HOSTNAME}\s+uptime\s+is\s+${UPTIME} -> Continue

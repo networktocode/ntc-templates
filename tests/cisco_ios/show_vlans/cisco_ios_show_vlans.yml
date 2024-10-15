@@ -1,0 +1,93 @@
+---
+parsed_sample:
+  - vlan_id: "1"
+    interfaces:
+      - "GigabitEthernet0/0/0"
+      - "GigabitEthernet0/0/1"
+      - "TenGigabitEthernet0/1/0"
+    ip_addresses:
+      - "10.0.2.86"
+      - "10.0.2.225"
+      - "10.252.212.189"
+    ipv6_addresses: []
+    inner_vlans: []
+  - vlan_id: "3141"
+    interfaces:
+      - "GigabitEthernet0/0/0.3141"
+      - "GigabitEthernet0/0/1.3141"
+    ip_addresses:
+      - "10.0.2.94"
+      - "10.0.2.233"
+    ipv6_addresses: []
+    inner_vlans: []
+  - vlan_id: "100"
+    interfaces:
+      - "TenGigabitEthernet0/1/0.100"
+    ip_addresses:
+      - "10.0.2.149"
+    ipv6_addresses: []
+    inner_vlans: []
+  - vlan_id: "101"
+    interfaces:
+      - "TenGigabitEthernet0/1/0.101"
+    ip_addresses:
+      - "10.0.2.145"
+    ipv6_addresses: []
+    inner_vlans: []
+  - vlan_id: "102"
+    interfaces:
+      - "TenGigabitEthernet0/1/0.102"
+    ip_addresses:
+      - "10.0.2.153"
+    ipv6_addresses: []
+    inner_vlans: []
+  - vlan_id: "103"
+    interfaces:
+      - "TenGigabitEthernet0/1/0.103"
+    ip_addresses:
+      - "10.0.2.157"
+    ipv6_addresses: []
+    inner_vlans: []
+  - vlan_id: "104"
+    interfaces:
+      - "TenGigabitEthernet0/1/0.104"
+    ip_addresses:
+      - "10.0.231.229"
+    ipv6_addresses: []
+    inner_vlans: []
+  - vlan_id: "3228"
+    interfaces:
+      - "GigabitEthernet0/0/0.3228"
+      - "GigabitEthernet0/0/1.3228"
+    ip_addresses:
+      - "10.0.231.242"
+      - "10.0.231.233"
+    ipv6_addresses: []
+    inner_vlans: []
+  - vlan_id: "3000"
+    interfaces:
+      - "GigabitEthernet0/0/0.3000"
+      - "GigabitEthernet0/0/1.3000"
+    ip_addresses:
+      - "10.0.2.90"
+      - "10.0.2.229"
+    ipv6_addresses: []
+    inner_vlans: []
+  - vlan_id: "3017"
+    interfaces:
+      - "GigabitEthernet0/0/0.3017"
+      - "GigabitEthernet0/0/1.3017"
+    ip_addresses:
+      - "10.0.2.98"
+      - "10.0.2.237"
+    ipv6_addresses: []
+    inner_vlans: []
+  - vlan_id: "3062"
+    interfaces:
+      - "GigabitEthernet0/0/0.3062"
+      - "GigabitEthernet0/0/1.3062"
+    ip_addresses:
+      - "10.0.2.102"
+      - "10.0.2.241"
+    ipv6_addresses: []
+    inner_vlans: []

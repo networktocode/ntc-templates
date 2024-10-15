@@ -1,0 +1,24 @@
+---
+parsed_sample:
+  - access_vlan: "1"
+    admin_mode: "dynamic auto"
+    interface: "Gi0/1/3"
+    mode: "down"
+    native_vlan: "1"
+    switchport: "Enabled"
+    switchport_monitor: ""
+    switchport_negotiation: "On"
+    trunking_vlans:
+      - "ALL"
+    voice_vlan: "none"
+  - access_vlan: "41"
+    admin_mode: "dynamic auto"
+    interface: "Wl0/1/4"
+    mode: "static access"
+    native_vlan: "1"
+    switchport: "Enabled"
+    switchport_monitor: ""
+    switchport_negotiation: "On"
+    trunking_vlans:
+      - "ALL"
+    voice_vlan: "none"

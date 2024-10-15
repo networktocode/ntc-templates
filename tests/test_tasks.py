@@ -1,4 +1,5 @@
 """Test functions for tasks.py."""
+
 import pytest
 
 from tasks import strtobool

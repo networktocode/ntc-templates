@@ -1,0 +1,18 @@
+Switch-Oriented Flow List
+  -----------------------------------------------------------------------------
+   INDEX VLAN VLAN     PORT F/ S/ P VPI  VCI   FLOW  FLOW       RX   TX   STATE
+         ID   ATTR     TYPE                    TYPE  PARA
+  -----------------------------------------------------------------------------
+    5827 2    common   gpon 0/1 /0  0    1     vlan  2          -    -    up   
+  -----------------------------------------------------------------------------
+   Total : 1  (Up/Down :    1/0)
+   Note : F--Frame, S--Slot, P--Port,
+          VPI indicates ONT ID for PON, VCI indicates GEM index for GPON,
+          v/e--vlan/encap, pritag--priority-tagged,
+          ppp--pppoe, ip--ipoe, ip4--ipv4oe, ip6--ipv6oe, vxl--vxlan.
+          When FLOW TYPE is plist, the value of FLOW PARA is a byte in
+          hexadecimal format and indicates a priority list. Eight bits
+          of its binary value indicate priorities 0-7 from the least
+          significant bit to the most significant bit. Value 1 indicates
+          that the priority is used. For example, if FLOW PARA is 0x23 and
+          its binary format is 0010 0011, priorities 0, 1 and 5 are used

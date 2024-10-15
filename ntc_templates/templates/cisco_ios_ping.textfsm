@@ -4,16 +4,17 @@ Value Required DESTINATION (\S+)
 Value Required TIMEOUT (\d+)
 Value SOURCE (\S+)
 Value List RESPONSE_STREAM ([\.\!/U/Q]+)
-Value Required SUCCESS_PCT (\d+)
-Value Required SUCCESS_QTY (\d+)
+Value SUCCESS_PCT (\d+)
+Value SUCCESS_QTY (\d+)
 Value RTT_MIN (\d+)
 Value RTT_AVG (\d+)
 Value RTT_MAX (\d+)
-
+Value List RESPONDERS (.*)
 
 Start
   ^Type\s+escape\s+sequence\s+to\s+abort.
   ^Sending\s+${SENT_QTY},\s+${SENT_TYPE}\s+to\s+${DESTINATION},\s+timeout\s+is\s+${TIMEOUT}\s+seconds:
+  ^Reply\s+to\s+request\s+\d+\s+from\s+${RESPONDERS},\s+\d+\s+ms
   ^Packet\s+sent\s+with\s+a\s+source\s+address\s+of\s+${SOURCE}
   ^Packet\s+sent\s+with\s+the\s+DF\s+bit\s+set
   ^${RESPONSE_STREAM}

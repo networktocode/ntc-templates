@@ -1,0 +1,14 @@
+Value Key ONT_ID (\d+)
+Value ONT_PORT_ID (\d+)
+Value ONT_PORT_TYPE (\S+)
+Value SPEED_MBPS (\S+)
+Value DUPLEX (\S+)
+Value LINK_STATE (up|down)
+Value RING_STATUS (\S+)
+
+Start
+  ^\s+ONT-ID\s*ONT\s*ONT\s*Speed\(Mbps\)\s*Duplex\s*LinkState\s*RingStatus\s*$$
+  ^\s+port-ID\s*Port-type\s*$$
+  ^\s+${ONT_ID}\s+${ONT_PORT_ID}\s+${ONT_PORT_TYPE}\s*(-|${SPEED_MBPS})\s*(-|${DUPLEX})\s*(-|${LINK_STATE})\s*(-|${RING_STATUS}) -> Record
+  ^\s+-
+  ^. -> Error

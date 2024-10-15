@@ -1,0 +1,19 @@
+---
+parsed_sample:
+  - cluster_state_changed_time: "2024-09-16 13:03:51"
+    cluster_uptime: "23 days 1:31:39"
+    ha_group: "28"
+    ha_health:
+      - "WARNING: FGT40XXXXXXXXXXX has hbdev down"
+      - "WARNING: FGT40YYYYYYYYYYY has hbdev down"
+    ha_master_unit_index: "1"
+    ha_master_unit_name: "FGT-fw-a"
+    ha_master_unit_serial: "FGT40XXXXXXXXXXX"
+    ha_mode: "HA A-P"
+    ha_override_status: "enable"
+    ha_session_pickup_delay: "disable"
+    ha_session_pickup_status: "enable"
+    ha_slave_unit_index: "0"
+    ha_slave_unit_name: "FGT-fw-b"
+    ha_slave_unit_serial: "FGT40YYYYYYYYYYY"
+    model: "FortiGate-40F"

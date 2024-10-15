@@ -1,0 +1,10 @@
+access-list third-acl; 2 elements; name hash: 0x178be4f2
+access-list third-acl line 1 extended permit object-group telssh any object ip-friend (hitcnt=0) 0xb8411547
+  access-list third-acl line 1 extended permit tcp any host 198.18.0.1 eq ssh (hitcnt=0) 0xb86c056b
+  access-list third-acl line 1 extended permit tcp any host 198.18.0.1 eq telnet (hitcnt=0) 0x5eb7814e
+access-list fifth-acl; 1 elements; name hash: 0x6f26777b
+access-list fifth-acl line 1 standard permit any4 (hitcnt=0) 0x35bc84d3
+access-list sixth-acl; 1 elements; name hash: 0x9d252764
+access-list sixth-acl line 1 standard deny 198.18.0.0 255.254.0.0 (hitcnt=0) 0xce26b1f0
+access-list fourth-acl; 1 elements; name hash: 0x5d7174ae
+access-list fourth-acl line 1 standard deny host 198.18.0.1 (hitcnt=0) 0x18e858ae

@@ -1,0 +1,55 @@
+Value Required VLAN_ID (\d+)
+Value List INTERFACES ([\w\./-]+)
+Value List IP_ADDRESSES (\S+)
+Value List IPV6_ADDRESSES (\S+)
+Value List INNER_VLANS (\d+)
+
+Start
+  ^VLAN\s+ID:\s+${VLAN_ID} -> Data
+  ^Virtual\s+LAN\s+ID\:\s+${VLAN_ID} -> Data
+  ^No\s+Virtual\s+LANs\s+configured
+  ^\s*$$
+  ^. -> Error
+
+Data
+  ^Virtual\s+LAN\s+ID\:\s+\d.* -> Continue.Record
+  ^Virtual\s+LAN\s+ID\:\s+${VLAN_ID}.*
+  ^VLAN\s+ID:\s+\d+ -> Continue.Record
+  ^VLAN\s+ID:\s+${VLAN_ID}
+  ^\s+This\s+is\s+configured\s+as\s+native\s+Vlan\s+for\s+the\s+following\s+interface\(s\)\s+:\s*$$
+  ^\S+(\s+Native-vlan\s+Tx-type:\s+\S+)?\s*$$
+  ^\s+Protocols\s+Configured
+  ^\s+IP\s+\d+\s+\d+
+  ^\s+MPLS\s+\d+\s+\d+
+  ^\s+MPLS\:\s+\S+
+  ^\s+[vV]LAN\s+Trunk\s+Interfaces?\:\s+${INTERFACES} -> Interface
+  ^VLAN\s+trunk\s+interfaces -> Interface
+  ^[\w\./]+\s*$$
+  ^${INTERFACES}\s+\(\d+\)\s*$$
+  ^\s+IP:\s+${IP_ADDRESSES}\s*$$
+  ^\s+IP\s+${IP_ADDRESSES}\s+
+  ^\s+IPv6:\s+${IPV6_ADDRESSES}\s*$$
+  ^\s+IPv6\s+${IPV6_ADDRESSES}\s+\d+\s+\d+
+  ^\s+Other\s+
+  ^\s+IPv6\s+\d+\s+\d+
+  ^\s+Total\s\d+
+  ^\s+\d+\s+packets,
+  ^\s*$$
+  ^. -> Error Data
+
+Interface
+  ^\s*${INTERFACES}\s*$$
+  ^\s*\S+\s+\(\d+\/${INNER_VLANS}\)\s*$$
+  ^\s*\S+\s+\(\S+\)$$
+  ^\s*$$
+  ^\s+Total\s+\d+\s+
+  ^\s+IP\:\s+${IP_ADDRESSES}
+  ^\s+IPv6\:\s+${IPV6_ADDRESSES}
+  ^\s+MPLS\:\s+
+  ^\s+Protocols\s+Configured\: -> Data
+  ^\s+This\s+is\s+configured\s+as\s+native\s+Vlan -> Data
+  ^Virtual\s+LAN\s+ID\:\s+\d.* -> Continue.Record
+  ^Virtual\s+LAN\s+ID\:\s+${VLAN_ID}.* -> Data
+  ^VLAN\s+ID:\s+\d+ -> Continue.Record
+  ^VLAN\s+ID:\s+${VLAN_ID} -> Data
+  ^. -> Error Interface

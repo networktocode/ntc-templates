@@ -1,7 +1,7 @@
 Value Filldown VLAN_ID (\d+)
 Value Filldown VLAN_TYPE (\w+)
 Value Filldown MODE ((TG|UT))
-Value INTERFACE ([A-Z0-9/]+)
+Value INTERFACE ([A-Z0-9/th\-runk]+)
 Value VLAN_NAME (.+)
 Value VLAN_STATUS (\S+)
 

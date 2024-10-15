@@ -1,0 +1,9 @@
+Value ONT_ID (\d+)
+Value SNMP_PROFILE_ID (\d+)
+Value SNMP_PROFILE_NAME (\S+)
+
+Start
+  ^\s*ONT\s*ID\s*SNMP\s*profile\s*ID\s*SNMP\s*profile\s*name\s*
+  ^\s*${ONT_ID}\s*${SNMP_PROFILE_ID}\s*${SNMP_PROFILE_NAME} -> Record
+  ^\s*
+  ^. -> Error

@@ -1,0 +1,56 @@
+---
+parsed_sample:
+  - interfaces:
+      - "HundredGigE2/0/0.3084"
+    ip_addresses:
+      - "10.247.62.37"
+    ipv6_addresses: []
+    inner_vlans: []
+    vlan_id: "3084"
+  - interfaces:
+      - "HundredGigE2/0/0"
+      - "TenGigabitEthernet2/1/8"
+      - "TenGigabitEthernet2/1/9"
+      - "Port-channel10"
+      - "Port-channel30"
+    ip_addresses:
+      - "10.247.53.229"
+      - "10.247.52.197"
+      - "10.247.58.138"
+    ipv6_addresses:
+      - "FE80::4"
+    inner_vlans: []
+    vlan_id: "1"
+  - interfaces:
+      - "Port-channel10.2"
+    ip_addresses:
+      - "10.252.218.109"
+    ipv6_addresses: []
+    inner_vlans: []
+    vlan_id: "2"
+  - interfaces:
+      - "HundredGigE2/0/0.3013"
+      - "TenGigabitEthernet2/1/8.3013"
+    ip_addresses:
+      - "10.247.59.65"
+      - "10.247.44.13"
+    ipv6_addresses: []
+    inner_vlans: []
+    vlan_id: "3013"
+  - interfaces:
+      - "HundredGigE2/0/0.3039"
+    ip_addresses:
+      - "10.247.37.253"
+    ipv6_addresses: []
+    inner_vlans: []
+    vlan_id: "3039"
+  - interfaces:
+      - "HundredGigE2/0/0.3041"
+      - "TenGigabitEthernet2/1/8.3041"
+    ip_addresses:
+      - "10.247.28.69"
+      - "10.247.52.201"
+    ipv6_addresses:
+      - "FE80::1"
+    inner_vlans: []
+    vlan_id: "3041"

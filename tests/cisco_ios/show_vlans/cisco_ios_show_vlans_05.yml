@@ -1,0 +1,25 @@
+---
+parsed_sample:
+  - interfaces:
+      - "Port-channel10"
+      - "Port-channel11"
+    ip_addresses: []
+    ipv6_addresses: []
+    inner_vlans: []
+    vlan_id: "1"
+  - interfaces:
+      - "Port-channel10.3101"
+      - "Port-channel11.3101"
+    ip_addresses:
+      - "172.16.16.54"
+    ipv6_addresses: []
+    inner_vlans: []
+    vlan_id: "3101"
+  - interfaces:
+      - "Port-channel10.3102"
+      - "Port-channel11.3102"
+    ip_addresses:
+      - "172.17.17.58"
+    ipv6_addresses: []
+    inner_vlans: []
+    vlan_id: "3102"
