@@ -1,7 +1,7 @@
 Value Required ID (\d+)
 Value NAME (\S+)
 Value PARENT_INTERFACE (\S+)
-Value List DESCRIPTION (\s*.+?)
+Value List DESCRIPTION (.+?)
 Value STATUS (X|R)
 Value VLAN_ID (\d+)
 Value SERVICE_TAG (yes|no)
