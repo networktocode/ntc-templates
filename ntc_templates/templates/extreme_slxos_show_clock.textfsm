@@ -1,0 +1,10 @@
+Value YEAR (\d+)
+Value MONTH (\d+)
+Value DAY (\d+)
+Value TIME (\d+:\d+:\d+)
+Value TIMEZONE (\w+\/\w+)
+
+Start
+  ^${YEAR}-${MONTH}-${DAY}\s${TIME}\s${TIMEZONE} -> Record
+  ^\s*$$
+  ^. -> Error
