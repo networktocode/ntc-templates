@@ -3,7 +3,7 @@ Value DYNAMIC (D)
 Value STATUS (X|R)
 Value SLAVE (S)
 Value NAME (\S+)
-Value List DESCRIPTION (\s*.+?)
+Value List DESCRIPTION ((?:\S).+?)
 Value DEFAULT_NAME (\S+)
 Value TYPE (\S+)
 Value MTU (\d+|auto)
@@ -28,6 +28,6 @@ Interface
   ^\s*${ID}+\s*(?:${DYNAMIC})?\s*(?:${STATUS})?\s*(?:${SLAVE})?\s*name="${NAME}"(?:\s*default-name="${DEFAULT_NAME}")?\s*type="${TYPE}"\s*mtu=${MTU}\s*actual-mtu=${ACTUAL_MTU}\s*l2mtu=${L2MTU}\s*(max-l2mtu=${MAX_L2MTU}|vrf=${VRF})?\s*mac-address=${MAC_ADDRESS}\s*ifname="(\S+)"\s*ifindex=(\d+)\s*id=(\d+)(?:\s*last-link-down-time=${LAST_LINK_DOWN_TIME})?(?:\s*last-link-up-time=${LAST_LINK_UP_TIME})?\s*link-downs=${LINK_DOWNS}\s*$$
   ^\s*name="${NAME}"(?:\s*default-name="${DEFAULT_NAME}")?\s*type="${TYPE}"\s*mtu=${MTU}\s*actual-mtu=${ACTUAL_MTU}\s*l2mtu=${L2MTU}\s*(max-l2mtu=${MAX_L2MTU}|vrf=${VRF})?\s*mac-address=${MAC_ADDRESS}\s*ifname="(\S+)"\s*ifindex=(\d+)\s*id=(\d+)(?:\s*last-link-down-time=${LAST_LINK_DOWN_TIME})?(?:\s*last-link-up-time=${LAST_LINK_UP_TIME})?\s*link-downs=${LINK_DOWNS}\s*$$
   ^\s*${ID}(?:\s+${DYNAMIC})?(?:\s*${STATUS})?(?:\s*${SLAVE})?\s+;{3}\s+${DESCRIPTION}\s*$$
-  ^${DESCRIPTION}\s*$$
   ^\s*$$
+  ^\s*${DESCRIPTION}\s*$$
   ^. -> Error
