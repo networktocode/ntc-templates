@@ -1,0 +1,24 @@
+Value Interface (\S+)
+Value Admin (\S+)
+Value Oper (on|off)
+Value Power (\d+\.\d+)
+Value Device (\S+(\s\S+)*)
+Value Class (\d|n/a)
+Value Max (\d+\.\d+)
+
+Start
+  ^Interface\s+Admin\s+Oper\s+Power\s+Device\s+Class\s+Max -> Interfaces
+  ^Module
+  ^\d+
+  ^-+
+  ^\s+\(Watts\)
+  ^\s*$$
+  ^. -> Error
+
+Interfaces
+  ^\s*${Interface}\s+${Admin}\s+${Oper}\s+${Power}\s+${Device}\s+${Class}\s+${Max}\s*$$ -> Record
+  ^Totals.*
+  ^\s+\(Watts\)
+  ^-+
+  ^\s*$$
+  ^. -> Error
