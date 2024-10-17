@@ -67,11 +67,11 @@ Start
   ^\s*eeprom:\s${EEPROM}
   ^\s*${EEPROM}
   ^\s*supported:\s*$$
-  ^\s*supported:\s${SUPPORTED}
+  ^\s*supported:\s*${SUPPORTED}
   ^\s*advertising:\s*$$
-  ^\s*advertising:\s${ADVERTISING}
+  ^\s*advertising:\s*${ADVERTISING}
   ^\s*link-partner-advertising:\s*$$
-  ^\s*link-partner-advertising:\s${LINK_PARTNER_ADVERTISING}$$
+  ^\s*link-partner-advertising:\s*${LINK_PARTNER_ADVERTISING}$$
   ^\s*(?:\d{2}:){2}\d{2}\s+echo:\s*.*$$ -> Next
   ^\s*$$
   ^. -> Error
