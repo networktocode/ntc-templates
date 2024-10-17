@@ -1,9 +1,10 @@
 ---
 parsed_sample:
-  - advertising: "10M-half,10M-full,100M-half,100M-full,1000M-half,1000M-full"
+  - advertising: "10M-baseT-half,10M-baseT-full,100M-baseT-half,100M-baseT-full,1G-baseT-half,1G-baseT-full"
+    supported: "10M-baseT-half,10M-baseT-full,100M-baseT-half,100M-baseT-full,1G-baseT-half,1G-baseT-full"
     auto_negotiation: "done"
     full_duplex: "yes"
-    link_partner_advertising: "10M-half,10M-full,100M-half,100M-full,1000M-full"
+    link_partner_advertising: "10M-baseT-full,100M-baseT-full,1G-baseT-full"
     name: "ether1"
     rate: "1Gbps"
     rx_flow_control: "no"
@@ -33,4 +34,3 @@ parsed_sample:
     sfp_rx_power: ""
     eeprom_checksum: ""
     eeprom: []
-    supported: ""

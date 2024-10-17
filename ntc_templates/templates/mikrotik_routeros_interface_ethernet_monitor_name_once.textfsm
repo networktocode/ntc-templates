@@ -29,6 +29,7 @@ Value SFP_TX_POWER (\S+dBm)
 Value SFP_RX_POWER (\S+dBm)
 Value EEPROM_CHECKSUM (\S+)
 Value List EEPROM ([0-9a-f]+:(?:\s+[0-9a-f]{2})+.*)
+Value SUPPORTED (\S+)
 Value ADVERTISING (\S+)
 Value LINK_PARTNER_ADVERTISING (\S+)
 
@@ -65,10 +66,12 @@ Start
   ^\s*eeprom-checksum:\s${EEPROM_CHECKSUM}
   ^\s*eeprom:\s${EEPROM}
   ^\s*${EEPROM}
+  ^\s*supported:\s*$$
+  ^\s*supported:\s*${SUPPORTED}
   ^\s*advertising:\s*$$
-  ^\s*advertising:\s${ADVERTISING}
+  ^\s*advertising:\s*${ADVERTISING}
   ^\s*link-partner-advertising:\s*$$
-  ^\s*link-partner-advertising:\s${LINK_PARTNER_ADVERTISING}$$
+  ^\s*link-partner-advertising:\s*${LINK_PARTNER_ADVERTISING}$$
   ^\s*(?:\d{2}:){2}\d{2}\s+echo:\s*.*$$ -> Next
   ^\s*$$
   ^. -> Error
