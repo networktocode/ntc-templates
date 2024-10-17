@@ -2,6 +2,7 @@
 parsed_sample:
   - actual_mtu: "1500"
     default_name: "ether1"
+    description: []
     dynamic: ""
     id: "0"
     l2mtu: "1598"
@@ -12,12 +13,13 @@ parsed_sample:
     max_l2mtu: "2028"
     mtu: "1500"
     name: "ether1"
-    description: []
     slave: ""
     status: ""
     type: "ether"
+    vrf: ""
   - actual_mtu: "1500"
     default_name: "ether2"
+    description: []
     dynamic: "D"
     id: "1"
     l2mtu: "1598"
@@ -28,12 +30,13 @@ parsed_sample:
     max_l2mtu: "2028"
     mtu: "1500"
     name: "ether2"
-    description: []
     slave: ""
     status: ""
     type: "ether"
+    vrf: ""
   - actual_mtu: "1500"
     default_name: "ether3"
+    description: []
     dynamic: ""
     id: "2"
     l2mtu: "1598"
@@ -44,12 +47,13 @@ parsed_sample:
     max_l2mtu: "2028"
     mtu: "1500"
     name: "ether3"
-    description: []
     slave: ""
     status: "R"
     type: "ether"
+    vrf: ""
   - actual_mtu: "1500"
     default_name: "ether4"
+    description: []
     dynamic: ""
     id: "3"
     l2mtu: "1598"
@@ -60,12 +64,13 @@ parsed_sample:
     max_l2mtu: "2028"
     mtu: "1500"
     name: "ether4"
-    description: []
     slave: "S"
     status: ""
     type: "ether"
+    vrf: ""
   - actual_mtu: "1500"
     default_name: "ether5"
+    description: []
     dynamic: "D"
     id: "4"
     l2mtu: "1598"
@@ -76,12 +81,13 @@ parsed_sample:
     max_l2mtu: "2028"
     mtu: "1500"
     name: "ether5"
-    description: []
     slave: ""
     status: "R"
     type: "ether"
+    vrf: ""
   - actual_mtu: "1500"
     default_name: "ether6"
+    description: []
     dynamic: ""
     id: "5"
     l2mtu: "1598"
@@ -92,12 +98,13 @@ parsed_sample:
     max_l2mtu: "2028"
     mtu: "1500"
     name: "ether6"
-    description: []
     slave: "S"
     status: "R"
     type: "ether"
+    vrf: ""
   - actual_mtu: "1500"
     default_name: ""
+    description: []
     dynamic: "D"
     id: "6"
     l2mtu: ""
@@ -108,12 +115,15 @@ parsed_sample:
     max_l2mtu: ""
     mtu: "1500"
     name: "lte1"
-    description: []
     slave: "S"
     status: ""
     type: "lte"
+    vrf: ""
   - actual_mtu: "1450"
     default_name: ""
+    description:
+      - "very very long"
+      - "multiline description"
     dynamic: "D"
     id: "7"
     l2mtu: ""
@@ -124,14 +134,14 @@ parsed_sample:
     max_l2mtu: ""
     mtu: "1450"
     name: "pptp-out1"
-    description:
-      - "very very long"
-      - "multiline description"
     slave: "S"
     status: "R"
     type: "pptp-out"
+    vrf: ""
   - actual_mtu: "1596"
     default_name: ""
+    description:
+      - "Free Wi-Fi HTTPS"
     dynamic: ""
     id: "8"
     l2mtu: ""
@@ -142,8 +152,7 @@ parsed_sample:
     max_l2mtu: ""
     mtu: "1596"
     name: "pptp-to-AH1100-HS"
-    description:
-      - "Free Wi-Fi HTTPS"
     slave: "S"
     status: "R"
     type: "pptp-out"
+    vrf: ""
