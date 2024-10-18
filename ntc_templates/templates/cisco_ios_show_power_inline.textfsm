@@ -1,10 +1,11 @@
-Value Interface (\S+)
-Value Admin (\S+)
-Value Oper (on|off)
-Value Power (\d+\.\d+)
-Value Device (\S+(\s\S+)*)
-Value Class (\d|n/a)
-Value Max (\d+\.\d+)
+Value INTERFACE (\S+)
+Value ADMIN_STATUS (\S+)
+Value OPERATIONAL_STATUS (on|off)
+Value POWER (\d+\.\d+)
+Value DEVICE (\S+(\s\S+)*)
+Value CLASS (\d|n/a)
+Value MAX (\d+\.\d+)
+
 
 Start
   ^Interface\s+Admin\s+Oper\s+Power\s+Device\s+Class\s+Max -> Interfaces
