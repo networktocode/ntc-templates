@@ -17,7 +17,8 @@ Start
   ^. -> Error
 
 Interfaces
-  ^\s*${Interface}\s+${Admin}\s+${Oper}\s+${Power}\s+${Device}\s+${Class}\s+${Max}\s*$$ -> Record
+  ^\s*${INTERFACE}\s+${ADMIN_STATUS}\s+${OPERATIONAL_STATUS}\s+${POWER}\s+${DEVICE}\s+${CLASS}\s+${MAX}\s*$$ -> Record
+
   ^Totals.*
   ^\s+\(Watts\)
   ^-+
