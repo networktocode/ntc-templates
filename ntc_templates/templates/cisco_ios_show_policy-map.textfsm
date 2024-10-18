@@ -1,0 +1,34 @@
+Value Required,Filldown POLICY_MAP (\S+)
+Value Required CLASS (\S+)
+Value CLASS_BW_RATIO (\d+)
+Value CLASS_BW_ACCOUNT (\d+)
+Value CLASS_SERVICE_POLICY (\S+)
+Value CLASS_QUEUE_LIMIT (\d+)
+Value CLASS_POLICE_CIR (\d+)
+Value CLASS_POLICE_BC (\d+)
+Value CLASS_POLICE_ACTION_CONFORM (\S+)
+Value CLASS_POLICE_ACTION_EXCEED (\S+)
+Value CLASS_POLICE_ACCOUNT (\d+)
+Value CLASS_POLICE_PRIORITY (\d+)
+Value CLASS_SHAPE_CIR (\d+)
+Value CLASS_SHAPE_ACCOUNT (\d+)
+Value CLASS_SHAPE_RATE_TYPE (\S+)
+
+Start
+  ^\s+Policy\sMap\s\S+$$ -> Continue.Record
+  ^\s+Class\s\S+$$ -> Continue.Record
+  ^\s+bandwidth\sremaining\sratio\s${CLASS_BW_RATIO}\saccount\suser-defined\s${CLASS_BW_ACCOUNT}$$
+  ^\s+service-policy\s${CLASS_SERVICE_POLICY}$$
+  ^\s+queue-limit\s${CLASS_QUEUE_LIMIT}\sms$$
+  ^\s+police\scir\s${CLASS_POLICE_CIR}\sbc\s${CLASS_POLICE_BC}$$
+  ^\s+conform-action\s${CLASS_POLICE_ACTION_CONFORM}$$
+  ^\s+exceed-action\s${CLASS_POLICE_ACTION_EXCEED}$$
+  ^\s+account\suser-defined\s${CLASS_POLICE_ACCOUNT}$$
+  ^\s+priority\slevel\s${CLASS_POLICE_PRIORITY}$$
+  ^\s+${CLASS_SHAPE_RATE_TYPE}\sRate\sTraffic\sShaping$$`
+  ^\s+cir\s${CLASS_SHAPE_CIR}\s+\S+\s+account\suser-defined\s${CLASS_SHAPE_ACCOUNT}$$
+  ^\s+Policy\sMap\s${POLICY_MAP}$$
+  ^\s+Class\s${CLASS}$$
+  ^[\S\s]*$$
+  ^\s*$$
+  ^. -> Error PolicyMap

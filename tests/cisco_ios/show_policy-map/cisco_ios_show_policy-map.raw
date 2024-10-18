@@ -1,0 +1,33 @@
+  Policy Map vpn-bandwidths
+    Class internet-private
+      bandwidth remaining ratio 5 account user-defined 4
+      service-policy internet-private_class
+    Class systems-m2m
+      bandwidth remaining ratio 5 account user-defined 4
+      service-policy systems-m2m_class
+    Class internal-office
+      bandwidth remaining ratio 5 account user-defined 4
+      service-policy internal-office_class
+    Class db-net-lst
+      bandwidth remaining ratio 5 account user-defined 4
+      service-policy db-net-lst_class
+    Class db-systems-abc
+      bandwidth remaining ratio 5 account user-defined 4
+      service-policy db-systems-abc_class
+    Class iot-systems
+      bandwidth remaining ratio 5 account user-defined 4
+      service-policy iot-systems_class
+    Class class-default
+      bandwidth remaining ratio 6 account user-defined 4
+      service-policy db-systems-net_class
+
+  Policy Map db-systems-abc_class
+    Class premium
+      bandwidth remaining ratio 10 account user-defined 1
+      queue-limit 50 ms
+    Class classic
+      bandwidth remaining ratio 20 account user-defined 2
+      queue-limit 50 ms
+    Class class-default
+      bandwidth remaining ratio 60 account user-defined 3
+      queue-limit 50 ms
