@@ -310,6 +310,7 @@ cisco_ios_show_ap_summary.textfsm, .*, cisco_ios, sh[[ow]] ap sum[[mary]]
 cisco_ios_show_dhcp_lease.textfsm, .*, cisco_ios, sh[[ow]] dh[[cp]] l[[ease]]
 cisco_ios_show_interfaces.textfsm, .*, cisco_ios, sh[[ow]] int[[erfaces]](?: (?:\S+))?
 cisco_ios_show_ipv6_route.textfsm, .*, cisco_ios, sh[[ow]] ipv6 r[[oute]]
+cisco_ios_show_policy-map.textfsm, .*, cisco_ios, sh[[ow]] pol[[icy-map]]
 cisco_ios_show_redundancy.textfsm, .*, cisco_ios, sh[[ow]] redu[[ndancy]]
 cisco_ios_show_snmp_group.textfsm, .*, cisco_ios, sh[[ow]] snm[[p]] g[[roup]]
 cisco_ios_show_vrf_detail.textfsm, .*, cisco_ios, sh[[ow]] vrf detail
@@ -502,7 +503,7 @@ cisco_xr_show_bgp_instance_all_summary.textfsm, .*, cisco_xr, sh[[ow]] bg[[p]] i
 cisco_xr_admin_show_environment_power.textfsm, .*, cisco_xr, adm[[in]] sh[[ow]] env[[ironment]] p[[ower]]
 cisco_xr_show_dhcp_ipv4_proxy_binding.textfsm, .*, cisco_xr, sh[[ow]] dh[[cp]] ipv4 p[[roxy]] b[[inding]]
 cisco_xr_show_mpls_ldp_neighbor_brief.textfsm, .*, cisco_xr, sh[[ow]] mp[[ls]] ld[[p]] neigh[[bor]] br[[ief]]
-cisco_xr_show_running-config_hostname.textfsm, .*, cisco_xr, sh[[ow]] run[[ning-config]] host[[name]] 
+cisco_xr_show_running-config_hostname.textfsm, .*, cisco_xr, sh[[ow]] run[[ning-config]] host[[name]]
 cisco_xr_show_interfaces_description.textfsm, .*, cisco_xr, sh[[ow]] int[[erfaces]](?: (?:\S+))? des[[cription]]
 cisco_xr_admin_show_environment_fan.textfsm, .*, cisco_xr, adm[[in]] sh[[ow]] env[[ironment]] f[[an]]
 cisco_xr_show_lldp_neighbors_detail.textfsm, .*, cisco_xr, sh[[ow]] ll[[dp]] ne[[ighbors]] de[[tail]]
@@ -816,7 +817,7 @@ paloalto_panos_show_interface_management.textfsm, .*, paloalto_panos, sh[[ow]] i
 paloalto_panos_show_interface_hardware.textfsm, .*, paloalto_panos, sh[[ow]] int[[erface]] hard[[ware]]
 paloalto_panos_show_running_nat-policy.textfsm, .*, paloalto_panos, sh[[ow]] runn[[ing]] nat[[-policy]]
 paloalto_panos_show_interface_logical.textfsm, .*, paloalto_panos, sh[[ow]] int[[erface]] logi[[cal]]
-paloalto_panos_request_license_info.textfsm, .*, paloalto_panos, request license info 
+paloalto_panos_request_license_info.textfsm, .*, paloalto_panos, request license info
 paloalto_panos_show_counter_global.textfsm, .*, paloalto_panos, sh[[ow]] coun[[ter]] glo[[bal]]
 paloalto_panos_debug_swm_status.textfsm, .*, paloalto_panos, de[[bug]] s[[wm]] status
 paloalto_panos_show_system_info.textfsm, .*, paloalto_panos, sh[[ow]] sys[[tem]] in[[fo]]

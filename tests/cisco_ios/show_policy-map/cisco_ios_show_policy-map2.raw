@@ -1,0 +1,71 @@
+  Policy Map vpn-bandwidths
+    Class db-internet-private
+      bandwidth remaining ratio 5 account user-defined 4
+      service-policy db-internet-private_class
+    Class systems-m2m
+      bandwidth remaining ratio 5 account user-defined 4
+      service-policy systems-m2m_class
+    Class internal-office
+      bandwidth remaining ratio 5 account user-defined 4
+      service-policy internal-office_class
+    Class db-netz-lst
+      bandwidth remaining ratio 5 account user-defined 4
+      service-policy db-net-list_class
+    Class db-systems-abc
+      bandwidth remaining ratio 5 account user-defined 4
+      service-policy db-systems-abc_class
+    Class db-iot-konzern
+      bandwidth remaining ratio 5 account user-defined 4
+      service-policy db-iot-konzern_class
+    Class class-default
+      bandwidth remaining ratio 6 account user-defined 4
+      service-policy internal-systems-net_class
+
+  Policy Map db-net-list_class
+    Class network
+     police cir 200000 bc 6250
+       conform-action transmit
+       exceed-action drop
+       account user-defined 4
+      priority level 2
+    Class class-default
+      bandwidth remaining ratio 1 account user-defined 4
+      queue-limit 50 ms
+
+  Policy Map db-systems-abc_class
+    Class prioritaet
+     police cir 290000 bc 9062
+       conform-action transmit
+       exceed-action drop
+       account user-defined 4
+      priority level 1
+    Class network
+     police cir 200000 bc 6250
+       conform-action transmit
+       exceed-action drop
+       account user-defined 4
+      priority level 2
+    Class premium
+      bandwidth remaining ratio 10 account user-defined 4
+      queue-limit 50 ms
+    Class classic
+      bandwidth remaining ratio 20 account user-defined 4
+      queue-limit 50 ms
+    Class class-default
+      bandwidth remaining ratio 60 account user-defined 4
+      queue-limit 50 ms
+
+  Policy Map location-bandwidth
+    Class class-default
+      Average Rate Traffic Shaping
+      cir 3510000 (bps)   account user-defined 4
+      service-policy vpn-bandwidths
+
+  Policy Map systems-m2m_class
+    Class network
+     police cir 200000 bc 6250
+       conform-action transmit
+       exceed-action drop
+       account user-defined 4
+      priority level 2
+    Class class-default
