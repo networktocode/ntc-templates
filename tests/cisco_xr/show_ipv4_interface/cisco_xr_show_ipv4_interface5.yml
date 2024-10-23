@@ -1,0 +1,123 @@
+---
+parsed_sample:
+  - interface: "Loopback0"
+    in_acl: "not set"
+    ip_address: "10.24.29.18"
+    ip_mtu: "1500"
+    link_status: "Up"
+    mtu: "1500"
+    multicast_groups:
+      - "224.0.0.13"
+      - "224.0.0.22"
+      - "224.0.1.40"
+    out_acl: "not set"
+    prefix_length: "32"
+    protocol: "ipv4"
+    protocol_status: "Up"
+    rpf_check: ""
+    sec_ip_address: []
+    sec_prefix_length: []
+    vrf: "default"
+    vrf_id: "0x60000000"
+  - interface: "Loopback7"
+    in_acl: "not set"
+    ip_address: "10.44.7.60"
+    ip_mtu: "1500"
+    link_status: "Up"
+    mtu: "1500"
+    multicast_groups: []
+    out_acl: "not set"
+    prefix_length: "32"
+    protocol: "ipv4"
+    protocol_status: "Up"
+    rpf_check: ""
+    sec_ip_address: []
+    sec_prefix_length: []
+    vrf: "default"
+    vrf_id: "0x60000000"
+  - interface: "MgmtEth0/RSP0/CPU0/0"
+    in_acl: "not set"
+    ip_address: "10.0.0.1"
+    ip_mtu: "1500"
+    link_status: "Down"
+    mtu: "1514"
+    multicast_groups: []
+    out_acl: "not set"
+    prefix_length: "24"
+    protocol: "ipv4"
+    protocol_status: "Down"
+    rpf_check: ""
+    sec_ip_address: []
+    sec_prefix_length: []
+    vrf: "default"
+    vrf_id: "0x60000000"
+  - interface: "TenGigE0/5/0/0"
+    in_acl: "not set"
+    ip_address: "10.24.14.12"
+    ip_mtu: "9180"
+    link_status: "Up"
+    mtu: "9208"
+    multicast_groups:
+      - "224.0.0.2"
+      - "224.0.0.1"
+      - "224.0.0.5"
+      - "224.0.0.6"
+      - "224.0.0.13"
+      - "224.0.0.22"
+    out_acl: "not set"
+    prefix_length: "31"
+    protocol: "ipv4"
+    protocol_status: "Up"
+    rpf_check: ""
+    sec_ip_address: []
+    sec_prefix_length: []
+    vrf: "default"
+    vrf_id: "0x60000000"
+  - interface: "TenGigE0/5/0/1"
+    in_acl: ""
+    ip_address: ""
+    ip_mtu: ""
+    link_status: "Shutdown"
+    mtu: ""
+    multicast_groups: []
+    out_acl: ""
+    prefix_length: ""
+    protocol: "ipv4"
+    protocol_status: "Down"
+    rpf_check: ""
+    sec_ip_address: []
+    sec_prefix_length: []
+    vrf: "default"
+    vrf_id: "0x60000000"
+  - interface: "TenGigE0/5/0/2"
+    in_acl: ""
+    ip_address: ""
+    ip_mtu: ""
+    link_status: "Shutdown"
+    mtu: ""
+    multicast_groups: []
+    out_acl: ""
+    prefix_length: ""
+    protocol: "ipv4"
+    protocol_status: "Down"
+    rpf_check: ""
+    sec_ip_address: []
+    sec_prefix_length: []
+    vrf: "default"
+    vrf_id: "0x60000000"
+  - interface: "TenGigE0/5/0/3"
+    in_acl: ""
+    ip_address: ""
+    ip_mtu: ""
+    link_status: "Shutdown"
+    mtu: ""
+    multicast_groups: []
+    out_acl: ""
+    prefix_length: ""
+    protocol: "ipv4"
+    protocol_status: "Down"
+    rpf_check: ""
+    sec_ip_address: []
+    sec_prefix_length: []
+    vrf: "default"
+    vrf_id: "0x60000000"

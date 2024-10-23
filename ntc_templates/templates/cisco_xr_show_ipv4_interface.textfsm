@@ -29,7 +29,7 @@ Start
   ^\s+Multicast\s+reserved\s+groups\s+joined\:\s+${MULTICAST_GROUPS} -> Continue
   ^\s+Multicast\s+reserved\s+groups\s+joined\:\s+\S+\s+${MULTICAST_GROUPS} -> Continue
   ^\s+Multicast\s+reserved\s+groups\s+joined\:\s+\S+\s+\S+\s+${MULTICAST_GROUPS} -> Continue
-  ^\s+Multicast\s+reserved\s+groups\s+joined\:\s+ -> MULTICAST
+  ^\s+Multicast\s+reserved\s+groups\s+joined\: -> MULTICAST
   ^\s+Internet\s+protocol.*$$
   ^\s+Directed.*$$
   ^\s+Outgoing\s+access\s+list\s+is\s+${OUT_ACL}
