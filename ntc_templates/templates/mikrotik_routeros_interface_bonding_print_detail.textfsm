@@ -1,0 +1,20 @@
+Value Required ID (\d+)
+Value STATUS (X|R)
+Value NAME (\S+)
+Value SLAVES (\S+(?:,)?)
+Value List DESCRIPTION (.+?)
+Value MODE (\S+)
+
+Start
+  ^\s*Flags:\s*X\s*-\s*disabled(?:;|,)\s*R\s*-\s*running\s*$$ -> Interface
+  ^\s*$$
+  ^. -> Error
+
+Interface
+  ^\s*\d+\s*(?:X|R)?\s*$$ -> Continue.Record
+  ^\s*${ID}\s*${STATUS}\s*name="${NAME}"\s*mtu=\d+\s*mac-address=([a-zA-Z0-9]{2}(?::[a-zA-Z0-9]{2}){5})\s*arp=\S+\s*arp-timeout=\S+\s*slaves=${SLAVES}\s*mode=${MODE}\s*primary=\S+\s*link-monitoring=\S+\s*arp-interval=(?:\d+ms)\s*arp-ip-targets=\S+\s*mii-interval=(?:\d+ms)\s*down-delay=(?:\d+ms)\s*up-delay=(?:\d+ms)\s*lacp-rate=(?:\d+sec(?:s)?)\s*transmit-hash-policy=\S+\s*min-links=\d+\s*$$
+  ^\s*name="${NAME}"\s*mtu=\d+\s*mac-address=([a-zA-Z0-9]{2}(?::[a-zA-Z0-9]{2}){5})\s*arp=\S+\s*arp-timeout=\S+\s*slaves=${SLAVES}\s*mode=${MODE}\s*primary=\S+\s*link-monitoring=\S+\s*arp-interval=(?:\d+ms)\s*arp-ip-targets=\S+\s*mii-interval=(?:\d+ms)\s*down-delay=(?:\d+ms)\s*up-delay=(?:\d+ms)\s*lacp-rate=(?:\d+sec(?:s)?)\s*transmit-hash-policy=\S+\s*min-links=\d+\s*$$
+  ^\s*${ID}\s*${STATUS}\s*;{3}\s*${DESCRIPTION}\s*$$
+  ^\s*${DESCRIPTION}\s*$$
+  ^\s*$$
+  ^. -> Error

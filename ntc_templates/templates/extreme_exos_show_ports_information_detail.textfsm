@@ -22,5 +22,26 @@ Start
   ^\s*Link\s+State:\s*${LINK_STATE}(,)?(\s)?.*$$
   ^\s*Link\s+Ups:\s*${LINK_UPS_NUM}\s+Last:\s*${LINK_UPS_LAST}\s*$$
   ^\s*Link\s+Downs:\s*${LINK_DOWNS_NUM}\s+Last:\s*${LINK_DOWNS_LAST}\s*$$
-	^\s*VLAN\s+cfg:\s*$$
   ^.*VLAN\s+ID:\s*${VLAN_ID}\s*$$
+  ^\s*\S+\s+cfg:\s*$$
+  ^\s*Name:.*,?
+  ^\s*\S+\s*Tag=\S+\s+Mode=\S+\s+State=\S+\s*$$
+  ^\s*(Protocol|Trunking|Members|EDP|ELSM|Learning|Jumbo):
+  ^\s*algorithm\s*$$
+  ^\s*(\S+\s+)?Ethernet(\s+OAM)?:
+  ^\s*\S+\s+(\S+\s+)*(Flooding|Rate):
+  ^\s*(\S+\s+)?Flow\s+Control:
+  ^\s*Reflective\s+Relay:
+  ^\s*Link\s+up/down\s+SNMP\s+trap
+  ^\s*QoS\s+Profile:
+  ^\s*(Ingress|Egress)\s+\S+
+  ^\s*NetLogin:?
+  ^\s*\S+\s+redundan\S+(\s+\S+)?:
+  ^\s*(IPFIX|DIP):
+  ^\s*IPv\d+\s+Flow\s+Key\s+Mask:
+  ^\s*Far-End-Fault-Indication:
+  ^\s*Shared\s+packet\s+buffer:
+  ^\s*VMAN\s+CEP\s+egress\s+filtering:
+  ^\s*(Isolation|PTP\s+Configured|Time-Stamping\s+Mode):
+  ^\s*(\S+\s+)+VLANs?(\s+\S+)?:\s+\S+\s*$$
+  ^. -> Error

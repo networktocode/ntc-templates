@@ -1,0 +1,21 @@
+Value Required ID (\d+)
+Value NAME (\S+)
+Value PARENT_INTERFACE (\S+)
+Value List DESCRIPTION (.+?)
+Value STATUS (X|R)
+Value VLAN_ID (\d+)
+Value SERVICE_TAG (yes|no)
+
+Start
+  ^\s*Flags:\s*X\s*-\s*disabled,\s*R\s*-\s*running\s*$$ -> Vlan
+  ^\s*$$
+  ^. -> Error
+
+Vlan
+  ^\s*(?:\d+)?\s*(?:X|R)?\s*$$ -> Continue.Record
+  ^\s*name="${NAME}"\s*mtu=(?:\d+)\s*l2mtu=(?:\d+)\s*mac-address=(?:[a-zA-Z0-9]{2}(?::[a-zA-Z0-9]{2}){5})\s*arp=(?:\S+)\s*arp-timeout=(?:\S+)\s*loop-protect=(?:\S+)\s*loop-protect-status=(?:\S+)\s*loop-protect-send-interval=(?:\d+\w)\s*loop-protect-disable-time=(?:\d+\w)\s*vlan-id=${VLAN_ID}\s*interface=${PARENT_INTERFACE}\s*use-service-tag=${SERVICE_TAG}\s*$$
+  ^\s*${ID}\s*${STATUS}\s*name="${NAME}"\s*mtu=(?:\d+)\s*l2mtu=(?:\d+)\s*mac-address=(?:[a-zA-Z0-9]{2}(?::[a-zA-Z0-9]{2}){5})\s*arp=(?:\S+)\s*arp-timeout=(?:\S+)\s*loop-protect=(?:\S+)\s*loop-protect-status=(?:\S+)\s*loop-protect-send-interval=(?:\d+\w)\s*loop-protect-disable-time=(?:\d+\w)\s*vlan-id=${VLAN_ID}\s*interface=${PARENT_INTERFACE}\s*use-service-tag=${SERVICE_TAG}\s*$$
+  ^\s*${ID}\s*${STATUS}\s*;{3}\s*${DESCRIPTION}\s*$$
+  ^\s*${DESCRIPTION}\s*$$
+  ^\s*$$
+  ^. -> Error

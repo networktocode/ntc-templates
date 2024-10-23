@@ -42,6 +42,7 @@ OS_CHOICES = [
     "enterasys",
     "ericsson_ipos",
     "extreme_exos",
+    "extreme_slxos",
     "f5_ltm",
     "fortinet",
     "hp_comware",

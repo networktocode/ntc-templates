@@ -1,0 +1,130 @@
+#
+# Pavel Pestov
+#
+# 2024-10-09: Inital Version
+#
+# SW Version: 7.0.15
+# HW        : FortiGate-40F
+# Mode		: HA A-P
+# VDOMS     : DISABLE
+#
+# Neighbors	: Huawei CloudEngine S5735-L Series Switches, HPE Aruba 2530 Series Switches, Cisco Catalyst 3000 Series Switches, Cisco Nexus 3000 Series Switches
+#
+# The number of parameters may vary depending on the type of neighbor
+#
+Value PORT (\S+)
+Value PORT_TXT (\S+)
+Value MAC_ADDRESS (\S+)
+Value CHASSIS_TYPE (\S+)
+Value CHASSIS_TYPE_TXT (\S+)
+Value CHASSIS_DATA (\S+)
+Value PORT_ID_TYPE (\S+)
+Value PORT_ID_TYPE_TXT (\S+)
+Value PORT_ID_LEN (\S+)
+Value PORT_ID_DATA (\S+)
+Value TTL (\S+)
+Value PORT_DESC_LEN (\S+)
+Value PORT_DESC_DATA ([\S\s]+)
+Value SYSTEM_NAME_LEN (\S+)
+Value SYSTEM_NAME_DATA (\S+)
+Value SYSTEM_DESC_LEN (\S+)
+Value List SYSTEM_DESC_DATA ([^1][\S\s]+)
+Value SYSTEM_CAPS_AVAILABLE (\S+)
+Value SYSTEM_CAPS_AVAILABLE_TXT ([\S\s]+)
+Value SYSTEM_CAPS_ENABLED (\S+)
+Value SYSTEM_CAPS_ENABLED_TXT ([\S\s]+)
+Value ADDRESS_COUNT (\S+)
+Value ADDRESS_1_TYPE (\S+)
+Value ADDRESS_1_TYPE_TXT (\S+)
+Value ADDRESS_1_LEN (\S+)
+Value ADDRESS_1_ADDR (\S+)
+Value ADDRESS_1_ADDR_INTERFACE_TYPE (\S+)
+Value ADDRESS_1_ADDR_INTERFACE_TYPE_TXT (\S+)
+Value ADDRESS_1_ADDR_INTERFACE_NUMBER (\S+)
+Value VLAN_ID (\S+)
+Value VLAN_PROTOCOL_COUNT (\S+)
+Value VLAN_PROTOCOL_1_FLAG (\S+)
+Value VLAN_PROTOCOL_1_FLAG_TXT ([\S\s]*)
+Value VLAN_PROTOCOL_1_ID (\S+)
+Value VLAN_NAME_COUNT (\S+)
+Value VLAN_NAME_1_ID (\S+)
+Value VLAN_NAME_1_LEN (\S+)
+Value VLAN_NAME_1_DATA ([\S\s]+)
+Value AGGREGATION_STATUS (\S+)
+Value AGGREGATION_STATUS_TXT (\S+)
+Value AGGREGATION_PORT (\S+)
+Value MAC_PHY_AUTO (\S+)
+Value MAC_PHY_AUTO_TXT ([\S\s]+)
+Value MAC_PHY_PMD (\S+)
+Value MAC_PHY_PMD_TXT ([\S\s]+)
+Value MAC_PHY_MAU (\S+)
+Value MAC_PHY_MAU_TXT (\S+)
+Value POWER_STATUS (\S+)
+Value POWER_STATUS_TXT (\S+)
+Value POWER_PAIR (\S+)
+Value POWER_CLASS (\S+)
+Value MAX_FRAME_SIZE (\S+)
+
+Start
+  ^1\s+port:\s+${PORT}
+  ^1\s+port\.txt:\s+${PORT_TXT}
+  ^1\s+mac:\s+${MAC_ADDRESS}
+  ^1\s+chassis\.type:\s+${CHASSIS_TYPE}
+  ^1\s+chassis\.type\.txt:\s+${CHASSIS_TYPE_TXT}
+  ^1\s+chassis\.data:\s+${CHASSIS_DATA}
+  ^1\s+port\.id\.type:\s+${PORT_ID_TYPE}
+  ^1\s+port\.id\.type\.txt:\s+${PORT_ID_TYPE_TXT}
+  ^1\s+port\.id\.len:\s+${PORT_ID_LEN}
+  ^1\s+port\.id\.data:\s+${PORT_ID_DATA}
+  ^1\s+ttl:\s+${TTL}
+  ^1\s+port\.desc\.len:\s+${PORT_DESC_LEN}
+  ^1\s+port\.desc\.data:\s+${PORT_DESC_DATA}
+  ^1\s+system\.name\.len:\s+${SYSTEM_NAME_LEN}
+  ^1\s+system\.name\.data:\s+${SYSTEM_NAME_DATA}
+  ^1\s+system\.desc\.len:\s+${SYSTEM_DESC_LEN}
+  ^1\s+system\.desc\.data:\s+${SYSTEM_DESC_DATA} -> MultipleLines
+  ^1\s+system\.caps\.available:\s+${SYSTEM_CAPS_AVAILABLE}
+  ^1\s+system\.caps\.available\.txt:\s+${SYSTEM_CAPS_AVAILABLE_TXT}
+  ^1\s+system\.caps\.enabled:\s+${SYSTEM_CAPS_ENABLED}
+  ^1\s+system\.caps\.enabled\.txt:\s+${SYSTEM_CAPS_ENABLED_TXT}
+  ^1\s+address\.count:\s+${ADDRESS_COUNT}
+  ^1\s+address\.1\.type:\s+${ADDRESS_1_TYPE}
+  ^1\s+address\.1\.type\.txt:\s+${ADDRESS_1_TYPE_TXT}
+  ^1\s+address\.1\.len:\s+${ADDRESS_1_LEN}
+  ^1\s+address\.1\.addr:\s+${ADDRESS_1_ADDR}
+  ^1\s+address\.1\.addr\.interface\.type:\s+${ADDRESS_1_ADDR_INTERFACE_TYPE}
+  ^1\s+address\.1\.addr\.interface\.type\.txt:\s+${ADDRESS_1_ADDR_INTERFACE_TYPE_TXT}
+  ^1\s+address\.1\.addr\.interface\.number:\s+${ADDRESS_1_ADDR_INTERFACE_NUMBER}
+  ^1\s+vlan\.id:\s+${VLAN_ID}
+  ^1\s+vlan\.protocol\.count:\s+${VLAN_PROTOCOL_COUNT}
+  ^1\s+vlan\.protocol\.1\.flag:\s+${VLAN_PROTOCOL_1_FLAG}
+  ^1\s+vlan\.protocol\.1\.flag\.txt:\s*${VLAN_PROTOCOL_1_FLAG_TXT}
+  ^1\s+vlan\.protocol\.1\.id:\s+${VLAN_PROTOCOL_1_ID}
+  ^1\s+vlan\.name\.count:\s+${VLAN_NAME_COUNT}
+  ^1\s+vlan\.name\.1\.id:\s+${VLAN_NAME_1_ID}
+  ^1\s+vlan\.name\.1\.len:\s+${VLAN_NAME_1_LEN}
+  ^1\s+vlan\.name\.1\.data:\s+${VLAN_NAME_1_DATA}
+  ^1\s+aggregation\.status:\s+${AGGREGATION_STATUS}
+  ^1\s+aggregation\.status\.txt:\s+${AGGREGATION_STATUS_TXT}
+  ^1\s+aggregation\.port:\s+${AGGREGATION_PORT}
+  ^1\s+mac_phy\.auto:\s+${MAC_PHY_AUTO}
+  ^1\s+mac_phy\.auto\.txt:\s+${MAC_PHY_AUTO_TXT}
+  ^1\s+mac_phy\.pmd:\s+${MAC_PHY_PMD}
+  ^1\s+mac_phy\.pmd\.txt:\s+${MAC_PHY_PMD_TXT}
+  ^1\s+mac_phy\.mau:\s+${MAC_PHY_MAU}
+  ^1\s+mac_phy\.mau\.txt:\s+${MAC_PHY_MAU_TXT}
+  ^1\s+power\.status:\s+${POWER_STATUS}
+  ^1\s+power\.status\.txt:\s+${POWER_STATUS_TXT}
+  ^1\s+power\.pair:\s+${POWER_PAIR}
+  ^1\s+power\.class:\s+${POWER_CLASS}
+  ^1\s+max-frame-size:\s+${MAX_FRAME_SIZE}
+  # Processing possible new information to eliminate errors
+  ^1\s+[\S\s]+
+  ^\s*$$
+  ^. -> Error
+  
+MultipleLines
+  ^${SYSTEM_DESC_DATA}
+  ^1\s+system\.caps\.available:\s+${SYSTEM_CAPS_AVAILABLE} -> Start  
+  ^\s*$$
+  ^. -> Error

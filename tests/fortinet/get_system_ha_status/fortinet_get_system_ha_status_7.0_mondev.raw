@@ -1,0 +1,40 @@
+HA Health Status:
+    WARNING: FGT40FYYYYYYYYYY has mondev down;
+Model: FortiGate-40F
+Mode: HA A-P
+Group: 172
+Debug: 0
+Cluster Uptime: 63 days 22:15:42
+Cluster state change time: 2024-02-11 15:25:27
+Primary selected using:
+    <2024/02/11 15:25:27> FGT40FXXXXXXXXXX is selected as the primary because the value 0 of link-failure + pingsvr-failure is less than peer member FGT40FYYYYYYYYYY.
+ses_pickup: enable, ses_pickup_delay=disable
+override: enable
+Configuration Status:
+    FGT40FXXXXXXXXXX(updated 0 seconds ago): in-sync
+    FGT40FYYYYYYYYYY(updated 0 seconds ago): in-sync
+System Usage stats:
+    FGT40FXXXXXXXXXX(updated 0 seconds ago):
+        sessions=768, average-cpu-user/nice/system/idle=0%/0%/0%/99%, memory=35%
+    FGT40FYYYYYYYYYY(updated 0 seconds ago):
+        sessions=634, average-cpu-user/nice/system/idle=0%/0%/0%/100%, memory=31%
+HBDEV stats:
+    FGT40FXXXXXXXXXX(updated 0 seconds ago):
+        lan2: physical/1000auto, up, rx-bytes/packets/dropped/errors=9997131732/27616386/0/0, tx=10080077920/27616652/0/0
+        lan3: physical/1000auto, up, rx-bytes/packets/dropped/errors=11772621099/36693306/0/0, tx=26151306122/60128423/0/0
+    FGT40FYYYYYYYYYY(updated 0 seconds ago):
+        lan2: physical/1000auto, up, rx-bytes/packets/dropped/errors=10080077920/27616652/0/0, tx=9997131732/27616386/0/0
+        lan3: physical/1000auto, up, rx-bytes/packets/dropped/errors=26151777728/60128423/0/0, tx=11771044717/36693306/0/0
+MONDEV stats:
+    FGT40FXXXXXXXXXX(updated 0 seconds ago):
+        lan1: physical/100auto, up, rx-bytes/packets/dropped/errors=535463275509/3388288017/0/0, tx=3023591767050/4114831127/0/0
+        wan: physical/100auto, up, rx-bytes/packets/dropped/errors=3314385262333/4439875482/0/0, tx=768352772861/3445252569/0/0
+    FGT40FYYYYYYYYYY(updated 0 seconds ago):
+        lan1: physical/00, down, rx-bytes/packets/dropped/errors=0/0/0/0, tx=0/0/0/0
+        wan: physical/100auto, up, rx-bytes/packets/dropped/errors=15792718293/245544650/0/0, tx=0/0/0/0
+Primary : FGT-fw-a, FGT40FXXXXXXXXXX, HA cluster index = 1
+Secondary : FGT-fw-b, FGT40FYYYYYYYYYY, HA cluster index = 0
+number of vcluster: 1
+vcluster 1: work 169.254.0.2
+Primary: FGT40FXXXXXXXXXX, HA operating index = 0
+Secondary: FGT40FYYYYYYYYYY, HA operating index = 1
