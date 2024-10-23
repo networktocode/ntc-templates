@@ -35,7 +35,7 @@ parsed_sample:
     sec_prefix_length: []
     vrf: "default"
     vrf_id: "0x60000000"
-  - interface: "mgmteth0/rsp0/cpu0/0"
+  - interface: "MgmtEth0/RSP0/CPU0/0"
     in_acl: "not set"
     ip_address: "10.0.0.1"
     ip_mtu: "1500"
@@ -51,7 +51,7 @@ parsed_sample:
     sec_prefix_length: []
     vrf: "default"
     vrf_id: "0x60000000"
-  - interface: "tengige0/5/0/0"
+  - interface: "TenGigE0/5/0/0"
     in_acl: "not set"
     ip_address: "10.24.14.12"
     ip_mtu: "9180"
@@ -73,11 +73,11 @@ parsed_sample:
     sec_prefix_length: []
     vrf: "default"
     vrf_id: "0x60000000"
-  - interface: "tengige0/5/0/1"
+  - interface: "TenGigE0/5/0/1"
     in_acl: ""
     ip_address: ""
     ip_mtu: ""
-    link_status: "shutdown"
+    link_status: "Shutdown"
     mtu: ""
     multicast_groups: []
     out_acl: ""
@@ -89,11 +89,11 @@ parsed_sample:
     sec_prefix_length: []
     vrf: "default"
     vrf_id: "0x60000000"
-  - interface: "tengige0/5/0/2"
+  - interface: "TenGigE0/5/0/2"
     in_acl: ""
     ip_address: ""
     ip_mtu: ""
-    link_status: "shutdown"
+    link_status: "Shutdown"
     mtu: ""
     multicast_groups: []
     out_acl: ""
@@ -105,11 +105,11 @@ parsed_sample:
     sec_prefix_length: []
     vrf: "default"
     vrf_id: "0x60000000"
-  - interface: "tengige0/5/0/3"
+  - interface: "TenGigE0/5/0/3"
     in_acl: ""
     ip_address: ""
     ip_mtu: ""
-    link_status: "shutdown"
+    link_status: "Shutdown"
     mtu: ""
     multicast_groups: []
     out_acl: ""
