@@ -1,0 +1,26 @@
+BGP router identifier 10.0.0.1, local AS number 6230
+BGP table version is 39619, main routing table version 39619
+972 network entries using 241056 bytes of memory
+2762 path entries using 375632 bytes of memory
+124/52 BGP path/bestpath attribute entries using 34720 bytes of memory
+48 BGP AS-PATH entries using 1888 bytes of memory
+4 BGP community entries using 144 bytes of memory
+1 BGP extended community entries using 24 bytes of memory
+0 BGP route-map cache entries using 0 bytes of memory
+0 BGP filter-list cache entries using 0 bytes of memory
+BGP using 653464 total bytes of memory
+905 received paths for inbound soft reconfiguration
+BGP attribute entries [9/3240], BGP AS path entries [1/6]
+BGP community entries [0/0], BGP clusterlist entries [0/0]
+BGP activity 2303/1331 prefixes, 43670/40908 paths, scan interval 60 secs
+
+Neighbor        V           AS MsgRcvd MsgSent   TblVer  InQ OutQ Up/Down  State/PfxRcd
+10.0.0.81    4         132       0       0        1    0    0 never    Idle (Admin)
+10.0.0.66   4        6230  363273  392165    39619    0    0 6w1d            9
+10.0.0.67   4        6230  363277  392110    39619    0    0 6w1d            9
+10.0.0.74   4        6230  363274  392168    39619    0    0 6w1d           10
+10.0.0.75   4        6230  363277  392137    39619    0    0 6w1d           10
+10.0.0.82   4        6230  363272  392239    39619    0    0 6w1d            2
+10.0.0.83   4        6230  363274  392149    39619    0    0 6w1d            2
+10.0.0.90   4        6230  363272  392205    39619    0    0 6w1d            1
+10.0.0.91   4        6230  363274  392176    39619    0    0 6w1d            1
