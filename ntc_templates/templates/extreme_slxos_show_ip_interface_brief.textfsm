@@ -1,0 +1,13 @@
+Value INTERFACE ((Port-channel|Loopback|Ethernet|Ve) \d+(?:/\d+)?(?:\s*\(I\))?)
+Value IP_ADDRESS (\S+)
+Value VRF (\S+)
+Value STATUS (\S+\s?\S+)
+Value PROTOCOL (\S+)
+
+Start
+  ^\s*Flags
+  ^\s*Interface\s+IP-Address\s+Vrf\s+Status\s+Protocol\s*$$
+  ^==================
+  ^${INTERFACE}\s+${IP_ADDRESS}\s+${VRF}\s+${STATUS}\s+${PROTOCOL} -> Record
+  ^\s*$$
+  ^. -> Error
