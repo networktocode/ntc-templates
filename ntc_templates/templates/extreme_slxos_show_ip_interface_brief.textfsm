@@ -6,7 +6,7 @@ Value PROTOCOL (\S+)
 
 Start
   ^\s*Flags
-  ^\s*Interface
+  ^\s*Interface\s+IP-Address\s+Vrf\s+Status\s+Protocol\s*$$
   ^==================
   ^${INTERFACE}\s+${IP_ADDRESS}\s+${VRF}\s+${STATUS}\s+${PROTOCOL} -> Record
   ^\s*$$
