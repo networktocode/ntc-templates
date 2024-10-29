@@ -17,10 +17,14 @@ Start
   ^${BGP_NEIGH}\s+\d+\s+${NEIGH_AS}\s+${MSG_RCVD}\s+${MSG_SENT}\s+\d+\s+${IN_QUEUE}\s+${OUT_QUEUE}\s+${UP_DOWN}\s+${STATE_PFXRCD}\s*$$ -> Record
   ^${BGP_NEIGH}\s+\d+\s+${NEIGH_AS}
   ^\s+${MSG_RCVD}\s+${MSG_SENT}\s+\d+\s+${IN_QUEUE}\s+${OUT_QUEUE}\s+${UP_DOWN}\s+${STATE_PFXRCD}\s*$$ -> Record
+  # ignoring all lines ending in bytes of memory
+  ^.*\s+bytes\s+of\s+memory
   ^BGP\s+table\s+version
   ^\d+\s+network\s+entries
-  ^BGP attribute entries
-  ^BGP community entries
+  ^BGP\s+attribute\s+entries
+  ^BGP\s+community\s+entries
   ^\d+\s+(received|identical)
+  ^BGP\s+activity
+  ^\d+\s+networks\s+peaked\s+at
   ^\s*$$
   ^. -> Error
