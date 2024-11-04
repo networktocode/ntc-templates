@@ -11,9 +11,7 @@ parsed_sample:
     failed_connections: "52"
     packets_sent: "23450"
     packet_received: "23439"
-    server_status: "Alive"
-    continous_authc_fail_count: "0"
-    continous_authz_fail_count: "0"
+
   - tacacs_server: "10.20.30.2"
     tacacs_server_name: "TACACS_2"
     server_port: "49"
