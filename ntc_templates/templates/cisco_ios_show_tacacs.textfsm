@@ -24,6 +24,8 @@ Start
   ^\s+Failed\s+Connect\s+Attempts:\s+${FAILED_CONNECTIONS}\s*$$
   ^\s+Total\s+Packets\s+Sent:\s+${PACKETS_SENT}\s*$$
   ^\s+Total\s+Packets\s+Recv:\s+${PACKET_RECEIVED}\s*$$
+  ^\s+Server\s+Status:\s+\S+\s*$$
+  ^\s*Continous\s+Auth\w+\s+fail\s+count:\s+\d+\s*$$
   ^\s*$$
   # Capture time-stamp if vty line has command time-stamping turned on
   ^Load\s+for\s+
