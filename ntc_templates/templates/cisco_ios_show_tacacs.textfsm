@@ -26,7 +26,6 @@ Start
   ^\s+Total\s+Packets\s+Recv:\s+${PACKET_RECEIVED}\s*$$
   ^\s+Server\s+Status:\s+\S+\s*$$
   ^Continous\s+Authc\s+fail\s+count:\s+\d+\s*$$
-  ^Continous\s+Authz\s+fail\s+count:\s+\d+\s*$$
   ^\s*$$
   # Capture time-stamp if vty line has command time-stamping turned on
   ^Load\s+for\s+
