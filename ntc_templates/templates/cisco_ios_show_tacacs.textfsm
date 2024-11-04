@@ -24,7 +24,7 @@ Start
   ^\s+Failed\s+Connect\s+Attempts:\s+${FAILED_CONNECTIONS}\s*$$
   ^\s+Total\s+Packets\s+Sent:\s+${PACKETS_SENT}\s*$$
   ^\s+Total\s+Packets\s+Recv:\s+${PACKET_RECEIVED}\s*$$
-  ^\s+Server\s+Status:.+?\s*$$
+  ^\s+Server\s+Status:\s+\S+\s*$$
   ^Continous\s+Authc\s+fail\s+count:\s+\d+\s*$$
   ^Continous\s+Authz\s+fail\s+count:\s+\d+\s*$$
   ^\s*$$
