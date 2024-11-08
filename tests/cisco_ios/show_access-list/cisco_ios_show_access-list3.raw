@@ -1,0 +1,29 @@
+Extended IP access list 115
+    9999 permit ip any any (10878 matches)
+Extended IP access list 150
+    10 permit tcp any any eq 5060
+    20 permit udp any any eq 5060 (2 matches)
+    30 permit tcp any eq 5060 any
+    40 permit udp any eq 5060 any
+    50 permit tcp any any eq 5090
+    60 permit udp any any eq 5090
+    70 permit tcp any eq 5090 any
+    80 permit udp any eq 5090 any
+    90 permit ip 54.48.253.0 0.0.0.31 any
+    100 permit ip any 54.48.253.0 0.0.0.31
+    110 permit ip 54.48.254.0 0.0.0.15 any
+    120 permit ip any 54.48.254.0 0.0.0.15
+    130 permit ip 54.163.212.48 0.0.0.15 any
+    140 permit ip any 54.163.212.48 0.0.0.15
+    150 permit ip 54.163.212.64 0.0.0.15 any
+    160 permit ip any 54.163.212.64 0.0.0.15
+    170 permit ip any 17.195.31.0 0.0.0.255
+    180 permit ip 17.195.31.0 0.0.0.255 any
+    190 permit ip any 178.255.160.0 0.0.7.255
+    200 permit ip 178.255.160.0 0.0.7.255 any
+    210 permit ip any 17.171.23.0 0.0.0.255
+    220 permit ip 17.171.23.0 0.0.0.255 any
+    230 permit ip any 37.97.64.0 0.0.0.255
+    240 permit ip 37.97.64.0 0.0.0.255 any
+    250 permit ip any 81.93.0.0 0.0.31.255
+    260 permit ip 81.93.0.0 0.0.31.255 any
