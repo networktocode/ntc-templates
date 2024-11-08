@@ -1,6 +1,6 @@
 Value ID (\d+)
 Value NAME (\w+)
-Value SSID (\w+)
+Value SSID (\S+)
 
 Start
   ^\s*-+ -> Next
