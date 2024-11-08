@@ -10,11 +10,12 @@ Start
   ^.*IP\sRoute\sTable -> IP
 
 IP
-  ^\s+\*>\s+\[${DISTANCE}/${METRIC}\]\svia\s${NEXTHOP_IP}\s\(recursive is directly connected,\s${INTERFACE}\)\s* -> Record
-  ^${CODE}\s+\*>\s${IP_ADDRESS}/${PREFIX_LENGTH}\sis\sdirectly\sconnected,\s${INTERFACE}\s* -> Record
-  ^${CODE}\s+\*>\s${IP_ADDRESS}/${PREFIX_LENGTH}\sis\sdirectly\sconnected\s* -> Record
-  ^${CODE}\s+\*>\s${IP_ADDRESS}/${PREFIX_LENGTH}\s\[${DISTANCE}/${METRIC}\]\sis\sdirectly\sconnected,\s${INTERFACE}\s* -> Record
-  ^${CODE}\s+\*>\s${IP_ADDRESS}/${PREFIX_LENGTH}\s\[${DISTANCE}/${METRIC}\]\svia\s${NEXTHOP_IP}\s\(recursive is directly connected,\s${INTERFACE}\)\s* -> Record
+  ^\s+(\*>)?\s+\[${DISTANCE}/${METRIC}\]\svia\s${NEXTHOP_IP}\s\(recursive is directly connected,\s${INTERFACE}\)\s* -> Record
+  ^${CODE}\s+(\*>)?\s${IP_ADDRESS}/${PREFIX_LENGTH}\sis\sdirectly\sconnected,\s${INTERFACE}\s* -> Record
+  ^${CODE}\s+(\*>)?\s${IP_ADDRESS}/${PREFIX_LENGTH}\sis\sdirectly\sconnected\s* -> Record
+  ^${CODE}\s+(\*>)?\s${IP_ADDRESS}/${PREFIX_LENGTH}\s\[${DISTANCE}/${METRIC}\]\sis\sdirectly\sconnected,\s${INTERFACE}\s* -> Record
+  ^${CODE}\s+(\*>)?\s${IP_ADDRESS}/${PREFIX_LENGTH}\s\[${DISTANCE}/${METRIC}\]\svia\s${NEXTHOP_IP}\s\(recursive is directly connected,\s${INTERFACE}\)\s* -> Record
+  ^${CODE}\s+(\*>)?\s${IP_ADDRESS}/${PREFIX_LENGTH}\s\[${DISTANCE}/${METRIC}\]\svia\s${NEXTHOP_IP},\s${INTERFACE}\s* -> Record
   ^. -> Error
 
 EOF

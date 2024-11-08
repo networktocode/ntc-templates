@@ -1,0 +1,15 @@
+Codes: K - kernel, C - connected, S - static, R - RIP, B - BGP
+       O - OSPF, IA - OSPF inter area
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2
+       > - selected route, * - FIB route, p - stale info
+
+IP Route Table for VRF "default"
+S    *> 0.0.0.0/0 [50/0] via 100.100.34.45, eth9
+C    *> 100.100.34.44/30 is directly connected, eth9
+B    *> 100.100.34.48/30 [20/0] via 100.100.34.45, eth9, 1d05h38m
+C    *> 127.0.0.0/8 is directly connected, lo
+B    *> 192.168.2.0/24 [20/0] via 100.100.34.45, eth9, 01:16:38
+C    *> 192.168.6.0/24 is directly connected, switch0.1
+C       192.168.6.0/24 is directly connected, switch0.1
+B    *> 100.100.34.32/30 [20/0] via 100.100.34.45, eth9, 03w0d00h
