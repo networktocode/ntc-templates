@@ -24,8 +24,8 @@ Value OPERATOR_DESTINATION_PORT (eq|gt|lt|neq|range)
 #
 # This can be either a single port or a list.
 #
-Value SOURCE_PORT ([\s\S]+)
-Value DESTINATION_PORT ([\s\S]+)
+Value SOURCE_PORT ([\da-zA-Z\s]+)
+Value DESTINATION_PORT ([\da-zA-Z\s]+)
 #
 # DESTINATION RegEx must be able to catch every possible source combination including masks. 'any' and 'host' and 'wildcard bits' are possible too.
 # 
@@ -35,9 +35,9 @@ Value MATCHES (\d+)
 
 Start
   ^${TYPE}.*list\s+${NAME}
-  ^\s*${SN}\s+${ACTION}\s+${PROTOCOL}\s+${SOURCE}\s+${OPERATOR_SOURCE_PORT}\s${SOURCE_PORT}\s${DESTINATION}\s${OPERATOR_DESTINATION_PORT}\s${DESTINATION_PORT} -> Record
-  ^\s*${SN}\s+${ACTION}\s+${PROTOCOL}\s+${SOURCE}\s+${DESTINATION}(\s+${OPERATOR_SOURCE_PORT})*(\s${SOURCE_PORT})* -> Record
-  ^\s*${SN}\s+${ACTION}\s+${PROTOCOL}\s+${SOURCE}(\s+${OPERATOR_SOURCE_PORT})*(\s${SOURCE_PORT})*\s+${DESTINATION}(\s+${MODIFIER})*(\s\(*(\s\(${MATCHES}\smatches\))*\smatches\))* -> Record
+  ^\s*${SN}\s+${ACTION}\s+${PROTOCOL}\s+${SOURCE}\s+${OPERATOR_SOURCE_PORT}\s${SOURCE_PORT}\s${DESTINATION}\s${OPERATOR_DESTINATION_PORT}\s${DESTINATION_PORT}(?<=[^()\s])+(\s\(${MATCHES}\smatches\))* -> Record
+  ^\s*${SN}\s+${ACTION}\s+${PROTOCOL}\s+${SOURCE}\s+${DESTINATION}(\s${OPERATOR_SOURCE_PORT}\s${SOURCE_PORT}(?<=[^()\s])+)?(\s\(${MATCHES}\smatches\))? -> Record
+  ^\s*${SN}\s+${ACTION}\s+${PROTOCOL}\s+${SOURCE}(\s${OPERATOR_SOURCE_PORT}\s${SOURCE_PORT})*\s+${DESTINATION}(\s+${MODIFIER})*(\s\(${MATCHES}\smatches\))* -> Record
   ^\s*${SN}\s+${ACTION}\s+${SOURCE}(\s+${MODIFIER})*(\s\(${MATCHES}\smatches\))* -> Record
   ^Load\s+for\s+
   ^Time\s+source\s+is
