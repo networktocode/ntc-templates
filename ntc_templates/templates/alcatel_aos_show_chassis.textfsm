@@ -1,0 +1,26 @@
+Value CHASSIS_ID (\d+)
+Value MODEL_NAME (\w+(-\w+)?)
+Value MODULE_TYPE (\w+)
+Value DESCRIPTION ([^,]+)
+Value PART_NUMBER (\w+-\w+)
+Value HARDWARE_REVISION (\d+)
+Value SERIAL_NUMBER (\w+)
+Value MANUFACTURE_DATE (\w+\s*\d+\s*\d+)
+Value ADMIN_STATUS (POWER ON)
+Value OPERATIONAL_STATUS (UP|DOWN)
+Value NUMBER_OF_RESETS (\d+)
+Value MAC_ADDRESS (\w+\.\w+\.\w+|\w+\:\w+\:\w+\:\w+\:\w+\:\w+)
+
+Start
+  ^\s*(?:Local\s*)?Chassis\s*(?:ID\s*)?${CHASSIS_ID}\s*(?:\(Master\))? -> Continue
+  ^\s*Model\s*Name:\s*${MODEL_NAME} -> Continue
+  ^\s*Module\s*Type:\s*${MODULE_TYPE} -> Continue
+  ^\s*Description:\s*${DESCRIPTION} -> Continue
+  ^\s*Part\s*Number:\s*${PART_NUMBER} -> Continue
+  ^\s*Hardware\s*Revision:\s*${HARDWARE_REVISION} -> Continue
+  ^\s*Serial\s*Number:\s*${SERIAL_NUMBER} -> Continue
+  ^\s*Manufacture\s*Date:\s*${MANUFACTURE_DATE} -> Continue
+  ^\s*Admin\s*Status:\s*${ADMIN_STATUS} -> Continue
+  ^\s*Operational\s*Status:\s*${OPERATIONAL_STATUS} -> Continue
+  ^\s*Number\s*Of\s*Resets:\s*${NUMBER_OF_RESETS} -> Continue
+  ^\s*MAC\s*Address:\s*${MAC_ADDRESS} -> Record
