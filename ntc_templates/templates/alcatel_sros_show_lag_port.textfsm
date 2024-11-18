@@ -9,13 +9,20 @@ Value FORCED (-)
 Value PRIO (\d+)
 
 Start
-  ^----------- -> LagPort
+  ^-+ -> LagPort
+  ^=+
+  ^Lag\s+Port\s+States
+  ^LACP\s+Status:
+  ^Lag-id\s+
+  ^\s+Stdby\s*
+  ^\s*$$
+  ^. -> Error
 
 LagPort
   ^${LAG_ID}\s+${PORT_ID}\s+${ADM}\s+${ACT_STD}\s+${OPR}\s+${PRIMARY}\s+${SUB_GROUP}\s+${FORCED}\s+${PRIO}(\s|$$) -> Record
   ^\s+${PORT_ID}\s+${ADM}\s+${ACT_STD}\s+${OPR}\s+${SUB_GROUP}\s+${FORCED}\s+${PRIO}(\s|$$) -> Record
   ^\s*$$
-  ^-----------
-  ^===========
+  ^-+
+  ^=+
   ^Total
   ^. -> Error
