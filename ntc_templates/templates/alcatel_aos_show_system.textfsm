@@ -1,0 +1,27 @@
+Value DESCRIPTION (.+,.+,[^,]+)
+Value OBJECT_ID ([^,]+)
+Value UP_TIME (\d+ days \d+ hours \d+ minutes and \d+ seconds)
+Value CONTACT (.+,(?: https://\S+)?)
+Value NAME ([^,]+)
+Value LOCATION ([^,]+)
+Value Service (\d+)
+Value DATE_TIME (\S+\s*\S+\s*\d+\s*\d+\s*\d+:\d+:\d+\s*(\(\w+\)))
+Value AVAILABLE (\d+)
+Value COMMENTS ([^,]+)
+
+Start
+  ^\s*System:$$
+  ^\s*Description:\s*${DESCRIPTION},$$
+  ^\s*Object\s*ID:\s*${OBJECT_ID},$$
+  ^\s*Up\s*Time:\s*${UP_TIME},$$
+  ^\s*Contact:\s*${CONTACT},$$
+  ^\s*Name:\s*${NAME},$$
+  ^\s*Location:\s*${LOCATION},$$
+  ^\s*Services:\s*${Service},$$
+  ^\s*Date\s*&\s*Time:\s*${DATE_TIME}$$
+  ^\s*Flash\s*Space:\s*$$
+  ^\s*Primary\s*CMM:$$
+  ^\s*Available\s*\(bytes\):\s*${AVAILABLE},$$
+  ^\s*Comments\s*:\s*${COMMENTS}$$
+  ^\s*$$
+  ^.*$$ -> Error
