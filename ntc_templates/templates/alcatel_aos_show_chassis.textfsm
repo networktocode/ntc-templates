@@ -24,3 +24,5 @@ Start
   ^\s*Operational\s*Status:\s*${OPERATIONAL_STATUS} -> Continue
   ^\s*Number\s*Of\s*Resets:\s*${NUMBER_OF_RESETS} -> Continue
   ^\s*MAC\s*Address:\s*${MAC_ADDRESS} -> Record
+  ^\s*$$
+  ^. -> Error
