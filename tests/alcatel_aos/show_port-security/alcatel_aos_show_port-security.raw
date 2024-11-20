@@ -1,0 +1,33 @@
+
+Legend: Mac Address: * = Duplicate Static
+        Mac Address: # = Pseudo Static
+
+
+Port:  1/11
+ Operation Mode   :                ENABLED,
+ Max MAC bridged  :                      1,
+ Trap Threshold   :               DISABLED,
+ Max MAC filtered :                      5,
+ Violation        :               RESTRICT,
+ Violating MAC    :                   NULL
+
+ MAC Address        VLAN   TYPE
+-------------------+------+------------
+ aa:aa:aa:aa:aa:aa    10   STATIC
+
+ 
+Legend: Mac Address: * = Duplicate Static
+        Mac Address: # = Pseudo Static
+
+
+Port:  1/12
+ Operation Mode   :                ENABLED,
+ Max MAC bridged  :                      1,
+ Trap Threshold   :               DISABLED,
+ Max MAC filtered :                      5,
+ Violation        :               RESTRICT,
+ Violating MAC    :                   NULL
+
+ MAC Address        VLAN   TYPE
+-------------------+------+------------
+ aa:aa:aa:aa:aa:bb    10   STATIC
