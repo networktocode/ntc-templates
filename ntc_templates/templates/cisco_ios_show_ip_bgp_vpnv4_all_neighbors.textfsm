@@ -2,6 +2,7 @@ Value NEIGHBOR (\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})
 Value VRF (\S+)
 Value REMOTE_AS (\d+)
 Value LOCAL_AS (\d+)
+Value DESCRIPTION (\S+.*)
 Value PEER_GROUP (\S+)
 Value REMOTE_ROUTER_ID (\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})
 Value BGP_STATE (\w+)
@@ -19,6 +20,10 @@ Start
   # Capture BGP peer group
   # Example: 'Member of peer-group RR_SERVERS for session parameters'
   ^\s*Member\s+of\s+peer-group\s+${PEER_GROUP}
+  #
+  # Capture description
+  # Example: 'Description: connection to HQ router'
+  ^\s+Description:\s+${DESCRIPTION}
   #
   # Capture remote router ID
   # Example: ' BGP version 4, remote router ID 10.10.255.14'
