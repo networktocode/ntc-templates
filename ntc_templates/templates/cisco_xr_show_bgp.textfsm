@@ -33,7 +33,7 @@ Start
   # Checking for header
   ^\s*Network\s+Next(?:\s+|-)[Hh]op\s+Metric\s+LocPrf\s+Weight\s+Path\s*$$ -> BGPTable
   ^\s*$$
-  ^. -> Error
+  #^. -> Error
 
 BGPTable
   # Regex to match the complete line including network
