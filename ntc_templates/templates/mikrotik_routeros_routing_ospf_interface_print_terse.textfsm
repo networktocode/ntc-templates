@@ -1,0 +1,10 @@
+Value INTERFACE (\S+)
+Value DYNAMIC (D)
+Value PASSIVE (P|passive)
+Value COST (\d+)
+
+Start
+  ^\s*\d+\s*(${DYNAMIC}\s*)?(${PASSIVE}\s*)?(comment=.+?)?interface=${INTERFACE}\s*cost=${COST}\s*priority=\d+\s*authentication=\S+\s*authentication-key=(?:")?\S+(?:")?\s*authentication-key-id=\d+\s*network-type=\S+\s*instance-id=\d+\s*retransmit-interval=\d+s\s*transmit-delay=\d+s\s*hello-interval=\d+s\s*dead-interval=\d+s\s*use-bfd=\S+$$ -> Record
+  ^\s*\d+\s*(D\s*)?address=\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}%${INTERFACE}\s*area=\S+\s*state=(${PASSIVE}|\S+)\s*network-type=\S+\s*cost=${COST}\s*(priority=\d+\s*)?use-bfd=\S+\s*retransmit-interval=\d+s\s*transmit-delay=\d+s\s*hello-interval=\d+s\s*dead-interval=\d+s\s*$$ -> Record
+  ^\s*$$
+  ^. -> Error

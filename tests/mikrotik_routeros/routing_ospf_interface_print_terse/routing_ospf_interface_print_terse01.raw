@@ -1,0 +1,3 @@
+0 D address=1.1.1.1%vlan11@vlan975@sfp-sfpplus1 area=INET-v2 state=ptp network-type=ptp cost=1400 use-bfd=no retransmit-interval=5s transmit-delay=1s hello-interval=1s dead-interval=4s
+1 D address=1.1.1.1%vlan10@vlan975@sfp-sfpplus1 area=MGMT-v2 state=ptp network-type=ptp cost=10 use-bfd=no retransmit-interval=5s transmit-delay=1s hello-interval=10s dead-interval=40s
+2 D address=1.1.1.1%Lo0 area=MGMT-v2 state=passive network-type=broadcast cost=1 priority=128 use-bfd=no retransmit-interval=5s transmit-delay=1s hello-interval=10s dead-interval=40s
