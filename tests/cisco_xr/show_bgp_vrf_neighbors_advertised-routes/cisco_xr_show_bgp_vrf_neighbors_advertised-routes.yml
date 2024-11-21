@@ -1,344 +1,344 @@
 ---
 parsed_sample:
-  - as_path: 3222 65401i
-    from: 10.244.28.102
-    network: 0.0.0.0/0
-    next_hop: 10.164.199.181
-    route_distinguisher: 3222:9196
-    vrf: VRF_NAME:9196
-  - as_path: 3222 65401?
-    from: 10.244.28.102
-    network: 10.0.0.16/29
-    next_hop: 10.164.199.181
-    route_distinguisher: 3222:9196
-    vrf: VRF_NAME:9196
-  - as_path: 3222 65401?
-    from: 10.244.28.102
-    network: 10.0.2.0/24
-    next_hop: 10.164.199.181
-    route_distinguisher: 3222:9196
-    vrf: VRF_NAME:9196
-  - as_path: 3222 65401?
-    from: 10.244.28.102
-    network: 10.0.3.0/24
-    next_hop: 10.164.199.181
-    route_distinguisher: 3222:9196
-    vrf: VRF_NAME:9196
-  - as_path: 3222 65401?
-    from: 10.244.28.102
-    network: 10.0.4.0/24
-    next_hop: 10.164.199.181
-    route_distinguisher: 3222:9196
-    vrf: VRF_NAME:9196
-  - as_path: 3222 65401?
-    from: 10.164.200.10
-    network: 10.0.5.0/24
-    next_hop: 10.164.199.181
-    route_distinguisher: 3222:9196
-    vrf: VRF_NAME:9196
-  - as_path: 3222 65500i
-    from: 10.244.28.102
-    network: 10.11.217.0/24
-    next_hop: 10.164.199.181
-    route_distinguisher: 3222:9196
-    vrf: VRF_NAME:9196
-  - as_path: 3222 65500i
-    from: 10.244.28.102
-    network: 10.11.247.0/27
-    next_hop: 10.164.199.181
-    route_distinguisher: 3222:9196
-    vrf: VRF_NAME:9196
-  - as_path: 3222 65500i
-    from: 10.244.28.102
-    network: 10.11.247.128/27
-    next_hop: 10.164.199.181
-    route_distinguisher: 3222:9196
-    vrf: VRF_NAME:9196
-  - as_path: 3222 65502 65502 65502 65502 65502i
-    from: 10.244.28.104
-    network: 10.19.247.128/27
-    next_hop: 10.164.199.181
-    route_distinguisher: 3222:9196
-    vrf: VRF_NAME:9196
-  - as_path: 3222 65401?
-    from: 10.244.28.102
-    network: 10.200.0.0/16
-    next_hop: 10.164.199.181
-    route_distinguisher: 3222:9196
-    vrf: VRF_NAME:9196
-  - as_path: 3222 65401?
-    from: 10.244.28.102
-    network: 10.235.0.0/16
-    next_hop: 10.164.199.181
-    route_distinguisher: 3222:9196
-    vrf: VRF_NAME:9196
-  - as_path: 3222 65401?
-    from: 10.244.28.102
-    network: 10.236.0.0/16
-    next_hop: 10.164.199.181
-    route_distinguisher: 3222:9196
-    vrf: VRF_NAME:9196
-  - as_path: 3222 65401?
-    from: 10.244.28.102
-    network: 10.238.0.0/16
-    next_hop: 10.164.199.181
-    route_distinguisher: 3222:9196
-    vrf: VRF_NAME:9196
-  - as_path: 3222?
-    from: 10.244.28.102
-    network: 10.164.6.88/30
-    next_hop: 10.164.199.181
-    route_distinguisher: 3222:9196
-    vrf: VRF_NAME:9196
-  - as_path: 3222 65401?
-    from: 10.244.28.102
-    network: 10.164.192.248/30
-    next_hop: 10.164.199.181
-    route_distinguisher: 3222:9196
-    vrf: VRF_NAME:9196
-  - as_path: 3222?
-    from: 10.244.28.102
-    network: 10.164.192.252/30
-    next_hop: 10.164.199.181
-    route_distinguisher: 3222:9196
-    vrf: VRF_NAME:9196
-  - as_path: 3222?
-    from: 10.244.28.102
-    network: 10.164.193.0/30
-    next_hop: 10.164.199.181
-    route_distinguisher: 3222:9196
-    vrf: VRF_NAME:9196
-  - as_path: 3222?
-    from: local
-    network: 10.164.193.4/30
-    next_hop: 10.164.199.181
-    route_distinguisher: 3222:9196
-    vrf: VRF_NAME:9196
-  - as_path: 3222?
-    from: local
-    network: 10.164.193.180/30
-    next_hop: 10.164.199.181
-    route_distinguisher: 3222:9196
-    vrf: VRF_NAME:9196
-  - as_path: 3222?
-    from: 10.244.28.102
-    network: 10.164.194.196/30
-    next_hop: 10.164.199.181
-    route_distinguisher: 3222:9196
-    vrf: VRF_NAME:9196
-  - as_path: 3222?
-    from: 10.244.28.102
-    network: 10.164.194.224/30
-    next_hop: 10.164.199.181
-    route_distinguisher: 3222:9196
-    vrf: VRF_NAME:9196
-  - as_path: 3222?
-    from: local
-    network: 10.164.195.24/30
-    next_hop: 10.164.199.181
-    route_distinguisher: 3222:9196
-    vrf: VRF_NAME:9196
-  - as_path: 3222?
-    from: 10.244.28.102
-    network: 10.164.195.28/30
-    next_hop: 10.164.199.181
-    route_distinguisher: 3222:9196
-    vrf: VRF_NAME:9196
-  - as_path: 3222?
-    from: 10.244.28.102
-    network: 10.164.195.36/30
-    next_hop: 10.164.199.181
-    route_distinguisher: 3222:9196
-    vrf: VRF_NAME:9196
-  - as_path: 3222?
-    from: local
-    network: 10.164.195.40/30
-    next_hop: 10.164.199.181
-    route_distinguisher: 3222:9196
-    vrf: VRF_NAME:9196
-  - as_path: 3222?
-    from: 10.244.28.102
-    network: 10.164.195.44/30
-    next_hop: 10.164.199.181
-    route_distinguisher: 3222:9196
-    vrf: VRF_NAME:9196
-  - as_path: 3222?
-    from: 10.244.28.102
-    network: 10.164.195.68/30
-    next_hop: 10.164.199.181
-    route_distinguisher: 3222:9196
-    vrf: VRF_NAME:9196
-  - as_path: 3222?
-    from: local
-    network: 10.164.195.72/30
-    next_hop: 10.164.199.181
-    route_distinguisher: 3222:9196
-    vrf: VRF_NAME:9196
-  - as_path: 3222?
-    from: 10.244.28.102
-    network: 10.164.195.76/30
-    next_hop: 10.164.199.181
-    route_distinguisher: 3222:9196
-    vrf: VRF_NAME:9196
-  - as_path: 3222?
-    from: 10.244.28.102
-    network: 10.164.195.100/30
-    next_hop: 10.164.199.181
-    route_distinguisher: 3222:9196
-    vrf: VRF_NAME:9196
-  - as_path: 3222?
-    from: local
-    network: 10.164.195.104/30
-    next_hop: 10.164.199.181
-    route_distinguisher: 3222:9196
-    vrf: VRF_NAME:9196
-  - as_path: 3222?
-    from: 10.244.28.102
-    network: 10.164.195.108/30
-    next_hop: 10.164.199.181
-    route_distinguisher: 3222:9196
-    vrf: VRF_NAME:9196
-  - as_path: 3222?
-    from: local
-    network: 10.164.200.124/30
-    next_hop: 10.164.199.181
-    route_distinguisher: 3222:9196
-    vrf: VRF_NAME:9196
-  - as_path: 3222?
-    from: 10.244.28.102
-    network: 10.164.200.128/30
-    next_hop: 10.164.199.181
-    route_distinguisher: 3222:9196
-    vrf: VRF_NAME:9196
-  - as_path: 3222?
-    from: 10.244.28.102
-    network: 10.164.200.132/30
-    next_hop: 10.164.199.181
-    route_distinguisher: 3222:9196
-    vrf: VRF_NAME:9196
-  - as_path: 3222?
-    from: 10.244.28.102
-    network: 10.164.200.164/30
-    next_hop: 10.164.199.181
-    route_distinguisher: 3222:9196
-    vrf: VRF_NAME:9196
-  - as_path: 3222?
-    from: 10.244.28.102
-    network: 10.164.200.168/30
-    next_hop: 10.164.199.181
-    route_distinguisher: 3222:9196
-    vrf: VRF_NAME:9196
-  - as_path: 3222?
-    from: 10.244.28.102
-    network: 10.164.200.172/30
-    next_hop: 10.164.199.181
-    route_distinguisher: 3222:9196
-    vrf: VRF_NAME:9196
-  - as_path: 3222?
-    from: local
-    network: 10.164.200.176/30
-    next_hop: 10.164.199.181
-    route_distinguisher: 3222:9196
-    vrf: VRF_NAME:9196
-  - as_path: 3222?
-    from: 10.244.28.102
-    network: 10.164.200.180/30
-    next_hop: 10.164.199.181
-    route_distinguisher: 3222:9196
-    vrf: VRF_NAME:9196
-  - as_path: 3222?
-    from: 10.244.28.102
-    network: 10.164.200.184/30
-    next_hop: 10.164.199.181
-    route_distinguisher: 3222:9196
-    vrf: VRF_NAME:9196
-  - as_path: 3222?
-    from: local
-    network: 10.164.201.28/30
-    next_hop: 10.164.199.181
-    route_distinguisher: 3222:9196
-    vrf: VRF_NAME:9196
-  - as_path: 3222?
-    from: 10.244.28.102
-    network: 10.164.201.32/30
-    next_hop: 10.164.199.181
-    route_distinguisher: 3222:9196
-    vrf: VRF_NAME:9196
-  - as_path: 3222?
-    from: local
-    network: 10.164.206.144/30
-    next_hop: 10.164.199.181
-    route_distinguisher: 3222:9196
-    vrf: VRF_NAME:9196
-  - as_path: 3222?
-    from: 10.244.28.102
-    network: 10.164.207.72/30
-    next_hop: 10.164.199.181
-    route_distinguisher: 3222:9196
-    vrf: VRF_NAME:9196
-  - as_path: 3222?
-    from: local
-    network: 10.164.207.80/30
-    next_hop: 10.164.199.181
-    route_distinguisher: 3222:9196
-    vrf: VRF_NAME:9196
-  - as_path: 3222 65000 65022i
-    from: 10.244.28.102
-    network: 169.247.1.236/32
-    next_hop: 10.164.199.181
-    route_distinguisher: 3222:9196
-    vrf: VRF_NAME:9196
-  - as_path: 3222?
-    from: 10.244.28.102
-    network: 169.254.29.216/31
-    next_hop: 10.164.199.181
-    route_distinguisher: 3222:9196
-    vrf: VRF_NAME:9196
-  - as_path: 3222 65401?
-    from: 10.244.28.102
-    network: 172.21.0.0/16
-    next_hop: 10.164.199.181
-    route_distinguisher: 3222:9196
-    vrf: VRF_NAME:9196
-  - as_path: 3222 27652?
-    from: 10.244.28.102
-    network: 172.197.1.0/24
-    next_hop: 10.164.199.181
-    route_distinguisher: 3222:9196
-    vrf: VRF_NAME:9196
-  - as_path: 3222 27652 65510i
-    from: 10.244.28.102
-    network: 172.197.2.104/32
-    next_hop: 10.164.199.181
-    route_distinguisher: 3222:9196
-    vrf: VRF_NAME:9196
-  - as_path: 3222 65500 65500?
-    from: 10.244.28.102
-    network: 10.172.210.0/24
-    next_hop: 10.164.199.181
-    route_distinguisher: 3222:9196
-    vrf: VRF_NAME:9196
-  - as_path: 3222 65500 65500?
-    from: 10.244.28.102
-    network: 10.172.211.0/26
-    next_hop: 10.164.199.181
-    route_distinguisher: 3222:9196
-    vrf: VRF_NAME:9196
-  - as_path: 3222?
-    from: 10.244.28.102
-    network: 10.209.18.184/30
-    next_hop: 10.164.199.181
-    route_distinguisher: 3222:9196
-    vrf: VRF_NAME:9196
-  - as_path: 3222?
-    from: 10.244.28.102
-    network: 10.214.86.80/30
-    next_hop: 10.164.199.181
-    route_distinguisher: 3222:9196
-    vrf: VRF_NAME:9196
-  - as_path: 3222 65500 65500?
-    from: 10.244.28.102
-    network: 10.255.225.60/32
-    next_hop: 10.164.199.181
-    route_distinguisher: 3222:9196
-    vrf: VRF_NAME:9196
+  - as_path: "3222 65401i"
+    from: "10.244.28.102"
+    network: "0.0.0.0/0"
+    next_hop: "10.164.199.181"
+    route_distinguisher: "3222:9196"
+    vrf: "VRF_NAME:9196"
+  - as_path: "3222 65401?"
+    from: "10.244.28.102"
+    network: "10.0.0.16/29"
+    next_hop: "10.164.199.181"
+    route_distinguisher: "3222:9196"
+    vrf: "VRF_NAME:9196"
+  - as_path: "3222 65401?"
+    from: "10.244.28.102"
+    network: "10.0.2.0/24"
+    next_hop: "10.164.199.181"
+    route_distinguisher: "3222:9196"
+    vrf: "VRF_NAME:9196"
+  - as_path: "3222 65401?"
+    from: "10.244.28.102"
+    network: "10.0.3.0/24"
+    next_hop: "10.164.199.181"
+    route_distinguisher: "3222:9196"
+    vrf: "VRF_NAME:9196"
+  - as_path: "3222 65401?"
+    from: "10.244.28.102"
+    network: "10.0.4.0/24"
+    next_hop: "10.164.199.181"
+    route_distinguisher: "3222:9196"
+    vrf: "VRF_NAME:9196"
+  - as_path: "3222 65401?"
+    from: "10.164.200.10"
+    network: "10.0.5.0/24"
+    next_hop: "10.164.199.181"
+    route_distinguisher: "3222:9196"
+    vrf: "VRF_NAME:9196"
+  - as_path: "3222 65500i"
+    from: "10.244.28.102"
+    network: "10.11.217.0/24"
+    next_hop: "10.164.199.181"
+    route_distinguisher: "3222:9196"
+    vrf: "VRF_NAME:9196"
+  - as_path: "3222 65500i"
+    from: "10.244.28.102"
+    network: "10.11.247.0/27"
+    next_hop: "10.164.199.181"
+    route_distinguisher: "3222:9196"
+    vrf: "VRF_NAME:9196"
+  - as_path: "3222 65500i"
+    from: "10.244.28.102"
+    network: "10.11.247.128/27"
+    next_hop: "10.164.199.181"
+    route_distinguisher: "3222:9196"
+    vrf: "VRF_NAME:9196"
+  - as_path: "3222 65502 65502 65502 65502 65502i"
+    from: "10.244.28.104"
+    network: "10.19.247.128/27"
+    next_hop: "10.164.199.181"
+    route_distinguisher: "3222:9196"
+    vrf: "VRF_NAME:9196"
+  - as_path: "3222 65401?"
+    from: "10.244.28.102"
+    network: "10.200.0.0/16"
+    next_hop: "10.164.199.181"
+    route_distinguisher: "3222:9196"
+    vrf: "VRF_NAME:9196"
+  - as_path: "3222 65401?"
+    from: "10.244.28.102"
+    network: "10.235.0.0/16"
+    next_hop: "10.164.199.181"
+    route_distinguisher: "3222:9196"
+    vrf: "VRF_NAME:9196"
+  - as_path: "3222 65401?"
+    from: "10.244.28.102"
+    network: "10.236.0.0/16"
+    next_hop: "10.164.199.181"
+    route_distinguisher: "3222:9196"
+    vrf: "VRF_NAME:9196"
+  - as_path: "3222 65401?"
+    from: "10.244.28.102"
+    network: "10.238.0.0/16"
+    next_hop: "10.164.199.181"
+    route_distinguisher: "3222:9196"
+    vrf: "VRF_NAME:9196"
+  - as_path: "3222?"
+    from: "10.244.28.102"
+    network: "10.164.6.88/30"
+    next_hop: "10.164.199.181"
+    route_distinguisher: "3222:9196"
+    vrf: "VRF_NAME:9196"
+  - as_path: "3222 65401?"
+    from: "10.244.28.102"
+    network: "10.164.192.248/30"
+    next_hop: "10.164.199.181"
+    route_distinguisher: "3222:9196"
+    vrf: "VRF_NAME:9196"
+  - as_path: "3222?"
+    from: "10.244.28.102"
+    network: "10.164.192.252/30"
+    next_hop: "10.164.199.181"
+    route_distinguisher: "3222:9196"
+    vrf: "VRF_NAME:9196"
+  - as_path: "3222?"
+    from: "10.244.28.102"
+    network: "10.164.193.0/30"
+    next_hop: "10.164.199.181"
+    route_distinguisher: "3222:9196"
+    vrf: "VRF_NAME:9196"
+  - as_path: "3222?"
+    from: "local"
+    network: "10.164.193.4/30"
+    next_hop: "10.164.199.181"
+    route_distinguisher: "3222:9196"
+    vrf: "VRF_NAME:9196"
+  - as_path: "3222?"
+    from: "local"
+    network: "10.164.193.180/30"
+    next_hop: "10.164.199.181"
+    route_distinguisher: "3222:9196"
+    vrf: "VRF_NAME:9196"
+  - as_path: "3222?"
+    from: "10.244.28.102"
+    network: "10.164.194.196/30"
+    next_hop: "10.164.199.181"
+    route_distinguisher: "3222:9196"
+    vrf: "VRF_NAME:9196"
+  - as_path: "3222?"
+    from: "10.244.28.102"
+    network: "10.164.194.224/30"
+    next_hop: "10.164.199.181"
+    route_distinguisher: "3222:9196"
+    vrf: "VRF_NAME:9196"
+  - as_path: "3222?"
+    from: "local"
+    network: "10.164.195.24/30"
+    next_hop: "10.164.199.181"
+    route_distinguisher: "3222:9196"
+    vrf: "VRF_NAME:9196"
+  - as_path: "3222?"
+    from: "10.244.28.102"
+    network: "10.164.195.28/30"
+    next_hop: "10.164.199.181"
+    route_distinguisher: "3222:9196"
+    vrf: "VRF_NAME:9196"
+  - as_path: "3222?"
+    from: "10.244.28.102"
+    network: "10.164.195.36/30"
+    next_hop: "10.164.199.181"
+    route_distinguisher: "3222:9196"
+    vrf: "VRF_NAME:9196"
+  - as_path: "3222?"
+    from: "local"
+    network: "10.164.195.40/30"
+    next_hop: "10.164.199.181"
+    route_distinguisher: "3222:9196"
+    vrf: "VRF_NAME:9196"
+  - as_path: "3222?"
+    from: "10.244.28.102"
+    network: "10.164.195.44/30"
+    next_hop: "10.164.199.181"
+    route_distinguisher: "3222:9196"
+    vrf: "VRF_NAME:9196"
+  - as_path: "3222?"
+    from: "10.244.28.102"
+    network: "10.164.195.68/30"
+    next_hop: "10.164.199.181"
+    route_distinguisher: "3222:9196"
+    vrf: "VRF_NAME:9196"
+  - as_path: "3222?"
+    from: "local"
+    network: "10.164.195.72/30"
+    next_hop: "10.164.199.181"
+    route_distinguisher: "3222:9196"
+    vrf: "VRF_NAME:9196"
+  - as_path: "3222?"
+    from: "10.244.28.102"
+    network: "10.164.195.76/30"
+    next_hop: "10.164.199.181"
+    route_distinguisher: "3222:9196"
+    vrf: "VRF_NAME:9196"
+  - as_path: "3222?"
+    from: "10.244.28.102"
+    network: "10.164.195.100/30"
+    next_hop: "10.164.199.181"
+    route_distinguisher: "3222:9196"
+    vrf: "VRF_NAME:9196"
+  - as_path: "3222?"
+    from: "local"
+    network: "10.164.195.104/30"
+    next_hop: "10.164.199.181"
+    route_distinguisher: "3222:9196"
+    vrf: "VRF_NAME:9196"
+  - as_path: "3222?"
+    from: "10.244.28.102"
+    network: "10.164.195.108/30"
+    next_hop: "10.164.199.181"
+    route_distinguisher: "3222:9196"
+    vrf: "VRF_NAME:9196"
+  - as_path: "3222?"
+    from: "local"
+    network: "10.164.200.124/30"
+    next_hop: "10.164.199.181"
+    route_distinguisher: "3222:9196"
+    vrf: "VRF_NAME:9196"
+  - as_path: "3222?"
+    from: "10.244.28.102"
+    network: "10.164.200.128/30"
+    next_hop: "10.164.199.181"
+    route_distinguisher: "3222:9196"
+    vrf: "VRF_NAME:9196"
+  - as_path: "3222?"
+    from: "10.244.28.102"
+    network: "10.164.200.132/30"
+    next_hop: "10.164.199.181"
+    route_distinguisher: "3222:9196"
+    vrf: "VRF_NAME:9196"
+  - as_path: "3222?"
+    from: "10.244.28.102"
+    network: "10.164.200.164/30"
+    next_hop: "10.164.199.181"
+    route_distinguisher: "3222:9196"
+    vrf: "VRF_NAME:9196"
+  - as_path: "3222?"
+    from: "10.244.28.102"
+    network: "10.164.200.168/30"
+    next_hop: "10.164.199.181"
+    route_distinguisher: "3222:9196"
+    vrf: "VRF_NAME:9196"
+  - as_path: "3222?"
+    from: "10.244.28.102"
+    network: "10.164.200.172/30"
+    next_hop: "10.164.199.181"
+    route_distinguisher: "3222:9196"
+    vrf: "VRF_NAME:9196"
+  - as_path: "3222?"
+    from: "local"
+    network: "10.164.200.176/30"
+    next_hop: "10.164.199.181"
+    route_distinguisher: "3222:9196"
+    vrf: "VRF_NAME:9196"
+  - as_path: "3222?"
+    from: "10.244.28.102"
+    network: "10.164.200.180/30"
+    next_hop: "10.164.199.181"
+    route_distinguisher: "3222:9196"
+    vrf: "VRF_NAME:9196"
+  - as_path: "3222?"
+    from: "10.244.28.102"
+    network: "10.164.200.184/30"
+    next_hop: "10.164.199.181"
+    route_distinguisher: "3222:9196"
+    vrf: "VRF_NAME:9196"
+  - as_path: "3222?"
+    from: "local"
+    network: "10.164.201.28/30"
+    next_hop: "10.164.199.181"
+    route_distinguisher: "3222:9196"
+    vrf: "VRF_NAME:9196"
+  - as_path: "3222?"
+    from: "10.244.28.102"
+    network: "10.164.201.32/30"
+    next_hop: "10.164.199.181"
+    route_distinguisher: "3222:9196"
+    vrf: "VRF_NAME:9196"
+  - as_path: "3222?"
+    from: "local"
+    network: "10.164.206.144/30"
+    next_hop: "10.164.199.181"
+    route_distinguisher: "3222:9196"
+    vrf: "VRF_NAME:9196"
+  - as_path: "3222?"
+    from: "10.244.28.102"
+    network: "10.164.207.72/30"
+    next_hop: "10.164.199.181"
+    route_distinguisher: "3222:9196"
+    vrf: "VRF_NAME:9196"
+  - as_path: "3222?"
+    from: "local"
+    network: "10.164.207.80/30"
+    next_hop: "10.164.199.181"
+    route_distinguisher: "3222:9196"
+    vrf: "VRF_NAME:9196"
+  - as_path: "3222 65000 65022i"
+    from: "10.244.28.102"
+    network: "169.247.1.236/32"
+    next_hop: "10.164.199.181"
+    route_distinguisher: "3222:9196"
+    vrf: "VRF_NAME:9196"
+  - as_path: "3222?"
+    from: "10.244.28.102"
+    network: "169.254.29.216/31"
+    next_hop: "10.164.199.181"
+    route_distinguisher: "3222:9196"
+    vrf: "VRF_NAME:9196"
+  - as_path: "3222 65401?"
+    from: "10.244.28.102"
+    network: "172.21.0.0/16"
+    next_hop: "10.164.199.181"
+    route_distinguisher: "3222:9196"
+    vrf: "VRF_NAME:9196"
+  - as_path: "3222 27652?"
+    from: "10.244.28.102"
+    network: "172.197.1.0/24"
+    next_hop: "10.164.199.181"
+    route_distinguisher: "3222:9196"
+    vrf: "VRF_NAME:9196"
+  - as_path: "3222 27652 65510i"
+    from: "10.244.28.102"
+    network: "172.197.2.104/32"
+    next_hop: "10.164.199.181"
+    route_distinguisher: "3222:9196"
+    vrf: "VRF_NAME:9196"
+  - as_path: "3222 65500 65500?"
+    from: "10.244.28.102"
+    network: "10.172.210.0/24"
+    next_hop: "10.164.199.181"
+    route_distinguisher: "3222:9196"
+    vrf: "VRF_NAME:9196"
+  - as_path: "3222 65500 65500?"
+    from: "10.244.28.102"
+    network: "10.172.211.0/26"
+    next_hop: "10.164.199.181"
+    route_distinguisher: "3222:9196"
+    vrf: "VRF_NAME:9196"
+  - as_path: "3222?"
+    from: "10.244.28.102"
+    network: "10.209.18.184/30"
+    next_hop: "10.164.199.181"
+    route_distinguisher: "3222:9196"
+    vrf: "VRF_NAME:9196"
+  - as_path: "3222?"
+    from: "10.244.28.102"
+    network: "10.214.86.80/30"
+    next_hop: "10.164.199.181"
+    route_distinguisher: "3222:9196"
+    vrf: "VRF_NAME:9196"
+  - as_path: "3222 65500 65500?"
+    from: "10.244.28.102"
+    network: "10.255.225.60/32"
+    next_hop: "10.164.199.181"
+    route_distinguisher: "3222:9196"
+    vrf: "VRF_NAME:9196
