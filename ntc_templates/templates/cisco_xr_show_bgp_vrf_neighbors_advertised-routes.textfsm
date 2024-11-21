@@ -7,7 +7,7 @@ Value Filldown VRF (\S+)
 
 Start
   ^\S{3}\s+\S{3}\s+\d{1,2}\s+\d+:\d+:\d+
-  ^Network\S*
+  ^Network\s+Next\s+Hop\s+From\s+AS\s+Path
   ^Route\s+Distinguisher\:\s+${ROUTE_DISTINGUISHER}\s+\(default\s+for\s+vrf\s+${VRF}\)\s*$$ -> ROUTES
   ^. -> Error
 
