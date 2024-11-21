@@ -14,6 +14,6 @@ Start
 ROUTES
   ^${NETWORK}\s+${NEXT_HOP}\s+${FROM}\s+${AS_PATH} -> Record
   ^\s*$$ -> End
-  ^. -> Error
+  #^. -> Error
 
 End
