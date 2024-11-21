@@ -1,0 +1,28 @@
+Value LAG_ID (\d+\(\w\))
+Value PORT_ID (\d+/\d+/\d+)
+Value ADMIN_STATUS (up|down)
+Value ACTIVE_STATUS (active|standby)
+Value OPERATIONAL_STATUS (up|down)
+Value PRIMARY (yes|no)
+Value SUB_GROUP (\d+)
+Value FORCED (-)
+Value PRIORITY (\d+)
+
+Start
+  ^-+ -> LagPort
+  ^=+
+  ^Lag\s+Port\s+States
+  ^LACP\s+Status:
+  ^Lag-id\s+
+  ^\s+Stdby\s*
+  ^\s*$$
+  ^. -> Error
+
+LagPort
+  ^${LAG_ID}\s+${PORT_ID}\s+${ADMIN_STATUS}\s+${ACTIVE_STATUS}\s+${OPERATIONAL_STATUS}\s+${PRIMARY}\s+${SUB_GROUP}\s+${FORCED}\s+${PRIORITY}(\s|$$) -> Record
+  ^\s+${PORT_ID}\s+${ADMIN_STATUS}\s+${ACTIVE_STATUS}\s+${OPERATIONAL_STATUS}\s+${SUB_GROUP}\s+${FORCED}\s+${PRIORITY}(\s|$$) -> Record
+  ^\s*$$
+  ^-+
+  ^=+
+  ^Total
+  ^. -> Error

@@ -11,6 +11,7 @@
 #
 Template, Hostname, Platform, Command
 
+alcatel_aos_show_vlan_port.textfsm, .*, alcatel_aos, sh[[ow]] vl[[an]] (p[[ort]]|m[[embers]])
 alcatel_aos_show_vlan.textfsm, .*, alcatel_aos, show vlan
 
 alcatel_sros_show_router_bgp_routes_vpn-ipv4.textfsm, .*, alcatel_sros, sh[[ow]] router bgp rou[[tes]] vpn-ipv4
@@ -30,6 +31,7 @@ alcatel_sros_show_router_mpls_lsp.textfsm, .*, alcatel_sros, sh[[ow]] router mpl
 alcatel_sros_show_service_id_base.textfsm, .*, alcatel_sros, sh[[ow]] serv[[ice]] id ba[[se]]
 alcatel_sros_show_service_sdp.textfsm, .*, alcatel_sros, sh[[ow]] service sdp
 alcatel_sros_show_system_cpu.textfsm, .*, alcatel_sros, sh[[ow]] system cpu
+alcatel_sros_show_lag_port.textfsm, .*, alcatel_sros, sh[[ow]] la[[g]] (\d+ )?po[[rt]]
 alcatel_sros_oam_mac-ping.textfsm, .*, alcatel_sros, oam mac-pi[[ng]]
 alcatel_sros_show_port.textfsm, .*, alcatel_sros, show port
 alcatel_sros_show_lag.textfsm, .*, alcatel_sros, show lag
@@ -378,12 +380,12 @@ cisco_nxos_show_interface_snmp-ifindex.textfsm, .*, cisco_nxos, sh[[ow]] int[[er
 cisco_nxos_show_forwarding_ipv4_route.textfsm, .*, cisco_nxos, sh[[ow]] fo[[rwarding]] ipv4 ro[[ute]]
 cisco_nxos_show_interface_description.textfsm, .*, cisco_nxos, sh[[ow]] int[[erface]] desc[[ription]]
 cisco_nxos_show_interface_transceiver.textfsm, .*, cisco_nxos, sh[[ow]] int[[erface]] tra[[nsceiver]]
-cisco_nxos_show_interfaces_switchport.textfsm, .*, cisco_nxos, sh[[ow]] int[[erfaces]] sw[[itchport]]
 cisco_nxos_show_ip_arp_detail_vrf_all.textfsm, .*, cisco_nxos, sh[[ow]] i[[p]] a[[rp]] det[[ail]] vrf all
 cisco_nxos_show_ip_dhcp_relay_address.textfsm, .*, cisco_nxos, sh[[ow]] ip dh[[cp]] r[[elay]] a[[ddress]]
 cisco_nxos_show_lldp_neighbors_detail.textfsm, .*, cisco_nxos, sh[[ow]] ll[[dp]] nei[[ghbors]] d[[etail]]
 cisco_nxos_show_cdp_neighbors_detail.textfsm, .*, cisco_nxos, sh[[ow]] c[[dp]] neig[[hbors]] det[[ail]]
 cisco_nxos_show_forwarding_adjacency.textfsm, .*, cisco_nxos, sh[[ow]] fo[[rwarding]] (?:ipv4 )?ad[[jacency]]
+cisco_nxos_show_interface_switchport.textfsm, .*, cisco_nxos, sh[[ow]] int[[erface]](\s+.+)? sw[[itchport]]
 cisco_nxos_show_ip_interface_vrf_all.textfsm, .*, cisco_nxos, sh[[ow]] ip interf[[ace]] v[[rf]] a[[ll]]
 cisco_nxos_show_ipv6_interface_brief.textfsm, .*, cisco_nxos, sh[[ow]] ipv[[6]] interf[[ace]] b[[rief]]
 cisco_nxos_show_port-channel_summary.textfsm, .*, cisco_nxos, sh[[ow]] po[[rt-channel]] sum[[mary]]
@@ -586,6 +588,7 @@ extreme_exos_show_ipconfig.textfsm, .*, extreme_exos, show ipconfig
 extreme_exos_show_sharing.textfsm, .*, extreme_exos, show sharing
 extreme_exos_show_iparp.textfsm, .*, extreme_exos, show iparp
 
+extreme_slxos_show_ip_interface_brief.textfsm, .*, extreme_slxos, sh[[ow]] ip int[[erface]] br[[ief]]
 extreme_slxos_show_clock.textfsm, .*, extreme_slxos, show clock
 
 fortinet_diagnose_lldprx_port_neighbor_details_port-name.textfsm, .*, fortinet, d[[iagnose]] lldpr[[x]] p[[ort]] n[[eighbor]] d[[etails]] (\S+)
