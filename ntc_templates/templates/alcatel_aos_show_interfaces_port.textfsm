@@ -1,0 +1,16 @@
+Value PORT ((\d+\/?)+)
+Value WTR_RUNNING (\#?)
+Value PERMANENT_SHUTDOWN (\*?)
+Value ADMIN_STATUS (\S+)
+Value LINK_STATUS (\S+)
+Value VIOLATIONS (\S+)
+Value RECOVERY_TIME (\d+)
+Value RECOVERY_MAX (\d+)
+Value WTR (\d+)
+Value ALIAS (\S+)
+
+Start
+  ^\s*[-+]+\s*$$
+  ^\s*${WTR_RUNNING}${PERMANENT_SHUTDOWN}${PORT}\s+${ADMIN_STATUS}\s+${LINK_STATUS}\s+${VIOLATIONS}\s+${RECOVERY_TIME}\s+${RECOVERY_MAX}\s+${WTR}\s+${ALIAS}\s*$$ -> Record
+  ^\s*
+  ^.*$$ -> Error
