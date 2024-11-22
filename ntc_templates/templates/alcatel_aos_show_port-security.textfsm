@@ -19,5 +19,6 @@ Start
   ^\s*Violation\s*:\s*${VIOLATION_TYPE},$$
   ^\s*Violating\s*MAC\s*:\s*${VIOLATION_MAC}\s*$$
   ^\s*Pkt-Relay\s*:\s*${PKT_RELAY}$$ -> Record
+  ^\s*
   ^\s*$$
   ^.*$$ -> Error
