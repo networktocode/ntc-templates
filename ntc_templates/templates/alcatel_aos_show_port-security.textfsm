@@ -10,7 +10,7 @@ Value PKT_RELAY (\S+)
 
 
 Start
-  ^\s*Port:\s*${PORT}$$
+  ^\s*Port:\s*${PORT}\s*$$
   ^\s*Admin-State\s*:\s*${ADMIN_STATE},$$
   ^\s*Operation\s*Mode\s*:\s*${OPERATION_MODE},$$
   ^\s*Max\s*MAC\s*bridged\s*:\s*${MAX_MAC_BRIDGED},$$
