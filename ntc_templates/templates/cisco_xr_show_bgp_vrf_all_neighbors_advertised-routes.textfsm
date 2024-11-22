@@ -1,4 +1,5 @@
-Value NETWORK (\d+\.\d+\.\d+\.\d+\/\d+)
+Value NETWORK (\d+\.\d+\.\d+\.\d+)
+Value PREFIX_LENGTH (\d+)
 Value NEXT_HOP (\d+\.\d+\.\d+\.\d+)
 Value FROM ((\d+\.\d+\.\d+\.\d+)|\S+)
 Value AS_PATH (.*)
@@ -12,7 +13,7 @@ Start
   ^. -> Error
 
 ROUTES
-  ^${NETWORK}\s+${NEXT_HOP}\s+${FROM}\s+${AS_PATH} -> Record
+  ^${NETWORK}\/${PREFIX_LENGTH}\s+${NEXT_HOP}\s+${FROM}\s+${AS_PATH} -> Record
   ^\s*$$ -> End
   ^. -> Error
 
