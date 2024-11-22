@@ -10,7 +10,7 @@ Value AVAILABLE (\d+)
 Value COMMENTS (.+)
 
 Start
-  ^\s*System:$$
+  ^\s*System:\s*$$
   ^\s*Description:\s*${DESCRIPTION},$$
   ^\s*Object\s*ID:\s*${OBJECT_ID},$$
   ^\s*Up\s*Time:\s*${UPTIME},$$
