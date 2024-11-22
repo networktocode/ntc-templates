@@ -1,0 +1,22 @@
+Value PORT ((\d+\/?)+)
+Value ADMIN_STATUS (\S+)
+Value AUTO_NEGOTIATION (\S+)
+Value DETECTED_SPEED (\d+)
+Value DETECTED_DUPLEX (\S+)
+Value DETECT_HYBRID (\S+)
+Value DETECTED_PAUSE (\S+)
+Value DETECTED_FEC (\S+)
+Value CONFIGURED_SPEED (\S+)
+Value CONFIGURED_DUPLEX (\S+)
+Value CONFIGURED_HYBRID (\S+)
+Value CONFIGURED_PAUSE (\S+)
+Value CONFIGURED_FEC (\S+)
+Value LINK_TRAP (\S+)
+Value EEE (\S+)
+
+Start
+  ^\s*[-+]+\s*$$
+  ^\s*${PORT}\s+${AUTO_NEGOTIATION}\s*(-|${DETECTED_SPEED})\s*(-|${DETECTED_DUPLEX})\s*(-|${DETECT_HYBRID})\s*${CONFIGURED_SPEED}\s*${CONFIGURED_DUPLEX}\s*${CONFIGURED_HYBRID}\s*(-|${LINK_TRAP})\s*$$ -> Record
+  ^\s*${PORT}\s+${ADMIN_STATUS}\s+${AUTO_NEGOTIATION}\s+(-|${DETECTED_SPEED})\s+(-|${DETECTED_DUPLEX})\s+(-|${DETECTED_PAUSE})\s+(-|${DETECTED_FEC})\s+${CONFIGURED_SPEED}\s+${CONFIGURED_DUPLEX}\s+(-|${CONFIGURED_PAUSE})\s+${CONFIGURED_FEC}\s+(-|${LINK_TRAP})\s+${EEE}\s*$$ -> Record
+  ^\s*
+  ^.*$$ -> Error
