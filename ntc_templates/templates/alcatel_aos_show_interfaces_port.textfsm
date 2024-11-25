@@ -7,10 +7,10 @@ Value VIOLATIONS (\S+)
 Value RECOVERY_TIME (\d+)
 Value RECOVERY_MAX (\d+)
 Value WTR (\d+)
-Value ALIAS (\S+)
+Value ALIAS (\S.+\S)
 
 Start
   ^\s*[-+]+\s*$$
-  ^\s*${WTR_RUNNING}${PERMANENT_SHUTDOWN}${PORT}\s+${ADMIN_STATUS}\s+${LINK_STATUS}\s+${VIOLATIONS}\s+${RECOVERY_TIME}\s+${RECOVERY_MAX}\s+${WTR}\s+${ALIAS}\s*$$ -> Record
+  ^\s*${WTR_RUNNING}${PERMANENT_SHUTDOWN}${PORT}\s+${ADMIN_STATUS}\s+${LINK_STATUS}\s+${VIOLATIONS}\s+${RECOVERY_TIME}\s+${RECOVERY_MAX}\s+${WTR}\s+(""|"${ALIAS}")\s*$$ -> Record
   ^\s*
   ^.*$$ -> Error
