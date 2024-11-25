@@ -1,0 +1,27 @@
+Value DESCRIPTION (.+)
+Value OBJECT_ID (\S+)
+Value UPTIME (.+)
+Value CONTACT (.+)
+Value NAME (\S+)
+Value LOCATION (.+)
+Value SERVICES (\d+)
+Value DATETIME ((\S+\s*)+)
+Value AVAILABLE (\d+)
+Value COMMENTS (.+)
+
+Start
+  ^\s*System:\s*$$
+  ^\s*Description:\s*${DESCRIPTION},$$
+  ^\s*Object\s*ID:\s*${OBJECT_ID},$$
+  ^\s*Up\s*Time:\s*${UPTIME},$$
+  ^\s*Contact:\s*${CONTACT},$$
+  ^\s*Name:\s*${NAME},$$
+  ^\s*Location:\s*${LOCATION},$$
+  ^\s*Services:\s*${SERVICES},$$
+  ^\s*Date\s*&\s*Time:\s*${DATETIME}$$
+  ^\s*Flash\s*Space:\s*$$
+  ^\s*Primary\s*CMM:$$
+  ^\s*Available\s*\(bytes\):\s*${AVAILABLE},$$
+  ^\s*Comments\s*:\s*${COMMENTS}$$
+  ^\s*$$
+  ^.*$$ -> Error
