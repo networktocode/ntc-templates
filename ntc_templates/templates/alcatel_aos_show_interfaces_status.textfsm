@@ -15,7 +15,7 @@ Value LINK_TRAP (\S+)
 Value EEE (\S+)
 
 Start
-  ^\s*[-+]+\s*$$
+  ^\s*-+\+
   ^\s*${PORT}\s+${AUTO_NEGOTIATION}\s*(-|${DETECTED_SPEED})\s*(-|${DETECTED_DUPLEX})\s*(-|${DETECT_HYBRID})\s*${CONFIGURED_SPEED}\s*${CONFIGURED_DUPLEX}\s*${CONFIGURED_HYBRID}\s*(-|${LINK_TRAP})\s*$$ -> Record
   ^\s*${PORT}\s+${ADMIN_STATUS}\s+${AUTO_NEGOTIATION}\s+(-|${DETECTED_SPEED})\s+(-|${DETECTED_DUPLEX})\s+(-|${DETECTED_PAUSE})\s+(-|${DETECTED_FEC})\s+${CONFIGURED_SPEED}\s+${CONFIGURED_DUPLEX}\s+(-|${CONFIGURED_PAUSE})\s+${CONFIGURED_FEC}\s+(-|${LINK_TRAP})\s+${EEE}\s*$$ -> Record
   ^\s*
