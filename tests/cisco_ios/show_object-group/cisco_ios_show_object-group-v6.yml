@@ -1,138 +1,138 @@
 ---
 parsed_sample:
-  - ANY: ''
-    DESCRIPTION: ''
-    HOST: ''
-    HOST_RANGE_END: ''
-    HOST_RANGE_START: ''
-    ICMP6_TYPE: ''
-    ICMP_TYPE: ''
+  - ANY: ""
+    DESCRIPTION: ""
+    HOST: ""
+    HOST_RANGE_END: ""
+    HOST_RANGE_START: ""
+    ICMP6_TYPE: ""
+    ICMP_TYPE: ""
     NAME: TEST-v6-icmp
-    NESTED_GROUPS: ''
-    NETMASK: ''
-    NETWORK: ''
-    PORT: ''
-    PORT_MATCH: ''
-    PORT_RANGE_END: ''
-    PORT_RANGE_START: ''
-    PROTOCOL: ''
+    NESTED_GROUPS: ""
+    NETMASK: ""
+    NETWORK: ""
+    PORT: ""
+    PORT_MATCH: ""
+    PORT_RANGE_END: ""
+    PORT_RANGE_START: ""
+    PROTOCOL: ""
     TYPE: V6-Service
-  - ANY: ''
-    DESCRIPTION: ''
-    HOST: ''
-    HOST_RANGE_END: ''
-    HOST_RANGE_START: ''
+  - ANY: ""
+    DESCRIPTION: ""
+    HOST: ""
+    HOST_RANGE_END: ""
+    HOST_RANGE_START: ""
     ICMP6_TYPE: echo-request
-    ICMP_TYPE: ''
+    ICMP_TYPE: ""
     NAME: TEST-v6-icmp
-    NESTED_GROUPS: ''
-    NETMASK: ''
-    NETWORK: ''
-    PORT: ''
-    PORT_MATCH: ''
-    PORT_RANGE_END: ''
-    PORT_RANGE_START: ''
-    PROTOCOL: ''
+    NESTED_GROUPS: ""
+    NETMASK: ""
+    NETWORK: ""
+    PORT: ""
+    PORT_MATCH: ""
+    PORT_RANGE_END: ""
+    PORT_RANGE_START: ""
+    PROTOCOL: ""
     TYPE: V6-Service
-  - ANY: ''
-    DESCRIPTION: ''
-    HOST: ''
-    HOST_RANGE_END: ''
-    HOST_RANGE_START: ''
-    ICMP6_TYPE: ''
+  - ANY: ""
+    DESCRIPTION: ""
+    HOST: ""
+    HOST_RANGE_END: ""
+    HOST_RANGE_START: ""
+    ICMP6_TYPE: ""
     ICMP_TYPE: echo-reply
     NAME: TEST-v6-icmp
-    NESTED_GROUPS: ''
-    NETMASK: ''
-    NETWORK: ''
-    PORT: ''
-    PORT_MATCH: ''
-    PORT_RANGE_END: ''
-    PORT_RANGE_START: ''
-    PROTOCOL: ''
+    NESTED_GROUPS: ""
+    NETMASK: ""
+    NETWORK: ""
+    PORT: ""
+    PORT_MATCH: ""
+    PORT_RANGE_END: ""
+    PORT_RANGE_START: ""
+    PROTOCOL: ""
     TYPE: V6-Service
-  - ANY: ''
-    DESCRIPTION: ''
-    HOST: ''
-    HOST_RANGE_END: ''
-    HOST_RANGE_START: ''
-    ICMP6_TYPE: ''
-    ICMP_TYPE: ''
+  - ANY: ""
+    DESCRIPTION: ""
+    HOST: ""
+    HOST_RANGE_END: ""
+    HOST_RANGE_START: ""
+    ICMP6_TYPE: ""
+    ICMP_TYPE: ""
     NAME: TEST-v6-obj
-    NESTED_GROUPS: ''
-    NETMASK: ''
-    NETWORK: ''
-    PORT: ''
-    PORT_MATCH: ''
-    PORT_RANGE_END: ''
-    PORT_RANGE_START: ''
-    PROTOCOL: ''
+    NESTED_GROUPS: ""
+    NETMASK: ""
+    NETWORK: ""
+    PORT: ""
+    PORT_MATCH: ""
+    PORT_RANGE_END: ""
+    PORT_RANGE_START: ""
+    PROTOCOL: ""
     TYPE: V6-Network
-  - ANY: ''
-    DESCRIPTION: ''
+  - ANY: ""
+    DESCRIPTION: ""
     HOST: 2001:DB8::1:1111
-    HOST_RANGE_END: ''
-    HOST_RANGE_START: ''
-    ICMP6_TYPE: ''
-    ICMP_TYPE: ''
+    HOST_RANGE_END: ""
+    HOST_RANGE_START: ""
+    ICMP6_TYPE: ""
+    ICMP_TYPE: ""
     NAME: TEST-v6-obj
-    NESTED_GROUPS: ''
-    NETMASK: ''
-    NETWORK: ''
-    PORT: ''
-    PORT_MATCH: ''
-    PORT_RANGE_END: ''
-    PORT_RANGE_START: ''
-    PROTOCOL: ''
+    NESTED_GROUPS: ""
+    NETMASK: ""
+    NETWORK: ""
+    PORT: ""
+    PORT_MATCH: ""
+    PORT_RANGE_END: ""
+    PORT_RANGE_START: ""
+    PROTOCOL: ""
     TYPE: V6-Network
-  - ANY: ''
-    DESCRIPTION: ''
+  - ANY: ""
+    DESCRIPTION: ""
     HOST: 2001:DB8::2:2222
-    HOST_RANGE_END: ''
-    HOST_RANGE_START: ''
-    ICMP6_TYPE: ''
-    ICMP_TYPE: ''
+    HOST_RANGE_END: ""
+    HOST_RANGE_START: ""
+    ICMP6_TYPE: ""
+    ICMP_TYPE: ""
     NAME: TEST-v6-obj
-    NESTED_GROUPS: ''
-    NETMASK: ''
-    NETWORK: ''
-    PORT: ''
-    PORT_MATCH: ''
-    PORT_RANGE_END: ''
-    PORT_RANGE_START: ''
-    PROTOCOL: ''
+    NESTED_GROUPS: ""
+    NETMASK: ""
+    NETWORK: ""
+    PORT: ""
+    PORT_MATCH: ""
+    PORT_RANGE_END: ""
+    PORT_RANGE_START: ""
+    PROTOCOL: ""
     TYPE: V6-Network
-  - ANY: ''
-    DESCRIPTION: ''
-    HOST: ''
-    HOST_RANGE_END: ''
-    HOST_RANGE_START: ''
-    ICMP6_TYPE: ''
-    ICMP_TYPE: ''
+  - ANY: ""
+    DESCRIPTION: ""
+    HOST: ""
+    HOST_RANGE_END: ""
+    HOST_RANGE_START: ""
+    ICMP6_TYPE: ""
+    ICMP_TYPE: ""
     NAME: TEST-v6-obj
-    NESTED_GROUPS: ''
+    NESTED_GROUPS: ""
     NETMASK: /48
-    NETWORK: '2001:DB8:111:1::'
-    PORT: ''
-    PORT_MATCH: ''
-    PORT_RANGE_END: ''
-    PORT_RANGE_START: ''
-    PROTOCOL: ''
+    NETWORK: "2001:DB8:111:1::"
+    PORT: ""
+    PORT_MATCH: ""
+    PORT_RANGE_END: ""
+    PORT_RANGE_START: ""
+    PROTOCOL: ""
     TYPE: V6-Network
-  - ANY: ''
-    DESCRIPTION: ''
-    HOST: ''
-    HOST_RANGE_END: ''
-    HOST_RANGE_START: ''
-    ICMP6_TYPE: ''
-    ICMP_TYPE: ''
+  - ANY: ""
+    DESCRIPTION: ""
+    HOST: ""
+    HOST_RANGE_END: ""
+    HOST_RANGE_START: ""
+    ICMP6_TYPE: ""
+    ICMP_TYPE: ""
     NAME: TEST-v6-obj
-    NESTED_GROUPS: ''
+    NESTED_GROUPS: ""
     NETMASK: /48
-    NETWORK: '2001:DB8:222:2::'
-    PORT: ''
-    PORT_MATCH: ''
-    PORT_RANGE_END: ''
-    PORT_RANGE_START: ''
-    PROTOCOL: ''
+    NETWORK: "2001:DB8:222:2::"
+    PORT: ""
+    PORT_MATCH: ""
+    PORT_RANGE_END: ""
+    PORT_RANGE_START: ""
+    PROTOCOL: ""
     TYPE: V6-Network
