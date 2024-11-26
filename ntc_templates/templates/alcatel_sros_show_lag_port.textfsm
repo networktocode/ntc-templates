@@ -1,5 +1,5 @@
 Value LAG_ID (\d+\(\w\))
-Value PORT_ID (\d+/\d+/\d+)
+Value PORT_ID (\S+)
 Value ADMIN_STATUS (up|down)
 Value ACTIVE_STATUS (active|standby)
 Value OPERATIONAL_STATUS (up|down)
