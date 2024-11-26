@@ -12,13 +12,13 @@ Start
   ^-+$$
   ^%\s+Neighbor\s+not\s+found$$
   ^Network\s+Next\s+Hop\s+From\s+AS\s+Path$$
-  ^Route\s+Distinguisher\:\s+${ROUTE_DISTINGUISHER}\s+\(default\s+for\s+vrf\s+${VRF}\)\s*$$ -> ROUTES
-  ^Processed\s+
+  ^Route\s+Distinguisher:\s+${ROUTE_DISTINGUISHER}\s+\(default\s+for\s+vrf\s+${VRF}\)\s*$$ -> ROUTES
   ^. -> Error
 
 ROUTES
-  ^${NETWORK}\/${PREFIX_LENGTH}\s+${NEXT_HOP}\s+${FROM}\s+${AS_PATH} -> Record
-  ^\s*$$ -> Start
+  ^${NETWORK}\/${PREFIX_LENGTH}\s+${NEXT_HOP}\s+${FROM}\s+${AS_PATH}$$ -> Record
+  ^\s*$$ -> Continue.Clearall
+  ^Processed\s+ -> Start
   ^. -> Error
 
 End
