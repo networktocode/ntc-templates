@@ -1,0 +1,21 @@
+Value PORT_ID (\S+)
+Value DESCRIPTION (.+)
+
+Start
+  ^=+\s*$$ -> PreHeader
+  ^. -> Error
+
+PreHeader
+  ^\s*$$ -> End
+  ^Port\s+Descriptions\s+on\s+Slot\s+\S+\s*$$ 
+  ^=+\s*$$ -> Header
+
+Header
+  ^Port\s+Id\s+Description\s*$$
+  ^-+\s*$$ -> Port
+  ^. -> Error
+  
+Port
+  ^${PORT_ID}\s+${DESCRIPTION}\s*$$ -> Record
+  ^=+\s*$$ -> PreHeader
+  ^. -> Error
