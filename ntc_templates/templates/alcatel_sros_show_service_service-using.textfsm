@@ -6,9 +6,19 @@ Value CUSTOMER_ID (\d+)
 Value SERVICE_NAME (\S+)
 
 Start
+  ^=+\s*$$
+  ^Services.*$$ -> Header
+  ^. -> Error
+
+Header
+  ^=+\s*$$
   ^ServiceId\s+Type\s+Adm\s+Opr\s+CustomerId\s+Service\s+Name -> Services
+  ^. -> Error
 
 Services
   ^\s*${SERVICE_ID}\s+${TYPE}\s+${ADMIN_STATUS}\s+${OPERATIONAL_STATUS}\s+${CUSTOMER_ID}\s+${SERVICE_NAME}\s*$$ -> Record
   ^-+\s*$$
-  ^Matching Services : \d+\s*$$ -> End
+  ^Matching Services : \d+\s*$$
+  ^-+\s*$$
+  ^=+\s*$$ -> End
+  ^. -> Error
