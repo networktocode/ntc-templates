@@ -9,6 +9,7 @@ PreHeader
   ^\s*$$ -> End
   ^Port\s+Descriptions\s+on\s+Slot\s+\S+\s*$$ 
   ^=+\s*$$ -> Header
+  ^. -> Error
 
 Header
   ^Port\s+Id\s+Description\s*$$
