@@ -14,7 +14,6 @@ Start
   ^\s*Domain\s*Vlan\/SrvcId\[ISId\/vnId\]\s*Mac\s*Address\s*Type\s*Operation\s*Interface\s*$$
   ^\s*${DOMAIN}\s*${VLAN_ID}\s*${MAC}\s*${TYPE}\s*${OPERATION}\s*${INTERFACE}\s*$$ -> Record
   ^\s*Total\s*number\s*of\s*Valid\s*MAC\s*addresses\s*above\s*=\s*\d+\s*$$ -> Record
-  ^Legend
-  ^\s+Mac\s+Address:
+  ^\s*(Legend:\s+)?Mac\s+Address:
   ^\s*$$
   ^.*$$ -> Error
