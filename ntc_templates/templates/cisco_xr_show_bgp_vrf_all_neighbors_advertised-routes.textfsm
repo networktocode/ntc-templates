@@ -17,8 +17,7 @@ Start
 
 ROUTES
   ^${NETWORK}\/${PREFIX_LENGTH}\s+${NEXT_HOP}\s+${FROM}\s+${AS_PATH}$$ -> Record
-  ^\s*$$ -> Continue.Clearall
-  ^Processed\s+ -> Start
+  ^\s*$$
+  ^Processed
   ^. -> Error
 
-End
