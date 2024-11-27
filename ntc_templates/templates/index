@@ -11,8 +11,11 @@
 #
 Template, Hostname, Platform, Command
 
+alcatel_aos_show_mac-address-table.textfsm, .*, alcatel_aos, sh[[ow]] (mac-a[[ddress-table]]|mac-l[[earning]])
 alcatel_aos_show_port-security.textfsm, .*, alcatel_aos, sh[[ow]] port-[[security]]
 alcatel_aos_show_vlan_port.textfsm, .*, alcatel_aos, sh[[ow]] vl[[an]] (p[[ort]]|m[[embers]])
+alcatel_aos_show_chassis.textfsm, .*, alcatel_aos, sh[[ow]] ch[[assis]]
+alcatel_aos_show_system.textfsm, .*, alcatel_aos, sh[[ow]] sy[[stem]]
 alcatel_aos_show_vlan.textfsm, .*, alcatel_aos, show vlan
 
 alcatel_sros_show_router_bgp_routes_vpn-ipv4.textfsm, .*, alcatel_sros, sh[[ow]] router bgp rou[[tes]] vpn-ipv4
