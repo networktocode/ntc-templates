@@ -33,6 +33,7 @@ alcatel_sros_show_service_sap-using.textfsm, .*, alcatel_sros, sh[[ow]] service 
 alcatel_sros_show_service_sdp-using.textfsm, .*, alcatel_sros, sh[[ow]] service sdp-using
 alcatel_sros_show_port_description.textfsm, .*, alcatel_sros, sh[[ow]] port (\S+ )?des[[cription]]
 alcatel_sros_show_router_interface.textfsm, .*, alcatel_sros, sh[[ow]] router (\d+ int[[erface]]|int[[erface]])
+alcatel_sros_show_service_id_0_sap.textfsm, .*, alcatel_sros, sh[[ow]] serv[[ice]] id \d+ sa[[p]]
 alcatel_sros_show_router_mpls_lsp.textfsm, .*, alcatel_sros, sh[[ow]] router mpls lsp
 alcatel_sros_show_service_id_base.textfsm, .*, alcatel_sros, sh[[ow]] serv[[ice]] id ba[[se]]
 alcatel_sros_show_service_sdp.textfsm, .*, alcatel_sros, sh[[ow]] service sdp
