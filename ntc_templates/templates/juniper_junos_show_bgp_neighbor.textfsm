@@ -1,0 +1,81 @@
+Value Required ADDRESS ([^+]+)
+Value ASN (\d+)
+Value LOCAL_ADDRESS ([^+]+)
+Value LOCAL_ASN (\d+)
+Value STATE (\S+)
+Value HOLDTIME (\d+)
+Value LAST_FLAP_EVENT (\S+)
+Value ERROR (\S+)
+Value PEER_ID (\S+)
+Value LOCAL_ID (\S+)
+Value ACTIVE_HOLDTIME (\d+)
+Value INTERFACE (\S+)
+Value INET ([^.]+)
+Value PREFIXES_ACTIVE (\d+)
+Value PREFIXES_RECEIVED (\d+)
+Value PREFIXES_ACCEPTED (\d+)
+Value PREFIXES_SUPPRESSED (\d+)
+Value PREFIXES_ADVERTISED (\d+)
+
+Start
+  ^Peer:\s+${ADDRESS}\+\d+\s+AS\s+${ASN}\s+Local:\s+${LOCAL_ADDRESS}\+\d+\s+AS\s+${LOCAL_ASN}\s*
+  ^Peer:\s+${ADDRESS}\+\d+\s+AS\s+${ASN}\s+Local:\s+${LOCAL_ADDRESS}\s+AS\s+${LOCAL_ASN}\s*
+  ^Peer:\s+${ADDRESS}\s+AS\s+${ASN}\s+Local:\s+${LOCAL_ADDRESS}\+\d+\s+AS\s+${LOCAL_ASN}\s*
+  ^Peer:\s+${ADDRESS}\s+AS\s+${ASN}\s+Local:\s+${LOCAL_ADDRESS}\s+AS\s+${LOCAL_ASN}\s*
+  ^\s*Description:\s+
+  ^\s*Group:\s+
+  ^\s*Forwarding routing-instance:\s+
+  ^\s*Type:\s+\S+\s+State:\s+${STATE}\s+Flags:\s+\S+
+  ^\s*Type:\s+\S+\s+State:\s+${STATE}\s+\(route reflector client\)Flags:\s+\S+
+  ^\s*Last\s+State:
+  ^\s*Last\s+Error:\s+
+  ^\s*Export:\s+
+  ^\s*Import:\s+
+  ^\s*Options:\s+
+  ^\s*Authentication\s+key\s+is\s+configured\s*
+  ^\s*Address families configured:\s+
+  ^\s*Path-attributes dropped:\s+
+  ^\s*Local Address:\s+\S+\s+Holdtime:\s+${HOLDTIME}\s+Preference:\s+
+  ^\s*Holdtime:\s+${HOLDTIME}\s+Preference:\s+
+  ^\s*Graceful Shutdown Receiver local-preference:\s+
+  ^\s*Receive Bufsize: \d+ Send Bufsize: \d+\s*
+  ^\s*Peer End of Rib received\s+
+  ^\s*Outbound Timer:\s+
+  ^\s*MED tracks IGP metric\s*
+  ^\s*Number of flaps:\s+
+  ^\s*Receive eBGP Origin Validation community:\s+
+  ^\s*Threads related state:\s*
+  ^\s*Internal State:\s*
+  ^\s*Peer UP acknowledgement received from Update Thread\s*
+  ^\s*Malformed attributes\s+log interval:\s+
+  ^\s*Last flap event:\s+${LAST_FLAP_EVENT}\s+
+  ^\s*Error:\s+${ERROR}\s+
+  ^\s*Peer\s+ID:\s+${PEER_ID}\s+Local\s+ID:\s+${LOCAL_ID}\s+Active\s+Holdtime:\s+${ACTIVE_HOLDTIME}\s*
+  ^\s*Keepalive Interval:\s+
+  ^\s*I/O Session Thread:\s+
+  ^\s*BFD:\s+
+  ^\s*Local Interface:\s+${INTERFACE}\s+
+  ^\s*(?:NLRI|NLRI's)\s+
+  ^\s*Peer (?:does not support|supports)\s+
+  ^\s*Stale routes from peer are kept for:\s+
+  ^\s*Restart flag received from the peer:\s+
+  ^\s*Restart time requested by this peer:\s+
+  ^\s*NLRI\(s\)\s+enabled\s+for\s+color\s+nexthop\s+resolution:\s+
+  ^\s*Table\s+${INET}.0\s+Bit:\s+\d+\s*
+  ^\s*Table
+  ^\s*RIB State:\s+
+  ^\s*Send state:\s+
+  ^\s*Active\s+prefixes:\s+${PREFIXES_ACTIVE}\s*
+  ^\s*Received\s+prefixes:\s+${PREFIXES_RECEIVED}\s*
+  ^\s*Accepted\s+prefixes:\s+${PREFIXES_ACCEPTED}\s*
+  ^\s*Suppressed\s+due\s+to\s+damping:\s+${PREFIXES_SUPPRESSED}\s*
+  ^\s*Advertised\s+prefixes:\s+${PREFIXES_ADVERTISED}\s*
+  ^\s*Last\s+
+  ^\s*Input messages:\s*
+  ^\s*Output\s*
+  ^\s*Trace options:\s*
+  ^\s*Trace file:\s*
+  ^\s*Write\s*buffered\s*
+  ^{master}
+  ^\s*$$ -> Record -> Start
+  ^. -> Error

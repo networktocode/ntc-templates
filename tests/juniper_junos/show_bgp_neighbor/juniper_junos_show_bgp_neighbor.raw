@@ -1,0 +1,59 @@
+Peer: 192.168.0.1+179 AS 65000 Local: 192.168.1.1+53626 AS 65000
+  Group: iBGP-gtat             Routing-Instance: master
+  Forwarding routing-instance: master
+  Type: Internal    State: Established  (route reflector client)Flags: <Sync>
+  Last State: OpenConfirm   Last Event: RecvKeepAlive
+  Last Error: None
+  Export: [ filter ] Import: [ deny-all ]
+  Options: <LocalAddress LogUpDown Cluster AddressFamily PeerAS Multipath Refresh Confed>
+  Options: <MtuDiscovery DropPathAttributes>
+  Options: <GracefulShutdownRcv>
+  Address families configured: inet-unicast inet6-unicast
+  Path-attributes dropped:   28
+  Local Address: 192.168.1.1 Holdtime: 90 Preference: 170
+  Graceful Shutdown Receiver local-preference: 0
+  Number of flaps: 0
+  Receive eBGP Origin Validation community: Accept
+  Threads related state:
+    Internal State: Thread sync complete
+    Peer UP acknowledgement received from Update Thread
+  Malformed attributes    log interval: 60   route limit: 1000
+  Peer ID: 1.2.3.4         Local ID: 192.168.1.1       Active Holdtime: 90
+  Keepalive Interval: 30         Group index: 5    Peer index: 0    SNMP index: 13
+  I/O Session Thread: bgp-updio-3 State: Enabled
+  BFD: disabled, down
+  NLRI for restart configured on peer: inet-unicast inet6-unicast
+  NLRI advertised by peer: inet-unicast inet6-unicast
+  NLRI for this session: inet-unicast inet6-unicast
+  Peer does not support Refresh capability
+  Stale routes from peer are kept for: 300
+  Peer does not support Restarter functionality
+  NLRI of all end-of-rib markers sent: inet-unicast inet6-unicast
+  Peer does not support Receiver functionality
+  Peer does not support LLGR Restarter or Receiver functionality
+  Peer supports 4 byte AS extension (peer-as 65000)
+  NLRI's for which peer can receive multiple paths: inet-unicast inet6-unicast
+  NLRI(s) enabled for color nexthop resolution: inet-unicast inet6-unicast
+  Table inet.0 Bit: 20003
+    RIB State: BGP restart is complete
+    Send state: in sync
+    Active prefixes:              0
+    Received prefixes:            0
+    Accepted prefixes:            0
+    Suppressed due to damping:    0
+    Advertised prefixes:          1075542
+  Table inet6.0 Bit: 30003
+    RIB State: BGP restart is complete
+    Send state: in sync
+    Active prefixes:              0
+    Received prefixes:            0
+    Accepted prefixes:            0
+    Suppressed due to damping:    0
+    Advertised prefixes:          226497
+  Last traffic (seconds): Received 41   Sent 0    Checked 3533360
+  Input messages:  Total 76814	Updates 0	Refreshes 0	Octets 1459428
+  Output messages: Total 207466114	Updates 207466117	Refreshes 0	Octets 3914928611
+  Output Queue[1]: 0            (inet.0, inet-unicast)
+  Output Queue[1]: 0            (inet.0, inet-unicast) (Main/Shards)
+  Output Queue[2]: 0            (inet6.0, inet6-unicast)
+  Output Queue[2]: 0            (inet6.0, inet6-unicast) (Main/Shards)
