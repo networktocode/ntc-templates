@@ -1,0 +1,13 @@
+Value Filldown NODE (\S+)
+Value DRIVE (\S+)
+Value SIZE (\S+)
+Value USED (\S+)
+Value PERCENT (\d+%)
+Value AVAIL (\S+)
+
+Start
+ ^Media Info for Location: ${NODE} -> Continue
+ ^Partition\s+Size\s+Used\s+Percent\s+Avail
+  ^--------------------------------------------------------------------
+ ^${DRIVE}:\s+${SIZE}\s+${USED}\s+${PERCENT}\s+${AVAIL} -> Record
+ ^$$ -> Start
