@@ -1,0 +1,13 @@
+Value TABLE ((\S+\s{,1}\S+))
+Value ACTIVE_ROUTES (\d+)
+Value ROUTES (\d+)
+
+Start
+  ^===========
+  ^Route\s*Table\s*Summary
+  ^===========
+  ^\s*Active\s*Available\s*
+  ^-----------
+  ^${TABLE}\s*${ACTIVE_ROUTES}\s*${ROUTES} -> Record
+
+EOF
