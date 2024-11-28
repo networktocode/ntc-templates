@@ -19,8 +19,8 @@ Start
   ^. -> Error
 
 LagPort
-  ^${LAG_ID}\s+${PORT_ID}\s+${ADMIN_STATUS}\s+${ACTIVE_STATUS}\s+${OPERATIONAL_STATUS}\s+${PRIMARY}\s+${SUB_GROUP}\s+${FORCED}\s+${PRIORITY}(\s|$$) -> Record
-  ^\s+${PORT_ID}\s+${ADMIN_STATUS}\s+${ACTIVE_STATUS}\s+${OPERATIONAL_STATUS}\s+${SUB_GROUP}\s+${FORCED}\s+${PRIORITY}(\s|$$) -> Record
+  ^${LAG_ID}\s+${PORT_ID}\s+${ADMIN_STATUS}\s+${ACTIVE_STATUS}\s+${OPERATIONAL_STATUS}\s+${PRIMARY}\s+${SUB_GROUP}\s+${FORCED}\s+${PRIORITY}\s*$$ -> Record
+  ^\s+${PORT_ID}\s+${ADMIN_STATUS}\s+${ACTIVE_STATUS}\s+${OPERATIONAL_STATUS}\s+${SUB_GROUP}\s+${FORCED}\s+${PRIORITY}\s*$$ -> Record
   ^\s*$$
   ^-+
   ^=+
