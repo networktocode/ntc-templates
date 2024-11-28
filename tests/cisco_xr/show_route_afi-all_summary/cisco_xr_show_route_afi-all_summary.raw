@@ -1,0 +1,30 @@
+IPv4 Unicast:
+-------------
+Route Source                     Routes     Backup     Deleted     Memory(bytes)
+local                            6          0          0           1296
+connected                        5          1          0           1296
+connected ICPE                   1          0          0           216
+application fib_mgr              0          0          0           0
+static                           1          0          0           216
+isis verio                       6344       3          0           1624312
+bgp 65000                        968772     0          4           213526736
+dagr                             0          0          0           0
+vxlan                            0          0          0           0
+Total                            975129     4          4           215154072
+
+
+IPv6 Unicast:
+-------------
+Route Source                     Routes     Backup     Deleted     Memory(bytes)
+local-iid sidmgr                 0          0          0           0
+connected                        3          1          0           864
+connected l2tpv3_xconnect        0          0          0           0
+local                            4          0          0           864
+local-srv6 xtc_srv6              0          0          0           0
+local-srv6 isis-verio            0          0          0           0
+local-srv6 bgp-65000             0          0          0           0
+static                           1          0          0           216
+isis verio                       5624       3          0           1439992
+bgp 65000                        203818     0          12          44934800
+vxlan                            0          0          0           0
+Total                            209450     4          12          46376736

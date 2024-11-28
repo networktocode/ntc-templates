@@ -1,0 +1,15 @@
+Value Filldown ETYPE (IPv\d)
+Value Required ROUTE_SOURCE (\S* \S*)
+Value ROUTES (\d*)
+Value BACKUP (\d*)
+Value DELETED (\d*)
+Value MEMORY (\d*)
+
+Start
+  ^${ETYPE}\s*Unicast:
+  ^-------------
+  ^Route\s*Source\s*
+  ^Total\s*
+  ^\s*${ROUTE_SOURCE}\s*${ROUTES}\s*${BACKUP}\s*${DELETED}\s*${MEMORY} -> Record
+
+EOF
