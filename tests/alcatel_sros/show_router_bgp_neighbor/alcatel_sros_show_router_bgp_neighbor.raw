@@ -1,0 +1,125 @@
+===============================================================================
+BGP Neighbor
+===============================================================================
+-------------------------------------------------------------------------------
+Peer                 : 192.168.0.1
+Description          : description line
+Group                : ibgp
+-------------------------------------------------------------------------------
+Peer AS              : 65000            Peer Port            : 179
+Peer Address         : 192.168.0.1
+Local AS             : 65000            Local Port           : 53472
+Local Address        : 192.168.0.2
+Peer Type            : Internal         Dynamic Peer         : No
+State                : Established      Last State           : Active
+Last Event           : recvOpen
+Last Error           : Cease (Administrative Shutdown)
+AS Override          : Disabled
+Local Family         : IPv4 IPv6
+Remote Family        : IPv4 IPv6
+Hold Time            : 90               Keep Alive           : 30
+Min Hold Time        : 0
+Active Hold Time     : 90               Active Keep Alive    : 30
+Cluster Id           : 192.168.0.3
+Preference           : 170              Num of Update Flaps  : 0
+Input Queue          : 0                Output Queue         : 0
+Input Messages       : 118382           Output Messages      : 16517498
+Input Octets         : 2249298          Output Octets        : 184467440722290*
+Input Updates        : 0                Output Updates       : 16399088
+Input RtRefresh      : 0                Output RtRefresh     : 0
+TTL Security         : Disabled         Min TTL Value        : n/a
+Graceful Restart     : Disabled         Stale Routes Time    : n/a
+Restart Time         : n/a
+Long-Lived GR        : Disabled
+Advertise Inactive   : Disabled         Peer Tracking        : Disabled
+Auth key chain       : n/a
+Disable Cap Nego     : Disabled         Bfd Enabled          : Disabled
+Default Route Tgt    : Disabled
+Aigp Metric          : Disabled         Split Horizon        : Disabled
+Damp Peer Oscillatio*: Disabled         Update Errors        : 0
+GR Notification      : Disabled         Fault Tolerance      : Enabled
+Rem Idle Hold Time   : 00h00m00s
+Next-Hop Unchanged   : n/a
+L2 VPN Cisco Interop : Disabled
+sel-lbl-ipv4-install : Disabled
+Egress Engineering   : Disabled
+SRv6                 : Disabled         SRv6 Route Advertise*: Disabled
+Local Capability     : RtRefresh MPBGP 4byte ASN
+Remote Capability    : MPBGP 4byte ASN
+Local AddPath Capabi*: Send - ipv4 (multipath) ipv6 (multipath)
+                     : Receive - None
+Remote AddPath Capab*: Send - None
+                     : Receive - ipv4 ipv6
+Import Policy        : deny-all
+                     : Default Accept
+Export Policy        : Default Accept
+Origin Validation    : n/a
+Add EBGP Link-Bw     : n/a
+Aggr EBGP Link-Bw    : n/a
+Send EBGP Link-Bw    : n/a
+Accept EBGP Link-Bw  : n/a
+Adv-ipv6-next-hop    : n/a
+Ext-nh-encoding      : n/a
+Remote Ext-nh-encodi*: n/a
+Convergence Sent-EOR : ipv4 ipv6
+Convergence Recv-EOR : n/a
+Exceeded min-wait    : Unknown
+Ebgp Pref            : 170              Ibgp Pref            : 170
+Ebgp Label Pref      : 170              Ibgp Label Pref      : 170
+Tcp Mss              : 1460
+Tcp Rcvd Mss         : 1460
+Received Paths       : 0
+Backup IPv4          : 0                Backup IPv6          : 0
+Backup VPN-IPv4      : 0                Backup VPN-IPv6      : 0
+Backup Label-IPv4    : 0                Backup Label-IPv6    : 0
+-------------------------------------------------------------------------------
+Ingress prefix counters per family.
+IPv4 received        : 0                IPv6 received        : 0
+IPv4 active          : 0                IPv6 active          : 0
+IPv4 suppressed      : 0                IPv6 suppressed      : 0
+IPv4 rejected        : 0                IPv6 rejected        : 0
+VPN-IPv4 received    : 0                VPN-IPv6 received    : 0
+VPN-IPv4 active      : 0                VPN-IPv6 active      : 0
+VPN-IPv4 suppressed  : 0                VPN-IPv6 suppressed  : 0
+VPN-IPv4 rejected    : 0                VPN-IPv6 rejected    : 0
+Label-IPv4 received  : 0                Label-IPv6 received  : 0
+Label-IPv4 active    : 0                Label-IPv6 active    : 0
+Label-IPv4 suppressed: 0                Label-IPv6 suppressed: 0
+Label-IPv4 rejected  : 0                Label-IPv6 rejected  : 0
+MVPN-IPv4 received   : 0                MVPN-IPv6 received   : 0
+MVPN-IPv4 active     : 0                MVPN-IPv6 active     : 0
+MVPN-IPv4 suppressed : 0                MVPN-IPv6 suppressed : 0
+MVPN-IPv4 rejected   : 0                MVPN-IPv6 rejected   : 0
+Mcast-IPv4 received  : 0                Mcast-IPv6 received  : 0
+Mcast-IPv4 active    : 0                Mcast-IPv6 active    : 0
+Mcast-IPv4 suppressed: 0                Mcast-IPv6 suppressed: 0
+Mcast-IPv4 rejected  : 0                Mcast-IPv6 rejected  : 0
+Mc-VPN-IPv4 received : 0                Mc-VPN-IPv6 received : 0
+Mc-VPN-IPv4 active   : 0                Mc-VPN-IPv6 active   : 0
+Mc-VPN-IPv4 suppress*: 0                Mc-VPN-IPv6 suppress*: 0
+Mc-VPN-IPv4 rejected : 0                Mc-VPN-IPv6 rejected : 0
+MDT-Safi received    : 0                RT-Constrnt received : 0
+MDT-Safi active      : 0                RT-Constrnt active   : 0
+MDT-Safi suppressed  : 0                RT-Constrnt suppress*: 0
+MDT-Safi rejected    : 0                RT-Constrnt rejected : 0
+L2-VPN received      : 0                EVPN received        : 0
+L2-VPN active        : 0                EVPN active          : 0
+L2-VPN suppressed    : 0                EVPN suppressed      : 0
+L2-VPN rejected      : 0                EVPN rejected        : 0
+Flow-IPv4 received   : 0                Flow-IPv6 received   : 0
+Flow-IPv4 active     : 0                Flow-IPv6 active     : 0
+Flow-IPv4 suppressed : 0                Flow-IPv6 suppressed : 0
+Flow-IPv4 rejected   : 0                Flow-IPv6 rejected   : 0
+MS-PW received       : 0                BGP-LS received      : 0
+MS-PW active         : 0                BGP-LS active        : 0
+MS-PW suppressed     : 0                BGP-LS suppressed    : 0
+MS-PW rejected       : 0                BGP-LS rejected      : 0
+SRPLCY-IPV4 received : 0                SRPLCY-IPV6 received : 0
+SRPLCY-IPV4 active   : 0                SRPLCY-IPV6 active   : 0
+SRPLCY-IPV4 suppress*: 0                SRPLCY-IPV6 suppress*: 0
+SRPLCY-IPV4 rejected : 0                SRPLCY-IPV6 rejected : 0
+Flow-VPN-IPv4 receiv*: 0                Flow-VPN-IPv6 receiv*: 0
+Flow-VPN-IPv4 active : 0                Flow-VPN-IPv6 active : 0
+Flow-VPN-IPv4 suppre*: 0                Flow-VPN-IPv6 suppre*: 0
+Flow-VPN-IPv4 reject*: 0                Flow-VPN-IPv6 reject*: 0
+* indicates that the corresponding row element may have been truncated.

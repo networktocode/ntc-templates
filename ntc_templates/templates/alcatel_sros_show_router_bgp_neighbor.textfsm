@@ -1,0 +1,108 @@
+Value Required PEER_IP (\d+\.\d+\.\d+\.\d+|[0-9a-f:]*)
+Value DESCRIPTION (\S+)
+Value GROUP (\S+)
+Value Required ASN (\d+\**)
+Value Required LOCAL_AS (\d+\**)
+Value PEER_TYPE (\S+)
+Value STATE (\S+)
+Value LAST_STATE (\S+)
+Value ERROR (\S+)
+Value LOCAL_FAMILY (\S+)
+Value REMOTE_FAMILY (\S+)
+Value HOLDTIME (\d+)
+Value KEEPALIVE (\d+)
+Value IPV4_RECEIVED (\d+)
+Value IPV6_RECEIVED (\d+)
+Value IPV4_ACTIVE (\d+)
+Value IPV6_ACTIVE (\d+)
+Value IPV4_SUPPRESSED (\d+)
+Value IPV6_SUPPRESSED (\d+)
+Value IPV4_REJECTED (\d+)
+Value IPV6_REJECTED (\d+)
+
+Start
+  ^----------- -> Peer
+
+Peer
+  ^Peer\s+:\s+${PEER_IP}(\s|$$)
+  ^Description\s+:\s+${DESCRIPTION}(\s|$$)
+  ^Group\s+:\s+${GROUP}(\s|$$) -> PeerData
+
+PeerData
+  ^-----------
+  ^Peer AS\s+: ${ASN}\s+Peer Port\s+:\s+\d+
+  ^Peer Address\s+:
+  ^Local AS\s+:\s+${LOCAL_AS}\s+Local Port\s+:\s+\d+
+  ^Local Address\s+:
+  ^Peer Type\s+:\s+${PEER_TYPE}\s+Dynamic Peer\s+:
+  ^State\s+:\s+${STATE}\s+Last State\s+:\s+${LAST_STATE}
+  ^Last Event\s+:
+  ^Last Error\s+:\s+${ERROR}\s+
+  ^Local Family\s+:\s+${LOCAL_FAMILY}
+  ^Remote Family\s+:\s+${REMOTE_FAMILY}
+  ^Hold Time\s+:\s+${HOLDTIME}\s+Keep Alive\s+:\s+${KEEPALIVE}
+  ^Min Hold Time        :
+  ^Active Hold Time     :
+  ^Cluster Id           :
+  ^Preference           :
+  ^Input Queue          :
+  ^Input Messages       :
+  ^Input Octets         :
+  ^Input Updates        :
+  ^Input RtRefresh      :
+  ^TTL Security         :
+  ^Graceful Restart     :
+  ^Restart Time         :
+  ^Long-Lived GR        :
+  ^Advertise Inactive   :
+  ^Auth key chain       :
+  ^Disable Cap Nego     :
+  ^Default Route Tgt    :
+  ^Aigp Metric          :
+  ^Damp Peer.*:
+  ^GR Notification      :
+  ^Rem Idle Hold Time   :
+  ^Next-Hop Unchanged   :
+  ^L2 VPN Cisco Interop :
+  ^sel-lbl-ipv4-install :
+  ^Egress Engineering   :
+  ^Local Capability     :
+  ^Remote Capability    :
+  ^                     :
+  ^Routes Resolve.*:
+  ^Local AddPath.*:
+  ^Remote AddPath.*:
+  ^                     :
+  ^Import Policy        :
+  ^                     :
+  ^Export Policy        :
+  ^                     :
+  ^Origin Validation    :
+  ^Add EBGP Link-Bw     :
+  ^Aggr EBGP Link-Bw    :
+  ^Send EBGP Link-Bw    :
+  ^Accept EBGP Link-Bw  :
+  ^Adv-ipv6-next-hop    :
+  ^Ext-nh-encoding      :
+  ^Remote Ext.*:
+  ^Convergence Sent-EOR :
+  ^Convergence Recv-EOR :
+  ^Exceeded min-wait    :
+  ^Ebgp Pref            :
+  ^Ebgp Label Pref      :
+  ^Tcp Mss              :
+  ^Tcp Rcvd Mss         :
+  ^Received Paths       :
+  ^Backup IPv4          :
+  ^Backup VPN-IPv4      :
+  ^Backup Label-IPv4    :
+  ^-----------
+  ^Ingress prefix counters per family.
+  ^IPv4 received\s+:\s+${IPV4_RECEIVED}\s+IPv6 received\s+:\s+${IPV6_RECEIVED}
+  ^IPv4 active\s+:\s+${IPV4_ACTIVE}\s+IPv6 active\s+:\s+${IPV6_ACTIVE}
+  ^IPv4 suppressed\s+:\s+${IPV4_SUPPRESSED}\s+IPv6 suppressed\s+:\s+${IPV6_SUPPRESSED}
+  ^IPv4 rejected\s+:\s+${IPV4_REJECTED}\s+IPv6 rejected\s+:\s+${IPV6_REJECTED} -> Record Peer
+  ^\S+\s+:
+  ^-----------
+  ^\s*$$
+  ^. -> Error
