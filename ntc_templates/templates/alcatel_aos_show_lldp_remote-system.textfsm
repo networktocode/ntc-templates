@@ -1,6 +1,6 @@
 Value Filldown LOCAL_INTERFACE (\S+)
 Value Required CHASSIS_ID (\S+)
-Value Required MAC_PORT (\S+)
+Value Required MAC_ADDRESS (\S+)
 # question mark in many regexes so we don't capture the optional trailing comma
 Value REMOTE_ID (.+?)
 Value CHASSIS_SUBTYPE (.+?)
@@ -28,7 +28,7 @@ Start
   ^.*$$ -> Error
 
 LLDP
-  ^\s*Chassis\s+${CHASSIS_ID},\s+Port\s+${MAC_PORT}:\s*$$
+  ^\s*Chassis\s+${CHASSIS_ID},\s+Port\s+${MAC_ADDRESS}:\s*$$
   ^\s*Remote\s+ID\s+=\s+${REMOTE_ID},?\s*$$
   ^\s*Chassis\s+Subtype\s+=\s+${CHASSIS_SUBTYPE},?\s*$$
   ^\s*Port\s+Subtype\s+=\s+${PORT_SUBTYPE},?\s*$$
