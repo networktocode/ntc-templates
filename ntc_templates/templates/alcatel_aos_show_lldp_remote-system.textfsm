@@ -5,7 +5,7 @@ Value Required MAC_PORT (\S+)
 Value REMOTE_ID (.+?)
 Value CHASSIS_SUBTYPE (.+?)
 Value PORT_SUBTYPE (.+?)
-Value PORT_DESCRIPTION (.+?)
+Value NEIGHBOR_INTERFACE (.+?)
 Value NEIGHBOR_NAME (.+?)
 Value NEIGHBOR_DESCRIPTION (.+?)
 Value CAPABILITIES_SUPPORTED (.+?)
@@ -32,7 +32,7 @@ LLDP
   ^\s*Remote\s+ID\s+=\s+${REMOTE_ID},?\s*$$
   ^\s*Chassis\s+Subtype\s+=\s+${CHASSIS_SUBTYPE},?\s*$$
   ^\s*Port\s+Subtype\s+=\s+${PORT_SUBTYPE},?\s*$$
-  ^\s*Port\s+Description\s+=\s+${PORT_DESCRIPTION},?\s*$$
+  ^\s*Port\s+Description\s+=\s+(\(null\)|${NEIGHBOR_INTERFACE}),?\s*$$
   ^\s*System\s+Name\s+=\s+${NEIGHBOR_NAME},?\s*$$
   ^\s*System\s+Description\s+=\s+(\(null\)|${NEIGHBOR_DESCRIPTION}),?\s*$$
   ^\s*Capabilities\s+Supported\s+=\s+${CAPABILITIES_SUPPORTED},?\s*$$
