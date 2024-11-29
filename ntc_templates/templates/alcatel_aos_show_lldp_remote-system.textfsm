@@ -46,5 +46,7 @@ LLDP
   ^\s*MED\s+Power\s+Priority\s+=\s+${MED_POWER_PRIORITY},?\s*$$
   ^\s*MED\s+Power\s+Value\s+=\s+${MED_POWER_VALUE},?\s*$$
   ^\s*Remote\s+port\s+MAC\/PHY\s+AutoNeg\s+=\s+${REMOTE_PORT_MAC_PHY_AUTONEG},?\s*$$
+  ^\s*Remote\s+port\s+default\s+vlan
   ^\s*Mau\s+Type\s+=\s+${MAU_TYPE},?\s*$$
   ^\s*$$ -> Record Start
+  ^.*$$ -> Error
