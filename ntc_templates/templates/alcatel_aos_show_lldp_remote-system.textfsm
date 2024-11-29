@@ -7,7 +7,7 @@ Value CHASSIS_SUBTYPE (.+?)
 Value PORT_SUBTYPE (.+?)
 Value PORT_DESCRIPTION (.+?)
 Value SYSTEM_NAME (.+?)
-Value SYSTEM_DESCRIPTION (.+?)
+Value NEIGHBOR_DESCRIPTION (.+?)
 Value CAPABILITIES_SUPPORTED (.+?)
 Value CAPABILITIES_ENABLED (.+?)
 Value MANAGEMENT_IP_ADDRESS (.+?)
@@ -34,7 +34,7 @@ LLDP
   ^\s*Port\s+Subtype\s+=\s+${PORT_SUBTYPE},?\s*$$
   ^\s*Port\s+Description\s+=\s+${PORT_DESCRIPTION},?\s*$$
   ^\s*System\s+Name\s+=\s+${SYSTEM_NAME},?\s*$$
-  ^\s*System\s+Description\s+=\s+(\(null\)|${SYSTEM_DESCRIPTION}),?\s*$$
+  ^\s*System\s+Description\s+=\s+(\(null\)|${NEIGHBOR_DESCRIPTION}),?\s*$$
   ^\s*Capabilities\s+Supported\s+=\s+${CAPABILITIES_SUPPORTED},?\s*$$
   ^\s*Capabilities\s+Enabled\s+=\s+${CAPABILITIES_ENABLED},?\s*$$
   ^\s*Management\s+IP\s+Address\s+=\s+${MANAGEMENT_IP_ADDRESS},?\s*$$
