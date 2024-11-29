@@ -1,4 +1,4 @@
-Value Filldown PORT (\S+)
+Value Filldown LOCAL_INTERFACE (\S+)
 Value Required CHASSIS_ID (\S+)
 Value Required MAC_PORT (\S+)
 # question mark in many regexes so we don't capture the optional trailing comma
@@ -22,8 +22,8 @@ Value REMOTE_PORT_MAC_PHY_AUTONEG (.+?)
 Value MAU_TYPE (.+?)
 
 Start
-  ^\s*Remote\s+LLDP\s+nearest-bridge\s+Agents\s+on\s+Local\s+Port\s+${PORT}:\s*$$
-  ^\s*Remote\s+LLDP\s+Agents\s+on\s+Local\s+Slot\/Port\s+${PORT}:\s*$$
+  ^\s*Remote\s+LLDP\s+nearest-bridge\s+Agents\s+on\s+Local\s+Port\s+${LOCAL_INTERFACE}:\s*$$
+  ^\s*Remote\s+LLDP\s+Agents\s+on\s+Local\s+Slot\/Port\s+${LOCAL_INTERFACE}:\s*$$
   ^\s*$$ -> LLDP
   ^.*$$ -> Error
 
