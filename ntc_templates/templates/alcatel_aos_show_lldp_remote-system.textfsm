@@ -10,7 +10,7 @@ Value NEIGHBOR_NAME (.+?)
 Value NEIGHBOR_DESCRIPTION (.+?)
 Value CAPABILITIES_SUPPORTED (.+?)
 Value CAPABILITIES_ENABLED (.+?)
-Value MANAGEMENT_IP_ADDRESS (.+?)
+Value MGMT_ADDRESS (.+?)
 Value MED_DEVICE_TYPE (.+?)
 Value MED_CAPABILITIES (.+?)
 Value MED_EXTENSION_TLVS_PRESENT (.+?)
@@ -37,7 +37,7 @@ LLDP
   ^\s*System\s+Description\s+=\s+(\(null\)|${NEIGHBOR_DESCRIPTION}),?\s*$$
   ^\s*Capabilities\s+Supported\s+=\s+${CAPABILITIES_SUPPORTED},?\s*$$
   ^\s*Capabilities\s+Enabled\s+=\s+${CAPABILITIES_ENABLED},?\s*$$
-  ^\s*Management\s+IP\s+Address\s+=\s+${MANAGEMENT_IP_ADDRESS},?\s*$$
+  ^\s*Management\s+IP\s+Address\s+=\s+${MGMT_ADDRESS},?\s*$$
   ^\s*MED\s+Device\s+Type\s+=\s+${MED_DEVICE_TYPE},?\s*$$
   ^\s*MED\s+Capabilities\s+=\s+${MED_CAPABILITIES},?\s*$$
   ^\s*MED\s+Extension\s+TLVs\s+Present\s+=\s+${MED_EXTENSION_TLVS_PRESENT},?\s*$$
