@@ -1,0 +1,18 @@
+Value Filldown ASN (\d*)
+Value Filldown ROUTER_ID (\d*(\.\d*){3})
+Value Filldown TABLE_NAME (.*)
+Value ROUTE_SRC (.*)
+Value ROUTES (\d*)
+Value ACTIVE_ROUTES (\d*)
+
+Start
+  ^Autonomous\s*system\s*number:\s*${ASN}\s*
+  ^Router\s*ID:\s*${ROUTER_ID}\s*
+  ^RIB\s*Unique\s*destination\s*routes\s*high\s*watermark:\s*
+  ^RIB\s*routes\s*high\s*watermark:\s*
+  ^FIB\s*routes\s*high\s*watermark:\s*
+  ^VRF
+  ^\s*${TABLE_NAME}:\s*\d*\s*destinations,
+  ^\s*${ROUTE_SRC}:\s*${ROUTES}\s*routes,\s*${ACTIVE_ROUTES}\s*active -> Record
+
+EOF

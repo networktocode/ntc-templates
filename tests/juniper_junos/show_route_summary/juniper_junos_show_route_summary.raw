@@ -1,0 +1,53 @@
+Autonomous system number: 65000
+Router ID: 192.168.0.2
+
+Highwater Mark (All time / Time averaged watermark)
+    RIB unique destination routes: 1196271 at 2022-11-28 22:05:49 / 1192453
+    RIB routes                   : 10646951 at 2022-11-26 19:01:43 / 10160015
+    FIB routes                   : 1185172 at 2022-11-29 00:31:07 / 1181634
+    VRF type routing instances   : 1 at 2024-10-18 18:27:34
+
+inet.0: 975277 destinations, 8496059 routes (975273 active, 53520 holddown, 1398650 hidden)
+              Direct:     10 routes,      9 active
+               Local:      8 routes,      8 active
+                 BGP: 8489696 routes, 968911 active
+              Static:      2 routes,      2 active
+               IS-IS:   6342 routes,   6342 active
+                 LDP:      1 routes,      1 active
+
+inet.2: 18 destinations, 18 routes (17 active, 0 holddown, 1 hidden)
+              Direct:     10 routes,      9 active
+               Local:      8 routes,      8 active
+
+inet.3: 260 destinations, 260 routes (260 active, 0 holddown, 0 hidden)
+                 LDP:    260 routes,    260 active
+
+__raass__inet.inet.0: 5231 destinations, 5231 routes (5231 active, 0 holddown, 0 hidden)
+                RaaS:   5231 routes,   5231 active
+
+iso.0: 1 destinations, 1 routes (1 active, 0 holddown, 0 hidden)
+              Direct:      1 routes,      1 active
+
+mpls.0: 268 destinations, 268 routes (268 active, 0 holddown, 0 hidden)
+                MPLS:      6 routes,      6 active
+                 LDP:    262 routes,    262 active
+
+inet6.0: 209659 destinations, 1720743 routes (209657 active, 9307 holddown, 260202 hidden)
+              Direct:      6 routes,      6 active
+               Local:      8 routes,      8 active
+                 BGP: 1715104 routes, 204018 active
+              Static:      2 routes,      2 active
+               IS-IS:   5622 routes,   5622 active
+               INET6:      1 routes,      1 active
+
+inet6.3: 260 destinations, 260 routes (260 active, 0 holddown, 0 hidden)
+                 LDP:    260 routes,    260 active
+
+special-vrf.inet6.0: 1 destinations, 1 routes (1 active, 0 holddown, 0 hidden)
+               INET6:      1 routes,      1 active
+
+__raass__inet6.inet6.0: 3713 destinations, 3713 routes (3713 active, 0 holddown, 0 hidden)
+                RaaS:   3713 routes,   3713 active
+
+l2circuit.0: 1 destinations, 1 routes (1 active, 0 holddown, 0 hidden)
+                 LDP:      1 routes,      1 active
