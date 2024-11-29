@@ -14,9 +14,9 @@ Value MGMT_ADDRESS (.+?)
 Value MED_DEVICE_TYPE (.+?)
 Value MED_CAPABILITIES (.+?)
 Value MED_EXTENSION_TLVS_PRESENT (.+?)
-Value MED_POWER_TYPE (.+?)
-Value MED_POWER_SOURCE (.+?)
-Value MED_POWER_PRIORITY (.+?)
+Value POWER_DEVICE_TYPE (.+?)
+Value POWER_SOURCE (.+?)
+Value POWER_PRIORITY (.+?)
 Value MED_POWER_VALUE (.+?)
 Value REMOTE_PORT_MAC_PHY_AUTONEG (.+?)
 Value MAU_TYPE (.+?)
@@ -41,9 +41,9 @@ LLDP
   ^\s*MED\s+Device\s+Type\s+=\s+${MED_DEVICE_TYPE},?\s*$$
   ^\s*MED\s+Capabilities\s+=\s+${MED_CAPABILITIES},?\s*$$
   ^\s*MED\s+Extension\s+TLVs\s+Present\s+=\s+${MED_EXTENSION_TLVS_PRESENT},?\s*$$
-  ^\s*MED\s+Power\s+Type\s+=\s+${MED_POWER_TYPE},?\s*$$
-  ^\s*MED\s+Power\s+Source\s+=\s+${MED_POWER_SOURCE},?\s*$$
-  ^\s*MED\s+Power\s+Priority\s+=\s+${MED_POWER_PRIORITY},?\s*$$
+  ^\s*MED\s+Power\s+Type\s+=\s+${POWER_DEVICE_TYPE},?\s*$$
+  ^\s*MED\s+Power\s+Source\s+=\s+${POWER_SOURCE},?\s*$$
+  ^\s*MED\s+Power\s+Priority\s+=\s+${POWER_PRIORITY},?\s*$$
   ^\s*MED\s+Power\s+Value\s+=\s+${MED_POWER_VALUE},?\s*$$
   ^\s*Remote\s+port\s+MAC\/PHY\s+AutoNeg\s+=\s+${REMOTE_PORT_MAC_PHY_AUTONEG},?\s*$$
   ^\s*Remote\s+port\s+default\s+vlan
