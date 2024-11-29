@@ -21,29 +21,29 @@ Value REMOTE_PORT_MAC_PHY_AUTONEG (.*?)
 Value MAU_TYPE (.*?)
 
 Start
-  ^\s*Remote\s*LLDP\s*nearest-bridge\s*Agents\s*on\s*Local\s*Port\s*${PORT}:\s*$$
-  ^\s*Remote \s*LLDP\s*Agents\s*on\s*Local\s*Slot\/Port\s*${PORT}:\s*$$
+  ^\s*Remote\s+LLDP\s+nearest-bridge\s+Agents\s+on\s+Local\s+Port\s+${PORT}:\s*$$
+  ^\s*Remote\s+LLDP\s+Agents\s+on\s+Local\s+Slot\/Port\s+${PORT}:\s*$$
   ^\s*$$ -> LLDP
   ^.*?$$ -> Error
 
 LLDP
-  ^\s*Chassis\s*${CHASSIS},\s*Port\s*${MAC_PORT}:\s*$$
-  ^\s*Remote\s*ID\s*=\s*${REMOTE_ID}(?:,)?\s*$$
-  ^\s*Chassis\s*Subtype\s*=\s*${CHASSIS_SUBTYPE}(?:,)?\s*$$
-  ^\s*Port\s*Subtype\s*=\s*${PORT_SUBTYPE}(?:,)?\s*$$
-  ^\s*Port\s*Description\s*=\s*${PORT_DESCRIPTION}(?:,)?\s*$$
-  ^\s*System\s*Name\s*=\s*${SYSTEM_NAME}(?:,)?\s*$$
-  ^\s*System\s*Description\s*=\s*(\(null\)|${SYSTEM_DESCRIPTION})(?:,)?\s*$$
-  ^\s*Capabilities\s*Supported\s*=\s*${CAPABILITIES_SUPPORTED}(?:,)?\s*$$
-  ^\s*Capabilities\s*Enabled\s*=\s*${CAPABILITIES_ENABLED}(?:,)?\s*$$
-  ^\s*Management\s*IP\s*Address\s*=\s*${MANAGEMENT_IP_ADDRESS}(?:,)?\s*$$
-  ^\s*MED\s*Device\s*Type\s*=\s*${MED_DEVICE_TYPE}(?:,)?\s*$$
-  ^\s*MED\s*Capabilities\s*=\s*${MED_CAPABILITIES}(?:,)?\s*$$
-  ^\s*MED\s*Extension\s*TLVs\s*Present\s*=\s*${MED_EXTENSION_TLVS_PRESENT}(?:,)?\s*$$
-  ^\s*MED\s*Power\s*Type\s*=\s*${MED_POWER_TYPE}(?:,)?\s*$$
-  ^\s*MED\s*Power\s*Source\s*=\s*${MED_POWER_SOURCE}(?:,)?\s*$$
-  ^\s*MED\s*Power\s*Priority\s*=\s*${MED_POWER_PRIORITY}(?:,)?\s*$$
-  ^\s*MED\s*Power\s*Value\s*=\s*${MED_POWER_VALUE}(?:,)?\s*$$
-  ^\s*Remote\s*port\s*MAC\/PHY\s*AutoNeg\s*=\s*${REMOTE_PORT_MAC_PHY_AUTONEG}(?:,)?\s*$$
-  ^\s*Mau\s*Type\s*=\s*${MAU_TYPE}(?:,)?\s*$$
+  ^\s*Chassis\s+${CHASSIS},\s+Port\s+${MAC_PORT}:\s*$$
+  ^\s*Remote\s+ID\s+=\s+${REMOTE_ID}(?:,)?\s*$$
+  ^\s*Chassis\s+Subtype\s+=\s+${CHASSIS_SUBTYPE}(?:,)?\s*$$
+  ^\s*Port\s+Subtype\s+=\s+${PORT_SUBTYPE}(?:,)?\s*$$
+  ^\s*Port\s+Description\s+=\s+${PORT_DESCRIPTION}(?:,)?\s*$$
+  ^\s*System\s+Name\s+=\s+${SYSTEM_NAME}(?:,)?\s*$$
+  ^\s*System\s+Description\s+=\s+(\(null\)|${SYSTEM_DESCRIPTION})(?:,)?\s*$$
+  ^\s*Capabilities\s+Supported\s+=\s+${CAPABILITIES_SUPPORTED}(?:,)?\s*$$
+  ^\s*Capabilities\s+Enabled\s+=\s+${CAPABILITIES_ENABLED}(?:,)?\s*$$
+  ^\s*Management\s+IP\s+Address\s+=\s+${MANAGEMENT_IP_ADDRESS}(?:,)?\s*$$
+  ^\s*MED\s+Device\s+Type\s+=\s+${MED_DEVICE_TYPE}(?:,)?\s*$$
+  ^\s*MED\s+Capabilities\s+=\s+${MED_CAPABILITIES}(?:,)?\s*$$
+  ^\s*MED\s+Extension\s+TLVs\s+Present\s+=\s+${MED_EXTENSION_TLVS_PRESENT}(?:,)?\s*$$
+  ^\s*MED\s+Power\s+Type\s+=\s+${MED_POWER_TYPE}(?:,)?\s*$$
+  ^\s*MED\s+Power\s+Source\s+=\s+${MED_POWER_SOURCE}(?:,)?\s*$$
+  ^\s*MED\s+Power\s+Priority\s+=\s+${MED_POWER_PRIORITY}(?:,)?\s*$$
+  ^\s*MED\s+Power\s+Value\s+=\s+${MED_POWER_VALUE}(?:,)?\s*$$
+  ^\s*Remote\s+port\s+MAC\/PHY\s+AutoNeg\s+=\s+${REMOTE_PORT_MAC_PHY_AUTONEG}(?:,)?\s*$$
+  ^\s*Mau\s+Type\s+=\s+${MAU_TYPE}(?:,)?\s*$$
   ^\s*$$ -> Record Start
