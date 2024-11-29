@@ -24,7 +24,7 @@ Start
   ^\s*Remote\s+LLDP\s+nearest-bridge\s+Agents\s+on\s+Local\s+Port\s+${PORT}:\s*$$
   ^\s*Remote\s+LLDP\s+Agents\s+on\s+Local\s+Slot\/Port\s+${PORT}:\s*$$
   ^\s*$$ -> LLDP
-  ^.*?$$ -> Error
+  ^.*$$ -> Error
 
 LLDP
   ^\s*Chassis\s+${CHASSIS},\s+Port\s+${MAC_PORT}:\s*$$
