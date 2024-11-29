@@ -1,0 +1,16 @@
+Value MAX_DB_SIZE (\d*\.\d*\s*\D*)
+Value CURR_DB_SIZE (\d*\.\d*\s*\D*)
+Value ACTUAL_DB_SIZE (\d*\.\d*\s*\D*)
+Value AVAIL_DB_SPACE (\d*\.\d*\s*\D*)
+
+
+Start
+  ^\s*Cannot\s*proceed,\s*database\s*is\s*currently\s*being\s*modified
+  ^\s*Maximum\s*size\s*of\s*the\s*database:\s*${MAX_DB_SIZE}\s*
+  ^\s*Current\s*database\s*size\s*on\s*disk:\s*${CURR_DB_SIZE}\s*
+  ^\s*Actual\s*database\s*usage:\s*${ACTUAL_DB_SIZE}\s*
+  ^\s*Available\s*database\s*space:\s*${AVAIL_DB_SPACE}\s* -> Record
+  ^\s*$$
+  ^{master:\d+}
+  ^{master}
+  ^. -> Error
