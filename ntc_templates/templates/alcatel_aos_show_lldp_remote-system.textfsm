@@ -1,4 +1,4 @@
-Value Filldown PORT ((\d+\/?)+)
+Value Filldown PORT (\S+)
 Value Required CHASSIS (\S+)
 Value Required MAC_PORT (\S+)
 Value REMOTE_ID (.*?)
