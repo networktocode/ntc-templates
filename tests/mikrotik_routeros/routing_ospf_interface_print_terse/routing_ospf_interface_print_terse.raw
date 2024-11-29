@@ -1,0 +1,3 @@
+ 0  P interface=all cost=10 priority=1 authentication=none authentication-key=foo authentication-key-id=1 network-type=broadcast instance-id=0 retransmit-interval=5s transmit-delay=1s hello-interval=10s dead-interval=40s use-bfd=no
+ 1    comment=ospf comment interface=vlan906@bond1 cost=10 priority=1 authentication=none authentication-key="bar" authentication-key-id=1 network-type=broadcast instance-id=0 retransmit-interval=5s transmit-delay=1s hello-interval=10s dead-interval=40s use-bfd=no
+ 2 DP interface=lo0 cost=10 priority=1 authentication=none authentication-key="" authentication-key-id=1 network-type=broadcast instance-id=0 retransmit-interval=5s transmit-delay=1s hello-interval=10s dead-interval=40s use-bfd=no

@@ -1,0 +1,14 @@
+---
+parsed_sample:
+  - cost: "10"
+    dynamic: ""
+    interface: "all"
+    passive: "P"
+  - cost: "10"
+    dynamic: ""
+    interface: "vlan906@bond1"
+    passive: ""
+  - cost: "10"
+    dynamic: "D"
+    interface: "lo0"
+    passive: "P"

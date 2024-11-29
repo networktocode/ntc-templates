@@ -1,0 +1,18 @@
+Value PORT_ID (\S+)
+Value SERVICE_ID (\d+)
+Value INGRESS_QOS (\d+)
+Value INGRESS_FILTER (\S+)
+Value EGRESS_QOS (\d+)
+Value EGRESS_FILTER (\S+)
+Value ADMIN_STATUS (\S+)
+Value OPERATIONAL_STATUS (\S+)
+
+Start
+  ^=+\s*$$
+  ^SAP\(Summary\), Service \d+\s*$$
+  ^PortId\s+SvcId\s+Ing\.\s+Ing\.\s+Egr\.\s+Egr\.\s+Adm\s+Opr\s*$$
+  ^\s+QoS\s+Fltr\s+QoS\s+Fltr\s*$$
+  ^${PORT_ID}\s+${SERVICE_ID}\s+${INGRESS_QOS}\s+${INGRESS_FILTER}\s+${EGRESS_QOS}\s+${EGRESS_FILTER}\s+${ADMIN_STATUS}\s+${OPERATIONAL_STATUS}\s*$$ -> Record
+  ^-+\s*$$
+  ^Number\s+of\s+SAPs\s+:\s+\d+\s*$$
+  ^. -> Error
