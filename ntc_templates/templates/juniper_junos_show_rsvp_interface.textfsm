@@ -1,0 +1,19 @@
+Value Required INTERFACE (\S+\d\.\d*)
+Value STATE (\S+)
+Value ACTIVE_RESV (\d+)
+Value SUBSCRIPTION (\d+)
+Value STATIC_BW (\d+\S+)
+Value AVAIL_BW (\d+\S+)
+Value RESERVED_BW (\d+\S+)
+Value HIGHWATER_MARK (\d+\S+)
+
+Start
+  ^Warning:\s*License\s*key\s*missing;\s*requires\s*'rsvp'\s*license
+  ^RSVP\s+interface:\s+
+  ^\s*Active\s*
+  ^\s*Interface\s*
+  ^\s*${INTERFACE}\s*${STATE}\s*${ACTIVE_RESV}\s*${SUBSCRIPTION}%\s*${STATIC_BW}\s*${AVAIL_BW}\s*${RESERVED_BW}\s*${HIGHWATER_MARK}\s* -> Record
+  ^\s*$$
+  ^{master:\d+}
+  ^{master}
+  ^. -> Error
