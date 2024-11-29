@@ -1,0 +1,138 @@
+Warning: License key missing; requires 'rsvp' license
+
+Ingress LSP: 47 sessions
+
+192.168.0.134
+  From: 192.168.0.71, State: Up, ActiveRoute: 0, LSPname: r21.testtx03-a00.testtx03-00, LSPid: 99
+  ActivePath: r21.testtx03-a00.testtx03-00-pri (primary)
+  LSPtype: Static Configured, Penultimate hop popping
+  LoadBalance: Least-fill
+  Follow destination IGP metric
+  Encoding type: Packet, Switching type: Packet, GPID: IPv4
+  LSP Self-ping Status : Enabled
+ *Primary   r21.testtx03-a00.testtx03-00-pri State: Up
+    Priorities: 7 6
+    Bandwidth: 1000bps
+    OptimizeTimer: 1800
+    SmartOptimizeTimer: 180
+          Exclude: na-sa na-eu na-ap
+    Flap Count: 3
+    MBB Count: 3
+    Reoptimization in 252 second(s).
+    Computed ERO (S [L] denotes strict [loose] hops): (CSPF metric: 5)
+ 192.168.3.4 S
+    Received RRO (ProtectionFlag 1=Available 2=InUse 4=B/W 8=Node 10=SoftPreempt 20=Node-ID):
+          192.168.3.4(Label=3)
+   100 Nov 28 23:49:37.775 CSPF: computation result ignored, new path no benefit[1120 times, first Nov  7 02:41:08.965]
+   99 Nov  7 02:15:03.256 Make-before-break: Cleaned up old instance: Adaptive teardown
+   98 Nov  7 02:14:49.881 Make-before-break: Switched to new instance
+   97 Nov  7 02:14:49.880 Self-ping ended successfully
+   96 Nov  7 02:14:49.858 Up
+   95 Nov  7 02:14:49.858 Self-ping started
+   94 Nov  7 02:14:49.858 Self-ping enqueued
+   93 Nov  7 02:14:49.858 Record Route:  192.168.3.4(Label=3)
+   92 Nov  7 02:14:49.854 LSP-ID: 19 created
+   91 Nov  7 02:14:49.854 Originate make-before-break call
+   90 Nov  7 02:14:49.854 CSPF: computation result accepted  192.168.3.4
+   89 Nov  7 02:14:49.853 CSPF: Reroute due to re-optimization
+   88 Nov  7 02:12:34.614 Selected as active path: due to 'primary'
+   87 Nov  7 02:11:33.872 Self-ping ended successfully
+   86 Nov  7 02:11:33.767 Up
+   85 Nov  7 02:11:33.767 Self-ping started
+   84 Nov  7 02:11:33.767 Self-ping enqueued
+   83 Nov  7 02:11:33.767 Record Route:  192.168.2.101(Label=206112) 192.168.3.87(Label=3)
+   82 Nov  7 02:11:30.658 CSPF: computation result accepted  192.168.2.101 192.168.3.87
+   81 Nov  7 02:11:30.657 CSPF: link down/deleted: 192.168.3.5(192.168.0.71:1058)(r21.testtx03.us.bb.00/192.168.0.71)->192.168.3.4(192.168.0.134:71)(a00.testtx03.us.bb.00/192.168
+   80 Nov  7 02:11:30.640 LSP-ID: 18 created
+   79 Nov  7 02:11:30.640 Originate Call
+   78 Nov  7 02:11:30.639 Clear Call
+   77 Nov  7 02:11:30.639 CSPF: computation result accepted  192.168.2.101 192.168.3.87
+   76 Nov  7 02:11:30.638 Deselected as active
+   75 Nov  7 02:11:30.635 192.168.3.5: No Route toward dest
+   74 Nov  7 02:11:30.635 192.168.3.5: Down
+   73 Nov  7 02:02:55.739 CSPF: computation result ignored, new path no benefit[838 times, first Oct 21 17:03:32.897]
+   72 Oct 21 16:37:01.285 Make-before-break: Cleaned up old instance: Adaptive teardown
+   71 Oct 21 16:36:50.266 Make-before-break: Switched to new instance
+   70 Oct 21 16:36:50.265 Self-ping ended successfully
+   69 Oct 21 16:36:49.790 Up
+   68 Oct 21 16:36:49.790 Self-ping started
+   67 Oct 21 16:36:49.790 Self-ping enqueued
+   66 Oct 21 16:36:49.790 Record Route:  192.168.3.4(Label=3)
+   65 Oct 21 16:36:49.786 LSP-ID: 17 created
+   64 Oct 21 16:36:49.786 Originate make-before-break call
+   63 Oct 21 16:36:49.786 CSPF: computation result accepted  192.168.3.4
+   62 Oct 21 16:36:49.786 CSPF: Reroute due to re-optimization
+   61 Oct 21 16:34:43.248 Selected as active path: due to 'primary'
+   60 Oct 21 16:33:43.729 Self-ping ended successfully
+   59 Oct 21 16:33:42.283 Up
+   58 Oct 21 16:33:42.283 Self-ping started
+   57 Oct 21 16:33:42.283 Self-ping enqueued
+   56 Oct 21 16:33:42.283 Record Route:  192.168.2.101(Label=141838) 192.168.3.87(Label=3)
+   55 Oct 21 16:33:42.252 CSPF: computation result accepted  192.168.2.101 192.168.3.87
+   54 Oct 21 16:33:42.252 CSPF: link down/deleted: 192.168.3.5(192.168.0.71:1058)(r21.testtx03.us.bb.00/192.168.0.71)->192.168.3.4(192.168.0.134:71)(a00.testtx03.us.bb.00/192.168
+   53 Oct 21 16:33:42.234 LSP-ID: 16 created
+   52 Oct 21 16:33:42.234 Originate Call
+   51 Oct 21 16:33:42.234 Clear Call
+  Standby   r21.testtx03-a00.testtx03-00-sec State: Up
+    Priorities: 7 6
+    OptimizeTimer: 1800
+    SmartOptimizeTimer: 180
+          Exclude: na-sa na-eu na-ap
+    Flap Count: 4
+    MBB Count: 0
+    Reoptimization in 385 second(s).
+    Computed ERO (S [L] denotes strict [loose] hops): (CSPF metric: 20000)
+ 192.168.2.41 S 192.168.2.39 S
+    Received RRO (ProtectionFlag 1=Available 2=InUse 4=B/W 8=Node 10=SoftPreempt 20=Node-ID):
+          192.168.2.41(Label=17228) 192.168.2.39(Label=3)
+   118 Nov 28 23:50:15.994 CSPF: computation result ignored, new path no benefit[1268 times, first Nov  7 02:15:48.324]
+   117 Nov  7 02:12:34.614 Deselected as active: due to 'primary'
+   116 Nov  7 02:11:30.638 Selected as active path
+   115 Nov  7 02:03:12.912 CSPF: computation result ignored, new path no benefit[947 times, first Oct 21 16:37:47.037]
+   114 Oct 21 16:34:43.248 Deselected as active: due to 'primary'
+   113 Oct 21 16:33:42.233 Selected as active path
+   112 Oct 21 16:19:48.461 CSPF: computation result ignored, new path no benefit[620 times, first Oct 10 18:04:54.273]
+   111 Oct 10 18:03:19.614 Self-ping ended successfully
+   110 Oct 10 18:03:19.506 Up
+   109 Oct 10 18:03:19.506 Self-ping started
+   108 Oct 10 18:03:19.506 Self-ping enqueued
+   107 Oct 10 18:03:19.506 Record Route:  192.168.2.41(Label=17228) 192.168.2.39(Label=3)
+   106 Oct 10 18:03:19.494 LSP-ID: 15 created
+   105 Oct 10 18:03:19.494 Originate Call
+   104 Oct 10 18:03:19.494 Clear Call
+   103 Oct 10 18:03:19.494 CSPF: computation result accepted  192.168.2.41 192.168.2.39
+   102 Oct 10 18:03:19.494 CSPF: Reroute due to re-optimization
+   101 Oct 10 17:36:31.996 Self-ping ended successfully
+   100 Oct 10 17:36:31.309 Up
+   99 Oct 10 17:36:31.309 Self-ping started
+   98 Oct 10 17:36:31.309 Self-ping enqueued
+   97 Oct 10 17:36:31.309 Record Route:  192.168.3.4(Label=3)
+   96 Oct 10 17:36:31.234 LSP-ID: 14 created
+   95 Oct 10 17:36:31.234 Originate Call
+   94 Oct 10 17:36:31.234 CSPF: computation result accepted  192.168.3.4
+   93 Oct 10 17:36:01.395 CSPF failed: no route toward 192.168.0.134[72 times, first Oct 10 17:01:28.922]
+   92 Oct 10 17:01:28.921 Clear Call: CSPF computation failed
+   91 Oct 10 17:00:58.113 LSP-ID: 11 created
+   90 Oct 10 17:00:58.113 Originate Call
+   89 Oct 10 17:00:58.113 Clear Call
+   88 Oct 10 17:00:58.113 CSPF: computation result accepted  192.168.3.4
+   87 Oct 10 17:00:58.112 Deselected as active
+   86 Oct 10 17:00:58.112 192.168.3.87: RSVP System error, subcode 4: protocol shutdown
+   85 Oct 10 17:00:58.112 ResvTear received
+   84 Oct 10 17:00:58.111 192.168.2.100: Down
+   83 Oct 10 17:00:58.111 192.168.3.87: RSVP System error, subcode 4: protocol shutdown
+   82 Oct 10 17:00:58.106 Selected as active path
+   81 Oct 10 17:00:35.576 CSPF: computation result ignored, new path no benefit[1513 times, first Sep 14 09:03:07.237]
+   80 Sep 14 08:56:17.990 Self-ping ended successfully
+   79 Sep 14 08:56:16.552 Up
+   78 Sep 14 08:56:16.552 Self-ping started
+   77 Sep 14 08:56:16.552 Self-ping enqueued
+   76 Sep 14 08:56:16.552 Record Route:  192.168.2.101(Label=299) 192.168.3.87(Label=3)
+   75 Sep 14 08:56:07.619 LSP-ID: 9 created
+   74 Sep 14 08:56:07.619 Originate Call
+   73 Sep 14 08:56:07.619 CSPF: computation result accepted  192.168.2.101 192.168.3.87
+   72 Sep 14 08:55:38.115 CSPF failed: no route toward 192.168.0.134[110 times, first Sep 14 07:54:30.932]
+   71 Sep 14 07:54:30.932 Clear Call: CSPF computation failed
+   70 Sep 14 07:54:30.024 CSPF: link down/deleted: 192.168.3.20(192.168.1.28:13274)(r22.dllstx14.us.bb.00/192.168.1.28)->192.168.3.21(192.168.0.23:1001)(r23.dllstx14.us.bb.00/129
+   69 Sep 14 07:54:28.820 192.168.2.41: Explicit Route: bad strict route[2 times, first Sep 14 07:54:28.820]
+  Created: Thu Aug 15 20:03:47 2024

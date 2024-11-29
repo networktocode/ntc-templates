@@ -1,0 +1,107 @@
+Value INGRESS_LSP_COUNT (\d+)
+Value DST_ADDRESS (\d+.\d+.\d+.\d+)
+Value SRC_ADDRESS (\d+.\d+.\d+.\d+)
+Value LSP_STATE (\S+)
+Value ACTIVE_ROUTES (\d+)
+Value LSP_NAME (\S+)
+Value LSP_ID (\d+)
+Value LSP_ACTIVE_NAME (\S+)
+Value ACTIVE_PATH (\S+)
+Value LSP_TYPE (\S+)
+Value LOAD_BALANCE_TYPE (\S+)
+Value ENCODING_TYPE (\S+)
+Value SWITCHING_TYPE (\S+)
+Value GPID (\S+)
+Value SELF_PING_STATUS (\S+)
+Value PRIMARY_LSP_NAME (\S+)
+Value PRIMARY_LSP_STATE (\S+)
+Value PRIMARY_SETUP_PRIORITY (\d+)
+Value PRIMARY_HOLD_PRIORITY (\d+)
+Value PRIMARY_BW (\d*\S*)
+Value PRIMARY_OPTIMIZE_TIMER (\d+)
+Value PRIMARY_SMART_OPTIMIZE_TIMER (\d+)
+Value PRIMARY_EXCLUDE ((\S+\s*)*)
+Value PRIMARY_FLAP_COUNT (\d+)
+Value PRIMARY_MBB_COUNT (\d+)
+Value PRIMARY_CSPF_METRIC (\d+)
+Value PRIMARY_ERO ((\d+.\d+.\d+.\d+\s+\S\s)+)
+Value PRIMARY_RECEIVED_RRO ((\d+.\d+.\d+.\d+\(Label=\d+\)\s*)+|(\d+.\d+.\d+.\d+\s*)+)
+Value STANDBY_LSP_NAME (\S+)
+Value STANDBY_LSP_STATE (\S+)
+Value STANDBY_SETUP_PRIORITY (\d+)
+Value STANDBY_HOLD_PRIORITY (\d+)
+Value STANDBY_OPTIMIZE_TIMER (\d+)
+Value STANDBY_SMART_OPTIMIZE_TIMER (\d+)
+Value STANDBY_EXCLUDE ((\S*\s*)*)
+Value STANDBY_FLAP_COUNT (\d+)
+Value STANDBY_MBB_COUNT (\d+)
+Value STANDBY_CSPF_METRIC (\d+)
+Value STANDBY_ERO ((\d+.\d+.\d+.\d+\s+\S\s)+)
+Value STANDBY_RECEIVED_RRO ((\d+.\d+.\d+.\d+\(Label=\d+\)\s*)+|(\d+.\d+.\d+.\d+\s*)+)
+Value CREATED_DATE (((\S*\s*)*))
+
+
+Start
+  ^Warning:\s*License\s*key\s*missing;\s*requires\s*'rsvp'\s*license
+  ^Ingress\s*LSP:\s*${INGRESS_LSP_COUNT}\s*sessions\s* -> Begin
+  ^\s*$$
+  ^. -> Error
+
+Begin
+  ^${DST_ADDRESS}\s*
+  ^\s*From:\s*${SRC_ADDRESS},\s*State:\s*${LSP_STATE},\s*ActiveRoute:\s*${ACTIVE_ROUTES},\s*LSPname:\s*${LSP_NAME}
+  ^\s*From:\s*${SRC_ADDRESS},\s*State:\s*${LSP_STATE},\s*ActiveRoute:\s*${ACTIVE_ROUTES},\s*LSPname:\s*${LSP_NAME},\s*LSPid:\s*${LSP_ID}
+  ^\s*Description:.*
+  ^\s*[*]?ActivePath:\s*${LSP_ACTIVE_NAME}\s*\(${ACTIVE_PATH}\)\s*
+  ^\s*[*]?ActivePath:\s*\(none\)\s*
+  ^\s*LSPtype:\s*${LSP_TYPE}\s*
+  ^\s*LoadBalance:\s*${LOAD_BALANCE_TYPE}\s*
+  ^\s*Follow\s*destination\s*IGP\s*metric\s*
+  ^\s*Autobandwidth
+  ^\s*AdjustTimer:
+  ^\s*Max\s*AvgBW\s*util:
+  ^\s*Overflow\s*limit:
+  ^\s*Underflow\s*limit:
+  ^\s*Encoding type:\s*${ENCODING_TYPE},\s*Switching type:\s*${SWITCHING_TYPE}, GPID:\s*${GPID}\s*
+  ^\s*LSP\s*Self-ping\s*Status\s*:\s*${SELF_PING_STATUS}\s*
+  ^\s*\S*Primary\s*${PRIMARY_LSP_NAME}\s*State:\s*${PRIMARY_LSP_STATE}\s*
+  ^\s*Priorities:\s*${PRIMARY_SETUP_PRIORITY}\s*${PRIMARY_HOLD_PRIORITY}\s*
+  ^\s*Bandwidth:\s*${PRIMARY_BW}\s*
+  ^\s*Hoplimit:\s*\d\s*
+  ^\s*OptimizeTimer:\s*${PRIMARY_OPTIMIZE_TIMER}\s*
+  ^\s*SmartOptimizeTimer:\s*${PRIMARY_SMART_OPTIMIZE_TIMER}\s*
+  ^\s*Exclude:\s*${PRIMARY_EXCLUDE}\s*
+  ^\s*Flap\s*Count:\s*${PRIMARY_FLAP_COUNT}\s*
+  ^\s*MBB\s*Count:\s*${PRIMARY_MBB_COUNT}\s*
+  ^\s*Reoptimization.*
+  ^\s*Computed\s*ERO.*CSPF\s*metric:\s*${PRIMARY_CSPF_METRIC}.*\s*
+  ^\s*${PRIMARY_ERO}\s*
+  ^\s*Received\s*RRO.*\s*
+  ^\s*${PRIMARY_RECEIVED_RRO}\s*
+  ^\s*Will\s*be\s*enqueued
+  ^\s*Time\s*remaining\s*before\s*reverting
+  ^\s*\d+\s\S+.* -> Standby_LSP_info
+  ^{master}
+  ^. -> Error
+
+Standby_LSP_info
+  ^\s*[*]?Standby\s*${STANDBY_LSP_NAME}\s*State:\s*${STANDBY_LSP_STATE}\s*
+  ^\s*Priorities:\s*${STANDBY_SETUP_PRIORITY}\s*${STANDBY_HOLD_PRIORITY}\s*
+  ^\s*OptimizeTimer:\s*${STANDBY_OPTIMIZE_TIMER}\s*
+  ^\s*SmartOptimizeTimer:\s*${STANDBY_SMART_OPTIMIZE_TIMER}\s*
+  ^\s*Exclude:\s*${STANDBY_EXCLUDE}\s*
+  ^\s*Flap\s*Count:\s*${STANDBY_FLAP_COUNT}\s*
+  ^\s*MBB\s*Count:\s*${STANDBY_MBB_COUNT}\s*
+  ^\s*Reoptimization.*
+  ^\s*Computed\s*ERO.*CSPF\s*metric:\s*${STANDBY_CSPF_METRIC}.*\s*
+  ^\s*${STANDBY_ERO}\s*
+  ^\s*Received\s*RRO.*\s*
+  ^\s*${STANDBY_RECEIVED_RRO}\s*
+  ^\s*Will\s*be\s*enqueued
+  ^\s*Time\s*remaining\s*before\s*reverting
+  ^\s*\d+\s\S+.*
+  ^\s*Created:\s*${CREATED_DATE}\s* -> Continue.Record
+  ^\s*$$ -> Begin
+  ^.*$$
+  ^{master}
+  ^. -> Error
