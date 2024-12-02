@@ -9,4 +9,6 @@ Value SW_VER (\d+\.\d+\.\d+)
 Start
   ^Switch.*
   ^--.*
-  ^\s${INDEX}\s+${PORTS}\s+${MODEL}\s+${SERIAL}\s+${MAC}\s+${HW_VER}\s+${SW_VER}
+  ^\s*${INDEX}\s+${PORTS}\s+${MODEL}\s+${SERIAL}\s+${MAC}\s+${HARDWARE_VERSION}\s+${SOFTWARE_VERSION}\s*
+  ^\s*$$
+  ^. -> Error
