@@ -24,4 +24,14 @@ Lag-id Port-id        Adm   Act/     Opr   Primary Sub-group      Forced Prio
 52(d)  1/1/18         up    active   down  yes     1              -      32768
 53(d)  1/1/19         up    active   down  yes     1              -      32768
 54(d)  1/1/20         down  active   down  yes     1              -      32768
+115(e) 3/2/2          up    active   up    yes     2              -      32768
+       7/2/3          up    standby  down          1              -      32768
+116(e) esat-1/1/6     up    active   up    yes     1              -      32768
+       esat-2/1/6     up    standby  down          2              -      32768
+120(e) 2/1/13         up    active   up    yes     1              -      32768
+       3/1/4          up    standby  down          2              -      32768
+121(e) 3/2/6          up    standby  down  yes     1              -      32768
+       8/1/5          up    active   up            2              -      32768
+122(e) A/6            up    standby  down  yes     1              -      32768
+       B/5            up    active   up            2              -      32768
 ===============================================================================
