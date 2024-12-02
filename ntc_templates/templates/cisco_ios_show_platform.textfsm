@@ -3,8 +3,8 @@ Value PORTS (\d+)
 Value MODEL (\S+)
 Value SERIAL (\S+)
 Value MAC (\S+)
-Value HW_VER (\S+)
-Value SW_VER (\d+\.\d+\.\d+)
+Value HARDWARE_VERSION (\S+)
+Value SOFTWARE_VERSION (\d+\.\d+\.\d+)
 
 Start
   ^Switch\s+Ports\s+Model\s+Serial\s+No\.\s+MAC\s+address\s+Hw\s+Ver\.\s+Sw\s+Ver\.\s*$$
