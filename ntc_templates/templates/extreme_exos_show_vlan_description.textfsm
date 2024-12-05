@@ -5,7 +5,8 @@ Value DESCRIPTION (.*)
 Start
   ^(\s*=+)+\s*$$
   ^\s*Name\s+VID\s+Description\s*$$ -> VlanTable
-  ^\s*
+  ^\s*-+\s*$$
+  ^\s*$$
   ^. -> Error
 
 VlanTable
@@ -13,5 +14,6 @@ VlanTable
   ^\s*${VLAN_NAME}\s+${VLAN_ID}(?:\s+${DESCRIPTION})?\s*$$ -> Record
   ^\s*>\s+Indicates\s+description\s+string\s+truncated\s+past\s+\d+\s+characters\s*$$
   ^\s*Total\s+number\s+of\s+VLAN\(s\)\s*:\s*\d+\s*$$
-  ^\s*
+  ^\s*-+\s*$$
+  ^\s*$$
   ^. -> Error

@@ -46,5 +46,21 @@ Start
   ^\s*Uplink\s+:\s+${UPLINK_PORTS}\s
   ^\s*Wlan\s+0\s+:\s+${WLAN0}\s
   ^\s*Wlan\s+1\s+:\s+${WLAN1}\s
-  ^\s*
+  ^\s*CPLD\s+Index\s*:
+  ^\s*Local\s*:\s+x\s+Uplink\s*:
+  ^\s*FMAN\s+Freq\s*:
+  ^\s*FPGA\s*:
+  ^\s*Bus\s+Freq\s*:
+  ^\s*FPGA\s+(Index|Ext)\s*:
+  ^\s*M\s+Ext\s*:
+  ^\s*Ram\s+(size|disk)\s*:
+  ^\s*Local\s*:
+  ^\s*PRI\s*:
+  ^\s*PRI\s+Ext\s*:
+  ^\s*Dsp\d+\s*:
+  ^\s*FXS\s*:
+  ^\s*FXS\s+Ext\s*:
+  ^\s*BRI\s*:
+  ^\s*Uplink\s*:
+  ^\s*$$
   ^. -> Error
