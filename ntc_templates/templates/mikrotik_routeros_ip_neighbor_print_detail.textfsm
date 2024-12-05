@@ -37,7 +37,8 @@ Start
   ^.*\s+ipv6=${IPV6} -> Continue
   ^.*\s+interface-name="${INTERFACE_NAME}" -> Continue
   ^.*\s+system-description="${SYSTEM_DESCRIPTION}" -> Continue
+  ^.*\s+system-caps="?${SYSTEM_CAPS}"?\s*$$
   ^.*\s+system-caps="?${SYSTEM_CAPS}"? -> Continue
-  ^.*\s+system-caps-enabled="?${SYSTEM_CAPS_ENABLED}"? -> Continue
-  ^\s*
+  ^.*\s+system-caps-enabled="?${SYSTEM_CAPS_ENABLED}"?
+  ^\s*$$
   ^. -> Error

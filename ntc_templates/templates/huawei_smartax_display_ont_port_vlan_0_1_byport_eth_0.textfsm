@@ -19,8 +19,10 @@ Start
   ^\s*Native\s*VLAN\s*:\s*${NATIVE_VLAN}\s*
   ^\s*Default\s*priority\s*:\s*${DEFAULT_PRIORITY}\s*
   ^\s*Downstream\s*mode\s*:\s*${DOWNSTREAM_MODE}\s*
-  ^\s*Mismatch\s*policy\s*:\s*${MISMATCH_POLICY}\s* 
-  ^\s*
+  ^\s*Mismatch\s*policy\s*:\s*${MISMATCH_POLICY}\s*
+  ^\s*-+\s*$$
+  ^\s*Notes: -> EOF
+  ^\s*$$
   ^. -> Error
 
 EOF
