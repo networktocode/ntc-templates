@@ -1,0 +1,39 @@
+last pid: 24931;  load averages:  0.89,  0.94,  0.81  up 41+06:26:24    00:51:55
+545 threads:   9 running, 481 sleeping, 1 zombie, 54 waiting
+CPU: 14.7% user,  0.0% nice,  4.1% system,  0.2% interrupt, 81.0% idle
+Mem: 3977M Active, 14G Inact, 1815M Wired, 504M Buf, 74G Free
+Swap: 12G Total, 12G Free
+
+  PID USERNAME    PRI NICE   SIZE    RES STATE    C   TIME    WCPU COMMAND
+   11 root        155 ki31     0B   128K CPU7     7 787.8H  98.58% idle{idle: cpu7}
+   11 root        155 ki31     0B   128K CPU0     0 931.9H  98.39% idle{idle: cpu0}
+   11 root        155 ki31     0B   128K CPU2     2 783.0H  96.88% idle{idle: cpu2}
+   11 root        155 ki31     0B   128K RUN      5 787.6H  96.78% idle{idle: cpu5}
+   11 root        155 ki31     0B   128K CPU4     4 786.1H  96.68% idle{idle: cpu4}
+   11 root        155 ki31     0B   128K CPU6     6 787.6H  93.26% idle{idle: cpu6}
+   11 root        155 ki31     0B   128K CPU1     1 785.5H  91.70% idle{idle: cpu1}
+   11 root        155 ki31     0B   128K CPU3     3 785.6H  90.67% idle{idle: cpu3}
+19880 root         25    0   801M    74M select   2 132.6H  15.09% cosd
+19926 root         24    0   735M    27M select   7 113.5H  11.87% snmpd
+19929 root         22    0   805M    86M select   3  81.9H   9.28% mib2d
+19876 root         21    0    14G    13G kqread   3 938.4H   2.69% rpd{rpd}
+19876 root         21    0    14G    13G kqread   3  20.3H   2.69% rpd{junos-bgpshard3}
+19876 root         21    0    14G    13G kqread   4  20.3H   1.76% rpd{junos-bgpshard0}
+19876 root         20    0    14G    13G kqread   0  24.6H   1.46% rpd{junos-bgpshard2}
+19914 root         21    0   839M   118M select   5  18.4H   1.37% jinsightd{jinsightd}
+19876 root         20    0    14G    13G kqread   1  22.2H   1.27% rpd{junos-bgpshard1}
+   12 root        -60    -     0B   864K WAIT     0  69:18   1.17% intr{swi4: clock (0)}
+19315 root         21    0   880M    78M select   6 898:25   0.98% chassisd{chassisd}
+19921 root         20    0   131M    49M select   2 596:38   0.59% na-grpcd{na-grpcd}
+19876 root         20    0    14G    13G kqread   6 489:58   0.59% rpd{bgp-updio-3}
+24926 remote       20    0    95M    25M select   1   0:00   0.59% cli
+   12 root        -92    -     0B   864K WAIT     0 162:55   0.49% intr{irq271: ixlv0:que 0}
+24923 root         22    0   756M    13M select   7   0:00   0.29% sshd
+   12 root        -72    -     0B   864K WAIT     1 417:28   0.20% intr{swi1: netisr 2}
+19352 root         20    0   724M  8544K select   2 106:54   0.20% timingd{ptp_stack}
+24925 remote       20    0   756M    13M select   6   0:00   0.20% sshd
+19858 root        -16    -     0B    16K select   1 184:43   0.10% ppt_11_80000010
+19743 root        -16    -     0B    16K select   7 172:15   0.10% ppt_11_80000013
+21670 root        -16    -     0B    16K select   0 166:12   0.10% ppt_11_80000015
+    2 root        -16    -     0B    16K jfe_jo   2 138:19   0.10% jfe_job_0_0
+24931 root         20    0    14M  3636K CPU5     5   0:00   0.00% top
