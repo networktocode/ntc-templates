@@ -1,0 +1,14 @@
+Flags: * - Adjacencies learnt on non-active FHRP router
+       + - Adjacencies synced via CFSoE
+       # - Adjacencies Throttled for Glean
+
+IP ARP Table for context default
+Total number of entries: 1725
+Address         Age       MAC Address     Interface        Physical Interface
+10.10.10.194   00:03:10  aaaa.bbbb.cccc  Ethernet1/9      Ethernet1/9     
+10.10.10.190   00:03:18  aaaa.bbbb.cccc  Ethernet2/9      Ethernet2/9     
+10.10.10.81    00:02:14  aaaa.bbbb.cccc  Ethernet2/12     Ethernet2/12    
+192.168.1.1     00:02:06  aaaa.bbbb.cccc  Ethernet7/47     Ethernet7/47    
+10.10.11.2      00:03:12  aaaa.bbbb.cccc  Vlan11           port-channel1    *
+10.10.11.20     00:00:18  aaaa.bbbb.cccc  Vlan11           port-channel3    +
+10.10.11.21     00:00:06  aaaa.bbbb.cccc  Vlan11           port-channel3    #

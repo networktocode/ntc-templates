@@ -13,5 +13,5 @@ Start
   ^. -> Error
 
 Data
-  ^${IP_ADDRESS}\s+${AGE}\s+${MAC_ADDRESS}\s+${INTERFACE}\s+${PHYSICAL_INTERFACE}\s*$$ -> Record
+  ^${IP_ADDRESS}\s+${AGE}\s+${MAC_ADDRESS}\s+${INTERFACE}\s+${PHYSICAL_INTERFACE}(?:\s+[#*+])?\s*$$ -> Record
   ^. -> Error
