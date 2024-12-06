@@ -1,0 +1,27 @@
+Value NODE (\D+\d+)
+Value MEMORY_FORMAT (\w)
+Value SWAP_FORMAT (\w)
+Value MEM_ACTIVE (\d*\D*\d*)
+Value MEM_FREE (\d*\D*\d*)
+Value MEM_USED (\d*\D*\d*)
+Value MEM_BUFFER (\d*\D*\d*)
+Value SWAP_TOTAL (\d*\D*\d*)
+Value SWAP_FREE (\d*\D*\d*)
+Value SWAP_USED (\d*\D*\d*)
+Value SWAP_AVAIL (\d*\D*\d*)
+
+Start
+  ^-------------------------------
+  ^node:\s*${NODE}
+  ^-------------------------------
+  ^top\s*
+  ^Tasks:\s*
+  ^\%Cpu
+  ^${MEMORY_FORMAT}iB\s*Mem\s*:\s*${MEM_ACTIVE}\s*total,\s*${MEM_FREE}\s*free,\s*${MEM_USED}\s*used,\s*${MEM_BUFFER}\s*buff/cache\s*
+  ^${SWAP_FORMAT}iB\s*Swap:\s*${SWAP_TOTAL}\s*total,\s*${SWAP_FREE}\s*free,\s*${SWAP_USED}\s*used\.\s*${SWAP_AVAIL}\s*avail\s*Mem\s* -> Record
+  ^\s+\S+
+  ^\s*$$
+  ^{master}
+  ^. -> Error
+
+EOF
