@@ -1,0 +1,14 @@
+Value INDEX (\d+)
+Value PORTS (\d+)
+Value MODEL (\S+)
+Value SERIAL (\S+)
+Value MAC (\S+)
+Value HARDWARE_VERSION (\S+)
+Value SOFTWARE_VERSION (\d+\.\d+\.\d+)
+
+Start
+  ^Switch\s+Ports\s+Model\s+Serial\s+No\.\s+MAC\s+address\s+Hw\s+Ver\.\s+Sw\s+Ver\.\s*$$
+  ^(-+\s*)+$$
+  ^\s*${INDEX}\s+${PORTS}\s+${MODEL}\s+${SERIAL}\s+${MAC}\s+${HARDWARE_VERSION}\s+${SOFTWARE_VERSION}\s* -> Record
+  ^\s*$$
+  ^. -> Error
