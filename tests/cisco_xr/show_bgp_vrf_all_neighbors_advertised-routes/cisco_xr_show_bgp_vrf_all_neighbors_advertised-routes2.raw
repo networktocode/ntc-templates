@@ -1,0 +1,39 @@
+Tue Nov 26 00:00:10.176 BRA
+
+VRF: CITY_GER:7688
+-------------------
+% Neighbor not found
+
+VRF: MARKET_INT_2:4776
+---------------------
+Network            Next Hop        From            AS Path
+Route Distinguisher: 4230:4776 (default for vrf MARKET_INT_2:4776)
+0.0.0.0/0          172.23.33.9     10.43.78.102  4230 65000?
+10.44.97.0/24      172.23.33.9     10.43.78.102  4230 65000?
+10.44.255.184/29   172.23.33.9     10.43.78.102  4230 65000i
+
+Processed 3 prefixes, 3 paths
+
+VRF: NONAMENEWB:7609
+---------------------
+% Neighbor not found
+
+VRF: VRF_CFTV:7129
+----------------------
+Network            Next Hop        From            AS Path
+Route Distinguisher: 4230:7199 (default for vrf VRF_CFTV:7129)
+0.0.0.0/0          172.23.33.9     10.43.78.102  4230 65000?
+10.44.97.0/24      172.23.33.9     10.43.78.102  4230 65000?
+10.44.255.184/29   172.23.33.9     10.43.78.102  4230 65000i
+10.58.0.0/24       172.23.33.9     10.43.78.102  4230 64611i
+10.58.8.0/22       172.23.33.9     10.43.78.102  4230 65000i
+
+Processed 5 prefixes, 5 paths
+
+VRF: VRDUF_ACMEUF:9795
+----------------------
+% Neighbor not found
+
+VRF: VRDUF_VRFCAR:9128
+----------------------
+% Neighbor not found

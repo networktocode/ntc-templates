@@ -1,0 +1,10 @@
+---
+parsed_sample:
+  - port: "1/25"
+    status: "inactive"
+    type: "default"
+    vlan_id: "1"
+  - port: "1/26"
+    status: "forwarding"
+    type: "qtagged"
+    vlan_id: "1"

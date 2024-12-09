@@ -9,13 +9,15 @@ Value BACKPRESSURE (Disabled|Enabled|--)
 Value MDIXMODE (Off|On|--)
 
 Start
-  ^Port\s+Type\s+Duplex\s+Speed\s+Neg\s+ctrl\s+State\s+Pressure\s+Mode -> Begin
+  ^Flow\s+Link\s+Back\s+Mdix\s*$$
+  ^Port\s+Type\s+Duplex\s+Speed\s+Neg\s+ctrl\s+State\s+Pressure\s+Mode\s*$$ -> Begin
+  ^\s*$$
+  ^. -> Error
 
 Begin
-  ^\s+Flow\s+Link\s+Back\s+Mdix
-  ^-+
   ^${PORT}\s+${TYPE}\s+${DUPLEX}\s+${SPEED}\s+${NEG}\s+${FLOWCTRL}\s+${LINKSTATE}\s+${BACKPRESSURE}\s+${MDIXMODE} -> Record
-  ^\s+Flow\s+Link
-  ^Ch\s+Type\s+Duplex\s+Speed\s+Neg\s+control\s+State -> End
-  ^\s*
+  ^-+
+  ^Flow\s+Link\s*$$
+  ^Ch\s+Type\s+Duplex\s+Speed\s+Neg\s+control\s+State -> EOF
+  ^\s*$$
   ^. -> Error

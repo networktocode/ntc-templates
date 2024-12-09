@@ -1,0 +1,11 @@
+Value VLAN_ID (\d+)
+Value PORT ((\d+\/?)+)
+Value TYPE (\S+)
+Value STATUS (\S+)
+
+Start
+  ^\s*vlan\s*port\s*type\s*status\s*$$
+  ^\s*[-+]+\s*$$
+  ^\s*${VLAN_ID}\s*${PORT}\s*${TYPE}\s*${STATUS}\s*$$ -> Record
+  ^\s*$$
+  ^.*$$ -> Error

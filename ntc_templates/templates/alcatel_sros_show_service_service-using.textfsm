@@ -1,0 +1,15 @@
+Value SERVICE_ID (\d+)
+Value TYPE (\S+)
+Value ADMIN_STATUS (\S+)
+Value OPERATIONAL_STATUS (\S+)
+Value CUSTOMER_ID (\d+)
+Value SERVICE_NAME (\S+)
+
+Start
+  ^=+\s*$$
+  ^Services.*$$
+  ^ServiceId\s+Type\s+Adm\s+Opr\s+CustomerId\s+Service\s+Name
+  ^\s*${SERVICE_ID}\s+${TYPE}\s+${ADMIN_STATUS}\s+${OPERATIONAL_STATUS}\s+${CUSTOMER_ID}\s+${SERVICE_NAME}\s*$$ -> Record
+  ^Matching\s+Services\s+:\s+\d+\s*$$
+  ^-+\s*$$
+  ^. -> Error
