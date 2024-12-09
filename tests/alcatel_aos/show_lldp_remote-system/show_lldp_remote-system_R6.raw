@@ -1,0 +1,73 @@
+Remote LLDP Agents on Local Slot/Port 1/1:
+
+    Chassis aa:aa:aa:aa:aa:aa, Port bb:bb:bb:bb:bb:bb:
+      Remote ID                   = 1,
+      Chassis Subtype             = 1 (MAC Address),
+      Port Subtype                = 1 (MAC address),
+      Port Description            = Alcatel-Lucent Enterprise OAW-AP1201H eth0-4094,
+      System Name                 = AP,
+      System Description          = Alcatel-Lucent Enterprise OAW-AP1201H 1.0.0.10,
+      Capabilities Supported      = Bridge WLAN AP Router Station Only,
+      Capabilities Enabled        = Bridge WLAN AP Router,
+      Management IP Address       = 1.1.1.1,
+      MED Device Type             = Network Connectivity,
+      MED Capabilities            = Capabilities | Power via MDI-PD(33),
+      MED Extension TLVs Present  = Network Policy| Inventory,
+      MED Power Type              = PD Device,
+      MED Power Source            = PSE and Local,
+      MED Power Priority          = Low,
+      MED Power Value             = 25.4 W
+
+Remote LLDP Agents on Local Slot/Port 1/2:
+
+    Chassis aa:aa:aa:aa:aa:aa, Port bb:bb:bb:bb:bb:bb:
+      Remote ID                   = 1,
+      Chassis Subtype             = 1 (MAC Address),
+      Port Subtype                = 1 (MAC address),
+      Port Description            = Alcatel-Lucent Enterprise OAW-AP1321 eth1,
+      System Name                 = AP,
+      System Description          = Alcatel-Lucent Enterprise OAW-AP1321 1.0.0.10,
+      Capabilities Supported      = Bridge WLAN AP Router Station Only,
+      Capabilities Enabled        = Bridge WLAN AP Router,
+      Management IP Address       = 1.1.1.1,
+      MED Device Type             = Network Connectivity,
+      MED Capabilities            = Capabilities | Power via MDI-PD(33),
+      MED Extension TLVs Present  = Network Policy| Inventory,
+      MED Power Type              = PD Device,
+      MED Power Source            = PSE and Local,
+      MED Power Priority          = Low,
+      MED Power Value             = 25.4 W,
+      Remote port MAC/PHY AutoNeg = Supported Enabled Capability 0x8336,
+      Mau Type                    = 1000BaseTFD - Four-pair Category 5 UTP full duplex mode
+
+Remote LLDP Agents on Local Slot/Port 1/3:
+
+    Chassis aa:aa:aa:aa:aa:aa, Port bb:bb:bb:bb:bb:bb:
+      Remote ID                   = 1,
+      Chassis Subtype             = 1 (MAC Address),
+      Port Subtype                = 1 (MAC address),
+      Port Description            = Alcatel-Lucent Enterprise OAW-AP1361 eth0,
+      System Name                 = AP,
+      System Description          = Alcatel-Lucent Enterprise OAW-AP1361 1.0.0.10,
+      Capabilities Supported      = Bridge WLAN AP Router Station Only,
+      Capabilities Enabled        = Bridge WLAN AP Router,
+      Management IP Address       = 1.1.1.1,
+      MED Device Type             = Network Connectivity,
+      MED Capabilities            = Capabilities | Power via MDI-PD(33),
+      MED Extension TLVs Present  = Network Policy| Inventory,
+      Remote port MAC/PHY AutoNeg = Supported Enabled Capability 0x8337,
+      Mau Type                    = 1000BaseTFD - Four-pair Category 5 UTP full duplex mode
+
+Remote LLDP Agents on Local Slot/Port 1/4:
+
+    Chassis aa:aa:aa:aa:aa:aa, Port 1001:
+      Remote ID                   = 123,
+      Chassis Subtype             = 1 (MAC Address),
+      Port Subtype                = 1 (Locally assigned),
+      Port Description            = Alcatel-Lucent OS6860 GNI 1/1/1,
+      System Name                 = SW,
+      System Description          = (null),
+      Capabilities Supported      = Bridge Router,
+      Capabilities Enabled        = Bridge Router,
+      Management IP Address       = 1.1.1.1
+
