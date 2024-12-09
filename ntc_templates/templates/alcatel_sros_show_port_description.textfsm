@@ -4,7 +4,7 @@ Value DESCRIPTION (.+)
 Start
   ^=+\s*$$
   ^\s*$$
-  ^Port\s+Descriptions\s+on\s+Slot\s+\S+\s*$$ 
+  ^Port\s+Descriptions\s+on\s\S+\s+\S+\s*$$ 
   ^Port\s+Id\s+Description\s*$$
   ^${PORT_ID}\s+${DESCRIPTION}\s*$$ -> Record
   ^-+\s*$$
