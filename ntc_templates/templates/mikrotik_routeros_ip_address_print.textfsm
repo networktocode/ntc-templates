@@ -7,7 +7,7 @@ Value NETWORK (\S+)
 Value INTERFACE (.*?)
 
 Start
-  ^\s*Flags:\s*(?:X\s*-\s*(DISABLED|disabled),)?\s*(?:I\s*-\s*(INVALID|invalid),)?\s*(?:D\s*-\s*(?:DYNAMIC|dynamic))?\s*
+  ^\s*Flags:
   ^\s*Columns:\s*ADDRESS,\s*NETWORK,\s*INTERFACE\s*$$
   ^\s*#\s+ADDRESS\s+NETWORK\s+INTERFACE\s*$$ -> IPsTable
   ^\s*$$
