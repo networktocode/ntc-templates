@@ -1,0 +1,25 @@
+Value MEM_ACTIVE (\d*\D*)
+Value MEM_INACTIVE (\d*\D*)
+Value MEM_WIRED (\d*\D*)
+Value MEM_BUFFER (\d*\D*)
+Value MEM_FREE (\d*\D*)
+Value SWAP_TOTAL (\d*\D*)
+Value SWAP_FREE (\d*\D*)
+
+
+Start
+ ^\s*last\s*pid
+ ^\s*\d+\s*processes:
+ ^\s*Mem:\s*${MEM_ACTIVE}\s*Active,\s*${MEM_INACTIVE}\s*Inact,\s*${MEM_WIRED}\s*Wired,\s*${MEM_BUFFER}\s*Buf,\s*${MEM_FREE}\s*Free
+ ^\s*Mem:\s*${MEM_ACTIVE}\s*Active,\s*${MEM_INACTIVE}\s*Inact,\s*${MEM_WIRED}\s*Wired,\s*\d*\D*\s*Cache,\s*${MEM_BUFFER}\s*Buf,\s*${MEM_FREE}\s*Free
+ ^\s*Mem:\s*${MEM_ACTIVE}\s*Active,\s*${MEM_INACTIVE}\s*Inact,\s*\d*\D*\s*Laundry,\s*${MEM_WIRED}\s*Wired,\s*${MEM_BUFFER}\s*Buf,\s*${MEM_FREE}\s*Free
+ ^\s*Swap:\s*${SWAP_TOTAL}\s*Total,\s*${SWAP_FREE}\s*Free -> Record
+ ^\s*Swap:\s*${SWAP_TOTAL}\s*Total,\s*\d*\D*\s*Used,\s*${SWAP_FREE}\s*Free -> Record
+ ^\s*Swap:\s*${SWAP_TOTAL}\s*Total,\s*\d*\D*\s*Used,\s*${SWAP_FREE}\s*Free,\s*\d*%\s*Inuse -> Record
+ ^\s*Swap: -> Record
+ ^\s*PID\s*USERNAME\s*PRI\s*NICE\s*SIZE\s*RES\s*STATE\s*C\s*TIME\s*WCPU\s*COMMAND
+ ^\s*
+ ^\s*$$
+ ^. -> Error
+
+EOF
