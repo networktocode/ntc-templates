@@ -13,9 +13,10 @@ Start
   ^\s*-+\+ -> Table
   ^Legends: WTR - Wait To Restore
   ^\s+#
-  ^\s+*
+  ^\s+\*
   ^\s*Slot/\s+Admin\s+Link\s+Violations\s+Recovery\s+Recovery\s+WTR\s+Alias\s*$$
-  ^\s*Port\s+Status\s+Status\s+Time\s+Max\s+(sec)\s*$$
+  ^\s*Port\s+Status\s+Status\s+Time\s+Max\s+\(sec\)\s*$$
+  ^\s*$$
   ^.*$$ -> Error
 
 Table
