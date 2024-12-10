@@ -1,7 +1,7 @@
 Value Required FSP (\w+\/\s\w+\/\w+)
 Value Key ONT_ID (\d+)
 Value SERIAL_NUMBER ([A-Z0-9]{16})
-Value CONTROL_FLAG (active|configuring|)
+Value CONTROL_FLAG (active|deactive|configuring)
 Value RUN_STATE (online|offline)
 Value CONFIG_STATE (normal|mismatch|failing|online|initial)
 Value MATCH_STATE (initial|mismatch|match)
