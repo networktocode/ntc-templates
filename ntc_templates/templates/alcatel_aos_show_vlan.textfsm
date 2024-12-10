@@ -1,18 +1,25 @@
 Value VLAN_ID (\d+)
-Value TYPE (std|vstk|gvrp|ipmv)
-Value ADMIN_STATE (on|off)
-Value OPERATIONAL_STATE (on|off)
-Value SPANNING_TREE_1X1 (on|off)
-Value SPANNING_TREE_FLAT (on|off)
-Value AUTH (on|off)
-Value IP_STATE (on|off)
-Value MBLETAG (on|off)
-Value SOURCE_LEARN (on|off)
-Value VLAN_NAME ((\S+\s*)+\S+)
+Value TYPE (\S+)
+Value ADMIN_STATE (\S+)
+Value OPERATIONAL_STATE (\S+)
+Value SPANNING_TREE_1X1 (\S+)
+Value SPANNING_TREE_FLAT (\S+)
+Value AUTH (\S+)
+Value IP_STATE (\S+)
+Value MBLETAG (\S+)
+Value SOURCE_LEARN (\S+)
+Value MTU (\d+)
+Value VLAN_NAME (\S.+\S)
 
 Start
-  ^\s*${VLAN_ID}\s+${TYPE}\s+${ADMIN_STATE}\s+${OPERATIONAL_STATE}\s+${SPANNING_TREE_1X1}\s+${SPANNING_TREE_FLAT}\s+${AUTH}\s+${IP_STATE}\s+${MBLETAG}\s+${SOURCE_LEARN}\s+${VLAN_NAME}\s*$$ -> Record
+  # R6 Version
   ^\s*stree\s+mble\s+src\s*$$
   ^\s*vlan\s+type\s+admin\s+oper\s+1x1\s+flat\s+auth\s+ip\s+tag\s+lrn\s+name\s*$$
-  ^-----\+-----\+------\+------\+------\+------\+----\+-----\+-----\+------\+----------
+  # R8 Version
+  ^\s*vlan\s+type\s+admin\s+oper\s+ip\s+mtu\s+name\s*$$
+  ^\s*-+
+  # R6
+  ^\s*${VLAN_ID}\s+${TYPE}\s+${ADMIN_STATE}\s+${OPERATIONAL_STATE}\s+${SPANNING_TREE_1X1}\s+${SPANNING_TREE_FLAT}\s+${AUTH}\s+${IP_STATE}\s+${MBLETAG}\s+${SOURCE_LEARN}\s+${VLAN_NAME}\s*$$ -> Record
+  # R8
+  ^\s*${VLAN_ID}\s+${TYPE}\s+${ADMIN_STATE}\s+${OPERATIONAL_STATE}\s+${IP_STATE}\s+${MTU}\s+${VLAN_NAME}\s*$$ -> Record
   ^.*$$ -> Error
