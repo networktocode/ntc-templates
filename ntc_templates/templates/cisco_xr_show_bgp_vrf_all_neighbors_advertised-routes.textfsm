@@ -1,0 +1,26 @@
+Value NETWORK (\d+\.\d+\.\d+\.\d+)
+Value PREFIX_LENGTH (\d+)
+Value NEXT_HOP (\d+\.\d+\.\d+\.\d+)
+Value FROM ((\d+\.\d+\.\d+\.\d+)|\S+)
+Value AS_PATH (.+)
+Value Filldown ROUTE_DISTINGUISHER (\d+:\d+)
+Value Filldown VRF (\S+)
+
+Start
+  ^\S{3}\s+\S{3}\s+\d{1,2}\s+\d+:\d+:\d+
+  ^VRF:\s+\S+:\d+$$
+  ^-+$$
+  ^%\s+Neighbor\s+not\s+found$$
+  ^Network\s+Next\s+Hop\s+From\s+AS\s+Path$$
+  ^Route\s+Distinguisher:\s+${ROUTE_DISTINGUISHER}\s+\(default\s+for\s+vrf\s+${VRF}\)\s*$$ -> ROUTES
+  ^. -> Error
+
+ROUTES
+  ^${NETWORK}\/${PREFIX_LENGTH}\s+${NEXT_HOP}\s+${FROM}\s+${AS_PATH}$$ -> Record
+  ^\s*$$
+  ^s*$$ -> Clearall
+  ^Processed -> Start
+  ^. -> Error
+
+EOF
+

@@ -12,7 +12,7 @@ Value INTERFACE_UP_TIME (.*)
 Value LINK_STATUS_CHANGE (\d+)
 
 Start
-  ^\S+\s+is\s+\S+,\s+line\s+protocol\s+is\s+\S+\s+\S+ -> Continue.Record
+  ^\S+\s+is\s+\S+(\s+\S+)?, -> Continue.Record
   ^${INTERFACE}\s+is\s+${LINK_STATUS},\s+line\s+protocol\s+is\s+${PROTOCOL_STATUS}
   ^\s+Hardware\s+is\s+${HARDWARE_TYPE}(.*address\s+is\s+${MAC_ADDRESS})*(.*bia\s+${BIA})*
   ^\s+Description:\s+"?${DESCRIPTION}"?$$
@@ -20,7 +20,22 @@ Start
   ^\s+(Up|Down)\s+${INTERFACE_UP_TIME}
   ^\s+${LINK_STATUS_CHANGE}\s+link\s+status\s+changes.*
   ^.*MTU\s+${MTU}(.*BW\s+${BANDWIDTH})*
-  ^\s*
+  ^\s+Broadcast\s+address
+  ^\s+Address\s+determined
+  ^\s+\S+(-|\s)duplex,
+  ^\s+Last\s+clearing
+  ^\s+\d+\s+\S+\s+(in|out)put\s+rate
+  ^\s+\d+\s+packets\s+(in|out)put,
+  ^\s+(Sent|Received)\s+\d+\s+broadcasts,
+  ^\s+\d+\s+runts,
+  ^\s+\d+\s+(in|out)put\s+errors,
+  ^\s+\d+\s+PAUSE
+  ^\s+\d+\s+late\s+collision,
+  ^\s+Loopback\s+Mode\s*:
+  ^\s+Active\s+members
+  ^\s+Fallback\s+mode
+  ^\s+IPv6\s+link-local
+  ^\s+.+IPv6\s+global\s+unicast
+  ^\s+[\dA-Fa-f:]+,\s+subnet\s+is
+  ^\s*$$
   ^. -> Error
-
-EOF

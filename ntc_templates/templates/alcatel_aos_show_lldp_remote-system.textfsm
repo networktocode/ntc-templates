@@ -1,0 +1,52 @@
+Value Filldown LOCAL_INTERFACE (\S+)
+Value Required CHASSIS_ID (\S+)
+Value Required MAC_ADDRESS (\S+)
+# question mark in many regexes so we don't capture the optional trailing comma
+Value REMOTE_ID (.+?)
+Value CHASSIS_SUBTYPE (.+?)
+Value PORT_SUBTYPE (.+?)
+Value NEIGHBOR_INTERFACE (.+?)
+Value NEIGHBOR_NAME (.+?)
+Value NEIGHBOR_DESCRIPTION (.+?)
+Value CAPABILITIES_SUPPORTED (.+?)
+Value CAPABILITIES_ENABLED (.+?)
+Value MGMT_ADDRESS (.+?)
+Value MED_DEVICE_TYPE (.+?)
+Value MED_CAPABILITIES (.+?)
+Value MED_EXTENSION_TLVS_PRESENT (.+?)
+Value POWER_DEVICE_TYPE (.+?)
+Value POWER_SOURCE (.+?)
+Value POWER_PRIORITY (.+?)
+Value POWER_REQUESTED (.+?)
+Value REMOTE_PORT_MAC_PHY_AUTONEG (.+?)
+Value MAU_TYPE (.+?)
+
+Start
+  ^\s*Remote\s+LLDP\s+nearest-bridge\s+Agents\s+on\s+Local\s+Port\s+${LOCAL_INTERFACE}:\s*$$
+  ^\s*Remote\s+LLDP\s+Agents\s+on\s+Local\s+Slot\/Port\s+${LOCAL_INTERFACE}:\s*$$
+  ^\s*$$ -> LLDP
+  ^.*$$ -> Error
+
+LLDP
+  ^\s*Chassis\s+${CHASSIS_ID},\s+Port\s+${MAC_ADDRESS}:\s*$$
+  ^\s*Remote\s+ID\s+=\s+${REMOTE_ID},?\s*$$
+  ^\s*Chassis\s+Subtype\s+=\s+${CHASSIS_SUBTYPE},?\s*$$
+  ^\s*Port\s+Subtype\s+=\s+${PORT_SUBTYPE},?\s*$$
+  ^\s*Port\s+Description\s+=\s+(\(null\)|${NEIGHBOR_INTERFACE}),?\s*$$
+  ^\s*System\s+Name\s+=\s+${NEIGHBOR_NAME},?\s*$$
+  ^\s*System\s+Description\s+=\s+(\(null\)|${NEIGHBOR_DESCRIPTION}),?\s*$$
+  ^\s*Capabilities\s+Supported\s+=\s+${CAPABILITIES_SUPPORTED},?\s*$$
+  ^\s*Capabilities\s+Enabled\s+=\s+${CAPABILITIES_ENABLED},?\s*$$
+  ^\s*Management\s+IP\s+Address\s+=\s+${MGMT_ADDRESS},?\s*$$
+  ^\s*MED\s+Device\s+Type\s+=\s+${MED_DEVICE_TYPE},?\s*$$
+  ^\s*MED\s+Capabilities\s+=\s+${MED_CAPABILITIES},?\s*$$
+  ^\s*MED\s+Extension\s+TLVs\s+Present\s+=\s+${MED_EXTENSION_TLVS_PRESENT},?\s*$$
+  ^\s*MED\s+Power\s+Type\s+=\s+${POWER_DEVICE_TYPE},?\s*$$
+  ^\s*MED\s+Power\s+Source\s+=\s+${POWER_SOURCE},?\s*$$
+  ^\s*MED\s+Power\s+Priority\s+=\s+${POWER_PRIORITY},?\s*$$
+  ^\s*MED\s+Power\s+Value\s+=\s+${POWER_REQUESTED},?\s*$$
+  ^\s*Remote\s+port\s+MAC\/PHY\s+AutoNeg\s+=\s+${REMOTE_PORT_MAC_PHY_AUTONEG},?\s*$$
+  ^\s*Remote\s+port\s+default\s+vlan
+  ^\s*Mau\s+Type\s+=\s+${MAU_TYPE},?\s*$$
+  ^\s*$$ -> Record Start
+  ^.*$$ -> Error

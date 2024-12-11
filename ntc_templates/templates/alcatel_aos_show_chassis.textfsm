@@ -1,0 +1,28 @@
+Value CHASSIS_ID (\d+)
+Value MODEL_NAME (\S.+\S)
+Value MODULE_TYPE (\S.+\S)
+Value DESCRIPTION (\S.+\S)
+Value PART_NUMBER (\S.+\S)
+Value HARDWARE_REVISION (\d+)
+Value SERIAL_NUMBER (\w+)
+Value MANUFACTURE_DATE (\S.+\S)
+Value ADMIN_STATUS (\S.+\S)
+Value OPERATIONAL_STATUS (\S+)
+Value NUMBER_OF_RESETS (\d+)
+Value MAC_ADDRESS ([^,]+)
+
+Start
+  ^\s*(?:Local\s*)?Chassis\s*(?:ID\s*)?${CHASSIS_ID}\s*(?:\(Master\))?
+  ^\s*Model\s*Name:\s*${MODEL_NAME}\s*,$$
+  ^\s*Module\s*Type:\s*${MODULE_TYPE}\s*,$$
+  ^\s*Description:\s*${DESCRIPTION}\s*,$$
+  ^\s*Part\s*Number:\s*${PART_NUMBER}\s*,$$
+  ^\s*Hardware\s*Revision:\s*${HARDWARE_REVISION}\s*,$$
+  ^\s*Serial\s*Number:\s*${SERIAL_NUMBER}\s*,$$
+  ^\s*Manufacture\s*Date:\s*${MANUFACTURE_DATE}\s*,$$
+  ^\s*Admin\s*Status:\s*${ADMIN_STATUS},\s*$$
+  ^\s*Operational\s*Status:\s*${OPERATIONAL_STATUS},\s*$$
+  ^\s*Number\s*Of\s*Resets:\s*${NUMBER_OF_RESETS}(?:,)?\s*$$
+  ^\s*MAC\s*Address:\s*${MAC_ADDRESS}(?:,)?\s*$$ -> Record
+  ^\s*$$
+  ^. -> Error

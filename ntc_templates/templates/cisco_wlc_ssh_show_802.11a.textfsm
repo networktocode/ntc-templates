@@ -22,7 +22,6 @@ Value VIDEO_ROAMING_BANDWIDTH (\d+|)
 Value MAX_CLIENT (\d+)
 
 
-
 Start
   ^802.11(a|b)\sNetwork\.*\s${STATUS}s*$$ -> Spec_support
   ^Beacon\sInterval\.*\s${BEACON_INTERVAL}s*$$
@@ -61,7 +60,7 @@ Spec_support
 Data_Rates
   ^\s+802.11(a|g|b|(b\/g))\s${DATA_RATE}\s+Rate\.*\s+${DATA_RATE_VALUE}s*$$
   ^802.11n\s+MCS\s+Settings: -> MCS_Rates
-  ^\s*
+  ^\s*$$
   ^. -> Error
 
 MCS_Rates

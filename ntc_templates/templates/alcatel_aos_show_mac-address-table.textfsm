@@ -1,0 +1,19 @@
+Value VLAN_ID (\d+)
+Value ADDRESS_NOT_VALID (\*?)
+Value DOMAIN (\S+)
+Value MAC (\S+)
+Value TYPE (\S+)
+Value PROTOCOL (\S+)
+Value OPERATION (\S+)
+Value INTERFACE (\S+)
+
+Start
+  ^\s+Vlan\s+Mac\s+Address\s+Type\s+Protocol\s+Operation\s+Interface\s+$$
+  ^\s*-+\+
+  ^\s*${ADDRESS_NOT_VALID}${VLAN_ID}\s+${MAC}\s+${TYPE}\s+(---|${PROTOCOL})\s+${OPERATION}\s+${INTERFACE}\s*$$ -> Record
+  ^\s*Domain\s+Vlan\/SrvcId\[ISId\/vnId\]\s+Mac\s+Address\s+Type\s+Operation\s+Interface\s*$$
+  ^\s*${DOMAIN}\s+${VLAN_ID}\s+${MAC}\s+${TYPE}\s+${OPERATION}\s+${INTERFACE}\s*$$ -> Record
+  ^\s*Total\s+number\s+of\s+Valid\s+MAC\s+addresses\s+above\s+=\s+\d+\s*$$ -> Record
+  ^\s*(Legend:\s+)?Mac\s+Address:
+  ^\s*$$
+  ^.*$$ -> Error

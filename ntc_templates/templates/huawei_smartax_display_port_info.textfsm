@@ -47,5 +47,7 @@ Start
   ^\s*Channel\w*\s*Information\s*
   ^\s*Channel\s*Type\s*${CHANNEL_TYPE}
   ^\s*Online\s*ONT\s*number\s*threshold\s*${ONLINE_ONT_NUMBER_THRESHOLD}
-  ^\s*
+  ^\s*-+\s*$$
+  ^\s*Channel\s+\d+\s+Information
+  ^\s*$$
   ^. -> Error
