@@ -10,7 +10,7 @@ Start
 
 Start_record
   ^\s*-+\s*$$
-  ^${MAC_ADDRESS}\s+${VLAN_NAME}\(${VLAN_ID}\)\s+${AGE}\D+${INTERFACE}\s*$$ -> Record
+  ^${MAC_ADDRESS}\s+${VLAN_NAME}\(0*${VLAN_ID}\)\s+0*${AGE}\D+${INTERFACE}\s*$$ -> Record
   ^\s*Flags\s+:
   ^\s*x\s+-\s+IPX
   ^\s*b\s+-\s+Ingress\s+Blackhole
