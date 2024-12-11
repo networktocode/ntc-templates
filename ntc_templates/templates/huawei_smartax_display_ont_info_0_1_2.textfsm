@@ -17,5 +17,5 @@ SNs
   ^\s*${FSP}\s*${ONT_ID}\s*${SERIAL_NUMBER}\s*${CONTROL_FLAG}\s*(-|${RUN_STATE})\s*(-|${CONFIG_STATE})\s*(-|${MATCH_STATE})\s*${PROTECT_SIDE}\s* -> Record
   ^\s*-
   ^\s*F\/S\/P\s+(ONT|ONT-ID)\s+Description
-  ^\s*
-  ^.\s*$$ -> Error
+  ^\s*$$
+  ^.-> Error
