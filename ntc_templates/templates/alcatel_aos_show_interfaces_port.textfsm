@@ -1,0 +1,25 @@
+Value PORT (\S+)
+Value PERMANENT_SHUTDOWN (\*?)
+Value ADMIN_STATUS (\S+)
+Value LINK_STATUS (\S+)
+Value VIOLATIONS (\S+)
+Value RECOVERY_TIME (\d+)
+Value RECOVERY_MAX (\d+)
+Value WTR_RUNNING (\#?)
+Value WTR_TIME (\d+)
+Value ALIAS (.*)
+
+Start
+  ^\s*-+\+ -> Table
+  ^Legends: WTR - Wait To Restore
+  ^\s+#
+  ^\s+\*
+  ^\s*Slot/\s+Admin\s+Link\s+Violations\s+Recovery\s+Recovery\s+WTR\s+Alias\s*$$
+  ^\s*Port\s+Status\s+Status\s+Time\s+Max\s+\(sec\)\s*$$
+  ^\s*$$
+  ^.*$$ -> Error
+
+Table
+  ^\s*${PERMANENT_SHUTDOWN}${PORT}\s+${ADMIN_STATUS}\s+${LINK_STATUS}\s+${VIOLATIONS}\s+${RECOVERY_TIME}\s+${RECOVERY_MAX}\s+(?:${WTR_RUNNING}\s+)?${WTR_TIME}\s+"${ALIAS}"\s*$$ -> Record
+  ^\s*$$
+  ^.*$$ -> Error

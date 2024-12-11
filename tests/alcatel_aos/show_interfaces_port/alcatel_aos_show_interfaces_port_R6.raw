@@ -1,0 +1,15 @@
+Legends: WTR - Wait To Restore
+         #   - WTR Timer is Running & Port is in wait-to-restore state
+         *   - Permanent Shutdown
+
+Slot/    Admin     Link    Violations  Recovery   Recovery      WTR            Alias
+Port     Status   Status                 Time       Max        (sec)
+------+----------+---------+----------+----------+----------+----------+-----------------------------------------
+ *1/1    enable      up        none           300         10          0 "Hello"
+  1/2    enable      down      none           300         10          0 ""
+  1/11   enable      down      none           300         10       # 10 ""
+  1/17   disable     down      none           300         10          0 ""
+  1/23   disable     down      none           300         10          0 ""
+  1/25   enable      up        none           300         10          0 ""
+  1/26   enable      down      none           300         10          0 ""
+  1/28   enable      down      none             0          0          0 ""
