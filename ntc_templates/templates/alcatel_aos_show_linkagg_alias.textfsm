@@ -1,0 +1,16 @@
+Value NUMBER (\d+)
+Value AGGREGATE (\S+)
+Value SIZE (\d+)
+Value ADMIN_STATE (\S+)
+Value OPERATIONAL_STATE (\S+)
+Value N_ATTACHED_PORTS (\d+)
+Value N_POSSIBLE_PORTS (\d+)
+Value NAME (\S.+\S)
+
+Start
+  ^\s*Admin\s*Oper\s*Att\/Sel\s*$$
+  ^\s*Number\s+Aggregate\s+Size\s+state\s+state\s+Ports\s+Name\s*$$
+  ^\s*-+
+  ^\s*${NUMBER}\s+${AGGREGATE}\s+${SIZE}\s+${ADMIN_STATE}\s+${OPERATIONAL_STATE}\s+${N_ATTACHED_PORTS}\s+${N_POSSIBLE_PORTS}\s+${NAME}\s*$$ -> Record
+  ^\s*$$
+  ^.*$$ -> Error
