@@ -15,5 +15,6 @@ Start
   ^\s*${DOMAIN}\s+${VLAN_ID}\s+${MAC}\s+${TYPE}\s+${OPERATION}\s+${INTERFACE}\s*$$ -> Record
   ^\s*Total\s+number\s+of\s+Valid\s+MAC\s+addresses\s+above\s+=\s+\d+\s*$$ -> Record
   ^\s*(Legend:\s+)?Mac\s+Address:
+  ^\s*ID\s+=\s+ISID\/Vnid\/vplsid\s*$$
   ^\s*$$
   ^.*$$ -> Error
