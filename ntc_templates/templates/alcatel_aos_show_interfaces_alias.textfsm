@@ -1,0 +1,19 @@
+Value PORT (\S+)
+Value ADMIN_STATUS (\S+)
+Value LINK_STATUS (\S+)
+Value WAIT_TO_RESTORE (\d+)
+Value WAIT_TO_SHUTDOWN (\d+)
+Value ALIAS (.*)
+
+Start
+  ^\s*-+\+ -> Table
+  ^\s*Chas\/\s*$$
+  ^\s*Slot\/\s+Admin\s+Link\s+WTR\s+WTS\s+Alias\s*$$
+  ^\s*Port\s+Status\s+Status\s+\(sec\)\s+\(msec\)\s*$$
+  ^\s*$$
+  ^.*$$ -> Error
+
+Table
+  ^\s*${PORT}\s+${ADMIN_STATUS}\s+${LINK_STATUS}\s+${WAIT_TO_RESTORE}\s+${WAIT_TO_SHUTDOWN}\s+"${ALIAS}"\s*$$ -> Record
+  ^\s*$$
+  ^.*$$ -> Error
