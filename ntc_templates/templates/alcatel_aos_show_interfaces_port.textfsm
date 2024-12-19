@@ -33,4 +33,3 @@ Table_2
   ^\s*${PERMANENT_SHUTDOWN}${PORT}\s+${ADMIN_STATUS}\s+${LINK_STATUS}\s+${WTR_TIME}\s+${WAIT_TO_SHUTDOWN}\s+"${ALIAS}"\s*$$ -> Record
   ^\s*$$
   ^.*$$ -> Error
-  
