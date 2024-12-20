@@ -2,8 +2,9 @@ Value Key ONT_ID (\d+)
 Value SERIAL_NUMBER (\w+)
 Value ONT_MODEL_TYPE (\S+)
 Value DISTANCE_M (\d+|-)
-Value RX_TX_POWER_DBM (-?\d+\.\d+\/-?\d+\.\d+|\S+)
-Value DESCRIPTION (\S+)
+Value RX_POWER_DBM (-?\d+\.\d+)
+Value TX_POWER_DBM (-?\d+\.\d+)
+Value DESCRIPTION (\S.+\S)
 
 Start
   ^\s*Command\s*is\s*being\s*executed\.\s*Please\s*wait\s*$$
@@ -20,5 +21,5 @@ Start
 
 SNs
   ^\s+-\s*$$
-  ^\s+${ONT_ID}\s+${SERIAL_NUMBER}\s+${ONT_MODEL_TYPE}\s+${DISTANCE_M}\s+${RX_TX_POWER_DBM}\s+${DESCRIPTION} -> Record
+  ^\s+${ONT_ID}\s+${SERIAL_NUMBER}\s+${ONT_MODEL_TYPE}\s+${DISTANCE_M}\s+(-|${RX_POWER_DBM})\/(-|${TX_POWER_DBM})\s+${DESCRIPTION} -> Record
   ^\s*$$ -> Start
