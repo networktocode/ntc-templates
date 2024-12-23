@@ -1,3 +1,4 @@
+Value Key,Filldown PORT (\S+)
 Value Key ONT_ID (\d+)
 Value SERIAL_NUMBER (\w+)
 Value ONT_MODEL_TYPE (\S+)
@@ -8,7 +9,7 @@ Value DESCRIPTION (\S.+\S)
 
 Start
   ^\s*Command\s*is\s*being\s*executed\.\s*Please\s*wait\s*$$
-  ^\s*In\s*port\s*\S+,\s*the\s*total\s*of\s*ONTs\s*are:\s*\d+,\s*online:\s*\d+\s*$$
+  ^\s*In\s*port\s*${PORT},\s*the\s*total\s*of\s*ONTs\s*are:\s*\d+,\s*online:\s*\d+\s*$$
   ^\s*ONT\s*Run\s*Last\s*Last\s*Last\s*$$
   ^\s*ID\s*State\s*UpTime\s*DownTime\s*DownCause\s*$$
   ^\s*\d+\s*\S+\s*(-|\S+\s\S+)\s*(-|\S+\s*\S+)\s*\S+\s*$$
