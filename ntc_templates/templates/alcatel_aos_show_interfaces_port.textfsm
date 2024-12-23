@@ -7,19 +7,29 @@ Value RECOVERY_TIME (\d+)
 Value RECOVERY_MAX (\d+)
 Value WTR_RUNNING (\#?)
 Value WTR_TIME (\d+)
+Value WAIT_TO_SHUTDOWN (\d+)
 Value ALIAS (.*)
 
 Start
-  ^\s*-+\+ -> Table
   ^Legends: WTR - Wait To Restore
   ^\s+#
   ^\s+\*
-  ^\s*Slot/\s+Admin\s+Link\s+Violations\s+Recovery\s+Recovery\s+WTR\s+Alias\s*$$
-  ^\s*Port\s+Status\s+Status\s+Time\s+Max\s+\(sec\)\s*$$
+  ^\s+Chas\/\s*$$
+  ^\s*Slot\/\s+Admin\s+Link\s+Violations\s+Recovery\s+Recovery\s+WTR\s+Alias\s*$$
+  ^\s*Port\s+Status\s+Status\s+Time\s+Max\s+\(sec\)\s*$$ -> Table_1
+  ^\s*Slot\/\s+Admin\s+Link\s+WTR\s+WTS\s+Alias\s*$$
+  ^\s*Port\s+Status\s+Status\s+\(sec\)\s+\(msec\)\s*$$ -> Table_2
   ^\s*$$
   ^.*$$ -> Error
 
-Table
-  ^\s*${PERMANENT_SHUTDOWN}${PORT}\s+${ADMIN_STATUS}\s+${LINK_STATUS}\s+${VIOLATIONS}\s+${RECOVERY_TIME}\s+${RECOVERY_MAX}\s+(?:${WTR_RUNNING}\s+)?${WTR_TIME}\s+"${ALIAS}"\s*$$ -> Record
+Table_1
+  ^\s*-+\s*
+  ^\s*${PERMANENT_SHUTDOWN}${PORT}\s+${ADMIN_STATUS}\s+${LINK_STATUS}\s+${VIOLATIONS}\s+${RECOVERY_TIME}\s+${RECOVERY_MAX}\s+${WTR_RUNNING}\s+${WTR_TIME}\s+"${ALIAS}"\s*$$ -> Record
+  ^\s*$$
+  ^.*$$ -> Error
+
+Table_2
+  ^\s*-+\s*
+  ^\s*${PERMANENT_SHUTDOWN}${PORT}\s+${ADMIN_STATUS}\s+${LINK_STATUS}\s+${WTR_TIME}\s+${WAIT_TO_SHUTDOWN}\s+"${ALIAS}"\s*$$ -> Record
   ^\s*$$
   ^.*$$ -> Error

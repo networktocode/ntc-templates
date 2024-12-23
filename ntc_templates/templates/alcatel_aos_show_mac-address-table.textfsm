@@ -10,7 +10,7 @@ Value INTERFACE (\S+)
 Start
   ^\s+Vlan\s+Mac\s+Address\s+Type\s+Protocol\s+Operation\s+Interface\s+$$
   ^\s*-+\+
-  ^\s*${ADDRESS_NOT_VALID}${VLAN_ID}\s+${MAC}\s+${TYPE}\s+(---|${PROTOCOL})\s+${OPERATION}\s+${INTERFACE}\s*$$ -> Record
+  ^\s*(?:${ADDRESS_NOT_VALID}\s*)?${VLAN_ID}\s+${MAC}\s+${TYPE}\s+(---|${PROTOCOL})\s+${OPERATION}\s+${INTERFACE}\s*$$ -> Record
   ^\s*Domain\s+Vlan\/SrvcId\[(ISId\/vnId|:ID)\]\s+Mac\s+Address\s+Type\s+Operation\s+Interface\s*$$
   ^\s*${DOMAIN}\s+${VLAN_ID}\s+${MAC}\s+${TYPE}\s+${OPERATION}\s+${INTERFACE}\s*$$ -> Record
   ^\s*Total\s+number\s+of\s+Valid\s+MAC\s+addresses\s+above\s+=\s+\d+\s*$$ -> Record
