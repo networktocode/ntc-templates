@@ -1,5 +1,6 @@
 Value PORT (\S+)
 Value STATUS (\S+)
+Value ADMIN_STATUS (\S+)
 Value PORT_DOWN_VIOLATION_REASON (\S.+\S)
 Value LAST_TIME_LINK_CHANGED (\S.+\S)
 Value NUMBER_OF_STATUS_CHANGE (\d+)
@@ -41,7 +42,7 @@ Start
   ^\s*Slot\/Port\s*${PORT}\s*:\s*$$
 # R8
   ^\s*Chassis\/Slot\/Port\s*:\s*${PORT}\s*$$
-  ^\s*Operational\s*Status\s*:\s*${STATUS},\s*(?:\"\w*\"\s*)?$$
+  ^\s*Operational\s*Status\s*:\s*${STATUS},\s*(?:"(?:${ADMIN_STATUS})?"\s*)?$$
   ^\s*Port-Down\/Violation\s*Reason\s*:\s*${PORT_DOWN_VIOLATION_REASON},\s*$$
   ^\s*Last\s*Time\s*Link\s*Changed\s*:\s*${LAST_TIME_LINK_CHANGED}\s*,\s*$$
   ^\s*Number\s*of\s*Status\s*Change\s*:\s*${NUMBER_OF_STATUS_CHANGE},\s*$$
@@ -51,8 +52,8 @@ Start
   ^\s*EPP\s*:\s*${ETHERNET_POWER_POLICY},\s*$$
   ^\s*Link-Quality\s*:\s*${LINK_QUALITY},\s*$$
   ^\s*MAC\s*address\s*:\s*${MAC_ADDRESS},\s*$$
-  ^\s*BandWidth\s*\(Megabits\)\s*:\s*${BANDWIDTH},\s*Duplex\s*:\s*${DUPLEX},\s*$$
-  ^\s*Autonegotiation\s*:\s*\d+\s*\[\s*${AUTONEGOTIATION}\s*\],\s*$$
+  ^\s*BandWidth\s*\(Megabits\)\s*:\s*(-|${BANDWIDTH})\s*,\s*Duplex\s*:\s*(-|${DUPLEX})\s*,\s*$$
+  ^\s*Autonegotiation\s*:\s*\d+\s*\[(\s*|\s*${AUTONEGOTIATION}\s*)\],\s*$$
   ^\s*Long\s*Frame\s*Size\(Bytes\)\s*:\s*${LONG_FRAME_SIZE},\s*$$
   ^\s*Inter\s*Frame\s*Gap\(Bytes\)\s*:\s*${INTER_FRAME_GAP},\s*$$
   ^\s*loopback\s*mode\s*:\s*${LOOPBACK_MODE},\s*$$

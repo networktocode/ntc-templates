@@ -1,6 +1,7 @@
 ---
 parsed_sample:
-  - autonegotiation: "1000-F"
+  - admin_status: ""
+    autonegotiation: "1000-F"
     bandwidth: "1000"
     duplex: "Full"
     ethernet_power_policy: "Disabled"
@@ -36,7 +37,8 @@ parsed_sample:
     tx_oversize_frames: ""
     tx_undersize_frames: ""
     tx_unicast_frames: "3121178"
-  - autonegotiation: "1000-F"
+  - admin_status: ""
+    autonegotiation: ""
     bandwidth: "1000"
     duplex: "Full"
     ethernet_power_policy: "Disabled"
