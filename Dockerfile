@@ -28,7 +28,7 @@ WORKDIR /local
 COPY pyproject.toml poetry.lock README.md /local/
 
 RUN poetry config virtualenvs.create false \
-  && poetry install --no-interaction --no-ansi
+  && poetry install --no-interaction --no-ansi --no-root
 
 # Do not break dependency caching before installing project
 COPY . .
