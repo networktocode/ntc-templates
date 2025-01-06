@@ -1,6 +1,6 @@
 Value INTERFACE (\S+)
 Value IP_ADDRESS (\S+)
-Value STATUS (up|down|administratively down)
+Value STATUS (up|down|administratively down|deleted)
 Value PROTO (up|down)
 
 Start
