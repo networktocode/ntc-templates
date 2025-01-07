@@ -82,3 +82,5 @@ TX_Table
   ^\s*Error\s*Frames\s*:\s*${TX_ERROR_FRAMES}\s*$$ -> Record Start
   ^\s*Error\s*Frames\s*:\s*${TX_ERROR_FRAMES}(?:,\s*Collisions\s*:\s*${TX_COLLISIONS},)?\s*$$
   ^\s*Late\s*collisions\s*:\s*${TX_LATE_COLLISIONS},\s*Exc-Collisions\s*:\s*${TX_EXCESSIVE_COLLISIONS}\s*$$ -> Record Start
+  ^\s*$$
+  ^. -> Error
