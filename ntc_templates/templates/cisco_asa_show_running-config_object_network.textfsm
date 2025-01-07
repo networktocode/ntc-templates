@@ -19,9 +19,5 @@ Start
   ^\s+subnet\s+${NETWORK}\/${PREFIX_LENGTH}\s*
   ^\s+range\s+${START_IP}\s+${END_IP}\s*
   ^\s+host\s+${HOST}\s*
-<<<<<<< HEAD
   ^\s+fqdn\s+(?:v\d+\s+)?${FQDN}\s*
-=======
-  ^\s+fqdn\s+(?:v4|v6)?\s*${FQDN}\s*
->>>>>>> fac936536c64472bf4edaa457f8e725e1e1e58bd
   ^. -> Error
