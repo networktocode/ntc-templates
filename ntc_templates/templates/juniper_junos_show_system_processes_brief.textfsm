@@ -1,14 +1,14 @@
 Value NODE (\S+)
 Value MEMORY_FORMAT (\w)
 Value SWAP_FORMAT (\w)
-Value MEMORY_ACTIVE (\d*\D*\d*)
-Value MEMORY_FREE (\d*\D*\d*)
-Value MEMORY_USED (\d*\D*\d*)
-Value MEMORY_BUFFER (\d*\D*\d*)
-Value SWAP_TOTAL (\d*\D*\d*)
-Value SWAP_FREE (\d*\D*\d*)
-Value SWAP_USED (\d*\D*\d*)
-Value SWAP_AVAIL (\d*\D*\d*)
+Value MEMORY_ACTIVE (\S+)
+Value MEMORY_FREE (\S+)
+Value MEMORY_USED (\S+)
+Value MEMORY_BUFFER (\S+)
+Value SWAP_TOTAL (\S+)
+Value SWAP_FREE (\S+)
+Value SWAP_USED (\S+)
+Value SWAP_AVAIL (\S+)
 
 Start
   ^-+\s*$$
