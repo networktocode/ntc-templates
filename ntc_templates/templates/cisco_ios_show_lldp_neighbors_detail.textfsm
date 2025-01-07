@@ -26,6 +26,7 @@ Start
   ^.*Invalid input detected -> EOF
   ^.*LLDP is not enabled -> EOF
   ^Local\s+Intf:\s+${LOCAL_INTERFACE}\s*$$
+  ^Local\s+Intf\s+service\s+instance
   ^Chassis\s+id:\s+${CHASSIS_ID}\s*$$
   ^Port\s+id:\s+${NEIGHBOR_PORT_ID}\s*$$
   ^Port\s+Description:\s+${NEIGHBOR_INTERFACE}\s*$$
