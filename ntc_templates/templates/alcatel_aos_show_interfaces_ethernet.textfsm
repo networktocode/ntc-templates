@@ -39,7 +39,6 @@ Value TX_COLLISIONS (\d+)
 Value TX_LATE_COLLISIONS (\d+)
 Value TX_EXCESSIVE_COLLISIONS (\d+)
 
-
 Start
   ^\s*(Chassis\/)?Slot\/Port\s*(:\s*)?${PORT}\s*(:\s*)?$$
   ^\s*Operational\s*Status\s*:\s*${STATUS},\s*(?:"(?:${ADMIN_STATUS})?"\s*)?$$
