@@ -1,18 +1,24 @@
 Value MEMBER_ID (\S+)
+Value TOPOLOGY (\S+)
+Value NAME (\S+)
 Value MAC_ADDRESS (\S+)
 Value STATUS (.*)
+Value SERIAL_NUMBER (\S+)
 Value CPU (\d+%)
 Value MEMORY (\d+%)
 Value VSF_LINK_1 (.*)
 Value VSF_LINK_2 (.*)
 
 Start
-  ^VSF\s*${MEMBER_ID}
+  ^VSF\s+${MEMBER_ID}
+  ^\s+Topology\s+:\s+${TOPOLOGY}
+  ^\s+Name\s+:\s+${NAME}
   ^Member.* -> Continue.Record
   ^Member\s+ID\s+:\s+${MEMBER_ID}
-  ^\s+MAC\s+Address\s+:\s+${MAC_ADDRESS}                                                                          
-  ^\s+Status\s+:\s+${STATUS}                                                                       
-  ^\s+CPU\sUtilization\s+:\s+${CPU}                                                                      
-  ^\s+Memory\sUtilization\s+:\s+${MEMORY}
+  ^\s+MAC\s+Address\s+:\s+${MAC_ADDRESS}
+  ^\s+Status\s+:\s+${STATUS}
+  ^\s+Serial\s+Number\s+:\s+${SERIAL_NUMBER}
+  ^\s+CPU\s+Utilization\s+:\s+${CPU}
+  ^\s+Memory\s+Utilization\s+:\s+${MEMORY}
   ^\s+VSF\s+Link\s+1\s+:${VSF_LINK_1}
   ^\s+VSF\s+Link\s+2\s+:${VSF_LINK_2}
