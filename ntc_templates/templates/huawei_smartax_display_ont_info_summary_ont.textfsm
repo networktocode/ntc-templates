@@ -7,7 +7,7 @@ Value LAST_DOWNCAUSE (\S+)
 
 Start
   ^\s*Command\s*is\s*being\s*executed\.\s*Please\s*wait\s*$$
-  ^\s*-
+  ^\s*-+\s*$$
   ^\s+ID\s+State\s+UpTime\s+DownTime\s+DownCause\s*$$ -> ONTs
   ^\s+ONT\s+Run\s+Last\s+Last\s+Last\s*$$
   ^\s*In\s*port\s*${PORT},\s*the\s*total\s*of\s*ONTs\s*are:\s*\d+,\s*online:\s*\d+\s*$$
