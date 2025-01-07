@@ -71,6 +71,8 @@ RX_Table
   ^\s*UnderSize\s*Frames\s*:\s*${RX_UNDERSIZE_FRAMES},\s*OverSize\s*Frames\s*:\s*${RX_OVERSIZE_FRAMES},\s*$$
   ^\s*Lost\s*Frames\s*:\s*${RX_LOST_FRAMES},\s*Error\s*Frames\s*:\s*${RX_ERROR_FRAMES},\s*$$
   ^\s*CRC\s*Error\s*Frames\s*:\s*${RX_CRC_ERROR_FRAMES},\s*Alignments\s*Err\s*:\s*${RX_ALIGNMENT_ERRORS},\s*$$ -> Start
+  ^\s*$$
+  ^. -> Error
 
 TX_Table
   ^\s*Bytes\s*Xmitted\s*:\s*${TX_BYTES_TRANSMITTED},\s*Unicast\s*Frames\s*:\s*${TX_UNICAST_FRAMES},\s*$$
