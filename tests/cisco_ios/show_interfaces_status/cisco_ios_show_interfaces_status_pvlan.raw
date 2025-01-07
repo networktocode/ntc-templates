@@ -1,0 +1,9 @@
+
+Port         Name               Status       Vlan       Duplex  Speed Type
+Twe1/0/1     Device 1           connected    123        a-full a-1000 10/100/1000BaseTX SFP
+Twe1/0/2     Device 2           disabled     456          auto   auto 10/100/1000BaseTX SFP
+Twe1/0/4     * Device 3 *       connected    123,1234   a-full a-1000 10/100/1000BaseTX SFP
+Twe1/0/5     Device 4           disabled     2345         auto   auto 10/100/1000BaseTX SFP
+Twe1/0/17    Device 5           connected    pvlan prom   full    10G SFP-10GBase-SR
+Twe1/0/28    Device 6           notconnect   123          auto   auto 10/100/1000BaseTX SFP
+Twe2/0/32                       monitoring   1            full    10G SFP-10GBase-SR
