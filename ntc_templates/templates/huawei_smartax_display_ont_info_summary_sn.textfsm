@@ -13,7 +13,7 @@ Start
   ^\s*ONT\s*Run\s*Last\s*Last\s*Last\s*$$
   ^\s*ID\s*State\s*UpTime\s*DownTime\s*DownCause\s*$$
   ^\s*\d+\s*\S+\s*(-|\S+\s\S+)\s*(-|\S+\s*\S+)\s*\S+\s*$$
-  ^\s+-
+  ^\s+-+\s*$$
   ^\s+ONT\s+SN\s+Type\s+Distance\s+Rx\/Tx\s+power\s+Description
   ^\s+ID\s+\(m\)\s+\(dBm\) -> SNs
   ^\s+-\s*$$
