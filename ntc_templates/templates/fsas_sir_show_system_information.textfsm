@@ -1,6 +1,6 @@
 Value VERSION (\d+\.\d+)
 Value SERIAL (\d+)
-Value SYSTEM (.+)
+Value SYSTEM (.+?)
 Value FIRMWARE (\S+)
 Value CONFIG_FILE (\S+)
 Value STARTUP_TIME (.+)
