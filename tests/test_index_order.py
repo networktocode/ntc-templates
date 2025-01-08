@@ -45,6 +45,7 @@ OS_CHOICES = [
     "extreme_slxos",
     "f5_ltm",
     "fortinet",
+    "fsas_sir",
     "hp_comware",
     "hp_procurve",
     "huawei_smartax",
