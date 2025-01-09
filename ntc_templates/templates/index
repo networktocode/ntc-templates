@@ -242,6 +242,8 @@ cisco_asa_dir.textfsm, .*, cisco_asa, dir
 
 cisco_ftd_show_vpn-sessiondb_anyconnect.textfsm, .*, cisco_ftd, sh[[ow]] vpn-[[sessiondb]] a[[nyconnect]]
 
+cisco_fxos_show_firmware.textfsm, .*, cisco_fxos, sh[[ow]] fi[[rmware]]
+
 cisco_ios_show_module.textfsm:cisco_ios_show_module_status.textfsm:cisco_ios_show_module_submodule.textfsm:cisco_ios_show_module_online_diag.textfsm, .*, cisco_ios, sh[[ow]] mod[[ule]]
 cisco_ios_show_switch_detail.textfsm:cisco_ios_show_switch_detail_stack_ports.textfsm, .*, cisco_ios, sh[[ow]] sw[[itch]] d[[etail]]
 cisco_ios_show_authentication_sessions_method_details.textfsm, .*, cisco_ios, show authen[[tication]] ses[[sions]] met[[hod]](\s+d[[ot1x]]|\s+m[[ab]])? det[[ails]]
