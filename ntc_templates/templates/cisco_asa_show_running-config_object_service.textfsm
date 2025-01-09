@@ -14,30 +14,7 @@ Value DST_PORT_END (\S+)
 
 Start
   ^object\s+service -> Continue.Record
-  ^object\s+service\s+${NAME}\s*
-  ^\s+description\s+${DESCRIPTION}\s*
-  ^\s+service\s+${PROTOCOL}\s+source\s+eq\s+${SRC_PORT_EQ}\s+destination\s+eq\s+${DST_PORT_EQ}\s*
-  ^\s+service\s+${PROTOCOL}\s+source\s+eq\s+${SRC_PORT_EQ}\s+destination\s+gt\s+${DST_PORT_GT}\s*
-  ^\s+service\s+${PROTOCOL}\s+source\s+eq\s+${SRC_PORT_EQ}\s+destination\s+lt\s+${DST_PORT_LT}\s*
-  ^\s+service\s+${PROTOCOL}\s+source\s+eq\s+${SRC_PORT_EQ}\s+destination\s+range\s+${DST_PORT_START}\s+${DST_PORT_END}\s*
-  ^\s+service\s+${PROTOCOL}\s+source\s+gt\s+${SRC_PORT_GT}\s+destination\s+eq\s+${DST_PORT_EQ}\s*
-  ^\s+service\s+${PROTOCOL}\s+source\s+gt\s+${SRC_PORT_GT}\s+destination\s+gt\s+${DST_PORT_GT}\s*
-  ^\s+service\s+${PROTOCOL}\s+source\s+gt\s+${SRC_PORT_GT}\s+destination\s+lt\s+${DST_PORT_LT}\s*
-  ^\s+service\s+${PROTOCOL}\s+source\s+gt\s+${SRC_PORT_GT}\s+destination\s+range\s+${DST_PORT_START}\s+${DST_PORT_END}\s*
-  ^\s+service\s+${PROTOCOL}\s+source\s+lt\s+${SRC_PORT_LT}\s+destination\s+eq\s+${DST_PORT_EQ}\s*
-  ^\s+service\s+${PROTOCOL}\s+source\s+lt\s+${SRC_PORT_LT}\s+destination\s+gt\s+${DST_PORT_GT}\s*
-  ^\s+service\s+${PROTOCOL}\s+source\s+lt\s+${SRC_PORT_LT}\s+destination\s+lt\s+${DST_PORT_LT}\s*
-  ^\s+service\s+${PROTOCOL}\s+source\s+lt\s+${SRC_PORT_LT}\s+destination\s+range\s+${DST_PORT_START}\s+${DST_PORT_END}\s*
-  ^\s+service\s+${PROTOCOL}\s+source\s+range\s+${SRC_PORT_START}\s+${SRC_PORT_END}\s+destination\s+eq\s+${DST_PORT_EQ}\s*
-  ^\s+service\s+${PROTOCOL}\s+source\s+range\s+${SRC_PORT_START}\s+${SRC_PORT_END}\s+destination\s+lt\s+${DST_PORT_LT}\s*
-  ^\s+service\s+${PROTOCOL}\s+source\s+range\s+${SRC_PORT_START}\s+${SRC_PORT_END}\s+destination\s+gt\s+${DST_PORT_GT}\s*
-  ^\s+service\s+${PROTOCOL}\s+source\s+range\s+${SRC_PORT_START}\s+${SRC_PORT_END}\s+destination\s+range\s+${DST_PORT_START}\s+${DST_PORT_END}\s*
-  ^\s+service\s+${PROTOCOL}\s+source\s+eq\s+${SRC_PORT_EQ}\s*
-  ^\s+service\s+${PROTOCOL}\s+source\s+gt\s+${SRC_PORT_GT}\s*
-  ^\s+service\s+${PROTOCOL}\s+source\s+lt\s+${SRC_PORT_LT}\s*
-  ^\s+service\s+${PROTOCOL}\s+source\s+range\s+${SRC_PORT_START}\s+${SRC_PORT_END}\s*
-  ^\s+service\s+${PROTOCOL}\s+destination\s+eq\s+${DST_PORT_EQ}\s*
-  ^\s+service\s+${PROTOCOL}\s+destination\s+gt\s+${DST_PORT_GT}\s*
-  ^\s+service\s+${PROTOCOL}\s+destination\s+lt\s+${DST_PORT_LT}\s*
-  ^\s+service\s+${PROTOCOL}\s+destination\s+range\s+${DST_PORT_START}\s+${DST_PORT_END}\s*
+  ^object\s+service\s+${NAME}\s*$$
+  ^\s+description\s+${DESCRIPTION}\s*$$
+  ^\s+service\s+${PROTOCOL}(\s+source\s+(eq\s+${SRC_PORT_EQ}|gt\s+${SRC_PORT_GT}|lt\s+${SRC_PORT_LT}|range\s+${SRC_PORT_START}\s+${SRC_PORT_END}))?(\s+destination\s+(eq\s+${DST_PORT_EQ}|gt\s+${DST_PORT_GT}|lt\s+${DST_PORT_LT}|range\s+${DST_PORT_START}\s+${DST_PORT_END}))?\s*$$
   ^. -> Error "Did not match any lines"
