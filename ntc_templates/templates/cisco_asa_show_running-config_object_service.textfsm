@@ -1,5 +1,5 @@
 Value Required NAME (\S+)
-Value DESCRIPTION (.+)
+Value DESCRIPTION (.+?)
 Value PROTOCOL ([a-z]+)
 Value SRC_PORT_EQ (\S+)
 Value SRC_PORT_GT (\S+)
