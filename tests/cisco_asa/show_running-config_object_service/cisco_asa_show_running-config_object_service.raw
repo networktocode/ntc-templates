@@ -35,7 +35,7 @@ object service twelve
  description test twelve
  service tcp source lt 8000 destination range 9000 9999
 object service thirteen
- description test twthirteeno
+ description test thirteen
  service tcp source range 8000 8999 destination eq 9000
 object service fourteen
  description test fourteen
