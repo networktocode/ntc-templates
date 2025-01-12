@@ -1,20 +1,19 @@
 Value Required NAME (\S+)
 Value DESCRIPTION (.+?)
 Value PROTOCOL ([a-z]+)
-Value SRC_PORT_EQ (\S+)
-Value SRC_PORT_GT (\S+)
-Value SRC_PORT_LT (\S+)
+Value SRC_OPERATOR (\S+)
 Value SRC_PORT_START (\S+)
 Value SRC_PORT_END (\S+)
-Value DST_PORT_EQ (\S+)
-Value DST_PORT_GT (\S+)
-Value DST_PORT_LT (\S+)
+Value DST_OPERATOR (\S+)
 Value DST_PORT_START (\S+)
 Value DST_PORT_END (\S+)
+Value ICMP_TYPE (\S+)
+Value ICMP_CODE (\S+)
 
 Start
   ^object\s+service -> Continue.Record
   ^object\s+service\s+${NAME}\s*$$
   ^\s+description\s+${DESCRIPTION}\s*$$
-  ^\s+service\s+${PROTOCOL}(\s+source\s+(eq\s+${SRC_PORT_EQ}|gt\s+${SRC_PORT_GT}|lt\s+${SRC_PORT_LT}|range\s+${SRC_PORT_START}\s+${SRC_PORT_END}))?(\s+destination\s+(eq\s+${DST_PORT_EQ}|gt\s+${DST_PORT_GT}|lt\s+${DST_PORT_LT}|range\s+${DST_PORT_START}\s+${DST_PORT_END}))?\s*$$
+  ^\s+service\s+${PROTOCOL}(\s+${ICMP_TYPE}(\s+${ICMP_CODE})?)?\s*$$
+  ^\s+service\s+${PROTOCOL}(\s+source\s+${SRC_OPERATOR}\s+${SRC_PORT_START}(\s+${SRC_PORT_END})?)?(\s+destination\s+${DST_OPERATOR}\s+${DST_PORT_START}(\s+${DST_PORT_END})?)?\s*$$
   ^. -> Error "Did not match any lines"

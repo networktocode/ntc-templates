@@ -69,3 +69,15 @@ object service twenty-three
  service tcp destination lt 8000
 object service twenty-four
  service udp destination range 8000 8999
+object service twenty-five
+ service tcp source range 1 1024 destination eq https
+object service twenty-six
+ service tcp destination eq http
+object service twenty-seven
+ service tcp source eq ssh
+object service twenty-eight
+ service icmp echo
+object service twenty-nine
+ service icmp
+object service thirty
+ service icmp 9 16
