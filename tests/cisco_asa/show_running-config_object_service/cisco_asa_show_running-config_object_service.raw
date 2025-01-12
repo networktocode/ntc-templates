@@ -81,3 +81,6 @@ object service twenty-nine
  service icmp
 object service thirty
  service icmp 9 16
+object service thirty-one
+ description Except for IRC-based botnet C&C traffic
+ service tcp destination neq 6667
