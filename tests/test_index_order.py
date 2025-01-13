@@ -26,6 +26,7 @@ OS_CHOICES = [
     "cisco_apic",
     "cisco_asa",
     "cisco_ftd",
+    "cisco_fxos",
     "cisco_ios",
     "cisco_nvfis",
     "cisco_nxos",
