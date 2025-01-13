@@ -84,3 +84,6 @@ object service thirty
 object service thirty-one
  description Except for IRC-based botnet C&C traffic
  service tcp destination neq 6667
+object service thirty-two
+ description Numeric protocol
+ service 137
