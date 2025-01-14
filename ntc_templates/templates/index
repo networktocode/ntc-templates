@@ -11,7 +11,7 @@
 #
 Template, Hostname, Platform, Command
 
-alcatel_aos_show_interfaces_ethernet.textfsm, .*, alcatel_aos, sh[[ow]] (in[[terfaces]] e[[thernet]]|in[[terfaces]])$$
+alcatel_aos_show_interfaces_ethernet.textfsm, .*, alcatel_aos, sh[[ow]] (in[[terfaces]] e[[thernet]]|in[[terfaces]])$
 alcatel_aos_show_lldp_remote-system.textfsm, .*, alcatel_aos, sh[[ow]] lldp r[[emote-system]]
 alcatel_aos_show_interfaces_status.textfsm, .*, alcatel_aos, sh[[ow]] in[[terfaces]] st[[atus]]
 alcatel_aos_show_mac-address-table.textfsm, .*, alcatel_aos, sh[[ow]] mac-(a[[ddress-table]]|l[[earning]])
@@ -242,6 +242,8 @@ cisco_asa_ping.textfsm, .*, cisco_(asa|ftd), ping
 cisco_asa_dir.textfsm, .*, cisco_asa, dir
 
 cisco_ftd_show_vpn-sessiondb_anyconnect.textfsm, .*, cisco_ftd, sh[[ow]] vpn-[[sessiondb]] a[[nyconnect]]
+
+cisco_fxos_show_system_firmware.textfsm, .*, cisco_fxos, sh[[ow]] sy[[stem]] fi[[rmware]]
 
 cisco_ios_show_module.textfsm:cisco_ios_show_module_status.textfsm:cisco_ios_show_module_submodule.textfsm:cisco_ios_show_module_online_diag.textfsm, .*, cisco_ios, sh[[ow]] mod[[ule]]
 cisco_ios_show_switch_detail.textfsm:cisco_ios_show_switch_detail_stack_ports.textfsm, .*, cisco_ios, sh[[ow]] sw[[itch]] d[[etail]]
