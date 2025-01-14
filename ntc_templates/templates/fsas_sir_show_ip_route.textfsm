@@ -1,7 +1,7 @@
-Value FLAG ([\*X])
+Value FLAG (\S)
 Value PROTOCOL (\w+)
-Value NETWORK (\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})
-Value PREFIX_LENGTH (\d{1,2})
+Value NETWORK (\S+)
+Value PREFIX_LENGTH (\d+)
 Value GATEWAY (\S+)
 Value DISTANCE (\d+)
 Value UPTIME (\S+)
@@ -9,7 +9,7 @@ Value INTERFACE (\w+)
 
 Start
   ^FP\s+Destination\/Mask
-  ^[-\s]+$$
-  ^(\s|${FLAG})${PROTOCOL}\s+${NETWORK}\/${PREFIX_LENGTH}\s+${GATEWAY}\s+${DISTANCE}\s+${UPTIME}\s+${INTERFACE}\s*$$ -> Record
+  ^---\s+
+  ^\s*${FLAG}?${PROTOCOL}\s+${NETWORK}\/${PREFIX_LENGTH}\s+${GATEWAY}\s+${DISTANCE}\s+${UPTIME}\s+${INTERFACE}\s*$$ -> Record
   ^\s*$$
   ^. -> Error
