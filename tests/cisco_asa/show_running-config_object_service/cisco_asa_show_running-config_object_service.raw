@@ -35,7 +35,7 @@ object service twelve
  description test twelve
  service tcp source lt 8000 destination range 9000 9999
 object service thirteen
- description test twthirteeno
+ description test thirteen
  service tcp source range 8000 8999 destination eq 9000
 object service fourteen
  description test fourteen
@@ -69,3 +69,21 @@ object service twenty-three
  service tcp destination lt 8000
 object service twenty-four
  service udp destination range 8000 8999
+object service twenty-five
+ service tcp source range 1 1024 destination eq https
+object service twenty-six
+ service tcp destination eq http
+object service twenty-seven
+ service tcp source eq ssh
+object service twenty-eight
+ service icmp echo
+object service twenty-nine
+ service icmp
+object service thirty
+ service icmp 9 16
+object service thirty-one
+ description Except for IRC-based botnet C&C traffic
+ service tcp destination neq 6667
+object service thirty-two
+ description Numeric protocol
+ service 137
