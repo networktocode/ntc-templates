@@ -19,7 +19,7 @@ Start
   ^\[ETHER -> Continue.Record
   ^\[ETHER\s+GROUP\-${ETHER_GROUP}\s+PORT\-${ETHER_PORT}\]\s*$$
   ^description\s+:(\s+${DESCRIPTION})?\s*$$
-  ^status\s+:\s+(${STATUS_AUTO}\s+)?${STATUS_SPEED}\s+${STATUS_DUPLEX}\s+${STATUS_MDI}\s*$$ -> Continue
+  ^status\s+:\s+(${STATUS}\s+)?${STATUS_SPEED}\s+${STATUS_DUPLEX}\s+${STATUS_MDI}\s*$$
   ^status\s+:\s+${STATUS}\s*$$
   ^media\s+:\s+${MEDIA}s*$$
   ^flow\s+control\s+:\s+(-|send\s+${FLOW_CONTROL_SEND},\s+receive\s+${FLOW_CONTROL_RECEIVE})\s*$$
