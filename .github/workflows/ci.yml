@@ -82,7 +82,7 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        python-version: ["3.8", "3.9", "3.10"]
+        python-version: ["3.12"]
     runs-on: "ubuntu-20.04"
     env:
       PYTHON_VER: "${{ matrix.python-version }}"
@@ -118,7 +118,7 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        python-version: ["3.10"]
+        python-version: ["3.12"]
     env:
       PYTHON_VER: "${{ matrix.python-version }}"
     steps:
@@ -154,7 +154,7 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        python-version: ["3.8", "3.9", "3.10"]
+        python-version: ["3.12"]
     runs-on: "ubuntu-20.04"
     env:
       PYTHON_VER: "${{ matrix.python-version }}"
@@ -197,7 +197,7 @@ jobs:
       - name: "Set up Python"
         uses: "actions/setup-python@v4"
         with:
-          python-version: "3.9"
+          python-version: "3.12"
       - name: "Install Python Packages"
         run: "pip install poetry"
       - name: "Set env"
@@ -226,7 +226,7 @@ jobs:
       - name: "Set up Python"
         uses: "actions/setup-python@v4"
         with:
-          python-version: "3.9"
+          python-version: "3.12"
       - name: "Install Python Packages"
         run: "pip install poetry"
       - name: "Set env"

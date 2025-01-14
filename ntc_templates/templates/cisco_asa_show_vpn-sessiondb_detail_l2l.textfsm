@@ -72,7 +72,7 @@ Start
   ^. -> Error
 
 Connection
-  ^\s*Connection\s*:\s+${CONNECTION}\s*$$
+  ^\s*Connection\s*:(\s+${CONNECTION})?\s*$$
   ^\s*Index\s*:\s+${INDEX}\s+IP\s+Addr\s*:\s+${IP_ADDRESS}\s*$$
   ^\s*Protocol\s*:\s+${PROTOCOL}(?:\s+Encryption\s*:\s+${ENCRYPTION}|)\s*$$
   ^\s*Encryption\s*:\s+${ENCRYPTION}\s+Hashing\s*:\s+${HASHING}\s*$$

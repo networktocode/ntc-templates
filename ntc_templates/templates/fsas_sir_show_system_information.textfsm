@@ -1,0 +1,29 @@
+Value VERSION (\d+\.\d+)
+Value SERIAL (\d+)
+Value SYSTEM (.+?)
+Value FIRMWARE (\S+)
+Value CONFIG_FILE (\S+)
+Value STARTUP_TIME (.+?)
+Value CURRENT_TIME (.+?)
+Value FIRMWARE1_VERSION (\d+\.\d+)
+Value FIRMWARE2_VERSION (\d+\.\d+)
+
+Start
+  ^Current-time\s+:\s+${CURRENT_TIME}\s*$$
+  ^Startup-time\s+:\s+${STARTUP_TIME}\s*$$
+  ^System\s+:\s+${SYSTEM}\s*$$
+  ^Serial\s+No\.\s+:\s+${SERIAL}\s*$$
+  ^ROM\s+Ver\.\s+:\s+.+$$
+  ^Firm\s+Ver\.\s+:\s+V${VERSION}\s*.+$$
+  ^Running-firmware\s+:\s+${FIRMWARE}\s*$$
+  ^Firmware1\s+Ver\.\s+:\s+V${FIRMWARE1_VERSION}\s*.+$$
+  ^Firmware2\s+Ver\.\s+:\s+V${FIRMWARE2_VERSION}\s*.+$$
+  ^Security\s+Software\s+Ver\.\s+:\s+.+$$
+  ^Startup-config\s+:\s+\w+\s+\w+\s+\d+\s+[\d:]+\s+\d+\s+${CONFIG_FILE}\s*$$
+  ^Running-config\s+:\s+.+$$
+  ^MAC\s+:\s+.+$$
+  ^Memory\s+:\s+.+$$
+  ^USB\d?\s+:\s+.+$$
+  ^WWAN\d?\s+.+$$
+  ^\s*$$
+  ^. -> Error

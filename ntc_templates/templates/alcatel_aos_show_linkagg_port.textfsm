@@ -1,0 +1,15 @@
+Value INTERFACE (\S+)
+Value AGGREGATE_TYPE (\S+)
+Value SNMP_ID (\d+)
+Value STATUS (\S+)
+Value AGGREGATE (\S+)
+Value OPERATIONAL_STATUS (\S+)
+Value LINK_STATUS (\S+)
+Value PRIMARY (\S+)
+
+Start
+  ^\s*(?:Chassis\/)?Slot\/Port\s*Aggregate\s*SNMP\s*Id\s*Status\s*Agg\s*Oper\s*Link\s*Prim\s*$$
+  ^\s*-+
+  ^\s*${INTERFACE}\s*${AGGREGATE_TYPE}\s*${SNMP_ID}\s*${STATUS}\s*${AGGREGATE}\s*${OPERATIONAL_STATUS}\s*${LINK_STATUS}\s*${PRIMARY}\s*$$ -> Record
+  ^\s*$$
+  ^.*$$ -> Error

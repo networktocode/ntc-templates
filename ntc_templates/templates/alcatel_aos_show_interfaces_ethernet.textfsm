@@ -1,0 +1,82 @@
+Value PORT (\S+)
+Value STATUS (\S+)
+Value ADMIN_STATUS (\S+)
+Value PORT_DOWN_VIOLATION_REASON (.+?)
+Value LAST_TIME_LINK_CHANGED (.+?)
+Value NUMBER_OF_STATUS_CHANGE (\d+)
+Value PORT_TYPE (.+?)
+Value SFP_XFP (.+?)
+Value INTERFACE_TYPE (.+?)
+Value ETHERNET_POWER_POLICY (.+?)
+Value LINK_QUALITY (.+?)
+Value MAC_ADDRESS (.+?)
+Value BANDWIDTH (\d+)
+Value DUPLEX (\S+)
+Value AUTONEGOTIATION (.+?)
+Value LONG_FRAME_SIZE (\d+)
+Value INTER_FRAME_GAP (\d+)
+Value LOOPBACK_MODE (.+?)
+Value RX_BYTES_RECEIVED (\d+)
+Value RX_BROADCAST_FRAMES (\d+)
+Value RX_UNDERSIZE_FRAMES (\d+)
+Value RX_LOST_FRAMES (\d+)
+Value RX_CRC_ERROR_FRAMES (\d+)
+Value RX_UNICAST_FRAMES (\d+)
+Value RX_MULTICAST_FRAMES (\d+)
+Value RX_OVERSIZE_FRAMES (\d+)
+Value RX_ERROR_FRAMES (\d+)
+Value RX_ALIGNMENT_ERRORS (\d+)
+Value TX_BYTES_TRANSMITTED (\d+)
+Value TX_BROADCAST_FRAMES (\d+)
+Value TX_UNDERSIZE_FRAMES (\d+)
+Value TX_LOST_FRAMES (\d+)
+Value TX_ERROR_FRAMES (\d+)
+Value TX_UNICAST_FRAMES (\d+)
+Value TX_MULTICAST_FRAMES (\d+)
+Value TX_OVERSIZE_FRAMES (\d+)
+Value TX_COLLIDED_FRAMES (\d+)
+Value TX_COLLISIONS (\d+)
+Value TX_LATE_COLLISIONS (\d+)
+Value TX_EXCESSIVE_COLLISIONS (\d+)
+
+Start
+  ^\s*(Chassis\/)?Slot\/Port\s*(:\s+)?${PORT}(\s+:)?\s*$$
+  ^\s*Operational\s+Status\s*:\s+${STATUS},(?:\s+"(?:${ADMIN_STATUS})?")?\s*$$
+  ^\s*Port-Down\/Violation\s+Reason\s*:\s+${PORT_DOWN_VIOLATION_REASON},\s*$$
+  ^\s*Last\s+Time\s+Link\s+Changed\s*:\s+${LAST_TIME_LINK_CHANGED}\s*,\s*$$
+  ^\s*Number\s+of\s+Status\s+Change\s*:\s+${NUMBER_OF_STATUS_CHANGE},\s*$$
+  ^\s*Type\s*:\s+${PORT_TYPE},\s*$$
+  ^\s*(?:SFP\+?\/)+XFP\s*:\s+${SFP_XFP},\s*$$
+  ^\s*Interface\s+Type\s*:\s+${INTERFACE_TYPE},\s*$$
+  ^\s*EPP\s*:\s+${ETHERNET_POWER_POLICY},\s*$$
+  ^\s*Link-Quality\s*:\s+${LINK_QUALITY},\s*$$
+  ^\s*MAC\s+address\s*:\s+${MAC_ADDRESS},\s*$$
+  ^\s*Band[Ww]idth\s+\(Megabits\)\s*:\s+(-|${BANDWIDTH})\s*,\s+Duplex\s+:\s+(-|${DUPLEX})\s*,\s*$$
+  ^\s*Autonegotiation\s*:\s+\d+\s+\[(\s*${AUTONEGOTIATION}?\s*)\],\s*$$
+  ^\s*Long\s+Frame\s+Size\(Bytes\)\s*:\s+${LONG_FRAME_SIZE},\s*$$
+  ^\s*Inter\s+Frame\s+Gap\(Bytes\)\s*:\s+${INTER_FRAME_GAP},\s*$$
+  ^\s*loopback\s+mode\s*:\s+${LOOPBACK_MODE},\s*$$
+  ^\s*Rx\s*:\s*$$ -> RX_Table
+  ^\s*Tx\s*:\s*$$ -> TX_Table
+  ^\s*$$
+  ^.+ -> Error
+
+RX_Table
+  ^\s*Bytes\s+Received\s*:\s+${RX_BYTES_RECEIVED},\s+Unicast\s+Frames\s*:\s+${RX_UNICAST_FRAMES},\s*$$
+  ^\s*Broadcast\s+Frames\s*:\s+${RX_BROADCAST_FRAMES},\s+M-cast\s+Frames\s*:\s+${RX_MULTICAST_FRAMES},\s*$$
+  ^\s*UnderSize\s+Frames\s*:\s+${RX_UNDERSIZE_FRAMES},\s+OverSize\s+Frames\s*:\s+${RX_OVERSIZE_FRAMES},\s*$$
+  ^\s*Lost\s+Frames\s*:\s+${RX_LOST_FRAMES},\s+Error\s+Frames\s*:\s+${RX_ERROR_FRAMES},\s*$$
+  ^\s*CRC\s+Error\s+Frames\s*:\s+${RX_CRC_ERROR_FRAMES},\s+Alignments\s+Err\s*:\s+${RX_ALIGNMENT_ERRORS},\s*$$ -> Start
+  ^\s*$$
+  ^. -> Error
+
+TX_Table
+  ^\s*Bytes\s+Xmitted\s*:\s+${TX_BYTES_TRANSMITTED},\s+Unicast\s+Frames\s*:\s+${TX_UNICAST_FRAMES},\s*$$
+  ^\s*Broadcast\s+Frames\s*:\s+${TX_BROADCAST_FRAMES},\s+M-cast\s+Frames\s*:\s+${TX_MULTICAST_FRAMES},\s*$$
+  ^\s*UnderSize\s+Frames\s*:\s+${TX_UNDERSIZE_FRAMES},\s+OverSize\s+Frames\s*:\s+${TX_OVERSIZE_FRAMES},\s*$$
+  ^\s*Lost\s+Frames\s*:\s+${TX_LOST_FRAMES},\s+Collided\s+Frames\s*:\s+${TX_COLLIDED_FRAMES},\s*$$
+  ^\s*Error\s+Frames\s*:\s+${TX_ERROR_FRAMES}\s*$$ -> Record Start
+  ^\s*Error\s+Frames\s*:\s+${TX_ERROR_FRAMES}(?:,\s+Collisions\s*:\s+${TX_COLLISIONS},)?\s*$$
+  ^\s*Late\s+collisions\s*:\s+${TX_LATE_COLLISIONS},\s+Exc-Collisions\s*:\s+${TX_EXCESSIVE_COLLISIONS}\s*$$ -> Record Start
+  ^\s*$$
+  ^. -> Error

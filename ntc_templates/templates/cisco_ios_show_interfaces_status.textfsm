@@ -1,7 +1,7 @@
 Value PORT (\S+)
 Value NAME (.+?)
 Value STATUS (err-disabled|disabled|connected|notconnect|inactive|up|down|monitoring|suspended)
-Value VLAN_ID (\d+|trunk|routed|unassigned)
+Value VLAN_ID (\d+(,\d+)*|trunk|routed|unassigned|pvlan\s+prom)
 Value DUPLEX (\S+)
 Value SPEED (\S+)
 Value TYPE (.*)
@@ -21,7 +21,7 @@ Interfaces
   ^\s*${PORT}\s+is\s+${STATUS}\s+Port\s+mode\s+is\s+${FC_MODE}\s*$$ -> Record
   ^\s*${PORT}\s+is\s+${STATUS}\s+\(${TYPE}\)\s*$$ -> Record
   ^\s*${PORT}\s+${STATUS}\s+${VLAN_ID}\s+${DUPLEX}\s+${SPEED}\s*${TYPE}$$ -> Record
-  ^\s*${PORT}\s+${NAME}\s+${STATUS}:?\s+${VLAN_ID}\s+${DUPLEX}\s+${SPEED}\s*${TYPE}\s*$$ -> Record
+  ^\s*${PORT}\s+${NAME}\s+${STATUS}:?(\s+\S+)?\s+${VLAN_ID}\s+${DUPLEX}\s+${SPEED}\s*${TYPE}\s*$$ -> Record
   ^-+
   ^\s*$$
   ^. -> Error

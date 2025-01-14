@@ -1,0 +1,31 @@
+Value PORT ((\d+\/?)+)
+Value ADMIN_STATUS (\S+)
+Value AUTO_NEGOTIATION (\S+)
+Value DETECTED_SPEED (\d+)
+Value DETECTED_DUPLEX (\S+)
+Value DETECTED_HYBRID (\S+)
+Value DETECTED_PAUSE (\S+)
+Value DETECTED_FEC (\S+)
+Value CONFIGURED_SPEED (\S+)
+Value CONFIGURED_DUPLEX (\S+)
+Value CONFIGURED_HYBRID (\S+)
+Value CONFIGURED_PAUSE (\S+)
+Value CONFIGURED_FEC (\S+)
+Value LINK_TRAP (\S+)
+Value ENERGY_EFFICIENT_ETHERNET (\S+)
+
+Start
+  ^\s*-+\+
+  ^\s*${PORT}\s+${AUTO_NEGOTIATION}\s*(-|${DETECTED_SPEED})\s*(-|${DETECTED_DUPLEX})\s*(-|${DETECTED_HYBRID})\s*${CONFIGURED_SPEED}\s*${CONFIGURED_DUPLEX}\s*${CONFIGURED_HYBRID}\s*(-|${LINK_TRAP})\s*$$ -> Record
+  ^\s*${PORT}\s+${ADMIN_STATUS}\s+${AUTO_NEGOTIATION}\s+(-|${DETECTED_SPEED})\s+(-|${DETECTED_DUPLEX})\s+(-|${DETECTED_PAUSE})\s+(-|${DETECTED_FEC})\s+${CONFIGURED_SPEED}\s+${CONFIGURED_DUPLEX}\s+(-|${CONFIGURED_PAUSE})\s+${CONFIGURED_FEC}\s+(-|${LINK_TRAP})\s+${ENERGY_EFFICIENT_ETHERNET}\s*$$ -> Record
+  ^\s*(Chas/\s+)?DETECTED(-VALUES)?\s+CONFIGURED(-VALUES)?\s*$$
+  # R6 version
+  ^\s*Slot/\s+AutoNego\s+Speed\s+Duplex\s+Hybrid\s+Speed\s+Duplex\s+Hybrid\s+Trap\s*$$
+  ^\s*(\S+\s+\(Mbps\)\s+)+Mode\s+LinkUpDown\s*$$
+  # R8 version
+  ^\s*Slot/\s+Admin\s+Auto\s+Speed\s+Duplex\s+Pause\s+FEC\s+Speed\s+Duplex\s+Pause\s+FEC\s+Link\s*$$
+  ^\s*Port\s+Status\s+(\S+\s+\(Mbps\)\s+)+Cfg\s+Trap\s+EEE\s*$$
+  #
+  ^\s*F[A-Z]\s+-\s+Forced
+  ^\s*$$
+  ^.*$$ -> Error

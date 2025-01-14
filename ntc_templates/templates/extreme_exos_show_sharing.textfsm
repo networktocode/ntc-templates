@@ -10,7 +10,7 @@ Value List LINK_UP_TRANSITIONS (\d+)
 Start
   ^\s*Load\s+Sharing\s+Monitor\s*$$
   ^\s*Config\s+Current\s+Agg\s+Ld\s+Share\s+Ld\s+Share\s+Agg\s+Link\s+Link\s+Up\s*$$ -> SharingTable
-  ^\s*
+  ^\s*$$
   ^. -> Error
 
 SharingTable
@@ -25,5 +25,5 @@ SharingTable
   ^\s*\(custom\)\s+User-selected\s+address-based\s+configuration\s*$$
   ^\s*Custom\s+Algorithm\s+Configuration:\s+.*\s*$$
   ^\s*Number\s+of\s+load\s+sharing\s+trunks:\s+\d+\s*$$
-  ^\s*
+  ^\s*$$
   ^. -> Error

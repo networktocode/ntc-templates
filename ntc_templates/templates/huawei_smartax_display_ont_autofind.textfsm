@@ -30,5 +30,7 @@ Start
   ^\s*Ont\s+Equipment\s+SN\s+:\s+${ONT_EQUIPMENT_SERIAL_NUMBER}
   ^\s*Ont\s+autofind\s+time\s+:\s+${ONT_AUTOFIND_TIME}
   ^\s*Multi\s+channel\s+:\s+${MULTI_CHANNEL} -> Record
-  ^\s*
+  ^\s*-+\s*$$
+  ^\s*(Loid|Checkcode)\s*:
+  ^\s*$$
   ^. -> Error

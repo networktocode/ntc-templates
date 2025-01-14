@@ -48,16 +48,16 @@ Start
   ^\s*\(t\)\s+Tentative\s+address,\s+\(T\)\s+Time\s+Stamp\s+Reply\s+Enabled\s*$$
   ^\s*\(u\)\s+Send\s+Unreachables\s+Enabled,\s+\(U\)\s+Interface\s+Up\s*$$
   ^\s*\(v\)\s+VRRP\s+Enabled,\s+\(X\)\s+Send\s+Time\s+Exceeded\s+Enabled\s*$$
-  ^\s*
+  ^\s*$$
   ^. -> Error
 
 Irdp
   ^\s*Advertisement\s+Address:\s+${IRDP_ADVERTISEMENT_ADDRESS}\s+Maximum\s+Interval:\s+${IRDP_MAX_INTERVAL}\s*$$
   ^\s*Minimum\s+Interval:\s+${IRDP_MIN_INTERVAL}\s+Lifetime:\s+${IRDP_LIFETIME}\s+Preference:\s+${IRDP_PREFERENCE}\s*$$
-  ^\s* -> Start
+  ^\s*$$ -> Start
   ^. -> Error
 
 IpAdresses
   ^\s*${INTERFACE}\s+${IP}\s+${SUBNET}\s+${FLAGS}\s+${NSIA}\s*$$
-  ^\s* -> Start
+  ^\s*$$ -> Start
   ^. -> Error

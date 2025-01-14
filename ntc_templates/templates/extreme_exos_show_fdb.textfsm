@@ -1,0 +1,23 @@
+Value MAC_ADDRESS (\S+)
+Value VLAN_NAME (\S+)
+Value VLAN_ID (\d+)
+Value AGE (\d+)
+Value INTERFACE (\S+(\s+\S+)*)
+
+Start
+  ^MAC\s+VLAN\s+Name\s*\(\s*Tag\s*\)\s+Age\s+Flags\s+Port\s+\/\s+Virtual\s+Port\s+List -> Start_record
+  ^. -> Error
+
+Start_record
+  ^\s*-+\s*$$
+  ^${MAC_ADDRESS}\s+${VLAN_NAME}\(0*${VLAN_ID}\)\s+0*${AGE}\D+${INTERFACE}\s*$$ -> Record
+  ^\s*Flags\s+:
+  ^\s*x\s+-\s+IPX
+  ^\s*b\s+-\s+Ingress\s+Blackhole
+  ^\s*D\s+-\s+drop\s+packet
+  ^\s*S\s+-\s+Software\s+Controlled\s+Deletion
+  ^\s*X\s+-\s+VXLAN
+  ^\s*Total:
+  ^\s*FDB\s+Aging\s+time:
+  ^\s*$$
+  ^. -> Error
