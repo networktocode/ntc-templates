@@ -1,26 +1,30 @@
-object-group service one
- description TEST ONE
- service-object object alpha 
- service-object object bravo 
- service-object icmp echo 0
- service-object icmp echo
-object-group service two
- description TEST TWO
- service-object object charlie
- service-object tcp destination eq ftp 
- service-object tcp destination eq 5666 
- service-object icmp
- service-object 137 
-object-group service three
- description TEST THREE
- service-object udp destination range 48129 48137 
- service-object udp source range 48129 48137 
- service-object udp source eq 48129 destination eq 48137 
- service-object udp source range 48129 48137 destination eq 48137 
- service-object udp source gt 1023 destination lt 40000 
-object-group service four
- description TEST FOUR
- group-object three
-object-group service five tcp
- port-object eq 445
- port-object eq netbios-ssn
+Value Filldown NAME (\S+)
+Value Filldown GRP_PROTOCOL (\S+)
+Value Filldown DESCRIPTION (.+?)
+Value SVC_OBJ_NAME (\S+)
+Value SVC_PROTOCOL (\S+)
+Value ICMP_TYPE (\S+)
+Value ICMP_CODE (\S+)
+Value SRC_OPERATOR (\S+)
+Value SRC_PORT_START (\S+)
+Value SRC_PORT_END (\S+)
+Value DST_OPERATOR (\S+)
+Value DST_PORT_START (\S+)
+Value DST_PORT_END (\S+)
+Value PORT_OPERATOR (\S+)
+Value PORT_START (\S+)
+Value PORT_END (\S+)
+Value GRP_OBJ_NAME (\S+)
+
+Start
+  ^object-group -> Continue.Clearall
+  ^object-group\s+service\s+${NAME}(\s+${GRP_PROTOCOL})?\s*$$
+  ^\s+description:?\s+${DESCRIPTION}\s*$$
+  ^\s+service-object\s+object\s+${SVC_OBJ_NAME}\s*$$ -> Record
+  ^\s+service-object\s+${SVC_PROTOCOL}(\s+${ICMP_TYPE}(\s+${ICMP_CODE})?)?\s*$$ -> Record
+  ^\s+service-object\s+${SVC_PROTOCOL}(\s+source\s+${SRC_OPERATOR}\s+${SRC_PORT_START}(\s+${SRC_PORT_END})?)?(\s+destination\s+${DST_OPERATOR}\s+${DST_PORT_START}(\s+${DST_PORT_END})?)?\s*$$ -> Record
+  ^\s+port-object\s+${PORT_OPERATOR}\s+${PORT_START}(\s+${PORT_END})?\s*$$ -> Record
+  ^\s+group-object\s+${GRP_OBJ_NAME}\s*$$ -> Record
+  ^. -> Error "Did not match any lines"
+
+EOF
