@@ -20,7 +20,7 @@ TYPE1
   ^node:\s+${NODE}
   ^top\s+
   ^Tasks:\s+
-  ^%Cpu\s+
+  ^%Cpu\(s\):\s+
   ^${MEMORY_FORMAT}iB\s+M(em|EMORY)\s+:\s+${MEMORY_ACTIVE}\s+total,\s+${MEMORY_FREE}\s+free,\s+${MEMORY_USED}\s+used,\s+${MEMORY_BUFFER}\s+buff/cache\s*
   ^${SWAP_FORMAT}iB\s+Swap:\s+${SWAP_TOTAL}\s+total,\s+${SWAP_FREE}\s+free,\s+${SWAP_USED}\s+used\.\s+${SWAP_AVAIL}\s+avail\s+M(em|EMORY)\s* -> Record
   ^{(master|backup)}\s*$$
