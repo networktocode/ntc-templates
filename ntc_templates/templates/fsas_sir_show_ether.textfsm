@@ -1,0 +1,29 @@
+Value Required ETHER_GROUP (\d+)
+Value Required ETHER_PORT (\d+)
+Value DESCRIPTION (.+?)
+Value STATUS (.+?)
+Value STATUS_SPEED (\d+[A-Z])
+Value STATUS_DUPLEX (Full|Half)
+Value STATUS_MDI (MDI(-X)?)
+Value MEDIA (\S+)
+Value FLOW_CONTROL_SEND (\w+)
+Value FLOW_CONTROL_RECEIVE (\w+)
+Value TYPE (.+?)
+Value SINCE (.+?)
+Value CONFIG_MODE (\S+)
+Value CONFIG_MDI (\S+)
+Value CONFIG_MEDIA (\S+)
+
+Start
+  ^\[ETHER -> Continue.Record
+  ^\[ETHER\s+GROUP\-${ETHER_GROUP}\s+PORT\-${ETHER_PORT}\]\s*$$
+  ^description\s+:(\s+${DESCRIPTION})?\s*$$
+  ^status\s+:\s+(${STATUS}\s+)?${STATUS_SPEED}\s+${STATUS_DUPLEX}\s+${STATUS_MDI}\s*$$
+  ^status\s+:\s+${STATUS}\s*$$
+  ^media\s+:\s+${MEDIA}s*$$
+  ^flow\s+control\s+:\s+(-|send\s+${FLOW_CONTROL_SEND},\s+receive\s+${FLOW_CONTROL_RECEIVE})\s*$$
+  ^type\s+:\s+${TYPE}\s*$$
+  ^since\s+:\s+${SINCE}\s*$$
+  ^config\s+:\s+mode\(${CONFIG_MODE}\),\s+mdi\(${CONFIG_MDI}\),\s+media\(${CONFIG_MEDIA}\)\s*$$
+  ^\s*$$
+  ^. -> Error
