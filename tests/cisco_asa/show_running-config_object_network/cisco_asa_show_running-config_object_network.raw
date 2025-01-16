@@ -25,3 +25,7 @@ object network internal-ipv6-subnet
  subnet fd00::/8
 object network fqdn_test
  fqdn google.com
+object network fqdn_test_v4
+ fqdn v4 example.com
+object network fqdn_test_v6
+ fqdn v6 example.com

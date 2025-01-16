@@ -1,0 +1,16 @@
+---
+parsed_sample:
+  - access_list: "INSIDE_acl"
+    interface: "inside"
+  - access_list: "dmz1_acl"
+    interface: "dmz1"
+  - access_list: "dmz2_acl"
+    interface: "dmz2"
+  - access_list: "dmz3_acl"
+    interface: "dmz3"
+  - access_list: "dmz4"
+    interface: "dmz4"
+  - access_list: "dmz5"
+    interface: "dmz5"
+  - access_list: "OUTSIDE_acl"
+    interface: "outside"

@@ -1,0 +1,23 @@
+Value MEMORY_ACTIVE (\S+)
+Value MEMORY_INACTIVE (\S+)
+Value MEMORY_WIRED (\S+)
+Value MEMORY_BUFFER (\S+)
+Value MEMORY_FREE (\S+)
+Value SWAP_TOTAL (\S+)
+Value SWAP_FREE (\S+)
+
+Start
+  ^\s*last\s+pid
+  ^\s*\d+\s+threads:
+  ^\s*CPU:
+  ^\s*\d+\s*processes:
+  ^\s*Mem:\s*${MEMORY_ACTIVE}\s*Active,\s*${MEMORY_INACTIVE}\s*Inact,\s*${MEMORY_WIRED}\s*Wired,\s*${MEMORY_BUFFER}\s*Buf,\s*${MEMORY_FREE}\s*Free
+  ^\s*Mem:\s*${MEMORY_ACTIVE}\s*Active,\s*${MEMORY_INACTIVE}\s*Inact,\s*${MEMORY_WIRED}\s*Wired,\s*\d*\D*\s*Cache,\s*${MEMORY_BUFFER}\s*Buf,\s*${MEMORY_FREE}\s*Free
+  ^\s*Mem:\s*${MEMORY_ACTIVE}\s*Active,\s*${MEMORY_INACTIVE}\s*Inact,\s*\d*\D*\s*Laundry,\s*${MEMORY_WIRED}\s*Wired,\s*${MEMORY_BUFFER}\s*Buf,\s*${MEMORY_FREE}\s*Free
+  ^\s*Swap:\s*${SWAP_TOTAL}\s*Total,\s*${SWAP_FREE}\s*Free -> Record
+  ^\s*Swap:\s*${SWAP_TOTAL}\s*Total,\s*\d*\D*\s*Used,\s*${SWAP_FREE}\s*Free -> Record
+  ^\s*Swap:\s*${SWAP_TOTAL}\s*Total,\s*\d*\D*\s*Used,\s*${SWAP_FREE}\s*Free,\s*\d*%\s*Inuse -> Record
+  ^\s*Swap: -> Record
+  ^\s*PID\s+USERNAME\s+PRI\s+NICE\s+SIZE\s+RES\s+STATE\s+C\s+TIME\s+WCPU\s+COMMAND -> EOF
+  ^\s*$$
+  ^. -> Error

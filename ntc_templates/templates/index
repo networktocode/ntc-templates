@@ -11,7 +11,7 @@
 #
 Template, Hostname, Platform, Command
 
-alcatel_aos_show_interfaces_ethernet.textfsm, .*, alcatel_aos, sh[[ow]] (in[[terfaces]] e[[thernet]]|in[[terfaces]])$$
+alcatel_aos_show_interfaces_ethernet.textfsm, .*, alcatel_aos, sh[[ow]] (in[[terfaces]] e[[thernet]]|in[[terfaces]])$
 alcatel_aos_show_lldp_remote-system.textfsm, .*, alcatel_aos, sh[[ow]] lldp r[[emote-system]]
 alcatel_aos_show_interfaces_status.textfsm, .*, alcatel_aos, sh[[ow]] in[[terfaces]] st[[atus]]
 alcatel_aos_show_mac-address-table.textfsm, .*, alcatel_aos, sh[[ow]] mac-(a[[ddress-table]]|l[[earning]])
@@ -203,7 +203,9 @@ cisco_apic_fabric_show_vlan_extended.textfsm, .*, cisco_apic, fabric sh[[ow]] vl
 cisco_asa_show_module.textfsm:cisco_asa_show_module_details.textfsm:cisco_asa_show_module_status.textfsm, .*, cisco_asa, sh[[ow]] modu[[le]]
 cisco_asa_show_running-config_all_crypto_map.textfsm, .*, cisco_asa, sh[[ow]] ru[[nning-config]] all cr[[ypto]] m[[ap]]
 cisco_asa_show_running-config_object_network.textfsm, .*, cisco_asa, sh[[ow]] ru[[nning-config]] o[[bject]] n[[etwork]]
+cisco_asa_show_running-config_object_service.textfsm, .*, cisco_asa, sh[[ow]] ru[[nning-config]] o[[bject]] s[[ervice]]
 cisco_asa_show_asp_table_vpn-context_detail.textfsm, .*, cisco_asa, sh[[ow]] asp t[[able]] vpn-co[[ntext]] d[[etail]]
+cisco_asa_show_running-config_access-group.textfsm, .*, cisco_asa, sh[[ow]] ru[[nning-config]] access-gr[[oup]]
 cisco_asa_show_running-config_crypto_ikev1.textfsm, .*, cisco_asa, sh[[ow]] ru[[nning-config]] cr[[ypto]] ikev1
 cisco_asa_show_running-config_tunnel-group.textfsm, .*, cisco_asa, sh[[ow]] ru[[nning-config]] tu[[nnel-group]]
 cisco_asa_show_running-config_crypto_map.textfsm, .*, cisco_asa, sh[[ow]] ru[[nning-config]] cr[[ypto]] m[[ap]]
@@ -240,6 +242,8 @@ cisco_asa_ping.textfsm, .*, cisco_(asa|ftd), ping
 cisco_asa_dir.textfsm, .*, cisco_asa, dir
 
 cisco_ftd_show_vpn-sessiondb_anyconnect.textfsm, .*, cisco_ftd, sh[[ow]] vpn-[[sessiondb]] a[[nyconnect]]
+
+cisco_fxos_show_system_firmware.textfsm, .*, cisco_fxos, sh[[ow]] sy[[stem]] fi[[rmware]]
 
 cisco_ios_show_module.textfsm:cisco_ios_show_module_status.textfsm:cisco_ios_show_module_submodule.textfsm:cisco_ios_show_module_online_diag.textfsm, .*, cisco_ios, sh[[ow]] mod[[ule]]
 cisco_ios_show_switch_detail.textfsm:cisco_ios_show_switch_detail_stack_ports.textfsm, .*, cisco_ios, sh[[ow]] sw[[itch]] d[[etail]]
@@ -340,7 +344,7 @@ cisco_ios_show_nve_peers.textfsm, .*, cisco_ios, sh[[ow]] nv[[e]] p[[eers]]
 cisco_ios_show_route-map.textfsm, .*, cisco_ios, sh[[ow]] route-m[[ap]]
 cisco_ios_show_snmp_user.textfsm, .*, cisco_ios, sh[[ow]] sn[[mp]] u[[ser]]
 cisco_ios_show_ip_route.textfsm, .*, cisco_ios, sh[[ow]] ip r[[oute]]
-cisco_ios_show_platform.textfsm, .*, cisco_ios, sh[[ow]] plat[[form]] 
+cisco_ios_show_platform.textfsm, .*, cisco_ios, sh[[ow]] plat[[form]]
 cisco_ios_show_vrrp_all.textfsm, .*, cisco_ios, sh[[ow]] vrr[[p]] a[[ll]]
 cisco_ios_show_aliases.textfsm,  .*, cisco_ios, sh[[ow]] alia[[ses]]
 cisco_ios_show_archive.textfsm,  .*, cisco_ios, sh[[ow]] arc[[hive]]
@@ -629,6 +633,9 @@ fortinet_execute_date.textfsm, .*, fortinet, exec[[ute]] da[[te]]
 fortinet_execute_ping.textfsm, .*, fortinet, exec[[ute]] ping
 fortinet_execute_time.textfsm, .*, fortinet, exec[[ute]] ti[[me]]
 
+fsas_sir_show_system_information.textfsm, .*, fsas_sir, sh[[ow]] sys[[tem]] i[[nformation]]
+fsas_sir_show_ether.textfsm, .*, fsas_sir, sh[[ow]] eth[[er]]
+
 hp_comware_display_lldp_neighbor-information_verbose.textfsm, .*, hp_comware, di[[splay]] ll[[dp]] n[[eighbor-information]] v[[erbose]]
 hp_comware_display_lldp_neighbor-information_list.textfsm, .*, hp_comware, di[[splay]] ll[[dp]] n[[eighbor-information]] l[[ist]]
 hp_comware_display_ip_vpn-instance_instance-name.textfsm, .*, hp_comware, di[[splay]] ip vpn[[-instance]] in[[instance-name]]
@@ -720,7 +727,9 @@ ipinfusion_ocnos_show_lldp_table.textfsm, .*, ipinfusion_ocnos, show ll[[dp]] t[
 
 juniper_junos_show_chassis_cluster_interfaces.textfsm, .*, juniper_junos, sh[[ow]] ch[[assis]] c[[luster]] i[[nterface]]
 juniper_junos_show_ethernet-switching_table.textfsm, .*, juniper_junos, sh[[ow]] et[[hernet-switching]] t[[able]]
+juniper_junos_show_system_processes_summary.textfsm, .*, juniper_junos, sh[[ow]] sys[[tem]] proc[[esses]] sum[[mary]]
 juniper_junos_show_chassis_cluster_status.textfsm, .*, juniper_junos, sh[[ow]] ch[[assis]] c[[luster]] s[[tatus]]
+juniper_junos_show_system_processes_brief.textfsm, .*, juniper_junos, show[[ow]] s[[ystem]] p[[rocesses]] b[[rief]]
 juniper_junos_show_chassis_firmware.textfsm, .*, juniper_junos, sh[[ow]] ch[[assis]] fi[[rmware]]
 juniper_junos_show_chassis_hardware.textfsm, .*, juniper_junos, sh[[ow]] ch[[assis]] ha[[ardware]]
 juniper_junos_show_lacp_interfaces.textfsm, .*, juniper_junos, sh[[ow]] la[[cp]] i[[nterfaces]]

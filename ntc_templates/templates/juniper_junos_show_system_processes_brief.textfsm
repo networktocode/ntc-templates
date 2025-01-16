@@ -1,0 +1,22 @@
+Value NODE (\S+)
+Value MEMORY_FORMAT (\w)
+Value SWAP_FORMAT (\w)
+Value MEMORY_ACTIVE (\S+)
+Value MEMORY_FREE (\S+)
+Value MEMORY_USED (\S+)
+Value MEMORY_BUFFER (\S+)
+Value SWAP_TOTAL (\S+)
+Value SWAP_FREE (\S+)
+Value SWAP_USED (\S+)
+Value SWAP_AVAIL (\S+)
+
+Start
+  ^-+\s*$$
+  ^node:\s*${NODE}
+  ^top\s*
+  ^Tasks:\s*
+  ^\%Cpu
+  ^${MEMORY_FORMAT}iB\s+(Mem|MEMORY)\s+:\s+${MEMORY_ACTIVE}\s+total,\s+${MEMORY_FREE}\s+free,\s+${MEMORY_USED}\s+used,\s+${MEMORY_BUFFER}\s+buff/cache\s*
+  ^${SWAP_FORMAT}iB\s+Swap:\s+${SWAP_TOTAL}\s+total,\s+${SWAP_FREE}\s+free,\s+${SWAP_USED}\s+used\.\s+${SWAP_AVAIL}\s+avail\s+(Mem|MEMORY)\s* -> Record
+  ^\s*$$
+  ^. -> Error

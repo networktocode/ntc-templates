@@ -1,0 +1,7 @@
+access-group INSIDE_acl in interface inside
+access-group dmz1_acl in interface dmz1
+access-group dmz2_acl in interface dmz2
+access-group dmz3_acl in interface dmz3
+access-group dmz4 in interface dmz4
+access-group dmz5 in interface dmz5
+access-group OUTSIDE_acl in interface outside

@@ -1,0 +1,89 @@
+object service one
+ description test one
+ service tcp source eq 8000 destination eq 9000
+object service two
+ description test two
+ service udp source eq 8000 destination gt 9000
+object service three
+ description test three
+ service tcp source eq 8000 destination lt 9000
+object service four
+ description test four
+ service tcp source eq 8000 destination range 9000 9999
+object service five
+ description test five
+ service tcp source gt 8000 destination eq 9000
+object service six
+ description test six
+ service udp source gt 8000 destination gt 9000
+object service seven
+ description test seven
+ service tcp source gt 8000 destination lt 9000
+object service eight
+ description test eight
+ service tcp source gt 8000 destination range 9000 9999
+object service nine
+ description test nine
+ service tcp source lt 8000 destination eq 9000
+object service ten
+ description test ten
+ service udp source lt 8000 destination gt 9000
+object service eleven
+ description test eleven
+ service tcp source lt 8000 destination lt 9000
+object service twelve
+ description test twelve
+ service tcp source lt 8000 destination range 9000 9999
+object service thirteen
+ description test thirteen
+ service tcp source range 8000 8999 destination eq 9000
+object service fourteen
+ description test fourteen
+ service udp source range 8000 8999 destination gt 9000
+object service fifteen
+ description test fifteen
+ service tcp source range 8000 8999 destination lt 9000
+object service sixteen
+ description test sixteen
+ service tcp source range 8000 8999 destination range 9000 9999
+object service seventeen
+ description test seventeen
+ service tcp source eq 8000
+object service eighteen
+ description test eighteen
+ service tcp source gt 8000
+object service nineteen
+ description test nineteen
+ service udp source lt 8000
+object service twenty
+ description test twenty
+ service tcp source range 8000 8999
+object service twenty-one
+ description test twenty-one
+ service tcp destination eq 8000
+object service twenty-two
+ description test twenty-two
+ service tcp destination gt 8000
+object service twenty-three
+ description test twenty-three
+ service tcp destination lt 8000
+object service twenty-four
+ service udp destination range 8000 8999
+object service twenty-five
+ service tcp source range 1 1024 destination eq https
+object service twenty-six
+ service tcp destination eq http
+object service twenty-seven
+ service tcp source eq ssh
+object service twenty-eight
+ service icmp echo
+object service twenty-nine
+ service icmp
+object service thirty
+ service icmp 9 16
+object service thirty-one
+ description Except for IRC-based botnet C&C traffic
+ service tcp destination neq 6667
+object service thirty-two
+ description Numeric protocol
+ service 137

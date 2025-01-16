@@ -1,0 +1,44 @@
+[ETHER GROUP-1 PORT-1]
+description     : __@@foo
+status          : 100M Full MDI
+media           : Metal
+flow control    : send off, receive on
+type            : Normal
+since           : Feb 16 21:28:21 2024 
+config          : mode(100M), mdi(mdi), media(-)
+
+[ETHER GROUP-2 PORT-1]
+description     :
+status          : auto 1000M Full MDI
+media           : Metal
+flow control    : send off, receive on
+type            : Backup (group 1, master)
+since           : Feb 16 21:31:40 2024
+config          : mode(auto), mdi(auto), media(-)
+
+[ETHER GROUP-2 PORT-2]
+description     :
+status          : auto 100M Half MDI-X
+media           : Metal
+flow control    : send off, receive off
+type            : Normal
+since           : Feb 16 21:28:19 2024
+config          : mode(auto), mdi(auto), media(-)
+
+[ETHER GROUP-2 PORT-3]
+description     : ##backup_port##
+status          : offline (backup)
+media           : -
+flow control    : -
+type            : Backup (group 1, backup)
+since           : Feb 16 21:36:55 2024
+config          : mode(auto), mdi(auto), media(-)
+
+[ETHER GROUP-2 PORT-4]
+description     :
+status          : disable
+media           : -
+flow control    : -
+type            : Normal
+since           : Feb 16 21:22:33 2024
+config          : mode(auto), mdi(auto), media(-)
