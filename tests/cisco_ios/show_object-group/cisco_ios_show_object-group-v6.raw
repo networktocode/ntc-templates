@@ -1,0 +1,8 @@
+V6-Network object group TEST-v6-obj
+ host 2001:db8::1:1111
+ host 2001:db8::2:2222
+ 2001:db8:111:1::/48
+ 2001:db8:222:2::/48
+V6-Service object group TEST-v6-icmp
+ icmp echo-request
+ icmp echo-reply
