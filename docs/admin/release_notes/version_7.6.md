@@ -1,0 +1,43 @@
+## [7.6.0](https://github.com/networktocode/ntc-templates/tree/7.6.0) (2025-01-15)
+
+[Full Changelog](https://github.com/networktocode/ntc-templates/compare/v7.5.0...7.6.0)
+
+**Closed issues:**
+
+- Create cisco\_asa\_show\_running-config\_object\_service [\#1968](https://github.com/networktocode/ntc-templates/issues/1968)
+- Create cisco\_asa\_show\_running-config\_access-group [\#1959](https://github.com/networktocode/ntc-templates/issues/1959)
+- cisco\_ios\_show\_lldp\_neighbors\_detail.textfsm: Missing validation for 'Local Intf service instance:' line. [\#1954](https://github.com/networktocode/ntc-templates/issues/1954)
+- hp\_comware\_display\_interface.textfsm fails on SPEED value for Management Interfaces due to "space" [\#1953](https://github.com/networktocode/ntc-templates/issues/1953)
+- cisco\_ios\_show\_interfaces\_status.textfsm throwing error when status has additional text [\#1938](https://github.com/networktocode/ntc-templates/issues/1938)
+
+**Merged pull requests:**
+
+- Add new template for Fsas Si-R `show ether` [\#1971](https://github.com/networktocode/ntc-templates/pull/1971) ([caribouHY](https://github.com/caribouHY))
+- Create cisco\_asa\_show\_running-config\_object\_service [\#1970](https://github.com/networktocode/ntc-templates/pull/1970) ([wollmannbruno](https://github.com/wollmannbruno))
+- Added template support for cisco\_fxos show system firmware [\#1967](https://github.com/networktocode/ntc-templates/pull/1967) ([manofcolombia](https://github.com/manofcolombia))
+- Augment and simplify regexes in alcatel\_aos\_sh\_int\_ethernet [\#1966](https://github.com/networktocode/ntc-templates/pull/1966) ([mjbear](https://github.com/mjbear))
+- adding juniper\_junos\_show\_system\_processes\_summary.textfsm support  [\#1965](https://github.com/networktocode/ntc-templates/pull/1965) ([jmcgill298](https://github.com/jmcgill298))
+- Create cisco\_asa\_show\_running-config\_access-group [\#1962](https://github.com/networktocode/ntc-templates/pull/1962) ([wollmannbruno](https://github.com/wollmannbruno))
+- Update ci.yml [\#1961](https://github.com/networktocode/ntc-templates/pull/1961) ([jmcgill298](https://github.com/jmcgill298))
+- Update cisco\_ios\_show\_ip\_interface\_brief [\#1958](https://github.com/networktocode/ntc-templates/pull/1958) ([averhaven](https://github.com/averhaven))
+- Added support for capturing the "Local Intf service instance" field in the template. [\#1957](https://github.com/networktocode/ntc-templates/pull/1957) ([RandyRozo](https://github.com/RandyRozo))
+- Add Fsas Si-R show system information template [\#1956](https://github.com/networktocode/ntc-templates/pull/1956) ([caribouHY](https://github.com/caribouHY))
+- Handle trailing space after mode in HP Comware display interface [\#1955](https://github.com/networktocode/ntc-templates/pull/1955) ([mjbear](https://github.com/mjbear))
+- Update cisco\_asa\_show\_running-config\_object\_network.textfsm [\#1952](https://github.com/networktocode/ntc-templates/pull/1952) ([ppisnjak](https://github.com/ppisnjak))
+- Add IPv6 network and service group support to IOS show object-group [\#1951](https://github.com/networktocode/ntc-templates/pull/1951) ([mjbear](https://github.com/mjbear))
+- Fix ios sh int status private vlan \(pvlan\) bug [\#1948](https://github.com/networktocode/ntc-templates/pull/1948) ([mjbear](https://github.com/mjbear))
+- Add new templates for Alcatel AOS: `show interfaces ethernet` [\#1946](https://github.com/networktocode/ntc-templates/pull/1946) ([evilmonkey19](https://github.com/evilmonkey19))
+- Bump jinja2 from 3.1.3 to 3.1.5 [\#1945](https://github.com/networktocode/ntc-templates/pull/1945) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Huawei smartax display ont info summary [\#1944](https://github.com/networktocode/ntc-templates/pull/1944) ([evilmonkey19](https://github.com/evilmonkey19))
+- Updating template for Huawei SmartAX: `display ont info summary ont` [\#1943](https://github.com/networktocode/ntc-templates/pull/1943) ([evilmonkey19](https://github.com/evilmonkey19))
+- Updated Aruba AOSCX show\_vsf\_detail with additional values [\#1942](https://github.com/networktocode/ntc-templates/pull/1942) ([ritkit](https://github.com/ritkit))
+- status regex includes non-whitespace [\#1941](https://github.com/networktocode/ntc-templates/pull/1941) ([tfchristie-wi](https://github.com/tfchristie-wi))
+- Update template Alcatel AOS: `show mac-address-table` [\#1940](https://github.com/networktocode/ntc-templates/pull/1940) ([evilmonkey19](https://github.com/evilmonkey19))
+- Update template Alcatel AOS: `show interfaces port` [\#1939](https://github.com/networktocode/ntc-templates/pull/1939) ([evilmonkey19](https://github.com/evilmonkey19))
+- Alcatel aos show linkagg port [\#1937](https://github.com/networktocode/ntc-templates/pull/1937) ([evilmonkey19](https://github.com/evilmonkey19))
+- Adding template for Alcatel AOS \(only R8\): `show interfaces alias` [\#1936](https://github.com/networktocode/ntc-templates/pull/1936) ([evilmonkey19](https://github.com/evilmonkey19))
+- Fixing template for alcatel aos to support R8.9: `show mac-address-table` [\#1935](https://github.com/networktocode/ntc-templates/pull/1935) ([evilmonkey19](https://github.com/evilmonkey19))
+- Adding new command on Alcatel AOS: `show linkagg alias` [\#1934](https://github.com/networktocode/ntc-templates/pull/1934) ([evilmonkey19](https://github.com/evilmonkey19))
+- New template for Alcatel AOS: `show linkagg port` [\#1933](https://github.com/networktocode/ntc-templates/pull/1933) ([evilmonkey19](https://github.com/evilmonkey19))
+- adding juniper\_junos\_show\_system\_processes\_brief.textfsm support [\#1922](https://github.com/networktocode/ntc-templates/pull/1922) ([jnicholson56](https://github.com/jnicholson56))
+- Added description in cisco\_ios\_show\_ip\_bgp\_vpnv4\_all\_neighbors [\#1906](https://github.com/networktocode/ntc-templates/pull/1906) ([0lesen](https://github.com/0lesen))

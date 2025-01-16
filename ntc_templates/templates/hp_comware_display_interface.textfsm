@@ -34,7 +34,7 @@ Start
   ^\s*Internet\s+[Aa]ddress:\s+${IP_ADDRESS}\s+\([Ss]ub\)
   ^\s*IP\s+[Pp]acket\s+[Ff]rame\s+[Tt]ype\s*:\s*[^,]+,\s+[Hh]ardware\s+[Aa]ddress:\s+${HW_ADDRESS}
   ^\s*IPv6\s+[Pp]acket\s+[Ff]rame\s+[Tt]ype\s*:\s*[^,]+,\s+[Hh]ardware\s+[Aa]ddress:\s+${HW_ADDRESS}
-  ^\s*${SPEED}\s+mode,\s+${DUPLEX}\s+mode
+  ^\s*${SPEED}\s+mode\s*,\s+${DUPLEX}\s+mode
   ^\s*${SPEED},\s+${DUPLEX},\s+link\s+type
   ^\s*PVID:\s+${VLAN_NATIVE}
   ^\s*Port\s+link-type:\s+${PORT_LINK_TYPE}
@@ -83,7 +83,7 @@ Start
   ^\s{14,}(?:\s+[^,]+,){18}\s+${VLAN_PASSING},* -> Continue
   ^\s{14,}(?:\s+[^,]+,){19}\s+${VLAN_PASSING},* -> Continue
   ^\s{14,}(?:\s+[^,]+,){20}\s+${VLAN_PASSING},* -> Continue
-  # End od VLAN Passing
+  # End of VLAN Passing
   ^\s+VLAN\s+[Pp]assing\s*:
   ^\s{14,}
   # Trunk - Permitted VLANs (parsing multiple times with Continue)
@@ -130,7 +130,7 @@ Start
   ^\s{14,}(?:\s+[^,]+,){18}\s+${VLAN_PERMITTED},* -> Continue
   ^\s{14,}(?:\s+[^,]+,){19}\s+${VLAN_PERMITTED},* -> Continue
   ^\s{14,}(?:\s+[^,]+,){20}\s+${VLAN_PERMITTED},* -> Continue
-  # End od VLAN Passing
+  # End of VLAN Passing
   ^\s+VLAN\s+permitted:
   ^\s{14,}
   # Next
