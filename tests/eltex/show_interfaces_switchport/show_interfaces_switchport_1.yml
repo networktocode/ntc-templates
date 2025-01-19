@@ -9,22 +9,22 @@ parsed_sample:
     forbidden_vlan_name: []
     gvrp_status: "disabled"
     ingress_filtering: "true"
-    mac_based_vlan_group_id: []
-    mac_based_vlan_id: []
-    name:
-      - "test101"
-      - "test102"
-    native_vlan: "1"
     interface: "gi1/0/1"
     interface_membership_type:
       - "Static"
       - "Static"
     interface_mode: "Access"
+    mac_based_vlan_group_id: []
+    mac_based_vlan_id: []
+    native_vlan: "1"
     protected: "Disabled"
     protocol_based_vlan_group_id: []
     protocol_based_vlan_id: []
     subnet_based_vlan_group_id: []
     subnet_based_vlan_id: []
-    vlan:
+    vlan_id:
       - "101"
       - "102"
+    vlan_name:
+      - "test101"
+      - "test102"
