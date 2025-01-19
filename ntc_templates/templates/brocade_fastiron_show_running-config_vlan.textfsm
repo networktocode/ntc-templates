@@ -30,8 +30,8 @@ Value METRONAME4 ([a-zA-Z0-9\-\"\ ]+)
 
 Start
   ^\w -> Continue.Record
-  ^vlan ${VLANID} -> Continue
-  ^vlan ${VLANID} name ${VLANNAME} -> Continue
+  ^vlan\s+${VLANID} -> Continue
+  ^vlan\s+${VLANID}\s+name\s+${VLANNAME} -> Continue
   ^\s+tagged\s+${TAGGEDPORTS} -> Continue
   ^\s+untagged\s+${UNTAGGEDPORTS} -> Continue
   ^\s+${SPANNINGTREE}\s+spanning-tree -> Continue
