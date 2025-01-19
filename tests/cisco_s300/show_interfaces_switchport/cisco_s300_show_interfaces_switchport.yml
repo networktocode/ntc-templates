@@ -15,10 +15,10 @@ parsed_sample:
     interface_mode: "Trunk"
     mac_based_vlan_group_id: []
     mac_based_vlan_id: []
-    name:
-      - "203"
-      - "VOIP-1"
     native_vlan: "203"
     vlan_id:
       - "203"
       - "222"
+    vlan_name:
+      - "203"
+      - "VOIP-1"

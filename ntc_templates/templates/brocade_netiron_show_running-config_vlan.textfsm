@@ -1,5 +1,5 @@
-Value VLANID (\d+)
-Value VLANNAME ([a-zA-Z0-9\-\"\ ]+)
+Value VLAN_ID (\d+)
+Value VLAN_NAME ([a-zA-Z0-9\-\"\ ]+)
 Value UNTAGGEDPORTS ([0-9\/\ eto]+)
 Value TAGGEDPORTS ([0-9\/\ eto]+)
 Value ASSOCIATEDVE (\d+)
@@ -30,8 +30,8 @@ Value METRONAME4 ([a-zA-Z0-9\-\"\ ]+)
 
 Start
   ^\w -> Continue.Record
-  ^vlan\s+${VLANID} -> Continue
-  ^vlan\s+${VLANID}\s+name\s+${VLANNAME} -> Continue
+  ^vlan\s+${VLAN_ID} -> Continue
+  ^vlan\s+${VLAN_ID}\s+name\s+${VLAN_NAME} -> Continue
   ^\s+tagged\s+${TAGGEDPORTS} -> Continue
   ^\s+untagged\s+${UNTAGGEDPORTS} -> Continue
   ^\s+router-interface\s+ve\s+${ASSOCIATEDVE} -> Continue
