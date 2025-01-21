@@ -24,6 +24,7 @@ SNs
 
 Descriptions
   ^\s+-
+  ^\s*ID\s*$$
   ^\s+\w+\/\s\w+\/\w+\s+\d+\s+.+?\s*$$
   ^\s+In\s+port\s+\w+\/\s*\w+\/\w+\s*,\s+the\s+total(\s*number)?\s+of\s+ONTs\s+(is|are):\s+\w+(\,\s*online:\s*\w+)?(\,\s*offline:\s*\w+)? -> Start
   ^. -> Error
