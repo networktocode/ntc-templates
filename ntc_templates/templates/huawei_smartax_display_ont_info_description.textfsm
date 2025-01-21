@@ -13,7 +13,7 @@ Start
 SNs
   ^\s+-
   ^\s*\w+\/\s\w+\/\w+\s*\d+\s*([A-Z0-9]{16})\s*(active|deactive|configuring)\s*(-|online|offline)\s*(-|normal|mismatch|failing|online|initial)\s*(-|initial|mismatch|match)\s*(no|yes)\s*$$
-  ^\s*F\/S\/P\s+(ONT|ONT-ID)\s+Description\s*$$ -> Descriptions
+  ^\s*F\/S\/P\s+ONT(-ID)?\s+Description\s*$$ -> Descriptions
   ^\s*$$
   ^.-> Error
 
