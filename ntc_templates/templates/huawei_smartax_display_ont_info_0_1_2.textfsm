@@ -1,4 +1,4 @@
-Value Required FSP (\w+\/\s\w+\/\w+)
+Value Required,Key FSP (\w+\/\s\w+\/\w+)
 Value Key ONT_ID (\d+)
 Value SERIAL_NUMBER ([A-Z0-9]{16})
 Value CONTROL_FLAG (active|deactive|configuring)
@@ -11,11 +11,17 @@ Start
   ^\s+-
   ^\s+F\/S\/P\s+ONT\s+SN\s+Control\s+Run\s+Config\s+Match\s+Protect
   ^\s+ID\s+flag\s+state\s+state\s+state\s+side -> SNs
-  ^.\s*$$ -> Error
+  ^. -> Error
 
 SNs
+  ^\s+-
   ^\s*${FSP}\s*${ONT_ID}\s*${SERIAL_NUMBER}\s*${CONTROL_FLAG}\s*(-|${RUN_STATE})\s*(-|${CONFIG_STATE})\s*(-|${MATCH_STATE})\s*${PROTECT_SIDE}\s* -> Record
-  ^\s*-
-  ^\s*F\/S\/P\s+(ONT|ONT-ID)\s+Description
+  ^\s*F\/S\/P\s+(ONT|ONT-ID)\s+Description -> Descriptions
   ^\s*$$
   ^.-> Error
+
+Descriptions
+  ^\s+-
+  ^\s+\w+\/\s\w+\/\w+\s+\d+\s+.+?\s*$$
+  ^\s+In\s+port\s+\w+\/\s*\w+\/\w+\s*,\s+the\s+total(\s*number)?\s+of\s+ONTs\s+(is|are):\s+\w+(\,\s*online:\s*\w+)?(\,\s*offline:\s*\w+)? -> Start
+  ^. -> Error
