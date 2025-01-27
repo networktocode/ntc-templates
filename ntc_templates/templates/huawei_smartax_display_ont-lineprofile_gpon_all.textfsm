@@ -1,0 +1,10 @@
+Value PROFILE_ID (\d+)
+Value PROFILE_NAME (\S+)
+Value BINDING_TIMES (\d+)
+
+Start
+  ^\s*-+\s*$$
+  ^\s*Profile-ID\s+Profile-name\s+Binding\s+times\s*$$
+  ^\s*${PROFILE_ID}\s+${PROFILE_NAME}\s+${BINDING_TIMES}\s*$$ -> Record
+  ^\s*Total:\s+\d+\s*$$
+  ^. -> Error
