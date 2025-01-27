@@ -1,0 +1,63 @@
+Value ONT_FSP (\S+)
+Value ONT_DESCRIPTION (\S+|\S.+\S)
+Value ONT_ID (\d+)
+Value EQUIPMENT_ID (\S+|\S.+\S)
+Value NUMBER_OF_UPLINK_PON_PORTS (\d+)
+Value NUMBER_OF_POTS_PORTS (\d+)
+Value NUMBER_OF_ETH_PORTS (\d+)
+Value NUMBER_OF_VDSL_PORTS (\S+)
+Value NUMBER_OF_TDM_PORTS (\S+)
+Value NUMBER_OF_MOCA_PORTS (\S+)
+Value NUMBER_OF_CATV_ANI_PORTS (\S+)
+Value NUMBER_OF_CATV_UNI_PORTS (\S+)
+Value NUMBER_OF_GEM_PORTS (\d+)
+Value IP_CONFIGURATION (\S+|\S.+\S)
+Value NUMBER_OF_TRAFFIC_SCHEDULERS (\d+)
+Value NUMBER_OF_TCONTS (\d+)
+Value TYPE_OF_FLOW_CONTROL (\S+|\S.+\S)
+Value ONT_OPTICAL_MODULE_POWER_CONTROL_CAPABILITY (\S+|\S.+\S)
+Value ONT_TYPE (\S+|\S.+\S)
+Value EXTENDED_OMCI_MESSAGE_FORMAT (\S+|\S.+\S)
+Value VOIP_CONFIGURATION_METHOD (\S+|\S.+\S)
+Value VOIP_SIGNALING_PROTOCOL (\S+|\S.+\S)
+Value ETHOAM (\S+|\S.+\S)
+Value SINGLE_RING_CHECK (\S+|\S.+\S)
+Value MULTICAST_ENCRYPT (\S+|\S.+\S)
+Value MULTI_CHANNEL (\S+|\S.+\S)
+Value FIT_AP (\S+|\S.+\S)
+
+Start
+  ^\s*During\s+the\s+course\s+of\s+print\s*,\s*press\s+CTRL_C\s+to\s+break\s*$$
+  ^\s*-+\s*$$
+  ^\s*ONT\s+Hardware\s+Capability\s*/\s*Status\s+Information\s*$$
+  ^\s*F\/S\/P:\s+${ONT_FSP}\s*$$
+  ^\s*ONT\s+description:\s+${ONT_DESCRIPTION}\s*$$
+  ^\s*ONT\s+ID:\s+${ONT_ID}\s*$$
+  ^\s*Equipment\s+ID:\s+${EQUIPMENT_ID}\s*$$
+  ^\s*Number\s+of\s+uplink\s+PON\s+ports:\s+(-|${NUMBER_OF_UPLINK_PON_PORTS})\s*$$
+  ^\s*Number\s+of\s+POTS\s+ports:\s+(-|${NUMBER_OF_POTS_PORTS})\s*$$
+  ^\s*Number\s+of\s+ETH\s+ports:\s+(-|${NUMBER_OF_ETH_PORTS})\s*$$
+  ^\s*Number\s+of\s+VDSL\s+ports:\s+(-|${NUMBER_OF_VDSL_PORTS})\s*$$
+  ^\s*Number\s+of\s+TDM\s+ports:\s+(-|${NUMBER_OF_TDM_PORTS})\s*$$
+  ^\s*Number\s+of\s+MOCA\s+ports:\s+(-|${NUMBER_OF_MOCA_PORTS})\s*$$
+  ^\s*Number\s+of\s+CATV\s+ANI\s+ports:\s+(-|${NUMBER_OF_CATV_ANI_PORTS})\s*$$
+  ^\s*Number\s+of\s+CATV\s+UNI\s+ports:\s+(-|${NUMBER_OF_CATV_UNI_PORTS})\s*$$
+  ^\s*Number\s+of\s+GEM\s+ports:\s+(-|${NUMBER_OF_GEM_PORTS})\s*$$
+  ^\s*IP\s+configuration:\s+${IP_CONFIGURATION}\s*$$
+  ^\s*Number\s+of\s+Traffic\s+Schedulers:\s+(-|${NUMBER_OF_TRAFFIC_SCHEDULERS})\s*$$
+  ^\s*Number\s+of\s+T-CONTs:\s+(-|${NUMBER_OF_TCONTS})\s*$$
+  ^\s*The\s+type\s+of\s+flow\s+control:\s+${TYPE_OF_FLOW_CONTROL}\s*$$
+  ^\s*ONT\s+optical\s+module\s+power\s*$$
+  ^\s*control\s+capability:\s+${ONT_OPTICAL_MODULE_POWER_CONTROL_CAPABILITY}\s*$$
+  ^\s*ONT\s+type:\s+${ONT_TYPE}\s*$$
+  ^\s*Extended\s+OMCI\s+message\s+format:\s+${EXTENDED_OMCI_MESSAGE_FORMAT}\s*$$
+  ^\s*VoIP\s+configuration\s+method:\s+${VOIP_CONFIGURATION_METHOD}\s*$$
+  ^\s*VoIP\s+signalling\s+protocol:\s+${VOIP_SIGNALING_PROTOCOL}\s*$$
+  ^\s*ETHOAM:\s+${ETHOAM}\s*$$
+  ^\s*Single\s+ring\s+check:\s+${SINGLE_RING_CHECK}\s*$$
+  ^\s*Multicast\s+encrypt:\s+(-|${MULTICAST_ENCRYPT})\s*$$
+  ^\s*Multi\s+channel:\s+(-|${MULTI_CHANNEL})\s*$$
+  ^\s*Fit\s+AP:\s+${FIT_AP}\s*$$ -> Record
+  ^\s*Number\s+of\s+PQs\s+in\s+T-CONT\s+\d+\s*:\s+\d+\s*$$
+  ^\s*The\s+total\s+of\s+online\s+ONTs\s+are\s*:\s+\d+\s*$$
+  ^. -> Error
