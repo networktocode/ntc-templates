@@ -1,0 +1,15 @@
+Value ACCESS_TYPE (\S+)
+Value VENDOR_ID (\S+)
+Value ONT_MODEL (\S+)
+Value SOFTWARE_VERSION (\S+)
+Value ONLINE (\d+)
+Value OFFLINE (\d+)
+
+Start
+  ^\s*During\s+the\s+course\s+of\s+print\s*,\s*press\s+CTRL_C\s+to\s+break\s*$$
+  ^\s*-+\s*$$
+  ^\s*The\s+number\s+of\s+\S+(\s+\S+)?\s+ONT\s*:(\d+)\s*$$
+  ^\s*Access\s+Vendor\s+ONT\s+Model\s+Software\s+Online\s+Offline\s*$$
+  ^\s*Type\s+ID\s+Version\s+Number\s+Number\s*$$
+  ^\s*${ACCESS_TYPE}\s+${VENDOR_ID}\s+${ONT_MODEL}\s+${SOFTWARE_VERSION}\s+${ONLINE}\s+${OFFLINE}\s*$$ -> Record
+  ^. -> Error
