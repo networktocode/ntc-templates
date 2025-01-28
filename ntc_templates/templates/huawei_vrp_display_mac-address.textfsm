@@ -6,7 +6,7 @@ Value VLAN_ID (\d+)
 Start
   ^\s*-+$$
   ^\s+$$
-  ^\s*MAC\s+Address\s*VLAN\/VSI\/BD\s*Learned-From\s*Type\s*$$
-  ^\s*${DESTINATION_ADDRESS}\s+${VLAN_ID}/([^/]+)/([^/]+)\s+${DESTINATION_PORT}\s+${TYPE}\s*$$ -> Record
+  ^\s*MAC\s+Address\s*VLAN\/VSI(?:\/BD)?\s*Learned-From\s*Type\s*$$
+  ^\s*${DESTINATION_ADDRESS}\s+${VLAN_ID}/([^/]+)(?:/([^/]+))?\s+${DESTINATION_PORT}\s+${TYPE}\s*$$ -> Record
   ^\s*Total\s+items\s*displayed\s*=\s*\d+\s*$$
   ^. -> Error
