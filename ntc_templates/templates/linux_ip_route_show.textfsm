@@ -16,9 +16,9 @@ Start
   ^\s*broadcast*
   ^\s*local
   # default
-  ^\s*${NETWORK}\s+via\s+${NEXTHOP_IP}\s+dev\s+${NEXTHOP_IF}\s*$$ -> Record
+  ^\s*${NETWORK}\s+via\s+${NEXTHOP_IP}\s+dev\s+${NEXTHOP_IF}(?:\s+proto\s+${PROTOCOL}(?:\s+${REACHABILITY})?)?\s*$$ -> Record
   # local (network)
-  ^\s*${NETWORK}\s+dev\s+${NEXTHOP_IF}\s+proto\s+${PROTOCOL}\s+scope\s+${SCOPE}\s+src\s+${SRC}\s*$$ -> Record
+  ^\s*${NETWORK}\s+dev\s+${NEXTHOP_IF}\s+proto\s+${PROTOCOL}\s+scope\s+${SCOPE}\s+src\s+${SRC}(?:\s+${REACHABILITY})?\s*$$ -> Record
   # static
-  ^\s*${NETWORK}\s+via\s+${NEXTHOP_IP}\s+dev\s+${NEXTHOP_IF}\s*(?:${REACHABILITY})?$$ -> Record
+  ^\s*${NETWORK}\s+via\s+${NEXTHOP_IP}\s+dev\s+${NEXTHOP_IF}\s*(?:${REACHABILITY})?\s*$$ -> Record
   ^. -> Error
