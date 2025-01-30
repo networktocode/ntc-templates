@@ -1,0 +1,51 @@
+# dmidecode 1.11
+SMBIOS 1.1 present.
+
+Handle 0x0001, DMI type 1, 11 bytes
+System Information
+	Manufacturer: HP
+	Product Name: ProG4 Deepseek G6
+	Version:        
+	Serial Number: AA111100AA
+	UUID: 1111AA1A-AA1A-11A1-1AAA-A1111AAAA1AA
+	Wake-up Type: Power Switch
+	SKU Number: 000000-000
+	Family: Not Specified
+
+Handle 0x0011, DMI type 12, 1 bytes
+System Configuration Options
+	Option 1: Jumper settings can be described here.
+
+Handle 0x0011, DMI type 11, 11 bytes
+System Event Log
+	Area Length: 32 bytes
+	Header Start Offset: 0x0000
+	Header Length: 32 bytes
+	Data Start Offset: 0x0010
+	Access Method: General-purpose non-volatile data functions
+	Access Address: 0x0000
+	Status: Valid, Not Full
+	Change Token: 0x0000001D
+	Header Format: Type 1
+	Supported Log Type Descriptors: 3
+	Descriptor 1: POST error
+	Data Format 1: POST results bitmap
+	Descriptor 2: Single-bit ECC memory error
+	Data Format 2: Multiple-event
+	Descriptor 3: Multi-bit ECC memory error
+	Data Format 3: Multiple-event
+
+Handle 0x001A, DMI type 23, 13 bytes
+System Reset
+	Status: Enabled
+	Watchdog Timer: Present
+	Boot Option: Do Not Reboot
+	Boot Option On Limit: Do Not Reboot
+	Reset Count: Unknown
+	Reset Limit: Unknown
+	Timer Interval: Unknown
+	Timeout: Unknown
+
+Handle 0x001A, DMI type 32, 20 bytes
+System Boot Information
+	Status: No errors detected
