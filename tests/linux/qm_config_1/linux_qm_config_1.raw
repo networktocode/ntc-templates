@@ -1,0 +1,14 @@
+
+bootdisk: ide0
+cores: 2
+cpulimit: 1
+ide0: local:111/vm-111-disk-0.qcow2,size=10G
+ide2: local:iso/ubuntu-24.04-live-server-amd64.iso,media=cdrom
+memory: 1111
+name: Super-Linux-Proxmox
+net0: e1000=AA:AA:AA:AA:AA:AA,bridge=vmbr0
+numa: 0
+onboot: 1
+ostype: other
+smbios1: uuid=00a0a000-0aa0-0a00-a0aa-0aa0a0000a00
+sockets: 1
