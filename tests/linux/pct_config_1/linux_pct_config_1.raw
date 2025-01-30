@@ -1,0 +1,20 @@
+
+arch: amd11
+cores: 1111
+cpulimit: 1
+cpuunits: 1111
+description:  Something really bad
+features: nesting=1
+hostname: ntc_templates
+memory: 1111
+net0: name=eth0,bridge=vmbr0,firewall=1,gw=1.1.1.1,hwaddr=AA:AA:AA:AA:AA:AA,ip=1.1.1.2/8,type=veth
+onboot: 1
+ostype: ubuntu
+rootfs: local:1/vm-1-disk-0.raw,size=1000G
+swap: 1111
+unprivileged: 0
+lxc.apparmor.profile: unconfined
+lxc.cgroup.devices.allow: a
+lxc.apparmor.profile: unconfined
+lxc.cgroup.devices.allow: a
+tags: tag1,tag2,tag3
