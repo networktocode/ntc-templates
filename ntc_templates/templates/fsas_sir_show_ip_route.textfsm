@@ -1,0 +1,15 @@
+Value FLAG (\S)
+Value PROTOCOL (\w+)
+Value NETWORK (\S+)
+Value PREFIX_LENGTH (\d+)
+Value GATEWAY (\S+)
+Value DISTANCE (\d+)
+Value UPTIME (\S+)
+Value INTERFACE (\w+)
+
+Start
+  ^FP\s+Destination\/Mask
+  ^---\s+
+  ^(\s+|${FLAG})${PROTOCOL}\s+${NETWORK}\/${PREFIX_LENGTH}\s+${GATEWAY}\s+${DISTANCE}\s+${UPTIME}\s+${INTERFACE}\s*$$ -> Record
+  ^\s*$$
+  ^. -> Error
