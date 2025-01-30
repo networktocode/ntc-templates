@@ -1,0 +1,11 @@
+Value VMID (\d+)
+Value NAME (\S+)
+Value STATUS (\S+)
+Value MEMORY (\d+)
+Value DISK (\S+)
+Value PID (\d+)
+
+Start
+  ^\s*VMID\s*NAME\s*STATUS\s*MEM\(MB\)\s*BOOTDISK\(GB\)\s*PID\s*$$
+  ^\s*${VMID}\s*${NAME}\s*${STATUS}\s*${MEMORY}\s*${DISK}\s*${PID}\s*$$ -> Record
+  ^. -> Error

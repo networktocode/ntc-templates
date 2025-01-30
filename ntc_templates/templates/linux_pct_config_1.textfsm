@@ -1,0 +1,37 @@
+Value ARCH (\S+)
+Value CORES (\S+)
+Value CPULIMIT (\S+)
+Value CPUUNITS (\S+)
+Value DESCRIPTION (\S+|\S.+\S)
+Value FEATURES (\S+)
+Value HOSTNAME (\S+)
+Value MEMORY (\S+)
+Value NET0 (\S+)
+Value ONBOOT (\S+)
+Value OSTYPE (\S+)
+Value ROOTFS (\S+)
+Value SWAP (\S+)
+Value UNPRIVILEGED (\S+)
+Value LXC_APPARMOR_PROFILE (\S+)
+Value LXC_CGROUP_DEVICE_ALLOW (\S+)
+Value TAGS (\S+|\S.+\S)
+
+Start
+  ^\s*arch:\s+${ARCH}\s*$$
+  ^\s*cores:\s+${CORES}\s*$$
+  ^\s*cpulimit:\s+${CPULIMIT}\s*$$
+  ^\s*cpuunits:\s+${CPUUNITS}\s*$$
+  ^\s*features:\s+${FEATURES}\s*$$
+  ^\s*description:\s+${DESCRIPTION}\s*$$
+  ^\s*hostname:\s+${HOSTNAME}\s*$$
+  ^\s*memory:\s+${MEMORY}\s*$$
+  ^\s*net0:\s+${NET0}\s*$$
+  ^\s*onboot:\s+${ONBOOT}\s*$$
+  ^\s*ostype:\s+${OSTYPE}\s*$$
+  ^\s*rootfs:\s+${ROOTFS}\s*$$
+  ^\s*swap:\s+${SWAP}\s*$$
+  ^\s*unprivileged:\s+${UNPRIVILEGED}\s*$$
+  ^\s*lxc.apparmor.profile:\s+${LXC_APPARMOR_PROFILE}\s*$$
+  ^\s*lxc.cgroup.devices.allow:\s+${LXC_CGROUP_DEVICE_ALLOW}\s*$$
+  ^\s*tags:\s+(?:${TAGS})?\s*$$
+  ^. -> Error
