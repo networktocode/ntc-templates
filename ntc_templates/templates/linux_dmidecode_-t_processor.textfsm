@@ -1,0 +1,59 @@
+Value CPU_SOCKET_DESIGNATION (\S+)
+Value CPU_TYPE (\S.+\S)
+Value CPU_FAMILY (\S.+\S)
+Value CPU_MANUFACTURER (\S.+\S)
+Value CPU_ID (\S.+\S)
+Value CPU_SIGNATURE (\S.+\S)
+Value CPU_VERSION (\S.+\S)
+Value CPU_VOLTAGE (\S.+\S)
+Value CPU_MAX_SPEED (\S.+\S)	
+Value CPU_EXTERNAL_CLOCK (\S.+\S)
+Value CPU_CURRENT_SPEED (\S.+\S)
+Value CPU_STATUS (\S.+\S)
+Value CPU_UPGRADE (\S.+\S)
+Value CPU_CORE_COUNT (\S+)
+Value CPU_CORE_ENABLED (\S+)
+Value CPU_THREAD_COUNT (\S+)
+Value List CPU_CHARACTERISTICS (\S.*\S)
+
+Start
+  ^\s*\#\s+dmidecode\s+\S+\s*$$
+  ^\s*\#\s+SMBIOS\s+entry\s+point\s+at\s+\S+\s*$$
+  ^\s*Getting\s+SMBIOS\s+data\s+from\s+sysfs\.\s*$$
+  ^\s*SMBIOS\s+\d+\.\d+(?:.\d+)?\s+present\.\s*$$
+  ^\s*\#\s+SMBIOS\s+implementations\s+newer\s+than\s+version\s+\d+\.\d+\s+are\s+not\s*$$
+  ^\s*\#\s+fully\s+supported\s+by\s+this\s+version\s+of\s+dmidecode\.\s*$$
+  ^\s*$$
+  ^\s*Handle\s+\S+,\s+DMI\s+type\s+\d+,\s+\d+\s+bytes$$ -> processor_info
+  ^. -> Error
+
+processor_info
+  ^\s*Processor\s+Information\s*$$
+  ^\s*Socket\s+Designation:\s+${CPU_SOCKET_DESIGNATION}\s*$$
+  ^\s*Type:\s+${CPU_TYPE}\s*$$
+  ^\s*Family:\s+${CPU_FAMILY}\s*$$
+  ^\s*Manufacturer:\s+${CPU_MANUFACTURER}\s*$$
+  ^\s*ID:\s+${CPU_ID}\s*$$
+  ^\s*Signature:\s+${CPU_SIGNATURE}\s*$$
+  ^\s*Flags:\s*$$
+  ^\s*\S+\s+\(\S.+\S\)\s*$$
+  ^\s*Version:\s+${CPU_VERSION}\s*$$
+  ^\s*Voltage:\s+${CPU_VOLTAGE}\s*$$
+  ^\s*External\s+Clock:\s+${CPU_EXTERNAL_CLOCK}\s*$$
+  ^\s*Max\s+Speed:\s+${CPU_MAX_SPEED}\s*$$
+  ^\s*Current\s+Speed:\s+${CPU_CURRENT_SPEED}\s*$$
+  ^\s*Status:\s+${CPU_STATUS}\s*$$
+  ^\s*Upgrade:\s+${CPU_UPGRADE}\s*$$
+  ^\s*L1\s+Cache\s+Handle:\s+\S+\s*$$
+  ^\s*L2\s+Cache\s+Handle:\s+\S+\s*$$
+  ^\s*L3\s+Cache\s+Handle:\s+\S+\s*$$
+  ^\s*Serial\s+Number:\s+\S.+\S\s*$$
+  ^\s*Asset\s+Tag:\s+\S.+\S\s*$$
+  ^\s*Part\s+Number:\s+\S.+\S\s*$$
+  ^\s*Core\s+Count:\s+${CPU_CORE_COUNT}\s*$$
+  ^\s*Core\s+Enabled:\s+${CPU_CORE_ENABLED}\s*$$
+  ^\s*Thread\s+Count:\s+${CPU_THREAD_COUNT}\s*$$
+  ^\s*Characteristics:\s*$$
+  ^\s*${CPU_CHARACTERISTICS}\s*$$
+  ^\s*$$ -> Record
+  ^. -> Error
