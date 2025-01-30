@@ -1,0 +1,9 @@
+Value VMID (\d+)
+Value STATUS (\w+)
+Value LOCK (\w?)
+Value NAME (\S+)
+
+Start
+  ^\s*VMID\s+Status\s+Lock\s+Name\s*$$
+  ^\s*${VMID}\s+${STATUS}\s+${LOCK}\s+${NAME}\s*$$ -> Record
+  ^. -> Error
