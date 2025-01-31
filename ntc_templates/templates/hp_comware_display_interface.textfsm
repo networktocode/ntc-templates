@@ -28,8 +28,8 @@ Start
   ^\s*The\sMaximum\s+Transmit\s+Unit\sis\s+${MTU}
   ^\s*Maximum\s+frame\s+length:\s+${L2MTU}
   ^\s*Forbid\s+jumbo\s+frames\s+to\s+pass
-  ^\s*The\s[Mm]aximum\s+[Ff]rame\s+[Ll]ength\sis\s+${L2MTU}
-  ^\s*Internet\s+[Aa]ddress:\s+${IP_ADDRESS}\s+\([Pp]rimary\)
+  ^\s*The\sMaximum\s+Frame\s+Length\sis\s+${L2MTU}
+  ^\s*Internet\s+[Aa]ddress:\s+${IP_ADDRESS}\s+\(([Pp]rimary|[Cc]ellular-[Aa]llocated)\)
   ^\s*Internet\s+[Aa]ddress\sis\s+${IP_ADDRESS}\s+[Pp]rimary
   ^\s*Internet\s+[Aa]ddress:\s+${IP_ADDRESS}\s+\([Ss]ub\)
   ^\s*IP\s+[Pp]acket\s+[Ff]rame\s+[Tt]ype\s*:\s*[^,]+,\s+[Hh]ardware\s+[Aa]ddress:\s+${HW_ADDRESS}
@@ -183,6 +183,7 @@ Start
   ^\s+-\s+frame
   ^\s+-\s+aborts
   ^\s+-\s+lost\s+carrier
+  ^\s*Transfer\s+time:\s+\d+:\d+:\d+
   ^\s*DCD:
   ^. -> Error
   ^\s*$$ ^. -> Error
