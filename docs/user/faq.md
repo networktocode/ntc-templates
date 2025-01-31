@@ -1,6 +1,6 @@
 # Frequently Asked Questions
 
-From an outsiders view, some design choices, requirements, and testing procedures can seem arbitrary. The following list of FAQ is intended to help provide context and better guide users and contributors of ntc-templates.
+From an outsider's view, some design choices, requirements, and testing procedures can seem arbitrary. The following list of FAQ is intended to help provide context and better guide users and contributors of ntc-templates.
 
 ## How do I test my templates?
 
