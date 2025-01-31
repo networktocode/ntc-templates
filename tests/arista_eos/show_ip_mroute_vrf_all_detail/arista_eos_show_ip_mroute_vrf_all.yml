@@ -1,0 +1,85 @@
+---
+parsed_sample:
+  - vrf: "default"
+    multicast_group: "224.0.1.129"
+    rpf_source: "169.254.132.172"
+    rp: ""
+    uptime: "118d18h"
+    flags: "PE"
+    incoming_interface: "Null"
+    outgoing_interface_list: []
+    upstream_joined_state: "upNotJoined"
+    upstream_rpt_joined_state: "upRptNotJoined"
+
+  - vrf: "default"
+    multicast_group: "224.0.23.192"
+    rpf_source: "0.0.0.0"
+    rp: "204.14.0.136"
+    uptime: "38d14h"
+    flags: "W"
+    incoming_interface: "Register"
+    upstream_joined_state: "upJoined"
+    upstream_rpt_joined_state: "upRptNotJoined"
+    outgoing_interface_list:
+    - Ethernet2/1
+    - Ethernet2/2
+
+  - vrf: "default"
+    multicast_group: "224.0.23.192"
+    rpf_source: "192.26.98.17"
+    rp: ""
+    uptime: "8:57:21"
+    flags: "PE"
+    incoming_interface: "Register"
+    outgoing_interface_list:
+    - Ethernet2/1
+    upstream_joined_state: "upNotJoined"
+    upstream_rpt_joined_state: "upRptNotPruned"
+
+  - vrf: "default"
+    multicast_group: "224.0.23.190"
+    rpf_source: "0.0.0.0"
+    rp: "204.14.0.136"
+    uptime: "38d14h"
+    flags: "W"
+    incoming_interface: "Register"
+    outgoing_interface_list:
+    - Ethernet0/1
+    upstream_joined_state: "upJoined"
+    upstream_rpt_joined_state: "upRptNotJoined"
+
+  - vrf: "default"
+    multicast_group: "224.0.23.190"
+    rpf_source: "10.205.227.165"
+    rp: ""
+    uptime: "38d14h"
+    flags: "SBNP"
+    incoming_interface: "Ethernet32"
+    outgoing_interface_list:
+    - Ethernet2/1
+    upstream_joined_state: "upJoined"
+    upstream_rpt_joined_state: "upRptNotPruned"
+
+  - vrf: "default"
+    multicast_group: "224.0.23.190"
+    rpf_source: "10.205.227.166"
+    rp: "204.14.0.136"
+    uptime: "18d7h"
+    flags: "SBNP"
+    incoming_interface: "Ethernet32"
+    outgoing_interface_list:
+    - Ethernet0/1
+    - Ethernet2/1
+    upstream_joined_state: "upJoined"
+    upstream_rpt_joined_state: "upRptNotPruned"
+
+  - vrf: "FOO"
+    multicast_group: "224.0.1.130"
+    rpf_source: "169.254.132.173"
+    rp: ""
+    uptime: "1d18h"
+    flags: "PE"
+    incoming_interface: "Null"
+    outgoing_interface_list: []
+    upstream_joined_state: "upNotJoined"
+    upstream_rpt_joined_state: "upRptNotJoined"
