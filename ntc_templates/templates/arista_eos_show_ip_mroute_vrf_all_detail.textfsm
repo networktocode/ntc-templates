@@ -18,25 +18,26 @@ Start
   ^\s{4}[RWIHZANTVF]\s-
   ^(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}) -> Continue.Record
   ^${MULTICAST_GROUP}
-  ^\s{2}(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}) -> Continue.Record
-  ^\s{2}${RPF_SOURCE}, ${UPTIME}, flags: ${FLAGS}
-  ^\s{2}${RPF_SOURCE}, ${UPTIME}, RP ${RP}, flags: ${FLAGS}
-  ^\s{4}Incoming interface: ${INCOMING_INTERFACE}
-  ^\s{4}Outgoing interface list:
-  ^\s{6}${OUTGOING_INTERFACE_LIST}$$
-  ^\s{4}Interfaces not in OIL
-  ^\s{6}\S+
-  ^\s{4}\S -> Continue
-  ^\s{4}Upstream joined state: ${UPSTREAM_JOINED_STATE}
-  ^\s{4}Upstream RPT joined state: ${UPSTREAM_RPT_JOINED_STATE} -> Record
-  ^\s{4}State summarization macros:
-  ^\s{6}Could
-  ^\s{6}Register
-  ^\s{6}Join
-  ^\s{6}RPT join desired
-  ^\s{6}Prune
-  ^\s{6}No interfaces in immediate olist
-  ^\s{6}No interfaces in inherited olist
+  ^\s+[RWIHZANTVF]\s-
+  ^(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}) -> Continue.Record
+  ^${MULTICAST_GROUP}
+  ^\s+(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}) -> Continue.Record
+  ^\s+${RPF_SOURCE},\s+${UPTIME},\s+(RP\s+${RP},\s+)?flags:\s+${FLAGS}
+  ^\s+Incoming\s+interface:\s+${INCOMING_INTERFACE}
+  ^\s+Outgoing\s+interface\s+list:
+  ^\s+${OUTGOING_INTERFACE_LIST}$$
+  ^\s+Interfaces\s+not\s+in\s+OIL
+  ^\s+\S+
+  ^\s+\S -> Continue
+  ^\s+Upstream\s+joined\s+state:\s+${UPSTREAM_JOINED_STATE}
+  ^\s+Upstream\s+RPT\s+joined\s+state:\s+${UPSTREAM_RPT_JOINED_STATE} -> Record
+  ^\s+State\s+summarization\s+macros:
+  ^\s+Could
+  ^\s+Register
+  ^\s+Join
+  ^\s+RPT\s+join\s+desired
+  ^\s+Prune
+  ^\s+No\s+interfaces\s+in\s+(inherited|immediate)\s+olist
   ^.* -> Error
 
 EOF
