@@ -21,8 +21,8 @@ parsed_sample:
     upstream_joined_state: "upJoined"
     upstream_rpt_joined_state: "upRptNotJoined"
     outgoing_interface_list:
-    - Ethernet2/1
-    - Ethernet2/2
+      - "Ethernet2/1"
+      - "Ethernet2/2"
 
   - vrf: "default"
     multicast_group: "224.0.23.192"
@@ -32,7 +32,7 @@ parsed_sample:
     flags: "PE"
     incoming_interface: "Register"
     outgoing_interface_list:
-    - Ethernet2/1
+      - "Ethernet2/1"
     upstream_joined_state: "upNotJoined"
     upstream_rpt_joined_state: "upRptNotPruned"
 
@@ -44,7 +44,7 @@ parsed_sample:
     flags: "W"
     incoming_interface: "Register"
     outgoing_interface_list:
-    - Ethernet0/1
+      - "Ethernet0/1"
     upstream_joined_state: "upJoined"
     upstream_rpt_joined_state: "upRptNotJoined"
 
@@ -56,7 +56,7 @@ parsed_sample:
     flags: "SBNP"
     incoming_interface: "Ethernet32"
     outgoing_interface_list:
-    - Ethernet2/1
+      - "Ethernet2/1"
     upstream_joined_state: "upJoined"
     upstream_rpt_joined_state: "upRptNotPruned"
 
@@ -68,8 +68,8 @@ parsed_sample:
     flags: "SBNP"
     incoming_interface: "Ethernet32"
     outgoing_interface_list:
-    - Ethernet0/1
-    - Ethernet2/1
+      - "Ethernet0/1"
+      - "Ethernet2/1"
     upstream_joined_state: "upJoined"
     upstream_rpt_joined_state: "upRptNotPruned"
 
