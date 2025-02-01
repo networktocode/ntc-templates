@@ -55,6 +55,20 @@ RPF route: U - From unicast routing table
       Prune desired (S,G,Rpt): False
       No interfaces in immediate olist (S,G): True
       No interfaces in inherited olist (S,G): False
+  192.168.98.17, 8:57:21, flags: SP
+    Incoming interface: Ethernet10
+    RPF route: [U] 192.168.98.0/27 [20/0] via 10.100.10.6
+    Outgoing interface list:
+      Ethernet2/1
+    Upstream joined state: upNotJoined
+    Upstream RPT joined state: upRptNotPruned
+    State summarization macros:
+      Could register (S,G): False
+      Register stop (S,G): True
+      Join desired (S,G): True
+      Prune desired (S,G,Rpt): False
+      No interfaces in immediate olist (S,G): False
+      No interfaces in inherited olist (S,G): False
 224.0.23.190
   0.0.0.0, 38d14h, RP 204.14.0.136, flags: W
     Incoming interface: Register
