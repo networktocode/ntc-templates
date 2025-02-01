@@ -25,8 +25,8 @@ Start
   ^\s{4}\S\s -> Continue
   ^\s+Interfaces\s+not\s+in\s+OIL
   ^\s{6}\S+
-  ^\s{4}Upstream\s+joined\s+state:\s+${UPSTREAM_JOINED_STATE}
-  ^\s{4}Upstream\s+RPT\s+joined\s+state:\s+${UPSTREAM_RPT_JOINED_STATE} -> Record
+  ^\s+Upstream\s+joined\s+state:\s+${UPSTREAM_JOINED_STATE}
+  ^\s+Upstream\s+RPT\s+joined\s+state:\s+${UPSTREAM_RPT_JOINED_STATE} -> Record
   ^\s+State\s+summarization\s+macros:
   ^\s+Could
   ^\s+Register
