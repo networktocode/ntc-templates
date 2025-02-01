@@ -18,12 +18,12 @@ Start
   ^\s{4}[RWIHZANTVF]\s+-
   ^${MULTICAST_GROUP}
   ^\s+?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}) -> Continue.Record
-  ^\s{2}${RPF_SOURCE},\s+${UPTIME},\s+(RP\s${RP},\s+)?flags:\s+${FLAGS}
-  ^\s{4}Incoming\s+interface:\s+${INCOMING_INTERFACE}
-  ^\s{4}Outgoing\s+interface\s+list:
+  ^\s{2}${RPF_SOURCE},\s+${UPTIME},\s+(RP\s+${RP},\s+)?flags:\s+${FLAGS}
+  ^\s+Incoming\s+interface:\s+${INCOMING_INTERFACE}
+  ^\s+Outgoing\s+interface\s+list:
   ^\s{6}${OUTGOING_INTERFACE_LIST}$$
   ^\s{4}\S\s -> Continue
-  ^\s{4}Interfaces\s+not\s+in\s+OIL
+  ^\s+Interfaces\s+not\s+in\s+OIL
   ^\s{6}\S+
   ^\s{4}Upstream\s+joined\s+state:\s+${UPSTREAM_JOINED_STATE}
   ^\s{4}Upstream\s+RPT\s+joined\s+state:\s+${UPSTREAM_RPT_JOINED_STATE} -> Record
@@ -31,9 +31,9 @@ Start
   ^\s+Could
   ^\s+Register
   ^\s+Join
-  ^\s{6}RPT\s+join\s+desired
+  ^\s+RPT\s+join\s+desired
   ^\s+Prune
-  ^\s{6}No\s+interfaces\s+in\s+(immediate|inherited)\s+olist
+  ^\s+No\s+interfaces\s+in\s+(immediate|inherited)\s+olist
   ^.* -> Error
 
 EOF
