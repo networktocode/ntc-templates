@@ -22,9 +22,9 @@ Start
   ^\s+Incoming\s+interface:\s+${INCOMING_INTERFACE}
   ^\s+Outgoing\s+interface\s+list:
   ^\s+${OUTGOING_INTERFACE_LIST}$$
-  ^\s{4}\S\s -> Continue
   ^\s+Interfaces\s+not\s+in\s+OIL
-  ^\s{6}\S+
+# match interface names that are not in the OIL
+  ^\s+\S+:\s+
   ^\s+Upstream\s+joined\s+state:\s+${UPSTREAM_JOINED_STATE}
   ^\s+Upstream\s+RPT\s+joined\s+state:\s+${UPSTREAM_RPT_JOINED_STATE} -> Record
   ^\s+State\s+summarization\s+macros:
