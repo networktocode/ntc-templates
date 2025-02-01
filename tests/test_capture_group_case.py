@@ -9,7 +9,7 @@ import pytest
 
 # https://github.com/google/textfsm/wiki/TextFSM#value-definitions
 OPTION_KEYWORDS = ["Filldown", "Key", "Required", "List", "Fillup"]
-CG_REGEX = rf"^Value\s+(?:(?:(?:{'|'.join(OPTION_KEYWORDS)}),?)+\s+)?(\S+)"
+RE_CAPGRP = re.compile(rf"^Value\s+(?:(?:(?:{'|'.join(OPTION_KEYWORDS)}),?)+\s+)?(\S+)")
 
 
 def return_template_files():
@@ -27,7 +27,7 @@ def return_template_capture_groups(template_file):
     """Return a list of capture groups in a template."""
     with open(template_file, encoding="utf-8") as fh:
         file = fh.read()
-        return re.findall(CG_REGEX, file, re.MULTILINE)
+        return RE_CAPGRP.findall(file, re.MULTILINE)
 
 
 def test_uppercase_capture_group(load_template_files):
