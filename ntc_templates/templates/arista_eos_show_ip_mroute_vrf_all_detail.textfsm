@@ -24,9 +24,9 @@ Start
   ^\s{4}Incoming\sinterface:\s${INCOMING_INTERFACE}
   ^\s{4}Outgoing\sinterface\slist:
   ^\s{6}${OUTGOING_INTERFACE_LIST}$$
+  ^\s{4}\S\s-> Continue
   ^\s{4}Interfaces\snot\sin\sOIL
   ^\s{6}\S+
-  ^\s{4}\S\s-> Continue
   ^\s{4}Upstream\sjoined\sstate:\s${UPSTREAM_JOINED_STATE}
   ^\s{4}Upstream\sRPT\sjoined\sstate:\s${UPSTREAM_RPT_JOINED_STATE} -> Record
   ^\s{4}State\ssummarization\smacros:
