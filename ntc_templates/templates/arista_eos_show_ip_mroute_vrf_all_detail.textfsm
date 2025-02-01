@@ -22,7 +22,7 @@ Start
   ^\s{4}Incoming\s+interface:\s+${INCOMING_INTERFACE}
   ^\s{4}Outgoing\s+interface\s+list:
   ^\s{6}${OUTGOING_INTERFACE_LIST}$$
-  ^\s{4}\S\s-> Continue
+  ^\s{4}\S\s -> Continue
   ^\s{4}Interfaces\s+not\s+in\s+OIL
   ^\s{6}\S+
   ^\s{4}Upstream\s+joined\s+state:\s+${UPSTREAM_JOINED_STATE}
