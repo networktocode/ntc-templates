@@ -1,0 +1,38 @@
+---
+parsed_sample:
+  - bandwidth: ""
+    description: "mydescr"
+    duplex: "full-duplex"
+    hw_address:
+      - "2c23-3afc-8bf9"
+    interface: "Bridge-Aggregation11"
+    ip_address: []
+    l2mtu: ""
+    line_status: "UP"
+    mtu: ""
+    port_link_type: "trunk"
+    protocol_status: ""
+    speed: "20Gbps-speed"
+    untagged_vlan_id: ""
+    vlan_native: "4094"
+    vlan_passing:
+      - "201-212"
+    vlan_permitted:
+      - "201-212"
+  - bandwidth: ""
+    description: "mydescr"
+    duplex: "unknown-duplex"
+    hw_address:
+      - "2c23-3afc-8bc0"
+    interface: "Bridge-Aggregation66"
+    ip_address: []
+    l2mtu: ""
+    line_status: "DOWN"
+    mtu: ""
+    port_link_type: "access"
+    protocol_status: ""
+    speed: "Unknown-speed"
+    untagged_vlan_id: "1"
+    vlan_native: "1"
+    vlan_passing: []
+    vlan_permitted: []

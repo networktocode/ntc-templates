@@ -1,0 +1,54 @@
+ Bridge-Aggregation11 current state: UP
+ IP Packet Frame Type: PKTFMT_ETHNT_2, Hardware Address: 2c23-3afc-8bf9
+ Description: mydescr
+ 20Gbps-speed mode, full-duplex mode
+ Link speed type is autonegotiation, link duplex type is autonegotiation
+ PVID: 4094
+ Port link-type: trunk
+  VLAN passing  : 201-212
+  VLAN permitted: 201-212
+  Trunk port encapsulation: IEEE 802.1q
+ Last clearing of counters:  Never
+ Last 300 seconds input:  0 packets/sec 8 bytes/sec    0%
+ Last 300 seconds output:  58 packets/sec 10067 bytes/sec    0%
+ Input (total):  879620774593 packets, 757707436249911 bytes
+         879438947612 unicasts, 177384844 broadcasts, 4442137 multicasts
+ Input (normal):  879620774593 packets, - bytes
+         879438947612 unicasts, 177384844 broadcasts, 4442137 multicasts
+ Input:  0 input errors, 0 runts, 0 giants, 0 throttles
+         0 CRC, 0 frame, - overruns, 0 aborts
+         - ignored, - parity errors
+ Output (total): 714267170700 packets, 452933870007295 bytes
+         709437724867 unicasts, 2905418797 broadcasts, 1924027036 multicasts, 0 pauses
+ Output (normal): 714267170700 packets, - bytes
+         709437724867 unicasts, 2905418797 broadcasts, 1924027036 multicasts, 0 pauses
+ Output: 0 output errors, - underruns, - buffer failures
+         0 aborts, 0 deferred, 0 collisions, 0 late collisions
+         0 lost carrier, - no carrier
+
+ Bridge-Aggregation66 current state: DOWN
+ IP Packet Frame Type: PKTFMT_ETHNT_2, Hardware Address: 2c23-3afc-8bc0
+ Description: mydescr
+ Unknown-speed mode, unknown-duplex mode
+ Link speed type is autonegotiation, link duplex type is autonegotiation
+ PVID: 1
+ Port link-type: access
+  Tagged   VLAN ID : none
+  Untagged VLAN ID : 1
+ Last clearing of counters:  Never
+ Last 300 seconds input:  0 packets/sec 0 bytes/sec    -%
+ Last 300 seconds output:  0 packets/sec 0 bytes/sec    -%
+ Input (total):  0 packets, 0 bytes
+         0 unicasts, 0 broadcasts, 0 multicasts
+ Input (normal):  0 packets, 0 bytes
+         0 unicasts, 0 broadcasts, 0 multicasts
+ Input:  0 input errors, 0 runts, 0 giants, 0 throttles
+         0 CRC, 0 frame, 0 overruns, 0 aborts
+         0 ignored, 0 parity errors
+ Output (total): 0 packets, 0 bytes
+         0 unicasts, 0 broadcasts, 0 multicasts, 0 pauses
+ Output (normal): 0 packets, 0 bytes
+         0 unicasts, 0 broadcasts, 0 multicasts, 0 pauses
+ Output: 0 output errors, 0 underruns, 0 buffer failures
+         0 aborts, 0 deferred, 0 collisions, 0 late collisions
+         0 lost carrier, 0 no carrier
