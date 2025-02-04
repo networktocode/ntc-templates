@@ -1,4 +1,4 @@
-Value Filldown PROTOCOL (C|S|R|B|D|O|i|L)
+Value Filldown PROTOCOL (C|S|R|B|D|O|i|L|V)
 Value Filldown TYPE (\w{0,2})
 Value Required,Filldown NETWORK (\d+\.\d+\.\d+\.\d+|\S+)
 Value Filldown NETMASK (\d+\.\d+\.\d+\.\d+)
@@ -34,6 +34,13 @@ ROUTES
   ^${PROTOCOL}\s${TYPE}\s+${NETWORK}\sis\sdirectly\sconnected,\s${NEXTHOPIF} -> Record
   ^${PROTOCOL}(\*){0,1}\s${TYPE}\s+${NETWORK}\s+${NETMASK}\sis\sdirectly\sconnected,\s${NEXTHOPIF} -> Record
   ^\s+is\sdirectly\sconnected,\s${NEXTHOPIF} -> Record
+  #
+  # Match VPN routes
+  ^${PROTOCOL}\s${TYPE}\s+${NETWORK}\s${NETMASK}\sconnected\sby\sVPN\s\(advertised\),\s${NEXTHOPIF}\s*$$ -> Record
+  #
+  # Match multiline VPN routes
+  ^${PROTOCOL}\s${TYPE}\s+${NETWORK}\s${NETMASK}\s*$$ -> Continue
+  ^\s+connected\sby\sVPN\s\(advertised\),\s${NEXTHOPIF}\s*$$ -> Record
   #
   # Clear all variables on empty lines
   ^\s*$$ -> Clearall
