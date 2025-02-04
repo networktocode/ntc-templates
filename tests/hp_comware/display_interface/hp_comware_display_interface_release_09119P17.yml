@@ -1,0 +1,278 @@
+---
+parsed_sample:
+  - bandwidth: "1000000 kbps"
+    description: "### NOT USED ###"
+    duplex: "Unknown-duplex"
+    hw_address:
+      - "5477-8abb-9445"
+      - "5477-8abb-9445"
+    interface: "GigabitEthernet0/0/0"
+    ip_address: []
+    l2mtu: "9664"
+    line_status: "Administratively DOWN"
+    mtu: "1500"
+    port_link_type: ""
+    protocol_status: "DOWN"
+    speed: "Unknown-speed"
+    untagged_vlan_id: ""
+    vlan_native: ""
+    vlan_passing: []
+    vlan_permitted: []
+  - bandwidth: "1000000 kbps"
+    description: "### WAN ###"
+    duplex: "Full-duplex"
+    hw_address:
+      - "5477-8abb-9446"
+      - "5477-8abb-9446"
+    interface: "GigabitEthernet0/0/1"
+    ip_address:
+      - "1.2.3.4/31"
+    l2mtu: "9664"
+    line_status: "UP"
+    mtu: "1500"
+    port_link_type: ""
+    protocol_status: "UP"
+    speed: "1000Mbps-speed"
+    untagged_vlan_id: ""
+    vlan_native: ""
+    vlan_passing: []
+    vlan_permitted: []
+  - bandwidth: "1000000 kbps"
+    description: "GigabitEthernet0/0/2 Interface"
+    duplex: "unknown-duplex"
+    hw_address:
+      - "5477-8abb-9443"
+    interface: "GigabitEthernet0/0/2"
+    ip_address: []
+    l2mtu: "9664"
+    line_status: "DOWN"
+    mtu: ""
+    port_link_type: "Access"
+    protocol_status: "DOWN"
+    speed: "Unknown-speed"
+    untagged_vlan_id: ""
+    vlan_native: "1"
+    vlan_passing: []
+    vlan_permitted: []
+  - bandwidth: "1000000 kbps"
+    description: "GigabitEthernet0/0/3 Interface"
+    duplex: "full-duplex"
+    hw_address:
+      - "5477-8abb-9443"
+    interface: "GigabitEthernet0/0/3"
+    ip_address: []
+    l2mtu: "9664"
+    line_status: "UP"
+    mtu: ""
+    port_link_type: "Access"
+    protocol_status: "UP"
+    speed: "1000Mbps-speed"
+    untagged_vlan_id: ""
+    vlan_native: "1"
+    vlan_passing: []
+    vlan_permitted: []
+  - bandwidth: "1000000 kbps"
+    description: "GigabitEthernet0/0/4 Interface"
+    duplex: "unknown-duplex"
+    hw_address:
+      - "5477-8abb-9443"
+    interface: "GigabitEthernet0/0/4"
+    ip_address: []
+    l2mtu: "9664"
+    line_status: "DOWN"
+    mtu: ""
+    port_link_type: "Access"
+    protocol_status: "DOWN"
+    speed: "Unknown-speed"
+    untagged_vlan_id: ""
+    vlan_native: "1"
+    vlan_passing: []
+    vlan_permitted: []
+  - bandwidth: "1000000 kbps"
+    description: "GigabitEthernet0/0/5 Interface"
+    duplex: "unknown-duplex"
+    hw_address:
+      - "5477-8abb-9443"
+    interface: "GigabitEthernet0/0/5"
+    ip_address: []
+    l2mtu: "9664"
+    line_status: "DOWN"
+    mtu: ""
+    port_link_type: "Access"
+    protocol_status: "DOWN"
+    speed: "Unknown-speed"
+    untagged_vlan_id: ""
+    vlan_native: "1"
+    vlan_passing: []
+    vlan_permitted: []
+  - bandwidth: "1000000 kbps"
+    description: "GigabitEthernet0/0/6 Interface"
+    duplex: "unknown-duplex"
+    hw_address:
+      - "5477-8abb-9443"
+    interface: "GigabitEthernet0/0/6"
+    ip_address: []
+    l2mtu: "9664"
+    line_status: "DOWN"
+    mtu: ""
+    port_link_type: "Access"
+    protocol_status: "DOWN"
+    speed: "Unknown-speed"
+    untagged_vlan_id: ""
+    vlan_native: "1"
+    vlan_passing: []
+    vlan_permitted: []
+  - bandwidth: "1000000 kbps"
+    description: "GigabitEthernet0/0/7 Interface"
+    duplex: "unknown-duplex"
+    hw_address:
+      - "5477-8abb-9443"
+    interface: "GigabitEthernet0/0/7"
+    ip_address: []
+    l2mtu: "9664"
+    line_status: "DOWN"
+    mtu: ""
+    port_link_type: "Access"
+    protocol_status: "DOWN"
+    speed: "Unknown-speed"
+    untagged_vlan_id: ""
+    vlan_native: "1"
+    vlan_passing: []
+    vlan_permitted: []
+  - bandwidth: "1000000 kbps"
+    description: "GigabitEthernet0/0/8 Interface"
+    duplex: "unknown-duplex"
+    hw_address:
+      - "5477-8abb-9443"
+    interface: "GigabitEthernet0/0/8"
+    ip_address: []
+    l2mtu: "9664"
+    line_status: "DOWN"
+    mtu: ""
+    port_link_type: "Access"
+    protocol_status: "DOWN"
+    speed: "Unknown-speed"
+    untagged_vlan_id: ""
+    vlan_native: "1"
+    vlan_passing: []
+    vlan_permitted: []
+  - bandwidth: "1000000 kbps"
+    description: "GigabitEthernet0/0/9 Interface"
+    duplex: "unknown-duplex"
+    hw_address:
+      - "5477-8abb-9443"
+    interface: "GigabitEthernet0/0/9"
+    ip_address: []
+    l2mtu: "9664"
+    line_status: "DOWN"
+    mtu: ""
+    port_link_type: "Access"
+    protocol_status: "DOWN"
+    speed: "Unknown-speed"
+    untagged_vlan_id: ""
+    vlan_native: "1"
+    vlan_passing: []
+    vlan_permitted: []
+  - bandwidth: ""
+    description: "InLoopBack0 Interface"
+    duplex: ""
+    hw_address: []
+    interface: "InLoopBack0"
+    ip_address: []
+    l2mtu: ""
+    line_status: "UP"
+    mtu: "1536"
+    port_link_type: ""
+    protocol_status: "UP(spoofing)"
+    speed: ""
+    untagged_vlan_id: ""
+    vlan_native: ""
+    vlan_passing: []
+    vlan_permitted: []
+  - bandwidth: "1000000 kbps"
+    description: "NULL0 Interface"
+    duplex: ""
+    hw_address: []
+    interface: "NULL0"
+    ip_address: []
+    l2mtu: ""
+    line_status: "UP"
+    mtu: "1500"
+    port_link_type: ""
+    protocol_status: "UP(spoofing)"
+    speed: ""
+    untagged_vlan_id: ""
+    vlan_native: ""
+    vlan_passing: []
+    vlan_permitted: []
+  - bandwidth: ""
+    description: "Register-Tunnel0 Interface"
+    duplex: ""
+    hw_address: []
+    interface: "Register-Tunnel0"
+    ip_address: []
+    l2mtu: ""
+    line_status: "UP"
+    mtu: "1536"
+    port_link_type: ""
+    protocol_status: "DOWN"
+    speed: ""
+    untagged_vlan_id: ""
+    vlan_native: ""
+    vlan_passing: []
+    vlan_permitted: []
+  - bandwidth: "10000000 kbps"
+    description: "Ten-GigabitEthernet0/0/10 Interface"
+    duplex: "Unknown-duplex"
+    hw_address:
+      - "5477-8abb-944f"
+      - "5477-8abb-944f"
+    interface: "Ten-GigabitEthernet0/0/10"
+    ip_address: []
+    l2mtu: "9664"
+    line_status: "DOWN"
+    mtu: "1500"
+    port_link_type: ""
+    protocol_status: "DOWN"
+    speed: "Unknown-speed"
+    untagged_vlan_id: ""
+    vlan_native: ""
+    vlan_passing: []
+    vlan_permitted: []
+  - bandwidth: "10000000 kbps"
+    description: "Ten-GigabitEthernet0/0/11 Interface"
+    duplex: "Unknown-duplex"
+    hw_address:
+      - "5477-8abb-9450"
+      - "5477-8abb-9450"
+    interface: "Ten-GigabitEthernet0/0/11"
+    ip_address: []
+    l2mtu: "9664"
+    line_status: "DOWN"
+    mtu: "1500"
+    port_link_type: ""
+    protocol_status: "DOWN"
+    speed: "Unknown-speed"
+    untagged_vlan_id: ""
+    vlan_native: ""
+    vlan_passing: []
+    vlan_permitted: []
+  - bandwidth: "10000000 kbps"
+    description: "### LAN ###"
+    duplex: ""
+    hw_address:
+      - "5477-8abb-9444"
+      - "5477-8abb-9444"
+    interface: "Vlan-interface1"
+    ip_address:
+      - "192.168.0.1/24"
+    l2mtu: ""
+    line_status: "UP"
+    mtu: "1500"
+    port_link_type: ""
+    protocol_status: "UP"
+    speed: ""
+    untagged_vlan_id: ""
+    vlan_native: ""
+    vlan_passing: []
+    vlan_permitted: []
