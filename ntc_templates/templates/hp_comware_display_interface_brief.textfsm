@@ -14,7 +14,7 @@ Start
   ^\s*Protocol:\s+\(s\)\s+-\s+spoofing\s*$$
   ^\s*Interface\s+Link\s+Protocol\s+(Main|Primary)\s+IP\s+Description\s*$$ -> RouteModeIfaces
   ^\s*Link:\s+ADM\s+-\s+administratively\s+down;\s+Stby\s+-\s+standby\s*$$
-  ^\s*(Speed\s+or\s+Duplex:\s+\(a\)/A\s+-\s+auto;\s+H\s+-\s+half;\s+F\s+-\s+full|Speed:\s+\(a\)\s+-\s+auto|Duplex:\s+\(a\)/A\s+-\s+auto;\s+H\s+-\s+half;\s+F\s+-\s+full)\s*$$
+  ^\s*(Speed(\s+or\s+)?)?(Duplex)?:\s+\(a\)(/A)?\s+-\s+auto(;\s+H\s+-\s+half;\s+F\s+-\s+full)?\s*$$
   ^\s*Type:\s+A\s+-\s+access;\s+T\s+-\s+trunk;\s+H\s+-\s+hybrid\s*$$
   ^\s*Interface\s+Link\s+Speed\s+Duplex\s+Type\s+PVID\s+Description\s*$$ -> BridgeModeIfaces
   ^\s*$$
