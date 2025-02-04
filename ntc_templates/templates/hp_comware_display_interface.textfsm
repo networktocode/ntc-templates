@@ -26,7 +26,7 @@ Start
   ^\s*Bandwidth:\s+${BANDWIDTH}
   ^\s*Maximum\s+[Tt]ransmi\S+\s+[Uu]nit:\s+${MTU}
   ^\s*The\sMaximum\s+Transmit\s+Unit\sis\s+${MTU}
-  ^\s*Maximum\s+frame\s+length:\s+${L2MTU}
+  ^\s*Maximum\s+frame\s+length:\s*${L2MTU}
   ^\s*Forbid\s+jumbo\s+frames\s+to\s+pass
   ^\s*The\s[Mm]aximum\s+[Ff]rame\s+[Ll]ength\sis\s+${L2MTU}
   ^\s*Internet\s+[Aa]ddress:\s+${IP_ADDRESS}\s+\(([Pp]rimary|[Cc]ellular-[Aa]llocated)\)
@@ -184,6 +184,8 @@ Start
   ^\s+-\s+aborts
   ^\s+-\s+lost\s+carrier
   ^\s*Transfer\s+time:\s+\d+:\d+:\d+
+  ^\s*Unknown-multicast\s+max-ratio
+  ^\s*Promiscuous\s+mode
   ^\s*DCD:
   ^. -> Error
   ^\s*$$ ^. -> Error
