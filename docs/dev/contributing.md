@@ -1,8 +1,8 @@
 # Contributing
 
-Pull requests are welcomed and automatically built and tested against multiple versions of Python through GitHub Actions. 
+Pull requests are welcomed and automatically built and tested against Python version(s) through GitHub Actions. 
 
-Except for unit tests, testing is only supported on Python 3.9.
+Except for unit tests, testing is supported on Python 3.12.
 
 The project is packaged with a light development environment based on `Docker` to help with the local development of the project and to run tests within  GitHub Actions.
 
