@@ -2,11 +2,19 @@ Value Filldown VLAN_ID (\d+)
 Value Filldown VLAN_TYPE (\w+)
 Value Filldown MODE ((TG|UT))
 Value INTERFACE ([A-Z0-9/th\-runk]+)
-Value VLAN_NAME (.+)
+Value VLAN_NAME (\S+|\S.+\S)
 Value VLAN_STATUS (\S+)
+Value VLAN_AP (\d+)
+Value VLAN_TYPE_AP (\w+)
+Value MAC_LEARNING (\S+)
+Value BROADCAST (\S+)
+Value MULTICAST (\S+)
+Value UNICAST (\S+)
+Value VLAN_PROPERTY (\S+)
 
 Start
-  ^The\s+total\s+number\s+of\s+VLANs
+  ^\s*\*\s+:\s+management-vlan\s*$$ -> VLANS_AP
+  ^The\s+total\s+number\s+of\s+VLANs\s+is:\s+\d+\s*$$
   ^-+$$
   ^U:\s+Up;\s+D:\s+Down;\s+TG:\s+Tagged;\s+UT:\s+Untagged;
   ^MP:\s+Vlan-mapping;\s+ST:\s+Vlan-stacking;
@@ -39,4 +47,13 @@ STATUS
   ^-+$$ -> Clearall
   ^${VLAN_ID}\s+${VLAN_STATUS}\s+\S+\s+\S+\s+\S+\s+${VLAN_NAME} -> Continue.Record
   ^\d+ -> Clearall
+  ^. -> Error
+
+
+VLANS_AP
+  ^\s*-+$$
+  ^\s*The\s+total\s+number\s+of\s+vlans\s+is\s+:\s+\d+\s*$$
+  ^\s*VLAN\s+ID\s+Type\s+Status\s+MAC\s+Learning\s+Broadcast\/Multicast\/Unicast\s+Property\s*$$
+  # ^\s*${VLAN_ID}\s+${VLAN_TYPE}\s+${VLAN_STATUS}?\s+${MAC_LEARNING}\s+${BROADCAST}\s+${MULTICAST}\s+${UNICAST}\s+${VLAN_PROPERTY}\s*$$ -> Record
+  ^\s*${VLAN_AP}\s+${VLAN_TYPE_AP}\s+${VLAN_STATUS}?\s+${MAC_LEARNING}?\s+${BROADCAST}?\s+${MULTICAST}?\s+${UNICAST}?\s+${VLAN_PROPERTY}?\s*$$ -> Record
   ^. -> Error
