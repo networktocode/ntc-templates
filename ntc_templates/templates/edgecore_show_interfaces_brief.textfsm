@@ -1,7 +1,7 @@
 Value INTERFACE (\S+\s+\d+\s*/\s*\d+)
 Value NAME (.*?)
 Value STATUS (Up|Down|Disabled)
-Value PVID (\d+)
+Value VLAN_ID (\d+)
 Value PRIORITY (\d+)
 Value NEGOTIATION (Auto)
 Value SPEED (\d+)
@@ -16,6 +16,6 @@ Start
 
 IfacesTable
   ^(?:\s*-+)+\s*$$
-  ^\s*${INTERFACE}(?:\s+${NAME})?\s+${STATUS}\s+${PVID}\s+${PRIORITY}\s+(?:${NEGOTIATION})?-?(?:${SPEED}${DUPLEX})?\s+${TYPE}\s+${TRUNK}\s*$$ -> Record
+  ^\s*${INTERFACE}(?:\s+${NAME})?\s+${STATUS}\s+${VLAN_ID}\s+${PRIORITY}\s+(?:${NEGOTIATION})?-?(?:${SPEED}${DUPLEX})?\s+${TYPE}\s+${TRUNK}\s*$$ -> Record
   ^\s*$$
   ^. -> Error
