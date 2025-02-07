@@ -49,7 +49,6 @@ STATUS
   ^\s*\d+ -> Clearall
   ^. -> Error
 
-
 VLANS_AP
   ^\s*-+$$ -> Clearall
   ^\s*${VLAN_ID}\s+${VLAN_TYPE}\s+${VLAN_STATUS}\s+${VLAN_MAC_LEARNING}\s+${VLAN_BROADCAST}\s+${VLAN_MULTICAST}\s+${VLAN_UNICAST}\s+${VLAN_PROPERTY}\s*$$ -> Continue.Record
