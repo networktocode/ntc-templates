@@ -1,8 +1,10 @@
 ---
 parsed_sample:
   - interface: ""
+    interface_status: ""
     mode: ""
     vlan_broadcast: "forward"
+    vlan_description: ""
     vlan_id: "1"
     vlan_mac_learning: "enable"
     vlan_multicast: "forward"
@@ -13,8 +15,10 @@ parsed_sample:
     vlan_type: "common"
     vlan_unicast: "forward"
   - interface: ""
+    interface_status: ""
     mode: ""
     vlan_broadcast: "forward"
+    vlan_description: ""
     vlan_id: "2"
     vlan_mac_learning: "enable"
     vlan_multicast: "forward"
