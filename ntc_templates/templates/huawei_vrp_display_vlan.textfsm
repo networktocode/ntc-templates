@@ -1,7 +1,7 @@
-Value Filldown VLAN_ID (\d+)
-Value Filldown VLAN_TYPE (\w+)
-Value Filldown MODE ((TG|UT))
-Value INTERFACE ([A-Z0-9/th\-runk]+)
+Value VLAN_ID (\d+)
+Value VLAN_TYPE (\w+)
+Value List INTERFACE ([A-Z0-9/th\-runkMultiWlanBs]+)
+Value MODE ((TG|UT))
 Value VLAN_NAME (\S.+\S|\S+)
 Value VLAN_STATUS (\S+)
 Value VLAN_BROADCAST (\S+)
@@ -10,38 +10,51 @@ Value VLAN_UNICAST (\S+)
 Value VLAN_PROPERTY (\S+)
 Value VLAN_MAC_LEARNING (\S+)
 Value VLAN_STATISTICS (\S+)
+Value VLAN_UPLINK_DOWNLINK ((D|U))
 
 Start
   ^\s*\*\s+:\s+management-vlan\s*$$
   ^\s*The\s+total\s+number\s+of\s+(VLANs|vlans)\s+is\s*:\s+\d+\s*$$
   ^-+$$
-  ^U:\s+Up;\s+D:\s+Down;\s+TG:\s+Tagged;\s+UT:\s+Untagged;
+  ^\s*U:\s*Up;\s*D:\s*Down;\s*TG:\s*Tagged;\s*UT:\s*Untagged;\s*$$
   ^MP:\s+Vlan-mapping;\s+ST:\s+Vlan-stacking;
   ^#:\s+ProtocolTransparent-vlan;\s+\*:\s+Management-vlan;
-  ^VID\s+Type\s+Ports -> VLANS
+  ^\s*VID\s+Type\s+Ports\s*$$ -> VLANS
+  ^\s*VID\s+Name\s+Status\s+Ports\s*$$ -> VLANS_AP_BRIEF
   ^VID\s+Status\s+Property -> STATUS
   ^\s*VLAN\s+ID\s+Type\s+Status\s+MAC\s+Learning\s+Broadcast\/Multicast\/Unicast\s+Property\s*$$ -> VLANS_AP
   ^. -> Error
 
 VLANS
   ^-+$$
-  ^${VLAN_ID}\s+${VLAN_TYPE}\s*$$ -> Record
-  ^${VLAN_ID}\s+${VLAN_TYPE}\s+${MODE}:${INTERFACE}\(\w+\)\s* -> Continue.Record
-  ^${VLAN_ID}\s+${VLAN_TYPE}\s+${MODE}:(?:\S+\s+){1}\s+${INTERFACE}\(\w+\)\s* -> Continue.Record
-  ^${VLAN_ID}\s+${VLAN_TYPE}\s+${MODE}:(?:\S+\s+){2}\s+${INTERFACE}\(\w+\)\s* -> Continue.Record
-  ^${VLAN_ID}\s+${VLAN_TYPE}\s+${MODE}:(?:\S+\s+){3}\s+${INTERFACE}\(\w+\)\s* -> Continue.Record
-  ^${VLAN_ID}\s+${VLAN_TYPE}\s+${MODE}:(?:\S+\s+){4}\s+${INTERFACE}\(\w+\)\s* -> Continue.Record
-  ^\d+
-  ^\s{6,}${MODE}:${INTERFACE}\(\w+\)\s* -> Continue.Record
-  ^\s{6,}${INTERFACE}\(\w+\)\s* -> Continue.Record
-  ^\s{6,}(?:\S+\s+){1}${INTERFACE}\(\w+\)\s* -> Continue.Record
-  ^\s{6,}(?:\S+\s+){2}${INTERFACE}\(\w+\)\s* -> Continue.Record
-  ^\s{6,}(?:\S+\s+){3}${INTERFACE}\(\w+\)\s* -> Continue.Record
-  ^\s{6,}(?:\S+\s+){4}${INTERFACE}\(\w+\)\s* -> Continue.Record
-  ^\s{6,}
+  ^\s*${VLAN_ID}\s+${VLAN_TYPE}\s+${MODE}:\s*${INTERFACE}\(\w+\)\s* -> Continue.Record
+  ^\s*${VLAN_ID}\s+${VLAN_TYPE}\s+${MODE}:\s*(?:\S+\s+){1}\s+${INTERFACE}\(\w+\)\s* -> Continue.Record
+  ^\s*${VLAN_ID}\s+${VLAN_TYPE}\s+${MODE}:\s*(?:\S+\s+){2}\s+${INTERFACE}\(\w+\)\s* -> Continue.Record
+  ^\s*${VLAN_ID}\s+${VLAN_TYPE}\s+${MODE}:\s*(?:\S+\s+){3}\s+${INTERFACE}\(\w+\)\s* -> Continue.Record
+  ^\s*${VLAN_ID}\s+${VLAN_TYPE}\s+${MODE}:\s*(?:\S+\s+){4}\s+${INTERFACE}\(\w+\)\s* -> Continue.Record
+  ^\s*\d+
+  ^\s*\s{6,}${MODE}:\s*${INTERFACE}\(\w+\)\s* -> Continue.Record
+  ^\s+${INTERFACE}\(${VLAN_UPLINK_DOWNLINK}\)\s* -> Continue.Record
+  ^\s*\s{6,}(?:\S+\s+){1}${INTERFACE}\(\w+\)\s* -> Continue.Record
+  ^\s*\s{6,}(?:\S+\s+){2}${INTERFACE}\(\w+\)\s* -> Continue.Record
+  ^\s*\s{6,}(?:\S+\s+){3}${INTERFACE}\(\w+\)\s* -> Continue.Record
+  ^\s*\s{6,}(?:\S+\s+){4}${INTERFACE}\(\w+\)\s* -> Continue.Record
+  ^\s*\s{6,}
   ^\s*$$ -> Start
-  ^. -> Error
 
+VLANS_AP_BRIEF
+  ^\s*-+\s*$$
+  ^\s*d+.* -> Continue.Record
+  ^\s*${VLAN_ID}\s+(?:${VLAN_NAME}\s+)?${VLAN_STATUS}\s+${MODE}:\s*${INTERFACE}\(\w+\)\s* -> Continue
+  ^\s*${VLAN_ID}\s+(?:${VLAN_NAME}\s+)?${VLAN_STATUS}\s+${MODE}:\s*(?:\S+\s+){1}${INTERFACE}\(\w+\)\s* -> Continue
+  ^\s*${VLAN_ID}\s+(?:${VLAN_NAME}\s+)?${VLAN_STATUS}\s+${MODE}:\s*(?:\S+\s+){2}${INTERFACE}\(\w+\)\s* -> Continue
+  ^\s*${VLAN_ID}\s+(?:${VLAN_NAME}\s+)?${VLAN_STATUS}\s+${MODE}:\s*(?:\S+\s+){3}${INTERFACE}\(\w+\)\s* -> Continue
+  ^\s*${VLAN_ID}\s+(?:${VLAN_NAME}\s+)?${VLAN_STATUS}\s+${MODE}:\s*(?:\S+\s+){4}${INTERFACE}\(\w+\)\s* -> Continue
+  ^\s+${INTERFACE}\(${VLAN_UPLINK_DOWNLINK}\)\s* -> Continue
+  ^\s+(?:\S+\s+){1}${INTERFACE}\(${VLAN_UPLINK_DOWNLINK}\)\s* -> Continue
+  ^\s+(?:\S+\s+){2}${INTERFACE}\(${VLAN_UPLINK_DOWNLINK}\)\s* -> Continue
+  ^\s+(?:\S+\s+){3}${INTERFACE}\(${VLAN_UPLINK_DOWNLINK}\)\s* -> Continue
+  ^\s+(?:\S+\s+){4}${INTERFACE}\(${VLAN_UPLINK_DOWNLINK}\)\s* -> Continue
 
 STATUS
   ^\s*-+$$ -> Clearall
