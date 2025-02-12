@@ -6,7 +6,7 @@ Value MESSAGES_RECEIVED (\d+)
 Value MESSAGES_SENT (\d+)
 Value OUTPUT_QUEUE (\d+)
 Value PREFIXES_RECEIVED (\d+)
-Value UP_DOWN (\d+h\d+m)
+Value UP_DOWN (\S+)
 Value STATE (\S+)
 
 Start
