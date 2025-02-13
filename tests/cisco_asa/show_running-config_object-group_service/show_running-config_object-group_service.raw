@@ -1,0 +1,26 @@
+object-group service one
+ description TEST ONE
+ service-object object alpha 
+ service-object object bravo 
+ service-object icmp echo 0
+ service-object icmp echo
+object-group service two
+ description TEST TWO
+ service-object object charlie
+ service-object tcp destination eq ftp 
+ service-object tcp destination eq 5666 
+ service-object icmp
+ service-object 137 
+object-group service three
+ description TEST THREE
+ service-object udp destination range 48129 48137 
+ service-object udp source range 48129 48137 
+ service-object udp source eq 48129 destination eq 48137 
+ service-object udp source range 48129 48137 destination eq 48137 
+ service-object udp source gt 1023 destination lt 40000 
+object-group service four
+ description TEST FOUR
+ group-object three
+object-group service five tcp
+ port-object eq 445
+ port-object eq netbios-ssn
