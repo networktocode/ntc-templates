@@ -227,7 +227,7 @@ tests/cisco_ios/show_mac-address-table/cisco_ios_show_mac-address-table9.yml
 $ 
 ```
 
-Additionally, each of these commands are available via invoke commands to better support a docker environment. The arguement names match up, e.g. `python cli.py clean-yaml-file` has an equivalant `invoke clean-yaml-file`.
+Additionally, each of these commands are available via invoke commands to better support a docker environment. The argument names match up, e.g. `python cli.py clean-yaml-file` has an equivalant `invoke clean-yaml-file`.
 
 # Updating/Fixing Existing Templates
 When either fixing a bug within a template or adding additional **Values** to be captured, additional test files should be added to ensure backwards compatibility and that the new data is being parsed correctly.
