@@ -1,0 +1,82 @@
+Value Filldown RAM_MAXIMUM_CAPACITY (\S.+\S)
+Value Filldown RAM_TOTAL_SLOT (\d+)
+Value RAM_TOTAL_WIDTH (\S.+\S)
+Value RAM_DATA_WIDTH (\S.+\S)
+Value RAM_SIZE (\S.+\S)
+Value RAM_FORM_FACTOR (\S.+\S)
+Value RAM_LOCATOR (\S+|\S.+\S)
+Value RAM_TYPE (\S.+\S)
+Value RAM_SPEED (\S.+\S)
+Value RAM_MANUFACTURER (\S+|\S.+\S)
+Value RAM_SERIAL_NUMBER (\S.+\S)
+Value RAM_ASSET_TAG (\S.+\S)
+Value RAM_PART_NUMBER (\S.+\S)
+Value RAM_CONFIGURED_MEMORY_SPEED (\S.+\S)
+Value RAM_CONFIGURED_CLOCK_SPEED (\S.+\S)
+Value RAM_MINIMUM_VOLTAGE (\S.+\S)
+Value RAM_MAXIMUM_VOLTAGE (\S.+\S)
+Value RAM_CONFIGURED_VOLTAGE (\S.+\S)
+
+Start
+  ^\s*\#\s*dmidecode\s*\S+\s*$$
+  ^\s*\#\s*SMBIOS\s*entry\s*point\s*at\s*\S+\s*$$
+  ^\s*Getting\s*SMBIOS\s*data\s*from\s*sysfs\.\s*$$
+  ^\s*SMBIOS\s*\d+\.\d+(?:.\d+)?\s*present\.\s*$$
+  ^\s*\#\s*SMBIOS\s*implementations\s*newer\s*than\s*version\s*\d+\.\d+\s*are\s*not\s*$$
+  ^\s*\#\s*fully\s*supported\s*by\s*this\s*version\s*of\s*dmidecode\.\s*$$
+  ^\s*$$
+  ^\s*Handle\s*\S+,\s*DMI\s*type\s*\d+,\s*\d+\s*bytes$$ -> decisor
+  ^. -> Error
+
+decisor
+  ^\s*Physical\s*Memory\s*Array\s*$$ -> memory_array_info
+  ^\s*Memory\s*Device\s*$$ -> memory_info
+  ^. -> Error
+
+memory_array_info
+  ^\s*Location:\s*\S.+\S\s*$$
+  ^\s*Use:\s*\S.+\S\s*$$
+  ^\s*Error\s*Correction\s*Type:\s*\S.+\S\s*$$
+  ^\s*Maximum\s*Capacity:\s*${RAM_MAXIMUM_CAPACITY}\s*$$
+  ^\s*Error\s*Information\s*Handle:\s*\S.+\S\s*$$
+  ^\s*Number\s*Of\s*Devices:\s*${RAM_TOTAL_SLOT}\s*$$
+  ^\s*Handle\s*\S+,\s*DMI\s*type\s*\d+,\s*\d+\s*bytes$$ -> decisor
+  ^. -> Error
+
+memory_info
+  ^\s*Array\s*Handle:\s*\S+$$
+  ^\s*Error\s*Information\s*Handle:\s*\S.+\S\s*$$
+  ^\s*Total\s*Width:\s*${RAM_TOTAL_WIDTH}\s*$$
+  ^\s*Data\s*Width:\s*${RAM_DATA_WIDTH}\s*$$
+  ^\s*Size:\s*${RAM_SIZE}\s*$$
+  ^\s*Form\s*Factor:\s*${RAM_FORM_FACTOR}\s*$$
+  ^\s*Set:\s*\S+$$
+  ^\s*Locator:\s*${RAM_LOCATOR}\s*$$
+  ^\s*Bank\s*Locator:\s*\S.+\S\s*$$
+  ^\s*Type:\s*${RAM_TYPE}\s*$$
+  ^\s*Type\s*Detail:\s*\S.+\S\s*$$
+  ^\s*Speed:\s*${RAM_SPEED}\s*$$
+  ^\s*Manufacturer:\s*${RAM_MANUFACTURER}\s*$$
+  ^\s*Serial\s*Number:\s*${RAM_SERIAL_NUMBER}\s*$$
+  ^\s*Asset\s*Tag:\s*${RAM_ASSET_TAG}\s*$$
+  ^\s*Part\s*Number:\s*${RAM_PART_NUMBER}\s*$$
+  ^\s*Rank:\s*\S+$$
+  ^\s*Configured\s*Memory\s*Speed:\s*${RAM_CONFIGURED_MEMORY_SPEED}\s*$$
+  ^\s*Configured\s*Clock\s*Speed:\s*${RAM_CONFIGURED_CLOCK_SPEED}\s*$$
+  ^\s*Minimum\s*(V|v)oltage:\s*${RAM_MINIMUM_VOLTAGE}\s*$$
+  ^\s*Maximum\s*(V|v)oltage:\s*${RAM_MAXIMUM_VOLTAGE}\s*$$
+  ^\s*Configured\s*(V|v)oltage:\s*${RAM_CONFIGURED_VOLTAGE}\s*$$
+  ^\s*Memory\s*Technology:\s*\S.+\S\s*$$
+  ^\s*Memory\s*Operating\s*Mode\s*Capability:\s*\S.+\S\s*$$
+  ^\s*Firmware\s*Version:\s*\S.+\S\s*$$
+  ^\s*Module\s*Manufacturer\s*ID:\s*\S.+\S\s*$$
+  ^\s*Module\s*Product\s*ID:\s*\S.+\S\s*$$
+  ^\s*Memory\s*Subsystem\s*Controller\s*Manufacturer\s*ID:\s*\S.+\S\s*$$
+  ^\s*Memory\s*Subsystem\s*Controller\s*Product\s*ID:\s*\S.+\S\s*$$
+  ^\s*Non-Volatile\s*Size:\s*\S.+\S\s*$$
+  ^\s*Volatile\s*Size:\s*\S.+\S\s*$$
+  ^\s*Cache\s*Size:\s*\S.+\S\s*$$
+  ^\s*Logical\s*Size:\s*\S.+\S\s*$$
+  ^\s*$$ -> Record
+  ^\s*Handle\s*\S+,\s*DMI\s*type\s*\d+,\s*\d+\s*bytes$$ -> decisor
+  ^. -> Error

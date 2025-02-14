@@ -1,0 +1,21 @@
+Value Filldown LOCAL_ROUTER_ID (\d{1,3}(?:\.\d{1,3}){3}) 
+Value Filldown LOCAL_AS_NUMBER (\d+)
+Value Required,Key PEER (\d{1,3}(?:\.\d{1,3}){3}) 
+Value Required REMOTE_ASN (\d+)
+Value MESSAGES_RECEIVED (\d+)
+Value MESSAGES_SENT (\d+)
+Value OUTPUT_QUEUE (\d+)
+Value PREFIXES_RECEIVED (\d+)
+Value UP_DOWN (\S+)
+Value STATE (\S+)
+
+Start
+  ^\s*BGP\s+local\s+router\s+ID:\s+${LOCAL_ROUTER_ID}
+  ^\s+Local\s+AS\s+number:\s+${LOCAL_AS_NUMBER}
+  ^\s+Total\s+number\s+of\s+peers:\s+(\d+)\s+Peers\s+in\s+established\s+state:\s+(\d+)
+  ^\s*\*\s+-\s+Dynamically\s+created\s+peer
+  ^\s*Peer\s+AS\s+MsgRcvd\s+MsgSent\s+OutQ\s+PrefRcv\s+Up\/Down\s+State
+  ^\s{2}${PEER}\s+${REMOTE_ASN}\s+${MESSAGES_RECEIVED}\s+${MESSAGES_SENT}\s+${OUTPUT_QUEUE}\s+${PREFIXES_RECEIVED}\s+${UP_DOWN}\s+${STATE}\s*$$ -> Record
+  ^. -> Error
+
+EOF

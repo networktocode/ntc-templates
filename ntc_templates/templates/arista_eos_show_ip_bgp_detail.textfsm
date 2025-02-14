@@ -9,6 +9,7 @@ Value VALID (\S+)
 Value PATH_TYPE (\S+)
 Value ACTIVE (best)
 Value COMMUNITY ((?:(?:(?:no-export|no-advertise|local-as|internet)|\d+\s?:\s?\d+)\s?)*)
+Value LARGE_COMMUNITY ((?:(?:\d+\s?:\s?\d+\s?:\s?\d+)\s?)*)
 Value NEXT_HOP (\d+\.\d+\.\d+\.\d+)
 Value NEIGHBOR (\S+)
 Value NEIGHBOR_ID (\S+)
@@ -32,6 +33,7 @@ Start
   ^\s+Origin\s+${ORIGIN},\s+metric\s+${METRIC},\s+localpref\s+${LOCAL_PREF},\s+IGP\s+metric\s+\S+,\s+weight\s+${WEIGHT},\s+received\s+\S+\s+ago,\s+${VALID},\s+${PATH_TYPE},\s+atomic-aggregate
   ^\s+Origin\s+${ORIGIN},\s+metric\s+${METRIC},\s+localpref\s+${LOCAL_PREF},\s+IGP\s+metric\s+\S+,\s+weight\s+${WEIGHT},\s+received\s+\S+\s+ago,\s+${VALID},\s+${PATH_TYPE}
   ^\s+Community:\s+${COMMUNITY}$$
+  ^\s+Large\s+Community:\s+${LARGE_COMMUNITY}$$
   ^\s+Extended\s+Community:\s+\S+
   ^\s+Rx\s+path\s+id:\s+\S+
   ^\s+Rx\s+SAFI:\s+\S+ -> Record

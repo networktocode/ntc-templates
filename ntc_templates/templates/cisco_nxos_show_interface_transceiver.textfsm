@@ -7,6 +7,7 @@ Value PART_NUMBER (\S+)
 Value PRODUCT_ID (\S+)
 
 Start
+  ^\S+/\S+ -> Continue.Record
   ^${INTERFACE}
   ^\s+transceiver\sis\s+${STATUS}
   ^\s+type\s+is(\s+${TYPE})?
@@ -24,5 +25,4 @@ Start
   ^\s+cisco\s+product\s+id\sis(\s+${PRODUCT_ID})?
   ^\s+cisco\s+version\s+id
   ^\s+cisco\s+vendor\s+id
-  ^\s*$$ -> Record
   ^. -> Error
