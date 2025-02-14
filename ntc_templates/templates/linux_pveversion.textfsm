@@ -1,0 +1,6 @@
+Value PROXMOX_VERSION (\S+)
+Value RUNNING_KERNEL (\S+)
+
+Start
+  ^\s*pve-manager\/${PROXMOX_VERSION}\/\w+\s+\(\s*running\s+kernel:\s+${RUNNING_KERNEL}\)
+  ^. -> Error
