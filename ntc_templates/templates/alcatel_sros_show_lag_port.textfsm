@@ -1,28 +1,31 @@
 Value LAG_ID (\d+\(\w\))
 Value PORT_ID (\S+)
 Value ADMIN_STATUS (up|down)
-Value ACTIVE_STATUS (active|standby)
+Value ACTIVE_STATUS (active|standby|\s*)
 Value OPERATIONAL_STATUS (up|down)
-Value PRIMARY (yes|no)
-Value SUB_GROUP (\d+)
-Value FORCED (-)
-Value PRIORITY (\d+)
+Value PRIMARY (yes|no|\s*)
+Value SUB_GROUP (\d+|\s*)
+Value FORCED (-|\s*)
+Value PRIORITY (\d+|\s*)
 
 Start
   ^-+ -> LagPort
   ^=+
   ^Lag\s+Port\s+States
-  ^LACP\s+Status:
-  ^Lag-id\s+
+  ^LACP\s+Status:\s+e\s+-\s+Enabled,\s+d\s+-\s+Disabled
+  ^=+
+  ^(Name|Lag-id)\s*
+  ^(Id|Port-id)\s+Port-id\s+Adm\s+Act/\s+Opr\s+Primary\s+Sub-group\s+Forced\s+Prio
   ^\s+Stdby\s*
+  ^-+ -> LagPort
   ^\s*$$
   ^. -> Error
 
 LagPort
+  ^(lag-\d+)?\s*$$
   ^${LAG_ID}\s+${PORT_ID}\s+${ADMIN_STATUS}\s+${ACTIVE_STATUS}\s+${OPERATIONAL_STATUS}\s+${PRIMARY}\s+${SUB_GROUP}\s+${FORCED}\s+${PRIORITY}\s*$$ -> Record
-  ^\s+${PORT_ID}\s+${ADMIN_STATUS}\s+${ACTIVE_STATUS}\s+${OPERATIONAL_STATUS}\s+${SUB_GROUP}\s+${FORCED}\s+${PRIORITY}\s*$$ -> Record
-  ^\s*$$
-  ^-+
+  ^\s+${PORT_ID}\s+${ADMIN_STATUS}\s+${ACTIVE_STATUS}\s+${OPERATIONAL_STATUS}\s+${PRIMARY}\s+${SUB_GROUP}\s+${FORCED}\s+${PRIORITY}\s*$$ -> Record
+  ^-+ -> End
   ^=+
   ^Total
   ^. -> Error
