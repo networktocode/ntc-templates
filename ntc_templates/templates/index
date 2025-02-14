@@ -752,8 +752,10 @@ linux_dmidecode_-t_processor.textfsm, .*, linux, dmidecode -t processor
 linux_ip_address_show.textfsm, .*, linux, ip a[[ddress]] [[show]]
 linux_ip_route_show.textfsm, .*, linux, ip r[[oute]] [[show]]
 linux_ip_link_show.textfsm, .*, linux, ip l[[ink]] [[show]]
+linux_pct_config_1.textfsm, .*, linux, pct config \d+
 linux_ip_vrf_show.textfsm, .*, linux, ip v[[rf]] [[show]]
 linux_qm_config_1.textfsm, .*, linux, qm c[[onfig]] \d+
+linux_qm_list.textfsm, .*, linux, qm list
 linux_arp_-a.textfsm, .*, linux, arp -a
 linux_vzlist.textfsm, .*, linux, vzlist
 
