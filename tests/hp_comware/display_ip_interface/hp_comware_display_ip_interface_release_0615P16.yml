@@ -1,0 +1,41 @@
+---
+parsed_sample:
+  - interface: "Aux0"
+    ip_address: []
+    line_status: "UP"
+    mtu: ""
+    protocol_status: "DOWN"
+    route_map: ""
+  - interface: "Eth-channel2/0:0"
+    ip_address:
+      - "1.2.3.4/32"
+    line_status: "UP"
+    mtu: "1500"
+    protocol_status: "UP"
+    route_map: ""
+  - interface: "GigabitEthernet0/0"
+    ip_address: []
+    line_status: "Administratively DOWN"
+    mtu: ""
+    protocol_status: "DOWN"
+    route_map: ""
+  - interface: "GigabitEthernet0/1"
+    ip_address:
+      - "5.6.7.10/30"
+    line_status: "UP"
+    mtu: "1500"
+    protocol_status: "UP"
+    route_map: ""
+  - interface: "GigabitEthernet0/2"
+    ip_address: []
+    line_status: "Administratively DOWN"
+    mtu: ""
+    protocol_status: "DOWN"
+    route_map: ""
+  - interface: "Vlan-interface1"
+    ip_address:
+      - "1.2.3.65/29"
+    line_status: "UP"
+    mtu: "1500"
+    protocol_status: "UP"
+    route_map: ""
