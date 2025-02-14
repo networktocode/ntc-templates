@@ -17,7 +17,6 @@ Value RAM_MINIMUM_VOLTAGE (\S.+\S)
 Value RAM_MAXIMUM_VOLTAGE (\S.+\S)
 Value RAM_CONFIGURED_VOLTAGE (\S.+\S)
 
-
 Start
   ^\s*\#\s*dmidecode\s*\S+\s*$$
   ^\s*\#\s*SMBIOS\s*entry\s*point\s*at\s*\S+\s*$$
