@@ -1,0 +1,78 @@
+Value SYSTEM_MANUFACTURER (\S+|\S.+\S)
+Value SYSTEM_PRODUCT_NAME (\S+|\S.+\S)
+Value SYSTEM_SERIAL_NUMBER (|S+|\S.+\S)
+Value SYSTEM_UUID (\S+|\S.+\S)
+
+Start
+  ^\s*\#\s*dmidecode\s*\S+\s*$$
+  ^\s*\#\s*SMBIOS\s*entry\s*point\s*at\s*\S+\s*$$
+  ^\s*Getting\s*SMBIOS\s*data\s*from\s*sysfs\.\s*$$
+  ^\s*SMBIOS\s*\d+\.\d+(?:.\d+)?\s*present\.\s*$$
+  ^\s*\#\s*SMBIOS\s*implementations\s*newer\s*than\s*version\s*\d+\.\d+\s*are\s*not\s*$$
+  ^\s*\#\s*fully\s*supported\s*by\s*this\s*version\s*of\s*dmidecode\.\s*$$
+  ^\s*$$
+  ^\s*Handle\s*\S+,\s*DMI\s*type\s*\d+,\s*\d+\s*bytes$$ -> decisor
+  ^. -> Error
+
+decisor
+  ^\s*System\s*Configuration\s*Options\s*$$ -> system_configurations
+  ^\s*System\s*Boot\s*Information\s*$$ -> system_boot_information
+  ^\s*System\s*Information\s*$$ -> system
+  ^\s*System\s*Event\s*Log\s*$$ -> system_event_log
+  ^\s*System\s*Reset\s*$$ -> system_reset
+  ^. -> Error
+
+system
+  ^\s*Manufacturer:\s+${SYSTEM_MANUFACTURER}\s*$$
+  ^\s*Product\s*Name:\s+${SYSTEM_PRODUCT_NAME}\s*$$
+  ^\s*Version:\s*(?:\S.+\S\s*)?$$
+  ^\s*Serial\s*Number:\s+${SYSTEM_SERIAL_NUMBER}\s*$$
+  ^\s*UUID:\s+${SYSTEM_UUID}\s*$$
+  ^\s*Wake-up\s*Type:\s+\S.+\S\s*$$
+  ^\s*SKU\s*Number:\s+\S.+\S\s*$$
+  ^\s*Family:\s+\S.+\S\s*$$
+  ^\s*$$
+  ^\s*Handle\s*\S+,\s*DMI\s*type\s*\d+,\s*\d+\s*bytes$$ -> decisor
+  ^. -> Error
+
+system_configurations
+  ^\s*Option\s+\d+:\s+\S.+\S\s*$$
+  ^\s*$$
+  ^\s*Handle\s*\S+,\s*DMI\s*type\s*\d+,\s*\d+\s*bytes$$ -> decisor
+  ^. -> Error
+
+system_boot_information
+  ^\s*System\s*Boot\s*Information\s*$$
+  ^\s*Status:\s+\S.+\S\s*$$ -> Record
+  ^\s*Handle\s*\S+,\s*DMI\s*type\s*\d+,\s*\d+\s*bytes$$ -> decisor
+  ^. -> Error
+
+system_event_log
+  ^\s*Area\s*Length:\s+\d+\s*bytes\s*$$
+  ^\s*Header\s*Start\s*Offset:\s+\S.+\S\s*$$
+  ^\s*Header\s*Length:\s+\d+\s*bytes\s*$$
+  ^\s*Data\s*Start\s*Offset:\s+\S.+\S\s*$$
+  ^\s*Access\s*Method:\s+\S.+\S\s*$$
+  ^\s*Access\s*Address:\s+\S.+\S\s*$$
+  ^\s*Status:\s+\S.+\S\s*$$
+  ^\s*Change\s*Token:\s+\S.+\S\s*$$
+  ^\s*Header\s*Format:\s+\S.+\S\s*$$
+  ^\s*Supported\s*Log\s*Type\s*Descriptors:\s+\d+\s*$$
+  ^\s*Descriptor\s+\d+:\s+\S.+\S\s*$$
+  ^\s*Data\s*Format\s+\d+:\s+\S.+\S\s*$$
+  ^\s*$$
+  ^\s*Handle\s*\S+,\s*DMI\s*type\s*\d+,\s*\d+\s*bytes$$ -> decisor
+  ^. -> Error
+
+system_reset
+  ^\s*Status:\s+\S.+\S\s*$$
+  ^\s*Watchdog\s*Timer:\s+\S.+\S\s*$$
+  ^\s*Boot\s*Option:\s+\S.+\S\s*$$
+  ^\s*Boot\s*Option\s*On\s*Limit:\s+\S.+\S\s*$$
+  ^\s*Reset\s*Count:\s+\S.+\S\s*$$
+  ^\s*Reset\s*Limit:\s+\S.+\S\s*$$
+  ^\s*Timer\s*Interval:\s+\S.+\S\s*$$
+  ^\s*Timeout:\s+\S.+\S\s*$$
+  ^\s*$$
+  ^\s*Handle\s*\S+,\s*DMI\s*type\s*\d+,\s*\d+\s*bytes$$ -> decisor
+  ^. -> Error
