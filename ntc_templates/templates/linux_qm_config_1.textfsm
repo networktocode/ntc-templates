@@ -1,0 +1,77 @@
+Value AGENT (\S+)
+Value BALLOON (\S+)
+Value BOOT (\S+)
+Value CORES (\S+)
+Value CPU (\S+)
+Value CPU_LIMIT (\S+)
+Value DESCRIPTION (\S+|\S.+\S)
+Value AUDIO0 (\S+|\S.+\S)
+Value IDE0 (\S+)
+Value IDE1 (\S+)
+Value IDE2 (\S+)
+Value KEYBOARD (\S+)
+Value LOCK (\S+)
+Value MACHINE (\S+)
+Value KVM (\S+)
+Value MEMORY (\S+)
+Value META (\S+)
+Value NAME (\S+)
+Value NET0 (\S+)
+Value NET1 (\S+)
+Value NET2 (\S+)
+Value NET3 (\S+)
+Value NUMA (\S+)
+Value ONBOOT (\S+)
+Value OSTYPE (\S+)
+Value PARENT (\S+)
+Value SCSI0 (\S+)
+Value SCSI1 (\S+)
+Value SERIAL0 (\S+)
+Value SCSIHW (\S+)
+Value SATA0 (\S+)
+Value SATA1 (\S+)
+Value SMBIOS1 (\S+)
+Value SOCKETS (\S+)
+Value VIRTIO0 (\S+)
+Value VMGENID (\S+)
+Value VGA (\S+)
+
+Start
+  ^\s*agent:\s*${AGENT}\s*$$
+  ^\s*balloon:\s*${BALLOON}\s*$$
+  ^\s*boot(?:disk)?:\s*${BOOT}\s*$$
+  ^\s*cores:\s*${CORES}\s*$$
+  ^\s*cpu:\s*${CPU}\s*$$
+  ^\s*cpulimit:\s*${CPU_LIMIT}\s*$$
+  ^\s*description:\s*${DESCRIPTION}\s*$$
+  ^\s*audio0:\s*${AUDIO0}\s*$$
+  ^\s*ide0:\s*${IDE0}\s*$$
+  ^\s*ide1:\s*${IDE1}\s*$$
+  ^\s*ide2:\s*${IDE2}\s*$$
+  ^\s*keyboard:\s*${KEYBOARD}\s*$$
+  ^\s*lock:\s*${LOCK}\s*$$
+  ^\s*machine:\s*${MACHINE}\s*$$
+  ^\s*kvm:\s*${KVM}\s*$$
+  ^\s*memory:\s*${MEMORY}\s*$$
+  ^\s*meta:\s*${META}\s*$$
+  ^\s*name:\s*${NAME}\s*$$
+  ^\s*net0:\s*${NET0}\s*$$
+  ^\s*net1:\s*${NET1}\s*$$
+  ^\s*net2:\s*${NET2}\s*$$
+  ^\s*net3:\s*${NET3}\s*$$
+  ^\s*numa:\s*${NUMA}\s*$$
+  ^\s*onboot:\s*${ONBOOT}\s*$$
+  ^\s*ostype:\s*${OSTYPE}\s*$$
+  ^\s*parent:\s*${PARENT}\s*$$
+  ^\s*sata0:\s*${SATA0}\s*$$
+  ^\s*sata1:\s*${SATA1}\s*$$
+  ^\s*scsi0:\s*${SCSI0}\s*$$
+  ^\s*scsi1:\s*${SCSI1}\s*$$
+  ^\s*serial0:\s*${SERIAL0}\s*$$
+  ^\s*scsihw:\s*${SCSIHW}\s*$$
+  ^\s*smbios1:\s*${SMBIOS1}\s*$$
+  ^\s*sockets:\s*${SOCKETS}\s*$$
+  ^\s*vga:\s*${VGA}\s*$$
+  ^\s*virtio0:\s*${VIRTIO0}\s*$$
+  ^\s*vmgenid:\s*${VMGENID}\s*$$
+  ^. -> Error
