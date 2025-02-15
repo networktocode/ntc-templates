@@ -5,19 +5,20 @@ Value NEXTHOP_IP (\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3})
 Value NEXTHOP_IF (\S+)
 Value SCOPE (\S+)
 Value SRC (\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3})
+Value REACHABILITY (\S+)
 
 Start
   # dhcp (discarded)
-  ^.*proto dhcp.*
-  ^\S+ dev \S+ proto dhcp .*
+  ^.*proto\s+dhcp.*
+  ^\s*\S+\s+dev\s+\S+\s+proto\s+dhcp\s+.*
   # unreachable, broadcast, local (discarded)
-  ^unreachable
-  ^broadcast*
-  ^local
+  ^\s*unreachable
+  ^\s*broadcast*
+  ^\s*local
   # default
-  ^${NETWORK} via ${NEXTHOP_IP} dev ${NEXTHOP_IF} -> Record
+  ^\s*${NETWORK}\s+via\s+${NEXTHOP_IP}\s+dev\s+${NEXTHOP_IF}(?:\s+proto\s+${PROTOCOL}(?:\s+${REACHABILITY})?)?\s*$$ -> Record
   # local (network)
-  ^${NETWORK} dev ${NEXTHOP_IF} proto ${PROTOCOL} scope ${SCOPE} src ${SRC} -> Record
+  ^\s*${NETWORK}\s+dev\s+${NEXTHOP_IF}\s+proto\s+${PROTOCOL}\s+scope\s+${SCOPE}\s+src\s+${SRC}(?:\s+${REACHABILITY})?\s*$$ -> Record
   # static
-  ^${NETWORK} via ${NEXTHOP_IP} dev ${NEXTHOP_IF} -> Record
+  ^\s*${NETWORK}\s+via\s+${NEXTHOP_IP}\s+dev\s+${NEXTHOP_IF}\s*(?:${REACHABILITY})?\s*$$ -> Record
   ^. -> Error
