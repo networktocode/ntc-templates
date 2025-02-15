@@ -683,6 +683,7 @@ huawei_smartax_display_ont_snmp-profile_0_all.textfsm, .*, huawei_smartax, di[[s
 huawei_smartax_display_ont_gemport_0_ontid_0.textfsm, .*, huawei_smartax, di[[splay]] ont g[[emport]] \d+ ontid \d+\s*
 huawei_smartax_display_sysman_service_state.textfsm, .*, huawei_smartax, di[[splay]] sysman s[[ervice]] s[[tate]]
 huawei_smartax_display_board_serial-number.textfsm, .*, huawei_smartax, di[[splay]] bo[[ard]] s[[erial-number]]\s*
+huawei_smartax_display_ont_wlan-status_0_1.textfsm, .*, huawei_smartax, disp[[lay]] ont wlan-s[[tatus]] \d+ \d+\s*
 huawei_smartax_display_service-port_all.textfsm, .*, huawei_smartax, disp[[lay]] ser[[vice-port]] a[[ll]] *$
 huawei_smartax_display_ont_autofind.textfsm, .*, huawei_smartax, di[[splay]] ont a[[utofind]]\s*
 huawei_smartax_display_ont_info_0_1.textfsm, .*, huawei_smartax, di[[splay]] ont i[[nfo]] (by-sn \w*\s*|\d+ \d+\s*|\d+ \d+ \d+ \d+\s*)
@@ -749,12 +750,16 @@ juniper_junos_show_vlans.textfsm, .*, juniper_junos, sh[[ow]] vl[[ans]]
 juniper_screenos_get_route.textfsm, .*, juniper_screenos, get route
 
 linux_dmidecode_-t_processor.textfsm, .*, linux, dmidecode -t processor
+linux_dmidecode_-t_memory.textfsm, .*, linux, dmidecode -t memory
+linux_dmidecode_-t_system.textfsm, .*, linux, dmidecode -t system
 linux_ip_address_show.textfsm, .*, linux, ip a[[ddress]] [[show]]
 linux_ip_route_show.textfsm, .*, linux, ip r[[oute]] [[show]]
 linux_ip_link_show.textfsm, .*, linux, ip l[[ink]] [[show]]
 linux_pct_config_1.textfsm, .*, linux, pct config \d+
 linux_ip_vrf_show.textfsm, .*, linux, ip v[[rf]] [[show]]
 linux_qm_config_1.textfsm, .*, linux, qm c[[onfig]] \d+
+linux_pveversion.textfsm, .*, linux, pveversion
+linux_pct_list.textfsm, .*, linux, pct list
 linux_qm_list.textfsm, .*, linux, qm list
 linux_arp_-a.textfsm, .*, linux, arp -a
 linux_vzlist.textfsm, .*, linux, vzlist
