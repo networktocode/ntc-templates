@@ -1,0 +1,16 @@
+== [ port1 ]
+name: port1 mode: dhcp ip: 192.168.0.205 255.255.255.0 status: up netbios-forward: disable type: physical ring-rx: 0 ring-tx: 0 netflow-sampler: disable sflow-sampler: disable src-check: enable explicit-web-proxy: disable explicit-ftp-proxy: disable proxy-captive-portal: disable mtu-override: disable wccp: disable drop-overlapped-fragment: disable drop-fragment: disable
+== [ port2 ]
+name: port2 mode: static ip: 0.0.0.0 0.0.0.0 status: up netbios-forward: disable type: physical ring-rx: 0 ring-tx: 0 netflow-sampler: disable sflow-sampler: disable src-check: enable explicit-web-proxy: disable explicit-ftp-proxy: disable proxy-captive-portal: disable mtu-override: disable wccp: disable drop-overlapped-fragment: disable drop-fragment: disable
+== [ port3 ]
+name: port3 mode: static ip: 0.0.0.0 0.0.0.0 status: up netbios-forward: disable type: physical ring-rx: 0 ring-tx: 0 netflow-sampler: disable sflow-sampler: disable src-check: enable explicit-web-proxy: disable explicit-ftp-proxy: disable proxy-captive-portal: disable mtu-override: disable wccp: disable drop-overlapped-fragment: disable drop-fragment: disable
+== [ port4 ]
+name: port4 mode: static ip: 0.0.0.0 0.0.0.0 status: up netbios-forward: disable type: physical ring-rx: 0 ring-tx: 0 netflow-sampler: disable sflow-sampler: disable src-check: enable explicit-web-proxy: disable explicit-ftp-proxy: disable proxy-captive-portal: disable mtu-override: disable wccp: disable drop-overlapped-fragment: disable drop-fragment: disable
+== [ naf.root ]
+name: naf.root ip: 0.0.0.0 0.0.0.0 status: up netbios-forward: disable type: tunnel netflow-sampler: disable sflow-sampler: disable src-check: disable explicit-web-proxy: disable explicit-ftp-proxy: disable proxy-captive-portal: disable wccp: disable
+== [ l2t.root ]
+name: l2t.root ip: 0.0.0.0 0.0.0.0 status: up netbios-forward: disable type: tunnel netflow-sampler: disable sflow-sampler: disable src-check: enable explicit-web-proxy: disable explicit-ftp-proxy: disable proxy-captive-portal: disable wccp: disable
+== [ ssl.root ]
+name: ssl.root ip: 0.0.0.0 0.0.0.0 status: up netbios-forward: disable type: tunnel netflow-sampler: disable sflow-sampler: disable src-check: enable explicit-web-proxy: disable explicit-ftp-proxy: disable proxy-captive-portal: disable wccp: disable
+== [ fortilink ]
+name: fortilink mode: static ip: 10.255.1.1 255.255.255.0 status: up netbios-forward: disable type: aggregate netflow-sampler: disable sflow-sampler: disable src-check: enable explicit-web-proxy: disable explicit-ftp-proxy: disable proxy-captive-portal: disable mtu-override: disable wccp: disable drop-overlapped-fragment: disable drop-fragment: disable
