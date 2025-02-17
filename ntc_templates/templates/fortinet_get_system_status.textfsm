@@ -26,6 +26,7 @@ Value FMWP_DB (.*)
 Value INDUSTRIAL_DB (.*)
 Value SERIAL_NUMBER (\S+)
 Value LICENSE_STATUS (.*)
+Value EVALUATION_LICENSE_EXPIRES (.*)
 Value VM_RESOURCES (.*)
 Value IPS_MALICIOUS_URL_DATABASE (.*)
 Value IOT_DETECT (.*)
@@ -69,6 +70,7 @@ Start
   ^INDUSTRIAL-DB:\s+${INDUSTRIAL_DB}
   ^Serial-Number:\s+${SERIAL_NUMBER}
   ^License Status:\s+${LICENSE_STATUS}
+  ^Evaluation\s+License\s+Expires:\s+${EVALUATION_LICENSE_EXPIRES}
   ^VM Resources:\s+${VM_RESOURCES}
   ^IPS\s+Malicious\s+URL\s+Database:\s+${IPS_MALICIOUS_URL_DATABASE}
   ^IoT-Detect:\s+${IOT_DETECT}
