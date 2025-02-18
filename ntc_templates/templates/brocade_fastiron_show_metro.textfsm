@@ -1,33 +1,33 @@
-Value ringid (\d+)
-Value ringname ([a-zA-Z0-9\-\"\ ]+)
-Value ringstate (enabled|disabled)
-Value ringrole (member|master)
-Value mastervlan (\d+)
-Value topogroup (\d+|not conf)
-Value hellotime (\d+)
-Value prefwingtime (\d+)
-Value port1interface ([0-9\/]+)
-Value port1role (primary|secondary)
-Value port1state (\w+)
-Value port1activeint ([0-9\/]+)
-Value port1inttype (\w+)
-Value port2interface ([0-9\/]+)
-Value port2role (primary|secondary)
-Value port2state (\w+)
-Value port2activeint ([0-9\/]+)
-Value port2inttype (\w+)
-Value rhpssent (\d+)
-Value rhpsrecvd (\d+)
-Value tcrbpdusrecvd (\d+)
-Value statechanges (\d+)
+Value RINGID (\d+)
+Value RINGNAME ([a-zA-Z0-9\-\"\ ]+)
+Value RINGSTATE (enabled|disabled)
+Value RINGROLE (member|master)
+Value MASTERVLAN (\d+)
+Value TOPOGROUP (\d+|not conf)
+Value HELLOTIME (\d+)
+Value PREFWINGTIME (\d+)
+Value PORT1INTERFACE ([0-9\/]+)
+Value PORT1ROLE (primary|secondary)
+Value PORT1STATE (\w+)
+Value PORT1ACTIVEINT ([0-9\/]+)
+Value PORT1INTTYPE (\w+)
+Value PORT2INTERFACE ([0-9\/]+)
+Value PORT2ROLE (primary|secondary)
+Value PORT2STATE (\w+)
+Value PORT2ACTIVEINT ([0-9\/]+)
+Value PORT2INTTYPE (\w+)
+Value RHPSSENT (\d+)
+Value RHPSRECVD (\d+)
+Value TCRBPDUSRECVD (\d+)
+Value STATECHANGES (\d+)
 
 Start
-  ^Metro Ring ${ringid} -> Continue
-  ^Metro Ring ${ringid} - ${ringname}
-  ^\d+\s+${ringstate}\s+${ringrole}\s+${mastervlan}\s+${topogroup}\s+${hellotime}\s+${prefwingtime}
-  ^${rhpssent}\s+${rhpsrecvd}\s+${tcrbpdusrecvd}\s+${statechanges} -> Record
-  ^ethernet\s+${port1interface}\s+${port1role}\s+${port1state}\s+ethernet\s+${port1activeint}\s+${port1inttype} -> PORT2
+  ^Metro Ring ${RINGID} -> Continue
+  ^Metro Ring ${RINGID} - ${RINGNAME}
+  ^\d+\s+${RINGSTATE}\s+${RINGROLE}\s+${MASTERVLAN}\s+${TOPOGROUP}\s+${HELLOTIME}\s+${PREFWINGTIME}
+  ^${RHPSSENT}\s+${RHPSRECVD}\s+${TCRBPDUSRECVD}\s+${STATECHANGES} -> Record
+  ^ethernet\s+${PORT1INTERFACE}\s+${PORT1ROLE}\s+${PORT1STATE}\s+ethernet\s+${PORT1ACTIVEINT}\s+${PORT1INTTYPE} -> PORT2
 
 PORT2
-  ^ethernet\s+${port2interface}\s+${port2role}\s+${port2state}\s+ethernet\s+${port2activeint}\s+${port2inttype} -> Start
+  ^ethernet\s+${PORT2INTERFACE}\s+${PORT2ROLE}\s+${PORT2STATE}\s+ethernet\s+${PORT2ACTIVEINT}\s+${PORT2INTTYPE} -> Start
 
