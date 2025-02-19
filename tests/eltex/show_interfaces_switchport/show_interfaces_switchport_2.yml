@@ -11,20 +11,20 @@ parsed_sample:
     forbidden_vlan_name: []
     gvrp_status: "disabled"
     ingress_filtering: "true"
-    mac_based_vlan_group_id: []
-    mac_based_vlan_id: []
-    name:
-      - "Servers_OS"
-      - "NULL"
-    native_vlan: "4094"
     interface: "gi1/0/1"
     interface_membership_type: []
     interface_mode: "Trunk"
+    mac_based_vlan_group_id: []
+    mac_based_vlan_id: []
+    native_vlan: "4094"
     protected: "Disabled"
     protocol_based_vlan_group_id: []
     protocol_based_vlan_id: []
     subnet_based_vlan_group_id: []
     subnet_based_vlan_id: []
-    vlan:
+    vlan_id:
       - "130"
       - "4094"
+    vlan_name:
+      - "Servers_OS"
+      - "NULL"

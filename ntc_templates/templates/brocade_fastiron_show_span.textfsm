@@ -1,19 +1,19 @@
-Value Filldown mastervlan (\d+)
-Value Required vlan (\d+)
-Value rootbridgeid ([0-9a-f]+)
-Value rootpathcost (\d+)
-Value rootport ([0-9a-zA-Z]+)
-Value priorityhex ([0-9a-f]+)
-Value bridgemaxage (\d+)
-Value bridgehello (\d+)
-Value holdtime (\d+)
-Value bridgefwddly (\d+)
-Value lasttopochange (\d+)
-Value topochangecount (\d+)
-Value bridgeaddress ([0-9a-f]+)
-Value portstates (\d+)
+Value Filldown MASTERVLAN (\d+)
+Value Required VLAN_ID (\d+)
+Value ROOTBRIDGEID ([0-9a-f]+)
+Value ROOTPATHCOST (\d+)
+Value ROOTPORT ([0-9a-zA-Z]+)
+Value PRIORITYHEX ([0-9a-f]+)
+Value BRIDGEMAXAGE (\d+)
+Value BRIDGEHELLO (\d+)
+Value HOLDTIME (\d+)
+Value BRIDGEFWDDLY (\d+)
+Value LASTTOPOCHANGE (\d+)
+Value TOPOCHANGECOUNT (\d+)
+Value BRIDGEADDRESS ([0-9a-f]+)
+Value PORTSTATES (\d+)
 
 Start
-  ^STP instance owned by VLAN ${mastervlan}
-  ^\s+${vlan}\s+${rootbridgeid}\s+${rootpathcost}\s+${rootport}\s+${priorityhex}\s+${bridgemaxage}\s+${bridgehello}\s+${holdtime}\s+${bridgefwddly}\s+${lasttopochange}\s+${bridgeaddress} -> Continue
-  ^\s+${vlan}\s+${rootbridgeid}\s+${rootpathcost}\s+${rootport}\s+${priorityhex}\s+${bridgemaxage}\s+${bridgehello}\s+${holdtime}\s+${bridgefwddly}\s+${lasttopochange}\s+${topochangecount}\s+${bridgeaddress} -> Next.Record
+  ^STP\s+instance\s+owned\s+by\s+VLAN\s+${MASTERVLAN}
+  ^\s+${VLAN_ID}\s+${ROOTBRIDGEID}\s+${ROOTPATHCOST}\s+${ROOTPORT}\s+${PRIORITYHEX}\s+${BRIDGEMAXAGE}\s+${BRIDGEHELLO}\s+${HOLDTIME}\s+${BRIDGEFWDDLY}\s+${LASTTOPOCHANGE}\s+${BRIDGEADDRESS} -> Continue
+  ^\s+${VLAN_ID}\s+${ROOTBRIDGEID}\s+${ROOTPATHCOST}\s+${ROOTPORT}\s+${PRIORITYHEX}\s+${BRIDGEMAXAGE}\s+${BRIDGEHELLO}\s+${HOLDTIME}\s+${BRIDGEFWDDLY}\s+${LASTTOPOCHANGE}\s+${TOPOCHANGECOUNT}\s+${BRIDGEADDRESS} -> Next.Record
