@@ -1,0 +1,49 @@
+== [onboard]
+    ==[ha]
+        mode: static
+        ip: 0.0.0.0 0.0.0.0
+        ipv6: ::/0
+        status: up
+        speed: 1000Mbps (Duplex: full)
+        FEC: none
+        FEC_cap: none
+    ==[mgmt]
+        mode: static
+        ip: 192.168.1.99 255.255.255.0
+        ipv6: ::/0
+        status: up
+        speed: 1000Mbps (Duplex: full)
+        FEC: none
+        FEC_cap: none
+    ==[port1]
+        mode: static
+        ip: 0.0.0.0 0.0.0.0
+        ipv6: ::/0
+        status: up
+        speed: 1000Mbps (Duplex: full)
+        FEC: none
+        FEC_cap: none
+    ==[port2]
+        mode: static
+        ip: 0.0.0.0 0.0.0.0
+        ipv6: ::/0
+        status: up
+        speed: 1000Mbps (Duplex: full)
+        FEC: none
+        FEC_cap: none
+    ==[port3]
+        mode: static
+        ip: 0.0.0.0 0.0.0.0
+        ipv6: ::/0
+        status: up
+        speed: 1000Mbps (Duplex: full)
+        FEC: none
+        FEC_cap: none
+    ==[port4]
+        mode: static
+        ip: 0.0.0.0 0.0.0.0
+        ipv6: ::/0
+        status: up
+        speed: 1000Mbps (Duplex: full)
+        FEC: none
+        FEC_cap: none
