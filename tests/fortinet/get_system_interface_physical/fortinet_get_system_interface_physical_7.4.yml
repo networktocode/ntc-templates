@@ -1,56 +1,56 @@
 ---
 parsed_sample:
-- name: ha
-  mode: static
-  ip_address: 0.0.0.0
-  netmask: 0.0.0.0
+- name: "ha"
+  mode: "static"
+  ip_address: "0.0.0.0"
+  netmask: "0.0.0.0"
   ipv6_address: "::"
   ipv6netmask: "0"
-  status: up
+  status: "up"
   speed: "1000"
-  duplex: full
-- name: mgmt
-  mode: static
-  ip_address: 192.168.1.99
-  netmask: 255.255.255.0
+  duplex: "full"
+- name: "mgmt"
+  mode: "static"
+  ip_address: "192.168.1.99"
+  netmask: "255.255.255.0"
   ipv6_address: "::"
   ipv6netmask: "0"
-  status: up
+  status: "up"
   speed: "1000"
-  duplex: full
-- name: port1
-  mode: static
-  ip_address: 0.0.0.0
-  netmask: 0.0.0.0
+  duplex: "full"
+- name: "port1"
+  mode: "static"
+  ip_address: "0.0.0.0"
+  netmask: "0.0.0.0"
   ipv6_address: "::"
   ipv6netmask: "0"
-  status: up
+  status: "up"
   speed: "1000"
-  duplex: full
-- name: port2
-  mode: static
-  ip_address: 0.0.0.0
-  netmask: 0.0.0.0
+  duplex: "full"
+- name: "port2"
+  mode: "static"
+  ip_address: "0.0.0.0"
+  netmask: "0.0.0.0"
   ipv6_address: "::"
   ipv6netmask: "0"
-  status: up
+  status: "up"
   speed: "1000"
-  duplex: full
-- name: port3
-  mode: static
-  ip_address: 0.0.0.0
-  netmask: 0.0.0.0
+  duplex: "full"
+- name: "port3"
+  mode: "static"
+  ip_address: "0.0.0.0"
+  netmask: "0.0.0.0"
   ipv6_address: "::"
   ipv6netmask: "0"
-  status: up
+  status: "up"
   speed: "1000"
-  duplex: full
-- name: port4
-  mode: static
-  ip_address: 0.0.0.0
-  netmask: 0.0.0.0
+  duplex: "full"
+- name: "port4"
+  mode: "static"
+  ip_address: "0.0.0.0"
+  netmask: "0.0.0.0"
   ipv6_address: "::"
   ipv6netmask: "0"
-  status: up
+  status: "up"
   speed: "1000"
-  duplex: full
+  duplex: "full"
