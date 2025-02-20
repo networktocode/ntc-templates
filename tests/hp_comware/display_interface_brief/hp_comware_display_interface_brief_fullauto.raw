@@ -1,0 +1,15 @@
+The brief information of interface(s) under route mode:
+Link: ADM - administratively down; Stby - standby
+Protocol: (s) - spoofing
+Interface            Link Protocol Main IP         Description
+M-GE0/0/0            ADM  DOWN     --
+NULL0                UP   UP(s)    --
+Vlan1081             UP   UP       1.2.3.6
+
+The brief information of interface(s) under bridge mode:
+Link: ADM - administratively down; Stby - standby
+Speed or Duplex: (a)/A - auto; H - half; F - full
+Type: A - access; T - trunk; H - hybrid
+Interface            Link Speed   Duplex Type PVID Description
+BAGG10               UP   20G(a)  F(a)   T    4094 mydescr
+BAGG11               UP   20G(a)  F(a)   T    4094 mydescr
