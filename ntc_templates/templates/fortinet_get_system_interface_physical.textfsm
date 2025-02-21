@@ -26,7 +26,6 @@ Start
   ^\s+status:\s+${STATUS}$$
   ^\s+speed:\s+${SPEED}(|Mbps)\s+\(Duplex:\s+${DUPLEX}\)$$ -> Record
   ^\s+speed:\s+${SPEED}$$ -> Record
-  ^\s+FEC:.*$$
-  ^\s+FEC_cap:.*$$
+  ^\s+FEC(_cap)?:.*$$
   ^\s*$$
   ^. -> Error
