@@ -16,6 +16,7 @@ Flags: E - Entry forwarding on the RPT, J - Joining to the SPT
     F - Learned via MVPN
 RPF route: U - From unicast routing table
            M - From multicast routing table
+* - Interface has EVPN information available in the 'detail' command output
 224.0.1.129
   169.254.132.172, 118d18h, flags: PE
     Incoming interface: Null
