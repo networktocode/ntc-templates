@@ -5,7 +5,7 @@ Value List INTERFACES (\S+\s+\d+(\s+\d+)?)
 Start
   ^VID\s+Interface\s+Tag\s+Type\s+Description
   ^---- -> VLANS
-  ^Total\sCount
+  ^Total\s+Count
   ^\s*$$
   ^. -> Error
 
