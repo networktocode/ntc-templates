@@ -16,6 +16,8 @@ Value IPV6NETMASK (\S+)
 Value STATUS (\S+)
 Value SPEED (\d+|n\/a)
 Value DUPLEX (\S+)
+Value FEC (\S+)
+Value FEC_CAP (\S+)
 
 Start
   ^==\s+\[onboard\]$$
@@ -29,7 +31,8 @@ PhysicalStatus
   ^\s+status:\s+${STATUS}$$
   ^\s+speed:\s+${SPEED}(Mbps)?\s+\(Duplex:\s+${DUPLEX}\)$$
   ^\s+speed:\s+${SPEED}$$
-  ^\s+FEC(_cap)?:.*$$
+  ^\s+FEC:\s+${FEC}$$
+  ^\s+FEC_cap:\s+${FEC_CAP}$$
   ^\s+==\[ -> Continue.Record
   ^\s+==\[${NAME}\]$$ -> Start
   ^\s*$$
