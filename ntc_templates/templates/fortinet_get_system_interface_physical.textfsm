@@ -20,12 +20,17 @@ Value DUPLEX (\S+)
 Start
   ^==\s+\[onboard\]$$
   ^\s+==\[${NAME}\]$$
-  ^\s+mode:\s+${MODE}$$
+  ^\s+mode:\s+${MODE}$$ -> PhysicalStatus
+  ^. -> Error
+
+PhysicalStatus
   ^\s+ip:\s+${IP_ADDRESS}\s+${NETMASK}$$
   ^\s+ipv6:\s+${IPV6_ADDRESS}/${IPV6NETMASK}$$
   ^\s+status:\s+${STATUS}$$
-  ^\s+speed:\s+${SPEED}(|Mbps)\s+\(Duplex:\s+${DUPLEX}\)$$ -> Record
-  ^\s+speed:\s+${SPEED}$$ -> Record
+  ^\s+speed:\s+${SPEED}(|Mbps)\s+\(Duplex:\s+${DUPLEX}\)$$
+  ^\s+speed:\s+${SPEED}$$
   ^\s+FEC(_cap)?:.*$$
+  ^\s+==\[ -> Continue.Record
+  ^\s+==\[${NAME}\]$$ -> Start
   ^\s*$$
   ^. -> Error
