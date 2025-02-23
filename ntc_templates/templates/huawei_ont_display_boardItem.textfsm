@@ -1,0 +1,7 @@
+Value BOARD_ITEM (\S+)
+
+Start
+  ^\s*board\s+item\s*=\s*${BOARD_ITEM}\s*$$
+  ^\s+$$
+  ^\s*success!\s*$$
+  ^. -> Error
