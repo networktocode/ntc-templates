@@ -1,22 +1,22 @@
-Value mastervlan (\d+)
-Value instance (\d+)
-Value bridgeid ([0-9a-f]+)
-Value bridgemaxage (\d+)
-Value bridgehello (\d+)
-Value bridgefwddly (\d+)
-Value holdtime (\d+)
-Value lasttopochange (\d+)
-Value topochangecount (\d+)
-Value rootbridgeid ([0-9a-f]+)
-Value rootpathcost (\d+)
-Value designatedbridgeid ([0-9a-f]+)
-Value rootport ([0-9a-zA-Z]+)
-Value rbmaxage (\d+)
-Value rbhello (\d+)
-Value rbfwddly (\d+)
-Value portstates (\d+)
+Value MASTERVLAN (\d+)
+Value INSTANCE (\d+)
+Value BRIDGEID ([0-9a-f]+)
+Value BRIDGEMAXAGE (\d+)
+Value BRIDGEHELLO (\d+)
+Value BRIDGEFWDDLY (\d+)
+Value HOLDTIME (\d+)
+Value LASTTOPOCHANGE (\d+)
+Value TOPOCHANGECOUNT (\d+)
+Value ROOTBRIDGEID ([0-9a-f]+)
+Value ROOTPATHCOST (\d+)
+Value DESIGNATEDBRIDGEID ([0-9a-f]+)
+Value ROOTPORT ([0-9a-zA-Z]+)
+Value RBMAXAGE (\d+)
+Value RBHELLO (\d+)
+Value RBFWDDLY (\d+)
+Value PORTSTATES (\d+)
 
 Start
-  ^VLAN ${mastervlan} - STP instance ${instance}
-  ^${bridgeid}\s+${bridgemaxage}\s+${bridgehello}\s+${bridgefwddly}\s+${holdtime}\s+${lasttopochange}\s+${topochangecount}
-  ^${rootbridgeid}\s+${rootpathcost}\s+${designatedbridgeid}\s+${rootport}\s+${rbmaxage}\s+${rbhello}\s+${rbfwddly} -> Next.Record
+  ^VLAN ${MASTERVLAN} - STP instance ${INSTANCE}
+  ^${BRIDGEID}\s+${BRIDGEMAXAGE}\s+${BRIDGEHELLO}\s+${BRIDGEFWDDLY}\s+${HOLDTIME}\s+${LASTTOPOCHANGE}\s+${TOPOCHANGECOUNT}
+  ^${ROOTBRIDGEID}\s+${ROOTPATHCOST}\s+${DESIGNATEDBRIDGEID}\s+${ROOTPORT}\s+${RBMAXAGE}\s+${RBHELLO}\s+${RBFWDDLY} -> Next.Record

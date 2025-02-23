@@ -4,8 +4,8 @@ Value MAC_ADDRESS ([0-9A-Fa-f:]+|incomplete)
 Value PORT (\S+)
 Value STATIC (\S+)
 Value AGE (\d+)
-Value VLAN (\S+)
-Value VID (\S+)
+Value VLAN_NAME (\S+)
+Value VLAN_ID (\d+)
 
 Start
   ^VR\s+Destination\s+Mac\s+Age\s+Static\s+VLAN\s+VID\s+Port -> Start_record
@@ -13,7 +13,7 @@ Start
 
 Start_record
   ^\s*---
-  ^${VR}\s+${DESTINATION}\s+\(*${MAC_ADDRESS}\)*\s+${AGE}\s+${STATIC}\s+${VLAN}\s+${VID}(\s+${PORT})?\s*$$ -> Record
+  ^${VR}\s+${DESTINATION}\s+\(*${MAC_ADDRESS}\)*\s+${AGE}\s+${STATIC}\s+${VLAN_NAME}\s+${VLAN_ID}(\s+${PORT})?\s*$$ -> Record
   ^\s*(Dynamic|Pending)\s+Entries\s*:
   ^\s*(In|Out|Failed)\s+Requests?\s*:
   ^\s*Proxy\s+Answered\s*:

@@ -1,120 +1,120 @@
-Value interface ([a-zA-Z0-9\/]+)
-Value Required intstate (up|down|disabled)
-Value protostate (up|down)
-Value stprootguard (enabled|disabled)
-Value stpbpduguard (enabled|disabled)
-Value hardwaretype ([a-zA-Z0-9\s]+)
-Value mac ([0-9a-f\.]+)
-Value bia ([0-9a-f\.]+)
-Value conffiberspeed ([0-9a-zA-Z]+)
-Value confcopperspeed ([0-9a-zA-Z]+)
-Value conffiberduplex ([0-9a-zA-Z]+)
-Value confcopperduplex ([0-9a-zA-Z]+)
-Value actualspeed ([0-9a-zA-Z]+)
-Value actualduplex ([0-9a-zA-Z]+)
-Value l2portstate (Forwarding|Disabled)
-Value l2portmode (tagged|untagged|dual)
-Value untaggedvlan (\d+)
-Value numtaggedvlans (\d+)
-Value stpconfstate (ON|OFF)
-Value priority ([a-zA-Z0-9]+)
-Value flowcontrolstate (enabled|disabled)
-Value priorityforcedstate (enabled|disabled)
-Value dropprecedencelevel (\d+)
-Value dropprecedenceforcestate (enabled|disabled)
-Value dhcpsnooptrust (ON|OFF)
-Value mirrorstate (enabled|disabled)
-Value monitorstate (enabled|disabled)
-Value lacpbpduforward (Enabled|Disabled)
-Value lldpbpduforward (Enabled|Disabled)
-Value activelagports ([0-9\/\-\,]+)
-Value activelagrole (primary|secondary)
-Value activelagprimaryport ([0-9\/]+)
-Value conflagports ([0-9\/\-\,]+)
-Value conflagrole (primary|secondary)
-Value conflagprimaryport ([0-9\/]+)
-Value portname ([a-zA-Z0-9\.\ \"\(\)\#\/\-]+)
-Value l2mtubytes (\d+)
-Value encapsulation ([a-zA-Z0-9]+)
-Value openflowopstate (Disabled|Enabled)
-Value openflowindex (\d+)
-Value clusterl2protoforwarding (disabled|enabled)
-Value loadinterval (\d+)
-Value inputbitssec (\d+)
-Value inputpacketssec (\d+)
-Value inputpercentutilization ([\d\.]+)
-Value outputbitssec (\d+)
-Value outputpacketssec (\d+)
-Value outputpercentutilization ([\d\.]+)
-Value inputpacketstotal (\d+)
-Value inputbytestotal (\d+)
-Value inputnobuffers (\d+)
-Value inputbroadcasts (\d+)
-Value inputmulticasts (\d+)
-Value inputunicasts (\d+)
-Value inputerrors (\d+)
-Value inputcrcerrors (\d+)
-Value inputframeerrors (\d+)
-Value inputignorederrors (\d+)
-Value inputrunts (\d+)
-Value inputgiants (\d+)
-Value inputnpreceivedpackets (\d+)
-Value inputsenttotmpackets (\d+)
-Value inputnpingressdroppedpackets (\d+)
-Value outputpacketstotal (\d+)
-Value outputbytestotal (\d+)
-Value outputunderruns (\d+)
-Value outputbroadcasts (\d+)
-Value outputmulticasts (\d+)
-Value outputunicasts (\d+)
-Value outputerrors (\d+)
-Value outputcollisions (\d+)
-Value outputnptransmittedpackets (\d+)
-Value outputreceivedfromtmpackets (\d+)
-Value l3mtubytes (\d+)
-Value ipaddress ([0-9\.\/]+)
-Value ipencapsulation ([a-zA-Z]+)
+Value INTERFACE ([a-zA-Z0-9\/]+)
+Value Required INTSTATE (up|down|disabled)
+Value PROTOSTATE (up|down)
+Value STPROOTGUARD (enabled|disabled)
+Value STPBPDUGUARD (enabled|disabled)
+Value HARDWARETYPE ([a-zA-Z0-9\s]+)
+Value MAC ([0-9a-f\.]+)
+Value BIA ([0-9a-f\.]+)
+Value CONFFIBERSPEED ([0-9a-zA-Z]+)
+Value CONFCOPPERSPEED ([0-9a-zA-Z]+)
+Value CONFFIBERDUPLEX ([0-9a-zA-Z]+)
+Value CONFCOPPERDUPLEX ([0-9a-zA-Z]+)
+Value ACTUALSPEED ([0-9a-zA-Z]+)
+Value ACTUALDUPLEX ([0-9a-zA-Z]+)
+Value L2PORTSTATE (Forwarding|Disabled)
+Value L2PORTMODE (tagged|untagged|dual)
+Value UNTAGGEDVLAN (\d+)
+Value NUMTAGGEDVLANS (\d+)
+Value STPCONFSTATE (ON|OFF)
+Value PRIORITY ([a-zA-Z0-9]+)
+Value FLOWCONTROLSTATE (enabled|disabled)
+Value PRIORITYFORCEDSTATE (enabled|disabled)
+Value DROPPRECEDENCELEVEL (\d+)
+Value DROPPRECEDENCEFORCESTATE (enabled|disabled)
+Value DHCPSNOOPTRUST (ON|OFF)
+Value MIRRORSTATE (enabled|disabled)
+Value MONITORSTATE (enabled|disabled)
+Value LACPBPDUFORWARD (Enabled|Disabled)
+Value LLDPBPDUFORWARD (Enabled|Disabled)
+Value ACTIVELAGPORTS ([0-9\/\-\,]+)
+Value ACTIVELAGROLE (primary|secondary)
+Value ACTIVELAGPRIMARYPORT ([0-9\/]+)
+Value CONFLAGPORTS ([0-9\/\-\,]+)
+Value CONFLAGROLE (primary|secondary)
+Value CONFLAGPRIMARYPORT ([0-9\/]+)
+Value PORTNAME ([a-zA-Z0-9\.\ \"\(\)\#\/\-]+)
+Value L2MTUBYTES (\d+)
+Value ENCAPSULATION ([a-zA-Z0-9]+)
+Value OPENFLOWOPSTATE (Disabled|Enabled)
+Value OPENFLOWINDEX (\d+)
+Value CLUSTERL2PROTOFORWARDING (disabled|enabled)
+Value LOADINTERVAL (\d+)
+Value INPUTBITSSEC (\d+)
+Value INPUTPACKETSSEC (\d+)
+Value INPUTPERCENTUTILIZATION ([\d\.]+)
+Value OUTPUTBITSSEC (\d+)
+Value OUTPUTPACKETSSEC (\d+)
+Value OUTPUTPERCENTUTILIZATION ([\d\.]+)
+Value INPUTPACKETSTOTAL (\d+)
+Value INPUTBYTESTOTAL (\d+)
+Value INPUTNOBUFFERS (\d+)
+Value INPUTBROADCASTS (\d+)
+Value INPUTMULTICASTS (\d+)
+Value INPUTUNICASTS (\d+)
+Value INPUTERRORS (\d+)
+Value INPUTCRCERRORS (\d+)
+Value INPUTFRAMEERRORS (\d+)
+Value INPUTIGNOREDERRORS (\d+)
+Value INPUTRUNTS (\d+)
+Value INPUTGIANTS (\d+)
+Value INPUTNPRECEIVEDPACKETS (\d+)
+Value INPUTSENTTOTMPACKETS (\d+)
+Value INPUTNPINGRESSDROPPEDPACKETS (\d+)
+Value OUTPUTPACKETSTOTAL (\d+)
+Value OUTPUTBYTESTOTAL (\d+)
+Value OUTPUTUNDERRUNS (\d+)
+Value OUTPUTBROADCASTS (\d+)
+Value OUTPUTMULTICASTS (\d+)
+Value OUTPUTUNICASTS (\d+)
+Value OUTPUTERRORS (\d+)
+Value OUTPUTCOLLISIONS (\d+)
+Value OUTPUTNPTRANSMITTEDPACKETS (\d+)
+Value OUTPUTRECEIVEDFROMTMPACKETS (\d+)
+Value L3MTUBYTES (\d+)
+Value IPADDRESS ([0-9\.\/]+)
+Value IPENCAPSULATION ([a-zA-Z]+)
 
 Start
   ^\w -> Continue.Record
-  ^${interface} is ${intstate}, line protocol is ${protostate}
-  ^\s+Hardware is ${hardwaretype} -> Continue
-  ^\s+Hardware is ${hardwaretype}, address is ${mac} \(bia ${bia}\) -> Continue
-  ^\s+STP Root Guard is ${stprootguard}, STP BPDU Guard is ${stpbpduguard} -> Continue
-  ^\s+Configured speed ${conffiberspeed}, actual ${actualspeed}, configured duplex ${conffiberduplex}, actual ${actualduplex} -> Continue
-  ^\s+Configured fiber speed ${conffiberspeed}, configured copper speed ${confcopperspeed}, actual ${actualspeed}, configured fiber duplex ${conffiberduplex}, configured copper duplex ${confcopperduplex}, actual ${actualduplex} -> Continue
-  ^\s+Member of VLAN ${untaggedvlan} \(untagged\), port is in ${l2portmode} mode, port state is ${l2portstate} -> Continue
-  ^\s+Member of Control VLAN 4095, ${numtaggedvlans} L2 VLAN\(S\) \(tagged\), port is in ${l2portmode} mode, port state is ${l2portstate} -> Continue
-  ^\s+Member of Control VLAN 4095, VLAN ${untaggedvlan} \(untagged\), port is in ${l2portmode} mode, port state is ${l2portstate} -> Continue
-  ^\s+Member of Control VLAN 4095, VLAN ${untaggedvlan} \(untagged\), ${numtaggedvlans} L2 VLANS \(tagged\), -> Continue
-  ^\s+port is in ${l2portmode} mode, port state is ${l2portstate} -> Continue
-  ^\s+Type is Vlan \(Vlan Id: ${untaggedvlan}\) -> Continue
-  ^\s+STP configured to ${stpconfstate}, Priority is ${priority}, flow control ${flowcontrolstate} -> Continue
-  ^\s+Priority force ${priorityforcedstate}, Drop precedence level ${dropprecedencelevel}, Drop precedence force ${dropprecedenceforcestate} -> Continue
-  ^\s+dhcp-snooping-trust configured to ${dhcpsnooptrust} -> Continue
-  ^\s+mirror ${mirrorstate}, monitor ${monitorstate} -> Continue
-  ^\s+LACP BPDU Forwarding:${lacpbpduforward} -> Continue
-  ^\s+LLDP BPDU Forwarding:${lldpbpduforward} -> Continue
-  ^\s+Member of active trunk ports ${activelagports}, ${activelagrole} port, primary port is ${activelagprimaryport} -> Continue
-  ^\s+Member of configured trunk ports ${conflagports}, ${conflagrole} port, primary port is ${conflagprimaryport} -> Continue
-  ^\s+Member of active trunk ports ${activelagports}, ${activelagrole} port -> Continue
-  ^\s+Member of configured trunk ports ${conflagports}, ${conflagrole} port -> Continue
-  ^\s+Port name is ${portname} -> Continue
-  ^\s+MTU ${l2mtubytes} bytes, encapsulation ${encapsulation} -> Continue
-  ^\s+Openflow: ${openflowopstate}, Openflow Index ${openflowindex} -> Continue
-  ^\s+Cluster L2 protocol forwarding ${clusterl2protoforwarding} -> Continue
-  ^\s+${loadinterval} second input rate: ${inputbitssec} bits/sec, ${inputpacketssec} packets/sec, ${inputpercentutilization}% utilization -> Continue
-  ^\s+(\d+) second output rate: ${outputbitssec} bits/sec, ${outputpacketssec} packets/sec, ${outputpercentutilization}% utilization -> Continue
-  ^\s+${inputpacketstotal} packets input, ${inputbytestotal} bytes, ${inputnobuffers} no buffer -> Continue
-  ^\s+Received ${inputbroadcasts} broadcasts, ${inputmulticasts} multicasts, ${inputunicasts} unicasts -> Continue
-  ^\s+${inputerrors} input errors, ${inputcrcerrors} CRC, ${inputframeerrors} frame, ${inputignorederrors} ignored -> Continue
-  ^\s+${inputrunts} runts, ${inputgiants} giants -> Continue
-  ^\s+NP received ${inputnpreceivedpackets} packets, Sent to TM ${inputsenttotmpackets} packets -> Continue
-  ^\s+NP Ingress dropped ${inputnpingressdroppedpackets} packets -> Continue
-  ^\s+${outputpacketstotal} packets output, ${outputbytestotal} bytes, ${outputunderruns} underruns -> Continue
-  ^\s+Transmitted ${outputbroadcasts} broadcasts, ${outputmulticasts} multicasts, ${outputunicasts} unicasts -> Continue
-  ^\s+${outputerrors} output errors, ${outputcollisions} collisions -> Continue
-  ^\s+NP transmitted ${outputnptransmittedpackets} packets, Received from TM ${outputreceivedfromtmpackets} packets -> Continue
-  ^\s+IP MTU ${l3mtubytes} bytes, encapsulation ${ipencapsulation} -> Continue
-  ^\s+Internet address is ${ipaddress}, IP MTU ${l3mtubytes} bytes, encapsulation ${ipencapsulation} -> Continue
+  ^${INTERFACE} is ${INTSTATE}, line protocol is ${PROTOSTATE}
+  ^\s+Hardware is ${HARDWARETYPE} -> Continue
+  ^\s+Hardware is ${HARDWARETYPE}, address is ${MAC} \(bia ${BIA}\) -> Continue
+  ^\s+STP Root Guard is ${STPROOTGUARD}, STP BPDU Guard is ${STPBPDUGUARD} -> Continue
+  ^\s+Configured speed ${CONFFIBERSPEED}, actual ${ACTUALSPEED}, configured duplex ${CONFFIBERDUPLEX}, actual ${ACTUALDUPLEX} -> Continue
+  ^\s+Configured fiber speed ${CONFFIBERSPEED}, configured copper speed ${CONFCOPPERSPEED}, actual ${ACTUALSPEED}, configured fiber duplex ${CONFFIBERDUPLEX}, configured copper duplex ${CONFCOPPERDUPLEX}, actual ${ACTUALDUPLEX} -> Continue
+  ^\s+Member of VLAN ${UNTAGGEDVLAN} \(untagged\), port is in ${L2PORTMODE} mode, port state is ${L2PORTSTATE} -> Continue
+  ^\s+Member of Control VLAN 4095, ${NUMTAGGEDVLANS} L2 VLAN\(S\) \(tagged\), port is in ${L2PORTMODE} mode, port state is ${L2PORTSTATE} -> Continue
+  ^\s+Member of Control VLAN 4095, VLAN ${UNTAGGEDVLAN} \(untagged\), port is in ${L2PORTMODE} mode, port state is ${L2PORTSTATE} -> Continue
+  ^\s+Member of Control VLAN 4095, VLAN ${UNTAGGEDVLAN} \(untagged\), ${NUMTAGGEDVLANS} L2 VLANS \(tagged\), -> Continue
+  ^\s+port is in ${L2PORTMODE} mode, port state is ${L2PORTSTATE} -> Continue
+  ^\s+Type is Vlan \(Vlan Id: ${UNTAGGEDVLAN}\) -> Continue
+  ^\s+STP configured to ${STPCONFSTATE}, Priority is ${PRIORITY}, flow control ${FLOWCONTROLSTATE} -> Continue
+  ^\s+Priority force ${PRIORITYFORCEDSTATE}, Drop precedence level ${DROPPRECEDENCELEVEL}, Drop precedence force ${DROPPRECEDENCEFORCESTATE} -> Continue
+  ^\s+dhcp-snooping-trust configured to ${DHCPSNOOPTRUST} -> Continue
+  ^\s+mirror ${MIRRORSTATE}, monitor ${MONITORSTATE} -> Continue
+  ^\s+LACP BPDU Forwarding:${LACPBPDUFORWARD} -> Continue
+  ^\s+LLDP BPDU Forwarding:${LLDPBPDUFORWARD} -> Continue
+  ^\s+Member of active trunk ports ${ACTIVELAGPORTS}, ${ACTIVELAGROLE} port, primary port is ${ACTIVELAGPRIMARYPORT} -> Continue
+  ^\s+Member of configured trunk ports ${CONFLAGPORTS}, ${CONFLAGROLE} port, primary port is ${CONFLAGPRIMARYPORT} -> Continue
+  ^\s+Member of active trunk ports ${ACTIVELAGPORTS}, ${ACTIVELAGROLE} port -> Continue
+  ^\s+Member of configured trunk ports ${CONFLAGPORTS}, ${CONFLAGROLE} port -> Continue
+  ^\s+Port name is ${PORTNAME} -> Continue
+  ^\s+MTU ${L2MTUBYTES} bytes, encapsulation ${ENCAPSULATION} -> Continue
+  ^\s+Openflow: ${OPENFLOWOPSTATE}, Openflow Index ${OPENFLOWINDEX} -> Continue
+  ^\s+Cluster L2 protocol forwarding ${CLUSTERL2PROTOFORWARDING} -> Continue
+  ^\s+${LOADINTERVAL} second input rate: ${INPUTBITSSEC} bits/sec, ${INPUTPACKETSSEC} packets/sec, ${INPUTPERCENTUTILIZATION}% utilization -> Continue
+  ^\s+(\d+) second output rate: ${OUTPUTBITSSEC} bits/sec, ${OUTPUTPACKETSSEC} packets/sec, ${OUTPUTPERCENTUTILIZATION}% utilization -> Continue
+  ^\s+${INPUTPACKETSTOTAL} packets input, ${INPUTBYTESTOTAL} bytes, ${INPUTNOBUFFERS} no buffer -> Continue
+  ^\s+Received ${INPUTBROADCASTS} broadcasts, ${INPUTMULTICASTS} multicasts, ${INPUTUNICASTS} unicasts -> Continue
+  ^\s+${INPUTERRORS} input errors, ${INPUTCRCERRORS} CRC, ${INPUTFRAMEERRORS} frame, ${INPUTIGNOREDERRORS} ignored -> Continue
+  ^\s+${INPUTRUNTS} runts, ${INPUTGIANTS} giants -> Continue
+  ^\s+NP received ${INPUTNPRECEIVEDPACKETS} packets, Sent to TM ${INPUTSENTTOTMPACKETS} packets -> Continue
+  ^\s+NP Ingress dropped ${INPUTNPINGRESSDROPPEDPACKETS} packets -> Continue
+  ^\s+${OUTPUTPACKETSTOTAL} packets output, ${OUTPUTBYTESTOTAL} bytes, ${OUTPUTUNDERRUNS} underruns -> Continue
+  ^\s+Transmitted ${OUTPUTBROADCASTS} broadcasts, ${OUTPUTMULTICASTS} multicasts, ${OUTPUTUNICASTS} unicasts -> Continue
+  ^\s+${OUTPUTERRORS} output errors, ${OUTPUTCOLLISIONS} collisions -> Continue
+  ^\s+NP transmitted ${OUTPUTNPTRANSMITTEDPACKETS} packets, Received from TM ${OUTPUTRECEIVEDFROMTMPACKETS} packets -> Continue
+  ^\s+IP MTU ${L3MTUBYTES} bytes, encapsulation ${IPENCAPSULATION} -> Continue
+  ^\s+Internet address is ${IPADDRESS}, IP MTU ${L3MTUBYTES} bytes, encapsulation ${IPENCAPSULATION} -> Continue
 
