@@ -1,0 +1,55 @@
+Value List LAN_MAC (\S{17})
+Value List WAN_MAC (\S{17})
+Value List WLAN_MAC (\S{17})
+Value List LLID_MAC (\S{17})
+Value List RESERVED_MAC (\S{17})
+
+Start
+  ^\s*lan\s+mac\s*=\s*${LAN_MAC}\s*$$ -> Lan
+  ^\s*wan\s+mac\s*=\s*${WAN_MAC}\s*$$ -> Wan
+  ^\s*wlan\s+mac\s*=\s*${WLAN_MAC}\s*$$ -> Wlan
+  ^\s*llid\s+mac\s*=\s*${LLID_MAC}\s*$$ -> Llid
+  ^\s*reserved\s+mac\s*=\s*${RESERVED_MAC}\s*$$ -> Reserved_mac
+  ^\s+$$
+  ^\s*success!\s*$$ -> Record
+  ^. -> Error
+
+Lan
+  ^\s*${LAN_MAC}\s*$$
+  ^\s*wan\s+mac\s*=\s*${WAN_MAC}\s*$$ -> Wan
+  ^\s*wlan\s+mac\s*=\s*${WLAN_MAC}\s*$$ -> Wlan
+  ^\s*llid\s+mac\s*=\s*${LLID_MAC}\s*$$ -> Llid
+  ^\s*reserved\s+mac\s*=\s*${RESERVED_MAC}\s*$$ -> Reserved_mac
+  ^\s+$$
+  ^\s*success!\s*$$ -> Record
+  ^. -> Error
+
+Wan
+  ^\s*${WAN_MAC}\s*$$
+  ^\s*wlan\s+mac\s*=\s*${WLAN_MAC}\s*$$ -> Wlan
+  ^\s*llid\s+mac\s*=\s*${LLID_MAC}\s*$$ -> Llid
+  ^\s*reserved\s+mac\s*=\s*${RESERVED_MAC}\s*$$ -> Reserved_mac
+  ^\s+$$
+  ^\s*success!\s*$$ -> Record
+  ^. -> Error
+
+Wlan
+  ^\s*${WLAN_MAC}\s*$$
+  ^\s*llid\s+mac\s*=\s*${LLID_MAC}\s*$$ -> Llid
+  ^\s*reserved\s+mac\s*=\s*${RESERVED_MAC}\s*$$ -> Reserved_mac
+  ^\s+$$
+  ^\s*success!\s*$$ -> Record
+  ^. -> Error
+
+Llid
+  ^\s*${LLID_MAC}\s*$$
+  ^\s*reserved\s+mac\s*=\s*${RESERVED_MAC}\s*$$ -> Reserved_mac
+  ^\s+$$
+  ^\s*success!\s*$$ -> Record
+  ^. -> Error
+
+Reserved_mac
+  ^\s*${RESERVED_MAC}\s*$$
+  ^\s+$$
+  ^\s*success!\s*$$ -> Record
+  ^. -> Error
