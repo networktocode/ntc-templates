@@ -1,0 +1,13 @@
+Value CPU_USED (\d+)
+Value MEM_USED (\d+)
+Value CURRENT_TIME (\S.+\S)
+
+Start
+  ^\s*\*+\s+system\s+infomation\s+\*+\s*$$
+  ^\s*CpuUsed\s+=\s+${CPU_USED}\s+Percent\(s\)\s*$$
+  ^\s*MemUsed\s+=\s+${MEM_USED}\s+Percent\(s\)\s*$$
+  ^\s*CurTime\s+=\s+${CURRENT_TIME}\s*$$
+  ^\s*\*+\s*$$
+  ^\s+$$
+  ^\s*success!\s*$$
+  ^. -> Error
