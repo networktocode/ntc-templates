@@ -1,8 +1,7 @@
-Value MAC (\S{17})
+Value List MAC (\S{17})
 
 Start
-  ^\s*wan\s+mac\s+\=\s+${MAC}\s*$$ -> Record
-  ^\s*${MAC}\s*$$ -> Record
+  ^\s*(wan\s+mac\s+\=\s+)?${MAC}\s*$$
   ^\s+$$
-  ^\s*success!\s*$$
+  ^\s*success!\s*$$ -> Record
   ^. -> Error
