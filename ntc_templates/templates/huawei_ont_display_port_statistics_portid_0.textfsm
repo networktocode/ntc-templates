@@ -1,0 +1,21 @@
+Value ETHERNET_PORTID (\d+)
+Value RX_UNICAST_PACKETS (\d+)
+Value TX_UNICAST_PACKETS (\d+)
+Value RX_BROADCAST_PACKETS (\d+)
+Value TX_BROADCAST_PACKETS (\d+)
+Value RX_MULTICAST_PACKETS (\d+)
+Value TX_MULTICAST_PACKETS (\d+)
+Value DROPPED_PACKETS (\d+)
+
+Start
+  ^\s*Ethernet\s+portid\s*=\s*${ETHERNET_PORTID}\s*$$
+  ^\s*Rx\s+unicast\s+packets\s*:\s*${RX_UNICAST_PACKETS}\s*$$
+  ^\s*Tx\s+unicast\s+packets\s*:\s*${TX_UNICAST_PACKETS}\s*$$
+  ^\s*Rx\s+broadcast\s+packets\s*:\s*${RX_BROADCAST_PACKETS}\s*$$
+  ^\s*Tx\s+broadcast\s+packets\s*:\s*${TX_BROADCAST_PACKETS}\s*$$
+  ^\s*Rx\s+multicast\s+packets\s*:\s*${RX_MULTICAST_PACKETS}\s*$$
+  ^\s*Tx\s+multicast\s+packets\s*:\s*${TX_MULTICAST_PACKETS}\s*$$
+  ^\s*Dropped\s+packets\s*:\s*${DROPPED_PACKETS}\s*$$
+  ^\s+$$
+  ^\s*success!\s*$$
+  ^. -> Error
