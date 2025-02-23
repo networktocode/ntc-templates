@@ -1,0 +1,8 @@
+Value MAC (\S{17})
+
+Start
+  ^\s*wan\s+mac\s+\=\s+${MAC}\s*$$ -> Record
+  ^\s*${MAC}\s*$$ -> Record
+  ^\s+$$
+  ^\s*success!\s*$$
+  ^. -> Error
