@@ -1,0 +1,7 @@
+Value ACCESS_MODE (\S+)
+
+Start
+  ^\s*access\s+mode\s+is\s+${ACCESS_MODE}\s*$$
+  ^\s*success!\s*$$
+  ^\s+$$
+  ^. -> Error
