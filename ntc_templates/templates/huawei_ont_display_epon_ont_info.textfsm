@@ -1,0 +1,10 @@
+Value ONT_ID (\d+)
+Value ONT_STATUS (\S.+\S)
+
+Start
+  ^\s*ONT\s+information:\s*$$
+  ^\s*ONT\s+ID\s*:\s+${ONT_ID}\s*$$
+  ^\s*Status\s*:\s+${ONT_STATUS}\s*$$
+  ^\s+$$
+  ^\s*success!\s*$$
+  ^. -> Error	
