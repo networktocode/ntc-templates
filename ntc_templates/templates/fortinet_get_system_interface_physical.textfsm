@@ -1,8 +1,9 @@
 #
 # Refried Jello, Stephen Kiely
 # 2021-01-06 - Initial Version
+# 2025-02-20 - Update for 7.4
 #
-# FG Version: 5.6, 6.0, 6.2
+# FG Version: 5.6, 6.0, 6.2, 7.4
 # HW        : variety
 # HA        : AP
 # VDOMS     : ENABLED
@@ -25,5 +26,6 @@ Start
   ^\s+status:\s+${STATUS}$$
   ^\s+speed:\s+${SPEED}(|Mbps)\s+\(Duplex:\s+${DUPLEX}\)$$ -> Record
   ^\s+speed:\s+${SPEED}$$ -> Record
+  ^\s+FEC(_cap)?:.*$$
   ^\s*$$
   ^. -> Error
