@@ -1,0 +1,7 @@
+Value FLASHLOCK_STATUS (\d+)
+
+Start
+  ^\s*current\s+flash\s+protect\s+status:\s+${FLASHLOCK_STATUS}\s*$$
+  ^\s+$$
+  ^\s*success!\s*$$	
+  ^. -> Error
