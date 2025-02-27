@@ -23,7 +23,7 @@ Start
   ^\s*Status\s+:\s*${STATUS}\s*$$
   ^\s*Authentication\s+Mode\s+:\s*${AUTHENTICATION_MODE}\s*$$
   ^\s*Encryption\s+Mode\s+:\s*${ENCRYPTION_MODE}\s*$$
-  ^\s*Channel\s+:\s*${CHANNEL}\s*$$
+  ^\s*Channel\s+:\s*${CHANNEL}(?:\(auto\))?\s*$$
   ^\s*Channel\s+bandwidth\s+:\s*${CHANNEL_BANDWIDTH_MHZ}\s*MHz$$
   ^\s*Standard\s+:\s*${WIFI_STANDARD}\s*$$
   ^\s*Supported\s+Max\s+Rate\s+:\s*${SUPPORTED_MAX_RATE_MBPS}\s*M\s*$$
