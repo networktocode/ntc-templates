@@ -2,6 +2,7 @@ Value INDEX (\d+)
 Value NAME (\S+|\S.+\S)
 Value SERVICE_TYPE (\S+)
 Value CONNECTION_TYPE (\S.+\S)
+Value CONNECTION_STATUS (\S+)
 Value IPV4_CONNECTION_STATUS (\S+)
 Value IPV4_ACCESS_TYPE (\S+)
 Value IPV4_ADDRESS (\S+)
@@ -44,6 +45,9 @@ Start
   ^\s*Name\s*:\s+(-|${NAME})\s*$$
   ^\s*Service\s+type\s*:\s+(-|${SERVICE_TYPE})\s*$$
   ^\s*Connection\s+type\s*:\s+(-|${CONNECTION_TYPE})\s*$$
+  ^\s*Connection\s+status\s*:\s+(-|${CONNECTION_STATUS})\s*$$
+  ^\s*IP\s+access\s+type\s*:\s+(-|${IPV4_ACCESS_TYPE})\s*$$
+  ^\s*IP\s*:\s+(-|${IPV4_ADDRESS})\s*$$
   ^\s*IPv4\s+Connection\s+status\s*:\s+(-|${IPV4_CONNECTION_STATUS})\s*$$
   ^\s*IPv4\s+access\s+type\s*:\s+(-|${IPV4_ACCESS_TYPE})\s*$$
   ^\s*IPv4\s+address\s*:\s+(-|${IPV4_ADDRESS})\s*$$
