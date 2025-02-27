@@ -9,9 +9,11 @@ Value BD_VRF (\S+)
 Start
   ^Codes:\s+CP.*
   ^\s+UC\s+-\s+Unconfigured.*
+  ^\s+S-ND\s+-\s+Suppress.*
   ^\s+SU\s+-\s+Suppress.*
   ^\s+Xconn\s+-\s+Crossconnect.*
   ^\s+MS-IR\s+-\s+Multisite.*
+  ^\s+HYB\s+-\s+Hybrid.*
   ^Interface\s+VNI\s+Multicast-group\s+State\s+Mode\s+Type\s+\[BD/VRF\]\s+Flags\s*$$
   ^-+
   ^${INTERFACE}\s+${VNI}\s+${MCAST_GROUP}\s+${STATE}\s+${MODE}\s+${TYPE}\s+\[${BD_VRF}\] -> Record
