@@ -61,7 +61,7 @@ Start
   ^\s*NAT\s+switch\s*:\s+(-|${NAT_SWITCH})\s*$$
   ^\s*Option60\s*:\s+(-|${OPTION60})\s*$$
   ^\s*Switch\s*:\s+(-|${SWITCH})\s*$$
-  ^\s*MAC\s+address\s*:\s+(--------------|${MAC_ADDRESS})\s*$$
+  ^\s*MAC\s+address\s*:\s+(-+|${MAC_ADDRESS})\s*$$
   ^\s*Priority\s+policy\s*:\s+(-|${PRIORITY_POLICY})\s*$$
   ^\s*L2\s+encap-type\s*:\s+(-|${L2_ENCAP_TYPE})\s*$$
   ^\s*IPv4\s+switch\s*:\s+(-|${IPV4_SWITCH})\s*$$
