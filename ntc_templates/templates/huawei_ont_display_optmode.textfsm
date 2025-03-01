@@ -1,0 +1,7 @@
+Value OPTIC_MODE (\S+)
+
+Start
+  ^\s*optic\s+mode\s+=\s+${OPTIC_MODE}\s*$$
+  ^\s+$$
+  ^\s*success!\s*$$
+  ^. -> Error
