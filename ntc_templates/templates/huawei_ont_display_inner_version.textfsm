@@ -1,0 +1,13 @@
+Value MAIN_VERSION (\S.+\S)
+Value STANDBY_VERSION (\S.+\S)
+Value COMPONENT_VERSION (\S.+\S)
+Value RESOURCE_VERSION (\S.+\S)
+
+Start
+  ^\s*MainVersion\s+:\s+${MAIN_VERSION}\s*$$
+  ^\s*StandbyVersion\s+:\s+${STANDBY_VERSION}\s*$$
+  ^\s*ComponentVersion\s+:\s+${COMPONENT_VERSION}\s*$$
+  ^\s*ResourceVersion\s+:\s+${RESOURCE_VERSION}\s*$$
+  ^\s*$$
+  ^\s*success!\s*$$
+  ^. -> Error
