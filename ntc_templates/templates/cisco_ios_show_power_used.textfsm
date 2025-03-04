@@ -1,0 +1,6 @@
+Value USED_WATTS (\d+\.\d+)
+
+Start
+  ^system\s+power\s+used\s+=\s+${USED_WATTS} -> Record
+  ^\s*$$
+  ^. -> Error
