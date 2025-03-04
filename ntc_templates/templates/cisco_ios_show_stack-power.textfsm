@@ -10,7 +10,7 @@ Value POWER_SUPPLY_NUMBERS (\d+)
 
 Start
   ^\s*Power\s+Stack
-  ^\s*Name\s*Mode
+  ^\s*Name\s+Mode
   ^\s*-+ -> Power
   ^\s*$$
   ^. -> Error
