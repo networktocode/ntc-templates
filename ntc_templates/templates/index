@@ -248,6 +248,7 @@ cisco_fxos_show_system_firmware.textfsm, .*, cisco_fxos, sh[[ow]] sy[[stem]] fi[
 
 cisco_ios_show_module.textfsm:cisco_ios_show_module_status.textfsm:cisco_ios_show_module_submodule.textfsm:cisco_ios_show_module_online_diag.textfsm, .*, cisco_ios, sh[[ow]] mod[[ule]]
 cisco_ios_show_switch_detail.textfsm:cisco_ios_show_switch_detail_stack_ports.textfsm, .*, cisco_ios, sh[[ow]] sw[[itch]] d[[etail]]
+cisco_ios_show_stack-power.textfsm, .*, cisco_ios, sh[[ow]] stack-[[power]]
 cisco_ios_show_authentication_sessions_method_details.textfsm, .*, cisco_ios, show authen[[tication]] ses[[sions]] met[[hod]](\s+d[[ot1x]]|\s+m[[ab]])? det[[ails]]
 cisco_ios_show_running-config_partition_access-list.textfsm, .*, cisco_ios, sh[[ow]] ru[[nning-config]] p[[artition]] a[[ccess-list]]
 cisco_ios_show_ip_bgp_neighbors_advertised-routes.textfsm, .*, cisco_ios, sh[[ow]] ip bgp nei[[ghbors]](\s+\d+\.\d+\.\d+\.\d+)? adv[[ertised-routes]]
@@ -300,6 +301,7 @@ cisco_ios_show_ip_access-lists.textfsm, .*, cisco_ios, sh[[ow]] ip acce[[ss-list
 cisco_ios_show_ip_dhcp_binding.textfsm, .*, cisco_ios, sh[[ow]] ip dh[[cp]] b[[inding]]
 cisco_ios_show_mpls_interfaces.textfsm, .*, cisco_ios, sh[[ow]] mpls interfa[[ces]]
 cisco_ios_show_power_available.textfsm, .*, cisco_ios, sh[[ow]] pow[[er]] a[[vailable]]
+cisco_ios_show_power_used.textfsm, .*, cisco_ios, sh[[ow]] pow[[er]] u[[sed]]
 cisco_ios_show_access-session.textfsm, .*, cisco_ios, show access-s[[ession]]
 cisco_ios_show_alert_counters.textfsm, .*, cisco_ios, sh[[ow]] alert [[counters]]
 cisco_ios_show_interface_link.textfsm, .*, cisco_ios, sh[[ow]] int[[erfaces]] li[[nk]]
