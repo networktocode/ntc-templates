@@ -1,0 +1,11 @@
+
+VID  Interface          Tag           Type     Description
+---- ------------------ ------------- -------- --------------------------------
+1    ether 1 1          untagged      port     default
+2    ether 2 1          untagged      port     lan2
+     ether 2 2          untagged
+     ether 2 3          untagged
+501  pseudo-ether 1     untagged      port     wwan
+1005 ether 2 1          dot1q-tagged  port     v1005
+
+Total Count :   4
