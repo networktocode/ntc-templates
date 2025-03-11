@@ -49,6 +49,7 @@ OS_CHOICES = [
     "fsas_sir",
     "hp_comware",
     "hp_procurve",
+    "huawei_ont",
     "huawei_smartax",
     "huawei_vrp",
     "ipinfusion_ocnos",
