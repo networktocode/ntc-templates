@@ -1,0 +1,84 @@
+Value INDEX (\d+)
+Value NAME (\S+|\S.+\S)
+Value SERVICE_TYPE (\S+)
+Value CONNECTION_TYPE (\S.+\S)
+Value CONNECTION_STATUS (\S+)
+Value IPV4_CONNECTION_STATUS (\S+)
+Value IPV4_ACCESS_TYPE (\S+)
+Value IPV4_ADDRESS (\S+)
+Value SUBNET_MASK (\S+)
+Value DEFAULT_GATEWAY (\S+)
+Value PRIMARY_DNS (\S+)
+Value SECONDARY_DNS (\S+)
+Value MANAGE_VLAN (\d+)
+Value MANAGE_PRIORITY (\d+)
+Value MULTICAST_VLAN (\S+)
+Value NAT_SWITCH (\S+)
+Value OPTION60 (\S+)
+Value SWITCH (\S+)
+Value MAC_ADDRESS (\S+)
+Value PRIORITY_POLICY (\S+)
+Value L2_ENCAP_TYPE (\S+)
+Value IPV4_SWITCH (\S+)
+Value IPV6_SWITCH (\S+)
+Value PREFIX (\S+)
+Value PREFIX_ACCESS_MODE (\S+)
+Value PREFIX_PREFERRED_TIME (\S+)
+Value PREFIX_VALID_TIME (\S+)
+Value IPV6_CONNECTION_STATUS (\S+)
+Value IPV6_ADDRESS (\S+)
+Value IPV6_PRIMARY_DNS (\S+)
+Value IPV6_SECONDARY_DNS (\S+)
+Value IPV6_MULTICAST_VLAN (\S+)
+Value IPV6_ADDRESS_STATUS (\S+)
+Value IPV6_ADDRESS_ACCESS_MODE (\S+)
+Value IPV6_ADDRESS_PREFERRED_TIME (\S+)
+Value IPV6_ADDRESS_VALID_TIME (\S+)
+Value DS_LITE_MODE (\S+)
+Value DS_LITE_PEER_ADDRESS (\S+)
+
+Start
+  ^\s*-+\s*$$
+  ^\s*F\/S\/P\s*:\s+(\S+)\s*$$
+  ^\s*ONT ID\s*:\s+(\S+)\s*$$
+  ^\s*Index\s*:\s+(-|${INDEX})\s*$$
+  ^\s*Name\s*:\s+(-|${NAME})\s*$$
+  ^\s*Service\s+type\s*:\s+(-|${SERVICE_TYPE})\s*$$
+  ^\s*Connection\s+type\s*:\s+(-|${CONNECTION_TYPE})\s*$$
+  ^\s*Connection\s+status\s*:\s+(-|${CONNECTION_STATUS})\s*$$
+  ^\s*IP\s+access\s+type\s*:\s+(-|${IPV4_ACCESS_TYPE})\s*$$
+  ^\s*IP\s*:\s+(-|${IPV4_ADDRESS})\s*$$
+  ^\s*IPv4\s+Connection\s+status\s*:\s+(-|${IPV4_CONNECTION_STATUS})\s*$$
+  ^\s*IPv4\s+access\s+type\s*:\s+(-|${IPV4_ACCESS_TYPE})\s*$$
+  ^\s*IPv4\s+address\s*:\s+(-|${IPV4_ADDRESS})\s*$$
+  ^\s*Subnet\s+mask\s*:\s+(-|${SUBNET_MASK})\s*$$
+  ^\s*Default\s+gateway\s*:\s+(-|${DEFAULT_GATEWAY})\s*$$
+  ^\s*Primary\s+DNS\s*:\s+(-|${PRIMARY_DNS})\s*$$
+  ^\s*Secondary\s+DNS\s*:\s+(-|${SECONDARY_DNS})\s*$$
+  ^\s*Manage\s+VLAN\s*:\s+(-|${MANAGE_VLAN})\s*$$
+  ^\s*Manage\s+priority\s*:\s+(-|${MANAGE_PRIORITY})\s*$$
+  ^\s*Multicast\s+VLAN\s*:\s+(-|${MULTICAST_VLAN})\s*$$
+  ^\s*NAT\s+switch\s*:\s+(-|${NAT_SWITCH})\s*$$
+  ^\s*Option60\s*:\s+(-|${OPTION60})\s*$$
+  ^\s*Switch\s*:\s+(-|${SWITCH})\s*$$
+  ^\s*MAC\s+address\s*:\s+(-+|${MAC_ADDRESS})\s*$$
+  ^\s*Priority\s+policy\s*:\s+(-|${PRIORITY_POLICY})\s*$$
+  ^\s*L2\s+encap-type\s*:\s+(-|${L2_ENCAP_TYPE})\s*$$
+  ^\s*IPv4\s+switch\s*:\s+(-|${IPV4_SWITCH})\s*$$
+  ^\s*IPv6\s+switch\s*:\s+(-|${IPV6_SWITCH})\s*$$
+  ^\s*Prefix\s*:\s+(-|${PREFIX})\s*$$
+  ^\s*Prefix\s+access\s+mode\s*:\s+(-|${PREFIX_ACCESS_MODE})\s*$$
+  ^\s*Prefix\s+preferred\s+time\s*:\s+(-|${PREFIX_PREFERRED_TIME})\s*$$
+  ^\s*Prefix\s+valid\s+time\s*:\s+(-|${PREFIX_VALID_TIME})\s*$$
+  ^\s*IPv6\s+Connection\s+status\s*:\s+(-|${IPV6_CONNECTION_STATUS})\s*$$
+  ^\s*IPv6\s+address\s*:\s+(-|${IPV6_ADDRESS})\s*$$
+  ^\s*IPv6\s+Primary\s+DNS\s*:\s+(-|${IPV6_PRIMARY_DNS})\s*$$
+  ^\s*IPv6\s+Secondary\s+DNS\s*:\s+(-|${IPV6_SECONDARY_DNS})\s*$$
+  ^\s*IPv6\s+Multicast\s+VLAN\s*:\s+(-|${IPV6_MULTICAST_VLAN})\s*$$
+  ^\s*IPv6\s+address\s+status\s*:\s+(-|${IPV6_ADDRESS_STATUS})\s*$$
+  ^\s*IPv6\s+address\s+access\s+mode\s*:\s+(-|${IPV6_ADDRESS_ACCESS_MODE})\s*$$
+  ^\s*IPv6\s+address\s+preferred\s+time\s*:\s+(-|${IPV6_ADDRESS_PREFERRED_TIME})\s*$$
+  ^\s*IPv6\s+address\s+valid\s+time\s*:\s+(-|${IPV6_ADDRESS_VALID_TIME})\s*$$
+  ^\s*DS-Lite\s+Mode\s*:\s+(-|${DS_LITE_MODE})\s*$$
+  ^\s*DS-Lite\s+peer\s+address\s*:\s+(-|${DS_LITE_PEER_ADDRESS})\s*$$ -> Record
+  ^. -> Error
