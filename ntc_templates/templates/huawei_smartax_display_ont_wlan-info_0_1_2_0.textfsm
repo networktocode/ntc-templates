@@ -1,0 +1,24 @@
+Value SSID_INDEX (\d+)
+Value SSID_NAME (\S+|\S.+\S)
+Value WIRELESS_STANDARD (\S+|\S.+\S)
+Value ADMINISTRATIVE_STATE (\S+|\S.+\S)
+Value OPERATIONAL_STATE (\S+|\S.+\S)
+Value MAXIMUM_ASSOCIATE_NUMBER (\d+)
+Value CURRENT_ASSOCIATE_NUMBER (\d+)
+
+Start
+  ^\s*-+\s*$$
+  ^\s*F\/S\/P\s*:\s+\d+\/\d+\/\d+\s*$$
+  ^\s*ONT\s+ID\s*:\s+\d+\s*$$
+  ^\s*The\s+total\s+number\s+of\s+SSID\s*:\s+\d+\s*$$ -> ssid_info
+
+ssid_info
+  ^\s*-+\s*$$
+  ^\s*SSID\s+Index\s*:\s+${SSID_INDEX}\s*$$
+  ^\s*SSID\s*:\s+${SSID_NAME}\s*$$
+  ^\s*Wireless\s+Standard\s*:\s+${WIRELESS_STANDARD}\s*$$
+  ^\s*Administrative\s+state\s*:\s+${ADMINISTRATIVE_STATE}\s*$$
+  ^\s*Operational\s+state\s*:\s+${OPERATIONAL_STATE}\s*$$
+  ^\s*Maximum\s+associate\s+number\s*:\s+${MAXIMUM_ASSOCIATE_NUMBER}\s*$$
+  ^\s*Current\s+associate\s+number\s*:\s+${CURRENT_ASSOCIATE_NUMBER}\s*$$ -> Record
+  ^. -> Error
