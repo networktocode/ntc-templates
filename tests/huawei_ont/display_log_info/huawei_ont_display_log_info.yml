@@ -1,0 +1,20 @@
+---
+parsed_sample:
+  - hw_ver: "6A5.A"
+    ip: "192.168.0.100"
+    log_info:
+      - "1970-01-01 00:17:45 [Critical][Shell日志] 终端:CLI(192.168.0.254),执行结果:Success,操作命令:quit"
+      - "1970-01-01 00:17:49 [Critical][Shell日志] 终端:CLI(192.168.0.254),执行结果:Success,操作命令:su"
+      - "1970-01-01 00:17:50 [Critical][Shell日志] 终端:CLI(192.168.0.254),执行结果:Success,操作命令:shell"
+      - "1970-01-01 00:17:56 [Critical][Shell日志] 终端:CLI(192.168.0.254),执行结果:Success,操作命令:exit"
+      - "1970-01-01 00:22:57 [Critical][配置日志] 终端:CLI(192.168.0.254),执行结果:Fail,操作类型:Set,InternetGatewayDevice.X_HW_AMPConfig.PortIsolate:"
+      - "1970-01-01 00:23:19 [Critical][配置日志] 终端:CLI(192.168.0.254),执行结果:Success,操作类型:Set,InternetGatewayDevice.X_HW_AMPConfig.PortIsolate:,PortIsolateSwitch:enable"
+      - "1970-01-01 00:23:22 [Critical][Shell日志] 终端:CLI(192.168.0.254),执行结果:Success,操作命令:quit"
+      - "1970-01-01 00:23:23 [Critical][Shell日志] 终端:CLI(192.168.0.254),执行结果:Success,操作命令:quit"
+      - "1970-01-01 00:23:23 [Critical][配置日志] 终端:CLI(192.168.0.254),执行结果:Success,操作类型:Logout,Username:root"
+      - "1970-01-01 00:23:30 [Critical][配置日志] 终端:CLI(192.168.0.254),执行结果:Success,操作类型:Login,Username:root"
+      - "1970-01-01 00:23:45 [Critical][配置日志] 终端:CLI(192.168.0.254),执行结果:Success,操作类型:Set,InternetGatewayDevice.X_HW_AMPConfig.PortIsolate:,PortIsolateSwitch:disable"
+    manufacturer: "Huawei Technologies Co., Ltd"
+    product_class: "HG8310M"
+    serial_number: "48575443CA49257B"
+    sw_ver: "V3R017C00S100"

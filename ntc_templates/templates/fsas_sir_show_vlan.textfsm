@@ -1,0 +1,17 @@
+Value Required VLAN_ID (\d+)
+Value VLAN_NAME (\S+)
+Value List INTERFACES (\S+\s+\d+(\s+\d+)?)
+
+Start
+  ^VID\s+Interface\s+Tag\s+Type\s+Description
+  ^---- -> VLANS
+  ^Total\s+Count
+  ^\s*$$
+  ^. -> Error
+
+VLANS
+  ^\d+ -> Continue.Record
+  ^${VLAN_ID}\s+${INTERFACES}\s+\S+\s+\S+\s+${VLAN_NAME}\s*$$
+  ^\s+${INTERFACES}\s+\S+\s*$$
+  ^\s*$$ -> Start
+  ^. -> Error
