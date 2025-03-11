@@ -327,11 +327,13 @@ cisco_ios_show_power_status.textfsm, .*, cisco_ios, sh[[ow]] pow[[er]] st[[atus]
 cisco_ios_show_rep_topology.textfsm, .*, cisco_ios, sh[[ow]] rep topology
 cisco_ios_show_access-list.textfsm, .*, cisco_ios, sh[[ow]] acc[[ess-list]]
 cisco_ios_show_isdn_status.textfsm, .*, cisco_ios, sh[[ow]] isd[[n]] st[[atus]]
+cisco_ios_show_stack-power.textfsm, .*, cisco_ios, sh[[ow]] stack-[[power]]
 cisco_ios_show_ap_summary.textfsm, .*, cisco_ios, sh[[ow]] ap sum[[mary]]
 cisco_ios_show_dhcp_lease.textfsm, .*, cisco_ios, sh[[ow]] dh[[cp]] l[[ease]]
 cisco_ios_show_interfaces.textfsm, .*, cisco_ios, sh[[ow]] int[[erfaces]](?: (?:\S+))?
 cisco_ios_show_ipv6_route.textfsm, .*, cisco_ios, sh[[ow]] ipv6 r[[oute]]
 cisco_ios_show_policy-map.textfsm, .*, cisco_ios, sh[[ow]] pol[[icy-map]]
+cisco_ios_show_power_used.textfsm, .*, cisco_ios, sh[[ow]] pow[[er]] u[[sed]]
 cisco_ios_show_redundancy.textfsm, .*, cisco_ios, sh[[ow]] redu[[ndancy]]
 cisco_ios_show_snmp_group.textfsm, .*, cisco_ios, sh[[ow]] snm[[p]] g[[roup]]
 cisco_ios_show_vrf_detail.textfsm, .*, cisco_ios, sh[[ow]] vrf detail
@@ -637,6 +639,7 @@ fortinet_execute_time.textfsm, .*, fortinet, exec[[ute]] ti[[me]]
 fsas_sir_show_system_information.textfsm, .*, fsas_sir, sh[[ow]] sys[[tem]] i[[nformation]]
 fsas_sir_show_ip_route.textfsm, .*, fsas_sir, sh[[ow]] ip ro[[ute]]
 fsas_sir_show_ether.textfsm, .*, fsas_sir, sh[[ow]] eth[[er]]
+fsas_sir_show_vlan.textfsm, .*, fsas_sir, sh[[ow]] vl[[an]]
 
 hp_comware_display_lldp_neighbor-information_verbose.textfsm, .*, hp_comware, di[[splay]] ll[[dp]] n[[eighbor-information]] v[[erbose]]
 hp_comware_display_lldp_neighbor-information_list.textfsm, .*, hp_comware, di[[splay]] ll[[dp]] n[[eighbor-information]] l[[ist]]
@@ -672,8 +675,25 @@ hp_procurve_show_vlans.textfsm, .*, (hp|aruba)_procurve, sh[[ow]] vl[[ans]]
 hp_procurve_show_arp.textfsm, .*, (hp|aruba)_procurve, sh[[ow]] ar[[p]]
 hp_procurve_show_ip.textfsm, .*, (hp|aruba)_procurve, sh[[ow]] ip
 
+huawei_ont_display_port_statistics_portid_0.textfsm, .*, huawei_ont, di[[splay]] p[[ort]] s[[tatistics]] po[[rtid]] \d+
+huawei_ont_display_wifi_information.textfsm, .*, huawei_ont, di[[splay]] w[[ifi]] i[[nformation]]
+huawei_ont_display_pppoe_em_result.textfsm, .*, huawei_ont, di[[splay]] pppoe(\s+|_)e[[m]] r[[esult]]
+huawei_ont_display_epon_ont_info.textfsm, .*, huawei_ont, di[[splay]] ep[[on]] o[[nt]] i[[nfo]]
+huawei_ont_display_inner_version.textfsm, .*, huawei_ont, di[[splay]] in[[ner]] ve[[rsion]]
 huawei_ont_display_access_mode.textfsm, .*, huawei_ont, di[[splay]] ac[[cess]] m[[ode]]
+huawei_ont_display_memory_info.textfsm, .*, huawei_ont, di[[splay]] me[[mory]] i[[nfo]]
+huawei_ont_display_deviceInfo.textfsm, .*, huawei_ont, di[[splay]] de[[viceInfo]]
+huawei_ont_display_macaddress.textfsm, .*, huawei_ont, di[[splay]] maca[[ddress]]
+huawei_ont_display_boardItem.textfsm, .*, huawei_ont, di[[splay]] bo[[ardItem]]
+huawei_ont_display_rf_config.textfsm, .*, huawei_ont, di[[splay]] rf c[[onfig]]
 huawei_ont_display_swm_state.textfsm, .*, huawei_ont, di[[splay]] s[[wm]] s[[tate]]
+huawei_ont_display_log_info.textfsm, .*, huawei_ont, di[[splay]] l[[og]] i[[nfo]]
+huawei_ont_display_sysinfo.textfsm, .*, huawei_ont, di[[splay]] sys[[info]]
+huawei_ont_display_timeout.textfsm, .*, huawei_ont, di[[splay]] ti[[meout]]
+huawei_ont_display_version.textfsm, .*, huawei_ont, di[[splay]] ve[[rsion]]
+huawei_ont_display_wanmac.textfsm, .*, huawei_ont, di[[splay]] w[[anmac]]
+huawei_ont_display_optic.textfsm, .*, huawei_ont, di[[splay]] o[[ptic]]
+huawei_ont_display_sn.textfsm, .*, huawei_ont, di[[splay]] sn
 
 huawei_smartax_display_ont_info_summary_ont.textfsm:huawei_smartax_display_ont_info_summary_sn.textfsm, .*, huawei_smartax, di[[splay]] ont i[[nfo]] su[[mmary]] \S+ *$
 huawei_smartax_display_ont_info_0_1_2.textfsm:huawei_smartax_display_ont_info_description.textfsm, .*, huawei_smartax, di[[splay]] ont i[[nfo]] (\d+\s*|\d+ \d+ \d+\s*)\s*[[all]] *$
@@ -686,6 +706,8 @@ huawei_smartax_display_ont_optical-info_0_all.textfsm, .*, huawei_smartax, di[[s
 huawei_smartax_display_ont_snmp-profile_0_all.textfsm, .*, huawei_smartax, di[[splay]] ont s[[nmp-profile]] \d+ all
 huawei_smartax_display_ont_gemport_0_ontid_0.textfsm, .*, huawei_smartax, di[[splay]] ont g[[emport]] \d+ ontid \d+\s*
 huawei_smartax_display_ont_version_summary_0.textfsm, .*, huawei_smartax, disp[[lay]] ont ve[[rsion]] s[[ummary]] \S+\s*
+huawei_smartax_display_ont_wlan-info_0_1_2_0.textfsm, .*, huawei_smartax, di[[splay]] ont w[[lan-info]] \d+(\/)?\s*\d+(\/)?\s*\d+ \d+\s*
+huawei_smartax_display_ont_wan-info_0_1_2_0.textfsm, .*, huawei_smartax, di[[splay]] ont w[[an-info]] \d+(\/)?\s*\d+ \d+ \d+\s*
 huawei_smartax_display_sysman_service_state.textfsm, .*, huawei_smartax, di[[splay]] sysman s[[ervice]] s[[tate]]
 huawei_smartax_display_board_serial-number.textfsm, .*, huawei_smartax, di[[splay]] bo[[ard]] s[[erial-number]]\s*
 huawei_smartax_display_ont_wlan-status_0_1.textfsm, .*, huawei_smartax, disp[[lay]] ont wlan-s[[tatus]] \d+ \d+\s*
@@ -697,6 +719,7 @@ huawei_smartax_display_mac-address.textfsm, .*, huawei_smartax, display mac-addr
 huawei_smartax_display_temperature.textfsm, .*, huawei_smartax, di[[splay]] tem[[perature]]\s*
 huawei_smartax_display_port_info.textfsm, .*, huawei_smartax, di[[splay]] port i[[nfo]]\s*
 huawei_smartax_display_sysuptime.textfsm, .*, huawei_smartax, di[[splay]] sys[[uptime]]
+huawei_smartax_display_location.textfsm, .*, huawei_smartax, disp[[lay]] loc[[ation]]( \S+)?\s*$
 huawei_smartax_display_version.textfsm, .*, huawei_smartax, di[[splay]] ver[[sion]]
 huawei_smartax_display_board.textfsm, .*^, huawei_smartax, di[[splay]] bo[[ard]]\s*
 huawei_smartax_display_cpu.textfsm, .*, huawei_smartax, di[[splay]] cpu\s*
