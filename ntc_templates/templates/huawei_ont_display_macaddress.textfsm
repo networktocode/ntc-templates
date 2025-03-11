@@ -1,0 +1,11 @@
+Value INDEX (\d+)
+Value PORT_ID (\d+)
+Value VLAN (\d+)
+Value MAC_ADDRESS (\S+)
+
+Start
+  ^\s*Index\s+Portid\s+Vlan\s+MAC-Address
+  ^\s*${INDEX}\s+${PORT_ID}\s+${VLAN}\s+${MAC_ADDRESS} -> Record
+  ^\s+$$
+  ^\s*success!\s*$$
+  ^. -> Error

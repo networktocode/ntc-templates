@@ -1,0 +1,29 @@
+Value MANUFACTURER (\S.+\S)
+Value MANUFACTURER_OUI (\S+)
+Value MODEL_NAME (\S.+\S)
+Value DESCRIPTION (\S.+\S)
+Value MANUFACTURE_INFO (\S.+\S)
+Value PRODUCT_CLASS (\S.+\S)
+Value SPEC_VERSION (\S.+\S)
+Value PROVISIONING_CODE (\S.+\S)
+Value UP_TIME (\S.+\S)
+Value RELEASE_TIME (\S.+\S)
+Value UP_PORT_MODE (\d+)
+
+Start
+  ^\s*\*+\s+device\s+information\s+\*+\s*$$
+  ^Manufacturer\s+=\s+${MANUFACTURER}\s*$$
+  ^ManufacturerOUI\s+=\s+${MANUFACTURER_OUI}\s*$$
+  ^ModelName\s+=\s+${MODEL_NAME}\s*$$
+  ^Description\s+=\s+${DESCRIPTION}\s*$$
+  ^ManufactureInfo\s+=\s+${MANUFACTURE_INFO}\s*$$
+  ^ProductClass\s+=\s+${PRODUCT_CLASS}\s*$$
+  ^SpecVersion\s+=\s+${SPEC_VERSION}\s*$$
+  ^ProvisioningCode\s+=\s+(?:${PROVISIONING_CODE})?\s*$$
+  ^UpTime\s+=\s+${UP_TIME}\s*$$
+  ^ReleaseTime\s+=\s+${RELEASE_TIME}\s*$$
+  ^UpPort\s+mode\s+=\s+${UP_PORT_MODE}\s*$$ -> Record
+  ^\s*\*+\s*$$
+  ^\s+$$
+  ^\s*success\!\s*$$
+  ^. -> Error
