@@ -1,0 +1,47 @@
+
+Session Type: LAN-to-LAN Detailed
+
+Connection   : 169.254.254.169
+Index        : 382305                 IP Addr      : Fujitsu-SydAX
+Protocol     : IKEv1 IPsec
+Encryption   : IKEv1: (1)AES128  IPsec: (2)AES256
+Hashing      : IKEv1: (1)SHA1  IPsec: (2)SHA1
+Bytes Tx     : 2990057135             Bytes Rx     : 2882502120
+Login Time   : 02:03:37 CET Thu Dec 19 2024
+Duration     : 61d 8h:03m:16s
+
+IKEv1 Tunnels: 1
+IPsec Tunnels: 2
+
+IKEv1:
+Tunnel ID    : 382305.1
+UDP Src Port : 500                    UDP Dst Port : 500
+IKE Neg Mode : Main                   Auth Mode    : preSharedKeys
+Encryption   : AES128                 Hashing      : SHA1
+Rekey Int (T): 28800 Seconds          Rekey Left(T): 5305 Seconds
+D/H Group    : 5
+Filter Name  :
+
+IPsec:
+Tunnel ID    : 382305.2
+Local Addr   : 10.0.0.0/255.0.0.0/0/0
+Remote Addr  : 169.254.254.169/255.255.255.224/0/0
+Encryption   : AES256                 Hashing      : SHA1
+Encapsulation: Tunnel                 PFS Group    : 5
+Rekey Int (T): 28800 Seconds          Rekey Left(T): 9912 Seconds
+Rekey Int (D): 4608000 K-Bytes        Rekey Left(D): 4593380 K-Bytes
+Idle Time Out: 30 Minutes             Idle TO Left : 29 Minutes
+Bytes Tx     : 2438705575             Bytes Rx     : 2753793776
+Pkts Tx      : 14948386               Pkts Rx      : 11089026
+
+IPsec:
+Tunnel ID    : 382305.434
+Local Addr   : 172.16.0.0/255.240.0.0/0/0
+Remote Addr  : 169.254.254.169/255.255.255.224/0/0
+Encryption   : AES256                 Hashing      : SHA1
+Encapsulation: Tunnel                 PFS Group    : 5
+Rekey Int (T): 28800 Seconds          Rekey Left(T): 27272 Seconds
+Rekey Int (D): 4608000 K-Bytes        Rekey Left(D): 4608000 K-Bytes
+Idle Time Out: 30 Minutes             Idle TO Left : 4 Minutes
+Bytes Tx     : 192                    Bytes Rx     : 248
+Pkts Tx      : 1                      Pkts Rx      : 1

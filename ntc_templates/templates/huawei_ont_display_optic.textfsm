@@ -1,0 +1,31 @@
+Value LINK_STATUS (\S+|\S.+\S)
+Value VOLTAGE_MV (\d+)
+Value CURRENT_BIAS_MA (\d+)
+Value TEMPERATURE (\d+)
+Value TX_POWER_DBM (\d+)
+Value RX_POWER_DBM (\d+)
+Value RF_RX_POWER (\d+)
+Value RF_OUTPUT_POWER (\d+)
+Value VENDOR_NAME (\S+|\S.+\S)
+Value VENDOR_SERIAL_NUMBER (\S+|\S.+\S)
+Value VENDOR_REVISION (\S+|\S.+\S)
+Value VENDOR_PRODUCT_NAME (\S+|\S.+\S)
+Value DATE_CODE (\S+|\S.+\S)
+
+Start
+  ^\s*LinkStatus\s+:\s+(?:${LINK_STATUS})?\s*$$
+  ^\s*Voltage\s+:\s+(?:${VOLTAGE_MV})?\s+\(mV\)\s*$$
+  ^\s*Bias\s+:\s+(?:${CURRENT_BIAS_MA})?\s+\(mA\)\s*$$
+  ^\s*Temperature\s+:\s+(?:${TEMPERATURE})?\s+\(C\)\s*$$
+  ^\s*TxPower\s+:\s+(--|${TX_POWER_DBM})\s+\(dBm\)\s*$$
+  ^\s*RxPower\s+:\s+(--|${RX_POWER_DBM})\s+\(dBm\)\s*$$
+  ^\s*RfRxPower\s+:\s+(--|${RF_RX_POWER})\s+\(dBm\)\s*$$
+  ^\s*RfOutputPower\s*:\s+(--|${RF_OUTPUT_POWER})\s+\(dBmV\)\s*$$
+  ^\s*VendorName\s+:\s+(?:${VENDOR_NAME})?\s*$$
+  ^\s*VendorSN\s+:\s+(?:${VENDOR_SERIAL_NUMBER})?\s*$$
+  ^\s*VendorRev\s+:\s+(?:${VENDOR_REVISION})?\s*$$
+  ^\s*VendorPN\s+:\s+(?:${VENDOR_PRODUCT_NAME})?\s*$$
+  ^\s*DateCode\s+:\s+(?:${DATE_CODE})?\s*$$
+  ^\s+$$
+  ^\s*success!\s*$$
+  ^. -> Error
