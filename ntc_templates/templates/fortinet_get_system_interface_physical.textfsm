@@ -1,8 +1,9 @@
 #
 # Refried Jello, Stephen Kiely
 # 2021-01-06 - Initial Version
+# 2025-02-20 - Update for 7.4
 #
-# FG Version: 5.6, 6.0, 6.2
+# FG Version: 5.6, 6.0, 6.2, 7.4
 # HW        : variety
 # HA        : AP
 # VDOMS     : ENABLED
@@ -15,15 +16,24 @@ Value IPV6NETMASK (\S+)
 Value STATUS (\S+)
 Value SPEED (\d+|n\/a)
 Value DUPLEX (\S+)
+Value FEC (\S+)
+Value FEC_CAP (\S+)
 
 Start
   ^==\s+\[onboard\]$$
   ^\s+==\[${NAME}\]$$
-  ^\s+mode:\s+${MODE}$$
+  ^\s+mode:\s+${MODE}$$ -> PhysicalStatus
+  ^. -> Error
+
+PhysicalStatus
   ^\s+ip:\s+${IP_ADDRESS}\s+${NETMASK}$$
   ^\s+ipv6:\s+${IPV6_ADDRESS}/${IPV6NETMASK}$$
   ^\s+status:\s+${STATUS}$$
-  ^\s+speed:\s+${SPEED}(|Mbps)\s+\(Duplex:\s+${DUPLEX}\)$$ -> Record
-  ^\s+speed:\s+${SPEED}$$ -> Record
+  ^\s+speed:\s+${SPEED}(Mbps)?\s+\(Duplex:\s+${DUPLEX}\)$$
+  ^\s+speed:\s+${SPEED}$$
+  ^\s+FEC:\s+${FEC}$$
+  ^\s+FEC_cap:\s+${FEC_CAP}$$
+  ^\s+==\[ -> Continue.Record
+  ^\s+==\[${NAME}\]$$ -> Start
   ^\s*$$
   ^. -> Error

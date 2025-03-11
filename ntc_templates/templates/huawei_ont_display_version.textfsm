@@ -1,0 +1,13 @@
+Value HARDWARE_VERSION (\S.+\S)
+Value MAIN_SOFTWARE_VERSION (\S.+\S)
+Value STANDBY_SOFTWARE_VERSION (\S.+\S)
+Value UBOOT_VERSION (\S.+\S)
+
+Start
+  ^\s*hardware\s+version\s+=\s+${HARDWARE_VERSION}\s*$$
+  ^\s*main\s+software\s+version\s+=\s+${MAIN_SOFTWARE_VERSION}\s*$$
+  ^\s*standby\s+software\s+version\s+=\s+${STANDBY_SOFTWARE_VERSION}\s*$$
+  ^\s*uboot\s+version\s+=\s+${UBOOT_VERSION}\s*$$
+  ^\s+$$
+  ^\s*success!\s*$$
+  ^. -> Error

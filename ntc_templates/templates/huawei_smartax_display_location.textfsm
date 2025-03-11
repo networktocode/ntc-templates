@@ -1,0 +1,21 @@
+Value SRV_PORT_INDEX (\d+)
+Value BUNDLE_INDEX (\d+)
+Value TYPE (\S+)
+Value MAC (\S+)
+Value MAC_TYPE (\S+)
+Value FSP (\d+\s*\/\d+\s*\/\d+)
+Value ONT_ID (\d+)
+Value GEM_INDEX (\d+)
+Value VLAN_ID (\d+)
+
+Start
+  ^\s*-+\s*$$
+  ^\s*SRV-P\s+BUNDLE\s+TYPE\s+MAC\s+MAC\s*TYPE\s+F\s*\/S\s*\/P\s+VPI\s+VCI\s+VLAN\s*ID\s*$$
+  ^\s*INDEX\s+INDEX\s*$$
+  ^\s*${SRV_PORT_INDEX}\s*(-|${BUNDLE_INDEX})\s+${TYPE}\s+${MAC}\s+${MAC_TYPE}\s+${FSP}\s+${ONT_ID}\s+${GEM_INDEX}\s+${VLAN_ID}\s*$$ -> Record
+  ^\s*Note:\s+F--Frame,\s+S--Slot,\s+P--Port,\s+F\/S\/P\s+indicates\s+PW\s+Index\s+for\s+PW,\s*$$
+  ^\s*A--The\s+MAC\s+address\s+is\s+learned\s+or\s+configured\s+on\s+the\s+aggregation\s+port,\s*$$
+  ^\s*VPI\s+indicates\s+ONT\s+ID\s+for\s+PON,\s+VCI\s+indicates\s+GEM\s+index\s+for\s+GPON,\s*$$
+  ^\s*v\/e--vlan\/encap,\s+pritag--priority-tagged,\s*$$
+  ^\s*ppp--pppoe,\s+ip--ipoe,\s+ip4--ipv4oe,\s+ip6--ipv6oe\s*$$
+  ^. -> Error
