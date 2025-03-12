@@ -36,11 +36,11 @@ ROUTES
   ^\s+is\sdirectly\sconnected,\s${NEXTHOPIF} -> Record
   #
   # Match VPN routes
-  ^${PROTOCOL}\s${TYPE}\s+${NETWORK}\s${NETMASK}\sconnected\sby\sVPN\s\(advertised\),\s${NEXTHOPIF}\s*$$ -> Record
+  ^${PROTOCOL}\s+${TYPE}\s+${NETWORK}\s+${NETMASK}\s+connected\s+by\s+VPN\s+\(advertised\),\s+${NEXTHOPIF}\s*$$ -> Record
   #
   # Match multiline VPN routes
-  ^${PROTOCOL}\s${TYPE}\s+${NETWORK}\s${NETMASK}\s*$$ -> Continue
-  ^\s+connected\sby\sVPN\s\(advertised\),\s${NEXTHOPIF}\s*$$ -> Record
+  ^${PROTOCOL}\s+${TYPE}\s+${NETWORK}\s+${NETMASK}\s*$$ -> Continue
+  ^\s+connected\s+by\s+VPN\s+\(advertised\),\s+${NEXTHOPIF}\s*$$ -> Record
   #
   # Clear all variables on empty lines
   ^\s*$$ -> Clearall
