@@ -1,0 +1,13 @@
+Value STATE (\S.+\S)
+Value OPERATION (\S.+\S)
+Value PROGRESS (\d+)
+
+Start
+  ^\s*\*+\s*SWM\s+STATE:\s*\*+\s*$$
+  ^\s*\*\s*STATE:\s*${STATE}\s*$$
+  ^\s*\*\s*OPER:\s*${OPERATION}\s*$$
+  ^\s*\*\s*PROG:\s*${PROGRESS}%\s*$$
+  ^\s*\*+\s*$$
+  ^\s+$$
+  ^\s*success!\s*$$
+  ^. -> Error

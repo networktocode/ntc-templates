@@ -1,0 +1,6 @@
+Value TIMEOUT (\S.+\S)
+
+Start
+  ^\s*timeout\s+value\s+=\s+${TIMEOUT}\s*$$
+  ^\s*success!\s*$$
+  ^. -> Error

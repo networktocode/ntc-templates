@@ -1,0 +1,19 @@
+Value MANUFACTURER (\S.+\S)
+Value PRODUCT_CLASS (\S.+\S)
+Value SERIAL_NUMBER (\S.+\S)
+Value IP (\S.+\S)
+Value HW_VER (\S.+\S)
+Value SW_VER (\S.+\S)
+Value List LOG_INFO (\S.+\S)
+
+Start
+  ^\s*Manufacturer:${MANUFACTURER};\s*$$
+  ^\s*ProductClass:${PRODUCT_CLASS};\s*$$
+  ^\s*SerialNumber:${SERIAL_NUMBER};\s*$$
+  ^\s*IP:${IP};\s*$$
+  ^\s*HWVer:${HW_VER};\s*$$
+  ^\s*SWVer:${SW_VER};\s*$$
+  ^\s+$$
+  ^\s*success!\s*$$
+  ^\s*${LOG_INFO}$$
+  ^. -> Error
