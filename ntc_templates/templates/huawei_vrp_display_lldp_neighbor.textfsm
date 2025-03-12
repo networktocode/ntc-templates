@@ -34,7 +34,6 @@ Value MED_DEVICE_CLASS (\S.+\S)
 Value FIRMWARE_REVISION (\S.+\S)
 Value HARDWARE_REVISION (\S.+\S)
 
-
 Start
   ^\s*${LOCAL_INTERFACE}\s+has\s+\d+\s+neighbor(s|\(s\)):\s*$$
   ^\s*\S.+\S\s+has\s+\d+\s+neighbor(s|\(s\))\s*$$
