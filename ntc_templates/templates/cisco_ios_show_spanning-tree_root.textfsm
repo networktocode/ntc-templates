@@ -1,0 +1,19 @@
+Value VLAN_ID (\S+)
+Value Root_ID ([0-9]{5}\s[0-9a-fA-F]{4}\.[0-9a-fA-F]{4}\.[0-9a-fA-F]{4})
+Value Root_Cost (\d+)
+Value Hello_Time (\d+)
+Value Max_Age (\d+)
+Value FWD_DLY (\d+)
+Value Root_Port (\S+)
+
+Start
+  ^Vlan\s+Root ID\s+Cost\s+Time\s+Age\s+Dly\s+Root Port -> STP
+  # Capture time-stamp if vty line has command time-stamping turned on
+  ^Load\s+for\s+
+  ^Time\s+source\s+is
+
+STP
+  ^${VLAN_ID}\s+${Root_ID}\s+${Root_Cost}\s+${Hello_Time}\s+${Max_Age}\s+${FWD_DLY}\s+${Root_Port} -> Record
+  ^${VLAN_ID}\s+${Root_ID}\s+${Root_Cost}\s+${Hello_Time}\s+${Max_Age}\s+${FWD_DLY} -> Record
+  ^-+
+  ^\s*$$
