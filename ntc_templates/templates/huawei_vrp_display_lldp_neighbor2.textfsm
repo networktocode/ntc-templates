@@ -16,6 +16,7 @@ Value PORT_PSE_PRIORITY (\S.+\S)
 Value PORT_AVAILABLE_POWER_VALUE (\d+)
 Value LOCATION_FORMAT (\S.+\S)
 Value LOCATION_INFORMATION (\S.+\S)
+
 Start
   ^\s*${LOCAL_INTERFACE}\s+has\s+\d+\s+neighbor(s|\(s\)):\s*$$
   ^\s*\S.+\S\s+has\s+\d+\s+neighbor(s|\(s\))\s*$$
