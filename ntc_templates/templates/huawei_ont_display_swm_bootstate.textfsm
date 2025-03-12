@@ -1,0 +1,21 @@
+Value STRUCT_CRC (\d+)
+Value MAGIC_1 (\d+)
+Value MAGIC_2 (\d+)
+Value BOOT_COUNT (\d+)
+Value START_AREA (\d+)
+Value RUN_AREA (\d+)
+Value FLAG (\d+)
+
+Start
+  ^\s*\*+\s*BOOT\s*STATE:\s*\*+$$
+  ^\s*\*\s*\s+StructCrc:\s*${STRUCT_CRC}\s*$$
+  ^\s*\*\s*\s+Magic1:\s*${MAGIC_1}\s*$$
+  ^\s*\*\s*\s+Magic2:\s*${MAGIC_2}\s*$$
+  ^\s*\*\s*\s+BootCount:\s*${BOOT_COUNT}\s*$$
+  ^\s*\*\s*\s+StartArea:\s*${START_AREA}\s*$$
+  ^\s*\*\s*\s+RunArea:\s*${RUN_AREA}\s*$$
+  ^\s*\*\s*\s+Flag:\s*${FLAG}\s*$$
+  ^\s*\*+\s*$$
+  ^\s+$$
+  ^\s*success!\s*$$
+  ^. -> Error
