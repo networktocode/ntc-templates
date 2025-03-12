@@ -36,7 +36,7 @@ Value VLAN_ID (\d+)
 Value VLAN_ID_INNER (\d+)
 Value VLAN_ID_OUTER (\d+)
 Value QUEUE_SIZE (\d+)
-Value QUEUE_MAX (\d+) 
+Value QUEUE_MAX (\d+)
 Value QUEUE_DROPS (\d+)
 Value QUEUE_FLUSHES (\d+)
 Value QUEUE_OUTPUT_DROPS (\d+)
@@ -49,13 +49,13 @@ Start
   ^\s+Description:\s+${DESCRIPTION}\s*$$
   ^\s+Internet\s+address\s+is\s+${IP_ADDRESS}\/${PREFIX_LENGTH}\s*$$
   ^\s+MTU\s+${MTU}.*BW\s+${BANDWIDTH}.*DLY\s+${DELAY},\s*$$
-  ^\s+Encapsulation\s+${ENCAPSULATION}, Vlan ID\s+${VLAN_ID}
-  ^\s+Encapsulation\s+${ENCAPSULATION}, outer ID\s+${VLAN_ID_OUTER}, inner ID\s+${VLAN_ID_INNER}
+  ^\s+Encapsulation\s+${ENCAPSULATION},\s+Vlan\s+ID\s+${VLAN_ID}
+  ^\s+Encapsulation\s+${ENCAPSULATION},\s+outer\s+ID\s+${VLAN_ID_OUTER},\s+inner\s+ID\s+${VLAN_ID_INNER}
   ^\s+Encapsulation\s+${ENCAPSULATION},.+$$
   ^\s+Last\s+input\s+${LAST_INPUT},\s+output\s+${LAST_OUTPUT},\s+output\s+hang\s+${LAST_OUTPUT_HANG}\s*$$
   ^\s+Input\s+queue:\s+${QUEUE_SIZE}\/${QUEUE_MAX}\/${QUEUE_DROPS}\/${QUEUE_FLUSHES}\s+\(size\/max\/drops\/flushes\);\s+Total output\s+drops:\s+${QUEUE_OUTPUT_DROPS}\s*$$
   ^\s+Queueing\s+strategy:\s+${QUEUE_STRATEGY}\s*$$
-  ^\s+${DUPLEX},\s+${SPEED},.+media\stype\sis\s${MEDIA_TYPE}$$
+  ^\s+${DUPLEX},\s+${SPEED},.+media\s+type\s+is\s*(${MEDIA_TYPE})?$$
   ^\s+${DUPLEX},\s+${SPEED},.+TX/FX$$
   ^\s+${DUPLEX},\s+${SPEED}$$
   ^.*input\s+rate\s+${INPUT_RATE}\s+\w+/sec,\s+${INPUT_PPS}\s+packets.+$$
