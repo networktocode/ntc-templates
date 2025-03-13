@@ -1,0 +1,27 @@
+mtd[readflash]:device=reservearea tclen=1 tcoffset=659455
+Unlocking reservearea ...
+Reading from reservearea to /tmp/boot_flag ... 
+/tmp/boot_flag
+mtd[readflash]:device=tclinux_slave tclen=372 tcoffset=0
+Unlocking tclinux_slave ...
+Reading from tclinux_slave to /tmp/BootImg_info ... 
+/tmp/BootImg_info
+zyUtilIGetBootingFlag:sysCmd = /sbin/mtd readflash /tmp/boot_flag 1 659455 reservearea
+zyUtilGetBootImageHeader:sysCmd = /sbin/mtd readflash /tmp/BootImg_info 372 0 tclinux_slave
+Firmware Version        : V5.50(ABPM.9.2)C0
+Bootbase Version        : V1.49 | 04/28/2023 15:07:34
+Vendor Name             : Zyxel Communications Corp.
+Product Model           : VMG3625-T50B
+Serial Number           : S240Y37011297
+First MAC Address       : 14360E6D6C30
+Last MAC Address        : 14360E6D6C3F
+MAC Address Quantity    : 16
+Default Country Code    : 00
+Boot Module Debug Flag  : 00
+Kernel Checksum         : 6353591D
+RootFS Checksum         : F50EC1E9
+Romfile Checksum        : 00005A3E
+Main Feature Bits       : 00
+Other Feature Bits      : 
+7fc8508a: 04050503 00000100 00000000 00000000
+7fc8509a: 00000000 00000000 00000000
