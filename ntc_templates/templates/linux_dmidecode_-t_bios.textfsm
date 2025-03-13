@@ -1,0 +1,38 @@
+Value BIOS_VENDOR (\S+|\S.+\S)
+Value BIOS_VERSION (\S+)
+Value BIOS_RELEASE_DATE (\S+)
+Value BIOS_RUNTIME_SIZE (\S.+\S)
+Value BIOS_ROM_SIZE (\S.+\S)
+
+Start
+  ^\s*\#\s*dmidecode\s*\S+\s*$$
+  ^\s*\#\s*SMBIOS\s*entry\s*point\s*at\s*\S+\s*$$
+  ^\s*Getting\s*SMBIOS\s*data\s*from\s*sysfs\.\s*$$
+  ^\s*SMBIOS\s*\d+\.\d+(?:.\d+)?\s*present\.\s*$$
+  ^\s*\#\s*SMBIOS\s*implementations\s*newer\s*than\s*version\s*\d+\.\d+\s*are\s*not\s*$$
+  ^\s*\#\s*fully\s*supported\s*by\s*this\s*version\s*of\s*dmidecode\.\s*$$
+  ^\s*$$
+  ^\s*Handle\s*\S+,\s*DMI\s*type\s*\d+,\s*\d+\s*bytes$$ -> BIOS
+  ^. -> Error
+
+BIOS
+  ^\s*BIOS\s*Information\s*$$
+  ^\s*Vendor:\s+${BIOS_VENDOR}\s*$$
+  ^\s*Version:\s+${BIOS_VERSION}\s*$$
+  ^\s*Release\s*Date:\s+${BIOS_RELEASE_DATE}\s*$$
+  ^\s*Address:\s+\S+\s*$$
+  ^\s*Runtime\s*Size:\s+${BIOS_RUNTIME_SIZE}\s*$$
+  ^\s*ROM\s*Size:\s+${BIOS_ROM_SIZE}\s*$$
+  ^\s*Characteristics:\s* -> Characteristics
+  ^. -> Error
+
+Characteristics
+  ^\s*.*\s* -> Characteristics
+  ^\s*BIOS Revision:\s+\S+\s*$$
+  ^\s*Handle\s*\S+,\s*DMI\s*type\s*\d+,\s*\d+\s*bytes$$
+  ^\s*BIOS\s*Language\s*Information\s*$$
+  ^\s*Language\s*Description\s*Format:\s*\S+\s*$$
+  ^\s*Installable\s*Languages:\s*\d+\s*$$
+  ^\s*\S.+\S\s*$$
+  ^\s*Currently\s*Installed\s*Language:\s*\S.+\S\s*$$ -> Record
+  ^. -> Error
