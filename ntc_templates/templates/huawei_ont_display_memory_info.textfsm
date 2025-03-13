@@ -1,0 +1,19 @@
+Value MEMORY_TOTAL (\d+)
+Value MEMORY_USED (\d+)
+Value MEMORY_FREE (\d+)
+Value MEMORY_SHARED (\d+)
+Value MEMORY_BUFFERS (\d+)
+Value BUFFERS_USED (\d+)
+Value BUFFERS_FREE (\d+)
+Value SWAP_TOTAL (\d+)
+Value SWAP_USED (\d+)
+Value SWAP_FREE (\d+)
+
+Start
+  ^\s+total\s+used\s+free\s+shared\s+buffers
+  ^\s*Mem:\s+${MEMORY_TOTAL}\s+${MEMORY_USED}\s+${MEMORY_FREE}\s+${MEMORY_SHARED}\s+${MEMORY_BUFFERS}\s*$$
+  ^\s*-\/\+\s+buffers:\s+${BUFFERS_USED}\s+${BUFFERS_FREE}\s*$$
+  ^\s*Swap:\s+${SWAP_TOTAL}\s+${SWAP_USED}\s+${SWAP_FREE}\s*$$
+  ^\s+$$
+  ^\s*success!\s*$$
+  ^. -> Error

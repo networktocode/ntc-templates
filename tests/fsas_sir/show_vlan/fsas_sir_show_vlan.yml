@@ -1,0 +1,20 @@
+---
+parsed_sample:
+  - interfaces:
+      - "ether 1 1"
+    vlan_id: "1"
+    vlan_name: "default"
+  - interfaces:
+      - "ether 2 1"
+      - "ether 2 2"
+      - "ether 2 3"
+    vlan_id: "2"
+    vlan_name: "lan2"
+  - interfaces:
+      - "pseudo-ether 1"
+    vlan_id: "501"
+    vlan_name: "wwan"
+  - interfaces:
+      - "ether 2 1"
+    vlan_id: "1005"
+    vlan_name: "v1005"
