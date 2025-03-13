@@ -16,6 +16,7 @@ Value LAST_PHYSICAL_DOWN_TIME (\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2}|-)
 Value LAST_LINE_PROTOCOL_UPTIME (\d{4}-\d{2}-\d{2}\s*\d{2}:\d{2}:\d{2}\s*(\S{3}\+\d{2}:\d{2}\s*\S{3})?)
 Value CURRENT_SYSTEM_TIME (\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2})
 Value PORT_MODE ([\S\s]*)
+Value CURRENT_WORK_MODE (\S.+\S|\S+)
 Value SPEED (\d*)
 Value LOOPBACK (\S*)
 Value DUPLEX (HALF|FULL)
@@ -55,6 +56,7 @@ Start
   ^\s+Input\sbandwidth\sutilization(\sthreshold)?\s*:.*$$
   ^\s+Output\sbandwidth\sutilization(\sthreshold)?\s*:.*$$
   ^Port\s+Mode:\s+${PORT_MODE}\s*$$
+  ^\s*Current\s+Work\s+Mode:\s+${CURRENT_WORK_MODE}\s*$$
   ^Speed\s+:\s+${SPEED},\s*Loopback:\s+${LOOPBACK}\s*$$
   ^Duplex:\s+${DUPLEX},\s*Negotiation:\s+${NEGOTIATION}\s*$$
   ^Mdi\s*:\s+\S+,\s*Clock\s*:\s+\S+\s*$$

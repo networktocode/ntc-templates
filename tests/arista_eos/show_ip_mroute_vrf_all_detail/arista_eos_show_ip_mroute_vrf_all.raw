@@ -1,0 +1,144 @@
+VRF:default
+PIM Bidirectional Mode Multicast Routing Table
+RPF route: U - From unicast routing table
+           M - From multicast routing table
+PIM Sparse Mode Multicast Routing Table
+Flags: E - Entry forwarding on the RPT, J - Joining to the SPT
+    R - RPT bit is set, S - SPT bit is set, L - Source is attached
+    W - Wildcard entry, X - External component interest
+    I - SG Include Join alert rcvd, P - Programmed in hardware
+    H - Joining SPT due to policy, D - Joining SPT due to protocol
+    Z - Entry marked for deletion, C - Learned from a DR via a register
+    A - Learned via Anycast RP Router, M - Learned via MSDP
+    N - May notify MSDP, K - Keepalive timer not running
+    T - Switching Incoming Interface, B - Learned via Border Router
+    V - Source is reachable via Evpn Tenant Domain
+    F - Learned via MVPN
+RPF route: U - From unicast routing table
+           M - From multicast routing table
+* - Interface has EVPN information available in the 'detail' command output
+224.0.1.129
+  169.254.132.172, 118d18h, flags: PE
+    Incoming interface: Null
+    Upstream joined state: upNotJoined
+    Upstream RPT joined state: upRptNotJoined
+    State summarization macros:
+      Could register (S,G): False
+      Register stop (S,G): True
+      Join desired (S,G): False
+      Prune desired (S,G,Rpt): False
+      No interfaces in immediate olist (S,G): True
+      No interfaces in inherited olist (S,G): True
+224.0.23.192
+  0.0.0.0, 38d14h, RP 204.14.0.136, flags: W
+    Incoming interface: Register
+    Outgoing interface list:
+      Ethernet2/1
+      Ethernet2/2
+    Upstream joined state: upJoined
+    Upstream RPT joined state: upRptNotJoined
+    State summarization macros:
+      Join desired (*,G): True
+      Join desired (*,*,RP): False
+      RPT join desired (*,G): True
+      No interfaces in immediate olist (*,G): False
+      No interfaces in immediate olist (*,*,G): True
+  192.26.98.17, 8:57:21, flags: PE
+    Incoming interface: Register
+    Outgoing interface list:
+      Ethernet2/1
+    Upstream joined state: upNotJoined
+    Upstream RPT joined state: upRptNotPruned
+    State summarization macros:
+      Could register (S,G): False
+      Register stop (S,G): False
+      Join desired (S,G): False
+      Prune desired (S,G,Rpt): False
+      No interfaces in immediate olist (S,G): True
+      No interfaces in inherited olist (S,G): False
+  192.168.98.17, 8:57:21, flags: SP
+    Incoming interface: Ethernet10
+    RPF route: [U] 192.168.98.0/27 [20/0] via 10.100.10.6
+    Outgoing interface list:
+      Ethernet2/1
+    Upstream joined state: upNotJoined
+    Upstream RPT joined state: upRptNotPruned
+    State summarization macros:
+      Could register (S,G): False
+      Register stop (S,G): True
+      Join desired (S,G): True
+      Prune desired (S,G,Rpt): False
+      No interfaces in immediate olist (S,G): False
+      No interfaces in inherited olist (S,G): False
+224.0.23.190
+  0.0.0.0, 38d14h, RP 204.14.0.136, flags: W
+    Incoming interface: Register
+    Outgoing interface list:
+      Ethernet0/1
+    Upstream joined state: upJoined
+    Upstream RPT joined state: upRptNotJoined
+    State summarization macros:
+      Join desired (*,G): True
+      Join desired (*,*,RP): False
+      RPT join desired (*,G): True
+      No interfaces in immediate olist (*,G): False
+      No interfaces in immediate olist (*,*,G): True
+  10.205.227.165, 38d14h, flags: SBNP
+    Incoming interface: Ethernet32
+    Outgoing interface list:
+      Ethernet2/1
+    Interfaces not in OIL:
+      Ethernet0/1: Not DR, RPT Pruned
+    Upstream joined state: upJoined
+    Upstream RPT joined state: upRptNotPruned
+    State summarization macros:
+      Could register (S,G): True
+      Register stop (S,G): True
+      Join desired (S,G): True
+      Prune desired (S,G,Rpt): False
+      No interfaces in immediate olist (S,G): False
+      No interfaces in inherited olist (S,G): False
+  10.205.227.166, 18d7h, RP 204.14.0.136, flags: SBNP
+    Incoming interface: Ethernet32
+    Outgoing interface list:
+      Ethernet0/1
+      Ethernet2/1
+    Upstream joined state: upJoined
+    Upstream RPT joined state: upRptNotPruned
+    State summarization macros:
+      Could register (S,G): True
+      Register stop (S,G): True
+      Join desired (S,G): True
+      Prune desired (S,G,Rpt): False
+      No interfaces in immediate olist (S,G): False
+      No interfaces in inherited olist (S,G): False
+VRF:FOO
+PIM Bidirectional Mode Multicast Routing Table
+RPF route: U - From unicast routing table
+           M - From multicast routing table
+PIM Sparse Mode Multicast Routing Table
+Flags: E - Entry forwarding on the RPT, J - Joining to the SPT
+    R - RPT bit is set, S - SPT bit is set, L - Source is attached
+    W - Wildcard entry, X - External component interest
+    I - SG Include Join alert rcvd, P - Programmed in hardware
+    H - Joining SPT due to policy, D - Joining SPT due to protocol
+    Z - Entry marked for deletion, C - Learned from a DR via a register
+    A - Learned via Anycast RP Router, M - Learned via MSDP
+    N - May notify MSDP, K - Keepalive timer not running
+    T - Switching Incoming Interface, B - Learned via Border Router
+    V - Source is reachable via Evpn Tenant Domain
+    F - Learned via MVPN
+RPF route: U - From unicast routing table
+           M - From multicast routing table
+224.0.1.130
+  169.254.132.173, 1d18h, flags: PE
+    Incoming interface: Null
+    Upstream joined state: upNotJoined
+    Upstream RPT joined state: upRptNotJoined
+    State summarization macros:
+      Could register (S,G): False
+      Register stop (S,G): True
+      Join desired (S,G): False
+      Prune desired (S,G,Rpt): False
+      No interfaces in immediate olist (S,G): True
+      No interfaces in inherited olist (S,G): True

@@ -1,0 +1,13 @@
+Value RESULT (\S.+\S)
+Value SESSION_ID (\d+)
+Value EXTERNAL_IP_ADDRESS (\S.+\S)	
+Value DEFAULT_GATEWAY (\S.+\S)
+
+Start
+  ^\s*pppoe\s+emulator\s+Result:\s*(?:${RESULT})?\s*$$
+  ^\s*SessionID:\s*${SESSION_ID}\s*$$
+  ^\s*ExternalIPAddress:\s*(?:${EXTERNAL_IP_ADDRESS})?\s*$$
+  ^\s*DefaultGateway:\s*(?:${DEFAULT_GATEWAY})?\s*$$
+  ^\s*success!\s*$$
+  ^\s+$$
+  ^. -> Error

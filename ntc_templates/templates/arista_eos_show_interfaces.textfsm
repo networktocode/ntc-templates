@@ -37,5 +37,7 @@ Start
   ^\s+IPv6\s+link-local
   ^\s+.+IPv6\s+global\s+unicast
   ^\s+[\dA-Fa-f:]+,\s+subnet\s+is
+  ^\s+Member\s+of\s+
+  ^\s+...\s+\S+\s+,
   ^\s*$$
   ^. -> Error

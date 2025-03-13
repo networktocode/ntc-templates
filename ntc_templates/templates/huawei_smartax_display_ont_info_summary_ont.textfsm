@@ -3,7 +3,7 @@ Value Key ONT_ID (\d+)
 Value Required RUN_STATE (\w+)
 Value LAST_UPTIME (\S+\s*\S+)
 Value LAST_DOWNTIME (\S+\s*\S+)
-Value LAST_DOWNCAUSE (\S+)
+Value LAST_DOWNCAUSE (\S.+\S|\S+)
 
 Start
   ^\s*Command\s*is\s*being\s*executed\.\s*Please\s*wait\s*$$

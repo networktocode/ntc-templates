@@ -26,12 +26,11 @@ Start
   ^\s*Bandwidth:\s+${BANDWIDTH}
   ^\s*Maximum\s+[Tt]ransmi\S+\s+[Uu]nit:\s+${MTU}
   ^\s*The\sMaximum\s+Transmit\s+Unit\sis\s+${MTU}
-  ^\s*Maximum\s+frame\s+length:\s+${L2MTU}
+  ^\s*Maximum\s+frame\s+length:\s*${L2MTU}
   ^\s*Forbid\s+jumbo\s+frames\s+to\s+pass
-  ^\s*The\sMaximum\s+Frame\s+Length\sis\s+${L2MTU}
-  ^\s*Internet\s+[Aa]ddress:\s+${IP_ADDRESS}\s+\([Pp]rimary\)
-  ^\s*Internet\s+[Aa]ddress\sis\s+${IP_ADDRESS}\s+[Pp]rimary
-  ^\s*Internet\s+[Aa]ddress:\s+${IP_ADDRESS}\s+\([Ss]ub\)
+  ^\s*The\s+[Mm]aximum\s+[Ff]rame\s+[Ll]ength\s+is\s+${L2MTU}
+  ^\s*Internet\s+[Aa]ddress:\s+${IP_ADDRESS}\s+\(([Pp]rimary|[Ss]ub|[Cc]ellular-[Aa]llocated)\)
+  ^\s*Internet\s+[Aa]ddress\s+is\s+${IP_ADDRESS}\s+[Pp]rimary
   ^\s*IP\s+[Pp]acket\s+[Ff]rame\s+[Tt]ype\s*:\s*[^,]+,\s+[Hh]ardware\s+[Aa]ddress:\s+${HW_ADDRESS}
   ^\s*IPv6\s+[Pp]acket\s+[Ff]rame\s+[Tt]ype\s*:\s*[^,]+,\s+[Hh]ardware\s+[Aa]ddress:\s+${HW_ADDRESS}
   ^\s*${SPEED}\s+mode\s*,\s+${DUPLEX}\s+mode
@@ -180,9 +179,12 @@ Start
   ^\s*GRE
   ^\s*Checksumming\sof\sGRE
   ^\s+-\s+ignored
-  ^\s+-\s+frame
+  ^\s+(-|\d+)\s+frame
   ^\s+-\s+aborts
   ^\s+-\s+lost\s+carrier
+  ^\s*Transfer\s+time:\s+\d+:\d+:\d+
+  ^\s*Unknown-multicast\s+max-ratio
+  ^\s*Promiscuous\s+mode
   ^\s*DCD:
   ^. -> Error
   ^\s*$$ ^. -> Error

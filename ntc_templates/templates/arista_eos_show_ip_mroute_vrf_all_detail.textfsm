@@ -1,0 +1,46 @@
+Value Filldown VRF (\S+)
+Value Filldown MULTICAST_GROUP (\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})
+Value Required RPF_SOURCE (\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})
+Value RP (\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})
+Value UPTIME (\d+d\d+h|\d+:\d+:\d+)
+Value FLAGS (\S+)
+Value RPF_ROUTE (\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}/\d{1,2})
+Value RPF_ROUTING_TABLE ([UM])
+Value RPF_ROUTE_ADMINISTRATIVE_DISTANCE (\d+)
+Value RPF_ROUTE_METRIC (\d+)
+Value RPF_ROUTE_VIA (\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})
+Value INCOMING_INTERFACE (\S+)
+Value UPSTREAM_JOINED_STATE (\S+)
+Value UPSTREAM_RPT_JOINED_STATE (\S+)
+Value List OUTGOING_INTERFACE_LIST (\S+)
+
+Start
+  ^VRF:${VRF}
+  ^PIM
+  ^RPF
+  ^\s+M\s+-\s+From
+  ^Flags
+  ^\s+[RWIHZANTVF]\s+-
+  ^\*\s-
+  ^${MULTICAST_GROUP}
+  ^\s+?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}) -> Continue.Record
+  ^\s+${RPF_SOURCE},\s+${UPTIME},\s+(RP\s+${RP},\s+)?flags:\s+${FLAGS}
+  ^\s+Incoming\s+interface:\s+${INCOMING_INTERFACE}
+  ^\s+RPF\s+route:\s+\[${RPF_ROUTING_TABLE}\]\s+${RPF_ROUTE}\s+\[${RPF_ROUTE_ADMINISTRATIVE_DISTANCE}/${RPF_ROUTE_METRIC}\]\s+via\s+${RPF_ROUTE_VIA}
+  ^\s+Outgoing\s+interface\s+list:
+  ^\s+${OUTGOING_INTERFACE_LIST}$$
+  ^\s+Interfaces\s+not\s+in\s+OIL
+# match interface names that are not in the OIL
+  ^\s+\S+:\s+
+  ^\s+Upstream\s+joined\s+state:\s+${UPSTREAM_JOINED_STATE}
+  ^\s+Upstream\s+RPT\s+joined\s+state:\s+${UPSTREAM_RPT_JOINED_STATE} -> Record
+  ^\s+State\s+summarization\s+macros:
+  ^\s+Could
+  ^\s+Register
+  ^\s+Join
+  ^\s+RPT\s+join\s+desired
+  ^\s+Prune
+  ^\s+No\s+interfaces\s+in\s+(immediate|inherited)\s+olist
+  ^.* -> Error
+
+EOF

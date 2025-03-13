@@ -1,0 +1,76 @@
+---
+parsed_sample:
+  - bandwidth: "40000000 kbps"
+    description: "DescriptionSanitized"
+    duplex: "full-duplex"
+    hw_address:
+      - "ec9b-8b87-6ebb"
+    interface: "FortyGigE2/0/30"
+    ip_address: []
+    l2mtu: "1500"
+    line_status: "UP"
+    mtu: ""
+    port_link_type: ""
+    protocol_status: ""
+    speed: "40Gbps-speed"
+    untagged_vlan_id: ""
+    vlan_native: ""
+    vlan_passing: []
+    vlan_permitted: []
+  - bandwidth: "40000000 kbps"
+    description: "DescriptionSanitized"
+    duplex: "full-duplex"
+    hw_address:
+      - "ec9b-8b87-6712"
+      - "ec9b-8b87-6712"
+    interface: "FortyGigE2/0/31"
+    ip_address:
+      - "1.2.3.4/30"
+    l2mtu: "10000"
+    line_status: "UP"
+    mtu: "9008"
+    port_link_type: ""
+    protocol_status: "UP"
+    speed: "40Gbps-speed"
+    untagged_vlan_id: ""
+    vlan_native: ""
+    vlan_passing: []
+    vlan_permitted: []
+  - bandwidth: "40000000 kbps"
+    description: "DescriptionSanitized"
+    duplex: "full-duplex"
+    hw_address:
+      - "ec9b-8b87-6712"
+      - "ec9b-8b87-6712"
+    interface: "FortyGigE2/0/32"
+    ip_address:
+      - "2.3.4.5/30"
+    l2mtu: "10000"
+    line_status: "UP"
+    mtu: "9008"
+    port_link_type: ""
+    protocol_status: "UP"
+    speed: "40Gbps-speed"
+    untagged_vlan_id: ""
+    vlan_native: ""
+    vlan_passing: []
+    vlan_permitted: []
+  - bandwidth: "40000000 kbps"
+    description: "DescriptionSanitized"
+    duplex: "full-duplex"
+    hw_address:
+      - "ec9b-8b87-6712"
+      - "ec9b-8b87-6712"
+    interface: "FortyGigE2/0/33"
+    ip_address:
+      - "2.3.4.5/30"
+    l2mtu: "10000"
+    line_status: "UP"
+    mtu: "9008"
+    port_link_type: ""
+    protocol_status: "UP"
+    speed: "40Gbps-speed"
+    untagged_vlan_id: ""
+    vlan_native: ""
+    vlan_passing: []
+    vlan_permitted: []
