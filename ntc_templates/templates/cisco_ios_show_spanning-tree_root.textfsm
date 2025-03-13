@@ -7,7 +7,7 @@ Value FWD_DLY (\d+)
 Value ROOT_PORT (\S+)
 
 Start
-  ^Vlan\s+Root\s+ID\s+Cost\s+Time\s+Age\s+Dly\s+Root\s+Port -> STP
+  ^Vlan\s+Root\s+ID\s+Cost\s+Time\s+Age\s+Dly\s+Root\s+Port\s*$$ -> STP
   # Capture time-stamp if vty line has command time-stamping turned on
   ^Load\s+for\s+
   ^Time\s+source\s+is
