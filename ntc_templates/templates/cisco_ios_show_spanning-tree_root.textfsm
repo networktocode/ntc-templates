@@ -13,7 +13,6 @@ Start
   ^Time\s+source\s+is
 
 STP
-  ^${VLAN_ID}\s+${ROOT_ID}\s+${ROOT_COST}\s+${HELLO_TIME}\s+${MAX_AGE}\s+${FWD_DLY}\s+${ROOT_PORT} -> Record
-  ^${VLAN_ID}\s+${ROOT_ID}\s+${ROOT_COST}\s+${HELLO_TIME}\s+${MAX_AGE}\s+${FWD_DLY} -> Record
+  ^${VLAN_ID}\s+${ROOT_ID}\s+${ROOT_COST}\s+${HELLO_TIME}\s+${MAX_AGE}\s+${FWD_DLY}(\s+${ROOT_PORT})?\s*$$ -> Record
   ^-+
   ^\s*$$
