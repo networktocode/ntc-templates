@@ -1,0 +1,8 @@
+Value WATTS (\d+\.\d+)
+Value AMPS (\d+\.\d+)
+Value VOLTS (\d+)
+
+Start
+  ^system\s+power\s+used\s+=\s+${WATTS}\s+Watts\s+\(${AMPS}\s+Amps\s+@\s+${VOLTS}V\)\s*$$ -> Record
+  ^\s*$$
+  ^. -> Error
