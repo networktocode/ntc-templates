@@ -27,6 +27,8 @@ Start
 	^\s*-+\s*$$
 	^\s*Command\s*is\s*being\s*executed\.\s*Please\s*wait\s*$$
 	^\s*Channel\s*Information:\s*$$ -> channel_info
+	^\s*Statistics\s*of\s*SSID\s*:\s*$$ -> statistics
+	^\s*STA\s*Information:\s*$$ -> sta_info
 	^. -> Error
 
 channel_info
