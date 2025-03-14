@@ -1,0 +1,10 @@
+access-list test_acl; 888 elements; name hash: 0x12345678
+access-list test_acl line 1 extended permit object-group test_protocols object-group test_clients object-group test_sites log informational interval 300 (hitcnt=30) 0x12345679 
+  access-list test_acl line 1 extended permit tcp 172.16.0.0 255.240.0.0 host 10.1.1.1 (test.net) eq 8883 log informational interval 300 (hitcnt=300) 0x12345680 
+access-list test_acl line 2 extended permit object-group test_protocols object-group test_sites object-group test_ext log informational interval 300 (hitcnt=11389) 0x12345681 
+  access-list test_acl line 2 extended permit tcp host 10.2.2.2 (test.com) host 192.168.16.11 eq 5061 log informational interval 300 (hitcnt=234897) 0x12345682 
+access-list test_acl line 3 extended permit object-group test_protocols object-group test-managers object-group test_controllers log informational interval 300 (hitcnt=234) 0x12345683 
+  access-list test_acl line 3 extended permit udp host 172.19.3.21 eq 7999 host 192.168.15.11 range 35000 50000 log informational interval 300 (hitcnt=654453) 0x12345684 
+  access-list test_acl line 3 extended permit udp host 172.19.3.21 gt 7999 host 192.168.15.11 range 35000 50000 log informational interval 300 (hitcnt=43234) 0x12345685 
+  access-list test_acl line 3 extended permit udp host 172.19.3.21 lt 7999 host 192.168.15.11 range 35000 50000 log informational interval 300 (hitcnt=56732) 0x12345686 
+  access-list test_acl line 3 extended permit udp host 172.19.3.21 range 7000 7999 host 192.168.15.11 range 35000 50000 log informational interval 300 (hitcnt=2345) 0x12345687 
