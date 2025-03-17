@@ -1,0 +1,7 @@
+Value MACHINE_ITEM (\S+)
+
+Start
+  ^\s*machine\s+item\s+=\s+${MACHINE_ITEM}\s*$$
+  ^\s+$$
+  ^\s*success!\s*$$
+  ^. -> Error

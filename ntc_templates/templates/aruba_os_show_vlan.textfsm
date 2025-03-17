@@ -21,7 +21,7 @@ VLANInfo
   ^. -> Error
 
 VLANTable
-  ^\s*-+\s+-+\s+\+\s+-+\s+-+\s+-+\s*$$ -> VLANRows
+  ^\s*---+.*$$ -> VLANRows
   ^\s*$$
   ^. -> Error
 
