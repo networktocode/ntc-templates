@@ -1,4 +1,18 @@
 Value NODE (\S+)
+Value TASK_TOTAL (\S+)
+Value TASK_RUNNING (\S+)
+Value TASK_SLEEPING (\S+)
+Value TASK_STOPPED (\S+)
+Value TASK_ZOMBIE (\S+)
+Value TASK_WAITING (\S+)
+Value CPU_USER (\S+)
+Value CPU_SYSTEM (\S+)
+Value CPU_NICE (\S+)
+Value CPU_IDLE (\S+)
+Value CPU_WAIT (\S+)
+Value CPU_HW_IRQ (\S+)
+Value CPU_SW_IRQ (\S+)
+Value CPU_STEAL (\S+)
 Value MEMORY_FORMAT (\w)
 Value SWAP_FORMAT (\w)
 Value MEMORY_ACTIVE (\S+)
@@ -11,12 +25,27 @@ Value SWAP_USED (\S+)
 Value SWAP_AVAIL (\S+)
 
 Start
+  ^-+\s*$$ -> TYPE1
+  ^last\s*pid: -> TYPE2
+
+# JUNOS EVO template
+TYPE1
   ^-+\s*$$
-  ^node:\s*${NODE}
-  ^top\s*
-  ^Tasks:\s*
-  ^\%Cpu
-  ^${MEMORY_FORMAT}iB\s+(Mem|MEMORY)\s+:\s+${MEMORY_ACTIVE}\s+total,\s+${MEMORY_FREE}\s+free,\s+${MEMORY_USED}\s+used,\s+${MEMORY_BUFFER}\s+buff/cache\s*
-  ^${SWAP_FORMAT}iB\s+Swap:\s+${SWAP_TOTAL}\s+total,\s+${SWAP_FREE}\s+free,\s+${SWAP_USED}\s+used\.\s+${SWAP_AVAIL}\s+avail\s+(Mem|MEMORY)\s* -> Record
+  ^node:\s+${NODE}
+  ^top\s+
+  ^Tasks:\s+${TASK_TOTAL}\s+total,\s+${TASK_RUNNING}\s+running,\s+${TASK_SLEEPING}\s+sleeping,\s+${TASK_STOPPED}\s+stopped,\s+${TASK_ZOMBIE}\s+zombie\s*
+  ^%Cpu\(s\):\s+${CPU_USER}\s+us,\s+${CPU_SYSTEM}\s+sy,\s+${CPU_NICE}\s+ni,\s+${CPU_IDLE}\s+id,\s+${CPU_WAIT}\s+wa,\s+${CPU_HW_IRQ}\s+hi,\s+${CPU_SW_IRQ}\s+si,\s+${CPU_STEAL}\s+st\s*
+  ^${MEMORY_FORMAT}iB\s+M(em|EMORY)\s+:\s+${MEMORY_ACTIVE}\s+total,\s+${MEMORY_FREE}\s+free,\s+${MEMORY_USED}\s+used,\s+${MEMORY_BUFFER}\s+buff/cache\s*
+  ^${SWAP_FORMAT}iB\s+Swap:\s+${SWAP_TOTAL}\s+total,\s+${SWAP_FREE}\s+free,\s+${SWAP_USED}\s+used\.\s+${SWAP_AVAIL}\s+avail\s+M(em|EMORY)\s* -> Record
+  ^{(master|backup)}\s*$$
   ^\s*$$
+  ^. -> Error
+
+# Junos Classic template
+TYPE2
+  ^last\s+pid:
+  ^${TASK_TOTAL}\s+processes:\s+${TASK_RUNNING}+\s+running,\s+${TASK_SLEEPING}\s+sleeping,\s+${TASK_ZOMBIE}\s+zombie,\s+${TASK_WAITING}\s+waiting\s*$$
+  ^CPU:\s+${CPU_USER}\%\s+user,\s+${CPU_NICE}\%\s+nice,\s+${CPU_SYSTEM}\%\s+system,\s+${CPU_HW_IRQ}\%\s+interrupt,\s+${CPU_IDLE}\%\s+idle\s*$$
+  ^Mem:\s+${MEMORY_ACTIVE}${MEMORY_FORMAT}\s+Active,\s+\S+\s+Inact,\s+\S+\s+Wired,\s+${MEMORY_BUFFER}\S+\s+Buf,\s+${MEMORY_FREE}\S+\s+Free\s*$$
+  ^Swap:\s+${SWAP_TOTAL}${SWAP_FORMAT}\s+Total,\s+${SWAP_FREE}\S+\s+Free\s*$$
   ^. -> Error

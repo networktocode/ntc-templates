@@ -1,0 +1,11 @@
+  -----------------------------------------------------------------------
+   SRV-P BUNDLE TYPE MAC            MAC TYPE F /S /P   VPI  VCI   VLAN ID
+   INDEX INDEX
+  -----------------------------------------------------------------------
+      99     -  gpon aaaa-aaaa-aaaa dynamic  0 /1 /0   0    1           1
+  -----------------------------------------------------------------------
+  Note: F--Frame, S--Slot, P--Port, F/S/P indicates PW Index for PW,
+        A--The MAC address is learned or configured on the aggregation port,
+        VPI indicates ONT ID for PON, VCI indicates GEM index for GPON,
+        v/e--vlan/encap, pritag--priority-tagged,
+        ppp--pppoe, ip--ipoe, ip4--ipv4oe, ip6--ipv6oe
