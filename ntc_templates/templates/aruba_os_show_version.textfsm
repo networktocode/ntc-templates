@@ -7,12 +7,12 @@ Value BOOT_ROM_VERSION (\S+)
 Value ACTIVE_BOOT_ROM (\S+)
 
 Start
-  ^Image\sstamp:\s+${IMAGE_STAMP}\s*$$
+  ^Image\s+stamp:\s+${IMAGE_STAMP}\s*$$
   ^\s+${IMAGE_BUILD_DATE}\s*$$
   ^\s+${REVISION}\s*$$
   ^\s+${IMAGE_VERSION}\s*$$
-  ^Boot\sImage:\s+${BOOT_IMAGE}\s*$$
-  ^Boot\sROM\sVersion:\s+${BOOT_ROM_VERSION}\s*$$
-  ^Active\sBoot\sROM:\s+${ACTIVE_BOOT_ROM}\s*$$
+  ^Boot\s+Image:\s+${BOOT_IMAGE}\s*$$
+  ^Boot\s+ROM\s+Version:\s+${BOOT_ROM_VERSION}\s*$$
+  ^Active\s+Boot\s+ROM:\s+${ACTIVE_BOOT_ROM}\s*$$
   ^\s*$$
   ^. -> Error
