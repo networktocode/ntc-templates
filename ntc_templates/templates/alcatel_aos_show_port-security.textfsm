@@ -10,6 +10,7 @@ Value PKT_RELAY (\S+)
 
 
 Start
+  ^\s*No\s+Port\s+Security\s+is\s+configured\s+in\s+the\s+system\.\s*$$
   ^Port: -> Continue.Record
   ^\s*Port:\s*${PORT}\s*$$
   ^\s*Admin-State\s*:\s*${ADMIN_STATE},$$
