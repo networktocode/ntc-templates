@@ -20,25 +20,25 @@ Value LOCATION_INFORMATION (\S.+\S)
 Start
   ^\s*${LOCAL_INTERFACE}\s+has\s+\d+\s+neighbor(s|\(s\)):\s*$$
   ^\s*\S.+\S\s+has\s+\d+\s+neighbor(s|\(s\))\s*$$
-  ^\s*Neighbor\s+index\s+:\s*\d+\s*$$
-  ^\s*Chassis\s+type\s+:\s*(\S.+\S)\s*$$
-  ^\s*Chassis\s+ID\s+:\s*(\S.+\S)\s*$$
-  ^\s*Port\s+ID\s+type\s+:\s*(\S.+\S)\s*$$
-  ^\s*Port\s+ID\s+:\s*(.*?)\s*$$
-  ^\s*Port\s+description\s+:\s*(?:\S.+\S)?\s*$$
-  ^\s*System\s+name\s+:\s*(?:\S.+\S)?\s*$$
-  ^\s*System\s+description\s+:\s*(\S.+\S)\s*$$ -> SystemDescription
-  ^\s*System\s+capabilities\s+supported\s+:\s*(\S.+\S)\s*$$
-  ^\s*System\s+capabilities\s+enabled\s+:\s*(.*?)\s*$$
-  ^\s*Management\s+address\s+type\s+:\s*(\S.+\S)\s*$$
+  ^\s*Neighbor\s+index\s*:\s*\d+\s*$$
+  ^\s*Chassis\s+type\s*:\s*(\S.+\S)\s*$$
+  ^\s*Chassis\s+ID\s*:\s*(\S.+\S)\s*$$
+  ^\s*Port\s+ID\s+type\s*:\s*(\S.+\S)\s*$$
+  ^\s*Port\s+ID\s*:\s*(.*?)\s*$$
+  ^\s*Port\s+description\s*:\s*(?:\S.+\S)?\s*$$
+  ^\s*System\s+name\s*:\s*(?:\S.+\S)?\s*$$
+  ^\s*System\s+description\s*:\s*(\S.+\S)\s*$$ -> SystemDescription
+  ^\s*System\s+capabilities\s+supported\s*:\s*(\S.+\S)\s*$$
+  ^\s*System\s+capabilities\s+enabled\s*:\s*(.*?)\s*$$
+  ^\s*Management\s+address\s+type\s*:\s*(\S.+\S)\s*$$
   ^\s*Management\s+address\s*(value\s*)?:\s*(\S.+\S)\s*$$
-  ^\s*OID\s+:(\S.+\S)?\s*$$
-  ^\s*Expired\s+time\s+:(\d+)s\s*$$
-  ^\s*Port\s+VLAN\s+ID\(PVID\)\s+:(\d+)\s*$$
+  ^\s*OID\s*:(\S.+\S)?\s*$$
+  ^\s*Expired\s+time\s*:(\d+)s\s*$$
+  ^\s*Port\s+VLAN\s+ID\(PVID\)\s*:(\d+)\s*$$
   ^\s*VLAN\s+name\s+of\s+VLAN\s*1\s*:(\S.+\S)\s*$$
   ^\s*Protocol\s+identity
-  ^\s*Auto-negotiation\s+supported\s+:(\S.+\S)\s*$$
-  ^\s*Auto-negotiation\s+enabled\s+:(\S.+\S)\s*$$
+  ^\s*Auto-negotiation\s+supported\s*:(\S.+\S)\s*$$
+  ^\s*Auto-negotiation\s+enabled\s*:(\S.+\S)\s*$$
   ^\s*OperMau\s*:(\S.+\S)\s*$$
   ^\s*Power\s+port\s+class\s*:(\S+)\s*$$
   ^\s*PSE\s+power\s+supported\s*:(\S+)\s*$$
@@ -51,15 +51,15 @@ Start
   ^\s*Aggregation\s+port\s+ID\s*:\s*(\d+)\s*$$
   ^\s*Maximum\s+frame\s+Size\s*:\s*(\d+)\s*$$
   ^\s*MED\s+Device\s+information\s*$$
-  ^\s*Device\s+class\s+:(\S.+\S)\s*$$
-  ^\s*HardwareRev\s+:(\S.+\S)\s*$$
-  ^\s*FirmwareRev\s+:(\S+)\s*$$
-  ^\s*SoftwareRev\s+:\s*${SOFTWARE_REVISION}\s*$$
-  ^\s*SerialNum\s+:\s*(NA|${SERIAL_NUMBER})\s*$$
-  ^\s*Manufacturer\s+name\s+:${MANUFACTURER_NAME}\s*$$
-  ^\s*Model\s+name\s+:${MODEL_NAME}\s*$$
-  ^\s*Asset\s+tracking\s+identifier\s+:\s*(NA|${ASSET_TRACKING_IDENTIFIER})\s*$$
-  ^\s*Media\s+policy\s+type\s+:\s*${MEDIA_POLICY_TYPE}\s*$$
+  ^\s*Device\s+class\s*:(\S.+\S)\s*$$
+  ^\s*HardwareRev\s*:(\S.+\S)\s*$$
+  ^\s*FirmwareRev\s*:(\S+)\s*$$
+  ^\s*SoftwareRev\s*:\s*${SOFTWARE_REVISION}\s*$$
+  ^\s*SerialNum\s*:\s*(NA|${SERIAL_NUMBER})\s*$$
+  ^\s*Manufacturer\s+name\s*:${MANUFACTURER_NAME}\s*$$
+  ^\s*Model\s+name\s*:${MODEL_NAME}\s*$$
+  ^\s*Asset\s+tracking\s+identifier\s*:\s*(NA|${ASSET_TRACKING_IDENTIFIER})\s*$$
+  ^\s*Media\s+policy\s+type\s*:\s*${MEDIA_POLICY_TYPE}\s*$$
   ^\s*Unknown\s+Policy\s*:\s*${UNKNOWN_POLICY}\s*$$
   ^\s*VLAN\s+tagged\s*:\s*${VLAN_TAGGED}\s*$$
   ^\s*Media\s+policy\s+VlanID\s*:\s*${MEDIA_POLICY_VLAN_ID}\s*$$
@@ -76,10 +76,10 @@ Start
   ^. -> Error
 
 SystemDescription
-  ^\s*System\s+capabilities\s+supported\s+:\s*(\S.+\S)\s*$$ -> Start
-  ^\s*System\s+capabilities\s+enabled\s+:\s*(.*?)\s*$$ -> Start
+  ^\s*System\s+capabilities\s+supported\s*:\s*(\S.+\S)\s*$$ -> Start
+  ^\s*System\s+capabilities\s+enabled\s*:\s*(.*?)\s*$$ -> Start
   ^\s*Management\s+address\s+type\s+:\s*(\S.+\S)\s*$$ -> Start
   ^\s*Management\s+address\s*(value\s*)?:\s*(\S.+\S)\s*$$ -> Start
-  ^\s*Expired\s+time\s+:\s*(\d+)s\s*$$ -> Start
+  ^\s*Expired\s+time\s*:\s*(\d+)s\s*$$ -> Start
   ^\s*(\S.+\S)\s*$$
   ^. -> Error

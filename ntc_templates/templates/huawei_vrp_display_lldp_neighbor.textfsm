@@ -37,25 +37,25 @@ Value HARDWARE_REVISION (\S.+\S)
 Start
   ^\s*${LOCAL_INTERFACE}\s+has\s+\d+\s+neighbor(s|\(s\)):\s*$$
   ^\s*\S.+\S\s+has\s+\d+\s+neighbor(s|\(s\))\s*$$
-  ^\s*Neighbor\s+index\s+:\s*\d+\s*$$
-  ^\s*Chassis\s+type\s+:\s*${CHASSIS_TYPE}\s*$$
-  ^\s*Chassis\s+ID\s+:\s*${CHASSIS_ID}\s*$$
-  ^\s*Port\s+ID\s+type\s+:\s*${PORT_ID_TYPE}\s*$$
-  ^\s*Port\s+ID\s+:\s*${NEIGHBOR_PORT_ID}\s*$$
-  ^\s*Port\s+description\s+:\s*(?:${NEIGHBOR_INTERFACE})?\s*$$
-  ^\s*System\s+name\s+:\s*(?:${NEIGHBOR_NAME})?\s*$$
-  ^\s*System\s+description\s+:\s*${NEIGHBOR_DESCRIPTION}\s*$$ -> SystemDescription
-  ^\s*System\s+capabilities\s+supported\s+:\s*${SYSTEM_CAPABILITIES_SUPPORTED}\s*$$
-  ^\s*System\s+capabilities\s+enabled\s+:\s*${CAPABILITIES}\s*$$
-  ^\s*Management\s+address\s+type\s+:\s*${MGMT_ADDRESS}\s*$$
+  ^\s*Neighbor\s+index\s*:\s*\d+\s*$$
+  ^\s*Chassis\s+type\s*:\s*${CHASSIS_TYPE}\s*$$
+  ^\s*Chassis\s+ID\s*:\s*${CHASSIS_ID}\s*$$
+  ^\s*Port\s+ID\s+type\s*:\s*${PORT_ID_TYPE}\s*$$
+  ^\s*Port\s+ID\s*:\s*${NEIGHBOR_PORT_ID}\s*$$
+  ^\s*Port\s+description\s*:\s*(?:${NEIGHBOR_INTERFACE})?\s*$$
+  ^\s*System\s+name\s*:\s*(?:${NEIGHBOR_NAME})?\s*$$
+  ^\s*System\s+description\s*:\s*${NEIGHBOR_DESCRIPTION}\s*$$ -> SystemDescription
+  ^\s*System\s+capabilities\s+supported\s*:\s*${SYSTEM_CAPABILITIES_SUPPORTED}\s*$$
+  ^\s*System\s+capabilities\s+enabled\s*:\s*${CAPABILITIES}\s*$$
+  ^\s*Management\s+address\s+type\s*:\s*${MGMT_ADDRESS}\s*$$
   ^\s*Management\s+address\s*(value\s*)?:\s*${MGMT_ADDRESS}\s*$$
-  ^\s*OID\s+:(?:${OID})?\s*$$
-  ^\s*Expired\s+time\s+:\s*${EXPIRED_TIME}s\s*$$
-  ^\s*Port\s+VLAN\s+ID\(PVID\)\s+:${VLAN_ID}\s*$$
+  ^\s*OID\s*:(?:${OID})?\s*$$
+  ^\s*Expired\s+time\s*:\s*${EXPIRED_TIME}s\s*$$
+  ^\s*Port\s+VLAN\s+ID\(PVID\)\s*:${VLAN_ID}\s*$$
   ^\s*VLAN\s+name\s+of\s+VLAN\s*1\s*:${VLAN_1_NAME}\s*$$
   ^\s*Protocol\s+identity
-  ^\s*Auto-negotiation\s+supported\s+:\s*${AUTONEGOTIATION_SUPPORTED}\s*$$
-  ^\s*Auto-negotiation\s+enabled\s+:\s*${AUTONEGOTIATION_ENABLED}\s*$$
+  ^\s*Auto-negotiation\s+supported\s*:\s*${AUTONEGOTIATION_SUPPORTED}\s*$$
+  ^\s*Auto-negotiation\s+enabled\s*:\s*${AUTONEGOTIATION_ENABLED}\s*$$
   ^\s*OperMau\s*:\s*${OPERATION_MODE}\s*$$
   ^\s*Power\s+port\s+class\s*:\s*${POWER_PORT_CLASS}\s*$$
   ^\s*PSE\s+power\s+supported\s*:\s*${PSE_POWER_SUPPORTED}\s*$$
@@ -68,15 +68,15 @@ Start
   ^\s*Aggregation\s+port\s+ID\s*:\s*${AGGREGATION_PORT_ID}\s*$$
   ^\s*Maximum\s+frame\s+Size\s*:\s*${MAXIMUM_FRAME_SIZE}\s*$$
   ^\s*MED\s+Device\s+information\s*$$
-  ^\s*Device\s+class\s+:\s*${MED_DEVICE_CLASS}\s*$$
-  ^\s*HardwareRev\s+:\s*${HARDWARE_REVISION}\s*$$
-  ^\s*FirmwareRev\s+:\s*(NA|${FIRMWARE_REVISION})\s*$$ -> Record
-  ^\s*SoftwareRev\s+:\s*(\S.+\S)\s*$$
-  ^\s*SerialNum\s+:\s*(NA|\S.+\S)\s*$$
-  ^\s*Manufacturer\s+name\s+:(\S.+\S)\s*$$
-  ^\s*Model\s+name\s+:(\S.+\S)\s*$$
-  ^\s*Asset\s+tracking\s+identifier\s+:\s*(NA|\S.+\S)\s*$$
-  ^\s*Media\s+policy\s+type\s+:\s*(\S+)\s*$$
+  ^\s*Device\s+class\s*:\s*${MED_DEVICE_CLASS}\s*$$
+  ^\s*HardwareRev\s*:\s*${HARDWARE_REVISION}\s*$$
+  ^\s*FirmwareRev\s*:\s*(NA|${FIRMWARE_REVISION})\s*$$ -> Record
+  ^\s*SoftwareRev\s*:\s*(\S.+\S)\s*$$
+  ^\s*SerialNum\s*:\s*(NA|\S.+\S)\s*$$
+  ^\s*Manufacturer\s+name\s*:(\S.+\S)\s*$$
+  ^\s*Model\s+name\s*:(\S.+\S)\s*$$
+  ^\s*Asset\s+tracking\s+identifier\s*:\s*(NA|\S.+\S)\s*$$
+  ^\s*Media\s+policy\s+type\s*:\s*(\S+)\s*$$
   ^\s*Unknown\s+Policy\s*:\s*(\S+)\s*$$
   ^\s*VLAN\s+tagged\s*:\s*(\S+)\s*$$
   ^\s*Media\s+policy\s+VlanID\s*:\s*(\d+)\s*$$
@@ -93,10 +93,10 @@ Start
   ^. -> Error
 
 SystemDescription
-  ^\s*System\s+capabilities\s+supported\s+:\s*${SYSTEM_CAPABILITIES_SUPPORTED}\s*$$ -> Start
-  ^\s*System\s+capabilities\s+enabled\s+:\s*${CAPABILITIES}\s*$$ -> Start
-  ^\s*Management\s+address\s+type\s+:\s*${MGMT_ADDRESS}\s*$$ -> Start
+  ^\s*System\s+capabilities\s+supported\s*:\s*${SYSTEM_CAPABILITIES_SUPPORTED}\s*$$ -> Start
+  ^\s*System\s+capabilities\s+enabled\s*:\s*${CAPABILITIES}\s*$$ -> Start
+  ^\s*Management\s+address\s+type\s*:\s*${MGMT_ADDRESS}\s*$$ -> Start
   ^\s*Management\s+address\s*(value\s*)?:\s*${MGMT_ADDRESS}\s*$$ -> Start
-  ^\s*Expired\s+time\s+:\s*${EXPIRED_TIME}s\s*$$ -> Start
+  ^\s*Expired\s+time\s*:\s*${EXPIRED_TIME}s\s*$$ -> Start
   ^\s*${NEIGHBOR_DESCRIPTION}\s*$$
   ^. -> Error
