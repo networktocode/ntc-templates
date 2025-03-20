@@ -1,0 +1,69 @@
+Value RX_FIFO_OVERRUNS (\d+)
+Value RX_FCS_ERR (\d+)
+Value RX_OVER_MAX (\d+)
+Value RX_ALLIGN_ERR (\d+)
+Value RX (\d+)
+Value RX_UNICAST (\d+)
+Value RX_MULTICAST (\d+)
+Value RX_BROADCAST (\d+)
+Value RX_PAUSE (\d+)
+Value RX_UNDERSIZE (\d+)
+Value RX_FRAGMENTS (\d+)
+Value RX_JABBERS (\d+)
+Value RX_64 (\d+)
+Value RX_65_127 (\d+)
+Value RX_128_255 (\d+)
+Value RX_256_511 (\d+)
+Value RX_512_1023 (\d+)
+Value RX_1024_1518 (\d+)
+Value RX_OVERSIZE (\d+)
+Value RX_BYTE_OK (\d+)
+Value RX_BYTE_ERR (\d+)
+Value TX_EXCESS_COL (\d+)
+Value TX_LATE_COL (\d+)
+Value TX_SINGLE_COL (\d+)
+Value TX_MULTI_COL (\d+)
+Value TX (\d+)
+Value TX_UNICAST (\d+)
+Value TX_MULTICAST (\d+)
+Value TX_BROADCAST (\d+)
+Value TX_PAUSE (\d+)
+Value TX_BYTE_OK (\d+)
+
+Start
+  ^\s*Ethernet\s+portid\s+=\s+\d+\s+packet\s+statistic\s+as\s+follows?:\s*$$
+  ^\s*-+\s*$$
+  ^\s*rx_fifo_overrun\s+:\s+${RX_FIFO_OVERRUNS}\s*$$
+  ^\s*rx_fcs_err\s+:\s+${RX_FCS_ERR}\s*$$
+  ^\s*rx_over_max\s+:\s+${RX_OVER_MAX}\s*$$
+  ^\s*rx_align_err\s+:\s+${RX_ALLIGN_ERR}\s*$$
+  ^\s*rx\s+:\s+${RX}\s*$$
+  ^\s*rx_uc\s+:\s+${RX_UNICAST}\s*$$
+  ^\s*rx_mc\s+:\s+${RX_MULTICAST}\s*$$
+  ^\s*rx_bc\s+:\s+${RX_BROADCAST}\s*$$
+  ^\s*rx_pause\s+:\s+${RX_PAUSE}\s*$$
+  ^\s*rx_undersize\s+:\s+${RX_UNDERSIZE}\s*$$
+  ^\s*rx_frage?ment\s+:\s+${RX_FRAGMENTS}\s*$$
+  ^\s*rx_jabber\s+:\s+${RX_JABBERS}\s*$$
+  ^\s*rx_64\s+:\s+${RX_64}\s*$$
+  ^\s*rx_65_127\s+:\s+${RX_65_127}\s*$$
+  ^\s*rx_128_255\s+:\s+${RX_128_255}\s*$$
+  ^\s*rx_256_511\s+:\s+${RX_256_511}\s*$$
+  ^\s*rx_512_1023\s+:\s+${RX_512_1023}\s*$$
+  ^\s*rx_1024_1518\s+:\s+${RX_1024_1518}\s*$$
+  ^\s*rx_oversize\s+:\s+${RX_OVERSIZE}\s*$$
+  ^\s*rx_byte_ok\s+:\s+${RX_BYTE_OK}\s*$$
+  ^\s*rx_byte_err\s+:\s+${RX_BYTE_ERR}\s*$$
+  ^\s*tx_excess_col\s+:\s+${TX_EXCESS_COL}\s*$$
+  ^\s*tx_late_col\s+:\s+${TX_LATE_COL}\s*$$
+  ^\s*tx_single_col\s+:\s+${TX_SINGLE_COL}\s*$$
+  ^\s*tx_multi_col\s+:\s+${TX_MULTI_COL}\s*$$
+  ^\s*tx\s+:\s+${TX}\s*$$
+  ^\s*tx_uc\s+:\s+${TX_UNICAST}\s*$$
+  ^\s*tx_mc\s+:\s+${TX_MULTICAST}\s*$$
+  ^\s*tx_bc\s+:\s+${TX_BROADCAST}\s*$$
+  ^\s*tx_pause\s+:\s+${TX_PAUSE}\s*$$
+  ^\s*tx_byte_ok\s+:\s+${TX_BYTE_OK}\s*$$
+  ^\s+$$
+  ^\s*success!\s*$$
+  ^. -> Error
