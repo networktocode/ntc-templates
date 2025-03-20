@@ -31,7 +31,7 @@ Value TX_PAUSE (\d+)
 Value TX_BYTE_OK (\d+)
 
 Start
-  ^\s*Ethernet\s+portid\s+=\s+\d+\s+packet\s+statistic\s+as\s+follow:\s*$$
+  ^\s*Ethernet\s+portid\s+=\s+\d+\s+packet\s+statistic\s+as\s+follows?:\s*$$
   ^\s*-+\s*$$
   ^\s*rx_fifo_overrun\s+:\s+${RX_FIFO_OVERRUNS}\s*$$
   ^\s*rx_fcs_err\s+:\s+${RX_FCS_ERR}\s*$$
@@ -43,7 +43,7 @@ Start
   ^\s*rx_bc\s+:\s+${RX_BROADCAST}\s*$$
   ^\s*rx_pause\s+:\s+${RX_PAUSE}\s*$$
   ^\s*rx_undersize\s+:\s+${RX_UNDERSIZE}\s*$$
-  ^\s*rx_fragement\s+:\s+${RX_FRAGMENTS}\s*$$
+  ^\s*rx_frage?ment\s+:\s+${RX_FRAGMENTS}\s*$$
   ^\s*rx_jabber\s+:\s+${RX_JABBERS}\s*$$
   ^\s*rx_64\s+:\s+${RX_64}\s*$$
   ^\s*rx_65_127\s+:\s+${RX_65_127}\s*$$
