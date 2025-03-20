@@ -51,8 +51,8 @@ Start
   ^\s*Management\s+address\s*(value\s*)?:\s*${MGMT_ADDRESS}\s*$$
   ^\s*OID\s*:(?:${OID})?\s*$$
   ^\s*Expired\s+time\s*:\s*${EXPIRED_TIME}s\s*$$
-  ^\s*Port\s+VLAN\s+ID\(PVID\)\s*:${VLAN_ID}\s*$$
-  ^\s*VLAN\s+name\s+of\s+VLAN\s*1\s*:${VLAN_1_NAME}\s*$$
+  ^\s*Port\s+VLAN\s+ID\(PVID\)\s*:\s*${VLAN_ID}\s*$$
+  ^\s*VLAN\s+name\s+of\s+VLAN\s*1\s*:\s*${VLAN_1_NAME}\s*$$
   ^\s*Protocol\s+identity
   ^\s*Auto-negotiation\s+supported\s*:\s*${AUTONEGOTIATION_SUPPORTED}\s*$$
   ^\s*Auto-negotiation\s+enabled\s*:\s*${AUTONEGOTIATION_ENABLED}\s*$$
