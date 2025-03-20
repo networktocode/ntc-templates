@@ -56,8 +56,8 @@ Start
   ^\s*FirmwareRev\s*:(\S+)\s*$$
   ^\s*SoftwareRev\s*:\s*${SOFTWARE_REVISION}\s*$$
   ^\s*SerialNum\s*:\s*(NA|${SERIAL_NUMBER})\s*$$
-  ^\s*Manufacturer\s+name\s*:${MANUFACTURER_NAME}\s*$$
-  ^\s*Model\s+name\s*:${MODEL_NAME}\s*$$
+  ^\s*Manufacturer\s+name\s*:\s*${MANUFACTURER_NAME}\s*$$
+  ^\s*Model\s+name\s*:\s*${MODEL_NAME}\s*$$
   ^\s*Asset\s+tracking\s+identifier\s*:\s*(NA|${ASSET_TRACKING_IDENTIFIER})\s*$$
   ^\s*Media\s+policy\s+type\s*:\s*${MEDIA_POLICY_TYPE}\s*$$
   ^\s*Unknown\s+Policy\s*:\s*${UNKNOWN_POLICY}\s*$$

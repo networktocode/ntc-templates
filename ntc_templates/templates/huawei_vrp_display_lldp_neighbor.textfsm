@@ -42,14 +42,14 @@ Start
   ^\s*Chassis\s+ID\s*:\s*${CHASSIS_ID}\s*$$
   ^\s*Port\s+ID\s+type\s*:\s*${PORT_ID_TYPE}\s*$$
   ^\s*Port\s+ID\s*:\s*${NEIGHBOR_PORT_ID}\s*$$
-  ^\s*Port\s+description\s*:\s*(?:${NEIGHBOR_INTERFACE})?\s*$$
-  ^\s*System\s+name\s*:\s*(?:${NEIGHBOR_NAME})?\s*$$
+  ^\s*Port\s+description\s*:\s*${NEIGHBOR_INTERFACE}?\s*$$
+  ^\s*System\s+name\s*:\s*${NEIGHBOR_NAME}?\s*$$
   ^\s*System\s+description\s*:\s*${NEIGHBOR_DESCRIPTION}\s*$$ -> SystemDescription
   ^\s*System\s+capabilities\s+supported\s*:\s*${SYSTEM_CAPABILITIES_SUPPORTED}\s*$$
   ^\s*System\s+capabilities\s+enabled\s*:\s*${CAPABILITIES}\s*$$
   ^\s*Management\s+address\s+type\s*:\s*${MGMT_ADDRESS}\s*$$
   ^\s*Management\s+address\s*(value\s*)?:\s*${MGMT_ADDRESS}\s*$$
-  ^\s*OID\s*:(?:${OID})?\s*$$
+  ^\s*OID\s*:\s*${OID}?\s*$$
   ^\s*Expired\s+time\s*:\s*${EXPIRED_TIME}s\s*$$
   ^\s*Port\s+VLAN\s+ID\(PVID\)\s*:\s*${VLAN_ID}\s*$$
   ^\s*VLAN\s+name\s+of\s+VLAN\s*1\s*:\s*${VLAN_1_NAME}\s*$$
