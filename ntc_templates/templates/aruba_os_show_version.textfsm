@@ -1,0 +1,18 @@
+Value IMAGE_STAMP (\S+)
+Value IMAGE_BUILD_DATE (\S+\s\d+\s\d+\s\d+:\d+:\d+)
+Value REVISION (\d+)
+Value IMAGE_VERSION (\S+)
+Value BOOT_IMAGE (\S+)
+Value BOOT_ROM_VERSION (\S+)
+Value ACTIVE_BOOT_ROM (\S+)
+
+Start
+  ^Image\s+stamp:\s+${IMAGE_STAMP}\s*$$
+  ^\s+${IMAGE_BUILD_DATE}\s*$$
+  ^\s+${REVISION}\s*$$
+  ^\s+${IMAGE_VERSION}\s*$$
+  ^Boot\s+Image:\s+${BOOT_IMAGE}\s*$$
+  ^Boot\s+ROM\s+Version:\s+${BOOT_ROM_VERSION}\s*$$
+  ^Active\s+Boot\s+ROM:\s+${ACTIVE_BOOT_ROM}\s*$$
+  ^\s*$$
+  ^. -> Error

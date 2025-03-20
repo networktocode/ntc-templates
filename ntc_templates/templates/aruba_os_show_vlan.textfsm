@@ -1,0 +1,32 @@
+Value MAX_VLANS (\d+)
+Value PRIMARY_VLAN (\S+)
+Value MGMT_VLAN (\S*)
+Value VLAN_ID (\d+)
+Value VLAN_NAME (\S+)
+Value VLAN_STATUS (\S+)
+Value VOICE (\S+)
+Value JUMBO (\S+)
+
+Start
+  ^\s*Status\s+and\s+Counters\s+-\s+VLAN\s+Information\s*$$ -> VLANInfo
+  ^\s*$$
+  ^. -> Error
+
+VLANInfo
+  ^\s*Maximum\s+VLANs\s+to\s+support\s*:\s*${MAX_VLANS}\s*$$
+  ^\s*Primary\s+VLAN\s*:\s*${PRIMARY_VLAN}\s*$$
+  ^\s*Management\s+VLAN\s*:\s*${MGMT_VLAN}\s*$$
+  ^\s*VLAN\s+ID\s+Name\s+\|\s+Status\s+Voice\s+Jumbo\s*$$ -> VLANTable
+  ^\s*$$
+  ^. -> Error
+
+VLANTable
+  ^\s*---+.*$$ -> VLANRows
+  ^\s*$$
+  ^. -> Error
+
+VLANRows
+  # Match VLAN entries
+  ^\s*${VLAN_ID}\s+${VLAN_NAME}\s+\|\s+${VLAN_STATUS}\s+${VOICE}\s+${JUMBO}\s*$$ -> Record
+  ^\s*$$
+  ^. -> Error

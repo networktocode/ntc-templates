@@ -129,6 +129,8 @@ aruba_os_show_ip_interface_brief.textfsm, .*, aruba_os, sh[[ow]] ip in[[terface]
 aruba_os_show_ap_radio-database.textfsm, .*, aruba_os, show ap radio-database
 aruba_os_show_ap_database_long.textfsm, .*, aruba_os, show ap database long
 aruba_os_show_ap_database.textfsm, .*, aruba_os, show ap database
+aruba_os_show_version.textfsm, .*, aruba_os, sh[[ow]] ver[[sion]]
+aruba_os_show_vlan.textfsm, .*, aruba_os, sh[[ow]] vl[[an]]
 aruba_os_show_arp.textfsm, .*, aruba_os, sh[[ow]] arp
 
 avaya_ers_show_mac-address-table.textfsm, .*, avaya_ers, sh[[ow]] mac-a[[ddress-table]]
@@ -202,6 +204,7 @@ ciena_saos_vlan_show.textfsm, .*, ciena_saos, vl[[an]] sh[[ow]]
 cisco_apic_fabric_show_vlan_extended.textfsm, .*, cisco_apic, fabric sh[[ow]] vlan ex[[tended]]
 
 cisco_asa_show_module.textfsm:cisco_asa_show_module_details.textfsm:cisco_asa_show_module_status.textfsm, .*, cisco_asa, sh[[ow]] modu[[le]]
+cisco_asa_show_running-config_object-group_service.textfsm, .*, cisco_asa, sh[[ow]] (?:ru[[nning-config]] object-[[group]]|ob[[ject-group]]) ser[[vice]]
 cisco_asa_show_running-config_all_crypto_map.textfsm, .*, cisco_asa, sh[[ow]] ru[[nning-config]] all cr[[ypto]] m[[ap]]
 cisco_asa_show_running-config_object_network.textfsm, .*, cisco_asa, sh[[ow]] ru[[nning-config]] o[[bject]] n[[etwork]]
 cisco_asa_show_running-config_object_service.textfsm, .*, cisco_asa, sh[[ow]] ru[[nning-config]] o[[bject]] s[[ervice]]
@@ -675,14 +678,16 @@ hp_procurve_show_vlans.textfsm, .*, (hp|aruba)_procurve, sh[[ow]] vl[[ans]]
 hp_procurve_show_arp.textfsm, .*, (hp|aruba)_procurve, sh[[ow]] ar[[p]]
 hp_procurve_show_ip.textfsm, .*, (hp|aruba)_procurve, sh[[ow]] ip
 
-huawei_ont_display_port_statistics_portid_0.textfsm, .*, huawei_ont, di[[splay]] p[[ort]] s[[tatistics]] po[[rtid]] \d+
 huawei_ont_display_portstatistics_portnum_0.textfsm, .*, huawei_ont, di[[splay]] po[[rtstatistics]] p[[ortnum]] \d+
+huawei_ont_display_port_statistics_portid_0.textfsm, .*, huawei_ont, di[[splay]] p[[ort]] s[[tatistics]] po[[rtid]] \d+
+huawei_ont_display_flashlock_status.textfsm, .*, huawei_ont, di[[splay]] fl[[ashlock]] s[[tatus]]
 huawei_ont_display_wifi_information.textfsm, .*, huawei_ont, di[[splay]] w[[ifi]] i[[nformation]]
 huawei_ont_display_pppoe_em_result.textfsm, .*, huawei_ont, di[[splay]] pppoe(\s+|_)e[[m]] r[[esult]]
 huawei_ont_display_epon_ont_info.textfsm, .*, huawei_ont, di[[splay]] ep[[on]] o[[nt]] i[[nfo]]
 huawei_ont_display_inner_version.textfsm, .*, huawei_ont, di[[splay]] in[[ner]] ve[[rsion]]
 huawei_ont_display_swm_bootstate.textfsm, .*, huawei_ont, di[[splay]] swm b[[ootstate]]
 huawei_ont_display_access_mode.textfsm, .*, huawei_ont, di[[splay]] ac[[cess]] m[[ode]]
+huawei_ont_display_machineItem.textfsm, .*, huawei_ont, di[[splay]] mach[[ineItem]]
 huawei_ont_display_memory_info.textfsm, .*, huawei_ont, di[[splay]] me[[mory]] i[[nfo]]
 huawei_ont_display_deviceInfo.textfsm, .*, huawei_ont, di[[splay]] de[[viceInfo]]
 huawei_ont_display_macaddress.textfsm, .*, huawei_ont, di[[splay]] maca[[ddress]]
@@ -691,11 +696,13 @@ huawei_ont_display_boardItem.textfsm, .*, huawei_ont, di[[splay]] bo[[ardItem]]
 huawei_ont_display_rf_config.textfsm, .*, huawei_ont, di[[splay]] rf c[[onfig]]
 huawei_ont_display_swm_state.textfsm, .*, huawei_ont, di[[splay]] s[[wm]] s[[tate]]
 huawei_ont_display_log_info.textfsm, .*, huawei_ont, di[[splay]] l[[og]] i[[nfo]]
+huawei_ont_display_optmode.textfsm, .*, huawei_ont, di[[splay]] optm[[ode]]
 huawei_ont_display_sysinfo.textfsm, .*, huawei_ont, di[[splay]] sys[[info]]
 huawei_ont_display_timeout.textfsm, .*, huawei_ont, di[[splay]] ti[[meout]]
 huawei_ont_display_version.textfsm, .*, huawei_ont, di[[splay]] ve[[rsion]]
+huawei_ont_display_lanmac.textfsm, .*, huawei_ont, di[[splay]] l[[anmac]]
 huawei_ont_display_wanmac.textfsm, .*, huawei_ont, di[[splay]] w[[anmac]]
-huawei_ont_display_optic.textfsm, .*, huawei_ont, di[[splay]] o[[ptic]]
+huawei_ont_display_optic.textfsm, .*, huawei_ont, di[[splay]] opti[[c]]
 huawei_ont_display_sn.textfsm, .*, huawei_ont, di[[splay]] sn
 
 huawei_smartax_display_ont_info_summary_ont.textfsm:huawei_smartax_display_ont_info_summary_sn.textfsm, .*, huawei_smartax, di[[splay]] ont i[[nfo]] su[[mmary]] \S+ *$
