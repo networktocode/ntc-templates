@@ -707,6 +707,7 @@ huawei_ont_display_sn.textfsm, .*, huawei_ont, di[[splay]] sn
 huawei_smartax_display_ont_info_summary_ont.textfsm:huawei_smartax_display_ont_info_summary_sn.textfsm, .*, huawei_smartax, di[[splay]] ont i[[nfo]] su[[mmary]] \S+ *$
 huawei_smartax_display_ont_info_0_1_2.textfsm:huawei_smartax_display_ont_info_description.textfsm, .*, huawei_smartax, di[[splay]] ont i[[nfo]] (\d+\s*|\d+ \d+ \d+\s*)\s*[[all]] *$
 huawei_smartax_display_ont_port_vlan_0_1_byport_eth_0.textfsm, .*, huawei_smartax, di[[splay]] ont p[[ort]] vl[[an]] \d+ \d+ byport eth \d+\s*
+huawei_smartax_display_location_aaaa-aaaa-aaaa_ont.textfsm, .*, huawei_smartax, disp[[lay]] loc[[ation]] \S+ o[[nt]]
 huawei_smartax_display_ont_port_state_0_1_eth-port.textfsm, .*, huawei_smartax, di[[splay]] on[[t]] por[[t]] st[[ate]] \d+ \d+ e[[th-port]]
 huawei_smartax_display_ont_port_vlan_0_1_byvlan_0.textfsm, .*, huawei_smartax, di[[splay]] ont p[[ort]] v[[lan]] \d+ \d+ byvlan \d+
 huawei_smartax_display_ont-lineprofile_gpon_all.textfsm, .*, huawei_smartax, disp[[lay]] ont-li[[neprofile]] g[[pon]] a[[ll]]\s*
