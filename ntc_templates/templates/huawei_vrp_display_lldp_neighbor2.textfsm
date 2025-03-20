@@ -32,28 +32,28 @@ Start
   ^\s*System\s+capabilities\s+enabled\s*:\s*(.*?)\s*$$
   ^\s*Management\s+address\s+type\s*:\s*(\S.+\S)\s*$$
   ^\s*Management\s+address\s*(value\s*)?:\s*(\S.+\S)\s*$$
-  ^\s*OID\s*:(\S.+\S)?\s*$$
-  ^\s*Expired\s+time\s*:(\d+)s\s*$$
-  ^\s*Port\s+VLAN\s+ID\(PVID\)\s*:(\d+)\s*$$
-  ^\s*VLAN\s+name\s+of\s+VLAN\s*1\s*:(\S.+\S)\s*$$
+  ^\s*OID\s*:\s*(\S.+\S)?\s*$$
+  ^\s*Expired\s+time\s*:\s*(\d+)s\s*$$
+  ^\s*Port\s+VLAN\s+ID\(PVID\)\s*:\s*(\d+)\s*$$
+  ^\s*VLAN\s+name\s+of\s+VLAN\s*1\s*:\s*(\S.+\S)\s*$$
   ^\s*Protocol\s+identity
-  ^\s*Auto-negotiation\s+supported\s*:(\S.+\S)\s*$$
-  ^\s*Auto-negotiation\s+enabled\s*:(\S.+\S)\s*$$
-  ^\s*OperMau\s*:(\S.+\S)\s*$$
-  ^\s*Power\s+port\s+class\s*:(\S+)\s*$$
-  ^\s*PSE\s+power\s+supported\s*:(\S+)\s*$$
-  ^\s*PSE\s+power\s+enabled\s*:(\S+)\s*$$
-  ^\s*PSE\s+pairs\s+control\s+ability\s*:(\S+)\s*$$
-  ^\s*Power\s+pairs\s*:(\S.+\S)\s*$$
-  ^\s*Port\s+power\s+classification\s*:(\S.+\S)\s*$$
+  ^\s*Auto-negotiation\s+supported\s*:\s*(\S.+\S)\s*$$
+  ^\s*Auto-negotiation\s+enabled\s*:\s*(\S.+\S)\s*$$
+  ^\s*OperMau\s*:\s*(\S.+\S)\s*$$
+  ^\s*Power\s+port\s+class\s*:\s*(\S+)\s*$$
+  ^\s*PSE\s+power\s+supported\s*:\s*(\S+)\s*$$
+  ^\s*PSE\s+power\s+enabled\s*:\s*(\S+)\s*$$
+  ^\s*PSE\s+pairs\s+control\s+ability\s*:\s*(\S+)\s*$$
+  ^\s*Power\s+pairs\s*:\s*(\S.+\S)\s*$$
+  ^\s*Port\s+power\s+classification\s*:\s*(\S.+\S)\s*$$
   ^\s*Link\s+aggregation\s+supported\s*:\s*(\S+)\s*$$
   ^\s*Link\s+aggregation\s+enabled\s*:\s*(\S+)\s*$$
   ^\s*Aggregation\s+port\s+ID\s*:\s*(\d+)\s*$$
   ^\s*Maximum\s+frame\s+Size\s*:\s*(\d+)\s*$$
   ^\s*MED\s+Device\s+information\s*$$
-  ^\s*Device\s+class\s*:(\S.+\S)\s*$$
-  ^\s*HardwareRev\s*:(\S.+\S)\s*$$
-  ^\s*FirmwareRev\s*:(\S+)\s*$$
+  ^\s*Device\s+class\s*:\s*(\S.+\S)\s*$$
+  ^\s*HardwareRev\s*:\s*(\S.+\S)\s*$$
+  ^\s*FirmwareRev\s*:\s*(\S+)\s*$$
   ^\s*SoftwareRev\s*:\s*${SOFTWARE_REVISION}\s*$$
   ^\s*SerialNum\s*:\s*(NA|${SERIAL_NUMBER})\s*$$
   ^\s*Manufacturer\s+name\s*:\s*${MANUFACTURER_NAME}\s*$$
@@ -78,7 +78,7 @@ Start
 SystemDescription
   ^\s*System\s+capabilities\s+supported\s*:\s*(\S.+\S)\s*$$ -> Start
   ^\s*System\s+capabilities\s+enabled\s*:\s*(.*?)\s*$$ -> Start
-  ^\s*Management\s+address\s+type\s+:\s*(\S.+\S)\s*$$ -> Start
+  ^\s*Management\s+address\s+type\s*:\s*(\S.+\S)\s*$$ -> Start
   ^\s*Management\s+address\s*(value\s*)?:\s*(\S.+\S)\s*$$ -> Start
   ^\s*Expired\s+time\s*:\s*(\d+)s\s*$$ -> Start
   ^\s*(\S.+\S)\s*$$

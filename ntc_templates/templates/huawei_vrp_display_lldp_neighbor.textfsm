@@ -73,8 +73,8 @@ Start
   ^\s*FirmwareRev\s*:\s*(NA|${FIRMWARE_REVISION})\s*$$ -> Record
   ^\s*SoftwareRev\s*:\s*(\S.+\S)\s*$$
   ^\s*SerialNum\s*:\s*(NA|\S.+\S)\s*$$
-  ^\s*Manufacturer\s+name\s*:(\S.+\S)\s*$$
-  ^\s*Model\s+name\s*:(\S.+\S)\s*$$
+  ^\s*Manufacturer\s+name\s*:\s*(\S.+\S)\s*$$
+  ^\s*Model\s+name\s*:\s*(\S.+\S)\s*$$
   ^\s*Asset\s+tracking\s+identifier\s*:\s*(NA|\S.+\S)\s*$$
   ^\s*Media\s+policy\s+type\s*:\s*(\S+)\s*$$
   ^\s*Unknown\s+Policy\s*:\s*(\S+)\s*$$
