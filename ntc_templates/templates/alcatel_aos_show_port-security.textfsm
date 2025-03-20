@@ -8,17 +8,18 @@ Value VIOLATION_TYPE (\S+)
 Value VIOLATION_MAC (\S+)
 Value PKT_RELAY (\S+)
 
-
 Start
+  ^\s*Check\s+PortCB\s+on\s+\d+\s*$$
+  ^\s*No\s+Port\s+Security\s+is\s+configured(?:\s+in\s+the\s+system\.)?\s*$$
   ^Port: -> Continue.Record
   ^\s*Port:\s*${PORT}\s*$$
   ^\s*Admin-State\s*:\s*${ADMIN_STATE},$$
-  ^\s*Operation\s*Mode\s*:\s*${OPERATION_MODE},$$
-  ^\s*Max\s*MAC\s*bridged\s*:\s*${MAX_MAC_BRIDGED},$$
-  ^\s*Trap\s*Threshold\s*:\s*${TRAP_THRESHOLD},$$
-  ^\s*Max\s*MAC\s*filtered\s*:\s*${MAX_MAC_FILTERED},$$
+  ^\s*Operation\s+Mode\s*:\s*${OPERATION_MODE},$$
+  ^\s*Max\s+MAC\s+bridged\s*:\s*${MAX_MAC_BRIDGED},$$
+  ^\s*Trap\s+Threshold\s*:\s*${TRAP_THRESHOLD},$$
+  ^\s*Max\s+MAC\s+filtered\s*:\s*${MAX_MAC_FILTERED},$$
   ^\s*Violation\s*:\s*${VIOLATION_TYPE},$$
-  ^\s*Violating\s*MAC\s*:\s*${VIOLATION_MAC}\s*$$
+  ^\s*Violating\s+MAC\s*:\s*${VIOLATION_MAC}\s*$$
   ^\s*Pkt-Relay\s*:\s*${PKT_RELAY}$$ -> Record
   ^(Legend:)?\s+Mac\s+Address:
   ^\s*[MmAaCc]{3}\s+Address\s+VLAN\s+TYPE\s*$$
