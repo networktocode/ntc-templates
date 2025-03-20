@@ -10,7 +10,7 @@ Value REACHABILITY (\S+)
 Start
   # unreachable, broadcast, local (discarded)
   ^\s*unreachable
-  ^\s*broadcast*
+  ^\s*broadcast
   ^\s*local
   ^\s*${NETWORK}(?:\s+via\s+${NEXTHOP_IP})?(?:\s+dev\s+${NEXTHOP_IF})?(?:\s+proto\s+${PROTOCOL})?(?:\s+scope\s+${SCOPE})?(?:\s+src\s+${SRC})?(?:\s+${REACHABILITY})?(?:\s+metric\s+${METRIC})?\s*$$ -> Record
   ^. -> Error
