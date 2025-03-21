@@ -9,7 +9,7 @@ import pytest
 
 # https://github.com/google/textfsm/wiki/TextFSM#value-definitions
 OPTION_KEYWORDS = ["Filldown", "Key", "Required", "List", "Fillup"]
-RE_CAPGRP = re.compile(rf"^Value\s+(?:(?:(?:{'|'.join(OPTION_KEYWORDS)}),?)+\s+)?(\S+)")
+RE_CAPGRP = re.compile(rf"^Value\s+(?:(?:(?:{'|'.join(OPTION_KEYWORDS)}),?)+\s+)?(\S+)")  # noqa: E231
 
 
 def return_template_files():
