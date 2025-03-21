@@ -4,9 +4,9 @@ Value Required MAP (\S+)
 Value Required SEQ (\d+)
 Value PFS (group\d|\s*)
 Value PEER (\S+)
-Value IKEv1_PHASE1_MODE (\S+)
-Value IKEv1_TRANSFORM_SET (\S+(\s\S+)*?)
-Value IKEv2_MODE (\S+)
+Value IKEV1_PHASE1_MODE (\S+)
+Value IKEV1_TRANSFORM_SET (\S+(\s\S+)*?)
+Value IKEV2_MODE (\S+)
 Value ISAKMP_DYNAMIC (\S+)
 Value Fillup INTERFACE (\S+)
 Value TRANSFORM (\S+)
@@ -28,9 +28,9 @@ ReadBlockLines
   ^crypto\smap\s${MAP}\s${SEQ}\sset\sconnection-type\s${CONNECTION_TYPE}\s*$$
   ^crypto\smap\s${MAP}\s${SEQ}\sset\spfs\s${PFS}\s*$$
   ^crypto\smap\s${MAP}\s${SEQ}\sset\speer\s${PEER}\s*$$
-  ^crypto\smap\s${MAP}\s${SEQ}\sset\sikev1\sphase1-mode\s${IKEv1_PHASE1_MODE}\s*$$
-  ^crypto\smap\s${MAP}\s${SEQ}\sset\sikev1\stransform-set\s${IKEv1_TRANSFORM_SET}\s*$$
-  ^crypto\smap\s${MAP}\s${SEQ}\sset\sikev2\smode\s${IKEv2_MODE}\s*$$
+  ^crypto\smap\s${MAP}\s${SEQ}\sset\sikev1\sphase1-mode\s${IKEV1_PHASE1_MODE}\s*$$
+  ^crypto\smap\s${MAP}\s${SEQ}\sset\sikev1\stransform-set\s${IKEV1_TRANSFORM_SET}\s*$$
+  ^crypto\smap\s${MAP}\s${SEQ}\sset\sikev2\smode\s${IKEV2_MODE}\s*$$
   # SA Second/Byte alone or in different combinations
   ^crypto\smap\s\S+\s\d+\sset\ssecurity-association\slifetime\sseconds\s${SA_SEC}\s*$$
   ^crypto\smap\s\S+\s\d+\sset\ssecurity-association\slifetime\skilobytes\s${SA_KB}\s*$$
