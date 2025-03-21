@@ -1,0 +1,4 @@
+default via 192.168.1.1 dev enp0s25 proto dhcp src 192.168.1.19 metric 100 
+192.168.1.0/24 dev enp0s25 proto kernel scope link src 192.168.1.19 metric 100 
+192.168.88.0/24 dev br0 proto kernel scope link src 192.168.88.254 metric 425 linkdown 
+192.168.122.0/24 dev virbr0 proto kernel scope link src 192.168.122.1 linkdown
