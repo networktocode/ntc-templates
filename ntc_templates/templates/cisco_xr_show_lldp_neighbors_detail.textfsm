@@ -6,7 +6,7 @@ Value NEIGHBOR (.+)
 Value SYSTEM_DESCRIPTION (.*)
 Value CAPABILITIES (.*)
 Value MANAGEMENT_IP (\S+)
-Value MANAGEMENT_IPv6 (\S+)
+Value MANAGEMENT_IPV6 (\S+)
 Value MAC_ADDRESS (([0-9a-fA-F]{2}[:]){5}([0-9a-fA-F]{2}))
 
 Start
@@ -31,7 +31,7 @@ NEIGHBOR
   ^Enabled\s+Capabilities\:\s+${CAPABILITIES}
   ^Management\s+Addresses\:
   ^\s*IPv4\s+address\:\s+${MANAGEMENT_IP}
-  ^\s*IPv6\s+address\:\s+${MANAGEMENT_IPv6}
+  ^\s*IPv6\s+address\:\s+${MANAGEMENT_IPV6}
   ^Peer\s+MAC\s+Address\:\s+${MAC_ADDRESS}
   ^Total\s+entries\s+displayed\:\s\d+ -> Start
   ^-------------- -> Record NEIGHBOR
