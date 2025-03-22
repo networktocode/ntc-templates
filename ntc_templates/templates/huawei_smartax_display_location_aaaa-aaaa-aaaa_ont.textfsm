@@ -1,0 +1,18 @@
+Value MAC_ADDRESS (\S+)
+Value MAC_ADDRESS_TYPE (\w+)
+Value FSP (\d+\s*\/\s*\d+\s*\/\d+)
+Value ONT_ID (\d+)
+Value PORT_ID (\d+)
+Value PORT_TYPE (\w+)
+Value VLAN_ID (\d+)
+
+Start
+  ^\s*It\s+will\s+take\s+several\s+minutes,\s+please\s+wait\s+or\s+press\s+CTRL_C\s+to\s+break\s*$$
+  ^\s*-+\s*$$
+  ^\s*(MAC\s+){2}TYPE\s+F/S/P\s+ONT\s+ID\s+Port\s+ID\s+Port\s+Type\s+VLAN\s*$$
+  ^\s*${MAC_ADDRESS}\s+${MAC_ADDRESS_TYPE}\s+${FSP}\s+${ONT_ID}\s+${PORT_ID}\s+${PORT_TYPE}\s+${VLAN_ID}\s*$$ -> Record
+  ^\s*{\s+<cr>\|+<K>\s+}:\s*$$
+  ^\s+Command:\s*$$
+  ^\s+display\s+location\s+\S+\s+ont\s*$$
+  ^\s+Are\s+you\s+sure
+  ^. -> Error

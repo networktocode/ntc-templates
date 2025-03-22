@@ -1,0 +1,29 @@
+Brief information on interfaces in route mode:
+Link: ADM - administratively down; Stby - standby
+Protocol: (s) - spoofing
+Interface            Link Protocol Primary IP      Description
+Aux0                 UP   --       --
+E-Ch2/0:0            UP   UP       1.2.3.4
+GE0/0                ADM  DOWN     --              ### NOT USED ###
+GE0/1                UP   UP       5.6.7.8  ### WAN ###
+GE0/2                ADM  DOWN     --              ### NOT USED ###
+InLoop0              UP   UP(s)    --
+NULL0                UP   UP(s)    --
+REG0                 UP   --       --
+Vlan1                UP   UP       9.10.11.12   ### LAN ###
+
+Brief information on interfaces in bridge mode:
+Link: ADM - administratively down; Stby - standby
+Speed: (a) - auto
+Duplex: (a)/A - auto; H - half; F - full
+Type: A - access; T - trunk; H - hybrid
+Interface            Link Speed     Duplex Type PVID Description
+GE3/0                UP   1G(a)     F(a)   A    1
+GE3/1                DOWN auto      A      A    1
+GE3/2                DOWN auto      A      A    1
+GE3/3                DOWN auto      A      A    1
+GE3/4                DOWN auto      A      A    1
+GE3/5                DOWN auto      A      A    1
+GE3/6                DOWN auto      A      A    1
+GE3/7                DOWN auto      A      A    1
+

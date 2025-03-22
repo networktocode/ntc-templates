@@ -1,0 +1,68 @@
+# General
+Value AP_ID (\S+|\S.+\S)
+Value SSID_INDEX (\d+)
+Value SSID (\S+|\S.+\S)
+# Channel Table
+Value CHANNEL_NUMBER (\d+)
+Value AP_NUMBER (\d+)
+Value INTERFERENCE_DEGREE (\d+)
+# Statistics Table
+Value SENT_PACKETS (\d+)
+Value SENT_ERROR_PACKETS (\d+)
+Value SENT_DISCARD_PACKETS (\d+)
+Value RECEIVED_PACKETS (\d+)
+Value RECEIVED_ERROR_PACKETS (\d+)
+Value RECEIVED_DISCARD_PACKETS (\d+)
+Value TRANSMISSION_QUALITY_LEVEL (\S+|\S.+\S)
+# STA Table
+Value STA_MAC_ADDRESS (\S+|\S.+\S)
+Value TX_RATE (\d+)
+Value RX_RATE (\d+)
+Value RSSI (\d+)
+Value SNR (\d+)
+Value SIGNAL_QUALITY_LEVEL (\S+|\S.+\S)
+
+Start
+  ^\s*-+\s*$$
+  ^\s*Command\s+is\s+being\s+executed\.\s+Please\s+wait\s*$$
+  ^\s*Channel\s+Information:\s*$$ -> Channel_Info
+  ^\s*Statistics\s+of\s+SSID:\s*$$ -> Statistics
+  ^\s*STA\s+Information:\s*$$ -> STA_Info
+  ^. -> Error
+
+Channel_Info
+  ^\s*-+\s*$$
+  ^\s*Channel\s+Num\s+:\s+${CHANNEL_NUMBER}\s*$$
+  ^\s*AP\s+ID\s+:\s+${AP_ID}\s*$$
+  ^\s*AP\s+Number\s+:\s+${AP_NUMBER}\s*$$
+  ^\s*Interference\s+degree\s+:\s+${INTERFERENCE_DEGREE}\s*$$ -> Record
+  ^\s*Statistics\s+of\s+SSID:\s*$$ -> Clear Statistics
+  ^. -> Error
+
+Statistics
+  ^\s*-+\s*$$
+  ^\s*AP\s+ID\s+:\s+${AP_ID}\s*$$
+  ^\s*SSID\s+Index\s+:\s+${SSID_INDEX}\s*$$
+  ^\s*SSID\s+:\s+${SSID}\s*$$
+  ^\s*Sent\s+Packets\s+:\s+${SENT_PACKETS}\s*$$
+  ^\s*Sent\s+Error\s+Packets\s+:\s+${SENT_ERROR_PACKETS}\s*$$
+  ^\s*Sent\s+Discard\s+Packets\s+:\s+${SENT_DISCARD_PACKETS}\s*$$
+  ^\s*Received\s+Packets\s+:\s+${RECEIVED_PACKETS}\s*$$
+  ^\s*Received\s+Error\s+Packets\s+:\s+${RECEIVED_ERROR_PACKETS}\s*$$
+  ^\s*Received\s+Discard\s+Packets\s+:\s+${RECEIVED_DISCARD_PACKETS}\s*$$
+  ^\s*Transmission\s+Quality\s+Level\s+:\s+${TRANSMISSION_QUALITY_LEVEL}\s*$$ -> Record
+  ^\s*STA\s+Information:\s*$$ -> Clear STA_Info
+  ^. -> Error
+
+STA_Info
+  ^\s*-+\s*$$
+  ^\s*AP\s+ID\s+:\s+${AP_ID}\s*$$
+  ^\s*SSID\s+Index\s+:\s+${SSID_INDEX}\s*$$
+  ^\s*SSID\s+:\s+${SSID}\s*$$
+  ^\s*STA\s+Mac\s+Address\s+:\s+${STA_MAC_ADDRESS}\s*$$
+  ^\s*TxRate(?:\(Mbps\))?\s+:\s+${TX_RATE}\s*$$
+  ^\s*RxRate(?:\(Mbps\))?\s+:\s+${RX_RATE}\s*$$
+  ^\s*RSSI(?:\(dBm\))?\s+:\s+${RSSI}\s*$$
+  ^\s*SNR(?:\(dB\))?\s+:\s+${SNR}\s*$$
+  ^\s*Signal\s+Quality\s+Level\s+:\s+${SIGNAL_QUALITY_LEVEL}\s*$$ -> Record
+  ^. -> Error

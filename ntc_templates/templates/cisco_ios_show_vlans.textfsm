@@ -20,6 +20,7 @@ Data
   ^\S+(\s+Native-vlan\s+Tx-type:\s+\S+)?\s*$$
   ^\s+Protocols\s+Configured
   ^\s+IP\s+\d+\s+\d+
+  ^\s+CLNS\s+\d+\s+\d+
   ^\s+MPLS\s+\d+\s+\d+
   ^\s+MPLS\:\s+\S+
   ^\s+[vV]LAN\s+Trunk\s+Interfaces?\:\s+${INTERFACES} -> Interface

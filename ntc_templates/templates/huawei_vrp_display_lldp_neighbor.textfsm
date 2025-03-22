@@ -1,77 +1,102 @@
-Value Required LOCAL_INTERFACE (\S+)
-Value CHASSIS_ID (.+?)
+Value Required,Key LOCAL_INTERFACE (\S.+\S)
+Value CHASSIS_TYPE (\S.+\S)
+Value CHASSIS_ID (\S.+\S)
+Value PORT_ID_TYPE (\S.+\S)
 Value MANUFACTURER (.*?)
 Value PLATFORM (.*?)
 Value NEIGHBOR_PORT_ID (.*?)
-Value NEIGHBOR_INTERFACE (.*?)
-Value NEIGHBOR_NAME (.+?)
-Value List NEIGHBOR_DESCRIPTION (.*)
+Value NEIGHBOR_INTERFACE (\S.+\S)
+Value NEIGHBOR_NAME (\S.+\S)
+Value List NEIGHBOR_DESCRIPTION (\S.+\S)
+Value SYSTEM_CAPABILITIES_SUPPORTED (\S.+\S)
 Value CAPABILITIES (.*?)
+Value MGMT_ADDRESS_TYPE (\S+)
 Value MGMT_ADDRESS (\S+)
+Value EXPIRED_TIME (\d+)
 Value VLAN_ID (\d+)
+Value VLAN_1_NAME (\S.+\S)	
 Value SERIAL (\S+)
+Value OID (\S+)
+Value AUTONEGOTIATION_SUPPORTED (\S+)
+Value AUTONEGOTIATION_ENABLED (\S+)
+Value OPERATION_MODE (\S.+\S)
+Value POWER_PORT_CLASS (\S+)
+Value PSE_POWER_SUPPORTED (\S+)
+Value PSE_POWER_ENABLED (\S+)
+Value PSE_PAIRS_CONTROL_ABILITY (\S+)
+Value POWER_PAIRS (\S+)
+Value PORT_POWER_CLASSIFICATION (\S+)
+Value LINK_AGGREGATION_SUPPORTED (\S+)
+Value LINK_AGGREGATION_ENABLED (\S+)
+Value AGGREGATION_PORT_ID (\d+)
+Value MAXIMUM_FRAME_SIZE (\d+)
+Value MED_DEVICE_CLASS (\S.+\S)
+Value FIRMWARE_REVISION (\S.+\S)
+Value HARDWARE_REVISION (\S.+\S)
 
 Start
-  ^${LOCAL_INTERFACE}\s+has\s+\d+\s+neighbor(s|\(s\)):$$
-  ^\S+\s+has\s+\d+\s+neighbors
-  ^Neighbor\s+index
-  ^Chassis\s+type
-  ^Chassis\s+ID\s+:${CHASSIS_ID}$$
-  ^Port\s+ID\s+type
-  ^Port\s+ID\s+:${NEIGHBOR_PORT_ID}\s*$$
-  ^Port\s+description\s+:${NEIGHBOR_INTERFACE}\s*$$
-  ^System\s+name\s+:${NEIGHBOR_NAME}\s*$$
-  ^System\s+description\s+:${NEIGHBOR_DESCRIPTION} -> SystemDescription
-  ^System\s+capabilities\s+supported
-  ^System\s+capabilities\s+enabled\s+:${CAPABILITIES}\s*$$
-  ^Management\s+address\s+type
-  ^Management\s+address\s*(value\s*)?:\s*${MGMT_ADDRESS}
-  ^Expired\s+time
-  ^Port\s+VLAN\s+ID\(PVID\)\s+:${VLAN_ID}
-  ^VLAN\s+name\s+of\s+VLAN
-  ^Protocol\s+identity
-  ^Auto-negotiation
-  ^OperMau
-  ^Power
-  ^OID
-  ^PSE
-  ^Port\s+power
-  ^Link\s+aggregation
-  ^Aggregation
-  ^Maximum\s+frame\s+Size
-  ^MED\s+Device\s+information -> MED
-  ^\s*$$
+  ^\s*${LOCAL_INTERFACE}\s+has\s+\d+\s+neighbor(s|\(s\)):\s*$$
+  ^\s*\S.+\S\s+has\s+\d+\s+neighbor(s|\(s\))\s*$$
+  ^\s*Neighbor\s+index\s*:\s*\d+\s*$$
+  ^\s*Chassis\s+type\s*:\s*${CHASSIS_TYPE}\s*$$
+  ^\s*Chassis\s+ID\s*:\s*${CHASSIS_ID}\s*$$
+  ^\s*Port\s+ID\s+type\s*:\s*${PORT_ID_TYPE}\s*$$
+  ^\s*Port\s+ID\s*:\s*${NEIGHBOR_PORT_ID}\s*$$
+  ^\s*Port\s+description\s*:\s*${NEIGHBOR_INTERFACE}?\s*$$
+  ^\s*System\s+name\s*:\s*${NEIGHBOR_NAME}?\s*$$
+  ^\s*System\s+description\s*:\s*${NEIGHBOR_DESCRIPTION}\s*$$ -> SystemDescription
+  ^\s*System\s+capabilities\s+supported\s*:\s*${SYSTEM_CAPABILITIES_SUPPORTED}\s*$$
+  ^\s*System\s+capabilities\s+enabled\s*:\s*${CAPABILITIES}\s*$$
+  ^\s*Management\s+address\s+type\s*:\s*${MGMT_ADDRESS}\s*$$
+  ^\s*Management\s+address\s*(value\s*)?:\s*${MGMT_ADDRESS}\s*$$
+  ^\s*OID\s*:\s*${OID}?\s*$$
+  ^\s*Expired\s+time\s*:\s*${EXPIRED_TIME}s\s*$$
+  ^\s*Port\s+VLAN\s+ID\(PVID\)\s*:\s*${VLAN_ID}\s*$$
+  ^\s*VLAN\s+name\s+of\s+VLAN\s*1\s*:\s*${VLAN_1_NAME}\s*$$
+  ^\s*Protocol\s+identity
+  ^\s*Auto-negotiation\s+supported\s*:\s*${AUTONEGOTIATION_SUPPORTED}\s*$$
+  ^\s*Auto-negotiation\s+enabled\s*:\s*${AUTONEGOTIATION_ENABLED}\s*$$
+  ^\s*OperMau\s*:\s*${OPERATION_MODE}\s*$$
+  ^\s*Power\s+port\s+class\s*:\s*${POWER_PORT_CLASS}\s*$$
+  ^\s*PSE\s+power\s+supported\s*:\s*${PSE_POWER_SUPPORTED}\s*$$
+  ^\s*PSE\s+power\s+enabled\s*:\s*${PSE_POWER_ENABLED}\s*$$
+  ^\s*PSE\s+pairs\s+control\s+ability\s*:\s*${PSE_PAIRS_CONTROL_ABILITY}\s*$$
+  ^\s*Power\s+pairs\s*:\s*${POWER_PAIRS}\s*$$
+  ^\s*Port\s+power\s+classification\s*:\s*${PORT_POWER_CLASSIFICATION}\s*$$
+  ^\s*Link\s+aggregation\s+supported\s*:\s*${LINK_AGGREGATION_SUPPORTED}\s*$$
+  ^\s*Link\s+aggregation\s+enabled\s*:\s*${LINK_AGGREGATION_ENABLED}\s*$$
+  ^\s*Aggregation\s+port\s+ID\s*:\s*${AGGREGATION_PORT_ID}\s*$$
+  ^\s*Maximum\s+frame\s+Size\s*:\s*${MAXIMUM_FRAME_SIZE}\s*$$
+  ^\s*MED\s+Device\s+information\s*$$
+  ^\s*Device\s+class\s*:\s*${MED_DEVICE_CLASS}\s*$$
+  ^\s*HardwareRev\s*:\s*${HARDWARE_REVISION}\s*$$
+  ^\s*FirmwareRev\s*:\s*(NA|${FIRMWARE_REVISION})\s*$$ -> Record
+  ^\s*SoftwareRev\s*:\s*(\S.+\S)\s*$$
+  ^\s*SerialNum\s*:\s*(NA|\S.+\S)\s*$$
+  ^\s*Manufacturer\s+name\s*:\s*(\S.+\S)\s*$$
+  ^\s*Model\s+name\s*:\s*(\S.+\S)\s*$$
+  ^\s*Asset\s+tracking\s+identifier\s*:\s*(NA|\S.+\S)\s*$$
+  ^\s*Media\s+policy\s+type\s*:\s*(\S+)\s*$$
+  ^\s*Unknown\s+Policy\s*:\s*(\S+)\s*$$
+  ^\s*VLAN\s+tagged\s*:\s*(\S+)\s*$$
+  ^\s*Media\s+policy\s+VlanID\s*:\s*(\d+)\s*$$
+  ^\s*Media\s+policy\s+L2\s+priority\s*:\s*(\d+)\s*$$
+  ^\s*Media\s+policy\s+Dscp\s*:\s*(\d+)\s*$$
+  ^\s*Power\s+Type\s*:\s*(\S+)\s*$$
+  ^\s*PoE\s+PSE\s+power\s+source\s*:\s*(\S+)\s*$$
+  ^\s*Port\s+PSE\s+Priority\s*:\s*(\S+)\s*$$
+  ^\s*Port\s+Available\s+power\s+value\s*:\s*(\d+)\s*$$
+  ^\s*Location\s+format\s*:\s*(\S.+\S)\s*$$
+  ^\s*Location\s+information\s*:\s*(\S.+\S)\s*$$
+  ^\s*Ca\s+type\s+Ca\s+value\s*$$
+  ^\s+$$
   ^. -> Error
 
 SystemDescription
-  ^${NEIGHBOR_DESCRIPTION} -> IgnoreDescription
-
-IgnoreDescription
-  ^System\s+capabilities\s+supported -> Start
-  ^${NEIGHBOR_DESCRIPTION}
-  ^\s*$$
-  ^.*$$ -> Error
-
-MED
-  ^Device\s+class
-  ^HardwareRev
-  ^FirmwareRev
-  ^SoftwareRev
-  ^SerialNum\s+:${SERIAL}
-  ^Manufacturer\s+name\s+:${MANUFACTURER}\s*$$
-  ^Model\s+name\s+:${PLATFORM}\s*$$
-  ^Asset\s+tracking
-  ^Media\s+policy\s+type
-  ^Unknown\s+Policy
-  ^VLAN\s+tagged
-  ^Media
-  ^Power
-  ^PoE
-  ^Port\s+PSE\s+Priority
-  ^Port\s+Available\s+power
-  ^Location\s+format
-  ^Location\s+information
-  ^Ca
-  ^\S+\s+has\s+\d+\s+neighbors -> Record Start
-  ^\s*$$
+  ^\s*System\s+capabilities\s+supported\s*:\s*${SYSTEM_CAPABILITIES_SUPPORTED}\s*$$ -> Start
+  ^\s*System\s+capabilities\s+enabled\s*:\s*${CAPABILITIES}\s*$$ -> Start
+  ^\s*Management\s+address\s+type\s*:\s*${MGMT_ADDRESS}\s*$$ -> Start
+  ^\s*Management\s+address\s*(value\s*)?:\s*${MGMT_ADDRESS}\s*$$ -> Start
+  ^\s*Expired\s+time\s*:\s*${EXPIRED_TIME}s\s*$$ -> Start
+  ^\s*${NEIGHBOR_DESCRIPTION}\s*$$
   ^. -> Error

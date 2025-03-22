@@ -1,0 +1,9 @@
+Value SWITCH (\S+)
+Value STATE (\S+)
+
+Start
+  ^\s*rf\s+config\s+info:\s*$$
+  ^\s*switch:\s+${SWITCH},\s*state:\s+${STATE}\s*$$
+  ^\s+$$
+  ^\s*success!\s*$$
+  ^. -> Error

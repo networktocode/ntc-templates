@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "ntc_templates"
-version = "7.7.0"
+version = "7.8.0"
 description = "TextFSM Templates for Network Devices, and Python wrapper for TextFSM's CliTable."
 authors = ["Network to Code <info@networktocode.com>"]
 license = "Apache-2.0"
@@ -45,11 +45,13 @@ sphinx-rtd-theme = "*"
 toml = "*"
 yamllint = "*"
 "ruamel.yaml" = "*"
-mkdocs = "1.5.2"
-mkdocs-material = "9.1.15"
-mkdocstrings = "0.22.0"
-mkdocstrings-python = "1.5.2"
+mkdocs = "1.6.0"
+mkdocs-material = "9.5.32"
 mkdocs-version-annotations = "1.0.0"
+mkdocstrings = "0.25.2"
+mkdocstrings-python =  "1.10.8"
+mkdocs-python-classy = "0.1.3"
+griffe = "1.1.1"
 
 [tool.poetry.extras]
 test = ["pytest"]

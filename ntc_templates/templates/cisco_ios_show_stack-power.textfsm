@@ -1,0 +1,21 @@
+Value POWER_STACK_NAME (\S+)
+Value STACK_MODE (\S+)
+Value STACK_TOPOLOGY (\w+)
+Value TOTAL_POWER (\d+)
+Value RESERVED_POWER (\d+)
+Value ALLOCATED_POWER (\d+)
+Value SWITCH_AVAILABLE_POWER (\d+)
+Value STACK_NUMBER (\d+)
+Value POWER_SUPPLY_NUMBERS (\d+)
+
+Start
+  ^\s*Power\s+Stack
+  ^\s*Name\s+Mode
+  ^\s*-+ -> Power
+  ^\s*$$
+  ^. -> Error
+
+Power
+  ^\s*${POWER_STACK_NAME}\s+${STACK_MODE}\s+${STACK_TOPOLOGY}\s+${TOTAL_POWER}\s+${RESERVED_POWER}\s+${ALLOCATED_POWER}\s+${SWITCH_AVAILABLE_POWER}\s+${STACK_NUMBER}\s+${POWER_SUPPLY_NUMBERS} -> Record
+  ^\s*$$
+  ^. -> Error
