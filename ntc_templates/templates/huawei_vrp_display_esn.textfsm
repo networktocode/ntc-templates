@@ -1,0 +1,9 @@
+Value ESN (\w+)
+
+Start
+  ^\s*ESN of slot \d+: ${ESN} -> Record
+  ^\s*ESN of chassis \d+ : ${ESN} -> Record
+  ^\s*ESN of \S+: ${ESN} -> Record
+  ^\s*ESN of master:\s*${ESN} -> Record
+  ^\s*Equipment SN\(ESN\): ${ESN} -> Record
+  ^. -> Error

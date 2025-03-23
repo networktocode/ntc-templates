@@ -1,0 +1,31 @@
+Value Filldown HEART_BEAT_STATE (\w+)
+Value NODE_NUM (\d+)
+Value DFS_GROUP_ID (\d+)
+Value PRIORITY (\d+)
+Value ADDRESS (.*)
+Value STATE (\w+)
+Value CAUSATION (\S+)
+Value SYSTEM_ID ([\w\-]+)
+Value SYS_NAME ([\w\-]+)
+Value VERSION (\w+)
+Value DEVICE_TYPE (\w+)
+
+Start
+  ^\*\s+:\s+Local node -> NoRecord
+  ^Heart\s+beat\s+state\s+:\s+${HEART_BEAT_STATE}
+  ^Node\s+${NODE_NUM} -> NODE
+  ^. -> Error
+
+NODE
+  ^Node\s+\d+ -> Continue.Record
+  ^Node\s+${NODE_NUM} -> NODE
+  ^\s+Dfs\-Group\s+ID\s+:\s+${DFS_GROUP_ID}
+  ^\s+Priority\s+:\s+${PRIORITY}
+  ^\s+Address\s+:\s+${ADDRESS}
+  ^\s+State\s+:\s+${STATE}
+  ^\s+Causation\s+:\s+${CAUSATION}
+  ^\s+System ID\s+:\s+${SYSTEM_ID}
+  ^\s+SysName\s+:\s+${SYS_NAME}
+  ^\s+Version\s+:\s+${VERSION}
+  ^\s+Device\s+Type\s+:\s+${DEVICE_TYPE}
+  ^. -> Error

@@ -1,0 +1,19 @@
+Value MODULE (\w+)
+Value VERSION (\w+)
+Value INSTALL_TIME ([\w\-]+\s+.*)
+Value PACKAGE_NAME (\S+)
+
+Start
+  ^Module\s+Version\s+InstallTime\s+PackageName -> MODULE_INFORMATION
+  ^\s+Module Information
+  ^[\-]+
+  ^. -> Error
+
+MODULE_INFORMATION
+  ^--------- -> MODULE_INFORMATION1
+  ^. -> Error
+
+MODULE_INFORMATION1
+  ^${MODULE}\s+${VERSION}\s+${INSTALL_TIME}\s+${PACKAGE_NAME} -> Record
+  ^Total\s+=\s+\d+$$
+  ^. -> Error

@@ -1,0 +1,29 @@
+Value Filldown STATUS_CODES (\w+)
+Value Filldown BGP_LOCAL_ROUTER_ID ([\w\.:]+)
+Value Filldown LOCAL_AS_NUMBER ([\d\.]+)
+Value Filldown TOTAL_NUMBER_OF_PEERS (\d+)
+Value Filldown PEERS_IN_ESTABLISHED_STATE (\d+)
+Value Filldown TOTAL_NUMBER_OF_DYNAMIC_PEERS (\d+)
+Value Required PEER (\S+)
+Value V (\d+)
+Value AS ([\d\.]+)
+Value MSG_RCV (\d+)
+Value MSG_SENT (\d+)
+Value OUT_Q (\d+)
+Value UP_DOWN (\w+)
+Value STATE (\w+)
+Value PREF_RCV (\d+)
+
+Start
+  ^\s+Status codes:\s*\* \- ${STATUS_CODES}
+  ^\s+BGP local router ID\s+:\s*${BGP_LOCAL_ROUTER_ID}
+  ^\s+Local AS number\s+:\s*${LOCAL_AS_NUMBER}
+  ^\s+Total number of peers\s+:\s*${TOTAL_NUMBER_OF_PEERS}
+  ^\s+Peers in established state\s+:\s*${PEERS_IN_ESTABLISHED_STATE}
+  ^\s+Total number of dynamic peers\s+:\s*${TOTAL_NUMBER_OF_DYNAMIC_PEERS}
+  ^\s+Peer\s+V\s+AS\s+MsgRcvd\s+MsgSent\s+OutQ\s+Up/Down\s+State\s+PrefRcv -> BGP_PEER
+  ^. -> Error
+
+BGP_PEER
+  ^\s+${PEER}\s+${V}\s+${AS}\s+${MSG_RCV}\s+${MSG_SENT}\s+${OUT_Q}\s+${UP_DOWN}\s+${STATE}\s+${PREF_RCV} -> Record
+  ^. -> Error

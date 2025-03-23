@@ -1,0 +1,20 @@
+Value SLOT (\d+)
+Value CARD (\w+)
+Value SENSOR (\w+)
+Value STATUS (\w+)
+Value CURRENT ([\d\-]+)
+Value LOWER ([\d\-]+)
+Value LOWER_RESUME ([\d\-]+)
+Value UPPER ([\d\-]+)
+Value UPPER_RESUME ([\d\-]+)
+
+Start
+  ^\s+Slot\s+Card\s+Sensor\s+Status\s+Current\(C\)\s+Lower\(C\)\s+Lower\s+Upper\(C\)\s+Upper -> TEMPERATURE
+  ^[\-]+
+  ^. -> Error
+
+TEMPERATURE
+  ^\s+${SLOT}\s+${CARD}\s+${SENSOR}\s+${STATUS}\s+${CURRENT}\s+${LOWER}\s+${LOWER_RESUME}\s+${UPPER}\s+${UPPER_RESUME} -> Record
+  ^\s+Resume\(C\)\s+Resume\(C\)
+  ^[\-]+
+  ^. -> Error

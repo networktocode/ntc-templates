@@ -1,0 +1,19 @@
+Value LOCAL_INTERFACE (\S+)
+Value NEIGHBOR_DEVICE (\S+)
+Value NEIGHBOR_INTERFACE (\S+)
+Value EXP_TIME (\d+)
+
+Start
+  ^Local\s+Intf\s+Neighbor\s+Dev\s+Neighbor\s+Intf\s+Exptime\s*\(s -> LLDP1
+  ^Local\s+Interface\s+Exptime\(s\)\s+Neighbor\s+Interface\s+Neighbor\s+Device -> LLDP2
+  ^. -> Error
+
+LLDP1
+  ^${LOCAL_INTERFACE}\s+${NEIGHBOR_DEVICE}\s+${NEIGHBOR_INTERFACE}\s+${EXP_TIME} -> Record
+  ^[\-]+
+  ^. -> Error
+
+LLDP2
+  ^${LOCAL_INTERFACE}\s+${EXP_TIME}\s+${NEIGHBOR_INTERFACE}\s+${NEIGHBOR_DEVICE} -> Record
+  ^[\-]+
+  ^. -> Error

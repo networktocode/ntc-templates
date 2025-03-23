@@ -1,0 +1,24 @@
+Value Filldown SLOT (\d+)
+Value CARD (\S+)
+Value Required SENSOR_NAME (\S+)
+Value STATUS (\w+)
+Value MAJOR (\S+)
+Value FATAL (\S+)
+Value CURRENT (\S+)
+
+Start
+  ^Slot\s+Card\s+SensorName\s+Status\s+Major\s+Fatal\s+Current -> TEMPERATURE
+  ^Slot\s+Card\s+SensorID\s+Status\s+Major\s+Fatal\s+Current -> TEMPERATURE
+  ^[\-]+
+  ^. -> Error
+
+TEMPERATURE
+  ^------------ -> TEMPERATURE1
+  ^\s+[\(Celsius\)\s]+$$
+  ^. -> Error
+
+TEMPERATURE1
+  ^------------ -> Start
+  ^${SLOT}\s+${CARD}\s+${SENSOR_NAME}\s+${STATUS}\s+${MAJOR}\s+${FATAL}\s+${CURRENT} -> Record
+  ^\s+${CARD}\s+${SENSOR_NAME}\s+${STATUS}\s+${MAJOR}\s+${FATAL}\s+${CURRENT} -> Record
+  ^. -> Error

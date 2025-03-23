@@ -1,0 +1,37 @@
+Value Filldown SLOT (\w+)
+Value Required BOARD_TYPE (\S+)
+Value SENSOR_ID (\d+)
+Value SENSOR_NAME (\S+)
+Value STATUS (\w+)
+Value MINOR (\S+)
+Value MAJOR (\S+)
+Value FATAL (\S+)
+Value FAN_T_MIN (\S+)
+Value FAN_T_MAX (\S+)
+Value TEMP (\d+)
+
+Start
+  ^\s+\S+, \w+:\s*\w+, Slot ${SLOT}
+  ^BoardType\s+SensorID\s+SensorName\s+Status\s+Minor\s+Major\s+Fatal\s+FanTMin\s+FanTMax\s+Temp -> TEMP1
+  ^PCB\s+SensorID\s+SensorName\s+Status\s+Minor\s+Major\s+Fatal\s+FanTMin\s+FanTMax\s+Temp -> TEMP2
+  ^[\-]+
+  ^. -> Error
+
+TEMP1
+  ^---------------------- -> TEMPERATURE1
+  ^. -> Error
+
+TEMP2
+  ^---------------------- -> TEMPERATURE2
+  ^. -> Error
+
+TEMPERATURE1
+  ^---------------------- -> Start
+  ^${BOARD_TYPE}\s+${SENSOR_ID}\s+${SENSOR_NAME}\s+${STATUS}\s+${MINOR}\s+${MAJOR}\s+${FATAL}\s+${FAN_T_MIN}\s+${FAN_T_MAX}\s+${TEMP} -> Record
+  ^[\w\-]+\s+\d+[\-\s]+\d+$$
+  ^. -> Error
+
+TEMPERATURE2
+  ^---------------------- -> Start
+  ^${BOARD_TYPE}\s+${SENSOR_ID}\s+${SENSOR_NAME}\s+${STATUS}\s+${MINOR}\s+${MAJOR}\s+${FATAL}\s+${FAN_T_MIN}\s+${FAN_T_MAX}\s+${TEMP} -> Record
+  ^. -> Error
