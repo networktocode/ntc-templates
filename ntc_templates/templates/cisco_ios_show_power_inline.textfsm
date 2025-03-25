@@ -29,5 +29,6 @@ Interfaces45xx
   ^\s*${INTERFACE}\s+${ADMIN_STATUS}\s+${OPERATIONAL_STATUS}\s+\d+\.\d+\s+${POWER}\s+${DEVICE}\s+${CLASS}\s*$$ -> Record
   ^\s+From\s+PS\s+To\s+Device\s*$$
   ^-+
+  ^\s*$$
   ^Totals:.*
   ^. -> Error
