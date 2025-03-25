@@ -23,5 +23,5 @@ Start
   ^\s+root\s+dispersion:\s+${ROOT_DISPERSION}
   ^\s+peer\s+dispersion:\s+${PEER_DISPERSION}
   ^\s+reference\s+time:\s+${REFERENCE_TIME}
-  ^\s+synchronization\s+state:\s+${SYNCHRONIZATION_STATE} -> Record
+  ^\s+synchronization\s+state:\s+${SYNCHRONIZATION_STATE}
   ^. -> Error

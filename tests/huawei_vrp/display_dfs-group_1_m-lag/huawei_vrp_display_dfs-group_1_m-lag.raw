@@ -1,0 +1,22 @@
+*                : Local node
+Heart beat state : OK
+Node 2 *
+  Dfs-Group ID   : 1
+  Priority       : 100
+  Address        : ip address 192.168.1.1
+  State          : Backup
+  Causation      : -
+  System ID      : f4xx-abcd-xxxx
+  SysName        : TEST-LFA02S
+  Version        : V200R005C10SPC800
+  Device Type    : CE6856HI
+Node 1
+  Dfs-Group ID   : 1
+  Priority       : 150
+  Address        : ip address 192.168.1.2
+  State          : Master
+  Causation      : -
+  System ID      : f5xx-abcd-xxxx
+  SysName        : TEST-LFA01S
+  Version        : V200R005C10SPC800
+  Device Type    : CE6856HI

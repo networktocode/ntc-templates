@@ -1,0 +1,12 @@
+ Status codes: * - Dynamic
+ BGP local router ID        : 192.168.2.1
+ Local AS number            : 65011.21531
+ Total number of peers      : 106
+ Peers in established state : 50
+ Total number of dynamic peers : 0
+
+  Peer                             V          AS  MsgRcvd  MsgSent  OutQ  Up/Down       State  PrefRcv
+  fd00:1234:abcd:5678::1           4 65011.21541      591      568     0 07:59:47 Established        6
+  fd00:1234:abcd:5678::2           4 65011.21541      594      566     0 07:57:52 Established        6
+  fd00:1234:abcd:5678::3           4 65011.21572      564      560     0 07:56:31 Established        8
+  fd00:1234:abcd:5678::4           4 65011.21572      562      561     0 07:56:14 Established        8
