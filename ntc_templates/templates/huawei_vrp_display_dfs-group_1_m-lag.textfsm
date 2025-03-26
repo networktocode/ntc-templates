@@ -11,7 +11,7 @@ Value VERSION (\w+)
 Value DEVICE_TYPE (\w+)
 
 Start
-  ^\*\s+:\s+Local node -> NoRecord
+  ^\*\s+:\s+Local node
   ^Heart\s+beat\s+state\s+:\s+${HEART_BEAT_STATE}
   ^Node\s+${NODE_NUM} -> NODE
   ^. -> Error
@@ -19,7 +19,7 @@ Start
 NODE
   ^Node\s+\d+ -> Continue.Record
   ^Node\s+${NODE_NUM} -> NODE
-  ^\s+Dfs\-Group\s+ID\s+:\s+${DFS_GROUP_ID}
+  ^\s+Dfs-Group\s+ID\s+:\s+${DFS_GROUP_ID}
   ^\s+Priority\s+:\s+${PRIORITY}
   ^\s+Address\s+:\s+${ADDRESS}
   ^\s+State\s+:\s+${STATE}

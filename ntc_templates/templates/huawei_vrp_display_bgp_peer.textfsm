@@ -15,7 +15,7 @@ Value STATE (\w+)
 Value PREF_RCV (\d+)
 
 Start
-  ^\s+Status codes:\s*\* \- ${STATUS_CODES}
+  ^\s+Status codes:\s*\* - ${STATUS_CODES}
   ^\s+BGP local router ID\s+:\s*${BGP_LOCAL_ROUTER_ID}
   ^\s+Local AS number\s+:\s*${LOCAL_AS_NUMBER}
   ^\s+Total number of peers\s+:\s*${TOTAL_NUMBER_OF_PEERS}

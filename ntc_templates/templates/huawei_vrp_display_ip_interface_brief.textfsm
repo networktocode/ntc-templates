@@ -9,20 +9,15 @@ Value PROTOCOL ([\w\(\)]+)
 
 Start
   ^[\d\-]+\s+[\d:\.]+\s+[\d:\+]+$$
-  ^\*down: administratively down
-  ^!down: FIB overload down
-  ^\^down: standby
-  ^\(l\): loopback
-  ^\(s\): spoofing
-  ^\(d\): Dampening Suppressed
-  ^\(E\): E-Trunk down
+  ^(?:\*|\^|!)down:
+  ^\(\w+\):\s+\S+
   ^The number of interface that is UP in Physical is ${PHYSICAL_UP}
   ^The number of interface that is DOWN in Physical is ${PHYSICAL_DOWN}
   ^The number of interface that is UP in Protocol is ${PROTOCOL_UP}
   ^The number of interface that is DOWN in Protocol is ${PROTOCOL_DOWN}
-  ^Interface\s+IP\s+Address/Mask\s+Physical\s+Protocol -> INTERFACE_BRIEF1
+  ^Interface\s+IP\s+Address/Mask\s+Physical\s+Protocol -> INTERFACE_BRIEF
   ^. -> Error
 
-INTERFACE_BRIEF1
+INTERFACE_BRIEF
   ^${INTERFACE}\s+${IP_ADDRESS_MASK}\s+${PHYSICAL}\s+${PROTOCOL} -> Record
   ^. -> Error
