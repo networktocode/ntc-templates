@@ -738,7 +738,7 @@ huawei_smartax_display_mem.textfsm, .*, huawei_smartax, di[[splay]] mem[[ory]]\s
 huawei_smartax_port_vlan.textfsm, .*, huawei_smartax, port vlan\s*
 huawei_smartax_ont_add.textfsm, .*, huawei_smartax, ont add\s*
 
-huawei_vrp_display_lldp_neighbor.textfsm:huawei_vrp_display_lldp_neighbor2.textfsm, .*, huawei_vrp, dis[[play]] lldp nei[[ghbor]]\s*((?!brief).)*$
+huawei_vrp_display_lldp_neighbor.textfsm:huawei_vrp_display_lldp_neighbor2.textfsm, .*, huawei_vrp, dis[[play]] lldp nei[[ghbor]]
 huawei_vrp_display_traffic-filter_applied-record.textfsm, .*, huawei_vrp, dis[[play]] traffic-filter applied-record
 huawei_vrp_display_module-information_verbose.textfsm, .*, huawei_vrp, dis[[play]] mod[[ule-information]] v[[erbose]]
 huawei_vrp_display_ip_vpn-instance_interface.textfsm, .*, huawei_vrp, di[[splay]] ip vpn[[-instance]] interface
@@ -747,7 +747,6 @@ huawei_vrp_display_ip_routing-table_verbose.textfsm, .*, huawei_vrp, dis[[play]]
 huawei_vrp_display_interface_description.textfsm, .*, huawei_vrp, dis[[play]] inter[[face]] des[[cription]]
 huawei_vrp_display_telnet_server_status.textfsm, .*, huawei_vrp, di[[splay]] t[[elnet]] s[[erver]] s[[tatus]]
 huawei_vrp_display_ipv6_interface_brief.textfsm, .*, huawei_vrp, dis[[play]] ipv6 inter[[face]] br[[ief]]
-huawei_vrp_display_lldp_neighbor_brief.textfsm, .*, huawei, dis[[play]] lldp nei[[ghbor]] br[[ief]]
 huawei_vrp_display_ip_interface_brief.textfsm, .*, huawei_vrp, dis[[play]] ip inter[[face]] br[[ief]]
 huawei_vrp_display_service-set_id_id.textfsm, .*, huawei_vrp, dis[[play]] service-set (id|name) \S+
 huawei_vrp_display_patch-information.textfsm, .*, huawei_vrp, dis[[play]] pat[[ch-information]]
