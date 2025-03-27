@@ -1,0 +1,21 @@
+Value Filldown TOTAL_INTERFACE (\S+)
+Value Required INTERFACE (\S+)
+Value STATE (\S+)
+Value ACTIVE_RESV (\S+)
+Value SUBSCRIPTION (\S+)
+Value STATIC_BW (\S+)
+Value AVAIL_BW (\S+)
+Value RESERVED_BW (\S+)
+Value HIGHWATER_MARK (\S+)
+
+# The first line is present when the license is not installed on the router
+
+Start
+  ^Warning:\s+License\s+key\s+missing;\s+requires\s+'rsvp'\s+license
+  ^RSVP\s+interface:\s+${TOTAL_INTERFACE}
+  ^\s+Active\s+
+  ^\s*Interface\s+
+  ^\s*${INTERFACE}\s+${STATE}\s+${ACTIVE_RESV}\s+${SUBSCRIPTION}%\s+${STATIC_BW}\s+${AVAIL_BW}\s+${RESERVED_BW}\s+${HIGHWATER_MARK}\s* -> Record
+  ^{(master|backup)}\s+$$
+  ^\s*$$
+  ^. -> Error
