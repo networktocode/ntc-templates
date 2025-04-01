@@ -1,6 +1,6 @@
 Value Required VLAN_GROUP_NAME (\S+)
-Value VLAN_ID (\d+)
+Value VLAN_IDS (\d+.*)
 
 Start
-  ^vlan\s+group\s+${VLAN_GROUP_NAME}\s+:\s+${VLAN_ID}$$ -> Record
+  ^vlan\s+group\s+${VLAN_GROUP_NAME}\s+:\s+${VLAN_IDS}$$ -> Record
   ^. -> Error
