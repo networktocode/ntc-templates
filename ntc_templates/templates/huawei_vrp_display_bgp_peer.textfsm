@@ -1,20 +1,19 @@
 Value PEER ([\w\.:]+)
-Value V (\d+)
 Value AS ([\d\.]+)
-Value MSG_RCV (\d+)
+Value MSG_RCVD (\d+)
 Value MSG_SENT (\d+)
 Value OUT_Q (\d+)
 Value UP_DOWN ([\w:]+)
 Value STATE (\w+)
-Value PREF_RCV (\d+)
+Value PREF_RCVD (\d+)
 
 Start
-  ^\s+${PEER}\s+${V}\s+${AS}\s+${MSG_RCV}\s+${MSG_SENT}\s+${OUT_Q}\s+${UP_DOWN}\s+${STATE}\s+${PREF_RCV} -> Record
-  ^\s+Status codes
-  ^\s+BGP local router ID
-  ^\s+Local AS number
-  ^\s+Total number of peers
-  ^\s+Peers in established state
-  ^\s+Total number of dynamic peers
+  ^\s+${PEER}\s+\d+\s+${AS}\s+${MSG_RCVD}\s+${MSG_SENT}\s+${OUT_Q}\s+${UP_DOWN}\s+${STATE}\s+${PREF_RCVD} -> Record
+  ^\s+Status\s+codes
+  ^\s+BGP\s+local\s+router\s+ID
+  ^\s+Local\s+AS\s+number
+  ^\s+Total\s+number\s+of\s+peers
+  ^\s+Peers\s+in\s+established\s+state
+  ^\s+Total\s+number\s+of\s+dynamic\s+peers
   ^\s+Peer\s+V\s+AS\s+MsgRcvd\s+MsgSent\s+OutQ\s+Up/Down\s+State\s+PrefRcv
   ^. -> Error
