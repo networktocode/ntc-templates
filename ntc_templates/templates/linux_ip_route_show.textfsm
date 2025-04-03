@@ -1,24 +1,16 @@
-Value PROTOCOL (\S+)
 Value METRIC (\d+)
 Value NETWORK (\S+)
-Value NEXTHOP_IP (\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3})
+Value NEXTHOP_IP (\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})
 Value NEXTHOP_IF (\S+)
-Value SCOPE (\S+)
-Value SRC (\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3})
+Value PROTOCOL (\S+)
 Value REACHABILITY (\S+)
+Value SCOPE (\S+)
+Value SRC (\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})
 
 Start
-  # dhcp (discarded)
-  ^.*proto\s+dhcp.*
-  ^\s*\S+\s+dev\s+\S+\s+proto\s+dhcp\s+.*
-  # unreachable, broadcast, local (discarded)
+  # These need to match early
   ^\s*unreachable
-  ^\s*broadcast*
+  ^\s*broadcast
   ^\s*local
-  # default
-  ^\s*${NETWORK}\s+via\s+${NEXTHOP_IP}\s+dev\s+${NEXTHOP_IF}(?:\s+proto\s+${PROTOCOL}(?:\s+${REACHABILITY})?)?\s*$$ -> Record
-  # local (network)
-  ^\s*${NETWORK}\s+dev\s+${NEXTHOP_IF}\s+proto\s+${PROTOCOL}\s+scope\s+${SCOPE}\s+src\s+${SRC}(?:\s+${REACHABILITY})?\s*$$ -> Record
-  # static
-  ^\s*${NETWORK}\s+via\s+${NEXTHOP_IP}\s+dev\s+${NEXTHOP_IF}\s*(?:${REACHABILITY})?\s*$$ -> Record
+  ^\s*${NETWORK}(?:\s+via\s+${NEXTHOP_IP})?(?:\s+dev\s+${NEXTHOP_IF})?(?:\s+proto\s+${PROTOCOL})?(?:\s+scope\s+${SCOPE})?(?:\s+src\s+${SRC})?(?:\s+metric\s+${METRIC})?(?:\s+${REACHABILITY})?\s*$$ -> Record
   ^. -> Error
