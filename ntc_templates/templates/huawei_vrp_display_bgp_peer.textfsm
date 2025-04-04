@@ -3,7 +3,7 @@ Value AS ([\d\.]+)
 Value MSG_RCVD (\d+)
 Value MSG_SENT (\d+)
 Value OUT_Q (\d+)
-Value UP_DOWN ([\w:]+)
+Value UP_DOWN (\S+)
 Value STATE (\w+)
 Value PREF_RCVD (\d+)
 
