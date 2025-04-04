@@ -1,4 +1,4 @@
-Value PEER ([\w\.:]+)
+Value PEER (\S+)
 Value AS ([\d\.]+)
 Value MSG_RCVD (\d+)
 Value MSG_SENT (\d+)
