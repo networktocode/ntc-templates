@@ -4,6 +4,6 @@ Start
   # Capture date output by XR by 'show run hostname' first
   ^\S+\s+\S+\s+\d+\s+\d+:\d+:\d+\.\d+\s+\S+$$
   # Capture hostname
-  ^hostname ${HOSTNAME}$$
+  ^hostname\s+${HOSTNAME}$$
   ^\s*$$
   ^. -> Error
