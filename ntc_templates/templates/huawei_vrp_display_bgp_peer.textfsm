@@ -12,8 +12,7 @@ Start
   ^\s+Status\s+codes
   ^\s+BGP\s+local\s+router\s+ID
   ^\s+Local\s+AS\s+number
-  ^\s+Total\s+number\s+of\s+peers
   ^\s+Peers\s+in\s+established\s+state
-  ^\s+Total\s+number\s+of\s+dynamic\s+peers
+  ^\s+Total\s+number\s+of(\s+dynamic)?\s+peers
   ^\s+Peer\s+V\s+AS\s+MsgRcvd\s+MsgSent\s+OutQ\s+Up/Down\s+State\s+PrefRcv
   ^. -> Error
