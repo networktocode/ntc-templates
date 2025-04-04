@@ -5,8 +5,8 @@ Value INGRESS_FILTERING (.*?)
 Value ACCEPTABLE_FRAME_TYPE (.*?)
 Value NATIVE_VLAN (.*?)
 Value PROTECTED (.*?)
-Value List VLAN (\d+)
-Value List NAME (.*?)
+Value List VLAN_ID (\d+)
+Value List VLAN_NAME (.*?)
 Value List EGRESS_RULE (Untagged|Tagged)
 Value List INTERFACE_MEMBERSHIP_TYPE (\S+)
 Value List ADDED_BY (\S+)
@@ -46,13 +46,13 @@ VlanMemberTable
 
 VlanMemberTableType1
   ^(?:\s*-+)+\s*$$
-  ^\s*${VLAN}\s+${NAME}\s+${EGRESS_RULE}\s+${INTERFACE_MEMBERSHIP_TYPE}\s*$$
+  ^\s*${VLAN_ID}\s+${VLAN_NAME}\s+${EGRESS_RULE}\s+${INTERFACE_MEMBERSHIP_TYPE}\s*$$
   ^\s*$$ -> Start
   ^. -> Error
 
 VlanMemberTableType2
   ^(?:\s*-+)+\s*$$
-  ^\s*${VLAN}\s+${NAME}\s+${EGRESS_RULE}\s+${ADDED_BY}\s*$$
+  ^\s*${VLAN_ID}\s+${VLAN_NAME}\s+${EGRESS_RULE}\s+${ADDED_BY}\s*$$
   ^\s*$$ -> Start
   ^. -> Error
 
