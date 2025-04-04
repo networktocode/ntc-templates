@@ -1,5 +1,5 @@
 Value PEER (\S+)
-Value AS ([\d\.]+)
+Value AS (\d+(\.\d+)?)
 Value MSG_RCVD (\d+)
 Value MSG_SENT (\d+)
 Value OUT_Q (\d+)
