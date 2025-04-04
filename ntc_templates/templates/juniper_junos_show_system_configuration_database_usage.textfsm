@@ -3,7 +3,7 @@ Value CURR_DB_SIZE (\S+)
 Value ACTUAL_DB_SIZE (\S+)
 Value AVAIL_DB_SPACE (\S+)
 
-# If the database is being modified, the first line will be displayed
+# If the database is being modified, a "cannot proceed" message will be displayed
 # Otherwise, the database usage will be displayed
 
 Start 
