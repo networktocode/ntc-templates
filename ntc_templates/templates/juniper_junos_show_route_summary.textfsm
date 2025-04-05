@@ -10,8 +10,7 @@ Start
   ^Router\s+ID:\s+${ROUTER_ID}
   ^Highwater\s+Mark
   ^\s+RIB\s+unique\s+destination\s+routes
-  ^\s+RIB\s+routes
-  ^\s+FIB\s+routes
+  ^\s+[RF]IB\s+routes
   ^\s+VRF
   ^${TABLE_NAME}:\s+\S+\s+destinations,
   ^\s+${ROUTE_SRC}:\s+${ROUTES}\s+routes,\s+${ACTIVE_ROUTES}\s+active -> Record
