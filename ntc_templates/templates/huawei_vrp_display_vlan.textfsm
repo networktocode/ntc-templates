@@ -12,7 +12,7 @@ Value VLAN_STATISTICS (\S+)
 
 Start
   ^\s*\*\s+:\s+management-vlan\s*$$
-  ^\s*The\s+total\s+number\s+of\s+(VLANs|vlans)\s+is\s*:\s+\d+\s*$$
+  ^\s*The\s+total\s+number\s+of\s+(VLAN|vlan)s\s+is\s*:\s+\d+\s*$$
   ^\s*-+\s*$$
   ^\s*U:\s*Up;\s*D:\s*Down;\s*TG:\s*Tagged;\s*UT:\s*Untagged;\s*$$
   ^\s*MP:\s+Vlan-mapping;\s+ST:\s+Vlan-stacking;\s*$$
