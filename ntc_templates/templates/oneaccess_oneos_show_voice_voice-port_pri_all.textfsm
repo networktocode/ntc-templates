@@ -15,7 +15,7 @@ Value L2_STATUS (\S+)
 Value PRI_TX_FRAMES_ON_D_CHANNEL (\d+)
 Value PRI_RX_FRAMES_ON_D_CHANNEL (\d+)
 Value ATTACHED_VOIP_DIAL_PEER (\d+)
-Value NBR_VOICE_COMMunication (\d+)
+Value NBR_VOICE_COMMUNICATION (\d+)
 Value OUTGOING_CALLS (\d+)
 Value OUTGOING_FAILURES (\d+)
 Value OUTGOING_FAILURES_PHYSICAL_INTF_DOWN (\d+)
@@ -58,7 +58,7 @@ Start
   ^\s*pri\sTx\sframes\son\sD\schannel\s+${PRI_TX_FRAMES_ON_D_CHANNEL}
   ^\s*pri\sRx\sframes\son\sD\schannel\s+${PRI_RX_FRAMES_ON_D_CHANNEL}
   ^\s*attached\svoip\sdial\speer\s+${ATTACHED_VOIP_DIAL_PEER}
-  ^\s*number\sof\svoice\scommunication\s+${NBR_VOICE_COMMunication}
+  ^\s*number\sof\svoice\scommunication\s+${NBR_VOICE_COMMUNICATION}
   ^\s*Outgoing\scalls\s+${OUTGOING_CALLS}
   ^\s*Outgoing\scalls\sfailures\s+${OUTGOING_FAILURES}
   ^\s*Physical\sInterface\sdown\s+${OUTGOING_FAILURES_PHYSICAL_INTF_DOWN}
