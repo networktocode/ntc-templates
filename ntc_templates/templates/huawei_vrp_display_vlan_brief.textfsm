@@ -38,7 +38,6 @@ VLANS_SW
   ^\s*$$ -> Start
   ^. -> Error
 
-
 VLANS_AP
   ^\d+ -> Continue.Record
   ^\s*${VLAN_ID}\s+(?:${VLAN_NAME}\s+)?${VLAN_STATUS}\s+ -> Continue
