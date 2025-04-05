@@ -1,5 +1,5 @@
 Value PEER (\S+)
-Value AS (\d+(\.\d+)?)
+Value ASN (\d+(\.\d+)?)
 Value MSG_RCVD (\d+)
 Value MSG_SENT (\d+)
 Value OUT_Q (\d+)
@@ -8,7 +8,7 @@ Value STATE (\w+)
 Value PREF_RCVD (\d+)
 
 Start
-  ^\s+${PEER}\s+\d+\s+${AS}\s+${MSG_RCVD}\s+${MSG_SENT}\s+${OUT_Q}\s+${UP_DOWN}\s+${STATE}\s+${PREF_RCVD} -> Record
+  ^\s+${PEER}\s+\d+\s+${ASN}\s+${MSG_RCVD}\s+${MSG_SENT}\s+${OUT_Q}\s+${UP_DOWN}\s+${STATE}\s+${PREF_RCVD} -> Record
   ^\s+Status\s+codes
   ^\s+BGP\s+[Ll]ocal\s+router\s+ID
   ^\s+[Ll]ocal\s+AS\s+number
