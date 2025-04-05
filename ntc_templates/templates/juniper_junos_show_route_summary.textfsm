@@ -8,7 +8,7 @@ Value ACTIVE_ROUTES (\S+)
 Start
   ^Autonomous\s+system\s+number:\s+${ASN}
   ^Router\s+ID:\s+${ROUTER_ID}
-  ^Highwater Mark
+  ^Highwater\s+Mark
   ^\s+RIB\s+unique\s+destination\s+routes
   ^\s+RIB\s+routes
   ^\s+FIB\s+routes
