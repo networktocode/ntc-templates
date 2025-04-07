@@ -1,0 +1,21 @@
+Value Filldown ASN (\S+)
+Value Filldown ROUTER_ID (\S+)
+Value Filldown TABLE_NAME (\S+)
+Value ROUTE_SRC (\S+)
+Value ROUTES (\S+)
+Value ACTIVE_ROUTES (\S+)
+
+Start
+  ^Autonomous\s+system\s+number:\s+${ASN}
+  ^Router\s+ID:\s+${ROUTER_ID}
+  ^Highwater\s+Mark
+  ^\s+RIB\s+unique\s+destination\s+routes
+  ^\s+[RF]IB\s+routes
+  ^\s+VRF\s+type
+  ^${TABLE_NAME}:\s+\S+\s+destinations,
+  ^\s+${ROUTE_SRC}:\s+${ROUTES}\s+routes,\s+${ACTIVE_ROUTES}\s+active -> Record
+  ^{(master|backup)}\s+$$
+  ^\s*$$
+  ^. -> Error
+
+EOF
