@@ -1,6 +1,6 @@
 Value Required SENT_QTY (\d+)
 Value Required SENT_TYPE (.*)
-Value Required DESTINATION (\S+)
+Value Required DESTINATION (\S+(.*[^,]))
 Value Required TIMEOUT (\d+)
 Value SOURCE (\S+)
 Value List RESPONSE_STREAM ([\.\!/Q/U]+)
