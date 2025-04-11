@@ -1,6 +1,6 @@
 Value INTERFACE (\S+)
 Value ADMIN_STATUS (\S+)
-Value OPERATIONAL_STATUS (on|off)
+Value OPERATIONAL_STATUS (\S+)
 Value POWER (\d+\.\d+)
 Value DEVICE (\S+(\s\S+)*)
 Value CLASS (\d|n/a)
