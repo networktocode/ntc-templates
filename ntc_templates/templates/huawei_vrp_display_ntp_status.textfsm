@@ -9,7 +9,7 @@ Value CLOCK_DELAY (.*)
 Value ROOT_DISPERSION (.*)
 Value PEER_DISPERSION (.*)
 Value REFERENCE_TIME (.*)
-Value SYNCHRONIZATION_STATE ([\w\s]+)
+Value SYNCHRONIZATION_STATE (\w+\s+\w+)
 
 Start
   ^\s+clock\s+status:\s+${CLOCK_STATUS}
