@@ -17,9 +17,13 @@ Start
   ^\s*U:\s*Up;\s*D:\s*Down;\s*TG:\s*Tagged;\s*UT:\s*Untagged;\s*$$
   ^\s*MP:\s+Vlan-mapping;\s+ST:\s+Vlan-stacking;\s*$$
   ^\s*#:\s+ProtocolTransparent-vlan;\s+\*:\s+Management-vlan;\s*$$
-  ^\s*VID\s+Type\s+Ports\s*$$ -> VLANS_SW
+  ^\s*MAC-LRN:\s+MAC-address\s+learning;\s+STAT:\s+Statistic;\s*$$
+  ^\s*BC:\s+Broadcast;\s+MC:\s+Multicast;\s+UC:\s+Unknown-unicast;\s*$$
+  ^\s*FWD:\s+Forward;\s+DSD:\s+Discard;\s*$$
+  ^\s*VID\s+(?:Type\s+)?Ports\s*$$ -> VLANS_SW
   ^\s*VID\s+Name\s+Status\s+Ports\s*$$ -> VLANS_AP
   ^\s*VID\s+Status\s+Property\s+MAC\-LRN\s+Statistics\s+Description\s*$$ -> STATUS_SW
+  ^\s*VID\s+Type\s+Status\s+Property\s+MAC\-LRN\s+STAT\s+BC\s+MC\s+UC\s+Description\s*$$ -> STATUS_SW_2
   ^\s*VLAN\s+ID\s+Type\s+Status\s+MAC\s+Learning\s+Broadcast\/Multicast\/Unicast\s+Property\s*$$ -> STATUS_AP
   ^. -> Error
 
@@ -40,6 +44,11 @@ VLANS_AP
 STATUS_SW
   ^\s*-+\s*$$
   ^\s*${VLAN_ID}\s+${VLAN_STATUS}\s+${VLAN_PROPERTY}\s+${VLAN_MAC_LEARNING}\s+${VLAN_STATISTICS}\s+${VLAN_DESCRIPTION}\s*$$ -> Record
+  ^. -> Error
+
+STATUS_SW_2
+  ^\s*-+\s*$$
+  ^\s*${VLAN_ID}\s+${VLAN_TYPE}\s+${VLAN_STATUS}\s+${VLAN_PROPERTY}\s+${VLAN_MAC_LEARNING}\s+${VLAN_STATISTICS}\s+${VLAN_BROADCAST}\s+${VLAN_MULTICAST}\s+${VLAN_UNICAST}\s+${VLAN_DESCRIPTION}\s*$$ -> Record
   ^. -> Error
 
 STATUS_AP
