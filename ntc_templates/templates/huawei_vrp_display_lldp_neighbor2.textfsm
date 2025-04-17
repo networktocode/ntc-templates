@@ -31,8 +31,7 @@ Start
   ^\s*Neighbor\s+index\s*:\s*\d+\s*$$
   ^\s*Chassis\s+type\s*:\s*(\S.+\S)\s*$$
   ^\s*Chassis\s+ID\s*:\s*(\S.+\S)\s*$$
-  ^\s*Port\s+ID\s+type\s*:\s*(\S.+\S)\s*$$
-  ^\s*Port\s+ID\s+subtype\s*:\s*(\S.+\S)\s*$$
+  ^\s*Port\s+ID\s+(sub)?type\s*:\s*(\S.+\S)\s*$$
   ^\s*Port\s+ID\s*:\s*(.*?)\s*$$
   ^\s*Port\s+description\s*:\s*(?:\S.+\S)?\s*$$
   ^\s*System\s+name\s*:\s*(?:\S.+\S)?\s*$$
