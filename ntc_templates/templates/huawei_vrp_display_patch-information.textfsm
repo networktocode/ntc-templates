@@ -5,7 +5,7 @@ Value RUN_TIME (\S+\s+\S+)
 
 Start
   ^Patch\s+Package\s+Name\s+:${NAME}
-  ^Patch\s+Package\s+Version\s*:${VERSION}
+  ^Patch\s+Package\s+Version\s+:${VERSION}
   ^Patch\s+Package\s+State\s+:${STATE}
   ^Patch\s+Package\s+Run\s+Time:${RUN_TIME}
   ^. -> Error
