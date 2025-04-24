@@ -1,0 +1,19 @@
+BGP router identifier 100.127.255.0, local AS number 65000.1000
+BGP table version is 458, main routing table version 458
+452 network entries using 112096 bytes of memory
+460 path entries using 62560 bytes of memory
+4 multipath network entries and 8 multipath paths
+21/17 BGP path/bestpath attribute entries using 6216 bytes of memory
+15 BGP AS-PATH entries using 592 bytes of memory
+0 BGP route-map cache entries using 0 bytes of memory
+0 BGP filter-list cache entries using 0 bytes of memory
+BGP using 181464 total bytes of memory
+BGP activity 452/0 prefixes, 460/0 paths, scan interval 60 secs
+452 networks peaked at 17:06:38 Apr 5 2025 UTC (4d12h ago)
+
+Neighbor        V           AS MsgRcvd MsgSent   TblVer  InQ OutQ Up/Down  State/PfxRcd
+100.127.255.1   4   65000.1000   46094   46090      458    0    0 4w1d            6
+100.127.255.7   4   65000.1001   46083   46093      458    0    0 4w1d            4
+100.127.255.9   4   65000.1002   46075   46097      458    0    0 4w1d            4
+192.88.99.1     4    662.47492   41920   46104      458    0    0 4w1d          435
+edge1-rt#
