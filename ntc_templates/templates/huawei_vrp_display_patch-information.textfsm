@@ -1,0 +1,11 @@
+Value NAME (\S+)
+Value VERSION (\w+)
+Value STATE (\w+)
+Value RUN_TIME (\S+\s+\S+)
+
+Start
+  ^Patch\s+Package\s+Name\s*:\s*${NAME}
+  ^Patch\s+Package\s+Version\s*:\s*${VERSION}
+  ^Patch\s+Package\s+State\s*:\s*${STATE}
+  ^Patch\s+Package\s+Run\s+Time\s*:\s*${RUN_TIME}
+  ^. -> Error
