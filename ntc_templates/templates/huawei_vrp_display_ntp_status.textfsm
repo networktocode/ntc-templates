@@ -1,0 +1,27 @@
+Value CLOCK_STATUS (\w+)
+Value CLOCK_STRATUM (\d+)
+Value REFERENCE_CLOCK_ID (\S+)
+Value NOMINAL_FREQUENCY (\S+\s+\S+)
+Value ACTUAL_FREQUENCY (\S+\s+\S+)
+Value CLOCK_PRECISION (\S+)
+Value CLOCK_OFFSET (\S+\s+\S+)
+Value CLOCK_DELAY (\S+\s+\S+)
+Value ROOT_DISPERSION (\S+\s+\S+)
+Value PEER_DISPERSION (\S+\s+\S+)
+Value REFERENCE_TIME (.*)
+Value SYNCHRONIZATION_STATE (\w+\s+\w+)
+
+Start
+  ^\s+clock\s+status:\s+${CLOCK_STATUS}
+  ^\s+clock\s+stratum:\s+${CLOCK_STRATUM}
+  ^\s+reference\s+clock\s+ID:\s+${REFERENCE_CLOCK_ID}
+  ^\s+nominal\s+frequency:\s+${NOMINAL_FREQUENCY}
+  ^\s+actual\s+frequency:\s+${ACTUAL_FREQUENCY}
+  ^\s+clock\s+precision:\s+${CLOCK_PRECISION}
+  ^\s+clock\s+offset:\s+${CLOCK_OFFSET}
+  ^\s+root\s+delay:\s+${CLOCK_DELAY}
+  ^\s+root\s+dispersion:\s+${ROOT_DISPERSION}
+  ^\s+peer\s+dispersion:\s+${PEER_DISPERSION}
+  ^\s+reference\s+time:\s+${REFERENCE_TIME}
+  ^\s+synchronization\s+state:\s+${SYNCHRONIZATION_STATE}
+  ^. -> Error
