@@ -16,7 +16,7 @@ Value ALIAS (.+)
 
 Start
   ^\d+ -> Continue.Record
-  ^${ID}: ${INTERFACE}:\s+<${FLAGS}>\s+mtu\s+${MTU}\s+qdisc\s+${QDISC}(?:\s+master\s+${MASTER})?\s+state\s+${STATE}(?:\s+mode\s+${MODE})?(?:\s+group\s+${GROUP})?(?:\s+qlen\s+${QLEN})?\s*$$ -> Continue
+  ^${ID}:\s+${INTERFACE}:\s+<${FLAGS}>\s+mtu\s+${MTU}\s+qdisc\s+${QDISC}(?:\s+master\s+${MASTER})?\s+state\s+${STATE}(?:\s+mode\s+${MODE})?(?:\s+group\s+${GROUP})?(?:\s+qlen\s+${QLEN})?\s*$$ -> Continue
   # Link type and MAC address
   ^\s+link/${TYPE}\s*$$
   ^\s+link/${TYPE}\s+${MAC_ADDRESS}\s+brd\s+${BROADCAST}(?:\s+permaddr\s+${PERMANENT_MAC})?\s*$$
