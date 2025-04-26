@@ -1,0 +1,15 @@
+*down: administratively down
+!down: FIB overload down
+^down: standby
+(l): loopback
+(s): spoofing
+(d): Dampening Suppressed
+(ed): error down
+The number of interface that is UP in Physical is 3
+The number of interface that is DOWN in Physical is 0
+The number of interface that is UP in Protocol is 3
+The number of interface that is DOWN in Protocol is 0
+Interface                   IP Address/Mask    Physical Protocol VPN
+100GE1/0/1                  unassigned          *down    down     --
+MEth0/0/0                   192.168.190.129/16  up       up       --
+NULL0                       unassigned          up       up(s)    --

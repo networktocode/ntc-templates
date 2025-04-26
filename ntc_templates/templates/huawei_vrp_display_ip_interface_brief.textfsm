@@ -1,0 +1,13 @@
+Value INTERFACE (\S+)
+Value IP_ADDRESS_MASK (\S+)
+Value PHYSICAL (\S+)
+Value PROTOCOL (\S+)
+Value VPN (\S+)
+
+Start
+  ^(?:\*|\^|!)down:
+  ^\(\w+\):\s+\w+
+  ^The\s+number\s+of\s+interface\s+that\s+is
+  ^Interface\s+IP\s+Address/Mask\s+Physical\s+Protocol\s+VPN
+  ^${INTERFACE}\s+${IP_ADDRESS_MASK}\s+${PHYSICAL}\s+${PROTOCOL}\s+${VPN} -> Record
+  ^. -> Error
