@@ -25,6 +25,36 @@ Value PACKET_OUTPUT_RATE (.+?)
 Value BANDWIDTH_INPUT_RATE (.+?)
 Value BANDWIDTH_OUTPUT_RATE (.+?)
 Value MEDIA_TYPE (.+?)
+# RX
+Value RX_SHORT_FRAME (\d+)
+Value RX_OVERRUN (\d+)
+Value RX_UNDERRUN (\d+)
+Value RX_IGNORED (\d+)
+Value RX_WATCHDOG (\d+)
+Value RX_BAD_ETYPE_DROP (\d+)
+Value RX_BAD_PROTO_DROP (\d+)
+Value RX_IF_DOWN_DROP (\d+)
+Value RX_DRIBBLE (\d+)
+Value RX_INPUT_DISCARD (\d+)
+Value RX_PAUSE (\d+)
+Value RX_STOMPED_CRC (\d+)
+Value RX_JUMBO_PACKETS (\d+)
+Value RX_STORM_SUPPRESSION_BYTES (\d+)
+Value RX_RUNTS (\d+)
+Value RX_GIANTS (\d+)
+Value RX_CRC (\d+)
+Value RX_NO_BUFFER (\d+)
+# TX
+Value TX_JUMBO_PACKETS (\d+)
+Value TX_COLLISIONS (\d+)
+Value TX_DEFERRED (\d+)
+Value TX_LATE_COLLISIONS (\d+)
+Value TX_LOST_CARRIER (\d+)
+Value TX_NO_CARRIER (\d+)
+Value TX_BABBLE (\d+)
+Value TX_OUTPUT_DISCARD (\d+)
+Value TX_PAUSE (\d+)
+
 
 Start
   ^\S+\s+is.+ -> Continue.Record
@@ -39,9 +69,20 @@ Start
   ^\s+MTU\s+${MTU}.*BW\s+${BANDWIDTH}.*DLY\s+${DELAY}
   ^\s+Encapsulation\s+${ENCAPSULATION}(,)?(\s+Virtual\s+LAN,\s+Vlan\s+ID\s+${VLAN_ID},)?
   ^\s+${INPUT_PACKETS}\s+input\s+packets\s+\d+\s+bytes\s*$$
-  ^\s+${INPUT_ERRORS}\s+input\s+error\s+\d+\s+short\s+frame\s+\d+\s+overrun\s+\d+\s+underrun\s+\d+\s+ignored\s*$$
   ^\s+${OUTPUT_PACKETS}\s+output\s+packets\s+\d+\s+bytes\s*$$
-  ^\s+${OUTPUT_ERRORS}\s+output\s+error\s+\d+\s+collision\s+\d+\s+deferred\s+\d+\s+late\s+collision\s*$$
   ^\s+Last\s+link\s+flapped\s+${LAST_LINK_FLAPPED}\s*$$
   ^\s+\d+\s+seconds\s+input\s+rate\s+${BANDWIDTH_INPUT_RATE}\s+bits/sec,\s+${PACKET_INPUT_RATE}\s+packets/sec
   ^\s+\d+\s+seconds\s+output\s+rate\s+${BANDWIDTH_OUTPUT_RATE}\s+bits/sec,\s+${PACKET_OUTPUT_RATE}\s+packets/sec
+  # RX
+  ^\s+${INPUT_ERRORS}\s+input\s+error\s+${RX_SHORT_FRAME}\s+short\s+frame\s+${RX_OVERRUN}\s+overrun\s+${RX_UNDERRUN}\s+underrun\s+${RX_IGNORED}\s+ignored\s*$$
+  ^ *${RX_WATCHDOG} +watchdog +${RX_BAD_ETYPE_DROP} +bad +etype +drop +${RX_BAD_PROTO_DROP} +bad +proto +drop +${RX_IF_DOWN_DROP} +if +down +drop *$$
+  ^ *${RX_DRIBBLE} +input +with +dribble +${RX_INPUT_DISCARD} +input +discard *$$
+  ^ *${RX_PAUSE} +Rx +pause *$$
+  ^ *${RX_STOMPED_CRC} +Stomped +CRC *$$
+  ^ *${RX_JUMBO_PACKETS} +jumbo +packets +${RX_STORM_SUPPRESSION_BYTES} +storm +suppression +bytes *$$
+  ^ *${RX_RUNTS} +runts +${RX_GIANTS} +giants +${RX_CRC} +CRC +${RX_NO_BUFFER} +no +buffer *$$
+  # TX
+  ^ *${TX_JUMBO_PACKETS} +jumbo +packets *$$
+  ^ *${OUTPUT_ERRORS} +output +error +${TX_COLLISIONS} +collision +${TX_DEFERRED} +deferred +${TX_LATE_COLLISIONS} +late +collision *$$
+  ^ *${TX_LOST_CARRIER} +lost +carrier +${TX_NO_CARRIER} +no +carrier +${TX_BABBLE} +babble +${TX_OUTPUT_DISCARD} +output +discard *$$
+  ^ *${TX_PAUSE} +Tx +pause *$$
