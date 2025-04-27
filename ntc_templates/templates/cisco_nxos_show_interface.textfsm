@@ -74,14 +74,14 @@ Start
   ^\s+\d+\s+seconds\s+output\s+rate\s+${BANDWIDTH_OUTPUT_RATE}\s+bits/sec,\s+${PACKET_OUTPUT_RATE}\s+packets/sec
   # RX
   ^\s+${INPUT_ERRORS}\s+input\s+error\s+${RX_SHORT_FRAME}\s+short\s+frame\s+${RX_OVERRUN}\s+overrun\s+${RX_UNDERRUN}\s+underrun\s+${RX_IGNORED}\s+ignored\s*$$
-  ^ *${RX_WATCHDOG} +watchdog +${RX_BAD_ETYPE_DROP} +bad +etype +drop +${RX_BAD_PROTO_DROP} +bad +proto +drop +${RX_IF_DOWN_DROP} +if +down +drop *$$
-  ^ *${RX_DRIBBLE} +input +with +dribble +${RX_INPUT_DISCARD} +input +discard *$$
-  ^ *${RX_PAUSE} +Rx +pause *$$
-  ^ *${RX_STOMPED_CRC} +Stomped +CRC *$$
-  ^ *${RX_JUMBO_PACKETS} +jumbo +packets +${RX_STORM_SUPPRESSION_BYTES} +storm +suppression +bytes *$$
-  ^ *${RX_RUNTS} +runts +${RX_GIANTS} +giants +${RX_CRC} +CRC +${RX_NO_BUFFER} +no +buffer *$$
+  ^\s*${RX_WATCHDOG}\s+watchdog\s+${RX_BAD_ETYPE_DROP}\s+bad\s+etype\s+drop\s+${RX_BAD_PROTO_DROP}\s+bad\s+proto\s+drop\s+${RX_IF_DOWN_DROP}\s+if\s+down\s+drop\s*$$
+  ^\s*${RX_DRIBBLE}\s+input\s+with\s+dribble\s+${RX_INPUT_DISCARD}\s+input\s+discard\s*$$
+  ^\s*${RX_PAUSE}\s+Rx\s+pause\s*$$
+  ^\s*${RX_STOMPED_CRC}\s+Stomped\s+CRC\s*$$
+  ^\s*${RX_JUMBO_PACKETS}\s+jumbo\s+packets\s+${RX_STORM_SUPPRESSION_BYTES}\s+storm\s+suppression\s+bytes\s*$$
+  ^\s*${RX_RUNTS}\s+runts\s+${RX_GIANTS}\s+giants\s+${RX_CRC}\s+CRC\s+${RX_NO_BUFFER}\s+no\s+buffer\s*$$
   # TX
-  ^ *${TX_JUMBO_PACKETS} +jumbo +packets *$$
-  ^ *${OUTPUT_ERRORS} +output +error +${TX_COLLISIONS} +collision +${TX_DEFERRED} +deferred +${TX_LATE_COLLISIONS} +late +collision *$$
-  ^ *${TX_LOST_CARRIER} +lost +carrier +${TX_NO_CARRIER} +no +carrier +${TX_BABBLE} +babble +${TX_OUTPUT_DISCARD} +output +discard *$$
-  ^ *${TX_PAUSE} +Tx +pause *$$
+  ^\s*${TX_JUMBO_PACKETS}\s+jumbo\s+packets\s*$$
+  ^\s*${OUTPUT_ERRORS}\s+output\s+error\s+${TX_COLLISIONS}\s+collision\s+${TX_DEFERRED}\s+deferred\s+${TX_LATE_COLLISIONS}\s+late\s+collision\s*$$
+  ^\s*${TX_LOST_CARRIER}\s+lost\s+carrier\s+${TX_NO_CARRIER}\s+no\s+carrier\s+${TX_BABBLE}\s+babble\s+${TX_OUTPUT_DISCARD}\s+output\s+discard\s*$$
+  ^\s*${TX_PAUSE}\s+Tx\s+pause\s*$$
