@@ -55,7 +55,6 @@ Value TX_BABBLE (\d+)
 Value TX_OUTPUT_DISCARD (\d+)
 Value TX_PAUSE (\d+)
 
-
 Start
   ^\S+\s+is.+ -> Continue.Record
   ^${INTERFACE}\s+is\s+${LINK_STATUS},\sline\sprotocol\sis\s${ADMIN_STATE}$$
