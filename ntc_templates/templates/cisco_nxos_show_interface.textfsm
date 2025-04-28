@@ -102,3 +102,6 @@ Start
   ^\s+admin\s+fec\s+state\s+is\s+\S+,\s+oper\s+fec\s+state\s+is\s+\S+\s*$$
   ^\s+Keepalive\s+
   ^\s+ARP\s+type:\s+\S+\s*$$
+  ^\s+\d+\s+broadcast\s+packets\s+\d+\s+bytes\s*$$
+  ^\s+ucast:\s+\d+\s+pkts,\s+\d+\s+bytes(\s+-\s+mcast:\s+\d+\s+pkts,\s+\d+\s+bytes)?\s*$$
+  ^\s+\d+\s+unicast\s+packets\s+\d+\s+multicast\s+packets\s+\d+\s+broadcast\s+packets\s*$$
