@@ -85,3 +85,19 @@ Start
   ^\s+${OUTPUT_ERRORS}\s+output\s+errors?\s+${TX_COLLISIONS}\s+collision\s+${TX_DEFERRED}\s+deferred\s+${TX_LATE_COLLISIONS}\s+late\s+collision\s*$$
   ^\s+${TX_LOST_CARRIER}\s+lost\s+carrier\s+${TX_NO_CARRIER}\s+no\s+carrier\s+${TX_BABBLE}\s+babble\s+${TX_OUTPUT_DISCARD}\s+output\s+discard\s*$$
   ^\s+${TX_PAUSE}\s+Tx\s+pause\s*$$
+  # Unmatched
+  ^\s+reliability\s+\d+/\d+,\s+txload\s+\d+/\d+,\s+rxload\s+\d+/\d+\s*$$
+  ^\s+Auto-(mdix|Negotiation)\s+is\s+
+  ^\s+(Beacon|EtherType|Rate\s+mode|Switchport\s+monitor)\s+is\s+
+  ^\s+Input\s+flow-control\s+is\s+\S+,\s+output\s+flow-control\s+is\s+\S+\s*$$
+  ^\s+EEE\s+\(efficient-ethernet\)\s+
+  ^\s+Last\s+clearing\s+of\s+"show\s+interface"\s+counters\s+
+  ^\s+\d+\s+interface\s+resets\s*$$
+  ^\s+Load-Interval\s+
+  ^\s+L3\s+(in|out)\s+Switched:\s*$$
+  ^\s+[RT][Xx]\s*$$
+  ^\s+Dedicated\s+Interface\s*$$
+  ^\s+Belongs\s+to\s+
+  ^\s+admin\s+fec\s+state\s+is\s+\S+,\s+oper\s+fec\s+state\s+is\s+\S+\s*$$
+  ^\s+Keepalive\s+
+  ^\s+ARP\s+type:\s+\S+\s*$$
