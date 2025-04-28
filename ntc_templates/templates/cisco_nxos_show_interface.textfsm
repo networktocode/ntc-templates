@@ -79,6 +79,7 @@ Start
   ^\s+${RX_PAUSE}\s+Rx\s+pause\s*$$
   ^\s+${RX_STOMPED_CRC}\s+Stomped\s+CRC\s*$$
   ^\s+${RX_JUMBO_PACKETS}\s+jumbo\s+packets\s+${RX_STORM_SUPPRESSION_BYTES}\s+storm\s+suppression\s+bytes\s*$$
+  ^\s+${RX_JUMBO_PACKETS}\s+jumbo\s+packets\s+\d+\s+storm\s+suppression\s+packets\s*$$
   ^\s+${RX_RUNTS}\s+runts\s+${RX_GIANTS}\s+giants\s+${RX_CRC}\s+CRC(/FCS)?\s+${RX_NO_BUFFER}\s+no\s+buffer\s*$$
   # TX
   ^\s+${TX_JUMBO_PACKETS}\s+jumbo\s+packets\s*$$
