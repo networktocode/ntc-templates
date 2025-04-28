@@ -72,8 +72,8 @@ Start
   ^\s+${INPUT_PACKETS}\s+input\s+packets(\s+\d+\s+(unicast|multicast)+\s+packets){2}\s*$$
   ^\s+${OUTPUT_PACKETS}\s+output\s+packets(\s+\d+\s+(unicast|multicast)+\s+packets){2}\s*$$
   ^\s+Last\s+link\s+flapped\s+${LAST_LINK_FLAPPED}\s*$$
-  ^\s+\d+\s+seconds\s+input\s+rate\s+${BANDWIDTH_INPUT_RATE}\s+bits/sec,\s+${PACKET_INPUT_RATE}\s+packets/sec
-  ^\s+\d+\s+seconds\s+output\s+rate\s+${BANDWIDTH_OUTPUT_RATE}\s+bits/sec,\s+${PACKET_OUTPUT_RATE}\s+packets/sec
+  ^\s+\d+\s+(second|minute)s?\s+input\s+rate\s+${BANDWIDTH_INPUT_RATE}\s+bits/sec,\s+${PACKET_INPUT_RATE}\s+packets/sec
+  ^\s+\d+\s+(second|minute)s?\s+output\s+rate\s+${BANDWIDTH_OUTPUT_RATE}\s+bits/sec,\s+${PACKET_OUTPUT_RATE}\s+packets/sec
   # RX
   ^\s+${INPUT_ERRORS}\s+input\s+errors?\s+${RX_SHORT_FRAME}\s+short\s+frame\s+${RX_OVERRUN}\s+overrun\s+${RX_UNDERRUN}\s+underrun\s+${RX_IGNORED}\s+ignored\s*$$
   ^\s+${RX_WATCHDOG}\s+watchdog\s+${RX_BAD_ETYPE_DROP}\s+bad\s+etype\s+drop\s+${RX_BAD_PROTO_DROP}\s+bad\s+proto\s+drop\s+${RX_IF_DOWN_DROP}\s+if\s+down\s+drop\s*$$
