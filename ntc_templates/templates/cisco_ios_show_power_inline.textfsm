@@ -16,6 +16,9 @@ Start
   ^\s+\(Watts\)
   ^\s*$$
   ^%No\s+inline\s+power\s+card\s+on\s+switch\s*$$
+  ^Interface\s+Admin\s+Priority\s+Oper\s+Power\(Watts\)\s+Device\s+Class\s+Police\s+ActConsumption\s*$$
+  ^\s+\(enabled\s*\)\s+From\s+PS\s+To\s+PD\s*$$
+  ^Totals:\s+\d+\s+pd\(s\)\s+\S+\s+\S+\s+\S+\s*$$
   ^. -> Error
 
 Interfaces
