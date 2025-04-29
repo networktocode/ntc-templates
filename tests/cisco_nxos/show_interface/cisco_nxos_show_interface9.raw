@@ -177,3 +177,23 @@ admin state is up,
     0 packets output 0 bytes 0 underruns
     0 output errors 0 collisions 0 fifo
     0 out_carrier_errors
+Vlan1 is administratively down (Administratively down), line protocol is down, autostate enabled
+  Hardware is EtherSVI, address is  e4c7.2212.1dc1
+  MTU 1500 bytes, BW 1000000 Kbit, DLY 10 usec,
+
+   reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, loopback not set
+  Keepalive not supported
+  ARP type: ARPA
+  Last clearing of "show interface" counters 03:49:01
+  Load-Interval #1: 1 minute (60 seconds)
+  60 seconds input rate 0 bits/sec, 0 packets/sec
+  60 seconds output rate 0 bits/sec, 0 packets/sec
+  Load-Interval #2: 5 minute (300 seconds)
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  L3 Switched:
+    input: 0 pkts, 0 bytes - output: 0 pkts, 0 bytes
+  L3 in Switched:
+    ucast: 0 pkts, 0 bytes - mcast: 0 pkts, 0 bytes
+  L3 out Switched:
+    ucast: 0 pkts, 0 bytes - mcast: 0 pkts, 0 bytes
