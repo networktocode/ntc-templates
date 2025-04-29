@@ -60,6 +60,7 @@ Start
   ^${INTERFACE}\s+is\s+${LINK_STATUS},\sline\sprotocol\sis\s${ADMIN_STATE}$$
   ^${INTERFACE}\s+is\s+${LINK_STATUS}$$
   ^admin\s+state\s+is\s+${ADMIN_STATE},
+  ^admin\s+state\s+is\s+${ADMIN_STATE}
   ^\s+Hardware(:|\s+is)\s+${HARDWARE_TYPE},\s+address(:|\s+is)\s+${MAC_ADDRESS}(.*bia\s+${BIA})*
   ^\s+Description:\s+${DESCRIPTION}\s*$$
   ^\s+Internet\s+Address\s+is\s+${IP_ADDRESS}\/${PREFIX_LENGTH}
@@ -109,4 +110,7 @@ Start
   ^\s+\d+\s+unicast\s+packets\s+\d+\s+multicast\s+packets\s+\d+\s+broadcast\s+packets\s*$$
   ^\s+input\s+rate\s+\S+\s+\w?bps,\s+\S+\s+\w?pps;\s+output\s+rate\s+\S+\s+\w?bps,\s+\S+\s+\w?pps\s*$$
   ^\s+Members\s+in\s+this\s+channel:\s+
+  ^\s+Management\s+transceiver:
+  ^\s+Active\s+connector:
+  ^\s+Configured\s+Media-type:
   ^. -> Error
