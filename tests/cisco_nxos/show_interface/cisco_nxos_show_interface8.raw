@@ -1,0 +1,42 @@
+port-channel1 is up
+admin state is up,
+ vPC Status: Up, vPC number: 1
+  Hardware: Port-Channel, address: 341b.2d3a.d454 (bia 341b.2d3a.d454)
+  Description: HQP5-CER-R714-OOB LINK 
+  MTU 9216 bytes, BW 25000000 Kbit , DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 25 Gb/s
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Members in this channel: Eth1/1
+  Last clearing of "show interface" counters never
+  2 interface resets
+  Load-Interval #1: 30 seconds
+    30 seconds input rate 2796856 bits/sec, 519 packets/sec
+    30 seconds output rate 55648 bits/sec, 36 packets/sec
+    input rate 2.80 Mbps, 519 pps; output rate 55.65 Kbps, 36 pps
+  Load-Interval #2: 5 minute (300 seconds)
+    300 seconds input rate 2822856 bits/sec, 465 packets/sec
+    300 seconds output rate 67640 bits/sec, 14 packets/sec
+    input rate 2.82 Mbps, 465 pps; output rate 67.64 Kbps, 14 pps
+  RX
+    39023410954 unicast packets  4603693 multicast packets  1051 broadcast packets
+    39028015698 input packets  27390323803289 bytes
+    15485078 jumbo packets  0 storm suppression bytes
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+    0 Stomped CRC
+  TX
+    1611516736 unicast packets  53754923 multicast packets  13725892 broadcast packets
+    1678997551 output packets  527528524615 bytes
+    99205724 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
