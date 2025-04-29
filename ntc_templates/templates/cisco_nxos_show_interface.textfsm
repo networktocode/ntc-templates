@@ -75,6 +75,7 @@ Start
   ^\s+${OUTPUT_PACKETS}\s+output\s+packets(\s+\d+\s+(unicast|multicast)+\s+packets){2}\s*$$
   ^\s+${INPUT_PACKETS}\s+packets\s+input\s+\d+\s+bytes\s*$$
   ^\s+${OUTPUT_PACKETS}\s+packets\s+output\s+\d+\s+bytes\s+${RX_UNDERRUN}\s+underruns\s*$$
+  ^\s+input:\s+${INPUT_PACKETS}\s+pkts,\s+\d+\s+bytes\s+-\s+output:\s+${OUTPUT_PACKETS}\s+pkts,\s+\d+\s+bytes\s*$$
   ^\s+Last\s+link\s+flapped\s+${LAST_LINK_FLAPPED}\s*$$
   ^\s+\d+\s+(second|minute)s?\s+input\s+rate\s+${BANDWIDTH_INPUT_RATE}\s+bits/sec,\s+${PACKET_INPUT_RATE}\s+packets/sec
   ^\s+\d+\s+(second|minute)s?\s+output\s+rate\s+${BANDWIDTH_OUTPUT_RATE}\s+bits/sec,\s+${PACKET_OUTPUT_RATE}\s+packets/sec
@@ -104,7 +105,7 @@ Start
   ^\s+Last\s+clearing\s+of\s+"show\s+interface"\s+counters\s+
   ^\s+\d+\s+interface\s+resets\s*$$
   ^\s+Load-Interval\s+
-  ^\s+L3\s+(in|out)\s+Switched:\s*$$
+  ^\s+L3\s+((in|out)\s+)?Switched:\s*$$
   ^\s+[RT][Xx]\s*$$
   ^\s+Dedicated\s+Interface\s*$$
   ^\s+Belongs\s+to\s+
