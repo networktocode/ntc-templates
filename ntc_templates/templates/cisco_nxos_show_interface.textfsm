@@ -62,6 +62,7 @@ Start
   ^admin\s+state\s+is\s+${ADMIN_STATE},
   ^admin\s+state\s+is\s+${ADMIN_STATE}
   ^\s+Hardware(:|\s+is)\s+${HARDWARE_TYPE},\s+address(:|\s+is)\s+${MAC_ADDRESS}(.*bia\s+${BIA})*
+  ^\s+Hardware(:|\s+is)\s+${HARDWARE_TYPE}
   ^\s+Description:\s+${DESCRIPTION}\s*$$
   ^\s+Internet\s+Address\s+is\s+${IP_ADDRESS}\/${PREFIX_LENGTH}
   ^\s+Port\s+mode\s+is\s+${MODE}
@@ -72,11 +73,14 @@ Start
   ^\s+${OUTPUT_PACKETS}\s+output\s+packets\s+\d+\s+bytes\s*$$
   ^\s+${INPUT_PACKETS}\s+input\s+packets(\s+\d+\s+(unicast|multicast)+\s+packets){2}\s*$$
   ^\s+${OUTPUT_PACKETS}\s+output\s+packets(\s+\d+\s+(unicast|multicast)+\s+packets){2}\s*$$
+  ^\s+${INPUT_PACKETS}\s+packets\s+input\s+\d+\s+bytes\s*$$
+  ^\s+${OUTPUT_PACKETS}\s+packets\s+output\s+\d+\s+bytes\s+${RX_UNDERRUN}\s+underruns\s*$$
   ^\s+Last\s+link\s+flapped\s+${LAST_LINK_FLAPPED}\s*$$
   ^\s+\d+\s+(second|minute)s?\s+input\s+rate\s+${BANDWIDTH_INPUT_RATE}\s+bits/sec,\s+${PACKET_INPUT_RATE}\s+packets/sec
   ^\s+\d+\s+(second|minute)s?\s+output\s+rate\s+${BANDWIDTH_OUTPUT_RATE}\s+bits/sec,\s+${PACKET_OUTPUT_RATE}\s+packets/sec
   # RX
   ^\s+${INPUT_ERRORS}\s+input\s+errors?\s+${RX_SHORT_FRAME}\s+short\s+frame\s+${RX_OVERRUN}\s+overrun\s+${RX_UNDERRUN}\s+underrun\s+${RX_IGNORED}\s+ignored\s*$$
+  ^\s+${INPUT_ERRORS}\s+input\s+errors\s+${RX_SHORT_FRAME}\s+frame\s+${RX_OVERRUN}\s+overrun\s+\d+\s+fifo\s*$$
   ^\s+${RX_WATCHDOG}\s+watchdog\s+${RX_BAD_ETYPE_DROP}\s+bad\s+etype\s+drop\s+${RX_BAD_PROTO_DROP}\s+bad\s+proto\s+drop\s+${RX_IF_DOWN_DROP}\s+if\s+down\s+drop\s*$$
   ^\s+${RX_DRIBBLE}\s+input\s+with\s+dribble\s+${RX_INPUT_DISCARD}\s+input\s+discard\s*$$
   ^\s+${RX_PAUSE}\s+Rx\s+pause\s*$$
@@ -88,6 +92,7 @@ Start
   # TX
   ^\s+${TX_JUMBO_PACKETS}\s+jumbo\s+packets\s*$$
   ^\s+${OUTPUT_ERRORS}\s+output\s+errors?\s+${TX_COLLISIONS}\s+collision\s+${TX_DEFERRED}\s+deferred\s+${TX_LATE_COLLISIONS}\s+late\s+collision\s*$$
+  ^\s+${OUTPUT_ERRORS}\s+output\s+errors\s+${TX_COLLISIONS}\s+collisions\s+\d+\s+fifo\s*$$
   ^\s+${TX_LOST_CARRIER}\s+lost\s+carrier\s+${TX_NO_CARRIER}\s+no\s+carrier\s+${TX_BABBLE}\s+babble\s+${TX_OUTPUT_DISCARD}\s+output\s+discard\s*$$
   ^\s+${TX_PAUSE}\s+Tx\s+pause\s*$$
   # Unmatched
@@ -116,4 +121,7 @@ Start
   ^\s+Active\s+connector:
   ^\s+Configured\s+Media-type:
   ^\s+vPC\s+Status:\s+\S+,\s+vPC\s+number:\s+\d+
+  ^\s+Input\s+flow-control\s+is\s+\S+,\s+Port\s+mode\s+is\s+\S+\s*$$
+  ^\s+\d+\s+multicast\s+frames\s+\d+\s+compressed\s*$$
+  ^\s+\d+\s+out_carrier_errors\s*$$
   ^. -> Error
