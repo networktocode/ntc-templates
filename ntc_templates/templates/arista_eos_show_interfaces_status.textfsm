@@ -4,7 +4,7 @@ Value STATUS (connected|notconnect|inactive|errdisabled|disabled)
 Value VLAN_ID (\S+)
 Value DUPLEX (\S+)
 Value SPEED (\S+)
-Value TYPE (\S.*\S)
+Value TYPE (Not\s+Present|\S+)
 Value FLAGS (\S+)
 
 Start
