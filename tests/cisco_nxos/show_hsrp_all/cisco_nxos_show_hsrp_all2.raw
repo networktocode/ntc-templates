@@ -1,0 +1,40 @@
+Vlan123 - Group 123 (HSRP-V2) (IPv4)
+  Local state is Active, priority 200 (Cfged 200), may preempt
+    Forwarding threshold(for vPC), lower: 0 upper: 200 
+  Preemption Delay (Seconds) Minimum:180 
+  Hellotime 3 sec, holdtime 10 sec
+  Next hello sent in 2.259000 sec(s)
+  Virtual IP address is 10.0.2.1 (Cfged)
+  Active router is local
+  Standby router is 10.0.2.3 , priority 100 expires in 7.338000 sec(s)
+  Authentication MD5, key-chain HSRP-AUTH
+  Virtual mac address is 0000.0c9f.1234 (Default MAC)
+  2 state changes, last state change 24w0d
+  IP redundancy name is hsrp-Vlan123-123 (default)
+
+Vlan456 - Group 456 (HSRP-V2) (IPv4)
+  Local state is Initial(Interface Down), priority 200 (Cfged 200), may preempt
+    Forwarding threshold(for vPC), lower: 0 upper: 200 
+  Preemption Delay (Seconds) Minimum:180 
+  Hellotime 3 sec, holdtime 10 sec
+  Virtual IP address is 10.0.3.1 (Cfged)
+  Active router is unknown
+  Standby router is unknown 
+  Authentication MD5, key-chain HSRP-AUTH
+  Virtual mac address is 0000.0c9f.1235 (Default MAC)
+  0 state changes, last state change never
+  IP redundancy name is hsrp-Vlan456-456 (default)
+
+Vlan789 - Group 789 (HSRP-V2) (IPv4)
+  Local state is Standby, priority 100 (Cfged 100), may preempt
+    Forwarding threshold(for vPC), lower: 0 upper: 100 
+  Preemption Delay (Seconds) Minimum:180 
+  Hellotime 3 sec, holdtime 10 sec
+  Next hello sent in 0.161000 sec(s)
+  Virtual IP address is 10.0.4.254 (Cfged)
+  Active router is 10.0.4.253, priority 200 expires in 8.317000 sec(s)
+  Standby router is local 
+  Authentication MD5, key-chain HSRP-AUTH
+  Virtual mac address is 0000.0c9f.1236 (Default MAC)
+  1 state changes, last state change 24w0d
+  IP redundancy name is hsrp-Vlan789-789 (default)
