@@ -796,6 +796,7 @@ juniper_junos_show_vlans.textfsm, .*, juniper_junos, sh[[ow]] vl[[ans]]
 juniper_screenos_get_route.textfsm, .*, juniper_screenos, get route
 
 linux_dmidecode_-t_processor.textfsm, .*, linux, dmidecode -t processor
+linux_iwlist_wlan0_scanning.textfsm, .*, linux, iwlist \S+ sc[[anning]]
 linux_dmidecode_-t_memory.textfsm, .*, linux, dmidecode -t memory
 linux_dmidecode_-t_system.textfsm, .*, linux, dmidecode -t system
 linux_dmidecode_-t_bios.textfsm, .*, linux, dmidecode -t bios
