@@ -12,7 +12,7 @@ Value TIME (\S+)
 Value COMMAND (\S.+\S|\S+)
 
 Start
-  ^\s*top\s+-\s+\d+:\d+:\d+\s+up\s+\d+:\d+\s*,\s+\d+\s+users,\s+load\s+average:\s+\d+\.\d+,\s+\d+\.\d+,\s+\d+\.\d+\s*$$
+  ^\s*top\s+-\s+\d+:\d+:\d+\s+up\s+\d+:\d+\s*,\s+\d+\s+users,\s+load\s+average:(\s+\d+\.\d+,?){3}\s*$$
   ^\s*Tasks:\s+\d+\s+total,\s+\d+\s+running,\s+\d+\s+sleeping,\s+\d+\s+stopped,\s+\d+\s+zombie\s*$$
   ^\s*\%Cpu\(s\):(\s+\d+\.\d+\s+\w+,?){8}\s*$$
   ^\s*MiB\s+Mem\s+:\s+\d+\.\d+\s+total,\s+\d+\.\d+\s+free,\s+\d+\.\d+\s+used,\s+\d+\.\d+\s+buff/cache\s*$$
