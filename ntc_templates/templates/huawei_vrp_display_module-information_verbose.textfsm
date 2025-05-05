@@ -12,10 +12,11 @@ Start
   ^${MODULE}\s+${VERSION}\s+${INSTALL_TIME}\s+${PACKAGE_NAME} -> Record
   ^${SLOT_ID_CPU_ID}\s+${PROC_NAME}\s+${TYPE}\s+${FILE_NAME}\s+${EFFECTIVE_TIME}\s+${MODULE} -> Record
   ^\s+Module\s+Information
-  ^-+
+  ^-+$$
   ^Module\s+Version\s+InstallTime\s+PackageName
   ^Total\s+=\s+\d+
-  ^\*+
+  ^\*+$$
+  ^\*\s+Information\s+about\s+patch\s+errors\s+is\s+as\s+follows:
   ^SlotID/CpuID\s+CurrentVersion
   ^No\s+patch\s+error\s+occurs\s+on\s+any\s+board
   ^Board\s+Info\s+:
