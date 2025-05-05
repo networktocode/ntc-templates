@@ -11,7 +11,7 @@ Value EFFECTIVE_TIME (\d+-\d+-\d+\s+\d+:\d+:\d+(?:\.\d+)?)
 Start
   ^${MODULE}\s+${VERSION}\s+${INSTALL_TIME}\s+${PACKAGE_NAME} -> Record
   ^${SLOT_ID_CPU_ID}\s+${PROC_NAME}\s+${TYPE}\s+${FILE_NAME}\s+${EFFECTIVE_TIME}\s+${MODULE} -> Record
-  ^\s+Module Information
+  ^\s+Module\s+Information
   ^-+
   ^Module\s+Version\s+InstallTime\s+PackageName
   ^Total\s+=\s+\d+
