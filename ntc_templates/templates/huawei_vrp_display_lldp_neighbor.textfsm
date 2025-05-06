@@ -125,40 +125,40 @@ Start
   ^\s*PSE\s+power\s+enabled\s*:\s*${PSE_POWER_ENABLED}\s*$$
   ^\s*PSE\s+pairs\s+control\s+ability\s*:\s*${PSE_PAIRS_CONTROL_ABILITY}\s*$$
   ^\s*Power\s+pairs\s*:\s*${POWER_PAIRS}\s*$$
-  ^\s*Power\s*class\s*:\s*${POWER_CLASS}\s*$$
-  ^\s*Power\s*class\s*ext\s*:\s*${POWER_CLASS_EXT}\s*$$
-  ^\s*Power\s*(type|typex)\s*(?:ext\s*)?:\s*${POWER_EXT_TYPE}\s*$$
-  ^\s*PSE\s*allocated\s*power\s*mode\s*A\s*value\s*:\s*${PSE_ALLOCATED_MODE_POWER_A}\s*$$
-  ^\s*PSE\s*allocated\s*power\s*mode\s*B\s*value\s*:\s*${PSE_ALLOCATED_MODE_POWER_B}\s*$$
-  ^\s*PSE\s*powering\s*status\s*:\s*${PSE_POWERING_STATUS}\s*$$
-  ^\s*PSE\s*Autoclass\s*support\s*:\s*${PSE_AUTOCLASS_SUPPORT}\s*$$
-  ^\s*PD\s*4PID\s*:\s*${PD_4PID}\s*$$
-  ^\s*PD\s*Load\s*:\s*${PD_LOAD}\s*$$
-  ^\s*PD\s*powered\s*status\s*:\s*${PD_POWERED_STATUS}\s*$$
-  ^\s*Dual-signature\s*power\s*Classx\s*mode\s*A\s*:\s*${DUAL_SIGNATURE_POWER_CLASSX_MODE_A}\s*$$
-  ^\s*Dual-signature\s*power\s*Classx\s*mode\s*B\s*:\s*${DUAL_SIGNATURE_POWER_CLASSX_MODE_B}\s*$$
-  ^\s*Autoclass\s*completed\s*:\s*${AUTOCLASS_COMPLETED}\s*$$
-  ^\s*Autoclass\s*request\s*:\s*${AUTOCLASS_REQUEST}\s*$$
-  ^\s*Power\s*down\s*request\s*:\s*${POWER_DOWN_REQUEST}\s*$$
-  ^\s*Power\s*down\s*time\s*:\s*${POWER_DOWN_TIME}\s*$$
-  ^\s*Power\s*down\s*:\s*${POWER_DOWN}\s*$$
-  ^\s*Power\s*capability\s*:\s*${POWER_CAPABILITY}\s*$$
-  ^\s*Power-up\s*mode\s*:\s*${POWER_UP_MODE}\s*$$
+  ^\s*Power\s+class\s*:\s*${POWER_CLASS}\s*$$
+  ^\s*Power\s+class\s+ext\s*:\s*${POWER_CLASS_EXT}\s*$$
+  ^\s*Power\s+(type|typex)(?:\s+ext)?\s*:\s*${POWER_EXT_TYPE}\s*$$
+  ^\s*PSE\s+allocated\s+power\s+mode\s+A\s+value\s*:\s*${PSE_ALLOCATED_MODE_POWER_A}\s*$$
+  ^\s*PSE\s+allocated\s+power\s+mode\s+B\s+value\s*:\s*${PSE_ALLOCATED_MODE_POWER_B}\s*$$
+  ^\s*PSE\s+powering\s+status\s*:\s*${PSE_POWERING_STATUS}\s*$$
+  ^\s*PSE\s+Autoclass\s+support\s*:\s*${PSE_AUTOCLASS_SUPPORT}\s*$$
+  ^\s*PD\s+4PID\s*:\s*${PD_4PID}\s*$$
+  ^\s*PD\s+Load\s*:\s*${PD_LOAD}\s*$$
+  ^\s*PD\s+powered\s+status\s*:\s*${PD_POWERED_STATUS}\s*$$
+  ^\s*Dual-signature\s+power\s+Classx\s+mode\s+A\s*:\s*${DUAL_SIGNATURE_POWER_CLASSX_MODE_A}\s*$$
+  ^\s*Dual-signature\s+power\s+Classx\s+mode\s+B\s*:\s*${DUAL_SIGNATURE_POWER_CLASSX_MODE_B}\s*$$
+  ^\s*Autoclass\s+completed\s*:\s*${AUTOCLASS_COMPLETED}\s*$$
+  ^\s*Autoclass\s+request\s*:\s*${AUTOCLASS_REQUEST}\s*$$
+  ^\s*Power\s+down\s+request\s*:\s*${POWER_DOWN_REQUEST}\s*$$
+  ^\s*Power\s+down\s+time\s*:\s*${POWER_DOWN_TIME}\s*$$
+  ^\s*Power\s+down\s*:\s*${POWER_DOWN}\s*$$
+  ^\s*Power\s+capability\s*:\s*${POWER_CAPABILITY}\s*$$
+  ^\s*Power-up\s+mode\s*:\s*${POWER_UP_MODE}\s*$$
   ^\s*Port\s+power\s+classification\s*:\s*${PORT_POWER_CLASSIFICATION}\s*$$
   ^\s*Link\s+aggregation\s+supported\s*:\s*${LINK_AGGREGATION_SUPPORTED}\s*$$
   ^\s*Link\s+aggregation\s+enabled\s*:\s*${LINK_AGGREGATION_ENABLED}\s*$$
   ^\s*Aggregation\s+port\s+ID\s*:\s*(--|${AGGREGATION_PORT_ID})\s*$$
   ^\s*Port\s+Identity\s*:\s*(--|${PORT_IDENTITY})\s*$$
-  ^\s*Discovered\s*time\s*:\s*(--|${DISCOVERED_TIME})\s*$$
-  ^\s*EEE\s*support\s*:\s*(--|${ENERGY_EFFICIENT_ETHERNET_SUPPORT})\s*$$
-  ^\s*Transmit\s*Tw\s*:\s*(--|${TRANSMIT_TW})\s*$$
-  ^\s*Receive\s*Tw\s*:\s*(--|${RECEIVE_TW})\s*$$
-  ^\s*Fallback\s*Receive\s*Tw\s*:\s*(--|${FALLBACK_RECEIVE_TW})\s*$$
-  ^\s*Echo\s*Transmit\s*Tw\s*:\s*(--|${ECHO_TRANSMIT_TW})\s*$$
-  ^\s*Echo\s*Receive\s*Tw\s*:\s*(--|${ECHO_RECEIVE_TW})\s*$$
-  ^\s*Network\s*Card\s*ID\s*:\s*(--|${NETWORK_CARD_ID})\s*$$
+  ^\s*Discovered\s+time\s*:\s*(--|${DISCOVERED_TIME})\s*$$
+  ^\s*EEE\s+support\s*:\s*(--|${ENERGY_EFFICIENT_ETHERNET_SUPPORT})\s*$$
+  ^\s*Transmit\s+Tw\s*:\s*(--|${TRANSMIT_TW})\s*$$
+  ^\s*Receive\s+Tw\s*:\s*(--|${RECEIVE_TW})\s*$$
+  ^\s*Fallback\s+Receive\s*Tw\s*:\s*(--|${FALLBACK_RECEIVE_TW})\s*$$
+  ^\s*Echo\s+Transmit\s+Tw\s*:\s*(--|${ECHO_TRANSMIT_TW})\s*$$
+  ^\s*Echo\s+Receive\s+Tw\s*:\s*(--|${ECHO_RECEIVE_TW})\s*$$
+  ^\s*Network\s+Card\s+ID\s*:\s*(--|${NETWORK_CARD_ID})\s*$$
   ^\s*Maximum\s+frame\s+Size\s*:\s*(--|${MAXIMUM_FRAME_SIZE})\s*$$
-  ^\s*Med\s*capability\s*:\s*(--|${MED_CAPABILITY})\s*$$
+  ^\s*Med\s+capability\s*:\s*(--|${MED_CAPABILITY})\s*$$
   ^\s*Med\s+device\s+type\s*:\s*(--|${MED_DEVICE_TYPE})\s*$$
   ^\s*MED\s+Device\s+information\s*$$
   ^\s*Device\s+class\s*:\s*${MED_DEVICE_CLASS}\s*$$
@@ -176,25 +176,25 @@ Start
   ^\s*Media\s+policy\s+L2\s+priority\s*:\s*${MEDIA_POLICY_L2_PRIORITY}\s*$$
   ^\s*Media\s+policy\s+Dscp\s*:\s*${MEDIA_POLICY_DSCP}\s*$$
   ^\s*Power\s+(T|t)ype\s*:\s*${POWER_TYPE}\s*$$
-  ^\s*Power\s*source\s*:\s*${POWER_SOURCE}\s*$$
-  ^\s*Power\s*priority\s*:\s*${POWER_PRIORITY}\s*$$
-  ^\s*PD\s*requested\s*power\s*value\s*:\s*${PD_REQUESTED_POWER}\s*$$
-  ^\s*PSE\s*allocated\s*power\s*value\s*:\s*${PSE_ALLOCATED_POWER}\s*$$
-  ^\s*PD\s*requested\s*power\s*mode\s*A\s*value\s*:\s*${PD_REQUESTED_POWER_MODE_A}\s*$$
-  ^\s*PD\s*requested\s*power\s*mode\s*B\s*value\s*:\s*${PD_REQUESTED_POWER_MODE_B}\s*$$
-  ^\s*PSE\s*maximum\s*available\s*power\s*:\s*${PSE_MAXIMUM_AVAILABLE_POWER}\s*$$
-  ^\s*PSE\s*power\s*pairs\s*ext\s*:\s*${PSE_POWER_PAIRS_EXT}\s*$$
+  ^\s*Power\s+source\s*:\s*${POWER_SOURCE}\s*$$
+  ^\s*Power\s+priority\s*:\s*${POWER_PRIORITY}\s*$$
+  ^\s*PD\s+requested\s+power\s+value\s*:\s*${PD_REQUESTED_POWER}\s*$$
+  ^\s*PSE\s+allocated\s+power\s+value\s*:\s*${PSE_ALLOCATED_POWER}\s*$$
+  ^\s*PD\s+requested\s+power\s+mode\s+A\s+value\s*:\s*${PD_REQUESTED_POWER_MODE_A}\s*$$
+  ^\s*PD\s+requested\s+power\s+mode\s+B\s+value\s*:\s*${PD_REQUESTED_POWER_MODE_B}\s*$$
+  ^\s*PSE\s+maximum\s+available\s+power\s*:\s*${PSE_MAXIMUM_AVAILABLE_POWER}\s*$$
+  ^\s*PSE\s+power\s+pairs\s+ext\s*:\s*${PSE_POWER_PAIRS_EXT}\s*$$
   ^\s*PoE\s+PSE\s+power\s+source\s*:\s*${POE_PSE_POWER_SOURCE}\s*$$
   ^\s*Port\s+PSE\s+Priority\s*:\s*${PORT_PSE_PRIORITY}s*$$
   ^\s*Port\s+Available\s+power\s+value\s*:\s*${PORT_AVAILABLE_POWER_VALUE}\s*$$
   ^\s*Location\s+format\s*:\s*${LOCATION_FORMAT}\s*$$
   ^\s*Location\s+information\s*:\s*${LOCATION_INFORMATION}\s*$$
   ^\s*Ca\s+type\s+Ca\s+value\s*$$
-  ^\s*Unrecognized\s*organizationally\s*defined\s*TLV\s*$$
-  ^\s*TLV\s*OUI\s*:\s*(\S+|\S.+\S)\s*$$
-  ^\s*TLV\s*subtype\s*:\s*(\S+|\S.+\S)\s*$$
+  ^\s*Unrecognized\s+organizationally\s+defined\s+TLV\s*$$
+  ^\s*TLV\s+OUI\s*:\s*(\S+|\S.+\S)\s*$$
+  ^\s*TLV\s+subtype\s*:\s*(\S+|\S.+\S)\s*$$
   ^\s*Index\s*:\s*(\S+|\S.+\S)\s*$$
-  ^\s*TLV\s*information\s*:\s*(\S+|\S.+\S)\s*$$
+  ^\s*TLV\s+information\s*:\s*(\S+|\S.+\S)\s*$$
   ^\s+$$
   ^. -> Error
 
