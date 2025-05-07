@@ -1,0 +1,46 @@
+Value Filldown INTERFACE (\S+)
+Value ADDRESS (\S+)
+Value Required SSID (\S.+\S|\S+)
+Value PROTOCOL (\S.+\S)
+Value MODE (\S+)
+Value FREQUENCY (\S+\sGHz)
+Value CHANNEL (\d+)
+Value ENCRYPTION_KEY (\S+)
+Value List BIT_RATE (\d+(?:\.\d+)?\s(Gb|Mb|Kb)\/s)
+Value GROUP_CIPHER (\S.+\S)
+Value PAIRWISE_CIPHER (\S.+\S)
+Value AUTHENTICATION_SUITES (\S.+\S)
+Value PREAUTHENTICATION (Supported)
+Value QUALITY (\d+\/\d+)
+Value SIGNAL_LEVEL (-?\d+\/\d+|-?\d+\sdBm)
+Value List EXTRA (\S.+\S)
+Value List INFORMATION_ELEMENT (\S.+\S)
+
+Start
+  ^\s*Cell\s+\d+\s* -> Continue.Record
+  ^\s*(?:Bit\s+Rates:\s*)?\s*${BIT_RATE}\;?\s*$$
+  ^\s*(?:Bit\s+Rates:\s*)?\s*${BIT_RATE}\;?\s* -> Continue
+  ^\s*(?:Bit\s+Rates:\s*)?(\s*\d+(?:\.\d+)?\s(Gb|Mb|Kb)\/s\;){1}\s*${BIT_RATE}\;?\s*$$
+  ^\s*(?:Bit\s+Rates:\s*)?(\s*\d+(?:\.\d+)?\s(Gb|Mb|Kb)\/s\;){1}\s*${BIT_RATE}\;?\s* -> Continue
+  ^\s*(?:Bit\s+Rates:\s*)?(\s*\d+(?:\.\d+)?\s(Gb|Mb|Kb)\/s\;){2}\s*${BIT_RATE}\;?\s*$$
+  ^\s*(?:Bit\s+Rates:\s*)?(\s*\d+(?:\.\d+)?\s(Gb|Mb|Kb)\/s\;){2}\s*${BIT_RATE}\;?\s* -> Continue
+  ^\s*(?:Bit\s+Rates:\s*)?(\s*\d+(?:\.\d+)?\s(Gb|Mb|Kb)\/s\;){3}\s*${BIT_RATE}\;?\s*$$
+  ^\s*(?:Bit\s+Rates:\s*)?(\s*\d+(?:\.\d+)?\s(Gb|Mb|Kb)\/s\;){3}\s*${BIT_RATE}\;?\s* -> Continue
+  ^\s*(?:Bit\s+Rates:\s*)?(\s*\d+(?:\.\d+)?\s(Gb|Mb|Kb)\/s\;){4}\s*${BIT_RATE}\;?\s*$$
+  ^\s*(?:Bit\s+Rates:\s*)?(\s*\d+(?:\.\d+)?\s(Gb|Mb|Kb)\/s\;){4}\s*${BIT_RATE}\;?\s* -> Continue
+  ^\s*Cell\s+\d+\s+-\s+Address:\s*${ADDRESS}\s*$$
+  ^\s*${INTERFACE}\s+Scan\s+completed\s+:\s*$$
+  ^\s*Channel:\s*${CHANNEL}\s*$$
+  ^\s*ESSID:\s*"(?:${SSID})?"\s*$$
+  ^\s*Protocol:\s*${PROTOCOL}\s*$$
+  ^\s*Mode:\s*${MODE}\s*$$
+  ^\s*Frequency:\s*${FREQUENCY}(?:\s+\(Channel\s+${CHANNEL}\))?\s*$$
+  ^\s*Encryption\s+key:\s*${ENCRYPTION_KEY}\s*$$
+  ^\s*IE:\s+${INFORMATION_ELEMENT}\s*$$
+  ^\s*Group\s+Cipher\s*:\s*${GROUP_CIPHER}\s*$$
+  ^\s*Pairwise\s+Ciphers\s*\(\d+\)\s*:\s*${GROUP_CIPHER}\s*$$
+  ^\s*Authentication\s+Suites\s*\(\d+\)\s*:\s*${AUTHENTICATION_SUITES}\s*$$
+  ^\s*Preauthentication\s+${PREAUTHENTICATION}\s*$$
+  ^\s*Quality\s*=\s*${QUALITY}\s+Signal\s+level\s*=\s*${SIGNAL_LEVEL}\s*$$
+  ^\s*Extra:\s*${EXTRA}\s*$$
+  ^. -> Error
