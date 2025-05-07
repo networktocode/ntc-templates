@@ -1,0 +1,55 @@
+Value ACTIVATE_LICENSE (\S+)
+Value LICENSE_STATE (\w+)
+Value REVOKE_TICKET (.*)
+Value LICENSE_MODE (\w+)
+Value PRODUCT_NAME (\S+)
+Value PRODUCT_VERSION (\w+)
+Value LICENSE_FILE_ESN (\w+)
+Value LICENSE_SERIAL_NO (\w+)
+Value CREATOR (.*)
+Value CREATED_TIME (\d+-\d+-\d+\s+\d+:\d+:\d+)
+Value COUNTRY (\w+)
+Value CUSTOM (.*)
+Value OFFICE (\w+)
+Value FEATURE_NAME (\w+)
+Value AUTHORIZE_TYPE (\w+)
+Value EXPIRED_DATE (\S+)
+Value TRIAL_DAYS (\S+)
+Value SALE_NAME (\S+)
+Value ITEM_NAME (\S+)
+Value ITEM_TYPE (\w+)
+Value CONTROL_VALUE (\d+)
+Value USED_VALUE (\d+)
+Value ITEM_STATE (\w+)
+Value ITEM_EXPIRED_DATE (\S+)
+Value ITEM_TRIAL_DAYS (\d+)
+Value DESCRIPTION (\S+)
+
+Start
+  ^\s+Active\s+license\s+:\s+${ACTIVATE_LICENSE}
+  ^\s+License\s+state\s+:\s+${LICENSE_STATE}
+  ^\s+Revoke\s+ticket\s+:\s+${REVOKE_TICKET}
+  ^\s+License\s+mode\s+:\s+${LICENSE_MODE} -> Record
+  ^\s+Product\s+name\s+:\s+${PRODUCT_NAME}
+  ^\s+Product\s+version\s+:\s+${PRODUCT_VERSION}
+  ^\s+License\s+file\s+ESN\s+:\s+${LICENSE_FILE_ESN}
+  ^\s+License\s+Serial\s+No\s+:\s+${LICENSE_SERIAL_NO}
+  ^\s+Creator\s+:\s+${CREATOR}
+  ^\s+Created\s+Time\s+:\s+${CREATED_TIME}
+  ^\s+Country\s+:\s+${COUNTRY}
+  ^\s+Custom\s+:\s+${CUSTOM}
+  ^\s+Office\s+:\s+${OFFICE} -> Record
+  ^\s+Feature\s+name\s+:\s+${FEATURE_NAME}
+  ^\s+Authorize\s+type\s+:\s+${AUTHORIZE_TYPE}
+  ^\s+Expired\s+date\s+:\s+${EXPIRED_DATE}
+  ^\s+Trial\s+days\s+:\s+${TRIAL_DAYS}
+  ^\s+Sale\s+name\s+:\s+${SALE_NAME}
+  ^\s+Item\s+name\s+:\s+${ITEM_NAME}
+  ^\s+Item\s+type\s+:\s+${ITEM_TYPE}
+  ^\s+Control\s+value\s+:\s+${CONTROL_VALUE}
+  ^\s+Used\s+value\s+:\s+${USED_VALUE}
+  ^\s+Item\s+state\s+:\s+${ITEM_STATE}
+  ^\s+Item\s+expired\s+date\s+:\s+${ITEM_EXPIRED_DATE}
+  ^\s+Item\s+trial\s+days\s+:\s+${ITEM_TRIAL_DAYS}
+  ^\s+Description\s+:\s+${DESCRIPTION} -> Record
+  ^. -> Error
