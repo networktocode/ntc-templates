@@ -3,7 +3,7 @@ Value INTERFACE (\S+)
 Value VERSION (\d+)
 Value GROUP_NUMBER (\d+)
 Value PRIORITY (\d+)
-Value HSRP_ROUTER_STATE (\S+)
+Value HSRP_ROUTER_STATE (\w+(\(\w+\s+\w+\))?)
 Value CONFIGURED_PRIORITY (\d+)
 Value PREEMPT (.*)
 Value LOWER_FWD_TRESHOLD (\d+)
@@ -46,10 +46,10 @@ Start
   # catch clear text authetication:
   ^\s+Authentication\stext\s+.*$$
   ^\s+Authentication\s+${AUTHENTICATION},.*$$
-  ^\s+Virtual\s+mac\s+address\s+is\s+${VIRTUAL_MAC_ADDRESS} \(${VIRTUAL_MAC_ADDRESS_STATUS}\)\s*$$
+  ^\s+Virtual\s+mac\s+address\s+is\s+${VIRTUAL_MAC_ADDRESS}\s+\(${VIRTUAL_MAC_ADDRESS_STATUS}\)\s*$$
   ^\s+${NUM_STATE_CHANGES}\s+state\s+changes,\s+last\s+state\s+change\s+${LAST_STATE_CHANGE}\s*$$
   ^\s+IP\s+redundancy\s+name\s+is\s+${SESSION_NAME}\s.*$$
-  ^\s+Secondary VIP.*$$
+  ^\s+Secondary\s+VIP.*$$
   # Catch secondary VIPs:
   ^\s+\d+\.\d+\.\d+\.\d+$$
   # Record data when empty line is found
