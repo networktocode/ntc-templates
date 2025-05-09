@@ -24,7 +24,7 @@ Value MISSED_BEACON (\w+)
 
 
 Start
-  ^\s*w -> Continue.Record
+  ^\s*wl\w+\d+ -> Continue.Record
   ^\s*${INTERFACE}\s+no\s*wireless\s*extensions\.$$ -> Clear
   ^\s*${INTERFACE}\s+(IEEE\s+802\.11\w*|unassociated)(?:\s+ESSID:off\/any)?(?:\s+Nickname:\"${NICKNAME}\")?\s*$$
   ^\s*${INTERFACE}\s+(IEEE\s+802\.11\w*|unassociated)(?:\s+ESSID:\"${ESSID}\"\s+)?(?:\s*Nickname:\"${NICKNAME}\")?\s*$$
