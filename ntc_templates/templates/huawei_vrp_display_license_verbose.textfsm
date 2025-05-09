@@ -23,7 +23,7 @@ Value USED_VALUE (\d+)
 Value ITEM_STATE (\w+)
 Value ITEM_EXPIRED_DATE (\S+)
 Value ITEM_TRIAL_DAYS (\d+)
-Value DESCRIPTION (\S+)
+Value DESCRIPTION (.*)
 
 Start
   ^\s+Active\s+license\s+:\s+${ACTIVE_LICENSE}
