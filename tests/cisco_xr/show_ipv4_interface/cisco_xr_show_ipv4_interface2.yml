@@ -1,7 +1,7 @@
 ---
 parsed_sample:
-  - interface: "TenGigE0/0/0/6"
-    in_acl: "not set"
+  - in_acl: "not set"
+    interface: "TenGigE0/0/0/6"
     ip_address: "10.1.1.1"
     ip_mtu: "9202"
     link_status: "Up"
@@ -22,8 +22,8 @@ parsed_sample:
     sec_prefix_length: []
     vrf: "default"
     vrf_id: "0x60000000"
-  - interface: "Bundle-Ether10.23"
-    in_acl: "not set"
+  - in_acl: "not set"
+    interface: "Bundle-Ether10.23"
     ip_address: "10.1.1.7"
     ip_mtu: "9100"
     link_status: "Up"
@@ -40,8 +40,8 @@ parsed_sample:
     sec_prefix_length: []
     vrf: "default"
     vrf_id: "0x60000000"
-  - interface: "TenGigE0/5/0/2.3"
-    in_acl: "BLOCK"
+  - in_acl: "BLOCK"
+    interface: "TenGigE0/5/0/2.3"
     ip_address: "10.2.2.1"
     ip_mtu: "1500"
     link_status: "Up"

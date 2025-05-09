@@ -1,7 +1,7 @@
 ---
 parsed_sample:
-  - interface: "Loopback0"
-    in_acl: "not set"
+  - in_acl: "not set"
+    interface: "Loopback0"
     ip_address: "10.24.29.18"
     ip_mtu: "1500"
     link_status: "Up"
@@ -19,8 +19,8 @@ parsed_sample:
     sec_prefix_length: []
     vrf: "default"
     vrf_id: "0x60000000"
-  - interface: "Loopback7"
-    in_acl: "not set"
+  - in_acl: "not set"
+    interface: "Loopback7"
     ip_address: "10.44.7.60"
     ip_mtu: "1500"
     link_status: "Up"
@@ -35,8 +35,8 @@ parsed_sample:
     sec_prefix_length: []
     vrf: "default"
     vrf_id: "0x60000000"
-  - interface: "MgmtEth0/RSP0/CPU0/0"
-    in_acl: "not set"
+  - in_acl: "not set"
+    interface: "MgmtEth0/RSP0/CPU0/0"
     ip_address: "10.0.0.1"
     ip_mtu: "1500"
     link_status: "Down"
@@ -51,8 +51,8 @@ parsed_sample:
     sec_prefix_length: []
     vrf: "default"
     vrf_id: "0x60000000"
-  - interface: "TenGigE0/5/0/0"
-    in_acl: "not set"
+  - in_acl: "not set"
+    interface: "TenGigE0/5/0/0"
     ip_address: "10.24.14.12"
     ip_mtu: "9180"
     link_status: "Up"
@@ -73,8 +73,8 @@ parsed_sample:
     sec_prefix_length: []
     vrf: "default"
     vrf_id: "0x60000000"
-  - interface: "TenGigE0/5/0/1"
-    in_acl: ""
+  - in_acl: ""
+    interface: "TenGigE0/5/0/1"
     ip_address: ""
     ip_mtu: ""
     link_status: "Shutdown"
@@ -89,8 +89,8 @@ parsed_sample:
     sec_prefix_length: []
     vrf: "default"
     vrf_id: "0x60000000"
-  - interface: "TenGigE0/5/0/2"
-    in_acl: ""
+  - in_acl: ""
+    interface: "TenGigE0/5/0/2"
     ip_address: ""
     ip_mtu: ""
     link_status: "Shutdown"
@@ -105,8 +105,8 @@ parsed_sample:
     sec_prefix_length: []
     vrf: "default"
     vrf_id: "0x60000000"
-  - interface: "TenGigE0/5/0/3"
-    in_acl: ""
+  - in_acl: ""
+    interface: "TenGigE0/5/0/3"
     ip_address: ""
     ip_mtu: ""
     link_status: "Shutdown"

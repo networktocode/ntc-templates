@@ -1,7 +1,7 @@
 ---
 parsed_sample:
-  - interface: "Bundle-Ether123"
-    in_acl: ""
+  - in_acl: ""
+    interface: "Bundle-Ether123"
     ip_address: ""
     ip_mtu: ""
     link_status: "Down"
@@ -16,8 +16,8 @@ parsed_sample:
     sec_prefix_length: []
     vrf: "default"
     vrf_id: "0x60000000"
-  - interface: "MgmtEth0/RP0/CPU0/0"
-    in_acl: "not set, access list is not set"
+  - in_acl: "not set, access list is not set"
+    interface: "MgmtEth0/RP0/CPU0/0"
     ip_address: "192.168.254.130"
     ip_mtu: "1500"
     link_status: "Up"
@@ -32,8 +32,8 @@ parsed_sample:
     sec_prefix_length: []
     vrf: "MGMT"
     vrf_id: "0x60000001"
-  - interface: "GigabitEthernet0/0/0/0"
-    in_acl: ""
+  - in_acl: ""
+    interface: "GigabitEthernet0/0/0/0"
     ip_address: ""
     ip_mtu: ""
     link_status: "Shutdown"
@@ -48,8 +48,8 @@ parsed_sample:
     sec_prefix_length: []
     vrf: "default"
     vrf_id: "0x60000000"
-  - interface: "GigabitEthernet0/0/0/1"
-    in_acl: ""
+  - in_acl: ""
+    interface: "GigabitEthernet0/0/0/1"
     ip_address: ""
     ip_mtu: ""
     link_status: "Shutdown"
@@ -64,8 +64,8 @@ parsed_sample:
     sec_prefix_length: []
     vrf: "default"
     vrf_id: "0x60000000"
-  - interface: "GigabitEthernet0/0/0/1.100"
-    in_acl: ""
+  - in_acl: ""
+    interface: "GigabitEthernet0/0/0/1.100"
     ip_address: ""
     ip_mtu: ""
     link_status: "Shutdown"
@@ -80,8 +80,8 @@ parsed_sample:
     sec_prefix_length: []
     vrf: "default"
     vrf_id: "0x60000000"
-  - interface: "GigabitEthernet0/0/0/2"
-    in_acl: ""
+  - in_acl: ""
+    interface: "GigabitEthernet0/0/0/2"
     ip_address: ""
     ip_mtu: ""
     link_status: "Shutdown"
@@ -96,8 +96,8 @@ parsed_sample:
     sec_prefix_length: []
     vrf: "default"
     vrf_id: "0x60000000"
-  - interface: "GigabitEthernet0/0/0/3"
-    in_acl: ""
+  - in_acl: ""
+    interface: "GigabitEthernet0/0/0/3"
     ip_address: ""
     ip_mtu: ""
     link_status: "Up"
