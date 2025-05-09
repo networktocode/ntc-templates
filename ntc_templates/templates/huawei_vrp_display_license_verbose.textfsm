@@ -1,4 +1,4 @@
-Value ACTIVATE_LICENSE (\S+)
+Value ACTIVE_LICENSE (\S+)
 Value LICENSE_STATE (\w+)
 Value REVOKE_TICKET (.*)
 Value LICENSE_MODE (\w+)
@@ -26,7 +26,7 @@ Value ITEM_TRIAL_DAYS (\d+)
 Value DESCRIPTION (\S+)
 
 Start
-  ^\s+Active\s+license\s+:\s+${ACTIVATE_LICENSE}
+  ^\s+Active\s+license\s+:\s+${ACTIVE_LICENSE}
   ^\s+License\s+state\s+:\s+${LICENSE_STATE}
   ^\s+Revoke\s+ticket\s+:\s+${REVOKE_TICKET}
   ^\s+License\s+mode\s+:\s+${LICENSE_MODE} -> Record
