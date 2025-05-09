@@ -1,0 +1,15 @@
+top - 12:33:53 up  2:11,  5 users,  load average: 0.12, 0.40, 0.66
+Tasks: 200 total,   1 running, 189 sleeping,   5 stopped,   5 zombie
+%Cpu(s): 12.5 us, 12.5 sy,  0.0 ni, 62.5 id, 12.5 wa,  0.0 hi,  0.0 si,  0.0 st 
+MiB Mem :   7809.9 total,   4753.7 free,   2052.9 used,   1126.5 buff/cache     
+MiB Swap:    512.0 total,    512.0 free,      0.0 used.   5757.0 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  19516 admin     20   0   28.7g 880836  52224 S  12.5  11.0   6:51.26 node
+  30427 admin     20   0   11708   4864   2816 R   6.2   0.1   0:00.03 top
+      1 root      20   0  168332  11152   8400 S   0.0   0.1   0:01.14 systemd
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-rcu_g
+    395 systemd+  20   0   90708   6784   5888 S   0.0   0.1   0:00.18 systemd-timesyn
+    397 root       0 -20       0      0      0 I   0.0   0.0   0:00.68 kworker/u13:1-brcmf_wq/mmc1:0001:1
+    402 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 irq/41-vc4 hdmi hpd connected
+  30343 admin     20   0    5200   1408   1408 S   0.0   0.0   0:00.00 sleep
