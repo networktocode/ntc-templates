@@ -32,7 +32,7 @@ Start
   ^\s*Mode:\s*${MODE}\s+(?:Frequency(:|=)\s*${FREQUENCY}\s+)?Access\s+Point:\s+${ACCESS_POINT}(?:\s+Tx-Power\s*=\s*${TX_POWER})?\s*$$
   ^\s*(?:Bit\s+Rate(:|=)${BIT_RATE})?(?:\s*Sensitivity:${SENSITIVITY})?(?:\s+Tx-Power=${TX_POWER})?\s*$$
   ^\s*Retry(?:\s+short\s+limit)?:${RETRY_SHORT_LIMIT}\s+RTS\s+thr:${RTS_THR}\s+Fragment\s+thr:${FRAGMENT_THR}\s*$$
-  ^\s*Encryption\s+key\s*:\s*${ENCRYPTION_KEY}\s*$$
+  ^\s*Encryption\s+key:\s*${ENCRYPTION_KEY}\s*$$
   ^\s*Power\s+Management:${POWER_MANAGEMENT}\s*$$
   ^\s*Link\s+Quality(:|=)${LINK_QUALITY}\s+Signal\s+level(:|=)${SIGNAL_LEVEL}(?:\s+Noise\s+level(:|=)${NOISE_LEVEL})?\s*$$
   ^\s*Rx\s+invalid\s+nwid:${RX_INVALID_NWID}\s+Rx\s+invalid\s+crypt:${RX_INVALID_CRYPT}\s+Rx\s+invalid\s+frag:${RX_INVALID_FRAG}\s*$$
