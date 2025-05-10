@@ -1,16 +1,16 @@
-Value ACTIVE_LICENSE (\S+)
-Value LICENSE_STATE (\w+)
-Value REVOKE_TICKET (.*)
-Value LICENSE_MODE (\w+)
-Value PRODUCT_NAME (\S+)
-Value PRODUCT_VERSION (\w+)
-Value LICENSE_FILE_ESN (\w+)
-Value LICENSE_SERIAL_NO (\w+)
-Value CREATOR (.*)
-Value CREATED_TIME (\d+-\d+-\d+\s+\d+:\d+:\d+)
-Value COUNTRY (\w+)
-Value CUSTOM (.*)
-Value OFFICE (\w+)
+Value Filldown ACTIVE_LICENSE (\S+)
+Value Filldown LICENSE_STATE (\w+)
+Value Filldown REVOKE_TICKET (.*)
+Value Filldown LICENSE_MODE (\w+)
+Value Filldown PRODUCT_NAME (\S+)
+Value Filldown PRODUCT_VERSION (\w+)
+Value Filldown LICENSE_FILE_ESN (\w+)
+Value Filldown LICENSE_SERIAL_NO (\w+)
+Value Filldown CREATOR (.*)
+Value Filldown CREATED_TIME (\d+-\d+-\d+\s+\d+:\d+:\d+)
+Value Filldown COUNTRY (\w+)
+Value Filldown CUSTOM (.*)
+Value Filldown OFFICE (\w+)
 Value FEATURE_NAME (\w+)
 Value AUTHORIZE_TYPE (\w+)
 Value EXPIRED_DATE (\S+)
@@ -29,7 +29,7 @@ Start
   ^\s+Active\s+license\s+:\s+${ACTIVE_LICENSE}
   ^\s+License\s+state\s+:\s+${LICENSE_STATE}
   ^\s+Revoke\s+ticket\s+:\s+${REVOKE_TICKET}
-  ^\s+License\s+mode\s+:\s+${LICENSE_MODE} -> Record
+  ^\s+License\s+mode\s+:\s+${LICENSE_MODE}
   ^\s+Product\s+name\s+:\s+${PRODUCT_NAME}
   ^\s+Product\s+version\s+:\s+${PRODUCT_VERSION}
   ^\s+License\s+file\s+ESN\s+:\s+${LICENSE_FILE_ESN}
@@ -38,7 +38,7 @@ Start
   ^\s+Created\s+Time\s+:\s+${CREATED_TIME}
   ^\s+Country\s+:\s+${COUNTRY}
   ^\s+Custom\s+:\s+${CUSTOM}
-  ^\s+Office\s+:\s+${OFFICE} -> Record
+  ^\s+Office\s+:\s+${OFFICE}
   ^\s+Feature\s+name\s+:\s+${FEATURE_NAME}
   ^\s+Authorize\s+type\s+:\s+${AUTHORIZE_TYPE}
   ^\s+Expired\s+date\s+:\s+${EXPIRED_DATE}
@@ -53,3 +53,5 @@ Start
   ^\s+Item\s+trial\s+days\s+:\s+${ITEM_TRIAL_DAYS}
   ^\s+Description\s+:\s+${DESCRIPTION} -> Record
   ^. -> Error
+
+EOF
