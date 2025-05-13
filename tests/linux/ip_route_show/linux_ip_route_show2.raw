@@ -1,0 +1,6 @@
+default dev wlan0 scope link
+default via 172.21.240.1 dev eth0 proto kernel
+default via 172.30.1.1 dev eth0 proto dhcp src 172.30.1.112 metric 100 
+default via 172.20.2.1 dev wlan0 proto dhcp src 172.20.3.163 metric 600 
+172.20.2.0/23 dev wlan0 proto kernel scope link src 172.20.3.163 metric 600 
+172.30.1.0/24 dev eth0 proto kernel scope link src 172.30.1.112 metric 100 

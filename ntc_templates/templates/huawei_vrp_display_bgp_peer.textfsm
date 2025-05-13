@@ -1,0 +1,18 @@
+Value PEER (\S+)
+Value ASN (\d+(\.\d+)?)
+Value MSG_RCVD (\d+)
+Value MSG_SENT (\d+)
+Value OUT_Q (\d+)
+Value UP_DOWN (\S+)
+Value STATE (\w+)
+Value PREF_RCVD (\d+)
+
+Start
+  ^\s+${PEER}\s+\d+\s+${ASN}\s+${MSG_RCVD}\s+${MSG_SENT}\s+${OUT_Q}\s+${UP_DOWN}\s+${STATE}\s+${PREF_RCVD} -> Record
+  ^\s+Status\s+codes
+  ^\s+BGP\s+[Ll]ocal\s+router\s+ID
+  ^\s+[Ll]ocal\s+AS\s+number
+  ^\s+Peers\s+in\s+established\s+state
+  ^\s+Total\s+number\s+of(\s+dynamic)?\s+peers
+  ^\s+Peer\s+V\s+AS\s+MsgRcvd\s+MsgSent\s+OutQ\s+Up/Down\s+State\s+PrefRcv
+  ^. -> Error

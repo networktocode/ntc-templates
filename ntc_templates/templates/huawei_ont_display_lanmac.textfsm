@@ -1,0 +1,7 @@
+Value List LAN_MAC (\S+)
+
+Start
+  ^\s*lan\s+mac\s+=\s+${LAN_MAC}\s*$$
+  ^\s+$$
+  ^\s*success!\s*$$
+  ^. -> Error

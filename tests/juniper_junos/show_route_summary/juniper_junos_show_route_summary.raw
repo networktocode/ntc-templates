@@ -1,0 +1,35 @@
+Autonomous system number: 65000
+Router ID: 129.250.0.2
+
+Highwater Mark (All time / Time averaged watermark)
+    RIB unique destination routes: 1221502 at 2000-01-01 00:00:00 / 1217389
+    RIB routes                   : 11101463 at 2000-01-01 00:00:00 / 10394871
+    FIB routes                   : 1207937 at 2000-01-01 00:00:00 / 1203820
+    VRF type routing instances   : 1 at 2000-01-01 00:00:00
+
+inet.0: 993427 destinations, 8574425 routes (992253 active, 13182 holddown, 1328663 hidden)
+              Direct:      8 routes,      7 active
+               Local:      7 routes,      7 active
+                 BGP: 8568064 routes, 985893 active
+              Static:      2 routes,      2 active
+               IS-IS:   6343 routes,   6343 active
+                 LDP:      1 routes,      1 active
+
+iso.0: 1 destinations, 1 routes (1 active, 0 holddown, 0 hidden)
+              Direct:      1 routes,      1 active
+
+mpls.0: 284 destinations, 284 routes (284 active, 0 holddown, 0 hidden)
+                MPLS:      6 routes,      6 active
+                RSVP:      4 routes,      4 active
+                 LDP:    274 routes,    274 active
+
+inet6.0: 214385 destinations, 1781556 routes (214292 active, 2700 holddown, 257364 hidden)
+              Direct:      4 routes,      4 active
+               Local:      4 routes,      4 active
+                 BGP: 1775906 routes, 208642 active
+              Static:      2 routes,      2 active
+               IS-IS:   5639 routes,   5639 active
+               INET6:      1 routes,      1 active
+
+l2circuit.0: 1 destinations, 1 routes (1 active, 0 holddown, 0 hidden)
+                 LDP:      1 routes,      1 active

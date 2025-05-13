@@ -129,6 +129,8 @@ aruba_os_show_ip_interface_brief.textfsm, .*, aruba_os, sh[[ow]] ip in[[terface]
 aruba_os_show_ap_radio-database.textfsm, .*, aruba_os, show ap radio-database
 aruba_os_show_ap_database_long.textfsm, .*, aruba_os, show ap database long
 aruba_os_show_ap_database.textfsm, .*, aruba_os, show ap database
+aruba_os_show_version.textfsm, .*, aruba_os, sh[[ow]] ver[[sion]]
+aruba_os_show_vlan.textfsm, .*, aruba_os, sh[[ow]] vl[[an]]
 aruba_os_show_arp.textfsm, .*, aruba_os, sh[[ow]] arp
 
 avaya_ers_show_mac-address-table.textfsm, .*, avaya_ers, sh[[ow]] mac-a[[ddress-table]]
@@ -202,6 +204,7 @@ ciena_saos_vlan_show.textfsm, .*, ciena_saos, vl[[an]] sh[[ow]]
 cisco_apic_fabric_show_vlan_extended.textfsm, .*, cisco_apic, fabric sh[[ow]] vlan ex[[tended]]
 
 cisco_asa_show_module.textfsm:cisco_asa_show_module_details.textfsm:cisco_asa_show_module_status.textfsm, .*, cisco_asa, sh[[ow]] modu[[le]]
+cisco_asa_show_running-config_object-group_service.textfsm, .*, cisco_asa, sh[[ow]] (?:ru[[nning-config]] object-[[group]]|ob[[ject-group]]) ser[[vice]]
 cisco_asa_show_running-config_all_crypto_map.textfsm, .*, cisco_asa, sh[[ow]] ru[[nning-config]] all cr[[ypto]] m[[ap]]
 cisco_asa_show_running-config_object_network.textfsm, .*, cisco_asa, sh[[ow]] ru[[nning-config]] o[[bject]] n[[etwork]]
 cisco_asa_show_running-config_object_service.textfsm, .*, cisco_asa, sh[[ow]] ru[[nning-config]] o[[bject]] s[[ervice]]
@@ -285,6 +288,7 @@ cisco_ios_show_mpls_l2transport_vc.textfsm, .*, cisco_ios, sh[[ow]] m[[pls]] l2[
 cisco_ios_show_ip_eigrp_neighbors.textfsm, .*, cisco_ios, sh[[ow]] ip ei[[grp]] nei[[ghbors]]
 cisco_ios_show_ip_flow_toptalkers.textfsm, .*, cisco_ios, sh[[ow]] ip fl[[ow]] top[[-talkers]]
 cisco_ios_show_ip_interface_brief.textfsm, .*, cisco_ios, sh[[ow]] ip int[[erface]] br[[ief]]
+cisco_ios_show_spanning-tree_root.textfsm, .*, cisco_ios, sh[[ow]] sp[[anning-tree]] ro[[ot]]
 cisco_ios_show_interfaces_status.textfsm, .*, cisco_ios, sh[[ow]] int[[erfaces]](?: (?:\S+))? st[[atus]]
 cisco_ios_show_ip_eigrp_topology.textfsm, .*, cisco_ios, sh[[ow]] ip eigrp top[[ology]]
 cisco_ios_show_ip_source_binding.textfsm, .*, cisco_ios, sh[[ow]] ip sou[[rce]] b[[inding]]
@@ -327,11 +331,13 @@ cisco_ios_show_power_status.textfsm, .*, cisco_ios, sh[[ow]] pow[[er]] st[[atus]
 cisco_ios_show_rep_topology.textfsm, .*, cisco_ios, sh[[ow]] rep topology
 cisco_ios_show_access-list.textfsm, .*, cisco_ios, sh[[ow]] acc[[ess-list]]
 cisco_ios_show_isdn_status.textfsm, .*, cisco_ios, sh[[ow]] isd[[n]] st[[atus]]
+cisco_ios_show_stack-power.textfsm, .*, cisco_ios, sh[[ow]] stack-[[power]]
 cisco_ios_show_ap_summary.textfsm, .*, cisco_ios, sh[[ow]] ap sum[[mary]]
 cisco_ios_show_dhcp_lease.textfsm, .*, cisco_ios, sh[[ow]] dh[[cp]] l[[ease]]
 cisco_ios_show_interfaces.textfsm, .*, cisco_ios, sh[[ow]] int[[erfaces]](?: (?:\S+))?
 cisco_ios_show_ipv6_route.textfsm, .*, cisco_ios, sh[[ow]] ipv6 r[[oute]]
 cisco_ios_show_policy-map.textfsm, .*, cisco_ios, sh[[ow]] pol[[icy-map]]
+cisco_ios_show_power_used.textfsm, .*, cisco_ios, sh[[ow]] pow[[er]] u[[sed]]
 cisco_ios_show_redundancy.textfsm, .*, cisco_ios, sh[[ow]] redu[[ndancy]]
 cisco_ios_show_snmp_group.textfsm, .*, cisco_ios, sh[[ow]] snm[[p]] g[[roup]]
 cisco_ios_show_vrf_detail.textfsm, .*, cisco_ios, sh[[ow]] vrf detail
@@ -635,8 +641,10 @@ fortinet_execute_ping.textfsm, .*, fortinet, exec[[ute]] ping
 fortinet_execute_time.textfsm, .*, fortinet, exec[[ute]] ti[[me]]
 
 fsas_sir_show_system_information.textfsm, .*, fsas_sir, sh[[ow]] sys[[tem]] i[[nformation]]
+fsas_sir_show_ip_ospf_neighbor.textfsm, .*, fsas_sir, sh[[ow]] ip ospf nei[[ghbor]]
 fsas_sir_show_ip_route.textfsm, .*, fsas_sir, sh[[ow]] ip ro[[ute]]
 fsas_sir_show_ether.textfsm, .*, fsas_sir, sh[[ow]] eth[[er]]
+fsas_sir_show_vlan.textfsm, .*, fsas_sir, sh[[ow]] vl[[an]]
 
 hp_comware_display_lldp_neighbor-information_verbose.textfsm, .*, hp_comware, di[[splay]] ll[[dp]] n[[eighbor-information]] v[[erbose]]
 hp_comware_display_lldp_neighbor-information_list.textfsm, .*, hp_comware, di[[splay]] ll[[dp]] n[[eighbor-information]] l[[ist]]
@@ -673,19 +681,36 @@ hp_procurve_show_arp.textfsm, .*, (hp|aruba)_procurve, sh[[ow]] ar[[p]]
 hp_procurve_show_ip.textfsm, .*, (hp|aruba)_procurve, sh[[ow]] ip
 
 huawei_ont_display_port_statistics_portid_0.textfsm, .*, huawei_ont, di[[splay]] p[[ort]] s[[tatistics]] po[[rtid]] \d+
+huawei_ont_display_portstatistics_portnum_0.textfsm, .*, huawei_ont, di[[splay]] po[[rtstatistics]] p[[ortnum]] \d+
+huawei_ont_display_flashlock_status.textfsm, .*, huawei_ont, di[[splay]] fl[[ashlock]] s[[tatus]]
 huawei_ont_display_wifi_information.textfsm, .*, huawei_ont, di[[splay]] w[[ifi]] i[[nformation]]
 huawei_ont_display_pppoe_em_result.textfsm, .*, huawei_ont, di[[splay]] pppoe(\s+|_)e[[m]] r[[esult]]
 huawei_ont_display_epon_ont_info.textfsm, .*, huawei_ont, di[[splay]] ep[[on]] o[[nt]] i[[nfo]]
 huawei_ont_display_inner_version.textfsm, .*, huawei_ont, di[[splay]] in[[ner]] ve[[rsion]]
+huawei_ont_display_swm_bootstate.textfsm, .*, huawei_ont, di[[splay]] swm b[[ootstate]]
 huawei_ont_display_access_mode.textfsm, .*, huawei_ont, di[[splay]] ac[[cess]] m[[ode]]
+huawei_ont_display_machineItem.textfsm, .*, huawei_ont, di[[splay]] mach[[ineItem]]
 huawei_ont_display_memory_info.textfsm, .*, huawei_ont, di[[splay]] me[[mory]] i[[nfo]]
+huawei_ont_display_deviceInfo.textfsm, .*, huawei_ont, di[[splay]] de[[viceInfo]]
 huawei_ont_display_macaddress.textfsm, .*, huawei_ont, di[[splay]] maca[[ddress]]
+huawei_ont_display_productmac.textfsm, .*, huawei_ont, di[[splay]] pr[[oductmac]]
+huawei_ont_display_boardItem.textfsm, .*, huawei_ont, di[[splay]] bo[[ardItem]]
+huawei_ont_display_rf_config.textfsm, .*, huawei_ont, di[[splay]] rf c[[onfig]]
+huawei_ont_display_swm_state.textfsm, .*, huawei_ont, di[[splay]] s[[wm]] s[[tate]]
 huawei_ont_display_log_info.textfsm, .*, huawei_ont, di[[splay]] l[[og]] i[[nfo]]
-huawei_ont_display_optic.textfsm, .*, huawei_ont, di[[splay]] o[[ptic]]
+huawei_ont_display_optmode.textfsm, .*, huawei_ont, di[[splay]] optm[[ode]]
+huawei_ont_display_sysinfo.textfsm, .*, huawei_ont, di[[splay]] sys[[info]]
+huawei_ont_display_timeout.textfsm, .*, huawei_ont, di[[splay]] ti[[meout]]
+huawei_ont_display_version.textfsm, .*, huawei_ont, di[[splay]] ve[[rsion]]
+huawei_ont_display_lanmac.textfsm, .*, huawei_ont, di[[splay]] l[[anmac]]
+huawei_ont_display_wanmac.textfsm, .*, huawei_ont, di[[splay]] w[[anmac]]
+huawei_ont_display_optic.textfsm, .*, huawei_ont, di[[splay]] opti[[c]]
+huawei_ont_display_sn.textfsm, .*, huawei_ont, di[[splay]] sn
 
 huawei_smartax_display_ont_info_summary_ont.textfsm:huawei_smartax_display_ont_info_summary_sn.textfsm, .*, huawei_smartax, di[[splay]] ont i[[nfo]] su[[mmary]] \S+ *$
 huawei_smartax_display_ont_info_0_1_2.textfsm:huawei_smartax_display_ont_info_description.textfsm, .*, huawei_smartax, di[[splay]] ont i[[nfo]] (\d+\s*|\d+ \d+ \d+\s*)\s*[[all]] *$
 huawei_smartax_display_ont_port_vlan_0_1_byport_eth_0.textfsm, .*, huawei_smartax, di[[splay]] ont p[[ort]] vl[[an]] \d+ \d+ byport eth \d+\s*
+huawei_smartax_display_location_aaaa-aaaa-aaaa_ont.textfsm, .*, huawei_smartax, disp[[lay]] loc[[ation]] \S+ o[[nt]]
 huawei_smartax_display_ont_port_state_0_1_eth-port.textfsm, .*, huawei_smartax, di[[splay]] on[[t]] por[[t]] st[[ate]] \d+ \d+ e[[th-port]]
 huawei_smartax_display_ont_port_vlan_0_1_byvlan_0.textfsm, .*, huawei_smartax, di[[splay]] ont p[[ort]] v[[lan]] \d+ \d+ byvlan \d+
 huawei_smartax_display_ont-lineprofile_gpon_all.textfsm, .*, huawei_smartax, disp[[lay]] ont-li[[neprofile]] g[[pon]] a[[ll]]\s*
@@ -694,6 +719,7 @@ huawei_smartax_display_ont_optical-info_0_all.textfsm, .*, huawei_smartax, di[[s
 huawei_smartax_display_ont_snmp-profile_0_all.textfsm, .*, huawei_smartax, di[[splay]] ont s[[nmp-profile]] \d+ all
 huawei_smartax_display_ont_gemport_0_ontid_0.textfsm, .*, huawei_smartax, di[[splay]] ont g[[emport]] \d+ ontid \d+\s*
 huawei_smartax_display_ont_version_summary_0.textfsm, .*, huawei_smartax, disp[[lay]] ont ve[[rsion]] s[[ummary]] \S+\s*
+huawei_smartax_display_ont_wlan-info_0_1_2_0.textfsm, .*, huawei_smartax, di[[splay]] ont w[[lan-info]] \d+(\/)?\s*\d+(\/)?\s*\d+ \d+\s*
 huawei_smartax_display_ont_wan-info_0_1_2_0.textfsm, .*, huawei_smartax, di[[splay]] ont w[[an-info]] \d+(\/)?\s*\d+ \d+ \d+\s*
 huawei_smartax_display_sysman_service_state.textfsm, .*, huawei_smartax, di[[splay]] sysman s[[ervice]] s[[tate]]
 huawei_smartax_display_board_serial-number.textfsm, .*, huawei_smartax, di[[splay]] bo[[ard]] s[[erial-number]]\s*
@@ -706,6 +732,7 @@ huawei_smartax_display_mac-address.textfsm, .*, huawei_smartax, display mac-addr
 huawei_smartax_display_temperature.textfsm, .*, huawei_smartax, di[[splay]] tem[[perature]]\s*
 huawei_smartax_display_port_info.textfsm, .*, huawei_smartax, di[[splay]] port i[[nfo]]\s*
 huawei_smartax_display_sysuptime.textfsm, .*, huawei_smartax, di[[splay]] sys[[uptime]]
+huawei_smartax_display_location.textfsm, .*, huawei_smartax, disp[[lay]] loc[[ation]]( \S+)?\s*$
 huawei_smartax_display_version.textfsm, .*, huawei_smartax, di[[splay]] ver[[sion]]
 huawei_smartax_display_board.textfsm, .*^, huawei_smartax, di[[splay]] bo[[ard]]\s*
 huawei_smartax_display_cpu.textfsm, .*, huawei_smartax, di[[splay]] cpu\s*
@@ -713,28 +740,31 @@ huawei_smartax_display_mem.textfsm, .*, huawei_smartax, di[[splay]] mem[[ory]]\s
 huawei_smartax_port_vlan.textfsm, .*, huawei_smartax, port vlan\s*
 huawei_smartax_ont_add.textfsm, .*, huawei_smartax, ont add\s*
 
+huawei_vrp_display_lldp_neighbor.textfsm:huawei_vrp_display_lldp_neighbor2.textfsm, .*, huawei_vrp, dis[[play]] lldp nei[[ghbor]]
 huawei_vrp_display_traffic-filter_applied-record.textfsm, .*, huawei_vrp, dis[[play]] traffic-filter applied-record
 huawei_vrp_display_ip_vpn-instance_interface.textfsm, .*, huawei_vrp, di[[splay]] ip vpn[[-instance]] interface
 huawei_vrp_display_snmp-agent_community_read.textfsm, .*, huawei_vrp, dis[[play]] snm[[p-agent]] c[[ommunity]] (r[[ead]]|w[[rite]])
 huawei_vrp_display_ip_routing-table_verbose.textfsm, .*, huawei_vrp, dis[[play]] ip(v6)? routi[[ng-table]] ve[[rbose]]
 huawei_vrp_display_interface_description.textfsm, .*, huawei_vrp, dis[[play]] inter[[face]] des[[cription]]
 huawei_vrp_display_telnet_server_status.textfsm, .*, huawei_vrp, di[[splay]] t[[elnet]] s[[erver]] s[[tatus]]
+huawei_vrp_display_patch-information.textfsm, .*, huawei_vrp, d[[isplay]] pa[[tch-information]]
 huawei_vrp_display_service-set_id_id.textfsm, .*, huawei_vrp, dis[[play]] service-set (id|name) \S+
 huawei_vrp_display_interface_brief.textfsm, .*, huawei_vrp, dis[[play]] inter[[face]] br[[ief]]
 huawei_vrp_display_ip_vpn-instance.textfsm, .*, huawei_vrp, di[[splay]] ip vpn[[-instance]]
 huawei_vrp_display_service-set_all.textfsm, .*, huawei_vrp, dis[[play]] service-set all
 huawei_vrp_display_ipv6_neighbors.textfsm, .*, huawei_vrp, dis[[play]] ipv6 n[[eighbors]]
 huawei_vrp_display_mpls_te_tunnel.textfsm, .*, huawei_vrp, dis[[play]] mpls te tunnel
-huawei_vrp_display_lldp_neighbor.textfsm, .*, huawei_vrp, dis[[play]] lldp nei[[ghbor]]
 huawei_vrp_display_http_server.textfsm, .*, huawei_vrp, di[[splay]] h[[ttp]] s[[erver]] *$
 huawei_vrp_display_mac-address.textfsm, .*, huawei_vrp, disp[[lay]] mac[[-address]]
 huawei_vrp_display_temperature.textfsm, .*, huawei_vrp, dis[[play]] tem[[perature]]
 huawei_vrp_display_nat_server.textfsm, .*, huawei_vrp, dis[[play]] na[[t]] ser[[ver]]
+huawei_vrp_display_ntp_status.textfsm, .*, huawei_vrp, d[[isplay]] nt[[p]] st[[atus]]
 huawei_vrp_display_sn_license.textfsm, .*, huawei_vrp, dis[[play]] sn l[[icence]]
 huawei_vrp_display_arp_brief.textfsm, .*, huawei_vrp, dis[[play]] arp br[[ief]]
 huawei_vrp_display_interface.textfsm, .*, huawei_vrp, dis[[play]] inter[[face]]\s*((?!brief|counters|description).)*$
 huawei_vrp_display_isis_peer.textfsm, .*, huawei_vrp, disp[[lay]] isis p[[eer]]
 huawei_vrp_display_port_vlan.textfsm, .*, huawei_vrp, dis[[play]] port vl[[an]]
+huawei_vrp_display_bgp_peer.textfsm, .*, huawei_vrp, dis[[play]] bgp peer
 huawei_vrp_display_acl_all.textfsm, .*, huawei_vrp, dis[[play]] acl(\si[[pv6]])? a[[ll]]
 huawei_vrp_display_arp_all.textfsm, .*, huawei_vrp, disp[[lay]] ar[[p]] all
 huawei_vrp_display_startup.textfsm, .*, huawei_vrp, dis[[play]] star[[tup]]
@@ -755,7 +785,9 @@ juniper_junos_show_lacp_interfaces.textfsm, .*, juniper_junos, sh[[ow]] la[[cp]]
 juniper_junos_show_arp_no-resolve.textfsm, .*, juniper_junos, sh[[ow]] a[[rp]] n[[o-resolve]]
 juniper_junos_show_isis_adjacency.textfsm, .*, juniper_junos, sh[[ow]] is[[is]] ad[[jacency]]
 juniper_junos_show_lldp_neighbors.textfsm, .*, juniper_junos, sh[[ow]] ll[[dp]] n[[eighbors]]
+juniper_junos_show_rsvp_interface.textfsm, .*, juniper_junos, sh[[ow]] rs[[vp]] i[[nterface]]
 juniper_junos_show_ospf_neighbor.textfsm, .*, juniper_junos, sh[[ow]] ospf n[[eighbor]]
+juniper_junos_show_route_summary.textfsm, .*, juniper_junos, sh[[ow]] ro[[ute]] su[[mmary]]
 juniper_junos_show_system_uptime.textfsm, .*, juniper_junos, sh[[ow]] sys[[tem]] up[[time]]
 juniper_junos_show_bgp_summary.textfsm, .*, juniper_junos, sh[[ow]] bgp sum[[mary]]
 juniper_junos_show_interfaces.textfsm, .*, juniper_junos, sh[[ow]] inte[[rfaces]]
@@ -765,6 +797,7 @@ juniper_junos_show_vlans.textfsm, .*, juniper_junos, sh[[ow]] vl[[ans]]
 juniper_screenos_get_route.textfsm, .*, juniper_screenos, get route
 
 linux_dmidecode_-t_processor.textfsm, .*, linux, dmidecode -t processor
+linux_nmcli_connection_show.textfsm, .*, linux, nmcli c[[onnection]] s[[how]]
 linux_dmidecode_-t_memory.textfsm, .*, linux, dmidecode -t memory
 linux_dmidecode_-t_system.textfsm, .*, linux, dmidecode -t system
 linux_dmidecode_-t_bios.textfsm, .*, linux, dmidecode -t bios
@@ -779,6 +812,7 @@ linux_pct_list.textfsm, .*, linux, pct list
 linux_qm_list.textfsm, .*, linux, qm list
 linux_arp_-a.textfsm, .*, linux, arp -a
 linux_vzlist.textfsm, .*, linux, vzlist
+linux_top.textfsm, .*, linux, top
 
 mikrotik_routeros_routing_ospf_neighbor_print_terse_without-paging.textfsm, .*, mikrotik_routeros, [[/]]r[[outing]] o[[spf]] nei[[ghbor]] p[[rint]] t[[erse]] wi[[thout-paging]]
 mikrotik_routeros_ip_dhcp-server_lease_print_terse_without-paging.textfsm, .*, mikrotik_routeros, [[/]]ip dh[[cp-server]] l[[ease]] pr[[int]] t[[erse]] wi[[thout-paging]]

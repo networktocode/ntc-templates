@@ -1,6 +1,6 @@
 Value Required SENT_QTY (\d+)
 Value Required SENT_TYPE (.*)
-Value Required DESTINATION (\S+)
+Value Required DESTINATION (\S+[^,])
 Value Required TIMEOUT (\d+)
 Value SOURCE (\S+)
 Value List RESPONSE_STREAM ([\.\!/Q/U]+)
@@ -14,7 +14,7 @@ Value RTT_MAX (\d+)
 Start
   ^(Mon?)|(Tue?)|(Wed?)|(Thu?)|(Fri?)|(Sat?)|(Sun?)\s.*$$
   ^Type\s+escape\s+sequence\s+to\s+abort.
-  ^Sending\s+${SENT_QTY},\s+${SENT_TYPE}\s+to\s+${DESTINATION},\s+timeout\s+is\s+${TIMEOUT}\s+seconds:
+  ^Sending\s+${SENT_QTY},\s+${SENT_TYPE}\s+to\s+${DESTINATION},?\s+timeout\s+is\s+${TIMEOUT}\s+seconds:
   ^Packet\s+sent\s+with\s+a\s+source\s+address\s+of\s+${SOURCE}
   ^Packet\s+sent\s+with\s+the\s+DF\s+bit\s+set
   ^${RESPONSE_STREAM}
