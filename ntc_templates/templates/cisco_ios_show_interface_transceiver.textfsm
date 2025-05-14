@@ -1,11 +1,19 @@
 Value INTERFACE (\w+\d+\/\S+)
 Value TEMPERATURE (\d+.\d+)
 Value VOLTAGE (\d+.\d+)
+Value CURRENT (\d+.\d+)
 Value TX_PWR (\S+)
 Value RX_PWR (\S+)
 
 Start
-  ^${INTERFACE}\s+${TEMPERATURE}\s+${VOLTAGE}\s+${TX_PWR}\s+${RX_PWR}\s+ -> Record
+  ^${INTERFACE}\s+${TEMPERATURE}\s+${VOLTAGE}\s+${CURRENT}?\s+${TX_PWR}\s+${RX_PWR}\s* -> Record
   # Capture time-stamp if vty line has command time-stamping turned on
   ^Load\s+for\s+
   ^Time\s+source\s+is
+  ^(\s+Optical){2}
+  ^\s+Temperature\s+Voltage(\s+Current)?(\s+[TR]x\s+Power){2}
+  ^Port\s+\(Celsius\)\s+\(Volts\)(\s+\(mA\))?\s+(\(dBm\)\s*){2}
+  ^(If\s+device|\+\+|NA|mA|---+)
+  ^No\s+transceiver\s+present
+  ^Diagnostic\s+Monitoring\s+is\s+not\s+implemented\.
+  ^. -> Error
