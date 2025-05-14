@@ -6,7 +6,7 @@ Value TX_PWR (\S+)
 Value RX_PWR (\S+)
 
 Start
-  ^${INTERFACE}\s+${TEMPERATURE}\s+${VOLTAGE}\s+${CURRENT}?\s+${TX_PWR}\s+${RX_PWR}\s? -> Record
+  ^${INTERFACE}\s+${TEMPERATURE}\s+${VOLTAGE}\s+${CURRENT}?\s+${TX_PWR}\s+${RX_PWR}\s* -> Record
   # Capture time-stamp if vty line has command time-stamping turned on
   ^Load\s+for\s+
   ^Time\s+source\s+is
