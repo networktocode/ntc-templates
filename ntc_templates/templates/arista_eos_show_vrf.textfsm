@@ -93,3 +93,5 @@ VRF
   #
   # match vrf line with no interfaces
   ^\s+${VRF}\s+${RD}\s+\S+\s+\S+:\S+(\s\S+)*,?\s+$$
+  #
+  ^---+
