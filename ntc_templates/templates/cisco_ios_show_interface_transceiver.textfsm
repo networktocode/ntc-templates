@@ -14,6 +14,6 @@ Start
   ^\s+Temperature\s+Voltage(\s+Current)?(\s+[TR]x\s+Power){2}
   ^Port\s+\(Celsius\)\s+\(Volts\)(\s+\(mA\))?\s+(\(dBm\)\s*){2}
   ^(If\s+device|\+\+|NA|mA|---+)
-  ^No transceiver present
-  ^Diagnostic Monitoring is not implemented\.
+  ^No\s+transceiver\s+present
+  ^Diagnostic\s+Monitoring\s+is\s+not\s+implemented\.
   ^. -> Error
