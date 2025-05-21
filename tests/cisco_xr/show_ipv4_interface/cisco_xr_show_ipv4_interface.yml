@@ -1,7 +1,7 @@
 ---
 parsed_sample:
-  - interface: "GigabitEthernet0/0/0/0"
-    in_acl: "not set, access list is not set"
+  - in_acl: "not set, access list is not set"
+    interface: "GigabitEthernet0/0/0/0"
     ip_address: "10.2.0.2"
     ip_mtu: "1500"
     link_status: "Up"
@@ -20,8 +20,8 @@ parsed_sample:
     sec_prefix_length: []
     vrf: "default"
     vrf_id: "0x60000000"
-  - interface: "GigabitEthernet0/0/0/1"
-    in_acl: "not set, access list is not set"
+  - in_acl: "not set, access list is not set"
+    interface: "GigabitEthernet0/0/0/1"
     ip_address: "10.0.7.1"
     ip_mtu: "1500"
     link_status: "Up"
