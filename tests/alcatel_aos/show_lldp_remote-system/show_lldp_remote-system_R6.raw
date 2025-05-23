@@ -71,3 +71,24 @@ Remote LLDP Agents on Local Slot/Port 1/4:
       Capabilities Enabled        = Bridge Router,
       Management IP Address       = 1.1.1.1
 
+Remote LLDP Agents on Local Slot/Port 1/24:
+
+    Chassis aa:aa:aa:aa:aa:aa, Port GigabitEthernet0/0/47:
+      Remote ID                   = 223,
+      Chassis Subtype             = 4 (MAC Address),
+      Port Subtype                = 5 (Interface name),
+      Port Description            = UPLINK,
+      System Name                 = super_mega_switch,
+      System Description          = S5700-52P-PWR-LI-AC
+Huawei Versatile Routing Platform Software
+VRP (R) software, Version 1.110 (S5700 A000A000A00AAA000)
+Copyright (C) 2000-2001 HUAWEI TECH Co., Ltd.,
+      Capabilities Supported      = Bridge Router,
+      Capabilities Enabled        = Bridge Router,
+      Management IP Address       = 1.1.1.1
+      Remote port default vlan    = 2000,
+      Vlan ID                     = 1,
+      Vlan Name                   = VLAN 0001,
+      Protocol vlan Id            = 0 (Flags = 0),
+      Remote port MAC/PHY AutoNeg = Supported Enabled Capability 0xa03e,
+      Mau Type                    = 1000BaseTFD - Four-pair Category 5 UTP full duplex mode
