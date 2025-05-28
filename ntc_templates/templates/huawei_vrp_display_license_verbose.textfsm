@@ -23,35 +23,35 @@ Value USED_VALUE (\d+)
 Value ITEM_STATE (\w+)
 Value ITEM_EXPIRED_DATE (\S+)
 Value ITEM_TRIAL_DAYS (\d+)
-Value DESCRIPTION (.*)
+Value DESCRIPTION (\S.+\S)
 
 Start
-  ^\s+Active\s+license\s+:\s+${ACTIVE_LICENSE}
-  ^\s+License\s+state\s+:\s+${LICENSE_STATE}
-  ^\s+Revoke\s+ticket\s+:\s+${REVOKE_TICKET}
-  ^\s+License\s+mode\s+:\s+${LICENSE_MODE}
-  ^\s+Product\s+name\s+:\s+${PRODUCT_NAME}
-  ^\s+Product\s+version\s+:\s+${PRODUCT_VERSION}
-  ^\s+License\s+file\s+ESN\s+:\s+${LICENSE_FILE_ESN}
-  ^\s+License\s+Serial\s+No\s+:\s+${LICENSE_SERIAL_NO}
-  ^\s+Creator\s+:\s+${CREATOR}
-  ^\s+Created\s+Time\s+:\s+${CREATED_TIME}
-  ^\s+Country\s+:\s+${COUNTRY}
-  ^\s+Custom\s+:\s+${CUSTOM}
-  ^\s+Office\s+:\s+${OFFICE}
-  ^\s+Feature\s+name\s+:\s+${FEATURE_NAME}
-  ^\s+Authorize\s+type\s+:\s+${AUTHORIZE_TYPE}
-  ^\s+Expired\s+date\s+:\s+${EXPIRED_DATE}
-  ^\s+Trial\s+days\s+:\s+${TRIAL_DAYS}
-  ^\s+Sale\s+name\s+:\s+${SALE_NAME}
-  ^\s+Item\s+name\s+:\s+${ITEM_NAME}
-  ^\s+Item\s+type\s+:\s+${ITEM_TYPE}
-  ^\s+Control\s+value\s+:\s+${CONTROL_VALUE}
-  ^\s+Used\s+value\s+:\s+${USED_VALUE}
-  ^\s+Item\s+state\s+:\s+${ITEM_STATE}
-  ^\s+Item\s+expired\s+date\s+:\s+${ITEM_EXPIRED_DATE}
-  ^\s+Item\s+trial\s+days\s+:\s+${ITEM_TRIAL_DAYS}
-  ^\s+Description\s+:\s+${DESCRIPTION} -> Record
+  ^\s*Active\s+license\s*:\s*${ACTIVE_LICENSE}\s*$$
+  ^\s*License\s+state\s*:\s*${LICENSE_STATE}\s*$$
+  ^\s*Revoke\s+ticket\s*:\s*${REVOKE_TICKET}\s*$$
+  ^\s*License\s+mode\s*:\s*${LICENSE_MODE}\s*$$
+  ^\s*Product\s+name\s*:\s*${PRODUCT_NAME}\s*$$
+  ^\s*Product\s+version\s*:\s*${PRODUCT_VERSION}\s*$$
+  ^\s*License\s+file\s+ESN\s*:\s*${LICENSE_FILE_ESN}\s*$$
+  ^\s*License\s+Serial\s+No\s*:\s*${LICENSE_SERIAL_NO}\s*$$
+  ^\s*Creator\s*:\s*${CREATOR}\s*$$
+  ^\s*Created\s+Time\s*:\s*${CREATED_TIME}\s*$$
+  ^\s*Country\s*:\s*${COUNTRY}\s*$$
+  ^\s*Custom\s*:\s*${CUSTOM}\s*$$
+  ^\s*Office\s*:\s*${OFFICE}\s*$$
+  ^\s*Feature\s+name\s*:\s*${FEATURE_NAME}\s*$$
+  ^\s*Authorize\s+type\s*:\s*${AUTHORIZE_TYPE}\s*$$
+  ^\s*Expired\s+date\s*:\s*${EXPIRED_DATE}\s*$$
+  ^\s*Trial\s+days\s*:\s*${TRIAL_DAYS}\s*$$
+  ^\s*Sale\s+name\s*:\s*${SALE_NAME}\s*$$
+  ^\s*Item\s+name\s*:\s*${ITEM_NAME}\s*$$
+  ^\s*Item\s+type\s*:\s*${ITEM_TYPE}\s*$$
+  ^\s*Control\s+value\s*:\s*${CONTROL_VALUE}\s*$$
+  ^\s*Used\s+value\s*:\s*${USED_VALUE}\s*$$
+  ^\s*Item\s+state\s*:\s*${ITEM_STATE}\s*$$
+  ^\s*Item\s+expired\s+date\s*:\s*${ITEM_EXPIRED_DATE}\s*$$
+  ^\s*Item\s+trial\s+days\s*:\s*${ITEM_TRIAL_DAYS}\s*$$
+  ^\s*Description\s*:\s*${DESCRIPTION}\s*$$ -> Record
   ^. -> Error
 
 EOF
