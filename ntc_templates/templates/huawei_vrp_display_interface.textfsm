@@ -11,10 +11,10 @@ Value HOLD_TIMER (\d+)
 Value INTERNET_ADDRESS (\S*)
 Value INTERNET_PROTOCOL (disabled|enabled)
 Value HARDWARE_ADDRESS (\S{4}-\S{4}-\S{4})
-Value LAST_PHYSICAL_UP_TIME (\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2}|-)
-Value LAST_PHYSICAL_DOWN_TIME (\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2}|-)
-Value LAST_LINE_PROTOCOL_UPTIME (\d{4}-\d{2}-\d{2}\s*\d{2}:\d{2}:\d{2}\s*(\S{3}\+\d{2}:\d{2}\s*\S{3})?)
-Value CURRENT_SYSTEM_TIME (\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2})
+Value LAST_PHYSICAL_UP_TIME (\S.+\S)
+Value LAST_PHYSICAL_DOWN_TIME (\S.+\S)
+Value LAST_LINE_PROTOCOL_UPTIME (\S.+\S)
+Value CURRENT_SYSTEM_TIME (\S.+\S)
 Value PORT_MODE ([\S\s]*)
 Value CURRENT_WORK_MODE (\S.+\S|\S+)
 Value SPEED (\d*)
@@ -24,51 +24,51 @@ Value NEGOTIATION (DISABLE|ENABLE)
 Value List AGGREGATED_INTERFACES (\S+)
 
 Start
-  ^\S*\s+current\s+state\s+:.*$$ -> Continue.Record
-  ^${INTERFACE}\s+current\s+state\s+:\s+${LINK_STATUS}\s*$$
-  ^Line\s+protocol\s+current\s+state\s+:\s+${PROTOCOL_STATUS}\s*$$
-  ^Last\s*line\s*protocol\s*up\s*time\s*:\s*(-|${LAST_LINE_PROTOCOL_UPTIME})\s*$$
-  ^Description:${INTERFACE_DESCRIPTION}\s*$$
-  ^${PORT_TYPE}\s+Port,\s*Link-type\s*:\s*${LINK_TYPE},\s*$$
-  ^${PORT_TYPE}\s+Port,\s*The\s+(MTU|Maximum\s+Transmit\s+Unit)\s+is\s+${MTU}(,\s*Hold\s*timer\s*is\s*${HOLD_TIMER}\(sec\))?\s*$$
-  ^${PORT_TYPE}\s+Port,(\s*PVID\s*:\s*${PVID},)?\s*TPID\s*:\s*${TPID},\s*The\s*Maximum\s*(Frame\s*Length|Transmit\s*Unit)\s*is\s*${MTU}\s*$$
-  ^TPID\s*:\s*${TPID},\s*The\s*Maximum\s*Frame\s*Length\s*is\s*${MTU}\s*$$
-  ^PVID\s*:\s+${PVID},(\s*[^,]+,){0,}\s+The\s+Maximum\s+Frame\s+Length\s+is\s+${MTU}
-  ^Internet\s+Address\s+is\s+allocated\s+by\s+DHCP,\s+${INTERNET_ADDRESS}\s*$$
-  ^Internet\s+Address\s+is\s+negotiated,\s+${INTERNET_ADDRESS}\s*$$
-  ^Internet\s+Address\s+is\s+${INTERNET_ADDRESS}\s*$$
-  ^.*,\s+Hardware\s+address\s+is\s+${HARDWARE_ADDRESS}\s*$$
-  ^Internet\s+protocol\s+processing\s+:\s+${INTERNET_PROTOCOL}\s*$$
-  ^Encapsulation\sis\s.+\s*$$
-  ^Tunnel\ssource\s\S+\s\(.+\),\sdestination\s\S+\s*$$
-  ^Tunnel\sprotocol\/transport\sGRE\/IP,\skey\s.+\s*$$
-  ^keepalive\s\S+\s*$$
-  ^Checksumming\sof\spackets\s\S+\s*$$
-  ^Last\s+physical\s+up\s+time\s*:\s+${LAST_PHYSICAL_UP_TIME}\s*
-  ^Last\s+physical\s+down\s+time\s+:\s+${LAST_PHYSICAL_DOWN_TIME}\s*
-  ^IP\sSending\sFrames'\sFormat\sis\s\S+\s*,\sHardware\saddress\sis\s\S+\s*$$
-  ^Current\s+system\s+time:\s+${CURRENT_SYSTEM_TIME}\s*
-  ^Modem\sState:\s+.+\s*$$
-  ^Model\s=\s+.+\s*$$
-  ^Current\sNetwork\sConnection\s=\s.+\s*$$
-  ^Current\sRSSI\s<?=\s+(-)?\d+\sdBm.*$$
-  ^Current\sSINR\s([<>])?=\s+(-)?\d+\sdB\s\(.+\)\s*$$
+  ^\s*\S*\s+current\s+state\s+:.*$$ -> Continue.Record
+  ^\s*${INTERFACE}\s+current\s+state\s+:\s+${LINK_STATUS}\s*$$
+  ^\s*Line\s+protocol\s+current\s+state\s+:\s+${PROTOCOL_STATUS}\s*$$
+  ^\s*Last\s*line\s*protocol\s*up\s*time\s*:\s*(-|${LAST_LINE_PROTOCOL_UPTIME})\s*$$
+  ^\s*Description:${INTERFACE_DESCRIPTION}\s*$$
+  ^\s*${PORT_TYPE}\s+Port,\s*Link-type\s*:\s*${LINK_TYPE},\s*$$
+  ^\s*${PORT_TYPE}\s+Port,\s*The\s+(MTU|Maximum\s+Transmit\s+Unit)\s+is\s+${MTU}(,\s*Hold\s*timer\s*is\s*${HOLD_TIMER}\(sec\))?\s*$$
+  ^\s*${PORT_TYPE}\s+Port,(\s*PVID\s*:\s*${PVID},)?\s*TPID\s*:\s*${TPID},\s*The\s*Maximum\s*(Frame\s*Length|Transmit\s*Unit)\s*is\s*${MTU}\s*$$
+  ^\s*TPID\s*:\s*${TPID},\s*The\s*Maximum\s*Frame\s*Length\s*is\s*${MTU}\s*$$
+  ^\s*PVID\s*:\s+${PVID},(\s*[^,]+,){0,}\s+The\s+Maximum\s+Frame\s+Length\s+is\s+${MTU}
+  ^\s*Internet\s+Address\s+is\s+allocated\s+by\s+DHCP,\s+${INTERNET_ADDRESS}\s*$$
+  ^\s*Internet\s+Address\s+is\s+negotiated,\s+${INTERNET_ADDRESS}\s*$$
+  ^\s*Internet\s+Address\s+is\s+${INTERNET_ADDRESS}\s*$$
+  ^\s*.*,\s+Hardware\s+address\s+is\s+${HARDWARE_ADDRESS}\s*$$
+  ^\s*Internet\s+protocol\s+processing\s+:\s+${INTERNET_PROTOCOL}\s*$$
+  ^\s*Encapsulation\sis\s.+\s*$$
+  ^\s*Tunnel\ssource\s\S+\s\(.+\),\sdestination\s\S+\s*$$
+  ^\s*Tunnel\sprotocol\/transport\sGRE\/IP,\skey\s.+\s*$$
+  ^\s*keepalive\s\S+\s*$$
+  ^\s*Checksumming\sof\spackets\s\S+\s*$$
+  ^\s*Last\s+physical\s+up\s+time\s*:\s+(-|${LAST_PHYSICAL_UP_TIME})\s*
+  ^\s*Last\s+physical\s+down\s+time\s+:\s+(-|${LAST_PHYSICAL_DOWN_TIME})\s*
+  ^\s*IP\sSending\sFrames'\sFormat\sis\s\S+\s*,\sHardware\saddress\sis\s\S+\s*$$
+  ^\s*Current\s+system\s+time:\s+${CURRENT_SYSTEM_TIME}\s*
+  ^\s*Modem\sState:\s+.+\s*$$
+  ^\s*Model\s=\s+.+\s*$$
+  ^\s*Current\sNetwork\sConnection\s=\s.+\s*$$
+  ^\s*Current\sRSSI\s<?=\s+(-)?\d+\sdBm.*$$
+  ^\s*Current\sSINR\s([<>])?=\s+(-)?\d+\sdB\s\(.+\)\s*$$
   ^\s+Input\sbandwidth\sutilization(\sthreshold)?\s*:.*$$
   ^\s+Output\sbandwidth\sutilization(\sthreshold)?\s*:.*$$
-  ^Port\s+Mode:\s+${PORT_MODE}\s*$$
+  ^\s*Port\s+Mode:\s+${PORT_MODE}\s*$$
   ^\s*Current\s+Work\s+Mode:\s+${CURRENT_WORK_MODE}\s*$$
-  ^Speed\s+:\s+${SPEED},\s*Loopback:\s+${LOOPBACK}\s*$$
-  ^Duplex:\s+${DUPLEX},\s*Negotiation:\s+${NEGOTIATION}\s*$$
-  ^Mdi\s*:\s+\S+,\s*Clock\s*:\s+\S+\s*$$
-  ^Port\sPHY\stype\s+:\s+\S+\s*$$
+  ^\s*Speed\s+:\s+${SPEED},\s*Loopback:\s+${LOOPBACK}\s*$$
+  ^\s*Duplex:\s+${DUPLEX},\s*Negotiation:\s+${NEGOTIATION}\s*$$
+  ^\s*Mdi\s*:\s+\S+,\s*Clock\s*:\s+\S+\s*$$
+  ^\s*Port\sPHY\stype\s+:\s+\S+\s*$$
   ^\s*Last\s\d+\sseconds\s(input|output)\srate\s(\d+\sbytes\/sec(,)?\s)?\d+\sbits\/sec(,)?\s\d+\spackets\/sec\s*$$
   ^\s*(Input|Output)\speak\srate\s\d+\sbits\/sec\s*,\s*Record\stime:\s+.*$$
-  ^Link\slayer\sprotocol\sis.*$$
-  ^LCP\sinitial\s*$$
-  ^Physical\sis.*$$
-  ^Bound\sto.*$$
+  ^\s*Link\slayer\sprotocol\sis.*$$
+  ^\s*LCP\sinitial\s*$$
+  ^\s*Physical\sis.*$$
+  ^\s*Bound\sto.*$$
   ^\s*LCP\s\S+,\s+IPCP\s\S+(,\s+IP6CP\s\S+)?\s*$$
-  ^Packets\sstatistics:\s*$$
+  ^\s*Packets\sstatistics:\s*$$
   ^\s+(Input|Output)\spackets\s*:\s*\d+,\s+\d+\sbytes\s*$$
   ^\s+FCS\serror\spackets:\s*\d+\s*$$
   ^\s+Address\serror\spackets:\s*\d+\s*$$
@@ -92,14 +92,14 @@ Start
   ^\s*Output:\s+\d+\s+Packets,\s+\d+\s+Bytes
   ^\s*Mdi\s+:\s+
   ^-{6}
-  ^PortName -> Trunk
+  ^\s*PortName -> Trunk
   ^\s+
   ^. -> Error
 
 Trunk
-  ^-{6}
-  ^${AGGREGATED_INTERFACES}\s+\S+\s+\d+\s*$$
-  ^The\s+Number\s+of\s+Ports\s+in\s+Trunk\s*:\s*\d+\s*$$
-  ^The\s+Number\s+of\s+UP\s+Ports\s+in\s+Trunk\s*:\s*\d+\s*$$
+  ^\s*-{6}
+  ^\s*${AGGREGATED_INTERFACES}\s+\S+\s+\d+\s*$$
+  ^\s*The\s+Number\s+of\s+Ports\s+in\s+Trunk\s*:\s*\d+\s*$$
+  ^\s*The\s+Number\s+of\s+UP\s+Ports\s+in\s+Trunk\s*:\s*\d+\s*$$
   ^\s*$$ -> Start
   ^. -> Error
