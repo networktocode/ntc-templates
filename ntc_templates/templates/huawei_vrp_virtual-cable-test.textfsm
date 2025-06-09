@@ -9,7 +9,7 @@ Value PAIR_D_STATE (\S+)
 
 Start
   ^\s*Warning:\s+The\s+command\s+will\s+stop\s+service\s+for\s+a\s+while.\s+Continue\?\s+\[Y\/N\]:\s*Y\s*$$
-  ^\s*Info:\s+This\s+operation\s+may\s+take\s+a\s+few\s+seconds.\s+Please\s+wait\s+for\s+a\s+moment..done.\s*$$
+  ^\s*Info:\s+This\s+operation\s+may\s+take\s+a\s+few\s+seconds.\s+Please\s+wait\s+for\s+a\s+moment\.+done.\s*$$
   ^\s*Pair\s+A\s+length:\s+${PAIR_A_LENGTH}\s*$$
   ^\s*Pair\s+B\s+length:\s+${PAIR_B_LENGTH}\s*$$
   ^\s*Pair\s+C\s+length:\s+${PAIR_C_LENGTH}\s*$$
