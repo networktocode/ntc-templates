@@ -1,6 +1,7 @@
 ---
 parsed_sample:
   - admin_state: "up"
+    babble: "0"
     bad_etype_drop: "0"
     bad_proto_drop: "0"
     bandwidth: ""
@@ -44,13 +45,12 @@ parsed_sample:
     runts: "0"
     rx_jumbo_packets: "0"
     rx_pause: "0"
-    rx_watchdog: "0"
     short_frame: "0"
     speed: ""
     stomped_crc: "0"
     storm_suppression_bytes: "0"
-    tx_babble: "0"
     tx_jumbo_packets: "0"
     tx_pause: "0"
     underrun: "0"
     vlan_id: ""
+    watchdog: "0"

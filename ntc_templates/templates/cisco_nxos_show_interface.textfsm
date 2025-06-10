@@ -30,7 +30,7 @@ Value SHORT_FRAME (\d+)
 Value OVERRUN (\d+)
 Value UNDERRUN (\d+)
 Value IGNORED (\d+)
-Value RX_WATCHDOG (\d+)
+Value WATCHDOG (\d+)
 Value BAD_ETYPE_DROP (\d+)
 Value BAD_PROTO_DROP (\d+)
 Value INTERFACE_DOWN_DROP (\d+)
@@ -51,7 +51,7 @@ Value DEFERRED (\d+)
 Value LATE_COLLISIONS (\d+)
 Value LOST_CARRIER (\d+)
 Value NO_CARRIER (\d+)
-Value TX_BABBLE (\d+)
+Value BABBLE (\d+)
 Value OUTPUT_DISCARDS (\d+)
 Value TX_PAUSE (\d+)
 
@@ -82,7 +82,7 @@ Start
   # RX
   ^\s+${INPUT_ERRORS}\s+input\s+errors?\s+${SHORT_FRAME}\s+short\s+frame\s+${OVERRUN}\s+overrun\s+${UNDERRUN}\s+underrun\s+${IGNORED}\s+ignored\s*$$
   ^\s+${INPUT_ERRORS}\s+input\s+errors\s+${SHORT_FRAME}\s+frame\s+${OVERRUN}\s+overrun\s+\d+\s+fifo\s*$$
-  ^\s+${RX_WATCHDOG}\s+watchdog\s+${BAD_ETYPE_DROP}\s+bad\s+etype\s+drop\s+${BAD_PROTO_DROP}\s+bad\s+proto\s+drop\s+${INTERFACE_DOWN_DROP}\s+if\s+down\s+drop\s*$$
+  ^\s+${WATCHDOG}\s+watchdog\s+${BAD_ETYPE_DROP}\s+bad\s+etype\s+drop\s+${BAD_PROTO_DROP}\s+bad\s+proto\s+drop\s+${INTERFACE_DOWN_DROP}\s+if\s+down\s+drop\s*$$
   ^\s+${DRIBBLE}\s+input\s+with\s+dribble\s+${INPUT_DISCARDS}\s+input\s+discard\s*$$
   ^\s+${RX_PAUSE}\s+Rx\s+pause\s*$$
   ^\s+${STOMPED_CRC}\s+Stomped\s+CRC\s*$$
@@ -94,7 +94,7 @@ Start
   ^\s+${TX_JUMBO_PACKETS}\s+jumbo\s+packets\s*$$
   ^\s+${OUTPUT_ERRORS}\s+output\s+errors?\s+${COLLISIONS}\s+collision\s+${DEFERRED}\s+deferred\s+${LATE_COLLISIONS}\s+late\s+collision\s*$$
   ^\s+${OUTPUT_ERRORS}\s+output\s+errors\s+${COLLISIONS}\s+collisions\s+\d+\s+fifo\s*$$
-  ^\s+${LOST_CARRIER}\s+lost\s+carrier\s+${NO_CARRIER}\s+no\s+carrier\s+${TX_BABBLE}\s+babble\s+${OUTPUT_DISCARDS}\s+output\s+discard\s*$$
+  ^\s+${LOST_CARRIER}\s+lost\s+carrier\s+${NO_CARRIER}\s+no\s+carrier\s+${BABBLE}\s+babble\s+${OUTPUT_DISCARDS}\s+output\s+discard\s*$$
   ^\s+${TX_PAUSE}\s+Tx\s+pause\s*$$
   # Unmatched
   ^\s+reliability\s+\d+/\d+,\s+txload\s+\d+/\d+,\s+rxload\s+\d+/\d+\s*$$
