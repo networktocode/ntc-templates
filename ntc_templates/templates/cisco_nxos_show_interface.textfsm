@@ -66,7 +66,7 @@ Start
   ^\s+Description:\s+${DESCRIPTION}\s*$$
   ^\s+Internet\s+Address\s+is\s+${IP_ADDRESS}\/${PREFIX_LENGTH}
   ^\s+Port\s+mode\s+is\s+${MODE}
-  ^\s+${DUPLEX}, ${SPEED}(,\s+media\s+type\s+is\s+${MEDIA_TYPE})?\s*$$
+  ^\s+${DUPLEX},\s+${SPEED}(,\s+media\s+type\s+is\s+${MEDIA_TYPE})?\s*$$
   ^\s+MTU\s+${MTU}.*BW\s+${BANDWIDTH}.*DLY\s+${DELAY}
   ^\s+Encapsulation\s+${ENCAPSULATION}(,)?(\s+Virtual\s+LAN,\s+Vlan\s+ID\s+${VLAN_ID},)?
   ^\s+${INPUT_PACKETS}\s+input\s+packets\s+\d+\s+bytes\s*$$
