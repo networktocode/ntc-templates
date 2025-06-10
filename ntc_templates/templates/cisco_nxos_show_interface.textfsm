@@ -26,13 +26,13 @@ Value BANDWIDTH_INPUT_RATE (.+?)
 Value BANDWIDTH_OUTPUT_RATE (.+?)
 Value MEDIA_TYPE (.+?)
 # RX
-Value RX_SHORT_FRAME (\d+)
+Value SHORT_FRAME (\d+)
 Value OVERRUN (\d+)
 Value UNDERRUN (\d+)
 Value IGNORED (\d+)
 Value RX_WATCHDOG (\d+)
-Value RX_BAD_ETYPE_DROP (\d+)
-Value RX_BAD_PROTO_DROP (\d+)
+Value BAD_ETYPE_DROP (\d+)
+Value BAD_PROTO_DROP (\d+)
 Value RX_IF_DOWN_DROP (\d+)
 Value DRIBBLE (\d+)
 Value INPUT_DISCARDS (\d+)
@@ -80,9 +80,9 @@ Start
   ^\s+\d+\s+(second|minute)s?\s+input\s+rate\s+${BANDWIDTH_INPUT_RATE}\s+bits/sec,\s+${PACKET_INPUT_RATE}\s+packets/sec
   ^\s+\d+\s+(second|minute)s?\s+output\s+rate\s+${BANDWIDTH_OUTPUT_RATE}\s+bits/sec,\s+${PACKET_OUTPUT_RATE}\s+packets/sec
   # RX
-  ^\s+${INPUT_ERRORS}\s+input\s+errors?\s+${RX_SHORT_FRAME}\s+short\s+frame\s+${OVERRUN}\s+overrun\s+${UNDERRUN}\s+underrun\s+${IGNORED}\s+ignored\s*$$
-  ^\s+${INPUT_ERRORS}\s+input\s+errors\s+${RX_SHORT_FRAME}\s+frame\s+${OVERRUN}\s+overrun\s+\d+\s+fifo\s*$$
-  ^\s+${RX_WATCHDOG}\s+watchdog\s+${RX_BAD_ETYPE_DROP}\s+bad\s+etype\s+drop\s+${RX_BAD_PROTO_DROP}\s+bad\s+proto\s+drop\s+${RX_IF_DOWN_DROP}\s+if\s+down\s+drop\s*$$
+  ^\s+${INPUT_ERRORS}\s+input\s+errors?\s+${SHORT_FRAME}\s+short\s+frame\s+${OVERRUN}\s+overrun\s+${UNDERRUN}\s+underrun\s+${IGNORED}\s+ignored\s*$$
+  ^\s+${INPUT_ERRORS}\s+input\s+errors\s+${SHORT_FRAME}\s+frame\s+${OVERRUN}\s+overrun\s+\d+\s+fifo\s*$$
+  ^\s+${RX_WATCHDOG}\s+watchdog\s+${BAD_ETYPE_DROP}\s+bad\s+etype\s+drop\s+${BAD_PROTO_DROP}\s+bad\s+proto\s+drop\s+${RX_IF_DOWN_DROP}\s+if\s+down\s+drop\s*$$
   ^\s+${DRIBBLE}\s+input\s+with\s+dribble\s+${INPUT_DISCARDS}\s+input\s+discard\s*$$
   ^\s+${RX_PAUSE}\s+Rx\s+pause\s*$$
   ^\s+${STOMPED_CRC}\s+Stomped\s+CRC\s*$$
