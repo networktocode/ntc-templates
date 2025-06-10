@@ -27,15 +27,15 @@ Value BANDWIDTH_OUTPUT_RATE (.+?)
 Value MEDIA_TYPE (.+?)
 # RX
 Value RX_SHORT_FRAME (\d+)
-Value RX_OVERRUN (\d+)
-Value RX_UNDERRUN (\d+)
-Value RX_IGNORED (\d+)
+Value OVERRUN (\d+)
+Value UNDERRUN (\d+)
+Value IGNORED (\d+)
 Value RX_WATCHDOG (\d+)
 Value RX_BAD_ETYPE_DROP (\d+)
 Value RX_BAD_PROTO_DROP (\d+)
 Value RX_IF_DOWN_DROP (\d+)
 Value RX_DRIBBLE (\d+)
-Value RX_INPUT_DISCARD (\d+)
+Value INPUT_DISCARDS (\d+)
 Value RX_PAUSE (\d+)
 Value RX_STOMPED_CRC (\d+)
 Value RX_JUMBO_PACKETS (\d+)
@@ -48,11 +48,11 @@ Value RX_NO_BUFFER (\d+)
 Value TX_JUMBO_PACKETS (\d+)
 Value COLLISIONS (\d+)
 Value TX_DEFERRED (\d+)
-Value TX_LATE_COLLISIONS (\d+)
+Value LATE_COLLISIONS (\d+)
 Value TX_LOST_CARRIER (\d+)
 Value TX_NO_CARRIER (\d+)
 Value TX_BABBLE (\d+)
-Value TX_OUTPUT_DISCARD (\d+)
+Value OUTPUT_DISCARDS (\d+)
 Value TX_PAUSE (\d+)
 
 Start
@@ -74,16 +74,16 @@ Start
   ^\s+${INPUT_PACKETS}\s+input\s+packets(\s+\d+\s+(unicast|multicast)+\s+packets){2}\s*$$
   ^\s+${OUTPUT_PACKETS}\s+output\s+packets(\s+\d+\s+(unicast|multicast)+\s+packets){2}\s*$$
   ^\s+${INPUT_PACKETS}\s+packets\s+input\s+\d+\s+bytes\s*$$
-  ^\s+${OUTPUT_PACKETS}\s+packets\s+output\s+\d+\s+bytes\s+${RX_UNDERRUN}\s+underruns\s*$$
+  ^\s+${OUTPUT_PACKETS}\s+packets\s+output\s+\d+\s+bytes\s+${UNDERRUN}\s+underruns\s*$$
   ^\s+input:\s+${INPUT_PACKETS}\s+pkts,\s+\d+\s+bytes\s+-\s+output:\s+${OUTPUT_PACKETS}\s+pkts,\s+\d+\s+bytes\s*$$
   ^\s+Last\s+link\s+flapped\s+${LAST_LINK_FLAPPED}\s*$$
   ^\s+\d+\s+(second|minute)s?\s+input\s+rate\s+${BANDWIDTH_INPUT_RATE}\s+bits/sec,\s+${PACKET_INPUT_RATE}\s+packets/sec
   ^\s+\d+\s+(second|minute)s?\s+output\s+rate\s+${BANDWIDTH_OUTPUT_RATE}\s+bits/sec,\s+${PACKET_OUTPUT_RATE}\s+packets/sec
   # RX
-  ^\s+${INPUT_ERRORS}\s+input\s+errors?\s+${RX_SHORT_FRAME}\s+short\s+frame\s+${RX_OVERRUN}\s+overrun\s+${RX_UNDERRUN}\s+underrun\s+${RX_IGNORED}\s+ignored\s*$$
-  ^\s+${INPUT_ERRORS}\s+input\s+errors\s+${RX_SHORT_FRAME}\s+frame\s+${RX_OVERRUN}\s+overrun\s+\d+\s+fifo\s*$$
+  ^\s+${INPUT_ERRORS}\s+input\s+errors?\s+${RX_SHORT_FRAME}\s+short\s+frame\s+${OVERRUN}\s+overrun\s+${UNDERRUN}\s+underrun\s+${IGNORED}\s+ignored\s*$$
+  ^\s+${INPUT_ERRORS}\s+input\s+errors\s+${RX_SHORT_FRAME}\s+frame\s+${OVERRUN}\s+overrun\s+\d+\s+fifo\s*$$
   ^\s+${RX_WATCHDOG}\s+watchdog\s+${RX_BAD_ETYPE_DROP}\s+bad\s+etype\s+drop\s+${RX_BAD_PROTO_DROP}\s+bad\s+proto\s+drop\s+${RX_IF_DOWN_DROP}\s+if\s+down\s+drop\s*$$
-  ^\s+${RX_DRIBBLE}\s+input\s+with\s+dribble\s+${RX_INPUT_DISCARD}\s+input\s+discard\s*$$
+  ^\s+${RX_DRIBBLE}\s+input\s+with\s+dribble\s+${INPUT_DISCARDS}\s+input\s+discard\s*$$
   ^\s+${RX_PAUSE}\s+Rx\s+pause\s*$$
   ^\s+${RX_STOMPED_CRC}\s+Stomped\s+CRC\s*$$
   ^\s+${RX_JUMBO_PACKETS}\s+jumbo\s+packets\s+${RX_STORM_SUPPRESSION_BYTES}\s+storm\s+suppression\s+bytes\s*$$
@@ -92,9 +92,9 @@ Start
   ^\s+${RUNTS}\s+runts\s+${GIANTS}\s+giants\s+${RX_CRC}\s+CRC(/FCS)?\s+${RX_NO_BUFFER}\s+no\s+buffer\s*$$
   # TX
   ^\s+${TX_JUMBO_PACKETS}\s+jumbo\s+packets\s*$$
-  ^\s+${OUTPUT_ERRORS}\s+output\s+errors?\s+${COLLISIONS}\s+collision\s+${TX_DEFERRED}\s+deferred\s+${TX_LATE_COLLISIONS}\s+late\s+collision\s*$$
+  ^\s+${OUTPUT_ERRORS}\s+output\s+errors?\s+${COLLISIONS}\s+collision\s+${TX_DEFERRED}\s+deferred\s+${LATE_COLLISIONS}\s+late\s+collision\s*$$
   ^\s+${OUTPUT_ERRORS}\s+output\s+errors\s+${COLLISIONS}\s+collisions\s+\d+\s+fifo\s*$$
-  ^\s+${TX_LOST_CARRIER}\s+lost\s+carrier\s+${TX_NO_CARRIER}\s+no\s+carrier\s+${TX_BABBLE}\s+babble\s+${TX_OUTPUT_DISCARD}\s+output\s+discard\s*$$
+  ^\s+${TX_LOST_CARRIER}\s+lost\s+carrier\s+${TX_NO_CARRIER}\s+no\s+carrier\s+${TX_BABBLE}\s+babble\s+${OUTPUT_DISCARDS}\s+output\s+discard\s*$$
   ^\s+${TX_PAUSE}\s+Tx\s+pause\s*$$
   # Unmatched
   ^\s+reliability\s+\d+/\d+,\s+txload\s+\d+/\d+,\s+rxload\s+\d+/\d+\s*$$
