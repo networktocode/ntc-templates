@@ -33,13 +33,13 @@ Value IGNORED (\d+)
 Value RX_WATCHDOG (\d+)
 Value BAD_ETYPE_DROP (\d+)
 Value BAD_PROTO_DROP (\d+)
-Value RX_IF_DOWN_DROP (\d+)
+Value INTERFACE_DOWN_DROP (\d+)
 Value DRIBBLE (\d+)
 Value INPUT_DISCARDS (\d+)
 Value RX_PAUSE (\d+)
 Value STOMPED_CRC (\d+)
 Value RX_JUMBO_PACKETS (\d+)
-Value RX_STORM_SUPPRESSION_BYTES (\d+)
+Value STORM_SUPPRESSION_BYTES (\d+)
 Value RUNTS (\d+)
 Value GIANTS (\d+)
 Value CRC (\d+)
@@ -82,11 +82,11 @@ Start
   # RX
   ^\s+${INPUT_ERRORS}\s+input\s+errors?\s+${SHORT_FRAME}\s+short\s+frame\s+${OVERRUN}\s+overrun\s+${UNDERRUN}\s+underrun\s+${IGNORED}\s+ignored\s*$$
   ^\s+${INPUT_ERRORS}\s+input\s+errors\s+${SHORT_FRAME}\s+frame\s+${OVERRUN}\s+overrun\s+\d+\s+fifo\s*$$
-  ^\s+${RX_WATCHDOG}\s+watchdog\s+${BAD_ETYPE_DROP}\s+bad\s+etype\s+drop\s+${BAD_PROTO_DROP}\s+bad\s+proto\s+drop\s+${RX_IF_DOWN_DROP}\s+if\s+down\s+drop\s*$$
+  ^\s+${RX_WATCHDOG}\s+watchdog\s+${BAD_ETYPE_DROP}\s+bad\s+etype\s+drop\s+${BAD_PROTO_DROP}\s+bad\s+proto\s+drop\s+${INTERFACE_DOWN_DROP}\s+if\s+down\s+drop\s*$$
   ^\s+${DRIBBLE}\s+input\s+with\s+dribble\s+${INPUT_DISCARDS}\s+input\s+discard\s*$$
   ^\s+${RX_PAUSE}\s+Rx\s+pause\s*$$
   ^\s+${STOMPED_CRC}\s+Stomped\s+CRC\s*$$
-  ^\s+${RX_JUMBO_PACKETS}\s+jumbo\s+packets\s+${RX_STORM_SUPPRESSION_BYTES}\s+storm\s+suppression\s+bytes\s*$$
+  ^\s+${RX_JUMBO_PACKETS}\s+jumbo\s+packets\s+${STORM_SUPPRESSION_BYTES}\s+storm\s+suppression\s+bytes\s*$$
   ^\s+${RX_JUMBO_PACKETS}\s+jumbo\s+packets\s+\d+\s+storm\s+suppression\s+packets\s*$$
   ^\s+${RX_JUMBO_PACKETS}\s+jumbo\s+pa(ckets)?\s+Encapsulation\s+\S+,\s+medium\s+is\s+\S+
   ^\s+${RUNTS}\s+runts\s+${GIANTS}\s+giants\s+${CRC}\s+CRC(/FCS)?\s+${RX_NO_BUFFER}\s+no\s+buffer\s*$$
