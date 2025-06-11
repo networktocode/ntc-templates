@@ -20,4 +20,6 @@ Start
   ^Uptime:\s+${UPTIME}
   ^Total\s+memory:\s+${TOTAL_MEMORY}
   ^Free\s+memory:\s+${FREE_MEMORY} -> Record
+  ^cEOS\s+tools\s+version:
+  ^Kernel\s+version:
   ^. -> Error
