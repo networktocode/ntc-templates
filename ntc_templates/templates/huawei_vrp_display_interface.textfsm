@@ -27,12 +27,12 @@ Start
   ^\s*\S*\s+current\s+state\s+:.*$$ -> Continue.Record
   ^\s*${INTERFACE}\s+current\s+state\s+:\s+${LINK_STATUS}\s*$$
   ^\s*Line\s+protocol\s+current\s+state\s+:\s+${PROTOCOL_STATUS}\s*$$
-  ^\s*Last\s*line\s*protocol\s*up\s*time\s*:\s*(-|${LAST_LINE_PROTOCOL_UPTIME})\s*$$
+  ^\s*Last\s+line\s+protocol\s+up\s+time\s*:\s*(-|${LAST_LINE_PROTOCOL_UPTIME})\s*$$
   ^\s*Description:${INTERFACE_DESCRIPTION}\s*$$
   ^\s*${PORT_TYPE}\s+Port,\s*Link-type\s*:\s*${LINK_TYPE},\s*$$
-  ^\s*${PORT_TYPE}\s+Port,\s*The\s+(MTU|Maximum\s+Transmit\s+Unit)\s+is\s+${MTU}(,\s*Hold\s*timer\s*is\s*${HOLD_TIMER}\(sec\))?\s*$$
-  ^\s*${PORT_TYPE}\s+Port,(\s*PVID\s*:\s*${PVID},)?\s*TPID\s*:\s*${TPID},\s*The\s*Maximum\s*(Frame\s*Length|Transmit\s*Unit)\s*is\s*${MTU}\s*$$
-  ^\s*TPID\s*:\s*${TPID},\s*The\s*Maximum\s*Frame\s*Length\s*is\s*${MTU}\s*$$
+  ^\s*${PORT_TYPE}\s+Port,\s*The\s+(MTU|Maximum\s+Transmit\s+Unit)\s+is\s+${MTU}(,\s*Hold\s+timer\s+is\s+${HOLD_TIMER}\(sec\))?\s*$$
+  ^\s*${PORT_TYPE}\s+Port,(\s*PVID\s*:\s*${PVID},)?\s*TPID\s*:\s*${TPID},\s*The\s+Maximum\s+(Frame\s+Length|Transmit\s+Unit)\s+is\s+${MTU}\s*$$
+  ^\s*TPID\s*:\s*${TPID},\s*The\s+Maximum\s+Frame\s+Length\s+is\s+${MTU}\s*$$
   ^\s*PVID\s*:\s+${PVID},(\s*[^,]+,){0,}\s+The\s+Maximum\s+Frame\s+Length\s+is\s+${MTU}
   ^\s*Internet\s+Address\s+is\s+allocated\s+by\s+DHCP,\s+${INTERNET_ADDRESS}\s*$$
   ^\s*Internet\s+Address\s+is\s+negotiated,\s+${INTERNET_ADDRESS}\s*$$
