@@ -39,22 +39,21 @@ Start
   ^\s*Internet\s+Address\s+is\s+${INTERNET_ADDRESS}\s*$$
   ^\s*.*,\s+Hardware\s+address\s+is\s+${HARDWARE_ADDRESS}\s*$$
   ^\s*Internet\s+protocol\s+processing\s+:\s+${INTERNET_PROTOCOL}\s*$$
-  ^\s*Encapsulation\sis\s.+\s*$$
-  ^\s*Tunnel\ssource\s\S+\s\(.+\),\sdestination\s\S+\s*$$
-  ^\s*Tunnel\sprotocol\/transport\sGRE\/IP,\skey\s.+\s*$$
-  ^\s*keepalive\s\S+\s*$$
-  ^\s*Checksumming\sof\spackets\s\S+\s*$$
+  ^\s*Encapsulation\s+is\s.+\s*$$
+  ^\s*Tunnel\s+source\s+\S+\s+\(.+\),\s+destination\s+\S+\s*$$
+  ^\s*Tunnel\s+protocol\/transport\s+GRE\/IP,\s+key\s.+\s*$$
+  ^\s*keepalive\s+\S+\s*$$
+  ^\s*Checksumming\s+of\s+packets\s+\S+\s*$$
   ^\s*Last\s+physical\s+up\s+time\s*:\s+(-|${LAST_PHYSICAL_UP_TIME})\s*
   ^\s*Last\s+physical\s+down\s+time\s+:\s+(-|${LAST_PHYSICAL_DOWN_TIME})\s*
-  ^\s*IP\sSending\sFrames'\sFormat\sis\s\S+\s*,\sHardware\saddress\sis\s\S+\s*$$
+  ^\s*IP\s+Sending\s+Frames'\s+Format\s+is\s+\S+\s*,\s+Hardware\s+address\s+is\s+\S+\s*$$
   ^\s*Current\s+system\s+time:\s+${CURRENT_SYSTEM_TIME}\s*
-  ^\s*Modem\sState:\s+.+\s*$$
-  ^\s*Model\s=\s+.+\s*$$
-  ^\s*Current\sNetwork\sConnection\s=\s.+\s*$$
-  ^\s*Current\sRSSI\s<?=\s+(-)?\d+\sdBm.*$$
-  ^\s*Current\sSINR\s([<>])?=\s+(-)?\d+\sdB\s\(.+\)\s*$$
-  ^\s+Input\sbandwidth\sutilization(\sthreshold)?\s*:.*$$
-  ^\s+Output\sbandwidth\sutilization(\sthreshold)?\s*:.*$$
+  ^\s*Modem\s+State:\s+.+\s*$$
+  ^\s*Model\s+=\s+.+\s*$$
+  ^\s*Current\s+Network\s+Connection\s+=\s.+\s*$$
+  ^\s*Current\s+RSSI\s+<?=\s+(-)?\d+\s+dBm.*$$
+  ^\s*Current\s+SINR\s+([<>])?=\s+(-)?\d+\s+dB\s+\(.+\)\s*$$
+  ^\s+(In|Out)put\s+bandwidth\s+utilization(\s+threshold)?\s*:.*$$
   ^\s*Port\s+Mode:\s+${PORT_MODE}\s*$$
   ^\s*Current\s+Work\s+Mode:\s+${CURRENT_WORK_MODE}\s*$$
   ^\s*Speed\s+:\s+${SPEED},\s*Loopback:\s+${LOOPBACK}\s*$$
