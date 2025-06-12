@@ -62,10 +62,10 @@ Start
   ^\s*Port\s+PHY\s+type\s+:\s+\S+\s*$$
   ^\s*Last\s\d+\sseconds\s(input|output)\srate\s(\d+\sbytes\/sec(,)?\s)?\d+\sbits\/sec(,)?\s\d+\spackets\/sec\s*$$
   ^\s*(Input|Output)\speak\srate\s\d+\sbits\/sec\s*,\s*Record\stime:\s+.*$$
-  ^\s*Link\slayer\sprotocol\sis.*$$
-  ^\s*LCP\sinitial\s*$$
-  ^\s*Physical\sis.*$$
-  ^\s*Bound\sto.*$$
+  ^\s*Link\s+layer\s+protocol\s+is.*$$
+  ^\s*LCP\s+initial\s*$$
+  ^\s*Physical\s+is.*$$
+  ^\s*Bound\s+to.*$$
   ^\s*LCP\s\S+,\s+IPCP\s\S+(,\s+IP6CP\s\S+)?\s*$$
   ^\s*Packets\sstatistics:\s*$$
   ^\s+(Input|Output)\spackets\s*:\s*\d+,\s+\d+\sbytes\s*$$
