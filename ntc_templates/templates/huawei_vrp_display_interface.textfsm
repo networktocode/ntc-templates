@@ -59,7 +59,7 @@ Start
   ^\s*Speed\s+:\s+${SPEED},\s*Loopback:\s+${LOOPBACK}\s*$$
   ^\s*Duplex:\s+${DUPLEX},\s*Negotiation:\s+${NEGOTIATION}\s*$$
   ^\s*Mdi\s*:\s+\S+,\s*Clock\s*:\s+\S+\s*$$
-  ^\s*Port\sPHY\stype\s+:\s+\S+\s*$$
+  ^\s*Port\s+PHY\s+type\s+:\s+\S+\s*$$
   ^\s*Last\s\d+\sseconds\s(input|output)\srate\s(\d+\sbytes\/sec(,)?\s)?\d+\sbits\/sec(,)?\s\d+\spackets\/sec\s*$$
   ^\s*(Input|Output)\speak\srate\s\d+\sbits\/sec\s*,\s*Record\stime:\s+.*$$
   ^\s*Link\slayer\sprotocol\sis.*$$
