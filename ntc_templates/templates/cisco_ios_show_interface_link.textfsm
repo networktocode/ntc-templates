@@ -6,13 +6,13 @@ Value UPTIME ((([0-9]{1,2}m)?([0-9]{1,2}w)?([0-9]{1,2}d)([0-9]{1,2}h)?|([0-9]{1,
 
 Start
   ^\s*\^\s* -> EOF
-  ^.*Invalid input detected.* -> EOF
+  ^.*Invalid\s+input\s+detected.* -> EOF
   ^Load\s+for\s+
   # Capture time-stamp if vty line has command time-stamping turned on
   ^Time\s+source\s+is
   ^-+\s*$$
-  ^\s*Port\s+Name\s+Down Time\s+Down Since\s*$$ -> DownSince
-  ^\s*Port\s+Name\s+Down Time\s+Up Time\s*$$ -> UpTime
+  ^\s*Port\s+Name\s+Down\s+Time\s+Down\s+Since\s*$$ -> DownSince
+  ^\s*Port\s+Name\s+Down\s+Time\s+Up\s+Time\s*$$ -> UpTime
   ^\s*$$
   ^. -> Error
 
