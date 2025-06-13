@@ -8,9 +8,9 @@ Value PVID (\d+)
 Value TPID (\S+)
 Value MTU (\d+)
 Value HOLD_TIMER (\d+)
-Value INTERNET_ADDRESS (\S*)
-Value INTERNET_PROTOCOL (disabled|enabled)
-Value HARDWARE_ADDRESS (\S{4}-\S{4}-\S{4})
+Value IP_ADDRESS (\S*)
+Value IP_STATUS (disabled|enabled)
+Value MAC_ADDRESS (\S{4}-\S{4}-\S{4})
 Value LAST_PHYSICAL_UP_TIME (\S.+\S)
 Value LAST_PHYSICAL_DOWN_TIME (\S.+\S)
 Value LAST_LINE_PROTOCOL_UPTIME (\S.+\S)
@@ -34,11 +34,11 @@ Start
   ^\s*${PORT_TYPE}\s+Port,(\s*PVID\s*:\s*${PVID},)?\s*TPID\s*:\s*${TPID},\s*The\s+Maximum\s+(Frame\s+Length|Transmit\s+Unit)\s+is\s+${MTU}\s*$$
   ^\s*TPID\s*:\s*${TPID},\s*The\s+Maximum\s+Frame\s+Length\s+is\s+${MTU}\s*$$
   ^\s*PVID\s*:\s+${PVID},(\s*[^,]+,){0,}\s+The\s+Maximum\s+Frame\s+Length\s+is\s+${MTU}
-  ^\s*Internet\s+Address\s+is\s+allocated\s+by\s+DHCP,\s+${INTERNET_ADDRESS}\s*$$
-  ^\s*Internet\s+Address\s+is\s+negotiated,\s+${INTERNET_ADDRESS}\s*$$
-  ^\s*Internet\s+Address\s+is\s+${INTERNET_ADDRESS}\s*$$
-  ^\s*.*,\s+Hardware\s+address\s+is\s+${HARDWARE_ADDRESS}\s*$$
-  ^\s*Internet\s+protocol\s+processing\s+:\s+${INTERNET_PROTOCOL}\s*$$
+  ^\s*Internet\s+Address\s+is\s+allocated\s+by\s+DHCP,\s+${IP_ADDRESS}\s*$$
+  ^\s*Internet\s+Address\s+is\s+negotiated,\s+${IP_ADDRESS}\s*$$
+  ^\s*Internet\s+Address\s+is\s+${IP_ADDRESS}\s*$$
+  ^\s*.*,\s+Hardware\s+address\s+is\s+${MAC_ADDRESS}\s*$$
+  ^\s*Internet\s+protocol\s+processing\s+:\s+${IP_STATUS}\s*$$
   ^\s*Encapsulation\s+is\s.+\s*$$
   ^\s*Tunnel\s+source\s+\S+\s+\(.+\),\s+destination\s+\S+\s*$$
   ^\s*Tunnel\s+protocol\/transport\s+GRE\/IP,\s+key\s.+\s*$$
