@@ -11,7 +11,7 @@ Start
   ^-+
   ^\s+\S\s+-
   ^Number
-  ^\s+Port-Channel\s+Protocol\s+Ports\s+$$ -> PCS
+  ^\s+Port-Channel\s+Protocol\s+Ports\s*$$ -> PCS
   ^\s*$$
   ^. -> Error
 
