@@ -23,7 +23,6 @@ PCS
   ^\s*Po\d+.+?(Et.+?\(.+?\)\s){1}${MEMBER_INTERFACE}\(${MEMBER_INTERFACE_STATUS}\)(\s|$$) -> Continue
   ^\s*Po\d+.+?(Et.+?\(.+?\)\s){2}${MEMBER_INTERFACE}\(${MEMBER_INTERFACE_STATUS}\)(\s|$$) -> Continue
   ^\s*Po\d+.+?(Et.+?\(.+?\)\s){3}${MEMBER_INTERFACE}\(${MEMBER_INTERFACE_STATUS}\)(\s|$$) -> Continue
-  ^\s*Po\d+.+?(Et.+?\(.+?\)\s){4}${MEMBER_INTERFACE}\(${MEMBER_INTERFACE_STATUS}\)(\s|$$) -> Continue
   ^\s+${MEMBER_INTERFACE}\(${MEMBER_INTERFACE_STATUS}\)(\s|$$) -> Continue
   ^\s+(Et.+?\(.+?\)\s){1}${MEMBER_INTERFACE}\(${MEMBER_INTERFACE_STATUS}\)(\s|$$) -> Continue
   ^\s+(Et.+?\(.+?\)\s){2}${MEMBER_INTERFACE}\(${MEMBER_INTERFACE_STATUS}\)(\s|$$) -> Continue
