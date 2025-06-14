@@ -5,6 +5,7 @@ Value BUNDLE_PROTOCOL_STATE (\S+)
 Value List MEMBER_INTERFACE (Et\S+)
 Value List MEMBER_INTERFACE_STATUS (\S+)
 
+# template also used for `show port-channel dense`
 
 Start
   ^\s*Flags
