@@ -17,7 +17,6 @@ Start
   ^. -> Error
 
 
-
 PCS
   ^\s*Po\d+ -> Continue.Record
   ^\s*${BUNDLE_NAME}\(${BUNDLE_STATUS}\)\s+${BUNDLE_PROTOCOL}\(${BUNDLE_PROTOCOL_STATE}\)\s+${MEMBER_INTERFACE}\(${MEMBER_INTERFACE_STATUS}\)(\s|$$) -> Continue
@@ -29,4 +28,3 @@ PCS
   ^\s+(Et.+?\(.+?\)\s){2}${MEMBER_INTERFACE}\(${MEMBER_INTERFACE_STATUS}\)(\s|$$) -> Continue
   ^\s+(Et.+?\(.+?\)\s){3}${MEMBER_INTERFACE}\(${MEMBER_INTERFACE_STATUS}\)\s*$$ -> Continue
   ^-+
-
