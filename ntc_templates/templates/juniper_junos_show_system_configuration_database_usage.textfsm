@@ -1,0 +1,17 @@
+Value MAX_DB_SIZE (\S+)
+Value CURR_DB_SIZE (\S+)
+Value ACTUAL_DB_SIZE (\S+)
+Value AVAIL_DB_SPACE (\S+)
+
+# If the database is being modified, a "cannot proceed" message will be displayed
+# Otherwise, the database usage will be displayed
+
+Start 
+  ^\s*Maximum\s+size\s+of\s+the\s+database:\s+${MAX_DB_SIZE}\s*
+  ^\s*Current\s+database\s+size\s+on\s+disk:\s+${CURR_DB_SIZE}\s*
+  ^\s*Actual\s+database\s+usage:\s+${ACTUAL_DB_SIZE}\s*
+  ^\s*Available\s+database\s+space:\s+${AVAIL_DB_SPACE}\s* -> Record
+  ^{(master|backup)}\s*$$
+  ^\s*Cannot\s+proceed,\s+database\s+is\s+currently\s+being\s+modified
+  ^\s*$$
+  ^. -> Error

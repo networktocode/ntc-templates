@@ -1,25 +1,39 @@
 Value INTERFACE (\S+)
 Value ADMIN_STATUS (\S+)
-Value OPERATIONAL_STATUS (on|off)
+Value OPERATIONAL_STATUS (\S+)
 Value POWER (\d+\.\d+)
 Value DEVICE (\S+(\s\S+)*)
 Value CLASS (\d|n/a)
 Value MAX (\d+\.\d+)
 
 Start
-  ^Interface\s+Admin\s+Oper\s+Power\s+Device\s+Class\s+Max -> Interfaces
+  ^Interface\s+Admin\s+Oper\s+Power\s+Device\s+Class\s+Max\s*$$ -> Interfaces
+  ^Interface\s+Admin\s+Oper\s+Power\(Watts\)\s+Device\s+Class\s*$$ -> Interfaces45xx
   ^Available:
   ^Module
   ^\d+
   ^-+
   ^\s+\(Watts\)
   ^\s*$$
+  ^%No\s+inline\s+power\s+card\s+on\s+switch\s*$$
+  ^Interface\s+Admin\s+Priority\s+Oper\s+Power\(Watts\)\s+Device\s+Class\s+Police\s+ActConsumption\s*$$
+  ^\s+\(enabled\s*\)\s+From\s+PS\s+To\s+PD\s*$$
+  ^Totals:\s+\d+\s+pd\(s\)\s+\S+\s+\S+\s+\S+\s*$$
   ^. -> Error
 
 Interfaces
-  ^\s*${INTERFACE}\s+${ADMIN_STATUS}\s+${OPERATIONAL_STATUS}\s+${POWER}\s+${DEVICE}\s+${CLASS}\s+${MAX}\s*$$ -> Record
   ^Totals.*
+  ^\s*${INTERFACE}\s+${ADMIN_STATUS}\s+${OPERATIONAL_STATUS}\s+${POWER}\s+${DEVICE}\s+${CLASS}\s+${MAX}\s*$$ -> Record
+  ^\s*${INTERFACE}\s+${ADMIN_STATUS}\s+${OPERATIONAL_STATUS}\s+${POWER}\s*$$ -> Record
   ^\s+\(Watts\)
   ^-+
   ^\s*$$ -> Start
+  ^. -> Error
+
+Interfaces45xx
+  ^\s*${INTERFACE}\s+${ADMIN_STATUS}\s+${OPERATIONAL_STATUS}\s+\d+\.\d+\s+${POWER}\s+${DEVICE}\s+${CLASS}\s*$$ -> Record
+  ^\s+From\s+PS\s+To\s+Device\s*$$
+  ^-+
+  ^\s*$$
+  ^Totals:.*
   ^. -> Error

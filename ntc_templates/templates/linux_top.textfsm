@@ -1,0 +1,23 @@
+Value PID (\d+)
+Value USERNAME (\S+)
+Value PROCESS_PRIORITY (\S+)
+Value NICE_VALUE (\S+)
+Value VIRTUAL_MEMORY (\S+)
+Value RESIDENT_MEMORY (\w+)
+Value SHARED_MEMORY (\w+)
+Value STATUS (\w)
+Value CPU_TIME (\S+)
+Value MEMORY (\S+)
+Value TIME (\S+)
+Value COMMAND (\S.+\S|\S+)
+
+Start
+  ^\s*top\s+-\s+\d+:\d+:\d+\s+up\s+\d+:\d+\s*,\s+\d+\s+users,\s+load\s+average:(\s+\d+\.\d+,?){3}\s*$$
+  ^\s*Tasks:\s+\d+\s+total,\s+\d+\s+running,\s+\d+\s+sleeping,\s+\d+\s+stopped,\s+\d+\s+zombie\s*$$
+  ^\s*\%Cpu\(s\):(\s+\d+\.\d+\s+\w+,?){8}\s*$$
+  ^\s*MiB\s+Mem\s+:\s+\d+\.\d+\s+total,\s+\d+\.\d+\s+free,\s+\d+\.\d+\s+used,\s+\d+\.\d+\s+buff/cache\s*$$
+  ^\s*MiB\s+Swap:\s+\d+\.\d+\s+total,\s+\d+\.\d+\s+free,\s+\d+\.\d+\s+used.\s+\d+\.\d+\s+avail\s+Mem\s*$$
+  ^\s*PID\s+USER\s+PR\s+NI\s+VIRT\s+RES\s+SHR\s+S\s+\%CPU\s+\%MEM\s+TIME\+\s+COMMAND\s*$$
+  ^\s*${PID}\s+${USERNAME}\s+${PROCESS_PRIORITY}\s+${NICE_VALUE}\s+${VIRTUAL_MEMORY}\s+${RESIDENT_MEMORY}\s+${SHARED_MEMORY}\s+${STATUS}\s+${CPU_TIME}\s+${MEMORY}\s+${TIME}\s+${COMMAND}\s*$$ -> Record
+  ^\s+$$
+  ^. -> Error

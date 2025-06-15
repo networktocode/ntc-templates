@@ -1,0 +1,57 @@
+Value Filldown ACTIVE_LICENSE (\S+)
+Value Filldown LICENSE_STATE (\w+)
+Value Filldown REVOKE_TICKET (.*)
+Value Filldown LICENSE_MODE (\w+)
+Value Filldown PRODUCT_NAME (\S+)
+Value Filldown PRODUCT_VERSION (\w+)
+Value Filldown LICENSE_FILE_ESN (\w+)
+Value Filldown LICENSE_SERIAL_NO (\w+)
+Value Filldown CREATOR (.*)
+Value Filldown CREATED_TIME (\d+-\d+-\d+\s+\d+:\d+:\d+)
+Value Filldown COUNTRY (\w+)
+Value Filldown CUSTOM (.*)
+Value Filldown OFFICE (\w+)
+Value FEATURE_NAME (\w+)
+Value AUTHORIZE_TYPE (\w+)
+Value EXPIRED_DATE (\S+)
+Value TRIAL_DAYS (\S+)
+Value SALE_NAME (\S+)
+Value ITEM_NAME (\S+)
+Value ITEM_TYPE (\w+)
+Value CONTROL_VALUE (\d+)
+Value USED_VALUE (\d+)
+Value ITEM_STATE (\w+)
+Value ITEM_EXPIRED_DATE (\S+)
+Value ITEM_TRIAL_DAYS (\d+)
+Value DESCRIPTION (\S.+\S)
+
+Start
+  ^\s*Active\s+license\s*:\s*${ACTIVE_LICENSE}\s*$$
+  ^\s*License\s+state\s*:\s*${LICENSE_STATE}\s*$$
+  ^\s*Revoke\s+ticket\s*:\s*${REVOKE_TICKET}\s*$$
+  ^\s*License\s+mode\s*:\s*${LICENSE_MODE}\s*$$
+  ^\s*Product\s+name\s*:\s*${PRODUCT_NAME}\s*$$
+  ^\s*Product\s+version\s*:\s*${PRODUCT_VERSION}\s*$$
+  ^\s*License\s+file\s+ESN\s*:\s*${LICENSE_FILE_ESN}\s*$$
+  ^\s*License\s+Serial\s+No\s*:\s*${LICENSE_SERIAL_NO}\s*$$
+  ^\s*Creator\s*:\s*${CREATOR}\s*$$
+  ^\s*Created\s+Time\s*:\s*${CREATED_TIME}\s*$$
+  ^\s*Country\s*:\s*${COUNTRY}\s*$$
+  ^\s*Custom\s*:\s*${CUSTOM}\s*$$
+  ^\s*Office\s*:\s*${OFFICE}\s*$$
+  ^\s*Feature\s+name\s*:\s*${FEATURE_NAME}\s*$$
+  ^\s*Authorize\s+type\s*:\s*${AUTHORIZE_TYPE}\s*$$
+  ^\s*Expired\s+date\s*:\s*${EXPIRED_DATE}\s*$$
+  ^\s*Trial\s+days\s*:\s*${TRIAL_DAYS}\s*$$
+  ^\s*Sale\s+name\s*:\s*${SALE_NAME}\s*$$
+  ^\s*Item\s+name\s*:\s*${ITEM_NAME}\s*$$
+  ^\s*Item\s+type\s*:\s*${ITEM_TYPE}\s*$$
+  ^\s*Control\s+value\s*:\s*${CONTROL_VALUE}\s*$$
+  ^\s*Used\s+value\s*:\s*${USED_VALUE}\s*$$
+  ^\s*Item\s+state\s*:\s*${ITEM_STATE}\s*$$
+  ^\s*Item\s+expired\s+date\s*:\s*${ITEM_EXPIRED_DATE}\s*$$
+  ^\s*Item\s+trial\s+days\s*:\s*${ITEM_TRIAL_DAYS}\s*$$
+  ^\s*Description\s*:\s*${DESCRIPTION}\s*$$ -> Record
+  ^. -> Error
+
+EOF

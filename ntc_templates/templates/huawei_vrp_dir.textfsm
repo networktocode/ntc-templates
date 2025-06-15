@@ -1,0 +1,14 @@
+Value IDX (\d+)
+Value ATTR (\S+)
+Value SIZE (\S+)
+Value DATE_TIME (\w+\s+\d+\s+\d+\s+\d+:\d+:\d+)
+Value Required FILE_NAME (\S+)
+Value Fillup TOTAL_SIZE (\S+)
+Value Fillup TOTAL_FREE (\S+)
+
+Start
+  ^\s+${IDX}\s+${ATTR}\s+${SIZE}\s+${DATE_TIME}\s+${FILE_NAME} -> Record
+  ^${TOTAL_SIZE}\s+KB\s+total\s+\(${TOTAL_FREE}\s+KB\s+free\)
+  ^Directory\s+of\s+flash:/
+  ^\s+Idx\s+Attr\s+Size\(Byte\)\s+Date\s+Time\s+FileName
+  ^. -> Error

@@ -1,0 +1,39 @@
+Value Required INTERFACE (\S+)
+Value NICKNAME (\S.+\S)
+Value ESSID (\S.+\S|\S+)
+Value MODE (\S+)
+Value FREQUENCY (\S.+\S)
+Value ACCESS_POINT (\S+)
+Value SENSITIVITY (\S+)
+Value BIT_RATE (\d+|-?\d+(?:\.\d+)?\s(?:Mb\/s)?)
+Value TX_POWER (\S.+\S)
+Value RETRY_SHORT_LIMIT (\w+)
+Value RTS_THR (\S+)
+Value FRAGMENT_THR (\S+)
+Value ENCRYPTION_KEY (\S+)
+Value POWER_MANAGEMENT (\S+)
+Value LINK_QUALITY (\S+)
+Value SIGNAL_LEVEL (\S+|-?\d+(?:\.\d+)?\s(?:dBm)?)
+Value NOISE_LEVEL (\S+)
+Value RX_INVALID_NWID (\w+)
+Value RX_INVALID_CRYPT (\w+)
+Value RX_INVALID_FRAG (\w+)
+Value TX_EXCESSIVE_RETRIES (\w+)
+Value INVALID_MISC (\w+)
+Value MISSED_BEACON (\w+)
+
+
+Start
+  ^\s*wl\w+\d+ -> Continue.Record
+  ^\s*${INTERFACE}\s+no\s+wireless\s+extensions\.$$ -> Clear
+  ^\s*${INTERFACE}\s+(IEEE\s+802\.11\w*|unassociated)(?:\s+ESSID:off\/any)?(?:\s+Nickname:\"${NICKNAME}\")?\s*$$
+  ^\s*${INTERFACE}\s+(IEEE\s+802\.11\w*|unassociated)(?:\s+ESSID:\"${ESSID}\"\s+)?(?:\s*Nickname:\"${NICKNAME}\")?\s*$$
+  ^\s*Mode:\s*${MODE}\s+(?:Frequency(:|=)\s*${FREQUENCY}\s+)?Access\s+Point:\s+${ACCESS_POINT}(?:\s+Tx-Power\s*=\s*${TX_POWER})?\s*$$
+  ^\s*(?:Bit\s+Rate(:|=)${BIT_RATE})?(?:\s*Sensitivity:${SENSITIVITY})?(?:\s+Tx-Power=${TX_POWER})?\s*$$
+  ^\s*Retry(?:\s+short\s+limit)?:${RETRY_SHORT_LIMIT}\s+RTS\s+thr:${RTS_THR}\s+Fragment\s+thr:${FRAGMENT_THR}\s*$$
+  ^\s*Encryption\s+key:\s*${ENCRYPTION_KEY}\s*$$
+  ^\s*Power\s+Management:${POWER_MANAGEMENT}\s*$$
+  ^\s*Link\s+Quality(:|=)${LINK_QUALITY}\s+Signal\s+level(:|=)${SIGNAL_LEVEL}(?:\s+Noise\s+level(:|=)${NOISE_LEVEL})?\s*$$
+  ^\s*Rx\s+invalid\s+nwid:${RX_INVALID_NWID}\s+Rx\s+invalid\s+crypt:${RX_INVALID_CRYPT}\s+Rx\s+invalid\s+frag:${RX_INVALID_FRAG}\s*$$
+  ^\s*Tx\s+excessive\s+retries:${TX_EXCESSIVE_RETRIES}\s+Invalid\s+misc:${INVALID_MISC}\s+Missed\s+beacon:${MISSED_BEACON}\s*$$
+  ^. -> Error

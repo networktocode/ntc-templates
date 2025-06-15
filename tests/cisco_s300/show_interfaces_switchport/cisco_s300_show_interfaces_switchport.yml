@@ -8,17 +8,17 @@ parsed_sample:
     forbidden_vlan_name: []
     gvrp_status: "disabled"
     ingress_filtering_status: "true"
-    mac_based_vlan_group_id: []
-    mac_based_vlan_id: []
-    name:
-      - "203"
-      - "VOIP-1"
-    native_vlan: "203"
     interface: "fa1"
     interface_membership_type:
       - "Static"
       - "Static"
     interface_mode: "Trunk"
-    vlan:
+    mac_based_vlan_group_id: []
+    mac_based_vlan_id: []
+    native_vlan: "203"
+    vlan_id:
       - "203"
       - "222"
+    vlan_name:
+      - "203"
+      - "VOIP-1"
