@@ -41,7 +41,7 @@ def test_uppercase_capture_group(load_template_files):
         if "bogus" in load_template_files:
             # The bogus file intentionally has lowercase/titlecase capture groups
             #   (for that file it should always evaluate to false)
-            assert group.isupper() == False, "Error: Bogus test case should never evaluate to True"
+            assert group.isupper() is False, "Error: Bogus test case should never evaluate to True"
         else:
             # Otherwise capture groups are uppercase and compliant with the project guidelines
             assert group.isupper(), "Capture groups need to be uppercase per project guidelines"
