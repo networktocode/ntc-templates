@@ -38,4 +38,4 @@ def test_uppercase_capture_group(load_template_files):
     assert capture_groups != [], "No capture groups were matched, check regex function syntax/usage"
 
     for group in capture_groups:
-        assert group.isupper()
+        assert group.isupper(), "Capture groups need to be uppercase per project guidelines"
