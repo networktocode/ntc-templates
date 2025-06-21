@@ -37,7 +37,7 @@ VRF
   # three interfaces displayed per line
   ^\s+\S+\s+\S+(\s\S+)*\s+\S+\s+\S+:\S+(\s\S+)*,?\s+(?:\S+,\s){2}${INTERFACES}, -> Continue
   #
-  ############## Lines that contains state ##################
+  ############## Lines that contain state ##################
   #
   # match state only line
   ^\s+(\S+:\S+(?:\s\S+)*)\s*$$
@@ -94,4 +94,5 @@ VRF
   # match vrf line with no interfaces
   ^\s+${VRF}\s+${RD}\s+\S+\s+\S+:\S+(\s\S+)*,?\s+$$
   #
+  ################## Unmatched ###################
   ^---+
