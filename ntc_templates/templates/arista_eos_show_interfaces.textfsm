@@ -8,7 +8,7 @@ Value DESCRIPTION ([^\"]*)
 Value IP_ADDRESS (\d+\.\d+\.\d+\.\d+\/\d+)
 Value MTU (\d+)
 Value BANDWIDTH (\d+\s+\w+)
-Value INTERFACE_UP_TIME (.*)
+Value LAST_LINK_FLAPPED (.*)
 Value LINK_STATUS_CHANGE (\d+)
 
 Start
@@ -17,7 +17,7 @@ Start
   ^\s+Hardware\s+is\s+${HARDWARE_TYPE}(.*address\s+is\s+${MAC_ADDRESS})*(.*bia\s+${BIA})*
   ^\s+Description:\s+"?${DESCRIPTION}"?$$
   ^\s+Internet\s+address\s+is\s+${IP_ADDRESS}
-  ^\s+(Up|Down)\s+${INTERFACE_UP_TIME}
+  ^\s+(Up|Down)\s+${LAST_LINK_FLAPPED}
   ^\s+${LINK_STATUS_CHANGE}\s+link\s+status\s+changes.*
   ^.*MTU\s+${MTU}(.*BW\s+${BANDWIDTH})*
   ^\s+Broadcast\s+address
