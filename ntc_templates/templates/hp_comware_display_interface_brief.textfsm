@@ -5,7 +5,7 @@ Value MAIN_IP (\S+)
 Value SPEED (\S+)
 Value DUPLEX (\S+)
 Value TYPE (A|T|H)
-Value PVID (\d+)
+Value VLAN_ID (\d+)
 Value DESCRIPTION (.*?)
 
 Start
@@ -26,6 +26,6 @@ RouteModeIfaces
   ^. -> Error
 
 BridgeModeIfaces
-  ^${INTERFACE}\s+${LINK}\s+${SPEED}(?:\(a\))?\s+${DUPLEX}(?:\(a\))?\s+${TYPE}\s+${PVID}(?:\s+${DESCRIPTION})?\s*$$ -> Record
+  ^${INTERFACE}\s+${LINK}\s+${SPEED}(?:\(a\))?\s+${DUPLEX}(?:\(a\))?\s+${TYPE}\s+${VLAN_ID}(?:\s+${DESCRIPTION})?\s*$$ -> Record
   ^\s*$$
   ^. -> Error
