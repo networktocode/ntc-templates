@@ -5,28 +5,26 @@ Value BUNDLE_PROTOCOL_STATE (\S+)
 Value List MEMBER_INTERFACE (Et\S+)
 Value List MEMBER_INTERFACE_STATUS (\S+)
 
+# template also used for `show port-channel dense`
 
 Start
   ^\s*Flags
   ^-+
   ^\s+\S\s+-
   ^Number
-  ^\s+Port-Channel\s+Protocol\s+Ports\s+$$ -> PCS
+  ^\s+Port-Channel\s+Protocol\s+Ports\s*$$ -> PCS
   ^\s*$$
   ^. -> Error
-
 
 
 PCS
   ^\s*Po\d+ -> Continue.Record
   ^\s*${BUNDLE_NAME}\(${BUNDLE_STATUS}\)\s+${BUNDLE_PROTOCOL}\(${BUNDLE_PROTOCOL_STATE}\)\s+${MEMBER_INTERFACE}\(${MEMBER_INTERFACE_STATUS}\)(\s|$$) -> Continue
-  ^\s*Po\d+.+(Et.+?\(.+?\)\s){1}${MEMBER_INTERFACE}\(${MEMBER_INTERFACE_STATUS}\)(\s|$$) -> Continue
-  ^\s*Po\d+.+(Et.+?\(.+?\)\s){2}${MEMBER_INTERFACE}\(${MEMBER_INTERFACE_STATUS}\)(\s|$$) -> Continue
-  ^\s*Po\d+.+(Et.+?\(.+?\)\s){3}${MEMBER_INTERFACE}\(${MEMBER_INTERFACE_STATUS}\)(\s|$$) -> Continue
-  ^\s*Po\d+.+(Et.+?\(.+?\)\s){4}${MEMBER_INTERFACE}\(${MEMBER_INTERFACE_STATUS}\)(\s|$$) -> Continue
+  ^\s*Po\d+.+?(Et.+?\(.+?\)\s){1}${MEMBER_INTERFACE}\(${MEMBER_INTERFACE_STATUS}\)(\s|$$) -> Continue
+  ^\s*Po\d+.+?(Et.+?\(.+?\)\s){2}${MEMBER_INTERFACE}\(${MEMBER_INTERFACE_STATUS}\)(\s|$$) -> Continue
+  ^\s*Po\d+.+?(Et.+?\(.+?\)\s){3}${MEMBER_INTERFACE}\(${MEMBER_INTERFACE_STATUS}\)\s*$$ -> Continue
   ^\s+${MEMBER_INTERFACE}\(${MEMBER_INTERFACE_STATUS}\)(\s|$$) -> Continue
   ^\s+(Et.+?\(.+?\)\s){1}${MEMBER_INTERFACE}\(${MEMBER_INTERFACE_STATUS}\)(\s|$$) -> Continue
   ^\s+(Et.+?\(.+?\)\s){2}${MEMBER_INTERFACE}\(${MEMBER_INTERFACE_STATUS}\)(\s|$$) -> Continue
-  ^\s+(Et.+?\(.+?\)\s){3}${MEMBER_INTERFACE}\(${MEMBER_INTERFACE_STATUS}\)(\s|$$) -> Continue
-  ^\s+(Et.+?\(.+?\)\s){4}${MEMBER_INTERFACE}\(${MEMBER_INTERFACE_STATUS}\)(\s|$$) -> Continue
-
+  ^\s+(Et.+?\(.+?\)\s){3}${MEMBER_INTERFACE}\(${MEMBER_INTERFACE_STATUS}\)\s*$$ -> Continue
+  ^-+
