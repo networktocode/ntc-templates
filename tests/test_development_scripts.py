@@ -22,6 +22,7 @@ YAML_OBJECT = YAML()
 YAML_OBJECT.explicit_start = True
 YAML_OBJECT.indent(sequence=4, offset=2)
 YAML_OBJECT.block_style = True
+YAML_OBJECT.width = float("inf")
 RE_MULTILINE_REMARK = re.compile(r"(.*\n\s*#)(.*)")
 
 
