@@ -12,5 +12,6 @@ Start
   ^Patch\s+[Vv]ersion\s*:\s+${PATCH_VERSION}\s*$$
   ^(HUAWEI|Huawei|Quidway)\s+${MODEL}\s+(Router\s+)?uptime\s+is\s+${UPTIME}$$
   ^BKP\s+\d+\s+version\s+information -> EOF
+  ^MPU\s+\d+.+ -> EOF
   ^\s*$$ -> EOF
   ^. -> Error

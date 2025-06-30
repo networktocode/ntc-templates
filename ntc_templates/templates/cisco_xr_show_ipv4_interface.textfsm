@@ -35,9 +35,10 @@ Start
   ^\s+Outgoing\s+access\s+list\s+is\s+${OUT_ACL}
   ^\s+Inbound\s+(?:common)?\s+access\s+list\s+is\s+${IN_ACL}
   ^\s+Proxy.*$$
-  ^\s+ICMP redirects.*$$
-  ^\s+ICMP unreachables.*$$
-  ^\s+ICMP mask.*$$
+  ^\s+ARP\s+EVPN.*$$
+  ^\s+ICMP\s+redirects.*$$
+  ^\s+ICMP\s+unreachables.*$$
+  ^\s+ICMP\s+mask.*$$
   ^\s+Table.*$$
   ^\s+mLACP.*$$
   ^IP\s+unicast\s+RPF\s+check\s+is\s+${RPF_CHECK}

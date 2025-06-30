@@ -1,0 +1,9 @@
+Value NAME (\S.+\S|\S+)
+Value UUID (\S+)
+Value TYPE (\S+)
+Value DEVICE (\S+)
+
+Start
+  ^\s*NAME\s+UUID\s+TYPE\s+DEVICE\s*$$
+  ^\s*${NAME}\s+${UUID}\s+${TYPE}\s+(--|${DEVICE})\s*$$ -> Record
+  ^. -> Error

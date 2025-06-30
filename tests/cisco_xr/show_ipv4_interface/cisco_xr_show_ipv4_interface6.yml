@@ -1,0 +1,114 @@
+---
+parsed_sample:
+  - in_acl: ""
+    interface: "Bundle-Ether123"
+    ip_address: ""
+    ip_mtu: ""
+    link_status: "Down"
+    mtu: ""
+    multicast_groups: []
+    out_acl: ""
+    prefix_length: ""
+    protocol: "ipv4"
+    protocol_status: "Down"
+    rpf_check: ""
+    sec_ip_address: []
+    sec_prefix_length: []
+    vrf: "default"
+    vrf_id: "0x60000000"
+  - in_acl: "not set, access list is not set"
+    interface: "MgmtEth0/RP0/CPU0/0"
+    ip_address: "192.168.254.130"
+    ip_mtu: "1500"
+    link_status: "Up"
+    mtu: "1514"
+    multicast_groups: []
+    out_acl: "not set"
+    prefix_length: "24"
+    protocol: "ipv4"
+    protocol_status: "Up"
+    rpf_check: ""
+    sec_ip_address: []
+    sec_prefix_length: []
+    vrf: "MGMT"
+    vrf_id: "0x60000001"
+  - in_acl: ""
+    interface: "GigabitEthernet0/0/0/0"
+    ip_address: ""
+    ip_mtu: ""
+    link_status: "Shutdown"
+    mtu: ""
+    multicast_groups: []
+    out_acl: ""
+    prefix_length: ""
+    protocol: "ipv4"
+    protocol_status: "Down"
+    rpf_check: ""
+    sec_ip_address: []
+    sec_prefix_length: []
+    vrf: "default"
+    vrf_id: "0x60000000"
+  - in_acl: ""
+    interface: "GigabitEthernet0/0/0/1"
+    ip_address: ""
+    ip_mtu: ""
+    link_status: "Shutdown"
+    mtu: ""
+    multicast_groups: []
+    out_acl: ""
+    prefix_length: ""
+    protocol: "ipv4"
+    protocol_status: "Down"
+    rpf_check: ""
+    sec_ip_address: []
+    sec_prefix_length: []
+    vrf: "default"
+    vrf_id: "0x60000000"
+  - in_acl: ""
+    interface: "GigabitEthernet0/0/0/1.100"
+    ip_address: ""
+    ip_mtu: ""
+    link_status: "Shutdown"
+    mtu: ""
+    multicast_groups: []
+    out_acl: ""
+    prefix_length: ""
+    protocol: "ipv4"
+    protocol_status: "Down"
+    rpf_check: ""
+    sec_ip_address: []
+    sec_prefix_length: []
+    vrf: "default"
+    vrf_id: "0x60000000"
+  - in_acl: ""
+    interface: "GigabitEthernet0/0/0/2"
+    ip_address: ""
+    ip_mtu: ""
+    link_status: "Shutdown"
+    mtu: ""
+    multicast_groups: []
+    out_acl: ""
+    prefix_length: ""
+    protocol: "ipv4"
+    protocol_status: "Down"
+    rpf_check: ""
+    sec_ip_address: []
+    sec_prefix_length: []
+    vrf: "default"
+    vrf_id: "0x60000000"
+  - in_acl: ""
+    interface: "GigabitEthernet0/0/0/3"
+    ip_address: ""
+    ip_mtu: ""
+    link_status: "Up"
+    mtu: ""
+    multicast_groups: []
+    out_acl: ""
+    prefix_length: ""
+    protocol: "ipv4"
+    protocol_status: "Up"
+    rpf_check: ""
+    sec_ip_address: []
+    sec_prefix_length: []
+    vrf: "MGMT"
+    vrf_id: "0x60000001"

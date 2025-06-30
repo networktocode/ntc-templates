@@ -1,0 +1,19 @@
+Value Filldown,Required INTERFACE (\S+)
+Value NEIGHBOR_ID (\S+)
+Value PRIORITY (\d+)
+Value STATE (\S+)
+Value DEAD_TIME (\S+)
+Value IP_ADDRESS (\S+)
+Value DATABASE_SUMMARY_LIST (\d+)
+Value LINK_STATE_REQUEST_LIST (\d+)
+Value LINK_STATE_RETRANSMISSION_LIST (\d+)
+
+Start
+  ^Neighbor\s+information\s+with
+  ^Neighbor\s+with\s+${INTERFACE}\s+result:\s*$$
+  ^\s+Neighbor\s+ID\s+Pri\s+State
+  ^\s+${NEIGHBOR_ID}\s+${PRIORITY}\s+${STATE}\s+${DEAD_TIME}\s+${IP_ADDRESS}\s+${DATABASE_SUMMARY_LIST}\s+${LINK_STATE_REQUEST_LIST}\s+${LINK_STATE_RETRANSMISSION_LIST}\s*$$ -> Record
+  ^\s*$$
+  ^. -> Error
+
+EOF

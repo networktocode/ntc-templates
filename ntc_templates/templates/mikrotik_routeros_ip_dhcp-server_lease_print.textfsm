@@ -9,7 +9,10 @@ Value STATUS (\S+)
 Value LAST_SEEN (\S+)
 
 Start
-  ^\s*#\s+ADDRESS\s+MAC-ADDRESS\s+HOST-NAME\s+SERVER\s+RATE-LIMIT\s+STATUS\s+LAST-SEEN\s*$$ -> EntriesTable
+  ^\s*Flags:\s+\w\s+-\s+\S+
+  ^\s*Columns:\s+ADDRESS,\s+MAC-ADDRESS,\s+HOST-NAME,\s+SERVER,\s+STATUS,\s+LAST-SEEN\s*$$
+  ^\s*(#|Columns:)\s+ADDRESS,?\s+MAC-ADDRESS,?\s+HOST-NAME,?\s+SERVER,?\s+(?:RATE-LIMIT,?\s+)?STATUS,?\s+LAST-SEEN,?\s*$$ -> EntriesTable
+  ^. -> Error
 
 EntriesTable
   # Impossible to separate HOST-NAME and SERVER? Have the same regex, can be empty,
