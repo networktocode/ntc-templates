@@ -1,0 +1,27 @@
+Value Key,Required language (\S+)
+Value Creator ([^,]+)
+Value year_created (\d+)
+Value Filldown level ([^,]+)
+Value object_oriented (\S+)
+
+# capture group names are intentionally lowercase/titlecase to trigger and
+# test against the project guidelines of uppercase capture group names
+
+Start
+  ^${language},${Creator},${year_created},${level},${object_oriented},?$$ -> Record
+  ^${language},${Creator},${year_created},,${object_oriented},?$$ -> Record
+  ^#$$
+  ^. -> Error
+
+
+# Mock output below was pulled together by referencing Wikipedia,
+#  opinions can vary and this is just test data
+
+##Language,Creator,Year Created,Level,Object Oriented
+#Python,Guido van Rossum,1991,high-level,yes
+#Go,Google,2009,,partial
+##
+#C,Dennis Ritchie,1972,low-level,no
+#C++,Bjarne Stroustrup,1985,,yes
+#Rust,The Rust Team,2012,,partial
+#Zig,Andrew Kelley,2016,,no
