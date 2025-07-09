@@ -2,7 +2,6 @@
 parsed_sample:
   - allow_dev_key: "yes"
     auto_upgrade: "yes"
-    auto_upgrade_path: ""
     boot_mode: ""
     boot_optimization: "disabled"
     boot_path: "flash:/c3560cx-universalk9-mz.152-7.E4/c3560cx-universalk9-mz.152-7.E4.bin"
@@ -12,7 +11,6 @@ parsed_sample:
     config_file: "flash:/config.text"
     current_boot_variables: ""
     enable_break: "yes"
-    helper_path_list: ""
     manual_boot: "no"
     priv_config_file: "flash:/private-config.text"
     switch_number: ""
