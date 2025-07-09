@@ -6,9 +6,7 @@ Value Required MASK (\d{1,2})
 Value DISTANCE (\d+)
 Value METRIC (\d+)
 Value NEXTHOP_IP (\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3})
-Value NEXTHOP_VRF (\S+)
 Value NEXTHOP_IF ([A-Za-z][\w\-\.:/]+)
-Value UPTIME (\d[\w:\.]+)
 
 Start
   ^Codes:
