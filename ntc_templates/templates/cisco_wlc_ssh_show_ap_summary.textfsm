@@ -11,7 +11,6 @@ Value CLIENTS (\d+)
 Value DSE_LOCATION (.+?)
 Value PRIORITY (\d+)
 Value STATE (\S+)
-Value NUMBER_OF_APS (\d+)
 
 Start
   # Skip lines 
