@@ -13,8 +13,8 @@ Value MAX_L2MTU (\d+)
 Value VRF (.*?)
 Value MAC_ADDRESS ([a-zA-Z0-9]{2}(:[a-zA-Z0-9]{2}){5})
 Value FAST_PATH (\S+)
-Value LAST_LINK_DOWN_TIME (([a-z]{3}\/\d+\/\d+|\d{4}-\d{2}-\d{2})\s\d+\:\d+\:\d+)
-Value LAST_LINK_UP_TIME (([a-z]{3}\/\d+\/\d+|\d{4}-\d{2}-\d{2})\s\d+\:\d+\:\d+)
+Value LAST_LINK_DOWN_TIME (\S+\s\S+)
+Value LAST_LINK_UP_TIME (\S+\s\S+)
 Value LINK_DOWNS (\d+)
 
 Start
