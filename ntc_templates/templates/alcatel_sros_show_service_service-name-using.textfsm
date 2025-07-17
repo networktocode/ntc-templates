@@ -1,6 +1,6 @@
 Value SERVICE_ID (\d+)
 Value TYPE (\S+)
-Value SERVICE_NAME (\S+((?:(\s+\S+))?)+)
+Value SERVICE_NAME (\S+(?:\s+\S+)*)
 
 Start
   ^=+\s*$$
