@@ -6,7 +6,7 @@ Start
   ^=+\s*$$
   ^Services.*$$
   ^Service\s+Name\s+Type\s+Service\s+Id
-  ^\s*${SERVICE_NAME}\s+${TYPE}\s+${SERVICE_ID}\s*$$ -> Record
   ^Matching\s+Services\s+:\s+\d+\s*$$
+  ^\s*${SERVICE_NAME}\s+${TYPE}\s+${SERVICE_ID}\s*$$ -> Record
   ^-+\s*$$
   ^. -> Error
