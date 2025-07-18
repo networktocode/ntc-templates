@@ -3,7 +3,7 @@ Value TYPE (\S+)
 Value ADMIN_STATUS (\S+)
 Value OPERATIONAL_STATUS (\S+)
 Value CUSTOMER_ID (\d+)
-Value SERVICE_NAME (\S+)
+Value SERVICE_NAME (\S+(?:\s+\S+)*)
 
 Start
   ^=+\s*$$
