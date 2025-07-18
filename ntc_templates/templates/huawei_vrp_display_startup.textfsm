@@ -13,7 +13,7 @@ Value NEXT_STARTUP_VOICE_FILES (.+)
 Start
   ^\S+.*:\s*$$ -> Continue.Record
   ^\S+.*:\s*$$
-  ^\s+Startup\ssystem\ssoftware:\s+${STARTUP_SYSTEM_SOFTWARE}\s*$$\s*$$
+  ^\s+Startup\ssystem\ssoftware:\s+${STARTUP_SYSTEM_SOFTWARE}\s*$$
   ^\s+Next\sstartup\s+system\s+software:\s+${NEXT_STARTUP_SYSTEM_SOFTWARE}\s*$$
   ^\s+Backup\s+system\s+software\s+for\s+next\sstartup:\s+${BACKUP_SYSTEM_SOFTWARE_FOR_NEXT_STARTUP}\s*$$
   ^\s+Startup\s+saved-configuration\s+file:\s+${STARTUP_SAVED_CONFIGURATION_FILE}\s*$$
@@ -24,4 +24,6 @@ Start
   ^\s+Next\sstartup\s+patch\s+package:\s+${NEXT_STARTUP_PATCH_PACKAGE}\s*$$
   ^\s+Startup\s+voice-files:\s+${STARTUP_VOICE_FILES}\s*$$
   ^\s+Next\sstartup\s+voice-files:\s+${NEXT_STARTUP_VOICE_FILES}\s*$$
+  ^Info:\s+.*$$
+  ^\s*$$
   ^. -> Error
