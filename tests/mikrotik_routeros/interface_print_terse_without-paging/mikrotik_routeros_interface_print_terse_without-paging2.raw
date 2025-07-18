@@ -1,0 +1,9 @@
+ 0  R  comment=this is a comment name=ether1 default-name=ether1 type=ether mtu=1500 actual-mtu=1500 l2mtu=1596 max-l2mtu=9582 mac-address=12:34:56:78:90:01 last-link-down-time=1970-01-01 01:02:03 last-link-up-time=1970-01-01 01:02:03 link-downs=5
+ 1  R  comment=this is a comment name=ether2 default-name=ether2 type=ether mtu=1500 actual-mtu=1500 l2mtu=1596 max-l2mtu=9582 mac-address=12:34:56:78:90:02 last-link-down-time=1970-01-01 01:02:03 last-link-up-time=1970-01-01 01:02:03 link-downs=17
+ 2   S name=ether3 default-name=ether3 type=ether mtu=1500 actual-mtu=1500 l2mtu=1596 max-l2mtu=9582 vrf=myvrf mac-address=12:34:56:78:90:03 last-link-down-time=1970-01-01 01:02:03 last-link-up-time=1970-01-01 01:02:03 link-downs=1
+ 3   S name=ether4 default-name=ether4 type=ether mtu=1500 actual-mtu=1500 l2mtu=1596 max-l2mtu=9582 vrf=myvrf mac-address=12:34:56:78:90:04 last-link-down-time=1970-01-01 01:02:03 last-link-up-time=1970-01-01 01:02:03 link-downs=1
+ 4     name=sfp-sfpplus1 default-name=sfp-sfpplus1 type=ether mtu=1500 actual-mtu=1500 l2mtu=1600 max-l2mtu=9586 mac-address=12:34:56:78:90:11 link-downs=0
+ 5     name=sfp-sfpplus2 default-name=sfp-sfpplus2 type=ether mtu=1500 actual-mtu=1500 l2mtu=1600 max-l2mtu=9586 mac-address=12:34:56:78:90:12 link-downs=0
+ 6  R  name=lan-bridge type=bridge mtu=auto actual-mtu=1500 l2mtu=1596 vrf=myvrf mac-address=12:34:56:78:90:13 last-link-up-time=1970-01-01 01:02:03 link-downs=0
+ 7  R  name=lo type=loopback mtu=65536 actual-mtu=65536 mac-address=00:00:00:00:00:00 last-link-up-time=1970-01-01 01:02:03 link-downs=0
+ 8  R  name=myvrf type=vrf mtu=65536 actual-mtu=65536 mac-address=12:34:56:78:90:FF last-link-up-time=1970-01-01 01:02:03 link-downs=0
