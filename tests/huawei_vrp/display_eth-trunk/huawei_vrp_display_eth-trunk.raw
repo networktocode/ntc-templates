@@ -1,0 +1,26 @@
+Eth-Trunk0's state information is:
+WorkingMode: NORMAL         Hash arithmetic: According to SIP-XOR-DIP         
+Least Active-linknumber: 1  Max Bandwidth-affected-linknumber: 8              
+Operate status: up          Number Of Up Port In Trunk: 2                     
+--------------------------------------------------------------------------------
+PortName                      Status      Weight 
+GigabitEthernet0/0/27         Up          1      
+GigabitEthernet0/0/28         Up          1      
+  
+Eth-Trunk1's state information is:
+Local:
+LAG ID: 1                   WorkingMode: LACP                                 
+Preempt Delay: Disabled     Hash arithmetic: According to SIP-XOR-DIP         
+System Priority: 32768      System ID: aaaa-aaaa-aaaa                         
+Least Active-linknumber: 1  Max Active-linknumber: 8                          
+Operate status: up          Number Of Up Port In Trunk: 2                     
+--------------------------------------------------------------------------------
+ActorPortName          Status   PortType PortPri PortNo PortKey PortState Weight
+GigabitEthernet0/0/11  Selected 1GE      32768   1      305     10111100  1     
+GigabitEthernet0/0/12  Selected 1GE      32768   2      305     10111100  1     
+
+Partner:
+--------------------------------------------------------------------------------
+ActorPortName          SysPri   SystemID        PortPri PortNo PortKey PortState
+GigabitEthernet0/0/11  65535    bbbb-bbbb-bbbb  255     1      9       10111100
+GigabitEthernet0/0/12  65535    bbbb-bbbb-bbbb  255     2      9       10111100

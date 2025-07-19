@@ -1,0 +1,50 @@
+Value Filldown ETH_TRUNK (\S+)
+Value Filldown WORKING_MODE (\S+)
+Value Filldown HASH_ARITHMETIC (\S.+\S)
+Value Filldown LEAST_ACTIVE_LINKNUMBER (\d+)
+Value Filldown MAX_ACTIVE_LINKNUMBER (\d+)
+Value Filldown MAX_BANDWIDTH_AFFECTED_LINKNUMBER (\d+)
+Value Filldown OPERATE_STATUS (\S+)
+Value Filldown NUMBER_OF_UP_PORT_IN_TRUNK (\d+)
+Value Filldown LAG_ID (\d+)
+Value Filldown PREEMPT_DELAY (\S+)
+Value Filldown SYSTEM_PRIORITY (\d+)
+Value Filldown SYSTEM_ID (\S+)
+Value Required INTERFACE (\S+)
+Value STATUS (\S+)
+Value PORT_TYPE (\S+)
+Value PORT_PRIORITY (\d+)
+Value PORT_NUMBER (\d+)
+Value PORT_KEY (\d+)
+Value PORT_STATE (\d+)
+Value WEIGHT (\d+)
+Value PARTNER_SYSTEM_PRIORITY (\d+)
+Value PARTNER_SYSTEM_ID (\S+)
+
+Start
+  ^\s*Info:\s+No\s+valid\s+trunk\s+in\s+the\s+system.\s*$$
+  ^\s*Eth-Trunk -> Continue.Clear
+  ^\s*${ETH_TRUNK}'s\s+state\s+information\s+is:\s*$$
+  ^\s*WorkingMode:\s+${WORKING_MODE}\s+Hash\s+arithmetic:\s+${HASH_ARITHMETIC}\s*$$
+  ^\s*LAG\s+ID:\s+${LAG_ID}\s+WorkingMode:\s+${WORKING_MODE}\s*$$
+  ^\s*Preempt\s+Delay:\s+${PREEMPT_DELAY}\s+Hash\s+arithmetic:\s+${HASH_ARITHMETIC}\s*$$
+  ^\s*System\s+Priority:\s+${SYSTEM_PRIORITY}\s+System\s+ID:\s+${SYSTEM_ID}\s*$$
+  ^\s*Least\s+Active-linknumber:\s+${LEAST_ACTIVE_LINKNUMBER}\s+Max\s+Bandwidth-affected-linknumber:\s+${MAX_BANDWIDTH_AFFECTED_LINKNUMBER}\s*$$
+  ^\s*Least\s+Active-linknumber:\s+${LEAST_ACTIVE_LINKNUMBER}\s+Max\sActive-linknumber:\s+${MAX_ACTIVE_LINKNUMBER}\s*$$
+  ^\s*Operate\s+status:\s+${OPERATE_STATUS}\s+Number\s+Of\s+Up\s+Port\s+In\s+Trunk:\s+${NUMBER_OF_UP_PORT_IN_TRUNK}\s*$$
+  ^\s*-+\s*$$
+  ^\s*ActorPortName\s+Status\s+PortType\s+PortPri\s+PortNo\s+PortKey\s+PortState\s+Weight\s*$$
+  ^\s*PortName\s+Status\s+Weight\s*$$
+  ^\s*Partner:\s*$$ -> Partner
+  ^\s*${INTERFACE}\s+${STATUS}\s+${PORT_TYPE}\s+${PORT_PRIORITY}\s+${PORT_NUMBER}\s+${PORT_KEY}\s+${PORT_STATE}\s+${WEIGHT}\s*$$ -> Record
+  ^\s*${INTERFACE}\s+${STATUS}\s+${WEIGHT}\s*$$ -> Record
+  ^\s*Local:\s*$$ 
+  ^\s+$$
+  ^. -> Error
+
+Partner
+  ^\s*-+\s*$$
+  ^\s*ActorPortName\s+SysPri\s+SystemID\s+PortPri\s+PortNo\s+PortKey\s+PortState\s*$$
+  ^\s*${INTERFACE}\s+${PARTNER_SYSTEM_PRIORITY}\s+${PARTNER_SYSTEM_ID}\s+${PORT_PRIORITY}\s+${PORT_NUMBER}\s+${PORT_KEY}\s+${PORT_STATE}\s*$$ -> Record
+  ^\s*$$ -> Start
+  ^. -> Error
