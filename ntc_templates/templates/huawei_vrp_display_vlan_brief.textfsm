@@ -18,7 +18,7 @@ Start
   ^\s*FWD:\s+Forward;\s+DSD:\s+Discard;\s*$$
   ^\s*VID\s+(?:Type\s+)?Ports\s*$$ -> VLANS_SW
   ^\s*VID\s+Name\s+Status\s+Ports\s*$$ -> VLANS_AP
-  ^\s*VID\s+(?:Type\s+)?Status\s+Property\s+MAC\-LRN\s+(STAT|Statistics)\s+(?:BC\s+)?(?:MC\s+)?(?:UC\s+)?Description\s*$$ -> STATUS_SW
+  ^\s*VID\s+(?:Type\s+)?Status\s+Property\s+MAC\-LRN\s+(STAT|Statistics)\s+(?:[BMU]C\s+)*Description\s*$$ -> STATUS_SW
   ^\s*VLAN\s+ID\s+Type\s+Status\s+MAC\s+Learning\s+Broadcast\/Multicast\/Unicast\s+Property\s*$$ -> STATUS_AP
   ^. -> Error
 
