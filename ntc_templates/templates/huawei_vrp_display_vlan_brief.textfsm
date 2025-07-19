@@ -1,10 +1,10 @@
 Value Key,Required,Filldown VLAN_ID (\d+)
 Value Filldown VLAN_NAME (\w.+\w|\w+)
-Value Filldown MODE ((TG|UT))
-Value Filldown VLAN_STATUS ((enable|disable))
-Value Filldown VLAN_TYPE ((common|uncommon))
+Value Filldown MODE (TG|UT)
+Value Filldown VLAN_STATUS (enable|disable)
+Value Filldown VLAN_TYPE (common|uncommon)
 Value List INTERFACE ([\w+\.\-\/]+)
-Value List INTERFACE_STATUS ((U|D))
+Value List INTERFACE_STATUS (U|D)
 
 Start
   ^\s*\*\s+:\s+management-vlan\s*$$
