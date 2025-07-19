@@ -6,7 +6,6 @@ Value VPLSVLANPRESENT (TRUE|FALSE)
 Value MEMBERVLANS ([0-9\ to]+)
 Value MEMBERGROUP ([0-9a-zA-Z\/\ ]+)
 Value CONTROLPORTS ([0-9\ \/eto]+)
-Value FREEPORTS ([0-9\ \/eto]+)
 
 Start
   ^Topology Group\s+${TOPOGROUP}

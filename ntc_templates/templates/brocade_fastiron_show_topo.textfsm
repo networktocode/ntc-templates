@@ -1,9 +1,6 @@
 Value TOPOGROUP (\d+)
 Value MASTERVLAN (\d+)
 Value L2PROTO (MRP|STP|RSTP|VSRP|ERP)
-Value MEMBERVLANS ([0-9\ to]+)
-Value CONTROLPORTS ([0-9\ \/eto]+)
-Value FREEPORTS ([0-9\ \/eto]+)
 
 Start
   ^Topology Group\s+${TOPOGROUP} -> Continue
