@@ -9,10 +9,20 @@ Value OUTERRORS (\d+)
 
 Start
   ^\s*${INTERFACE}\s+${PHY}\s+${PROTOCOL}\s+${INUTI}\s+${OUTUTI}\s+${INERRORS}\s+${OUTERRORS} -> Record
-  ^PHY:\s+Physical
-  ^(?:\*|\^|\#)down:
-  ^\(\w+\):\s+\S+
-  ^InUti/OutUti:
-  ^Interface\s+PHY\s+Protocol\s+InUti\s+OutUti\s+inErrors\s+outErrors\s*$$
-  ^\s*$$
+  ^\s*PHY:\s+Physical\s*$$
+  ^\s*\*down:\s+administratively\s+down\s*$$
+  ^\s*\^down:\s+standby\s*$$
+  ^\s*#down:\s+LBDT\s+down\s*$$
+  ^\s*\(l\):\s+loopback\s*$$
+  ^\s*\(s\):\s+spoofing\s*$$
+  ^\s*\(E\):\s+E-Trunk\s+down\s*$$
+  ^\s*\(b\):\s+BFD\s+down\s*$$
+  ^\s*\(B\):\s+Bit-error-detection\s+down\s*$$
+  ^\s*\(e\):\s+ETHOAM\s+down\s*$$
+  ^\s*\(dl\):\s+DLDP\s+down\s*$$
+  ^\s*\(lb\):\s+LBDT\s+block\s*$$
+  ^\s*\(d\):\s+Dampening\s+Suppressed\s*$$
+  ^\s*\(v\):\s+VirtualPort\s*$$
+  ^\s*InUti/OutUti:\s+input\s+utility/output\s+utility\s*$$
+  ^\s*Interface\s+PHY\s+Protocol\s+InUti\s+OutUti\s+inErrors\s+outErrors\s*$$
   ^. -> Error
