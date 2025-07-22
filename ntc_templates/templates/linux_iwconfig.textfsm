@@ -28,6 +28,7 @@ Start
   ^\s*${INTERFACE}\s+no\s+wireless\s+extensions\.$$ -> Clear
   ^\s*${INTERFACE}\s+(IEEE\s+802\.11\w*|unassociated)(?:\s+ESSID:off\/any)?(?:\s+Nickname:\"${NICKNAME}\")?\s*$$
   ^\s*${INTERFACE}\s+(IEEE\s+802\.11\w*|unassociated)(?:\s+ESSID:\"${ESSID}\"\s+)?(?:\s*Nickname:\"${NICKNAME}\")?\s*$$
+  ^\s*${INTERFACE}\s+(IEEE\s+802\.11\w*|unassociated)(?:\s+Mode:${MODE}\s+)?(?:\s*Frequency:${FREQUENCY}\s+)?(?:\s*Tx-Power=${TX_POWER})?\s*$$
   ^\s*Mode:\s*${MODE}\s+(?:Frequency(:|=)\s*${FREQUENCY}\s+)?Access\s+Point:\s+${ACCESS_POINT}(?:\s+Tx-Power\s*=\s*${TX_POWER})?\s*$$
   ^\s*(?:Bit\s+Rate(:|=)${BIT_RATE})?(?:\s*Sensitivity:${SENSITIVITY})?(?:\s+Tx-Power=${TX_POWER})?\s*$$
   ^\s*Retry(?:\s+short\s+limit)?:${RETRY_SHORT_LIMIT}\s+RTS\s+thr:${RTS_THR}\s+Fragment\s+thr:${FRAGMENT_THR}\s*$$
