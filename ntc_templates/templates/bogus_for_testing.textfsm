@@ -3,6 +3,7 @@ Value Creator ([^,]+)
 Value year_created (\d+)
 Value Filldown level ([^,]+)
 Value object_oriented (\S+)
+Value not_used (\S+)
 
 # capture group names are intentionally lowercase/titlecase to trigger and
 # test against the project guidelines of uppercase capture group names

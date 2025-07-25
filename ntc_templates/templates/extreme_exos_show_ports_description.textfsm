@@ -1,5 +1,5 @@
 Value INTERFACE (\d+)
-Value DISPLAY_STRING (\S+)
+# Value DISPLAY_STRING (\S+)
 Value DESCRIPTION (.*)
 
 # Broken. There is no good way to differ 'Display String' and 'Description' since
