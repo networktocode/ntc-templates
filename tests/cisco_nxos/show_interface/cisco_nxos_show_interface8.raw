@@ -1,0 +1,41 @@
+port-channel5 is up
+admin state is up
+ vPC Status: Up, vPC number: 5
+  Hardware: Port-Channel, address: 0c11.67ea.61ff (bia 0c11.67ea.61ff)
+  Description: <<vPC for OTV>>
+  MTU 9216 bytes, BW 10000000 Kbit, DLY 10 usec
+  reliability 255/255, txload 2/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 10 Gb/s
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Members in this channel: Eth4/40
+  Last clearing of "show interface" counters 18w4d
+  0 interface resets
+  Load-Interval #1: 30 seconds
+    30 seconds input rate 6346768 bits/sec, 2346 packets/sec
+    30 seconds output rate 79764184 bits/sec, 11521 packets/sec
+    input rate 6.35 Mbps, 2.35 Kpps; output rate 79.76 Mbps, 11.52 Kpps
+  Load-Interval #2: 5 minute (300 seconds)
+    300 seconds input rate 13037584 bits/sec, 2887 packets/sec
+    300 seconds output rate 76395224 bits/sec, 11438 packets/sec
+    input rate 13.04 Mbps, 2.89 Kpps; output rate 76.39 Mbps, 11.44 Kpps
+  RX
+    207066434678 unicast packets  1204676434 multicast packets  1682709022 broadcast packets
+    209953670944 input packets  277461463918114 bytes
+    1141046629 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC/FCS  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  10586 input discard
+    0 Rx pause
+  TX
+    105894201592 unicast packets  76424674970 multicast packets  753017308 broadcast packets
+    182751753874 output packets  153916773348225 bytes
+    1106570203 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause

@@ -25,23 +25,104 @@ Value PACKET_OUTPUT_RATE (.+?)
 Value BANDWIDTH_INPUT_RATE (.+?)
 Value BANDWIDTH_OUTPUT_RATE (.+?)
 Value MEDIA_TYPE (.+?)
+# RX
+Value SHORT_FRAME (\d+)
+Value OVERRUN (\d+)
+Value UNDERRUN (\d+)
+Value IGNORED (\d+)
+Value WATCHDOG (\d+)
+Value BAD_ETYPE_DROP (\d+)
+Value BAD_PROTO_DROP (\d+)
+Value INTERFACE_DOWN_DROP (\d+)
+Value DRIBBLE (\d+)
+Value INPUT_DISCARDS (\d+)
+Value RX_PAUSE (\d+)
+Value STOMPED_CRC (\d+)
+Value RX_JUMBO_PACKETS (\d+)
+Value STORM_SUPPRESSION_BYTES (\d+)
+Value RUNTS (\d+)
+Value GIANTS (\d+)
+Value CRC (\d+)
+Value NO_BUFFER (\d+)
+# TX
+Value TX_JUMBO_PACKETS (\d+)
+Value COLLISIONS (\d+)
+Value DEFERRED (\d+)
+Value LATE_COLLISIONS (\d+)
+Value LOST_CARRIER (\d+)
+Value NO_CARRIER (\d+)
+Value BABBLE (\d+)
+Value OUTPUT_DISCARDS (\d+)
+Value TX_PAUSE (\d+)
 
 Start
   ^\S+\s+is.+ -> Continue.Record
   ^${INTERFACE}\s+is\s+${LINK_STATUS},\sline\sprotocol\sis\s${ADMIN_STATE}$$
   ^${INTERFACE}\s+is\s+${LINK_STATUS}$$
   ^admin\s+state\s+is\s+${ADMIN_STATE},
+  ^admin\s+state\s+is\s+${ADMIN_STATE}
   ^\s+Hardware(:|\s+is)\s+${HARDWARE_TYPE},\s+address(:|\s+is)\s+${MAC_ADDRESS}(.*bia\s+${BIA})*
+  ^\s+Hardware(:|\s+is)\s+${HARDWARE_TYPE}
   ^\s+Description:\s+${DESCRIPTION}\s*$$
   ^\s+Internet\s+Address\s+is\s+${IP_ADDRESS}\/${PREFIX_LENGTH}
   ^\s+Port\s+mode\s+is\s+${MODE}
-  ^\s+${DUPLEX}, ${SPEED}(,\s+media\s+type\s+is\s+${MEDIA_TYPE})?\s*$$
+  ^\s+${DUPLEX},\s+${SPEED}(,\s+media\s+type\s+is\s+${MEDIA_TYPE})?\s*$$
   ^\s+MTU\s+${MTU}.*BW\s+${BANDWIDTH}.*DLY\s+${DELAY}
-  ^\s+Encapsulation\s+${ENCAPSULATION}(,)?(\s+Virtual\s+LAN,\s+Vlan\s+ID\s+${VLAN_ID},)?
+  ^\s+Encapsulation\s+${ENCAPSULATION},?(\s+Virtual\s+LAN,\s+Vlan\s+ID\s+${VLAN_ID},)?
   ^\s+${INPUT_PACKETS}\s+input\s+packets\s+\d+\s+bytes\s*$$
-  ^\s+${INPUT_ERRORS}\s+input\s+error\s+\d+\s+short\s+frame\s+\d+\s+overrun\s+\d+\s+underrun\s+\d+\s+ignored\s*$$
   ^\s+${OUTPUT_PACKETS}\s+output\s+packets\s+\d+\s+bytes\s*$$
-  ^\s+${OUTPUT_ERRORS}\s+output\s+error\s+\d+\s+collision\s+\d+\s+deferred\s+\d+\s+late\s+collision\s*$$
+  ^\s+${INPUT_PACKETS}\s+input\s+packets(\s+\d+\s+(unicast|multicast)+\s+packets){2}\s*$$
+  ^\s+${OUTPUT_PACKETS}\s+output\s+packets(\s+\d+\s+(unicast|multicast)+\s+packets){2}\s*$$
+  ^\s+${INPUT_PACKETS}\s+packets\s+input\s+\d+\s+bytes\s*$$
+  ^\s+${OUTPUT_PACKETS}\s+packets\s+output\s+\d+\s+bytes\s+${UNDERRUN}\s+underruns\s*$$
+  ^\s+input:\s+${INPUT_PACKETS}\s+pkts,\s+\d+\s+bytes\s+-\s+output:\s+${OUTPUT_PACKETS}\s+pkts,\s+\d+\s+bytes\s*$$
   ^\s+Last\s+link\s+flapped\s+${LAST_LINK_FLAPPED}\s*$$
-  ^\s+\d+\s+seconds\s+input\s+rate\s+${BANDWIDTH_INPUT_RATE}\s+bits/sec,\s+${PACKET_INPUT_RATE}\s+packets/sec
-  ^\s+\d+\s+seconds\s+output\s+rate\s+${BANDWIDTH_OUTPUT_RATE}\s+bits/sec,\s+${PACKET_OUTPUT_RATE}\s+packets/sec
+  ^\s+\d+\s+(second|minute)s?\s+input\s+rate\s+${BANDWIDTH_INPUT_RATE}\s+bits/sec,\s+${PACKET_INPUT_RATE}\s+packets/sec
+  ^\s+\d+\s+(second|minute)s?\s+output\s+rate\s+${BANDWIDTH_OUTPUT_RATE}\s+bits/sec,\s+${PACKET_OUTPUT_RATE}\s+packets/sec
+  # RX
+  ^\s+${INPUT_ERRORS}\s+input\s+errors?\s+${SHORT_FRAME}\s+short\s+frame\s+${OVERRUN}\s+overrun\s+${UNDERRUN}\s+underrun\s+${IGNORED}\s+ignored\s*$$
+  ^\s+${INPUT_ERRORS}\s+input\s+errors\s+${SHORT_FRAME}\s+frame\s+${OVERRUN}\s+overrun\s+\d+\s+fifo\s*$$
+  ^\s+${WATCHDOG}\s+watchdog\s+${BAD_ETYPE_DROP}\s+bad\s+etype\s+drop\s+${BAD_PROTO_DROP}\s+bad\s+proto\s+drop\s+${INTERFACE_DOWN_DROP}\s+if\s+down\s+drop\s*$$
+  ^\s+${DRIBBLE}\s+input\s+with\s+dribble\s+${INPUT_DISCARDS}\s+input\s+discard\s*$$
+  ^\s+${RX_PAUSE}\s+Rx\s+pause\s*$$
+  ^\s+${STOMPED_CRC}\s+Stomped\s+CRC\s*$$
+  ^\s+${RX_JUMBO_PACKETS}\s+jumbo\s+packets\s+${STORM_SUPPRESSION_BYTES}\s+storm\s+suppression\s+bytes\s*$$
+  ^\s+${RX_JUMBO_PACKETS}\s+jumbo\s+packets\s+\d+\s+storm\s+suppression\s+packets\s*$$
+  ^\s+${RX_JUMBO_PACKETS}\s+jumbo\s+pa(ckets)?\s+Encapsulation\s+\S+,\s+medium\s+is\s+\S+
+  ^\s+${RUNTS}\s+runts\s+${GIANTS}\s+giants\s+${CRC}\s+CRC(/FCS)?\s+${NO_BUFFER}\s+no\s+buffer\s*$$
+  # TX
+  ^\s+${TX_JUMBO_PACKETS}\s+jumbo\s+packets\s*$$
+  ^\s+${OUTPUT_ERRORS}\s+output\s+errors?\s+${COLLISIONS}\s+collision\s+${DEFERRED}\s+deferred\s+${LATE_COLLISIONS}\s+late\s+collision\s*$$
+  ^\s+${OUTPUT_ERRORS}\s+output\s+errors\s+${COLLISIONS}\s+collisions\s+\d+\s+fifo\s*$$
+  ^\s+${LOST_CARRIER}\s+lost\s+carrier\s+${NO_CARRIER}\s+no\s+carrier\s+${BABBLE}\s+babble\s+${OUTPUT_DISCARDS}\s+output\s+discard\s*$$
+  ^\s+${TX_PAUSE}\s+Tx\s+pause\s*$$
+  # Unmatched
+  ^\s+reliability\s+\d+/\d+,\s+txload\s+\d+/\d+,\s+rxload\s+\d+/\d+\s*$$
+  ^\s+Auto-(mdix|Negotiation)\s+is\s+
+  ^\s+(Beacon|EtherType|Rate\s+mode|Switchport\s+monitor)\s+is\s+
+  ^\s+Input\s+flow-control\s+is\s+\S+,\s+output\s+flow-control\s+is\s+\S+\s*$$
+  ^\s+EEE\s+\(efficient-ethernet\)\s+
+  ^\s+Last\s+clearing\s+of\s+"show\s+interface"\s+counters\s+
+  ^\s+\d+\s+interface\s+resets\s*$$
+  ^\s+Load-Interval\s+
+  ^\s+L3\s+((in|out)\s+)?Switched:\s*$$
+  ^\s+[RT][Xx]\s*$$
+  ^\s+Dedicated\s+Interface\s*$$
+  ^\s+Belongs\s+to\s+
+  ^\s+admin\s+fec\s+state\s+is\s+\S+,\s+oper\s+fec\s+state\s+is\s+\S+\s*$$
+  ^\s+Keepalive\s+
+  ^\s+ARP\s+type:\s+\S+\s*$$
+  ^\s+\d+\s+broadcast\s+packets\s+\d+\s+bytes\s*$$
+  ^\s+ucast:\s+\d+\s+pkts,\s+\d+\s+bytes(\s+-\s+mcast:\s+\d+\s+pkts,\s+\d+\s+bytes)?\s*$$
+  ^\s+\d+\s+unicast\s+packets\s+\d+\s+multicast\s+packets\s+\d+\s+broadcast\s+packets\s*$$
+  ^\s+(Ha\s+)?input\s+rate\s+\S+\s+\w?bps,\s+\S+\s+\w?pps;\s+output\s+rate\s+\S+\s+\w?bps,\s+\S+\s+\w?pps\s*$$
+  ^\s+Members\s+in\s+this\s+channel:\s+
+  ^\s+No\s+members
+  ^\s+Management\s+transceiver:
+  ^\s+Active\s+connector:
+  ^\s+Configured\s+Media-type:
+  ^\s+vPC\s+Status:\s+\S+,\s+vPC\s+number:\s+\d+
+  ^\s+Input\s+flow-control\s+is\s+\S+,\s+Port\s+mode\s+is\s+\S+\s*$$
+  ^\s+\d+\s+multicast\s+frames\s+\d+\s+compressed\s*$$
+  ^\s+\d+\s+out_carrier_errors\s*$$
+  ^. -> Error
