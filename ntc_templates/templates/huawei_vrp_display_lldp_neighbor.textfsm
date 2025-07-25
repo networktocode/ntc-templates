@@ -17,7 +17,7 @@ Value EXPIRED_TIME (\d+)
 Value VLAN_ID (\d+)
 Value VLAN_ID_AND_PROTOCOL (\S+|\S.+\S)
 Value VLAN_NAME (\S.+\S)		
-Value SERIAL (\S+)
+Value SERIAL (\S.+\S)
 Value OID (\S+)
 Value AUTONEGOTIATION_SUPPORTED (\S+)
 Value AUTONEGOTIATION_ENABLED (\S+)
@@ -67,7 +67,6 @@ Value MED_DEVICE_CLASS (\S.+\S)
 Value FIRMWARE_REVISION (\S.+\S)
 Value HARDWARE_REVISION (\S.+\S)
 Value SOFTWARE_REVISION (\S.+\S)
-Value SERIAL_NUMBER (\S.+\S)
 Value MODEL_NAME (\S.+\S)
 Value ASSET_TRACKING_IDENTIFIER (\S.+\S)
 Value MEDIA_POLICY_TYPE (\S.+\S)
@@ -164,7 +163,7 @@ Start
   ^\s*HardwareRev\s*:\s*${HARDWARE_REVISION}\s*$$
   ^\s*FirmwareRev\s*:\s*(NA|${FIRMWARE_REVISION})\s*$$
   ^\s*SoftwareRev\s*:\s*${SOFTWARE_REVISION}\s*$$
-  ^\s*SerialNum\s*:\s*(NA|${SERIAL_NUMBER})\s*$$
+  ^\s*SerialNum\s*:\s*(NA|${SERIAL})\s*$$
   ^\s*Manufacturer\s+name\s*:\s*${MANUFACTURER}\s*$$
   ^\s*Model\s+name\s*:\s*${MODEL_NAME}\s*$$
   ^\s*Asset\s+tracking\s+identifier\s*:\s*(NA|${ASSET_TRACKING_IDENTIFIER})\s*$$
