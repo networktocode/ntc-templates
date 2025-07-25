@@ -61,5 +61,10 @@ def test_unused_capture_group(load_template_files):
         if len(usage) < 1:
             unused.append(group)
 
-    # as long as the `unused` list is empty there are no unused capture groups
-    assert not unused, "There are unused capture groups defined in template"
+    if "bogus" in load_template_files:
+        # The bogus file intentionally has an unused capture group defined
+        # (Utilizes a lowercase group since the bogus template is also used for another test.)
+        assert unused, "Error: Bogus test case should always have a match"
+    else:
+        # as long as the `unused` list is empty there are no unused capture groups
+        assert not unused, "There are unused capture groups defined in template"
