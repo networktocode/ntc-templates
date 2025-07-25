@@ -38,7 +38,7 @@ Start
   ^\s*Encryption\s+key:\s*${ENCRYPTION_KEY}\s*$$
   ^\s*IE:\s+${INFORMATION_ELEMENT}\s*$$
   ^\s*Group\s+Cipher\s*:\s*${GROUP_CIPHER}\s*$$
-  ^\s*Pairwise\s+Ciphers\s*\(\d+\)\s*:\s*${GROUP_CIPHER}\s*$$
+  ^\s*Pairwise\s+Ciphers\s*\(\d+\)\s*:\s*${PAIRWISE_CIPHER}\s*$$
   ^\s*Authentication\s+Suites\s*\(\d+\)\s*:\s*${AUTHENTICATION_SUITES}\s*$$
   ^\s*Preauthentication\s+${PREAUTHENTICATION}\s*$$
   ^\s*Quality\s*=\s*${QUALITY}\s+Signal\s+level\s*=\s*${SIGNAL_LEVEL}\s*$$
