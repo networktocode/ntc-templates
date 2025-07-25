@@ -107,7 +107,7 @@ Start
   ^\s*System\s+description\s*:\s*${NEIGHBOR_DESCRIPTION}\s*$$ -> SystemDescription
   ^\s*System\s+capabilities\s+supported\s*:\s*${SYSTEM_CAPABILITIES_SUPPORTED}\s*$$
   ^\s*System\s+capabilities\s+enabled\s*:\s*${CAPABILITIES}\s*$$
-  ^\s*Management\s+address\s+type\s*:\s*${MGMT_ADDRESS}\s*$$
+  ^\s*Management\s+address\s+type\s*:\s*${MGMT_ADDRESS_TYPE}\s*$$
   ^\s*Management\s+address\s*(value\s*)?:\s*${MGMT_ADDRESS}\s*$$
   ^\s*OID\s*:\s*${OID}?\s*$$
   ^\s*Expired\s+time\s*:\s*${EXPIRED_TIME}s\s*$$
@@ -200,7 +200,7 @@ Start
 SystemDescription
   ^\s*System\s+capabilities\s+supported\s*:\s*${SYSTEM_CAPABILITIES_SUPPORTED}\s*$$ -> Start
   ^\s*System\s+capabilities\s+enabled\s*:\s*${CAPABILITIES}\s*$$ -> Start
-  ^\s*Management\s+address\s+type\s*:\s*${MGMT_ADDRESS}\s*$$ -> Start
+  ^\s*Management\s+address\s+type\s*:\s*${MGMT_ADDRESS_TYPE}\s*$$ -> Start
   ^\s*Management\s+address\s*(value\s*)?:\s*${MGMT_ADDRESS}\s*$$ -> Start
   ^\s*Expired\s+time\s*:\s*${EXPIRED_TIME}s\s*$$ -> Start
   ^\s*${NEIGHBOR_DESCRIPTION}\s*$$
