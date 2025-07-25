@@ -1,0 +1,51 @@
+IPv4 Sessions
+NeighAddr                              LD/RD         RH/RS     State     Int
+10.103.45.4                             1/4344       Up        Up        Twe1/0/1
+Session state is UP and using echo function with 500 ms interval.
+Session Host: Software
+OurAddr: 10.103.45.5    
+Handle: 1
+Local Diag: 0, Demand mode: 0, Poll bit: 0
+MinTxInt: 1000000, MinRxInt: 1000000, Multiplier: 3
+Received MinRxInt: 1000000, Received Multiplier: 3
+Holddown (hits): 0(0), Hello (hits): 1000(78231)
+Rx Count: 78237, Rx Interval (ms) min/max/avg: 2/1004/875 last: 657 ms ago
+Tx Count: 78233, Tx Interval (ms) min/max/avg: 2/1004/877 last: 703 ms ago
+Echo Rx Count: 156257, Echo Rx Interval (ms) min/max/avg: 377/505/439 last: 436 ms ago
+Echo Tx Count: 156257, Echo Tx Interval (ms) min/max/avg: 378/505/439 last: 437 ms ago
+Elapsed time watermarks: 0 0 (last: 0)
+Registered protocols: OSPF CEF 
+Uptime: 19:03:41
+Last packet: Version: 1                  - Diagnostic: 0
+             State bit: Up               - Demand bit: 0
+             Poll bit: 0                 - Final bit: 0
+             C bit: 0                                   
+             Multiplier: 3               - Length: 24
+             My Discr.: 4344             - Your Discr.: 1
+             Min tx interval: 1000000    - Min rx interval: 1000000
+             Min Echo interval: 100000  
+
+IPv4 Sessions
+NeighAddr                              LD/RD         RH/RS     State     Int
+192.168.100.3                           2/0          Down      Down      Tu100
+Session Host: Hardware
+OurAddr: 192.168.100.11 
+Handle: 2
+Local Diag: 1, Demand mode: 0, Poll bit: 0
+MinTxInt: 1000000, MinRxInt: 1000000, Multiplier: 3
+Received MinRxInt: 500000, Received Multiplier: 3
+Holddown (hits): 0(0), Hello (hits): 1000(0)
+Rx Count: 0, Rx Interval (ms) min/max/avg: 0/0/0
+Tx Count: 8439, Tx Interval (ms) min/max/avg: 873/1000/1032
+Elapsed time watermarks: 0 0 (last: 0)
+Registered protocols: NHRP CEF 
+Template: GlobalWan
+Downtime: 02:11:53
+Last packet: Version: 1                  - Diagnostic: 0
+             State bit: Up               - Demand bit: 0
+             Poll bit: 0                 - Final bit: 0
+             C bit: 1                                   
+             Multiplier: 3               - Length: 24
+             My Discr.: 245              - Your Discr.: 2
+             Min tx interval: 500000     - Min rx interval: 500000
+             Min Echo interval: 0       

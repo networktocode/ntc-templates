@@ -23,9 +23,14 @@ Value RX_COUNT (\d+)
 Value RX_LAST (\d+)
 Value TX_COUNT (\d+)
 Value TX_LAST (\d+)
+Value ECHO_RX_COUNT (\d+)
+Value ECHO_RX_LAST (\d+)
+Value ECHO_TX_COUNT (\d+)
+Value ECHO_TX_LAST (\d+)
 Value REGISTERED_PROTOCOLS (\S+(?:\s+\S+)*)
 Value TEMPLATE (\S+)
 Value UPTIME (\S+)
+Value DOWNTIME (\S+)
 Value VERSION (\d+)
 
 Start
@@ -57,9 +62,12 @@ BFD
   ^\s*Tx\s+Count:\s+${TX_COUNT},(?:\s+\S+){5}\s*$$
   ^\s*Rx\s+Count:\s+${RX_COUNT},(?:\s+\S+){6}\s+${RX_LAST}(?:\s+\S+){2}\s*$$
   ^\s*Tx\s+Count:\s+${TX_COUNT},(?:\s+\S+){6}\s+${TX_LAST}(?:\s+\S+){2}\s*$$
+  ^\s*Echo\s+Rx\s+Count:\s+${ECHO_RX_COUNT},(?:\s+\S+){7}\s+${ECHO_RX_LAST}(?:\s+\S+){2}\s*$$
+  ^\s*Echo\s+Tx\s+Count:\s+${ECHO_TX_COUNT},(?:\s+\S+){7}\s+${ECHO_TX_LAST}(?:\s+\S+){2}\s*$$
   ^\s*Registered\s+protocols:\s+${REGISTERED_PROTOCOLS}\s*$$
   ^\s*Template:\s+${TEMPLATE}\s*$$
   ^\s*Uptime:\s+${UPTIME}\s*$$
+  ^\s*Downtime:\s+${DOWNTIME}\s*$$
   ^\s*Last\s+packet:\s+Version:\s+${VERSION}\s+.*$$ -> Record
   #
   # lines of no interest for the time being
