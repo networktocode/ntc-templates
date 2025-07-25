@@ -27,7 +27,7 @@ include = [
 
 [tool.poetry.dependencies]
 python = "^3.9"
-textfsm = "^1.1.0"
+textfsm = ">=1.1.0"
 
 [tool.poetry.dev-dependencies]
 bandit = "*"
