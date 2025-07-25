@@ -3,7 +3,7 @@ Value CHASSIS_TYPE (\S.+\S)
 Value CHASSIS_ID (\S.+\S)
 Value PORT_ID_TYPE (\S.+\S)
 Value PORT_ID_SUBTYPE (\S.+\S)
-Value MANUFACTURER (.*?)
+Value MANUFACTURER (\S.+\S)
 Value PLATFORM (.*?)
 Value NEIGHBOR_PORT_ID (.*?)
 Value NEIGHBOR_INTERFACE (\S.+\S)
@@ -68,7 +68,6 @@ Value FIRMWARE_REVISION (\S.+\S)
 Value HARDWARE_REVISION (\S.+\S)
 Value SOFTWARE_REVISION (\S.+\S)
 Value SERIAL_NUMBER (\S.+\S)
-Value MANUFACTURER_NAME (\S.+\S)
 Value MODEL_NAME (\S.+\S)
 Value ASSET_TRACKING_IDENTIFIER (\S.+\S)
 Value MEDIA_POLICY_TYPE (\S.+\S)
@@ -166,7 +165,7 @@ Start
   ^\s*FirmwareRev\s*:\s*(NA|${FIRMWARE_REVISION})\s*$$
   ^\s*SoftwareRev\s*:\s*${SOFTWARE_REVISION}\s*$$
   ^\s*SerialNum\s*:\s*(NA|${SERIAL_NUMBER})\s*$$
-  ^\s*Manufacturer\s+name\s*:\s*${MANUFACTURER_NAME}\s*$$
+  ^\s*Manufacturer\s+name\s*:\s*${MANUFACTURER}\s*$$
   ^\s*Model\s+name\s*:\s*${MODEL_NAME}\s*$$
   ^\s*Asset\s+tracking\s+identifier\s*:\s*(NA|${ASSET_TRACKING_IDENTIFIER})\s*$$
   ^\s*Media\s+policy\s+type\s*:\s*${MEDIA_POLICY_TYPE}\s*$$
