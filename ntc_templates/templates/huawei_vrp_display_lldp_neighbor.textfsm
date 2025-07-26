@@ -1,7 +1,8 @@
-Value Required,Key LOCAL_INTERFACE (\S.+\S)
+Value LOCAL_INTERFACE (\S.+\S)
 Value CHASSIS_TYPE (\S.+\S)
 Value CHASSIS_ID (\S.+\S)
 Value PORT_ID_TYPE (\S.+\S)
+Value PORT_ID_SUBTYPE (\S.+\S)
 Value MANUFACTURER (.*?)
 Value PLATFORM (.*?)
 Value NEIGHBOR_PORT_ID (.*?)
@@ -14,33 +15,93 @@ Value MGMT_ADDRESS_TYPE (\S+)
 Value MGMT_ADDRESS (\S+)
 Value EXPIRED_TIME (\d+)
 Value VLAN_ID (\d+)
-Value VLAN_1_NAME (\S.+\S)	
+Value VLAN_ID_AND_PROTOCOL (\S+|\S.+\S)
+Value VLAN_NAME (\S.+\S)		
 Value SERIAL (\S+)
 Value OID (\S+)
 Value AUTONEGOTIATION_SUPPORTED (\S+)
 Value AUTONEGOTIATION_ENABLED (\S+)
 Value OPERATION_MODE (\S.+\S)
 Value POWER_PORT_CLASS (\S+)
+Value PSE_POWER_PAIRSX (\S+|\S.+\S)
 Value PSE_POWER_SUPPORTED (\S+)
 Value PSE_POWER_ENABLED (\S+)
 Value PSE_PAIRS_CONTROL_ABILITY (\S+)
 Value POWER_PAIRS (\S+)
+Value POWER_CLASS (\S+|\S.+\S)
+Value POWER_CLASS_EXT (\S+|\S.+\S)
+Value POWER_EXT_TYPE (\S+|\S.+\S)
+Value PSE_ALLOCATED_MODE_POWER_A (\S+|\S.+\S)
+Value PSE_ALLOCATED_MODE_POWER_B (\S+|\S.+\S)
+Value PSE_POWERING_STATUS (\S+|\S.+\S)
+Value PSE_AUTOCLASS_SUPPORT (\S+|\S.+\S)
+Value PD_4PID (\S+|\S.+\S)
+Value PD_LOAD (\S+|\S.+\S)
+Value PD_POWERED_STATUS (\S+|\S.+\S)
+Value DUAL_SIGNATURE_POWER_CLASSX_MODE_A (\S+|\S.+\S)
+Value DUAL_SIGNATURE_POWER_CLASSX_MODE_B (\S+|\S.+\S)
+Value AUTOCLASS_COMPLETED (\S+|\S.+\S)
+Value AUTOCLASS_REQUEST (\S+|\S.+\S)
+Value POWER_DOWN_REQUEST (\S+|\S.+\S)
+Value POWER_DOWN_TIME (\S+|\S.+\S)
+Value POWER_DOWN (\S+|\S.+\S)
+Value POWER_CAPABILITY (\S+|\S.+\S)
+Value POWER_UP_MODE (\S+|\S.+\S)
 Value PORT_POWER_CLASSIFICATION (\S+)
 Value LINK_AGGREGATION_SUPPORTED (\S+)
 Value LINK_AGGREGATION_ENABLED (\S+)
 Value AGGREGATION_PORT_ID (\d+)
+Value PORT_IDENTITY (\S+|\S.+\S)
+Value DISCOVERED_TIME (\S+|\S.+\S)
+Value ENERGY_EFFICIENT_ETHERNET_SUPPORT (\S+|\S.+\S)
+Value TRANSMIT_TW (\S+|\S.+\S)
+Value RECEIVE_TW (\S+|\S.+\S)
+Value FALLBACK_RECEIVE_TW (\S+|\S.+\S)
+Value ECHO_TRANSMIT_TW (\S+|\S.+\S)
+Value ECHO_RECEIVE_TW (\S+|\S.+\S)
+Value NETWORK_CARD_ID (\S+|\S.+\S)
 Value MAXIMUM_FRAME_SIZE (\d+)
+Value MED_CAPABILITY (\S+|\S.+\S)
+Value MED_DEVICE_TYPE (\S+|\S.+\S)
 Value MED_DEVICE_CLASS (\S.+\S)
 Value FIRMWARE_REVISION (\S.+\S)
 Value HARDWARE_REVISION (\S.+\S)
+Value SOFTWARE_REVISION (\S.+\S)
+Value SERIAL_NUMBER (\S.+\S)
+Value MANUFACTURER_NAME (\S.+\S)
+Value MODEL_NAME (\S.+\S)
+Value ASSET_TRACKING_IDENTIFIER (\S.+\S)
+Value MEDIA_POLICY_TYPE (\S.+\S)
+Value UNKNOWN_POLICY (\S.+\S)
+Value VLAN_TAGGED (\S+)
+Value MEDIA_POLICY_VLAN_ID (\d+)
+Value MEDIA_POLICY_L2_PRIORITY (\d+)
+Value MEDIA_POLICY_DSCP (\d+)
+Value POWER_TYPE (\S+|\S.+\S)
+Value POWER_SOURCE (\S+|\S.+\S)
+Value POWER_PRIORITY (\S+|\S.+\S)
+Value PD_REQUESTED_POWER (\S+|\S.+\S)
+Value PSE_ALLOCATED_POWER (\S+|\S.+\S)
+Value PD_REQUESTED_POWER_MODE_A (\S+|\S.+\S)
+Value PD_REQUESTED_POWER_MODE_B (\S+|\S.+\S)
+Value PSE_MAXIMUM_AVAILABLE_POWER (\S+|\S.+\S)
+Value PSE_POWER_PAIRS_EXT (\S+|\S.+\S)
+Value POE_PSE_POWER_SOURCE (\S.+\S)
+Value PORT_PSE_PRIORITY (\S.+\S)
+Value PORT_AVAILABLE_POWER_VALUE (\d+)
+Value LOCATION_FORMAT (\S.+\S)
+Value LOCATION_INFORMATION (\S.+\S)
+
 
 Start
+  ^\s*(GigabitEthernet|GE) -> Continue.Record
   ^\s*${LOCAL_INTERFACE}\s+has\s+\d+\s+neighbor(s|\(s\)):\s*$$
   ^\s*\S.+\S\s+has\s+\d+\s+neighbor(s|\(s\))\s*$$
   ^\s*Neighbor\s+index\s*:\s*\d+\s*$$
   ^\s*Chassis\s+type\s*:\s*${CHASSIS_TYPE}\s*$$
   ^\s*Chassis\s+ID\s*:\s*${CHASSIS_ID}\s*$$
   ^\s*Port\s+ID\s+type\s*:\s*${PORT_ID_TYPE}\s*$$
+  ^\s*Port\s+ID\s+subtype\s*:\s*${PORT_ID_SUBTYPE}\s*$$
   ^\s*Port\s+ID\s*:\s*${NEIGHBOR_PORT_ID}\s*$$
   ^\s*Port\s+description\s*:\s*${NEIGHBOR_INTERFACE}?\s*$$
   ^\s*System\s+name\s*:\s*${NEIGHBOR_NAME}?\s*$$
@@ -51,44 +112,89 @@ Start
   ^\s*Management\s+address\s*(value\s*)?:\s*${MGMT_ADDRESS}\s*$$
   ^\s*OID\s*:\s*${OID}?\s*$$
   ^\s*Expired\s+time\s*:\s*${EXPIRED_TIME}s\s*$$
-  ^\s*Port\s+VLAN\s+ID\(PVID\)\s*:\s*${VLAN_ID}\s*$$
-  ^\s*VLAN\s+name\s+of\s+VLAN\s*1\s*:\s*${VLAN_1_NAME}\s*$$
+  ^\s*Port\s+VLAN\s+ID\(PVID\)\s*:\s*(--|${VLAN_ID})\s*$$
+  ^\s*Port\s+and\s+Protocol\s+VLAN\s+(supported|enabled|ID\(PPVID\))\s*:\s*(--|${VLAN_ID_AND_PROTOCOL})\s*$$
+  ^\s*VLAN\s+name\s+of\s+VLAN\s*(?:\d+\s*)?:\s*(--|${VLAN_NAME})\s*$$
   ^\s*Protocol\s+identity
   ^\s*Auto-negotiation\s+supported\s*:\s*${AUTONEGOTIATION_SUPPORTED}\s*$$
   ^\s*Auto-negotiation\s+enabled\s*:\s*${AUTONEGOTIATION_ENABLED}\s*$$
   ^\s*OperMau\s*:\s*${OPERATION_MODE}\s*$$
   ^\s*Power\s+port\s+class\s*:\s*${POWER_PORT_CLASS}\s*$$
+  ^\s*PSE\s+power\s+pairsx\s*:\s*${PSE_POWER_PAIRSX}\s*$$
   ^\s*PSE\s+power\s+supported\s*:\s*${PSE_POWER_SUPPORTED}\s*$$
   ^\s*PSE\s+power\s+enabled\s*:\s*${PSE_POWER_ENABLED}\s*$$
   ^\s*PSE\s+pairs\s+control\s+ability\s*:\s*${PSE_PAIRS_CONTROL_ABILITY}\s*$$
   ^\s*Power\s+pairs\s*:\s*${POWER_PAIRS}\s*$$
+  ^\s*Power\s+class\s*:\s*${POWER_CLASS}\s*$$
+  ^\s*Power\s+class\s+ext\s*:\s*${POWER_CLASS_EXT}\s*$$
+  ^\s*Power\s+(type|typex)(?:\s+ext)?\s*:\s*${POWER_EXT_TYPE}\s*$$
+  ^\s*PSE\s+allocated\s+power\s+mode\s+A\s+value\s*:\s*${PSE_ALLOCATED_MODE_POWER_A}\s*$$
+  ^\s*PSE\s+allocated\s+power\s+mode\s+B\s+value\s*:\s*${PSE_ALLOCATED_MODE_POWER_B}\s*$$
+  ^\s*PSE\s+powering\s+status\s*:\s*${PSE_POWERING_STATUS}\s*$$
+  ^\s*PSE\s+Autoclass\s+support\s*:\s*${PSE_AUTOCLASS_SUPPORT}\s*$$
+  ^\s*PD\s+4PID\s*:\s*${PD_4PID}\s*$$
+  ^\s*PD\s+Load\s*:\s*${PD_LOAD}\s*$$
+  ^\s*PD\s+powered\s+status\s*:\s*${PD_POWERED_STATUS}\s*$$
+  ^\s*Dual-signature\s+power\s+Classx\s+mode\s+A\s*:\s*${DUAL_SIGNATURE_POWER_CLASSX_MODE_A}\s*$$
+  ^\s*Dual-signature\s+power\s+Classx\s+mode\s+B\s*:\s*${DUAL_SIGNATURE_POWER_CLASSX_MODE_B}\s*$$
+  ^\s*Autoclass\s+completed\s*:\s*${AUTOCLASS_COMPLETED}\s*$$
+  ^\s*Autoclass\s+request\s*:\s*${AUTOCLASS_REQUEST}\s*$$
+  ^\s*Power\s+down\s+request\s*:\s*${POWER_DOWN_REQUEST}\s*$$
+  ^\s*Power\s+down\s+time\s*:\s*${POWER_DOWN_TIME}\s*$$
+  ^\s*Power\s+down\s*:\s*${POWER_DOWN}\s*$$
+  ^\s*Power\s+capability\s*:\s*${POWER_CAPABILITY}\s*$$
+  ^\s*Power-up\s+mode\s*:\s*${POWER_UP_MODE}\s*$$
   ^\s*Port\s+power\s+classification\s*:\s*${PORT_POWER_CLASSIFICATION}\s*$$
   ^\s*Link\s+aggregation\s+supported\s*:\s*${LINK_AGGREGATION_SUPPORTED}\s*$$
   ^\s*Link\s+aggregation\s+enabled\s*:\s*${LINK_AGGREGATION_ENABLED}\s*$$
-  ^\s*Aggregation\s+port\s+ID\s*:\s*${AGGREGATION_PORT_ID}\s*$$
-  ^\s*Maximum\s+frame\s+Size\s*:\s*${MAXIMUM_FRAME_SIZE}\s*$$
+  ^\s*Aggregation\s+port\s+ID\s*:\s*(--|${AGGREGATION_PORT_ID})\s*$$
+  ^\s*Port\s+Identity\s*:\s*(--|${PORT_IDENTITY})\s*$$
+  ^\s*Discovered\s+time\s*:\s*(--|${DISCOVERED_TIME})\s*$$
+  ^\s*EEE\s+support\s*:\s*(--|${ENERGY_EFFICIENT_ETHERNET_SUPPORT})\s*$$
+  ^\s*Transmit\s+Tw\s*:\s*(--|${TRANSMIT_TW})\s*$$
+  ^\s*Receive\s+Tw\s*:\s*(--|${RECEIVE_TW})\s*$$
+  ^\s*Fallback\s+Receive\s*Tw\s*:\s*(--|${FALLBACK_RECEIVE_TW})\s*$$
+  ^\s*Echo\s+Transmit\s+Tw\s*:\s*(--|${ECHO_TRANSMIT_TW})\s*$$
+  ^\s*Echo\s+Receive\s+Tw\s*:\s*(--|${ECHO_RECEIVE_TW})\s*$$
+  ^\s*Network\s+Card\s+ID\s*:\s*(--|${NETWORK_CARD_ID})\s*$$
+  ^\s*Maximum\s+frame\s+Size\s*:\s*(--|${MAXIMUM_FRAME_SIZE})\s*$$
+  ^\s*Med\s+capability\s*:\s*(--|${MED_CAPABILITY})\s*$$
+  ^\s*Med\s+device\s+type\s*:\s*(--|${MED_DEVICE_TYPE})\s*$$
   ^\s*MED\s+Device\s+information\s*$$
   ^\s*Device\s+class\s*:\s*${MED_DEVICE_CLASS}\s*$$
   ^\s*HardwareRev\s*:\s*${HARDWARE_REVISION}\s*$$
-  ^\s*FirmwareRev\s*:\s*(NA|${FIRMWARE_REVISION})\s*$$ -> Record
-  ^\s*SoftwareRev\s*:\s*(\S.+\S)\s*$$
-  ^\s*SerialNum\s*:\s*(NA|\S.+\S)\s*$$
-  ^\s*Manufacturer\s+name\s*:\s*(\S.+\S)\s*$$
-  ^\s*Model\s+name\s*:\s*(\S.+\S)\s*$$
-  ^\s*Asset\s+tracking\s+identifier\s*:\s*(NA|\S.+\S)\s*$$
-  ^\s*Media\s+policy\s+type\s*:\s*(\S+)\s*$$
-  ^\s*Unknown\s+Policy\s*:\s*(\S+)\s*$$
-  ^\s*VLAN\s+tagged\s*:\s*(\S+)\s*$$
-  ^\s*Media\s+policy\s+VlanID\s*:\s*(\d+)\s*$$
-  ^\s*Media\s+policy\s+L2\s+priority\s*:\s*(\d+)\s*$$
-  ^\s*Media\s+policy\s+Dscp\s*:\s*(\d+)\s*$$
-  ^\s*Power\s+Type\s*:\s*(\S+)\s*$$
-  ^\s*PoE\s+PSE\s+power\s+source\s*:\s*(\S+)\s*$$
-  ^\s*Port\s+PSE\s+Priority\s*:\s*(\S+)\s*$$
-  ^\s*Port\s+Available\s+power\s+value\s*:\s*(\d+)\s*$$
-  ^\s*Location\s+format\s*:\s*(\S.+\S)\s*$$
-  ^\s*Location\s+information\s*:\s*(\S.+\S)\s*$$
+  ^\s*FirmwareRev\s*:\s*(NA|${FIRMWARE_REVISION})\s*$$
+  ^\s*SoftwareRev\s*:\s*${SOFTWARE_REVISION}\s*$$
+  ^\s*SerialNum\s*:\s*(NA|${SERIAL_NUMBER})\s*$$
+  ^\s*Manufacturer\s+name\s*:\s*${MANUFACTURER_NAME}\s*$$
+  ^\s*Model\s+name\s*:\s*${MODEL_NAME}\s*$$
+  ^\s*Asset\s+tracking\s+identifier\s*:\s*(NA|${ASSET_TRACKING_IDENTIFIER})\s*$$
+  ^\s*Media\s+policy\s+type\s*:\s*${MEDIA_POLICY_TYPE}\s*$$
+  ^\s*Unknown\s+Policy\s*:\s*${UNKNOWN_POLICY}\s*$$
+  ^\s*VLAN\s+tagged\s*:\s*${VLAN_TAGGED}\s*$$
+  ^\s*Media\s+policy\s+VlanID\s*:\s*${MEDIA_POLICY_VLAN_ID}\s*$$
+  ^\s*Media\s+policy\s+L2\s+priority\s*:\s*${MEDIA_POLICY_L2_PRIORITY}\s*$$
+  ^\s*Media\s+policy\s+Dscp\s*:\s*${MEDIA_POLICY_DSCP}\s*$$
+  ^\s*Power\s+(T|t)ype\s*:\s*${POWER_TYPE}\s*$$
+  ^\s*Power\s+source\s*:\s*${POWER_SOURCE}\s*$$
+  ^\s*Power\s+priority\s*:\s*${POWER_PRIORITY}\s*$$
+  ^\s*PD\s+requested\s+power\s+value\s*:\s*${PD_REQUESTED_POWER}\s*$$
+  ^\s*PSE\s+allocated\s+power\s+value\s*:\s*${PSE_ALLOCATED_POWER}\s*$$
+  ^\s*PD\s+requested\s+power\s+mode\s+A\s+value\s*:\s*${PD_REQUESTED_POWER_MODE_A}\s*$$
+  ^\s*PD\s+requested\s+power\s+mode\s+B\s+value\s*:\s*${PD_REQUESTED_POWER_MODE_B}\s*$$
+  ^\s*PSE\s+maximum\s+available\s+power\s*:\s*${PSE_MAXIMUM_AVAILABLE_POWER}\s*$$
+  ^\s*PSE\s+power\s+pairs\s+ext\s*:\s*${PSE_POWER_PAIRS_EXT}\s*$$
+  ^\s*PoE\s+PSE\s+power\s+source\s*:\s*${POE_PSE_POWER_SOURCE}\s*$$
+  ^\s*Port\s+PSE\s+Priority\s*:\s*${PORT_PSE_PRIORITY}s*$$
+  ^\s*Port\s+Available\s+power\s+value\s*:\s*${PORT_AVAILABLE_POWER_VALUE}\s*$$
+  ^\s*Location\s+format\s*:\s*${LOCATION_FORMAT}\s*$$
+  ^\s*Location\s+information\s*:\s*${LOCATION_INFORMATION}\s*$$
   ^\s*Ca\s+type\s+Ca\s+value\s*$$
+  ^\s*Unrecognized\s+organizationally\s+defined\s+TLV\s*$$
+  ^\s*TLV\s+OUI\s*:\s*(\S+|\S.+\S)\s*$$
+  ^\s*TLV\s+subtype\s*:\s*(\S+|\S.+\S)\s*$$
+  ^\s*Index\s*:\s*(\S+|\S.+\S)\s*$$
+  ^\s*TLV\s+information\s*:\s*(\S+|\S.+\S)\s*$$
   ^\s+$$
   ^. -> Error
 

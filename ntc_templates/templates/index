@@ -26,6 +26,7 @@ alcatel_aos_show_system.textfsm, .*, alcatel_aos, sh[[ow]] sy[[stem]]
 alcatel_aos_show_vlan.textfsm, .*, alcatel_aos, show vlan
 
 alcatel_sros_show_router_bgp_routes_vpn-ipv4.textfsm, .*, alcatel_sros, sh[[ow]] router bgp rou[[tes]] vpn-ipv4
+alcatel_sros_show_service_service-name-using.textfsm, .*, alcatel_sros, sh[[ow]] se[[rvice]] service-n[[ame-using]]
 alcatel_sros_show_router_bgp_summary_family.textfsm, .*, alcatel_sros, sh[[ow]] router bgp sum[[mary]] family
 alcatel_sros_show_router_isis_adjacency.textfsm, .*, alcatel_sros, sh[[ow]] router isis adj[[acency]]
 alcatel_sros_show_router_isis_interface.textfsm, .*, alcatel_sros, sh[[ow]] router isis int[[erface]]
@@ -72,7 +73,7 @@ arista_eos_show_interfaces_description.textfsm, .*, arista_eos, sh[[ow]] int[[er
 arista_eos_show_interfaces_transceiver.textfsm, .*, arista_eos, sh[[ow]] inte[[rfaces]] tr[[ansceiver]]
 arista_eos_show_mac_security_interface.textfsm, .*, arista_eos, sh[[ow]] ma[[c]] secu[[rity]] int[[erface]]
 arista_eos_show_lldp_neighbors_detail.textfsm, .*, arista_eos, sh[[ow]] ll[[dp]] nei[[ghbors]] d[[etail]]
-arista_eos_show_port-channel_summary.textfsm, .*, arista_eos, sh[[ow]] port-c[[hannel]] s[[ummary]]
+arista_eos_show_port-channel_summary.textfsm, .*, arista_eos, sh[[ow]] port-c[[hannel]] (s[[ummary]]|d[[ense]])
 arista_eos_show_environment_cooling.textfsm, .*, arista_eos, sh[[ow]] en[[vironment]] c[[ooling]]
 arista_eos_show_ip_interface_brief.textfsm, .*, arista_eos, sh[[ow]] i[[p]] int[[erface]] br[[ief]]
 arista_eos_show_pim_ipv4_interface.textfsm, .*, arista_eos, sh[[ow]] pim ipv4 int[[erface]]
@@ -714,8 +715,9 @@ huawei_smartax_display_ont_port_vlan_0_1_byport_eth_0.textfsm, .*, huawei_smarta
 huawei_smartax_display_location_aaaa-aaaa-aaaa_ont.textfsm, .*, huawei_smartax, disp[[lay]] loc[[ation]] \S+ o[[nt]]
 huawei_smartax_display_ont_port_state_0_1_eth-port.textfsm, .*, huawei_smartax, di[[splay]] on[[t]] por[[t]] st[[ate]] \d+ \d+ e[[th-port]]
 huawei_smartax_display_ont_port_vlan_0_1_byvlan_0.textfsm, .*, huawei_smartax, di[[splay]] ont p[[ort]] v[[lan]] \d+ \d+ byvlan \d+
-huawei_smartax_display_ont-lineprofile_gpon_all.textfsm, .*, huawei_smartax, disp[[lay]] ont-li[[neprofile]] g[[pon]] a[[ll]]\s*
+huawei_smartax_display_ont-lineprofile_gpon_all.textfsm, .*, huawei_smartax, di[[splay]] ont-li[[neprofile]] g[[pon]] a[[ll]]\s*
 huawei_smartax_display_mac-address_ont_0_1_2_0.textfsm, .*, huawei_smartax, di[[splay]] mac-a[[ddress]] o[[nt]] \d+(\/)?\s*\d+(\/)?\s*\d+ \d+ *$
+huawei_smartax_display_ont-srvprofile_gpon_all.textfsm, .*, huawei_smartax, di[[splay]] ont-s[[rvprofile]] g[[pon]] a[[ll]]\s*
 huawei_smartax_display_ont_optical-info_0_all.textfsm, .*, huawei_smartax, di[[splay]] ont o[[ptical-info]] \d+ all
 huawei_smartax_display_ont_snmp-profile_0_all.textfsm, .*, huawei_smartax, di[[splay]] ont s[[nmp-profile]] \d+ all
 huawei_smartax_display_ont_gemport_0_ontid_0.textfsm, .*, huawei_smartax, di[[splay]] ont g[[emport]] \d+ ontid \d+\s*
@@ -758,6 +760,7 @@ huawei_vrp_display_license_verbose.textfsm, .*, huawei_vrp, dis[[play]] lic[[ens
 huawei_vrp_display_service-set_all.textfsm, .*, huawei_vrp, dis[[play]] service-set all
 huawei_vrp_display_ipv6_neighbors.textfsm, .*, huawei_vrp, dis[[play]] ipv6 n[[eighbors]]
 huawei_vrp_display_mpls_te_tunnel.textfsm, .*, huawei_vrp, dis[[play]] mpls te tunnel
+huawei_vrp_display_lldp_neighbor.textfsm, .*, huawei_vrp, dis[[play]] lldp nei[[ghbor]]
 huawei_vrp_display_http_server.textfsm, .*, huawei_vrp, di[[splay]] h[[ttp]] s[[erver]] *$
 huawei_vrp_display_mac-address.textfsm, .*, huawei_vrp, disp[[lay]] mac[[-address]]
 huawei_vrp_display_temperature.textfsm, .*, huawei_vrp, dis[[play]] tem[[perature]]
@@ -767,6 +770,7 @@ huawei_vrp_display_sn_license.textfsm, .*, huawei_vrp, dis[[play]] sn l[[icence]
 huawei_vrp_display_vlan_brief.textfsm, .*, huawei_vrp, di[[splay]] v[[lan]] b[[rief]]
 huawei_vrp_virtual-cable-test.textfsm, .*, huawei_vrp, vi[[rtual-cable-test]]
 huawei_vrp_display_arp_brief.textfsm, .*, huawei_vrp, dis[[play]] arp br[[ief]]
+huawei_vrp_display_eth-trunk.textfsm, .*, huawei_vrp, di[[splay]] eth-t[[runk]]
 huawei_vrp_display_interface.textfsm, .*, huawei_vrp, dis[[play]] inter[[face]]\s*((?!brief|counters|description).)*$
 huawei_vrp_display_isis_peer.textfsm, .*, huawei_vrp, disp[[lay]] isis p[[eer]]
 huawei_vrp_display_port_vlan.textfsm, .*, huawei_vrp, dis[[play]] port vl[[an]]
@@ -824,6 +828,7 @@ linux_arp_-a.textfsm, .*, linux, arp -a
 linux_vzlist.textfsm, .*, linux, vzlist
 linux_top.textfsm, .*, linux, top
 
+mikrotik_routeros_ip_hotspot_ip-binding_print_terse_without-paging.textfsm, .*, mikrotik_routeros, [[/]]ip h[[otspot]] ip-b[[inding]] p[[rint]] t[[erse]] wi[[thout-paging]]
 mikrotik_routeros_routing_ospf_neighbor_print_terse_without-paging.textfsm, .*, mikrotik_routeros, [[/]]r[[outing]] o[[spf]] nei[[ghbor]] p[[rint]] t[[erse]] wi[[thout-paging]]
 mikrotik_routeros_ip_dhcp-server_lease_print_terse_without-paging.textfsm, .*, mikrotik_routeros, [[/]]ip dh[[cp-server]] l[[ease]] pr[[int]] t[[erse]] wi[[thout-paging]]
 mikrotik_routeros_routing_bgp_peer_print_status_without-paging.textfsm, .*, mikrotik_routeros, [[/]]r[[outing]] bg[[p]] p[[eer]] p[[rint]] s[[tatus]] wi[[thout-paging]]

@@ -1,0 +1,11 @@
+Value INDEX (\d+)
+Value COMMENT (\S+)
+Value MAC_ADDRESS (\S+)
+Value ADDRESS (\S+)
+Value TO_ADDRESS (\S+)
+Value SERVER (\S+)
+Value TYPE (\S+)
+
+Start
+  ^\s*${INDEX}\s+(?:\S\s+)?(?:comment=${COMMENT}\s+)?(?:mac-address=${MAC_ADDRESS}\s+)?(?:address=${ADDRESS}\s+)?(?:to-address=${TO_ADDRESS}\s*)?(?:server=${SERVER}\s*)?(?:type=${TYPE}\s*)?\s*$$ -> Record
+  ^. -> Error
