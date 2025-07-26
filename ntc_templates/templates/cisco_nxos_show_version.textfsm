@@ -3,7 +3,7 @@ Value LAST_REBOOT_REASON (.+)
 Value BIOS (\d+.\d+(.+)?)
 Value OS (\d+.\d+(.+)?)
 Value BOOT_IMAGE (.*)
-Value PLATFORM (\w+)
+Value PLATFORM ([\w-]+)
 Value HOSTNAME (.*)
 Value SERIAL (\w+)
 
