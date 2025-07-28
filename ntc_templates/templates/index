@@ -743,6 +743,7 @@ huawei_smartax_display_mem.textfsm, .*, huawei_smartax, di[[splay]] mem[[ory]]\s
 huawei_smartax_port_vlan.textfsm, .*, huawei_smartax, port vlan\s*
 huawei_smartax_ont_add.textfsm, .*, huawei_smartax, ont add\s*
 
+huawei_vrp_display_vlan.textfsm:huawei_vrp_display_vlan_brief.textfsm, .*, huawei_vrp, di[[splay]] v[[lan]]$
 huawei_vrp_display_traffic-filter_applied-record.textfsm, .*, huawei_vrp, dis[[play]] traffic-filter applied-record
 huawei_vrp_display_module-information_verbose.textfsm, .*, huawei_vrp, dis[[play]] mod[[ule-information]] v[[erbose]]
 huawei_vrp_display_ip_vpn-instance_interface.textfsm, .*, huawei_vrp, di[[splay]] ip vpn[[-instance]] interface
@@ -765,6 +766,7 @@ huawei_vrp_display_temperature.textfsm, .*, huawei_vrp, dis[[play]] tem[[peratur
 huawei_vrp_display_nat_server.textfsm, .*, huawei_vrp, dis[[play]] na[[t]] ser[[ver]]
 huawei_vrp_display_ntp_status.textfsm, .*, huawei_vrp, d[[isplay]] nt[[p]] st[[atus]]
 huawei_vrp_display_sn_license.textfsm, .*, huawei_vrp, dis[[play]] sn l[[icence]]
+huawei_vrp_display_vlan_brief.textfsm, .*, huawei_vrp, di[[splay]] v[[lan]] b[[rief]]
 huawei_vrp_virtual-cable-test.textfsm, .*, huawei_vrp, vi[[rtual-cable-test]]
 huawei_vrp_display_arp_brief.textfsm, .*, huawei_vrp, dis[[play]] arp br[[ief]]
 huawei_vrp_display_eth-trunk.textfsm, .*, huawei_vrp, di[[splay]] eth-t[[runk]]

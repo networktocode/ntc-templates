@@ -1,0 +1,64 @@
+Value Key,Required,Filldown VLAN_ID (\d+)
+Value Filldown VLAN_NAME (\w.+\w|\w+)
+Value Filldown MODE (TG|UT)
+Value Filldown VLAN_STATUS (enable|disable)
+Value Filldown VLAN_TYPE (common|uncommon)
+Value List INTERFACE ([\w+\.\-\/]+)
+Value List INTERFACE_STATUS (U|D)
+
+Start
+  ^\s*\*\s+:\s+management-vlan\s*$$
+  ^\s*The\s+total\s+number\s+of\s+(VLAN|vlan)s\s+is\s*:\s+\d+\s*$$
+  ^\s*-+\s*$$
+  ^\s*U:\s*Up;\s*D:\s*Down;\s*TG:\s*Tagged;\s*UT:\s*Untagged;\s*$$
+  ^\s*MP:\s+Vlan-mapping;\s+ST:\s+Vlan-stacking;\s*$$
+  ^\s*#:\s+ProtocolTransparent-vlan;\s+\*:\s+Management-vlan;\s*$$
+  ^\s*MAC-LRN:\s+MAC-address\s+learning;\s+STAT:\s+Statistic;\s*$$
+  ^\s*BC:\s+Broadcast;\s+MC:\s+Multicast;\s+UC:\s+Unknown-unicast;\s*$$
+  ^\s*FWD:\s+Forward;\s+DSD:\s+Discard;\s*$$
+  ^\s*VID\s+(?:Type\s+)?Ports\s*$$ -> VLANS_SW
+  ^\s*VID\s+Name\s+Status\s+Ports\s*$$ -> VLANS_AP
+  ^\s*VID\s+(?:Type\s+)?Status\s+Property\s+MAC\-LRN\s+(STAT|Statistics)\s+(?:[BMU]C\s+)*Description\s*$$ -> STATUS_SW
+  ^\s*VLAN\s+ID\s+Type\s+Status\s+MAC\s+Learning\s+Broadcast\/Multicast\/Unicast\s+Property\s*$$ -> STATUS_AP
+  ^. -> Error
+
+VLANS_SW
+  ^\d+ -> Continue.Record
+  ^\s+(UT|TG): -> Continue.Record
+  ^\s*${VLAN_ID}\s+(?:${VLAN_TYPE}\s+)? -> Continue
+  ^.+(?:(-|common|uncommon)\s+)?${MODE}:\s*${INTERFACE}\(${INTERFACE_STATUS}\)\s* -> Continue
+  ^.+(?:(-|common|uncommon)\s+)?(UT|TG):\s*[\w+\.\-\/\(\)]+\s+${INTERFACE}\(${INTERFACE_STATUS}\)\s* -> Continue
+  ^.+(?:(-|common|uncommon)\s+)?(UT|TG):\s*[\w+\.\-\/\(\)]+\s+[\w+\.\-\/\(\)]+\s+${INTERFACE}\(${INTERFACE_STATUS}\)\s* -> Continue
+  ^.+(?:(-|common|uncommon)\s+)?(UT|TG):\s*[\w+\.\-\/\(\)]+\s+[\w+\.\-\/\(\)]+\s+[\w+\.\-\/\(\)]+\s+${INTERFACE}\(${INTERFACE_STATUS}\)\s* -> Continue
+  ^\s+${MODE}:\s*[\w+\.\-\/\(\)]+\s+${INTERFACE}\(${INTERFACE_STATUS}\)\s* -> Continue
+  ^\s+(UT|TG):\s*[\w+\.\-\/\(\)]+\s+[\w+\.\-\/\(\)]+\s+${INTERFACE}\(${INTERFACE_STATUS}\)\s* -> Continue
+  ^\s+(UT|TG):\s*[\w+\.\-\/\(\)]+\s+[\w+\.\-\/\(\)]+\s+[\w+\.\-\/\(\)]+\s+${INTERFACE}\(${INTERFACE_STATUS}\)\s* -> Continue
+  ^\s+${INTERFACE}\(${INTERFACE_STATUS}\)\s* -> Continue
+  ^\s+[\w+\.\-\/\(\)]+\s+${INTERFACE}\(${INTERFACE_STATUS}\)\s* -> Continue
+  ^\d+
+  ^\s+\S+
+  ^\s*-+\s*$$
+  ^\s*$$ -> Start
+  ^. -> Error
+
+VLANS_AP
+  ^\d+ -> Continue.Record
+  ^\s*${VLAN_ID}\s+(?:${VLAN_NAME}\s+)?${VLAN_STATUS}\s+ -> Continue
+  ^.+(-|enable|disable)\s+${MODE}:\s*${INTERFACE}\(${INTERFACE_STATUS}\)\s* -> Continue
+  ^.+(-|enable|disable)\s+(UT|TG):\s+[\w+\.\-\/\(\)]+\s+${INTERFACE}\(${INTERFACE_STATUS}\)\s* -> Continue
+  ^.+(-|enable|disable)\s+(UT|TG):\s+[\w+\.\-\/\(\)]+\s+[\w+\.\-\/\(\)]+\s+${INTERFACE}\(${INTERFACE_STATUS}\)\s* -> Continue
+  ^\s+${INTERFACE}\(${INTERFACE_STATUS}\)\s* -> Continue
+  ^\d+
+  ^\s+\S+
+  ^\s*-+\s*$$
+  ^. -> Error
+
+STATUS_SW
+  ^\s*-+\s*$$
+  ^\s*\d+\s+\w+\s+\w+\s+\w+\s+\w+\s+\S.+\S\s*$$
+  ^. -> Error
+
+STATUS_AP
+  ^\s*-+\s*$$
+  ^\s*\d+\s+\S+\s+\S+\s+\S+\s+\S+\s+\S+\s+\S+\s+\S+\s*$$
+  ^. -> Error
