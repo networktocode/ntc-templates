@@ -10,8 +10,6 @@ Value List EGRESS_RULE (Untagged|Tagged)
 Value List INTERFACE_MEMBERSHIP_TYPE (\S+)
 Value List FORBIDDEN_VLAN (\d+)
 Value List FORBIDDEN_VLAN_NAME (.*)
-Value List MAC_BASED_VLAN_GROUP_ID (\d+)
-Value List MAC_BASED_VLAN_ID (\d+)
 
 Start
   ^\s*Port\s*:\s*${INTERFACE}\s*$$

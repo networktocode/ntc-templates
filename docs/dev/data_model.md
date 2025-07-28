@@ -57,5 +57,6 @@ Example: Imagine the extra programming logic needed to consume structured data w
 | `PREFIX_LENGTH`                  | instead of PREFIX or CIDR for the numbers of a slash notation or CIDR mask |
 | `PROTOCOL`                       | instead of PROTO |
 | `ROUTER_ID`                      | for local router IDs (local to the device being parsed) |
+| `SERIAL`                         | represents serial numbers whether in version output or used in CDP/LLDP output |
 | `VLAN_ID`                        | numeric VLAN identifier; used instead of VLAN, VLANID, or TAG |
 | `VLAN_NAME`                      | VLAN name or description |

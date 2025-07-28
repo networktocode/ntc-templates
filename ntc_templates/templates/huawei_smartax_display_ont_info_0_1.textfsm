@@ -58,7 +58,6 @@ Value MAC_LEARNING_FUNCTION_SWITCH (\w+)
 Value ONT_TRANSPARENT_FUNCTION_SWITCH (\w+)
 Value RING_CHECK_SWITCH (\w+)
 Value RING_PORT_AUTO_SHUTDOWN (\w+)
-Value RING_RESUME_FREQUENCY (\w+\s\(\w*\))
 Value RING_DETECT_FREQUENCY (\w+\s\(\w*\))
 Value RING_RESUME_INTERVAL (\w+\s\(\w*\))
 Value RING_DETECT_PERIOD (\w+\s\(\w*\))
@@ -178,7 +177,7 @@ Service_profile
   ^\s*ONT\s+transparent\s+function\s+switch\s*:\s*${ONT_TRANSPARENT_FUNCTION_SWITCH}
   ^\s*Ring\s+check\s+switch\s*:\s*${RING_CHECK_SWITCH}
   ^\s*Ring\s+port\s+auto-shutdown\s*:\s*${RING_PORT_AUTO_SHUTDOWN}
-  ^\s*Ring\s+detect\s+frequency\s*:\s*${RING_RESUME_FREQUENCY}
+  ^\s*Ring\s+detect\s+frequency\s*:\s*${RING_DETECT_FREQUENCY}
   ^\s*Ring\s+resume\s+interval\s*:\s*${RING_RESUME_INTERVAL}
   ^\s*Ring\s*detect\s+period\s*:\s*${RING_DETECT_PERIOD}
   ^ \s+Multicast\s+forward\s+mode\s*:\s*${SERVICE_PROFILE_MULTICAST_FORWARD_MODE}
