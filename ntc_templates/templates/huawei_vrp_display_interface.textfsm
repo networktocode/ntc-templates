@@ -4,7 +4,7 @@ Value PROTOCOL_STATUS (\S*|\S*\s+\(\w+\))
 Value INTERFACE_DESCRIPTION (.*)
 Value LINK_TYPE (\S+)
 Value PORT_TYPE (\S*)
-Value PVID (\d+)
+Value VLAN_ID (\d+)
 Value TPID (\S+)
 Value MTU (\d+)
 Value HOLD_TIMER (\d+)
@@ -31,9 +31,9 @@ Start
   ^\s*Description:${INTERFACE_DESCRIPTION}\s*$$
   ^\s*${PORT_TYPE}\s+Port,\s*Link-type\s*:\s*${LINK_TYPE},\s*$$
   ^\s*${PORT_TYPE}\s+Port,\s*The\s+(MTU|Maximum\s+Transmit\s+Unit)\s+is\s+${MTU}(,\s*Hold\s+timer\s+is\s+${HOLD_TIMER}\(sec\))?\s*$$
-  ^\s*${PORT_TYPE}\s+Port,(\s*PVID\s*:\s*${PVID},)?\s*TPID\s*:\s*${TPID},\s*The\s+Maximum\s+(Frame\s+Length|Transmit\s+Unit)\s+is\s+${MTU}\s*$$
+  ^\s*${PORT_TYPE}\s+Port,(\s*PVID\s*:\s*${VLAN_ID},)?\s*TPID\s*:\s*${TPID},\s*The\s+Maximum\s+(Frame\s+Length|Transmit\s+Unit)\s+is\s+${MTU}\s*$$
   ^\s*TPID\s*:\s*${TPID},\s*The\s+Maximum\s+Frame\s+Length\s+is\s+${MTU}\s*$$
-  ^\s*PVID\s*:\s+${PVID},(\s*[^,]+,){0,}\s+The\s+Maximum\s+Frame\s+Length\s+is\s+${MTU}
+  ^\s*PVID\s*:\s+${VLAN_ID},(\s*[^,]+,){0,}\s+The\s+Maximum\s+Frame\s+Length\s+is\s+${MTU}
   ^\s*Internet\s+Address\s+is\s+allocated\s+by\s+DHCP,\s+${IP_ADDRESS}\s*$$
   ^\s*Internet\s+Address\s+is\s+negotiated,\s+${IP_ADDRESS}\s*$$
   ^\s*Internet\s+Address\s+is\s+${IP_ADDRESS}\s*$$

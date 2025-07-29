@@ -1,6 +1,6 @@
 Value Required INTERFACE ([\w\.\/\-]+)
 Value LINK_TYPE (trunk|access|auto|hybrid|desirable)
-Value PVID (\d+)
+Value VLAN_ID (\d+)
 Value List TRUNK_VLAN_LIST (\d+\-\d+|\d+)
 
 
@@ -11,7 +11,7 @@ Start
 
 VLANS
   ^[\w\.\/\-]+ -> Continue.Record
-  ^${INTERFACE}\s+${LINK_TYPE}\s+${PVID}\s+${TRUNK_VLAN_LIST}\s* -> Continue
+  ^${INTERFACE}\s+${LINK_TYPE}\s+${VLAN_ID}\s+${TRUNK_VLAN_LIST}\s* -> Continue
   ^[\w\.\/\-]+\s+(?:\S+\s+){3}${TRUNK_VLAN_LIST}\s* -> Continue
   ^[\w\.\/\-]+\s+(?:\S+\s+){4}${TRUNK_VLAN_LIST}\s* -> Continue
   ^[\w\.\/\-]+\s+(?:\S+\s+){5}${TRUNK_VLAN_LIST}\s* -> Continue
@@ -134,7 +134,7 @@ VLANS
   # Bundled interface (PVID is 0)
   ^${INTERFACE}\s+-\s+0\s+-\s*$$ -> Record
   # Access port (PVID is empty)
-  ^${INTERFACE}\s+${LINK_TYPE}\s+${PVID}\s+-\s*$$ -> Record
+  ^${INTERFACE}\s+${LINK_TYPE}\s+${VLAN_ID}\s+-\s*$$ -> Record
   # Interface lists
   ^[\w\.\/\-]+\s+\S+\s+\d+\s+[0-9\- ]+$$
   ^\s{6,}
