@@ -17,6 +17,7 @@ Start
   ^Architecture:\s+\S+
   ^Internal\s+build\s+(version|ID):\s+\S+
   ^Image\s+(format\s+version|optimization):\s+\S+
+  ^Kernel\s+version:\s+\S+
   ^Uptime:\s+${UPTIME}
   ^Total\s+memory:\s+${TOTAL_MEMORY}
   ^Free\s+memory:\s+${FREE_MEMORY} -> Record
