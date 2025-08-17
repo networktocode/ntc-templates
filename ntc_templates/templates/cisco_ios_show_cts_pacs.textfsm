@@ -7,6 +7,7 @@ Value PAC_OPAQUE (\S+)
 Value REFRESH_TIMER (\S+)
 Value REFRESH_TIMER_STOPPED (Refresh\s+timer\s+stopped)
 Value ERROR (No\s+PACs\s+found\s+in\s+the\s+key\s+store\.)
+Value SECONDS_WAITING_FOR_SERVER (\d+)
 
 Start
   ^\s*Load\s+for\s+five\s+secs\s*:
@@ -20,6 +21,8 @@ Start
   ^\s*${REFRESH_TIMER_STOPPED}\s*,\s+provisioning\s+jobs\s+in\s+session
   ^\s*$$
   ^Reqid=\S+\s+\S+
+  ^Refresh\s+delayed\s+for\s+${SECONDS_WAITING_FOR_SERVER}\s+seconds\s+waiting\s+for\s+server\s+address\s+information
+  ^\S+$$
   ^.* -> Error
 
 PacInfo
