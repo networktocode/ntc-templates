@@ -11,8 +11,7 @@ Value ERROR (No\s+PACs\s+found\s+in\s+the\s+key\s+store\.)
 Start
   ^\s*Load\s+for\s+five\s+secs\s*:
   ^\s*Time\s+source\s+is\s+
-  ^-+\s+show\s+cts\s+pacs\s+-+
-  ^-+\s+show\s+sga-binos\s+pacs\s+-+
+  ^-+\s+show\s+(?:cts|sga-binos)\s+pacs\s+-+
   ^${ERROR} -> Record
   ^\s*AID\s*:\s+${AID}
   ^\s*PAC-Info\s*: -> PacInfo
