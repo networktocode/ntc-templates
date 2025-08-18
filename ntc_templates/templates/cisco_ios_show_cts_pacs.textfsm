@@ -2,7 +2,12 @@ Value AID (\S+)
 Value PAC_TYPE (.*)
 Value INITIATOR_ID (\S+)
 Value AUTHENTICATOR_ID_INFO (.*)
-Value CREDENTIAL_LIFETIME (.*)
+Value TIME (\d+:\d+:\d+)
+Value TIMEZONE (\w+)
+Value WEEKDAY (\w+)
+Value MONTH (\w+)
+Value DAY (\d+)
+Value YEAR (\d+)
 Value PAC_OPAQUE (\S+)
 Value REFRESH_TIMER (\S+)
 Value REFRESH_TIMER_STOPPED (Refresh\s+timer\s+stopped)
@@ -30,5 +35,5 @@ PacInfo
   ^\s+AID\s*:
   ^\s+I-ID\s*:\s+${INITIATOR_ID}
   ^\s+A-ID-Info\s*:\s+${AUTHENTICATOR_ID_INFO}
-  ^\s+Credential\s+Lifetime\s*:\s+${CREDENTIAL_LIFETIME} -> Start
+  ^\s+Credential\s+Lifetime\s*:\s+${TIME}\s+${TIMEZONE}\s+${WEEKDAY}\s+${MONTH}\s+${DAY}(\s+${YEAR})? -> Start
   ^.* -> Error
