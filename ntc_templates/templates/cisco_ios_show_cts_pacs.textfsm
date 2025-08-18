@@ -4,7 +4,7 @@ Value INITIATOR_ID (\S+)
 Value AUTHENTICATOR_ID_INFO (.*)
 Value TIME (\d+:\d+:\d+)
 Value TIMEZONE (\w+)
-Value WEEKDAY (\w+)
+Value WEEKDAY (Mon|Tue|Wed|Thu|Fri|Sat|Sun)
 Value MONTH (\w+)
 Value DAY (\d+)
 Value YEAR (\d+)
@@ -35,5 +35,5 @@ PacInfo
   ^\s+AID\s*:
   ^\s+I-ID\s*:\s+${INITIATOR_ID}
   ^\s+A-ID-Info\s*:\s+${AUTHENTICATOR_ID_INFO}
-  ^\s+Credential\s+Lifetime\s*:\s+${TIME}\s+${TIMEZONE}\s+${WEEKDAY}\s+${MONTH}\s+${DAY}(\s+${YEAR})? -> Start
+  ^\s+Credential\s+Lifetime\s*:\s+${TIME}\s+${TIMEZONE}(\s+${WEEKDAY})?\s+${MONTH}\s+${DAY}(\s+${YEAR})? -> Start
   ^.* -> Error
