@@ -36,7 +36,7 @@ parsed_sample:
     table_version:
     - "31259922"
     up_down:
-    - 6w2d
+    - "6w2d"
     vrf: "PROD"
   - bgp_neighbor:
     - "172.16.16.10"
@@ -60,7 +60,7 @@ parsed_sample:
     table_version:
     - "31259922"
     up_down:
-    - 6w2d
+    - "6w2d"
     vrf: "REPL"
   - bgp_neighbor: []
     input_queue: []
@@ -103,4 +103,4 @@ parsed_sample:
     state_or_prefixes_received: []
     table_version: []
     up_down: []
-    vrf: vrf-test
+    vrf: "vrf-test"
