@@ -1,0 +1,16 @@
+Total AP information:
+fault : fault           [1]
+idle  : idle            [1]
+nor   : normal          [1]
+stdby : standby         [1]
+ExtraInfo : Extra information
+P     : insufficient power supply
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+ID    MAC            Name                             Group               IP             Type               State  STA  Uptime          ExtraInfo Scene
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+0     aaaa-aaaa-aaaa APW_0055(WC VIP)                 AP_GROUP_OBIWAN     11.11.11.11    AirEngine1111-11   nor    0    4D:1H:10M:0S    -         -
+1     bbbb-bbbb-bbbb APW_0001                         AP_GROUP_HELLO      -              -                  idle   0    -               P         -
+2     cccc-cccc-cccc APW_0002                         AP_GROUP_THERE      -              AirEngine1111R-11E fault  0    -               -         -
+3     dddd-dddd-dddd APW_0003(Parkin VIP)             AP_GROUP_STAR_WARS  22.22.22.22    AirEngine1111R-11E stdby  0    17D:11H:4M:28S  P         -
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total: 4
