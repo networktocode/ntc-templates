@@ -15,7 +15,7 @@ Value List SPK (\d+)
 
 Start
   ^BGP\s+VRF\s+${VRF},\s+state:\s+${STATE}
-  ^BGP Route Distinguisher:\s+${RD}
+  ^BGP\s+Route\s+Distinguisher:\s+${RD}
   ^.*,\slocal\sAS\snumber\s${LOCAL_AS_NUMBER}
   ^Neighbor\s+Spk\s+AS\s+MsgRcvd\s+MsgSent\s+TblVer\s+InQ\s+OutQ\s+Up/Down\s+St/PfxRcd\s*$$
   ^${BGP_NEIGHBOR}\s+${SPK}\s+${NEIGHBOR_AS}\s+${MESSAGES_RECEIVED}\s+${MESSAGES_SENT}\s+${TABLE_VERSION}\s+${INPUT_QUEUE}\s+${OUTPUT_QUEUE}\s+${UP_DOWN}\s+${STATE_OR_PREFIXES_RECEIVED}\s*$$ -> Continue
