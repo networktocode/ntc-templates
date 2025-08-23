@@ -1,0 +1,152 @@
+---
+parsed_sample:
+  - bgp_neighbor:
+      - "10.29.246.174"
+      - "10.174.196.70"
+    input_queue:
+      - "0"
+      - "0"
+    local_as_number: "1234"
+    messages_received:
+      - "687457"
+      - "803718"
+    messages_sent:
+      - "625254"
+      - "730825"
+    neighbor_as:
+      - "64649"
+      - "64649"
+    output_queue:
+      - "0"
+      - "0"
+    rd: "1234:7777"
+    spk:
+      - "0"
+      - "0"
+    state: "Active"
+    state_or_prefixes_received:
+      - "Active"
+      - "19"
+    table_version:
+      - "0"
+      - "58620903"
+    up_down:
+      - "03:10:19"
+      - "27w0d"
+    vrf: "CBA:7777"
+  - bgp_neighbor: []
+    input_queue: []
+    local_as_number: "1234"
+    messages_received: []
+    messages_sent: []
+    neighbor_as: []
+    output_queue: []
+    rd: "1234:8888"
+    spk: []
+    state: "Active"
+    state_or_prefixes_received: []
+    table_version: []
+    up_down: []
+    vrf: "NONE_IP:8888"
+  - bgp_neighbor:
+      - "10.231.26.18"
+      - "10.231.39.18"
+      - "10.231.39.38"
+      - "10.245.123.138"
+      - "10.246.15.182"
+    input_queue:
+      - "0"
+      - "0"
+      - "0"
+      - "0"
+      - "0"
+    local_as_number: "1234"
+    messages_received:
+      - "661485"
+      - "534249"
+      - "539350"
+      - "803072"
+      - "218552"
+    messages_sent:
+      - "627195"
+      - "507686"
+      - "512100"
+      - "759852"
+      - "204533"
+    neighbor_as:
+      - "65508"
+      - "65508"
+      - "65508"
+      - "65508"
+      - "65508"
+    output_queue:
+      - "0"
+      - "0"
+      - "0"
+      - "0"
+      - "0"
+    rd: "1234:7415"
+    spk:
+      - "0"
+      - "0"
+      - "0"
+      - "0"
+      - "0"
+    state: "Active"
+    state_or_prefixes_received:
+      - "2"
+      - "2"
+      - "2"
+      - "2"
+      - "Active"
+    table_version:
+      - "58620903"
+      - "58620903"
+      - "58620903"
+      - "58620903"
+      - "0"
+    up_down:
+      - "1w0d"
+      - "1w1d"
+      - "1w1d"
+      - "9w5d"
+      - "1y00w"
+    vrf: "XMAS_TI:7415"
+  - bgp_neighbor:
+      - "10.254.64.230"
+    input_queue:
+      - "0"
+    local_as_number: "1234"
+    messages_received:
+      - "269417"
+    messages_sent:
+      - "243241"
+    neighbor_as:
+      - "28573"
+    output_queue:
+      - "0"
+    rd: "1234:7778"
+    spk:
+      - "0"
+    state: "Active"
+    state_or_prefixes_received:
+      - "Idle"
+    table_version:
+      - "0"
+    up_down:
+      - "49w3d"
+    vrf: "JOY:7778"
+  - bgp_neighbor: []
+    input_queue: []
+    local_as_number: "1234"
+    messages_received: []
+    messages_sent: []
+    neighbor_as: []
+    output_queue: []
+    rd: "1234:153799"
+    spk: []
+    state: "Active"
+    state_or_prefixes_received: []
+    table_version: []
+    up_down: []
+    vrf: "FARM:153799"
