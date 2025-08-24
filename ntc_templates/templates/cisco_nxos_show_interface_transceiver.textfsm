@@ -25,4 +25,13 @@ Start
   ^\s+cisco\s+product\s+id\sis(\s+${PRODUCT_ID})?
   ^\s+cisco\s+version\s+id
   ^\s+cisco\s+vendor\s+id
+  ^\s*DOM\sis\s+(Enabled|Disabled)
+  ^\s*Lane\sNumber
+  ^\s*SFP\sDetail\sDiagnostics\sInformation
+  ^\s*-+
+  ^\s*(Alarms|Warnings)
+  ^\s*(High|Low)
+  ^\s*(Temperature|Voltage|Current|Tx\sPower|Rx\sPower)
+  ^\s*Transmit\sFault\sCount
+  ^\s*$$
   ^. -> Error
