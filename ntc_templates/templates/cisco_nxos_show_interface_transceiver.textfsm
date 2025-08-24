@@ -31,7 +31,7 @@ Start
   ^\s*-+
   ^\s*(Alarms|Warnings)
   ^\s*(High|Low)
-  ^\s*(Temperature|Voltage|Current|Tx\s+Power|Rx\s+Power)
+  ^\s*(Temperature|Voltage|Current|[TR]x\s+Power)
   ^\s*Transmit\s+Fault\s+Count
   ^\s*$$
   ^. -> Error
