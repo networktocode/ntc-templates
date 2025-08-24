@@ -2,8 +2,21 @@ Value Required VRF (\S+)
 Value RD (\S+)
 Value STATE (\w+)
 Value LOCAL_AS_NUMBER (\S+)
+Value List BGP_NEIGHBOR (\d+\.\d+\.\d+\.\d+)
+Value List NEIGHBOR_AS (\d+)
+Value List MESSAGES_RECEIVED (\d+)
+Value List MESSAGES_SENT (\d+)
+Value List TABLE_VERSION (\d+)
+Value List INPUT_QUEUE (\d+)
+Value List OUTPUT_QUEUE (\d+)
+Value List UP_DOWN (\S+)
+Value List STATE_OR_PREFIXES_RECEIVED (\S+)
+Value List SPK (\d+)
 
 Start
   ^BGP\s+VRF\s+${VRF},\s+state:\s+${STATE}
-  ^BGP Route Distinguisher:\s+${RD}
-  ^.*,\slocal\sAS\snumber\s${LOCAL_AS_NUMBER} -> Record
+  ^BGP\s+Route\s+Distinguisher:\s+${RD}
+  ^.*,\s+local\s+AS\s+number\s+${LOCAL_AS_NUMBER}
+  ^Neighbor\s+Spk\s+AS\s+MsgRcvd\s+MsgSent\s+TblVer\s+InQ\s+OutQ\s+Up/Down\s+St/PfxRcd\s*$$
+  ^${BGP_NEIGHBOR}\s+${SPK}\s+${NEIGHBOR_AS}\s+${MESSAGES_RECEIVED}\s+${MESSAGES_SENT}\s+${TABLE_VERSION}\s+${INPUT_QUEUE}\s+${OUTPUT_QUEUE}\s+${UP_DOWN}\s+${STATE_OR_PREFIXES_RECEIVED}\s*$$ -> Continue
+  ^VRF: -> Record
