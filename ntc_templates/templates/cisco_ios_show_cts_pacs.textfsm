@@ -30,7 +30,7 @@ Start
   ^\s*Refresh\s+timer\s+is\s+set\s+for\s+${REFRESH_TIMER}
   ^\s*${REFRESH_TIMER_STOPPED}\s*,\s+provisioning\s+jobs\s+in\s+session
   ^\s*$$
-  ^Reqid=\S+\s+\S+
-  ^Refresh\s+delayed\s+for\s+${SECONDS_WAITING_FOR_SERVER}\s+seconds\s+waiting\s+for\s+server\s+address\s+information
+  ^\s*Reqid=\S+\s+\S+
+  ^\s*Refresh\s+delayed\s+for\s+${SECONDS_WAITING_FOR_SERVER}\s+seconds\s+waiting\s+for\s+server\s+address\s+information
   ^\S+$$
   ^.* -> Error
