@@ -1,0 +1,15 @@
+Value H (\d+)
+Value Address (\S+)
+Value Interface (\S+)
+Value Hold (\d+)
+Value Uptime (\S+)
+Value SRTT (\d+)
+Value RTO (\d+)
+Value Q_Cnt (\d+)
+Value Seq_Num (\d+)
+
+Start
+  ^\s*H\s+Address\s+Interface\s+Hold\s+Uptime\s+SRTT\s+RTO\s+Q\s+Seq -> Neighbors
+
+Neighbors
+  ^\s*${H}\s+${Address}\s+${Interface}\s+${Hold}\s+${Uptime}\s+${SRTT}\s+${RTO}\s+${Q_Cnt}\s+${Seq_Num} -> Record
