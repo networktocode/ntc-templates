@@ -38,5 +38,16 @@ Start
   ^\s+Supported\s+speeds
   ^\s+.*\s+diagnostic\s+monitoring\s+type
   ^\s+Note:
+  ^\s+firmware\s+version
+  ^\s+Wavelength\s+tolerance
+  ^\s+(host|media)\s+lane\s+count
+  ^\s+\S+\s+module\s+temperature
+  ^\s+\S+\s+operational\s+voltage
+  ^\s+vendor\s+OUI
+  ^\s+(date|clei|Advertising)\s+code
+  ^\s+power\s+class
+  ^\s+max\s+power
+  ^\s+(near|far)-end\s+lane
+  ^\s+(media|Host\s+electrical)\s+interface
   ^\s*$$
   ^. -> Error
