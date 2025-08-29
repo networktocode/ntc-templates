@@ -9,7 +9,7 @@ Value PRODUCT_ID (\S+)
 Start
   ^\S+/\S+ -> Continue.Record
   ^${INTERFACE}
-  ^\s+transceiver\sis\s+${STATUS}
+  ^\s+transceiver\s+is\s+${STATUS}
   ^\s+type\s+is(\s+${TYPE})?
   ^\s+name\s+is(\s+${MANUFACTURER})?
   ^\s+part\s+number\s+is(\s+${PART_NUMBER})?
@@ -22,7 +22,16 @@ Start
   ^\s+cisco\s+id
   ^\s+cisco\s+extended
   ^\s+cisco\s+part\s+number
-  ^\s+cisco\s+product\s+id\sis(\s+${PRODUCT_ID})?
+  ^\s+cisco\s+product\s+id\s+is(\s+${PRODUCT_ID})?
   ^\s+cisco\s+version\s+id
   ^\s+cisco\s+vendor\s+id
+  ^\s*DOM\s+is\s+(Enabled|Disabled)
+  ^\s*Lane\s+Number
+  ^\s*SFP\s+Detail\s+Diagnostics\s+Information
+  ^\s*-+
+  ^\s*(Alarms|Warnings)
+  ^\s*(High|Low)
+  ^\s*(Temperature|Voltage|Current|[TR]x\s+Power)
+  ^\s*Transmit\s+Fault\s+Count
+  ^\s*$$
   ^. -> Error
