@@ -1,6 +1,6 @@
 Value VRF (\S+)
 Value RD (\d\S+|<.+>)
-Value List INTERFACES ([A-Z]\S+\d+)
+Value List INTERFACES ([\w\./-]+)
 
 Start
   ^\s+V[rR][fF]\s+RD\s+Protocols\s+State\s+Interfaces -> VRF
@@ -120,7 +120,8 @@ VRF_NO_RD
   ^\s+\S+\s+\S+\s+\S+(\s\S+)?\s+(?:\S+,\s){6}${INTERFACES},? -> Continue
   #
   # line begins with whitespace, first interface
-  ^\s+${INTERFACES},? -> Continue
+  ^\s+${INTERFACES}, -> Continue
+  ^\s+${INTERFACES}$$ -> Continue
   # line begins with whitespace, second interface
   ^\s+(?:\S+,\s){1}${INTERFACES},? -> Continue
   # line begins with whitespace, third interface
