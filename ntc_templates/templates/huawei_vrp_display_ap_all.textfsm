@@ -1,13 +1,13 @@
 Value ID (\d+)
-Value MAC (\S+)
+Value MAC_ADDRESS (\S+)
 Value NAME (\S.+\S|\S+)
 Value GROUP (\S+)
-Value IP (\S+)
+Value IP_ADDRESS (\S+)
 Value TYPE (\S+)
 Value STATE (\S+)
 Value STA (\d+)
 Value UPTIME (\S+)
-Value EXTRAINFO (\S+)
+Value EXTRA_INFO (\S+)
 Value SCENE (\S+)
 
 Start
@@ -20,6 +20,6 @@ Start
   ^\s*P\s+:\s+insufficient\s+power\s+supply\s*$$
   ^\s*-+\s*$$
   ^\s*ID\s+MAC\s+Name\s+Group\s+IP\s+Type\s+State\s+STA\s+Uptime\s+ExtraInfo\s+Scene\s*$$
-  ^\s*${ID}\s+${MAC}\s+${NAME}\s+${GROUP}\s+(-|${IP})\s+(-|${TYPE})\s+${STATE}\s+${STA}\s+(-|${UPTIME})\s+(-|${EXTRAINFO})\s+(-|${SCENE})\s*$$ -> Record
+  ^\s*${ID}\s+${MAC_ADDRESS}\s+${NAME}\s+${GROUP}\s+(-|${IP_ADDRESS})\s+(-|${TYPE})\s+${STATE}\s+${STA}\s+(-|${UPTIME})\s+(-|${EXTRA_INFO})\s+(-|${SCENE})\s*$$ -> Record
   ^\s*Total:\s+\d+\s*$$
   ^. -> Error
