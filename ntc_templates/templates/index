@@ -251,7 +251,7 @@ cisco_ftd_show_vpn-sessiondb_anyconnect.textfsm, .*, cisco_ftd, sh[[ow]] vpn-[[s
 cisco_fxos_show_system_firmware.textfsm, .*, cisco_fxos, sh[[ow]] sy[[stem]] fi[[rmware]]
 
 cisco_ios_show_module.textfsm:cisco_ios_show_module_status.textfsm:cisco_ios_show_module_submodule.textfsm:cisco_ios_show_module_online_diag.textfsm, .*, cisco_ios, sh[[ow]] mod[[ule]]
-cisco_ios_show_switch_detail.textfsm:cisco_ios_show_switch_detail_stack_ports.textfsm, .*, cisco_ios, sh[[ow]] sw[[itch]] d[[etail]]
+cisco_ios_show_switch_detail.textfsm:cisco_ios_show_switch_detail_stack_ports.textfsm:cisco_ios_show_switch.textfsm, .*, cisco_ios, sh[[ow]] sw[[itch]]( d[[etail]])?\s*$
 cisco_ios_show_authentication_sessions_method_details.textfsm, .*, cisco_ios, show authen[[tication]] ses[[sions]] met[[hod]](\s+d[[ot1x]]|\s+m[[ab]])? det[[ails]]
 cisco_ios_show_running-config_partition_access-list.textfsm, .*, cisco_ios, sh[[ow]] ru[[nning-config]] p[[artition]] a[[ccess-list]]
 cisco_ios_show_ip_bgp_neighbors_advertised-routes.textfsm, .*, cisco_ios, sh[[ow]] ip bgp nei[[ghbors]](\s+\d+\.\d+\.\d+\.\d+)? adv[[ertised-routes]]
@@ -317,6 +317,7 @@ cisco_ios_show_license_status.textfsm, .*, cisco_ios, sh[[ow]] lic[[ense]] st[[a
 cisco_ios_show_lldp_neighbors.textfsm, .*, cisco_ios, sh[[ow]] lld[[p]] neig[[hbors]]
 cisco_ios_show_power_supplies.textfsm,  .*, cisco_ios, sh[[ow]] pow[[er]] su[[pplies]]
 cisco_ios_show_snmp_community.textfsm, .*, cisco_ios, sh[[ow]] sn[[mp]] com[[munity]]
+cisco_ios_show_switch_virtual.textfsm, .*, cisco_ios, sh[[ow]] sw[[itch]] vi[[rtual]]
 cisco_ios_show_cdp_neighbors.textfsm, .*, cisco_ios, sh[[ow]] c[[dp]] neig[[hbors]]
 cisco_ios_show_controller_t1.textfsm, .*, cisco_ios, sh[[ow]] cont[[rollers]] t1
 cisco_ios_show_hosts_summary.textfsm, .*, cisco_ios, sh[[ow]] ho[[sts]] summary

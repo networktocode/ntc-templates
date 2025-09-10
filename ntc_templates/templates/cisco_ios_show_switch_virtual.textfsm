@@ -1,0 +1,23 @@
+Value MODE (\S+(?:\s+\S+)*)
+Value DOMAIN (\d+)
+Value Key SWITCH (\d+)
+Value ROLE (Active|Standby)
+Value PEER_SWITCH (\d+)
+Value PEER_ROLE (Active|Standby)
+
+Start
+  ^\s*Executing the command on VSS member switch role\s*=\s*VSS\s+(?:Active|Standby),\s*id\s*=\s*\d+\s*$$
+  ^\s*$$
+  ^\s*Switch mode\s*:\s+${MODE}\s*$$ -> Block
+  ^. -> Error
+
+Block
+  ^\s*Virtual switch domain number\s*:\s+${DOMAIN}\s*$$
+  ^\s*Local switch number\s*:\s+${SWITCH}\s*$$
+  ^\s*Local switch operational role\s*:\s+Virtual Switch ${ROLE}\s*$$
+  ^\s*Peer switch number\s*:\s+${PEER_SWITCH}\s*$$
+  ^\s*Peer switch operational role\s*:\s+Virtual Switch ${PEER_ROLE}\s*$$ -> Record
+  ^\s*Executing the command on VSS member switch role\s*=\s*VSS\s+(?:Active|Standby),\s*id\s*=\s*\d+\s*$$ -> Start
+  ^\s*Switch mode\s*:\s+${MODE}\s*$$ -> Block
+  ^\s*$$
+  ^. -> Error
