@@ -1,0 +1,17 @@
+Value MODE (\S+(?:\s+\S+)*)
+Value DOMAIN (\d+)
+Value Key SWITCH (\d+)
+Value ROLE (Active|Standby)
+Value PEER_SWITCH (\d+)
+Value PEER_ROLE (Active|Standby)
+
+Start
+  ^\s*Executing\s+the\s+command\s+on\s+VSS\s+member\s+switch\s+role\s*=\s*VSS\s+(?:Active|Standby),\s*id\s*=\s*\d+\s*$$
+  ^\s*Switch\s+mode\s*:\s+${MODE}\s*$$
+  ^\s*Virtual\s+switch\s+domain\s+number\s*:\s+${DOMAIN}\s*$$
+  ^\s*Local\s+switch\s+number\s*:\s+${SWITCH}\s*$$
+  ^\s*Local\s+switch\s+operational\s+role\s*:\s+Virtual\s+Switch\s+${ROLE}\s*$$
+  ^\s*Peer\s+switch\s+number\s*:\s+${PEER_SWITCH}\s*$$
+  ^\s*Peer\s+switch\s+operational\s+role\s*:\s+Virtual\s+Switch\s+${PEER_ROLE}\s*$$ -> Record
+  ^\s*$$
+  ^. -> Error
