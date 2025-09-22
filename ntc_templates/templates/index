@@ -131,6 +131,7 @@ aruba_os_show_ap_radio-database.textfsm, .*, aruba_os, show ap radio-database
 aruba_os_show_ap_database_long.textfsm, .*, aruba_os, show ap database long
 aruba_os_show_ap_database.textfsm, .*, aruba_os, show ap database
 aruba_os_show_inventory.textfsm, .*, aruba_os, sh[[ow]] inventory
+aruba_os_show_hostname.textfsm, .*, aruba_os, sh[[ow]] hostname
 aruba_os_show_version.textfsm, .*, aruba_os, sh[[ow]] ver[[sion]]
 aruba_os_show_vlan.textfsm, .*, aruba_os, sh[[ow]] vl[[an]]
 aruba_os_show_arp.textfsm, .*, aruba_os, sh[[ow]] arp
@@ -252,7 +253,7 @@ cisco_ftd_show_vpn-sessiondb_anyconnect.textfsm, .*, cisco_ftd, sh[[ow]] vpn-[[s
 cisco_fxos_show_system_firmware.textfsm, .*, cisco_fxos, sh[[ow]] sy[[stem]] fi[[rmware]]
 
 cisco_ios_show_module.textfsm:cisco_ios_show_module_status.textfsm:cisco_ios_show_module_submodule.textfsm:cisco_ios_show_module_online_diag.textfsm, .*, cisco_ios, sh[[ow]] mod[[ule]]
-cisco_ios_show_switch_detail.textfsm:cisco_ios_show_switch_detail_stack_ports.textfsm, .*, cisco_ios, sh[[ow]] sw[[itch]] d[[etail]]
+cisco_ios_show_switch_detail.textfsm:cisco_ios_show_switch_detail_stack_ports.textfsm, .*, cisco_ios, sh[[ow]] sw[[itch]]( d[[etail]])?\s*$
 cisco_ios_show_authentication_sessions_method_details.textfsm, .*, cisco_ios, show authen[[tication]] ses[[sions]] met[[hod]](\s+d[[ot1x]]|\s+m[[ab]])? det[[ails]]
 cisco_ios_show_running-config_partition_access-list.textfsm, .*, cisco_ios, sh[[ow]] ru[[nning-config]] p[[artition]] a[[ccess-list]]
 cisco_ios_show_ip_bgp_neighbors_advertised-routes.textfsm, .*, cisco_ios, sh[[ow]] ip bgp nei[[ghbors]](\s+\d+\.\d+\.\d+\.\d+)? adv[[ertised-routes]]
@@ -318,6 +319,7 @@ cisco_ios_show_license_status.textfsm, .*, cisco_ios, sh[[ow]] lic[[ense]] st[[a
 cisco_ios_show_lldp_neighbors.textfsm, .*, cisco_ios, sh[[ow]] lld[[p]] neig[[hbors]]
 cisco_ios_show_power_supplies.textfsm,  .*, cisco_ios, sh[[ow]] pow[[er]] su[[pplies]]
 cisco_ios_show_snmp_community.textfsm, .*, cisco_ios, sh[[ow]] sn[[mp]] com[[munity]]
+cisco_ios_show_switch_virtual.textfsm, .*, cisco_ios, sh[[ow]] sw[[itch]] vi[[rtual]]
 cisco_ios_show_cdp_neighbors.textfsm, .*, cisco_ios, sh[[ow]] c[[dp]] neig[[hbors]]
 cisco_ios_show_controller_t1.textfsm, .*, cisco_ios, sh[[ow]] cont[[rollers]] t1
 cisco_ios_show_hosts_summary.textfsm, .*, cisco_ios, sh[[ow]] ho[[sts]] summary
@@ -831,6 +833,7 @@ linux_arp_-a.textfsm, .*, linux, arp -a
 linux_vzlist.textfsm, .*, linux, vzlist
 linux_top.textfsm, .*, linux, top
 
+mikrotik_routeros_interface_bridge_host_print_terse_without-paging.textfsm, .*, mikrotik_routeros, [[/]]in[[terface]] b[[ridge]] h[[ost]] p[[rint]] t[[erse]] wi[[thout-paging]]
 mikrotik_routeros_ip_hotspot_ip-binding_print_terse_without-paging.textfsm, .*, mikrotik_routeros, [[/]]ip h[[otspot]] ip-b[[inding]] p[[rint]] t[[erse]] wi[[thout-paging]]
 mikrotik_routeros_routing_ospf_neighbor_print_terse_without-paging.textfsm, .*, mikrotik_routeros, [[/]]r[[outing]] o[[spf]] nei[[ghbor]] p[[rint]] t[[erse]] wi[[thout-paging]]
 mikrotik_routeros_ip_dhcp-server_lease_print_terse_without-paging.textfsm, .*, mikrotik_routeros, [[/]]ip dh[[cp-server]] l[[ease]] pr[[int]] t[[erse]] wi[[thout-paging]]

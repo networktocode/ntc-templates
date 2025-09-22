@@ -1,16 +1,16 @@
 ---
 parsed_sample:
-  - vrf: "red"
-    rd: "<not set>"
-    interfaces:
+  - interfaces:
       - "Ethernet10"
       - "Ethernet20/1"
       - "Loopback0"
       - "Vlan100"
       - "Vlan200"
-  - vrf: "blue"
-    rd: "1:1"
-    interfaces:
+    rd: "<not set>"
+    vrf: "red"
+  - interfaces:
       - "Ethernet20/1.10"
       - "Loopback1"
       - "Port-Channel1.20"
+    rd: "1:1"
+    vrf: "blue"

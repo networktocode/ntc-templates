@@ -1,0 +1,19 @@
+Maximum number of VRFs allowed: 1023
+   VRF             Protocols       State         Interfaces                             
+--------------- --------------- ---------------- ---------------------------------------
+   default         IPv4            routing       Vl2000, Vl4094                         
+   default         IPv6            no routing                                           
+   guest-wan       IPv4            routing       Et4.930, Lo23, Vl23, Vl53, Vl93, Vl466 
+   guest-wan       IPv6            no routing                                           
+   p-wan           IPv4            routing       Et3, Lo29, Vl2, Vl5, Vl22, Vl29, Vl55, 
+                                                 Vl99, Vl463                            
+   p-wan           IPv6            no routing                                           
+   sdwan           IPv4            routing       Et2                                    
+   sdwan           IPv6            no routing                                           
+   Sip-ext3        IPv4            routing       Et19, Vl204, Vl206, Vl207, Vl213       
+   Sip-ext3        IPv6            no routing                                           
+   Sip-wan6        IPv4            routing       Vl58, Vl89, Vl205, Vl208, Vl209, Vl210,
+                                                 Vl211, Vl212, Vl468                    
+   Sip-wan6        IPv6            no routing                                           
+   trade-wan       IPv4            routing       Et4.970, Lo26, Vl26, Vl57, Vl96, Vl465 
+   trade-wan       IPv6            no routing                                           

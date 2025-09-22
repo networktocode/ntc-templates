@@ -1,0 +1,82 @@
+---
+parsed_sample:
+  - interfaces:
+      - "Vl2000"
+      - "Vl4094"
+    rd: ""
+    vrf: "default"
+  - interfaces: []
+    rd: ""
+    vrf: "default"
+  - interfaces:
+      - "Et4.930"
+      - "Lo23"
+      - "Vl23"
+      - "Vl53"
+      - "Vl93"
+      - "Vl466"
+    rd: ""
+    vrf: "guest-wan"
+  - interfaces: []
+    rd: ""
+    vrf: "guest-wan"
+  - interfaces:
+      - "Et3"
+      - "Lo29"
+      - "Vl2"
+      - "Vl5"
+      - "Vl22"
+      - "Vl29"
+      - "Vl55"
+      - "Vl99"
+      - "Vl463"
+    rd: ""
+    vrf: "p-wan"
+  - interfaces: []
+    rd: ""
+    vrf: "p-wan"
+  - interfaces:
+      - "Et2"
+    rd: ""
+    vrf: "sdwan"
+  - interfaces: []
+    rd: ""
+    vrf: "sdwan"
+  - interfaces:
+      - "Et19"
+      - "Vl204"
+      - "Vl206"
+      - "Vl207"
+      - "Vl213"
+    rd: ""
+    vrf: "Sip-ext3"
+  - interfaces: []
+    rd: ""
+    vrf: "Sip-ext3"
+  - interfaces:
+      - "Vl58"
+      - "Vl89"
+      - "Vl205"
+      - "Vl208"
+      - "Vl209"
+      - "Vl210"
+      - "Vl211"
+      - "Vl212"
+      - "Vl468"
+    rd: ""
+    vrf: "Sip-wan6"
+  - interfaces: []
+    rd: ""
+    vrf: "Sip-wan6"
+  - interfaces:
+      - "Et4.970"
+      - "Lo26"
+      - "Vl26"
+      - "Vl57"
+      - "Vl96"
+      - "Vl465"
+    rd: ""
+    vrf: "trade-wan"
+  - interfaces: []
+    rd: ""
+    vrf: "trade-wan"
