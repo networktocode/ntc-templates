@@ -1,0 +1,75 @@
+Value SOFTWARE_VERSION (\S+)
+Value SOFTWARE_RELEASE (\S+)
+Value MODEL (.+)
+Value UPTIME (.+?)
+Value LAST_REBOOT_REASON (.+)
+Value SLOT_NUMBER (\d+)
+
+
+Start
+  ^\s*HP(E)?\s+Comware\s+Software,\s+Version\s+${SOFTWARE_VERSION},\s+(Feature|Release)\s+${SOFTWARE_RELEASE}
+  ^\s*(H3C|HP)\s+Comware\s+
+  ^\s*Comware\s+Software,\s+Version\s+${SOFTWARE_VERSION},\s+(Feature|Release)\s+${SOFTWARE_RELEASE}
+  ^\s*Copyright\s+\(c\)
+  ^\s*HP(E)?\s+${MODEL}\s+Switch\s*uptime\s*is\s*${UPTIME}$$
+  ^\s*HP(E)?\s+${MODEL}\s+Switch\s*with\s+.+\s+uptime\s*is\s*${UPTIME}$$
+  ^\s*HP(E)?\s+${MODEL}\s+uptime\s*is\s*${UPTIME}$$
+  ^\s*(H3C|HP)\s+${MODEL}\s*uptime\s*is\s*${UPTIME}$$
+  ^\s*(H3C|HP)\s+${MODEL}\s*with
+  ^\s*Hardware\s+Version
+  ^\s*Bootrom\s*Version
+  ^\s*CPLD
+  ^\s*\d+[A-Z]\s+bytes
+  ^\s*Last\s*reboot\s*reason\s*:\s*${LAST_REBOOT_REASON}
+  ^\s*Boot\s*image:\s*.+
+  ^\s*Boot\s*image\s*version:\s*.+
+  ^\s*Compiled\s*.+
+  ^\s*System\s*image:\s*.+
+  ^\s*System\s*image\s*version:\s* -> Record
+  ^\s*Feature\s+image
+  ^\s*Patch\s*image\(s\)\s*list:
+  ^\s*flash:
+  ^\s*Slot\s*${SLOT_NUMBER}(:)?\s* -> Slot
+  ^\s*MPU\(M\)\s+Slot\s*${SLOT_NUMBER}(:)?\s* -> Slot
+  ^\s*MPU\(M\)\s+${SLOT_NUMBER}(:)?\s* -> Slot
+  ^\s*MPU\(S\)\s+Slot\s*${SLOT_NUMBER}(:)?\s* -> Slot
+  ^\s*MPU\(S\)\s+${SLOT_NUMBER}(:)?\s* -> Slot
+  ^\s*LPU\s+${SLOT_NUMBER}(:)?\s* -> Slot
+  ^\s*\[SubSlot\s*\d+\] 
+  ^\s*$$
+  ^. -> Error
+
+Slot
+  ^\s*Slot\s*${SLOT_NUMBER}(:)?\s*
+  ^\s*MPU\(M\)\s+Slot\s*${SLOT_NUMBER}(:)?\s*
+  ^\s*MPU\(S\)\s+Slot\s*${SLOT_NUMBER}(:)?\s*
+  ^\s*MPU\(M\)\s+${SLOT_NUMBER}(:)?\s*
+  ^\s*MPU\(S\)\s+${SLOT_NUMBER}(:)?\s*
+  ^\s*LPU\s+${SLOT_NUMBER}(:)?\s* 
+  ^\s*Uptime\sis\s${UPTIME}$$
+  ^\s*Release\s+Version:
+  ^\s*BOARD\s*TYPE:
+  ^\s*HP(E)?\s+${MODEL}\s*Switch\s*
+  ^\s*HP(E)?\s+${MODEL}\s+with
+  ^\s*${MODEL}\s+Switch\s*
+  ^\s*${MODEL}\s+with
+  ^\s*DRAM:
+  ^\s*FLASH:
+  ^\s*NVRAM:
+  ^\s*PCB
+  ^\s*(Basic|Extended)\s+BootWare\s+Version
+  ^\s*FPGA\s+Version:
+  ^\s*FPGA\s\d+\s+Version:
+  ^\s*Bootrom\s*Version:
+  ^\s*Bootware\s+Version
+  ^\s*CPLD
+  ^\s*Patch\s*Version\s*:
+  ^\s*Reboot\s*Cause\s*:\s*${LAST_REBOOT_REASON}
+  ^\s*Last\s+reboot\s+reason\s+:\s+${LAST_REBOOT_REASON}
+  ^\s*\d+[A-Z]\s+bytes
+  ^\s*Config\s+Register
+  ^\s*Hardware\s+Version
+  ^\s*BootRom\s+Version
+  ^\s*\[SubSlot\s*\d+\] -> Record 
+  ^\s*$$ -> Record
+  ^. -> Error
