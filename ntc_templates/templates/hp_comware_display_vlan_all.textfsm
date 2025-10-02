@@ -12,7 +12,9 @@ Start
   ^\s*VLAN\s+[Tt]ype\s*:\s*${TYPE}
   ^\s*Route\s+[Ii]nterface\s*:\s*${ROUTE_INTERFACE}
   ^\s*IPv4\s+[Aa]ddress\s*:\s*${IPV4_ADDRESS}
+  ^\s*IP\s+[Aa]ddress\s*:\s*${IPV4_ADDRESS}
   ^\s*IPv4\s+[Ss]ubnet\s+mask\s*:\s*${IPV4_SUBNET}
+  ^\s*[Ss]ubnet\s+[Mm]ask\s*:\s*${IPV4_SUBNET}
   ^\s*Description\s*:\s*${DESCRIPTION}
   ^\s*Name\s*:\s*${VLAN_NAME}
   ^\s*Tagged\s+[Pp]orts
@@ -20,4 +22,5 @@ Start
   ^\s{3,}\S+\s*$$
   ^\s{3,}\S+\s+\S+\s*$$
   ^\s{3,}\S+\s+\S+\s+\S+\s*$$
+  ^\s*$$
   ^. -> Error
