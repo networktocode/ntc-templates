@@ -1,0 +1,36 @@
+---
+parsed_sample:
+  - bandwidth: ""
+    description: "GigabitEthernet12/0/17 Interface"
+    duplex: "unknown-duplex"
+    hw_address:
+      - "3822-d629-5e21"
+    interface: "GigabitEthernet12/0/17"
+    ip_address: []
+    l2mtu: "1518"
+    line_status: "DOWN"
+    mtu: ""
+    port_link_type: "access"
+    protocol_status: ""
+    speed: "Unknown-speed"
+    untagged_vlan_id: "200"
+    vlan_native: "200"
+    vlan_passing: []
+    vlan_permitted: []
+  - bandwidth: "1000000 kbps"
+    description: "Server Mgmt Port"
+    duplex: "unknown-duplex"
+    hw_address:
+      - "ec9b-8baa-f45e"
+    interface: "GigabitEthernet11/0/17"
+    ip_address: []
+    l2mtu: "1536"
+    line_status: "STP DOWN"
+    mtu: ""
+    port_link_type: "Access"
+    protocol_status: "DOWN"
+    speed: "Unknown-speed"
+    untagged_vlan_id: "231"
+    vlan_native: "231"
+    vlan_passing: []
+    vlan_permitted: []
