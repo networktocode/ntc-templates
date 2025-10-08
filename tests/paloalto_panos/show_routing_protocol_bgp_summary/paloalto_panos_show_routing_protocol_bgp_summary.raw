@@ -1,0 +1,32 @@
+  ==========
+  router id:                     1.1.1.1
+  virtual router:                VR_HANDOFF
+  reject default route:          no
+  redist default route:          allow
+  Install BGP routes:            yes
+  Graceful Restart:              supported
+  AS size:                       2
+  Local AS:                      65253
+  Local member AS:               0
+  Cluster id:                    0.0.0.0
+  Default local preference:      100
+  Always compare MED:            no
+  Aggregate regardless MED:      yes
+  Deterministic MED processing:  yes
+  Accept ORF:                    no
+  Accept CISCO style prefix:     yes
+  mp-bgp-enable:                 yes
+  afi-safi-ipv4-unicast:         yes
+  rib-out entries:               current 46, peak 47 
+    peer DC-N9K-BGW01 - BLU 301: AS 65253, Established, IP 192.168.1.1
+      bgpAfiIpv4/unicast pfx:    Accepted pfx: 4, Advertised pfx: 4
+    peer DC-N9K-BGW02 - BLU 301: AS 65301, Established, IP 192.168.1.2
+      bgpAfiIpv4/unicast pfx:    Accepted pfx: 4, Advertised pfx: 4
+    peer DC-N9K-BGW01 - GRN 302: AS 65253, Established, IP 192.168.2.9
+      bgpAfiIpv4/unicast pfx:    Accepted pfx: 3, Advertised pfx: 4
+    peer DC-N9K-BGW02 - GRN 302: AS 65302, Established, IP 192.168.2.10
+      bgpAfiIpv4/unicast pfx:    Accepted pfx: 3, Advertised pfx: 4
+    peer DC-N9K-BGW01 - AMB 303: AS 65253, Established, IP 192.168.3.17
+      bgpAfiIpv4/unicast pfx:    Accepted pfx: 2, Advertised pfx: 3
+    peer DC-N9K-BGW02 - AMB 303: AS 65303, Established, IP 192.168.3.18
+      bgpAfiIpv4/unicast pfx:    Accepted pfx: 2, Advertised pfx: 3

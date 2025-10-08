@@ -1,0 +1,28 @@
+Value Filldown ROUTER_ID (\S+)
+Value Filldown VIRTUAL_ROUTER (\S+)
+Value Filldown LOCAL_AS (\d+)
+Value Filldown NEIGHBOR_NAME ([^:]+)
+Value Filldown NEIGHBOR_AS (\d+)
+Value Filldown BGP_NEIGHBOR (\S+)
+Value ADDRESS_FAMILY (\S+)
+Value ACCEPTED_PFX (\d+)
+Value ADVERTISED_PFX (\d+)
+
+Start
+  ^\s*==+
+  ^\s*router id:\s+${ROUTER_ID}
+  ^\s*virtual router:\s+${VIRTUAL_ROUTER}
+  ^\s*Local AS:\s+${LOCAL_AS} -> Peer
+
+Peer
+  ^\s*peer\s+${NEIGHBOR_NAME}:\s+AS\s+${NEIGHBOR_AS},.*IP\s+${BGP_NEIGHBOR} -> PeerData
+  ^\s*$$
+
+PeerData
+  ^\s*${ADDRESS_FAMILY}\s+pfx:\s+Accepted pfx:\s+${ACCEPTED_PFX},\s+Advertised pfx:\s+${ADVERTISED_PFX} -> Record
+  ^\s*${ADDRESS_FAMILY}\s+pfx: -> PeerData
+  ^\s*peer\s+${NEIGHBOR_NAME}:\s+AS\s+${NEIGHBOR_AS},.*IP\s+${BGP_NEIGHBOR} -> PeerData
+  ^\s*$$ -> Peer
+  ^. -> Error
+
+EOF
