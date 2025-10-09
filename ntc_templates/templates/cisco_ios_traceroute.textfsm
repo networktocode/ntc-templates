@@ -20,8 +20,8 @@ Value DETAILS (.*)
 
 Start
   ^Type\s+escape
-  ^Tracing\s+the\s+route
-  ^VRF\s+info: -> Entries
+  ^Tracing\s+the\s+route -> Entries
+  ^VRF\s+info:
   ^\s*$$
   ^\s*$$
   ^. -> Error
