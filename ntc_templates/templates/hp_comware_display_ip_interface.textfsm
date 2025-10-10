@@ -15,7 +15,7 @@ Interface
   ^\S+\s+current\s+state -> Continue.Record
   ^${INTERFACE}\s+current\s+state\s*:\s*${LINE_STATUS}
   ^Line\s+protocol\s+current\s+state\s*:\s*${PROTOCOL_STATUS}
-  ^Internet\s+Address\s+is\s+${IP_ADDRESS}\s+(Primary|Sub|CELLULAR-Allocated)
+  ^Internet\s+Address\s+is\s+${IP_ADDRESS}\s+(Primary|Sub|CELLULAR-Allocated|DHCP-[Aa]llocated)
   ^Broadcast\s+address\s*:\s*\S+
   ^The\s+Maximum\s+Transmit\s+Unit\s*:\s*${MTU}\s+bytes
   ^Policy\s+routing\s+is\s+enabled,\s+using\s+route\s+map\s+${ROUTE_MAP}
