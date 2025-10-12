@@ -1,0 +1,100 @@
+HundredGigE3/0/23
+Current state: Administratively DOWN
+Line protocol state: DOWN
+IP packet frame type: Ethernet II, hardware address: dc68-0c3c-2388
+Description: SOME-DEVICE-DESC
+Bandwidth: 100000000 kbps
+Loopback is not set
+Media type is not sure, port is No connector
+Ethernet port mode: LAN
+Unknown-speed mode, unknown-duplex mode
+Link speed type is autonegotiation, link duplex type is autonegotiation
+Flow-control is not enabled
+Maximum frame length: 9416
+Allow jumbo frames to pass
+Broadcast max-ratio: 100%
+Multicast max-ratio: 100%
+Unicast max-ratio: 100%
+PVID: 1
+MDI type: Automdix
+Port link-type: Access
+ Tagged VLANs:   None
+ Untagged VLANs: 1
+Port priority: 0
+Last link flapping: Never
+Last clearing of counters: 21:02:03 Sat 05/31/2025 
+Current system time:2025-09-29 17:34:11 EST-05:00:00
+Last time when physical state changed to up:-
+Last time when physical state changed to down:2000-12-31 19:04:54 EST-05:00:00
+ Peak input rate: 0 bytes/sec, at 2025-05-31 21:02:08 
+ Peak output rate: 0 bytes/sec, at 2025-05-31 21:02:08 
+ Last 300 seconds input: 0 packets/sec 0 bytes/sec -%
+ Last 300 seconds output: 0 packets/sec 0 bytes/sec -%
+ Input (total):  0 packets, 0 bytes
+         0 unicasts, 0 broadcasts, 0 multicasts, 0 pauses
+ Input (normal):  0 packets, - bytes
+         0 unicasts, 0 broadcasts, 0 multicasts, 0 pauses
+ Input:  0 input errors, 0 runts, 0 giants, 0 throttles
+         0 CRC, 0 frame, - overruns, 0 aborts
+         - ignored, - parity errors
+ Output (total): 0 packets, 0 bytes
+         0 unicasts, 0 broadcasts, 0 multicasts, 0 pauses
+ Output (normal): 0 packets, - bytes
+         0 unicasts, 0 broadcasts, 0 multicasts, 0 pauses
+ Output: 0 output errors, - underruns, 0 buffer failures
+         0 aborts, 0 deferred, 0 collisions, 0 late collisions
+         0 lost carrier, - no carrier
+IPv4 traffic statistics:
+ Last 300 seconds input rate: 0 packets/sec, 0 bytes/sec
+ Last 300 seconds output rate: 0 packets/sec, 0 bytes/sec
+ Input: 0 packets, 0 bytes
+ Output: 0 packets, 0 bytes
+IPv6 traffic statistics:
+ Last 300 seconds input rate: 0 packets/sec, 0 bytes/sec
+ Last 300 seconds output rate: 0 packets/sec, 0 bytes/sec
+ Input: 0 packets, 0 bytes
+ Output: 0 packets, 0 bytes
+
+Ten-GigabitEthernet13/2/12
+Current state: UP
+Line protocol state: UP
+IP packet frame type: Ethernet II, hardware address: 40b9-3c3c-e9a0
+Description: SOME_DEVICE_DESCR
+Bandwidth: 1000000 kbps
+Loopback is not set
+Media type is twisted pair, port hardware type is 1000_BASE_T_AN_SFP
+1000Mbps-speed mode, full-duplex mode
+Link speed type is autonegotiation, link duplex type is autonegotiation
+Flow-control is not enabled
+Maximum frame length: 10000
+Allow jumbo frames to pass
+Broadcast max-ratio: 100%
+Multicast max-ratio: 100%
+Unicast max-ratio: 100%
+PVID: 1
+MDI type: Automdix
+Port up-mode is enabled
+Port link-type: Access
+ Tagged VLANs:   None
+ Untagged VLANs: 1
+Port priority: 0
+Last link flapping: 299 weeks 3 days 18 hours 27 minutes
+Last clearing of counters: 23:10:42 Sun 03/07/2021 
+ Peak input rate: 0 bytes/sec, at 2025-03-06 17:03:07 
+ Peak output rate: 32 bytes/sec, at 2025-03-06 17:03:46 
+ Last 300 second input: 0 packets/sec 0 bytes/sec 0%
+ Last 300 second output: 0 packets/sec 32 bytes/sec 0%
+ Input (total):  0 packets, 0 bytes
+         0 unicasts, 0 broadcasts, 0 multicasts, 0 pauses
+ Input (normal):  0 packets, - bytes
+         0 unicasts, 0 broadcasts, 0 multicasts, 0 pauses
+ Input:  0 input errors, 0 runts, 0 giants, 0 throttles
+         0 CRC, 0 frame, - overruns, 0 aborts
+         - ignored, - parity errors
+ Output (total): 72002554 packets, 4608163456 bytes
+         0 unicasts, 0 broadcasts, 72002554 multicasts, 0 pauses
+ Output (normal): 72002554 packets, - bytes
+         0 unicasts, 0 broadcasts, 72002554 multicasts, 0 pauses
+ Output: 0 output errors, - underruns, - buffer failures
+         0 aborts, 0 deferred, 0 collisions, 0 late collisions
+         0 lost carrier, - no carrier
