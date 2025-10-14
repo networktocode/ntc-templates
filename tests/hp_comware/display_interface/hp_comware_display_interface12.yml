@@ -1,0 +1,36 @@
+---
+parsed_sample:
+  - bandwidth: "100000000 kbps"
+    description: "SOME-DEVICE-DESC"
+    duplex: "unknown-duplex"
+    hw_address:
+      - "dc68-0c3c-2388"
+    interface: "HundredGigE3/0/23"
+    ip_address: []
+    l2mtu: "9416"
+    line_status: "Administratively DOWN"
+    mtu: ""
+    port_link_type: "Access"
+    protocol_status: "DOWN"
+    speed: "Unknown-speed"
+    untagged_vlan_id: "1"
+    vlan_native: "1"
+    vlan_passing: []
+    vlan_permitted: []
+  - bandwidth: "1000000 kbps"
+    description: "SOME_DEVICE_DESCR"
+    duplex: "full-duplex"
+    hw_address:
+      - "40b9-3c3c-e9a0"
+    interface: "Ten-GigabitEthernet13/2/12"
+    ip_address: []
+    l2mtu: "10000"
+    line_status: "UP"
+    mtu: ""
+    port_link_type: "Access"
+    protocol_status: "UP"
+    speed: "1000Mbps-speed"
+    untagged_vlan_id: "1"
+    vlan_native: "1"
+    vlan_passing: []
+    vlan_permitted: []

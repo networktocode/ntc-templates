@@ -1,0 +1,26 @@
+Value ALL_ROUTES (\d+)
+Value IPV4_ROUTES (\d+)
+Value IPV6_ROUTES (\d+)
+Value ACTIVE_ROUTES (\d+)
+Value STATIC_ROUTES (\d+)
+Value CONNECT_ROUTES (\d+)
+Value BGP_ROUTES (\d+)
+Value OSPF_ROUTES (\d+)
+Value RIP_ROUTES (\d+)
+
+Start
+  ^GLOBAL ROUTING RESOURCE USAGE: -> Global
+
+Global
+  ^\s*All\s+Routes \(total\):\s+${ALL_ROUTES}
+  ^\s*All IPv4 Routes \(total\):\s+${IPV4_ROUTES}
+  ^\s*All IPv6 Routes \(total\):\s+${IPV6_ROUTES}
+  ^\s*All\s+Routes \(active\):\s+${ACTIVE_ROUTES}
+  ^\s*Static\s+Routes \(total\):\s+${STATIC_ROUTES}
+  ^\s*Connect\s+Routes \(total\):\s+${CONNECT_ROUTES}
+  ^\s*BGP\s+Routes \(total\):\s+${BGP_ROUTES}
+  ^\s*OSPF\s+Routes \(total\):\s+${OSPF_ROUTES}
+  ^\s*RIP\s+Routes \(total\):\s+${RIP_ROUTES} -> Record
+  ^\s*==+$$
+  ^\s*$$
+  ^. -> Error

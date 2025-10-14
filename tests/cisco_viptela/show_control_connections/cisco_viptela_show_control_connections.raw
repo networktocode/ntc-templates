@@ -1,0 +1,22 @@
+                                                                                             PEER                                          PEER                                          
+      PEER    PEER PEER            SITE       DOMAIN PEER                                    PRIV  PEER                                    PUB                                           
+INDEX TYPE    PROT SYSTEM IP       ID         ID     PRIVATE IP                              PORT  PUBLIC IP                               PORT  ORGANIZATION            REMOTE COLOR     STATE UPTIME     
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+0     vedge   dtls 172.37.205.6    65123      1      192.168.2.14                            12386 80.169.94.206                           12386 network-SDWAN             gold            up     42:01:48:26
+0     vedge   dtls 172.37.205.6    65123      1      212.145.174.58                          12386 212.215.174.58                          12386 network-SDWAN             silver          up     25:18:09:32
+0     vedge   dtls 10.7.205.1      65221      1      10.1.242.4                              12346 21.0.118.48                             12346 network-SDWAN             gold            up     110:18:19:05
+0     vedge   dtls 10.8.205.6      65222      1      10.2.242.5                              12346 30.107.33.32                            12346 network-SDWAN             silver          up     110:18:18:49
+0     vsmart  dtls 10.94.3.250     222        1      10.94.3.70                              12346 50.238.90.220                           12346 network-SDWAN             default         up     59:12:30:33
+0     vbond   dtls 10.94.3.249     0          0      20.203.233.139                          12346 43.203.233.139                          12346 network-SDWAN             default         up     110:18:19:19
+0     vbond   dtls 10.94.2.249     0          0      20.214.51.185                           12346 45.214.51.185                           12346 network-SDWAN             default         up     110:18:19:19
+0     vmanage dtls 10.94.2.248     120        0      10.94.2.70                              12346 56.117.133.18                           12346 network-SDWAN             default         up     139:23:37:04
+1     vedge   dtls 10.94.2.247     125        1      10.94.2.73                              12386 51.145.96.212                           12386 network-SDWAN             gold            up     110:18:04:58
+1     vedge   dtls 10.8.205.1      65222      1      10.2.242.4                              12346 78.117.13.0                             12346 network-SDWAN             gold            up     110:18:19:19
+1     vbond   dtls 10.94.3.249     0          0      20.223.213.139                          12346 90.223.213.139                          12346 network-SDWAN             default         up     110:18:19:24
+1     vbond   dtls 10.94.2.249     0          0      20.254.81.185                           12346 33.254.54.185                           12346 network-SDWAN             default         up     110:18:19:24
+2     vedge   dtls 172.37.205.1    65123      1      192.158.1.9                             12386 222.115.191.254                         12386 network-SDWAN             silver          up     25:18:09:48
+2     vedge   dtls 172.37.205.1    65123      1      217.101.187.218                         12346 247.121.187.218                         12346 network-SDWAN             gold            up     42:01:48:24
+2     vedge   dtls 172.31.127.1    65124      1      192.168.11.9                            12406 183.81.133.71                           12406 network-SDWAN             silver          up     51:02:00:29
+2     vedge   dtls 172.31.127.6    65124      1      185.81.153.72                           12386 182.89.193.72                           12386 network-SDWAN             silver          up     51:02:00:34
+2     vedge   dtls 172.31.127.6    65124      1      192.138.17.14                           12426 222.121.2.79                            12426 network-SDWAN             gold            up     103:02:15:50
+2     vedge   dtls 172.31.127.1    65124      1      213.86.117.170                          12346 203.86.147.170                          12346 network-SDWAN             gold            up     110:18:19:14
