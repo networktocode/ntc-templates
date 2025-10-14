@@ -926,6 +926,7 @@ oneaccess_oneos_show_sntp.textfsm, .*, oneaccess_oneos, sh[[ow]] sntp
 oneaccess_oneos_hostname.textfsm, .*, oneaccess_oneos, hostname
 oneaccess_oneos_ls.textfsm, .*, oneaccess_oneos, ls( -[lh][lh]? )?.*
 
+paloalto_panos_show_routing_protocol_bgp_summary.textfsm, .*, paloalto_panos, sh[[ow]] ro[[uting]] pr[[otocol]] b[[gp]] s[[ummary]]
 paloalto_panos_show_running_security-policy.textfsm, .*, paloalto_panos, sh[[ow]] runn[[ing]] security[[-policy]]
 paloalto_panos_show_high-availability_all.textfsm, .*, paloalto_panos, sh[[ow]] high[[-availability]] all
 paloalto_panos_test_security-policy-match.textfsm, .*, paloalto_panos, test security-policy-match.*
