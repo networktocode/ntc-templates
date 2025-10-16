@@ -11,7 +11,7 @@ Start
   ^\s*(H3C|HP)\s+Comware\s+
   ^\s*Copyright\s+\(c\)
   ^\s*(HPE?|H3C)\s+${MODEL}\s+(\d+-slot|EI|HI|Switch|\(\d+W\)).+uptime\s+is\s+${UPTIME}$$
-  ^\s*(HPE?|H3C)\s+${MODEL}\s+uptime\s+is\s+${UPTIME}$$
+  ^\s*(HPE?|H3C)\s+${MODEL}\s+uptime\s+is\s+${UPTIME}$$ -> Record
   ^\s*Hardware\s+Version
   ^\s*Bootrom\s+Version
   ^\s*CPLD
