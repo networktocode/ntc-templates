@@ -40,6 +40,5 @@ Entries
   ^.*?(?:(?:\d+\s+msec|![A-Z]|\*|\?)\s+){8}${RTT_RESPONSE} -> Continue
   ^.*?(?:(?:\d+\s+msec|![A-Z]|\*|\?)\s+){9}${RTT_RESPONSE} -> Continue
   ^.* -> Record
-  ^. -> Error
 
 EOF
