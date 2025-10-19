@@ -21,7 +21,6 @@ Value DETAILS (.*)
 Start
   ^Type\s+escape
   ^Tracing\s+the\s+route -> Entries
-  ^VRF\s+info:
   ^\s*$$
   ^\s*$$
   ^. -> Error
@@ -41,5 +40,6 @@ Entries
   ^.*?(?:(?:\d+\s+msec|![A-Z]|\*|\?)\s+){8}${RTT_RESPONSE} -> Continue
   ^.*?(?:(?:\d+\s+msec|![A-Z]|\*|\?)\s+){9}${RTT_RESPONSE} -> Continue
   ^.* -> Record
+  ^. -> Error
 
 EOF
