@@ -1,0 +1,99 @@
+ VLAN ID: 1
+ VLAN Type: static
+ Route Interface: not configured
+ Description: VLAN 0001
+ Name: VLAN 0001
+ Tagged   Ports: none
+ Untagged Ports:
+    Bridge-Aggregation1      Bridge-Aggregation40
+    GigabitEthernet2/0/2     GigabitEthernet2/0/3     GigabitEthernet2/0/4
+    GigabitEthernet2/0/5     GigabitEthernet2/0/6     GigabitEthernet2/0/7
+    GigabitEthernet2/0/8     GigabitEthernet2/0/9     GigabitEthernet2/0/11
+    GigabitEthernet2/0/12    GigabitEthernet2/0/13    GigabitEthernet2/0/14
+    GigabitEthernet2/0/15    GigabitEthernet2/0/16    GigabitEthernet2/0/17
+    GigabitEthernet2/0/18    GigabitEthernet2/0/19    GigabitEthernet2/0/20
+    GigabitEthernet2/0/21    GigabitEthernet2/0/22    GigabitEthernet2/0/23
+    GigabitEthernet2/0/24    GigabitEthernet2/0/25    GigabitEthernet2/0/26
+    GigabitEthernet2/0/27    GigabitEthernet2/0/28    GigabitEthernet2/0/29
+    GigabitEthernet2/0/30    GigabitEthernet2/0/31    GigabitEthernet2/0/32
+    GigabitEthernet2/0/33    GigabitEthernet2/0/34    GigabitEthernet2/0/35
+    GigabitEthernet2/0/36    GigabitEthernet2/0/38    GigabitEthernet2/0/39
+    GigabitEthernet2/0/40    GigabitEthernet2/0/41    GigabitEthernet2/0/42
+    GigabitEthernet2/0/43    GigabitEthernet2/0/44    GigabitEthernet2/0/45
+    GigabitEthernet2/0/46    GigabitEthernet3/0/1     GigabitEthernet3/0/2
+    GigabitEthernet3/0/11    GigabitEthernet3/0/12    GigabitEthernet3/0/14
+    GigabitEthernet3/0/47    GigabitEthernet3/0/48    GigabitEthernet8/0/3
+    GigabitEthernet8/0/4     GigabitEthernet8/0/5     GigabitEthernet8/0/6
+    GigabitEthernet8/0/7     GigabitEthernet8/0/8     GigabitEthernet8/0/9
+    GigabitEthernet8/0/10    GigabitEthernet8/0/11    GigabitEthernet8/0/12
+
+ VLAN ID: 250
+ VLAN Type: static
+ Route Interface: configured
+ IP Address: 10.11.12.13
+ Subnet Mask: 255.255.255.128
+ Description: "TESTING"
+ Name: VLAN 0250
+ Tagged   Ports: none
+ Untagged Ports:
+    GigabitEthernet2/0/47
+
+ VLAN ID: 400
+ VLAN Type: static
+ Route Interface: not configured
+ Description: Mgmt VLAN-10.20.30.0/25
+ Name: VLAN 0400
+ Tagged   Ports:
+    GigabitEthernet8/0/1     GigabitEthernet8/0/2
+ Untagged Ports:
+    GigabitEthernet2/0/1
+
+ VLAN ID: 443
+ VLAN Type: static
+ Route Interface: configured
+ IP Address: 10.20.40.51
+ Subnet Mask: 255.255.255.240
+ Description: VLAN 0443
+ Name: global vlan 443
+ Tagged   Ports: none
+ Untagged Ports: none
+
+ VLAN ID: 444
+ VLAN Type: static
+ Route Interface: configured
+ IP Address: 10.100.200.100
+ Subnet Mask: 255.255.255.240
+ Description: VLAN 0444
+ Name: global vlan 444
+ Tagged   Ports: none
+ Untagged Ports: none
+                
+ VLAN ID: 904
+ VLAN Type: static
+ Route Interface: configured
+ IP Address: 10.15.20.25
+ Subnet Mask: 255.255.255.252
+ Description: IRL to Device
+ Name: VLAN 0904
+ Tagged   Ports:
+    GigabitEthernet2/0/1     GigabitEthernet8/0/1
+ Untagged Ports: none
+
+ VLAN ID: 905
+ VLAN Type: static
+ Route Interface: configured
+ IP Address: 10.9.8.7
+ Subnet Mask: 255.255.255.252
+ Description: IRL to HP Device
+ Name: VLAN 0905
+ Tagged   Ports:
+    GigabitEthernet8/0/2
+ Untagged Ports: none
+
+ VLAN ID: 999   
+ VLAN Type: static
+ Route Interface: not configured
+ Description: VLAN 0999
+ Name: dot1x_failed
+ Tagged   Ports: none
+ Untagged Ports: none
