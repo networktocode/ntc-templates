@@ -11,9 +11,9 @@ Value INTERVAL (\d+)
 
 Start
   ^--+$$
-  ^total paths monitored.*$$
-  ^hold time.*$$
-  ^\s*\(after device becomes active\)
+  ^total\s+paths\s+monitored.*$$
+  ^hold\s+time.*$$
+  ^\s*\(after\s+device\s+becomes\s+active\)
   ^--+$$
   ^grp/name/type\s+destination\s+suc/total\s+rtt min/max/avg.*$$
   ^--+$$
