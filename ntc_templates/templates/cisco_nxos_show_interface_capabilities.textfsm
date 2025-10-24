@@ -1,0 +1,49 @@
+Value Required INTERFACE (\S+)
+Value MODEL (.+?)
+Value TYPE (\S+)
+Value TYPEDETAIL (.+)
+Value SPEED (.+?)
+Value DUPLEX (.+?)
+Value TRUNK_ENCAP_TYPE (.+?)
+Value TRUNK_MODE (.+?)
+Value CHANNEL (.+?)
+Value BROADCAST_SUPPRESSION (.+?)
+Value UNICAST_SUPPRESSION (.+?)
+Value MULTICAST_SUPPRESSION (.+?)
+Value FLOWCONTROL (.+?)
+Value FAST_START (.+?)
+Value QOS_SCHEDULING (.+?)
+Value COS_REWRITE (.+?)
+Value TOS_REWRITE (.+?)
+Value UDLD (.+?)
+Value INLINE_POWER (.+?)
+Value SPAN (.+?)
+Value PORTSECURE (.+?)
+Value DOT1X (.+?)
+Value BREAKOUT_SUPPORT (.+?)
+
+Start
+  ^\S+$$ -> Continue.Record
+  ^${INTERFACE}$$
+  ^\s+Model:\s+${MODEL}\s*$$ -> Continue
+  ^\s+Type\s+\(${TYPEDETAIL}\):\s+${TYPE}\s*$$
+  ^\s+Type:\s+${TYPE}\s*$$
+  ^\s+Speed:\s+${SPEED}\s*$$
+  ^\s+Duplex:\s+${DUPLEX}\s*$$
+  ^\s+Trunk encap. type:\s+${TRUNK_ENCAP_TYPE}\s*$$
+  ^\s+Trunk mode:\s+${TRUNK_MODE}\s*$$
+  ^\s+Channel:\s+${CHANNEL}\s*$$
+  ^\s+Broadcast suppression:\s+${BROADCAST_SUPPRESSION}\s*$$
+  ^\s+Unicast suppression:\s+${UNICAST_SUPPRESSION}\s*$$
+  ^\s+Multicast suppression:\s+${MULTICAST_SUPPRESSION}\s*$$
+  ^\s+Flowcontrol:\s+${FLOWCONTROL}\s*$$
+  ^\s+Fast Start:\s+${FAST_START}\s*$$
+  ^\s+QoS scheduling:\s+${QOS_SCHEDULING}\s*$$
+  ^\s+CoS rewrite:\s+${COS_REWRITE}\s*$$
+  ^\s+ToS rewrite:\s+${TOS_REWRITE}\s*$$
+  ^\s+UDLD:\s+${UDLD}\s*$$
+  ^\s+Inline power:\s+${INLINE_POWER}\s*$$
+  ^\s+SPAN:\s+${SPAN}\s*$$
+  ^\s+PortSecure:\s+${PORTSECURE}\s*$$
+  ^\s+Dot1x:\s+${DOT1X}\s*$$
+  ^\s+Breakout Support:\s+${BREAKOUT_SUPPORT}\s*$$
