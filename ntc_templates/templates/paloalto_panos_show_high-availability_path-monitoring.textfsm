@@ -1,0 +1,25 @@
+Value GRP_NAME (\S+)
+Value VR_NAME (\S+)
+Value TYPE (\S+)
+Value DESTINATION (\S+)
+Value SUCCESS_RATE (\d+/\d+)
+Value RTT_MIN (\d+\.\d+)
+Value RTT_MAX (\d+\.\d+)
+Value RTT_AVG (\d+\.\d+)
+Value PROBE_CNT (\d+)
+Value INTERVAL (\d+)
+
+Start
+  ^--+$$
+  ^total\s+paths\s+monitored.*$$
+  ^hold\s+time.*$$
+  ^\s*\(after\s+device\s+becomes\s+active\)
+  ^--+$$
+  ^grp/name/type\s+destination\s+suc/total\s+rtt min/max/avg.*$$
+  ^--+$$
+  # Capture table rows
+  ^${GRP_NAME}/${VR_NAME}/${TYPE}\s+${DESTINATION}\s+${SUCCESS_RATE}\s+${RTT_MIN}/${RTT_MAX}/${RTT_AVG}\s+${PROBE_CNT}/${INTERVAL} -> Record
+  # Skip any extra separator lines
+  ^--+$$
+  ^\s*$$
+  ^. -> Error
