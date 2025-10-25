@@ -1,0 +1,50 @@
+Ethernet1/1
+  Model:                 N5600-48Q-12Q-FIX
+  Type (SFP capable):    QSFP-40G-SR-BD
+  Speed:                 40000
+  Duplex:                full
+  Trunk encap. type:     802.1Q
+  Channel:               yes
+  Broadcast suppression: no
+  Flowcontrol:           rx-(off/on),tx-(off/on)
+  Rate mode:             none
+  QOS scheduling:        rx-(6q1t),tx-(1p6q0t)
+  CoS rewrite:           no
+  ToS rewrite:           no
+  SPAN:                  yes
+  UDLD:                  yes
+  MDIX:                  no
+  Link Debounce:         yes
+  Link Debounce Time:    yes
+  dot1Q-tunnel mode:     yes
+  Pvlan Trunk capable:   yes
+  TDR capable:           no
+  FabricPath capable:    yes
+  Port mode:             Switched
+  FEX Fabric:            yes
+
+Ethernet101/1/23
+  Model:                 N2K-C2348TQ-10G-E
+  Type (Non SFP):        1G/10G
+  Speed:                 100,1000,10000,auto
+  Duplex:                full
+  Trunk encap. type:     802.1Q
+  Channel:               yes
+  Broadcast suppression: no
+  Flowcontrol:           rx-(off/on),tx-(off/on)
+  Rate mode:             none
+  QOS scheduling:        rx-(6q1t),tx-(1p6q0t)
+  CoS rewrite:           no
+  ToS rewrite:           no
+  SPAN:                  yes
+  UDLD:                  no
+  MDIX:                  no
+  Link Debounce:         yes
+  Link Debounce Time:    yes
+  dot1Q-tunnel mode:     yes
+  Pvlan Trunk capable:   yes
+  TDR capable:           no
+  FabricPath capable:    no
+  Port mode:             Switched
+  FEX Fabric:            no
+
