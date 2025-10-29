@@ -1,0 +1,99 @@
+Interface Vlan1 "", is down, line protocol is down
+  Hardware is EtherSVI, BW 100 Mbps, DLY 100 usec
+        Available but not configured via nameif
+Interface Ethernet1/1 "oob", is up, line protocol is up
+  Hardware is EtherSVI, BW 1000 Mbps, DLY 10 usec
+        Full-Duplex(fullDuplex), 1000 Mbps(1gbps)
+        Description: UPLINK > SW1 - Gi1/0/47
+        MAC address dc05.3909.4648, MTU 1500
+        IP address 10.9.224.41, subnet mask 255.255.255.252
+        213367 packets input, 134863056 bytes, 0 no buffer
+        Received 0 broadcasts, 0 runts, 0 giants
+        0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored, 0 abort
+        0 pause input, 0 resume input
+        448915 packets output, 36318489 bytes, 0 underruns
+        0 pause output, 0 resume output
+        0 output errors, 0 collisions, 0 interface resets
+        0 late collisions, 0 deferred
+        0 input reset drops, 0 output reset drops
+  Traffic Statistics for "oob":
+        192184 packets input, 128239736 bytes
+        449279 packets output, 28229676 bytes
+        38 packets dropped
+      1 minute input rate 30 pkts/sec,  29499 bytes/sec
+      1 minute output rate 12 pkts/sec,  754 bytes/sec
+      1 minute drop rate, 0 pkts/sec
+      5 minute input rate 34 pkts/sec,  31541 bytes/sec
+      5 minute output rate 15 pkts/sec,  996 bytes/sec
+      5 minute drop rate, 0 pkts/sec
+Interface Ethernet1/2 "", is admin down, line protocol is down
+  Hardware is EtherSVI, BW 1000 Mbps, DLY 10 usec
+        Full-Duplex, 1000 Mbps
+        Description: UPLINK > SW2
+        Available but not configured via nameif
+        MAC address dc05.3909.4649, MTU not set
+        IP address unassigned
+        0 packets input, 0 bytes, 0 no buffer
+        Received 0 broadcasts, 0 runts, 0 giants
+        0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored, 0 abort
+        0 pause input, 0 resume input
+        0 packets output, 0 bytes, 0 underruns
+        0 pause output, 0 resume output
+        0 output errors, 0 collisions, 0 interface resets
+        0 late collisions, 0 deferred
+        0 input reset drops, 0 output reset drops
+Interface Ethernet1/8 "DC3_GRY_HANDOFF", is up, line protocol is up
+  Hardware is EtherSVI, BW 1000 Mbps, DLY 10 usec
+        Full-Duplex(fullDuplex), 1000 Mbps(1gbps)
+        Description: UPLINK > SW2 Eth1/40
+        MAC address dc05.3909.464f, MTU 1500
+        IP address 10.9.224.51, subnet mask 255.255.255.254
+        281075 packets input, 33692992 bytes, 0 no buffer
+        Received 1 broadcasts, 0 runts, 0 giants
+        0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored, 0 abort
+        0 pause input, 0 resume input
+        379379 packets output, 53834629 bytes, 0 underruns
+        0 pause output, 0 resume output
+        0 output errors, 0 collisions, 0 interface resets
+        0 late collisions, 0 deferred
+        0 input reset drops, 0 output reset drops
+  Traffic Statistics for "DC3_GRY_HANDOFF":
+        228276 packets input, 13410966 bytes
+        263567 packets output, 17891913 bytes
+        27 packets dropped
+      1 minute input rate 4 pkts/sec,  327 bytes/sec
+      1 minute output rate 6 pkts/sec,  513 bytes/sec
+      1 minute drop rate, 0 pkts/sec
+      5 minute input rate 7 pkts/sec,  566 bytes/sec
+      5 minute output rate 10 pkts/sec,  1145 bytes/sec
+      5 minute drop rate, 0 pkts/sec
+Interface Management1/1 "management", is up, line protocol is up
+  Hardware is en_vtun rev00, BW Unknown Speed-Capability, DLY 1000 usec
+        Auto-Duplex(Full-duplex), Auto-Speed(1000 Mbps)
+        Input flow control is unsupported, output flow control is unsupported
+        MAC address dc05.3909.4601, MTU 1500
+        IP address 10.9.227.2, subnet mask 255.255.255.0
+        3084 packets input, 212680 bytes, 0 no buffer
+        Received 0 broadcasts, 0 runts, 0 giants
+        0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored, 0 abort
+        0 pause input, 0 resume input
+        0 L2 decode drops, 0 demux drops
+        3364 packets output, 296124 bytes, 0 underruns
+        0 pause output, 0 resume output
+        0 output errors, 0 collisions, 0 interface resets
+        0 late collisions, 0 deferred
+        0 input reset drops, 0 output reset drops
+        input queue (blocks free curr/low): hardware (0/0)
+        output queue (blocks free curr/low): hardware (0/0)
+  Traffic Statistics for "management":
+        3084 packets input, 169504 bytes
+        3364 packets output, 249028 bytes
+        0 packets dropped
+      1 minute input rate 0 pkts/sec,  53 bytes/sec
+      1 minute output rate 1 pkts/sec,  82 bytes/sec
+      1 minute drop rate, 0 pkts/sec
+      5 minute input rate 0 pkts/sec,  46 bytes/sec
+      5 minute output rate 1 pkts/sec,  71 bytes/sec
+      5 minute drop rate, 0 pkts/sec
+        Management-only interface. Blocked 0 through-the-device packets
+        
