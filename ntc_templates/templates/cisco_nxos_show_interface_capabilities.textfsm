@@ -30,20 +30,20 @@ Start
   ^\s+Type:\s+${TYPE}\s*$$
   ^\s+Speed:\s+${SPEED}\s*$$
   ^\s+Duplex:\s+${DUPLEX}\s*$$
-  ^\s+Trunk encap\. type:\s+${TRUNK_ENCAP_TYPE}\s*$$
-  ^\s+Trunk mode:\s+${TRUNK_MODE}\s*$$
+  ^\s+Trunk\s+encap\.\s+type:\s+${TRUNK_ENCAP_TYPE}\s*$$
+  ^\s+Trunk\s+mode:\s+${TRUNK_MODE}\s*$$
   ^\s+Channel:\s+${CHANNEL}\s*$$
-  ^\s+Broadcast suppression:\s+${BROADCAST_SUPPRESSION}\s*$$
-  ^\s+Unicast suppression:\s+${UNICAST_SUPPRESSION}\s*$$
-  ^\s+Multicast suppression:\s+${MULTICAST_SUPPRESSION}\s*$$
+  ^\s+Broadcast\s+suppression:\s+${BROADCAST_SUPPRESSION}\s*$$
+  ^\s+Unicast\s+suppression:\s+${UNICAST_SUPPRESSION}\s*$$
+  ^\s+Multicast\s+suppression:\s+${MULTICAST_SUPPRESSION}\s*$$
   ^\s+Flowcontrol:\s+${FLOWCONTROL}\s*$$
-  ^\s+Fast Start:\s+${FAST_START}\s*$$
-  ^\s+QoS scheduling:\s+${QOS_SCHEDULING}\s*$$
-  ^\s+CoS rewrite:\s+${COS_REWRITE}\s*$$
-  ^\s+ToS rewrite:\s+${TOS_REWRITE}\s*$$
+  ^\s+Fast\s+Start:\s+${FAST_START}\s*$$
+  ^\s+QoS\s+scheduling:\s+${QOS_SCHEDULING}\s*$$
+  ^\s+CoS\s+rewrite:\s+${COS_REWRITE}\s*$$
+  ^\s+ToS\s+rewrite:\s+${TOS_REWRITE}\s*$$
   ^\s+UDLD:\s+${UDLD}\s*$$
-  ^\s+Inline power:\s+${INLINE_POWER}\s*$$
+  ^\s+Inline\s+power:\s+${INLINE_POWER}\s*$$
   ^\s+SPAN:\s+${SPAN}\s*$$
   ^\s+PortSecure:\s+${PORTSECURE}\s*$$
   ^\s+Dot1x:\s+${DOT1X}\s*$$
-  ^\s+Breakout Support:\s+${BREAKOUT_SUPPORT}\s*$$
+  ^\s+Breakout\s+Support:\s+${BREAKOUT_SUPPORT}\s*$$
