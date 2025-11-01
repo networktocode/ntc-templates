@@ -91,7 +91,7 @@ Value LOCATION_INFORMATION (\S.+\S)
 
 
 Start
-  ^\s*(GigabitEthernet|GE) -> Continue.Record
+  ^\s*\w*(GigabitEthernet|GE) -> Continue.Record
   ^\s*${LOCAL_INTERFACE}\s+has\s+\d+\s+neighbor(s|\(s\)):\s*$$
   ^\s*\S.+\S\s+has\s+\d+\s+neighbor(s|\(s\))\s*$$
   ^\s*Neighbor\s+index\s*:\s*\d+\s*$$
