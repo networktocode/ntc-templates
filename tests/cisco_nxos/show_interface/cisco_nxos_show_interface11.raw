@@ -1,0 +1,41 @@
+fc1/43 is down (SFP not present)
+    Hardware is Fibre Channel 
+    Port WWN is 20:2b:54:7f:ee:64:66:80
+    Admin port mode is auto, trunk mode is on
+    snmp link state traps are enabled
+    Port vsan is 1
+    Receive data field Size is 2112
+    Beacon is turned off
+    1 minute input rate 0 bits/sec, 0 bytes/sec, 0 frames/sec
+    1 minute output rate 0 bits/sec, 0 bytes/sec, 0 frames/sec
+      0 frames input, 0 bytes
+        0 discards, 0 errors
+        0 CRC,  0 unknown class
+        0 too long, 0 too short
+      0 frames output, 0 bytes
+        0 discards, 0 errors
+      0 input OLS, 0 LRR, 0 NOS, 0 loop inits
+      0 output OLS, 0 LRR, 0 NOS, 0 loop inits
+    last clearing of "show interface" counters never
+
+fc4/11 is down (Link failure: loss of signal)
+    Port description is UCS Cisco Fiber-Channel (FI-B Port 31)
+    Hardware is Fibre Channel, SFP is short wave laser w/o OFC (SN)
+    Port WWN is 20:cb:00:2a:6a:73:4d:80
+    Admin port mode is auto, trunk mode is on
+    snmp link state traps are enabled
+    Port vsan is 1
+    Receive data field Size is 2112
+    Beacon is turned off
+    1 minute input rate 0 bits/sec, 0 bytes/sec, 0 frames/sec
+    1 minute output rate 0 bits/sec, 0 bytes/sec, 0 frames/sec
+      95020 frames input, 4941396 bytes
+        0 discards, 0 errors
+        0 CRC,  0 unknown class
+        0 too long, 0 too short
+      95026 frames output, 53208452 bytes
+        0 discards, 0 errors
+      1 input OLS, 1 LRR, 1 NOS, 0 loop inits
+      1 output OLS, 0 LRR, 1 NOS, 0 loop inits
+    last clearing of "show interface" counters never
+    Interface last changed at Tue Jun  3 11:51:29 2025
