@@ -63,7 +63,7 @@ Start
 
 Current
   ^\s*-+\s*$$
-  ^\s*Active\s+Location\s*=\s*slot\s+${ACTIVE_SLOT}\s*$$
+  ^\s*Active\s+Location\s*=\s*(slot|Switch)\s+${ACTIVE_SLOT}\s*$$
   ^\s*Current\s+Software\s+state\s*=\s*${ACTIVE_SOFTWARE_STATE}\s*$$
   ^\s*Uptime\s+in\s+current\s+state\s*=\s*(${ACTIVE_UPTIME_YEARS}\s*year(s)?,)?\s*(${ACTIVE_UPTIME_WEEKS}\s*week(s)?,)?\s*(${ACTIVE_UPTIME_DAYS}\s*day(s)?,)?\s*(${ACTIVE_UPTIME_HOURS}\s*hour(s)?,)?\s*${ACTIVE_UPTIME_MINUTES}\s*minute(s)?\s*$$
   ^\s*Image\s+Version
@@ -81,7 +81,7 @@ Current
 
 Peer
   ^\s*-+\s*$$
-  ^\s*Standby\s+Location\s*=\s*slot\s+${STANDBY_SLOT}\s*$$
+  ^\s*Standby\s+Location\s*=\s*(slot|Switch)\s+${STANDBY_SLOT}\s*$$
   ^\s*Current\s+Software\s+state\s*=\s*${STANDBY_SOFTWARE_STATE}\s*$$
   ^\s*Uptime\s+in\s+current\s+state\s*=\s*(${STANDBY_UPTIME_YEARS}\s*year(s)?,)?\s*(${STANDBY_UPTIME_WEEKS}\s*week(s)?,)?\s*(${STANDBY_UPTIME_DAYS}\s*day(s)?,)?\s*(${STANDBY_UPTIME_HOURS}\s*hour(s)?,)?\s*${STANDBY_UPTIME_MINUTES}\s*minute(s)?\s*$$
   ^\s*Image\s+Version
