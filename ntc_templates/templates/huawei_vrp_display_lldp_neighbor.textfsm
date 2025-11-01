@@ -192,6 +192,8 @@ Start
   ^\s*TLV\s+subtype\s*:\s*(\S+|\S.+\S)\s*$$
   ^\s*Index\s*:\s*(\S+|\S.+\S)\s*$$
   ^\s*TLV\s+information\s*:\s*(\S+|\S.+\S)\s*$$
+  ^\s*Device\s+\d+\s+infor?mation:\s*$$
+  ^\s+Device\s+(serial\s+number|model\s+name)\s*:
   ^\s+$$
   ^. -> Error
 
