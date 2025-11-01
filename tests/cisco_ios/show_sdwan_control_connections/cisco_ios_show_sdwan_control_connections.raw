@@ -1,0 +1,8 @@
+                                                                                       PEER                                          PEER                                          CONTROLLER 
+PEER    PEER PEER            SITE       DOMAIN PEER                                    PRIV  PEER                                    PUB                                           GROUP      
+TYPE    PROT SYSTEM IP       ID         ID     PRIVATE IP                              PORT  PUBLIC IP                               PORT  ORGANIZATION            LOCAL COLOR     PROXY STATE UPTIME      ID         
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+vsmart  dtls 10.14.2.250     102        1      10.14.2.71                              12346 21.254.56.204                           12346 network-SDWAN           gold            No    up     110:18:17:060           
+vsmart  dtls 10.14.3.250     202        1      10.14.3.70                              12346 30.238.57.220                           12346 network-SDWAN           gold            No    up     59:12:26:430           
+vbond   dtls 0.0.0.0         0          0      24.254.21.185                           12346 24.254.21.185                           12346 network-SDWAN           gold            -     up     110:18:34:340           
+vmanage dtls 10.14.2.248     100        0      10.14.2.70                              12346 40.117.123.18                           12346 network-SDWAN           gold            No    up     110:18:39:240   
