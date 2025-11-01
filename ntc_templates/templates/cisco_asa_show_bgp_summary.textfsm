@@ -10,6 +10,7 @@ Start
   ^BGP\s+table\s+version\s+is\s+\d+,\s+main\s+routing\s+table\s+version\s+\d+\s*$$
   ^\d+\s+network\s+entries\s+using\s+\d+\s+bytes\s+of\s+memory\s*$$
   ^\d+\s+path\s+entries\s+using\s+\d+\s+bytes\s+of\s+memory\s*$$
+  ^\d+\s+multipath\s+network\s+entries\s+and\s+\d+\s+multipath\s+paths
   ^\d+\/\d+\s+BGP\s+path\/bestpath\s+attribute\s+entries\s+using\s+\d+\s+bytes\s+of\s+memory\s*$$
   ^\d+\s+BGP\s+AS-PATH\s+entries\s+using\s+\d+\s+bytes\s+of\s+memory\s*$$
   ^\d+\s+BGP\s+community\s+entries\s+using\s+\d+\s+bytes\s+of\s+memory\s*$$

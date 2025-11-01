@@ -1,0 +1,14 @@
+---
+parsed_sample:
+  - bgp_neigh: "10.10.254.1"
+    local_as: "65101"
+    neigh_as: "65101"
+    router_id: "10.10.254.1"
+    state_pfxrcd: "5"
+    up_down: "4w6d"
+  - bgp_neigh: "10.10.254.9"
+    local_as: "65101"
+    neigh_as: "65101"
+    router_id: "10.10.254.1"
+    state_pfxrcd: "1"
+    up_down: "4w6d"
