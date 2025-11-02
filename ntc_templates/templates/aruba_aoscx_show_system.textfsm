@@ -2,7 +2,7 @@ Value Required HOSTNAME (\S+)
 Value CONTACT (\S+)
 Value LOCATION (\S+)
 Value VENDOR (\S+)
-Value PRODUCT (.+)
+Value PRODUCT (.+?)
 Value SERIAL (\S+)
 Value BASE_MAC (\S+)
 Value VERSION (\S+)
@@ -20,7 +20,7 @@ Start
   ^System\s+Location\s+:\s+${LOCATION}
   ^System\s+Location\s+:
   ^Vendor\s+:\s+${VENDOR}
-  ^Product\s+Name\s+:\s+${PRODUCT}
+  ^Product\s+Name\s+:\s+${PRODUCT}\s*$$
   ^Chassis\s+Serial\s+Nbr\s+:\s+${SERIAL}
   ^Base\s+MAC\s+Address\s+:\s+${BASE_MAC}
   ^A(ruba)?OS-CX\s+Version\s+:\s+${VERSION}
