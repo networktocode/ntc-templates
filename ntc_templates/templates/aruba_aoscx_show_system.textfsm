@@ -15,14 +15,14 @@ Value UPTIME_MINUTES (\d+)
 Start
   ^Hostname\s+:\s+${HOSTNAME}
   ^System\s+Description\s+:\s*\S+
-  ^System\s+Contact\s+:\s+${CONTACT}		
+  ^System\s+Contact\s+:\s+${CONTACT}
   ^System\s+Contact\s+:
   ^System\s+Location\s+:\s+${LOCATION}
   ^System\s+Location\s+:
   ^Vendor\s+:\s+${VENDOR}
   ^Product\s+Name\s+:\s+${PRODUCT}
   ^Chassis\s+Serial\s+Nbr\s+:\s+${SERIAL}
-  ^Base\s+MAC\s+Address\s+:\s+${BASE_MAC}	
+  ^Base\s+MAC\s+Address\s+:\s+${BASE_MAC}
   ^A(ruba)?OS-CX\s+Version\s+:\s+${VERSION}
   ^Time\s+Zone\s+:\s+${TIME_ZONE}
   ^Up\s+Time\s+:(\s+${UPTIME_WEEKS}\s+weeks?,?)?(\s+${UPTIME_DAYS}\s+days?,?)?(\s+${UPTIME_HOURS}\s+hours?,?)?(\s+(${UPTIME_MINUTES}|under\s+a)\s+minutes?)? -> Record
