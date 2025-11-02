@@ -23,7 +23,7 @@ Start
   ^Product Name\s+:\s+${PRODUCT}
   ^Chassis Serial Nbr\s+:\s+${SERIAL}
   ^Base MAC Address\s+:\s+${BASE_MAC}	
-  ^ArubaOS-CX Version\s+:\s+${VERSION}
+  ^A(ruba)?OS-CX Version\s+:\s+${VERSION}
   ^Time Zone\s+:\s+${TIME_ZONE}
   ^Up Time\s+:(\s+${UPTIME_WEEKS}\s+weeks?,?)?(\s+${UPTIME_DAYS}\s+days?,?)?(\s+${UPTIME_HOURS}\s+hours?,?)?(\s+(${UPTIME_MINUTES}|under\s+a)\s+minutes?)? -> Record
   ^CPU
