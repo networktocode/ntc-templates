@@ -8,10 +8,10 @@ Value CABLE_TYPE (\S+)
 
 Start
   ^Name:\s+${NAME} -> Record Start
-  ^Media type:\s+${MEDIA_TYPE}
-  ^Module presence:\s+${MODULE_PRESENCE}
-  ^Maximum module power \(W\):\s+${MAX_MODULE_POWER_W}
-  ^Maximum slot power \(W\):\s+${MAX_SLOT_POWER_W}
-  ^Wavelength \(nm\):\s+${WAVELENGTH_NM}
-  ^Cable type:\s+${CABLE_TYPE}  
+  ^Media\s+type:\s+${MEDIA_TYPE}
+  ^Module\s+presence:\s+${MODULE_PRESENCE}
+  ^Maximum\s+module\s+power\s+\(W\):\s+${MAX_MODULE_POWER_W}
+  ^Maximum\s+slot\s+power\s+\(W\):\s+${MAX_SLOT_POWER_W}
+  ^Wavelength\s+\(nm\):\s+${WAVELENGTH_NM}
+  ^Cable\s+type:\s+${CABLE_TYPE}  
   ^. -> Error                 
