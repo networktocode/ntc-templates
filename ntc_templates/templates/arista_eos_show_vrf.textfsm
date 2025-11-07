@@ -4,6 +4,7 @@ Value List INTERFACES ([\w\./-]+)
 
 Start
   ^\s+V[rR][fF]\s+RD\s+Protocols\s+State\s+Interfaces -> VRF
+  ^\s+V[rR][fF]\s+Protocols\s+State\s+Interfaces -> VRF_NO_RD
   ^Maximum
   ^\s*$$
   ^. -> Error
@@ -37,7 +38,7 @@ VRF
   # three interfaces displayed per line
   ^\s+\S+\s+\S+(\s\S+)*\s+\S+\s+\S+:\S+(\s\S+)*,?\s+(?:\S+,\s){2}${INTERFACES}, -> Continue
   #
-  ############## Lines that contains state ##################
+  ############## Lines that contain state ##################
   #
   # match state only line
   ^\s+(\S+:\S+(?:\s\S+)*)\s*$$
@@ -93,3 +94,46 @@ VRF
   #
   # match vrf line with no interfaces
   ^\s+${VRF}\s+${RD}\s+\S+\s+\S+:\S+(\s\S+)*,?\s+$$
+  #
+  ################## Unmatched ###################
+  ^---+
+
+VRF_NO_RD
+  ^\s+\S+\s+\S+\s+(no\s)?routing.*$$ -> Continue.Record
+  #
+  # no interfaces
+  ^\s+${VRF}\s+\S+\s+(no\s)?routing\s+$$ -> Record
+  #
+  # first line, first interface
+  ^\s+${VRF}\s+\S+\s+\S+(\s\S+)?\s+${INTERFACES},?(\s\S+,?)*\s*$$ -> Continue
+  # first line, second of multiple interfaces
+  ^\s+\S+\s+\S+\s+\S+(\s\S+)?\s+(?:\S+,\s){1}${INTERFACES},? -> Continue
+  # first line, third of multiple interfaces
+  ^\s+\S+\s+\S+\s+\S+(\s\S+)?\s+(?:\S+,\s){2}${INTERFACES},? -> Continue
+  # first line, fourth of multiple interfaces
+  ^\s+\S+\s+\S+\s+\S+(\s\S+)?\s+(?:\S+,\s){3}${INTERFACES},? -> Continue
+  # first line, fifth of multiple interfaces
+  ^\s+\S+\s+\S+\s+\S+(\s\S+)?\s+(?:\S+,\s){4}${INTERFACES},? -> Continue
+  # first line, sixth of multiple interfaces
+  ^\s+\S+\s+\S+\s+\S+(\s\S+)?\s+(?:\S+,\s){5}${INTERFACES},? -> Continue
+  # first line, seventh of multiple interfaces
+  ^\s+\S+\s+\S+\s+\S+(\s\S+)?\s+(?:\S+,\s){6}${INTERFACES},? -> Continue
+  #
+  # line begins with whitespace, first interface
+  ^\s+${INTERFACES}, -> Continue
+  ^\s+${INTERFACES}$$ -> Continue
+  # line begins with whitespace, second interface
+  ^\s+(?:\S+,\s){1}${INTERFACES},? -> Continue
+  # line begins with whitespace, third interface
+  ^\s+(?:\S+,\s){2}${INTERFACES},? -> Continue
+  # line begins with whitespace, fourth interface
+  ^\s+(?:\S+,\s){3}${INTERFACES},? -> Continue
+  # line begins with whitespace, fifth interface
+  ^\s+(?:\S+,\s){4}${INTERFACES},? -> Continue
+  # line begins with whitespace, sixth interface
+  ^\s+(?:\S+,\s){5}${INTERFACES},? -> Continue
+  # line begins with whitespace, seventh interface
+  ^\s+(?:\S+,\s){6}${INTERFACES},? -> Continue
+  #
+  # Unmatched
+  ^---+

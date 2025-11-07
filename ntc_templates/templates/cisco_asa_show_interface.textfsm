@@ -3,10 +3,10 @@ Value INTERFACE_ZONE (.+?)
 Value LINK_STATUS (.+?)
 Value PROTOCOL_STATUS (.*)
 Value HARDWARE_TYPE (Virtual Tunnel|EtherChannel/LACP|[\w ]+)
-Value BANDWIDTH (\d+\s+\w+)
+Value BANDWIDTH ([^,]+)
 Value DELAY (\d+\s+\w+)
-Value DUPLEX (\w+\-\w+)
-Value SPEED (\d+\w+\s\w+)
+Value DUPLEX (\w+(?:-\w+)?)
+Value SPEED (\d+\w+\s?\w+)
 Value DESCRIPTION (.*)
 Value BONDED_PORT (.+?)
 Value BONDED_PORT_MEMBERS (.*)
@@ -42,6 +42,7 @@ Start
   ^.*\(${DUPLEX}\),\s+\d+\s+Mbps\(${SPEED}\)
   ^.*\(${DUPLEX}\),\s+\(${SPEED}\)
   ^.*Duplex,\s+Auto-Speed
+  ^.*Full-Duplex,\s+1000\s+Mbps
   ^.*Description:\s+${DESCRIPTION}
   ^.*VLAN\s+identifier\s+(${VLAN_ID}|(?:none))
   ^.*MAC\s+address\s+${MAC_ADDRESS},\s+MTU\s+${MTU}

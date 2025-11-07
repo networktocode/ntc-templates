@@ -1,0 +1,11 @@
+Value NAME (\S+)
+Value TRACKERS (.+?)
+Value STATUS (\S+\(.*\))
+Value RTT ((?:\d+(?:,\s*\d+)*))
+Value PROBE_ID ((?:\d+(?:,\s*\d+)*))
+
+Start
+  ^\s*Tracker\s+Name\s+Element\s+trackers\s+name\s+Status\s+RTT\s+in\s+msec\s+Probe\s+ID
+  ^${NAME}\s+${TRACKERS}\s+${STATUS}\s+${RTT}\s+${PROBE_ID} -> Record
+  ^\s*$$
+  ^. -> Error

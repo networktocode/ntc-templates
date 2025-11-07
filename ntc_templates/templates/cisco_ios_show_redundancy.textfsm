@@ -23,6 +23,8 @@ Value ACTIVE_MINOR_RELEASE (\d+)
 Value ACTIVE_MAINTENANCE_RELEASE (\S+)
 Value ACTIVE_BOOT_DIRECTORY (\S+)
 Value ACTIVE_BOOT_FILE (\S+)
+Value FAST_SWITCHOVER (\S+)
+Value INITIAL_GARP (\S+)
 Value ACTIVE_CONFIG_REGISTER (\S+)
 Value STANDBY_SLOT (\S+)
 Value STANDBY_SOFTWARE_STATE (.+?)
@@ -69,6 +71,8 @@ Current
   ^.+[Cc][Ii][Ss][Cc][Oo]
   ^.*(?:Copyright|Compiled|CONFIG_FILE|BOOTLDR)
   ^\s*BOOT\s*=\s*${ACTIVE_BOOT_DIRECTORY}:${ACTIVE_BOOT_FILE}\s*$$
+  ^\s*Fast\s+Switchover\s+=\s+${FAST_SWITCHOVER}
+  ^\s*Initial\s+Garp\s+=\s+${INITIAL_GARP}
   ^\s*Configuration\s+register\s*=\s*${ACTIVE_CONFIG_REGISTER}\s*$$
   ^Peer\s*\(slot:\s*unavailable\)\s*\w*\s*\w*\s*\w*\s*\w*\s*\w\s*\w*\s*\w*\s*\w*\s*\w*\s*\'${STANDBY_STATUS}\'\s*state$$ -> EOF
   ^\s*Peer\s+Processor -> Peer

@@ -1,0 +1,8 @@
+0 D E  mac-address=11:22:33:44:55:01 interface=ether4 bridge=lan-bridge on-interface=ether4
+1 D E  mac-address=11:22:33:44:55:02 interface=ether3 bridge=lan-bridge on-interface=ether3
+2 DLE  mac-address=11:22:33:44:55:03 interface=lan-bridge bridge=lan-bridge on-interface=lan-bridge
+3 DL   mac-address=11:22:33:44:55:04 interface=ether4 bridge=lan-bridge on-interface=ether4
+4  I   mac-address=11:22:33:44:55:05 interface=lan-bridge bridge=lan-bridge
+5  I   comment=test comment mac-address=11:22:33:44:55:06 interface=lan-bridge bridge=lan-bridge
+6 XI   mac-address=11:22:33:44:55:07 interface=lan-bridge bridge=lan-bridge
+7 XI   mac-address=11:22:33:44:55:08 vid=123 interface=lan-bridge bridge=lan-bridge

@@ -1,14 +1,14 @@
 ---
 parsed_sample:
-  - vrf: "red"
-    rd: "100:100"
-    interfaces:
+  - interfaces:
       - "Ethernet3"
       - "Ethernet4"
       - "Ethernet5"
       - "Ethernet6"
       - "Ethernet7"
-  - vrf: "blue"
-    rd: "1:1"
-    interfaces:
+    rd: "100:100"
+    vrf: "red"
+  - interfaces:
       - "Management1"
+    rd: "1:1"
+    vrf: "blue"

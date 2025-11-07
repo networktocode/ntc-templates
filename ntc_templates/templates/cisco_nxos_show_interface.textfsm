@@ -63,11 +63,11 @@ Start
   ^admin\s+state\s+is\s+${ADMIN_STATE}
   ^\s+Hardware(:|\s+is)\s+${HARDWARE_TYPE},\s+address(:|\s+is)\s+${MAC_ADDRESS}(.*bia\s+${BIA})*
   ^\s+Hardware(:|\s+is)\s+${HARDWARE_TYPE}
-  ^\s+Description:\s+${DESCRIPTION}\s*$$
+  ^\s+(Port\s+)?[Dd]escription(:|\s+is)\s+${DESCRIPTION}\s*$$
   ^\s+Internet\s+Address\s+is\s+${IP_ADDRESS}\/${PREFIX_LENGTH}
   ^\s+Port\s+mode\s+is\s+${MODE}
   ^\s+${DUPLEX},\s+${SPEED}(,\s+media\s+type\s+is\s+${MEDIA_TYPE})?\s*$$
-  ^\s+MTU\s+${MTU}.*BW\s+${BANDWIDTH}.*DLY\s+${DELAY}
+  ^\s+MTU\s+${MTU}(.*BW\s+${BANDWIDTH}.*DLY\s+${DELAY})?
   ^\s+Encapsulation\s+${ENCAPSULATION},?(\s+Virtual\s+LAN,\s+Vlan\s+ID\s+${VLAN_ID},)?
   ^\s+${INPUT_PACKETS}\s+input\s+packets\s+\d+\s+bytes\s*$$
   ^\s+${OUTPUT_PACKETS}\s+output\s+packets\s+\d+\s+bytes\s*$$
@@ -77,8 +77,8 @@ Start
   ^\s+${OUTPUT_PACKETS}\s+packets\s+output\s+\d+\s+bytes\s+${UNDERRUN}\s+underruns\s*$$
   ^\s+input:\s+${INPUT_PACKETS}\s+pkts,\s+\d+\s+bytes\s+-\s+output:\s+${OUTPUT_PACKETS}\s+pkts,\s+\d+\s+bytes\s*$$
   ^\s+Last\s+link\s+flapped\s+${LAST_LINK_FLAPPED}\s*$$
-  ^\s+\d+\s+(second|minute)s?\s+input\s+rate\s+${BANDWIDTH_INPUT_RATE}\s+bits/sec,\s+${PACKET_INPUT_RATE}\s+packets/sec
-  ^\s+\d+\s+(second|minute)s?\s+output\s+rate\s+${BANDWIDTH_OUTPUT_RATE}\s+bits/sec,\s+${PACKET_OUTPUT_RATE}\s+packets/sec
+  ^\s+\d+\s+(second|minute)s?\s+input\s+rate\s+${BANDWIDTH_INPUT_RATE}\s+bits/sec(,\s+${PACKET_INPUT_RATE}\s+packets/sec)?
+  ^\s+\d+\s+(second|minute)s?\s+output\s+rate\s+${BANDWIDTH_OUTPUT_RATE}\s+bits/sec(,\s+${PACKET_OUTPUT_RATE}\s+packets/sec)?
   # RX
   ^\s+${INPUT_ERRORS}\s+input\s+errors?\s+${SHORT_FRAME}\s+short\s+frame\s+${OVERRUN}\s+overrun\s+${UNDERRUN}\s+underrun\s+${IGNORED}\s+ignored\s*$$
   ^\s+${INPUT_ERRORS}\s+input\s+errors\s+${SHORT_FRAME}\s+frame\s+${OVERRUN}\s+overrun\s+\d+\s+fifo\s*$$
@@ -90,6 +90,7 @@ Start
   ^\s+${RX_JUMBO_PACKETS}\s+jumbo\s+packets\s+\d+\s+storm\s+suppression\s+packets\s*$$
   ^\s+${RX_JUMBO_PACKETS}\s+jumbo\s+pa(ckets)?\s+Encapsulation\s+\S+,\s+medium\s+is\s+\S+
   ^\s+${RUNTS}\s+runts\s+${GIANTS}\s+giants\s+${CRC}\s+CRC(/FCS)?\s+${NO_BUFFER}\s+no\s+buffer\s*$$
+  ^\s+${CRC}\s+CRC,\s+\d+\s+unknown\s+class
   # TX
   ^\s+${TX_JUMBO_PACKETS}\s+jumbo\s+packets\s*$$
   ^\s+${OUTPUT_ERRORS}\s+output\s+errors?\s+${COLLISIONS}\s+collision\s+${DEFERRED}\s+deferred\s+${LATE_COLLISIONS}\s+late\s+collision\s*$$
@@ -102,7 +103,7 @@ Start
   ^\s+(Beacon|EtherType|Rate\s+mode|Switchport\s+monitor)\s+is\s+
   ^\s+Input\s+flow-control\s+is\s+\S+,\s+output\s+flow-control\s+is\s+\S+\s*$$
   ^\s+EEE\s+\(efficient-ethernet\)\s+
-  ^\s+Last\s+clearing\s+of\s+"show\s+interface"\s+counters\s+
+  ^\s+[Ll]ast\s+clearing\s+of\s+"show\s+interface"\s+counters\s+
   ^\s+\d+\s+interface\s+resets\s*$$
   ^\s+Load-Interval\s+
   ^\s+L3\s+((in|out)\s+)?Switched:\s*$$
@@ -112,9 +113,9 @@ Start
   ^\s+admin\s+fec\s+state\s+is\s+\S+,\s+oper\s+fec\s+state\s+is\s+\S+\s*$$
   ^\s+Keepalive\s+
   ^\s+ARP\s+type:\s+\S+\s*$$
-  ^\s+\d+\s+broadcast\s+packets\s+\d+\s+bytes\s*$$
+  ^\s+\d+\s+broadcast\s+packets\s+\d+\s+(bytes|packets/sec)\s*$$
   ^\s+ucast:\s+\d+\s+pkts,\s+\d+\s+bytes(\s+-\s+mcast:\s+\d+\s+pkts,\s+\d+\s+bytes)?\s*$$
-  ^\s+\d+\s+unicast\s+packets\s+\d+\s+multicast\s+packets\s+\d+\s+broadcast\s+packets\s*$$
+  ^\s+\d+\s+unicast\s+packets\s+\d+\s+multicast\s+packets(\s+\d+\s+broadcast\s+packets)?\s*$$
   ^\s+(Ha\s+)?input\s+rate\s+\S+\s+\w?bps,\s+\S+\s+\w?pps;\s+output\s+rate\s+\S+\s+\w?bps,\s+\S+\s+\w?pps\s*$$
   ^\s+Members\s+in\s+this\s+channel:\s+
   ^\s+No\s+members
@@ -125,4 +126,15 @@ Start
   ^\s+Input\s+flow-control\s+is\s+\S+,\s+Port\s+mode\s+is\s+\S+\s*$$
   ^\s+\d+\s+multicast\s+frames\s+\d+\s+compressed\s*$$
   ^\s+\d+\s+out_carrier_errors\s*$$
+  ^\s+VFC\s+not\s+bound
+  ^\s+Port\s+(WWN|vsan)
+  ^\s+Admin\s+port\s+mode
+  ^\s+snmp\s+link\s+state
+  ^\s+Current\s+counters\s+not\s+available
+  ^\s+Receive\s+data\s+field\s+[Ss]ize\s+is
+  ^\s+\d+\s+frames\s+(in|out)put,\s+\d+\s+bytes
+  ^\s+\d+\s+discards,\s+\d+\s+errors
+  ^\s+\d+\s+too\s+long,\s+\d+\s+too\s+short
+  ^\s+\d+\s+(in|out)put\s+OLS,\s+\d+\s+LRR,\s+\d+\s+NOS,\s+\d+\s+loop\s+inits
+  ^\s+Interface\s+last\s+changed
   ^. -> Error

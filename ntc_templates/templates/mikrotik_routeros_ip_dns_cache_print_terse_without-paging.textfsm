@@ -1,0 +1,9 @@
+Value INDEX (\d+)
+Value RECORD_TYPE (\S+)
+Value IP_ADDRESS (\S+)
+Value NAME (\S+)
+Value TTL (\S+)
+
+Start
+  ^\s*${INDEX}\s+type=${RECORD_TYPE}\s+data=${IP_ADDRESS}\s+name=${NAME}\s+ttl=${TTL}\s*$$ -> Record
+  ^. -> Error

@@ -1,5 +1,5 @@
 Value LOCAL_INTERFACE (\S+)
-Value CHASSIS_ID (([^:]+|::))
+Value CHASSIS_ID (.*)
 Value NEIGHBOR_PORT_ID (.*)
 Value NEIGHBOR_INTERFACE (.*)
 Value NEIGHBOR_NAME (.+?)

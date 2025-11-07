@@ -9,20 +9,45 @@ Value PRODUCT_ID (\S+)
 Start
   ^\S+/\S+ -> Continue.Record
   ^${INTERFACE}
-  ^\s+transceiver\sis\s+${STATUS}
+  ^\s+transceiver\s+is\s+${STATUS}
   ^\s+type\s+is(\s+${TYPE})?
-  ^\s+name\s+is(\s+${MANUFACTURER})?
-  ^\s+part\s+number\s+is(\s+${PART_NUMBER})?
-  ^\s+serial\s+number\s+is(\s+${SERIAL})?
+  ^\s+[nN]ame\s+is(\s+${MANUFACTURER})?
+  ^\s+(Manufacturer's\s+)?part\s+number\s+is(\s+${PART_NUMBER})?
+  ^\s+[sS]erial\s+number\s+is(\s+${SERIAL})?
   ^\s+transceiver\s+
-  ^\s+nominal\s+
-  ^\s+revision\s+
+  ^\s+[nN]ominal\s+
+  ^\s+[rR]evision\s+
   ^\s+Link\s+
   ^\s+cable\s+type\s+is
   ^\s+cisco\s+id
-  ^\s+cisco\s+extended
-  ^\s+cisco\s+part\s+number
-  ^\s+cisco\s+product\s+id\sis(\s+${PRODUCT_ID})?
+  ^\s+[cC]isco\s+extended
+  ^\s+[cC]isco\s+part\s+number
+  ^\s+cisco\s+product\s+id\s+is(\s+${PRODUCT_ID})?
   ^\s+cisco\s+version\s+id
   ^\s+cisco\s+vendor\s+id
+  ^\s*DOM\s+is\s+(Enabled|Disabled)
+  ^\s*Lane\s+Number
+  ^\s*SFP(\s+Detail)?\s+Diagnostics\s+Information
+  ^\s*-+
+  ^\s*(Alarms|Warnings)
+  ^\s*(High|Low)
+  ^\s*(Temperature|Voltage|Current|(Optical\s+)?[TR]x\s+Power)
+  ^\s*T(x|ransmit)\s+Fault\s+[cC]ount
+  ^\s+FC\s+Transmitter
+  ^\s+Transmission\s+medium
+  ^\s+Supported\s+speeds
+  ^\s+.*\s+diagnostic\s+monitoring\s+type
+  ^\s+Note:
+  ^\s+firmware\s+version
+  ^\s+Wavelength\s+tolerance
+  ^\s+(host|media)\s+lane\s+count
+  ^\s+\S+\s+module\s+temperature
+  ^\s+\S+\s+operational\s+voltage
+  ^\s+vendor\s+OUI
+  ^\s+(date|clei|Advertising)\s+code
+  ^\s+power\s+class
+  ^\s+max\s+power
+  ^\s+(near|far)-end\s+lane
+  ^\s+(media|Host\s+electrical)\s+interface
+  ^\s*$$
   ^. -> Error

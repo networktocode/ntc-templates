@@ -1,0 +1,14 @@
+---
+parsed_sample:
+  - switch: "1"
+    role: "Active"
+    peer_switch: "2"
+    peer_role: "Standby"
+    mode: "Virtual Switch"
+    domain: "100"
+  - switch: "2"
+    role: "Standby"
+    peer_switch: "1"
+    peer_role: "Active"
+    mode: "Virtual Switch"
+    domain: "100"

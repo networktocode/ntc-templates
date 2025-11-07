@@ -1,0 +1,14 @@
+---
+parsed_sample:
+  - interface: "GigabitEthernet1"
+    name: "trk_umbrella"
+    next_hop: "10.44.22.1"
+    probe_id: "1"
+    rtt: "2"
+    status: "Up"
+  - interface: "GigabitEthernet2"
+    name: "trk_goolge"
+    next_hop: "10.2.2.1"
+    probe_id: "1"
+    rtt: "2"
+    status: "Up"

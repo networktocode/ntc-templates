@@ -1,0 +1,19 @@
+Value NETWORK (\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3})
+Value PREFIX_LENGTH (\d{1,2})
+Value NEXTHOP_IP (\S+)
+Value METRIC (\d*|)
+Value FLAGS ((?:A|C|H|S|~|R|O|B|Oi|Oo|O1|O2|E|M)(?:[\s?]+(?:A|C|H|S|~|R|O|B|Oi|Oo|O1|O2|E|M))?)
+Value AGE (\d*|)
+Value NEXTHOP_IF ([a-zA-Z][a-zA-Z0-9_/.\-]*|)
+Value NEXT_AS (\d*|)
+
+Start
+  ^\s*flags:\s+A:active,\s+\?:loose,\s+C:connect,\s+H:host,\s+S:static,\s+~:internal,\s+R:rip,\s+O:ospf,\s+B:bgp, 
+  ^\s+Oi:ospf\s+intra-area,\s+Oo:ospf\s+inter-area,\s+O1:ospf\s+ext-type-1,\s+O2:ospf\s+ext-type-2,\s+E:ecmp,\s+M:multicast
+  ^VIRTUAL\s+ROUTER:.*
+  ^\s*==+
+  ^destination\s+nexthop\s+metric\s+flags\s+age\s+interface\s+next-AS
+  ^\s*${NETWORK}/${PREFIX_LENGTH}\s+${NEXTHOP_IP}\s+${METRIC}\s+${FLAGS}\s+${AGE}\s+${NEXTHOP_IF}\s+${NEXT_AS} -> Record
+  ^total\s+routes\s+shown:.* -> End
+  ^\s*$$
+  ^. -> Error
