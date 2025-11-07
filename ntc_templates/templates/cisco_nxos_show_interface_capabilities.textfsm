@@ -40,31 +40,32 @@ Start
   ^\s+Type:\s+${TYPE}\s*$$
   ^\s+Speed:\s+${SPEED}\s*$$
   ^\s+Duplex:\s+${DUPLEX}\s*$$
-  ^\s+Trunk encap. type:\s+${TRUNK_ENCAP_TYPE}\s*$$
-  ^\s+FabricPath capable:\s+${FABRICPATH_CAPABLE}\s*$$
+  ^\s+Trunk\s+encap\.\s+type:\s+${TRUNK_ENCAP_TYPE}\s*$$
+  ^\s+FabricPath\s+capable:\s+${FABRICPATH_CAPABLE}\s*$$
   ^\s+Channel:\s+${CHANNEL}\s*$$
-  ^\s+Broadcast suppression:\s+${BROADCAST_SUPPRESSION}\s*$$
+  ^\s+Broadcast\s+suppression:\s+${BROADCAST_SUPPRESSION}\s*$$
   ^\s+Flowcontrol:\s+${FLOWCONTROL}\s*$$
-  ^\s+Rate mode:\s+${RATE_MODE}\s*$$
-  ^\s+Port mode:\s+${PORT_MODE}\s*$$
-  ^\s*QOS scheduling:\s+${QOS_SCHEDULING}\s*$$
+  ^\s+Rate\s+mode:\s+${RATE_MODE}\s*$$
+  ^\s+Port\s+mode:\s+${PORT_MODE}\s*$$
+  ^\s*QOS\s+scheduling:\s+${QOS_SCHEDULING}\s*$$
   ^\s+${QOS_SCHEDULING}\s*$$
-  ^\s+CoS rewrite:\s+${COS_REWRITE}\s*$$
-  ^\s+ToS rewrite:\s+${TOS_REWRITE}\s*$$
+  ^\s+CoS\s+rewrite:\s+${COS_REWRITE}\s*$$
+  ^\s+ToS\s+rewrite:\s+${TOS_REWRITE}\s*$$
   ^\s+UDLD:\s+${UDLD}\s*$$
   ^\s+SPAN:\s+${SPAN}\s*$$
   ^\s+MDIX:\s+${MDIX}\s*$$
-  ^\s+TDR capable:\s+${TDR_CAPABLE}\s*$$
-  ^\s+Link Debounce:\s+${LINK_DEBOUNCE}\s*$$
-  ^\s+Link Debounce Time:\s+${LINK_DEBOUNCE_TIME}\s*$$
-  ^\s+FEX Fabric:\s+${FEX_FABRIC}\s*$$
-  ^\s+dot1Q-tunnel mode:\s+${DOT1Q_TUNNEL_MODE}\s*$$
+  ^\s+TDR\s+capable:\s+${TDR_CAPABLE}\s*$$
+  ^\s+Link\s+Debounce:\s+${LINK_DEBOUNCE}\s*$$
+  ^\s+Link\s+Debounce\s+Time:\s+${LINK_DEBOUNCE_TIME}\s*$$
+  ^\s+FEX\s+Fabric:\s+${FEX_FABRIC}\s*$$
+  ^\s+dot1Q-tunnel\s+mode:\s+${DOT1Q_TUNNEL_MODE}\s*$$
   ^\s+EFP:\s+${EFP}\s*$$
-  ^\s+Num Rewrites Allowed:\s+${NUM_REWRITES_ALLOWED}\s*$$
-  ^\s+Pvlan Trunk capable:\s+${PVLAN_TRUNK_CAPABLE}\s*$$
-  ^\s+Port Group Members:\s+${PORT_GROUP_MEMBERS}\s*$$
-  ^\s+EEE\s\(efficient-eth\):\s+${EEE}\s*$$
-  ^\s+PFC capable:\s+${PFC_CAPABLE}\s*$$
-  ^\s+Breakout capable:\s+${BREAKOUT_CAPABLE}\s*$$
-  ^\s+Link Up Debounce:\s+${LINK_UP_DEBOUNCE}\s*$$
-  ^\s+FEC capable:\s+${FEC_CAPABLE}\s*$$
+  ^\s+Num\s+Rewrites\s+Allowed:\s+${NUM_REWRITES_ALLOWED}\s*$$
+  ^\s+Pvlan\s+Trunk\s+capable:\s+${PVLAN_TRUNK_CAPABLE}\s*$$
+  ^\s+Port\s+Group\s+Members:\s+${PORT_GROUP_MEMBERS}\s*$$
+  ^\s+EEE\s+\(efficient-eth\):\s+${EEE}\s*$$
+  ^\s+PFC\s+capable:\s+${PFC_CAPABLE}\s*$$
+  ^\s+Breakout\s+capable:\s+${BREAKOUT_CAPABLE}\s*$$
+  ^\s+Link\s+Up\s+Debounce:\s+${LINK_UP_DEBOUNCE}\s*$$
+  ^\s+FEC\s+capable:\s+${FEC_CAPABLE}\s*$$
+  ^. -> Error
