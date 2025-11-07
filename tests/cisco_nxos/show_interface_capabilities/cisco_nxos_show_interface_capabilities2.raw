@@ -1,0 +1,35 @@
+Ethernet1/1
+  Model:                 N77-F348XP-23
+  Type (SFP capable):    10Gbase-(unknown)
+  Speed:                 1000,10000
+  Duplex:                full
+  Trunk encap. type:     802.1Q
+  FabricPath capable:    yes
+  Channel:               yes
+  Broadcast suppression: percentage(0-100)
+  Flowcontrol:           rx-(off/on),tx-(off/on)
+  Rate mode:             dedicated
+  Port mode:             Routed,Switched
+  QOS scheduling:        rx-(4q1t),tx-(1p7q1t)
+                         rx-(4q1t),tx-(3p5q1t)
+                         rx-(4q1t),tx-(2p6q1t)
+  CoS rewrite:           yes
+  ToS rewrite:           yes
+  SPAN:                  yes
+  UDLD:                  yes
+  MDIX:                  yes
+  TDR capable:           no
+  Link Debounce:         yes
+  Link Debounce Time:    yes
+  FEX Fabric:            yes
+  dot1Q-tunnel mode:     yes
+  EFP:                   yes
+  Num Rewrites Allowed:  104
+  Pvlan Trunk capable:   yes
+  Port Group Members:    1-8
+  EEE (efficient-eth):   no
+  PFC capable:           yes
+  Breakout capable:      no
+  Link Up Debounce:      yes
+  FEC capable:           no
+

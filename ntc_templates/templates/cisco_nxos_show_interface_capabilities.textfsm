@@ -1,50 +1,70 @@
 Value Required INTERFACE (\S+)
 Value MODEL (.+?)
 Value TYPE (\S+)
-Value TYPEDETAIL (.+)
+Value TYPE_DETAIL (.+)
 Value SPEED (.+?)
 Value DUPLEX (.+?)
 Value TRUNK_ENCAP_TYPE (.+?)
-Value TRUNK_MODE (.+?)
+Value FABRICPATH_CAPABLE (\S+)
 Value CHANNEL (.+?)
 Value BROADCAST_SUPPRESSION (.+?)
-Value UNICAST_SUPPRESSION (.+?)
-Value MULTICAST_SUPPRESSION (.+?)
-Value FLOWCONTROL (.+?)
-Value FAST_START (.+?)
-Value QOS_SCHEDULING (.+?)
+Value FLOWCONTROL (\S+)
+Value RATE_MODE (\S+)
+Value PORT_MODE (.+)
+Value List QOS_SCHEDULING (rx-\(\S+\),tx-\(\S+\))
 Value COS_REWRITE (.+?)
 Value TOS_REWRITE (.+?)
-Value UDLD (.+?)
-Value INLINE_POWER (.+?)
 Value SPAN (.+?)
-Value PORTSECURE (.+?)
-Value DOT1X (.+?)
-Value BREAKOUT_SUPPORT (.+?)
+Value UDLD (.+?)
+Value MDIX (\S+)
+Value TDR_CAPABLE (\S+)
+Value LINK_DEBOUNCE (\S+)
+Value LINK_DEBOUNCE_TIME (\S+)
+Value FEX_FABRIC (\S+)
+Value DOT1Q_TUNNEL_MODE (\S+)
+Value EFP (\S+)
+Value NUM_REWRITES_ALLOWED (\d+)
+Value PVLAN_TRUNK_CAPABLE (\S+)
+Value PORT_GROUP_MEMBERS (\S+)
+Value EEE (\S+)
+Value PFC_CAPABLE (\S+)
+Value BREAKOUT_CAPABLE (\S+)
+Value LINK_UP_DEBOUNCE (\S+)
+Value FEC_CAPABLE (\S+)
 
 Start
   ^\S+$$ -> Continue.Record
   ^${INTERFACE}$$
   ^\s+Model:\s+${MODEL}\s*$$ -> Continue
-  ^\s+Type\s+\(${TYPEDETAIL}\):\s+${TYPE}\s*$$
+  ^\s+Type\s+\(${TYPE_DETAIL}\):\s+${TYPE}\s*$$
   ^\s+Type:\s+${TYPE}\s*$$
   ^\s+Speed:\s+${SPEED}\s*$$
   ^\s+Duplex:\s+${DUPLEX}\s*$$
-  ^\s+Trunk\s+encap\.\s+type:\s+${TRUNK_ENCAP_TYPE}\s*$$
-  ^\s+Trunk\s+mode:\s+${TRUNK_MODE}\s*$$
+  ^\s+Trunk encap. type:\s+${TRUNK_ENCAP_TYPE}\s*$$
+  ^\s+FabricPath capable:\s+${FABRICPATH_CAPABLE}\s*$$
   ^\s+Channel:\s+${CHANNEL}\s*$$
-  ^\s+Broadcast\s+suppression:\s+${BROADCAST_SUPPRESSION}\s*$$
-  ^\s+Unicast\s+suppression:\s+${UNICAST_SUPPRESSION}\s*$$
-  ^\s+Multicast\s+suppression:\s+${MULTICAST_SUPPRESSION}\s*$$
+  ^\s+Broadcast suppression:\s+${BROADCAST_SUPPRESSION}\s*$$
   ^\s+Flowcontrol:\s+${FLOWCONTROL}\s*$$
-  ^\s+Fast\s+Start:\s+${FAST_START}\s*$$
-  ^\s+QoS\s+scheduling:\s+${QOS_SCHEDULING}\s*$$
-  ^\s+CoS\s+rewrite:\s+${COS_REWRITE}\s*$$
-  ^\s+ToS\s+rewrite:\s+${TOS_REWRITE}\s*$$
+  ^\s+Rate mode:\s+${RATE_MODE}\s*$$
+  ^\s+Port mode:\s+${PORT_MODE}\s*$$
+  ^\s*QOS scheduling:\s+${QOS_SCHEDULING}\s*$$
+  ^\s+${QOS_SCHEDULING}\s*$$
+  ^\s+CoS rewrite:\s+${COS_REWRITE}\s*$$
+  ^\s+ToS rewrite:\s+${TOS_REWRITE}\s*$$
   ^\s+UDLD:\s+${UDLD}\s*$$
-  ^\s+Inline\s+power:\s+${INLINE_POWER}\s*$$
   ^\s+SPAN:\s+${SPAN}\s*$$
-  ^\s+PortSecure:\s+${PORTSECURE}\s*$$
-  ^\s+Dot1x:\s+${DOT1X}\s*$$
-  ^\s+Breakout\s+Support:\s+${BREAKOUT_SUPPORT}\s*$$
-  ^. -> Error
+  ^\s+MDIX:\s+${MDIX}\s*$$
+  ^\s+TDR capable:\s+${TDR_CAPABLE}\s*$$
+  ^\s+Link Debounce:\s+${LINK_DEBOUNCE}\s*$$
+  ^\s+Link Debounce Time:\s+${LINK_DEBOUNCE_TIME}\s*$$
+  ^\s+FEX Fabric:\s+${FEX_FABRIC}\s*$$
+  ^\s+dot1Q-tunnel mode:\s+${DOT1Q_TUNNEL_MODE}\s*$$
+  ^\s+EFP:\s+${EFP}\s*$$
+  ^\s+Num Rewrites Allowed:\s+${NUM_REWRITES_ALLOWED}\s*$$
+  ^\s+Pvlan Trunk capable:\s+${PVLAN_TRUNK_CAPABLE}\s*$$
+  ^\s+Port Group Members:\s+${PORT_GROUP_MEMBERS}\s*$$
+  ^\s+EEE\s\(efficient-eth\):\s+${EEE}\s*$$
+  ^\s+PFC capable:\s+${PFC_CAPABLE}\s*$$
+  ^\s+Breakout capable:\s+${BREAKOUT_CAPABLE}\s*$$
+  ^\s+Link Up Debounce:\s+${LINK_UP_DEBOUNCE}\s*$$
+  ^\s+FEC capable:\s+${FEC_CAPABLE}\s*$$
