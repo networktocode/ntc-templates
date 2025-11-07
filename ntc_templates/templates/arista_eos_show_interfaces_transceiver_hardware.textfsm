@@ -1,17 +1,17 @@
 Value Required NAME (\S+)
 Value MEDIA_TYPE (.*)
 Value MODULE_PRESENCE (.*)
-Value MAX_MODULE_POWER_W (\S+)
-Value MAX_SLOT_POWER_W (\S+)
-Value WAVELENGTH_NM (\S+)
+Value MAX_MODULE_POWER (\S+)
+Value MAX_SLOT_POWER (\S+)
+Value WAVELENGTH (\S+)
 Value CABLE_TYPE (\S+)
 
 Start
   ^Name:\s+${NAME} -> Record Start
   ^Media type:\s+${MEDIA_TYPE}
   ^Module presence:\s+${MODULE_PRESENCE}
-  ^Maximum module power \(W\):\s+${MAX_MODULE_POWER_W}
-  ^Maximum slot power \(W\):\s+${MAX_SLOT_POWER_W}
-  ^Wavelength \(nm\):\s+${WAVELENGTH_NM}
+  ^Maximum module power \(W\):\s+${MAX_MODULE_POWER}
+  ^Maximum slot power \(W\):\s+${MAX_SLOT_POWER}
+  ^Wavelength \(nm\):\s+${WAVELENGTH}
   ^Cable type:\s+${CABLE_TYPE}  
   ^. -> Error                 
