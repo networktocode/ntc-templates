@@ -33,9 +33,8 @@ Value LINK_UP_DEBOUNCE (\S+)
 Value FEC_CAPABLE (\S+)
 
 Start
-  ^\S+$$ -> Continue.Record
   ^${INTERFACE}$$
-  ^\s+Model:\s+${MODEL}\s*$$ -> Continue
+  ^\s+Model:\s+${MODEL}\s*$$
   ^\s+Type\s+\(${TYPE_DETAIL}\):\s+${TYPE}\s*$$
   ^\s+Type:\s+${TYPE}\s*$$
   ^\s+Speed:\s+${SPEED}\s*$$
@@ -68,4 +67,5 @@ Start
   ^\s+Breakout\s+capable:\s+${BREAKOUT_CAPABLE}\s*$$
   ^\s+Link\s+Up\s+Debounce:\s+${LINK_UP_DEBOUNCE}\s*$$
   ^\s+FEC\s+capable:\s+${FEC_CAPABLE}\s*$$
+  ^$$ -> Record
   ^. -> Error
