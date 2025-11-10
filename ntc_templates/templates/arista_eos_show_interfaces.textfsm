@@ -39,5 +39,18 @@ Start
   ^\s+[\dA-Fa-f:]+,\s+subnet\s+is
   ^\s+Member\s+of\s+
   ^\s+...\s+\S+\s+,
+  ^\s+No\s+Internet\s+protocol\s+address\s+assigned
+  ^\s+Source\s+interface\s+is
+  ^\s+Listening\s+on
+  ^\s+Replication/Flood\s+Mode
+  ^\s+Remote\s+MAC\s+learning
+  ^\s+VNI\s+mapping
+  ^\s+\[(\d+(,\s+)?)+\]
+  ^\s+Note:
+  ^\s+Use\s+'show.*'
+  ^\s+Static\s+V(RF|LAN)
+  ^\s+Headend\s+replication
+  ^\s+\d+\s+\S+\s+\S+
+  ^\s+MLAG\s+Shared\s+Router\s+MAC
   ^\s*$$
   ^. -> Error
