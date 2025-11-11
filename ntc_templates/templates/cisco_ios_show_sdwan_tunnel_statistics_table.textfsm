@@ -1,0 +1,31 @@
+Value PROTOCOL (\S+)
+Value SOURCE_IP (\S+)
+Value DEST_IP (\S+)
+Value SOURCE_PORT (\d+)
+Value DEST_PORT (\d+)
+Value SYSTEM_IP (\S+)
+Value LOCAL_COLOR (\S+)
+Value REMOTE_COLOR (\S+)
+Value MTU (\d+)
+Value IPV4_TX_PACKETS (\d+)
+Value IPV4_TX_OCTETS (\d+)
+Value IPV4_RX_PACKETS (\d+)
+Value IPV4_RX_OCTETS (\d+)
+Value MSS_ADJUST (\d+)
+Value IPV6_TX_PACKETS (\d+)
+Value IPV6_TX_OCTETS (\d+)
+Value IPV6_RX_PACKETS (\d+)
+Value IPV6_RX_OCTETS (\d+)
+Value IPV4_TX_MCAST_PACKETS (\d+)
+Value IPV4_TX_MCAST_OCTETS (\d+)
+Value IPV4_RX_MCAST_PACKETS (\d+)
+Value IPV4_RX_MCAST_OCTETS (\d+)
+
+Start
+  ^\s+TCP
+  ^\s*TUNNEL\s+SOURCE\s+DEST\s+LOCAL\s+REMOTE\s+TUNNEL\s+MSS
+  ^\s*PROTOCOL\s+SOURCE\s+IP\s+DEST\s+IP\s+PORT\s+PORT\s+SYSTEM\s+IP\s+COLOR\s+COLOR\s+MTU\s+tx-pkts\s+tx-octets\s+rx-pkts\s+rx-octets\s+ADJUST\s+ipv6-tx-pkts\s+ipv6-tx-octets\s+ipv6-rx-pkts\s+ipv6-rx-octets\s+tx-ipv4-mcast-pkts\s+tx-ipv4-mcast-octets\s+rx-ipv4-mcast-pkts\s+rx-ipv4-mcast-octets
+  ^\s*--+$$
+  ^\s*${PROTOCOL}\s+${SOURCE_IP}\s+${DEST_IP}\s+${SOURCE_PORT}\s+${DEST_PORT}\s+${SYSTEM_IP}\s+${LOCAL_COLOR}\s+${REMOTE_COLOR}\s+${MTU}\s+${IPV4_TX_PACKETS}\s+${IPV4_TX_OCTETS}\s+${IPV4_RX_PACKETS}\s+${IPV4_RX_OCTETS}\s+${MSS_ADJUST}\s+${IPV6_TX_PACKETS}\s+${IPV6_TX_OCTETS}\s+${IPV6_RX_PACKETS}\s+${IPV6_RX_OCTETS}\s+${IPV4_TX_MCAST_PACKETS}\s+${IPV4_TX_MCAST_OCTETS}\s+${IPV4_RX_MCAST_PACKETS}\s+${IPV4_RX_MCAST_OCTETS} -> Record
+  ^\s*$$
+  ^. -> Error
