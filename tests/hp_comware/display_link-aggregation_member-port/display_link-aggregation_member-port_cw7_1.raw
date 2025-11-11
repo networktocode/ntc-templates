@@ -1,0 +1,71 @@
+Flags: A -- LACP_Activity, B -- LACP_Timeout, C -- Aggregation, 
+       D -- Synchronization, E -- Collecting, F -- Distributing, 
+       G -- Defaulted, H -- Expired
+
+Twenty-FiveGigE6/0/27: 
+Aggregate Interface: Bridge-Aggregation123
+Local: 
+    Port Number: 1 
+    Port Priority: 32768 
+    Oper-Key: 2 
+    Flag: {ACDEF}
+Remote: 
+    System ID: 0x8000, aaaa-1111-bbbb 
+    Port Number: 1 
+    Port Priority: 32768 
+    Oper-Key: 2 
+    Flag: {ACDEF}
+Received LACP Packets: 652111 packet(s) 
+Illegal: 0 packet(s) 
+Sent LACP Packets: 652267 packet(s)
+
+Twenty-FiveGigE9/0/47: 
+Aggregate Interface: Bridge-Aggregation123
+Local:         
+    Port Number: 2 
+    Port Priority: 32768 
+    Oper-Key: 2 
+    Flag: {ACDEF}
+Remote: 
+    System ID: 0x8000, cccc-dddd-2222
+    Port Number: 2 
+    Port Priority: 32768 
+    Oper-Key: 2 
+    Flag: {ACDEF}
+Received LACP Packets: 652108 packet(s) 
+Illegal: 0 packet(s) 
+Sent LACP Packets: 652253 packet(s)
+
+Twenty-FiveGigE2/0/10: 
+Aggregate Interface: Bridge-Aggregation321
+Local: 
+    Port Number: 3 
+    Port Priority: 32768 
+    Oper-Key: 2 
+    Flag: {ACDEF}
+Remote: 
+    System ID: 0x8000, tttt-zzzz-1122 
+    Port Number: 3 
+    Port Priority: 32768 
+    Oper-Key: 2 
+    Flag: {ACDEF}
+Received LACP Packets: 652108 packet(s) 
+Illegal: 0 packet(s) 
+Sent LACP Packets: 652244 packet(s)
+
+Twenty-FiveGigE1/0/56: 
+Aggregate Interface: Bridge-Aggregation321
+Local: 
+    Port Number: 4 
+    Port Priority: 32768 
+    Oper-Key: 2 
+    Flag: {ACDEF}
+Remote: 
+    System ID: 0x8000, zzzz-aaaa-cccc 
+    Port Number: 4 
+    Port Priority: 32768 
+    Oper-Key: 2 
+    Flag: {ACDEF}
+Received LACP Packets: 652104 packet(s) 
+Illegal: 0 packet(s) 
+Sent LACP Packets: 652237 packet(s)
