@@ -31,7 +31,7 @@ Start
   ^\s+service-policy\s+input\s+${INPUT_POLICY}
   ^\s+service-policy\s+output\s+${OUTPUT_POLICY}
   ^\s+vrf\s+${VRF}
-  ^\s+ipv4\s+address\s+${IP_ADDRESS}\s+${PREFIX_LENGTH}(?:\s+secondary)?
+  ^\s+ipv4\s+address\s+${IP_ADDRESS}\s+${IP_NETMASK}(?:\s+secondary)?
   ^\s+ipv4\s+verify\s+unicast\s+source\s+reachable-via\s+${UNICAST_SOURCE}\s+allow-self-ping
   ^\s+ipv6\s+verify\s+unicast\s+source\s+reachable-via\s+${UNICAST_SOURCE_V6}\s+allow-self-ping
   ^\s+ipv6\s+address\s+${IPV6_ADDRESS}\/+${PREFIXV6_LENGTH}\s*$$
