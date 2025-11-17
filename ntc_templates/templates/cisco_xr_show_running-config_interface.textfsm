@@ -44,7 +44,9 @@ Start
   ^\s+flow\s+mpls\s+monitor\s+${FLOW_MPLS}\s+sampler\s+${FLOW_MPLS_SAMPLER}\s+ingress
   ^\s+encapsulation\s+dot1q\s+${DOT1Q}(?:\s+second-dot1q\s+${SECOND_DOT1Q})?
   ^\s+(lacp|bundle|dampening|mpls|shutdown|!)
-  ^\s+ipv4\s+access-group\s+${ACCESS_GROUP}\s+(ingress|egress)
-  ^\s+ipv6\s+access-group\s+${ACCESS_GROUP_V6}\s+(ingress|egress)
+  ^\s+ipv4\s+access-group\s+${ACCESS_GROUP_IN}\s+ingress
+  ^\s+ipv4\s+access-group\s+${ACCESS_GROUP_OUT}\s+egress
+  ^\s+ipv6\s+access-group\s+${ACCESS_GROUP_V6_IN}\s+ingress
+  ^\s+ipv6\s+access-group\s+${ACCESS_GROUP_V6_OUT}\s+egress
   ^\S+ -> Record
   ^. -> Error
