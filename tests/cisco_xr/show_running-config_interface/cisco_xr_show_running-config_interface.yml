@@ -34,7 +34,7 @@ parsed_sample:
   - access_group: "iACL"
     access_group_out: ""
     access_group_v6: "FilterPackIPv6"
-	access_group_v6_out: ""
+    access_group_v6_out: ""
     bandwidth: "100000"
     description: "PEOPLE | 100M"
     dot1q: "2222"
@@ -48,7 +48,7 @@ parsed_sample:
     interface: "TenGigE2/4/0/2.22227"
     ipv6_address:
       - "fe80:a8:2:b8::a671"
-	ip_address:
+    ip_address:
       - 10.23.125.209
     ip_netmask:
       - "255.255.255.252"
@@ -65,7 +65,7 @@ parsed_sample:
   - access_group: "iACL"
     access_group_out: ""
     access_group_v6: "FilterPackIPv6"
-	access_group_v6_out: ""
+    access_group_v6_out: ""
     bandwidth: "100000"
     description: "AVENIDA | 100M"
     dot1q: "2222"
@@ -96,7 +96,7 @@ parsed_sample:
   - access_group: ""
     access_group_out: ""
     access_group_v6: ""
-	access_group_v6_out: ""
+    access_group_v6_out: ""
     bandwidth: "1500"
     description: "MONTE EVEREST | 1500K"
     dot1q: "1001"
@@ -125,7 +125,7 @@ parsed_sample:
   - access_group: ""
     access_group_out: ""
     access_group_v6: ""
-	access_group_v6_out: ""
+    access_group_v6_out: ""
     bandwidth: "100000"
     description: "TEST PASS| 100M"
     dot1q: "1002"
@@ -156,7 +156,7 @@ parsed_sample:
   - access_group: ""
     access_group_out: ""
     access_group_v6: ""
-	access_group_v6_out: ""
+    access_group_v6_out: ""
     bandwidth: "2048"
     description: "BLUE | 2048K"
     dot1q: "1002"
