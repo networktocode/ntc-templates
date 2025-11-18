@@ -73,3 +73,11 @@ interface TenGigE2/4/0/2.10023
  load-interval 30
  encapsulation dot1q 1002 second-dot1q 3
 !
+interface TenGigE3/0/0/0
+ description TEST MTU and FLOW
+ mtu 9216
+ ipv4 mtu 9000
+ flow ipv4 monitor IPV4-MONITOR sampler IPV4-SAMPLER ingress
+ flow ipv6 monitor IPV6-MONITOR sampler IPV6-SAMPLER ingress
+ flow mpls monitor MPLS-MONITOR sampler MPLS-SAMPLER ingress
+!
