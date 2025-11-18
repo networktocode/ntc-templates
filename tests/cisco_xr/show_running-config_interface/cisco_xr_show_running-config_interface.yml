@@ -49,7 +49,7 @@ parsed_sample:
     ipv6_address:
       - "fe80:a8:2:b8::a671"
     ip_address:
-      - 10.23.125.209
+      - "10.23.125.209"
     ip_netmask:
       - "255.255.255.252"
     load_interval: "30"
@@ -189,7 +189,7 @@ parsed_sample:
     access_group_v6_in: ""
     access_group_v6_out: ""
     bandwidth: ""
-    description: TEST MTU and FLOW
+    description: "TEST MTU and FLOW"
     dot1q: ""
     flow_monitor: "IPV4-MONITOR"
     flow_monitor_v6: "IPV6-MONITOR"
