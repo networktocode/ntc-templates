@@ -50,5 +50,7 @@ Start
   ^\s+ipv4\s+access-group\s+${ACCESS_GROUP_OUT}\s+egress
   ^\s+ipv6\s+access-group\s+${ACCESS_GROUP_V6_IN}\s+ingress
   ^\s+ipv6\s+access-group\s+${ACCESS_GROUP_V6_OUT}\s+egress
-  ^\S+ -> Record
+  ^!$$ -> Record
+  # date stamp
+  ^\w+\s+\w+\s+\d+
   ^. -> Error
