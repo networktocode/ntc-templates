@@ -1,0 +1,83 @@
+Thu Nov  6 12:54:14.972 BRA
+interface TenGigE2/1/0/0.1234256
+ description TESTONE | 50M
+ bandwidth 50000
+ service-policy input IN_BAND_S_50000_V1
+ service-policy output OUT_BAND_S_50000_V1
+ ipv4 address 10.242.26.65 255.255.255.252
+ ipv4 verify unicast source reachable-via rx allow-self-ping
+ ipv6 verify unicast source reachable-via tx allow-self-ping
+ ipv6 address fe80:a8:2:b0::309/126
+ load-interval 30
+ encapsulation dot1q 1234
+ ipv4 access-group iACL ingress
+ ipv6 access-group FilterPackIPv6 ingress
+!
+interface TenGigE2/4/0/2.22227
+ description PEOPLE | 100M
+ bandwidth 100000
+ service-policy input IN_BAND_S_100000_V1
+ service-policy output OUT_BAND_S_100000_V1
+ ipv4 address 10.23.125.209 255.255.255.252
+ ipv4 verify unicast source reachable-via tx allow-self-ping
+ ipv6 verify unicast source reachable-via rx allow-self-ping
+ ipv6 address fe80:a8:2:b8::a671/126
+ load-interval 30
+ encapsulation dot1q 2222 second-dot1q 7
+ ipv4 access-group iACL ingress
+ ipv6 access-group FilterPackIPv6 ingress
+!
+interface TenGigE2/4/0/2.22229
+ description AVENIDA | 100M
+ bandwidth 100000
+ service-policy input IN_BAND_S_100000_V1
+ service-policy output OUT_BAND_S_100000_V1
+ ipv4 address 10.228.247.93 255.255.255.252
+ ipv4 verify unicast source reachable-via any allow-self-ping
+ ipv6 verify unicast source reachable-via any allow-self-ping
+ ipv6 address fe80:a8:2:b8::10ed/126
+ load-interval 30
+ encapsulation dot1q 2222 second-dot1q 9
+ ipv4 access-group iACL ingress
+ ipv6 access-group FilterPackIPv6 ingress
+!
+interface TenGigE2/4/0/2.10012
+ description MONTE EVEREST | 1500K
+ bandwidth 1500
+ service-policy output OUT_SIP_VOICE_1500
+ vrf FONE_CLIENT:5341
+ ipv4 address 10.86.193.193 255.255.255.252
+ ipv4 verify unicast source reachable-via rx allow-self-ping
+ load-interval 30
+ encapsulation dot1q 1001 second-dot1q 2
+!
+interface TenGigE2/4/0/2.1002
+ description TEST PASS| 100M
+ bandwidth 100000
+ service-policy input IN_100000K_1_0_1_0_0_1_1
+ service-policy output OUT_100000K_1_0_1_0_0_1_1
+ vrf FEED_HUB:1245
+ ipv4 address 10.245.37.157 255.255.255.252
+ ipv6 address fe80:a8:2:2b8::751/126
+ load-interval 30
+ encapsulation dot1q 1002
+!
+interface TenGigE2/4/0/2.10023
+ description BLUE | 2048K
+ bandwidth 2048
+ service-policy input IN_BLUE_2M_0_0_0_98_0_1_XR_V1
+ service-policy output OUT_BLUE_2M_0_0_0_98_0_1_XR_V1
+ vrf OBS_CHIN:1236
+ ipv4 address 192.168.226.53 255.255.255.252
+ ipv6 address fe80:a8:2:2b8::ac5/126
+ load-interval 30
+ encapsulation dot1q 1002 second-dot1q 3
+!
+interface TenGigE3/0/0/0
+ description TEST MTU and FLOW
+ mtu 9216
+ ipv4 mtu 9000
+ flow ipv4 monitor IPV4-MONITOR sampler IPV4-SAMPLER ingress
+ flow ipv6 monitor IPV6-MONITOR sampler IPV6-SAMPLER ingress
+ flow mpls monitor MPLS-MONITOR sampler MPLS-SAMPLER ingress
+!

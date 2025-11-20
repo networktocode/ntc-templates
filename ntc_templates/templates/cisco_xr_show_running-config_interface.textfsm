@@ -1,0 +1,56 @@
+Value Required INTERFACE (\S+)
+Value DESCRIPTION (.*)
+Value BANDWIDTH (\d+)
+Value OUTER_VLAN (\d+)
+Value INNER_VLAN (\d+)
+Value VRF (\S+)
+Value List IP_ADDRESS (\d+.\d+.\d+.\d+)
+Value List NETMASK (\d+.\d+.\d+.\d+)
+Value List IPV6_ADDRESS (\S+)
+Value List PREFIXV6_LENGTH (\d+)
+Value LOAD_INTERVAL (\d+)
+Value MTU (\d+)
+Value MTU_IPV4 (\d+)
+Value UNICAST_SOURCE (\S+)
+Value UNICAST_SOURCE_V6 (\S+)
+Value INPUT_POLICY (\S+)
+Value OUTPUT_POLICY (\S+)
+Value ACCESS_GROUP_IN (\S+)
+Value ACCESS_GROUP_OUT (\S+)
+Value ACCESS_GROUP_V6_IN (\S+)
+Value ACCESS_GROUP_V6_OUT (\S+)
+Value FLOW_MONITOR (\S+)
+Value FLOW_MONITOR_V6 (\S+)
+Value FLOW_MPLS (\S+)
+Value FLOW_SAMPLER (\S+)
+Value FLOW_SAMPLER_V6 (\S+)
+Value FLOW_MPLS_SAMPLER (\S+)
+
+Start
+  ^interface\s+${INTERFACE}
+  ^\s+description\s+${DESCRIPTION}
+  ^\s+bandwidth\s+${BANDWIDTH}
+  ^\s+service-policy\s+input\s+${INPUT_POLICY}
+  ^\s+service-policy\s+output\s+${OUTPUT_POLICY}
+  ^\s+vrf\s+${VRF}
+  ^\s+ipv4\s+address\s+${IP_ADDRESS}\s+${NETMASK}(?:\s+secondary)?
+  ^\s+ipv4\s+verify\s+unicast\s+source\s+reachable-via\s+${UNICAST_SOURCE}\s+allow-self-ping
+  ^\s+ipv6\s+verify\s+unicast\s+source\s+reachable-via\s+${UNICAST_SOURCE_V6}\s+allow-self-ping
+  ^\s+ipv6\s+address\s+${IPV6_ADDRESS}\/+${PREFIXV6_LENGTH}\s*$$
+  ^\s+mtu\s+${MTU}
+  ^\s+ipv4\s+mtu\s+${MTU_IPV4}
+  ^\s+ipv6\s+enable
+  ^\s+load-interval\s+${LOAD_INTERVAL}
+  ^\s+flow\s+ipv4\s+monitor\s+${FLOW_MONITOR}\s+sampler\s+${FLOW_SAMPLER}\s+ingress
+  ^\s+flow\s+ipv6\s+monitor\s+${FLOW_MONITOR_V6}\s+sampler\s+${FLOW_SAMPLER_V6}\s+ingress
+  ^\s+flow\s+mpls\s+monitor\s+${FLOW_MPLS}\s+sampler\s+${FLOW_MPLS_SAMPLER}\s+ingress
+  ^\s+encapsulation\s+dot1q\s+${OUTER_VLAN}(?:\s+second-dot1q\s+${INNER_VLAN})?
+  ^\s+(lacp|bundle|dampening|mpls|shutdown|!)
+  ^\s+ipv4\s+access-group\s+${ACCESS_GROUP_IN}\s+ingress
+  ^\s+ipv4\s+access-group\s+${ACCESS_GROUP_OUT}\s+egress
+  ^\s+ipv6\s+access-group\s+${ACCESS_GROUP_V6_IN}\s+ingress
+  ^\s+ipv6\s+access-group\s+${ACCESS_GROUP_V6_OUT}\s+egress
+  ^!$$ -> Record
+  # date stamp
+  ^\w+\s+\w+\s+\d+
+  ^. -> Error
