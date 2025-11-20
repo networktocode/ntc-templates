@@ -15,15 +15,15 @@ parsed_sample:
     flow_sampler_v6: ""
     input_policy: "IN_BAND_S_50000_V1"
     interface: "TenGigE2/1/0/0.1234256"
-    ipv6_address:
-      - "fe80:a8:2:b0::309"
     ip_address:
       - "10.242.26.65"
-    ip_netmask:
-      - "255.255.255.252"
+    ipv6_address:
+      - "fe80:a8:2:b0::309"
     load_interval: "30"
     mtu: ""
     mtu_ipv4: ""
+    netmask:
+      - "255.255.255.252"
     output_policy: "OUT_BAND_S_50000_V1"
     prefixv6_length:
       - "126"
@@ -46,15 +46,15 @@ parsed_sample:
     flow_sampler_v6: ""
     input_policy: "IN_BAND_S_100000_V1"
     interface: "TenGigE2/4/0/2.22227"
-    ipv6_address:
-      - "fe80:a8:2:b8::a671"
     ip_address:
       - "10.23.125.209"
-    ip_netmask:
-      - "255.255.255.252"
+    ipv6_address:
+      - "fe80:a8:2:b8::a671"
     load_interval: "30"
     mtu: ""
     mtu_ipv4: ""
+    netmask:
+      - "255.255.255.252"
     output_policy: "OUT_BAND_S_100000_V1"
     prefixv6_length:
       - "126"
@@ -77,15 +77,15 @@ parsed_sample:
     flow_sampler_v6: ""
     input_policy: "IN_BAND_S_100000_V1"
     interface: "TenGigE2/4/0/2.22229"
-    ipv6_address:
-      - "fe80:a8:2:b8::10ed"
     ip_address:
       - "10.228.247.93"
-    ip_netmask:
-      - "255.255.255.252"
+    ipv6_address:
+      - "fe80:a8:2:b8::10ed"
     load_interval: "30"
     mtu: ""
     mtu_ipv4: ""
+    netmask:
+      - "255.255.255.252"
     output_policy: "OUT_BAND_S_100000_V1"
     prefixv6_length:
       - "126"
@@ -108,14 +108,14 @@ parsed_sample:
     flow_sampler_v6: ""
     input_policy: ""
     interface: "TenGigE2/4/0/2.10012"
-    ipv6_address: []
     ip_address:
       - "10.86.193.193"
-    ip_netmask:
-      - "255.255.255.252"
+    ipv6_address: []
     load_interval: "30"
     mtu: ""
     mtu_ipv4: ""
+    netmask:
+      - "255.255.255.252"
     output_policy: "OUT_SIP_VOICE_1500"
     prefixv6_length: []
     second_dot1q: "2"
@@ -137,15 +137,15 @@ parsed_sample:
     flow_sampler_v6: ""
     input_policy: "IN_100000K_1_0_1_0_0_1_1"
     interface: "TenGigE2/4/0/2.1002"
-    ipv6_address:
-      - "fe80:a8:2:2b8::751"
     ip_address:
       - "10.245.37.157"
-    ip_netmask:
-      - "255.255.255.252"
+    ipv6_address:
+      - "fe80:a8:2:2b8::751"
     load_interval: "30"
     mtu: ""
     mtu_ipv4: ""
+    netmask:
+      - "255.255.255.252"
     output_policy: "OUT_100000K_1_0_1_0_0_1_1"
     prefixv6_length:
       - "126"
@@ -168,15 +168,15 @@ parsed_sample:
     flow_sampler_v6: ""
     input_policy: "IN_BLUE_2M_0_0_0_98_0_1_XR_V1"
     interface: "TenGigE2/4/0/2.10023"
-    ipv6_address:
-      - "fe80:a8:2:2b8::ac5"
     ip_address:
       - "192.168.226.53"
-    ip_netmask:
-      - "255.255.255.252"
+    ipv6_address:
+      - "fe80:a8:2:2b8::ac5"
     load_interval: "30"
     mtu: ""
     mtu_ipv4: ""
+    netmask:
+      - "255.255.255.252"
     output_policy: "OUT_BLUE_2M_0_0_0_98_0_1_XR_V1"
     prefixv6_length:
       - "126"
@@ -199,12 +199,12 @@ parsed_sample:
     flow_sampler_v6: "IPV6-SAMPLER"
     input_policy: ""
     interface: "TenGigE3/0/0/0"
-    ipv6_address: []
     ip_address: []
-    ip_netmask: []
+    ipv6_address: []
     load_interval: ""
     mtu: "9216"
     mtu_ipv4: "9000"
+    netmask: []
     output_policy: ""
     prefixv6_length: []
     second_dot1q: ""
