@@ -1,22 +1,24 @@
-# Goals
+# Data Model: Common Capture Groups
+
+## Goals
 
 - The table below becomes an evolving reference of common capture group names
 - Normalize common capture groups across templates (including cross-vendor)
 
-# Reasoning
+## Reasoning
 
 Normalized capture group names enable more predictable structured data across templates where similar data exists.
 
 Example: Imagine the extra programming logic needed to consume structured data when capture groups could have two or more names across several templates or several vendors! Yikes! This is why we seek to normalize.
 
-# Considerations
+## Considerations
 
 - Some capture groups are a single value and others are lists of values despite containing similar data as one another
-    - Example: single IP address vs list of IP addresses
+  - Example: single IP address vs list of IP addresses
 - Normalizing and using standard capture group names will take time, persistence, and patience from the community
 - Other than new templates, these normalization changes modify the expected template output and are considered "breaking changes" to be included in version releases
 
-# Common Capture Groups
+## Common Capture Groups
 
 | Capture Group                    | Usage Description |
 |----------------------------------|:------------------|
