@@ -20,6 +20,10 @@ Example: Imagine the extra programming logic needed to consume structured data w
 
 | Capture Group                    | Usage Description |
 |----------------------------------|:------------------|
+| `ACCESS_GROUP_IN`                | access group for IPv4 addresses, inbound |
+| `ACCESS_GROUP_OUT`               | access group for IPv4 addresses, outbound |
+| `ACCESS_GROUP_V6_IN`             | access group for IPv6 addresses, inbound |
+| `ACCESS_GROUP_V6_OUT`            | access group for IPv6 addresses, outbound |
 | `BIA`                            | use this if the template already has MAC_ADDRESS in use for the active MAC address |
 | `BUNDLE_NAME`                    | virtual interface name for etherchannel, LACP, LAG, or port-channel interfaces |
 | `BUNDLE_PROTOCOL`                | virtual interface protocol type (LACP, PAgP) for etherchannel or port-channel interfaces |
@@ -30,6 +34,8 @@ Example: Imagine the extra programming logic needed to consume structured data w
 | `CHASSIS_ID`                     | often represents CDP or LLDP neighbor chassis ID |
 | `DESCRIPTION`                    | often used for port or interface descriptions |
 | `GATEWAY`                        | gateway address for a subnet |
+| `INNER_VLAN`.                    | numeric VLAN identifier; used instead of VLAN, VLANID, or TAG |
+| `INNER_VLAN_NAME`                | VLAN name or description |
 | `INTERFACE`                      | full word instead of IFACE, INTF, INTFC, etc |
 | `IP_ADDRESS`                     | for a single IP address, often IPv4 |
 | `IP_ADDRESSES`                   | for lists of IPv4 addresses, but in the case of some templates there may be a mix of IP protocol versions |
@@ -51,7 +57,10 @@ Example: Imagine the extra programming logic needed to consume structured data w
 | `NEIGHBOR_INTERFACE_DESCRIPTION` | represents CDP or LLDP neighbor (remote host) interface or port descriptions (Note: see NEIGHBOR_INTERFACE) |
 | `NEIGHBOR_NAME`                  | often represents neighbor name for CDP or LLDP |
 | `NETMASK`                        | for IPv4 dotted quad masks |
+| `NETMASKS`                       | list of IPv4 dotted quad masks |
 | `NETWORK`                        | for network numbers or subnet address (without the mask or prefix/slash notation); in place of ROUTE |
+| `OUTER_VLAN`.                    | numeric VLAN identifier; used instead of VLAN, VLANID, or TAG |
+| `OUTER_VLAN_NAME`                | VLAN name or description |
 | `PID`                            | represents Part IDs (PIDs), Stock Keeping Units (SKUs), and in some cases Models or Model Numbers
 | `PLATFORM`                       | often represents CDP or LLDP neighbor's platform or model name/number |
 | `PREFIX_LENGTH`                  | instead of PREFIX or CIDR for the numbers of a slash notation or CIDR mask |
