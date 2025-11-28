@@ -7,7 +7,7 @@ from invoke import task
 try:
     import tomli
 except ImportError:
-    sys.exit("Please make sure to `pip install toml` or enable the Poetry shell and run `poetry install`.")
+    sys.exit("Please make sure to `pip install tomli` or enable the Poetry shell and run `poetry install`.")
 
 
 def strtobool(val: str) -> bool:
