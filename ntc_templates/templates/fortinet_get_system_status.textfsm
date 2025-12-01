@@ -14,6 +14,7 @@
 #
 Value Required HOSTNAME (\S+)
 Value VERSION (.*)
+Value FIRST_GA_PATCH_BUILD_DATE (.*)
 Value SECURITY_LEVEL (.*)
 Value FIRMWARE_SIGNATURE (.*)
 Value VIRUS_DB (.*)
@@ -57,7 +58,8 @@ Value LAST_REBOOT_REASON (.+)
 
 Start
   ^Version:\s+${VERSION}
-  ^Security Level:\s+${SECURITY_LEVEL}
+  ^First GA patch build date:\s+${FIRST_GA_PATCH_BUILD_DATE}
+  ^(Current)* Security Level:\s+${SECURITY_LEVEL}
   ^Firmware Signature:\s+${FIRMWARE_SIGNATURE}
   ^Virus-DB:\s+${VIRUS_DB}
   ^Extended\s+DB:\s+${EXTENDED_DB}
