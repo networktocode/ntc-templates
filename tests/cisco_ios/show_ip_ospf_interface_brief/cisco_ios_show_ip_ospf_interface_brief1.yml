@@ -1,0 +1,18 @@
+---
+parsed_sample:
+  - area: "0.0.0.0"
+    cost: "1"
+    interface: "Lo0"
+    ip_address: "10.0.0.2"
+    neighbors_fc: "0/0"
+    prefix_length: "32"
+    process: "1"
+    state: "LOOP"
+  - area: "0.0.0.0"
+    cost: "10"
+    interface: "Et0/2"
+    ip_address: "10.1.0.6"
+    neighbors_fc: "1/1"
+    prefix_length: "30"
+    process: "1"
+    state: "P2P"
