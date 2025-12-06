@@ -1,6 +1,6 @@
 Value INTERFACE (\S+)
 Value PROCESS (\d+)
-Value AREA (\d+|(\d+?\.\d+?\.\d+?\.\d+?))
+Value AREA (\d+(\.\d+\.\d+\.\d+)?)
 Value IP_ADDRESS (\d+\.\d+\.\d+\.\d+)
 Value PREFIX_LENGTH (\d+)
 Value COST (\d+)
