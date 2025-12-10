@@ -7,6 +7,7 @@ nturbo_rx       Link encap:Ethernet
 
 wan     Link encap:Ethernet  HWaddr 12:34:56:78:90:AA
         inet addr:1.2.3.4  Bcast:1.2.3.5  Mask:255.255.255.252
+        inet addr6: fdae:41a4:643b:9303::2 prefixlen 128
         UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
         RX packets:7513822 errors:0 dropped:0 overruns:0 frame:0
         TX packets:12533342 errors:0 dropped:0 overruns:0 carrier:0
