@@ -2,6 +2,7 @@ Value NIC (.*?)
 Value LINK_ENCAP (.*?)
 Value HARDWARE_ADDRESS ([a-zA-Z0-9]{2}(:[a-zA-Z0-9]{2}){5})
 Value IP_ADDRESS (\S+)
+Value IPV6_ADDRESS (\S+)
 Value BCAST (\S+)
 Value MASK (\S+)
 Value LINK_LOCAL6 (\S+)
@@ -27,6 +28,7 @@ Value TX_BYTES (\d+)
 Start
   ^\s*${NIC}\s+Link\s+encap:${LINK_ENCAP}(?:\s+HWaddr\s+${HARDWARE_ADDRESS})?\s*$$
   ^\s*inet\s+addr:${IP_ADDRESS}(?:\s+Bcast:${BCAST})?\s+Mask:${MASK}\s*$$
+  ^\s*inet\s+addr6:\s+${IPV6_ADDRESS}\s+prefixlen\s\d+\s*$$
   ^\s*link-local6:\s+${LINK_LOCAL6}\s+prefixlen\s+${LINK_LOCAL6_PREFIXLEN}\s*$$
   ^\s*${MULTICAST}\s+MTU:${MTU}\s+Metric:${METRIC}\s*$$
   ^\s*RX\s+packets:${RX_PACKETS}\s+errors:${RX_ERRORS}\s+dropped:${RX_DROPPED}\s+overruns:${RX_OVERRUNS}\s+frame:${RX_FRAME}\s*$$
