@@ -36,7 +36,7 @@ Example: Imagine the extra programming logic needed to consume structured data w
 | `CHASSIS_ID`                     | often represents CDP or LLDP neighbor chassis ID |
 | `DESCRIPTION`                    | often used for port or interface descriptions |
 | `GATEWAY`                        | gateway address for a subnet |
-| `INNER_VLAN`.                    | numeric VLAN identifier; used instead of VLAN, VLANID, or TAG |
+| `INNER_VLAN`                     | numeric VLAN identifier; used instead of VLAN, VLANID, or TAG |
 | `INNER_VLAN_NAME`                | VLAN name or description |
 | `INTERFACE`                      | full word instead of IFACE, INTF, INTFC, etc |
 | `IP_ADDRESS`                     | for a single IP address, often IPv4 |
