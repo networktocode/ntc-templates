@@ -11,8 +11,8 @@ Value ALLOWED_ADDRESS (\S+)
 Value PRESHARED_KEY (\S+)
 Value CLIENT_ADDRESS (\S+)
 Value CLIENT_ENDPOINT (\S+)
-Value RX_BYTES (\d+)
-Value TX_BYTES (\d+)
+Value RX_BYTES (\S+)
+Value TX_BYTES (\S+)
 Value LAST_HANDSHAKE (\S+)
 
 Start
