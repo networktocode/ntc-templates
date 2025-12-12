@@ -61,7 +61,7 @@ Example: Imagine the extra programming logic needed to consume structured data w
 | `NETMASK`                        | for IPv4 dotted quad masks |
 | `NETMASKS`                       | list of IPv4 dotted quad masks |
 | `NETWORK`                        | for network numbers or subnet address (without the mask or prefix/slash notation); in place of ROUTE |
-| `OUTER_VLAN`.                    | numeric VLAN identifier; used instead of VLAN, VLANID, or TAG |
+| `OUTER_VLAN`                     | numeric VLAN identifier; used instead of VLAN, VLANID, or TAG |
 | `OUTER_VLAN_NAME`                | VLAN name or description |
 | `PID`                            | represents Part IDs (PIDs), Stock Keeping Units (SKUs), and in some cases Models or Model Numbers
 | `PLATFORM`                       | often represents CDP or LLDP neighbor's platform or model name/number |
