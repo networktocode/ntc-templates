@@ -22,10 +22,10 @@ Example: Imagine the extra programming logic needed to consume structured data w
 
 | Capture Group                    | Usage Description |
 |----------------------------------|:------------------|
-| `ACCESS_GROUP_IN`                | access group for IPv4 addresses, inbound |
-| `ACCESS_GROUP_OUT`               | access group for IPv4 addresses, outbound |
-| `ACCESS_GROUP_V6_IN`             | access group for IPv6 addresses, inbound |
-| `ACCESS_GROUP_V6_OUT`            | access group for IPv6 addresses, outbound |
+| `ACCESS_GROUP_IN`                | inbound access group for IPv4 addresses |
+| `ACCESS_GROUP_OUT`               | outbound access group for IPv4 addresses |
+| `ACCESS_GROUP_V6_IN`             | inbound access group for IPv6 addresses |
+| `ACCESS_GROUP_V6_OUT`            | outbound access group for IPv6 addresses |
 | `BIA`                            | use this if the template already has MAC_ADDRESS in use for the active MAC address |
 | `BUNDLE_NAME`                    | virtual interface name for etherchannel, LACP, LAG, or port-channel interfaces |
 | `BUNDLE_PROTOCOL`                | virtual interface protocol type (LACP, PAgP) for etherchannel or port-channel interfaces |
