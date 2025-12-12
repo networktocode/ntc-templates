@@ -1,0 +1,11 @@
+Value INDEX (\d+)
+Value RUNNING (R)
+Value NAME (\S.+\S|\S+)
+Value MTU (\d+)
+Value LISTEN_PORT (\d+)
+Value PRIVATE_KEY (\S+)
+Value PUBLIC_KEY (\S+)
+
+Start
+  ^\s*${INDEX}\s+${RUNNING}\s+name=${NAME}\s+mtu=${MTU}\s+listen-port=${LISTEN_PORT}\s+private-key=${PRIVATE_KEY}\s+public-key=${PUBLIC_KEY} -> Record
+  ^.* -> Error
