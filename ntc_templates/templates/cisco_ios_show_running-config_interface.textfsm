@@ -1,0 +1,40 @@
+Value Required INTERFACE (\S+)
+Value DESCRIPTION (.*)
+Value BANDWIDTH (\d+)
+Value MTU (\d+)
+Value OUTER_VLAN (\d+)
+Value INNER_VLAN (\d+)
+Value VRF (\S+)
+Value IP_ADDRESS (\d+.\d+.\d+.\d+)
+Value NETMASK (\d+.\d+.\d+.\d+)
+Value IPV6_ADDRESS (\S+)
+Value PREFIXV6_LENGTH (\d+)
+Value PROXY_ARP (\S+)
+Value UNICAST_SOURCE (\S+)
+Value INPUT_POLICY (\S+)
+Value OUTPUT_POLICY (\S+)
+Value ACCESS_GROUP_IN (\S+)
+Value ACCESS_GROUP_OUT (\S+)
+
+Start
+  ^(Building|Current)\s+
+  ^interface\s+${INTERFACE}
+  ^\s+description\s+${DESCRIPTION}
+  ^\s+bandwidth\s+${BANDWIDTH}
+  ^\s+encapsulation\s+dot1Q\s+${OUTER_VLAN}(?:\s+second-dot1q\s+${INNER_VLAN})?
+  ^(?:\s+ip)?\s+vrf\s+forwarding\s+${VRF}
+  ^\s+ip\s+address\s+${IP_ADDRESS}\s+${NETMASK}
+  ^\s+ipv6\s+address\s+${IPV6_ADDRESS}\/+${PREFIXV6_LENGTH}
+  ^\s+${PROXY_ARP}\s+ip\s+proxy-arp
+  ^\s+mtu\s+${MTU}
+  ^\s+ip\s+verify\s+unicast\s+source\s+reachable-via\s+${UNICAST_SOURCE}
+  ^\s+no\s+clns\s+route-cache
+  ^\s+no\s+ip
+  ^\s+ip\s+access-group\s+${ACCESS_GROUP_IN}\s+in
+  ^\s+ip\s+access-group\s+${ACCESS_GROUP_OUT}\s+out
+  ^\s+(shutdown|ipv6|ppp|load|speed|ip|plim|dampening|carrier|mpls|bfd|standby|hold-queue)
+  ^(?:\s+no)?\s+negotiation
+  ^\s+service-policy\s+input\s+${INPUT_POLICY}
+  ^\s+service-policy\s+output\s+${OUTPUT_POLICY}
+  ^!$$ -> Record
+  ^. -> Error

@@ -1,0 +1,20 @@
+Value INDEX (\d+)
+Value INTERFACE (\S.+\S|\S+)
+Value NAME (\S.+\S|\S+)
+Value PUBLIC_KEY (\S+)
+Value PRIVATE_KEY (\S+)
+Value ENDPOINT_ADDRESS (\S+)
+Value ENDPOINT_PORT (\d+)
+Value CURRENT_ENDPOINT_ADDRESS (\S+)
+Value CURRENT_ENDPOINT_PORT (\d+)
+Value ALLOWED_ADDRESS (\S+)
+Value PRESHARED_KEY (\S+)
+Value CLIENT_ADDRESS (\S+)
+Value CLIENT_ENDPOINT (\S+)
+Value RX_BYTES (\S+)
+Value TX_BYTES (\S+)
+Value LAST_HANDSHAKE (\S+)
+
+Start
+  ^\s*${INDEX}\s+interface=${INTERFACE}\s+name=${NAME}\s+public-key=${PUBLIC_KEY}?\s+private-key=${PRIVATE_KEY}?\s+endpoint-address=${ENDPOINT_ADDRESS}?\s+endpoint-port=${ENDPOINT_PORT}?\s+current-endpoint-address=${CURRENT_ENDPOINT_ADDRESS}?\s+current-endpoint-port=${CURRENT_ENDPOINT_PORT}?\s+allowed-address=${ALLOWED_ADDRESS}?\s+preshared-key=${PRESHARED_KEY}?\s+client-address=${CLIENT_ADDRESS}?\s+client-endpoint=${CLIENT_ENDPOINT}?\s+rx=${RX_BYTES}?\s+tx=${TX_BYTES}?\s+last-handshake=${LAST_HANDSHAKE}?\s*$$ -> Record
+  ^. -> Error

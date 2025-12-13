@@ -1,0 +1,39 @@
+Redundant System Information :
+------------------------------
+       Available system uptime = 1 day, 15 hours, 3 minutes
+Switchovers system experienced = 0
+              Standby failures = 0
+        Last switchover reason = none
+ 
+                 Hardware Mode = Duplex
+    Configured Redundancy Mode = sso
+     Operating Redundancy Mode = sso
+              Maintenance Mode = Disabled
+                Communications = Up
+ 
+Current Processor Information :
+-------------------------------
+               Active Location = Switch 1
+        Current Software state = ACTIVE
+       Uptime in current state = 1 day, 15 hours, 3 minutes
+                 Image Version = Cisco IOS Software [Dublin], Catalyst L3 Switch Software (CAT9K_IOSXE), Version 17.14.1, RELEASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2024 by Cisco Systems, Inc.
+Compiled Fri 05-Apr-24 00:08 by mcpre
+                          BOOT = bootflash:packages.conf;
+                   CONFIG_FILE =
+             Fast Switchover   = Enabled
+                Initial Garp   = Enabled
+ 
+Peer Processor Information :
+----------------------------
+              Standby Location = Switch 2
+        Current Software state = STANDBY HOT
+       Uptime in current state = 1 day, 15 hours, 0 minutes
+                 Image Version = Cisco IOS Software [Dublin], Catalyst L3 Switch Software (CAT9K_IOSXE), Version 17.14.1, RELEASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2024 by Cisco Systems, Inc.
+Compiled Fri 05-Apr-24 00:08 by mcpre
+                          BOOT = bootflash:packages.conf;
+                   CONFIG_FILE =
+

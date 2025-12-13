@@ -1,0 +1,71 @@
+Value Required INTERFACE (\S+)
+Value MODEL (.+?)
+Value TYPE (\S+)
+Value TYPE_DETAIL (.+)
+Value SPEED (.+?)
+Value DUPLEX (.+?)
+Value TRUNK_ENCAP_TYPE (.+?)
+Value FABRICPATH_CAPABLE (\S+)
+Value CHANNEL (.+?)
+Value BROADCAST_SUPPRESSION (.+?)
+Value FLOWCONTROL (\S+)
+Value RATE_MODE (\S+)
+Value PORT_MODE (.+)
+Value List QOS_SCHEDULING (rx-\(\S+\),tx-\(\S+\))
+Value COS_REWRITE (.+?)
+Value TOS_REWRITE (.+?)
+Value SPAN (.+?)
+Value UDLD (.+?)
+Value MDIX (\S+)
+Value TDR_CAPABLE (\S+)
+Value LINK_DEBOUNCE (\S+)
+Value LINK_DEBOUNCE_TIME (\S+)
+Value FEX_FABRIC (\S+)
+Value DOT1Q_TUNNEL_MODE (\S+)
+Value EFP (\S+)
+Value NUM_REWRITES_ALLOWED (\d+)
+Value PVLAN_TRUNK_CAPABLE (\S+)
+Value PORT_GROUP_MEMBERS (\S+)
+Value EEE (\S+)
+Value PFC_CAPABLE (\S+)
+Value BREAKOUT_CAPABLE (\S+)
+Value LINK_UP_DEBOUNCE (\S+)
+Value FEC_CAPABLE (\S+)
+
+Start
+  ^${INTERFACE}$$
+  ^\s+Model:\s+${MODEL}\s*$$
+  ^\s+Type\s+\(${TYPE_DETAIL}\):\s+${TYPE}\s*$$
+  ^\s+Type:\s+${TYPE}\s*$$
+  ^\s+Speed:\s+${SPEED}\s*$$
+  ^\s+Duplex:\s+${DUPLEX}\s*$$
+  ^\s+Trunk\s+encap\.\s+type:\s+${TRUNK_ENCAP_TYPE}\s*$$
+  ^\s+FabricPath\s+capable:\s+${FABRICPATH_CAPABLE}\s*$$
+  ^\s+Channel:\s+${CHANNEL}\s*$$
+  ^\s+Broadcast\s+suppression:\s+${BROADCAST_SUPPRESSION}\s*$$
+  ^\s+Flowcontrol:\s+${FLOWCONTROL}\s*$$
+  ^\s+Rate\s+mode:\s+${RATE_MODE}\s*$$
+  ^\s+Port\s+mode:\s+${PORT_MODE}\s*$$
+  ^\s*QOS\s+scheduling:\s+${QOS_SCHEDULING}\s*$$
+  ^\s+${QOS_SCHEDULING}\s*$$
+  ^\s+CoS\s+rewrite:\s+${COS_REWRITE}\s*$$
+  ^\s+ToS\s+rewrite:\s+${TOS_REWRITE}\s*$$
+  ^\s+UDLD:\s+${UDLD}\s*$$
+  ^\s+SPAN:\s+${SPAN}\s*$$
+  ^\s+MDIX:\s+${MDIX}\s*$$
+  ^\s+TDR\s+capable:\s+${TDR_CAPABLE}\s*$$
+  ^\s+Link\s+Debounce:\s+${LINK_DEBOUNCE}\s*$$
+  ^\s+Link\s+Debounce\s+Time:\s+${LINK_DEBOUNCE_TIME}\s*$$
+  ^\s+FEX\s+Fabric:\s+${FEX_FABRIC}\s*$$
+  ^\s+dot1Q-tunnel\s+mode:\s+${DOT1Q_TUNNEL_MODE}\s*$$
+  ^\s+EFP:\s+${EFP}\s*$$
+  ^\s+Num\s+Rewrites\s+Allowed:\s+${NUM_REWRITES_ALLOWED}\s*$$
+  ^\s+Pvlan\s+Trunk\s+capable:\s+${PVLAN_TRUNK_CAPABLE}\s*$$
+  ^\s+Port\s+Group\s+Members:\s+${PORT_GROUP_MEMBERS}\s*$$
+  ^\s+EEE\s+\(efficient-eth\):\s+${EEE}\s*$$
+  ^\s+PFC\s+capable:\s+${PFC_CAPABLE}\s*$$
+  ^\s+Breakout\s+capable:\s+${BREAKOUT_CAPABLE}\s*$$
+  ^\s+Link\s+Up\s+Debounce:\s+${LINK_UP_DEBOUNCE}\s*$$
+  ^\s+FEC\s+capable:\s+${FEC_CAPABLE}\s*$$
+  ^$$ -> Record
+  ^. -> Error

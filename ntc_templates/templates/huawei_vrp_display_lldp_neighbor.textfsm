@@ -91,7 +91,7 @@ Value LOCATION_INFORMATION (\S.+\S)
 
 
 Start
-  ^\s*(GigabitEthernet|GE) -> Continue.Record
+  ^\s*\w*(GigabitEthernet|GE) -> Continue.Record
   ^\s*${LOCAL_INTERFACE}\s+has\s+\d+\s+neighbor(s|\(s\)):\s*$$
   ^\s*\S.+\S\s+has\s+\d+\s+neighbor(s|\(s\))\s*$$
   ^\s*Neighbor\s+index\s*:\s*\d+\s*$$
@@ -192,6 +192,8 @@ Start
   ^\s*TLV\s+subtype\s*:\s*(\S+|\S.+\S)\s*$$
   ^\s*Index\s*:\s*(\S+|\S.+\S)\s*$$
   ^\s*TLV\s+information\s*:\s*(\S+|\S.+\S)\s*$$
+  ^\s*Device\s+\d+\s+infor?mation:\s*$$
+  ^\s+Device\s+(serial\s+number|model\s+name)\s*:
   ^\s+$$
   ^. -> Error
 

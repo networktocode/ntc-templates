@@ -1,0 +1,12 @@
+---
+parsed_sample:
+  - name: "trkgrp_grp1"
+    probe_id: "5, 6"
+    rtt: "16, 3"
+    status: "UP(UP OR UP)"
+    trackers: "trk_google-web, trk_umbrella"
+  - name: "trkgrp_endpoint"
+    probe_id: "5, 6"
+    rtt: "16, 3"
+    status: "UP(UP AND UP)"
+    trackers: "trk_google-web1, trk_umbrella1"
