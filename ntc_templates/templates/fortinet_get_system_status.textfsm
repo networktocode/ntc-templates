@@ -58,9 +58,9 @@ Value LAST_REBOOT_REASON (.+)
 
 Start
   ^Version:\s+${VERSION}
-  ^First GA patch build date:\s+${FIRST_GA_PATCH_BUILD_DATE}
-  ^(Current )*Security Level:\s+${SECURITY_LEVEL}
-  ^Firmware Signature:\s+${FIRMWARE_SIGNATURE}
+  ^First\s+GA\s+patch\s+build\s+date:\s+${FIRST_GA_PATCH_BUILD_DATE}
+  ^(Current\s+)*Security\s+Level:\s+${SECURITY_LEVEL}
+  ^Firmware\s+Signature:\s+${FIRMWARE_SIGNATURE}
   ^Virus-DB:\s+${VIRUS_DB}
   ^Extended\s+DB:\s+${EXTENDED_DB}
   ^AV\s+AI/ML\s+Model:\s+${AV_AI_ML_MODEL}
@@ -71,9 +71,9 @@ Start
   ^FMWP-DB:\s+${FMWP_DB}
   ^INDUSTRIAL-DB:\s+${INDUSTRIAL_DB}
   ^Serial-Number:\s+${SERIAL_NUMBER}
-  ^License Status:\s+${LICENSE_STATUS}
+  ^License\s+Status:\s+${LICENSE_STATUS}
   ^Evaluation\s+License\s+Expires:\s+${EVALUATION_LICENSE_EXPIRES}
-  ^VM Resources:\s+${VM_RESOURCES}
+  ^VM\s+Resources:\s+${VM_RESOURCES}
   ^IPS\s+Malicious\s+URL\s+Database:\s+${IPS_MALICIOUS_URL_DATABASE}
   ^IoT-Detect:\s+${IOT_DETECT}
   ^OT-Detect-DB:\s+${OT_DETECT_DB}
