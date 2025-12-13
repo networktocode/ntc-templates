@@ -59,7 +59,7 @@ Value LAST_REBOOT_REASON (.+)
 Start
   ^Version:\s+${VERSION}
   ^First\s+GA\s+patch\s+build\s+date:\s+${FIRST_GA_PATCH_BUILD_DATE}
-  ^(Current\s+)*Security\s+Level:\s+${SECURITY_LEVEL}
+  ^(Current\s+)?Security\s+Level:\s+${SECURITY_LEVEL}
   ^Firmware\s+Signature:\s+${FIRMWARE_SIGNATURE}
   ^Virus-DB:\s+${VIRUS_DB}
   ^Extended\s+DB:\s+${EXTENDED_DB}
