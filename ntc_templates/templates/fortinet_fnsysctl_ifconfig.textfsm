@@ -25,6 +25,7 @@ Value COLLISIONS (\d+)
 Value TX_QUEUE_LEN (\d+)
 Value RX_BYTES (\d+)
 Value TX_BYTES (\d+)
+Value INTERRUPTS (\d+)
 
 Start
   ^\s*${NIC}\s+Link\s+encap:${LINK_ENCAP}(?:\s+HWaddr\s+${HARDWARE_ADDRESS})?\s*$$
@@ -35,6 +36,7 @@ Start
   ^\s*RX\s+packets:${RX_PACKETS}\s+errors:${RX_ERRORS}\s+dropped:${RX_DROPPED}\s+overruns:${RX_OVERRUNS}\s+frame:${RX_FRAME}\s*$$
   ^\s*TX\s+packets:${TX_PACKETS}\s+errors:${TX_ERRORS}\s+dropped:${TX_DROPPED}\s+overruns:${TX_OVERRUNS}\s+carrier:${TX_CARRIER}\s*$$
   ^\s*collisions:${COLLISIONS}\s+txqueuelen:${TX_QUEUE_LEN}\s*$$
-  ^\s*RX\s+bytes:${RX_BYTES}\s+\(.*\)\s+TX\s+bytes:${TX_BYTES}\s+\(.*\)\s*$$ -> Record
-  ^\s*$$
+  ^\s*RX\s+bytes:${RX_BYTES}\s+\(.*\)\s+TX\s+bytes:${TX_BYTES}\s+\(.*\)\s*$$
+  ^\s*Interrupt\s*:\s*${INTERRUPTS}\s*$$
+  ^\s*$$ -> Record
   ^. -> Error
