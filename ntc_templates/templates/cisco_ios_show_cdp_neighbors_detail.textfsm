@@ -1,27 +1,83 @@
 Value Required NEIGHBOR_NAME (\S+)
-Value MGMT_ADDRESS (\d+\.\d+\.\d+\.\d+|\w+\.\w+\.\w+)
-Value PLATFORM (.*)
-Value NEIGHBOR_INTERFACE (.*)
-Value LOCAL_INTERFACE (.*)
-Value NEIGHBOR_DESCRIPTION (.*$)
-Value CAPABILITIES (.+?)
+Value INTERFACE_IP (\d+\.\d+\.\d+\.\d+)
+Value List INTERFACE_IPV6 ([0-9a-fA-F:]+)
+Value MGMT_IP_ADDRESS (\d+\.\d+\.\d+\.\d+)
+Value PLATFORM (\S.*)
+Value NEIGHBOR_INTERFACE (\S.*)
+Value LOCAL_INTERFACE (.+)
+Value CAPABILITIES ([^\r\n]*\S)
+Value SOFTWARE_VERSION ([^,\s]+)
+Value SOFTWARE (.*)
+Value SOFTWARE_FAMILY (.*)
+Value List VERSION (\S.*)
+Value SERIAL (\S+)
+Value VTP_DOMAIN (.+)
+Value VTP_VERSION (\d+)
+Value NATIVE_VLAN (\d+)
+Value DUPLEX (\S+)
+Value DUPLEX_MISMATCH (\S+)
+Value HOLDTIME (\d+)
+Value POWER_DRAWN ([.\d]+)
+Value POWER_REQUEST_ID ([-\d]+)
+Value POWER_REQUEST_LEVEL ([-\d\s]+)
+Value POWER_MGMT_ID ([-\d]+)
+Value POWER_AVAILABLE ([-\d]+)
+Value POWER_MGMT_LEVEL ([-\d]+)
+Value PEER_MAC (\S+\.\S+\.\S+)
+Value UNIDIRECTIONAL_MODE (\S+)
 
 Start
-  ^Device ID: ${NEIGHBOR_NAME}
-  ^Entry address\(es\)\s*:\s* -> ParseIP
-  ^Platform\s*:\s*${PLATFORM}\s*,\s*Capabilities\s*:\s*${CAPABILITIES}\s+$$
-  ^Platform\s*:\s*${PLATFORM}\s*,\s*Capabilities\s*:\s*${CAPABILITIES}$$
-  ^Interface: ${LOCAL_INTERFACE},  Port ID \(outgoing port\): ${NEIGHBOR_INTERFACE}
-  ^Version : -> GetVersion
-  # Capture time-stamp if vty line has command time-stamping turned on
-  ^Load\s+for\s+
+  ^Device ID\s*:\s*${NEIGHBOR_NAME}\s*\(${SERIAL}\)\s*$$
+  ^Device ID\s*:\s*${NEIGHBOR_NAME}\s*$$
+  ^Entry address\(es\)\s*:\s*$$ -> ParseIP
+  ^\s*Platform\s*:\s*${PLATFORM}\s*,\s*Capabilities\s*:\s*${CAPABILITIES}\s*$$ -> Start
+  ^Interface:\s*${LOCAL_INTERFACE}\s*,\s*Port ID\s*\(outgoing port\)\s*:\s*${NEIGHBOR_INTERFACE}\s*$$
+  ^Version\s*:\s*$$ -> GetVersion
+  ^advertisement\sversion:\s${VTP_VERSION}
+  ^Peer\s*Source\s*MAC:\s*${PEER_MAC}
+  ^VTP Management Domain\s*:\s*${VTP_DOMAIN}\s*$$
+  ^Native VLAN\s*:\s*${NATIVE_VLAN}\s*$$
+  ^\s*Duplex\s*:\s*${DUPLEX}\s*\(\s*${DUPLEX_MISMATCH}\s*\)\s*$$
+  ^Duplex\s*:\s*${DUPLEX}\s*$$
+  ^Power\s*drawn:\s*${POWER_DRAWN}\s*Watts$$
+  ^Management address\(es\)\s*:\s*$$ -> ParseMgmtIP
+  ^\s*Power\s*Available\s*TLV\s*:\s*$$ -> PwrAvail
+  ^\s*Power\s*request\s*id\s*:\s*${POWER_REQUEST_ID}\s*,\s*Power\s*management\s*id\s*:\s*${POWER_MGMT_ID}\s*$$
+  ^\s*Power\s*request\s*levels\s*are:\s*${POWER_REQUEST_LEVEL} -> Start
+  ^Holdtime\s*:\s*${HOLDTIME}\s*sec
+  ^Unidirectional Mode:\s*${UNIDIRECTIONAL_MODE}
+  # common noise lines
+  ^advertisement version\s*:
+  ^Protocol\sHello
+  ^Power request id\s*:
+  ^Power request levels\s*are\s*:
+  ^Load\s+for
   ^Time\s+source\s+is
+  ^$$ -> Start
+  ^-+$$ -> Record Start
+  ^Total\s*cdp\s*entries\s*displayed : 
+  ^. -> Error
 
 ParseIP
-  ^.*IP address: ${MGMT_ADDRESS} -> Start
-  ^Platform\s*:\s*${PLATFORM}\s*,\s*Capabilities\s*:\s*${CAPABILITIES}\s+$$ -> Start
-  ^Platform\s*:\s*${PLATFORM}\s*,\s*Capabilities\s*:\s*${CAPABILITIES}$$ -> Start
-  ^.* -> Start
+  ^\s*IP address:\s*${INTERFACE_IP}\s*$$
+  ^\s*IPv6 address:\s*${INTERFACE_IPV6}\s*\(.*\)\s*$$
+  ^\s*Platform\s*:\s*${PLATFORM}\s*,\s*Capabilities\s*:\s*${CAPABILITIES}\s*$$ -> Start
 
 GetVersion
-  ^${NEIGHBOR_DESCRIPTION} -> Record Start
+  # Match software line with version info for Cisco Devices
+  ^\s*${SOFTWARE}\s*,\s*${SOFTWARE_FAMILY}\s*,s*[^,]*\bVersion\s*:?\s*${SOFTWARE_VERSION}\s*,*\s*.*$$
+  ^\s*${SOFTWARE}\s*,*\s*${SOFTWARE_FAMILY}\s*,*s*[^,]*\bVersion\s*:?\s*${SOFTWARE_VERSION}\s*,*\s*.*$$
+  # get whatever is provided
+  ^\s*${VERSION}\s*$$
+  ^\s*$$ -> Start
+
+
+ParseMgmtIP
+  ^\s*IP address:\s*${MGMT_IP_ADDRESS}\s*$$ -> Start
+  ^$$ -> Start
+
+PwrAvail
+  # Optional: tolerate blank lines or unrelated lines after the header without failing.
+  ^$$  -> PwrAvail
+  # Match the detail line (allow indentation and flexible spaces/commas).
+  ^\s*Power\s*request\s*id\s*:\s*${POWER_REQUEST_ID}\s*,\s*Power\s*management\s*id\s*:\s*${POWER_MGMT_ID}\s*,\s*Power\s*available\s*:\s*${POWER_AVAILABLE}\s*,\s*Power\s*management\s*level\s*:\s*${POWER_MGMT_LEVEL}\s*$$ -> Start
