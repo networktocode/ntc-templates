@@ -1,0 +1,14 @@
+---
+parsed_sample:
+  - interface: "Eth1"
+    name: "EM PM"
+    port_error: "psecure-violation"
+    status: "err-disabled"
+  - interface: "Eth2"
+    name: ""
+    port_error: "bpduguard"
+    status: "err-disabled"
+  - interface: "Eth3"
+    name: ""
+    port_error: "loopback"
+    status: "err-disabled"
