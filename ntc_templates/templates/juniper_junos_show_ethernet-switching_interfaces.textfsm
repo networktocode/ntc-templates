@@ -12,6 +12,5 @@ Start
   ^${INTERFACE}\s+${STATUS}\s+${VLAN_MEMBER}\s+${TAGGING}\s+${PORT_ERROR}
   ^${INTERFACE}\s+${STATUS}\s+${VLAN_MEMBER}\s+${PORT_ERROR}
   ^\s+${VLAN_MEMBER}\s+${VLAN_ID}\s+${TAGGING}\s+${PORT_ERROR}
-  ^{.*}$$
   ^\s*$$
   ^. -> Error
