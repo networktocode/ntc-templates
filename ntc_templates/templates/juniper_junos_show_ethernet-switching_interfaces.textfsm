@@ -6,10 +6,7 @@ Value List TAGGING (tagged|untagged)
 Value List PORT_ERROR (.*)
 
 Start
-  ^\s*Interface\s+State\s+VLAN\smembers -> Table
-  ^. -> Error
-
-Table
+  ^\s*Interface\s+State\s+VLAN\s+members
   ^\S -> Continue.Record
   ^${INTERFACE}\s+${STATUS}\s+${VLAN_MEMBER}\s+${TAG}\s+${TAGGING}\s+${PORT_ERROR}
   ^${INTERFACE}\s+${STATUS}\s+${VLAN_MEMBER}\s+${TAGGING}\s+${PORT_ERROR}
