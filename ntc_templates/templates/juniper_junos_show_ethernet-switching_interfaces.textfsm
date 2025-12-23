@@ -2,7 +2,7 @@ Value Required INTERFACE (\S+)
 Value STATUS (up|down)
 Value List VLAN_MEMBER (\S+)
 Value List TAG (\d+)
-Value List TAGGING (tagged|untagged)
+Value List TAGGING ((un)?tagged)
 Value List PORT_ERROR (.*)
 
 Start
