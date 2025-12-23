@@ -1,0 +1,121 @@
+---
+parsed_sample:
+  - interface: "ae0.0"
+    port_error:
+      - "unblocked"
+    status: "up"
+    tagging:
+      - "untagged"
+    vlan_id: []
+    vlan_member:
+      - "default"
+  - interface: "ge-0/0/2.0"
+    port_error:
+      - "blocked by RTG (rtggroup)"
+    status: "up"
+    tagging:
+      - "untagged"
+    vlan_id:
+      - "300"
+    vlan_member:
+      - "vlan300"
+  - interface: "ge-0/0/3.0"
+    port_error:
+      - "blocked by STP      "
+    status: "up"
+    tagging: []
+    vlan_id: []
+    vlan_member:
+      - "default"
+  - interface: "ge-0/0/4.0"
+    port_error:
+      - "MAC limit exceeded"
+    status: "down"
+    tagging: []
+    vlan_id: []
+    vlan_member:
+      - "default"
+  - interface: "ge-0/0/5.0"
+    port_error:
+      - "MAC move limit exceeded"
+    status: "down"
+    tagging: []
+    vlan_id: []
+    vlan_member:
+      - "default"
+  - interface: "ge-0/0/6.0"
+    port_error:
+      - "Storm control in effect"
+    status: "down"
+    tagging: []
+    vlan_id: []
+    vlan_member:
+      - "default"
+  - interface: "ge-0/0/7.0"
+    port_error:
+      - "unblocked"
+    status: "down"
+    tagging: []
+    vlan_id: []
+    vlan_member:
+      - "default"
+  - interface: "ge-0/0/13.0"
+    port_error:
+      - "unblocked"
+    status: "up"
+    tagging:
+      - "untagged"
+    vlan_id: []
+    vlan_member:
+      - "default"
+  - interface: "ge-0/0/14.0"
+    port_error:
+      - "unblocked"
+      - "unblocked"
+    status: "up"
+    tagging:
+      - "tagged"
+      - "tagged"
+    vlan_id:
+      - "100"
+      - "200"
+    vlan_member:
+      - "vlan100"
+      - "vlan200"
+  - interface: "ge-0/0/15.0"
+    port_error:
+      - "blocked by STP"
+      - "blocked by STP"
+    status: "up"
+    tagging:
+      - "tagged"
+      - "tagged"
+    vlan_id:
+      - "100"
+      - "200"
+    vlan_member:
+      - "vlan100"
+      - "vlan200"
+  - interface: "ge-0/0/16.0"
+    port_error:
+      - "unblocked"
+    status: "down"
+    tagging:
+      - "untagged"
+    vlan_id: []
+    vlan_member:
+      - "default"
+  - interface: "ge-0/0/17.0"
+    port_error:
+      - "Disabled by bpdu-control"
+      - "Disabled by bpdu-control"
+    status: "down"
+    tagging:
+      - "tagged"
+      - "tagged"
+    vlan_id:
+      - "100"
+      - "200"
+    vlan_member:
+      - "vlan100"
+      - "vlan200"

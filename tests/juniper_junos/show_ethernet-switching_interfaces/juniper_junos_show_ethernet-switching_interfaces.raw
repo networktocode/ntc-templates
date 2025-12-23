@@ -1,0 +1,17 @@
+Interface    State  VLAN members        Tag   Tagging  Blocking 
+
+ae0.0        up      default                   untagged unblocked
+ge-0/0/2.0   up      vlan300            300    untagged blocked by RTG (rtggroup)
+ge-0/0/3.0   up      default                            blocked by STP      
+ge-0/0/4.0   down    default                            MAC limit exceeded
+ge-0/0/5.0   down    default                            MAC move limit exceeded
+ge-0/0/6.0   down    default                            Storm control in effect
+ge-0/0/7.0   down    default                            unblocked
+ge-0/0/13.0  up      default                   untagged unblocked
+ge-0/0/14.0  up      vlan100             100   tagged   unblocked
+                     vlan200             200   tagged   unblocked
+ge-0/0/15.0  up      vlan100             100   tagged   blocked by STP
+                     vlan200             200   tagged   blocked by STP
+ge-0/0/16.0  down    default                   untagged unblocked
+ge-0/0/17.0  down    vlan100             100   tagged   Disabled by bpdu-control
+                     vlan200             200   tagged   Disabled by bpdu-control
