@@ -36,7 +36,7 @@ Start
   ^\s*TX\s+packets:${TX_PACKETS}\s+errors:${TX_ERRORS}\s+dropped:${TX_DROPPED}\s+overruns:${TX_OVERRUNS}\s+carrier:${TX_CARRIER}\s*$$
   ^\s*collisions:${COLLISIONS}\s+txqueuelen:${TX_QUEUE_LEN}\s*$$
   ^\s*RX\s+bytes:${RX_BYTES}\s+\(.*\)\s+TX\s+bytes:${TX_BYTES}\s+\(.*\)\s*$$
-  # The Interrupt value dosen't provide any usefull info and in later versions it seems to have been removed
+  # The Interrupt value doesn't provide any useful info and in later versions it seems to have been removed
   ^\s*Interrupt\s*:\s*\d+\s*$$
   ^\s*$$ -> Record
   ^. -> Error
