@@ -1,11 +1,12 @@
 Value Required NEIGHBOR_NAME (\S+)
-Value INTERFACE_IP (\d+\.\d+\.\d+\.\d+)
+Value MGMT_ADDRESS (\d+\.\d+\.\d+\.\d+|\w+\.\w+\.\w+)
 Value List INTERFACE_IPV6 ([0-9a-fA-F:]+)
 Value MGMT_IP_ADDRESS (\d+\.\d+\.\d+\.\d+)
-Value PLATFORM (\S.*)
-Value NEIGHBOR_INTERFACE (\S.*)
-Value LOCAL_INTERFACE (.+)
-Value CAPABILITIES ([^\r\n]*\S)
+Value PLATFORM (.*)
+Value NEIGHBOR_INTERFACE (.*)
+Value LOCAL_INTERFACE (.*)
+Value NEIGHBOR_DESCRIPTION (.*$)
+Value CAPABILITIES (.+?)
 Value SOFTWARE_VERSION ([^,\s]+)
 Value SOFTWARE (.*)
 Value SOFTWARE_FAMILY (.*)
@@ -27,48 +28,59 @@ Value PEER_MAC (\S+\.\S+\.\S+)
 Value UNIDIRECTIONAL_MODE (\S+)
 
 Start
+   # Nexus Neighbor provides Serial Number
   ^Device ID\s*:\s*${NEIGHBOR_NAME}\s*\(${SERIAL}\)\s*$$
   ^Device ID\s*:\s*${NEIGHBOR_NAME}\s*$$
   ^Entry address\(es\)\s*:\s*$$ -> ParseIP
-  ^\s*Platform\s*:\s*${PLATFORM}\s*,\s*Capabilities\s*:\s*${CAPABILITIES}\s*$$ -> Start
+  ^\s*Platform\s*:\s*${PLATFORM}\s*,\s*Capabilities\s*:\s*${CAPABILITIES}\s*$$
   ^Interface:\s*${LOCAL_INTERFACE}\s*,\s*Port ID\s*\(outgoing port\)\s*:\s*${NEIGHBOR_INTERFACE}\s*$$
+  # For Compatibility preserve the legacy format
   ^Version\s*:\s*$$ -> GetVersion
-  ^advertisement\sversion:\s${VTP_VERSION}
-  ^Peer\s*Source\s*MAC:\s*${PEER_MAC}
+  ^Version\s*:\s*$$ -> NewVersion
+  # Various optional parameters
+  ^advertisement\s+version\s*:\s*${VTP_VERSION}\s*$$
+  ^Peer\s*Source\s*MAC:\s*${PEER_MAC}\s*$$
   ^VTP Management Domain\s*:\s*${VTP_DOMAIN}\s*$$
   ^Native VLAN\s*:\s*${NATIVE_VLAN}\s*$$
   ^\s*Duplex\s*:\s*${DUPLEX}\s*\(\s*${DUPLEX_MISMATCH}\s*\)\s*$$
-  ^Duplex\s*:\s*${DUPLEX}\s*$$
+  ^\s*Duplex\s*:\s*${DUPLEX}\s*$$
   ^Power\s*drawn:\s*${POWER_DRAWN}\s*Watts$$
+  # Management Address may be different of interface - global address
   ^Management address\(es\)\s*:\s*$$ -> ParseMgmtIP
+  # PoE information 
   ^\s*Power\s*Available\s*TLV\s*:\s*$$ -> PwrAvail
   ^\s*Power\s*request\s*id\s*:\s*${POWER_REQUEST_ID}\s*,\s*Power\s*management\s*id\s*:\s*${POWER_MGMT_ID}\s*$$
-  ^\s*Power\s*request\s*levels\s*are:\s*${POWER_REQUEST_LEVEL} -> Start
+  ^\s*Power\s*request\s*levels\s*are\s*:\s*${POWER_REQUEST_LEVEL}\s*$$
   ^Holdtime\s*:\s*${HOLDTIME}\s*sec
-  ^Unidirectional Mode:\s*${UNIDIRECTIONAL_MODE}
-  # common noise lines
+  ^Unidirectional\s*Mode\s*:\s*${UNIDIRECTIONAL_MODE}\s*$$
+  # Additionnal parameters - noise
   ^advertisement version\s*:
-  ^Protocol\sHello
-  ^Power request id\s*:
-  ^Power request levels\s*are\s*:
+  ^Protocol\s+Hello
+  # Capture time-stamp if vty line has command time-stamping turned on
   ^Load\s+for
   ^Time\s+source\s+is
-  ^$$ -> Start
   ^-+$$ -> Record Start
-  ^Total\s*cdp\s*entries\s*displayed : 
+  ^$$ -> Start
+  ^Total\s*cdp\s*entries\s*displayed\s*:
   ^. -> Error
 
 ParseIP
-  ^\s*IP address:\s*${INTERFACE_IP}\s*$$
+  # Parse Management IP - unfortunately no clear separator with the rest of the record
+  ^\s*IP address:\s*${MGMT_ADDRESS}\s*$$
   ^\s*IPv6 address:\s*${INTERFACE_IPV6}\s*\(.*\)\s*$$
   ^\s*Platform\s*:\s*${PLATFORM}\s*,\s*Capabilities\s*:\s*${CAPABILITIES}\s*$$ -> Start
 
 GetVersion
+  # For compatibility with legacy templates
+  ^${NEIGHBOR_DESCRIPTION} -> NewVersion
   # Match software line with version info for Cisco Devices
-  ^\s*${SOFTWARE}\s*,\s*${SOFTWARE_FAMILY}\s*,s*[^,]*\bVersion\s*:?\s*${SOFTWARE_VERSION}\s*,*\s*.*$$
+
+NewVersion
+  # Parse directly relevant information of the version of the software
+ ^\s*${SOFTWARE}\s*,\s*${SOFTWARE_FAMILY}\s*,\s*[^,]*\bVersion\s*:?\s*${SOFTWARE_VERSION}\s*,*\s*.*$$
   ^\s*${SOFTWARE}\s*,*\s*${SOFTWARE_FAMILY}\s*,*s*[^,]*\bVersion\s*:?\s*${SOFTWARE_VERSION}\s*,*\s*.*$$
   # get whatever is provided
-  ^\s*${VERSION}\s*$$
+  ^${VERSION}
   ^\s*$$ -> Start
 
 
@@ -78,6 +90,6 @@ ParseMgmtIP
 
 PwrAvail
   # Optional: tolerate blank lines or unrelated lines after the header without failing.
-  ^$$  -> PwrAvail
+  ^\s*$$  -> PwrAvail
   # Match the detail line (allow indentation and flexible spaces/commas).
   ^\s*Power\s*request\s*id\s*:\s*${POWER_REQUEST_ID}\s*,\s*Power\s*management\s*id\s*:\s*${POWER_MGMT_ID}\s*,\s*Power\s*available\s*:\s*${POWER_AVAILABLE}\s*,\s*Power\s*management\s*level\s*:\s*${POWER_MGMT_LEVEL}\s*$$ -> Start
