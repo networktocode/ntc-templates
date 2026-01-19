@@ -57,7 +57,7 @@ Value TX_PAUSE (\d+)
 
 Start
   ^\S+\s+is.+ -> Continue.Record
-  ^${INTERFACE}\s+is\s+${LINK_STATUS},\sline\sprotocol\sis\s${ADMIN_STATE}$$
+  ^${INTERFACE}\s+is\s+${LINK_STATUS},\s+line\s+protocol\s+is\s+${ADMIN_STATE}$$
   ^${INTERFACE}\s+is\s+${LINK_STATUS}$$
   ^admin\s+state\s+is\s+${ADMIN_STATE},
   ^admin\s+state\s+is\s+${ADMIN_STATE}
