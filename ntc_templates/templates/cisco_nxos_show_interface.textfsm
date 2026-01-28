@@ -65,7 +65,7 @@ Start
   ^\s+Hardware(:|\s+is)\s+${HARDWARE_TYPE},\s+address(:|\s+is)\s+${MAC_ADDRESS}(.*bia\s+${BIA})*
   ^\s+Hardware(:|\s+is)\s+${HARDWARE_TYPE}
   ^\s+(Port\s+)?[Dd]escription(:|\s+is)\s+${DESCRIPTION}\s*$$
-  ^\s+Internet\s+Address\s+is\s+${IP_ADDRESS}\/${PREFIX_LENGTH}
+  ^\s+Internet\s+[aA]ddress\s+is\s+${IP_ADDRESS}\/${PREFIX_LENGTH}
   ^\s+Port\s+mode\s+is\s+${MODE}
   ^\s+${DUPLEX},\s+${SPEED}(,\s+media\s+type\s+is\s+${MEDIA_TYPE})?\s*$$
   ^\s+MTU\s+${MTU}(.*BW\s+${BANDWIDTH}.*DLY\s+${DELAY})?
