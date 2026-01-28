@@ -57,14 +57,15 @@ Value TX_PAUSE (\d+)
 
 Start
   ^\S+\s+is.+ -> Continue.Record
-  ^${INTERFACE}\s+is\s+${LINK_STATUS},\sline\sprotocol\sis\s${ADMIN_STATE}$$
+  ^${INTERFACE}\s+is\s+${LINK_STATUS},\s+line\s+protocol\s+is\s+${ADMIN_STATE}$$
   ^${INTERFACE}\s+is\s+${LINK_STATUS}$$
   ^admin\s+state\s+is\s+${ADMIN_STATE},
   ^admin\s+state\s+is\s+${ADMIN_STATE}
+  ^\s+[Aa]dmin\s+[Ss]tate:\s+${ADMIN_STATE}
   ^\s+Hardware(:|\s+is)\s+${HARDWARE_TYPE},\s+address(:|\s+is)\s+${MAC_ADDRESS}(.*bia\s+${BIA})*
   ^\s+Hardware(:|\s+is)\s+${HARDWARE_TYPE}
   ^\s+(Port\s+)?[Dd]escription(:|\s+is)\s+${DESCRIPTION}\s*$$
-  ^\s+Internet\s+Address\s+is\s+${IP_ADDRESS}\/${PREFIX_LENGTH}
+  ^\s+Internet\s+[aA]ddress\s+is\s+${IP_ADDRESS}\/${PREFIX_LENGTH}
   ^\s+Port\s+mode\s+is\s+${MODE}
   ^\s+${DUPLEX},\s+${SPEED}(,\s+media\s+type\s+is\s+${MEDIA_TYPE})?\s*$$
   ^\s+MTU\s+${MTU}(.*BW\s+${BANDWIDTH}.*DLY\s+${DELAY})?
@@ -73,8 +74,8 @@ Start
   ^\s+${OUTPUT_PACKETS}\s+output\s+packets\s+\d+\s+bytes\s*$$
   ^\s+${INPUT_PACKETS}\s+input\s+packets(\s+\d+\s+(unicast|multicast)+\s+packets){2}\s*$$
   ^\s+${OUTPUT_PACKETS}\s+output\s+packets(\s+\d+\s+(unicast|multicast)+\s+packets){2}\s*$$
-  ^\s+${INPUT_PACKETS}\s+packets\s+input\s+\d+\s+bytes\s*$$
-  ^\s+${OUTPUT_PACKETS}\s+packets\s+output\s+\d+\s+bytes\s+${UNDERRUN}\s+underruns\s*$$
+  ^\s+${INPUT_PACKETS}\s+packets\s+input,?\s+\d+\s+bytes\s*$$
+  ^\s+${OUTPUT_PACKETS}\s+packets\s+output,?\s+\d+\s+bytes(\s+${UNDERRUN}\s+underruns\s*)?$$
   ^\s+input:\s+${INPUT_PACKETS}\s+pkts,\s+\d+\s+bytes\s+-\s+output:\s+${OUTPUT_PACKETS}\s+pkts,\s+\d+\s+bytes\s*$$
   ^\s+Last\s+link\s+flapped\s+${LAST_LINK_FLAPPED}\s*$$
   ^\s+\d+\s+(second|minute)s?\s+input\s+rate\s+${BANDWIDTH_INPUT_RATE}\s+bits/sec(,\s+${PACKET_INPUT_RATE}\s+packets/sec)?
@@ -137,4 +138,6 @@ Start
   ^\s+\d+\s+too\s+long,\s+\d+\s+too\s+short
   ^\s+\d+\s+(in|out)put\s+OLS,\s+\d+\s+LRR,\s+\d+\s+NOS,\s+\d+\s+loop\s+inits
   ^\s+Interface\s+last\s+changed
+  ^\s+T(unnel|ransport)\s+protocol
+  ^\s+Tunnel\s+(source|interface)
   ^. -> Error
