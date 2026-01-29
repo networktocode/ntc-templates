@@ -89,4 +89,4 @@ Trunk
   ^\s+((\d+|\d+\-\d+),)+${TRUNKING_VLANS}\s*$$ -> Start
   ^\s+((\d+|\d+\-\d+),)+(\d+|\d+\-\d+),\s*$$ -> Trunk
   ^\s+${TRUNKING_VLANS}$$ -> Start
-  #^. -> Error
+  ^. -> Error
