@@ -1,0 +1,48 @@
+Value MEMBER_PORT (\S+)
+Value AGGREGATE_INTERFACE (\S+)
+Value LOCAL_PORT_NUMBER (\d+)
+Value LOCAL_PORT_PRIORITY (\d+)
+Value LOCAL_OPER_KEY (\d+)
+Value LOCAL_FLAG (\{[A-Z]*\})
+Value REMOTE_SYSTEM_ID (\S+,\s+\S+)
+Value REMOTE_PORT_NUMBER (\d+)
+Value REMOTE_PORT_PRIORITY (\d+)
+Value REMOTE_OPER_KEY (\d+)
+Value REMOTE_FLAG (\{[A-Z]*\})
+Value RECEIVED_PACKETS (\d+)
+Value ILLEGAL_PACKETS (\d+)
+Value SENT_PACKETS (\d+)
+
+Start
+  ^Flags: -> LACP_OUTPUT
+  
+LACP_OUTPUT
+  ^\s+[A-Z]\s--\s.+$$
+  ^Local:\s*$$ -> LOCAL_PORT_OUTPUT
+  ^Remote:\s*$$ -> REMOTE_PORT_OUTPUT
+  ^${MEMBER_PORT}:\s*$$
+  ^(Aggregate|Aggregation)\s+Interface:\s+${AGGREGATE_INTERFACE}
+  ^\s*Port\s+Number:\s+${LOCAL_PORT_NUMBER}
+  ^\s*Port\s+Priority:\s+${LOCAL_PORT_PRIORITY}
+  ^\s*Oper-Key:\s+${LOCAL_OPER_KEY} -> Record
+  ^Received\s+LACP\s+Packets:\s+${RECEIVED_PACKETS}\s+packet\(s\)
+  ^Illegal:\s+${ILLEGAL_PACKETS}\s+packet\(s\)
+  ^Sent\s+LACP\s+Packets:\s+${SENT_PACKETS}\s+packet\(s\) -> Record
+  ^\s*$$
+  ^. -> Error
+
+LOCAL_PORT_OUTPUT
+  ^\s+Port\s+Number:\s+${LOCAL_PORT_NUMBER}
+  ^\s+Port\s+Priority:\s+${LOCAL_PORT_PRIORITY}
+  ^\s+Oper-Key:\s+${LOCAL_OPER_KEY}
+  ^\s+Flag:\s+${LOCAL_FLAG}
+  ^Remote:\s*$$ -> REMOTE_PORT_OUTPUT
+  ^. -> Error
+
+REMOTE_PORT_OUTPUT
+  ^\s+System\s+ID:\s+${REMOTE_SYSTEM_ID}
+  ^\s+Port\s+Number:\s+${REMOTE_PORT_NUMBER}
+  ^\s+Port\s+Priority:\s+${REMOTE_PORT_PRIORITY}
+  ^\s+Oper-Key:\s+${REMOTE_OPER_KEY}
+  ^\s+Flag:\s+${REMOTE_FLAG}\s*$$ -> LACP_OUTPUT
+  ^. -> Error

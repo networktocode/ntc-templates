@@ -1,0 +1,84 @@
+ GigabitEthernet12/0/17 current state: DOWN ( Administratively )
+ IP Packet Frame Type: PKTFMT_ETHNT_2, Hardware Address: 3822-d629-5e21
+ Description: GigabitEthernet12/0/17 Interface
+ Loopback is not set
+ Media type is twisted pair
+ Port hardware type is  1000_BASE_T
+ Unknown-speed mode, unknown-duplex mode
+ Link speed type is autonegotiation, link duplex type is autonegotiation
+ Flow-control is not enabled
+ The Maximum Frame Length is 1518
+ Broadcast MAX-ratio: 100%
+ Unicast MAX-ratio: 100%
+ Multicast MAX-ratio: 100%
+ Forbid jumbo frame to pass
+ PVID: 200
+ Mdi type: auto
+ Link delay is 0(sec)
+ Port link-type: access
+  Tagged   VLAN ID : none
+  Untagged VLAN ID : 200
+ Port priority: 0
+ Last clearing of counters:  23:17:06 Sun 03/07/2021
+ Peak value of input: 51839 bytes/sec, at 2022-05-06 09:37:18
+ Peak value of output: 65267 bytes/sec, at 2022-04-29 01:23:12
+ Last 300 seconds input:  0 packets/sec 0 bytes/sec -%
+ Last 300 seconds output:  0 packets/sec 0 bytes/sec -%
+ Input (total):  15657716 packets, 2077724863 bytes
+         13292312 unicasts, 67542 broadcasts, 2297862 multicasts, 0 pauses
+ Input (normal):  15657716 packets, - bytes
+         13292312 unicasts, 67542 broadcasts, 2297862 multicasts, 0 pauses
+ Input:  0 input errors, 0 runts, 0 giants, 0 throttles
+         0 CRC, 0 frame, - overruns, 0 aborts
+         - ignored, - parity errors
+ Output (total): 224919997 packets, 23685575500 bytes
+         22486252 unicasts, 126451753 broadcasts, 75981992 multicasts, 0 pauses
+ Output (normal): 224919997 packets, - bytes
+         22486252 unicasts, 126451753 broadcasts, 75981992 multicasts, 0 pauses
+ Output: 0 output errors, - underruns, - buffer failures
+         0 aborts, 0 deferred, 0 collisions, 0 late collisions
+         0 lost carrier, - no carrier
+
+GigabitEthernet11/0/17
+Current state: STP DOWN
+Line protocol state: DOWN
+IP packet frame type: Ethernet II, hardware address: ec9b-8baa-f45e
+Description: Server Mgmt Port
+Bandwidth: 1000000 kbps
+Loopback is not set
+Media type is twisted pair
+Port hardware type is 1000_BASE_T
+Unknown-speed mode, unknown-duplex mode
+Link speed type is autonegotiation, link duplex type is autonegotiation
+Flow-control is not enabled
+Maximum frame length: 1536
+Forbid jumbo frames to pass
+Broadcast max-ratio: 100%
+Multicast max-ratio: 100%
+Unicast max-ratio: 100%
+PVID: 231
+MDI type: automdix
+Port link-type: Access
+ Tagged VLANs:   None
+ Untagged VLANs: 231
+Port priority: 0
+Last link flapping: 61 weeks 6 days 20 hours 43 minutes
+Last clearing of counters: Never
+ Peak input rate: 2 bytes/sec, at 2024-07-22 20:46:58 
+ Peak output rate: 5 bytes/sec, at 2024-07-22 20:46:58 
+ Last 300 second input: 0 packets/sec 0 bytes/sec -%
+ Last 300 second output: 0 packets/sec 0 bytes/sec -%
+ Input (total):  3 packets, 773 bytes
+         1 unicasts, 0 broadcasts, 2 multicasts, 0 pauses
+ Input (normal):  3 packets, - bytes
+         1 unicasts, 0 broadcasts, 2 multicasts, 0 pauses
+ Input:  0 input errors, 0 runts, 0 giants, 0 throttles
+         0 CRC, 0 frame, - overruns, 0 aborts
+         - ignored, - parity errors
+ Output (total): 7 packets, 1674 bytes
+         4 unicasts, 0 broadcasts, 3 multicasts, 0 pauses
+ Output (normal): 7 packets, - bytes
+         4 unicasts, 0 broadcasts, 3 multicasts, 0 pauses
+ Output: 0 output errors, - underruns, - buffer failures
+         0 aborts, 0 deferred, 0 collisions, 0 late collisions
+         0 lost carrier, - no carrier

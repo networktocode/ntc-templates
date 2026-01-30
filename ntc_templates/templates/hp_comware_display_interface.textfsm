@@ -1,5 +1,5 @@
 Value Required INTERFACE (\S+)
-Value LINE_STATUS (UP|DOWN|Administratively DOWN)
+Value LINE_STATUS (UP|DOWN|Administratively DOWN|STP DOWN)
 Value PROTOCOL_STATUS (UP(\(spoofing\))?|DOWN)
 Value List IP_ADDRESS (\S+)
 Value MTU (\d+)
@@ -27,10 +27,10 @@ Start
   ^\s*Maximum\s+[Tt]ransmi\S+\s+[Uu]nit:\s+${MTU}
   ^\s*The\sMaximum\s+Transmit\s+Unit\sis\s+${MTU}
   ^\s*Maximum\s+frame\s+length:\s*${L2MTU}
-  ^\s*Forbid\s+jumbo\s+frames\s+to\s+pass
+  ^\s*Forbid\s+jumbo\s+frame(s?)\s+to\s+pass
   ^\s*The\s+[Mm]aximum\s+[Ff]rame\s+[Ll]ength\s+is\s+${L2MTU}
-  ^\s*Internet\s+[Aa]ddress:\s+${IP_ADDRESS}\s+\(([Pp]rimary|[Ss]ub|[Cc]ellular-[Aa]llocated)\)
-  ^\s*Internet\s+[Aa]ddress\s+is\s+${IP_ADDRESS}\s+[Pp]rimary
+  ^\s*Internet\s+[Aa]ddress:\s+${IP_ADDRESS}\s+\(([Pp]rimary|[Ss]ub|[Cc]ellular-[Aa]llocated|DHCP-[Aa]llocated)\)
+  ^\s*Internet\s+[Aa]ddress\s+is\s+${IP_ADDRESS}\s+([Pp]rimary|[Ss]ub|[Cc]ellular-[Aa]llocated|DHCP-[Aa]llocated)
   ^\s*IP\s+[Pp]acket\s+[Ff]rame\s+[Tt]ype\s*:\s*[^,]+,\s+[Hh]ardware\s+[Aa]ddress:\s+${HW_ADDRESS}
   ^\s*IPv6\s+[Pp]acket\s+[Ff]rame\s+[Tt]ype\s*:\s*[^,]+,\s+[Hh]ardware\s+[Aa]ddress:\s+${HW_ADDRESS}
   ^\s*${SPEED}\s+mode\s*,\s+${DUPLEX}\s+mode
@@ -38,6 +38,7 @@ Start
   ^\s*PVID:\s+${VLAN_NATIVE}
   ^\s*Port\s+link-type:\s+${PORT_LINK_TYPE}
   ^\s*Un[Tt]agged\s+VLAN\s+ID\s*:\s*${UNTAGGED_VLAN_ID}
+  ^\s*Un[Tt]agged\s+(VLAN|Vlan)(s?):\s*${UNTAGGED_VLAN_ID}
   # Trunk - Passing VLANs (parsing multiple times with Continue)
   ^\s+VLAN\s+[Pp]assing\s*:\s+${VLAN_PASSING},* -> Continue
   # Skip initial VLANs and read the Nth + 1
@@ -142,19 +143,22 @@ Start
   ^\s*Trunk\s+port
   ^\s*Loopback
   ^\s*Media
+  ^\s*Ethernet\s+port\s+mode:
   ^\s*[Ff]low
   ^\s*Allow\s+jumbo
   ^\s*Broadcast
   ^\s*Multicast
   ^\s*Unicast
+  ^\s*Known-unicast
   ^\s*No\sconnector
   ^\s*M[Dd][Ii]\s+type
+  ^\s*Port\s+up-mode
   ^\s*Port\s+priority
   ^\s*Current\s*system
   ^\s*Peak
   ^\s*IPv4\s+traffic
   ^\s*IPv6\s+traffic
-  ^\s+Tagged\s+VLAN
+  ^\s+Tagged\s+(VLAN|Vlan)
   ^\s+Un[tT]agged\s+VLAN
   ^\s*[Ii]nput
   ^\s*[Oo]utput
@@ -165,14 +169,14 @@ Start
   ^\s+-\s+unicasts
   ^\s+\d+\s+[Cc][Rr][Cc]
   ^\s+\d+\s+aborts
-  ^\s+\d+\s+packets,*\s*
+  ^\s*\d+\s+packets,*\s*
   ^\s+\d+\s+errors,*\s*
   ^\s+\d+\s+lost
   ^\s+\d+\s+input\s+error
   ^\s+\d+\s+output\s+error
   ^\s+\d+\s+drops,*\s*
   ^\s+\d+\s+deferred,*\s*
-  ^\s+\d+\s+broadcasts
+  ^\s+(-|\d+)\s+broadcasts
   ^\s+\d+\s+ignored
   ^\s+\d+\s+dribbles
   ^\s*Tunnel\s

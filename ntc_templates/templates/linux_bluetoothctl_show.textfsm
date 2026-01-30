@@ -1,0 +1,73 @@
+Value CONTROLLER_ID (\S+\s+\(\S+\))
+Value MANUFACTURER_ID (\S+\s+\(\d+\))
+Value VERSION (\S+\s+\(\d+\))
+Value NAME (\S.+\S|\S+)
+Value ALIAS (\S.+\S|\S+)
+Value CLASS (\S+\s+\(\d+\))
+Value POWERED (\S+)
+Value DISCOVERABLE (\S+)
+Value DISCOVERABLE_TIMEOUT (\S+\s+\(\d+\))
+Value PAIRABLE (\S+)
+Value UUID_MESSAGE_NOTIFICATION_SERVER (\S+)
+Value UUID_A_V_REMOTE_CONTROL (\S+)
+Value UUID_OBEX_OBJECT_PUSH (\S+)
+Value UUID_MESSAGE_ACCESS_SERVER (\S+)
+Value UUID_PNP_INFORMATION (\S+)
+Value UUID_IRMC_SYNC (\S+)
+Value UUID_VENDOR_SPECIFIC (\S+)
+Value UUID_AV_REMOTE_CONTROL_TARGET (\S+)
+Value UUID_GENERIC_ATTRIBUTE_PROFILE (\S+)
+Value UUID_PHONEBOOK_ACCESS_SERVER (\S+)
+Value UUID_AUDIO_SINK (\S+)
+Value UUID_DEVICE_INFORMATION (\S+)
+Value UUID_GENERIC_ACCESS_PROFILE (\S+)
+Value UUID_HANDSFREE_AUDIO_GATEWAY (\S+)
+Value UUID_AUDIO_SOURCE (\S+)
+Value UUID_OBEX_FILE_TRANSFER (\S+)
+Value UUID_HANDSFREE (\S+)
+Value MODALIAS (\S+)
+Value DISCOVERING (\S+)
+Value List ROLES (\S+)
+Value ACTIVE_INSTANCES (\S+\s+\(\d+\))
+Value SUPPORTED_INSTANCES (\S+\s+\(\d+\))
+Value List SUPPORTED_INCLUDES (\S+)
+Value List SUPPORTED_SECONDARY_CHANNELS (\S+)
+
+Start
+  ^\s*Controller\s+${CONTROLLER_ID}\s*$$
+  ^\s*Manufacturer:\s+${MANUFACTURER_ID}\s*$$
+  ^\s*Version:\s+${VERSION}\s*$$
+  ^\s*Name:\s+${NAME}\s*$$
+  ^\s*Alias:\s+${ALIAS}\s*$$
+  ^\s*Class:\s+${CLASS}\s*$$
+  ^\s*Powered:\s+${POWERED}\s*$$
+  ^\s*Discoverable:\s+${DISCOVERABLE}\s*$$
+  ^\s*DiscoverableTimeout:\s+${DISCOVERABLE_TIMEOUT}\s*$$
+  ^\s*Pairable:\s+${PAIRABLE}\s*$$
+  ^\s*UUID:\s+Message\s+Notification\s+Se\.\.\s+\(${UUID_MESSAGE_NOTIFICATION_SERVER}\)\s*$$
+  ^\s*UUID:\s+A\/V\s+Remote\s+Control\s+\(${UUID_A_V_REMOTE_CONTROL}\)\s*$$
+  ^\s*UUID:\s+OBEX\s+Object\s+Push\s+\(${UUID_OBEX_OBJECT_PUSH}\)\s*$$
+  ^\s*UUID:\s+Message\s+Access\s+Server\s+\(${UUID_MESSAGE_ACCESS_SERVER}\)\s*$$
+  ^\s*UUID:\s+PnP\s+Information\s+\(${UUID_PNP_INFORMATION}\)\s*$$
+  ^\s*UUID:\s+IrMC\s+Sync\s+\(${UUID_IRMC_SYNC}\)\s*$$
+  ^\s*UUID:\s+Vendor\s+specific\s+\(${UUID_VENDOR_SPECIFIC}\)\s*$$
+  ^\s*UUID:\s+A\/V\s+Remote\s+Control\s+Target\s+\(${UUID_AV_REMOTE_CONTROL_TARGET}\)\s*$$
+  ^\s*UUID:\s+Generic\s+Attribute\s+Profile\s+\(${UUID_GENERIC_ATTRIBUTE_PROFILE}\)\s*$$
+  ^\s*UUID:\s+Phonebook\s+Access\s+Server\s+\(${UUID_PHONEBOOK_ACCESS_SERVER}\)\s*$$
+  ^\s*UUID:\s+Audio\s+Sink\s+\(${UUID_AUDIO_SINK}\)\s*$$
+  ^\s*UUID:\s+Device\s+Information\s+\(${UUID_DEVICE_INFORMATION}\)\s*$$
+  ^\s*UUID:\s+Generic\s+Access\s+Profile\s+\(${UUID_GENERIC_ACCESS_PROFILE}\)\s*$$
+  ^\s*UUID:\s+Handsfree\s+Audio\s+Gateway\s+\(${UUID_HANDSFREE_AUDIO_GATEWAY}\)\s*$$
+  ^\s*UUID:\s+Audio\s+Source\s+\(${UUID_AUDIO_SOURCE}\)\s*$$
+  ^\s*UUID:\s+OBEX\s+File\s+Transfer\s+\(${UUID_OBEX_FILE_TRANSFER}\)\s*$$
+  ^\s*UUID:\s+Handsfree\s+\(${UUID_HANDSFREE}\)\s*$$
+  ^\s*Modalias:\s+${MODALIAS}\s*$$
+  ^\s*Discovering:\s+${DISCOVERING}\s*$$
+  ^\s*Roles:\s+${ROLES}\s*$$
+  ^\s*Advertising\s+Features:\s*$$
+  ^\s*ActiveInstances:\s+${ACTIVE_INSTANCES}\s*$$
+  ^\s*SupportedInstances:\s+${SUPPORTED_INSTANCES}\s*$$
+  ^\s*SupportedIncludes:\s+${SUPPORTED_INCLUDES}\s*$$
+  ^\s*SupportedSecondaryChannels:\s+${SUPPORTED_SECONDARY_CHANNELS}\s*$$
+  ^\s*$$
+  ^. -> Error

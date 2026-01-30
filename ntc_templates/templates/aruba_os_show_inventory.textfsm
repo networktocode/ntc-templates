@@ -1,0 +1,36 @@
+Value SUP_SLOT (\d+)
+Value SYSTEM_SERIAL (\S+)
+Value CPU_CARD_SERIAL (\S+)
+Value CPU_CARD_ASSEMBLY (\S+)
+Value CPU_CARD_REV (\S+)
+Value INTERFACE_CARD_SERIAL (\S+)
+Value INTERFACE_CARD_ASSEMBLY (\S+)
+Value INTERFACE_CARD_REV (\S+)
+Value SC_MODEL (\S+)
+Value HW_MAC_ADDR_START (\S+)
+Value HW_MAC_ADDR_END (\S+)
+Value CPLD_VERSION (\S+)
+
+
+Start
+  ^Supervisor\s+Card\s+slot\s+:\s+${SUP_SLOT}
+  ^System\s+Serial#\s+:\s+${SYSTEM_SERIAL}
+  ^CPU\s+Card\s+Serial#\s+:\s+${CPU_CARD_SERIAL}
+  ^CPU\s+Card\s+Assembly#\s+:\s+${CPU_CARD_ASSEMBLY}
+  ^CPU\s+Card\s+Revision\s+:\s+\(Rev:${CPU_CARD_REV}\)
+  ^Interface\s+Card\s+Serial#\s+:\s+${INTERFACE_CARD_SERIAL}
+  ^Interface\s+Card\s+Assembly#\s+:\s+${INTERFACE_CARD_ASSEMBLY}
+  ^Interface\s+Card\s+Revision\s+:\s+\(Rev:${INTERFACE_CARD_REV}\)
+  ^SC\s+Model#\s+:\s+${SC_MODEL}
+  ^HW\s+MAC\s+Addr\s+:\s+${HW_MAC_ADDR_START}\s+to\s+${HW_MAC_ADDR_END}
+  ^CPLD\s+Version\s+:\s+\(Rev:\s+${CPLD_VERSION}\) -> Record
+  ^Power\s+Supply.+$$
+  ^\s+:\s+.+$$
+  ^Main\s+Board\s+Temperatures\s+:
+  ^Interface\s+Board\s+Temperatures\s+:
+  ^Fan.+$$
+  ^Main\s+Board\s+Voltages\s+:
+  ^ispPAC.+$$
+  ^Interface\s+Board\s+Voltages\s+:  
+  ^\s*$$
+  ^. -> Error

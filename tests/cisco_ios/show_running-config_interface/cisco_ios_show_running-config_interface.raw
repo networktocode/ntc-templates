@@ -1,0 +1,82 @@
+Building configuration...
+
+Current configuration : 440 bytes
+!
+interface GigabitEthernet2/0/4.223415
+ description DISTRIBUTION  | 2048K
+ bandwidth 2048
+ encapsulation dot1Q 2234 second-dot1q 15
+ vrf forwarding CLIENT_VOIP:1234
+ ip address 10.30.33.161 255.255.255.252
+ no ip proxy-arp
+ ip verify unicast source reachable-via rx allow-default allow-self-ping
+ service-policy input VIPSIP_POLICY_2048_V1
+ service-policy output VIPSIP_POLICY_2048_OUT
+!
+interface GigabitEthernet2/0/4.223427
+ description PEOPLE | 100M
+ bandwidth 100000
+ encapsulation dot1Q 2234 second-dot1q 27
+ vrf forwarding CLIENT_VOIP:1234
+ ip address 10.53.8.241 255.255.255.252
+ no ip proxy-arp
+ ip verify unicast source reachable-via rx allow-default allow-self-ping
+ service-policy input DATA_POLICY_100M_V1
+ service-policy output DATA_POLICY_100M_OUT
+!
+interface GigabitEthernet2/0/4.223436
+ description AVENIDA | 100M
+ bandwidth 2048
+ encapsulation dot1Q 2234 second-dot1q 36
+ vrf forwarding CLIENT_VOIP:1234
+ ip address 10.39.246.29 255.255.255.252
+ no ip proxy-arp
+ ip verify unicast source reachable-via rx allow-default allow-self-ping
+ ip access-group oACL out
+ ip access-group iACL in
+ service-policy input VIPSIP_POLICY_2048_V1
+ service-policy output VIPSIP_POLICY_2048_OUT
+!
+interface GigabitEthernet2/0/4.223449
+ description MONTE EVEREST | 1500K
+ bandwidth 2048
+ encapsulation dot1Q 2234 second-dot1q 49
+ vrf forwarding CLIENT_VOIP:1234
+ ip address 10.30.33.41 255.255.255.252
+ no ip proxy-arp
+ ip verify unicast source reachable-via tx allow-default allow-self-ping
+ ip access-group iACL in
+ ip access-group ACL_OUTPUT out
+ service-policy input VIPSIP_POLICY_2048_V1
+ service-policy output VIPSIP_POLICY_2048_OUT
+!
+interface GigabitEthernet2/0/4.223478
+ description TEST PASS| 100M
+ mtu 9096
+ bandwidth 1000
+ encapsulation dot1Q 2234 second-dot1q 1011
+ ip vrf forwarding CLIENT_VOIP:1234
+ ip address 10.39.18.217 255.255.255.252
+ ipv6 address FE80:A8::2DA::1689/126
+ ip flow monitor IPV4_MONITOR_MAP sampler FNF_SAMPLER_MAP input
+ no ip proxy-arp
+ no negotiation
+ ip verify unicast source reachable-via rx allow-default allow-self-ping
+ ip access-group ACL_INPUT in
+ service-policy input VIPSIP_POLICY_1000_V1
+ service-policy output VIPSIP_POLICY_1000_OUT
+!
+interface GigabitEthernet2/0/4.22341020
+ description BLUE | 800K
+ mtu 1546
+ bandwidth 800
+ encapsulation dot1Q 2234 second-dot1q 1020
+ vrf forwarding CLIENT_VOIP:1234
+ ip flow monitor IPV4_MONITOR_MAP sampler FNF_SAMPLER_MAP input
+ ip address 10.30.33.197 255.255.255.252
+ no ip proxy-arp
+ ip verify unicast source reachable-via rx allow-default allow-self-ping
+ ip access-group oACL out
+ service-policy input VIPSIP_POLICY_800_V1
+ service-policy output VIPSIP_POLICY_800_OUT
+!

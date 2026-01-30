@@ -1,0 +1,37 @@
+Flags: A -- LACP_Activity, B -- LACP_Timeout, C -- Aggregation,
+       D -- Synchronization, E -- Collecting, F -- Distributing,
+       G -- Defaulted, H -- Expired
+
+GigabitEthernet4/0/36:
+Aggregation Interface: Bridge-Aggregation123
+Local:
+    Port Number: 74
+    Port Priority: 32768
+    Oper-Key: 1
+    Flag: {ACG}
+Remote:
+    System ID: 0x8000, 0000-0000-0000
+    Port Number: 0
+    Port Priority: 32768
+    Oper-Key: 0
+    Flag: {EF}
+Received LACP Packets: 0 packet(s)
+Illegal: 0 packet(s)
+Sent LACP Packets: 0 packet(s)
+
+GigabitEthernet7/0/1:
+Aggregation Interface: Bridge-Aggregation123
+Local:          
+    Port Number: 76
+    Port Priority: 32768
+    Oper-Key: 1
+    Flag: {ACG}
+Remote:
+    System ID: 0x8000, 0000-0000-0000
+    Port Number: 0
+    Port Priority: 32768
+    Oper-Key: 0
+    Flag: {EF}
+Received LACP Packets: 0 packet(s)
+Illegal: 0 packet(s)
+Sent LACP Packets: 0 packet(s)

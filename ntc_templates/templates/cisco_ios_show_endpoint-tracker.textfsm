@@ -1,0 +1,12 @@
+Value INTERFACE (\S+)
+Value NAME (\S+)
+Value STATUS (\S+)
+Value RTT (\d+)
+Value PROBE_ID (\d+)
+Value NEXT_HOP (\S+)
+
+Start
+  ^Interface\s+Record\s+Name\s+Status\s+RTT
+  ^\s*${INTERFACE}\s+${NAME}\s+${STATUS}\s+${RTT}\s+${PROBE_ID}\s+${NEXT_HOP} -> Record
+  ^\s*$$
+  ^. -> Error

@@ -1,26 +1,106 @@
 ---
 parsed_sample:
-  - vrf: "DR"
+  - bgp_neighbor: []
+    input_queue: []
+    local_as_number: "15005"
+    messages_received: []
+    messages_sent: []
+    neighbor_as: []
+    output_queue: []
     rd: "10.1.1.1:5"
+    spk: []
     state: "Active"
+    state_or_prefixes_received: []
+    table_version: []
+    up_down: []
+    vrf: "DR"
+  - bgp_neighbor:
+      - "10.10.10.10"
+    input_queue:
+      - "0"
     local_as_number: "15005"
-  - vrf: "PROD"
+    messages_received:
+      - "83403"
+    messages_sent:
+      - "96226"
+    neighbor_as:
+      - "65370"
+    output_queue:
+      - "0"
     rd: "10.1.1.1:3"
+    spk:
+      - "0"
     state: "Active"
+    state_or_prefixes_received:
+      - "34543"
+    table_version:
+      - "31259922"
+    up_down:
+      - "6w2d"
+    vrf: "PROD"
+  - bgp_neighbor:
+      - "172.16.16.10"
+    input_queue:
+      - "0"
     local_as_number: "15005"
-  - vrf: "REPL"
+    messages_received:
+      - "63970"
+    messages_sent:
+      - "64069"
+    neighbor_as:
+      - "65320"
+    output_queue:
+      - "0"
     rd: "10.1.1.1:1"
+    spk:
+      - "0"
     state: "Active"
+    state_or_prefixes_received:
+      - "1"
+    table_version:
+      - "31259922"
+    up_down:
+      - "6w2d"
+    vrf: "REPL"
+  - bgp_neighbor: []
+    input_queue: []
     local_as_number: "15005"
-  - vrf: "EXTRANET"
+    messages_received: []
+    messages_sent: []
+    neighbor_as: []
+    output_queue: []
     rd: "10.1.1.1:7"
+    spk: []
     state: "Active"
+    state_or_prefixes_received: []
+    table_version: []
+    up_down: []
+    vrf: "EXTRANET"
+  - bgp_neighbor: []
+    input_queue: []
     local_as_number: "15005"
-  - vrf: "EXTRANET2"
+    messages_received: []
+    messages_sent: []
+    neighbor_as: []
+    output_queue: []
     rd: "10.1.1.1:8"
+    spk: []
     state: "Active"
-    local_as_number: "15005"
-  - vrf: "vrf-test"
-    rd: "65000:42"
-    state: "Active"
+    state_or_prefixes_received: []
+    table_version: []
+    up_down: []
+    vrf: "EXTRANET2"
+  - bgp_neighbor: []
+    input_queue: []
     local_as_number: "65000"
+    messages_received: []
+    messages_sent: []
+    neighbor_as: []
+    output_queue: []
+    rd: "65000:42"
+    spk: []
+    state: "Active"
+    state_or_prefixes_received: []
+    table_version: []
+    up_down: []
+    vrf: "vrf-test"

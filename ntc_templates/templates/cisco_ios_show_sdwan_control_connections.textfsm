@@ -1,0 +1,24 @@
+Value TYPE (\S+)
+Value PROTOCOL (\S+)
+Value SYSTEM_IP (\S+)
+Value SITE_ID (\d+)
+Value DOMAIN_ID (\d+)
+Value PRIVATE_IP (\S+)
+Value PRIVATE_PORT (\d+)
+Value PUBLIC_IP (\S+)
+Value PUBLIC_PORT (\d+)
+Value ORGANIZATION (\S+)
+Value LOCAL_COLOR (\S+)
+Value PROXY (\S+|-)
+Value STATE (\S+)
+Value UPTIME (\S+)
+Value CONTROLLER_GROUP_ID (\S+)
+
+Start
+  ^\s+(PEER\s+){2}CONTROLLER
+  ^\s*(PEER\s+){3}SITE\s+DOMAIN\s+PEER\s+PRIV\s+PEER\s+PUB\s+GROUP
+  ^\s*TYPE\s+PROT\s+SYSTEM\s+IP\s+ID\s+ID\s+PRIVATE\s+IP\s+PORT\s+PUBLIC\s+IP\s+PORT\s+ORGANIZATION\s+LOCAL\s+COLOR\s+PROXY\s+STATE\s+UPTIME\s+ID
+  ^\s*--+$$
+  ^\s*${TYPE}\s+${PROTOCOL}\s+${SYSTEM_IP}\s+${SITE_ID}\s+${DOMAIN_ID}\s+${PRIVATE_IP}\s+${PRIVATE_PORT}\s+${PUBLIC_IP}\s+${PUBLIC_PORT}\s+${ORGANIZATION}\s+${LOCAL_COLOR}\s+${PROXY}\s+${STATE}\s+${UPTIME}(?:\s+${CONTROLLER_GROUP_ID})? -> Record
+  ^\s*$$
+  ^. -> Error

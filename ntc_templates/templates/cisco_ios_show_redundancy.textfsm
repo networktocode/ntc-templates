@@ -23,6 +23,8 @@ Value ACTIVE_MINOR_RELEASE (\d+)
 Value ACTIVE_MAINTENANCE_RELEASE (\S+)
 Value ACTIVE_BOOT_DIRECTORY (\S+)
 Value ACTIVE_BOOT_FILE (\S+)
+Value FAST_SWITCHOVER (\S+)
+Value INITIAL_GARP (\S+)
 Value ACTIVE_CONFIG_REGISTER (\S+)
 Value STANDBY_SLOT (\S+)
 Value STANDBY_SOFTWARE_STATE (.+?)
@@ -61,7 +63,7 @@ Start
 
 Current
   ^\s*-+\s*$$
-  ^\s*Active\s+Location\s*=\s*slot\s+${ACTIVE_SLOT}\s*$$
+  ^\s*Active\s+Location\s*=\s*(slot|Switch)\s+${ACTIVE_SLOT}\s*$$
   ^\s*Current\s+Software\s+state\s*=\s*${ACTIVE_SOFTWARE_STATE}\s*$$
   ^\s*Uptime\s+in\s+current\s+state\s*=\s*(${ACTIVE_UPTIME_YEARS}\s*year(s)?,)?\s*(${ACTIVE_UPTIME_WEEKS}\s*week(s)?,)?\s*(${ACTIVE_UPTIME_DAYS}\s*day(s)?,)?\s*(${ACTIVE_UPTIME_HOURS}\s*hour(s)?,)?\s*${ACTIVE_UPTIME_MINUTES}\s*minute(s)?\s*$$
   ^\s*Image\s+Version
@@ -69,6 +71,8 @@ Current
   ^.+[Cc][Ii][Ss][Cc][Oo]
   ^.*(?:Copyright|Compiled|CONFIG_FILE|BOOTLDR)
   ^\s*BOOT\s*=\s*${ACTIVE_BOOT_DIRECTORY}:${ACTIVE_BOOT_FILE}\s*$$
+  ^\s*Fast\s+Switchover\s+=\s+${FAST_SWITCHOVER}
+  ^\s*Initial\s+Garp\s+=\s+${INITIAL_GARP}
   ^\s*Configuration\s+register\s*=\s*${ACTIVE_CONFIG_REGISTER}\s*$$
   ^Peer\s*\(slot:\s*unavailable\)\s*\w*\s*\w*\s*\w*\s*\w*\s*\w\s*\w*\s*\w*\s*\w*\s*\w*\s*\'${STANDBY_STATUS}\'\s*state$$ -> EOF
   ^\s*Peer\s+Processor -> Peer
@@ -77,7 +81,7 @@ Current
 
 Peer
   ^\s*-+\s*$$
-  ^\s*Standby\s+Location\s*=\s*slot\s+${STANDBY_SLOT}\s*$$
+  ^\s*Standby\s+Location\s*=\s*(slot|Switch)\s+${STANDBY_SLOT}\s*$$
   ^\s*Current\s+Software\s+state\s*=\s*${STANDBY_SOFTWARE_STATE}\s*$$
   ^\s*Uptime\s+in\s+current\s+state\s*=\s*(${STANDBY_UPTIME_YEARS}\s*year(s)?,)?\s*(${STANDBY_UPTIME_WEEKS}\s*week(s)?,)?\s*(${STANDBY_UPTIME_DAYS}\s*day(s)?,)?\s*(${STANDBY_UPTIME_HOURS}\s*hour(s)?,)?\s*${STANDBY_UPTIME_MINUTES}\s*minute(s)?\s*$$
   ^\s*Image\s+Version

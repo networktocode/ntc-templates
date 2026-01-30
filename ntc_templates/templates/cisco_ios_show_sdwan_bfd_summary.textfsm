@@ -1,0 +1,13 @@
+Value BFD_TOTAL (\d+)
+Value BFD_UP (\d+)
+Value BFD_MAX (\d+)
+Value BFD_FLAP (\d+)
+
+Start
+  ^\s*sessions-total\s*${BFD_TOTAL}
+  ^\s*sessions-up\s*${BFD_UP}
+  ^\s*sessions-max\s*${BFD_MAX}
+  ^\s*sessions-flap\s*${BFD_FLAP} -> Record
+  ^\s*poll-interval
+  ^\s*$$
+  ^. -> Error

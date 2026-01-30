@@ -1,0 +1,17 @@
+Value ID (\d+)
+Value DISABLED (X)
+Value INVALID (I)
+Value DYNAMIC (D)
+Value LOCAL (L)
+Value EXTERNAL (E)
+Value COMMENT (.*)
+Value MAC_ADDRESS ([a-zA-Z0-9]{2}(:[a-zA-Z0-9]{2}){5})
+Value VLAN_ID (\d+)
+Value INTERFACE (\S+)
+Value BRIDGE (\S+)
+Value ON_INTERFACE (\S+)
+
+Start
+  ^\s*${ID}\s+(?:${DISABLED})?(?:${INVALID})?(?:${DYNAMIC})?(?:${LOCAL}|\s)?(?:${EXTERNAL}|\s)?\s+(comment=${COMMENT}\s+)?mac-address=${MAC_ADDRESS}\s+(vid=${VLAN_ID}\s+)?interface=${INTERFACE}\s+bridge=${BRIDGE}(\s+on-interface=${ON_INTERFACE})?\s*$$ -> Record
+  ^\s*$$
+  ^. -> Error

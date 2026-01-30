@@ -1,0 +1,32 @@
+Flags: A -- LACP_Activity, B -- LACP_Timeout, C -- Aggregation, 
+       D -- Synchronization, E -- Collecting, F -- Distributing, 
+       G -- Defaulted, H -- Expired
+       
+FortyGigE1/0/10: 
+Aggregate Interface: Bridge-Aggregation11
+Local:         
+    Port Number: 37 
+    Port Priority: 32768 
+    Oper-Key: 2 
+    Flag: {ACDEF}
+Remote:        
+    System ID: 0x8000, 5c8a-3849-a0a0 
+    Port Number: 256 
+    Port Priority: 32768 
+    Oper-Key: 1 
+    Flag: {ACDEF}
+Received LACP Packets: 272834 packet(s) 
+Illegal: 0 packet(s) 
+Sent LACP Packets: 136456 packet(s)
+
+FortyGigE1/0/25: 
+Aggregate Interface: Bridge-Aggregation25
+Port Number: 97 
+Port Priority: 32768
+Oper-Key: 3
+
+FortyGigE1/0/26: 
+Aggregate Interface: Bridge-Aggregation25
+Port Number: 101 
+Port Priority: 32768
+Oper-Key: 3

@@ -1,0 +1,21 @@
+Value PEER (\S+)
+Value TYPE (\S+)
+Value DOMAIN_ID (\d+)
+Value OVERLAY_ID (\d+)
+Value SITE_ID (\d+)
+Value STATE (\S+)
+Value UPTIME (\S+)
+Value ROUTES_RECEIVED (\d+)
+Value ROUTES_INSTALLED (\d+)
+Value ROUTES_SENT (\d+)
+
+Start
+  ^R\s+->\s+routes\s+received
+  ^I\s+->\s+routes\s+installed
+  ^S\s+->\s+routes\s+sent
+  ^\s+DOMAIN\s+OVERLAY\s+SITE
+  ^PEER\s+TYPE\s+ID\s+ID\s+ID\s+STATE\s+UPTIME\s+R/I/S
+  ^\s*--+$$
+  ^\s*${PEER}\s+${TYPE}\s+${DOMAIN_ID}\s+${OVERLAY_ID}\s+${SITE_ID}\s+${STATE}\s+${UPTIME}\s+${ROUTES_RECEIVED}/${ROUTES_INSTALLED}/${ROUTES_SENT} -> Record
+  ^\s*$$
+  ^. -> Error

@@ -17,8 +17,9 @@ Value ACTIVE_CLIENT_ID (\S+)
 Value ACTIVE_SERVER (\S+)
 Value HOST_NAME (\S+)
 Value SRC_MAC_ADDRESS ((?:[0-9a-fA-F]{2}:){5}[0-9a-fA-F]{2})
+Value CLASS_ID (\S+|\S.+\S)
 
 Start
-  ^\s*${INDEX}(?:\s+${FLAG})?(?:\s+comment=${COMMENT})?\s+address=${ADDRESS}(?:\s+mac-address=${MAC_ADDRESS})?(?:\s+client-id=(?:\"?(\b${CLIENT_ID}\b)?\"?))?(?:\s+address-lists=(?:\"?(\b${ADDRESS_LISTS}\b)?\"?))?(?:\s+server=${SERVER})?(?:\s+dhcp-option=(?:\"?(\b${DHCP_OPTION}\b)?\"?))?(?:\s+status=${STATUS})?(?:\s+expires-after=${EXPIRES_AFTER})?(?:\s+last-seen=${LAST_SEEN})?(?:\s+age=${AGE})?(?:\s+active-address=${ACTIVE_ADDRESS})?(?:\s+active-mac-address=${ACTIVE_MAC_ADDRESS})?(?:\s+active-client-id=(?:\"?(\b${ACTIVE_CLIENT_ID}\b)?\"?))?(?:\s+active-server=${ACTIVE_SERVER})?(?:\s+host-name=(?:\"?(\b${HOST_NAME}\b)?\"?))?(?:\s+src-mac-address=${SRC_MAC_ADDRESS})?\s*$$ -> Record
+  ^\s*${INDEX}(?:\s+${FLAG})?(?:\s+comment=${COMMENT})?\s+address=${ADDRESS}(?:\s+mac-address=${MAC_ADDRESS})?(?:\s+client-id=(?:\"?(\b${CLIENT_ID}\b)?\"?))?(?:\s+address-lists=(?:\"?(\b${ADDRESS_LISTS}\b)?\"?))?(?:\s+server=${SERVER})?(?:\s+dhcp-option=(?:\"?(\b${DHCP_OPTION}\b)?\"?))?(?:\s+status=${STATUS})?(?:\s+expires-after=${EXPIRES_AFTER})?(?:\s+last-seen=${LAST_SEEN})?(?:\s+age=${AGE})?(?:\s+active-address=${ACTIVE_ADDRESS})?(?:\s+active-mac-address=${ACTIVE_MAC_ADDRESS})?(?:\s+active-client-id=(?:\"?(\b${ACTIVE_CLIENT_ID}\b)?\"?))?(?:\s+active-server=${ACTIVE_SERVER})?(?:\s+host-name=(?:\"?(\b${HOST_NAME}\b)?\"?))?(?:\s+src-mac-address=${SRC_MAC_ADDRESS})?(\s+class-id=${CLASS_ID})?\s*$$ -> Record
   ^\s*$$
   ^. -> Error

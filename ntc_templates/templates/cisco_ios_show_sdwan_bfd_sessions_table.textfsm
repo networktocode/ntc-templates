@@ -1,0 +1,24 @@
+Value SRC_IP (\S+)
+Value DST_IP (\S+)
+Value PROTOCOL (\S+)
+Value SRC_PORT (\d+)
+Value DST_PORT (\d+)
+Value SYSTEM_IP (\S+)
+Value SITE_ID (\d+)
+Value LOCAL_COLOR (\S+)
+Value REMOTE_COLOR (\S+)
+Value STATE (\S+)
+Value DETECT_MULTIPLIER (\d+)
+Value TX_INTERVAL (\d+)
+Value UPTIME (\S+)
+Value TRANSITIONS (\d+)
+
+Start
+  # Skip headers and separators
+  ^\s*SRC\s+DST\s+SITE\s+LOCAL\s+DETECT\s+TX
+  ^\s*SRC\s+IP\s+DST\s+IP\s+PROTO\s+PORT\s+PORT\s+SYSTEM\s+IP\s+ID\s+COLOR\s+COLOR\s+STATE\s+MULTIPLIER\s+INTERVAL\s+UPTIME\s+TRANSITIONS
+  ^\s*--+$$
+  # Match data rows
+  ^${SRC_IP}\s+${DST_IP}\s+${PROTOCOL}\s+${SRC_PORT}\s+${DST_PORT}\s+${SYSTEM_IP}\s+${SITE_ID}\s+${LOCAL_COLOR}\s+${REMOTE_COLOR}\s+${STATE}\s+${DETECT_MULTIPLIER}\s+${TX_INTERVAL}\s+${UPTIME}\s+${TRANSITIONS} -> Record
+  ^\s*$$
+  ^. -> Error

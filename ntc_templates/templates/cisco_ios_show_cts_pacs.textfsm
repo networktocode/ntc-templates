@@ -1,0 +1,36 @@
+Value AID (\S+)
+Value PAC_TYPE (.*)
+Value INITIATOR_ID (\S+)
+Value AUTHENTICATOR_ID_INFO (.*)
+Value TIME (\d+:\d+:\d+)
+Value TIMEZONE (\w+)
+Value WEEKDAY (Mon|Tue|Wed|Thu|Fri|Sat|Sun)
+Value MONTH (\w+)
+Value DAY (\d+)
+Value YEAR (\d+)
+Value PAC_OPAQUE (\S+)
+Value REFRESH_TIMER (\S+)
+Value REFRESH_TIMER_STOPPED (Refresh\s+timer\s+stopped)
+Value ERROR (No\s+PACs\s+found\s+in\s+the\s+key\s+store\.)
+Value SECONDS_WAITING_FOR_SERVER (\d+)
+
+Start
+  ^\s*Load\s+for\s+five\s+secs\s*:
+  ^\s*Time\s+source\s+is\s+
+  ^-+\s+show\s+(?:cts|sga-binos)\s+pacs\s+-+
+  ^${ERROR} -> Record
+  ^\s*AID\s*:\s+${AID}
+  ^\s*PAC-Info\s*:
+  ^\s+PAC-type\s+=\s+${PAC_TYPE}
+  ^\s+AID\s*:
+  ^\s+I-ID\s*:\s+${INITIATOR_ID}
+  ^\s+A-ID-Info\s*:\s+${AUTHENTICATOR_ID_INFO}
+  ^\s+Credential\s+Lifetime\s*:\s+${TIME}\s+${TIMEZONE}(\s+${WEEKDAY})?\s+${MONTH}\s+${DAY}(\s+${YEAR})?
+  ^\s*PAC-Opaque\s*:\s+${PAC_OPAQUE}
+  ^\s*Refresh\s+timer\s+is\s+set\s+for\s+${REFRESH_TIMER}
+  ^\s*${REFRESH_TIMER_STOPPED}\s*,\s+provisioning\s+jobs\s+in\s+session
+  ^\s*$$
+  ^\s*Reqid=\S+\s+\S+
+  ^\s*Refresh\s+delayed\s+for\s+${SECONDS_WAITING_FOR_SERVER}\s+seconds\s+waiting\s+for\s+server\s+address\s+information
+  ^\S+$$
+  ^.* -> Error

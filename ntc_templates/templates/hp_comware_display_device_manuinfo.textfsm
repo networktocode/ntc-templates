@@ -12,6 +12,7 @@ Start
   ^\s*Chassis\s+${CHASSIS_ID}
   ^\s*${SLOT_TYPE}\s+${SLOT_ID}
   ^\s*DEVICE_ID
+  ^\s*Only\s+new\s+chassis\s+
   ^\s*The\s+operation\s+is\s+not\s+supported\s+ -> Record
   ^\s*The\s+card\s+does\s+not\s+support\s+ -> Record
   ^\s*Failed\s+to\s+display\s+ -> Record
@@ -21,7 +22,7 @@ Start
   ^\s*MAC_ADDRESS\s*:\s*${MAC_ADDRESS}
   ^\s*MANUFACTURING_DATE\s*:\s*${MANUFACTURING_DATE}
   ^\s*VENDOR_NAME\s*:\s*${VENDOR_NAME} -> Record
-  ^\s*PRODUCT\s+NUMBER\s*:
+  ^\s*PRODUCT\s+(ID|NUMBER)\s*:
   ^\s*$$
   ^. -> Error
 
