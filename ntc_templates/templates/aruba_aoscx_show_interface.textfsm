@@ -82,9 +82,11 @@ Start
   ^\s*rate-limit\s+unknown-unicast
   ^\s*rate-limit\s+broadcast
   ^\s*rate-limit\s+multicast
+  ^\s*rate-limit\s+icmp
   ^\s*L3\s+Counters
   ^\s*MDI mode
   ^\s*Leader-follower\s+mode
+  ^\s*sFlow\s+is\s+disabled
   ^\s*Rate collection interval
   ^\s*Energy-Efficient
   ^\s*Rx -> Rx
