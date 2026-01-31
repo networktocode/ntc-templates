@@ -5,6 +5,6 @@ Value BREAKOUT_PORTS (\S+)
 Start
   ^${PARENT}\s+${BREAKOUT_MAP}\s+${BREAKOUT_PORTS}\s*$$ -> Record
   ^Parent\s+Breakout\s+Map\s+Breakout\s+Ports\s*$$
-  ^-+
+  ^---+
   ^\s*$$
   ^. -> Error
