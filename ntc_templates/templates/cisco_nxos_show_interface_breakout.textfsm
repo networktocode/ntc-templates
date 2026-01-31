@@ -1,0 +1,10 @@
+Value PARENT (\S+)
+Value BREAKOUT_MAP (\S+)
+Value BREAKOUT_PORTS (\S+)
+
+Start
+  ^${PARENT}\s+${BREAKOUT_MAP}\s+${BREAKOUT_PORTS}\s*$$ -> Record
+  ^[Pp]arent\s+[Bb]reakout [Mm]ap\s+[Bb]reakout [Pp]orts\s*$$
+  ^-+
+  ^\s*$$
+  ^. -> Error
