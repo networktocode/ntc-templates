@@ -15,7 +15,7 @@ Start
   ^\s*$$
   ^\s*H\s+Address\s+Interface\s+Hold\s+Uptime\s+SRTT\s+RTO\s+Q\s+Seq\s*$$
   ^\s+\(sec\)\s+\(ms\)\s+Cnt\s+Num\s*$$
-  # Capture time-stamp if vty line has command time-stamping turned on
+  # Match time-stamp if vty line has command time-stamping turned on
   ^\S+\s\S+\s\d+\s\d+:\d+:\d+\.\d+\s\S+
   ^. -> Error
 
