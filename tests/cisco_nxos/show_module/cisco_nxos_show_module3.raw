@@ -1,0 +1,45 @@
+Mod Ports             Module-Type                      Model           Status
+--- ----- ------------------------------------- --------------------- ---------
+1    32   32x100G Ethernet Module               N9K-X9732C-EX         initializing
+2    32   32x100G Ethernet Module               N9K-X9732C-EX         testing
+22   0    8-slot Fabric Module                  N9K-C9508-FM-E        ok
+24   0    Unknown Module                                              present
+26   0    8-slot Fabric Module                  N9K-C9508-FM-E        ok
+27   0    Supervisor Module                     N9K-SUP-A             active *
+28   0    Supervisor Module                     N9K-SUP-A             ha-standby
+29   0    System Controller                     N9K-SC-A              standby
+30   0    System Controller                     N9K-SC-A              active
+
+Mod  Sw                       Hw    Slot
+---  ----------------------- ------ ----
+1    9.3(15)                  1.4    LC1
+2    9.3(15)                  1.4    LC2
+22   9.3(15)                  1.2    FM2
+26   9.3(15)                  1.2    FM6
+27   9.3(15)                  1.2    SUP1
+28   9.3(15)                  1.0    SUP2
+29   9.3(15)                  1.4    SC1
+30   9.3(15)                  1.4    SC2
+
+
+Mod  MAC-Address(es)                         Serial-Num
+---  --------------------------------------  ----------
+1    00-27-e3-5f-5a-64 to 00-27-e3-5f-5a-e7  FOC21213GNT
+2    70-db-98-cb-90-78 to 70-db-98-cb-90-fb  FOC21213GKV
+22   NA                                      FOC21264ZX1
+26   NA                                      FOC21264ZY5
+27   e4-c7-22-bd-84-e0 to e4-c7-22-bd-84-f1  SAL1823U1XF
+28   e0-0e-da-36-a9-0c to e0-0e-da-36-a9-1d  SAL2027T03Z
+29   NA                                      SAL1829WZ8T
+30   NA                                      SAL1829WZ9B
+
+Mod  Online Diag Status
+---  ------------------
+1    Pass
+2    Pass
+22   Pass
+26   Pass
+27   Pass
+28   Pass
+29   Pass
+30   Pass
