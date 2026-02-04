@@ -1,0 +1,18 @@
+---
+parsed_sample:
+  - interface: "Eth1"
+    name: "tenGigE 0/0/2/0 as"
+    port_error: "linkFlapErrDisabled"
+    status: "linkFlapErr"
+  - interface: "Eth2"
+    name: "--"
+    port_error: "linkFlapErrDisabled"
+    status: "linkFlapErr"
+  - interface: "Eth3"
+    name: "--"
+    port_error: "Error disabled"
+    status: "err-disabled"
+  - interface: "Eth4"
+    name: "SD 180848 OFFER EM"
+    port_error: "linkFlapErrDisabled"
+    status: "linkFlapErr"

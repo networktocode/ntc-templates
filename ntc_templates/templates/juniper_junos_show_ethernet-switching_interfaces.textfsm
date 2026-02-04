@@ -1,0 +1,16 @@
+Value Required INTERFACE (\S+)
+Value STATUS (up|down)
+Value List VLAN_MEMBER (\S+)
+Value List VLAN_ID (\d+)
+Value List TAGGING ((un)?tagged)
+Value List PORT_ERROR (.*)
+
+Start
+  ^\s*Interface\s+State\s+VLAN\s+members\s+Tag\s+Tagging\s+Blocking
+  ^\S -> Continue.Record
+  ^${INTERFACE}\s+${STATUS}\s+${VLAN_MEMBER}\s+${VLAN_ID}\s+${TAGGING}\s+${PORT_ERROR}
+  ^${INTERFACE}\s+${STATUS}\s+${VLAN_MEMBER}\s+${TAGGING}\s+${PORT_ERROR}
+  ^${INTERFACE}\s+${STATUS}\s+${VLAN_MEMBER}\s+${PORT_ERROR}
+  ^\s+${VLAN_MEMBER}\s+${VLAN_ID}\s+${TAGGING}\s+${PORT_ERROR}
+  ^\s*$$
+  ^. -> Error
