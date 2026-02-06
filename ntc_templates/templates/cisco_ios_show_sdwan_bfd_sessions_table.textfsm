@@ -15,8 +15,8 @@ Value TRANSITIONS (\d+)
 
 Start
   # Skip headers and separators
-  ^\s*SRC\s+DST\s+SITE\s+LOCAL\s+DETECT\s+TX
-  ^\s*SRC\s+IP\s+DST\s+IP\s+PROTO\s+PORT\s+PORT\s+SYSTEM\s+IP\s+ID\s+COLOR\s+COLOR\s+STATE\s+MULTIPLIER\s+INTERVAL\s+UPTIME\s+TRANSITIONS
+  ^\s*SRC\s+DST\s+SITE\s+(LOCAL\s+)?DETECT\s+TX
+  ^\s*SRC\s+IP\s+DST\s+IP\s+PROTO\s+PORT\s+PORT\s+SYSTEM\s+IP\s+ID\s+(LOCAL\s+)?COLOR\s+COLOR\s+STATE\s+MULTIPLIER\s+INTERVAL\s+UPTIME\s+TRANSITIONS
   ^\s*--+$$
   # Match data rows
   ^${SRC_IP}\s+${DST_IP}\s+${PROTOCOL}\s+${SRC_PORT}\s+${DST_PORT}\s+${SYSTEM_IP}\s+${SITE_ID}\s+${LOCAL_COLOR}\s+${REMOTE_COLOR}\s+${STATE}\s+${DETECT_MULTIPLIER}\s+${TX_INTERVAL}\s+${UPTIME}\s+${TRANSITIONS} -> Record
