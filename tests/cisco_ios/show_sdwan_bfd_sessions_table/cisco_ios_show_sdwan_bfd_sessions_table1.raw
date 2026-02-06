@@ -1,0 +1,15 @@
+                                 SRC    DST                SITE                                           DETECT      TX
+SRC IP       DST IP       PROTO  PORT   PORT   SYSTEM IP   ID    LOCAL COLOR      COLOR            STATE  MULTIPLIER  INTERVAL  UPTIME      TRANSITIONS
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+10.10.23.10  10.10.23.6   ipsec  12346  12346  10.10.1.11  100   mpls             mpls             up     7           1000      0:00:42:15  0
+10.10.23.10  10.10.23.38  ipsec  12346  12346  10.10.1.11  100   mpls             public-internet  up     7           1000      0:00:42:15  0
+10.10.23.42  10.10.23.6   ipsec  12346  12346  10.10.1.11  100   public-internet  mpls             up     7           1000      0:00:42:15  0
+10.10.23.42  10.10.23.38  ipsec  12346  12346  10.10.1.11  100   public-internet  public-internet  up     7           1000      0:00:42:15  0
+10.10.23.10  10.10.23.14  ipsec  12346  12346  10.10.1.15  1002  mpls             mpls             up     7           1000      0:00:42:15  0
+10.10.23.10  10.10.23.46  ipsec  12346  12346  10.10.1.15  1002  mpls             public-internet  up     7           1000      0:00:42:14  0
+10.10.23.42  10.10.23.14  ipsec  12346  12346  10.10.1.15  1002  public-internet  mpls             up     7           1000      0:00:42:15  0
+10.10.23.42  10.10.23.46  ipsec  12346  12346  10.10.1.15  1002  public-internet  public-internet  up     7           1000      0:00:42:15  0
+10.10.23.10  10.10.23.18  ipsec  12346  12346  10.10.1.17  1003  mpls             mpls             up     7           1000      0:00:42:06  0
+10.10.23.42  10.10.23.18  ipsec  12346  12346  10.10.1.17  1003  public-internet  mpls             up     7           1000      0:00:42:06  0
+10.10.23.10  10.10.23.50  ipsec  12346  12346  10.10.1.18  1003  mpls             public-internet  up     7           1000      0:00:42:15  0
+10.10.23.42  10.10.23.50  ipsec  12346  12346  10.10.1.18  1003  public-internet  public-internet  up     7           1000      0:00:42:15  0
