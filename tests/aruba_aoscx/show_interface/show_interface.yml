@@ -1,6 +1,7 @@
 ---
 parsed_sample:
-  - auto_neg: "off"
+  - aggregated_interfaces: []
+    auto_neg: "off"
     duplex: "Full"
     error_control: "off"
     flow_control: "off"
@@ -8,6 +9,7 @@ parsed_sample:
     if_type: "SFP+DAC1"
     interface: "1/1/1"
     interface_desc: ""
+    ip_address: ""
     link_admin: "up"
     link_state_info: ""
     link_status: "up"
@@ -23,6 +25,7 @@ parsed_sample:
     rx_total_bytes: "457274611"
     rx_total_packets: "2417650"
     rx_unicast_packets: "0"
+    secondary_ip_address: []
     speed: "10000 Mb/s"
     tx_broadcast_packets: "5"
     tx_collision: "0"
@@ -35,11 +38,10 @@ parsed_sample:
     tx_unicast_packets: "0"
     vlan_access: ""
     vlan_mode: ""
-    ip_address: ""
-    vlan_trunk: []
     vlan_native: ""
-    aggregated_interfaces: []
-  - auto_neg: "on"
+    vlan_trunk: []
+  - aggregated_interfaces: []
+    auto_neg: "on"
     duplex: "Full"
     error_control: "off"
     flow_control: "off"
@@ -47,6 +49,7 @@ parsed_sample:
     if_type: "--"
     interface: "1/1/2"
     interface_desc: ""
+    ip_address: ""
     link_admin: "up"
     link_state_info: ""
     link_status: "down"
@@ -62,6 +65,7 @@ parsed_sample:
     rx_total_bytes: "0"
     rx_total_packets: "0"
     rx_unicast_packets: "0"
+    secondary_ip_address: []
     speed: "0 Mb/s"
     tx_broadcast_packets: "0"
     tx_collision: "0"
@@ -74,11 +78,10 @@ parsed_sample:
     tx_unicast_packets: "0"
     vlan_access: ""
     vlan_mode: ""
-    ip_address: ""
-    vlan_trunk: []
     vlan_native: ""
-    aggregated_interfaces: []
-  - auto_neg: "on"
+    vlan_trunk: []
+  - aggregated_interfaces: []
+    auto_neg: "on"
     duplex: "Full"
     error_control: "off"
     flow_control: "off"
@@ -86,6 +89,7 @@ parsed_sample:
     if_type: "--"
     interface: "1/1/3"
     interface_desc: ""
+    ip_address: ""
     link_admin: "up"
     link_state_info: ""
     link_status: "down"
@@ -101,6 +105,7 @@ parsed_sample:
     rx_total_bytes: "0"
     rx_total_packets: "0"
     rx_unicast_packets: "0"
+    secondary_ip_address: []
     speed: "0 Mb/s"
     tx_broadcast_packets: "0"
     tx_collision: "0"
@@ -113,11 +118,10 @@ parsed_sample:
     tx_unicast_packets: "0"
     vlan_access: "1"
     vlan_mode: "access"
-    ip_address: ""
-    vlan_trunk: []
     vlan_native: ""
-    aggregated_interfaces: []
-  - auto_neg: "on"
+    vlan_trunk: []
+  - aggregated_interfaces: []
+    auto_neg: "on"
     duplex: "Full"
     error_control: "off"
     flow_control: "off"
@@ -125,6 +129,7 @@ parsed_sample:
     if_type: "--"
     interface: "1/1/4"
     interface_desc: ""
+    ip_address: ""
     link_admin: "up"
     link_state_info: ""
     link_status: "down"
@@ -140,6 +145,7 @@ parsed_sample:
     rx_total_bytes: "0"
     rx_total_packets: "0"
     rx_unicast_packets: "0"
+    secondary_ip_address: []
     speed: "0 Mb/s"
     tx_broadcast_packets: "0"
     tx_collision: "0"
@@ -152,11 +158,10 @@ parsed_sample:
     tx_unicast_packets: "0"
     vlan_access: "1"
     vlan_mode: "access"
-    ip_address: ""
-    vlan_trunk: []
     vlan_native: ""
-    aggregated_interfaces: []
-  - auto_neg: "on"
+    vlan_trunk: []
+  - aggregated_interfaces: []
+    auto_neg: "on"
     duplex: "Full"
     error_control: "off"
     flow_control: "off"
@@ -164,6 +169,7 @@ parsed_sample:
     if_type: "--"
     interface: "1/1/5"
     interface_desc: ""
+    ip_address: ""
     link_admin: "up"
     link_state_info: ""
     link_status: "down"
@@ -179,6 +185,7 @@ parsed_sample:
     rx_total_bytes: "0"
     rx_total_packets: "0"
     rx_unicast_packets: "0"
+    secondary_ip_address: []
     speed: "0 Mb/s"
     tx_broadcast_packets: "0"
     tx_collision: "0"
@@ -191,11 +198,10 @@ parsed_sample:
     tx_unicast_packets: "0"
     vlan_access: "1"
     vlan_mode: "access"
-    ip_address: ""
-    vlan_trunk: []
     vlan_native: ""
-    aggregated_interfaces: []
-  - auto_neg: "on"
+    vlan_trunk: []
+  - aggregated_interfaces: []
+    auto_neg: "on"
     duplex: "Full"
     error_control: "off"
     flow_control: "off"
@@ -203,6 +209,7 @@ parsed_sample:
     if_type: "--"
     interface: "1/1/6"
     interface_desc: ""
+    ip_address: ""
     link_admin: "up"
     link_state_info: ""
     link_status: "down"
@@ -218,6 +225,7 @@ parsed_sample:
     rx_total_bytes: "0"
     rx_total_packets: "0"
     rx_unicast_packets: "0"
+    secondary_ip_address: []
     speed: "0 Mb/s"
     tx_broadcast_packets: "0"
     tx_collision: "0"
@@ -230,11 +238,10 @@ parsed_sample:
     tx_unicast_packets: "0"
     vlan_access: "1"
     vlan_mode: "access"
-    ip_address: ""
-    vlan_trunk: []
     vlan_native: ""
-    aggregated_interfaces: []
-  - auto_neg: "on"
+    vlan_trunk: []
+  - aggregated_interfaces: []
+    auto_neg: "on"
     duplex: "Full"
     error_control: "off"
     flow_control: "off"
@@ -242,6 +249,7 @@ parsed_sample:
     if_type: "--"
     interface: "1/1/7"
     interface_desc: ""
+    ip_address: ""
     link_admin: "up"
     link_state_info: ""
     link_status: "down"
@@ -257,6 +265,7 @@ parsed_sample:
     rx_total_bytes: "0"
     rx_total_packets: "0"
     rx_unicast_packets: "0"
+    secondary_ip_address: []
     speed: "0 Mb/s"
     tx_broadcast_packets: "0"
     tx_collision: "0"
@@ -269,11 +278,10 @@ parsed_sample:
     tx_unicast_packets: "0"
     vlan_access: "1"
     vlan_mode: "access"
-    ip_address: ""
-    vlan_trunk: []
     vlan_native: ""
-    aggregated_interfaces: []
-  - auto_neg: "on"
+    vlan_trunk: []
+  - aggregated_interfaces: []
+    auto_neg: "on"
     duplex: "Full"
     error_control: "off"
     flow_control: "off"
@@ -281,6 +289,7 @@ parsed_sample:
     if_type: "--"
     interface: "1/1/8"
     interface_desc: ""
+    ip_address: ""
     link_admin: "up"
     link_state_info: ""
     link_status: "down"
@@ -296,6 +305,7 @@ parsed_sample:
     rx_total_bytes: "0"
     rx_total_packets: "0"
     rx_unicast_packets: "0"
+    secondary_ip_address: []
     speed: "0 Mb/s"
     tx_broadcast_packets: "0"
     tx_collision: "0"
@@ -308,11 +318,10 @@ parsed_sample:
     tx_unicast_packets: "0"
     vlan_access: "1"
     vlan_mode: "access"
-    ip_address: ""
-    vlan_trunk: []
     vlan_native: ""
-    aggregated_interfaces: []
-  - auto_neg: "on"
+    vlan_trunk: []
+  - aggregated_interfaces: []
+    auto_neg: "on"
     duplex: "Full"
     error_control: "off"
     flow_control: "off"
@@ -320,6 +329,7 @@ parsed_sample:
     if_type: "--"
     interface: "1/1/9"
     interface_desc: ""
+    ip_address: ""
     link_admin: "up"
     link_state_info: ""
     link_status: "down"
@@ -335,6 +345,7 @@ parsed_sample:
     rx_total_bytes: "0"
     rx_total_packets: "0"
     rx_unicast_packets: "0"
+    secondary_ip_address: []
     speed: "0 Mb/s"
     tx_broadcast_packets: "0"
     tx_collision: "0"
@@ -347,11 +358,10 @@ parsed_sample:
     tx_unicast_packets: "0"
     vlan_access: "1"
     vlan_mode: "access"
-    ip_address: ""
-    vlan_trunk: []
     vlan_native: ""
-    aggregated_interfaces: []
-  - auto_neg: "on"
+    vlan_trunk: []
+  - aggregated_interfaces: []
+    auto_neg: "on"
     duplex: "Full"
     error_control: "off"
     flow_control: "off"
@@ -359,6 +369,7 @@ parsed_sample:
     if_type: "--"
     interface: "1/1/10"
     interface_desc: ""
+    ip_address: ""
     link_admin: "up"
     link_state_info: ""
     link_status: "down"
@@ -374,6 +385,7 @@ parsed_sample:
     rx_total_bytes: "0"
     rx_total_packets: "0"
     rx_unicast_packets: "0"
+    secondary_ip_address: []
     speed: "0 Mb/s"
     tx_broadcast_packets: "0"
     tx_collision: "0"
@@ -386,11 +398,10 @@ parsed_sample:
     tx_unicast_packets: "0"
     vlan_access: "1"
     vlan_mode: "access"
-    ip_address: ""
-    vlan_trunk: []
     vlan_native: ""
-    aggregated_interfaces: []
-  - auto_neg: "on"
+    vlan_trunk: []
+  - aggregated_interfaces: []
+    auto_neg: "on"
     duplex: "Full"
     error_control: "off"
     flow_control: "off"
@@ -398,6 +409,7 @@ parsed_sample:
     if_type: "--"
     interface: "1/1/11"
     interface_desc: ""
+    ip_address: ""
     link_admin: "up"
     link_state_info: ""
     link_status: "down"
@@ -413,6 +425,7 @@ parsed_sample:
     rx_total_bytes: "0"
     rx_total_packets: "0"
     rx_unicast_packets: "0"
+    secondary_ip_address: []
     speed: "0 Mb/s"
     tx_broadcast_packets: "0"
     tx_collision: "0"
@@ -425,11 +438,10 @@ parsed_sample:
     tx_unicast_packets: "0"
     vlan_access: "1"
     vlan_mode: "access"
-    ip_address: ""
-    vlan_trunk: []
     vlan_native: ""
-    aggregated_interfaces: []
-  - auto_neg: "on"
+    vlan_trunk: []
+  - aggregated_interfaces: []
+    auto_neg: "on"
     duplex: "Full"
     error_control: "off"
     flow_control: "off"
@@ -437,6 +449,7 @@ parsed_sample:
     if_type: "--"
     interface: "1/1/12"
     interface_desc: ""
+    ip_address: ""
     link_admin: "up"
     link_state_info: ""
     link_status: "down"
@@ -452,6 +465,7 @@ parsed_sample:
     rx_total_bytes: "0"
     rx_total_packets: "0"
     rx_unicast_packets: "0"
+    secondary_ip_address: []
     speed: "0 Mb/s"
     tx_broadcast_packets: "0"
     tx_collision: "0"
@@ -464,11 +478,10 @@ parsed_sample:
     tx_unicast_packets: "0"
     vlan_access: "1"
     vlan_mode: "access"
-    ip_address: ""
-    vlan_trunk: []
     vlan_native: ""
-    aggregated_interfaces: []
-  - auto_neg: "on"
+    vlan_trunk: []
+  - aggregated_interfaces: []
+    auto_neg: "on"
     duplex: "Full"
     error_control: "off"
     flow_control: "off"
@@ -476,6 +489,7 @@ parsed_sample:
     if_type: "--"
     interface: "1/1/13"
     interface_desc: ""
+    ip_address: ""
     link_admin: "up"
     link_state_info: ""
     link_status: "down"
@@ -491,6 +505,7 @@ parsed_sample:
     rx_total_bytes: "0"
     rx_total_packets: "0"
     rx_unicast_packets: "0"
+    secondary_ip_address: []
     speed: "0 Mb/s"
     tx_broadcast_packets: "0"
     tx_collision: "0"
@@ -503,11 +518,10 @@ parsed_sample:
     tx_unicast_packets: "0"
     vlan_access: "1"
     vlan_mode: "access"
-    ip_address: ""
-    vlan_trunk: []
     vlan_native: ""
-    aggregated_interfaces: []
-  - auto_neg: "on"
+    vlan_trunk: []
+  - aggregated_interfaces: []
+    auto_neg: "on"
     duplex: "Full"
     error_control: "off"
     flow_control: "off"
@@ -515,6 +529,7 @@ parsed_sample:
     if_type: "--"
     interface: "1/1/14"
     interface_desc: ""
+    ip_address: ""
     link_admin: "up"
     link_state_info: ""
     link_status: "down"
@@ -530,6 +545,7 @@ parsed_sample:
     rx_total_bytes: "0"
     rx_total_packets: "0"
     rx_unicast_packets: "0"
+    secondary_ip_address: []
     speed: "0 Mb/s"
     tx_broadcast_packets: "0"
     tx_collision: "0"
@@ -542,11 +558,10 @@ parsed_sample:
     tx_unicast_packets: "0"
     vlan_access: "1"
     vlan_mode: "access"
-    ip_address: ""
-    vlan_trunk: []
     vlan_native: ""
-    aggregated_interfaces: []
-  - auto_neg: "on"
+    vlan_trunk: []
+  - aggregated_interfaces: []
+    auto_neg: "on"
     duplex: "Full"
     error_control: "off"
     flow_control: "off"
@@ -554,6 +569,7 @@ parsed_sample:
     if_type: "--"
     interface: "1/1/15"
     interface_desc: ""
+    ip_address: ""
     link_admin: "up"
     link_state_info: ""
     link_status: "down"
@@ -569,6 +585,7 @@ parsed_sample:
     rx_total_bytes: "0"
     rx_total_packets: "0"
     rx_unicast_packets: "0"
+    secondary_ip_address: []
     speed: "0 Mb/s"
     tx_broadcast_packets: "0"
     tx_collision: "0"
@@ -581,11 +598,10 @@ parsed_sample:
     tx_unicast_packets: "0"
     vlan_access: "1"
     vlan_mode: "access"
-    ip_address: ""
-    vlan_trunk: []
     vlan_native: ""
-    aggregated_interfaces: []
-  - auto_neg: "on"
+    vlan_trunk: []
+  - aggregated_interfaces: []
+    auto_neg: "on"
     duplex: "Full"
     error_control: "off"
     flow_control: "off"
@@ -593,6 +609,7 @@ parsed_sample:
     if_type: "--"
     interface: "1/1/16"
     interface_desc: ""
+    ip_address: ""
     link_admin: "up"
     link_state_info: ""
     link_status: "down"
@@ -608,6 +625,7 @@ parsed_sample:
     rx_total_bytes: "0"
     rx_total_packets: "0"
     rx_unicast_packets: "0"
+    secondary_ip_address: []
     speed: "0 Mb/s"
     tx_broadcast_packets: "0"
     tx_collision: "0"
@@ -620,11 +638,10 @@ parsed_sample:
     tx_unicast_packets: "0"
     vlan_access: "1"
     vlan_mode: "access"
-    ip_address: ""
-    vlan_trunk: []
     vlan_native: ""
-    aggregated_interfaces: []
-  - auto_neg: "on"
+    vlan_trunk: []
+  - aggregated_interfaces: []
+    auto_neg: "on"
     duplex: "Full"
     error_control: "off"
     flow_control: "off"
@@ -632,6 +649,7 @@ parsed_sample:
     if_type: "--"
     interface: "1/1/17"
     interface_desc: ""
+    ip_address: ""
     link_admin: "up"
     link_state_info: ""
     link_status: "down"
@@ -647,6 +665,7 @@ parsed_sample:
     rx_total_bytes: ""
     rx_total_packets: ""
     rx_unicast_packets: ""
+    secondary_ip_address: []
     speed: "0 Mb/s"
     tx_broadcast_packets: ""
     tx_collision: ""
@@ -659,7 +678,5 @@ parsed_sample:
     tx_unicast_packets: ""
     vlan_access: ""
     vlan_mode: ""
-    ip_address: ""
-    vlan_trunk: []
     vlan_native: ""
-    aggregated_interfaces: []
+    vlan_trunk: []

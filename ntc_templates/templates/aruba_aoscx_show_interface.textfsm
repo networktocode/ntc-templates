@@ -9,6 +9,7 @@ Value MAC_ADDRESS (\S+)
 Value MTU (\d+)
 Value IF_TYPE (\S+)
 Value IP_ADDRESS (\S+)
+Value List SECONDARY_IP_ADDRESS (\S+)
 Value DUPLEX (\w+)
 Value QOS_TRUST (\S+)
 Value SPEED (\S+\s\S+) 
@@ -47,7 +48,8 @@ Start
   ^\s*State\s*information\s*:\s*${LINK_STATE_INFO}
   ^\s*Hardware\s*:\s*${HW_TYPE},?\s*MAC\s*Address:\s+${MAC_ADDRESS}
   ^\s*MAC\s+Address\s*:\s*${MAC_ADDRESS}
-  ^\s*IPv4\s+address\s+${IP_ADDRESS}
+  ^\s*IPv4\s+address\s+${IP_ADDRESS}$$
+  ^\s*IPv4\s+address\s+${SECONDARY_IP_ADDRESS}\s+secondary
   ^\s*MTU\s*${MTU}
   ^\s*Type\s*${IF_TYPE}
   ^\s*${DUPLEX}-duplex
