@@ -7,7 +7,10 @@ Value POE_PWR (\S+)
 Value WATTS (\w+)
 
 Start
+  ^\s*SW\s+PID\s+Serial#\s+Status\s+Sys\s+Pwr\s+PoE\s+Pwr\s+Watts$$
+  ^--+
   ^${PS_MODULE}\s+${PID}\s+${SERIAL}\s+${STATUS}\s+${SYS_PWR}\s+${POE_PWR}\s+${WATTS} -> Record
   # Capture time-stamp if vty line has command time-stamping turned on
   ^Load\s+for\s+
   ^Time\s+source\s+is
+  ^. -> Error
