@@ -1,16 +1,20 @@
-####
-# For 3850 switches, does not work on 3750 switches
-###
 Value PS_MODULE (\w+)
-Value PID (\S+)
+Value PID (\S+(\s\S+)?)
 Value SERIAL (\w+)
 Value STATUS (.+?)
 Value SYS_PWR (Good|Bad)
-Value POE_PWR (\w+)
+Value POE_PWR (\S+)
 Value WATTS (\w+)
 
 Start
-  ^${PS_MODULE}\s+${PID}\s+${SERIAL}\s+${STATUS}\s+${SYS_PWR}\s+${POE_PWR}\s+${WATTS} -> Record
+  ^\s*SW\s+PID\s+Serial#\s+Status\s+Sys\s+Pwr\s+PoE\s+Pwr\s+Watts$$
+  ^--+
+  ^${PS_MODULE}\s+${PID}\s+${SERIAL}\s+${STATUS}\s+${SYS_PWR}\s+${POE_PWR}\s+${WATTS}\s*(/\d+)?\s*$$ -> Record
+  # when power supplies are not present/installed
+  ^${PS_MODULE}\s+${PID}$$ -> Record
+  # built-in PSUs such as 2960-S, 2960-X, 3750G
+  ^\s*${PS_MODULE}\s+${PID}\s+${SYS_PWR}\s*$$ -> Record
   # Capture time-stamp if vty line has command time-stamping turned on
   ^Load\s+for\s+
   ^Time\s+source\s+is
+  ^. -> Error
