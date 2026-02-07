@@ -12,6 +12,8 @@ Start
   ^${PS_MODULE}\s+${PID}\s+${SERIAL}\s+${STATUS}\s+${SYS_PWR}\s+${POE_PWR}\s+${WATTS}\s*(/\d+)?\s*$$ -> Record
   # when power supplies are not present/installed
   ^${PS_MODULE}\s+${PID}$$ -> Record
+  # built-in PSUs such as 2960-S, 2960-X, 3750G
+  ^\s*${PS_MODULE}\s+${PID}\s+${SYS_PWR}\s*$$ -> Record
   # Capture time-stamp if vty line has command time-stamping turned on
   ^Load\s+for\s+
   ^Time\s+source\s+is
