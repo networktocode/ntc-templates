@@ -76,7 +76,7 @@ CHOICES_STRING = "|".join(OS_CHOICES)
 RE_TEMPLATE_OS = re.compile(rf"^({CHOICES_STRING})")
 
 
-def check_order(  # pylint: disable=too-many-arguments,too-many-arguments,too-many-return-statements
+def check_order(  # pylint: disable=too-many-arguments,too-many-positional-arguments,too-many-return-statements
     current_os,
     prior_os,
     cmd_len,
