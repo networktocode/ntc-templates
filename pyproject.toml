@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "ntc_templates"
-version = "8.1.0"
+version = "9.0.0"
 description = "TextFSM Templates for Network Devices, and Python wrapper for TextFSM's CliTable."
 authors = ["Network to Code <info@networktocode.com>"]
 license = "Apache-2.0"
@@ -13,10 +13,11 @@ classifiers = [
     "Intended Audience :: Developers",
     "Development Status :: 4 - Beta",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
 ]
 include = [
     "LICENSE",
@@ -26,7 +27,7 @@ include = [
 ]
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = "^3.10"
 textfsm = ">=1.1.0"
 
 [tool.poetry.dev-dependencies]
@@ -35,7 +36,7 @@ black = "*"
 coverage = "*"
 invoke = "*"
 flake8 = "*"
-importlib-metadata = "<5.0"
+importlib-metadata = "*"
 pylint = "*"
 pytest = "*"
 pyyaml = "*"
@@ -44,20 +45,20 @@ sphinx-rtd-theme = "*"
 toml = "*"
 yamllint = "*"
 "ruamel.yaml" = "*"
-mkdocs = "1.6.0"
-mkdocs-material = "9.5.32"
-mkdocs-version-annotations = "1.0.0"
-mkdocstrings = "0.25.2"
-mkdocstrings-python =  "1.10.8"
-mkdocs-python-classy = "0.1.3"
-griffe = "1.1.1"
+mkdocs = "*"
+mkdocs-material = "*"
+mkdocs-version-annotations = "*"
+mkdocstrings = "*"
+mkdocstrings-python = "*"
+mkdocs-python-classy = "*"
+griffe = "*"
 
 [tool.poetry.extras]
 test = ["pytest"]
 
 [tool.black]
 line-length = 120
-target-version = ['py39']
+target-version = ['py310']
 include = '\.pyi?$'
 exclude = '''
 (
