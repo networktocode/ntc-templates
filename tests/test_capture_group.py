@@ -1,11 +1,11 @@
 #!/usr/bin/env python
 
 """Run tests against all the *.textfsm template files."""
+
 import glob
 import re
 
 import pytest
-
 
 # https://github.com/google/textfsm/wiki/TextFSM#value-definitions
 OPTION_KEYWORDS = ["Filldown", "Key", "Required", "List", "Fillup"]

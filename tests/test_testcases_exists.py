@@ -7,7 +7,6 @@ import pytest
 
 from tests import load_index_data
 
-
 TEST_DIRECTORIES = os.listdir("tests")
 
 

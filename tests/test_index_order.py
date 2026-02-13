@@ -4,7 +4,6 @@ import re
 
 from tests import load_index_data
 
-
 OS_CHOICES = [
     "a10",
     "alcatel_aos",
