@@ -1,0 +1,42 @@
+Value Filldown CHASSIS_TYPE (\S+)
+Value Filldown CHASSIS_ID (\S+)
+Value Filldown SYSTEM_NAME (\S+)
+Value Filldown DESCRIPTION (.+?)
+Value Filldown CAPABILITIES_SUPPORTED (.+?)
+Value Filldown CAPABILITIES (.+?)
+Value Filldown MGMT_TYPE (\S+)
+Value Filldown MGMT_ADDRESS (\S+)
+Value Required LOCAL_INTERFACE (\S+)
+Value PORT_TYPE (\S+)
+Value PORT_ID (\S+)
+Value PORT_DESCRIPTION (\S+)
+
+Start
+  ^\s*LLDP\s+Local\s+Device\s+Information\s*$$ -> INFO
+  ^\s*$$
+  ^. -> Error
+
+INFO
+  ^\s*Chassis Type\s+:\s+${CHASSIS_TYPE}\s*$$
+  ^\s*Chassis Id\s+:\s+${CHASSIS_ID}\s*$$
+  ^\s*System Name\s+:\s+${SYSTEM_NAME}\s*$$
+  ^\s*System Description\s+:\s+${DESCRIPTION}\s*$$
+  ^\s*System Capabilities Supported:\s+${CAPABILITIES_SUPPORTED}\s*$$
+  ^\s*System Capabilities Enabled:\s+${CAPABILITIES}\s*$$
+  ^\s*Management Address\s*:\s*$$
+  ^\s+Type:\s+${MGMT_TYPE}\s*$$
+  ^\s+Address:\s+${MGMT_ADDRESS}\s*$$
+  ^\s*LLDP\s+Port\s+Information\s*$$ -> PORTS
+  ^\s*$$
+  ^. -> Error
+
+PORTS
+  ^\s*Port\s+PortType\s+PortId\s+PortDesc\s*$$
+  ^\s*-+\s+-+\s+-+\s+-+\s*$$ -> PORT_TABLE
+  ^\s*$$
+  ^. -> Error
+
+PORT_TABLE
+  ^\s+${LOCAL_INTERFACE}\s+${PORT_TYPE}\s+${PORT_ID}\s+${PORT_DESCRIPTION}\s*$$ -> Record
+  ^\s*$$
+  ^. -> Error
