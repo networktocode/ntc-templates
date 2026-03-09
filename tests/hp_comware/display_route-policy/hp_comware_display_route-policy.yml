@@ -1,15 +1,32 @@
-Route-policy: ACTIVE_OUT
-  Permit : 10
-         if-match ip address prefix-list pl_customer_only
-
-Route-policy: BACKUP_ACT_OUT
-  Permit : 10
-         if-match ip address prefix-list pl_customer_only
-         apply community 1111:135
-  Deny   : 99
-
-Route-policy: BACKUP_SBY_OUT
-  Permit : 10
-         if-match ip address prefix-list pl_customer_only
-         apply community 1111:130
-  Deny   : 99
+---
+parsed_sample:
+  - action: "Permit"
+    apply: []
+    if_match:
+      - "ip address prefix-list pl_customer_only"
+    node: "10"
+    policy_name: "ACTIVE_OUT"
+  - action: "Permit"
+    apply:
+      - "community 1111:135"
+    if_match:
+      - "ip address prefix-list pl_customer_only"
+    node: "10"
+    policy_name: "BACKUP_ACT_OUT"
+  - action: "Deny"
+    apply: []
+    if_match: []
+    node: "99"
+    policy_name: "BACKUP_ACT_OUT"
+  - action: "Permit"
+    apply:
+      - "community 1111:130"
+    if_match:
+      - "ip address prefix-list pl_customer_only"
+    node: "10"
+    policy_name: "BACKUP_SBY_OUT"
+  - action: "Deny"
+    apply: []
+    if_match: []
+    node: "99"
+    policy_name: "BACKUP_SBY_OUT"
