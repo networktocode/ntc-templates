@@ -6,7 +6,7 @@ concurrency:  # Cancel any existing runs of this workflow for this same PR
 on: # yamllint disable-line rule:truthy rule:comments
   push:
     branches:
-      - "master"
+      - "alcatel_sros_show_service_sap-using_pruned"
     tags:
       - "v*"
   pull_request: ~
