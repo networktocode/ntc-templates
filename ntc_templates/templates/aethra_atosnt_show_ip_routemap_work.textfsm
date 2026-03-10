@@ -1,0 +1,15 @@
+Value Filldown MAP_NAME (\S+)
+Value Required ACTION (permit|deny)
+Value Required SEQUENCE (\d+)
+Value TYPE (\S+)
+Value VALUE (.+)
+
+Start
+  ^LIST OF MAPS -> Maps
+  ^.* -> Continue
+
+Maps
+  ^${MAP_NAME}\s*$$
+  ^\s+${ACTION}\s+${SEQUENCE}\s+${TYPE}\s+${VALUE}\s*$$ -> Record
+  ^\s*$$
+  ^. -> Error

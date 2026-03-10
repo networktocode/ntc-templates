@@ -1,0 +1,17 @@
+---
+parsed_sample:
+  - action: "permit"
+    map_name: "ACT_OUT"
+    sequence: "10"
+    type: "CLASSIFIER"
+    value: "adver_subs"
+  - action: "permit"
+    map_name: "LTE_SBY_OUT"
+    sequence: "10"
+    type: "CLASSIFIER"
+    value: "adver_subs"
+  - action: "permit"
+    map_name: "LTE_SBY_OUT"
+    sequence: "10"
+    type: "ACTION"
+    value: "set-community       additive      1111:135"

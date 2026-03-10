@@ -1,0 +1,18 @@
+Show of SOMEDEVICE-73493 ip routemap
+LIST OF COMMUNITY-SETS
+COMMUNITY-SET NAME
+LOCALPREF_135       1111:135
+
+LIST OF EXT-COMMUNITY-SETS
+Empty list
+
+LIST OF CLASSIFIERS
+adver_subs
+  permit 10     match-ip              1.1.1.1/29
+
+LIST OF MAPS
+ACT_OUT
+  permit 10     CLASSIFIER           adver_subs
+LTE_SBY_OUT
+  permit 10     CLASSIFIER           adver_subs
+  permit 10     ACTION               set-community       additive      1111:135
