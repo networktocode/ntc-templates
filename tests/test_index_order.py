@@ -6,6 +6,7 @@ from tests import load_index_data
 
 OS_CHOICES = [
     "a10",
+    "aethra_atosnt",
     "alcatel_aos",
     "alcatel_sros",
     "allied_telesis_awplus",
