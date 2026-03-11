@@ -17,13 +17,13 @@ Start
   ^. -> Error
 
 INFO
-  ^\s*Chassis Type\s+:\s+${CHASSIS_TYPE}\s*$$
-  ^\s*Chassis Id\s+:\s+${CHASSIS_ID}\s*$$
-  ^\s*System Name\s+:\s+${SYSTEM_NAME}\s*$$
-  ^\s*System Description\s+:\s+${DESCRIPTION}\s*$$
-  ^\s*System Capabilities Supported:\s+${CAPABILITIES_SUPPORTED}\s*$$
-  ^\s*System Capabilities Enabled:\s+${CAPABILITIES}\s*$$
-  ^\s*Management Address\s*:\s*$$
+  ^\s*Chassis\s+Type\s+:\s+${CHASSIS_TYPE}\s*$$
+  ^\s*Chassis\s+Id\s+:\s+${CHASSIS_ID}\s*$$
+  ^\s*System\s+Name\s+:\s+${SYSTEM_NAME}\s*$$
+  ^\s*System\s+Description\s+:\s+${DESCRIPTION}\s*$$
+  ^\s*System\s+Capabilities\s+Supported:\s+${CAPABILITIES_SUPPORTED}\s*$$
+  ^\s*System\s+Capabilities\s+Enabled:\s+${CAPABILITIES}\s*$$
+  ^\s*Management\s+Address\s*:\s*$$
   ^\s+Type:\s+${MGMT_TYPE}\s*$$
   ^\s+Address:\s+${MGMT_ADDRESS}\s*$$
   ^\s*LLDP\s+Port\s+Information\s*$$ -> PORTS
