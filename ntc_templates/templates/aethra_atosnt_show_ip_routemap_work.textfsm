@@ -5,7 +5,7 @@ Value TYPE (\S+)
 Value VALUE (.+)
 
 Start
-  ^LIST OF MAPS -> Maps
+  ^LIST\s+OF\s+MAPS -> Maps
   ^.* -> Continue
 
 Maps
