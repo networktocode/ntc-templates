@@ -5,8 +5,16 @@ Value TYPE (\S+)
 Value VALUE (.+)
 
 Start
-  ^LIST\s+OF\s+MAPS -> Maps
-  ^.* -> Continue
+  ^Show\s+of\s+\S+\s+ip\s+routemap$$
+  ^LIST\s+OF\s+(EXT-)?COMMUNITY-SETS$$
+  ^COMMUNITY-SET\s+NAME$$
+  ^\S+\s+\d+:\d+$$
+  ^Empty\s+list$$
+  ^LIST\s+OF\s+CLASSIFIERS$$
+  ^adver_subs$$
+  ^\s+\S+\s+\d+\s+\S+\s+\S+$$
+  ^LIST\s+OF\s+MAPS$$ -> Maps
+  ^. -> Error
 
 Maps
   ^${MAP_NAME}\s*$$
