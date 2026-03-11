@@ -6,7 +6,7 @@ concurrency:  # Cancel any existing runs of this workflow for this same PR
 on: # yamllint disable-line rule:truthy rule:comments
   push:
     branches:
-      - "pruned"
+      - "master"
     tags:
       - "v*"
   pull_request: ~
