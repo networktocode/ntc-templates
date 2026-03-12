@@ -22,10 +22,7 @@ Value BUFFERS_LOWEST (\d+)
 Value BUFFERS_MISSED (\d+)
 
 Start
-  ^.*Status and Counters -> INFO
-  ^. -> Error
-
-INFO
+  ^.*Status and Counters
   ^\s*System Name\s+:\s+${NAME}
   ^\s*System Contact\s+:\s+${CONTACT}
   ^\s*System Location\s+:\s+${LOCATION}
