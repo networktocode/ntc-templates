@@ -32,11 +32,7 @@ INFO
 
 PORTS
   ^\s*Port\s+PortType\s+PortId\s+PortDesc\s*$$
-  ^\s*-+\s+-+\s+-+\s+-+\s*$$ -> PORT_TABLE
-  ^\s*$$
-  ^. -> Error
-
-PORT_TABLE
+  ^\s*---+
   ^\s+${LOCAL_INTERFACE}\s+${PORT_TYPE}\s+${PORT_ID}\s+${PORT_DESCRIPTION}\s*$$ -> Record
   ^\s*$$
   ^. -> Error
