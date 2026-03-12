@@ -12,11 +12,7 @@ Value PORT_ID (\S+)
 Value PORT_DESCRIPTION (\S+)
 
 Start
-  ^\s*LLDP\s+Local\s+Device\s+Information\s*$$ -> INFO
-  ^\s*$$
-  ^. -> Error
-
-INFO
+  ^\s*LLDP\s+Local\s+Device\s+Information\s*$$
   ^\s*Chassis\s+Type\s+:\s+${CHASSIS_TYPE}\s*$$
   ^\s*Chassis\s+Id\s+:\s+${CHASSIS_ID}\s*$$
   ^\s*System\s+Name\s+:\s+${SYSTEM_NAME}\s*$$
