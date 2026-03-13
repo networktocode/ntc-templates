@@ -1,0 +1,17 @@
+---
+parsed_sample:
+  - action: "Permit"
+    apply: []
+    if_match:
+      - "ip address prefix-list pl_customer_only"
+    node: "10"
+    policy_name: "active_out"
+  - action: "Permit"
+    apply:
+      - "community 1111:100"
+      - "local-preference 200"
+    if_match:
+      - "cost 10"
+      - "ip address prefix-list pl_customer_only"
+    node: "10"
+    policy_name: "test_policy"
