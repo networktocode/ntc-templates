@@ -15,3 +15,8 @@ parsed_sample:
     sequence: "10"
     type: "ACTION"
     value: "set-community       additive      1111:135"
+  - action: "deny"
+    map_name: "TEST_BLOCK"
+    sequence: "10"
+    type: "CLASSIFIER"
+    value: "adver_subs"

@@ -16,3 +16,5 @@ ACT_OUT
 LTE_SBY_OUT
   permit 10     CLASSIFIER           adver_subs
   permit 10     ACTION               set-community       additive      1111:135
+TEST_BLOCK
+  deny   10     CLASSIFIER           adver_subs
