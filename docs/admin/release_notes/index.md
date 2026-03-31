@@ -4,6 +4,7 @@ All the published release notes can be found below. All patch releases are inclu
 
 | Version | Link |
 | ------- | ---- |
+| v9.1 | [Release Notes](version_9.1.md) |
 | v9.0 | [Release Notes](version_9.0.md) |
 | v8.1 | [Release Notes](version_8.1.md) |
 | v8.0 | [Release Notes](version_8.0.md) |
