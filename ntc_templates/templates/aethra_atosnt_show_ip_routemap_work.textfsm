@@ -11,7 +11,7 @@ Start
   ^\S+\s+\d+:\d+$$
   ^Empty\s+list$$
   ^LIST\s+OF\s+CLASSIFIERS$$
-  ^adver_subs$$
+  ^\S{1,16}$$
   ^\s+\S+\s+\d+\s+\S+\s+\S+$$
   ^LIST\s+OF\s+MAPS$$ -> Maps
   ^. -> Error

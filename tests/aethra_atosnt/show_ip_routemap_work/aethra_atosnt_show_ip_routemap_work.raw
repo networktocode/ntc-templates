@@ -9,10 +9,13 @@ Empty list
 LIST OF CLASSIFIERS
 adver_subs
   permit 10     match-ip              1.1.1.1/29
+cust_class01
+  permit 10     match-ip              10.10.10.8/29
 
 LIST OF MAPS
 ACT_OUT
   permit 10     CLASSIFIER           adver_subs
+  permit 20     CLASSIFIER           cust_class01
 LTE_SBY_OUT
   permit 10     CLASSIFIER           adver_subs
   permit 10     ACTION               set-community       additive      1111:135
