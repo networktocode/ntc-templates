@@ -1,0 +1,54 @@
+Value DOMAIN_ID (\d+)
+Value MAC_ADDRESS (\S+)
+Value TOPOLOGY (\S+)
+Value STATUS (\S.*\S)
+Value UPTIME (\S.*\S)
+Value VSF_MAD (\S+)
+Value PORT_SPEED (\S+)
+Value SOFTWARE_VERSION (\S+)
+Value NAME (\S.*\S)
+Value CONTACT (\S.*\S)
+Value LOCATION (\S.*\S)
+Value MEMBER_ID (\d+)
+Value TYPE (\S+)
+Value MODEL (\S.*\S)
+Value PRIORITY (\d+)
+Value ROM_VERSION (\S+)
+Value SERIAL_NUMBER (\S+)
+Value CPU (\d+%)
+Value MEMORY_TOTAL (\S.*\S)
+Value MEMORY_FREE (\S.*\S)
+Value VSF_LINK_1 (\S.*\S)
+Value VSF_LINK_2 (\S.*\S)
+
+Start
+  ^\s*VSF\s+Domain\s+ID\s+:\s+${DOMAIN_ID}\s*$$
+  ^\s*VSF\s+Topology\s+:\s+${TOPOLOGY}\s*$$
+  ^\s*VSF\s+Status\s+:\s+${STATUS}\s*$$
+  ^\s*VSF\s+MAD\s+:\s+${VSF_MAD}\s*$$
+  ^\s*VSF\s+Port\s+Speed\s+:\s+${PORT_SPEED}\s*$$
+  ^\s*Software\s+Version\s+:\s+${SOFTWARE_VERSION}\s*$$
+  ^\s*Name\s+:\s+${NAME}\s*$$
+  ^\s*Name\s*:\s*$$
+  ^\s*Contact\s+:\s+${CONTACT}\s*$$
+  ^\s*Contact\s*:\s*$$
+  ^\s*Location\s+:\s+${LOCATION}\s*$$
+  ^\s*Location\s*:\s*$$
+  ^\s*Member\s+ID -> Continue.Record
+  ^\s*Member\s+ID\s+:\s+${MEMBER_ID}\s*$$
+  ^\s*MAC\s+Address\s+:\s+${MAC_ADDRESS}\s*$$
+  ^\s*Type\s+:\s+${TYPE}\s*$$
+  ^\s*Model\s+:\s+${MODEL}\s*$$
+  ^\s*Priority\s+:\s+${PRIORITY}\s*$$
+  ^\s*Status\s+:\s+${STATUS}\s*$$
+  ^\s*ROM\s+Version\s+:\s+${ROM_VERSION}\s*$$
+  ^\s*Serial\s+Number\s+:\s+${SERIAL_NUMBER}\s*$$
+  ^\s*Uptime\s+:\s+${UPTIME}\s*$$
+  ^\s*CPU\s+Utilization\s+:\s+${CPU}\s*$$
+  ^\s*Memory\s+-\s+Total\s+:\s+${MEMORY_TOTAL}\s*$$
+  ^\s*Free\s+:\s+${MEMORY_FREE}\s*$$
+  ^\s*VSF\s+Links\s+-\s*$$
+  ^\s*#1\s*:\s*${VSF_LINK_1}\s*$$
+  ^\s*#2\s*:\s*${VSF_LINK_2}\s*$$
+  ^\s*$$
+  ^. -> Error

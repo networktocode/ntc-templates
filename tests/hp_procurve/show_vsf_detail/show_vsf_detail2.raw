@@ -1,0 +1,65 @@
+VSF Domain ID    : 5
+ MAC Address      : 548028-aabbd0
+ VSF Topology     : Ring
+ VSF Status       : Active
+ Uptime           : 454d 7h 42m
+ VSF MAD          : None
+ VSF Port Speed   : 1G
+ Software Version : WC.16.10.0014
+
+Name             : SWITCH-2
+Contact          :
+Location         :
+
+
+Member ID        : 1
+MAC Address      : 548028-aabbd1
+Type             : JL255A
+Model            : Aruba JL255A 2930F-24G-PoE+-4SFP+ Switch
+Priority         : 255
+Status           : Commander
+ROM Version      : WC.16.01.0008
+Serial Number    : SN0000003A
+Uptime           : 454d 7h 42m
+CPU Utilization  : 0%
+Memory - Total   : 338,285,056 bytes
+Free             : 216,976,472 bytes
+VSF Links -
+#1 : Active, Peer member 3
+#2 : Active, Peer member 2
+
+
+
+Member ID        : 2
+MAC Address      : 548028-aabbd2
+Type             : JL255A
+Model            : Aruba JL255A 2930F-24G-PoE+-4SFP+ Switch
+Priority         : 128
+Status           : Standby
+ROM Version      : WC.16.01.0008
+Serial Number    : SN0000004A
+Uptime           : 454d 7h 42m
+CPU Utilization  : 0%
+Memory - Total   : 338,285,056 bytes
+Free             : 233,891,828 bytes
+VSF Links -
+#1 : Active, Peer member 3
+#2 : Active, Peer member 1
+
+
+
+Member ID        : 3
+MAC Address      : 548028-aabbd3
+Type             : JL255A
+Model            : Aruba JL255A 2930F-24G-PoE+-4SFP+ Switch
+Priority         : 128
+Status           : Member
+ROM Version      : WC.16.01.0008
+Serial Number    : SN0000005A
+Uptime           : 454d 7h 42m
+CPU Utilization  : 0%
+Memory - Total   : 338,285,056 bytes
+Free             : 247,712,468 bytes
+VSF Links -
+#1 : Active, Peer member 1
+#2 : Active, Peer member 2
