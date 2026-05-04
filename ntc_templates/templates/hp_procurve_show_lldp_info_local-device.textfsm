@@ -1,0 +1,32 @@
+Value CHASSIS_TYPE (\S.*\S)
+Value CHASSIS_ID (\S.*\S)
+Value SYSTEM_NAME (\S+)
+Value SYSTEM_DESCRIPTION (\S.*\S)
+Value MODEL (\S+)
+Value CAPABILITIES_SUPPORTED (\S.*\S)
+Value CAPABILITIES_ENABLED (\S.*\S)
+Value MGMT_ADDRESS_TYPE (\S+)
+Value MGMT_ADDRESS (\S+)
+
+Start
+  ^\s*LLDP\s+Local\s+Device\s+Information\s*$$
+  ^\s*Chassis\s+Type\s*:\s+${CHASSIS_TYPE}\s*$$
+  ^\s*Chassis\s+Id\s*:\s+${CHASSIS_ID}\s*$$
+  ^\s*System\s+Name\s*:\s+${SYSTEM_NAME}\s*$$
+  ^\s*System\s+Description\s*:\s+(?:ProCurve|HP|Aruba)\s+${MODEL}\s+${SYSTEM_DESCRIPTION}\s*$$
+  ^\s*System\s+Description\s*:\s+${SYSTEM_DESCRIPTION}\s*$$
+  ^\s*System\s+Capabilities\s+Supported\s*:\s+${CAPABILITIES_SUPPORTED}\s*$$
+  ^\s*System\s+Capabilities\s+Enabled\s*:\s+${CAPABILITIES_ENABLED}\s*$$
+  ^\s*Management\s+Address\s*:\s*$$
+  ^\s+Type\s*:\s*${MGMT_ADDRESS_TYPE}\s*$$
+  ^\s+Address\s*:\s*${MGMT_ADDRESS}\s*$$
+  ^\s*LLDP\s+Port\s+Information\s*$$ -> Record PortSection
+  ^\s*$$
+  ^. -> Error
+
+PortSection
+  ^\s*Port\s+PortType\s+PortId\s+PortDesc\s*$$
+  ^\s*-+\s+-+\s+-+\s+-+\s*$$
+  ^\s*\S+\s+\S+\s+\S+\s+\S+\s*$$
+  ^\s*$$
+  ^. -> Error
