@@ -22,13 +22,13 @@ LLDP
   ^\s+ChassisId\s+:\s${CHASSIS_ID}\s*$$
   ^\s+PortType\s+:\s${PORT_TYPE}\s*$$
   ^\s+PortId\s+:\s${NEIGHBOR_INTERFACE}\s*$$
-  ^\s+SysName\s+:\s${NEIGHBOR_NAME}\s*$$
-  ^\s+System\sDescr\s:\s${NEIGHBOR_DESCRIPTION}\s*$$
-  ^\s+PortDescr\s+:\s${NEIGHBOR_INTERFACE_DESCRIPTION}\s*$$
+  ^\s+SysName\s+:\s?${NEIGHBOR_NAME}\s*$$
+  ^\s+System\sDescr\s:\s?${NEIGHBOR_DESCRIPTION}\s*$$
+  ^\s+PortDescr\s+:\s?${NEIGHBOR_INTERFACE_DESCRIPTION}\s*$$
 # Port VLAN ID
-  ^\s+Pvid\s+:\s${VLAN_ID}\s*$$
-  ^\s+System\s+Capabilities\s+Supported\s+:\s${CAPABILITIES_SUPPORTED}\s*$$
-  ^\s+System\s+Capabilities\s+Enabled\s+:\s${CAPABILITIES}\s*$$
+  ^\s+Pvid\s+:\s?${VLAN_ID}\s*$$
+  ^\s+System\s+Capabilities\s+Supported\s+:\s?${CAPABILITIES_SUPPORTED}\s*$$
+  ^\s+System\s+Capabilities\s+Enabled\s+:\s?${CAPABILITIES}\s*$$
   ^\s+Remote\s+Management\s+Address\s*$$
   ^\s+Type.*$$
   ^\s+Address\s:\s${MGMT_ADDRESS}
