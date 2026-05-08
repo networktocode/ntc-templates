@@ -1,0 +1,171 @@
+LACP:
+
+**********************************************************************************
+AE group: ae1
+Members:                Bndl Rx state       Mux state  Sel state
+  ethernet1/19          yes  Current        Tx_Rx      Selected
+  ethernet1/20          yes  Current        Tx_Rx      Selected
+Status:           Enabled
+Mode:             Active
+Rate:             Slow
+Max-port:         8
+Fast-failover:    Disabled
+Pre-negotiation:  Enabled
+Local:            System Priority: 32768
+                  System MAC:      64:7c:e8:aa:bb:01
+                  Key:             64
+Partner:          System Priority: 65534
+                  System MAC:      0a:00:00:aa:bb:cc
+                  Key:             103
+Port State
+--------------------------------------------------------------------------------
+Interface                       Port
+                    Number Priority  Mode    Rate  Key      State
+--------------------------------------------------------------------------------
+ethernet1/19         34     32768    Active  Slow  64       0x3D
+Partner              3      1        Active  Slow  103      0x3D
+
+ethernet1/20         35     32768    Active  Slow  64       0x3D
+Partner              1003   1        Active  Slow  103      0x3D
+
+Port Counters
+--------------------------------------------------------------------------------
+Interface               LACPDUs         Marker      Marker Response       Error
+                    Sent     Recv     Sent Recv     Sent     Recv     Unknown  Illegal
+--------------------------------------------------------------------------------
+ethernet1/19         584295   584296   0    0        0        0        0        0
+ethernet1/20         584295   584297   0    0        0        0        0        0
+
+**********************************************************************************
+AE group: ae2
+Members:                Bndl Rx state       Mux state  Sel state
+  ethernet1/11          yes  Current        Tx_Rx      Selected
+Status:           Enabled
+Mode:             Active
+Rate:             Slow
+Max-port:         8
+Fast-failover:    Disabled
+Pre-negotiation:  Enabled
+Local:            System Priority: 32768
+                  System MAC:      64:7c:e8:aa:bb:01
+                  Key:             65
+Partner:          System Priority: 32768
+                  System MAC:      64:7c:e8:aa:bb:01
+                  Key:             67
+Port State
+--------------------------------------------------------------------------------
+Interface                       Port
+                    Number Priority  Mode    Rate  Key      State
+--------------------------------------------------------------------------------
+ethernet1/11         26     32768    Active  Slow  65       0x3D
+Partner              27     32768    Active  Slow  67       0x3D
+
+Port Counters
+--------------------------------------------------------------------------------
+Interface               LACPDUs         Marker      Marker Response       Error
+                    Sent     Recv     Sent Recv     Sent     Recv     Unknown  Illegal
+--------------------------------------------------------------------------------
+ethernet1/11         584290   584286   0    0        0        0        0        0
+
+**********************************************************************************
+AE group: ae4
+Members:                Bndl Rx state       Mux state  Sel state
+  ethernet1/12          yes  Current        Tx_Rx      Selected
+Status:           Enabled
+Mode:             Active
+Rate:             Slow
+Max-port:         8
+Fast-failover:    Disabled
+Pre-negotiation:  Enabled
+Local:            System Priority: 32768
+                  System MAC:      64:7c:e8:aa:bb:01
+                  Key:             67
+Partner:          System Priority: 32768
+                  System MAC:      64:7c:e8:aa:bb:01
+                  Key:             65
+Port State
+--------------------------------------------------------------------------------
+Interface                       Port
+                    Number Priority  Mode    Rate  Key      State
+--------------------------------------------------------------------------------
+ethernet1/12         27     32768    Active  Slow  67       0x3D
+Partner              26     32768    Active  Slow  65       0x3D
+
+Port Counters
+--------------------------------------------------------------------------------
+Interface               LACPDUs         Marker      Marker Response       Error
+                    Sent     Recv     Sent Recv     Sent     Recv     Unknown  Illegal
+--------------------------------------------------------------------------------
+ethernet1/12         584290   584286   0    0        0        0        0        0
+
+**********************************************************************************
+AE group: ae5
+Members:                Bndl Rx state       Mux state  Sel state
+  ethernet1/15          yes  Current        Tx_Rx      Selected
+  ethernet1/17          yes  Current        Tx_Rx      Selected
+Status:           Enabled
+Mode:             Active
+Rate:             Slow
+Max-port:         8
+Fast-failover:    Disabled
+Pre-negotiation:  Enabled
+Local:            System Priority: 32768
+                  System MAC:      64:7c:e8:aa:bb:01
+                  Key:             68
+Partner:          System Priority: 65534
+                  System MAC:      0a:00:00:aa:bb:cc
+                  Key:             101
+Port State
+--------------------------------------------------------------------------------
+Interface                       Port
+                    Number Priority  Mode    Rate  Key      State
+--------------------------------------------------------------------------------
+ethernet1/15         30     32768    Active  Slow  68       0x3D
+Partner              1001   1        Active  Slow  101      0x3D
+
+ethernet1/17         32     32768    Active  Slow  68       0x3D
+Partner              1      1        Active  Slow  101      0x3D
+
+Port Counters
+--------------------------------------------------------------------------------
+Interface               LACPDUs         Marker      Marker Response       Error
+                    Sent     Recv     Sent Recv     Sent     Recv     Unknown  Illegal
+--------------------------------------------------------------------------------
+ethernet1/15         584299   584270   0    0        0        0        0        0
+ethernet1/17         584300   584271   0    0        0        0        0        0
+
+**********************************************************************************
+AE group: ae6
+Members:                Bndl Rx state       Mux state  Sel state
+  ethernet1/21          yes  Current        Tx_Rx      Selected
+  ethernet1/22          yes  Current        Tx_Rx      Selected
+Status:           Enabled
+Mode:             Active
+Rate:             Slow
+Max-port:         8
+Fast-failover:    Disabled
+Pre-negotiation:  Enabled
+Local:            System Priority: 32768
+                  System MAC:      64:7c:e8:aa:bb:01
+                  Key:             69
+Partner:          System Priority: 65534
+                  System MAC:      0a:00:00:aa:bb:cc
+                  Key:             102
+Port State
+--------------------------------------------------------------------------------
+Interface                       Port
+                    Number Priority  Mode    Rate  Key      State
+--------------------------------------------------------------------------------
+ethernet1/21         36     32768    Active  Slow  69       0x3D
+Partner              2      1        Active  Slow  102      0x3D
+
+ethernet1/22         37     32768    Active  Slow  69       0x3D
+Partner              1002   1        Active  Slow  102      0x3D
+
+Port Counters
+--------------------------------------------------------------------------------
+Interface               LACPDUs         Marker      Marker Response       Error
+                    Sent     Recv     Sent Recv     Sent     Recv     Unknown  Illegal
+--------------------------------------------------------------------------------
+ethernet1/21         584296   584297   0    0        0        0        0        0
+ethernet1/22         584296   584297   0    0        0        0        0        0

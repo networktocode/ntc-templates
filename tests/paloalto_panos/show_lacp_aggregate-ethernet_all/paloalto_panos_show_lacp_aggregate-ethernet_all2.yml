@@ -1,0 +1,132 @@
+---
+parsed_sample:
+  - bundle_name: "ae1"
+    bundled:
+      - "yes"
+      - "yes"
+    fast_failover: "Disabled"
+    local_key: "64"
+    local_system_mac: "64:7c:e8:aa:bb:01"
+    local_system_priority: "32768"
+    max_port: "8"
+    member_interface:
+      - "ethernet1/19"
+      - "ethernet1/20"
+    mode: "Active"
+    mux_state:
+      - "Tx_Rx"
+      - "Tx_Rx"
+    partner_key: "103"
+    partner_system_mac: "0a:00:00:aa:bb:cc"
+    partner_system_priority: "65534"
+    pre_negotiation: "Enabled"
+    rate: "Slow"
+    receive_state:
+      - "Current"
+      - "Current"
+    selection_state:
+      - "Selected"
+      - "Selected"
+    status: "Enabled"
+  - bundle_name: "ae2"
+    bundled:
+      - "yes"
+    fast_failover: "Disabled"
+    local_key: "65"
+    local_system_mac: "64:7c:e8:aa:bb:01"
+    local_system_priority: "32768"
+    max_port: "8"
+    member_interface:
+      - "ethernet1/11"
+    mode: "Active"
+    mux_state:
+      - "Tx_Rx"
+    partner_key: "67"
+    partner_system_mac: "64:7c:e8:aa:bb:01"
+    partner_system_priority: "32768"
+    pre_negotiation: "Enabled"
+    rate: "Slow"
+    receive_state:
+      - "Current"
+    selection_state:
+      - "Selected"
+    status: "Enabled"
+  - bundle_name: "ae4"
+    bundled:
+      - "yes"
+    fast_failover: "Disabled"
+    local_key: "67"
+    local_system_mac: "64:7c:e8:aa:bb:01"
+    local_system_priority: "32768"
+    max_port: "8"
+    member_interface:
+      - "ethernet1/12"
+    mode: "Active"
+    mux_state:
+      - "Tx_Rx"
+    partner_key: "65"
+    partner_system_mac: "64:7c:e8:aa:bb:01"
+    partner_system_priority: "32768"
+    pre_negotiation: "Enabled"
+    rate: "Slow"
+    receive_state:
+      - "Current"
+    selection_state:
+      - "Selected"
+    status: "Enabled"
+  - bundle_name: "ae5"
+    bundled:
+      - "yes"
+      - "yes"
+    fast_failover: "Disabled"
+    local_key: "68"
+    local_system_mac: "64:7c:e8:aa:bb:01"
+    local_system_priority: "32768"
+    max_port: "8"
+    member_interface:
+      - "ethernet1/15"
+      - "ethernet1/17"
+    mode: "Active"
+    mux_state:
+      - "Tx_Rx"
+      - "Tx_Rx"
+    partner_key: "101"
+    partner_system_mac: "0a:00:00:aa:bb:cc"
+    partner_system_priority: "65534"
+    pre_negotiation: "Enabled"
+    rate: "Slow"
+    receive_state:
+      - "Current"
+      - "Current"
+    selection_state:
+      - "Selected"
+      - "Selected"
+    status: "Enabled"
+  - bundle_name: "ae6"
+    bundled:
+      - "yes"
+      - "yes"
+    fast_failover: "Disabled"
+    local_key: "69"
+    local_system_mac: "64:7c:e8:aa:bb:01"
+    local_system_priority: "32768"
+    max_port: "8"
+    member_interface:
+      - "ethernet1/21"
+      - "ethernet1/22"
+    mode: "Active"
+    mux_state:
+      - "Tx_Rx"
+      - "Tx_Rx"
+    partner_key: "102"
+    partner_system_mac: "0a:00:00:aa:bb:cc"
+    partner_system_priority: "65534"
+    pre_negotiation: "Enabled"
+    rate: "Slow"
+    receive_state:
+      - "Current"
+      - "Current"
+    selection_state:
+      - "Selected"
+      - "Selected"
+    status: "Enabled"

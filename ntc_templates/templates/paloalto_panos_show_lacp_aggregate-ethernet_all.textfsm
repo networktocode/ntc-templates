@@ -1,0 +1,56 @@
+Value Required BUNDLE_NAME (\S+)
+Value List MEMBER_INTERFACE (\S+)
+Value List BUNDLED (yes|no)
+Value List RECEIVE_STATE (\S+)
+Value List MUX_STATE (\S+)
+Value List SELECTION_STATE (\S+)
+Value STATUS (\S+)
+Value MODE (\S+)
+Value RATE (\S+)
+Value MAX_PORT (\d+)
+Value FAST_FAILOVER (\S+)
+Value PRE_NEGOTIATION (\S+)
+Value LOCAL_SYSTEM_PRIORITY (\d+)
+Value LOCAL_SYSTEM_MAC (\S+)
+Value LOCAL_KEY (\d+)
+Value PARTNER_SYSTEM_PRIORITY (\d+)
+Value PARTNER_SYSTEM_MAC (\S+)
+Value PARTNER_KEY (\d+)
+
+Start
+  ^LACP\s*:\s*$$
+  ^\*+\s*$$
+  ^AE\s+group:\s+${BUNDLE_NAME}\s*$$ -> AeBlock
+  ^\s*$$
+  ^. -> Error
+
+AeBlock
+  ^Members:\s+Bndl\s+Rx\s+state\s+Mux\s+state\s+Sel\s+state\s*$$
+  ^\s+${MEMBER_INTERFACE}\s+${BUNDLED}\s+${RECEIVE_STATE}\s+${MUX_STATE}\s+${SELECTION_STATE}\s*$$
+  ^Status:\s+${STATUS}\s*$$
+  ^Mode:\s+${MODE}\s*$$
+  ^Rate:\s+${RATE}\s*$$
+  ^Max-port:\s+${MAX_PORT}\s*$$
+  ^Fast-failover:\s+${FAST_FAILOVER}\s*$$
+  ^Pre-negotiation:\s+${PRE_NEGOTIATION}\s*$$
+  ^Local:\s+System\s+Priority:\s+${LOCAL_SYSTEM_PRIORITY}\s*$$ -> Local
+  ^\s*$$
+  ^. -> Error
+
+Local
+  ^\s+System\s+MAC:\s+${LOCAL_SYSTEM_MAC}\s*$$
+  ^\s+Key:\s+${LOCAL_KEY}\s*$$
+  ^Partner:\s+System\s+Priority:\s+${PARTNER_SYSTEM_PRIORITY}\s*$$ -> Partner
+  ^\s*$$
+  ^. -> Error
+
+Partner
+  ^\s+System\s+MAC:\s+${PARTNER_SYSTEM_MAC}\s*$$
+  ^\s+Key:\s+${PARTNER_KEY}\s*$$ -> PostBlock
+  ^\s*$$
+  ^. -> Error
+
+PostBlock
+  ^\*+\s*$$ -> Record Start
+  ^\s*$$
+  ^.
