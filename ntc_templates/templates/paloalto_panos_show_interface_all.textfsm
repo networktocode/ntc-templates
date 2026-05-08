@@ -1,0 +1,45 @@
+Value Required INTERFACE (\S+)
+Value ID (\d+)
+Value SPEED (\[n/a\]|[^/\s]+)
+Value DUPLEX (\[n/a\]|[^/\s]+)
+Value STATE (\[n/a\]|[^/\s]+)
+Value FEC (\[n/a\]|[^/\s]+)
+Value MAC_ADDRESS ([a-fA-F0-9]{2}(?::[a-fA-F0-9]{2}){5})
+Value VSYS (\d+)
+Value ZONE (\S+)
+Value FORWARDING (\S+)
+Value VLAN_ID (\d+)
+Value List IP_ADDRESS (\S+)
+
+Start
+  ^total\s+configured\s+hardware\s+interfaces:\s+\d+\s*$$ -> Hardware
+  ^total\s+configured\s+logical\s+interfaces:\s+\d+\s*$$ -> Logical
+  ^\s*$$
+  ^. -> Error
+
+Hardware
+  ^name\s+id\s+speed/duplex/state(?:/fec)?\s+mac\s+address\s*$$
+  ^-+\s*$$
+  ^${INTERFACE}\s+${ID}\s+${SPEED}/${DUPLEX}/${STATE}/${FEC}\s+${MAC_ADDRESS}\s*$$ -> Record
+  ^${INTERFACE}\s+${ID}\s+${SPEED}/${DUPLEX}/${STATE}\s+${MAC_ADDRESS}\s*$$ -> Record
+  ^aggregation\s+groups:\s+\d+\s*$$ -> Aggregation
+  ^total\s+configured\s+logical\s+interfaces:\s+\d+\s*$$ -> Logical
+  ^\s*$$
+  ^. -> Error
+
+Aggregation
+  ^\S+\s+members:\s*$$
+  ^\s+\S+.*$$
+  ^total\s+configured\s+logical\s+interfaces:\s+\d+\s*$$ -> Logical
+  ^\s*$$
+  ^. -> Error
+
+Logical
+  ^name\s+id\s+vsys\s+zone\s+forwarding\s+tag\s+address\s*$$
+  ^-+(?:\s+-+)*\s*$$
+  ^\S+\s+\d+\s+\d+ -> Continue.Record
+  ^${INTERFACE}\s+${ID}\s+${VSYS}\s+${ZONE}\s+${FORWARDING}\s+${VLAN_ID}\s+${IP_ADDRESS}\s*$$
+  ^${INTERFACE}\s+${ID}\s+${VSYS}\s+${FORWARDING}\s+${VLAN_ID}\s+${IP_ADDRESS}\s*$$
+  ^\s+${IP_ADDRESS}\s*$$
+  ^\s*$$
+  ^. -> Error
