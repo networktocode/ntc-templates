@@ -1,0 +1,47 @@
+VSF Domain ID    : 1
+ MAC Address      : 94f128-aabbcc
+ VSF Topology     : Chain
+ VSF Status       : Active
+ Uptime           : 134d 1h 55m
+ VSF MAD          : None
+ VSF Port Speed   : 10G
+ Software Version : WC.16.11.0021
+
+Name             : SWITCH-1
+Contact          : Network Team (email@address.com)
+Location         : Datacenter Generic
+
+
+Member ID        : 1
+MAC Address      : 94f128-aabbcd
+Type             : JL256A
+Model            : Aruba JL256A 2930F-48G-PoE+-4SFP+ Switch
+Priority         : 255
+Status           : Commander
+ROM Version      : WC.16.01.0010
+Serial Number    : SN0000001A
+Uptime           : 134d 1h 55m
+CPU Utilization  : 10%
+Memory - Total   : 333,513,216 bytes
+Free             : 212,192,464 bytes
+VSF Links -
+#1 : Active, Peer member 2
+#2 : Inactive
+
+
+
+Member ID        : 2
+MAC Address      : 94f128-aabbce
+Type             : JL256A
+Model            : Aruba JL256A 2930F-48G-PoE+-4SFP+ Switch
+Priority         : 128
+Status           : Standby
+ROM Version      : WC.16.01.0010
+Serial Number    : SN0000002A
+Uptime           : 134d 1h 55m
+CPU Utilization  : 4%
+Memory - Total   : 333,513,216 bytes
+Free             : 227,871,324 bytes
+VSF Links -
+#1 : Active, Peer member 1
+#2 : Inactive
