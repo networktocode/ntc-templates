@@ -1,0 +1,177 @@
+Interface 1/1/1 is up
+ Admin state is up
+ Link state: up for 1 month (since Thu Mar 19 22:11:41 GMT 2026)
+ Link transitions: 25
+ Description: Generic-FW01-link
+ Persona:
+ Hardware: Ethernet, MAC Address: bc:d7:a5:aa:bb:01
+ MTU 1500
+ Type 1G-SX / 1G SFP SX
+ Full-duplex
+ qos trust none
+ Speed 1000 Mb/s
+ Auto-negotiation is off
+ Flow-control: off
+ Error-control: off
+ Rate collection interval: 300 seconds
+
+ Rate                               RX                   TX        Total (RX+TX)
+ ---------------- -------------------- -------------------- --------------------
+ Mbits / sec                      0.00                 0.00                 0.00
+ KPkts / sec                      0.00                 0.00                 0.00
+   Unicast                        0.00                 0.00                 0.00
+   Multicast                      0.00                 0.00                 0.00
+   Broadcast                      0.00                 0.00                 0.00
+ Utilization %                    0.00                 0.00                 0.00
+
+ Statistic                          RX                   TX                Total
+ ---------------- -------------------- -------------------- --------------------
+ Packets                  426532925762         289433120397         715966046159
+   Unicast                426529938844         289390890725         715920829569
+   Multicast                   2986918             38510812             41497730
+   Broadcast                         0              3718860              3718860
+ Bytes                 432110265724967      125750100128348      557860365853315
+ Jumbos                    13255730326           1398455884          14654186210
+ Dropped                             0                    0                    0
+ Filtered                     33259205                   42             33259247
+ Pause Frames                        0                    0                    0
+ Errors                              0                    0                    0
+   CRC/FCS                           0                  n/a                    0
+   Collision                       n/a                    0                    0
+   Runts                             0                  n/a                    0
+   Giants                            0                  n/a                    0
+
+Interface 1/1/7 is up
+ Admin state is up
+ Link state: up for 2 months (since Mon Feb 16 02:50:07 GMT 2026)
+ Link transitions: 45
+ Description: Core-to-DC1
+ Persona:
+ Hardware: Ethernet, MAC Address: bc:d7:a5:aa:bb:02
+ MTU 1500
+ Type 10G-SR / 10G SFP+ SR
+ Full-duplex
+ qos trust none
+ Speed 10000 Mb/s
+ Auto-negotiation is off
+ Flow-control: off
+ Error-control: off
+ VLAN Mode: access
+ Access VLAN: 5
+ Rate collection interval: 300 seconds
+
+ Rate                               RX                   TX        Total (RX+TX)
+ ---------------- -------------------- -------------------- --------------------
+ Mbits / sec                      0.00                 0.01                 0.01
+ KPkts / sec                      0.00                 0.02                 0.02
+   Unicast                        0.00                 0.00                 0.00
+   Multicast                      0.00                 0.01                 0.01
+   Broadcast                      0.00                 0.01                 0.01
+ Utilization %                    0.00                 0.00                 0.00
+
+ Statistic                          RX                   TX                Total
+ ---------------- -------------------- -------------------- --------------------
+ Packets                     656375294           1184647042           1841022336
+   Unicast                   654860098            639066094           1293926192
+   Multicast                   1513019            339353458            340866477
+   Broadcast                      2177            206227490            206229667
+ Bytes                    491394340524         234866344691         726260685215
+ Jumbos                              0                    0                    0
+ Dropped                             0                    0                    0
+ Filtered                           39                  691                  730
+ Pause Frames                        0                    0                    0
+ Errors                              0                    0                    0
+   CRC/FCS                           0                  n/a                    0
+   Collision                       n/a                    0                    0
+   Runts                             0                  n/a                    0
+   Giants                            0                  n/a                    0
+
+Interface 1/1/9 is down
+ Admin state is up
+ State information: No XCVR installed
+ Link state: down for 1 year (since Tue Nov 26 17:26:53 GMT 2024)
+ Link transitions: 0
+ Description: Core-to-Edge
+ Persona:
+ Hardware: Ethernet, MAC Address: bc:d7:a5:aa:bb:03
+ MTU 1500
+ Type --
+ Full-duplex
+ qos trust none
+ Speed 0 Mb/s
+ Auto-negotiation is off
+ Flow-control: off
+ Error-control: off
+ L3 Counters: Rx Disabled, Tx Disabled
+ Rate collection interval: 300 seconds
+
+ Rate                               RX                   TX        Total (RX+TX)
+ ---------------- -------------------- -------------------- --------------------
+ Mbits / sec                      0.00                 0.00                 0.00
+ KPkts / sec                      0.00                 0.00                 0.00
+   Unicast                        0.00                 0.00                 0.00
+   Multicast                      0.00                 0.00                 0.00
+   Broadcast                      0.00                 0.00                 0.00
+ Utilization %                    0.00                 0.00                 0.00
+
+ Statistic                          RX                   TX                Total
+ ---------------- -------------------- -------------------- --------------------
+ Packets                             0                    0                    0
+   Unicast                           0                    0                    0
+   Multicast                         0                    0                    0
+   Broadcast                         0                    0                    0
+ Bytes                               0                    0                    0
+ Jumbos                              0                    0                    0
+ Dropped                             0                    0                    0
+ Filtered                            0                    0                    0
+ Pause Frames                        0                    0                    0
+ Errors                              0                    0                    0
+   CRC/FCS                           0                  n/a                    0
+   Collision                       n/a                    0                    0
+   Runts                             0                  n/a                    0
+   Giants                            0                  n/a                    0
+
+Interface 1/1/10 is down (Administratively down)
+ Admin state is down
+ State information: No XCVR installed
+ Link state: down for 1 year (since Tue Nov 26 17:26:53 GMT 2024)
+ Link transitions: 0
+ Description:
+ Persona:
+ Hardware: Ethernet, MAC Address: bc:d7:a5:aa:bb:04
+ MTU 1500
+ Type --
+ Full-duplex
+ qos trust none
+ Speed 0 Mb/s
+ Auto-negotiation is off
+ Flow-control: off
+ Error-control: off
+ L3 Counters: Rx Disabled, Tx Disabled
+ Rate collection interval: 300 seconds
+
+ Rate                               RX                   TX        Total (RX+TX)
+ ---------------- -------------------- -------------------- --------------------
+ Mbits / sec                      0.00                 0.00                 0.00
+ KPkts / sec                      0.00                 0.00                 0.00
+   Unicast                        0.00                 0.00                 0.00
+   Multicast                      0.00                 0.00                 0.00
+   Broadcast                      0.00                 0.00                 0.00
+ Utilization %                    0.00                 0.00                 0.00
+
+ Statistic                          RX                   TX                Total
+ ---------------- -------------------- -------------------- --------------------
+ Packets                             0                    0                    0
+   Unicast                           0                    0                    0
+   Multicast                         0                    0                    0
+   Broadcast                         0                    0                    0
+ Bytes                               0                    0                    0
+ Jumbos                              0                    0                    0
+ Dropped                             0                    0                    0
+ Filtered                            0                    0                    0
+ Pause Frames                        0                    0                    0
+ Errors                              0                    0                    0
+   CRC/FCS                           0                  n/a                    0
+   Collision                       n/a                    0                    0
+   Runts                             0                  n/a                    0
+   Giants                            0                  n/a                    0

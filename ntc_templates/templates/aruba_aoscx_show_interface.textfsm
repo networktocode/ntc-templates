@@ -28,6 +28,7 @@ Value RX_MCAST_PACKETS (\d+)
 Value RX_BROADCAST_PACKETS (\d+)
 Value RX_ERRORS (\d+)
 Value RX_DROPPED (\d+)
+Value RX_FILTERED (\d+)
 Value RX_CRC_FCS (\d+)
 Value TX_TOTAL_PACKETS (\d+)
 Value TX_TOTAL_BYTES (\d+)
@@ -36,6 +37,7 @@ Value TX_MCAST_PACKETS (\d+)
 Value TX_BROADCAST_PACKETS (\d+)
 Value TX_ERRORS (\d+)
 Value TX_DROPPED (\d+)
+Value TX_FILTERED (\d+)
 Value TX_CRC_FCS (\S+)
 Value TX_COLLISION (\d+)
 
@@ -79,6 +81,7 @@ Start
   ^\s*Aggregated-interfaces\s*:\s+(?:\S+\s+){7}${AGGREGATED_INTERFACES}\s* -> Continue
   ^\s*Aggregated-interfaces\s*:
   ^\s*Aggregation-key
+  ^\s*Subinterface\s+count
   ^\s*Aggregate\s+mode
   ^\s*Persona
   ^\s*rate-limit\s+unknown-unicast
@@ -92,6 +95,8 @@ Start
   ^\s*Rx -> Rx
   ^\s*Rate\s+RX\s+TX\s+Total -> Rate
   ^\s*Statistic\s+RX\s+TX\s+Total -> Statistic
+  ^\s*active-gateway\s
+  ^\s*VRF\s+name\s+is\s+\S+
   ^. -> Error
 
 Rx
@@ -137,6 +142,7 @@ Statistic
   ^\s*Jumbos
   ^\s*Pause\s+Frames
   ^\s*Dropped\s+${RX_DROPPED}\s+${TX_DROPPED}\s+\d+
+  ^\s*Filtered\s+${RX_FILTERED}\s+${TX_FILTERED}\s+\d+
   ^\s*Errors\s+${RX_ERRORS}\s+${TX_ERRORS}\s+\d+
   ^\s+CRC/FCS\s+${RX_CRC_FCS}\s+${TX_CRC_FCS}\s+\d+
   ^\s+Collision\s+\S+\s+${TX_COLLISION}\s+\d+
