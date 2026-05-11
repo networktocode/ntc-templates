@@ -1,0 +1,25 @@
+Value Filldown MODULE_TYPE (Management|Line)
+Value Required MODULE (\S+)
+Value MODEL (\S+)
+Value DESCRIPTION (\S.*\S)
+Value Required SERIAL_NUMBER (\S+)
+Value STATUS (\S.*\S)
+
+Start
+  ^${MODULE_TYPE}\s+Modules\s*$$ -> Header
+  ^=+\s*$$
+  ^\s*$$
+  ^. -> Error
+
+Header
+  ^=+\s*$$
+  ^\s*Product\s+Serial\s*$$
+  ^Name\s+Number\s+Description\s+Number\s+Status\s*$$
+  ^-+\s+-+\s+-+\s+-+\s+-+\s*$$ -> Rows
+  ^\s*$$
+  ^. -> Error
+
+Rows
+  ^${MODULE}\s+${MODEL}\s+${DESCRIPTION}\s{2,}${SERIAL_NUMBER}\s+${STATUS}\s*$$ -> Record
+  ^\s*$$ -> Start
+  ^. -> Error
