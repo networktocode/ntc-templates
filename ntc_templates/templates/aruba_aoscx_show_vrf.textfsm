@@ -1,0 +1,23 @@
+Value Filldown VRF (\S+)
+Value Required INTERFACE (\S+)
+Value Required STATUS (\S+)
+
+Start
+  ^VRF\s+Configuration\s*:\s*$$
+  ^-+\s*$$
+  ^VRF\s+Name\s+:\s+${VRF}\s*$$ -> VrfHeader
+  ^\s*$$
+  ^. -> Error
+
+VrfHeader
+  ^\s+Interfaces\s+Status\s*$$
+  ^\s+-+\s*$$ -> Interfaces
+  ^VRF\s+Name\s+:\s+${VRF}\s*$$ -> VrfHeader
+  ^\s*$$
+  ^. -> Error
+
+Interfaces
+  ^\s+${INTERFACE}\s+${STATUS}\s*$$ -> Record
+  ^VRF\s+Name\s+:\s+${VRF}\s*$$ -> VrfHeader
+  ^\s*$$
+  ^. -> Error
