@@ -4,7 +4,7 @@ Value SYSTEM_NAME (\S+)
 Value SYSTEM_DESCRIPTION (\S.*\S)
 Value MODEL (\S+)
 Value CAPABILITIES_SUPPORTED (\S.*\S)
-Value CAPABILITIES_ENABLED (\S.*\S)
+Value CAPABILITIES (\S.*\S)
 Value MGMT_ADDRESS_TYPE (\S+)
 Value MGMT_ADDRESS (\S+)
 
@@ -16,7 +16,7 @@ Start
   ^\s*System\s+Description\s*:\s+(?:ProCurve|HP|Aruba)\s+${MODEL}\s+${SYSTEM_DESCRIPTION}\s*$$
   ^\s*System\s+Description\s*:\s+${SYSTEM_DESCRIPTION}\s*$$
   ^\s*System\s+Capabilities\s+Supported\s*:\s+${CAPABILITIES_SUPPORTED}\s*$$
-  ^\s*System\s+Capabilities\s+Enabled\s*:\s+${CAPABILITIES_ENABLED}\s*$$
+  ^\s*System\s+Capabilities\s+Enabled\s*:\s+${CAPABILITIES}\s*$$
   ^\s*Management\s+Address\s*:\s*$$
   ^\s+Type\s*:\s*${MGMT_ADDRESS_TYPE}\s*$$
   ^\s+Address\s*:\s*${MGMT_ADDRESS}\s*$$
