@@ -1,6 +1,6 @@
 Value Filldown NAME (\S+)
-Value Filldown CONTACT (.+)
-Value Filldown LOCATION (.+)
+Value Filldown CONTACT (.*)
+Value Filldown LOCATION (.*)
 Value Filldown MAC_AGE (\d+)
 Value Filldown TIMEZONE (\S+)
 Value Filldown DAYLIGHT_RULE (\S+)
@@ -24,8 +24,8 @@ Value BUFFERS_MISSED (\d+)
 Start
   ^.*Status\s+and\s+Counters
   ^\s*System\s+Name\s+:\s+${NAME}
-  ^\s*System\s+Contact\s+:\s+${CONTACT}
-  ^\s*System\s+Location\s+:\s+${LOCATION}
+  ^\s*System\s+Contact\s+:\s*${CONTACT}
+  ^\s*System\s+Location\s+:\s*${LOCATION}
   ^\s*MAC\s+Age\s+Time[^:]*:\s+${MAC_AGE}
   ^\s*Time\s+Zone\s+:\s+${TIMEZONE}
   ^\s*Daylight\s+Time\s+Rule\s+:\s+${DAYLIGHT_RULE}
