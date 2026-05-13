@@ -14,10 +14,10 @@ Start
   ^. -> Error
 
 Ports
-  ^\s+${PORT}\s+?${NAME}\s+${STATUS}\s+?${CONFIG_MODE}\s+?${SPEED}\s+?${TYPE}\s+${VLAN_TAGGED}\s+${VLAN_UNTAGGED}\s*$$ -> Record
-  ^\s+${PORT}\s+?${NAME}\s+${STATUS}\s+${VLAN_TAGGED}\s+${VLAN_UNTAGGED}\s*$$ -> Record
-  ^\s+${PORT}\s+${STATUS}\s+?${CONFIG_MODE}\s+?${SPEED}\s+?${TYPE}\s+${VLAN_TAGGED}\s+${VLAN_UNTAGGED}\s*$$ -> Record
-  ^\s+${PORT}\s+${STATUS}\s+?${CONFIG_MODE}\s+${VLAN_TAGGED}\s+${VLAN_UNTAGGED}\s*$$ -> Record
+  ^\s+${PORT}\s+${NAME}\s+${STATUS}\s+${CONFIG_MODE}\s+${SPEED}\s+${TYPE}\s+${VLAN_TAGGED}\s+${VLAN_UNTAGGED}\s*$$ -> Record
+  ^\s+${PORT}\s+${NAME}\s+${STATUS}\s+${VLAN_TAGGED}\s+${VLAN_UNTAGGED}\s*$$ -> Record
+  ^\s+${PORT}\s+${STATUS}\s+${CONFIG_MODE}\s+${SPEED}\s+${TYPE}\s+${VLAN_TAGGED}\s+${VLAN_UNTAGGED}\s*$$ -> Record
+  ^\s+${PORT}\s+${STATUS}\s+${CONFIG_MODE}\s+${VLAN_TAGGED}\s+${VLAN_UNTAGGED}\s*$$ -> Record
   ^\s+${PORT}\s+${STATUS}\s+${VLAN_TAGGED}\s+${VLAN_UNTAGGED}\s*$$ -> Record
   ^\s*$$
   ^. -> Error
