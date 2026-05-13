@@ -3,30 +3,29 @@ Value ADMIN_STATE (\S+)
 Value LINK_STATE (\S+)
 Value MAC_ADDRESS (\S+)
 Value IPV4_ADDRESS (\S+)
-Value IPV4_MASK (\S+)
+Value IPV4_PREFIX_LENGTH (\d+)
 Value IPV4_GATEWAY (\S+)
 Value IPV6_ADDRESS (\S+)
-Value IPV6_PREFIX (\S+)
+Value IPV6_PREFIX_LENGTH (\d+)
 Value IPV6_LINK_LOCAL (\S+)
-Value IPV6_LINK_LOCAL_PREFIX (\S+)
+Value IPV6_LINK_LOCAL_PREFIX_LENGTH (\d+)
 Value IPV6_GATEWAY (\S+)
 Value PRIMARY_DNS (\S+)
 Value SECONDARY_DNS (\S+)
 Value TERTIARY_DNS (\S+)
-Value IPV6_ONLY_PREFERRED (\S+)
 
 Start
   ^\s*Address\s+Mode\s+:\s+${ADDRESS_MODE}\s*$$
   ^\s*Admin\s+State\s+:\s+${ADMIN_STATE}\s*$$
   ^\s*Link\s+State\s+:\s+${LINK_STATE}\s*$$
   ^\s*Mac\s+Address\s+:\s+${MAC_ADDRESS}\s*$$
-  ^\s*IPv4\s+address/subnet-mask\s+:\s+${IPV4_ADDRESS}/${IPV4_MASK}\s*$$
+  ^\s*IPv4\s+address/subnet-mask\s+:\s+${IPV4_ADDRESS}/${IPV4_PREFIX_LENGTH}\s*$$
   ^\s*IPv4\s+address/subnet-mask\s+:\s*$$
   ^\s*Default\s+gateway\s+IPv4\s+:\s+${IPV4_GATEWAY}\s*$$
   ^\s*Default\s+gateway\s+IPv4\s+:\s*$$
-  ^\s*IPv6\s+address/prefix\s+:\s+${IPV6_ADDRESS}/${IPV6_PREFIX}\s*$$
+  ^\s*IPv6\s+address/prefix\s+:\s+${IPV6_ADDRESS}/${IPV6_PREFIX_LENGTH}\s*$$
   ^\s*IPv6\s+address/prefix\s+:\s*$$
-  ^\s*IPv6\s+link\s+local\s+address/prefix\s*:\s+${IPV6_LINK_LOCAL}/${IPV6_LINK_LOCAL_PREFIX}\s*$$
+  ^\s*IPv6\s+link\s+local\s+address/prefix\s*:\s+${IPV6_LINK_LOCAL}/${IPV6_LINK_LOCAL_PREFIX_LENGTH}\s*$$
   ^\s*IPv6\s+link\s+local\s+address/prefix\s*:\s*$$
   ^\s*Default\s+gateway\s+IPv6\s+:\s+${IPV6_GATEWAY}\s*$$
   ^\s*Default\s+gateway\s+IPv6\s+:\s*$$
@@ -36,7 +35,5 @@ Start
   ^\s*Secondary\s+Nameserver\s+:\s*$$
   ^\s*Tertiary\s+Nameserver\s+:\s+${TERTIARY_DNS}\s*$$
   ^\s*Tertiary\s+Nameserver\s+:\s*$$
-  ^\s*Ipv6-only-preferred\s+:\s+${IPV6_ONLY_PREFERRED}\s*$$
-  ^\s*Ipv6-only-preferred\s+:\s*$$
   ^\s*$$
   ^. -> Error
