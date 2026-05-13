@@ -1,8 +1,8 @@
 Value Filldown MODULE_TYPE (Management|Line)
 Value Required MODULE (\S+)
 Value MODEL (\S+)
-Value DESCRIPTION (\S.*\S)
-Value Required SERIAL_NUMBER (\S+)
+Value CARDTYPE (\S.*\S)
+Value Required SERIAL (\S+)
 Value STATUS (\S.*\S)
 
 Start
@@ -20,6 +20,6 @@ Header
   ^. -> Error
 
 Rows
-  ^${MODULE}\s+${MODEL}\s+${DESCRIPTION}\s{2,}${SERIAL_NUMBER}\s+${STATUS}\s*$$ -> Record
+  ^${MODULE}\s+${MODEL}\s+${CARDTYPE}\s{2,}${SERIAL}\s+${STATUS}\s*$$ -> Record
   ^\s*$$ -> Start
   ^. -> Error
