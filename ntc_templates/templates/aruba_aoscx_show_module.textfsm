@@ -6,20 +6,11 @@ Value Required SERIAL (\S+)
 Value STATUS (\S.*\S)
 
 Start
-  ^${MODULE_TYPE}\s+Modules\s*$$ -> Header
-  ^=+\s*$$
-  ^\s*$$
-  ^. -> Error
-
-Header
+  ^${MODULE_TYPE}\s+Modules\s*$$
   ^=+\s*$$
   ^\s*Product\s+Serial\s*$$
   ^Name\s+Number\s+Description\s+Number\s+Status\s*$$
-  ^-+\s+-+\s+-+\s+-+\s+-+\s*$$ -> Rows
-  ^\s*$$
-  ^. -> Error
-
-Rows
+  ^---+
   ^${MODULE}\s+${MODEL}\s+${CARDTYPE}\s{2,}${SERIAL}\s+${STATUS}\s*$$ -> Record
-  ^\s*$$ -> Start
+  ^\s*$$
   ^. -> Error
