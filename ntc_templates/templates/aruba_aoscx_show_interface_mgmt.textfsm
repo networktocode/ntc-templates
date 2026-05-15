@@ -29,11 +29,8 @@ Start
   ^\s*IPv6\s+link\s+local\s+address/prefix\s*:\s*$$
   ^\s*Default\s+gateway\s+IPv6\s+:\s+${IPV6_GATEWAY}\s*$$
   ^\s*Default\s+gateway\s+IPv6\s+:\s*$$
-  ^\s*Primary\s+Nameserver\s+:\s+${PRIMARY_DNS}\s*$$
-  ^\s*Primary\s+Nameserver\s+:\s*$$
-  ^\s*Secondary\s+Nameserver\s+:\s+${SECONDARY_DNS}\s*$$
-  ^\s*Secondary\s+Nameserver\s+:\s*$$
-  ^\s*Tertiary\s+Nameserver\s+:\s+${TERTIARY_DNS}\s*$$
-  ^\s*Tertiary\s+Nameserver\s+:\s*$$
+  ^\s*Primary\s+Nameserver\s+:\s*${PRIMARY_DNS}?\s*$$
+  ^\s*Secondary\s+Nameserver\s+:\s*${SECONDARY_DNS}?\s*$$
+  ^\s*Tertiary\s+Nameserver\s+:\s*${TERTIARY_DNS}?\s*$$
   ^\s*$$
   ^. -> Error
