@@ -21,6 +21,7 @@ parsed_sample:
     rx_crc_fcs: "0"
     rx_dropped: "0"
     rx_errors: "0"
+    rx_filtered: ""
     rx_mcast_packets: "0"
     rx_total_bytes: "66461683072"
     rx_total_packets: "55863297"
@@ -32,6 +33,7 @@ parsed_sample:
     tx_crc_fcs: "n/a"
     tx_dropped: "0"
     tx_errors: "0"
+    tx_filtered: ""
     tx_mcast_packets: "1781"
     tx_total_bytes: "12145426823"
     tx_total_packets: "25381339"
@@ -40,6 +42,7 @@ parsed_sample:
     vlan_mode: ""
     vlan_native: ""
     vlan_trunk: []
+    vrf: ""
   - aggregated_interfaces: []
     auto_neg: "on"
     duplex: "Full"
@@ -61,6 +64,7 @@ parsed_sample:
     rx_crc_fcs: "0"
     rx_dropped: "0"
     rx_errors: "0"
+    rx_filtered: ""
     rx_mcast_packets: "0"
     rx_total_bytes: "0"
     rx_total_packets: "0"
@@ -72,6 +76,7 @@ parsed_sample:
     tx_crc_fcs: "n/a"
     tx_dropped: "0"
     tx_errors: "0"
+    tx_filtered: ""
     tx_mcast_packets: "0"
     tx_total_bytes: "0"
     tx_total_packets: "0"
@@ -80,6 +85,7 @@ parsed_sample:
     vlan_mode: "access"
     vlan_native: ""
     vlan_trunk: []
+    vrf: ""
   - aggregated_interfaces: []
     auto_neg: "on"
     duplex: "Full"
@@ -101,6 +107,7 @@ parsed_sample:
     rx_crc_fcs: "0"
     rx_dropped: "0"
     rx_errors: "0"
+    rx_filtered: ""
     rx_mcast_packets: "0"
     rx_total_bytes: "0"
     rx_total_packets: "0"
@@ -113,6 +120,7 @@ parsed_sample:
     tx_crc_fcs: "n/a"
     tx_dropped: "0"
     tx_errors: "0"
+    tx_filtered: ""
     tx_mcast_packets: "0"
     tx_total_bytes: "0"
     tx_total_packets: "0"
@@ -121,6 +129,7 @@ parsed_sample:
     vlan_mode: ""
     vlan_native: ""
     vlan_trunk: []
+    vrf: ""
   - aggregated_interfaces: []
     auto_neg: "on"
     duplex: "Full"
@@ -142,6 +151,7 @@ parsed_sample:
     rx_crc_fcs: "0"
     rx_dropped: "0"
     rx_errors: "0"
+    rx_filtered: ""
     rx_mcast_packets: "0"
     rx_total_bytes: "0"
     rx_total_packets: "0"
@@ -155,6 +165,7 @@ parsed_sample:
     tx_crc_fcs: "n/a"
     tx_dropped: "0"
     tx_errors: "0"
+    tx_filtered: ""
     tx_mcast_packets: "0"
     tx_total_bytes: "0"
     tx_total_packets: "0"
@@ -163,6 +174,7 @@ parsed_sample:
     vlan_mode: ""
     vlan_native: ""
     vlan_trunk: []
+    vrf: ""
   - aggregated_interfaces: []
     auto_neg: ""
     duplex: ""
@@ -184,6 +196,7 @@ parsed_sample:
     rx_crc_fcs: ""
     rx_dropped: ""
     rx_errors: ""
+    rx_filtered: ""
     rx_mcast_packets: ""
     rx_total_bytes: ""
     rx_total_packets: ""
@@ -196,6 +209,7 @@ parsed_sample:
     tx_crc_fcs: ""
     tx_dropped: ""
     tx_errors: ""
+    tx_filtered: ""
     tx_mcast_packets: ""
     tx_total_bytes: ""
     tx_total_packets: ""
@@ -204,6 +218,7 @@ parsed_sample:
     vlan_mode: ""
     vlan_native: ""
     vlan_trunk: []
+    vrf: ""
   - aggregated_interfaces: []
     auto_neg: ""
     duplex: ""
@@ -225,6 +240,7 @@ parsed_sample:
     rx_crc_fcs: ""
     rx_dropped: ""
     rx_errors: ""
+    rx_filtered: ""
     rx_mcast_packets: ""
     rx_total_bytes: ""
     rx_total_packets: ""
@@ -236,6 +252,7 @@ parsed_sample:
     tx_crc_fcs: ""
     tx_dropped: ""
     tx_errors: ""
+    tx_filtered: ""
     tx_mcast_packets: ""
     tx_total_bytes: ""
     tx_total_packets: ""
@@ -244,6 +261,7 @@ parsed_sample:
     vlan_mode: ""
     vlan_native: ""
     vlan_trunk: []
+    vrf: ""
   - aggregated_interfaces: []
     auto_neg: ""
     duplex: ""
@@ -265,6 +283,7 @@ parsed_sample:
     rx_crc_fcs: ""
     rx_dropped: ""
     rx_errors: ""
+    rx_filtered: ""
     rx_mcast_packets: ""
     rx_total_bytes: ""
     rx_total_packets: ""
@@ -276,6 +295,7 @@ parsed_sample:
     tx_crc_fcs: ""
     tx_dropped: ""
     tx_errors: ""
+    tx_filtered: ""
     tx_mcast_packets: ""
     tx_total_bytes: ""
     tx_total_packets: ""
@@ -284,3 +304,4 @@ parsed_sample:
     vlan_mode: ""
     vlan_native: ""
     vlan_trunk: []
+    vrf: ""
