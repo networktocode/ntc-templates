@@ -43,6 +43,7 @@ parsed_sample:
     vlan_native: "1"
     vlan_trunk:
       - "all"
+    vrf: ""
   - aggregated_interfaces: []
     auto_neg: "on"
     duplex: "Full"
@@ -85,6 +86,7 @@ parsed_sample:
     vlan_mode: "access"
     vlan_native: ""
     vlan_trunk: []
+    vrf: ""
   - aggregated_interfaces: []
     auto_neg: "on"
     duplex: "Full"
@@ -127,6 +129,7 @@ parsed_sample:
     vlan_mode: "access"
     vlan_native: ""
     vlan_trunk: []
+    vrf: ""
   - aggregated_interfaces: []
     auto_neg: "on"
     duplex: "Full"
@@ -170,6 +173,7 @@ parsed_sample:
     vlan_native: "1"
     vlan_trunk:
       - "all"
+    vrf: ""
   - aggregated_interfaces: []
     auto_neg: "off"
     duplex: "Full"
@@ -212,6 +216,7 @@ parsed_sample:
     vlan_mode: "access"
     vlan_native: ""
     vlan_trunk: []
+    vrf: ""
   - aggregated_interfaces: []
     auto_neg: ""
     duplex: ""
@@ -254,3 +259,4 @@ parsed_sample:
     vlan_mode: ""
     vlan_native: ""
     vlan_trunk: []
+    vrf: ""

@@ -40,6 +40,7 @@ Value TX_DROPPED (\d+)
 Value TX_FILTERED (\d+)
 Value TX_CRC_FCS (\S+)
 Value TX_COLLISION (\d+)
+Value VRF (\S+)
 
 Start
   ^\s*(Interface|Aggregate)\s+\S+\s+is -> Continue.Record
@@ -96,7 +97,7 @@ Start
   ^\s*Rate\s+RX\s+TX\s+Total -> Rate
   ^\s*Statistic\s+RX\s+TX\s+Total -> Statistic
   ^\s*active-gateway\s
-  ^\s*VRF\s+name\s+is\s+\S+
+  ^\s*VRF\s+name\s+is\s+${VRF}
   ^. -> Error
 
 Rx

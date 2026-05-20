@@ -43,6 +43,7 @@ parsed_sample:
     vlan_native: "2033"
     vlan_trunk:
       - "2033"
+    vrf: ""
   - aggregated_interfaces: []
     auto_neg: "on"
     duplex: "Full"
@@ -88,3 +89,4 @@ parsed_sample:
       - "19"
       - "23-24"
       - "2016"
+    vrf: ""
