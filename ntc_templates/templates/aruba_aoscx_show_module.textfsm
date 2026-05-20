@@ -1,0 +1,16 @@
+Value Filldown MODULE_TYPE (Management|Line)
+Value Required MODULE (\S+)
+Value MODEL (\S+)
+Value CARDTYPE (\S.*\S)
+Value Required SERIAL (\S+)
+Value STATUS (\S.*\S)
+
+Start
+  ^${MODULE_TYPE}\s+Modules\s*$$
+  ^=+\s*$$
+  ^\s*Product\s+Serial\s*$$
+  ^Name\s+Number\s+Description\s+Number\s+Status\s*$$
+  ^---+
+  ^${MODULE}\s+${MODEL}\s+${CARDTYPE}\s{2,}${SERIAL}\s+${STATUS}\s*$$ -> Record
+  ^\s*$$
+  ^. -> Error
