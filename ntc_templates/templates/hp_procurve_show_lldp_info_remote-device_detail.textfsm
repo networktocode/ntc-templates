@@ -13,25 +13,25 @@ Value MGMT_ADDRESS (\S+|.*?)
 
 Start
   ^\s*$$
-  ^\s*LLDP\sRemote\sDevice\sInformation\sDetail -> LLDP
+  ^\s*LLDP\s+Remote\s+Device\s+Information\s+Detail -> LLDP
   ^. -> Error
 
 LLDP
-  ^\s+Local\sPort\s+:\s${LOCAL_INTERFACE}\s*$$
-  ^\s+ChassisType\s+:\s${NEIGHBOR_CHASSIS_TYPE}\s*$$
-  ^\s+ChassisId\s+:\s${CHASSIS_ID}\s*$$
-  ^\s+PortType\s+:\s${PORT_TYPE}\s*$$
-  ^\s+PortId\s+:\s${NEIGHBOR_INTERFACE}\s*$$
-  ^\s+SysName\s+:\s${NEIGHBOR_NAME}\s*$$
-  ^\s+System\sDescr\s:\s${NEIGHBOR_DESCRIPTION}\s*$$
-  ^\s+PortDescr\s+:\s${NEIGHBOR_INTERFACE_DESCRIPTION}\s*$$
+  ^\s+Local\s+Port\s+:\s+${LOCAL_INTERFACE}\s*$$
+  ^\s+ChassisType\s+:\s+${NEIGHBOR_CHASSIS_TYPE}\s*$$
+  ^\s+ChassisId\s+:\s+${CHASSIS_ID}\s*$$
+  ^\s+PortType\s+:\s+${PORT_TYPE}\s*$$
+  ^\s+PortId\s+:\s+${NEIGHBOR_INTERFACE}\s*$$
+  ^\s+SysName\s+:\s*${NEIGHBOR_NAME}\s*$$
+  ^\s+System\s+Descr\s+:\s*${NEIGHBOR_DESCRIPTION}\s*$$
+  ^\s+PortDescr\s+:\s*${NEIGHBOR_INTERFACE_DESCRIPTION}\s*$$
 # Port VLAN ID
-  ^\s+Pvid\s+:\s${VLAN_ID}\s*$$
-  ^\s+System\s+Capabilities\s+Supported\s+:\s${CAPABILITIES_SUPPORTED}\s*$$
-  ^\s+System\s+Capabilities\s+Enabled\s+:\s${CAPABILITIES}\s*$$
+  ^\s+Pvid\s+:\s*${VLAN_ID}\s*$$
+  ^\s+System\s+Capabilities\s+Supported\s+:\s*${CAPABILITIES_SUPPORTED}\s*$$
+  ^\s+System\s+Capabilities\s+Enabled\s+:\s*${CAPABILITIES}\s*$$
   ^\s+Remote\s+Management\s+Address\s*$$
   ^\s+Type.*$$
-  ^\s+Address\s:\s${MGMT_ADDRESS}
+  ^\s+Address\s+:\s+${MGMT_ADDRESS}
   ^\s+Poe\s+Plus\s+Information\s+Detail\s*$$
   ^\s+Poe\s+Device\s+Type.*
   ^\s+Power\s+Source.*
@@ -41,7 +41,7 @@ LLDP
   ^\s+Requested\s+Power\s+Value.*
   ^\s+Actual\s+Power\s+Value.*
   ^\s+PSE\s+Allocated\s+Power\s+Value.*
-  ^\s+MED\sInformation\sDetail\s*$$
+  ^\s+MED\s+Information\s+Detail\s*$$
   ^\s+EndpointClass.*
   ^\s+Poe\s+Device\s+Type.*
   ^\s+Power\s+Requested.*

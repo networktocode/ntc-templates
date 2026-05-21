@@ -1,0 +1,117 @@
+ LLDP Remote Device Information Detail
+
+  Local Port   : A2
+  ChassisType  : mac-address
+  ChassisId    : c025a5-aabb01
+  PortType     : mac-address
+  PortId       : c0 25 a5 aa bb 01
+  SysName      :
+  System Descr :
+  PortDescr    :
+  Pvid         :
+
+  System Capabilities Supported  :
+  System Capabilities Enabled    :
+
+  Remote Management Address
+
+  MED Information Detail
+    EndpointClass          :Class1
+
+------------------------------------------------------------------------------
+  Local Port   : A8
+  ChassisType  : mac-address
+  ChassisId    : 20a6cd-aabb02
+  PortType     : mac-address
+  PortId       : 20 a6 cd aa bb 02
+  SysName      : Generic-AP-1
+  System Descr : ArubaOS (MODEL: 315), Version Aruba AP
+  PortDescr    : bond0
+  Pvid         : 1
+
+  System Capabilities Supported  : bridge, wlan-access-point
+  System Capabilities Enabled    : wlan-access-point
+
+  Remote Management Address
+     Type    : ipv4
+     Address : 192.0.2.41
+
+  Poe Plus Information Detail
+
+    Poe Device Type         : Type2 PD
+    Power Source            : Only PSE
+    Power Priority          : Unknown
+    PD Requested Power Value   : 20.8 Watts
+    PSE Allocated Power Value  : 20.8 Watts
+
+------------------------------------------------------------------------------
+  Local Port   : A9
+  ChassisType  : mac-address
+  ChassisId    : bcd7a5-aabb03
+  PortType     : interface-name
+  PortId       : 1/1/12
+  SysName      : SWITCH-1
+  System Descr : Aruba JL817A  RL.10.13.1060
+  PortDescr    : Switch-Generic-A9
+  Pvid         : 60
+
+  System Capabilities Supported  : bridge, router
+  System Capabilities Enabled    : bridge, router
+
+  Remote Management Address
+     Type    : ipv4
+     Address : 192.0.2.12
+
+  Poe Plus Information Detail
+
+    Poe Device Type         : Type2 PSE
+    Power Source            : Unknown
+    Power Priority          : Unknown
+    PD Requested Power Value   : 0.0 Watts
+    PSE Allocated Power Value  : 0.0 Watts
+
+------------------------------------------------------------------------------
+  Local Port   : A17
+  ChassisType  : local
+  ChassisId    : AC_AP_GenericLoc...
+  PortType     : local
+  PortId       : emac0
+  SysName      : Generic-AP-12
+  System Descr : Cisco 1200 Series AP 12.01T1
+  PortDescr    :
+  Pvid         :
+
+  System Capabilities Supported  :
+  System Capabilities Enabled    :
+
+  Remote Management Address
+     Type    : ipv4
+     Address : 192.0.2.11
+
+------------------------------------------------------------------------------
+  Local Port   : D13
+  ChassisType  : mac-address
+  ChassisId    : f061c0-aabb04
+  PortType     : mac-address
+  PortId       : f0 61 c0 aa bb 04
+  SysName      : AP 07-01-04
+  System Descr : ArubaOS (MODEL: 535), Version Aruba AP
+  PortDescr    : eth0
+  Pvid         : 1
+
+  System Capabilities Supported  : bridge, wlan-access-point
+  System Capabilities Enabled    : wlan-access-point
+
+  Remote Management Address
+     Type    : ipv4
+     Address : 192.0.2.222
+
+  Poe Plus Information Detail
+
+    Poe Device Type         : Type2 PD
+    Power Source            : Only PSE
+    Power Priority          : Unknown
+    PD Requested Power Value   : 23.3 Watts
+    PSE Allocated Power Value  : 23.3 Watts
+
+------------------------------------------------------------------------------
