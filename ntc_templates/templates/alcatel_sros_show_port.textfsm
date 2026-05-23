@@ -1,4 +1,4 @@
-Value PORT_ID ([^=]\S+)
+Value PORT_ID (\S+)
 Value ADMIN_STATE (Up|Down)
 Value LINK (Yes|No)
 Value PORT_STATE (Up|Down|Ghost|Link Up)
@@ -22,5 +22,3 @@ Start
   ^${PORT_ID}$$
   ^\s+${ADMIN_STATE}\s+${LINK}\s+${PORT_STATE}\s+${CFG_MTU}\s+${OPER_MTU}\s+${LAG}\s+${PORT_MODE}\s+${PORT_ENCP}\s+${PORT_TYPE}\s*${C_QS_S_XFP_MDIMDX} -> Record
   ^. -> Error
-
-EOF
