@@ -11,7 +11,7 @@ Value PORT_TYPE (\S+)
 Value C_QS_S_XFP_MDIMDX (.*)
 
 Start
-  ^${PORT_ID}\s+${ADMIN_STATE}\s+${PORT_STATE}\s+(conn|anchor)\s*${C_QS_S_XFP_MDIMDX} -> Record
+  ^${PORT_ID}\s+${ADMIN_STATE}\s+${PORT_STATE}\s+(?:conn|anchor)\s*${C_QS_S_XFP_MDIMDX} -> Record
   ^${PORT_ID}\s+${ADMIN_STATE}\s+${LINK}\s+${PORT_STATE}\s+${CFG_MTU}\s+${OPER_MTU}\s+${LAG}\s+${PORT_MODE}\s+${PORT_ENCP}\s+${PORT_TYPE}\s*${C_QS_S_XFP_MDIMDX} -> Record
   ^${PORT_ID}$$
   ^\s+${ADMIN_STATE}\s+${LINK}\s+${PORT_STATE}\s+${CFG_MTU}\s+${OPER_MTU}\s+${LAG}\s+${PORT_MODE}\s+${PORT_ENCP}\s+${PORT_TYPE}\s*${C_QS_S_XFP_MDIMDX} -> Record
