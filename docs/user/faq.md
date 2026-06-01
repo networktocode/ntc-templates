@@ -7,6 +7,7 @@ From an outsider's view, some design choices, requirements, and testing procedur
 You can follow the local development procedures, but for your convenience here are included locations to test your template:
 
 * [textfsm.nornir.tech](https://textfsm.nornir.tech/) - An online textfsm editor.
+* [Packet Coders TextFSM Parser](https://tools.packetcoders.io/textfsm-parser/) - An online textfsm editor by Packet Coders.
 
 ## Why is there a requirement to use `Error` in every template?
 
