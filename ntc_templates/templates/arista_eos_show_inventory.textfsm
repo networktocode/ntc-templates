@@ -2,7 +2,7 @@ Value PORT ([0-9\/]+)
 Value PID (\S+)
 Value SN (\S+)
 Value DESCR (.+)
-Value VID (\d+\.\d+|\d+)
+Value VID (\S+)
 
 Start
   ^\s*System\s+\S+?$$ -> Chassis
