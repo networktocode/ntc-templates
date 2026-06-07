@@ -5,7 +5,7 @@ Value Required INGRESS_FILTER (\S+)
 Value Required EGRESS_QOS (\d+)
 Value Required EGRESS_FILTER (\S+)
 Value Required ADMIN_STATE (Up|Down)
-Value Required OPER_STATE (Up|Down)
+Value Required OPER_STATE (Up|Down|Prun)
 
 Start
   ^=+
