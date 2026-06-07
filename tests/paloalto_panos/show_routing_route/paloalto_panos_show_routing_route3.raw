@@ -1,0 +1,13 @@
+flags: A:active, ?:loose, C:connect, H:host, S:static, ~:internal, R:rip, O:ospf, B:bgp,
+       Oi:ospf intra-area, Oo:ospf inter-area, O1:ospf ext-type-1, O2:ospf ext-type-2, E:ecmp, M:multicast
+
+VIRTUAL ROUTER: default (id 1)
+  ==========
+destination                                 nexthop                                 metric flags      age   interface          next-AS
+10.7.4.0/24                                 172.20.17.118                                  A?B        3509239                    65201
+10.7.7.0/24                                 10.6.255.25                             10     A O2       3474418 ae1.255
+10.8.0.0/16                                 0.0.0.0                                 10     A S              tunnel.30
+10.9.1.0/24                                 10.6.100.16                             0      ?B         1030201                    0
+10.9.1.0/24                                 10.6.255.16                             50     A Oi       1030301 ae1.255
+10.9.4.0/24                                 10.6.100.16                             0      ?B         1030201                    0
+total routes shown: 6
