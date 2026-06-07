@@ -34,6 +34,9 @@ Fan
 Ports
   ^\s+${DESCR}\s+${PORT} -> Record
   ^\s*System.+transceiver -> Transceiver
+  ^\s+Type\s+Count$$
+  ^\s+---+
+  ^. -> Error
 
 Transceiver
   ^\s+${PORT}\s+${DESCR}\s+${PID}\s+${SN}\s+${VID} -> Record
