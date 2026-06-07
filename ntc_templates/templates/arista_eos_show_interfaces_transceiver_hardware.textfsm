@@ -5,6 +5,7 @@ Value MAX_MODULE_POWER (\S+)
 Value MAX_SLOT_POWER (\S+)
 Value WAVELENGTH (\S+)
 Value CABLE_TYPE (\S+)
+Value DETECTED_MEDIA_TYPE (.*)
 
 Start
   ^Name:\s+${NAME}
@@ -13,6 +14,7 @@ Start
   ^Maximum\s+module\s+power\s+\(W\):\s+${MAX_MODULE_POWER}
   ^Maximum\s+slot\s+power\s+\(W\):\s+${MAX_SLOT_POWER}
   ^Wavelength\s+\(nm\):\s+${WAVELENGTH}
-  ^Cable\s+type:\s+${CABLE_TYPE}  
+  ^Cable\s+type:\s+${CABLE_TYPE}
+  ^Detected\s+media\s+type:\s+${DETECTED_MEDIA_TYPE}
   ^$$ -> Record
-  ^. -> Error                 
+  ^. -> Error
