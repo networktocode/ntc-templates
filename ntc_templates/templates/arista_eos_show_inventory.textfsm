@@ -40,3 +40,6 @@ Ports
 
 Transceiver
   ^\s+${PORT}\s+${DESCR}\s+${PID}\s+${SN}\s+${VID} -> Record
+  ^\s+Port\s+Manufacturer\s+Model\s+Serial\s+Number\s+Rev$$
+  ^\s+---+
+  ^. -> Error
