@@ -1,0 +1,10 @@
+Route-policy: active_out
+  Permit : 10
+         if-match ip address prefix-list pl_customer_only
+
+Route-policy: test_policy
+  Permit : 10
+         if-match cost 10
+         if-match ip address prefix-list pl_customer_only
+         apply community 1111:100
+         apply local-preference 200
