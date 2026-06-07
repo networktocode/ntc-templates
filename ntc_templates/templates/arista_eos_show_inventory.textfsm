@@ -6,6 +6,7 @@ Value VID (\S+)
 
 Start
   ^\s*System\s+\S+?$$ -> Chassis
+  ^. -> Error
 
 Chassis
   ^\s+Model
@@ -14,23 +15,31 @@ Chassis
   ^\s+${VID}\s+${SN}\s+\d+-\d+-\d+ -> Record
   ^\s+${PID}?\s+${DESCR}$$
   ^\s*System.+(power supply|power-supply) -> Power_Supply
-
+  ^. -> Error
 
 Power_Supply
   ^\s+Slot
   ^\s+-
   ^\s+${PORT}\s+${PID}\s+${SN} -> Record
   ^\s*System.+(fan) -> Fan
+  ^. -> Error
 
 Fan
   ^\s+Module
   ^\s+-
   ^\s+${PORT}?\s+\d+?\s+${PID}?\s+${SN} -> Record
   ^\s*System.+ports -> Ports
+  ^. -> Error
 
 Ports
   ^\s+${DESCR}\s+${PORT} -> Record
   ^\s*System.+transceiver -> Transceiver
+  ^\s+Type\s+Count$$
+  ^\s+---+
+  ^. -> Error
 
 Transceiver
   ^\s+${PORT}\s+${DESCR}\s+${PID}\s+${SN}\s+${VID} -> Record
+  ^\s+Port\s+Manufacturer\s+Model\s+Serial\s+Number\s+Rev$$
+  ^\s+---+
+  ^. -> Error
