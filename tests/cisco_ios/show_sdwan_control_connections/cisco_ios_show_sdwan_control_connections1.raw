@@ -1,0 +1,9 @@
+PEER                                          PEER                                          CONTROLLER
+PEER    PEER    PEER            SITE       DOMAIN PEER                                    PRIV  PEER                                    PUB                                           GROUP
+TYPE    PROT    SYSTEM IP       ID         ID     PRIVATE IP                              PORT  PUBLIC IP                               PORT  ORGANIZATION            LOCAL COLOR     PROXY STATE UPTIME      ID
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+vsmart  dtls    1.1.1.6         1231231234 1      10.0.2.5                                12446 12.13.14.151                            12446 Company_IT_1111111111   mpls            No    up     0:08:33:46 0
+vsmart  dtls    1.1.1.6         1231231234 1      10.0.2.5                                12446 12.13.14.151                            12446 Company_IT_1111111111   private1        No    up     0:00:00:55 0
+vsmart  dtls    1.1.1.5         1231231235 1      10.0.5.6                                12446 123.132.144.156                         12446 Company_IT_1111111111   mpls            No    up     0:08:33:49 0
+vsmart  dtls    1.1.1.5         1231231235 1      10.0.5.6                                12446 123.132.144.156                         12446 Company_IT_1111111111   private1        No    up     0:00:00:58 0
+vmanage dtls    1.1.1.4         1231231236 0      10.0.5.5                                12446 1.122.144.15                            12446 Company_IT_1111111111   mpls            No    up     0:08:33:45 0
