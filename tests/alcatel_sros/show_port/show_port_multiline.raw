@@ -1,0 +1,96 @@
+
+===============================================================================
+Ports on Slot 1
+===============================================================================
+Port          Admin Link Port    Cfg  Oper LAG/ Port Port Port   C/QS/S/XFP/
+Id            State      State   MTU  MTU  Bndl Mode Encp Type   MDIMDX
+-------------------------------------------------------------------------------
+1/1/c1        Up         Link Up                          conn   100GBASE-LR4*
+1/1/c1/1      Up    Yes  Up      9212 9212  213 accs dotq cgige  
+1/1/c1/2      Up    Yes  Up      9212 9212  210 accs dotq cgige  
+1/1/c3        Down       Down                             conn   
+1/1/c23       Up         Link Up                          conn   10GBASE-SR 
+1/1/c23/1     Up    Yes  Up      1514 1514   56 accs null xgige  
+1/1/c23/2     Up    Yes  Up      1514 1514   57 accs null xgige  
+1/1/c23/3     Up    Yes  Up      1514 1514   50 accs null xgige  
+1/1/c23/4     Up    Yes  Up      1514 1514   51 accs null xgige  
+1/1/c23/5     Up    Yes  Up      1514 1514   52 accs null xgige  
+1/1/c23/6     Up    Yes  Up      1514 1514   53 accs null xgige  
+1/1/c23/7     Down  No   Down    9212 9212    - netw null xgige  
+1/1/c23/8     Down  No   Down    9212 9212    - netw null xgige  
+1/1/c23/9     Down  No   Down    9212 9212    - netw null xgige  
+1/1/c23/10    Down  No   Down    9212 9212    - netw null xgige  
+1/1/c29       Up         Link Up                          conn   40G PSM4  10*
+1/1/c29/1     Up    Yes  Up      9212 9212   23 hybr dotq xgige  
+1/1/c29/2     Up    Yes  Up      9212 9212   23 hybr dotq xgige  
+1/1/c29/3     Up    Yes  Up      9212 9212   23 hybr dotq xgige  
+1/1/c29/4     Down  No   Down    9212 9212    - netw null xgige  
+1/1/c34       Up         Link Up                          conn   400G-FR4 2km*
+1/1/c34/1     Up    Yes  Up      9212 9212    1 netw null cdgige 
+1/1/m3/1      Up         Link Up                          anchor 
+1/2/c36       Down       Down                             conn   
+                                      
+===============================================================================
+Ports on Slot 6
+===============================================================================
+Port          Admin Link Port    Cfg  Oper LAG/ Port Port Port   C/QS/S/XFP/
+Id            State      State   MTU  MTU  Bndl Mode Encp Type   MDIMDX
+-------------------------------------------------------------------------------
+6/1/c1        Up         Link Up                          conn   100GBASE-LR4*
+6/1/c1/1      Up    Yes  Up      1526 1526   60 accs dotq cgige  
+6/1/c1/2      Up    Yes  Up      1526 1526   61 accs dotq cgige  
+6/1/c30       Up         Link Up                          conn   40G PSM4  10*
+6/1/c30/1     Down  No   Down    9212 9212    - netw null xgige  
+6/1/c30/2     Up    Yes  Up      9212 9212   16 netw null xgige  
+6/1/c30/3     Up    Yes  Up      9212 9212   17 netw null xgige  
+6/1/c30/4     Up    Yes  Up      9212 9212   11 netw null xgige  
+6/2/c36       Down       Down                             conn   
+
+===============================================================================
+Ports on Slot A
+===============================================================================
+Port          Admin Link Port    Cfg  Oper LAG/ Port Port Port   C/QS/S/XFP/
+Id            State      State   MTU  MTU  Bndl Mode Encp Type   MDIMDX
+-------------------------------------------------------------------------------
+A/1           Up    Yes  Up      1514 1514    - netw null xcme   MDI
+A/3           Down  No   Down    9212 9212    - netw null xcme   
+A/4           Down  No   Down    1514 1514    - netw null xcme   
+
+===============================================================================
+Ports on Slot B
+===============================================================================
+Port          Admin Link Port    Cfg  Oper LAG/ Port Port Port   C/QS/S/XFP/
+Id            State      State   MTU  MTU  Bndl Mode Encp Type   MDIMDX
+-------------------------------------------------------------------------------
+B/1           Up    Yes  Up      1514 1514    - netw null xcme   MDI
+B/3           Down  No   Down    9212 9212    - netw null xcme   
+B/4           Down  No   Down    1514 1514    - netw null xcme   
+
+===============================================================================
+Ports on Satellite esat-11
+===============================================================================
+Port          Admin Link Port    Cfg  Oper LAG/ Port Port Port   C/QS/S/XFP/
+Id            State      State   MTU  MTU  Bndl Mode Encp Type   MDIMDX
+-------------------------------------------------------------------------------
+esat-11/1/1   Up    Yes  Up      1518 1518   71 accs dotq vspeed MDI GIGE-LX *
+esat-11/1/2   Down  No   Down    9208 9208    - netw null vspeed 
+esat-11/1/64  Down  No   Down    9208 9208    - netw null vspeed 
+esat-11/1/c65 Up         Link Up                          conn   100GBASE-LR4*
+esat-11/1/c65/u1
+              Up    Yes  Up      9212 9212    - accs dotq cgige  
+esat-11/1/c66 Up         Link Up                          conn   100GBASE-LR4*
+esat-11/1/c66/u1
+              Up    Yes  Up      9212 9212    - accs dotq cgige  
+esat-11/1/c67 Down       Down                             conn   
+esat-11/1/c68 Down       Down                             conn   
+
+===============================================================================
+Ports on Port Cross Connect 1
+===============================================================================
+Port          Admin Link Port    Cfg  Oper LAG/ Port Port Port   C/QS/S/XFP/
+Id            State      State   MTU  MTU  Bndl Mode Encp Type   MDIMDX
+-------------------------------------------------------------------------------
+pxc-1.a       Up    Yes  Up      9208 9208   35 hybr dotq cgige  
+pxc-1.b       Up    Yes  Up      9208 9208   36 hybr dotq cgige  
+===============================================================================
+* indicates that the corresponding row element may have been truncated.
