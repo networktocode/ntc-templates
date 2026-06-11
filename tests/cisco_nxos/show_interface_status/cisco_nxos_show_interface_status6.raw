@@ -1,0 +1,13 @@
+--------------------------------------------------------------------------------
+Port          Name               Status    Vlan      Duplex  Speed   Type
+--------------------------------------------------------------------------------
+mgmt0         --                 connected routed    full    a-1000  --
+Eth1/1        server uplink      connected 10        full    a-10G   10Gbase-SR
+Eth1/2        --                 notconnec 1         auto    auto    --
+Po1           --                 connected trunk     full    a-10G   --
+--------------------------------------------------------------------------------
+Interface     Name               Status    Reason            Reason description
+--------------------------------------------------------------------------------
+Tunnel0       --                 connected none              none
+Tunnel13      Test Tun13         connected none              none
+Tunnel40      WAN to DR site     down      Link not connected  administratively down
