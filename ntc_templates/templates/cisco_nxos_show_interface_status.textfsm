@@ -9,6 +9,14 @@ Value TYPE (\S+(\s\S+)*)
 Start
   ^${PORT}\s+${NAME}\s+${STATUS}\s+${VLAN_ID}\s+${DUPLEX}\s+${SPEED}(?:\s+${TYPE})?\s*$$ -> Record
   ^[Pp]ort\s+[Nn]ame\s+[Ss]tatus\s+[Vv]lan\s+[Dd]uplex\s+[Ss]peed\s+[Tt]ype\s*$$
+  ^[Ii]nterface\s+[Nn]ame\s+[Ss]tatus\s+[Rr]eason\s+[Rr]eason\s+[Dd]escription\s*$$ -> Tunnel
+  ^-+
+  ^\s*$$
+  ^. -> Error
+
+Tunnel
+  ^${PORT}\s{2,}${NAME}\s{2,}${STATUS}(?:\s+.*)?$$ -> Record
+  ^[Ii]nterface\s+[Nn]ame\s+[Ss]tatus\s+[Rr]eason\s+[Rr]eason\s+[Dd]escription\s*$$
   ^-+
   ^\s*$$
   ^. -> Error
