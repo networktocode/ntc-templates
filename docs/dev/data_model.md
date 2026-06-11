@@ -1,25 +1,31 @@
-# Goals
+# Data Model: Common Capture Groups
+
+## Goals
 
 - The table below becomes an evolving reference of common capture group names
 - Normalize common capture groups across templates (including cross-vendor)
 
-# Reasoning
+## Reasoning
 
 Normalized capture group names enable more predictable structured data across templates where similar data exists.
 
 Example: Imagine the extra programming logic needed to consume structured data when capture groups could have two or more names across several templates or several vendors! Yikes! This is why we seek to normalize.
 
-# Considerations
+## Considerations
 
 - Some capture groups are a single value and others are lists of values despite containing similar data as one another
-    - Example: single IP address vs list of IP addresses
+  - Example: single IP address vs list of IP addresses
 - Normalizing and using standard capture group names will take time, persistence, and patience from the community
 - Other than new templates, these normalization changes modify the expected template output and are considered "breaking changes" to be included in version releases
 
-# Common Capture Groups
+## Common Capture Groups
 
 | Capture Group                    | Usage Description |
 |----------------------------------|:------------------|
+| `ACCESS_GROUP_IN`                | inbound access group for IPv4 addresses |
+| `ACCESS_GROUP_OUT`               | outbound access group for IPv4 addresses |
+| `ACCESS_GROUP_V6_IN`             | inbound access group for IPv6 addresses |
+| `ACCESS_GROUP_V6_OUT`            | outbound access group for IPv6 addresses |
 | `BIA`                            | use this if the template already has MAC_ADDRESS in use for the active MAC address |
 | `BUNDLE_NAME`                    | virtual interface name for etherchannel, LACP, LAG, or port-channel interfaces |
 | `BUNDLE_PROTOCOL`                | virtual interface protocol type (LACP, PAgP) for etherchannel or port-channel interfaces |
@@ -30,6 +36,8 @@ Example: Imagine the extra programming logic needed to consume structured data w
 | `CHASSIS_ID`                     | often represents CDP or LLDP neighbor chassis ID |
 | `DESCRIPTION`                    | often used for port or interface descriptions |
 | `GATEWAY`                        | gateway address for a subnet |
+| `INNER_VLAN`                     | numeric VLAN identifier; used instead of VLAN, VLANID, or TAG |
+| `INNER_VLAN_NAME`                | VLAN name or description |
 | `INTERFACE`                      | full word instead of IFACE, INTF, INTFC, etc |
 | `IP_ADDRESS`                     | for a single IP address, often IPv4 |
 | `IP_ADDRESSES`                   | for lists of IPv4 addresses, but in the case of some templates there may be a mix of IP protocol versions |
@@ -51,7 +59,10 @@ Example: Imagine the extra programming logic needed to consume structured data w
 | `NEIGHBOR_INTERFACE_DESCRIPTION` | represents CDP or LLDP neighbor (remote host) interface or port descriptions (Note: see NEIGHBOR_INTERFACE) |
 | `NEIGHBOR_NAME`                  | often represents neighbor name for CDP or LLDP |
 | `NETMASK`                        | for IPv4 dotted quad masks |
+| `NETMASKS`                       | list of IPv4 dotted quad masks |
 | `NETWORK`                        | for network numbers or subnet address (without the mask or prefix/slash notation); in place of ROUTE |
+| `OUTER_VLAN`                     | numeric VLAN identifier; used instead of VLAN, VLANID, or TAG |
+| `OUTER_VLAN_NAME`                | VLAN name or description |
 | `PID`                            | represents Part IDs (PIDs), Stock Keeping Units (SKUs), and in some cases Models or Model Numbers
 | `PLATFORM`                       | often represents CDP or LLDP neighbor's platform or model name/number |
 | `PREFIX_LENGTH`                  | instead of PREFIX or CIDR for the numbers of a slash notation or CIDR mask |
