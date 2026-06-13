@@ -21,6 +21,9 @@ parsed_sample:
     ipv6_addresses:
       - "fe80:a8:2:b0::309"
       - "2001:db8:0:1::"
+    ipv6_prefix_length:
+      - "126"
+      - "64"
     load_interval: "30"
     mtu: ""
     mtu_ipv4: ""
@@ -29,9 +32,6 @@ parsed_sample:
       - "255.255.255.254"
     outer_vlan: "1234"
     output_policy: "OUT_BAND_S_50000_V1"
-    prefixv6_length:
-      - "126"
-      - "64"
     unicast_source: "rx"
     unicast_source_v6: "tx"
     vrf: ""
@@ -54,6 +54,8 @@ parsed_sample:
       - "10.23.125.209"
     ipv6_addresses:
       - "fe80:a8:2:b8::a671"
+    ipv6_prefix_length:
+      - "126"
     load_interval: "30"
     mtu: ""
     mtu_ipv4: ""
@@ -61,8 +63,6 @@ parsed_sample:
       - "255.255.255.252"
     outer_vlan: "2222"
     output_policy: "OUT_BAND_S_100000_V1"
-    prefixv6_length:
-      - "126"
     unicast_source: "tx"
     unicast_source_v6: "rx"
     vrf: ""
@@ -85,6 +85,8 @@ parsed_sample:
       - "10.228.247.93"
     ipv6_addresses:
       - "fe80:a8:2:b8::10ed"
+    ipv6_prefix_length:
+      - "126"
     load_interval: "30"
     mtu: ""
     mtu_ipv4: ""
@@ -92,8 +94,6 @@ parsed_sample:
       - "255.255.255.252"
     outer_vlan: "2222"
     output_policy: "OUT_BAND_S_100000_V1"
-    prefixv6_length:
-      - "126"
     unicast_source: "any"
     unicast_source_v6: "any"
     vrf: ""
@@ -115,6 +115,7 @@ parsed_sample:
     ip_addresses:
       - "10.86.193.193"
     ipv6_addresses: []
+    ipv6_prefix_length: []
     load_interval: "30"
     mtu: ""
     mtu_ipv4: ""
@@ -122,7 +123,6 @@ parsed_sample:
       - "255.255.255.252"
     outer_vlan: "1001"
     output_policy: "OUT_SIP_VOICE_1500"
-    prefixv6_length: []
     unicast_source: "rx"
     unicast_source_v6: ""
     vrf: "FONE_CLIENT:5341"
@@ -145,6 +145,8 @@ parsed_sample:
       - "10.245.37.157"
     ipv6_addresses:
       - "fe80:a8:2:2b8::751"
+    ipv6_prefix_length:
+      - "126"
     load_interval: "30"
     mtu: ""
     mtu_ipv4: ""
@@ -152,8 +154,6 @@ parsed_sample:
       - "255.255.255.252"
     outer_vlan: "1002"
     output_policy: "OUT_100000K_1_0_1_0_0_1_1"
-    prefixv6_length:
-      - "126"
     unicast_source: ""
     unicast_source_v6: ""
     vrf: "FEED_HUB:1245"
@@ -176,6 +176,8 @@ parsed_sample:
       - "192.168.226.53"
     ipv6_addresses:
       - "fe80:a8:2:2b8::ac5"
+    ipv6_prefix_length:
+      - "126"
     load_interval: "30"
     mtu: ""
     mtu_ipv4: ""
@@ -183,8 +185,6 @@ parsed_sample:
       - "255.255.255.252"
     outer_vlan: "1002"
     output_policy: "OUT_BLUE_2M_0_0_0_98_0_1_XR_V1"
-    prefixv6_length:
-      - "126"
     unicast_source: ""
     unicast_source_v6: ""
     vrf: "OBS_CHIN:1236"
@@ -205,13 +205,13 @@ parsed_sample:
     interface: "TenGigE3/0/0/0"
     ip_addresses: []
     ipv6_addresses: []
+    ipv6_prefix_length: []
     load_interval: ""
     mtu: "9216"
     mtu_ipv4: "9000"
     netmask: []
     outer_vlan: ""
     output_policy: ""
-    prefixv6_length: []
     unicast_source: ""
     unicast_source_v6: ""
     vrf: ""

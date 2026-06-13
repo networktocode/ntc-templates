@@ -7,7 +7,7 @@ Value VRF (\S+)
 Value List IP_ADDRESSES (\d+.\d+.\d+.\d+)
 Value List NETMASK (\d+.\d+.\d+.\d+)
 Value List IPV6_ADDRESSES (\S+)
-Value List PREFIXV6_LENGTH (\d+)
+Value List IPV6_PREFIX_LENGTH (\d+)
 Value LOAD_INTERVAL (\d+)
 Value MTU (\d+)
 Value MTU_IPV4 (\d+)
@@ -36,7 +36,7 @@ Start
   ^\s+ipv4\s+address\s+${IP_ADDRESSES}\s+${NETMASK}(?:\s+secondary)?
   ^\s+ipv4\s+verify\s+unicast\s+source\s+reachable-via\s+${UNICAST_SOURCE}\s+allow-self-ping
   ^\s+ipv6\s+verify\s+unicast\s+source\s+reachable-via\s+${UNICAST_SOURCE_V6}\s+allow-self-ping
-  ^\s+ipv6\s+address\s+${IPV6_ADDRESSES}\/+${PREFIXV6_LENGTH}\s*(eui-64)?$$
+  ^\s+ipv6\s+address\s+${IPV6_ADDRESSES}\/+${IPV6_PREFIX_LENGTH}\s*(eui-64)?$$
   ^\s+mtu\s+${MTU}
   ^\s+ipv4\s+mtu\s+${MTU_IPV4}
   ^\s+ipv6\s+enable
