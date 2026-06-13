@@ -20,6 +20,7 @@ parsed_sample:
       - "10.0.0.1"
     ipv6_address:
       - "fe80:a8:2:b0::309"
+      - "2001:db8:0:1::"
     load_interval: "30"
     mtu: ""
     mtu_ipv4: ""
@@ -30,6 +31,7 @@ parsed_sample:
     output_policy: "OUT_BAND_S_50000_V1"
     prefixv6_length:
       - "126"
+      - "64"
     unicast_source: "rx"
     unicast_source_v6: "tx"
     vrf: ""

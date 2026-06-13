@@ -36,7 +36,7 @@ Start
   ^\s+ipv4\s+address\s+${IP_ADDRESS}\s+${NETMASK}(?:\s+secondary)?
   ^\s+ipv4\s+verify\s+unicast\s+source\s+reachable-via\s+${UNICAST_SOURCE}\s+allow-self-ping
   ^\s+ipv6\s+verify\s+unicast\s+source\s+reachable-via\s+${UNICAST_SOURCE_V6}\s+allow-self-ping
-  ^\s+ipv6\s+address\s+${IPV6_ADDRESS}\/+${PREFIXV6_LENGTH}\s*$$
+  ^\s+ipv6\s+address\s+${IPV6_ADDRESS}\/+${PREFIXV6_LENGTH}\s*(eui-64)?$$
   ^\s+mtu\s+${MTU}
   ^\s+ipv4\s+mtu\s+${MTU_IPV4}
   ^\s+ipv6\s+enable

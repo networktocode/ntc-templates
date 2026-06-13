@@ -9,6 +9,7 @@ interface TenGigE2/1/0/0.1234256
  ipv4 verify unicast source reachable-via rx allow-self-ping
  ipv6 verify unicast source reachable-via tx allow-self-ping
  ipv6 address fe80:a8:2:b0::309/126
+ ipv6 address 2001:db8:0:1::/64 eui-64
  load-interval 30
  encapsulation dot1q 1234
  ipv4 access-group iACL ingress
