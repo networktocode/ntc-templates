@@ -17,6 +17,7 @@ parsed_sample:
     interface: "TenGigE2/1/0/0.1234256"
     ip_address:
       - "10.242.26.65"
+      - "10.0.0.1"
     ipv6_address:
       - "fe80:a8:2:b0::309"
     load_interval: "30"
@@ -24,6 +25,7 @@ parsed_sample:
     mtu_ipv4: ""
     netmask:
       - "255.255.255.252"
+      - "255.255.255.254"
     outer_vlan: "1234"
     output_policy: "OUT_BAND_S_50000_V1"
     prefixv6_length:

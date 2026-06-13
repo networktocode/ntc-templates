@@ -5,6 +5,7 @@ interface TenGigE2/1/0/0.1234256
  service-policy input IN_BAND_S_50000_V1
  service-policy output OUT_BAND_S_50000_V1
  ipv4 address 10.242.26.65 255.255.255.252
+ ipv4 address 10.0.0.1 255.255.255.254 secondary
  ipv4 verify unicast source reachable-via rx allow-self-ping
  ipv6 verify unicast source reachable-via tx allow-self-ping
  ipv6 address fe80:a8:2:b0::309/126
