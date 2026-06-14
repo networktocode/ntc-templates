@@ -1,0 +1,26 @@
+ Status and Counters - Port Status
+
+                          | Intrusion                           MDI  Flow Bcast
+  Port         Type       | Alert     Enabled Status Mode       Mode Ctrl Limit
+  ------------ ---------- + --------- ------- ------ ---------- ---- ---- -----
+  1/1          100/1000T  | No        Yes     Up     1000FDx    MDI  off  0
+  1/2          100/1000T  | No        Yes     Up     1000FDx    MDIX off  0
+  1/24         100/1000T  | No        Yes     Down   1000FDx    Auto off  0
+  1/25         1000SX     | No        Yes     Up     1000FDx    NA   off  0
+  1/26         1000SX     | No        Yes     Up     1000FDx    NA   off  0
+  1/27                    | No        Yes     Down   .               off  0
+  1/28-Trk1    SFP+SR     | No        Yes     Up     10GigFD    NA   off  0
+  2/1          100/1000T  | No        Yes     Up     1000FDx    MDIX off  0
+  2/2          100/1000T  | No        Yes     Up     1000FDx    MDI  off  0
+  2/6          100/1000T  | No        Yes     Up     100FDx     MDI  off  0
+  2/25         1000SX     | No        Yes     Up     1000FDx    NA   off  0
+  2/26         1000SX     | No        Yes     Up     1000FDx    NA   off  0
+  2/27                    | No        Yes     Down   .               off  0
+  2/28                    | No        Yes     Down   .               off  0
+  3/1          100/1000T  | No        Yes     Up     1000FDx    MDIX off  0
+  3/2          100/1000T  | No        Yes     Up     1000FDx    MDIX off  0
+  3/24         100/1000T  | No        Yes     Down   1000FDx    Auto off  0
+  3/25         1000SX     | No        Yes     Up     1000FDx    NA   off  0
+  3/26         1000SX     | No        Yes     Up     1000FDx    NA   off  0
+  3/27                    | No        Yes     Down   .               off  0
+  3/28-Trk1    SFP+SR     | No        Yes     Up     10GigFD    NA   off  0
