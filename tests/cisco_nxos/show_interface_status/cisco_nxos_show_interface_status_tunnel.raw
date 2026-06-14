@@ -1,0 +1,17 @@
+
+--------------------------------------------------------------------------------
+Port             Name            Status    Vlan      Duplex  Speed   Type
+--------------------------------------------------------------------------------
+mgmt0            --              connected routed    full    a-1000  --         
+Eth1/1           TEST1           connected routed    full    a-10G   10Gbase-SR 
+Eth1/2           TEST2           connected trunk     full    a-10G   10Gbase-SR 
+Eth1/3           TEST3           disabled  routed    auto    auto    10Gbase-SR
+
+-------------------------------------------------------------------------------
+Interface     Name               Status    Reason            Reason description          
+-------------------------------------------------------------------------------
+Tunnel13      Test Tun13         connected none               none                                                 
+Tunnel40      Test Tun40         down      admin down         Administratively down                                               
+Tunnel41      Test Tun41         down      sourceNotConfigure tunnel source is not configured 
+Tunnel42      Test Tun42         down      destinationNotConf tunnel destination is not configured                 
+           

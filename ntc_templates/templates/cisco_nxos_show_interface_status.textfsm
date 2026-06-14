@@ -1,6 +1,6 @@
 Value PORT (\S+)
 Value NAME (.*?)
-Value STATUS (\S+)
+Value STATUS (connected|notconnec|down|disabled|sfpAbsent|xcvrAbsen|channelDo|noOperMem)
 Value VLAN_ID (\d+|routed|trunk|f-path|--)
 Value DUPLEX (\S+)
 Value SPEED (\S+)
@@ -9,6 +9,9 @@ Value TYPE (\S+(\s\S+)*)
 Start
   ^${PORT}\s+${NAME}\s+${STATUS}\s+${VLAN_ID}\s+${DUPLEX}\s+${SPEED}(?:\s+${TYPE})?\s*$$ -> Record
   ^[Pp]ort\s+[Nn]ame\s+[Ss]tatus\s+[Vv]lan\s+[Dd]uplex\s+[Ss]peed\s+[Tt]ype\s*$$
+  ^Interface\s+Name\s+Status\s+(Reason\s+){2}description\s*$$
+  ^${PORT}\s+${NAME}\s+${STATUS}\s+admin\s+down\s+\S+\s+\S+\s*$$ -> Record
+  ^${PORT}\s+${NAME}\s+${STATUS}\s+\S+(\s+\S+)?\s+.*?\s*$$ -> Record
   ^-+
   ^\s*$$
   ^. -> Error
