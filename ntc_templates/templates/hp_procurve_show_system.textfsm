@@ -42,6 +42,8 @@ Start
   ^\s*Missed\s+:\s+${BUFFERS_MISSED} -> Record
   ^\s*VSF-Member\s*: -> Continue.Record
   ^\s*VSF-Member\s*:\s*${MEMBER_ID} -> VSF
+  # swallow single-token wrap-continuation lines (long contact/location wrap at col 78)
+  ^\s+\S+$$
   ^. -> Error
 
 VSF
