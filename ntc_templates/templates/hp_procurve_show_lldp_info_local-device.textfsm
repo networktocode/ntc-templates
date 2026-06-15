@@ -1,7 +1,8 @@
 Value Filldown CHASSIS_TYPE (\S+)
-Value Filldown CHASSIS_ID (\S+)
+Value Filldown CHASSIS_ID (\S.*\S)
 Value Filldown SYSTEM_NAME (\S+)
 Value Filldown DESCRIPTION (.+?)
+Value Filldown PID (\S+)
 Value Filldown CAPABILITIES_SUPPORTED (.+?)
 Value Filldown CAPABILITIES (.+?)
 Value Filldown MGMT_TYPE (\S+)
@@ -16,6 +17,7 @@ Start
   ^\s*Chassis\s+Type\s+:\s+${CHASSIS_TYPE}\s*$$
   ^\s*Chassis\s+Id\s+:\s+${CHASSIS_ID}\s*$$
   ^\s*System\s+Name\s+:\s+${SYSTEM_NAME}\s*$$
+  ^\s*System\s+Description\s+:\s+(?:HP|Aruba)\s+${PID}\s+\S.*\S\s*$$ -> Continue
   ^\s*System\s+Description\s+:\s+${DESCRIPTION}\s*$$
   ^\s*System\s+Capabilities\s+Supported:\s+${CAPABILITIES_SUPPORTED}\s*$$
   ^\s*System\s+Capabilities\s+Enabled:\s+${CAPABILITIES}\s*$$
