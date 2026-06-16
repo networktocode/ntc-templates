@@ -1,0 +1,230 @@
+System information
+  Model                    Description                                          
+  ------------------------ ---------------------------------------------------- 
+  DCS-7504                 DCS-7504 Chassis                                     
+
+  HW Version  Serial Number  Mfg Date   Epoch 
+  ----------- -------------- ---------- ----- 
+  02.00       NMW73494474    2015-05-08 00.00 
+
+System has 12 card slots
+  Module        Model           HW Version   Serial Number   Mfg Date     Epoch 
+  ------------- --------------- ------------ --------------- ------------ ----- 
+  Supervisor1   DCS-7500E-SUP   02.02        UYG13869875     2015-04-29   00.00 
+  Supervisor2   DCS-7500E-SUP   02.02        XBO60798591     2015-04-29   00.00 
+  Linecard3     7500E-72S-LC    02.00        HTO67444972     2015-05-27   00.00 
+  Linecard4     7500E-72S-LC    02.00        PTA02093377     2015-05-26   00.00 
+  Linecard5     7500E-36Q-LC    03.04        SOT35897684     2018-05-23   00.00 
+  Linecard6     7500E-36Q-LC    03.00        CVQ85772640     2015-05-26   00.00 
+  Fabric1       7504E-FM        01.02        YUM42966220     2015-05-22   00.00 
+  Fabric2       7504E-FM        01.02        TUC24327037     2015-05-22   00.00 
+  Fabric3       7504E-FM        01.02        LYA59864415     2015-05-22   00.00 
+  Fabric4       7504E-FM        01.02        PFE44760881     2015-05-22   00.00 
+  Fabric5       7504E-FM        01.02        HCQ16261500     2015-05-22   00.00 
+  Fabric6       7504E-FM        01.02        AEI97759630     2015-05-22   00.00 
+
+System has 4 power supply slots
+  Slot Model            Serial Number    
+  ---- ---------------- ---------------- 
+  1    PWR-2900AC       D731UL17ASBHS    
+  2    PWR-2900AC       L988QI60RQNYP    
+  3    PWR-2900AC       L691WU87HLGWN    
+  4    PWR-2900AC       Q042JS53D9GWN    
+
+System has 6 fan modules
+  Module  Number of Fans  Model            Serial Number    
+  ------- --------------- ---------------- ---------------- 
+  1       3               7504E-FM         YUM42966220      
+  2       3               7504E-FM         TUC24327037      
+  3       3               7504E-FM         LYA59864415      
+  4       3               7504E-FM         PFE44760881      
+  5       3               7504E-FM         HCQ16261500      
+  6       3               7504E-FM         AEI97759630      
+
+System has 436 ports
+  Type               Count
+  ------------------ ----
+  Management         4   
+  Switched           424 
+  SwitchedBootstrap  8   
+
+System has 172 transceiver slots
+  Port Manufacturer     Model            Serial Number    Rev 
+  ---- ---------------- ---------------- ---------------- ----
+  3/1  Arista Networks  SFP1G-LX-31      Q3479690326      1.0 
+  3/2  Arista Networks  SFP-1G-SX        YFR5275D1VDU     0002
+  3/3  Not Present                                            
+  3/4  Arista Networks  SFP-1G-LX        CAG0254RS09L     0002
+  3/5  Not Present                                            
+  3/6  Arista Networks  SFP-10GLR-31     X1147117910      0002
+  3/7  Arista Networks  SFP-10G-SRL      JWO8674YN841     0002
+  3/8  Not Present                                            
+  3/9  Not Present                                            
+  3/10 Not Present                                            
+  3/11 Not Present                                            
+  3/12 Not Present                                            
+  3/13 Not Present                                            
+  3/14 Not Present                                            
+  3/15 Arista Networks  SFP-10G-SRL      CLO5006DH31M     0002
+  3/16 Not Present                                            
+  3/17 Not Present                                            
+  3/18 Not Present                                            
+  3/19 Not Present                                            
+  3/20 Not Present                                            
+  3/21 Not Present                                            
+  3/22 Not Present                                            
+  3/23 Not Present                                            
+  3/24 Arista Networks  SFP-10G-SR-CURV  NYJ3RQ5B8706     A1  
+  3/25 Arista Networks  SFP-10G-SR       BXW4124SS991     0002
+  3/26 Arista Networks  SFP-10G-SR       IKI2014CS6V2     0002
+  3/27 Arista Networks  SFP-10G-SR       SMB2612ZJ64E     0002
+  3/28 Arista Networks  SFP-10G-SRL      XXQ4815QN1VZ     0002
+  3/29 Arista Networks  SFP-10G-SR-CURV  XTA9BF3V0507     A1  
+  3/30 Arista Networks  SFP-10G-SR-CURV  WZE4DQ3V5398     A1  
+  3/31 Arista Networks  SFP-10G-SR       ZSP5470BQ021     0002
+  3/32 Arista Networks  SFP-10G-SR       FGI7976OF1R9     0002
+  3/33 Arista Networks  SFP-10G-SR       HGQ4317C29C8     0002
+  3/34 Arista Networks  SFP-10G-SRL      XRH7191WS63E     0002
+  3/35 Arista Networks  SFP10GSRL-ARISTA XZM5OD4E0923     A1  
+  3/36 Arista Networks  SFP-10G-SR       EAS0729FN55R     0002
+  3/37 Arista Networks  SFP-10G-SRL      IIR2918BF5W3     0002
+  3/38 Arista Networks  SFP-10G-SR       ARX626934639     0002
+  3/39 Arista Networks  SFP-10G-SRL      IPA5390OI0CU     0002
+  3/40 Arista Networks  SFP10GSRL-ARISTA KAX7XV9O6241     A1  
+  3/41 Arista Networks  SFP10GSRL-ARISTA YVF3KZ4X0549     A1  
+  3/42 Arista Networks  SFP-10G-SRL      DGE6536ZU4EY     0002
+  3/43 Arista Networks  SFP-10G-SR       KID2218JL21O     0002
+  3/44 Arista Networks  SFP-10G-SR       UKG6312Y52O1     0002
+  3/45 Not Present                                            
+  3/46 Arista Networks  SFP-10G-SR       MQJ0217WU365     0002
+  3/47 Arista Networks  CAB-SFP-SFP-3M   KGL906070180     0002
+  3/48 Arista Networks  CAB-SFP-SFP-2.5M GTF14329317J     0002
+  3/49 Arista Networks  7500E-72S-LC                          
+  3/50 Arista Networks  7500E-72S-LC                          
+  4/1  Arista Networks  CAB-SFP-SFP-2M   DMK5483852OZ     20  
+  4/2  Arista Networks  SFP-10GLR-31     Q7486187857      0002
+  4/3  Arista Networks  SFP-10G-SR       FFI5791NMQ0R     0002
+  4/4  Arista Networks  SFP-10G-SRL      SLY6990ZI9R1     0002
+  4/5  Not Present                                            
+  4/6  Not Present                                            
+  4/7  Not Present                                            
+  4/8  Not Present                                            
+  4/9  Not Present                                            
+  4/10 Not Present                                            
+  4/11 Not Present                                            
+  4/12 Not Present                                            
+  4/13 Not Present                                            
+  4/14 Not Present                                            
+  4/15 Arista Networks  SFP-10G-SRL      SZA7894RQ506     0002
+  4/16 Not Present                                            
+  4/17 Arista Networks  SFP-10G-SRL      YNS6960TP06A     0002
+  4/18 Not Present                                            
+  4/19 Not Present                                            
+  4/20 Not Present                                            
+  4/21 Not Present                                            
+  4/22 Not Present                                            
+  4/23 Arista Networks  SFP-10G-SR       AFK334044205     0002
+  4/24 Not Present                                            
+  4/25 Arista Networks  SFP-10G-SRL      WSA2372HX5R5     0002
+  4/26 Not Present                                            
+  4/27 Arista Networks  SFP-10G-SR       OCK454086797     0002
+  4/28 Arista Networks  SFP-10G-SRL      VAR7433JO8BB     0002
+  4/29 Arista Networks  SFP-10G-SR       UEL709202146     0002
+  4/30 Arista Networks  SFP-10G-SRL      ZPQ3317CC018     0002
+  4/31 Arista Networks  SFP-10G-SR       TDB9272FS1BU     0002
+  4/32 Arista Networks  SFP-10G-SR       TBT0771BD4IS     0002
+  4/33 Arista Networks  SFP-10G-SR       VHJ6003NG34L     0002
+  4/34 Arista Networks  SFP-10G-SR       HTQ7011JY41P     0002
+  4/35 Arista Networks  SFP-10G-SR       MZT4931IH7YW     0002
+  4/36 Arista Networks  SFP-10G-SR       UHZ7182BF03P     0002
+  4/37 Arista Networks  SFP-10G-SR       TEK1828EA1E1     0002
+  4/38 Arista Networks  SFP-10G-SR       TND4742KZ8H8     0002
+  4/39 Arista Networks  SFP-10G-SR       XRX3101IX1TJ     0002
+  4/40 Arista Networks  SFP-10G-SR       UDS4411MB68C     0002
+  4/41 Arista Networks  SFP-10G-SR       RMN9222MU1VG     0002
+  4/42 Arista Networks  SFP-10G-SR       MGO6994MT2UE     0002
+  4/43 Arista Networks  SFP-10G-SR-CURV  IFQ6DT8P1512     A1  
+  4/44 Not Present                                            
+  4/45 Not Present                                            
+  4/46 Not Present                                            
+  4/47 Not Present                                            
+  4/48 Not Present                                            
+  4/49 Arista Networks  7500E-72S-LC                          
+  4/50 Arista Networks  7500E-72S-LC                          
+  5/1  Arista Networks  QSFP-40G-UNIV    UIC251807401     01  
+  5/2  Arista Networks  QSFP-40G-UNIV    RKB009729170     20  
+  5/3  Arista Networks  QSFP-40G-UNIV    UQD380317643     20  
+  5/4  Arista Networks  QSFP-40G-UNIV    YLO498104269     20  
+  5/5  Arista Networks  QSFP-40G-UNIV    ZAH982420825     20  
+  5/6  Arista Networks  QSFP-40G-UNIV    SMT706929535     01  
+  5/7  Arista Networks  QSFP-40G-UNIV    OYJ64344790U     01  
+  5/8  Arista Networks  QSFP-40G-UNIV    FAN734867690     20  
+  5/9  Arista Networks  QSFP-40G-UNIV    QPJ783252693     20  
+  5/10 Arista Networks  QSFP-40G-UNIV    OIY0638045D0     01  
+  5/11 Arista Networks  QSFP-40G-UNIV    CYL822296111     01  
+  5/12 Arista Networks  QSFP-40G-UNIV    UOD781879212     01  
+  5/13 Arista Networks  QSFP-40G-UNIV    WYJ675694851     20  
+  5/14 Arista Networks  QSFP-40G-UNIV    PMD041175852     01  
+  5/15 Arista Networks  QSFP-40G-UNIV    HIH327517100     01  
+  5/16 Arista Networks  QSFP-40G-UNIV    LWT355048948     01  
+  5/17 Arista Networks  QSFP-40G-UNIV    OFU660766711     01  
+  5/18 Arista Networks  QSFP-40G-UNIV    SRB163644717     01  
+  5/19 Arista Networks  QSFP-40G-UNIV    NTC836907475     01  
+  5/20 Arista Networks  QSFP-40G-UNIV    MJP141759326     01  
+  5/21 Arista Networks  QSFP-40G-UNIV    SSK9494886JH     01  
+  5/22 Arista Networks  QSFP-40G-UNIV    VBV9642105K8     01  
+  5/23 Arista Networks  QSFP-40G-UNIV    NOK357567938     01  
+  5/24 Arista Networks  QSFP-40G-UNIV    RQV312250545     20  
+  5/25 Arista Networks  QSFP-40G-UNIV    YPS650218607     20  
+  5/26 Arista Networks  QSFP-40G-UNIV    UQB66600731E     01  
+  5/27 Arista Networks  QSFP-40G-UNIV    HPL3737446ZY     01  
+  5/28 Arista Networks  QSFP-40G-UNIV    XUT189136568     20  
+  5/29 Arista Networks  QSFP-40G-UNIV    WCL845259598     01  
+  5/30 Arista Networks  QSFP-40G-UNIV    IMD372527668     20  
+  5/31 Arista Networks  QSFP-PC015       H9984002848-9    01  
+  5/32 Arista Networks  QSFP-PC03        I7596958958-6    01  
+  5/33 Arista Networks  QSFP-40G-UNIV    TKN3018051E2     20  
+  5/34 Arista Networks  QSFP-40G-UNIV    QSP836450345     01  
+  5/35 Arista Networks  QSFP-40G-UNIV    SDB051655317     01  
+  5/36 Not Present                                            
+  6/1  Arista Networks  QSFP-40G-UNIV    UHP830048077     20  
+  6/2  Arista Networks  QSFP-PC02        F3629972385-4    01  
+  6/3  Arista Networks  QSFP-PC03        S4640011131-5    01  
+  6/4  Not Present                                            
+  6/5  Arista Networks  QSFP-SR4-40G     W4563884538      02  
+  6/6  Arista Networks  QSFP-SR4-40G     C2503923404      02  
+  6/7  Arista Networks  QSFP-SR4-40G     O8531747748      02  
+  6/8  Arista Networks  QSFP-SR4-40G     T2709739166      02  
+  6/9  Arista Networks  QSFP-LR4-40G     N2405628317      1A  
+  6/10 Arista Networks  QSFP-LR4-40G     Z8751571036      1A  
+  6/11 Arista Networks  QSFP-LR4-40G     D8544794120      1A  
+  6/12 Arista Networks  QSFP-LR4-40G     C0015074431      1A  
+  6/13 Arista Networks  QSFP-LR4-40G     K4852375981      1A  
+  6/14 Arista Networks  QSFP-LR4-40G     T4558196462      1A  
+  6/15 Arista Networks  QSFP-LR4-40G     X8795813277      1A  
+  6/16 Arista Networks  QSFP-LR4-40G     Q0717578508      1A  
+  6/17 Not Present                                            
+  6/18 Not Present                                            
+  6/19 Not Present                                            
+  6/20 Not Present                                            
+  6/21 Not Present                                            
+  6/22 Not Present                                            
+  6/23 Not Present                                            
+  6/24 Not Present                                            
+  6/25 Not Present                                            
+  6/26 Not Present                                            
+  6/27 Not Present                                            
+  6/28 Not Present                                            
+  6/29 Arista Networks  QSFP-SR4-40G     C0234027870      02  
+  6/30 Arista Networks  QSFP-SR4-40G     M1820510138      02  
+  6/31 Arista Networks  QSFP-PC015       L5071034145-0    01  
+  6/32 Arista Networks  QSFP-PC03        O9565991888-2    01  
+  6/33 Not Present                                            
+  6/34 Arista Networks  QSFP-40G-UNIV    MJA834241552     20  
+  6/35 Arista Networks  QSFP-40G-UNIV    KZY197408691     01  
+  6/36 Not Present                                            
+
+System has 1 storage device
+  Mount      Type Model      Serial Number Rev Size (GB) 
+  ---------- ---- ---------- ------------- --- --------- 
+  /mnt/flash eUSB eUSB drive                   4         
