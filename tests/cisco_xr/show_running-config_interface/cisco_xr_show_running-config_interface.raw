@@ -5,11 +5,9 @@ interface TenGigE2/1/0/0.1234256
  service-policy input IN_BAND_S_50000_V1
  service-policy output OUT_BAND_S_50000_V1
  ipv4 address 10.242.26.65 255.255.255.252
- ipv4 address 10.0.0.1 255.255.255.254 secondary
  ipv4 verify unicast source reachable-via rx allow-self-ping
  ipv6 verify unicast source reachable-via tx allow-self-ping
  ipv6 address fe80:a8:2:b0::309/126
- ipv6 address 2001:db8:0:1::/64 eui-64
  load-interval 30
  encapsulation dot1q 1234
  ipv4 access-group iACL ingress
@@ -82,4 +80,58 @@ interface TenGigE3/0/0/0
  flow ipv4 monitor IPV4-MONITOR sampler IPV4-SAMPLER ingress
  flow ipv6 monitor IPV6-MONITOR sampler IPV6-SAMPLER ingress
  flow mpls monitor MPLS-MONITOR sampler MPLS-SAMPLER ingress
+!
+interface TenGigE3/0/0/1
+ description TEST EGRESS ACL
+ shutdown
+ ipv4 access-group iACL-IN ingress
+ ipv4 access-group iACL-OUT egress
+ ipv6 access-group FilterPackIPv6-IN ingress
+ ipv6 access-group FilterPackIPv6-OUT egress
+!
+interface Bundle-Ether10
+ description TEST STRINGS
+ bfd mode ietf
+ bfd address-family ipv4 multiplier 3
+ bfd address-family ipv4 destination 10.230.130.4
+ bfd address-family ipv4 fast-detect
+ bfd address-family ipv4 minimum-interval 100
+ mtu 9208
+ lldp
+ ipv4 flowspec disable
+ ipv6 flowspec disable
+ service-policy output SubRate_200
+ mac-accounting ingress
+ encapsulation dot1q 31 exact
+  rewrite ingress tag pop 1 symmetric
+ ipv4 mtu 9180
+ ipv4 address 10.230.130.5 255.255.255.254
+ ipv6 address 2804:a8:2:b8::13a9/126
+ ipv6 address fe80::1000:16:3/126 link-local
+ ipv6 address fe80::1000:16:2 link-local
+ ipv6 address fe80:388:129:16::3/64 eui-64
+ ipv6 address fe80:388:129:16::24 eui-64
+ ipv6 address fe80:0cB8:0:1::/19
+ ipv6 address fe80:0D18:0:1::/64 eui-64
+ logging events link-status
+ mpls
+  mtu 9180
+!
+interface Bundle-Ether100
+ shutdown
+ description satellite100
+ cdp
+ carrier-delay up 0 down 0
+ lacp period short
+ load-interval 30
+ dampening
+ ethernet udld
+ l2transport
+ speed 1000
+ negotiation auto
+ nv
+  satellite-fabric-link satellite 100
+   remote-ports GigabitEthernet 0/0/0 - 43
+  !
+ !
 !
