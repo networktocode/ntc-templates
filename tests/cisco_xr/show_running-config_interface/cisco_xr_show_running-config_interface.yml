@@ -1,217 +1,300 @@
 ---
 parsed_sample:
-  - access_group_in: "iACL"
-    access_group_out: ""
-    access_group_v6_in: "FilterPackIPv6"
-    access_group_v6_out: ""
-    bandwidth: "50000"
-    description: "TESTONE | 50M"
-    flow_monitor: ""
-    flow_monitor_v6: ""
-    flow_mpls: ""
-    flow_mpls_sampler: ""
-    flow_sampler: ""
-    flow_sampler_v6: ""
-    inner_vlan: ""
-    input_policy: "IN_BAND_S_50000_V1"
-    interface: "TenGigE2/1/0/0.1234256"
+  - interface: TenGigE2/1/0/0.1234256
+    description: TESTONE | 50M
+    bandwidth: '50000'
+    outer_vlan: '1234'
+    inner_vlan: ''
+    vrf: ''
+    mac_address: ''
     ip_addresses:
-      - "10.242.26.65"
-      - "10.0.0.1"
+      - 10.242.26.65
+    ip_netmasks:
+      - 255.255.255.252
     ipv6_addresses:
-      - "fe80:a8:2:b0::309"
-      - "2001:db8:0:1::"
-    ipv6_prefix_lengths:
-      - "126"
-      - "64"
-    load_interval: "30"
-    mtu: ""
-    mtu_ipv4: ""
-    netmasks:
-      - "255.255.255.252"
-      - "255.255.255.254"
-    outer_vlan: "1234"
-    output_policy: "OUT_BAND_S_50000_V1"
-    unicast_source: "rx"
-    unicast_source_v6: "tx"
-    vrf: ""
-  - access_group_in: "iACL"
-    access_group_out: ""
-    access_group_v6_in: "FilterPackIPv6"
-    access_group_v6_out: ""
-    bandwidth: "100000"
-    description: "PEOPLE | 100M"
-    flow_monitor: ""
-    flow_monitor_v6: ""
-    flow_mpls: ""
-    flow_mpls_sampler: ""
-    flow_sampler: ""
-    flow_sampler_v6: ""
-    inner_vlan: "7"
-    input_policy: "IN_BAND_S_100000_V1"
-    interface: "TenGigE2/4/0/2.22227"
+      - fe80:a8:2:b0::309
+    prefixv6_lengths:
+      - '126'
+    load_interval: '30'
+    mtu: ''
+    mtu_ipv4: ''
+    unicast_source: rx
+    unicast_source_v6: ''
+    input_policy: IN_BAND_S_50000_V1
+    output_policy: OUT_BAND_S_50000_V1
+    access_group: iACL
+    access_group_v6: FilterPackIPv6
+    flow_monitor: ''
+    flow_monitor_v6: ''
+    flow_mpls: ''
+    flow_sampler: ''
+    flow_sampler_v6: ''
+    flow_mpls_sampler: ''
+  - interface: TenGigE2/4/0/2.22227
+    description: PEOPLE | 100M
+    bandwidth: '100000'
+    outer_vlan: '2222'
+    inner_vlan: '7'
+    vrf: ''
+    mac_address: ''
     ip_addresses:
-      - "10.23.125.209"
+      - 10.23.125.209
+    ip_netmasks:
+      - 255.255.255.252
     ipv6_addresses:
-      - "fe80:a8:2:b8::a671"
-    ipv6_prefix_lengths:
-      - "126"
-    load_interval: "30"
-    mtu: ""
-    mtu_ipv4: ""
-    netmasks:
-      - "255.255.255.252"
-    outer_vlan: "2222"
-    output_policy: "OUT_BAND_S_100000_V1"
-    unicast_source: "tx"
-    unicast_source_v6: "rx"
-    vrf: ""
-  - access_group_in: "iACL"
-    access_group_out: ""
-    access_group_v6_in: "FilterPackIPv6"
-    access_group_v6_out: ""
-    bandwidth: "100000"
-    description: "AVENIDA | 100M"
-    flow_monitor: ""
-    flow_monitor_v6: ""
-    flow_mpls: ""
-    flow_mpls_sampler: ""
-    flow_sampler: ""
-    flow_sampler_v6: ""
-    inner_vlan: "9"
-    input_policy: "IN_BAND_S_100000_V1"
-    interface: "TenGigE2/4/0/2.22229"
+      - fe80:a8:2:b8::a671
+    prefixv6_lengths:
+      - '126'
+    load_interval: '30'
+    mtu: ''
+    mtu_ipv4: ''
+    unicast_source: tx
+    unicast_source_v6: ''
+    input_policy: IN_BAND_S_100000_V1
+    output_policy: OUT_BAND_S_100000_V1
+    access_group: iACL
+    access_group_v6: FilterPackIPv6
+    flow_monitor: ''
+    flow_monitor_v6: ''
+    flow_mpls: ''
+    flow_sampler: ''
+    flow_sampler_v6: ''
+    flow_mpls_sampler: ''
+  - interface: TenGigE2/4/0/2.22229
+    description: AVENIDA | 100M
+    bandwidth: '100000'
+    outer_vlan: '2222'
+    inner_vlan: '9'
+    vrf: ''
+    mac_address: ''
     ip_addresses:
-      - "10.228.247.93"
+      - 10.228.247.93
+    ip_netmasks:
+      - 255.255.255.252
     ipv6_addresses:
-      - "fe80:a8:2:b8::10ed"
-    ipv6_prefix_lengths:
-      - "126"
-    load_interval: "30"
-    mtu: ""
-    mtu_ipv4: ""
-    netmasks:
-      - "255.255.255.252"
-    outer_vlan: "2222"
-    output_policy: "OUT_BAND_S_100000_V1"
-    unicast_source: "any"
-    unicast_source_v6: "any"
-    vrf: ""
-  - access_group_in: ""
-    access_group_out: ""
-    access_group_v6_in: ""
-    access_group_v6_out: ""
-    bandwidth: "1500"
-    description: "MONTE EVEREST | 1500K"
-    flow_monitor: ""
-    flow_monitor_v6: ""
-    flow_mpls: ""
-    flow_mpls_sampler: ""
-    flow_sampler: ""
-    flow_sampler_v6: ""
-    inner_vlan: "2"
-    input_policy: ""
-    interface: "TenGigE2/4/0/2.10012"
+      - fe80:a8:2:b8::10ed
+    prefixv6_lengths:
+      - '126'
+    load_interval: '30'
+    mtu: ''
+    mtu_ipv4: ''
+    unicast_source: any
+    unicast_source_v6: ''
+    input_policy: IN_BAND_S_100000_V1
+    output_policy: OUT_BAND_S_100000_V1
+    access_group: iACL
+    access_group_v6: FilterPackIPv6
+    flow_monitor: ''
+    flow_monitor_v6: ''
+    flow_mpls: ''
+    flow_sampler: ''
+    flow_sampler_v6: ''
+    flow_mpls_sampler: ''
+  - interface: TenGigE2/4/0/2.10012
+    description: MONTE EVEREST | 1500K
+    bandwidth: '1500'
+    outer_vlan: '1001'
+    inner_vlan: '2'
+    vrf: FONE_CLIENT:5341
+    mac_address: ''
     ip_addresses:
-      - "10.86.193.193"
+      - 10.86.193.193
+    ip_netmasks:
+      - 255.255.255.252
     ipv6_addresses: []
-    ipv6_prefix_lengths: []
-    load_interval: "30"
-    mtu: ""
-    mtu_ipv4: ""
-    netmasks:
-      - "255.255.255.252"
-    outer_vlan: "1001"
-    output_policy: "OUT_SIP_VOICE_1500"
-    unicast_source: "rx"
-    unicast_source_v6: ""
-    vrf: "FONE_CLIENT:5341"
-  - access_group_in: ""
-    access_group_out: ""
-    access_group_v6_in: ""
-    access_group_v6_out: ""
-    bandwidth: "100000"
-    description: "TEST PASS| 100M"
-    flow_monitor: ""
-    flow_monitor_v6: ""
-    flow_mpls: ""
-    flow_mpls_sampler: ""
-    flow_sampler: ""
-    flow_sampler_v6: ""
-    inner_vlan: ""
-    input_policy: "IN_100000K_1_0_1_0_0_1_1"
-    interface: "TenGigE2/4/0/2.1002"
+    prefixv6_lengths: []
+    load_interval: '30'
+    mtu: ''
+    mtu_ipv4: ''
+    unicast_source: rx
+    unicast_source_v6: ''
+    input_policy: ''
+    output_policy: OUT_SIP_VOICE_1500
+    access_group: ''
+    access_group_v6: ''
+    flow_monitor: ''
+    flow_monitor_v6: ''
+    flow_mpls: ''
+    flow_sampler: ''
+    flow_sampler_v6: ''
+    flow_mpls_sampler: ''
+  - interface: TenGigE2/4/0/2.1002
+    description: TEST PASS| 100M
+    bandwidth: '100000'
+    outer_vlan: '1002'
+    inner_vlan: ''
+    vrf: FEED_HUB:1245
+    mac_address: ''
     ip_addresses:
-      - "10.245.37.157"
+      - 10.245.37.157
+    ip_netmasks:
+      - 255.255.255.252
     ipv6_addresses:
-      - "fe80:a8:2:2b8::751"
-    ipv6_prefix_lengths:
-      - "126"
-    load_interval: "30"
-    mtu: ""
-    mtu_ipv4: ""
-    netmasks:
-      - "255.255.255.252"
-    outer_vlan: "1002"
-    output_policy: "OUT_100000K_1_0_1_0_0_1_1"
-    unicast_source: ""
-    unicast_source_v6: ""
-    vrf: "FEED_HUB:1245"
-  - access_group_in: ""
-    access_group_out: ""
-    access_group_v6_in: ""
-    access_group_v6_out: ""
-    bandwidth: "2048"
-    description: "BLUE | 2048K"
-    flow_monitor: ""
-    flow_monitor_v6: ""
-    flow_mpls: ""
-    flow_mpls_sampler: ""
-    flow_sampler: ""
-    flow_sampler_v6: ""
-    inner_vlan: "3"
-    input_policy: "IN_BLUE_2M_0_0_0_98_0_1_XR_V1"
-    interface: "TenGigE2/4/0/2.10023"
+      - fe80:a8:2:2b8::751
+    prefixv6_lengths:
+      - '126'
+    load_interval: '30'
+    mtu: ''
+    mtu_ipv4: ''
+    unicast_source: ''
+    unicast_source_v6: ''
+    input_policy: IN_100000K_1_0_1_0_0_1_1
+    output_policy: OUT_100000K_1_0_1_0_0_1_1
+    access_group: ''
+    access_group_v6: ''
+    flow_monitor: ''
+    flow_monitor_v6: ''
+    flow_mpls: ''
+    flow_sampler: ''
+    flow_sampler_v6: ''
+    flow_mpls_sampler: ''
+  - interface: TenGigE2/4/0/2.10023
+    description: BLUE | 2048K
+    bandwidth: '2048'
+    outer_vlan: '1002'
+    inner_vlan: '3'
+    vrf: OBS_CHIN:1236
+    mac_address: ''
     ip_addresses:
-      - "192.168.226.53"
+      - 192.168.226.53
+    ip_netmasks:
+      - 255.255.255.252
     ipv6_addresses:
-      - "fe80:a8:2:2b8::ac5"
-    ipv6_prefix_lengths:
-      - "126"
-    load_interval: "30"
-    mtu: ""
-    mtu_ipv4: ""
-    netmasks:
-      - "255.255.255.252"
-    outer_vlan: "1002"
-    output_policy: "OUT_BLUE_2M_0_0_0_98_0_1_XR_V1"
-    unicast_source: ""
-    unicast_source_v6: ""
-    vrf: "OBS_CHIN:1236"
-  - access_group_in: ""
-    access_group_out: ""
-    access_group_v6_in: ""
-    access_group_v6_out: ""
-    bandwidth: ""
-    description: "TEST MTU and FLOW"
-    flow_monitor: "IPV4-MONITOR"
-    flow_monitor_v6: "IPV6-MONITOR"
-    flow_mpls: "MPLS-MONITOR"
-    flow_mpls_sampler: "MPLS-SAMPLER"
-    flow_sampler: "IPV4-SAMPLER"
-    flow_sampler_v6: "IPV6-SAMPLER"
-    inner_vlan: ""
-    input_policy: ""
-    interface: "TenGigE3/0/0/0"
+      - fe80:a8:2:2b8::ac5
+    prefixv6_lengths:
+      - '126'
+    load_interval: '30'
+    mtu: ''
+    mtu_ipv4: ''
+    unicast_source: ''
+    unicast_source_v6: ''
+    input_policy: IN_BLUE_2M_0_0_0_98_0_1_XR_V1
+    output_policy: OUT_BLUE_2M_0_0_0_98_0_1_XR_V1
+    access_group: ''
+    access_group_v6: ''
+    flow_monitor: ''
+    flow_monitor_v6: ''
+    flow_mpls: ''
+    flow_sampler: ''
+    flow_sampler_v6: ''
+    flow_mpls_sampler: ''
+  - interface: TenGigE3/0/0/0
+    description: TEST MTU and FLOW
+    bandwidth: ''
+    outer_vlan: ''
+    inner_vlan: ''
+    vrf: ''
+    mac_address: ''
     ip_addresses: []
+    ip_netmasks: []
     ipv6_addresses: []
-    ipv6_prefix_lengths: []
-    load_interval: ""
-    mtu: "9216"
-    mtu_ipv4: "9000"
-    netmasks: []
-    outer_vlan: ""
-    output_policy: ""
-    unicast_source: ""
-    unicast_source_v6: ""
-    vrf: ""
+    prefixv6_lengths: []
+    load_interval: ''
+    mtu: '9216'
+    mtu_ipv4: '9000'
+    unicast_source: ''
+    unicast_source_v6: ''
+    input_policy: ''
+    output_policy: ''
+    access_group: ''
+    access_group_v6: ''
+    flow_monitor: IPV4-MONITOR
+    flow_monitor_v6: IPV6-MONITOR
+    flow_mpls: MPLS-MONITOR
+    flow_sampler: IPV4-SAMPLER
+    flow_sampler_v6: IPV6-SAMPLER
+    flow_mpls_sampler: MPLS-SAMPLER
+  - interface: TenGigE3/0/0/1
+    description: TEST EGRESS ACL
+    bandwidth: ''
+    outer_vlan: ''
+    inner_vlan: ''
+    vrf: ''
+    mac_address: ''
+    ip_addresses: []
+    ip_netmasks: []
+    ipv6_addresses: []
+    prefixv6_lengths: []
+    load_interval: ''
+    mtu: ''
+    mtu_ipv4: ''
+    unicast_source: ''
+    unicast_source_v6: ''
+    input_policy: ''
+    output_policy: ''
+    access_group: iACL-OUT
+    access_group_v6: FilterPackIPv6-OUT
+    flow_monitor: ''
+    flow_monitor_v6: ''
+    flow_mpls: ''
+    flow_sampler: ''
+    flow_sampler_v6: ''
+    flow_mpls_sampler: ''
+  - interface: Bundle-Ether10
+    description: TEST STRINGS
+    bandwidth: ''
+    outer_vlan: '31'
+    inner_vlan: ''
+    vrf: ''
+    mac_address: ''
+    ip_addresses:
+      - 10.230.130.5
+    ip_netmasks:
+      - 255.255.255.254
+    ipv6_addresses:
+      - 2804:a8:2:b8::13a9
+      - fe80::1000:16:3
+      - fe80::1000:16:2
+      - fe80:388:129:16::3
+      - fe80:388:129:16::24
+      - 'fe80:0cB8:0:1::'
+      - 'fe80:0D18:0:1::'
+    prefixv6_lengths:
+      - '126'
+      - '126'
+      - null
+      - '64'
+      - null
+      - '19'
+      - '64'
+    load_interval: ''
+    mtu: '9180'
+    mtu_ipv4: '9180'
+    unicast_source: ''
+    unicast_source_v6: ''
+    input_policy: ''
+    output_policy: SubRate_200
+    access_group: ''
+    access_group_v6: ''
+    flow_monitor: ''
+    flow_monitor_v6: ''
+    flow_mpls: ''
+    flow_sampler: ''
+    flow_sampler_v6: ''
+    flow_mpls_sampler: ''
+  - interface: Bundle-Ether100
+    description: satellite100
+    bandwidth: ''
+    outer_vlan: ''
+    inner_vlan: ''
+    vrf: ''
+    mac_address: ''
+    ip_addresses: []
+    ip_netmasks: []
+    ipv6_addresses: []
+    prefixv6_lengths: []
+    load_interval: '30'
+    mtu: ''
+    mtu_ipv4: ''
+    unicast_source: ''
+    unicast_source_v6: ''
+    input_policy: ''
+    output_policy: ''
+    access_group: ''
+    access_group_v6: ''
+    flow_monitor: ''
+    flow_monitor_v6: ''
+    flow_mpls: ''
+    flow_sampler: ''
+    flow_sampler_v6: ''
+    flow_mpls_sampler: ''
