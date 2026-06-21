@@ -8,7 +8,7 @@ Value MAC_ADDRESS (\S+?)
 Value List IP_ADDRESSES (\d+.\d+.\d+.\d+)
 Value List NETMASKS (\d+.\d+.\d+.\d+)
 Value List IPV6_ADDRESSES ([0-9a-fA-F:]+)
-Value List PREFIXV6_LENGTHS (\d+)
+Value List IPV6_PREFIX_LENGTHS (\d+)
 Value LOAD_INTERVAL (\d+)
 Value MTU (\d+)
 Value MTU_IPV4 (\d+)
@@ -38,7 +38,7 @@ Start
   ^\s+ipv6\s+(nd|verify)\s+\S
   ^\s+ipv(4|6)\s+flowspec\s+disable
   ^\s+ipv6\s+verify\s+unicast\s+source\s+reachable-via\s+${UNICAST_SOURCE_V6}\s+allow-self-ping
-  ^\s+ipv6\s+address\s+${IPV6_ADDRESSES}(?:\/+${PREFIXV6_LENGTHS})?((?:\s+\S)?)
+  ^\s+ipv6\s+address\s+${IPV6_ADDRESSES}(?:\/+${IPV6_PREFIX_LENGTHS})?((?:\s+\S)?)
   ^\s+mac-address\s+${MAC_ADDRESS}
   ^\s+mtu\s+${MTU}
   ^\s+ipv4\s+mtu\s+${MTU_IPV4}
