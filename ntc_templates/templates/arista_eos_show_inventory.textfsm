@@ -10,7 +10,6 @@ Start
 
 Chassis
   ^\s+Model\s*$$ -> ChassisSplit
-  ^\s+Model
   ^\s+---+
   ^\s+HW
   ^\s+${VID}\s+${SN}\s+\d+-\d+-\d+ -> Record
