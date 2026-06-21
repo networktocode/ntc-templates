@@ -11,7 +11,7 @@ Start
 Chassis
   ^\s+Model\s*$$ -> ChassisSplit
   ^\s+Model
-  ^\s+-
+  ^\s+---+
   ^\s+HW
   ^\s+${VID}\s+${SN}\s+\d+-\d+-\d+ -> Record
   ^\s+${PID}?\s+${DESCR}$$
@@ -21,7 +21,7 @@ Chassis
   ^. -> Error
 
 ChassisSplit
-  ^\s+-
+  ^\s+---+
   ^\s+Description\s*$$
   ^\s+HW -> Chassis
   ^\s+${PID}\s*$$
@@ -30,28 +30,28 @@ ChassisSplit
 
 Subcomponent
   ^\s+Component\s+Serial
-  ^\s+-
+  ^\s+---+
   ^\s+\S+\s+\S+\s*$$
   ^\s*System.+(power supply|power-supply) -> Power_Supply
   ^. -> Error
 
 Modules
   ^\s+Module\s+Model\s+HW
-  ^\s+-
+  ^\s+---+
   ^\s+${DESCR}\s+${PID}\s+${VID}\s+${SN}\s+\d+-\d+-\d+ -> Record
   ^\s*System.+(power supply|power-supply) -> Power_Supply
   ^. -> Error
 
 Power_Supply
   ^\s+Slot
-  ^\s+-
+  ^\s+---+
   ^\s+${PORT}\s+${PID}\s+${SN} -> Record
   ^\s*System.+(fan) -> Fan
   ^. -> Error
 
 Fan
   ^\s+Module
-  ^\s+-
+  ^\s+---+
   ^\s+${PORT}?\s+\d+?\s+${PID}?\s+${SN} -> Record
   ^\s*System.+ports -> Ports
   ^. -> Error
@@ -78,7 +78,7 @@ Storage
   ^Supervisor \d+:\s*$$
   ^\s+Mount\s+Type\s+Model\s+Serial
   ^\s+Size\s+\(GB\)
-  ^\s+-
+  ^\s+---+
   ^\s+/\S+
   ^\s+\d+\s*$$
   ^\s*System has precision clock\s*$$
