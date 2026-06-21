@@ -1,7 +1,7 @@
 Value PORT ([0-9\/]+)
 Value PID (\S+)
 Value SN (\S+)
-Value DESCR (\S.*)
+Value DESCR (\S.*\S)
 Value VID (\S+)
 
 Start
@@ -14,7 +14,7 @@ Chassis
   ^\s+---+
   ^\s+HW
   ^\s+${VID}\s+${SN}\s+\d+-\d+-\d+ -> Record
-  ^\s+${PID}?\s+${DESCR}$$
+  ^\s+${PID}?\s+${DESCR}\s*$$
   ^Subcomponent serial numbers\s*$$ -> Subcomponent
   ^\s*System has \d+ card slot -> Modules
   ^\s*System.+(power supply|power-supply) -> Power_Supply
