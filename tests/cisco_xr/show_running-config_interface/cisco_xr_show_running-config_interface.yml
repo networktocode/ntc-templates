@@ -15,14 +15,14 @@ parsed_sample:
     interface: "TenGigE2/1/0/0.1234256"
     ip_addresses:
       - "10.242.26.65"
-    ip_netmasks:
-      - "255.255.255.252"
     ipv6_addresses:
       - "fe80:a8:2:b0::309"
     load_interval: "30"
     mac_address: ""
     mtu: ""
     mtu_ipv4: ""
+    netmasks:
+      - "255.255.255.252"
     outer_vlan: "1234"
     output_policy: "OUT_BAND_S_50000_V1"
     prefixv6_lengths:
@@ -45,14 +45,14 @@ parsed_sample:
     interface: "TenGigE2/4/0/2.22227"
     ip_addresses:
       - "10.23.125.209"
-    ip_netmasks:
-      - "255.255.255.252"
     ipv6_addresses:
       - "fe80:a8:2:b8::a671"
     load_interval: "30"
     mac_address: ""
     mtu: ""
     mtu_ipv4: ""
+    netmasks:
+      - "255.255.255.252"
     outer_vlan: "2222"
     output_policy: "OUT_BAND_S_100000_V1"
     prefixv6_lengths:
@@ -75,14 +75,14 @@ parsed_sample:
     interface: "TenGigE2/4/0/2.22229"
     ip_addresses:
       - "10.228.247.93"
-    ip_netmasks:
-      - "255.255.255.252"
     ipv6_addresses:
       - "fe80:a8:2:b8::10ed"
     load_interval: "30"
     mac_address: ""
     mtu: ""
     mtu_ipv4: ""
+    netmasks:
+      - "255.255.255.252"
     outer_vlan: "2222"
     output_policy: "OUT_BAND_S_100000_V1"
     prefixv6_lengths:
@@ -105,13 +105,13 @@ parsed_sample:
     interface: "TenGigE2/4/0/2.10012"
     ip_addresses:
       - "10.86.193.193"
-    ip_netmasks:
-      - "255.255.255.252"
     ipv6_addresses: []
     load_interval: "30"
     mac_address: ""
     mtu: ""
     mtu_ipv4: ""
+    netmasks:
+      - "255.255.255.252"
     outer_vlan: "1001"
     output_policy: "OUT_SIP_VOICE_1500"
     prefixv6_lengths: []
@@ -133,14 +133,14 @@ parsed_sample:
     interface: "TenGigE2/4/0/2.1002"
     ip_addresses:
       - "10.245.37.157"
-    ip_netmasks:
-      - "255.255.255.252"
     ipv6_addresses:
       - "fe80:a8:2:2b8::751"
     load_interval: "30"
     mac_address: ""
     mtu: ""
     mtu_ipv4: ""
+    netmasks:
+      - "255.255.255.252"
     outer_vlan: "1002"
     output_policy: "OUT_100000K_1_0_1_0_0_1_1"
     prefixv6_lengths:
@@ -163,14 +163,14 @@ parsed_sample:
     interface: "TenGigE2/4/0/2.10023"
     ip_addresses:
       - "192.168.226.53"
-    ip_netmasks:
-      - "255.255.255.252"
     ipv6_addresses:
       - "fe80:a8:2:2b8::ac5"
     load_interval: "30"
     mac_address: ""
     mtu: ""
     mtu_ipv4: ""
+    netmasks:
+      - "255.255.255.252"
     outer_vlan: "1002"
     output_policy: "OUT_BLUE_2M_0_0_0_98_0_1_XR_V1"
     prefixv6_lengths:
@@ -192,12 +192,12 @@ parsed_sample:
     input_policy: ""
     interface: "TenGigE3/0/0/0"
     ip_addresses: []
-    ip_netmasks: []
     ipv6_addresses: []
     load_interval: ""
     mac_address: ""
     mtu: "9216"
     mtu_ipv4: "9000"
+    netmasks: []
     outer_vlan: ""
     output_policy: ""
     prefixv6_lengths: []
@@ -218,12 +218,12 @@ parsed_sample:
     input_policy: ""
     interface: "TenGigE3/0/0/1"
     ip_addresses: []
-    ip_netmasks: []
     ipv6_addresses: []
     load_interval: ""
     mac_address: ""
     mtu: ""
     mtu_ipv4: ""
+    netmasks: []
     outer_vlan: ""
     output_policy: ""
     prefixv6_lengths: []
@@ -245,8 +245,6 @@ parsed_sample:
     interface: "Bundle-Ether10"
     ip_addresses:
       - "10.230.130.5"
-    ip_netmasks:
-      - "255.255.255.254"
     ipv6_addresses:
       - "2804:a8:2:b8::13a9"
       - "fe80::1000:16:3"
@@ -259,6 +257,8 @@ parsed_sample:
     mac_address: ""
     mtu: "9180"
     mtu_ipv4: "9180"
+    netmasks:
+      - "255.255.255.254"
     outer_vlan: "31"
     output_policy: "SubRate_200"
     prefixv6_lengths:
@@ -286,12 +286,12 @@ parsed_sample:
     input_policy: ""
     interface: "Bundle-Ether100"
     ip_addresses: []
-    ip_netmasks: []
     ipv6_addresses: []
     load_interval: "30"
     mac_address: ""
     mtu: ""
     mtu_ipv4: ""
+    netmasks: []
     outer_vlan: ""
     output_policy: ""
     prefixv6_lengths: []
