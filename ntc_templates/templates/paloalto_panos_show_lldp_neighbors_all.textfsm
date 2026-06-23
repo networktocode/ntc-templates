@@ -14,7 +14,7 @@ Value CAPABILITIES (\S.*\S)
 Value MGMT_ADDRESS_TYPE (\S+)
 Value MGMT_ADDRESS (\S+)
 Value INTERFACE_NUMBER (\d+)
-Value INTERFACE_TYPE (\S+)
+Value INTERFACE_TYPE (\S.*\S)
 Value OID (\S+)
 
 Start
