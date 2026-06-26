@@ -1,0 +1,275 @@
+Local information:
+Index 26
+Local interface: ethernet1/11
+Local Port ID: 11
+Neighbor information:
+
+Chassis type: MAC address
+Chassis ID: 8c:36:7a:aa:bb:cc
+Port type: Interface name
+Port ID: ethernet1/12
+Port description: TRANSIT_INTERFACE_VIA_LOOP_CABLE
+TTL: 105
+System name: FIREWALL-1
+System description: Palo Alto Networks PA-3400 series firewall
+System capabilities:
+Supported: O, P, B, R,
+Enabled: O, R,
+
+Local information:
+Index 27
+Local interface: ethernet1/12
+Local Port ID: 12
+Neighbor information:
+
+Chassis type: MAC address
+Chassis ID: 8c:36:7a:aa:bb:cc
+Port type: Interface name
+Port ID: ethernet1/11
+Port description:
+TTL: 105
+System name:
+System description:
+System capabilities:
+Supported:
+Enabled:
+
+Local information:
+Index 30
+Local interface: ethernet1/15
+Local Port ID: 15
+Neighbor information:
+
+Chassis type: MAC address
+Chassis ID: bc:d7:a5:aa:bb:cc
+Port type: Interface name
+Port ID: 1/1/4
+Port description: UPLINK_TO_FIREWALL-2_A
+TTL: 119
+System name: SWITCH-1
+System description: Aruba JL635A  GL.10.13.1050
+System capabilities:
+Supported: B, R,
+Enabled: B, R,
+Management address type: ipv4
+Management address: 192.0.2.10
+Interface number: 33554532
+Interface type: Ifindex
+oid: 1.3.6.1.2.1.31.1.1.1.1.33554532.
+
+
+Local information:
+Index 32
+Local interface: ethernet1/17
+Local Port ID: 17
+Neighbor information:
+
+Chassis type: MAC address
+Chassis ID: bc:d7:a5:dd:ee:ff
+Port type: Interface name
+Port ID: 1/1/4
+Port description: UPLINK_TO_FIREWALL-2_A - 1/17
+TTL: 117
+System name: SWITCH-2
+System description: Aruba JL635A  GL.10.13.1050
+System capabilities:
+Supported: B, R,
+Enabled: B, R,
+Management address type: ipv4
+Management address: 192.0.2.20
+Interface number: 33554532
+Interface type: Ifindex
+oid: 1.3.6.1.2.1.31.1.1.1.1.33554532.
+
+
+Local information:
+Index 34
+Local interface: ethernet1/19
+Local Port ID: 19
+Neighbor information:
+
+Chassis type: MAC address
+Chassis ID: bc:d7:a5:aa:bb:cc
+Port type: Interface name
+Port ID: 1/1/6
+Port description: UPLINK_TO_FIREWALL-2_B
+TTL: 119
+System name: SWITCH-1
+System description: Aruba JL635A  GL.10.13.1050
+System capabilities:
+Supported: B, R,
+Enabled: B, R,
+Management address type: ipv4
+Management address: 192.0.2.10
+Interface number: 33554532
+Interface type: Ifindex
+oid: 1.3.6.1.2.1.31.1.1.1.1.33554532.
+
+
+Local information:
+Index 35
+Local interface: ethernet1/20
+Local Port ID: 20
+Neighbor information:
+
+Chassis type: MAC address
+Chassis ID: bc:d7:a5:dd:ee:ff
+Port type: Interface name
+Port ID: 1/1/6
+Port description: UPLINK_TO_FIREWALL-2_B - 1/1/19
+TTL: 117
+System name: SWITCH-2
+System description: Aruba JL635A  GL.10.13.1050
+System capabilities:
+Supported: B, R,
+Enabled: B, R,
+Management address type: ipv4
+Management address: 192.0.2.20
+Interface number: 33554532
+Interface type: Ifindex
+oid: 1.3.6.1.2.1.31.1.1.1.1.33554532.
+
+
+Local information:
+Index 36
+Local interface: ethernet1/21
+Local Port ID: 21
+Neighbor information:
+
+Chassis type: MAC address
+Chassis ID: bc:d7:a5:aa:bb:cc
+Port type: Interface name
+Port ID: 1/1/5
+Port description: UPLINK_TO_FIREWALL-2_C
+TTL: 119
+System name: SWITCH-1
+System description: Aruba JL635A  GL.10.13.1050
+System capabilities:
+Supported: B, R,
+Enabled: B, R,
+Management address type: ipv4
+Management address: 192.0.2.10
+Interface number: 33554532
+Interface type: Ifindex
+oid: 1.3.6.1.2.1.31.1.1.1.1.33554532.
+
+
+Local information:
+Index 37
+Local interface: ethernet1/22
+Local Port ID: 22
+Neighbor information:
+
+Chassis type: MAC address
+Chassis ID: bc:d7:a5:dd:ee:ff
+Port type: Interface name
+Port ID: 1/1/5
+Port description: UPLINK_TO_FIREWALL-2_C - 1/22
+TTL: 117
+System name: SWITCH-2
+System description: Aruba JL635A  GL.10.13.1050
+System capabilities:
+Supported: B, R,
+Enabled: B, R,
+Management address type: ipv4
+Management address: 192.0.2.20
+Interface number: 33554532
+Interface type: Ifindex
+oid: 1.3.6.1.2.1.31.1.1.1.1.33554532.
+
+
+Local information:
+Index 28
+Local interface: ethernet1/13
+Local Port ID: 13
+Neighbor information:
+
+Chassis type: MAC address
+Chassis ID: f4:03:43:aa:bb:cc
+Port type: Locally assigned
+Port ID: 23
+Port description: 1/23
+TTL: 101
+System name: SWITCH-3
+System description: Aruba JL319A 2930M-24G Switch, revision WC.16.11.0021, ROM WC.17.02.0007 (/ws/swbuildm/rel_beluru_qaoff/code/build/lvm(swbuildm_rel_beluru_qaoff_rel_beluru))
+System capabilities:
+Supported: B, R,
+Enabled: B,
+Management address type: ipv4
+Management address: 192.0.2.30
+Interface number: 0
+Interface type: Ifindex
+oid:
+
+
+Local information:
+Index 29
+Local interface: ethernet1/14
+Local Port ID: 14
+Neighbor information:
+
+Chassis type: MAC address
+Chassis ID: f4:03:43:aa:bb:cc
+Port type: Locally assigned
+Port ID: 22
+Port description: 1/22
+TTL: 101
+System name: SWITCH-3
+System description: Aruba JL319A 2930M-24G Switch, revision WC.16.11.0021, ROM WC.17.02.0007 (/ws/swbuildm/rel_beluru_qaoff/code/build/lvm(swbuildm_rel_beluru_qaoff_rel_beluru))
+System capabilities:
+Supported: B, R,
+Enabled: B,
+Management address type: ipv4
+Management address: 192.0.2.30
+Interface number: 0
+Interface type: Ifindex
+oid:
+
+
+Local information:
+Index 23
+Local interface: ethernet1/8
+Local Port ID: 8
+Neighbor information:
+
+Chassis type: MAC address
+Chassis ID: f4:03:43:aa:bb:cc
+Port type: Locally assigned
+Port ID: 5
+Port description: 1/5
+TTL: 101
+System name: SWITCH-3
+System description: Aruba JL319A 2930M-24G Switch, revision WC.16.11.0021, ROM WC.17.02.0007 (/ws/swbuildm/rel_beluru_qaoff/code/build/lvm(swbuildm_rel_beluru_qaoff_rel_beluru))
+System capabilities:
+Supported: B, R,
+Enabled: B,
+Management address type: ipv4
+Management address: 192.0.2.30
+Interface number: 0
+Interface type: Ifindex
+oid:
+
+
+Local information:
+Index 31
+Local interface: ethernet1/16
+Local Port ID: 16
+Neighbor information:
+
+Chassis type: MAC address
+Chassis ID: f4:03:43:aa:bb:cc
+Port type: Locally assigned
+Port ID: 21
+Port description: 1/21
+TTL: 101
+System name: SWITCH-3
+System description: Aruba JL319A 2930M-24G Switch, revision WC.16.11.0021, ROM WC.17.02.0007 (/ws/swbuildm/rel_beluru_qaoff/code/build/lvm(swbuildm_rel_beluru_qaoff_rel_beluru))
+System capabilities:
+Supported: B, R,
+Enabled: B,
+Management address type: ipv4
+Management address: 192.0.2.30
+Interface number: 0
+Interface type: Ifindex
+oid:
+

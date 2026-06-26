@@ -1,0 +1,56 @@
+Value Required LOCAL_INTERFACE (\S+)
+Value INDEX (\d+)
+Value LOCAL_PORT_ID (\S+)
+Value NEIGHBOR_CHASSIS_TYPE (\S.*\S)
+Value CHASSIS_ID (\S+)
+Value PORT_TYPE (\S.*\S)
+Value NEIGHBOR_INTERFACE (\S+)
+Value NEIGHBOR_INTERFACE_DESCRIPTION (\S.*\S)
+Value TTL (\d+)
+Value NEIGHBOR_NAME (\S+)
+Value NEIGHBOR_DESCRIPTION (\S.*\S)
+Value CAPABILITIES_SUPPORTED (\S.*\S)
+Value CAPABILITIES (\S.*\S)
+Value MGMT_ADDRESS_TYPE (\S+)
+Value MGMT_ADDRESS (\S+)
+Value INTERFACE_NUMBER (\d+)
+Value INTERFACE_TYPE (\S.*\S)
+Value OID (\S+)
+
+Start
+  ^\s*Local\s+information:\s*$$ -> Record
+  ^\s*Index\s+${INDEX}\s*$$
+  ^\s*Local\s+interface:\s+${LOCAL_INTERFACE}\s*$$
+  ^\s*Local\s+Port\s+ID:\s+${LOCAL_PORT_ID}\s*$$
+  ^\s*Neighbor\s+information:\s*$$
+  ^\s*Chassis\s+type:\s+${NEIGHBOR_CHASSIS_TYPE}\s*$$
+  ^\s*Chassis\s+ID:\s+${CHASSIS_ID}\s*$$
+  ^\s*Port\s+type:\s+${PORT_TYPE}\s*$$
+  ^\s*Port\s+ID:\s+${NEIGHBOR_INTERFACE}\s*$$
+  ^\s*Port\s+description:\s+${NEIGHBOR_INTERFACE_DESCRIPTION}\s*$$
+  ^\s*Port\s+description:\s*$$
+  ^\s*TTL:\s+${TTL}\s*$$
+  ^\s*System\s+name:\s+${NEIGHBOR_NAME}\s*$$
+  ^\s*System\s+name:\s*$$
+  ^\s*System\s+description:\s+${NEIGHBOR_DESCRIPTION}\s*$$ -> SysDescr
+  ^\s*System\s+description:\s*$$
+  ^\s*System\s+capabilities:\s*$$
+  ^\s*Supported:\s+${CAPABILITIES_SUPPORTED}\s*$$
+  ^\s*Supported:\s*$$
+  ^\s*Enabled:\s+${CAPABILITIES}\s*$$
+  ^\s*Enabled:\s*$$
+  ^\s*Management\s+address\s+type:\s+${MGMT_ADDRESS_TYPE}\s*$$
+  ^\s*Management\s+address:\s+${MGMT_ADDRESS}\s*$$
+  ^\s*Interface\s+number:\s+${INTERFACE_NUMBER}\s*$$
+  ^\s*Interface\s+type:\s+${INTERFACE_TYPE}\s*$$
+  ^\s*oid:\s+${OID}\s*$$
+  ^\s*oid:\s*$$
+  ^\s*$$
+  ^. -> Error
+
+# multi-line System description (e.g. HPE Comware platforms emit a 3-line description)
+SysDescr
+  ^\s*System\s+capabilities:\s*$$ -> Start
+  ^\s*\S.*$$
+  ^\s*$$
+  ^. -> Error
