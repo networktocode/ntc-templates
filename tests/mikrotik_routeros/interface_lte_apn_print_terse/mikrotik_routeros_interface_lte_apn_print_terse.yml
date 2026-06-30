@@ -1,0 +1,12 @@
+---
+parsed_sample:
+  - add_default_route: "yes"
+    apn: "telstra.internet"
+    authentication: "none"
+    default_route_distance: "10"
+    flags: "*"
+    index: "0"
+    ip_type: "ipv4"
+    name: "default"
+    use_network_apn: "no"
+    use_peer_dns: "yes"
