@@ -9,7 +9,7 @@ You can follow the local development procedures, but for your convenience here a
 * [textfsm.nornir.tech](https://textfsm.nornir.tech/) - An online textfsm editor.
 * [Packet Coders TextFSM Parser](https://tools.packetcoders.io/textfsm-parser/) - An online textfsm editor by Packet Coders.
 * [Slurp'it TextFSM Template Builder](https://textfsm.slurpit.io/) - An online AI-integrated textfsm editor by Slurp'it.
-   * [Overview page](https://slurpit.io/textfsm-template-builder/) which links to [code on GitLab](https://gitlab.com/slurpit.io/template_builder) for a self-hosted version.
+    * [Overview page](https://slurpit.io/textfsm-template-builder/) which links to [code on GitLab](https://gitlab.com/slurpit.io/template_builder) for a self-hosted version.
 
 ## Why is there a requirement to use `Error` in every template?
 
