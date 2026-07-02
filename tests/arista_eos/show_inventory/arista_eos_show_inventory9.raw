@@ -1,0 +1,50 @@
+System information
+  Model                    Description                                         
+  ------------------------ ----------------------------------------------------
+  DCS-7060X6-64PE          64x800GbE OSFP & 2xSFP Ethernet Switch              
+
+  HW Version  Serial Number  Mfg Date   Epoch
+  ----------- -------------- ---------- -----
+  11.22       ATL555364MC    2024-09-27 01.00
+
+System has 1 card slots
+  Module        Model        HW Version    Serial Number    Mfg Date      Epoch
+  ------------- ------------ ------------- ---------------- ------------- -----
+  Supervisor1   7001-SUP-A   11.00         QCI46516IVL      2024-09-27    01.00
+
+System has 2 power supply slots
+  Slot Model            Serial Number   
+  ---- ---------------- ----------------
+  1    PWR-2421-HV-RED  DHQC1841223M5   
+  2    PWR-2421-HV-RED  MNRT2890516IY   
+
+System has 4 fan modules
+  Module  Number of Fans  Model            Serial Number   
+  ------- --------------- ---------------- ----------------
+  1       1               FAN-7021H-RED    N/A             
+  2       1               FAN-7021H-RED    N/A             
+  3       1               FAN-7021H-RED    N/A             
+  4       1               FAN-7021H-RED    N/A             
+
+System has 515 ports
+  Type               Count
+  ------------------ ----
+  Management         1   
+  Switched           512 
+  SwitchedBootstrap  2   
+
+System has 66 switched transceiver slots
+  Port Manufacturer     Model            Serial Number    Rev 
+  ---- ---------------- ---------------- ---------------- ----
+  1    Arista Networks  OSFP-800G-PC01   E8650514478-2    00  
+  7    WhiteBoxNetworks O112-2DR4        2K4Z99101        1E  
+  9    Arista Networks  OSFP800GB2XSR4AR DC639I90F003     A1  
+  15   WhiteBoxNetworks O112-2DR4        0M1S86969        1E  
+  31   T1NEXUS          T1O112-800G-2SR4 Q1Y362400        B0  
+  66   Not Present                                            
+
+System has 1 storage device
+Supervisor 1: 
+  Mount      Type Model                     Serial Number     Rev      Size (GB)
+  ---------- ---- ------------------------- ----------------- -------- ---------
+  /mnt/flash NVME W6EN240G8TA-PE4EA5-4D2.E2 693-7231708-93060 EIEM51.2 240      
