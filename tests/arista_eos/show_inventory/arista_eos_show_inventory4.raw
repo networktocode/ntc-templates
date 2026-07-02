@@ -1,0 +1,53 @@
+System information
+  Model                    Description                                         
+  ------------------------ ----------------------------------------------------
+  DCS-7130-48LBS           7130 Series 48 port chassis                         
+
+  HW Version  Serial Number    Mfg Date   Epoch
+  ----------- ---------------- ---------- -----
+  02.03       V49XI-Y5-32582-7 2026-05-04 02.00
+
+Subcomponent serial numbers
+  Component          Serial Number 
+  ------------------ --------------
+  mainboardOtl       DAF65304243   
+  assemblyOtl        DAF65304243   
+  mezzanineOtl       AFG66785350   
+  mezzanine          VVR-B4-55788-1
+
+System has 2 power supply slots
+  Slot Model            Serial Number   
+  ---- ---------------- ----------------
+  1    PWR-500AC-R      JCKE65R7AXO     
+  2    PWR-500AC-R      DVFA63B6MML     
+
+System has 2 fan modules
+  Module  Number of Fans  Model            Serial Number   
+  ------- --------------- ---------------- ----------------
+  1       2               FAN-7130-1U-R    N/A             
+  2       2               FAN-7130-1U-R    N/A             
+
+System has 103 ports
+  Type               Count
+  ------------------ ----
+  Management         2   
+  Switched           94  
+  SwitchedBootstrap  2   
+  Cpu                4   
+  SwitchManagement   1   
+
+System has 48 switched transceiver slots
+  Port Manufacturer     Model            Serial Number    Rev 
+  ---- ---------------- ---------------- ---------------- ----
+  1    Not Present                                            
+  24   Arista Networks  Q-4SPC03         E4444248725-6    0001
+  27   Arista Networks  CAB-SFP-SFP-2M   EXO39179M0QZ     0002
+  29   Arista Networks  SFP-10GSR-85     U9850056331      0002
+  43   Arista Networks  CAB-SFP-SFP-0.5M ZEI9291563J6     0002
+  47   Arista Networks  SFP-10GLR-31     S455OB25986      0002
+  48   Not Present                                            
+
+System has 1 storage device
+  Mount      Type Model            Serial Number     Rev     Size (GB)
+  ---------- ---- ---------------- ----------------- ------- ---------
+  /mnt/flash SSD  M.2 (S42) 3MG2-P UUO40136458568268 M161225 62       
