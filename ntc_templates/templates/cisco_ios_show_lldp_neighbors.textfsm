@@ -1,7 +1,7 @@
 Value Required NEIGHBOR_NAME (.{0,20}(?<! ))
 Value Required LOCAL_INTERFACE (\S+)
-Value CAPABILITIES (\S*)
-Value Required NEIGHBOR_INTERFACE (\S+)
+Value CAPABILITIES ([BRCWPSTO,]+)
+Value Required NEIGHBOR_INTERFACE (\S+(?:\s+\S+)*)
 
 Start
   ^Device.*ID -> LLDP
@@ -10,6 +10,6 @@ Start
   ^Time\s+source\s+is
 
 LLDP
-  ^${NEIGHBOR_NAME}\s*${LOCAL_INTERFACE}\s+\d+\s+${CAPABILITIES}\s+${NEIGHBOR_INTERFACE} -> Record
+  ^${NEIGHBOR_NAME}\s*${LOCAL_INTERFACE}\s+\d+\s+(?:${CAPABILITIES}\s+)?${NEIGHBOR_INTERFACE}\s*$$ -> Record
   ^${NEIGHBOR_NAME}
-  ^\s+${LOCAL_INTERFACE}\s+\d+\s+${CAPABILITIES}\s+${NEIGHBOR_INTERFACE} -> Record
+  ^\s+${LOCAL_INTERFACE}\s+\d+\s+(?:${CAPABILITIES}\s+)?${NEIGHBOR_INTERFACE}\s*$$ -> Record
