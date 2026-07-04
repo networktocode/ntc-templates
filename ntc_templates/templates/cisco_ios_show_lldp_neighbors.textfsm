@@ -1,15 +1,22 @@
 Value Required NEIGHBOR_NAME (.{0,20}(?<! ))
 Value Required LOCAL_INTERFACE (\S+)
-Value CAPABILITIES (\S*)
-Value Required NEIGHBOR_INTERFACE (\S+)
+Value CAPABILITIES ([BRCWPSTO,]+)
+Value Required NEIGHBOR_INTERFACE (\S+(?:\s+\S+)*)
 
 Start
   ^Device.*ID -> LLDP
   # Capture time-stamp if vty line has command time-stamping turned on
   ^Load\s+for\s+
   ^Time\s+source\s+is
+  ^Capability\s+codes:
+  ^\s+\(
+  ^\s*$$
+  ^. -> Error
 
 LLDP
-  ^${NEIGHBOR_NAME}\s*${LOCAL_INTERFACE}\s+\d+\s+${CAPABILITIES}\s+${NEIGHBOR_INTERFACE} -> Record
+  ^${NEIGHBOR_NAME}\s*${LOCAL_INTERFACE}\s+\d+\s+(?:${CAPABILITIES}\s+)?${NEIGHBOR_INTERFACE}\s*$$ -> Record
+  ^Total\s+entries\s+displayed
+  ^\s*$$
   ^${NEIGHBOR_NAME}
-  ^\s+${LOCAL_INTERFACE}\s+\d+\s+${CAPABILITIES}\s+${NEIGHBOR_INTERFACE} -> Record
+  ^\s+${LOCAL_INTERFACE}\s+\d+\s+(?:${CAPABILITIES}\s+)?${NEIGHBOR_INTERFACE}\s*$$ -> Record
+  ^. -> Error
