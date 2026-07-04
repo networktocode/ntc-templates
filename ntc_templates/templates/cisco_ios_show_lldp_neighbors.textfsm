@@ -8,8 +8,15 @@ Start
   # Capture time-stamp if vty line has command time-stamping turned on
   ^Load\s+for\s+
   ^Time\s+source\s+is
+  ^Capability\s+codes:
+  ^\s+\(
+  ^\s*$$
+  ^. -> Error
 
 LLDP
   ^${NEIGHBOR_NAME}\s*${LOCAL_INTERFACE}\s+\d+\s+(?:${CAPABILITIES}\s+)?${NEIGHBOR_INTERFACE}\s*$$ -> Record
+  ^Total\s+entries\s+displayed
+  ^\s*$$
   ^${NEIGHBOR_NAME}
   ^\s+${LOCAL_INTERFACE}\s+\d+\s+(?:${CAPABILITIES}\s+)?${NEIGHBOR_INTERFACE}\s*$$ -> Record
+  ^. -> Error
