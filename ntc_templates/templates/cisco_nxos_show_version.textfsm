@@ -21,3 +21,41 @@ Start
   ^\s*Processor\s[Bb]oard\sID\s+${SERIAL}$$
   ^Kernel\s+uptime\s+is\s+${UPTIME}
   ^\s+Reason:\s${LAST_REBOOT_REASON} -> Record
+  #
+  # Uncaptured lines
+  ^Cisco\s+Nexus\s+Operating\s+System
+  ^TAC\s+support:
+  ^Documents:
+  ^Copyright
+  ^All\s+rights\s+reserved
+  ^The\s+copyrights
+  ^(owned\s+by\s+)?other\s+third\s+parties
+  ^licenses,\s+such
+  ^such\s+license
+  ^otherwise\s+stated
+  ^limited\s+to
+  ^(license\.\s+)?Certain\s+components
+  ^(the\s+)?(GNU|Lesser)\s+General
+  ^A\s+copy
+  ^Some\s+parts
+  ^License
+  ^http://
+  ^Software$$
+  ^\s+(Power\s+Sequencer|((QSFP|CXP)\s+)?Microcontroller)\s+Firmware:
+  ^\s+Module\s+(\d+:|not\s+detected)
+  ^\s+(loader|power-seq|((SFP\s+)?uC)):
+  ^\s+(kickstart|system)(:|\s+(image|compile))
+  ^\s+PE:
+  ^\s+Host\s+NXOS:
+  ^\s+(BIOS|NXOS)\s+compile
+  ^\s+NXOS\s+boot\s+mode
+  ^Hardware$$
+  ^\s+Intel
+  ^\s+bootflash:
+  ^Last\s+reset
+  ^\s+System\s+version
+  ^\s+Service:
+  ^plugin$$
+  ^\s+\S+\s+Plugin
+  ^Active\s+Package
+  ^. -> Error
