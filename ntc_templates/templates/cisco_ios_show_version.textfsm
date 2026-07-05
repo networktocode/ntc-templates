@@ -32,7 +32,7 @@ Start
   ^[Ss]ystem\s+image\s+file\s+is\s+"(.*?):${RUNNING_IMAGE}"
   ^(?:[Ll]ast\s+reload\s+reason:|System\s+returned\s+to\s+ROM\s+by)\s+${RELOAD_REASON}\s*$$
   ^[Pp]rocessor\s+board\s+ID\s+${SERIAL}
-  ^[Cc]isco\s+${HARDWARE}\s+\(.+\).+
+  ^([Cc]isco|Allen-Bradley)\s+${HARDWARE}\s+\(.+\).+
   ^[Cc]onfiguration\s+register\s+is\s+${CONFIG_REGISTER}
   ^Base\s+[Ee]thernet\s+MAC\s+[Aa]ddress\s+:\s+${MAC_ADDRESS}
   ^System\s+restarted\s+at\s+${RESTARTED}$$
@@ -58,13 +58,13 @@ Start
   ^compliance\s+with
   ^(\S+\s+)?to\s+comply
   ^A\s+summary
-  ^http://
+  ^\(?http://
   ^If\s+you
   ^export@cisco\.com
   ^\S+\s+CPU\s+at
   ^Last\s+reset
-  ^\d+(\s+\S+)?\s+\S+\s+Ethernet
-  ^\S+\s+bytes\s+of\s+(non-volatile|physical|Crash\s+Files|Flash|WebUI|eUSB)
+  ^\d+.+\s+interface
+  ^\S+\s+bytes\s+of.*(non-volatile|physical|Crash\s+Files|Flash|Bootflash|WebUI|webui|eUSB|crashinfo|SD\s+Flash|ATA|Dummy)
   ^licensed\s+under
   ^software(\s+code|\.)
   ^with\s+ABSOLUTELY
@@ -78,11 +78,17 @@ Start
   ^Current\s+Type
   # license level with dash, ex: network-advantage
   ^[a-z]+-[a-z]+\s+\S+\s+\S+
+  ^None\s+Subscription
   ^Smart\s+Licensing\s+Status
   ^Motherboard\s+(Assembly|Serial|Revision)\s+Number
   ^Model(\s+Revision)?\s+Number
   ^System\s+Serial\s+Number
-  ^(Next\s+reload\s+)?[Ll]icense\s+(Level|Type):
+  ^(Next\s+reload\s+(AIR)?|AIR)?\s*[Ll]icense\s+(Level|Type):
+  ^Top\s+Assembly\s+(Part|Revision)\s+Number
+  ^System\s+FPGA\s+version
+  ^CIP\s+Serial\s+Number
+  ^SKU\s+Brand\s+Name
+  ^DRAM\s+configuration
   ^\s+$$
   ^. -> Error
 
