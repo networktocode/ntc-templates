@@ -29,8 +29,8 @@ Start
   ^.*\s+uptime\s+is.*\s+${UPTIME_DAYS}\sday -> Continue
   ^.*\s+uptime\s+is.*\s+${UPTIME_HOURS}\shour -> Continue
   ^.*\s+uptime\s+is.*\s+${UPTIME_MINUTES}\sminute
-  ^[sS]ystem\s+image\s+file\s+is\s+"(.*?):${RUNNING_IMAGE}"
-  ^(?:[lL]ast\s+reload\s+reason:|System\s+returned\s+to\s+ROM\s+by)\s+${RELOAD_REASON}\s*$$
+  ^[Ss]ystem\s+image\s+file\s+is\s+"(.*?):${RUNNING_IMAGE}"
+  ^(?:[Ll]ast\s+reload\s+reason:|System\s+returned\s+to\s+ROM\s+by)\s+${RELOAD_REASON}\s*$$
   ^[Pp]rocessor\s+board\s+ID\s+${SERIAL}
   ^[Cc]isco\s+${HARDWARE}\s+\(.+\).+
   ^[Cc]onfiguration\s+register\s+is\s+${CONFIG_REGISTER}
