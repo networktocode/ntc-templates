@@ -43,9 +43,9 @@ Start
 
 Stack
   ^[Ss]ystem\s+[Ss]erial\s+[Nn]umber\s+:\s+${SERIAL}
-  ^[Mm]odel\s+[Nn]umber\s+:\s+${HARDWARE}\s*
+  ^[Mm]odel\s+[Nn]umber\s+:\s+${HARDWARE}
   ^[Cc]onfiguration\s+register\s+is\s+${CONFIG_REGISTER}
-  ^Base [Ee]thernet MAC [Aa]ddress\s+:\s+${MAC_ADDRESS}
+  ^Base\s+[Ee]thernet\s+MAC\s+[Aa]ddress\s+:\s+${MAC_ADDRESS}
   ^---+
   ^\*?\s+\d\s+\d+\s+\S+
   ^Switch\s+(\d+|uptime)
