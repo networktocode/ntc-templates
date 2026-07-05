@@ -47,3 +47,9 @@ Stack
   ^[Mm]odel\s+[Nn]umber\s+:\s+${HARDWARE}\s*
   ^[Cc]onfiguration\s+register\s+is\s+${CONFIG_REGISTER}
   ^Base [Ee]thernet MAC [Aa]ddress\s+:\s+${MAC_ADDRESS}
+  ^---+
+  ^\*?\s+\d\s+\d+\s+\S+
+  ^Switch\s+(\d+|uptime)
+  ^Motherboard\s+(Assembly|Serial|Revision)\s+Number
+  ^Model\s+Revision\s+Number
+  ^. -> Error
