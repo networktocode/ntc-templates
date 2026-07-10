@@ -1,36 +1,84 @@
 Value PORT ([0-9\/]+)
 Value PID (\S+)
 Value SN (\S+)
-Value DESCR (.+)
+Value DESCR (\S.*\S)
 Value VID (\S+)
 
 Start
   ^\s*System\s+\S+?$$ -> Chassis
+  ^. -> Error
 
 Chassis
-  ^\s+Model
-  ^\s+-
+  ^\s+Model\s*$$ -> ChassisSplit
+  ^\s+---+
   ^\s+HW
   ^\s+${VID}\s+${SN}\s+\d+-\d+-\d+ -> Record
-  ^\s+${PID}?\s+${DESCR}$$
+  ^\s+${PID}?\s+${DESCR}\s*$$
+  ^Subcomponent serial numbers\s*$$ -> Subcomponent
+  ^\s*System has \d+ card slot -> Modules
   ^\s*System.+(power supply|power-supply) -> Power_Supply
+  ^. -> Error
 
+ChassisSplit
+  ^\s+---+
+  ^\s+Description\s*$$
+  ^\s+HW -> Chassis
+  ^\s+${PID}\s*$$
+  ^\s+${DESCR}$$
+  ^. -> Error
+
+Subcomponent
+  ^\s+Component\s+Serial
+  ^\s+---+
+  ^\s+\S+\s+\S+\s*$$
+  ^\s*System.+(power supply|power-supply) -> Power_Supply
+  ^. -> Error
+
+Modules
+  ^\s+Module\s+Model\s+HW
+  ^\s+---+
+  ^\s+${DESCR}\s+${PID}\s+${VID}\s+${SN}\s+\d+-\d+-\d+ -> Record
+  ^\s*System.+(power supply|power-supply) -> Power_Supply
+  ^. -> Error
 
 Power_Supply
   ^\s+Slot
-  ^\s+-
+  ^\s+---+
   ^\s+${PORT}\s+${PID}\s+${SN} -> Record
   ^\s*System.+(fan) -> Fan
+  ^. -> Error
 
 Fan
   ^\s+Module
-  ^\s+-
+  ^\s+---+
   ^\s+${PORT}?\s+\d+?\s+${PID}?\s+${SN} -> Record
   ^\s*System.+ports -> Ports
+  ^. -> Error
 
 Ports
   ^\s+${DESCR}\s+${PORT} -> Record
   ^\s*System.+transceiver -> Transceiver
+  ^\s+Type\s+Count$$
+  ^\s+---+
+  ^. -> Error
 
 Transceiver
   ^\s+${PORT}\s+${DESCR}\s+${PID}\s+${SN}\s+${VID} -> Record
+  ^\s+\d[\d\/]*\s+Not Present\s*$$
+  ^\s+${PORT}\s+Arista Networks\s+\S+\s*$$
+  ^\s+${PORT}\s+${DESCR}\s+${PID}\s+${SN}\s*$$ -> Record
+  ^\s+Port\s+Manufacturer\s+Model\s+Serial\s+Number\s+Rev\s*$$
+  ^\s+---+
+  ^\s*System has \d+ \S+ transceiver slots\s*$$
+  ^\s*System.+storage -> Storage
+  ^. -> Error
+
+Storage
+  ^Supervisor \d+:\s*$$
+  ^\s+Mount\s+Type\s+Model\s+Serial
+  ^\s+Size\s+\(GB\)
+  ^\s+---+
+  ^\s+/\S+
+  ^\s+\d+\s*$$
+  ^\s*System has precision clock\s*$$
+  ^. -> Error
