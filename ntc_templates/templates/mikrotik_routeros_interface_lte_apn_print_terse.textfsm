@@ -1,0 +1,15 @@
+Value INDEX (\d+)
+Value FLAGS ([X\*]+)
+Value NAME (\S+)
+Value APN (\S+)
+Value IP_TYPE (\S+)
+Value USE_PEER_DNS (yes|no)
+Value USE_NETWORK_APN (yes|no)
+Value ADD_DEFAULT_ROUTE (yes|no)
+Value DEFAULT_ROUTE_DISTANCE (\d+)
+Value AUTHENTICATION (\S+)
+
+Start
+ ^${INDEX}\s+(${FLAGS}\s+)?name=${NAME}\s+apn=${APN}\s+use-peer-dns=${USE_PEER_DNS}\s+use-network-apn=${USE_NETWORK_APN}\s+add-default-route=${ADD_DEFAULT_ROUTE}\s+default-route-distance=${DEFAULT_ROUTE_DISTANCE}\s+ip-type=${IP_TYPE}\s+authentication=${AUTHENTICATION}\s*$$
+  ^\s*$$
+  ^. -> Error
