@@ -30,6 +30,7 @@ Example: Imagine the extra programming logic needed to consume structured data w
 | `CHASSIS_ID`                     | often represents CDP or LLDP neighbor chassis ID |
 | `DESCRIPTION`                    | often used for port or interface descriptions |
 | `GATEWAY`                        | gateway address for a subnet |
+| `INNER_VLAN`                     | inner 802.1Q VLAN in relation to dot1Q / Q-in-Q tunneling |
 | `INTERFACE`                      | full word instead of IFACE, INTF, INTFC, etc |
 | `IP_ADDRESS`                     | for a single IP address, often IPv4 |
 | `IP_ADDRESSES`                   | for lists of IPv4 addresses, but in the case of some templates there may be a mix of IP protocol versions |
@@ -38,6 +39,8 @@ Example: Imagine the extra programming logic needed to consume structured data w
 | `IPV6_ADDRESS`                   | for a single IPv6 address |
 | `IPV6_ADDRESSES`                 | for lists of IPv6 addresses |
 | `IPV6_GATEWAY`                   | for IPv6 gateway address |
+| `IPV6_PREFIX_LENGTH`             | for IPv6 prefix length |
+| `IPV6_PREFIX_LENGTHS`            | for lists of IPv6 prefix lengths |
 | `LOCAL_INTERFACE`                | often represents local interface or port for CDP or LLDP |
 | `LOCAL_IP_ADDRESS`               | local IP address in the case of First Hop Redundancy Protocols (FHRP) |
 | `MAC_ADDRESS`                    | instead of MAC or MACADDR |
@@ -50,8 +53,10 @@ Example: Imagine the extra programming logic needed to consume structured data w
 | `NEIGHBOR_INTERFACE`             | often represents neighbor or remote interface or port for CDP or LLDP |
 | `NEIGHBOR_INTERFACE_DESCRIPTION` | represents CDP or LLDP neighbor (remote host) interface or port descriptions (Note: see NEIGHBOR_INTERFACE) |
 | `NEIGHBOR_NAME`                  | often represents neighbor name for CDP or LLDP |
-| `NETMASK`                        | for IPv4 dotted quad masks |
-| `NETWORK`                        | for network numbers or subnet address (without the mask or prefix/slash notation); in place of ROUTE |
+| `NETMASK`                        | for IPv4 dotted quad mask (netmask) |
+| `NETMASKS`                       | for lists of IPv4 dotted quad masks (netmasks) |
+| `NETWORK`                        | for network number or subnet address (without the mask or prefix/slash notation); in place of ROUTE |
+| `OUTER_VLAN`                     | outer 802.1Q VLAN in relation to dot1Q / Q-in-Q tunneling |
 | `PID`                            | represents Part IDs (PIDs), Stock Keeping Units (SKUs), and in some cases Models or Model Numbers
 | `PLATFORM`                       | often represents CDP or LLDP neighbor's platform or model name/number |
 | `PREFIX_LENGTH`                  | instead of PREFIX or CIDR for the numbers of a slash notation or CIDR mask |
