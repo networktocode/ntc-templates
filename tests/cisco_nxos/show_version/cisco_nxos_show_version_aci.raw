@@ -1,0 +1,42 @@
+Cisco Nexus Operating System (NX-OS) Software
+TAC support: http://www.cisco.com/tac
+Documents: http://www.cisco.com/en/US/products/ps9372/tsd_products_support_series_home.html
+Copyright (c) 2002-2014, Cisco Systems, Inc. All rights reserved.
+The copyrights to certain works contained in this software are
+owned by other third parties and used and distributed under
+license. Certain components of this software are licensed under
+the GNU General Public License (GPL) version 2.0 or the GNU
+Lesser General Public License (LGPL) Version 2.1. A copy of each
+such license is available at
+http://www.opensource.org/licenses/gpl-2.0.php and
+http://www.opensource.org/licenses/lgpl-2.1.php
+
+Software
+  BIOS:      version 05.53
+  kickstart: version 16.0(9e) [build 16.0(9e)]
+  system:    version 16.0(9e) [build 16.0(9e)]
+  PE:        version 6.0(9e)
+  BIOS compile time:       01/22/2025
+  kickstart image file is: /bootflash/aci-n9000-dk9.16.0.9e.bin
+  kickstart compile time:  08/05/2025 12:57:46 [08/05/2025 12:57:46]
+  system image file is:    /bootflash/auto-s
+  system compile time:     08/05/2025 12:57:46 [08/05/2025 12:57:46]
+
+
+Hardware
+  cisco N9K-C93180LC-EX ("supervisor")
+   Intel(R) Xeon(R) CPU D-1526 @ 1.80GHz with 24419328 kB of memory.
+  Processor Board ID XYZ12345678
+
+  Device name: leaf1
+  bootflash:    62522368 kB
+
+Kernel uptime is 79 day(s), 19 hour(s), 33 minute(s), 28 second(s)
+
+Last reset at 484000 usecs after Sat Apr 11 20:02:15 2026 CDT
+  Reason: reset-by-installer
+  System version: 16.0(7e)
+  Service: Upgrade
+
+plugin
+  Core Plugin, Ethernet Plugin
