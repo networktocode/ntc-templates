@@ -40,7 +40,7 @@ Start
   ^\s+ipv6\s+(nd|verify)\s+\S
   ^\s+ipv(4|6)\s+flowspec\s+disable
   ^\s+ipv6\s+verify\s+unicast\s+source\s+reachable-via\s+${UNICAST_SOURCE_V6}\s+allow-self-ping
-  ^\s+ipv6\s+address\s+${IPV6_ADDRESSES}(?:\/${IPV6_PREFIX_LENGTHS})?((?:\s+\S)?)  
+  ^\s+ipv6\s+address\s+${IPV6_ADDRESSES}(?:\/${IPV6_PREFIX_LENGTHS})?((?:\s+\S)?)
   ^\s+mac-address\s+${MAC_ADDRESS}
   ^\s+mtu\s+${MTU}
   ^\s+ipv4\s+mtu\s+${MTU_IPV4}
