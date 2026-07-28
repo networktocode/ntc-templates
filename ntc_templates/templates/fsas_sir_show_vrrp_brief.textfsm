@@ -1,0 +1,15 @@
+Value Filldown INTERFACE (\S+\s+\d+)
+Value Required VRID (\d+)
+Value STATUS (\S+)
+
+Start
+  ^\[${INTERFACE}\]\s*$$ -> VRRP
+  ^\s*$$
+  ^. -> Error
+
+VRRP
+  ^\s+VRID\s+Status\s*$$
+  ^\s+${VRID}\s+${STATUS}\s*$$ -> Record
+  ^\[${INTERFACE}\]\s*$$ -> VRRP
+  ^\s*$$
+  ^. -> Error

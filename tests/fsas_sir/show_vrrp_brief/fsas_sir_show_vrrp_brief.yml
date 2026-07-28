@@ -1,0 +1,14 @@
+---
+parsed_sample:
+  - interface: "lan 1"
+    status: "Master"
+    vrid: "10"
+  - interface: "lan 1"
+    status: "Backup"
+    vrid: "20"
+  - interface: "lan 2"
+    status: "Backup"
+    vrid: "30"
+  - interface: "lan 3"
+    status: "Initialize:Disabled"
+    vrid: "40"
