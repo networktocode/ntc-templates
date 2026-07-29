@@ -1,0 +1,78 @@
+Value Filldown SOFTWARE_VERSION (\S+)
+Value Filldown RELEASE (\S+)
+Value Filldown MODEL (.+?)
+Value Filldown UPTIME (.+)
+Value Filldown LAST_REBOOT_REASON (.+)
+Value Filldown BOOT_IMAGE (\S+)
+Value Filldown BOOT_IMAGE_VERSION (\S+)
+Value Filldown BOOT_RELEASE (\S+)
+Value Filldown BOOT_COMPILE_DATE (.+)
+Value Filldown SYSTEM_IMAGE (\S+)
+Value Filldown SYSTEM_IMAGE_VERSION (\S+)
+Value Filldown SYSTEM_RELEASE (\S+)
+Value Filldown SYSTEM_COMPILE_DATE (.+)
+Value SLOT_TYPE (\S+)
+Value CHASSIS (\d+)
+Value SLOT (\d+)
+Value STATUS (Without Board)
+Value SLOT_UPTIME (.+)
+Value BOARD_TYPE (.+)
+Value DRAM (\d+\w*)
+Value FLASH (\d+\w*)
+Value NAND_FLASH (\d+\w*)
+Value NOR_FLASH (\d+\w*)
+Value NVRAM (\d+\w*)
+Value BOOTROM_VERSION (\S+)
+Value PATCH_VERSION (\S+)
+Value REBOOT_CAUSE (\S+)
+
+PreStart
+  ^HPE?\s+(?:HP\s+)?Comware\s+(?:Platform\s+)?Software,\s+Version\s+${SOFTWARE_VERSION},\s+Release\s+${RELEASE} -> Start
+  ^HPE?\s+(?:HP\s+)?Comware\s+Platform\s+Software -> Start
+
+Start
+  ^Copyright
+  ^.*Comware Software,\s+Version\s+${SOFTWARE_VERSION},\s+Release\s+${RELEASE}
+  ^${MODEL}\s+uptime is\s+${UPTIME}
+  ^Last reboot reason\s*:\s*${LAST_REBOOT_REASON}
+  ^Boot image:\s+${BOOT_IMAGE}
+  ^Boot image version:\s+${BOOT_IMAGE_VERSION},\s+Release\s+${BOOT_RELEASE}
+  ^\s+Compiled\s+${BOOT_COMPILE_DATE}
+  ^System image:\s+${SYSTEM_IMAGE}
+  ^System image version:\s+${SYSTEM_IMAGE_VERSION},\s+Release\s+${SYSTEM_RELEASE}
+  ^\s+Compiled\s+${SYSTEM_COMPILE_DATE}
+  # Standalone switch rules (e.g. HP 5800)
+  ^\s*${DRAM}\s+bytes\s+SDRAM
+  ^\s*${NOR_FLASH}\s+bytes\s+Nor\s+Flash\s+Memory
+  ^\s*${NAND_FLASH}\s+bytes\s+Nand\s+Flash\s+Memory
+  ^BootRom Version is ${BOOTROM_VERSION}
+  ^${BOARD_TYPE}\s+with\s+\d+\s+Processors?
+  # Chassis / Slot header transitions to SlotSection
+  ^\s*${SLOT_TYPE}\s+Chassis\s+${CHASSIS}\s+Slot\s+${SLOT}: -> SlotSection
+  ^\s*Chassis\s+${CHASSIS}\s+Slot\s+${SLOT}: -> SlotSection
+  ^\s*${SLOT_TYPE}\s+Slot\s+${SLOT}: -> SlotSection
+  ^\s*Slot\s+${SLOT}: -> SlotSection
+  ^\s*(?:${SLOT_TYPE}\s+)?(?:Chassis\s+${CHASSIS}\s+)?Slot\s+${SLOT}\s+${STATUS} -> SlotSection
+
+SlotSection
+  # Flush completed slot record prior to parsing the next slot line
+  ^\s*(?:\S+\s+)?(?:Chassis\s+\d+\s+)?Slot\s+\d+ -> Continue.Record
+  # Slot header capture rules
+  ^\s*${SLOT_TYPE}\s+Chassis\s+${CHASSIS}\s+Slot\s+${SLOT}:
+  ^\s*Chassis\s+${CHASSIS}\s+Slot\s+${SLOT}:
+  ^\s*${SLOT_TYPE}\s+Slot\s+${SLOT}:
+  ^\s*Slot\s+${SLOT}:
+  ^\s*(?:${SLOT_TYPE}\s+)?(?:Chassis\s+${CHASSIS}\s+)?Slot\s+${SLOT}\s+${STATUS}
+  # Slot attribute rules
+  ^Uptime is ${SLOT_UPTIME}
+  ^BOARD TYPE:\s+${BOARD_TYPE}
+  ^DRAM:\s+${DRAM}
+  ^\s*${DRAM}\s+bytes\s+SDRAM
+  ^FLASH:\s+${FLASH}
+  ^\s*${NOR_FLASH}\s+bytes\s+Nor\s+Flash\s+Memory
+  ^\s*${NAND_FLASH}\s+bytes\s+Nand\s+Flash\s+Memory
+  ^NVRAM:\s+${NVRAM}
+  ^(?:Bootrom|Bootware) Version:\s+${BOOTROM_VERSION}
+  ^BootRom Version is ${BOOTROM_VERSION}
+  ^Patch Version\s*:\s*${PATCH_VERSION}
+  ^Reboot Cause\s*:\s*${REBOOT_CAUSE}
