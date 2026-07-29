@@ -8,11 +8,16 @@ Value HW_TYPE (\w+)
 Value MAC_ADDRESS (\S+)
 Value MTU (\d+)
 Value IF_TYPE (\S+)
-Value IP_ADDRESS (\S+)
+Value IP_ADDRESS (\d+\.\d+\.\d+\.\d+)
+Value NETMASK (\d+)
+Value VRF (\S+)
+Value GW_IP (\S+)
+Value GW_IP_MAC (\S+)
+Value GW_SOURCE_MAC (\S+)
 Value List SECONDARY_IP_ADDRESS (\S+)
 Value DUPLEX (\w+)
 Value QOS_TRUST (\S+)
-Value SPEED (\S+\s\S+) 
+Value SPEED (\S+\s\S+)
 Value AUTO_NEG (\S+)
 Value FLOW_CONTROL (\S+)
 Value ERROR_CONTROL (\S+)
@@ -40,7 +45,9 @@ Value TX_DROPPED (\d+)
 Value TX_FILTERED (\d+)
 Value TX_CRC_FCS (\S+)
 Value TX_COLLISION (\d+)
-Value VRF (\S+)
+Value LEADER_FOLLOWER_MODE (\S+)
+Value MDI (\S+)
+Value SUBINTERFACE_COUNT (\d+)
 
 Start
   ^\s*(Interface|Aggregate)\s+\S+\s+is -> Continue.Record
@@ -51,8 +58,9 @@ Start
   ^\s*State\s*information\s*:\s*${LINK_STATE_INFO}
   ^\s*Hardware\s*:\s*${HW_TYPE},?\s*MAC\s*Address:\s+${MAC_ADDRESS}
   ^\s*MAC\s+Address\s*:\s*${MAC_ADDRESS}
-  ^\s*IPv4\s+address\s+${IP_ADDRESS}$$
+  ^\s*IPv4\s+address\s+${IP_ADDRESS}(/${NETMASK})?$$
   ^\s*IPv4\s+address\s+${SECONDARY_IP_ADDRESS}\s+secondary
+  ^\s*Subinterface count\s*:\s+${SUBINTERFACE_COUNT} 
   ^\s*MTU\s*${MTU}
   ^\s*Type\s*${IF_TYPE}
   ^\s*${DUPLEX}-duplex
@@ -89,14 +97,16 @@ Start
   ^\s*rate-limit\s+broadcast
   ^\s*rate-limit\s+multicast
   ^\s*L3\s+Counters
-  ^\s*MDI mode
-  ^\s*Leader-follower\s+mode
+  ^\s*MDI mode\s*:\s*${MDI}
+  ^\s*Leader-follower\s+mode:\s+${LEADER_FOLLOWER_MODE}
   ^\s*Rate collection interval
   ^\s*Energy-Efficient
   ^\s*Rx -> Rx
   ^\s*Rate\s+RX\s+TX\s+Total -> Rate
   ^\s*Statistic\s+RX\s+TX\s+Total -> Statistic
-  ^\s*active-gateway\s
+  ^\s*active-gateway L3 source mac ${GW_SOURCE_MAC}
+  ^\s*active-gateway ip mac ${GW_IP_MAC}
+  ^\s*active-gateway ip ${GW_IP}
   ^\s*VRF\s+name\s+is\s+${VRF}
   ^. -> Error
 
