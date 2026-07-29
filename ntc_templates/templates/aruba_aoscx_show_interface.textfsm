@@ -58,7 +58,7 @@ Start
   ^\s*State\s*information\s*:\s*${LINK_STATE_INFO}
   ^\s*Hardware\s*:\s*${HW_TYPE},?\s*MAC\s*Address:\s+${MAC_ADDRESS}
   ^\s*MAC\s+Address\s*:\s*${MAC_ADDRESS}
-  ^\s*IPv4\s+address\s+${IP_ADDRESS}(/${NETMASK})?$$
+  ^\s*IPv4\s+address\s+${IP_ADDRESS}(/${NETMASK})?\s*$$
   ^\s*IPv4\s+address\s+${SECONDARY_IP_ADDRESS}\s+secondary
   ^\s*Subinterface count\s*:\s+${SUBINTERFACE_COUNT} 
   ^\s*MTU\s*${MTU}
