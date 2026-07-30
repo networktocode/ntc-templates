@@ -8,7 +8,7 @@ Value HARDWARE_VERSION (\S+)
 Start
   ^\s*$$
   ^Type\s+Location
-  ^\s*Number
-  ^\s*[- \s]+\s*$$
+  ^\s+Number
+  ^---+
   ^\s*${TYPE}\s+${LOCATION}\s+${PRODUCT_NUMBER}\s+${DESCRIPTION}\s+${SERIAL}\s+${HARDWARE_VERSION}\s*$$ -> Record
   ^. -> Error "LINE NOT FOUND"
