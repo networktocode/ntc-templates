@@ -1,4 +1,5 @@
-Value TYPE (\S+)
+Value TYPE (\w+\s?\w+)
+#Value LOCATION (\S*\d+(/\d+)*)
 Value LOCATION (\S+)
 Value PRODUCT_NUMBER (\S+)
 Value DESCRIPTION (.+?)
@@ -10,5 +11,5 @@ Start
   ^Type\s+Location
   ^\s+Number
   ^---+
-  ^\s*${TYPE}\s+${LOCATION}\s+${PRODUCT_NUMBER}\s+${DESCRIPTION}\s+${SERIAL}\s+${HARDWARE_VERSION}\s*$$ -> Record
+  ^${TYPE}\s+${LOCATION}\s+${PRODUCT_NUMBER}\s+${DESCRIPTION}\s+${SERIAL}\s+${HARDWARE_VERSION}\s*$$ -> Record
   ^. -> Error "LINE NOT FOUND"
