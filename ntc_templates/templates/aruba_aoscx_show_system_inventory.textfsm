@@ -1,14 +1,14 @@
-Value TYPE (.+?)
+Value TYPE (\S+)
 Value LOCATION (\S+)
-Value PRODUCT_NUMBER (\S+|--)
+Value PRODUCT_NUMBER (\S+)
 Value DESCRIPTION (.+?)
-Value SERIAL (\S+|--)
-Value HARDWARE_VERSION (\S+|--)
+Value SERIAL (\S+)
+Value HARDWARE_VERSION (\S+)
 
 Start
-  ^\s*$$                         # blank line
-  ^[-\s]+$$                       # dashed separator row
-  ^Type\s+Location\s+Product\s+Description\s+Serial\s+Hardware
-  ^\s*Number\s+Number\s+Version
-  ^\s*${TYPE}\s{2,}${LOCATION}\s{2,}${PRODUCT_NUMBER}\s+${DESCRIPTION}\s+${SERIAL}\s{1,}${HARDWARE_VERSION}\s*$$ -> Record
+  ^\s*$$
+  ^Type\s+Location -> Next
+  ^\s*Number -> Next
+  ^\s*[- \s]+\s*$$ -> Next
+  ^\s*${TYPE}\s+${LOCATION}\s+${PRODUCT_NUMBER}\s+${DESCRIPTION}\s+${SERIAL}\s+${HARDWARE_VERSION}\s*$$ -> Record
   ^. -> Error "LINE NOT FOUND"
