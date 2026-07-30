@@ -1,9 +1,14 @@
 Value PORT (\S+)
 Value TYPE (\S+)
-Value LINK_STATUS (up|down)
-Value ADMIN_STATUS (up|down)
+Value LINK_STATUS (\S+)
+Value ADMIN_STATUS (\S+)
 Value SPEED_STATUS (\S+|--)
 Value DESCRIPTION (.*)
 
 Start
+  ^\s*$$
+  ^\s*Link\s+Admin -> Next
+  ^\s*Port\s+Type -> Next
+  ^\s*[- ]+$$ -> Next
   ^${PORT}\s+${TYPE}\s+${LINK_STATUS}\s+${ADMIN_STATUS}\s+${SPEED_STATUS}\s+\S+\s+\S+\s+\S+\s+\S+\s+.*?\s+${DESCRIPTION}\s*$$ -> Record
+  ^. -> Error "LINE NOT FOUND"
