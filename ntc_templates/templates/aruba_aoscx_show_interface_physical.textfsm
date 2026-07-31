@@ -10,6 +10,5 @@ Start
   ^\s+Link\s+Admin
   ^Port\s+Type
   ^---+
-  ^${PORT}\s+${TYPE}\s+${LINK_STATUS}\s+${ADMIN_STATUS}\s+${SPEED_STATUS}\s+(\S+\s+){8}${DESCRIPTION}\s*$$ -> Record
-  ^${PORT}\s+${TYPE}\s+${LINK_STATUS}\s+${ADMIN_STATUS}\s+${SPEED_STATUS}\s+(\S+\s+){5}${DESCRIPTION}\s*$$ -> Record
+  ^${PORT}\s+${TYPE}\s+${LINK_STATUS}\s+${ADMIN_STATUS}\s+${SPEED_STATUS}\s+(\S+\s+){5,8}${DESCRIPTION}\s*$$ -> Record
   ^. -> Error "LINE NOT FOUND"
