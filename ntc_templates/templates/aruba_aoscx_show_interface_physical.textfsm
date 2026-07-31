@@ -7,7 +7,7 @@ Value DESCRIPTION (.*)
 
 Start
   ^\s*$$
-  ^\s*Link\s+Admin
+  ^\s+Link\s+Admin
   ^\s*Port\s+Type
   ^\s*[- ]+$$
   ^${PORT}\s+${TYPE}\s+${LINK_STATUS}\s+${ADMIN_STATUS}\s+${SPEED_STATUS}\s+\S+\s+\S+\s+\S+\s+\S+\s+.*?\s+${DESCRIPTION}\s*$$ -> Record
