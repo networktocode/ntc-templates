@@ -12,7 +12,7 @@ Value NEIGHBOR_INTERFACE (\S+)
 Start
   ^Port\s*:\s*${LOCAL_INTERFACE}
   ^Neighbor\s*(Chassis|System)-Name\s*:\s*${NEIGHBOR_NAME}
-  ^Neighbor\s*(Chassis|System)-Description\s*:\s*${NEIGHBOR_DESCRIPTION}
+  ^Neighbor\s*(Chassis|System)-Description\s*:\s*${NEIGHBOR_DESCRIPTION} -> NeighborDescription
   ^Neighbor\s*Chassis-ID\s*:\s*${CHASSIS_ID}
   ^Neighbor\s*Management-Address\s*:\s*${MGMT_ADDRESS}
   ^Chassis\s*Capabilities\s*Available\s*:\s*${CAPABILITIES_SUPPORTED}
@@ -34,3 +34,10 @@ Start
   ^=+
   ^. -> Error
 
+# multiline neighbor description
+NeighborDescription
+  ^Neighbor\s*Chassis-ID\s*:\s*${CHASSIS_ID} -> Start
+  # toss away after the first description line captured in Start state
+  # (avoid breaking change resulting from changing data type to List)
+  ^.+$$
+  ^. -> Error
