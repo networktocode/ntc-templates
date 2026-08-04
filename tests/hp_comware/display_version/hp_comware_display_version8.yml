@@ -17,11 +17,11 @@ parsed_sample:
     boot_image_version: ""
     boot_release: ""
     bootrom_version:
-      - "500"
-      - "500"
-      - "511"
+      - "303"
+      - "303"
+      - "2.02"
     card_type:
-      - "HP 7506 MPU(M)"
+      - "HP 7506 MPU(S)"
       - "HP 7506 MPU(S)"
       - "HP 7506 LPU"
     chassis:
@@ -63,9 +63,9 @@ parsed_sample:
       - "0K"
     oaa_front_board: []
     patch_version:
-      - "None"
-      - "None"
-      - "None"
+      - "P001"
+      - "P001"
+      - "P001"
     pcb:
       - "1"
       - "2"
@@ -82,11 +82,11 @@ parsed_sample:
     power_cpld: []
     power_cpld_version: []
     reboot_cause: []
-    release: "6708-US"
+    release: "6708P13"
     release_version:
-      - "HP 7506-6708-US"
-      - "HP 7506-6708-US"
-      - "HP 7506-6708-US"
+      - "HP 7506-6708P13"
+      - "HP 7506-6708P13"
+      - "HP 7506-6708P13"
     slot:
       - "0"
       - "1"
@@ -94,13 +94,13 @@ parsed_sample:
     slot_model: []
     slot_name: []
     slot_type:
-      - "MPU(M)"
+      - "MPU(S)"
       - "MPU(S)"
       - "LPU"
     slot_uptime:
-      - "593 weeks,5 days,21 hours,24 minutes"
-      - "593 weeks,5 days,21 hours,41 minutes"
-      - "593 weeks,5 days,22 hours,37 minutes"
+      - "238 weeks,6 days,23 hours,40 minutes"
+      - "238 weeks,6 days,23 hours,49 minutes"
+      - "239 weeks,0 days,0 hours,6 minutes"
     status: []
     subslot: []
     subslot_version: []
@@ -108,7 +108,95 @@ parsed_sample:
     system_image: ""
     system_image_version: ""
     system_release: ""
-    uptime: "593 weeks, 5 days, 21 hours, 24 minutes"
+    uptime: "238 weeks, 6 days, 23 hours, 56 minutes"
+    version: "5.20.105"
+  - board_processor_count:
+      - "1"
+      - "1"
+    board_processor_model:
+      - "BCM1122"
+      - "BCM1122"
+    board_type:
+      - "LSQ1GV48SC"
+      - "LSQ1GV48SC"
+    boot_compile_date: ""
+    boot_image: ""
+    boot_image_version: ""
+    boot_release: ""
+    bootrom_version:
+      - "3.06"
+      - "3.06"
+    card_type:
+      - "HP 7506 LPU"
+      - "HP 7506 LPU"
+    chassis:
+      - "1"
+      - "1"
+      - "1"
+    cpld:
+      - "1"
+      - "1"
+    cpld_version:
+      - "004"
+      - "004"
+    cplda: []
+    cpldb: []
+    dram:
+      - "512M"
+      - "512M"
+    flash:
+      - "0M"
+      - "0M"
+    fpga: []
+    fpga_version: []
+    hw_version: []
+    last_reboot_reason: ""
+    model: "HP 7506"
+    nand_flash: []
+    nor_flash: []
+    nvram:
+      - "0K"
+      - "0K"
+    oaa_front_board: []
+    patch_version:
+      - "P001"
+      - "P001"
+    pcb:
+      - "1"
+      - "1"
+    pcb_version:
+      - "D"
+      - "D"
+    pow_chip: []
+    power_cpld: []
+    power_cpld_version: []
+    reboot_cause: []
+    release: "6708P13"
+    release_version:
+      - "HP 7506-6708P13"
+      - "HP 7506-6708P13"
+    slot:
+      - "3"
+      - "4"
+      - "5"
+    slot_model: []
+    slot_name: []
+    slot_type:
+      - "None"
+      - "LPU"
+      - "LPU"
+    slot_uptime:
+      - "239 weeks,0 days,0 hours,9 minutes"
+      - "239 weeks,0 days,0 hours,13 minutes"
+    status:
+      - "Without Board"
+    subslot: []
+    subslot_version: []
+    system_compile_date: ""
+    system_image: ""
+    system_image_version: ""
+    system_release: ""
+    uptime: "238 weeks, 6 days, 23 hours, 56 minutes"
     version: "5.20.105"
   - board_processor_count: []
     board_processor_model: []
@@ -143,10 +231,10 @@ parsed_sample:
     power_cpld: []
     power_cpld_version: []
     reboot_cause: []
-    release: "6708-US"
+    release: "6708P13"
     release_version: []
     slot:
-      - "3"
+      - "6"
     slot_model: []
     slot_name: []
     slot_type:
@@ -160,7 +248,7 @@ parsed_sample:
     system_image: ""
     system_image_version: ""
     system_release: ""
-    uptime: "593 weeks, 5 days, 21 hours, 24 minutes"
+    uptime: "238 weeks, 6 days, 23 hours, 56 minutes"
     version: "5.20.105"
   - board_processor_count:
       - "1"
@@ -174,50 +262,50 @@ parsed_sample:
     board_processor_model:
       - "BCM1122"
       - "BCM1122"
-      - "BCM1122"
-      - "BCM1122"
-      - "BCM1122"
       - "BCM1125H"
       - "BCM1125H"
       - "XLS408"
+      - "XLS408"
+      - "BCM1122"
+      - "BCM1122"
     board_type:
-      - "LSQ1GV48SC"
-      - "LSQ1GV48SC"
-      - "LSQ1GV48SC"
       - "SRP2XBSLAVE"
       - "SRP2XBSLAVE"
       - "LSQ1SRP2XB"
       - "LSQ1SRP2XB"
       - "LSQ1TGS8SC"
+      - "LSU3WCMD"
+      - "LSQ1GV48SC"
+      - "LSQ1GV48SC"
     boot_compile_date: ""
     boot_image: ""
     boot_image_version: ""
     boot_release: ""
     bootrom_version:
-      - "503"
-      - "503"
-      - "306"
-      - "306"
-      - "306"
-      - "500"
-      - "500"
-      - "511"
+      - "3.06"
+      - "3.06"
+      - "303"
+      - "303"
+      - "2.02"
+      - "5.11"
+      - "3.06"
+      - "3.06"
     card_type:
       - "HP 7506 LPU"
       - "HP 7506 LPU"
-      - "HP 7506 LPU"
-      - "HP 7506 LPU"
-      - "HP 7506 LPU"
+      - "HP 7506 MPU(M)"
       - "HP 7506 MPU(S)"
-      - "HP 7506 MPU(S)"
+      - "HP 7506 LPU"
+      - "HP 7506 LPU"
+      - "HP 7506 LPU"
       - "HP 7506 LPU"
     chassis:
       - "1"
       - "1"
       - "1"
-      - "1"
-      - "1"
-      - "1"
+      - "2"
+      - "2"
+      - "2"
       - "2"
       - "2"
       - "2"
@@ -225,17 +313,14 @@ parsed_sample:
       - "1"
       - "1"
       - "1"
-      - "1"
-      - "1"
-      - "1"
       - "2"
       - "1"
       - "2"
+      - "1"
+      - "1"
+      - "1"
       - "1"
     cpld_version:
-      - "004"
-      - "004"
-      - "004"
       - "NA"
       - "NA"
       - "006"
@@ -243,6 +328,9 @@ parsed_sample:
       - "006"
       - "006"
       - "001"
+      - "003"
+      - "004"
+      - "004"
     cplda: []
     cpldb: []
     dram:
@@ -250,18 +338,18 @@ parsed_sample:
       - "512M"
       - "512M"
       - "512M"
-      - "512M"
-      - "512M"
-      - "512M"
       - "1024M"
+      - "1024M"
+      - "512M"
+      - "512M"
     flash:
       - "0M"
       - "0M"
-      - "0M"
-      - "0M"
-      - "0M"
       - "64M"
       - "64M"
+      - "0M"
+      - "0M"
+      - "0M"
       - "0M"
     fpga: []
     fpga_version: []
@@ -273,89 +361,92 @@ parsed_sample:
     nvram:
       - "0K"
       - "0K"
-      - "0K"
-      - "0K"
-      - "0K"
       - "512K"
       - "512K"
       - "0K"
-    oaa_front_board: []
+      - "0K"
+      - "0K"
+      - "0K"
+    oaa_front_board:
+      - "LSU3WCMD0"
     patch_version:
-      - "None"
-      - "None"
-      - "None"
-      - "None"
-      - "None"
-      - "None"
-      - "None"
-      - "None"
+      - "P001"
+      - "P001"
+      - "P001"
+      - "P001"
+      - "P001"
+      - "P001"
+      - "P001"
+      - "P001"
     pcb:
       - "1"
       - "1"
       - "1"
+      - "2"
       - "1"
+      - "2"
       - "1"
       - "1"
       - "2"
       - "1"
-      - "2"
       - "1"
     pcb_version:
-      - "E"
-      - "E"
+      - "None"
+      - "None"
+      - "B"
+      - "B"
+      - "B"
+      - "B"
+      - "B"
+      - "B"
+      - "B"
       - "D"
-      - "None"
-      - "None"
-      - "B"
-      - "B"
-      - "B"
-      - "B"
-      - "B"
+      - "D"
     pow_chip: []
     power_cpld: []
     power_cpld_version: []
     reboot_cause: []
-    release: "6708-US"
+    release: "6708P13"
     release_version:
-      - "HP 7506-6708-US"
-      - "HP 7506-6708-US"
-      - "HP 7506-6708-US"
-      - "HP 7506-6708-US"
-      - "HP 7506-6708-US"
-      - "HP 7506-6708-US"
-      - "HP 7506-6708-US"
-      - "HP 7506-6708-US"
+      - "HP 7506-6708P13"
+      - "HP 7506-6708P13"
+      - "HP 7506-6708P13"
+      - "HP 7506-6708P13"
+      - "HP 7506-6708P13"
+      - "HP 7506-6708P13"
+      - "HP 7506-6708P13"
+      - "HP 7506-6708P13"
     slot:
-      - "4"
-      - "5"
-      - "6"
       - "7"
       - "8"
       - "9"
       - "0"
       - "1"
       - "2"
+      - "3"
+      - "4"
+      - "5"
     slot_model: []
     slot_name: []
     slot_type:
       - "None"
       - "LPU"
       - "LPU"
-      - "LPU"
-      - "LPU"
-      - "LPU"
+      - "MPU(M)"
       - "MPU(S)"
-      - "MPU(S)"
+      - "LPU"
+      - "LPU"
+      - "LPU"
       - "LPU"
     slot_uptime:
-      - "542 weeks,5 days,2 hours,21 minutes"
-      - "542 weeks,5 days,2 hours,33 minutes"
-      - "593 weeks,5 days,21 hours,47 minutes"
-      - "593 weeks,5 days,21 hours,3 minutes"
-      - "593 weeks,5 days,21 hours,45 minutes"
-      - "44 weeks,4 days,1 hours,21 minutes"
-      - "44 weeks,4 days,1 hours,19 minutes"
-      - "44 weeks,4 days,1 hours,18 minutes"
+      - "238 weeks,6 days,23 hours,43 minutes"
+      - "238 weeks,6 days,23 hours,48 minutes"
+      - "238 weeks,6 days,23 hours,56 minutes"
+      - "239 weeks,0 days,0 hours,3 minutes"
+      - "239 weeks,0 days,0 hours,38 minutes"
+      - "239 weeks,0 days,0 hours,29 minutes"
+      - "239 weeks,0 days,0 hours,42 minutes"
+      - "239 weeks,0 days,0 hours,43 minutes"
     status:
       - "Without Board"
     subslot: []
@@ -364,7 +455,7 @@ parsed_sample:
     system_image: ""
     system_image_version: ""
     system_release: ""
-    uptime: "593 weeks, 5 days, 21 hours, 24 minutes"
+    uptime: "238 weeks, 6 days, 23 hours, 56 minutes"
     version: "5.20.105"
   - board_processor_count: []
     board_processor_model: []
@@ -399,10 +490,10 @@ parsed_sample:
     power_cpld: []
     power_cpld_version: []
     reboot_cause: []
-    release: "6708-US"
+    release: "6708P13"
     release_version: []
     slot:
-      - "3"
+      - "6"
     slot_model: []
     slot_name: []
     slot_type:
@@ -416,24 +507,15 @@ parsed_sample:
     system_image: ""
     system_image_version: ""
     system_release: ""
-    uptime: "593 weeks, 5 days, 21 hours, 24 minutes"
+    uptime: "238 weeks, 6 days, 23 hours, 56 minutes"
     version: "5.20.105"
   - board_processor_count:
-      - "1"
-      - "1"
-      - "1"
       - "1"
       - "1"
     board_processor_model:
       - "BCM1122"
       - "BCM1122"
-      - "BCM1122"
-      - "BCM1122"
-      - "BCM1122"
     board_type:
-      - "LSQ1GV48SC"
-      - "LSQ1GV48SC"
-      - "LSQ1GV48SC"
       - "SRP2XBSLAVE"
       - "SRP2XBSLAVE"
     boot_compile_date: ""
@@ -441,34 +523,19 @@ parsed_sample:
     boot_image_version: ""
     boot_release: ""
     bootrom_version:
-      - "503"
-      - "306"
-      - "306"
-      - "306"
-      - "306"
+      - "3.06"
+      - "3.06"
     card_type:
-      - "HP 7506 LPU"
-      - "HP 7506 LPU"
-      - "HP 7506 LPU"
       - "HP 7506 LPU"
       - "HP 7506 LPU"
     chassis:
       - "2"
       - "2"
       - "2"
-      - "2"
-      - "2"
-      - "2"
     cpld:
       - "1"
       - "1"
-      - "1"
-      - "1"
-      - "1"
     cpld_version:
-      - "004"
-      - "004"
-      - "004"
       - "NA"
       - "NA"
     cplda: []
@@ -476,13 +543,7 @@ parsed_sample:
     dram:
       - "512M"
       - "512M"
-      - "512M"
-      - "512M"
-      - "512M"
     flash:
-      - "0M"
-      - "0M"
-      - "0M"
       - "0M"
       - "0M"
     fpga: []
@@ -495,43 +556,25 @@ parsed_sample:
     nvram:
       - "0K"
       - "0K"
-      - "0K"
-      - "0K"
-      - "0K"
     oaa_front_board: []
     patch_version:
-      - "None"
-      - "None"
-      - "None"
-      - "None"
-      - "None"
+      - "P001"
+      - "P001"
     pcb:
       - "1"
       - "1"
-      - "1"
-      - "1"
-      - "1"
     pcb_version:
-      - "E"
-      - "D"
-      - "D"
       - "None"
       - "None"
     pow_chip: []
     power_cpld: []
     power_cpld_version: []
     reboot_cause: []
-    release: "6708-US"
+    release: "6708P13"
     release_version:
-      - "HP 7506-6708-US"
-      - "HP 7506-6708-US"
-      - "HP 7506-6708-US"
-      - "HP 7506-6708-US"
-      - "HP 7506-6708-US"
+      - "HP 7506-6708P13"
+      - "HP 7506-6708P13"
     slot:
-      - "4"
-      - "5"
-      - "6"
       - "7"
       - "8"
       - "9"
@@ -541,15 +584,9 @@ parsed_sample:
       - "None"
       - "LPU"
       - "LPU"
-      - "LPU"
-      - "LPU"
-      - "LPU"
     slot_uptime:
-      - "28 weeks,5 days,22 hours,14 minutes"
-      - "44 weeks,4 days,1 hours,16 minutes"
-      - "44 weeks,4 days,1 hours,10 minutes"
-      - "44 weeks,4 days,1 hours,19 minutes"
-      - "44 weeks,4 days,1 hours,18 minutes"
+      - "239 weeks,0 days,0 hours,24 minutes"
+      - "239 weeks,0 days,0 hours,8 minutes"
     status:
       - "Without Board"
     subslot: []
@@ -558,5 +595,5 @@ parsed_sample:
     system_image: ""
     system_image_version: ""
     system_release: ""
-    uptime: "593 weeks, 5 days, 21 hours, 24 minutes"
+    uptime: "238 weeks, 6 days, 23 hours, 56 minutes"
     version: "5.20.105"
