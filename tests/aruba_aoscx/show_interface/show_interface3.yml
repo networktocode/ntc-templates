@@ -1,6 +1,9 @@
 ---
 parsed_sample:
-  - aggregated_interfaces: []
+  - active_gateway_ip: ""
+    active_gateway_ip_mac: ""
+    active_gateway_source_mac: ""
+    aggregated_interfaces: []
     auto_neg: "on"
     duplex: "Full"
     error_control: "off"
@@ -10,12 +13,15 @@ parsed_sample:
     interface: "1/1/1"
     interface_desc: ""
     ip_address: ""
+    leader_follower_mode: "preferred-leader"
     link_admin: "up"
     link_state_info: ""
     link_status: "down"
     link_transitions: "0"
     mac_address: "b8:d4:e7:04:c6:3f"
+    mdi_mode: "none"
     mtu: "1500"
+    prefix_length: ""
     qos_trust: "dscp"
     rx_broadcast_packets: "0"
     rx_crc_fcs: "0"
@@ -27,7 +33,9 @@ parsed_sample:
     rx_total_packets: "0"
     rx_unicast_packets: "0"
     secondary_ip_address: []
+    secondary_ip_prefix_length: []
     speed: "0 Mb/s"
+    subinterface_count: ""
     tx_broadcast_packets: "0"
     tx_collision: "0"
     tx_crc_fcs: "n/a"
@@ -44,7 +52,10 @@ parsed_sample:
     vlan_trunk:
       - "all"
     vrf: ""
-  - aggregated_interfaces: []
+  - active_gateway_ip: ""
+    active_gateway_ip_mac: ""
+    active_gateway_source_mac: ""
+    aggregated_interfaces: []
     auto_neg: "on"
     duplex: "Full"
     error_control: "off"
@@ -54,12 +65,15 @@ parsed_sample:
     interface: "1/1/2"
     interface_desc: "Algo Sip Alerter"
     ip_address: ""
+    leader_follower_mode: "preferred-leader"
     link_admin: "up"
     link_state_info: ""
     link_status: "up"
     link_transitions: "11"
     mac_address: "b8:d4:e7:04:c6:40"
+    mdi_mode: "MDI"
     mtu: "1500"
+    prefix_length: ""
     qos_trust: "dscp"
     rx_broadcast_packets: "20"
     rx_crc_fcs: "0"
@@ -71,7 +85,9 @@ parsed_sample:
     rx_total_packets: "8570"
     rx_unicast_packets: "5051"
     secondary_ip_address: []
+    secondary_ip_prefix_length: []
     speed: "100 Mb/s"
+    subinterface_count: ""
     tx_broadcast_packets: "25991"
     tx_collision: "0"
     tx_crc_fcs: "n/a"
@@ -87,7 +103,10 @@ parsed_sample:
     vlan_native: ""
     vlan_trunk: []
     vrf: ""
-  - aggregated_interfaces: []
+  - active_gateway_ip: ""
+    active_gateway_ip_mac: ""
+    active_gateway_source_mac: ""
+    aggregated_interfaces: []
     auto_neg: "on"
     duplex: "Full"
     error_control: "off"
@@ -97,12 +116,15 @@ parsed_sample:
     interface: "1/1/5"
     interface_desc: ""
     ip_address: ""
+    leader_follower_mode: "preferred-leader"
     link_admin: "up"
     link_state_info: ""
     link_status: "down"
     link_transitions: "0"
     mac_address: "b8:d4:e7:04:c6:3b"
+    mdi_mode: "none"
     mtu: "1500"
+    prefix_length: ""
     qos_trust: "dscp"
     rx_broadcast_packets: "0"
     rx_crc_fcs: "0"
@@ -114,7 +136,9 @@ parsed_sample:
     rx_total_packets: "0"
     rx_unicast_packets: "0"
     secondary_ip_address: []
+    secondary_ip_prefix_length: []
     speed: "0 Mb/s"
+    subinterface_count: ""
     tx_broadcast_packets: "0"
     tx_collision: "0"
     tx_crc_fcs: "n/a"
@@ -130,7 +154,10 @@ parsed_sample:
     vlan_native: ""
     vlan_trunk: []
     vrf: ""
-  - aggregated_interfaces: []
+  - active_gateway_ip: ""
+    active_gateway_ip_mac: ""
+    active_gateway_source_mac: ""
+    aggregated_interfaces: []
     auto_neg: "on"
     duplex: "Full"
     error_control: "off"
@@ -140,12 +167,15 @@ parsed_sample:
     interface: "1/1/49"
     interface_desc: ""
     ip_address: ""
+    leader_follower_mode: ""
     link_admin: "up"
     link_state_info: ""
     link_status: "up"
     link_transitions: "1"
     mac_address: "b8:d4:e7:04:c6:10"
+    mdi_mode: ""
     mtu: "1500"
+    prefix_length: ""
     qos_trust: "dscp"
     rx_broadcast_packets: "1173633"
     rx_crc_fcs: "0"
@@ -157,7 +187,9 @@ parsed_sample:
     rx_total_packets: "2902654"
     rx_unicast_packets: "157778"
     secondary_ip_address: []
+    secondary_ip_prefix_length: []
     speed: "1000 Mb/s"
+    subinterface_count: ""
     tx_broadcast_packets: "477"
     tx_collision: "0"
     tx_crc_fcs: "n/a"
@@ -174,7 +206,10 @@ parsed_sample:
     vlan_trunk:
       - "all"
     vrf: ""
-  - aggregated_interfaces: []
+  - active_gateway_ip: ""
+    active_gateway_ip_mac: ""
+    active_gateway_source_mac: ""
+    aggregated_interfaces: []
     auto_neg: "off"
     duplex: "Full"
     error_control: "off"
@@ -184,12 +219,15 @@ parsed_sample:
     interface: "1/1/50"
     interface_desc: ""
     ip_address: ""
+    leader_follower_mode: ""
     link_admin: "up"
     link_state_info: ""
     link_status: "down"
     link_transitions: "0"
     mac_address: "b8:d4:e7:04:c6:0f"
+    mdi_mode: ""
     mtu: "1500"
+    prefix_length: ""
     qos_trust: "dscp"
     rx_broadcast_packets: "0"
     rx_crc_fcs: "0"
@@ -201,7 +239,9 @@ parsed_sample:
     rx_total_packets: "0"
     rx_unicast_packets: "0"
     secondary_ip_address: []
+    secondary_ip_prefix_length: []
     speed: "0 Mb/s"
+    subinterface_count: ""
     tx_broadcast_packets: "0"
     tx_collision: "0"
     tx_crc_fcs: "n/a"
@@ -217,7 +257,10 @@ parsed_sample:
     vlan_native: ""
     vlan_trunk: []
     vrf: ""
-  - aggregated_interfaces: []
+  - active_gateway_ip: ""
+    active_gateway_ip_mac: ""
+    active_gateway_source_mac: ""
+    aggregated_interfaces: []
     auto_neg: ""
     duplex: ""
     error_control: ""
@@ -226,13 +269,16 @@ parsed_sample:
     if_type: ""
     interface: "vlan1"
     interface_desc: ""
-    ip_address: "172.22.220.236/25"
+    ip_address: "172.22.220.236"
+    leader_follower_mode: ""
     link_admin: "up"
     link_state_info: ""
     link_status: "up"
     link_transitions: ""
     mac_address: "b8:d4:e7:04:c6:00"
+    mdi_mode: ""
     mtu: ""
+    prefix_length: "25"
     qos_trust: ""
     rx_broadcast_packets: ""
     rx_crc_fcs: ""
@@ -244,7 +290,9 @@ parsed_sample:
     rx_total_packets: ""
     rx_unicast_packets: ""
     secondary_ip_address: []
+    secondary_ip_prefix_length: []
     speed: ""
+    subinterface_count: ""
     tx_broadcast_packets: ""
     tx_collision: ""
     tx_crc_fcs: ""

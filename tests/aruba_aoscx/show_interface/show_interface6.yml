@@ -1,6 +1,9 @@
 ---
 parsed_sample:
-  - aggregated_interfaces: []
+  - active_gateway_ip: ""
+    active_gateway_ip_mac: ""
+    active_gateway_source_mac: ""
+    aggregated_interfaces: []
     auto_neg: "off"
     duplex: "Full"
     error_control: "off"
@@ -9,13 +12,16 @@ parsed_sample:
     if_type: "--"
     interface: "loopback101"
     interface_desc: ""
-    ip_address: "192.0.2.151/32"
+    ip_address: "192.0.2.151"
+    leader_follower_mode: ""
     link_admin: "up"
     link_state_info: ""
     link_status: "up"
     link_transitions: ""
     mac_address: "bc:d7:a5:aa:bb:cc"
+    mdi_mode: "none"
     mtu: "1500"
+    prefix_length: "32"
     qos_trust: ""
     rx_broadcast_packets: ""
     rx_crc_fcs: ""
@@ -27,7 +33,9 @@ parsed_sample:
     rx_total_packets: ""
     rx_unicast_packets: ""
     secondary_ip_address: []
+    secondary_ip_prefix_length: []
     speed: "0 Mb/s"
+    subinterface_count: ""
     tx_broadcast_packets: ""
     tx_collision: ""
     tx_crc_fcs: ""
@@ -43,7 +51,10 @@ parsed_sample:
     vlan_native: ""
     vlan_trunk: []
     vrf: "VRF_RED"
-  - aggregated_interfaces: []
+  - active_gateway_ip: ""
+    active_gateway_ip_mac: ""
+    active_gateway_source_mac: ""
+    aggregated_interfaces: []
     auto_neg: "off"
     duplex: "Full"
     error_control: "off"
@@ -52,13 +63,16 @@ parsed_sample:
     if_type: "--"
     interface: "loopback102"
     interface_desc: ""
-    ip_address: "192.0.2.152/32"
+    ip_address: "192.0.2.152"
+    leader_follower_mode: ""
     link_admin: "up"
     link_state_info: ""
     link_status: "up"
     link_transitions: ""
     mac_address: "bc:d7:a5:aa:bb:cc"
+    mdi_mode: "none"
     mtu: "1500"
+    prefix_length: "32"
     qos_trust: ""
     rx_broadcast_packets: ""
     rx_crc_fcs: ""
@@ -70,7 +84,9 @@ parsed_sample:
     rx_total_packets: ""
     rx_unicast_packets: ""
     secondary_ip_address: []
+    secondary_ip_prefix_length: []
     speed: "0 Mb/s"
+    subinterface_count: ""
     tx_broadcast_packets: ""
     tx_collision: ""
     tx_crc_fcs: ""

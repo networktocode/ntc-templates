@@ -1,6 +1,9 @@
 ---
 parsed_sample:
-  - aggregated_interfaces: []
+  - active_gateway_ip: ""
+    active_gateway_ip_mac: ""
+    active_gateway_source_mac: ""
+    aggregated_interfaces: []
     auto_neg: "off"
     duplex: "Full"
     error_control: "off"
@@ -10,12 +13,15 @@ parsed_sample:
     interface: "1/1/1"
     interface_desc: ""
     ip_address: ""
+    leader_follower_mode: ""
     link_admin: "up"
     link_state_info: ""
     link_status: "up"
     link_transitions: "1"
     mac_address: "88:3a:30:97:d0:80"
+    mdi_mode: ""
     mtu: "9198"
+    prefix_length: ""
     qos_trust: "none"
     rx_broadcast_packets: "586595"
     rx_crc_fcs: "0"
@@ -27,7 +33,9 @@ parsed_sample:
     rx_total_packets: "2417650"
     rx_unicast_packets: "0"
     secondary_ip_address: []
+    secondary_ip_prefix_length: []
     speed: "10000 Mb/s"
+    subinterface_count: ""
     tx_broadcast_packets: "5"
     tx_collision: "0"
     tx_crc_fcs: ""
@@ -43,7 +51,10 @@ parsed_sample:
     vlan_native: ""
     vlan_trunk: []
     vrf: ""
-  - aggregated_interfaces: []
+  - active_gateway_ip: ""
+    active_gateway_ip_mac: ""
+    active_gateway_source_mac: ""
+    aggregated_interfaces: []
     auto_neg: "on"
     duplex: "Full"
     error_control: "off"
@@ -53,12 +64,15 @@ parsed_sample:
     interface: "1/1/2"
     interface_desc: ""
     ip_address: ""
+    leader_follower_mode: ""
     link_admin: "up"
     link_state_info: ""
     link_status: "down"
     link_transitions: "0"
     mac_address: "88:3a:30:97:d0:7e"
+    mdi_mode: ""
     mtu: "9198"
+    prefix_length: ""
     qos_trust: "none"
     rx_broadcast_packets: "0"
     rx_crc_fcs: "0"
@@ -70,7 +84,9 @@ parsed_sample:
     rx_total_packets: "0"
     rx_unicast_packets: "0"
     secondary_ip_address: []
+    secondary_ip_prefix_length: []
     speed: "0 Mb/s"
+    subinterface_count: ""
     tx_broadcast_packets: "0"
     tx_collision: "0"
     tx_crc_fcs: ""
@@ -86,7 +102,10 @@ parsed_sample:
     vlan_native: ""
     vlan_trunk: []
     vrf: ""
-  - aggregated_interfaces: []
+  - active_gateway_ip: ""
+    active_gateway_ip_mac: ""
+    active_gateway_source_mac: ""
+    aggregated_interfaces: []
     auto_neg: "on"
     duplex: "Full"
     error_control: "off"
@@ -96,12 +115,15 @@ parsed_sample:
     interface: "1/1/3"
     interface_desc: ""
     ip_address: ""
+    leader_follower_mode: ""
     link_admin: "up"
     link_state_info: ""
     link_status: "down"
     link_transitions: "0"
     mac_address: "88:3a:30:97:d0:7c"
+    mdi_mode: ""
     mtu: "1500"
+    prefix_length: ""
     qos_trust: "none"
     rx_broadcast_packets: "0"
     rx_crc_fcs: "0"
@@ -113,7 +135,9 @@ parsed_sample:
     rx_total_packets: "0"
     rx_unicast_packets: "0"
     secondary_ip_address: []
+    secondary_ip_prefix_length: []
     speed: "0 Mb/s"
+    subinterface_count: ""
     tx_broadcast_packets: "0"
     tx_collision: "0"
     tx_crc_fcs: ""
@@ -129,7 +153,10 @@ parsed_sample:
     vlan_native: ""
     vlan_trunk: []
     vrf: ""
-  - aggregated_interfaces: []
+  - active_gateway_ip: ""
+    active_gateway_ip_mac: ""
+    active_gateway_source_mac: ""
+    aggregated_interfaces: []
     auto_neg: "on"
     duplex: "Full"
     error_control: "off"
@@ -139,12 +166,15 @@ parsed_sample:
     interface: "1/1/4"
     interface_desc: ""
     ip_address: ""
+    leader_follower_mode: ""
     link_admin: "up"
     link_state_info: ""
     link_status: "down"
     link_transitions: "0"
     mac_address: "88:3a:30:97:d0:7a"
+    mdi_mode: ""
     mtu: "1500"
+    prefix_length: ""
     qos_trust: "none"
     rx_broadcast_packets: "0"
     rx_crc_fcs: "0"
@@ -156,7 +186,9 @@ parsed_sample:
     rx_total_packets: "0"
     rx_unicast_packets: "0"
     secondary_ip_address: []
+    secondary_ip_prefix_length: []
     speed: "0 Mb/s"
+    subinterface_count: ""
     tx_broadcast_packets: "0"
     tx_collision: "0"
     tx_crc_fcs: ""
@@ -172,7 +204,10 @@ parsed_sample:
     vlan_native: ""
     vlan_trunk: []
     vrf: ""
-  - aggregated_interfaces: []
+  - active_gateway_ip: ""
+    active_gateway_ip_mac: ""
+    active_gateway_source_mac: ""
+    aggregated_interfaces: []
     auto_neg: "on"
     duplex: "Full"
     error_control: "off"
@@ -182,12 +217,15 @@ parsed_sample:
     interface: "1/1/5"
     interface_desc: ""
     ip_address: ""
+    leader_follower_mode: ""
     link_admin: "up"
     link_state_info: ""
     link_status: "down"
     link_transitions: "0"
     mac_address: "88:3a:30:97:d0:78"
+    mdi_mode: ""
     mtu: "1500"
+    prefix_length: ""
     qos_trust: "none"
     rx_broadcast_packets: "0"
     rx_crc_fcs: "0"
@@ -199,7 +237,9 @@ parsed_sample:
     rx_total_packets: "0"
     rx_unicast_packets: "0"
     secondary_ip_address: []
+    secondary_ip_prefix_length: []
     speed: "0 Mb/s"
+    subinterface_count: ""
     tx_broadcast_packets: "0"
     tx_collision: "0"
     tx_crc_fcs: ""
@@ -215,7 +255,10 @@ parsed_sample:
     vlan_native: ""
     vlan_trunk: []
     vrf: ""
-  - aggregated_interfaces: []
+  - active_gateway_ip: ""
+    active_gateway_ip_mac: ""
+    active_gateway_source_mac: ""
+    aggregated_interfaces: []
     auto_neg: "on"
     duplex: "Full"
     error_control: "off"
@@ -225,12 +268,15 @@ parsed_sample:
     interface: "1/1/6"
     interface_desc: ""
     ip_address: ""
+    leader_follower_mode: ""
     link_admin: "up"
     link_state_info: ""
     link_status: "down"
     link_transitions: "0"
     mac_address: "88:3a:30:97:d0:76"
+    mdi_mode: ""
     mtu: "1500"
+    prefix_length: ""
     qos_trust: "none"
     rx_broadcast_packets: "0"
     rx_crc_fcs: "0"
@@ -242,7 +288,9 @@ parsed_sample:
     rx_total_packets: "0"
     rx_unicast_packets: "0"
     secondary_ip_address: []
+    secondary_ip_prefix_length: []
     speed: "0 Mb/s"
+    subinterface_count: ""
     tx_broadcast_packets: "0"
     tx_collision: "0"
     tx_crc_fcs: ""
@@ -258,7 +306,10 @@ parsed_sample:
     vlan_native: ""
     vlan_trunk: []
     vrf: ""
-  - aggregated_interfaces: []
+  - active_gateway_ip: ""
+    active_gateway_ip_mac: ""
+    active_gateway_source_mac: ""
+    aggregated_interfaces: []
     auto_neg: "on"
     duplex: "Full"
     error_control: "off"
@@ -268,12 +319,15 @@ parsed_sample:
     interface: "1/1/7"
     interface_desc: ""
     ip_address: ""
+    leader_follower_mode: ""
     link_admin: "up"
     link_state_info: ""
     link_status: "down"
     link_transitions: "0"
     mac_address: "88:3a:30:97:d0:74"
+    mdi_mode: ""
     mtu: "1500"
+    prefix_length: ""
     qos_trust: "none"
     rx_broadcast_packets: "0"
     rx_crc_fcs: "0"
@@ -285,7 +339,9 @@ parsed_sample:
     rx_total_packets: "0"
     rx_unicast_packets: "0"
     secondary_ip_address: []
+    secondary_ip_prefix_length: []
     speed: "0 Mb/s"
+    subinterface_count: ""
     tx_broadcast_packets: "0"
     tx_collision: "0"
     tx_crc_fcs: ""
@@ -301,7 +357,10 @@ parsed_sample:
     vlan_native: ""
     vlan_trunk: []
     vrf: ""
-  - aggregated_interfaces: []
+  - active_gateway_ip: ""
+    active_gateway_ip_mac: ""
+    active_gateway_source_mac: ""
+    aggregated_interfaces: []
     auto_neg: "on"
     duplex: "Full"
     error_control: "off"
@@ -311,12 +370,15 @@ parsed_sample:
     interface: "1/1/8"
     interface_desc: ""
     ip_address: ""
+    leader_follower_mode: ""
     link_admin: "up"
     link_state_info: ""
     link_status: "down"
     link_transitions: "0"
     mac_address: "88:3a:30:97:d0:72"
+    mdi_mode: ""
     mtu: "1500"
+    prefix_length: ""
     qos_trust: "none"
     rx_broadcast_packets: "0"
     rx_crc_fcs: "0"
@@ -328,7 +390,9 @@ parsed_sample:
     rx_total_packets: "0"
     rx_unicast_packets: "0"
     secondary_ip_address: []
+    secondary_ip_prefix_length: []
     speed: "0 Mb/s"
+    subinterface_count: ""
     tx_broadcast_packets: "0"
     tx_collision: "0"
     tx_crc_fcs: ""
@@ -344,7 +408,10 @@ parsed_sample:
     vlan_native: ""
     vlan_trunk: []
     vrf: ""
-  - aggregated_interfaces: []
+  - active_gateway_ip: ""
+    active_gateway_ip_mac: ""
+    active_gateway_source_mac: ""
+    aggregated_interfaces: []
     auto_neg: "on"
     duplex: "Full"
     error_control: "off"
@@ -354,12 +421,15 @@ parsed_sample:
     interface: "1/1/9"
     interface_desc: ""
     ip_address: ""
+    leader_follower_mode: ""
     link_admin: "up"
     link_state_info: ""
     link_status: "down"
     link_transitions: "0"
     mac_address: "88:3a:30:97:d0:70"
+    mdi_mode: ""
     mtu: "1500"
+    prefix_length: ""
     qos_trust: "none"
     rx_broadcast_packets: "0"
     rx_crc_fcs: "0"
@@ -371,7 +441,9 @@ parsed_sample:
     rx_total_packets: "0"
     rx_unicast_packets: "0"
     secondary_ip_address: []
+    secondary_ip_prefix_length: []
     speed: "0 Mb/s"
+    subinterface_count: ""
     tx_broadcast_packets: "0"
     tx_collision: "0"
     tx_crc_fcs: ""
@@ -387,7 +459,10 @@ parsed_sample:
     vlan_native: ""
     vlan_trunk: []
     vrf: ""
-  - aggregated_interfaces: []
+  - active_gateway_ip: ""
+    active_gateway_ip_mac: ""
+    active_gateway_source_mac: ""
+    aggregated_interfaces: []
     auto_neg: "on"
     duplex: "Full"
     error_control: "off"
@@ -397,12 +472,15 @@ parsed_sample:
     interface: "1/1/10"
     interface_desc: ""
     ip_address: ""
+    leader_follower_mode: ""
     link_admin: "up"
     link_state_info: ""
     link_status: "down"
     link_transitions: "0"
     mac_address: "88:3a:30:97:d0:6e"
+    mdi_mode: ""
     mtu: "1500"
+    prefix_length: ""
     qos_trust: "none"
     rx_broadcast_packets: "0"
     rx_crc_fcs: "0"
@@ -414,7 +492,9 @@ parsed_sample:
     rx_total_packets: "0"
     rx_unicast_packets: "0"
     secondary_ip_address: []
+    secondary_ip_prefix_length: []
     speed: "0 Mb/s"
+    subinterface_count: ""
     tx_broadcast_packets: "0"
     tx_collision: "0"
     tx_crc_fcs: ""
@@ -430,7 +510,10 @@ parsed_sample:
     vlan_native: ""
     vlan_trunk: []
     vrf: ""
-  - aggregated_interfaces: []
+  - active_gateway_ip: ""
+    active_gateway_ip_mac: ""
+    active_gateway_source_mac: ""
+    aggregated_interfaces: []
     auto_neg: "on"
     duplex: "Full"
     error_control: "off"
@@ -440,12 +523,15 @@ parsed_sample:
     interface: "1/1/11"
     interface_desc: ""
     ip_address: ""
+    leader_follower_mode: ""
     link_admin: "up"
     link_state_info: ""
     link_status: "down"
     link_transitions: "0"
     mac_address: "88:3a:30:97:d0:6c"
+    mdi_mode: ""
     mtu: "1500"
+    prefix_length: ""
     qos_trust: "none"
     rx_broadcast_packets: "0"
     rx_crc_fcs: "0"
@@ -457,7 +543,9 @@ parsed_sample:
     rx_total_packets: "0"
     rx_unicast_packets: "0"
     secondary_ip_address: []
+    secondary_ip_prefix_length: []
     speed: "0 Mb/s"
+    subinterface_count: ""
     tx_broadcast_packets: "0"
     tx_collision: "0"
     tx_crc_fcs: ""
@@ -473,7 +561,10 @@ parsed_sample:
     vlan_native: ""
     vlan_trunk: []
     vrf: ""
-  - aggregated_interfaces: []
+  - active_gateway_ip: ""
+    active_gateway_ip_mac: ""
+    active_gateway_source_mac: ""
+    aggregated_interfaces: []
     auto_neg: "on"
     duplex: "Full"
     error_control: "off"
@@ -483,12 +574,15 @@ parsed_sample:
     interface: "1/1/12"
     interface_desc: ""
     ip_address: ""
+    leader_follower_mode: ""
     link_admin: "up"
     link_state_info: ""
     link_status: "down"
     link_transitions: "0"
     mac_address: "88:3a:30:97:d0:6a"
+    mdi_mode: ""
     mtu: "1500"
+    prefix_length: ""
     qos_trust: "none"
     rx_broadcast_packets: "0"
     rx_crc_fcs: "0"
@@ -500,7 +594,9 @@ parsed_sample:
     rx_total_packets: "0"
     rx_unicast_packets: "0"
     secondary_ip_address: []
+    secondary_ip_prefix_length: []
     speed: "0 Mb/s"
+    subinterface_count: ""
     tx_broadcast_packets: "0"
     tx_collision: "0"
     tx_crc_fcs: ""
@@ -516,7 +612,10 @@ parsed_sample:
     vlan_native: ""
     vlan_trunk: []
     vrf: ""
-  - aggregated_interfaces: []
+  - active_gateway_ip: ""
+    active_gateway_ip_mac: ""
+    active_gateway_source_mac: ""
+    aggregated_interfaces: []
     auto_neg: "on"
     duplex: "Full"
     error_control: "off"
@@ -526,12 +625,15 @@ parsed_sample:
     interface: "1/1/13"
     interface_desc: ""
     ip_address: ""
+    leader_follower_mode: ""
     link_admin: "up"
     link_state_info: ""
     link_status: "down"
     link_transitions: "0"
     mac_address: "88:3a:30:97:d0:68"
+    mdi_mode: ""
     mtu: "1500"
+    prefix_length: ""
     qos_trust: "none"
     rx_broadcast_packets: "0"
     rx_crc_fcs: "0"
@@ -543,7 +645,9 @@ parsed_sample:
     rx_total_packets: "0"
     rx_unicast_packets: "0"
     secondary_ip_address: []
+    secondary_ip_prefix_length: []
     speed: "0 Mb/s"
+    subinterface_count: ""
     tx_broadcast_packets: "0"
     tx_collision: "0"
     tx_crc_fcs: ""
@@ -559,7 +663,10 @@ parsed_sample:
     vlan_native: ""
     vlan_trunk: []
     vrf: ""
-  - aggregated_interfaces: []
+  - active_gateway_ip: ""
+    active_gateway_ip_mac: ""
+    active_gateway_source_mac: ""
+    aggregated_interfaces: []
     auto_neg: "on"
     duplex: "Full"
     error_control: "off"
@@ -569,12 +676,15 @@ parsed_sample:
     interface: "1/1/14"
     interface_desc: ""
     ip_address: ""
+    leader_follower_mode: ""
     link_admin: "up"
     link_state_info: ""
     link_status: "down"
     link_transitions: "0"
     mac_address: "88:3a:30:97:d0:66"
+    mdi_mode: ""
     mtu: "1500"
+    prefix_length: ""
     qos_trust: "none"
     rx_broadcast_packets: "0"
     rx_crc_fcs: "0"
@@ -586,7 +696,9 @@ parsed_sample:
     rx_total_packets: "0"
     rx_unicast_packets: "0"
     secondary_ip_address: []
+    secondary_ip_prefix_length: []
     speed: "0 Mb/s"
+    subinterface_count: ""
     tx_broadcast_packets: "0"
     tx_collision: "0"
     tx_crc_fcs: ""
@@ -602,7 +714,10 @@ parsed_sample:
     vlan_native: ""
     vlan_trunk: []
     vrf: ""
-  - aggregated_interfaces: []
+  - active_gateway_ip: ""
+    active_gateway_ip_mac: ""
+    active_gateway_source_mac: ""
+    aggregated_interfaces: []
     auto_neg: "on"
     duplex: "Full"
     error_control: "off"
@@ -612,12 +727,15 @@ parsed_sample:
     interface: "1/1/15"
     interface_desc: ""
     ip_address: ""
+    leader_follower_mode: ""
     link_admin: "up"
     link_state_info: ""
     link_status: "down"
     link_transitions: "0"
     mac_address: "88:3a:30:97:d0:64"
+    mdi_mode: ""
     mtu: "1500"
+    prefix_length: ""
     qos_trust: "none"
     rx_broadcast_packets: "0"
     rx_crc_fcs: "0"
@@ -629,7 +747,9 @@ parsed_sample:
     rx_total_packets: "0"
     rx_unicast_packets: "0"
     secondary_ip_address: []
+    secondary_ip_prefix_length: []
     speed: "0 Mb/s"
+    subinterface_count: ""
     tx_broadcast_packets: "0"
     tx_collision: "0"
     tx_crc_fcs: ""
@@ -645,7 +765,10 @@ parsed_sample:
     vlan_native: ""
     vlan_trunk: []
     vrf: ""
-  - aggregated_interfaces: []
+  - active_gateway_ip: ""
+    active_gateway_ip_mac: ""
+    active_gateway_source_mac: ""
+    aggregated_interfaces: []
     auto_neg: "on"
     duplex: "Full"
     error_control: "off"
@@ -655,12 +778,15 @@ parsed_sample:
     interface: "1/1/16"
     interface_desc: ""
     ip_address: ""
+    leader_follower_mode: ""
     link_admin: "up"
     link_state_info: ""
     link_status: "down"
     link_transitions: "0"
     mac_address: "88:3a:30:97:d0:62"
+    mdi_mode: ""
     mtu: "1500"
+    prefix_length: ""
     qos_trust: "none"
     rx_broadcast_packets: "0"
     rx_crc_fcs: "0"
@@ -672,7 +798,9 @@ parsed_sample:
     rx_total_packets: "0"
     rx_unicast_packets: "0"
     secondary_ip_address: []
+    secondary_ip_prefix_length: []
     speed: "0 Mb/s"
+    subinterface_count: ""
     tx_broadcast_packets: "0"
     tx_collision: "0"
     tx_crc_fcs: ""
@@ -688,7 +816,10 @@ parsed_sample:
     vlan_native: ""
     vlan_trunk: []
     vrf: ""
-  - aggregated_interfaces: []
+  - active_gateway_ip: ""
+    active_gateway_ip_mac: ""
+    active_gateway_source_mac: ""
+    aggregated_interfaces: []
     auto_neg: "on"
     duplex: "Full"
     error_control: "off"
@@ -698,12 +829,15 @@ parsed_sample:
     interface: "1/1/17"
     interface_desc: ""
     ip_address: ""
+    leader_follower_mode: ""
     link_admin: "up"
     link_state_info: ""
     link_status: "down"
     link_transitions: "0"
     mac_address: "88:3a:30:97:d0:60"
+    mdi_mode: ""
     mtu: "1500"
+    prefix_length: ""
     qos_trust: "none"
     rx_broadcast_packets: ""
     rx_crc_fcs: ""
@@ -715,7 +849,9 @@ parsed_sample:
     rx_total_packets: ""
     rx_unicast_packets: ""
     secondary_ip_address: []
+    secondary_ip_prefix_length: []
     speed: "0 Mb/s"
+    subinterface_count: ""
     tx_broadcast_packets: ""
     tx_collision: ""
     tx_crc_fcs: ""
