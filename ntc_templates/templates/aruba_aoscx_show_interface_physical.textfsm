@@ -1,0 +1,29 @@
+Value PORT (\S+)
+Value TYPE (\S+)
+Value LINK_STATUS (\S+)
+Value ADMIN_STATUS (\S+)
+Value SPEED_STATUS (\S+)
+Value SPEED_CONFIG (\S+)
+Value FLOW_CONTROL_STATUS (\S+)
+Value FLOW_CONTROL_CONFIG (\S+)
+Value EEE_STATUS (\S+)
+Value EEE_CONFIG (\S+)
+Value POE_POWER (\S+)
+Value LINK_STATE_INFO (.+?)
+Value DESCRIPTION (.+)
+
+Start
+  ^\s*$$
+  ^\s+Link\s+Admin\s+Speed\s+Flow-Control\s+EEE\s+PoE\s+Power -> EEETemplate
+  ^\s+Link\s+Admin
+  ^Port\s+Type
+  ^---+
+  ^${PORT}\s+${TYPE}\s+${LINK_STATUS}\s+${ADMIN_STATUS}\s+${SPEED_STATUS}\s+${SPEED_CONFIG}\s+${FLOW_CONTROL_STATUS}\s+${FLOW_CONTROL_CONFIG}\s+${POE_POWER}\s+${LINK_STATE_INFO}\s{2,}${DESCRIPTION}\s*$$ -> Record
+  ^. -> Error "LINE NOT FOUND"
+
+EEETemplate
+  ^Port\s+Type
+  ^---+
+  ^${PORT}\s+${TYPE}\s+${LINK_STATUS}\s+${ADMIN_STATUS}\s+${SPEED_STATUS}\s+${SPEED_CONFIG}\s+${FLOW_CONTROL_STATUS}\s+${FLOW_CONTROL_CONFIG}\s+${EEE_STATUS}\s+${EEE_CONFIG}\s+${POE_POWER}\s+${LINK_STATE_INFO}\s{2,}${DESCRIPTION}\s*$$ -> Record
+  ^. -> Error "LINE NOT FOUND"
+
