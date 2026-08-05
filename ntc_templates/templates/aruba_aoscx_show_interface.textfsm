@@ -9,12 +9,13 @@ Value MAC_ADDRESS (\S+)
 Value MTU (\d+)
 Value IF_TYPE (\S+)
 Value IP_ADDRESS (\d+\.\d+\.\d+\.\d+)
-Value NETMASK (\d+)
+Value PREFIX_LENGTH (\d+)
 Value VRF (\S+)
-Value GW_IP (\S+)
-Value GW_IP_MAC (\S+)
-Value GW_SOURCE_MAC (\S+)
-Value List SECONDARY_IP_ADDRESS (\S+)
+Value ACTIVE_GATEWAY_IP (\S+)
+Value ACTIVE_GATEWAY_IP_MAC (\S+)
+Value ACTIVE_GATEWAY_SOURCE_MAC (\S+)
+Value List SECONDARY_IP_ADDRESS (\d+\.\d+\.\d+\.\d+)
+Value List SECONDARY_IP_PREFIX_LENGTH (\d+)
 Value DUPLEX (\w+)
 Value QOS_TRUST (\S+)
 Value SPEED (\S+\s\S+)
@@ -46,7 +47,7 @@ Value TX_FILTERED (\d+)
 Value TX_CRC_FCS (\S+)
 Value TX_COLLISION (\d+)
 Value LEADER_FOLLOWER_MODE (\S+)
-Value MDI (\S+)
+Value MDI_MODE (\S+)
 Value SUBINTERFACE_COUNT (\d+)
 
 Start
@@ -58,9 +59,9 @@ Start
   ^\s*State\s*information\s*:\s*${LINK_STATE_INFO}
   ^\s*Hardware\s*:\s*${HW_TYPE},?\s*MAC\s*Address:\s+${MAC_ADDRESS}
   ^\s*MAC\s+Address\s*:\s*${MAC_ADDRESS}
-  ^\s*IPv4\s+address\s+${IP_ADDRESS}(/${NETMASK})?\s*$$
-  ^\s*IPv4\s+address\s+${SECONDARY_IP_ADDRESS}\s+secondary
-  ^\s*Subinterface count\s*:\s+${SUBINTERFACE_COUNT} 
+  ^\s*IPv4\s+address\s+${IP_ADDRESS}(/${PREFIX_LENGTH})?\s*$$
+  ^\s*IPv4\s+address\s+${SECONDARY_IP_ADDRESS}(/${SECONDARY_IP_PREFIX_LENGTH})?\s+secondary
+  ^\s*Subinterface\s+count\s*:\s+${SUBINTERFACE_COUNT} 
   ^\s*MTU\s*${MTU}
   ^\s*Type\s*${IF_TYPE}
   ^\s*${DUPLEX}-duplex
@@ -97,16 +98,16 @@ Start
   ^\s*rate-limit\s+broadcast
   ^\s*rate-limit\s+multicast
   ^\s*L3\s+Counters
-  ^\s*MDI mode\s*:\s*${MDI}
+  ^\s*MDI\s+mode\s*:\s*${MDI_MODE}
   ^\s*Leader-follower\s+mode:\s+${LEADER_FOLLOWER_MODE}
   ^\s*Rate collection interval
   ^\s*Energy-Efficient
   ^\s*Rx -> Rx
   ^\s*Rate\s+RX\s+TX\s+Total -> Rate
   ^\s*Statistic\s+RX\s+TX\s+Total -> Statistic
-  ^\s*active-gateway L3 source mac ${GW_SOURCE_MAC}
-  ^\s*active-gateway ip mac ${GW_IP_MAC}
-  ^\s*active-gateway ip ${GW_IP}
+  ^\s*active-gateway L3 source mac ${ACTIVE_GATEWAY_SOURCE_MAC}
+  ^\s*active-gateway ip mac ${ACTIVE_GATEWAY_IP_MAC}
+  ^\s*active-gateway ip ${ACTIVE_GATEWAY_IP}
   ^\s*VRF\s+name\s+is\s+${VRF}
   ^. -> Error
 

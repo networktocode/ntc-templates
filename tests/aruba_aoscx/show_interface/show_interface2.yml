@@ -1,13 +1,13 @@
 ---
 parsed_sample:
-  - aggregated_interfaces: []
+  - active_gateway_ip: ""
+    active_gateway_ip_mac: ""
+    active_gateway_source_mac: ""
+    aggregated_interfaces: []
     auto_neg: "on"
     duplex: "Full"
     error_control: "off"
     flow_control: "off"
-    gw_ip: ""
-    gw_ip_mac: ""
-    gw_source_mac: ""
     hw_type: "Ethernet"
     if_type: "1GbT"
     interface: "1/1/1"
@@ -19,9 +19,9 @@ parsed_sample:
     link_status: "up"
     link_transitions: "73"
     mac_address: "bc:d7:a5:be:a5:3f"
-    mdi: "MDIX"
+    mdi_mode: "MDIX"
     mtu: "1500"
-    netmask: ""
+    prefix_length: ""
     qos_trust: "none"
     rx_broadcast_packets: "795"
     rx_crc_fcs: "0"
@@ -33,6 +33,7 @@ parsed_sample:
     rx_total_packets: "18874893"
     rx_unicast_packets: "18644933"
     secondary_ip_address: []
+    secondary_ip_prefix_length: []
     speed: "1000 Mb/s"
     subinterface_count: ""
     tx_broadcast_packets: "249042"
@@ -50,14 +51,14 @@ parsed_sample:
     vlan_native: ""
     vlan_trunk: []
     vrf: ""
-  - aggregated_interfaces: []
+  - active_gateway_ip: ""
+    active_gateway_ip_mac: ""
+    active_gateway_source_mac: ""
+    aggregated_interfaces: []
     auto_neg: "off"
     duplex: "Full"
     error_control: "off"
     flow_control: "off"
-    gw_ip: ""
-    gw_ip_mac: ""
-    gw_source_mac: ""
     hw_type: "Ethernet"
     if_type: "10G-SR"
     interface: "1/1/51"
@@ -69,9 +70,9 @@ parsed_sample:
     link_status: "up"
     link_transitions: "1"
     mac_address: "bc:d7:a5:be:a5:00"
-    mdi: ""
+    mdi_mode: ""
     mtu: "1500"
-    netmask: ""
+    prefix_length: ""
     qos_trust: "none"
     rx_broadcast_packets: "23082079"
     rx_crc_fcs: "0"
@@ -83,6 +84,7 @@ parsed_sample:
     rx_total_packets: "103446835"
     rx_unicast_packets: "30270030"
     secondary_ip_address: []
+    secondary_ip_prefix_length: []
     speed: "10000 Mb/s"
     subinterface_count: ""
     tx_broadcast_packets: "1729763"
@@ -100,14 +102,14 @@ parsed_sample:
     vlan_native: ""
     vlan_trunk: []
     vrf: ""
-  - aggregated_interfaces: []
+  - active_gateway_ip: ""
+    active_gateway_ip_mac: ""
+    active_gateway_source_mac: ""
+    aggregated_interfaces: []
     auto_neg: "off"
     duplex: "Full"
     error_control: "off"
     flow_control: "off"
-    gw_ip: ""
-    gw_ip_mac: ""
-    gw_source_mac: ""
     hw_type: "Ethernet"
     if_type: "10G-SR"
     interface: "1/1/52"
@@ -119,9 +121,9 @@ parsed_sample:
     link_status: "up"
     link_transitions: "1"
     mac_address: "bc:d7:a5:be:a5:00"
-    mdi: ""
+    mdi_mode: ""
     mtu: "1500"
-    netmask: ""
+    prefix_length: ""
     qos_trust: "none"
     rx_broadcast_packets: "77813307"
     rx_crc_fcs: "0"
@@ -133,6 +135,7 @@ parsed_sample:
     rx_total_packets: "1436539051"
     rx_unicast_packets: "1174876405"
     secondary_ip_address: []
+    secondary_ip_prefix_length: []
     speed: "10000 Mb/s"
     subinterface_count: ""
     tx_broadcast_packets: "887739"
@@ -150,14 +153,14 @@ parsed_sample:
     vlan_native: ""
     vlan_trunk: []
     vrf: ""
-  - aggregated_interfaces: []
+  - active_gateway_ip: ""
+    active_gateway_ip_mac: ""
+    active_gateway_source_mac: ""
+    aggregated_interfaces: []
     auto_neg: ""
     duplex: ""
     error_control: ""
     flow_control: ""
-    gw_ip: ""
-    gw_ip_mac: ""
-    gw_source_mac: ""
     hw_type: "Ethernet"
     if_type: ""
     interface: "vlan1"
@@ -169,9 +172,9 @@ parsed_sample:
     link_status: "up"
     link_transitions: ""
     mac_address: "bc:d7:a5:be:a5:00"
-    mdi: ""
+    mdi_mode: ""
     mtu: ""
-    netmask: ""
+    prefix_length: ""
     qos_trust: ""
     rx_broadcast_packets: ""
     rx_crc_fcs: ""
@@ -183,6 +186,7 @@ parsed_sample:
     rx_total_packets: ""
     rx_unicast_packets: ""
     secondary_ip_address: []
+    secondary_ip_prefix_length: []
     speed: ""
     subinterface_count: ""
     tx_broadcast_packets: ""
@@ -200,14 +204,14 @@ parsed_sample:
     vlan_native: ""
     vlan_trunk: []
     vrf: ""
-  - aggregated_interfaces: []
+  - active_gateway_ip: ""
+    active_gateway_ip_mac: ""
+    active_gateway_source_mac: ""
+    aggregated_interfaces: []
     auto_neg: ""
     duplex: ""
     error_control: ""
     flow_control: ""
-    gw_ip: ""
-    gw_ip_mac: ""
-    gw_source_mac: ""
     hw_type: "Ethernet"
     if_type: ""
     interface: "vlan3072"
@@ -219,9 +223,9 @@ parsed_sample:
     link_status: "up"
     link_transitions: ""
     mac_address: "bc:d7:a5:be:a5:00"
-    mdi: ""
+    mdi_mode: ""
     mtu: ""
-    netmask: "24"
+    prefix_length: "24"
     qos_trust: ""
     rx_broadcast_packets: ""
     rx_crc_fcs: ""
@@ -233,6 +237,7 @@ parsed_sample:
     rx_total_packets: ""
     rx_unicast_packets: ""
     secondary_ip_address: []
+    secondary_ip_prefix_length: []
     speed: ""
     subinterface_count: ""
     tx_broadcast_packets: ""
@@ -250,16 +255,16 @@ parsed_sample:
     vlan_native: ""
     vlan_trunk: []
     vrf: ""
-  - aggregated_interfaces:
+  - active_gateway_ip: ""
+    active_gateway_ip_mac: ""
+    active_gateway_source_mac: ""
+    aggregated_interfaces:
       - "1/1/51"
       - "1/1/52"
     auto_neg: ""
     duplex: ""
     error_control: ""
     flow_control: ""
-    gw_ip: ""
-    gw_ip_mac: ""
-    gw_source_mac: ""
     hw_type: ""
     if_type: ""
     interface: "lag1"
@@ -271,9 +276,9 @@ parsed_sample:
     link_status: "up"
     link_transitions: ""
     mac_address: "bc:d7:a5:be:a5:00"
-    mdi: ""
+    mdi_mode: ""
     mtu: ""
-    netmask: ""
+    prefix_length: ""
     qos_trust: "none"
     rx_broadcast_packets: "100895386"
     rx_crc_fcs: "0"
@@ -285,6 +290,7 @@ parsed_sample:
     rx_total_packets: "1539985886"
     rx_unicast_packets: "1205146435"
     secondary_ip_address: []
+    secondary_ip_prefix_length: []
     speed: "20000 Mb/s"
     subinterface_count: ""
     tx_broadcast_packets: "2617502"

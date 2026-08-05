@@ -1,13 +1,13 @@
 ---
 parsed_sample:
-  - aggregated_interfaces: []
+  - active_gateway_ip: "192.0.2.254"
+    active_gateway_ip_mac: "02:00:00:aa:bb:cc"
+    active_gateway_source_mac: "bc:d7:a5:aa:bb:cc"
+    aggregated_interfaces: []
     auto_neg: ""
     duplex: ""
     error_control: ""
     flow_control: ""
-    gw_ip: "192.0.2.254"
-    gw_ip_mac: "02:00:00:aa:bb:cc"
-    gw_source_mac: "bc:d7:a5:aa:bb:cc"
     hw_type: "Ethernet"
     if_type: ""
     interface: "vlan2"
@@ -19,9 +19,9 @@ parsed_sample:
     link_status: "up"
     link_transitions: ""
     mac_address: "bc:d7:a5:aa:bb:cc"
-    mdi: ""
+    mdi_mode: ""
     mtu: ""
-    netmask: "22"
+    prefix_length: "22"
     qos_trust: ""
     rx_broadcast_packets: ""
     rx_crc_fcs: ""
@@ -33,6 +33,7 @@ parsed_sample:
     rx_total_packets: ""
     rx_unicast_packets: ""
     secondary_ip_address: []
+    secondary_ip_prefix_length: []
     speed: ""
     subinterface_count: ""
     tx_broadcast_packets: ""

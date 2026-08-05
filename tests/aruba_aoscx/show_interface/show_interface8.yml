@@ -1,13 +1,13 @@
 ---
 parsed_sample:
-  - aggregated_interfaces: []
+  - active_gateway_ip: ""
+    active_gateway_ip_mac: ""
+    active_gateway_source_mac: ""
+    aggregated_interfaces: []
     auto_neg: "on"
     duplex: "Full"
     error_control: "off"
     flow_control: "off"
-    gw_ip: ""
-    gw_ip_mac: ""
-    gw_source_mac: ""
     hw_type: "Ethernet"
     if_type: "1GbT"
     interface: "1/1/10"
@@ -19,9 +19,9 @@ parsed_sample:
     link_status: "up"
     link_transitions: "1"
     mac_address: "9c:37:08:aa:bb:cc"
-    mdi: "MDI"
+    mdi_mode: "MDI"
     mtu: "2000"
-    netmask: ""
+    prefix_length: ""
     qos_trust: "none"
     rx_broadcast_packets: ""
     rx_crc_fcs: ""
@@ -33,6 +33,7 @@ parsed_sample:
     rx_total_packets: ""
     rx_unicast_packets: ""
     secondary_ip_address: []
+    secondary_ip_prefix_length: []
     speed: "1000 Mb/s"
     subinterface_count: "1"
     tx_broadcast_packets: ""
