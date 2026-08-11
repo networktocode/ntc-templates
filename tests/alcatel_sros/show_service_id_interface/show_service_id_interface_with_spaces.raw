@@ -1,0 +1,20 @@
+==============================================================================
+Interface Table
+==============================================================================
+Interface-Name                   Adm       Opr(v4/v6)  Type    Port/SapId
+   IP-Address                                                  PfxState
+------------------------------------------------------------------------------
+Gigaesat-1/1/4:1502.18           Up        Up/Up       VPRN    esat-1/1/4:15*
+   10.28.76.185/30                                             n/a
+   fe80:a8:2:280::2245/126                                     PREFERRED
+   fe80::fa:77ad:f065:b928/64                                  PREFERRED
+loopback10                       Up        Up/Down     VPRN    loopback
+   10.218.0.41/32                                              n/a
+Loopback 10 loop 2               Up        Down/Down   VPRN    loopback
+   -                                                           -
+loopback why are you like this?  Up        Up/Down     VPRN    loopback
+   10.218.128.43/32                                            n/a
+------------------------------------------------------------------------------
+Interfaces : 4
+==============================================================================
+* indicates that the corresponding row element may have been truncated.
