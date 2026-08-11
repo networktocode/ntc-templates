@@ -81,14 +81,14 @@ Start
   ^\s*Allowed\s+VLAN List\s*:\s+(?:[^,]+,){5}${VLAN_TRUNK},* -> Continue
   ^\s*Allowed\s+VLAN List\s*:
   ^\s*Link\s+state
-  ^\s*Aggregated-interfaces\s*:\s+${AGGREGATED_INTERFACES}\s* -> Continue
-  ^\s*Aggregated-interfaces\s*:\s+(?:\S+\s+){1}${AGGREGATED_INTERFACES}\s* -> Continue
-  ^\s*Aggregated-interfaces\s*:\s+(?:\S+\s+){2}${AGGREGATED_INTERFACES}\s* -> Continue
-  ^\s*Aggregated-interfaces\s*:\s+(?:\S+\s+){3}${AGGREGATED_INTERFACES}\s* -> Continue
-  ^\s*Aggregated-interfaces\s*:\s+(?:\S+\s+){4}${AGGREGATED_INTERFACES}\s* -> Continue
-  ^\s*Aggregated-interfaces\s*:\s+(?:\S+\s+){5}${AGGREGATED_INTERFACES}\s* -> Continue
-  ^\s*Aggregated-interfaces\s*:\s+(?:\S+\s+){6}${AGGREGATED_INTERFACES}\s* -> Continue
-  ^\s*Aggregated-interfaces\s*:\s+(?:\S+\s+){7}${AGGREGATED_INTERFACES}\s* -> Continue
+  ^\s*Aggregated-interfaces\s*:\s+${AGGREGATED_INTERFACES} -> Continue
+  ^\s*Aggregated-interfaces\s*:\s+(?:\S+\s+){1}${AGGREGATED_INTERFACES} -> Continue
+  ^\s*Aggregated-interfaces\s*:\s+(?:\S+\s+){2}${AGGREGATED_INTERFACES} -> Continue
+  ^\s*Aggregated-interfaces\s*:\s+(?:\S+\s+){3}${AGGREGATED_INTERFACES} -> Continue
+  ^\s*Aggregated-interfaces\s*:\s+(?:\S+\s+){4}${AGGREGATED_INTERFACES} -> Continue
+  ^\s*Aggregated-interfaces\s*:\s+(?:\S+\s+){5}${AGGREGATED_INTERFACES} -> Continue
+  ^\s*Aggregated-interfaces\s*:\s+(?:\S+\s+){6}${AGGREGATED_INTERFACES} -> Continue
+  ^\s*Aggregated-interfaces\s*:\s+(?:\S+\s+){7}${AGGREGATED_INTERFACES} -> Continue
   ^\s*Aggregated-interfaces\s*:
   ^\s*Aggregation-key
   ^\s*Subinterface\s+count
