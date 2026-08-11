@@ -124,10 +124,10 @@ SlotSection
   ^\s*Reboot\s+Cause\s*:\s*${REBOOT_CAUSE}
   ^\s*\[SubSlot\s+${SUBSLOT}\]\s+${SLOT_MODEL}(\s+Hardware\s+Version\s+is\s+Ver\.${SUBSLOT_VERSION})?
   # Chassis / Slot header transitions to SlotSection
-  ^\s*${SLOT_TYPE}\s+Chassis\s+${CHASSIS}\s+Slot\s+${SLOT}: -> SlotSection
-  ^\s*Chassis\s+${CHASSIS}\s+Slot\s+${SLOT}: -> SlotSection
-  ^\s*${SLOT_TYPE}\s+Slot\s+${SLOT}: -> SlotSection
-  ^\s*Slot\s+${SLOT}: -> SlotSection
-  ^\s*${SLOT_NAME}\s+${SLOT}: -> SlotSection
+  ^\s*${SLOT_TYPE}\s+Chassis\s+${CHASSIS}\s+Slot\s+${SLOT}:
+  ^\s*Chassis\s+${CHASSIS}\s+Slot\s+${SLOT}:
+  ^\s*${SLOT_TYPE}\s+Slot\s+${SLOT}:
+  ^\s*Slot\s+${SLOT}:
+  ^\s*${SLOT_NAME}\s+${SLOT}:
   ^\s*$$
   ^\s*. -> Error
