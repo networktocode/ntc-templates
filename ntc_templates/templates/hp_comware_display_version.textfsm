@@ -48,8 +48,8 @@ Value List POW_CHIP (\S+)
 Value List OAA_FRONT_BOARD (\S+)
 
 Start
-  ^\s*HPE?\s+Comware\s+(Platform\s+)?Software,\s+Version\s+${VERSION},\s+Release\s+${RELEASE} -> Start
-  ^\s*HPE?\s+Comware\s+Platform\s+Software -> Start
+  ^\s*HPE?\s+Comware\s+(Platform\s+)?Software,\s+Version\s+${VERSION},\s+Release\s+${RELEASE}
+  ^\s*HPE?\s+Comware\s+Platform\s+Software
   ^\s*Copyright
   ^\s*.*Comware\s+Software,\s+Version\s+${VERSION},\s+Release\s+${RELEASE}
   ^\s*${MODEL}\s+uptime\s+is\s+${UPTIME}
