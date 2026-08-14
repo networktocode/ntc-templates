@@ -1,0 +1,10 @@
+Flags: D - DYNAMIC; X - DISABLED, R - RUNNING, S - SLAVE
+Columns: NAME, DEFAULT-NAME, TYPE, MTU, ACTUAL-MTU, L2MTU, MAX-L2MTU, MAC-ADDRESS
+ 0  R  name=ether1 default-name=ether1 type=ether mtu=1500 actual-mtu=1500 l2mtu=1596 max-l2mtu=9578 mac-address=12:34:56:78:90:01 fast-path=yes ifname=ether1 ifindex=1 id=1 last-link-down-time=jan/01/2026 00:00:03 last-link-up-time=jan/01/2026 00:00:09 link-downs=2
+ 1  R  comment=uplink to core name=ether2 default-name=ether2 type=ether mtu=1500 actual-mtu=1500 l2mtu=1596 max-l2mtu=9578 mac-address=12:34:56:78:90:02 ifname=ether2 ifindex=2 id=2 last-link-up-time=jan/01/2026 00:00:09 link-downs=0
+ 2     name=ether3 default-name=ether3 type=ether mtu=1500 actual-mtu=1500 l2mtu=1596 max-l2mtu=9578 mac-address=12:34:56:78:90:03 ifname=ether3 ifindex=3 id=3 link-downs=0
+ 3  R  name=lan-bridge type=bridge mtu=auto actual-mtu=1500 l2mtu=1594 vrf=myvrf mac-address=12:34:56:78:90:10 ifname=lan-bridge ifindex=4 id=4 last-link-up-time=jan/01/2026 00:00:11 link-downs=0
+ 4  RS name=vlan100 type=vlan mtu=1500 actual-mtu=1500 l2mtu=1590 mac-address=12:34:56:78:90:11 ifname=vlan100 ifindex=5 id=5 link-downs=0 switch=switch1
+ 5 D S name=vlan200 type=vlan mtu=1500 actual-mtu=1500 l2mtu=1590 mac-address=12:34:56:78:90:12 ifindex=6 link-downs=0
+ 6 DXS name=vlan300 type=vlan mac-address=12:34:56:78:90:13 id=7 link-downs=0
+ 7  R  name=lo type=loopback mtu=65536 actual-mtu=65536 mac-address=00:00:00:00:00:00 ifname=lo ifindex=8 id=8 last-link-up-time=jan/01/2026 00:00:11 link-downs=0
