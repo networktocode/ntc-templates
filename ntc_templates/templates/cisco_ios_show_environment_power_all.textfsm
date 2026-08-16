@@ -8,10 +8,13 @@ Value WATTS (\w+)
 
 Start
   ^\s*SW\s+PID\s+Serial#\s+Status\s+Sys\s+Pwr\s+PoE\s+Pwr\s+Watts$$
+  ^\s*Power\s+Source\s+Type\s+Power\(w\)\s+Mode\s*$$
   ^--+
   ^${PS_MODULE}\s+${PID}\s+${SERIAL}\s+${STATUS}\s+${SYS_PWR}\s+${POE_PWR}\s+${WATTS}\s*(/\d+)?\s*$$ -> Record
   # when power supplies are not present/installed
   ^${PS_MODULE}\s+${PID}$$ -> Record
+  # external PSUs such as 9200CX
+  ^${PID}\s+${PS_MODULE}\s+${WATTS}\(w\)\s+${STATUS}\s*$$ -> Record
   # built-in PSUs such as 2960-S, 2960-X, 3750G
   ^\s*${PS_MODULE}\s+${PID}\s+${SYS_PWR}\s*$$ -> Record
   # Capture time-stamp if vty line has command time-stamping turned on
