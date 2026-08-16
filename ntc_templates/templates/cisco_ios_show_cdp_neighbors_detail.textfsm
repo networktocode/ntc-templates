@@ -80,7 +80,7 @@ GetVersion
 NewVersion
   # Parse directly relevant information of the version of the software
   ^\s*${SOFTWARE}\s*,\s*${SOFTWARE_FAMILY}\s*,\s*[^,]*\bVersion\s*:?\s*${SOFTWARE_VERSION}\s*,*\s*.*$$
-  ^\s*${SOFTWARE}\s*,*\s*${SOFTWARE_FAMILY}\s*,*s*[^,]*\bVersion\s*:?\s*${SOFTWARE_VERSION}\s*,*\s*.*$$
+  ^\s*${SOFTWARE}\s*,*\s*${SOFTWARE_FAMILY}\s*,*\s*[^,]*\bVersion\s*:?\s*${SOFTWARE_VERSION}\s*,*\s*.*$$
   # get whatever is provided
   ^${VERSION}
   ^\s*$$ -> Start
