@@ -69,11 +69,13 @@ ParseIP
   ^\s*IP address:\s*${MGMT_ADDRESS}\s*$$
   ^\s*IPv6 address:\s*${INTERFACE_IPV6}\s*\(.*\)\s*$$
   ^\s*Platform\s*:\s*${PLATFORM}\s*,\s*Capabilities\s*:\s*${CAPABILITIES}\s*$$ -> Start
+  ^. -> Error
 
 GetVersion
   # For compatibility with legacy templates
   ^${NEIGHBOR_DESCRIPTION} -> NewVersion
   # Match software line with version info for Cisco Devices
+  ^. -> Error
 
 NewVersion
   # Parse directly relevant information of the version of the software
@@ -82,14 +84,16 @@ NewVersion
   # get whatever is provided
   ^${VERSION}
   ^\s*$$ -> Start
-
+  ^. -> Error
 
 ParseMgmtIP
   ^\s*IP address:\s*${MGMT_IP_ADDRESS}\s*$$ -> Start
   ^$$ -> Start
+  ^. -> Error
 
 PwrAvail
   # Optional: tolerate blank lines or unrelated lines after the header without failing.
   ^\s*$$  -> PwrAvail
   # Match the detail line (allow indentation and flexible spaces/commas).
   ^\s*Power\s*request\s*id\s*:\s*${POWER_REQUEST_ID}\s*,\s*Power\s*management\s*id\s*:\s*${POWER_MGMT_ID}\s*,\s*Power\s*available\s*:\s*${POWER_AVAILABLE}\s*,\s*Power\s*management\s*level\s*:\s*${POWER_MGMT_LEVEL}\s*$$ -> Start
+  ^. -> Error
