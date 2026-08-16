@@ -1,6 +1,7 @@
 ---
 parsed_sample:
   - capabilities: "Router Switch"
+    cdp_version: "2"
     duplex: "full"
     duplex_mismatch: ""
     holdtime: "129"
@@ -30,8 +31,8 @@ parsed_sample:
       - "Copyright (c) 1986-2024 by Cisco Systems, Inc."
       - "Compiled Tue 30-Jan-24 15:48 by mcpre"
     vtp_domain: "'vtp-324'"
-    vtp_version: "2"
   - capabilities: "Router Switch"
+    cdp_version: "2"
     duplex: "full"
     duplex_mismatch: ""
     holdtime: "143"
@@ -61,4 +62,3 @@ parsed_sample:
       - "Copyright (c) 1986-2024 by Cisco Systems, Inc."
       - "Compiled Tue 30-Jan-24 15:48 by mcpre"
     vtp_domain: "'vtp-324'"
-    vtp_version: "2"

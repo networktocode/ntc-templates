@@ -13,7 +13,7 @@ Value SOFTWARE_FAMILY (.*)
 Value List VERSION (\S.*)
 Value SERIAL (\S+)
 Value VTP_DOMAIN (.+)
-Value VTP_VERSION (\d+)
+Value CDP_VERSION (\d+)
 Value NATIVE_VLAN (\d+)
 Value DUPLEX (\S+)
 Value DUPLEX_MISMATCH (\S+)
@@ -38,7 +38,7 @@ Start
   ^Version\s*:\s*$$ -> GetVersion
   ^Version\s*:\s*$$ -> NewVersion
   # Various optional parameters
-  ^advertisement\s+version\s*:\s*${VTP_VERSION}\s*$$
+  ^advertisement\s+version\s*:\s*${CDP_VERSION}\s*$$
   ^Peer\s*Source\s*MAC:\s*${PEER_MAC}\s*$$
   ^VTP Management Domain\s*:\s*${VTP_DOMAIN}\s*$$
   ^Native VLAN\s*:\s*${NATIVE_VLAN}\s*$$

@@ -1,6 +1,7 @@
 ---
 parsed_sample:
   - capabilities: "Switch IGMP"
+    cdp_version: "2"
     duplex: "full"
     duplex_mismatch: ""
     holdtime: "164"
@@ -30,8 +31,8 @@ parsed_sample:
       - "Copyright (c) 1986-2014 by Cisco Systems, Inc."
       - "Compiled Mon 03-Mar-14 22:53 by prod_rel_team"
     vtp_domain: "''"
-    vtp_version: "2"
   - capabilities: "Router Switch IGMP"
+    cdp_version: "2"
     duplex: "full"
     duplex_mismatch: ""
     holdtime: "156"
@@ -61,8 +62,8 @@ parsed_sample:
       - "Copyright (c) 1986-2009 by Cisco Systems, Inc."
       - "Compiled Fri 19-Jun-09 18:40 by prod_rel_team"
     vtp_domain: "''"
-    vtp_version: "2"
   - capabilities: "Host"
+    cdp_version: "2"
     duplex: "full"
     duplex_mismatch: ""
     holdtime: "145"
@@ -89,8 +90,8 @@ parsed_sample:
     unidirectional_mode: ""
     version: []
     vtp_domain: ""
-    vtp_version: "2"
   - capabilities: "Router Switch IGMP"
+    cdp_version: "2"
     duplex: "full"
     duplex_mismatch: ""
     holdtime: "173"
@@ -120,4 +121,3 @@ parsed_sample:
       - "Copyright (c) 1986-2015 by Cisco Systems, Inc."
       - "Compiled Wed 15-Apr-15 00:42 by mmen"
     vtp_domain: ""
-    vtp_version: "2"
