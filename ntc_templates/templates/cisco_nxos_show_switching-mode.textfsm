@@ -7,4 +7,4 @@ Start
   ^\s*Module\s*Number\s*Operational\s*Mode\s*$$
   ^\s*${MODULE_NUMBER}\s*${OPERATIONAL_MODE}\s*$$ -> Record
   ^\s*$$
- ^. -> Error
+  ^. -> Error
