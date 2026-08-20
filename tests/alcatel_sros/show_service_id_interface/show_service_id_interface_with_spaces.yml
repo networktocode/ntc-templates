@@ -44,3 +44,13 @@ parsed_sample:
       - "n/a"
     port_sap_id: "loopback"
     type: "VPRN"
+  - admin_state: "Up"
+    interface_name: "e1"
+    ip_address:
+      - "10.11.12.13/32"
+    oper_state_v4: "Up"
+    oper_state_v6: "Down"
+    pfx_state:
+      - "n/a"
+    port_sap_id: "e1"
+    type: "IES"
