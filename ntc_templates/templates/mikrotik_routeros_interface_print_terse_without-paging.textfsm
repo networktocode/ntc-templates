@@ -21,8 +21,6 @@ Value LAST_LINK_UP_TIME (\S+\s\S+)
 Value LINK_DOWNS (\d+)
 
 Start
-  ^\s*Flags:.*$$
-  ^\s*Columns:.*$$
-  ^\s*${ID}\s+(?:${DYNAMIC})?(?:${STATUS}|\s)?(?:${SLAVE})?\s+(comment=${COMMENT}\s+)?name=${NAME}(\s+default-name=${DEFAULT_NAME})?\s+type=${TYPE}(\s+mtu=${MTU})?(\s+actual-mtu=${ACTUAL_MTU})?(\s+l2mtu=${L2MTU})?(\s+max-l2mtu=${MAX_L2MTU})?(\s+vrf=${VRF})?(\s+mac-address=${MAC_ADDRESS})?(\s+fast-path=${FAST_PATH})?(\s+ifname=${IFNAME})?(\s+ifindex=${IFINDEX})?(\s+id=${INTERFACE_ID})?(\s+last-link-down-time=${LAST_LINK_DOWN_TIME})?(\s+last-link-up-time=${LAST_LINK_UP_TIME})?(\s+link-downs=${LINK_DOWNS})?(\s+\S+=\S+)*\s*$$ -> Record
+  ^\s*${ID}\s+(?:${DYNAMIC})?(?:${STATUS}|\s)?(?:${SLAVE})?\s+(comment=${COMMENT}\s+)?name=${NAME}(\s+default-name=${DEFAULT_NAME})?\s+type=${TYPE}(\s+mtu=${MTU})?(\s+actual-mtu=${ACTUAL_MTU})?(\s+l2mtu=${L2MTU})?(\s+max-l2mtu=${MAX_L2MTU})?(\s+vrf=${VRF})?(\s+mac-address=${MAC_ADDRESS})?(\s+fast-path=${FAST_PATH})?(\s+ifname=${IFNAME})?(\s+ifindex=${IFINDEX})?(\s+id=${INTERFACE_ID})?(\s+last-link-down-time=${LAST_LINK_DOWN_TIME})?(\s+last-link-up-time=${LAST_LINK_UP_TIME})?(\s+link-downs=${LINK_DOWNS})?\s*$$ -> Record
   ^\s*$$
   ^. -> Error
