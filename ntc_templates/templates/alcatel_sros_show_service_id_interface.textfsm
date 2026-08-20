@@ -1,4 +1,4 @@
-Value Required INTERFACE_NAME (\S.+\S)
+Value Required INTERFACE_NAME (\S+(?:\s+\S+)*)
 Value Required ADMIN_STATE (Up|Down)
 Value Required OPER_STATE_V4 (Up|Down)
 Value Required OPER_STATE_V6 (Up|Down)
