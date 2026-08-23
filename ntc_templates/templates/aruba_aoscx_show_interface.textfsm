@@ -3,7 +3,7 @@ Value LINK_STATUS (\w+)
 Value LINK_ADMIN (\w+)
 Value LINK_STATE_INFO (\.*)
 Value LINK_TRANSITIONS (\d+)
-Value INTERFACE_DESC (.*)
+Value DESCRIPTION (.*)
 Value HW_TYPE (\w+)
 Value MAC_ADDRESS (\S+)
 Value MTU (\d+)
@@ -55,7 +55,7 @@ Start
   ^\s*(Interface|Aggregate)\s+${INTERFACE}\s+is\s+${LINK_STATUS}
   ^\s*Admin\s+state\s+is\s+${LINK_ADMIN}
   ^\s*Link\s+transitions\s*:\s+${LINK_TRANSITIONS}
-  ^\s*Description\s*:\s*${INTERFACE_DESC}
+  ^\s*Description\s*:\s*${DESCRIPTION}
   ^\s*State\s+information\s*:\s+${LINK_STATE_INFO}
   ^\s*Hardware\s*:\s+${HW_TYPE},?\s*MAC\s+Address:\s+${MAC_ADDRESS}
   ^\s*MAC\s+Address\s*:\s+${MAC_ADDRESS}
