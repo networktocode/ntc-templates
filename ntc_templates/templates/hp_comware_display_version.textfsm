@@ -1,0 +1,133 @@
+Value Filldown VERSION (\S+)
+Value Filldown RELEASE (\S+)
+Value Filldown MODEL (.+?)
+Value Filldown UPTIME (.+)
+Value Filldown LAST_REBOOT_REASON (.+)
+Value Filldown BOOT_IMAGE (\S+)
+Value Filldown BOOT_IMAGE_VERSION (\S+)
+Value Filldown BOOT_RELEASE (\S+)
+Value Filldown BOOT_COMPILE_DATE (.+)
+Value Filldown SYSTEM_IMAGE (\S+)
+Value Filldown SYSTEM_IMAGE_VERSION (\S+)
+Value Filldown SYSTEM_RELEASE (\S+)
+Value Filldown SYSTEM_COMPILE_DATE (.+)
+Value List SLOT_TYPE (\S+)
+Value List CHASSIS (\d+)
+Value List SLOT (\d+)
+Value List STATUS (Without Board)
+Value List SLOT_UPTIME (.+)
+Value List BOARD_TYPE (.+)
+Value List CARD_TYPE (.+)
+Value List DRAM (\d+\w*)
+Value List FLASH (\d+\w*)
+Value List NAND_FLASH (\d+\w*)
+Value List NOR_FLASH (\d+\w*)
+Value List NVRAM (\d+\w*)
+Value List BOOTROM_VERSION (\S+)
+Value List PATCH_VERSION (\S+)
+Value List REBOOT_CAUSE (\S+)
+Value List HW_VERSION (\S+)
+Value List CPLDA (\d+)
+Value List CPLDB (\d+)
+Value List SUBSLOT (\d+)
+Value List SLOT_MODEL (.+?)
+Value List SUBSLOT_VERSION (\S+)
+Value List PCB (\S+)
+Value List PCB_VERSION (\S+)
+Value List CPLD (\d+)
+Value List CPLD_VERSION (\S+)
+Value List POWER_CPLD (\d+)
+Value List POWER_CPLD_VERSION (\S+)
+Value List RELEASE_VERSION (.+)
+Value List BOARD_PROCESSOR_COUNT (\d+)
+Value List BOARD_PROCESSOR_MODEL (\S+)
+Value List FPGA (\S+)
+Value List FPGA_VERSION (\S+)
+Value List SLOT_NAME (MPU.*|LPU)
+Value List POW_CHIP (\S+)
+Value List OAA_FRONT_BOARD (\S+)
+
+Start
+  ^\s*HPE?\s+Comware\s+(Platform\s+)?Software,\s+Version\s+${VERSION},\s+Release\s+${RELEASE}
+  ^\s*HPE?\s+Comware\s+Platform\s+Software
+  ^\s*Copyright
+  ^\s*.*Comware\s+Software,\s+Version\s+${VERSION},\s+Release\s+${RELEASE}
+  ^\s*${MODEL}\s+uptime\s+is\s+${UPTIME}
+  ^\s*Last\s+reboot\s+reason\s*:\s*${LAST_REBOOT_REASON}
+  ^\s*Boot\s+image:\s+${BOOT_IMAGE}
+  ^\s*Boot\s+image\s+version:\s+${BOOT_IMAGE_VERSION},\s+Release\s+${BOOT_RELEASE} -> BootImageCompileDate
+  ^\s*System\s+image:\s+${SYSTEM_IMAGE}
+  ^\s*System\s+image\s+version:\s+${SYSTEM_IMAGE_VERSION},\s+Release\s+${SYSTEM_RELEASE} -> SystemImageCompileDate
+  # Standalone switch rules (e.g. HP 5800)
+  ^\s*${DRAM}\s+bytes\s+SDRAM
+  ^\s*${NOR_FLASH}\s+bytes\s+Nor\s+Flash\s+Memory
+  ^\s*${NAND_FLASH}\s+bytes\s+Nand\s+Flash\s+Memory
+  ^\s*${FLASH}\s+bytes\s+Flash\s+Memory
+  ^\s*Config\s+Register\s+points\s+to\s+Nand\s+Flash
+  ^\s*Hardware\s+Version\s+is\s+(Ver|REV)\.${HW_VERSION}
+  ^\s*CPLDA\s+Version\s+is\s+${CPLDA},\s+CPLDB\s+Version\s+is\s+${CPLDB}
+  ^\s*CPLD(\s+${CPLD})?\s+Version(:|\s+is)\s+${CPLD_VERSION}
+  ^\s*Power\s+CPLD(\s+${POWER_CPLD})?\s+Version(:|\s+is)\s+${POWER_CPLD_VERSION}
+  ^.*\S*\s*Boot\S+\s+Version(:|\s+is)\s+${BOOTROM_VERSION}\s*
+  ^\s*\[SubSlot\s+${SUBSLOT}\]\s+(${SLOT_MODEL}\s+Hardware\s+Version\s+is\s+Ver\.${SUBSLOT_VERSION})?
+  ^\s*FPGA(\s+${FPGA})?\s+Version:\s+${FPGA_VERSION}
+  ^\s*${BOARD_TYPE}\s+with\s+\d+\s+Processors?
+  # Chassis / Slot header transitions to SlotSection
+  ^\s*${SLOT_TYPE}\s+Chassis\s+${CHASSIS}\s+Slot\s+${SLOT}: -> SlotSection
+  ^\s*Chassis\s+${CHASSIS}\s+Slot\s+${SLOT}: -> SlotSection
+  ^\s*${SLOT_TYPE}\s+Slot\s+${SLOT}: -> SlotSection
+  ^\s*Slot\s+${SLOT}:? -> SlotSection
+  ^\s*${SLOT_NAME}\s+${SLOT}: -> SlotSection
+  ^\s*(?:${SLOT_TYPE}\s+)?(?:Chassis\s+${CHASSIS}\s+)?Slot\s+${SLOT}\s+${STATUS} -> SlotSection
+  ^\s*$$
+  ^\s*. -> Error
+
+
+BootImageCompileDate
+  ^\s+Compiled\s+${BOOT_COMPILE_DATE} -> Start
+
+SystemImageCompileDate
+  ^\s+Compiled\s+${SYSTEM_COMPILE_DATE} -> Start
+
+SlotSection
+  # Flush completed slot record prior to parsing the next slot line
+  ^\s*(Chassis\s+\d+\s+)?Slot\s+\d+ -> Continue.Record
+  # Slot header capture rules
+  ^\s*${SLOT_TYPE}\s+Chassis\s+${CHASSIS}\s+Slot\s+${SLOT}:
+  ^\s*Chassis\s+${CHASSIS}\s+Slot\s+${SLOT}:
+  ^\s*${SLOT_TYPE}\s+Slot\s+${SLOT}:
+  ^\s*Slot\s+${SLOT}:
+  ^\s*(${SLOT_TYPE}\s+)?(?:Chassis\s+${CHASSIS}\s+)?Slot\s+${SLOT}\s+${STATUS}
+  # Slot attribute rules
+  ^\s*Uptime\s+is\s+${SLOT_UPTIME}
+  ^\s*${CARD_TYPE}\s+with\s+${BOARD_PROCESSOR_COUNT}(\s+${BOARD_PROCESSOR_MODEL})?\s+Processors?
+  ^\s*BOARD\s+TYPE:\s+${BOARD_TYPE}
+  ^\s*DRAM:\s+${DRAM}
+  ^\s*${DRAM}\s+bytes\s+SDRAM
+  ^\s*FLASH:\s+${FLASH}
+  ^\s*${NOR_FLASH}\s+bytes\s+Nor\s+Flash\s+Memory
+  ^\s*${NAND_FLASH}\s+bytes\s+Nand\s+Flash\s+Memory
+  ^\s*NVRAM:\s+${NVRAM}
+  ^\s*PCB\s+${PCB}\s+Version:\s+(VER.${PCB_VERSION})?
+  ^\s*FPGA(\s+${FPGA})?\s+Version:\s+${FPGA_VERSION}
+  ^\s*Config\s+Register\s+points\s+to\s+Nand\s+Flash
+  ^\s*CPLD(\s+${CPLD})?\s+Version(:|\s+is)\s+${CPLD_VERSION}
+  ^\s*CPLDA\s+Version\s+is\s+${CPLDA},\s+CPLDB\s+Version\s+is\s+${CPLDB}
+  ^\s*Hardware\s+Version\s+is\s+(Ver|REV)\.${HW_VERSION}
+  ^\s*Power\s+CPLD(\s+${POWER_CPLD})?\s+Version(:|\s+is)\s+${POWER_CPLD_VERSION}
+  ^\s*OAA\s+Front\s+Board:\s+${OAA_FRONT_BOARD}
+  ^.*\S*\s*Boot\S+\s+Version(:|\s+is)\s+${BOOTROM_VERSION}\s*
+  ^\s*Last\s+reboot\s+reason\s*:\s*${LAST_REBOOT_REASON}
+  ^\s*PowChip\s+Version:\s+${POW_CHIP}
+  ^\s*Release\s+Version:\s+${RELEASE_VERSION}
+  ^\s*Patch\s+Version\s*:\s*${PATCH_VERSION}
+  ^\s*Reboot\s+Cause\s*:\s*${REBOOT_CAUSE}
+  ^\s*\[SubSlot\s+${SUBSLOT}\]\s+${SLOT_MODEL}(\s+Hardware\s+Version\s+is\s+Ver\.${SUBSLOT_VERSION})?
+  # Chassis / Slot header transitions to SlotSection
+  ^\s*${SLOT_TYPE}\s+Chassis\s+${CHASSIS}\s+Slot\s+${SLOT}:
+  ^\s*Chassis\s+${CHASSIS}\s+Slot\s+${SLOT}:
+  ^\s*${SLOT_TYPE}\s+Slot\s+${SLOT}:
+  ^\s*Slot\s+${SLOT}:
+  ^\s*${SLOT_NAME}\s+${SLOT}:
+  ^\s*$$
+  ^\s*. -> Error
