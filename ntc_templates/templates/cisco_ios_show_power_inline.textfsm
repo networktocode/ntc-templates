@@ -10,6 +10,7 @@ Start
   ^Interface\s+Admin\s+Oper\s+Power\s+Device\s+Class\s+Max\s*$$ -> Interfaces
   ^Interface\s+Admin\s+Oper\s+Power\(Watts\)\s+Device\s+Class\s*$$ -> Interfaces45xx
   ^Interface\s+Admin\s+(Priority\s+)?Oper\s+Power\(Watts\)\s+Device\s+Class\s+Police\s+Act(ual)?Consumption\s*$$ -> Interfaces6xxx
+  ^PowerSupply\s+SlotNum\.\s+Maximum\s+Allocated\s+Status$$ -> ISR
   ^Available:
   ^Module
   ^\d+
@@ -42,4 +43,13 @@ Interfaces6xxx
   ^---+
   ^\s*${INTERFACE}\s+${ADMIN_STATUS}(\s+\S+)?\s+${OPERATIONAL_STATUS}\s+\d+(\.\d+)?\s+${POWER}\s+${DEVICE}\s+${CLASS}\s+\S+\s+\S+\s*$$ -> Record
   ^Totals:\s+\d+\s+pd\(s\)\s+\S+\s+\S+\s+\S+\s*$$
+  ^. -> Error
+
+ISR
+  ^INT-PS
+  ^Interface\s+Config\s+Device\s+Powered\s+PowerAllocated$$
+  ^---+
+  ^${INTERFACE}\s+${ADMIN_STATUS}\s+${DEVICE}\s+${OPERATIONAL_STATUS}\s+${POWER}\s+Watts\s*$$
+  ^Ethernet\s+Switch
+  ^\s+properly\s+upon
   ^. -> Error
