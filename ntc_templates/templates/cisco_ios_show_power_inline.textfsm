@@ -9,7 +9,7 @@ Value MAX (\d+\.\d+)
 Start
   ^Interface\s+Admin\s+Oper\s+Power\s+Device\s+Class\s+Max\s*$$ -> Interfaces
   ^Interface\s+Admin\s+Oper\s+Power\(Watts\)\s+Device\s+Class\s*$$ -> Interfaces45xx
-  ^Interface\s+Admin\s+Priority\s+Oper\s+Power\(Watts\)\s+Device\s+Class\s+Police\s+ActConsumption\s*$$ -> Interfaces6xxx
+  ^Interface\s+Admin\s+(Priority\s+)?Oper\s+Power\(Watts\)\s+Device\s+Class\s+Police\s+Act(ual)?Consumption\s*$$ -> Interfaces6xxx
   ^Available:
   ^Module
   ^\d+
@@ -38,7 +38,8 @@ Interfaces45xx
 
 Interfaces6xxx
   ^\s+\(enabled\s*\)\s+From\s+PS\s+To\s+PD\s*$$
+  ^\s+From\s+PS\s+To\s+Device\s*$$
   ^---+
-  ^\s*${INTERFACE}\s+${ADMIN_STATUS}\s+\S+\s+${OPERATIONAL_STATUS}\s+\d+(\.\d+)?\s+${POWER}\s+${DEVICE}\s+${CLASS}\s+\S+\s+\S+\s*$$ -> Record
+  ^\s*${INTERFACE}\s+${ADMIN_STATUS}(\s+\S+)?\s+${OPERATIONAL_STATUS}\s+\d+(\.\d+)?\s+${POWER}\s+${DEVICE}\s+${CLASS}\s+\S+\s+\S+\s*$$ -> Record
   ^Totals:\s+\d+\s+pd\(s\)\s+\S+\s+\S+\s+\S+\s*$$
   ^. -> Error
