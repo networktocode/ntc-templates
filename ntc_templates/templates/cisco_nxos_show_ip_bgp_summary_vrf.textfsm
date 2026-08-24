@@ -24,6 +24,3 @@ Start
   ^${BGP_NEIGH}\s+${BGP_VER}\s+${NEIGH_AS}\s+${MSG_RCVD}\s+${MSG_SENT}\s+${TBLVER}\s+${IN_QUEUE}\s+${OUT_QUEUE}\s+${UP_DOWN}\s+${STATE_PFXRCD}\s*$$ -> Record
   # Match lines that are spaces
   ^\s+$$
-
-Done
-  ^.*

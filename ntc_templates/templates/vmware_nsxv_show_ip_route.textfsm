@@ -7,4 +7,4 @@ Value METRIC (\d+)
 Value NEXTHOP (\d+(\.\d+){3})
 
 Start
-	^${PROTOCOL}\s+${TYPE}\s+${IP_ADDRESS}\/${PREFIX_LENGTH}\s+\[${DISTANCE}\/${METRIC}\]\s+via\s+${NEXTHOP} -> Next.Record
+  ^${PROTOCOL}\s+${TYPE}\s+${IP_ADDRESS}\/${PREFIX_LENGTH}\s+\[${DISTANCE}\/${METRIC}\]\s+via\s+${NEXTHOP} -> Next.Record
