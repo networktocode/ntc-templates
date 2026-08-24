@@ -12,7 +12,7 @@ Start
   ^Available:
   ^Module
   ^\d+
-  ^-+
+  ^---+
   ^\s+\(Watts\)
   ^\s*$$
   ^%No\s+inline\s+power\s+card\s+on\s+switch\s*$$
@@ -26,14 +26,14 @@ Interfaces
   ^\s*${INTERFACE}\s+${ADMIN_STATUS}\s+${OPERATIONAL_STATUS}\s+${POWER}\s+${DEVICE}\s+${CLASS}\s+${MAX}\s*$$ -> Record
   ^\s*${INTERFACE}\s+${ADMIN_STATUS}\s+${OPERATIONAL_STATUS}\s+${POWER}\s*$$ -> Record
   ^\s+\(Watts\)
-  ^-+
+  ^---+
   ^\s*$$ -> Start
   ^. -> Error
 
 Interfaces45xx
   ^\s*${INTERFACE}\s+${ADMIN_STATUS}\s+${OPERATIONAL_STATUS}\s+\d+\.\d+\s+${POWER}\s+${DEVICE}\s+${CLASS}\s*$$ -> Record
   ^\s+From\s+PS\s+To\s+Device\s*$$
-  ^-+
+  ^---+
   ^\s*$$
   ^Totals:.*
   ^. -> Error
