@@ -1,0 +1,72 @@
+Ethernet49 is up, line protocol is up (connected)
+  Hardware is Ethernet, address is 985d.82b8.fb26 (bia 985d.82b8.fb26)
+  Member of Port-Channel1
+  Ethernet MTU 9214 bytes, BW 10000000 kbit
+  Full-duplex, 10Gb/s, auto negotiation: off, uni-link: n/a
+  Up 17 minutes, 32 seconds
+  Loopback Mode : None
+  4 link status changes since last clear
+  Last clearing of "show interface" counters 0:27:02 ago
+  5 minutes input rate 7.39 kbps (0.0% with framing overhead), 6 packets/sec
+  5 minutes output rate 15.4 kbps (0.0% with framing overhead), 10 packets/sec
+     7084 packets input, 1015083 bytes
+     Received 2180 broadcasts, 2051 multicast
+     0 runts, 0 giants
+     0 input errors, 0 CRC, 0 alignment, 0 symbol, 0 input discards
+     0 PAUSE input
+     11644 packets output, 2229928 bytes
+     Sent 1921 broadcasts, 5293 multicast
+Loopback0 is administratively down, line protocol is down (disabled)
+  Hardware is Loopback
+  Internet address is 44.44.44.44/32
+  Broadcast address is 255.255.255.255
+  IP MTU 65535 bytes (default)
+  Down 4 minutes, 2 seconds
+Loopback2 is administratively down, line protocol is down (disabled)
+  Hardware is Loopback
+  Internet address is 22.22.22.22/32
+  Broadcast address is 255.255.255.255
+  IP MTU 65535 bytes (default)
+  Down 3 minutes, 55 seconds
+Management1 is up, line protocol is up (connected)
+  Hardware is Ethernet, address is 985d.82b8.faf4 (bia 985d.82b8.faf4)
+  Internet address is 10.16.100.5/24
+  Broadcast address is 255.255.255.255
+  IP MTU 1500 bytes (default), BW 1000000 kbit
+  Full-duplex, 1Gb/s, auto negotiation: on, uni-link: n/a
+  Up 8 minutes, 57 seconds
+  Loopback Mode : None
+  8 link status changes since last clear
+  Last clearing of "show interface" counters 0:27:02 ago
+  5 minutes input rate 12.9 kbps (0.0% with framing overhead), 9 packets/sec
+  5 minutes output rate 1.67 kbps (0.0% with framing overhead), 1 packets/sec
+     7444 packets input, 1360817 bytes
+     Received 2719 broadcasts, 4383 multicast
+     0 runts, 0 giants
+     655 input errors, 274 CRC, 248 alignment, 0 symbol, 0 input discards
+     0 PAUSE input
+     905 packets output, 167687 bytes
+     Sent 14 broadcasts, 702 multicast
+     0 output errors, 0 collisions
+     0 late collision, 4 deferred, 0 output discards
+     0 PAUSE output
+Port-Channel1 is up, line protocol is up (connected)
+  Hardware is Port-Channel, address is 985d.82b8.fb26
+  Ethernet MTU 9214 bytes, BW 10000000 kbit
+  Full-duplex, 10Gb/s 
+  Active members in this channel: 1
+  ... Ethernet49 , Full-duplex, 10Gb/s
+  Fallback mode is: off
+  Up 17 minutes, 30 seconds
+  2 link status changes since last clear
+  Last clearing of "show interface" counters never
+  5 minutes input rate 7.39 kbps (0.0% with framing overhead), 6 packets/sec
+  5 minutes output rate 15.4 kbps (0.0% with framing overhead), 10 packets/sec
+     7084 packets input, 1015083 bytes
+     Received 2180 broadcasts, 2051 multicast
+     0 input errors, 0 input discards
+     11644 packets output, 2229928 bytes
+     Sent 1921 broadcasts, 5293 multicast
+     0 output errors, 0 output discards 0 output errors, 0 collisions
+     0 late collision, 0 deferred, 0 output discards
+     0 PAUSE output
