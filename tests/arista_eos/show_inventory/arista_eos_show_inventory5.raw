@@ -1,0 +1,81 @@
+System information
+  Model                    Description                                          
+  ------------------------ ---------------------------------------------------- 
+  DCS-7504                 DCS-7504 Chassis                                     
+
+  HW Version  Serial Number  Mfg Date   Epoch 
+  ----------- -------------- ---------- ----- 
+  02.00       NMW73494474    2015-05-08 00.00 
+
+System has 12 card slots
+  Module        Model           HW Version   Serial Number   Mfg Date     Epoch 
+  ------------- --------------- ------------ --------------- ------------ ----- 
+  Supervisor1   DCS-7500E-SUP   02.02        UYG13869875     2015-04-29   00.00 
+  Supervisor2   DCS-7500E-SUP   02.02        XBO60798591     2015-04-29   00.00 
+  Linecard3     7500E-72S-LC    02.00        HTO67444972     2015-05-27   00.00 
+  Linecard4     7500E-72S-LC    02.00        PTA02093377     2015-05-26   00.00 
+  Linecard5     7500E-36Q-LC    03.04        SOT35897684     2018-05-23   00.00 
+  Linecard6     7500E-36Q-LC    03.00        CVQ85772640     2015-05-26   00.00 
+  Fabric1       7504E-FM        01.02        YUM42966220     2015-05-22   00.00 
+  Fabric2       7504E-FM        01.02        TUC24327037     2015-05-22   00.00 
+  Fabric3       7504E-FM        01.02        LYA59864415     2015-05-22   00.00 
+  Fabric4       7504E-FM        01.02        PFE44760881     2015-05-22   00.00 
+  Fabric5       7504E-FM        01.02        HCQ16261500     2015-05-22   00.00 
+  Fabric6       7504E-FM        01.02        AEI97759630     2015-05-22   00.00 
+
+System has 4 power supply slots
+  Slot Model            Serial Number    
+  ---- ---------------- ---------------- 
+  1    PWR-2900AC       D731UL17ASBHS    
+  2    PWR-2900AC       L988QI60RQNYP    
+  3    PWR-2900AC       L691WU87HLGWN    
+  4    PWR-2900AC       Q042JS53D9GWN    
+
+System has 6 fan modules
+  Module  Number of Fans  Model            Serial Number    
+  ------- --------------- ---------------- ---------------- 
+  1       3               7504E-FM         YUM42966220      
+  2       3               7504E-FM         TUC24327037      
+  3       3               7504E-FM         LYA59864415      
+  4       3               7504E-FM         PFE44760881      
+  5       3               7504E-FM         HCQ16261500      
+  6       3               7504E-FM         AEI97759630      
+
+System has 436 ports
+  Type               Count
+  ------------------ ----
+  Management         4   
+  Switched           424 
+  SwitchedBootstrap  8   
+
+System has 172 transceiver slots
+  Port Manufacturer     Model            Serial Number    Rev 
+  ---- ---------------- ---------------- ---------------- ----
+  3/1  Arista Networks  SFP1G-LX-31      Q3479690326      1.0 
+  3/2  Arista Networks  SFP-1G-SX        YFR5275D1VDU     0002
+  3/3  Not Present                                            
+  3/4  Arista Networks  SFP-1G-LX        CAG0254RS09L     0002
+  3/6  Arista Networks  SFP-10GLR-31     X1147117910      0002
+  3/7  Arista Networks  SFP-10G-SRL      JWO8674YN841     0002
+  3/15 Arista Networks  SFP-10G-SRL      CLO5006DH31M     0002
+  3/16 Not Present                                            
+  3/24 Arista Networks  SFP-10G-SR-CURV  NYJ3RQ5B8706     A1  
+  3/25 Arista Networks  SFP-10G-SR       BXW4124SS991     0002
+  3/35 Arista Networks  SFP10GSRL-ARISTA XZM5OD4E0923     A1  
+  3/47 Arista Networks  CAB-SFP-SFP-3M   KGL906070180     0002
+  3/48 Arista Networks  CAB-SFP-SFP-2.5M GTF14329317J     0002
+  3/50 Arista Networks  7500E-72S-LC                          
+  4/1  Arista Networks  CAB-SFP-SFP-2M   DMK5483852OZ     20  
+  5/1  Arista Networks  QSFP-40G-UNIV    UIC251807401     01  
+  5/31 Arista Networks  QSFP-PC015       H9984002848-9    01  
+  5/32 Arista Networks  QSFP-PC03        I7596958958-6    01  
+  5/33 Arista Networks  QSFP-40G-UNIV    TKN3018051E2     20  
+  6/2  Arista Networks  QSFP-PC02        F3629972385-4    01  
+  6/8  Arista Networks  QSFP-SR4-40G     T2709739166      02  
+  6/9  Arista Networks  QSFP-LR4-40G     N2405628317      1A  
+  6/36 Not Present                                            
+
+System has 1 storage device
+  Mount      Type Model      Serial Number Rev Size (GB) 
+  ---------- ---- ---------- ------------- --- --------- 
+  /mnt/flash eUSB eUSB drive                   4         
