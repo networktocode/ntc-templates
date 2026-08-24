@@ -3,16 +3,22 @@ Value LINK_STATUS (\w+)
 Value LINK_ADMIN (\w+)
 Value LINK_STATE_INFO (\.*)
 Value LINK_TRANSITIONS (\d+)
-Value INTERFACE_DESC (.*)
+Value DESCRIPTION (.*)
 Value HW_TYPE (\w+)
 Value MAC_ADDRESS (\S+)
 Value MTU (\d+)
 Value IF_TYPE (\S+)
-Value IP_ADDRESS (\S+)
-Value List SECONDARY_IP_ADDRESS (\S+)
+Value IP_ADDRESS (\d+\.\d+\.\d+\.\d+)
+Value PREFIX_LENGTH (\d+)
+Value VRF (\S+)
+Value ACTIVE_GATEWAY_IP (\S+)
+Value ACTIVE_GATEWAY_IP_MAC (\S+)
+Value ACTIVE_GATEWAY_SOURCE_MAC (\S+)
+Value List SECONDARY_IP_ADDRESS (\d+\.\d+\.\d+\.\d+)
+Value List SECONDARY_IP_PREFIX_LENGTH (\d+)
 Value DUPLEX (\w+)
 Value QOS_TRUST (\S+)
-Value SPEED (\S+\s\S+) 
+Value SPEED (\S+\s\S+)
 Value AUTO_NEG (\S+)
 Value FLOW_CONTROL (\S+)
 Value ERROR_CONTROL (\S+)
@@ -40,46 +46,49 @@ Value TX_DROPPED (\d+)
 Value TX_FILTERED (\d+)
 Value TX_CRC_FCS (\S+)
 Value TX_COLLISION (\d+)
-Value VRF (\S+)
+Value LEADER_FOLLOWER_MODE (\S+)
+Value MDI_MODE (\S+)
+Value SUBINTERFACE_COUNT (\d+)
 
 Start
   ^\s*(Interface|Aggregate)\s+\S+\s+is -> Continue.Record
   ^\s*(Interface|Aggregate)\s+${INTERFACE}\s+is\s+${LINK_STATUS}
-  ^\s*Admin\s*state\s*is\s*${LINK_ADMIN}
-  ^\s*Link\s*transitions\s*:\s*${LINK_TRANSITIONS}
-  ^\s*Description\s*:\s*${INTERFACE_DESC}
-  ^\s*State\s*information\s*:\s*${LINK_STATE_INFO}
-  ^\s*Hardware\s*:\s*${HW_TYPE},?\s*MAC\s*Address:\s+${MAC_ADDRESS}
-  ^\s*MAC\s+Address\s*:\s*${MAC_ADDRESS}
-  ^\s*IPv4\s+address\s+${IP_ADDRESS}$$
-  ^\s*IPv4\s+address\s+${SECONDARY_IP_ADDRESS}\s+secondary
-  ^\s*MTU\s*${MTU}
-  ^\s*Type\s*${IF_TYPE}
+  ^\s*Admin\s+state\s+is\s+${LINK_ADMIN}
+  ^\s*Link\s+transitions\s*:\s+${LINK_TRANSITIONS}
+  ^\s*Description\s*:\s*${DESCRIPTION}
+  ^\s*State\s+information\s*:\s+${LINK_STATE_INFO}
+  ^\s*Hardware\s*:\s+${HW_TYPE},?\s*MAC\s+Address:\s+${MAC_ADDRESS}
+  ^\s*MAC\s+Address\s*:\s+${MAC_ADDRESS}
+  ^\s*IPv4\s+address\s+${IP_ADDRESS}(/${PREFIX_LENGTH})?\s*$$
+  ^\s*IPv4\s+address\s+${SECONDARY_IP_ADDRESS}(/${SECONDARY_IP_PREFIX_LENGTH})?\s+secondary
+  ^\s*Subinterface\s+count\s*:\s+${SUBINTERFACE_COUNT}
+  ^\s*MTU\s+${MTU}
+  ^\s*Type\s+${IF_TYPE}
   ^\s*${DUPLEX}-duplex
-  ^\s*qos\s*trust\s*${QOS_TRUST}
-  ^\s*Speed\s*:*\s*${SPEED}
-  ^\s*Auto-negotiation\s*is\s*${AUTO_NEG}
-  ^\s*Flow-control\s*:\s*${FLOW_CONTROL}
-  ^\s*Error-control\s*:\s*${ERROR_CONTROL}
-  ^\s*VLAN Mode\s*:\s*${VLAN_MODE}
-  ^\s*Access VLAN\s*:\s*${VLAN_ACCESS}
-  ^\s*Native VLAN\s*:\s*${VLAN_NATIVE}
-  ^\s*Allowed VLAN List\s*:\s+${VLAN_TRUNK},* -> Continue
-  ^\s*Allowed VLAN List\s*:\s+(?:[^,]+,){1}${VLAN_TRUNK},* -> Continue
-  ^\s*Allowed VLAN List\s*:\s+(?:[^,]+,){2}${VLAN_TRUNK},* -> Continue
-  ^\s*Allowed VLAN List\s*:\s+(?:[^,]+,){3}${VLAN_TRUNK},* -> Continue
-  ^\s*Allowed VLAN List\s*:\s+(?:[^,]+,){4}${VLAN_TRUNK},* -> Continue
-  ^\s*Allowed VLAN List\s*:\s+(?:[^,]+,){5}${VLAN_TRUNK},* -> Continue
-  ^\s*Allowed VLAN List\s*:
-  ^\s*Link state
-  ^\s*Aggregated-interfaces\s*:\s+${AGGREGATED_INTERFACES}\s* -> Continue
-  ^\s*Aggregated-interfaces\s*:\s+(?:\S+\s+){1}${AGGREGATED_INTERFACES}\s* -> Continue
-  ^\s*Aggregated-interfaces\s*:\s+(?:\S+\s+){2}${AGGREGATED_INTERFACES}\s* -> Continue
-  ^\s*Aggregated-interfaces\s*:\s+(?:\S+\s+){3}${AGGREGATED_INTERFACES}\s* -> Continue
-  ^\s*Aggregated-interfaces\s*:\s+(?:\S+\s+){4}${AGGREGATED_INTERFACES}\s* -> Continue
-  ^\s*Aggregated-interfaces\s*:\s+(?:\S+\s+){5}${AGGREGATED_INTERFACES}\s* -> Continue
-  ^\s*Aggregated-interfaces\s*:\s+(?:\S+\s+){6}${AGGREGATED_INTERFACES}\s* -> Continue
-  ^\s*Aggregated-interfaces\s*:\s+(?:\S+\s+){7}${AGGREGATED_INTERFACES}\s* -> Continue
+  ^\s*qos\s+trust\s+${QOS_TRUST}
+  ^\s*Speed\s*:?\s+${SPEED}
+  ^\s*Auto-negotiation\s+is\s+${AUTO_NEG}
+  ^\s*Flow-control\s*:\s+${FLOW_CONTROL}
+  ^\s*Error-control\s*:\s+${ERROR_CONTROL}
+  ^\s*VLAN Mode\s*:\s+${VLAN_MODE}
+  ^\s*Access\s+VLAN\s*:\s+${VLAN_ACCESS}
+  ^\s*Native\s+VLAN\s*:\s+${VLAN_NATIVE}
+  ^\s*Allowed\s+VLAN List\s*:\s+${VLAN_TRUNK},* -> Continue
+  ^\s*Allowed\s+VLAN List\s*:\s+(?:[^,]+,){1}${VLAN_TRUNK},* -> Continue
+  ^\s*Allowed\s+VLAN List\s*:\s+(?:[^,]+,){2}${VLAN_TRUNK},* -> Continue
+  ^\s*Allowed\s+VLAN List\s*:\s+(?:[^,]+,){3}${VLAN_TRUNK},* -> Continue
+  ^\s*Allowed\s+VLAN List\s*:\s+(?:[^,]+,){4}${VLAN_TRUNK},* -> Continue
+  ^\s*Allowed\s+VLAN List\s*:\s+(?:[^,]+,){5}${VLAN_TRUNK},* -> Continue
+  ^\s*Allowed\s+VLAN List\s*:
+  ^\s*Link\s+state
+  ^\s*Aggregated-interfaces\s*:\s+${AGGREGATED_INTERFACES} -> Continue
+  ^\s*Aggregated-interfaces\s*:\s+(?:\S+\s+){1}${AGGREGATED_INTERFACES} -> Continue
+  ^\s*Aggregated-interfaces\s*:\s+(?:\S+\s+){2}${AGGREGATED_INTERFACES} -> Continue
+  ^\s*Aggregated-interfaces\s*:\s+(?:\S+\s+){3}${AGGREGATED_INTERFACES} -> Continue
+  ^\s*Aggregated-interfaces\s*:\s+(?:\S+\s+){4}${AGGREGATED_INTERFACES} -> Continue
+  ^\s*Aggregated-interfaces\s*:\s+(?:\S+\s+){5}${AGGREGATED_INTERFACES} -> Continue
+  ^\s*Aggregated-interfaces\s*:\s+(?:\S+\s+){6}${AGGREGATED_INTERFACES} -> Continue
+  ^\s*Aggregated-interfaces\s*:\s+(?:\S+\s+){7}${AGGREGATED_INTERFACES} -> Continue
   ^\s*Aggregated-interfaces\s*:
   ^\s*Aggregation-key
   ^\s*Subinterface\s+count
@@ -89,35 +98,37 @@ Start
   ^\s*rate-limit\s+broadcast
   ^\s*rate-limit\s+multicast
   ^\s*L3\s+Counters
-  ^\s*MDI mode
-  ^\s*Leader-follower\s+mode
-  ^\s*Rate collection interval
+  ^\s*MDI\s+mode\s*:\s+${MDI_MODE}
+  ^\s*Leader-follower\s+mode:\s+${LEADER_FOLLOWER_MODE}
+  ^\s*Rate\s+collection\s+interval
   ^\s*Energy-Efficient
   ^\s*Rx -> Rx
   ^\s*Rate\s+RX\s+TX\s+Total -> Rate
   ^\s*Statistic\s+RX\s+TX\s+Total -> Statistic
-  ^\s*active-gateway\s
+  ^\s*active-gateway\s+L3\s+source\s+mac\s+${ACTIVE_GATEWAY_SOURCE_MAC}
+  ^\s*active-gateway\s+ip\s+mac\s+${ACTIVE_GATEWAY_IP_MAC}
+  ^\s*active-gateway\s+ip\s+${ACTIVE_GATEWAY_IP}
   ^\s*VRF\s+name\s+is\s+${VRF}
   ^. -> Error
 
 Rx
-  ^\s*${RX_TOTAL_PACKETS} total packets\s*${RX_TOTAL_BYTES} total bytes
-  ^\s*${RX_UNICAST_PACKETS}   unicast packets
-  ^\s*${RX_MCAST_PACKETS}   multicast packets
-  ^\s*${RX_BROADCAST_PACKETS}   broadcast packets
-  ^\s*${RX_ERRORS} errors\s*${RX_DROPPED} dropped
-  ^\s*${RX_CRC_FCS} CRC/FCS
+  ^\s*${RX_TOTAL_PACKETS}\s+total\s+packets\s+${RX_TOTAL_BYTES}\s+total\s+bytes
+  ^\s*${RX_UNICAST_PACKETS}\s+unicast\s+packets
+  ^\s*${RX_MCAST_PACKETS}\s+multicast\s+packets
+  ^\s*${RX_BROADCAST_PACKETS}\s+broadcast packets
+  ^\s*${RX_ERRORS}\s+errors\s+${RX_DROPPED}\s+dropped
+  ^\s*${RX_CRC_FCS}\s+CRC/FCS
   ^\s*Tx -> Tx
   ^. -> Error
 
 Tx
-  ^\s*${TX_TOTAL_PACKETS} total packets\s*${TX_TOTAL_BYTES} total bytes
-  ^\s*${TX_UNICAST_PACKETS}   unicast packets
-  ^\s*${TX_MCAST_PACKETS}   multicast packets
-  ^\s*${TX_BROADCAST_PACKETS}   broadcast packets
-  ^\s*${TX_ERRORS} errors\s*${TX_DROPPED} dropped
-  ^\s*${TX_CRC_FCS} CRC/FCS
-  ^\s*${TX_COLLISION}\s*collision
+  ^\s*${TX_TOTAL_PACKETS}\s+total\s+packets\s+${TX_TOTAL_BYTES}\s+total\s+bytes
+  ^\s*${TX_UNICAST_PACKETS}\s+unicast\s+packets
+  ^\s*${TX_MCAST_PACKETS}\s+multicast\s+packets
+  ^\s*${TX_BROADCAST_PACKETS}\s+broadcast\s+packets
+  ^\s*${TX_ERRORS}\s+errors\s+${TX_DROPPED}\s+dropped
+  ^\s*${TX_CRC_FCS}\s+CRC/FCS
+  ^\s*${TX_COLLISION}\s+collision
   ^\s*$$ -> Start
   ^. -> Error
 
