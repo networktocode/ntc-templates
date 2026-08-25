@@ -14,6 +14,8 @@ Value INPUT_RATE (\S+)
 Value INPUT_PPS (\d+)
 Value OUTPUT_RATE (\S+)
 Value OUTPUT_PPS (\d+)
+Value INPUT_PACKETS (\d+)
+Value OUTPUT_PACKETS (\d+)
 
 Start
   ^\S+\s+is\s+\S+(\s+\S+)?, -> Continue.Record
@@ -30,7 +32,8 @@ Start
   ^\s+Last\s+clearing
   ^\s+\d+\s+minutes\s+input\s+rate\s+${INPUT_RATE}\s+\w+\s+\(.+\),\s+${INPUT_PPS}\s+packets/sec
   ^\s+\d+\s+minutes\s+output\s+rate\s+${OUTPUT_RATE}\s+\w+\s+\(.+\),\s+${OUTPUT_PPS}\s+packets/sec
-  ^\s+\d+\s+packets\s+(in|out)put,
+  ^\s+${INPUT_PACKETS}\s+packets\s+input,\s+\d+\s+bytes
+  ^\s+${OUTPUT_PACKETS}\s+packets\s+output,\s+\d+\s+bytes
   ^\s+(Sent|Received)\s+\d+\s+broadcasts,
   ^\s+\d+\s+runts,
   ^\s+\d+\s+(in|out)put\s+errors,
