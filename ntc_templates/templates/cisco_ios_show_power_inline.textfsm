@@ -49,7 +49,7 @@ ISR
   ^INT-PS
   ^Interface\s+Config\s+Device\s+Powered\s+PowerAllocated$$
   ^---+
-  ^${INTERFACE}\s+${ADMIN_STATUS}\s+${DEVICE}\s+${OPERATIONAL_STATUS}\s+${POWER}\s+Watts\s*$$
+  ^${INTERFACE}\s+${ADMIN_STATUS}\s+${DEVICE}\s+${OPERATIONAL_STATUS}\s+${POWER}\s+Watts\s*$$ -> Record
   ^Ethernet\s+Switch
   ^\s+properly\s+upon
   ^. -> Error
