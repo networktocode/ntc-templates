@@ -16,6 +16,18 @@ Value OUTPUT_RATE (\S+)
 Value OUTPUT_PPS (\d+)
 Value INPUT_PACKETS (\d+)
 Value OUTPUT_PACKETS (\d+)
+Value RUNTS (\d+)
+Value GIANTS (\d+)
+Value INPUT_ERRORS (\d+)
+Value CRC (\d+)
+Value INPUT_DISCARDS (\d+)
+Value RX_PAUSE (\d+)
+Value OUTPUT_ERRORS (\d+)
+Value COLLISIONS (\d+)
+Value OUTPUT_DISCARDS (\d+)
+Value TX_PAUSE (\d+)
+Value LATE_COLLISIONS (\d+)
+Value DEFERRED (\d+)
 
 Start
   ^\S+\s+is\s+\S+(\s+\S+)?, -> Continue.Record
@@ -35,10 +47,13 @@ Start
   ^\s+${INPUT_PACKETS}\s+packets\s+input,\s+\d+\s+bytes
   ^\s+${OUTPUT_PACKETS}\s+packets\s+output,\s+\d+\s+bytes
   ^\s+(Sent|Received)\s+\d+\s+broadcasts,
-  ^\s+\d+\s+runts,
-  ^\s+\d+\s+(in|out)put\s+errors,
-  ^\s+\d+\s+PAUSE
-  ^\s+\d+\s+late\s+collision,
+  ^\s+${RUNTS}\s+runts,\s+${GIANTS}\s+giants
+  ^\s+${INPUT_ERRORS}\s+input\s+errors,(\s+${CRC}\s+CRC,(\s+\d+\s+\S+,){2})?\s+${INPUT_DISCARDS}\s+input\s+discards
+  ^\s+${OUTPUT_ERRORS}\s+output\s+errors,\s+${COLLISIONS}\s+collisions
+  ^\s+${OUTPUT_ERRORS}\s+output\s+errors,\s+${OUTPUT_DISCARDS}\s+output\s+discards
+  ^\s+${RX_PAUSE}\s+PAUSE\s+input
+  ^\s+${TX_PAUSE}\s+PAUSE\s+output
+  ^\s+${LATE_COLLISIONS}\s+late\s+collision,\s+${DEFERRED}\s+deferred,\s+${OUTPUT_DISCARDS}\s+output\s+discards
   ^\s+Loopback\s+Mode\s*:
   ^\s+Active\s+members
   ^\s+Fallback\s+mode
