@@ -50,7 +50,8 @@ Start
   ^\s+Use\s+'show.*'
   ^\s+Static\s+V(RF|LAN)
   ^\s+Headend\s+replication
-  ^\s+\d+\s+\S+\s+\S+
+  # flood vtep list
+  ^\s+\d+(\s+\d+\.\d+\.\d+\.\d+)+\s*$$
   ^\s+MLAG\s+Shared\s+Router\s+MAC
   ^\s*$$
   ^. -> Error
