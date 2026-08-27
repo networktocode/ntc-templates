@@ -42,7 +42,7 @@ Interfaces6xxx
   ^\s+From\s+PS\s+To\s+Device\s*$$
   ^---+
   ^\s*${INTERFACE}\s+${ADMIN_STATUS}(\s+\S+)?\s+${OPERATIONAL_STATUS}\s+\d+(\.\d+)?\s+${POWER}\s+${DEVICE}\s+${CLASS}\s+\S+\s+\S+\s*$$ -> Record
-  ^Totals:\s+\d+\s+pd\(s\)\s+\S+\s+\S+\s+\S+\s*$$
+  ^Totals:
   ^. -> Error
 
 ISR
