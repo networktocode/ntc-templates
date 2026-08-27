@@ -1,0 +1,27 @@
+Capability codes:
+  (R) Router, (B) Bridge, (T) Telephone, (C) DOCSIS Cable Device
+  (W) WLAN Access Point, (P) Repeater, (S) Station, (O) Other
+Device ID            Local Intf      Hold-time  Capability  Port ID  
+
+Chassis id: 0000.5e00.53aa
+Local Port id: Eth1/10
+Port Description: sfp-sfpplus1
+System Name: edge-router-01
+System Description: RouterOS RB5009UG+S+
+Time remaining: 96 seconds
+System Capabilities: B, R
+Enabled Capabilities: B, R
+Management Address: 192.168.1.9
+Vlan ID: 1
+
+Chassis id: 0000.5e00.53bb
+Local Port id: Eth1/11
+Port Description: ether1
+System Name: edge-router-02
+System Description: RouterOS CCR2004
+Time remaining: 92 seconds
+System Capabilities: B, R
+Enabled Capabilities: B, R
+Management Address: 192.168.1.10
+Vlan ID: not advertised
+

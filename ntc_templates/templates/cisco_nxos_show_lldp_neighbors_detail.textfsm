@@ -1,6 +1,6 @@
 Value Required NEIGHBOR_NAME (\S+)
 Value Required LOCAL_INTERFACE (\S+)
-Value Required NEIGHBOR_INTERFACE (\S+)
+Value NEIGHBOR_INTERFACE (\S+)
 Value CHASSIS_ID (\w+?\.\w+?\.\w+?)
 Value MGMT_ADDRESS (\d+?\.\d+?\.\d+?\.\d+?|\w+?\.\w+?\.\w+?)
 Value NEIGHBOR_DESCRIPTION (.*)

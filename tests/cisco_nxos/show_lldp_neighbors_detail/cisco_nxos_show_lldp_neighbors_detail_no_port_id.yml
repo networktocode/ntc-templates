@@ -1,0 +1,18 @@
+---
+parsed_sample:
+  - capabilities: "B, R"
+    chassis_id: "0000.5e00.53aa"
+    local_interface: "Eth1/10"
+    mgmt_address: "192.168.1.9"
+    neighbor_description: "RouterOS RB5009UG+S+"
+    neighbor_interface: ""
+    neighbor_name: "edge-router-01"
+    vlan_id: "1"
+  - capabilities: "B, R"
+    chassis_id: "0000.5e00.53bb"
+    local_interface: "Eth1/11"
+    mgmt_address: "192.168.1.10"
+    neighbor_description: "RouterOS CCR2004"
+    neighbor_interface: ""
+    neighbor_name: "edge-router-02"
+    vlan_id: ""
