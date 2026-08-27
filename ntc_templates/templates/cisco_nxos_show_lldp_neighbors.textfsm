@@ -1,4 +1,4 @@
-Value NEIGHBOR_NAME (\S+)
+Value NEIGHBOR_NAME (\S+(?:\s\S+)*?)
 Value LOCAL_INTERFACE (\S+)
 Value NEIGHBOR_INTERFACE (\S+)
 Value CAPABILITIES (\w+)
@@ -7,6 +7,7 @@ Start
   ^Device.*ID -> LLDP
 
 LLDP
+  ^Total entries displayed
   ^${NEIGHBOR_NAME}$$
   ^${NEIGHBOR_NAME}\s+${LOCAL_INTERFACE}\s+\d+\s+(${CAPABILITIES}?\s)+\s+${NEIGHBOR_INTERFACE} -> Record
   ^\s+${LOCAL_INTERFACE}\s+\d+\s+(${CAPABILITIES}?\s)+\s+${NEIGHBOR_INTERFACE} -> Record
