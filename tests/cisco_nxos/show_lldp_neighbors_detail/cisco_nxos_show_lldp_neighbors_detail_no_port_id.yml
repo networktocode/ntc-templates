@@ -7,6 +7,7 @@ parsed_sample:
     neighbor_description: "RouterOS RB5009UG+S+"
     neighbor_interface: ""
     neighbor_name: "edge-router-01"
+    neighbor_port_description: "sfp-sfpplus1"
     vlan_id: "1"
   - capabilities: "B, R"
     chassis_id: "0000.5e00.53bb"
@@ -15,4 +16,5 @@ parsed_sample:
     neighbor_description: "RouterOS CCR2004"
     neighbor_interface: ""
     neighbor_name: "edge-router-02"
+    neighbor_port_description: "ether1"
     vlan_id: ""
