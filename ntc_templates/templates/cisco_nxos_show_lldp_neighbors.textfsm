@@ -7,7 +7,7 @@ Start
   ^Device.*ID -> LLDP
 
 LLDP
-  ^Total entries displayed
+  ^Total\s+entries\s+displayed
   ^${NEIGHBOR_NAME}$$
   ^${NEIGHBOR_NAME}\s+${LOCAL_INTERFACE}\s+\d+\s+(${CAPABILITIES}?\s)+\s+${NEIGHBOR_INTERFACE} -> Record
   ^\s+${LOCAL_INTERFACE}\s+\d+\s+(${CAPABILITIES}?\s)+\s+${NEIGHBOR_INTERFACE} -> Record
