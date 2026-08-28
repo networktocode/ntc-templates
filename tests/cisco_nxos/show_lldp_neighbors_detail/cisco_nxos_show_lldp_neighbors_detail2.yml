@@ -7,6 +7,7 @@ parsed_sample:
     neighbor_description: "Cisco Nexus Operating System (NX-OS) Software 9.3(8)"
     neighbor_interface: "Ethernet1/52"
     neighbor_name: "SW-NEXUS"
+    neighbor_port_description: "SW-NEXUS-UPLINK"
     vlan_id: ""
   - capabilities: "B"
     chassis_id: "24a9.3700.0001"
@@ -15,4 +16,5 @@ parsed_sample:
     neighbor_description: "FlashArray FA-X20R3 pure-storage"
     neighbor_interface: "1a51.4800.0001"
     neighbor_name: "pure-storage"
+    neighbor_port_description: "eth0"
     vlan_id: "0"
