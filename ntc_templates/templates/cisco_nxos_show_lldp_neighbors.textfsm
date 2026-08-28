@@ -1,4 +1,4 @@
-Value NEIGHBOR_NAME (\S+(?:\s\S+)*)
+Value NEIGHBOR_NAME (\S+(?:\s\S+)*?)
 Value LOCAL_INTERFACE (\S+)
 Value NEIGHBOR_INTERFACE (\S+)
 Value CAPABILITIES (\w+)
