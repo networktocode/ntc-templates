@@ -7,7 +7,6 @@ Value NEIGHBOR_DESCRIPTION (.*)
 Value CAPABILITIES (.*)
 Value VLAN_ID ([0-9]+)
 
-
 Start
   ^[Cc]hassis\s[idID]{2}\:\s${CHASSIS_ID}$$
   ^[Pp]ort\s[idID]{2}\:\s${NEIGHBOR_INTERFACE}$$
