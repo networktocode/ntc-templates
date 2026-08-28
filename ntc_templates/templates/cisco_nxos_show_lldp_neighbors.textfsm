@@ -4,7 +4,11 @@ Value NEIGHBOR_INTERFACE (\S+)
 Value CAPABILITIES (\w+)
 
 Start
-  ^Device.*ID -> LLDP
+  ^Device\s+ID\s+Local\s+Intf -> LLDP
+  ^Capability\s+codes:
+  ^\s+\(R\)\s+Router
+  ^\s+\(W\)\s+WLAN
+  ^. -> Error
 
 LLDP
   ^Total\s+entries\s+displayed
