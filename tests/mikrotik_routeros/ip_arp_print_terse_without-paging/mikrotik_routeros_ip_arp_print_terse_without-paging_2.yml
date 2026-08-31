@@ -1,0 +1,18 @@
+---
+parsed_sample:
+  - address: "192.168.1.100"
+    flags: "DC"
+    index: "0"
+    interface: "bridge-lan"
+    mac_address: "6C:4C:BC:53:2C:73"
+    published: "no"
+    status: "reachable"
+    vrf: "main"
+  - address: "192.168.1.174"
+    flags: "DC"
+    index: "1"
+    interface: "bridge-lan"
+    mac_address: "6C:4C:BC:53:2C:73"
+    published: "no"
+    status: "stale"
+    vrf: "main"
