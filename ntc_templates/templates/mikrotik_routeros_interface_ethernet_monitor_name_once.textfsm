@@ -29,10 +29,18 @@ Value SFP_TX_POWER (\S+dBm)
 Value SFP_RX_POWER (\S+dBm)
 Value EEPROM_CHECKSUM (\S+)
 Value List EEPROM ([0-9a-f]+:(?:\s+[0-9a-f]{2})+.*)
-Value SUPPORTED (\S+)
-Value ADVERTISING (\S+)
-Value LINK_PARTNER_ADVERTISING (\S+)
+Value List SUPPORTED ([^,\s]+)
+Value List ADVERTISING ([^,\s]+)
+Value List LINK_PARTNER_ADVERTISING ([^,\s]+)
 
+# supported/advertising/link-partner-advertising are printed as a single
+# comma separated line, or - when the terminal is too narrow to show it all -
+# wrapped onto one bare value per line instead. Each of these fields gets its
+# own state (Supported/Advertising/LinkPartnerAdvertising below) so that a
+# wrapped continuation line lands in the right list, and each state peels the
+# label's own comma separated list into individual entries with a bounded
+# "(?:[^,\s]+,){N}" prefix per position (same idiom as the comma separated
+# lists in arista_eos_show_vrf.textfsm).
 Start
   ^\s*name:\s${NAME}
   ^\s*status:\s${STATUS}
@@ -66,12 +74,114 @@ Start
   ^\s*eeprom-checksum:\s${EEPROM_CHECKSUM}
   ^\s*eeprom:\s${EEPROM}
   ^\s*${EEPROM}
-  ^\s*supported:\s*$$
-  ^\s*supported:\s*${SUPPORTED}
-  ^\s*advertising:\s*$$
-  ^\s*advertising:\s*${ADVERTISING}
-  ^\s*link-partner-advertising:\s*$$
-  ^\s*link-partner-advertising:\s*${LINK_PARTNER_ADVERTISING}$$
+  ^\s*supported:\s*$$ -> Supported
+  ^\s*supported:\s*(?:[^,\s]+,){0}${SUPPORTED} -> Continue
+  ^\s*supported:\s*(?:[^,\s]+,){1}${SUPPORTED} -> Continue
+  ^\s*supported:\s*(?:[^,\s]+,){2}${SUPPORTED} -> Continue
+  ^\s*supported:\s*(?:[^,\s]+,){3}${SUPPORTED} -> Continue
+  ^\s*supported:\s*(?:[^,\s]+,){4}${SUPPORTED} -> Continue
+  ^\s*supported:\s*(?:[^,\s]+,){5}${SUPPORTED} -> Continue
+  ^\s*supported:\s*(?:[^,\s]+,){6}${SUPPORTED} -> Continue
+  ^\s*supported:\s*(?:[^,\s]+,){7}${SUPPORTED} -> Continue
+  ^\s*supported:\s*(?:[^,\s]+,){8}${SUPPORTED} -> Continue
+  ^\s*supported:\s*(?:[^,\s]+,){9}${SUPPORTED} -> Continue
+  ^\s*supported:\s*(?:[^,\s]+,){10}${SUPPORTED} -> Continue
+  ^\s*supported:\s*(?:[^,\s]+,){11}${SUPPORTED} -> Continue
+  ^\s*supported:.*$$ -> Supported
+  ^\s*advertising:\s*$$ -> Advertising
+  ^\s*advertising:\s*(?:[^,\s]+,){0}${ADVERTISING} -> Continue
+  ^\s*advertising:\s*(?:[^,\s]+,){1}${ADVERTISING} -> Continue
+  ^\s*advertising:\s*(?:[^,\s]+,){2}${ADVERTISING} -> Continue
+  ^\s*advertising:\s*(?:[^,\s]+,){3}${ADVERTISING} -> Continue
+  ^\s*advertising:\s*(?:[^,\s]+,){4}${ADVERTISING} -> Continue
+  ^\s*advertising:\s*(?:[^,\s]+,){5}${ADVERTISING} -> Continue
+  ^\s*advertising:\s*(?:[^,\s]+,){6}${ADVERTISING} -> Continue
+  ^\s*advertising:\s*(?:[^,\s]+,){7}${ADVERTISING} -> Continue
+  ^\s*advertising:\s*(?:[^,\s]+,){8}${ADVERTISING} -> Continue
+  ^\s*advertising:\s*(?:[^,\s]+,){9}${ADVERTISING} -> Continue
+  ^\s*advertising:\s*(?:[^,\s]+,){10}${ADVERTISING} -> Continue
+  ^\s*advertising:\s*(?:[^,\s]+,){11}${ADVERTISING} -> Continue
+  ^\s*advertising:.*$$ -> Advertising
+  ^\s*link-partner-advertising:\s*$$ -> LinkPartnerAdvertising
+  ^\s*link-partner-advertising:\s*${LINK_PARTNER_ADVERTISING}\s*$$ -> LinkPartnerAdvertising
+  ^\s*(?:\d{2}:){2}\d{2}\s+echo:\s*.*$$ -> Next
+  ^\s*$$
+  ^. -> Error
+
+# "supported:" is always followed by "advertising:" (never straight by
+# sfp-*/eeprom, which only show up after link-partner-advertising below), so
+# this state only needs to know how to keep collecting SUPPORTED and how to
+# hand off to Advertising.
+Supported
+  ^\s*advertising:\s*$$ -> Advertising
+  ^\s*advertising:\s*(?:[^,\s]+,){0}${ADVERTISING} -> Continue
+  ^\s*advertising:\s*(?:[^,\s]+,){1}${ADVERTISING} -> Continue
+  ^\s*advertising:\s*(?:[^,\s]+,){2}${ADVERTISING} -> Continue
+  ^\s*advertising:\s*(?:[^,\s]+,){3}${ADVERTISING} -> Continue
+  ^\s*advertising:\s*(?:[^,\s]+,){4}${ADVERTISING} -> Continue
+  ^\s*advertising:\s*(?:[^,\s]+,){5}${ADVERTISING} -> Continue
+  ^\s*advertising:\s*(?:[^,\s]+,){6}${ADVERTISING} -> Continue
+  ^\s*advertising:\s*(?:[^,\s]+,){7}${ADVERTISING} -> Continue
+  ^\s*advertising:\s*(?:[^,\s]+,){8}${ADVERTISING} -> Continue
+  ^\s*advertising:\s*(?:[^,\s]+,){9}${ADVERTISING} -> Continue
+  ^\s*advertising:\s*(?:[^,\s]+,){10}${ADVERTISING} -> Continue
+  ^\s*advertising:\s*(?:[^,\s]+,){11}${ADVERTISING} -> Continue
+  ^\s*advertising:.*$$ -> Advertising
+  ^\s+${SUPPORTED}\s*$$
+  ^\s*(?:\d{2}:){2}\d{2}\s+echo:\s*.*$$ -> Next
+  ^\s*$$
+  ^. -> Error
+
+# Same idea: "advertising:" is always followed by "link-partner-advertising:".
+Advertising
+  ^\s*link-partner-advertising:\s*$$ -> LinkPartnerAdvertising
+  ^\s*link-partner-advertising:\s*(?:[^,\s]+,){0}${LINK_PARTNER_ADVERTISING} -> Continue
+  ^\s*link-partner-advertising:\s*(?:[^,\s]+,){1}${LINK_PARTNER_ADVERTISING} -> Continue
+  ^\s*link-partner-advertising:\s*(?:[^,\s]+,){2}${LINK_PARTNER_ADVERTISING} -> Continue
+  ^\s*link-partner-advertising:\s*(?:[^,\s]+,){3}${LINK_PARTNER_ADVERTISING} -> Continue
+  ^\s*link-partner-advertising:\s*(?:[^,\s]+,){4}${LINK_PARTNER_ADVERTISING} -> Continue
+  ^\s*link-partner-advertising:\s*(?:[^,\s]+,){5}${LINK_PARTNER_ADVERTISING} -> Continue
+  ^\s*link-partner-advertising:\s*(?:[^,\s]+,){6}${LINK_PARTNER_ADVERTISING} -> Continue
+  ^\s*link-partner-advertising:\s*(?:[^,\s]+,){7}${LINK_PARTNER_ADVERTISING} -> Continue
+  ^\s*link-partner-advertising:\s*(?:[^,\s]+,){8}${LINK_PARTNER_ADVERTISING} -> Continue
+  ^\s*link-partner-advertising:\s*(?:[^,\s]+,){9}${LINK_PARTNER_ADVERTISING} -> Continue
+  ^\s*link-partner-advertising:\s*(?:[^,\s]+,){10}${LINK_PARTNER_ADVERTISING} -> Continue
+  ^\s*link-partner-advertising:\s*(?:[^,\s]+,){11}${LINK_PARTNER_ADVERTISING} -> Continue
+  ^\s*link-partner-advertising:.*$$ -> LinkPartnerAdvertising
+  ^\s+${ADVERTISING}\s*$$
+  ^\s*(?:\d{2}:){2}\d{2}\s+echo:\s*.*$$ -> Next
+  ^\s*$$
+  ^. -> Error
+
+# "link-partner-advertising:" is the last of the three wrapped fields, so
+# this state is the only one that also needs the combo/SFP/eeprom fields
+# that can follow it on SFP interfaces.
+LinkPartnerAdvertising
+  ^\s+${LINK_PARTNER_ADVERTISING}\s*$$
+  ^\s*combo-state:\s${COMBO_STATE}
+  ^\s*sfp-module-present:\s${SFP_MODULE_PRESENT}
+  ^\s*sfp-rx-loss:\s${SFP_RX_LOSS}
+  ^\s*sfp-tx-fault:\s${SFP_TX_FAULT}
+  ^\s*sfp-type:\s${SFP_TYPE}
+  ^\s*sfp-connector-type:\s${SFP_CONNECTOR_TYPE}
+  ^\s*sfp-link-length-9um:\s${SFP_LINK_LENGTH_9UM}
+  ^\s*sfp-link-length-50um:\s${SFP_LINK_LENGTH_50UM}
+  ^\s*sfp-link-length-62um:\s${SFP_LINK_LENGTH_62UM}
+  ^\s*sfp-link-length-copper:\s${SFP_LINK_LENGTH_COPPER}
+  ^\s*sfp-vendor-name:\s${SFP_VENDOR_NAME}
+  ^\s*sfp-vendor-part-number:\s${SFP_VENDOR_PART_NUMBER}
+  ^\s*sfp-vendor-revision:\s${SFP_VENDOR_REVISION}
+  ^\s*sfp-vendor-serial:\s${SFP_VENDOR_SERIAL}
+  ^\s*sfp-manufacturing-date:\s${SFP_MANUFACTURING_DATE}
+  ^\s*sfp-wavelength:\s${SFP_WAVELENGTH}
+  ^\s*sfp-temperature:\s${SFP_TEMPERATURE}
+  ^\s*sfp-supply-voltage:\s${SFP_SUPPLY_VOLTAGE}
+  ^\s*sfp-tx-bias-current:\s${SFP_TX_BIAS_CURRENT}
+  ^\s*sfp-tx-power:\s${SFP_TX_POWER}
+  ^\s*sfp-rx-power:\s${SFP_RX_POWER}
+  ^\s*eeprom-checksum:\s${EEPROM_CHECKSUM}
+  ^\s*eeprom:\s${EEPROM}
+  ^\s*${EEPROM}
   ^\s*(?:\d{2}:){2}\d{2}\s+echo:\s*.*$$ -> Next
   ^\s*$$
   ^. -> Error
