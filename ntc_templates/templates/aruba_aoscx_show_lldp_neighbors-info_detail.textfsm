@@ -18,7 +18,7 @@ Start
   ^Chassis\s+Capabilities\s+Available\s*:\s*${CAPABILITIES_SUPPORTED}
   ^Chassis\s+Capabilities\s+Enabled\s*:\s*${CAPABILITIES}
   ^Neighbor\s+Port-ID\s*:\s*${NEIGHBOR_PORT_ID}
-  ^Neighbor\s+Port-Desc\s*:\s*${NEIGHBOR_INTERFACE} 
+  ^Neighbor\s+Port-Desc\s*:\s*${NEIGHBOR_INTERFACE}
   ^-+$$ -> Record
   ^Neighbor\.*
   ^TTL\.*
