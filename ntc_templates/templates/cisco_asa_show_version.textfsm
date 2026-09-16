@@ -16,6 +16,11 @@ Value FAILOVER (\S+)
 Value CLUSTER (\S+)
 Value List SERIAL (\S+)
 Value LAST_MOD (.+)
+Value VLAN_COUNT (\d+)
+Value VLAN_DESC (.*)
+Value LICENSE_FEATURE_NAME ([-\w\s/]+)
+Value LICENSE_FEATURE_VALUE (\S+)
+Value LICENSE_FEATURE_TYPE (\S+)
 
 Start
   ^.*Software\sVersion\s${VERSION}
@@ -90,5 +95,11 @@ Start
   ^WebVPN.*:
   ^WARNING:
   ^Running\s+Activation\s+Key\s*:
+  ^VLANs\s*:\s+${VLAN_COUNT}\s+${VLAN_DESC}
+  ^Licensed features for this platform: -> LicenseFeatures
   ^\s*$$
-  ^. -> Error
+  ^. -> Next
+
+LicenseFeatures
+  ^${LICENSE_FEATURE_NAME}\s*:\s+${LICENSE_FEATURE_VALUE}\s+${LICENSE_FEATURE_TYPE} -> Record
+  ^\s*$$ -> Start  

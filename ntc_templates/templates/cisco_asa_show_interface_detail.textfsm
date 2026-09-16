@@ -49,6 +49,9 @@ Value SWITCH_EGRESS_POLICY_DROPS (\d+)
 Value IN_RESET_DROPS (\d+)
 Value OUT_RESET_DROPS (\d+)
 Value VLAN_ID (\d+)
+Value IFACE_NUM (\d+)
+Value IFACE_CFG_STATUS (\S+)
+Value IFACE_STATE (\S+)
 #
 # Control Point Interface States
 #
@@ -120,8 +123,11 @@ Start
   ^Interface -> Continue.Record
   ^Interface\s+${INTERFACE}\s+"${INTERFACE_NAME}",\s+is\s+${LINK_STATUS},\s+line\s+protocol\s+is\s+${PROTOCOL_STATUS}
   ^\s+Topology\s+Information: -> Topology
+  ^\s*Interface number is ${IFACE_NUM}
+  ^\s*Interface config status is ${IFACE_CFG_STATUS}
+  ^\s*Interface state is ${IFACE_STATE}
   ^\s*$$
-  ^. -> Error
+  ^. -> Next
 
 ControlPoint
   ^\s+Interface\s+number\s+is\s+${CONTROL_INTERFACE_NUMBER}
@@ -132,6 +138,9 @@ ControlPoint
   ^\s+Queue\s+Stats:
   ^\s+RX\[${RXRING_NUMBER}\]:\s+${RXRING_PACKETS}\s+packets,\s+${RXRING_BYTES}\s+bytes,\s+${RXRING_OVERRUN}\s+overrun -> RXRingBlocks
   ^\s+TX\[${TXRING_NUMBER}\]:\s+${TXRING_PACKETS}\s+packets,\s+${TXRING_BYTES}\s+bytes,\s+${TXRING_UNDERRUN}\s+underruns -> TXRingBlocks
+  ^\s*Interface number is ${IFACE_NUM}
+  ^\s*Interface config status is ${IFACE_CFG_STATUS}
+  ^\s*Interface state is ${IFACE_STATE}
 
 RXRingBlocks
   ^\s+RX\[${RXRING_NUMBER}\]:\s+${RXRING_PACKETS}\s+packets,\s+${RXRING_BYTES}\s+bytes,\s+${RXRING_OVERRUN}\s+overrun
@@ -143,7 +152,7 @@ RXRingBlocks
   ^Interface -> Continue.Record
   ^Interface\s+${INTERFACE}\s+"${INTERFACE_NAME}",\s+is\s+${LINK_STATUS},\s+line\s+protocol\s+is\s+${PROTOCOL_STATUS} -> Start
   ^\s*$$
-  ^. -> Error
+  ^. -> Next
 
 TXRingBlocks
   ^\s+TX\[${TXRING_NUMBER}\]:\s+${TXRING_PACKETS}\s+packets,\s+${TXRING_BYTES}\s+bytes,\s+${TXRING_UNDERRUN}\s+underruns
@@ -155,7 +164,7 @@ TXRingBlocks
   ^Interface -> Continue.Record
   ^Interface\s+${INTERFACE}\s+"${INTERFACE_NAME}",\s+is\s+${LINK_STATUS},\s+line\s+protocol\s+is\s+${PROTOCOL_STATUS} -> Start
   ^\s*$$
-  ^. -> Error
+  ^. -> Next
 
 Topology
   ^\s{4,}\S+
@@ -165,4 +174,4 @@ Topology
   ^\s+RX\[${RXRING_NUMBER}\]:\s+${RXRING_PACKETS}\s+packets,\s+${RXRING_BYTES}\s+bytes,\s+${RXRING_OVERRUN}\s+overrun -> RXRingBlocks
   ^\s+TX\[${TXRING_NUMBER}\]:\s+${TXRING_PACKETS}\s+packets,\s+${TXRING_BYTES}\s+bytes,\s+${TXRING_UNDERRUN}\s+underruns -> TXRingBlocks
   ^\s*$$
-  ^. -> Error
+  ^. -> Next
