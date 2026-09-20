@@ -1,0 +1,13 @@
+Flags: D - dynamic; X - disabled; I - inactive, R - running; S - slave; P - passthrough 
+ 0   RS  name="ether1" default-name="ether1" type="ether" mtu=1500 actual-mtu=1500 l2mtu=1598 max-l2mtu=2028 mac-address=aa:aa:aa:11:11:11 last-link-up-time=2026-04-02 10:51:40 link-downs=0 
+
+ 1  X    name="wlan1" default-name="wlan1" type="wlan" mtu=1500 actual-mtu=1500 l2mtu=1600 max-l2mtu=2290 mac-address=aa:aa:aa:11:11:11 link-downs=0 
+
+ 2   R   name="4G-L2TP" type="bridge" mtu=auto actual-mtu=1500 l2mtu=1598 mac-address=aa:aa:aa:11:11:11 last-link-up-time=2026-04-02 10:51:35 link-downs=0 
+
+ 3       name="l2tp-out-lte" type="l2tp-out" link-downs=0 
+
+ 4   R   name="lo" type="loopback" mtu=65536 actual-mtu=65536 mac-address=aa:aa:aa:11:11:11 last-link-up-time=2026-04-02 10:51:34 link-downs=0 
+
+ 5   I   ;;; SIM SN:40000000000000
+         name="lte1" default-name="lte1" type="lte" mtu=1500 mac-address=aa:aa:aa:11:11:11 link-downs=0

@@ -1,0 +1,46 @@
+Flags: D - dynamic; X - disabled; I - inactive, R - running; S - slave; P - passthrough 
+ 0    S  ;;; Other Service
+         name="ether1" default-name="ether1" type="ether" mtu=1500 actual-mtu=1500 l2mtu=1596 max-l2mtu=2026 mac-address=aa:aa:aa:11:11:11 link-downs=0 
+
+ 1    S  ;;; VoIP Service
+         name="ether2" default-name="ether2" type="ether" mtu=1500 actual-mtu=1500 l2mtu=1596 max-l2mtu=2026 vrf=VoIP-AGV_ mac-address=aa:aa:aa:11:11:11 link-downs=0 
+
+ 2   RS  ;;; Internet Service
+         name="ether3" default-name="ether3" type="ether" mtu=1500 actual-mtu=1500 l2mtu=1596 max-l2mtu=2026 mac-address=aa:aa:aa:11:11:11 last-link-down-time=2025-04-01 08:24:05 last-link-up-time=2025-04-01 08:24:18 link-downs=4 
+
+ 3       ;;; xDSL Carrier
+         name="ether4" default-name="ether4" type="ether" mtu=1578 actual-mtu=1578 l2mtu=1596 max-l2mtu=2026 mac-address=aa:aa:aa:11:11:11 link-downs=0 
+
+ 4   R   ;;; FTTx Carrier
+         name="ether5" default-name="ether5" type="ether" mtu=1578 actual-mtu=1578 l2mtu=1596 max-l2mtu=2026 mac-address=aa:aa:aa:11:11:11 last-link-down-time=2025-04-01 16:35:29 last-link-up-time=2025-04-01 16:35:31 link-downs=1730 
+
+ 5       name="sfp1" default-name="sfp1" type="ether" mtu=1500 actual-mtu=1500 l2mtu=1596 max-l2mtu=2026 mac-address=aa:aa:aa:11:11:11 link-downs=0 
+
+ 6   R   name="Lo0" type="bridge" mtu=auto actual-mtu=1500 l2mtu=65535 mac-address=aa:aa:aa:11:11:11 last-link-up-time=2025-03-31 16:51:26 link-downs=0 
+
+ 7   R   name="Lo1" type="bridge" mtu=auto actual-mtu=1500 l2mtu=65535 mac-address=aa:aa:aa:11:11:11 last-link-up-time=2025-03-31 16:51:26 link-downs=0 
+
+ 8   R   name="VoIP-AGV_" type="vrf" mtu=65536 actual-mtu=65536 mac-address=aa:aa:aa:11:11:11 last-link-up-time=2025-03-31 16:51:25 link-downs=0 
+
+ 9   R   ;;; Internet Service
+         name="bridge_Internet" type="bridge" mtu=auto actual-mtu=1500 l2mtu=1558 mac-address=aa:aa:aa:11:11:11 last-link-up-time=2025-03-31 16:51:26 link-downs=0 
+
+10   R   ;;; Other Service
+         name="bridge_OtherService" type="bridge" mtu=auto actual-mtu=1500 l2mtu=1596 mac-address=aa:aa:aa:11:11:11 last-link-up-time=2025-03-31 16:51:26 link-downs=0 
+
+11   R   ;;; VoIP Service
+         name="bridge_VoIP" type="bridge" mtu=auto actual-mtu=1500 l2mtu=1596 vrf=VoIP-AGV_ mac-address=aa:aa:aa:11:11:11 last-link-up-time=2025-03-31 16:51:26 link-downs=0 
+
+12   R   name="lo" type="loopback" mtu=65536 actual-mtu=65536 mac-address=aa:aa:aa:11:11:11 last-link-up-time=2025-03-31 16:51:25 link-downs=0 
+
+13   R   name="vlan10@ether5" type="vlan" mtu=1574 actual-mtu=1574 l2mtu=1592 mac-address=aa:aa:aa:11:11:11 last-link-down-time=2025-04-01 16:35:29 last-link-up-time=2025-04-01 16:35:31 link-downs=1730 
+
+14 D RS  name="vpls1713" type="vpls" mtu=1500 actual-mtu=1500 l2mtu=1558 mac-address=aa:aa:aa:11:11:11 last-link-up-time=2025-04-01 16:35:37 link-downs=0 
+
+15       name="vpls:VoIP:AGV1" type="vpls" mac-address=aa:aa:aa:11:11:11 link-downs=0 
+
+16   R   name="vpls:VoIP:AGV2" type="vpls" actual-mtu=1500 l2mtu=1500 vrf=VoIP-AGV_ mac-address=aa:aa:aa:11:11:11 last-link-down-time=2025-04-01 16:34:41 last-link-up-time=2025-04-01 16:35:37 link-downs=1267 
+
+17   R   name="vpls:VoIP:AGV3" type="vpls" actual-mtu=1500 l2mtu=1500 vrf=VoIP-AGV_ mac-address=aa:aa:aa:11:11:11 last-link-down-time=2025-04-01 16:36:03 last-link-up-time=2025-04-01 16:36:24 link-downs=1236 
+
+18       name="vpls:VoIP:AGV4" type="vpls" mac-address=aa:aa:aa:11:11:11 link-downs=0
