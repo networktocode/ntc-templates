@@ -4,8 +4,10 @@ Value ADDRESS (\S+)
 Value MAC_ADDRESS (\S+)
 Value INTERFACE (\S+)
 Value PUBLISHED (yes|no)
+Value STATUS (\S+)
+Value VRF (\S+)
 
 Start
-  ^\s*${INDEX}(?:\s+${FLAGS})?\s+address=${ADDRESS}\s+mac-address=${MAC_ADDRESS}\s+interface=${INTERFACE}\s+published=${PUBLISHED}\s*$$ -> Record
+  ^\s*${INDEX}(?:\s+${FLAGS})?\s+address=${ADDRESS}(?:\s+mac-address=${MAC_ADDRESS})?\s+interface=${INTERFACE}\s+published=${PUBLISHED}(?:\s+status=${STATUS})?(?:\s+vrf=${VRF})?\s*$$ -> Record
   ^\s*$$
   ^. -> Error
