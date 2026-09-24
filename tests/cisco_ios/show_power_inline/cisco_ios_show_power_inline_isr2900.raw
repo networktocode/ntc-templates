@@ -1,0 +1,9 @@
+PowerSupply   SlotNum.   Maximum   Allocated       Status
+-----------   --------   -------   ---------       ------
+INT-PS           0       280.000     0.000         PS GOOD   RPS ABSENT 
+Interface   Config   Device   Powered    PowerAllocated
+---------   ------   ------   -------    -------------- 
+Gi1/0       auto     Unknown  Off        0.000 Watts 
+
+Ethernet Switch Network Modules with PoE support should be reloaded to function 
+ properly upon PoE Power Supply OIR insertion/removal.
