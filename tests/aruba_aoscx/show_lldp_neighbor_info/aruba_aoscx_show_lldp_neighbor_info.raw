@@ -1,0 +1,16 @@
+LLDP Neighbor Information 
+=========================
+
+Total Neighbor Entries          : 6
+Total Neighbor Entries Deleted  : 69
+Total Neighbor Entries Dropped  : 0
+Total Neighbor Entries Aged-Out : 69
+
+LOCAL-PORT  CHASSIS-ID         PORT-ID                      PORT-DESC                    TTL      SYS-NAME    
+-----------------------------------------------------------------------------------------------------------
+1/1/1       80:8d:b7:c7:33:ec  80:8d:b7:c7:33:ec            bond0                        120      SwitchA
+1/1/5       192.168.202.193      38:25:17:ae:be:04            1                            120      Polycom VVX 150                    
+1/1/6       192.168.202.200      38:24:27:ae:c0:77            1                            120      Polycom VVX 150                    
+1/1/7       192.168.202.174      38:24:37:ae:bf:9e            1                            120      Polycom VVX 150                    
+1/1/9       FW                 e5:b7:7a:f2:d2:66                                         3601                                        
+1/1/49      44:5b:ed:94:23:00  1/5/20                       SwitchB                      120      SwitchB
