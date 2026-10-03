@@ -1,15 +1,15 @@
 Value NAME (.*)
 Value DESCR (.*)
 Value PID (([\S+]+|.*))
-Value VID (.*)
+Value VID (\S*)
 Value SN ([\w+\d+]+)
 
 Start
   ^NAME:\s+"${NAME}",\s+DESCR:\s+"${DESCR}"
-  ^PID:\s+${PID}.*,.*VID:\s+${VID},.*SN:\s+${SN} -> Record
-  ^PID:\s+,.*VID:\s+${VID},.*SN: -> Record
-  ^PID:\s+${PID}.*,.*VID:\s+${VID},.*SN: -> Record
-  ^PID:\s+,.*VID:\s+${VID},.*SN:\s+${SN} -> Record
+  ^PID:\s+${PID}.*,.*VID:\s+${VID}\s*,.*SN:\s+${SN} -> Record
+  ^PID:\s+,.*VID:\s+${VID}\s*,.*SN: -> Record
+  ^PID:\s+${PID}.*,.*VID:\s+${VID}\s*,.*SN: -> Record
+  ^PID:\s+,.*VID:\s+${VID}\s*,.*SN:\s+${SN} -> Record
   ^PID:\s+${PID}.*,.*VID:\s+${VID}.*
   ^PID:\s+,.*VID:\s+${VID}.*
   ^.*SN:\s+${SN} -> Record
