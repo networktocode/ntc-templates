@@ -12,7 +12,7 @@ Value IP_ADDRESS (\S+)
 Value List SECONDARY_IP_ADDRESS (\S+)
 Value DUPLEX (\w+)
 Value QOS_TRUST (\S+)
-Value SPEED (\S+\s\S+) 
+Value SPEED (\S+\s\S+)
 Value AUTO_NEG (\S+)
 Value FLOW_CONTROL (\S+)
 Value ERROR_CONTROL (\S+)
@@ -108,6 +108,8 @@ Rx
   ^\s*${RX_ERRORS} errors\s*${RX_DROPPED} dropped
   ^\s*${RX_CRC_FCS} CRC/FCS
   ^\s*Tx -> Tx
+  ^\s*L3:
+  ^\s*\d+\s+packets,\s+\d+\s+bytes
   ^. -> Error
 
 Tx
@@ -118,6 +120,9 @@ Tx
   ^\s*${TX_ERRORS} errors\s*${TX_DROPPED} dropped
   ^\s*${TX_CRC_FCS} CRC/FCS
   ^\s*${TX_COLLISION}\s*collision
+  ^\s*$$ -> Start
+  ^\s*L3:
+  ^\s*\d+\s+packets,\s+\d+\s+bytes
   ^\s*$$ -> Start
   ^. -> Error
 

@@ -1,0 +1,30 @@
+Interface vlan1 is up
+ Admin state is up
+ Description:
+ Hardware: Ethernet, MAC Address: 00:11:22:33:44:55
+ Rx
+ L3:
+ 0 packets, 0 bytes
+ Tx
+ L3:
+ 0 packets, 0 bytes
+
+Interface vlan10 is up
+ Admin state is up
+ Description:
+ Hardware: Ethernet, MAC Address: 00:11:22:33:44:66
+ IPv4 address 192.0.2.10/20
+ Rx
+ L3:
+ 0 packets, 0 bytes
+ Tx
+ L3:
+ 0 packets, 0 bytes
+
+Aggregate lag40 is up
+ Admin state is up
+ Description : 'Switch1'
+ MAC Address : 00:11:22:33:44:77
+ Aggregated-interfaces : 1/1/49 3/1/49
+ Aggregation-key : 40
+ Aggregate mode : active
