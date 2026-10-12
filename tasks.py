@@ -5,9 +5,9 @@ import sys
 from invoke import task
 
 try:
-    import toml
+    import tomli
 except ImportError:
-    sys.exit("Please make sure to `pip install toml` or enable the Poetry shell and run `poetry install`.")
+    sys.exit("Please make sure to `pip install tomli` or enable the Poetry shell and run `poetry install`.")
 
 
 def strtobool(val: str) -> bool:
@@ -49,7 +49,8 @@ def is_truthy(arg):
     return bool(strtobool(arg))
 
 
-PYPROJECT_CONFIG = toml.load("pyproject.toml")
+with open("pyproject.toml", "rb") as fd:
+    PYPROJECT_CONFIG = tomli.load(fd)
 TOOL_CONFIG = PYPROJECT_CONFIG["tool"]["poetry"]
 
 # Can be set to a separate Python version to be used for launching or building image
