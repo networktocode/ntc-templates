@@ -1,0 +1,16 @@
+Value LOCAL_PORT (\S+)
+Value CHASSIS_ID (\S+)
+Value PORT_ID (\S+)
+Value PORT_DESC (.*?)
+Value TTL (\d+)
+Value SYS_NAME (.*)
+
+Start
+  ^\s*$$ -> Next 
+  ^\s*LLDP\s+Neighbor\s+Information -> Next
+  ^\s*Total\s+Neighbor\s+Entries -> Next
+  ^\s*LOCAL-PORT\s+CHASSIS-ID -> Next
+  ^\s*[=\-\s]+$$ -> Next
+  # Main pattern with flexible column widths
+  ^\s*${LOCAL_PORT}\s+${CHASSIS_ID}\s+${PORT_ID}\s+${PORT_DESC}?\s+${TTL}\s+${SYS_NAME}\s*$$ -> Record
+  ^. -> Error "LINE NOT FOUND"
