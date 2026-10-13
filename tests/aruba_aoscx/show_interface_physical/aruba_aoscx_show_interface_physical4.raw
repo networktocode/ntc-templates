@@ -1,0 +1,11 @@
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                            Link    Admin         Speed           Flow-Control          EEE       PoE Power                                          Port
+Port        Type           Status   Config   Status | Config    Status | Config   Status | Config  (Watts)    State Information                      Description
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1/1/1       1GbT           up       up       100M-FDx auto      --       off      off      off      0.00      10M/100M/1G                            Wired_End_Points
+1/1/2       1GbT           down     up       --       auto      --       off      off      off      0.00      Waiting for link, 10M/100M/1G          Wired_End_Points
+1/1/9       1GbT           up       up       1G       auto      --       off      off      off      0.00      10M/100M/1G                            Wired_End_Points
+1/1/49      1G-SX          up       up       1G       1G-FDx    --       off      --       --       --        1G-FDx                                 rt-310012-v106 1+0+4
+1/1/50      --             down     up       --       --        --       off      --       --       --        No XCVR installed, 1G/10G/25G/50G      rt-310012-v106 2+0+4
+1/1/52      --             down     up       --       --        --       off      --       --       --        No XCVR installed, 1G/10G/25G/50G      --
+
