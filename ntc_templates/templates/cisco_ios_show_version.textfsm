@@ -29,22 +29,77 @@ Start
   ^.*\s+uptime\s+is.*\s+${UPTIME_DAYS}\sday -> Continue
   ^.*\s+uptime\s+is.*\s+${UPTIME_HOURS}\shour -> Continue
   ^.*\s+uptime\s+is.*\s+${UPTIME_MINUTES}\sminute
-  ^[sS]ystem\s+image\s+file\s+is\s+"(.*?):${RUNNING_IMAGE}"
-  ^(?:[lL]ast\s+reload\s+reason:|System\s+returned\s+to\s+ROM\s+by)\s+${RELOAD_REASON}\s*$$
+  ^[Ss]ystem\s+image\s+file\s+is\s+"(.*?):${RUNNING_IMAGE}"
+  ^(?:[Ll]ast\s+reload\s+reason:|System\s+returned\s+to\s+ROM\s+by)\s+${RELOAD_REASON}\s*$$
   ^[Pp]rocessor\s+board\s+ID\s+${SERIAL}
-  ^[Cc]isco\s+${HARDWARE}\s+\(.+\).+
+  ^([Cc]isco|Allen-Bradley)\s+${HARDWARE}\s+\(.+\).+
   ^[Cc]onfiguration\s+register\s+is\s+${CONFIG_REGISTER}
   ^Base\s+[Ee]thernet\s+MAC\s+[Aa]ddress\s+:\s+${MAC_ADDRESS}
   ^System\s+restarted\s+at\s+${RESTARTED}$$
-  ^Switch\s+Port -> Stack
+  ^Switch\s+(Port|\d+) -> Stack
   # Capture time-stamp if vty line has command time-stamping turned on
-  ^Switch\s\d+ -> Stack
   ^Load\s+for\s+
   ^Time\s+source\s+is
-
+  #
+  # Unmatched
+  ^.*(Software,|IOS XE)\s+Version:?\s+\S+
+  ^This\s+software
+  ^Technical\s+Support
+  ^.*Copyright
+  ^All\s+rights
+  ^Compiled
+  ^Image\s+text-base
+  ^\S+\s+Revision\s+\d+
+  ^This\s+product
+  ^States\s+and\s+local
+  ^use\.\s+Delivery
+  ^third-party
+  ^Importers
+  ^compliance\s+with
+  ^(\S+\s+)?to\s+comply
+  ^A\s+summary
+  ^\(?http://
+  ^If\s+you
+  ^export@cisco\.com
+  ^\S+\s+CPU\s+at
+  ^Last\s+reset
+  ^\d+.+\s+interface
+  ^\S+\s+bytes\s+of.*(non-volatile|physical|Crash\s+Files|Flash|Bootflash|WebUI|webui|eUSB|crashinfo|SD\s+Flash|ATA|Dummy)
+  ^licensed\s+under
+  ^software(\s+code|\.)
+  ^with\s+ABSOLUTELY
+  ^GPL\s+code
+  ^documentation\s+or
+  ^or\s+the\s+applicable
+  ^BOOTLDR:
+  ^Uptime\s+for
+  ^Technology(\s+|-)[Pp]ackage
+  ^---+
+  ^Current\s+Type
+  # license level with dash, ex: network-advantage
+  ^[a-z]+-[a-z]+\s+\S+\s+\S+
+  ^None\s+Subscription
+  ^Smart\s+Licensing\s+Status
+  ^Motherboard\s+(Assembly|Serial|Revision)\s+Number
+  ^Model(\s+Revision)?\s+Number
+  ^System\s+Serial\s+Number
+  ^(Next\s+reload\s+(AIR)?|AIR)?\s*[Ll]icense\s+(Level|Type):
+  ^Top\s+Assembly\s+(Part|Revision)\s+Number
+  ^System\s+FPGA\s+version
+  ^CIP\s+Serial\s+Number
+  ^SKU\s+Brand\s+Name
+  ^DRAM\s+configuration
+  ^\s+$$
+  ^. -> Error
 
 Stack
   ^[Ss]ystem\s+[Ss]erial\s+[Nn]umber\s+:\s+${SERIAL}
-  ^[Mm]odel\s+[Nn]umber\s+:\s+${HARDWARE}\s*
+  ^[Mm]odel\s+[Nn]umber\s+:\s+${HARDWARE}
   ^[Cc]onfiguration\s+register\s+is\s+${CONFIG_REGISTER}
-  ^Base [Ee]thernet MAC [Aa]ddress\s+:\s+${MAC_ADDRESS}
+  ^Base\s+[Ee]thernet\s+MAC\s+[Aa]ddress\s+:\s+${MAC_ADDRESS}
+  ^---+
+  ^\*?\s+\d\s+\d+\s+\S+
+  ^Switch\s+(\d+|uptime)
+  ^Motherboard\s+(Assembly|Serial|Revision)\s+Number
+  ^Model\s+Revision\s+Number
+  ^. -> Error
