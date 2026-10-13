@@ -1,0 +1,18 @@
+Value Required INTERFACE (\S+)
+Value IP_ADDRESS ([\d\.]+/\d+|No\s+Address)
+Value LINK_STATUS (up|down)
+Value ADMIN_STATUS (up|down)
+
+Start
+  # Skip ALL header-related lines
+  ^\s*Interface -> Next
+  ^\s*IP\s*.Address -> Next
+  ^\s*link/admin -> Next
+  ^Interface.Status -> Next
+  ^-+$$ -> Next
+  ^\s*$$ -> Next
+  # Process interface data
+  ^${INTERFACE}\s+${IP_ADDRESS}\s+${LINK_STATUS}/${ADMIN_STATUS}$$ -> Record
+  ^${INTERFACE}\s+${IP_ADDRESS}\s*$$
+  ^\s+${LINK_STATUS}/${ADMIN_STATUS}$$ -> Record
+  ^. -> Error "LINE NOT FOUND"
