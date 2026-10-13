@@ -12,4 +12,4 @@ Start
   ^\s*Vlan\s*Root\sID\s*Cost\s*Time\s*Age\s*Dly\s*Root\s*Port$$
   ^\s*- 
   ^\s*${VLAN_ID}\s+${PRIORITY}\s+${ROOT_ID}+\s+${ROOT_COST}+\s+${HELLO_TIME}+\s+${MAX_AGE}+\s+${FWD_DLY}+\s+${ROOT_PORT} -> Record
- ^. -> Error
+  ^. -> Error
