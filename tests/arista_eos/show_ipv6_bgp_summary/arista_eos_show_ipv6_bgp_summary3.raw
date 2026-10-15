@@ -1,0 +1,8 @@
+BGP summary information for VRF default
+Router identifier 192.168.1.1, local AS number 64496
+Neighbor Status Codes: m - Under maintenance
+  Description              Neighbor                   V AS           MsgRcvd   MsgSent  InQ OutQ  Up/Down State   PfxRcd PfxAcc
+  RTR1                     2001:db8:c0de::1           4 64501      185253720   1578255    0    0  348d12h Estab   24457 24457
+  RTR2                     2001:db8:c0de:ffff:2       4 64502         341047    365958    0    0  136d07h Active
+  RTR#3                    2001:db8:c0de:ffff:3       4 64503        8687916    461055    0    0   93d05h Idle(Admin)
+                           2001:db8:c0de:ffff:4       4 64504        1117932   1148706    0    0 12:36:56 Idle(NoIf)
