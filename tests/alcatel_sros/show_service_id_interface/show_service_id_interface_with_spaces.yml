@@ -1,0 +1,56 @@
+---
+parsed_sample:
+  - admin_state: "Up"
+    interface_name: "Gigaesat-1/1/4:1502.18"
+    ip_address:
+      - "10.28.76.185/30"
+      - "fe80:a8:2:280::2245/126"
+      - "fe80::fa:77ad:f065:b928/64"
+    oper_state_v4: "Up"
+    oper_state_v6: "Up"
+    pfx_state:
+      - "n/a"
+      - "PREFERRED"
+      - "PREFERRED"
+    port_sap_id: "esat-1/1/4:15*"
+    type: "VPRN"
+  - admin_state: "Up"
+    interface_name: "loopback10"
+    ip_address:
+      - "10.218.0.41/32"
+    oper_state_v4: "Up"
+    oper_state_v6: "Down"
+    pfx_state:
+      - "n/a"
+    port_sap_id: "loopback"
+    type: "VPRN"
+  - admin_state: "Up"
+    interface_name: "Loopback 10 loop 2"
+    ip_address:
+      - "-"
+    oper_state_v4: "Down"
+    oper_state_v6: "Down"
+    pfx_state:
+      - "-"
+    port_sap_id: "loopback"
+    type: "VPRN"
+  - admin_state: "Up"
+    interface_name: "loopback why are you like this?"
+    ip_address:
+      - "10.218.128.43/32"
+    oper_state_v4: "Up"
+    oper_state_v6: "Down"
+    pfx_state:
+      - "n/a"
+    port_sap_id: "loopback"
+    type: "VPRN"
+  - admin_state: "Up"
+    interface_name: "e1"
+    ip_address:
+      - "10.11.12.13/32"
+    oper_state_v4: "Up"
+    oper_state_v6: "Down"
+    pfx_state:
+      - "n/a"
+    port_sap_id: "e1"
+    type: "IES"
