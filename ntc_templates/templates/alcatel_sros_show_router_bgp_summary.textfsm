@@ -1,0 +1,43 @@
+# Header variables (FILLDOWN)
+Value Filldown ROUTER_ID (\S+)
+Value Filldown LOCAL_BGP_AS (\d+)
+Value Filldown LOCAL_AS (\d+)
+Value Filldown ADMIN_STATE (\S+)
+Value Filldown OPER_STATE (\S+)
+Value Filldown TOTAL_PEER_GROUPS (\d+)
+Value Filldown TOTAL_PEERS (\d+)
+Value Filldown TOTAL_VPN_PEER_GROUPS (\d+)
+Value Filldown TOTAL_VPN_PEERS (\d+)
+Value Filldown CUR_INTERNAL_GROUPS (\d+)
+Value Filldown MAX_INTERNAL_GROUPS (\d+)
+Value Filldown TOTAL_BGP_PATHS (\d+)
+Value Filldown TOTAL_PATH_MEMORY (\d+)
+# PEER variables
+# NEIGHBOR forces exact format for IPv4 (ex: 1.1.1.1) or IPv6 (ex: 2001::1)
+Value Required NEIGHBOR (\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}|[0-9a-fA-F:]+:[0-9a-fA-F:]+)
+Value DESCRIPTION ([^\s].*)
+Value AS (\d+)
+Value PKT_RCVD (\d+\*?)
+Value INQ (\d+)
+Value UP_DOWN (\S+)
+Value STATE (.+)
+Value PKT_SENT (\d+\*?)
+Value OUTQ (\d+)
+
+Start
+  ^\s*BGP Router ID:${ROUTER_ID}\s+AS:${LOCAL_BGP_AS}\s+Local AS:${LOCAL_AS}
+  ^\s*BGP Admin State\s*:\s*${ADMIN_STATE}\s+BGP Oper State\s*:\s*${OPER_STATE}
+  ^\s*Total Peer Groups\s*:\s*${TOTAL_PEER_GROUPS}\s+Total Peers\s*:\s*${TOTAL_PEERS}
+  ^\s*Total VPN Peer Groups\s*:\s*${TOTAL_VPN_PEER_GROUPS}\s+Total VPN Peers\s*:\s*${TOTAL_VPN_PEERS}
+  ^\s*Current Internal Groups\s*:\s*${CUR_INTERNAL_GROUPS}\s+Max Internal Groups\s*:\s*${MAX_INTERNAL_GROUPS}
+  ^\s*Total BGP Paths\s*:\s*${TOTAL_BGP_PATHS}\s+Total Path Memory\s*:\s*${TOTAL_PATH_MEMORY}
+  ^\s*Neighbor.* -> PeersHeader
+
+PeersHeader
+  ^-+ -> Peers
+
+Peers
+  ^${NEIGHBOR}
+  ^${DESCRIPTION}
+  ^\s+${AS}\s+${PKT_RCVD}\s+${INQ}\s+${UP_DOWN}\s+${STATE}
+  ^\s+${PKT_SENT}\s+${OUTQ}.* -> Record
