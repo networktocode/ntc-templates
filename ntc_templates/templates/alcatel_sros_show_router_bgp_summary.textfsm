@@ -46,7 +46,7 @@ Start
   ^. -> Error
 
 PeersHeader
-  ^-+ -> Peers
+  ^---+ -> Peers
   ^\s*Description
   ^\s+AS\s+PktRcvd\s+InQ\s+Up/Down
   ^\s+PktSent\s+OutQ$$
