@@ -37,7 +37,7 @@ PeersHeader
   ^-+ -> Peers
 
 Peers
-  ^${NEIGHBOR}
+  ^${NEIGHBOR}$$
   ^${DESCRIPTION}
   ^\s+${AS}\s+${PKT_RCVD}\s+${INQ}\s+${UP_DOWN}\s+${STATE}
   ^\s+${PKT_SENT}\s+${OUTQ}.* -> Record
