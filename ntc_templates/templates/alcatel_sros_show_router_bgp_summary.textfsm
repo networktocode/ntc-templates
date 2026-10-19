@@ -33,14 +33,14 @@ Start
   ^\s*Total\s+BGP\s+Paths\s*:\s*${TOTAL_BGP_PATHS}\s+Total\s+Path\s+Memory\s*:\s*${TOTAL_PATH_MEMORY}
   ^\s*Neighbor.* -> PeersHeader
   ^===+
-  ^\s*Total\s+IPv\d\s+(Remote|Backup)
-  ^\s*Total\s+LblIpv\d\s+(Rem|Bkp)
+  ^\s*Total\s+IPv\d+\s+(Remote|Backup)
+  ^\s*Total\s+LblIpv\d+\s+(Rem|Bkp)
   ^\s*Total\s+(Supp?ressed|Decay|MDT-SAFI|MSPW|RouteTgt)
   ^\s*Total\s+(M|E|L2-)?VPN
   ^\s*Total\s+Mc(IP|Vpn)
-  ^\s*Total\s+Flow(Ip|Vpn)v\d
+  ^\s*Total\s+Flow(Ip|Vpn)v\d+
   ^\s*Total\s+Link\s+State
-  ^\s*Total\s+SrPlcyIpv\d
+  ^\s*Total\s+SrPlcyIpv\d+
   ^\s*BGP\s+Summary$$
   ^\s*Legend\s*:
   ^. -> Error
@@ -59,5 +59,5 @@ Peers
   ^\s+${PKT_SENT}\s+${OUTQ}.* -> Record
   ^\s+\d+/\d+/\d+\s+\((Flow|Lbl-)IPv6\)
   ^\s+\d+/\d+/\d+\s+\((LinkState|MdtSafi|RouteTarget)\)
-  ^\s+\d+/\d+/\d+\s+\(MvpnIPv\d\)
+  ^\s+\d+/\d+/\d+\s+\(MvpnIPv\d+\)
   ^. -> Error
