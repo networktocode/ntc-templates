@@ -31,7 +31,7 @@ Start
   ^\s*Total\s+VPN\s+Peer\s+Groups\s*:\s*${TOTAL_VPN_PEER_GROUPS}\s+Total\s+VPN\s+Peers\s*:\s*${TOTAL_VPN_PEERS}
   ^\s*Current\s+Internal\s+Groups\s*:\s*${CUR_INTERNAL_GROUPS}\s+Max\s+Internal\s+Groups\s*:\s*${MAX_INTERNAL_GROUPS}
   ^\s*Total\s+BGP\s+Paths\s*:\s*${TOTAL_BGP_PATHS}\s+Total\s+Path\s+Memory\s*:\s*${TOTAL_PATH_MEMORY}
-  ^\s*Neighbor.* -> PeersHeader
+  ^---+ -> Peers
   ^===+
   ^\s*Total\s+IPv\d+\s+(Remote|Backup)
   ^\s*Total\s+LblIpv\d+\s+(Rem|Bkp)
@@ -43,10 +43,7 @@ Start
   ^\s*Total\s+SrPlcyIpv\d+
   ^\s*BGP\s+Summary$$
   ^\s*Legend\s*:
-  ^. -> Error
-
-PeersHeader
-  ^---+ -> Peers
+  ^\s*Neighbor
   ^\s*Description
   ^\s+AS\s+PktRcvd\s+InQ\s+Up/Down
   ^\s+PktSent\s+OutQ$$
