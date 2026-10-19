@@ -57,3 +57,7 @@ Peers
   ^${DESCRIPTION}
   ^\s+${AS}\s+${PKT_RCVD}\s+${INQ}\s+${UP_DOWN}\s+${STATE}
   ^\s+${PKT_SENT}\s+${OUTQ}.* -> Record
+  ^\s+\d+/\d+/\d+\s+\((Flow|Lbl-)IPv6\)
+  ^\s+\d+/\d+/\d+\s+\((LinkState|MdtSafi|RouteTarget)\)
+  ^\s+\d+/\d+/\d+\s+\(MvpnIPv\d\)
+  ^. -> Error
