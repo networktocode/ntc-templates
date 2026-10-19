@@ -25,12 +25,12 @@ Value PKT_SENT (\d+\*?)
 Value OUTQ (\d+)
 
 Start
-  ^\s*BGP Router ID:${ROUTER_ID}\s+AS:${LOCAL_BGP_AS}\s+Local AS:${LOCAL_AS}
-  ^\s*BGP Admin State\s*:\s*${ADMIN_STATE}\s+BGP Oper State\s*:\s*${OPER_STATE}
-  ^\s*Total Peer Groups\s*:\s*${TOTAL_PEER_GROUPS}\s+Total Peers\s*:\s*${TOTAL_PEERS}
-  ^\s*Total VPN Peer Groups\s*:\s*${TOTAL_VPN_PEER_GROUPS}\s+Total VPN Peers\s*:\s*${TOTAL_VPN_PEERS}
-  ^\s*Current Internal Groups\s*:\s*${CUR_INTERNAL_GROUPS}\s+Max Internal Groups\s*:\s*${MAX_INTERNAL_GROUPS}
-  ^\s*Total BGP Paths\s*:\s*${TOTAL_BGP_PATHS}\s+Total Path Memory\s*:\s*${TOTAL_PATH_MEMORY}
+  ^\s*BGP\s+Router\s+ID:${ROUTER_ID}\s+AS:${LOCAL_BGP_AS}\s+Local\s+AS:${LOCAL_AS}
+  ^\s*BGP\s+Admin\s+State\s*:\s*${ADMIN_STATE}\s+BGP\s+Oper\s+State\s*:\s*${OPER_STATE}
+  ^\s*Total\s+Peer\s+Groups\s*:\s*${TOTAL_PEER_GROUPS}\s+Total\s+Peers\s*:\s*${TOTAL_PEERS}
+  ^\s*Total\s+VPN\s+Peer\s+Groups\s*:\s*${TOTAL_VPN_PEER_GROUPS}\s+Total\s+VPN\s+Peers\s*:\s*${TOTAL_VPN_PEERS}
+  ^\s*Current\s+Internal\s+Groups\s*:\s*${CUR_INTERNAL_GROUPS}\s+Max\s+Internal\s+Groups\s*:\s*${MAX_INTERNAL_GROUPS}
+  ^\s*Total\s+BGP\s+Paths\s*:\s*${TOTAL_BGP_PATHS}\s+Total\s+Path\s+Memory\s*:\s*${TOTAL_PATH_MEMORY}
   ^\s*Neighbor.* -> PeersHeader
 
 PeersHeader
