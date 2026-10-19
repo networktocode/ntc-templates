@@ -47,6 +47,10 @@ Start
 
 PeersHeader
   ^-+ -> Peers
+  ^\s*Description
+  ^\s+AS\s+PktRcvd\s+InQ\s+Up/Down
+  ^\s+PktSent\s+OutQ$$
+  ^. -> Error
 
 Peers
   ^${NEIGHBOR}$$
