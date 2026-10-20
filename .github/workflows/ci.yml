@@ -7,7 +7,6 @@ on: # yamllint disable-line rule:truthy rule:comments
   push:
     branches:
       - "master"
-      - "master"
     tags:
       - "v*"
   pull_request: ~
