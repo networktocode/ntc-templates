@@ -50,7 +50,7 @@ Start
   # to reject any line containing that separator, so only wrapped text is
   # ignored. The alternative was to hardcode an integer to represent the
   # number of whitespaces to be ignored but that was too fragile.
-  ^\s+(?!.*\s:\s)\S.*$$
+  ^\s{20,}(?!.*\s:\s)\S.*$$
   ^. -> Error
 
 VSF
