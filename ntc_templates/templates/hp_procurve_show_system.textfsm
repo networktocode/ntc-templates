@@ -42,14 +42,7 @@ Start
   ^\s*Missed\s+:\s+${BUFFERS_MISSED} -> Record
   ^\s*VSF-Member\s*: -> Continue.Record
   ^\s*VSF-Member\s*:\s*${MEMBER_ID} -> VSF
-  # Ignore wrapped (continuation) lines: long Contact/Location values wrap at col 78.
-  # Wrapped and indented lines may contain several words, e.g.
-  #   "                       example.com) location Building-3 Rack-12".
-  # Every real non-wrapped line has a "label : value" separator (whitespace, colon,
-  # whitespace) and continuation lines do not. Hence we can use negative lookahead (?!.*\s:\s)
-  # to reject any line containing that separator, so only wrapped text is
-  # ignored. The alternative was to hardcode an integer to represent the
-  # number of whitespaces to be ignored but that was too fragile.
+  # Skip wrapped Contact/Location continuation lines (no "label : value" separator)
   ^\s{20,}(?!.*\s:\s)\S.*$$
   ^. -> Error
 
