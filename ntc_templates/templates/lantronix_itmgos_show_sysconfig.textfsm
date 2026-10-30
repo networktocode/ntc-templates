@@ -1,0 +1,75 @@
+Value UPTIME (\S.*?)
+Value MODEL (\S+)
+Value POWER_SUPPLY (\S.*?)
+Value USB_PORTS (\d+)
+Value CELLULAR_MODEM (\S.*?)
+Value INTERNAL_MODEM (\S.*?)
+Value VERSION (\S+)
+Value ETHERNET_SWITCH (\S.*?)
+Value FIRMWARE_BUILT (\d+/\d+/\d+\s+\d+:\d+)
+Value FIRMWARE_UPDATED (\d+/\d+/\d+\s+\d+:\d+)
+Value BOOTLOADER_VERSION (\S+)
+Value SERIAL (\S+)
+Value MEMORY (\S.*?)
+Value FLASH (\S.*?)
+Value SECURE_BOOT (\S+)
+Value TPM (\S.*?)
+Value MAC_ADDRESS ([0-9a-fA-F]{2}(?::[0-9a-fA-F]{2}){5})
+Value IO_MODULES ([^,\s]+(?:,\s*[^,\s]+)*)
+Value HOSTNAME (\S+)
+Value DOMAIN (\S+)
+Value DEFAULT_GATEWAY (\S+)
+
+Start
+  ^Uptime:\s+${UPTIME}\s*$$
+  ^Hardware/Firmware\s+Information\s*$$ -> Hardware
+  ^-+\s*$$
+  ^\s*$$
+  ^. -> Error
+
+Hardware
+  # Fields sit in a left or right column depending on model and release, so each
+  # one is matched in either position and the line is passed on with Continue.
+  ^Model:\s+${MODEL}(?:\s{2,}|\s*$$) -> Continue
+  ^(?:.*\s{2,})?Power\s+Supply:\s+${POWER_SUPPLY}(?:\s{2,}|\s*$$) -> Continue
+  ^Number\s+of\s+USB\s+Ports:\s+${USB_PORTS}(?:\s{2,}|\s*$$) -> Continue
+  ^(?:.*\s{2,})?Cellular\s+Modem:\s+${CELLULAR_MODEM}(?:\s{2,}|\s*$$) -> Continue
+  ^(?:.*\s{2,})?Internal\s+Modem:\s+${INTERNAL_MODEM}(?:\s{2,}|\s*$$) -> Continue
+  ^Firmware\s+Version:\s+${VERSION}(?:\s{2,}|\s*$$) -> Continue
+  ^(?:.*\s{2,})?Ethernet\s+Switch:\s+${ETHERNET_SWITCH}(?:\s{2,}|\s*$$) -> Continue
+  ^Firmware\s+Built:\s+${FIRMWARE_BUILT}(?:\s{2,}|\s*$$) -> Continue
+  ^Firmware\s+Updated:\s+${FIRMWARE_UPDATED}(?:\s{2,}|\s*$$) -> Continue
+  ^(?:.*\s{2,})?Bootloader\s+Version:\s+${BOOTLOADER_VERSION}(?:\s{2,}|\s*$$) -> Continue
+  ^S/N:\s+${SERIAL}(?:\s{2,}|\s*$$) -> Continue
+  ^Memory/Flash\s+Size:\s+${MEMORY}/${FLASH}(?:\s{2,}|\s*$$) -> Continue
+  ^(?:.*\s{2,})?Secure\s+Boot:\s+${SECURE_BOOT}(?:\s{2,}|\s*$$) -> Continue
+  ^TPM\s+2\.0\s+Chip:\s+${TPM}(?:\s{2,}|\s*$$) -> Continue
+  ^(?:.*\s{2,})?Eth1\s+HW\s+Address:\s+${MAC_ADDRESS}(?:\s{2,}|\s*$$) -> Continue
+  ^I/O\s+Module\s+Type\(s\):\s+${IO_MODULES}[,\s]*$$
+  ^Network\s+Settings\s*$$ -> Network
+  # The remaining hardware fields vary by model and release.
+  ^\S[^:]*:.*$$
+  ^-+\s*$$
+  ^\s*$$
+  ^. -> Error
+
+Network
+  ^Default\s+Gateway:\s+${DEFAULT_GATEWAY}(?:\s{2,}|\s*$$)
+  ^Hostname\s+and\s+Name\s+Server\s+Settings\s*$$ -> Names
+  # Interface, cellular and failover fields vary by model and release.
+  ^.*:.*$$
+  ^-+\s*$$
+  ^\s*$$
+  ^. -> Error
+
+Names
+  ^Hostname:\s+${HOSTNAME}(?:\s{2,}|\s*$$)
+  ^Domain:\s+${DOMAIN}(?:\s{2,}|\s*$$)
+  ^\s*DNS\s+Server\s+#\d+:
+  ^\s*#\d+:
+  ^DNS\s+Source
+  ^-+\s*$$
+  ^\s*$$
+  # The rest of the output (services, users, device ports) is not parsed.
+  ^\S.*\s+Settings\s*$$ -> Record End
+  ^. -> Error
