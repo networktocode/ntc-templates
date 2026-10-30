@@ -56,6 +56,7 @@ OS_CHOICES = [
     "juniper_junos",
     "juniper_screenos",
     "juniper",
+    "lantronix_itmgos",
     "linux",
     "mikrotik_routeros",
     "oneaccess_oneos",
