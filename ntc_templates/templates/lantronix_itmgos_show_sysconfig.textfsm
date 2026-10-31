@@ -23,7 +23,7 @@ Value DEFAULT_GATEWAY (\S+)
 Start
   ^Uptime:\s+${UPTIME}\s*$$
   ^Hardware/Firmware\s+Information\s*$$ -> Hardware
-  ^-+\s*$$
+  ^---+\s*$$
   ^\s*$$
   ^. -> Error
 
@@ -49,7 +49,7 @@ Hardware
   ^Network\s+Settings\s*$$ -> Network
   # The remaining hardware fields vary by model and release.
   ^\S[^:]*:.*$$
-  ^-+\s*$$
+  ^---+\s*$$
   ^\s*$$
   ^. -> Error
 
@@ -58,7 +58,7 @@ Network
   ^Hostname\s+and\s+Name\s+Server\s+Settings\s*$$ -> Names
   # Interface, cellular and failover fields vary by model and release.
   ^.*:.*$$
-  ^-+\s*$$
+  ^---+\s*$$
   ^\s*$$
   ^. -> Error
 
@@ -68,7 +68,7 @@ Names
   ^\s*DNS\s+Server\s+#\d+:
   ^\s*#\d+:
   ^DNS\s+Source
-  ^-+\s*$$
+  ^---+\s*$$
   ^\s*$$
   # The rest of the output (services, users, device ports) is not parsed.
   ^\S.*\s+Settings\s*$$ -> Record End
