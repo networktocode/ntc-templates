@@ -47,8 +47,11 @@ Hardware
   ^(?:.*\s{2,})?Eth1\s+HW\s+Address:\s+${MAC_ADDRESS}(?:\s{2,}|\s*$$) -> Continue
   ^I/O\s+Module\s+Type\(s\):\s+${IO_MODULES}[,\s]*$$
   ^Network\s+Settings\s*$$ -> Network
-  # The remaining hardware fields vary by model and release.
-  ^\S[^:]*:.*$$
+  # Every line starts with a known left-column label; captured fields above fall through to here.
+  ^(?:Model|Power\s+Supply|Number\s+of\s+USB\s+Ports|(?:Cellular|Internal)\s+Modem|Ethernet\s+Switch|Switch\s+HW\s+Addr):
+  ^(?:Firmware\s+(?:Version|Built|Updated)|OS\s+Vr|Bootloader\s+Version|EC\s+Version|S/N|Memory/Flash\s+Size|Flash\s+Info):
+  ^(?:Secure\s+Boot|TPM\s+2\.0\s+Chip|Main\s+Board\s+Revision|NIC\s+Board\s+Type|Eth\d+\s+(?:HW\s+Address|SFP)|Cell\s+HW\s+Address):
+  ^(?:I/O|Connectivity)\s+Module\s+(?:Type|Revision|Part\s+Number|Serial\s+Number)\(s\):
   ^---+\s*$$
   ^\s*$$
   ^. -> Error
@@ -56,8 +59,12 @@ Hardware
 Network
   ^Default\s+Gateway:\s+${DEFAULT_GATEWAY}(?:\s{2,}|\s*$$)
   ^Hostname\s+and\s+Name\s+Server\s+Settings\s*$$ -> Names
-  # Interface, cellular and failover fields vary by model and release.
-  ^.*:.*$$
+  ^Eth\d+(?:\s+\(SFP\))?:\s
+  ^Eth\d+\s+(?:IP\s+Address|Subnet\s+Mask|Mode|MTU|SFP|IPv6\s+Address):
+  ^(?:Ethernet\s+Bonding|Reverse\s+Path\s+Filter|Precedence|Primary\s+(?:GW\s+Ping\s+)?Interface):
+  ^(?:Keepalive\s+(?:Start\s+Probes|Number\s+of\s+Probes|Interval)|IPv6|IPv6\s+Default\s+Gateway):
+  ^(?:Cellular\s+Modem|PDP\s+Context\s+ID|Auto\s+APN|Roaming|Cell\s+(?:IP\s+Address|Subnet\s+Mask|IPv6|IPv6\s+Address)):
+  ^\s+Fail-over\s+GW\s+Device:
   ^---+\s*$$
   ^\s*$$
   ^. -> Error
