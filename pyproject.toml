@@ -43,6 +43,7 @@ pyyaml = "*"
 pydocstyle = "*"
 sphinx-rtd-theme = "*"
 toml = "*"
+tomli = "*"
 yamllint = "*"
 "ruamel.yaml" = "*"
 mkdocs = "*"
@@ -51,7 +52,7 @@ mkdocs-version-annotations = "*"
 mkdocstrings = "*"
 mkdocstrings-python = "*"
 mkdocs-python-classy = "*"
-griffe = ">=1.1.1,<2.0"
+griffe = ">=1.1.1,<2.4.0"
 
 [tool.poetry.extras]
 test = ["pytest"]
