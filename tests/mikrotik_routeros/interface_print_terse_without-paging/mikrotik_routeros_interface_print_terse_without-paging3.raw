@@ -1,0 +1,8 @@
+0  S name=ether1 default-name=ether1 type=ether mtu=1500 actual-mtu=1500 l2mtu=1598 max-l2mtu=9214 mac-address=12:34:56:78:90:01 ifname=eth0 ifindex=8 id=1 link-downs=0
+1  S name=ether2 default-name=ether2 type=ether mtu=1500 actual-mtu=1500 l2mtu=1598 max-l2mtu=9214 mac-address=12:34:56:78:90:02 ifname=eth1 ifindex=9 id=2 link-downs=0
+2  S name=ether3 default-name=ether3 type=ether mtu=1500 actual-mtu=1500 l2mtu=1598 max-l2mtu=9214 mac-address=12:34:56:78:90:03 ifname=eth2 ifindex=10 id=3 link-downs=0
+3    comment=temp uplink to peer name=ether4 default-name=ether4 type=ether mtu=1500 actual-mtu=1500 l2mtu=1598 max-l2mtu=9214 mac-address=12:34:56:78:90:04 ifname=eth3 ifindex=11 id=4 link-downs=0
+4 R  comment=uplink to internet name=ether5 default-name=ether5 type=ether mtu=1500 actual-mtu=1500 l2mtu=1598 max-l2mtu=9214 mac-address=12:34:56:78:90:05 ifname=eth4 ifindex=12 id=5 last-link-down-time=2026-08-18 07:20:12 last-link-up-time=2026-08-18 07:20:13 link-downs=5
+5 RS name=wlan1 default-name=wlan1 type=wlan mtu=1500 actual-mtu=1500 l2mtu=1600 max-l2mtu=2290 mac-address=12:34:56:78:90:06 ifname=ath0 ifindex=13 id=6 last-link-up-time=2026-08-18 05:28:19 link-downs=0
+6 RS name=wlan2 default-name=wlan2 type=wlan mtu=1500 actual-mtu=1500 l2mtu=1600 max-l2mtu=2290 mac-address=12:34:56:78:90:07 ifname=ath1 ifindex=14 id=7 last-link-up-time=2026-08-18 05:25:31 link-downs=0
+7 R  comment=defconf name=lan_bridge type=bridge mtu=auto actual-mtu=1500 l2mtu=1598 mac-address=12:34:56:78:90:01 ifname=br0 ifindex=6 id=8 last-link-up-time=2026-08-18 05:25:07 link-downs=0
