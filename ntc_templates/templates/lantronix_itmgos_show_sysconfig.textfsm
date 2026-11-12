@@ -81,7 +81,7 @@ Hardware
 Network
   ^Default\s+Gateway:\s+${DEFAULT_GATEWAY}(?:\s{2,}|\s*$$)
   ^Hostname\s+and\s+Name\s+Server\s+Settings\s*$$ -> Names
-  ^Eth\d+(?:\s+\(SFP\))?:\s
+  ^Eth\d+(?:\s+\(SFP\))?:
   ^Eth\d+\s+(?:IP\s+Address|Subnet\s+Mask|Mode|MTU|SFP|IPv6\s+Address):
   ^(?:Ethernet\s+Bonding|Reverse\s+Path\s+Filter|Precedence|Primary\s+(?:GW\s+Ping\s+)?Interface):
   ^(?:Keepalive\s+(?:Start\s+Probes|Number\s+of\s+Probes|Interval)|IPv6|IPv6\s+Default\s+Gateway):
