@@ -1,0 +1,104 @@
+Value UPTIME (\S.*?)
+Value MODEL (\S+)
+Value POWER_SUPPLY (\S[^,]*?)
+Value POWER_SUPPLY_COUNT (\d+)
+Value USB_PORTS (\d+)
+Value CELLULAR_MODEM (\S.*?)
+Value INTERNAL_MODEM (\S.*?)
+Value VERSION (\S+)
+Value ETHERNET_SWITCH (Installed|Not\s+Installed)
+Value ETHERNET_SWITCH_PORTS (\d+)
+Value FIRMWARE_BUILT (\d+/\d+/\d+\s+\d+:\d+)
+Value FIRMWARE_UPDATED (\d+/\d+/\d+\s+\d+:\d+)
+Value BOOTLOADER_VERSION (\S+)
+Value EC_VERSION (\S+)
+Value SERIAL (\S+)
+Value MEMORY (\S.*?)
+Value FLASH (\S.*?)
+Value FLASH_INFO (\S.*?)
+Value SECURE_BOOT (\S+)
+Value TPM (Installed|Not\s+Installed)
+Value TPM_FIRMWARE_VERSION (\S+)
+Value MAIN_BOARD_REVISION (\S.*?)
+Value List MAC_ADDRESS ([0-9a-fA-F]{2}(?::[0-9a-fA-F]{2}){5})
+Value SWITCH_MAC_ADDRESS ([0-9a-fA-F]{2}(?::[0-9a-fA-F]{2}){5})
+Value CELL_MAC_ADDRESS ([0-9a-fA-F]{2}(?::[0-9a-fA-F]{2}){5})
+Value List IO_MODULES ((?!N/A|unknown)[^,\s]+)
+Value List IO_MODULE_REVISIONS ((?!N/A|unknown)[^,\s]+)
+Value HOSTNAME (\S+)
+Value DOMAIN (\S+)
+Value DEFAULT_GATEWAY (\S+)
+
+Start
+  ^Uptime:\s+${UPTIME}\s*$$
+  ^Hardware/Firmware\s+Information\s*$$ -> Hardware
+  ^---+\s*$$
+  ^\s*$$
+  ^. -> Error
+
+Hardware
+  # Fields sit in a left or right column depending on model and release, so each
+  # one is matched in either position and the line is passed on with Continue.
+  ^Model:\s+${MODEL}(?:\s{2,}|\s*$$) -> Continue
+  ^(?:.*\s{2,})?Power\s+Supply:\s+${POWER_SUPPLY}(?:,\s+${POWER_SUPPLY_COUNT}\s+power\s+suppl(?:y|ies))?(?:\s{2,}|\s*$$) -> Continue
+  ^Number\s+of\s+USB\s+Ports:\s+${USB_PORTS}(?:\s{2,}|\s*$$) -> Continue
+  ^(?:.*\s{2,})?Cellular\s+Modem:\s+${CELLULAR_MODEM}(?:\s{2,}|\s*$$) -> Continue
+  ^(?:.*\s{2,})?Internal\s+Modem:\s+${INTERNAL_MODEM}(?:\s{2,}|\s*$$) -> Continue
+  ^Firmware\s+Version:\s+${VERSION}(?:\s{2,}|\s*$$) -> Continue
+  ^(?:.*\s{2,})?Ethernet\s+Switch:\s+${ETHERNET_SWITCH}(?:/${ETHERNET_SWITCH_PORTS}\s+port)?(?:\s{2,}|\s*$$) -> Continue
+  ^Firmware\s+Built:\s+${FIRMWARE_BUILT}(?:\s{2,}|\s*$$) -> Continue
+  ^Firmware\s+Updated:\s+${FIRMWARE_UPDATED}(?:\s{2,}|\s*$$) -> Continue
+  ^(?:.*\s{2,})?Switch\s+HW\s+Addr:\s+${SWITCH_MAC_ADDRESS}(?:\s{2,}|\s*$$) -> Continue
+  ^(?:.*\s{2,})?Bootloader\s+Version:\s+${BOOTLOADER_VERSION}(?:\s{2,}|\s*$$) -> Continue
+  ^EC\s+Version:\s+${EC_VERSION}(?:\s{2,}|\s*$$) -> Continue
+  ^S/N:\s+${SERIAL}(?:\s{2,}|\s*$$) -> Continue
+  ^Memory/Flash\s+Size:\s+${MEMORY}/${FLASH}(?:\s{2,}|\s*$$) -> Continue
+  ^(?:.*\s{2,})?Secure\s+Boot:\s+${SECURE_BOOT}(?:\s{2,}|\s*$$) -> Continue
+  ^Flash\s+Info:\s+${FLASH_INFO}\s*$$
+  ^TPM\s+2\.0\s+Chip:\s+${TPM}(?:\s{2,}|\s*$$) -> Continue
+  ^(?:.*\s{2,})?TPM\s+2\.0\s+Chip\s+FW\s+Version:\s+${TPM_FIRMWARE_VERSION}(?:\s{2,}|\s*$$) -> Continue
+  ^Main\s+Board\s+(?:Revision|Part\s+Number/HW\s+Version):\s+${MAIN_BOARD_REVISION}\s*$$
+  ^(?:.*\s{2,})?Eth\d+\s+HW\s+Address:\s+${MAC_ADDRESS}(?:\s{2,}|\s*$$) -> Continue
+  ^(?:.*\s{2,})?Cell\s+HW\s+Address:\s+${CELL_MAC_ADDRESS}(?:\s{2,}|\s*$$) -> Continue
+  # Up to three I/O module slots, comma separated. Empty slots, N/A and unknown are skipped.
+  ^I/O\s+Module\s+Type\(s\):\s+${IO_MODULES}\s*(?:,|$$) -> Continue
+  ^I/O\s+Module\s+Type\(s\):\s*[^,]*,\s*${IO_MODULES}\s*(?:,|$$) -> Continue
+  ^I/O\s+Module\s+Type\(s\):\s*(?:[^,]*,){2}\s*${IO_MODULES}\s*(?:,|$$) -> Continue
+  ^I/O\s+Module\s+Revision\(s\):\s+${IO_MODULE_REVISIONS}\s*(?:,|$$) -> Continue
+  ^I/O\s+Module\s+Revision\(s\):\s*[^,]*,\s*${IO_MODULE_REVISIONS}\s*(?:,|$$) -> Continue
+  ^I/O\s+Module\s+Revision\(s\):\s*(?:[^,]*,){2}\s*${IO_MODULE_REVISIONS}\s*(?:,|$$) -> Continue
+  ^Network\s+Settings\s*$$ -> Network
+  # Every line starts with a known left-column label; captured fields above fall through to here.
+  ^(?:Model|Power\s+Supply|Number\s+of\s+USB\s+Ports|(?:Cellular|Internal)\s+Modem|WiFi\s+Module|Ethernet\s+Switch|Switch\s+HW\s+Addr):
+  ^(?:Firmware\s+(?:Version|Built|Updated)|OS\s+Vr|Bootloader\s+Version|EC\s+Version|S/N|Memory/Flash\s+Size):
+  ^(?:Secure\s+Boot|TPM\s+2\.0\s+Chip|NIC\s+Board\s+Type|Eth\d+\s+(?:HW\s+Address|SFP)|Cell\s+HW\s+Address):
+  ^(?:I/O|Connectivity)\s+Module\s+(?:Types?|Revision|Part\s+Number|Serial\s+Number)\(s\):
+  ^(?:I/O\s+Board\s+Revision\(s\)|Flash\s+Info|Main\s+Board\s+(?:Revision|Part\s+Number/HW\s+Version)):
+  ^---+\s*$$
+  ^\s*$$
+  ^. -> Error
+
+Network
+  ^Default\s+Gateway:\s+${DEFAULT_GATEWAY}(?:\s{2,}|\s*$$)
+  ^Hostname\s+and\s+Name\s+Server\s+Settings\s*$$ -> Names
+  ^Eth\d+(?:\s+\(SFP\))?:
+  ^Eth\d+\s+(?:IP\s+Address|Subnet\s+Mask|Mode|MTU|SFP|IPv6\s+Address):
+  ^(?:Ethernet\s+Bonding|Reverse\s+Path\s+Filter|Precedence|Primary\s+(?:GW\s+Ping\s+)?Interface):
+  ^(?:Keepalive\s+(?:Start\s+Probes|Number\s+of\s+Probes|Interval)|IPv6|IPv6\s+Default\s+Gateway):
+  ^(?:Cellular\s+Modem|PDP\s+Context\s+ID|Auto\s+APN|Roaming|Cell\s+(?:IP\s+Address|Subnet\s+Mask|IPv6|IPv6\s+Address)):
+  ^\s+Fail-over\s+GW\s+Device:
+  ^---+\s*$$
+  ^\s*$$
+  ^. -> Error
+
+Names
+  ^Hostname:\s+${HOSTNAME}(?:\s{2,}|\s*$$)
+  ^Domain:\s+${DOMAIN}(?:\s{2,}|\s*$$)
+  ^\s*DNS\s+Server\s+#\d+:
+  ^\s*#\d+:
+  ^DNS\s+Source
+  ^---+\s*$$
+  ^\s*$$
+  # The rest of the output (services, users, device ports) is not parsed.
+  ^\S.*\s+Settings\s*$$ -> Record End
+  ^. -> Error
