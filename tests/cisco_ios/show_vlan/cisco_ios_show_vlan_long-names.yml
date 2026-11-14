@@ -1,0 +1,80 @@
+---
+parsed_sample:
+  - interfaces: []
+    status: "active"
+    vlan_id: "1"
+    vlan_name: "default"
+  - interfaces: []
+    status: "suspended"
+    vlan_id: "331"
+    vlan_name: "VLAN0331"
+  - interfaces:
+      - "Tw2/0/3"
+    status: "act/ishut"
+    vlan_id: "332"
+    vlan_name: "test332"
+  - interfaces:
+      - "Tw2/0/4"
+    status: "act/lshut"
+    vlan_id: "333"
+    vlan_name: "Parking"
+  - interfaces:
+      - "Tw2/0/5"
+    status: "sus/ishut"
+    vlan_id: "334"
+    vlan_name: "test334"
+  - interfaces:
+      - "Tw2/0/6"
+    status: "sus/lshut"
+    vlan_id: "335"
+    vlan_name: "test335"
+  - interfaces:
+      - "Tw3/0/2"
+    status: "active"
+    vlan_id: "915"
+    vlan_name: "VLAN0915"
+  - interfaces:
+      - "Tw1/0/1"
+      - "active"
+      - "Tw1/0/1"
+      - "Tw3/0/16"
+    status: "active"
+    vlan_id: "1000"
+    vlan_name: "REDACTED-REDACTED-REDACTED-REDACTED-REDACTED"
+  - interfaces:
+      - "Tw1/0/10"
+      - "active"
+      - "Tw1/0/10"
+      - "Tw1/0/24"
+      - "Tw2/0/15"
+      - "Tw2/0/17"
+      - "Tw2/0/29"
+      - "Te2/0/45"
+      - "Tw3/0/7"
+      - "Te3/0/40"
+      - "Te3/0/41"
+      - "Te3/0/42"
+      - "Te3/0/43"
+      - "Te3/0/46"
+      - "Te3/0/47"
+      - "Te3/0/48"
+      - "Tw4/0/27"
+    status: "active"
+    vlan_id: "1001"
+    vlan_name: "CONFIDENTIAL-CONFIDENTIAL-CONFIDENTIAL-CONFIDENTIAL"
+  - interfaces: []
+    status: "act/unsup"
+    vlan_id: "1002"
+    vlan_name: "fddi-default"
+  - interfaces: []
+    status: "act/unsup"
+    vlan_id: "1003"
+    vlan_name: "token-ring-default"
+  - interfaces: []
+    status: "act/unsup"
+    vlan_id: "1004"
+    vlan_name: "fddinet-default"
+  - interfaces: []
+    status: "act/unsup"
+    vlan_id: "1005"
+    vlan_name: "trnet-default"
