@@ -1,6 +1,6 @@
 Value Required VLAN_ID (\d+)
 Value VLAN_NAME (\S+)
-Value STATUS (act\S+)
+Value STATUS ((act|sus)\S+)
 Value List INTERFACES ([\w\./]+)
 
 Start

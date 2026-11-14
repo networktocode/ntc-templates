@@ -4,6 +4,30 @@ parsed_sample:
     status: "active"
     vlan_id: "1"
     vlan_name: "default"
+  - interfaces: []
+    status: "suspended"
+    vlan_id: "331"
+    vlan_name: "VLAN0331"
+  - interfaces:
+      - "Tw2/0/3"
+    status: "act/ishut"
+    vlan_id: "332"
+    vlan_name: "test332"
+  - interfaces:
+      - "Tw2/0/4"
+    status: "act/lshut"
+    vlan_id: "333"
+    vlan_name: "Parking"
+  - interfaces:
+      - "Tw2/0/5"
+    status: "sus/ishut"
+    vlan_id: "334"
+    vlan_name: "test334"
+  - interfaces:
+      - "Tw2/0/6"
+    status: "sus/lshut"
+    vlan_id: "335"
+    vlan_name: "test335"
   - interfaces:
       - "Tw3/0/2"
     status: "active"

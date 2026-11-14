@@ -1,6 +1,11 @@
 VLAN Name                             Status    Ports
 ---- -------------------------------- --------- -------------------------------
 1    default                          active
+331  VLAN0331                         suspended
+332  test332                          act/ishut Tw2/0/3
+333  Parking                          act/lshut Tw2/0/4
+334  test334                          sus/ishut Tw2/0/5
+335  test335                          sus/lshut Tw2/0/6
 915  VLAN0915                         active    Tw3/0/2
 1000 REDACTED-REDACTED-REDACTED-REDACTED-REDACTED
                                       active    Tw1/0/1, Tw3/0/16
