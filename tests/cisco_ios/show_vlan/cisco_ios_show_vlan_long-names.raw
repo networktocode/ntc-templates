@@ -1,0 +1,31 @@
+VLAN Name                             Status    Ports
+---- -------------------------------- --------- -------------------------------
+1    default                          active
+915  VLAN0915                         active    Tw3/0/2
+1000 REDACTED-REDACTED-REDACTED-REDACTED-REDACTED
+                                      active    Tw1/0/1, Tw3/0/16
+1001 CONFIDENTIAL-CONFIDENTIAL-CONFIDENTIAL-CONFIDENTIAL
+                                      active    Tw1/0/10, Tw1/0/24, Tw2/0/15, Tw2/0/17, Tw2/0/29, Te2/0/45, Tw3/0/7, Te3/0/40, Te3/0/41, Te3/0/42, Te3/0/43, Te3/0/46
+                                                Te3/0/47, Te3/0/48, Tw4/0/27
+1002 fddi-default                     act/unsup 
+1003 token-ring-default               act/unsup 
+1004 fddinet-default                  act/unsup 
+1005 trnet-default                    act/unsup 
+
+VLAN Type  SAID       MTU   Parent RingNo BridgeNo Stp  BrdgMode Trans1 Trans2
+---- ----- ---------- ----- ------ ------ -------- ---- -------- ------ ------
+1    enet  100001     1500  -      -      -        -    -        0      0   
+10   enet  100010     1500  -      -      -        -    -        0      0   
+50   enet  100050     1500  -      -      -        -    -        0      0   
+60   enet  100060     1500  -      -      -        -    -        0      0   
+1002 fddi  101002     1500  -      -      -        -    -        0      0   
+1003 tr    101003     1500  -      -      -        -    srb      0      0   
+1004 fdnet 101004     1500  -      -      -        ieee -        0      0   
+1005 trnet 101005     1500  -      -      -        ibm  -        0      0   
+
+Remote SPAN VLANs
+------------------------------------------------------------------------------
+
+
+Primary Secondary Type              Ports
+------- --------- ----------------- ------------------------------------------
