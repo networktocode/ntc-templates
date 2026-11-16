@@ -20,11 +20,12 @@ Value PACKETS_TOT (\d+)
 Value BUFFERS_FREE (\d+)
 Value BUFFERS_LOWEST (\d+)
 Value BUFFERS_MISSED (\d+)
+Value Filldown,List CONTACT_CONTINUED (\S.*?)
 
 Start
   ^.*Status\s+and\s+Counters
   ^\s*System\s+Name\s+:\s+${NAME}
-  ^\s*System\s+Contact\s+:\s+${CONTACT}
+  ^\s*System\s+Contact\s+:\s+${CONTACT} -> ContactContinued
   ^\s*System\s+Location\s+:\s+${LOCATION}
   ^\s*MAC\s+Age\s+Time[^:]*:\s+${MAC_AGE}
   ^\s*Time\s+Zone\s+:\s+${TIMEZONE}
@@ -42,8 +43,15 @@ Start
   ^\s*Missed\s+:\s+${BUFFERS_MISSED} -> Record
   ^\s*VSF-Member\s*: -> Continue.Record
   ^\s*VSF-Member\s*:\s*${MEMBER_ID} -> VSF
-  # Skip wrapped Contact/Location continuation lines (no "label : value" separator)
+  # Skip wrapped Location continuation lines (no "label : value" separator); Contact ones are captured in the ContactContinued state
   ^\s{20,}(?!.*\s:\s)\S.*$$
+  ^. -> Error
+
+# Collect wrapped System Contact lines into CONTACT_CONTINUED.
+# Full contact = CONTACT + "".join(CONTACT_CONTINUED): lines wrap at a fixed column (often mid-word), so join without a separator
+ContactContinued
+  ^\s{20,}${CONTACT_CONTINUED}\s*$$
+  ^\s*System\s+Location\s+:\s+${LOCATION} -> Start
   ^. -> Error
 
 VSF
