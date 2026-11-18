@@ -16,6 +16,7 @@ Start
   ^\s+Internet\s+address\s+is\s+${IP_ADDRESS}/?${PREFIX_LENGTH}\s*$$
   ^\s+Internet\s+address\s+will\s+be\s+negotiated
   ^\s+Secondary\s+address\s+${IP_ADDRESS}/?${PREFIX_LENGTH}\s*$$
+  ^\s+Tunnel\s+VPN\s+Routing/Forwarding
   ^.+VPN\s+Routing/Forwarding\s+"${VRF}"
   ^\s+MTU\s+is\s+${MTU}\s+bytes
   ^\s+Helper\s+address(es|)\s(is|are)\s+${IP_HELPER}\s*$$ -> HELPERS

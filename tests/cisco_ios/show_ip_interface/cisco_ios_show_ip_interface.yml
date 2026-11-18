@@ -585,7 +585,7 @@ parsed_sample:
     prefix_length:
       - "31"
     protocol_status: "up"
-    vrf: "MYCOMPANY"
+    vrf: ""
   - inbound_acl: ""
     interface: "Tunnel5002"
     ip_address:
@@ -597,7 +597,7 @@ parsed_sample:
     prefix_length:
       - "31"
     protocol_status: "up"
-    vrf: "MYCOMPANY"
+    vrf: ""
   - inbound_acl: ""
     interface: "Tunnel5010"
     ip_address:
@@ -609,7 +609,7 @@ parsed_sample:
     prefix_length:
       - "31"
     protocol_status: "up"
-    vrf: "MYCOMPANY"
+    vrf: ""
   - inbound_acl: ""
     interface: "Tunnel6001"
     ip_address:
@@ -621,7 +621,7 @@ parsed_sample:
     prefix_length:
       - "31"
     protocol_status: "down"
-    vrf: "MYCOMPANY"
+    vrf: ""
   - inbound_acl: ""
     interface: "Tunnel6002"
     ip_address:
@@ -633,7 +633,7 @@ parsed_sample:
     prefix_length:
       - "31"
     protocol_status: "down"
-    vrf: "MYCOMPANY"
+    vrf: ""
   - inbound_acl: ""
     interface: "vasileft1"
     ip_address:
