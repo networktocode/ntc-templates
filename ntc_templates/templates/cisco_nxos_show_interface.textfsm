@@ -99,6 +99,7 @@ Start
   ^\s+${LOST_CARRIER}\s+lost\s+carrier\s+${NO_CARRIER}\s+no\s+carrier\s+${BABBLE}\s+babble\s+${OUTPUT_DISCARDS}\s+output\s+discard\s*$$
   ^\s+${TX_PAUSE}\s+Tx\s+pause\s*$$
   # Unmatched
+  ^\s+\d+\s+bytes\s+\d+\s+bits/sec\s+\d+\s+packets/sec
   ^\s+reliability\s+\d+/\d+,\s+txload\s+\d+/\d+,\s+rxload\s+\d+/\d+\s*$$
   ^\s+Auto-(mdix|Negotiation)\s+is\s+
   ^\s+(Beacon|EtherType|Rate\s+mode|Switchport\s+monitor)\s+is\s+
