@@ -1,0 +1,320 @@
+===============================================================================
+ BGP Router ID:10.244.27.160    AS:1234        Local AS:1234
+===============================================================================
+BGP Admin State         : Up          BGP Oper State              : Up
+Total Peer Groups       : 31          Total Peers                 : 64
+Total VPN Peer Groups   : 222         Total VPN Peers             : 677
+Current Internal Groups : 21          Max Internal Groups         : 22
+Total BGP Paths         : 413913      Total Path Memory           : 173680783
+
+Total IPv4 Remote Rts   : 2636406     Total IPv4 Rem. Active Rts  : 1306369
+Total IPv6 Remote Rts   : 5064        Total IPv6 Rem. Active Rts  : 98
+Total IPv4 Backup Rts   : 0           Total IPv6 Backup Rts       : 0
+Total LblIpv4 Rem Rts   : 0           Total LblIpv4 Rem. Act Rts  : 0
+Total LblIpv6 Rem Rts   : 644556      Total LblIpv6 Rem. Act Rts  : 321322
+Total LblIpv4 Bkp Rts   : 0           Total LblIpv6 Bkp Rts       : 0
+Total Supressed Rts     : 0           Total Hist. Rts             : 0
+Total Decay Rts         : 0
+
+Total VPN-IPv4 Rem. Rts : 1244499     Total VPN-IPv4 Rem. Act. Rts: 607597
+Total VPN-IPv6 Rem. Rts : 564926      Total VPN-IPv6 Rem. Act. Rts: 282140
+Total VPN-IPv4 Bkup Rts : 0           Total VPN-IPv6 Bkup Rts     : 0
+Total VPN Local Rts     : 18201       Total VPN Supp. Rts         : 0
+Total VPN Hist. Rts     : 0           Total VPN Decay Rts         : 0
+
+Total MVPN-IPv4 Rem Rts : 0           Total MVPN-IPv4 Rem Act Rts : 0
+Total MVPN-IPv6 Rem Rts : 0           Total MVPN-IPv6 Rem Act Rts : 0
+Total MDT-SAFI Rem Rts  : 2990        Total MDT-SAFI Rem Act Rts  : 557
+Total McIPv4 Remote Rts : 0           Total McIPv4 Rem. Active Rts: 0
+Total McIPv6 Remote Rts : 0           Total McIPv6 Rem. Active Rts: 0
+Total McVpnIPv4 Rem Rts : 0           Total McVpnIPv4 Rem Act Rts : 0
+Total McVpnIPv6 Rem Rts : 0           Total McVpnIPv6 Rem Act Rts : 0
+
+Total EVPN Rem Rts      : 0           Total EVPN Rem Act Rts      : 0
+Total L2-VPN Rem. Rts   : 0           Total L2VPN Rem. Act. Rts   : 0
+Total MSPW Rem Rts      : 0           Total MSPW Rem Act Rts      : 0
+Total RouteTgt Rem Rts  : 2           Total RouteTgt Rem Act Rts  : 2
+Total FlowIpv4 Rem Rts  : 2           Total FlowIpv4 Rem Act Rts  : 1
+Total FlowIpv6 Rem Rts  : 0           Total FlowIpv6 Rem Act Rts  : 0
+Total FlowVpnv4 Rem Rts : 0           Total FlowVpnv4 Rem Act Rts : 0
+Total FlowVpnv6 Rem Rts : 0           Total FlowVpnv6 Rem Act Rts : 0
+Total Link State Rem Rts: 0           Total Link State Rem Act Rts: 0
+Total SrPlcyIpv4 Rem Rts: 0           Total SrPlcyIpv4 Rem Act Rts: 0
+Total SrPlcyIpv6 Rem Rts: 0           Total SrPlcyIpv6 Rem Act Rts: 0
+
+===============================================================================
+BGP Summary
+===============================================================================
+Legend : D - Dynamic Neighbor
+===============================================================================
+Neighbor
+Description
+                   AS PktRcvd InQ  Up/Down   State|Rcv/Act/Sent (Addr Family)
+                      PktSent OutQ
+-------------------------------------------------------------------------------
+187.28.156.170
+GERMANCITY_ABC/INET/00248_BGP_LIGHT
+                65000      19    0 00h06m33s 3/0/1 (IPv4)
+                          603    0
+10.42.255.30
+                    0       0    0 0156d08h  Idle
+                            0    0
+10.87.4.101
+CACHE DATA
+                36040   10010    0 03d11h23m 1/0/19170 (IPv4)
+                        22362    0
+10.87.16.5
+CACHE QUICK - LAG201
+                20253  450326    0 0156d08h  1/1/1 (IPv4)
+                       450328    0
+10.87.16.25
+CACHE MEDIA - LAG71
+                40027   57587    0 17d11h35m 0/0/26460 (IPv4)
+                       111700    0
+10.87.16.27
+CACHE MEDIA - LAG72
+                40027   54212    0 16d11h22m 0/0/26460 (IPv4)
+                        94544    0
+10.87.16.29
+CACHE MEDIA - LAG73
+                40027   64129    0 19d11h31m 0/0/26460 (IPv4)
+                       111767    0
+10.87.16.46
+MPU_NYC/INET/32986
+                26118    8350    0 02d12h55m 1/1/100864 (IPv4)
+                        94355    0
+10.87.16.130
+MPU_ILH/INET/02446
+                26118    8382    0 02d13h00m 1/1/100864 (IPv4)
+                       104428    0
+10.87.16.190
+MPU_VYC/INET/03305
+                26118    8361    0 02d13h00m 1/1/100864 (IPv4)
+                        94568    0
+10.87.16.210
+MPU_USA/INET/01092
+                26118    8379    0 02d13h00m 1/1/100864 (IPv4)
+                        94719    0
+10.87.16.218
+MPU_YYZ/INET/08616
+                26118    8365    0 02d13h00m 1/1/100864 (IPv4)
+                        94689    0
+10.87.16.226
+MPU_NYC/INET/33057
+                26118    8355    0 02d13h00m 1/1/100860 (IPv4)
+                        94734    0
+10.87.34.126
+VYC/INET/03433
+                65000  143096    0 44d17h10m 3/1/1 (IPv4)
+                       128784    0
+10.87.240.118
+GERMANCITY_SMF_INET_00742_BGP_LIGHT
+                65000   44356    0 14d02h51m 3/3/1 (IPv4)
+                        40668    0
+10.166.171.126
+BUR_FOOD_IPW_INET_00178_BGP_LIGHT
+                65000     105    0 00h44m40s 1/0/1 (IPv4)
+                           95    0
+10.166.171.222
+BUR_FOOD_STN_INET_02941_BGP_LIGHT
+                65000     106    0 00h44m27s 1/0/1 (IPv4)
+                        93454    0
+10.167.161.149
+CACHE BYTE AMPLIFIER
+                36040   73127    0 25d09h22m 1/0/19170 (IPv4)
+                       117055    0
+10.167.250.26
+NETWORKING_NYC/INET/32310
+                28573       0    0 0156d08h  Connect
+                            0    0
+10.167.250.30
+NETWORKING_NYC/INET/32311
+                28573       0    0 0156d08h  Connect
+                            0    0
+10.167.250.190
+NETWORKING_NET_DTC_YYK_LAG500
+                28573  507641    0 0156d08h  42/42/1 (IPv4)
+                       450328    0
+10.167.250.254
+PEERING_LIVE - tF4eB1bGP
+                10429 1692535    0 0156d08h  12706/194/14243 (IPv4)
+                       968407    0
+10.211.217.3
+PGW_YYK MD5: BGPABCXYZRST123
+                22085  512641    0 0156d08h  8/4/1 (IPv4)
+                       450328    0
+10.211.218.22
+                22085  449562    0 0156d08h  226/226/1 (IPv4)
+                       450329    0
+10.211.221.135
+BAYYK02_dDGWHUA01_SGI_01_IPv4 MD5: ABCXYZRST123
+                22085  515488    0 0156d08h  7/7/1 (IPv4)
+                       450328    0
+10.211.222.47
+TO_BAYYK02_DUPFHUA01_SGI_IPV4
+                22085  515486    0 0156d08h  1/1/1 (IPv4)
+                       450328    0
+10.230.5.73
+WAESDN MD5: ABCXYZRST123
+                 1234       5    0 00h00m55s 0/0/440521 (IPv4)
+                        73553    0           0/0/72264 (IPv6)
+10.230.9.25
+                 1234  206970    0 71d21h06m 0/0/1306369 (IPv4)
+                      562120*    0
+10.244.27.165
+RR10.YYK
+                 1234 286071*    0 0156d08h  1311636/1305818/2141 (IPv4)
+                      6028532    0           1/1/0 (FlowIPv4)
+                                             0/0/0 (FlowIPv6)
+                                             322277/321308/959 (Lbl-IPv6)
+                                             0/0/16993 (LinkState)
+10.244.27.166
+VRR10.YYK
+                 1234 148364*    0 0121d23h  622253/607597/16695 (VpnIPv4)
+                      2981776    0           282463/282140/319 (VpnIPv6)
+                                             0/0/0 (MvpnIPv4)
+                                             1495/557/7 (MdtSafi)
+                                             1/1/218 (RouteTarget)
+10.244.28.127
+RR10.YYKIT
+                 1234 297723*    0 0156d08h  1311633/0/2141 (IPv4)
+                      6067412    0           1/0/0 (FlowIPv4)
+                                             0/0/0 (FlowIPv6)
+                                             322279/14/959 (Lbl-IPv6)
+                                             0/0/16993 (LinkState)
+10.244.28.128
+VRR10.YYKIT
+                 1234 191400*    0 0156d08h  622246/0/16695 (VpnIPv4)
+                      4261993    0           282463/0/319 (VpnIPv6)
+                                             0/0/0 (MvpnIPv4)
+                                             1495/0/7 (MdtSafi)
+                                             1/1/218 (RouteTarget)
+10.254.96.226
+CIA_NYC/INET/33398_BGP_PARTIAL
+                61572 1069549    0 54d11h23m 2/2/1 (IPv4)
+                       925321    0
+10.254.202.150
+NETWORKING_NYC/INET/22623
+                28573  509126    0 0156d08h  35/7/1 (IPv4)
+                       450330    0
+10.39.12.138
+CARREFOUR | LFS/INET/02844 | BGP_LIGHT IPV4
+                65500       0    0 39d10h21m Active
+                            0    0
+10.39.21.62
+NETWORKING_ZOZ/INET/00281
+                28573    3501    0 01d01h04m 2/2/1 (IPv4)
+                        14408    0
+10.39.77.18
+ELECT | NYC/INET/33095 | BGP_LIGHT
+                65000    8244    0 02d14h59m 9/5/1 (IPv4)
+                         7567    0
+10.39.77.122
+NETWORKING_NYC/INET/33105
+                28573  507351    0 0156d08h  68/39/1 (IPv4)
+                       450328    0
+10.39.77.134
+MPU_MKW/INET/00140
+                26118    8373    0 02d13h00m 1/1/100863 (IPv4)
+                        97001    0
+10.39.77.138
+LON/INET/00965
+                26118    6822    0 02d01h45m 1/1/100860 (IPv4)
+                        80905    0
+10.39.77.146
+MPU_BER/INET/01256
+                26118    8361    0 02d12h58m 1/1/100864 (IPv4)
+                        94810    0
+10.39.77.234
+ELECT | NYC/INET/33132 | BGP LIGHT
+                65000  138731    0 44d04h13m 1/1/1 (IPv4)
+                       127282    0
+10.57.227.80
+CACHE_CHTULU_IPv4
+                63293    4539    0 01d13h48m 0/0/26460 (IPv4)
+                        28107    0
+10.73.5.3
+LOOKING_GLASS | BGP FULL IPV4 | BGP_AS65071
+                65071       0    0 02d03h22m Connect
+                            0    0
+10.73.240.102
+BAYYK02-DNS | BAYYK02-LDB02 | INTERNET | MD5: ABCXYZRST123 | DDS 1045180
+                22085 135050*    0 0156d08h  7/7/1 (IPv4)
+                      112578*    0
+fe80:a8:2:80::d6
+NETWORKING_IPV6_ZOZ/INET/00281
+                28573    3505    0 01d01h04m 1/1/1 (IPv6)
+                         5695    0
+fe80:a8:2:90::146
+NETWORKING_IPV6_NYC/INET/22623
+                28573  508954    0 0156d08h  2/2/1 (IPv6)
+                       450339    0
+fe80:a8:2:90::17de
+NETWORKING_IPV6_NET_DTC_YYK_LAG500
+                28573  507678    0 0156d08h  19/17/1 (IPv6)
+                       450337    0
+fe80:a8:2:90::19c2
+PEERING_LIVE_IPv6 - tF4eB1bGP
+                10429 2755638    0 0156d08h  4996/38/4494 (IPv6)
+                       769160    0
+fe80:a8:2:90::2ae6
+NETWORKING_IPV6_NYC/INET/33105
+                28573  509133    0 0156d08h  14/12/1 (IPv6)
+                       450334    0
+fe80:a8:2:90::37aa
+CIA_NYC/INET/33398_BGP_PARTIAL
+                61572 1069818    0 54d11h23m 2/2/1 (IPv6)
+                       922869    0
+fe80:a8:7ff:e000::6
+PGW_YYK MD5: BGPABCXYZRST123
+                22085  512590    0 0156d08h  8/7/1 (IPv6)
+                       450330    0
+fe80:a8:7ff:e000::e
+PGW_YYK MD5: BGPABCXYZRST123
+                22085  512632    0 0156d08h  4/3/1 (IPv6)
+                       450330    0
+fe80:a8:7ff:e000::f6
+                22085    3168    0 01d02h23m 0/0/1 (IPv6)
+                        28839    0
+fe80:a8:7ff:e004::16
+BAYYK02_dDGWHUA01_SGI_01_IPv6 MD5: ABCXYZRST123
+                22085  515549    0 0156d08h  6/6/1 (IPv6)
+                       450330    0
+fe80:a8:7ff:e004::26
+TO_BAYYK02_DUPFHUA01_SGI_IPV6
+                22085  515487    0 0156d08h  2/2/1 (IPv6)
+                       450330    0
+fe80:a8:1000:1::6
+BAYYK02-DNS | BAYYK02-LDB02 | INTERNET | MD5: ABCXYZRST123 | DDS 10480
+                22085 135051*    0 0156d08h  7/7/1 (IPv6)
+                      112578*    0
+fe80:a8:1000:1f::12f
+CACHE QUICK - LAG201
+                20253  450324    0 0156d08h  1/1/1 (IPv6)
+                       450327    0
+fe80:a8:1000:1f::177
+CACHE MEDIA - LAG71
+                40027   57541    0 17d11h35m 0/0/7749 (IPv6)
+                        74890    0
+fe80:a8:1000:1f::179
+CACHE MEDIA - LAG72
+                40027   54221    0 16d11h22m 0/0/7749 (IPv6)
+                        70971    0
+fe80:a8:1000:1f::17b
+CACHE MEDIA - LAG73
+                40027   64065    0 19d11h31m 0/0/7749 (IPv6)
+                        75396    0
+fe80:a8:1000:1f::1eb
+CACHE BYTE IPV6
+                36040   10010    0 03d11h23m 1/0/7977 (IPv6)
+                        13930    0
+fe80:a8:1000:1f::225
+CACHE BYTE AMPLIFIER IPV6
+                36040   73127    0 25d09h22m 1/0/7977 (IPv6)
+                        97444    0
+fe80:a8:9000:8::10
+CACHE_CHTULU_IPv6
+                63293    4539    0 01d13h48m 0/0/7749 (IPv6)
+                        24837    0
+-------------------------------------------------------------------------------
+* indicates that the corresponding row element may have been truncated.

@@ -1,0 +1,60 @@
+# Header variables (FILLDOWN)
+Value Filldown ROUTER_ID (\S+)
+Value Filldown LOCAL_BGP_AS (\d+)
+Value Filldown LOCAL_AS (\d+)
+Value Filldown ADMIN_STATE (\S+)
+Value Filldown OPER_STATE (\S+)
+Value Filldown TOTAL_PEER_GROUPS (\d+)
+Value Filldown TOTAL_PEERS (\d+)
+Value Filldown TOTAL_VPN_PEER_GROUPS (\d+)
+Value Filldown TOTAL_VPN_PEERS (\d+)
+Value Filldown CUR_INTERNAL_GROUPS (\d+)
+Value Filldown MAX_INTERNAL_GROUPS (\d+)
+Value Filldown TOTAL_BGP_PATHS (\d+)
+Value Filldown TOTAL_PATH_MEMORY (\d+)
+# PEER variables
+# NEIGHBOR forces exact format for IPv4 (ex: 1.1.1.1) or IPv6 (ex: 2001::1)
+Value Required NEIGHBOR (\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}|[0-9a-fA-F:]+:[0-9a-fA-F:]+)
+Value DESCRIPTION ([^\s].*)
+Value AS (\d+)
+Value PKT_RCVD (\d+\*?)
+Value INQ (\d+)
+Value UP_DOWN (\S+)
+Value STATE (.+)
+Value PKT_SENT (\d+\*?)
+Value OUTQ (\d+)
+
+Start
+  ^\s*BGP\s+Router\s+ID:${ROUTER_ID}\s+AS:${LOCAL_BGP_AS}\s+Local\s+AS:${LOCAL_AS}
+  ^\s*BGP\s+Admin\s+State\s*:\s*${ADMIN_STATE}\s+BGP\s+Oper\s+State\s*:\s*${OPER_STATE}
+  ^\s*Total\s+Peer\s+Groups\s*:\s*${TOTAL_PEER_GROUPS}\s+Total\s+Peers\s*:\s*${TOTAL_PEERS}
+  ^\s*Total\s+VPN\s+Peer\s+Groups\s*:\s*${TOTAL_VPN_PEER_GROUPS}\s+Total\s+VPN\s+Peers\s*:\s*${TOTAL_VPN_PEERS}
+  ^\s*Current\s+Internal\s+Groups\s*:\s*${CUR_INTERNAL_GROUPS}\s+Max\s+Internal\s+Groups\s*:\s*${MAX_INTERNAL_GROUPS}
+  ^\s*Total\s+BGP\s+Paths\s*:\s*${TOTAL_BGP_PATHS}\s+Total\s+Path\s+Memory\s*:\s*${TOTAL_PATH_MEMORY}
+  ^---+ -> Peers
+  ^===+
+  ^\s*Total\s+IPv\d+\s+(Remote|Backup)
+  ^\s*Total\s+LblIpv\d+\s+(Rem|Bkp)
+  ^\s*Total\s+(Supp?ressed|Decay|MDT-SAFI|MSPW|RouteTgt)
+  ^\s*Total\s+(M|E|L2-)?VPN
+  ^\s*Total\s+Mc(IP|Vpn)
+  ^\s*Total\s+Flow(Ip|Vpn)v\d+
+  ^\s*Total\s+Link\s+State
+  ^\s*Total\s+SrPlcyIpv\d+
+  ^\s*BGP\s+Summary$$
+  ^\s*Legend\s*:
+  ^\s*Neighbor
+  ^\s*Description
+  ^\s+AS\s+PktRcvd\s+InQ\s+Up/Down
+  ^\s+PktSent\s+OutQ$$
+  ^. -> Error
+
+Peers
+  ^${NEIGHBOR}$$
+  ^${DESCRIPTION}
+  ^\s+${AS}\s+${PKT_RCVD}\s+${INQ}\s+${UP_DOWN}\s+${STATE}
+  ^\s+${PKT_SENT}\s+${OUTQ}.* -> Record
+  ^\s+\d+/\d+/\d+\s+\((Flow|Lbl-)IPv6\)
+  ^\s+\d+/\d+/\d+\s+\((LinkState|MdtSafi|RouteTarget)\)
+  ^\s+\d+/\d+/\d+\s+\(MvpnIPv\d+\)
+  ^. -> Error
