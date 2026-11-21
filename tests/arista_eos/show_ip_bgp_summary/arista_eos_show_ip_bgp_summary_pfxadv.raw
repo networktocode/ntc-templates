@@ -1,0 +1,7 @@
+BGP summary information for VRF default
+Router identifier 10.0.255.7, local AS number 65000
+Neighbor Status Codes: m - Under maintenance
+  Description              Neighbor     V AS           MsgRcvd   MsgSent  InQ OutQ  Up/Down State   PfxRcd PfxAcc PfxAdv
+  IBGP-CE2                 10.0.9.23    4 65000         164164   1641222    0    0 18:42:32 Estab   1238   1238   1039468
+  CUSTOMER-FW              10.56.30.17  4 64512           7909      7960    0    0 16:36:07 Estab   2      2      1
+  Primary-ISP-PE-AS65530   172.16.130.2 4 65530         668187      7920    0    0 18:42:32 Estab   1040594 1040594 2
