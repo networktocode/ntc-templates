@@ -147,6 +147,8 @@ Statistic
   ^\s*Bytes\s+${RX_TOTAL_BYTES}\s+${TX_TOTAL_BYTES}\s+\d+
   ^\s*Jumbos
   ^\s*Pause\s+Frames
+  ^\s*L3\s+Packets
+  ^\s*L3\s+Bytes
   ^\s*Dropped\s+${RX_DROPPED}\s+${TX_DROPPED}\s+\d+
   ^\s*Filtered\s+${RX_FILTERED}\s+${TX_FILTERED}\s+\d+
   ^\s*Errors\s+${RX_ERRORS}\s+${TX_ERRORS}\s+\d+
